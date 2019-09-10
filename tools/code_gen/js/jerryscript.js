@@ -30,11 +30,31 @@ class QuickJSGenerator extends JsBindingGenerator {
     return `  TKMEM_FREE(${name});\n`;
   }
   
-  genCreateObject(name, type, destroyFunc) {
-    let result = `  static jerry_object_native_info_t info = {(jerry_object_native_free_callback_t)${destroyFunc}};\n`;
-    result +=`  jret = jsvalue_create_object(ctx, ${name}, "${type}", &info);\n`;
+  genGlobalInfo(json) {
+    let result = '';
+    json.forEach(cls => {
+      if(cls.methods) {
+        cls.methods.forEach(m => {
+          if(this.isGcDeconstructor(m)) {
+            result += `static jerry_object_native_info_t s_${m.name}_info = {
+  (jerry_object_native_free_callback_t)${m.name}
+};
+`;
+        cls.gc = m.name;
+          }
+        });
+      }
+    });
 
     return result;
+  }
+
+  genCreateObject(name, type, destroyFunc) {
+    return `  jret = jsvalue_create_object(ctx, ${name}, "${type}", &s_${destroyFunc}_info);\n`;
+  }
+  
+  genGetObject(index, type, name) {
+    return `(${type})jsvalue_get_pointer(ctx, argv[${index}], "${type}");\n`;
   }
 
   genGetGlobalObject() {

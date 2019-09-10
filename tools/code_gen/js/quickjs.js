@@ -40,8 +40,16 @@ class QuickJSGenerator extends JsBindingGenerator {
                       JS_NewCFunction(ctx, ${prefix}_${name}, "${name}", 1));\n`;
   }
    
+  genGlobalInfo(json) {
+    return '';
+  }
+
   genCreateObject(name, type, destroyFunc) {
     return `  jret = jsvalue_create_object(ctx, ${name}, "${type}", (tk_destroy_t)${destroyFunc});\n`;
+  }
+  
+  genGetObject(index, type, name) {
+    return `(${type})jsvalue_get_pointer(ctx, argv[${index}], "${type}");\n`;
   }
 
   static gen() {

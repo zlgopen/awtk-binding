@@ -103,6 +103,36 @@
 #include "widgets/system_bar.h"
 #include "custom.c"
 
+static jerry_object_native_info_t s_bitmap_destroy_info = {
+  (jerry_object_native_free_callback_t)bitmap_destroy
+};
+static jerry_object_native_info_t s_color_destroy_info = {
+  (jerry_object_native_free_callback_t)color_destroy
+};
+static jerry_object_native_info_t s_date_time_destroy_info = {
+  (jerry_object_native_free_callback_t)date_time_destroy
+};
+static jerry_object_native_info_t s_emitter_destroy_info = {
+  (jerry_object_native_free_callback_t)emitter_destroy
+};
+static jerry_object_native_info_t s_event_destroy_info = {
+  (jerry_object_native_free_callback_t)event_destroy
+};
+static jerry_object_native_info_t s_named_value_destroy_info = {
+  (jerry_object_native_free_callback_t)named_value_destroy
+};
+static jerry_object_native_info_t s_rect_destroy_info = {
+  (jerry_object_native_free_callback_t)rect_destroy
+};
+static jerry_object_native_info_t s_value_destroy_info = {
+  (jerry_object_native_free_callback_t)value_destroy
+};
+static jerry_object_native_info_t s_object_unref_info = {
+  (jerry_object_native_free_callback_t)object_unref
+};
+static jerry_object_native_info_t s_object_default_unref_info = {
+  (jerry_object_native_free_callback_t)object_default_unref
+};
 jsvalue_t wrap_tk_quit(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -274,8 +304,7 @@ jsvalue_t wrap_bitmap_create(
   bitmap_t* ret = NULL;
   ret = (bitmap_t*)bitmap_create();
 
-  static jerry_object_native_info_t info = {(jerry_object_native_free_callback_t)bitmap_destroy};
-  jret = jsvalue_create_object(ctx, ret, "bitmap_t*", &info);
+  jret = jsvalue_create_object(ctx, ret, "bitmap_t*", &s_bitmap_destroy_info);
   }
   return jret;
 }
@@ -297,8 +326,7 @@ jsvalue_t wrap_bitmap_create_ex(
   bitmap_format_t format = (bitmap_format_t)jsvalue_get_number_value(ctx, argv[3]);
   ret = (bitmap_t*)bitmap_create_ex(w, h, line_length, format);
 
-  static jerry_object_native_info_t info = {(jerry_object_native_free_callback_t)bitmap_destroy};
-  jret = jsvalue_create_object(ctx, ret, "bitmap_t*", &info);
+  jret = jsvalue_create_object(ctx, ret, "bitmap_t*", &s_bitmap_destroy_info);
   }
   return jret;
 }
@@ -9872,8 +9900,7 @@ jsvalue_t wrap_color_create(
   uint8_t a = (uint8_t)jsvalue_get_int_value(ctx, argv[3]);
   ret = (color_t*)color_create(r, b, g, a);
 
-  static jerry_object_native_info_t info = {(jerry_object_native_free_callback_t)color_destroy};
-  jret = jsvalue_create_object(ctx, ret, "color_t*", &info);
+  jret = jsvalue_create_object(ctx, ret, "color_t*", &s_color_destroy_info);
   }
   return jret;
 }
@@ -10050,8 +10077,7 @@ jsvalue_t wrap_date_time_create(
   date_time_t* ret = NULL;
   ret = (date_time_t*)date_time_create();
 
-  static jerry_object_native_info_t info = {(jerry_object_native_free_callback_t)date_time_destroy};
-  jret = jsvalue_create_object(ctx, ret, "date_time_t*", &info);
+  jret = jsvalue_create_object(ctx, ret, "date_time_t*", &s_date_time_destroy_info);
   }
   return jret;
 }
@@ -10187,8 +10213,7 @@ jsvalue_t wrap_emitter_create(
   emitter_t* ret = NULL;
   ret = (emitter_t*)emitter_create();
 
-  static jerry_object_native_info_t info = {(jerry_object_native_free_callback_t)emitter_destroy};
-  jret = jsvalue_create_object(ctx, ret, "emitter_t*", &info);
+  jret = jsvalue_create_object(ctx, ret, "emitter_t*", &s_emitter_destroy_info);
   }
   return jret;
 }
@@ -10466,8 +10491,7 @@ jsvalue_t wrap_event_create(
   void* target = (void*)jsvalue_get_pointer(ctx, argv[1], "void*");
   ret = (event_t*)event_create(type, target);
 
-  static jerry_object_native_info_t info = {(jerry_object_native_free_callback_t)event_destroy};
-  jret = jsvalue_create_object(ctx, ret, "event_t*", &info);
+  jret = jsvalue_create_object(ctx, ret, "event_t*", &s_event_destroy_info);
   }
   return jret;
 }
@@ -10540,8 +10564,7 @@ jsvalue_t wrap_named_value_create(
   named_value_t* ret = NULL;
   ret = (named_value_t*)named_value_create();
 
-  static jerry_object_native_info_t info = {(jerry_object_native_free_callback_t)named_value_destroy};
-  jret = jsvalue_create_object(ctx, ret, "named_value_t*", &info);
+  jret = jsvalue_create_object(ctx, ret, "named_value_t*", &s_named_value_destroy_info);
   }
   return jret;
 }
@@ -10673,8 +10696,7 @@ jsvalue_t wrap_rect_create(
   wh_t h = (wh_t)jsvalue_get_int_value(ctx, argv[3]);
   ret = (rect_t*)rect_create(x, y, w, h);
 
-  static jerry_object_native_info_t info = {(jerry_object_native_free_callback_t)rect_destroy};
-  jret = jsvalue_create_object(ctx, ret, "rect_t*", &info);
+  jret = jsvalue_create_object(ctx, ret, "rect_t*", &s_rect_destroy_info);
   }
   return jret;
 }
@@ -11872,8 +11894,7 @@ jsvalue_t wrap_value_create(
   value_t* ret = NULL;
   ret = (value_t*)value_create();
 
-  static jerry_object_native_info_t info = {(jerry_object_native_free_callback_t)value_destroy};
-  jret = jsvalue_create_object(ctx, ret, "value_t*", &info);
+  jret = jsvalue_create_object(ctx, ret, "value_t*", &s_value_destroy_info);
   }
   return jret;
 }
@@ -17468,8 +17489,7 @@ jsvalue_t wrap_object_ref(
   object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
   ret = (object_t*)object_ref(obj);
 
-  static jerry_object_native_info_t info = {(jerry_object_native_free_callback_t)object_unref};
-  jret = jsvalue_create_object(ctx, ret, "object_t*", &info);
+  jret = jsvalue_create_object(ctx, ret, "object_t*", &s_object_unref_info);
   }
   return jret;
 }
@@ -22529,8 +22549,7 @@ jsvalue_t wrap_object_default_create(
   object_t* ret = NULL;
   ret = (object_t*)object_default_create();
 
-  static jerry_object_native_info_t info = {(jerry_object_native_free_callback_t)object_default_unref};
-  jret = jsvalue_create_object(ctx, ret, "object_default_t*", &info);
+  jret = jsvalue_create_object(ctx, ret, "object_default_t*", &s_object_default_unref_info);
   }
   return jret;
 }

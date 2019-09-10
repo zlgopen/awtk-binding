@@ -27,8 +27,7 @@ class JsBindingGenerator extends CodeGen {
           result += ' NULL;\n';
         }
       } else if (type.indexOf('*') >= 0) {
-        const type_name = type.replace(/\*/g, '');
-        result += `(${type})jsvalue_get_pointer(ctx, argv[${index}], "${type}");\n`;
+        result += this.genGetObject(index, type, name);
       } else if (type.indexOf('float') >= 0 || type.indexOf('double') >= 0) {
         result += `(${type})jsvalue_get_number_value(ctx, argv[${index}]);\n`;
       } else if (type.indexOf('int') >= 0 || type.indexOf('xy_t') >= 0 || type.indexOf('wh_t') >= 0 ||
@@ -332,6 +331,8 @@ class JsBindingGenerator extends CodeGen {
   genJsonAll(ojson) {
     let json = this.filterScriptableJson(ojson);
     let result = this.genIncludes(json);
+    
+    result += this.genGlobalInfo(json);
 
     json.forEach(iter => {
       result += this.genOne(iter);
