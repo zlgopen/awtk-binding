@@ -13857,6 +13857,24 @@ jsvalue_t wrap_combo_box_set_value(
   return jret;
 }
 
+jsvalue_t wrap_combo_box_set_item_height(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  uint32_t item_height = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)combo_box_set_item_height(widget, item_height);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_combo_box_append_option(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -13995,6 +14013,19 @@ jsvalue_t wrap_combo_box_t_get_prop_options(
   return jret;
 }
 
+jsvalue_t wrap_combo_box_t_get_prop_item_height(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  combo_box_t* obj = (combo_box_t*)jsvalue_get_pointer(ctx, argv[0], "combo_box_t*");
+
+  jret = jsvalue_create_int(ctx, obj->item_height);
+  return jret;
+}
+
 ret_t combo_box_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
   JS_SetPropertyStr(ctx, global_obj, "combo_box_create",
@@ -14013,6 +14044,8 @@ ret_t combo_box_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_combo_box_set_localize_options, "combo_box_set_localize_options", 1));
   JS_SetPropertyStr(ctx, global_obj, "combo_box_set_value",
                       JS_NewCFunction(ctx, wrap_combo_box_set_value, "combo_box_set_value", 1));
+  JS_SetPropertyStr(ctx, global_obj, "combo_box_set_item_height",
+                      JS_NewCFunction(ctx, wrap_combo_box_set_item_height, "combo_box_set_item_height", 1));
   JS_SetPropertyStr(ctx, global_obj, "combo_box_append_option",
                       JS_NewCFunction(ctx, wrap_combo_box_append_option, "combo_box_append_option", 1));
   JS_SetPropertyStr(ctx, global_obj, "combo_box_set_options",
@@ -14031,6 +14064,8 @@ ret_t combo_box_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_combo_box_t_get_prop_localize_options, "combo_box_t_get_prop_localize_options", 1));
   JS_SetPropertyStr(ctx, global_obj, "combo_box_t_get_prop_options",
                       JS_NewCFunction(ctx, wrap_combo_box_t_get_prop_options, "combo_box_t_get_prop_options", 1));
+  JS_SetPropertyStr(ctx, global_obj, "combo_box_t_get_prop_item_height",
+                      JS_NewCFunction(ctx, wrap_combo_box_t_get_prop_item_height, "combo_box_t_get_prop_item_height", 1));
 
  jsvalue_unref(ctx, global_obj);
 

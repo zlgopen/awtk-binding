@@ -948,6 +948,7 @@ declare function combo_box_count_options(widget);
 declare function combo_box_set_selected_index(widget, index);
 declare function combo_box_set_localize_options(widget, localize_options);
 declare function combo_box_set_value(widget, value);
+declare function combo_box_set_item_height(widget, item_height);
 declare function combo_box_append_option(widget, value, text);
 declare function combo_box_set_options(widget, options);
 declare function combo_box_get_value(widget);
@@ -957,6 +958,7 @@ declare function combo_box_t_get_prop_selected_index(nativeObj);
 declare function combo_box_t_get_prop_value(nativeObj);
 declare function combo_box_t_get_prop_localize_options(nativeObj);
 declare function combo_box_t_get_prop_options(nativeObj);
+declare function combo_box_t_get_prop_item_height(nativeObj);
 declare function combo_box_item_create(parent, x, y, w, h);
 declare function combo_box_item_cast(widget);
 declare function combo_box_item_set_checked(widget, checked);
@@ -3914,6 +3916,10 @@ class TComboBox extends TWidget {
    return combo_box_set_value(this.nativeObj, value);
  }
 
+ setItemHeight(item_height) {
+   return combo_box_set_item_height(this.nativeObj, item_height);
+ }
+
  appendOption(value, text) {
    return combo_box_append_option(this.nativeObj, value, text);
  }
@@ -3948,6 +3954,10 @@ class TComboBox extends TWidget {
 
  get options() {
    return combo_box_t_get_prop_options(this.nativeObj);
+ }
+
+ get itemHeight() {
+   return combo_box_t_get_prop_item_height(this.nativeObj);
  }
 
 }

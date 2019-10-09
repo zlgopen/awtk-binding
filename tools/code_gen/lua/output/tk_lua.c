@@ -8294,6 +8294,17 @@ static int wrap_combo_box_set_value(lua_State* L) {
   return 1;
 }
 
+static int wrap_combo_box_set_item_height(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  uint32_t item_height = (uint32_t)luaL_checkinteger(L, 2);
+  ret = (ret_t)combo_box_set_item_height(widget, item_height);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 static int wrap_combo_box_append_option(lua_State* L) {
   ret_t ret = 0;
   widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
@@ -8345,6 +8356,7 @@ static const struct luaL_Reg combo_box_t_member_funcs[] = {
   {"set_selected_index", wrap_combo_box_set_selected_index},
   {"set_localize_options", wrap_combo_box_set_localize_options},
   {"set_value", wrap_combo_box_set_value},
+  {"set_item_height", wrap_combo_box_set_item_height},
   {"append_option", wrap_combo_box_append_option},
   {"set_options", wrap_combo_box_set_options},
   {"get_value", wrap_combo_box_get_value},
@@ -8393,6 +8405,11 @@ static int wrap_combo_box_t_get_prop(lua_State* L) {
   }
   else if(strcmp(name, "options") == 0) {
     lua_pushstring(L,(char*)(obj->options));
+
+  return 1;
+  }
+  else if(strcmp(name, "item_height") == 0) {
+    lua_pushinteger(L,(lua_Integer)(obj->item_height));
 
   return 1;
   }
