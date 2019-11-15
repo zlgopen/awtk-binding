@@ -6,6 +6,11 @@ if(this['console'] === undefined) {
       print(str);
   }
 }
+declare function INDICATOR_DEFAULT_PAINT_AUTO();
+declare function INDICATOR_DEFAULT_PAINT_FILL_DOT();
+declare function INDICATOR_DEFAULT_PAINT_STROKE_DOT();
+declare function INDICATOR_DEFAULT_PAINT_FILL_RECT();
+declare function INDICATOR_DEFAULT_PAINT_STROKE_RECT();
 declare function tk_quit();
 declare function tk_get_pointer_x();
 declare function tk_get_pointer_y();
@@ -682,11 +687,6 @@ declare function IMAGE_DRAW_PATCH3_X();
 declare function IMAGE_DRAW_PATCH3_Y();
 declare function IMAGE_DRAW_PATCH3_X_SCALE_Y();
 declare function IMAGE_DRAW_PATCH3_Y_SCALE_X();
-declare function INDICATOR_DEFAULT_PAINT_AUTO();
-declare function INDICATOR_DEFAULT_PAINT_FILL_DOT();
-declare function INDICATOR_DEFAULT_PAINT_STROKE_DOT();
-declare function INDICATOR_DEFAULT_PAINT_FILL_RECT();
-declare function INDICATOR_DEFAULT_PAINT_STROKE_RECT();
 declare function bitmap_create();
 declare function bitmap_create_ex(w, h, line_length, format);
 declare function bitmap_get_bpp(bitmap);
@@ -987,19 +987,6 @@ declare function value_create();
 declare function value_destroy(v);
 declare function value_reset(v);
 declare function value_cast(value);
-declare function row_create(parent, x, y, w, h);
-declare function row_cast(widget);
-declare function progress_bar_create(parent, x, y, w, h);
-declare function progress_bar_cast(widget);
-declare function progress_bar_set_value(widget, value);
-declare function progress_bar_set_max(widget, max);
-declare function progress_bar_set_vertical(widget, vertical);
-declare function progress_bar_set_show_text(widget, show_text);
-declare function progress_bar_get_percent(widget);
-declare function progress_bar_t_get_prop_value(nativeObj);
-declare function progress_bar_t_get_prop_max(nativeObj);
-declare function progress_bar_t_get_prop_vertical(nativeObj);
-declare function progress_bar_t_get_prop_show_text(nativeObj);
 declare function popup_create(parent, x, y, w, h);
 declare function popup_cast(widget);
 declare function popup_set_close_when_click(widget, close_when_click);
@@ -1498,6 +1485,19 @@ declare function slider_t_get_prop_max(nativeObj);
 declare function slider_t_get_prop_step(nativeObj);
 declare function slider_t_get_prop_vertical(nativeObj);
 declare function slider_t_get_prop_bar_size(nativeObj);
+declare function row_create(parent, x, y, w, h);
+declare function row_cast(widget);
+declare function progress_bar_create(parent, x, y, w, h);
+declare function progress_bar_cast(widget);
+declare function progress_bar_set_value(widget, value);
+declare function progress_bar_set_max(widget, max);
+declare function progress_bar_set_vertical(widget, vertical);
+declare function progress_bar_set_show_text(widget, show_text);
+declare function progress_bar_get_percent(widget);
+declare function progress_bar_t_get_prop_value(nativeObj);
+declare function progress_bar_t_get_prop_max(nativeObj);
+declare function progress_bar_t_get_prop_vertical(nativeObj);
+declare function progress_bar_t_get_prop_show_text(nativeObj);
 declare function app_bar_create(parent, x, y, w, h);
 declare function app_bar_cast(widget);
 declare function button_group_create(parent, x, y, w, h);
@@ -1552,17 +1552,17 @@ declare function dialog_title_cast(widget);
 declare function svg_image_create(parent, x, y, w, h);
 declare function svg_image_set_image(widget, name);
 declare function svg_image_cast(widget);
-declare function timer_info_cast(timer);
-declare function timer_info_t_get_prop_ctx(nativeObj);
-declare function timer_info_t_get_prop_id(nativeObj);
-declare function timer_info_t_get_prop_now(nativeObj);
-declare function timer_info_t_get_prop_user_changed_time(nativeObj);
 declare function system_bar_create(parent, x, y, w, h);
 declare function system_bar_cast(widget);
 declare function object_array_create();
 declare function object_array_unref(obj);
 declare function object_array_clear_props(obj);
 declare function object_array_t_get_prop_props_size(nativeObj);
+declare function timer_info_cast(timer);
+declare function timer_info_t_get_prop_ctx(nativeObj);
+declare function timer_info_t_get_prop_id(nativeObj);
+declare function timer_info_t_get_prop_now(nativeObj);
+declare function timer_info_t_get_prop_user_changed_time(nativeObj);
 declare function object_default_create();
 declare function object_default_unref(obj);
 declare function object_default_clear_props(obj);
@@ -1571,14 +1571,22 @@ declare function image_create(parent, x, y, w, h);
 declare function image_set_draw_type(widget, draw_type);
 declare function image_cast(widget);
 declare function image_t_get_prop_draw_type(nativeObj);
-declare function gif_image_create(parent, x, y, w, h);
-declare function gif_image_cast(widget);
 declare function spin_box_create(parent, x, y, w, h);
 declare function spin_box_cast(widget);
+declare function gif_image_create(parent, x, y, w, h);
+declare function gif_image_cast(widget);
 declare function idle_info_cast(idle);
 declare function idle_info_t_get_prop_ctx(nativeObj);
 declare function idle_info_t_get_prop_id(nativeObj);
 declare function combo_box_ex_create(parent, x, y, w, h);
+
+enum TIndicatorDefaultPaint {
+ AUTO = INDICATOR_DEFAULT_PAINT_AUTO(),
+ FILL_DOT = INDICATOR_DEFAULT_PAINT_FILL_DOT(),
+ STROKE_DOT = INDICATOR_DEFAULT_PAINT_STROKE_DOT(),
+ FILL_RECT = INDICATOR_DEFAULT_PAINT_FILL_RECT(),
+ STROKE_RECT = INDICATOR_DEFAULT_PAINT_STROKE_RECT(),
+};
 
 class TGlobal {
  public nativeObj;
@@ -2990,14 +2998,6 @@ enum TImageDrawType {
  PATCH3_Y_SCALE_X = IMAGE_DRAW_PATCH3_Y_SCALE_X(),
 };
 
-enum TIndicatorDefaultPaint {
- AUTO = INDICATOR_DEFAULT_PAINT_AUTO(),
- FILL_DOT = INDICATOR_DEFAULT_PAINT_FILL_DOT(),
- STROKE_DOT = INDICATOR_DEFAULT_PAINT_STROKE_DOT(),
- FILL_RECT = INDICATOR_DEFAULT_PAINT_FILL_RECT(),
- STROKE_RECT = INDICATOR_DEFAULT_PAINT_STROKE_RECT(),
-};
-
 class TBitmap {
  public nativeObj;
  constructor(nativeObj) {
@@ -3492,22 +3492,6 @@ class TPath {
 
 }
 
-class TPlatform {
- public nativeObj;
- constructor(nativeObj) {
-   this.nativeObj = nativeObj;
- }
-
-}
-
-class TPoint {
- public nativeObj;
- constructor(nativeObj) {
-   this.nativeObj = nativeObj;
- }
-
-}
-
 class TRect {
  public nativeObj;
  constructor(nativeObj) {
@@ -3796,74 +3780,6 @@ class TValue {
 
  static cast(value) {
    return new TValue(value_cast(value ? (value.nativeObj || value) : null));
- }
-
-}
-
-class TRow extends TWidget {
- public nativeObj;
- constructor(nativeObj) {
-   super(nativeObj);
- }
-
- static create(parent, x, y, w, h) {
-   return new TRow(row_create(parent ? parent.nativeObj : null, x, y, w, h));
- }
-
- static cast(widget) {
-   return new TRow(row_cast(widget ? (widget.nativeObj || widget) : null));
- }
-
-}
-
-class TProgressBar extends TWidget {
- public nativeObj;
- constructor(nativeObj) {
-   super(nativeObj);
- }
-
- static create(parent, x, y, w, h) {
-   return new TProgressBar(progress_bar_create(parent ? parent.nativeObj : null, x, y, w, h));
- }
-
- static cast(widget) {
-   return new TProgressBar(progress_bar_cast(widget ? (widget.nativeObj || widget) : null));
- }
-
- setValue(value) {
-   return progress_bar_set_value(this.nativeObj, value);
- }
-
- setMax(max) {
-   return progress_bar_set_max(this.nativeObj, max);
- }
-
- setVertical(vertical) {
-   return progress_bar_set_vertical(this.nativeObj, vertical);
- }
-
- setShowText(show_text) {
-   return progress_bar_set_show_text(this.nativeObj, show_text);
- }
-
- getPercent() {
-   return progress_bar_get_percent(this.nativeObj);
- }
-
- get value() {
-   return progress_bar_t_get_prop_value(this.nativeObj);
- }
-
- get max() {
-   return progress_bar_t_get_prop_max(this.nativeObj);
- }
-
- get vertical() {
-   return progress_bar_t_get_prop_vertical(this.nativeObj);
- }
-
- get showText() {
-   return progress_bar_t_get_prop_show_text(this.nativeObj);
  }
 
 }
@@ -6292,6 +6208,74 @@ class TSlider extends TWidget {
 
 }
 
+class TRow extends TWidget {
+ public nativeObj;
+ constructor(nativeObj) {
+   super(nativeObj);
+ }
+
+ static create(parent, x, y, w, h) {
+   return new TRow(row_create(parent ? parent.nativeObj : null, x, y, w, h));
+ }
+
+ static cast(widget) {
+   return new TRow(row_cast(widget ? (widget.nativeObj || widget) : null));
+ }
+
+}
+
+class TProgressBar extends TWidget {
+ public nativeObj;
+ constructor(nativeObj) {
+   super(nativeObj);
+ }
+
+ static create(parent, x, y, w, h) {
+   return new TProgressBar(progress_bar_create(parent ? parent.nativeObj : null, x, y, w, h));
+ }
+
+ static cast(widget) {
+   return new TProgressBar(progress_bar_cast(widget ? (widget.nativeObj || widget) : null));
+ }
+
+ setValue(value) {
+   return progress_bar_set_value(this.nativeObj, value);
+ }
+
+ setMax(max) {
+   return progress_bar_set_max(this.nativeObj, max);
+ }
+
+ setVertical(vertical) {
+   return progress_bar_set_vertical(this.nativeObj, vertical);
+ }
+
+ setShowText(show_text) {
+   return progress_bar_set_show_text(this.nativeObj, show_text);
+ }
+
+ getPercent() {
+   return progress_bar_get_percent(this.nativeObj);
+ }
+
+ get value() {
+   return progress_bar_t_get_prop_value(this.nativeObj);
+ }
+
+ get max() {
+   return progress_bar_t_get_prop_max(this.nativeObj);
+ }
+
+ get vertical() {
+   return progress_bar_t_get_prop_vertical(this.nativeObj);
+ }
+
+ get showText() {
+   return progress_bar_t_get_prop_show_text(this.nativeObj);
+ }
+
+}
+
 class TAppBar extends TWidget {
  public nativeObj;
  constructor(nativeObj) {
@@ -6604,34 +6588,6 @@ class TSvgImage extends TImageBase {
 
 }
 
-class TTimerInfo extends TObject {
- public nativeObj;
- constructor(nativeObj) {
-   super(nativeObj);
- }
-
- static cast(timer) {
-   return new TTimerInfo(timer_info_cast(timer ? (timer.nativeObj || timer) : null));
- }
-
- get ctx() {
-   return timer_info_t_get_prop_ctx(this.nativeObj);
- }
-
- get id() {
-   return timer_info_t_get_prop_id(this.nativeObj);
- }
-
- get now() {
-   return timer_info_t_get_prop_now(this.nativeObj);
- }
-
- get userChangedTime() {
-   return timer_info_t_get_prop_user_changed_time(this.nativeObj);
- }
-
-}
-
 class TSystemBar extends TWindowBase {
  public nativeObj;
  constructor(nativeObj) {
@@ -6668,6 +6624,34 @@ class TObjectArray extends TObject {
 
  get propsSize() {
    return object_array_t_get_prop_props_size(this.nativeObj);
+ }
+
+}
+
+class TTimerInfo extends TObject {
+ public nativeObj;
+ constructor(nativeObj) {
+   super(nativeObj);
+ }
+
+ static cast(timer) {
+   return new TTimerInfo(timer_info_cast(timer ? (timer.nativeObj || timer) : null));
+ }
+
+ get ctx() {
+   return timer_info_t_get_prop_ctx(this.nativeObj);
+ }
+
+ get id() {
+   return timer_info_t_get_prop_id(this.nativeObj);
+ }
+
+ get now() {
+   return timer_info_t_get_prop_now(this.nativeObj);
+ }
+
+ get userChangedTime() {
+   return timer_info_t_get_prop_user_changed_time(this.nativeObj);
  }
 
 }
@@ -6720,22 +6704,6 @@ class TImage extends TImageBase {
 
 }
 
-class TGifImage extends TImageBase {
- public nativeObj;
- constructor(nativeObj) {
-   super(nativeObj);
- }
-
- static create(parent, x, y, w, h) {
-   return new TGifImage(gif_image_create(parent ? parent.nativeObj : null, x, y, w, h));
- }
-
- static cast(widget) {
-   return new TGifImage(gif_image_cast(widget ? (widget.nativeObj || widget) : null));
- }
-
-}
-
 class TSpinBox extends TEdit {
  public nativeObj;
  constructor(nativeObj) {
@@ -6748,6 +6716,22 @@ class TSpinBox extends TEdit {
 
  static cast(widget) {
    return new TSpinBox(spin_box_cast(widget ? (widget.nativeObj || widget) : null));
+ }
+
+}
+
+class TGifImage extends TImageBase {
+ public nativeObj;
+ constructor(nativeObj) {
+   super(nativeObj);
+ }
+
+ static create(parent, x, y, w, h) {
+   return new TGifImage(gif_image_create(parent ? parent.nativeObj : null, x, y, w, h));
+ }
+
+ static cast(widget) {
+   return new TGifImage(gif_image_cast(widget ? (widget.nativeObj || widget) : null));
  }
 
 }
