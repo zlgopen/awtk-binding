@@ -143,6 +143,10 @@ static int wrap_timer_manager_t_get_prop(lua_State* L);
 static int wrap_timer_manager_t_set_prop(lua_State* L);
 static int wrap_rect_t_get_prop(lua_State* L);
 static int wrap_rect_t_set_prop(lua_State* L);
+static int wrap_pointf_t_get_prop(lua_State* L);
+static int wrap_pointf_t_set_prop(lua_State* L);
+static int wrap_point_t_get_prop(lua_State* L);
+static int wrap_point_t_set_prop(lua_State* L);
 static int wrap_named_value_t_get_prop(lua_State* L);
 static int wrap_named_value_t_set_prop(lua_State* L);
 static int wrap_idle_manager_t_get_prop(lua_State* L);
@@ -5950,6 +5954,106 @@ static void rect_t_init(lua_State* L) {
   lua_settable(L, -3);
   luaL_openlib(L, NULL, index_funcs, 0);
   luaL_openlib(L, "Rect", static_funcs, 0);
+  lua_settop(L, 0);
+}
+
+static const struct luaL_Reg pointf_t_member_funcs[] = {
+  {NULL, NULL}
+};
+
+static int wrap_pointf_t_set_prop(lua_State* L) {
+  pointf_t* obj = (pointf_t*)tk_checkudata(L, 1, "pointf_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  (void)obj;
+  (void)name;
+  log_debug("%s: not supported %s\n", __FUNCTION__, name);
+  return 0;
+}
+
+static int wrap_pointf_t_get_prop(lua_State* L) {
+  pointf_t* obj = (pointf_t*)tk_checkudata(L, 1, "pointf_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  const luaL_Reg* ret = find_member(pointf_t_member_funcs, name);
+
+  (void)obj;
+  (void)name;
+  if(ret) {
+    lua_pushcfunction(L, ret->func);
+    return 1;
+  }
+  else {
+    log_debug("%s: not supported %s\n", __FUNCTION__, name);
+    return 0;
+  }
+}
+
+static void pointf_t_init(lua_State* L) {
+  static const struct luaL_Reg static_funcs[] = {
+    {NULL, NULL}
+  };
+
+  static const struct luaL_Reg index_funcs[] = {
+    {"__index", wrap_pointf_t_get_prop},
+    {"__newindex", wrap_pointf_t_set_prop},
+    {NULL, NULL}
+  };
+
+  luaL_newmetatable(L, "awtk.pointf_t");
+  lua_pushstring(L, "__index");
+  lua_pushvalue(L, -2);
+  lua_settable(L, -3);
+  luaL_openlib(L, NULL, index_funcs, 0);
+  luaL_openlib(L, "Pointf", static_funcs, 0);
+  lua_settop(L, 0);
+}
+
+static const struct luaL_Reg point_t_member_funcs[] = {
+  {NULL, NULL}
+};
+
+static int wrap_point_t_set_prop(lua_State* L) {
+  point_t* obj = (point_t*)tk_checkudata(L, 1, "point_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  (void)obj;
+  (void)name;
+  log_debug("%s: not supported %s\n", __FUNCTION__, name);
+  return 0;
+}
+
+static int wrap_point_t_get_prop(lua_State* L) {
+  point_t* obj = (point_t*)tk_checkudata(L, 1, "point_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  const luaL_Reg* ret = find_member(point_t_member_funcs, name);
+
+  (void)obj;
+  (void)name;
+  if(ret) {
+    lua_pushcfunction(L, ret->func);
+    return 1;
+  }
+  else {
+    log_debug("%s: not supported %s\n", __FUNCTION__, name);
+    return 0;
+  }
+}
+
+static void point_t_init(lua_State* L) {
+  static const struct luaL_Reg static_funcs[] = {
+    {NULL, NULL}
+  };
+
+  static const struct luaL_Reg index_funcs[] = {
+    {"__index", wrap_point_t_get_prop},
+    {"__newindex", wrap_point_t_set_prop},
+    {NULL, NULL}
+  };
+
+  luaL_newmetatable(L, "awtk.point_t");
+  lua_pushstring(L, "__index");
+  lua_pushvalue(L, -2);
+  lua_settable(L, -3);
+  luaL_openlib(L, NULL, index_funcs, 0);
+  luaL_openlib(L, "Point", static_funcs, 0);
   lua_settop(L, 0);
 }
 static void path_t_init(lua_State* L) {
@@ -16759,6 +16863,8 @@ void luaL_openawtk(lua_State* L) {
   timer_manager_t_init(L);
   time_now_t_init(L);
   rect_t_init(L);
+  pointf_t_init(L);
+  point_t_init(L);
   path_t_init(L);
   named_value_t_init(L);
   MIME_TYPE_init(L);

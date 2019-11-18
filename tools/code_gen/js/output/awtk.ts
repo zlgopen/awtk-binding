@@ -3331,6 +3331,22 @@ class TRect {
 
 }
 
+class TPointf {
+ public nativeObj;
+ constructor(nativeObj) {
+   this.nativeObj = nativeObj;
+ }
+
+}
+
+class TPoint {
+ public nativeObj;
+ constructor(nativeObj) {
+   this.nativeObj = nativeObj;
+ }
+
+}
+
 class TPath {
  public nativeObj;
  constructor(nativeObj) {
