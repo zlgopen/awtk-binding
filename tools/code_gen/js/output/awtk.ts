@@ -348,6 +348,7 @@ declare function TK_KEY_F12();
 declare function TK_KEY_MENU();
 declare function TK_KEY_COMMAND();
 declare function TK_KEY_BACK();
+declare function TK_KEY_CANCEL();
 declare function locale_info();
 declare function locale_info_tr(locale_info, text);
 declare function locale_info_change(locale_info, language, country);
@@ -536,11 +537,13 @@ declare function WIDGET_PROP_ALIGN_H();
 declare function WIDGET_PROP_AUTO_PLAY();
 declare function WIDGET_PROP_LOOP();
 declare function WIDGET_PROP_AUTO_FIX();
+declare function WIDGET_PROP_SELECT_NONE_WHEN_FOCUSED();
 declare function WIDGET_PROP_X_MIN();
 declare function WIDGET_PROP_X_MAX();
 declare function WIDGET_PROP_Y_MIN();
 declare function WIDGET_PROP_Y_MAX();
 declare function WIDGET_PROP_MAX();
+declare function WIDGET_PROP_GRAB_KEYS();
 declare function WIDGET_PROP_ROW();
 declare function WIDGET_PROP_STATE_FOR_STYLE();
 declare function WIDGET_PROP_THEME();
@@ -590,8 +593,12 @@ declare function WIDGET_PROP_FOCUSED();
 declare function WIDGET_PROP_FOCUS();
 declare function WIDGET_PROP_FOCUSABLE();
 declare function WIDGET_PROP_WITH_FOCUS_STATE();
-declare function WIDGET_PROP_MOVE_FOCUS_NEXT_KEY();
 declare function WIDGET_PROP_MOVE_FOCUS_PREV_KEY();
+declare function WIDGET_PROP_MOVE_FOCUS_NEXT_KEY();
+declare function WIDGET_PROP_MOVE_FOCUS_UP_KEY();
+declare function WIDGET_PROP_MOVE_FOCUS_DOWN_KEY();
+declare function WIDGET_PROP_MOVE_FOCUS_LEFT_KEY();
+declare function WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY();
 declare function WIDGET_TYPE_NONE();
 declare function WIDGET_TYPE_WINDOW_MANAGER();
 declare function WIDGET_TYPE_NORMAL_WINDOW();
@@ -1534,6 +1541,7 @@ declare function edit_set_int_limit(widget, min, max, step);
 declare function edit_set_float_limit(widget, min, max, step);
 declare function edit_set_readonly(widget, readonly);
 declare function edit_set_auto_fix(widget, auto_fix);
+declare function edit_set_select_none_when_focused(widget, select_none_when_focused);
 declare function edit_set_input_type(widget, type);
 declare function edit_set_input_tips(widget, tips);
 declare function edit_set_password_visible(widget, password_visible);
@@ -1542,6 +1550,7 @@ declare function edit_set_cursor(widget, cursor);
 declare function edit_t_get_prop_readonly(nativeObj);
 declare function edit_t_get_prop_password_visible(nativeObj);
 declare function edit_t_get_prop_auto_fix(nativeObj);
+declare function edit_t_get_prop_select_none_when_focused(nativeObj);
 declare function edit_t_get_prop_tips(nativeObj);
 declare function edit_t_get_prop_input_type(nativeObj);
 declare function edit_t_get_prop_min(nativeObj);
@@ -2296,6 +2305,7 @@ enum TKeyCode {
  KEY_MENU = TK_KEY_MENU(),
  KEY_COMMAND = TK_KEY_COMMAND(),
  KEY_BACK = TK_KEY_BACK(),
+ KEY_CANCEL = TK_KEY_CANCEL(),
 };
 
 class TLocaleInfo {
@@ -2752,11 +2762,13 @@ enum TWidgetProp {
  AUTO_PLAY = WIDGET_PROP_AUTO_PLAY(),
  LOOP = WIDGET_PROP_LOOP(),
  AUTO_FIX = WIDGET_PROP_AUTO_FIX(),
+ SELECT_NONE_WHEN_FOCUSED = WIDGET_PROP_SELECT_NONE_WHEN_FOCUSED(),
  X_MIN = WIDGET_PROP_X_MIN(),
  X_MAX = WIDGET_PROP_X_MAX(),
  Y_MIN = WIDGET_PROP_Y_MIN(),
  Y_MAX = WIDGET_PROP_Y_MAX(),
  MAX = WIDGET_PROP_MAX(),
+ GRAB_KEYS = WIDGET_PROP_GRAB_KEYS(),
  ROW = WIDGET_PROP_ROW(),
  STATE_FOR_STYLE = WIDGET_PROP_STATE_FOR_STYLE(),
  THEME = WIDGET_PROP_THEME(),
@@ -2806,8 +2818,12 @@ enum TWidgetProp {
  FOCUS = WIDGET_PROP_FOCUS(),
  FOCUSABLE = WIDGET_PROP_FOCUSABLE(),
  WITH_FOCUS_STATE = WIDGET_PROP_WITH_FOCUS_STATE(),
- MOVE_FOCUS_NEXT_KEY = WIDGET_PROP_MOVE_FOCUS_NEXT_KEY(),
  MOVE_FOCUS_PREV_KEY = WIDGET_PROP_MOVE_FOCUS_PREV_KEY(),
+ MOVE_FOCUS_NEXT_KEY = WIDGET_PROP_MOVE_FOCUS_NEXT_KEY(),
+ MOVE_FOCUS_UP_KEY = WIDGET_PROP_MOVE_FOCUS_UP_KEY(),
+ MOVE_FOCUS_DOWN_KEY = WIDGET_PROP_MOVE_FOCUS_DOWN_KEY(),
+ MOVE_FOCUS_LEFT_KEY = WIDGET_PROP_MOVE_FOCUS_LEFT_KEY(),
+ MOVE_FOCUS_RIGHT_KEY = WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY(),
 };
 
 enum TWidgetType {
@@ -6499,6 +6515,10 @@ class TEdit extends TWidget {
    return edit_set_auto_fix(this.nativeObj, auto_fix);
  }
 
+ setSelectNoneWhenFocused(select_none_when_focused) {
+   return edit_set_select_none_when_focused(this.nativeObj, select_none_when_focused);
+ }
+
  setInputType(type) {
    return edit_set_input_type(this.nativeObj, type);
  }
@@ -6529,6 +6549,10 @@ class TEdit extends TWidget {
 
  get autoFix() {
    return edit_t_get_prop_auto_fix(this.nativeObj);
+ }
+
+ get selectNoneWhenFocused() {
+   return edit_t_get_prop_select_none_when_focused(this.nativeObj);
  }
 
  get tips() {
