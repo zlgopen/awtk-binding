@@ -67,6 +67,12 @@ declare function CLIP_BOARD_DATA_TYPE_NONE();
 declare function CLIP_BOARD_DATA_TYPE_TEXT();
 declare function clip_board_set_text(text);
 declare function clip_board_get_text();
+declare function DIALOG_QUIT_NONE();
+declare function DIALOG_QUIT_OK();
+declare function DIALOG_QUIT_YES();
+declare function DIALOG_QUIT_CANCEL();
+declare function DIALOG_QUIT_NO();
+declare function DIALOG_QUIT_OTHER();
 declare function EVT_POINTER_DOWN();
 declare function EVT_POINTER_DOWN_BEFORE_CHILDREN();
 declare function EVT_POINTER_MOVE();
@@ -538,6 +544,7 @@ declare function WIDGET_PROP_AUTO_PLAY();
 declare function WIDGET_PROP_LOOP();
 declare function WIDGET_PROP_AUTO_FIX();
 declare function WIDGET_PROP_SELECT_NONE_WHEN_FOCUSED();
+declare function WIDGET_PROP_OPEN_IM_WHEN_FOCUSED();
 declare function WIDGET_PROP_X_MIN();
 declare function WIDGET_PROP_X_MAX();
 declare function WIDGET_PROP_Y_MIN();
@@ -920,6 +927,7 @@ declare function EVT_PROP_CHANGED();
 declare function EVT_ITEMS_WILL_CHANGE();
 declare function EVT_ITEMS_CHANGED();
 declare function EVT_PROPS_CHANGED();
+declare function EVT_PROGRESS();
 declare function EVT_DESTROY();
 declare function emitter_create();
 declare function emitter_dispatch(emitter, e);
@@ -994,8 +1002,7 @@ declare function ASSET_TYPE_DATA();
 declare function assets_manager();
 declare function assets_manager_ref(am, type, name);
 declare function assets_manager_unref(am, info);
-declare function canvas_widget_create(parent, x, y, w, h);
-declare function canvas_widget_cast(widget);
+declare function color_component_cast(widget);
 declare function time_clock_create(parent, x, y, w, h);
 declare function time_clock_cast(widget);
 declare function time_clock_set_hour(widget, hour);
@@ -1044,6 +1051,11 @@ declare function switch_set_value(widget, value);
 declare function switch_cast(widget);
 declare function switch_t_get_prop_value(nativeObj);
 declare function switch_t_get_prop_max_xoffset_ratio(nativeObj);
+declare function prop_change_event_cast(event);
+declare function prop_change_event_t_get_prop_name(nativeObj);
+declare function prop_change_event_t_get_prop_value(nativeObj);
+declare function progress_event_cast(event);
+declare function progress_event_t_get_prop_percent(nativeObj);
 declare function dialog_create(parent, x, y, w, h);
 declare function dialog_create_simple(parent, x, y, w, h);
 declare function dialog_cast(widget);
@@ -1071,9 +1083,6 @@ declare function slide_view_t_get_prop_vertical(nativeObj);
 declare function slide_view_t_get_prop_auto_play(nativeObj);
 declare function slide_view_t_get_prop_loop(nativeObj);
 declare function slide_view_t_get_prop_anim_hint(nativeObj);
-declare function prop_change_event_cast(event);
-declare function prop_change_event_t_get_prop_name(nativeObj);
-declare function prop_change_event_t_get_prop_value(nativeObj);
 declare function slide_indicator_create(parent, x, y, w, h);
 declare function slide_indicator_create_linear(parent, x, y, w, h);
 declare function slide_indicator_create_arc(parent, x, y, w, h);
@@ -1135,6 +1144,8 @@ declare function scroll_bar_t_get_prop_virtual_size(nativeObj);
 declare function scroll_bar_t_get_prop_value(nativeObj);
 declare function scroll_bar_t_get_prop_row(nativeObj);
 declare function scroll_bar_t_get_prop_animatable(nativeObj);
+declare function view_create(parent, x, y, w, h);
+declare function view_cast(widget);
 declare function list_view_create(parent, x, y, w, h);
 declare function list_view_set_item_height(widget, item_height);
 declare function list_view_set_default_item_height(widget, default_item_height);
@@ -1149,10 +1160,6 @@ declare function list_view_h_set_spacing(widget, spacing);
 declare function list_view_h_cast(widget);
 declare function list_view_h_t_get_prop_item_width(nativeObj);
 declare function list_view_h_t_get_prop_spacing(nativeObj);
-declare function view_create(parent, x, y, w, h);
-declare function view_cast(widget);
-declare function list_item_create(parent, x, y, w, h);
-declare function list_item_cast(widget);
 declare function tab_control_create(parent, x, y, w, h);
 declare function tab_control_cast(widget);
 declare function tab_button_create(parent, x, y, w, h);
@@ -1163,6 +1170,8 @@ declare function tab_button_set_active_icon(widget, name);
 declare function tab_button_t_get_prop_value(nativeObj);
 declare function tab_button_t_get_prop_active_icon(nativeObj);
 declare function tab_button_t_get_prop_icon(nativeObj);
+declare function list_item_create(parent, x, y, w, h);
+declare function list_item_cast(widget);
 declare function hscroll_label_create(parent, x, y, w, h);
 declare function hscroll_label_set_lull(widget, lull);
 declare function hscroll_label_set_duration(widget, duration);
@@ -1376,7 +1385,8 @@ declare function color_picker_create(parent, x, y, w, h);
 declare function color_picker_set_color(widget, color);
 declare function color_picker_cast(widget);
 declare function color_picker_t_get_prop_value(nativeObj);
-declare function color_component_cast(widget);
+declare function canvas_widget_create(parent, x, y, w, h);
+declare function canvas_widget_cast(widget);
 declare function overlay_create(parent, x, y, w, h);
 declare function overlay_cast(widget);
 declare function window_create(parent, x, y, w, h);
@@ -1542,6 +1552,7 @@ declare function edit_set_float_limit(widget, min, max, step);
 declare function edit_set_readonly(widget, readonly);
 declare function edit_set_auto_fix(widget, auto_fix);
 declare function edit_set_select_none_when_focused(widget, select_none_when_focused);
+declare function edit_set_open_im_when_focused(widget, open_im_when_focused);
 declare function edit_set_input_type(widget, type);
 declare function edit_set_input_tips(widget, tips);
 declare function edit_set_password_visible(widget, password_visible);
@@ -1551,6 +1562,7 @@ declare function edit_t_get_prop_readonly(nativeObj);
 declare function edit_t_get_prop_password_visible(nativeObj);
 declare function edit_t_get_prop_auto_fix(nativeObj);
 declare function edit_t_get_prop_select_none_when_focused(nativeObj);
+declare function edit_t_get_prop_open_im_when_focused(nativeObj);
 declare function edit_t_get_prop_tips(nativeObj);
 declare function edit_t_get_prop_input_type(nativeObj);
 declare function edit_t_get_prop_min(nativeObj);
@@ -1814,6 +1826,15 @@ class TClipBoard {
  }
 
 }
+
+enum TDialogQuitCode {
+ NONE = DIALOG_QUIT_NONE(),
+ OK = DIALOG_QUIT_OK(),
+ YES = DIALOG_QUIT_YES(),
+ CANCEL = DIALOG_QUIT_CANCEL(),
+ NO = DIALOG_QUIT_NO(),
+ OTHER = DIALOG_QUIT_OTHER(),
+};
 
 enum TEventType {
  POINTER_DOWN = EVT_POINTER_DOWN(),
@@ -2763,6 +2784,7 @@ enum TWidgetProp {
  LOOP = WIDGET_PROP_LOOP(),
  AUTO_FIX = WIDGET_PROP_AUTO_FIX(),
  SELECT_NONE_WHEN_FOCUSED = WIDGET_PROP_SELECT_NONE_WHEN_FOCUSED(),
+ OPEN_IM_WHEN_FOCUSED = WIDGET_PROP_OPEN_IM_WHEN_FOCUSED(),
  X_MIN = WIDGET_PROP_X_MIN(),
  X_MAX = WIDGET_PROP_X_MAX(),
  Y_MIN = WIDGET_PROP_Y_MIN(),
@@ -3575,6 +3597,7 @@ enum TEventBaseType {
  ITEMS_WILL_CHANGE = EVT_ITEMS_WILL_CHANGE(),
  ITEMS_CHANGED = EVT_ITEMS_CHANGED(),
  PROPS_CHANGED = EVT_PROPS_CHANGED(),
+ PROGRESS = EVT_PROGRESS(),
  DESTROY = EVT_DESTROY(),
 };
 
@@ -3817,18 +3840,14 @@ class TAssetsManager {
 
 }
 
-class TCanvasWidget extends TWidget {
+class TColorComponent extends TWidget {
  public nativeObj;
  constructor(nativeObj) {
    super(nativeObj);
  }
 
- static create(parent, x, y, w, h) {
-   return new TCanvasWidget(canvas_widget_create(parent ? parent.nativeObj : null, x, y, w, h));
- }
-
  static cast(widget) {
-   return new TCanvasWidget(canvas_widget_cast(widget ? (widget.nativeObj || widget) : null));
+   return new TColorComponent(color_component_cast(widget ? (widget.nativeObj || widget) : null));
  }
 
 }
@@ -4049,6 +4068,42 @@ class TSwitch extends TWidget {
 
 }
 
+class TPropChangeEvent extends TEvent {
+ public nativeObj;
+ constructor(nativeObj) {
+   super(nativeObj);
+ }
+
+ static cast(event) {
+   return new TPropChangeEvent(prop_change_event_cast(event ? (event.nativeObj || event) : null));
+ }
+
+ get name() {
+   return prop_change_event_t_get_prop_name(this.nativeObj);
+ }
+
+ get value() {
+   return prop_change_event_t_get_prop_value(this.nativeObj);
+ }
+
+}
+
+class TProgressEvent extends TEvent {
+ public nativeObj;
+ constructor(nativeObj) {
+   super(nativeObj);
+ }
+
+ static cast(event) {
+   return new TProgressEvent(progress_event_cast(event ? (event.nativeObj || event) : null));
+ }
+
+ get percent() {
+   return progress_event_t_get_prop_percent(this.nativeObj);
+ }
+
+}
+
 class TDialog extends TWidget {
  public nativeObj;
  constructor(nativeObj) {
@@ -4169,26 +4224,6 @@ class TSlideView extends TWidget {
 
  get animHint() {
    return slide_view_t_get_prop_anim_hint(this.nativeObj);
- }
-
-}
-
-class TPropChangeEvent extends TEvent {
- public nativeObj;
- constructor(nativeObj) {
-   super(nativeObj);
- }
-
- static cast(event) {
-   return new TPropChangeEvent(prop_change_event_cast(event ? (event.nativeObj || event) : null));
- }
-
- get name() {
-   return prop_change_event_t_get_prop_name(this.nativeObj);
- }
-
- get value() {
-   return prop_change_event_t_get_prop_value(this.nativeObj);
  }
 
 }
@@ -4469,6 +4504,22 @@ class TScrollBar extends TWidget {
 
 }
 
+class TView extends TWidget {
+ public nativeObj;
+ constructor(nativeObj) {
+   super(nativeObj);
+ }
+
+ static create(parent, x, y, w, h) {
+   return new TView(view_create(parent ? parent.nativeObj : null, x, y, w, h));
+ }
+
+ static cast(widget) {
+   return new TView(view_cast(widget ? (widget.nativeObj || widget) : null));
+ }
+
+}
+
 class TListView extends TWidget {
  public nativeObj;
  constructor(nativeObj) {
@@ -4541,38 +4592,6 @@ class TListViewH extends TWidget {
 
 }
 
-class TView extends TWidget {
- public nativeObj;
- constructor(nativeObj) {
-   super(nativeObj);
- }
-
- static create(parent, x, y, w, h) {
-   return new TView(view_create(parent ? parent.nativeObj : null, x, y, w, h));
- }
-
- static cast(widget) {
-   return new TView(view_cast(widget ? (widget.nativeObj || widget) : null));
- }
-
-}
-
-class TListItem extends TWidget {
- public nativeObj;
- constructor(nativeObj) {
-   super(nativeObj);
- }
-
- static create(parent, x, y, w, h) {
-   return new TListItem(list_item_create(parent ? parent.nativeObj : null, x, y, w, h));
- }
-
- static cast(widget) {
-   return new TListItem(list_item_cast(widget ? (widget.nativeObj || widget) : null));
- }
-
-}
-
 class TTabControl extends TWidget {
  public nativeObj;
  constructor(nativeObj) {
@@ -4625,6 +4644,22 @@ class TTabButton extends TWidget {
 
  get icon() {
    return tab_button_t_get_prop_icon(this.nativeObj);
+ }
+
+}
+
+class TListItem extends TWidget {
+ public nativeObj;
+ constructor(nativeObj) {
+   super(nativeObj);
+ }
+
+ static create(parent, x, y, w, h) {
+   return new TListItem(list_item_create(parent ? parent.nativeObj : null, x, y, w, h));
+ }
+
+ static cast(widget) {
+   return new TListItem(list_item_cast(widget ? (widget.nativeObj || widget) : null));
  }
 
 }
@@ -5633,14 +5668,18 @@ class TColorPicker extends TWidget {
 
 }
 
-class TColorComponent extends TWidget {
+class TCanvasWidget extends TWidget {
  public nativeObj;
  constructor(nativeObj) {
    super(nativeObj);
  }
 
+ static create(parent, x, y, w, h) {
+   return new TCanvasWidget(canvas_widget_create(parent ? parent.nativeObj : null, x, y, w, h));
+ }
+
  static cast(widget) {
-   return new TColorComponent(color_component_cast(widget ? (widget.nativeObj || widget) : null));
+   return new TCanvasWidget(canvas_widget_cast(widget ? (widget.nativeObj || widget) : null));
  }
 
 }
@@ -6519,6 +6558,10 @@ class TEdit extends TWidget {
    return edit_set_select_none_when_focused(this.nativeObj, select_none_when_focused);
  }
 
+ setOpenImWhenFocused(open_im_when_focused) {
+   return edit_set_open_im_when_focused(this.nativeObj, open_im_when_focused);
+ }
+
  setInputType(type) {
    return edit_set_input_type(this.nativeObj, type);
  }
@@ -6553,6 +6596,10 @@ class TEdit extends TWidget {
 
  get selectNoneWhenFocused() {
    return edit_t_get_prop_select_none_when_focused(this.nativeObj);
+ }
+
+ get openImWhenFocused() {
+   return edit_t_get_prop_open_im_when_focused(this.nativeObj);
  }
 
  get tips() {
