@@ -58,11 +58,15 @@ declare function canvas_draw_utf8(c, str, x, y);
 declare function canvas_draw_utf8_in_rect(c, str, r);
 declare function canvas_draw_icon(c, img, cx, cy);
 declare function canvas_draw_image(c, img, src, dst);
+declare function canvas_draw_image_ex(c, img, draw_type, dst);
 declare function canvas_get_vgcanvas(c);
 declare function canvas_cast(c);
 declare function canvas_reset(c);
 declare function canvas_t_get_prop_ox(nativeObj);
 declare function canvas_t_get_prop_oy(nativeObj);
+declare function canvas_t_get_prop_font_name(nativeObj);
+declare function canvas_t_get_prop_font_size(nativeObj);
+declare function canvas_t_get_prop_global_alpha(nativeObj);
 declare function CLIP_BOARD_DATA_TYPE_NONE();
 declare function CLIP_BOARD_DATA_TYPE_TEXT();
 declare function clip_board_set_text(text);
@@ -1784,6 +1788,10 @@ class TCanvas {
    return canvas_draw_image(this.nativeObj, img ? img.nativeObj : null, src ? src.nativeObj : null, dst ? dst.nativeObj : null);
  }
 
+ drawImageEx(img, draw_type, dst) {
+   return canvas_draw_image_ex(this.nativeObj, img ? img.nativeObj : null, draw_type, dst ? dst.nativeObj : null);
+ }
+
  getVgcanvas() {
    return new TVgcanvas(canvas_get_vgcanvas(this.nativeObj));
  }
@@ -1802,6 +1810,18 @@ class TCanvas {
 
  get oy() {
    return canvas_t_get_prop_oy(this.nativeObj);
+ }
+
+ get fontName() {
+   return canvas_t_get_prop_font_name(this.nativeObj);
+ }
+
+ get fontSize() {
+   return canvas_t_get_prop_font_size(this.nativeObj);
+ }
+
+ get globalAlpha() {
+   return canvas_t_get_prop_global_alpha(this.nativeObj);
  }
 
 }

@@ -900,6 +900,39 @@
             "type": "canvas_t*",
             "name": "c",
             "desc": "canvas对象。"
+          },
+          {
+            "type": "bitmap_t*",
+            "name": "img",
+            "desc": "图片对象。"
+          },
+          {
+            "type": "image_draw_type_t",
+            "name": "draw_type",
+            "desc": "绘制类型。"
+          },
+          {
+            "type": "rect_t*",
+            "name": "dst",
+            "desc": "目的区域。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "绘制图片。\n",
+        "name": "canvas_draw_image_ex",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "canvas_t*",
+            "name": "c",
+            "desc": "canvas对象。"
           }
         ],
         "annotation": {
@@ -969,10 +1002,37 @@
           "readable": true,
           "scriptable": true
         }
+      },
+      {
+        "name": "font_name",
+        "desc": "当前字体名称。\n",
+        "type": "char*",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "font_size",
+        "desc": "当前字体大小。\n",
+        "type": "uint16_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "global_alpha",
+        "desc": "当前全局alpha。\n",
+        "type": "uint8_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
       }
     ],
     "header": "base/canvas.h",
-    "desc": "canvas类。\n",
+    "desc": "提供基本的绘图功能和状态管理。\n",
     "name": "canvas_t",
     "annotation": {
       "scriptable": true
