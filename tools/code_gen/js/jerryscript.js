@@ -2,7 +2,7 @@ const fs = require('fs')
 const CodeGen = require('../common/code_gen.js')
 const JsBindingGenerator = require('./js_binding.js');
 
-class QuickJSGenerator extends JsBindingGenerator {
+class JerryscriptGenerator extends JsBindingGenerator {
   constructor() {
     super();
   }
@@ -29,18 +29,18 @@ class QuickJSGenerator extends JsBindingGenerator {
   genFreeStr(name) {
     return `  TKMEM_FREE(${name});\n`;
   }
-  
+
   genGlobalInfo(json) {
     let result = '';
     json.forEach(cls => {
-      if(cls.methods) {
+      if (cls.methods) {
         cls.methods.forEach(m => {
-          if(this.isGcDeconstructor(m)) {
+          if (this.isGcDeconstructor(m)) {
             result += `static jerry_object_native_info_t s_${m.name}_info = {
   (jerry_object_native_free_callback_t)${m.name}
 };
 `;
-        cls.gc = m.name;
+            cls.gc = m.name;
           }
         });
       }
@@ -52,7 +52,7 @@ class QuickJSGenerator extends JsBindingGenerator {
   genCreateObject(name, type, destroyFunc) {
     return `  jret = jsvalue_create_object(ctx, ${name}, "${type}", &s_${destroyFunc}_info);\n`;
   }
-  
+
   genGetObject(index, type, name) {
     return `(${type})jsvalue_get_pointer(ctx, argv[${index}], "${type}");\n`;
   }
@@ -70,11 +70,11 @@ class QuickJSGenerator extends JsBindingGenerator {
   }
 
   static gen() {
-    const gen = new QuickJSGenerator();
+    const gen = new JerryscriptGenerator();
 
     gen.genAll(gen.getJsonIDL());
     gen.saveResult('output/tk_jerryscript.c');
   }
 }
 
-QuickJSGenerator.gen();
+JerryscriptGenerator.gen();

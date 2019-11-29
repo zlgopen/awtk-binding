@@ -1,6 +1,33 @@
 const fs = require('fs');
 
 class CodeGen {
+  camelCase(name) {
+    if (name.indexOf('_') > 0) {
+      name = name.replace(/(_)[a-z]/g, r => {
+        if (r.length > 1) {
+          r = r.substr(1);
+        }
+
+        return r.toUpperCase();
+      });
+    }
+
+    return name;
+  }
+
+  upperCamelName(name) {
+    name = name.replace(/_t$/, '');
+    name = name.replace(/(^|_)[a-z]/g, r => {
+      if (r.length > 1) {
+        r = r.substr(1);
+      }
+
+      return r.toUpperCase();
+    });
+
+    return name;
+  }
+
   CodeGen() {
     this.result = '';
   }
@@ -113,7 +140,7 @@ class CodeGen {
     fs.writeFileSync(filename, this.result);
     console.log(`write result to ${filename}`);
   }
-  
+
   getJsonIDL() {
     return '../../../../awtk/tools/idl_gen/idl.json';
   }

@@ -6792,29 +6792,6 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "查找指定名称的动画。\n",
-        "name": "widget_find_animator",
-        "return": {
-          "type": "widget_animator_t*",
-          "desc": "成功返回动画对象，失败返回NULL。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "widget_t*",
-            "name": "widget",
-            "desc": "控件对象。"
-          },
-          {
-            "type": "char*",
-            "name": "name",
-            "desc": "动画名称。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
         "desc": "停止动画(控件的相应属性回归原位)。\n请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)\n* 1.widget为NULL时，停止所有名称为name的动画。\n* 2.name为NULL时，停止所有widget相关的动画。\n* 3.widget和name均为NULL，停止所有动画。\n",
         "name": "widget_stop_animator",
         "return": {
@@ -7605,8 +7582,26 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "销毁控件。\n一般无需直接调用，关闭窗口时，自动销毁相关控件。\n",
+        "desc": "从父控件中移除控件，并调用unref函数销毁控件。\n> 一般无需直接调用，关闭窗口时，自动销毁相关控件。\n",
         "name": "widget_destroy",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "减少控件的引用计数。引用计数为0时销毁控件。\n",
+        "name": "widget_unref",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
