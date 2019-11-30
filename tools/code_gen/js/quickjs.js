@@ -7,13 +7,18 @@ class QuickJSGenerator extends JsBindingGenerator {
     super();
   }
 
+  genFuncBegin(name, prefix) {
+    prefix = prefix || 'wrap';
+    return `jsvalue_t ${prefix}_${name}` + this.genFuncArgs() + ' {\n';
+  }
+
   genFuncArgs() {
     return `(
     JSContext *ctx, 
     jsvalue_const_t this_val,
     int argc, 
     jsvalue_const_t *argv
-  ) {\n`;
+  )`;
   }
 
   genJavascriptIncludes() {

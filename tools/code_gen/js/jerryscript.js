@@ -7,15 +7,23 @@ class JerryscriptGenerator extends JsBindingGenerator {
     super();
   }
 
+  genFuncBegin(name, prefix) {
+    prefix = prefix || 'wrap';
+    let result = `jsvalue_t ${prefix}_${name}` + this.genFuncArgs();
+
+    result +='  {\n';
+    result +='  void* ctx = NULL;\n';
+
+    return result;
+  }
+
   genFuncArgs() {
     return `(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
-  ) {\n
-    void* ctx = NULL;
-  `;
+  )`;
   }
 
   genJavascriptIncludes() {
