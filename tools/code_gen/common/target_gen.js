@@ -8,6 +8,14 @@ class TargetGen extends CodeGen {
     this.classNamePrefix = 'T';
   }
 
+  getNull() {
+    return 'null';
+  }
+
+  getNativeNull() {
+    return 'null';
+  }
+
   toClassName(name) {
     return this.classNamePrefix + this.upperCamelName(name);
   }
@@ -43,12 +51,12 @@ class TargetGen extends CodeGen {
     let result = '';
     m.params.forEach((iter, index) => {
       if (index === 0) {
-        result += this.mapTypeVar(iter.type, iter.name);
+        result += this.mapTypeVar(iter.type, iter.name, true);
       } else {
         if (result) {
           result += ', ';
         }
-        result += this.mapTypeVar(iter.type, iter.name);
+        result += this.mapTypeVar(iter.type, iter.name, true);
       }
     });
 
@@ -69,10 +77,14 @@ class TargetGen extends CodeGen {
       if (result !== '') {
         result += ', ';
       }
-      result += this.mapTypeVar(iter.type, iter.name);
+      result += this.mapTypeVar(iter.type, iter.name, false);
     });
 
     return '(' + result + ')';
+  }
+
+  genGetNativeObj(name, isCast) {
+    return `${name} != ${this.getNull()} ? (${name}.nativeObj) : ${this.getNativeNull()}`;
   }
 
   genCallParamList(m) {
@@ -87,7 +99,7 @@ class TargetGen extends CodeGen {
           result += 'this.nativeObj';
           return;
         } else if (this.isCast(m)) {
-          result += `${name} ? (${name}.nativeObj || ${name}) : null`;
+          result += this.genGetNativeObj(name, true);
           return;
         }
       }
@@ -97,13 +109,21 @@ class TargetGen extends CodeGen {
       }
 
       if (this.isClassName(iter.type)) {
-        result += `${name} ? ${name}.nativeObj : null`;
+        result += this.genGetNativeObj(name, false);
       } else {
         result += name;
       }
     });
 
     return '(' + result + ')';
+  }
+
+  genOneClassPre(cls) {
+    return '';
+  }
+
+  genOneClassPost(cls) {
+    return '';
   }
 
   genOneClass(cls) {
@@ -117,7 +137,8 @@ class TargetGen extends CodeGen {
       result += ' {\n';
     }
 
-    result += ' public nativeObj;\n';
+    result += this.genOneClassPre(cls);
+
     result += this.genConstructor(cls);
 
     if (cls.methods) {
@@ -143,6 +164,7 @@ class TargetGen extends CodeGen {
         result += this.genConst(cls, iter);
       });
     }
+    result += this.genOneClassPost(cls);
 
     result += '}\n\n';
     return result;

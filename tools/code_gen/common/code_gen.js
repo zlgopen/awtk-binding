@@ -6,39 +6,51 @@ class CodeGen {
     return type.replace(/const /g, "");
   }
 
-  typeIsFunction(type) {
-   return type.indexOf('event_func_t') >= 0 
-    || type.indexOf('tk_visit_t') >= 0 
-    || type.indexOf('idle_func_t') >= 0 
-    || type.indexOf('timer_func_t') >= 0;
+  typeIsPointer(type) {
+    return type.indexOf('*') > 0;
   }
 
-  typeIsInterger(type) {
+  typeIsClassPointer(type) {
+    return this.typeIsPointer(type) && this.getClassInfo(type);
+  }
+
+  typeIsFunction(type) {
+    return type.indexOf('event_func_t') >= 0
+      || type.indexOf('tk_visit_t') >= 0
+      || type.indexOf('idle_func_t') >= 0
+      || type.indexOf('timer_func_t') >= 0;
+  }
+
+  typeIsLongInteger(type) {
+    return type.indexOf('int64') >= 0 || type.indexOf('long long') >= 0;
+  }
+
+  typeIsInteger(type) {
     return type.indexOf('int') >= 0 || type.indexOf('ret_t') >= 0
       || type.indexOf('wh_t') >= 0 || type.indexOf("xy_t") >= 0
-      || type.indexOf('font_size_t') >= 0;
+      || type.indexOf('font_size_t') >= 0 || type.indexOf('long') >= 0;
   }
 
   typeIsFloat(type) {
     return type.indexOf('float') >= 0 || type.indexOf("double") >= 0;
   }
-  
+
   typeIsNumber(type) {
-    return this.typeIsInterger(type) || this.typeIsFloat(type);
+    return this.typeIsInteger(type) || this.typeIsFloat(type);
   }
-  
+
   typeIsBool(type) {
     return type.indexOf('bool_t') >= 0;
   }
-  
+
   typeIsString(type) {
     return type.indexOf('char*') >= 0;
   }
 
   typeToName(type) {
-    let name = this.typeToNativeName(type); 
+    let name = this.typeToNativeName(type);
     let cls = this.getClassOrEnumInfo(name);
-    if(cls) {
+    if (cls) {
       return this.toClassName(cls.name);
     } else {
       return null;
@@ -83,7 +95,6 @@ class CodeGen {
   isGcDeconstructor(obj) {
     return obj.annotation && (obj.annotation.deconstructor === true && obj.annotation.gc);
   }
-
 
   isScriptable(obj) {
     return obj.annotation && obj.annotation.scriptable;
@@ -141,7 +152,7 @@ class CodeGen {
 
     return null;
   }
-  
+
   getClassOrEnumInfo(name) {
     const json = this.json;
 
@@ -187,7 +198,7 @@ class CodeGen {
     return json;
   }
 
-  genJsonAll(ojson) {}
+  genJsonAll(ojson) { }
 
   genAll(filename) {
     this.json = JSON.parse(fs.readFileSync(filename).toString());

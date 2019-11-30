@@ -6,6 +6,14 @@ class TypescriptGenerator extends TargetGen {
     super()
   }
   
+  genGetNativeObj(name, isCast) {
+    if(isCast) {
+      return `${name} != ${this.getNull()} ? (${name}.nativeObj || ${name}) : ${this.getNativeNull()}`;
+    } else {
+      return `${name} != ${this.getNull()} ? (${name}.nativeObj || ${name}) : ${this.getNativeNull()}`;
+    }
+  }
+  
   mapType(type) {
     let name = this.typeToName(type); 
     if(name) {
@@ -66,26 +74,36 @@ class TypescriptGenerator extends TargetGen {
 
     return result;
   }
+  
+  genOneClassPre(cls) {
+    return ' public nativeObj : any;\n';
+  }
 
   genSetProperty(cls, p) {
     let result = '';
     const name = this.toFuncName(cls.name, p.name);
     const funcName = this.getSetPropertyFuncName(cls, p);
 
-    result += ` set ${name}(value) {\n`;
+    result += ` set ${name}(${this.mapTypeVar(p.type, 'value', false)}) {\n`;
     result += `   ${funcName}(this.nativeObj, value);\n`;
     result += ' }\n\n'
 
     return result;
   }
-
+  
   genGetProperty(cls, p) {
     let result = '';
     const type = p.type;
+    const retType = this.typeToName(type); 
     const name = this.toFuncName(cls.name, p.name);
     const funcName = this.getGetPropertyFuncName(cls, p);
-    result += ` get ${name}() {\n`;
-    result += `   return ${funcName}(this.nativeObj);\n`;
+
+    result += ` get ${name}() : ${this.mapType(type, false)} {\n`;
+      if(retType && this.typeIsPointer(type)) {
+        result += `   return new ${retType}(${funcName}(this.nativeObj));\n`;
+      } else {
+        result += `   return ${funcName}(this.nativeObj);\n`;
+      }
     result += ' }\n\n'
 
     return result;
@@ -97,12 +115,12 @@ class TypescriptGenerator extends TargetGen {
 
   genGetPropNativeDecl(cls, p) {
     const funcName = this.getGetPropertyFuncName(cls, p);
-    return `declare function ${funcName}(nativeObj);\n`;
+    return `declare function ${funcName}(nativeObj : any);\n`;
   }
 
   genSetPropNativeDecl(cls, p) {
     const funcName = this.getSetPropertyFuncName(cls, p);
-    return `declare function ${funcName}(nativeObj, value);\n`;
+    return `declare function ${funcName}(nativeObj : any, ${this.mapTypeVar(p.type, 'value', true)});\n`;
   }
 
   genConstNativeDecl(cls, c) {
