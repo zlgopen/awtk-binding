@@ -1,6 +1,50 @@
 const fs = require('fs');
 
 class CodeGen {
+  typeToNativeName(type) {
+    type = type.replace(/\*/g, "");
+    return type.replace(/const /g, "");
+  }
+
+  typeIsFunction(type) {
+   return type.indexOf('event_func_t') >= 0 
+    || type.indexOf('tk_visit_t') >= 0 
+    || type.indexOf('idle_func_t') >= 0 
+    || type.indexOf('timer_func_t') >= 0;
+  }
+
+  typeIsInterger(type) {
+    return type.indexOf('int') >= 0 || type.indexOf('ret_t') >= 0
+      || type.indexOf('wh_t') >= 0 || type.indexOf("xy_t") >= 0
+      || type.indexOf('font_size_t') >= 0;
+  }
+
+  typeIsFloat(type) {
+    return type.indexOf('float') >= 0 || type.indexOf("double") >= 0;
+  }
+  
+  typeIsNumber(type) {
+    return this.typeIsInterger(type) || this.typeIsFloat(type);
+  }
+  
+  typeIsBool(type) {
+    return type.indexOf('bool_t') >= 0;
+  }
+  
+  typeIsString(type) {
+    return type.indexOf('char*') >= 0;
+  }
+
+  typeToName(type) {
+    let name = this.typeToNativeName(type); 
+    let cls = this.getClassOrEnumInfo(name);
+    if(cls) {
+      return this.toClassName(cls.name);
+    } else {
+      return null;
+    }
+  }
+
   camelCase(name) {
     if (name.indexOf('_') > 0) {
       name = name.replace(/(_)[a-z]/g, r => {
@@ -90,7 +134,20 @@ class CodeGen {
 
     for (let i = 0; i < json.length; i++) {
       let iter = json[i];
-      if (iter.type === 'class' && iter.name === name) {
+      if ((iter.type === 'class') && iter.name === name) {
+        return iter;
+      }
+    }
+
+    return null;
+  }
+  
+  getClassOrEnumInfo(name) {
+    const json = this.json;
+
+    for (let i = 0; i < json.length; i++) {
+      let iter = json[i];
+      if ((iter.type === 'class' || iter.type == 'enum') && iter.name === name) {
         return iter;
       }
     }
@@ -125,6 +182,7 @@ class CodeGen {
     })
 
     fs.writeFileSync('filter.json', JSON.stringify(json, null, '  '));
+    this.json = json;
 
     return json;
   }

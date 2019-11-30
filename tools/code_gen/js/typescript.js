@@ -5,9 +5,27 @@ class TypescriptGenerator extends TargetGen {
   constructor() {
     super()
   }
+  
+  mapType(type) {
+    let name = this.typeToName(type); 
+    if(name) {
+      return name; 
+    } else  if(this.typeIsNumber(type)) {
+      return 'number';
+    } else if(this.typeIsBool(type)) {
+      return 'number';
+    } else if(this.typeIsFunction(type)) {
+      return 'Function';
+    } else if(this.typeIsString(type)) {
+      return 'string';
+    } else {
+      console.log(type);
+      return 'any';
+    }
+  }
 
   mapTypeVar(type, name) {
-    return name + ': any';
+    return name + ' : ' + this.mapType(type);
   }
 
   genConstructor(cls) {
@@ -31,7 +49,7 @@ class TypescriptGenerator extends TargetGen {
   }
 
   genFuncDecl(cls, m, name) {
-    return `${name}${this.genParamList(m)}`;
+    return `${name}${this.genParamList(m)} : ${this.mapType(m.return.type)} `;
   }
 
   genFunc(cls, m) {
@@ -74,7 +92,7 @@ class TypescriptGenerator extends TargetGen {
   }
 
   genFuncNativeDecl(cls, m) {
-    return `declare function ${m.name}${this.genParamListNative(m)} : any;\n`;
+    return `declare function ${m.name}${this.genParamListNative(m)} : ${this.mapType(m.return.type)};\n`;
   }
 
   genGetPropNativeDecl(cls, p) {
