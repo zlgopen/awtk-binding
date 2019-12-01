@@ -8923,11 +8923,6 @@
             "type": "uint32_t",
             "name": "type",
             "desc": "事件类型。"
-          },
-          {
-            "type": "void*",
-            "name": "target",
-            "desc": "目标对象。"
           }
         ],
         "annotation": {
@@ -16009,34 +16004,6 @@
         },
         "desc": "设置指定属性的字符串类型的值。\n",
         "name": "object_set_prop_str",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "object_t*",
-            "name": "obj",
-            "desc": "object对象。"
-          },
-          {
-            "type": "const char*",
-            "name": "name",
-            "desc": "属性的名称。"
-          },
-          {
-            "type": "void*",
-            "name": "value",
-            "desc": "属性的值。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "设置指定属性的指针类型的值。\n",
-        "name": "object_set_prop_pointer",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"

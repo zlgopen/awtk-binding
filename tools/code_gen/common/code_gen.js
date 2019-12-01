@@ -50,6 +50,10 @@ class CodeGen {
   typeIsString(type) {
     return type.indexOf('char*') >= 0;
   }
+  
+  typeIsWString(type) {
+    return type.indexOf('wchar_t*') >= 0;
+  }
 
   typeToName(type) {
     let name = this.typeToNativeName(type);
