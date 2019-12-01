@@ -22,7 +22,7 @@ class NamedValue {
  }
 
  Ret setValue(Value value)  {
-   return named_value_set_value(this.nativeObj, value != null ? value.nativeObj : 0);
+   return named_value_set_value(this.nativeObj, value != null ? (value.nativeObj) : 0);
  }
 
  Value getValue()  {

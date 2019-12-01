@@ -10,7 +10,7 @@ class ScrollBar extends Widget {
  }
 
  static Widget create(Widget parent, int x, int y, int w, int h)  {
-   return new ScrollBar(scroll_bar_create(parent != null ? parent.nativeObj : 0, x, y, w, h));
+   return new ScrollBar(scroll_bar_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
  static Widget cast(Widget widget)  {
@@ -18,11 +18,11 @@ class ScrollBar extends Widget {
  }
 
  static Widget createMobile(Widget parent, int x, int y, int w, int h)  {
-   return new ScrollBar(scroll_bar_create_mobile(parent != null ? parent.nativeObj : 0, x, y, w, h));
+   return new ScrollBar(scroll_bar_create_mobile(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
  static Widget createDesktop(Widget parent, int x, int y, int w, int h)  {
-   return new ScrollBar(scroll_bar_create_desktop(parent != null ? parent.nativeObj : 0, x, y, w, h));
+   return new ScrollBar(scroll_bar_create_desktop(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
  Ret setParams(int virtual_size, int row)  {

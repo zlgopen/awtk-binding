@@ -10,7 +10,7 @@ class ImageAnimation extends Widget {
  }
 
  static Widget create(Widget parent, int x, int y, int w, int h)  {
-   return new ImageAnimation(image_animation_create(parent != null ? parent.nativeObj : 0, x, y, w, h));
+   return new ImageAnimation(image_animation_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
  Ret setLoop(boolean loop)  {

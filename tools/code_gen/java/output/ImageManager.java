@@ -14,7 +14,7 @@ class ImageManager {
  }
 
  Ret getBitmap(String name, Bitmap image)  {
-   return image_manager_get_bitmap(this.nativeObj, name, image != null ? image.nativeObj : 0);
+   return image_manager_get_bitmap(this.nativeObj, name, image != null ? (image.nativeObj) : 0);
  }
 
 static private native long image_manager();

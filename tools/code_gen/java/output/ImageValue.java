@@ -10,7 +10,7 @@ class ImageValue extends Widget {
  }
 
  static Widget create(Widget parent, int x, int y, int w, int h)  {
-   return new ImageValue(image_value_create(parent != null ? parent.nativeObj : 0, x, y, w, h));
+   return new ImageValue(image_value_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
  Ret setImage(String image)  {

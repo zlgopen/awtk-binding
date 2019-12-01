@@ -10,7 +10,7 @@ class HscrollLabel extends Widget {
  }
 
  static Widget create(Widget parent, int x, int y, int w, int h)  {
-   return new HscrollLabel(hscroll_label_create(parent != null ? parent.nativeObj : 0, x, y, w, h));
+   return new HscrollLabel(hscroll_label_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
  Ret setLull(int lull)  {

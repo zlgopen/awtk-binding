@@ -10,7 +10,7 @@ class ComboBoxEx extends ComboBox {
  }
 
  static Widget create(Widget parent, int x, int y, int w, int h)  {
-   return new ComboBoxEx(combo_box_ex_create(parent != null ? parent.nativeObj : 0, x, y, w, h));
+   return new ComboBoxEx(combo_box_ex_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
 static private native long combo_box_ex_create(long parent, int x, int y, int w, int h);

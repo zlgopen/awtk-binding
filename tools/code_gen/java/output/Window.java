@@ -10,7 +10,7 @@ class Window extends Widget {
  }
 
  static Widget create(Widget parent, int x, int y, int w, int h)  {
-   return new Window(window_create(parent != null ? parent.nativeObj : 0, x, y, w, h));
+   return new Window(window_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
  Ret setFullscreen(boolean fullscreen)  {
@@ -22,7 +22,7 @@ class Window extends Widget {
  }
 
  static Widget openAndClose(String name, Widget to_close)  {
-   return new Window(window_open_and_close(name, to_close != null ? to_close.nativeObj : 0));
+   return new Window(window_open_and_close(name, to_close != null ? (to_close.nativeObj) : 0));
  }
 
  Ret close()  {

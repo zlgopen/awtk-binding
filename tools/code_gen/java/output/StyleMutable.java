@@ -22,7 +22,7 @@ class StyleMutable extends Style {
  }
 
  static Style create(Widget widget, Style default_style)  {
-   return new StyleMutable(style_mutable_create(widget != null ? widget.nativeObj : 0, default_style != null ? default_style.nativeObj : 0));
+   return new StyleMutable(style_mutable_create(widget != null ? (widget.nativeObj) : 0, default_style != null ? (default_style.nativeObj) : 0));
  }
 
  public String getName() {

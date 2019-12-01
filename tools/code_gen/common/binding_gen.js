@@ -6,6 +6,38 @@ class BindingGen extends CodeGen {
     super();
   }
   
+  toClassName(name) {
+    return this.upperCamelName(name);
+  }
+  
+  genFreeStr(name) {
+    return '';
+  }
+
+  genGetGlobalObject() {
+    return '';
+  }
+
+  genFreeGlobalObject() {
+    return '';
+  }
+
+  genRegFunc(prefix, name) {
+    return '';
+  }
+   
+  genGlobalInfo(json) {
+    return '';
+  }
+
+  genCreateObject(name, type, destroyFunc) {
+    return '';
+  }
+  
+  genGetObject(index, type, name) {
+    return '';
+  }
+
   genFuncDecl(cls, m) {
     const name = m.name;
     return this.genFuncBegin(name);
@@ -230,7 +262,7 @@ class BindingGen extends CodeGen {
 
     result += '#include "tkc/utf8.h"\n';
     result += '#include "tkc/mem.h"\n';
-    result += this.genJavascriptIncludes();
+    result += this.genTargetIncludes();
 
     json.forEach(iter => {
       if (result.indexOf(iter.header) <= 0) {

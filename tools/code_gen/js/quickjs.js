@@ -21,7 +21,7 @@ class QuickJSGenerator extends JsBindingGenerator {
   )`;
   }
 
-  genJavascriptIncludes() {
+  genTargetIncludes() {
     let result = '';
     result += '#include "quickjs.h"\n';
 

@@ -10,7 +10,7 @@ class TabButton extends Widget {
  }
 
  static Widget create(Widget parent, int x, int y, int w, int h)  {
-   return new TabButton(tab_button_create(parent != null ? parent.nativeObj : 0, x, y, w, h));
+   return new TabButton(tab_button_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
  static Widget cast(Widget widget)  {

@@ -158,7 +158,7 @@ class Widget {
  }
 
  Ret invalidateForce(Rect r)  {
-   return widget_invalidate_force(this.nativeObj, r != null ? r.nativeObj : 0);
+   return widget_invalidate_force(this.nativeObj, r != null ? (r.nativeObj) : 0);
  }
 
  Ret setPropStr(String name, String v)  {
@@ -218,11 +218,11 @@ class Widget {
  }
 
  Widget clone(Widget parent)  {
-   return new Widget(widget_clone(this.nativeObj, parent != null ? parent.nativeObj : 0));
+   return new Widget(widget_clone(this.nativeObj, parent != null ? (parent.nativeObj) : 0));
  }
 
  boolean equal(Widget other)  {
-   return widget_equal(this.nativeObj, other != null ? other.nativeObj : 0);
+   return widget_equal(this.nativeObj, other != null ? (other.nativeObj) : 0);
  }
 
  static Widget cast(Widget widget)  {

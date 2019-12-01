@@ -10,7 +10,7 @@ class Style {
  }
 
  Ret notifyWidgetStateChanged(Widget widget)  {
-   return style_notify_widget_state_changed(this.nativeObj, widget != null ? widget.nativeObj : 0);
+   return style_notify_widget_state_changed(this.nativeObj, widget != null ? (widget.nativeObj) : 0);
  }
 
  boolean isValid()  {
@@ -26,7 +26,7 @@ class Style {
  }
 
  Ret set(String state, String name, Value value)  {
-   return style_set(this.nativeObj, state, name, value != null ? value.nativeObj : 0);
+   return style_set(this.nativeObj, state, name, value != null ? (value.nativeObj) : 0);
  }
 
  boolean isMutable()  {

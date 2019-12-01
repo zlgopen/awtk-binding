@@ -14,7 +14,7 @@ class Object extends Emitter {
  }
 
  static Object ref(Object obj)  {
-   return new Object(object_ref(obj != null ? obj.nativeObj : 0));
+   return new Object(object_ref(obj != null ? (obj.nativeObj) : 0));
  }
 
  String getType()  {
@@ -38,11 +38,11 @@ class Object extends Emitter {
  }
 
  int compare(Object other)  {
-   return object_compare(this.nativeObj, other != null ? other.nativeObj : 0);
+   return object_compare(this.nativeObj, other != null ? (other.nativeObj) : 0);
  }
 
  Ret getProp(String name, Value v)  {
-   return object_get_prop(this.nativeObj, name, v != null ? v.nativeObj : 0);
+   return object_get_prop(this.nativeObj, name, v != null ? (v.nativeObj) : 0);
  }
 
  String getPropStr(String name)  {
@@ -74,7 +74,7 @@ class Object extends Emitter {
  }
 
  Ret setProp(String name, Value value)  {
-   return object_set_prop(this.nativeObj, name, value != null ? value.nativeObj : 0);
+   return object_set_prop(this.nativeObj, name, value != null ? (value.nativeObj) : 0);
  }
 
  Ret setPropStr(String name, String value)  {
@@ -86,7 +86,7 @@ class Object extends Emitter {
  }
 
  Ret setPropObject(String name, Object value)  {
-   return object_set_prop_object(this.nativeObj, name, value != null ? value.nativeObj : 0);
+   return object_set_prop_object(this.nativeObj, name, value != null ? (value.nativeObj) : 0);
  }
 
  Ret setPropInt(String name, int value)  {
@@ -102,7 +102,7 @@ class Object extends Emitter {
  }
 
  Ret copyProp(Object src, String name)  {
-   return object_copy_prop(this.nativeObj, src != null ? src.nativeObj : 0, name);
+   return object_copy_prop(this.nativeObj, src != null ? (src.nativeObj) : 0, name);
  }
 
  Ret foreachProp(int on_prop, int ctx)  {
@@ -114,7 +114,7 @@ class Object extends Emitter {
  }
 
  Ret eval(String expr, Value v)  {
-   return object_eval(this.nativeObj, expr, v != null ? v.nativeObj : 0);
+   return object_eval(this.nativeObj, expr, v != null ? (v.nativeObj) : 0);
  }
 
  boolean canExec(String name, String args)  {

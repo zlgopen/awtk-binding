@@ -10,7 +10,7 @@ class ComboBoxItem extends Widget {
  }
 
  static Widget create(Widget parent, int x, int y, int w, int h)  {
-   return new ComboBoxItem(combo_box_item_create(parent != null ? parent.nativeObj : 0, x, y, w, h));
+   return new ComboBoxItem(combo_box_item_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
  static Widget cast(Widget widget)  {

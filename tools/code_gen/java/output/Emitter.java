@@ -14,7 +14,7 @@ class Emitter {
  }
 
  Ret dispatch(Event e)  {
-   return emitter_dispatch(this.nativeObj, e != null ? e.nativeObj : 0);
+   return emitter_dispatch(this.nativeObj, e != null ? (e.nativeObj) : 0);
  }
 
  Ret dispatchSimpleEvent(int type)  {

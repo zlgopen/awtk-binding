@@ -11,7 +11,11 @@ class CodeGen {
   }
 
   typeIsClassPointer(type) {
-    return this.typeIsPointer(type) && this.getClassInfo(type);
+    return this.typeIsPointer(type) && this.getClassInfo(type) != null;
+  }
+  
+  typeIsEnum(type) {
+    return this.getClassInfo(type) != null;
   }
 
   typeIsFunction(type) {
@@ -146,6 +150,19 @@ class CodeGen {
     for (let i = 0; i < json.length; i++) {
       let iter = json[i];
       if ((iter.type === 'class') && iter.name === name) {
+        return iter;
+      }
+    }
+
+    return null;
+  }
+  
+  getEnumInfo(name) {
+    const json = this.json;
+
+    for (let i = 0; i < json.length; i++) {
+      let iter = json[i];
+      if ((iter.type === 'enum') && iter.name === name) {
         return iter;
       }
     }

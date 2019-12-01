@@ -10,15 +10,15 @@ class SlideIndicator extends Widget {
  }
 
  static Widget create(Widget parent, int x, int y, int w, int h)  {
-   return new SlideIndicator(slide_indicator_create(parent != null ? parent.nativeObj : 0, x, y, w, h));
+   return new SlideIndicator(slide_indicator_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
  static Widget createLinear(Widget parent, int x, int y, int w, int h)  {
-   return new SlideIndicator(slide_indicator_create_linear(parent != null ? parent.nativeObj : 0, x, y, w, h));
+   return new SlideIndicator(slide_indicator_create_linear(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
  static Widget createArc(Widget parent, int x, int y, int w, int h)  {
-   return new SlideIndicator(slide_indicator_create_arc(parent != null ? parent.nativeObj : 0, x, y, w, h));
+   return new SlideIndicator(slide_indicator_create_arc(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
  static Widget cast(Widget widget)  {

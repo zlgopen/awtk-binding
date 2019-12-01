@@ -10,7 +10,7 @@ class SpinBox extends Edit {
  }
 
  static Widget create(Widget parent, int x, int y, int w, int h)  {
-   return new SpinBox(spin_box_create(parent != null ? parent.nativeObj : 0, x, y, w, h));
+   return new SpinBox(spin_box_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
  static Widget cast(Widget widget)  {

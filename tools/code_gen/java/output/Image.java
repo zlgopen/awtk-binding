@@ -10,7 +10,7 @@ class Image extends ImageBase {
  }
 
  static Widget create(Widget parent, int x, int y, int w, int h)  {
-   return new Image(image_create(parent != null ? parent.nativeObj : 0, x, y, w, h));
+   return new Image(image_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
  Ret setDrawType(ImageDrawType draw_type)  {

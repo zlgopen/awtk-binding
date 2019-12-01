@@ -10,7 +10,7 @@ class Switch extends Widget {
  }
 
  static Widget create(Widget parent, int x, int y, int w, int h)  {
-   return new Switch(switch_create(parent != null ? parent.nativeObj : 0, x, y, w, h));
+   return new Switch(switch_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
  Ret setValue(boolean value)  {

@@ -18,7 +18,7 @@ class AssetsManager {
  }
 
  Ret unref(AssetInfo info)  {
-   return assets_manager_unref(this.nativeObj, info != null ? info.nativeObj : 0);
+   return assets_manager_unref(this.nativeObj, info != null ? (info.nativeObj) : 0);
  }
 
 static private native long assets_manager();

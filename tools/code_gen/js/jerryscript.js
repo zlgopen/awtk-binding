@@ -26,7 +26,7 @@ class JerryscriptGenerator extends JsBindingGenerator {
   )`;
   }
 
-  genJavascriptIncludes() {
+  genTargetIncludes() {
     let result = '';
     result += '#include "jerryscript.h"\n';
     result += '#include "jerryscript-ext/handler.h"\n';

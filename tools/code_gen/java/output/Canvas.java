@@ -18,15 +18,15 @@ class Canvas {
  }
 
  Ret getClipRect(Rect r)  {
-   return canvas_get_clip_rect(this.nativeObj, r != null ? r.nativeObj : 0);
+   return canvas_get_clip_rect(this.nativeObj, r != null ? (r.nativeObj) : 0);
  }
 
  Ret setClipRect(Rect r)  {
-   return canvas_set_clip_rect(this.nativeObj, r != null ? r.nativeObj : 0);
+   return canvas_set_clip_rect(this.nativeObj, r != null ? (r.nativeObj) : 0);
  }
 
  Ret setClipRectEx(Rect r, boolean translate)  {
-   return canvas_set_clip_rect_ex(this.nativeObj, r != null ? r.nativeObj : 0, translate);
+   return canvas_set_clip_rect_ex(this.nativeObj, r != null ? (r.nativeObj) : 0, translate);
  }
 
  Ret setFillColor(String color)  {
@@ -82,19 +82,19 @@ class Canvas {
  }
 
  Ret drawTextInRect(String str, Rect r)  {
-   return canvas_draw_utf8_in_rect(this.nativeObj, str, r != null ? r.nativeObj : 0);
+   return canvas_draw_utf8_in_rect(this.nativeObj, str, r != null ? (r.nativeObj) : 0);
  }
 
  Ret drawIcon(Bitmap img, int cx, int cy)  {
-   return canvas_draw_icon(this.nativeObj, img != null ? img.nativeObj : 0, cx, cy);
+   return canvas_draw_icon(this.nativeObj, img != null ? (img.nativeObj) : 0, cx, cy);
  }
 
  Ret drawImage(Bitmap img, Rect src, Rect dst)  {
-   return canvas_draw_image(this.nativeObj, img != null ? img.nativeObj : 0, src != null ? src.nativeObj : 0, dst != null ? dst.nativeObj : 0);
+   return canvas_draw_image(this.nativeObj, img != null ? (img.nativeObj) : 0, src != null ? (src.nativeObj) : 0, dst != null ? (dst.nativeObj) : 0);
  }
 
  Ret drawImageEx(Bitmap img, ImageDrawType draw_type, Rect dst)  {
-   return canvas_draw_image_ex(this.nativeObj, img != null ? img.nativeObj : 0, draw_type, dst != null ? dst.nativeObj : 0);
+   return canvas_draw_image_ex(this.nativeObj, img != null ? (img.nativeObj) : 0, draw_type, dst != null ? (dst.nativeObj) : 0);
  }
 
  Vgcanvas getVgcanvas()  {

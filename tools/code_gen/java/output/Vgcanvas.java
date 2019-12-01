@@ -98,7 +98,7 @@ class Vgcanvas {
  }
 
  Ret paint(boolean stroke, Bitmap img)  {
-   return vgcanvas_paint(this.nativeObj, stroke, img != null ? img.nativeObj : 0);
+   return vgcanvas_paint(this.nativeObj, stroke, img != null ? (img.nativeObj) : 0);
  }
 
  Ret setFont(String font)  {
@@ -126,11 +126,11 @@ class Vgcanvas {
  }
 
  Ret drawImage(Bitmap img, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh)  {
-   return vgcanvas_draw_image(this.nativeObj, img != null ? img.nativeObj : 0, sx, sy, sw, sh, dx, dy, dw, dh);
+   return vgcanvas_draw_image(this.nativeObj, img != null ? (img.nativeObj) : 0, sx, sy, sw, sh, dx, dy, dw, dh);
  }
 
  Ret drawIcon(Bitmap img, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh)  {
-   return vgcanvas_draw_icon(this.nativeObj, img != null ? img.nativeObj : 0, sx, sy, sw, sh, dx, dy, dw, dh);
+   return vgcanvas_draw_icon(this.nativeObj, img != null ? (img.nativeObj) : 0, sx, sy, sw, sh, dx, dy, dw, dh);
  }
 
  Ret setAntialias(boolean value)  {

@@ -10,7 +10,7 @@ class Edit extends Widget {
  }
 
  static Widget create(Widget parent, int x, int y, int w, int h)  {
-   return new Edit(edit_create(parent != null ? parent.nativeObj : 0, x, y, w, h));
+   return new Edit(edit_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
  static Widget cast(Widget widget)  {

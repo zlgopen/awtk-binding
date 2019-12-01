@@ -10,7 +10,7 @@ class TabButtonGroup extends Widget {
  }
 
  static Widget create(Widget parent, int x, int y, int w, int h)  {
-   return new TabButtonGroup(tab_button_group_create(parent != null ? parent.nativeObj : 0, x, y, w, h));
+   return new TabButtonGroup(tab_button_group_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
  Ret setCompact(boolean compact)  {

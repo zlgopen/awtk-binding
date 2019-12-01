@@ -110,7 +110,7 @@ class Value {
  }
 
  Value setObject(Object value)  {
-   return new Value(value_set_object(this.nativeObj, value != null ? value.nativeObj : 0));
+   return new Value(value_set_object(this.nativeObj, value != null ? (value.nativeObj) : 0));
  }
 
  Object object()  {
