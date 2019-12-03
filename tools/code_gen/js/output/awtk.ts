@@ -910,7 +910,7 @@ declare function INDICATOR_DEFAULT_PAINT_STROKE_DOT();
 declare function INDICATOR_DEFAULT_PAINT_FILL_RECT();
 declare function INDICATOR_DEFAULT_PAINT_STROKE_RECT();
 declare function event_cast(event : TEvent) : TEvent;
-declare function event_create(type : number, target : any) : TEvent;
+declare function event_create(type : number) : TEvent;
 declare function event_destroy(event : TEvent) : TRet;
 declare function event_t_get_prop_type(nativeObj : any);
 declare function event_t_get_prop_time(nativeObj : any);
@@ -1050,22 +1050,8 @@ declare function prop_change_event_t_get_prop_name(nativeObj : any);
 declare function prop_change_event_t_get_prop_value(nativeObj : any);
 declare function progress_event_cast(event : TEvent) : TProgressEvent;
 declare function progress_event_t_get_prop_percent(nativeObj : any);
-declare function dialog_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function dialog_create_simple(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function dialog_cast(widget : TWidget) : TWidget;
-declare function dialog_get_title(widget : TWidget) : TWidget;
-declare function dialog_get_client(widget : TWidget) : TWidget;
-declare function dialog_open(name : string) : TWidget;
-declare function dialog_set_title(widget : TWidget, title : string) : TRet;
-declare function dialog_modal(widget : TWidget) : TRet;
-declare function dialog_quit(widget : TWidget, code : number) : TRet;
-declare function dialog_is_quited(widget : TWidget) : number;
-declare function dialog_is_modal(widget : TWidget) : number;
-declare function dialog_toast(text : string, duration : number) : TRet;
-declare function dialog_info(title : string, text : string) : TRet;
-declare function dialog_warn(title : string, text : string) : TRet;
-declare function dialog_confirm(title : string, text : string) : TRet;
-declare function dialog_t_get_prop_highlight(nativeObj : any);
+declare function view_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function view_cast(widget : TWidget) : TWidget;
 declare function slide_view_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
 declare function slide_view_cast(widget : TWidget) : TWidget;
 declare function slide_view_set_auto_play(widget : TWidget, auto_play : number) : TRet;
@@ -1138,8 +1124,8 @@ declare function scroll_bar_t_get_prop_virtual_size(nativeObj : any);
 declare function scroll_bar_t_get_prop_value(nativeObj : any);
 declare function scroll_bar_t_get_prop_row(nativeObj : any);
 declare function scroll_bar_t_get_prop_animatable(nativeObj : any);
-declare function view_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function view_cast(widget : TWidget) : TWidget;
+declare function tab_control_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function tab_control_cast(widget : TWidget) : TWidget;
 declare function list_view_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
 declare function list_view_set_item_height(widget : TWidget, item_height : number) : TRet;
 declare function list_view_set_default_item_height(widget : TWidget, default_item_height : number) : TRet;
@@ -1154,8 +1140,6 @@ declare function list_view_h_set_spacing(widget : TWidget, spacing : number) : T
 declare function list_view_h_cast(widget : TWidget) : TWidget;
 declare function list_view_h_t_get_prop_item_width(nativeObj : any);
 declare function list_view_h_t_get_prop_spacing(nativeObj : any);
-declare function tab_control_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function tab_control_cast(widget : TWidget) : TWidget;
 declare function tab_button_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
 declare function tab_button_cast(widget : TWidget) : TWidget;
 declare function tab_button_set_value(widget : TWidget, value : number) : TRet;
@@ -1164,6 +1148,12 @@ declare function tab_button_set_active_icon(widget : TWidget, name : string) : T
 declare function tab_button_t_get_prop_value(nativeObj : any);
 declare function tab_button_t_get_prop_active_icon(nativeObj : any);
 declare function tab_button_t_get_prop_icon(nativeObj : any);
+declare function tab_button_group_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function tab_button_group_set_compact(widget : TWidget, compact : number) : TRet;
+declare function tab_button_group_set_scrollable(widget : TWidget, scrollable : number) : TRet;
+declare function tab_button_group_cast(widget : TWidget) : TWidget;
+declare function tab_button_group_t_get_prop_compact(nativeObj : any);
+declare function tab_button_group_t_get_prop_scrollable(nativeObj : any);
 declare function list_item_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
 declare function list_item_cast(widget : TWidget) : TWidget;
 declare function hscroll_label_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
@@ -1207,26 +1197,6 @@ declare function progress_circle_t_get_prop_line_width(nativeObj : any);
 declare function progress_circle_t_get_prop_unit(nativeObj : any);
 declare function progress_circle_t_get_prop_counter_clock_wise(nativeObj : any);
 declare function progress_circle_t_get_prop_show_text(nativeObj : any);
-declare function tab_button_group_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function tab_button_group_set_compact(widget : TWidget, compact : number) : TRet;
-declare function tab_button_group_set_scrollable(widget : TWidget, scrollable : number) : TRet;
-declare function tab_button_group_cast(widget : TWidget) : TWidget;
-declare function tab_button_group_t_get_prop_compact(nativeObj : any);
-declare function tab_button_group_t_get_prop_scrollable(nativeObj : any);
-declare function mledit_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function mledit_set_readonly(widget : TWidget, readonly : number) : TRet;
-declare function mledit_set_focus(widget : TWidget, focus : number) : TRet;
-declare function mledit_set_wrap_word(widget : TWidget, wrap_word : number) : TRet;
-declare function mledit_set_max_lines(widget : TWidget, max_lines : number) : TRet;
-declare function mledit_set_input_tips(widget : TWidget, tips : string) : TRet;
-declare function mledit_set_cursor(widget : TWidget, cursor : number) : TRet;
-declare function mledit_set_scroll_line(widget : TWidget, scroll_line : number) : TRet;
-declare function mledit_cast(widget : TWidget) : TWidget;
-declare function mledit_t_get_prop_readonly(nativeObj : any);
-declare function mledit_t_get_prop_tips(nativeObj : any);
-declare function mledit_t_get_prop_wrap_word(nativeObj : any);
-declare function mledit_t_get_prop_max_lines(nativeObj : any);
-declare function mledit_t_get_prop_scroll_line(nativeObj : any);
 declare function slider_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
 declare function slider_cast(widget : TWidget) : TWidget;
 declare function slider_set_value(widget : TWidget, value : number) : TRet;
@@ -1241,8 +1211,33 @@ declare function slider_t_get_prop_max(nativeObj : any);
 declare function slider_t_get_prop_step(nativeObj : any);
 declare function slider_t_get_prop_vertical(nativeObj : any);
 declare function slider_t_get_prop_bar_size(nativeObj : any);
+declare function mledit_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function mledit_set_readonly(widget : TWidget, readonly : number) : TRet;
+declare function mledit_set_focus(widget : TWidget, focus : number) : TRet;
+declare function mledit_set_wrap_word(widget : TWidget, wrap_word : number) : TRet;
+declare function mledit_set_max_lines(widget : TWidget, max_lines : number) : TRet;
+declare function mledit_set_input_tips(widget : TWidget, tips : string) : TRet;
+declare function mledit_set_cursor(widget : TWidget, cursor : number) : TRet;
+declare function mledit_set_scroll_line(widget : TWidget, scroll_line : number) : TRet;
+declare function mledit_cast(widget : TWidget) : TWidget;
+declare function mledit_t_get_prop_readonly(nativeObj : any);
+declare function mledit_t_get_prop_tips(nativeObj : any);
+declare function mledit_t_get_prop_wrap_word(nativeObj : any);
+declare function mledit_t_get_prop_max_lines(nativeObj : any);
+declare function mledit_t_get_prop_scroll_line(nativeObj : any);
 declare function row_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
 declare function row_cast(widget : TWidget) : TWidget;
+declare function progress_bar_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function progress_bar_cast(widget : TWidget) : TWidget;
+declare function progress_bar_set_value(widget : TWidget, value : number) : TRet;
+declare function progress_bar_set_max(widget : TWidget, max : number) : TRet;
+declare function progress_bar_set_vertical(widget : TWidget, vertical : number) : TRet;
+declare function progress_bar_set_show_text(widget : TWidget, show_text : number) : TRet;
+declare function progress_bar_get_percent(widget : TWidget) : number;
+declare function progress_bar_t_get_prop_value(nativeObj : any);
+declare function progress_bar_t_get_prop_max(nativeObj : any);
+declare function progress_bar_t_get_prop_vertical(nativeObj : any);
+declare function progress_bar_t_get_prop_show_text(nativeObj : any);
 declare function object_unref(obj : TObject) : TRet;
 declare function object_ref(obj : TObject) : TObject;
 declare function object_get_type(obj : TObject) : string;
@@ -1261,7 +1256,6 @@ declare function object_get_prop_float(obj : TObject, name : string, defval : nu
 declare function object_remove_prop(obj : TObject, name : string) : TRet;
 declare function object_set_prop(obj : TObject, name : string, value : TValue) : TRet;
 declare function object_set_prop_str(obj : TObject, name : string, value : string) : TRet;
-declare function object_set_prop_pointer(obj : TObject, name : string, value : any) : TRet;
 declare function object_set_prop_object(obj : TObject, name : string, value : TObject) : TRet;
 declare function object_set_prop_int(obj : TObject, name : string, value : number) : TRet;
 declare function object_set_prop_bool(obj : TObject, name : string, value : number) : TRet;
@@ -1281,25 +1275,19 @@ declare function object_get_prop_bool_by_path(obj : TObject, path : string, defv
 declare function object_get_prop_float_by_path(obj : TObject, path : string, defval : number) : number;
 declare function object_t_get_prop_ref_count(nativeObj : any);
 declare function object_t_get_prop_name(nativeObj : any);
-declare function progress_bar_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function progress_bar_cast(widget : TWidget) : TWidget;
-declare function progress_bar_set_value(widget : TWidget, value : number) : TRet;
-declare function progress_bar_set_max(widget : TWidget, max : number) : TRet;
-declare function progress_bar_set_vertical(widget : TWidget, vertical : number) : TRet;
-declare function progress_bar_set_show_text(widget : TWidget, show_text : number) : TRet;
-declare function progress_bar_get_percent(widget : TWidget) : number;
-declare function progress_bar_t_get_prop_value(nativeObj : any);
-declare function progress_bar_t_get_prop_max(nativeObj : any);
-declare function progress_bar_t_get_prop_vertical(nativeObj : any);
-declare function progress_bar_t_get_prop_show_text(nativeObj : any);
+declare function pages_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function pages_cast(widget : TWidget) : TWidget;
+declare function pages_set_active(widget : TWidget, index : number) : TRet;
+declare function pages_set_active_by_name(widget : TWidget, name : string) : TRet;
+declare function pages_t_get_prop_active(nativeObj : any);
 declare function line_number_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
 declare function line_number_set_top_margin(widget : TWidget, top_margin : number) : TRet;
 declare function line_number_set_bottom_margin(widget : TWidget, bottom_margin : number) : TRet;
 declare function line_number_set_line_height(widget : TWidget, line_height : number) : TRet;
 declare function line_number_set_yoffset(widget : TWidget, yoffset : number) : TRet;
 declare function line_number_cast(widget : TWidget) : TWidget;
-declare function keyboard_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function keyboard_cast(widget : TWidget) : TWidget;
+declare function overlay_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function overlay_cast(widget : TWidget) : TWidget;
 declare function image_value_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
 declare function image_value_set_image(widget : TWidget, image : string) : TRet;
 declare function image_value_set_format(widget : TWidget, format : string) : TRet;
@@ -1348,12 +1336,11 @@ declare function guage_pointer_t_get_prop_angle(nativeObj : any);
 declare function guage_pointer_t_get_prop_image(nativeObj : any);
 declare function guage_pointer_t_get_prop_anchor_x(nativeObj : any);
 declare function guage_pointer_t_get_prop_anchor_y(nativeObj : any);
-declare function popup_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function popup_cast(widget : TWidget) : TWidget;
-declare function popup_set_close_when_click(widget : TWidget, close_when_click : number) : TRet;
-declare function popup_set_close_when_click_outside(widget : TWidget, close_when_click_outside : number) : TRet;
-declare function popup_t_get_prop_close_when_click(nativeObj : any);
-declare function popup_t_get_prop_close_when_click_outside(nativeObj : any);
+declare function label_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function label_set_length(widget : TWidget, length : number) : TRet;
+declare function label_resize_to_content(widget : TWidget, min_w : number, max_w : number, min_h : number, max_h : number) : TRet;
+declare function label_cast(widget : TWidget) : TWidget;
+declare function label_t_get_prop_length(nativeObj : any);
 declare function draggable_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
 declare function draggable_cast(widget : TWidget) : TWidget;
 declare function draggable_set_top(widget : TWidget, top : number) : TRet;
@@ -1370,27 +1357,18 @@ declare function draggable_t_get_prop_right(nativeObj : any);
 declare function draggable_t_get_prop_vertical_only(nativeObj : any);
 declare function draggable_t_get_prop_horizontal_only(nativeObj : any);
 declare function draggable_t_get_prop_drag_window(nativeObj : any);
-declare function pages_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function pages_cast(widget : TWidget) : TWidget;
-declare function pages_set_active(widget : TWidget, index : number) : TRet;
-declare function pages_set_active_by_name(widget : TWidget, name : string) : TRet;
-declare function pages_t_get_prop_active(nativeObj : any);
+declare function group_box_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function group_box_cast(widget : TWidget) : TWidget;
 declare function color_picker_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
 declare function color_picker_set_color(widget : TWidget, color : string) : TRet;
 declare function color_picker_cast(widget : TWidget) : TWidget;
 declare function color_picker_t_get_prop_value(nativeObj : any);
 declare function canvas_widget_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
 declare function canvas_widget_cast(widget : TWidget) : TWidget;
-declare function overlay_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function overlay_cast(widget : TWidget) : TWidget;
-declare function window_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function window_set_fullscreen(widget : TWidget, fullscreen : number) : TRet;
-declare function window_open(name : string) : TWidget;
-declare function window_open_and_close(name : string, to_close : TWidget) : TWidget;
-declare function window_close(widget : TWidget) : TRet;
-declare function window_close_force(widget : TWidget) : TRet;
-declare function window_cast(widget : TWidget) : TWidget;
-declare function window_t_get_prop_fullscreen(nativeObj : any);
+declare function grid_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function grid_cast(widget : TWidget) : TWidget;
+declare function grid_item_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function grid_item_cast(widget : TWidget) : TWidget;
 declare function window_manager() : TWidget;
 declare function window_manager_cast(widget : TWidget) : TWidget;
 declare function window_manager_get_top_main_window(widget : TWidget) : TWidget;
@@ -1407,18 +1385,46 @@ declare function window_manager_back_to_home(widget : TWidget) : TRet;
 declare function window_base_cast(widget : TWidget) : TWidget;
 declare function window_base_t_get_prop_theme(nativeObj : any);
 declare function window_base_t_get_prop_closable(nativeObj : any);
-declare function label_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function label_set_length(widget : TWidget, length : number) : TRet;
-declare function label_resize_to_content(widget : TWidget, min_w : number, max_w : number, min_h : number, max_h : number) : TRet;
-declare function label_cast(widget : TWidget) : TWidget;
-declare function label_t_get_prop_length(nativeObj : any);
+declare function edit_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function edit_cast(widget : TWidget) : TWidget;
+declare function edit_get_int(widget : TWidget) : number;
+declare function edit_get_double(widget : TWidget) : number;
+declare function edit_set_int(widget : TWidget, value : number) : TRet;
+declare function edit_set_double(widget : TWidget, value : number) : TRet;
+declare function edit_set_text_limit(widget : TWidget, min : number, max : number) : TRet;
+declare function edit_set_int_limit(widget : TWidget, min : number, max : number, step : number) : TRet;
+declare function edit_set_float_limit(widget : TWidget, min : number, max : number, step : number) : TRet;
+declare function edit_set_readonly(widget : TWidget, readonly : number) : TRet;
+declare function edit_set_auto_fix(widget : TWidget, auto_fix : number) : TRet;
+declare function edit_set_select_none_when_focused(widget : TWidget, select_none_when_focused : number) : TRet;
+declare function edit_set_open_im_when_focused(widget : TWidget, open_im_when_focused : number) : TRet;
+declare function edit_set_input_type(widget : TWidget, type : TInputType) : TRet;
+declare function edit_set_input_tips(widget : TWidget, tips : string) : TRet;
+declare function edit_set_password_visible(widget : TWidget, password_visible : number) : TRet;
+declare function edit_set_focus(widget : TWidget, focus : number) : TRet;
+declare function edit_set_cursor(widget : TWidget, cursor : number) : TRet;
+declare function edit_t_get_prop_readonly(nativeObj : any);
+declare function edit_t_get_prop_password_visible(nativeObj : any);
+declare function edit_t_get_prop_auto_fix(nativeObj : any);
+declare function edit_t_get_prop_select_none_when_focused(nativeObj : any);
+declare function edit_t_get_prop_open_im_when_focused(nativeObj : any);
+declare function edit_t_get_prop_tips(nativeObj : any);
+declare function edit_t_get_prop_input_type(nativeObj : any);
+declare function edit_t_get_prop_min(nativeObj : any);
+declare function edit_t_get_prop_max(nativeObj : any);
+declare function edit_t_get_prop_step(nativeObj : any);
 declare function style_mutable_set_name(s : TStyle, name : string) : TRet;
 declare function style_mutable_set_int(s : TStyle, state : string, name : string, val : number) : TRet;
 declare function style_mutable_cast(s : TStyle) : TStyle;
 declare function style_mutable_create(widget : TWidget, default_style : TStyle) : TStyle;
 declare function style_mutable_t_get_prop_name(nativeObj : any);
-declare function group_box_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function group_box_cast(widget : TWidget) : TWidget;
+declare function dragger_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function dragger_cast(widget : TWidget) : TWidget;
+declare function dragger_set_range(widget : TWidget, x_min : number, y_min : number, x_max : number, y_max : number) : TWidget;
+declare function dragger_t_get_prop_x_min(nativeObj : any);
+declare function dragger_t_get_prop_y_min(nativeObj : any);
+declare function dragger_t_get_prop_x_max(nativeObj : any);
+declare function dragger_t_get_prop_y_max(nativeObj : any);
 declare function image_base_set_image(widget : TWidget, name : string) : TRet;
 declare function image_base_set_rotation(widget : TWidget, rotation : number) : TRet;
 declare function image_base_set_scale(widget : TWidget, scale_x : number, scale_y : number) : TRet;
@@ -1481,6 +1487,10 @@ declare function button_set_repeat(widget : TWidget, repeat : number) : TRet;
 declare function button_set_enable_long_press(widget : TWidget, enable_long_press : number) : TRet;
 declare function button_t_get_prop_repeat(nativeObj : any);
 declare function button_t_get_prop_enable_long_press(nativeObj : any);
+declare function digit_clock_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function digit_clock_cast(widget : TWidget) : TWidget;
+declare function digit_clock_set_format(widget : TWidget, format : string) : TRet;
+declare function digit_clock_t_get_prop_format(nativeObj : any);
 declare function check_button_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
 declare function check_button_create_radio(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
 declare function check_button_set_value(widget : TWidget, value : number) : TRet;
@@ -1522,70 +1532,43 @@ declare function dialog_client_create(parent : TWidget, x : number, y : number, 
 declare function dialog_client_cast(widget : TWidget) : TWidget;
 declare function dialog_title_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
 declare function dialog_title_cast(widget : TWidget) : TWidget;
-declare function digit_clock_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function digit_clock_cast(widget : TWidget) : TWidget;
-declare function digit_clock_set_format(widget : TWidget, format : string) : TRet;
-declare function digit_clock_t_get_prop_format(nativeObj : any);
-declare function dragger_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function dragger_cast(widget : TWidget) : TWidget;
-declare function dragger_set_range(widget : TWidget, x_min : number, y_min : number, x_max : number, y_max : number) : TWidget;
-declare function dragger_t_get_prop_x_min(nativeObj : any);
-declare function dragger_t_get_prop_y_min(nativeObj : any);
-declare function dragger_t_get_prop_x_max(nativeObj : any);
-declare function dragger_t_get_prop_y_max(nativeObj : any);
-declare function edit_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function edit_cast(widget : TWidget) : TWidget;
-declare function edit_get_int(widget : TWidget) : number;
-declare function edit_get_double(widget : TWidget) : number;
-declare function edit_set_int(widget : TWidget, value : number) : TRet;
-declare function edit_set_double(widget : TWidget, value : number) : TRet;
-declare function edit_set_text_limit(widget : TWidget, min : number, max : number) : TRet;
-declare function edit_set_int_limit(widget : TWidget, min : number, max : number, step : number) : TRet;
-declare function edit_set_float_limit(widget : TWidget, min : number, max : number, step : number) : TRet;
-declare function edit_set_readonly(widget : TWidget, readonly : number) : TRet;
-declare function edit_set_auto_fix(widget : TWidget, auto_fix : number) : TRet;
-declare function edit_set_select_none_when_focused(widget : TWidget, select_none_when_focused : number) : TRet;
-declare function edit_set_open_im_when_focused(widget : TWidget, open_im_when_focused : number) : TRet;
-declare function edit_set_input_type(widget : TWidget, type : TInputType) : TRet;
-declare function edit_set_input_tips(widget : TWidget, tips : string) : TRet;
-declare function edit_set_password_visible(widget : TWidget, password_visible : number) : TRet;
-declare function edit_set_focus(widget : TWidget, focus : number) : TRet;
-declare function edit_set_cursor(widget : TWidget, cursor : number) : TRet;
-declare function edit_t_get_prop_readonly(nativeObj : any);
-declare function edit_t_get_prop_password_visible(nativeObj : any);
-declare function edit_t_get_prop_auto_fix(nativeObj : any);
-declare function edit_t_get_prop_select_none_when_focused(nativeObj : any);
-declare function edit_t_get_prop_open_im_when_focused(nativeObj : any);
-declare function edit_t_get_prop_tips(nativeObj : any);
-declare function edit_t_get_prop_input_type(nativeObj : any);
-declare function edit_t_get_prop_min(nativeObj : any);
-declare function edit_t_get_prop_max(nativeObj : any);
-declare function edit_t_get_prop_step(nativeObj : any);
-declare function grid_item_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function grid_item_cast(widget : TWidget) : TWidget;
-declare function grid_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function grid_cast(widget : TWidget) : TWidget;
-declare function spin_box_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function spin_box_cast(widget : TWidget) : TWidget;
+declare function object_default_create() : TObject;
+declare function object_default_unref(obj : TObject) : TRet;
+declare function object_default_clear_props(obj : TObject) : TRet;
+declare function object_default_t_get_prop_props_size(nativeObj : any);
+declare function window_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function window_set_fullscreen(widget : TWidget, fullscreen : number) : TRet;
+declare function window_open(name : string) : TWidget;
+declare function window_open_and_close(name : string, to_close : TWidget) : TWidget;
+declare function window_close(widget : TWidget) : TRet;
+declare function window_close_force(widget : TWidget) : TRet;
+declare function window_cast(widget : TWidget) : TWidget;
+declare function window_t_get_prop_fullscreen(nativeObj : any);
 declare function timer_info_cast(timer : TTimerInfo) : TTimerInfo;
 declare function timer_info_t_get_prop_ctx(nativeObj : any);
 declare function timer_info_t_get_prop_id(nativeObj : any);
 declare function timer_info_t_get_prop_now(nativeObj : any);
 declare function combo_box_ex_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function gif_image_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
-declare function gif_image_cast(widget : TWidget) : TWidget;
-declare function object_default_create() : TObject;
-declare function object_default_unref(obj : TObject) : TRet;
-declare function object_default_clear_props(obj : TObject) : TRet;
-declare function object_default_t_get_prop_props_size(nativeObj : any);
-declare function object_array_create() : TObject;
-declare function object_array_unref(obj : TObject) : TRet;
-declare function object_array_clear_props(obj : TObject) : TRet;
-declare function object_array_t_get_prop_props_size(nativeObj : any);
 declare function image_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
 declare function image_set_draw_type(widget : TWidget, draw_type : TImageDrawType) : TRet;
 declare function image_cast(widget : TWidget) : TWidget;
 declare function image_t_get_prop_draw_type(nativeObj : any);
+declare function gif_image_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function gif_image_cast(widget : TWidget) : TWidget;
+declare function keyboard_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function keyboard_cast(widget : TWidget) : TWidget;
+declare function popup_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function popup_cast(widget : TWidget) : TWidget;
+declare function popup_set_close_when_click(widget : TWidget, close_when_click : number) : TRet;
+declare function popup_set_close_when_click_outside(widget : TWidget, close_when_click_outside : number) : TRet;
+declare function popup_t_get_prop_close_when_click(nativeObj : any);
+declare function popup_t_get_prop_close_when_click_outside(nativeObj : any);
+declare function object_array_create() : TObject;
+declare function object_array_unref(obj : TObject) : TRet;
+declare function object_array_clear_props(obj : TObject) : TRet;
+declare function object_array_t_get_prop_props_size(nativeObj : any);
+declare function spin_box_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function spin_box_cast(widget : TWidget) : TWidget;
 declare function system_bar_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
 declare function system_bar_cast(widget : TWidget) : TWidget;
 declare function idle_info_cast(idle : TIdleInfo) : TIdleInfo;
@@ -1594,6 +1577,22 @@ declare function idle_info_t_get_prop_id(nativeObj : any);
 declare function svg_image_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
 declare function svg_image_set_image(widget : TWidget, name : string) : TRet;
 declare function svg_image_cast(widget : TWidget) : TWidget;
+declare function dialog_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function dialog_create_simple(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function dialog_cast(widget : TWidget) : TWidget;
+declare function dialog_get_title(widget : TWidget) : TWidget;
+declare function dialog_get_client(widget : TWidget) : TWidget;
+declare function dialog_open(name : string) : TWidget;
+declare function dialog_set_title(widget : TWidget, title : string) : TRet;
+declare function dialog_modal(widget : TWidget) : TRet;
+declare function dialog_quit(widget : TWidget, code : number) : TRet;
+declare function dialog_is_quited(widget : TWidget) : number;
+declare function dialog_is_modal(widget : TWidget) : number;
+declare function dialog_toast(text : string, duration : number) : TRet;
+declare function dialog_info(title : string, text : string) : TRet;
+declare function dialog_warn(title : string, text : string) : TRet;
+declare function dialog_confirm(title : string, text : string) : TRet;
+declare function dialog_t_get_prop_highlight(nativeObj : any);
 class TGlobal {
  public nativeObj : any;
  constructor(nativeObj) {
@@ -3536,8 +3535,8 @@ class TEvent {
    return new TEvent(event_cast(event != null ? (event.nativeObj || event) : null));
  }
 
- static create(type : number, target : any) : TEvent  {
-   return new TEvent(event_create(type, target));
+ static create(type : number) : TEvent  {
+   return new TEvent(event_create(type));
  }
 
  destroy() : TRet  {
@@ -4072,74 +4071,18 @@ class TProgressEvent extends TEvent {
 
 }
 
-class TDialog extends TWidget {
+class TView extends TWidget {
  public nativeObj : any;
  constructor(nativeObj) {
    super(nativeObj);
  }
 
  static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TDialog(dialog_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
- static createSimple(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TDialog(dialog_create_simple(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+   return new TView(view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
  static cast(widget : TWidget) : TWidget  {
-   return new TDialog(dialog_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
- getTitle() : TWidget  {
-   return new TWidget(dialog_get_title(this.nativeObj));
- }
-
- getClient() : TWidget  {
-   return new TWidget(dialog_get_client(this.nativeObj));
- }
-
- static open(name : string) : TWidget  {
-   return new TDialog(dialog_open(name));
- }
-
- setTitle(title : string) : TRet  {
-   return dialog_set_title(this.nativeObj, title);
- }
-
- modal() : TRet  {
-   return dialog_modal(this.nativeObj);
- }
-
- quit(code : number) : TRet  {
-   return dialog_quit(this.nativeObj, code);
- }
-
- isQuited() : number  {
-   return dialog_is_quited(this.nativeObj);
- }
-
- isModal() : number  {
-   return dialog_is_modal(this.nativeObj);
- }
-
- static toast(text : string, duration : number) : TRet  {
-   return dialog_toast(text, duration);
- }
-
- static info(title : string, text : string) : TRet  {
-   return dialog_info(title, text);
- }
-
- static warn(title : string, text : string) : TRet  {
-   return dialog_warn(title, text);
- }
-
- static confirm(title : string, text : string) : TRet  {
-   return dialog_confirm(title, text);
- }
-
- get highlight() : string {
-   return dialog_t_get_prop_highlight(this.nativeObj);
+   return new TView(view_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 }
@@ -4472,18 +4415,18 @@ class TScrollBar extends TWidget {
 
 }
 
-class TView extends TWidget {
+class TTabControl extends TWidget {
  public nativeObj : any;
  constructor(nativeObj) {
    super(nativeObj);
  }
 
  static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TView(view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+   return new TTabControl(tab_control_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
  static cast(widget : TWidget) : TWidget  {
-   return new TView(view_cast(widget != null ? (widget.nativeObj || widget) : null));
+   return new TTabControl(tab_control_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 }
@@ -4560,22 +4503,6 @@ class TListViewH extends TWidget {
 
 }
 
-class TTabControl extends TWidget {
- public nativeObj : any;
- constructor(nativeObj) {
-   super(nativeObj);
- }
-
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TTabControl(tab_control_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
- static cast(widget : TWidget) : TWidget  {
-   return new TTabControl(tab_control_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-}
-
 class TTabButton extends TWidget {
  public nativeObj : any;
  constructor(nativeObj) {
@@ -4612,6 +4539,38 @@ class TTabButton extends TWidget {
 
  get icon() : string {
    return tab_button_t_get_prop_icon(this.nativeObj);
+ }
+
+}
+
+class TTabButtonGroup extends TWidget {
+ public nativeObj : any;
+ constructor(nativeObj) {
+   super(nativeObj);
+ }
+
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+   return new TTabButtonGroup(tab_button_group_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+ setCompact(compact : number) : TRet  {
+   return tab_button_group_set_compact(this.nativeObj, compact);
+ }
+
+ setScrollable(scrollable : number) : TRet  {
+   return tab_button_group_set_scrollable(this.nativeObj, scrollable);
+ }
+
+ static cast(widget : TWidget) : TWidget  {
+   return new TTabButtonGroup(tab_button_group_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+ get compact() : number {
+   return tab_button_group_t_get_prop_compact(this.nativeObj);
+ }
+
+ get scrollable() : number {
+   return tab_button_group_t_get_prop_scrollable(this.nativeObj);
  }
 
 }
@@ -4820,34 +4779,66 @@ class TProgressCircle extends TWidget {
 
 }
 
-class TTabButtonGroup extends TWidget {
+class TSlider extends TWidget {
  public nativeObj : any;
  constructor(nativeObj) {
    super(nativeObj);
  }
 
  static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TTabButtonGroup(tab_button_group_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
- setCompact(compact : number) : TRet  {
-   return tab_button_group_set_compact(this.nativeObj, compact);
- }
-
- setScrollable(scrollable : number) : TRet  {
-   return tab_button_group_set_scrollable(this.nativeObj, scrollable);
+   return new TSlider(slider_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
  static cast(widget : TWidget) : TWidget  {
-   return new TTabButtonGroup(tab_button_group_cast(widget != null ? (widget.nativeObj || widget) : null));
+   return new TSlider(slider_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
- get compact() : number {
-   return tab_button_group_t_get_prop_compact(this.nativeObj);
+ setValue(value : number) : TRet  {
+   return slider_set_value(this.nativeObj, value);
  }
 
- get scrollable() : number {
-   return tab_button_group_t_get_prop_scrollable(this.nativeObj);
+ setMin(min : number) : TRet  {
+   return slider_set_min(this.nativeObj, min);
+ }
+
+ setMax(max : number) : TRet  {
+   return slider_set_max(this.nativeObj, max);
+ }
+
+ setStep(step : number) : TRet  {
+   return slider_set_step(this.nativeObj, step);
+ }
+
+ setBarSize(bar_size : number) : TRet  {
+   return slider_set_bar_size(this.nativeObj, bar_size);
+ }
+
+ setVertical(vertical : number) : TRet  {
+   return slider_set_vertical(this.nativeObj, vertical);
+ }
+
+ get value() : number {
+   return slider_t_get_prop_value(this.nativeObj);
+ }
+
+ get min() : number {
+   return slider_t_get_prop_min(this.nativeObj);
+ }
+
+ get max() : number {
+   return slider_t_get_prop_max(this.nativeObj);
+ }
+
+ get step() : number {
+   return slider_t_get_prop_step(this.nativeObj);
+ }
+
+ get vertical() : number {
+   return slider_t_get_prop_vertical(this.nativeObj);
+ }
+
+ get barSize() : number {
+   return slider_t_get_prop_bar_size(this.nativeObj);
  }
 
 }
@@ -4916,70 +4907,6 @@ class TMledit extends TWidget {
 
 }
 
-class TSlider extends TWidget {
- public nativeObj : any;
- constructor(nativeObj) {
-   super(nativeObj);
- }
-
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TSlider(slider_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
- static cast(widget : TWidget) : TWidget  {
-   return new TSlider(slider_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
- setValue(value : number) : TRet  {
-   return slider_set_value(this.nativeObj, value);
- }
-
- setMin(min : number) : TRet  {
-   return slider_set_min(this.nativeObj, min);
- }
-
- setMax(max : number) : TRet  {
-   return slider_set_max(this.nativeObj, max);
- }
-
- setStep(step : number) : TRet  {
-   return slider_set_step(this.nativeObj, step);
- }
-
- setBarSize(bar_size : number) : TRet  {
-   return slider_set_bar_size(this.nativeObj, bar_size);
- }
-
- setVertical(vertical : number) : TRet  {
-   return slider_set_vertical(this.nativeObj, vertical);
- }
-
- get value() : number {
-   return slider_t_get_prop_value(this.nativeObj);
- }
-
- get min() : number {
-   return slider_t_get_prop_min(this.nativeObj);
- }
-
- get max() : number {
-   return slider_t_get_prop_max(this.nativeObj);
- }
-
- get step() : number {
-   return slider_t_get_prop_step(this.nativeObj);
- }
-
- get vertical() : number {
-   return slider_t_get_prop_vertical(this.nativeObj);
- }
-
- get barSize() : number {
-   return slider_t_get_prop_bar_size(this.nativeObj);
- }
-
-}
-
 class TRow extends TWidget {
  public nativeObj : any;
  constructor(nativeObj) {
@@ -4992,6 +4919,58 @@ class TRow extends TWidget {
 
  static cast(widget : TWidget) : TWidget  {
    return new TRow(row_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+}
+
+class TProgressBar extends TWidget {
+ public nativeObj : any;
+ constructor(nativeObj) {
+   super(nativeObj);
+ }
+
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+   return new TProgressBar(progress_bar_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+ static cast(widget : TWidget) : TWidget  {
+   return new TProgressBar(progress_bar_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+ setValue(value : number) : TRet  {
+   return progress_bar_set_value(this.nativeObj, value);
+ }
+
+ setMax(max : number) : TRet  {
+   return progress_bar_set_max(this.nativeObj, max);
+ }
+
+ setVertical(vertical : number) : TRet  {
+   return progress_bar_set_vertical(this.nativeObj, vertical);
+ }
+
+ setShowText(show_text : number) : TRet  {
+   return progress_bar_set_show_text(this.nativeObj, show_text);
+ }
+
+ getPercent() : number  {
+   return progress_bar_get_percent(this.nativeObj);
+ }
+
+ get value() : number {
+   return progress_bar_t_get_prop_value(this.nativeObj);
+ }
+
+ get max() : number {
+   return progress_bar_t_get_prop_max(this.nativeObj);
+ }
+
+ get vertical() : number {
+   return progress_bar_t_get_prop_vertical(this.nativeObj);
+ }
+
+ get showText() : number {
+   return progress_bar_t_get_prop_show_text(this.nativeObj);
  }
 
 }
@@ -5074,10 +5053,6 @@ class TObject extends TEmitter {
    return object_set_prop_str(this.nativeObj, name, value);
  }
 
- setPropPointer(name : string, value : any) : TRet  {
-   return object_set_prop_pointer(this.nativeObj, name, value);
- }
-
  setPropObject(name : string, value : TObject) : TRet  {
    return object_set_prop_object(this.nativeObj, name, value != null ? (value.nativeObj || value) : null);
  }
@@ -5156,54 +5131,30 @@ class TObject extends TEmitter {
 
 }
 
-class TProgressBar extends TWidget {
+class TPages extends TWidget {
  public nativeObj : any;
  constructor(nativeObj) {
    super(nativeObj);
  }
 
  static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TProgressBar(progress_bar_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+   return new TPages(pages_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
  static cast(widget : TWidget) : TWidget  {
-   return new TProgressBar(progress_bar_cast(widget != null ? (widget.nativeObj || widget) : null));
+   return new TPages(pages_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
- setValue(value : number) : TRet  {
-   return progress_bar_set_value(this.nativeObj, value);
+ setActive(index : number) : TRet  {
+   return pages_set_active(this.nativeObj, index);
  }
 
- setMax(max : number) : TRet  {
-   return progress_bar_set_max(this.nativeObj, max);
+ setActiveByName(name : string) : TRet  {
+   return pages_set_active_by_name(this.nativeObj, name);
  }
 
- setVertical(vertical : number) : TRet  {
-   return progress_bar_set_vertical(this.nativeObj, vertical);
- }
-
- setShowText(show_text : number) : TRet  {
-   return progress_bar_set_show_text(this.nativeObj, show_text);
- }
-
- getPercent() : number  {
-   return progress_bar_get_percent(this.nativeObj);
- }
-
- get value() : number {
-   return progress_bar_t_get_prop_value(this.nativeObj);
- }
-
- get max() : number {
-   return progress_bar_t_get_prop_max(this.nativeObj);
- }
-
- get vertical() : number {
-   return progress_bar_t_get_prop_vertical(this.nativeObj);
- }
-
- get showText() : number {
-   return progress_bar_t_get_prop_show_text(this.nativeObj);
+ get active() : number {
+   return pages_t_get_prop_active(this.nativeObj);
  }
 
 }
@@ -5240,18 +5191,18 @@ class TLineNumber extends TWidget {
 
 }
 
-class TKeyboard extends TWidget {
+class TOverlay extends TWidget {
  public nativeObj : any;
  constructor(nativeObj) {
    super(nativeObj);
  }
 
  static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TKeyboard(keyboard_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+   return new TOverlay(overlay_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
  static cast(widget : TWidget) : TWidget  {
-   return new TKeyboard(keyboard_cast(widget != null ? (widget.nativeObj || widget) : null));
+   return new TOverlay(overlay_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 }
@@ -5480,34 +5431,30 @@ class TGuagePointer extends TWidget {
 
 }
 
-class TPopup extends TWidget {
+class TLabel extends TWidget {
  public nativeObj : any;
  constructor(nativeObj) {
    super(nativeObj);
  }
 
  static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TPopup(popup_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+   return new TLabel(label_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+ setLength(length : number) : TRet  {
+   return label_set_length(this.nativeObj, length);
+ }
+
+ resizeToContent(min_w : number, max_w : number, min_h : number, max_h : number) : TRet  {
+   return label_resize_to_content(this.nativeObj, min_w, max_w, min_h, max_h);
  }
 
  static cast(widget : TWidget) : TWidget  {
-   return new TPopup(popup_cast(widget != null ? (widget.nativeObj || widget) : null));
+   return new TLabel(label_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
- setCloseWhenClick(close_when_click : number) : TRet  {
-   return popup_set_close_when_click(this.nativeObj, close_when_click);
- }
-
- setCloseWhenClickOutside(close_when_click_outside : number) : TRet  {
-   return popup_set_close_when_click_outside(this.nativeObj, close_when_click_outside);
- }
-
- get closeWhenClick() : number {
-   return popup_t_get_prop_close_when_click(this.nativeObj);
- }
-
- get closeWhenClickOutside() : number {
-   return popup_t_get_prop_close_when_click_outside(this.nativeObj);
+ get length() : number {
+   return label_t_get_prop_length(this.nativeObj);
  }
 
 }
@@ -5584,30 +5531,18 @@ class TDraggable extends TWidget {
 
 }
 
-class TPages extends TWidget {
+class TGroupBox extends TWidget {
  public nativeObj : any;
  constructor(nativeObj) {
    super(nativeObj);
  }
 
  static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TPages(pages_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+   return new TGroupBox(group_box_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
  static cast(widget : TWidget) : TWidget  {
-   return new TPages(pages_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
- setActive(index : number) : TRet  {
-   return pages_set_active(this.nativeObj, index);
- }
-
- setActiveByName(name : string) : TRet  {
-   return pages_set_active_by_name(this.nativeObj, name);
- }
-
- get active() : number {
-   return pages_t_get_prop_active(this.nativeObj);
+   return new TGroupBox(group_box_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 }
@@ -5652,58 +5587,34 @@ class TCanvasWidget extends TWidget {
 
 }
 
-class TOverlay extends TWidget {
+class TGrid extends TWidget {
  public nativeObj : any;
  constructor(nativeObj) {
    super(nativeObj);
  }
 
  static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TOverlay(overlay_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+   return new TGrid(grid_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
  static cast(widget : TWidget) : TWidget  {
-   return new TOverlay(overlay_cast(widget != null ? (widget.nativeObj || widget) : null));
+   return new TGrid(grid_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 }
 
-class TWindow extends TWidget {
+class TGridItem extends TWidget {
  public nativeObj : any;
  constructor(nativeObj) {
    super(nativeObj);
  }
 
  static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TWindow(window_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
- setFullscreen(fullscreen : number) : TRet  {
-   return window_set_fullscreen(this.nativeObj, fullscreen);
- }
-
- static open(name : string) : TWidget  {
-   return new TWindow(window_open(name));
- }
-
- static openAndClose(name : string, to_close : TWidget) : TWidget  {
-   return new TWindow(window_open_and_close(name, to_close != null ? (to_close.nativeObj || to_close) : null));
- }
-
- close() : TRet  {
-   return window_close(this.nativeObj);
- }
-
- closeForce() : TRet  {
-   return window_close_force(this.nativeObj);
+   return new TGridItem(grid_item_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
  static cast(widget : TWidget) : TWidget  {
-   return new TWindow(window_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
- get fullscreen() : number {
-   return window_t_get_prop_fullscreen(this.nativeObj);
+   return new TGridItem(grid_item_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 }
@@ -5788,30 +5699,122 @@ class TWindowBase extends TWidget {
 
 }
 
-class TLabel extends TWidget {
+class TEdit extends TWidget {
  public nativeObj : any;
  constructor(nativeObj) {
    super(nativeObj);
  }
 
  static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TLabel(label_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
- setLength(length : number) : TRet  {
-   return label_set_length(this.nativeObj, length);
- }
-
- resizeToContent(min_w : number, max_w : number, min_h : number, max_h : number) : TRet  {
-   return label_resize_to_content(this.nativeObj, min_w, max_w, min_h, max_h);
+   return new TEdit(edit_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
  static cast(widget : TWidget) : TWidget  {
-   return new TLabel(label_cast(widget != null ? (widget.nativeObj || widget) : null));
+   return new TEdit(edit_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
- get length() : number {
-   return label_t_get_prop_length(this.nativeObj);
+ getInt() : number  {
+   return edit_get_int(this.nativeObj);
+ }
+
+ getDouble() : number  {
+   return edit_get_double(this.nativeObj);
+ }
+
+ setInt(value : number) : TRet  {
+   return edit_set_int(this.nativeObj, value);
+ }
+
+ setDouble(value : number) : TRet  {
+   return edit_set_double(this.nativeObj, value);
+ }
+
+ setTextLimit(min : number, max : number) : TRet  {
+   return edit_set_text_limit(this.nativeObj, min, max);
+ }
+
+ setIntLimit(min : number, max : number, step : number) : TRet  {
+   return edit_set_int_limit(this.nativeObj, min, max, step);
+ }
+
+ setFloatLimit(min : number, max : number, step : number) : TRet  {
+   return edit_set_float_limit(this.nativeObj, min, max, step);
+ }
+
+ setReadonly(readonly : number) : TRet  {
+   return edit_set_readonly(this.nativeObj, readonly);
+ }
+
+ setAutoFix(auto_fix : number) : TRet  {
+   return edit_set_auto_fix(this.nativeObj, auto_fix);
+ }
+
+ setSelectNoneWhenFocused(select_none_when_focused : number) : TRet  {
+   return edit_set_select_none_when_focused(this.nativeObj, select_none_when_focused);
+ }
+
+ setOpenImWhenFocused(open_im_when_focused : number) : TRet  {
+   return edit_set_open_im_when_focused(this.nativeObj, open_im_when_focused);
+ }
+
+ setInputType(type : TInputType) : TRet  {
+   return edit_set_input_type(this.nativeObj, type);
+ }
+
+ setInputTips(tips : string) : TRet  {
+   return edit_set_input_tips(this.nativeObj, tips);
+ }
+
+ setPasswordVisible(password_visible : number) : TRet  {
+   return edit_set_password_visible(this.nativeObj, password_visible);
+ }
+
+ setFocus(focus : number) : TRet  {
+   return edit_set_focus(this.nativeObj, focus);
+ }
+
+ setCursor(cursor : number) : TRet  {
+   return edit_set_cursor(this.nativeObj, cursor);
+ }
+
+ get readonly() : number {
+   return edit_t_get_prop_readonly(this.nativeObj);
+ }
+
+ get passwordVisible() : number {
+   return edit_t_get_prop_password_visible(this.nativeObj);
+ }
+
+ get autoFix() : number {
+   return edit_t_get_prop_auto_fix(this.nativeObj);
+ }
+
+ get selectNoneWhenFocused() : number {
+   return edit_t_get_prop_select_none_when_focused(this.nativeObj);
+ }
+
+ get openImWhenFocused() : number {
+   return edit_t_get_prop_open_im_when_focused(this.nativeObj);
+ }
+
+ get tips() : string {
+   return edit_t_get_prop_tips(this.nativeObj);
+ }
+
+ get inputType() : TInputType {
+   return edit_t_get_prop_input_type(this.nativeObj);
+ }
+
+ get min() : number {
+   return edit_t_get_prop_min(this.nativeObj);
+ }
+
+ get max() : number {
+   return edit_t_get_prop_max(this.nativeObj);
+ }
+
+ get step() : number {
+   return edit_t_get_prop_step(this.nativeObj);
  }
 
 }
@@ -5844,18 +5847,38 @@ class TStyleMutable extends TStyle {
 
 }
 
-class TGroupBox extends TWidget {
+class TDragger extends TWidget {
  public nativeObj : any;
  constructor(nativeObj) {
    super(nativeObj);
  }
 
  static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TGroupBox(group_box_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+   return new TDragger(dragger_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
  static cast(widget : TWidget) : TWidget  {
-   return new TGroupBox(group_box_cast(widget != null ? (widget.nativeObj || widget) : null));
+   return new TDragger(dragger_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+ setRange(x_min : number, y_min : number, x_max : number, y_max : number) : TWidget  {
+   return new TWidget(dragger_set_range(this.nativeObj, x_min, y_min, x_max, y_max));
+ }
+
+ get xMin() : number {
+   return dragger_t_get_prop_x_min(this.nativeObj);
+ }
+
+ get yMin() : number {
+   return dragger_t_get_prop_y_min(this.nativeObj);
+ }
+
+ get xMax() : number {
+   return dragger_t_get_prop_x_max(this.nativeObj);
+ }
+
+ get yMax() : number {
+   return dragger_t_get_prop_y_max(this.nativeObj);
  }
 
 }
@@ -6188,6 +6211,30 @@ class TButton extends TWidget {
 
 }
 
+class TDigitClock extends TWidget {
+ public nativeObj : any;
+ constructor(nativeObj) {
+   super(nativeObj);
+ }
+
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+   return new TDigitClock(digit_clock_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+ static cast(widget : TWidget) : TWidget  {
+   return new TDigitClock(digit_clock_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+ setFormat(format : string) : TRet  {
+   return digit_clock_set_format(this.nativeObj, format);
+ }
+
+ get format() : string {
+   return digit_clock_t_get_prop_format(this.nativeObj);
+ }
+
+}
+
 class TCheckButton extends TWidget {
  public nativeObj : any;
  constructor(nativeObj) {
@@ -6408,230 +6455,66 @@ class TDialogTitle extends TWidget {
 
 }
 
-class TDigitClock extends TWidget {
+class TObjectDefault extends TObject {
  public nativeObj : any;
  constructor(nativeObj) {
    super(nativeObj);
  }
 
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TDigitClock(digit_clock_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ static create() : TObject  {
+   return new TObjectDefault(object_default_create());
  }
 
- static cast(widget : TWidget) : TWidget  {
-   return new TDigitClock(digit_clock_cast(widget != null ? (widget.nativeObj || widget) : null));
+ unref() : TRet  {
+   return object_default_unref(this.nativeObj);
  }
 
- setFormat(format : string) : TRet  {
-   return digit_clock_set_format(this.nativeObj, format);
+ clearProps() : TRet  {
+   return object_default_clear_props(this.nativeObj);
  }
 
- get format() : string {
-   return digit_clock_t_get_prop_format(this.nativeObj);
+ get propsSize() : number {
+   return object_default_t_get_prop_props_size(this.nativeObj);
  }
 
 }
 
-class TDragger extends TWidget {
+class TWindow extends TWindowBase {
  public nativeObj : any;
  constructor(nativeObj) {
    super(nativeObj);
  }
 
  static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TDragger(dragger_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+   return new TWindow(window_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+ setFullscreen(fullscreen : number) : TRet  {
+   return window_set_fullscreen(this.nativeObj, fullscreen);
+ }
+
+ static open(name : string) : TWidget  {
+   return new TWindow(window_open(name));
+ }
+
+ static openAndClose(name : string, to_close : TWidget) : TWidget  {
+   return new TWindow(window_open_and_close(name, to_close != null ? (to_close.nativeObj || to_close) : null));
+ }
+
+ close() : TRet  {
+   return window_close(this.nativeObj);
+ }
+
+ closeForce() : TRet  {
+   return window_close_force(this.nativeObj);
  }
 
  static cast(widget : TWidget) : TWidget  {
-   return new TDragger(dragger_cast(widget != null ? (widget.nativeObj || widget) : null));
+   return new TWindow(window_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
- setRange(x_min : number, y_min : number, x_max : number, y_max : number) : TWidget  {
-   return new TWidget(dragger_set_range(this.nativeObj, x_min, y_min, x_max, y_max));
- }
-
- get xMin() : number {
-   return dragger_t_get_prop_x_min(this.nativeObj);
- }
-
- get yMin() : number {
-   return dragger_t_get_prop_y_min(this.nativeObj);
- }
-
- get xMax() : number {
-   return dragger_t_get_prop_x_max(this.nativeObj);
- }
-
- get yMax() : number {
-   return dragger_t_get_prop_y_max(this.nativeObj);
- }
-
-}
-
-class TEdit extends TWidget {
- public nativeObj : any;
- constructor(nativeObj) {
-   super(nativeObj);
- }
-
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TEdit(edit_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
- static cast(widget : TWidget) : TWidget  {
-   return new TEdit(edit_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
- getInt() : number  {
-   return edit_get_int(this.nativeObj);
- }
-
- getDouble() : number  {
-   return edit_get_double(this.nativeObj);
- }
-
- setInt(value : number) : TRet  {
-   return edit_set_int(this.nativeObj, value);
- }
-
- setDouble(value : number) : TRet  {
-   return edit_set_double(this.nativeObj, value);
- }
-
- setTextLimit(min : number, max : number) : TRet  {
-   return edit_set_text_limit(this.nativeObj, min, max);
- }
-
- setIntLimit(min : number, max : number, step : number) : TRet  {
-   return edit_set_int_limit(this.nativeObj, min, max, step);
- }
-
- setFloatLimit(min : number, max : number, step : number) : TRet  {
-   return edit_set_float_limit(this.nativeObj, min, max, step);
- }
-
- setReadonly(readonly : number) : TRet  {
-   return edit_set_readonly(this.nativeObj, readonly);
- }
-
- setAutoFix(auto_fix : number) : TRet  {
-   return edit_set_auto_fix(this.nativeObj, auto_fix);
- }
-
- setSelectNoneWhenFocused(select_none_when_focused : number) : TRet  {
-   return edit_set_select_none_when_focused(this.nativeObj, select_none_when_focused);
- }
-
- setOpenImWhenFocused(open_im_when_focused : number) : TRet  {
-   return edit_set_open_im_when_focused(this.nativeObj, open_im_when_focused);
- }
-
- setInputType(type : TInputType) : TRet  {
-   return edit_set_input_type(this.nativeObj, type);
- }
-
- setInputTips(tips : string) : TRet  {
-   return edit_set_input_tips(this.nativeObj, tips);
- }
-
- setPasswordVisible(password_visible : number) : TRet  {
-   return edit_set_password_visible(this.nativeObj, password_visible);
- }
-
- setFocus(focus : number) : TRet  {
-   return edit_set_focus(this.nativeObj, focus);
- }
-
- setCursor(cursor : number) : TRet  {
-   return edit_set_cursor(this.nativeObj, cursor);
- }
-
- get readonly() : number {
-   return edit_t_get_prop_readonly(this.nativeObj);
- }
-
- get passwordVisible() : number {
-   return edit_t_get_prop_password_visible(this.nativeObj);
- }
-
- get autoFix() : number {
-   return edit_t_get_prop_auto_fix(this.nativeObj);
- }
-
- get selectNoneWhenFocused() : number {
-   return edit_t_get_prop_select_none_when_focused(this.nativeObj);
- }
-
- get openImWhenFocused() : number {
-   return edit_t_get_prop_open_im_when_focused(this.nativeObj);
- }
-
- get tips() : string {
-   return edit_t_get_prop_tips(this.nativeObj);
- }
-
- get inputType() : TInputType {
-   return edit_t_get_prop_input_type(this.nativeObj);
- }
-
- get min() : number {
-   return edit_t_get_prop_min(this.nativeObj);
- }
-
- get max() : number {
-   return edit_t_get_prop_max(this.nativeObj);
- }
-
- get step() : number {
-   return edit_t_get_prop_step(this.nativeObj);
- }
-
-}
-
-class TGridItem extends TWidget {
- public nativeObj : any;
- constructor(nativeObj) {
-   super(nativeObj);
- }
-
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TGridItem(grid_item_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
- static cast(widget : TWidget) : TWidget  {
-   return new TGridItem(grid_item_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-}
-
-class TGrid extends TWidget {
- public nativeObj : any;
- constructor(nativeObj) {
-   super(nativeObj);
- }
-
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TGrid(grid_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
- static cast(widget : TWidget) : TWidget  {
-   return new TGrid(grid_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-}
-
-class TSpinBox extends TEdit {
- public nativeObj : any;
- constructor(nativeObj) {
-   super(nativeObj);
- }
-
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TSpinBox(spin_box_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
- static cast(widget : TWidget) : TWidget  {
-   return new TSpinBox(spin_box_cast(widget != null ? (widget.nativeObj || widget) : null));
+ get fullscreen() : number {
+   return window_t_get_prop_fullscreen(this.nativeObj);
  }
 
 }
@@ -6672,6 +6555,30 @@ class TComboBoxEx extends TComboBox {
 
 }
 
+class TImage extends TImageBase {
+ public nativeObj : any;
+ constructor(nativeObj) {
+   super(nativeObj);
+ }
+
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+   return new TImage(image_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+ setDrawType(draw_type : TImageDrawType) : TRet  {
+   return image_set_draw_type(this.nativeObj, draw_type);
+ }
+
+ static cast(widget : TWidget) : TWidget  {
+   return new TImage(image_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+ get drawType() : TImageDrawType {
+   return image_t_get_prop_draw_type(this.nativeObj);
+ }
+
+}
+
 class TGifImage extends TImageBase {
  public nativeObj : any;
  constructor(nativeObj) {
@@ -6688,26 +6595,50 @@ class TGifImage extends TImageBase {
 
 }
 
-class TObjectDefault extends TObject {
+class TKeyboard extends TWindowBase {
  public nativeObj : any;
  constructor(nativeObj) {
    super(nativeObj);
  }
 
- static create() : TObject  {
-   return new TObjectDefault(object_default_create());
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+   return new TKeyboard(keyboard_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- unref() : TRet  {
-   return object_default_unref(this.nativeObj);
+ static cast(widget : TWidget) : TWidget  {
+   return new TKeyboard(keyboard_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
- clearProps() : TRet  {
-   return object_default_clear_props(this.nativeObj);
+}
+
+class TPopup extends TWindowBase {
+ public nativeObj : any;
+ constructor(nativeObj) {
+   super(nativeObj);
  }
 
- get propsSize() : number {
-   return object_default_t_get_prop_props_size(this.nativeObj);
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+   return new TPopup(popup_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+ static cast(widget : TWidget) : TWidget  {
+   return new TPopup(popup_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+ setCloseWhenClick(close_when_click : number) : TRet  {
+   return popup_set_close_when_click(this.nativeObj, close_when_click);
+ }
+
+ setCloseWhenClickOutside(close_when_click_outside : number) : TRet  {
+   return popup_set_close_when_click_outside(this.nativeObj, close_when_click_outside);
+ }
+
+ get closeWhenClick() : number {
+   return popup_t_get_prop_close_when_click(this.nativeObj);
+ }
+
+ get closeWhenClickOutside() : number {
+   return popup_t_get_prop_close_when_click_outside(this.nativeObj);
  }
 
 }
@@ -6736,26 +6667,26 @@ class TObjectArray extends TObject {
 
 }
 
-class TImage extends TImageBase {
+class TMutableImage extends TImageBase {
+ public nativeObj : any;
+ constructor(nativeObj) {
+   super(nativeObj);
+ }
+
+}
+
+class TSpinBox extends TEdit {
  public nativeObj : any;
  constructor(nativeObj) {
    super(nativeObj);
  }
 
  static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
-   return new TImage(image_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
- setDrawType(draw_type : TImageDrawType) : TRet  {
-   return image_set_draw_type(this.nativeObj, draw_type);
+   return new TSpinBox(spin_box_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
  static cast(widget : TWidget) : TWidget  {
-   return new TImage(image_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
- get drawType() : TImageDrawType {
-   return image_t_get_prop_draw_type(this.nativeObj);
+   return new TSpinBox(spin_box_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 }
@@ -6772,14 +6703,6 @@ class TSystemBar extends TWindowBase {
 
  static cast(widget : TWidget) : TWidget  {
    return new TSystemBar(system_bar_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-}
-
-class TMutableImage extends TImageBase {
- public nativeObj : any;
- constructor(nativeObj) {
-   super(nativeObj);
  }
 
 }
@@ -6820,6 +6743,78 @@ class TSvgImage extends TImageBase {
 
  static cast(widget : TWidget) : TWidget  {
    return new TSvgImage(svg_image_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+}
+
+class TDialog extends TWindowBase {
+ public nativeObj : any;
+ constructor(nativeObj) {
+   super(nativeObj);
+ }
+
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+   return new TDialog(dialog_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+ static createSimple(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+   return new TDialog(dialog_create_simple(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+ static cast(widget : TWidget) : TWidget  {
+   return new TDialog(dialog_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+ getTitle() : TWidget  {
+   return new TWidget(dialog_get_title(this.nativeObj));
+ }
+
+ getClient() : TWidget  {
+   return new TWidget(dialog_get_client(this.nativeObj));
+ }
+
+ static open(name : string) : TWidget  {
+   return new TDialog(dialog_open(name));
+ }
+
+ setTitle(title : string) : TRet  {
+   return dialog_set_title(this.nativeObj, title);
+ }
+
+ modal() : TRet  {
+   return dialog_modal(this.nativeObj);
+ }
+
+ quit(code : number) : TRet  {
+   return dialog_quit(this.nativeObj, code);
+ }
+
+ isQuited() : number  {
+   return dialog_is_quited(this.nativeObj);
+ }
+
+ isModal() : number  {
+   return dialog_is_modal(this.nativeObj);
+ }
+
+ static toast(text : string, duration : number) : TRet  {
+   return dialog_toast(text, duration);
+ }
+
+ static info(title : string, text : string) : TRet  {
+   return dialog_info(title, text);
+ }
+
+ static warn(title : string, text : string) : TRet  {
+   return dialog_warn(title, text);
+ }
+
+ static confirm(title : string, text : string) : TRet  {
+   return dialog_confirm(title, text);
+ }
+
+ get highlight() : string {
+   return dialog_t_get_prop_highlight(this.nativeObj);
  }
 
 }
