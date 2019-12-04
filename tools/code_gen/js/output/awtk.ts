@@ -709,6 +709,13 @@ declare function widget_set_enable(widget : TWidget, enable : number) : TRet;
 declare function widget_set_feedback(widget : TWidget, feedback : number) : TRet;
 declare function widget_set_floating(widget : TWidget, floating : number) : TRet;
 declare function widget_set_focused(widget : TWidget, focused : number) : TRet;
+declare function widget_set_state(widget : TWidget, state : string) : TRet;
+declare function widget_set_opacity(widget : TWidget, opacity : number) : TRet;
+declare function widget_destroy_children(widget : TWidget) : TRet;
+declare function widget_add_child(widget : TWidget, child : TWidget) : TRet;
+declare function widget_remove_child(widget : TWidget, child : TWidget) : TRet;
+declare function widget_insert_child(widget : TWidget, index : number, child : TWidget) : TRet;
+declare function widget_restack(widget : TWidget, index : number) : TRet;
 declare function widget_child(widget : TWidget, name : string) : TWidget;
 declare function widget_lookup(widget : TWidget, name : string, recursive : number) : TWidget;
 declare function widget_lookup_by_type(widget : TWidget, type : string, recursive : number) : TWidget;
@@ -764,6 +771,7 @@ declare function widget_t_set_prop_focusable(nativeObj : any, value : number);
 declare function widget_t_get_prop_with_focus_state(nativeObj : any);
 declare function widget_t_set_prop_with_focus_state(nativeObj : any, value : number);
 declare function widget_t_get_prop_floating(nativeObj : any);
+declare function widget_t_get_prop_parent(nativeObj : any);
 declare function RET_OK();
 declare function RET_OOM();
 declare function RET_FAIL();
@@ -1101,12 +1109,15 @@ declare function scroll_view_set_virtual_h(widget : TWidget, h : number) : TRet;
 declare function scroll_view_set_xslidable(widget : TWidget, xslidable : number) : TRet;
 declare function scroll_view_set_yslidable(widget : TWidget, yslidable : number) : TRet;
 declare function scroll_view_set_offset(widget : TWidget, xoffset : number, yoffset : number) : TRet;
+declare function scroll_view_set_speed_scale(widget : TWidget, xspeed_scale : number, yspeed_scale : number) : TRet;
 declare function scroll_view_scroll_to(widget : TWidget, xoffset_end : number, yoffset_end : number, duration : number) : TRet;
 declare function scroll_view_scroll_delta_to(widget : TWidget, xoffset_delta : number, yoffset_delta : number, duration : number) : TRet;
 declare function scroll_view_t_get_prop_virtual_w(nativeObj : any);
 declare function scroll_view_t_get_prop_virtual_h(nativeObj : any);
 declare function scroll_view_t_get_prop_xoffset(nativeObj : any);
 declare function scroll_view_t_get_prop_yoffset(nativeObj : any);
+declare function scroll_view_t_get_prop_xspeed_scale(nativeObj : any);
+declare function scroll_view_t_get_prop_yspeed_scale(nativeObj : any);
 declare function scroll_view_t_get_prop_xslidable(nativeObj : any);
 declare function scroll_view_t_get_prop_yslidable(nativeObj : any);
 declare function scroll_bar_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
@@ -1382,6 +1393,7 @@ declare function window_manager_set_screen_saver_time(widget : TWidget, screen_s
 declare function window_manager_set_cursor(widget : TWidget, cursor : string) : TRet;
 declare function window_manager_back(widget : TWidget) : TRet;
 declare function window_manager_back_to_home(widget : TWidget) : TRet;
+declare function window_manager_back_to(widget : TWidget, target : string) : TRet;
 declare function window_base_cast(widget : TWidget) : TWidget;
 declare function window_base_t_get_prop_theme(nativeObj : any);
 declare function window_base_t_get_prop_closable(nativeObj : any);
@@ -3026,6 +3038,34 @@ class TWidget {
    return widget_set_focused(this.nativeObj, focused);
  }
 
+ setState(state : string) : TRet  {
+   return widget_set_state(this.nativeObj, state);
+ }
+
+ setOpacity(opacity : number) : TRet  {
+   return widget_set_opacity(this.nativeObj, opacity);
+ }
+
+ destroyChildren() : TRet  {
+   return widget_destroy_children(this.nativeObj);
+ }
+
+ addChild(child : TWidget) : TRet  {
+   return widget_add_child(this.nativeObj, child != null ? (child.nativeObj || child) : null);
+ }
+
+ removeChild(child : TWidget) : TRet  {
+   return widget_remove_child(this.nativeObj, child != null ? (child.nativeObj || child) : null);
+ }
+
+ insertChild(index : number, child : TWidget) : TRet  {
+   return widget_insert_child(this.nativeObj, index, child != null ? (child.nativeObj || child) : null);
+ }
+
+ restack(index : number) : TRet  {
+   return widget_restack(this.nativeObj, index);
+ }
+
  child(name : string) : TWidget  {
    return new TWidget(widget_child(this.nativeObj, name));
  }
@@ -3244,6 +3284,10 @@ class TWidget {
 
  get floating() : number {
    return widget_t_get_prop_floating(this.nativeObj);
+ }
+
+ get parent() : TWidget {
+   return new TWidget(widget_t_get_prop_parent(this.nativeObj));
  }
 
 }
@@ -4313,6 +4357,10 @@ class TScrollView extends TWidget {
    return scroll_view_set_offset(this.nativeObj, xoffset, yoffset);
  }
 
+ setSpeedScale(xspeed_scale : number, yspeed_scale : number) : TRet  {
+   return scroll_view_set_speed_scale(this.nativeObj, xspeed_scale, yspeed_scale);
+ }
+
  scrollTo(xoffset_end : number, yoffset_end : number, duration : number) : TRet  {
    return scroll_view_scroll_to(this.nativeObj, xoffset_end, yoffset_end, duration);
  }
@@ -4335,6 +4383,14 @@ class TScrollView extends TWidget {
 
  get yoffset() : number {
    return scroll_view_t_get_prop_yoffset(this.nativeObj);
+ }
+
+ get xspeedScale() : number {
+   return scroll_view_t_get_prop_xspeed_scale(this.nativeObj);
+ }
+
+ get yspeedScale() : number {
+   return scroll_view_t_get_prop_yspeed_scale(this.nativeObj);
  }
 
  get xslidable() : number {
@@ -5675,6 +5731,10 @@ class TWindowManager extends TWidget {
 
  backToHome() : TRet  {
    return window_manager_back_to_home(this.nativeObj);
+ }
+
+ backTo(target : string) : TRet  {
+   return window_manager_back_to(this.nativeObj, target);
  }
 
 }
