@@ -1,4 +1,6 @@
-class IdleManager {
+package awtk;
+
+public class IdleManager {
  public long nativeObj;
 
  public IdleManager(long nativeObj) {

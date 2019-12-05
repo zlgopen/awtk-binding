@@ -1,3 +1,5 @@
+package awtk;
+
 public class AlignV {
  static public final int NONE = ALIGN_V_NONE();
  static public final int MIDDLE = ALIGN_V_MIDDLE();

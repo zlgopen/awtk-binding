@@ -1,4 +1,6 @@
-class ColorComponent extends Widget {
+package awtk;
+
+public class ColorComponent extends Widget {
  public long nativeObj;
 
  public ColorComponent(long nativeObj) {
@@ -9,7 +11,7 @@ class ColorComponent extends Widget {
    return new ColorComponent(nativeObj);
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new ColorComponent(color_component_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

@@ -1,3 +1,5 @@
+package awtk;
+
 public class GlyphFormat {
  static public final int ALPHA = GLYPH_FMT_ALPHA();
  static public final int MONO = GLYPH_FMT_MONO();

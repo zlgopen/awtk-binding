@@ -1,4 +1,6 @@
-class GifImage extends ImageBase {
+package awtk;
+
+public class GifImage extends ImageBase {
  public long nativeObj;
 
  public GifImage(long nativeObj) {
@@ -9,11 +11,11 @@ class GifImage extends ImageBase {
    return new GifImage(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new GifImage(gif_image_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new GifImage(gif_image_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

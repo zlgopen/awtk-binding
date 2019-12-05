@@ -8224,22 +8224,6 @@
     "level": 1
   },
   {
-    "params": [],
-    "annotation": {
-      "global": true,
-      "scriptable": true
-    },
-    "desc": "初始化AWTK扩展控件。\n",
-    "name": "tk_ext_widgets_init",
-    "return": {
-      "type": "ret_t",
-      "desc": "返回RET_OK表示成功，否则表示失败。"
-    },
-    "type": "method",
-    "header": "ext_widgets/ext_widgets.h",
-    "level": 1
-  },
-  {
     "type": "class",
     "methods": [
       {

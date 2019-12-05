@@ -1,4 +1,6 @@
-class HscrollLabel extends Widget {
+package awtk;
+
+public class HscrollLabel extends Widget {
  public long nativeObj;
 
  public HscrollLabel(long nativeObj) {
@@ -9,51 +11,51 @@ class HscrollLabel extends Widget {
    return new HscrollLabel(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new HscrollLabel(hscroll_label_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- Ret setLull(int lull)  {
+ public  int setLull(int lull)  {
    return hscroll_label_set_lull(this.nativeObj, lull);
  }
 
- Ret setDuration(int duration)  {
+ public  int setDuration(int duration)  {
    return hscroll_label_set_duration(this.nativeObj, duration);
  }
 
- Ret setOnlyFocus(boolean only_focus)  {
+ public  int setOnlyFocus(boolean only_focus)  {
    return hscroll_label_set_only_focus(this.nativeObj, only_focus);
  }
 
- Ret setOnlyParentFocus(boolean only_parent_focus)  {
+ public  int setOnlyParentFocus(boolean only_parent_focus)  {
    return hscroll_label_set_only_parent_focus(this.nativeObj, only_parent_focus);
  }
 
- Ret setLoop(boolean loop)  {
+ public  int setLoop(boolean loop)  {
    return hscroll_label_set_loop(this.nativeObj, loop);
  }
 
- Ret setYoyo(boolean yoyo)  {
+ public  int setYoyo(boolean yoyo)  {
    return hscroll_label_set_yoyo(this.nativeObj, yoyo);
  }
 
- Ret setEllipses(boolean ellipses)  {
+ public  int setEllipses(boolean ellipses)  {
    return hscroll_label_set_ellipses(this.nativeObj, ellipses);
  }
 
- Ret setXoffset(int xoffset)  {
+ public  int setXoffset(int xoffset)  {
    return hscroll_label_set_xoffset(this.nativeObj, xoffset);
  }
 
- Ret start()  {
+ public  int start()  {
    return hscroll_label_start(this.nativeObj);
  }
 
- Ret stop()  {
+ public  int stop()  {
    return hscroll_label_stop(this.nativeObj);
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new HscrollLabel(hscroll_label_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -94,16 +96,16 @@ class HscrollLabel extends Widget {
  }
 
 static private native long hscroll_label_create(long parent, int x, int y, int w, int h);
-static private native Ret hscroll_label_set_lull(long widget, int lull);
-static private native Ret hscroll_label_set_duration(long widget, int duration);
-static private native Ret hscroll_label_set_only_focus(long widget, boolean only_focus);
-static private native Ret hscroll_label_set_only_parent_focus(long widget, boolean only_parent_focus);
-static private native Ret hscroll_label_set_loop(long widget, boolean loop);
-static private native Ret hscroll_label_set_yoyo(long widget, boolean yoyo);
-static private native Ret hscroll_label_set_ellipses(long widget, boolean ellipses);
-static private native Ret hscroll_label_set_xoffset(long widget, int xoffset);
-static private native Ret hscroll_label_start(long widget);
-static private native Ret hscroll_label_stop(long widget);
+static private native int hscroll_label_set_lull(long widget, int lull);
+static private native int hscroll_label_set_duration(long widget, int duration);
+static private native int hscroll_label_set_only_focus(long widget, boolean only_focus);
+static private native int hscroll_label_set_only_parent_focus(long widget, boolean only_parent_focus);
+static private native int hscroll_label_set_loop(long widget, boolean loop);
+static private native int hscroll_label_set_yoyo(long widget, boolean yoyo);
+static private native int hscroll_label_set_ellipses(long widget, boolean ellipses);
+static private native int hscroll_label_set_xoffset(long widget, int xoffset);
+static private native int hscroll_label_start(long widget);
+static private native int hscroll_label_stop(long widget);
 static private native long hscroll_label_cast(long widget);
 static private native boolean hscroll_label_t_get_prop_only_focus(long nativeObj);
 static private native boolean hscroll_label_t_get_prop_only_parent_focus(long nativeObj);

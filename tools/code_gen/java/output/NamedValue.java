@@ -1,4 +1,6 @@
-class NamedValue {
+package awtk;
+
+public class NamedValue {
  public long nativeObj;
 
  public NamedValue(long nativeObj) {
@@ -9,27 +11,27 @@ class NamedValue {
    return new NamedValue(nativeObj);
  }
 
- static NamedValue create()  {
+ public  static NamedValue create()  {
    return new NamedValue(named_value_create());
  }
 
- static NamedValue cast(NamedValue nv)  {
+ public  static NamedValue cast(NamedValue nv)  {
    return new NamedValue(named_value_cast(nv != null ? (nv.nativeObj) : 0));
  }
 
- Ret setName(String name)  {
+ public  int setName(String name)  {
    return named_value_set_name(this.nativeObj, name);
  }
 
- Ret setValue(Value value)  {
+ public  int setValue(Value value)  {
    return named_value_set_value(this.nativeObj, value != null ? (value.nativeObj) : 0);
  }
 
- Value getValue()  {
+ public  Value getValue()  {
    return new Value(named_value_get_value(this.nativeObj));
  }
 
- Ret destroy()  {
+ public  int destroy()  {
    return named_value_destroy(this.nativeObj);
  }
 
@@ -39,10 +41,10 @@ class NamedValue {
 
 static private native long named_value_create();
 static private native long named_value_cast(long nv);
-static private native Ret named_value_set_name(long nv, String name);
-static private native Ret named_value_set_value(long nv, long value);
+static private native int named_value_set_name(long nv, String name);
+static private native int named_value_set_value(long nv, long value);
 static private native long named_value_get_value(long nv);
-static private native Ret named_value_destroy(long nv);
+static private native int named_value_destroy(long nv);
 static private native String named_value_t_get_prop_name(long nativeObj);
 }
 

@@ -26,7 +26,6 @@
 #include "tkc/types_def.h"
 #include "tkc/timer_manager.h"
 #include "tkc/time_now.h"
-#include "ext_widgets/ext_widgets.h"
 #include "tkc/rect.h"
 #include "tkc/path.h"
 #include "tkc/named_value.h"
@@ -11070,22 +11069,6 @@ ret_t time_now_t_init(JSContext *ctx) {
  jsvalue_unref(ctx, global_obj);
 
  return RET_OK;
-}
-
-jsvalue_t wrap_tk_ext_widgets_init(
-    JSContext *ctx, 
-    jsvalue_const_t this_val,
-    int argc, 
-    jsvalue_const_t *argv
-  ) {
-  jsvalue_t jret = JS_NULL;
-  if(argc >= 0) {
-  ret_t ret = 0;
-  ret = (ret_t)tk_ext_widgets_init();
-
-  jret = jsvalue_create_int(ctx, ret);
-  }
-  return jret;
 }
 
 jsvalue_t wrap_rect_create(

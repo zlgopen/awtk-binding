@@ -1,4 +1,6 @@
-class GridItem extends Widget {
+package awtk;
+
+public class GridItem extends Widget {
  public long nativeObj;
 
  public GridItem(long nativeObj) {
@@ -9,11 +11,11 @@ class GridItem extends Widget {
    return new GridItem(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new GridItem(grid_item_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new GridItem(grid_item_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

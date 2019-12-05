@@ -1,4 +1,6 @@
-class Value {
+package awtk;
+
+public class Value {
  public long nativeObj;
 
  public Value(long nativeObj) {
@@ -9,135 +11,135 @@ class Value {
    return new Value(nativeObj);
  }
 
- Value setBool(boolean value)  {
+ public  Value setBool(boolean value)  {
    return new Value(value_set_bool(this.nativeObj, value));
  }
 
- boolean bool()  {
+ public  boolean bool()  {
    return value_bool(this.nativeObj);
  }
 
- Value setInt8(int value)  {
+ public  Value setInt8(int value)  {
    return new Value(value_set_int8(this.nativeObj, value));
  }
 
- int int8()  {
+ public  int int8()  {
    return value_int8(this.nativeObj);
  }
 
- Value setUint8(int value)  {
+ public  Value setUint8(int value)  {
    return new Value(value_set_uint8(this.nativeObj, value));
  }
 
- int uint8()  {
+ public  int uint8()  {
    return value_uint8(this.nativeObj);
  }
 
- Value setInt16(int value)  {
+ public  Value setInt16(int value)  {
    return new Value(value_set_int16(this.nativeObj, value));
  }
 
- int int16()  {
+ public  int int16()  {
    return value_int16(this.nativeObj);
  }
 
- Value setUint16(int value)  {
+ public  Value setUint16(int value)  {
    return new Value(value_set_uint16(this.nativeObj, value));
  }
 
- int uint16()  {
+ public  int uint16()  {
    return value_uint16(this.nativeObj);
  }
 
- Value setInt32(int value)  {
+ public  Value setInt32(int value)  {
    return new Value(value_set_int32(this.nativeObj, value));
  }
 
- int int32()  {
+ public  int int32()  {
    return value_int32(this.nativeObj);
  }
 
- Value setUint32(int value)  {
+ public  Value setUint32(int value)  {
    return new Value(value_set_uint32(this.nativeObj, value));
  }
 
- Value setInt64(long value)  {
+ public  Value setInt64(long value)  {
    return new Value(value_set_int64(this.nativeObj, value));
  }
 
- long int64()  {
+ public  long int64()  {
    return value_int64(this.nativeObj);
  }
 
- Value setUint64(long value)  {
+ public  Value setUint64(long value)  {
    return new Value(value_set_uint64(this.nativeObj, value));
  }
 
- long uint64()  {
+ public  long uint64()  {
    return value_uint64(this.nativeObj);
  }
 
- Value setFloat(double value)  {
+ public  Value setFloat(double value)  {
    return new Value(value_set_float(this.nativeObj, value));
  }
 
- double float32()  {
+ public  double float32()  {
    return value_float32(this.nativeObj);
  }
 
- Value setFloat64(double value)  {
+ public  Value setFloat64(double value)  {
    return new Value(value_set_double(this.nativeObj, value));
  }
 
- double float64()  {
+ public  double float64()  {
    return value_double(this.nativeObj);
  }
 
- Value setStr(String value)  {
+ public  Value setStr(String value)  {
    return new Value(value_dup_str(this.nativeObj, value));
  }
 
- String str()  {
+ public  String str()  {
    return value_str(this.nativeObj);
  }
 
- boolean isNull()  {
+ public  boolean isNull()  {
    return value_is_null(this.nativeObj);
  }
 
- Value setInt(int value)  {
+ public  Value setInt(int value)  {
    return new Value(value_set_int(this.nativeObj, value));
  }
 
- Value setObject(Object value)  {
+ public  Value setObject(Object value)  {
    return new Value(value_set_object(this.nativeObj, value != null ? (value.nativeObj) : 0));
  }
 
- Object object()  {
+ public  Object object()  {
    return new Object(value_object(this.nativeObj));
  }
 
- Value setToken(int value)  {
+ public  Value setToken(int value)  {
    return new Value(value_set_token(this.nativeObj, value));
  }
 
- int token()  {
+ public  int token()  {
    return value_token(this.nativeObj);
  }
 
- static Value create()  {
+ public  static Value create()  {
    return new Value(value_create());
  }
 
- Ret destroy()  {
+ public  int destroy()  {
    return value_destroy(this.nativeObj);
  }
 
- Ret reset()  {
+ public  int reset()  {
    return value_reset(this.nativeObj);
  }
 
- static Value cast(Value value)  {
+ public  static Value cast(Value value)  {
    return new Value(value_cast(value != null ? (value.nativeObj) : 0));
  }
 
@@ -171,8 +173,8 @@ static private native long value_object(long v);
 static private native long value_set_token(long v, int value);
 static private native int value_token(long v);
 static private native long value_create();
-static private native Ret value_destroy(long v);
-static private native Ret value_reset(long v);
+static private native int value_destroy(long v);
+static private native int value_reset(long v);
 static private native long value_cast(long value);
 }
 

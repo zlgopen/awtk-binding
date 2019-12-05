@@ -1,4 +1,6 @@
-class CanvasWidget extends Widget {
+package awtk;
+
+public class CanvasWidget extends Widget {
  public long nativeObj;
 
  public CanvasWidget(long nativeObj) {
@@ -9,11 +11,11 @@ class CanvasWidget extends Widget {
    return new CanvasWidget(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new CanvasWidget(canvas_widget_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new CanvasWidget(canvas_widget_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

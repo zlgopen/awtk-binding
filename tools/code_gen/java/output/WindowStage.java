@@ -1,3 +1,5 @@
+package awtk;
+
 public class WindowStage {
  static public final int NONE = WINDOW_STAGE_NONE();
  static public final int CREATED = WINDOW_STAGE_CREATED();

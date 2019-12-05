@@ -1,4 +1,6 @@
-class Slider extends Widget {
+package awtk;
+
+public class Slider extends Widget {
  public long nativeObj;
 
  public Slider(long nativeObj) {
@@ -9,35 +11,35 @@ class Slider extends Widget {
    return new Slider(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new Slider(slider_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new Slider(slider_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- Ret setValue(double value)  {
+ public  int setValue(double value)  {
    return slider_set_value(this.nativeObj, value);
  }
 
- Ret setMin(double min)  {
+ public  int setMin(double min)  {
    return slider_set_min(this.nativeObj, min);
  }
 
- Ret setMax(double max)  {
+ public  int setMax(double max)  {
    return slider_set_max(this.nativeObj, max);
  }
 
- Ret setStep(double step)  {
+ public  int setStep(double step)  {
    return slider_set_step(this.nativeObj, step);
  }
 
- Ret setBarSize(int bar_size)  {
+ public  int setBarSize(int bar_size)  {
    return slider_set_bar_size(this.nativeObj, bar_size);
  }
 
- Ret setVertical(boolean vertical)  {
+ public  int setVertical(boolean vertical)  {
    return slider_set_vertical(this.nativeObj, vertical);
  }
 
@@ -63,12 +65,12 @@ class Slider extends Widget {
 
 static private native long slider_create(long parent, int x, int y, int w, int h);
 static private native long slider_cast(long widget);
-static private native Ret slider_set_value(long widget, double value);
-static private native Ret slider_set_min(long widget, double min);
-static private native Ret slider_set_max(long widget, double max);
-static private native Ret slider_set_step(long widget, double step);
-static private native Ret slider_set_bar_size(long widget, int bar_size);
-static private native Ret slider_set_vertical(long widget, boolean vertical);
+static private native int slider_set_value(long widget, double value);
+static private native int slider_set_min(long widget, double min);
+static private native int slider_set_max(long widget, double max);
+static private native int slider_set_step(long widget, double step);
+static private native int slider_set_bar_size(long widget, int bar_size);
+static private native int slider_set_vertical(long widget, boolean vertical);
 static private native double slider_t_get_prop_value(long nativeObj);
 static private native double slider_t_get_prop_min(long nativeObj);
 static private native double slider_t_get_prop_max(long nativeObj);

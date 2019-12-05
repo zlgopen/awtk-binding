@@ -1,3 +1,5 @@
+package awtk;
+
 public class DialogQuitCode {
  static public final int NONE = DIALOG_QUIT_NONE();
  static public final int OK = DIALOG_QUIT_OK();

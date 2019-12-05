@@ -1,4 +1,6 @@
-class DialogClient extends Widget {
+package awtk;
+
+public class DialogClient extends Widget {
  public long nativeObj;
 
  public DialogClient(long nativeObj) {
@@ -9,11 +11,11 @@ class DialogClient extends Widget {
    return new DialogClient(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new DialogClient(dialog_client_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new DialogClient(dialog_client_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

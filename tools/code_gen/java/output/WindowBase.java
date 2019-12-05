@@ -1,4 +1,6 @@
-class WindowBase extends Widget {
+package awtk;
+
+public class WindowBase extends Widget {
  public long nativeObj;
 
  public WindowBase(long nativeObj) {
@@ -9,7 +11,7 @@ class WindowBase extends Widget {
    return new WindowBase(nativeObj);
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new WindowBase(window_base_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -17,12 +19,12 @@ class WindowBase extends Widget {
    return window_base_t_get_prop_theme(this.nativeObj);
  }
 
- public WindowClosable getClosable() {
+ public int getClosable() {
    return window_base_t_get_prop_closable(this.nativeObj);
  }
 
 static private native long window_base_cast(long widget);
 static private native String window_base_t_get_prop_theme(long nativeObj);
-static private native WindowClosable window_base_t_get_prop_closable(long nativeObj);
+static private native int window_base_t_get_prop_closable(long nativeObj);
 }
 

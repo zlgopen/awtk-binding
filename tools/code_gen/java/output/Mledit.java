@@ -1,4 +1,6 @@
-class Mledit extends Widget {
+package awtk;
+
+public class Mledit extends Widget {
  public long nativeObj;
 
  public Mledit(long nativeObj) {
@@ -9,39 +11,39 @@ class Mledit extends Widget {
    return new Mledit(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new Mledit(mledit_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- Ret setReadonly(boolean readonly)  {
+ public  int setReadonly(boolean readonly)  {
    return mledit_set_readonly(this.nativeObj, readonly);
  }
 
- Ret setFocus(boolean focus)  {
+ public  int setFocus(boolean focus)  {
    return mledit_set_focus(this.nativeObj, focus);
  }
 
- Ret setWrapWord(boolean wrap_word)  {
+ public  int setWrapWord(boolean wrap_word)  {
    return mledit_set_wrap_word(this.nativeObj, wrap_word);
  }
 
- Ret setMaxLines(int max_lines)  {
+ public  int setMaxLines(int max_lines)  {
    return mledit_set_max_lines(this.nativeObj, max_lines);
  }
 
- Ret setInputTips(String tips)  {
+ public  int setInputTips(String tips)  {
    return mledit_set_input_tips(this.nativeObj, tips);
  }
 
- Ret setCursor(int cursor)  {
+ public  int setCursor(int cursor)  {
    return mledit_set_cursor(this.nativeObj, cursor);
  }
 
- Ret setScrollLine(int scroll_line)  {
+ public  int setScrollLine(int scroll_line)  {
    return mledit_set_scroll_line(this.nativeObj, scroll_line);
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new Mledit(mledit_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -66,13 +68,13 @@ class Mledit extends Widget {
  }
 
 static private native long mledit_create(long parent, int x, int y, int w, int h);
-static private native Ret mledit_set_readonly(long widget, boolean readonly);
-static private native Ret mledit_set_focus(long widget, boolean focus);
-static private native Ret mledit_set_wrap_word(long widget, boolean wrap_word);
-static private native Ret mledit_set_max_lines(long widget, int max_lines);
-static private native Ret mledit_set_input_tips(long widget, String tips);
-static private native Ret mledit_set_cursor(long widget, int cursor);
-static private native Ret mledit_set_scroll_line(long widget, int scroll_line);
+static private native int mledit_set_readonly(long widget, boolean readonly);
+static private native int mledit_set_focus(long widget, boolean focus);
+static private native int mledit_set_wrap_word(long widget, boolean wrap_word);
+static private native int mledit_set_max_lines(long widget, int max_lines);
+static private native int mledit_set_input_tips(long widget, String tips);
+static private native int mledit_set_cursor(long widget, int cursor);
+static private native int mledit_set_scroll_line(long widget, int scroll_line);
 static private native long mledit_cast(long widget);
 static private native boolean mledit_t_get_prop_readonly(long nativeObj);
 static private native String mledit_t_get_prop_tips(long nativeObj);

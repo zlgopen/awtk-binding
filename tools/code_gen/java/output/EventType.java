@@ -1,3 +1,5 @@
+package awtk;
+
 public class EventType {
  static public final int POINTER_DOWN = EVT_POINTER_DOWN();
  static public final int POINTER_DOWN_BEFORE_CHILDREN = EVT_POINTER_DOWN_BEFORE_CHILDREN();

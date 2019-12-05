@@ -1,3 +1,5 @@
+package awtk;
+
 public class StyleId {
  static public final String _ID_BG_COLOR = STYLE_ID_BG_COLOR();
  static public final String _ID_FG_COLOR = STYLE_ID_FG_COLOR();

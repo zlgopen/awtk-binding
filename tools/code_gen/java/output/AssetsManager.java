@@ -1,4 +1,6 @@
-class AssetsManager {
+package awtk;
+
+public class AssetsManager {
  public long nativeObj;
 
  public AssetsManager(long nativeObj) {
@@ -9,20 +11,20 @@ class AssetsManager {
    return new AssetsManager(nativeObj);
  }
 
- static AssetsManager instance()  {
+ public  static AssetsManager instance()  {
    return new AssetsManager(assets_manager());
  }
 
- AssetInfo ref(AssetType type, String name)  {
+ public  AssetInfo ref(int type, String name)  {
    return new AssetInfo(assets_manager_ref(this.nativeObj, type, name));
  }
 
- Ret unref(AssetInfo info)  {
+ public  int unref(AssetInfo info)  {
    return assets_manager_unref(this.nativeObj, info != null ? (info.nativeObj) : 0);
  }
 
 static private native long assets_manager();
-static private native long assets_manager_ref(long am, AssetType type, String name);
-static private native Ret assets_manager_unref(long am, long info);
+static private native long assets_manager_ref(long am, int type, String name);
+static private native int assets_manager_unref(long am, long info);
 }
 

@@ -1,3 +1,5 @@
+package awtk;
+
 public class Ret {
  static public final int OK = RET_OK();
  static public final int OOM = RET_OOM();

@@ -1,4 +1,6 @@
-class Theme {
+package awtk;
+
+public class Theme {
  public long nativeObj;
 
  public Theme(long nativeObj) {
@@ -9,7 +11,7 @@ class Theme {
    return new Theme(nativeObj);
  }
 
- static Theme instance()  {
+ public  static Theme instance()  {
    return new Theme(theme());
  }
 

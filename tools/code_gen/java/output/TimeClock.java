@@ -1,4 +1,6 @@
-class TimeClock extends Widget {
+package awtk;
+
+public class TimeClock extends Widget {
  public long nativeObj;
 
  public TimeClock(long nativeObj) {
@@ -9,55 +11,55 @@ class TimeClock extends Widget {
    return new TimeClock(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new TimeClock(time_clock_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new TimeClock(time_clock_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- Ret setHour(int hour)  {
+ public  int setHour(int hour)  {
    return time_clock_set_hour(this.nativeObj, hour);
  }
 
- Ret setMinute(int minute)  {
+ public  int setMinute(int minute)  {
    return time_clock_set_minute(this.nativeObj, minute);
  }
 
- Ret setSecond(int second)  {
+ public  int setSecond(int second)  {
    return time_clock_set_second(this.nativeObj, second);
  }
 
- Ret setHourImage(String hour)  {
+ public  int setHourImage(String hour)  {
    return time_clock_set_hour_image(this.nativeObj, hour);
  }
 
- Ret setMinuteImage(String minute_image)  {
+ public  int setMinuteImage(String minute_image)  {
    return time_clock_set_minute_image(this.nativeObj, minute_image);
  }
 
- Ret setSecondImage(String second_image)  {
+ public  int setSecondImage(String second_image)  {
    return time_clock_set_second_image(this.nativeObj, second_image);
  }
 
- Ret setBgImage(String bg_image)  {
+ public  int setBgImage(String bg_image)  {
    return time_clock_set_bg_image(this.nativeObj, bg_image);
  }
 
- Ret setImage(String image)  {
+ public  int setImage(String image)  {
    return time_clock_set_image(this.nativeObj, image);
  }
 
- Ret setHourAnchor(String anchor_x, String anchor_y)  {
+ public  int setHourAnchor(String anchor_x, String anchor_y)  {
    return time_clock_set_hour_anchor(this.nativeObj, anchor_x, anchor_y);
  }
 
- Ret setMinuteAnchor(String anchor_x, String anchor_y)  {
+ public  int setMinuteAnchor(String anchor_x, String anchor_y)  {
    return time_clock_set_minute_anchor(this.nativeObj, anchor_x, anchor_y);
  }
 
- Ret setSecondAnchor(String anchor_x, String anchor_y)  {
+ public  int setSecondAnchor(String anchor_x, String anchor_y)  {
    return time_clock_set_second_anchor(this.nativeObj, anchor_x, anchor_y);
  }
 
@@ -119,17 +121,17 @@ class TimeClock extends Widget {
 
 static private native long time_clock_create(long parent, int x, int y, int w, int h);
 static private native long time_clock_cast(long widget);
-static private native Ret time_clock_set_hour(long widget, int hour);
-static private native Ret time_clock_set_minute(long widget, int minute);
-static private native Ret time_clock_set_second(long widget, int second);
-static private native Ret time_clock_set_hour_image(long widget, String hour);
-static private native Ret time_clock_set_minute_image(long widget, String minute_image);
-static private native Ret time_clock_set_second_image(long widget, String second_image);
-static private native Ret time_clock_set_bg_image(long widget, String bg_image);
-static private native Ret time_clock_set_image(long widget, String image);
-static private native Ret time_clock_set_hour_anchor(long widget, String anchor_x, String anchor_y);
-static private native Ret time_clock_set_minute_anchor(long widget, String anchor_x, String anchor_y);
-static private native Ret time_clock_set_second_anchor(long widget, String anchor_x, String anchor_y);
+static private native int time_clock_set_hour(long widget, int hour);
+static private native int time_clock_set_minute(long widget, int minute);
+static private native int time_clock_set_second(long widget, int second);
+static private native int time_clock_set_hour_image(long widget, String hour);
+static private native int time_clock_set_minute_image(long widget, String minute_image);
+static private native int time_clock_set_second_image(long widget, String second_image);
+static private native int time_clock_set_bg_image(long widget, String bg_image);
+static private native int time_clock_set_image(long widget, String image);
+static private native int time_clock_set_hour_anchor(long widget, String anchor_x, String anchor_y);
+static private native int time_clock_set_minute_anchor(long widget, String anchor_x, String anchor_y);
+static private native int time_clock_set_second_anchor(long widget, String anchor_x, String anchor_y);
 static private native int time_clock_t_get_prop_hour(long nativeObj);
 static private native int time_clock_t_get_prop_minute(long nativeObj);
 static private native int time_clock_t_get_prop_second(long nativeObj);

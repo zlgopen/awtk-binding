@@ -1,4 +1,6 @@
-class Dialog extends Widget {
+package awtk;
+
+public class Dialog extends WindowBase {
  public long nativeObj;
 
  public Dialog(long nativeObj) {
@@ -9,63 +11,63 @@ class Dialog extends Widget {
    return new Dialog(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new Dialog(dialog_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget createSimple(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget createSimple(Widget parent, int x, int y, int w, int h)  {
    return new Dialog(dialog_create_simple(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new Dialog(dialog_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- Widget getTitle()  {
+ public  Widget getTitle()  {
    return new Widget(dialog_get_title(this.nativeObj));
  }
 
- Widget getClient()  {
+ public  Widget getClient()  {
    return new Widget(dialog_get_client(this.nativeObj));
  }
 
- static Widget open(String name)  {
+ public  static Widget open(String name)  {
    return new Dialog(dialog_open(name));
  }
 
- Ret setTitle(String title)  {
+ public  int setTitle(String title)  {
    return dialog_set_title(this.nativeObj, title);
  }
 
- Ret modal()  {
+ public  int modal()  {
    return dialog_modal(this.nativeObj);
  }
 
- Ret quit(int code)  {
+ public  int quit(int code)  {
    return dialog_quit(this.nativeObj, code);
  }
 
- boolean isQuited()  {
+ public  boolean isQuited()  {
    return dialog_is_quited(this.nativeObj);
  }
 
- boolean isModal()  {
+ public  boolean isModal()  {
    return dialog_is_modal(this.nativeObj);
  }
 
- static Ret toast(String text, int duration)  {
+ public  static int toast(String text, int duration)  {
    return dialog_toast(text, duration);
  }
 
- static Ret info(String title, String text)  {
+ public  static int info(String title, String text)  {
    return dialog_info(title, text);
  }
 
- static Ret warn(String title, String text)  {
+ public  static int warn(String title, String text)  {
    return dialog_warn(title, text);
  }
 
- static Ret confirm(String title, String text)  {
+ public  static int confirm(String title, String text)  {
    return dialog_confirm(title, text);
  }
 
@@ -79,15 +81,15 @@ static private native long dialog_cast(long widget);
 static private native long dialog_get_title(long widget);
 static private native long dialog_get_client(long widget);
 static private native long dialog_open(String name);
-static private native Ret dialog_set_title(long widget, String title);
-static private native Ret dialog_modal(long widget);
-static private native Ret dialog_quit(long widget, int code);
+static private native int dialog_set_title(long widget, String title);
+static private native int dialog_modal(long widget);
+static private native int dialog_quit(long widget, int code);
 static private native boolean dialog_is_quited(long widget);
 static private native boolean dialog_is_modal(long widget);
-static private native Ret dialog_toast(String text, int duration);
-static private native Ret dialog_info(String title, String text);
-static private native Ret dialog_warn(String title, String text);
-static private native Ret dialog_confirm(String title, String text);
+static private native int dialog_toast(String text, int duration);
+static private native int dialog_info(String title, String text);
+static private native int dialog_warn(String title, String text);
+static private native int dialog_confirm(String title, String text);
 static private native String dialog_t_get_prop_highlight(long nativeObj);
 }
 

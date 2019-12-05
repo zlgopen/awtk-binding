@@ -126,11 +126,16 @@ class TargetGen extends CodeGen {
     return '';
   }
 
+  genOneClassDecl(clsName) {
+    return `class ${clsName}`;
+  }
+
   genOneClass(cls) {
     let result = '';
     let clsName = this.toClassName(this.getClassName(cls));
 
-    result = `class ${clsName}`;
+    result = this.genOneClassDecl(clsName);
+
     if (cls.parent) {
       result += ` extends ${this.toClassName(this.getParentClassName(cls))} {\n`
     } else {

@@ -1,4 +1,6 @@
-class Rect {
+package awtk;
+
+public class Rect {
  public long nativeObj;
 
  public Rect(long nativeObj) {
@@ -9,19 +11,19 @@ class Rect {
    return new Rect(nativeObj);
  }
 
- static Rect create(int x, int y, int w, int h)  {
+ public  static Rect create(int x, int y, int w, int h)  {
    return new Rect(rect_create(x, y, w, h));
  }
 
- Rect set(int x, int y, int w, int h)  {
+ public  Rect set(int x, int y, int w, int h)  {
    return new Rect(rect_set(this.nativeObj, x, y, w, h));
  }
 
- static Rect cast(Rect rect)  {
+ public  static Rect cast(Rect rect)  {
    return new Rect(rect_cast(rect != null ? (rect.nativeObj) : 0));
  }
 
- Ret destroy()  {
+ public  int destroy()  {
    return rect_destroy(this.nativeObj);
  }
 
@@ -44,7 +46,7 @@ class Rect {
 static private native long rect_create(int x, int y, int w, int h);
 static private native long rect_set(long rect, int x, int y, int w, int h);
 static private native long rect_cast(long rect);
-static private native Ret rect_destroy(long r);
+static private native int rect_destroy(long r);
 static private native int rect_t_get_prop_x(long nativeObj);
 static private native int rect_t_get_prop_y(long nativeObj);
 static private native int rect_t_get_prop_w(long nativeObj);

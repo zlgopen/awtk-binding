@@ -1,4 +1,6 @@
-class ButtonGroup extends Widget {
+package awtk;
+
+public class ButtonGroup extends Widget {
  public long nativeObj;
 
  public ButtonGroup(long nativeObj) {
@@ -9,11 +11,11 @@ class ButtonGroup extends Widget {
    return new ButtonGroup(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new ButtonGroup(button_group_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new ButtonGroup(button_group_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

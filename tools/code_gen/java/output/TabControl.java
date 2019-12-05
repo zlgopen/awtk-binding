@@ -1,4 +1,6 @@
-class TabControl extends Widget {
+package awtk;
+
+public class TabControl extends Widget {
  public long nativeObj;
 
  public TabControl(long nativeObj) {
@@ -9,11 +11,11 @@ class TabControl extends Widget {
    return new TabControl(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new TabControl(tab_control_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new TabControl(tab_control_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

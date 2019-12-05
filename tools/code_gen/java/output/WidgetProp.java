@@ -1,3 +1,5 @@
+package awtk;
+
 public class WidgetProp {
  static public final String EXEC = WIDGET_PROP_EXEC();
  static public final String X = WIDGET_PROP_X();

@@ -1,3 +1,5 @@
+package awtk;
+
 public class WindowClosable {
  static public final int YES = WINDOW_CLOSABLE_YES();
  static public final int NO = WINDOW_CLOSABLE_NO();

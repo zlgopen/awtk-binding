@@ -1,4 +1,6 @@
-class ImageAnimation extends Widget {
+package awtk;
+
+public class ImageAnimation extends Widget {
  public long nativeObj;
 
  public ImageAnimation(long nativeObj) {
@@ -9,63 +11,63 @@ class ImageAnimation extends Widget {
    return new ImageAnimation(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new ImageAnimation(image_animation_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- Ret setLoop(boolean loop)  {
+ public  int setLoop(boolean loop)  {
    return image_animation_set_loop(this.nativeObj, loop);
  }
 
- Ret setImage(String image)  {
+ public  int setImage(String image)  {
    return image_animation_set_image(this.nativeObj, image);
  }
 
- Ret setInterval(int interval)  {
+ public  int setInterval(int interval)  {
    return image_animation_set_interval(this.nativeObj, interval);
  }
 
- Ret setDelay(int delay)  {
+ public  int setDelay(int delay)  {
    return image_animation_set_delay(this.nativeObj, delay);
  }
 
- Ret setAutoPlay(boolean auto_play)  {
+ public  int setAutoPlay(boolean auto_play)  {
    return image_animation_set_auto_play(this.nativeObj, auto_play);
  }
 
- Ret setSequence(String sequence)  {
+ public  int setSequence(String sequence)  {
    return image_animation_set_sequence(this.nativeObj, sequence);
  }
 
- Ret setRangeSequence(int start_index, int end_index)  {
+ public  int setRangeSequence(int start_index, int end_index)  {
    return image_animation_set_range_sequence(this.nativeObj, start_index, end_index);
  }
 
- Ret play()  {
+ public  int play()  {
    return image_animation_play(this.nativeObj);
  }
 
- Ret stop()  {
+ public  int stop()  {
    return image_animation_stop(this.nativeObj);
  }
 
- Ret pause()  {
+ public  int pause()  {
    return image_animation_pause(this.nativeObj);
  }
 
- Ret next()  {
+ public  int next()  {
    return image_animation_next(this.nativeObj);
  }
 
- Ret setFormat(String format)  {
+ public  int setFormat(String format)  {
    return image_animation_set_format(this.nativeObj, format);
  }
 
- Ret setUnloadAfterPaint(boolean unload_after_paint)  {
+ public  int setUnloadAfterPaint(boolean unload_after_paint)  {
    return image_animation_set_unload_after_paint(this.nativeObj, unload_after_paint);
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new ImageAnimation(image_animation_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -110,19 +112,19 @@ class ImageAnimation extends Widget {
  }
 
 static private native long image_animation_create(long parent, int x, int y, int w, int h);
-static private native Ret image_animation_set_loop(long widget, boolean loop);
-static private native Ret image_animation_set_image(long widget, String image);
-static private native Ret image_animation_set_interval(long widget, int interval);
-static private native Ret image_animation_set_delay(long widget, int delay);
-static private native Ret image_animation_set_auto_play(long widget, boolean auto_play);
-static private native Ret image_animation_set_sequence(long widget, String sequence);
-static private native Ret image_animation_set_range_sequence(long widget, int start_index, int end_index);
-static private native Ret image_animation_play(long widget);
-static private native Ret image_animation_stop(long widget);
-static private native Ret image_animation_pause(long widget);
-static private native Ret image_animation_next(long widget);
-static private native Ret image_animation_set_format(long widget, String format);
-static private native Ret image_animation_set_unload_after_paint(long widget, boolean unload_after_paint);
+static private native int image_animation_set_loop(long widget, boolean loop);
+static private native int image_animation_set_image(long widget, String image);
+static private native int image_animation_set_interval(long widget, int interval);
+static private native int image_animation_set_delay(long widget, int delay);
+static private native int image_animation_set_auto_play(long widget, boolean auto_play);
+static private native int image_animation_set_sequence(long widget, String sequence);
+static private native int image_animation_set_range_sequence(long widget, int start_index, int end_index);
+static private native int image_animation_play(long widget);
+static private native int image_animation_stop(long widget);
+static private native int image_animation_pause(long widget);
+static private native int image_animation_next(long widget);
+static private native int image_animation_set_format(long widget, String format);
+static private native int image_animation_set_unload_after_paint(long widget, boolean unload_after_paint);
 static private native long image_animation_cast(long widget);
 static private native String image_animation_t_get_prop_image(long nativeObj);
 static private native String image_animation_t_get_prop_sequence(long nativeObj);

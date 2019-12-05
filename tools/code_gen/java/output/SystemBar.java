@@ -1,4 +1,6 @@
-class SystemBar extends WindowBase {
+package awtk;
+
+public class SystemBar extends WindowBase {
  public long nativeObj;
 
  public SystemBar(long nativeObj) {
@@ -9,11 +11,11 @@ class SystemBar extends WindowBase {
    return new SystemBar(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new SystemBar(system_bar_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new SystemBar(system_bar_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

@@ -1,4 +1,6 @@
-class KeyEvent extends Event {
+package awtk;
+
+public class KeyEvent extends Event {
  public long nativeObj;
 
  public KeyEvent(long nativeObj) {
@@ -9,7 +11,7 @@ class KeyEvent extends Event {
    return new KeyEvent(nativeObj);
  }
 
- static KeyEvent cast(Event event)  {
+ public  static KeyEvent cast(Event event)  {
    return new KeyEvent(key_event_cast(event != null ? (event.nativeObj) : 0));
  }
 

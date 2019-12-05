@@ -1,4 +1,6 @@
-class InputMethod {
+package awtk;
+
+public class InputMethod {
  public long nativeObj;
 
  public InputMethod(long nativeObj) {
@@ -9,20 +11,20 @@ class InputMethod {
    return new InputMethod(nativeObj);
  }
 
- Ret commitText(String text)  {
+ public  int commitText(String text)  {
    return input_method_commit_text(this.nativeObj, text);
  }
 
- Ret dispatchKey(int key)  {
+ public  int dispatchKey(int key)  {
    return input_method_dispatch_key(this.nativeObj, key);
  }
 
- static InputMethod instance()  {
+ public  static InputMethod instance()  {
    return new InputMethod(input_method());
  }
 
-static private native Ret input_method_commit_text(long im, String text);
-static private native Ret input_method_dispatch_key(long im, int key);
+static private native int input_method_commit_text(long im, String text);
+static private native int input_method_dispatch_key(long im, int key);
 static private native long input_method();
 }
 

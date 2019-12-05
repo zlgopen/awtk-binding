@@ -1,3 +1,5 @@
+package awtk;
+
 public class EventBaseType {
  static public final int NONE = EVT_NONE();
  static public final int PROP_WILL_CHANGE = EVT_PROP_WILL_CHANGE();

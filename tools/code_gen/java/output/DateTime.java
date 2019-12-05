@@ -1,4 +1,6 @@
-class DateTime {
+package awtk;
+
+public class DateTime {
  public long nativeObj;
 
  public DateTime(long nativeObj) {
@@ -9,15 +11,15 @@ class DateTime {
    return new DateTime(nativeObj);
  }
 
- static DateTime create()  {
+ public  static DateTime create()  {
    return new DateTime(date_time_create());
  }
 
- Ret set()  {
+ public  int set()  {
    return date_time_set(this.nativeObj);
  }
 
- Ret destroy()  {
+ public  int destroy()  {
    return date_time_destroy(this.nativeObj);
  }
 
@@ -50,8 +52,8 @@ class DateTime {
  }
 
 static private native long date_time_create();
-static private native Ret date_time_set(long dt);
-static private native Ret date_time_destroy(long dt);
+static private native int date_time_set(long dt);
+static private native int date_time_destroy(long dt);
 static private native int date_time_t_get_prop_second(long nativeObj);
 static private native int date_time_t_get_prop_minute(long nativeObj);
 static private native int date_time_t_get_prop_hour(long nativeObj);

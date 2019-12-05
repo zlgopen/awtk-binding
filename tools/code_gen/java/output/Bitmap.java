@@ -1,4 +1,6 @@
-class Bitmap {
+package awtk;
+
+public class Bitmap {
  public long nativeObj;
 
  public Bitmap(long nativeObj) {
@@ -9,19 +11,19 @@ class Bitmap {
    return new Bitmap(nativeObj);
  }
 
- static Bitmap create()  {
+ public  static Bitmap create()  {
    return new Bitmap(bitmap_create());
  }
 
- static Bitmap createEx(int w, int h, int line_length, BitmapFormat format)  {
+ public  static Bitmap createEx(int w, int h, int line_length, int format)  {
    return new Bitmap(bitmap_create_ex(w, h, line_length, format));
  }
 
- int getBpp()  {
+ public  int getBpp()  {
    return bitmap_get_bpp(this.nativeObj);
  }
 
- Ret destroy()  {
+ public  int destroy()  {
    return bitmap_destroy(this.nativeObj);
  }
 
@@ -50,9 +52,9 @@ class Bitmap {
  }
 
 static private native long bitmap_create();
-static private native long bitmap_create_ex(int w, int h, int line_length, BitmapFormat format);
+static private native long bitmap_create_ex(int w, int h, int line_length, int format);
 static private native int bitmap_get_bpp(long bitmap);
-static private native Ret bitmap_destroy(long bitmap);
+static private native int bitmap_destroy(long bitmap);
 static private native int bitmap_t_get_prop_w(long nativeObj);
 static private native int bitmap_t_get_prop_h(long nativeObj);
 static private native int bitmap_t_get_prop_line_length(long nativeObj);

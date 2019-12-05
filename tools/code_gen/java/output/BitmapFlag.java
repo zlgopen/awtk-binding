@@ -1,3 +1,5 @@
+package awtk;
+
 public class BitmapFlag {
  static public final int NONE = BITMAP_FLAG_NONE();
  static public final int OPAQUE = BITMAP_FLAG_OPAQUE();

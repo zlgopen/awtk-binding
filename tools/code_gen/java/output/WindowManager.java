@@ -1,4 +1,6 @@
-class WindowManager extends Widget {
+package awtk;
+
+public class WindowManager extends Widget {
  public long nativeObj;
 
  public WindowManager(long nativeObj) {
@@ -9,56 +11,60 @@ class WindowManager extends Widget {
    return new WindowManager(nativeObj);
  }
 
- static Widget instance()  {
+ public  static Widget instance()  {
    return new WindowManager(window_manager());
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new WindowManager(window_manager_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- Widget getTopMainWindow()  {
+ public  Widget getTopMainWindow()  {
    return new Widget(window_manager_get_top_main_window(this.nativeObj));
  }
 
- Widget getTopWindow()  {
+ public  Widget getTopWindow()  {
    return new Widget(window_manager_get_top_window(this.nativeObj));
  }
 
- Widget getPrevWindow()  {
+ public  Widget getPrevWindow()  {
    return new Widget(window_manager_get_prev_window(this.nativeObj));
  }
 
- int getPointerX()  {
+ public  int getPointerX()  {
    return window_manager_get_pointer_x(this.nativeObj);
  }
 
- int getPointerY()  {
+ public  int getPointerY()  {
    return window_manager_get_pointer_y(this.nativeObj);
  }
 
- boolean getPointerPressed()  {
+ public  boolean getPointerPressed()  {
    return window_manager_get_pointer_pressed(this.nativeObj);
  }
 
- Ret setShowFps(boolean show_fps)  {
+ public  int setShowFps(boolean show_fps)  {
    return window_manager_set_show_fps(this.nativeObj, show_fps);
  }
 
- Ret setScreenSaverTime(int screen_saver_time)  {
+ public  int setScreenSaverTime(int screen_saver_time)  {
    return window_manager_set_screen_saver_time(this.nativeObj, screen_saver_time);
  }
 
- Ret setCursor(String cursor)  {
+ public  int setCursor(String cursor)  {
    return window_manager_set_cursor(this.nativeObj, cursor);
  }
 
- Ret back()  {
+ public  int back()  {
    return window_manager_back(this.nativeObj);
  }
 
- Ret backToHome()  {
+ public  int backToHome()  {
    return window_manager_back_to_home(this.nativeObj);
+ }
+
+ public  int backTo(String target)  {
+   return window_manager_back_to(this.nativeObj, target);
  }
 
 static private native long window_manager();
@@ -69,10 +75,11 @@ static private native long window_manager_get_prev_window(long widget);
 static private native int window_manager_get_pointer_x(long widget);
 static private native int window_manager_get_pointer_y(long widget);
 static private native boolean window_manager_get_pointer_pressed(long widget);
-static private native Ret window_manager_set_show_fps(long widget, boolean show_fps);
-static private native Ret window_manager_set_screen_saver_time(long widget, int screen_saver_time);
-static private native Ret window_manager_set_cursor(long widget, String cursor);
-static private native Ret window_manager_back(long widget);
-static private native Ret window_manager_back_to_home(long widget);
+static private native int window_manager_set_show_fps(long widget, boolean show_fps);
+static private native int window_manager_set_screen_saver_time(long widget, int screen_saver_time);
+static private native int window_manager_set_cursor(long widget, String cursor);
+static private native int window_manager_back(long widget);
+static private native int window_manager_back_to_home(long widget);
+static private native int window_manager_back_to(long widget, String target);
 }
 

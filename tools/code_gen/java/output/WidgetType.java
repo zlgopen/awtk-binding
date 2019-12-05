@@ -1,3 +1,5 @@
+package awtk;
+
 public class WidgetType {
  static public final String NONE = WIDGET_TYPE_NONE();
  static public final String WINDOW_MANAGER = WIDGET_TYPE_WINDOW_MANAGER();

@@ -1,4 +1,6 @@
-class ObjectDefault extends Object {
+package awtk;
+
+public class ObjectDefault extends Object {
  public long nativeObj;
 
  public ObjectDefault(long nativeObj) {
@@ -9,15 +11,15 @@ class ObjectDefault extends Object {
    return new ObjectDefault(nativeObj);
  }
 
- static Object create()  {
+ public  static Object create()  {
    return new ObjectDefault(object_default_create());
  }
 
- Ret unref()  {
+ public  int unref()  {
    return object_default_unref(this.nativeObj);
  }
 
- Ret clearProps()  {
+ public  int clearProps()  {
    return object_default_clear_props(this.nativeObj);
  }
 
@@ -26,8 +28,8 @@ class ObjectDefault extends Object {
  }
 
 static private native long object_default_create();
-static private native Ret object_default_unref(long obj);
-static private native Ret object_default_clear_props(long obj);
+static private native int object_default_unref(long obj);
+static private native int object_default_clear_props(long obj);
 static private native int object_default_t_get_prop_props_size(long nativeObj);
 }
 

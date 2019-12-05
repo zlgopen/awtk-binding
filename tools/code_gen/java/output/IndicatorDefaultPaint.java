@@ -1,3 +1,5 @@
+package awtk;
+
 public class IndicatorDefaultPaint {
  static public final int AUTO = INDICATOR_DEFAULT_PAINT_AUTO();
  static public final int FILL_DOT = INDICATOR_DEFAULT_PAINT_FILL_DOT();

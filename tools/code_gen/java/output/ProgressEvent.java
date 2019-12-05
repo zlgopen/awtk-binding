@@ -1,4 +1,6 @@
-class ProgressEvent extends Event {
+package awtk;
+
+public class ProgressEvent extends Event {
  public long nativeObj;
 
  public ProgressEvent(long nativeObj) {
@@ -9,7 +11,7 @@ class ProgressEvent extends Event {
    return new ProgressEvent(nativeObj);
  }
 
- static ProgressEvent cast(Event event)  {
+ public  static ProgressEvent cast(Event event)  {
    return new ProgressEvent(progress_event_cast(event != null ? (event.nativeObj) : 0));
  }
 

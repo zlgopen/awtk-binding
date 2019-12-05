@@ -1,4 +1,6 @@
-class Path {
+package awtk;
+
+public class Path {
  public long nativeObj;
 
  public Path(long nativeObj) {

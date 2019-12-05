@@ -27,7 +27,6 @@
 #include "tkc/types_def.h"
 #include "tkc/timer_manager.h"
 #include "tkc/time_now.h"
-#include "ext_widgets/ext_widgets.h"
 #include "tkc/rect.h"
 #include "tkc/path.h"
 #include "tkc/named_value.h"
@@ -10990,23 +10989,6 @@ ret_t time_now_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"time_now_ms", wrap_time_now_ms);
 
  return RET_OK;
-}
-
-jsvalue_t wrap_tk_ext_widgets_init(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
-    const jerry_value_t argv[], 
-    const jerry_length_t argc 
-  )  {
-  void* ctx = NULL;
-  jsvalue_t jret = JS_NULL;
-  if(argc >= 0) {
-  ret_t ret = 0;
-  ret = (ret_t)tk_ext_widgets_init();
-
-  jret = jsvalue_create_int(ctx, ret);
-  }
-  return jret;
 }
 
 jsvalue_t wrap_rect_create(

@@ -1,4 +1,6 @@
-class WheelEvent extends Event {
+package awtk;
+
+public class WheelEvent extends Event {
  public long nativeObj;
 
  public WheelEvent(long nativeObj) {
@@ -9,7 +11,7 @@ class WheelEvent extends Event {
    return new WheelEvent(nativeObj);
  }
 
- static WheelEvent cast(Event event)  {
+ public  static WheelEvent cast(Event event)  {
    return new WheelEvent(wheel_event_cast(event != null ? (event.nativeObj) : 0));
  }
 

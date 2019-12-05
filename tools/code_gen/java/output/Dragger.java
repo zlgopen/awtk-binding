@@ -1,4 +1,6 @@
-class Dragger extends Widget {
+package awtk;
+
+public class Dragger extends Widget {
  public long nativeObj;
 
  public Dragger(long nativeObj) {
@@ -9,15 +11,15 @@ class Dragger extends Widget {
    return new Dragger(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new Dragger(dragger_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new Dragger(dragger_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- Widget setRange(int x_min, int y_min, int x_max, int y_max)  {
+ public  Widget setRange(int x_min, int y_min, int x_max, int y_max)  {
    return new Widget(dragger_set_range(this.nativeObj, x_min, y_min, x_max, y_max));
  }
 

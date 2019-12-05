@@ -1,3 +1,5 @@
+package awtk;
+
 public class AssetType {
  static public final int NONE = ASSET_TYPE_NONE();
  static public final int FONT = ASSET_TYPE_FONT();

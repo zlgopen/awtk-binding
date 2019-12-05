@@ -1,4 +1,6 @@
-class PropChangeEvent extends Event {
+package awtk;
+
+public class PropChangeEvent extends Event {
  public long nativeObj;
 
  public PropChangeEvent(long nativeObj) {
@@ -9,7 +11,7 @@ class PropChangeEvent extends Event {
    return new PropChangeEvent(nativeObj);
  }
 
- static PropChangeEvent cast(Event event)  {
+ public  static PropChangeEvent cast(Event event)  {
    return new PropChangeEvent(prop_change_event_cast(event != null ? (event.nativeObj) : 0));
  }
 

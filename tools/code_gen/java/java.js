@@ -9,14 +9,25 @@ class TypescriptGenerator extends TargetGen {
 
   mapType(type, isNative) {
     let name = this.typeToName(type);
-
-    if (name) {
-      if (isNative && this.typeIsPointer(type)) {
-        return 'long';
+    let info = this.getClassOrEnumInfo(this.typeToNativeName(type));
+    
+    if (info != null) {
+      if (info.type === 'class') {
+        if(isNative) {
+          return 'long';
+        } else {
+          return name;
+        }
+      } else if (info.type == 'enum') {
+        if (this.isEnumString(info)) {
+          return 'String';
+        } else {
+          return 'int';
+        }
       }
+    }
 
-      return name;
-    } else if (this.typeIsLongInteger(type)) {
+    if (this.typeIsLongInteger(type)) {
       return 'long';
     } else if (this.typeIsInteger(type)) {
       return 'int';
@@ -24,13 +35,19 @@ class TypescriptGenerator extends TargetGen {
       return 'double';
     } else if (this.typeIsBool(type)) {
       return 'boolean';
-    } else if (this.typeIsFunction(type)) {
-      return 'int';//TODO
+    } else if(type.indexOf('event_func_t') >= 0) {
+      return 'OnEvent';
+    } else if(type.indexOf('tk_visit_t') >= 0) {
+      return 'OnData';
+    } else if(type.indexOf('idle_func_t') >= 0) {
+      return 'OnIdle';
+    } else if(type.indexOf('timer_func_t') >= 0) {
+      return 'OnTimer';
     } else if (this.typeIsString(type)) {
       return 'String';
     } else {
       console.log(type);
-      return 'int';
+      return 'long';
     }
   }
 
@@ -74,7 +91,7 @@ class TypescriptGenerator extends TargetGen {
   }
 
   genFunc(cls, m) {
-    let result = '';
+    let result = ' public ';
     const name = this.toFuncName(cls.name, m.alias || m.name);
 
     if (this.isConstructor(m) || this.isCast(m) || this.isStatic(m)) {
@@ -132,8 +149,8 @@ class TypescriptGenerator extends TargetGen {
 
   genOneEnum(cls) {
     let clsName = this.toClassName(cls.name);
-    let result = `public class ${clsName} {\n`;
     let isString = this.isEnumString(cls);
+    let result = `public class ${clsName} {\n`;
 
     if (cls.consts) {
       cls.consts.forEach(iter => {
@@ -161,6 +178,10 @@ class TypescriptGenerator extends TargetGen {
     return '0';
   }
 
+  genOneClassDecl(clsName) {
+    return `public class ${clsName}`;
+  }
+
   genOneClassPre(cls) {
     return ' public long nativeObj;\n\n';
   }
@@ -174,7 +195,8 @@ class TypescriptGenerator extends TargetGen {
 
     json.forEach(iter => {
       let name = this.upperCamelName(this.getClassName(iter));
-      this.result = this.genOne(iter);
+      this.result = `package awtk;\n\n`;
+      this.result += this.genOne(iter);
       this.saveResult(`output/${name}.java`);
     });
 

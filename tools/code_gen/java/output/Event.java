@@ -1,4 +1,6 @@
-class Event {
+package awtk;
+
+public class Event {
  public long nativeObj;
 
  public Event(long nativeObj) {
@@ -9,15 +11,15 @@ class Event {
    return new Event(nativeObj);
  }
 
- static Event cast(Event event)  {
+ public  static Event cast(Event event)  {
    return new Event(event_cast(event != null ? (event.nativeObj) : 0));
  }
 
- static Event create(int type, int target)  {
-   return new Event(event_create(type, target));
+ public  static Event create(int type)  {
+   return new Event(event_create(type));
  }
 
- Ret destroy()  {
+ public  int destroy()  {
    return event_destroy(this.nativeObj);
  }
 
@@ -29,15 +31,15 @@ class Event {
    return event_t_get_prop_time(this.nativeObj);
  }
 
- public int getTarget() {
+ public long getTarget() {
    return event_t_get_prop_target(this.nativeObj);
  }
 
 static private native long event_cast(long event);
-static private native long event_create(int type, int target);
-static private native Ret event_destroy(long event);
+static private native long event_create(int type);
+static private native int event_destroy(long event);
 static private native int event_t_get_prop_type(long nativeObj);
 static private native int event_t_get_prop_time(long nativeObj);
-static private native int event_t_get_prop_target(long nativeObj);
+static private native long event_t_get_prop_target(long nativeObj);
 }
 

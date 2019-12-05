@@ -1,3 +1,5 @@
+package awtk;
+
 public class InputType {
  static public final int TEXT = INPUT_TEXT();
  static public final int INT = INPUT_INT();

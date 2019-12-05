@@ -1,4 +1,6 @@
-class TimerManager {
+package awtk;
+
+public class TimerManager {
  public long nativeObj;
 
  public TimerManager(long nativeObj) {

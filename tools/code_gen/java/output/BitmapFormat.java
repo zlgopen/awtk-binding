@@ -1,3 +1,5 @@
+package awtk;
+
 public class BitmapFormat {
  static public final int NONE = BITMAP_FMT_NONE();
  static public final int RGBA8888 = BITMAP_FMT_RGBA8888();

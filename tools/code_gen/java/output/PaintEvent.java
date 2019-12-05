@@ -1,4 +1,6 @@
-class PaintEvent extends Event {
+package awtk;
+
+public class PaintEvent extends Event {
  public long nativeObj;
 
  public PaintEvent(long nativeObj) {
@@ -9,7 +11,7 @@ class PaintEvent extends Event {
    return new PaintEvent(nativeObj);
  }
 
- static PaintEvent cast(Event event)  {
+ public  static PaintEvent cast(Event event)  {
    return new PaintEvent(paint_event_cast(event != null ? (event.nativeObj) : 0));
  }
 

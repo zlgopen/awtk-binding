@@ -1,4 +1,6 @@
-class Keyboard extends Widget {
+package awtk;
+
+public class Keyboard extends WindowBase {
  public long nativeObj;
 
  public Keyboard(long nativeObj) {
@@ -9,11 +11,11 @@ class Keyboard extends Widget {
    return new Keyboard(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new Keyboard(keyboard_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new Keyboard(keyboard_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

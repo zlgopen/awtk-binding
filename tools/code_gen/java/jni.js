@@ -82,9 +82,13 @@ class JniGenerator extends BindingGen {
     return result;
   }
 
+  escapeName(name) {
+    return name.replace(/_/g, '_1');
+  }
+
   genFuncDecl(cls, m) {
     let args = '';
-    const name = m.name;
+    const name = this.escapeName(m.name);
     const className = this.upperCamelName(cls.name || "global");
     const returnType = this.mapType(m.return.type);
 
@@ -92,30 +96,30 @@ class JniGenerator extends BindingGen {
       args += ', ' + this.mapTypeVar(iter.type, iter.name);
     });
 
-    return `JNIEXPORT ${returnType} JNICALL Java_${className}_${name}(JNIEnv* env,  jclass ajc${args}) { /*func*/\n`;
+    return `JNIEXPORT ${returnType} JNICALL Java_awtk_${className}_${name}(JNIEnv* env,  jclass ajc${args}) { /*func*/\n`;
   }
 
   genGetPropDecl(cls, p) {
-    const name = this.getGetPropertyFuncName(cls, p);
+    const name = this.escapeName(this.getGetPropertyFuncName(cls, p));
     const className = this.upperCamelName(cls.name);
     const returnType = this.mapType(p.type);
 
-    return `JNIEXPORT ${returnType} JNICALL Java_${className}_${name}(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/\n`;
+    return `JNIEXPORT ${returnType} JNICALL Java_awtk_${className}_${name}(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/\n`;
   }
 
   genSetPropDecl(cls, p) {
-    const name = this.getSetPropertyFuncName(cls, p);
+    const name = this.escapeName(this.getSetPropertyFuncName(cls, p));
     const className = this.upperCamelName(cls.name);
 
-    return `JNIEXPORT void JNICALL Java_${className}_${name} (JNIEnv* env,  jclass ajc, jlong jobj, ${this.mapTypeVar(p.type, 'value')}) {/*set*/\n`;
+    return `JNIEXPORT void JNICALL Java_awtk_${className}_${name} (JNIEnv* env,  jclass ajc, jlong jobj, ${this.mapTypeVar(p.type, 'value')}) {/*set*/\n`;
   }
 
   genConstDecl(cls, c) {
-    const name = c.name;
+    const name = this.escapeName(c.name);
     const isConstString = this.isEnumString(cls);
     const className = this.upperCamelName(cls.name);
     const returnType = isConstString ? 'jstring' : 'jint';
-    return `JNIEXPORT ${returnType} JNICALL Java_${className}_${name}(JNIEnv* env,  jclass ajc) {/*const*/\n`;
+    return `JNIEXPORT ${returnType} JNICALL Java_awtk_${className}_${name}(JNIEnv* env,  jclass ajc) {/*const*/\n`;
   }
 
   genFuncImpl(cls, m) {

@@ -1,3 +1,5 @@
+package awtk;
+
 public class EasingType {
  static public final int LINEAR = EASING_LINEAR();
  static public final int QUADRATIC_IN = EASING_QUADRATIC_IN();

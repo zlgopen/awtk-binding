@@ -1,3 +1,5 @@
+package awtk;
+
 public class MIME_TYPE {
  static public final String APPLICATION_ENVOY = MIME_TYPE_APPLICATION_ENVOY();
  static public final String APPLICATION_FRACTALS = MIME_TYPE_APPLICATION_FRACTALS();

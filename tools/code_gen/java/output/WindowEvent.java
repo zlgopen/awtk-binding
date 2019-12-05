@@ -1,4 +1,6 @@
-class WindowEvent extends Event {
+package awtk;
+
+public class WindowEvent extends Event {
  public long nativeObj;
 
  public WindowEvent(long nativeObj) {
@@ -9,7 +11,7 @@ class WindowEvent extends Event {
    return new WindowEvent(nativeObj);
  }
 
- static WindowEvent cast(Event event)  {
+ public  static WindowEvent cast(Event event)  {
    return new WindowEvent(window_event_cast(event != null ? (event.nativeObj) : 0));
  }
 

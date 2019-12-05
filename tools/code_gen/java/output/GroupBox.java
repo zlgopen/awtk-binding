@@ -1,4 +1,6 @@
-class GroupBox extends Widget {
+package awtk;
+
+public class GroupBox extends Widget {
  public long nativeObj;
 
  public GroupBox(long nativeObj) {
@@ -9,11 +11,11 @@ class GroupBox extends Widget {
    return new GroupBox(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new GroupBox(group_box_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new GroupBox(group_box_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

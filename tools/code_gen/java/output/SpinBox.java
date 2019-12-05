@@ -1,4 +1,6 @@
-class SpinBox extends Edit {
+package awtk;
+
+public class SpinBox extends Edit {
  public long nativeObj;
 
  public SpinBox(long nativeObj) {
@@ -9,11 +11,11 @@ class SpinBox extends Edit {
    return new SpinBox(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new SpinBox(spin_box_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new SpinBox(spin_box_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

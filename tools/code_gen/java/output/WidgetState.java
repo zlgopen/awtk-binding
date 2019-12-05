@@ -1,3 +1,5 @@
+package awtk;
+
 public class WidgetState {
  static public final String STATE_NONE = WIDGET_STATE_NONE();
  static public final String STATE_NORMAL = WIDGET_STATE_NORMAL();

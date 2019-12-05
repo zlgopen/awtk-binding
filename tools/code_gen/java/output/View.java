@@ -1,4 +1,6 @@
-class View extends Widget {
+package awtk;
+
+public class View extends Widget {
  public long nativeObj;
 
  public View(long nativeObj) {
@@ -9,11 +11,11 @@ class View extends Widget {
    return new View(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new View(view_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new View(view_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

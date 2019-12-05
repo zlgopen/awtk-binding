@@ -1,3 +1,5 @@
+package awtk;
+
 public class ImageDrawType {
  static public final int DEFAULT = IMAGE_DRAW_DEFAULT();
  static public final int CENTER = IMAGE_DRAW_CENTER();

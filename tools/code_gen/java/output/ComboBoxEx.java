@@ -1,4 +1,6 @@
-class ComboBoxEx extends ComboBox {
+package awtk;
+
+public class ComboBoxEx extends ComboBox {
  public long nativeObj;
 
  public ComboBoxEx(long nativeObj) {
@@ -9,7 +11,7 @@ class ComboBoxEx extends ComboBox {
    return new ComboBoxEx(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new ComboBoxEx(combo_box_ex_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 

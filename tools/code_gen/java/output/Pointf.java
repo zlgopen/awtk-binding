@@ -1,4 +1,6 @@
-class Pointf {
+package awtk;
+
+public class Pointf {
  public long nativeObj;
 
  public Pointf(long nativeObj) {

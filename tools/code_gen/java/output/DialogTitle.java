@@ -1,4 +1,6 @@
-class DialogTitle extends Widget {
+package awtk;
+
+public class DialogTitle extends Widget {
  public long nativeObj;
 
  public DialogTitle(long nativeObj) {
@@ -9,11 +11,11 @@ class DialogTitle extends Widget {
    return new DialogTitle(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new DialogTitle(dialog_title_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new DialogTitle(dialog_title_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

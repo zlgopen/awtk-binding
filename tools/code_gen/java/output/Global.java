@@ -1,4 +1,6 @@
-class Global {
+package awtk;
+
+public class Global {
  public long nativeObj;
 
  public Global(long nativeObj) {
@@ -9,23 +11,23 @@ class Global {
    return new Global(nativeObj);
  }
 
- static Ret quit()  {
+ public  static int quit()  {
    return tk_quit();
  }
 
- static int getPointerX()  {
+ public  static int getPointerX()  {
    return tk_get_pointer_x();
  }
 
- static int getPointerY()  {
+ public  static int getPointerY()  {
    return tk_get_pointer_y();
  }
 
- static boolean isPointerPressed()  {
+ public  static boolean isPointerPressed()  {
    return tk_is_pointer_pressed();
  }
 
-static private native Ret tk_quit();
+static private native int tk_quit();
 static private native int tk_get_pointer_x();
 static private native int tk_get_pointer_y();
 static private native boolean tk_is_pointer_pressed();

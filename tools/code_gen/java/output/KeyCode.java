@@ -1,3 +1,5 @@
+package awtk;
+
 public class KeyCode {
  static public final int KEY_RETURN = TK_KEY_RETURN();
  static public final int KEY_ESCAPE = TK_KEY_ESCAPE();

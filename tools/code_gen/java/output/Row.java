@@ -1,4 +1,6 @@
-class Row extends Widget {
+package awtk;
+
+public class Row extends Widget {
  public long nativeObj;
 
  public Row(long nativeObj) {
@@ -9,11 +11,11 @@ class Row extends Widget {
    return new Row(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new Row(row_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new Row(row_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

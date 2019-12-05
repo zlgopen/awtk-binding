@@ -1,4 +1,6 @@
-class TimeNow {
+package awtk;
+
+public class TimeNow {
  public long nativeObj;
 
  public TimeNow(long nativeObj) {
@@ -9,11 +11,11 @@ class TimeNow {
    return new TimeNow(nativeObj);
  }
 
- static long s()  {
+ public  static long s()  {
    return time_now_s();
  }
 
- static long ms()  {
+ public  static long ms()  {
    return time_now_ms();
  }
 

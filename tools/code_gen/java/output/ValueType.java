@@ -1,3 +1,5 @@
+package awtk;
+
 public class ValueType {
  static public final int INVALID = VALUE_TYPE_INVALID();
  static public final int BOOL = VALUE_TYPE_BOOL();

@@ -1,4 +1,6 @@
-class FsFile {
+package awtk;
+
+public class FsFile {
  public long nativeObj;
 
  public FsFile(long nativeObj) {

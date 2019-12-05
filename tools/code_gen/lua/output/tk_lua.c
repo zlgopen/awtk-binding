@@ -27,7 +27,6 @@
 #include "tkc/types_def.h"
 #include "tkc/timer_manager.h"
 #include "tkc/time_now.h"
-#include "ext_widgets/ext_widgets.h"
 #include "tkc/rect.h"
 #include "tkc/path.h"
 #include "tkc/named_value.h"
@@ -324,18 +323,7 @@ static int wrap_window_manager_default_t_set_prop(lua_State* L);
 static int wrap_window_manager_simple_t_get_prop(lua_State* L);
 static int wrap_window_manager_simple_t_set_prop(lua_State* L);
 
-static int wrap_tk_ext_widgets_init(lua_State* L) {
-  ret_t ret = 0;
-  ret = (ret_t)tk_ext_widgets_init();
-
-  lua_pushnumber(L,(lua_Number)(ret));
-
-  return 1;
-}
-
 static void globals_init(lua_State* L) {
-  lua_pushcfunction(L, wrap_tk_ext_widgets_init);
-  lua_setglobal(L, "tk_ext_widgets_init");
   lua_pushcfunction(L, to_str);
   lua_setglobal(L, "to_str");
   lua_pushcfunction(L, to_wstr);

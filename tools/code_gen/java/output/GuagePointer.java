@@ -1,4 +1,6 @@
-class GuagePointer extends Widget {
+package awtk;
+
+public class GuagePointer extends Widget {
  public long nativeObj;
 
  public GuagePointer(long nativeObj) {
@@ -9,23 +11,23 @@ class GuagePointer extends Widget {
    return new GuagePointer(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new GuagePointer(guage_pointer_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new GuagePointer(guage_pointer_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- Ret setAngle(int angle)  {
+ public  int setAngle(int angle)  {
    return guage_pointer_set_angle(this.nativeObj, angle);
  }
 
- Ret setImage(String image)  {
+ public  int setImage(String image)  {
    return guage_pointer_set_image(this.nativeObj, image);
  }
 
- Ret setAnchor(String anchor_x, String anchor_y)  {
+ public  int setAnchor(String anchor_x, String anchor_y)  {
    return guage_pointer_set_anchor(this.nativeObj, anchor_x, anchor_y);
  }
 
@@ -47,9 +49,9 @@ class GuagePointer extends Widget {
 
 static private native long guage_pointer_create(long parent, int x, int y, int w, int h);
 static private native long guage_pointer_cast(long widget);
-static private native Ret guage_pointer_set_angle(long widget, int angle);
-static private native Ret guage_pointer_set_image(long widget, String image);
-static private native Ret guage_pointer_set_anchor(long widget, String anchor_x, String anchor_y);
+static private native int guage_pointer_set_angle(long widget, int angle);
+static private native int guage_pointer_set_image(long widget, String image);
+static private native int guage_pointer_set_anchor(long widget, String anchor_x, String anchor_y);
 static private native int guage_pointer_t_get_prop_angle(long nativeObj);
 static private native String guage_pointer_t_get_prop_image(long nativeObj);
 static private native double guage_pointer_t_get_prop_anchor_x(long nativeObj);

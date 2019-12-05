@@ -1,3 +1,5 @@
+package awtk;
+
 public class AlignH {
  static public final int NONE = ALIGN_H_NONE();
  static public final int CENTER = ALIGN_H_CENTER();

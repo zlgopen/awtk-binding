@@ -1,4 +1,6 @@
-class AppBar extends Widget {
+package awtk;
+
+public class AppBar extends Widget {
  public long nativeObj;
 
  public AppBar(long nativeObj) {
@@ -9,11 +11,11 @@ class AppBar extends Widget {
    return new AppBar(nativeObj);
  }
 
- static Widget create(Widget parent, int x, int y, int w, int h)  {
+ public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new AppBar(app_bar_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- static Widget cast(Widget widget)  {
+ public  static Widget cast(Widget widget)  {
    return new AppBar(app_bar_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

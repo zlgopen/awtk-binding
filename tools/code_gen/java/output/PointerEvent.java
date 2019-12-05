@@ -1,4 +1,6 @@
-class PointerEvent extends Event {
+package awtk;
+
+public class PointerEvent extends Event {
  public long nativeObj;
 
  public PointerEvent(long nativeObj) {
@@ -9,7 +11,7 @@ class PointerEvent extends Event {
    return new PointerEvent(nativeObj);
  }
 
- static PointerEvent cast(Event event)  {
+ public  static PointerEvent cast(Event event)  {
    return new PointerEvent(pointer_event_cast(event != null ? (event.nativeObj) : 0));
  }
 

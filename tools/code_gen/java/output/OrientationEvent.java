@@ -1,4 +1,6 @@
-class OrientationEvent extends Event {
+package awtk;
+
+public class OrientationEvent extends Event {
  public long nativeObj;
 
  public OrientationEvent(long nativeObj) {
@@ -9,7 +11,7 @@ class OrientationEvent extends Event {
    return new OrientationEvent(nativeObj);
  }
 
- static OrientationEvent cast(Event event)  {
+ public  static OrientationEvent cast(Event event)  {
    return new OrientationEvent(orientation_event_cast(event != null ? (event.nativeObj) : 0));
  }
 

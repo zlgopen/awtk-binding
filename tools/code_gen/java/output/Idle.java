@@ -1,4 +1,6 @@
-class Idle {
+package awtk;
+
+public class Idle {
  public long nativeObj;
 
  public Idle(long nativeObj) {
@@ -9,15 +11,15 @@ class Idle {
    return new Idle(nativeObj);
  }
 
- static int add(int on_idle, int ctx)  {
+ public  static int add(OnIdle on_idle, long ctx)  {
    return idle_add(on_idle, ctx);
  }
 
- static Ret remove(int idle_id)  {
+ public  static int remove(int idle_id)  {
    return idle_remove(idle_id);
  }
 
-static private native int idle_add(int on_idle, int ctx);
-static private native Ret idle_remove(int idle_id);
+static private native int idle_add(OnIdle on_idle, long ctx);
+static private native int idle_remove(int idle_id);
 }
 

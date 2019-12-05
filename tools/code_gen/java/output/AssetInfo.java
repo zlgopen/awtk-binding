@@ -1,4 +1,6 @@
-class AssetInfo {
+package awtk;
+
+public class AssetInfo {
  public long nativeObj;
 
  public AssetInfo(long nativeObj) {
