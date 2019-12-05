@@ -219,6 +219,10 @@ class BindingGen extends CodeGen {
       result += this.genFuncDecl(cls, m);
       result += this.genFuncImpl(cls, m);
       result += '}\n\n'
+    } else {
+      let custom = this.genFuncDecl(cls, m);
+      custom += '}\n\n'
+      //console.log(custom);
     }
 
     return result;

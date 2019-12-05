@@ -3176,6 +3176,25 @@ static void align_h_t_init(lua_State* L) {
 
 }
 
+static void app_type_t_init(lua_State* L) {
+  lua_newtable(L);
+  lua_setglobal(L, "AppType");
+  lua_getglobal(L, "AppType");
+
+  lua_pushstring(L, "MOBILE");
+  lua_pushinteger(L, APP_MOBILE);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "SIMULATOR");
+  lua_pushinteger(L, APP_SIMULATOR);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "DESKTOP");
+  lua_pushinteger(L, APP_DESKTOP);
+  lua_settable(L, -3); 
+
+}
+
 static void bitmap_format_t_init(lua_State* L) {
   lua_newtable(L);
   lua_setglobal(L, "BitmapFormat");
@@ -17028,6 +17047,7 @@ void luaL_openawtk(lua_State* L) {
   timer_t_init(L);
   align_v_t_init(L);
   align_h_t_init(L);
+  app_type_t_init(L);
   bitmap_format_t_init(L);
   bitmap_flag_t_init(L);
   vgcanvas_t_init(L);

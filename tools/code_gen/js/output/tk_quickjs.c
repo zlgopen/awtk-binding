@@ -5481,6 +5481,47 @@ ret_t align_h_t_init(JSContext *ctx) {
  return RET_OK;
 }
 
+jsvalue_t get_APP_MOBILE(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, APP_MOBILE);
+}
+
+jsvalue_t get_APP_SIMULATOR(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, APP_SIMULATOR);
+}
+
+jsvalue_t get_APP_DESKTOP(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, APP_DESKTOP);
+}
+
+ret_t app_type_t_init(JSContext *ctx) {
+  jsvalue_t global_obj = JS_GetGlobalObject(ctx);
+  JS_SetPropertyStr(ctx, global_obj, "APP_MOBILE",
+                      JS_NewCFunction(ctx, get_APP_MOBILE, "APP_MOBILE", 1));
+  JS_SetPropertyStr(ctx, global_obj, "APP_SIMULATOR",
+                      JS_NewCFunction(ctx, get_APP_SIMULATOR, "APP_SIMULATOR", 1));
+  JS_SetPropertyStr(ctx, global_obj, "APP_DESKTOP",
+                      JS_NewCFunction(ctx, get_APP_DESKTOP, "APP_DESKTOP", 1));
+
+ jsvalue_unref(ctx, global_obj);
+
+ return RET_OK;
+}
+
 jsvalue_t get_BITMAP_FMT_NONE(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -25571,6 +25612,7 @@ ret_t awtk_js_init(JSContext *ctx) {
   timer_t_init(ctx);
   align_v_t_init(ctx);
   align_h_t_init(ctx);
+  app_type_t_init(ctx);
   bitmap_format_t_init(ctx);
   bitmap_flag_t_init(ctx);
   vgcanvas_t_init(ctx);

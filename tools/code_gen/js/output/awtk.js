@@ -790,6 +790,13 @@ var TAlignH;
     TAlignH[TAlignH["RIGHT"] = ALIGN_H_RIGHT()] = "RIGHT";
 })(TAlignH || (TAlignH = {}));
 ;
+var TAppType;
+(function (TAppType) {
+    TAppType[TAppType["MOBILE"] = APP_MOBILE()] = "MOBILE";
+    TAppType[TAppType["SIMULATOR"] = APP_SIMULATOR()] = "SIMULATOR";
+    TAppType[TAppType["DESKTOP"] = APP_DESKTOP()] = "DESKTOP";
+})(TAppType || (TAppType = {}));
+;
 var TBitmapFormat;
 (function (TBitmapFormat) {
     TBitmapFormat[TBitmapFormat["NONE"] = BITMAP_FMT_NONE()] = "NONE";

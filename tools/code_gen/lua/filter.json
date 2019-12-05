@@ -3695,6 +3695,31 @@
   },
   {
     "type": "enum",
+    "desc": "应用程序类型。\n",
+    "consts": [
+      {
+        "desc": "嵌入式或移动APP\n",
+        "name": "APP_MOBILE"
+      },
+      {
+        "desc": "模拟器。\n",
+        "name": "APP_SIMULATOR"
+      },
+      {
+        "desc": "桌面应用程序。\n",
+        "name": "APP_DESKTOP"
+      }
+    ],
+    "header": "base/types_def.h",
+    "name": "app_type_t",
+    "prefix": "APP_",
+    "annotation": {
+      "scriptable": true
+    },
+    "level": 1
+  },
+  {
+    "type": "enum",
     "desc": "位图格式常量定义。\n",
     "consts": [
       {

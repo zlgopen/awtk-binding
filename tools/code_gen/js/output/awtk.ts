@@ -405,6 +405,9 @@ declare function ALIGN_H_NONE();
 declare function ALIGN_H_CENTER();
 declare function ALIGN_H_LEFT();
 declare function ALIGN_H_RIGHT();
+declare function APP_MOBILE();
+declare function APP_SIMULATOR();
+declare function APP_DESKTOP();
 declare function BITMAP_FMT_NONE();
 declare function BITMAP_FMT_RGBA8888();
 declare function BITMAP_FMT_ABGR8888();
@@ -2451,6 +2454,12 @@ enum TAlignH {
  CENTER = ALIGN_H_CENTER(),
  LEFT = ALIGN_H_LEFT(),
  RIGHT = ALIGN_H_RIGHT(),
+};
+
+enum TAppType {
+ MOBILE = APP_MOBILE(),
+ SIMULATOR = APP_SIMULATOR(),
+ DESKTOP = APP_DESKTOP(),
 };
 
 enum TBitmapFormat {

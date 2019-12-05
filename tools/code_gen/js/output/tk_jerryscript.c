@@ -5440,6 +5440,44 @@ ret_t align_h_t_init(JSContext *ctx) {
  return RET_OK;
 }
 
+jsvalue_t get_APP_MOBILE(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  return jsvalue_create_int(ctx, APP_MOBILE);
+}
+
+jsvalue_t get_APP_SIMULATOR(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  return jsvalue_create_int(ctx, APP_SIMULATOR);
+}
+
+jsvalue_t get_APP_DESKTOP(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  return jsvalue_create_int(ctx, APP_DESKTOP);
+}
+
+ret_t app_type_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"APP_MOBILE", get_APP_MOBILE);
+  jerryx_handler_register_global((const jerry_char_t*)"APP_SIMULATOR", get_APP_SIMULATOR);
+  jerryx_handler_register_global((const jerry_char_t*)"APP_DESKTOP", get_APP_DESKTOP);
+
+ return RET_OK;
+}
+
 jsvalue_t get_BITMAP_FMT_NONE(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -25194,6 +25232,7 @@ ret_t awtk_js_init(JSContext *ctx) {
   timer_t_init(ctx);
   align_v_t_init(ctx);
   align_h_t_init(ctx);
+  app_type_t_init(ctx);
   bitmap_format_t_init(ctx);
   bitmap_flag_t_init(ctx);
   vgcanvas_t_init(ctx);
