@@ -1,8 +1,6 @@
 package awtk;
 
 public class Dialog extends WindowBase {
- public long nativeObj;
-
  public Dialog(long nativeObj) {
    super(nativeObj);
  }

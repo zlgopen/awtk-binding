@@ -1,8 +1,6 @@
 package awtk;
 
 public class PointerEvent extends Event {
- public long nativeObj;
-
  public PointerEvent(long nativeObj) {
    super(nativeObj);
  }

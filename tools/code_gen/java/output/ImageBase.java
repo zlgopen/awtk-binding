@@ -1,8 +1,6 @@
 package awtk;
 
 public class ImageBase extends Widget {
- public long nativeObj;
-
  public ImageBase(long nativeObj) {
    super(nativeObj);
  }

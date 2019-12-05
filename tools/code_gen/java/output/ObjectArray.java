@@ -1,8 +1,6 @@
 package awtk;
 
 public class ObjectArray extends Object {
- public long nativeObj;
-
  public ObjectArray(long nativeObj) {
    super(nativeObj);
  }

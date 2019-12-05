@@ -1,8 +1,6 @@
 package awtk;
 
 public class DialogClient extends Widget {
- public long nativeObj;
-
  public DialogClient(long nativeObj) {
    super(nativeObj);
  }

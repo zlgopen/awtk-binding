@@ -1,7 +1,7 @@
 const fs = require('fs')
 const TargetGen = require('../common/target_gen.js')
 
-class TypescriptGenerator extends TargetGen {
+class JavaGenerator extends TargetGen {
   constructor() {
     super()
     this.classNamePrefix = '';
@@ -183,7 +183,11 @@ class TypescriptGenerator extends TargetGen {
   }
 
   genOneClassPre(cls) {
-    return ' public long nativeObj;\n\n';
+    if (!(cls.parent)) {
+      return ' public long nativeObj;\n\n';
+    } else {
+      return '';
+    }
   }
 
   genOneClassPost(cls) {
@@ -203,10 +207,10 @@ class TypescriptGenerator extends TargetGen {
   }
 
   static gen() {
-    const gen = new TypescriptGenerator();
+    const gen = new JavaGenerator();
 
     gen.genAll(gen.getJsonIDL());
   }
 }
 
-TypescriptGenerator.gen();
+JavaGenerator.gen();

@@ -1,8 +1,6 @@
 package awtk;
 
 public class ImageValue extends Widget {
- public long nativeObj;
-
  public ImageValue(long nativeObj) {
    super(nativeObj);
  }

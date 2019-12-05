@@ -1,8 +1,6 @@
 package awtk;
 
 public class MutableImage extends ImageBase {
- public long nativeObj;
-
  public MutableImage(long nativeObj) {
    super(nativeObj);
  }

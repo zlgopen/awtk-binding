@@ -1,8 +1,6 @@
 package awtk;
 
 public class ProgressCircle extends Widget {
- public long nativeObj;
-
  public ProgressCircle(long nativeObj) {
    super(nativeObj);
  }

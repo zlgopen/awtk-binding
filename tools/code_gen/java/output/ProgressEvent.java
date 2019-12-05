@@ -1,8 +1,6 @@
 package awtk;
 
 public class ProgressEvent extends Event {
- public long nativeObj;
-
  public ProgressEvent(long nativeObj) {
    super(nativeObj);
  }

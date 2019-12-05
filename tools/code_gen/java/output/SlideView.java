@@ -1,8 +1,6 @@
 package awtk;
 
 public class SlideView extends Widget {
- public long nativeObj;
-
  public SlideView(long nativeObj) {
    super(nativeObj);
  }

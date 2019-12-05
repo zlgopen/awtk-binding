@@ -1,8 +1,6 @@
 package awtk;
 
 public class ComboBoxEx extends ComboBox {
- public long nativeObj;
-
  public ComboBoxEx(long nativeObj) {
    super(nativeObj);
  }

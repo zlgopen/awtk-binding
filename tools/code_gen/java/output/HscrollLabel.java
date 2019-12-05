@@ -1,8 +1,6 @@
 package awtk;
 
 public class HscrollLabel extends Widget {
- public long nativeObj;
-
  public HscrollLabel(long nativeObj) {
    super(nativeObj);
  }

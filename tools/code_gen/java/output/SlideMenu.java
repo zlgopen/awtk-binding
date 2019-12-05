@@ -1,8 +1,6 @@
 package awtk;
 
 public class SlideMenu extends Widget {
- public long nativeObj;
-
  public SlideMenu(long nativeObj) {
    super(nativeObj);
  }

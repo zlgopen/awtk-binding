@@ -1,8 +1,6 @@
 package awtk;
 
 public class SystemBar extends WindowBase {
- public long nativeObj;
-
  public SystemBar(long nativeObj) {
    super(nativeObj);
  }

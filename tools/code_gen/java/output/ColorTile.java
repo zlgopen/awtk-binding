@@ -1,8 +1,6 @@
 package awtk;
 
 public class ColorTile extends Widget {
- public long nativeObj;
-
  public ColorTile(long nativeObj) {
    super(nativeObj);
  }

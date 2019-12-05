@@ -1,8 +1,6 @@
 package awtk;
 
 public class StyleMutable extends Style {
- public long nativeObj;
-
  public StyleMutable(long nativeObj) {
    super(nativeObj);
  }

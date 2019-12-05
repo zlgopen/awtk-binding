@@ -1,8 +1,6 @@
 package awtk;
 
 public class TextSelector extends Widget {
- public long nativeObj;
-
  public TextSelector(long nativeObj) {
    super(nativeObj);
  }

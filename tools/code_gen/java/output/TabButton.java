@@ -1,8 +1,6 @@
 package awtk;
 
 public class TabButton extends Widget {
- public long nativeObj;
-
  public TabButton(long nativeObj) {
    super(nativeObj);
  }

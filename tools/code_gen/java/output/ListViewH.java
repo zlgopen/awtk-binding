@@ -1,8 +1,6 @@
 package awtk;
 
 public class ListViewH extends Widget {
- public long nativeObj;
-
  public ListViewH(long nativeObj) {
    super(nativeObj);
  }

@@ -1,8 +1,6 @@
 package awtk;
 
 public class TimeClock extends Widget {
- public long nativeObj;
-
  public TimeClock(long nativeObj) {
    super(nativeObj);
  }

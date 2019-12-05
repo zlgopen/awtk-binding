@@ -1,8 +1,6 @@
 package awtk;
 
 public class GridItem extends Widget {
- public long nativeObj;
-
  public GridItem(long nativeObj) {
    super(nativeObj);
  }

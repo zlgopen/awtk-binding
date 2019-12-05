@@ -1,8 +1,6 @@
 package awtk;
 
 public class WindowManagerSimple extends WindowManager {
- public long nativeObj;
-
  public WindowManagerSimple(long nativeObj) {
    super(nativeObj);
  }

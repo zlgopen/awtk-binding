@@ -1,8 +1,6 @@
 package awtk;
 
 public class ComboBox extends Widget {
- public long nativeObj;
-
  public ComboBox(long nativeObj) {
    super(nativeObj);
  }

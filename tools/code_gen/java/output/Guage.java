@@ -1,8 +1,6 @@
 package awtk;
 
 public class Guage extends Widget {
- public long nativeObj;
-
  public Guage(long nativeObj) {
    super(nativeObj);
  }

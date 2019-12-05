@@ -1,8 +1,6 @@
 package awtk;
 
 public class WindowEvent extends Event {
- public long nativeObj;
-
  public WindowEvent(long nativeObj) {
    super(nativeObj);
  }

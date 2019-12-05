@@ -1,8 +1,6 @@
 package awtk;
 
 public class Window extends WindowBase {
- public long nativeObj;
-
  public Window(long nativeObj) {
    super(nativeObj);
  }

@@ -1,8 +1,6 @@
 package awtk;
 
 public class Object extends Emitter {
- public long nativeObj;
-
  public Object(long nativeObj) {
    super(nativeObj);
  }

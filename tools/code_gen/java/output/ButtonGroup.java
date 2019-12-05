@@ -1,8 +1,6 @@
 package awtk;
 
 public class ButtonGroup extends Widget {
- public long nativeObj;
-
  public ButtonGroup(long nativeObj) {
    super(nativeObj);
  }

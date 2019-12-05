@@ -1,8 +1,6 @@
 package awtk;
 
 public class Dragger extends Widget {
- public long nativeObj;
-
  public Dragger(long nativeObj) {
    super(nativeObj);
  }

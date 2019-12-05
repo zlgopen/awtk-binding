@@ -1,8 +1,6 @@
 package awtk;
 
 public class IdleInfo extends Object {
- public long nativeObj;
-
  public IdleInfo(long nativeObj) {
    super(nativeObj);
  }

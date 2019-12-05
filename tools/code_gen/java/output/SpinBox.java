@@ -1,8 +1,6 @@
 package awtk;
 
 public class SpinBox extends Edit {
- public long nativeObj;
-
  public SpinBox(long nativeObj) {
    super(nativeObj);
  }

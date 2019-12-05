@@ -1,8 +1,6 @@
 package awtk;
 
 public class ScrollView extends Widget {
- public long nativeObj;
-
  public ScrollView(long nativeObj) {
    super(nativeObj);
  }

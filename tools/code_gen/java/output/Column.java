@@ -1,8 +1,6 @@
 package awtk;
 
 public class Column extends Widget {
- public long nativeObj;
-
  public Column(long nativeObj) {
    super(nativeObj);
  }

@@ -1,8 +1,6 @@
 package awtk;
 
 public class Switch extends Widget {
- public long nativeObj;
-
  public Switch(long nativeObj) {
    super(nativeObj);
  }

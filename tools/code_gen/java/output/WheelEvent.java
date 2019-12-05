@@ -1,8 +1,6 @@
 package awtk;
 
 public class WheelEvent extends Event {
- public long nativeObj;
-
  public WheelEvent(long nativeObj) {
    super(nativeObj);
  }

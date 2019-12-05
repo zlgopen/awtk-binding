@@ -1,8 +1,6 @@
 package awtk;
 
 public class KeyEvent extends Event {
- public long nativeObj;
-
  public KeyEvent(long nativeObj) {
    super(nativeObj);
  }

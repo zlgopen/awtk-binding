@@ -1,8 +1,6 @@
 package awtk;
 
 public class GuagePointer extends Widget {
- public long nativeObj;
-
  public GuagePointer(long nativeObj) {
    super(nativeObj);
  }

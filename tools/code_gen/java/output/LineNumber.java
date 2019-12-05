@@ -1,8 +1,6 @@
 package awtk;
 
 public class LineNumber extends Widget {
- public long nativeObj;
-
  public LineNumber(long nativeObj) {
    super(nativeObj);
  }

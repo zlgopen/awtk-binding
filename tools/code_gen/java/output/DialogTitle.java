@@ -1,8 +1,6 @@
 package awtk;
 
 public class DialogTitle extends Widget {
- public long nativeObj;
-
  public DialogTitle(long nativeObj) {
    super(nativeObj);
  }

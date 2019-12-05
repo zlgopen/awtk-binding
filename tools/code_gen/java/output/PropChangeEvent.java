@@ -1,8 +1,6 @@
 package awtk;
 
 public class PropChangeEvent extends Event {
- public long nativeObj;
-
  public PropChangeEvent(long nativeObj) {
    super(nativeObj);
  }

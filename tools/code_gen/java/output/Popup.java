@@ -1,8 +1,6 @@
 package awtk;
 
 public class Popup extends WindowBase {
- public long nativeObj;
-
  public Popup(long nativeObj) {
    super(nativeObj);
  }

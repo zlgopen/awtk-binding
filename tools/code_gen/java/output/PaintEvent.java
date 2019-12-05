@@ -1,8 +1,6 @@
 package awtk;
 
 public class PaintEvent extends Event {
- public long nativeObj;
-
  public PaintEvent(long nativeObj) {
    super(nativeObj);
  }

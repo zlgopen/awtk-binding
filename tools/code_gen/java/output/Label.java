@@ -1,8 +1,6 @@
 package awtk;
 
 public class Label extends Widget {
- public long nativeObj;
-
  public Label(long nativeObj) {
    super(nativeObj);
  }

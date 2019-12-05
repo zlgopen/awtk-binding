@@ -1,8 +1,6 @@
 package awtk;
 
 public class ObjectDefault extends Object {
- public long nativeObj;
-
  public ObjectDefault(long nativeObj) {
    super(nativeObj);
  }

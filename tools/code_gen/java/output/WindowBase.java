@@ -1,8 +1,6 @@
 package awtk;
 
 public class WindowBase extends Widget {
- public long nativeObj;
-
  public WindowBase(long nativeObj) {
    super(nativeObj);
  }

@@ -1,8 +1,6 @@
 package awtk;
 
 public class ProgressBar extends Widget {
- public long nativeObj;
-
  public ProgressBar(long nativeObj) {
    super(nativeObj);
  }

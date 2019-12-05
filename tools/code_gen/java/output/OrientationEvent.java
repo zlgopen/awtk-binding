@@ -1,8 +1,6 @@
 package awtk;
 
 public class OrientationEvent extends Event {
- public long nativeObj;
-
  public OrientationEvent(long nativeObj) {
    super(nativeObj);
  }

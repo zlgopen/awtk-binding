@@ -1,8 +1,6 @@
 package awtk;
 
 public class Mledit extends Widget {
- public long nativeObj;
-
  public Mledit(long nativeObj) {
    super(nativeObj);
  }

@@ -1,8 +1,6 @@
 package awtk;
 
 public class Image extends ImageBase {
- public long nativeObj;
-
  public Image(long nativeObj) {
    super(nativeObj);
  }

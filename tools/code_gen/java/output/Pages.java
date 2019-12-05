@@ -1,8 +1,6 @@
 package awtk;
 
 public class Pages extends Widget {
- public long nativeObj;
-
  public Pages(long nativeObj) {
    super(nativeObj);
  }

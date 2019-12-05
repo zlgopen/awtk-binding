@@ -1,8 +1,6 @@
 package awtk;
 
 public class GroupBox extends Widget {
- public long nativeObj;
-
  public GroupBox(long nativeObj) {
    super(nativeObj);
  }

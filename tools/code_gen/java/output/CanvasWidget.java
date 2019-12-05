@@ -1,8 +1,6 @@
 package awtk;
 
 public class CanvasWidget extends Widget {
- public long nativeObj;
-
  public CanvasWidget(long nativeObj) {
    super(nativeObj);
  }

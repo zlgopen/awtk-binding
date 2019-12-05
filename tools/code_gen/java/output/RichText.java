@@ -1,8 +1,6 @@
 package awtk;
 
 public class RichText extends Widget {
- public long nativeObj;
-
  public RichText(long nativeObj) {
    super(nativeObj);
  }

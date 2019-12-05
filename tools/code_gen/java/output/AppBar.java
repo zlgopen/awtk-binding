@@ -1,8 +1,6 @@
 package awtk;
 
 public class AppBar extends Widget {
- public long nativeObj;
-
  public AppBar(long nativeObj) {
    super(nativeObj);
  }

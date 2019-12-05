@@ -1,8 +1,6 @@
 package awtk;
 
 public class ImageAnimation extends Widget {
- public long nativeObj;
-
  public ImageAnimation(long nativeObj) {
    super(nativeObj);
  }

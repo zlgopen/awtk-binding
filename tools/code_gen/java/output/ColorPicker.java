@@ -1,8 +1,6 @@
 package awtk;
 
 public class ColorPicker extends Widget {
- public long nativeObj;
-
  public ColorPicker(long nativeObj) {
    super(nativeObj);
  }

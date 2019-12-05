@@ -1,8 +1,6 @@
 package awtk;
 
 public class Keyboard extends WindowBase {
- public long nativeObj;
-
  public Keyboard(long nativeObj) {
    super(nativeObj);
  }

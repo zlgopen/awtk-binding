@@ -1,8 +1,6 @@
 package awtk;
 
 public class TimerInfo extends Object {
- public long nativeObj;
-
  public TimerInfo(long nativeObj) {
    super(nativeObj);
  }

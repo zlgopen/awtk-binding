@@ -1,8 +1,6 @@
 package awtk;
 
 public class GifImage extends ImageBase {
- public long nativeObj;
-
  public GifImage(long nativeObj) {
    super(nativeObj);
  }

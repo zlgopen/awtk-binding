@@ -1,8 +1,6 @@
 package awtk;
 
 public class SvgImage extends ImageBase {
- public long nativeObj;
-
  public SvgImage(long nativeObj) {
    super(nativeObj);
  }

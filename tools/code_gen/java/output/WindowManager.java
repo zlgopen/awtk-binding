@@ -1,8 +1,6 @@
 package awtk;
 
 public class WindowManager extends Widget {
- public long nativeObj;
-
  public WindowManager(long nativeObj) {
    super(nativeObj);
  }

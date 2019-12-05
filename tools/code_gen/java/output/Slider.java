@@ -1,8 +1,6 @@
 package awtk;
 
 public class Slider extends Widget {
- public long nativeObj;
-
  public Slider(long nativeObj) {
    super(nativeObj);
  }

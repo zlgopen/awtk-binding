@@ -1,8 +1,6 @@
 package awtk;
 
 public class Overlay extends Widget {
- public long nativeObj;
-
  public Overlay(long nativeObj) {
    super(nativeObj);
  }
