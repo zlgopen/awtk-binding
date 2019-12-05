@@ -101,10 +101,6 @@ public class Object extends Emitter {
    return object_copy_prop(this.nativeObj, src != null ? (src.nativeObj) : 0, name);
  }
 
- public  int foreachProp(OnData on_prop, long ctx)  {
-   return object_foreach_prop(this.nativeObj, on_prop, ctx);
- }
-
  public  boolean hasProp(String name)  {
    return object_has_prop(this.nativeObj, name);
  }
@@ -180,7 +176,6 @@ static private native int object_set_prop_int(long obj, String name, int value);
 static private native int object_set_prop_bool(long obj, String name, boolean value);
 static private native int object_set_prop_float(long obj, String name, double value);
 static private native int object_copy_prop(long obj, long src, String name);
-static private native int object_foreach_prop(long obj, OnData on_prop, long ctx);
 static private native boolean object_has_prop(long obj, String name);
 static private native int object_eval(long obj, String expr, long v);
 static private native boolean object_can_exec(long obj, String name, String args);

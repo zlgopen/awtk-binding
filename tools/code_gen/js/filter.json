@@ -3138,39 +3138,6 @@
             "desc": "locale_info对象。"
           },
           {
-            "type": "event_type_t",
-            "name": "type",
-            "desc": "事件类型，目前固定为EVT_LOCALE_CHANGED。"
-          },
-          {
-            "type": "event_func_t",
-            "name": "on_event",
-            "desc": "事件处理函数。"
-          },
-          {
-            "type": "void*",
-            "name": "ctx",
-            "desc": "事件处理函数上下文。"
-          }
-        ],
-        "annotation": {
-          "scriptable": "custom"
-        },
-        "desc": "注册指定事件的处理函数。\n",
-        "name": "locale_info_on",
-        "return": {
-          "type": "uint32_t",
-          "desc": "返回id，用于locale_info_off。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "locale_info_t*",
-            "name": "locale_info",
-            "desc": "locale_info对象。"
-          },
-          {
             "type": "uint32_t",
             "name": "id",
             "desc": "locale_info_on返回的ID。"
@@ -7081,44 +7048,6 @@
             "desc": "控件对象。"
           },
           {
-            "type": "uint32_t",
-            "name": "type",
-            "desc": "事件类型。"
-          },
-          {
-            "type": "event_func_t",
-            "name": "on_event",
-            "desc": "事件处理函数。"
-          },
-          {
-            "type": "void*",
-            "name": "ctx",
-            "desc": "事件处理函数上下文。"
-          },
-          {
-            "type": "uint32_t",
-            "name": "tag",
-            "desc": "tag。"
-          }
-        ],
-        "annotation": {
-          "scriptable": "custom"
-        },
-        "desc": "注册指定tag的事件处理函数。\n> 注册时指定一个tag，可用widget\\_off\\_by\\_tag注销相同tag的事件处理函数。\n",
-        "name": "widget_on_with_tag",
-        "return": {
-          "type": "int32_t",
-          "desc": "返回id，用于widget_off。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "widget_t*",
-            "name": "widget",
-            "desc": "控件对象。"
-          },
-          {
             "type": "int32_t",
             "name": "id",
             "desc": "widget_on返回的ID。"
@@ -9311,44 +9240,6 @@
         },
         "desc": "注册指定事件的处理函数。\n",
         "name": "emitter_on",
-        "return": {
-          "type": "uint32_t",
-          "desc": "返回id，用于emitter_off。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "emitter_t*",
-            "name": "emitter",
-            "desc": "emitter对象。"
-          },
-          {
-            "type": "uint32_t",
-            "name": "type",
-            "desc": "事件类型。"
-          },
-          {
-            "type": "event_func_t",
-            "name": "on_event",
-            "desc": "事件处理函数。"
-          },
-          {
-            "type": "void*",
-            "name": "ctx",
-            "desc": "事件处理函数上下文。"
-          },
-          {
-            "type": "uint32_t",
-            "name": "tag",
-            "desc": "tag。"
-          }
-        ],
-        "annotation": {
-          "scriptable": "custom"
-        },
-        "desc": "注册指定事件的处理函数。\n",
-        "name": "emitter_on_with_tag",
         "return": {
           "type": "uint32_t",
           "desc": "返回id，用于emitter_off。"
@@ -16250,34 +16141,6 @@
         },
         "desc": "拷贝指定的属性。\n",
         "name": "object_copy_prop",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "object_t*",
-            "name": "obj",
-            "desc": "object对象。"
-          },
-          {
-            "type": "tk_visit_t",
-            "name": "on_prop",
-            "desc": "回调函数。"
-          },
-          {
-            "type": "void*",
-            "name": "ctx",
-            "desc": "回调函数上下文。"
-          }
-        ],
-        "annotation": {
-          "scriptable": "custom"
-        },
-        "desc": "遍历所有属性。\n",
-        "name": "object_foreach_prop",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"

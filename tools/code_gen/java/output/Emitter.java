@@ -27,10 +27,6 @@ public class Emitter {
    return emitter_on(this.nativeObj, type, on_event, ctx);
  }
 
- public  int onWithTag(int type, OnEvent on_event, long ctx, int tag)  {
-   return emitter_on_with_tag(this.nativeObj, type, on_event, ctx, tag);
- }
-
  public  int off(int id)  {
    return emitter_off(this.nativeObj, id);
  }
@@ -59,7 +55,6 @@ static private native long emitter_create();
 static private native int emitter_dispatch(long emitter, long e);
 static private native int emitter_dispatch_simple_event(long emitter, int type);
 static private native int emitter_on(long emitter, int type, OnEvent on_event, long ctx);
-static private native int emitter_on_with_tag(long emitter, int type, OnEvent on_event, long ctx, int tag);
 static private native int emitter_off(long emitter, int id);
 static private native int emitter_enable(long emitter);
 static private native int emitter_disable(long emitter);

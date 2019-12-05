@@ -4760,7 +4760,6 @@ ret_t locale_info_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"locale_info", wrap_locale_info);
   jerryx_handler_register_global((const jerry_char_t*)"locale_info_tr", wrap_locale_info_tr);
   jerryx_handler_register_global((const jerry_char_t*)"locale_info_change", wrap_locale_info_change);
-  jerryx_handler_register_global((const jerry_char_t*)"locale_info_on", wrap_locale_info_on);
   jerryx_handler_register_global((const jerry_char_t*)"locale_info_off", wrap_locale_info_off);
 
  return RET_OK;
@@ -10694,7 +10693,6 @@ ret_t widget_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"widget_set_visible_only", wrap_widget_set_visible_only);
   jerryx_handler_register_global((const jerry_char_t*)"widget_set_sensitive", wrap_widget_set_sensitive);
   jerryx_handler_register_global((const jerry_char_t*)"widget_on", wrap_widget_on);
-  jerryx_handler_register_global((const jerry_char_t*)"widget_on_with_tag", wrap_widget_on_with_tag);
   jerryx_handler_register_global((const jerry_char_t*)"widget_off", wrap_widget_off);
   jerryx_handler_register_global((const jerry_char_t*)"widget_invalidate_force", wrap_widget_invalidate_force);
   jerryx_handler_register_global((const jerry_char_t*)"widget_set_prop_str", wrap_widget_set_prop_str);
@@ -12819,7 +12817,6 @@ ret_t emitter_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"emitter_dispatch", wrap_emitter_dispatch);
   jerryx_handler_register_global((const jerry_char_t*)"emitter_dispatch_simple_event", wrap_emitter_dispatch_simple_event);
   jerryx_handler_register_global((const jerry_char_t*)"emitter_on", wrap_emitter_on);
-  jerryx_handler_register_global((const jerry_char_t*)"emitter_on_with_tag", wrap_emitter_on_with_tag);
   jerryx_handler_register_global((const jerry_char_t*)"emitter_off", wrap_emitter_off);
   jerryx_handler_register_global((const jerry_char_t*)"emitter_enable", wrap_emitter_enable);
   jerryx_handler_register_global((const jerry_char_t*)"emitter_disable", wrap_emitter_disable);
@@ -19042,7 +19039,6 @@ ret_t object_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"object_set_prop_bool", wrap_object_set_prop_bool);
   jerryx_handler_register_global((const jerry_char_t*)"object_set_prop_float", wrap_object_set_prop_float);
   jerryx_handler_register_global((const jerry_char_t*)"object_copy_prop", wrap_object_copy_prop);
-  jerryx_handler_register_global((const jerry_char_t*)"object_foreach_prop", wrap_object_foreach_prop);
   jerryx_handler_register_global((const jerry_char_t*)"object_has_prop", wrap_object_has_prop);
   jerryx_handler_register_global((const jerry_char_t*)"object_eval", wrap_object_eval);
   jerryx_handler_register_global((const jerry_char_t*)"object_can_exec", wrap_object_can_exec);

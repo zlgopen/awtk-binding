@@ -2719,7 +2719,6 @@ static int wrap_locale_info_off(lua_State* L) {
 static const struct luaL_Reg locale_info_t_member_funcs[] = {
   {"tr", wrap_locale_info_tr},
   {"change", wrap_locale_info_change},
-  {"on", wrap_locale_info_on},
   {"off", wrap_locale_info_off},
   {NULL, NULL}
 };
@@ -5577,7 +5576,6 @@ static const struct luaL_Reg widget_t_member_funcs[] = {
   {"set_visible_only", wrap_widget_set_visible_only},
   {"set_sensitive", wrap_widget_set_sensitive},
   {"on", wrap_widget_on},
-  {"on_with_tag", wrap_widget_on_with_tag},
   {"off", wrap_widget_off},
   {"invalidate_force", wrap_widget_invalidate_force},
   {"set_prop_str", wrap_widget_set_prop_str},
@@ -6990,7 +6988,6 @@ static const struct luaL_Reg emitter_t_member_funcs[] = {
   {"dispatch", wrap_emitter_dispatch},
   {"dispatch_simple_event", wrap_emitter_dispatch_simple_event},
   {"on", wrap_emitter_on},
-  {"on_with_tag", wrap_emitter_on_with_tag},
   {"off", wrap_emitter_off},
   {"enable", wrap_emitter_enable},
   {"disable", wrap_emitter_disable},
@@ -11459,7 +11456,6 @@ static const struct luaL_Reg object_t_member_funcs[] = {
   {"set_prop_bool", wrap_object_set_prop_bool},
   {"set_prop_float", wrap_object_set_prop_float},
   {"copy_prop", wrap_object_copy_prop},
-  {"foreach_prop", wrap_object_foreach_prop},
   {"has_prop", wrap_object_has_prop},
   {"eval", wrap_object_eval},
   {"can_exec", wrap_object_can_exec},

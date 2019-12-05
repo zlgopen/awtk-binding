@@ -23,10 +23,6 @@ public class LocaleInfo {
    return locale_info_change(this.nativeObj, language, country);
  }
 
- public  int on(int type, OnEvent on_event, long ctx)  {
-   return locale_info_on(this.nativeObj, type, on_event, ctx);
- }
-
  public  int off(int id)  {
    return locale_info_off(this.nativeObj, id);
  }
@@ -34,7 +30,6 @@ public class LocaleInfo {
 static private native long locale_info();
 static private native String locale_info_tr(long locale_info, String text);
 static private native int locale_info_change(long locale_info, String language, String country);
-static private native int locale_info_on(long locale_info, int type, OnEvent on_event, long ctx);
 static private native int locale_info_off(long locale_info, int id);
 }
 

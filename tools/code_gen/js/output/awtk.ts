@@ -352,7 +352,6 @@ declare function TK_KEY_CANCEL();
 declare function locale_info() : TLocaleInfo;
 declare function locale_info_tr(locale_info : TLocaleInfo, text : string) : string;
 declare function locale_info_change(locale_info : TLocaleInfo, language : string, country : string) : TRet;
-declare function locale_info_on(locale_info : TLocaleInfo, type : TEventType, on_event : Function, ctx : any) : number;
 declare function locale_info_off(locale_info : TLocaleInfo, id : number) : TRet;
 declare function STYLE_ID_BG_COLOR();
 declare function STYLE_ID_FG_COLOR();
@@ -726,7 +725,6 @@ declare function widget_set_visible(widget : TWidget, visible : number, recursiv
 declare function widget_set_visible_only(widget : TWidget, visible : number) : TRet;
 declare function widget_set_sensitive(widget : TWidget, sensitive : number) : TRet;
 declare function widget_on(widget : TWidget, type : number, on_event : Function, ctx : any) : number;
-declare function widget_on_with_tag(widget : TWidget, type : number, on_event : Function, ctx : any, tag : number) : number;
 declare function widget_off(widget : TWidget, id : number) : TRet;
 declare function widget_invalidate_force(widget : TWidget, r : TRect) : TRet;
 declare function widget_set_prop_str(widget : TWidget, name : string, v : string) : TRet;
@@ -938,7 +936,6 @@ declare function emitter_create() : TEmitter;
 declare function emitter_dispatch(emitter : TEmitter, e : TEvent) : TRet;
 declare function emitter_dispatch_simple_event(emitter : TEmitter, type : number) : TRet;
 declare function emitter_on(emitter : TEmitter, type : number, on_event : Function, ctx : any) : number;
-declare function emitter_on_with_tag(emitter : TEmitter, type : number, on_event : Function, ctx : any, tag : number) : number;
 declare function emitter_off(emitter : TEmitter, id : number) : TRet;
 declare function emitter_enable(emitter : TEmitter) : TRet;
 declare function emitter_disable(emitter : TEmitter) : TRet;
@@ -1275,7 +1272,6 @@ declare function object_set_prop_int(obj : TObject, name : string, value : numbe
 declare function object_set_prop_bool(obj : TObject, name : string, value : number) : TRet;
 declare function object_set_prop_float(obj : TObject, name : string, value : number) : TRet;
 declare function object_copy_prop(obj : TObject, src : TObject, name : string) : TRet;
-declare function object_foreach_prop(obj : TObject, on_prop : Function, ctx : any) : TRet;
 declare function object_has_prop(obj : TObject, name : string) : number;
 declare function object_eval(obj : TObject, expr : string, v : TValue) : TRet;
 declare function object_can_exec(obj : TObject, name : string, args : string) : number;
@@ -2329,10 +2325,6 @@ class TLocaleInfo {
    return locale_info_change(this.nativeObj, language, country);
  }
 
- on(type : TEventType, on_event : Function, ctx : any) : number  {
-   return locale_info_on(this.nativeObj, type, on_event, ctx);
- }
-
  off(id : number) : TRet  {
    return locale_info_off(this.nativeObj, id);
  }
@@ -3103,10 +3095,6 @@ class TWidget {
    return widget_on(this.nativeObj, type, on_event, ctx);
  }
 
- onWithTag(type : number, on_event : Function, ctx : any, tag : number) : number  {
-   return widget_on_with_tag(this.nativeObj, type, on_event, ctx, tag);
- }
-
  off(id : number) : TRet  {
    return widget_off(this.nativeObj, id);
  }
@@ -3641,10 +3629,6 @@ class TEmitter {
 
  on(type : number, on_event : Function, ctx : any) : number  {
    return emitter_on(this.nativeObj, type, on_event, ctx);
- }
-
- onWithTag(type : number, on_event : Function, ctx : any, tag : number) : number  {
-   return emitter_on_with_tag(this.nativeObj, type, on_event, ctx, tag);
  }
 
  off(id : number) : TRet  {
@@ -5136,10 +5120,6 @@ class TObject extends TEmitter {
 
  copyProp(src : TObject, name : string) : TRet  {
    return object_copy_prop(this.nativeObj, src != null ? (src.nativeObj || src) : null, name);
- }
-
- foreachProp(on_prop : Function, ctx : any) : TRet  {
-   return object_foreach_prop(this.nativeObj, on_prop, ctx);
  }
 
  hasProp(name : string) : number  {

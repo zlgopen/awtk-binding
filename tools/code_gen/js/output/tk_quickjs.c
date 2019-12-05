@@ -4778,8 +4778,6 @@ ret_t locale_info_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_locale_info_tr, "locale_info_tr", 1));
   JS_SetPropertyStr(ctx, global_obj, "locale_info_change",
                       JS_NewCFunction(ctx, wrap_locale_info_change, "locale_info_change", 1));
-  JS_SetPropertyStr(ctx, global_obj, "locale_info_on",
-                      JS_NewCFunction(ctx, wrap_locale_info_on, "locale_info_on", 1));
   JS_SetPropertyStr(ctx, global_obj, "locale_info_off",
                       JS_NewCFunction(ctx, wrap_locale_info_off, "locale_info_off", 1));
 
@@ -10717,8 +10715,6 @@ ret_t widget_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_widget_set_sensitive, "widget_set_sensitive", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_on",
                       JS_NewCFunction(ctx, wrap_widget_on, "widget_on", 1));
-  JS_SetPropertyStr(ctx, global_obj, "widget_on_with_tag",
-                      JS_NewCFunction(ctx, wrap_widget_on_with_tag, "widget_on_with_tag", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_off",
                       JS_NewCFunction(ctx, wrap_widget_off, "widget_off", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_invalidate_force",
@@ -12932,8 +12928,6 @@ ret_t emitter_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_emitter_dispatch_simple_event, "emitter_dispatch_simple_event", 1));
   JS_SetPropertyStr(ctx, global_obj, "emitter_on",
                       JS_NewCFunction(ctx, wrap_emitter_on, "emitter_on", 1));
-  JS_SetPropertyStr(ctx, global_obj, "emitter_on_with_tag",
-                      JS_NewCFunction(ctx, wrap_emitter_on_with_tag, "emitter_on_with_tag", 1));
   JS_SetPropertyStr(ctx, global_obj, "emitter_off",
                       JS_NewCFunction(ctx, wrap_emitter_off, "emitter_off", 1));
   JS_SetPropertyStr(ctx, global_obj, "emitter_enable",
@@ -19244,8 +19238,6 @@ ret_t object_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_object_set_prop_float, "object_set_prop_float", 1));
   JS_SetPropertyStr(ctx, global_obj, "object_copy_prop",
                       JS_NewCFunction(ctx, wrap_object_copy_prop, "object_copy_prop", 1));
-  JS_SetPropertyStr(ctx, global_obj, "object_foreach_prop",
-                      JS_NewCFunction(ctx, wrap_object_foreach_prop, "object_foreach_prop", 1));
   JS_SetPropertyStr(ctx, global_obj, "object_has_prop",
                       JS_NewCFunction(ctx, wrap_object_has_prop, "object_has_prop", 1));
   JS_SetPropertyStr(ctx, global_obj, "object_eval",

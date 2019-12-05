@@ -179,10 +179,6 @@ public class Widget {
    return widget_on(this.nativeObj, type, on_event, ctx);
  }
 
- public  int onWithTag(int type, OnEvent on_event, long ctx, int tag)  {
-   return widget_on_with_tag(this.nativeObj, type, on_event, ctx, tag);
- }
-
  public  int off(int id)  {
    return widget_off(this.nativeObj, id);
  }
@@ -401,7 +397,6 @@ static private native int widget_set_visible(long widget, boolean visible, boole
 static private native int widget_set_visible_only(long widget, boolean visible);
 static private native int widget_set_sensitive(long widget, boolean sensitive);
 static private native int widget_on(long widget, int type, OnEvent on_event, long ctx);
-static private native int widget_on_with_tag(long widget, int type, OnEvent on_event, long ctx, int tag);
 static private native int widget_off(long widget, int id);
 static private native int widget_invalidate_force(long widget, long r);
 static private native int widget_set_prop_str(long widget, String name, String v);
