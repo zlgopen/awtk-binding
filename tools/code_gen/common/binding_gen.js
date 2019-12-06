@@ -176,7 +176,7 @@ class BindingGen extends CodeGen {
     return result;
   }
 
-  genOneClass(cls) {
+  genClass(cls) {
     let result = '';
     let isConstString = this.isEnumString(cls);
     if (cls.methods) {
@@ -249,15 +249,15 @@ class BindingGen extends CodeGen {
     return result;
   }
 
-  genOneGlobalMethod(m) {
+  genGlobalMethod(m) {
     return this.genFunc({}, m);
   }
 
   genOne(cls) {
     if (cls.type == 'class' || cls.type == 'enum') {
-      return this.genOneClass(cls);
+      return this.genClass(cls);
     } else if (cls.type == 'method') {
-      return this.genOneGlobalMethod(cls);
+      return this.genGlobalMethod(cls);
     }
   }
 
@@ -293,7 +293,6 @@ class BindingGen extends CodeGen {
 
     this.result = result;
   }
- 
 }
 
 module.exports = BindingGen;
