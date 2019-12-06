@@ -136,6 +136,10 @@ class TargetGen extends CodeGen {
   genClassDecl(clsName) {
     return `class ${clsName}`;
   }
+  
+  genClassExtends(cls) {
+    return ` extends ${this.toClassName(this.getParentClassName(cls))} {\n`
+  }
 
   genClass(cls) {
     let result = '';
@@ -144,13 +148,12 @@ class TargetGen extends CodeGen {
     result = this.genClassDecl(clsName);
 
     if (cls.parent) {
-      result += ` extends ${this.toClassName(this.getParentClassName(cls))} {\n`
+      result += this.genClassExtends(cls);
     } else {
       result += ' {\n';
     }
 
     result += this.genClassPre(cls);
-
     result += this.genConstructor(cls);
 
     if (cls.methods) {
@@ -179,6 +182,7 @@ class TargetGen extends CodeGen {
     result += this.genClassPost(cls);
 
     result += '}\n\n';
+
     return result;
   }
 
@@ -189,31 +193,6 @@ class TargetGen extends CodeGen {
 
   getGetPropertyFuncName(cls, p) {
     return `${cls.name}_get_prop_${p.name}`;
-  }
-
-  genSetProperty(cls, p) {
-    let result = '';
-    const name = this.toFuncName(cls.name, p.name);
-    const funcName = this.getSetPropertyFuncName(cls, p);
-
-    result += ` set ${name}(value) {\n`;
-    result += `   ${funcName}(this.nativeObj, value);\n`;
-    result += ' }\n\n'
-
-    return result;
-  }
-
-  genGetProperty(cls, p) {
-    let result = '';
-    const type = p.type;
-    const name = this.toFuncName(cls.name, p.name);
-    const funcName = this.getGetPropertyFuncName(cls, p);
-
-    result += ` get ${name}() {\n`;
-    result += `   return ${funcName}(this.nativeObj);\n`;
-    result += ' }\n\n'
-
-    return result;
   }
 
   genDeclForCls(cls) {
@@ -241,23 +220,6 @@ class TargetGen extends CodeGen {
         result += this.genConstNativeDecl(cls, c);
       });
     }
-    return result;
-  }
-
-  genEnum(cls) {
-    let clsName = this.toClassName(cls.name);
-    let result = `enum ${clsName} {\n`;
-
-    if (cls.consts) {
-      cls.consts.forEach(iter => {
-        const name = iter.name;
-        const shortName = name.replace(cls.prefix, "");
-        result += ` ${shortName} = ${name}(),\n`
-      });
-    }
-
-    result += `};\n\n`;
-
     return result;
   }
 
