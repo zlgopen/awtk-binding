@@ -19,6 +19,17 @@ class TargetGen extends CodeGen {
   toClassName(name) {
     return this.classNamePrefix + this.upperCamelName(name);
   }
+  
+  toFuncName(clsName, mName) {
+    let prefix = clsName.replace(/_t$/, '');
+    let name = mName.replace(prefix + '_', '');
+
+    return this.camelCase(name);
+  }
+
+  toEnumValue(enumInfo, result) {
+    return `   return ${result};\n`;
+  }
 
   genCallMethod(cls, m) {
     let returnType = null;
@@ -30,21 +41,17 @@ class TargetGen extends CodeGen {
     }
 
     let classInfo = this.getClassInfo(returnType);
+    let enumInfo = this.getEnumInfo(returnType);
     if (classInfo) {
       let clsName = this.toClassName(this.getClassName(classInfo));
-      result = `   return new ${clsName}(${result});\n`;
+      return `   return new ${clsName}(${result});\n`;
+    } else if(enumInfo) {
+      return this.toEnumValue(enumInfo, result);
     } else {
       return `   return ${result};\n`;
     }
 
     return result;
-  }
-
-  toFuncName(clsName, mName) {
-    let prefix = clsName.replace(/_t$/, '');
-    let name = mName.replace(prefix + '_', '');
-
-    return this.camelCase(name);
   }
 
   genParamListNative(m) {
@@ -118,23 +125,23 @@ class TargetGen extends CodeGen {
     return '(' + result + ')';
   }
 
-  genOneClassPre(cls) {
+  genClassPre(cls) {
     return '';
   }
 
-  genOneClassPost(cls) {
+  genClassPost(cls) {
     return '';
   }
 
-  genOneClassDecl(clsName) {
+  genClassDecl(clsName) {
     return `class ${clsName}`;
   }
 
-  genOneClass(cls) {
+  genClass(cls) {
     let result = '';
     let clsName = this.toClassName(this.getClassName(cls));
 
-    result = this.genOneClassDecl(clsName);
+    result = this.genClassDecl(clsName);
 
     if (cls.parent) {
       result += ` extends ${this.toClassName(this.getParentClassName(cls))} {\n`
@@ -142,7 +149,7 @@ class TargetGen extends CodeGen {
       result += ' {\n';
     }
 
-    result += this.genOneClassPre(cls);
+    result += this.genClassPre(cls);
 
     result += this.genConstructor(cls);
 
@@ -169,7 +176,7 @@ class TargetGen extends CodeGen {
         result += this.genConst(cls, iter);
       });
     }
-    result += this.genOneClassPost(cls);
+    result += this.genClassPost(cls);
 
     result += '}\n\n';
     return result;
@@ -237,7 +244,7 @@ class TargetGen extends CodeGen {
     return result;
   }
 
-  genOneEnum(cls) {
+  genEnum(cls) {
     let clsName = this.toClassName(cls.name);
     let result = `enum ${clsName} {\n`;
 
@@ -256,9 +263,9 @@ class TargetGen extends CodeGen {
 
   genOne(cls) {
     if (cls.type === 'class') {
-      return this.genOneClass(cls);
+      return this.genClass(cls);
     } else if (cls.type === 'enum') {
-      return this.genOneEnum(cls);
+      return this.genEnum(cls);
     } else {
       return '';
     }

@@ -147,7 +147,7 @@ class JavaGenerator extends TargetGen {
     return `static private native ${this.mapType(c.type, true)} ${c.name}();\n`
   }
 
-  genOneEnum(cls) {
+  genEnum(cls) {
     let clsName = this.toClassName(cls.name);
     let isString = this.isEnumString(cls);
     let result = `public class ${clsName} {\n`;
@@ -178,11 +178,11 @@ class JavaGenerator extends TargetGen {
     return '0';
   }
 
-  genOneClassDecl(clsName) {
+  genClassDecl(clsName) {
     return `public class ${clsName}`;
   }
 
-  genOneClassPre(cls) {
+  genClassPre(cls) {
     if (!(cls.parent)) {
       return ' public long nativeObj;\n\n';
     } else {
@@ -190,7 +190,7 @@ class JavaGenerator extends TargetGen {
     }
   }
 
-  genOneClassPost(cls) {
+  genClassPost(cls) {
     return this.genDeclForCls(cls);
   }
 

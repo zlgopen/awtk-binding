@@ -75,7 +75,7 @@ class TypescriptGenerator extends TargetGen {
     return result;
   }
   
-  genOneClassPre(cls) {
+  genClassPre(cls) {
     return ' public nativeObj : any;\n';
   }
 
@@ -127,7 +127,7 @@ class TypescriptGenerator extends TargetGen {
     return `declare function ${c.name}();\n`
   }
 
-  genOneEnum(cls) {
+  genEnum(cls) {
     let clsName = this.toClassName(cls.name);
     let result = `enum ${clsName} {\n`;
 
