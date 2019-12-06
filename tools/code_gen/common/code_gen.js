@@ -1,9 +1,26 @@
 const fs = require('fs');
 
 class CodeGen {
+  CodeGen() {
+    this.result = '';
+  }
+
   typeToNativeName(type) {
-    type = type.replace(/\*/g, "");
-    return type.replace(/const /g, "");
+    return type.replace("*", "").replace("const ", "").replace(" ", "");
+  }
+  
+  typeToName(type) {
+    let name = this.typeToNativeName(type);
+    let cls = this.getClassOrEnumInfo(name);
+    if (cls) {
+      return this.toClassName(cls.name);
+    } else {
+      return null;
+    }
+  }
+  
+  isClassName(name) {
+    return this.getClassInfo(this.typeToNativeName(name)) !== null;
   }
 
   typeIsPointer(type) {
@@ -55,16 +72,6 @@ class CodeGen {
     return type.indexOf('wchar_t*') >= 0;
   }
 
-  typeToName(type) {
-    let name = this.typeToNativeName(type);
-    let cls = this.getClassOrEnumInfo(name);
-    if (cls) {
-      return this.toClassName(cls.name);
-    } else {
-      return null;
-    }
-  }
-
   camelCase(name) {
     if (name.indexOf('_') > 0) {
       name = name.replace(/(_)[a-z]/g, r => {
@@ -90,10 +97,6 @@ class CodeGen {
     });
 
     return name;
-  }
-
-  CodeGen() {
-    this.result = '';
   }
 
   isGcConstructor(obj) {
@@ -187,11 +190,6 @@ class CodeGen {
     return null;
   }
 
-  isClassName(name) {
-    name = name.replace("*", "").replace("const ", "").replace(" ", "");
-    return this.getClassInfo(name) !== null;
-  }
-
   getClassName(cls) {
     return cls.alias || cls.name;
   }
@@ -219,7 +217,8 @@ class CodeGen {
     return json;
   }
 
-  genJsonAll(ojson) { }
+  genJsonAll(ojson) { 
+  }
 
   genAll(filename) {
     this.json = JSON.parse(fs.readFileSync(filename).toString());
@@ -228,6 +227,7 @@ class CodeGen {
 
   saveResult(filename) {
     fs.writeFileSync(filename, this.result);
+
     console.log(`write result to ${filename}`);
   }
 
