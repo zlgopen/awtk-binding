@@ -86,7 +86,7 @@ class JniGenerator extends BindingGen {
     return name.replace(/_/g, '_1');
   }
 
-  genFuncDecl(cls, m) {
+  genMemberFuncDecl(cls, m) {
     let args = '';
     const name = this.escapeName(m.name);
     const className = this.upperCamelName(cls.name || "global");

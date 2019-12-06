@@ -7,7 +7,7 @@ class QuickJSGenerator extends JsBindingGenerator {
     super();
   }
 
-  genFuncBegin(name, prefix) {
+  genFuncDecl(name, prefix) {
     prefix = prefix || 'wrap';
     return `jsvalue_t ${prefix}_${name}` + this.genFuncArgs() + ' {\n';
   }

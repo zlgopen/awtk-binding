@@ -7,7 +7,7 @@ class JerryscriptGenerator extends JsBindingGenerator {
     super();
   }
 
-  genFuncBegin(name, prefix) {
+  genFuncDecl(name, prefix) {
     prefix = prefix || 'wrap';
     let result = `jsvalue_t ${prefix}_${name}` + this.genFuncArgs();
 

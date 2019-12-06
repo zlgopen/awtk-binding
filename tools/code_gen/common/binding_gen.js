@@ -38,24 +38,24 @@ class BindingGen extends CodeGen {
     return '';
   }
 
-  genFuncDecl(cls, m) {
+  genMemberFuncDecl(cls, m) {
     const name = m.name;
-    return this.genFuncBegin(name);
+    return this.genFuncDecl(name);
   }
 
   genGetPropDecl(cls, p) {
     const name = this.getGetPropertyFuncName(cls, p);
-    return this.genFuncBegin(name);
+    return this.genFuncDecl(name);
   }
 
   genSetPropDecl(cls, p) {
     const name = this.getSetPropertyFuncName(cls, p);
-    return this.genFuncBegin(name);
+    return this.genFuncDecl(name);
   }
 
   genConstDecl(cls, c) {
     const name = c.name;
-    return this.genFuncBegin(name, "get");
+    return this.genFuncDecl(name, "get");
   }
   
   genParamsDecl(m) {
@@ -216,11 +216,11 @@ class BindingGen extends CodeGen {
     let result = '';
 
     if (!this.isCustom(m)) {
-      result += this.genFuncDecl(cls, m);
+      result += this.genMemberFuncDecl(cls, m);
       result += this.genFuncImpl(cls, m);
       result += '}\n\n'
     } else {
-      let custom = this.genFuncDecl(cls, m);
+      let custom = this.genMemberFuncDecl(cls, m);
       custom += '}\n\n'
       //console.log(custom);
     }
