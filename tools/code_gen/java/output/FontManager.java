@@ -11,12 +11,12 @@ public class FontManager {
    return new FontManager(nativeObj);
  }
 
- public  int unloadFont(String name, int size)  {
-   return font_manager_unload_font(this.nativeObj, name, size);
+ public  Ret unloadFont(String name, int size)  {
+   return Ret.from(font_manager_unload_font(this.nativeObj, name, size));
  }
 
- public  int unloadAll()  {
-   return font_manager_unload_all(this.nativeObj);
+ public  Ret unloadAll()  {
+   return Ret.from(font_manager_unload_all(this.nativeObj));
  }
 
 static private native int font_manager_unload_font(long fm, String name, int size);

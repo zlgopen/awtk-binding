@@ -13,16 +13,16 @@ public class ImageValue extends Widget {
    return new ImageValue(image_value_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- public  int setImage(String image)  {
-   return image_value_set_image(this.nativeObj, image);
+ public  Ret setImage(String image)  {
+   return Ret.from(image_value_set_image(this.nativeObj, image));
  }
 
- public  int setFormat(String format)  {
-   return image_value_set_format(this.nativeObj, format);
+ public  Ret setFormat(String format)  {
+   return Ret.from(image_value_set_format(this.nativeObj, format));
  }
 
- public  int setValue(double value)  {
-   return image_value_set_value(this.nativeObj, value);
+ public  Ret setValue(double value)  {
+   return Ret.from(image_value_set_value(this.nativeObj, value));
  }
 
  public  static Widget cast(Widget widget)  {

@@ -142,6 +142,14 @@ declare function EVT_REQUEST_QUIT_APP();
 declare function EVT_THEME_CHANGED();
 declare function EVT_REQ_START();
 declare function EVT_USER_START();
+declare function EVT_NONE();
+declare function EVT_PROP_WILL_CHANGE();
+declare function EVT_PROP_CHANGED();
+declare function EVT_ITEMS_WILL_CHANGE();
+declare function EVT_ITEMS_CHANGED();
+declare function EVT_PROPS_CHANGED();
+declare function EVT_PROGRESS();
+declare function EVT_DESTROY();
 declare function font_manager_unload_font(fm : TFontManager, name : string, size : number) : TRet;
 declare function font_manager_unload_all(fm : TFontManager) : TRet;
 declare function GLYPH_FMT_ALPHA();
@@ -724,7 +732,7 @@ declare function widget_lookup_by_type(widget : TWidget, type : string, recursiv
 declare function widget_set_visible(widget : TWidget, visible : number, recursive : number) : TRet;
 declare function widget_set_visible_only(widget : TWidget, visible : number) : TRet;
 declare function widget_set_sensitive(widget : TWidget, sensitive : number) : TRet;
-declare function widget_on(widget : TWidget, type : number, on_event : Function, ctx : any) : number;
+declare function widget_on(widget : TWidget, type : TEventType, on_event : Function, ctx : any) : number;
 declare function widget_off(widget : TWidget, id : number) : TRet;
 declare function widget_invalidate_force(widget : TWidget, r : TRect) : TRet;
 declare function widget_set_prop_str(widget : TWidget, name : string, v : string) : TRet;
@@ -924,18 +932,10 @@ declare function event_destroy(event : TEvent) : TRet;
 declare function event_t_get_prop_type(nativeObj : any);
 declare function event_t_get_prop_time(nativeObj : any);
 declare function event_t_get_prop_target(nativeObj : any);
-declare function EVT_NONE();
-declare function EVT_PROP_WILL_CHANGE();
-declare function EVT_PROP_CHANGED();
-declare function EVT_ITEMS_WILL_CHANGE();
-declare function EVT_ITEMS_CHANGED();
-declare function EVT_PROPS_CHANGED();
-declare function EVT_PROGRESS();
-declare function EVT_DESTROY();
 declare function emitter_create() : TEmitter;
 declare function emitter_dispatch(emitter : TEmitter, e : TEvent) : TRet;
-declare function emitter_dispatch_simple_event(emitter : TEmitter, type : number) : TRet;
-declare function emitter_on(emitter : TEmitter, type : number, on_event : Function, ctx : any) : number;
+declare function emitter_dispatch_simple_event(emitter : TEmitter, type : TEventType) : TRet;
+declare function emitter_on(emitter : TEmitter, type : TEventType, on_event : Function, ctx : any) : number;
 declare function emitter_off(emitter : TEmitter, id : number) : TRet;
 declare function emitter_enable(emitter : TEmitter) : TRet;
 declare function emitter_disable(emitter : TEmitter) : TRet;
@@ -1920,6 +1920,14 @@ enum TEventType {
  THEME_CHANGED = EVT_THEME_CHANGED(),
  REQ_START = EVT_REQ_START(),
  USER_START = EVT_USER_START(),
+ NONE = EVT_NONE(),
+ PROP_WILL_CHANGE = EVT_PROP_WILL_CHANGE(),
+ PROP_CHANGED = EVT_PROP_CHANGED(),
+ ITEMS_WILL_CHANGE = EVT_ITEMS_WILL_CHANGE(),
+ ITEMS_CHANGED = EVT_ITEMS_CHANGED(),
+ PROPS_CHANGED = EVT_PROPS_CHANGED(),
+ PROGRESS = EVT_PROGRESS(),
+ DESTROY = EVT_DESTROY(),
 };
 
 class TFontManager {
@@ -3091,7 +3099,7 @@ class TWidget {
    return widget_set_sensitive(this.nativeObj, sensitive);
  }
 
- on(type : number, on_event : Function, ctx : any) : number  {
+ on(type : TEventType, on_event : Function, ctx : any) : number  {
    return widget_on(this.nativeObj, type, on_event, ctx);
  }
 
@@ -3598,17 +3606,6 @@ class TEvent {
 
 }
 
-enum TEventBaseType {
- NONE = EVT_NONE(),
- PROP_WILL_CHANGE = EVT_PROP_WILL_CHANGE(),
- PROP_CHANGED = EVT_PROP_CHANGED(),
- ITEMS_WILL_CHANGE = EVT_ITEMS_WILL_CHANGE(),
- ITEMS_CHANGED = EVT_ITEMS_CHANGED(),
- PROPS_CHANGED = EVT_PROPS_CHANGED(),
- PROGRESS = EVT_PROGRESS(),
- DESTROY = EVT_DESTROY(),
-};
-
 class TEmitter {
  public nativeObj : any;
  constructor(nativeObj) {
@@ -3623,11 +3620,11 @@ class TEmitter {
    return emitter_dispatch(this.nativeObj, e != null ? (e.nativeObj || e) : null);
  }
 
- dispatchSimpleEvent(type : number) : TRet  {
+ dispatchSimpleEvent(type : TEventType) : TRet  {
    return emitter_dispatch_simple_event(this.nativeObj, type);
  }
 
- on(type : number, on_event : Function, ctx : any) : number  {
+ on(type : TEventType, on_event : Function, ctx : any) : number  {
    return emitter_on(this.nativeObj, type, on_event, ctx);
  }
 

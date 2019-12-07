@@ -15,8 +15,8 @@ public class Idle {
    return idle_add(on_idle, ctx);
  }
 
- public  static int remove(int idle_id)  {
-   return idle_remove(idle_id);
+ public  static Ret remove(int idle_id)  {
+   return Ret.from(idle_remove(idle_id));
  }
 
 static private native int idle_add(OnIdle on_idle, long ctx);

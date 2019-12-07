@@ -13,12 +13,12 @@ public class ListViewH extends Widget {
    return new ListViewH(list_view_h_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- public  int setItemWidth(int item_width)  {
-   return list_view_h_set_item_width(this.nativeObj, item_width);
+ public  Ret setItemWidth(int item_width)  {
+   return Ret.from(list_view_h_set_item_width(this.nativeObj, item_width));
  }
 
- public  int setSpacing(int spacing)  {
-   return list_view_h_set_spacing(this.nativeObj, spacing);
+ public  Ret setSpacing(int spacing)  {
+   return Ret.from(list_view_h_set_spacing(this.nativeObj, spacing));
  }
 
  public  static Widget cast(Widget widget)  {

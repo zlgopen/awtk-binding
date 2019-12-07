@@ -25,48 +25,49 @@ public class SlideIndicator extends Widget {
    return new SlideIndicator(slide_indicator_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int setValue(int value)  {
-   return slide_indicator_set_value(this.nativeObj, value);
+ public  Ret setValue(int value)  {
+   return Ret.from(slide_indicator_set_value(this.nativeObj, value));
  }
 
- public  int setMax(int max)  {
-   return slide_indicator_set_max(this.nativeObj, max);
+ public  Ret setMax(int max)  {
+   return Ret.from(slide_indicator_set_max(this.nativeObj, max));
  }
 
- public  int setDefaultPaint(int default_paint)  {
-   return slide_indicator_set_default_paint(this.nativeObj, default_paint);
+ public  Ret setDefaultPaint(IndicatorDefaultPaint default_paint)  {
+   return Ret.from(slide_indicator_set_default_paint(this.nativeObj, default_paint.value()));
  }
 
- public  int setAutoHide(int auto_hide)  {
-   return slide_indicator_set_auto_hide(this.nativeObj, auto_hide);
+ public  Ret setAutoHide(int auto_hide)  {
+   return Ret.from(slide_indicator_set_auto_hide(this.nativeObj, auto_hide));
  }
 
- public  int setMargin(int margin)  {
-   return slide_indicator_set_margin(this.nativeObj, margin);
+ public  Ret setMargin(int margin)  {
+   return Ret.from(slide_indicator_set_margin(this.nativeObj, margin));
  }
 
- public  int setSpacing(double spacing)  {
-   return slide_indicator_set_spacing(this.nativeObj, spacing);
+ public  Ret setSpacing(double spacing)  {
+   return Ret.from(slide_indicator_set_spacing(this.nativeObj, spacing));
  }
 
- public  int setSize(int size)  {
-   return slide_indicator_set_size(this.nativeObj, size);
+ public  Ret setSize(int size)  {
+   return Ret.from(slide_indicator_set_size(this.nativeObj, size));
  }
 
- public  int setAnchor(String anchor_x, String anchor_y)  {
-   return slide_indicator_set_anchor(this.nativeObj, anchor_x, anchor_y);
+ public  Ret setAnchor(String anchor_x, String anchor_y)  {
+   return Ret.from(slide_indicator_set_anchor(this.nativeObj, anchor_x, anchor_y));
  }
 
- public  int setIndicatedTarget(String indicated_target)  {
-   return slide_indicator_set_indicated_target(this.nativeObj, indicated_target);
+ public  Ret setIndicatedTarget(String indicated_target)  {
+   return Ret.from(slide_indicator_set_indicated_target(this.nativeObj, indicated_target));
  }
 
  public int getMax() {
    return slide_indicator_t_get_prop_max(this.nativeObj);
  }
 
- public int getDefaultPaint() {
-   return slide_indicator_t_get_prop_default_paint(this.nativeObj);
+ public IndicatorDefaultPaint getDefaultPaint() {
+   return IndicatorDefaultPaint.from(slide_indicator_t_get_prop_default_paint(this.nativeObj));
+
  }
 
  public int getAutoHide() {

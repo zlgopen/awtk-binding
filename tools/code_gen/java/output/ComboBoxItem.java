@@ -17,12 +17,12 @@ public class ComboBoxItem extends Widget {
    return new ComboBoxItem(combo_box_item_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int setChecked(boolean checked)  {
-   return combo_box_item_set_checked(this.nativeObj, checked);
+ public  Ret setChecked(boolean checked)  {
+   return Ret.from(combo_box_item_set_checked(this.nativeObj, checked));
  }
 
- public  int setValue(int value)  {
-   return combo_box_item_set_value(this.nativeObj, value);
+ public  Ret setValue(int value)  {
+   return Ret.from(combo_box_item_set_value(this.nativeObj, value));
  }
 
  public boolean getChecked() {

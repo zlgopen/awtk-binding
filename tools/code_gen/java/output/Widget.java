@@ -23,40 +23,40 @@ public class Widget {
    return widget_index_of(this.nativeObj);
  }
 
- public  int move(int x, int y)  {
-   return widget_move(this.nativeObj, x, y);
+ public  Ret move(int x, int y)  {
+   return Ret.from(widget_move(this.nativeObj, x, y));
  }
 
- public  int resize(int w, int h)  {
-   return widget_resize(this.nativeObj, w, h);
+ public  Ret resize(int w, int h)  {
+   return Ret.from(widget_resize(this.nativeObj, w, h));
  }
 
- public  int moveResize(int x, int y, int w, int h)  {
-   return widget_move_resize(this.nativeObj, x, y, w, h);
+ public  Ret moveResize(int x, int y, int w, int h)  {
+   return Ret.from(widget_move_resize(this.nativeObj, x, y, w, h));
  }
 
- public  int setValue(int value)  {
-   return widget_set_value(this.nativeObj, value);
+ public  Ret setValue(int value)  {
+   return Ret.from(widget_set_value(this.nativeObj, value));
  }
 
- public  int animateValueTo(int value, int duration)  {
-   return widget_animate_value_to(this.nativeObj, value, duration);
+ public  Ret animateValueTo(int value, int duration)  {
+   return Ret.from(widget_animate_value_to(this.nativeObj, value, duration));
  }
 
- public  int addValue(int delta)  {
-   return widget_add_value(this.nativeObj, delta);
+ public  Ret addValue(int delta)  {
+   return Ret.from(widget_add_value(this.nativeObj, delta));
  }
 
- public  int useStyle(String style)  {
-   return widget_use_style(this.nativeObj, style);
+ public  Ret useStyle(String style)  {
+   return Ret.from(widget_use_style(this.nativeObj, style));
  }
 
- public  int setText(String text)  {
-   return widget_set_text_utf8(this.nativeObj, text);
+ public  Ret setText(String text)  {
+   return Ret.from(widget_set_text_utf8(this.nativeObj, text));
  }
 
- public  int setTrText(String text)  {
-   return widget_set_tr_text(this.nativeObj, text);
+ public  Ret setTrText(String text)  {
+   return Ret.from(widget_set_tr_text(this.nativeObj, text));
  }
 
  public  int getValue()  {
@@ -67,88 +67,88 @@ public class Widget {
    return widget_get_text(this.nativeObj);
  }
 
- public  int setName(String name)  {
-   return widget_set_name(this.nativeObj, name);
+ public  Ret setName(String name)  {
+   return Ret.from(widget_set_name(this.nativeObj, name));
  }
 
- public  int setTheme(String name)  {
-   return widget_set_theme(this.nativeObj, name);
+ public  Ret setTheme(String name)  {
+   return Ret.from(widget_set_theme(this.nativeObj, name));
  }
 
- public  int setPointerCursor(String cursor)  {
-   return widget_set_pointer_cursor(this.nativeObj, cursor);
+ public  Ret setPointerCursor(String cursor)  {
+   return Ret.from(widget_set_pointer_cursor(this.nativeObj, cursor));
  }
 
- public  int setAnimation(String animation)  {
-   return widget_set_animation(this.nativeObj, animation);
+ public  Ret setAnimation(String animation)  {
+   return Ret.from(widget_set_animation(this.nativeObj, animation));
  }
 
- public  int createAnimator(String animation)  {
-   return widget_create_animator(this.nativeObj, animation);
+ public  Ret createAnimator(String animation)  {
+   return Ret.from(widget_create_animator(this.nativeObj, animation));
  }
 
- public  int startAnimator(String name)  {
-   return widget_start_animator(this.nativeObj, name);
+ public  Ret startAnimator(String name)  {
+   return Ret.from(widget_start_animator(this.nativeObj, name));
  }
 
- public  int setAnimatorTimeScale(String name, double time_scale)  {
-   return widget_set_animator_time_scale(this.nativeObj, name, time_scale);
+ public  Ret setAnimatorTimeScale(String name, double time_scale)  {
+   return Ret.from(widget_set_animator_time_scale(this.nativeObj, name, time_scale));
  }
 
- public  int pauseAnimator(String name)  {
-   return widget_pause_animator(this.nativeObj, name);
+ public  Ret pauseAnimator(String name)  {
+   return Ret.from(widget_pause_animator(this.nativeObj, name));
  }
 
- public  int stopAnimator(String name)  {
-   return widget_stop_animator(this.nativeObj, name);
+ public  Ret stopAnimator(String name)  {
+   return Ret.from(widget_stop_animator(this.nativeObj, name));
  }
 
- public  int destroyAnimator(String name)  {
-   return widget_destroy_animator(this.nativeObj, name);
+ public  Ret destroyAnimator(String name)  {
+   return Ret.from(widget_destroy_animator(this.nativeObj, name));
  }
 
- public  int setEnable(boolean enable)  {
-   return widget_set_enable(this.nativeObj, enable);
+ public  Ret setEnable(boolean enable)  {
+   return Ret.from(widget_set_enable(this.nativeObj, enable));
  }
 
- public  int setFeedback(boolean feedback)  {
-   return widget_set_feedback(this.nativeObj, feedback);
+ public  Ret setFeedback(boolean feedback)  {
+   return Ret.from(widget_set_feedback(this.nativeObj, feedback));
  }
 
- public  int setFloating(boolean floating)  {
-   return widget_set_floating(this.nativeObj, floating);
+ public  Ret setFloating(boolean floating)  {
+   return Ret.from(widget_set_floating(this.nativeObj, floating));
  }
 
- public  int setFocused(boolean focused)  {
-   return widget_set_focused(this.nativeObj, focused);
+ public  Ret setFocused(boolean focused)  {
+   return Ret.from(widget_set_focused(this.nativeObj, focused));
  }
 
- public  int setState(String state)  {
-   return widget_set_state(this.nativeObj, state);
+ public  Ret setState(String state)  {
+   return Ret.from(widget_set_state(this.nativeObj, state));
  }
 
- public  int setOpacity(int opacity)  {
-   return widget_set_opacity(this.nativeObj, opacity);
+ public  Ret setOpacity(int opacity)  {
+   return Ret.from(widget_set_opacity(this.nativeObj, opacity));
  }
 
- public  int destroyChildren()  {
-   return widget_destroy_children(this.nativeObj);
+ public  Ret destroyChildren()  {
+   return Ret.from(widget_destroy_children(this.nativeObj));
  }
 
- public  int addChild(Widget child)  {
-   return widget_add_child(this.nativeObj, child != null ? (child.nativeObj) : 0);
+ public  Ret addChild(Widget child)  {
+   return Ret.from(widget_add_child(this.nativeObj, child != null ? (child.nativeObj) : 0));
  }
 
- public  int removeChild(Widget child)  {
-   return widget_remove_child(this.nativeObj, child != null ? (child.nativeObj) : 0);
+ public  Ret removeChild(Widget child)  {
+   return Ret.from(widget_remove_child(this.nativeObj, child != null ? (child.nativeObj) : 0));
  }
 
- public  int insertChild(int index, Widget child)  {
-   return widget_insert_child(this.nativeObj, index, child != null ? (child.nativeObj) : 0);
+ public  Ret insertChild(int index, Widget child)  {
+   return Ret.from(widget_insert_child(this.nativeObj, index, child != null ? (child.nativeObj) : 0));
  }
 
- public  int restack(int index)  {
-   return widget_restack(this.nativeObj, index);
+ public  Ret restack(int index)  {
+   return Ret.from(widget_restack(this.nativeObj, index));
  }
 
  public  Widget child(String name)  {
@@ -163,48 +163,48 @@ public class Widget {
    return new Widget(widget_lookup_by_type(this.nativeObj, type, recursive));
  }
 
- public  int setVisible(boolean visible, boolean recursive)  {
-   return widget_set_visible(this.nativeObj, visible, recursive);
+ public  Ret setVisible(boolean visible, boolean recursive)  {
+   return Ret.from(widget_set_visible(this.nativeObj, visible, recursive));
  }
 
- public  int setVisibleOnly(boolean visible)  {
-   return widget_set_visible_only(this.nativeObj, visible);
+ public  Ret setVisibleOnly(boolean visible)  {
+   return Ret.from(widget_set_visible_only(this.nativeObj, visible));
  }
 
- public  int setSensitive(boolean sensitive)  {
-   return widget_set_sensitive(this.nativeObj, sensitive);
+ public  Ret setSensitive(boolean sensitive)  {
+   return Ret.from(widget_set_sensitive(this.nativeObj, sensitive));
  }
 
- public  int on(int type, OnEvent on_event, long ctx)  {
-   return widget_on(this.nativeObj, type, on_event, ctx);
+ public  int on(EventType type, OnEvent on_event, long ctx)  {
+   return widget_on(this.nativeObj, type.value(), on_event, ctx);
  }
 
- public  int off(int id)  {
-   return widget_off(this.nativeObj, id);
+ public  Ret off(int id)  {
+   return Ret.from(widget_off(this.nativeObj, id));
  }
 
- public  int invalidateForce(Rect r)  {
-   return widget_invalidate_force(this.nativeObj, r != null ? (r.nativeObj) : 0);
+ public  Ret invalidateForce(Rect r)  {
+   return Ret.from(widget_invalidate_force(this.nativeObj, r != null ? (r.nativeObj) : 0));
  }
 
- public  int setPropStr(String name, String v)  {
-   return widget_set_prop_str(this.nativeObj, name, v);
+ public  Ret setPropStr(String name, String v)  {
+   return Ret.from(widget_set_prop_str(this.nativeObj, name, v));
  }
 
  public  String getPropStr(String name, String defval)  {
    return widget_get_prop_str(this.nativeObj, name, defval);
  }
 
- public  int setPropInt(String name, int v)  {
-   return widget_set_prop_int(this.nativeObj, name, v);
+ public  Ret setPropInt(String name, int v)  {
+   return Ret.from(widget_set_prop_int(this.nativeObj, name, v));
  }
 
  public  int getPropInt(String name, int defval)  {
    return widget_get_prop_int(this.nativeObj, name, defval);
  }
 
- public  int setPropBool(String name, boolean v)  {
-   return widget_set_prop_bool(this.nativeObj, name, v);
+ public  Ret setPropBool(String name, boolean v)  {
+   return Ret.from(widget_set_prop_bool(this.nativeObj, name, v));
  }
 
  public  boolean getPropBool(String name, boolean defval)  {
@@ -227,8 +227,8 @@ public class Widget {
    return widget_is_window_manager(this.nativeObj);
  }
 
- public  int foreach(OnData visit, long ctx)  {
-   return widget_foreach(this.nativeObj, visit, ctx);
+ public  Ret foreach(OnData visit, long ctx)  {
+   return Ret.from(widget_foreach(this.nativeObj, visit, ctx));
  }
 
  public  Widget getWindow()  {
@@ -255,40 +255,40 @@ public class Widget {
    return new Widget(widget_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int destroy()  {
-   return widget_destroy(this.nativeObj);
+ public  Ret destroy()  {
+   return Ret.from(widget_destroy(this.nativeObj));
  }
 
- public  int unref()  {
-   return widget_unref(this.nativeObj);
+ public  Ret unref()  {
+   return Ret.from(widget_unref(this.nativeObj));
  }
 
- public  int layout()  {
-   return widget_layout(this.nativeObj);
+ public  Ret layout()  {
+   return Ret.from(widget_layout(this.nativeObj));
  }
 
- public  int setSelfLayout(String params)  {
-   return widget_set_self_layout(this.nativeObj, params);
+ public  Ret setSelfLayout(String params)  {
+   return Ret.from(widget_set_self_layout(this.nativeObj, params));
  }
 
- public  int setChildrenLayout(String params)  {
-   return widget_set_children_layout(this.nativeObj, params);
+ public  Ret setChildrenLayout(String params)  {
+   return Ret.from(widget_set_children_layout(this.nativeObj, params));
  }
 
- public  int setSelfLayoutParams(String x, String y, String w, String h)  {
-   return widget_set_self_layout_params(this.nativeObj, x, y, w, h);
+ public  Ret setSelfLayoutParams(String x, String y, String w, String h)  {
+   return Ret.from(widget_set_self_layout_params(this.nativeObj, x, y, w, h));
  }
 
- public  int setStyleInt(String state_and_name, int value)  {
-   return widget_set_style_int(this.nativeObj, state_and_name, value);
+ public  Ret setStyleInt(String state_and_name, int value)  {
+   return Ret.from(widget_set_style_int(this.nativeObj, state_and_name, value));
  }
 
- public  int setStyleStr(String state_and_name, String value)  {
-   return widget_set_style_str(this.nativeObj, state_and_name, value);
+ public  Ret setStyleStr(String state_and_name, String value)  {
+   return Ret.from(widget_set_style_str(this.nativeObj, state_and_name, value));
  }
 
- public  int setStyleColor(String state_and_name, int value)  {
-   return widget_set_style_color(this.nativeObj, state_and_name, value);
+ public  Ret setStyleColor(String state_and_name, int value)  {
+   return Ret.from(widget_set_style_color(this.nativeObj, state_and_name, value));
  }
 
  public int getX() {

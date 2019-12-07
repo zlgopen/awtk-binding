@@ -17,12 +17,12 @@ public class Button extends Widget {
    return new Button(button_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int setRepeat(int repeat)  {
-   return button_set_repeat(this.nativeObj, repeat);
+ public  Ret setRepeat(int repeat)  {
+   return Ret.from(button_set_repeat(this.nativeObj, repeat));
  }
 
- public  int setEnableLongPress(boolean enable_long_press)  {
-   return button_set_enable_long_press(this.nativeObj, enable_long_press);
+ public  Ret setEnableLongPress(boolean enable_long_press)  {
+   return Ret.from(button_set_enable_long_press(this.nativeObj, enable_long_press));
  }
 
  public int getRepeat() {

@@ -19,8 +19,8 @@ public class Event {
    return new Event(event_create(type));
  }
 
- public  int destroy()  {
-   return event_destroy(this.nativeObj);
+ public  Ret destroy()  {
+   return Ret.from(event_destroy(this.nativeObj));
  }
 
  public int getType() {

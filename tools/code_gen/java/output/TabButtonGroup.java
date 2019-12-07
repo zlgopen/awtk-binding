@@ -13,12 +13,12 @@ public class TabButtonGroup extends Widget {
    return new TabButtonGroup(tab_button_group_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- public  int setCompact(boolean compact)  {
-   return tab_button_group_set_compact(this.nativeObj, compact);
+ public  Ret setCompact(boolean compact)  {
+   return Ret.from(tab_button_group_set_compact(this.nativeObj, compact));
  }
 
- public  int setScrollable(boolean scrollable)  {
-   return tab_button_group_set_scrollable(this.nativeObj, scrollable);
+ public  Ret setScrollable(boolean scrollable)  {
+   return Ret.from(tab_button_group_set_scrollable(this.nativeObj, scrollable));
  }
 
  public  static Widget cast(Widget widget)  {

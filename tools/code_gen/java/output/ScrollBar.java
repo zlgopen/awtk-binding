@@ -25,28 +25,28 @@ public class ScrollBar extends Widget {
    return new ScrollBar(scroll_bar_create_desktop(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- public  int setParams(int virtual_size, int row)  {
-   return scroll_bar_set_params(this.nativeObj, virtual_size, row);
+ public  Ret setParams(int virtual_size, int row)  {
+   return Ret.from(scroll_bar_set_params(this.nativeObj, virtual_size, row));
  }
 
- public  int scrollTo(int value, int duration)  {
-   return scroll_bar_scroll_to(this.nativeObj, value, duration);
+ public  Ret scrollTo(int value, int duration)  {
+   return Ret.from(scroll_bar_scroll_to(this.nativeObj, value, duration));
  }
 
- public  int setValue(int value)  {
-   return scroll_bar_set_value(this.nativeObj, value);
+ public  Ret setValue(int value)  {
+   return Ret.from(scroll_bar_set_value(this.nativeObj, value));
  }
 
- public  int addDelta(int delta)  {
-   return scroll_bar_add_delta(this.nativeObj, delta);
+ public  Ret addDelta(int delta)  {
+   return Ret.from(scroll_bar_add_delta(this.nativeObj, delta));
  }
 
- public  int scrollDelta(int delta)  {
-   return scroll_bar_scroll_delta(this.nativeObj, delta);
+ public  Ret scrollDelta(int delta)  {
+   return Ret.from(scroll_bar_scroll_delta(this.nativeObj, delta));
  }
 
- public  int setValueOnly(int value)  {
-   return scroll_bar_set_value_only(this.nativeObj, value);
+ public  Ret setValueOnly(int value)  {
+   return Ret.from(scroll_bar_set_value_only(this.nativeObj, value));
  }
 
  public  boolean isMobile()  {

@@ -11,12 +11,12 @@ public class InputMethod {
    return new InputMethod(nativeObj);
  }
 
- public  int commitText(String text)  {
-   return input_method_commit_text(this.nativeObj, text);
+ public  Ret commitText(String text)  {
+   return Ret.from(input_method_commit_text(this.nativeObj, text));
  }
 
- public  int dispatchKey(int key)  {
-   return input_method_dispatch_key(this.nativeObj, key);
+ public  Ret dispatchKey(int key)  {
+   return Ret.from(input_method_dispatch_key(this.nativeObj, key));
  }
 
  public  static InputMethod instance()  {

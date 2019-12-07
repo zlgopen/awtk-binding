@@ -23,8 +23,8 @@ public class Rect {
    return new Rect(rect_cast(rect != null ? (rect.nativeObj) : 0));
  }
 
- public  int destroy()  {
-   return rect_destroy(this.nativeObj);
+ public  Ret destroy()  {
+   return Ret.from(rect_destroy(this.nativeObj));
  }
 
  public int getX() {

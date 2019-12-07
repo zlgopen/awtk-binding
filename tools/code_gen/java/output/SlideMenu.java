@@ -17,20 +17,21 @@ public class SlideMenu extends Widget {
    return new SlideMenu(slide_menu_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int setValue(int value)  {
-   return slide_menu_set_value(this.nativeObj, value);
+ public  Ret setValue(int value)  {
+   return Ret.from(slide_menu_set_value(this.nativeObj, value));
  }
 
- public  int setAlignV(int align_v)  {
-   return slide_menu_set_align_v(this.nativeObj, align_v);
+ public  Ret setAlignV(AlignV align_v)  {
+   return Ret.from(slide_menu_set_align_v(this.nativeObj, align_v.value()));
  }
 
- public  int setMinScale(double min_scale)  {
-   return slide_menu_set_min_scale(this.nativeObj, min_scale);
+ public  Ret setMinScale(double min_scale)  {
+   return Ret.from(slide_menu_set_min_scale(this.nativeObj, min_scale));
  }
 
- public int getAlignV() {
-   return slide_menu_t_get_prop_align_v(this.nativeObj);
+ public AlignV getAlignV() {
+   return AlignV.from(slide_menu_t_get_prop_align_v(this.nativeObj));
+
  }
 
  public double getMinScale() {

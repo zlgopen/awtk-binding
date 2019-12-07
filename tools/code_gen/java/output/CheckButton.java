@@ -17,8 +17,8 @@ public class CheckButton extends Widget {
    return new CheckButton(check_button_create_radio(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- public  int setValue(boolean value)  {
-   return check_button_set_value(this.nativeObj, value);
+ public  Ret setValue(boolean value)  {
+   return Ret.from(check_button_set_value(this.nativeObj, value));
  }
 
  public  static Widget cast(Widget widget)  {

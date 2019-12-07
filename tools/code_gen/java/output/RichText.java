@@ -13,8 +13,8 @@ public class RichText extends Widget {
    return new RichText(rich_text_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- public  int setText(String text)  {
-   return rich_text_set_text(this.nativeObj, text);
+ public  Ret setText(String text)  {
+   return Ret.from(rich_text_set_text(this.nativeObj, text));
  }
 
  public  static Widget cast(Widget widget)  {

@@ -131,12 +131,12 @@ public class Value {
    return new Value(value_create());
  }
 
- public  int destroy()  {
-   return value_destroy(this.nativeObj);
+ public  Ret destroy()  {
+   return Ret.from(value_destroy(this.nativeObj));
  }
 
- public  int reset()  {
-   return value_reset(this.nativeObj);
+ public  Ret reset()  {
+   return Ret.from(value_reset(this.nativeObj));
  }
 
  public  static Value cast(Value value)  {

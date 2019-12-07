@@ -17,12 +17,12 @@ public class Popup extends WindowBase {
    return new Popup(popup_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int setCloseWhenClick(boolean close_when_click)  {
-   return popup_set_close_when_click(this.nativeObj, close_when_click);
+ public  Ret setCloseWhenClick(boolean close_when_click)  {
+   return Ret.from(popup_set_close_when_click(this.nativeObj, close_when_click));
  }
 
- public  int setCloseWhenClickOutside(boolean close_when_click_outside)  {
-   return popup_set_close_when_click_outside(this.nativeObj, close_when_click_outside);
+ public  Ret setCloseWhenClickOutside(boolean close_when_click_outside)  {
+   return Ret.from(popup_set_close_when_click_outside(this.nativeObj, close_when_click_outside));
  }
 
  public boolean getCloseWhenClick() {

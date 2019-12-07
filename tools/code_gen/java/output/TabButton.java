@@ -17,16 +17,16 @@ public class TabButton extends Widget {
    return new TabButton(tab_button_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int setValue(int value)  {
-   return tab_button_set_value(this.nativeObj, value);
+ public  Ret setValue(int value)  {
+   return Ret.from(tab_button_set_value(this.nativeObj, value));
  }
 
- public  int setIcon(String name)  {
-   return tab_button_set_icon(this.nativeObj, name);
+ public  Ret setIcon(String name)  {
+   return Ret.from(tab_button_set_icon(this.nativeObj, name));
  }
 
- public  int setActiveIcon(String name)  {
-   return tab_button_set_active_icon(this.nativeObj, name);
+ public  Ret setActiveIcon(String name)  {
+   return Ret.from(tab_button_set_active_icon(this.nativeObj, name));
  }
 
  public String getActiveIcon() {

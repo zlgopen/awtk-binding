@@ -15,16 +15,16 @@ public class Timer {
    return timer_add(on_timer, ctx, duration);
  }
 
- public  static int remove(int timer_id)  {
-   return timer_remove(timer_id);
+ public  static Ret remove(int timer_id)  {
+   return Ret.from(timer_remove(timer_id));
  }
 
- public  static int reset(int timer_id)  {
-   return timer_reset(timer_id);
+ public  static Ret reset(int timer_id)  {
+   return Ret.from(timer_reset(timer_id));
  }
 
- public  static int modify(int timer_id, int duration)  {
-   return timer_modify(timer_id, duration);
+ public  static Ret modify(int timer_id, int duration)  {
+   return Ret.from(timer_modify(timer_id, duration));
  }
 
 static private native int timer_add(OnTimer on_timer, long ctx, int duration);

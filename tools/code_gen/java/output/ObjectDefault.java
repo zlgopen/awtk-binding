@@ -13,12 +13,12 @@ public class ObjectDefault extends Object {
    return new ObjectDefault(object_default_create());
  }
 
- public  int unref()  {
-   return object_default_unref(this.nativeObj);
+ public  Ret unref()  {
+   return Ret.from(object_default_unref(this.nativeObj));
  }
 
- public  int clearProps()  {
-   return object_default_clear_props(this.nativeObj);
+ public  Ret clearProps()  {
+   return Ret.from(object_default_clear_props(this.nativeObj));
  }
 
  public int getPropsSize() {

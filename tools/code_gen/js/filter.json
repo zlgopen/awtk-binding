@@ -1406,6 +1406,38 @@
       {
         "desc": "用户定义事件起始值。\n",
         "name": "EVT_USER_START"
+      },
+      {
+        "desc": "无效事件名称。\n",
+        "name": "EVT_NONE"
+      },
+      {
+        "desc": "对象的属性即将改变的事件名(prop_change_event_t)。\n",
+        "name": "EVT_PROP_WILL_CHANGE"
+      },
+      {
+        "desc": "对象的属性改变的事件名(prop_change_event_t)。\n",
+        "name": "EVT_PROP_CHANGED"
+      },
+      {
+        "desc": "即将增加和删除集合中的项目(event_t)。\n",
+        "name": "EVT_ITEMS_WILL_CHANGE"
+      },
+      {
+        "desc": "完成增加和删除集合中的项目(event_t)。\n",
+        "name": "EVT_ITEMS_CHANGED"
+      },
+      {
+        "desc": "对象的属性改变的事件名(props_event_t)。\n",
+        "name": "EVT_PROPS_CHANGED"
+      },
+      {
+        "desc": "进度状态(progress_event_t)。\n",
+        "name": "EVT_PROGRESS"
+      },
+      {
+        "desc": "对象销毁事件名(event_t)。\n",
+        "name": "EVT_DESTROY"
       }
     ],
     "header": "base/events.h",
@@ -7015,7 +7047,7 @@
             "desc": "控件对象。"
           },
           {
-            "type": "uint32_t",
+            "type": "event_type_t",
             "name": "type",
             "desc": "事件类型。"
           },
@@ -9105,51 +9137,6 @@
     "level": 1
   },
   {
-    "type": "enum",
-    "desc": "类型常量定义。\n",
-    "consts": [
-      {
-        "desc": "无效事件名称。\n",
-        "name": "EVT_NONE"
-      },
-      {
-        "desc": "对象的属性即将改变的事件名(prop_change_event_t)。\n",
-        "name": "EVT_PROP_WILL_CHANGE"
-      },
-      {
-        "desc": "对象的属性改变的事件名(prop_change_event_t)。\n",
-        "name": "EVT_PROP_CHANGED"
-      },
-      {
-        "desc": "即将增加和删除集合中的项目(event_t)。\n",
-        "name": "EVT_ITEMS_WILL_CHANGE"
-      },
-      {
-        "desc": "完成增加和删除集合中的项目(event_t)。\n",
-        "name": "EVT_ITEMS_CHANGED"
-      },
-      {
-        "desc": "对象的属性改变的事件名(props_event_t)。\n",
-        "name": "EVT_PROPS_CHANGED"
-      },
-      {
-        "desc": "进度状态(progress_event_t)。\n",
-        "name": "EVT_PROGRESS"
-      },
-      {
-        "desc": "对象销毁事件名(event_t)。\n",
-        "name": "EVT_DESTROY"
-      }
-    ],
-    "header": "tkc/event.h",
-    "name": "event_base_type_t",
-    "prefix": "EVT_",
-    "annotation": {
-      "scriptable": true
-    },
-    "level": 1
-  },
-  {
     "type": "class",
     "methods": [
       {
@@ -9197,7 +9184,7 @@
             "desc": "emitter对象。"
           },
           {
-            "type": "uint32_t",
+            "type": "event_type_t",
             "name": "type",
             "desc": "事件类型。"
           }
@@ -9220,7 +9207,7 @@
             "desc": "emitter对象。"
           },
           {
-            "type": "uint32_t",
+            "type": "event_type_t",
             "name": "type",
             "desc": "事件类型。"
           },

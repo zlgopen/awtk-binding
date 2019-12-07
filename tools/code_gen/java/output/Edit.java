@@ -25,60 +25,60 @@ public class Edit extends Widget {
    return edit_get_double(this.nativeObj);
  }
 
- public  int setInt(int value)  {
-   return edit_set_int(this.nativeObj, value);
+ public  Ret setInt(int value)  {
+   return Ret.from(edit_set_int(this.nativeObj, value));
  }
 
- public  int setDouble(double value)  {
-   return edit_set_double(this.nativeObj, value);
+ public  Ret setDouble(double value)  {
+   return Ret.from(edit_set_double(this.nativeObj, value));
  }
 
- public  int setTextLimit(int min, int max)  {
-   return edit_set_text_limit(this.nativeObj, min, max);
+ public  Ret setTextLimit(int min, int max)  {
+   return Ret.from(edit_set_text_limit(this.nativeObj, min, max));
  }
 
- public  int setIntLimit(int min, int max, int step)  {
-   return edit_set_int_limit(this.nativeObj, min, max, step);
+ public  Ret setIntLimit(int min, int max, int step)  {
+   return Ret.from(edit_set_int_limit(this.nativeObj, min, max, step));
  }
 
- public  int setFloatLimit(double min, double max, double step)  {
-   return edit_set_float_limit(this.nativeObj, min, max, step);
+ public  Ret setFloatLimit(double min, double max, double step)  {
+   return Ret.from(edit_set_float_limit(this.nativeObj, min, max, step));
  }
 
- public  int setReadonly(boolean readonly)  {
-   return edit_set_readonly(this.nativeObj, readonly);
+ public  Ret setReadonly(boolean readonly)  {
+   return Ret.from(edit_set_readonly(this.nativeObj, readonly));
  }
 
- public  int setAutoFix(boolean auto_fix)  {
-   return edit_set_auto_fix(this.nativeObj, auto_fix);
+ public  Ret setAutoFix(boolean auto_fix)  {
+   return Ret.from(edit_set_auto_fix(this.nativeObj, auto_fix));
  }
 
- public  int setSelectNoneWhenFocused(boolean select_none_when_focused)  {
-   return edit_set_select_none_when_focused(this.nativeObj, select_none_when_focused);
+ public  Ret setSelectNoneWhenFocused(boolean select_none_when_focused)  {
+   return Ret.from(edit_set_select_none_when_focused(this.nativeObj, select_none_when_focused));
  }
 
- public  int setOpenImWhenFocused(boolean open_im_when_focused)  {
-   return edit_set_open_im_when_focused(this.nativeObj, open_im_when_focused);
+ public  Ret setOpenImWhenFocused(boolean open_im_when_focused)  {
+   return Ret.from(edit_set_open_im_when_focused(this.nativeObj, open_im_when_focused));
  }
 
- public  int setInputType(int type)  {
-   return edit_set_input_type(this.nativeObj, type);
+ public  Ret setInputType(InputType type)  {
+   return Ret.from(edit_set_input_type(this.nativeObj, type.value()));
  }
 
- public  int setInputTips(String tips)  {
-   return edit_set_input_tips(this.nativeObj, tips);
+ public  Ret setInputTips(String tips)  {
+   return Ret.from(edit_set_input_tips(this.nativeObj, tips));
  }
 
- public  int setPasswordVisible(boolean password_visible)  {
-   return edit_set_password_visible(this.nativeObj, password_visible);
+ public  Ret setPasswordVisible(boolean password_visible)  {
+   return Ret.from(edit_set_password_visible(this.nativeObj, password_visible));
  }
 
- public  int setFocus(boolean focus)  {
-   return edit_set_focus(this.nativeObj, focus);
+ public  Ret setFocus(boolean focus)  {
+   return Ret.from(edit_set_focus(this.nativeObj, focus));
  }
 
- public  int setCursor(int cursor)  {
-   return edit_set_cursor(this.nativeObj, cursor);
+ public  Ret setCursor(int cursor)  {
+   return Ret.from(edit_set_cursor(this.nativeObj, cursor));
  }
 
  public boolean getReadonly() {
@@ -105,8 +105,9 @@ public class Edit extends Widget {
    return edit_t_get_prop_tips(this.nativeObj);
  }
 
- public int getInputType() {
-   return edit_t_get_prop_input_type(this.nativeObj);
+ public InputType getInputType() {
+   return InputType.from(edit_t_get_prop_input_type(this.nativeObj));
+
  }
 
  public double getMin() {

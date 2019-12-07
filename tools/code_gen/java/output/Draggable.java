@@ -17,32 +17,32 @@ public class Draggable extends Widget {
    return new Draggable(draggable_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int setTop(int top)  {
-   return draggable_set_top(this.nativeObj, top);
+ public  Ret setTop(int top)  {
+   return Ret.from(draggable_set_top(this.nativeObj, top));
  }
 
- public  int setBottom(int bottom)  {
-   return draggable_set_bottom(this.nativeObj, bottom);
+ public  Ret setBottom(int bottom)  {
+   return Ret.from(draggable_set_bottom(this.nativeObj, bottom));
  }
 
- public  int setLeft(int left)  {
-   return draggable_set_left(this.nativeObj, left);
+ public  Ret setLeft(int left)  {
+   return Ret.from(draggable_set_left(this.nativeObj, left));
  }
 
- public  int setRight(int right)  {
-   return draggable_set_right(this.nativeObj, right);
+ public  Ret setRight(int right)  {
+   return Ret.from(draggable_set_right(this.nativeObj, right));
  }
 
- public  int setVerticalOnly(boolean vertical_only)  {
-   return draggable_set_vertical_only(this.nativeObj, vertical_only);
+ public  Ret setVerticalOnly(boolean vertical_only)  {
+   return Ret.from(draggable_set_vertical_only(this.nativeObj, vertical_only));
  }
 
- public  int setHorizontalOnly(boolean horizontal_only)  {
-   return draggable_set_horizontal_only(this.nativeObj, horizontal_only);
+ public  Ret setHorizontalOnly(boolean horizontal_only)  {
+   return Ret.from(draggable_set_horizontal_only(this.nativeObj, horizontal_only));
  }
 
- public  int setDragWindow(boolean drag_window)  {
-   return draggable_set_drag_window(this.nativeObj, drag_window);
+ public  Ret setDragWindow(boolean drag_window)  {
+   return Ret.from(draggable_set_drag_window(this.nativeObj, drag_window));
  }
 
  public int getTop() {

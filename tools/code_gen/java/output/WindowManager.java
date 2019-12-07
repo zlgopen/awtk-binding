@@ -41,28 +41,28 @@ public class WindowManager extends Widget {
    return window_manager_get_pointer_pressed(this.nativeObj);
  }
 
- public  int setShowFps(boolean show_fps)  {
-   return window_manager_set_show_fps(this.nativeObj, show_fps);
+ public  Ret setShowFps(boolean show_fps)  {
+   return Ret.from(window_manager_set_show_fps(this.nativeObj, show_fps));
  }
 
- public  int setScreenSaverTime(int screen_saver_time)  {
-   return window_manager_set_screen_saver_time(this.nativeObj, screen_saver_time);
+ public  Ret setScreenSaverTime(int screen_saver_time)  {
+   return Ret.from(window_manager_set_screen_saver_time(this.nativeObj, screen_saver_time));
  }
 
- public  int setCursor(String cursor)  {
-   return window_manager_set_cursor(this.nativeObj, cursor);
+ public  Ret setCursor(String cursor)  {
+   return Ret.from(window_manager_set_cursor(this.nativeObj, cursor));
  }
 
- public  int back()  {
-   return window_manager_back(this.nativeObj);
+ public  Ret back()  {
+   return Ret.from(window_manager_back(this.nativeObj));
  }
 
- public  int backToHome()  {
-   return window_manager_back_to_home(this.nativeObj);
+ public  Ret backToHome()  {
+   return Ret.from(window_manager_back_to_home(this.nativeObj));
  }
 
- public  int backTo(String target)  {
-   return window_manager_back_to(this.nativeObj, target);
+ public  Ret backTo(String target)  {
+   return Ret.from(window_manager_back_to(this.nativeObj, target));
  }
 
 static private native long window_manager();

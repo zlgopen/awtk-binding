@@ -9,12 +9,12 @@ public class StyleMutable extends Style {
    return new StyleMutable(nativeObj);
  }
 
- public  int setName(String name)  {
-   return style_mutable_set_name(this.nativeObj, name);
+ public  Ret setName(String name)  {
+   return Ret.from(style_mutable_set_name(this.nativeObj, name));
  }
 
- public  int setInt(String state, String name, int val)  {
-   return style_mutable_set_int(this.nativeObj, state, name, val);
+ public  Ret setInt(String state, String name, int val)  {
+   return Ret.from(style_mutable_set_int(this.nativeObj, state, name, val));
  }
 
  public  static Style cast(Style s)  {

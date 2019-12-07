@@ -17,28 +17,28 @@ public class Slider extends Widget {
    return new Slider(slider_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int setValue(double value)  {
-   return slider_set_value(this.nativeObj, value);
+ public  Ret setValue(double value)  {
+   return Ret.from(slider_set_value(this.nativeObj, value));
  }
 
- public  int setMin(double min)  {
-   return slider_set_min(this.nativeObj, min);
+ public  Ret setMin(double min)  {
+   return Ret.from(slider_set_min(this.nativeObj, min));
  }
 
- public  int setMax(double max)  {
-   return slider_set_max(this.nativeObj, max);
+ public  Ret setMax(double max)  {
+   return Ret.from(slider_set_max(this.nativeObj, max));
  }
 
- public  int setStep(double step)  {
-   return slider_set_step(this.nativeObj, step);
+ public  Ret setStep(double step)  {
+   return Ret.from(slider_set_step(this.nativeObj, step));
  }
 
- public  int setBarSize(int bar_size)  {
-   return slider_set_bar_size(this.nativeObj, bar_size);
+ public  Ret setBarSize(int bar_size)  {
+   return Ret.from(slider_set_bar_size(this.nativeObj, bar_size));
  }
 
- public  int setVertical(boolean vertical)  {
-   return slider_set_vertical(this.nativeObj, vertical);
+ public  Ret setVertical(boolean vertical)  {
+   return Ret.from(slider_set_vertical(this.nativeObj, vertical));
  }
 
  public double getMin() {

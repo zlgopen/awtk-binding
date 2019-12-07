@@ -22,6 +22,10 @@ class CodeGen {
   isClassName(name) {
     return this.getClassInfo(this.typeToNativeName(name)) !== null;
   }
+  
+  isEnumName(name) {
+    return this.getEnumInfo(name) !== null;
+  }
 
   typeIsPointer(type) {
     return type.indexOf('*') > 0;

@@ -13,44 +13,44 @@ public class HscrollLabel extends Widget {
    return new HscrollLabel(hscroll_label_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- public  int setLull(int lull)  {
-   return hscroll_label_set_lull(this.nativeObj, lull);
+ public  Ret setLull(int lull)  {
+   return Ret.from(hscroll_label_set_lull(this.nativeObj, lull));
  }
 
- public  int setDuration(int duration)  {
-   return hscroll_label_set_duration(this.nativeObj, duration);
+ public  Ret setDuration(int duration)  {
+   return Ret.from(hscroll_label_set_duration(this.nativeObj, duration));
  }
 
- public  int setOnlyFocus(boolean only_focus)  {
-   return hscroll_label_set_only_focus(this.nativeObj, only_focus);
+ public  Ret setOnlyFocus(boolean only_focus)  {
+   return Ret.from(hscroll_label_set_only_focus(this.nativeObj, only_focus));
  }
 
- public  int setOnlyParentFocus(boolean only_parent_focus)  {
-   return hscroll_label_set_only_parent_focus(this.nativeObj, only_parent_focus);
+ public  Ret setOnlyParentFocus(boolean only_parent_focus)  {
+   return Ret.from(hscroll_label_set_only_parent_focus(this.nativeObj, only_parent_focus));
  }
 
- public  int setLoop(boolean loop)  {
-   return hscroll_label_set_loop(this.nativeObj, loop);
+ public  Ret setLoop(boolean loop)  {
+   return Ret.from(hscroll_label_set_loop(this.nativeObj, loop));
  }
 
- public  int setYoyo(boolean yoyo)  {
-   return hscroll_label_set_yoyo(this.nativeObj, yoyo);
+ public  Ret setYoyo(boolean yoyo)  {
+   return Ret.from(hscroll_label_set_yoyo(this.nativeObj, yoyo));
  }
 
- public  int setEllipses(boolean ellipses)  {
-   return hscroll_label_set_ellipses(this.nativeObj, ellipses);
+ public  Ret setEllipses(boolean ellipses)  {
+   return Ret.from(hscroll_label_set_ellipses(this.nativeObj, ellipses));
  }
 
- public  int setXoffset(int xoffset)  {
-   return hscroll_label_set_xoffset(this.nativeObj, xoffset);
+ public  Ret setXoffset(int xoffset)  {
+   return Ret.from(hscroll_label_set_xoffset(this.nativeObj, xoffset));
  }
 
- public  int start()  {
-   return hscroll_label_start(this.nativeObj);
+ public  Ret start()  {
+   return Ret.from(hscroll_label_start(this.nativeObj));
  }
 
- public  int stop()  {
-   return hscroll_label_stop(this.nativeObj);
+ public  Ret stop()  {
+   return Ret.from(hscroll_label_stop(this.nativeObj));
  }
 
  public  static Widget cast(Widget widget)  {

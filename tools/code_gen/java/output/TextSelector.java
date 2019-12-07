@@ -17,48 +17,48 @@ public class TextSelector extends Widget {
    return new TextSelector(text_selector_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int resetOptions()  {
-   return text_selector_reset_options(this.nativeObj);
+ public  Ret resetOptions()  {
+   return Ret.from(text_selector_reset_options(this.nativeObj));
  }
 
  public  int countOptions()  {
    return text_selector_count_options(this.nativeObj);
  }
 
- public  int appendOption(int value, String text)  {
-   return text_selector_append_option(this.nativeObj, value, text);
+ public  Ret appendOption(int value, String text)  {
+   return Ret.from(text_selector_append_option(this.nativeObj, value, text));
  }
 
- public  int setOptions(String options)  {
-   return text_selector_set_options(this.nativeObj, options);
+ public  Ret setOptions(String options)  {
+   return Ret.from(text_selector_set_options(this.nativeObj, options));
  }
 
- public  int setRangeOptions(int start, int nr, int step)  {
-   return text_selector_set_range_options(this.nativeObj, start, nr, step);
+ public  Ret setRangeOptions(int start, int nr, int step)  {
+   return Ret.from(text_selector_set_range_options(this.nativeObj, start, nr, step));
  }
 
  public  int getValue()  {
    return text_selector_get_value(this.nativeObj);
  }
 
- public  int setValue(int value)  {
-   return text_selector_set_value(this.nativeObj, value);
+ public  Ret setValue(int value)  {
+   return Ret.from(text_selector_set_value(this.nativeObj, value));
  }
 
  public  String getTextValue()  {
    return text_selector_get_text(this.nativeObj);
  }
 
- public  int setText(String text)  {
-   return text_selector_set_text(this.nativeObj, text);
+ public  Ret setText(String text)  {
+   return Ret.from(text_selector_set_text(this.nativeObj, text));
  }
 
- public  int setSelectedIndex(int index)  {
-   return text_selector_set_selected_index(this.nativeObj, index);
+ public  Ret setSelectedIndex(int index)  {
+   return Ret.from(text_selector_set_selected_index(this.nativeObj, index));
  }
 
- public  int setVisibleNr(int visible_nr)  {
-   return text_selector_set_visible_nr(this.nativeObj, visible_nr);
+ public  Ret setVisibleNr(int visible_nr)  {
+   return Ret.from(text_selector_set_visible_nr(this.nativeObj, visible_nr));
  }
 
  public int getVisibleNr() {

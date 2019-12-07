@@ -13,12 +13,12 @@ public class Label extends Widget {
    return new Label(label_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- public  int setLength(int length)  {
-   return label_set_length(this.nativeObj, length);
+ public  Ret setLength(int length)  {
+   return Ret.from(label_set_length(this.nativeObj, length));
  }
 
- public  int resizeToContent(int min_w, int max_w, int min_h, int max_h)  {
-   return label_resize_to_content(this.nativeObj, min_w, max_w, min_h, max_h);
+ public  Ret resizeToContent(int min_w, int max_w, int min_h, int max_h)  {
+   return Ret.from(label_resize_to_content(this.nativeObj, min_w, max_w, min_h, max_h));
  }
 
  public  static Widget cast(Widget widget)  {

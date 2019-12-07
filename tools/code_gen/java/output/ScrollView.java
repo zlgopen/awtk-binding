@@ -17,36 +17,36 @@ public class ScrollView extends Widget {
    return new ScrollView(scroll_view_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int setVirtualW(int w)  {
-   return scroll_view_set_virtual_w(this.nativeObj, w);
+ public  Ret setVirtualW(int w)  {
+   return Ret.from(scroll_view_set_virtual_w(this.nativeObj, w));
  }
 
- public  int setVirtualH(int h)  {
-   return scroll_view_set_virtual_h(this.nativeObj, h);
+ public  Ret setVirtualH(int h)  {
+   return Ret.from(scroll_view_set_virtual_h(this.nativeObj, h));
  }
 
- public  int setXslidable(boolean xslidable)  {
-   return scroll_view_set_xslidable(this.nativeObj, xslidable);
+ public  Ret setXslidable(boolean xslidable)  {
+   return Ret.from(scroll_view_set_xslidable(this.nativeObj, xslidable));
  }
 
- public  int setYslidable(boolean yslidable)  {
-   return scroll_view_set_yslidable(this.nativeObj, yslidable);
+ public  Ret setYslidable(boolean yslidable)  {
+   return Ret.from(scroll_view_set_yslidable(this.nativeObj, yslidable));
  }
 
- public  int setOffset(int xoffset, int yoffset)  {
-   return scroll_view_set_offset(this.nativeObj, xoffset, yoffset);
+ public  Ret setOffset(int xoffset, int yoffset)  {
+   return Ret.from(scroll_view_set_offset(this.nativeObj, xoffset, yoffset));
  }
 
- public  int setSpeedScale(double xspeed_scale, double yspeed_scale)  {
-   return scroll_view_set_speed_scale(this.nativeObj, xspeed_scale, yspeed_scale);
+ public  Ret setSpeedScale(double xspeed_scale, double yspeed_scale)  {
+   return Ret.from(scroll_view_set_speed_scale(this.nativeObj, xspeed_scale, yspeed_scale));
  }
 
- public  int scrollTo(int xoffset_end, int yoffset_end, int duration)  {
-   return scroll_view_scroll_to(this.nativeObj, xoffset_end, yoffset_end, duration);
+ public  Ret scrollTo(int xoffset_end, int yoffset_end, int duration)  {
+   return Ret.from(scroll_view_scroll_to(this.nativeObj, xoffset_end, yoffset_end, duration));
  }
 
- public  int scrollDeltaTo(int xoffset_delta, int yoffset_delta, int duration)  {
-   return scroll_view_scroll_delta_to(this.nativeObj, xoffset_delta, yoffset_delta, duration);
+ public  Ret scrollDeltaTo(int xoffset_delta, int yoffset_delta, int duration)  {
+   return Ret.from(scroll_view_scroll_delta_to(this.nativeObj, xoffset_delta, yoffset_delta, duration));
  }
 
  public int getVirtualW() {

@@ -9,32 +9,32 @@ public class ImageBase extends Widget {
    return new ImageBase(nativeObj);
  }
 
- public  int setImage(String name)  {
-   return image_base_set_image(this.nativeObj, name);
+ public  Ret setImage(String name)  {
+   return Ret.from(image_base_set_image(this.nativeObj, name));
  }
 
- public  int setRotation(double rotation)  {
-   return image_base_set_rotation(this.nativeObj, rotation);
+ public  Ret setRotation(double rotation)  {
+   return Ret.from(image_base_set_rotation(this.nativeObj, rotation));
  }
 
- public  int setScale(double scale_x, double scale_y)  {
-   return image_base_set_scale(this.nativeObj, scale_x, scale_y);
+ public  Ret setScale(double scale_x, double scale_y)  {
+   return Ret.from(image_base_set_scale(this.nativeObj, scale_x, scale_y));
  }
 
- public  int setAnchor(double anchor_x, double anchor_y)  {
-   return image_base_set_anchor(this.nativeObj, anchor_x, anchor_y);
+ public  Ret setAnchor(double anchor_x, double anchor_y)  {
+   return Ret.from(image_base_set_anchor(this.nativeObj, anchor_x, anchor_y));
  }
 
- public  int setSelected(boolean selected)  {
-   return image_base_set_selected(this.nativeObj, selected);
+ public  Ret setSelected(boolean selected)  {
+   return Ret.from(image_base_set_selected(this.nativeObj, selected));
  }
 
- public  int setSelectable(boolean selectable)  {
-   return image_base_set_selectable(this.nativeObj, selectable);
+ public  Ret setSelectable(boolean selectable)  {
+   return Ret.from(image_base_set_selectable(this.nativeObj, selectable));
  }
 
- public  int setClickable(boolean clickable)  {
-   return image_base_set_clickable(this.nativeObj, clickable);
+ public  Ret setClickable(boolean clickable)  {
+   return Ret.from(image_base_set_clickable(this.nativeObj, clickable));
  }
 
  public  static Widget cast(Widget widget)  {

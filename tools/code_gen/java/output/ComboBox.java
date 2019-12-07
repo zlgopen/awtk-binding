@@ -17,40 +17,40 @@ public class ComboBox extends Widget {
    return new ComboBox(combo_box_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int setOpenWindow(String open_window)  {
-   return combo_box_set_open_window(this.nativeObj, open_window);
+ public  Ret setOpenWindow(String open_window)  {
+   return Ret.from(combo_box_set_open_window(this.nativeObj, open_window));
  }
 
- public  int resetOptions()  {
-   return combo_box_reset_options(this.nativeObj);
+ public  Ret resetOptions()  {
+   return Ret.from(combo_box_reset_options(this.nativeObj));
  }
 
  public  int countOptions()  {
    return combo_box_count_options(this.nativeObj);
  }
 
- public  int setSelectedIndex(int index)  {
-   return combo_box_set_selected_index(this.nativeObj, index);
+ public  Ret setSelectedIndex(int index)  {
+   return Ret.from(combo_box_set_selected_index(this.nativeObj, index));
  }
 
- public  int setLocalizeOptions(boolean localize_options)  {
-   return combo_box_set_localize_options(this.nativeObj, localize_options);
+ public  Ret setLocalizeOptions(boolean localize_options)  {
+   return Ret.from(combo_box_set_localize_options(this.nativeObj, localize_options));
  }
 
- public  int setValue(int value)  {
-   return combo_box_set_value(this.nativeObj, value);
+ public  Ret setValue(int value)  {
+   return Ret.from(combo_box_set_value(this.nativeObj, value));
  }
 
- public  int setItemHeight(int item_height)  {
-   return combo_box_set_item_height(this.nativeObj, item_height);
+ public  Ret setItemHeight(int item_height)  {
+   return Ret.from(combo_box_set_item_height(this.nativeObj, item_height));
  }
 
- public  int appendOption(int value, String text)  {
-   return combo_box_append_option(this.nativeObj, value, text);
+ public  Ret appendOption(int value, String text)  {
+   return Ret.from(combo_box_append_option(this.nativeObj, value, text));
  }
 
- public  int setOptions(String options)  {
-   return combo_box_set_options(this.nativeObj, options);
+ public  Ret setOptions(String options)  {
+   return Ret.from(combo_box_set_options(this.nativeObj, options));
  }
 
  public  int getValue()  {

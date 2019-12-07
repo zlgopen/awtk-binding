@@ -11,8 +11,8 @@ public class Global {
    return new Global(nativeObj);
  }
 
- public  static int quit()  {
-   return tk_quit();
+ public  static Ret quit()  {
+   return Ret.from(tk_quit());
  }
 
  public  static int getPointerX()  {

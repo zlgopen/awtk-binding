@@ -17,48 +17,48 @@ public class TimeClock extends Widget {
    return new TimeClock(time_clock_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int setHour(int hour)  {
-   return time_clock_set_hour(this.nativeObj, hour);
+ public  Ret setHour(int hour)  {
+   return Ret.from(time_clock_set_hour(this.nativeObj, hour));
  }
 
- public  int setMinute(int minute)  {
-   return time_clock_set_minute(this.nativeObj, minute);
+ public  Ret setMinute(int minute)  {
+   return Ret.from(time_clock_set_minute(this.nativeObj, minute));
  }
 
- public  int setSecond(int second)  {
-   return time_clock_set_second(this.nativeObj, second);
+ public  Ret setSecond(int second)  {
+   return Ret.from(time_clock_set_second(this.nativeObj, second));
  }
 
- public  int setHourImage(String hour)  {
-   return time_clock_set_hour_image(this.nativeObj, hour);
+ public  Ret setHourImage(String hour)  {
+   return Ret.from(time_clock_set_hour_image(this.nativeObj, hour));
  }
 
- public  int setMinuteImage(String minute_image)  {
-   return time_clock_set_minute_image(this.nativeObj, minute_image);
+ public  Ret setMinuteImage(String minute_image)  {
+   return Ret.from(time_clock_set_minute_image(this.nativeObj, minute_image));
  }
 
- public  int setSecondImage(String second_image)  {
-   return time_clock_set_second_image(this.nativeObj, second_image);
+ public  Ret setSecondImage(String second_image)  {
+   return Ret.from(time_clock_set_second_image(this.nativeObj, second_image));
  }
 
- public  int setBgImage(String bg_image)  {
-   return time_clock_set_bg_image(this.nativeObj, bg_image);
+ public  Ret setBgImage(String bg_image)  {
+   return Ret.from(time_clock_set_bg_image(this.nativeObj, bg_image));
  }
 
- public  int setImage(String image)  {
-   return time_clock_set_image(this.nativeObj, image);
+ public  Ret setImage(String image)  {
+   return Ret.from(time_clock_set_image(this.nativeObj, image));
  }
 
- public  int setHourAnchor(String anchor_x, String anchor_y)  {
-   return time_clock_set_hour_anchor(this.nativeObj, anchor_x, anchor_y);
+ public  Ret setHourAnchor(String anchor_x, String anchor_y)  {
+   return Ret.from(time_clock_set_hour_anchor(this.nativeObj, anchor_x, anchor_y));
  }
 
- public  int setMinuteAnchor(String anchor_x, String anchor_y)  {
-   return time_clock_set_minute_anchor(this.nativeObj, anchor_x, anchor_y);
+ public  Ret setMinuteAnchor(String anchor_x, String anchor_y)  {
+   return Ret.from(time_clock_set_minute_anchor(this.nativeObj, anchor_x, anchor_y));
  }
 
- public  int setSecondAnchor(String anchor_x, String anchor_y)  {
-   return time_clock_set_second_anchor(this.nativeObj, anchor_x, anchor_y);
+ public  Ret setSecondAnchor(String anchor_x, String anchor_y)  {
+   return Ret.from(time_clock_set_second_anchor(this.nativeObj, anchor_x, anchor_y));
  }
 
  public int getHour() {

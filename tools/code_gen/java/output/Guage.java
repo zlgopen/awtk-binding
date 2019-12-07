@@ -17,20 +17,21 @@ public class Guage extends Widget {
    return new Guage(guage_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int setImage(String name)  {
-   return guage_set_image(this.nativeObj, name);
+ public  Ret setImage(String name)  {
+   return Ret.from(guage_set_image(this.nativeObj, name));
  }
 
- public  int setDrawType(int draw_type)  {
-   return guage_set_draw_type(this.nativeObj, draw_type);
+ public  Ret setDrawType(ImageDrawType draw_type)  {
+   return Ret.from(guage_set_draw_type(this.nativeObj, draw_type.value()));
  }
 
  public String getImage() {
    return guage_t_get_prop_image(this.nativeObj);
  }
 
- public int getDrawType() {
-   return guage_t_get_prop_draw_type(this.nativeObj);
+ public ImageDrawType getDrawType() {
+   return ImageDrawType.from(guage_t_get_prop_draw_type(this.nativeObj));
+
  }
 
 static private native long guage_create(long parent, int x, int y, int w, int h);

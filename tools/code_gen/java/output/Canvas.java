@@ -19,84 +19,84 @@ public class Canvas {
    return canvas_get_height(this.nativeObj);
  }
 
- public  int getClipRect(Rect r)  {
-   return canvas_get_clip_rect(this.nativeObj, r != null ? (r.nativeObj) : 0);
+ public  Ret getClipRect(Rect r)  {
+   return Ret.from(canvas_get_clip_rect(this.nativeObj, r != null ? (r.nativeObj) : 0));
  }
 
- public  int setClipRect(Rect r)  {
-   return canvas_set_clip_rect(this.nativeObj, r != null ? (r.nativeObj) : 0);
+ public  Ret setClipRect(Rect r)  {
+   return Ret.from(canvas_set_clip_rect(this.nativeObj, r != null ? (r.nativeObj) : 0));
  }
 
- public  int setClipRectEx(Rect r, boolean translate)  {
-   return canvas_set_clip_rect_ex(this.nativeObj, r != null ? (r.nativeObj) : 0, translate);
+ public  Ret setClipRectEx(Rect r, boolean translate)  {
+   return Ret.from(canvas_set_clip_rect_ex(this.nativeObj, r != null ? (r.nativeObj) : 0, translate));
  }
 
- public  int setFillColor(String color)  {
-   return canvas_set_fill_color_str(this.nativeObj, color);
+ public  Ret setFillColor(String color)  {
+   return Ret.from(canvas_set_fill_color_str(this.nativeObj, color));
  }
 
- public  int setTextColor(String color)  {
-   return canvas_set_text_color_str(this.nativeObj, color);
+ public  Ret setTextColor(String color)  {
+   return Ret.from(canvas_set_text_color_str(this.nativeObj, color));
  }
 
- public  int setStrokeColor(String color)  {
-   return canvas_set_stroke_color_str(this.nativeObj, color);
+ public  Ret setStrokeColor(String color)  {
+   return Ret.from(canvas_set_stroke_color_str(this.nativeObj, color));
  }
 
- public  int setGlobalAlpha(int alpha)  {
-   return canvas_set_global_alpha(this.nativeObj, alpha);
+ public  Ret setGlobalAlpha(int alpha)  {
+   return Ret.from(canvas_set_global_alpha(this.nativeObj, alpha));
  }
 
- public  int translate(int dx, int dy)  {
-   return canvas_translate(this.nativeObj, dx, dy);
+ public  Ret translate(int dx, int dy)  {
+   return Ret.from(canvas_translate(this.nativeObj, dx, dy));
  }
 
- public  int untranslate(int dx, int dy)  {
-   return canvas_untranslate(this.nativeObj, dx, dy);
+ public  Ret untranslate(int dx, int dy)  {
+   return Ret.from(canvas_untranslate(this.nativeObj, dx, dy));
  }
 
- public  int drawVline(int x, int y, int h)  {
-   return canvas_draw_vline(this.nativeObj, x, y, h);
+ public  Ret drawVline(int x, int y, int h)  {
+   return Ret.from(canvas_draw_vline(this.nativeObj, x, y, h));
  }
 
- public  int drawHline(int x, int y, int w)  {
-   return canvas_draw_hline(this.nativeObj, x, y, w);
+ public  Ret drawHline(int x, int y, int w)  {
+   return Ret.from(canvas_draw_hline(this.nativeObj, x, y, w));
  }
 
- public  int fillRect(int x, int y, int w, int h)  {
-   return canvas_fill_rect(this.nativeObj, x, y, w, h);
+ public  Ret fillRect(int x, int y, int w, int h)  {
+   return Ret.from(canvas_fill_rect(this.nativeObj, x, y, w, h));
  }
 
- public  int strokeRect(int x, int y, int w, int h)  {
-   return canvas_stroke_rect(this.nativeObj, x, y, w, h);
+ public  Ret strokeRect(int x, int y, int w, int h)  {
+   return Ret.from(canvas_stroke_rect(this.nativeObj, x, y, w, h));
  }
 
- public  int setFont(String name, int size)  {
-   return canvas_set_font(this.nativeObj, name, size);
+ public  Ret setFont(String name, int size)  {
+   return Ret.from(canvas_set_font(this.nativeObj, name, size));
  }
 
  public  double measureText(String str)  {
    return canvas_measure_utf8(this.nativeObj, str);
  }
 
- public  int drawText(String str, int x, int y)  {
-   return canvas_draw_utf8(this.nativeObj, str, x, y);
+ public  Ret drawText(String str, int x, int y)  {
+   return Ret.from(canvas_draw_utf8(this.nativeObj, str, x, y));
  }
 
- public  int drawTextInRect(String str, Rect r)  {
-   return canvas_draw_utf8_in_rect(this.nativeObj, str, r != null ? (r.nativeObj) : 0);
+ public  Ret drawTextInRect(String str, Rect r)  {
+   return Ret.from(canvas_draw_utf8_in_rect(this.nativeObj, str, r != null ? (r.nativeObj) : 0));
  }
 
- public  int drawIcon(Bitmap img, int cx, int cy)  {
-   return canvas_draw_icon(this.nativeObj, img != null ? (img.nativeObj) : 0, cx, cy);
+ public  Ret drawIcon(Bitmap img, int cx, int cy)  {
+   return Ret.from(canvas_draw_icon(this.nativeObj, img != null ? (img.nativeObj) : 0, cx, cy));
  }
 
- public  int drawImage(Bitmap img, Rect src, Rect dst)  {
-   return canvas_draw_image(this.nativeObj, img != null ? (img.nativeObj) : 0, src != null ? (src.nativeObj) : 0, dst != null ? (dst.nativeObj) : 0);
+ public  Ret drawImage(Bitmap img, Rect src, Rect dst)  {
+   return Ret.from(canvas_draw_image(this.nativeObj, img != null ? (img.nativeObj) : 0, src != null ? (src.nativeObj) : 0, dst != null ? (dst.nativeObj) : 0));
  }
 
- public  int drawImageEx(Bitmap img, int draw_type, Rect dst)  {
-   return canvas_draw_image_ex(this.nativeObj, img != null ? (img.nativeObj) : 0, draw_type, dst != null ? (dst.nativeObj) : 0);
+ public  Ret drawImageEx(Bitmap img, ImageDrawType draw_type, Rect dst)  {
+   return Ret.from(canvas_draw_image_ex(this.nativeObj, img != null ? (img.nativeObj) : 0, draw_type.value(), dst != null ? (dst.nativeObj) : 0));
  }
 
  public  Vgcanvas getVgcanvas()  {
@@ -107,8 +107,8 @@ public class Canvas {
    return new Canvas(canvas_cast(c != null ? (c.nativeObj) : 0));
  }
 
- public  int reset()  {
-   return canvas_reset(this.nativeObj);
+ public  Ret reset()  {
+   return Ret.from(canvas_reset(this.nativeObj));
  }
 
  public int getOx() {

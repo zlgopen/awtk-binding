@@ -15,16 +15,16 @@ public class Bitmap {
    return new Bitmap(bitmap_create());
  }
 
- public  static Bitmap createEx(int w, int h, int line_length, int format)  {
-   return new Bitmap(bitmap_create_ex(w, h, line_length, format));
+ public  static Bitmap createEx(int w, int h, int line_length, BitmapFormat format)  {
+   return new Bitmap(bitmap_create_ex(w, h, line_length, format.value()));
  }
 
  public  int getBpp()  {
    return bitmap_get_bpp(this.nativeObj);
  }
 
- public  int destroy()  {
-   return bitmap_destroy(this.nativeObj);
+ public  Ret destroy()  {
+   return Ret.from(bitmap_destroy(this.nativeObj));
  }
 
  public int getW() {

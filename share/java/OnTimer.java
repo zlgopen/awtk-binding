@@ -1,6 +1,6 @@
 package awtk;
 
 public interface OnTimer {
-  public int onTimer(long info);
+  public Ret onTimer(long info);
 };
 

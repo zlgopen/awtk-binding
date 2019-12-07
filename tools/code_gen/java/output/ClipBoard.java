@@ -11,8 +11,8 @@ public class ClipBoard {
    return new ClipBoard(nativeObj);
  }
 
- public  static int setText(String text)  {
-   return clip_board_set_text(text);
+ public  static Ret setText(String text)  {
+   return Ret.from(clip_board_set_text(text));
  }
 
  public  static String getText()  {

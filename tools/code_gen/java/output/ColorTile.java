@@ -17,8 +17,8 @@ public class ColorTile extends Widget {
    return new ColorTile(color_tile_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int setBgColor(String color)  {
-   return color_tile_set_bg_color(this.nativeObj, color);
+ public  Ret setBgColor(String color)  {
+   return Ret.from(color_tile_set_bg_color(this.nativeObj, color));
  }
 
  public String getBgColor() {

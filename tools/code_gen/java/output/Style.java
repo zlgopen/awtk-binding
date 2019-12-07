@@ -11,8 +11,8 @@ public class Style {
    return new Style(nativeObj);
  }
 
- public  int notifyWidgetStateChanged(Widget widget)  {
-   return style_notify_widget_state_changed(this.nativeObj, widget != null ? (widget.nativeObj) : 0);
+ public  Ret notifyWidgetStateChanged(Widget widget)  {
+   return Ret.from(style_notify_widget_state_changed(this.nativeObj, widget != null ? (widget.nativeObj) : 0));
  }
 
  public  boolean isValid()  {
@@ -27,8 +27,8 @@ public class Style {
    return style_get_str(this.nativeObj, name, defval);
  }
 
- public  int set(String state, String name, Value value)  {
-   return style_set(this.nativeObj, state, name, value != null ? (value.nativeObj) : 0);
+ public  Ret set(String state, String name, Value value)  {
+   return Ret.from(style_set(this.nativeObj, state, name, value != null ? (value.nativeObj) : 0));
  }
 
  public  boolean isMutable()  {

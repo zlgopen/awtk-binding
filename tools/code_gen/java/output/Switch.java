@@ -13,8 +13,8 @@ public class Switch extends Widget {
    return new Switch(switch_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- public  int setValue(boolean value)  {
-   return switch_set_value(this.nativeObj, value);
+ public  Ret setValue(boolean value)  {
+   return Ret.from(switch_set_value(this.nativeObj, value));
  }
 
  public  static Widget cast(Widget widget)  {

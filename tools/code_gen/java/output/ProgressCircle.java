@@ -17,32 +17,32 @@ public class ProgressCircle extends Widget {
    return new ProgressCircle(progress_circle_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int setValue(double value)  {
-   return progress_circle_set_value(this.nativeObj, value);
+ public  Ret setValue(double value)  {
+   return Ret.from(progress_circle_set_value(this.nativeObj, value));
  }
 
- public  int setMax(int max)  {
-   return progress_circle_set_max(this.nativeObj, max);
+ public  Ret setMax(int max)  {
+   return Ret.from(progress_circle_set_max(this.nativeObj, max));
  }
 
- public  int setLineWidth(int line_width)  {
-   return progress_circle_set_line_width(this.nativeObj, line_width);
+ public  Ret setLineWidth(int line_width)  {
+   return Ret.from(progress_circle_set_line_width(this.nativeObj, line_width));
  }
 
- public  int setStartAngle(int start_angle)  {
-   return progress_circle_set_start_angle(this.nativeObj, start_angle);
+ public  Ret setStartAngle(int start_angle)  {
+   return Ret.from(progress_circle_set_start_angle(this.nativeObj, start_angle));
  }
 
- public  int setUnit(String unit)  {
-   return progress_circle_set_unit(this.nativeObj, unit);
+ public  Ret setUnit(String unit)  {
+   return Ret.from(progress_circle_set_unit(this.nativeObj, unit));
  }
 
- public  int setShowText(boolean show_text)  {
-   return progress_circle_set_show_text(this.nativeObj, show_text);
+ public  Ret setShowText(boolean show_text)  {
+   return Ret.from(progress_circle_set_show_text(this.nativeObj, show_text));
  }
 
- public  int setCounterClockWise(boolean counter_clock_wise)  {
-   return progress_circle_set_counter_clock_wise(this.nativeObj, counter_clock_wise);
+ public  Ret setCounterClockWise(boolean counter_clock_wise)  {
+   return Ret.from(progress_circle_set_counter_clock_wise(this.nativeObj, counter_clock_wise));
  }
 
  public int getMax() {

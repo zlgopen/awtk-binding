@@ -17,12 +17,12 @@ public class Pages extends Widget {
    return new Pages(pages_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int setActive(int index)  {
-   return pages_set_active(this.nativeObj, index);
+ public  Ret setActive(int index)  {
+   return Ret.from(pages_set_active(this.nativeObj, index));
  }
 
- public  int setActiveByName(String name)  {
-   return pages_set_active_by_name(this.nativeObj, name);
+ public  Ret setActiveByName(String name)  {
+   return Ret.from(pages_set_active_by_name(this.nativeObj, name));
  }
 
  public int getActive() {

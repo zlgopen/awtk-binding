@@ -17,24 +17,24 @@ public class SlideView extends Widget {
    return new SlideView(slide_view_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int setAutoPlay(int auto_play)  {
-   return slide_view_set_auto_play(this.nativeObj, auto_play);
+ public  Ret setAutoPlay(int auto_play)  {
+   return Ret.from(slide_view_set_auto_play(this.nativeObj, auto_play));
  }
 
- public  int setActive(int index)  {
-   return slide_view_set_active(this.nativeObj, index);
+ public  Ret setActive(int index)  {
+   return Ret.from(slide_view_set_active(this.nativeObj, index));
  }
 
- public  int setVertical(boolean vertical)  {
-   return slide_view_set_vertical(this.nativeObj, vertical);
+ public  Ret setVertical(boolean vertical)  {
+   return Ret.from(slide_view_set_vertical(this.nativeObj, vertical));
  }
 
- public  int setAnimHint(String anim_hint)  {
-   return slide_view_set_anim_hint(this.nativeObj, anim_hint);
+ public  Ret setAnimHint(String anim_hint)  {
+   return Ret.from(slide_view_set_anim_hint(this.nativeObj, anim_hint));
  }
 
- public  int setLoop(boolean loop)  {
-   return slide_view_set_loop(this.nativeObj, loop);
+ public  Ret setLoop(boolean loop)  {
+   return Ret.from(slide_view_set_loop(this.nativeObj, loop));
  }
 
  public boolean getVertical() {

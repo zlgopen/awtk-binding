@@ -15,12 +15,12 @@ public class AssetsManager {
    return new AssetsManager(assets_manager());
  }
 
- public  AssetInfo ref(int type, String name)  {
-   return new AssetInfo(assets_manager_ref(this.nativeObj, type, name));
+ public  AssetInfo ref(AssetType type, String name)  {
+   return new AssetInfo(assets_manager_ref(this.nativeObj, type.value(), name));
  }
 
- public  int unref(AssetInfo info)  {
-   return assets_manager_unref(this.nativeObj, info != null ? (info.nativeObj) : 0);
+ public  Ret unref(AssetInfo info)  {
+   return Ret.from(assets_manager_unref(this.nativeObj, info != null ? (info.nativeObj) : 0));
  }
 
 static private native long assets_manager();

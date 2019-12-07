@@ -13,16 +13,16 @@ public class ListView extends Widget {
    return new ListView(list_view_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- public  int setItemHeight(int item_height)  {
-   return list_view_set_item_height(this.nativeObj, item_height);
+ public  Ret setItemHeight(int item_height)  {
+   return Ret.from(list_view_set_item_height(this.nativeObj, item_height));
  }
 
- public  int setDefaultItemHeight(int default_item_height)  {
-   return list_view_set_default_item_height(this.nativeObj, default_item_height);
+ public  Ret setDefaultItemHeight(int default_item_height)  {
+   return Ret.from(list_view_set_default_item_height(this.nativeObj, default_item_height));
  }
 
- public  int setAutoHideScrollBar(boolean auto_hide_scroll_bar)  {
-   return list_view_set_auto_hide_scroll_bar(this.nativeObj, auto_hide_scroll_bar);
+ public  Ret setAutoHideScrollBar(boolean auto_hide_scroll_bar)  {
+   return Ret.from(list_view_set_auto_hide_scroll_bar(this.nativeObj, auto_hide_scroll_bar));
  }
 
  public  static Widget cast(Widget widget)  {

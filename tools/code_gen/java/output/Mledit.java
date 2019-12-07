@@ -13,32 +13,32 @@ public class Mledit extends Widget {
    return new Mledit(mledit_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- public  int setReadonly(boolean readonly)  {
-   return mledit_set_readonly(this.nativeObj, readonly);
+ public  Ret setReadonly(boolean readonly)  {
+   return Ret.from(mledit_set_readonly(this.nativeObj, readonly));
  }
 
- public  int setFocus(boolean focus)  {
-   return mledit_set_focus(this.nativeObj, focus);
+ public  Ret setFocus(boolean focus)  {
+   return Ret.from(mledit_set_focus(this.nativeObj, focus));
  }
 
- public  int setWrapWord(boolean wrap_word)  {
-   return mledit_set_wrap_word(this.nativeObj, wrap_word);
+ public  Ret setWrapWord(boolean wrap_word)  {
+   return Ret.from(mledit_set_wrap_word(this.nativeObj, wrap_word));
  }
 
- public  int setMaxLines(int max_lines)  {
-   return mledit_set_max_lines(this.nativeObj, max_lines);
+ public  Ret setMaxLines(int max_lines)  {
+   return Ret.from(mledit_set_max_lines(this.nativeObj, max_lines));
  }
 
- public  int setInputTips(String tips)  {
-   return mledit_set_input_tips(this.nativeObj, tips);
+ public  Ret setInputTips(String tips)  {
+   return Ret.from(mledit_set_input_tips(this.nativeObj, tips));
  }
 
- public  int setCursor(int cursor)  {
-   return mledit_set_cursor(this.nativeObj, cursor);
+ public  Ret setCursor(int cursor)  {
+   return Ret.from(mledit_set_cursor(this.nativeObj, cursor));
  }
 
- public  int setScrollLine(int scroll_line)  {
-   return mledit_set_scroll_line(this.nativeObj, scroll_line);
+ public  Ret setScrollLine(int scroll_line)  {
+   return Ret.from(mledit_set_scroll_line(this.nativeObj, scroll_line));
  }
 
  public  static Widget cast(Widget widget)  {

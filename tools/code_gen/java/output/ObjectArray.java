@@ -13,12 +13,12 @@ public class ObjectArray extends Object {
    return new ObjectArray(object_array_create());
  }
 
- public  int unref()  {
-   return object_array_unref(this.nativeObj);
+ public  Ret unref()  {
+   return Ret.from(object_array_unref(this.nativeObj));
  }
 
- public  int clearProps()  {
-   return object_array_clear_props(this.nativeObj);
+ public  Ret clearProps()  {
+   return Ret.from(object_array_clear_props(this.nativeObj));
  }
 
  public int getPropsSize() {

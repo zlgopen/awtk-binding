@@ -1346,6 +1346,38 @@ static void event_type_t_init(lua_State* L) {
   lua_pushinteger(L, EVT_USER_START);
   lua_settable(L, -3); 
 
+  lua_pushstring(L, "NONE");
+  lua_pushinteger(L, EVT_NONE);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "PROP_WILL_CHANGE");
+  lua_pushinteger(L, EVT_PROP_WILL_CHANGE);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "PROP_CHANGED");
+  lua_pushinteger(L, EVT_PROP_CHANGED);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "ITEMS_WILL_CHANGE");
+  lua_pushinteger(L, EVT_ITEMS_WILL_CHANGE);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "ITEMS_CHANGED");
+  lua_pushinteger(L, EVT_ITEMS_CHANGED);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "PROPS_CHANGED");
+  lua_pushinteger(L, EVT_PROPS_CHANGED);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "PROGRESS");
+  lua_pushinteger(L, EVT_PROGRESS);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "DESTROY");
+  lua_pushinteger(L, EVT_DESTROY);
+  lua_settable(L, -3); 
+
 }
 
 static int wrap_font_manager_unload_font(lua_State* L) {
@@ -6856,45 +6888,6 @@ static void event_t_init(lua_State* L) {
   luaL_openlib(L, "Event", static_funcs, 0);
   lua_settop(L, 0);
 }
-static void event_base_type_t_init(lua_State* L) {
-  lua_newtable(L);
-  lua_setglobal(L, "EventBaseType");
-  lua_getglobal(L, "EventBaseType");
-
-  lua_pushstring(L, "NONE");
-  lua_pushinteger(L, EVT_NONE);
-  lua_settable(L, -3); 
-
-  lua_pushstring(L, "PROP_WILL_CHANGE");
-  lua_pushinteger(L, EVT_PROP_WILL_CHANGE);
-  lua_settable(L, -3); 
-
-  lua_pushstring(L, "PROP_CHANGED");
-  lua_pushinteger(L, EVT_PROP_CHANGED);
-  lua_settable(L, -3); 
-
-  lua_pushstring(L, "ITEMS_WILL_CHANGE");
-  lua_pushinteger(L, EVT_ITEMS_WILL_CHANGE);
-  lua_settable(L, -3); 
-
-  lua_pushstring(L, "ITEMS_CHANGED");
-  lua_pushinteger(L, EVT_ITEMS_CHANGED);
-  lua_settable(L, -3); 
-
-  lua_pushstring(L, "PROPS_CHANGED");
-  lua_pushinteger(L, EVT_PROPS_CHANGED);
-  lua_settable(L, -3); 
-
-  lua_pushstring(L, "PROGRESS");
-  lua_pushinteger(L, EVT_PROGRESS);
-  lua_settable(L, -3); 
-
-  lua_pushstring(L, "DESTROY");
-  lua_pushinteger(L, EVT_DESTROY);
-  lua_settable(L, -3); 
-
-}
-
 static int wrap_emitter_create(lua_State* L) {
   emitter_t* ret = NULL;
   ret = (emitter_t*)emitter_create();
@@ -6916,7 +6909,7 @@ static int wrap_emitter_dispatch(lua_State* L) {
 static int wrap_emitter_dispatch_simple_event(lua_State* L) {
   ret_t ret = 0;
   emitter_t* emitter = (emitter_t*)tk_checkudata(L, 1, "emitter_t");
-  uint32_t type = (uint32_t)luaL_checkinteger(L, 2);
+  event_type_t type = (event_type_t)luaL_checkinteger(L, 2);
   ret = (ret_t)emitter_dispatch_simple_event(emitter, type);
 
   lua_pushnumber(L,(lua_Number)(ret));
@@ -17066,7 +17059,6 @@ void luaL_openawtk(lua_State* L) {
   indicator_default_paint_t_init(L);
   fs_file_t_init(L);
   event_t_init(L);
-  event_base_type_t_init(L);
   emitter_t_init(L);
   easing_type_t_init(L);
   date_time_t_init(L);

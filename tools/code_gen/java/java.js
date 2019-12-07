@@ -6,6 +6,22 @@ class JavaGenerator extends TargetGen {
     super()
     this.classNamePrefix = '';
   }
+  
+  genCallParam(param) {
+    const name = param.name;
+    const type = param.type;
+
+    if(this.isEnumName(type)) {
+      return `${name}.value()`
+    } else {
+      return name;
+    }
+  }
+
+  toEnumValue(enumInfo, result) {
+    const name = this.toClassName(enumInfo.name);
+    return `   return ${name}.from(${result});\n`;
+  }
 
   mapType(type, isNative) {
     let name = this.typeToName(type);
@@ -22,7 +38,11 @@ class JavaGenerator extends TargetGen {
         if (this.isEnumString(info)) {
           return 'String';
         } else {
-          return 'int';
+          if(isNative) {
+            return 'int';
+          } else {
+            return name;
+          }
         }
       }
     }
@@ -109,13 +129,19 @@ class JavaGenerator extends TargetGen {
     let result = '';
     const type = p.type;
     const retType = this.typeToName(type);
+    const nativeType = this.typeToNativeName(type);
     const name = this.upperCamelName(this.toFuncName(cls.name, p.name));
     const funcName = this.getGetPropertyFuncName(cls, p);
+    const enumInfo = this.getEnumInfo(nativeType);
+    const classInfo = this.getClassInfo(nativeType);
 
     if (name != 'Value') {
       result += ` public ${this.mapType(type)} get${name}() {\n`;
-      if (retType && this.typeIsPointer(type)) {
+
+      if (classInfo) {
         result += `   return new ${retType}(${funcName}(this.nativeObj));\n`;
+      } else if(enumInfo) {
+        result += this.toEnumValue(enumInfo, `${funcName}(this.nativeObj)`) + '\n'; 
       } else {
         result += `   return ${funcName}(this.nativeObj);\n`;
       }
@@ -148,25 +174,52 @@ class JavaGenerator extends TargetGen {
   }
 
   genEnum(cls) {
-    let clsName = this.toClassName(cls.name);
+    let defValue = '';
+    let valueList = '';
+    let nativeList = '';
     let isString = this.isEnumString(cls);
-    let result = `public class ${clsName} {\n`;
+    let clsName = this.toClassName(cls.name);
+    let type = isString ? 'String' : 'int';
 
-    if (cls.consts) {
-      cls.consts.forEach(iter => {
-        const name = iter.name;
-        const shortName = name.replace(cls.prefix, "");
-        result += ` static public final ${isString ? 'String' : 'int'} ${shortName} = ${name}();\n`
-      });
+    cls.consts.forEach((iter, index) => {
+      const name = iter.name;
+      const shortName = name.replace(cls.prefix, "");
 
-      cls.consts.forEach(iter => {
-        const name = iter.name;
-        result += ` static private native ${isString ? 'String' : 'int'} ${name}();\n`
-      });
+      if(index == 0) {
+        defValue = shortName;
+      } else {
+        valueList += ',\n';  
+      }
+      valueList += `  ${shortName} (${name}())`;
+      nativeList += `  static private native ${type} ${name}();\n`
+    });
+    valueList += ';\n';
+
+    let result = `
+public enum ${clsName} {
+${valueList} 
+   
+  private ${type} value;
+  ${clsName}(${type} value) {
+    this.value = value;
+  }
+  public ${type} value() {
+    return this.value;
+  }
+
+  public static ${clsName} from(${type} value) {
+    for(${clsName} iter : ${clsName}.values()) {
+      if(iter.value() == value) {
+        return iter;
+      }
     }
 
-    result += `};\n\n`;
+    return ${defValue};
+  }
 
+${nativeList}
+}
+`
     return result;
   }
 

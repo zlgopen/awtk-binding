@@ -19,12 +19,12 @@ public class LocaleInfo {
    return locale_info_tr(this.nativeObj, text);
  }
 
- public  int change(String language, String country)  {
-   return locale_info_change(this.nativeObj, language, country);
+ public  Ret change(String language, String country)  {
+   return Ret.from(locale_info_change(this.nativeObj, language, country));
  }
 
- public  int off(int id)  {
-   return locale_info_off(this.nativeObj, id);
+ public  Ret off(int id)  {
+   return Ret.from(locale_info_off(this.nativeObj, id));
  }
 
 static private native long locale_info();

@@ -13,8 +13,8 @@ public class ColorPicker extends Widget {
    return new ColorPicker(color_picker_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- public  int setColor(String color)  {
-   return color_picker_set_color(this.nativeObj, color);
+ public  Ret setColor(String color)  {
+   return Ret.from(color_picker_set_color(this.nativeObj, color));
  }
 
  public  static Widget cast(Widget widget)  {

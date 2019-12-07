@@ -9,8 +9,8 @@ public class Object extends Emitter {
    return new Object(nativeObj);
  }
 
- public  int unref()  {
-   return object_unref(this.nativeObj);
+ public  Ret unref()  {
+   return Ret.from(object_unref(this.nativeObj));
  }
 
  public  static Object ref(Object obj)  {
@@ -33,16 +33,16 @@ public class Object extends Emitter {
    return object_is_collection(this.nativeObj);
  }
 
- public  int setName(String name)  {
-   return object_set_name(this.nativeObj, name);
+ public  Ret setName(String name)  {
+   return Ret.from(object_set_name(this.nativeObj, name));
  }
 
  public  int compare(Object other)  {
    return object_compare(this.nativeObj, other != null ? (other.nativeObj) : 0);
  }
 
- public  int getProp(String name, Value v)  {
-   return object_get_prop(this.nativeObj, name, v != null ? (v.nativeObj) : 0);
+ public  Ret getProp(String name, Value v)  {
+   return Ret.from(object_get_prop(this.nativeObj, name, v != null ? (v.nativeObj) : 0));
  }
 
  public  String getPropStr(String name)  {
@@ -69,56 +69,56 @@ public class Object extends Emitter {
    return object_get_prop_float(this.nativeObj, name, defval);
  }
 
- public  int removeProp(String name)  {
-   return object_remove_prop(this.nativeObj, name);
+ public  Ret removeProp(String name)  {
+   return Ret.from(object_remove_prop(this.nativeObj, name));
  }
 
- public  int setProp(String name, Value value)  {
-   return object_set_prop(this.nativeObj, name, value != null ? (value.nativeObj) : 0);
+ public  Ret setProp(String name, Value value)  {
+   return Ret.from(object_set_prop(this.nativeObj, name, value != null ? (value.nativeObj) : 0));
  }
 
- public  int setPropStr(String name, String value)  {
-   return object_set_prop_str(this.nativeObj, name, value);
+ public  Ret setPropStr(String name, String value)  {
+   return Ret.from(object_set_prop_str(this.nativeObj, name, value));
  }
 
- public  int setPropObject(String name, Object value)  {
-   return object_set_prop_object(this.nativeObj, name, value != null ? (value.nativeObj) : 0);
+ public  Ret setPropObject(String name, Object value)  {
+   return Ret.from(object_set_prop_object(this.nativeObj, name, value != null ? (value.nativeObj) : 0));
  }
 
- public  int setPropInt(String name, int value)  {
-   return object_set_prop_int(this.nativeObj, name, value);
+ public  Ret setPropInt(String name, int value)  {
+   return Ret.from(object_set_prop_int(this.nativeObj, name, value));
  }
 
- public  int setPropBool(String name, boolean value)  {
-   return object_set_prop_bool(this.nativeObj, name, value);
+ public  Ret setPropBool(String name, boolean value)  {
+   return Ret.from(object_set_prop_bool(this.nativeObj, name, value));
  }
 
- public  int setPropFloat(String name, double value)  {
-   return object_set_prop_float(this.nativeObj, name, value);
+ public  Ret setPropFloat(String name, double value)  {
+   return Ret.from(object_set_prop_float(this.nativeObj, name, value));
  }
 
- public  int copyProp(Object src, String name)  {
-   return object_copy_prop(this.nativeObj, src != null ? (src.nativeObj) : 0, name);
+ public  Ret copyProp(Object src, String name)  {
+   return Ret.from(object_copy_prop(this.nativeObj, src != null ? (src.nativeObj) : 0, name));
  }
 
  public  boolean hasProp(String name)  {
    return object_has_prop(this.nativeObj, name);
  }
 
- public  int eval(String expr, Value v)  {
-   return object_eval(this.nativeObj, expr, v != null ? (v.nativeObj) : 0);
+ public  Ret eval(String expr, Value v)  {
+   return Ret.from(object_eval(this.nativeObj, expr, v != null ? (v.nativeObj) : 0));
  }
 
  public  boolean canExec(String name, String args)  {
    return object_can_exec(this.nativeObj, name, args);
  }
 
- public  int exec(String name, String args)  {
-   return object_exec(this.nativeObj, name, args);
+ public  Ret exec(String name, String args)  {
+   return Ret.from(object_exec(this.nativeObj, name, args));
  }
 
- public  int notifyChanged()  {
-   return object_notify_changed(this.nativeObj);
+ public  Ret notifyChanged()  {
+   return Ret.from(object_notify_changed(this.nativeObj));
  }
 
  public  String getPropStrByPath(String path)  {

@@ -13,8 +13,8 @@ public class Window extends WindowBase {
    return new Window(window_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- public  int setFullscreen(boolean fullscreen)  {
-   return window_set_fullscreen(this.nativeObj, fullscreen);
+ public  Ret setFullscreen(boolean fullscreen)  {
+   return Ret.from(window_set_fullscreen(this.nativeObj, fullscreen));
  }
 
  public  static Widget open(String name)  {
@@ -25,12 +25,12 @@ public class Window extends WindowBase {
    return new Window(window_open_and_close(name, to_close != null ? (to_close.nativeObj) : 0));
  }
 
- public  int close()  {
-   return window_close(this.nativeObj);
+ public  Ret close()  {
+   return Ret.from(window_close(this.nativeObj));
  }
 
- public  int closeForce()  {
-   return window_close_force(this.nativeObj);
+ public  Ret closeForce()  {
+   return Ret.from(window_close_force(this.nativeObj));
  }
 
  public  static Widget cast(Widget widget)  {

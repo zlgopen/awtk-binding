@@ -15,12 +15,12 @@ public class DateTime {
    return new DateTime(date_time_create());
  }
 
- public  int set()  {
-   return date_time_set(this.nativeObj);
+ public  Ret set()  {
+   return Ret.from(date_time_set(this.nativeObj));
  }
 
- public  int destroy()  {
-   return date_time_destroy(this.nativeObj);
+ public  Ret destroy()  {
+   return Ret.from(date_time_destroy(this.nativeObj));
  }
 
  public int getSecond() {

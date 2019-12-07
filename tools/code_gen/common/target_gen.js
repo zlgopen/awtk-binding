@@ -94,6 +94,10 @@ class TargetGen extends CodeGen {
     return `${name} != ${this.getNull()} ? (${name}.nativeObj) : ${this.getNativeNull()}`;
   }
 
+  genCallParam(param) {
+    return param.name;
+  }
+
   genCallParamList(m) {
     let result = '';
     let isNormalMethod = this.isNormalMethod(m);
@@ -118,7 +122,7 @@ class TargetGen extends CodeGen {
       if (this.isClassName(iter.type)) {
         result += this.genGetNativeObj(name, false);
       } else {
-        result += name;
+        result += this.genCallParam(iter);
       }
     });
 

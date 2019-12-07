@@ -19,20 +19,20 @@ public class NamedValue {
    return new NamedValue(named_value_cast(nv != null ? (nv.nativeObj) : 0));
  }
 
- public  int setName(String name)  {
-   return named_value_set_name(this.nativeObj, name);
+ public  Ret setName(String name)  {
+   return Ret.from(named_value_set_name(this.nativeObj, name));
  }
 
- public  int setValue(Value value)  {
-   return named_value_set_value(this.nativeObj, value != null ? (value.nativeObj) : 0);
+ public  Ret setValue(Value value)  {
+   return Ret.from(named_value_set_value(this.nativeObj, value != null ? (value.nativeObj) : 0));
  }
 
  public  Value getValue()  {
    return new Value(named_value_get_value(this.nativeObj));
  }
 
- public  int destroy()  {
-   return named_value_destroy(this.nativeObj);
+ public  Ret destroy()  {
+   return Ret.from(named_value_destroy(this.nativeObj));
  }
 
  public String getName() {

@@ -13,8 +13,8 @@ public class SvgImage extends ImageBase {
    return new SvgImage(svg_image_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- public  int setImage(String name)  {
-   return svg_image_set_image(this.nativeObj, name);
+ public  Ret setImage(String name)  {
+   return Ret.from(svg_image_set_image(this.nativeObj, name));
  }
 
  public  static Widget cast(Widget widget)  {

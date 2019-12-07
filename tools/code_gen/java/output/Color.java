@@ -39,8 +39,8 @@ public class Color {
    return new Color(color_cast(color != null ? (color.nativeObj) : 0));
  }
 
- public  int destroy()  {
-   return color_destroy(this.nativeObj);
+ public  Ret destroy()  {
+   return Ret.from(color_destroy(this.nativeObj));
  }
 
  public int getColor() {

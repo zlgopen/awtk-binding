@@ -13,56 +13,56 @@ public class ImageAnimation extends Widget {
    return new ImageAnimation(image_animation_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
- public  int setLoop(boolean loop)  {
-   return image_animation_set_loop(this.nativeObj, loop);
+ public  Ret setLoop(boolean loop)  {
+   return Ret.from(image_animation_set_loop(this.nativeObj, loop));
  }
 
- public  int setImage(String image)  {
-   return image_animation_set_image(this.nativeObj, image);
+ public  Ret setImage(String image)  {
+   return Ret.from(image_animation_set_image(this.nativeObj, image));
  }
 
- public  int setInterval(int interval)  {
-   return image_animation_set_interval(this.nativeObj, interval);
+ public  Ret setInterval(int interval)  {
+   return Ret.from(image_animation_set_interval(this.nativeObj, interval));
  }
 
- public  int setDelay(int delay)  {
-   return image_animation_set_delay(this.nativeObj, delay);
+ public  Ret setDelay(int delay)  {
+   return Ret.from(image_animation_set_delay(this.nativeObj, delay));
  }
 
- public  int setAutoPlay(boolean auto_play)  {
-   return image_animation_set_auto_play(this.nativeObj, auto_play);
+ public  Ret setAutoPlay(boolean auto_play)  {
+   return Ret.from(image_animation_set_auto_play(this.nativeObj, auto_play));
  }
 
- public  int setSequence(String sequence)  {
-   return image_animation_set_sequence(this.nativeObj, sequence);
+ public  Ret setSequence(String sequence)  {
+   return Ret.from(image_animation_set_sequence(this.nativeObj, sequence));
  }
 
- public  int setRangeSequence(int start_index, int end_index)  {
-   return image_animation_set_range_sequence(this.nativeObj, start_index, end_index);
+ public  Ret setRangeSequence(int start_index, int end_index)  {
+   return Ret.from(image_animation_set_range_sequence(this.nativeObj, start_index, end_index));
  }
 
- public  int play()  {
-   return image_animation_play(this.nativeObj);
+ public  Ret play()  {
+   return Ret.from(image_animation_play(this.nativeObj));
  }
 
- public  int stop()  {
-   return image_animation_stop(this.nativeObj);
+ public  Ret stop()  {
+   return Ret.from(image_animation_stop(this.nativeObj));
  }
 
- public  int pause()  {
-   return image_animation_pause(this.nativeObj);
+ public  Ret pause()  {
+   return Ret.from(image_animation_pause(this.nativeObj));
  }
 
- public  int next()  {
-   return image_animation_next(this.nativeObj);
+ public  Ret next()  {
+   return Ret.from(image_animation_next(this.nativeObj));
  }
 
- public  int setFormat(String format)  {
-   return image_animation_set_format(this.nativeObj, format);
+ public  Ret setFormat(String format)  {
+   return Ret.from(image_animation_set_format(this.nativeObj, format));
  }
 
- public  int setUnloadAfterPaint(boolean unload_after_paint)  {
-   return image_animation_set_unload_after_paint(this.nativeObj, unload_after_paint);
+ public  Ret setUnloadAfterPaint(boolean unload_after_paint)  {
+   return Ret.from(image_animation_set_unload_after_paint(this.nativeObj, unload_after_paint));
  }
 
  public  static Widget cast(Widget widget)  {

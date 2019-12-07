@@ -33,16 +33,16 @@ public class Dialog extends WindowBase {
    return new Dialog(dialog_open(name));
  }
 
- public  int setTitle(String title)  {
-   return dialog_set_title(this.nativeObj, title);
+ public  Ret setTitle(String title)  {
+   return Ret.from(dialog_set_title(this.nativeObj, title));
  }
 
- public  int modal()  {
-   return dialog_modal(this.nativeObj);
+ public  Ret modal()  {
+   return Ret.from(dialog_modal(this.nativeObj));
  }
 
- public  int quit(int code)  {
-   return dialog_quit(this.nativeObj, code);
+ public  Ret quit(int code)  {
+   return Ret.from(dialog_quit(this.nativeObj, code));
  }
 
  public  boolean isQuited()  {
@@ -53,20 +53,20 @@ public class Dialog extends WindowBase {
    return dialog_is_modal(this.nativeObj);
  }
 
- public  static int toast(String text, int duration)  {
-   return dialog_toast(text, duration);
+ public  static Ret toast(String text, int duration)  {
+   return Ret.from(dialog_toast(text, duration));
  }
 
- public  static int info(String title, String text)  {
-   return dialog_info(title, text);
+ public  static Ret info(String title, String text)  {
+   return Ret.from(dialog_info(title, text));
  }
 
- public  static int warn(String title, String text)  {
-   return dialog_warn(title, text);
+ public  static Ret warn(String title, String text)  {
+   return Ret.from(dialog_warn(title, text));
  }
 
- public  static int confirm(String title, String text)  {
-   return dialog_confirm(title, text);
+ public  static Ret confirm(String title, String text)  {
+   return Ret.from(dialog_confirm(title, text));
  }
 
  public String getHighlight() {

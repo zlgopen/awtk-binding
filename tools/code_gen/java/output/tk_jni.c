@@ -918,6 +918,46 @@ JNIEXPORT jint JNICALL Java_awtk_EventType_EVT_1USER_1START(JNIEnv* env,  jclass
   return (jint)(EVT_USER_START);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_EventType_EVT_1NONE(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_NONE);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_EventType_EVT_1PROP_1WILL_1CHANGE(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_PROP_WILL_CHANGE);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_EventType_EVT_1PROP_1CHANGED(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_PROP_CHANGED);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_EventType_EVT_1ITEMS_1WILL_1CHANGE(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_ITEMS_WILL_CHANGE);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_EventType_EVT_1ITEMS_1CHANGED(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_ITEMS_CHANGED);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_EventType_EVT_1PROPS_1CHANGED(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_PROPS_CHANGED);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_EventType_EVT_1PROGRESS(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_PROGRESS);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_EventType_EVT_1DESTROY(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_DESTROY);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_FontManager_font_1manager_1unload_1font(JNIEnv* env,  jclass ajc, jlong jfm, jstring jname, jint size) { /*func*/
   ret_t ret;
   font_manager_t* fm = (font_manager_t*)jfm;
@@ -5468,46 +5508,6 @@ JNIEXPORT jlong JNICALL Java_awtk_Event_event_1t_1get_1prop_1target(JNIEnv* env,
   event_t* obj = (event_t*)jobj;
 
   return (jlong)(obj->target);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_EventBaseType_EVT_1NONE(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(EVT_NONE);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_EventBaseType_EVT_1PROP_1WILL_1CHANGE(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(EVT_PROP_WILL_CHANGE);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_EventBaseType_EVT_1PROP_1CHANGED(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(EVT_PROP_CHANGED);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_EventBaseType_EVT_1ITEMS_1WILL_1CHANGE(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(EVT_ITEMS_WILL_CHANGE);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_EventBaseType_EVT_1ITEMS_1CHANGED(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(EVT_ITEMS_CHANGED);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_EventBaseType_EVT_1PROPS_1CHANGED(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(EVT_PROPS_CHANGED);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_EventBaseType_EVT_1PROGRESS(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(EVT_PROGRESS);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_EventBaseType_EVT_1DESTROY(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(EVT_DESTROY);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_Emitter_emitter_1create(JNIEnv* env,  jclass ajc) { /*func*/

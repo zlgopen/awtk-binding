@@ -15,36 +15,36 @@ public class Emitter {
    return new Emitter(emitter_create());
  }
 
- public  int dispatch(Event e)  {
-   return emitter_dispatch(this.nativeObj, e != null ? (e.nativeObj) : 0);
+ public  Ret dispatch(Event e)  {
+   return Ret.from(emitter_dispatch(this.nativeObj, e != null ? (e.nativeObj) : 0));
  }
 
- public  int dispatchSimpleEvent(int type)  {
-   return emitter_dispatch_simple_event(this.nativeObj, type);
+ public  Ret dispatchSimpleEvent(EventType type)  {
+   return Ret.from(emitter_dispatch_simple_event(this.nativeObj, type.value()));
  }
 
- public  int on(int type, OnEvent on_event, long ctx)  {
-   return emitter_on(this.nativeObj, type, on_event, ctx);
+ public  int on(EventType type, OnEvent on_event, long ctx)  {
+   return emitter_on(this.nativeObj, type.value(), on_event, ctx);
  }
 
- public  int off(int id)  {
-   return emitter_off(this.nativeObj, id);
+ public  Ret off(int id)  {
+   return Ret.from(emitter_off(this.nativeObj, id));
  }
 
- public  int enable()  {
-   return emitter_enable(this.nativeObj);
+ public  Ret enable()  {
+   return Ret.from(emitter_enable(this.nativeObj));
  }
 
- public  int disable()  {
-   return emitter_disable(this.nativeObj);
+ public  Ret disable()  {
+   return Ret.from(emitter_disable(this.nativeObj));
  }
 
  public  int size()  {
    return emitter_size(this.nativeObj);
  }
 
- public  int destroy()  {
-   return emitter_destroy(this.nativeObj);
+ public  Ret destroy()  {
+   return Ret.from(emitter_destroy(this.nativeObj));
  }
 
  public  static Emitter cast(Emitter emitter)  {

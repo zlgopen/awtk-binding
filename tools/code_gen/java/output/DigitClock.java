@@ -17,8 +17,8 @@ public class DigitClock extends Widget {
    return new DigitClock(digit_clock_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int setFormat(String format)  {
-   return digit_clock_set_format(this.nativeObj, format);
+ public  Ret setFormat(String format)  {
+   return Ret.from(digit_clock_set_format(this.nativeObj, format));
  }
 
  public String getFormat() {

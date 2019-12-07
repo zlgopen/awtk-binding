@@ -17,20 +17,20 @@ public class ProgressBar extends Widget {
    return new ProgressBar(progress_bar_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int setValue(double value)  {
-   return progress_bar_set_value(this.nativeObj, value);
+ public  Ret setValue(double value)  {
+   return Ret.from(progress_bar_set_value(this.nativeObj, value));
  }
 
- public  int setMax(int max)  {
-   return progress_bar_set_max(this.nativeObj, max);
+ public  Ret setMax(int max)  {
+   return Ret.from(progress_bar_set_max(this.nativeObj, max));
  }
 
- public  int setVertical(boolean vertical)  {
-   return progress_bar_set_vertical(this.nativeObj, vertical);
+ public  Ret setVertical(boolean vertical)  {
+   return Ret.from(progress_bar_set_vertical(this.nativeObj, vertical));
  }
 
- public  int setShowText(boolean show_text)  {
-   return progress_bar_set_show_text(this.nativeObj, show_text);
+ public  Ret setShowText(boolean show_text)  {
+   return Ret.from(progress_bar_set_show_text(this.nativeObj, show_text));
  }
 
  public  int getPercent()  {

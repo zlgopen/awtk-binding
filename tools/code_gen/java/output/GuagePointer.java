@@ -17,16 +17,16 @@ public class GuagePointer extends Widget {
    return new GuagePointer(guage_pointer_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
- public  int setAngle(int angle)  {
-   return guage_pointer_set_angle(this.nativeObj, angle);
+ public  Ret setAngle(int angle)  {
+   return Ret.from(guage_pointer_set_angle(this.nativeObj, angle));
  }
 
- public  int setImage(String image)  {
-   return guage_pointer_set_image(this.nativeObj, image);
+ public  Ret setImage(String image)  {
+   return Ret.from(guage_pointer_set_image(this.nativeObj, image));
  }
 
- public  int setAnchor(String anchor_x, String anchor_y)  {
-   return guage_pointer_set_anchor(this.nativeObj, anchor_x, anchor_y);
+ public  Ret setAnchor(String anchor_x, String anchor_y)  {
+   return Ret.from(guage_pointer_set_anchor(this.nativeObj, anchor_x, anchor_y));
  }
 
  public int getAngle() {

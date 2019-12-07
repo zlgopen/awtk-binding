@@ -17,8 +17,9 @@ public class WindowBase extends Widget {
    return window_base_t_get_prop_theme(this.nativeObj);
  }
 
- public int getClosable() {
-   return window_base_t_get_prop_closable(this.nativeObj);
+ public WindowClosable getClosable() {
+   return WindowClosable.from(window_base_t_get_prop_closable(this.nativeObj));
+
  }
 
 static private native long window_base_cast(long widget);
