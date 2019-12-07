@@ -54,18 +54,11 @@ static ret_t async_callback_info_call(async_callback_info_t *info,
   ret_t ret = RET_REMOVE;
   JSContext *jctx = info->ctx;
 
-  if (data == NULL) {
-    argv[0] = JS_NULL;
-  } else {
-    argv[0] = jsvalue_create_pointer(info->ctx, (void *)data, type);
-  }
-
+  argv[0] = jsvalue_create_pointer(info->ctx, (void *)data, type);
   jret = jsfunc_call(jctx, info->func, JS_NULL, 1, argv);
   ret = (ret_t)jsvalue_get_int_value(jctx, jret);
 
-  if (type != NULL) {
-    jsvalue_unref(jctx, argv[0]);
-  }
+  jsvalue_unref(jctx, argv[0]);
   jsvalue_unref(jctx, jret);
 
   return ret;
@@ -80,13 +73,13 @@ static ret_t async_callback_info_destroy(async_callback_info_t *info) {
 }
 
 static ret_t call_on_timer(const timer_info_t *timer) {
-  return async_callback_info_call((async_callback_info_t *)(timer->ctx), NULL,
-                                  NULL);
+  return async_callback_info_call((async_callback_info_t *)(timer->ctx), timer,
+                                  "timer_info_t*");
 }
 
 static ret_t call_on_idle(const idle_info_t *idle) {
-  return async_callback_info_call((async_callback_info_t *)(idle->ctx), NULL,
-                                  NULL);
+  return async_callback_info_call((async_callback_info_t *)(idle->ctx), idle,
+                                  "idle_info_t*");
 }
 
 static ret_t call_on_data(void *ctx, const void *data) {
