@@ -145,6 +145,10 @@ class TargetGen extends CodeGen {
     return ` extends ${this.toClassName(this.getParentClassName(cls))} {\n`
   }
 
+  genSetPropertyWithSetter(cls, p) {
+    return '';
+  }
+
   genClass(cls) {
     let result = '';
     let clsName = this.toClassName(this.getClassName(cls));
@@ -170,6 +174,8 @@ class TargetGen extends CodeGen {
       cls.properties.forEach((p) => {
         if (this.isWritable(p)) {
           result += this.genSetProperty(cls, p);
+        } else if(this.hasSetterFor(cls, p.name)) {
+          result += this.genSetPropertyWithSetter(cls, p);
         }
 
         if (this.isReadable(p)) {

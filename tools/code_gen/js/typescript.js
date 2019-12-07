@@ -33,8 +33,8 @@ class TypescriptGenerator extends TargetGen {
   }
 
   mapTypeVar(type, name) {
-    if(type === 'bool_t' && name === 'value') {
-      return name + ' : number'
+    if((this.typeIsBool(type) || this.typeIsNumber(type)) && name === 'value') {
+      return name + ' : any'
     } else {
       return name + ' : ' + this.mapType(type);
     }
@@ -81,6 +81,19 @@ class TypescriptGenerator extends TargetGen {
   
   genClassPre(cls) {
     return ' public nativeObj : any;\n';
+  }
+
+  genSetPropertyWithSetter(cls, p) {
+    let result = '';
+    const name = this.toFuncName(cls.name, p.name);
+    const setter = this.toFuncName(cls.name, "set_"+ p.name);
+    const funcName = this.getSetPropertyFuncName(cls, p);
+
+    result += ` set ${name}(${this.mapTypeVar(p.type, 'v')}) {\n`;
+    result += `   this.${setter}(v);\n`;
+    result += ' }\n\n'
+
+    return result;
   }
 
   genSetProperty(cls, p) {

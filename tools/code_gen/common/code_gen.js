@@ -155,6 +155,13 @@ class CodeGen {
     return !this.isCast(m) && !this.isStatic(m) && !this.isConstructor(m);
   }
 
+  hasSetterFor(cls, name) {
+    let clsName = cls.name.replace(/_t$/, '');
+    let settter = clsName + '_set_' + name;
+    
+    return cls.methods.find(iter => (iter.name === settter));
+  }
+
   getClassInfo(name) {
     const json = this.json;
 
