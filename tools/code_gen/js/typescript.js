@@ -21,7 +21,7 @@ class TypescriptGenerator extends TargetGen {
     } else  if(this.typeIsNumber(type)) {
       return 'number';
     } else if(this.typeIsBool(type)) {
-      return 'number';
+      return 'boolean';
     } else if(this.typeIsFunction(type)) {
       return 'Function';
     } else if(this.typeIsString(type)) {
@@ -33,7 +33,11 @@ class TypescriptGenerator extends TargetGen {
   }
 
   mapTypeVar(type, name) {
-    return name + ' : ' + this.mapType(type);
+    if(type === 'bool_t' && name === 'value') {
+      return name + ' : number'
+    } else {
+      return name + ' : ' + this.mapType(type);
+    }
   }
 
   genConstructor(cls) {
@@ -84,8 +88,8 @@ class TypescriptGenerator extends TargetGen {
     const name = this.toFuncName(cls.name, p.name);
     const funcName = this.getSetPropertyFuncName(cls, p);
 
-    result += ` set ${name}(${this.mapTypeVar(p.type, 'value', false)}) {\n`;
-    result += `   ${funcName}(this.nativeObj, value);\n`;
+    result += ` set ${name}(${this.mapTypeVar(p.type, 'v')}) {\n`;
+    result += `   ${funcName}(this.nativeObj, v);\n`;
     result += ' }\n\n'
 
     return result;
@@ -98,7 +102,7 @@ class TypescriptGenerator extends TargetGen {
     const name = this.toFuncName(cls.name, p.name);
     const funcName = this.getGetPropertyFuncName(cls, p);
 
-    result += ` get ${name}() : ${this.mapType(type, false)} {\n`;
+    result += ` get ${name}() : ${this.mapType(type)} {\n`;
       if(retType && this.typeIsPointer(type)) {
         result += `   return new ${retType}(${funcName}(this.nativeObj));\n`;
       } else {
@@ -120,7 +124,7 @@ class TypescriptGenerator extends TargetGen {
 
   genSetPropNativeDecl(cls, p) {
     const funcName = this.getSetPropertyFuncName(cls, p);
-    return `declare function ${funcName}(nativeObj : any, ${this.mapTypeVar(p.type, 'value', true)});\n`;
+    return `declare function ${funcName}(nativeObj : any, ${this.mapTypeVar(p.type, 'v')});\n`;
   }
 
   genConstNativeDecl(cls, c) {

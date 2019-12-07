@@ -1560,8 +1560,8 @@ var TWidget = /** @class */ (function () {
         get: function () {
             return widget_t_get_prop_visible(this.nativeObj);
         },
-        set: function (value) {
-            widget_t_set_prop_visible(this.nativeObj, value);
+        set: function (v) {
+            widget_t_set_prop_visible(this.nativeObj, v);
         },
         enumerable: true,
         configurable: true
@@ -1570,8 +1570,8 @@ var TWidget = /** @class */ (function () {
         get: function () {
             return widget_t_get_prop_sensitive(this.nativeObj);
         },
-        set: function (value) {
-            widget_t_set_prop_sensitive(this.nativeObj, value);
+        set: function (v) {
+            widget_t_set_prop_sensitive(this.nativeObj, v);
         },
         enumerable: true,
         configurable: true
@@ -1580,8 +1580,8 @@ var TWidget = /** @class */ (function () {
         get: function () {
             return widget_t_get_prop_focusable(this.nativeObj);
         },
-        set: function (value) {
-            widget_t_set_prop_focusable(this.nativeObj, value);
+        set: function (v) {
+            widget_t_set_prop_focusable(this.nativeObj, v);
         },
         enumerable: true,
         configurable: true
@@ -1590,8 +1590,8 @@ var TWidget = /** @class */ (function () {
         get: function () {
             return widget_t_get_prop_with_focus_state(this.nativeObj);
         },
-        set: function (value) {
-            widget_t_set_prop_with_focus_state(this.nativeObj, value);
+        set: function (v) {
+            widget_t_set_prop_with_focus_state(this.nativeObj, v);
         },
         enumerable: true,
         configurable: true
@@ -2073,8 +2073,8 @@ var TColor = /** @class */ (function () {
         get: function () {
             return color_t_get_prop_color(this.nativeObj);
         },
-        set: function (value) {
-            color_t_set_prop_color(this.nativeObj, value);
+        set: function (v) {
+            color_t_set_prop_color(this.nativeObj, v);
         },
         enumerable: true,
         configurable: true
