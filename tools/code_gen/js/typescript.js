@@ -61,7 +61,13 @@ class TypescriptGenerator extends TargetGen {
   }
 
   genFuncDecl(cls, m, name) {
-    return `${name}${this.genParamList(m)} : ${this.mapType(m.return.type)} `;
+    let retType = m.return.type;
+
+    if(this.isCast(m)) {
+      retType = cls.name;
+    }
+
+    return `${name}${this.genParamList(m)} : ${this.mapType(retType)} `;
   }
 
   genFunc(cls, m) {

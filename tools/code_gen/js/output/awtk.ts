@@ -3915,7 +3915,7 @@ class TColorComponent extends TWidget {
    super(nativeObj);
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TColorComponent  {
    return new TColorComponent(color_component_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -3931,7 +3931,7 @@ class TTimeClock extends TWidget {
    return new TTimeClock(time_clock_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TTimeClock  {
    return new TTimeClock(time_clock_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -4079,7 +4079,7 @@ class TTextSelector extends TWidget {
    return new TTextSelector(text_selector_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TTextSelector  {
    return new TTextSelector(text_selector_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -4167,7 +4167,7 @@ class TSwitch extends TWidget {
    return switch_set_value(this.nativeObj, value);
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TSwitch  {
    return new TSwitch(switch_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -4231,7 +4231,7 @@ class TView extends TWidget {
    return new TView(view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TView  {
    return new TView(view_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -4247,7 +4247,7 @@ class TSlideView extends TWidget {
    return new TSlideView(slide_view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TSlideView  {
    return new TSlideView(slide_view_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -4323,7 +4323,7 @@ class TSlideIndicator extends TWidget {
    return new TSlideIndicator(slide_indicator_create_arc(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TSlideIndicator  {
    return new TSlideIndicator(slide_indicator_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -4447,7 +4447,7 @@ class TSlideMenu extends TWidget {
    return new TSlideMenu(slide_menu_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TSlideMenu  {
    return new TSlideMenu(slide_menu_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -4499,7 +4499,7 @@ class TScrollView extends TWidget {
    return new TScrollView(scroll_view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TScrollView  {
    return new TScrollView(scroll_view_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -4595,7 +4595,7 @@ class TScrollBar extends TWidget {
    return new TScrollBar(scroll_bar_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TScrollBar  {
    return new TScrollBar(scroll_bar_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -4667,7 +4667,7 @@ class TTabControl extends TWidget {
    return new TTabControl(tab_control_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TTabControl  {
    return new TTabControl(tab_control_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -4695,7 +4695,7 @@ class TListView extends TWidget {
    return list_view_set_auto_hide_scroll_bar(this.nativeObj, auto_hide_scroll_bar);
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TListView  {
    return new TListView(list_view_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -4743,7 +4743,7 @@ class TListViewH extends TWidget {
    return list_view_h_set_spacing(this.nativeObj, spacing);
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TListViewH  {
    return new TListViewH(list_view_h_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -4775,7 +4775,7 @@ class TTabButton extends TWidget {
    return new TTabButton(tab_button_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TTabButton  {
    return new TTabButton(tab_button_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -4835,7 +4835,7 @@ class TTabButtonGroup extends TWidget {
    return tab_button_group_set_scrollable(this.nativeObj, scrollable);
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TTabButtonGroup  {
    return new TTabButtonGroup(tab_button_group_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -4867,7 +4867,7 @@ class TListItem extends TWidget {
    return new TListItem(list_item_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TListItem  {
    return new TListItem(list_item_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -4923,7 +4923,7 @@ class THscrollLabel extends TWidget {
    return hscroll_label_stop(this.nativeObj);
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : THscrollLabel  {
    return new THscrollLabel(hscroll_label_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -5011,7 +5011,7 @@ class TRichText extends TWidget {
    return rich_text_set_text(this.nativeObj, text);
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TRichText  {
    return new TRichText(rich_text_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -5031,7 +5031,7 @@ class TProgressCircle extends TWidget {
    return new TProgressCircle(progress_circle_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TProgressCircle  {
    return new TProgressCircle(progress_circle_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -5131,7 +5131,7 @@ class TSlider extends TWidget {
    return new TSlider(slider_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TSlider  {
    return new TSlider(slider_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -5247,7 +5247,7 @@ class TMledit extends TWidget {
    return mledit_set_scroll_line(this.nativeObj, scroll_line);
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TMledit  {
    return new TMledit(mledit_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -5299,7 +5299,7 @@ class TRow extends TWidget {
    return new TRow(row_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TRow  {
    return new TRow(row_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -5315,7 +5315,7 @@ class TProgressBar extends TWidget {
    return new TProgressBar(progress_bar_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TProgressBar  {
    return new TProgressBar(progress_bar_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -5539,7 +5539,7 @@ class TPages extends TWidget {
    return new TPages(pages_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TPages  {
    return new TPages(pages_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -5587,7 +5587,7 @@ class TLineNumber extends TWidget {
    return line_number_set_yoffset(this.nativeObj, yoffset);
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TLineNumber  {
    return new TLineNumber(line_number_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -5603,7 +5603,7 @@ class TOverlay extends TWidget {
    return new TOverlay(overlay_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TOverlay  {
    return new TOverlay(overlay_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -5631,7 +5631,7 @@ class TImageValue extends TWidget {
    return image_value_set_value(this.nativeObj, value);
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TImageValue  {
    return new TImageValue(image_value_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -5723,7 +5723,7 @@ class TImageAnimation extends TWidget {
    return image_animation_set_unload_after_paint(this.nativeObj, unload_after_paint);
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TImageAnimation  {
    return new TImageAnimation(image_animation_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -5811,7 +5811,7 @@ class TGuage extends TWidget {
    return new TGuage(guage_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TGuage  {
    return new TGuage(guage_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -5851,7 +5851,7 @@ class TGuagePointer extends TWidget {
    return new TGuagePointer(guage_pointer_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TGuagePointer  {
    return new TGuagePointer(guage_pointer_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -5911,7 +5911,7 @@ class TLabel extends TWidget {
    return label_resize_to_content(this.nativeObj, min_w, max_w, min_h, max_h);
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TLabel  {
    return new TLabel(label_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -5935,7 +5935,7 @@ class TDraggable extends TWidget {
    return new TDraggable(draggable_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TDraggable  {
    return new TDraggable(draggable_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -6035,7 +6035,7 @@ class TGroupBox extends TWidget {
    return new TGroupBox(group_box_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TGroupBox  {
    return new TGroupBox(group_box_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -6055,7 +6055,7 @@ class TColorPicker extends TWidget {
    return color_picker_set_color(this.nativeObj, color);
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TColorPicker  {
    return new TColorPicker(color_picker_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -6075,7 +6075,7 @@ class TCanvasWidget extends TWidget {
    return new TCanvasWidget(canvas_widget_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TCanvasWidget  {
    return new TCanvasWidget(canvas_widget_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -6091,7 +6091,7 @@ class TGrid extends TWidget {
    return new TGrid(grid_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TGrid  {
    return new TGrid(grid_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -6107,7 +6107,7 @@ class TGridItem extends TWidget {
    return new TGridItem(grid_item_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TGridItem  {
    return new TGridItem(grid_item_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -6119,11 +6119,11 @@ class TWindowManager extends TWidget {
    super(nativeObj);
  }
 
- static instance() : TWidget  {
+ static instance() : TWindowManager  {
    return new TWindowManager(window_manager());
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TWindowManager  {
    return new TWindowManager(window_manager_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -6183,7 +6183,7 @@ class TWindowBase extends TWidget {
    super(nativeObj);
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TWindowBase  {
    return new TWindowBase(window_base_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -6207,7 +6207,7 @@ class TEdit extends TWidget {
    return new TEdit(edit_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TEdit  {
    return new TEdit(edit_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -6355,7 +6355,7 @@ class TStyleMutable extends TStyle {
    return style_mutable_set_int(this.nativeObj, state, name, val);
  }
 
- static cast(s : TStyle) : TStyle  {
+ static cast(s : TStyle) : TStyleMutable  {
    return new TStyleMutable(style_mutable_cast(s != null ? (s.nativeObj || s) : null));
  }
 
@@ -6383,7 +6383,7 @@ class TDragger extends TWidget {
    return new TDragger(dragger_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TDragger  {
    return new TDragger(dragger_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -6443,7 +6443,7 @@ class TImageBase extends TWidget {
    return image_base_set_clickable(this.nativeObj, clickable);
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TImageBase  {
    return new TImageBase(image_base_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -6703,7 +6703,7 @@ class TAppBar extends TWidget {
    return new TAppBar(app_bar_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TAppBar  {
    return new TAppBar(app_bar_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -6719,7 +6719,7 @@ class TButtonGroup extends TWidget {
    return new TButtonGroup(button_group_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TButtonGroup  {
    return new TButtonGroup(button_group_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -6735,7 +6735,7 @@ class TButton extends TWidget {
    return new TButton(button_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TButton  {
    return new TButton(button_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -6775,7 +6775,7 @@ class TDigitClock extends TWidget {
    return new TDigitClock(digit_clock_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TDigitClock  {
    return new TDigitClock(digit_clock_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -6811,7 +6811,7 @@ class TCheckButton extends TWidget {
    return check_button_set_value(this.nativeObj, value);
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TCheckButton  {
    return new TCheckButton(check_button_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -6835,7 +6835,7 @@ class TColorTile extends TWidget {
    return new TColorTile(color_tile_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TColorTile  {
    return new TColorTile(color_tile_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -6867,7 +6867,7 @@ class TColumn extends TWidget {
    return new TColumn(column_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TColumn  {
    return new TColumn(column_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -6883,7 +6883,7 @@ class TComboBoxItem extends TWidget {
    return new TComboBoxItem(combo_box_item_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TComboBoxItem  {
    return new TComboBoxItem(combo_box_item_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -6923,7 +6923,7 @@ class TComboBox extends TWidget {
    return new TComboBox(combo_box_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TComboBox  {
    return new TComboBox(combo_box_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -7031,7 +7031,7 @@ class TDialogClient extends TWidget {
    return new TDialogClient(dialog_client_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TDialogClient  {
    return new TDialogClient(dialog_client_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -7047,7 +7047,7 @@ class TDialogTitle extends TWidget {
    return new TDialogTitle(dialog_title_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TDialogTitle  {
    return new TDialogTitle(dialog_title_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -7107,7 +7107,7 @@ class TWindow extends TWindowBase {
    return window_close_force(this.nativeObj);
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TWindow  {
    return new TWindow(window_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -7171,7 +7171,7 @@ class TImage extends TImageBase {
    return image_set_draw_type(this.nativeObj, draw_type);
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TImage  {
    return new TImage(image_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -7195,7 +7195,7 @@ class TGifImage extends TImageBase {
    return new TGifImage(gif_image_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TGifImage  {
    return new TGifImage(gif_image_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -7211,7 +7211,7 @@ class TKeyboard extends TWindowBase {
    return new TKeyboard(keyboard_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TKeyboard  {
    return new TKeyboard(keyboard_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -7227,7 +7227,7 @@ class TPopup extends TWindowBase {
    return new TPopup(popup_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TPopup  {
    return new TPopup(popup_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -7299,7 +7299,7 @@ class TSpinBox extends TEdit {
    return new TSpinBox(spin_box_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TSpinBox  {
    return new TSpinBox(spin_box_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -7315,7 +7315,7 @@ class TSystemBar extends TWindowBase {
    return new TSystemBar(system_bar_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TSystemBar  {
    return new TSystemBar(system_bar_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -7355,7 +7355,7 @@ class TSvgImage extends TImageBase {
    return svg_image_set_image(this.nativeObj, name);
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TSvgImage  {
    return new TSvgImage(svg_image_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
@@ -7375,7 +7375,7 @@ class TDialog extends TWindowBase {
    return new TDialog(dialog_create_simple(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
- static cast(widget : TWidget) : TWidget  {
+ static cast(widget : TWidget) : TDialog  {
    return new TDialog(dialog_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
