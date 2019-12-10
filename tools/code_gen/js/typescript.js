@@ -121,6 +121,7 @@ class TypescriptGenerator extends TargetGen {
     const name = this.toFuncName(cls.name, p.name);
     const funcName = this.getGetPropertyFuncName(cls, p);
 
+    result += this.genPropDoc(p);
     result += ` get ${name}() : ${this.mapType(type)} {\n`;
       if(retType && this.typeIsPointer(type)) {
         result += `   return new ${retType}(${funcName}(this.nativeObj));\n`;
@@ -152,12 +153,14 @@ class TypescriptGenerator extends TargetGen {
 
   genEnum(cls) {
     let clsName = this.toClassName(cls.name);
-    let result = `enum ${clsName} {\n`;
+    let result = this.genEnumDoc(cls);
+    result += `enum ${clsName} {\n`;
 
     if (cls.consts) {
       cls.consts.forEach(iter => {
         const name = iter.name;
         const shortName = name.replace(cls.prefix, "");
+        result += this.genEnumItemDoc(iter);
         result += ` ${shortName} = ${name}(),\n`
       });
     }

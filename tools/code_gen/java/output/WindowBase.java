@@ -1,5 +1,13 @@
 package awtk;
 
+
+/**
+ * 窗口。
+ * 本类把窗口相关的公共行为进行抽象，放到一起方便重用。目前已知的具体实现如下图：
+ * 本类是一个抽象类，不能进行实例化。请在应用程序中使用具体的类，如window\_t。
+ * 
+ *
+ */
 public class WindowBase extends Widget {
  public WindowBase(long nativeObj) {
    super(nativeObj);
@@ -9,6 +17,15 @@ public class WindowBase extends Widget {
    return new WindowBase(nativeObj);
  }
 
+
+/**
+ * 转换为window_base对象(供脚本语言使用)。
+ * 
+ * 
+ * @param widget window_base对象。
+ *
+ * @returns window_base对象。
+ */
  public  static Widget cast(Widget widget)  {
    return new WindowBase(window_base_cast(widget != null ? (widget.nativeObj) : 0));
  }

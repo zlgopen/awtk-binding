@@ -1,5 +1,12 @@
 package awtk;
 
+
+/**
+ * 文件接口。
+ * 示例：
+ * 
+ *
+ */
 public class FsFile {
  public long nativeObj;
 

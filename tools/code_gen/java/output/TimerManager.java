@@ -1,5 +1,11 @@
 package awtk;
 
+
+/**
+ * 定时器管理器。
+ * 
+ *
+ */
 public class TimerManager {
  public long nativeObj;
 

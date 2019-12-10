@@ -1,5 +1,11 @@
 package awtk;
 
+
+/**
+ * 进度变化事件。
+ * 
+ *
+ */
 public class ProgressEvent extends Event {
  public ProgressEvent(long nativeObj) {
    super(nativeObj);
@@ -9,6 +15,15 @@ public class ProgressEvent extends Event {
    return new ProgressEvent(nativeObj);
  }
 
+
+/**
+ * 把event对象转progress_event_t对象，主要给脚本语言使用。
+ * 
+ * 
+ * @param event event对象。
+ *
+ * @returns 返回event对象。
+ */
  public  static ProgressEvent cast(Event event)  {
    return new ProgressEvent(progress_event_cast(event != null ? (event.nativeObj) : 0));
  }

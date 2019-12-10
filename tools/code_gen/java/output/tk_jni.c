@@ -1324,6 +1324,11 @@ JNIEXPORT jint JNICALL Java_awtk_InputType_INPUT_1CUSTOM(JNIEnv* env,  jclass aj
   return (jint)(INPUT_CUSTOM);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_InputType_INPUT_1CUSTOM_1PASSWORD(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(INPUT_CUSTOM_PASSWORD);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_ValueType_VALUE_1TYPE_1INVALID(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (jint)(VALUE_TYPE_INVALID);
@@ -7544,6 +7549,24 @@ JNIEXPORT jint JNICALL Java_awtk_Slider_slider_1t_1get_1prop_1bar_1size(JNIEnv* 
   slider_t* obj = (slider_t*)jobj;
 
   return (jint)(obj->bar_size);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_Slider_slider_1t_1get_1prop_1dragger_1size(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  slider_t* obj = (slider_t*)jobj;
+
+  return (jint)(obj->dragger_size);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_Slider_slider_1t_1get_1prop_1dragger_1adapt_1to_1icon(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  slider_t* obj = (slider_t*)jobj;
+
+  return (jboolean)(obj->dragger_adapt_to_icon);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_Slider_slider_1t_1get_1prop_1slide_1with_1bar(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  slider_t* obj = (slider_t*)jobj;
+
+  return (jboolean)(obj->slide_with_bar);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_Mledit_mledit_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/

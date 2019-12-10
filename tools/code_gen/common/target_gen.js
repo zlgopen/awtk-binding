@@ -137,6 +137,93 @@ class TargetGen extends CodeGen {
     return '';
   }
 
+  removeCode(str, start, end) {
+    let result = '';
+
+    do {
+      let startIndex = str.indexOf(start);
+      if(startIndex < 0) {
+        result += str; 
+        break;
+      }
+
+      let rest = str.substr(startIndex + start.length);
+      let endIndex = rest.indexOf(end);
+
+      if(endIndex < 0) {
+        result += rest; 
+        break;
+      }
+
+      result += str.substr(0, startIndex);
+      str = rest.substr(endIndex + end.length);
+    }while(true);
+
+    return result;
+  }
+ 
+  tidyDoc(desc) {
+    let result = this.removeCode(desc, '<!-- c_doc_begin -->', '<!-- c_doc_end -->');
+    result = this.removeCode(result, '```c\n', '```\n');
+    result = this.removeCode(result, '```graphviz\n', '```\n');
+
+    result = result.replace(/\r\n/g, '\n');
+    result = result.replace(/\r/g, '\n');
+    result = result.replace(/\n/g, '\n * ');
+    result = result.replace(/ * >/g, '');
+    return result;
+  }
+
+  genGeneralDoc(item) {
+    let desc = this.tidyDoc(item.desc);
+    let result = `
+/**
+ * ${desc}
+ *
+ */
+`;
+
+    return result;
+  }
+
+  genClassDoc(cls) {
+    return this.genGeneralDoc(cls);
+  }
+  
+  genConstDoc(c) {
+    return this.genGeneralDoc(c);
+  }
+  
+  genEnumDoc(c) {
+    return this.genGeneralDoc(c);
+  }
+  
+  genEnumItemDoc(c) {
+    return this.genGeneralDoc(c);
+  }
+  
+  genPropDoc(p) {
+    return this.genGeneralDoc(p);
+  }
+  
+  genFuncDoc(cls, m) {
+    let paramsDesc = '';
+    let retDesc = m.return.desc;
+    let desc = this.tidyDoc(m.desc);
+
+    m.params.forEach(iter => {
+      paramsDesc += ` * @param ${iter.name} ${iter.desc}\n`;
+    });
+
+    return `
+/**
+ * ${desc}
+ * \n${paramsDesc} *
+ * @returns ${retDesc}
+ */
+`;
+  }
+  
   genClassDecl(clsName) {
     return `class ${clsName}`;
   }
@@ -153,7 +240,8 @@ class TargetGen extends CodeGen {
     let result = '';
     let clsName = this.toClassName(this.getClassName(cls));
 
-    result = this.genClassDecl(clsName);
+    result = this.genClassDoc(cls);
+    result += this.genClassDecl(clsName);
 
     if (cls.parent) {
       result += this.genClassExtends(cls);
@@ -166,6 +254,7 @@ class TargetGen extends CodeGen {
 
     if (cls.methods) {
       cls.methods.forEach(iter => {
+        result += this.genFuncDoc(cls, iter);
         result += this.genFunc(cls, iter);
       });
     }
@@ -186,6 +275,7 @@ class TargetGen extends CodeGen {
 
     if (cls.consts) {
       cls.consts.forEach(iter => {
+        result += this.genConstDoc(cls, iter);
         result += this.genConst(cls, iter);
       });
     }

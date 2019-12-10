@@ -2000,6 +2000,10 @@ static void input_type_t_init(lua_State* L) {
   lua_pushinteger(L, INPUT_CUSTOM);
   lua_settable(L, -3); 
 
+  lua_pushstring(L, "CUSTOM_PASSWORD");
+  lua_pushinteger(L, INPUT_CUSTOM_PASSWORD);
+  lua_settable(L, -3); 
+
 }
 
 static void value_type_t_init(lua_State* L) {
@@ -10624,6 +10628,21 @@ static int wrap_slider_t_get_prop(lua_State* L) {
   }
   else if(strcmp(name, "bar_size") == 0) {
     lua_pushinteger(L,(lua_Integer)(obj->bar_size));
+
+  return 1;
+  }
+  else if(strcmp(name, "dragger_size") == 0) {
+    lua_pushinteger(L,(lua_Integer)(obj->dragger_size));
+
+  return 1;
+  }
+  else if(strcmp(name, "dragger_adapt_to_icon") == 0) {
+    lua_pushboolean(L,(lua_Integer)(obj->dragger_adapt_to_icon));
+
+  return 1;
+  }
+  else if(strcmp(name, "slide_with_bar") == 0) {
+    lua_pushboolean(L,(lua_Integer)(obj->slide_with_bar));
 
   return 1;
   }

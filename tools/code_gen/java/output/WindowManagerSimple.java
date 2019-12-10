@@ -1,5 +1,11 @@
 package awtk;
 
+
+/**
+ * 缺省窗口管理器。
+ * 
+ *
+ */
 public class WindowManagerSimple extends WindowManager {
  public WindowManagerSimple(long nativeObj) {
    super(nativeObj);

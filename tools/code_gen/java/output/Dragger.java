@@ -1,5 +1,12 @@
 package awtk;
 
+
+/**
+ * dragger控件。
+ * 目前主要用于scrollbar里的滑块。
+ * 
+ *
+ */
 public class Dragger extends Widget {
  public Dragger(long nativeObj) {
    super(nativeObj);
@@ -9,14 +16,49 @@ public class Dragger extends Widget {
    return new Dragger(nativeObj);
  }
 
+
+/**
+ * 创建dragger对象。
+ * 
+ * 
+ * @param parent 父控件
+ * @param x x坐标
+ * @param y y坐标
+ * @param w 宽度
+ * @param h 高度
+ *
+ * @returns 对象。
+ */
  public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new Dragger(dragger_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
+
+/**
+ * 转换为dragger对象(供脚本语言使用)。
+ * 
+ * 
+ * @param widget dragger对象。
+ *
+ * @returns dragger对象。
+ */
  public  static Widget cast(Widget widget)  {
    return new Dragger(dragger_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
+
+/**
+ * 设置拖动的范围。
+ * 
+ * 
+ * @param widget dragger控件。
+ * @param x_min x坐标最小值。
+ * @param y_min y坐标最小值。
+ * @param x_max x坐标最大值。
+ * @param y_max y坐标最大值。
+ *
+ * @returns 对象。
+ */
  public  Widget setRange(int x_min, int y_min, int x_max, int y_max)  {
    return new Widget(dragger_set_range(this.nativeObj, x_min, y_min, x_max, y_max));
  }

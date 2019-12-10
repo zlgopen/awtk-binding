@@ -1,5 +1,11 @@
 package awtk;
 
+
+/**
+ * 单个定时器的信息。
+ * 
+ *
+ */
 public class TimerInfo extends Object {
  public TimerInfo(long nativeObj) {
    super(nativeObj);
@@ -9,6 +15,15 @@ public class TimerInfo extends Object {
    return new TimerInfo(nativeObj);
  }
 
+
+/**
+ * 转换为timer_info对象(供脚本语言使用)。
+ * 
+ * 
+ * @param timer timer_info对象。
+ *
+ * @returns timer_info对象。
+ */
  public  static TimerInfo cast(TimerInfo timer)  {
    return new TimerInfo(timer_info_cast(timer != null ? (timer.nativeObj) : 0));
  }

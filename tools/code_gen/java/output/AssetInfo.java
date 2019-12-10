@@ -1,5 +1,11 @@
 package awtk;
 
+
+/**
+ * 单个资源的描述信息。
+ * 
+ *
+ */
 public class AssetInfo {
  public long nativeObj;
 

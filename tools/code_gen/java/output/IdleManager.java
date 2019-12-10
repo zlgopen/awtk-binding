@@ -1,5 +1,11 @@
 package awtk;
 
+
+/**
+ * idle_manager_t管理器。
+ * 
+ *
+ */
 public class IdleManager {
  public long nativeObj;
 
