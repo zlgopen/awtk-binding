@@ -3,7 +3,6 @@ package awtk;
 
 /**
  * 矩形。包括一个x坐标、y坐标、宽度和高度。
- * 
  *
  */
 public class Rect {
@@ -20,8 +19,8 @@ public class Rect {
 
 /**
  * 创建rect对象。
- * 主要供脚本语言使用。
  * 
+ * 主要供脚本语言使用。
  * 
  * @param x x坐标。
  * @param y y坐标。
@@ -37,8 +36,8 @@ public class Rect {
 
 /**
  * 设置rect对象的xywh。
- * 主要供脚本语言使用。
  * 
+ * 主要供脚本语言使用。
  * 
  * @param rect rect对象。
  * @param x x坐标。
@@ -55,8 +54,8 @@ public class Rect {
 
 /**
  * 转换为rect对象。
- * 供脚本语言使用。
  * 
+ * 供脚本语言使用。
  * 
  * @param rect rect对象。
  *
@@ -69,8 +68,8 @@ public class Rect {
 
 /**
  * 销毁rect对象。
- * 主要供脚本语言使用。
  * 
+ * 主要供脚本语言使用。
  * 
  * @param r rect对象。
  *

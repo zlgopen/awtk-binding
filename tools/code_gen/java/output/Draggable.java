@@ -3,27 +3,40 @@ package awtk;
 
 /**
  * 将draggable放入目标控件，即可让目标控件或当前窗口可以被拖动。
- * draggable\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于draggable\_t控件。
- * 在xml中使用"draggable"标签创建draggable控件。如：
- * ```xml
- * <button text="Drag Me" w="80" h="40" x="10" y="10">
- * <draggable />
- * </button>
- * ```
- * 拖动对话框标题时移动对话框：
- * ```xml
- * <dialog_title x="0" y="0" w="100%" h="30" text="Hello AWTK"
- * <draggable drag_window="true"/>
- * </dialog_title>
- * ```
- * 更多用法请参考：
- * [draggable.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/draggable.xml)
- * 在c代码中使用函数draggable\_create创建按钮控件。如：
- * draggable本身不可见，故无需style。
  * 
+ *  draggable\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于draggable\_t控件。
+ * 
+ *  在xml中使用"draggable"标签创建draggable控件。如：
+ * 
+ *  ```xml
+ *   <button text="Drag Me" w="80" h="40" x="10" y="10">
+ *    <draggable />
+ *   </button>
+ *  ```
+ * 
+ *  拖动对话框标题时移动对话框：
+ * 
+ *  ```xml
+ *  <dialog_title x="0" y="0" w="100%" h="30" text="Hello AWTK"
+ *    <draggable drag_window="true"/>
+ *  </dialog_title>
+ *  ```
+ * 
+ * 更多用法请参考：
+ *  [draggable.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/draggable.xml)
+ * 
+ *  在c代码中使用函数draggable\_create创建按钮控件。如：
+ * 
+ *  ```c
+ *   widget_t* draggable = draggable_create(target, 0, 0, 0, 0);
+ *  ```
+ * 
+ * draggable本身不可见，故无需style。
  *
  */
 public class Draggable extends Widget {
+ public long nativeObj;
+
  public Draggable(long nativeObj) {
    super(nativeObj);
  }
@@ -35,7 +48,6 @@ public class Draggable extends Widget {
 
 /**
  * 创建draggable对象
- * 
  * 
  * @param parent 父控件
  * @param x x坐标
@@ -53,7 +65,6 @@ public class Draggable extends Widget {
 /**
  * 转换为draggable对象(供脚本语言使用)。
  * 
- * 
  * @param widget draggable对象。
  *
  * @returns draggable对象。
@@ -65,7 +76,6 @@ public class Draggable extends Widget {
 
 /**
  * 设置top。
- * 
  * 
  * @param widget widget对象。
  * @param top 拖动范围的顶部限制。缺省为父控件的顶部。
@@ -80,7 +90,6 @@ public class Draggable extends Widget {
 /**
  * 设置bottom。
  * 
- * 
  * @param widget widget对象。
  * @param bottom 拖动范围的底部限制。缺省为父控件的底部。
  *
@@ -93,7 +102,6 @@ public class Draggable extends Widget {
 
 /**
  * 设置left。
- * 
  * 
  * @param widget widget对象。
  * @param left 拖动范围的左边限制。缺省为父控件的左边。
@@ -108,7 +116,6 @@ public class Draggable extends Widget {
 /**
  * 设置right。
  * 
- * 
  * @param widget widget对象。
  * @param right 拖动范围的右边限制。缺省为父控件的右边边。
  *
@@ -121,7 +128,6 @@ public class Draggable extends Widget {
 
 /**
  * 设置vertical_only。
- * 
  * 
  * @param widget widget对象。
  * @param vertical_only 只允许垂直拖动。
@@ -136,7 +142,6 @@ public class Draggable extends Widget {
 /**
  * 设置horizontal_only。
  * 
- * 
  * @param widget widget对象。
  * @param horizontal_only 只允许水平拖动。
  *
@@ -149,8 +154,7 @@ public class Draggable extends Widget {
 
 /**
  * 设置drag_window。
- * 拖动窗口而不是父控件。比如放在对话框的titlebar上，拖动titlebar其实是希望拖动对话框。
- * 
+ *  拖动窗口而不是父控件。比如放在对话框的titlebar上，拖动titlebar其实是希望拖动对话框。
  * 
  * @param widget widget对象。
  * @param drag_window drag_window

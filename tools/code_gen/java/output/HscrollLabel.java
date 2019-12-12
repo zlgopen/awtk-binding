@@ -3,26 +3,35 @@ package awtk;
 
 /**
  * 可水平滚动的文本控件，方便实现长文本滚动。
- * hscroll\_label\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于hscroll\_label\_t控件。
- * 在xml中使用"hscroll\_label"标签创建行号控件，一般配合mledit使用。如：
- * ```xml
- * ```
+ * 
+ * 
+ *  hscroll\_label\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于hscroll\_label\_t控件。
+ * 
+ *  在xml中使用"hscroll\_label"标签创建行号控件，一般配合mledit使用。如：
+ * 
+ *  ```xml
+ *  ```
+ * 
  * 更多用法请参考：[mledit.xml](
  * https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/mledit.xml)
- * 可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
- * ```xml
- * <style name="default" text_color="black">
- * <normal   />
- * <focused  />
- * </style>
- * ```
- * 更多用法请参考：
- * [theme default](
- * https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
  * 
+ *  可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
+ * 
+ *  ```xml
+ *   <style name="default" text_color="black">
+ *     <normal   />
+ *     <focused  />
+ *   </style>
+ *  ```
+ * 
+ * 更多用法请参考：
+ *  [theme default](
+ * https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
  *
  */
 public class HscrollLabel extends Widget {
+ public long nativeObj;
+
  public HscrollLabel(long nativeObj) {
    super(nativeObj);
  }
@@ -34,7 +43,6 @@ public class HscrollLabel extends Widget {
 
 /**
  * 创建hscroll_label对象
- * 
  * 
  * @param parent 父控件
  * @param x x坐标
@@ -52,7 +60,6 @@ public class HscrollLabel extends Widget {
 /**
  * 设置lull。
  * 
- * 
  * @param widget 控件对象。
  * @param lull 间歇时间(ms)。
  *
@@ -65,7 +72,6 @@ public class HscrollLabel extends Widget {
 
 /**
  * 设置duration。
- * 
  * 
  * @param widget 控件对象。
  * @param duration 滚动时间(ms)。
@@ -80,7 +86,6 @@ public class HscrollLabel extends Widget {
 /**
  * 设置only_focus。
  * 
- * 
  * @param widget 控件对象。
  * @param only_focus 是否只有处于focus时才滚动。
  *
@@ -93,7 +98,6 @@ public class HscrollLabel extends Widget {
 
 /**
  * 设置only_parent_focus。
- * 
  * 
  * @param widget 控件对象。
  * @param only_parent_focus 是否只有处于focus时才滚动。
@@ -108,7 +112,6 @@ public class HscrollLabel extends Widget {
 /**
  * 设置loop。
  * 
- * 
  * @param widget 控件对象。
  * @param loop 是否循环滚动。
  *
@@ -121,7 +124,6 @@ public class HscrollLabel extends Widget {
 
 /**
  * 设置yoyo。
- * 
  * 
  * @param widget 控件对象。
  * @param yoyo 是否往返滚动。
@@ -136,7 +138,6 @@ public class HscrollLabel extends Widget {
 /**
  * 设置ellipses。
  * 
- * 
  * @param widget 控件对象。
  * @param ellipses 是否在文本超长时在行尾显示"..."。
  *
@@ -149,7 +150,6 @@ public class HscrollLabel extends Widget {
 
 /**
  * 设置x偏移(一般无需用户调用)。。
- * 
  * 
  * @param widget 控件对象。
  * @param xoffset x偏移。
@@ -164,7 +164,6 @@ public class HscrollLabel extends Widget {
 /**
  * 启动(一般无需用户调用)。
  * 
- * 
  * @param widget 控件对象。
  *
  * @returns 返回RET_OK表示成功，否则表示失败。
@@ -177,7 +176,6 @@ public class HscrollLabel extends Widget {
 /**
  * 停止(一般无需用户调用)。
  * 
- * 
  * @param widget 控件对象。
  *
  * @returns 返回RET_OK表示成功，否则表示失败。
@@ -189,7 +187,6 @@ public class HscrollLabel extends Widget {
 
 /**
  * 转换为hscroll_label对象(供脚本语言使用)。
- * 
  * 
  * @param widget hscroll_label对象。
  *

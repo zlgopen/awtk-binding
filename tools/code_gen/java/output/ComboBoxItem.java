@@ -3,11 +3,13 @@ package awtk;
 
 /**
  * ComboBox Item控件。
- * 本类仅供combo\_box控件内部使用。
  * 
+ *  本类仅供combo\_box控件内部使用。
  *
  */
 public class ComboBoxItem extends Widget {
+ public long nativeObj;
+
  public ComboBoxItem(long nativeObj) {
    super(nativeObj);
  }
@@ -19,7 +21,6 @@ public class ComboBoxItem extends Widget {
 
 /**
  * 创建combo_box_item对象
- * 
  * 
  * @param parent 父控件
  * @param x x坐标
@@ -37,7 +38,6 @@ public class ComboBoxItem extends Widget {
 /**
  * 转换combo_box_item对象(供脚本语言使用)。
  * 
- * 
  * @param widget combo_box_item对象。
  *
  * @returns combo_box_item对象。
@@ -49,7 +49,6 @@ public class ComboBoxItem extends Widget {
 
 /**
  * 设置控件是否被选中。
- * 
  * 
  * @param widget combo_box_item对象。
  * @param checked 是否被选中。
@@ -63,7 +62,6 @@ public class ComboBoxItem extends Widget {
 
 /**
  * 设置控件的值。
- * 
  * 
  * @param widget combo_box_item对象。
  * @param value 值

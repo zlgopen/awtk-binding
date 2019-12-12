@@ -3,7 +3,6 @@ package awtk;
 
 /**
  * 事件基类。
- * 
  *
  */
 public class Event {
@@ -20,8 +19,8 @@ public class Event {
 
 /**
  * 转换为event对象。
- * 供脚本语言使用
  * 
+ * 供脚本语言使用
  * 
  * @param event event对象。
  *
@@ -34,8 +33,8 @@ public class Event {
 
 /**
  * 创建event对象。
- * 主要给脚本语言使用。
  * 
+ *  主要给脚本语言使用。
  * 
  * @param type 事件类型。
  *
@@ -48,8 +47,8 @@ public class Event {
 
 /**
  * 销毁事件对象。
- * 主要给脚本语言使用。
  * 
+ *  主要给脚本语言使用。
  * 
  * @param event event对象。
  *

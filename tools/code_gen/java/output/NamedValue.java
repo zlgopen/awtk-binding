@@ -3,7 +3,6 @@ package awtk;
 
 /**
  * 命名的值。
- * 
  *
  */
 public class NamedValue {
@@ -21,7 +20,6 @@ public class NamedValue {
 /**
  * 创建named_value对象。
  * 
- * 
  *
  * @returns 返回named_value对象。
  */
@@ -32,7 +30,6 @@ public class NamedValue {
 
 /**
  * 转换为named_value对象(供脚本语言使用)。
- * 
  * 
  * @param nv named_value对象。
  *
@@ -45,7 +42,6 @@ public class NamedValue {
 
 /**
  * 设置名称。
- * 
  * 
  * @param nv named_value对象。
  * @param name 名称。
@@ -60,7 +56,6 @@ public class NamedValue {
 /**
  * 设置值。
  * 
- * 
  * @param nv named_value对象。
  * @param value 值。
  *
@@ -74,7 +69,6 @@ public class NamedValue {
 /**
  * 获取值对象(主要给脚本语言使用)。
  * 
- * 
  * @param nv named_value对象。
  *
  * @returns 返回值对象。
@@ -86,7 +80,6 @@ public class NamedValue {
 
 /**
  * 销毁named_value对象。
- * 
  * 
  * @param nv named_value对象。
  *

@@ -79,6 +79,7 @@ class JavaGenerator extends TargetGen {
     let result = '';
     let name = this.upperCamelName(this.getClassName(cls));
 
+    result += ' public long nativeObj;\n\n';
     result += ` public ${name}(long nativeObj) {\n`;
     if (cls.parent) {
       result += '   super(nativeObj);\n';
@@ -233,14 +234,6 @@ ${nativeList}
 
   genClassDecl(clsName) {
     return `public class ${clsName}`;
-  }
-
-  genClassPre(cls) {
-    if (!(cls.parent)) {
-      return ' public long nativeObj;\n\n';
-    } else {
-      return '';
-    }
   }
 
   genClassPost(cls) {

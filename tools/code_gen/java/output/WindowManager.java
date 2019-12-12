@@ -3,10 +3,11 @@ package awtk;
 
 /**
  * 窗口管理器。
- * 
  *
  */
 public class WindowManager extends Widget {
+ public long nativeObj;
+
  public WindowManager(long nativeObj) {
    super(nativeObj);
  }
@@ -19,7 +20,6 @@ public class WindowManager extends Widget {
 /**
  * 获取全局window_manager对象
  * 
- * 
  *
  * @returns 对象。
  */
@@ -30,7 +30,6 @@ public class WindowManager extends Widget {
 
 /**
  * 转换为window_manager对象(供脚本语言使用)。
- * 
  * 
  * @param widget window_manager对象。
  *
@@ -44,7 +43,6 @@ public class WindowManager extends Widget {
 /**
  * 获取最上面的主窗口。
  * 
- * 
  * @param widget 窗口管理器对象。
  *
  * @returns 返回窗口对象。
@@ -56,7 +54,6 @@ public class WindowManager extends Widget {
 
 /**
  * 获取最上面的窗口。
- * 
  * 
  * @param widget 窗口管理器对象。
  *
@@ -70,7 +67,6 @@ public class WindowManager extends Widget {
 /**
  * 获取前一个的窗口。
  * 
- * 
  * @param widget 窗口管理器对象。
  *
  * @returns 返回窗口对象。
@@ -82,7 +78,6 @@ public class WindowManager extends Widget {
 
 /**
  * 获取指针当前的X坐标。
- * 
  * 
  * @param widget 窗口管理器对象。
  *
@@ -96,7 +91,6 @@ public class WindowManager extends Widget {
 /**
  * 获取指针当前的Y坐标。
  * 
- * 
  * @param widget 窗口管理器对象。
  *
  * @returns 返回指针当前的X坐标。
@@ -109,7 +103,6 @@ public class WindowManager extends Widget {
 /**
  * 获取指针当前是否按下。
  * 
- * 
  * @param widget 窗口管理器对象。
  *
  * @returns 返回指针当前是否按下。
@@ -121,7 +114,6 @@ public class WindowManager extends Widget {
 
 /**
  * 设置是否显示FPS。
- * 
  * 
  * @param widget 窗口管理器对象。
  * @param show_fps 是否显示FPS。
@@ -136,7 +128,6 @@ public class WindowManager extends Widget {
 /**
  * 设置屏保时间。
  * 
- * 
  * @param widget 窗口管理器对象。
  * @param screen_saver_time 屏保时间(单位毫秒)。
  *
@@ -150,7 +141,6 @@ public class WindowManager extends Widget {
 /**
  * 设置鼠标指针。
  * 
- * 
  * @param widget 窗口管理器对象。
  * @param cursor 图片名称(从图片管理器中加载)。
  *
@@ -163,8 +153,8 @@ public class WindowManager extends Widget {
 
 /**
  * 请求关闭顶层窗口。
+ *  
  * 如果顶层窗口时模态对话框，用DIALOG\_QUIT\_NONE调用dialog\_quit。
- * 
  * 
  * @param widget 窗口管理器对象。
  *
@@ -177,8 +167,8 @@ public class WindowManager extends Widget {
 
 /**
  * 回到主窗口，关闭之上的全部窗口。
- * 如果顶层窗口时模态对话框，用DIALOG\_QUIT\_NONE调用dialog\_quit。
  * 
+ * 如果顶层窗口时模态对话框，用DIALOG\_QUIT\_NONE调用dialog\_quit。
  * 
  * @param widget 窗口管理器对象。
  *
@@ -191,8 +181,8 @@ public class WindowManager extends Widget {
 
 /**
  * 回到指定的窗口，关闭之上的全部窗口。
- * 如果顶层窗口时模态对话框，用DIALOG\_QUIT\_NONE调用dialog\_quit。
  * 
+ * 如果顶层窗口时模态对话框，用DIALOG\_QUIT\_NONE调用dialog\_quit。
  * 
  * @param widget 窗口管理器对象。
  * @param target 目标窗口的名称。

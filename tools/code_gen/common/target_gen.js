@@ -250,7 +250,9 @@ class TargetGen extends CodeGen {
     }
 
     result += this.genClassPre(cls);
-    result += this.genConstructor(cls);
+    if(!this.isFake(cls)) {
+      result += this.genConstructor(cls);
+    }
 
     if (cls.methods) {
       cls.methods.forEach(iter => {

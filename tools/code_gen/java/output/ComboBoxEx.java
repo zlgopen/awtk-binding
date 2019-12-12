@@ -3,10 +3,11 @@ package awtk;
 
 /**
  * 可滚动的combo_box控件。
- * 
  *
  */
 public class ComboBoxEx extends ComboBox {
+ public long nativeObj;
+
  public ComboBoxEx(long nativeObj) {
    super(nativeObj);
  }
@@ -18,7 +19,6 @@ public class ComboBoxEx extends ComboBox {
 
 /**
  * 创建combo_box_ex对象
- * 
  * 
  * @param parent 父控件
  * @param x x坐标

@@ -3,13 +3,16 @@ package awtk;
 
 /**
  * 简单的动态数组，内部存放value对象。
- * 访问时属性名称为：
- * * "size"/"length" 用于获取数组的长度。
- * * index 用于访问属性，-1可以用来追加新元素。
  * 
+ *  访问时属性名称为：
+ * 
+ *  * "size"/"length" 用于获取数组的长度。
+ *  * index 用于访问属性，-1可以用来追加新元素。
  *
  */
 public class ObjectArray extends Object {
+ public long nativeObj;
+
  public ObjectArray(long nativeObj) {
    super(nativeObj);
  }
@@ -22,7 +25,6 @@ public class ObjectArray extends Object {
 /**
  * 创建对象。
  * 
- * 
  *
  * @returns 返回object对象。
  */
@@ -33,7 +35,6 @@ public class ObjectArray extends Object {
 
 /**
  * for script gc
- * 
  * 
  * @param obj 对象。
  *
@@ -46,7 +47,6 @@ public class ObjectArray extends Object {
 
 /**
  * 清除全部属性。
- * 
  * 
  * @param obj 对象。
  *

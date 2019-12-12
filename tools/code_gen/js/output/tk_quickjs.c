@@ -1671,6 +1671,15 @@ jsvalue_t get_EVT_WINDOW_LOAD(
   return jsvalue_create_int(ctx, EVT_WINDOW_LOAD);
 }
 
+jsvalue_t get_EVT_WIDGET_LOAD(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, EVT_WIDGET_LOAD);
+}
+
 jsvalue_t get_EVT_WINDOW_WILL_OPEN(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -2043,6 +2052,8 @@ ret_t event_type_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_EVT_ANIM_END, "EVT_ANIM_END", 1));
   JS_SetPropertyStr(ctx, global_obj, "EVT_WINDOW_LOAD",
                       JS_NewCFunction(ctx, get_EVT_WINDOW_LOAD, "EVT_WINDOW_LOAD", 1));
+  JS_SetPropertyStr(ctx, global_obj, "EVT_WIDGET_LOAD",
+                      JS_NewCFunction(ctx, get_EVT_WIDGET_LOAD, "EVT_WIDGET_LOAD", 1));
   JS_SetPropertyStr(ctx, global_obj, "EVT_WINDOW_WILL_OPEN",
                       JS_NewCFunction(ctx, get_EVT_WINDOW_WILL_OPEN, "EVT_WINDOW_WILL_OPEN", 1));
   JS_SetPropertyStr(ctx, global_obj, "EVT_WINDOW_OPEN",
@@ -5173,6 +5184,24 @@ jsvalue_t get_STYLE_ID_ROUND_RADIUS(
   return jsvalue_create_string(ctx, STYLE_ID_ROUND_RADIUS);
 }
 
+jsvalue_t get_STYLE_ID_CHILDREN_LAYOUT(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, STYLE_ID_CHILDREN_LAYOUT);
+}
+
+jsvalue_t get_STYLE_ID_SELF_LAYOUT(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, STYLE_ID_SELF_LAYOUT);
+}
+
 ret_t style_id_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
   JS_SetPropertyStr(ctx, global_obj, "STYLE_ID_BG_COLOR",
@@ -5239,6 +5268,10 @@ ret_t style_id_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_STYLE_ID_SELECTED_TEXT_COLOR, "STYLE_ID_SELECTED_TEXT_COLOR", 1));
   JS_SetPropertyStr(ctx, global_obj, "STYLE_ID_ROUND_RADIUS",
                       JS_NewCFunction(ctx, get_STYLE_ID_ROUND_RADIUS, "STYLE_ID_ROUND_RADIUS", 1));
+  JS_SetPropertyStr(ctx, global_obj, "STYLE_ID_CHILDREN_LAYOUT",
+                      JS_NewCFunction(ctx, get_STYLE_ID_CHILDREN_LAYOUT, "STYLE_ID_CHILDREN_LAYOUT", 1));
+  JS_SetPropertyStr(ctx, global_obj, "STYLE_ID_SELF_LAYOUT",
+                      JS_NewCFunction(ctx, get_STYLE_ID_SELF_LAYOUT, "STYLE_ID_SELF_LAYOUT", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -6652,6 +6685,19 @@ jsvalue_t wrap_vgcanvas_t_get_prop_h(
   return jret;
 }
 
+jsvalue_t wrap_vgcanvas_t_get_prop_stride(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  vgcanvas_t* obj = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
+
+  jret = jsvalue_create_int(ctx, obj->stride);
+  return jret;
+}
+
 jsvalue_t wrap_vgcanvas_t_get_prop_ratio(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -6883,6 +6929,8 @@ ret_t vgcanvas_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_vgcanvas_t_get_prop_w, "vgcanvas_t_get_prop_w", 1));
   JS_SetPropertyStr(ctx, global_obj, "vgcanvas_t_get_prop_h",
                       JS_NewCFunction(ctx, wrap_vgcanvas_t_get_prop_h, "vgcanvas_t_get_prop_h", 1));
+  JS_SetPropertyStr(ctx, global_obj, "vgcanvas_t_get_prop_stride",
+                      JS_NewCFunction(ctx, wrap_vgcanvas_t_get_prop_stride, "vgcanvas_t_get_prop_stride", 1));
   JS_SetPropertyStr(ctx, global_obj, "vgcanvas_t_get_prop_ratio",
                       JS_NewCFunction(ctx, wrap_vgcanvas_t_get_prop_ratio, "vgcanvas_t_get_prop_ratio", 1));
   JS_SetPropertyStr(ctx, global_obj, "vgcanvas_t_get_prop_anti_alias",

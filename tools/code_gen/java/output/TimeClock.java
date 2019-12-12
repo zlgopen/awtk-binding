@@ -3,22 +3,39 @@ package awtk;
 
 /**
  * 模拟时钟控件。
- * time\_clock\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于time\_clock\_t控件。
- * 在xml中使用"time\_clock"标签创建模拟时钟控件。如：
- * ```xml
- * <time_clock x="c" y="m" w="300" h="300" bg_image="clock_bg" image="clock"
- * hour_image="clock_hour" minute_image="clock_minute" second_image="clock_second"/>
- * ```
- * 更多用法请参考：[time\_clock.xml](
- * https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/time_clock.xml)
- * 在c代码中使用函数time\_clock\_create创建模拟时钟控件。如：
- * 完整示例请参考：[time_clock demo](
- * https://github.com/zlgopen/awtk-c-demos/blob/master/demos/time_clock.c)
- * time\_clock一般不需要设置style。
  * 
+ *  time\_clock\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于time\_clock\_t控件。
+ * 
+ *  在xml中使用"time\_clock"标签创建模拟时钟控件。如：
+ * 
+ *  ```xml
+ *  <time_clock x="c" y="m" w="300" h="300" bg_image="clock_bg" image="clock"
+ *    hour_image="clock_hour" minute_image="clock_minute" second_image="clock_second"/>
+ *  ```
+ * 
+ * 更多用法请参考：[time\_clock.xml](
+ *  https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/time_clock.xml)
+ * 
+ *  在c代码中使用函数time\_clock\_create创建模拟时钟控件。如：
+ * 
+ *  ```c
+ *  widget_t* tc = time_clock_create(win, 10, 10, 240, 240);
+ *  time_clock_set_image(tc, "clock");
+ *  time_clock_set_bg_image(tc, "clock_bg");
+ *  time_clock_set_hour_image(tc, "clock_hour");
+ *  time_clock_set_minute_image(tc, "clock_minute");
+ *  time_clock_set_second_image(tc, "clock_second");
+ *  ```
+ * 
+ * 完整示例请参考：[time_clock demo](
+ *  https://github.com/zlgopen/awtk-c-demos/blob/master/demos/time_clock.c)
+ * 
+ *  time\_clock一般不需要设置style。
  *
  */
 public class TimeClock extends Widget {
+ public long nativeObj;
+
  public TimeClock(long nativeObj) {
    super(nativeObj);
  }
@@ -30,7 +47,6 @@ public class TimeClock extends Widget {
 
 /**
  * 创建time_clock对象
- * 
  * 
  * @param parent 父控件
  * @param x x坐标
@@ -48,7 +64,6 @@ public class TimeClock extends Widget {
 /**
  * 转换为time_clock对象(供脚本语言使用)。
  * 
- * 
  * @param widget time_clock对象。
  *
  * @returns time_clock对象。
@@ -60,7 +75,6 @@ public class TimeClock extends Widget {
 
 /**
  * 设置小时的值。
- * 
  * 
  * @param widget 控件对象。
  * @param hour 小时的值。
@@ -75,7 +89,6 @@ public class TimeClock extends Widget {
 /**
  * 设置分钟的值。
  * 
- * 
  * @param widget 控件对象。
  * @param minute 分钟的值。
  *
@@ -88,7 +101,6 @@ public class TimeClock extends Widget {
 
 /**
  * 设置秒的值。
- * 
  * 
  * @param widget 控件对象。
  * @param second 秒的值。
@@ -103,7 +115,6 @@ public class TimeClock extends Widget {
 /**
  * 设置小时的图片。
  * 
- * 
  * @param widget 控件对象。
  * @param hour 小时的图片。
  *
@@ -116,7 +127,6 @@ public class TimeClock extends Widget {
 
 /**
  * 设置分钟的图片。
- * 
  * 
  * @param widget 控件对象。
  * @param minute_image 分钟的图片。
@@ -131,7 +141,6 @@ public class TimeClock extends Widget {
 /**
  * 设置秒的图片。
  * 
- * 
  * @param widget 控件对象。
  * @param second_image 秒的图片。
  *
@@ -144,7 +153,6 @@ public class TimeClock extends Widget {
 
 /**
  * 设置背景图片。
- * 
  * 
  * @param widget 控件对象。
  * @param bg_image 背景图片。
@@ -159,7 +167,6 @@ public class TimeClock extends Widget {
 /**
  * 设置中心图片。
  * 
- * 
  * @param widget 控件对象。
  * @param image 图片。
  *
@@ -173,7 +180,6 @@ public class TimeClock extends Widget {
 /**
  * 设置小时指针的旋转锚点。
  * 后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f
- * 
  * 
  * @param widget 控件对象。
  * @param anchor_x 指针的锚点坐标x。
@@ -190,7 +196,6 @@ public class TimeClock extends Widget {
  * 设置分钟指针的旋转锚点。
  * 后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f
  * 
- * 
  * @param widget 控件对象。
  * @param anchor_x 指针的锚点坐标x。
  * @param anchor_y 指针的锚点坐标y。
@@ -205,7 +210,6 @@ public class TimeClock extends Widget {
 /**
  * 设置秒钟指针的旋转锚点。
  * 后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f
- * 
  * 
  * @param widget 控件对象。
  * @param anchor_x 指针的锚点坐标x。

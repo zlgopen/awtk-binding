@@ -3,10 +3,11 @@ package awtk;
 
 /**
  * 滚轮事件。
- * 
  *
  */
 public class OrientationEvent extends Event {
+ public long nativeObj;
+
  public OrientationEvent(long nativeObj) {
    super(nativeObj);
  }
@@ -18,7 +19,6 @@ public class OrientationEvent extends Event {
 
 /**
  * 把event对象转orientation_event_t对象，主要给脚本语言使用。
- * 
  * 
  * @param event event对象。
  *

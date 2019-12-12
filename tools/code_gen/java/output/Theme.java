@@ -3,8 +3,8 @@ package awtk;
 
 /**
  * 主题。
- * 负责管理缺省的主题数据，方便实现style\_const。
  * 
+ *  负责管理缺省的主题数据，方便实现style\_const。
  *
  */
 public class Theme {
@@ -21,7 +21,6 @@ public class Theme {
 
 /**
  * 获取缺省的主题对象。
- * 
  * 
  *
  * @returns 返回主题对象。

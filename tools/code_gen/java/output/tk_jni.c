@@ -798,6 +798,11 @@ JNIEXPORT jint JNICALL Java_awtk_EventType_EVT_1WINDOW_1LOAD(JNIEnv* env,  jclas
   return (jint)(EVT_WINDOW_LOAD);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_EventType_EVT_1WIDGET_1LOAD(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_WIDGET_LOAD);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_EventType_EVT_1WINDOW_1WILL_1OPEN(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (jint)(EVT_WINDOW_WILL_OPEN);
@@ -2311,6 +2316,16 @@ JNIEXPORT jstring JNICALL Java_awtk_StyleId_STYLE_1ID_1ROUND_1RADIUS(JNIEnv* env
   return (*env)->NewStringUTF(env, STYLE_ID_ROUND_RADIUS);
 }
 
+JNIEXPORT jstring JNICALL Java_awtk_StyleId_STYLE_1ID_1CHILDREN_1LAYOUT(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, STYLE_ID_CHILDREN_LAYOUT);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_StyleId_STYLE_1ID_1SELF_1LAYOUT(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, STYLE_ID_SELF_LAYOUT);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_Style_style_1notify_1widget_1state_1changed(JNIEnv* env,  jclass ajc, jlong js, jlong jwidget) { /*func*/
   ret_t ret;
   style_t* s = (style_t*)js;
@@ -2898,6 +2913,12 @@ JNIEXPORT jint JNICALL Java_awtk_Vgcanvas_vgcanvas_1t_1get_1prop_1h(JNIEnv* env,
   vgcanvas_t* obj = (vgcanvas_t*)jobj;
 
   return (jint)(obj->h);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_Vgcanvas_vgcanvas_1t_1get_1prop_1stride(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  vgcanvas_t* obj = (vgcanvas_t*)jobj;
+
+  return (jint)(obj->stride);
 }
 
 JNIEXPORT jdouble JNICALL Java_awtk_Vgcanvas_vgcanvas_1t_1get_1prop_1ratio(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/

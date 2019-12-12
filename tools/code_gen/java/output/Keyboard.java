@@ -3,9 +3,13 @@ package awtk;
 
 /**
  * 软键盘。
- * 软键盘是一个特殊的窗口，由编辑器通过输入法自动打开和关闭。
- * 这里介绍一下定制软键盘的方法：
- * 编辑器输入类型和软键盘UI资源文件的对应关系:
+ * 
+ *  软键盘是一个特殊的窗口，由编辑器通过输入法自动打开和关闭。
+ * 
+ *  这里介绍一下定制软键盘的方法：
+ * 
+ *   编辑器输入类型和软键盘UI资源文件的对应关系:
+ * 
  * | 输入类型       | 软键盘UI资源文件|
  * |----------------|:---------------:|
  * | INPUT\_PHONE    | kb\_phone.xml    |
@@ -18,7 +22,9 @@ package awtk;
  * | INPUT\_PASSWORD | kb\_ascii.xml    |
  * | INPUT\_CUSTOM   | 使用自定义的键盘 |
  * | 其它            | kb\_default.xml  |
- * keyboard中按钮子控件的名称有些特殊要求：
+ * 
+ *  keyboard中按钮子控件的名称有些特殊要求：
+ * 
  * |  名称          | 功能            |
  * |----------------|:---------------:|
  * | return         | 回车键          |
@@ -29,12 +35,15 @@ package awtk;
  * | close          | 关闭软键盘      |
  * | 前缀key:       | 键值            |
  * | 前缀page:      | 切换到页面      |
- * 更多用法请参考：
- * [kb_default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/kb_default.xml)
  * 
+ * 
+ * 更多用法请参考：
+ *  [kb_default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/kb_default.xml)
  *
  */
 public class Keyboard extends WindowBase {
+ public long nativeObj;
+
  public Keyboard(long nativeObj) {
    super(nativeObj);
  }
@@ -46,7 +55,6 @@ public class Keyboard extends WindowBase {
 
 /**
  * 创建keyboard对象
- * 
  * 
  * @param parent 父控件
  * @param x x坐标
@@ -63,7 +71,6 @@ public class Keyboard extends WindowBase {
 
 /**
  * 转换为keyboard对象(供脚本语言使用)。
- * 
  * 
  * @param widget keyboard对象。
  *

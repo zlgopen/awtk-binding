@@ -3,8 +3,8 @@ package awtk;
 
 /**
  * 日期时间。
- * 在嵌入式平台中，在系统初始时，需要调用date\_time\_global\_init设置实际获取/设置系统时间的函数。
  * 
+ * 在嵌入式平台中，在系统初始时，需要调用date\_time\_global\_init设置实际获取/设置系统时间的函数。
  *
  */
 public class DateTime {
@@ -22,7 +22,6 @@ public class DateTime {
 /**
  * 创建date_time对象，并初始为当前日期和时间(一般供脚本语言中使用)。
  * 
- * 
  *
  * @returns 返回date_time对象。
  */
@@ -33,7 +32,6 @@ public class DateTime {
 
 /**
  * 设置当前时间。
- * 
  * 
  * @param dt date_time对象。
  *
@@ -46,7 +44,6 @@ public class DateTime {
 
 /**
  * 销毁date_time对象(一般供脚本语言中使用)。
- * 
  * 
  * @param dt date_time对象。
  *

@@ -3,10 +3,11 @@ package awtk;
 
 /**
  * 按键事件。
- * 
  *
  */
 public class KeyEvent extends Event {
+ public long nativeObj;
+
  public KeyEvent(long nativeObj) {
    super(nativeObj);
  }
@@ -18,7 +19,6 @@ public class KeyEvent extends Event {
 
 /**
  * 把event对象转key_event_t对象，主要给脚本语言使用。
- * 
  * 
  * @param event event对象。
  *

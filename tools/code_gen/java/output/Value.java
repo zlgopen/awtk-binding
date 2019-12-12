@@ -3,9 +3,15 @@ package awtk;
 
 /**
  * 一个通用数据类型，用来存放整数、浮点数、字符串和其它对象。
- * 在C/C++中，一般不需动态创建对象，直接声明并初始化即可。如：
- * 在脚本语言中，需要动态创建对象。
  * 
+ *  在C/C++中，一般不需动态创建对象，直接声明并初始化即可。如：
+ * 
+ *  ```c
+ *  value_t v;
+ *  value_set_int(&v, 100);
+ *  ```
+ * 
+ * 在脚本语言中，需要动态创建对象。
  *
  */
 public class Value {
@@ -23,7 +29,6 @@ public class Value {
 /**
  * 设置类型为bool的值。
  * 
- * 
  * @param v value对象。
  * @param value 待设置的值。
  *
@@ -37,7 +42,6 @@ public class Value {
 /**
  * 获取类型为bool的值。
  * 
- * 
  * @param v value对象。
  *
  * @returns 值。
@@ -49,7 +53,6 @@ public class Value {
 
 /**
  * 设置类型为int8的值。
- * 
  * 
  * @param v value对象。
  * @param value 待设置的值。
@@ -64,7 +67,6 @@ public class Value {
 /**
  * 获取类型为int8的值。
  * 
- * 
  * @param v value对象。
  *
  * @returns 值。
@@ -76,7 +78,6 @@ public class Value {
 
 /**
  * 设置类型为uint8的值。
- * 
  * 
  * @param v value对象。
  * @param value 待设置的值。
@@ -91,7 +92,6 @@ public class Value {
 /**
  * 获取类型为uint8的值。
  * 
- * 
  * @param v value对象。
  *
  * @returns 值。
@@ -103,7 +103,6 @@ public class Value {
 
 /**
  * 设置类型为int16的值。
- * 
  * 
  * @param v value对象。
  * @param value 待设置的值。
@@ -118,7 +117,6 @@ public class Value {
 /**
  * 获取类型为int16的值。
  * 
- * 
  * @param v value对象。
  *
  * @returns 值。
@@ -130,7 +128,6 @@ public class Value {
 
 /**
  * 设置类型为uint16的值。
- * 
  * 
  * @param v value对象。
  * @param value 待设置的值。
@@ -145,7 +142,6 @@ public class Value {
 /**
  * 获取类型为uint16的值。
  * 
- * 
  * @param v value对象。
  *
  * @returns 值。
@@ -157,7 +153,6 @@ public class Value {
 
 /**
  * 设置类型为int32的值。
- * 
  * 
  * @param v value对象。
  * @param value 待设置的值。
@@ -172,7 +167,6 @@ public class Value {
 /**
  * 获取类型为int32的值。
  * 
- * 
  * @param v value对象。
  *
  * @returns 值。
@@ -184,7 +178,6 @@ public class Value {
 
 /**
  * 设置类型为uint32的值。
- * 
  * 
  * @param v value对象。
  * @param value 待设置的值。
@@ -199,7 +192,6 @@ public class Value {
 /**
  * 设置类型为int64的值。
  * 
- * 
  * @param v value对象。
  * @param value 待设置的值。
  *
@@ -213,7 +205,6 @@ public class Value {
 /**
  * 获取类型为int64的值。
  * 
- * 
  * @param v value对象。
  *
  * @returns 值。
@@ -225,7 +216,6 @@ public class Value {
 
 /**
  * 设置类型为uint64的值。
- * 
  * 
  * @param v value对象。
  * @param value 待设置的值。
@@ -240,7 +230,6 @@ public class Value {
 /**
  * 获取类型为uint64的值。
  * 
- * 
  * @param v value对象。
  *
  * @returns 值。
@@ -252,7 +241,6 @@ public class Value {
 
 /**
  * 设置类型为float\_t的值。
- * 
  * 
  * @param v value对象。
  * @param value 待设置的值。
@@ -267,7 +255,6 @@ public class Value {
 /**
  * 获取类型为float的值。
  * 
- * 
  * @param v value对象。
  *
  * @returns 值。
@@ -279,7 +266,6 @@ public class Value {
 
 /**
  * 设置类型为double的值。
- * 
  * 
  * @param v value对象。
  * @param value 待设置的值。
@@ -294,7 +280,6 @@ public class Value {
 /**
  * 获取类型为double的值。
  * 
- * 
  * @param v value对象。
  *
  * @returns 值。
@@ -306,8 +291,8 @@ public class Value {
 
 /**
  * 设置类型为字符串的值(并拷贝字符串)。
- * 供脚本语言使用。
  * 
+ * 供脚本语言使用。
  * 
  * @param v value对象。
  * @param value 待设置的值。
@@ -322,7 +307,6 @@ public class Value {
 /**
  * 获取类型为字符串的值。
  * 
- * 
  * @param v value对象。
  *
  * @returns 值。
@@ -335,7 +319,6 @@ public class Value {
 /**
  * 判断value是否为空值。
  * 
- * 
  * @param value value对象。
  *
  * @returns 为空值返回TRUE，否则返回FALSE。
@@ -347,7 +330,6 @@ public class Value {
 
 /**
  * 设置类型为int的值。
- * 
  * 
  * @param v value对象。
  * @param value 待设置的值。
@@ -362,7 +344,6 @@ public class Value {
 /**
  * 设置类型为object的值。
  * 
- * 
  * @param v value对象。
  * @param value 待设置的值。
  *
@@ -376,7 +357,6 @@ public class Value {
 /**
  * 转换为object的值。
  * 
- * 
  * @param v value对象。
  *
  * @returns 值。
@@ -388,7 +368,6 @@ public class Value {
 
 /**
  * 设置类型为token的值。
- * 
  * 
  * @param v value对象。
  * @param value 待设置的值。
@@ -403,7 +382,6 @@ public class Value {
 /**
  * 获取token的值。
  * 
- * 
  * @param v value对象。
  *
  * @returns 值。
@@ -416,7 +394,6 @@ public class Value {
 /**
  * 创建value对象。
  * 
- * 
  *
  * @returns 对象。
  */
@@ -427,7 +404,6 @@ public class Value {
 
 /**
  * 销毁value对象。
- * 
  * 
  * @param v value对象。
  *
@@ -441,7 +417,6 @@ public class Value {
 /**
  * 重置value对象。
  * 
- * 
  * @param v value对象。
  *
  * @returns 返回RET_OK表示成功，否则表示失败。
@@ -453,8 +428,8 @@ public class Value {
 
 /**
  * 转换为value对象。
- * 供脚本语言使用
  * 
+ * 供脚本语言使用
  * 
  * @param value value对象。
  *

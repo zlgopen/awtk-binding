@@ -1725,6 +1725,16 @@ jsvalue_t get_EVT_WINDOW_LOAD(
   return jsvalue_create_int(ctx, EVT_WINDOW_LOAD);
 }
 
+jsvalue_t get_EVT_WIDGET_LOAD(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  return jsvalue_create_int(ctx, EVT_WIDGET_LOAD);
+}
+
 jsvalue_t get_EVT_WINDOW_WILL_OPEN(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -2087,6 +2097,7 @@ ret_t event_type_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"EVT_ANIM_ONCE", get_EVT_ANIM_ONCE);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_ANIM_END", get_EVT_ANIM_END);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_WINDOW_LOAD", get_EVT_WINDOW_LOAD);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_WIDGET_LOAD", get_EVT_WIDGET_LOAD);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_WINDOW_WILL_OPEN", get_EVT_WINDOW_WILL_OPEN);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_WINDOW_OPEN", get_EVT_WINDOW_OPEN);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_WINDOW_TO_BACKGROUND", get_EVT_WINDOW_TO_BACKGROUND);
@@ -5184,6 +5195,26 @@ jsvalue_t get_STYLE_ID_ROUND_RADIUS(
   return jsvalue_create_string(ctx, STYLE_ID_ROUND_RADIUS);
 }
 
+jsvalue_t get_STYLE_ID_CHILDREN_LAYOUT(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  return jsvalue_create_string(ctx, STYLE_ID_CHILDREN_LAYOUT);
+}
+
+jsvalue_t get_STYLE_ID_SELF_LAYOUT(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  return jsvalue_create_string(ctx, STYLE_ID_SELF_LAYOUT);
+}
+
 ret_t style_id_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_BG_COLOR", get_STYLE_ID_BG_COLOR);
   jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_FG_COLOR", get_STYLE_ID_FG_COLOR);
@@ -5217,6 +5248,8 @@ ret_t style_id_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_SELECTED_FG_COLOR", get_STYLE_ID_SELECTED_FG_COLOR);
   jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_SELECTED_TEXT_COLOR", get_STYLE_ID_SELECTED_TEXT_COLOR);
   jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_ROUND_RADIUS", get_STYLE_ID_ROUND_RADIUS);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_CHILDREN_LAYOUT", get_STYLE_ID_CHILDREN_LAYOUT);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_SELF_LAYOUT", get_STYLE_ID_SELF_LAYOUT);
 
  return RET_OK;
 }
@@ -6646,6 +6679,20 @@ jsvalue_t wrap_vgcanvas_t_get_prop_h(
   return jret;
 }
 
+jsvalue_t wrap_vgcanvas_t_get_prop_stride(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  vgcanvas_t* obj = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
+
+  jret = jsvalue_create_int(ctx, obj->stride);
+  return jret;
+}
+
 jsvalue_t wrap_vgcanvas_t_get_prop_ratio(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -6844,6 +6891,7 @@ ret_t vgcanvas_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_restore", wrap_vgcanvas_restore);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_w", wrap_vgcanvas_t_get_prop_w);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_h", wrap_vgcanvas_t_get_prop_h);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_stride", wrap_vgcanvas_t_get_prop_stride);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_ratio", wrap_vgcanvas_t_get_prop_ratio);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_anti_alias", wrap_vgcanvas_t_get_prop_anti_alias);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_line_width", wrap_vgcanvas_t_get_prop_line_width);

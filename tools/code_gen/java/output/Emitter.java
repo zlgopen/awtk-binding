@@ -3,7 +3,6 @@ package awtk;
 
 /**
  * 事件分发器, 用于实现观察者模式。
- * 
  *
  */
 public class Emitter {
@@ -21,7 +20,6 @@ public class Emitter {
 /**
  * 创建emitter对象。
  * 
- * 
  *
  * @returns 对象。
  */
@@ -32,9 +30,8 @@ public class Emitter {
 
 /**
  * 分发事件。如果当前分发的回调函数返回RET_REMOVE，该回调函数将被移出。
- * 禁用状态下，本函数不做任何事情。
- * 如果当前分发的回调函数返回RET_STOP，dispatch中断分发，并返回RET_STOP，否则返回RET_OK。
- * 
+ *  禁用状态下，本函数不做任何事情。
+ *   如果当前分发的回调函数返回RET_STOP，dispatch中断分发，并返回RET_STOP，否则返回RET_OK。
  * 
  * @param emitter emitter对象。
  * @param e 事件对象。
@@ -49,8 +46,7 @@ public class Emitter {
 /**
  * 分发事件。
  * 对emitter_dispatch的包装，分发一个简单的事件。
- * 如果当前分发的回调函数返回RET_STOP，dispatch中断分发，并返回RET_STOP，否则返回RET_OK。
- * 
+ *   如果当前分发的回调函数返回RET_STOP，dispatch中断分发，并返回RET_STOP，否则返回RET_OK。
  * 
  * @param emitter emitter对象。
  * @param type 事件类型。
@@ -64,7 +60,6 @@ public class Emitter {
 
 /**
  * 注册指定事件的处理函数。
- * 
  * 
  * @param emitter emitter对象。
  * @param type 事件类型。
@@ -81,7 +76,6 @@ public class Emitter {
 /**
  * 注销指定事件的处理函数。
  * 
- * 
  * @param emitter emitter对象。
  * @param id emitter_on返回的ID。
  *
@@ -95,7 +89,6 @@ public class Emitter {
 /**
  * 启用。
  * 
- * 
  * @param emitter emitter对象。
  *
  * @returns 返回RET_OK表示成功，否则表示失败。
@@ -107,8 +100,8 @@ public class Emitter {
 
 /**
  * 禁用。
- * 禁用后emitter_dispatch无效，但可以注册和注销。
  * 
+ *  禁用后emitter_dispatch无效，但可以注册和注销。
  * 
  * @param emitter emitter对象。
  *
@@ -122,7 +115,6 @@ public class Emitter {
 /**
  * 获取注册的回调函数个数，主要用于辅助测试。
  * 
- * 
  * @param emitter emitter对象。
  *
  * @returns 回调函数个数。
@@ -135,7 +127,6 @@ public class Emitter {
 /**
  * 销毁。
  * 
- * 
  * @param emitter emitter对象。
  *
  * @returns 返回RET_OK表示成功，否则表示失败。
@@ -147,8 +138,8 @@ public class Emitter {
 
 /**
  * 转换为emitter对象(供脚本语言使用)。
- * 主要给脚本语言使用。
  * 
+ *  主要给脚本语言使用。
  * 
  * @param emitter emitter对象。
  *

@@ -3,7 +3,6 @@ package awtk;
 
 /**
  * 提供基本的绘图功能和状态管理。
- * 
  *
  */
 public class Canvas {
@@ -21,7 +20,6 @@ public class Canvas {
 /**
  * 获取画布的宽度。
  * 
- * 
  * @param c canvas对象。
  *
  * @returns 返回画布的宽度。
@@ -34,7 +32,6 @@ public class Canvas {
 /**
  * 获取画布的高度。
  * 
- * 
  * @param c canvas对象。
  *
  * @returns 返回画布的高度。
@@ -46,7 +43,6 @@ public class Canvas {
 
 /**
  * 获取裁剪区。
- * 
  * 
  * @param c canvas对象。
  * @param r rect对象。
@@ -61,7 +57,6 @@ public class Canvas {
 /**
  * 设置裁剪区。
  * 
- * 
  * @param c canvas对象。
  * @param r rect对象。
  *
@@ -74,7 +69,6 @@ public class Canvas {
 
 /**
  * 设置裁剪区。
- * 
  * 
  * @param c canvas对象。
  * @param r rect对象。
@@ -89,8 +83,8 @@ public class Canvas {
 
 /**
  * 设置填充颜色。
- * 供脚本语言使用。
  * 
+ * 供脚本语言使用。
  * 
  * @param c canvas对象。
  * @param color 颜色。
@@ -104,8 +98,8 @@ public class Canvas {
 
 /**
  * 设置文本颜色。
- * 供脚本语言使用。
  * 
+ * 供脚本语言使用。
  * 
  * @param c canvas对象。
  * @param color 颜色。
@@ -119,8 +113,8 @@ public class Canvas {
 
 /**
  * 设置线条颜色。
- * 供脚本语言使用。
  * 
+ * 供脚本语言使用。
  * 
  * @param c canvas对象。
  * @param color 颜色。
@@ -135,7 +129,6 @@ public class Canvas {
 /**
  * 设置全局alpha值。
  * 
- * 
  * @param c canvas对象。
  * @param alpha alpha值。
  *
@@ -148,7 +141,6 @@ public class Canvas {
 
 /**
  * 平移原点坐标。
- * 
  * 
  * @param c canvas对象。
  * @param dx x偏移。
@@ -164,7 +156,6 @@ public class Canvas {
 /**
  * 反向平移原点坐标。
  * 
- * 
  * @param c canvas对象。
  * @param dx x偏移。
  * @param dy y偏移。
@@ -178,7 +169,6 @@ public class Canvas {
 
 /**
  * 画垂直线。
- * 
  * 
  * @param c canvas对象。
  * @param x x坐标。
@@ -195,7 +185,6 @@ public class Canvas {
 /**
  * 画水平线。
  * 
- * 
  * @param c canvas对象。
  * @param x x坐标。
  * @param y y坐标。
@@ -210,7 +199,6 @@ public class Canvas {
 
 /**
  * 填充矩形。
- * 
  * 
  * @param c canvas对象。
  * @param x x坐标。
@@ -228,7 +216,6 @@ public class Canvas {
 /**
  * 绘制矩形。
  * 
- * 
  * @param c canvas对象。
  * @param x x坐标。
  * @param y y坐标。
@@ -245,7 +232,6 @@ public class Canvas {
 /**
  * 设置字体。
  * 
- * 
  * @param c canvas对象。
  * @param name 字体名称。
  * @param size 字体大小。
@@ -259,8 +245,8 @@ public class Canvas {
 
 /**
  * 计算文本所占的宽度。
- * 供脚本语言使用。
  * 
+ * 供脚本语言使用。
  * 
  * @param c canvas对象。
  * @param str 字符串。
@@ -274,8 +260,8 @@ public class Canvas {
 
 /**
  * 绘制文本。
- * 供脚本语言使用。
  * 
+ * 供脚本语言使用。
  * 
  * @param c canvas对象。
  * @param str 字符串。
@@ -291,8 +277,8 @@ public class Canvas {
 
 /**
  * 绘制文本。
- * 供脚本语言使用。
  * 
+ * 供脚本语言使用。
  * 
  * @param c canvas对象。
  * @param str 字符串。
@@ -307,7 +293,6 @@ public class Canvas {
 
 /**
  * 绘制图标。
- * 
  * 
  * @param c canvas对象。
  * @param img 图片对象。
@@ -324,7 +309,6 @@ public class Canvas {
 /**
  * 绘制图片。
  * 
- * 
  * @param c canvas对象。
  * @param img 图片对象。
  * @param src 源区域。
@@ -339,7 +323,6 @@ public class Canvas {
 
 /**
  * 绘制图片。
- * 
  * 
  * @param c canvas对象。
  * @param img 图片对象。
@@ -356,7 +339,6 @@ public class Canvas {
 /**
  * 获取vgcanvas对象。
  * 
- * 
  * @param c canvas对象。
  *
  * @returns 返回vgcanvas对象。
@@ -369,7 +351,6 @@ public class Canvas {
 /**
  * 转换为canvas对象(供脚本语言使用)。
  * 
- * 
  * @param c canvas对象。
  *
  * @returns canvas对象。
@@ -381,7 +362,6 @@ public class Canvas {
 
 /**
  * 释放相关资源。
- * 
  * 
  * @param c canvas对象。
  *

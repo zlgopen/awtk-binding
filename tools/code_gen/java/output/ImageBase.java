@@ -3,18 +3,31 @@ package awtk;
 
 /**
  * 图片控件基类。
- * 本类把图片相关控件的公共行为进行抽象，放到一起方便重用。目前已知的具体实现如下图：
- * 本类是一个抽象类，不能进行实例化。请在应用程序中使用具体的类，如image\_t。
- * 如果需要显示文件系统中的图片，只需将图片名称换成实际的文件名，并加上"file://"前缀即可。如：
- * ```
- * <image draw_type="center" image="file://./demos/assets/default/raw/images/xx/flag_CN.png" />
- * <gif image="file://./demos/assets/default/raw/images/x2/bee.gif" />
- * <svg image="file://./demos/assets/default/raw/images/svg/china.bsvg" />
- * ```
  * 
+ *  本类把图片相关控件的公共行为进行抽象，放到一起方便重用。目前已知的具体实现如下图：
+ * 
+ *  ```graphviz
+ *    [default_style]
+ * 
+ *    image_t -> image_base_t[arrowhead = "empty"]
+ *    svg_image_t -> image_base_t[arrowhead = "empty"]
+ *    gif_image_t -> image_base_t[arrowhead = "empty"]
+ *  ```
+ * 
+ * 本类是一个抽象类，不能进行实例化。请在应用程序中使用具体的类，如image\_t。
+ * 
+ *  如果需要显示文件系统中的图片，只需将图片名称换成实际的文件名，并加上"file://"前缀即可。如：
+ * 
+ * ```
+ *   <image draw_type="center" image="file://./demos/assets/default/raw/images/xx/flag_CN.png" />
+ *   <gif image="file://./demos/assets/default/raw/images/x2/bee.gif" />
+ *   <svg image="file://./demos/assets/default/raw/images/svg/china.bsvg" />
+ *  ```
  *
  */
 public class ImageBase extends Widget {
+ public long nativeObj;
+
  public ImageBase(long nativeObj) {
    super(nativeObj);
  }
@@ -26,8 +39,8 @@ public class ImageBase extends Widget {
 
 /**
  * 设置控件的图片名称。
- * 如果需要显示文件系统中的图片，只需将图片名称换成实际的文件名，并加上"file://"前缀即可。
  * 
+ * 如果需要显示文件系统中的图片，只需将图片名称换成实际的文件名，并加上"file://"前缀即可。
  * 
  * @param widget image对象。
  * @param name 图片名称，该图片必须存在于资源管理器。
@@ -42,7 +55,6 @@ public class ImageBase extends Widget {
 /**
  * 设置控件的旋转角度(仅在WITH_VGCANVAS定义时生效)。
  * 
- * 
  * @param widget 控件对象。
  * @param rotation 旋转角度(幅度)。
  *
@@ -55,7 +67,6 @@ public class ImageBase extends Widget {
 
 /**
  * 设置控件的缩放比例(仅在WITH_VGCANVAS定义时生效)。
- * 
  * 
  * @param widget 控件对象。
  * @param scale_x X方向缩放比例。
@@ -71,7 +82,6 @@ public class ImageBase extends Widget {
 /**
  * 设置控件的锚点(仅在WITH_VGCANVAS定义时生效)。
  * 
- * 
  * @param widget 控件对象。
  * @param anchor_x 锚点X(0-1)。0在控件左边，0.5在控件中间，1在控件右边。
  * @param anchor_y 锚点Y(0-1)。0在控件顶部，0.5在控件中间，1在控件底部。
@@ -86,7 +96,6 @@ public class ImageBase extends Widget {
 /**
  * 设置控件的选中状态。
  * 
- * 
  * @param widget 控件对象。
  * @param selected 是否被选中。
  *
@@ -99,7 +108,6 @@ public class ImageBase extends Widget {
 
 /**
  * 设置控件是否可以被选中。
- * 
  * 
  * @param widget 控件对象。
  * @param selectable 是否可以被选中。
@@ -114,7 +122,6 @@ public class ImageBase extends Widget {
 /**
  * 设置控件是否可以被点击。
  * 
- * 
  * @param widget 控件对象。
  * @param clickable 是否可以被点击。
  *
@@ -127,7 +134,6 @@ public class ImageBase extends Widget {
 
 /**
  * 转换为image_base对象(供脚本语言使用)。
- * 
  * 
  * @param widget image_base对象。
  *

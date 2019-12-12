@@ -3,11 +3,13 @@ package awtk;
 
 /**
  * dragger控件。
- * 目前主要用于scrollbar里的滑块。
  * 
+ *  目前主要用于scrollbar里的滑块。
  *
  */
 public class Dragger extends Widget {
+ public long nativeObj;
+
  public Dragger(long nativeObj) {
    super(nativeObj);
  }
@@ -19,7 +21,6 @@ public class Dragger extends Widget {
 
 /**
  * 创建dragger对象。
- * 
  * 
  * @param parent 父控件
  * @param x x坐标
@@ -37,7 +38,6 @@ public class Dragger extends Widget {
 /**
  * 转换为dragger对象(供脚本语言使用)。
  * 
- * 
  * @param widget dragger对象。
  *
  * @returns dragger对象。
@@ -49,7 +49,6 @@ public class Dragger extends Widget {
 
 /**
  * 设置拖动的范围。
- * 
  * 
  * @param widget dragger控件。
  * @param x_min x坐标最小值。

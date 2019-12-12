@@ -3,11 +3,13 @@ package awtk;
 
 /**
  * 可变的style(可实时修改并生效，主要用于在designer中被编辑的控件，或者一些特殊控件)。
- * style\_mutable也对style\_const进行了包装，当用户没修改某个值时，便从style\_const中获取。
  * 
+ *  style\_mutable也对style\_const进行了包装，当用户没修改某个值时，便从style\_const中获取。
  *
  */
 public class StyleMutable extends Style {
+ public long nativeObj;
+
  public StyleMutable(long nativeObj) {
    super(nativeObj);
  }
@@ -19,7 +21,6 @@ public class StyleMutable extends Style {
 
 /**
  * 设置style的名称。
- * 
  * 
  * @param s style对象。
  * @param name 名称。
@@ -33,7 +34,6 @@ public class StyleMutable extends Style {
 
 /**
  * 设置指定名称整数格式的值。
- * 
  * 
  * @param s style对象。
  * @param state 控件状态。
@@ -50,7 +50,6 @@ public class StyleMutable extends Style {
 /**
  * 转换为style_mutable对象。
  * 
- * 
  * @param s style对象。
  *
  * @returns style对象。
@@ -62,8 +61,8 @@ public class StyleMutable extends Style {
 
 /**
  * 创建style\_mutable对象。
- * 除了测试程序外不需要直接调用，widget会通过style\_factory\_create创建。
  * 
+ * 除了测试程序外不需要直接调用，widget会通过style\_factory\_create创建。
  * 
  * @param widget 控件
  * @param default_style 缺省的style。

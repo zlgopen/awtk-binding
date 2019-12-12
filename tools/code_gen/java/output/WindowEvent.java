@@ -3,10 +3,11 @@ package awtk;
 
 /**
  * 窗口事件，由窗口管理器触发。
- * 
  *
  */
 public class WindowEvent extends Event {
+ public long nativeObj;
+
  public WindowEvent(long nativeObj) {
    super(nativeObj);
  }
@@ -18,7 +19,6 @@ public class WindowEvent extends Event {
 
 /**
  * 把event对象转window_event_t对象。主要给脚本语言使用。
- * 
  * 
  * @param event event对象。
  *

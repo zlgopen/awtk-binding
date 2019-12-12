@@ -3,21 +3,33 @@ package awtk;
 
 /**
  * 多行编辑器控件。
- * mledit\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于mledit\_t控件。
- * 在xml中使用"mledit"标签创建多行编辑器控件。如：
- * ```xml
- * <mledit x="c" y="m" w="300" h="300" />
- * ```
- * 更多用法请参考：[mledit.xml](
- * https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/mledit.xml)
- * 在c代码中使用函数mledit\_create创建多行编辑器控件。如：
- * 完整示例请参考：[mledit demo](
- * https://github.com/zlgopen/awtk-c-demos/blob/master/demos/mledit.c)
- * time\_clock一般不需要设置style。
  * 
+ *  mledit\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于mledit\_t控件。
+ * 
+ *  在xml中使用"mledit"标签创建多行编辑器控件。如：
+ * 
+ *  ```xml
+ *  <mledit x="c" y="m" w="300" h="300" />
+ *  ```
+ * 
+ * 更多用法请参考：[mledit.xml](
+ *  https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/mledit.xml)
+ * 
+ *  在c代码中使用函数mledit\_create创建多行编辑器控件。如：
+ * 
+ *  ```c
+ *  widget_t* tc = mledit_create(win, 10, 10, 240, 240);
+ *  ```
+ * 
+ * 完整示例请参考：[mledit demo](
+ *  https://github.com/zlgopen/awtk-c-demos/blob/master/demos/mledit.c)
+ * 
+ *  time\_clock一般不需要设置style。
  *
  */
 public class Mledit extends Widget {
+ public long nativeObj;
+
  public Mledit(long nativeObj) {
    super(nativeObj);
  }
@@ -29,7 +41,6 @@ public class Mledit extends Widget {
 
 /**
  * 创建mledit对象
- * 
  * 
  * @param parent 父控件
  * @param x x坐标
@@ -47,7 +58,6 @@ public class Mledit extends Widget {
 /**
  * 设置编辑器是否为只读。
  * 
- * 
  * @param widget widget对象。
  * @param readonly 只读。
  *
@@ -60,7 +70,6 @@ public class Mledit extends Widget {
 
 /**
  * 设置为焦点。
- * 
  * 
  * @param widget widget对象。
  * @param focus 是否为焦点。
@@ -75,7 +84,6 @@ public class Mledit extends Widget {
 /**
  * 设置编辑器是否自动折行。
  * 
- * 
  * @param widget widget对象。
  * @param wrap_word 是否自动折行。
  *
@@ -88,7 +96,6 @@ public class Mledit extends Widget {
 
 /**
  * 设置编辑器的最大行数。
- * 
  * 
  * @param widget widget对象。
  * @param max_lines 最大行数。
@@ -103,7 +110,6 @@ public class Mledit extends Widget {
 /**
  * 设置编辑器的输入提示。
  * 
- * 
  * @param widget widget对象。
  * @param tips 输入提示。
  *
@@ -116,7 +122,6 @@ public class Mledit extends Widget {
 
 /**
  * 设置编辑器光标位置。
- * 
  * 
  * @param widget widget对象。
  * @param cursor 光标位置。
@@ -131,7 +136,6 @@ public class Mledit extends Widget {
 /**
  * 设置编辑器滚动速度。
  * 
- * 
  * @param widget widget对象。
  * @param scroll_line 滚动行数。
  *
@@ -144,7 +148,6 @@ public class Mledit extends Widget {
 
 /**
  * 转换为mledit对象(供脚本语言使用)。
- * 
  * 
  * @param widget mledit对象。
  *

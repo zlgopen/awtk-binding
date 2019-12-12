@@ -3,7 +3,6 @@ package awtk;
 
 /**
  * 位图。
- * 
  *
  */
 public class Bitmap {
@@ -21,7 +20,6 @@ public class Bitmap {
 /**
  * 创建图片对象(一般供脚本语言中使用)。
  * 
- * 
  *
  * @returns 返回bitmap对象。
  */
@@ -32,7 +30,6 @@ public class Bitmap {
 
 /**
  * 创建图片对象。
- * 
  * 
  * @param w 宽度。
  * @param h 高度。
@@ -49,7 +46,6 @@ public class Bitmap {
 /**
  * 获取图片一个像素占用的字节数。
  * 
- * 
  * @param bitmap bitmap对象。
  *
  * @returns 返回一个像素占用的字节数。
@@ -61,7 +57,6 @@ public class Bitmap {
 
 /**
  * 销毁图片。
- * 
  * 
  * @param bitmap bitmap对象。
  *

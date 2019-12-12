@@ -3,21 +3,34 @@ package awtk;
 
 /**
  * 色块控件。
- * 用来显示一个颜色块，它通过属性而不是主题来设置颜色，方便在运行时动态改变颜色。
- * 可以使用value属性访问背景颜色的颜色值。
- * color\_tile\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于color\_tile\_t控件。
- * 在xml中使用"color_tile"标签创建色块控件。如：
- * ```xml
- * <color_tile x="c" y="m" w="80" h="30" bg_color="green" />
- * ```
- * 更多用法请参考：
- * [color_tile](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/color_picker_rgb.xml)
- * 在c代码中使用函数color_tile\_create创建色块控件。如：
- * 创建之后，用color\_tile\_set\_bg\_color设置背景颜色。
  * 
+ *  用来显示一个颜色块，它通过属性而不是主题来设置颜色，方便在运行时动态改变颜色。
+ * 
+ *  可以使用value属性访问背景颜色的颜色值。
+ * 
+ *  color\_tile\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于color\_tile\_t控件。
+ * 
+ *  在xml中使用"color_tile"标签创建色块控件。如：
+ * 
+ *  ```xml
+ *  <color_tile x="c" y="m" w="80" h="30" bg_color="green" />
+ *  ```
+ * 
+ * 更多用法请参考：
+ *  [color_tile](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/color_picker_rgb.xml)
+ * 
+ *  在c代码中使用函数color_tile\_create创建色块控件。如：
+ * 
+ *  ```c
+ *   widget_t* color_tile = color_tile_create(win, 10, 10, 128, 30);
+ *   color_tile_set_bg_color(color_tile, "red");
+ *  ```
+ * 创建之后，用color\_tile\_set\_bg\_color设置背景颜色。
  *
  */
 public class ColorTile extends Widget {
+ public long nativeObj;
+
  public ColorTile(long nativeObj) {
    super(nativeObj);
  }
@@ -29,7 +42,6 @@ public class ColorTile extends Widget {
 
 /**
  * 创建color_tile对象
- * 
  * 
  * @param parent 父控件
  * @param x x坐标
@@ -47,7 +59,6 @@ public class ColorTile extends Widget {
 /**
  * 转换为color_tile对象(供脚本语言使用)。
  * 
- * 
  * @param widget color_tile对象。
  *
  * @returns color_tile对象。
@@ -59,7 +70,6 @@ public class ColorTile extends Widget {
 
 /**
  * 设置背景颜色。
- * 
  * 
  * @param widget 控件对象。
  * @param color 背景颜色。

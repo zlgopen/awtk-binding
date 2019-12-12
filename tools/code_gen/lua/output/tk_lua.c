@@ -1250,6 +1250,10 @@ static void event_type_t_init(lua_State* L) {
   lua_pushinteger(L, EVT_WINDOW_LOAD);
   lua_settable(L, -3); 
 
+  lua_pushstring(L, "WIDGET_LOAD");
+  lua_pushinteger(L, EVT_WIDGET_LOAD);
+  lua_settable(L, -3); 
+
   lua_pushstring(L, "WINDOW_WILL_OPEN");
   lua_pushinteger(L, EVT_WINDOW_WILL_OPEN);
   lua_settable(L, -3); 
@@ -2938,6 +2942,14 @@ static void style_id_t_init(lua_State* L) {
   lua_pushstring(L, STYLE_ID_ROUND_RADIUS);
   lua_settable(L, -3); 
 
+  lua_pushstring(L, "_ID_CHILDREN_LAYOUT");
+  lua_pushstring(L, STYLE_ID_CHILDREN_LAYOUT);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "_ID_SELF_LAYOUT");
+  lua_pushstring(L, STYLE_ID_SELF_LAYOUT);
+  lua_settable(L, -3); 
+
 }
 
 static int wrap_style_notify_widget_state_changed(lua_State* L) {
@@ -3890,6 +3902,11 @@ static int wrap_vgcanvas_t_get_prop(lua_State* L) {
   }
   else if(strcmp(name, "h") == 0) {
     lua_pushnumber(L,(lua_Number)(obj->h));
+
+  return 1;
+  }
+  else if(strcmp(name, "stride") == 0) {
+    lua_pushinteger(L,(lua_Integer)(obj->stride));
 
   return 1;
   }

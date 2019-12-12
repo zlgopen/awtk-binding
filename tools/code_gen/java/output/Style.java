@@ -3,9 +3,17 @@ package awtk;
 
 /**
  * 控件风格。
- * widget从style对象中，获取诸如字体、颜色和图片相关的参数，根据这些参数来绘制界面。
- * 属性名称的请参考[style\_id](style_id_t.md)
  * 
+ *  widget从style对象中，获取诸如字体、颜色和图片相关的参数，根据这些参数来绘制界面。
+ * 
+ *  ```c
+ *  style_t* style = widget->astyle;
+ *  int32_t margin = style_get_int(style, STYLE_ID_MARGIN, 2);
+ *  int32_t icon_at = style_get_int(style, STYLE_ID_ICON_AT, ICON_AT_AUTO);
+ *  uint16_t font_size = style_get_int(style, STYLE_ID_FONT_SIZE, TK_DEFAULT_FONT_SIZE);
+ *  ```
+ * 
+ *  属性名称的请参考[style\_id](style_id_t.md)
  *
  */
 public class Style {
@@ -23,7 +31,6 @@ public class Style {
 /**
  * widget状态改变时，通知style更新数据。
  * 
- * 
  * @param s style对象。
  * @param widget 控件对象。
  *
@@ -37,7 +44,6 @@ public class Style {
 /**
  * 检查style对象是否有效
  * 
- * 
  * @param s style对象。
  *
  * @returns 返回是否有效。
@@ -49,7 +55,6 @@ public class Style {
 
 /**
  * 获取指定name的整数格式的值。
- * 
  * 
  * @param s style对象。
  * @param name 属性名。
@@ -65,7 +70,6 @@ public class Style {
 /**
  * 获取指定name的字符串格式的值。
  * 
- * 
  * @param s style对象。
  * @param name 属性名。
  * @param defval 缺省值。
@@ -79,7 +83,6 @@ public class Style {
 
 /**
  * 设置指定状态的指定属性的值(仅仅对mutable的style有效)。
- * 
  * 
  * @param s style对象。
  * @param state 状态。
@@ -95,7 +98,6 @@ public class Style {
 
 /**
  * 检查style是否是mutable的。
- * 
  * 
  * @param s style对象。
  *

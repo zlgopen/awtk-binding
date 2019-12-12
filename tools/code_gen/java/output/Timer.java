@@ -3,27 +3,29 @@ package awtk;
 
 /**
  * 定时器系统。
- * 本定时器精度较低，最高精度为1000/FPS，如果需要高精度的定时器，请用OS提供的定时器。
- * 示例：
- * 在非GUI线程请用timer\_queue。
  * 
+ * 本定时器精度较低，最高精度为1000/FPS，如果需要高精度的定时器，请用OS提供的定时器。
+ * 
+ *  示例：
+ * 
+ *  ```c
+ *  static ret_t my_on_timer(const timer_info_t* info) {
+ *   widget_t* widget = WIDGET(info->ctx);
+ *   ...
+ *   return RET_REPEAT;
+ *  }
+ * 
+ *  ...
+ * 
+ *  timer_add(my_on_timer, widget, 1000);
+ *  ```
+ * 在非GUI线程请用timer\_queue。
  *
  */
 public class Timer {
- public long nativeObj;
-
- public Timer(long nativeObj) {
-   this.nativeObj = nativeObj;
- }
-
- static public Timer cast(long nativeObj) {
-   return new Timer(nativeObj);
- }
-
 
 /**
  * 增加一个timer。
- * 
  * 
  * @param on_timer timer回调函数。
  * @param ctx timer回调函数的上下文。
@@ -39,7 +41,6 @@ public class Timer {
 /**
  * 删除指定的timer。
  * 
- * 
  * @param timer_id timerID。
  *
  * @returns 返回RET_OK表示成功，否则表示失败。
@@ -52,7 +53,6 @@ public class Timer {
 /**
  * 重置指定的timer，重置之后定时器重新开始计时。
  * 
- * 
  * @param timer_id timerID。
  *
  * @returns 返回RET_OK表示成功，否则表示失败。
@@ -64,7 +64,6 @@ public class Timer {
 
 /**
  * 修改指定的timer的duration，修改之后定时器重新开始计时。
- * 
  * 
  * @param timer_id timerID。
  * @param duration 新的时间。

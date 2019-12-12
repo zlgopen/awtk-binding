@@ -3,7 +3,6 @@ package awtk;
 
 /**
  * 剪切板接口。
- * 
  *
  */
 public class ClipBoard {
@@ -21,7 +20,6 @@ public class ClipBoard {
 /**
  * 设置文本(UTF8)数据到剪切板。
  * 
- * 
  * @param text 文本。
  *
  * @returns 返回RET_OK表示成功，否则表示失败。
@@ -33,7 +31,6 @@ public class ClipBoard {
 
 /**
  * 从剪切板中获取文本(UTF8)数据。
- * 
  * 
  *
  * @returns 返回文本数据。

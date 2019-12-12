@@ -3,10 +3,11 @@ package awtk;
 
 /**
  * 对象接口。
- * 
  *
  */
 public class Object extends Emitter {
+ public long nativeObj;
+
  public Object(long nativeObj) {
    super(nativeObj);
  }
@@ -18,7 +19,6 @@ public class Object extends Emitter {
 
 /**
  * 引用计数减1。引用计数为0时，销毁对象。
- * 
  * 
  * @param obj object对象。
  *
@@ -32,7 +32,6 @@ public class Object extends Emitter {
 /**
  * 引用计数加1。
  * 
- * 
  * @param obj object对象。
  *
  * @returns 返回object对象。
@@ -44,7 +43,6 @@ public class Object extends Emitter {
 
 /**
  * 获取对象的类型名称。
- * 
  * 
  * @param obj object对象。
  *
@@ -58,7 +56,6 @@ public class Object extends Emitter {
 /**
  * 获取对象的描述信息。
  * 
- * 
  * @param obj object对象。
  *
  * @returns 返回对象的描述信息。
@@ -70,7 +67,6 @@ public class Object extends Emitter {
 
 /**
  * 获取对象占用内存的大小。
- * 
  * 
  * @param obj object对象。
  *
@@ -84,7 +80,6 @@ public class Object extends Emitter {
 /**
  * 判断对象是否是集合。
  * 
- * 
  * @param obj object对象。
  *
  * @returns 返回TRUE表示是集合，否则不是。
@@ -96,7 +91,6 @@ public class Object extends Emitter {
 
 /**
  * 设置对象的名称。
- * 
  * 
  * @param obj object对象。
  * @param name 对象的名称。
@@ -111,7 +105,6 @@ public class Object extends Emitter {
 /**
  * 比较两个对象。
  * 
- * 
  * @param obj object对象。
  * @param other 比较的object对象。
  *
@@ -124,7 +117,6 @@ public class Object extends Emitter {
 
 /**
  * 获取指定属性的值。
- * 
  * 
  * @param obj object对象。
  * @param name 属性的名称。
@@ -140,7 +132,6 @@ public class Object extends Emitter {
 /**
  * 获取指定属性的字符串类型的值。
  * 
- * 
  * @param obj object对象。
  * @param name 属性的名称。
  *
@@ -153,7 +144,6 @@ public class Object extends Emitter {
 
 /**
  * 获取指定属性的指针类型的值。
- * 
  * 
  * @param obj object对象。
  * @param name 属性的名称。
@@ -168,7 +158,6 @@ public class Object extends Emitter {
 /**
  * 获取指定属性的object类型的值。
  * 
- * 
  * @param obj object对象。
  * @param name 属性的名称。
  *
@@ -181,7 +170,6 @@ public class Object extends Emitter {
 
 /**
  * 获取指定属性的整数类型的值。
- * 
  * 
  * @param obj object对象。
  * @param name 属性的名称。
@@ -197,7 +185,6 @@ public class Object extends Emitter {
 /**
  * 获取指定属性的bool类型的值。
  * 
- * 
  * @param obj object对象。
  * @param name 属性的名称。
  * @param defval 缺省值。
@@ -211,7 +198,6 @@ public class Object extends Emitter {
 
 /**
  * 获取指定属性的浮点数类型的值。
- * 
  * 
  * @param obj object对象。
  * @param name 属性的名称。
@@ -227,7 +213,6 @@ public class Object extends Emitter {
 /**
  * 删除指定属性。
  * 
- * 
  * @param obj object对象。
  * @param name 属性的名称。
  *
@@ -240,7 +225,6 @@ public class Object extends Emitter {
 
 /**
  * 设置指定属性的值。
- * 
  * 
  * @param obj object对象。
  * @param name 属性的名称。
@@ -256,7 +240,6 @@ public class Object extends Emitter {
 /**
  * 设置指定属性的字符串类型的值。
  * 
- * 
  * @param obj object对象。
  * @param name 属性的名称。
  * @param value 属性的值。
@@ -270,7 +253,6 @@ public class Object extends Emitter {
 
 /**
  * 设置指定属性的object类型的值。
- * 
  * 
  * @param obj object对象。
  * @param name 属性的名称。
@@ -286,7 +268,6 @@ public class Object extends Emitter {
 /**
  * 设置指定属性的整数类型的值。
  * 
- * 
  * @param obj object对象。
  * @param name 属性的名称。
  * @param value 属性的值。
@@ -300,7 +281,6 @@ public class Object extends Emitter {
 
 /**
  * 设置指定属性的bool类型的值。
- * 
  * 
  * @param obj object对象。
  * @param name 属性的名称。
@@ -316,7 +296,6 @@ public class Object extends Emitter {
 /**
  * 设置指定属性的浮点数类型的值。
  * 
- * 
  * @param obj object对象。
  * @param name 属性的名称。
  * @param value 属性的值。
@@ -330,7 +309,6 @@ public class Object extends Emitter {
 
 /**
  * 拷贝指定的属性。
- * 
  * 
  * @param obj 目标对象。
  * @param src 源对象。
@@ -346,7 +324,6 @@ public class Object extends Emitter {
 /**
  * 检查是否存在指定的属性。
  * 
- * 
  * @param obj object对象。
  * @param name 属性的名称。
  *
@@ -359,7 +336,6 @@ public class Object extends Emitter {
 
 /**
  * 计算一个表达式，表达式中引用的变量从prop中获取。
- * 
  * 
  * @param obj object对象。
  * @param expr 表达式。
@@ -375,7 +351,6 @@ public class Object extends Emitter {
 /**
  * 检查是否可以执行指定的命令。
  * 
- * 
  * @param obj object对象。
  * @param name 命令的名称。
  * @param args 命令的参数。
@@ -389,7 +364,6 @@ public class Object extends Emitter {
 
 /**
  * 执行指定的命令。
- * 
  * 
  * @param obj object对象。
  * @param name 命令的名称。
@@ -405,7 +379,6 @@ public class Object extends Emitter {
 /**
  * 触发EVT_PROPS_CHANGED事件。
  * 
- * 
  * @param obj object对象。
  *
  * @returns 返回RET_OK表示成功，否则表示失败。
@@ -417,7 +390,6 @@ public class Object extends Emitter {
 
 /**
  * 获取指定属性的字符串类型的值。
- * 
  * 
  * @param obj object对象。
  * @param path 属性的path。
@@ -432,7 +404,6 @@ public class Object extends Emitter {
 /**
  * 获取指定属性的指针类型的值。
  * 
- * 
  * @param obj object对象。
  * @param path 属性的path。
  *
@@ -446,7 +417,6 @@ public class Object extends Emitter {
 /**
  * 获取指定属性的object类型的值。
  * 
- * 
  * @param obj object对象。
  * @param path 属性的path。
  *
@@ -459,7 +429,6 @@ public class Object extends Emitter {
 
 /**
  * 获取指定属性的整数类型的值。
- * 
  * 
  * @param obj object对象。
  * @param path 属性的path。
@@ -475,7 +444,6 @@ public class Object extends Emitter {
 /**
  * 获取指定属性的bool类型的值。
  * 
- * 
  * @param obj object对象。
  * @param path 属性的path。
  * @param defval 缺省值。
@@ -489,7 +457,6 @@ public class Object extends Emitter {
 
 /**
  * 获取指定属性的浮点数类型的值。
- * 
  * 
  * @param obj object对象。
  * @param path 属性的path。

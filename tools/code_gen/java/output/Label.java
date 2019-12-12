@@ -3,32 +3,50 @@ package awtk;
 
 /**
  * 文本控件。用于显示一行或多行文本。
- * 文本控件不会根据文本的长度自动换行，只有文本内容包含换行符时才会换行。
- * 如需自动换行请使用[rich\_text\_t](rich_text_t.md)控件。
- * label\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于label\_t控件。
- * 在xml中使用"label"标签创建文本控件。如：
- * ```xml
- * <label style="center" text="center"/>
- * ```
+ * 
+ *  文本控件不会根据文本的长度自动换行，只有文本内容包含换行符时才会换行。
+ * 
+ *  如需自动换行请使用[rich\_text\_t](rich_text_t.md)控件。
+ * 
+ *  label\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于label\_t控件。
+ * 
+ *  在xml中使用"label"标签创建文本控件。如：
+ * 
+ *  ```xml
+ *  <label style="center" text="center"/>
+ *  ```
+ * 
  * 更多用法请参考：[label.xml](
  * https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/label.xml)
- * 在c代码中使用函数label\_create创建文本控件。如：
+ * 
+ *  在c代码中使用函数label\_create创建文本控件。如：
+ * 
+ *  ```c
+ *   widget_t* label = label_create(win, 10, 10, 128, 30);
+ *   widget_set_text(label, L"hello awtk!");
+ *  ```
+ * 
  * 创建之后，需要用widget\_set\_text或widget\_set\_text\_utf8设置文本内容。
+ * 
  * 完整示例请参考：[label demo](
  * https://github.com/zlgopen/awtk-c-demos/blob/master/demos/label.c)
- * 可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
- * ```xml
- * <style name="left">
- * <normal text_color="red" text_align_h="left" border_color="#a0a0a0" margin="4" />
- * </style>
- * ```
- * 更多用法请参考：
- * [theme default](
- * https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L144)
  * 
+ *  可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
+ * 
+ *  ```xml
+ *   <style name="left">
+ *    <normal text_color="red" text_align_h="left" border_color="#a0a0a0" margin="4" />
+ *   </style>
+ *  ```
+ * 
+ * 更多用法请参考：
+ *  [theme default](
+ * https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L144)
  *
  */
 public class Label extends Widget {
+ public long nativeObj;
+
  public Label(long nativeObj) {
    super(nativeObj);
  }
@@ -40,7 +58,6 @@ public class Label extends Widget {
 
 /**
  * 创建label对象
- * 
  * 
  * @param parent 父控件
  * @param x x坐标
@@ -58,7 +75,6 @@ public class Label extends Widget {
 /**
  * 设置显示字符的个数(小余0时全部显示)。。
  * 
- * 
  * @param widget 控件对象。
  * @param length 最大可显示字符个数。
  *
@@ -71,7 +87,6 @@ public class Label extends Widget {
 
 /**
  * 根据文本内容调节控件大小。
- * 
  * 
  * @param widget 控件对象。
  * @param min_w 最小宽度。
@@ -88,7 +103,6 @@ public class Label extends Widget {
 
 /**
  * 转换为label对象(供脚本语言使用)。
- * 
  * 
  * @param widget label对象。
  *

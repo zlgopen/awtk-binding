@@ -3,7 +3,6 @@ package awtk;
 
 /**
  * 颜色。
- * 
  *
  */
 public class Color {
@@ -20,8 +19,8 @@ public class Color {
 
 /**
  * 创建color对象。
- * 主要供脚本语言使用。
  * 
+ * 主要供脚本语言使用。
  * 
  * @param r 红色通道。
  * @param b 蓝色通道。
@@ -37,8 +36,8 @@ public class Color {
 
 /**
  * 创建color对象。
- * 主要供脚本语言使用。
  * 
+ * 主要供脚本语言使用。
  * 
  * @param c color对象。
  * @param str css类似的颜色值。
@@ -52,8 +51,8 @@ public class Color {
 
 /**
  * 获取红色通道的值。
- * 主要供脚本语言使用。
  * 
+ * 主要供脚本语言使用。
  * 
  * @param c color对象。
  *
@@ -66,8 +65,8 @@ public class Color {
 
 /**
  * 获取绿色通道的值。
- * 主要供脚本语言使用。
  * 
+ * 主要供脚本语言使用。
  * 
  * @param c color对象。
  *
@@ -80,8 +79,8 @@ public class Color {
 
 /**
  * 获取蓝色通道的值。
- * 主要供脚本语言使用。
  * 
+ * 主要供脚本语言使用。
  * 
  * @param c color对象。
  *
@@ -94,8 +93,8 @@ public class Color {
 
 /**
  * 获取alpha通道的值。
- * 主要供脚本语言使用。
  * 
+ * 主要供脚本语言使用。
  * 
  * @param c color对象。
  *
@@ -108,8 +107,8 @@ public class Color {
 
 /**
  * 转换为color对象。
- * 供脚本语言使用。
  * 
+ * 供脚本语言使用。
  * 
  * @param color color对象。
  *
@@ -123,7 +122,6 @@ public class Color {
 /**
  * 销毁color对象。
  * 主要供脚本语言使用。
- * 
  * 
  * @param c color对象。
  *

@@ -3,31 +3,47 @@ package awtk;
 
 /**
  * SVG图片控件。
- * svg\_image\_t是[image\_base\_t](image_base_t.md)的子类控件，image\_base\_t的函数均适用于svg\_image\_t控件。
- * 在xml中使用"svg"标签创建SVG图片控件。如：
- * ```xml
- * <svg image="girl"/>
- * ```
- *更多用法请参考：[svg image](
- * https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/svg_image.xml)
- * 在c代码中使用函数svg\_image\_create创建SVG图片控件。如：
- * 创建之后: 需要用widget\_set\_image设置图片名称。
- * 完整示例请参考：[svg image demo](
- * https://github.com/zlgopen/awtk-c-demos/blob/master/demos/svg_image.c)
- * 可用通过style来设置控件的显示风格，如背景和边框等。如：
- * ```xml
- * <svg>
- * <style name="default">
- * <normal border_color="green" fg_color="red" />
- * </style>
- * </svg>
- * ```
- * 更多用法请参考：[theme default](
- * https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
  * 
+ *  svg\_image\_t是[image\_base\_t](image_base_t.md)的子类控件，image\_base\_t的函数均适用于svg\_image\_t控件。
+ * 
+ *  在xml中使用"svg"标签创建SVG图片控件。如：
+ * 
+ *  ```xml
+ *  <svg image="girl"/>
+ *  ```
+ * 
+ *更多用法请参考：[svg image](
+ *  https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/svg_image.xml)
+ * 
+ *  在c代码中使用函数svg\_image\_create创建SVG图片控件。如：
+ * 
+ *  ```c
+ *   widget_t* image = svg_image_create(win, 10, 10, 200, 200);
+ *   image_set_image(image, "girl");
+ *  ```
+ * 
+ * 创建之后: 需要用widget\_set\_image设置图片名称。
+ * 
+ * 完整示例请参考：[svg image demo](
+ *  https://github.com/zlgopen/awtk-c-demos/blob/master/demos/svg_image.c)
+ * 
+ *  可用通过style来设置控件的显示风格，如背景和边框等。如：
+ * 
+ *  ```xml
+ *  <svg>
+ *  <style name="default">
+ *    <normal border_color="green" fg_color="red" />
+ *  </style>
+ *  </svg>
+ *  ```
+ * 
+ * 更多用法请参考：[theme default](
+ *  https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
  *
  */
 public class SvgImage extends ImageBase {
+ public long nativeObj;
+
  public SvgImage(long nativeObj) {
    super(nativeObj);
  }
@@ -39,7 +55,6 @@ public class SvgImage extends ImageBase {
 
 /**
  * 创建svg_image对象
- * 
  * 
  * @param parent 父控件
  * @param x x坐标
@@ -56,8 +71,8 @@ public class SvgImage extends ImageBase {
 
 /**
  * 设置控件的图片名称。
- * 如果需要显示文件系统中的图片，只需将图片名称换成实际的文件名，并加上"file://"前缀即可。
  * 
+ * 如果需要显示文件系统中的图片，只需将图片名称换成实际的文件名，并加上"file://"前缀即可。
  * 
  * @param widget image对象。
  * @param name 图片名称，该图片必须存在于资源管理器。
@@ -71,7 +86,6 @@ public class SvgImage extends ImageBase {
 
 /**
  * 转换为svg_image对象(供脚本语言使用)。
- * 
  * 
  * @param widget svg_image对象。
  *

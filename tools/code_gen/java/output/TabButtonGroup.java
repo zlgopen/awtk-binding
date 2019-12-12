@@ -3,31 +3,39 @@ package awtk;
 
 /**
  * 标签按钮分组控件。
- * 一个简单的容器，主要用于对标签按钮进行布局和管理。
- * tab\_button\_group\_t是[widget\_t](widget_t.md)的子类控件，
- * widget\_t的函数均适用于tab\_button\_group\_t控件。
- * 在xml中使用"tab\_button\_group"标签创建标签按钮分组控件。如：
- * ```xml
- * <tab_button_group x="c" y="bottom:10" w="90%" h="30" compact="true"
- * <tab_button text="General"/>
- * <tab_button text="Network" value="true" />
- * <tab_button text="Security"/>
- * </tab_button_group>
- * ```
- * 更多用法请参考：
- * [tab control](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
- * 可用通过style来设置控件的显示风格，如颜色等等。如：
- * ```xml
- * <tab_button_group>
- * <style name="default">
- * <normal/>
- * </style>
- * </tab_button_group>
- * ```
  * 
+ *  一个简单的容器，主要用于对标签按钮进行布局和管理。
+ * 
+ *  tab\_button\_group\_t是[widget\_t](widget_t.md)的子类控件，
+ *  widget\_t的函数均适用于tab\_button\_group\_t控件。
+ * 
+ *  在xml中使用"tab\_button\_group"标签创建标签按钮分组控件。如：
+ * 
+ *  ```xml
+ *    <tab_button_group x="c" y="bottom:10" w="90%" h="30" compact="true"
+ *      <tab_button text="General"/>
+ *      <tab_button text="Network" value="true" />
+ *      <tab_button text="Security"/>
+ *    </tab_button_group>
+ *  ```
+ * 
+ * 更多用法请参考：
+ *  [tab control](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
+ * 
+ *  可用通过style来设置控件的显示风格，如颜色等等。如：
+ * 
+ *  ```xml
+ *  <tab_button_group>
+ *   <style name="default">
+ *    <normal/>
+ *   </style>
+ *  </tab_button_group>
+ *  ```
  *
  */
 public class TabButtonGroup extends Widget {
+ public long nativeObj;
+
  public TabButtonGroup(long nativeObj) {
    super(nativeObj);
  }
@@ -39,7 +47,6 @@ public class TabButtonGroup extends Widget {
 
 /**
  * 创建tab_button_group对象
- * 
  * 
  * @param parent 父控件
  * @param x x坐标
@@ -57,7 +64,6 @@ public class TabButtonGroup extends Widget {
 /**
  * 设置compact。
  * 
- * 
  * @param widget 控件对象。
  * @param compact 是否使用紧凑布局(缺省FALSE)。
  *
@@ -71,7 +77,6 @@ public class TabButtonGroup extends Widget {
 /**
  * 设置scrollable。
  * 
- * 
  * @param widget 控件对象。
  * @param scrollable 是否允许滚动(缺省FALSE)。
  *
@@ -84,7 +89,6 @@ public class TabButtonGroup extends Widget {
 
 /**
  * 转换tab_button_group对象(供脚本语言使用)。
- * 
  * 
  * @param widget tab_button_group对象。
  *

@@ -42,6 +42,8 @@ class TypescriptGenerator extends TargetGen {
 
   genConstructor(cls) {
     let result = '';
+
+    result += ' public nativeObj : any;\n';
     result += ' constructor(nativeObj) {\n';
     if (cls.parent) {
       result += '   super(nativeObj);\n';
@@ -83,10 +85,6 @@ class TypescriptGenerator extends TargetGen {
     result += ' }\n\n'
 
     return result;
-  }
-  
-  genClassPre(cls) {
-    return ' public nativeObj : any;\n';
   }
 
   genSetPropertyWithSetter(cls, p) {

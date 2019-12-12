@@ -3,7 +3,6 @@ package awtk;
 
 /**
  * 本地化信息。提供字符串翻译数据管理，当前语言改变的事件通知等等。
- * 
  *
  */
 public class LocaleInfo {
@@ -21,7 +20,6 @@ public class LocaleInfo {
 /**
  * 获取缺省locale_info。
  * 
- * 
  *
  * @returns 返回locale_info对象。
  */
@@ -32,7 +30,6 @@ public class LocaleInfo {
 
 /**
  * 翻译字符串。
- * 
  * 
  * @param locale_info locale_info对象。
  * @param text 待翻译的文本。
@@ -47,7 +44,6 @@ public class LocaleInfo {
 /**
  * 设置当前的国家和语言。
  * 
- * 
  * @param locale_info locale_info对象。
  * @param language 语言。
  * @param country 国家或地区。
@@ -61,7 +57,6 @@ public class LocaleInfo {
 
 /**
  * 注销指定事件的处理函数。
- * 
  * 
  * @param locale_info locale_info对象。
  * @param id locale_info_on返回的ID。

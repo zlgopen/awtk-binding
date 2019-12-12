@@ -3,11 +3,13 @@ package awtk;
 
 /**
  * 对象接口的缺省实现。
- * 内部使用有序数组保存所有属性，可以快速查找指定名称的属性。
  * 
+ *  内部使用有序数组保存所有属性，可以快速查找指定名称的属性。
  *
  */
 public class ObjectDefault extends Object {
+ public long nativeObj;
+
  public ObjectDefault(long nativeObj) {
    super(nativeObj);
  }
@@ -20,7 +22,6 @@ public class ObjectDefault extends Object {
 /**
  * 创建对象。
  * 
- * 
  *
  * @returns 返回object对象。
  */
@@ -31,7 +32,6 @@ public class ObjectDefault extends Object {
 
 /**
  * for script gc
- * 
  * 
  * @param obj 对象。
  *
@@ -44,7 +44,6 @@ public class ObjectDefault extends Object {
 
 /**
  * 清除全部属性。
- * 
  * 
  * @param obj 对象。
  *

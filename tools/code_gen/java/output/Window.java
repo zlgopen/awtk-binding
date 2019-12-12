@@ -3,32 +3,48 @@ package awtk;
 
 /**
  * 窗口。
- * 缺省的应用程序窗口，占用除system\_bar\_t之外的整个区域，请不要修改它的位置和大小(除非你清楚后果)。
- * window\_t是[window\_base\_t](window_base_t.md)的子类控件，window\_base\_t的函数均适用于window\_t控件。
- * 在xml中使用"window"标签创建窗口。无需指定坐标和大小，可以指定主题和动画名称。如：
- * ```xml
- * <window theme="basic" anim_hint="htranslate">
- * ...
- * </window>
- * ```
- *
- * 更多用法请参考：[window.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
- * 在c代码中使用函数window\_create创建窗口。如：
- * 无需指定父控件、坐标和大小，使用0即可。
- * 完整示例请参考：[window
- * demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/)
- * 可用通过style来设置窗口的风格，如背景颜色或图片等。如：
- * ```xml
- * <style name="bricks">
- * <normal bg_image="bricks"  bg_image_draw_type="repeat"/>
- * </style>
- * ```
- * 更多用法请参考：[theme
- * default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L0)
  * 
+ *  缺省的应用程序窗口，占用除system\_bar\_t之外的整个区域，请不要修改它的位置和大小(除非你清楚后果)。
+ * 
+ *  window\_t是[window\_base\_t](window_base_t.md)的子类控件，window\_base\_t的函数均适用于window\_t控件。
+ * 
+ *  在xml中使用"window"标签创建窗口。无需指定坐标和大小，可以指定主题和动画名称。如：
+ * 
+ *  ```xml
+ *  <window theme="basic" anim_hint="htranslate">
+ *  ...
+ *  </window>
+ *  ```
+ * 
+ *
+ *  更多用法请参考：[window.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
+ * 
+ *  在c代码中使用函数window\_create创建窗口。如：
+ * 
+ *  ```c
+ *   widget_t* window = window_create(NULL, 0, 0, 0, 0);
+ *  ```
+ * 
+ * 无需指定父控件、坐标和大小，使用0即可。
+ * 
+ * 完整示例请参考：[window
+ *  demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/)
+ * 
+ *  可用通过style来设置窗口的风格，如背景颜色或图片等。如：
+ * 
+ *  ```xml
+ *  <style name="bricks">
+ *   <normal bg_image="bricks"  bg_image_draw_type="repeat"/>
+ *  </style>
+ *  ```
+ * 
+ * 更多用法请参考：[theme
+ *  default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L0)
  *
  */
 public class Window extends WindowBase {
+ public long nativeObj;
+
  public Window(long nativeObj) {
    super(nativeObj);
  }
@@ -40,7 +56,6 @@ public class Window extends WindowBase {
 
 /**
  * 创建window对象
- * 
  * 
  * @param parent 父控件
  * @param x x坐标
@@ -57,8 +72,8 @@ public class Window extends WindowBase {
 
 /**
  * 设置为全屏窗口。
- *这里全屏是指与LCD相同大小，而非让SDL窗口全屏。
  * 
+ *这里全屏是指与LCD相同大小，而非让SDL窗口全屏。
  * 
  * @param widget window对象。
  * @param fullscreen 是否全屏。
@@ -73,7 +88,6 @@ public class Window extends WindowBase {
 /**
  * 从资源文件中加载并创建window_base对象。本函数在ui_loader/ui_builder_default里实现。
  * 
- * 
  * @param name window的名称。
  *
  * @returns 对象。
@@ -85,7 +99,6 @@ public class Window extends WindowBase {
 
 /**
  * 从资源文件中加载并创建window对象。本函数在ui_loader/ui_builder_default里实现。
- * 
  * 
  * @param name window的名称。
  * @param to_close 关闭该窗口。
@@ -100,7 +113,6 @@ public class Window extends WindowBase {
 /**
  * 关闭窗口。
  * 
- * 
  * @param widget window对象。
  *
  * @returns 返回RET_OK表示成功，否则表示失败。
@@ -113,7 +125,6 @@ public class Window extends WindowBase {
 /**
  * 立即无条件关闭窗口(无动画)。
  * 
- * 
  * @param widget window对象。
  *
  * @returns 返回RET_OK表示成功，否则表示失败。
@@ -125,7 +136,6 @@ public class Window extends WindowBase {
 
 /**
  * 转换为window对象(供脚本语言使用)。
- * 
  * 
  * @param widget window对象。
  *

@@ -3,10 +3,11 @@ package awtk;
 
 /**
  * 单个idle的信息。
- * 
  *
  */
 public class IdleInfo extends Object {
+ public long nativeObj;
+
  public IdleInfo(long nativeObj) {
    super(nativeObj);
  }
@@ -18,7 +19,6 @@ public class IdleInfo extends Object {
 
 /**
  * 转换为idle_info对象(供脚本语言使用)。
- * 
  * 
  * @param idle idle_info对象。
  *
