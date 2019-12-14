@@ -39,7 +39,7 @@
 
 \+ **new TColor**(`nativeObj`: any): *[TColor](_awtk_.tcolor.md)*
 
-*Defined in [awtk.ts:10359](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10359)*
+*Defined in [awtk.ts:10359](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L10359)*
 
 **Parameters:**
 
@@ -55,7 +55,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:10359](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10359)*
+*Defined in [awtk.ts:10359](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L10359)*
 
 ## Accessors
 
@@ -63,7 +63,7 @@ Name | Type |
 
 • **get color**(): *number*
 
-*Defined in [awtk.ts:10473](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10473)*
+*Defined in [awtk.ts:10473](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L10473)*
 
 颜色的数值。
 
@@ -71,7 +71,7 @@ Name | Type |
 
 • **set color**(`v`: number): *void*
 
-*Defined in [awtk.ts:10464](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10464)*
+*Defined in [awtk.ts:10464](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L10464)*
 
 颜色的数值。
 
@@ -89,7 +89,7 @@ Name | Type |
 
 ▸ **a**(): *number*
 
-*Defined in [awtk.ts:10436](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10436)*
+*Defined in [awtk.ts:10436](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L10436)*
 
 获取alpha通道的值。 主要供脚本语言使用。
 
@@ -103,7 +103,7 @@ ___
 
 ▸ **b**(): *number*
 
-*Defined in [awtk.ts:10424](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10424)*
+*Defined in [awtk.ts:10424](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L10424)*
 
 获取蓝色通道的值。 主要供脚本语言使用。
 
@@ -117,7 +117,7 @@ ___
 
 ▸ **destroy**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:10460](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10460)*
+*Defined in [awtk.ts:10460](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L10460)*
 
 销毁color对象。 主要供脚本语言使用。
 
@@ -131,7 +131,7 @@ ___
 
 ▸ **fromStr**(`str`: string): *[TColor](_awtk_.tcolor.md)*
 
-*Defined in [awtk.ts:10388](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10388)*
+*Defined in [awtk.ts:10388](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L10388)*
 
 创建color对象。 主要供脚本语言使用。
 
@@ -151,7 +151,7 @@ ___
 
 ▸ **g**(): *number*
 
-*Defined in [awtk.ts:10412](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10412)*
+*Defined in [awtk.ts:10412](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L10412)*
 
 获取绿色通道的值。 主要供脚本语言使用。
 
@@ -165,7 +165,7 @@ ___
 
 ▸ **r**(): *number*
 
-*Defined in [awtk.ts:10400](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10400)*
+*Defined in [awtk.ts:10400](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L10400)*
 
 获取红色通道的值。 主要供脚本语言使用。
 
@@ -179,7 +179,7 @@ ___
 
 ▸ **cast**(`color`: [TColor](_awtk_.tcolor.md)): *[TColor](_awtk_.tcolor.md)*
 
-*Defined in [awtk.ts:10448](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10448)*
+*Defined in [awtk.ts:10448](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L10448)*
 
 转换为color对象。 供脚本语言使用。
 
@@ -199,7 +199,7 @@ ___
 
 ▸ **create**(`r`: number, `b`: number, `g`: number, `a`: number): *[TColor](_awtk_.tcolor.md)*
 
-*Defined in [awtk.ts:10375](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10375)*
+*Defined in [awtk.ts:10375](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L10375)*
 
 创建color对象。 主要供脚本语言使用。
 

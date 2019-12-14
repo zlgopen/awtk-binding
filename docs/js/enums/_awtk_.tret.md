@@ -36,7 +36,7 @@
 
 • **BAD_PARAMS**: =  RET_BAD_PARAMS()
 
-*Defined in [awtk.ts:8651](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8651)*
+*Defined in [awtk.ts:8651](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8651)*
 
 无效参数。
 
@@ -46,7 +46,7 @@ ___
 
 • **BUSY**: =  RET_BUSY()
 
-*Defined in [awtk.ts:8591](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8591)*
+*Defined in [awtk.ts:8591](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8591)*
 
 对象忙。
 
@@ -56,7 +56,7 @@ ___
 
 • **CONTINUE**: =  RET_CONTINUE()
 
-*Defined in [awtk.ts:8633](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8633)*
+*Defined in [awtk.ts:8633](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8633)*
 
 继续后续操作。
 
@@ -66,7 +66,7 @@ ___
 
 • **CRC**: =  RET_CRC()
 
-*Defined in [awtk.ts:8663](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8663)*
+*Defined in [awtk.ts:8663](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8663)*
 
 CRC错误。
 
@@ -76,7 +76,7 @@ ___
 
 • **DONE**: =  RET_DONE()
 
-*Defined in [awtk.ts:8615](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8615)*
+*Defined in [awtk.ts:8615](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8615)*
 
 操作完成。
 
@@ -86,7 +86,7 @@ ___
 
 • **EOS**: =  RET_EOS()
 
-*Defined in [awtk.ts:8675](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8675)*
+*Defined in [awtk.ts:8675](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8675)*
 
 End of Stream
 
@@ -96,7 +96,7 @@ ___
 
 • **FAIL**: =  RET_FAIL()
 
-*Defined in [awtk.ts:8567](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8567)*
+*Defined in [awtk.ts:8567](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8567)*
 
 失败。
 
@@ -106,7 +106,7 @@ ___
 
 • **FOUND**: =  RET_FOUND()
 
-*Defined in [awtk.ts:8585](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8585)*
+*Defined in [awtk.ts:8585](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8585)*
 
 找到。
 
@@ -116,7 +116,7 @@ ___
 
 • **IO**: =  RET_IO()
 
-*Defined in [awtk.ts:8669](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8669)*
+*Defined in [awtk.ts:8669](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8669)*
 
 IO错误。
 
@@ -126,7 +126,7 @@ ___
 
 • **ITEMS_CHANGED**: =  RET_ITEMS_CHANGED()
 
-*Defined in [awtk.ts:8645](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8645)*
+*Defined in [awtk.ts:8645](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8645)*
 
 集合数目变化。
 
@@ -136,7 +136,7 @@ ___
 
 • **NOT_FOUND**: =  RET_NOT_FOUND()
 
-*Defined in [awtk.ts:8609](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8609)*
+*Defined in [awtk.ts:8609](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8609)*
 
 没找到。
 
@@ -146,7 +146,7 @@ ___
 
 • **NOT_IMPL**: =  RET_NOT_IMPL()
 
-*Defined in [awtk.ts:8573](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8573)*
+*Defined in [awtk.ts:8573](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8573)*
 
 没有实现/不支持。
 
@@ -156,7 +156,7 @@ ___
 
 • **OBJECT_CHANGED**: =  RET_OBJECT_CHANGED()
 
-*Defined in [awtk.ts:8639](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8639)*
+*Defined in [awtk.ts:8639](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8639)*
 
 对象属性变化。
 
@@ -166,7 +166,7 @@ ___
 
 • **OK**: =  RET_OK()
 
-*Defined in [awtk.ts:8555](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8555)*
+*Defined in [awtk.ts:8555](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8555)*
 
 成功。
 
@@ -176,7 +176,7 @@ ___
 
 • **OOM**: =  RET_OOM()
 
-*Defined in [awtk.ts:8561](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8561)*
+*Defined in [awtk.ts:8561](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8561)*
 
 Out of memory。
 
@@ -186,7 +186,7 @@ ___
 
 • **QUIT**: =  RET_QUIT()
 
-*Defined in [awtk.ts:8579](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8579)*
+*Defined in [awtk.ts:8579](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8579)*
 
 退出。通常用于主循环。
 
@@ -196,7 +196,7 @@ ___
 
 • **REMOVE**: =  RET_REMOVE()
 
-*Defined in [awtk.ts:8597](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8597)*
+*Defined in [awtk.ts:8597](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8597)*
 
 移出。通常用于定时器。
 
@@ -206,7 +206,7 @@ ___
 
 • **REPEAT**: =  RET_REPEAT()
 
-*Defined in [awtk.ts:8603](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8603)*
+*Defined in [awtk.ts:8603](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8603)*
 
 重复。通常用于定时器。
 
@@ -216,7 +216,7 @@ ___
 
 • **SKIP**: =  RET_SKIP()
 
-*Defined in [awtk.ts:8627](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8627)*
+*Defined in [awtk.ts:8627](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8627)*
 
 跳过当前项。
 
@@ -226,7 +226,7 @@ ___
 
 • **STOP**: =  RET_STOP()
 
-*Defined in [awtk.ts:8621](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8621)*
+*Defined in [awtk.ts:8621](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8621)*
 
 停止后续操作。
 
@@ -236,6 +236,6 @@ ___
 
 • **TIMEOUT**: =  RET_TIMEOUT()
 
-*Defined in [awtk.ts:8657](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8657)*
+*Defined in [awtk.ts:8657](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L8657)*
 
 超时。

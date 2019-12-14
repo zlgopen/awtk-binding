@@ -23,7 +23,7 @@ TK全局对象。
 
 ▸ **getPointerX**(): *number*
 
-*Defined in [awtk.ts:3014](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3014)*
+*Defined in [awtk.ts:3014](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L3014)*
 
 获取全局指针的X坐标。
 
@@ -37,7 +37,7 @@ ___
 
 ▸ **getPointerY**(): *number*
 
-*Defined in [awtk.ts:3025](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3025)*
+*Defined in [awtk.ts:3025](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L3025)*
 
 获取全局指针的Y坐标。
 
@@ -51,7 +51,7 @@ ___
 
 ▸ **isPointerPressed**(): *boolean*
 
-*Defined in [awtk.ts:3036](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3036)*
+*Defined in [awtk.ts:3036](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L3036)*
 
 获取全局指针是否按下。
 
@@ -65,7 +65,7 @@ ___
 
 ▸ **quit**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:3003](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3003)*
+*Defined in [awtk.ts:3003](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L3003)*
 
 退出TK事件主循环。
 

@@ -20,7 +20,7 @@
 
 • **AUTO**: =  INDICATOR_DEFAULT_PAINT_AUTO()
 
-*Defined in [awtk.ts:9999](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9999)*
+*Defined in [awtk.ts:9999](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L9999)*
 
 自动选择。
 
@@ -30,7 +30,7 @@ ___
 
 • **FILL_DOT**: =  INDICATOR_DEFAULT_PAINT_FILL_DOT()
 
-*Defined in [awtk.ts:10005](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10005)*
+*Defined in [awtk.ts:10005](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L10005)*
 
 实心圆点指示器，当前项填充selected_fg_color，其他填充fg_color。
 
@@ -40,7 +40,7 @@ ___
 
 • **FILL_RECT**: =  INDICATOR_DEFAULT_PAINT_FILL_RECT()
 
-*Defined in [awtk.ts:10017](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10017)*
+*Defined in [awtk.ts:10017](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L10017)*
 
 实心矩形指示器，当前项填充selected_fg_color，其他填充fg_color。
 
@@ -50,7 +50,7 @@ ___
 
 • **STROKE_DOT**: =  INDICATOR_DEFAULT_PAINT_STROKE_DOT()
 
-*Defined in [awtk.ts:10011](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10011)*
+*Defined in [awtk.ts:10011](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L10011)*
 
 镂空圆点指示器，当前项填充selected_fg_color，其他镂空fg_color。
 
@@ -60,6 +60,6 @@ ___
 
 • **STROKE_RECT**: =  INDICATOR_DEFAULT_PAINT_STROKE_RECT()
 
-*Defined in [awtk.ts:10023](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10023)*
+*Defined in [awtk.ts:10023](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L10023)*
 
 镂空矩形指示器，当前项填充selected_fg_color，其他镂空fg_color。
