@@ -51,7 +51,7 @@ public class Bitmap {
  * @returns 返回一个像素占用的字节数。
  */
  public  int getBpp()  {
-   return bitmap_get_bpp(this.nativeObj);
+   return bitmap_get_bpp(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -63,7 +63,7 @@ public class Bitmap {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret destroy()  {
-   return Ret.from(bitmap_destroy(this.nativeObj));
+   return Ret.from(bitmap_destroy(this != null ? (this.nativeObj) : 0));
  }
 
  public int getW() {

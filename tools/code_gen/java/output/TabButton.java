@@ -74,7 +74,7 @@ public class TabButton extends Widget {
  *
  * @returns tab_button对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static TabButton cast(Widget widget)  {
    return new TabButton(tab_button_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -88,7 +88,7 @@ public class TabButton extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setValue(int value)  {
-   return Ret.from(tab_button_set_value(this.nativeObj, value));
+   return Ret.from(tab_button_set_value(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -101,7 +101,7 @@ public class TabButton extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setIcon(String name)  {
-   return Ret.from(tab_button_set_icon(this.nativeObj, name));
+   return Ret.from(tab_button_set_icon(this != null ? (this.nativeObj) : 0, name));
  }
 
 
@@ -114,7 +114,7 @@ public class TabButton extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setActiveIcon(String name)  {
-   return Ret.from(tab_button_set_active_icon(this.nativeObj, name));
+   return Ret.from(tab_button_set_active_icon(this != null ? (this.nativeObj) : 0, name));
  }
 
  public String getActiveIcon() {

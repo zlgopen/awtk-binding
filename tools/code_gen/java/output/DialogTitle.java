@@ -61,7 +61,7 @@ public class DialogTitle extends Widget {
  *
  * @returns dialog_title对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static DialogTitle cast(Widget widget)  {
    return new DialogTitle(dialog_title_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

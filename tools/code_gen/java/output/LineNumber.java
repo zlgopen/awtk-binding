@@ -2,36 +2,7 @@ package awtk;
 
 
 /**
- * 行号。多行编辑器的行号。
- * 
- *  line\_number\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于line\_number\_t控件。
- * 
- *  在xml中使用"lin\e_number"标签创建行号控件，一般配合mledit使用。如：
- * 
- *  ```xml
- *  <mledit x="c" y="10" h="40%" w="90%" focus="true" left_margin="36" right_margin="16"
- *  wrap_word="true">
- *   <line_number x="0" y="0" w="32" h="100%" value="0"/>
- *   <scroll_bar_d x="right" y="0" w="14" h="100%" value="0"/>
- *  </mledit>
- *  ```
- * 
- * 更多用法请参考：[mledit.xml](
- * https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/mledit.xml)
- * 
- *  可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
- * 
- *  ```xml
- *  <line_number>
- *  <style name="default">
- *     <normal text_color="black" bg_color="#d0d0d0" text_align_h="right"/>
- *  </style>
- *  </line_number>
- *  ```
- * 
- * 更多用法请参考：
- *  [theme default](
- * https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L556)
+ * 行号。多行编辑器的行号。 line\_number\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于line\_number\_t控件。 在xml中使用"lin\e_number"标签创建行号控件，一般配合mledit使用。如： ```xml <mledit x="c" y="10" h="40%" w="90%" focus="true" left_margin="36" right_margin="16" wrap_word="true">  <line_number x="0" y="0" w="32" h="100%" value="0"/>  <scroll_bar_d x="right" y="0" w="14" h="100%" value="0"/> </mledit> ``` 更多用法请参考：[mledit.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/mledit.xml) 可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如： ```xml <line_number> <style name="default">    <normal text_color="black" bg_color="#d0d0d0" text_align_h="right"/> </style> </line_number> ``` 更多用法请参考： [theme default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L556)
  *
  */
 public class LineNumber extends Widget {
@@ -71,7 +42,7 @@ public class LineNumber extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setTopMargin(int top_margin)  {
-   return Ret.from(line_number_set_top_margin(this.nativeObj, top_margin));
+   return Ret.from(line_number_set_top_margin(this != null ? (this.nativeObj) : 0, top_margin));
  }
 
 
@@ -84,7 +55,7 @@ public class LineNumber extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setBottomMargin(int bottom_margin)  {
-   return Ret.from(line_number_set_bottom_margin(this.nativeObj, bottom_margin));
+   return Ret.from(line_number_set_bottom_margin(this != null ? (this.nativeObj) : 0, bottom_margin));
  }
 
 
@@ -97,7 +68,7 @@ public class LineNumber extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setLineHeight(int line_height)  {
-   return Ret.from(line_number_set_line_height(this.nativeObj, line_height));
+   return Ret.from(line_number_set_line_height(this != null ? (this.nativeObj) : 0, line_height));
  }
 
 
@@ -110,7 +81,7 @@ public class LineNumber extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setYoffset(int yoffset)  {
-   return Ret.from(line_number_set_yoffset(this.nativeObj, yoffset));
+   return Ret.from(line_number_set_yoffset(this != null ? (this.nativeObj) : 0, yoffset));
  }
 
 
@@ -121,7 +92,7 @@ public class LineNumber extends Widget {
  *
  * @returns line_number对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static LineNumber cast(Widget widget)  {
    return new LineNumber(line_number_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

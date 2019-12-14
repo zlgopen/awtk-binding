@@ -14,6 +14,7 @@
 * [CALIBRATION_WIN](_awtk_.twidgettype.md#calibration_win)
 * [CANDIDATES](_awtk_.twidgettype.md#candidates)
 * [CHECK_BUTTON](_awtk_.twidgettype.md#check_button)
+* [CLIP_VIEW](_awtk_.twidgettype.md#clip_view)
 * [COLOR_COMPONENT](_awtk_.twidgettype.md#color_component)
 * [COLOR_PICKER](_awtk_.twidgettype.md#color_picker)
 * [COLOR_TILE](_awtk_.twidgettype.md#color_tile)
@@ -69,7 +70,7 @@
 
 • **APP_BAR**: =  WIDGET_TYPE_APP_BAR()
 
-*Defined in [awtk.ts:7661](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7661)*
+*Defined in [awtk.ts:7208](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7208)*
 
 AppBar控件。
 
@@ -79,7 +80,7 @@ ___
 
 • **BUTTON**: =  WIDGET_TYPE_BUTTON()
 
-*Defined in [awtk.ts:7416](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7416)*
+*Defined in [awtk.ts:6992](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L6992)*
 
 按钮控件。
 
@@ -89,7 +90,7 @@ ___
 
 • **BUTTON_GROUP**: =  WIDGET_TYPE_BUTTON_GROUP()
 
-*Defined in [awtk.ts:7556](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7556)*
+*Defined in [awtk.ts:7112](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7112)*
 
 按钮分组控件。
 
@@ -99,7 +100,7 @@ ___
 
 • **CALIBRATION_WIN**: =  WIDGET_TYPE_CALIBRATION_WIN()
 
-*Defined in [awtk.ts:7696](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7696)*
+*Defined in [awtk.ts:7238](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7238)*
 
 电阻屏校准窗口。
 
@@ -109,7 +110,7 @@ ___
 
 • **CANDIDATES**: =  WIDGET_TYPE_CANDIDATES()
 
-*Defined in [awtk.ts:7563](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7563)*
+*Defined in [awtk.ts:7118](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7118)*
 
 候选字控件。
 
@@ -119,9 +120,19 @@ ___
 
 • **CHECK_BUTTON**: =  WIDGET_TYPE_CHECK_BUTTON()
 
-*Defined in [awtk.ts:7451](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7451)*
+*Defined in [awtk.ts:7022](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7022)*
 
 多选按钮控件。
+
+___
+
+###  CLIP_VIEW
+
+• **CLIP_VIEW**: =  WIDGET_TYPE_CLIP_VIEW()
+
+*Defined in [awtk.ts:7196](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7196)*
+
+裁剪控件。
 
 ___
 
@@ -129,7 +140,7 @@ ___
 
 • **COLOR_COMPONENT**: =  WIDGET_TYPE_COLOR_COMPONENT()
 
-*Defined in [awtk.ts:7640](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7640)*
+*Defined in [awtk.ts:7184](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7184)*
 
 颜色选择器组件控件。
 
@@ -139,7 +150,7 @@ ___
 
 • **COLOR_PICKER**: =  WIDGET_TYPE_COLOR_PICKER()
 
-*Defined in [awtk.ts:7633](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7633)*
+*Defined in [awtk.ts:7178](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7178)*
 
 颜色选择器控件。
 
@@ -149,7 +160,7 @@ ___
 
 • **COLOR_TILE**: =  WIDGET_TYPE_COLOR_TILE()
 
-*Defined in [awtk.ts:7647](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7647)*
+*Defined in [awtk.ts:7190](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7190)*
 
 颜色块控件。
 
@@ -159,7 +170,7 @@ ___
 
 • **COLUMN**: =  WIDGET_TYPE_COLUMN()
 
-*Defined in [awtk.ts:7689](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7689)*
+*Defined in [awtk.ts:7232](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7232)*
 
 列控件。
 
@@ -169,7 +180,7 @@ ___
 
 • **COMBO_BOX**: =  WIDGET_TYPE_COMBO_BOX()
 
-*Defined in [awtk.ts:7493](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7493)*
+*Defined in [awtk.ts:7058](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7058)*
 
 下拉选择框控件。
 
@@ -179,7 +190,7 @@ ___
 
 • **COMBO_BOX_ITEM**: =  WIDGET_TYPE_COMBO_BOX_ITEM()
 
-*Defined in [awtk.ts:7500](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7500)*
+*Defined in [awtk.ts:7064](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7064)*
 
 下拉选择框的列表项控件。
 
@@ -189,7 +200,7 @@ ___
 
 • **DIALOG**: =  WIDGET_TYPE_DIALOG()
 
-*Defined in [awtk.ts:7360](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7360)*
+*Defined in [awtk.ts:6944](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L6944)*
 
 对话框。
 
@@ -199,7 +210,7 @@ ___
 
 • **DIALOG_CLIENT**: =  WIDGET_TYPE_DIALOG_CLIENT()
 
-*Defined in [awtk.ts:7472](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7472)*
+*Defined in [awtk.ts:7040](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7040)*
 
 对话框客户区域。
 
@@ -209,7 +220,7 @@ ___
 
 • **DIALOG_TITLE**: =  WIDGET_TYPE_DIALOG_TITLE()
 
-*Defined in [awtk.ts:7465](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7465)*
+*Defined in [awtk.ts:7034](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7034)*
 
 对话框标题。
 
@@ -219,7 +230,7 @@ ___
 
 • **DND**: =  WIDGET_TYPE_DND()
 
-*Defined in [awtk.ts:7402](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7402)*
+*Defined in [awtk.ts:6980](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L6980)*
 
 拖放状态窗口。
 
@@ -229,7 +240,7 @@ ___
 
 • **DRAGGER**: =  WIDGET_TYPE_DRAGGER()
 
-*Defined in [awtk.ts:7577](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7577)*
+*Defined in [awtk.ts:7130](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7130)*
 
 拖动块控件。
 
@@ -239,7 +250,7 @@ ___
 
 • **EDIT**: =  WIDGET_TYPE_EDIT()
 
-*Defined in [awtk.ts:7430](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7430)*
+*Defined in [awtk.ts:7004](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7004)*
 
 文本编辑控件。
 
@@ -249,7 +260,7 @@ ___
 
 • **GRID**: =  WIDGET_TYPE_GRID()
 
-*Defined in [awtk.ts:7668](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7668)*
+*Defined in [awtk.ts:7214](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7214)*
 
 网格控件。
 
@@ -259,7 +270,7 @@ ___
 
 • **GRID_ITEM**: =  WIDGET_TYPE_GRID_ITEM()
 
-*Defined in [awtk.ts:7675](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7675)*
+*Defined in [awtk.ts:7220](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7220)*
 
 网格项目控件。
 
@@ -269,7 +280,7 @@ ___
 
 • **GROUP_BOX**: =  WIDGET_TYPE_GROUP_BOX()
 
-*Defined in [awtk.ts:7444](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7444)*
+*Defined in [awtk.ts:7016](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7016)*
 
 分组控件。
 
@@ -279,7 +290,7 @@ ___
 
 • **IMAGE**: =  WIDGET_TYPE_IMAGE()
 
-*Defined in [awtk.ts:7423](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7423)*
+*Defined in [awtk.ts:6998](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L6998)*
 
 图片控件。
 
@@ -289,7 +300,7 @@ ___
 
 • **KEYBOARD**: =  WIDGET_TYPE_KEYBOARD()
 
-*Defined in [awtk.ts:7395](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7395)*
+*Defined in [awtk.ts:6974](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L6974)*
 
 键盘窗口。
 
@@ -299,7 +310,7 @@ ___
 
 • **LABEL**: =  WIDGET_TYPE_LABEL()
 
-*Defined in [awtk.ts:7409](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7409)*
+*Defined in [awtk.ts:6986](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L6986)*
 
 文本控件。
 
@@ -309,7 +320,7 @@ ___
 
 • **LIST_ITEM**: =  WIDGET_TYPE_LIST_ITEM()
 
-*Defined in [awtk.ts:7626](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7626)*
+*Defined in [awtk.ts:7172](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7172)*
 
 列表项控件。
 
@@ -319,7 +330,7 @@ ___
 
 • **LIST_VIEW**: =  WIDGET_TYPE_LIST_VIEW()
 
-*Defined in [awtk.ts:7612](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7612)*
+*Defined in [awtk.ts:7160](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7160)*
 
 列表视图控件。
 
@@ -329,7 +340,7 @@ ___
 
 • **LIST_VIEW_H**: =  WIDGET_TYPE_LIST_VIEW_H()
 
-*Defined in [awtk.ts:7619](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7619)*
+*Defined in [awtk.ts:7166](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7166)*
 
 水平列表视图控件。
 
@@ -339,7 +350,7 @@ ___
 
 • **NONE**: =  WIDGET_TYPE_NONE()
 
-*Defined in [awtk.ts:7325](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7325)*
+*Defined in [awtk.ts:6914](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L6914)*
 
 无特殊类型。
 
@@ -349,7 +360,7 @@ ___
 
 • **NORMAL_WINDOW**: =  WIDGET_TYPE_NORMAL_WINDOW()
 
-*Defined in [awtk.ts:7339](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7339)*
+*Defined in [awtk.ts:6926](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L6926)*
 
 普通窗口。
 
@@ -359,7 +370,7 @@ ___
 
 • **OVERLAY**: =  WIDGET_TYPE_OVERLAY()
 
-*Defined in [awtk.ts:7346](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7346)*
+*Defined in [awtk.ts:6932](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L6932)*
 
 overlay窗口。
 
@@ -369,7 +380,7 @@ ___
 
 • **PAGES**: =  WIDGET_TYPE_PAGES()
 
-*Defined in [awtk.ts:7528](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7528)*
+*Defined in [awtk.ts:7088](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7088)*
 
 多页控件。
 
@@ -379,7 +390,7 @@ ___
 
 • **POPUP**: =  WIDGET_TYPE_POPUP()
 
-*Defined in [awtk.ts:7367](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7367)*
+*Defined in [awtk.ts:6950](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L6950)*
 
 弹出窗口。
 
@@ -389,7 +400,7 @@ ___
 
 • **PROGRESS_BAR**: =  WIDGET_TYPE_PROGRESS_BAR()
 
-*Defined in [awtk.ts:7437](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7437)*
+*Defined in [awtk.ts:7010](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7010)*
 
 进度条控件。
 
@@ -399,7 +410,7 @@ ___
 
 • **RADIO_BUTTON**: =  WIDGET_TYPE_RADIO_BUTTON()
 
-*Defined in [awtk.ts:7458](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7458)*
+*Defined in [awtk.ts:7028](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7028)*
 
 单选按钮控件。
 
@@ -409,7 +420,7 @@ ___
 
 • **RICH_TEXT**: =  WIDGET_TYPE_RICH_TEXT()
 
-*Defined in [awtk.ts:7654](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7654)*
+*Defined in [awtk.ts:7202](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7202)*
 
 富文本控件。
 
@@ -419,7 +430,7 @@ ___
 
 • **ROW**: =  WIDGET_TYPE_ROW()
 
-*Defined in [awtk.ts:7682](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7682)*
+*Defined in [awtk.ts:7226](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7226)*
 
 行控件。
 
@@ -429,7 +440,7 @@ ___
 
 • **SCROLL_BAR**: =  WIDGET_TYPE_SCROLL_BAR()
 
-*Defined in [awtk.ts:7584](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7584)*
+*Defined in [awtk.ts:7136](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7136)*
 
 滚动条控件。
 
@@ -439,7 +450,7 @@ ___
 
 • **SCROLL_BAR_DESKTOP**: =  WIDGET_TYPE_SCROLL_BAR_DESKTOP()
 
-*Defined in [awtk.ts:7591](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7591)*
+*Defined in [awtk.ts:7142](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7142)*
 
 桌面版滚动条控件。
 
@@ -449,7 +460,7 @@ ___
 
 • **SCROLL_BAR_MOBILE**: =  WIDGET_TYPE_SCROLL_BAR_MOBILE()
 
-*Defined in [awtk.ts:7598](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7598)*
+*Defined in [awtk.ts:7148](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7148)*
 
 移动版滚动条控件。
 
@@ -459,7 +470,7 @@ ___
 
 • **SCROLL_VIEW**: =  WIDGET_TYPE_SCROLL_VIEW()
 
-*Defined in [awtk.ts:7605](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7605)*
+*Defined in [awtk.ts:7154](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7154)*
 
 滚动视图控件。
 
@@ -469,7 +480,7 @@ ___
 
 • **SLIDER**: =  WIDGET_TYPE_SLIDER()
 
-*Defined in [awtk.ts:7479](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7479)*
+*Defined in [awtk.ts:7046](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7046)*
 
 滑块控件。
 
@@ -479,7 +490,7 @@ ___
 
 • **SLIDE_INDICATOR**: =  WIDGET_TYPE_SLIDE_INDICATOR()
 
-*Defined in [awtk.ts:7514](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7514)*
+*Defined in [awtk.ts:7076](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7076)*
 
 滑动视图的指示器控件。
 
@@ -489,7 +500,7 @@ ___
 
 • **SLIDE_INDICATOR_ARC**: =  WIDGET_TYPE_SLIDE_INDICATOR_ARC()
 
-*Defined in [awtk.ts:7521](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7521)*
+*Defined in [awtk.ts:7082](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7082)*
 
 滑动视图的指示器控件（圆弧显示）。
 
@@ -499,7 +510,7 @@ ___
 
 • **SLIDE_VIEW**: =  WIDGET_TYPE_SLIDE_VIEW()
 
-*Defined in [awtk.ts:7507](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7507)*
+*Defined in [awtk.ts:7070](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7070)*
 
 滑动视图控件。
 
@@ -509,7 +520,7 @@ ___
 
 • **SPIN_BOX**: =  WIDGET_TYPE_SPIN_BOX()
 
-*Defined in [awtk.ts:7570](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7570)*
+*Defined in [awtk.ts:7124](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7124)*
 
 数值编辑控件。
 
@@ -519,7 +530,7 @@ ___
 
 • **SPRITE**: =  WIDGET_TYPE_SPRITE()
 
-*Defined in [awtk.ts:7388](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7388)*
+*Defined in [awtk.ts:6968](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L6968)*
 
 精灵窗口。
 
@@ -529,7 +540,7 @@ ___
 
 • **SYSTEM_BAR**: =  WIDGET_TYPE_SYSTEM_BAR()
 
-*Defined in [awtk.ts:7374](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7374)*
+*Defined in [awtk.ts:6956](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L6956)*
 
 system bar window
 
@@ -539,7 +550,7 @@ ___
 
 • **SYSTEM_BAR_BOTTOM**: =  WIDGET_TYPE_SYSTEM_BAR_BOTTOM()
 
-*Defined in [awtk.ts:7381](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7381)*
+*Defined in [awtk.ts:6962](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L6962)*
 
 system bar window ato bottom
 
@@ -549,7 +560,7 @@ ___
 
 • **TAB_BUTTON**: =  WIDGET_TYPE_TAB_BUTTON()
 
-*Defined in [awtk.ts:7535](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7535)*
+*Defined in [awtk.ts:7094](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7094)*
 
 标签按钮控件。
 
@@ -559,7 +570,7 @@ ___
 
 • **TAB_BUTTON_GROUP**: =  WIDGET_TYPE_TAB_BUTTON_GROUP()
 
-*Defined in [awtk.ts:7549](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7549)*
+*Defined in [awtk.ts:7106](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7106)*
 
 标签按钮分组控件。
 
@@ -569,7 +580,7 @@ ___
 
 • **TAB_CONTROL**: =  WIDGET_TYPE_TAB_CONTROL()
 
-*Defined in [awtk.ts:7542](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7542)*
+*Defined in [awtk.ts:7100](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7100)*
 
 标签控件。
 
@@ -579,7 +590,7 @@ ___
 
 • **TOOL_BAR**: =  WIDGET_TYPE_TOOL_BAR()
 
-*Defined in [awtk.ts:7353](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7353)*
+*Defined in [awtk.ts:6938](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L6938)*
 
 工具条。
 
@@ -589,7 +600,7 @@ ___
 
 • **VIEW**: =  WIDGET_TYPE_VIEW()
 
-*Defined in [awtk.ts:7486](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7486)*
+*Defined in [awtk.ts:7052](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L7052)*
 
 视图控件。
 
@@ -599,6 +610,6 @@ ___
 
 • **WINDOW_MANAGER**: =  WIDGET_TYPE_WINDOW_MANAGER()
 
-*Defined in [awtk.ts:7332](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L7332)*
+*Defined in [awtk.ts:6920](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L6920)*
 
 窗口管理器。

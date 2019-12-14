@@ -39,7 +39,7 @@
 
 \+ **new TColor**(`nativeObj`: any): *[TColor](_awtk_.tcolor.md)*
 
-*Defined in [awtk.ts:10993](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L10993)*
+*Defined in [awtk.ts:10359](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10359)*
 
 **Parameters:**
 
@@ -55,7 +55,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:10993](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L10993)*
+*Defined in [awtk.ts:10359](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10359)*
 
 ## Accessors
 
@@ -63,7 +63,7 @@ Name | Type |
 
 • **get color**(): *number*
 
-*Defined in [awtk.ts:11124](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L11124)*
+*Defined in [awtk.ts:10473](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10473)*
 
 颜色的数值。
 
@@ -71,7 +71,7 @@ Name | Type |
 
 • **set color**(`v`: number): *void*
 
-*Defined in [awtk.ts:11114](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L11114)*
+*Defined in [awtk.ts:10464](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10464)*
 
 颜色的数值。
 
@@ -89,10 +89,9 @@ Name | Type |
 
 ▸ **a**(): *number*
 
-*Defined in [awtk.ts:11082](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L11082)*
+*Defined in [awtk.ts:10436](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10436)*
 
-获取alpha通道的值。
-主要供脚本语言使用。
+获取alpha通道的值。 主要供脚本语言使用。
 
 **Returns:** *number*
 
@@ -104,10 +103,9 @@ ___
 
 ▸ **b**(): *number*
 
-*Defined in [awtk.ts:11068](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L11068)*
+*Defined in [awtk.ts:10424](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10424)*
 
-获取蓝色通道的值。
-主要供脚本语言使用。
+获取蓝色通道的值。 主要供脚本语言使用。
 
 **Returns:** *number*
 
@@ -119,10 +117,9 @@ ___
 
 ▸ **destroy**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:11110](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L11110)*
+*Defined in [awtk.ts:10460](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10460)*
 
-销毁color对象。
-主要供脚本语言使用。
+销毁color对象。 主要供脚本语言使用。
 
 **Returns:** *[TRet](../enums/_awtk_.tret.md)*
 
@@ -134,10 +131,9 @@ ___
 
 ▸ **fromStr**(`str`: string): *[TColor](_awtk_.tcolor.md)*
 
-*Defined in [awtk.ts:11026](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L11026)*
+*Defined in [awtk.ts:10388](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10388)*
 
-创建color对象。
-主要供脚本语言使用。
+创建color对象。 主要供脚本语言使用。
 
 **Parameters:**
 
@@ -155,10 +151,9 @@ ___
 
 ▸ **g**(): *number*
 
-*Defined in [awtk.ts:11054](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L11054)*
+*Defined in [awtk.ts:10412](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10412)*
 
-获取绿色通道的值。
-主要供脚本语言使用。
+获取绿色通道的值。 主要供脚本语言使用。
 
 **Returns:** *number*
 
@@ -170,10 +165,9 @@ ___
 
 ▸ **r**(): *number*
 
-*Defined in [awtk.ts:11040](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L11040)*
+*Defined in [awtk.ts:10400](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10400)*
 
-获取红色通道的值。
-主要供脚本语言使用。
+获取红色通道的值。 主要供脚本语言使用。
 
 **Returns:** *number*
 
@@ -185,10 +179,9 @@ ___
 
 ▸ **cast**(`color`: [TColor](_awtk_.tcolor.md)): *[TColor](_awtk_.tcolor.md)*
 
-*Defined in [awtk.ts:11096](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L11096)*
+*Defined in [awtk.ts:10448](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10448)*
 
-转换为color对象。
-供脚本语言使用。
+转换为color对象。 供脚本语言使用。
 
 **Parameters:**
 
@@ -206,10 +199,9 @@ ___
 
 ▸ **create**(`r`: number, `b`: number, `g`: number, `a`: number): *[TColor](_awtk_.tcolor.md)*
 
-*Defined in [awtk.ts:11011](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L11011)*
+*Defined in [awtk.ts:10375](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L10375)*
 
-创建color对象。
-主要供脚本语言使用。
+创建color对象。 主要供脚本语言使用。
 
 **Parameters:**
 

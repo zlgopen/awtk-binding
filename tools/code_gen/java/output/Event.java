@@ -18,9 +18,7 @@ public class Event {
 
 
 /**
- * 转换为event对象。
- * 
- * 供脚本语言使用
+ * 转换为event对象。 供脚本语言使用
  * 
  * @param event event对象。
  *
@@ -32,9 +30,7 @@ public class Event {
 
 
 /**
- * 创建event对象。
- * 
- *  主要给脚本语言使用。
+ * 创建event对象。 主要给脚本语言使用。
  * 
  * @param type 事件类型。
  *
@@ -46,16 +42,14 @@ public class Event {
 
 
 /**
- * 销毁事件对象。
- * 
- *  主要给脚本语言使用。
+ * 销毁事件对象。 主要给脚本语言使用。
  * 
  * @param event event对象。
  *
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret destroy()  {
-   return Ret.from(event_destroy(this.nativeObj));
+   return Ret.from(event_destroy(this != null ? (this.nativeObj) : 0));
  }
 
  public int getType() {

@@ -6,7 +6,7 @@ class TypescriptGenerator extends TargetGen {
     super()
   }
   
-  genGetNativeObj(name, isCast) {
+  genGetNativeObj(type, name, isCast) {
     if(isCast) {
       return `${name} != ${this.getNull()} ? (${name}.nativeObj || ${name}) : ${this.getNativeNull()}`;
     } else {
@@ -63,11 +63,7 @@ class TypescriptGenerator extends TargetGen {
   }
 
   genFuncDecl(cls, m, name) {
-    let retType = m.return.type;
-
-    if(this.isCast(m)) {
-      retType = cls.name;
-    }
+    let retType = this.isCast(m) ? cls.name : m.return.type;
 
     return `${name}${this.genParamList(m)} : ${this.mapType(retType)} `;
   }

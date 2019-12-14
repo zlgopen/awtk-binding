@@ -2,26 +2,7 @@ package awtk;
 
 
 /**
- * 输入法接口。
- * 
- *  常见的实现方式有以下几种：
- * 
- *  * 空实现。用于不需要输入法的嵌入式平台。
- * 
- *  * 缺省实现。用于需要输入法的嵌入式平台。
- * 
- *  * 基于SDL实现的平台原生输入法。用于桌面系统和手机系统。
- * 
- *  ```graphviz
- *   [default_style]
- * 
- *   input_method_default_t -> input_method_t [arrowhead=empty style=dashed]
- *   input_method_sdl_t -> input_method_t [arrowhead=empty style=dashed]
- *   input_method_null_t -> input_method_t [arrowhead=empty style=dashed]
- * 
- *  ```
- * 
- * 输入类型请参考：[input\_type](input_type_t.md)
+ * 输入法接口。 常见的实现方式有以下几种： * 空实现。用于不需要输入法的嵌入式平台。 * 缺省实现。用于需要输入法的嵌入式平台。 * 基于SDL实现的平台原生输入法。用于桌面系统和手机系统。 ```graphviz  [default_style]  input_method_default_t -> input_method_t [arrowhead=empty style=dashed]  input_method_sdl_t -> input_method_t [arrowhead=empty style=dashed]  input_method_null_t -> input_method_t [arrowhead=empty style=dashed] ``` 输入类型请参考：[input\_type](input_type_t.md)
  *
  */
 public class InputMethod {
@@ -45,7 +26,7 @@ public class InputMethod {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret commitText(String text)  {
-   return Ret.from(input_method_commit_text(this.nativeObj, text));
+   return Ret.from(input_method_commit_text(this != null ? (this.nativeObj) : 0, text));
  }
 
 
@@ -58,7 +39,7 @@ public class InputMethod {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret dispatchKey(int key)  {
-   return Ret.from(input_method_dispatch_key(this.nativeObj, key));
+   return Ret.from(input_method_dispatch_key(this != null ? (this.nativeObj) : 0, key));
  }
 
 

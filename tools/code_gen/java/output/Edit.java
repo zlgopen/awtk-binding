@@ -93,7 +93,7 @@ public class Edit extends Widget {
  *
  * @returns edit对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static Edit cast(Widget widget)  {
    return new Edit(edit_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -106,7 +106,7 @@ public class Edit extends Widget {
  * @returns 返回int的值。
  */
  public  int getInt()  {
-   return edit_get_int(this.nativeObj);
+   return edit_get_int(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -118,7 +118,7 @@ public class Edit extends Widget {
  * @returns 返回double的值。
  */
  public  double getDouble()  {
-   return edit_get_double(this.nativeObj);
+   return edit_get_double(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -131,7 +131,7 @@ public class Edit extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setInt(int value)  {
-   return Ret.from(edit_set_int(this.nativeObj, value));
+   return Ret.from(edit_set_int(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -144,7 +144,7 @@ public class Edit extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setDouble(double value)  {
-   return Ret.from(edit_set_double(this.nativeObj, value));
+   return Ret.from(edit_set_double(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -158,7 +158,7 @@ public class Edit extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setTextLimit(int min, int max)  {
-   return Ret.from(edit_set_text_limit(this.nativeObj, min, max));
+   return Ret.from(edit_set_text_limit(this != null ? (this.nativeObj) : 0, min, max));
  }
 
 
@@ -173,7 +173,7 @@ public class Edit extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setIntLimit(int min, int max, int step)  {
-   return Ret.from(edit_set_int_limit(this.nativeObj, min, max, step));
+   return Ret.from(edit_set_int_limit(this != null ? (this.nativeObj) : 0, min, max, step));
  }
 
 
@@ -188,7 +188,7 @@ public class Edit extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setFloatLimit(double min, double max, double step)  {
-   return Ret.from(edit_set_float_limit(this.nativeObj, min, max, step));
+   return Ret.from(edit_set_float_limit(this != null ? (this.nativeObj) : 0, min, max, step));
  }
 
 
@@ -201,7 +201,7 @@ public class Edit extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setReadonly(boolean readonly)  {
-   return Ret.from(edit_set_readonly(this.nativeObj, readonly));
+   return Ret.from(edit_set_readonly(this != null ? (this.nativeObj) : 0, readonly));
  }
 
 
@@ -214,7 +214,7 @@ public class Edit extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setAutoFix(boolean auto_fix)  {
-   return Ret.from(edit_set_auto_fix(this.nativeObj, auto_fix));
+   return Ret.from(edit_set_auto_fix(this != null ? (this.nativeObj) : 0, auto_fix));
  }
 
 
@@ -227,7 +227,7 @@ public class Edit extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setSelectNoneWhenFocused(boolean select_none_when_focused)  {
-   return Ret.from(edit_set_select_none_when_focused(this.nativeObj, select_none_when_focused));
+   return Ret.from(edit_set_select_none_when_focused(this != null ? (this.nativeObj) : 0, select_none_when_focused));
  }
 
 
@@ -240,7 +240,7 @@ public class Edit extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setOpenImWhenFocused(boolean open_im_when_focused)  {
-   return Ret.from(edit_set_open_im_when_focused(this.nativeObj, open_im_when_focused));
+   return Ret.from(edit_set_open_im_when_focused(this != null ? (this.nativeObj) : 0, open_im_when_focused));
  }
 
 
@@ -253,7 +253,7 @@ public class Edit extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setInputType(InputType type)  {
-   return Ret.from(edit_set_input_type(this.nativeObj, type.value()));
+   return Ret.from(edit_set_input_type(this != null ? (this.nativeObj) : 0, type.value()));
  }
 
 
@@ -266,7 +266,7 @@ public class Edit extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setInputTips(String tips)  {
-   return Ret.from(edit_set_input_tips(this.nativeObj, tips));
+   return Ret.from(edit_set_input_tips(this != null ? (this.nativeObj) : 0, tips));
  }
 
 
@@ -279,7 +279,7 @@ public class Edit extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setPasswordVisible(boolean password_visible)  {
-   return Ret.from(edit_set_password_visible(this.nativeObj, password_visible));
+   return Ret.from(edit_set_password_visible(this != null ? (this.nativeObj) : 0, password_visible));
  }
 
 
@@ -292,7 +292,7 @@ public class Edit extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setFocus(boolean focus)  {
-   return Ret.from(edit_set_focus(this.nativeObj, focus));
+   return Ret.from(edit_set_focus(this != null ? (this.nativeObj) : 0, focus));
  }
 
 
@@ -305,7 +305,7 @@ public class Edit extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setCursor(int cursor)  {
-   return Ret.from(edit_set_cursor(this.nativeObj, cursor));
+   return Ret.from(edit_set_cursor(this != null ? (this.nativeObj) : 0, cursor));
  }
 
  public boolean getReadonly() {

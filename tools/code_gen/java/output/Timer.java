@@ -2,24 +2,7 @@ package awtk;
 
 
 /**
- * 定时器系统。
- * 
- * 本定时器精度较低，最高精度为1000/FPS，如果需要高精度的定时器，请用OS提供的定时器。
- * 
- *  示例：
- * 
- *  ```c
- *  static ret_t my_on_timer(const timer_info_t* info) {
- *   widget_t* widget = WIDGET(info->ctx);
- *   ...
- *   return RET_REPEAT;
- *  }
- * 
- *  ...
- * 
- *  timer_add(my_on_timer, widget, 1000);
- *  ```
- * 在非GUI线程请用timer\_queue。
+ * 定时器系统。 本定时器精度较低，最高精度为1000/FPS，如果需要高精度的定时器，请用OS提供的定时器。 示例： ```c static ret_t my_on_timer(const timer_info_t* info) {  widget_t* widget = WIDGET(info->ctx);  ...  return RET_REPEAT; } ... timer_add(my_on_timer, widget, 1000); ``` 在非GUI线程请用timer\_queue。
  *
  */
 public class Timer {

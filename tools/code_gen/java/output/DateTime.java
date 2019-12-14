@@ -2,9 +2,7 @@ package awtk;
 
 
 /**
- * 日期时间。
- * 
- * 在嵌入式平台中，在系统初始时，需要调用date\_time\_global\_init设置实际获取/设置系统时间的函数。
+ * 日期时间。> 在嵌入式平台中，在系统初始时，需要调用date\_time\_global\_init设置实际获取/设置系统时间的函数。
  *
  */
 public class DateTime {
@@ -38,7 +36,7 @@ public class DateTime {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret set()  {
-   return Ret.from(date_time_set(this.nativeObj));
+   return Ret.from(date_time_set(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -50,7 +48,7 @@ public class DateTime {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret destroy()  {
-   return Ret.from(date_time_destroy(this.nativeObj));
+   return Ret.from(date_time_destroy(this != null ? (this.nativeObj) : 0));
  }
 
  public int getSecond() {

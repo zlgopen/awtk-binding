@@ -2,8 +2,7 @@ package awtk;
 
 
 /**
- * 字体管理器，负责字体的加载和缓存管理。
- *  (如果使用nanovg，字体由nanovg内部管理)
+ * 字体管理器，负责字体的加载和缓存管理。 (如果使用nanovg，字体由nanovg内部管理)
  *
  */
 public class FontManager {
@@ -28,7 +27,7 @@ public class FontManager {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret unloadFont(String name, int size)  {
-   return Ret.from(font_manager_unload_font(this.nativeObj, name, size));
+   return Ret.from(font_manager_unload_font(this != null ? (this.nativeObj) : 0, name, size));
  }
 
 
@@ -40,7 +39,7 @@ public class FontManager {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret unloadAll()  {
-   return Ret.from(font_manager_unload_all(this.nativeObj));
+   return Ret.from(font_manager_unload_all(this != null ? (this.nativeObj) : 0));
  }
 
 static private native int font_manager_unload_font(long fm, String name, int size);

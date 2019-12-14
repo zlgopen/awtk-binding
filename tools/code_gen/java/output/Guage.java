@@ -74,7 +74,7 @@ public class Guage extends Widget {
  *
  * @returns guage对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static Guage cast(Widget widget)  {
    return new Guage(guage_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -88,7 +88,7 @@ public class Guage extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setImage(String name)  {
-   return Ret.from(guage_set_image(this.nativeObj, name));
+   return Ret.from(guage_set_image(this != null ? (this.nativeObj) : 0, name));
  }
 
 
@@ -104,7 +104,7 @@ public class Guage extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setDrawType(ImageDrawType draw_type)  {
-   return Ret.from(guage_set_draw_type(this.nativeObj, draw_type.value()));
+   return Ret.from(guage_set_draw_type(this != null ? (this.nativeObj) : 0, draw_type.value()));
  }
 
  public String getImage() {

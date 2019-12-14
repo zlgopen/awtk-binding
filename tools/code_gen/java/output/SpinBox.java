@@ -87,7 +87,7 @@ public class SpinBox extends Edit {
  *
  * @returns spin_box对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static SpinBox cast(Widget widget)  {
    return new SpinBox(spin_box_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

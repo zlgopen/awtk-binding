@@ -60,7 +60,7 @@
 
 \+ **new TCanvas**(`nativeObj`: any): *[TCanvas](_awtk_.tcanvas.md)*
 
-*Defined in [awtk.ts:1941](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L1941)*
+*Defined in [awtk.ts:8837](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8837)*
 
 **Parameters:**
 
@@ -76,7 +76,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:1941](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L1941)*
+*Defined in [awtk.ts:8837](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8837)*
 
 ## Accessors
 
@@ -84,7 +84,7 @@ Name | Type |
 
 • **get fontName**(): *string*
 
-*Defined in [awtk.ts:2346](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2346)*
+*Defined in [awtk.ts:9220](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9220)*
 
 当前字体名称。
 
@@ -96,7 +96,7 @@ ___
 
 • **get fontSize**(): *number*
 
-*Defined in [awtk.ts:2356](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2356)*
+*Defined in [awtk.ts:9229](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9229)*
 
 当前字体大小。
 
@@ -108,7 +108,7 @@ ___
 
 • **get globalAlpha**(): *number*
 
-*Defined in [awtk.ts:2370](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2370)*
+*Defined in [awtk.ts:9242](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9242)*
 
 当前全局alpha。
 
@@ -116,7 +116,7 @@ ___
 
 • **set globalAlpha**(`v`: number): *void*
 
-*Defined in [awtk.ts:2360](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2360)*
+*Defined in [awtk.ts:9233](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9233)*
 
 当前全局alpha。
 
@@ -134,7 +134,7 @@ ___
 
 • **get ox**(): *number*
 
-*Defined in [awtk.ts:2326](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2326)*
+*Defined in [awtk.ts:9202](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9202)*
 
 x坐标偏移。
 
@@ -146,7 +146,7 @@ ___
 
 • **get oy**(): *number*
 
-*Defined in [awtk.ts:2336](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2336)*
+*Defined in [awtk.ts:9211](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9211)*
 
 y坐标偏移。
 
@@ -158,7 +158,7 @@ y坐标偏移。
 
 ▸ **drawHline**(`x`: number, `y`: number, `w`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2132](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2132)*
+*Defined in [awtk.ts:9018](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9018)*
 
 画水平线。
 
@@ -180,7 +180,7 @@ ___
 
 ▸ **drawIcon**(`img`: [TBitmap](_awtk_.tbitmap.md), `cx`: number, `cy`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2245](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2245)*
+*Defined in [awtk.ts:9127](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9127)*
 
 绘制图标。
 
@@ -202,7 +202,7 @@ ___
 
 ▸ **drawImage**(`img`: [TBitmap](_awtk_.tbitmap.md), `src`: [TRect](_awtk_.trect.md), `dst`: [TRect](_awtk_.trect.md)): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2261](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2261)*
+*Defined in [awtk.ts:9142](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9142)*
 
 绘制图片。
 
@@ -224,7 +224,7 @@ ___
 
 ▸ **drawImageEx**(`img`: [TBitmap](_awtk_.tbitmap.md), `draw_type`: [TImageDrawType](../enums/_awtk_.timagedrawtype.md), `dst`: [TRect](_awtk_.trect.md)): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2277](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2277)*
+*Defined in [awtk.ts:9157](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9157)*
 
 绘制图片。
 
@@ -246,9 +246,10 @@ ___
 
 ▸ **drawText**(`str`: string, `x`: number, `y`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2213](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2213)*
+*Defined in [awtk.ts:9096](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9096)*
 
 绘制文本。
+
 供脚本语言使用。
 
 **Parameters:**
@@ -269,9 +270,10 @@ ___
 
 ▸ **drawTextInRect**(`str`: string, `r`: [TRect](_awtk_.trect.md)): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2229](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2229)*
+*Defined in [awtk.ts:9112](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9112)*
 
 绘制文本。
+
 供脚本语言使用。
 
 **Parameters:**
@@ -291,7 +293,7 @@ ___
 
 ▸ **drawVline**(`x`: number, `y`: number, `h`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2116](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2116)*
+*Defined in [awtk.ts:9003](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9003)*
 
 画垂直线。
 
@@ -313,7 +315,7 @@ ___
 
 ▸ **fillRect**(`x`: number, `y`: number, `w`: number, `h`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2149](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2149)*
+*Defined in [awtk.ts:9034](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9034)*
 
 填充矩形。
 
@@ -336,7 +338,7 @@ ___
 
 ▸ **getClipRect**(`r`: [TRect](_awtk_.trect.md)): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:1982](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L1982)*
+*Defined in [awtk.ts:8875](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8875)*
 
 获取裁剪区。
 
@@ -356,7 +358,7 @@ ___
 
 ▸ **getHeight**(): *number*
 
-*Defined in [awtk.ts:1968](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L1968)*
+*Defined in [awtk.ts:8862](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8862)*
 
 获取画布的高度。
 
@@ -370,7 +372,7 @@ ___
 
 ▸ **getVgcanvas**(): *[TVgcanvas](_awtk_.tvgcanvas.md)*
 
-*Defined in [awtk.ts:2290](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2290)*
+*Defined in [awtk.ts:9169](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9169)*
 
 获取vgcanvas对象。
 
@@ -384,7 +386,7 @@ ___
 
 ▸ **getWidth**(): *number*
 
-*Defined in [awtk.ts:1955](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L1955)*
+*Defined in [awtk.ts:8850](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8850)*
 
 获取画布的宽度。
 
@@ -398,9 +400,10 @@ ___
 
 ▸ **measureText**(`str`: string): *number*
 
-*Defined in [awtk.ts:2196](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2196)*
+*Defined in [awtk.ts:9079](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9079)*
 
 计算文本所占的宽度。
+
 供脚本语言使用。
 
 **Parameters:**
@@ -419,7 +422,7 @@ ___
 
 ▸ **reset**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2316](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2316)*
+*Defined in [awtk.ts:9193](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9193)*
 
 释放相关资源。
 
@@ -433,7 +436,7 @@ ___
 
 ▸ **setClipRect**(`r`: [TRect](_awtk_.trect.md)): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:1996](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L1996)*
+*Defined in [awtk.ts:8888](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8888)*
 
 设置裁剪区。
 
@@ -453,7 +456,7 @@ ___
 
 ▸ **setClipRectEx**(`r`: [TRect](_awtk_.trect.md), `translate`: boolean): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2011](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2011)*
+*Defined in [awtk.ts:8902](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8902)*
 
 设置裁剪区。
 
@@ -474,9 +477,10 @@ ___
 
 ▸ **setFillColor**(`color`: string): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2026](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2026)*
+*Defined in [awtk.ts:8917](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8917)*
 
 设置填充颜色。
+
 供脚本语言使用。
 
 **Parameters:**
@@ -495,7 +499,7 @@ ___
 
 ▸ **setFont**(`name`: string, `size`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2181](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2181)*
+*Defined in [awtk.ts:9064](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9064)*
 
 设置字体。
 
@@ -516,7 +520,7 @@ ___
 
 ▸ **setGlobalAlpha**(`alpha`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2070](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2070)*
+*Defined in [awtk.ts:8960](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8960)*
 
 设置全局alpha值。
 
@@ -536,9 +540,10 @@ ___
 
 ▸ **setStrokeColor**(`color`: string): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2056](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2056)*
+*Defined in [awtk.ts:8947](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8947)*
 
 设置线条颜色。
+
 供脚本语言使用。
 
 **Parameters:**
@@ -557,9 +562,10 @@ ___
 
 ▸ **setTextColor**(`color`: string): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2041](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2041)*
+*Defined in [awtk.ts:8932](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8932)*
 
 设置文本颜色。
+
 供脚本语言使用。
 
 **Parameters:**
@@ -578,7 +584,7 @@ ___
 
 ▸ **strokeRect**(`x`: number, `y`: number, `w`: number, `h`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2166](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2166)*
+*Defined in [awtk.ts:9050](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9050)*
 
 绘制矩形。
 
@@ -601,7 +607,7 @@ ___
 
 ▸ **translate**(`dx`: number, `dy`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2085](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2085)*
+*Defined in [awtk.ts:8974](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8974)*
 
 平移原点坐标。
 
@@ -622,7 +628,7 @@ ___
 
 ▸ **untranslate**(`dx`: number, `dy`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2100](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2100)*
+*Defined in [awtk.ts:8988](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L8988)*
 
 反向平移原点坐标。
 
@@ -643,7 +649,7 @@ ___
 
 ▸ **cast**(`c`: [TCanvas](_awtk_.tcanvas.md)): *[TCanvas](_awtk_.tcanvas.md)*
 
-*Defined in [awtk.ts:2303](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L2303)*
+*Defined in [awtk.ts:9181](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L9181)*
 
 转换为canvas对象(供脚本语言使用)。
 

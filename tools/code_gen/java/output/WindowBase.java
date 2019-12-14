@@ -38,7 +38,7 @@ public class WindowBase extends Widget {
  *
  * @returns window_base对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static WindowBase cast(Widget widget)  {
    return new WindowBase(window_base_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

@@ -74,7 +74,7 @@ public class ImageValue extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setImage(String image)  {
-   return Ret.from(image_value_set_image(this.nativeObj, image));
+   return Ret.from(image_value_set_image(this != null ? (this.nativeObj) : 0, image));
  }
 
 
@@ -87,7 +87,7 @@ public class ImageValue extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setFormat(String format)  {
-   return Ret.from(image_value_set_format(this.nativeObj, format));
+   return Ret.from(image_value_set_format(this != null ? (this.nativeObj) : 0, format));
  }
 
 
@@ -100,7 +100,7 @@ public class ImageValue extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setValue(double value)  {
-   return Ret.from(image_value_set_value(this.nativeObj, value));
+   return Ret.from(image_value_set_value(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -111,7 +111,7 @@ public class ImageValue extends Widget {
  *
  * @returns image_value对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static ImageValue cast(Widget widget)  {
    return new ImageValue(image_value_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

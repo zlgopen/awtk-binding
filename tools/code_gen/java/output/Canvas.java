@@ -25,7 +25,7 @@ public class Canvas {
  * @returns 返回画布的宽度。
  */
  public  int getWidth()  {
-   return canvas_get_width(this.nativeObj);
+   return canvas_get_width(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -37,7 +37,7 @@ public class Canvas {
  * @returns 返回画布的高度。
  */
  public  int getHeight()  {
-   return canvas_get_height(this.nativeObj);
+   return canvas_get_height(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -50,7 +50,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret getClipRect(Rect r)  {
-   return Ret.from(canvas_get_clip_rect(this.nativeObj, r != null ? (r.nativeObj) : 0));
+   return Ret.from(canvas_get_clip_rect(this != null ? (this.nativeObj) : 0, r != null ? (r.nativeObj) : 0));
  }
 
 
@@ -63,7 +63,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setClipRect(Rect r)  {
-   return Ret.from(canvas_set_clip_rect(this.nativeObj, r != null ? (r.nativeObj) : 0));
+   return Ret.from(canvas_set_clip_rect(this != null ? (this.nativeObj) : 0, r != null ? (r.nativeObj) : 0));
  }
 
 
@@ -77,7 +77,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setClipRectEx(Rect r, boolean translate)  {
-   return Ret.from(canvas_set_clip_rect_ex(this.nativeObj, r != null ? (r.nativeObj) : 0, translate));
+   return Ret.from(canvas_set_clip_rect_ex(this != null ? (this.nativeObj) : 0, r != null ? (r.nativeObj) : 0, translate));
  }
 
 
@@ -92,7 +92,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setFillColor(String color)  {
-   return Ret.from(canvas_set_fill_color_str(this.nativeObj, color));
+   return Ret.from(canvas_set_fill_color_str(this != null ? (this.nativeObj) : 0, color));
  }
 
 
@@ -107,7 +107,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setTextColor(String color)  {
-   return Ret.from(canvas_set_text_color_str(this.nativeObj, color));
+   return Ret.from(canvas_set_text_color_str(this != null ? (this.nativeObj) : 0, color));
  }
 
 
@@ -122,7 +122,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setStrokeColor(String color)  {
-   return Ret.from(canvas_set_stroke_color_str(this.nativeObj, color));
+   return Ret.from(canvas_set_stroke_color_str(this != null ? (this.nativeObj) : 0, color));
  }
 
 
@@ -135,7 +135,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setGlobalAlpha(int alpha)  {
-   return Ret.from(canvas_set_global_alpha(this.nativeObj, alpha));
+   return Ret.from(canvas_set_global_alpha(this != null ? (this.nativeObj) : 0, alpha));
  }
 
 
@@ -149,7 +149,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret translate(int dx, int dy)  {
-   return Ret.from(canvas_translate(this.nativeObj, dx, dy));
+   return Ret.from(canvas_translate(this != null ? (this.nativeObj) : 0, dx, dy));
  }
 
 
@@ -163,7 +163,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret untranslate(int dx, int dy)  {
-   return Ret.from(canvas_untranslate(this.nativeObj, dx, dy));
+   return Ret.from(canvas_untranslate(this != null ? (this.nativeObj) : 0, dx, dy));
  }
 
 
@@ -178,7 +178,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret drawVline(int x, int y, int h)  {
-   return Ret.from(canvas_draw_vline(this.nativeObj, x, y, h));
+   return Ret.from(canvas_draw_vline(this != null ? (this.nativeObj) : 0, x, y, h));
  }
 
 
@@ -193,7 +193,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret drawHline(int x, int y, int w)  {
-   return Ret.from(canvas_draw_hline(this.nativeObj, x, y, w));
+   return Ret.from(canvas_draw_hline(this != null ? (this.nativeObj) : 0, x, y, w));
  }
 
 
@@ -209,7 +209,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret fillRect(int x, int y, int w, int h)  {
-   return Ret.from(canvas_fill_rect(this.nativeObj, x, y, w, h));
+   return Ret.from(canvas_fill_rect(this != null ? (this.nativeObj) : 0, x, y, w, h));
  }
 
 
@@ -225,7 +225,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret strokeRect(int x, int y, int w, int h)  {
-   return Ret.from(canvas_stroke_rect(this.nativeObj, x, y, w, h));
+   return Ret.from(canvas_stroke_rect(this != null ? (this.nativeObj) : 0, x, y, w, h));
  }
 
 
@@ -239,7 +239,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setFont(String name, int size)  {
-   return Ret.from(canvas_set_font(this.nativeObj, name, size));
+   return Ret.from(canvas_set_font(this != null ? (this.nativeObj) : 0, name, size));
  }
 
 
@@ -254,7 +254,7 @@ public class Canvas {
  * @returns 返回文本所占的宽度。
  */
  public  double measureText(String str)  {
-   return canvas_measure_utf8(this.nativeObj, str);
+   return canvas_measure_utf8(this != null ? (this.nativeObj) : 0, str);
  }
 
 
@@ -271,7 +271,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret drawText(String str, int x, int y)  {
-   return Ret.from(canvas_draw_utf8(this.nativeObj, str, x, y));
+   return Ret.from(canvas_draw_utf8(this != null ? (this.nativeObj) : 0, str, x, y));
  }
 
 
@@ -287,7 +287,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret drawTextInRect(String str, Rect r)  {
-   return Ret.from(canvas_draw_utf8_in_rect(this.nativeObj, str, r != null ? (r.nativeObj) : 0));
+   return Ret.from(canvas_draw_utf8_in_rect(this != null ? (this.nativeObj) : 0, str, r != null ? (r.nativeObj) : 0));
  }
 
 
@@ -302,7 +302,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret drawIcon(Bitmap img, int cx, int cy)  {
-   return Ret.from(canvas_draw_icon(this.nativeObj, img != null ? (img.nativeObj) : 0, cx, cy));
+   return Ret.from(canvas_draw_icon(this != null ? (this.nativeObj) : 0, img != null ? (img.nativeObj) : 0, cx, cy));
  }
 
 
@@ -317,7 +317,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret drawImage(Bitmap img, Rect src, Rect dst)  {
-   return Ret.from(canvas_draw_image(this.nativeObj, img != null ? (img.nativeObj) : 0, src != null ? (src.nativeObj) : 0, dst != null ? (dst.nativeObj) : 0));
+   return Ret.from(canvas_draw_image(this != null ? (this.nativeObj) : 0, img != null ? (img.nativeObj) : 0, src != null ? (src.nativeObj) : 0, dst != null ? (dst.nativeObj) : 0));
  }
 
 
@@ -332,7 +332,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret drawImageEx(Bitmap img, ImageDrawType draw_type, Rect dst)  {
-   return Ret.from(canvas_draw_image_ex(this.nativeObj, img != null ? (img.nativeObj) : 0, draw_type.value(), dst != null ? (dst.nativeObj) : 0));
+   return Ret.from(canvas_draw_image_ex(this != null ? (this.nativeObj) : 0, img != null ? (img.nativeObj) : 0, draw_type.value(), dst != null ? (dst.nativeObj) : 0));
  }
 
 
@@ -344,7 +344,7 @@ public class Canvas {
  * @returns 返回vgcanvas对象。
  */
  public  Vgcanvas getVgcanvas()  {
-   return new Vgcanvas(canvas_get_vgcanvas(this.nativeObj));
+   return new Vgcanvas(canvas_get_vgcanvas(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -368,7 +368,7 @@ public class Canvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret reset()  {
-   return Ret.from(canvas_reset(this.nativeObj));
+   return Ret.from(canvas_reset(this != null ? (this.nativeObj) : 0));
  }
 
  public int getOx() {

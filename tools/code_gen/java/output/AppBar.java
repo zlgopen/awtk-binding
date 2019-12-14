@@ -70,7 +70,7 @@ public class AppBar extends Widget {
  *
  * @returns app_bar对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static AppBar cast(Widget widget)  {
    return new AppBar(app_bar_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

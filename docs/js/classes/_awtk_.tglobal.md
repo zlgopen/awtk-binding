@@ -10,14 +10,6 @@ TK全局对象。
 
 ## Index
 
-### Constructors
-
-* [constructor](_awtk_.tglobal.md#constructor)
-
-### Properties
-
-* [nativeObj](_awtk_.tglobal.md#nativeobj)
-
 ### Methods
 
 * [getPointerX](_awtk_.tglobal.md#static-getpointerx)
@@ -25,37 +17,13 @@ TK全局对象。
 * [isPointerPressed](_awtk_.tglobal.md#static-ispointerpressed)
 * [quit](_awtk_.tglobal.md#static-quit)
 
-## Constructors
-
-###  constructor
-
-\+ **new TGlobal**(`nativeObj`: any): *[TGlobal](_awtk_.tglobal.md)*
-
-*Defined in [awtk.ts:1618](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L1618)*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`nativeObj` | any |
-
-**Returns:** *[TGlobal](_awtk_.tglobal.md)*
-
-## Properties
-
-###  nativeObj
-
-• **nativeObj**: *any*
-
-*Defined in [awtk.ts:1618](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L1618)*
-
 ## Methods
 
 ### `Static` getPointerX
 
 ▸ **getPointerX**(): *number*
 
-*Defined in [awtk.ts:1643](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L1643)*
+*Defined in [awtk.ts:3014](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3014)*
 
 获取全局指针的X坐标。
 
@@ -69,7 +37,7 @@ ___
 
 ▸ **getPointerY**(): *number*
 
-*Defined in [awtk.ts:1655](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L1655)*
+*Defined in [awtk.ts:3025](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3025)*
 
 获取全局指针的Y坐标。
 
@@ -83,7 +51,7 @@ ___
 
 ▸ **isPointerPressed**(): *boolean*
 
-*Defined in [awtk.ts:1667](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L1667)*
+*Defined in [awtk.ts:3036](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3036)*
 
 获取全局指针是否按下。
 
@@ -97,7 +65,7 @@ ___
 
 ▸ **quit**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:1631](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L1631)*
+*Defined in [awtk.ts:3003](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3003)*
 
 退出TK事件主循环。
 

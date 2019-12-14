@@ -83,7 +83,7 @@ public class Button extends Widget {
  *
  * @returns button对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static Button cast(Widget widget)  {
    return new Button(button_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -97,7 +97,7 @@ public class Button extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setRepeat(int repeat)  {
-   return Ret.from(button_set_repeat(this.nativeObj, repeat));
+   return Ret.from(button_set_repeat(this != null ? (this.nativeObj) : 0, repeat));
  }
 
 
@@ -110,7 +110,7 @@ public class Button extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setEnableLongPress(boolean enable_long_press)  {
-   return Ret.from(button_set_enable_long_press(this.nativeObj, enable_long_press));
+   return Ret.from(button_set_enable_long_press(this != null ? (this.nativeObj) : 0, enable_long_press));
  }
 
  public int getRepeat() {

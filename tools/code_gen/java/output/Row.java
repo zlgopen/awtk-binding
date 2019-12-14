@@ -65,7 +65,7 @@ public class Row extends Widget {
  *
  * @returns row对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static Row cast(Widget widget)  {
    return new Row(row_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

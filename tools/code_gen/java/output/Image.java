@@ -98,7 +98,7 @@ public class Image extends ImageBase {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setDrawType(ImageDrawType draw_type)  {
-   return Ret.from(image_set_draw_type(this.nativeObj, draw_type.value()));
+   return Ret.from(image_set_draw_type(this != null ? (this.nativeObj) : 0, draw_type.value()));
  }
 
 
@@ -109,7 +109,7 @@ public class Image extends ImageBase {
  *
  * @returns image对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static Image cast(Widget widget)  {
    return new Image(image_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

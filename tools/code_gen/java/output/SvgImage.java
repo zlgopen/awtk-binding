@@ -80,7 +80,7 @@ public class SvgImage extends ImageBase {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setImage(String name)  {
-   return Ret.from(svg_image_set_image(this.nativeObj, name));
+   return Ret.from(svg_image_set_image(this != null ? (this.nativeObj) : 0, name));
  }
 
 
@@ -91,7 +91,7 @@ public class SvgImage extends ImageBase {
  *
  * @returns svg_image对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static SvgImage cast(Widget widget)  {
    return new SvgImage(svg_image_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

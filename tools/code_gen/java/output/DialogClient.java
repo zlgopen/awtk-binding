@@ -61,7 +61,7 @@ public class DialogClient extends Widget {
  *
  * @returns dialog_client对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static DialogClient cast(Widget widget)  {
    return new DialogClient(dialog_client_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

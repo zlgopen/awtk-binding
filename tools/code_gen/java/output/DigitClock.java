@@ -2,39 +2,7 @@ package awtk;
 
 
 /**
- * 数字时钟控件。
- * 
- *  digit\_clock\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于digit\_clock\_t控件。
- * 
- *  在xml中使用"digit\_clock"标签创建数字时钟控件。如：
- * 
- *  ```xml
- *  <digit_clock format="YY/MM/DD h:mm:ss"/>
- *  ```
- * 
- * 更多用法请参考：[digit\_clock.xml](
- *  https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/digit_clock.xml)
- * 
- *  在c代码中使用函数digit\_clock\_create创建数字时钟控件。如：
- * 
- *  ```c
- *  widget_t* tc = digit_clock_create(win, 10, 10, 240, 30);
- *  digit_clock_set_format(tc, "YY/MM/DD h:mm:ss");
- *  ```
- * 
- * 完整示例请参考：[digit\_clock demo](
- *  https://github.com/zlgopen/awtk-c-demos/blob/master/demos/digit_clock.c)
- * 
- *  可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
- * 
- *  ```xml
- *  <style name="default">
- *    <normal text_color="black" />
- *  </style>
- *  ```
- * 
- * 更多用法请参考：[theme default](
- *  https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L138)
+ * 数字时钟控件。 digit\_clock\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于digit\_clock\_t控件。 在xml中使用"digit\_clock"标签创建数字时钟控件。如： ```xml <digit_clock format="YY/MM/DD h:mm:ss"/> ``` 更多用法请参考：[digit\_clock.xml]( https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/digit_clock.xml) 在c代码中使用函数digit\_clock\_create创建数字时钟控件。如： ```c widget_t* tc = digit_clock_create(win, 10, 10, 240, 30); digit_clock_set_format(tc, "YY/MM/DD h:mm:ss"); ``` 完整示例请参考：[digit\_clock demo]( https://github.com/zlgopen/awtk-c-demos/blob/master/demos/digit_clock.c) 可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如： ```xml <style name="default">   <normal text_color="black" /> </style> ``` 更多用法请参考：[theme default]( https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L138)
  *
  */
 public class DigitClock extends Widget {
@@ -72,7 +40,7 @@ public class DigitClock extends Widget {
  *
  * @returns digit_clock对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static DigitClock cast(Widget widget)  {
    return new DigitClock(digit_clock_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -86,7 +54,7 @@ public class DigitClock extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setFormat(String format)  {
-   return Ret.from(digit_clock_set_format(this.nativeObj, format));
+   return Ret.from(digit_clock_set_format(this != null ? (this.nativeObj) : 0, format));
  }
 
  public String getFormat() {

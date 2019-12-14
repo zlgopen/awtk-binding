@@ -2,12 +2,7 @@
 
 # Class: TInputMethod
 
-输入法接口。
-常见的实现方式有以下几种：
-* 空实现。用于不需要输入法的嵌入式平台。
-* 缺省实现。用于需要输入法的嵌入式平台。
-* 基于SDL实现的平台原生输入法。用于桌面系统和手机系统。
-输入类型请参考：[input\_type](input_type_t.md)
+输入法接口。 常见的实现方式有以下几种： * 空实现。用于不需要输入法的嵌入式平台。 * 缺省实现。用于需要输入法的嵌入式平台。 * 基于SDL实现的平台原生输入法。用于桌面系统和手机系统。 ```graphviz  [default_style]  input_method_default_t -> input_method_t [arrowhead=empty style=dashed]  input_method_sdl_t -> input_method_t [arrowhead=empty style=dashed]  input_method_null_t -> input_method_t [arrowhead=empty style=dashed] ``` 输入类型请参考：[input\_type](input_type_t.md)
 
 ## Hierarchy
 
@@ -35,7 +30,7 @@
 
 \+ **new TInputMethod**(`nativeObj`: any): *[TInputMethod](_awtk_.tinputmethod.md)*
 
-*Defined in [awtk.ts:3889](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L3889)*
+*Defined in [awtk.ts:3888](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3888)*
 
 **Parameters:**
 
@@ -51,7 +46,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:3889](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L3889)*
+*Defined in [awtk.ts:3888](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3888)*
 
 ## Methods
 
@@ -59,7 +54,7 @@ Name | Type |
 
 ▸ **commitText**(`text`: string): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:3904](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L3904)*
+*Defined in [awtk.ts:3902](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3902)*
 
 提交输入文本。
 
@@ -79,7 +74,7 @@ ___
 
 ▸ **dispatchKey**(`key`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:3918](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L3918)*
+*Defined in [awtk.ts:3915](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3915)*
 
 提交按键。
 
@@ -99,7 +94,7 @@ ___
 
 ▸ **instance**(): *[TInputMethod](_awtk_.tinputmethod.md)*
 
-*Defined in [awtk.ts:3930](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L3930)*
+*Defined in [awtk.ts:3926](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3926)*
 
 获取全局输入法对象。
 

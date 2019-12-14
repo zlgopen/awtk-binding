@@ -84,7 +84,7 @@ public class ListItem extends Widget {
  *
  * @returns list_item对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static ListItem cast(Widget widget)  {
    return new ListItem(list_item_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

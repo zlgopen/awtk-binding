@@ -23,7 +23,7 @@ public class WindowManager extends Widget {
  *
  * @returns 对象。
  */
- public  static Widget instance()  {
+ public  static WindowManager instance()  {
    return new WindowManager(window_manager());
  }
 
@@ -35,7 +35,7 @@ public class WindowManager extends Widget {
  *
  * @returns window_manager对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static WindowManager cast(Widget widget)  {
    return new WindowManager(window_manager_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -48,7 +48,7 @@ public class WindowManager extends Widget {
  * @returns 返回窗口对象。
  */
  public  Widget getTopMainWindow()  {
-   return new Widget(window_manager_get_top_main_window(this.nativeObj));
+   return new Widget(window_manager_get_top_main_window(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -60,7 +60,7 @@ public class WindowManager extends Widget {
  * @returns 返回窗口对象。
  */
  public  Widget getTopWindow()  {
-   return new Widget(window_manager_get_top_window(this.nativeObj));
+   return new Widget(window_manager_get_top_window(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -72,7 +72,7 @@ public class WindowManager extends Widget {
  * @returns 返回窗口对象。
  */
  public  Widget getPrevWindow()  {
-   return new Widget(window_manager_get_prev_window(this.nativeObj));
+   return new Widget(window_manager_get_prev_window(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -84,7 +84,7 @@ public class WindowManager extends Widget {
  * @returns 返回指针当前的X坐标。
  */
  public  int getPointerX()  {
-   return window_manager_get_pointer_x(this.nativeObj);
+   return window_manager_get_pointer_x(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -96,7 +96,7 @@ public class WindowManager extends Widget {
  * @returns 返回指针当前的X坐标。
  */
  public  int getPointerY()  {
-   return window_manager_get_pointer_y(this.nativeObj);
+   return window_manager_get_pointer_y(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -108,7 +108,7 @@ public class WindowManager extends Widget {
  * @returns 返回指针当前是否按下。
  */
  public  boolean getPointerPressed()  {
-   return window_manager_get_pointer_pressed(this.nativeObj);
+   return window_manager_get_pointer_pressed(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -121,7 +121,7 @@ public class WindowManager extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setShowFps(boolean show_fps)  {
-   return Ret.from(window_manager_set_show_fps(this.nativeObj, show_fps));
+   return Ret.from(window_manager_set_show_fps(this != null ? (this.nativeObj) : 0, show_fps));
  }
 
 
@@ -134,7 +134,7 @@ public class WindowManager extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setScreenSaverTime(int screen_saver_time)  {
-   return Ret.from(window_manager_set_screen_saver_time(this.nativeObj, screen_saver_time));
+   return Ret.from(window_manager_set_screen_saver_time(this != null ? (this.nativeObj) : 0, screen_saver_time));
  }
 
 
@@ -147,7 +147,7 @@ public class WindowManager extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setCursor(String cursor)  {
-   return Ret.from(window_manager_set_cursor(this.nativeObj, cursor));
+   return Ret.from(window_manager_set_cursor(this != null ? (this.nativeObj) : 0, cursor));
  }
 
 
@@ -161,7 +161,7 @@ public class WindowManager extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret back()  {
-   return Ret.from(window_manager_back(this.nativeObj));
+   return Ret.from(window_manager_back(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -175,7 +175,7 @@ public class WindowManager extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret backToHome()  {
-   return Ret.from(window_manager_back_to_home(this.nativeObj));
+   return Ret.from(window_manager_back_to_home(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -190,7 +190,7 @@ public class WindowManager extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret backTo(String target)  {
-   return Ret.from(window_manager_back_to(this.nativeObj, target));
+   return Ret.from(window_manager_back_to(this != null ? (this.nativeObj) : 0, target));
  }
 
 static private native long window_manager();

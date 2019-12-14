@@ -74,7 +74,7 @@ public class Switch extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setValue(boolean value)  {
-   return Ret.from(switch_set_value(this.nativeObj, value));
+   return Ret.from(switch_set_value(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -85,7 +85,7 @@ public class Switch extends Widget {
  *
  * @returns switch对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static Switch cast(Widget widget)  {
    return new Switch(switch_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

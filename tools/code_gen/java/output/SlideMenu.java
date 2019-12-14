@@ -99,7 +99,7 @@ public class SlideMenu extends Widget {
  *
  * @returns slide_menu对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static SlideMenu cast(Widget widget)  {
    return new SlideMenu(slide_menu_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -113,7 +113,7 @@ public class SlideMenu extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setValue(int value)  {
-   return Ret.from(slide_menu_set_value(this.nativeObj, value));
+   return Ret.from(slide_menu_set_value(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -126,7 +126,7 @@ public class SlideMenu extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setAlignV(AlignV align_v)  {
-   return Ret.from(slide_menu_set_align_v(this.nativeObj, align_v.value()));
+   return Ret.from(slide_menu_set_align_v(this != null ? (this.nativeObj) : 0, align_v.value()));
  }
 
 
@@ -139,7 +139,7 @@ public class SlideMenu extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setMinScale(double min_scale)  {
-   return Ret.from(slide_menu_set_min_scale(this.nativeObj, min_scale));
+   return Ret.from(slide_menu_set_min_scale(this != null ? (this.nativeObj) : 0, min_scale));
  }
 
  public AlignV getAlignV() {

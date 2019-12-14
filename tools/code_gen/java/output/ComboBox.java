@@ -149,7 +149,7 @@ public class ComboBox extends Widget {
  *
  * @returns combo_box对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static ComboBox cast(Widget widget)  {
    return new ComboBox(combo_box_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -163,7 +163,7 @@ public class ComboBox extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setOpenWindow(String open_window)  {
-   return Ret.from(combo_box_set_open_window(this.nativeObj, open_window));
+   return Ret.from(combo_box_set_open_window(this != null ? (this.nativeObj) : 0, open_window));
  }
 
 
@@ -175,7 +175,7 @@ public class ComboBox extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret resetOptions()  {
-   return Ret.from(combo_box_reset_options(this.nativeObj));
+   return Ret.from(combo_box_reset_options(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -187,7 +187,7 @@ public class ComboBox extends Widget {
  * @returns 返回选项个数。
  */
  public  int countOptions()  {
-   return combo_box_count_options(this.nativeObj);
+   return combo_box_count_options(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -200,7 +200,7 @@ public class ComboBox extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setSelectedIndex(int index)  {
-   return Ret.from(combo_box_set_selected_index(this.nativeObj, index));
+   return Ret.from(combo_box_set_selected_index(this != null ? (this.nativeObj) : 0, index));
  }
 
 
@@ -213,7 +213,7 @@ public class ComboBox extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setLocalizeOptions(boolean localize_options)  {
-   return Ret.from(combo_box_set_localize_options(this.nativeObj, localize_options));
+   return Ret.from(combo_box_set_localize_options(this != null ? (this.nativeObj) : 0, localize_options));
  }
 
 
@@ -226,7 +226,7 @@ public class ComboBox extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setValue(int value)  {
-   return Ret.from(combo_box_set_value(this.nativeObj, value));
+   return Ret.from(combo_box_set_value(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -239,7 +239,7 @@ public class ComboBox extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setItemHeight(int item_height)  {
-   return Ret.from(combo_box_set_item_height(this.nativeObj, item_height));
+   return Ret.from(combo_box_set_item_height(this != null ? (this.nativeObj) : 0, item_height));
  }
 
 
@@ -253,7 +253,7 @@ public class ComboBox extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret appendOption(int value, String text)  {
-   return Ret.from(combo_box_append_option(this.nativeObj, value, text));
+   return Ret.from(combo_box_append_option(this != null ? (this.nativeObj) : 0, value, text));
  }
 
 
@@ -266,7 +266,7 @@ public class ComboBox extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setOptions(String options)  {
-   return Ret.from(combo_box_set_options(this.nativeObj, options));
+   return Ret.from(combo_box_set_options(this != null ? (this.nativeObj) : 0, options));
  }
 
 
@@ -278,7 +278,7 @@ public class ComboBox extends Widget {
  * @returns 返回值。
  */
  public  int getValue()  {
-   return combo_box_get_value(this.nativeObj);
+   return combo_box_get_value(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -290,7 +290,7 @@ public class ComboBox extends Widget {
  * @returns 返回文本。
  */
  public  String getTextValue()  {
-   return combo_box_get_text(this.nativeObj);
+   return combo_box_get_text(this != null ? (this.nativeObj) : 0);
  }
 
  public String getOpenWindow() {

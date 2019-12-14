@@ -111,7 +111,7 @@ public class CheckButton extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setValue(boolean value)  {
-   return Ret.from(check_button_set_value(this.nativeObj, value));
+   return Ret.from(check_button_set_value(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -122,7 +122,7 @@ public class CheckButton extends Widget {
  *
  * @returns check_button对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static CheckButton cast(Widget widget)  {
    return new CheckButton(check_button_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

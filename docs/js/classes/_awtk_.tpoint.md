@@ -24,7 +24,7 @@
 
 \+ **new TPoint**(`nativeObj`: any): *[TPoint](_awtk_.tpoint.md)*
 
-*Defined in [awtk.ts:9521](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L9521)*
+*Defined in [awtk.ts:1818](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L1818)*
 
 **Parameters:**
 
@@ -40,4 +40,4 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:9521](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L9521)*
+*Defined in [awtk.ts:1818](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L1818)*

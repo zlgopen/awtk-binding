@@ -72,7 +72,7 @@ public class SlideIndicator extends Widget {
  *
  * @returns slide_indicator对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static SlideIndicator cast(Widget widget)  {
    return new SlideIndicator(slide_indicator_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -86,7 +86,7 @@ public class SlideIndicator extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setValue(int value)  {
-   return Ret.from(slide_indicator_set_value(this.nativeObj, value));
+   return Ret.from(slide_indicator_set_value(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -99,7 +99,7 @@ public class SlideIndicator extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setMax(int max)  {
-   return Ret.from(slide_indicator_set_max(this.nativeObj, max));
+   return Ret.from(slide_indicator_set_max(this != null ? (this.nativeObj) : 0, max));
  }
 
 
@@ -112,7 +112,7 @@ public class SlideIndicator extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setDefaultPaint(IndicatorDefaultPaint default_paint)  {
-   return Ret.from(slide_indicator_set_default_paint(this.nativeObj, default_paint.value()));
+   return Ret.from(slide_indicator_set_default_paint(this != null ? (this.nativeObj) : 0, default_paint.value()));
  }
 
 
@@ -125,7 +125,7 @@ public class SlideIndicator extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setAutoHide(int auto_hide)  {
-   return Ret.from(slide_indicator_set_auto_hide(this.nativeObj, auto_hide));
+   return Ret.from(slide_indicator_set_auto_hide(this != null ? (this.nativeObj) : 0, auto_hide));
  }
 
 
@@ -138,7 +138,7 @@ public class SlideIndicator extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setMargin(int margin)  {
-   return Ret.from(slide_indicator_set_margin(this.nativeObj, margin));
+   return Ret.from(slide_indicator_set_margin(this != null ? (this.nativeObj) : 0, margin));
  }
 
 
@@ -151,7 +151,7 @@ public class SlideIndicator extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setSpacing(double spacing)  {
-   return Ret.from(slide_indicator_set_spacing(this.nativeObj, spacing));
+   return Ret.from(slide_indicator_set_spacing(this != null ? (this.nativeObj) : 0, spacing));
  }
 
 
@@ -164,7 +164,7 @@ public class SlideIndicator extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setSize(int size)  {
-   return Ret.from(slide_indicator_set_size(this.nativeObj, size));
+   return Ret.from(slide_indicator_set_size(this != null ? (this.nativeObj) : 0, size));
  }
 
 
@@ -178,7 +178,7 @@ public class SlideIndicator extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setAnchor(String anchor_x, String anchor_y)  {
-   return Ret.from(slide_indicator_set_anchor(this.nativeObj, anchor_x, anchor_y));
+   return Ret.from(slide_indicator_set_anchor(this != null ? (this.nativeObj) : 0, anchor_x, anchor_y));
  }
 
 
@@ -191,7 +191,7 @@ public class SlideIndicator extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setIndicatedTarget(String indicated_target)  {
-   return Ret.from(slide_indicator_set_indicated_target(this.nativeObj, indicated_target));
+   return Ret.from(slide_indicator_set_indicated_target(this != null ? (this.nativeObj) : 0, indicated_target));
  }
 
  public int getMax() {

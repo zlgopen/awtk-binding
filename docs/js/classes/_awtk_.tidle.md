@@ -2,10 +2,7 @@
 
 # Class: TIdle
 
-idle可以看作是duration为0的定时器。
-idle可以用来实现一些异步处理。
-示例：
-在非GUI线程请用idle\_queue。
+idle可以看作是duration为0的定时器。 idle可以用来实现一些异步处理。 示例： ```c static ret_t something_on_idle(const idle_info_t* info) {   widget_t* widget = WIDGET(info->ctx);   edit_t* edit = EDIT(widget);   ...   return RET_REMOVE; } ... idle_add(something_on_idle, edit); ``` 在非GUI线程请用idle\_queue。
 
 ## Hierarchy
 
@@ -13,42 +10,10 @@ idle可以用来实现一些异步处理。
 
 ## Index
 
-### Constructors
-
-* [constructor](_awtk_.tidle.md#constructor)
-
-### Properties
-
-* [nativeObj](_awtk_.tidle.md#nativeobj)
-
 ### Methods
 
 * [add](_awtk_.tidle.md#static-add)
 * [remove](_awtk_.tidle.md#static-remove)
-
-## Constructors
-
-###  constructor
-
-\+ **new TIdle**(`nativeObj`: any): *[TIdle](_awtk_.tidle.md)*
-
-*Defined in [awtk.ts:3098](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L3098)*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`nativeObj` | any |
-
-**Returns:** *[TIdle](_awtk_.tidle.md)*
-
-## Properties
-
-###  nativeObj
-
-• **nativeObj**: *any*
-
-*Defined in [awtk.ts:3098](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L3098)*
 
 ## Methods
 
@@ -56,7 +21,7 @@ Name | Type |
 
 ▸ **add**(`on_idle`: Function, `ctx`: any): *number*
 
-*Defined in [awtk.ts:3113](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L3113)*
+*Defined in [awtk.ts:3618](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3618)*
 
 增加一个idle。
 
@@ -77,7 +42,7 @@ ___
 
 ▸ **remove**(`idle_id`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:3126](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L3126)*
+*Defined in [awtk.ts:3630](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3630)*
 
 删除指定的idle。
 

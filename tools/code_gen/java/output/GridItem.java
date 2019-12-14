@@ -72,7 +72,7 @@ public class GridItem extends Widget {
  *
  * @returns grid_item对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static GridItem cast(Widget widget)  {
    return new GridItem(grid_item_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

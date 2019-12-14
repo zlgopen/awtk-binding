@@ -29,8 +29,7 @@ public class ImageManager {
 
 
 /**
- * 获取指定的图片。
- *  先从缓存查找，如果没找到，再加载并缓存。
+ * 获取指定的图片。 先从缓存查找，如果没找到，再加载并缓存。
  * 
  * @param imm 图片管理器对象。
  * @param name 图片名称。
@@ -39,7 +38,7 @@ public class ImageManager {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret getBitmap(String name, Bitmap image)  {
-   return Ret.from(image_manager_get_bitmap(this.nativeObj, name, image != null ? (image.nativeObj) : 0));
+   return Ret.from(image_manager_get_bitmap(this != null ? (this.nativeObj) : 0, name, image != null ? (image.nativeObj) : 0));
  }
 
 static private native long image_manager();

@@ -6,12 +6,12 @@ class JavaGenerator extends TargetGen {
     super()
     this.classNamePrefix = '';
   }
-  
+
   genCallParam(param) {
     const name = param.name;
     const type = param.type;
 
-    if(this.isEnumName(type)) {
+    if (this.isEnumName(type)) {
       return `${name}.value()`
     } else {
       return name;
@@ -26,10 +26,10 @@ class JavaGenerator extends TargetGen {
   mapType(type, isNative) {
     let name = this.typeToName(type);
     let info = this.getClassOrEnumInfo(this.typeToNativeName(type));
-    
+
     if (info != null) {
       if (info.type === 'class') {
-        if(isNative) {
+        if (isNative) {
           return 'long';
         } else {
           return name;
@@ -38,7 +38,7 @@ class JavaGenerator extends TargetGen {
         if (this.isEnumString(info)) {
           return 'String';
         } else {
-          if(isNative) {
+          if (isNative) {
             return 'int';
           } else {
             return name;
@@ -55,13 +55,13 @@ class JavaGenerator extends TargetGen {
       return 'double';
     } else if (this.typeIsBool(type)) {
       return 'boolean';
-    } else if(type.indexOf('event_func_t') >= 0) {
+    } else if (type.indexOf('event_func_t') >= 0) {
       return 'OnEvent';
-    } else if(type.indexOf('tk_visit_t') >= 0) {
+    } else if (type.indexOf('tk_visit_t') >= 0) {
       return 'OnData';
-    } else if(type.indexOf('idle_func_t') >= 0) {
+    } else if (type.indexOf('idle_func_t') >= 0) {
       return 'OnIdle';
-    } else if(type.indexOf('timer_func_t') >= 0) {
+    } else if (type.indexOf('timer_func_t') >= 0) {
       return 'OnTimer';
     } else if (this.typeIsString(type)) {
       return 'String';
@@ -77,7 +77,7 @@ class JavaGenerator extends TargetGen {
 
   genConstructor(cls) {
     let result = '';
-    let name = this.upperCamelName(this.getClassName(cls));
+    let name = this.toClassName(cls.name);
 
     result += ' public long nativeObj;\n\n';
     result += ` public ${name}(long nativeObj) {\n`;
@@ -108,7 +108,8 @@ class JavaGenerator extends TargetGen {
   }
 
   genFuncDecl(cls, m, name) {
-    return `${this.mapType(m.return.type)} ${name}${this.genParamList(m)} `;
+    let retType = this.isCast(m) ? cls.name : m.return.type;
+    return `${this.mapType(retType)} ${name}${this.genParamList(m)} `;
   }
 
   genFunc(cls, m) {
@@ -141,8 +142,8 @@ class JavaGenerator extends TargetGen {
 
       if (classInfo) {
         result += `   return new ${retType}(${funcName}(this.nativeObj));\n`;
-      } else if(enumInfo) {
-        result += this.toEnumValue(enumInfo, `${funcName}(this.nativeObj)`) + '\n'; 
+      } else if (enumInfo) {
+        result += this.toEnumValue(enumInfo, `${funcName}(this.nativeObj)`) + '\n';
       } else {
         result += `   return ${funcName}(this.nativeObj);\n`;
       }
@@ -186,10 +187,10 @@ class JavaGenerator extends TargetGen {
       const name = iter.name;
       const shortName = name.replace(cls.prefix, "");
 
-      if(index == 0) {
+      if (index == 0) {
         defValue = shortName;
       } else {
-        valueList += ',\n';  
+        valueList += ',\n';
       }
       valueList += `  ${shortName} (${name}())`;
       nativeList += `  static private native ${type} ${name}();\n`

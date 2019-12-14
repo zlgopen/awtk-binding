@@ -87,7 +87,7 @@ public class ListView extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setItemHeight(int item_height)  {
-   return Ret.from(list_view_set_item_height(this.nativeObj, item_height));
+   return Ret.from(list_view_set_item_height(this != null ? (this.nativeObj) : 0, item_height));
  }
 
 
@@ -100,7 +100,7 @@ public class ListView extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setDefaultItemHeight(int default_item_height)  {
-   return Ret.from(list_view_set_default_item_height(this.nativeObj, default_item_height));
+   return Ret.from(list_view_set_default_item_height(this != null ? (this.nativeObj) : 0, default_item_height));
  }
 
 
@@ -113,7 +113,7 @@ public class ListView extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setAutoHideScrollBar(boolean auto_hide_scroll_bar)  {
-   return Ret.from(list_view_set_auto_hide_scroll_bar(this.nativeObj, auto_hide_scroll_bar));
+   return Ret.from(list_view_set_auto_hide_scroll_bar(this != null ? (this.nativeObj) : 0, auto_hide_scroll_bar));
  }
 
 
@@ -124,7 +124,7 @@ public class ListView extends Widget {
  *
  * @returns list_view对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static ListView cast(Widget widget)  {
    return new ListView(list_view_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

@@ -37,7 +37,7 @@ public class LocaleInfo {
  * @returns 返回翻译之后的字符串。
  */
  public  String tr(String text)  {
-   return locale_info_tr(this.nativeObj, text);
+   return locale_info_tr(this != null ? (this.nativeObj) : 0, text);
  }
 
 
@@ -51,7 +51,7 @@ public class LocaleInfo {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret change(String language, String country)  {
-   return Ret.from(locale_info_change(this.nativeObj, language, country));
+   return Ret.from(locale_info_change(this != null ? (this.nativeObj) : 0, language, country));
  }
 
 
@@ -64,7 +64,7 @@ public class LocaleInfo {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret off(int id)  {
-   return Ret.from(locale_info_off(this.nativeObj, id));
+   return Ret.from(locale_info_off(this != null ? (this.nativeObj) : 0, id));
  }
 
 static private native long locale_info();

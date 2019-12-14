@@ -65,7 +65,7 @@ public class Column extends Widget {
  *
  * @returns column对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static Column cast(Widget widget)  {
    return new Column(column_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

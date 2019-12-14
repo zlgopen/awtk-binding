@@ -41,7 +41,7 @@
 
 *Overrides [TEvent](_awtk_.tevent.md).[constructor](_awtk_.tevent.md#constructor)*
 
-*Defined in [awtk.ts:12186](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L12186)*
+*Defined in [awtk.ts:11443](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L11443)*
 
 **Parameters:**
 
@@ -59,7 +59,7 @@ Name | Type |
 
 *Overrides [TEvent](_awtk_.tevent.md).[nativeObj](_awtk_.tevent.md#nativeobj)*
 
-*Defined in [awtk.ts:12186](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L12186)*
+*Defined in [awtk.ts:11443](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L11443)*
 
 ## Accessors
 
@@ -67,7 +67,7 @@ Name | Type |
 
 • **get percent**(): *number*
 
-*Defined in [awtk.ts:12210](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L12210)*
+*Defined in [awtk.ts:11465](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L11465)*
 
 进度百分比。
 
@@ -81,7 +81,7 @@ ___
 
 *Inherited from [TEvent](_awtk_.tevent.md).[target](_awtk_.tevent.md#target)*
 
-*Defined in [awtk.ts:10525](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L10525)*
+*Defined in [awtk.ts:1689](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L1689)*
 
 事件发生的目标对象。
 
@@ -95,7 +95,7 @@ ___
 
 *Inherited from [TEvent](_awtk_.tevent.md).[time](_awtk_.tevent.md#time)*
 
-*Defined in [awtk.ts:10515](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L10515)*
+*Defined in [awtk.ts:1680](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L1680)*
 
 事件发生的时间。
 
@@ -109,7 +109,7 @@ ___
 
 *Inherited from [TEvent](_awtk_.tevent.md).[type](_awtk_.tevent.md#type)*
 
-*Defined in [awtk.ts:10505](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L10505)*
+*Defined in [awtk.ts:1671](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L1671)*
 
 类型。
 
@@ -123,10 +123,9 @@ ___
 
 *Inherited from [TEvent](_awtk_.tevent.md).[destroy](_awtk_.tevent.md#destroy)*
 
-*Defined in [awtk.ts:10495](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L10495)*
+*Defined in [awtk.ts:1662](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L1662)*
 
-销毁事件对象。
-主要给脚本语言使用。
+销毁事件对象。 主要给脚本语言使用。
 
 **Returns:** *[TRet](../enums/_awtk_.tret.md)*
 
@@ -140,7 +139,7 @@ ___
 
 *Overrides [TEvent](_awtk_.tevent.md).[cast](_awtk_.tevent.md#static-cast)*
 
-*Defined in [awtk.ts:12200](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L12200)*
+*Defined in [awtk.ts:11456](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L11456)*
 
 把event对象转progress_event_t对象，主要给脚本语言使用。
 
@@ -162,10 +161,9 @@ ___
 
 *Inherited from [TEvent](_awtk_.tevent.md).[create](_awtk_.tevent.md#static-create)*
 
-*Defined in [awtk.ts:10481](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L10481)*
+*Defined in [awtk.ts:1650](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L1650)*
 
-创建event对象。
-主要给脚本语言使用。
+创建event对象。 主要给脚本语言使用。
 
 **Parameters:**
 

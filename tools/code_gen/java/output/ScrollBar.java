@@ -77,7 +77,7 @@ public class ScrollBar extends Widget {
  *
  * @returns scroll_bar对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static ScrollBar cast(Widget widget)  {
    return new ScrollBar(scroll_bar_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -124,7 +124,7 @@ public class ScrollBar extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setParams(int virtual_size, int row)  {
-   return Ret.from(scroll_bar_set_params(this.nativeObj, virtual_size, row));
+   return Ret.from(scroll_bar_set_params(this != null ? (this.nativeObj) : 0, virtual_size, row));
  }
 
 
@@ -138,7 +138,7 @@ public class ScrollBar extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret scrollTo(int value, int duration)  {
-   return Ret.from(scroll_bar_scroll_to(this.nativeObj, value, duration));
+   return Ret.from(scroll_bar_scroll_to(this != null ? (this.nativeObj) : 0, value, duration));
  }
 
 
@@ -151,7 +151,7 @@ public class ScrollBar extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setValue(int value)  {
-   return Ret.from(scroll_bar_set_value(this.nativeObj, value));
+   return Ret.from(scroll_bar_set_value(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -164,7 +164,7 @@ public class ScrollBar extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret addDelta(int delta)  {
-   return Ret.from(scroll_bar_add_delta(this.nativeObj, delta));
+   return Ret.from(scroll_bar_add_delta(this != null ? (this.nativeObj) : 0, delta));
  }
 
 
@@ -177,7 +177,7 @@ public class ScrollBar extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret scrollDelta(int delta)  {
-   return Ret.from(scroll_bar_scroll_delta(this.nativeObj, delta));
+   return Ret.from(scroll_bar_scroll_delta(this != null ? (this.nativeObj) : 0, delta));
  }
 
 
@@ -190,7 +190,7 @@ public class ScrollBar extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setValueOnly(int value)  {
-   return Ret.from(scroll_bar_set_value_only(this.nativeObj, value));
+   return Ret.from(scroll_bar_set_value_only(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -202,7 +202,7 @@ public class ScrollBar extends Widget {
  * @returns 返回TRUE表示是mobile风格的，否则表示不是mobile风格的。
  */
  public  boolean isMobile()  {
-   return scroll_bar_is_mobile(this.nativeObj);
+   return scroll_bar_is_mobile(this != null ? (this.nativeObj) : 0);
  }
 
  public int getVirtualSize() {

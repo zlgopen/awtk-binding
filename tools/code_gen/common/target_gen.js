@@ -4,7 +4,6 @@ const CodeGen = require('../common/code_gen.js')
 class TargetGen extends CodeGen {
   constructor() {
     super()
-    this.result = '';
     this.classNamePrefix = 'T';
   }
 
@@ -16,10 +15,6 @@ class TargetGen extends CodeGen {
     return 'null';
   }
 
-  toClassName(name) {
-    return this.classNamePrefix + this.upperCamelName(name);
-  }
-  
   toFuncName(clsName, mName) {
     let prefix = clsName.replace(/_t$/, '');
     let name = mName.replace(prefix + '_', '');
@@ -29,6 +24,11 @@ class TargetGen extends CodeGen {
 
   toEnumValue(enumInfo, result) {
     return `   return ${result};\n`;
+  }
+
+  genCreateObject(cls, m, arg) {
+    let clsName = this.toClassName(this.getClassName(cls));
+    return `   return new ${clsName}(${arg});\n`;
   }
 
   genCallMethod(cls, m) {
@@ -43,9 +43,8 @@ class TargetGen extends CodeGen {
     let classInfo = this.getClassInfo(returnType);
     let enumInfo = this.getEnumInfo(returnType);
     if (classInfo) {
-      let clsName = this.toClassName(this.getClassName(classInfo));
-      return `   return new ${clsName}(${result});\n`;
-    } else if(enumInfo) {
+      return this.genCreateObject(classInfo, m, result);
+    } else if (enumInfo) {
       return this.toEnumValue(enumInfo, result);
     } else {
       return `   return ${result};\n`;
@@ -90,12 +89,12 @@ class TargetGen extends CodeGen {
     return '(' + result + ')';
   }
 
-  genGetNativeObj(name, isCast) {
-    return `${name} != ${this.getNull()} ? (${name}.nativeObj) : ${this.getNativeNull()}`;
-  }
-
   genCallParam(param) {
     return param.name;
+  }
+
+  genGetNativeObj(type, name, isCast) {
+    return `${name} != ${this.getNull()} ? (${name}.nativeObj) : ${this.getNativeNull()}`;
   }
 
   genCallParamList(m) {
@@ -103,14 +102,15 @@ class TargetGen extends CodeGen {
     let isNormalMethod = this.isNormalMethod(m);
 
     m.params.forEach((iter, index) => {
+      const type = iter.type;
       const name = iter.name;
 
       if (index == 0) {
         if (isNormalMethod) {
-          result += 'this.nativeObj';
+          result += this.genGetNativeObj(type, "this", false);
           return;
         } else if (this.isCast(m)) {
-          result += this.genGetNativeObj(name, true);
+          result += this.genGetNativeObj(type, name, true);
           return;
         }
       }
@@ -120,7 +120,7 @@ class TargetGen extends CodeGen {
       }
 
       if (this.isClassName(iter.type)) {
-        result += this.genGetNativeObj(name, false);
+        result += this.genGetNativeObj(type, name, false);
       } else {
         result += this.genCallParam(iter);
       }
@@ -137,31 +137,32 @@ class TargetGen extends CodeGen {
     return '';
   }
 
+
   removeCode(str, start, end) {
     let result = '';
 
     do {
       let startIndex = str.indexOf(start);
-      if(startIndex < 0) {
-        result += str; 
+      if (startIndex < 0) {
+        result += str;
         break;
       }
 
       let rest = str.substr(startIndex + start.length);
       let endIndex = rest.indexOf(end);
 
-      if(endIndex < 0) {
-        result += rest; 
+      if (endIndex < 0) {
+        result += rest;
         break;
       }
 
       result += str.substr(0, startIndex);
       str = rest.substr(endIndex + end.length);
-    }while(true);
+    } while (true);
 
     return result;
   }
- 
+
   tidyDoc(desc) {
     let result = this.removeCode(desc, '<!-- c_doc_begin -->', '<!-- c_doc_end -->');
     result = this.removeCode(result, '```c\n', '```\n');
@@ -189,23 +190,23 @@ class TargetGen extends CodeGen {
   genClassDoc(cls) {
     return this.genGeneralDoc(cls);
   }
-  
+
   genConstDoc(c) {
     return this.genGeneralDoc(c);
   }
-  
+
   genEnumDoc(c) {
     return this.genGeneralDoc(c);
   }
-  
+
   genEnumItemDoc(c) {
     return this.genGeneralDoc(c);
   }
-  
+
   genPropDoc(p) {
     return this.genGeneralDoc(p);
   }
-  
+
   genFuncDoc(cls, m) {
     let paramsDesc = '';
     let retDesc = m.return.desc;
@@ -223,11 +224,11 @@ class TargetGen extends CodeGen {
  */
 `;
   }
-  
+
   genClassDecl(clsName) {
     return `class ${clsName}`;
   }
-  
+
   genClassExtends(cls) {
     return ` extends ${this.toClassName(this.getParentClassName(cls))} {\n`
   }
@@ -236,11 +237,12 @@ class TargetGen extends CodeGen {
     return '';
   }
 
-  genClass(cls) {
-    let result = '';
+  genConst(cls, c) {}
+
+  genClassBegin(cls) {
+    let result = this.genClassDoc(cls);
     let clsName = this.toClassName(this.getClassName(cls));
 
-    result = this.genClassDoc(cls);
     result += this.genClassDecl(clsName);
 
     if (cls.parent) {
@@ -250,10 +252,24 @@ class TargetGen extends CodeGen {
     }
 
     result += this.genClassPre(cls);
-    if(!this.isFake(cls)) {
+    if (!this.isFake(cls)) {
       result += this.genConstructor(cls);
     }
 
+    return result;
+  }
+
+  genClassEnd(cls) {
+    let result = this.genClassPost(cls);
+    result += '}\n\n';
+
+    return result;
+  }
+
+  genClass(cls) {
+    let result = '';
+
+    result += this.genClassBegin(cls);
     if (cls.methods) {
       cls.methods.forEach(iter => {
         result += this.genFuncDoc(cls, iter);
@@ -265,7 +281,7 @@ class TargetGen extends CodeGen {
       cls.properties.forEach((p) => {
         if (this.isWritable(p)) {
           result += this.genSetProperty(cls, p);
-        } else if(this.hasSetterFor(cls, p.name)) {
+        } else if (this.hasSetterFor(cls, p.name)) {
           result += this.genSetPropertyWithSetter(cls, p);
         }
 
@@ -281,13 +297,10 @@ class TargetGen extends CodeGen {
         result += this.genConst(cls, iter);
       });
     }
-    result += this.genClassPost(cls);
-
-    result += '}\n\n';
+    result += this.genClassEnd(cls);
 
     return result;
   }
-
 
   getSetPropertyFuncName(cls, p) {
     return `${cls.name}_set_prop_${p.name}`;
@@ -325,15 +338,10 @@ class TargetGen extends CodeGen {
     return result;
   }
 
-  genOne(cls) {
-    if (cls.type === 'class') {
-      return this.genClass(cls);
-    } else if (cls.type === 'enum') {
-      return this.genEnum(cls);
-    } else {
-      return '';
-    }
+  genEnum() {
+    return '';
   }
+
 }
 
 module.exports = TargetGen;

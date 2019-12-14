@@ -65,7 +65,7 @@ public class ButtonGroup extends Widget {
  *
  * @returns button_group对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static ButtonGroup cast(Widget widget)  {
    return new ButtonGroup(button_group_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

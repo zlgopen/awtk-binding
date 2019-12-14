@@ -81,7 +81,7 @@ public class Label extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setLength(int length)  {
-   return Ret.from(label_set_length(this.nativeObj, length));
+   return Ret.from(label_set_length(this != null ? (this.nativeObj) : 0, length));
  }
 
 
@@ -97,7 +97,7 @@ public class Label extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret resizeToContent(int min_w, int max_w, int min_h, int max_h)  {
-   return Ret.from(label_resize_to_content(this.nativeObj, min_w, max_w, min_h, max_h));
+   return Ret.from(label_resize_to_content(this != null ? (this.nativeObj) : 0, min_w, max_w, min_h, max_h));
  }
 
 
@@ -108,7 +108,7 @@ public class Label extends Widget {
  *
  * @returns label对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static Label cast(Widget widget)  {
    return new Label(label_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

@@ -61,7 +61,7 @@ public class View extends Widget {
  *
  * @returns view对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static View cast(Widget widget)  {
    return new View(view_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

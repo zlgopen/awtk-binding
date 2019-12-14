@@ -70,7 +70,7 @@ public class TabButtonGroup extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setCompact(boolean compact)  {
-   return Ret.from(tab_button_group_set_compact(this.nativeObj, compact));
+   return Ret.from(tab_button_group_set_compact(this != null ? (this.nativeObj) : 0, compact));
  }
 
 
@@ -83,7 +83,7 @@ public class TabButtonGroup extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setScrollable(boolean scrollable)  {
-   return Ret.from(tab_button_group_set_scrollable(this.nativeObj, scrollable));
+   return Ret.from(tab_button_group_set_scrollable(this != null ? (this.nativeObj) : 0, scrollable));
  }
 
 
@@ -94,7 +94,7 @@ public class TabButtonGroup extends Widget {
  *
  * @returns tab_button_group对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static TabButtonGroup cast(Widget widget)  {
    return new TabButtonGroup(tab_button_group_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

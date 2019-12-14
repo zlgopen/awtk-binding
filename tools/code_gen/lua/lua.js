@@ -233,7 +233,7 @@ class LuaGenerator extends CodeGen {
     }
     if (hasSetProps) {
       str += `  }\n`;
-    } else if(!cls.parent) {
+    } else if (!cls.parent) {
       str += `  log_debug("%s: not supported %s\\n", __FUNCTION__, name);\n`;
       str += `  return 0;\n`;
     }
@@ -308,7 +308,7 @@ class LuaGenerator extends CodeGen {
       str += '  static const struct luaL_Reg index_funcs[] = {\n'
       str += `    {"__index", wrap_${clsName}_get_prop},\n`;
       str += `    {"__newindex", wrap_${clsName}_set_prop},\n`;
-      if(this.getGcDeconstructor(cls)) {
+      if (this.getGcDeconstructor(cls)) {
         str += `    {"__gc", wrap_${clsName}_gc},\n`;
       }
       str += `    {NULL, NULL}\n`;
@@ -333,7 +333,7 @@ class LuaGenerator extends CodeGen {
     let gcDeconstructor = null;
 
     cls.methods.forEach(m => {
-      if(this.isGcDeconstructor(m)) {
+      if (this.isGcDeconstructor(m)) {
         gcDeconstructor = m;
       }
     });
@@ -347,7 +347,7 @@ class LuaGenerator extends CodeGen {
     const clsName = cls.name.replace(/_t$/, '');
     let gcDeconstructor = this.getGcDeconstructor(cls);
 
-    if(gcDeconstructor) {
+    if (gcDeconstructor) {
       return `
 static int wrap_${clsName}_t_gc(lua_State* L) {
   userdata_info_t* udata = (userdata_info_t*)lua_touserdata(L, 1);
@@ -375,7 +375,7 @@ static int wrap_${clsName}_t_gc(lua_State* L) {
       }
     });
     str += this.genGcMethod(cls);
-    
+
     if (!cls.annotation.fake) {
       str += `\nstatic const struct luaL_Reg ${cls.name}_member_funcs[] = {\n`
       cls.methods.forEach(m => {
@@ -417,7 +417,7 @@ static int wrap_${clsName}_t_gc(lua_State* L) {
       const name = iter.name.replace(clsNamePrefix, "");
 
       str += `  lua_pushstring(L, "${name}");\n`
-      if(isConstString) {
+      if (isConstString) {
         str += `  lua_pushstring(L, ${iter.name});\n`;
       } else {
         str += `  lua_pushinteger(L, ${iter.name});\n`;

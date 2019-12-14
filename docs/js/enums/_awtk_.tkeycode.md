@@ -146,7 +146,7 @@ key code。
 
 • **KEY_0**: =  TK_KEY_0()
 
-*Defined in [awtk.ts:4089](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4089)*
+*Defined in [awtk.ts:4063](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4063)*
 
 TK_KEY_0
 
@@ -156,7 +156,7 @@ ___
 
 • **KEY_1**: =  TK_KEY_1()
 
-*Defined in [awtk.ts:4096](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4096)*
+*Defined in [awtk.ts:4069](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4069)*
 
 TK_KEY_1
 
@@ -166,7 +166,7 @@ ___
 
 • **KEY_2**: =  TK_KEY_2()
 
-*Defined in [awtk.ts:4103](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4103)*
+*Defined in [awtk.ts:4075](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4075)*
 
 TK_KEY_2
 
@@ -176,7 +176,7 @@ ___
 
 • **KEY_3**: =  TK_KEY_3()
 
-*Defined in [awtk.ts:4110](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4110)*
+*Defined in [awtk.ts:4081](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4081)*
 
 TK_KEY_3
 
@@ -186,7 +186,7 @@ ___
 
 • **KEY_4**: =  TK_KEY_4()
 
-*Defined in [awtk.ts:4117](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4117)*
+*Defined in [awtk.ts:4087](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4087)*
 
 TK_KEY_4
 
@@ -196,7 +196,7 @@ ___
 
 • **KEY_5**: =  TK_KEY_5()
 
-*Defined in [awtk.ts:4124](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4124)*
+*Defined in [awtk.ts:4093](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4093)*
 
 TK_KEY_5
 
@@ -206,7 +206,7 @@ ___
 
 • **KEY_6**: =  TK_KEY_6()
 
-*Defined in [awtk.ts:4131](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4131)*
+*Defined in [awtk.ts:4099](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4099)*
 
 TK_KEY_6
 
@@ -216,7 +216,7 @@ ___
 
 • **KEY_7**: =  TK_KEY_7()
 
-*Defined in [awtk.ts:4138](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4138)*
+*Defined in [awtk.ts:4105](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4105)*
 
 TK_KEY_7
 
@@ -226,7 +226,7 @@ ___
 
 • **KEY_8**: =  TK_KEY_8()
 
-*Defined in [awtk.ts:4145](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4145)*
+*Defined in [awtk.ts:4111](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4111)*
 
 TK_KEY_8
 
@@ -236,7 +236,7 @@ ___
 
 • **KEY_9**: =  TK_KEY_9()
 
-*Defined in [awtk.ts:4152](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4152)*
+*Defined in [awtk.ts:4117](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4117)*
 
 TK_KEY_9
 
@@ -246,7 +246,7 @@ ___
 
 • **KEY_A**: =  TK_KEY_A()
 
-*Defined in [awtk.ts:4432](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4432)*
+*Defined in [awtk.ts:4357](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4357)*
 
 TK_KEY_A
 
@@ -256,7 +256,7 @@ ___
 
 • **KEY_AMPERSAND**: =  TK_KEY_AMPERSAND()
 
-*Defined in [awtk.ts:4019](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4019)*
+*Defined in [awtk.ts:4003](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4003)*
 
 TK_KEY_AMPERSAND
 
@@ -266,7 +266,7 @@ ___
 
 • **KEY_ASTERISK**: =  TK_KEY_ASTERISK()
 
-*Defined in [awtk.ts:4047](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4047)*
+*Defined in [awtk.ts:4027](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4027)*
 
 TK_KEY_ASTERISK
 
@@ -276,7 +276,7 @@ ___
 
 • **KEY_AT**: =  TK_KEY_AT()
 
-*Defined in [awtk.ts:4201](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4201)*
+*Defined in [awtk.ts:4159](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4159)*
 
 TK_KEY_AT
 
@@ -286,7 +286,7 @@ ___
 
 • **KEY_B**: =  TK_KEY_B()
 
-*Defined in [awtk.ts:4439](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4439)*
+*Defined in [awtk.ts:4363](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4363)*
 
 TK_KEY_B
 
@@ -296,7 +296,7 @@ ___
 
 • **KEY_BACK**: =  TK_KEY_BACK()
 
-*Defined in [awtk.ts:4852](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4852)*
+*Defined in [awtk.ts:4717](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4717)*
 
 TK_KEY_BACK
 
@@ -306,7 +306,7 @@ ___
 
 • **KEY_BACKQUOTE**: =  TK_KEY_BACKQUOTE()
 
-*Defined in [awtk.ts:4243](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4243)*
+*Defined in [awtk.ts:4195](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4195)*
 
 TK_KEY_BACKQUOTE
 
@@ -316,7 +316,7 @@ ___
 
 • **KEY_BACKSLASH**: =  TK_KEY_BACKSLASH()
 
-*Defined in [awtk.ts:4215](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4215)*
+*Defined in [awtk.ts:4171](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4171)*
 
 TK_KEY_BACKSLASH
 
@@ -326,7 +326,7 @@ ___
 
 • **KEY_BACKSPACE**: =  TK_KEY_BACKSPACE()
 
-*Defined in [awtk.ts:3963](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L3963)*
+*Defined in [awtk.ts:3955](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3955)*
 
 TK_KEY_BACKSPACE
 
@@ -336,7 +336,7 @@ ___
 
 • **KEY_C**: =  TK_KEY_C()
 
-*Defined in [awtk.ts:4446](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4446)*
+*Defined in [awtk.ts:4369](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4369)*
 
 TK_KEY_C
 
@@ -346,7 +346,7 @@ ___
 
 • **KEY_CANCEL**: =  TK_KEY_CANCEL()
 
-*Defined in [awtk.ts:4859](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4859)*
+*Defined in [awtk.ts:4723](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4723)*
 
 TK_KEY_CANCEL
 
@@ -356,7 +356,7 @@ ___
 
 • **KEY_CAPSLOCK**: =  TK_KEY_CAPSLOCK()
 
-*Defined in [awtk.ts:4684](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4684)*
+*Defined in [awtk.ts:4573](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4573)*
 
 TK_KEY_CAPSLOCK
 
@@ -366,7 +366,7 @@ ___
 
 • **KEY_CARET**: =  TK_KEY_CARET()
 
-*Defined in [awtk.ts:4229](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4229)*
+*Defined in [awtk.ts:4183](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4183)*
 
 TK_KEY_CARET
 
@@ -376,7 +376,7 @@ ___
 
 • **KEY_COLON**: =  TK_KEY_COLON()
 
-*Defined in [awtk.ts:4159](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4159)*
+*Defined in [awtk.ts:4123](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4123)*
 
 TK_KEY_COLON
 
@@ -386,7 +386,7 @@ ___
 
 • **KEY_COMMA**: =  TK_KEY_COMMA()
 
-*Defined in [awtk.ts:4061](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4061)*
+*Defined in [awtk.ts:4039](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4039)*
 
 TK_KEY_COMMA
 
@@ -396,7 +396,7 @@ ___
 
 • **KEY_COMMAND**: =  TK_KEY_COMMAND()
 
-*Defined in [awtk.ts:4845](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4845)*
+*Defined in [awtk.ts:4711](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4711)*
 
 TK_KEY_COMMAND
 
@@ -406,7 +406,7 @@ ___
 
 • **KEY_D**: =  TK_KEY_D()
 
-*Defined in [awtk.ts:4453](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4453)*
+*Defined in [awtk.ts:4375](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4375)*
 
 TK_KEY_D
 
@@ -416,7 +416,7 @@ ___
 
 • **KEY_DELETE**: =  TK_KEY_DELETE()
 
-*Defined in [awtk.ts:4621](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4621)*
+*Defined in [awtk.ts:4519](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4519)*
 
 TK_KEY_DELETE
 
@@ -426,7 +426,7 @@ ___
 
 • **KEY_DOLLAR**: =  TK_KEY_DOLLAR()
 
-*Defined in [awtk.ts:4012](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4012)*
+*Defined in [awtk.ts:3997](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3997)*
 
 TK_KEY_DOLLAR
 
@@ -436,7 +436,7 @@ ___
 
 • **KEY_DOT**: =  TK_KEY_DOT()
 
-*Defined in [awtk.ts:4614](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4614)*
+*Defined in [awtk.ts:4513](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4513)*
 
 TK_KEY_DOT
 
@@ -446,7 +446,7 @@ ___
 
 • **KEY_DOWN**: =  TK_KEY_DOWN()
 
-*Defined in [awtk.ts:4719](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4719)*
+*Defined in [awtk.ts:4603](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4603)*
 
 TK_KEY_DOWN
 
@@ -456,7 +456,7 @@ ___
 
 • **KEY_E**: =  TK_KEY_E()
 
-*Defined in [awtk.ts:4460](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4460)*
+*Defined in [awtk.ts:4381](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4381)*
 
 TK_KEY_E
 
@@ -466,7 +466,7 @@ ___
 
 • **KEY_END**: =  TK_KEY_END()
 
-*Defined in [awtk.ts:4698](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4698)*
+*Defined in [awtk.ts:4585](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4585)*
 
 TK_KEY_END
 
@@ -476,7 +476,7 @@ ___
 
 • **KEY_EQUAL**: =  TK_KEY_EQUAL()
 
-*Defined in [awtk.ts:4180](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4180)*
+*Defined in [awtk.ts:4141](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4141)*
 
 TK_KEY_EQUAL
 
@@ -486,7 +486,7 @@ ___
 
 • **KEY_ESCAPE**: =  TK_KEY_ESCAPE()
 
-*Defined in [awtk.ts:3956](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L3956)*
+*Defined in [awtk.ts:3949](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3949)*
 
 TK_KEY_ESCAPE
 
@@ -496,7 +496,7 @@ ___
 
 • **KEY_EXCLAIM**: =  TK_KEY_EXCLAIM()
 
-*Defined in [awtk.ts:3984](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L3984)*
+*Defined in [awtk.ts:3973](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3973)*
 
 TK_KEY_EXCLAIM
 
@@ -506,7 +506,7 @@ ___
 
 • **KEY_F**: =  TK_KEY_F()
 
-*Defined in [awtk.ts:4467](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4467)*
+*Defined in [awtk.ts:4387](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4387)*
 
 TK_KEY_F
 
@@ -516,7 +516,7 @@ ___
 
 • **KEY_F1**: =  TK_KEY_F1()
 
-*Defined in [awtk.ts:4754](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4754)*
+*Defined in [awtk.ts:4633](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4633)*
 
 TK_KEY_F1
 
@@ -526,7 +526,7 @@ ___
 
 • **KEY_F10**: =  TK_KEY_F10()
 
-*Defined in [awtk.ts:4817](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4817)*
+*Defined in [awtk.ts:4687](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4687)*
 
 TK_KEY_F10
 
@@ -536,7 +536,7 @@ ___
 
 • **KEY_F11**: =  TK_KEY_F11()
 
-*Defined in [awtk.ts:4824](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4824)*
+*Defined in [awtk.ts:4693](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4693)*
 
 TK_KEY_F11
 
@@ -546,7 +546,7 @@ ___
 
 • **KEY_F12**: =  TK_KEY_F12()
 
-*Defined in [awtk.ts:4831](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4831)*
+*Defined in [awtk.ts:4699](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4699)*
 
 TK_KEY_F12
 
@@ -556,7 +556,7 @@ ___
 
 • **KEY_F2**: =  TK_KEY_F2()
 
-*Defined in [awtk.ts:4761](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4761)*
+*Defined in [awtk.ts:4639](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4639)*
 
 TK_KEY_F2
 
@@ -566,7 +566,7 @@ ___
 
 • **KEY_F3**: =  TK_KEY_F3()
 
-*Defined in [awtk.ts:4768](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4768)*
+*Defined in [awtk.ts:4645](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4645)*
 
 TK_KEY_F3
 
@@ -576,7 +576,7 @@ ___
 
 • **KEY_F4**: =  TK_KEY_F4()
 
-*Defined in [awtk.ts:4775](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4775)*
+*Defined in [awtk.ts:4651](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4651)*
 
 TK_KEY_F4
 
@@ -586,7 +586,7 @@ ___
 
 • **KEY_F5**: =  TK_KEY_F5()
 
-*Defined in [awtk.ts:4782](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4782)*
+*Defined in [awtk.ts:4657](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4657)*
 
 TK_KEY_F5
 
@@ -596,7 +596,7 @@ ___
 
 • **KEY_F6**: =  TK_KEY_F6()
 
-*Defined in [awtk.ts:4789](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4789)*
+*Defined in [awtk.ts:4663](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4663)*
 
 TK_KEY_F6
 
@@ -606,7 +606,7 @@ ___
 
 • **KEY_F7**: =  TK_KEY_F7()
 
-*Defined in [awtk.ts:4796](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4796)*
+*Defined in [awtk.ts:4669](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4669)*
 
 TK_KEY_F7
 
@@ -616,7 +616,7 @@ ___
 
 • **KEY_F8**: =  TK_KEY_F8()
 
-*Defined in [awtk.ts:4803](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4803)*
+*Defined in [awtk.ts:4675](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4675)*
 
 TK_KEY_F8
 
@@ -626,7 +626,7 @@ ___
 
 • **KEY_F9**: =  TK_KEY_F9()
 
-*Defined in [awtk.ts:4810](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4810)*
+*Defined in [awtk.ts:4681](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4681)*
 
 TK_KEY_F9
 
@@ -636,7 +636,7 @@ ___
 
 • **KEY_G**: =  TK_KEY_G()
 
-*Defined in [awtk.ts:4474](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4474)*
+*Defined in [awtk.ts:4393](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4393)*
 
 TK_KEY_G
 
@@ -646,7 +646,7 @@ ___
 
 • **KEY_GREATER**: =  TK_KEY_GREATER()
 
-*Defined in [awtk.ts:4187](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4187)*
+*Defined in [awtk.ts:4147](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4147)*
 
 TK_KEY_GREATER
 
@@ -656,7 +656,7 @@ ___
 
 • **KEY_H**: =  TK_KEY_H()
 
-*Defined in [awtk.ts:4481](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4481)*
+*Defined in [awtk.ts:4399](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4399)*
 
 TK_KEY_H
 
@@ -666,7 +666,7 @@ ___
 
 • **KEY_HASH**: =  TK_KEY_HASH()
 
-*Defined in [awtk.ts:3998](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L3998)*
+*Defined in [awtk.ts:3985](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3985)*
 
 TK_KEY_HASH
 
@@ -676,7 +676,7 @@ ___
 
 • **KEY_HOME**: =  TK_KEY_HOME()
 
-*Defined in [awtk.ts:4691](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4691)*
+*Defined in [awtk.ts:4579](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4579)*
 
 TK_KEY_HOME
 
@@ -686,7 +686,7 @@ ___
 
 • **KEY_I**: =  TK_KEY_I()
 
-*Defined in [awtk.ts:4488](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4488)*
+*Defined in [awtk.ts:4405](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4405)*
 
 TK_KEY_I
 
@@ -696,7 +696,7 @@ ___
 
 • **KEY_INSERT**: =  TK_KEY_INSERT()
 
-*Defined in [awtk.ts:4705](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4705)*
+*Defined in [awtk.ts:4591](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4591)*
 
 TK_KEY_INSERT
 
@@ -706,7 +706,7 @@ ___
 
 • **KEY_J**: =  TK_KEY_J()
 
-*Defined in [awtk.ts:4495](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4495)*
+*Defined in [awtk.ts:4411](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4411)*
 
 TK_KEY_J
 
@@ -716,7 +716,7 @@ ___
 
 • **KEY_K**: =  TK_KEY_K()
 
-*Defined in [awtk.ts:4502](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4502)*
+*Defined in [awtk.ts:4417](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4417)*
 
 TK_KEY_K
 
@@ -726,7 +726,7 @@ ___
 
 • **KEY_L**: =  TK_KEY_L()
 
-*Defined in [awtk.ts:4509](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4509)*
+*Defined in [awtk.ts:4423](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4423)*
 
 TK_KEY_L
 
@@ -736,7 +736,7 @@ ___
 
 • **KEY_LALT**: =  TK_KEY_LALT()
 
-*Defined in [awtk.ts:4670](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4670)*
+*Defined in [awtk.ts:4561](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4561)*
 
 TK_KEY_LALT
 
@@ -746,7 +746,7 @@ ___
 
 • **KEY_LCTRL**: =  TK_KEY_LCTRL()
 
-*Defined in [awtk.ts:4656](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4656)*
+*Defined in [awtk.ts:4549](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4549)*
 
 TK_KEY_LCTRL
 
@@ -756,7 +756,7 @@ ___
 
 • **KEY_LEFT**: =  TK_KEY_LEFT()
 
-*Defined in [awtk.ts:4726](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4726)*
+*Defined in [awtk.ts:4609](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4609)*
 
 TK_KEY_LEFT
 
@@ -766,7 +766,7 @@ ___
 
 • **KEY_LEFTBRACE**: =  TK_KEY_LEFTBRACE()
 
-*Defined in [awtk.ts:4628](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4628)*
+*Defined in [awtk.ts:4525](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4525)*
 
 TK_KEY_LEFTBRACE
 
@@ -776,7 +776,7 @@ ___
 
 • **KEY_LEFTBRACKET**: =  TK_KEY_LEFTBRACKET()
 
-*Defined in [awtk.ts:4208](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4208)*
+*Defined in [awtk.ts:4165](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4165)*
 
 TK_KEY_LEFTBRACKET
 
@@ -786,7 +786,7 @@ ___
 
 • **KEY_LEFTPAREN**: =  TK_KEY_LEFTPAREN()
 
-*Defined in [awtk.ts:4033](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4033)*
+*Defined in [awtk.ts:4015](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4015)*
 
 TK_KEY_LEFTPAREN
 
@@ -796,7 +796,7 @@ ___
 
 • **KEY_LESS**: =  TK_KEY_LESS()
 
-*Defined in [awtk.ts:4173](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4173)*
+*Defined in [awtk.ts:4135](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4135)*
 
 TK_KEY_LESS
 
@@ -806,7 +806,7 @@ ___
 
 • **KEY_LSHIFT**: =  TK_KEY_LSHIFT()
 
-*Defined in [awtk.ts:4642](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4642)*
+*Defined in [awtk.ts:4537](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4537)*
 
 TK_KEY_LSHIFT
 
@@ -816,7 +816,7 @@ ___
 
 • **KEY_M**: =  TK_KEY_M()
 
-*Defined in [awtk.ts:4516](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4516)*
+*Defined in [awtk.ts:4429](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4429)*
 
 TK_KEY_M
 
@@ -826,7 +826,7 @@ ___
 
 • **KEY_MENU**: =  TK_KEY_MENU()
 
-*Defined in [awtk.ts:4838](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4838)*
+*Defined in [awtk.ts:4705](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4705)*
 
 TK_KEY_MENU
 
@@ -836,7 +836,7 @@ ___
 
 • **KEY_MINUS**: =  TK_KEY_MINUS()
 
-*Defined in [awtk.ts:4068](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4068)*
+*Defined in [awtk.ts:4045](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4045)*
 
 TK_KEY_MINUS
 
@@ -846,7 +846,7 @@ ___
 
 • **KEY_N**: =  TK_KEY_N()
 
-*Defined in [awtk.ts:4523](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4523)*
+*Defined in [awtk.ts:4435](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4435)*
 
 TK_KEY_N
 
@@ -856,7 +856,7 @@ ___
 
 • **KEY_O**: =  TK_KEY_O()
 
-*Defined in [awtk.ts:4530](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4530)*
+*Defined in [awtk.ts:4441](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4441)*
 
 TK_KEY_O
 
@@ -866,7 +866,7 @@ ___
 
 • **KEY_P**: =  TK_KEY_P()
 
-*Defined in [awtk.ts:4537](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4537)*
+*Defined in [awtk.ts:4447](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4447)*
 
 TK_KEY_P
 
@@ -876,7 +876,7 @@ ___
 
 • **KEY_PAGEDOWN**: =  TK_KEY_PAGEDOWN()
 
-*Defined in [awtk.ts:4747](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4747)*
+*Defined in [awtk.ts:4627](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4627)*
 
 TK_KEY_PAGEDOWN
 
@@ -886,7 +886,7 @@ ___
 
 • **KEY_PAGEUP**: =  TK_KEY_PAGEUP()
 
-*Defined in [awtk.ts:4740](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4740)*
+*Defined in [awtk.ts:4621](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4621)*
 
 TK_KEY_PAGEUP
 
@@ -896,7 +896,7 @@ ___
 
 • **KEY_PERCENT**: =  TK_KEY_PERCENT()
 
-*Defined in [awtk.ts:4005](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4005)*
+*Defined in [awtk.ts:3991](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3991)*
 
 TK_KEY_PERCENT
 
@@ -906,7 +906,7 @@ ___
 
 • **KEY_PERIOD**: =  TK_KEY_PERIOD()
 
-*Defined in [awtk.ts:4075](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4075)*
+*Defined in [awtk.ts:4051](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4051)*
 
 TK_KEY_PERIOD
 
@@ -916,7 +916,7 @@ ___
 
 • **KEY_PLUS**: =  TK_KEY_PLUS()
 
-*Defined in [awtk.ts:4054](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4054)*
+*Defined in [awtk.ts:4033](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4033)*
 
 TK_KEY_PLUS
 
@@ -926,7 +926,7 @@ ___
 
 • **KEY_Q**: =  TK_KEY_Q()
 
-*Defined in [awtk.ts:4544](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4544)*
+*Defined in [awtk.ts:4453](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4453)*
 
 TK_KEY_Q
 
@@ -936,7 +936,7 @@ ___
 
 • **KEY_QUESTION**: =  TK_KEY_QUESTION()
 
-*Defined in [awtk.ts:4194](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4194)*
+*Defined in [awtk.ts:4153](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4153)*
 
 TK_KEY_QUESTION
 
@@ -946,7 +946,7 @@ ___
 
 • **KEY_QUOTE**: =  TK_KEY_QUOTE()
 
-*Defined in [awtk.ts:4026](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4026)*
+*Defined in [awtk.ts:4009](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4009)*
 
 TK_KEY_QUOTE
 
@@ -956,7 +956,7 @@ ___
 
 • **KEY_QUOTEDBL**: =  TK_KEY_QUOTEDBL()
 
-*Defined in [awtk.ts:3991](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L3991)*
+*Defined in [awtk.ts:3979](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3979)*
 
 TK_KEY_QUOTEDBL
 
@@ -966,7 +966,7 @@ ___
 
 • **KEY_R**: =  TK_KEY_R()
 
-*Defined in [awtk.ts:4551](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4551)*
+*Defined in [awtk.ts:4459](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4459)*
 
 TK_KEY_R
 
@@ -976,7 +976,7 @@ ___
 
 • **KEY_RALT**: =  TK_KEY_RALT()
 
-*Defined in [awtk.ts:4677](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4677)*
+*Defined in [awtk.ts:4567](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4567)*
 
 TK_KEY_RALT
 
@@ -986,7 +986,7 @@ ___
 
 • **KEY_RCTRL**: =  TK_KEY_RCTRL()
 
-*Defined in [awtk.ts:4663](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4663)*
+*Defined in [awtk.ts:4555](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4555)*
 
 TK_KEY_RCTRL
 
@@ -996,7 +996,7 @@ ___
 
 • **KEY_RETURN**: =  TK_KEY_RETURN()
 
-*Defined in [awtk.ts:3949](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L3949)*
+*Defined in [awtk.ts:3943](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3943)*
 
 TK_KEY_RETURN
 
@@ -1006,7 +1006,7 @@ ___
 
 • **KEY_RIGHT**: =  TK_KEY_RIGHT()
 
-*Defined in [awtk.ts:4733](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4733)*
+*Defined in [awtk.ts:4615](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4615)*
 
 TK_KEY_RIGHT
 
@@ -1016,7 +1016,7 @@ ___
 
 • **KEY_RIGHTBRACE**: =  TK_KEY_RIGHTBRACE()
 
-*Defined in [awtk.ts:4635](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4635)*
+*Defined in [awtk.ts:4531](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4531)*
 
 TK_KEY_RIGHTBRACE
 
@@ -1026,7 +1026,7 @@ ___
 
 • **KEY_RIGHTBRACKET**: =  TK_KEY_RIGHTBRACKET()
 
-*Defined in [awtk.ts:4222](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4222)*
+*Defined in [awtk.ts:4177](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4177)*
 
 TK_KEY_RIGHTBRACKET
 
@@ -1036,7 +1036,7 @@ ___
 
 • **KEY_RIGHTPAREN**: =  TK_KEY_RIGHTPAREN()
 
-*Defined in [awtk.ts:4040](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4040)*
+*Defined in [awtk.ts:4021](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4021)*
 
 TK_KEY_RIGHTPAREN
 
@@ -1046,7 +1046,7 @@ ___
 
 • **KEY_RSHIFT**: =  TK_KEY_RSHIFT()
 
-*Defined in [awtk.ts:4649](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4649)*
+*Defined in [awtk.ts:4543](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4543)*
 
 TK_KEY_RSHIFT
 
@@ -1056,7 +1056,7 @@ ___
 
 • **KEY_S**: =  TK_KEY_S()
 
-*Defined in [awtk.ts:4558](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4558)*
+*Defined in [awtk.ts:4465](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4465)*
 
 TK_KEY_S
 
@@ -1066,7 +1066,7 @@ ___
 
 • **KEY_SEMICOLON**: =  TK_KEY_SEMICOLON()
 
-*Defined in [awtk.ts:4166](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4166)*
+*Defined in [awtk.ts:4129](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4129)*
 
 TK_KEY_SEMICOLON
 
@@ -1076,7 +1076,7 @@ ___
 
 • **KEY_SLASH**: =  TK_KEY_SLASH()
 
-*Defined in [awtk.ts:4082](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4082)*
+*Defined in [awtk.ts:4057](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4057)*
 
 TK_KEY_SLASH
 
@@ -1086,7 +1086,7 @@ ___
 
 • **KEY_SPACE**: =  TK_KEY_SPACE()
 
-*Defined in [awtk.ts:3977](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L3977)*
+*Defined in [awtk.ts:3967](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3967)*
 
 TK_KEY_SPACE
 
@@ -1096,7 +1096,7 @@ ___
 
 • **KEY_T**: =  TK_KEY_T()
 
-*Defined in [awtk.ts:4565](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4565)*
+*Defined in [awtk.ts:4471](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4471)*
 
 TK_KEY_T
 
@@ -1106,7 +1106,7 @@ ___
 
 • **KEY_TAB**: =  TK_KEY_TAB()
 
-*Defined in [awtk.ts:3970](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L3970)*
+*Defined in [awtk.ts:3961](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L3961)*
 
 TK_KEY_TAB
 
@@ -1116,7 +1116,7 @@ ___
 
 • **KEY_U**: =  TK_KEY_U()
 
-*Defined in [awtk.ts:4572](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4572)*
+*Defined in [awtk.ts:4477](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4477)*
 
 TK_KEY_U
 
@@ -1126,7 +1126,7 @@ ___
 
 • **KEY_UNDERSCORE**: =  TK_KEY_UNDERSCORE()
 
-*Defined in [awtk.ts:4236](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4236)*
+*Defined in [awtk.ts:4189](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4189)*
 
 TK_KEY_UNDERSCORE
 
@@ -1136,7 +1136,7 @@ ___
 
 • **KEY_UP**: =  TK_KEY_UP()
 
-*Defined in [awtk.ts:4712](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4712)*
+*Defined in [awtk.ts:4597](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4597)*
 
 TK_KEY_UP
 
@@ -1146,7 +1146,7 @@ ___
 
 • **KEY_V**: =  TK_KEY_V()
 
-*Defined in [awtk.ts:4579](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4579)*
+*Defined in [awtk.ts:4483](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4483)*
 
 TK_KEY_V
 
@@ -1156,7 +1156,7 @@ ___
 
 • **KEY_W**: =  TK_KEY_W()
 
-*Defined in [awtk.ts:4586](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4586)*
+*Defined in [awtk.ts:4489](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4489)*
 
 TK_KEY_W
 
@@ -1166,7 +1166,7 @@ ___
 
 • **KEY_X**: =  TK_KEY_X()
 
-*Defined in [awtk.ts:4593](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4593)*
+*Defined in [awtk.ts:4495](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4495)*
 
 TK_KEY_X
 
@@ -1176,7 +1176,7 @@ ___
 
 • **KEY_Y**: =  TK_KEY_Y()
 
-*Defined in [awtk.ts:4600](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4600)*
+*Defined in [awtk.ts:4501](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4501)*
 
 TK_KEY_Y
 
@@ -1186,7 +1186,7 @@ ___
 
 • **KEY_Z**: =  TK_KEY_Z()
 
-*Defined in [awtk.ts:4607](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4607)*
+*Defined in [awtk.ts:4507](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4507)*
 
 TK_KEY_Z
 
@@ -1196,7 +1196,7 @@ ___
 
 • **KEY_a**: =  TK_KEY_a()
 
-*Defined in [awtk.ts:4250](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4250)*
+*Defined in [awtk.ts:4201](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4201)*
 
 TK_KEY_a
 
@@ -1206,7 +1206,7 @@ ___
 
 • **KEY_b**: =  TK_KEY_b()
 
-*Defined in [awtk.ts:4257](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4257)*
+*Defined in [awtk.ts:4207](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4207)*
 
 TK_KEY_b
 
@@ -1216,7 +1216,7 @@ ___
 
 • **KEY_c**: =  TK_KEY_c()
 
-*Defined in [awtk.ts:4264](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4264)*
+*Defined in [awtk.ts:4213](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4213)*
 
 TK_KEY_c
 
@@ -1226,7 +1226,7 @@ ___
 
 • **KEY_d**: =  TK_KEY_d()
 
-*Defined in [awtk.ts:4271](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4271)*
+*Defined in [awtk.ts:4219](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4219)*
 
 TK_KEY_d
 
@@ -1236,7 +1236,7 @@ ___
 
 • **KEY_e**: =  TK_KEY_e()
 
-*Defined in [awtk.ts:4278](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4278)*
+*Defined in [awtk.ts:4225](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4225)*
 
 TK_KEY_e
 
@@ -1246,7 +1246,7 @@ ___
 
 • **KEY_f**: =  TK_KEY_f()
 
-*Defined in [awtk.ts:4285](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4285)*
+*Defined in [awtk.ts:4231](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4231)*
 
 TK_KEY_f
 
@@ -1256,7 +1256,7 @@ ___
 
 • **KEY_g**: =  TK_KEY_g()
 
-*Defined in [awtk.ts:4292](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4292)*
+*Defined in [awtk.ts:4237](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4237)*
 
 TK_KEY_g
 
@@ -1266,7 +1266,7 @@ ___
 
 • **KEY_h**: =  TK_KEY_h()
 
-*Defined in [awtk.ts:4299](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4299)*
+*Defined in [awtk.ts:4243](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4243)*
 
 TK_KEY_h
 
@@ -1276,7 +1276,7 @@ ___
 
 • **KEY_i**: =  TK_KEY_i()
 
-*Defined in [awtk.ts:4306](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4306)*
+*Defined in [awtk.ts:4249](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4249)*
 
 TK_KEY_i
 
@@ -1286,7 +1286,7 @@ ___
 
 • **KEY_j**: =  TK_KEY_j()
 
-*Defined in [awtk.ts:4313](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4313)*
+*Defined in [awtk.ts:4255](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4255)*
 
 TK_KEY_j
 
@@ -1296,7 +1296,7 @@ ___
 
 • **KEY_k**: =  TK_KEY_k()
 
-*Defined in [awtk.ts:4320](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4320)*
+*Defined in [awtk.ts:4261](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4261)*
 
 TK_KEY_k
 
@@ -1306,7 +1306,7 @@ ___
 
 • **KEY_l**: =  TK_KEY_l()
 
-*Defined in [awtk.ts:4327](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4327)*
+*Defined in [awtk.ts:4267](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4267)*
 
 TK_KEY_l
 
@@ -1316,7 +1316,7 @@ ___
 
 • **KEY_m**: =  TK_KEY_m()
 
-*Defined in [awtk.ts:4334](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4334)*
+*Defined in [awtk.ts:4273](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4273)*
 
 TK_KEY_m
 
@@ -1326,7 +1326,7 @@ ___
 
 • **KEY_n**: =  TK_KEY_n()
 
-*Defined in [awtk.ts:4341](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4341)*
+*Defined in [awtk.ts:4279](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4279)*
 
 TK_KEY_n
 
@@ -1336,7 +1336,7 @@ ___
 
 • **KEY_o**: =  TK_KEY_o()
 
-*Defined in [awtk.ts:4348](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4348)*
+*Defined in [awtk.ts:4285](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4285)*
 
 TK_KEY_o
 
@@ -1346,7 +1346,7 @@ ___
 
 • **KEY_p**: =  TK_KEY_p()
 
-*Defined in [awtk.ts:4355](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4355)*
+*Defined in [awtk.ts:4291](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4291)*
 
 TK_KEY_p
 
@@ -1356,7 +1356,7 @@ ___
 
 • **KEY_q**: =  TK_KEY_q()
 
-*Defined in [awtk.ts:4362](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4362)*
+*Defined in [awtk.ts:4297](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4297)*
 
 TK_KEY_q
 
@@ -1366,7 +1366,7 @@ ___
 
 • **KEY_r**: =  TK_KEY_r()
 
-*Defined in [awtk.ts:4369](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4369)*
+*Defined in [awtk.ts:4303](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4303)*
 
 TK_KEY_r
 
@@ -1376,7 +1376,7 @@ ___
 
 • **KEY_s**: =  TK_KEY_s()
 
-*Defined in [awtk.ts:4376](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4376)*
+*Defined in [awtk.ts:4309](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4309)*
 
 TK_KEY_s
 
@@ -1386,7 +1386,7 @@ ___
 
 • **KEY_t**: =  TK_KEY_t()
 
-*Defined in [awtk.ts:4383](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4383)*
+*Defined in [awtk.ts:4315](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4315)*
 
 TK_KEY_t
 
@@ -1396,7 +1396,7 @@ ___
 
 • **KEY_u**: =  TK_KEY_u()
 
-*Defined in [awtk.ts:4390](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4390)*
+*Defined in [awtk.ts:4321](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4321)*
 
 TK_KEY_u
 
@@ -1406,7 +1406,7 @@ ___
 
 • **KEY_v**: =  TK_KEY_v()
 
-*Defined in [awtk.ts:4397](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4397)*
+*Defined in [awtk.ts:4327](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4327)*
 
 TK_KEY_v
 
@@ -1416,7 +1416,7 @@ ___
 
 • **KEY_w**: =  TK_KEY_w()
 
-*Defined in [awtk.ts:4404](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4404)*
+*Defined in [awtk.ts:4333](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4333)*
 
 TK_KEY_w
 
@@ -1426,7 +1426,7 @@ ___
 
 • **KEY_x**: =  TK_KEY_x()
 
-*Defined in [awtk.ts:4411](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4411)*
+*Defined in [awtk.ts:4339](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4339)*
 
 TK_KEY_x
 
@@ -1436,7 +1436,7 @@ ___
 
 • **KEY_y**: =  TK_KEY_y()
 
-*Defined in [awtk.ts:4418](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4418)*
+*Defined in [awtk.ts:4345](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4345)*
 
 TK_KEY_y
 
@@ -1446,6 +1446,6 @@ ___
 
 • **KEY_z**: =  TK_KEY_z()
 
-*Defined in [awtk.ts:4425](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L4425)*
+*Defined in [awtk.ts:4351](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L4351)*
 
 TK_KEY_z

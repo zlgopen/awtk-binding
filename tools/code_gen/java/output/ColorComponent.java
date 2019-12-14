@@ -27,7 +27,7 @@ public class ColorComponent extends Widget {
  *
  * @returns color_component对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static ColorComponent cast(Widget widget)  {
    return new ColorComponent(color_component_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

@@ -65,7 +65,7 @@ public class Grid extends Widget {
  *
  * @returns grid对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static Grid cast(Widget widget)  {
    return new Grid(grid_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

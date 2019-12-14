@@ -76,7 +76,7 @@ public class TextSelector extends Widget {
  *
  * @returns text_selector对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static TextSelector cast(Widget widget)  {
    return new TextSelector(text_selector_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -89,7 +89,7 @@ public class TextSelector extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret resetOptions()  {
-   return Ret.from(text_selector_reset_options(this.nativeObj));
+   return Ret.from(text_selector_reset_options(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -101,7 +101,7 @@ public class TextSelector extends Widget {
  * @returns 返回选项个数。
  */
  public  int countOptions()  {
-   return text_selector_count_options(this.nativeObj);
+   return text_selector_count_options(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -115,7 +115,7 @@ public class TextSelector extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret appendOption(int value, String text)  {
-   return Ret.from(text_selector_append_option(this.nativeObj, value, text));
+   return Ret.from(text_selector_append_option(this != null ? (this.nativeObj) : 0, value, text));
  }
 
 
@@ -128,7 +128,7 @@ public class TextSelector extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setOptions(String options)  {
-   return Ret.from(text_selector_set_options(this.nativeObj, options));
+   return Ret.from(text_selector_set_options(this != null ? (this.nativeObj) : 0, options));
  }
 
 
@@ -143,7 +143,7 @@ public class TextSelector extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setRangeOptions(int start, int nr, int step)  {
-   return Ret.from(text_selector_set_range_options(this.nativeObj, start, nr, step));
+   return Ret.from(text_selector_set_range_options(this != null ? (this.nativeObj) : 0, start, nr, step));
  }
 
 
@@ -155,7 +155,7 @@ public class TextSelector extends Widget {
  * @returns 返回值。
  */
  public  int getValue()  {
-   return text_selector_get_value(this.nativeObj);
+   return text_selector_get_value(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -168,7 +168,7 @@ public class TextSelector extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setValue(int value)  {
-   return Ret.from(text_selector_set_value(this.nativeObj, value));
+   return Ret.from(text_selector_set_value(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -180,7 +180,7 @@ public class TextSelector extends Widget {
  * @returns 返回文本。
  */
  public  String getTextValue()  {
-   return text_selector_get_text(this.nativeObj);
+   return text_selector_get_text(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -193,7 +193,7 @@ public class TextSelector extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setText(String text)  {
-   return Ret.from(text_selector_set_text(this.nativeObj, text));
+   return Ret.from(text_selector_set_text(this != null ? (this.nativeObj) : 0, text));
  }
 
 
@@ -206,7 +206,7 @@ public class TextSelector extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setSelectedIndex(int index)  {
-   return Ret.from(text_selector_set_selected_index(this.nativeObj, index));
+   return Ret.from(text_selector_set_selected_index(this != null ? (this.nativeObj) : 0, index));
  }
 
 
@@ -219,7 +219,7 @@ public class TextSelector extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setVisibleNr(int visible_nr)  {
-   return Ret.from(text_selector_set_visible_nr(this.nativeObj, visible_nr));
+   return Ret.from(text_selector_set_visible_nr(this != null ? (this.nativeObj) : 0, visible_nr));
  }
 
  public int getVisibleNr() {

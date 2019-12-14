@@ -68,7 +68,7 @@ public class TimeClock extends Widget {
  *
  * @returns time_clock对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static TimeClock cast(Widget widget)  {
    return new TimeClock(time_clock_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -82,7 +82,7 @@ public class TimeClock extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setHour(int hour)  {
-   return Ret.from(time_clock_set_hour(this.nativeObj, hour));
+   return Ret.from(time_clock_set_hour(this != null ? (this.nativeObj) : 0, hour));
  }
 
 
@@ -95,7 +95,7 @@ public class TimeClock extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setMinute(int minute)  {
-   return Ret.from(time_clock_set_minute(this.nativeObj, minute));
+   return Ret.from(time_clock_set_minute(this != null ? (this.nativeObj) : 0, minute));
  }
 
 
@@ -108,7 +108,7 @@ public class TimeClock extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setSecond(int second)  {
-   return Ret.from(time_clock_set_second(this.nativeObj, second));
+   return Ret.from(time_clock_set_second(this != null ? (this.nativeObj) : 0, second));
  }
 
 
@@ -121,7 +121,7 @@ public class TimeClock extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setHourImage(String hour)  {
-   return Ret.from(time_clock_set_hour_image(this.nativeObj, hour));
+   return Ret.from(time_clock_set_hour_image(this != null ? (this.nativeObj) : 0, hour));
  }
 
 
@@ -134,7 +134,7 @@ public class TimeClock extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setMinuteImage(String minute_image)  {
-   return Ret.from(time_clock_set_minute_image(this.nativeObj, minute_image));
+   return Ret.from(time_clock_set_minute_image(this != null ? (this.nativeObj) : 0, minute_image));
  }
 
 
@@ -147,7 +147,7 @@ public class TimeClock extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setSecondImage(String second_image)  {
-   return Ret.from(time_clock_set_second_image(this.nativeObj, second_image));
+   return Ret.from(time_clock_set_second_image(this != null ? (this.nativeObj) : 0, second_image));
  }
 
 
@@ -160,7 +160,7 @@ public class TimeClock extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setBgImage(String bg_image)  {
-   return Ret.from(time_clock_set_bg_image(this.nativeObj, bg_image));
+   return Ret.from(time_clock_set_bg_image(this != null ? (this.nativeObj) : 0, bg_image));
  }
 
 
@@ -173,7 +173,7 @@ public class TimeClock extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setImage(String image)  {
-   return Ret.from(time_clock_set_image(this.nativeObj, image));
+   return Ret.from(time_clock_set_image(this != null ? (this.nativeObj) : 0, image));
  }
 
 
@@ -188,7 +188,7 @@ public class TimeClock extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setHourAnchor(String anchor_x, String anchor_y)  {
-   return Ret.from(time_clock_set_hour_anchor(this.nativeObj, anchor_x, anchor_y));
+   return Ret.from(time_clock_set_hour_anchor(this != null ? (this.nativeObj) : 0, anchor_x, anchor_y));
  }
 
 
@@ -203,7 +203,7 @@ public class TimeClock extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setMinuteAnchor(String anchor_x, String anchor_y)  {
-   return Ret.from(time_clock_set_minute_anchor(this.nativeObj, anchor_x, anchor_y));
+   return Ret.from(time_clock_set_minute_anchor(this != null ? (this.nativeObj) : 0, anchor_x, anchor_y));
  }
 
 
@@ -218,7 +218,7 @@ public class TimeClock extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setSecondAnchor(String anchor_x, String anchor_y)  {
-   return Ret.from(time_clock_set_second_anchor(this.nativeObj, anchor_x, anchor_y));
+   return Ret.from(time_clock_set_second_anchor(this != null ? (this.nativeObj) : 0, anchor_x, anchor_y));
  }
 
  public int getHour() {

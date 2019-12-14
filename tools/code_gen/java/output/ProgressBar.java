@@ -75,7 +75,7 @@ public class ProgressBar extends Widget {
  *
  * @returns progress_bar对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static ProgressBar cast(Widget widget)  {
    return new ProgressBar(progress_bar_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -89,7 +89,7 @@ public class ProgressBar extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setValue(double value)  {
-   return Ret.from(progress_bar_set_value(this.nativeObj, value));
+   return Ret.from(progress_bar_set_value(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -102,7 +102,7 @@ public class ProgressBar extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setMax(int max)  {
-   return Ret.from(progress_bar_set_max(this.nativeObj, max));
+   return Ret.from(progress_bar_set_max(this != null ? (this.nativeObj) : 0, max));
  }
 
 
@@ -115,7 +115,7 @@ public class ProgressBar extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setVertical(boolean vertical)  {
-   return Ret.from(progress_bar_set_vertical(this.nativeObj, vertical));
+   return Ret.from(progress_bar_set_vertical(this != null ? (this.nativeObj) : 0, vertical));
  }
 
 
@@ -128,7 +128,7 @@ public class ProgressBar extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setShowText(boolean show_text)  {
-   return Ret.from(progress_bar_set_show_text(this.nativeObj, show_text));
+   return Ret.from(progress_bar_set_show_text(this != null ? (this.nativeObj) : 0, show_text));
  }
 
 
@@ -142,7 +142,7 @@ public class ProgressBar extends Widget {
  * @returns 返回百分比。
  */
  public  int getPercent()  {
-   return progress_bar_get_percent(this.nativeObj);
+   return progress_bar_get_percent(this != null ? (this.nativeObj) : 0);
  }
 
  public double getMax() {

@@ -63,7 +63,7 @@ public class ColorTile extends Widget {
  *
  * @returns color_tile对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static ColorTile cast(Widget widget)  {
    return new ColorTile(color_tile_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -77,7 +77,7 @@ public class ColorTile extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setBgColor(String color)  {
-   return Ret.from(color_tile_set_bg_color(this.nativeObj, color));
+   return Ret.from(color_tile_set_bg_color(this != null ? (this.nativeObj) : 0, color));
  }
 
  public String getBgColor() {

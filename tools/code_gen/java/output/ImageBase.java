@@ -48,7 +48,7 @@ public class ImageBase extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setImage(String name)  {
-   return Ret.from(image_base_set_image(this.nativeObj, name));
+   return Ret.from(image_base_set_image(this != null ? (this.nativeObj) : 0, name));
  }
 
 
@@ -61,7 +61,7 @@ public class ImageBase extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setRotation(double rotation)  {
-   return Ret.from(image_base_set_rotation(this.nativeObj, rotation));
+   return Ret.from(image_base_set_rotation(this != null ? (this.nativeObj) : 0, rotation));
  }
 
 
@@ -75,7 +75,7 @@ public class ImageBase extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setScale(double scale_x, double scale_y)  {
-   return Ret.from(image_base_set_scale(this.nativeObj, scale_x, scale_y));
+   return Ret.from(image_base_set_scale(this != null ? (this.nativeObj) : 0, scale_x, scale_y));
  }
 
 
@@ -89,7 +89,7 @@ public class ImageBase extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setAnchor(double anchor_x, double anchor_y)  {
-   return Ret.from(image_base_set_anchor(this.nativeObj, anchor_x, anchor_y));
+   return Ret.from(image_base_set_anchor(this != null ? (this.nativeObj) : 0, anchor_x, anchor_y));
  }
 
 
@@ -102,7 +102,7 @@ public class ImageBase extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setSelected(boolean selected)  {
-   return Ret.from(image_base_set_selected(this.nativeObj, selected));
+   return Ret.from(image_base_set_selected(this != null ? (this.nativeObj) : 0, selected));
  }
 
 
@@ -115,7 +115,7 @@ public class ImageBase extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setSelectable(boolean selectable)  {
-   return Ret.from(image_base_set_selectable(this.nativeObj, selectable));
+   return Ret.from(image_base_set_selectable(this != null ? (this.nativeObj) : 0, selectable));
  }
 
 
@@ -128,7 +128,7 @@ public class ImageBase extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setClickable(boolean clickable)  {
-   return Ret.from(image_base_set_clickable(this.nativeObj, clickable));
+   return Ret.from(image_base_set_clickable(this != null ? (this.nativeObj) : 0, clickable));
  }
 
 
@@ -139,7 +139,7 @@ public class ImageBase extends Widget {
  *
  * @returns image_base对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static ImageBase cast(Widget widget)  {
    return new ImageBase(image_base_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

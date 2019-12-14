@@ -18,9 +18,7 @@ public class Rect {
 
 
 /**
- * 创建rect对象。
- * 
- * 主要供脚本语言使用。
+ * 创建rect对象。 主要供脚本语言使用。
  * 
  * @param x x坐标。
  * @param y y坐标。
@@ -35,9 +33,7 @@ public class Rect {
 
 
 /**
- * 设置rect对象的xywh。
- * 
- * 主要供脚本语言使用。
+ * 设置rect对象的xywh。 主要供脚本语言使用。
  * 
  * @param rect rect对象。
  * @param x x坐标。
@@ -48,14 +44,12 @@ public class Rect {
  * @returns rect对象。
  */
  public  Rect set(int x, int y, int w, int h)  {
-   return new Rect(rect_set(this.nativeObj, x, y, w, h));
+   return new Rect(rect_set(this != null ? (this.nativeObj) : 0, x, y, w, h));
  }
 
 
 /**
- * 转换为rect对象。
- * 
- * 供脚本语言使用。
+ * 转换为rect对象。 供脚本语言使用。
  * 
  * @param rect rect对象。
  *
@@ -67,16 +61,14 @@ public class Rect {
 
 
 /**
- * 销毁rect对象。
- * 
- * 主要供脚本语言使用。
+ * 销毁rect对象。 主要供脚本语言使用。
  * 
  * @param r rect对象。
  *
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret destroy()  {
-   return Ret.from(rect_destroy(this.nativeObj));
+   return Ret.from(rect_destroy(this != null ? (this.nativeObj) : 0));
  }
 
  public int getX() {

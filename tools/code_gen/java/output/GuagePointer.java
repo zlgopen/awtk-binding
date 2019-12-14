@@ -2,31 +2,7 @@ package awtk;
 
 
 /**
- * 仪表指针控件。
- * 
- *  仪表指针就是一张旋转的图片，图片可以是普通图片也可以是SVG图片。
- * 
- *  在嵌入式平台上，对于旋转的图片，SVG图片的效率比位图高数倍，所以推荐使用SVG图片。
- * 
- *  guage\_pointer\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于guage\_pointer\_t控件。
- * 
- *  在xml中使用"guage\_pointer"标签创建仪表指针控件。如：
- * 
- *  ```xml
- *  <guage_pointer x="c" y="50" w="24" h="140" value="-128" image="guage_pointer" />
- *  ```
- * 
- * 更多用法请参考：
- *  [guage.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/guage.xml)
- * 
- *  在c代码中使用函数guage\_pointer\_create创建仪表指针控件。如：
- * 
- *  ```c
- *   widget_t* guage_pointer = guage_pointer_create(guage, 10, 10, 100, 30);
- *   guage_pointer_set_image(guage_pointer, "guage_pointer");
- *  ```
- * 
- * 创建之后，需要用guage\_pointer\_set\_image设置仪表指针图片。
+ * 仪表指针控件。 仪表指针就是一张旋转的图片，图片可以是普通图片也可以是SVG图片。 在嵌入式平台上，对于旋转的图片，SVG图片的效率比位图高数倍，所以推荐使用SVG图片。 guage\_pointer\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于guage\_pointer\_t控件。 在xml中使用"guage\_pointer"标签创建仪表指针控件。如： ```xml <guage_pointer x="c" y="50" w="24" h="140" value="-128" image="guage_pointer" /> ``` 更多用法请参考： [guage.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/guage.xml) 在c代码中使用函数guage\_pointer\_create创建仪表指针控件。如： ```c  widget_t* guage_pointer = guage_pointer_create(guage, 10, 10, 100, 30);  guage_pointer_set_image(guage_pointer, "guage_pointer"); ``` 创建之后，需要用guage\_pointer\_set\_image设置仪表指针图片。
  *
  */
 public class GuagePointer extends Widget {
@@ -64,7 +40,7 @@ public class GuagePointer extends Widget {
  *
  * @returns guage_pointer对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static GuagePointer cast(Widget widget)  {
    return new GuagePointer(guage_pointer_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -78,7 +54,7 @@ public class GuagePointer extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setAngle(int angle)  {
-   return Ret.from(guage_pointer_set_angle(this.nativeObj, angle));
+   return Ret.from(guage_pointer_set_angle(this != null ? (this.nativeObj) : 0, angle));
  }
 
 
@@ -91,7 +67,7 @@ public class GuagePointer extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setImage(String image)  {
-   return Ret.from(guage_pointer_set_image(this.nativeObj, image));
+   return Ret.from(guage_pointer_set_image(this != null ? (this.nativeObj) : 0, image));
  }
 
 
@@ -105,7 +81,7 @@ public class GuagePointer extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setAnchor(String anchor_x, String anchor_y)  {
-   return Ret.from(guage_pointer_set_anchor(this.nativeObj, anchor_x, anchor_y));
+   return Ret.from(guage_pointer_set_anchor(this != null ? (this.nativeObj) : 0, anchor_x, anchor_y));
  }
 
  public int getAngle() {

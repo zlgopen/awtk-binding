@@ -66,7 +66,7 @@ public class GroupBox extends Widget {
  *
  * @returns group_box对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static GroupBox cast(Widget widget)  {
    return new GroupBox(group_box_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

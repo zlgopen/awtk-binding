@@ -85,7 +85,7 @@ public class Popup extends WindowBase {
  *
  * @returns popup对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static Popup cast(Widget widget)  {
    return new Popup(popup_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -99,7 +99,7 @@ public class Popup extends WindowBase {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setCloseWhenClick(boolean close_when_click)  {
-   return Ret.from(popup_set_close_when_click(this.nativeObj, close_when_click));
+   return Ret.from(popup_set_close_when_click(this != null ? (this.nativeObj) : 0, close_when_click));
  }
 
 
@@ -112,7 +112,7 @@ public class Popup extends WindowBase {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setCloseWhenClickOutside(boolean close_when_click_outside)  {
-   return Ret.from(popup_set_close_when_click_outside(this.nativeObj, close_when_click_outside));
+   return Ret.from(popup_set_close_when_click_outside(this != null ? (this.nativeObj) : 0, close_when_click_outside));
  }
 
  public boolean getCloseWhenClick() {

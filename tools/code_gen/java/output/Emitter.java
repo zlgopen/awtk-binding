@@ -29,9 +29,7 @@ public class Emitter {
 
 
 /**
- * 分发事件。如果当前分发的回调函数返回RET_REMOVE，该回调函数将被移出。
- *  禁用状态下，本函数不做任何事情。
- *   如果当前分发的回调函数返回RET_STOP，dispatch中断分发，并返回RET_STOP，否则返回RET_OK。
+ * 分发事件。如果当前分发的回调函数返回RET_REMOVE，该回调函数将被移出。 禁用状态下，本函数不做任何事情。  如果当前分发的回调函数返回RET_STOP，dispatch中断分发，并返回RET_STOP，否则返回RET_OK。
  * 
  * @param emitter emitter对象。
  * @param e 事件对象。
@@ -39,14 +37,12 @@ public class Emitter {
  * @returns 
  */
  public  Ret dispatch(Event e)  {
-   return Ret.from(emitter_dispatch(this.nativeObj, e != null ? (e.nativeObj) : 0));
+   return Ret.from(emitter_dispatch(this != null ? (this.nativeObj) : 0, e != null ? (e.nativeObj) : 0));
  }
 
 
 /**
- * 分发事件。
- * 对emitter_dispatch的包装，分发一个简单的事件。
- *   如果当前分发的回调函数返回RET_STOP，dispatch中断分发，并返回RET_STOP，否则返回RET_OK。
+ * 分发事件。 对emitter_dispatch的包装，分发一个简单的事件。  如果当前分发的回调函数返回RET_STOP，dispatch中断分发，并返回RET_STOP，否则返回RET_OK。
  * 
  * @param emitter emitter对象。
  * @param type 事件类型。
@@ -54,7 +50,7 @@ public class Emitter {
  * @returns 
  */
  public  Ret dispatchSimpleEvent(EventType type)  {
-   return Ret.from(emitter_dispatch_simple_event(this.nativeObj, type.value()));
+   return Ret.from(emitter_dispatch_simple_event(this != null ? (this.nativeObj) : 0, type.value()));
  }
 
 
@@ -69,7 +65,7 @@ public class Emitter {
  * @returns 返回id，用于emitter_off。
  */
  public  int on(EventType type, OnEvent on_event, long ctx)  {
-   return emitter_on(this.nativeObj, type.value(), on_event, ctx);
+   return emitter_on(this != null ? (this.nativeObj) : 0, type.value(), on_event, ctx);
  }
 
 
@@ -82,7 +78,7 @@ public class Emitter {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret off(int id)  {
-   return Ret.from(emitter_off(this.nativeObj, id));
+   return Ret.from(emitter_off(this != null ? (this.nativeObj) : 0, id));
  }
 
 
@@ -94,21 +90,19 @@ public class Emitter {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret enable()  {
-   return Ret.from(emitter_enable(this.nativeObj));
+   return Ret.from(emitter_enable(this != null ? (this.nativeObj) : 0));
  }
 
 
 /**
- * 禁用。
- * 
- *  禁用后emitter_dispatch无效，但可以注册和注销。
+ * 禁用。 禁用后emitter_dispatch无效，但可以注册和注销。
  * 
  * @param emitter emitter对象。
  *
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret disable()  {
-   return Ret.from(emitter_disable(this.nativeObj));
+   return Ret.from(emitter_disable(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -120,7 +114,7 @@ public class Emitter {
  * @returns 回调函数个数。
  */
  public  int size()  {
-   return emitter_size(this.nativeObj);
+   return emitter_size(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -132,14 +126,12 @@ public class Emitter {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret destroy()  {
-   return Ret.from(emitter_destroy(this.nativeObj));
+   return Ret.from(emitter_destroy(this != null ? (this.nativeObj) : 0));
  }
 
 
 /**
- * 转换为emitter对象(供脚本语言使用)。
- * 
- *  主要给脚本语言使用。
+ * 转换为emitter对象(供脚本语言使用)。 主要给脚本语言使用。
  * 
  * @param emitter emitter对象。
  *

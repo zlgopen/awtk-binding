@@ -76,7 +76,7 @@ public class Keyboard extends WindowBase {
  *
  * @returns keyboard对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static Keyboard cast(Widget widget)  {
    return new Keyboard(keyboard_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

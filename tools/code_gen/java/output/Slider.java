@@ -78,7 +78,7 @@ public class Slider extends Widget {
  *
  * @returns slider对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static Slider cast(Widget widget)  {
    return new Slider(slider_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -92,7 +92,7 @@ public class Slider extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setValue(double value)  {
-   return Ret.from(slider_set_value(this.nativeObj, value));
+   return Ret.from(slider_set_value(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -105,7 +105,7 @@ public class Slider extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setMin(double min)  {
-   return Ret.from(slider_set_min(this.nativeObj, min));
+   return Ret.from(slider_set_min(this != null ? (this.nativeObj) : 0, min));
  }
 
 
@@ -118,7 +118,7 @@ public class Slider extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setMax(double max)  {
-   return Ret.from(slider_set_max(this.nativeObj, max));
+   return Ret.from(slider_set_max(this != null ? (this.nativeObj) : 0, max));
  }
 
 
@@ -131,7 +131,7 @@ public class Slider extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setStep(double step)  {
-   return Ret.from(slider_set_step(this.nativeObj, step));
+   return Ret.from(slider_set_step(this != null ? (this.nativeObj) : 0, step));
  }
 
 
@@ -144,7 +144,7 @@ public class Slider extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setBarSize(int bar_size)  {
-   return Ret.from(slider_set_bar_size(this.nativeObj, bar_size));
+   return Ret.from(slider_set_bar_size(this != null ? (this.nativeObj) : 0, bar_size));
  }
 
 
@@ -157,7 +157,7 @@ public class Slider extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setVertical(boolean vertical)  {
-   return Ret.from(slider_set_vertical(this.nativeObj, vertical));
+   return Ret.from(slider_set_vertical(this != null ? (this.nativeObj) : 0, vertical));
  }
 
  public double getMin() {

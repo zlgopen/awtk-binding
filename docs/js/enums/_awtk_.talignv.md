@@ -19,7 +19,7 @@
 
 • **BOTTOM**: =  ALIGN_V_BOTTOM()
 
-*Defined in [awtk.ts:5399](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L5399)*
+*Defined in [awtk.ts:5207](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L5207)*
 
 底部对齐。
 
@@ -29,7 +29,7 @@ ___
 
 • **MIDDLE**: =  ALIGN_V_MIDDLE()
 
-*Defined in [awtk.ts:5385](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L5385)*
+*Defined in [awtk.ts:5195](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L5195)*
 
 居中对齐。
 
@@ -39,7 +39,7 @@ ___
 
 • **NONE**: =  ALIGN_V_NONE()
 
-*Defined in [awtk.ts:5378](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L5378)*
+*Defined in [awtk.ts:5189](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L5189)*
 
 无效对齐方式。
 
@@ -49,6 +49,6 @@ ___
 
 • **TOP**: =  ALIGN_V_TOP()
 
-*Defined in [awtk.ts:5392](https://github.com/zlgopen/awtk-binding/blob/540939e/tools/code_gen/js/output/awtk.ts#L5392)*
+*Defined in [awtk.ts:5201](https://github.com/zlgopen/awtk-binding/blob/346f0a7/tools/code_gen/js/output/awtk.ts#L5201)*
 
 顶部对齐。

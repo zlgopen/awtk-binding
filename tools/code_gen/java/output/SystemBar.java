@@ -88,7 +88,7 @@ public class SystemBar extends WindowBase {
  *
  * @returns system_bar对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static SystemBar cast(Widget widget)  {
    return new SystemBar(system_bar_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

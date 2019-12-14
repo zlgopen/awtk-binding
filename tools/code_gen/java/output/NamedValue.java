@@ -49,7 +49,7 @@ public class NamedValue {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setName(String name)  {
-   return Ret.from(named_value_set_name(this.nativeObj, name));
+   return Ret.from(named_value_set_name(this != null ? (this.nativeObj) : 0, name));
  }
 
 
@@ -62,7 +62,7 @@ public class NamedValue {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setValue(Value value)  {
-   return Ret.from(named_value_set_value(this.nativeObj, value != null ? (value.nativeObj) : 0));
+   return Ret.from(named_value_set_value(this != null ? (this.nativeObj) : 0, value != null ? (value.nativeObj) : 0));
  }
 
 
@@ -74,7 +74,7 @@ public class NamedValue {
  * @returns 返回值对象。
  */
  public  Value getValue()  {
-   return new Value(named_value_get_value(this.nativeObj));
+   return new Value(named_value_get_value(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -86,7 +86,7 @@ public class NamedValue {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret destroy()  {
-   return Ret.from(named_value_destroy(this.nativeObj));
+   return Ret.from(named_value_destroy(this != null ? (this.nativeObj) : 0));
  }
 
  public String getName() {

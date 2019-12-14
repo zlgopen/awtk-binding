@@ -42,7 +42,7 @@ public class Dragger extends Widget {
  *
  * @returns dragger对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static Dragger cast(Widget widget)  {
    return new Dragger(dragger_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -56,10 +56,10 @@ public class Dragger extends Widget {
  * @param x_max x坐标最大值。
  * @param y_max y坐标最大值。
  *
- * @returns 对象。
+ * @returns 返回RET_OK表示成功，否则表示失败。
  */
- public  Widget setRange(int x_min, int y_min, int x_max, int y_max)  {
-   return new Widget(dragger_set_range(this.nativeObj, x_min, y_min, x_max, y_max));
+ public  Ret setRange(int x_min, int y_min, int x_max, int y_max)  {
+   return Ret.from(dragger_set_range(this != null ? (this.nativeObj) : 0, x_min, y_min, x_max, y_max));
  }
 
  public int getXMin() {
@@ -80,7 +80,7 @@ public class Dragger extends Widget {
 
 static private native long dragger_create(long parent, int x, int y, int w, int h);
 static private native long dragger_cast(long widget);
-static private native long dragger_set_range(long widget, int x_min, int y_min, int x_max, int y_max);
+static private native int dragger_set_range(long widget, int x_min, int y_min, int x_max, int y_max);
 static private native int dragger_t_get_prop_x_min(long nativeObj);
 static private native int dragger_t_get_prop_y_min(long nativeObj);
 static private native int dragger_t_get_prop_x_max(long nativeObj);

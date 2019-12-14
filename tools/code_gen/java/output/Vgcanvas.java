@@ -2,48 +2,7 @@ package awtk;
 
 
 /**
- * 矢量图画布抽象基类。
- * 
- *  具体实现时可以使用agg，nanovg, cairo和skia等方式。
- * 
- *  cairo和skia体积太大，不适合嵌入式平台，但在PC平台也是一种选择。
- * 
- *  目前我们只提供了基于nanovg的实现，支持软件渲染和硬件渲染。
- * 
- *  我们对nanovg进行了一些改进:
- * 
- *  * 可以用agg/agge实现软件渲染(暂时不支持文本绘制)。
- * 
- *  * 可以用bgfx使用DirectX(Windows平台)和Metal(iOS)平台硬件加速。
- * 
- *  ```graphviz
- *    [default_style]
- * 
- *    vgcanvas_cairo_t -> vgcanvas_t[arrowhead = "empty"]
- *    vgcanvas_nanovg_t -> vgcanvas_t[arrowhead = "empty"]
- *    opengl -> vgcanvas_nanovg_t[arrowhead = "none"]
- *    bgfx -> vgcanvas_nanovg_t[arrowhead = "none"]
- *    agg -> vgcanvas_nanovg_t[arrowhead = "none"]
- *    agge -> vgcanvas_nanovg_t[arrowhead = "none"]
- *    vgcanvas_skia_t -> vgcanvas_t[arrowhead = "empty"]
- *    vgcanvas_agge_t -> vgcanvas_t[arrowhead = "empty"]
- *  ```
- * 
- *  示例：
- * 
- *  ```c
- *    vgcanvas_t* vg = canvas_get_vgcanvas(c);
- *    vgcanvas_save(vg);
- *    vgcanvas_translate(vg, 0, 100);
- * 
- *    vgcanvas_set_line_width(vg, 1);
- *    vgcanvas_set_fill_color(vg, color_init(0xff, 0, 0, 0xff));
- *    vgcanvas_rect(vg, 5, 5, 100, 100);
- *    vgcanvas_fill(vg);
- *    vgcanvas_restore(vg);
- *  ```
- * 
- *请参考：https://www.w3schools.com/tags/ref_canvas.asp
+ * 矢量图画布抽象基类。 具体实现时可以使用agg，nanovg, cairo和skia等方式。 cairo和skia体积太大，不适合嵌入式平台，但在PC平台也是一种选择。 目前我们只提供了基于nanovg的实现，支持软件渲染和硬件渲染。 我们对nanovg进行了一些改进: * 可以用agg/agge实现软件渲染(暂时不支持文本绘制)。 * 可以用bgfx使用DirectX(Windows平台)和Metal(iOS)平台硬件加速。 ```graphviz   [default_style]   vgcanvas_cairo_t -> vgcanvas_t[arrowhead = "empty"]   vgcanvas_nanovg_t -> vgcanvas_t[arrowhead = "empty"]   opengl -> vgcanvas_nanovg_t[arrowhead = "none"]   bgfx -> vgcanvas_nanovg_t[arrowhead = "none"]   agg -> vgcanvas_nanovg_t[arrowhead = "none"]   agge -> vgcanvas_nanovg_t[arrowhead = "none"]   vgcanvas_skia_t -> vgcanvas_t[arrowhead = "empty"]   vgcanvas_agge_t -> vgcanvas_t[arrowhead = "empty"] ``` 示例： ```c   vgcanvas_t* vg = canvas_get_vgcanvas(c);   vgcanvas_save(vg);   vgcanvas_translate(vg, 0, 100);   vgcanvas_set_line_width(vg, 1);   vgcanvas_set_fill_color(vg, color_init(0xff, 0, 0, 0xff));   vgcanvas_rect(vg, 5, 5, 100, 100);   vgcanvas_fill(vg);   vgcanvas_restore(vg); ```请参考：https://www.w3schools.com/tags/ref_canvas.asp
  *
  */
 public class Vgcanvas {
@@ -78,7 +37,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret flush()  {
-   return Ret.from(vgcanvas_flush(this.nativeObj));
+   return Ret.from(vgcanvas_flush(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -90,7 +49,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret beginPath()  {
-   return Ret.from(vgcanvas_begin_path(this.nativeObj));
+   return Ret.from(vgcanvas_begin_path(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -104,7 +63,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret moveTo(double x, double y)  {
-   return Ret.from(vgcanvas_move_to(this.nativeObj, x, y));
+   return Ret.from(vgcanvas_move_to(this != null ? (this.nativeObj) : 0, x, y));
  }
 
 
@@ -118,7 +77,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret lineTo(double x, double y)  {
-   return Ret.from(vgcanvas_line_to(this.nativeObj, x, y));
+   return Ret.from(vgcanvas_line_to(this != null ? (this.nativeObj) : 0, x, y));
  }
 
 
@@ -134,7 +93,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret quadTo(double cpx, double cpy, double x, double y)  {
-   return Ret.from(vgcanvas_quad_to(this.nativeObj, cpx, cpy, x, y));
+   return Ret.from(vgcanvas_quad_to(this != null ? (this.nativeObj) : 0, cpx, cpy, x, y));
  }
 
 
@@ -152,7 +111,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret bezierTo(double cp1x, double cp1y, double cp2x, double cp2y, double x, double y)  {
-   return Ret.from(vgcanvas_bezier_to(this.nativeObj, cp1x, cp1y, cp2x, cp2y, x, y));
+   return Ret.from(vgcanvas_bezier_to(this != null ? (this.nativeObj) : 0, cp1x, cp1y, cp2x, cp2y, x, y));
  }
 
 
@@ -169,7 +128,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret arcTo(double x1, double y1, double x2, double y2, double r)  {
-   return Ret.from(vgcanvas_arc_to(this.nativeObj, x1, y1, x2, y2, r));
+   return Ret.from(vgcanvas_arc_to(this != null ? (this.nativeObj) : 0, x1, y1, x2, y2, r));
  }
 
 
@@ -187,7 +146,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret arc(double x, double y, double r, double start_angle, double end_angle, boolean ccw)  {
-   return Ret.from(vgcanvas_arc(this.nativeObj, x, y, r, start_angle, end_angle, ccw));
+   return Ret.from(vgcanvas_arc(this != null ? (this.nativeObj) : 0, x, y, r, start_angle, end_angle, ccw));
  }
 
 
@@ -201,7 +160,7 @@ public class Vgcanvas {
  * @returns 返回TRUE表示在，否则表示不在。
  */
  public  boolean isPointInPath(double x, double y)  {
-   return vgcanvas_is_point_in_path(this.nativeObj, x, y);
+   return vgcanvas_is_point_in_path(this != null ? (this.nativeObj) : 0, x, y);
  }
 
 
@@ -217,7 +176,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret rect(double x, double y, double w, double h)  {
-   return Ret.from(vgcanvas_rect(this.nativeObj, x, y, w, h));
+   return Ret.from(vgcanvas_rect(this != null ? (this.nativeObj) : 0, x, y, w, h));
  }
 
 
@@ -234,7 +193,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret roundedRect(double x, double y, double w, double h, double r)  {
-   return Ret.from(vgcanvas_rounded_rect(this.nativeObj, x, y, w, h, r));
+   return Ret.from(vgcanvas_rounded_rect(this != null ? (this.nativeObj) : 0, x, y, w, h, r));
  }
 
 
@@ -250,21 +209,19 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret ellipse(double x, double y, double rx, double ry)  {
-   return Ret.from(vgcanvas_ellipse(this.nativeObj, x, y, rx, ry));
+   return Ret.from(vgcanvas_ellipse(this != null ? (this.nativeObj) : 0, x, y, rx, ry));
  }
 
 
 /**
- * 闭合路径。
- * 
- *闭合路径是指把起点和终点连接起来，形成一个封闭的多边形。
+ * 闭合路径。闭合路径是指把起点和终点连接起来，形成一个封闭的多边形。
  * 
  * @param vg vgcanvas对象。
  *
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret closePath()  {
-   return Ret.from(vgcanvas_close_path(this.nativeObj));
+   return Ret.from(vgcanvas_close_path(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -277,7 +234,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret rotate(double rad)  {
-   return Ret.from(vgcanvas_rotate(this.nativeObj, rad));
+   return Ret.from(vgcanvas_rotate(this != null ? (this.nativeObj) : 0, rad));
  }
 
 
@@ -291,7 +248,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret scale(double x, double y)  {
-   return Ret.from(vgcanvas_scale(this.nativeObj, x, y));
+   return Ret.from(vgcanvas_scale(this != null ? (this.nativeObj) : 0, x, y));
  }
 
 
@@ -305,7 +262,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret translate(double x, double y)  {
-   return Ret.from(vgcanvas_translate(this.nativeObj, x, y));
+   return Ret.from(vgcanvas_translate(this != null ? (this.nativeObj) : 0, x, y));
  }
 
 
@@ -323,7 +280,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret transform(double a, double b, double c, double d, double e, double f)  {
-   return Ret.from(vgcanvas_transform(this.nativeObj, a, b, c, d, e, f));
+   return Ret.from(vgcanvas_transform(this != null ? (this.nativeObj) : 0, a, b, c, d, e, f));
  }
 
 
@@ -341,7 +298,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setTransform(double a, double b, double c, double d, double e, double f)  {
-   return Ret.from(vgcanvas_set_transform(this.nativeObj, a, b, c, d, e, f));
+   return Ret.from(vgcanvas_set_transform(this != null ? (this.nativeObj) : 0, a, b, c, d, e, f));
  }
 
 
@@ -357,7 +314,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret clipRect(double x, double y, double w, double h)  {
-   return Ret.from(vgcanvas_clip_rect(this.nativeObj, x, y, w, h));
+   return Ret.from(vgcanvas_clip_rect(this != null ? (this.nativeObj) : 0, x, y, w, h));
  }
 
 
@@ -369,7 +326,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret fill()  {
-   return Ret.from(vgcanvas_fill(this.nativeObj));
+   return Ret.from(vgcanvas_fill(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -381,13 +338,12 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret stroke()  {
-   return Ret.from(vgcanvas_stroke(this.nativeObj));
+   return Ret.from(vgcanvas_stroke(this != null ? (this.nativeObj) : 0));
  }
 
 
 /**
- * 用图片填充/画多边形(可能存在可移植性问题，除非必要请勿使用)。
- *  多边形的顶点必须在图片范围内，可以通过矩阵变化画到不同的位置。
+ * 用图片填充/画多边形(可能存在可移植性问题，除非必要请勿使用)。 多边形的顶点必须在图片范围内，可以通过矩阵变化画到不同的位置。
  * 
  * @param vg vgcanvas对象。
  * @param stroke TRUE表示画线FALSE表示填充。
@@ -396,7 +352,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret paint(boolean stroke, Bitmap img)  {
-   return Ret.from(vgcanvas_paint(this.nativeObj, stroke, img != null ? (img.nativeObj) : 0));
+   return Ret.from(vgcanvas_paint(this != null ? (this.nativeObj) : 0, stroke, img != null ? (img.nativeObj) : 0));
  }
 
 
@@ -409,7 +365,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setFont(String font)  {
-   return Ret.from(vgcanvas_set_font(this.nativeObj, font));
+   return Ret.from(vgcanvas_set_font(this != null ? (this.nativeObj) : 0, font));
  }
 
 
@@ -422,7 +378,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setFontSize(double font)  {
-   return Ret.from(vgcanvas_set_font_size(this.nativeObj, font));
+   return Ret.from(vgcanvas_set_font_size(this != null ? (this.nativeObj) : 0, font));
  }
 
 
@@ -435,7 +391,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setTextAlign(String value)  {
-   return Ret.from(vgcanvas_set_text_align(this.nativeObj, value));
+   return Ret.from(vgcanvas_set_text_align(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -448,7 +404,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setTextBaseline(String value)  {
-   return Ret.from(vgcanvas_set_text_baseline(this.nativeObj, value));
+   return Ret.from(vgcanvas_set_text_baseline(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -464,7 +420,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret fillText(String text, double x, double y, double max_width)  {
-   return Ret.from(vgcanvas_fill_text(this.nativeObj, text, x, y, max_width));
+   return Ret.from(vgcanvas_fill_text(this != null ? (this.nativeObj) : 0, text, x, y, max_width));
  }
 
 
@@ -477,7 +433,7 @@ public class Vgcanvas {
  * @returns 返回text的宽度。
  */
  public  double measureText(String text)  {
-   return vgcanvas_measure_text(this.nativeObj, text);
+   return vgcanvas_measure_text(this != null ? (this.nativeObj) : 0, text);
  }
 
 
@@ -498,14 +454,12 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret drawImage(Bitmap img, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh)  {
-   return Ret.from(vgcanvas_draw_image(this.nativeObj, img != null ? (img.nativeObj) : 0, sx, sy, sw, sh, dx, dy, dw, dh));
+   return Ret.from(vgcanvas_draw_image(this != null ? (this.nativeObj) : 0, img != null ? (img.nativeObj) : 0, sx, sy, sw, sh, dx, dy, dw, dh));
  }
 
 
 /**
- * 绘制图标。
- * 
- *  绘制图标时会根据屏幕密度进行自动缩放，而绘制普通图片时不会。
+ * 绘制图标。 绘制图标时会根据屏幕密度进行自动缩放，而绘制普通图片时不会。
  * 
  * @param vg vgcanvas对象。
  * @param img 图片。
@@ -521,7 +475,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret drawIcon(Bitmap img, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh)  {
-   return Ret.from(vgcanvas_draw_icon(this.nativeObj, img != null ? (img.nativeObj) : 0, sx, sy, sw, sh, dx, dy, dw, dh));
+   return Ret.from(vgcanvas_draw_icon(this != null ? (this.nativeObj) : 0, img != null ? (img.nativeObj) : 0, sx, sy, sw, sh, dx, dy, dw, dh));
  }
 
 
@@ -534,7 +488,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setAntialias(boolean value)  {
-   return Ret.from(vgcanvas_set_antialias(this.nativeObj, value));
+   return Ret.from(vgcanvas_set_antialias(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -547,7 +501,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setGlobalAlpha(double alpha)  {
-   return Ret.from(vgcanvas_set_global_alpha(this.nativeObj, alpha));
+   return Ret.from(vgcanvas_set_global_alpha(this != null ? (this.nativeObj) : 0, alpha));
  }
 
 
@@ -560,7 +514,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setLineWidth(double value)  {
-   return Ret.from(vgcanvas_set_line_width(this.nativeObj, value));
+   return Ret.from(vgcanvas_set_line_width(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -573,7 +527,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setFillColor(String color)  {
-   return Ret.from(vgcanvas_set_fill_color_str(this.nativeObj, color));
+   return Ret.from(vgcanvas_set_fill_color_str(this != null ? (this.nativeObj) : 0, color));
  }
 
 
@@ -586,7 +540,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setStrokeColor(String color)  {
-   return Ret.from(vgcanvas_set_stroke_color_str(this.nativeObj, color));
+   return Ret.from(vgcanvas_set_stroke_color_str(this != null ? (this.nativeObj) : 0, color));
  }
 
 
@@ -599,7 +553,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setLineCap(String value)  {
-   return Ret.from(vgcanvas_set_line_cap(this.nativeObj, value));
+   return Ret.from(vgcanvas_set_line_cap(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -612,7 +566,7 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setLineJoin(String value)  {
-   return Ret.from(vgcanvas_set_line_join(this.nativeObj, value));
+   return Ret.from(vgcanvas_set_line_join(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -625,35 +579,31 @@ public class Vgcanvas {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setMiterLimit(double value)  {
-   return Ret.from(vgcanvas_set_miter_limit(this.nativeObj, value));
+   return Ret.from(vgcanvas_set_miter_limit(this != null ? (this.nativeObj) : 0, value));
  }
 
 
 /**
- * 保存当前的状态。如颜色和矩阵等信息。
- * 
- * save/restore必须配套使用，否则可能导致状态混乱。
+ * 保存当前的状态。如颜色和矩阵等信息。 save/restore必须配套使用，否则可能导致状态混乱。
  * 
  * @param vg vgcanvas对象。
  *
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret save()  {
-   return Ret.from(vgcanvas_save(this.nativeObj));
+   return Ret.from(vgcanvas_save(this != null ? (this.nativeObj) : 0));
  }
 
 
 /**
- * 恢复上次save的状态。
- * 
- * save/restore必须配套使用，否则可能导致状态混乱。
+ * 恢复上次save的状态。> save/restore必须配套使用，否则可能导致状态混乱。
  * 
  * @param vg vgcanvas对象。
  *
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret restore()  {
-   return Ret.from(vgcanvas_restore(this.nativeObj));
+   return Ret.from(vgcanvas_restore(this != null ? (this.nativeObj) : 0));
  }
 
  public int getW() {

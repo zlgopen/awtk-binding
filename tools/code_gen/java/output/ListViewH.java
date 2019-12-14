@@ -72,7 +72,7 @@ public class ListViewH extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setItemWidth(int item_width)  {
-   return Ret.from(list_view_h_set_item_width(this.nativeObj, item_width));
+   return Ret.from(list_view_h_set_item_width(this != null ? (this.nativeObj) : 0, item_width));
  }
 
 
@@ -85,7 +85,7 @@ public class ListViewH extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setSpacing(int spacing)  {
-   return Ret.from(list_view_h_set_spacing(this.nativeObj, spacing));
+   return Ret.from(list_view_h_set_spacing(this != null ? (this.nativeObj) : 0, spacing));
  }
 
 
@@ -96,7 +96,7 @@ public class ListViewH extends Widget {
  *
  * @returns list_view_h对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static ListViewH cast(Widget widget)  {
    return new ListViewH(list_view_h_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

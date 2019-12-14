@@ -70,7 +70,7 @@ public class ColorPicker extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setColor(String color)  {
-   return Ret.from(color_picker_set_color(this.nativeObj, color));
+   return Ret.from(color_picker_set_color(this != null ? (this.nativeObj) : 0, color));
  }
 
 
@@ -81,7 +81,7 @@ public class ColorPicker extends Widget {
  *
  * @returns color_picker对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static ColorPicker cast(Widget widget)  {
    return new ColorPicker(color_picker_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

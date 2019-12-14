@@ -3,12 +3,17 @@ const fs = require('fs');
 class CodeGen {
   CodeGen() {
     this.result = '';
+    this.classNamePrefix = '';
+  }
+  
+  toClassName(name) {
+    return this.classNamePrefix + this.upperCamelName(name);
   }
 
   typeToNativeName(type) {
     return type.replace("*", "").replace("const ", "").replace(" ", "");
   }
-  
+
   typeToName(type) {
     let name = this.typeToNativeName(type);
     let cls = this.getClassOrEnumInfo(name);
@@ -18,11 +23,11 @@ class CodeGen {
       return null;
     }
   }
-  
+
   isClassName(name) {
     return this.getClassInfo(this.typeToNativeName(name)) !== null;
   }
-  
+
   isEnumName(name) {
     return this.getEnumInfo(name) !== null;
   }
@@ -34,16 +39,16 @@ class CodeGen {
   typeIsClassPointer(type) {
     return this.typeIsPointer(type) && this.getClassInfo(type) != null;
   }
-  
+
   typeIsEnum(type) {
     return this.getClassInfo(type) != null;
   }
 
   typeIsFunction(type) {
-    return type.indexOf('event_func_t') >= 0
-      || type.indexOf('tk_visit_t') >= 0
-      || type.indexOf('idle_func_t') >= 0
-      || type.indexOf('timer_func_t') >= 0;
+    return type.indexOf('event_func_t') >= 0 ||
+      type.indexOf('tk_visit_t') >= 0 ||
+      type.indexOf('idle_func_t') >= 0 ||
+      type.indexOf('timer_func_t') >= 0;
   }
 
   typeIsLongInteger(type) {
@@ -51,9 +56,9 @@ class CodeGen {
   }
 
   typeIsInteger(type) {
-    return type.indexOf('int') >= 0 || type.indexOf('ret_t') >= 0
-      || type.indexOf('wh_t') >= 0 || type.indexOf("xy_t") >= 0
-      || type.indexOf('font_size_t') >= 0 || type.indexOf('long') >= 0;
+    return type.indexOf('int') >= 0 || type.indexOf('ret_t') >= 0 ||
+      type.indexOf('wh_t') >= 0 || type.indexOf("xy_t") >= 0 ||
+      type.indexOf('font_size_t') >= 0 || type.indexOf('long') >= 0;
   }
 
   typeIsFloat(type) {
@@ -71,7 +76,7 @@ class CodeGen {
   typeIsString(type) {
     return type.indexOf('char*') >= 0;
   }
-  
+
   typeIsWString(type) {
     return type.indexOf('wchar_t*') >= 0;
   }
@@ -158,7 +163,7 @@ class CodeGen {
   hasSetterFor(cls, name) {
     let clsName = cls.name.replace(/_t$/, '');
     let settter = clsName + '_set_' + name;
-    
+
     return cls.methods.find(iter => (iter.name === settter));
   }
 
@@ -174,7 +179,7 @@ class CodeGen {
 
     return null;
   }
-  
+
   getEnumInfo(name) {
     const json = this.json;
 
@@ -228,7 +233,16 @@ class CodeGen {
     return json;
   }
 
-  genJsonAll(ojson) { 
+  genJsonAll(ojson) {}
+
+  genOne(cls) {
+    if (cls.type === 'class') {
+      return this.genClass(cls);
+    } else if (cls.type === 'enum') {
+      return this.genEnum(cls);
+    } else {
+      return '';
+    }
   }
 
   genAll(filename) {

@@ -82,7 +82,7 @@ public class GifImage extends ImageBase {
  *
  * @returns gif_image对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static GifImage cast(Widget widget)  {
    return new GifImage(gif_image_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

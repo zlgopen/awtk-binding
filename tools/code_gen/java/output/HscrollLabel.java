@@ -2,31 +2,7 @@ package awtk;
 
 
 /**
- * 可水平滚动的文本控件，方便实现长文本滚动。
- * 
- * 
- *  hscroll\_label\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于hscroll\_label\_t控件。
- * 
- *  在xml中使用"hscroll\_label"标签创建行号控件，一般配合mledit使用。如：
- * 
- *  ```xml
- *  ```
- * 
- * 更多用法请参考：[mledit.xml](
- * https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/mledit.xml)
- * 
- *  可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
- * 
- *  ```xml
- *   <style name="default" text_color="black">
- *     <normal   />
- *     <focused  />
- *   </style>
- *  ```
- * 
- * 更多用法请参考：
- *  [theme default](
- * https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
+ * 可水平滚动的文本控件，方便实现长文本滚动。 hscroll\_label\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于hscroll\_label\_t控件。 在xml中使用"hscroll\_label"标签创建行号控件，一般配合mledit使用。如： ```xml ``` 更多用法请参考：[mledit.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/mledit.xml) 可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如： ```xml  <style name="default" text_color="black">    <normal   />    <focused  />  </style> ``` 更多用法请参考： [theme default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
  *
  */
 public class HscrollLabel extends Widget {
@@ -66,7 +42,7 @@ public class HscrollLabel extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setLull(int lull)  {
-   return Ret.from(hscroll_label_set_lull(this.nativeObj, lull));
+   return Ret.from(hscroll_label_set_lull(this != null ? (this.nativeObj) : 0, lull));
  }
 
 
@@ -79,7 +55,7 @@ public class HscrollLabel extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setDuration(int duration)  {
-   return Ret.from(hscroll_label_set_duration(this.nativeObj, duration));
+   return Ret.from(hscroll_label_set_duration(this != null ? (this.nativeObj) : 0, duration));
  }
 
 
@@ -92,7 +68,7 @@ public class HscrollLabel extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setOnlyFocus(boolean only_focus)  {
-   return Ret.from(hscroll_label_set_only_focus(this.nativeObj, only_focus));
+   return Ret.from(hscroll_label_set_only_focus(this != null ? (this.nativeObj) : 0, only_focus));
  }
 
 
@@ -105,7 +81,7 @@ public class HscrollLabel extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setOnlyParentFocus(boolean only_parent_focus)  {
-   return Ret.from(hscroll_label_set_only_parent_focus(this.nativeObj, only_parent_focus));
+   return Ret.from(hscroll_label_set_only_parent_focus(this != null ? (this.nativeObj) : 0, only_parent_focus));
  }
 
 
@@ -118,7 +94,7 @@ public class HscrollLabel extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setLoop(boolean loop)  {
-   return Ret.from(hscroll_label_set_loop(this.nativeObj, loop));
+   return Ret.from(hscroll_label_set_loop(this != null ? (this.nativeObj) : 0, loop));
  }
 
 
@@ -131,7 +107,7 @@ public class HscrollLabel extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setYoyo(boolean yoyo)  {
-   return Ret.from(hscroll_label_set_yoyo(this.nativeObj, yoyo));
+   return Ret.from(hscroll_label_set_yoyo(this != null ? (this.nativeObj) : 0, yoyo));
  }
 
 
@@ -144,7 +120,7 @@ public class HscrollLabel extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setEllipses(boolean ellipses)  {
-   return Ret.from(hscroll_label_set_ellipses(this.nativeObj, ellipses));
+   return Ret.from(hscroll_label_set_ellipses(this != null ? (this.nativeObj) : 0, ellipses));
  }
 
 
@@ -157,7 +133,7 @@ public class HscrollLabel extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setXoffset(int xoffset)  {
-   return Ret.from(hscroll_label_set_xoffset(this.nativeObj, xoffset));
+   return Ret.from(hscroll_label_set_xoffset(this != null ? (this.nativeObj) : 0, xoffset));
  }
 
 
@@ -169,7 +145,7 @@ public class HscrollLabel extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret start()  {
-   return Ret.from(hscroll_label_start(this.nativeObj));
+   return Ret.from(hscroll_label_start(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -181,7 +157,7 @@ public class HscrollLabel extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret stop()  {
-   return Ret.from(hscroll_label_stop(this.nativeObj));
+   return Ret.from(hscroll_label_stop(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -192,7 +168,7 @@ public class HscrollLabel extends Widget {
  *
  * @returns hscroll_label对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static HscrollLabel cast(Widget widget)  {
    return new HscrollLabel(hscroll_label_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

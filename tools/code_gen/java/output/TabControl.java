@@ -72,7 +72,7 @@ public class TabControl extends Widget {
  *
  * @returns tab_control对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static TabControl cast(Widget widget)  {
    return new TabControl(tab_control_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

@@ -2,64 +2,7 @@ package awtk;
 
 
 /**
- * **widget_t** 是所有控件、窗口和窗口管理器的基类。
- *  **widget_t**也是一个容器，可放其它**widget_t**到它的内部，形成一个树形结构。
- * 
- *  ```graphviz
- *    [default_style]
- * 
- *    widget_t -> widget_t[arrowhead = "diamond"]
- *    window_t -> widget_t[arrowhead = "empty"]
- *    window_manager_t -> widget_t[arrowhead = "empty"]
- *    button_t -> widget_t[arrowhead = "empty"]
- *    label_t -> widget_t[arrowhead = "empty"]
- *    xxx_widget_t -> widget_t[arrowhead = "empty"]
- *  ```
- * 
- *  通常**widget_t**通过一个矩形区域向用户呈现一些信息，接受用户的输入，并据此做出适当的反应。
- *  它负责控件的生命周期、通用状态、事件分发和Style的管理。
- *  本类提供的接口(函数和属性)除非特别说明，一般都适用于子类控件。
- * 
- *  为了便于解释，这里特别说明一下几个术语：
- * 
- *  * **父控件与子控件**：父控件与子控件指的两个控件的组合关系(这是在运行时决定的)。
- *  比如：在窗口中放一个按钮，此时，我们称按钮是窗口的子控件，窗口是按钮的父控件。
- * 
- *  ```graphviz
- *    [default_style]
- * 
- *    子控件 -> 父控件[arrowhead = "ediamond"]
- *  ```
- * 
- *  * **子类控件与父类控件**：子类控件与父类控件指的两类控件的继承关系(这是在设计时决定的)。
- *  比如：我们称**button_t**是**widget_t**的子类控件，**widget_t**是**button_t**的父类控件。
- * 
- *  ```graphviz
- *    [default_style]
- * 
- *    子类控件 -> 父类控件[arrowhead = "empty"]
- * 
- *  ```
- * 
- *  widget相关的函数都只能在GUI线程中执行，如果需在非GUI线程中想调用widget相关函数，
- *  请用idle\_queue或timer\_queue进行串行化。
- *  请参考[demo thread](https://github.com/zlgopen/awtk/blob/master/demos/demo_thread_app.c)
- * 
- *  **widget\_t**是抽象类，不要直接创建**widget\_t**的实例。控件支持两种创建方式：
- * 
- *  * 通过XML创建。如：
- * 
- *  ```xml
- *  <button x="c" y="m" w="80" h="30" text="OK"/>
- *  ```
- * 
- *  * 通过代码创建。如：
- * 
- *  ```c
- *   widget_t* button = button_create(win, 10, 10, 128, 30);
- *   widget_set_text(button, L"OK");
- *   widget_on(button, EVT_CLICK, on_click, NULL);
- *  ```
+ * **widget_t** 是所有控件、窗口和窗口管理器的基类。 **widget_t**也是一个容器，可放其它**widget_t**到它的内部，形成一个树形结构。 ```graphviz   [default_style]   widget_t -> widget_t[arrowhead = "diamond"]   window_t -> widget_t[arrowhead = "empty"]   window_manager_t -> widget_t[arrowhead = "empty"]   button_t -> widget_t[arrowhead = "empty"]   label_t -> widget_t[arrowhead = "empty"]   xxx_widget_t -> widget_t[arrowhead = "empty"] ``` 通常**widget_t**通过一个矩形区域向用户呈现一些信息，接受用户的输入，并据此做出适当的反应。 它负责控件的生命周期、通用状态、事件分发和Style的管理。 本类提供的接口(函数和属性)除非特别说明，一般都适用于子类控件。 为了便于解释，这里特别说明一下几个术语： * **父控件与子控件**：父控件与子控件指的两个控件的组合关系(这是在运行时决定的)。 比如：在窗口中放一个按钮，此时，我们称按钮是窗口的子控件，窗口是按钮的父控件。 ```graphviz   [default_style]   子控件 -> 父控件[arrowhead = "ediamond"] ``` * **子类控件与父类控件**：子类控件与父类控件指的两类控件的继承关系(这是在设计时决定的)。 比如：我们称**button_t**是**widget_t**的子类控件，**widget_t**是**button_t**的父类控件。 ```graphviz   [default_style]   子类控件 -> 父类控件[arrowhead = "empty"] ``` widget相关的函数都只能在GUI线程中执行，如果需在非GUI线程中想调用widget相关函数， 请用idle\_queue或timer\_queue进行串行化。 请参考[demo thread](https://github.com/zlgopen/awtk/blob/master/demos/demo_thread_app.c) **widget\_t**是抽象类，不要直接创建**widget\_t**的实例。控件支持两种创建方式： * 通过XML创建。如： ```xml <button x="c" y="m" w="80" h="30" text="OK"/> ``` * 通过代码创建。如： ```c  widget_t* button = button_create(win, 10, 10, 128, 30);  widget_set_text(button, L"OK");  widget_on(button, EVT_CLICK, on_click, NULL); ```
  *
  */
 public class Widget {
@@ -82,7 +25,7 @@ public class Widget {
  * @returns 子控件的个数。
  */
  public  int countChildren()  {
-   return widget_count_children(this.nativeObj);
+   return widget_count_children(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -95,7 +38,7 @@ public class Widget {
  * @returns 子控件。
  */
  public  Widget getChild(int index)  {
-   return new Widget(widget_get_child(this.nativeObj, index));
+   return new Widget(widget_get_child(this != null ? (this.nativeObj) : 0, index));
  }
 
 
@@ -107,7 +50,7 @@ public class Widget {
  * @returns 在父控件中的索引编号。
  */
  public  int indexOf()  {
-   return widget_index_of(this.nativeObj);
+   return widget_index_of(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -121,7 +64,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret move(int x, int y)  {
-   return Ret.from(widget_move(this.nativeObj, x, y));
+   return Ret.from(widget_move(this != null ? (this.nativeObj) : 0, x, y));
  }
 
 
@@ -135,7 +78,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret resize(int w, int h)  {
-   return Ret.from(widget_resize(this.nativeObj, w, h));
+   return Ret.from(widget_resize(this != null ? (this.nativeObj) : 0, w, h));
  }
 
 
@@ -151,13 +94,12 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret moveResize(int x, int y, int w, int h)  {
-   return Ret.from(widget_move_resize(this.nativeObj, x, y, w, h));
+   return Ret.from(widget_move_resize(this != null ? (this.nativeObj) : 0, x, y, w, h));
  }
 
 
 /**
- * 设置控件的值。
- *  只是对widget\_set\_prop的包装，值的意义由子类控件决定。
+ * 设置控件的值。 只是对widget\_set\_prop的包装，值的意义由子类控件决定。
  * 
  * @param widget 控件对象。
  * @param value 值。
@@ -165,13 +107,12 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setValue(int value)  {
-   return Ret.from(widget_set_value(this.nativeObj, value));
+   return Ret.from(widget_set_value(this != null ? (this.nativeObj) : 0, value));
  }
 
 
 /**
- * 设置控件的值(以动画形式变化到指定的值)。
- *  只是对widget\_set\_prop的包装，值的意义由子类控件决定。
+ * 设置控件的值(以动画形式变化到指定的值)。 只是对widget\_set\_prop的包装，值的意义由子类控件决定。
  * 
  * @param widget 控件对象。
  * @param value 值。
@@ -180,13 +121,12 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret animateValueTo(int value, int duration)  {
-   return Ret.from(widget_animate_value_to(this.nativeObj, value, duration));
+   return Ret.from(widget_animate_value_to(this != null ? (this.nativeObj) : 0, value, duration));
  }
 
 
 /**
- * 增加控件的值。
- *  只是对widget\_set\_prop的包装，值的意义由子类控件决定。
+ * 增加控件的值。 只是对widget\_set\_prop的包装，值的意义由子类控件决定。
  * 
  * @param widget 控件对象。
  * @param delta 增量。
@@ -194,7 +134,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret addValue(int delta)  {
-   return Ret.from(widget_add_value(this.nativeObj, delta));
+   return Ret.from(widget_add_value(this != null ? (this.nativeObj) : 0, delta));
  }
 
 
@@ -207,13 +147,12 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret useStyle(String style)  {
-   return Ret.from(widget_use_style(this.nativeObj, style));
+   return Ret.from(widget_use_style(this != null ? (this.nativeObj) : 0, style));
  }
 
 
 /**
- * 设置控件的文本。
- *  只是对widget\_set\_prop的包装，文本的意义由子类控件决定。
+ * 设置控件的文本。 只是对widget\_set\_prop的包装，文本的意义由子类控件决定。
  * 
  * @param widget 控件对象。
  * @param text 文本。
@@ -221,7 +160,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setText(String text)  {
-   return Ret.from(widget_set_text_utf8(this.nativeObj, text));
+   return Ret.from(widget_set_text_utf8(this != null ? (this.nativeObj) : 0, text));
  }
 
 
@@ -234,7 +173,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setTrText(String text)  {
-   return Ret.from(widget_set_tr_text(this.nativeObj, text));
+   return Ret.from(widget_set_tr_text(this != null ? (this.nativeObj) : 0, text));
  }
 
 
@@ -246,20 +185,19 @@ public class Widget {
  * @returns 返回值。
  */
  public  int getValue()  {
-   return widget_get_value(this.nativeObj);
+   return widget_get_value(this != null ? (this.nativeObj) : 0);
  }
 
 
 /**
- * 获取控件的文本。
- *  只是对widget\_get\_prop的包装，文本的意义由子类控件决定。
+ * 获取控件的文本。 只是对widget\_get\_prop的包装，文本的意义由子类控件决定。
  * 
  * @param widget 控件对象。
  *
  * @returns 返回文本。
  */
  public  long getText()  {
-   return widget_get_text(this.nativeObj);
+   return widget_get_text(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -272,14 +210,12 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setName(String name)  {
-   return Ret.from(widget_set_name(this.nativeObj, name));
+   return Ret.from(widget_set_name(this != null ? (this.nativeObj) : 0, name));
  }
 
 
 /**
- * 设置theme的名称，用于动态切换主题。名称与当前主题名称相同，则重新加载全部资源。
- * 
- * 目前只支持带有文件系统的平台。
+ * 设置theme的名称，用于动态切换主题。名称与当前主题名称相同，则重新加载全部资源。 目前只支持带有文件系统的平台。
  * 
  * @param widget 控件对象。
  * @param name 主题的名称。
@@ -287,7 +223,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setTheme(String name)  {
-   return Ret.from(widget_set_theme(this.nativeObj, name));
+   return Ret.from(widget_set_theme(this != null ? (this.nativeObj) : 0, name));
  }
 
 
@@ -300,13 +236,12 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setPointerCursor(String cursor)  {
-   return Ret.from(widget_set_pointer_cursor(this.nativeObj, cursor));
+   return Ret.from(widget_set_pointer_cursor(this != null ? (this.nativeObj) : 0, cursor));
  }
 
 
 /**
- * 设置控件的动画参数(仅用于在UI文件使用)。
- *  请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
+ * 设置控件的动画参数(仅用于在UI文件使用)。 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
  * 
  * @param widget 控件对象。
  * @param animation 动画参数。
@@ -314,16 +249,12 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setAnimation(String animation)  {
-   return Ret.from(widget_set_animation(this.nativeObj, animation));
+   return Ret.from(widget_set_animation(this != null ? (this.nativeObj) : 0, animation));
  }
 
 
 /**
- * 创建动画。
- *  请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
- * 
- *  * 除非指定auto_start=false，动画创建后自动启动。
- *  * 除非指定auto_destroy=false，动画播放完成后自动销毁。
+ * 创建动画。 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md) * 除非指定auto_start=false，动画创建后自动启动。 * 除非指定auto_destroy=false，动画播放完成后自动销毁。
  * 
  * @param widget 控件对象。
  * @param animation 动画参数。
@@ -331,17 +262,12 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret createAnimator(String animation)  {
-   return Ret.from(widget_create_animator(this.nativeObj, animation));
+   return Ret.from(widget_create_animator(this != null ? (this.nativeObj) : 0, animation));
  }
 
 
 /**
- * 播放动画。
- *  请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
- * 
- *  * 1.widget为NULL时，播放所有名称为name的动画。
- *  * 2.name为NULL时，播放所有widget相关的动画。
- *  * 3.widget和name均为NULL，播放所有动画。
+ * 播放动画。 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md) * 1.widget为NULL时，播放所有名称为name的动画。 * 2.name为NULL时，播放所有widget相关的动画。 * 3.widget和name均为NULL，播放所有动画。
  * 
  * @param widget 控件对象。
  * @param name 动画名称。
@@ -349,17 +275,12 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret startAnimator(String name)  {
-   return Ret.from(widget_start_animator(this.nativeObj, name));
+   return Ret.from(widget_start_animator(this != null ? (this.nativeObj) : 0, name));
  }
 
 
 /**
- * 设置动画的时间倍率，<0: 时间倒退，<1: 时间变慢，>1 时间变快。
- *  请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
- * 
- *  * 1.widget为NULL时，设置所有名称为name的动画的时间倍率。
- *  * 2.name为NULL时，设置所有widget相关的动画的时间倍率。
- *  * 3.widget和name均为NULL，设置所有动画的时间倍率。
+ * 设置动画的时间倍率，<0: 时间倒退，<1: 时间变慢，>1 时间变快。 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md) * 1.widget为NULL时，设置所有名称为name的动画的时间倍率。 * 2.name为NULL时，设置所有widget相关的动画的时间倍率。 * 3.widget和name均为NULL，设置所有动画的时间倍率。
  * 
  * @param widget 控件对象。
  * @param name 动画名称。
@@ -368,17 +289,12 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setAnimatorTimeScale(String name, double time_scale)  {
-   return Ret.from(widget_set_animator_time_scale(this.nativeObj, name, time_scale));
+   return Ret.from(widget_set_animator_time_scale(this != null ? (this.nativeObj) : 0, name, time_scale));
  }
 
 
 /**
- * 暂停动画。
- *  请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
- * 
- *  * 1.widget为NULL时，暂停所有名称为name的动画。
- *  * 2.name为NULL时，暂停所有widget相关的动画。
- *  * 3.widget和name均为NULL，暂停所有动画。
+ * 暂停动画。 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md) * 1.widget为NULL时，暂停所有名称为name的动画。 * 2.name为NULL时，暂停所有widget相关的动画。 * 3.widget和name均为NULL，暂停所有动画。
  * 
  * @param widget 控件对象。
  * @param name 动画名称。
@@ -386,17 +302,12 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret pauseAnimator(String name)  {
-   return Ret.from(widget_pause_animator(this.nativeObj, name));
+   return Ret.from(widget_pause_animator(this != null ? (this.nativeObj) : 0, name));
  }
 
 
 /**
- * 停止动画(控件的相应属性回归原位)。
- *  请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
- * 
- *  * 1.widget为NULL时，停止所有名称为name的动画。
- *  * 2.name为NULL时，停止所有widget相关的动画。
- *  * 3.widget和name均为NULL，停止所有动画。
+ * 停止动画(控件的相应属性回归原位)。 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md) * 1.widget为NULL时，停止所有名称为name的动画。 * 2.name为NULL时，停止所有widget相关的动画。 * 3.widget和name均为NULL，停止所有动画。
  * 
  * @param widget 控件对象。
  * @param name 动画名称。
@@ -404,17 +315,12 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret stopAnimator(String name)  {
-   return Ret.from(widget_stop_animator(this.nativeObj, name));
+   return Ret.from(widget_stop_animator(this != null ? (this.nativeObj) : 0, name));
  }
 
 
 /**
- * 销毁动画。
- *  请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
- * 
- *  * 1.widget为NULL时，销毁所有名称为name的动画。
- *  * 2.name为NULL时，销毁所有widget相关的动画。
- *  * 3.widget和name均为NULL，销毁所有动画。
+ * 销毁动画。 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md) * 1.widget为NULL时，销毁所有名称为name的动画。 * 2.name为NULL时，销毁所有widget相关的动画。 * 3.widget和name均为NULL，销毁所有动画。
  * 
  * @param widget 控件对象。
  * @param name 动画名称。
@@ -422,7 +328,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret destroyAnimator(String name)  {
-   return Ret.from(widget_destroy_animator(this.nativeObj, name));
+   return Ret.from(widget_destroy_animator(this != null ? (this.nativeObj) : 0, name));
  }
 
 
@@ -435,7 +341,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setEnable(boolean enable)  {
-   return Ret.from(widget_set_enable(this.nativeObj, enable));
+   return Ret.from(widget_set_enable(this != null ? (this.nativeObj) : 0, enable));
  }
 
 
@@ -448,13 +354,12 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setFeedback(boolean feedback)  {
-   return Ret.from(widget_set_feedback(this.nativeObj, feedback));
+   return Ret.from(widget_set_feedback(this != null ? (this.nativeObj) : 0, feedback));
  }
 
 
 /**
- * 设置控件的floating标志。
- * floating的控件不受父控件的子控件布局参数的影响。
+ * 设置控件的floating标志。> floating的控件不受父控件的子控件布局参数的影响。
  * 
  * @param widget 控件对象。
  * @param floating 是否启用floating布局。
@@ -462,7 +367,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setFloating(boolean floating)  {
-   return Ret.from(widget_set_floating(this.nativeObj, floating));
+   return Ret.from(widget_set_floating(this != null ? (this.nativeObj) : 0, floating));
  }
 
 
@@ -475,7 +380,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setFocused(boolean focused)  {
-   return Ret.from(widget_set_focused(this.nativeObj, focused));
+   return Ret.from(widget_set_focused(this != null ? (this.nativeObj) : 0, focused));
  }
 
 
@@ -488,14 +393,12 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setState(String state)  {
-   return Ret.from(widget_set_state(this.nativeObj, state));
+   return Ret.from(widget_set_state(this != null ? (this.nativeObj) : 0, state));
  }
 
 
 /**
- * 设置控件的不透明度。
- * 
- *在嵌入式平台，半透明效果会使性能大幅下降，请谨慎使用。
+ * 设置控件的不透明度。>在嵌入式平台，半透明效果会使性能大幅下降，请谨慎使用。
  * 
  * @param widget 控件对象。
  * @param opacity 不透明度(取值0-255，0表示完全透明，255表示完全不透明)。
@@ -503,7 +406,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setOpacity(int opacity)  {
-   return Ret.from(widget_set_opacity(this.nativeObj, opacity));
+   return Ret.from(widget_set_opacity(this != null ? (this.nativeObj) : 0, opacity));
  }
 
 
@@ -515,7 +418,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret destroyChildren()  {
-   return Ret.from(widget_destroy_children(this.nativeObj));
+   return Ret.from(widget_destroy_children(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -528,7 +431,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret addChild(Widget child)  {
-   return Ret.from(widget_add_child(this.nativeObj, child != null ? (child.nativeObj) : 0));
+   return Ret.from(widget_add_child(this != null ? (this.nativeObj) : 0, child != null ? (child.nativeObj) : 0));
  }
 
 
@@ -541,7 +444,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret removeChild(Widget child)  {
-   return Ret.from(widget_remove_child(this.nativeObj, child != null ? (child.nativeObj) : 0));
+   return Ret.from(widget_remove_child(this != null ? (this.nativeObj) : 0, child != null ? (child.nativeObj) : 0));
  }
 
 
@@ -555,7 +458,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret insertChild(int index, Widget child)  {
-   return Ret.from(widget_insert_child(this.nativeObj, index, child != null ? (child.nativeObj) : 0));
+   return Ret.from(widget_insert_child(this != null ? (this.nativeObj) : 0, index, child != null ? (child.nativeObj) : 0));
  }
 
 
@@ -568,7 +471,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret restack(int index)  {
-   return Ret.from(widget_restack(this.nativeObj, index));
+   return Ret.from(widget_restack(this != null ? (this.nativeObj) : 0, index));
  }
 
 
@@ -581,7 +484,7 @@ public class Widget {
  * @returns 子控件或NULL。
  */
  public  Widget child(String name)  {
-   return new Widget(widget_child(this.nativeObj, name));
+   return new Widget(widget_child(this != null ? (this.nativeObj) : 0, name));
  }
 
 
@@ -595,7 +498,7 @@ public class Widget {
  * @returns 子控件或NULL。
  */
  public  Widget lookup(String name, boolean recursive)  {
-   return new Widget(widget_lookup(this.nativeObj, name, recursive));
+   return new Widget(widget_lookup(this != null ? (this.nativeObj) : 0, name, recursive));
  }
 
 
@@ -609,7 +512,7 @@ public class Widget {
  * @returns 子控件或NULL。
  */
  public  Widget lookupByType(String type, boolean recursive)  {
-   return new Widget(widget_lookup_by_type(this.nativeObj, type, recursive));
+   return new Widget(widget_lookup_by_type(this != null ? (this.nativeObj) : 0, type, recursive));
  }
 
 
@@ -623,7 +526,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setVisible(boolean visible, boolean recursive)  {
-   return Ret.from(widget_set_visible(this.nativeObj, visible, recursive));
+   return Ret.from(widget_set_visible(this != null ? (this.nativeObj) : 0, visible, recursive));
  }
 
 
@@ -636,7 +539,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setVisibleOnly(boolean visible)  {
-   return Ret.from(widget_set_visible_only(this.nativeObj, visible));
+   return Ret.from(widget_set_visible_only(this != null ? (this.nativeObj) : 0, visible));
  }
 
 
@@ -649,19 +552,12 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setSensitive(boolean sensitive)  {
-   return Ret.from(widget_set_sensitive(this.nativeObj, sensitive));
+   return Ret.from(widget_set_sensitive(this != null ? (this.nativeObj) : 0, sensitive));
  }
 
 
 /**
- * 注册指定事件的处理函数。
- *  使用示例：
- * 
- *  ```c
- *  widget_t* ok = button_create(win, 10, 10, 80, 30);
- *  widget_on(ok, EVT_CLICK, on_click, NULL);
- * 
- *  ```
+ * 注册指定事件的处理函数。 使用示例： ```c widget_t* ok = button_create(win, 10, 10, 80, 30); widget_on(ok, EVT_CLICK, on_click, NULL); ```
  * 
  * @param widget 控件对象。
  * @param type 事件类型。
@@ -671,7 +567,7 @@ public class Widget {
  * @returns 返回id，用于widget_off。
  */
  public  int on(EventType type, OnEvent on_event, long ctx)  {
-   return widget_on(this.nativeObj, type.value(), on_event, ctx);
+   return widget_on(this != null ? (this.nativeObj) : 0, type.value(), on_event, ctx);
  }
 
 
@@ -684,7 +580,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret off(int id)  {
-   return Ret.from(widget_off(this.nativeObj, id));
+   return Ret.from(widget_off(this != null ? (this.nativeObj) : 0, id));
  }
 
 
@@ -697,7 +593,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret invalidateForce(Rect r)  {
-   return Ret.from(widget_invalidate_force(this.nativeObj, r != null ? (r.nativeObj) : 0));
+   return Ret.from(widget_invalidate_force(this != null ? (this.nativeObj) : 0, r != null ? (r.nativeObj) : 0));
  }
 
 
@@ -711,7 +607,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setPropStr(String name, String v)  {
-   return Ret.from(widget_set_prop_str(this.nativeObj, name, v));
+   return Ret.from(widget_set_prop_str(this != null ? (this.nativeObj) : 0, name, v));
  }
 
 
@@ -725,7 +621,7 @@ public class Widget {
  * @returns 返回属性的值。
  */
  public  String getPropStr(String name, String defval)  {
-   return widget_get_prop_str(this.nativeObj, name, defval);
+   return widget_get_prop_str(this != null ? (this.nativeObj) : 0, name, defval);
  }
 
 
@@ -739,7 +635,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setPropInt(String name, int v)  {
-   return Ret.from(widget_set_prop_int(this.nativeObj, name, v));
+   return Ret.from(widget_set_prop_int(this != null ? (this.nativeObj) : 0, name, v));
  }
 
 
@@ -753,7 +649,7 @@ public class Widget {
  * @returns 返回属性的值。
  */
  public  int getPropInt(String name, int defval)  {
-   return widget_get_prop_int(this.nativeObj, name, defval);
+   return widget_get_prop_int(this != null ? (this.nativeObj) : 0, name, defval);
  }
 
 
@@ -767,7 +663,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setPropBool(String name, boolean v)  {
-   return Ret.from(widget_set_prop_bool(this.nativeObj, name, v));
+   return Ret.from(widget_set_prop_bool(this != null ? (this.nativeObj) : 0, name, v));
  }
 
 
@@ -781,7 +677,7 @@ public class Widget {
  * @returns 返回属性的值。
  */
  public  boolean getPropBool(String name, boolean defval)  {
-   return widget_get_prop_bool(this.nativeObj, name, defval);
+   return widget_get_prop_bool(this != null ? (this.nativeObj) : 0, name, defval);
  }
 
 
@@ -793,7 +689,7 @@ public class Widget {
  * @returns 返回当前控件所在的窗口是否已经打开。
  */
  public  boolean isWindowOpened()  {
-   return widget_is_window_opened(this.nativeObj);
+   return widget_is_window_opened(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -805,7 +701,7 @@ public class Widget {
  * @returns 返回当前控件是否是窗口。
  */
  public  boolean isWindow()  {
-   return widget_is_window(this.nativeObj);
+   return widget_is_window(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -817,7 +713,7 @@ public class Widget {
  * @returns 返回当前控件是否是设计窗口。
  */
  public  boolean isDesigningWindow()  {
-   return widget_is_designing_window(this.nativeObj);
+   return widget_is_designing_window(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -829,7 +725,7 @@ public class Widget {
  * @returns 返回当前控件是否是窗口管理器。
  */
  public  boolean isWindowManager()  {
-   return widget_is_window_manager(this.nativeObj);
+   return widget_is_window_manager(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -843,7 +739,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret foreach(OnData visit, long ctx)  {
-   return Ret.from(widget_foreach(this.nativeObj, visit, ctx));
+   return Ret.from(widget_foreach(this != null ? (this.nativeObj) : 0, visit, ctx));
  }
 
 
@@ -855,7 +751,7 @@ public class Widget {
  * @returns 窗口对象。
  */
  public  Widget getWindow()  {
-   return new Widget(widget_get_window(this.nativeObj));
+   return new Widget(widget_get_window(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -867,7 +763,7 @@ public class Widget {
  * @returns 窗口管理器对象。
  */
  public  Widget getWindowManager()  {
-   return new Widget(widget_get_window_manager(this.nativeObj));
+   return new Widget(widget_get_window_manager(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -879,7 +775,7 @@ public class Widget {
  * @returns 返回类型名。
  */
  public  String getType()  {
-   return widget_get_type(this.nativeObj);
+   return widget_get_type(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -892,7 +788,7 @@ public class Widget {
  * @returns 返回clone的对象。
  */
  public  Widget clone(Widget parent)  {
-   return new Widget(widget_clone(this.nativeObj, parent != null ? (parent.nativeObj) : 0));
+   return new Widget(widget_clone(this != null ? (this.nativeObj) : 0, parent != null ? (parent.nativeObj) : 0));
  }
 
 
@@ -905,7 +801,7 @@ public class Widget {
  * @returns 返回TRUE表示相同，否则表示不同。
  */
  public  boolean equal(Widget other)  {
-   return widget_equal(this.nativeObj, other != null ? (other.nativeObj) : 0);
+   return widget_equal(this != null ? (this.nativeObj) : 0, other != null ? (other.nativeObj) : 0);
  }
 
 
@@ -922,16 +818,14 @@ public class Widget {
 
 
 /**
- * 从父控件中移除控件，并调用unref函数销毁控件。
- *  
- * 一般无需直接调用，关闭窗口时，自动销毁相关控件。
+ * 从父控件中移除控件，并调用unref函数销毁控件。 一般无需直接调用，关闭窗口时，自动销毁相关控件。
  * 
  * @param widget 控件对象。
  *
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret destroy()  {
-   return Ret.from(widget_destroy(this.nativeObj));
+   return Ret.from(widget_destroy(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -943,7 +837,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret unref()  {
-   return Ret.from(widget_unref(this.nativeObj));
+   return Ret.from(widget_unref(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -955,7 +849,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret layout()  {
-   return Ret.from(widget_layout(this.nativeObj));
+   return Ret.from(widget_layout(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -968,7 +862,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setSelfLayout(String params)  {
-   return Ret.from(widget_set_self_layout(this.nativeObj, params));
+   return Ret.from(widget_set_self_layout(this != null ? (this.nativeObj) : 0, params));
  }
 
 
@@ -981,7 +875,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setChildrenLayout(String params)  {
-   return Ret.from(widget_set_children_layout(this.nativeObj, params));
+   return Ret.from(widget_set_children_layout(this != null ? (this.nativeObj) : 0, params));
  }
 
 
@@ -997,7 +891,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setSelfLayoutParams(String x, String y, String w, String h)  {
-   return Ret.from(widget_set_self_layout_params(this.nativeObj, x, y, w, h));
+   return Ret.from(widget_set_self_layout_params(this != null ? (this.nativeObj) : 0, x, y, w, h));
  }
 
 
@@ -1011,7 +905,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setStyleInt(String state_and_name, int value)  {
-   return Ret.from(widget_set_style_int(this.nativeObj, state_and_name, value));
+   return Ret.from(widget_set_style_int(this != null ? (this.nativeObj) : 0, state_and_name, value));
  }
 
 
@@ -1025,7 +919,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setStyleStr(String state_and_name, String value)  {
-   return Ret.from(widget_set_style_str(this.nativeObj, state_and_name, value));
+   return Ret.from(widget_set_style_str(this != null ? (this.nativeObj) : 0, state_and_name, value));
  }
 
 
@@ -1039,7 +933,7 @@ public class Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setStyleColor(String state_and_name, int value)  {
-   return Ret.from(widget_set_style_color(this.nativeObj, state_and_name, value));
+   return Ret.from(widget_set_style_color(this != null ? (this.nativeObj) : 0, state_and_name, value));
  }
 
  public int getX() {

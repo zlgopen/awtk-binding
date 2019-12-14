@@ -1,15 +1,14 @@
 const fs = require('fs')
 const CodeGen = require('../common/code_gen.js')
 
+/**
+ * 用于产生将C函数一一映射到目标语言的代码。
+ */
 class BindingGen extends CodeGen {
   constructor() {
     super();
   }
-  
-  toClassName(name) {
-    return this.upperCamelName(name);
-  }
-  
+
   genFreeStr(name) {
     return '';
   }
@@ -25,7 +24,7 @@ class BindingGen extends CodeGen {
   genRegFunc(prefix, name) {
     return '';
   }
-   
+
   genGlobalInfo(json) {
     return '';
   }
@@ -33,7 +32,7 @@ class BindingGen extends CodeGen {
   genCreateObject(name, type, destroyFunc) {
     return '';
   }
-  
+
   genGetObject(index, type, name) {
     return '';
   }
@@ -57,7 +56,7 @@ class BindingGen extends CodeGen {
     const name = c.name;
     return this.genFuncDecl(name, "get");
   }
-  
+
   genParamsDecl(m) {
     let result = '';
     let returnType = m.return.type;
@@ -94,7 +93,7 @@ class BindingGen extends CodeGen {
 
     return result;
   }
-  
+
   getGcDeconstructor(cls) {
     let gcDeconstructor = null;
     cls.methods.forEach(m => {
@@ -228,7 +227,7 @@ class BindingGen extends CodeGen {
     return result;
   }
 
-  
+
   genSetProperty(cls, p) {
     let result = '';
 
@@ -253,12 +252,8 @@ class BindingGen extends CodeGen {
     return this.genFunc({}, m);
   }
 
-  genOne(cls) {
-    if (cls.type == 'class' || cls.type == 'enum') {
-      return this.genClass(cls);
-    } else if (cls.type == 'method') {
-      return this.genGlobalMethod(cls);
-    }
+  genEnum(cls) {
+    return this.genClass(cls);
   }
 
   genIncludes(json) {
@@ -282,7 +277,7 @@ class BindingGen extends CodeGen {
   genJsonAll(ojson) {
     let json = this.filterScriptableJson(ojson);
     let result = this.genIncludes(json);
-    
+
     result += this.genGlobalInfo(json);
 
     json.forEach(iter => {
@@ -296,4 +291,3 @@ class BindingGen extends CodeGen {
 }
 
 module.exports = BindingGen;
-

@@ -42,7 +42,7 @@ public class ComboBoxItem extends Widget {
  *
  * @returns combo_box_item对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static ComboBoxItem cast(Widget widget)  {
    return new ComboBoxItem(combo_box_item_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -56,7 +56,7 @@ public class ComboBoxItem extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setChecked(boolean checked)  {
-   return Ret.from(combo_box_item_set_checked(this.nativeObj, checked));
+   return Ret.from(combo_box_item_set_checked(this != null ? (this.nativeObj) : 0, checked));
  }
 
 
@@ -69,7 +69,7 @@ public class ComboBoxItem extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setValue(int value)  {
-   return Ret.from(combo_box_item_set_value(this.nativeObj, value));
+   return Ret.from(combo_box_item_set_value(this != null ? (this.nativeObj) : 0, value));
  }
 
  public boolean getChecked() {

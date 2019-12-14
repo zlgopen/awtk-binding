@@ -75,7 +75,7 @@ public class ProgressCircle extends Widget {
  *
  * @returns progress_circle对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static ProgressCircle cast(Widget widget)  {
    return new ProgressCircle(progress_circle_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -89,7 +89,7 @@ public class ProgressCircle extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setValue(double value)  {
-   return Ret.from(progress_circle_set_value(this.nativeObj, value));
+   return Ret.from(progress_circle_set_value(this != null ? (this.nativeObj) : 0, value));
  }
 
 
@@ -102,7 +102,7 @@ public class ProgressCircle extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setMax(int max)  {
-   return Ret.from(progress_circle_set_max(this.nativeObj, max));
+   return Ret.from(progress_circle_set_max(this != null ? (this.nativeObj) : 0, max));
  }
 
 
@@ -115,7 +115,7 @@ public class ProgressCircle extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setLineWidth(int line_width)  {
-   return Ret.from(progress_circle_set_line_width(this.nativeObj, line_width));
+   return Ret.from(progress_circle_set_line_width(this != null ? (this.nativeObj) : 0, line_width));
  }
 
 
@@ -128,7 +128,7 @@ public class ProgressCircle extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setStartAngle(int start_angle)  {
-   return Ret.from(progress_circle_set_start_angle(this.nativeObj, start_angle));
+   return Ret.from(progress_circle_set_start_angle(this != null ? (this.nativeObj) : 0, start_angle));
  }
 
 
@@ -141,7 +141,7 @@ public class ProgressCircle extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setUnit(String unit)  {
-   return Ret.from(progress_circle_set_unit(this.nativeObj, unit));
+   return Ret.from(progress_circle_set_unit(this != null ? (this.nativeObj) : 0, unit));
  }
 
 
@@ -154,7 +154,7 @@ public class ProgressCircle extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setShowText(boolean show_text)  {
-   return Ret.from(progress_circle_set_show_text(this.nativeObj, show_text));
+   return Ret.from(progress_circle_set_show_text(this != null ? (this.nativeObj) : 0, show_text));
  }
 
 
@@ -167,7 +167,7 @@ public class ProgressCircle extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setCounterClockWise(boolean counter_clock_wise)  {
-   return Ret.from(progress_circle_set_counter_clock_wise(this.nativeObj, counter_clock_wise));
+   return Ret.from(progress_circle_set_counter_clock_wise(this != null ? (this.nativeObj) : 0, counter_clock_wise));
  }
 
  public int getMax() {

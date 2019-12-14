@@ -62,7 +62,7 @@ public class Pages extends Widget {
  *
  * @returns pages对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static Pages cast(Widget widget)  {
    return new Pages(pages_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -76,7 +76,7 @@ public class Pages extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setActive(int index)  {
-   return Ret.from(pages_set_active(this.nativeObj, index));
+   return Ret.from(pages_set_active(this != null ? (this.nativeObj) : 0, index));
  }
 
 
@@ -89,7 +89,7 @@ public class Pages extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setActiveByName(String name)  {
-   return Ret.from(pages_set_active_by_name(this.nativeObj, name));
+   return Ret.from(pages_set_active_by_name(this != null ? (this.nativeObj) : 0, name));
  }
 
  public int getActive() {

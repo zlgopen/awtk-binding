@@ -83,7 +83,7 @@ public class SlideView extends Widget {
  *
  * @returns slide_view对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static SlideView cast(Widget widget)  {
    return new SlideView(slide_view_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -97,7 +97,7 @@ public class SlideView extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setAutoPlay(int auto_play)  {
-   return Ret.from(slide_view_set_auto_play(this.nativeObj, auto_play));
+   return Ret.from(slide_view_set_auto_play(this != null ? (this.nativeObj) : 0, auto_play));
  }
 
 
@@ -110,7 +110,7 @@ public class SlideView extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setActive(int index)  {
-   return Ret.from(slide_view_set_active(this.nativeObj, index));
+   return Ret.from(slide_view_set_active(this != null ? (this.nativeObj) : 0, index));
  }
 
 
@@ -123,7 +123,7 @@ public class SlideView extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setVertical(boolean vertical)  {
-   return Ret.from(slide_view_set_vertical(this.nativeObj, vertical));
+   return Ret.from(slide_view_set_vertical(this != null ? (this.nativeObj) : 0, vertical));
  }
 
 
@@ -147,7 +147,7 @@ public class SlideView extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setAnimHint(String anim_hint)  {
-   return Ret.from(slide_view_set_anim_hint(this.nativeObj, anim_hint));
+   return Ret.from(slide_view_set_anim_hint(this != null ? (this.nativeObj) : 0, anim_hint));
  }
 
 
@@ -160,7 +160,7 @@ public class SlideView extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setLoop(boolean loop)  {
-   return Ret.from(slide_view_set_loop(this.nativeObj, loop));
+   return Ret.from(slide_view_set_loop(this != null ? (this.nativeObj) : 0, loop));
  }
 
  public boolean getVertical() {

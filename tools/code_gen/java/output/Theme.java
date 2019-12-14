@@ -2,9 +2,7 @@ package awtk;
 
 
 /**
- * 主题。
- * 
- *  负责管理缺省的主题数据，方便实现style\_const。
+ * 主题。 负责管理缺省的主题数据，方便实现style\_const。
  *
  */
 public class Theme {

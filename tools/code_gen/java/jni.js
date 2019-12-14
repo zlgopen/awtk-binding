@@ -46,7 +46,7 @@ class JniGenerator extends BindingGen {
 
     if (name == 'ret') {
       let result = ``;
-      if(type.indexOf('wchar_t*') >= 0) {
+      if (type.indexOf('wchar_t*') >= 0) {
         result += '  str_t str;\n';
         result += '  jstring jstr;\n';
       }
@@ -148,7 +148,7 @@ class JniGenerator extends BindingGen {
     let result = '';
     const name = c.name;
     const isConstString = this.isEnumString(cls);
-    
+
     result += this.genReturnData(null, isConstString ? 'char*' : 'int', name);
 
     return result;
@@ -208,4 +208,3 @@ class JniGenerator extends BindingGen {
 }
 
 JniGenerator.gen();
-

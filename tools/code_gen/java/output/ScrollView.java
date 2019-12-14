@@ -71,7 +71,7 @@ public class ScrollView extends Widget {
  *
  * @returns scroll_view对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static ScrollView cast(Widget widget)  {
    return new ScrollView(scroll_view_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
@@ -85,7 +85,7 @@ public class ScrollView extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setVirtualW(int w)  {
-   return Ret.from(scroll_view_set_virtual_w(this.nativeObj, w));
+   return Ret.from(scroll_view_set_virtual_w(this != null ? (this.nativeObj) : 0, w));
  }
 
 
@@ -98,7 +98,7 @@ public class ScrollView extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setVirtualH(int h)  {
-   return Ret.from(scroll_view_set_virtual_h(this.nativeObj, h));
+   return Ret.from(scroll_view_set_virtual_h(this != null ? (this.nativeObj) : 0, h));
  }
 
 
@@ -111,7 +111,7 @@ public class ScrollView extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setXslidable(boolean xslidable)  {
-   return Ret.from(scroll_view_set_xslidable(this.nativeObj, xslidable));
+   return Ret.from(scroll_view_set_xslidable(this != null ? (this.nativeObj) : 0, xslidable));
  }
 
 
@@ -124,7 +124,7 @@ public class ScrollView extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setYslidable(boolean yslidable)  {
-   return Ret.from(scroll_view_set_yslidable(this.nativeObj, yslidable));
+   return Ret.from(scroll_view_set_yslidable(this != null ? (this.nativeObj) : 0, yslidable));
  }
 
 
@@ -138,7 +138,7 @@ public class ScrollView extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setOffset(int xoffset, int yoffset)  {
-   return Ret.from(scroll_view_set_offset(this.nativeObj, xoffset, yoffset));
+   return Ret.from(scroll_view_set_offset(this != null ? (this.nativeObj) : 0, xoffset, yoffset));
  }
 
 
@@ -152,7 +152,7 @@ public class ScrollView extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setSpeedScale(double xspeed_scale, double yspeed_scale)  {
-   return Ret.from(scroll_view_set_speed_scale(this.nativeObj, xspeed_scale, yspeed_scale));
+   return Ret.from(scroll_view_set_speed_scale(this != null ? (this.nativeObj) : 0, xspeed_scale, yspeed_scale));
  }
 
 
@@ -167,7 +167,7 @@ public class ScrollView extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret scrollTo(int xoffset_end, int yoffset_end, int duration)  {
-   return Ret.from(scroll_view_scroll_to(this.nativeObj, xoffset_end, yoffset_end, duration));
+   return Ret.from(scroll_view_scroll_to(this != null ? (this.nativeObj) : 0, xoffset_end, yoffset_end, duration));
  }
 
 
@@ -182,7 +182,7 @@ public class ScrollView extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret scrollDeltaTo(int xoffset_delta, int yoffset_delta, int duration)  {
-   return Ret.from(scroll_view_scroll_delta_to(this.nativeObj, xoffset_delta, yoffset_delta, duration));
+   return Ret.from(scroll_view_scroll_delta_to(this != null ? (this.nativeObj) : 0, xoffset_delta, yoffset_delta, duration));
  }
 
  public int getVirtualW() {

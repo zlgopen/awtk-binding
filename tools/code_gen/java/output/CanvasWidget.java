@@ -98,7 +98,7 @@ public class CanvasWidget extends Widget {
  *
  * @returns canvas_widget对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static CanvasWidget cast(Widget widget)  {
    return new CanvasWidget(canvas_widget_cast(widget != null ? (widget.nativeObj) : 0));
  }
 

@@ -72,7 +72,7 @@ public class ImageAnimation extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setLoop(boolean loop)  {
-   return Ret.from(image_animation_set_loop(this.nativeObj, loop));
+   return Ret.from(image_animation_set_loop(this != null ? (this.nativeObj) : 0, loop));
  }
 
 
@@ -85,7 +85,7 @@ public class ImageAnimation extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setImage(String image)  {
-   return Ret.from(image_animation_set_image(this.nativeObj, image));
+   return Ret.from(image_animation_set_image(this != null ? (this.nativeObj) : 0, image));
  }
 
 
@@ -98,7 +98,7 @@ public class ImageAnimation extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setInterval(int interval)  {
-   return Ret.from(image_animation_set_interval(this.nativeObj, interval));
+   return Ret.from(image_animation_set_interval(this != null ? (this.nativeObj) : 0, interval));
  }
 
 
@@ -111,7 +111,7 @@ public class ImageAnimation extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setDelay(int delay)  {
-   return Ret.from(image_animation_set_delay(this.nativeObj, delay));
+   return Ret.from(image_animation_set_delay(this != null ? (this.nativeObj) : 0, delay));
  }
 
 
@@ -124,7 +124,7 @@ public class ImageAnimation extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setAutoPlay(boolean auto_play)  {
-   return Ret.from(image_animation_set_auto_play(this.nativeObj, auto_play));
+   return Ret.from(image_animation_set_auto_play(this != null ? (this.nativeObj) : 0, auto_play));
  }
 
 
@@ -138,7 +138,7 @@ public class ImageAnimation extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setSequence(String sequence)  {
-   return Ret.from(image_animation_set_sequence(this.nativeObj, sequence));
+   return Ret.from(image_animation_set_sequence(this != null ? (this.nativeObj) : 0, sequence));
  }
 
 
@@ -155,7 +155,7 @@ public class ImageAnimation extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setRangeSequence(int start_index, int end_index)  {
-   return Ret.from(image_animation_set_range_sequence(this.nativeObj, start_index, end_index));
+   return Ret.from(image_animation_set_range_sequence(this != null ? (this.nativeObj) : 0, start_index, end_index));
  }
 
 
@@ -167,7 +167,7 @@ public class ImageAnimation extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret play()  {
-   return Ret.from(image_animation_play(this.nativeObj));
+   return Ret.from(image_animation_play(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -179,7 +179,7 @@ public class ImageAnimation extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret stop()  {
-   return Ret.from(image_animation_stop(this.nativeObj));
+   return Ret.from(image_animation_stop(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -191,7 +191,7 @@ public class ImageAnimation extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret pause()  {
-   return Ret.from(image_animation_pause(this.nativeObj));
+   return Ret.from(image_animation_pause(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -203,7 +203,7 @@ public class ImageAnimation extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret next()  {
-   return Ret.from(image_animation_next(this.nativeObj));
+   return Ret.from(image_animation_next(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -223,7 +223,7 @@ public class ImageAnimation extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setFormat(String format)  {
-   return Ret.from(image_animation_set_format(this.nativeObj, format));
+   return Ret.from(image_animation_set_format(this != null ? (this.nativeObj) : 0, format));
  }
 
 
@@ -236,7 +236,7 @@ public class ImageAnimation extends Widget {
  * @returns 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setUnloadAfterPaint(boolean unload_after_paint)  {
-   return Ret.from(image_animation_set_unload_after_paint(this.nativeObj, unload_after_paint));
+   return Ret.from(image_animation_set_unload_after_paint(this != null ? (this.nativeObj) : 0, unload_after_paint));
  }
 
 
@@ -247,7 +247,7 @@ public class ImageAnimation extends Widget {
  *
  * @returns image_animation对象。
  */
- public  static Widget cast(Widget widget)  {
+ public  static ImageAnimation cast(Widget widget)  {
    return new ImageAnimation(image_animation_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
