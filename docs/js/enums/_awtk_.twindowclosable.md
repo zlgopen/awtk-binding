@@ -18,7 +18,7 @@
 
 • **CONFIRM**: =  WINDOW_CLOSABLE_CONFIRM()
 
-*Defined in [awtk.ts:7296](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L7296)*
+*Defined in [awtk.ts:7296](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7296)*
 
 窗口需要确认后才能关闭。
 
@@ -28,7 +28,7 @@ ___
 
 • **NO**: =  WINDOW_CLOSABLE_NO()
 
-*Defined in [awtk.ts:7290](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L7290)*
+*Defined in [awtk.ts:7290](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7290)*
 
 窗口不可关闭。
 
@@ -38,6 +38,6 @@ ___
 
 • **YES**: =  WINDOW_CLOSABLE_YES()
 
-*Defined in [awtk.ts:7284](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L7284)*
+*Defined in [awtk.ts:7284](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7284)*
 
 窗口可关闭。

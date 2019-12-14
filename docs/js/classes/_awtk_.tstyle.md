@@ -35,7 +35,7 @@
 
 \+ **new TStyle**(`nativeObj`: any): *[TStyle](_awtk_.tstyle.md)*
 
-*Defined in [awtk.ts:5008](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L5008)*
+*Defined in [awtk.ts:5008](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5008)*
 
 **Parameters:**
 
@@ -51,7 +51,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:5008](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L5008)*
+*Defined in [awtk.ts:5008](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5008)*
 
 ## Methods
 
@@ -59,7 +59,7 @@ Name | Type |
 
 ▸ **getInt**(`name`: string, `defval`: number): *number*
 
-*Defined in [awtk.ts:5048](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L5048)*
+*Defined in [awtk.ts:5048](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5048)*
 
 获取指定name的整数格式的值。
 
@@ -80,7 +80,7 @@ ___
 
 ▸ **getStr**(`name`: string, `defval`: string): *string*
 
-*Defined in [awtk.ts:5062](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L5062)*
+*Defined in [awtk.ts:5062](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5062)*
 
 获取指定name的字符串格式的值。
 
@@ -101,7 +101,7 @@ ___
 
 ▸ **isMutable**(): *boolean*
 
-*Defined in [awtk.ts:5089](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L5089)*
+*Defined in [awtk.ts:5089](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5089)*
 
 检查style是否是mutable的。
 
@@ -115,7 +115,7 @@ ___
 
 ▸ **isValid**(): *boolean*
 
-*Defined in [awtk.ts:5034](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L5034)*
+*Defined in [awtk.ts:5034](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5034)*
 
 检查style对象是否有效
 
@@ -129,7 +129,7 @@ ___
 
 ▸ **notifyWidgetStateChanged**(`widget`: [TWidget](_awtk_.twidget.md)): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:5022](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L5022)*
+*Defined in [awtk.ts:5022](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5022)*
 
 widget状态改变时，通知style更新数据。
 
@@ -149,7 +149,7 @@ ___
 
 ▸ **set**(`state`: string, `name`: string, `value`: [TValue](_awtk_.tvalue.md)): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:5077](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L5077)*
+*Defined in [awtk.ts:5077](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5077)*
 
 设置指定状态的指定属性的值(仅仅对mutable的style有效)。
 

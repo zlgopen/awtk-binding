@@ -31,7 +31,7 @@
 
 \+ **new TLocaleInfo**(`nativeObj`: any): *[TLocaleInfo](_awtk_.tlocaleinfo.md)*
 
-*Defined in [awtk.ts:4732](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L4732)*
+*Defined in [awtk.ts:4732](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L4732)*
 
 **Parameters:**
 
@@ -47,7 +47,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:4732](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L4732)*
+*Defined in [awtk.ts:4732](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L4732)*
 
 ## Methods
 
@@ -55,7 +55,7 @@ Name | Type |
 
 ▸ **change**(`language`: string, `country`: string): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:4771](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L4771)*
+*Defined in [awtk.ts:4771](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L4771)*
 
 设置当前的国家和语言。
 
@@ -76,7 +76,7 @@ ___
 
 ▸ **off**(`id`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:4784](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L4784)*
+*Defined in [awtk.ts:4784](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L4784)*
 
 注销指定事件的处理函数。
 
@@ -96,7 +96,7 @@ ___
 
 ▸ **tr**(`text`: string): *string*
 
-*Defined in [awtk.ts:4757](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L4757)*
+*Defined in [awtk.ts:4757](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L4757)*
 
 翻译字符串。
 
@@ -116,7 +116,7 @@ ___
 
 ▸ **instance**(): *[TLocaleInfo](_awtk_.tlocaleinfo.md)*
 
-*Defined in [awtk.ts:4744](https://github.com/zlgopen/awtk-binding/blob/b368e0d/tools/code_gen/js/output/awtk.ts#L4744)*
+*Defined in [awtk.ts:4744](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L4744)*
 
 获取缺省locale_info。
 
