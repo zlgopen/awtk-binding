@@ -22,7 +22,7 @@ public class ClipBoard {
  * 
  * @param text 文本。
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  static Ret setText(String text)  {
    return Ret.from(clip_board_set_text(text));
@@ -33,7 +33,7 @@ public class ClipBoard {
  * 从剪切板中获取文本(UTF8)数据。
  * 
  *
- * @returns 返回文本数据。
+ * @return 返回文本数据。
  */
  public  static String getText()  {
    return clip_board_get_text();

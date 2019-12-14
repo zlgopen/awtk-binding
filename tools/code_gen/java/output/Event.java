@@ -18,11 +18,13 @@ public class Event {
 
 
 /**
- * 转换为event对象。 供脚本语言使用
+ * 转换为event对象。
+ * 
+ * 供脚本语言使用
  * 
  * @param event event对象。
  *
- * @returns event对象。
+ * @return event对象。
  */
  public  static Event cast(Event event)  {
    return new Event(event_cast(event != null ? (event.nativeObj) : 0));
@@ -30,11 +32,13 @@ public class Event {
 
 
 /**
- * 创建event对象。 主要给脚本语言使用。
+ * 创建event对象。
+ * 
+ * 主要给脚本语言使用。
  * 
  * @param type 事件类型。
  *
- * @returns 返回事件对象。
+ * @return 返回事件对象。
  */
  public  static Event create(int type)  {
    return new Event(event_create(type));
@@ -42,24 +46,40 @@ public class Event {
 
 
 /**
- * 销毁事件对象。 主要给脚本语言使用。
+ * 销毁事件对象。
  * 
- * @param event event对象。
+ * 主要给脚本语言使用。
+ * 
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret destroy()  {
    return Ret.from(event_destroy(this != null ? (this.nativeObj) : 0));
  }
 
+
+/**
+ * 类型。
+ *
+ */
  public int getType() {
    return event_t_get_prop_type(this.nativeObj);
  }
 
+
+/**
+ * 事件发生的时间。
+ *
+ */
  public int getTime() {
    return event_t_get_prop_time(this.nativeObj);
  }
 
+
+/**
+ * 事件发生的目标对象。
+ *
+ */
  public long getTarget() {
    return event_t_get_prop_target(this.nativeObj);
  }

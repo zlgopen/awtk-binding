@@ -5,6 +5,7 @@ class TargetGen extends CodeGen {
   constructor() {
     super()
     this.classNamePrefix = 'T';
+    this.returnDocKey = 'return';
   }
 
   getNull() {
@@ -166,7 +167,7 @@ class TargetGen extends CodeGen {
   tidyDoc(desc) {
     let result = this.removeCode(desc, '<!-- c_doc_begin -->', '<!-- c_doc_end -->');
     result = this.removeCode(result, '```c\n', '```\n');
-    result = this.removeCode(result, '```graphviz\n', '```\n');
+    result = this.removeCode(result, '```graphviz', '```');
 
     result = result.replace(/\r\n/g, '\n');
     result = result.replace(/\r/g, '\n');
@@ -211,8 +212,13 @@ class TargetGen extends CodeGen {
     let paramsDesc = '';
     let retDesc = m.return.desc;
     let desc = this.tidyDoc(m.desc);
+    let isNormalMethod = this.isNormalMethod(m);
 
-    m.params.forEach(iter => {
+    m.params.forEach((iter, index) => {
+      if(index === 0 && isNormalMethod) {
+        return;
+      }
+
       paramsDesc += ` * @param ${iter.name} ${iter.desc}\n`;
     });
 
@@ -220,7 +226,7 @@ class TargetGen extends CodeGen {
 /**
  * ${desc}
  * \n${paramsDesc} *
- * @returns ${retDesc}
+ * @${this.returnDocKey} ${retDesc}
  */
 `;
   }

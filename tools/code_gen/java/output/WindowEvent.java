@@ -22,12 +22,17 @@ public class WindowEvent extends Event {
  * 
  * @param event event对象。
  *
- * @returns 对象。
+ * @return 对象。
  */
  public  static WindowEvent cast(Event event)  {
    return new WindowEvent(window_event_cast(event != null ? (event.nativeObj) : 0));
  }
 
+
+/**
+ * canvas。
+ *
+ */
  public Widget getWindow() {
    return new Widget(window_event_t_get_prop_window(this.nativeObj));
  }

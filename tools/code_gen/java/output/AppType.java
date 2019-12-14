@@ -1,9 +1,33 @@
 package awtk;
 
 
+
+/**
+ * 应用程序类型。
+ *
+ */
+
 public enum AppType {
+  
+/**
+ * 嵌入式或移动APP
+ *
+ */
+ 
   MOBILE (APP_MOBILE()),
+  
+/**
+ * 模拟器。
+ *
+ */
+ 
   SIMULATOR (APP_SIMULATOR()),
+  
+/**
+ * 桌面应用程序。
+ *
+ */
+ 
   DESKTOP (APP_DESKTOP());
  
    

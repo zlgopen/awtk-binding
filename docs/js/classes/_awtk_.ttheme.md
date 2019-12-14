@@ -2,7 +2,9 @@
 
 # Class: TTheme
 
-主题。 负责管理缺省的主题数据，方便实现style\_const。
+主题。
+
+负责管理缺省的主题数据，方便实现style\_const。
 
 ## Hierarchy
 
@@ -28,7 +30,7 @@
 
 \+ **new TTheme**(`nativeObj`: any): *[TTheme](_awtk_.ttheme.md)*
 
-*Defined in [awtk.ts:5101](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5101)*
+*Defined in [awtk.ts:5075](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L5075)*
 
 **Parameters:**
 
@@ -44,7 +46,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:5101](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5101)*
+*Defined in [awtk.ts:5075](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L5075)*
 
 ## Methods
 
@@ -52,7 +54,7 @@ Name | Type |
 
 ▸ **instance**(): *[TTheme](_awtk_.ttheme.md)*
 
-*Defined in [awtk.ts:5113](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5113)*
+*Defined in [awtk.ts:5087](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L5087)*
 
 获取缺省的主题对象。
 

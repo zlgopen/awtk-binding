@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['margin',['MARGIN',['../enumawtk_1_1_widget_prop.html#a6432f8086cd7d2d49944181b9a246a66',1,'awtk::WidgetProp']]],
+  ['max',['MAX',['../enumawtk_1_1_widget_prop.html#ae47b6eeeb06084901cbdb93cef3f7fc9',1,'awtk::WidgetProp']]],
+  ['max_5fw',['MAX_W',['../enumawtk_1_1_widget_prop.html#ac10e5f327a03517cf86ed071d84877ba',1,'awtk::WidgetProp']]],
+  ['measuretext',['measureText',['../classawtk_1_1_canvas.html#a350a945a7e4cc64283d2f740fe0ad96a',1,'awtk.Canvas.measureText()'],['../classawtk_1_1_vgcanvas.html#a3428329f183ca3b63fba264b998a712c',1,'awtk.Vgcanvas.measureText()']]],
+  ['message_5frfc822',['MESSAGE_RFC822',['../enumawtk_1_1_m_i_m_e___t_y_p_e.html#a04b04a75d2f959e53b91d9cb16c0f186',1,'awtk::MIME_TYPE']]],
+  ['middle',['MIDDLE',['../enumawtk_1_1_align_v.html#a7f174ca100d985c74b36f07fdf65dd8d',1,'awtk::AlignV']]],
+  ['mime_5ftype',['MIME_TYPE',['../enumawtk_1_1_m_i_m_e___t_y_p_e.html',1,'awtk']]],
+  ['min',['MIN',['../enumawtk_1_1_widget_prop.html#a9a252c9c95b04d011f9fdc8b9486fab0',1,'awtk::WidgetProp']]],
+  ['min_5fw',['MIN_W',['../enumawtk_1_1_widget_prop.html#a6a771a215bed697ed0f153463457213b',1,'awtk::WidgetProp']]],
+  ['mledit',['Mledit',['../classawtk_1_1_mledit.html',1,'awtk']]],
+  ['mobile',['MOBILE',['../enumawtk_1_1_app_type.html#afb6c17546311aca914f54b92f55d853d',1,'awtk::AppType']]],
+  ['modal',['modal',['../classawtk_1_1_dialog.html#ab3be2e24cc1fff2b956349dd3fcf49de',1,'awtk::Dialog']]],
+  ['modify',['modify',['../classawtk_1_1_timer.html#a1f723881a62ffd6d8535e06968e136cf',1,'awtk::Timer']]],
+  ['mono',['MONO',['../enumawtk_1_1_bitmap_format.html#a0012d20ea01c431a8d3f974585e7fa1c',1,'awtk.BitmapFormat.MONO()'],['../enumawtk_1_1_glyph_format.html#a228046f9aec094d242661f3bc69a6681',1,'awtk.GlyphFormat.MONO()']]],
+  ['move',['MOVE',['../enumawtk_1_1_event_type.html#ac01898b003e9ec570dbc4081aadedf9e',1,'awtk::EventType']]],
+  ['move_5ffocus_5fdown_5fkey',['MOVE_FOCUS_DOWN_KEY',['../enumawtk_1_1_widget_prop.html#a1810bdd28ecafaf150b8962c18971385',1,'awtk::WidgetProp']]],
+  ['move_5ffocus_5fleft_5fkey',['MOVE_FOCUS_LEFT_KEY',['../enumawtk_1_1_widget_prop.html#af873e78459974376144c6f12f11c3835',1,'awtk::WidgetProp']]],
+  ['move_5ffocus_5fnext_5fkey',['MOVE_FOCUS_NEXT_KEY',['../enumawtk_1_1_widget_prop.html#a5019595839684dc88282ddb3639ec9ea',1,'awtk::WidgetProp']]],
+  ['move_5ffocus_5fprev_5fkey',['MOVE_FOCUS_PREV_KEY',['../enumawtk_1_1_widget_prop.html#a10ba684fc703e227c7d72e6a5ce0a6f4',1,'awtk::WidgetProp']]],
+  ['move_5ffocus_5fright_5fkey',['MOVE_FOCUS_RIGHT_KEY',['../enumawtk_1_1_widget_prop.html#a7335e8b61c62250063cbc691719cc5fa',1,'awtk::WidgetProp']]],
+  ['move_5ffocus_5fup_5fkey',['MOVE_FOCUS_UP_KEY',['../enumawtk_1_1_widget_prop.html#af3d4147e22212485a320084d2a812bb6',1,'awtk::WidgetProp']]],
+  ['move_5fresize',['MOVE_RESIZE',['../enumawtk_1_1_event_type.html#a6c2a20a911cd209b5e6dcae0e441fcc0',1,'awtk::EventType']]],
+  ['moveto',['moveTo',['../classawtk_1_1_vgcanvas.html#a66a7a7851bab6e503be80a3ad63b89fc',1,'awtk::Vgcanvas']]],
+  ['ms',['ms',['../classawtk_1_1_time_now.html#acfc6f64336236836815e42f33a60ee4b',1,'awtk::TimeNow']]],
+  ['mutableimage',['MutableImage',['../classawtk_1_1_mutable_image.html',1,'awtk']]]
+];

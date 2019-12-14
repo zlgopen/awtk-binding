@@ -2,7 +2,9 @@
 
 # Class: TStyleMutable
 
-可变的style(可实时修改并生效，主要用于在designer中被编辑的控件，或者一些特殊控件)。 style\_mutable也对style\_const进行了包装，当用户没修改某个值时，便从style\_const中获取。
+可变的style(可实时修改并生效，主要用于在designer中被编辑的控件，或者一些特殊控件)。
+
+style\_mutable也对style\_const进行了包装，当用户没修改某个值时，便从style\_const中获取。
 
 ## Hierarchy
 
@@ -45,7 +47,7 @@
 
 *Overrides [TStyle](_awtk_.tstyle.md).[constructor](_awtk_.tstyle.md#constructor)*
 
-*Defined in [awtk.ts:15449](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L15449)*
+*Defined in [awtk.ts:15380](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L15380)*
 
 **Parameters:**
 
@@ -63,7 +65,7 @@ Name | Type |
 
 *Overrides [TStyle](_awtk_.tstyle.md).[nativeObj](_awtk_.tstyle.md#nativeobj)*
 
-*Defined in [awtk.ts:15449](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L15449)*
+*Defined in [awtk.ts:15380](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L15380)*
 
 ## Accessors
 
@@ -71,7 +73,7 @@ Name | Type |
 
 • **get name**(): *string*
 
-*Defined in [awtk.ts:15516](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L15516)*
+*Defined in [awtk.ts:15447](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L15447)*
 
 名称。
 
@@ -79,7 +81,7 @@ Name | Type |
 
 • **set name**(`v`: string): *void*
 
-*Defined in [awtk.ts:15507](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L15507)*
+*Defined in [awtk.ts:15438](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L15438)*
 
 名称。
 
@@ -99,7 +101,7 @@ Name | Type |
 
 *Inherited from [TStyle](_awtk_.tstyle.md).[getInt](_awtk_.tstyle.md#getint)*
 
-*Defined in [awtk.ts:5048](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5048)*
+*Defined in [awtk.ts:5023](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L5023)*
 
 获取指定name的整数格式的值。
 
@@ -122,7 +124,7 @@ ___
 
 *Inherited from [TStyle](_awtk_.tstyle.md).[getStr](_awtk_.tstyle.md#getstr)*
 
-*Defined in [awtk.ts:5062](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5062)*
+*Defined in [awtk.ts:5036](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L5036)*
 
 获取指定name的字符串格式的值。
 
@@ -145,7 +147,7 @@ ___
 
 *Inherited from [TStyle](_awtk_.tstyle.md).[isMutable](_awtk_.tstyle.md#ismutable)*
 
-*Defined in [awtk.ts:5089](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5089)*
+*Defined in [awtk.ts:5061](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L5061)*
 
 检查style是否是mutable的。
 
@@ -161,7 +163,7 @@ ___
 
 *Inherited from [TStyle](_awtk_.tstyle.md).[isValid](_awtk_.tstyle.md#isvalid)*
 
-*Defined in [awtk.ts:5034](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5034)*
+*Defined in [awtk.ts:5010](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L5010)*
 
 检查style对象是否有效
 
@@ -177,7 +179,7 @@ ___
 
 *Inherited from [TStyle](_awtk_.tstyle.md).[notifyWidgetStateChanged](_awtk_.tstyle.md#notifywidgetstatechanged)*
 
-*Defined in [awtk.ts:5022](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5022)*
+*Defined in [awtk.ts:4999](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4999)*
 
 widget状态改变时，通知style更新数据。
 
@@ -199,7 +201,7 @@ ___
 
 *Inherited from [TStyle](_awtk_.tstyle.md).[set](_awtk_.tstyle.md#set)*
 
-*Defined in [awtk.ts:5077](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5077)*
+*Defined in [awtk.ts:5050](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L5050)*
 
 设置指定状态的指定属性的值(仅仅对mutable的style有效)。
 
@@ -221,7 +223,7 @@ ___
 
 ▸ **setInt**(`state`: string, `name`: string, `val`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:15478](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L15478)*
+*Defined in [awtk.ts:15407](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L15407)*
 
 设置指定名称整数格式的值。
 
@@ -243,7 +245,7 @@ ___
 
 ▸ **setName**(`name`: string): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:15463](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L15463)*
+*Defined in [awtk.ts:15393](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L15393)*
 
 设置style的名称。
 
@@ -263,7 +265,7 @@ ___
 
 ▸ **cast**(`s`: [TStyle](_awtk_.tstyle.md)): *[TStyleMutable](_awtk_.tstylemutable.md)*
 
-*Defined in [awtk.ts:15490](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L15490)*
+*Defined in [awtk.ts:15419](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L15419)*
 
 转换为style_mutable对象。
 
@@ -283,9 +285,11 @@ ___
 
 ▸ **create**(`widget`: [TWidget](_awtk_.twidget.md), `default_style`: [TStyle](_awtk_.tstyle.md)): *[TStyle](_awtk_.tstyle.md)*
 
-*Defined in [awtk.ts:15503](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L15503)*
+*Defined in [awtk.ts:15434](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L15434)*
 
-创建style\_mutable对象。 除了测试程序外不需要直接调用，widget会通过style\_factory\_create创建。
+创建style\_mutable对象。
+
+除了测试程序外不需要直接调用，widget会通过style\_factory\_create创建。
 
 **Parameters:**
 

@@ -2,7 +2,13 @@
 
 # Class: TTimer
 
-定时器系统。 本定时器精度较低，最高精度为1000/FPS，如果需要高精度的定时器，请用OS提供的定时器。 示例： ```c static ret_t my_on_timer(const timer_info_t* info) {  widget_t* widget = WIDGET(info->ctx);  ...  return RET_REPEAT; } ... timer_add(my_on_timer, widget, 1000); ``` 在非GUI线程请用timer\_queue。
+定时器系统。
+
+本定时器精度较低，最高精度为1000/FPS，如果需要高精度的定时器，请用OS提供的定时器。
+
+示例：
+
+在非GUI线程请用timer\_queue。
 
 ## Hierarchy
 
@@ -23,7 +29,7 @@
 
 ▸ **add**(`on_timer`: Function, `ctx`: any, `duration`: number): *number*
 
-*Defined in [awtk.ts:5135](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5135)*
+*Defined in [awtk.ts:5115](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L5115)*
 
 增加一个timer。
 
@@ -45,7 +51,7 @@ ___
 
 ▸ **modify**(`timer_id`: number, `duration`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:5172](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5172)*
+*Defined in [awtk.ts:5152](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L5152)*
 
 修改指定的timer的duration，修改之后定时器重新开始计时。
 
@@ -66,7 +72,7 @@ ___
 
 ▸ **remove**(`timer_id`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:5147](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5147)*
+*Defined in [awtk.ts:5127](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L5127)*
 
 删除指定的timer。
 
@@ -86,7 +92,7 @@ ___
 
 ▸ **reset**(`timer_id`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:5159](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L5159)*
+*Defined in [awtk.ts:5139](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L5139)*
 
 重置指定的timer，重置之后定时器重新开始计时。
 

@@ -4,36 +4,33 @@ package awtk;
 /**
  * 滚动视图。
  * 
- *  scroll\_view\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于scroll\_view\_t控件。
+ * scroll\_view\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于scroll\_view\_t控件。
  * 
- *  在xml中使用"scroll\_view"标签创建滚动视图控件。如：
+ * 在xml中使用"scroll\_view"标签创建滚动视图控件。如：
  * 
- *  ```xml
- *  <list_view x="0"  y="30" w="100%" h="-80" item_height="60">
- *    <scroll_view name="view" x="0"  y="0" w="100%" h="100%">
- *      <list_item style="odd" children_layout="default(rows=1,cols=0)">
- *        <image draw_type="icon" w="30" image="earth"/>
- *        <label w="-30" text="1.Hello AWTK !">
- *          <switch x="r:10" y="m" w="60" h="20"/>
- *        </label>
- *      </list_item>
- *      ...
- *    </scroll_view>
- *   </list_view>
- *  ```
+ * ```xml
+ * <list_view x="0"  y="30" w="100%" h="-80" item_height="60">
+ * <scroll_view name="view" x="0"  y="0" w="100%" h="100%">
+ * <list_item style="odd" children_layout="default(rows=1,cols=0)">
+ * <image draw_type="icon" w="30" image="earth"/>
+ * <label w="-30" text="1.Hello AWTK !">
+ * <switch x="r:10" y="m" w="60" h="20"/>
+ * </label>
+ * </list_item>
+ * ...
+ * </scroll_view>
+ * </list_view>
+ * ```
  * 
  * 滚动视图一般作为列表视图的子控件使用。
  * 
  * 更多用法请参考：[list\_view\_m.xml](
  * https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/list_view_m.xml)
  * 
- *  在c代码中使用函数scroll\_view\_create创建列表视图控件。如：
+ * 在c代码中使用函数scroll\_view\_create创建列表视图控件。如：
  * 
- *  ```c
- *   widget_t* scroll_view = scroll_view_create(win, 0, 0, 0, 0);
- *  ```
  * 
- *  可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。
+ * 可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。
  *
  */
 public class ScrollView extends Widget {
@@ -57,7 +54,7 @@ public class ScrollView extends Widget {
  * @param w 宽度
  * @param h 高度
  *
- * @returns 对象。
+ * @return 对象。
  */
  public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new ScrollView(scroll_view_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
@@ -69,7 +66,7 @@ public class ScrollView extends Widget {
  * 
  * @param widget scroll_view对象。
  *
- * @returns scroll_view对象。
+ * @return scroll_view对象。
  */
  public  static ScrollView cast(Widget widget)  {
    return new ScrollView(scroll_view_cast(widget != null ? (widget.nativeObj) : 0));
@@ -79,10 +76,9 @@ public class ScrollView extends Widget {
 /**
  * 设置虚拟宽度。
  * 
- * @param widget 控件对象。
  * @param w 虚拟宽度。
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setVirtualW(int w)  {
    return Ret.from(scroll_view_set_virtual_w(this != null ? (this.nativeObj) : 0, w));
@@ -92,10 +88,9 @@ public class ScrollView extends Widget {
 /**
  * 设置虚拟高度。
  * 
- * @param widget 控件对象。
  * @param h 虚拟高度。
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setVirtualH(int h)  {
    return Ret.from(scroll_view_set_virtual_h(this != null ? (this.nativeObj) : 0, h));
@@ -105,10 +100,9 @@ public class ScrollView extends Widget {
 /**
  * 设置是否允许x方向滑动。
  * 
- * @param widget 控件对象。
  * @param xslidable 是否允许滑动。
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setXslidable(boolean xslidable)  {
    return Ret.from(scroll_view_set_xslidable(this != null ? (this.nativeObj) : 0, xslidable));
@@ -118,10 +112,9 @@ public class ScrollView extends Widget {
 /**
  * 设置是否允许y方向滑动。
  * 
- * @param widget 控件对象。
  * @param yslidable 是否允许滑动。
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setYslidable(boolean yslidable)  {
    return Ret.from(scroll_view_set_yslidable(this != null ? (this.nativeObj) : 0, yslidable));
@@ -131,11 +124,10 @@ public class ScrollView extends Widget {
 /**
  * 设置偏移量。
  * 
- * @param widget 控件对象。
  * @param xoffset x偏移量。
  * @param yoffset y偏移量。
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setOffset(int xoffset, int yoffset)  {
    return Ret.from(scroll_view_set_offset(this != null ? (this.nativeObj) : 0, xoffset, yoffset));
@@ -145,11 +137,10 @@ public class ScrollView extends Widget {
 /**
  * 设置偏移速度比例。
  * 
- * @param widget 控件对象。
  * @param xspeed_scale x偏移速度比例。。
  * @param yspeed_scale y偏移速度比例。。
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setSpeedScale(double xspeed_scale, double yspeed_scale)  {
    return Ret.from(scroll_view_set_speed_scale(this != null ? (this.nativeObj) : 0, xspeed_scale, yspeed_scale));
@@ -159,12 +150,11 @@ public class ScrollView extends Widget {
 /**
  * 滚动到指定的偏移量。
  * 
- * @param widget 控件对象。
  * @param xoffset_end x偏移量。
  * @param yoffset_end y偏移量。
  * @param duration 时间。
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret scrollTo(int xoffset_end, int yoffset_end, int duration)  {
    return Ret.from(scroll_view_scroll_to(this != null ? (this.nativeObj) : 0, xoffset_end, yoffset_end, duration));
@@ -174,45 +164,84 @@ public class ScrollView extends Widget {
 /**
  * 滚动到指定的偏移量。
  * 
- * @param widget 控件对象。
  * @param xoffset_delta x偏移量。
  * @param yoffset_delta y偏移量。
  * @param duration 时间。
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret scrollDeltaTo(int xoffset_delta, int yoffset_delta, int duration)  {
    return Ret.from(scroll_view_scroll_delta_to(this != null ? (this.nativeObj) : 0, xoffset_delta, yoffset_delta, duration));
  }
 
+
+/**
+ * 虚拟宽度。
+ *
+ */
  public int getVirtualW() {
    return scroll_view_t_get_prop_virtual_w(this.nativeObj);
  }
 
+
+/**
+ * 虚拟高度。
+ *
+ */
  public int getVirtualH() {
    return scroll_view_t_get_prop_virtual_h(this.nativeObj);
  }
 
+
+/**
+ * x偏移量。
+ *
+ */
  public int getXoffset() {
    return scroll_view_t_get_prop_xoffset(this.nativeObj);
  }
 
+
+/**
+ * y偏移量。
+ *
+ */
  public int getYoffset() {
    return scroll_view_t_get_prop_yoffset(this.nativeObj);
  }
 
+
+/**
+ * x偏移速度比例。
+ *
+ */
  public double getXspeedScale() {
    return scroll_view_t_get_prop_xspeed_scale(this.nativeObj);
  }
 
+
+/**
+ * y偏移速度比例。
+ *
+ */
  public double getYspeedScale() {
    return scroll_view_t_get_prop_yspeed_scale(this.nativeObj);
  }
 
+
+/**
+ * 是否允许x方向滑动。
+ *
+ */
  public boolean getXslidable() {
    return scroll_view_t_get_prop_xslidable(this.nativeObj);
  }
 
+
+/**
+ * 是否允许y方向滑动。
+ *
+ */
  public boolean getYslidable() {
    return scroll_view_t_get_prop_yslidable(this.nativeObj);
  }

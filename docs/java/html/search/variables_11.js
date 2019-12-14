@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['radio_5fbutton',['RADIO_BUTTON',['../enumawtk_1_1_widget_type.html#a57fb11d020d11a68e540b4d57e71c940',1,'awtk::WidgetType']]],
+  ['readonly',['READONLY',['../enumawtk_1_1_widget_prop.html#a2b6efb5558f5ffccbabf385084294a9b',1,'awtk::WidgetProp']]],
+  ['remove',['REMOVE',['../enumawtk_1_1_ret.html#a77f835e4aae733a9df137470ef3c8e9b',1,'awtk::Ret']]],
+  ['repeat',['REPEAT',['../enumawtk_1_1_image_draw_type.html#aa6f685573940bb941a338daa65f512b6',1,'awtk.ImageDrawType.REPEAT()'],['../enumawtk_1_1_ret.html#af8e99fa6f44168302cd555eaf4732c38',1,'awtk.Ret.REPEAT()'],['../enumawtk_1_1_widget_prop.html#a9f97890a60d2855c5a8448c67babe7a7',1,'awtk.WidgetProp.REPEAT()']]],
+  ['repeat_5fx',['REPEAT_X',['../enumawtk_1_1_image_draw_type.html#af5486931ca2a88ad4b2cb8af481c5292',1,'awtk::ImageDrawType']]],
+  ['repeat_5fy',['REPEAT_Y',['../enumawtk_1_1_image_draw_type.html#aab079b7b4e392868907259a84f85bea7',1,'awtk::ImageDrawType']]],
+  ['repeat_5fy_5finverse',['REPEAT_Y_INVERSE',['../enumawtk_1_1_image_draw_type.html#a7042668e3c2736db26d11bd73bb51f56',1,'awtk::ImageDrawType']]],
+  ['req_5fstart',['REQ_START',['../enumawtk_1_1_event_type.html#a08353718a329a42f280556ce38a3c3f0',1,'awtk::EventType']]],
+  ['request_5fclose_5fwindow',['REQUEST_CLOSE_WINDOW',['../enumawtk_1_1_event_type.html#a9a348357eb44c8d2de92167a04c8972e',1,'awtk::EventType']]],
+  ['request_5fquit_5fapp',['REQUEST_QUIT_APP',['../enumawtk_1_1_event_type.html#afe10dd60445b15f23a765dbaa0ba2f1d',1,'awtk::EventType']]],
+  ['resize',['RESIZE',['../enumawtk_1_1_event_type.html#a69c020a7a4917326f68cfc83fde08e23',1,'awtk::EventType']]],
+  ['rgb565',['RGB565',['../enumawtk_1_1_bitmap_format.html#adc555dca36daed2ab13f915489f89f3a',1,'awtk::BitmapFormat']]],
+  ['rgb888',['RGB888',['../enumawtk_1_1_bitmap_format.html#aa24974876f0b0a07248122e5a7b80b86',1,'awtk::BitmapFormat']]],
+  ['rgba',['RGBA',['../enumawtk_1_1_glyph_format.html#a0e65afcc46c519f858ae17669e38bf04',1,'awtk::GlyphFormat']]],
+  ['rgba8888',['RGBA8888',['../enumawtk_1_1_bitmap_format.html#a842df7da3dff87f91af9736e58138bc8',1,'awtk::BitmapFormat']]],
+  ['rich_5ftext',['RICH_TEXT',['../enumawtk_1_1_widget_type.html#aaf02f0248466e97f5943a8e6ffe00121',1,'awtk::WidgetType']]],
+  ['right',['RIGHT',['../enumawtk_1_1_align_h.html#ac05fbbdb0f6e04054b641bed3a404b64',1,'awtk::AlignH']]],
+  ['right_5fmargin',['RIGHT_MARGIN',['../enumawtk_1_1_widget_prop.html#a6d299e7a35c39a137dadf1b96f6560ef',1,'awtk::WidgetProp']]],
+  ['rotation',['ROTATION',['../enumawtk_1_1_widget_prop.html#a05940ba64734d3c0f4b591fd432d94fc',1,'awtk::WidgetProp']]],
+  ['row',['ROW',['../enumawtk_1_1_widget_prop.html#a651210c08d38c4bf3979c8d849533575',1,'awtk.WidgetProp.ROW()'],['../enumawtk_1_1_widget_type.html#a7bddd33f7ddb8ec7a641781c6312ff28',1,'awtk.WidgetType.ROW()']]]
+];

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AWTK-CPP: 首页</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AWTK-CPP
+   </div>
+   <div id="projectbrief">AWTK CPP API</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">AWTK-CPP 文档</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a href="https://github.com/zlgopen/awtk">AWTK</a> 全称 Toolkit AnyWhere，是 <a href="http://www.zlg.cn/">ZLG</a> 开发的开源 GUI 引擎，旨在为嵌入式系统、WEB、各种小程序、手机和 PC 打造的通用 GUI 引擎，为用户提供一个功能强大、高效可靠、简单易用、可轻松做出炫酷效果的 GUI 引擎。</p>
+<blockquote class="doxtable">
+<p>欢迎广大开发者一起参与开发：生态共建计划。 </p>
+</blockquote>
+<h4><a href="https://github.com/zlgopen/awtk">AWTK</a> 寓意有两个方面：</h4>
+<ul>
+<li>Toolkit AnyWhere。</li>
+<li>ZLG 物联网操作系统 AWorks 内置 GUI。</li>
+</ul>
+<h2>CPP 示例代码</h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;awtk_cpp.hpp&quot;</span></div><div class="line"><span class="preprocessor">#include &quot;application.hpp&quot;</span></div><div class="line"></div><div class="line"><span class="keyword">static</span> ret_t OnClick(<span class="keywordtype">void</span>* ctx, event_t* e) {</div><div class="line">  log_debug(<span class="stringliteral">&quot;on_click\n&quot;</span>);</div><div class="line">  <span class="keywordflow">return</span> RET_OK;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">bool</span> Application::Init(<span class="keywordtype">void</span>) {</div><div class="line">  TWidget wm = TWindowManager::Instance();</div><div class="line">  TWidget win = <a class="code" href="class_t_window.html#ac4fc6b5d8fac2932134569302a8488f9">TWindow::Create</a>(wm, 0, 0, 0, 0); </div><div class="line">  TWidget ok = TButton::Create(win, 0, 0, 0, 0); </div><div class="line"></div><div class="line">  ok.SetText(<span class="stringliteral">&quot;ok&quot;</span>);</div><div class="line">  ok.SetSelfLayoutParams(<span class="stringliteral">&quot;center&quot;</span>, <span class="stringliteral">&quot;middle&quot;</span>, <span class="stringliteral">&quot;50%&quot;</span>, <span class="stringliteral">&quot;30&quot;</span>);</div><div class="line">  ok.On(EVT_CLICK, OnClick, NULL);</div><div class="line"></div><div class="line">  win.Layout();</div><div class="line"></div><div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">bool</span> Application::Exit(<span class="keywordtype">void</span>) {</div><div class="line">  log_debug(<span class="stringliteral">&quot;application_exit\n&quot;</span>);</div><div class="line"></div><div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line">}</div></div><!-- fragment --><p><a href="classes.html">类列表</a> </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -21,7 +21,7 @@ public class LocaleInfo {
  * 获取缺省locale_info。
  * 
  *
- * @returns 返回locale_info对象。
+ * @return 返回locale_info对象。
  */
  public  static LocaleInfo instance()  {
    return new LocaleInfo(locale_info());
@@ -31,10 +31,9 @@ public class LocaleInfo {
 /**
  * 翻译字符串。
  * 
- * @param locale_info locale_info对象。
  * @param text 待翻译的文本。
  *
- * @returns 返回翻译之后的字符串。
+ * @return 返回翻译之后的字符串。
  */
  public  String tr(String text)  {
    return locale_info_tr(this != null ? (this.nativeObj) : 0, text);
@@ -44,11 +43,10 @@ public class LocaleInfo {
 /**
  * 设置当前的国家和语言。
  * 
- * @param locale_info locale_info对象。
  * @param language 语言。
  * @param country 国家或地区。
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret change(String language, String country)  {
    return Ret.from(locale_info_change(this != null ? (this.nativeObj) : 0, language, country));
@@ -58,10 +56,9 @@ public class LocaleInfo {
 /**
  * 注销指定事件的处理函数。
  * 
- * @param locale_info locale_info对象。
  * @param id locale_info_on返回的ID。
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret off(int id)  {
    return Ret.from(locale_info_off(this != null ? (this.nativeObj) : 0, id));

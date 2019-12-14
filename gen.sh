@@ -14,10 +14,12 @@ cd -
 
 #java
 cd tools/code_gen/java && rm output/* && node java.js && node jni.js
+./gendoc.sh
 cd -
 
 #cpp
 cd tools/code_gen/cpp && rm output/* && node cpp_intf.js && node cpp_impl.js
+./gendoc.sh
 cd -
 
 #lua

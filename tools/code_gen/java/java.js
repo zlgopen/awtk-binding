@@ -138,6 +138,7 @@ class JavaGenerator extends TargetGen {
     const classInfo = this.getClassInfo(nativeType);
 
     if (name != 'Value') {
+      result += this.genPropDoc(p);
       result += ` public ${this.mapType(type)} get${name}() {\n`;
 
       if (classInfo) {
@@ -192,12 +193,14 @@ class JavaGenerator extends TargetGen {
       } else {
         valueList += ',\n';
       }
+      valueList += `  ${this.genEnumItemDoc(iter)} \n`;
       valueList += `  ${shortName} (${name}())`;
       nativeList += `  static private native ${type} ${name}();\n`
     });
     valueList += ';\n';
 
     let result = `
+${this.genEnumDoc(cls)}
 public enum ${clsName} {
 ${valueList} 
    

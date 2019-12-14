@@ -22,12 +22,17 @@ public class PaintEvent extends Event {
  * 
  * @param event event对象。
  *
- * @returns event 对象。
+ * @return event 对象。
  */
  public  static PaintEvent cast(Event event)  {
    return new PaintEvent(paint_event_cast(event != null ? (event.nativeObj) : 0));
  }
 
+
+/**
+ * canvas。
+ *
+ */
  public Canvas getC() {
    return new Canvas(paint_event_t_get_prop_c(this.nativeObj));
  }

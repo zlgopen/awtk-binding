@@ -22,12 +22,17 @@ public class PropChangeEvent extends Event {
  * 
  * @param event event对象。
  *
- * @returns 返回event对象。
+ * @return 返回event对象。
  */
  public  static PropChangeEvent cast(Event event)  {
    return new PropChangeEvent(prop_change_event_cast(event != null ? (event.nativeObj) : 0));
  }
 
+
+/**
+ * 属性的名称。
+ *
+ */
  public String getName() {
    return prop_change_event_t_get_prop_name(this.nativeObj);
  }

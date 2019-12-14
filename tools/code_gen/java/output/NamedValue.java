@@ -21,7 +21,7 @@ public class NamedValue {
  * 创建named_value对象。
  * 
  *
- * @returns 返回named_value对象。
+ * @return 返回named_value对象。
  */
  public  static NamedValue create()  {
    return new NamedValue(named_value_create());
@@ -33,7 +33,7 @@ public class NamedValue {
  * 
  * @param nv named_value对象。
  *
- * @returns 返回named_value对象。
+ * @return 返回named_value对象。
  */
  public  static NamedValue cast(NamedValue nv)  {
    return new NamedValue(named_value_cast(nv != null ? (nv.nativeObj) : 0));
@@ -43,10 +43,9 @@ public class NamedValue {
 /**
  * 设置名称。
  * 
- * @param nv named_value对象。
  * @param name 名称。
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setName(String name)  {
    return Ret.from(named_value_set_name(this != null ? (this.nativeObj) : 0, name));
@@ -56,10 +55,9 @@ public class NamedValue {
 /**
  * 设置值。
  * 
- * @param nv named_value对象。
  * @param value 值。
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setValue(Value value)  {
    return Ret.from(named_value_set_value(this != null ? (this.nativeObj) : 0, value != null ? (value.nativeObj) : 0));
@@ -69,9 +67,8 @@ public class NamedValue {
 /**
  * 获取值对象(主要给脚本语言使用)。
  * 
- * @param nv named_value对象。
  *
- * @returns 返回值对象。
+ * @return 返回值对象。
  */
  public  Value getValue()  {
    return new Value(named_value_get_value(this != null ? (this.nativeObj) : 0));
@@ -81,14 +78,18 @@ public class NamedValue {
 /**
  * 销毁named_value对象。
  * 
- * @param nv named_value对象。
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret destroy()  {
    return Ret.from(named_value_destroy(this != null ? (this.nativeObj) : 0));
  }
 
+
+/**
+ * 名称。
+ *
+ */
  public String getName() {
    return named_value_t_get_prop_name(this.nativeObj);
  }

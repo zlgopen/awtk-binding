@@ -4,6 +4,7 @@ const TargetGen = require('../common/target_gen.js')
 class TypescriptGenerator extends TargetGen {
   constructor() {
     super()
+    this.returnDocKey = 'returns';
   }
   
   genGetNativeObj(type, name, isCast) {

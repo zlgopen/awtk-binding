@@ -2,7 +2,13 @@
 
 # Class: TIdle
 
-idle可以看作是duration为0的定时器。 idle可以用来实现一些异步处理。 示例： ```c static ret_t something_on_idle(const idle_info_t* info) {   widget_t* widget = WIDGET(info->ctx);   edit_t* edit = EDIT(widget);   ...   return RET_REMOVE; } ... idle_add(something_on_idle, edit); ``` 在非GUI线程请用idle\_queue。
+idle可以看作是duration为0的定时器。
+
+idle可以用来实现一些异步处理。
+
+示例：
+
+在非GUI线程请用idle\_queue。
 
 ## Hierarchy
 
@@ -21,7 +27,7 @@ idle可以看作是duration为0的定时器。 idle可以用来实现一些异�
 
 ▸ **add**(`on_idle`: Function, `ctx`: any): *number*
 
-*Defined in [awtk.ts:3618](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L3618)*
+*Defined in [awtk.ts:3584](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L3584)*
 
 增加一个idle。
 
@@ -42,7 +48,7 @@ ___
 
 ▸ **remove**(`idle_id`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:3630](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L3630)*
+*Defined in [awtk.ts:3596](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L3596)*
 
 删除指定的idle。
 

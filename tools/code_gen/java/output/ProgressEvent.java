@@ -22,12 +22,17 @@ public class ProgressEvent extends Event {
  * 
  * @param event event对象。
  *
- * @returns 返回event对象。
+ * @return 返回event对象。
  */
  public  static ProgressEvent cast(Event event)  {
    return new ProgressEvent(progress_event_cast(event != null ? (event.nativeObj) : 0));
  }
 
+
+/**
+ * 进度百分比。
+ *
+ */
  public int getPercent() {
    return progress_event_t_get_prop_percent(this.nativeObj);
  }

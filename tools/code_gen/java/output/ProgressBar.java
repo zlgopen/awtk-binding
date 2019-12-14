@@ -4,40 +4,37 @@ package awtk;
 /**
  * 进度条控件。
  * 
- *  进度条控件可以水平显示也可以垂直显示，由vertical属性决定。
+ * 进度条控件可以水平显示也可以垂直显示，由vertical属性决定。
  * 
- *  progress\_bar\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于progress\_bar\_t控件。
+ * progress\_bar\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于progress\_bar\_t控件。
  * 
- *  在xml中使用"progress\_bar"标签创建进度条控件。如：
+ * 在xml中使用"progress\_bar"标签创建进度条控件。如：
  * 
- *  ```xml
- *   <progress_bar name="bar1" x="10" y="128" w="240" h="30" value="40"/>
- *   <progress_bar name="bar2" x="280" y="128" w="30" h="118" value="20" vertical="true"/>
- *  ```
+ * ```xml
+ * <progress_bar name="bar1" x="10" y="128" w="240" h="30" value="40"/>
+ * <progress_bar name="bar2" x="280" y="128" w="30" h="118" value="20" vertical="true"/>
+ * ```
  * 
  * 更多用法请参考：
- *  [basic demo](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/basic.xml)
+ * [basic demo](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/basic.xml)
  * 
- *  在c代码中使用函数progress\_bar\_create创建进度条控件。如：
+ * 在c代码中使用函数progress\_bar\_create创建进度条控件。如：
  * 
- *  ```c
- *   widget_t* progress_bar = progress_bar_create(win, 10, 10, 128, 30);
- *  ```
  * 
  * 完整示例请参考：
- *  [progress_bar demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/progress_bar.c)
+ * [progress_bar demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/progress_bar.c)
  * 
- *  可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
+ * 可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
  * 
- *  ```xml
- *  <style>
- *    <normal bg_color="#f0f0f0" text_color="gold" fg_color="#c0c0c0" border_color="#a0a0a0" />
- *  </style>
- *  ```
+ * ```xml
+ * <style>
+ * <normal bg_color="#f0f0f0" text_color="gold" fg_color="#c0c0c0" border_color="#a0a0a0" />
+ * </style>
+ * ```
  * 
  * 更多用法请参考：
- *  [theme
- *  default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L183)
+ * [theme
+ * default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L183)
  *
  */
 public class ProgressBar extends Widget {
@@ -61,7 +58,7 @@ public class ProgressBar extends Widget {
  * @param w 宽度
  * @param h 高度
  *
- * @returns 对象。
+ * @return 对象。
  */
  public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new ProgressBar(progress_bar_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
@@ -73,7 +70,7 @@ public class ProgressBar extends Widget {
  * 
  * @param widget progress_bar对象。
  *
- * @returns progress_bar对象。
+ * @return progress_bar对象。
  */
  public  static ProgressBar cast(Widget widget)  {
    return new ProgressBar(progress_bar_cast(widget != null ? (widget.nativeObj) : 0));
@@ -83,10 +80,9 @@ public class ProgressBar extends Widget {
 /**
  * 设置进度条的进度。
  * 
- * @param widget 控件对象。
  * @param value 进度
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setValue(double value)  {
    return Ret.from(progress_bar_set_value(this != null ? (this.nativeObj) : 0, value));
@@ -96,10 +92,9 @@ public class ProgressBar extends Widget {
 /**
  * 设置最大值。
  * 
- * @param widget 控件对象。
  * @param max 最大值。
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setMax(int max)  {
    return Ret.from(progress_bar_set_max(this != null ? (this.nativeObj) : 0, max));
@@ -109,10 +104,9 @@ public class ProgressBar extends Widget {
 /**
  * 设置进度条的方向。
  * 
- * @param widget 控件对象。
  * @param vertical 是否为垂直方向。
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setVertical(boolean vertical)  {
    return Ret.from(progress_bar_set_vertical(this != null ? (this.nativeObj) : 0, vertical));
@@ -122,10 +116,9 @@ public class ProgressBar extends Widget {
 /**
  * 设置进度条的是否显示文本。
  * 
- * @param widget 控件对象。
  * @param show_text 是否显示文本。
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret setShowText(boolean show_text)  {
    return Ret.from(progress_bar_set_show_text(this != null ? (this.nativeObj) : 0, show_text));
@@ -137,22 +130,36 @@ public class ProgressBar extends Widget {
  * 
  * 当max为100时，percent和value取整后一致。
  * 
- * @param widget 控件对象。
  *
- * @returns 返回百分比。
+ * @return 返回百分比。
  */
  public  int getPercent()  {
    return progress_bar_get_percent(this != null ? (this.nativeObj) : 0);
  }
 
+
+/**
+ * 最大值(缺省为100)。
+ *
+ */
  public double getMax() {
    return progress_bar_t_get_prop_max(this.nativeObj);
  }
 
+
+/**
+ * 进度条的是否为垂直方向。
+ *
+ */
  public boolean getVertical() {
    return progress_bar_t_get_prop_vertical(this.nativeObj);
  }
 
+
+/**
+ * 是否显示文本。
+ *
+ */
  public boolean getShowText() {
    return progress_bar_t_get_prop_show_text(this.nativeObj);
  }

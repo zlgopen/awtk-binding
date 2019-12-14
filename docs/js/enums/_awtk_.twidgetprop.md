@@ -139,7 +139,7 @@
 
 • **ACTIVE**: =  WIDGET_PROP_ACTIVE()
 
-*Defined in [awtk.ts:6468](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6468)*
+*Defined in [awtk.ts:6443](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6443)*
 
 是否处于active状态。
 
@@ -149,7 +149,7 @@ ___
 
 • **ACTIVE_ICON**: =  WIDGET_PROP_ACTIVE_ICON()
 
-*Defined in [awtk.ts:6786](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6786)*
+*Defined in [awtk.ts:6761](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6761)*
 
 active状态下的图标。
 
@@ -159,7 +159,7 @@ ___
 
 • **ALIGN_H**: =  WIDGET_PROP_ALIGN_H()
 
-*Defined in [awtk.ts:6504](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6504)*
+*Defined in [awtk.ts:6479](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6479)*
 
 水平对齐模式。
 
@@ -169,7 +169,7 @@ ___
 
 • **ALIGN_V**: =  WIDGET_PROP_ALIGN_V()
 
-*Defined in [awtk.ts:6498](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6498)*
+*Defined in [awtk.ts:6473](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6473)*
 
 垂直对齐模式。
 
@@ -179,7 +179,7 @@ ___
 
 • **ANCHOR_X**: =  WIDGET_PROP_ANCHOR_X()
 
-*Defined in [awtk.ts:6732](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6732)*
+*Defined in [awtk.ts:6707](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6707)*
 
 x锚点。
 
@@ -189,7 +189,7 @@ ___
 
 • **ANCHOR_Y**: =  WIDGET_PROP_ANCHOR_Y()
 
-*Defined in [awtk.ts:6738](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6738)*
+*Defined in [awtk.ts:6713](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6713)*
 
 y锚点。
 
@@ -199,7 +199,7 @@ ___
 
 • **ANIMATABLE**: =  WIDGET_PROP_ANIMATABLE()
 
-*Defined in [awtk.ts:6678](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6678)*
+*Defined in [awtk.ts:6653](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6653)*
 
 是否启用动画。
 
@@ -209,7 +209,7 @@ ___
 
 • **ANIMATION**: =  WIDGET_PROP_ANIMATION()
 
-*Defined in [awtk.ts:6408](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6408)*
+*Defined in [awtk.ts:6383](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6383)*
 
 控件动画。
 
@@ -219,7 +219,7 @@ ___
 
 • **ANIM_HINT**: =  WIDGET_PROP_ANIM_HINT()
 
-*Defined in [awtk.ts:6414](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6414)*
+*Defined in [awtk.ts:6389](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6389)*
 
 窗口动画。
 
@@ -229,7 +229,7 @@ ___
 
 • **ASSETS_MANAGER**: =  WIDGET_PROP_ASSETS_MANAGER()
 
-*Defined in [awtk.ts:6606](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6606)*
+*Defined in [awtk.ts:6581](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6581)*
 
 资源管理器。
 
@@ -239,7 +239,7 @@ ___
 
 • **AUTO_FIX**: =  WIDGET_PROP_AUTO_FIX()
 
-*Defined in [awtk.ts:6522](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6522)*
+*Defined in [awtk.ts:6497](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6497)*
 
 是否启用自动更正功能。
 
@@ -249,7 +249,7 @@ ___
 
 • **AUTO_HIDE_SCROLL_BAR**: =  WIDGET_PROP_AUTO_HIDE_SCROLL_BAR()
 
-*Defined in [awtk.ts:6684](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6684)*
+*Defined in [awtk.ts:6659](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6659)*
 
 是否自动隐藏滚动条。
 
@@ -259,7 +259,7 @@ ___
 
 • **AUTO_PLAY**: =  WIDGET_PROP_AUTO_PLAY()
 
-*Defined in [awtk.ts:6510](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6510)*
+*Defined in [awtk.ts:6485](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6485)*
 
 是否自动播放或指定播放的时间。
 
@@ -269,7 +269,7 @@ ___
 
 • **BAR_SIZE**: =  WIDGET_PROP_BAR_SIZE()
 
-*Defined in [awtk.ts:6216](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6216)*
+*Defined in [awtk.ts:6191](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6191)*
 
 slider中的bar的的宽度或高度。
 
@@ -279,7 +279,7 @@ ___
 
 • **BG_COLOR**: =  WIDGET_PROP_BG_COLOR()
 
-*Defined in [awtk.ts:6822](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6822)*
+*Defined in [awtk.ts:6797](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6797)*
 
 背景颜色(仅仅使用于color tile)。
 
@@ -289,7 +289,7 @@ ___
 
 • **BORDER_COLOR**: =  WIDGET_PROP_BORDER_COLOR()
 
-*Defined in [awtk.ts:6828](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6828)*
+*Defined in [awtk.ts:6803](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6803)*
 
 边框颜色(仅仅使用于color tile)。
 
@@ -299,7 +299,7 @@ ___
 
 • **BOTTOM_MARGIN**: =  WIDGET_PROP_BOTTOM_MARGIN()
 
-*Defined in [awtk.ts:6384](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6384)*
+*Defined in [awtk.ts:6359](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6359)*
 
 底边距。
 
@@ -309,7 +309,7 @@ ___
 
 • **CANVAS**: =  WIDGET_PROP_CANVAS()
 
-*Defined in [awtk.ts:6192](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6192)*
+*Defined in [awtk.ts:6167](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6167)*
 
 Canvas。
 
@@ -319,7 +319,7 @@ ___
 
 • **CHECKED**: =  WIDGET_PROP_CHECKED()
 
-*Defined in [awtk.ts:6780](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6780)*
+*Defined in [awtk.ts:6755](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6755)*
 
 是否被勾选。
 
@@ -329,7 +329,7 @@ ___
 
 • **CHILDREN_LAYOUT**: =  WIDGET_PROP_CHILDREN_LAYOUT()
 
-*Defined in [awtk.ts:6240](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6240)*
+*Defined in [awtk.ts:6215](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6215)*
 
 子控件布局参数。
 
@@ -339,7 +339,7 @@ ___
 
 • **CLICKABLE**: =  WIDGET_PROP_CLICKABLE()
 
-*Defined in [awtk.ts:6714](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6714)*
+*Defined in [awtk.ts:6689](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6689)*
 
 是否可点击。
 
@@ -349,7 +349,7 @@ ___
 
 • **CLOSABLE**: =  WIDGET_PROP_CLOSABLE()
 
-*Defined in [awtk.ts:6294](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6294)*
+*Defined in [awtk.ts:6269](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6269)*
 
 是否可以关闭。
 
@@ -359,7 +359,7 @@ ___
 
 • **CLOSE_ANIM_HINT**: =  WIDGET_PROP_CLOSE_ANIM_HINT()
 
-*Defined in [awtk.ts:6432](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6432)*
+*Defined in [awtk.ts:6407](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6407)*
 
 关闭窗口动画。
 
@@ -369,7 +369,7 @@ ___
 
 • **CLOSE_WHEN_CLICK**: =  WIDGET_PROP_CLOSE_WHEN_CLICK()
 
-*Defined in [awtk.ts:6804](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6804)*
+*Defined in [awtk.ts:6779](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6779)*
 
 点击窗口时关闭窗口。
 
@@ -379,7 +379,7 @@ ___
 
 • **CLOSE_WHEN_CLICK_OUTSIDE**: =  WIDGET_PROP_CLOSE_WHEN_CLICK_OUTSIDE()
 
-*Defined in [awtk.ts:6810](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6810)*
+*Defined in [awtk.ts:6785](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6785)*
 
 点击窗口外部时关闭窗口。
 
@@ -389,7 +389,7 @@ ___
 
 • **COMPACT**: =  WIDGET_PROP_COMPACT()
 
-*Defined in [awtk.ts:6750](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6750)*
+*Defined in [awtk.ts:6725](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6725)*
 
 紧凑模式。
 
@@ -399,7 +399,7 @@ ___
 
 • **CURSOR**: =  WIDGET_PROP_CURSOR()
 
-*Defined in [awtk.ts:6300](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6300)*
+*Defined in [awtk.ts:6275](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6275)*
 
 鼠标指针。
 
@@ -409,7 +409,7 @@ ___
 
 • **DEFAULT_ITEM_HEIGHT**: =  WIDGET_PROP_DEFAULT_ITEM_HEIGHT()
 
-*Defined in [awtk.ts:6648](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6648)*
+*Defined in [awtk.ts:6623](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6623)*
 
 项的缺省高度。
 
@@ -419,7 +419,7 @@ ___
 
 • **DEFAULT_THEME_OBJ**: =  WIDGET_PROP_DEFAULT_THEME_OBJ()
 
-*Defined in [awtk.ts:6630](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6630)*
+*Defined in [awtk.ts:6605](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6605)*
 
 缺省的主题对象。
 
@@ -429,7 +429,7 @@ ___
 
 • **DELAY**: =  WIDGET_PROP_DELAY()
 
-*Defined in [awtk.ts:6834](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6834)*
+*Defined in [awtk.ts:6809](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6809)*
 
 延迟时间(毫秒)
 
@@ -439,7 +439,7 @@ ___
 
 • **DRAW_TYPE**: =  WIDGET_PROP_DRAW_TYPE()
 
-*Defined in [awtk.ts:6702](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6702)*
+*Defined in [awtk.ts:6677](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6677)*
 
 图片绘制类型。
 
@@ -449,7 +449,7 @@ ___
 
 • **ENABLE**: =  WIDGET_PROP_ENABLE()
 
-*Defined in [awtk.ts:6336](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6336)*
+*Defined in [awtk.ts:6311](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6311)*
 
 是否启用。
 
@@ -459,7 +459,7 @@ ___
 
 • **ENABLE_LONG_PRESS**: =  WIDGET_PROP_ENABLE_LONG_PRESS()
 
-*Defined in [awtk.ts:6672](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6672)*
+*Defined in [awtk.ts:6647](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6647)*
 
 是否启用长按。
 
@@ -469,7 +469,7 @@ ___
 
 • **EXEC**: =  WIDGET_PROP_EXEC()
 
-*Defined in [awtk.ts:6162](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6162)*
+*Defined in [awtk.ts:6137](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6137)*
 
 用于执行某些特殊的命令（比如控制动画的启停），主要是方便MVVM通过属性来控制动画。
 
@@ -479,7 +479,7 @@ ___
 
 • **FEEDBACK**: =  WIDGET_PROP_FEEDBACK()
 
-*Defined in [awtk.ts:6342](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6342)*
+*Defined in [awtk.ts:6317](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6317)*
 
 是否启用按键音等反馈。
 
@@ -489,7 +489,7 @@ ___
 
 • **FLOATING**: =  WIDGET_PROP_FLOATING()
 
-*Defined in [awtk.ts:6348](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6348)*
+*Defined in [awtk.ts:6323](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6323)*
 
 是否启用floating布局。
 
@@ -499,7 +499,7 @@ ___
 
 • **FOCUS**: =  WIDGET_PROP_FOCUS()
 
-*Defined in [awtk.ts:6852](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6852)*
+*Defined in [awtk.ts:6827](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6827)*
 
 (过时请用focused)。
 
@@ -509,7 +509,7 @@ ___
 
 • **FOCUSABLE**: =  WIDGET_PROP_FOCUSABLE()
 
-*Defined in [awtk.ts:6858](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6858)*
+*Defined in [awtk.ts:6833](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6833)*
 
 是否支持焦点停留。
 
@@ -519,7 +519,7 @@ ___
 
 • **FOCUSED**: =  WIDGET_PROP_FOCUSED()
 
-*Defined in [awtk.ts:6846](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6846)*
+*Defined in [awtk.ts:6821](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6821)*
 
 是否为焦点控件。
 
@@ -529,7 +529,7 @@ ___
 
 • **FONT_MANAGER**: =  WIDGET_PROP_FONT_MANAGER()
 
-*Defined in [awtk.ts:6618](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6618)*
+*Defined in [awtk.ts:6593](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6593)*
 
 字体管理器。
 
@@ -539,7 +539,7 @@ ___
 
 • **FORMAT**: =  WIDGET_PROP_FORMAT()
 
-*Defined in [awtk.ts:6696](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6696)*
+*Defined in [awtk.ts:6671](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6671)*
 
 显示格式。
 
@@ -549,7 +549,7 @@ ___
 
 • **FULLSCREEN**: =  WIDGET_PROP_FULLSCREEN()
 
-*Defined in [awtk.ts:6420](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6420)*
+*Defined in [awtk.ts:6395](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6395)*
 
 窗口设置为全部大小。
 
@@ -559,7 +559,7 @@ ___
 
 • **GRAB_KEYS**: =  WIDGET_PROP_GRAB_KEYS()
 
-*Defined in [awtk.ts:6570](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6570)*
+*Defined in [awtk.ts:6545](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6545)*
 
 让窗口管理器直接把按键发给自己。
 
@@ -569,7 +569,7 @@ ___
 
 • **H**: =  WIDGET_PROP_H()
 
-*Defined in [awtk.ts:6186](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6186)*
+*Defined in [awtk.ts:6161](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6161)*
 
 高度。
 
@@ -579,7 +579,7 @@ ___
 
 • **HIGHLIGHT**: =  WIDGET_PROP_HIGHLIGHT()
 
-*Defined in [awtk.ts:6210](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6210)*
+*Defined in [awtk.ts:6185](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6185)*
 
 dialog highlight。
 
@@ -589,7 +589,7 @@ ___
 
 • **ICON**: =  WIDGET_PROP_ICON()
 
-*Defined in [awtk.ts:6762](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6762)*
+*Defined in [awtk.ts:6737](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6737)*
 
 图标名称。
 
@@ -599,7 +599,7 @@ ___
 
 • **IMAGE**: =  WIDGET_PROP_IMAGE()
 
-*Defined in [awtk.ts:6690](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6690)*
+*Defined in [awtk.ts:6665](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6665)*
 
 图片名称。
 
@@ -609,7 +609,7 @@ ___
 
 • **IMAGE_MANAGER**: =  WIDGET_PROP_IMAGE_MANAGER()
 
-*Defined in [awtk.ts:6600](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6600)*
+*Defined in [awtk.ts:6575](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6575)*
 
 图片管理器。
 
@@ -619,7 +619,7 @@ ___
 
 • **INPUT_TYPE**: =  WIDGET_PROP_INPUT_TYPE()
 
-*Defined in [awtk.ts:6450](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6450)*
+*Defined in [awtk.ts:6425](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6425)*
 
 输入类型。
 
@@ -629,7 +629,7 @@ ___
 
 • **IS_KEYBOARD**: =  WIDGET_PROP_IS_KEYBOARD()
 
-*Defined in [awtk.ts:6840](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6840)*
+*Defined in [awtk.ts:6815](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6815)*
 
 是否为键盘。
 
@@ -639,7 +639,7 @@ ___
 
 • **ITEM_HEIGHT**: =  WIDGET_PROP_ITEM_HEIGHT()
 
-*Defined in [awtk.ts:6642](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6642)*
+*Defined in [awtk.ts:6617](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6617)*
 
 项的高度。
 
@@ -649,7 +649,7 @@ ___
 
 • **ITEM_WIDTH**: =  WIDGET_PROP_ITEM_WIDTH()
 
-*Defined in [awtk.ts:6636](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6636)*
+*Defined in [awtk.ts:6611](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6611)*
 
 项的宽度。
 
@@ -659,7 +659,7 @@ ___
 
 • **LAYOUT**: =  WIDGET_PROP_LAYOUT()
 
-*Defined in [awtk.ts:6246](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6246)*
+*Defined in [awtk.ts:6221](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6221)*
 
 子控件布局参数(过时)。
 
@@ -669,7 +669,7 @@ ___
 
 • **LAYOUT_H**: =  WIDGET_PROP_LAYOUT_H()
 
-*Defined in [awtk.ts:6264](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6264)*
+*Defined in [awtk.ts:6239](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6239)*
 
 layout高度。
 
@@ -679,7 +679,7 @@ ___
 
 • **LAYOUT_W**: =  WIDGET_PROP_LAYOUT_W()
 
-*Defined in [awtk.ts:6258](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6258)*
+*Defined in [awtk.ts:6233](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6233)*
 
 layout宽度。
 
@@ -689,7 +689,7 @@ ___
 
 • **LEFT_MARGIN**: =  WIDGET_PROP_LEFT_MARGIN()
 
-*Defined in [awtk.ts:6366](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6366)*
+*Defined in [awtk.ts:6341](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6341)*
 
 左边距。
 
@@ -699,7 +699,7 @@ ___
 
 • **LENGTH**: =  WIDGET_PROP_LENGTH()
 
-*Defined in [awtk.ts:6312](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6312)*
+*Defined in [awtk.ts:6287](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6287)*
 
 长度。
 
@@ -709,7 +709,7 @@ ___
 
 • **LINE_GAP**: =  WIDGET_PROP_LINE_GAP()
 
-*Defined in [awtk.ts:6816](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6816)*
+*Defined in [awtk.ts:6791](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6791)*
 
 行间距。
 
@@ -719,7 +719,7 @@ ___
 
 • **LOCALE_INFO**: =  WIDGET_PROP_LOCALE_INFO()
 
-*Defined in [awtk.ts:6612](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6612)*
+*Defined in [awtk.ts:6587](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6587)*
 
 locale_info。
 
@@ -729,7 +729,7 @@ ___
 
 • **LOCALIZE_OPTIONS**: =  WIDGET_PROP_LOCALIZE_OPTIONS()
 
-*Defined in [awtk.ts:6198](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6198)*
+*Defined in [awtk.ts:6173](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6173)*
 
 Canvas。
 
@@ -739,7 +739,7 @@ ___
 
 • **LOOP**: =  WIDGET_PROP_LOOP()
 
-*Defined in [awtk.ts:6516](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6516)*
+*Defined in [awtk.ts:6491](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6491)*
 
 是否循环播放或循环播放的次数。
 
@@ -749,7 +749,7 @@ ___
 
 • **MARGIN**: =  WIDGET_PROP_MARGIN()
 
-*Defined in [awtk.ts:6354](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6354)*
+*Defined in [awtk.ts:6329](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6329)*
 
 边距。
 
@@ -759,7 +759,7 @@ ___
 
 • **MAX**: =  WIDGET_PROP_MAX()
 
-*Defined in [awtk.ts:6564](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6564)*
+*Defined in [awtk.ts:6539](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6539)*
 
 最大值。
 
@@ -769,7 +769,7 @@ ___
 
 • **MAX_W**: =  WIDGET_PROP_MAX_W()
 
-*Defined in [awtk.ts:6234](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6234)*
+*Defined in [awtk.ts:6209](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6209)*
 
 最大宽度。
 
@@ -779,7 +779,7 @@ ___
 
 • **MIN**: =  WIDGET_PROP_MIN()
 
-*Defined in [awtk.ts:6438](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6438)*
+*Defined in [awtk.ts:6413](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6413)*
 
 最小值。
 
@@ -789,7 +789,7 @@ ___
 
 • **MIN_W**: =  WIDGET_PROP_MIN_W()
 
-*Defined in [awtk.ts:6228](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6228)*
+*Defined in [awtk.ts:6203](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6203)*
 
 最小宽度。
 
@@ -799,7 +799,7 @@ ___
 
 • **MOVE_FOCUS_DOWN_KEY**: =  WIDGET_PROP_MOVE_FOCUS_DOWN_KEY()
 
-*Defined in [awtk.ts:6888](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6888)*
+*Defined in [awtk.ts:6863](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6863)*
 
 将焦点向下移动的键值。
 
@@ -809,7 +809,7 @@ ___
 
 • **MOVE_FOCUS_LEFT_KEY**: =  WIDGET_PROP_MOVE_FOCUS_LEFT_KEY()
 
-*Defined in [awtk.ts:6894](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6894)*
+*Defined in [awtk.ts:6869](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6869)*
 
 将焦点向左移动的键值。
 
@@ -819,7 +819,7 @@ ___
 
 • **MOVE_FOCUS_NEXT_KEY**: =  WIDGET_PROP_MOVE_FOCUS_NEXT_KEY()
 
-*Defined in [awtk.ts:6876](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6876)*
+*Defined in [awtk.ts:6851](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6851)*
 
 将焦点移到后一个的键值。
 
@@ -829,7 +829,7 @@ ___
 
 • **MOVE_FOCUS_PREV_KEY**: =  WIDGET_PROP_MOVE_FOCUS_PREV_KEY()
 
-*Defined in [awtk.ts:6870](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6870)*
+*Defined in [awtk.ts:6845](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6845)*
 
 将焦点移到前一个的键值。
 
@@ -839,7 +839,7 @@ ___
 
 • **MOVE_FOCUS_RIGHT_KEY**: =  WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY()
 
-*Defined in [awtk.ts:6900](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6900)*
+*Defined in [awtk.ts:6875](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6875)*
 
 将焦点向右移动的键值。
 
@@ -849,7 +849,7 @@ ___
 
 • **MOVE_FOCUS_UP_KEY**: =  WIDGET_PROP_MOVE_FOCUS_UP_KEY()
 
-*Defined in [awtk.ts:6882](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6882)*
+*Defined in [awtk.ts:6857](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6857)*
 
 将焦点向上移动的键值。
 
@@ -859,7 +859,7 @@ ___
 
 • **NAME**: =  WIDGET_PROP_NAME()
 
-*Defined in [awtk.ts:6282](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6282)*
+*Defined in [awtk.ts:6257](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6257)*
 
 名称。
 
@@ -869,7 +869,7 @@ ___
 
 • **NATIVE_WINDOW**: =  WIDGET_PROP_NATIVE_WINDOW()
 
-*Defined in [awtk.ts:6204](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6204)*
+*Defined in [awtk.ts:6179](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6179)*
 
 Native Window。
 
@@ -879,7 +879,7 @@ ___
 
 • **OPACITY**: =  WIDGET_PROP_OPACITY()
 
-*Defined in [awtk.ts:6222](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6222)*
+*Defined in [awtk.ts:6197](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6197)*
 
 不透明度。
 
@@ -889,7 +889,7 @@ ___
 
 • **OPEN_ANIM_HINT**: =  WIDGET_PROP_OPEN_ANIM_HINT()
 
-*Defined in [awtk.ts:6426](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6426)*
+*Defined in [awtk.ts:6401](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6401)*
 
 打开窗口动画。
 
@@ -899,7 +899,7 @@ ___
 
 • **OPEN_IM_WHEN_FOCUSED**: =  WIDGET_PROP_OPEN_IM_WHEN_FOCUSED()
 
-*Defined in [awtk.ts:6534](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6534)*
+*Defined in [awtk.ts:6509](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6509)*
 
 编辑器在获得焦点时是否打开输入法。
 
@@ -909,7 +909,7 @@ ___
 
 • **OPEN_WINDOW**: =  WIDGET_PROP_OPEN_WINDOW()
 
-*Defined in [awtk.ts:6792](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6792)*
+*Defined in [awtk.ts:6767](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6767)*
 
 要打开窗口的名称。
 
@@ -919,7 +919,7 @@ ___
 
 • **OPTIONS**: =  WIDGET_PROP_OPTIONS()
 
-*Defined in [awtk.ts:6768](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6768)*
+*Defined in [awtk.ts:6743](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6743)*
 
 选项集合。
 
@@ -929,7 +929,7 @@ ___
 
 • **PASSWORD_VISIBLE**: =  WIDGET_PROP_PASSWORD_VISIBLE()
 
-*Defined in [awtk.ts:6462](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6462)*
+*Defined in [awtk.ts:6437](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6437)*
 
 密码是否可见。
 
@@ -939,7 +939,7 @@ ___
 
 • **READONLY**: =  WIDGET_PROP_READONLY()
 
-*Defined in [awtk.ts:6456](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6456)*
+*Defined in [awtk.ts:6431](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6431)*
 
 只读模式。
 
@@ -949,7 +949,7 @@ ___
 
 • **REPEAT**: =  WIDGET_PROP_REPEAT()
 
-*Defined in [awtk.ts:6666](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6666)*
+*Defined in [awtk.ts:6641](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6641)*
 
 重复次数。
 
@@ -959,7 +959,7 @@ ___
 
 • **RIGHT_MARGIN**: =  WIDGET_PROP_RIGHT_MARGIN()
 
-*Defined in [awtk.ts:6372](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6372)*
+*Defined in [awtk.ts:6347](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6347)*
 
 右边距。
 
@@ -969,7 +969,7 @@ ___
 
 • **ROTATION**: =  WIDGET_PROP_ROTATION()
 
-*Defined in [awtk.ts:6744](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6744)*
+*Defined in [awtk.ts:6719](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6719)*
 
 选中角度(幅度)
 
@@ -979,7 +979,7 @@ ___
 
 • **ROW**: =  WIDGET_PROP_ROW()
 
-*Defined in [awtk.ts:6576](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6576)*
+*Defined in [awtk.ts:6551](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6551)*
 
 行数或每行的高度。
 
@@ -989,7 +989,7 @@ ___
 
 • **SCALE_X**: =  WIDGET_PROP_SCALE_X()
 
-*Defined in [awtk.ts:6720](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6720)*
+*Defined in [awtk.ts:6695](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6695)*
 
 X方向缩放比例。
 
@@ -999,7 +999,7 @@ ___
 
 • **SCALE_Y**: =  WIDGET_PROP_SCALE_Y()
 
-*Defined in [awtk.ts:6726](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6726)*
+*Defined in [awtk.ts:6701](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6701)*
 
 Y方向缩放比例。
 
@@ -1009,7 +1009,7 @@ ___
 
 • **SCROLLABLE**: =  WIDGET_PROP_SCROLLABLE()
 
-*Defined in [awtk.ts:6756](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6756)*
+*Defined in [awtk.ts:6731](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6731)*
 
 是否支持滚动。
 
@@ -1019,7 +1019,7 @@ ___
 
 • **SELECTABLE**: =  WIDGET_PROP_SELECTABLE()
 
-*Defined in [awtk.ts:6708](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6708)*
+*Defined in [awtk.ts:6683](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6683)*
 
 是否可选择。
 
@@ -1029,7 +1029,7 @@ ___
 
 • **SELECTED**: =  WIDGET_PROP_SELECTED()
 
-*Defined in [awtk.ts:6774](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6774)*
+*Defined in [awtk.ts:6749](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6749)*
 
 是否被选中。
 
@@ -1039,7 +1039,7 @@ ___
 
 • **SELECTED_INDEX**: =  WIDGET_PROP_SELECTED_INDEX()
 
-*Defined in [awtk.ts:6798](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6798)*
+*Defined in [awtk.ts:6773](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6773)*
 
 被选中项的索引。
 
@@ -1049,7 +1049,7 @@ ___
 
 • **SELECT_NONE_WHEN_FOCUSED**: =  WIDGET_PROP_SELECT_NONE_WHEN_FOCUSED()
 
-*Defined in [awtk.ts:6528](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6528)*
+*Defined in [awtk.ts:6503](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6503)*
 
 编辑器在获得焦点时是否不选中文本。
 
@@ -1059,7 +1059,7 @@ ___
 
 • **SELF_LAYOUT**: =  WIDGET_PROP_SELF_LAYOUT()
 
-*Defined in [awtk.ts:6252](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6252)*
+*Defined in [awtk.ts:6227](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6227)*
 
 控件布局参数。
 
@@ -1069,7 +1069,7 @@ ___
 
 • **SENSITIVE**: =  WIDGET_PROP_SENSITIVE()
 
-*Defined in [awtk.ts:6402](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6402)*
+*Defined in [awtk.ts:6377](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6377)*
 
 是否接受用户事件。
 
@@ -1079,7 +1079,7 @@ ___
 
 • **SHOW_TEXT**: =  WIDGET_PROP_SHOW_TEXT()
 
-*Defined in [awtk.ts:6480](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6480)*
+*Defined in [awtk.ts:6455](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6455)*
 
 是否显示文本。
 
@@ -1089,7 +1089,7 @@ ___
 
 • **SPACING**: =  WIDGET_PROP_SPACING()
 
-*Defined in [awtk.ts:6360](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6360)*
+*Defined in [awtk.ts:6335](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6335)*
 
 间距。
 
@@ -1099,7 +1099,7 @@ ___
 
 • **STAGE**: =  WIDGET_PROP_STAGE()
 
-*Defined in [awtk.ts:6594](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6594)*
+*Defined in [awtk.ts:6569](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6569)*
 
 window stage
 
@@ -1109,7 +1109,7 @@ ___
 
 • **STATE_FOR_STYLE**: =  WIDGET_PROP_STATE_FOR_STYLE()
 
-*Defined in [awtk.ts:6582](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6582)*
+*Defined in [awtk.ts:6557](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6557)*
 
 控件状态。
 
@@ -1119,7 +1119,7 @@ ___
 
 • **STEP**: =  WIDGET_PROP_STEP()
 
-*Defined in [awtk.ts:6390](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6390)*
+*Defined in [awtk.ts:6365](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6365)*
 
 步长。
 
@@ -1129,7 +1129,7 @@ ___
 
 • **STYLE**: =  WIDGET_PROP_STYLE()
 
-*Defined in [awtk.ts:6330](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6330)*
+*Defined in [awtk.ts:6305](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6305)*
 
 style。
 
@@ -1139,7 +1139,7 @@ ___
 
 • **TEXT**: =  WIDGET_PROP_TEXT()
 
-*Defined in [awtk.ts:6318](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6318)*
+*Defined in [awtk.ts:6293](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6293)*
 
 文本。
 
@@ -1149,7 +1149,7 @@ ___
 
 • **THEME**: =  WIDGET_PROP_THEME()
 
-*Defined in [awtk.ts:6588](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6588)*
+*Defined in [awtk.ts:6563](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6563)*
 
 窗口主题名称。
 
@@ -1159,7 +1159,7 @@ ___
 
 • **THEME_OBJ**: =  WIDGET_PROP_THEME_OBJ()
 
-*Defined in [awtk.ts:6624](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6624)*
+*Defined in [awtk.ts:6599](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6599)*
 
 窗口的主题对象。
 
@@ -1169,7 +1169,7 @@ ___
 
 • **TIPS**: =  WIDGET_PROP_TIPS()
 
-*Defined in [awtk.ts:6444](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6444)*
+*Defined in [awtk.ts:6419](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6419)*
 
 提示信息。
 
@@ -1179,7 +1179,7 @@ ___
 
 • **TOP_MARGIN**: =  WIDGET_PROP_TOP_MARGIN()
 
-*Defined in [awtk.ts:6378](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6378)*
+*Defined in [awtk.ts:6353](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6353)*
 
 顶边距。
 
@@ -1189,7 +1189,7 @@ ___
 
 • **TR_TEXT**: =  WIDGET_PROP_TR_TEXT()
 
-*Defined in [awtk.ts:6324](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6324)*
+*Defined in [awtk.ts:6299](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6299)*
 
 待翻译文本。
 
@@ -1199,7 +1199,7 @@ ___
 
 • **TYPE**: =  WIDGET_PROP_TYPE()
 
-*Defined in [awtk.ts:6288](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6288)*
+*Defined in [awtk.ts:6263](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6263)*
 
 类型。
 
@@ -1209,7 +1209,7 @@ ___
 
 • **VALUE**: =  WIDGET_PROP_VALUE()
 
-*Defined in [awtk.ts:6306](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6306)*
+*Defined in [awtk.ts:6281](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6281)*
 
 值。
 
@@ -1219,7 +1219,7 @@ ___
 
 • **VERTICAL**: =  WIDGET_PROP_VERTICAL()
 
-*Defined in [awtk.ts:6474](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6474)*
+*Defined in [awtk.ts:6449](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6449)*
 
 是否为垂直模式。
 
@@ -1229,7 +1229,7 @@ ___
 
 • **VIRTUAL_H**: =  WIDGET_PROP_VIRTUAL_H()
 
-*Defined in [awtk.ts:6276](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6276)*
+*Defined in [awtk.ts:6251](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6251)*
 
 虚拟高度。
 
@@ -1239,7 +1239,7 @@ ___
 
 • **VIRTUAL_W**: =  WIDGET_PROP_VIRTUAL_W()
 
-*Defined in [awtk.ts:6270](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6270)*
+*Defined in [awtk.ts:6245](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6245)*
 
 虚拟宽度。
 
@@ -1249,7 +1249,7 @@ ___
 
 • **VISIBLE**: =  WIDGET_PROP_VISIBLE()
 
-*Defined in [awtk.ts:6396](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6396)*
+*Defined in [awtk.ts:6371](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6371)*
 
 是否可见。
 
@@ -1259,7 +1259,7 @@ ___
 
 • **W**: =  WIDGET_PROP_W()
 
-*Defined in [awtk.ts:6180](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6180)*
+*Defined in [awtk.ts:6155](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6155)*
 
 宽度。
 
@@ -1269,7 +1269,7 @@ ___
 
 • **WITH_FOCUS_STATE**: =  WIDGET_PROP_WITH_FOCUS_STATE()
 
-*Defined in [awtk.ts:6864](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6864)*
+*Defined in [awtk.ts:6839](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6839)*
 
 是否支持焦点状态(如果希望style支持焦点状态，但有不希望焦点停留，可用本属性)。
 
@@ -1279,7 +1279,7 @@ ___
 
 • **X**: =  WIDGET_PROP_X()
 
-*Defined in [awtk.ts:6168](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6168)*
+*Defined in [awtk.ts:6143](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6143)*
 
 X坐标。
 
@@ -1289,7 +1289,7 @@ ___
 
 • **XOFFSET**: =  WIDGET_PROP_XOFFSET()
 
-*Defined in [awtk.ts:6486](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6486)*
+*Defined in [awtk.ts:6461](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6461)*
 
 X方向的偏移。
 
@@ -1299,7 +1299,7 @@ ___
 
 • **XSLIDABLE**: =  WIDGET_PROP_XSLIDABLE()
 
-*Defined in [awtk.ts:6654](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6654)*
+*Defined in [awtk.ts:6629](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6629)*
 
 X方向是否可拖动。
 
@@ -1309,7 +1309,7 @@ ___
 
 • **X_MAX**: =  WIDGET_PROP_X_MAX()
 
-*Defined in [awtk.ts:6546](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6546)*
+*Defined in [awtk.ts:6521](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6521)*
 
 X最大值。
 
@@ -1319,7 +1319,7 @@ ___
 
 • **X_MIN**: =  WIDGET_PROP_X_MIN()
 
-*Defined in [awtk.ts:6540](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6540)*
+*Defined in [awtk.ts:6515](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6515)*
 
 X最小值。
 
@@ -1329,7 +1329,7 @@ ___
 
 • **Y**: =  WIDGET_PROP_Y()
 
-*Defined in [awtk.ts:6174](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6174)*
+*Defined in [awtk.ts:6149](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6149)*
 
 Y坐标。
 
@@ -1339,7 +1339,7 @@ ___
 
 • **YOFFSET**: =  WIDGET_PROP_YOFFSET()
 
-*Defined in [awtk.ts:6492](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6492)*
+*Defined in [awtk.ts:6467](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6467)*
 
 Y方向的偏移。
 
@@ -1349,7 +1349,7 @@ ___
 
 • **YSLIDABLE**: =  WIDGET_PROP_YSLIDABLE()
 
-*Defined in [awtk.ts:6660](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6660)*
+*Defined in [awtk.ts:6635](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6635)*
 
 Y方向是否可拖动。
 
@@ -1359,7 +1359,7 @@ ___
 
 • **Y_MAX**: =  WIDGET_PROP_Y_MAX()
 
-*Defined in [awtk.ts:6558](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6558)*
+*Defined in [awtk.ts:6533](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6533)*
 
 Y最大值。
 
@@ -1369,6 +1369,6 @@ ___
 
 • **Y_MIN**: =  WIDGET_PROP_Y_MIN()
 
-*Defined in [awtk.ts:6552](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L6552)*
+*Defined in [awtk.ts:6527](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L6527)*
 
 Y最小值。

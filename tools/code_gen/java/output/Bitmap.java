@@ -21,7 +21,7 @@ public class Bitmap {
  * 创建图片对象(一般供脚本语言中使用)。
  * 
  *
- * @returns 返回bitmap对象。
+ * @return 返回bitmap对象。
  */
  public  static Bitmap create()  {
    return new Bitmap(bitmap_create());
@@ -36,7 +36,7 @@ public class Bitmap {
  * @param line_length line_length。
  * @param format 格式。
  *
- * @returns 返回bitmap对象。
+ * @return 返回bitmap对象。
  */
  public  static Bitmap createEx(int w, int h, int line_length, BitmapFormat format)  {
    return new Bitmap(bitmap_create_ex(w, h, line_length, format.value()));
@@ -46,9 +46,8 @@ public class Bitmap {
 /**
  * 获取图片一个像素占用的字节数。
  * 
- * @param bitmap bitmap对象。
  *
- * @returns 返回一个像素占用的字节数。
+ * @return 返回一个像素占用的字节数。
  */
  public  int getBpp()  {
    return bitmap_get_bpp(this != null ? (this.nativeObj) : 0);
@@ -58,34 +57,63 @@ public class Bitmap {
 /**
  * 销毁图片。
  * 
- * @param bitmap bitmap对象。
  *
- * @returns 返回RET_OK表示成功，否则表示失败。
+ * @return 返回RET_OK表示成功，否则表示失败。
  */
  public  Ret destroy()  {
    return Ret.from(bitmap_destroy(this != null ? (this.nativeObj) : 0));
  }
 
+
+/**
+ * 宽度。
+ *
+ */
  public int getW() {
    return bitmap_t_get_prop_w(this.nativeObj);
  }
 
+
+/**
+ * 高度。
+ *
+ */
  public int getH() {
    return bitmap_t_get_prop_h(this.nativeObj);
  }
 
+
+/**
+ * 每一行实际占用的内存(也称为stride或pitch)，一般情况下为w*bpp。
+ *
+ */
  public int getLineLength() {
    return bitmap_t_get_prop_line_length(this.nativeObj);
  }
 
+
+/**
+ * 标志。请参考{bitmap_flag_t}。
+ *
+ */
  public int getFlags() {
    return bitmap_t_get_prop_flags(this.nativeObj);
  }
 
+
+/**
+ * 格式。请参考{bitmap_format_t}。
+ *
+ */
  public int getFormat() {
    return bitmap_t_get_prop_format(this.nativeObj);
  }
 
+
+/**
+ * 名称。
+ *
+ */
  public String getName() {
    return bitmap_t_get_prop_name(this.nativeObj);
  }

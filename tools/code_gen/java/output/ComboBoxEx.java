@@ -26,7 +26,7 @@ public class ComboBoxEx extends ComboBox {
  * @param w 宽度
  * @param h 高度
  *
- * @returns 对象。
+ * @return 对象。
  */
  public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new ComboBoxEx(combo_box_ex_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));

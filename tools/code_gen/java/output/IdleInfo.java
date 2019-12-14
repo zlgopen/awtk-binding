@@ -22,16 +22,28 @@ public class IdleInfo extends Object {
  * 
  * @param idle idle_info对象。
  *
- * @returns idle_info对象。
+ * @return idle_info对象。
  */
  public  static IdleInfo cast(IdleInfo idle)  {
    return new IdleInfo(idle_info_cast(idle != null ? (idle.nativeObj) : 0));
  }
 
+
+/**
+ * idle回调函数上下文。
+ *
+ */
  public long getCtx() {
    return idle_info_t_get_prop_ctx(this.nativeObj);
  }
 
+
+/**
+ * idle的ID
+ * 
+ * 为TK\_INVALID\_ID时表示无效idle。
+ *
+ */
  public int getId() {
    return idle_info_t_get_prop_id(this.nativeObj);
  }

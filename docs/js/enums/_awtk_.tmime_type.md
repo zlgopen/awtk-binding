@@ -117,7 +117,7 @@ MIME_TYPE。
 
 • **APPLICATION_ENVOY**: =  MIME_TYPE_APPLICATION_ENVOY()
 
-*Defined in [awtk.ts:9366](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9366)*
+*Defined in [awtk.ts:9302](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9302)*
 
 "application/envoy"。
 
@@ -127,7 +127,7 @@ ___
 
 • **APPLICATION_FRACTALS**: =  MIME_TYPE_APPLICATION_FRACTALS()
 
-*Defined in [awtk.ts:9372](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9372)*
+*Defined in [awtk.ts:9308](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9308)*
 
 "application/fractals"。
 
@@ -137,7 +137,7 @@ ___
 
 • **APPLICATION_FUTURESPLASH**: =  MIME_TYPE_APPLICATION_FUTURESPLASH()
 
-*Defined in [awtk.ts:9378](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9378)*
+*Defined in [awtk.ts:9314](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9314)*
 
 "application/futuresplash"。
 
@@ -147,7 +147,7 @@ ___
 
 • **APPLICATION_HTA**: =  MIME_TYPE_APPLICATION_HTA()
 
-*Defined in [awtk.ts:9384](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9384)*
+*Defined in [awtk.ts:9320](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9320)*
 
 "application/hta"。
 
@@ -157,7 +157,7 @@ ___
 
 • **APPLICATION_JSON**: =  MIME_TYPE_APPLICATION_JSON()
 
-*Defined in [awtk.ts:9390](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9390)*
+*Defined in [awtk.ts:9326](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9326)*
 
 "application/json"。
 
@@ -167,7 +167,7 @@ ___
 
 • **APPLICATION_MAC_BINHEX40**: =  MIME_TYPE_APPLICATION_MAC_BINHEX40()
 
-*Defined in [awtk.ts:9402](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9402)*
+*Defined in [awtk.ts:9338](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9338)*
 
 "application/mac-binhex40"。
 
@@ -177,7 +177,7 @@ ___
 
 • **APPLICATION_MSWORD**: =  MIME_TYPE_APPLICATION_MSWORD()
 
-*Defined in [awtk.ts:9408](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9408)*
+*Defined in [awtk.ts:9344](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9344)*
 
 "application/msword"。
 
@@ -187,7 +187,7 @@ ___
 
 • **APPLICATION_OCTET_STREAM**: =  MIME_TYPE_APPLICATION_OCTET_STREAM()
 
-*Defined in [awtk.ts:9414](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9414)*
+*Defined in [awtk.ts:9350](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9350)*
 
 "application/octet-stream"。
 
@@ -197,7 +197,7 @@ ___
 
 • **APPLICATION_ODA**: =  MIME_TYPE_APPLICATION_ODA()
 
-*Defined in [awtk.ts:9420](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9420)*
+*Defined in [awtk.ts:9356](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9356)*
 
 "application/oda"。
 
@@ -207,7 +207,7 @@ ___
 
 • **APPLICATION_OLESCRIPT**: =  MIME_TYPE_APPLICATION_OLESCRIPT()
 
-*Defined in [awtk.ts:9426](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9426)*
+*Defined in [awtk.ts:9362](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9362)*
 
 "application/olescript"。
 
@@ -217,7 +217,7 @@ ___
 
 • **APPLICATION_PDF**: =  MIME_TYPE_APPLICATION_PDF()
 
-*Defined in [awtk.ts:9432](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9432)*
+*Defined in [awtk.ts:9368](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9368)*
 
 "application/pdf"。
 
@@ -227,7 +227,7 @@ ___
 
 • **APPLICATION_PICS_RULES**: =  MIME_TYPE_APPLICATION_PICS_RULES()
 
-*Defined in [awtk.ts:9438](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9438)*
+*Defined in [awtk.ts:9374](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9374)*
 
 "application/pics-rules"。
 
@@ -237,7 +237,7 @@ ___
 
 • **APPLICATION_PKCS10**: =  MIME_TYPE_APPLICATION_PKCS10()
 
-*Defined in [awtk.ts:9444](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9444)*
+*Defined in [awtk.ts:9380](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9380)*
 
 "application/pkcs10"。
 
@@ -247,7 +247,7 @@ ___
 
 • **APPLICATION_PKIX_CRL**: =  MIME_TYPE_APPLICATION_PKIX_CRL()
 
-*Defined in [awtk.ts:9450](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9450)*
+*Defined in [awtk.ts:9386](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9386)*
 
 "application/pkix-crl"。
 
@@ -257,7 +257,7 @@ ___
 
 • **APPLICATION_POSTSCRIPT**: =  MIME_TYPE_APPLICATION_POSTSCRIPT()
 
-*Defined in [awtk.ts:9456](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9456)*
+*Defined in [awtk.ts:9392](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9392)*
 
 "application/postscript"。
 
@@ -267,7 +267,7 @@ ___
 
 • **APPLICATION_RTF**: =  MIME_TYPE_APPLICATION_RTF()
 
-*Defined in [awtk.ts:9462](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9462)*
+*Defined in [awtk.ts:9398](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9398)*
 
 "application/rtf"。
 
@@ -277,7 +277,7 @@ ___
 
 • **APPLICATION_UBJSON**: =  MIME_TYPE_APPLICATION_UBJSON()
 
-*Defined in [awtk.ts:9396](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9396)*
+*Defined in [awtk.ts:9332](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9332)*
 
 "application/ubjson"。
 
@@ -287,7 +287,7 @@ ___
 
 • **APPLICATION_VND_MS_EXCEL**: =  MIME_TYPE_APPLICATION_VND_MS_EXCEL()
 
-*Defined in [awtk.ts:9468](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9468)*
+*Defined in [awtk.ts:9404](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9404)*
 
 "application/vnd.ms-excel"。
 
@@ -297,7 +297,7 @@ ___
 
 • **APPLICATION_VND_MS_OUTLOOK**: =  MIME_TYPE_APPLICATION_VND_MS_OUTLOOK()
 
-*Defined in [awtk.ts:9474](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9474)*
+*Defined in [awtk.ts:9410](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9410)*
 
 "application/vnd.ms-outlook"。
 
@@ -307,7 +307,7 @@ ___
 
 • **APPLICATION_VND_MS_PKICERTSTORE**: =  MIME_TYPE_APPLICATION_VND_MS_PKICERTSTORE()
 
-*Defined in [awtk.ts:9480](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9480)*
+*Defined in [awtk.ts:9416](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9416)*
 
 "application/vnd.ms-pkicertstore"。
 
@@ -317,7 +317,7 @@ ___
 
 • **APPLICATION_VND_MS_PKISECCAT**: =  MIME_TYPE_APPLICATION_VND_MS_PKISECCAT()
 
-*Defined in [awtk.ts:9486](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9486)*
+*Defined in [awtk.ts:9422](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9422)*
 
 "application/vnd.ms-pkiseccat"。
 
@@ -327,7 +327,7 @@ ___
 
 • **APPLICATION_VND_MS_PKISTL**: =  MIME_TYPE_APPLICATION_VND_MS_PKISTL()
 
-*Defined in [awtk.ts:9492](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9492)*
+*Defined in [awtk.ts:9428](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9428)*
 
 "application/vnd.ms-pkistl"。
 
@@ -337,7 +337,7 @@ ___
 
 • **APPLICATION_VND_MS_POWERPOINT**: =  MIME_TYPE_APPLICATION_VND_MS_POWERPOINT()
 
-*Defined in [awtk.ts:9498](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9498)*
+*Defined in [awtk.ts:9434](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9434)*
 
 "application/vnd.ms-powerpoint"。
 
@@ -347,7 +347,7 @@ ___
 
 • **APPLICATION_VND_MS_PROJECT**: =  MIME_TYPE_APPLICATION_VND_MS_PROJECT()
 
-*Defined in [awtk.ts:9504](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9504)*
+*Defined in [awtk.ts:9440](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9440)*
 
 "application/vnd.ms-project"。
 
@@ -357,7 +357,7 @@ ___
 
 • **APPLICATION_VND_MS_WORKS**: =  MIME_TYPE_APPLICATION_VND_MS_WORKS()
 
-*Defined in [awtk.ts:9510](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9510)*
+*Defined in [awtk.ts:9446](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9446)*
 
 "application/vnd.ms-works"。
 
@@ -367,7 +367,7 @@ ___
 
 • **APPLICATION_WINHLP**: =  MIME_TYPE_APPLICATION_WINHLP()
 
-*Defined in [awtk.ts:9516](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9516)*
+*Defined in [awtk.ts:9452](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9452)*
 
 "application/winhlp"。
 
@@ -377,7 +377,7 @@ ___
 
 • **APPLICATION_X_BCPIO**: =  MIME_TYPE_APPLICATION_X_BCPIO()
 
-*Defined in [awtk.ts:9522](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9522)*
+*Defined in [awtk.ts:9458](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9458)*
 
 "application/x-bcpio"。
 
@@ -387,7 +387,7 @@ ___
 
 • **APPLICATION_X_CDF**: =  MIME_TYPE_APPLICATION_X_CDF()
 
-*Defined in [awtk.ts:9528](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9528)*
+*Defined in [awtk.ts:9464](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9464)*
 
 "application/x-cdf"。
 
@@ -397,7 +397,7 @@ ___
 
 • **APPLICATION_X_COMPRESS**: =  MIME_TYPE_APPLICATION_X_COMPRESS()
 
-*Defined in [awtk.ts:9534](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9534)*
+*Defined in [awtk.ts:9470](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9470)*
 
 "application/x-compress"。
 
@@ -407,7 +407,7 @@ ___
 
 • **APPLICATION_X_COMPRESSED**: =  MIME_TYPE_APPLICATION_X_COMPRESSED()
 
-*Defined in [awtk.ts:9540](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9540)*
+*Defined in [awtk.ts:9476](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9476)*
 
 "application/x-compressed"。
 
@@ -417,7 +417,7 @@ ___
 
 • **APPLICATION_X_CPIO**: =  MIME_TYPE_APPLICATION_X_CPIO()
 
-*Defined in [awtk.ts:9546](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9546)*
+*Defined in [awtk.ts:9482](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9482)*
 
 "application/x-cpio"。
 
@@ -427,7 +427,7 @@ ___
 
 • **APPLICATION_X_CSH**: =  MIME_TYPE_APPLICATION_X_CSH()
 
-*Defined in [awtk.ts:9552](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9552)*
+*Defined in [awtk.ts:9488](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9488)*
 
 "application/x-csh"。
 
@@ -437,7 +437,7 @@ ___
 
 • **APPLICATION_X_DIRECTOR**: =  MIME_TYPE_APPLICATION_X_DIRECTOR()
 
-*Defined in [awtk.ts:9558](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9558)*
+*Defined in [awtk.ts:9494](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9494)*
 
 "application/x-director"。
 
@@ -447,7 +447,7 @@ ___
 
 • **APPLICATION_X_DVI**: =  MIME_TYPE_APPLICATION_X_DVI()
 
-*Defined in [awtk.ts:9564](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9564)*
+*Defined in [awtk.ts:9500](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9500)*
 
 "application/x-dvi"。
 
@@ -457,7 +457,7 @@ ___
 
 • **APPLICATION_X_GTAR**: =  MIME_TYPE_APPLICATION_X_GTAR()
 
-*Defined in [awtk.ts:9570](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9570)*
+*Defined in [awtk.ts:9506](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9506)*
 
 "application/x-gtar"。
 
@@ -467,7 +467,7 @@ ___
 
 • **APPLICATION_X_GZIP**: =  MIME_TYPE_APPLICATION_X_GZIP()
 
-*Defined in [awtk.ts:9576](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9576)*
+*Defined in [awtk.ts:9512](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9512)*
 
 "application/x-gzip"。
 
@@ -477,7 +477,7 @@ ___
 
 • **APPLICATION_X_HDF**: =  MIME_TYPE_APPLICATION_X_HDF()
 
-*Defined in [awtk.ts:9582](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9582)*
+*Defined in [awtk.ts:9518](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9518)*
 
 "application/x-hdf"。
 
@@ -487,7 +487,7 @@ ___
 
 • **APPLICATION_X_IPHONE**: =  MIME_TYPE_APPLICATION_X_IPHONE()
 
-*Defined in [awtk.ts:9588](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9588)*
+*Defined in [awtk.ts:9524](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9524)*
 
 "application/x-iphone"。
 
@@ -497,7 +497,7 @@ ___
 
 • **APPLICATION_X_JAVASCRIPT**: =  MIME_TYPE_APPLICATION_X_JAVASCRIPT()
 
-*Defined in [awtk.ts:9594](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9594)*
+*Defined in [awtk.ts:9530](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9530)*
 
 "application/x-javascript"。
 
@@ -507,7 +507,7 @@ ___
 
 • **APPLICATION_X_LATEX**: =  MIME_TYPE_APPLICATION_X_LATEX()
 
-*Defined in [awtk.ts:9600](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9600)*
+*Defined in [awtk.ts:9536](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9536)*
 
 "application/x-latex"。
 
@@ -517,7 +517,7 @@ ___
 
 • **APPLICATION_X_MSACCESS**: =  MIME_TYPE_APPLICATION_X_MSACCESS()
 
-*Defined in [awtk.ts:9606](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9606)*
+*Defined in [awtk.ts:9542](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9542)*
 
 "application/x-msaccess"。
 
@@ -527,7 +527,7 @@ ___
 
 • **APPLICATION_X_MSCARDFILE**: =  MIME_TYPE_APPLICATION_X_MSCARDFILE()
 
-*Defined in [awtk.ts:9612](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9612)*
+*Defined in [awtk.ts:9548](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9548)*
 
 "application/x-mscardfile"。
 
@@ -537,7 +537,7 @@ ___
 
 • **APPLICATION_X_MSCLIP**: =  MIME_TYPE_APPLICATION_X_MSCLIP()
 
-*Defined in [awtk.ts:9618](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9618)*
+*Defined in [awtk.ts:9554](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9554)*
 
 "application/x-msclip"。
 
@@ -547,7 +547,7 @@ ___
 
 • **APPLICATION_X_MSDOWNLOAD**: =  MIME_TYPE_APPLICATION_X_MSDOWNLOAD()
 
-*Defined in [awtk.ts:9624](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9624)*
+*Defined in [awtk.ts:9560](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9560)*
 
 "application/x-msdownload"。
 
@@ -557,7 +557,7 @@ ___
 
 • **APPLICATION_X_MSMEDIAVIEW**: =  MIME_TYPE_APPLICATION_X_MSMEDIAVIEW()
 
-*Defined in [awtk.ts:9630](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9630)*
+*Defined in [awtk.ts:9566](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9566)*
 
 "application/x-msmediaview"。
 
@@ -567,7 +567,7 @@ ___
 
 • **APPLICATION_X_MSMETAFILE**: =  MIME_TYPE_APPLICATION_X_MSMETAFILE()
 
-*Defined in [awtk.ts:9636](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9636)*
+*Defined in [awtk.ts:9572](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9572)*
 
 "application/x-msmetafile"。
 
@@ -577,7 +577,7 @@ ___
 
 • **APPLICATION_X_MSMONEY**: =  MIME_TYPE_APPLICATION_X_MSMONEY()
 
-*Defined in [awtk.ts:9642](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9642)*
+*Defined in [awtk.ts:9578](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9578)*
 
 "application/x-msmoney"。
 
@@ -587,7 +587,7 @@ ___
 
 • **APPLICATION_X_MSPUBLISHER**: =  MIME_TYPE_APPLICATION_X_MSPUBLISHER()
 
-*Defined in [awtk.ts:9648](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9648)*
+*Defined in [awtk.ts:9584](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9584)*
 
 "application/x-mspublisher"。
 
@@ -597,7 +597,7 @@ ___
 
 • **APPLICATION_X_MSSCHEDULE**: =  MIME_TYPE_APPLICATION_X_MSSCHEDULE()
 
-*Defined in [awtk.ts:9654](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9654)*
+*Defined in [awtk.ts:9590](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9590)*
 
 "application/x-msschedule"。
 
@@ -607,7 +607,7 @@ ___
 
 • **APPLICATION_X_MSTERMINAL**: =  MIME_TYPE_APPLICATION_X_MSTERMINAL()
 
-*Defined in [awtk.ts:9660](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9660)*
+*Defined in [awtk.ts:9596](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9596)*
 
 "application/x-msterminal"。
 
@@ -617,7 +617,7 @@ ___
 
 • **APPLICATION_X_MSWRITE**: =  MIME_TYPE_APPLICATION_X_MSWRITE()
 
-*Defined in [awtk.ts:9666](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9666)*
+*Defined in [awtk.ts:9602](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9602)*
 
 "application/x-mswrite"。
 
@@ -627,7 +627,7 @@ ___
 
 • **APPLICATION_X_NETCDF**: =  MIME_TYPE_APPLICATION_X_NETCDF()
 
-*Defined in [awtk.ts:9672](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9672)*
+*Defined in [awtk.ts:9608](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9608)*
 
 "application/x-netcdf"。
 
@@ -637,7 +637,7 @@ ___
 
 • **APPLICATION_X_PERFMON**: =  MIME_TYPE_APPLICATION_X_PERFMON()
 
-*Defined in [awtk.ts:9678](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9678)*
+*Defined in [awtk.ts:9614](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9614)*
 
 "application/x-perfmon"。
 
@@ -647,7 +647,7 @@ ___
 
 • **APPLICATION_X_PKCS12**: =  MIME_TYPE_APPLICATION_X_PKCS12()
 
-*Defined in [awtk.ts:9684](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9684)*
+*Defined in [awtk.ts:9620](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9620)*
 
 "application/x-pkcs12"。
 
@@ -657,7 +657,7 @@ ___
 
 • **APPLICATION_X_SH**: =  MIME_TYPE_APPLICATION_X_SH()
 
-*Defined in [awtk.ts:9690](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9690)*
+*Defined in [awtk.ts:9626](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9626)*
 
 "application/x-sh"。
 
@@ -667,7 +667,7 @@ ___
 
 • **APPLICATION_X_SHAR**: =  MIME_TYPE_APPLICATION_X_SHAR()
 
-*Defined in [awtk.ts:9696](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9696)*
+*Defined in [awtk.ts:9632](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9632)*
 
 "application/x-shar"。
 
@@ -677,7 +677,7 @@ ___
 
 • **APPLICATION_X_SHOCKWAVE_FLASH**: =  MIME_TYPE_APPLICATION_X_SHOCKWAVE_FLASH()
 
-*Defined in [awtk.ts:9702](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9702)*
+*Defined in [awtk.ts:9638](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9638)*
 
 "application/x-shockwave-flash"。
 
@@ -687,7 +687,7 @@ ___
 
 • **APPLICATION_X_STUFFIT**: =  MIME_TYPE_APPLICATION_X_STUFFIT()
 
-*Defined in [awtk.ts:9708](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9708)*
+*Defined in [awtk.ts:9644](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9644)*
 
 "application/x-stuffit"。
 
@@ -697,7 +697,7 @@ ___
 
 • **APPLICATION_X_SV4CPIO**: =  MIME_TYPE_APPLICATION_X_SV4CPIO()
 
-*Defined in [awtk.ts:9714](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9714)*
+*Defined in [awtk.ts:9650](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9650)*
 
 "application/x-sv4cpio"。
 
@@ -707,7 +707,7 @@ ___
 
 • **APPLICATION_X_SV4CRC**: =  MIME_TYPE_APPLICATION_X_SV4CRC()
 
-*Defined in [awtk.ts:9720](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9720)*
+*Defined in [awtk.ts:9656](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9656)*
 
 "application/x-sv4crc"。
 
@@ -717,7 +717,7 @@ ___
 
 • **APPLICATION_X_TAR**: =  MIME_TYPE_APPLICATION_X_TAR()
 
-*Defined in [awtk.ts:9726](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9726)*
+*Defined in [awtk.ts:9662](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9662)*
 
 "application/x-tar"。
 
@@ -727,7 +727,7 @@ ___
 
 • **APPLICATION_X_TCL**: =  MIME_TYPE_APPLICATION_X_TCL()
 
-*Defined in [awtk.ts:9732](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9732)*
+*Defined in [awtk.ts:9668](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9668)*
 
 "application/x-tcl"。
 
@@ -737,7 +737,7 @@ ___
 
 • **APPLICATION_X_TEX**: =  MIME_TYPE_APPLICATION_X_TEX()
 
-*Defined in [awtk.ts:9738](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9738)*
+*Defined in [awtk.ts:9674](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9674)*
 
 "application/x-tex"。
 
@@ -747,7 +747,7 @@ ___
 
 • **APPLICATION_X_TEXINFO**: =  MIME_TYPE_APPLICATION_X_TEXINFO()
 
-*Defined in [awtk.ts:9744](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9744)*
+*Defined in [awtk.ts:9680](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9680)*
 
 "application/x-texinfo"。
 
@@ -757,7 +757,7 @@ ___
 
 • **APPLICATION_X_TROFF**: =  MIME_TYPE_APPLICATION_X_TROFF()
 
-*Defined in [awtk.ts:9750](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9750)*
+*Defined in [awtk.ts:9686](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9686)*
 
 "application/x-troff"。
 
@@ -767,7 +767,7 @@ ___
 
 • **APPLICATION_X_USTAR**: =  MIME_TYPE_APPLICATION_X_USTAR()
 
-*Defined in [awtk.ts:9756](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9756)*
+*Defined in [awtk.ts:9692](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9692)*
 
 "application/x-ustar"。
 
@@ -777,7 +777,7 @@ ___
 
 • **APPLICATION_ZIP**: =  MIME_TYPE_APPLICATION_ZIP()
 
-*Defined in [awtk.ts:9762](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9762)*
+*Defined in [awtk.ts:9698](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9698)*
 
 "application/zip"。
 
@@ -787,7 +787,7 @@ ___
 
 • **AUDIO_BASIC**: =  MIME_TYPE_AUDIO_BASIC()
 
-*Defined in [awtk.ts:9768](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9768)*
+*Defined in [awtk.ts:9704](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9704)*
 
 "audio/basic"。
 
@@ -797,7 +797,7 @@ ___
 
 • **AUDIO_MID**: =  MIME_TYPE_AUDIO_MID()
 
-*Defined in [awtk.ts:9774](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9774)*
+*Defined in [awtk.ts:9710](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9710)*
 
 "audio/mid"。
 
@@ -807,7 +807,7 @@ ___
 
 • **AUDIO_MPEG**: =  MIME_TYPE_AUDIO_MPEG()
 
-*Defined in [awtk.ts:9780](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9780)*
+*Defined in [awtk.ts:9716](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9716)*
 
 "audio/mpeg"。
 
@@ -817,7 +817,7 @@ ___
 
 • **AUDIO_X_AIFF**: =  MIME_TYPE_AUDIO_X_AIFF()
 
-*Defined in [awtk.ts:9786](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9786)*
+*Defined in [awtk.ts:9722](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9722)*
 
 "audio/x-aiff"。
 
@@ -827,7 +827,7 @@ ___
 
 • **AUDIO_X_MPEGURL**: =  MIME_TYPE_AUDIO_X_MPEGURL()
 
-*Defined in [awtk.ts:9792](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9792)*
+*Defined in [awtk.ts:9728](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9728)*
 
 "audio/x-mpegurl"。
 
@@ -837,7 +837,7 @@ ___
 
 • **AUDIO_X_WAV**: =  MIME_TYPE_AUDIO_X_WAV()
 
-*Defined in [awtk.ts:9798](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9798)*
+*Defined in [awtk.ts:9734](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9734)*
 
 "audio/x-wav"。
 
@@ -847,7 +847,7 @@ ___
 
 • **IMAGE_BMP**: =  MIME_TYPE_IMAGE_BMP()
 
-*Defined in [awtk.ts:9804](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9804)*
+*Defined in [awtk.ts:9740](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9740)*
 
 "image/bmp"。
 
@@ -857,7 +857,7 @@ ___
 
 • **IMAGE_CIS_COD**: =  MIME_TYPE_IMAGE_CIS_COD()
 
-*Defined in [awtk.ts:9810](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9810)*
+*Defined in [awtk.ts:9746](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9746)*
 
 "image/cis-cod"。
 
@@ -867,7 +867,7 @@ ___
 
 • **IMAGE_GIF**: =  MIME_TYPE_IMAGE_GIF()
 
-*Defined in [awtk.ts:9816](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9816)*
+*Defined in [awtk.ts:9752](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9752)*
 
 "image/gif"。
 
@@ -877,7 +877,7 @@ ___
 
 • **IMAGE_IEF**: =  MIME_TYPE_IMAGE_IEF()
 
-*Defined in [awtk.ts:9822](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9822)*
+*Defined in [awtk.ts:9758](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9758)*
 
 "image/ief"。
 
@@ -887,7 +887,7 @@ ___
 
 • **IMAGE_JPEG**: =  MIME_TYPE_IMAGE_JPEG()
 
-*Defined in [awtk.ts:9828](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9828)*
+*Defined in [awtk.ts:9764](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9764)*
 
 "image/jpeg"。
 
@@ -897,7 +897,7 @@ ___
 
 • **IMAGE_PIPEG**: =  MIME_TYPE_IMAGE_PIPEG()
 
-*Defined in [awtk.ts:9834](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9834)*
+*Defined in [awtk.ts:9770](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9770)*
 
 "image/pipeg"。
 
@@ -907,7 +907,7 @@ ___
 
 • **IMAGE_SVG_XML**: =  MIME_TYPE_IMAGE_SVG_XML()
 
-*Defined in [awtk.ts:9840](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9840)*
+*Defined in [awtk.ts:9776](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9776)*
 
 "image/svg+xml"。
 
@@ -917,7 +917,7 @@ ___
 
 • **IMAGE_TIFF**: =  MIME_TYPE_IMAGE_TIFF()
 
-*Defined in [awtk.ts:9846](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9846)*
+*Defined in [awtk.ts:9782](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9782)*
 
 "image/tiff"。
 
@@ -927,7 +927,7 @@ ___
 
 • **IMAGE_X_CMX**: =  MIME_TYPE_IMAGE_X_CMX()
 
-*Defined in [awtk.ts:9852](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9852)*
+*Defined in [awtk.ts:9788](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9788)*
 
 "image/x-cmx"。
 
@@ -937,7 +937,7 @@ ___
 
 • **IMAGE_X_ICON**: =  MIME_TYPE_IMAGE_X_ICON()
 
-*Defined in [awtk.ts:9858](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9858)*
+*Defined in [awtk.ts:9794](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9794)*
 
 "image/x-icon"。
 
@@ -947,7 +947,7 @@ ___
 
 • **IMAGE_X_RGB**: =  MIME_TYPE_IMAGE_X_RGB()
 
-*Defined in [awtk.ts:9864](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9864)*
+*Defined in [awtk.ts:9800](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9800)*
 
 "image/x-rgb"。
 
@@ -957,7 +957,7 @@ ___
 
 • **IMAGE_X_XBITMAP**: =  MIME_TYPE_IMAGE_X_XBITMAP()
 
-*Defined in [awtk.ts:9870](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9870)*
+*Defined in [awtk.ts:9806](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9806)*
 
 "image/x-xbitmap"。
 
@@ -967,7 +967,7 @@ ___
 
 • **IMAGE_X_XPIXMAP**: =  MIME_TYPE_IMAGE_X_XPIXMAP()
 
-*Defined in [awtk.ts:9876](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9876)*
+*Defined in [awtk.ts:9812](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9812)*
 
 "image/x-xpixmap"。
 
@@ -977,7 +977,7 @@ ___
 
 • **IMAGE_X_XWINDOWDUMP**: =  MIME_TYPE_IMAGE_X_XWINDOWDUMP()
 
-*Defined in [awtk.ts:9882](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9882)*
+*Defined in [awtk.ts:9818](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9818)*
 
 "image/x-xwindowdump"。
 
@@ -987,7 +987,7 @@ ___
 
 • **MESSAGE_RFC822**: =  MIME_TYPE_MESSAGE_RFC822()
 
-*Defined in [awtk.ts:9888](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9888)*
+*Defined in [awtk.ts:9824](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9824)*
 
 "message/rfc822"。
 
@@ -997,7 +997,7 @@ ___
 
 • **TEXT_CSS**: =  MIME_TYPE_TEXT_CSS()
 
-*Defined in [awtk.ts:9894](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9894)*
+*Defined in [awtk.ts:9830](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9830)*
 
 "text/css"。
 
@@ -1007,7 +1007,7 @@ ___
 
 • **TEXT_H323**: =  MIME_TYPE_TEXT_H323()
 
-*Defined in [awtk.ts:9900](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9900)*
+*Defined in [awtk.ts:9836](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9836)*
 
 "text/h323"。
 
@@ -1017,7 +1017,7 @@ ___
 
 • **TEXT_HTML**: =  MIME_TYPE_TEXT_HTML()
 
-*Defined in [awtk.ts:9906](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9906)*
+*Defined in [awtk.ts:9842](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9842)*
 
 "text/html"。
 
@@ -1027,7 +1027,7 @@ ___
 
 • **TEXT_IULS**: =  MIME_TYPE_TEXT_IULS()
 
-*Defined in [awtk.ts:9912](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9912)*
+*Defined in [awtk.ts:9848](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9848)*
 
 "text/iuls"。
 
@@ -1037,7 +1037,7 @@ ___
 
 • **TEXT_PLAIN**: =  MIME_TYPE_TEXT_PLAIN()
 
-*Defined in [awtk.ts:9918](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9918)*
+*Defined in [awtk.ts:9854](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9854)*
 
 "text/plain"。
 
@@ -1047,7 +1047,7 @@ ___
 
 • **TEXT_RICHTEXT**: =  MIME_TYPE_TEXT_RICHTEXT()
 
-*Defined in [awtk.ts:9924](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9924)*
+*Defined in [awtk.ts:9860](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9860)*
 
 "text/richtext"。
 
@@ -1057,7 +1057,7 @@ ___
 
 • **TEXT_SCRIPTLET**: =  MIME_TYPE_TEXT_SCRIPTLET()
 
-*Defined in [awtk.ts:9930](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9930)*
+*Defined in [awtk.ts:9866](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9866)*
 
 "text/scriptlet"。
 
@@ -1067,7 +1067,7 @@ ___
 
 • **TEXT_WEBVIEWHTML**: =  MIME_TYPE_TEXT_WEBVIEWHTML()
 
-*Defined in [awtk.ts:9936](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9936)*
+*Defined in [awtk.ts:9872](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9872)*
 
 "text/webviewhtml"。
 
@@ -1077,7 +1077,7 @@ ___
 
 • **TEXT_X_COMPONENT**: =  MIME_TYPE_TEXT_X_COMPONENT()
 
-*Defined in [awtk.ts:9942](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9942)*
+*Defined in [awtk.ts:9878](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9878)*
 
 "text/x-component"。
 
@@ -1087,7 +1087,7 @@ ___
 
 • **TEXT_X_SETEXT**: =  MIME_TYPE_TEXT_X_SETEXT()
 
-*Defined in [awtk.ts:9948](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9948)*
+*Defined in [awtk.ts:9884](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9884)*
 
 "text/x-setext"。
 
@@ -1097,7 +1097,7 @@ ___
 
 • **TEXT_X_VCARD**: =  MIME_TYPE_TEXT_X_VCARD()
 
-*Defined in [awtk.ts:9954](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9954)*
+*Defined in [awtk.ts:9890](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9890)*
 
 "text/x-vcard"。
 
@@ -1107,7 +1107,7 @@ ___
 
 • **VIDEO_MPEG**: =  MIME_TYPE_VIDEO_MPEG()
 
-*Defined in [awtk.ts:9960](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9960)*
+*Defined in [awtk.ts:9896](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9896)*
 
 "video/mpeg"。
 
@@ -1117,7 +1117,7 @@ ___
 
 • **VIDEO_QUICKTIME**: =  MIME_TYPE_VIDEO_QUICKTIME()
 
-*Defined in [awtk.ts:9966](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9966)*
+*Defined in [awtk.ts:9902](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9902)*
 
 "video/quicktime"。
 
@@ -1127,6 +1127,6 @@ ___
 
 • **VIDEO_X_MSVIDEO**: =  MIME_TYPE_VIDEO_X_MSVIDEO()
 
-*Defined in [awtk.ts:9972](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L9972)*
+*Defined in [awtk.ts:9908](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9908)*
 
 "video/x-msvideo"。

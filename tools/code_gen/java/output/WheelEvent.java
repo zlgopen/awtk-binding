@@ -22,24 +22,44 @@ public class WheelEvent extends Event {
  * 
  * @param event event对象。
  *
- * @returns event对象。
+ * @return event对象。
  */
  public  static WheelEvent cast(Event event)  {
    return new WheelEvent(wheel_event_cast(event != null ? (event.nativeObj) : 0));
  }
 
+
+/**
+ * 滚轮的y值。
+ *
+ */
  public int getDy() {
    return wheel_event_t_get_prop_dy(this.nativeObj);
  }
 
+
+/**
+ * alt键是否按下。
+ *
+ */
  public boolean getAlt() {
    return wheel_event_t_get_prop_alt(this.nativeObj);
  }
 
+
+/**
+ * ctrl键是否按下。
+ *
+ */
  public boolean getCtrl() {
    return wheel_event_t_get_prop_ctrl(this.nativeObj);
  }
 
+
+/**
+ * shift键是否按下。
+ *
+ */
  public boolean getShift() {
    return wheel_event_t_get_prop_shift(this.nativeObj);
  }

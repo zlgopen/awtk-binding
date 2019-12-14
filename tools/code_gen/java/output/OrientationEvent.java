@@ -22,12 +22,17 @@ public class OrientationEvent extends Event {
  * 
  * @param event event对象。
  *
- * @returns event对象。
+ * @return event对象。
  */
  public  static OrientationEvent cast(Event event)  {
    return new OrientationEvent(orientation_event_cast(event != null ? (event.nativeObj) : 0));
  }
 
+
+/**
+ * 屏幕方向。
+ *
+ */
  public int getOrientation() {
    return orientation_event_t_get_prop_orientation(this.nativeObj);
  }

@@ -2,7 +2,9 @@
 
 # Enumeration: TWidgetState
 
-控件状态常量定义。 这里指定常用的状态值，扩展控件可以在自己的头文件中定义私有的状态。
+控件状态常量定义。
+
+这里指定常用的状态值，扩展控件可以在自己的头文件中定义私有的状态。
 
 ## Index
 
@@ -35,7 +37,7 @@
 
 • **STATE_CHECKED**: =  WIDGET_STATE_CHECKED()
 
-*Defined in [awtk.ts:7346](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7346)*
+*Defined in [awtk.ts:7323](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7323)*
 
 勾选状态。
 
@@ -45,7 +47,7 @@ ___
 
 • **STATE_DISABLE**: =  WIDGET_STATE_DISABLE()
 
-*Defined in [awtk.ts:7334](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7334)*
+*Defined in [awtk.ts:7311](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7311)*
 
 禁用状态。
 
@@ -55,7 +57,7 @@ ___
 
 • **STATE_EMPTY**: =  WIDGET_STATE_EMPTY()
 
-*Defined in [awtk.ts:7358](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7358)*
+*Defined in [awtk.ts:7335](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7335)*
 
 编辑器无内容状态。
 
@@ -65,7 +67,7 @@ ___
 
 • **STATE_EMPTY_FOCUS**: =  WIDGET_STATE_EMPTY_FOCUS()
 
-*Defined in [awtk.ts:7364](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7364)*
+*Defined in [awtk.ts:7341](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7341)*
 
 编辑器无内容同时聚焦的状态。
 
@@ -75,7 +77,7 @@ ___
 
 • **STATE_ERROR**: =  WIDGET_STATE_ERROR()
 
-*Defined in [awtk.ts:7370](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7370)*
+*Defined in [awtk.ts:7347](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7347)*
 
 输入错误状态。
 
@@ -85,7 +87,7 @@ ___
 
 • **STATE_FOCUSED**: =  WIDGET_STATE_FOCUSED()
 
-*Defined in [awtk.ts:7340](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7340)*
+*Defined in [awtk.ts:7317](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7317)*
 
 聚焦状态。
 
@@ -95,7 +97,7 @@ ___
 
 • **STATE_FOCUSED_OF_ACTIVE**: =  WIDGET_STATE_FOCUSED_OF_ACTIVE()
 
-*Defined in [awtk.ts:7424](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7424)*
+*Defined in [awtk.ts:7401](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7401)*
 
 焦点状态(当前项)。
 
@@ -105,7 +107,7 @@ ___
 
 • **STATE_FOCUSED_OF_CHECKED**: =  WIDGET_STATE_FOCUSED_OF_CHECKED()
 
-*Defined in [awtk.ts:7400](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7400)*
+*Defined in [awtk.ts:7377](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7377)*
 
 焦点状态(选中项)。
 
@@ -115,7 +117,7 @@ ___
 
 • **STATE_NONE**: =  WIDGET_STATE_NONE()
 
-*Defined in [awtk.ts:7310](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7310)*
+*Defined in [awtk.ts:7287](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7287)*
 
 无效状态。
 
@@ -125,7 +127,7 @@ ___
 
 • **STATE_NORMAL**: =  WIDGET_STATE_NORMAL()
 
-*Defined in [awtk.ts:7316](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7316)*
+*Defined in [awtk.ts:7293](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7293)*
 
 正常状态。
 
@@ -135,7 +137,7 @@ ___
 
 • **STATE_NORMAL_OF_ACTIVE**: =  WIDGET_STATE_NORMAL_OF_ACTIVE()
 
-*Defined in [awtk.ts:7406](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7406)*
+*Defined in [awtk.ts:7383](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7383)*
 
 正常状态(当前项)。
 
@@ -145,7 +147,7 @@ ___
 
 • **STATE_NORMAL_OF_CHECKED**: =  WIDGET_STATE_NORMAL_OF_CHECKED()
 
-*Defined in [awtk.ts:7382](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7382)*
+*Defined in [awtk.ts:7359](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7359)*
 
 正常状态(选中项)。
 
@@ -155,7 +157,7 @@ ___
 
 • **STATE_OVER**: =  WIDGET_STATE_OVER()
 
-*Defined in [awtk.ts:7328](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7328)*
+*Defined in [awtk.ts:7305](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7305)*
 
 指针悬浮状态。
 
@@ -165,7 +167,7 @@ ___
 
 • **STATE_OVER_OF_ACTIVE**: =  WIDGET_STATE_OVER_OF_ACTIVE()
 
-*Defined in [awtk.ts:7418](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7418)*
+*Defined in [awtk.ts:7395](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7395)*
 
 指针悬浮状态(当前项)。
 
@@ -175,7 +177,7 @@ ___
 
 • **STATE_OVER_OF_CHECKED**: =  WIDGET_STATE_OVER_OF_CHECKED()
 
-*Defined in [awtk.ts:7394](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7394)*
+*Defined in [awtk.ts:7371](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7371)*
 
 指针悬浮状态(选中项)。
 
@@ -185,7 +187,7 @@ ___
 
 • **STATE_PRESSED**: =  WIDGET_STATE_PRESSED()
 
-*Defined in [awtk.ts:7322](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7322)*
+*Defined in [awtk.ts:7299](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7299)*
 
 指针按下状态。
 
@@ -195,7 +197,7 @@ ___
 
 • **STATE_PRESSED_OF_ACTIVE**: =  WIDGET_STATE_PRESSED_OF_ACTIVE()
 
-*Defined in [awtk.ts:7412](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7412)*
+*Defined in [awtk.ts:7389](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7389)*
 
 指针按下状态(当前项)。
 
@@ -205,7 +207,7 @@ ___
 
 • **STATE_PRESSED_OF_CHECKED**: =  WIDGET_STATE_PRESSED_OF_CHECKED()
 
-*Defined in [awtk.ts:7388](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7388)*
+*Defined in [awtk.ts:7365](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7365)*
 
 指针按下状态(选中项)。
 
@@ -215,7 +217,7 @@ ___
 
 • **STATE_SELECTED**: =  WIDGET_STATE_SELECTED()
 
-*Defined in [awtk.ts:7376](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7376)*
+*Defined in [awtk.ts:7353](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7353)*
 
 选中状态。
 
@@ -225,6 +227,6 @@ ___
 
 • **STATE_UNCHECKED**: =  WIDGET_STATE_UNCHECKED()
 
-*Defined in [awtk.ts:7352](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L7352)*
+*Defined in [awtk.ts:7329](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L7329)*
 
 没勾选状态。

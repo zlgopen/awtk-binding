@@ -4,11 +4,11 @@ package awtk;
 /**
  * 软键盘。
  * 
- *  软键盘是一个特殊的窗口，由编辑器通过输入法自动打开和关闭。
+ * 软键盘是一个特殊的窗口，由编辑器通过输入法自动打开和关闭。
  * 
- *  这里介绍一下定制软键盘的方法：
+ * 这里介绍一下定制软键盘的方法：
  * 
- *   编辑器输入类型和软键盘UI资源文件的对应关系:
+ * 编辑器输入类型和软键盘UI资源文件的对应关系:
  * 
  * | 输入类型       | 软键盘UI资源文件|
  * |----------------|:---------------:|
@@ -23,7 +23,7 @@ package awtk;
  * | INPUT\_CUSTOM   | 使用自定义的键盘 |
  * | 其它            | kb\_default.xml  |
  * 
- *  keyboard中按钮子控件的名称有些特殊要求：
+ * keyboard中按钮子控件的名称有些特殊要求：
  * 
  * |  名称          | 功能            |
  * |----------------|:---------------:|
@@ -38,7 +38,7 @@ package awtk;
  * 
  * 
  * 更多用法请参考：
- *  [kb_default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/kb_default.xml)
+ * [kb_default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/kb_default.xml)
  *
  */
 public class Keyboard extends WindowBase {
@@ -62,7 +62,7 @@ public class Keyboard extends WindowBase {
  * @param w 宽度
  * @param h 高度
  *
- * @returns 对象。
+ * @return 对象。
  */
  public  static Widget create(Widget parent, int x, int y, int w, int h)  {
    return new Keyboard(keyboard_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
@@ -74,7 +74,7 @@ public class Keyboard extends WindowBase {
  * 
  * @param widget keyboard对象。
  *
- * @returns keyboard对象。
+ * @return keyboard对象。
  */
  public  static Keyboard cast(Widget widget)  {
    return new Keyboard(keyboard_cast(widget != null ? (widget.nativeObj) : 0));

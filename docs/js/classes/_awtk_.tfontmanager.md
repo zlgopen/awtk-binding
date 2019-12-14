@@ -2,7 +2,8 @@
 
 # Class: TFontManager
 
-字体管理器，负责字体的加载和缓存管理。 (如果使用nanovg，字体由nanovg内部管理)
+字体管理器，负责字体的加载和缓存管理。
+(如果使用nanovg，字体由nanovg内部管理)
 
 ## Hierarchy
 
@@ -29,7 +30,7 @@
 
 \+ **new TFontManager**(`nativeObj`: any): *[TFontManager](_awtk_.tfontmanager.md)*
 
-*Defined in [awtk.ts:3544](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L3544)*
+*Defined in [awtk.ts:3505](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L3505)*
 
 **Parameters:**
 
@@ -45,7 +46,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:3544](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L3544)*
+*Defined in [awtk.ts:3505](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L3505)*
 
 ## Methods
 
@@ -53,7 +54,7 @@ Name | Type |
 
 ▸ **unloadAll**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:3571](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L3571)*
+*Defined in [awtk.ts:3530](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L3530)*
 
 卸载全部字体。
 
@@ -67,7 +68,7 @@ ___
 
 ▸ **unloadFont**(`name`: string, `size`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:3559](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L3559)*
+*Defined in [awtk.ts:3519](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L3519)*
 
 卸载指定的字体。
 

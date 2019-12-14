@@ -33,7 +33,7 @@
 
 \+ **new TAssetInfo**(`nativeObj`: any): *[TAssetInfo](_awtk_.tassetinfo.md)*
 
-*Defined in [awtk.ts:10485](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L10485)*
+*Defined in [awtk.ts:10441](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L10441)*
 
 **Parameters:**
 
@@ -49,7 +49,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:10485](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L10485)*
+*Defined in [awtk.ts:10441](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L10441)*
 
 ## Accessors
 
@@ -57,7 +57,7 @@ Name | Type |
 
 • **get isInRom**(): *number*
 
-*Defined in [awtk.ts:10513](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L10513)*
+*Defined in [awtk.ts:10469](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L10469)*
 
 资源是否在ROM中。
 
@@ -69,7 +69,7 @@ ___
 
 • **get name**(): *string*
 
-*Defined in [awtk.ts:10540](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L10540)*
+*Defined in [awtk.ts:10497](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L10497)*
 
 名称。
 
@@ -81,9 +81,10 @@ ___
 
 • **get refcount**(): *number*
 
-*Defined in [awtk.ts:10531](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L10531)*
+*Defined in [awtk.ts:10488](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L10488)*
 
-引用计数。 is\_in\_rom == FALSE时才有效。
+引用计数。
+is\_in\_rom == FALSE时才有效。
 
 **Returns:** *number*
 
@@ -93,7 +94,7 @@ ___
 
 • **get size**(): *number*
 
-*Defined in [awtk.ts:10522](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L10522)*
+*Defined in [awtk.ts:10478](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L10478)*
 
 大小。
 
@@ -105,7 +106,7 @@ ___
 
 • **get subtype**(): *number*
 
-*Defined in [awtk.ts:10504](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L10504)*
+*Defined in [awtk.ts:10460](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L10460)*
 
 子类型。
 
@@ -117,7 +118,7 @@ ___
 
 • **get type**(): *number*
 
-*Defined in [awtk.ts:10495](https://github.com/zlgopen/awtk-binding/blob/2f56731/tools/code_gen/js/output/awtk.ts#L10495)*
+*Defined in [awtk.ts:10451](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L10451)*
 
 类型。
 
