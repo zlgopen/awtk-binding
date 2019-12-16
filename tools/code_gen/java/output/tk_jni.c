@@ -911,6 +911,24 @@ JNIEXPORT jstring JNICALL Java_awtk_Object_object_1t_1get_1prop_1name(JNIEnv* en
   return (*env)->NewStringUTF(env, obj->name);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_Global_tk_1init(JNIEnv* env,  jclass ajc, jint w, jint h, jint app_type, jstring japp_name, jstring japp_root) { /*func*/
+  ret_t ret;
+  const char* app_name = (char*)(*env)->GetStringUTFChars(env, japp_name, 0);
+  const char* app_root = (char*)(*env)->GetStringUTFChars(env, japp_root, 0);
+  ret = (ret_t)tk_init(w, h, app_type, app_name, app_root);
+  (*env)->ReleaseStringUTFChars(env, japp_name, app_name);
+  (*env)->ReleaseStringUTFChars(env, japp_root, app_root);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_Global_tk_1run(JNIEnv* env,  jclass ajc) { /*func*/
+  ret_t ret;
+  ret = (ret_t)tk_run();
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_Global_tk_1quit(JNIEnv* env,  jclass ajc) { /*func*/
   ret_t ret;
   ret = (ret_t)tk_quit();

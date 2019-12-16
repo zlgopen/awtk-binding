@@ -19,7 +19,7 @@
 
 • **CENTER**: =  ALIGN_H_CENTER()
 
-*Defined in [awtk.ts:5207](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L5207)*
+*Defined in [awtk.ts:5236](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L5236)*
 
 居中对齐。
 
@@ -29,7 +29,7 @@ ___
 
 • **LEFT**: =  ALIGN_H_LEFT()
 
-*Defined in [awtk.ts:5213](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L5213)*
+*Defined in [awtk.ts:5242](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L5242)*
 
 左边对齐。
 
@@ -39,7 +39,7 @@ ___
 
 • **NONE**: =  ALIGN_H_NONE()
 
-*Defined in [awtk.ts:5201](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L5201)*
+*Defined in [awtk.ts:5230](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L5230)*
 
 无效对齐方式。
 
@@ -49,6 +49,6 @@ ___
 
 • **RIGHT**: =  ALIGN_H_RIGHT()
 
-*Defined in [awtk.ts:5219](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L5219)*
+*Defined in [awtk.ts:5248](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L5248)*
 
 右边对齐。

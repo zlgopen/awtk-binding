@@ -1061,6 +1061,27 @@ class TGlobal {
 public:
 
 /**
+ * 初始化TK。
+ * 
+ * @param w LCD宽度。
+ * @param h LCD高度。
+ * @param app_type 应用程序的类型。
+ * @param app_name 应用程序的名称(必须为常量字符串)。
+ * @param app_root 应用程序的根目录，用于定位资源文件(必须为常量字符串)。
+ *
+ * @return 返回RET_OK表示成功，否则表示失败。
+ */
+ static ret_t TkInit(wh_t w, wh_t h, app_type_t app_type, const char* app_name, const char* app_root) ;
+
+/**
+ * 进入TK事件主循环。
+ * 
+ *
+ * @return 返回RET_OK表示成功，否则表示失败。
+ */
+ static ret_t TkRun() ;
+
+/**
  * 退出TK事件主循环。
  * 
  *
@@ -6864,7 +6885,7 @@ public:
  *
  * @return 返回RET_OK表示成功，否则表示失败。
  */
- ret_t SetInt(const char* state, const char* name, int32_t val) ;
+ ret_t SetInt(const char* state, const char* name, uint32_t val) ;
 
 /**
  * 转换为style_mutable对象。
@@ -8542,7 +8563,7 @@ public:
  *
  * @return 返回RET_OK表示成功，否则表示失败。
  */
- ret_t SetIntLimit(int32_t min, int32_t max, int32_t step) ;
+ ret_t SetIntLimit(int32_t min, int32_t max, uint32_t step) ;
 
 /**
  * 设置为浮点数输入及取值范围。

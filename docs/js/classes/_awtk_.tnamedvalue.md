@@ -37,7 +37,7 @@
 
 \+ **new TNamedValue**(`nativeObj`: any): *[TNamedValue](_awtk_.tnamedvalue.md)*
 
-*Defined in [awtk.ts:9202](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9202)*
+*Defined in [awtk.ts:9231](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L9231)*
 
 **Parameters:**
 
@@ -53,7 +53,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:9202](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9202)*
+*Defined in [awtk.ts:9231](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L9231)*
 
 ## Accessors
 
@@ -61,7 +61,7 @@ Name | Type |
 
 • **get name**(): *string*
 
-*Defined in [awtk.ts:9285](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9285)*
+*Defined in [awtk.ts:9314](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L9314)*
 
 名称。
 
@@ -69,7 +69,7 @@ Name | Type |
 
 • **set name**(`v`: string): *void*
 
-*Defined in [awtk.ts:9276](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9276)*
+*Defined in [awtk.ts:9305](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L9305)*
 
 名称。
 
@@ -87,7 +87,7 @@ Name | Type |
 
 ▸ **destroy**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:9272](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9272)*
+*Defined in [awtk.ts:9301](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L9301)*
 
 销毁named_value对象。
 
@@ -101,7 +101,7 @@ ___
 
 ▸ **getValue**(): *[TValue](_awtk_.tvalue.md)*
 
-*Defined in [awtk.ts:9261](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9261)*
+*Defined in [awtk.ts:9290](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L9290)*
 
 获取值对象(主要给脚本语言使用)。
 
@@ -115,7 +115,7 @@ ___
 
 ▸ **setName**(`name`: string): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:9238](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9238)*
+*Defined in [awtk.ts:9267](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L9267)*
 
 设置名称。
 
@@ -135,7 +135,7 @@ ___
 
 ▸ **setValue**(`value`: [TValue](_awtk_.tvalue.md)): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:9250](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9250)*
+*Defined in [awtk.ts:9279](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L9279)*
 
 设置值。
 
@@ -155,7 +155,7 @@ ___
 
 ▸ **cast**(`nv`: [TNamedValue](_awtk_.tnamedvalue.md)): *[TNamedValue](_awtk_.tnamedvalue.md)*
 
-*Defined in [awtk.ts:9226](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9226)*
+*Defined in [awtk.ts:9255](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L9255)*
 
 转换为named_value对象(供脚本语言使用)。
 
@@ -175,7 +175,7 @@ ___
 
 ▸ **create**(): *[TNamedValue](_awtk_.tnamedvalue.md)*
 
-*Defined in [awtk.ts:9214](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L9214)*
+*Defined in [awtk.ts:9243](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L9243)*
 
 创建named_value对象。
 

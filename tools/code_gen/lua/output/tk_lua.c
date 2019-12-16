@@ -1761,6 +1761,29 @@ static void object_t_init(lua_State* L) {
   luaL_openlib(L, "Object", static_funcs, 0);
   lua_settop(L, 0);
 }
+static int wrap_tk_init(lua_State* L) {
+  ret_t ret = 0;
+  wh_t w = (wh_t)luaL_checkinteger(L, 1);
+  wh_t h = (wh_t)luaL_checkinteger(L, 2);
+  app_type_t app_type = (app_type_t)luaL_checkinteger(L, 3);
+  const char* app_name = (const char*)luaL_checkstring(L, 4);
+  const char* app_root = (const char*)luaL_checkstring(L, 5);
+  ret = (ret_t)tk_init(w, h, app_type, app_name, app_root);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_tk_run(lua_State* L) {
+  ret_t ret = 0;
+  ret = (ret_t)tk_run();
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 static int wrap_tk_quit(lua_State* L) {
   ret_t ret = 0;
   ret = (ret_t)tk_quit();
@@ -1799,6 +1822,8 @@ static int wrap_tk_is_pointer_pressed(lua_State* L) {
 
 static void global_t_init(lua_State* L) {
   static const struct luaL_Reg static_funcs[] = {
+    {"tk_init", wrap_tk_init},
+    {"tk_run", wrap_tk_run},
     {"quit", wrap_tk_quit},
     {"get_pointer_x", wrap_tk_get_pointer_x},
     {"get_pointer_y", wrap_tk_get_pointer_y},
@@ -12155,7 +12180,7 @@ static int wrap_style_mutable_set_int(lua_State* L) {
   style_t* s = (style_t*)tk_checkudata(L, 1, "style_t");
   const char* state = (const char*)luaL_checkstring(L, 2);
   const char* name = (const char*)luaL_checkstring(L, 3);
-  int32_t val = (int32_t)luaL_checkinteger(L, 4);
+  uint32_t val = (uint32_t)luaL_checkinteger(L, 4);
   ret = (ret_t)style_mutable_set_int(s, state, name, val);
 
   lua_pushnumber(L,(lua_Number)(ret));
@@ -14228,7 +14253,7 @@ static int wrap_edit_set_int_limit(lua_State* L) {
   widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
   int32_t min = (int32_t)luaL_checkinteger(L, 2);
   int32_t max = (int32_t)luaL_checkinteger(L, 3);
-  int32_t step = (int32_t)luaL_checkinteger(L, 4);
+  uint32_t step = (uint32_t)luaL_checkinteger(L, 4);
   ret = (ret_t)edit_set_int_limit(widget, min, max, step);
 
   lua_pushnumber(L,(lua_Number)(ret));

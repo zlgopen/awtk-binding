@@ -73,6 +73,10 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a125337c829c7837b23d256a56c116a20"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_ret.html">Ret</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_global.html#a125337c829c7837b23d256a56c116a20">tkInit</a> (int w, int h, <a class="el" href="enumawtk_1_1_app_type.html">AppType</a> app_type, String app_name, String app_root)</td></tr>
+<tr class="separator:a125337c829c7837b23d256a56c116a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80bf8ceae1cd1467365cdba2fdceed55"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_ret.html">Ret</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_global.html#a80bf8ceae1cd1467365cdba2fdceed55">tkRun</a> ()</td></tr>
+<tr class="separator:a80bf8ceae1cd1467365cdba2fdceed55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20cb43d2008ea2d16a3dca5f0ce318fa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_ret.html">Ret</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_global.html#a20cb43d2008ea2d16a3dca5f0ce318fa">quit</a> ()</td></tr>
 <tr class="separator:a20cb43d2008ea2d16a3dca5f0ce318fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bd68e6d84dddc91134347bc8065889a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_global.html#a9bd68e6d84dddc91134347bc8065889a">getPointerX</a> ()</td></tr>
@@ -189,6 +193,99 @@ $(function() {
 </table>
 </div><div class="memdoc">
 <p>退出TK事件主循环。</p>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a125337c829c7837b23d256a56c116a20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a125337c829c7837b23d256a56c116a20">&#9670;&nbsp;</a></span>tkInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="enumawtk_1_1_ret.html">Ret</a> awtk.Global.tkInit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="enumawtk_1_1_app_type.html">AppType</a>&#160;</td>
+          <td class="paramname"><em>app_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>app_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>app_root</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>初始化TK。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">w</td><td>LCD宽度。 </td></tr>
+    <tr><td class="paramname">h</td><td>LCD高度。 </td></tr>
+    <tr><td class="paramname">app_type</td><td>应用程序的类型。 </td></tr>
+    <tr><td class="paramname">app_name</td><td>应用程序的名称(必须为常量字符串)。 </td></tr>
+    <tr><td class="paramname">app_root</td><td>应用程序的根目录，用于定位资源文件(必须为常量字符串)。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a80bf8ceae1cd1467365cdba2fdceed55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80bf8ceae1cd1467365cdba2fdceed55">&#9670;&nbsp;</a></span>tkRun()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="enumawtk_1_1_ret.html">Ret</a> awtk.Global.tkRun </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>进入TK事件主循环。</p>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>

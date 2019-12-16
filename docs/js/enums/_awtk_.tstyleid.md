@@ -49,7 +49,7 @@ style常量定义。
 
 • **_ID_ACTIVE_ICON**: =  STYLE_ID_ACTIVE_ICON()
 
-*Defined in [awtk.ts:4924](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4924)*
+*Defined in [awtk.ts:4953](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4953)*
 
 Active图标的名称。
 
@@ -59,7 +59,7 @@ ___
 
 • **_ID_BG_COLOR**: =  STYLE_ID_BG_COLOR()
 
-*Defined in [awtk.ts:4774](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4774)*
+*Defined in [awtk.ts:4803](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4803)*
 
 背景颜色。
 
@@ -69,7 +69,7 @@ ___
 
 • **_ID_BG_IMAGE**: =  STYLE_ID_BG_IMAGE()
 
-*Defined in [awtk.ts:4852](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4852)*
+*Defined in [awtk.ts:4881](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4881)*
 
 图片的名称。
 
@@ -79,7 +79,7 @@ ___
 
 • **_ID_BG_IMAGE_DRAW_TYPE**: =  STYLE_ID_BG_IMAGE_DRAW_TYPE()
 
-*Defined in [awtk.ts:4858](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4858)*
+*Defined in [awtk.ts:4887](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4887)*
 
 图片的显示方式。
 
@@ -89,7 +89,7 @@ ___
 
 • **_ID_BORDER**: =  STYLE_ID_BORDER()
 
-*Defined in [awtk.ts:4846](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4846)*
+*Defined in [awtk.ts:4875](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4875)*
 
 边框类型。
 
@@ -99,7 +99,7 @@ ___
 
 • **_ID_BORDER_COLOR**: =  STYLE_ID_BORDER_COLOR()
 
-*Defined in [awtk.ts:4834](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4834)*
+*Defined in [awtk.ts:4863](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4863)*
 
 边框颜色。
 
@@ -109,7 +109,7 @@ ___
 
 • **_ID_BORDER_WIDTH**: =  STYLE_ID_BORDER_WIDTH()
 
-*Defined in [awtk.ts:4840](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4840)*
+*Defined in [awtk.ts:4869](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4869)*
 
 边框线宽。
 
@@ -119,7 +119,7 @@ ___
 
 • **_ID_CHILDREN_LAYOUT**: =  STYLE_ID_CHILDREN_LAYOUT()
 
-*Defined in [awtk.ts:4966](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4966)*
+*Defined in [awtk.ts:4995](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4995)*
 
 子控件布局参数。
 
@@ -129,7 +129,7 @@ ___
 
 • **_ID_FG_COLOR**: =  STYLE_ID_FG_COLOR()
 
-*Defined in [awtk.ts:4780](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4780)*
+*Defined in [awtk.ts:4809](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4809)*
 
 前景颜色。
 
@@ -139,7 +139,7 @@ ___
 
 • **_ID_FG_IMAGE**: =  STYLE_ID_FG_IMAGE()
 
-*Defined in [awtk.ts:4870](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4870)*
+*Defined in [awtk.ts:4899](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4899)*
 
 图片的名称。
 
@@ -149,7 +149,7 @@ ___
 
 • **_ID_FG_IMAGE_DRAW_TYPE**: =  STYLE_ID_FG_IMAGE_DRAW_TYPE()
 
-*Defined in [awtk.ts:4876](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4876)*
+*Defined in [awtk.ts:4905](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4905)*
 
 图片的显示方式。
 
@@ -159,7 +159,7 @@ ___
 
 • **_ID_FONT_NAME**: =  STYLE_ID_FONT_NAME()
 
-*Defined in [awtk.ts:4792](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4792)*
+*Defined in [awtk.ts:4821](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4821)*
 
 字体名称。
 
@@ -169,7 +169,7 @@ ___
 
 • **_ID_FONT_SIZE**: =  STYLE_ID_FONT_SIZE()
 
-*Defined in [awtk.ts:4798](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4798)*
+*Defined in [awtk.ts:4827](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4827)*
 
 字体大小。
 
@@ -179,7 +179,7 @@ ___
 
 • **_ID_FONT_STYLE**: =  STYLE_ID_FONT_STYLE()
 
-*Defined in [awtk.ts:4804](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4804)*
+*Defined in [awtk.ts:4833](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4833)*
 
 字体风格(粗体、斜体等)。
 
@@ -189,7 +189,7 @@ ___
 
 • **_ID_ICON**: =  STYLE_ID_ICON()
 
-*Defined in [awtk.ts:4864](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4864)*
+*Defined in [awtk.ts:4893](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4893)*
 
 图标的名称。
 
@@ -199,7 +199,7 @@ ___
 
 • **_ID_ICON_AT**: =  STYLE_ID_ICON_AT()
 
-*Defined in [awtk.ts:4918](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4918)*
+*Defined in [awtk.ts:4947](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4947)*
 
 图标的位置。
 
@@ -209,7 +209,7 @@ ___
 
 • **_ID_MARGIN**: =  STYLE_ID_MARGIN()
 
-*Defined in [awtk.ts:4888](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4888)*
+*Defined in [awtk.ts:4917](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4917)*
 
 边距。
 
@@ -219,7 +219,7 @@ ___
 
 • **_ID_MARGIN_BOTTOM**: =  STYLE_ID_MARGIN_BOTTOM()
 
-*Defined in [awtk.ts:4912](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4912)*
+*Defined in [awtk.ts:4941](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4941)*
 
 底边距。
 
@@ -229,7 +229,7 @@ ___
 
 • **_ID_MARGIN_LEFT**: =  STYLE_ID_MARGIN_LEFT()
 
-*Defined in [awtk.ts:4894](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4894)*
+*Defined in [awtk.ts:4923](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4923)*
 
 左边距。
 
@@ -239,7 +239,7 @@ ___
 
 • **_ID_MARGIN_RIGHT**: =  STYLE_ID_MARGIN_RIGHT()
 
-*Defined in [awtk.ts:4900](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4900)*
+*Defined in [awtk.ts:4929](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4929)*
 
 右边距。
 
@@ -249,7 +249,7 @@ ___
 
 • **_ID_MARGIN_TOP**: =  STYLE_ID_MARGIN_TOP()
 
-*Defined in [awtk.ts:4906](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4906)*
+*Defined in [awtk.ts:4935](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4935)*
 
 顶边距。
 
@@ -259,7 +259,7 @@ ___
 
 • **_ID_MASK_COLOR**: =  STYLE_ID_MASK_COLOR()
 
-*Defined in [awtk.ts:4786](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4786)*
+*Defined in [awtk.ts:4815](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4815)*
 
 蒙版颜色。
 
@@ -269,7 +269,7 @@ ___
 
 • **_ID_ROUND_RADIUS**: =  STYLE_ID_ROUND_RADIUS()
 
-*Defined in [awtk.ts:4960](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4960)*
+*Defined in [awtk.ts:4989](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4989)*
 
 圆角半径(仅在WITH_VGCANVAS定义时生效)。
 
@@ -279,7 +279,7 @@ ___
 
 • **_ID_SELECTED_BG_COLOR**: =  STYLE_ID_SELECTED_BG_COLOR()
 
-*Defined in [awtk.ts:4942](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4942)*
+*Defined in [awtk.ts:4971](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4971)*
 
 编辑器中选中区域的背景颜色。
 
@@ -289,7 +289,7 @@ ___
 
 • **_ID_SELECTED_FG_COLOR**: =  STYLE_ID_SELECTED_FG_COLOR()
 
-*Defined in [awtk.ts:4948](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4948)*
+*Defined in [awtk.ts:4977](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4977)*
 
 编辑器中选中区域的前景颜色。
 
@@ -299,7 +299,7 @@ ___
 
 • **_ID_SELECTED_TEXT_COLOR**: =  STYLE_ID_SELECTED_TEXT_COLOR()
 
-*Defined in [awtk.ts:4954](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4954)*
+*Defined in [awtk.ts:4983](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4983)*
 
 编辑器中选中区域的文本颜色。
 
@@ -309,7 +309,7 @@ ___
 
 • **_ID_SELF_LAYOUT**: =  STYLE_ID_SELF_LAYOUT()
 
-*Defined in [awtk.ts:4972](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4972)*
+*Defined in [awtk.ts:5001](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L5001)*
 
 控件布局参数。
 
@@ -319,7 +319,7 @@ ___
 
 • **_ID_SPACER**: =  STYLE_ID_SPACER()
 
-*Defined in [awtk.ts:4882](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4882)*
+*Defined in [awtk.ts:4911](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4911)*
 
 间距。
 
@@ -329,7 +329,7 @@ ___
 
 • **_ID_TEXT_ALIGN_H**: =  STYLE_ID_TEXT_ALIGN_H()
 
-*Defined in [awtk.ts:4822](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4822)*
+*Defined in [awtk.ts:4851](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4851)*
 
 文本水平对齐的方式。
 
@@ -339,7 +339,7 @@ ___
 
 • **_ID_TEXT_ALIGN_V**: =  STYLE_ID_TEXT_ALIGN_V()
 
-*Defined in [awtk.ts:4828](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4828)*
+*Defined in [awtk.ts:4857](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4857)*
 
 文本垂直对齐的方式。
 
@@ -349,7 +349,7 @@ ___
 
 • **_ID_TEXT_COLOR**: =  STYLE_ID_TEXT_COLOR()
 
-*Defined in [awtk.ts:4810](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4810)*
+*Defined in [awtk.ts:4839](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4839)*
 
 文本颜色。
 
@@ -359,7 +359,7 @@ ___
 
 • **_ID_TIPS_TEXT_COLOR**: =  STYLE_ID_TIPS_TEXT_COLOR()
 
-*Defined in [awtk.ts:4816](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4816)*
+*Defined in [awtk.ts:4845](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4845)*
 
 提示文本颜色。
 
@@ -369,7 +369,7 @@ ___
 
 • **_ID_X_OFFSET**: =  STYLE_ID_X_OFFSET()
 
-*Defined in [awtk.ts:4930](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4930)*
+*Defined in [awtk.ts:4959](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4959)*
 
 X方向的偏移，方便实现按下的效果。
 
@@ -379,6 +379,6 @@ ___
 
 • **_ID_Y_OFFSET**: =  STYLE_ID_Y_OFFSET()
 
-*Defined in [awtk.ts:4936](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L4936)*
+*Defined in [awtk.ts:4965](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L4965)*
 
 Y方向的偏移，方便实现按下的效果。

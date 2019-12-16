@@ -8,7 +8,7 @@ var searchData=
   ['fillrect',['fillRect',['../classawtk_1_1_canvas.html#ae9d21f60f2ebedb00c095221da53f3da',1,'awtk::Canvas']]],
   ['filltext',['fillText',['../classawtk_1_1_vgcanvas.html#abee532f03acac17f415532579ff527f1',1,'awtk::Vgcanvas']]],
   ['float',['FLOAT',['../enumawtk_1_1_input_type.html#a997089a2d9bc11902b1764cbd4051de5',1,'awtk.InputType.FLOAT()'],['../enumawtk_1_1_value_type.html#a1512776b7edae05e85082ae078d88baa',1,'awtk.ValueType.FLOAT()']]],
-  ['float32',['FLOAT32',['../enumawtk_1_1_value_type.html#ae439be783e2fe4636978d372edea89e3',1,'awtk.ValueType.FLOAT32()'],['../classawtk_1_1_value.html#a23438c104571425154f702fc2bf93c40',1,'awtk.Value.float32()']]],
+  ['float32',['float32',['../classawtk_1_1_value.html#a23438c104571425154f702fc2bf93c40',1,'awtk.Value.float32()'],['../enumawtk_1_1_value_type.html#ae439be783e2fe4636978d372edea89e3',1,'awtk.ValueType.FLOAT32()']]],
   ['float64',['float64',['../classawtk_1_1_value.html#a3e17e844c1a3371d556717e6728f591c',1,'awtk::Value']]],
   ['floating',['FLOATING',['../enumawtk_1_1_widget_prop.html#a7898dd544d0d9dcb2880e7f771462a90',1,'awtk::WidgetProp']]],
   ['flush',['flush',['../classawtk_1_1_vgcanvas.html#aeb07576621120a86a6b2712782e5b65b',1,'awtk::Vgcanvas']]],

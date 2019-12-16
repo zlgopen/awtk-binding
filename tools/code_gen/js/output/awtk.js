@@ -1179,6 +1179,29 @@ var TGlobal = /** @class */ (function () {
     function TGlobal() {
     }
     /**
+     * 初始化TK。
+     *
+     * @param w LCD宽度。
+     * @param h LCD高度。
+     * @param app_type 应用程序的类型。
+     * @param app_name 应用程序的名称(必须为常量字符串)。
+     * @param app_root 应用程序的根目录，用于定位资源文件(必须为常量字符串)。
+     *
+     * @returns 返回RET_OK表示成功，否则表示失败。
+     */
+    TGlobal.tkInit = function (w, h, app_type, app_name, app_root) {
+        return tk_init(w, h, app_type, app_name, app_root);
+    };
+    /**
+     * 进入TK事件主循环。
+     *
+     *
+     * @returns 返回RET_OK表示成功，否则表示失败。
+     */
+    TGlobal.tkRun = function () {
+        return tk_run();
+    };
+    /**
      * 退出TK事件主循环。
      *
      *

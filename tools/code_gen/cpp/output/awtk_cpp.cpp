@@ -411,6 +411,14 @@
    return ((object_t*)(this->nativeObj))->name;
  }
 
+ ret_t TGlobal::TkInit(wh_t w, wh_t h, app_type_t app_type, const char* app_name, const char* app_root)  {
+   return tk_init(w, h, app_type, app_name, app_root);
+ }
+
+ ret_t TGlobal::TkRun()  {
+   return tk_run();
+ }
+
  ret_t TGlobal::Quit()  {
    return tk_quit();
  }
@@ -2543,7 +2551,7 @@
    return style_mutable_set_name(((style_t*)(this->nativeObj)), name);
  }
 
- ret_t TStyleMutable::SetInt(const char* state, const char* name, int32_t val)  {
+ ret_t TStyleMutable::SetInt(const char* state, const char* name, uint32_t val)  {
    return style_mutable_set_int(((style_t*)(this->nativeObj)), state, name, val);
  }
 
@@ -3051,7 +3059,7 @@
    return edit_set_text_limit(((widget_t*)(this->nativeObj)), min, max);
  }
 
- ret_t TEdit::SetIntLimit(int32_t min, int32_t max, int32_t step)  {
+ ret_t TEdit::SetIntLimit(int32_t min, int32_t max, uint32_t step)  {
    return edit_set_int_limit(((widget_t*)(this->nativeObj)), min, max, step);
  }
 

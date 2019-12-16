@@ -23,7 +23,7 @@
 
 ▸ **ms**(): *number*
 
-*Defined in [awtk.ts:8674](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L8674)*
+*Defined in [awtk.ts:8703](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L8703)*
 
 获取当前时间(毫秒)。
 
@@ -37,7 +37,7 @@ ___
 
 ▸ **s**(): *number*
 
-*Defined in [awtk.ts:8663](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L8663)*
+*Defined in [awtk.ts:8692](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L8692)*
 
 获取当前时间(秒)。
 

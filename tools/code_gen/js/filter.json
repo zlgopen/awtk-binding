@@ -2236,6 +2236,58 @@
     "type": "class",
     "methods": [
       {
+        "params": [
+          {
+            "type": "wh_t",
+            "name": "w",
+            "desc": "LCD宽度。"
+          },
+          {
+            "type": "wh_t",
+            "name": "h",
+            "desc": "LCD高度。"
+          },
+          {
+            "type": "app_type_t",
+            "name": "app_type",
+            "desc": "应用程序的类型。"
+          },
+          {
+            "type": "const char*",
+            "name": "app_name",
+            "desc": "应用程序的名称(必须为常量字符串)。"
+          },
+          {
+            "type": "const char*",
+            "name": "app_root",
+            "desc": "应用程序的根目录，用于定位资源文件(必须为常量字符串)。"
+          }
+        ],
+        "annotation": {
+          "static": true,
+          "scriptable": true
+        },
+        "desc": "初始化TK。",
+        "name": "tk_init",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [],
+        "annotation": {
+          "static": true,
+          "scriptable": true
+        },
+        "desc": "进入TK事件主循环。",
+        "name": "tk_run",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
         "params": [],
         "annotation": {
           "static": true,
@@ -17474,7 +17526,7 @@
             "desc": "属性名。"
           },
           {
-            "type": "int32_t",
+            "type": "uint32_t",
             "name": "val",
             "desc": "值。"
           }
@@ -20270,7 +20322,7 @@
             "desc": "最大值。"
           },
           {
-            "type": "int32_t",
+            "type": "uint32_t",
             "name": "step",
             "desc": "步长。"
           }

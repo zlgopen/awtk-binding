@@ -39,7 +39,7 @@
 
 \+ **new TEmitter**(`nativeObj`: any): *[TEmitter](_awtk_.temitter.md)*
 
-*Defined in [awtk.ts:1842](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L1842)*
+*Defined in [awtk.ts:1844](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1844)*
 
 **Parameters:**
 
@@ -55,7 +55,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:1842](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L1842)*
+*Defined in [awtk.ts:1844](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1844)*
 
 ## Methods
 
@@ -63,7 +63,7 @@ Name | Type |
 
 ▸ **destroy**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:1953](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L1953)*
+*Defined in [awtk.ts:1955](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1955)*
 
 销毁。
 
@@ -77,7 +77,7 @@ ___
 
 ▸ **disable**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:1931](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L1931)*
+*Defined in [awtk.ts:1933](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1933)*
 
 禁用。
 
@@ -93,7 +93,7 @@ ___
 
 ▸ **dispatch**(`e`: [TEvent](_awtk_.tevent.md)): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:1867](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L1867)*
+*Defined in [awtk.ts:1869](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1869)*
 
 分发事件。如果当前分发的回调函数返回RET_REMOVE，该回调函数将被移出。
 禁用状态下，本函数不做任何事情。
@@ -114,7 +114,7 @@ ___
 
 ▸ **dispatchSimpleEvent**(`type`: [TEventType](../enums/_awtk_.teventtype.md)): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:1881](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L1881)*
+*Defined in [awtk.ts:1883](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1883)*
 
 分发事件。
 对emitter_dispatch的包装，分发一个简单的事件。
@@ -134,7 +134,7 @@ ___
 
 ▸ **enable**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:1918](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L1918)*
+*Defined in [awtk.ts:1920](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1920)*
 
 启用。
 
@@ -148,7 +148,7 @@ ___
 
 ▸ **off**(`id`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:1907](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L1907)*
+*Defined in [awtk.ts:1909](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1909)*
 
 注销指定事件的处理函数。
 
@@ -168,7 +168,7 @@ ___
 
 ▸ **on**(`type`: [TEventType](../enums/_awtk_.teventtype.md), `on_event`: Function, `ctx`: any): *number*
 
-*Defined in [awtk.ts:1895](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L1895)*
+*Defined in [awtk.ts:1897](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1897)*
 
 注册指定事件的处理函数。
 
@@ -190,7 +190,7 @@ ___
 
 ▸ **size**(): *number*
 
-*Defined in [awtk.ts:1942](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L1942)*
+*Defined in [awtk.ts:1944](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1944)*
 
 获取注册的回调函数个数，主要用于辅助测试。
 
@@ -204,7 +204,7 @@ ___
 
 ▸ **cast**(`emitter`: [TEmitter](_awtk_.temitter.md)): *[TEmitter](_awtk_.temitter.md)*
 
-*Defined in [awtk.ts:1967](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L1967)*
+*Defined in [awtk.ts:1969](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1969)*
 
 转换为emitter对象(供脚本语言使用)。
 
@@ -226,7 +226,7 @@ ___
 
 ▸ **create**(): *[TEmitter](_awtk_.temitter.md)*
 
-*Defined in [awtk.ts:1854](https://github.com/zlgopen/awtk-binding/blob/feacbc6/tools/code_gen/js/output/awtk.ts#L1854)*
+*Defined in [awtk.ts:1856](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1856)*
 
 创建emitter对象。
 

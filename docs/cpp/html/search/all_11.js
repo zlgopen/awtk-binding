@@ -19,6 +19,8 @@ var searchData=
   ['timagemanager',['TImageManager',['../class_t_image_manager.html',1,'']]],
   ['tinputmethod',['TInputMethod',['../class_t_input_method.html',1,'']]],
   ['tkeyboard',['TKeyboard',['../class_t_keyboard.html',1,'']]],
+  ['tkinit',['TkInit',['../class_t_global.html#a2dfbf0172ed5a4a02cfc8ac3ce35f8b8',1,'TGlobal']]],
+  ['tkrun',['TkRun',['../class_t_global.html#a2af9ce31a06b8a9ccf68344669c46950',1,'TGlobal']]],
   ['tlabel',['TLabel',['../class_t_label.html',1,'']]],
   ['tlocaleinfo',['TLocaleInfo',['../class_t_locale_info.html',1,'']]],
   ['tmutableimage',['TMutableImage',['../class_t_mutable_image.html',1,'']]],

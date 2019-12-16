@@ -71,7 +71,7 @@ var searchData=
   ['key_5fm',['KEY_m',['../enumawtk_1_1_key_code.html#ae11dc2148e88739a3e167b7b07071a2d',1,'awtk.KeyCode.KEY_m()'],['../enumawtk_1_1_key_code.html#af8ed653fa32d13471c7d19c10cee81a3',1,'awtk.KeyCode.KEY_M()']]],
   ['key_5fmenu',['KEY_MENU',['../enumawtk_1_1_key_code.html#a4ab94ba1ce4334830393667bcd652549',1,'awtk::KeyCode']]],
   ['key_5fminus',['KEY_MINUS',['../enumawtk_1_1_key_code.html#a542cde2eacbc7304c4863bf0cc2904ac',1,'awtk::KeyCode']]],
-  ['key_5fn',['KEY_N',['../enumawtk_1_1_key_code.html#ab2d64341b004466b646ace058ec2c92a',1,'awtk.KeyCode.KEY_N()'],['../enumawtk_1_1_key_code.html#a945b8c2969ed9bf99dc53b4eba871a62',1,'awtk.KeyCode.KEY_n()']]],
+  ['key_5fn',['KEY_n',['../enumawtk_1_1_key_code.html#a945b8c2969ed9bf99dc53b4eba871a62',1,'awtk.KeyCode.KEY_n()'],['../enumawtk_1_1_key_code.html#ab2d64341b004466b646ace058ec2c92a',1,'awtk.KeyCode.KEY_N()']]],
   ['key_5fo',['KEY_o',['../enumawtk_1_1_key_code.html#a124673ae00ec1960722b8646fec3d922',1,'awtk.KeyCode.KEY_o()'],['../enumawtk_1_1_key_code.html#a94f7f1b678444f15121b2612335c97b4',1,'awtk.KeyCode.KEY_O()']]],
   ['key_5fp',['KEY_P',['../enumawtk_1_1_key_code.html#addc081c51122c0420143af47c3d55a2b',1,'awtk.KeyCode.KEY_P()'],['../enumawtk_1_1_key_code.html#ae7dd10248214962facdabf0fee7f08fc',1,'awtk.KeyCode.KEY_p()']]],
   ['key_5fpagedown',['KEY_PAGEDOWN',['../enumawtk_1_1_key_code.html#a6b1868d724aac3229c7c5abfa074624f',1,'awtk::KeyCode']]],

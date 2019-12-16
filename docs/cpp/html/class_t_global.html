@@ -71,6 +71,10 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a2dfbf0172ed5a4a02cfc8ac3ce35f8b8"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#a2dfbf0172ed5a4a02cfc8ac3ce35f8b8">TkInit</a> (wh_t w, wh_t h, app_type_t app_type, const char *app_name, const char *app_root)</td></tr>
+<tr class="separator:a2dfbf0172ed5a4a02cfc8ac3ce35f8b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2af9ce31a06b8a9ccf68344669c46950"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#a2af9ce31a06b8a9ccf68344669c46950">TkRun</a> ()</td></tr>
+<tr class="separator:a2af9ce31a06b8a9ccf68344669c46950"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dbb7a28c76f571b5ab84ae747b5bc33"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#a9dbb7a28c76f571b5ab84ae747b5bc33">Quit</a> ()</td></tr>
 <tr class="separator:a9dbb7a28c76f571b5ab84ae747b5bc33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1502909469ee9ac4d51dd7497e76284e"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#a1502909469ee9ac4d51dd7497e76284e">GetPointerX</a> ()</td></tr>
@@ -187,6 +191,99 @@ $(function() {
 </table>
 </div><div class="memdoc">
 <p>退出TK事件主循环。</p>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a2dfbf0172ed5a4a02cfc8ac3ce35f8b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dfbf0172ed5a4a02cfc8ac3ce35f8b8">&#9670;&nbsp;</a></span>TkInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TGlobal::TkInit </td>
+          <td>(</td>
+          <td class="paramtype">wh_t&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wh_t&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">app_type_t&#160;</td>
+          <td class="paramname"><em>app_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>app_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>app_root</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>初始化TK。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">w</td><td>LCD宽度。 </td></tr>
+    <tr><td class="paramname">h</td><td>LCD高度。 </td></tr>
+    <tr><td class="paramname">app_type</td><td>应用程序的类型。 </td></tr>
+    <tr><td class="paramname">app_name</td><td>应用程序的名称(必须为常量字符串)。 </td></tr>
+    <tr><td class="paramname">app_root</td><td>应用程序的根目录，用于定位资源文件(必须为常量字符串)。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a2af9ce31a06b8a9ccf68344669c46950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2af9ce31a06b8a9ccf68344669c46950">&#9670;&nbsp;</a></span>TkRun()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TGlobal::TkRun </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>进入TK事件主循环。</p>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
