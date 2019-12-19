@@ -255,10 +255,6 @@ class BindingGen extends CodeGen {
   genEnum(cls) {
     return this.genClass(cls);
   }
-  
-  genClassInit(cls) {
-    return '';
-  }
 
   genIncludes(json) {
     let result = '/*XXX: GENERATED CODE, DONT EDIT IT.*/\n';

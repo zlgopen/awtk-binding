@@ -38,7 +38,7 @@
 
 \+ **new TRect**(`nativeObj`: any): *[TRect](_awtk_.trect.md)*
 
-*Defined in [awtk.ts:1708](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1708)*
+*Defined in [awtk.ts:1713](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1713)*
 
 **Parameters:**
 
@@ -54,7 +54,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:1708](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1708)*
+*Defined in [awtk.ts:1713](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1713)*
 
 ## Accessors
 
@@ -62,7 +62,7 @@ Name | Type |
 
 • **get h**(): *number*
 
-*Defined in [awtk.ts:1806](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1806)*
+*Defined in [awtk.ts:1811](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1811)*
 
 高度。
 
@@ -74,7 +74,7 @@ ___
 
 • **get w**(): *number*
 
-*Defined in [awtk.ts:1797](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1797)*
+*Defined in [awtk.ts:1802](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1802)*
 
 宽度。
 
@@ -86,7 +86,7 @@ ___
 
 • **get x**(): *number*
 
-*Defined in [awtk.ts:1779](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1779)*
+*Defined in [awtk.ts:1784](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1784)*
 
 x坐标。
 
@@ -98,7 +98,7 @@ ___
 
 • **get y**(): *number*
 
-*Defined in [awtk.ts:1788](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1788)*
+*Defined in [awtk.ts:1793](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1793)*
 
 y坐标。
 
@@ -110,11 +110,11 @@ y坐标。
 
 ▸ **destroy**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:1770](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1770)*
+*Defined in [awtk.ts:1775](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1775)*
 
 销毁rect对象。
 
-主要供脚本语言使用。
+> 主要供脚本语言使用。
 
 **Returns:** *[TRet](../enums/_awtk_.tret.md)*
 
@@ -126,11 +126,11 @@ ___
 
 ▸ **set**(`x`: number, `y`: number, `w`: number, `h`: number): *[TRect](_awtk_.trect.md)*
 
-*Defined in [awtk.ts:1743](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1743)*
+*Defined in [awtk.ts:1748](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1748)*
 
 设置rect对象的xywh。
 
-主要供脚本语言使用。
+> 主要供脚本语言使用。
 
 **Parameters:**
 
@@ -151,11 +151,11 @@ ___
 
 ▸ **cast**(`rect`: [TRect](_awtk_.trect.md)): *[TRect](_awtk_.trect.md)*
 
-*Defined in [awtk.ts:1757](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1757)*
+*Defined in [awtk.ts:1762](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1762)*
 
 转换为rect对象。
 
-供脚本语言使用。
+> 供脚本语言使用。
 
 **Parameters:**
 
@@ -173,11 +173,11 @@ ___
 
 ▸ **create**(`x`: number, `y`: number, `w`: number, `h`: number): *[TRect](_awtk_.trect.md)*
 
-*Defined in [awtk.ts:1726](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1726)*
+*Defined in [awtk.ts:1731](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1731)*
 
 创建rect对象。
 
-主要供脚本语言使用。
+> 主要供脚本语言使用。
 
 **Parameters:**
 

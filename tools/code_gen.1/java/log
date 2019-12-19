@@ -1,0 +1,155 @@
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/GridItem.java:101: warning: reached end of file while inside a ``` block!
+The command that should end the block seems to be missing!
+
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/AppBar.java:11: warning: unable to resolve reference to `https:' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/AppBar.java:13: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/AppBar.java:13: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Button.java:11: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Button.java:11: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ButtonGroup.java:9: warning: unable to resolve reference to `https:' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ButtonGroup.java:11: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ButtonGroup.java:11: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/CanvasWidget.java:9: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/CanvasWidget.java:9: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/CanvasWidget.java:42: warning: unable to resolve reference to `canvas_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/CanvasWidget.java:43: warning: unable to resolve reference to `vgcanvas_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/CheckButton.java:7: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/CheckButton.java:7: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ClipView.java:9: warning: unable to resolve reference to `https:' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ClipView.java:11: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ClipView.java:11: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ColorPicker.java:7: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ColorPicker.java:7: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ColorTile.java:11: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ColorTile.java:11: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Column.java:9: warning: unable to resolve reference to `https:' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Column.java:11: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Column.java:11: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ComboBox.java:9: warning: unable to resolve reference to `edit_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ComboBox.java:9: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Dialog.java:21: warning: unable to resolve reference to `window_base_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Dialog.java:21: warning: Illegal command _base as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Dialog.java:21: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Dialog.java:312: warning: unable to resolve reference to `https:' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Dialog.java:219: warning: unable to resolve reference to `dialog_quit_code_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/DialogClient.java:9: warning: unable to resolve reference to `https:' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/DialogClient.java:11: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/DialogClient.java:11: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/DialogTitle.java:9: warning: unable to resolve reference to `https:' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/DialogTitle.java:11: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/DialogTitle.java:11: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/DigitClock.java:7: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/DigitClock.java:7: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Draggable.java:7: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Draggable.java:7: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Edit.java:11: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Edit.java:11: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/GifImage.java:12: warning: unable to resolve reference to `image_base_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/GifImage.java:12: warning: Illegal command _base as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/GifImage.java:12: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Grid.java:9: warning: unable to resolve reference to `https:' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Grid.java:11: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Grid.java:11: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/GroupBox.java:11: warning: unable to resolve reference to `https:' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/GroupBox.java:13: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/GroupBox.java:13: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Guage.java:9: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Guage.java:9: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/GuagePointer.java:11: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/GuagePointer.java:11: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/HscrollLabel.java:8: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/HscrollLabel.java:8: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Image.java:9: warning: unable to resolve reference to `gif_image_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Image.java:9: warning: Illegal command _image as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Image.java:11: warning: unable to resolve reference to `svg_image_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Image.java:11: warning: Illegal command _image as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Image.java:17: warning: unable to resolve reference to `image_base_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Image.java:17: warning: Illegal command _base as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Image.java:17: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Image.java:43: warning: unable to resolve reference to `image_draw_type_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Image.java:43: warning: Illegal command _draw as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Image.java:43: warning: Illegal command _type as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Image.java:43: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ImageAnimation.java:9: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ImageAnimation.java:9: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ImageValue.java:15: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ImageValue.java:15: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/InputMethod.java:18: warning: unable to resolve reference to `input_type_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/InputMethod.java:18: warning: Illegal command _type as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Label.java:9: warning: unable to resolve reference to `rich_text_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Label.java:9: warning: Illegal command _text as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Label.java:9: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Label.java:11: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Label.java:11: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/LineNumber.java:7: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/LineNumber.java:7: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ListItem.java:9: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ListItem.java:9: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ListView.java:16: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ListView.java:16: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ListViewH.java:7: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ListViewH.java:7: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Mledit.java:7: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Mledit.java:7: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/MutableImage.java:11: warning: unable to resolve reference to `image_base_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/MutableImage.java:11: warning: Illegal command _base as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/MutableImage.java:11: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Overlay.java:11: warning: unable to resolve reference to `window_base_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Overlay.java:11: warning: Illegal command _base as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Overlay.java:11: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Pages.java:10: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Pages.java:10: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Popup.java:9: warning: unable to resolve reference to `window_base_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Popup.java:9: warning: Illegal command _base as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Popup.java:9: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ProgressBar.java:9: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ProgressBar.java:9: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ProgressCircle.java:7: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ProgressCircle.java:7: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/RichText.java:7: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/RichText.java:7: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Row.java:9: warning: unable to resolve reference to `https:' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Row.java:11: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Row.java:11: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ScrollBar.java:11: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ScrollBar.java:11: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ScrollView.java:7: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/ScrollView.java:7: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/SlideIndicator.java:11: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/SlideIndicator.java:11: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/SlideMenu.java:9: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/SlideMenu.java:9: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Slider.java:7: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Slider.java:7: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/SlideView.java:9: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/SlideView.java:9: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/SpinBox.java:12: warning: unable to resolve reference to `edit_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/SpinBox.java:12: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Style.java:10: warning: unable to resolve reference to `style_id_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Style.java:10: warning: Illegal command _id as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/SvgImage.java:7: warning: unable to resolve reference to `image_base_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/SvgImage.java:7: warning: Illegal command _base as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/SvgImage.java:7: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Switch.java:7: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Switch.java:7: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/SystemBar.java:18: warning: unable to resolve reference to `window_base_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/SystemBar.java:18: warning: Illegal command _base as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/SystemBar.java:18: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/TabButton.java:9: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/TabButton.java:9: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/TabButtonGroup.java:9: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/TabButtonGroup.java:9: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/TabControl.java:13: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/TabControl.java:13: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/TextSelector.java:11: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/TextSelector.java:11: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/TimeClock.java:7: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/TimeClock.java:7: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/View.java:9: warning: unable to resolve reference to `https:' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/View.java:11: warning: unable to resolve reference to `widget_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/View.java:11: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Window.java:9: warning: unable to resolve reference to `window_base_t.md' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Window.java:9: warning: Illegal command _base as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/Window.java:9: warning: Illegal command _t as part of a \ref
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/output/WindowBase.java:62: warning: unable to resolve reference to `https:' for \ref command
+/Users/jim/Share/lab/gui/awtk/awtk-binding/tools/code_gen/java/README.md:5: warning: unable to resolve reference to `docs/awtk_ecology.md' for \ref command

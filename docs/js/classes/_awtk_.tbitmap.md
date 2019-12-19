@@ -40,7 +40,7 @@
 
 \+ **new TBitmap**(`nativeObj`: any): *[TBitmap](_awtk_.tbitmap.md)*
 
-*Defined in [awtk.ts:1981](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1981)*
+*Defined in [awtk.ts:1978](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1978)*
 
 **Parameters:**
 
@@ -56,7 +56,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:1981](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1981)*
+*Defined in [awtk.ts:1978](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1978)*
 
 ## Accessors
 
@@ -64,7 +64,7 @@ Name | Type |
 
 • **get flags**(): *number*
 
-*Defined in [awtk.ts:2066](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L2066)*
+*Defined in [awtk.ts:2063](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L2063)*
 
 标志。请参考{bitmap_flag_t}。
 
@@ -76,7 +76,7 @@ ___
 
 • **get format**(): *number*
 
-*Defined in [awtk.ts:2075](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L2075)*
+*Defined in [awtk.ts:2072](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L2072)*
 
 格式。请参考{bitmap_format_t}。
 
@@ -88,7 +88,7 @@ ___
 
 • **get h**(): *number*
 
-*Defined in [awtk.ts:2048](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L2048)*
+*Defined in [awtk.ts:2045](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L2045)*
 
 高度。
 
@@ -100,7 +100,7 @@ ___
 
 • **get lineLength**(): *number*
 
-*Defined in [awtk.ts:2057](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L2057)*
+*Defined in [awtk.ts:2054](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L2054)*
 
 每一行实际占用的内存(也称为stride或pitch)，一般情况下为w*bpp。
 
@@ -112,7 +112,7 @@ ___
 
 • **get name**(): *string*
 
-*Defined in [awtk.ts:2084](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L2084)*
+*Defined in [awtk.ts:2081](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L2081)*
 
 名称。
 
@@ -124,7 +124,7 @@ ___
 
 • **get w**(): *number*
 
-*Defined in [awtk.ts:2039](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L2039)*
+*Defined in [awtk.ts:2036](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L2036)*
 
 宽度。
 
@@ -136,7 +136,7 @@ ___
 
 ▸ **destroy**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2030](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L2030)*
+*Defined in [awtk.ts:2027](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L2027)*
 
 销毁图片。
 
@@ -150,7 +150,7 @@ ___
 
 ▸ **getBpp**(): *number*
 
-*Defined in [awtk.ts:2019](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L2019)*
+*Defined in [awtk.ts:2016](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L2016)*
 
 获取图片一个像素占用的字节数。
 
@@ -164,7 +164,7 @@ ___
 
 ▸ **create**(): *[TBitmap](_awtk_.tbitmap.md)*
 
-*Defined in [awtk.ts:1993](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1993)*
+*Defined in [awtk.ts:1990](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1990)*
 
 创建图片对象(一般供脚本语言中使用)。
 
@@ -178,7 +178,7 @@ ___
 
 ▸ **createEx**(`w`: number, `h`: number, `line_length`: number, `format`: [TBitmapFormat](../enums/_awtk_.tbitmapformat.md)): *[TBitmap](_awtk_.tbitmap.md)*
 
-*Defined in [awtk.ts:2008](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L2008)*
+*Defined in [awtk.ts:2005](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L2005)*
 
 创建图片对象。
 

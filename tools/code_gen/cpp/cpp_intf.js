@@ -7,7 +7,7 @@ class CppIntfGenerator extends CppGenerator {
   }
 
   genClassExtends(cls) {
-    return ` : public ${this.toClassName(this.getParentClassName(cls))} {\n`
+    return ` : public ${this.toClassName(this.getParentClassName(cls))}`
   }
 
   getNativeObjType(cls) {
@@ -66,7 +66,7 @@ class CppIntfGenerator extends CppGenerator {
 
   genFuncDecl(cls, m, name) {
     let retType = this.isCast(m) ? cls.name : m.return.type;
-    return `${this.mapType(retType)} ${name}${this.genParamList(m)} `;
+    return `${this.mapType(retType)} ${name}${this.genParamsDecl(m)} `;
   }
 
   genFunc(cls, m) {

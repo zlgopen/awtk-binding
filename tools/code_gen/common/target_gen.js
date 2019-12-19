@@ -6,15 +6,17 @@ class TargetGen extends CodeGen {
     super()
     this.classNamePrefix = 'T';
     this.returnDocKey = 'return';
+    this.docPrefixFirst = '/**';
+    this.docPrefix = ' *';
+    this.docPrefixLast = ' */';
+    this.classBlockBegin = ' { \n';
+    this.classBlockEnd = '};';
+    this.thisArg = 'this';
+    this.nullPtr = 'null';
+    this.nullNativePtr = 'null';
+    this.newOperator = 'new';
   }
 
-  getNull() {
-    return 'null';
-  }
-
-  getNativeNull() {
-    return 'null';
-  }
 
   toFuncName(clsName, mName) {
     let prefix = clsName.replace(/_t$/, '');
@@ -23,18 +25,23 @@ class TargetGen extends CodeGen {
     return this.camelCase(name);
   }
 
-  toEnumValue(enumInfo, result) {
-    return `   return ${result};\n`;
+  genReturnEnum(enumInfo, result) {
+    return `    return ${result};\n`;
   }
 
-  genCreateObject(cls, m, arg) {
+  genReturnObject(cls, m, arg) {
     let clsName = this.toClassName(this.getClassName(cls));
-    return `   return new ${clsName}(${arg});\n`;
+    return `    return ${this.newOperator} ${clsName}(${arg});\n`;
+  }
+  
+  genReturnValue(arg) {
+    return `    return ${arg};\n`;
   }
 
   genCallMethod(cls, m) {
     let returnType = null;
-    let result = `${m.name}${this.genCallParamList(m)}`;
+    let result = `${m.name}${this.genCallParamsDecl(m)}`;
+
     if (this.isCast(m) || this.isConstructor(m)) {
       returnType = cls.name;
     } else {
@@ -43,18 +50,19 @@ class TargetGen extends CodeGen {
 
     let classInfo = this.getClassInfo(returnType);
     let enumInfo = this.getEnumInfo(returnType);
+
     if (classInfo) {
-      return this.genCreateObject(classInfo, m, result);
+      return this.genReturnObject(classInfo, m, result);
     } else if (enumInfo) {
-      return this.toEnumValue(enumInfo, result);
+      return this.genReturnEnum(enumInfo, result);
     } else {
-      return `   return ${result};\n`;
+      return this.genReturnValue(result);
     }
 
     return result;
   }
 
-  genParamListNative(m) {
+  genParamsDeclNative(m) {
     let result = '';
     m.params.forEach((iter, index) => {
       if (index === 0) {
@@ -70,7 +78,7 @@ class TargetGen extends CodeGen {
     return '(' + result + ')';
   }
 
-  genParamList(m) {
+  genParamsDecl(m) {
     let result = '';
     let isNormalMethod = this.isNormalMethod(m);
 
@@ -95,10 +103,10 @@ class TargetGen extends CodeGen {
   }
 
   genGetNativeObj(type, name, isCast) {
-    return `${name} != ${this.getNull()} ? (${name}.nativeObj) : ${this.getNativeNull()}`;
+    return `${name} != ${this.nullPtr} ? (${name}.nativeObj) : ${this.nullNativePtr}`;
   }
 
-  genCallParamList(m) {
+  genCallParamsDecl(m) {
     let result = '';
     let isNormalMethod = this.isNormalMethod(m);
 
@@ -108,7 +116,7 @@ class TargetGen extends CodeGen {
 
       if (index == 0) {
         if (isNormalMethod) {
-          result += this.genGetNativeObj(type, "this", false);
+          result += this.genGetNativeObj(type, this.thisArg, false);
           return;
         } else if (this.isCast(m)) {
           result += this.genGetNativeObj(type, name, true);
@@ -137,7 +145,6 @@ class TargetGen extends CodeGen {
   genClassPost(cls) {
     return '';
   }
-
 
   removeCode(str, start, end) {
     let result = '';
@@ -171,7 +178,7 @@ class TargetGen extends CodeGen {
 
     result = result.replace(/\r\n/g, '\n');
     result = result.replace(/\r/g, '\n');
-    result = result.replace(/\n/g, '\n * ');
+    result = result.replace(/\n/g, '\n' + this.docPrefix);
     result = result.replace(/ * >/g, '');
     return result;
   }
@@ -179,10 +186,10 @@ class TargetGen extends CodeGen {
   genGeneralDoc(item) {
     let desc = this.tidyDoc(item.desc);
     let result = `
-/**
- * ${desc}
- *
- */
+${this.docPrefixFirst}
+${this.docPrefix} ${desc}
+${this.docPrefix}
+${this.docPrefixLast}
 `;
 
     return result;
@@ -215,19 +222,19 @@ class TargetGen extends CodeGen {
     let isNormalMethod = this.isNormalMethod(m);
 
     m.params.forEach((iter, index) => {
-      if(index === 0 && isNormalMethod) {
+      if (index === 0 && isNormalMethod) {
         return;
       }
 
-      paramsDesc += ` * @param ${iter.name} ${iter.desc}\n`;
+      paramsDesc += `${this.docPrefix} @param ${iter.name} ${iter.desc}\n`;
     });
 
     return `
-/**
- * ${desc}
- * \n${paramsDesc} *
- * @${this.returnDocKey} ${retDesc}
- */
+${this.docPrefixFirst}
+${this.docPrefix} ${desc}
+${this.docPrefix} \n${paramsDesc} 
+${this.docPrefix} @${this.returnDocKey} ${retDesc}
+${this.docPrefixLast}
 `;
   }
 
@@ -236,7 +243,11 @@ class TargetGen extends CodeGen {
   }
 
   genClassExtends(cls) {
-    return ` extends ${this.toClassName(this.getParentClassName(cls))} {\n`
+    return ` extends ${this.toClassName(this.getParentClassName(cls))}`
+  }
+
+  genClassExtendsBase(cls) {
+    return '';
   }
 
   genSetPropertyWithSetter(cls, p) {
@@ -254,8 +265,10 @@ class TargetGen extends CodeGen {
     if (cls.parent) {
       result += this.genClassExtends(cls);
     } else {
-      result += ' {\n';
+      result += this.genClassExtendsBase(cls);
     }
+
+    result += this.classBlockBegin;
 
     result += this.genClassPre(cls);
     if (!this.isFake(cls)) {
@@ -267,7 +280,7 @@ class TargetGen extends CodeGen {
 
   genClassEnd(cls) {
     let result = this.genClassPost(cls);
-    result += '}\n\n';
+    result += this.classBlockEnd;
 
     return result;
   }
@@ -285,14 +298,14 @@ class TargetGen extends CodeGen {
 
     if (cls.properties) {
       cls.properties.forEach((p) => {
+        if (this.isReadable(p)) {
+          result += this.genGetProperty(cls, p);
+        }
+
         if (this.isWritable(p)) {
           result += this.genSetProperty(cls, p);
         } else if (this.hasSetterFor(cls, p.name)) {
           result += this.genSetPropertyWithSetter(cls, p);
-        }
-
-        if (this.isReadable(p)) {
-          result += this.genGetProperty(cls, p);
         }
       });
     }

@@ -8,11 +8,7 @@ class TypescriptGenerator extends TargetGen {
   }
   
   genGetNativeObj(type, name, isCast) {
-    if(isCast) {
-      return `${name} != ${this.getNull()} ? (${name}.nativeObj || ${name}) : ${this.getNativeNull()}`;
-    } else {
-      return `${name} != ${this.getNull()} ? (${name}.nativeObj || ${name}) : ${this.getNativeNull()}`;
-    }
+    return `${name} != ${this.nullPtr} ? (${name}.nativeObj || ${name}) : ${this.nullNativePtr}`;
   }
   
   mapType(type) {
@@ -66,7 +62,7 @@ class TypescriptGenerator extends TargetGen {
   genFuncDecl(cls, m, name) {
     let retType = this.isCast(m) ? cls.name : m.return.type;
 
-    return `${name}${this.genParamList(m)} : ${this.mapType(retType)} `;
+    return `${name}${this.genParamsDecl(m)} : ${this.mapType(retType)} `;
   }
 
   genFunc(cls, m) {
@@ -129,7 +125,7 @@ class TypescriptGenerator extends TargetGen {
   }
 
   genFuncNativeDecl(cls, m) {
-    return `declare function ${m.name}${this.genParamListNative(m)} : ${this.mapType(m.return.type)};\n`;
+    return `declare function ${m.name}${this.genParamsDeclNative(m)} : ${this.mapType(m.return.type)};\n`;
   }
 
   genGetPropNativeDecl(cls, p) {

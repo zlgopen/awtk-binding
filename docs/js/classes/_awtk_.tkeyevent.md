@@ -53,7 +53,7 @@
 
 *Overrides [TEvent](_awtk_.tevent.md).[constructor](_awtk_.tevent.md#constructor)*
 
-*Defined in [awtk.ts:15784](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L15784)*
+*Defined in [awtk.ts:15672](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L15672)*
 
 **Parameters:**
 
@@ -71,7 +71,7 @@ Name | Type |
 
 *Overrides [TEvent](_awtk_.tevent.md).[nativeObj](_awtk_.tevent.md#nativeobj)*
 
-*Defined in [awtk.ts:15784](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L15784)*
+*Defined in [awtk.ts:15672](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L15672)*
 
 ## Accessors
 
@@ -79,7 +79,7 @@ Name | Type |
 
 • **get alt**(): *boolean*
 
-*Defined in [awtk.ts:15815](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L15815)*
+*Defined in [awtk.ts:15703](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L15703)*
 
 alt键是否按下。
 
@@ -91,7 +91,7 @@ ___
 
 • **get capslock**(): *boolean*
 
-*Defined in [awtk.ts:15916](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L15916)*
+*Defined in [awtk.ts:15804](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L15804)*
 
 capslock键是否按下。
 
@@ -103,7 +103,7 @@ ___
 
 • **get cmd**(): *boolean*
 
-*Defined in [awtk.ts:15898](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L15898)*
+*Defined in [awtk.ts:15786](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L15786)*
 
 left shift键是否按下。
 cmd/win键是否按下。
@@ -116,7 +116,7 @@ ___
 
 • **get ctrl**(): *boolean*
 
-*Defined in [awtk.ts:15843](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L15843)*
+*Defined in [awtk.ts:15731](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L15731)*
 
 right alt键是否按下。
 ctrl键是否按下。
@@ -129,7 +129,7 @@ ___
 
 • **get key**(): *number*
 
-*Defined in [awtk.ts:15806](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L15806)*
+*Defined in [awtk.ts:15694](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L15694)*
 
 键值。
 
@@ -141,7 +141,7 @@ ___
 
 • **get lalt**(): *boolean*
 
-*Defined in [awtk.ts:15824](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L15824)*
+*Defined in [awtk.ts:15712](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L15712)*
 
 left alt键是否按下。
 
@@ -153,7 +153,7 @@ ___
 
 • **get lctrl**(): *boolean*
 
-*Defined in [awtk.ts:15852](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L15852)*
+*Defined in [awtk.ts:15740](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L15740)*
 
 left ctrl键是否按下。
 
@@ -165,7 +165,7 @@ ___
 
 • **get lshift**(): *boolean*
 
-*Defined in [awtk.ts:15879](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L15879)*
+*Defined in [awtk.ts:15767](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L15767)*
 
 left shift键是否按下。
 
@@ -177,7 +177,7 @@ ___
 
 • **get menu**(): *boolean*
 
-*Defined in [awtk.ts:15907](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L15907)*
+*Defined in [awtk.ts:15795](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L15795)*
 
 menu键是否按下。
 
@@ -189,7 +189,7 @@ ___
 
 • **get ralt**(): *boolean*
 
-*Defined in [awtk.ts:15833](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L15833)*
+*Defined in [awtk.ts:15721](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L15721)*
 
 right alt键是否按下。
 
@@ -201,7 +201,7 @@ ___
 
 • **get rctrl**(): *boolean*
 
-*Defined in [awtk.ts:15861](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L15861)*
+*Defined in [awtk.ts:15749](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L15749)*
 
 right ctrl键是否按下。
 
@@ -213,7 +213,7 @@ ___
 
 • **get rshift**(): *boolean*
 
-*Defined in [awtk.ts:15888](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L15888)*
+*Defined in [awtk.ts:15776](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L15776)*
 
 right shift键是否按下。
 
@@ -225,7 +225,7 @@ ___
 
 • **get shift**(): *boolean*
 
-*Defined in [awtk.ts:15870](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L15870)*
+*Defined in [awtk.ts:15758](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L15758)*
 
 shift键是否按下。
 
@@ -239,7 +239,7 @@ ___
 
 *Inherited from [TEvent](_awtk_.tevent.md).[target](_awtk_.tevent.md#target)*
 
-*Defined in [awtk.ts:1696](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1696)*
+*Defined in [awtk.ts:1703](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1703)*
 
 事件发生的目标对象。
 
@@ -253,7 +253,7 @@ ___
 
 *Inherited from [TEvent](_awtk_.tevent.md).[time](_awtk_.tevent.md#time)*
 
-*Defined in [awtk.ts:1687](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1687)*
+*Defined in [awtk.ts:1694](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1694)*
 
 事件发生的时间。
 
@@ -267,7 +267,7 @@ ___
 
 *Inherited from [TEvent](_awtk_.tevent.md).[type](_awtk_.tevent.md#type)*
 
-*Defined in [awtk.ts:1678](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1678)*
+*Defined in [awtk.ts:1685](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1685)*
 
 类型。
 
@@ -281,7 +281,7 @@ ___
 
 *Inherited from [TEvent](_awtk_.tevent.md).[destroy](_awtk_.tevent.md#destroy)*
 
-*Defined in [awtk.ts:1669](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1669)*
+*Defined in [awtk.ts:1676](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1676)*
 
 销毁事件对象。
 
@@ -299,7 +299,7 @@ ___
 
 *Overrides [TEvent](_awtk_.tevent.md).[cast](_awtk_.tevent.md#static-cast)*
 
-*Defined in [awtk.ts:15797](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L15797)*
+*Defined in [awtk.ts:15685](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L15685)*
 
 把event对象转key_event_t对象，主要给脚本语言使用。
 
@@ -321,7 +321,7 @@ ___
 
 *Inherited from [TEvent](_awtk_.tevent.md).[create](_awtk_.tevent.md#static-create)*
 
-*Defined in [awtk.ts:1656](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L1656)*
+*Defined in [awtk.ts:1663](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1663)*
 
 创建event对象。
 

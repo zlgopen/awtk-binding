@@ -76,11 +76,7 @@ $(function() {
  <div class="center">
   <img src="class_t_emitter.png" usemap="#TEmitter_map" alt=""/>
   <map id="TEmitter_map" name="TEmitter_map">
-<area href="class_t_object.html" alt="TObject" shape="rect" coords="159,56,255,80"/>
-<area href="class_t_idle_info.html" alt="TIdleInfo" shape="rect" coords="0,112,96,136"/>
-<area href="class_t_object_array.html" alt="TObjectArray" shape="rect" coords="106,112,202,136"/>
-<area href="class_t_object_default.html" alt="TObjectDefault" shape="rect" coords="212,112,308,136"/>
-<area href="class_t_timer_info.html" alt="TTimerInfo" shape="rect" coords="318,112,414,136"/>
+<area href="class_t_object.html" alt="TObject" shape="rect" coords="0,56,57,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -273,7 +269,10 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         </tr>
       </table>
 </div><div class="memdoc">
-<p>分发事件。 对emitter_dispatch的包装，分发一个简单的事件。 如果当前分发的回调函数返回RET_STOP，dispatch中断分发，并返回RET_STOP，否则返回RET_OK。</p>
+<p>分发事件。 </p><blockquote class="doxtable">
+<p>对emitter_dispatch的包装，分发一个简单的事件。 </p>
+</blockquote>
+<p>如果当前分发的回调函数返回RET_STOP，dispatch中断分发，并返回RET_STOP，否则返回RET_OK。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>事件类型。</td></tr>

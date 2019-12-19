@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AWTK-JAVA: awtk.TTimer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AWTK-JAVA
+   </div>
+   <div id="projectbrief">AWTK JAVA API</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>awtk</b></li><li class="navelem"><a class="el" href="classawtk_1_1_t_timer.html">TTimer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="classawtk_1_1_t_timer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">awtk.TTimer类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a61d4d292d7ae2cca6e169a3e08dc4ac9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_timer.html#a61d4d292d7ae2cca6e169a3e08dc4ac9">add</a> (TOnTimer on_timer, long ctx, int duration)</td></tr>
+<tr class="separator:a61d4d292d7ae2cca6e169a3e08dc4ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa98fdd8bd7ea95cc0efaf28d68c7807d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_timer.html#aa98fdd8bd7ea95cc0efaf28d68c7807d">remove</a> (int timer_id)</td></tr>
+<tr class="separator:aa98fdd8bd7ea95cc0efaf28d68c7807d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e60d742d29ccbe48e3a285ce497822d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_timer.html#a6e60d742d29ccbe48e3a285ce497822d">reset</a> (int timer_id)</td></tr>
+<tr class="separator:a6e60d742d29ccbe48e3a285ce497822d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b2196b6aeac5988564497a3b5a12dcb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_timer.html#a2b2196b6aeac5988564497a3b5a12dcb">modify</a> (int timer_id, int duration)</td></tr>
+<tr class="separator:a2b2196b6aeac5988564497a3b5a12dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>定时器系统。</p>
+<blockquote class="doxtable">
+<p>本定时器精度较低，最高精度为1000/FPS，如果需要高精度的定时器，请用OS提供的定时器。 </p>
+</blockquote>
+<p>示例：</p>
+<blockquote class="doxtable">
+<p>在非GUI线程请用timer_queue。</p>
+</blockquote>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a61d4d292d7ae2cca6e169a3e08dc4ac9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61d4d292d7ae2cca6e169a3e08dc4ac9">&#9670;&nbsp;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int awtk.TTimer.add </td>
+          <td>(</td>
+          <td class="paramtype">TOnTimer&#160;</td>
+          <td class="paramname"><em>on_timer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>duration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>增加一个timer。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">on_timer</td><td>timer回调函数。 </td></tr>
+    <tr><td class="paramname">ctx</td><td>timer回调函数的上下文。 </td></tr>
+    <tr><td class="paramname">duration</td><td>时间。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回timer的ID，TK_INVALID_ID表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a2b2196b6aeac5988564497a3b5a12dcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b2196b6aeac5988564497a3b5a12dcb">&#9670;&nbsp;</a></span>modify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TTimer.modify </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timer_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>duration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>修改指定的timer的duration，修改之后定时器重新开始计时。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer_id</td><td>timerID。 </td></tr>
+    <tr><td class="paramname">duration</td><td>新的时间。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="aa98fdd8bd7ea95cc0efaf28d68c7807d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa98fdd8bd7ea95cc0efaf28d68c7807d">&#9670;&nbsp;</a></span>remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TTimer.remove </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timer_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>删除指定的timer。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer_id</td><td>timerID。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a6e60d742d29ccbe48e3a285ce497822d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e60d742d29ccbe48e3a285ce497822d">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TTimer.reset </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timer_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>重置指定的timer，重置之后定时器重新开始计时。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer_id</td><td>timerID。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>output/TTimer.java</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

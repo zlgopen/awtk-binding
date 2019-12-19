@@ -17,7 +17,7 @@
 
 • **NONE**: =  CLIP_BOARD_DATA_TYPE_NONE()
 
-*Defined in [awtk.ts:10021](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L10021)*
+*Defined in [awtk.ts:9983](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L9983)*
 
 无数据。
 
@@ -27,6 +27,6 @@ ___
 
 • **TEXT**: =  CLIP_BOARD_DATA_TYPE_TEXT()
 
-*Defined in [awtk.ts:10027](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L10027)*
+*Defined in [awtk.ts:9989](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L9989)*
 
 UTF8文本。

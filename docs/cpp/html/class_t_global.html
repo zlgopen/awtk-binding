@@ -71,10 +71,10 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a2dfbf0172ed5a4a02cfc8ac3ce35f8b8"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#a2dfbf0172ed5a4a02cfc8ac3ce35f8b8">TkInit</a> (wh_t w, wh_t h, app_type_t app_type, const char *app_name, const char *app_root)</td></tr>
-<tr class="separator:a2dfbf0172ed5a4a02cfc8ac3ce35f8b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2af9ce31a06b8a9ccf68344669c46950"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#a2af9ce31a06b8a9ccf68344669c46950">TkRun</a> ()</td></tr>
-<tr class="separator:a2af9ce31a06b8a9ccf68344669c46950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcd2b5b875d64ea3ff108b64308a1f0f"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#afcd2b5b875d64ea3ff108b64308a1f0f">Init</a> (wh_t w, wh_t h, app_type_t app_type, const char *app_name, const char *app_root)</td></tr>
+<tr class="separator:afcd2b5b875d64ea3ff108b64308a1f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae63c53a967e921aceced48b52e60fd23"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#ae63c53a967e921aceced48b52e60fd23">Run</a> ()</td></tr>
+<tr class="separator:ae63c53a967e921aceced48b52e60fd23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dbb7a28c76f571b5ab84ae747b5bc33"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#a9dbb7a28c76f571b5ab84ae747b5bc33">Quit</a> ()</td></tr>
 <tr class="separator:a9dbb7a28c76f571b5ab84ae747b5bc33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1502909469ee9ac4d51dd7497e76284e"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#a1502909469ee9ac4d51dd7497e76284e">GetPointerX</a> ()</td></tr>
@@ -141,8 +141,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a801a449d0d5caa0ca5554c39d43f394f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a801a449d0d5caa0ca5554c39d43f394f">&#9670;&nbsp;</a></span>IsPointerPressed()</h2>
+<a id="afcd2b5b875d64ea3ff108b64308a1f0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcd2b5b875d64ea3ff108b64308a1f0f">&#9670;&nbsp;</a></span>Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -151,61 +151,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool TGlobal::IsPointerPressed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>获取全局指针是否按下。</p>
-<dl class="section return"><dt>返回</dt><dd>返回全局指针是否按下。 </dd></dl>
-
-</div>
-</div>
-<a id="a9dbb7a28c76f571b5ab84ae747b5bc33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9dbb7a28c76f571b5ab84ae747b5bc33">&#9670;&nbsp;</a></span>Quit()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ret_t TGlobal::Quit </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>退出TK事件主循环。</p>
-<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
-
-</div>
-</div>
-<a id="a2dfbf0172ed5a4a02cfc8ac3ce35f8b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2dfbf0172ed5a4a02cfc8ac3ce35f8b8">&#9670;&nbsp;</a></span>TkInit()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ret_t TGlobal::TkInit </td>
+          <td class="memname">ret_t TGlobal::Init </td>
           <td>(</td>
           <td class="paramtype">wh_t&#160;</td>
           <td class="paramname"><em>w</em>, </td>
@@ -261,8 +207,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a2af9ce31a06b8a9ccf68344669c46950"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2af9ce31a06b8a9ccf68344669c46950">&#9670;&nbsp;</a></span>TkRun()</h2>
+<a id="a801a449d0d5caa0ca5554c39d43f394f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a801a449d0d5caa0ca5554c39d43f394f">&#9670;&nbsp;</a></span>IsPointerPressed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -271,7 +217,61 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ret_t TGlobal::TkRun </td>
+          <td class="memname">bool TGlobal::IsPointerPressed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取全局指针是否按下。</p>
+<dl class="section return"><dt>返回</dt><dd>返回全局指针是否按下。 </dd></dl>
+
+</div>
+</div>
+<a id="a9dbb7a28c76f571b5ab84ae747b5bc33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dbb7a28c76f571b5ab84ae747b5bc33">&#9670;&nbsp;</a></span>Quit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TGlobal::Quit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>退出TK事件主循环。</p>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="ae63c53a967e921aceced48b52e60fd23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae63c53a967e921aceced48b52e60fd23">&#9670;&nbsp;</a></span>Run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TGlobal::Run </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

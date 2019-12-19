@@ -225,12 +225,10 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 <p>cairo和skia体积太大，不适合嵌入式平台，但在PC平台也是一种选择。</p>
 <p>目前我们只提供了基于nanovg的实现，支持软件渲染和硬件渲染。</p>
 <p>我们对nanovg进行了一些改进:</p>
-<ul>
-<li>可以用agg/agge实现软件渲染(暂时不支持文本绘制)。</li>
-<li>可以用bgfx使用DirectX(Windows平台)和Metal(iOS)平台硬件加速。</li>
-</ul>
+<p>可以用agg/agge实现软件渲染(暂时不支持文本绘制)。</p>
+<p>可以用bgfx使用DirectX(Windows平台)和Metal(iOS)平台硬件加速。</p>
 <p>示例：</p>
-<p>请参考：https://www.w3schools.com/tags/ref_canvas.asp </p>
+<p>&gt;请参考：https://www.w3schools.com/tags/ref_canvas.asp </p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a526c1eb6abb162b159fca0582d9b0c40"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a526c1eb6abb162b159fca0582d9b0c40">&#9670;&nbsp;</a></span>Arc()</h2>
@@ -539,7 +537,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
       </table>
 </div><div class="memdoc">
 <p>闭合路径。</p>
-<p>闭合路径是指把起点和终点连接起来，形成一个封闭的多边形。</p>
+<p>&gt;闭合路径是指把起点和终点连接起来，形成一个封闭的多边形。</p>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
@@ -1148,7 +1146,9 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
       </table>
 </div><div class="memdoc">
 <p>恢复上次save的状态。</p>
-<p>save/restore必须配套使用，否则可能导致状态混乱。</p>
+<blockquote class="doxtable">
+<p>save/restore必须配套使用，否则可能导致状态混乱。 </p>
+</blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
@@ -1252,7 +1252,9 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
       </table>
 </div><div class="memdoc">
 <p>保存当前的状态。如颜色和矩阵等信息。</p>
-<p>save/restore必须配套使用，否则可能导致状态混乱。</p>
+<blockquote class="doxtable">
+<p>save/restore必须配套使用，否则可能导致状态混乱。 </p>
+</blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>

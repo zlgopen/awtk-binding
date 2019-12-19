@@ -30,7 +30,7 @@
 
 \+ **new TFontManager**(`nativeObj`: any): *[TFontManager](_awtk_.tfontmanager.md)*
 
-*Defined in [awtk.ts:3534](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L3534)*
+*Defined in [awtk.ts:3535](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L3535)*
 
 **Parameters:**
 
@@ -46,7 +46,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:3534](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L3534)*
+*Defined in [awtk.ts:3535](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L3535)*
 
 ## Methods
 
@@ -54,7 +54,7 @@ Name | Type |
 
 ▸ **unloadAll**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:3559](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L3559)*
+*Defined in [awtk.ts:3560](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L3560)*
 
 卸载全部字体。
 
@@ -68,7 +68,7 @@ ___
 
 ▸ **unloadFont**(`name`: string, `size`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:3548](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L3548)*
+*Defined in [awtk.ts:3549](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L3549)*
 
 卸载指定的字体。
 

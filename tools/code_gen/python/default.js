@@ -188,6 +188,9 @@ ${this.regEntries}
     return result;
   }
 
+  genClassInit(cls) {
+    return '';
+  }
 
   static gen() {
     const gen = new DefaultGenerator();

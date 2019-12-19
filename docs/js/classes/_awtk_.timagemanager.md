@@ -29,7 +29,7 @@
 
 \+ **new TImageManager**(`nativeObj`: any): *[TImageManager](_awtk_.timagemanager.md)*
 
-*Defined in [awtk.ts:3637](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L3637)*
+*Defined in [awtk.ts:3634](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L3634)*
 
 **Parameters:**
 
@@ -45,7 +45,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:3637](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L3637)*
+*Defined in [awtk.ts:3634](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L3634)*
 
 ## Methods
 
@@ -53,7 +53,7 @@ Name | Type |
 
 ▸ **getBitmap**(`name`: string, `image`: [TBitmap](_awtk_.tbitmap.md)): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:3663](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L3663)*
+*Defined in [awtk.ts:3660](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L3660)*
 
 获取指定的图片。
 先从缓存查找，如果没找到，再加载并缓存。
@@ -75,7 +75,7 @@ ___
 
 ▸ **instance**(): *[TImageManager](_awtk_.timagemanager.md)*
 
-*Defined in [awtk.ts:3649](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L3649)*
+*Defined in [awtk.ts:3646](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L3646)*
 
 获取缺省的图片管理器。
 

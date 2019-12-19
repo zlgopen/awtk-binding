@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['quadratic_5fin',['QUADRATIC_IN',['../enumawtk_1_1_easing_type.html#a9cee70202975e4c847644538f3218b85',1,'awtk::EasingType']]],
-  ['quadratic_5finout',['QUADRATIC_INOUT',['../enumawtk_1_1_easing_type.html#a6ceda2fee13a3843bbf30d57cc85bcca',1,'awtk::EasingType']]],
-  ['quadratic_5fout',['QUADRATIC_OUT',['../enumawtk_1_1_easing_type.html#a42d30998d71a7156a5b17f3311784f44',1,'awtk::EasingType']]],
-  ['quadto',['quadTo',['../classawtk_1_1_vgcanvas.html#a1f4bfdddbe2c7c0d104b935446476391',1,'awtk::Vgcanvas']]],
-  ['quit',['quit',['../classawtk_1_1_dialog.html#a8f879dc9fc72bd3bda9a71731985f285',1,'awtk.Dialog.quit()'],['../classawtk_1_1_global.html#a20cb43d2008ea2d16a3dca5f0ce318fa',1,'awtk.Global.quit()'],['../enumawtk_1_1_ret.html#a49ceafa68a3445ea75ca0f3e933fb0d0',1,'awtk.Ret.QUIT()']]]
+  ['quadratic_5fin',['QUADRATIC_IN',['../enumawtk_1_1_t_easing_type.html#aeae46a0e19b7ffc2dd28cf13351007bb',1,'awtk::TEasingType']]],
+  ['quadratic_5finout',['QUADRATIC_INOUT',['../enumawtk_1_1_t_easing_type.html#a8fc82d8f1a2edcfce47fcb0588b9287e',1,'awtk::TEasingType']]],
+  ['quadratic_5fout',['QUADRATIC_OUT',['../enumawtk_1_1_t_easing_type.html#a5f4f40185da5fedc62558fbee384e7e3',1,'awtk::TEasingType']]],
+  ['quadto',['quadTo',['../classawtk_1_1_t_vgcanvas.html#acb91bb09810416e97cd917170837d888',1,'awtk::TVgcanvas']]],
+  ['quit',['quit',['../classawtk_1_1_t_dialog.html#a17e9f44f1a1cd341ef54b1fd53731aa1',1,'awtk.TDialog.quit()'],['../classawtk_1_1_t_global.html#a68ed3fc28b5b42299434a85f97ba9573',1,'awtk.TGlobal.quit()'],['../enumawtk_1_1_t_ret.html#ac9f460fe37c9b37fc3b64b79f08b7347',1,'awtk.TRet.QUIT()']]]
 ];

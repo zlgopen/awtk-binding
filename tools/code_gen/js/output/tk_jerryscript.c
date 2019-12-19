@@ -1,4 +1,4 @@
-/*XXX: GENERATED CODE, DONT EDIT IT.*/
+﻿/*XXX: GENERATED CODE, DONT EDIT IT.*/
 #include "tkc/utf8.h"
 #include "tkc/mem.h"
 #include "jerryscript.h"
@@ -30,12 +30,10 @@
 #include "tkc/timer_manager.h"
 #include "tkc/time_now.h"
 #include "base/canvas.h"
-#include "tkc/path.h"
 #include "tkc/named_value.h"
 #include "tkc/mime_types.h"
 #include "tkc/idle_manager.h"
 #include "slide_view/slide_indicator.h"
-#include "tkc/fs.h"
 #include "base/clip_board.h"
 #include "tkc/easing.h"
 #include "tkc/date_time.h"
@@ -223,6 +221,16 @@ jsvalue_t wrap_event_t_get_prop_target(
   return jret;
 }
 
+ret_t event_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"event_cast", wrap_event_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"event_create", wrap_event_create);
+  jerryx_handler_register_global((const jerry_char_t*)"event_t_get_prop_type", wrap_event_t_get_prop_type);
+  jerryx_handler_register_global((const jerry_char_t*)"event_t_get_prop_time", wrap_event_t_get_prop_time);
+  jerryx_handler_register_global((const jerry_char_t*)"event_t_get_prop_target", wrap_event_t_get_prop_target);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_rect_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -338,6 +346,28 @@ jsvalue_t wrap_rect_t_get_prop_h(
 
   jret = jsvalue_create_int(ctx, obj->h);
   return jret;
+}
+
+ret_t rect_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"rect_create", wrap_rect_create);
+  jerryx_handler_register_global((const jerry_char_t*)"rect_set", wrap_rect_set);
+  jerryx_handler_register_global((const jerry_char_t*)"rect_cast", wrap_rect_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"rect_t_get_prop_x", wrap_rect_t_get_prop_x);
+  jerryx_handler_register_global((const jerry_char_t*)"rect_t_get_prop_y", wrap_rect_t_get_prop_y);
+  jerryx_handler_register_global((const jerry_char_t*)"rect_t_get_prop_w", wrap_rect_t_get_prop_w);
+  jerryx_handler_register_global((const jerry_char_t*)"rect_t_get_prop_h", wrap_rect_t_get_prop_h);
+
+ return RET_OK;
+}
+
+ret_t pointf_t_init(JSContext *ctx) {
+
+ return RET_OK;
+}
+
+ret_t point_t_init(JSContext *ctx) {
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_emitter_create(
@@ -486,6 +516,20 @@ jsvalue_t wrap_emitter_cast(
   return jret;
 }
 
+ret_t emitter_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"emitter_create", wrap_emitter_create);
+  jerryx_handler_register_global((const jerry_char_t*)"emitter_dispatch", wrap_emitter_dispatch);
+  jerryx_handler_register_global((const jerry_char_t*)"emitter_dispatch_simple_event", wrap_emitter_dispatch_simple_event);
+  jerryx_handler_register_global((const jerry_char_t*)"emitter_on", wrap_emitter_on);
+  jerryx_handler_register_global((const jerry_char_t*)"emitter_off", wrap_emitter_off);
+  jerryx_handler_register_global((const jerry_char_t*)"emitter_enable", wrap_emitter_enable);
+  jerryx_handler_register_global((const jerry_char_t*)"emitter_disable", wrap_emitter_disable);
+  jerryx_handler_register_global((const jerry_char_t*)"emitter_size", wrap_emitter_size);
+  jerryx_handler_register_global((const jerry_char_t*)"emitter_cast", wrap_emitter_cast);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_bitmap_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -624,6 +668,20 @@ jsvalue_t wrap_bitmap_t_get_prop_name(
 
   jret = jsvalue_create_string(ctx, obj->name);
   return jret;
+}
+
+ret_t bitmap_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"bitmap_create", wrap_bitmap_create);
+  jerryx_handler_register_global((const jerry_char_t*)"bitmap_create_ex", wrap_bitmap_create_ex);
+  jerryx_handler_register_global((const jerry_char_t*)"bitmap_get_bpp", wrap_bitmap_get_bpp);
+  jerryx_handler_register_global((const jerry_char_t*)"bitmap_t_get_prop_w", wrap_bitmap_t_get_prop_w);
+  jerryx_handler_register_global((const jerry_char_t*)"bitmap_t_get_prop_h", wrap_bitmap_t_get_prop_h);
+  jerryx_handler_register_global((const jerry_char_t*)"bitmap_t_get_prop_line_length", wrap_bitmap_t_get_prop_line_length);
+  jerryx_handler_register_global((const jerry_char_t*)"bitmap_t_get_prop_flags", wrap_bitmap_t_get_prop_flags);
+  jerryx_handler_register_global((const jerry_char_t*)"bitmap_t_get_prop_format", wrap_bitmap_t_get_prop_format);
+  jerryx_handler_register_global((const jerry_char_t*)"bitmap_t_get_prop_name", wrap_bitmap_t_get_prop_name);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_value_set_bool(
@@ -1215,6 +1273,43 @@ jsvalue_t wrap_value_cast(
   jret = jsvalue_create_pointer(ctx, ret, "value_t*");
   }
   return jret;
+}
+
+ret_t value_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"value_set_bool", wrap_value_set_bool);
+  jerryx_handler_register_global((const jerry_char_t*)"value_bool", wrap_value_bool);
+  jerryx_handler_register_global((const jerry_char_t*)"value_set_int8", wrap_value_set_int8);
+  jerryx_handler_register_global((const jerry_char_t*)"value_int8", wrap_value_int8);
+  jerryx_handler_register_global((const jerry_char_t*)"value_set_uint8", wrap_value_set_uint8);
+  jerryx_handler_register_global((const jerry_char_t*)"value_uint8", wrap_value_uint8);
+  jerryx_handler_register_global((const jerry_char_t*)"value_set_int16", wrap_value_set_int16);
+  jerryx_handler_register_global((const jerry_char_t*)"value_int16", wrap_value_int16);
+  jerryx_handler_register_global((const jerry_char_t*)"value_set_uint16", wrap_value_set_uint16);
+  jerryx_handler_register_global((const jerry_char_t*)"value_uint16", wrap_value_uint16);
+  jerryx_handler_register_global((const jerry_char_t*)"value_set_int32", wrap_value_set_int32);
+  jerryx_handler_register_global((const jerry_char_t*)"value_int32", wrap_value_int32);
+  jerryx_handler_register_global((const jerry_char_t*)"value_set_uint32", wrap_value_set_uint32);
+  jerryx_handler_register_global((const jerry_char_t*)"value_set_int64", wrap_value_set_int64);
+  jerryx_handler_register_global((const jerry_char_t*)"value_int64", wrap_value_int64);
+  jerryx_handler_register_global((const jerry_char_t*)"value_set_uint64", wrap_value_set_uint64);
+  jerryx_handler_register_global((const jerry_char_t*)"value_uint64", wrap_value_uint64);
+  jerryx_handler_register_global((const jerry_char_t*)"value_set_float", wrap_value_set_float);
+  jerryx_handler_register_global((const jerry_char_t*)"value_float32", wrap_value_float32);
+  jerryx_handler_register_global((const jerry_char_t*)"value_set_double", wrap_value_set_double);
+  jerryx_handler_register_global((const jerry_char_t*)"value_double", wrap_value_double);
+  jerryx_handler_register_global((const jerry_char_t*)"value_dup_str", wrap_value_dup_str);
+  jerryx_handler_register_global((const jerry_char_t*)"value_str", wrap_value_str);
+  jerryx_handler_register_global((const jerry_char_t*)"value_is_null", wrap_value_is_null);
+  jerryx_handler_register_global((const jerry_char_t*)"value_set_int", wrap_value_set_int);
+  jerryx_handler_register_global((const jerry_char_t*)"value_set_object", wrap_value_set_object);
+  jerryx_handler_register_global((const jerry_char_t*)"value_object", wrap_value_object);
+  jerryx_handler_register_global((const jerry_char_t*)"value_set_token", wrap_value_set_token);
+  jerryx_handler_register_global((const jerry_char_t*)"value_token", wrap_value_token);
+  jerryx_handler_register_global((const jerry_char_t*)"value_create", wrap_value_create);
+  jerryx_handler_register_global((const jerry_char_t*)"value_reset", wrap_value_reset);
+  jerryx_handler_register_global((const jerry_char_t*)"value_cast", wrap_value_cast);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_object_ref(
@@ -1912,6 +2007,46 @@ jsvalue_t wrap_object_t_get_prop_name(
   return jret;
 }
 
+ret_t object_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"object_ref", wrap_object_ref);
+  jerryx_handler_register_global((const jerry_char_t*)"object_get_type", wrap_object_get_type);
+  jerryx_handler_register_global((const jerry_char_t*)"object_get_desc", wrap_object_get_desc);
+  jerryx_handler_register_global((const jerry_char_t*)"object_get_size", wrap_object_get_size);
+  jerryx_handler_register_global((const jerry_char_t*)"object_is_collection", wrap_object_is_collection);
+  jerryx_handler_register_global((const jerry_char_t*)"object_set_name", wrap_object_set_name);
+  jerryx_handler_register_global((const jerry_char_t*)"object_compare", wrap_object_compare);
+  jerryx_handler_register_global((const jerry_char_t*)"object_get_prop", wrap_object_get_prop);
+  jerryx_handler_register_global((const jerry_char_t*)"object_get_prop_str", wrap_object_get_prop_str);
+  jerryx_handler_register_global((const jerry_char_t*)"object_get_prop_pointer", wrap_object_get_prop_pointer);
+  jerryx_handler_register_global((const jerry_char_t*)"object_get_prop_object", wrap_object_get_prop_object);
+  jerryx_handler_register_global((const jerry_char_t*)"object_get_prop_int", wrap_object_get_prop_int);
+  jerryx_handler_register_global((const jerry_char_t*)"object_get_prop_bool", wrap_object_get_prop_bool);
+  jerryx_handler_register_global((const jerry_char_t*)"object_get_prop_float", wrap_object_get_prop_float);
+  jerryx_handler_register_global((const jerry_char_t*)"object_remove_prop", wrap_object_remove_prop);
+  jerryx_handler_register_global((const jerry_char_t*)"object_set_prop", wrap_object_set_prop);
+  jerryx_handler_register_global((const jerry_char_t*)"object_set_prop_str", wrap_object_set_prop_str);
+  jerryx_handler_register_global((const jerry_char_t*)"object_set_prop_object", wrap_object_set_prop_object);
+  jerryx_handler_register_global((const jerry_char_t*)"object_set_prop_int", wrap_object_set_prop_int);
+  jerryx_handler_register_global((const jerry_char_t*)"object_set_prop_bool", wrap_object_set_prop_bool);
+  jerryx_handler_register_global((const jerry_char_t*)"object_set_prop_float", wrap_object_set_prop_float);
+  jerryx_handler_register_global((const jerry_char_t*)"object_copy_prop", wrap_object_copy_prop);
+  jerryx_handler_register_global((const jerry_char_t*)"object_has_prop", wrap_object_has_prop);
+  jerryx_handler_register_global((const jerry_char_t*)"object_eval", wrap_object_eval);
+  jerryx_handler_register_global((const jerry_char_t*)"object_can_exec", wrap_object_can_exec);
+  jerryx_handler_register_global((const jerry_char_t*)"object_exec", wrap_object_exec);
+  jerryx_handler_register_global((const jerry_char_t*)"object_notify_changed", wrap_object_notify_changed);
+  jerryx_handler_register_global((const jerry_char_t*)"object_get_prop_str_by_path", wrap_object_get_prop_str_by_path);
+  jerryx_handler_register_global((const jerry_char_t*)"object_get_prop_pointer_by_path", wrap_object_get_prop_pointer_by_path);
+  jerryx_handler_register_global((const jerry_char_t*)"object_get_prop_object_by_path", wrap_object_get_prop_object_by_path);
+  jerryx_handler_register_global((const jerry_char_t*)"object_get_prop_int_by_path", wrap_object_get_prop_int_by_path);
+  jerryx_handler_register_global((const jerry_char_t*)"object_get_prop_bool_by_path", wrap_object_get_prop_bool_by_path);
+  jerryx_handler_register_global((const jerry_char_t*)"object_get_prop_float_by_path", wrap_object_get_prop_float_by_path);
+  jerryx_handler_register_global((const jerry_char_t*)"object_t_get_prop_ref_count", wrap_object_t_get_prop_ref_count);
+  jerryx_handler_register_global((const jerry_char_t*)"object_t_get_prop_name", wrap_object_t_get_prop_name);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_tk_init(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -2021,6 +2156,17 @@ jsvalue_t wrap_tk_is_pointer_pressed(
   return jret;
 }
 
+ret_t global_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"tk_init", wrap_tk_init);
+  jerryx_handler_register_global((const jerry_char_t*)"tk_run", wrap_tk_run);
+  jerryx_handler_register_global((const jerry_char_t*)"tk_quit", wrap_tk_quit);
+  jerryx_handler_register_global((const jerry_char_t*)"tk_get_pointer_x", wrap_tk_get_pointer_x);
+  jerryx_handler_register_global((const jerry_char_t*)"tk_get_pointer_y", wrap_tk_get_pointer_y);
+  jerryx_handler_register_global((const jerry_char_t*)"tk_is_pointer_pressed", wrap_tk_is_pointer_pressed);
+
+ return RET_OK;
+}
+
 jsvalue_t get_DIALOG_QUIT_NONE(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -2079,6 +2225,17 @@ jsvalue_t get_DIALOG_QUIT_OTHER(
   )  {
   void* ctx = NULL;
   return jsvalue_create_int(ctx, DIALOG_QUIT_OTHER);
+}
+
+ret_t dialog_quit_code_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"DIALOG_QUIT_NONE", get_DIALOG_QUIT_NONE);
+  jerryx_handler_register_global((const jerry_char_t*)"DIALOG_QUIT_OK", get_DIALOG_QUIT_OK);
+  jerryx_handler_register_global((const jerry_char_t*)"DIALOG_QUIT_YES", get_DIALOG_QUIT_YES);
+  jerryx_handler_register_global((const jerry_char_t*)"DIALOG_QUIT_CANCEL", get_DIALOG_QUIT_CANCEL);
+  jerryx_handler_register_global((const jerry_char_t*)"DIALOG_QUIT_NO", get_DIALOG_QUIT_NO);
+  jerryx_handler_register_global((const jerry_char_t*)"DIALOG_QUIT_OTHER", get_DIALOG_QUIT_OTHER);
+
+ return RET_OK;
 }
 
 jsvalue_t get_EVT_POINTER_DOWN(
@@ -2721,6 +2878,26 @@ jsvalue_t get_EVT_THEME_CHANGED(
   return jsvalue_create_int(ctx, EVT_THEME_CHANGED);
 }
 
+jsvalue_t get_EVT_WIDGET_ADD_CHILD(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  return jsvalue_create_int(ctx, EVT_WIDGET_ADD_CHILD);
+}
+
+jsvalue_t get_EVT_WIDGET_REMOVE_CHILD(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  return jsvalue_create_int(ctx, EVT_WIDGET_REMOVE_CHILD);
+}
+
 jsvalue_t get_EVT_REQ_START(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -2821,6 +2998,87 @@ jsvalue_t get_EVT_DESTROY(
   return jsvalue_create_int(ctx, EVT_DESTROY);
 }
 
+ret_t event_type_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_POINTER_DOWN", get_EVT_POINTER_DOWN);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_POINTER_DOWN_BEFORE_CHILDREN", get_EVT_POINTER_DOWN_BEFORE_CHILDREN);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_POINTER_MOVE", get_EVT_POINTER_MOVE);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_POINTER_MOVE_BEFORE_CHILDREN", get_EVT_POINTER_MOVE_BEFORE_CHILDREN);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_POINTER_UP", get_EVT_POINTER_UP);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_POINTER_UP_BEFORE_CHILDREN", get_EVT_POINTER_UP_BEFORE_CHILDREN);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_WHEEL", get_EVT_WHEEL);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_WHEEL_BEFORE_CHILDREN", get_EVT_WHEEL_BEFORE_CHILDREN);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_POINTER_DOWN_ABORT", get_EVT_POINTER_DOWN_ABORT);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_CONTEXT_MENU", get_EVT_CONTEXT_MENU);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_POINTER_ENTER", get_EVT_POINTER_ENTER);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_POINTER_LEAVE", get_EVT_POINTER_LEAVE);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_LONG_PRESS", get_EVT_LONG_PRESS);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_CLICK", get_EVT_CLICK);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_FOCUS", get_EVT_FOCUS);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_BLUR", get_EVT_BLUR);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_KEY_DOWN", get_EVT_KEY_DOWN);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_KEY_DOWN_BEFORE_CHILDREN", get_EVT_KEY_DOWN_BEFORE_CHILDREN);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_KEY_REPEAT", get_EVT_KEY_REPEAT);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_KEY_UP", get_EVT_KEY_UP);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_KEY_UP_BEFORE_CHILDREN", get_EVT_KEY_UP_BEFORE_CHILDREN);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_WILL_MOVE", get_EVT_WILL_MOVE);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_MOVE", get_EVT_MOVE);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_WILL_RESIZE", get_EVT_WILL_RESIZE);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_RESIZE", get_EVT_RESIZE);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_WILL_MOVE_RESIZE", get_EVT_WILL_MOVE_RESIZE);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_MOVE_RESIZE", get_EVT_MOVE_RESIZE);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_VALUE_WILL_CHANGE", get_EVT_VALUE_WILL_CHANGE);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_VALUE_CHANGED", get_EVT_VALUE_CHANGED);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_VALUE_CHANGING", get_EVT_VALUE_CHANGING);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_PAINT", get_EVT_PAINT);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_BEFORE_PAINT", get_EVT_BEFORE_PAINT);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_AFTER_PAINT", get_EVT_AFTER_PAINT);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_PAINT_DONE", get_EVT_PAINT_DONE);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_LOCALE_CHANGED", get_EVT_LOCALE_CHANGED);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_ANIM_START", get_EVT_ANIM_START);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_ANIM_STOP", get_EVT_ANIM_STOP);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_ANIM_PAUSE", get_EVT_ANIM_PAUSE);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_ANIM_ONCE", get_EVT_ANIM_ONCE);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_ANIM_END", get_EVT_ANIM_END);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_WINDOW_LOAD", get_EVT_WINDOW_LOAD);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_WIDGET_LOAD", get_EVT_WIDGET_LOAD);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_WINDOW_WILL_OPEN", get_EVT_WINDOW_WILL_OPEN);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_WINDOW_OPEN", get_EVT_WINDOW_OPEN);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_WINDOW_TO_BACKGROUND", get_EVT_WINDOW_TO_BACKGROUND);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_WINDOW_TO_FOREGROUND", get_EVT_WINDOW_TO_FOREGROUND);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_WINDOW_CLOSE", get_EVT_WINDOW_CLOSE);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_REQUEST_CLOSE_WINDOW", get_EVT_REQUEST_CLOSE_WINDOW);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_TOP_WINDOW_CHANGED", get_EVT_TOP_WINDOW_CHANGED);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_IM_COMMIT", get_EVT_IM_COMMIT);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_IM_SHOW_CANDIDATES", get_EVT_IM_SHOW_CANDIDATES);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_IM_ACTION", get_EVT_IM_ACTION);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_IM_ACTION_INFO", get_EVT_IM_ACTION_INFO);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_DRAG_START", get_EVT_DRAG_START);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_DRAG", get_EVT_DRAG);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_DRAG_END", get_EVT_DRAG_END);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_SCREEN_SAVER", get_EVT_SCREEN_SAVER);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_LOW_MEMORY", get_EVT_LOW_MEMORY);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_OUT_OF_MEMORY", get_EVT_OUT_OF_MEMORY);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_ORIENTATION_WILL_CHANGED", get_EVT_ORIENTATION_WILL_CHANGED);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_ORIENTATION_CHANGED", get_EVT_ORIENTATION_CHANGED);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_WIDGET_CREATED", get_EVT_WIDGET_CREATED);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_REQUEST_QUIT_APP", get_EVT_REQUEST_QUIT_APP);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_THEME_CHANGED", get_EVT_THEME_CHANGED);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_WIDGET_ADD_CHILD", get_EVT_WIDGET_ADD_CHILD);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_WIDGET_REMOVE_CHILD", get_EVT_WIDGET_REMOVE_CHILD);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_REQ_START", get_EVT_REQ_START);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_USER_START", get_EVT_USER_START);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_NONE", get_EVT_NONE);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_PROP_WILL_CHANGE", get_EVT_PROP_WILL_CHANGE);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_PROP_CHANGED", get_EVT_PROP_CHANGED);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_ITEMS_WILL_CHANGE", get_EVT_ITEMS_WILL_CHANGE);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_ITEMS_CHANGED", get_EVT_ITEMS_CHANGED);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_PROPS_CHANGED", get_EVT_PROPS_CHANGED);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_PROGRESS", get_EVT_PROGRESS);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_DESTROY", get_EVT_DESTROY);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_font_manager_unload_font(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -2860,6 +3118,13 @@ jsvalue_t wrap_font_manager_unload_all(
   return jret;
 }
 
+ret_t font_manager_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"font_manager_unload_font", wrap_font_manager_unload_font);
+  jerryx_handler_register_global((const jerry_char_t*)"font_manager_unload_all", wrap_font_manager_unload_all);
+
+ return RET_OK;
+}
+
 jsvalue_t get_GLYPH_FMT_ALPHA(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -2890,6 +3155,14 @@ jsvalue_t get_GLYPH_FMT_RGBA(
   return jsvalue_create_int(ctx, GLYPH_FMT_RGBA);
 }
 
+ret_t glyph_format_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"GLYPH_FMT_ALPHA", get_GLYPH_FMT_ALPHA);
+  jerryx_handler_register_global((const jerry_char_t*)"GLYPH_FMT_MONO", get_GLYPH_FMT_MONO);
+  jerryx_handler_register_global((const jerry_char_t*)"GLYPH_FMT_RGBA", get_GLYPH_FMT_RGBA);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_idle_remove(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -2906,6 +3179,13 @@ jsvalue_t wrap_idle_remove(
   jret = jsvalue_create_int(ctx, ret);
   }
   return jret;
+}
+
+ret_t idle_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"idle_add", wrap_idle_add);
+  jerryx_handler_register_global((const jerry_char_t*)"idle_remove", wrap_idle_remove);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_image_manager(
@@ -2944,6 +3224,13 @@ jsvalue_t wrap_image_manager_get_bitmap(
   jret = jsvalue_create_int(ctx, ret);
   }
   return jret;
+}
+
+ret_t image_manager_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"image_manager", wrap_image_manager);
+  jerryx_handler_register_global((const jerry_char_t*)"image_manager_get_bitmap", wrap_image_manager_get_bitmap);
+
+ return RET_OK;
 }
 
 jsvalue_t get_INPUT_TEXT(
@@ -3054,6 +3341,22 @@ jsvalue_t get_INPUT_CUSTOM_PASSWORD(
   )  {
   void* ctx = NULL;
   return jsvalue_create_int(ctx, INPUT_CUSTOM_PASSWORD);
+}
+
+ret_t input_type_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"INPUT_TEXT", get_INPUT_TEXT);
+  jerryx_handler_register_global((const jerry_char_t*)"INPUT_INT", get_INPUT_INT);
+  jerryx_handler_register_global((const jerry_char_t*)"INPUT_UINT", get_INPUT_UINT);
+  jerryx_handler_register_global((const jerry_char_t*)"INPUT_HEX", get_INPUT_HEX);
+  jerryx_handler_register_global((const jerry_char_t*)"INPUT_FLOAT", get_INPUT_FLOAT);
+  jerryx_handler_register_global((const jerry_char_t*)"INPUT_UFLOAT", get_INPUT_UFLOAT);
+  jerryx_handler_register_global((const jerry_char_t*)"INPUT_EMAIL", get_INPUT_EMAIL);
+  jerryx_handler_register_global((const jerry_char_t*)"INPUT_PASSWORD", get_INPUT_PASSWORD);
+  jerryx_handler_register_global((const jerry_char_t*)"INPUT_PHONE", get_INPUT_PHONE);
+  jerryx_handler_register_global((const jerry_char_t*)"INPUT_CUSTOM", get_INPUT_CUSTOM);
+  jerryx_handler_register_global((const jerry_char_t*)"INPUT_CUSTOM_PASSWORD", get_INPUT_CUSTOM_PASSWORD);
+
+ return RET_OK;
 }
 
 jsvalue_t get_VALUE_TYPE_INVALID(
@@ -3266,6 +3569,32 @@ jsvalue_t get_VALUE_TYPE_TOKEN(
   return jsvalue_create_int(ctx, VALUE_TYPE_TOKEN);
 }
 
+ret_t value_type_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_INVALID", get_VALUE_TYPE_INVALID);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_BOOL", get_VALUE_TYPE_BOOL);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_INT8", get_VALUE_TYPE_INT8);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_UINT8", get_VALUE_TYPE_UINT8);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_INT16", get_VALUE_TYPE_INT16);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_UINT16", get_VALUE_TYPE_UINT16);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_INT32", get_VALUE_TYPE_INT32);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_UINT32", get_VALUE_TYPE_UINT32);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_INT64", get_VALUE_TYPE_INT64);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_UINT64", get_VALUE_TYPE_UINT64);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_POINTER", get_VALUE_TYPE_POINTER);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_FLOAT", get_VALUE_TYPE_FLOAT);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_FLOAT32", get_VALUE_TYPE_FLOAT32);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_DOUBLE", get_VALUE_TYPE_DOUBLE);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_STRING", get_VALUE_TYPE_STRING);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_WSTRING", get_VALUE_TYPE_WSTRING);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_OBJECT", get_VALUE_TYPE_OBJECT);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_SIZED_STRING", get_VALUE_TYPE_SIZED_STRING);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_BINARY", get_VALUE_TYPE_BINARY);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_UBJSON", get_VALUE_TYPE_UBJSON);
+  jerryx_handler_register_global((const jerry_char_t*)"VALUE_TYPE_TOKEN", get_VALUE_TYPE_TOKEN);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_input_method_commit_text(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -3320,6 +3649,14 @@ jsvalue_t wrap_input_method(
   jret = jsvalue_create_pointer(ctx, ret, "input_method_t*");
   }
   return jret;
+}
+
+ret_t input_method_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"input_method_commit_text", wrap_input_method_commit_text);
+  jerryx_handler_register_global((const jerry_char_t*)"input_method_dispatch_key", wrap_input_method_dispatch_key);
+  jerryx_handler_register_global((const jerry_char_t*)"input_method", wrap_input_method);
+
+ return RET_OK;
 }
 
 jsvalue_t get_TK_KEY_RETURN(
@@ -4632,6 +4969,142 @@ jsvalue_t get_TK_KEY_CANCEL(
   return jsvalue_create_int(ctx, TK_KEY_CANCEL);
 }
 
+ret_t key_code_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_RETURN", get_TK_KEY_RETURN);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_ESCAPE", get_TK_KEY_ESCAPE);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_BACKSPACE", get_TK_KEY_BACKSPACE);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_TAB", get_TK_KEY_TAB);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_SPACE", get_TK_KEY_SPACE);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_EXCLAIM", get_TK_KEY_EXCLAIM);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_QUOTEDBL", get_TK_KEY_QUOTEDBL);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_HASH", get_TK_KEY_HASH);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_PERCENT", get_TK_KEY_PERCENT);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_DOLLAR", get_TK_KEY_DOLLAR);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_AMPERSAND", get_TK_KEY_AMPERSAND);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_QUOTE", get_TK_KEY_QUOTE);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_LEFTPAREN", get_TK_KEY_LEFTPAREN);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_RIGHTPAREN", get_TK_KEY_RIGHTPAREN);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_ASTERISK", get_TK_KEY_ASTERISK);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_PLUS", get_TK_KEY_PLUS);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_COMMA", get_TK_KEY_COMMA);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_MINUS", get_TK_KEY_MINUS);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_PERIOD", get_TK_KEY_PERIOD);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_SLASH", get_TK_KEY_SLASH);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_0", get_TK_KEY_0);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_1", get_TK_KEY_1);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_2", get_TK_KEY_2);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_3", get_TK_KEY_3);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_4", get_TK_KEY_4);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_5", get_TK_KEY_5);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_6", get_TK_KEY_6);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_7", get_TK_KEY_7);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_8", get_TK_KEY_8);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_9", get_TK_KEY_9);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_COLON", get_TK_KEY_COLON);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_SEMICOLON", get_TK_KEY_SEMICOLON);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_LESS", get_TK_KEY_LESS);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_EQUAL", get_TK_KEY_EQUAL);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_GREATER", get_TK_KEY_GREATER);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_QUESTION", get_TK_KEY_QUESTION);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_AT", get_TK_KEY_AT);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_LEFTBRACKET", get_TK_KEY_LEFTBRACKET);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_BACKSLASH", get_TK_KEY_BACKSLASH);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_RIGHTBRACKET", get_TK_KEY_RIGHTBRACKET);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_CARET", get_TK_KEY_CARET);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_UNDERSCORE", get_TK_KEY_UNDERSCORE);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_BACKQUOTE", get_TK_KEY_BACKQUOTE);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_a", get_TK_KEY_a);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_b", get_TK_KEY_b);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_c", get_TK_KEY_c);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_d", get_TK_KEY_d);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_e", get_TK_KEY_e);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_f", get_TK_KEY_f);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_g", get_TK_KEY_g);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_h", get_TK_KEY_h);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_i", get_TK_KEY_i);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_j", get_TK_KEY_j);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_k", get_TK_KEY_k);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_l", get_TK_KEY_l);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_m", get_TK_KEY_m);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_n", get_TK_KEY_n);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_o", get_TK_KEY_o);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_p", get_TK_KEY_p);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_q", get_TK_KEY_q);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_r", get_TK_KEY_r);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_s", get_TK_KEY_s);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_t", get_TK_KEY_t);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_u", get_TK_KEY_u);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_v", get_TK_KEY_v);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_w", get_TK_KEY_w);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_x", get_TK_KEY_x);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_y", get_TK_KEY_y);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_z", get_TK_KEY_z);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_A", get_TK_KEY_A);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_B", get_TK_KEY_B);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_C", get_TK_KEY_C);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_D", get_TK_KEY_D);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_E", get_TK_KEY_E);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_F", get_TK_KEY_F);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_G", get_TK_KEY_G);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_H", get_TK_KEY_H);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_I", get_TK_KEY_I);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_J", get_TK_KEY_J);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_K", get_TK_KEY_K);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_L", get_TK_KEY_L);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_M", get_TK_KEY_M);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_N", get_TK_KEY_N);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_O", get_TK_KEY_O);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_P", get_TK_KEY_P);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_Q", get_TK_KEY_Q);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_R", get_TK_KEY_R);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_S", get_TK_KEY_S);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_T", get_TK_KEY_T);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_U", get_TK_KEY_U);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_V", get_TK_KEY_V);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_W", get_TK_KEY_W);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_X", get_TK_KEY_X);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_Y", get_TK_KEY_Y);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_Z", get_TK_KEY_Z);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_DOT", get_TK_KEY_DOT);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_DELETE", get_TK_KEY_DELETE);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_LEFTBRACE", get_TK_KEY_LEFTBRACE);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_RIGHTBRACE", get_TK_KEY_RIGHTBRACE);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_LSHIFT", get_TK_KEY_LSHIFT);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_RSHIFT", get_TK_KEY_RSHIFT);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_LCTRL", get_TK_KEY_LCTRL);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_RCTRL", get_TK_KEY_RCTRL);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_LALT", get_TK_KEY_LALT);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_RALT", get_TK_KEY_RALT);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_CAPSLOCK", get_TK_KEY_CAPSLOCK);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_HOME", get_TK_KEY_HOME);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_END", get_TK_KEY_END);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_INSERT", get_TK_KEY_INSERT);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_UP", get_TK_KEY_UP);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_DOWN", get_TK_KEY_DOWN);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_LEFT", get_TK_KEY_LEFT);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_RIGHT", get_TK_KEY_RIGHT);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_PAGEUP", get_TK_KEY_PAGEUP);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_PAGEDOWN", get_TK_KEY_PAGEDOWN);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_F1", get_TK_KEY_F1);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_F2", get_TK_KEY_F2);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_F3", get_TK_KEY_F3);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_F4", get_TK_KEY_F4);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_F5", get_TK_KEY_F5);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_F6", get_TK_KEY_F6);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_F7", get_TK_KEY_F7);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_F8", get_TK_KEY_F8);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_F9", get_TK_KEY_F9);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_F10", get_TK_KEY_F10);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_F11", get_TK_KEY_F11);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_F12", get_TK_KEY_F12);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_MENU", get_TK_KEY_MENU);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_COMMAND", get_TK_KEY_COMMAND);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_BACK", get_TK_KEY_BACK);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_CANCEL", get_TK_KEY_CANCEL);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_locale_info(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -4708,6 +5181,15 @@ jsvalue_t wrap_locale_info_off(
   jret = jsvalue_create_int(ctx, ret);
   }
   return jret;
+}
+
+ret_t locale_info_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"locale_info", wrap_locale_info);
+  jerryx_handler_register_global((const jerry_char_t*)"locale_info_tr", wrap_locale_info_tr);
+  jerryx_handler_register_global((const jerry_char_t*)"locale_info_change", wrap_locale_info_change);
+  jerryx_handler_register_global((const jerry_char_t*)"locale_info_off", wrap_locale_info_off);
+
+ return RET_OK;
 }
 
 jsvalue_t get_STYLE_ID_BG_COLOR(
@@ -5050,6 +5532,45 @@ jsvalue_t get_STYLE_ID_SELF_LAYOUT(
   return jsvalue_create_string(ctx, STYLE_ID_SELF_LAYOUT);
 }
 
+ret_t style_id_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_BG_COLOR", get_STYLE_ID_BG_COLOR);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_FG_COLOR", get_STYLE_ID_FG_COLOR);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_MASK_COLOR", get_STYLE_ID_MASK_COLOR);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_FONT_NAME", get_STYLE_ID_FONT_NAME);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_FONT_SIZE", get_STYLE_ID_FONT_SIZE);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_FONT_STYLE", get_STYLE_ID_FONT_STYLE);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_TEXT_COLOR", get_STYLE_ID_TEXT_COLOR);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_TIPS_TEXT_COLOR", get_STYLE_ID_TIPS_TEXT_COLOR);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_TEXT_ALIGN_H", get_STYLE_ID_TEXT_ALIGN_H);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_TEXT_ALIGN_V", get_STYLE_ID_TEXT_ALIGN_V);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_BORDER_COLOR", get_STYLE_ID_BORDER_COLOR);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_BORDER_WIDTH", get_STYLE_ID_BORDER_WIDTH);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_BORDER", get_STYLE_ID_BORDER);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_BG_IMAGE", get_STYLE_ID_BG_IMAGE);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_BG_IMAGE_DRAW_TYPE", get_STYLE_ID_BG_IMAGE_DRAW_TYPE);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_ICON", get_STYLE_ID_ICON);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_FG_IMAGE", get_STYLE_ID_FG_IMAGE);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_FG_IMAGE_DRAW_TYPE", get_STYLE_ID_FG_IMAGE_DRAW_TYPE);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_SPACER", get_STYLE_ID_SPACER);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_MARGIN", get_STYLE_ID_MARGIN);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_MARGIN_LEFT", get_STYLE_ID_MARGIN_LEFT);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_MARGIN_RIGHT", get_STYLE_ID_MARGIN_RIGHT);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_MARGIN_TOP", get_STYLE_ID_MARGIN_TOP);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_MARGIN_BOTTOM", get_STYLE_ID_MARGIN_BOTTOM);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_ICON_AT", get_STYLE_ID_ICON_AT);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_ACTIVE_ICON", get_STYLE_ID_ACTIVE_ICON);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_X_OFFSET", get_STYLE_ID_X_OFFSET);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_Y_OFFSET", get_STYLE_ID_Y_OFFSET);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_SELECTED_BG_COLOR", get_STYLE_ID_SELECTED_BG_COLOR);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_SELECTED_FG_COLOR", get_STYLE_ID_SELECTED_FG_COLOR);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_SELECTED_TEXT_COLOR", get_STYLE_ID_SELECTED_TEXT_COLOR);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_ROUND_RADIUS", get_STYLE_ID_ROUND_RADIUS);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_CHILDREN_LAYOUT", get_STYLE_ID_CHILDREN_LAYOUT);
+  jerryx_handler_register_global((const jerry_char_t*)"STYLE_ID_SELF_LAYOUT", get_STYLE_ID_SELF_LAYOUT);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_style_notify_widget_state_changed(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -5171,6 +5692,17 @@ jsvalue_t wrap_style_is_mutable(
   return jret;
 }
 
+ret_t style_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"style_notify_widget_state_changed", wrap_style_notify_widget_state_changed);
+  jerryx_handler_register_global((const jerry_char_t*)"style_is_valid", wrap_style_is_valid);
+  jerryx_handler_register_global((const jerry_char_t*)"style_get_int", wrap_style_get_int);
+  jerryx_handler_register_global((const jerry_char_t*)"style_get_str", wrap_style_get_str);
+  jerryx_handler_register_global((const jerry_char_t*)"style_set", wrap_style_set);
+  jerryx_handler_register_global((const jerry_char_t*)"style_is_mutable", wrap_style_is_mutable);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_theme(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -5186,6 +5718,12 @@ jsvalue_t wrap_theme(
   jret = jsvalue_create_pointer(ctx, ret, "theme_t*");
   }
   return jret;
+}
+
+ret_t theme_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"theme", wrap_theme);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_timer_remove(
@@ -5243,6 +5781,15 @@ jsvalue_t wrap_timer_modify(
   return jret;
 }
 
+ret_t timer_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"timer_add", wrap_timer_add);
+  jerryx_handler_register_global((const jerry_char_t*)"timer_remove", wrap_timer_remove);
+  jerryx_handler_register_global((const jerry_char_t*)"timer_reset", wrap_timer_reset);
+  jerryx_handler_register_global((const jerry_char_t*)"timer_modify", wrap_timer_modify);
+
+ return RET_OK;
+}
+
 jsvalue_t get_ALIGN_V_NONE(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -5281,6 +5828,15 @@ jsvalue_t get_ALIGN_V_BOTTOM(
   )  {
   void* ctx = NULL;
   return jsvalue_create_int(ctx, ALIGN_V_BOTTOM);
+}
+
+ret_t align_v_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"ALIGN_V_NONE", get_ALIGN_V_NONE);
+  jerryx_handler_register_global((const jerry_char_t*)"ALIGN_V_MIDDLE", get_ALIGN_V_MIDDLE);
+  jerryx_handler_register_global((const jerry_char_t*)"ALIGN_V_TOP", get_ALIGN_V_TOP);
+  jerryx_handler_register_global((const jerry_char_t*)"ALIGN_V_BOTTOM", get_ALIGN_V_BOTTOM);
+
+ return RET_OK;
 }
 
 jsvalue_t get_ALIGN_H_NONE(
@@ -5323,6 +5879,15 @@ jsvalue_t get_ALIGN_H_RIGHT(
   return jsvalue_create_int(ctx, ALIGN_H_RIGHT);
 }
 
+ret_t align_h_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"ALIGN_H_NONE", get_ALIGN_H_NONE);
+  jerryx_handler_register_global((const jerry_char_t*)"ALIGN_H_CENTER", get_ALIGN_H_CENTER);
+  jerryx_handler_register_global((const jerry_char_t*)"ALIGN_H_LEFT", get_ALIGN_H_LEFT);
+  jerryx_handler_register_global((const jerry_char_t*)"ALIGN_H_RIGHT", get_ALIGN_H_RIGHT);
+
+ return RET_OK;
+}
+
 jsvalue_t get_APP_MOBILE(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -5351,6 +5916,14 @@ jsvalue_t get_APP_DESKTOP(
   )  {
   void* ctx = NULL;
   return jsvalue_create_int(ctx, APP_DESKTOP);
+}
+
+ret_t app_type_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"APP_MOBILE", get_APP_MOBILE);
+  jerryx_handler_register_global((const jerry_char_t*)"APP_SIMULATOR", get_APP_SIMULATOR);
+  jerryx_handler_register_global((const jerry_char_t*)"APP_DESKTOP", get_APP_DESKTOP);
+
+ return RET_OK;
 }
 
 jsvalue_t get_BITMAP_FMT_NONE(
@@ -5463,6 +6036,22 @@ jsvalue_t get_BITMAP_FMT_MONO(
   return jsvalue_create_int(ctx, BITMAP_FMT_MONO);
 }
 
+ret_t bitmap_format_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"BITMAP_FMT_NONE", get_BITMAP_FMT_NONE);
+  jerryx_handler_register_global((const jerry_char_t*)"BITMAP_FMT_RGBA8888", get_BITMAP_FMT_RGBA8888);
+  jerryx_handler_register_global((const jerry_char_t*)"BITMAP_FMT_ABGR8888", get_BITMAP_FMT_ABGR8888);
+  jerryx_handler_register_global((const jerry_char_t*)"BITMAP_FMT_BGRA8888", get_BITMAP_FMT_BGRA8888);
+  jerryx_handler_register_global((const jerry_char_t*)"BITMAP_FMT_ARGB8888", get_BITMAP_FMT_ARGB8888);
+  jerryx_handler_register_global((const jerry_char_t*)"BITMAP_FMT_RGB565", get_BITMAP_FMT_RGB565);
+  jerryx_handler_register_global((const jerry_char_t*)"BITMAP_FMT_BGR565", get_BITMAP_FMT_BGR565);
+  jerryx_handler_register_global((const jerry_char_t*)"BITMAP_FMT_RGB888", get_BITMAP_FMT_RGB888);
+  jerryx_handler_register_global((const jerry_char_t*)"BITMAP_FMT_BGR888", get_BITMAP_FMT_BGR888);
+  jerryx_handler_register_global((const jerry_char_t*)"BITMAP_FMT_GRAY", get_BITMAP_FMT_GRAY);
+  jerryx_handler_register_global((const jerry_char_t*)"BITMAP_FMT_MONO", get_BITMAP_FMT_MONO);
+
+ return RET_OK;
+}
+
 jsvalue_t get_BITMAP_FLAG_NONE(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -5521,6 +6110,17 @@ jsvalue_t get_BITMAP_FLAG_PREMULTI_ALPHA(
   )  {
   void* ctx = NULL;
   return jsvalue_create_int(ctx, BITMAP_FLAG_PREMULTI_ALPHA);
+}
+
+ret_t bitmap_flag_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"BITMAP_FLAG_NONE", get_BITMAP_FLAG_NONE);
+  jerryx_handler_register_global((const jerry_char_t*)"BITMAP_FLAG_OPAQUE", get_BITMAP_FLAG_OPAQUE);
+  jerryx_handler_register_global((const jerry_char_t*)"BITMAP_FLAG_IMMUTABLE", get_BITMAP_FLAG_IMMUTABLE);
+  jerryx_handler_register_global((const jerry_char_t*)"BITMAP_FLAG_TEXTURE", get_BITMAP_FLAG_TEXTURE);
+  jerryx_handler_register_global((const jerry_char_t*)"BITMAP_FLAG_CHANGED", get_BITMAP_FLAG_CHANGED);
+  jerryx_handler_register_global((const jerry_char_t*)"BITMAP_FLAG_PREMULTI_ALPHA", get_BITMAP_FLAG_PREMULTI_ALPHA);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_vgcanvas_cast(
@@ -6562,6 +7162,66 @@ jsvalue_t wrap_vgcanvas_t_get_prop_text_baseline(
 
   jret = jsvalue_create_string(ctx, obj->text_baseline);
   return jret;
+}
+
+ret_t vgcanvas_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_cast", wrap_vgcanvas_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_flush", wrap_vgcanvas_flush);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_begin_path", wrap_vgcanvas_begin_path);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_move_to", wrap_vgcanvas_move_to);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_line_to", wrap_vgcanvas_line_to);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_quad_to", wrap_vgcanvas_quad_to);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_bezier_to", wrap_vgcanvas_bezier_to);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_arc_to", wrap_vgcanvas_arc_to);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_arc", wrap_vgcanvas_arc);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_is_point_in_path", wrap_vgcanvas_is_point_in_path);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_rect", wrap_vgcanvas_rect);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_rounded_rect", wrap_vgcanvas_rounded_rect);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_ellipse", wrap_vgcanvas_ellipse);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_close_path", wrap_vgcanvas_close_path);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_rotate", wrap_vgcanvas_rotate);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_scale", wrap_vgcanvas_scale);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_translate", wrap_vgcanvas_translate);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_transform", wrap_vgcanvas_transform);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_set_transform", wrap_vgcanvas_set_transform);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_clip_rect", wrap_vgcanvas_clip_rect);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_fill", wrap_vgcanvas_fill);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_stroke", wrap_vgcanvas_stroke);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_paint", wrap_vgcanvas_paint);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_set_font", wrap_vgcanvas_set_font);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_set_font_size", wrap_vgcanvas_set_font_size);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_set_text_align", wrap_vgcanvas_set_text_align);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_set_text_baseline", wrap_vgcanvas_set_text_baseline);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_fill_text", wrap_vgcanvas_fill_text);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_measure_text", wrap_vgcanvas_measure_text);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_draw_image", wrap_vgcanvas_draw_image);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_draw_icon", wrap_vgcanvas_draw_icon);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_set_antialias", wrap_vgcanvas_set_antialias);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_set_global_alpha", wrap_vgcanvas_set_global_alpha);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_set_line_width", wrap_vgcanvas_set_line_width);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_set_fill_color_str", wrap_vgcanvas_set_fill_color_str);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_set_stroke_color_str", wrap_vgcanvas_set_stroke_color_str);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_set_line_cap", wrap_vgcanvas_set_line_cap);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_set_line_join", wrap_vgcanvas_set_line_join);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_set_miter_limit", wrap_vgcanvas_set_miter_limit);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_save", wrap_vgcanvas_save);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_restore", wrap_vgcanvas_restore);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_w", wrap_vgcanvas_t_get_prop_w);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_h", wrap_vgcanvas_t_get_prop_h);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_stride", wrap_vgcanvas_t_get_prop_stride);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_ratio", wrap_vgcanvas_t_get_prop_ratio);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_anti_alias", wrap_vgcanvas_t_get_prop_anti_alias);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_line_width", wrap_vgcanvas_t_get_prop_line_width);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_global_alpha", wrap_vgcanvas_t_get_prop_global_alpha);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_miter_limit", wrap_vgcanvas_t_get_prop_miter_limit);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_line_cap", wrap_vgcanvas_t_get_prop_line_cap);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_line_join", wrap_vgcanvas_t_get_prop_line_join);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_font", wrap_vgcanvas_t_get_prop_font);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_font_size", wrap_vgcanvas_t_get_prop_font_size);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_text_align", wrap_vgcanvas_t_get_prop_text_align);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_t_get_prop_text_baseline", wrap_vgcanvas_t_get_prop_text_baseline);
+
+ return RET_OK;
 }
 
 jsvalue_t get_WIDGET_PROP_EXEC(
@@ -7614,6 +8274,16 @@ jsvalue_t get_WIDGET_PROP_ACTIVE_ICON(
   return jsvalue_create_string(ctx, WIDGET_PROP_ACTIVE_ICON);
 }
 
+jsvalue_t get_WIDGET_PROP_LOAD_UI(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  return jsvalue_create_string(ctx, WIDGET_PROP_LOAD_UI);
+}
+
 jsvalue_t get_WIDGET_PROP_OPEN_WINDOW(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -7802,6 +8472,136 @@ jsvalue_t get_WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY(
   )  {
   void* ctx = NULL;
   return jsvalue_create_string(ctx, WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY);
+}
+
+ret_t widget_prop_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_EXEC", get_WIDGET_PROP_EXEC);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_X", get_WIDGET_PROP_X);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_Y", get_WIDGET_PROP_Y);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_W", get_WIDGET_PROP_W);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_H", get_WIDGET_PROP_H);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_CANVAS", get_WIDGET_PROP_CANVAS);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_LOCALIZE_OPTIONS", get_WIDGET_PROP_LOCALIZE_OPTIONS);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_NATIVE_WINDOW", get_WIDGET_PROP_NATIVE_WINDOW);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_HIGHLIGHT", get_WIDGET_PROP_HIGHLIGHT);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_BAR_SIZE", get_WIDGET_PROP_BAR_SIZE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_OPACITY", get_WIDGET_PROP_OPACITY);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_MIN_W", get_WIDGET_PROP_MIN_W);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_MAX_W", get_WIDGET_PROP_MAX_W);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_CHILDREN_LAYOUT", get_WIDGET_PROP_CHILDREN_LAYOUT);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_LAYOUT", get_WIDGET_PROP_LAYOUT);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_SELF_LAYOUT", get_WIDGET_PROP_SELF_LAYOUT);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_LAYOUT_W", get_WIDGET_PROP_LAYOUT_W);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_LAYOUT_H", get_WIDGET_PROP_LAYOUT_H);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_VIRTUAL_W", get_WIDGET_PROP_VIRTUAL_W);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_VIRTUAL_H", get_WIDGET_PROP_VIRTUAL_H);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_NAME", get_WIDGET_PROP_NAME);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_TYPE", get_WIDGET_PROP_TYPE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_CLOSABLE", get_WIDGET_PROP_CLOSABLE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_CURSOR", get_WIDGET_PROP_CURSOR);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_VALUE", get_WIDGET_PROP_VALUE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_LENGTH", get_WIDGET_PROP_LENGTH);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_TEXT", get_WIDGET_PROP_TEXT);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_TR_TEXT", get_WIDGET_PROP_TR_TEXT);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_STYLE", get_WIDGET_PROP_STYLE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_ENABLE", get_WIDGET_PROP_ENABLE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_FEEDBACK", get_WIDGET_PROP_FEEDBACK);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_FLOATING", get_WIDGET_PROP_FLOATING);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_MARGIN", get_WIDGET_PROP_MARGIN);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_SPACING", get_WIDGET_PROP_SPACING);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_LEFT_MARGIN", get_WIDGET_PROP_LEFT_MARGIN);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_RIGHT_MARGIN", get_WIDGET_PROP_RIGHT_MARGIN);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_TOP_MARGIN", get_WIDGET_PROP_TOP_MARGIN);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_BOTTOM_MARGIN", get_WIDGET_PROP_BOTTOM_MARGIN);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_STEP", get_WIDGET_PROP_STEP);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_VISIBLE", get_WIDGET_PROP_VISIBLE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_SENSITIVE", get_WIDGET_PROP_SENSITIVE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_ANIMATION", get_WIDGET_PROP_ANIMATION);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_ANIM_HINT", get_WIDGET_PROP_ANIM_HINT);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_FULLSCREEN", get_WIDGET_PROP_FULLSCREEN);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_OPEN_ANIM_HINT", get_WIDGET_PROP_OPEN_ANIM_HINT);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_CLOSE_ANIM_HINT", get_WIDGET_PROP_CLOSE_ANIM_HINT);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_MIN", get_WIDGET_PROP_MIN);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_TIPS", get_WIDGET_PROP_TIPS);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_INPUT_TYPE", get_WIDGET_PROP_INPUT_TYPE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_READONLY", get_WIDGET_PROP_READONLY);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_PASSWORD_VISIBLE", get_WIDGET_PROP_PASSWORD_VISIBLE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_ACTIVE", get_WIDGET_PROP_ACTIVE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_VERTICAL", get_WIDGET_PROP_VERTICAL);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_SHOW_TEXT", get_WIDGET_PROP_SHOW_TEXT);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_XOFFSET", get_WIDGET_PROP_XOFFSET);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_YOFFSET", get_WIDGET_PROP_YOFFSET);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_ALIGN_V", get_WIDGET_PROP_ALIGN_V);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_ALIGN_H", get_WIDGET_PROP_ALIGN_H);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_AUTO_PLAY", get_WIDGET_PROP_AUTO_PLAY);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_LOOP", get_WIDGET_PROP_LOOP);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_AUTO_FIX", get_WIDGET_PROP_AUTO_FIX);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_SELECT_NONE_WHEN_FOCUSED", get_WIDGET_PROP_SELECT_NONE_WHEN_FOCUSED);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_OPEN_IM_WHEN_FOCUSED", get_WIDGET_PROP_OPEN_IM_WHEN_FOCUSED);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_X_MIN", get_WIDGET_PROP_X_MIN);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_X_MAX", get_WIDGET_PROP_X_MAX);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_Y_MIN", get_WIDGET_PROP_Y_MIN);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_Y_MAX", get_WIDGET_PROP_Y_MAX);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_MAX", get_WIDGET_PROP_MAX);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_GRAB_KEYS", get_WIDGET_PROP_GRAB_KEYS);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_ROW", get_WIDGET_PROP_ROW);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_STATE_FOR_STYLE", get_WIDGET_PROP_STATE_FOR_STYLE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_THEME", get_WIDGET_PROP_THEME);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_STAGE", get_WIDGET_PROP_STAGE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_IMAGE_MANAGER", get_WIDGET_PROP_IMAGE_MANAGER);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_ASSETS_MANAGER", get_WIDGET_PROP_ASSETS_MANAGER);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_LOCALE_INFO", get_WIDGET_PROP_LOCALE_INFO);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_FONT_MANAGER", get_WIDGET_PROP_FONT_MANAGER);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_THEME_OBJ", get_WIDGET_PROP_THEME_OBJ);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_DEFAULT_THEME_OBJ", get_WIDGET_PROP_DEFAULT_THEME_OBJ);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_ITEM_WIDTH", get_WIDGET_PROP_ITEM_WIDTH);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_ITEM_HEIGHT", get_WIDGET_PROP_ITEM_HEIGHT);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_DEFAULT_ITEM_HEIGHT", get_WIDGET_PROP_DEFAULT_ITEM_HEIGHT);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_XSLIDABLE", get_WIDGET_PROP_XSLIDABLE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_YSLIDABLE", get_WIDGET_PROP_YSLIDABLE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_REPEAT", get_WIDGET_PROP_REPEAT);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_ENABLE_LONG_PRESS", get_WIDGET_PROP_ENABLE_LONG_PRESS);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_ANIMATABLE", get_WIDGET_PROP_ANIMATABLE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_AUTO_HIDE_SCROLL_BAR", get_WIDGET_PROP_AUTO_HIDE_SCROLL_BAR);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_IMAGE", get_WIDGET_PROP_IMAGE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_FORMAT", get_WIDGET_PROP_FORMAT);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_DRAW_TYPE", get_WIDGET_PROP_DRAW_TYPE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_SELECTABLE", get_WIDGET_PROP_SELECTABLE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_CLICKABLE", get_WIDGET_PROP_CLICKABLE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_SCALE_X", get_WIDGET_PROP_SCALE_X);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_SCALE_Y", get_WIDGET_PROP_SCALE_Y);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_ANCHOR_X", get_WIDGET_PROP_ANCHOR_X);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_ANCHOR_Y", get_WIDGET_PROP_ANCHOR_Y);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_ROTATION", get_WIDGET_PROP_ROTATION);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_COMPACT", get_WIDGET_PROP_COMPACT);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_SCROLLABLE", get_WIDGET_PROP_SCROLLABLE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_ICON", get_WIDGET_PROP_ICON);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_OPTIONS", get_WIDGET_PROP_OPTIONS);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_SELECTED", get_WIDGET_PROP_SELECTED);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_CHECKED", get_WIDGET_PROP_CHECKED);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_ACTIVE_ICON", get_WIDGET_PROP_ACTIVE_ICON);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_LOAD_UI", get_WIDGET_PROP_LOAD_UI);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_OPEN_WINDOW", get_WIDGET_PROP_OPEN_WINDOW);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_SELECTED_INDEX", get_WIDGET_PROP_SELECTED_INDEX);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_CLOSE_WHEN_CLICK", get_WIDGET_PROP_CLOSE_WHEN_CLICK);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_CLOSE_WHEN_CLICK_OUTSIDE", get_WIDGET_PROP_CLOSE_WHEN_CLICK_OUTSIDE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_LINE_GAP", get_WIDGET_PROP_LINE_GAP);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_BG_COLOR", get_WIDGET_PROP_BG_COLOR);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_BORDER_COLOR", get_WIDGET_PROP_BORDER_COLOR);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_DELAY", get_WIDGET_PROP_DELAY);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_IS_KEYBOARD", get_WIDGET_PROP_IS_KEYBOARD);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_FOCUSED", get_WIDGET_PROP_FOCUSED);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_FOCUS", get_WIDGET_PROP_FOCUS);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_FOCUSABLE", get_WIDGET_PROP_FOCUSABLE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_WITH_FOCUS_STATE", get_WIDGET_PROP_WITH_FOCUS_STATE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_MOVE_FOCUS_PREV_KEY", get_WIDGET_PROP_MOVE_FOCUS_PREV_KEY);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_MOVE_FOCUS_NEXT_KEY", get_WIDGET_PROP_MOVE_FOCUS_NEXT_KEY);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_MOVE_FOCUS_UP_KEY", get_WIDGET_PROP_MOVE_FOCUS_UP_KEY);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_MOVE_FOCUS_DOWN_KEY", get_WIDGET_PROP_MOVE_FOCUS_DOWN_KEY);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_MOVE_FOCUS_LEFT_KEY", get_WIDGET_PROP_MOVE_FOCUS_LEFT_KEY);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY", get_WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY);
+
+ return RET_OK;
 }
 
 jsvalue_t get_WIDGET_TYPE_NONE(
@@ -8354,6 +9154,66 @@ jsvalue_t get_WIDGET_TYPE_CALIBRATION_WIN(
   return jsvalue_create_string(ctx, WIDGET_TYPE_CALIBRATION_WIN);
 }
 
+ret_t widget_type_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_NONE", get_WIDGET_TYPE_NONE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_WINDOW_MANAGER", get_WIDGET_TYPE_WINDOW_MANAGER);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_NORMAL_WINDOW", get_WIDGET_TYPE_NORMAL_WINDOW);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_OVERLAY", get_WIDGET_TYPE_OVERLAY);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_TOOL_BAR", get_WIDGET_TYPE_TOOL_BAR);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_DIALOG", get_WIDGET_TYPE_DIALOG);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_POPUP", get_WIDGET_TYPE_POPUP);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_SYSTEM_BAR", get_WIDGET_TYPE_SYSTEM_BAR);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_SYSTEM_BAR_BOTTOM", get_WIDGET_TYPE_SYSTEM_BAR_BOTTOM);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_SPRITE", get_WIDGET_TYPE_SPRITE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_KEYBOARD", get_WIDGET_TYPE_KEYBOARD);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_DND", get_WIDGET_TYPE_DND);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_LABEL", get_WIDGET_TYPE_LABEL);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_BUTTON", get_WIDGET_TYPE_BUTTON);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_IMAGE", get_WIDGET_TYPE_IMAGE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_EDIT", get_WIDGET_TYPE_EDIT);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_PROGRESS_BAR", get_WIDGET_TYPE_PROGRESS_BAR);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_GROUP_BOX", get_WIDGET_TYPE_GROUP_BOX);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_CHECK_BUTTON", get_WIDGET_TYPE_CHECK_BUTTON);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_RADIO_BUTTON", get_WIDGET_TYPE_RADIO_BUTTON);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_DIALOG_TITLE", get_WIDGET_TYPE_DIALOG_TITLE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_DIALOG_CLIENT", get_WIDGET_TYPE_DIALOG_CLIENT);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_SLIDER", get_WIDGET_TYPE_SLIDER);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_VIEW", get_WIDGET_TYPE_VIEW);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_COMBO_BOX", get_WIDGET_TYPE_COMBO_BOX);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_COMBO_BOX_ITEM", get_WIDGET_TYPE_COMBO_BOX_ITEM);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_SLIDE_VIEW", get_WIDGET_TYPE_SLIDE_VIEW);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_SLIDE_INDICATOR", get_WIDGET_TYPE_SLIDE_INDICATOR);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_SLIDE_INDICATOR_ARC", get_WIDGET_TYPE_SLIDE_INDICATOR_ARC);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_PAGES", get_WIDGET_TYPE_PAGES);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_TAB_BUTTON", get_WIDGET_TYPE_TAB_BUTTON);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_TAB_CONTROL", get_WIDGET_TYPE_TAB_CONTROL);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_TAB_BUTTON_GROUP", get_WIDGET_TYPE_TAB_BUTTON_GROUP);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_BUTTON_GROUP", get_WIDGET_TYPE_BUTTON_GROUP);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_CANDIDATES", get_WIDGET_TYPE_CANDIDATES);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_SPIN_BOX", get_WIDGET_TYPE_SPIN_BOX);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_DRAGGER", get_WIDGET_TYPE_DRAGGER);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_SCROLL_BAR", get_WIDGET_TYPE_SCROLL_BAR);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_SCROLL_BAR_DESKTOP", get_WIDGET_TYPE_SCROLL_BAR_DESKTOP);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_SCROLL_BAR_MOBILE", get_WIDGET_TYPE_SCROLL_BAR_MOBILE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_SCROLL_VIEW", get_WIDGET_TYPE_SCROLL_VIEW);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_LIST_VIEW", get_WIDGET_TYPE_LIST_VIEW);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_LIST_VIEW_H", get_WIDGET_TYPE_LIST_VIEW_H);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_LIST_ITEM", get_WIDGET_TYPE_LIST_ITEM);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_COLOR_PICKER", get_WIDGET_TYPE_COLOR_PICKER);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_COLOR_COMPONENT", get_WIDGET_TYPE_COLOR_COMPONENT);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_COLOR_TILE", get_WIDGET_TYPE_COLOR_TILE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_CLIP_VIEW", get_WIDGET_TYPE_CLIP_VIEW);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_RICH_TEXT", get_WIDGET_TYPE_RICH_TEXT);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_APP_BAR", get_WIDGET_TYPE_APP_BAR);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_GRID", get_WIDGET_TYPE_GRID);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_GRID_ITEM", get_WIDGET_TYPE_GRID_ITEM);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_ROW", get_WIDGET_TYPE_ROW);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_COLUMN", get_WIDGET_TYPE_COLUMN);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_TYPE_CALIBRATION_WIN", get_WIDGET_TYPE_CALIBRATION_WIN);
+
+ return RET_OK;
+}
+
 jsvalue_t get_WINDOW_STAGE_NONE(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -8394,6 +9254,15 @@ jsvalue_t get_WINDOW_STAGE_CLOSED(
   return jsvalue_create_int(ctx, WINDOW_STAGE_CLOSED);
 }
 
+ret_t window_stage_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"WINDOW_STAGE_NONE", get_WINDOW_STAGE_NONE);
+  jerryx_handler_register_global((const jerry_char_t*)"WINDOW_STAGE_CREATED", get_WINDOW_STAGE_CREATED);
+  jerryx_handler_register_global((const jerry_char_t*)"WINDOW_STAGE_OPENED", get_WINDOW_STAGE_OPENED);
+  jerryx_handler_register_global((const jerry_char_t*)"WINDOW_STAGE_CLOSED", get_WINDOW_STAGE_CLOSED);
+
+ return RET_OK;
+}
+
 jsvalue_t get_WINDOW_CLOSABLE_YES(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -8422,6 +9291,14 @@ jsvalue_t get_WINDOW_CLOSABLE_CONFIRM(
   )  {
   void* ctx = NULL;
   return jsvalue_create_int(ctx, WINDOW_CLOSABLE_CONFIRM);
+}
+
+ret_t window_closable_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"WINDOW_CLOSABLE_YES", get_WINDOW_CLOSABLE_YES);
+  jerryx_handler_register_global((const jerry_char_t*)"WINDOW_CLOSABLE_NO", get_WINDOW_CLOSABLE_NO);
+  jerryx_handler_register_global((const jerry_char_t*)"WINDOW_CLOSABLE_CONFIRM", get_WINDOW_CLOSABLE_CONFIRM);
+
+ return RET_OK;
 }
 
 jsvalue_t get_WIDGET_STATE_NONE(
@@ -8622,6 +9499,31 @@ jsvalue_t get_WIDGET_STATE_FOCUSED_OF_ACTIVE(
   )  {
   void* ctx = NULL;
   return jsvalue_create_string(ctx, WIDGET_STATE_FOCUSED_OF_ACTIVE);
+}
+
+ret_t widget_state_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_NONE", get_WIDGET_STATE_NONE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_NORMAL", get_WIDGET_STATE_NORMAL);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_PRESSED", get_WIDGET_STATE_PRESSED);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_OVER", get_WIDGET_STATE_OVER);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_DISABLE", get_WIDGET_STATE_DISABLE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_FOCUSED", get_WIDGET_STATE_FOCUSED);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_CHECKED", get_WIDGET_STATE_CHECKED);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_UNCHECKED", get_WIDGET_STATE_UNCHECKED);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_EMPTY", get_WIDGET_STATE_EMPTY);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_EMPTY_FOCUS", get_WIDGET_STATE_EMPTY_FOCUS);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_ERROR", get_WIDGET_STATE_ERROR);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_SELECTED", get_WIDGET_STATE_SELECTED);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_NORMAL_OF_CHECKED", get_WIDGET_STATE_NORMAL_OF_CHECKED);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_PRESSED_OF_CHECKED", get_WIDGET_STATE_PRESSED_OF_CHECKED);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_OVER_OF_CHECKED", get_WIDGET_STATE_OVER_OF_CHECKED);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_FOCUSED_OF_CHECKED", get_WIDGET_STATE_FOCUSED_OF_CHECKED);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_NORMAL_OF_ACTIVE", get_WIDGET_STATE_NORMAL_OF_ACTIVE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_PRESSED_OF_ACTIVE", get_WIDGET_STATE_PRESSED_OF_ACTIVE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_OVER_OF_ACTIVE", get_WIDGET_STATE_OVER_OF_ACTIVE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_FOCUSED_OF_ACTIVE", get_WIDGET_STATE_FOCUSED_OF_ACTIVE);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_widget_count_children(
@@ -9166,6 +10068,25 @@ jsvalue_t wrap_widget_set_focused(
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
   bool_t focused = (bool_t)jsvalue_get_boolean_value(ctx, argv[1]);
   ret = (ret_t)widget_set_focused(widget, focused);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_widget_set_focusable(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  bool_t focusable = (bool_t)jsvalue_get_boolean_value(ctx, argv[1]);
+  ret = (ret_t)widget_set_focusable(widget, focusable);
 
   jret = jsvalue_create_int(ctx, ret);
   }
@@ -10234,6 +11155,102 @@ jsvalue_t wrap_widget_t_get_prop_parent(
   return jret;
 }
 
+ret_t widget_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"widget_count_children", wrap_widget_count_children);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_get_child", wrap_widget_get_child);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_index_of", wrap_widget_index_of);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_move", wrap_widget_move);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_resize", wrap_widget_resize);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_move_resize", wrap_widget_move_resize);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_value", wrap_widget_set_value);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_animate_value_to", wrap_widget_animate_value_to);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_add_value", wrap_widget_add_value);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_use_style", wrap_widget_use_style);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_text_utf8", wrap_widget_set_text_utf8);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_tr_text", wrap_widget_set_tr_text);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_get_value", wrap_widget_get_value);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_get_text", wrap_widget_get_text);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_name", wrap_widget_set_name);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_theme", wrap_widget_set_theme);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_pointer_cursor", wrap_widget_set_pointer_cursor);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_animation", wrap_widget_set_animation);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_create_animator", wrap_widget_create_animator);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_start_animator", wrap_widget_start_animator);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_animator_time_scale", wrap_widget_set_animator_time_scale);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_pause_animator", wrap_widget_pause_animator);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_stop_animator", wrap_widget_stop_animator);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_destroy_animator", wrap_widget_destroy_animator);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_enable", wrap_widget_set_enable);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_feedback", wrap_widget_set_feedback);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_floating", wrap_widget_set_floating);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_focused", wrap_widget_set_focused);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_focusable", wrap_widget_set_focusable);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_state", wrap_widget_set_state);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_opacity", wrap_widget_set_opacity);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_destroy_children", wrap_widget_destroy_children);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_add_child", wrap_widget_add_child);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_remove_child", wrap_widget_remove_child);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_insert_child", wrap_widget_insert_child);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_restack", wrap_widget_restack);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_child", wrap_widget_child);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_lookup", wrap_widget_lookup);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_lookup_by_type", wrap_widget_lookup_by_type);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_visible", wrap_widget_set_visible);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_visible_only", wrap_widget_set_visible_only);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_sensitive", wrap_widget_set_sensitive);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_on", wrap_widget_on);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_off", wrap_widget_off);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_invalidate_force", wrap_widget_invalidate_force);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_prop_str", wrap_widget_set_prop_str);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_get_prop_str", wrap_widget_get_prop_str);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_prop_int", wrap_widget_set_prop_int);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_get_prop_int", wrap_widget_get_prop_int);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_prop_bool", wrap_widget_set_prop_bool);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_get_prop_bool", wrap_widget_get_prop_bool);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_is_window_opened", wrap_widget_is_window_opened);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_is_window", wrap_widget_is_window);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_is_designing_window", wrap_widget_is_designing_window);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_is_window_manager", wrap_widget_is_window_manager);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_foreach", wrap_widget_foreach);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_get_window", wrap_widget_get_window);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_get_window_manager", wrap_widget_get_window_manager);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_get_type", wrap_widget_get_type);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_clone", wrap_widget_clone);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_equal", wrap_widget_equal);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_cast", wrap_widget_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_destroy", wrap_widget_destroy);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_unref", wrap_widget_unref);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_layout", wrap_widget_layout);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_self_layout", wrap_widget_set_self_layout);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_children_layout", wrap_widget_set_children_layout);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_self_layout_params", wrap_widget_set_self_layout_params);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_style_int", wrap_widget_set_style_int);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_style_str", wrap_widget_set_style_str);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_style_color", wrap_widget_set_style_color);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_get_prop_x", wrap_widget_t_get_prop_x);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_get_prop_y", wrap_widget_t_get_prop_y);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_get_prop_w", wrap_widget_t_get_prop_w);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_get_prop_h", wrap_widget_t_get_prop_h);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_get_prop_name", wrap_widget_t_get_prop_name);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_get_prop_tr_text", wrap_widget_t_get_prop_tr_text);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_get_prop_style", wrap_widget_t_get_prop_style);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_get_prop_animation", wrap_widget_t_get_prop_animation);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_get_prop_enable", wrap_widget_t_get_prop_enable);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_get_prop_feedback", wrap_widget_t_get_prop_feedback);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_set_prop_visible", wrap_widget_t_set_prop_visible);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_get_prop_visible", wrap_widget_t_get_prop_visible);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_set_prop_sensitive", wrap_widget_t_set_prop_sensitive);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_get_prop_sensitive", wrap_widget_t_get_prop_sensitive);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_set_prop_focusable", wrap_widget_t_set_prop_focusable);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_get_prop_focusable", wrap_widget_t_get_prop_focusable);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_set_prop_with_focus_state", wrap_widget_t_set_prop_with_focus_state);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_get_prop_with_focus_state", wrap_widget_t_get_prop_with_focus_state);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_get_prop_floating", wrap_widget_t_get_prop_floating);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_t_get_prop_parent", wrap_widget_t_get_prop_parent);
+
+ return RET_OK;
+}
+
 jsvalue_t get_RET_OK(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -10444,6 +11461,37 @@ jsvalue_t get_RET_EOS(
   return jsvalue_create_int(ctx, RET_EOS);
 }
 
+ret_t ret_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"RET_OK", get_RET_OK);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_OOM", get_RET_OOM);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_FAIL", get_RET_FAIL);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_NOT_IMPL", get_RET_NOT_IMPL);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_QUIT", get_RET_QUIT);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_FOUND", get_RET_FOUND);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_BUSY", get_RET_BUSY);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_REMOVE", get_RET_REMOVE);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_REPEAT", get_RET_REPEAT);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_NOT_FOUND", get_RET_NOT_FOUND);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_DONE", get_RET_DONE);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_STOP", get_RET_STOP);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_SKIP", get_RET_SKIP);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_CONTINUE", get_RET_CONTINUE);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_OBJECT_CHANGED", get_RET_OBJECT_CHANGED);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_ITEMS_CHANGED", get_RET_ITEMS_CHANGED);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_BAD_PARAMS", get_RET_BAD_PARAMS);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_TIMEOUT", get_RET_TIMEOUT);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_CRC", get_RET_CRC);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_IO", get_RET_IO);
+  jerryx_handler_register_global((const jerry_char_t*)"RET_EOS", get_RET_EOS);
+
+ return RET_OK;
+}
+
+ret_t timer_manager_t_init(JSContext *ctx) {
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_time_now_s(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -10476,6 +11524,13 @@ jsvalue_t wrap_time_now_ms(
   jret = jsvalue_create_int(ctx, ret);
   }
   return jret;
+}
+
+ret_t time_now_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"time_now_s", wrap_time_now_s);
+  jerryx_handler_register_global((const jerry_char_t*)"time_now_ms", wrap_time_now_ms);
+
+ return RET_OK;
 }
 
 jsvalue_t get_IMAGE_DRAW_DEFAULT(
@@ -10646,6 +11701,28 @@ jsvalue_t get_IMAGE_DRAW_PATCH3_Y_SCALE_X(
   )  {
   void* ctx = NULL;
   return jsvalue_create_int(ctx, IMAGE_DRAW_PATCH3_Y_SCALE_X);
+}
+
+ret_t image_draw_type_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"IMAGE_DRAW_DEFAULT", get_IMAGE_DRAW_DEFAULT);
+  jerryx_handler_register_global((const jerry_char_t*)"IMAGE_DRAW_CENTER", get_IMAGE_DRAW_CENTER);
+  jerryx_handler_register_global((const jerry_char_t*)"IMAGE_DRAW_ICON", get_IMAGE_DRAW_ICON);
+  jerryx_handler_register_global((const jerry_char_t*)"IMAGE_DRAW_SCALE", get_IMAGE_DRAW_SCALE);
+  jerryx_handler_register_global((const jerry_char_t*)"IMAGE_DRAW_SCALE_AUTO", get_IMAGE_DRAW_SCALE_AUTO);
+  jerryx_handler_register_global((const jerry_char_t*)"IMAGE_DRAW_SCALE_DOWN", get_IMAGE_DRAW_SCALE_DOWN);
+  jerryx_handler_register_global((const jerry_char_t*)"IMAGE_DRAW_SCALE_W", get_IMAGE_DRAW_SCALE_W);
+  jerryx_handler_register_global((const jerry_char_t*)"IMAGE_DRAW_SCALE_H", get_IMAGE_DRAW_SCALE_H);
+  jerryx_handler_register_global((const jerry_char_t*)"IMAGE_DRAW_REPEAT", get_IMAGE_DRAW_REPEAT);
+  jerryx_handler_register_global((const jerry_char_t*)"IMAGE_DRAW_REPEAT_X", get_IMAGE_DRAW_REPEAT_X);
+  jerryx_handler_register_global((const jerry_char_t*)"IMAGE_DRAW_REPEAT_Y", get_IMAGE_DRAW_REPEAT_Y);
+  jerryx_handler_register_global((const jerry_char_t*)"IMAGE_DRAW_REPEAT_Y_INVERSE", get_IMAGE_DRAW_REPEAT_Y_INVERSE);
+  jerryx_handler_register_global((const jerry_char_t*)"IMAGE_DRAW_PATCH9", get_IMAGE_DRAW_PATCH9);
+  jerryx_handler_register_global((const jerry_char_t*)"IMAGE_DRAW_PATCH3_X", get_IMAGE_DRAW_PATCH3_X);
+  jerryx_handler_register_global((const jerry_char_t*)"IMAGE_DRAW_PATCH3_Y", get_IMAGE_DRAW_PATCH3_Y);
+  jerryx_handler_register_global((const jerry_char_t*)"IMAGE_DRAW_PATCH3_X_SCALE_Y", get_IMAGE_DRAW_PATCH3_X_SCALE_Y);
+  jerryx_handler_register_global((const jerry_char_t*)"IMAGE_DRAW_PATCH3_Y_SCALE_X", get_IMAGE_DRAW_PATCH3_Y_SCALE_X);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_canvas_get_width(
@@ -11218,6 +12295,41 @@ jsvalue_t wrap_canvas_t_get_prop_global_alpha(
   return jret;
 }
 
+ret_t canvas_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_get_width", wrap_canvas_get_width);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_get_height", wrap_canvas_get_height);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_get_clip_rect", wrap_canvas_get_clip_rect);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_set_clip_rect", wrap_canvas_set_clip_rect);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_set_clip_rect_ex", wrap_canvas_set_clip_rect_ex);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_set_fill_color_str", wrap_canvas_set_fill_color_str);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_set_text_color_str", wrap_canvas_set_text_color_str);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_set_stroke_color_str", wrap_canvas_set_stroke_color_str);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_set_global_alpha", wrap_canvas_set_global_alpha);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_translate", wrap_canvas_translate);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_untranslate", wrap_canvas_untranslate);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_draw_vline", wrap_canvas_draw_vline);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_draw_hline", wrap_canvas_draw_hline);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_fill_rect", wrap_canvas_fill_rect);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_stroke_rect", wrap_canvas_stroke_rect);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_set_font", wrap_canvas_set_font);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_measure_utf8", wrap_canvas_measure_utf8);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_draw_utf8", wrap_canvas_draw_utf8);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_draw_utf8_in_rect", wrap_canvas_draw_utf8_in_rect);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_draw_icon", wrap_canvas_draw_icon);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_draw_image", wrap_canvas_draw_image);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_draw_image_ex", wrap_canvas_draw_image_ex);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_get_vgcanvas", wrap_canvas_get_vgcanvas);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_cast", wrap_canvas_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_reset", wrap_canvas_reset);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_t_get_prop_ox", wrap_canvas_t_get_prop_ox);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_t_get_prop_oy", wrap_canvas_t_get_prop_oy);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_t_get_prop_font_name", wrap_canvas_t_get_prop_font_name);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_t_get_prop_font_size", wrap_canvas_t_get_prop_font_size);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_t_get_prop_global_alpha", wrap_canvas_t_get_prop_global_alpha);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_named_value_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -11322,6 +12434,17 @@ jsvalue_t wrap_named_value_t_get_prop_name(
 
   jret = jsvalue_create_string(ctx, obj->name);
   return jret;
+}
+
+ret_t named_value_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"named_value_create", wrap_named_value_create);
+  jerryx_handler_register_global((const jerry_char_t*)"named_value_cast", wrap_named_value_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"named_value_set_name", wrap_named_value_set_name);
+  jerryx_handler_register_global((const jerry_char_t*)"named_value_set_value", wrap_named_value_set_value);
+  jerryx_handler_register_global((const jerry_char_t*)"named_value_get_value", wrap_named_value_get_value);
+  jerryx_handler_register_global((const jerry_char_t*)"named_value_t_get_prop_name", wrap_named_value_t_get_prop_name);
+
+ return RET_OK;
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_ENVOY(
@@ -12344,6 +13467,118 @@ jsvalue_t get_MIME_TYPE_VIDEO_X_MSVIDEO(
   return jsvalue_create_string(ctx, MIME_TYPE_VIDEO_X_MSVIDEO);
 }
 
+ret_t MIME_TYPE_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_ENVOY", get_MIME_TYPE_APPLICATION_ENVOY);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_FRACTALS", get_MIME_TYPE_APPLICATION_FRACTALS);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_FUTURESPLASH", get_MIME_TYPE_APPLICATION_FUTURESPLASH);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_HTA", get_MIME_TYPE_APPLICATION_HTA);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_JSON", get_MIME_TYPE_APPLICATION_JSON);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_UBJSON", get_MIME_TYPE_APPLICATION_UBJSON);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_MAC_BINHEX40", get_MIME_TYPE_APPLICATION_MAC_BINHEX40);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_MSWORD", get_MIME_TYPE_APPLICATION_MSWORD);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_OCTET_STREAM", get_MIME_TYPE_APPLICATION_OCTET_STREAM);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_ODA", get_MIME_TYPE_APPLICATION_ODA);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_OLESCRIPT", get_MIME_TYPE_APPLICATION_OLESCRIPT);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_PDF", get_MIME_TYPE_APPLICATION_PDF);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_PICS_RULES", get_MIME_TYPE_APPLICATION_PICS_RULES);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_PKCS10", get_MIME_TYPE_APPLICATION_PKCS10);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_PKIX_CRL", get_MIME_TYPE_APPLICATION_PKIX_CRL);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_POSTSCRIPT", get_MIME_TYPE_APPLICATION_POSTSCRIPT);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_RTF", get_MIME_TYPE_APPLICATION_RTF);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_VND_MS_EXCEL", get_MIME_TYPE_APPLICATION_VND_MS_EXCEL);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_VND_MS_OUTLOOK", get_MIME_TYPE_APPLICATION_VND_MS_OUTLOOK);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_VND_MS_PKICERTSTORE", get_MIME_TYPE_APPLICATION_VND_MS_PKICERTSTORE);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_VND_MS_PKISECCAT", get_MIME_TYPE_APPLICATION_VND_MS_PKISECCAT);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_VND_MS_PKISTL", get_MIME_TYPE_APPLICATION_VND_MS_PKISTL);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_VND_MS_POWERPOINT", get_MIME_TYPE_APPLICATION_VND_MS_POWERPOINT);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_VND_MS_PROJECT", get_MIME_TYPE_APPLICATION_VND_MS_PROJECT);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_VND_MS_WORKS", get_MIME_TYPE_APPLICATION_VND_MS_WORKS);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_WINHLP", get_MIME_TYPE_APPLICATION_WINHLP);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_BCPIO", get_MIME_TYPE_APPLICATION_X_BCPIO);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_CDF", get_MIME_TYPE_APPLICATION_X_CDF);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_COMPRESS", get_MIME_TYPE_APPLICATION_X_COMPRESS);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_COMPRESSED", get_MIME_TYPE_APPLICATION_X_COMPRESSED);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_CPIO", get_MIME_TYPE_APPLICATION_X_CPIO);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_CSH", get_MIME_TYPE_APPLICATION_X_CSH);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_DIRECTOR", get_MIME_TYPE_APPLICATION_X_DIRECTOR);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_DVI", get_MIME_TYPE_APPLICATION_X_DVI);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_GTAR", get_MIME_TYPE_APPLICATION_X_GTAR);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_GZIP", get_MIME_TYPE_APPLICATION_X_GZIP);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_HDF", get_MIME_TYPE_APPLICATION_X_HDF);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_IPHONE", get_MIME_TYPE_APPLICATION_X_IPHONE);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_JAVASCRIPT", get_MIME_TYPE_APPLICATION_X_JAVASCRIPT);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_LATEX", get_MIME_TYPE_APPLICATION_X_LATEX);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_MSACCESS", get_MIME_TYPE_APPLICATION_X_MSACCESS);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_MSCARDFILE", get_MIME_TYPE_APPLICATION_X_MSCARDFILE);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_MSCLIP", get_MIME_TYPE_APPLICATION_X_MSCLIP);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_MSDOWNLOAD", get_MIME_TYPE_APPLICATION_X_MSDOWNLOAD);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_MSMEDIAVIEW", get_MIME_TYPE_APPLICATION_X_MSMEDIAVIEW);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_MSMETAFILE", get_MIME_TYPE_APPLICATION_X_MSMETAFILE);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_MSMONEY", get_MIME_TYPE_APPLICATION_X_MSMONEY);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_MSPUBLISHER", get_MIME_TYPE_APPLICATION_X_MSPUBLISHER);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_MSSCHEDULE", get_MIME_TYPE_APPLICATION_X_MSSCHEDULE);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_MSTERMINAL", get_MIME_TYPE_APPLICATION_X_MSTERMINAL);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_MSWRITE", get_MIME_TYPE_APPLICATION_X_MSWRITE);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_NETCDF", get_MIME_TYPE_APPLICATION_X_NETCDF);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_PERFMON", get_MIME_TYPE_APPLICATION_X_PERFMON);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_PKCS12", get_MIME_TYPE_APPLICATION_X_PKCS12);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_SH", get_MIME_TYPE_APPLICATION_X_SH);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_SHAR", get_MIME_TYPE_APPLICATION_X_SHAR);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_SHOCKWAVE_FLASH", get_MIME_TYPE_APPLICATION_X_SHOCKWAVE_FLASH);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_STUFFIT", get_MIME_TYPE_APPLICATION_X_STUFFIT);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_SV4CPIO", get_MIME_TYPE_APPLICATION_X_SV4CPIO);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_SV4CRC", get_MIME_TYPE_APPLICATION_X_SV4CRC);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_TAR", get_MIME_TYPE_APPLICATION_X_TAR);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_TCL", get_MIME_TYPE_APPLICATION_X_TCL);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_TEX", get_MIME_TYPE_APPLICATION_X_TEX);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_TEXINFO", get_MIME_TYPE_APPLICATION_X_TEXINFO);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_TROFF", get_MIME_TYPE_APPLICATION_X_TROFF);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_X_USTAR", get_MIME_TYPE_APPLICATION_X_USTAR);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_APPLICATION_ZIP", get_MIME_TYPE_APPLICATION_ZIP);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_AUDIO_BASIC", get_MIME_TYPE_AUDIO_BASIC);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_AUDIO_MID", get_MIME_TYPE_AUDIO_MID);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_AUDIO_MPEG", get_MIME_TYPE_AUDIO_MPEG);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_AUDIO_X_AIFF", get_MIME_TYPE_AUDIO_X_AIFF);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_AUDIO_X_MPEGURL", get_MIME_TYPE_AUDIO_X_MPEGURL);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_AUDIO_X_WAV", get_MIME_TYPE_AUDIO_X_WAV);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_IMAGE_BMP", get_MIME_TYPE_IMAGE_BMP);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_IMAGE_CIS_COD", get_MIME_TYPE_IMAGE_CIS_COD);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_IMAGE_GIF", get_MIME_TYPE_IMAGE_GIF);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_IMAGE_IEF", get_MIME_TYPE_IMAGE_IEF);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_IMAGE_JPEG", get_MIME_TYPE_IMAGE_JPEG);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_IMAGE_PIPEG", get_MIME_TYPE_IMAGE_PIPEG);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_IMAGE_SVG_XML", get_MIME_TYPE_IMAGE_SVG_XML);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_IMAGE_TIFF", get_MIME_TYPE_IMAGE_TIFF);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_IMAGE_X_CMX", get_MIME_TYPE_IMAGE_X_CMX);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_IMAGE_X_ICON", get_MIME_TYPE_IMAGE_X_ICON);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_IMAGE_X_RGB", get_MIME_TYPE_IMAGE_X_RGB);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_IMAGE_X_XBITMAP", get_MIME_TYPE_IMAGE_X_XBITMAP);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_IMAGE_X_XPIXMAP", get_MIME_TYPE_IMAGE_X_XPIXMAP);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_IMAGE_X_XWINDOWDUMP", get_MIME_TYPE_IMAGE_X_XWINDOWDUMP);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_MESSAGE_RFC822", get_MIME_TYPE_MESSAGE_RFC822);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_TEXT_CSS", get_MIME_TYPE_TEXT_CSS);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_TEXT_H323", get_MIME_TYPE_TEXT_H323);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_TEXT_HTML", get_MIME_TYPE_TEXT_HTML);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_TEXT_IULS", get_MIME_TYPE_TEXT_IULS);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_TEXT_PLAIN", get_MIME_TYPE_TEXT_PLAIN);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_TEXT_RICHTEXT", get_MIME_TYPE_TEXT_RICHTEXT);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_TEXT_SCRIPTLET", get_MIME_TYPE_TEXT_SCRIPTLET);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_TEXT_WEBVIEWHTML", get_MIME_TYPE_TEXT_WEBVIEWHTML);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_TEXT_X_COMPONENT", get_MIME_TYPE_TEXT_X_COMPONENT);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_TEXT_X_SETEXT", get_MIME_TYPE_TEXT_X_SETEXT);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_TEXT_X_VCARD", get_MIME_TYPE_TEXT_X_VCARD);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_VIDEO_MPEG", get_MIME_TYPE_VIDEO_MPEG);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_VIDEO_QUICKTIME", get_MIME_TYPE_VIDEO_QUICKTIME);
+  jerryx_handler_register_global((const jerry_char_t*)"MIME_TYPE_VIDEO_X_MSVIDEO", get_MIME_TYPE_VIDEO_X_MSVIDEO);
+
+ return RET_OK;
+}
+
+ret_t idle_manager_t_init(JSContext *ctx) {
+
+ return RET_OK;
+}
+
 jsvalue_t get_INDICATOR_DEFAULT_PAINT_AUTO(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -12394,6 +13629,16 @@ jsvalue_t get_INDICATOR_DEFAULT_PAINT_STROKE_RECT(
   return jsvalue_create_int(ctx, INDICATOR_DEFAULT_PAINT_STROKE_RECT);
 }
 
+ret_t indicator_default_paint_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"INDICATOR_DEFAULT_PAINT_AUTO", get_INDICATOR_DEFAULT_PAINT_AUTO);
+  jerryx_handler_register_global((const jerry_char_t*)"INDICATOR_DEFAULT_PAINT_FILL_DOT", get_INDICATOR_DEFAULT_PAINT_FILL_DOT);
+  jerryx_handler_register_global((const jerry_char_t*)"INDICATOR_DEFAULT_PAINT_STROKE_DOT", get_INDICATOR_DEFAULT_PAINT_STROKE_DOT);
+  jerryx_handler_register_global((const jerry_char_t*)"INDICATOR_DEFAULT_PAINT_FILL_RECT", get_INDICATOR_DEFAULT_PAINT_FILL_RECT);
+  jerryx_handler_register_global((const jerry_char_t*)"INDICATOR_DEFAULT_PAINT_STROKE_RECT", get_INDICATOR_DEFAULT_PAINT_STROKE_RECT);
+
+ return RET_OK;
+}
+
 jsvalue_t get_CLIP_BOARD_DATA_TYPE_NONE(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -12412,6 +13657,13 @@ jsvalue_t get_CLIP_BOARD_DATA_TYPE_TEXT(
   )  {
   void* ctx = NULL;
   return jsvalue_create_int(ctx, CLIP_BOARD_DATA_TYPE_TEXT);
+}
+
+ret_t clip_board_data_type_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"CLIP_BOARD_DATA_TYPE_NONE", get_CLIP_BOARD_DATA_TYPE_NONE);
+  jerryx_handler_register_global((const jerry_char_t*)"CLIP_BOARD_DATA_TYPE_TEXT", get_CLIP_BOARD_DATA_TYPE_TEXT);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_clip_board_set_text(
@@ -12448,6 +13700,13 @@ jsvalue_t wrap_clip_board_get_text(
   jret = jsvalue_create_string(ctx, ret);
   }
   return jret;
+}
+
+ret_t clip_board_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"clip_board_set_text", wrap_clip_board_set_text);
+  jerryx_handler_register_global((const jerry_char_t*)"clip_board_get_text", wrap_clip_board_get_text);
+
+ return RET_OK;
 }
 
 jsvalue_t get_EASING_LINEAR(
@@ -12690,6 +13949,35 @@ jsvalue_t get_EASING_BOUNCE_INOUT(
   return jsvalue_create_int(ctx, EASING_BOUNCE_INOUT);
 }
 
+ret_t easing_type_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_LINEAR", get_EASING_LINEAR);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_QUADRATIC_IN", get_EASING_QUADRATIC_IN);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_QUADRATIC_OUT", get_EASING_QUADRATIC_OUT);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_QUADRATIC_INOUT", get_EASING_QUADRATIC_INOUT);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_CUBIC_IN", get_EASING_CUBIC_IN);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_CUBIC_OUT", get_EASING_CUBIC_OUT);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_SIN_IN", get_EASING_SIN_IN);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_SIN_OUT", get_EASING_SIN_OUT);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_SIN_INOUT", get_EASING_SIN_INOUT);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_POW_IN", get_EASING_POW_IN);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_POW_OUT", get_EASING_POW_OUT);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_POW_INOUT", get_EASING_POW_INOUT);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_CIRCULAR_IN", get_EASING_CIRCULAR_IN);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_CIRCULAR_OUT", get_EASING_CIRCULAR_OUT);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_CIRCULAR_INOUT", get_EASING_CIRCULAR_INOUT);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_ELASTIC_IN", get_EASING_ELASTIC_IN);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_ELASTIC_OUT", get_EASING_ELASTIC_OUT);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_ELASTIC_INOUT", get_EASING_ELASTIC_INOUT);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_BACK_IN", get_EASING_BACK_IN);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_BACK_OUT", get_EASING_BACK_OUT);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_BACK_INOUT", get_EASING_BACK_INOUT);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_BOUNCE_IN", get_EASING_BOUNCE_IN);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_BOUNCE_OUT", get_EASING_BOUNCE_OUT);
+  jerryx_handler_register_global((const jerry_char_t*)"EASING_BOUNCE_INOUT", get_EASING_BOUNCE_INOUT);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_date_time_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -12821,6 +14109,20 @@ jsvalue_t wrap_date_time_t_get_prop_year(
 
   jret = jsvalue_create_int(ctx, obj->year);
   return jret;
+}
+
+ret_t date_time_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"date_time_create", wrap_date_time_create);
+  jerryx_handler_register_global((const jerry_char_t*)"date_time_set", wrap_date_time_set);
+  jerryx_handler_register_global((const jerry_char_t*)"date_time_t_get_prop_second", wrap_date_time_t_get_prop_second);
+  jerryx_handler_register_global((const jerry_char_t*)"date_time_t_get_prop_minute", wrap_date_time_t_get_prop_minute);
+  jerryx_handler_register_global((const jerry_char_t*)"date_time_t_get_prop_hour", wrap_date_time_t_get_prop_hour);
+  jerryx_handler_register_global((const jerry_char_t*)"date_time_t_get_prop_day", wrap_date_time_t_get_prop_day);
+  jerryx_handler_register_global((const jerry_char_t*)"date_time_t_get_prop_wday", wrap_date_time_t_get_prop_wday);
+  jerryx_handler_register_global((const jerry_char_t*)"date_time_t_get_prop_month", wrap_date_time_t_get_prop_month);
+  jerryx_handler_register_global((const jerry_char_t*)"date_time_t_get_prop_year", wrap_date_time_t_get_prop_year);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_color_create(
@@ -12981,6 +14283,20 @@ jsvalue_t wrap_color_t_get_prop_color(
   return jret;
 }
 
+ret_t color_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"color_create", wrap_color_create);
+  jerryx_handler_register_global((const jerry_char_t*)"color_from_str", wrap_color_from_str);
+  jerryx_handler_register_global((const jerry_char_t*)"color_r", wrap_color_r);
+  jerryx_handler_register_global((const jerry_char_t*)"color_g", wrap_color_g);
+  jerryx_handler_register_global((const jerry_char_t*)"color_b", wrap_color_b);
+  jerryx_handler_register_global((const jerry_char_t*)"color_a", wrap_color_a);
+  jerryx_handler_register_global((const jerry_char_t*)"color_cast", wrap_color_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"color_t_set_prop_color", wrap_color_t_set_prop_color);
+  jerryx_handler_register_global((const jerry_char_t*)"color_t_get_prop_color", wrap_color_t_get_prop_color);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_asset_info_t_get_prop_type(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -13063,6 +14379,17 @@ jsvalue_t wrap_asset_info_t_get_prop_name(
 
   jret = jsvalue_create_string(ctx, obj->name);
   return jret;
+}
+
+ret_t asset_info_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"asset_info_t_get_prop_type", wrap_asset_info_t_get_prop_type);
+  jerryx_handler_register_global((const jerry_char_t*)"asset_info_t_get_prop_subtype", wrap_asset_info_t_get_prop_subtype);
+  jerryx_handler_register_global((const jerry_char_t*)"asset_info_t_get_prop_is_in_rom", wrap_asset_info_t_get_prop_is_in_rom);
+  jerryx_handler_register_global((const jerry_char_t*)"asset_info_t_get_prop_size", wrap_asset_info_t_get_prop_size);
+  jerryx_handler_register_global((const jerry_char_t*)"asset_info_t_get_prop_refcount", wrap_asset_info_t_get_prop_refcount);
+  jerryx_handler_register_global((const jerry_char_t*)"asset_info_t_get_prop_name", wrap_asset_info_t_get_prop_name);
+
+ return RET_OK;
 }
 
 jsvalue_t get_ASSET_TYPE_NONE(
@@ -13155,6 +14482,20 @@ jsvalue_t get_ASSET_TYPE_DATA(
   return jsvalue_create_int(ctx, ASSET_TYPE_DATA);
 }
 
+ret_t asset_type_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"ASSET_TYPE_NONE", get_ASSET_TYPE_NONE);
+  jerryx_handler_register_global((const jerry_char_t*)"ASSET_TYPE_FONT", get_ASSET_TYPE_FONT);
+  jerryx_handler_register_global((const jerry_char_t*)"ASSET_TYPE_IMAGE", get_ASSET_TYPE_IMAGE);
+  jerryx_handler_register_global((const jerry_char_t*)"ASSET_TYPE_STYLE", get_ASSET_TYPE_STYLE);
+  jerryx_handler_register_global((const jerry_char_t*)"ASSET_TYPE_UI", get_ASSET_TYPE_UI);
+  jerryx_handler_register_global((const jerry_char_t*)"ASSET_TYPE_XML", get_ASSET_TYPE_XML);
+  jerryx_handler_register_global((const jerry_char_t*)"ASSET_TYPE_STRINGS", get_ASSET_TYPE_STRINGS);
+  jerryx_handler_register_global((const jerry_char_t*)"ASSET_TYPE_SCRIPT", get_ASSET_TYPE_SCRIPT);
+  jerryx_handler_register_global((const jerry_char_t*)"ASSET_TYPE_DATA", get_ASSET_TYPE_DATA);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_assets_manager(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -13212,6 +14553,14 @@ jsvalue_t wrap_assets_manager_unref(
   return jret;
 }
 
+ret_t assets_manager_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"assets_manager", wrap_assets_manager);
+  jerryx_handler_register_global((const jerry_char_t*)"assets_manager_ref", wrap_assets_manager_ref);
+  jerryx_handler_register_global((const jerry_char_t*)"assets_manager_unref", wrap_assets_manager_unref);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_canvas_widget_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -13250,6 +14599,13 @@ jsvalue_t wrap_canvas_widget_cast(
   jret = jsvalue_create_pointer(ctx, ret, "canvas_widget_t*");
   }
   return jret;
+}
+
+ret_t canvas_widget_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_widget_create", wrap_canvas_widget_create);
+  jerryx_handler_register_global((const jerry_char_t*)"canvas_widget_cast", wrap_canvas_widget_cast);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_time_clock_create(
@@ -13711,6 +15067,38 @@ jsvalue_t wrap_time_clock_t_get_prop_second_anchor_y(
   return jret;
 }
 
+ret_t time_clock_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_create", wrap_time_clock_create);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_cast", wrap_time_clock_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_set_hour", wrap_time_clock_set_hour);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_set_minute", wrap_time_clock_set_minute);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_set_second", wrap_time_clock_set_second);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_set_hour_image", wrap_time_clock_set_hour_image);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_set_minute_image", wrap_time_clock_set_minute_image);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_set_second_image", wrap_time_clock_set_second_image);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_set_bg_image", wrap_time_clock_set_bg_image);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_set_image", wrap_time_clock_set_image);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_set_hour_anchor", wrap_time_clock_set_hour_anchor);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_set_minute_anchor", wrap_time_clock_set_minute_anchor);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_set_second_anchor", wrap_time_clock_set_second_anchor);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_t_get_prop_hour", wrap_time_clock_t_get_prop_hour);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_t_get_prop_minute", wrap_time_clock_t_get_prop_minute);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_t_get_prop_second", wrap_time_clock_t_get_prop_second);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_t_get_prop_image", wrap_time_clock_t_get_prop_image);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_t_get_prop_bg_image", wrap_time_clock_t_get_prop_bg_image);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_t_get_prop_hour_image", wrap_time_clock_t_get_prop_hour_image);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_t_get_prop_minute_image", wrap_time_clock_t_get_prop_minute_image);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_t_get_prop_second_image", wrap_time_clock_t_get_prop_second_image);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_t_get_prop_hour_anchor_x", wrap_time_clock_t_get_prop_hour_anchor_x);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_t_get_prop_hour_anchor_y", wrap_time_clock_t_get_prop_hour_anchor_y);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_t_get_prop_minute_anchor_x", wrap_time_clock_t_get_prop_minute_anchor_x);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_t_get_prop_minute_anchor_y", wrap_time_clock_t_get_prop_minute_anchor_y);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_t_get_prop_second_anchor_x", wrap_time_clock_t_get_prop_second_anchor_x);
+  jerryx_handler_register_global((const jerry_char_t*)"time_clock_t_get_prop_second_anchor_y", wrap_time_clock_t_get_prop_second_anchor_y);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_text_selector_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -14004,6 +15392,27 @@ jsvalue_t wrap_text_selector_t_get_prop_options(
   return jret;
 }
 
+ret_t text_selector_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"text_selector_create", wrap_text_selector_create);
+  jerryx_handler_register_global((const jerry_char_t*)"text_selector_cast", wrap_text_selector_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"text_selector_reset_options", wrap_text_selector_reset_options);
+  jerryx_handler_register_global((const jerry_char_t*)"text_selector_count_options", wrap_text_selector_count_options);
+  jerryx_handler_register_global((const jerry_char_t*)"text_selector_append_option", wrap_text_selector_append_option);
+  jerryx_handler_register_global((const jerry_char_t*)"text_selector_set_options", wrap_text_selector_set_options);
+  jerryx_handler_register_global((const jerry_char_t*)"text_selector_set_range_options", wrap_text_selector_set_range_options);
+  jerryx_handler_register_global((const jerry_char_t*)"text_selector_get_value", wrap_text_selector_get_value);
+  jerryx_handler_register_global((const jerry_char_t*)"text_selector_set_value", wrap_text_selector_set_value);
+  jerryx_handler_register_global((const jerry_char_t*)"text_selector_get_text", wrap_text_selector_get_text);
+  jerryx_handler_register_global((const jerry_char_t*)"text_selector_set_text", wrap_text_selector_set_text);
+  jerryx_handler_register_global((const jerry_char_t*)"text_selector_set_selected_index", wrap_text_selector_set_selected_index);
+  jerryx_handler_register_global((const jerry_char_t*)"text_selector_set_visible_nr", wrap_text_selector_set_visible_nr);
+  jerryx_handler_register_global((const jerry_char_t*)"text_selector_t_get_prop_visible_nr", wrap_text_selector_t_get_prop_visible_nr);
+  jerryx_handler_register_global((const jerry_char_t*)"text_selector_t_get_prop_selected_index", wrap_text_selector_t_get_prop_selected_index);
+  jerryx_handler_register_global((const jerry_char_t*)"text_selector_t_get_prop_options", wrap_text_selector_t_get_prop_options);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_prop_change_event_cast(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -14050,6 +15459,14 @@ jsvalue_t wrap_prop_change_event_t_get_prop_value(
   return jret;
 }
 
+ret_t prop_change_event_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"prop_change_event_cast", wrap_prop_change_event_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"prop_change_event_t_get_prop_name", wrap_prop_change_event_t_get_prop_name);
+  jerryx_handler_register_global((const jerry_char_t*)"prop_change_event_t_get_prop_value", wrap_prop_change_event_t_get_prop_value);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_progress_event_cast(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -14080,6 +15497,13 @@ jsvalue_t wrap_progress_event_t_get_prop_percent(
 
   jret = jsvalue_create_int(ctx, obj->percent);
   return jret;
+}
+
+ret_t progress_event_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"progress_event_cast", wrap_progress_event_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_event_t_get_prop_percent", wrap_progress_event_t_get_prop_percent);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_switch_create(
@@ -14167,6 +15591,16 @@ jsvalue_t wrap_switch_t_get_prop_max_xoffset_ratio(
 
   jret = jsvalue_create_number(ctx, obj->max_xoffset_ratio);
   return jret;
+}
+
+ret_t switch_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"switch_create", wrap_switch_create);
+  jerryx_handler_register_global((const jerry_char_t*)"switch_set_value", wrap_switch_set_value);
+  jerryx_handler_register_global((const jerry_char_t*)"switch_cast", wrap_switch_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"switch_t_get_prop_value", wrap_switch_t_get_prop_value);
+  jerryx_handler_register_global((const jerry_char_t*)"switch_t_get_prop_max_xoffset_ratio", wrap_switch_t_get_prop_max_xoffset_ratio);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_slide_view_create(
@@ -14359,6 +15793,22 @@ jsvalue_t wrap_slide_view_t_get_prop_anim_hint(
 
   jret = jsvalue_create_string(ctx, obj->anim_hint);
   return jret;
+}
+
+ret_t slide_view_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"slide_view_create", wrap_slide_view_create);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_view_cast", wrap_slide_view_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_view_set_auto_play", wrap_slide_view_set_auto_play);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_view_set_active", wrap_slide_view_set_active);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_view_set_vertical", wrap_slide_view_set_vertical);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_view_set_anim_hint", wrap_slide_view_set_anim_hint);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_view_set_loop", wrap_slide_view_set_loop);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_view_t_get_prop_vertical", wrap_slide_view_t_get_prop_vertical);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_view_t_get_prop_auto_play", wrap_slide_view_t_get_prop_auto_play);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_view_t_get_prop_loop", wrap_slide_view_t_get_prop_loop);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_view_t_get_prop_anim_hint", wrap_slide_view_t_get_prop_anim_hint);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_slide_indicator_create(
@@ -14760,6 +16210,34 @@ jsvalue_t wrap_slide_indicator_t_get_prop_indicated_target(
   return jret;
 }
 
+ret_t slide_indicator_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_create", wrap_slide_indicator_create);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_create_linear", wrap_slide_indicator_create_linear);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_create_arc", wrap_slide_indicator_create_arc);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_cast", wrap_slide_indicator_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_set_value", wrap_slide_indicator_set_value);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_set_max", wrap_slide_indicator_set_max);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_set_default_paint", wrap_slide_indicator_set_default_paint);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_set_auto_hide", wrap_slide_indicator_set_auto_hide);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_set_margin", wrap_slide_indicator_set_margin);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_set_spacing", wrap_slide_indicator_set_spacing);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_set_size", wrap_slide_indicator_set_size);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_set_anchor", wrap_slide_indicator_set_anchor);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_set_indicated_target", wrap_slide_indicator_set_indicated_target);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_t_get_prop_value", wrap_slide_indicator_t_get_prop_value);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_t_get_prop_max", wrap_slide_indicator_t_get_prop_max);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_t_get_prop_default_paint", wrap_slide_indicator_t_get_prop_default_paint);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_t_get_prop_auto_hide", wrap_slide_indicator_t_get_prop_auto_hide);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_t_get_prop_margin", wrap_slide_indicator_t_get_prop_margin);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_t_get_prop_spacing", wrap_slide_indicator_t_get_prop_spacing);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_t_get_prop_size", wrap_slide_indicator_t_get_prop_size);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_t_get_prop_anchor_x", wrap_slide_indicator_t_get_prop_anchor_x);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_t_get_prop_anchor_y", wrap_slide_indicator_t_get_prop_anchor_y);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_t_get_prop_indicated_target", wrap_slide_indicator_t_get_prop_indicated_target);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_slide_menu_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -14897,6 +16375,19 @@ jsvalue_t wrap_slide_menu_t_get_prop_min_scale(
 
   jret = jsvalue_create_number(ctx, obj->min_scale);
   return jret;
+}
+
+ret_t slide_menu_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"slide_menu_create", wrap_slide_menu_create);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_menu_cast", wrap_slide_menu_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_menu_set_value", wrap_slide_menu_set_value);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_menu_set_align_v", wrap_slide_menu_set_align_v);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_menu_set_min_scale", wrap_slide_menu_set_min_scale);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_menu_t_get_prop_value", wrap_slide_menu_t_get_prop_value);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_menu_t_get_prop_align_v", wrap_slide_menu_t_get_prop_align_v);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_menu_t_get_prop_min_scale", wrap_slide_menu_t_get_prop_min_scale);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_scroll_view_create(
@@ -15209,6 +16700,29 @@ jsvalue_t wrap_scroll_view_t_get_prop_yslidable(
   return jret;
 }
 
+ret_t scroll_view_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_create", wrap_scroll_view_create);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_cast", wrap_scroll_view_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_set_virtual_w", wrap_scroll_view_set_virtual_w);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_set_virtual_h", wrap_scroll_view_set_virtual_h);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_set_xslidable", wrap_scroll_view_set_xslidable);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_set_yslidable", wrap_scroll_view_set_yslidable);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_set_offset", wrap_scroll_view_set_offset);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_set_speed_scale", wrap_scroll_view_set_speed_scale);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_scroll_to", wrap_scroll_view_scroll_to);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_scroll_delta_to", wrap_scroll_view_scroll_delta_to);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_t_get_prop_virtual_w", wrap_scroll_view_t_get_prop_virtual_w);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_t_get_prop_virtual_h", wrap_scroll_view_t_get_prop_virtual_h);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_t_get_prop_xoffset", wrap_scroll_view_t_get_prop_xoffset);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_t_get_prop_yoffset", wrap_scroll_view_t_get_prop_yoffset);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_t_get_prop_xspeed_scale", wrap_scroll_view_t_get_prop_xspeed_scale);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_t_get_prop_yspeed_scale", wrap_scroll_view_t_get_prop_yspeed_scale);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_t_get_prop_xslidable", wrap_scroll_view_t_get_prop_xslidable);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_t_get_prop_yslidable", wrap_scroll_view_t_get_prop_yslidable);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_scroll_bar_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -15483,6 +16997,26 @@ jsvalue_t wrap_scroll_bar_t_get_prop_animatable(
   return jret;
 }
 
+ret_t scroll_bar_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_create", wrap_scroll_bar_create);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_cast", wrap_scroll_bar_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_create_mobile", wrap_scroll_bar_create_mobile);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_create_desktop", wrap_scroll_bar_create_desktop);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_set_params", wrap_scroll_bar_set_params);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_scroll_to", wrap_scroll_bar_scroll_to);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_set_value", wrap_scroll_bar_set_value);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_add_delta", wrap_scroll_bar_add_delta);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_scroll_delta", wrap_scroll_bar_scroll_delta);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_set_value_only", wrap_scroll_bar_set_value_only);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_is_mobile", wrap_scroll_bar_is_mobile);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_t_get_prop_virtual_size", wrap_scroll_bar_t_get_prop_virtual_size);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_t_get_prop_value", wrap_scroll_bar_t_get_prop_value);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_t_get_prop_row", wrap_scroll_bar_t_get_prop_row);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_t_get_prop_animatable", wrap_scroll_bar_t_get_prop_animatable);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_list_view_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -15622,6 +17156,19 @@ jsvalue_t wrap_list_view_t_get_prop_auto_hide_scroll_bar(
   return jret;
 }
 
+ret_t list_view_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"list_view_create", wrap_list_view_create);
+  jerryx_handler_register_global((const jerry_char_t*)"list_view_set_item_height", wrap_list_view_set_item_height);
+  jerryx_handler_register_global((const jerry_char_t*)"list_view_set_default_item_height", wrap_list_view_set_default_item_height);
+  jerryx_handler_register_global((const jerry_char_t*)"list_view_set_auto_hide_scroll_bar", wrap_list_view_set_auto_hide_scroll_bar);
+  jerryx_handler_register_global((const jerry_char_t*)"list_view_cast", wrap_list_view_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"list_view_t_get_prop_item_height", wrap_list_view_t_get_prop_item_height);
+  jerryx_handler_register_global((const jerry_char_t*)"list_view_t_get_prop_default_item_height", wrap_list_view_t_get_prop_default_item_height);
+  jerryx_handler_register_global((const jerry_char_t*)"list_view_t_get_prop_auto_hide_scroll_bar", wrap_list_view_t_get_prop_auto_hide_scroll_bar);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_list_view_h_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -15728,6 +17275,17 @@ jsvalue_t wrap_list_view_h_t_get_prop_spacing(
   return jret;
 }
 
+ret_t list_view_h_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"list_view_h_create", wrap_list_view_h_create);
+  jerryx_handler_register_global((const jerry_char_t*)"list_view_h_set_item_width", wrap_list_view_h_set_item_width);
+  jerryx_handler_register_global((const jerry_char_t*)"list_view_h_set_spacing", wrap_list_view_h_set_spacing);
+  jerryx_handler_register_global((const jerry_char_t*)"list_view_h_cast", wrap_list_view_h_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"list_view_h_t_get_prop_item_width", wrap_list_view_h_t_get_prop_item_width);
+  jerryx_handler_register_global((const jerry_char_t*)"list_view_h_t_get_prop_spacing", wrap_list_view_h_t_get_prop_spacing);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_list_item_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -15766,6 +17324,13 @@ jsvalue_t wrap_list_item_cast(
   jret = jsvalue_create_pointer(ctx, ret, "list_item_t*");
   }
   return jret;
+}
+
+ret_t list_item_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"list_item_create", wrap_list_item_create);
+  jerryx_handler_register_global((const jerry_char_t*)"list_item_cast", wrap_list_item_cast);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_hscroll_label_create(
@@ -16122,6 +17687,32 @@ jsvalue_t wrap_hscroll_label_t_get_prop_text_w(
   return jret;
 }
 
+ret_t hscroll_label_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_create", wrap_hscroll_label_create);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_set_lull", wrap_hscroll_label_set_lull);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_set_duration", wrap_hscroll_label_set_duration);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_set_only_focus", wrap_hscroll_label_set_only_focus);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_set_only_parent_focus", wrap_hscroll_label_set_only_parent_focus);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_set_loop", wrap_hscroll_label_set_loop);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_set_yoyo", wrap_hscroll_label_set_yoyo);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_set_ellipses", wrap_hscroll_label_set_ellipses);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_set_xoffset", wrap_hscroll_label_set_xoffset);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_start", wrap_hscroll_label_start);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_stop", wrap_hscroll_label_stop);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_cast", wrap_hscroll_label_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_t_get_prop_only_focus", wrap_hscroll_label_t_get_prop_only_focus);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_t_get_prop_only_parent_focus", wrap_hscroll_label_t_get_prop_only_parent_focus);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_t_get_prop_loop", wrap_hscroll_label_t_get_prop_loop);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_t_get_prop_yoyo", wrap_hscroll_label_t_get_prop_yoyo);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_t_get_prop_ellipses", wrap_hscroll_label_t_get_prop_ellipses);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_t_get_prop_lull", wrap_hscroll_label_t_get_prop_lull);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_t_get_prop_duration", wrap_hscroll_label_t_get_prop_duration);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_t_get_prop_xoffset", wrap_hscroll_label_t_get_prop_xoffset);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_t_get_prop_text_w", wrap_hscroll_label_t_get_prop_text_w);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_rich_text_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -16208,6 +17799,16 @@ jsvalue_t wrap_rich_text_t_get_prop_margin(
 
   jret = jsvalue_create_int(ctx, obj->margin);
   return jret;
+}
+
+ret_t rich_text_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"rich_text_create", wrap_rich_text_create);
+  jerryx_handler_register_global((const jerry_char_t*)"rich_text_set_text", wrap_rich_text_set_text);
+  jerryx_handler_register_global((const jerry_char_t*)"rich_text_cast", wrap_rich_text_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"rich_text_t_get_prop_line_gap", wrap_rich_text_t_get_prop_line_gap);
+  jerryx_handler_register_global((const jerry_char_t*)"rich_text_t_get_prop_margin", wrap_rich_text_t_get_prop_margin);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_progress_circle_create(
@@ -16482,6 +18083,27 @@ jsvalue_t wrap_progress_circle_t_get_prop_show_text(
   return jret;
 }
 
+ret_t progress_circle_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_create", wrap_progress_circle_create);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_cast", wrap_progress_circle_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_set_value", wrap_progress_circle_set_value);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_set_max", wrap_progress_circle_set_max);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_set_line_width", wrap_progress_circle_set_line_width);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_set_start_angle", wrap_progress_circle_set_start_angle);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_set_unit", wrap_progress_circle_set_unit);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_set_show_text", wrap_progress_circle_set_show_text);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_set_counter_clock_wise", wrap_progress_circle_set_counter_clock_wise);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_t_get_prop_value", wrap_progress_circle_t_get_prop_value);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_t_get_prop_max", wrap_progress_circle_t_get_prop_max);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_t_get_prop_start_angle", wrap_progress_circle_t_get_prop_start_angle);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_t_get_prop_line_width", wrap_progress_circle_t_get_prop_line_width);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_t_get_prop_unit", wrap_progress_circle_t_get_prop_unit);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_t_get_prop_counter_clock_wise", wrap_progress_circle_t_get_prop_counter_clock_wise);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_t_get_prop_show_text", wrap_progress_circle_t_get_prop_show_text);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_mledit_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -16726,6 +18348,25 @@ jsvalue_t wrap_mledit_t_get_prop_scroll_line(
   return jret;
 }
 
+ret_t mledit_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"mledit_create", wrap_mledit_create);
+  jerryx_handler_register_global((const jerry_char_t*)"mledit_set_readonly", wrap_mledit_set_readonly);
+  jerryx_handler_register_global((const jerry_char_t*)"mledit_set_focus", wrap_mledit_set_focus);
+  jerryx_handler_register_global((const jerry_char_t*)"mledit_set_wrap_word", wrap_mledit_set_wrap_word);
+  jerryx_handler_register_global((const jerry_char_t*)"mledit_set_max_lines", wrap_mledit_set_max_lines);
+  jerryx_handler_register_global((const jerry_char_t*)"mledit_set_input_tips", wrap_mledit_set_input_tips);
+  jerryx_handler_register_global((const jerry_char_t*)"mledit_set_cursor", wrap_mledit_set_cursor);
+  jerryx_handler_register_global((const jerry_char_t*)"mledit_set_scroll_line", wrap_mledit_set_scroll_line);
+  jerryx_handler_register_global((const jerry_char_t*)"mledit_cast", wrap_mledit_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"mledit_t_get_prop_readonly", wrap_mledit_t_get_prop_readonly);
+  jerryx_handler_register_global((const jerry_char_t*)"mledit_t_get_prop_tips", wrap_mledit_t_get_prop_tips);
+  jerryx_handler_register_global((const jerry_char_t*)"mledit_t_get_prop_wrap_word", wrap_mledit_t_get_prop_wrap_word);
+  jerryx_handler_register_global((const jerry_char_t*)"mledit_t_get_prop_max_lines", wrap_mledit_t_get_prop_max_lines);
+  jerryx_handler_register_global((const jerry_char_t*)"mledit_t_get_prop_scroll_line", wrap_mledit_t_get_prop_scroll_line);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_line_number_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -16840,6 +18481,17 @@ jsvalue_t wrap_line_number_cast(
   jret = jsvalue_create_pointer(ctx, ret, "line_number_t*");
   }
   return jret;
+}
+
+ret_t line_number_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"line_number_create", wrap_line_number_create);
+  jerryx_handler_register_global((const jerry_char_t*)"line_number_set_top_margin", wrap_line_number_set_top_margin);
+  jerryx_handler_register_global((const jerry_char_t*)"line_number_set_bottom_margin", wrap_line_number_set_bottom_margin);
+  jerryx_handler_register_global((const jerry_char_t*)"line_number_set_line_height", wrap_line_number_set_line_height);
+  jerryx_handler_register_global((const jerry_char_t*)"line_number_set_yoffset", wrap_line_number_set_yoffset);
+  jerryx_handler_register_global((const jerry_char_t*)"line_number_cast", wrap_line_number_cast);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_image_value_create(
@@ -16981,6 +18633,19 @@ jsvalue_t wrap_image_value_t_get_prop_value(
 
   jret = jsvalue_create_number(ctx, obj->value);
   return jret;
+}
+
+ret_t image_value_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"image_value_create", wrap_image_value_create);
+  jerryx_handler_register_global((const jerry_char_t*)"image_value_set_image", wrap_image_value_set_image);
+  jerryx_handler_register_global((const jerry_char_t*)"image_value_set_format", wrap_image_value_set_format);
+  jerryx_handler_register_global((const jerry_char_t*)"image_value_set_value", wrap_image_value_set_value);
+  jerryx_handler_register_global((const jerry_char_t*)"image_value_cast", wrap_image_value_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"image_value_t_get_prop_image", wrap_image_value_t_get_prop_image);
+  jerryx_handler_register_global((const jerry_char_t*)"image_value_t_get_prop_format", wrap_image_value_t_get_prop_format);
+  jerryx_handler_register_global((const jerry_char_t*)"image_value_t_get_prop_value", wrap_image_value_t_get_prop_value);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_image_animation_create(
@@ -17410,6 +19075,36 @@ jsvalue_t wrap_image_animation_t_get_prop_delay(
   return jret;
 }
 
+ret_t image_animation_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_create", wrap_image_animation_create);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_set_loop", wrap_image_animation_set_loop);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_set_image", wrap_image_animation_set_image);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_set_interval", wrap_image_animation_set_interval);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_set_delay", wrap_image_animation_set_delay);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_set_auto_play", wrap_image_animation_set_auto_play);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_set_sequence", wrap_image_animation_set_sequence);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_set_range_sequence", wrap_image_animation_set_range_sequence);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_play", wrap_image_animation_play);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_stop", wrap_image_animation_stop);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_pause", wrap_image_animation_pause);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_next", wrap_image_animation_next);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_set_format", wrap_image_animation_set_format);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_set_unload_after_paint", wrap_image_animation_set_unload_after_paint);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_cast", wrap_image_animation_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_image", wrap_image_animation_t_get_prop_image);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_sequence", wrap_image_animation_t_get_prop_sequence);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_start_index", wrap_image_animation_t_get_prop_start_index);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_end_index", wrap_image_animation_t_get_prop_end_index);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_loop", wrap_image_animation_t_get_prop_loop);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_auto_play", wrap_image_animation_t_get_prop_auto_play);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_unload_after_paint", wrap_image_animation_t_get_prop_unload_after_paint);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_format", wrap_image_animation_t_get_prop_format);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_interval", wrap_image_animation_t_get_prop_interval);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_delay", wrap_image_animation_t_get_prop_delay);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_guage_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -17515,6 +19210,17 @@ jsvalue_t wrap_guage_t_get_prop_draw_type(
 
   jret = jsvalue_create_number(ctx, obj->draw_type);
   return jret;
+}
+
+ret_t guage_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"guage_create", wrap_guage_create);
+  jerryx_handler_register_global((const jerry_char_t*)"guage_cast", wrap_guage_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"guage_set_image", wrap_guage_set_image);
+  jerryx_handler_register_global((const jerry_char_t*)"guage_set_draw_type", wrap_guage_set_draw_type);
+  jerryx_handler_register_global((const jerry_char_t*)"guage_t_get_prop_image", wrap_guage_t_get_prop_image);
+  jerryx_handler_register_global((const jerry_char_t*)"guage_t_get_prop_draw_type", wrap_guage_t_get_prop_draw_type);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_guage_pointer_create(
@@ -17672,6 +19378,20 @@ jsvalue_t wrap_guage_pointer_t_get_prop_anchor_y(
 
   jret = jsvalue_create_number(ctx, obj->anchor_y);
   return jret;
+}
+
+ret_t guage_pointer_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"guage_pointer_create", wrap_guage_pointer_create);
+  jerryx_handler_register_global((const jerry_char_t*)"guage_pointer_cast", wrap_guage_pointer_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"guage_pointer_set_angle", wrap_guage_pointer_set_angle);
+  jerryx_handler_register_global((const jerry_char_t*)"guage_pointer_set_image", wrap_guage_pointer_set_image);
+  jerryx_handler_register_global((const jerry_char_t*)"guage_pointer_set_anchor", wrap_guage_pointer_set_anchor);
+  jerryx_handler_register_global((const jerry_char_t*)"guage_pointer_t_get_prop_angle", wrap_guage_pointer_t_get_prop_angle);
+  jerryx_handler_register_global((const jerry_char_t*)"guage_pointer_t_get_prop_image", wrap_guage_pointer_t_get_prop_image);
+  jerryx_handler_register_global((const jerry_char_t*)"guage_pointer_t_get_prop_anchor_x", wrap_guage_pointer_t_get_prop_anchor_x);
+  jerryx_handler_register_global((const jerry_char_t*)"guage_pointer_t_get_prop_anchor_y", wrap_guage_pointer_t_get_prop_anchor_y);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_draggable_create(
@@ -17945,6 +19665,27 @@ jsvalue_t wrap_draggable_t_get_prop_drag_window(
   return jret;
 }
 
+ret_t draggable_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"draggable_create", wrap_draggable_create);
+  jerryx_handler_register_global((const jerry_char_t*)"draggable_cast", wrap_draggable_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"draggable_set_top", wrap_draggable_set_top);
+  jerryx_handler_register_global((const jerry_char_t*)"draggable_set_bottom", wrap_draggable_set_bottom);
+  jerryx_handler_register_global((const jerry_char_t*)"draggable_set_left", wrap_draggable_set_left);
+  jerryx_handler_register_global((const jerry_char_t*)"draggable_set_right", wrap_draggable_set_right);
+  jerryx_handler_register_global((const jerry_char_t*)"draggable_set_vertical_only", wrap_draggable_set_vertical_only);
+  jerryx_handler_register_global((const jerry_char_t*)"draggable_set_horizontal_only", wrap_draggable_set_horizontal_only);
+  jerryx_handler_register_global((const jerry_char_t*)"draggable_set_drag_window", wrap_draggable_set_drag_window);
+  jerryx_handler_register_global((const jerry_char_t*)"draggable_t_get_prop_top", wrap_draggable_t_get_prop_top);
+  jerryx_handler_register_global((const jerry_char_t*)"draggable_t_get_prop_bottom", wrap_draggable_t_get_prop_bottom);
+  jerryx_handler_register_global((const jerry_char_t*)"draggable_t_get_prop_left", wrap_draggable_t_get_prop_left);
+  jerryx_handler_register_global((const jerry_char_t*)"draggable_t_get_prop_right", wrap_draggable_t_get_prop_right);
+  jerryx_handler_register_global((const jerry_char_t*)"draggable_t_get_prop_vertical_only", wrap_draggable_t_get_prop_vertical_only);
+  jerryx_handler_register_global((const jerry_char_t*)"draggable_t_get_prop_horizontal_only", wrap_draggable_t_get_prop_horizontal_only);
+  jerryx_handler_register_global((const jerry_char_t*)"draggable_t_get_prop_drag_window", wrap_draggable_t_get_prop_drag_window);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_color_picker_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -18019,6 +19760,15 @@ jsvalue_t wrap_color_picker_t_get_prop_value(
   return jret;
 }
 
+ret_t color_picker_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"color_picker_create", wrap_color_picker_create);
+  jerryx_handler_register_global((const jerry_char_t*)"color_picker_set_color", wrap_color_picker_set_color);
+  jerryx_handler_register_global((const jerry_char_t*)"color_picker_cast", wrap_color_picker_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"color_picker_t_get_prop_value", wrap_color_picker_t_get_prop_value);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_color_component_cast(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -18035,6 +19785,12 @@ jsvalue_t wrap_color_component_cast(
   jret = jsvalue_create_pointer(ctx, ret, "color_component_t*");
   }
   return jret;
+}
+
+ret_t color_component_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"color_component_cast", wrap_color_component_cast);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_window_manager(
@@ -18294,6 +20050,25 @@ jsvalue_t wrap_window_manager_back_to(
   return jret;
 }
 
+ret_t window_manager_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"window_manager", wrap_window_manager);
+  jerryx_handler_register_global((const jerry_char_t*)"window_manager_cast", wrap_window_manager_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"window_manager_get_top_main_window", wrap_window_manager_get_top_main_window);
+  jerryx_handler_register_global((const jerry_char_t*)"window_manager_get_top_window", wrap_window_manager_get_top_window);
+  jerryx_handler_register_global((const jerry_char_t*)"window_manager_get_prev_window", wrap_window_manager_get_prev_window);
+  jerryx_handler_register_global((const jerry_char_t*)"window_manager_get_pointer_x", wrap_window_manager_get_pointer_x);
+  jerryx_handler_register_global((const jerry_char_t*)"window_manager_get_pointer_y", wrap_window_manager_get_pointer_y);
+  jerryx_handler_register_global((const jerry_char_t*)"window_manager_get_pointer_pressed", wrap_window_manager_get_pointer_pressed);
+  jerryx_handler_register_global((const jerry_char_t*)"window_manager_set_show_fps", wrap_window_manager_set_show_fps);
+  jerryx_handler_register_global((const jerry_char_t*)"window_manager_set_screen_saver_time", wrap_window_manager_set_screen_saver_time);
+  jerryx_handler_register_global((const jerry_char_t*)"window_manager_set_cursor", wrap_window_manager_set_cursor);
+  jerryx_handler_register_global((const jerry_char_t*)"window_manager_back", wrap_window_manager_back);
+  jerryx_handler_register_global((const jerry_char_t*)"window_manager_back_to_home", wrap_window_manager_back_to_home);
+  jerryx_handler_register_global((const jerry_char_t*)"window_manager_back_to", wrap_window_manager_back_to);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_window_base_cast(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -18338,6 +20113,14 @@ jsvalue_t wrap_window_base_t_get_prop_closable(
 
   jret = jsvalue_create_number(ctx, obj->closable);
   return jret;
+}
+
+ret_t window_base_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"window_base_cast", wrap_window_base_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"window_base_t_get_prop_theme", wrap_window_base_t_get_prop_theme);
+  jerryx_handler_register_global((const jerry_char_t*)"window_base_t_get_prop_closable", wrap_window_base_t_get_prop_closable);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_style_mutable_set_name(
@@ -18432,6 +20215,16 @@ jsvalue_t wrap_style_mutable_t_get_prop_name(
 
   jret = jsvalue_create_string(ctx, obj->name);
   return jret;
+}
+
+ret_t style_mutable_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"style_mutable_set_name", wrap_style_mutable_set_name);
+  jerryx_handler_register_global((const jerry_char_t*)"style_mutable_set_int", wrap_style_mutable_set_int);
+  jerryx_handler_register_global((const jerry_char_t*)"style_mutable_cast", wrap_style_mutable_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"style_mutable_create", wrap_style_mutable_create);
+  jerryx_handler_register_global((const jerry_char_t*)"style_mutable_t_get_prop_name", wrap_style_mutable_t_get_prop_name);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_image_base_set_image(
@@ -18714,6 +20507,28 @@ jsvalue_t wrap_image_base_t_get_prop_selected(
   return jret;
 }
 
+ret_t image_base_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"image_base_set_image", wrap_image_base_set_image);
+  jerryx_handler_register_global((const jerry_char_t*)"image_base_set_rotation", wrap_image_base_set_rotation);
+  jerryx_handler_register_global((const jerry_char_t*)"image_base_set_scale", wrap_image_base_set_scale);
+  jerryx_handler_register_global((const jerry_char_t*)"image_base_set_anchor", wrap_image_base_set_anchor);
+  jerryx_handler_register_global((const jerry_char_t*)"image_base_set_selected", wrap_image_base_set_selected);
+  jerryx_handler_register_global((const jerry_char_t*)"image_base_set_selectable", wrap_image_base_set_selectable);
+  jerryx_handler_register_global((const jerry_char_t*)"image_base_set_clickable", wrap_image_base_set_clickable);
+  jerryx_handler_register_global((const jerry_char_t*)"image_base_cast", wrap_image_base_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"image_base_t_get_prop_image", wrap_image_base_t_get_prop_image);
+  jerryx_handler_register_global((const jerry_char_t*)"image_base_t_get_prop_anchor_x", wrap_image_base_t_get_prop_anchor_x);
+  jerryx_handler_register_global((const jerry_char_t*)"image_base_t_get_prop_anchor_y", wrap_image_base_t_get_prop_anchor_y);
+  jerryx_handler_register_global((const jerry_char_t*)"image_base_t_get_prop_scale_x", wrap_image_base_t_get_prop_scale_x);
+  jerryx_handler_register_global((const jerry_char_t*)"image_base_t_get_prop_scale_y", wrap_image_base_t_get_prop_scale_y);
+  jerryx_handler_register_global((const jerry_char_t*)"image_base_t_get_prop_rotation", wrap_image_base_t_get_prop_rotation);
+  jerryx_handler_register_global((const jerry_char_t*)"image_base_t_get_prop_clickable", wrap_image_base_t_get_prop_clickable);
+  jerryx_handler_register_global((const jerry_char_t*)"image_base_t_get_prop_selectable", wrap_image_base_t_get_prop_selectable);
+  jerryx_handler_register_global((const jerry_char_t*)"image_base_t_get_prop_selected", wrap_image_base_t_get_prop_selected);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_window_event_cast(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -18746,6 +20561,13 @@ jsvalue_t wrap_window_event_t_get_prop_window(
   return jret;
 }
 
+ret_t window_event_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"window_event_cast", wrap_window_event_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"window_event_t_get_prop_window", wrap_window_event_t_get_prop_window);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_paint_event_cast(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -18776,6 +20598,13 @@ jsvalue_t wrap_paint_event_t_get_prop_c(
 
   jret = jsvalue_create_pointer(ctx, obj->c, "canvas_t*");
   return jret;
+}
+
+ret_t paint_event_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"paint_event_cast", wrap_paint_event_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"paint_event_t_get_prop_c", wrap_paint_event_t_get_prop_c);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_key_event_cast(
@@ -18978,6 +20807,25 @@ jsvalue_t wrap_key_event_t_get_prop_capslock(
   return jret;
 }
 
+ret_t key_event_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"key_event_cast", wrap_key_event_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"key_event_t_get_prop_key", wrap_key_event_t_get_prop_key);
+  jerryx_handler_register_global((const jerry_char_t*)"key_event_t_get_prop_alt", wrap_key_event_t_get_prop_alt);
+  jerryx_handler_register_global((const jerry_char_t*)"key_event_t_get_prop_lalt", wrap_key_event_t_get_prop_lalt);
+  jerryx_handler_register_global((const jerry_char_t*)"key_event_t_get_prop_ralt", wrap_key_event_t_get_prop_ralt);
+  jerryx_handler_register_global((const jerry_char_t*)"key_event_t_get_prop_ctrl", wrap_key_event_t_get_prop_ctrl);
+  jerryx_handler_register_global((const jerry_char_t*)"key_event_t_get_prop_lctrl", wrap_key_event_t_get_prop_lctrl);
+  jerryx_handler_register_global((const jerry_char_t*)"key_event_t_get_prop_rctrl", wrap_key_event_t_get_prop_rctrl);
+  jerryx_handler_register_global((const jerry_char_t*)"key_event_t_get_prop_shift", wrap_key_event_t_get_prop_shift);
+  jerryx_handler_register_global((const jerry_char_t*)"key_event_t_get_prop_lshift", wrap_key_event_t_get_prop_lshift);
+  jerryx_handler_register_global((const jerry_char_t*)"key_event_t_get_prop_rshift", wrap_key_event_t_get_prop_rshift);
+  jerryx_handler_register_global((const jerry_char_t*)"key_event_t_get_prop_cmd", wrap_key_event_t_get_prop_cmd);
+  jerryx_handler_register_global((const jerry_char_t*)"key_event_t_get_prop_menu", wrap_key_event_t_get_prop_menu);
+  jerryx_handler_register_global((const jerry_char_t*)"key_event_t_get_prop_capslock", wrap_key_event_t_get_prop_capslock);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_pointer_event_cast(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -19122,6 +20970,21 @@ jsvalue_t wrap_pointer_event_t_get_prop_shift(
   return jret;
 }
 
+ret_t pointer_event_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"pointer_event_cast", wrap_pointer_event_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"pointer_event_t_get_prop_x", wrap_pointer_event_t_get_prop_x);
+  jerryx_handler_register_global((const jerry_char_t*)"pointer_event_t_get_prop_y", wrap_pointer_event_t_get_prop_y);
+  jerryx_handler_register_global((const jerry_char_t*)"pointer_event_t_get_prop_button", wrap_pointer_event_t_get_prop_button);
+  jerryx_handler_register_global((const jerry_char_t*)"pointer_event_t_get_prop_pressed", wrap_pointer_event_t_get_prop_pressed);
+  jerryx_handler_register_global((const jerry_char_t*)"pointer_event_t_get_prop_alt", wrap_pointer_event_t_get_prop_alt);
+  jerryx_handler_register_global((const jerry_char_t*)"pointer_event_t_get_prop_ctrl", wrap_pointer_event_t_get_prop_ctrl);
+  jerryx_handler_register_global((const jerry_char_t*)"pointer_event_t_get_prop_cmd", wrap_pointer_event_t_get_prop_cmd);
+  jerryx_handler_register_global((const jerry_char_t*)"pointer_event_t_get_prop_menu", wrap_pointer_event_t_get_prop_menu);
+  jerryx_handler_register_global((const jerry_char_t*)"pointer_event_t_get_prop_shift", wrap_pointer_event_t_get_prop_shift);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_orientation_event_cast(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -19152,6 +21015,13 @@ jsvalue_t wrap_orientation_event_t_get_prop_orientation(
 
   jret = jsvalue_create_int(ctx, obj->orientation);
   return jret;
+}
+
+ret_t orientation_event_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"orientation_event_cast", wrap_orientation_event_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"orientation_event_t_get_prop_orientation", wrap_orientation_event_t_get_prop_orientation);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_wheel_event_cast(
@@ -19228,6 +21098,16 @@ jsvalue_t wrap_wheel_event_t_get_prop_shift(
   return jret;
 }
 
+ret_t wheel_event_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"wheel_event_cast", wrap_wheel_event_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"wheel_event_t_get_prop_dy", wrap_wheel_event_t_get_prop_dy);
+  jerryx_handler_register_global((const jerry_char_t*)"wheel_event_t_get_prop_alt", wrap_wheel_event_t_get_prop_alt);
+  jerryx_handler_register_global((const jerry_char_t*)"wheel_event_t_get_prop_ctrl", wrap_wheel_event_t_get_prop_ctrl);
+  jerryx_handler_register_global((const jerry_char_t*)"wheel_event_t_get_prop_shift", wrap_wheel_event_t_get_prop_shift);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_app_bar_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -19268,6 +21148,13 @@ jsvalue_t wrap_app_bar_cast(
   return jret;
 }
 
+ret_t app_bar_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"app_bar_create", wrap_app_bar_create);
+  jerryx_handler_register_global((const jerry_char_t*)"app_bar_cast", wrap_app_bar_cast);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_button_group_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -19306,6 +21193,13 @@ jsvalue_t wrap_button_group_cast(
   jret = jsvalue_create_pointer(ctx, ret, "button_group_t*");
   }
   return jret;
+}
+
+ret_t button_group_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"button_group_create", wrap_button_group_create);
+  jerryx_handler_register_global((const jerry_char_t*)"button_group_cast", wrap_button_group_cast);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_button_create(
@@ -19414,6 +21308,17 @@ jsvalue_t wrap_button_t_get_prop_enable_long_press(
   return jret;
 }
 
+ret_t button_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"button_create", wrap_button_create);
+  jerryx_handler_register_global((const jerry_char_t*)"button_cast", wrap_button_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"button_set_repeat", wrap_button_set_repeat);
+  jerryx_handler_register_global((const jerry_char_t*)"button_set_enable_long_press", wrap_button_set_enable_long_press);
+  jerryx_handler_register_global((const jerry_char_t*)"button_t_get_prop_repeat", wrap_button_t_get_prop_repeat);
+  jerryx_handler_register_global((const jerry_char_t*)"button_t_get_prop_enable_long_press", wrap_button_t_get_prop_enable_long_press);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_check_button_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -19509,6 +21414,16 @@ jsvalue_t wrap_check_button_t_get_prop_value(
   return jret;
 }
 
+ret_t check_button_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"check_button_create", wrap_check_button_create);
+  jerryx_handler_register_global((const jerry_char_t*)"check_button_create_radio", wrap_check_button_create_radio);
+  jerryx_handler_register_global((const jerry_char_t*)"check_button_set_value", wrap_check_button_set_value);
+  jerryx_handler_register_global((const jerry_char_t*)"check_button_cast", wrap_check_button_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"check_button_t_get_prop_value", wrap_check_button_t_get_prop_value);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_clip_view_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -19547,6 +21462,13 @@ jsvalue_t wrap_clip_view_cast(
   jret = jsvalue_create_pointer(ctx, ret, "clip_view_t*");
   }
   return jret;
+}
+
+ret_t clip_view_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"clip_view_create", wrap_clip_view_create);
+  jerryx_handler_register_global((const jerry_char_t*)"clip_view_cast", wrap_clip_view_cast);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_color_tile_create(
@@ -19637,6 +21559,16 @@ jsvalue_t wrap_color_tile_t_get_prop_border_color(
   return jret;
 }
 
+ret_t color_tile_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"color_tile_create", wrap_color_tile_create);
+  jerryx_handler_register_global((const jerry_char_t*)"color_tile_cast", wrap_color_tile_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"color_tile_set_bg_color", wrap_color_tile_set_bg_color);
+  jerryx_handler_register_global((const jerry_char_t*)"color_tile_t_get_prop_bg_color", wrap_color_tile_t_get_prop_bg_color);
+  jerryx_handler_register_global((const jerry_char_t*)"color_tile_t_get_prop_border_color", wrap_color_tile_t_get_prop_border_color);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_column_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -19675,6 +21607,13 @@ jsvalue_t wrap_column_cast(
   jret = jsvalue_create_pointer(ctx, ret, "column_t*");
   }
   return jret;
+}
+
+ret_t column_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"column_create", wrap_column_create);
+  jerryx_handler_register_global((const jerry_char_t*)"column_cast", wrap_column_cast);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_combo_box_item_create(
@@ -19781,6 +21720,17 @@ jsvalue_t wrap_combo_box_item_t_get_prop_checked(
 
   jret = jsvalue_create_bool(ctx, obj->checked);
   return jret;
+}
+
+ret_t combo_box_item_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_item_create", wrap_combo_box_item_create);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_item_cast", wrap_combo_box_item_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_item_set_checked", wrap_combo_box_item_set_checked);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_item_set_value", wrap_combo_box_item_set_value);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_item_t_get_prop_value", wrap_combo_box_item_t_get_prop_value);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_item_t_get_prop_checked", wrap_combo_box_item_t_get_prop_checked);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_combo_box_create(
@@ -20116,6 +22066,30 @@ jsvalue_t wrap_combo_box_t_get_prop_item_height(
   return jret;
 }
 
+ret_t combo_box_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_create", wrap_combo_box_create);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_cast", wrap_combo_box_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_set_open_window", wrap_combo_box_set_open_window);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_reset_options", wrap_combo_box_reset_options);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_count_options", wrap_combo_box_count_options);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_set_selected_index", wrap_combo_box_set_selected_index);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_set_localize_options", wrap_combo_box_set_localize_options);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_set_value", wrap_combo_box_set_value);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_set_item_height", wrap_combo_box_set_item_height);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_append_option", wrap_combo_box_append_option);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_set_options", wrap_combo_box_set_options);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_get_value", wrap_combo_box_get_value);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_get_text", wrap_combo_box_get_text);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_t_get_prop_open_window", wrap_combo_box_t_get_prop_open_window);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_t_get_prop_selected_index", wrap_combo_box_t_get_prop_selected_index);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_t_get_prop_value", wrap_combo_box_t_get_prop_value);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_t_get_prop_localize_options", wrap_combo_box_t_get_prop_localize_options);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_t_get_prop_options", wrap_combo_box_t_get_prop_options);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_t_get_prop_item_height", wrap_combo_box_t_get_prop_item_height);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_dialog_client_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -20156,6 +22130,13 @@ jsvalue_t wrap_dialog_client_cast(
   return jret;
 }
 
+ret_t dialog_client_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_client_create", wrap_dialog_client_create);
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_client_cast", wrap_dialog_client_cast);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_dialog_title_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -20194,6 +22175,13 @@ jsvalue_t wrap_dialog_title_cast(
   jret = jsvalue_create_pointer(ctx, ret, "dialog_title_t*");
   }
   return jret;
+}
+
+ret_t dialog_title_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_title_create", wrap_dialog_title_create);
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_title_cast", wrap_dialog_title_cast);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_digit_clock_create(
@@ -20268,6 +22256,15 @@ jsvalue_t wrap_digit_clock_t_get_prop_format(
 
   jret = jsvalue_create_string(ctx, obj->format);
   return jret;
+}
+
+ret_t digit_clock_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"digit_clock_create", wrap_digit_clock_create);
+  jerryx_handler_register_global((const jerry_char_t*)"digit_clock_cast", wrap_digit_clock_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"digit_clock_set_format", wrap_digit_clock_set_format);
+  jerryx_handler_register_global((const jerry_char_t*)"digit_clock_t_get_prop_format", wrap_digit_clock_t_get_prop_format);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_dragger_create(
@@ -20386,6 +22383,18 @@ jsvalue_t wrap_dragger_t_get_prop_y_max(
 
   jret = jsvalue_create_int(ctx, obj->y_max);
   return jret;
+}
+
+ret_t dragger_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"dragger_create", wrap_dragger_create);
+  jerryx_handler_register_global((const jerry_char_t*)"dragger_cast", wrap_dragger_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"dragger_set_range", wrap_dragger_set_range);
+  jerryx_handler_register_global((const jerry_char_t*)"dragger_t_get_prop_x_min", wrap_dragger_t_get_prop_x_min);
+  jerryx_handler_register_global((const jerry_char_t*)"dragger_t_get_prop_y_min", wrap_dragger_t_get_prop_y_min);
+  jerryx_handler_register_global((const jerry_char_t*)"dragger_t_get_prop_x_max", wrap_dragger_t_get_prop_x_max);
+  jerryx_handler_register_global((const jerry_char_t*)"dragger_t_get_prop_y_max", wrap_dragger_t_get_prop_y_max);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_edit_create(
@@ -20876,6 +22885,39 @@ jsvalue_t wrap_edit_t_get_prop_step(
   return jret;
 }
 
+ret_t edit_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"edit_create", wrap_edit_create);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_cast", wrap_edit_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_get_int", wrap_edit_get_int);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_get_double", wrap_edit_get_double);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_set_int", wrap_edit_set_int);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_set_double", wrap_edit_set_double);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_set_text_limit", wrap_edit_set_text_limit);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_set_int_limit", wrap_edit_set_int_limit);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_set_float_limit", wrap_edit_set_float_limit);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_set_readonly", wrap_edit_set_readonly);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_set_auto_fix", wrap_edit_set_auto_fix);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_set_select_none_when_focused", wrap_edit_set_select_none_when_focused);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_set_open_im_when_focused", wrap_edit_set_open_im_when_focused);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_set_input_type", wrap_edit_set_input_type);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_set_input_tips", wrap_edit_set_input_tips);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_set_password_visible", wrap_edit_set_password_visible);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_set_focus", wrap_edit_set_focus);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_set_cursor", wrap_edit_set_cursor);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_t_get_prop_readonly", wrap_edit_t_get_prop_readonly);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_t_get_prop_password_visible", wrap_edit_t_get_prop_password_visible);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_t_get_prop_auto_fix", wrap_edit_t_get_prop_auto_fix);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_t_get_prop_select_none_when_focused", wrap_edit_t_get_prop_select_none_when_focused);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_t_get_prop_open_im_when_focused", wrap_edit_t_get_prop_open_im_when_focused);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_t_get_prop_tips", wrap_edit_t_get_prop_tips);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_t_get_prop_input_type", wrap_edit_t_get_prop_input_type);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_t_get_prop_min", wrap_edit_t_get_prop_min);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_t_get_prop_max", wrap_edit_t_get_prop_max);
+  jerryx_handler_register_global((const jerry_char_t*)"edit_t_get_prop_step", wrap_edit_t_get_prop_step);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_grid_item_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -20914,6 +22956,13 @@ jsvalue_t wrap_grid_item_cast(
   jret = jsvalue_create_pointer(ctx, ret, "grid_item_t*");
   }
   return jret;
+}
+
+ret_t grid_item_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"grid_item_create", wrap_grid_item_create);
+  jerryx_handler_register_global((const jerry_char_t*)"grid_item_cast", wrap_grid_item_cast);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_grid_create(
@@ -20956,6 +23005,13 @@ jsvalue_t wrap_grid_cast(
   return jret;
 }
 
+ret_t grid_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"grid_create", wrap_grid_create);
+  jerryx_handler_register_global((const jerry_char_t*)"grid_cast", wrap_grid_cast);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_group_box_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -20994,6 +23050,13 @@ jsvalue_t wrap_group_box_cast(
   jret = jsvalue_create_pointer(ctx, ret, "group_box_t*");
   }
   return jret;
+}
+
+ret_t group_box_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"group_box_create", wrap_group_box_create);
+  jerryx_handler_register_global((const jerry_char_t*)"group_box_cast", wrap_group_box_cast);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_label_create(
@@ -21091,6 +23154,16 @@ jsvalue_t wrap_label_t_get_prop_length(
   return jret;
 }
 
+ret_t label_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"label_create", wrap_label_create);
+  jerryx_handler_register_global((const jerry_char_t*)"label_set_length", wrap_label_set_length);
+  jerryx_handler_register_global((const jerry_char_t*)"label_resize_to_content", wrap_label_resize_to_content);
+  jerryx_handler_register_global((const jerry_char_t*)"label_cast", wrap_label_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"label_t_get_prop_length", wrap_label_t_get_prop_length);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_overlay_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -21129,6 +23202,13 @@ jsvalue_t wrap_overlay_cast(
   jret = jsvalue_create_pointer(ctx, ret, "overlay_t*");
   }
   return jret;
+}
+
+ret_t overlay_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"overlay_create", wrap_overlay_create);
+  jerryx_handler_register_global((const jerry_char_t*)"overlay_cast", wrap_overlay_cast);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_pages_create(
@@ -21222,6 +23302,16 @@ jsvalue_t wrap_pages_t_get_prop_active(
 
   jret = jsvalue_create_int(ctx, obj->active);
   return jret;
+}
+
+ret_t pages_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"pages_create", wrap_pages_create);
+  jerryx_handler_register_global((const jerry_char_t*)"pages_cast", wrap_pages_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"pages_set_active", wrap_pages_set_active);
+  jerryx_handler_register_global((const jerry_char_t*)"pages_set_active_by_name", wrap_pages_set_active_by_name);
+  jerryx_handler_register_global((const jerry_char_t*)"pages_t_get_prop_active", wrap_pages_t_get_prop_active);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_progress_bar_create(
@@ -21414,6 +23504,22 @@ jsvalue_t wrap_progress_bar_t_get_prop_show_text(
   return jret;
 }
 
+ret_t progress_bar_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"progress_bar_create", wrap_progress_bar_create);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_bar_cast", wrap_progress_bar_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_bar_set_value", wrap_progress_bar_set_value);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_bar_set_max", wrap_progress_bar_set_max);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_bar_set_vertical", wrap_progress_bar_set_vertical);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_bar_set_show_text", wrap_progress_bar_set_show_text);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_bar_get_percent", wrap_progress_bar_get_percent);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_bar_t_get_prop_value", wrap_progress_bar_t_get_prop_value);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_bar_t_get_prop_max", wrap_progress_bar_t_get_prop_max);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_bar_t_get_prop_vertical", wrap_progress_bar_t_get_prop_vertical);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_bar_t_get_prop_show_text", wrap_progress_bar_t_get_prop_show_text);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_row_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -21452,6 +23558,13 @@ jsvalue_t wrap_row_cast(
   jret = jsvalue_create_pointer(ctx, ret, "row_t*");
   }
   return jret;
+}
+
+ret_t row_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"row_create", wrap_row_create);
+  jerryx_handler_register_global((const jerry_char_t*)"row_cast", wrap_row_cast);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_slider_create(
@@ -21734,6 +23847,28 @@ jsvalue_t wrap_slider_t_get_prop_slide_with_bar(
   return jret;
 }
 
+ret_t slider_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"slider_create", wrap_slider_create);
+  jerryx_handler_register_global((const jerry_char_t*)"slider_cast", wrap_slider_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"slider_set_value", wrap_slider_set_value);
+  jerryx_handler_register_global((const jerry_char_t*)"slider_set_min", wrap_slider_set_min);
+  jerryx_handler_register_global((const jerry_char_t*)"slider_set_max", wrap_slider_set_max);
+  jerryx_handler_register_global((const jerry_char_t*)"slider_set_step", wrap_slider_set_step);
+  jerryx_handler_register_global((const jerry_char_t*)"slider_set_bar_size", wrap_slider_set_bar_size);
+  jerryx_handler_register_global((const jerry_char_t*)"slider_set_vertical", wrap_slider_set_vertical);
+  jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_value", wrap_slider_t_get_prop_value);
+  jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_min", wrap_slider_t_get_prop_min);
+  jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_max", wrap_slider_t_get_prop_max);
+  jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_step", wrap_slider_t_get_prop_step);
+  jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_vertical", wrap_slider_t_get_prop_vertical);
+  jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_bar_size", wrap_slider_t_get_prop_bar_size);
+  jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_dragger_size", wrap_slider_t_get_prop_dragger_size);
+  jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_dragger_adapt_to_icon", wrap_slider_t_get_prop_dragger_adapt_to_icon);
+  jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_slide_with_bar", wrap_slider_t_get_prop_slide_with_bar);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_tab_button_group_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -21840,6 +23975,17 @@ jsvalue_t wrap_tab_button_group_t_get_prop_scrollable(
   return jret;
 }
 
+ret_t tab_button_group_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"tab_button_group_create", wrap_tab_button_group_create);
+  jerryx_handler_register_global((const jerry_char_t*)"tab_button_group_set_compact", wrap_tab_button_group_set_compact);
+  jerryx_handler_register_global((const jerry_char_t*)"tab_button_group_set_scrollable", wrap_tab_button_group_set_scrollable);
+  jerryx_handler_register_global((const jerry_char_t*)"tab_button_group_cast", wrap_tab_button_group_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"tab_button_group_t_get_prop_compact", wrap_tab_button_group_t_get_prop_compact);
+  jerryx_handler_register_global((const jerry_char_t*)"tab_button_group_t_get_prop_scrollable", wrap_tab_button_group_t_get_prop_scrollable);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_tab_button_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -21939,6 +24085,26 @@ jsvalue_t wrap_tab_button_set_active_icon(
   return jret;
 }
 
+jsvalue_t wrap_tab_button_set_load_ui(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  ret = (ret_t)tab_button_set_load_ui(widget, name);
+  TKMEM_FREE(name);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_tab_button_t_get_prop_value(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -21950,6 +24116,20 @@ jsvalue_t wrap_tab_button_t_get_prop_value(
   tab_button_t* obj = (tab_button_t*)jsvalue_get_pointer(ctx, argv[0], "tab_button_t*");
 
   jret = jsvalue_create_bool(ctx, obj->value);
+  return jret;
+}
+
+jsvalue_t wrap_tab_button_t_get_prop_load_ui(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  tab_button_t* obj = (tab_button_t*)jsvalue_get_pointer(ctx, argv[0], "tab_button_t*");
+
+  jret = jsvalue_create_string(ctx, obj->load_ui);
   return jret;
 }
 
@@ -21979,6 +24159,21 @@ jsvalue_t wrap_tab_button_t_get_prop_icon(
 
   jret = jsvalue_create_string(ctx, obj->icon);
   return jret;
+}
+
+ret_t tab_button_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"tab_button_create", wrap_tab_button_create);
+  jerryx_handler_register_global((const jerry_char_t*)"tab_button_cast", wrap_tab_button_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"tab_button_set_value", wrap_tab_button_set_value);
+  jerryx_handler_register_global((const jerry_char_t*)"tab_button_set_icon", wrap_tab_button_set_icon);
+  jerryx_handler_register_global((const jerry_char_t*)"tab_button_set_active_icon", wrap_tab_button_set_active_icon);
+  jerryx_handler_register_global((const jerry_char_t*)"tab_button_set_load_ui", wrap_tab_button_set_load_ui);
+  jerryx_handler_register_global((const jerry_char_t*)"tab_button_t_get_prop_value", wrap_tab_button_t_get_prop_value);
+  jerryx_handler_register_global((const jerry_char_t*)"tab_button_t_get_prop_load_ui", wrap_tab_button_t_get_prop_load_ui);
+  jerryx_handler_register_global((const jerry_char_t*)"tab_button_t_get_prop_active_icon", wrap_tab_button_t_get_prop_active_icon);
+  jerryx_handler_register_global((const jerry_char_t*)"tab_button_t_get_prop_icon", wrap_tab_button_t_get_prop_icon);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_tab_control_create(
@@ -22021,6 +24216,13 @@ jsvalue_t wrap_tab_control_cast(
   return jret;
 }
 
+ret_t tab_control_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"tab_control_create", wrap_tab_control_create);
+  jerryx_handler_register_global((const jerry_char_t*)"tab_control_cast", wrap_tab_control_cast);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_view_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -22059,6 +24261,13 @@ jsvalue_t wrap_view_cast(
   jret = jsvalue_create_pointer(ctx, ret, "view_t*");
   }
   return jret;
+}
+
+ret_t view_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"view_create", wrap_view_create);
+  jerryx_handler_register_global((const jerry_char_t*)"view_cast", wrap_view_cast);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_idle_info_cast(
@@ -22105,6 +24314,19 @@ jsvalue_t wrap_idle_info_t_get_prop_id(
 
   jret = jsvalue_create_int(ctx, obj->id);
   return jret;
+}
+
+ret_t idle_info_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"idle_info_cast", wrap_idle_info_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"idle_info_t_get_prop_ctx", wrap_idle_info_t_get_prop_ctx);
+  jerryx_handler_register_global((const jerry_char_t*)"idle_info_t_get_prop_id", wrap_idle_info_t_get_prop_id);
+
+ return RET_OK;
+}
+
+ret_t mutable_image_t_init(JSContext *ctx) {
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_object_array_create(
@@ -22156,6 +24378,14 @@ jsvalue_t wrap_object_array_t_get_prop_props_size(
   return jret;
 }
 
+ret_t object_array_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"object_array_create", wrap_object_array_create);
+  jerryx_handler_register_global((const jerry_char_t*)"object_array_clear_props", wrap_object_array_clear_props);
+  jerryx_handler_register_global((const jerry_char_t*)"object_array_t_get_prop_props_size", wrap_object_array_t_get_prop_props_size);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_gif_image_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -22194,6 +24424,13 @@ jsvalue_t wrap_gif_image_cast(
   jret = jsvalue_create_pointer(ctx, ret, "gif_image_t*");
   }
   return jret;
+}
+
+ret_t gif_image_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"gif_image_create", wrap_gif_image_create);
+  jerryx_handler_register_global((const jerry_char_t*)"gif_image_cast", wrap_gif_image_cast);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_object_default_create(
@@ -22243,6 +24480,14 @@ jsvalue_t wrap_object_default_t_get_prop_props_size(
 
   jret = jsvalue_create_int(ctx, obj->props_size);
   return jret;
+}
+
+ret_t object_default_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"object_default_create", wrap_object_default_create);
+  jerryx_handler_register_global((const jerry_char_t*)"object_default_clear_props", wrap_object_default_clear_props);
+  jerryx_handler_register_global((const jerry_char_t*)"object_default_t_get_prop_props_size", wrap_object_default_t_get_prop_props_size);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_image_create(
@@ -22318,6 +24563,15 @@ jsvalue_t wrap_image_t_get_prop_draw_type(
   return jret;
 }
 
+ret_t image_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"image_create", wrap_image_create);
+  jerryx_handler_register_global((const jerry_char_t*)"image_set_draw_type", wrap_image_set_draw_type);
+  jerryx_handler_register_global((const jerry_char_t*)"image_cast", wrap_image_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"image_t_get_prop_draw_type", wrap_image_t_get_prop_draw_type);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_combo_box_ex_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -22338,6 +24592,12 @@ jsvalue_t wrap_combo_box_ex_create(
   jret = jsvalue_create_pointer(ctx, ret, "combo_box_ex_t*");
   }
   return jret;
+}
+
+ret_t combo_box_ex_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_ex_create", wrap_combo_box_ex_create);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_popup_create(
@@ -22446,6 +24706,17 @@ jsvalue_t wrap_popup_t_get_prop_close_when_click_outside(
   return jret;
 }
 
+ret_t popup_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"popup_create", wrap_popup_create);
+  jerryx_handler_register_global((const jerry_char_t*)"popup_cast", wrap_popup_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"popup_set_close_when_click", wrap_popup_set_close_when_click);
+  jerryx_handler_register_global((const jerry_char_t*)"popup_set_close_when_click_outside", wrap_popup_set_close_when_click_outside);
+  jerryx_handler_register_global((const jerry_char_t*)"popup_t_get_prop_close_when_click", wrap_popup_t_get_prop_close_when_click);
+  jerryx_handler_register_global((const jerry_char_t*)"popup_t_get_prop_close_when_click_outside", wrap_popup_t_get_prop_close_when_click_outside);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_svg_image_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -22504,6 +24775,14 @@ jsvalue_t wrap_svg_image_cast(
   jret = jsvalue_create_pointer(ctx, ret, "svg_image_t*");
   }
   return jret;
+}
+
+ret_t svg_image_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"svg_image_create", wrap_svg_image_create);
+  jerryx_handler_register_global((const jerry_char_t*)"svg_image_set_image", wrap_svg_image_set_image);
+  jerryx_handler_register_global((const jerry_char_t*)"svg_image_cast", wrap_svg_image_cast);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_timer_info_cast(
@@ -22566,6 +24845,15 @@ jsvalue_t wrap_timer_info_t_get_prop_now(
   return jret;
 }
 
+ret_t timer_info_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"timer_info_cast", wrap_timer_info_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"timer_info_t_get_prop_ctx", wrap_timer_info_t_get_prop_ctx);
+  jerryx_handler_register_global((const jerry_char_t*)"timer_info_t_get_prop_id", wrap_timer_info_t_get_prop_id);
+  jerryx_handler_register_global((const jerry_char_t*)"timer_info_t_get_prop_now", wrap_timer_info_t_get_prop_now);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_spin_box_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -22604,6 +24892,13 @@ jsvalue_t wrap_spin_box_cast(
   jret = jsvalue_create_pointer(ctx, ret, "spin_box_t*");
   }
   return jret;
+}
+
+ret_t spin_box_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"spin_box_create", wrap_spin_box_create);
+  jerryx_handler_register_global((const jerry_char_t*)"spin_box_cast", wrap_spin_box_cast);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_system_bar_create(
@@ -22646,6 +24941,13 @@ jsvalue_t wrap_system_bar_cast(
   return jret;
 }
 
+ret_t system_bar_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"system_bar_create", wrap_system_bar_create);
+  jerryx_handler_register_global((const jerry_char_t*)"system_bar_cast", wrap_system_bar_cast);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_window_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -22662,6 +24964,23 @@ jsvalue_t wrap_window_create(
   wh_t w = (wh_t)jsvalue_get_int_value(ctx, argv[3]);
   wh_t h = (wh_t)jsvalue_get_int_value(ctx, argv[4]);
   ret = (widget_t*)window_create(parent, x, y, w, h);
+
+  jret = jsvalue_create_pointer(ctx, ret, "window_t*");
+  }
+  return jret;
+}
+
+jsvalue_t wrap_window_create_default(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 0) {
+  widget_t* ret = NULL;
+  ret = (widget_t*)window_create_default();
 
   jret = jsvalue_create_pointer(ctx, ret, "window_t*");
   }
@@ -22794,6 +25113,20 @@ jsvalue_t wrap_window_t_get_prop_fullscreen(
   return jret;
 }
 
+ret_t window_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"window_create", wrap_window_create);
+  jerryx_handler_register_global((const jerry_char_t*)"window_create_default", wrap_window_create_default);
+  jerryx_handler_register_global((const jerry_char_t*)"window_set_fullscreen", wrap_window_set_fullscreen);
+  jerryx_handler_register_global((const jerry_char_t*)"window_open", wrap_window_open);
+  jerryx_handler_register_global((const jerry_char_t*)"window_open_and_close", wrap_window_open_and_close);
+  jerryx_handler_register_global((const jerry_char_t*)"window_close", wrap_window_close);
+  jerryx_handler_register_global((const jerry_char_t*)"window_close_force", wrap_window_close_force);
+  jerryx_handler_register_global((const jerry_char_t*)"window_cast", wrap_window_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"window_t_get_prop_fullscreen", wrap_window_t_get_prop_fullscreen);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_keyboard_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -22832,6 +25165,13 @@ jsvalue_t wrap_keyboard_cast(
   jret = jsvalue_create_pointer(ctx, ret, "keyboard_t*");
   }
   return jret;
+}
+
+ret_t keyboard_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"keyboard_create", wrap_keyboard_create);
+  jerryx_handler_register_global((const jerry_char_t*)"keyboard_cast", wrap_keyboard_cast);
+
+ return RET_OK;
 }
 
 jsvalue_t wrap_dialog_create(
@@ -23141,6 +25481,27 @@ jsvalue_t wrap_dialog_t_get_prop_highlight(
   return jret;
 }
 
+ret_t dialog_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_create", wrap_dialog_create);
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_create_simple", wrap_dialog_create_simple);
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_cast", wrap_dialog_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_get_title", wrap_dialog_get_title);
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_get_client", wrap_dialog_get_client);
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_open", wrap_dialog_open);
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_set_title", wrap_dialog_set_title);
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_modal", wrap_dialog_modal);
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_quit", wrap_dialog_quit);
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_is_quited", wrap_dialog_is_quited);
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_is_modal", wrap_dialog_is_modal);
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_toast", wrap_dialog_toast);
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_info", wrap_dialog_info);
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_warn", wrap_dialog_warn);
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_confirm", wrap_dialog_confirm);
+  jerryx_handler_register_global((const jerry_char_t*)"dialog_t_get_prop_highlight", wrap_dialog_t_get_prop_highlight);
+
+ return RET_OK;
+}
+
 ret_t awtk_js_init(JSContext *ctx) {
   event_t_init(ctx);
   rect_t_init(ctx);
@@ -23183,12 +25544,10 @@ ret_t awtk_js_init(JSContext *ctx) {
   time_now_t_init(ctx);
   image_draw_type_t_init(ctx);
   canvas_t_init(ctx);
-  path_t_init(ctx);
   named_value_t_init(ctx);
   MIME_TYPE_init(ctx);
   idle_manager_t_init(ctx);
   indicator_default_paint_t_init(ctx);
-  fs_file_t_init(ctx);
   clip_board_data_type_t_init(ctx);
   clip_board_t_init(ctx);
   easing_type_t_init(ctx);

@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['tkinit',['TkInit',['../class_t_global.html#a2dfbf0172ed5a4a02cfc8ac3ce35f8b8',1,'TGlobal']]],
-  ['tkrun',['TkRun',['../class_t_global.html#a2af9ce31a06b8a9ccf68344669c46950',1,'TGlobal']]],
-  ['toast',['Toast',['../class_t_dialog.html#a025bcd9093b23fd65764ce83d416dc40',1,'TDialog']]],
   ['token',['Token',['../class_t_value.html#a20ef94873870ee699d917bfb65aee583',1,'TValue']]],
   ['tr',['Tr',['../class_t_locale_info.html#a21d2ea01811ba1fa06d950ea21f85d12',1,'TLocaleInfo']]],
   ['transform',['Transform',['../class_t_vgcanvas.html#a7d89dbb4ee1d187ae5353c3d233a9d49',1,'TVgcanvas']]],

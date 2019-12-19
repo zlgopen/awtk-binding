@@ -14,10 +14,10 @@ TK全局对象。
 
 * [getPointerX](_awtk_.tglobal.md#static-getpointerx)
 * [getPointerY](_awtk_.tglobal.md#static-getpointery)
+* [init](_awtk_.tglobal.md#static-init)
 * [isPointerPressed](_awtk_.tglobal.md#static-ispointerpressed)
 * [quit](_awtk_.tglobal.md#static-quit)
-* [tkInit](_awtk_.tglobal.md#static-tkinit)
-* [tkRun](_awtk_.tglobal.md#static-tkrun)
+* [run](_awtk_.tglobal.md#static-run)
 
 ## Methods
 
@@ -25,7 +25,7 @@ TK全局对象。
 
 ▸ **getPointerX**(): *number*
 
-*Defined in [awtk.ts:2996](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L2996)*
+*Defined in [awtk.ts:2987](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L2987)*
 
 获取全局指针的X坐标。
 
@@ -39,7 +39,7 @@ ___
 
 ▸ **getPointerY**(): *number*
 
-*Defined in [awtk.ts:3007](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L3007)*
+*Defined in [awtk.ts:2998](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L2998)*
 
 获取全局指针的Y坐标。
 
@@ -49,39 +49,11 @@ ___
 
 ___
 
-### `Static` isPointerPressed
+### `Static` init
 
-▸ **isPointerPressed**(): *boolean*
+▸ **init**(`w`: number, `h`: number, `app_type`: [TAppType](../enums/_awtk_.tapptype.md), `app_name`: string, `app_root`: string): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:3018](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L3018)*
-
-获取全局指针是否按下。
-
-**Returns:** *boolean*
-
-返回全局指针是否按下。
-
-___
-
-### `Static` quit
-
-▸ **quit**(): *[TRet](../enums/_awtk_.tret.md)*
-
-*Defined in [awtk.ts:2985](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L2985)*
-
-退出TK事件主循环。
-
-**Returns:** *[TRet](../enums/_awtk_.tret.md)*
-
-返回RET_OK表示成功，否则表示失败。
-
-___
-
-### `Static` tkInit
-
-▸ **tkInit**(`w`: number, `h`: number, `app_type`: [TAppType](../enums/_awtk_.tapptype.md), `app_name`: string, `app_root`: string): *[TRet](../enums/_awtk_.tret.md)*
-
-*Defined in [awtk.ts:2963](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L2963)*
+*Defined in [awtk.ts:2954](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L2954)*
 
 初始化TK。
 
@@ -101,11 +73,39 @@ Name | Type | Description |
 
 ___
 
-### `Static` tkRun
+### `Static` isPointerPressed
 
-▸ **tkRun**(): *[TRet](../enums/_awtk_.tret.md)*
+▸ **isPointerPressed**(): *boolean*
 
-*Defined in [awtk.ts:2974](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L2974)*
+*Defined in [awtk.ts:3009](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L3009)*
+
+获取全局指针是否按下。
+
+**Returns:** *boolean*
+
+返回全局指针是否按下。
+
+___
+
+### `Static` quit
+
+▸ **quit**(): *[TRet](../enums/_awtk_.tret.md)*
+
+*Defined in [awtk.ts:2976](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L2976)*
+
+退出TK事件主循环。
+
+**Returns:** *[TRet](../enums/_awtk_.tret.md)*
+
+返回RET_OK表示成功，否则表示失败。
+
+___
+
+### `Static` run
+
+▸ **run**(): *[TRet](../enums/_awtk_.tret.md)*
+
+*Defined in [awtk.ts:2965](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L2965)*
 
 进入TK事件主循环。
 

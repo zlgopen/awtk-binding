@@ -4,11 +4,11 @@
 
 idle可以看作是duration为0的定时器。
 
-idle可以用来实现一些异步处理。
+> idle可以用来实现一些异步处理。
 
 示例：
 
-在非GUI线程请用idle\_queue。
+> 在非GUI线程请用idle\_queue。
 
 ## Hierarchy
 
@@ -27,7 +27,7 @@ idle可以用来实现一些异步处理。
 
 ▸ **add**(`on_idle`: Function, `ctx`: any): *number*
 
-*Defined in [awtk.ts:3613](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L3613)*
+*Defined in [awtk.ts:3612](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L3612)*
 
 增加一个idle。
 
@@ -48,7 +48,7 @@ ___
 
 ▸ **remove**(`idle_id`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:3625](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L3625)*
+*Defined in [awtk.ts:3624](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L3624)*
 
 删除指定的idle。
 

@@ -1,11 +1,11 @@
 const fs = require('fs')
 const CppGenerator = require('./cpp.js')
 
-class CppImplGenerator extends CppGenerator{
+class CppImplGenerator extends CppGenerator {
   constructor() {
     super()
   }
-  
+
   genClassBegin(cls) {
     return '';
   }
@@ -13,11 +13,11 @@ class CppImplGenerator extends CppGenerator{
   genClassEnd(cls) {
     return '';
   }
-  
-  genCreateObject(cls, m, arg) {
+
+  genReturnObject(cls, m, arg) {
     let clsName = this.toClassName(this.getClassName(cls));
 
-    if(this.isCast(m)) {
+    if (this.isCast(m)) {
       return `   return ${clsName}(${arg});\n`;
     } else {
       let nativeType = this.getNativeObjType(cls) + '*';
@@ -28,7 +28,7 @@ class CppImplGenerator extends CppGenerator{
   genFuncDecl(cls, m, name) {
     let retType = this.isCast(m) ? cls.name : m.return.type;
     let clsName = this.toClassName(cls.name);
-    return `${this.mapType(retType)} ${clsName}::${name}${this.genParamList(m)} `;
+    return `${this.mapType(retType)} ${clsName}::${name}${this.genParamsDecl(m)} `;
   }
 
   genFuncDoc(cls, m) {
@@ -45,7 +45,7 @@ class CppImplGenerator extends CppGenerator{
 
     return result;
   }
-  
+
   genGetNativeObj(type, name, isCast) {
     if (name === 'this') {
       return `((${type})(${name}->nativeObj))`;
@@ -53,7 +53,7 @@ class CppImplGenerator extends CppGenerator{
       return `((${type})(${name}.nativeObj))`;
     }
   }
-  
+
   genGetProperty(cls, p) {
     let result = '';
     const type = p.type;

@@ -5,13 +5,15 @@ class CppGenerator extends TargetGen {
   constructor() {
     super()
     this.classNamePrefix = 'T';
+    this.nullPtr = 'NULL'
+    this.nullNativePtr = 'NULL'
   }
 
   genCallParam(param) {
     return param.name;
   }
 
-  toEnumValue(enumInfo, result) {
+  genReturnEnum(enumInfo, result) {
     return `   return ${result};\n`;
   }
 
@@ -56,7 +58,7 @@ class CppGenerator extends TargetGen {
 
   genFuncDecl(cls, m, name) {
     let retType = this.isCast(m) ? cls.name : m.return.type;
-    return `${this.mapType(retType)} ${name}${this.genParamList(m)} `;
+    return `${this.mapType(retType)} ${name}${this.genParamsDecl(m)} `;
   }
 
   toFuncName(clsName, mName) {
@@ -68,14 +70,6 @@ class CppGenerator extends TargetGen {
 
   genSetProperty(cls, p) {
     return '';
-  }
-
-  getNull() {
-    return 'NULL';
-  }
-
-  getNativeNull() {
-    return 'NULL';
   }
 }
 

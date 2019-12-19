@@ -1,14 +1,15 @@
 var searchData=
 [
-  ['r',['r',['../classawtk_1_1_color.html#a173f74044245247c24a0e480ad146812',1,'awtk::Color']]],
-  ['rect',['rect',['../classawtk_1_1_vgcanvas.html#aae377abd0cd8ec652f9823aced949d43',1,'awtk::Vgcanvas']]],
-  ['ref',['ref',['../classawtk_1_1_assets_manager.html#af91442e58d979a2326938e6d22cb2435',1,'awtk.AssetsManager.ref()'],['../classawtk_1_1_object.html#a3aee743952f88b9db26a117c84f266c3',1,'awtk.Object.ref()']]],
-  ['remove',['remove',['../classawtk_1_1_idle.html#a10f2350a89684922194d34a66ca1d265',1,'awtk.Idle.remove()'],['../classawtk_1_1_timer.html#ab1a699b693c3ea8de62f8db9c624c87d',1,'awtk.Timer.remove()']]],
-  ['removeprop',['removeProp',['../classawtk_1_1_object.html#a9b169759061aaa3ac1519aae12592542',1,'awtk::Object']]],
-  ['reset',['reset',['../classawtk_1_1_canvas.html#a73dbc71304d5e6a78c02b1452955078c',1,'awtk.Canvas.reset()'],['../classawtk_1_1_timer.html#a435d9db6a63eae8288dbf9046bc8a817',1,'awtk.Timer.reset()'],['../classawtk_1_1_value.html#a68c26e4f5f04a552679bdc46897344b2',1,'awtk.Value.reset()']]],
-  ['resetoptions',['resetOptions',['../classawtk_1_1_combo_box.html#ac6e833c311ae42611a36470c84b6aaf3',1,'awtk.ComboBox.resetOptions()'],['../classawtk_1_1_text_selector.html#a7d67b05df51fa7c19014310d5fc175fc',1,'awtk.TextSelector.resetOptions()']]],
-  ['resizetocontent',['resizeToContent',['../classawtk_1_1_label.html#af6c751102ababab865a326aa562c2d6c',1,'awtk::Label']]],
-  ['restore',['restore',['../classawtk_1_1_vgcanvas.html#ae92ff1bee8378b24b8fbdf7535cdeeb6',1,'awtk::Vgcanvas']]],
-  ['rotate',['rotate',['../classawtk_1_1_vgcanvas.html#acccba6ad6d7c833956572a5932a8c580',1,'awtk::Vgcanvas']]],
-  ['roundedrect',['roundedRect',['../classawtk_1_1_vgcanvas.html#af9ade2b2e882c767fb6b99215ff9f365',1,'awtk::Vgcanvas']]]
+  ['r',['r',['../classawtk_1_1_t_color.html#aaabe897c0e7697d470ea821d3f0ef6da',1,'awtk::TColor']]],
+  ['rect',['rect',['../classawtk_1_1_t_vgcanvas.html#a482195f71ccdf98dc68adce23c448488',1,'awtk::TVgcanvas']]],
+  ['ref',['ref',['../classawtk_1_1_t_assets_manager.html#ac063b5ff6c0620cf87368fdddb33b165',1,'awtk.TAssetsManager.ref()'],['../classawtk_1_1_t_object.html#a061dbbad49785d66c518927ebbb57f03',1,'awtk.TObject.ref()']]],
+  ['remove',['remove',['../classawtk_1_1_t_idle.html#a05f23f08f2206834cabcf5ad9a9df364',1,'awtk.TIdle.remove()'],['../classawtk_1_1_t_timer.html#aa98fdd8bd7ea95cc0efaf28d68c7807d',1,'awtk.TTimer.remove()']]],
+  ['removeprop',['removeProp',['../classawtk_1_1_t_object.html#accb710cc8e5be738420a208d8c1f37b9',1,'awtk::TObject']]],
+  ['reset',['reset',['../classawtk_1_1_t_canvas.html#ada3d9b9d00bba75d18a10c182ed1e45e',1,'awtk.TCanvas.reset()'],['../classawtk_1_1_t_timer.html#a6e60d742d29ccbe48e3a285ce497822d',1,'awtk.TTimer.reset()'],['../classawtk_1_1_t_value.html#af7deeb294b0288dd4313c5985d999bd2',1,'awtk.TValue.reset()']]],
+  ['resetoptions',['resetOptions',['../classawtk_1_1_t_combo_box.html#ae5b92cb1c3bf8e4cc739ccc122774027',1,'awtk.TComboBox.resetOptions()'],['../classawtk_1_1_t_text_selector.html#a5bf267fa1115cd3c90e0d534bd15ea6d',1,'awtk.TTextSelector.resetOptions()']]],
+  ['resizetocontent',['resizeToContent',['../classawtk_1_1_t_label.html#a02967a9a4dcc162d086af50077441a74',1,'awtk::TLabel']]],
+  ['restore',['restore',['../classawtk_1_1_t_vgcanvas.html#ad8b938c13491eeab6c2642c39b5bbe04',1,'awtk::TVgcanvas']]],
+  ['rotate',['rotate',['../classawtk_1_1_t_vgcanvas.html#aa15bb2842f4728c2f8e2ff59566d29f4',1,'awtk::TVgcanvas']]],
+  ['roundedrect',['roundedRect',['../classawtk_1_1_t_vgcanvas.html#ad766643bb11adb7029683d844ef35a12',1,'awtk::TVgcanvas']]],
+  ['run',['run',['../classawtk_1_1_t_global.html#a72365eeb6377915c777e62f0e492202d',1,'awtk::TGlobal']]]
 ];

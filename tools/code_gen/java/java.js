@@ -4,7 +4,8 @@ const TargetGen = require('../common/target_gen.js')
 class JavaGenerator extends TargetGen {
   constructor() {
     super()
-    this.classNamePrefix = '';
+    this.BOM = '';
+    this.nullNativePtr = '0'
   }
 
   genCallParam(param) {
@@ -18,7 +19,7 @@ class JavaGenerator extends TargetGen {
     }
   }
 
-  toEnumValue(enumInfo, result) {
+  genReturnEnum(enumInfo, result) {
     const name = this.toClassName(enumInfo.name);
     return `   return ${name}.from(${result});\n`;
   }
@@ -56,13 +57,13 @@ class JavaGenerator extends TargetGen {
     } else if (this.typeIsBool(type)) {
       return 'boolean';
     } else if (type.indexOf('event_func_t') >= 0) {
-      return 'OnEvent';
+      return 'TOnEvent';
     } else if (type.indexOf('tk_visit_t') >= 0) {
-      return 'OnData';
+      return 'TOnWidget';
     } else if (type.indexOf('idle_func_t') >= 0) {
-      return 'OnIdle';
+      return 'TOnIdle';
     } else if (type.indexOf('timer_func_t') >= 0) {
-      return 'OnTimer';
+      return 'TOnTimer';
     } else if (this.typeIsString(type)) {
       return 'String';
     } else {
@@ -79,7 +80,23 @@ class JavaGenerator extends TargetGen {
     let result = '';
     let name = this.toClassName(cls.name);
 
+result += 
+`
+/**
+ * 原生对象。
+ */
+`
     result += ' public long nativeObj;\n\n';
+result += 
+`
+/**
+ * 通过nativeObj构造Java对象。
+ *
+ * @param nativeObj 原生对象。
+
+ * @return 对应的Java对象。
+ */
+`;
     result += ` public ${name}(long nativeObj) {\n`;
     if (cls.parent) {
       result += '   super(nativeObj);\n';
@@ -88,6 +105,16 @@ class JavaGenerator extends TargetGen {
     }
     result += ' }\n\n';
 
+result += 
+`
+/**
+ * 把nativeObj转换层Java对象。
+ *
+ * @param nativeObj 原生对象。
+
+ * @return 对应的Java对象。
+ */
+`;
     result += ` static public ${name} cast(long nativeObj) {\n`;
     result += `   return new ${name}(nativeObj);\n`;
     result += ' }\n\n';
@@ -109,7 +136,7 @@ class JavaGenerator extends TargetGen {
 
   genFuncDecl(cls, m, name) {
     let retType = this.isCast(m) ? cls.name : m.return.type;
-    return `${this.mapType(retType)} ${name}${this.genParamList(m)} `;
+    return `${this.mapType(retType)} ${name}${this.genParamsDecl(m)} `;
   }
 
   genFunc(cls, m) {
@@ -144,7 +171,7 @@ class JavaGenerator extends TargetGen {
       if (classInfo) {
         result += `   return new ${retType}(${funcName}(this.nativeObj));\n`;
       } else if (enumInfo) {
-        result += this.toEnumValue(enumInfo, `${funcName}(this.nativeObj)`) + '\n';
+        result += this.genReturnEnum(enumInfo, `${funcName}(this.nativeObj)`) + '\n';
       } else {
         result += `   return ${funcName}(this.nativeObj);\n`;
       }
@@ -159,7 +186,7 @@ class JavaGenerator extends TargetGen {
   }
 
   genFuncNativeDecl(cls, m) {
-    return `static private native ${this.mapType(m.return.type, true)} ${m.name}${this.genParamListNative(m)};\n`;
+    return `static private native ${this.mapType(m.return.type, true)} ${m.name}${this.genParamsDeclNative(m)};\n`;
   }
 
   genGetPropNativeDecl(cls, p) {
@@ -203,15 +230,27 @@ class JavaGenerator extends TargetGen {
 ${this.genEnumDoc(cls)}
 public enum ${clsName} {
 ${valueList} 
-   
-  private ${type} value;
-  ${clsName}(${type} value) {
+ 
+  private ${clsName}(${type} value) {
     this.value = value;
   }
+
+/**
+ * 获取枚举的值。
+ *
+ * @return 枚举的值。
+ */
   public ${type} value() {
     return this.value;
   }
 
+/**
+ * 把枚举的值转换层枚举。
+ *
+ * @param value 枚举的值。
+
+ * @return 对应的枚举类型。
+ */
   public static ${clsName} from(${type} value) {
     for(${clsName} iter : ${clsName}.values()) {
       if(iter.value() == value) {
@@ -221,19 +260,13 @@ ${valueList}
 
     return ${defValue};
   }
+  
+  private ${type} value;
 
 ${nativeList}
 }
 `
     return result;
-  }
-
-  getNull() {
-    return 'null';
-  }
-
-  getNativeNull() {
-    return '0';
   }
 
   genClassDecl(clsName) {
@@ -251,7 +284,7 @@ ${nativeList}
       let name = this.upperCamelName(this.getClassName(iter));
       this.result = `package awtk;\n\n`;
       this.result += this.genOne(iter);
-      this.saveResult(`output/${name}.java`);
+      this.saveResult(`output/${this.classNamePrefix}${name}.java`);
     });
 
   }

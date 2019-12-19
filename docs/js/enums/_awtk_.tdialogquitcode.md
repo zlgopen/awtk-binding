@@ -4,7 +4,7 @@
 
 对话框退出码。
 
-一般用作dialog_quit函数的参数。
+> 一般用作dialog_quit函数的参数。
 
 ## Index
 
@@ -23,7 +23,7 @@
 
 • **CANCEL**: =  DIALOG_QUIT_CANCEL()
 
-*Defined in [awtk.ts:3055](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L3055)*
+*Defined in [awtk.ts:3044](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L3044)*
 
 点击“CANCEL”按钮关闭。
 
@@ -33,7 +33,7 @@ ___
 
 • **NO**: =  DIALOG_QUIT_NO()
 
-*Defined in [awtk.ts:3061](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L3061)*
+*Defined in [awtk.ts:3050](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L3050)*
 
 点击“NO”按钮关闭。
 
@@ -43,7 +43,7 @@ ___
 
 • **NONE**: =  DIALOG_QUIT_NONE()
 
-*Defined in [awtk.ts:3037](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L3037)*
+*Defined in [awtk.ts:3026](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L3026)*
 
 对话框被强行关闭或不关心关闭原因。
 
@@ -53,7 +53,7 @@ ___
 
 • **OK**: =  DIALOG_QUIT_OK()
 
-*Defined in [awtk.ts:3043](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L3043)*
+*Defined in [awtk.ts:3032](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L3032)*
 
 点击“OK”按钮关闭。
 
@@ -63,7 +63,7 @@ ___
 
 • **OTHER**: =  DIALOG_QUIT_OTHER()
 
-*Defined in [awtk.ts:3067](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L3067)*
+*Defined in [awtk.ts:3056](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L3056)*
 
 点击其它按钮关闭。
 
@@ -73,6 +73,6 @@ ___
 
 • **YES**: =  DIALOG_QUIT_YES()
 
-*Defined in [awtk.ts:3049](https://github.com/zlgopen/awtk-binding/blob/5be3859/tools/code_gen/js/output/awtk.ts#L3049)*
+*Defined in [awtk.ts:3038](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L3038)*
 
 点击“YES”按钮关闭。

@@ -23,7 +23,7 @@ wchar_t *jsvalue_get_wstring(JSContext *ctx, jsvalue_t v) {
   size = strlen(str);
   wstr = (wchar_t *)TKMEM_ALLOC(sizeof(wchar_t) * (size + 1));
   if (wstr != NULL) {
-    utf8_to_utf16(str, wstr, size + 1);
+    tk_utf8_to_utf16(str, wstr, size + 1);
     wstr[size] = '\0';
   }
   jsvalue_free_str(ctx, str);
