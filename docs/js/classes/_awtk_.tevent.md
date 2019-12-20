@@ -52,7 +52,7 @@
 
 \+ **new TEvent**(`nativeObj`: any): *[TEvent](_awtk_.tevent.md)*
 
-*Defined in [awtk.ts:1634](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1634)*
+*Defined in [awtk.ts:1634](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L1634)*
 
 **Parameters:**
 
@@ -68,7 +68,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:1634](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1634)*
+*Defined in [awtk.ts:1634](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L1634)*
 
 ## Accessors
 
@@ -76,7 +76,7 @@ Name | Type |
 
 • **get target**(): *any*
 
-*Defined in [awtk.ts:1703](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1703)*
+*Defined in [awtk.ts:1703](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L1703)*
 
 事件发生的目标对象。
 
@@ -88,7 +88,7 @@ ___
 
 • **get time**(): *number*
 
-*Defined in [awtk.ts:1694](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1694)*
+*Defined in [awtk.ts:1694](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L1694)*
 
 事件发生的时间。
 
@@ -100,7 +100,7 @@ ___
 
 • **get type**(): *number*
 
-*Defined in [awtk.ts:1685](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1685)*
+*Defined in [awtk.ts:1685](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L1685)*
 
 类型。
 
@@ -112,7 +112,7 @@ ___
 
 ▸ **destroy**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:1676](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1676)*
+*Defined in [awtk.ts:1676](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L1676)*
 
 销毁事件对象。
 
@@ -128,7 +128,7 @@ ___
 
 ▸ **cast**(`event`: [TEvent](_awtk_.tevent.md)): *[TEvent](_awtk_.tevent.md)*
 
-*Defined in [awtk.ts:1649](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1649)*
+*Defined in [awtk.ts:1649](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L1649)*
 
 转换为event对象。
 
@@ -150,7 +150,7 @@ ___
 
 ▸ **create**(`type`: number): *[TEvent](_awtk_.tevent.md)*
 
-*Defined in [awtk.ts:1663](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L1663)*
+*Defined in [awtk.ts:1663](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L1663)*
 
 创建event对象。
 

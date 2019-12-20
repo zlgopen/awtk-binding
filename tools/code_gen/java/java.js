@@ -80,17 +80,17 @@ class JavaGenerator extends TargetGen {
     let result = '';
     let name = this.toClassName(cls.name);
 
-result += 
+    if(!(cls.parent)) {
+      result += 
 `
 /**
  * 原生对象。
  */
+ result += ' public long nativeObj;\n\n';
 `
-
-    if(!(cls.parent)) {
-      result += ' public long nativeObj;\n\n';
     }
-result += 
+
+    result += 
 `
 /**
  * 通过nativeObj构造Java对象。

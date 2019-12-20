@@ -10,8 +10,9 @@ public class TClipBoard {
 /**
  * 原生对象。
  */
- public long nativeObj;
+ result += ' public long nativeObj;
 
+';
 
 /**
  * 通过nativeObj构造Java对象。

@@ -66,7 +66,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="#pub-attribs">Public 属性</a> &#124;
 <a href="classawtk_1_1_t_image_animation-members.html">所有成员列表</a>  </div>
   <div class="headertitle">
 <div class="title">awtk.TImageAnimation类 参考</div>  </div>
@@ -83,7 +82,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a3ddad555131ece1bff79cf3b747cf4db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_image_animation.html#a3ddad555131ece1bff79cf3b747cf4db">TImageAnimation</a> (long <a class="el" href="classawtk_1_1_t_image_animation.html#a80360401656c3fa44753ed7002e61919">nativeObj</a>)</td></tr>
+<tr class="memitem:a3ddad555131ece1bff79cf3b747cf4db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_image_animation.html#a3ddad555131ece1bff79cf3b747cf4db">TImageAnimation</a> (long nativeObj)</td></tr>
 <tr class="separator:a3ddad555131ece1bff79cf3b747cf4db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf79c632762fd1d56fdb2935960bad10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_image_animation.html#acf79c632762fd1d56fdb2935960bad10">setLoop</a> (boolean loop)</td></tr>
 <tr class="separator:acf79c632762fd1d56fdb2935960bad10"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,17 +133,12 @@ Public 成员函数</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a5a8b9102aa3f983d2f14cb3d07e466d8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_image_animation.html">TImageAnimation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_image_animation.html#a5a8b9102aa3f983d2f14cb3d07e466d8">cast</a> (long <a class="el" href="classawtk_1_1_t_image_animation.html#a80360401656c3fa44753ed7002e61919">nativeObj</a>)</td></tr>
+<tr class="memitem:a5a8b9102aa3f983d2f14cb3d07e466d8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_image_animation.html">TImageAnimation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_image_animation.html#a5a8b9102aa3f983d2f14cb3d07e466d8">cast</a> (long nativeObj)</td></tr>
 <tr class="separator:a5a8b9102aa3f983d2f14cb3d07e466d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3c0f03012160b5e169016e75c88d67e"><td class="memItemLeft" align="right" valign="top">static TWidget&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_image_animation.html#af3c0f03012160b5e169016e75c88d67e">create</a> (TWidget parent, int x, int y, int w, int h)</td></tr>
 <tr class="separator:af3c0f03012160b5e169016e75c88d67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4ed2677606260e2f8729c58eaa1e174"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_image_animation.html">TImageAnimation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_image_animation.html#ad4ed2677606260e2f8729c58eaa1e174">cast</a> (TWidget widget)</td></tr>
 <tr class="separator:ad4ed2677606260e2f8729c58eaa1e174"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public 属性</h2></td></tr>
-<tr class="memitem:a80360401656c3fa44753ed7002e61919"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_image_animation.html#a80360401656c3fa44753ed7002e61919">nativeObj</a></td></tr>
-<tr class="separator:a80360401656c3fa44753ed7002e61919"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>图片动画控件，指定一个图片前缀，依次显示指定序列的图片，从而形成动画效果。</p>
@@ -1015,22 +1009,6 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>停止(并重置index为-1)。</p>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">类成员变量说明</h2>
-<a id="a80360401656c3fa44753ed7002e61919"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80360401656c3fa44753ed7002e61919">&#9670;&nbsp;</a></span>nativeObj</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">long awtk.TImageAnimation.nativeObj</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>原生对象。 </p>
 
 </div>
 </div>

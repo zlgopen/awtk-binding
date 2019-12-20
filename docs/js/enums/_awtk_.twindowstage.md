@@ -19,7 +19,7 @@
 
 • **CLOSED**: =  WINDOW_STAGE_CLOSED()
 
-*Defined in [awtk.ts:7263](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L7263)*
+*Defined in [awtk.ts:7263](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7263)*
 
 窗口已关闭。
 
@@ -29,7 +29,7 @@ ___
 
 • **CREATED**: =  WINDOW_STAGE_CREATED()
 
-*Defined in [awtk.ts:7251](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L7251)*
+*Defined in [awtk.ts:7251](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7251)*
 
 创建完成。
 
@@ -39,7 +39,7 @@ ___
 
 • **NONE**: =  WINDOW_STAGE_NONE()
 
-*Defined in [awtk.ts:7245](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L7245)*
+*Defined in [awtk.ts:7245](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7245)*
 
 初始状态。
 
@@ -49,6 +49,6 @@ ___
 
 • **OPENED**: =  WINDOW_STAGE_OPENED()
 
-*Defined in [awtk.ts:7257](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L7257)*
+*Defined in [awtk.ts:7257](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7257)*
 
 窗口已经打开(窗口打开动画完成后，处于该状态，直到窗口被关闭)

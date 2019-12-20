@@ -29,7 +29,7 @@
 
 ▸ **add**(`on_timer`: Function, `ctx`: any, `duration`: number): *number*
 
-*Defined in [awtk.ts:5131](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L5131)*
+*Defined in [awtk.ts:5131](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L5131)*
 
 增加一个timer。
 
@@ -51,7 +51,7 @@ ___
 
 ▸ **modify**(`timer_id`: number, `duration`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:5168](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L5168)*
+*Defined in [awtk.ts:5168](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L5168)*
 
 修改指定的timer的duration，修改之后定时器重新开始计时。
 
@@ -72,7 +72,7 @@ ___
 
 ▸ **remove**(`timer_id`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:5143](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L5143)*
+*Defined in [awtk.ts:5143](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L5143)*
 
 删除指定的timer。
 
@@ -92,7 +92,7 @@ ___
 
 ▸ **reset**(`timer_id`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:5155](https://github.com/zlgopen/awtk-binding/blob/d304871/tools/code_gen/js/output/awtk.ts#L5155)*
+*Defined in [awtk.ts:5155](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L5155)*
 
 重置指定的timer，重置之后定时器重新开始计时。
 
