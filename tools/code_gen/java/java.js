@@ -86,7 +86,10 @@ result +=
  * 原生对象。
  */
 `
-    result += ' public long nativeObj;\n\n';
+
+    if(!(cls.parent)) {
+      result += ' public long nativeObj;\n\n';
+    }
 result += 
 `
 /**
