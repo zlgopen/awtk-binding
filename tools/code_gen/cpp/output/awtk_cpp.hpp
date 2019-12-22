@@ -65,9 +65,9 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t Destroy() ;
- int32_t getType() const;
- int32_t getTime() const;
- void* getTarget() const;
+ int32_t GetType() const;
+ int32_t GetTime() const;
+ void* GetTarget() const;
 };
 
 
@@ -144,10 +144,10 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t Destroy() ;
- xy_t getX() const;
- xy_t getY() const;
- wh_t getW() const;
- wh_t getH() const;
+ xy_t GetX() const;
+ xy_t GetY() const;
+ wh_t GetW() const;
+ wh_t GetH() const;
 };
 
 
@@ -386,12 +386,12 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t Destroy() ;
- wh_t getW() const;
- wh_t getH() const;
- uint32_t getLineLength() const;
- uint16_t getFlags() const;
- uint16_t getFormat() const;
- const char* getName() const;
+ wh_t GetW() const;
+ wh_t GetH() const;
+ uint32_t GetLineLength() const;
+ uint16_t GetFlags() const;
+ uint16_t GetFormat() const;
+ const char* GetName() const;
 };
 
 
@@ -731,6 +731,14 @@ public:
    return TObject((emitter_t*)nativeObj);
  }
 
+ static TObject cast(TEmitter& obj) {
+   return TObject(obj.nativeObj);
+ }
+
+ static TObject cast(const TEmitter& obj) {
+   return TObject(obj.nativeObj);
+ }
+
 
 /**
  * 引用计数减1。引用计数为0时，销毁对象。
@@ -1048,8 +1056,8 @@ public:
  * @return 返回指定属性的浮点数类型的值。
  */
  float_t GetPropFloatByPath(const char* path, float_t defval) ;
- int32_t getRefCount() const;
- char* getName() const;
+ int32_t GetRefCount() const;
+ char* GetName() const;
 };
 
 
@@ -2028,20 +2036,20 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t Restore() ;
- wh_t getW() const;
- wh_t getH() const;
- uint32_t getStride() const;
- float_t getRatio() const;
- bool getAntiAlias() const;
- float_t getLineWidth() const;
- float_t getGlobalAlpha() const;
- float_t getMiterLimit() const;
- const char* getLineCap() const;
- const char* getLineJoin() const;
- char* getFont() const;
- float_t getFontSize() const;
- const char* getTextAlign() const;
- const char* getTextBaseline() const;
+ wh_t GetW() const;
+ wh_t GetH() const;
+ uint32_t GetStride() const;
+ float_t GetRatio() const;
+ bool GetAntiAlias() const;
+ float_t GetLineWidth() const;
+ float_t GetGlobalAlpha() const;
+ float_t GetMiterLimit() const;
+ const char* GetLineCap() const;
+ const char* GetLineJoin() const;
+ char* GetFont() const;
+ float_t GetFontSize() const;
+ const char* GetTextAlign() const;
+ const char* GetTextBaseline() const;
 };
 
 
@@ -2767,22 +2775,22 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetStyleColor(const char* state_and_name, uint32_t value) ;
- xy_t getX() const;
- xy_t getY() const;
- wh_t getW() const;
- wh_t getH() const;
- char* getName() const;
- char* getTrText() const;
- char* getStyle() const;
- char* getAnimation() const;
- bool getEnable() const;
- bool getFeedback() const;
- bool getVisible() const;
- bool getSensitive() const;
- bool getFocusable() const;
- bool getWithFocusState() const;
- bool getFloating() const;
- TWidget getParent() const;
+ xy_t GetX() const;
+ xy_t GetY() const;
+ wh_t GetW() const;
+ wh_t GetH() const;
+ char* GetName() const;
+ char* GetTrText() const;
+ char* GetStyle() const;
+ char* GetAnimation() const;
+ bool GetEnable() const;
+ bool GetFeedback() const;
+ bool GetVisible() const;
+ bool GetSensitive() const;
+ bool GetFocusable() const;
+ bool GetWithFocusState() const;
+ bool GetFloating() const;
+ TWidget GetParent() const;
 };
 
 
@@ -3120,11 +3128,11 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t Reset() ;
- xy_t getOx() const;
- xy_t getOy() const;
- char* getFontName() const;
- uint16_t getFontSize() const;
- uint8_t getGlobalAlpha() const;
+ xy_t GetOx() const;
+ xy_t GetOy() const;
+ char* GetFontName() const;
+ uint16_t GetFontSize() const;
+ uint8_t GetGlobalAlpha() const;
 };
 
 
@@ -3203,7 +3211,7 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t Destroy() ;
- char* getName() const;
+ char* GetName() const;
 };
 
 
@@ -3328,13 +3336,13 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t Destroy() ;
- int32_t getSecond() const;
- int32_t getMinute() const;
- int32_t getHour() const;
- int32_t getDay() const;
- int32_t getWday() const;
- int32_t getMonth() const;
- int32_t getYear() const;
+ int32_t GetSecond() const;
+ int32_t GetMinute() const;
+ int32_t GetHour() const;
+ int32_t GetDay() const;
+ int32_t GetWday() const;
+ int32_t GetMonth() const;
+ int32_t GetYear() const;
 };
 
 
@@ -3447,7 +3455,7 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t Destroy() ;
- uint32_t getColor() const;
+ uint32_t GetColor() const;
 };
 
 
@@ -3475,12 +3483,12 @@ public:
    return TAssetInfo((asset_info_t*)nativeObj);
  }
 
- uint16_t getType() const;
- uint8_t getSubtype() const;
- uint8_t getIsInRom() const;
- uint32_t getSize() const;
- uint32_t getRefcount() const;
- char* getName() const;
+ uint16_t GetType() const;
+ uint8_t GetSubtype() const;
+ uint8_t GetIsInRom() const;
+ uint32_t GetSize() const;
+ uint32_t GetRefcount() const;
+ char* GetName() const;
 };
 
 
@@ -3617,6 +3625,14 @@ public:
    return TCanvasWidget((widget_t*)nativeObj);
  }
 
+ static TCanvasWidget cast(TWidget& obj) {
+   return TCanvasWidget(obj.nativeObj);
+ }
+
+ static TCanvasWidget cast(const TWidget& obj) {
+   return TCanvasWidget(obj.nativeObj);
+ }
+
 
 /**
  * 创建canvas_widget对象
@@ -3680,6 +3696,14 @@ public:
 
  static TTimeClock cast(const widget_t* nativeObj) {
    return TTimeClock((widget_t*)nativeObj);
+ }
+
+ static TTimeClock cast(TWidget& obj) {
+   return TTimeClock(obj.nativeObj);
+ }
+
+ static TTimeClock cast(const TWidget& obj) {
+   return TTimeClock(obj.nativeObj);
  }
 
 
@@ -3809,20 +3833,20 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetSecondAnchor(const char* anchor_x, const char* anchor_y) ;
- int32_t getHour() const;
- int32_t getMinute() const;
- int32_t getSecond() const;
- char* getImage() const;
- char* getBgImage() const;
- char* getHourImage() const;
- char* getMinuteImage() const;
- char* getSecondImage() const;
- char* getHourAnchorX() const;
- char* getHourAnchorY() const;
- char* getMinuteAnchorX() const;
- char* getMinuteAnchorY() const;
- char* getSecondAnchorX() const;
- char* getSecondAnchorY() const;
+ int32_t GetHour() const;
+ int32_t GetMinute() const;
+ int32_t GetSecond() const;
+ char* GetImage() const;
+ char* GetBgImage() const;
+ char* GetHourImage() const;
+ char* GetMinuteImage() const;
+ char* GetSecondImage() const;
+ char* GetHourAnchorX() const;
+ char* GetHourAnchorY() const;
+ char* GetMinuteAnchorX() const;
+ char* GetMinuteAnchorY() const;
+ char* GetSecondAnchorX() const;
+ char* GetSecondAnchorY() const;
 };
 
 
@@ -3874,6 +3898,14 @@ public:
 
  static TTextSelector cast(const widget_t* nativeObj) {
    return TTextSelector((widget_t*)nativeObj);
+ }
+
+ static TTextSelector cast(TWidget& obj) {
+   return TTextSelector(obj.nativeObj);
+ }
+
+ static TTextSelector cast(const TWidget& obj) {
+   return TTextSelector(obj.nativeObj);
  }
 
 
@@ -3996,9 +4028,9 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetVisibleNr(uint32_t visible_nr) ;
- uint32_t getVisibleNr() const;
- int32_t getSelectedIndex() const;
- char* getOptions() const;
+ uint32_t GetVisibleNr() const;
+ int32_t GetSelectedIndex() const;
+ char* GetOptions() const;
 };
 
 
@@ -4022,6 +4054,14 @@ public:
    return TPropChangeEvent((event_t*)nativeObj);
  }
 
+ static TPropChangeEvent cast(TEvent& obj) {
+   return TPropChangeEvent(obj.nativeObj);
+ }
+
+ static TPropChangeEvent cast(const TEvent& obj) {
+   return TPropChangeEvent(obj.nativeObj);
+ }
+
 
 /**
  * 把event对象转prop_change_event_t对象，主要给脚本语言使用。
@@ -4031,8 +4071,8 @@ public:
  * @return 返回event对象。
  */
  static TPropChangeEvent Cast(TEvent& event) ;
- const char* getName() const;
- TValue getValue() const;
+ const char* GetName() const;
+ TValue GetValue() const;
 };
 
 
@@ -4056,6 +4096,14 @@ public:
    return TProgressEvent((event_t*)nativeObj);
  }
 
+ static TProgressEvent cast(TEvent& obj) {
+   return TProgressEvent(obj.nativeObj);
+ }
+
+ static TProgressEvent cast(const TEvent& obj) {
+   return TProgressEvent(obj.nativeObj);
+ }
+
 
 /**
  * 把event对象转progress_event_t对象，主要给脚本语言使用。
@@ -4065,7 +4113,7 @@ public:
  * @return 返回event对象。
  */
  static TProgressEvent Cast(TEvent& event) ;
- uint32_t getPercent() const;
+ uint32_t GetPercent() const;
 };
 
 
@@ -4117,6 +4165,14 @@ public:
    return TSwitch((widget_t*)nativeObj);
  }
 
+ static TSwitch cast(TWidget& obj) {
+   return TSwitch(obj.nativeObj);
+ }
+
+ static TSwitch cast(const TWidget& obj) {
+   return TSwitch(obj.nativeObj);
+ }
+
 
 /**
  * 创建switch对象
@@ -4148,8 +4204,8 @@ public:
  * @return switch对象。
  */
  static TSwitch Cast(TWidget& widget) ;
- bool getValue() const;
- float_t getMaxXoffsetRatio() const;
+ bool GetValue() const;
+ float_t GetMaxXoffsetRatio() const;
 };
 
 
@@ -4211,6 +4267,14 @@ public:
 
  static TSlideView cast(const widget_t* nativeObj) {
    return TSlideView((widget_t*)nativeObj);
+ }
+
+ static TSlideView cast(TWidget& obj) {
+   return TSlideView(obj.nativeObj);
+ }
+
+ static TSlideView cast(const TWidget& obj) {
+   return TSlideView(obj.nativeObj);
  }
 
 
@@ -4291,10 +4355,10 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetLoop(bool loop) ;
- bool getVertical() const;
- uint16_t getAutoPlay() const;
- bool getLoop() const;
- char* getAnimHint() const;
+ bool GetVertical() const;
+ uint16_t GetAutoPlay() const;
+ bool GetLoop() const;
+ char* GetAnimHint() const;
 };
 
 
@@ -4344,6 +4408,14 @@ public:
 
  static TSlideIndicator cast(const widget_t* nativeObj) {
    return TSlideIndicator((widget_t*)nativeObj);
+ }
+
+ static TSlideIndicator cast(TWidget& obj) {
+   return TSlideIndicator(obj.nativeObj);
+ }
+
+ static TSlideIndicator cast(const TWidget& obj) {
+   return TSlideIndicator(obj.nativeObj);
  }
 
 
@@ -4476,16 +4548,16 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetIndicatedTarget(const char* indicated_target) ;
- uint32_t getValue() const;
- uint32_t getMax() const;
- indicator_default_paint_t getDefaultPaint() const;
- uint16_t getAutoHide() const;
- int32_t getMargin() const;
- float_t getSpacing() const;
- uint32_t getSize() const;
- float_t getAnchorX() const;
- float_t getAnchorY() const;
- char* getIndicatedTarget() const;
+ uint32_t GetValue() const;
+ uint32_t GetMax() const;
+ indicator_default_paint_t GetDefaultPaint() const;
+ uint16_t GetAutoHide() const;
+ int32_t GetMargin() const;
+ float_t GetSpacing() const;
+ uint32_t GetSize() const;
+ float_t GetAnchorX() const;
+ float_t GetAnchorY() const;
+ char* GetIndicatedTarget() const;
 };
 
 
@@ -4551,6 +4623,14 @@ public:
    return TSlideMenu((widget_t*)nativeObj);
  }
 
+ static TSlideMenu cast(TWidget& obj) {
+   return TSlideMenu(obj.nativeObj);
+ }
+
+ static TSlideMenu cast(const TWidget& obj) {
+   return TSlideMenu(obj.nativeObj);
+ }
+
 
 /**
  * 创建slide_menu对象
@@ -4600,9 +4680,9 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetMinScale(float_t min_scale) ;
- int32_t getValue() const;
- align_v_t getAlignV() const;
- float_t getMinScale() const;
+ int32_t GetValue() const;
+ align_v_t GetAlignV() const;
+ float_t GetMinScale() const;
 };
 
 
@@ -4652,6 +4732,14 @@ public:
 
  static TScrollView cast(const widget_t* nativeObj) {
    return TScrollView((widget_t*)nativeObj);
+ }
+
+ static TScrollView cast(TWidget& obj) {
+   return TScrollView(obj.nativeObj);
+ }
+
+ static TScrollView cast(const TWidget& obj) {
+   return TScrollView(obj.nativeObj);
  }
 
 
@@ -4754,14 +4842,14 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t ScrollDeltaTo(int32_t xoffset_delta, int32_t yoffset_delta, int32_t duration) ;
- wh_t getVirtualW() const;
- wh_t getVirtualH() const;
- int32_t getXoffset() const;
- int32_t getYoffset() const;
- float_t getXspeedScale() const;
- float_t getYspeedScale() const;
- bool getXslidable() const;
- bool getYslidable() const;
+ wh_t GetVirtualW() const;
+ wh_t GetVirtualH() const;
+ int32_t GetXoffset() const;
+ int32_t GetYoffset() const;
+ float_t GetXspeedScale() const;
+ float_t GetYspeedScale() const;
+ bool GetXslidable() const;
+ bool GetYslidable() const;
 };
 
 
@@ -4815,6 +4903,14 @@ public:
 
  static TScrollBar cast(const widget_t* nativeObj) {
    return TScrollBar((widget_t*)nativeObj);
+ }
+
+ static TScrollBar cast(TWidget& obj) {
+   return TScrollBar(obj.nativeObj);
+ }
+
+ static TScrollBar cast(const TWidget& obj) {
+   return TScrollBar(obj.nativeObj);
  }
 
 
@@ -4931,10 +5027,10 @@ public:
  * @return 返回TRUE表示是mobile风格的，否则表示不是mobile风格的。
  */
  bool IsMobile() ;
- int32_t getVirtualSize() const;
- int32_t getValue() const;
- int32_t getRow() const;
- bool getAnimatable() const;
+ int32_t GetVirtualSize() const;
+ int32_t GetValue() const;
+ int32_t GetRow() const;
+ bool GetAnimatable() const;
 };
 
 
@@ -5000,6 +5096,14 @@ public:
    return TListView((widget_t*)nativeObj);
  }
 
+ static TListView cast(TWidget& obj) {
+   return TListView(obj.nativeObj);
+ }
+
+ static TListView cast(const TWidget& obj) {
+   return TListView(obj.nativeObj);
+ }
+
 
 /**
  * 创建list_view对象
@@ -5049,9 +5153,9 @@ public:
  * @return list_view对象。
  */
  static TListView Cast(TWidget& widget) ;
- int32_t getItemHeight() const;
- int32_t getDefaultItemHeight() const;
- bool getAutoHideScrollBar() const;
+ int32_t GetItemHeight() const;
+ int32_t GetDefaultItemHeight() const;
+ bool GetAutoHideScrollBar() const;
 };
 
 
@@ -5102,6 +5206,14 @@ public:
    return TListViewH((widget_t*)nativeObj);
  }
 
+ static TListViewH cast(TWidget& obj) {
+   return TListViewH(obj.nativeObj);
+ }
+
+ static TListViewH cast(const TWidget& obj) {
+   return TListViewH(obj.nativeObj);
+ }
+
 
 /**
  * 创建list_view_h对象
@@ -5142,8 +5254,8 @@ public:
  * @return list_view_h对象。
  */
  static TListViewH Cast(TWidget& widget) ;
- int32_t getItemWidth() const;
- int32_t getSpacing() const;
+ int32_t GetItemWidth() const;
+ int32_t GetSpacing() const;
 };
 
 
@@ -5206,6 +5318,14 @@ public:
 
  static TListItem cast(const widget_t* nativeObj) {
    return TListItem((widget_t*)nativeObj);
+ }
+
+ static TListItem cast(TWidget& obj) {
+   return TListItem(obj.nativeObj);
+ }
+
+ static TListItem cast(const TWidget& obj) {
+   return TListItem(obj.nativeObj);
  }
 
 
@@ -5275,6 +5395,14 @@ public:
 
  static THscrollLabel cast(const widget_t* nativeObj) {
    return THscrollLabel((widget_t*)nativeObj);
+ }
+
+ static THscrollLabel cast(TWidget& obj) {
+   return THscrollLabel(obj.nativeObj);
+ }
+
+ static THscrollLabel cast(const TWidget& obj) {
+   return THscrollLabel(obj.nativeObj);
  }
 
 
@@ -5387,15 +5515,15 @@ public:
  * @return hscroll_label对象。
  */
  static THscrollLabel Cast(TWidget& widget) ;
- bool getOnlyFocus() const;
- bool getOnlyParentFocus() const;
- bool getLoop() const;
- bool getYoyo() const;
- bool getEllipses() const;
- int32_t getLull() const;
- int32_t getDuration() const;
- int32_t getXoffset() const;
- int32_t getTextW() const;
+ bool GetOnlyFocus() const;
+ bool GetOnlyParentFocus() const;
+ bool GetLoop() const;
+ bool GetYoyo() const;
+ bool GetEllipses() const;
+ int32_t GetLull() const;
+ int32_t GetDuration() const;
+ int32_t GetXoffset() const;
+ int32_t GetTextW() const;
 };
 
 
@@ -5455,6 +5583,14 @@ public:
    return TRichText((widget_t*)nativeObj);
  }
 
+ static TRichText cast(TWidget& obj) {
+   return TRichText(obj.nativeObj);
+ }
+
+ static TRichText cast(const TWidget& obj) {
+   return TRichText(obj.nativeObj);
+ }
+
 
 /**
  * 创建rich_text对象
@@ -5486,8 +5622,8 @@ public:
  * @return rich_text对象。
  */
  static TRichText Cast(TWidget& widget) ;
- uint32_t getLineGap() const;
- uint32_t getMargin() const;
+ uint32_t GetLineGap() const;
+ uint32_t GetMargin() const;
 };
 
 
@@ -5539,6 +5675,14 @@ public:
 
  static TProgressCircle cast(const widget_t* nativeObj) {
    return TProgressCircle((widget_t*)nativeObj);
+ }
+
+ static TProgressCircle cast(TWidget& obj) {
+   return TProgressCircle(obj.nativeObj);
+ }
+
+ static TProgressCircle cast(const TWidget& obj) {
+   return TProgressCircle(obj.nativeObj);
  }
 
 
@@ -5626,13 +5770,13 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetCounterClockWise(bool counter_clock_wise) ;
- float_t getValue() const;
- uint32_t getMax() const;
- int32_t getStartAngle() const;
- uint32_t getLineWidth() const;
- char* getUnit() const;
- bool getCounterClockWise() const;
- bool getShowText() const;
+ float_t GetValue() const;
+ uint32_t GetMax() const;
+ int32_t GetStartAngle() const;
+ uint32_t GetLineWidth() const;
+ char* GetUnit() const;
+ bool GetCounterClockWise() const;
+ bool GetShowText() const;
 };
 
 
@@ -5673,6 +5817,14 @@ public:
 
  static TMledit cast(const widget_t* nativeObj) {
    return TMledit((widget_t*)nativeObj);
+ }
+
+ static TMledit cast(TWidget& obj) {
+   return TMledit(obj.nativeObj);
+ }
+
+ static TMledit cast(const TWidget& obj) {
+   return TMledit(obj.nativeObj);
  }
 
 
@@ -5760,11 +5912,11 @@ public:
  * @return mledit对象。
  */
  static TMledit Cast(TWidget& widget) ;
- bool getReadonly() const;
- char* getTips() const;
- bool getWrapWord() const;
- uint32_t getMaxLines() const;
- float_t getScrollLine() const;
+ bool GetReadonly() const;
+ char* GetTips() const;
+ bool GetWrapWord() const;
+ uint32_t GetMaxLines() const;
+ float_t GetScrollLine() const;
 };
 
 
@@ -5815,6 +5967,14 @@ public:
 
  static TLineNumber cast(const widget_t* nativeObj) {
    return TLineNumber((widget_t*)nativeObj);
+ }
+
+ static TLineNumber cast(TWidget& obj) {
+   return TLineNumber(obj.nativeObj);
+ }
+
+ static TLineNumber cast(const TWidget& obj) {
+   return TLineNumber(obj.nativeObj);
  }
 
 
@@ -5925,6 +6085,14 @@ public:
    return TImageValue((widget_t*)nativeObj);
  }
 
+ static TImageValue cast(TWidget& obj) {
+   return TImageValue(obj.nativeObj);
+ }
+
+ static TImageValue cast(const TWidget& obj) {
+   return TImageValue(obj.nativeObj);
+ }
+
 
 /**
  * 创建image_value对象
@@ -5974,9 +6142,9 @@ public:
  * @return image_value对象。
  */
  static TImageValue Cast(TWidget& widget) ;
- char* getImage() const;
- char* getFormat() const;
- float_t getValue() const;
+ char* GetImage() const;
+ char* GetFormat() const;
+ float_t GetValue() const;
 };
 
 
@@ -6021,6 +6189,14 @@ public:
 
  static TImageAnimation cast(const widget_t* nativeObj) {
    return TImageAnimation((widget_t*)nativeObj);
+ }
+
+ static TImageAnimation cast(TWidget& obj) {
+   return TImageAnimation(obj.nativeObj);
+ }
+
+ static TImageAnimation cast(const TWidget& obj) {
+   return TImageAnimation(obj.nativeObj);
  }
 
 
@@ -6170,16 +6346,16 @@ public:
  * @return image_animation对象。
  */
  static TImageAnimation Cast(TWidget& widget) ;
- char* getImage() const;
- char* getSequence() const;
- uint32_t getStartIndex() const;
- uint32_t getEndIndex() const;
- bool getLoop() const;
- bool getAutoPlay() const;
- bool getUnloadAfterPaint() const;
- char* getFormat() const;
- uint32_t getInterval() const;
- uint32_t getDelay() const;
+ char* GetImage() const;
+ char* GetSequence() const;
+ uint32_t GetStartIndex() const;
+ uint32_t GetEndIndex() const;
+ bool GetLoop() const;
+ bool GetAutoPlay() const;
+ bool GetUnloadAfterPaint() const;
+ char* GetFormat() const;
+ uint32_t GetInterval() const;
+ uint32_t GetDelay() const;
 };
 
 
@@ -6233,6 +6409,14 @@ public:
    return TGuage((widget_t*)nativeObj);
  }
 
+ static TGuage cast(TWidget& obj) {
+   return TGuage(obj.nativeObj);
+ }
+
+ static TGuage cast(const TWidget& obj) {
+   return TGuage(obj.nativeObj);
+ }
+
 
 /**
  * 创建guage对象
@@ -6276,8 +6460,8 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetDrawType(image_draw_type_t draw_type) ;
- char* getImage() const;
- image_draw_type_t getDrawType() const;
+ char* GetImage() const;
+ image_draw_type_t GetDrawType() const;
 };
 
 
@@ -6319,6 +6503,14 @@ public:
 
  static TGuagePointer cast(const widget_t* nativeObj) {
    return TGuagePointer((widget_t*)nativeObj);
+ }
+
+ static TGuagePointer cast(TWidget& obj) {
+   return TGuagePointer(obj.nativeObj);
+ }
+
+ static TGuagePointer cast(const TWidget& obj) {
+   return TGuagePointer(obj.nativeObj);
  }
 
 
@@ -6371,10 +6563,10 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetAnchor(const char* anchor_x, const char* anchor_y) ;
- int32_t getAngle() const;
- char* getImage() const;
- float_t getAnchorX() const;
- float_t getAnchorY() const;
+ int32_t GetAngle() const;
+ char* GetImage() const;
+ float_t GetAnchorX() const;
+ float_t GetAnchorY() const;
 };
 
 
@@ -6422,6 +6614,14 @@ public:
 
  static TDraggable cast(const widget_t* nativeObj) {
    return TDraggable((widget_t*)nativeObj);
+ }
+
+ static TDraggable cast(TWidget& obj) {
+   return TDraggable(obj.nativeObj);
+ }
+
+ static TDraggable cast(const TWidget& obj) {
+   return TDraggable(obj.nativeObj);
  }
 
 
@@ -6510,13 +6710,13 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetDragWindow(bool drag_window) ;
- int32_t getTop() const;
- int32_t getBottom() const;
- int32_t getLeft() const;
- int32_t getRight() const;
- bool getVerticalOnly() const;
- bool getHorizontalOnly() const;
- bool getDragWindow() const;
+ int32_t GetTop() const;
+ int32_t GetBottom() const;
+ int32_t GetLeft() const;
+ int32_t GetRight() const;
+ bool GetVerticalOnly() const;
+ bool GetHorizontalOnly() const;
+ bool GetDragWindow() const;
 };
 
 
@@ -6568,6 +6768,14 @@ public:
    return TColorPicker((widget_t*)nativeObj);
  }
 
+ static TColorPicker cast(TWidget& obj) {
+   return TColorPicker(obj.nativeObj);
+ }
+
+ static TColorPicker cast(const TWidget& obj) {
+   return TColorPicker(obj.nativeObj);
+ }
+
 
 /**
  * 创建color_picker对象
@@ -6599,7 +6807,7 @@ public:
  * @return color_picker对象。
  */
  static TColorPicker Cast(TWidget& widget) ;
- const char* getValue() const;
+ const char* GetValue() const;
 };
 
 
@@ -6624,6 +6832,14 @@ public:
 
  static TColorComponent cast(const widget_t* nativeObj) {
    return TColorComponent((widget_t*)nativeObj);
+ }
+
+ static TColorComponent cast(TWidget& obj) {
+   return TColorComponent(obj.nativeObj);
+ }
+
+ static TColorComponent cast(const TWidget& obj) {
+   return TColorComponent(obj.nativeObj);
  }
 
 
@@ -6656,6 +6872,14 @@ public:
 
  static TWindowManager cast(const widget_t* nativeObj) {
    return TWindowManager((widget_t*)nativeObj);
+ }
+
+ static TWindowManager cast(TWidget& obj) {
+   return TWindowManager(obj.nativeObj);
+ }
+
+ static TWindowManager cast(const TWidget& obj) {
+   return TWindowManager(obj.nativeObj);
  }
 
 
@@ -6810,6 +7034,14 @@ public:
    return TWindowBase((widget_t*)nativeObj);
  }
 
+ static TWindowBase cast(TWidget& obj) {
+   return TWindowBase(obj.nativeObj);
+ }
+
+ static TWindowBase cast(const TWidget& obj) {
+   return TWindowBase(obj.nativeObj);
+ }
+
 
 /**
  * 转换为window_base对象(供脚本语言使用)。
@@ -6819,8 +7051,8 @@ public:
  * @return window_base对象。
  */
  static TWindowBase Cast(TWidget& widget) ;
- char* getTheme() const;
- window_closable_t getClosable() const;
+ char* GetTheme() const;
+ window_closable_t GetClosable() const;
 };
 
 
@@ -6844,6 +7076,14 @@ public:
 
  static TStyleMutable cast(const style_t* nativeObj) {
    return TStyleMutable((style_t*)nativeObj);
+ }
+
+ static TStyleMutable cast(TStyle& obj) {
+   return TStyleMutable(obj.nativeObj);
+ }
+
+ static TStyleMutable cast(const TStyle& obj) {
+   return TStyleMutable(obj.nativeObj);
  }
 
 
@@ -6887,7 +7127,7 @@ public:
  * @return style对象。
  */
  static TStyle Create(TWidget& widget, TStyle& default_style) ;
- char* getName() const;
+ char* GetName() const;
 };
 
 
@@ -6923,6 +7163,14 @@ public:
 
  static TImageBase cast(const widget_t* nativeObj) {
    return TImageBase((widget_t*)nativeObj);
+ }
+
+ static TImageBase cast(TWidget& obj) {
+   return TImageBase(obj.nativeObj);
+ }
+
+ static TImageBase cast(const TWidget& obj) {
+   return TImageBase(obj.nativeObj);
  }
 
 
@@ -7001,15 +7249,15 @@ public:
  * @return image_base对象。
  */
  static TImageBase Cast(TWidget& widget) ;
- char* getImage() const;
- float_t getAnchorX() const;
- float_t getAnchorY() const;
- float_t getScaleX() const;
- float_t getScaleY() const;
- float_t getRotation() const;
- bool getClickable() const;
- bool getSelectable() const;
- bool getSelected() const;
+ char* GetImage() const;
+ float_t GetAnchorX() const;
+ float_t GetAnchorY() const;
+ float_t GetScaleX() const;
+ float_t GetScaleY() const;
+ float_t GetRotation() const;
+ bool GetClickable() const;
+ bool GetSelectable() const;
+ bool GetSelected() const;
 };
 
 
@@ -7033,6 +7281,14 @@ public:
    return TWindowEvent((event_t*)nativeObj);
  }
 
+ static TWindowEvent cast(TEvent& obj) {
+   return TWindowEvent(obj.nativeObj);
+ }
+
+ static TWindowEvent cast(const TEvent& obj) {
+   return TWindowEvent(obj.nativeObj);
+ }
+
 
 /**
  * 把event对象转window_event_t对象。主要给脚本语言使用。
@@ -7042,7 +7298,7 @@ public:
  * @return 对象。
  */
  static TWindowEvent Cast(TEvent& event) ;
- TWidget getWindow() const;
+ TWidget GetWindow() const;
 };
 
 
@@ -7066,6 +7322,14 @@ public:
    return TPaintEvent((event_t*)nativeObj);
  }
 
+ static TPaintEvent cast(TEvent& obj) {
+   return TPaintEvent(obj.nativeObj);
+ }
+
+ static TPaintEvent cast(const TEvent& obj) {
+   return TPaintEvent(obj.nativeObj);
+ }
+
 
 /**
  * 把event对象转paint_event_t对象。主要给脚本语言使用。
@@ -7075,7 +7339,7 @@ public:
  * @return event 对象。
  */
  static TPaintEvent Cast(TEvent& event) ;
- TCanvas getC() const;
+ TCanvas GetC() const;
 };
 
 
@@ -7099,6 +7363,14 @@ public:
    return TKeyEvent((event_t*)nativeObj);
  }
 
+ static TKeyEvent cast(TEvent& obj) {
+   return TKeyEvent(obj.nativeObj);
+ }
+
+ static TKeyEvent cast(const TEvent& obj) {
+   return TKeyEvent(obj.nativeObj);
+ }
+
 
 /**
  * 把event对象转key_event_t对象，主要给脚本语言使用。
@@ -7108,19 +7380,19 @@ public:
  * @return event对象。
  */
  static TKeyEvent Cast(TEvent& event) ;
- uint32_t getKey() const;
- bool getAlt() const;
- bool getLalt() const;
- bool getRalt() const;
- bool getCtrl() const;
- bool getLctrl() const;
- bool getRctrl() const;
- bool getShift() const;
- bool getLshift() const;
- bool getRshift() const;
- bool getCmd() const;
- bool getMenu() const;
- bool getCapslock() const;
+ uint32_t GetKey() const;
+ bool GetAlt() const;
+ bool GetLalt() const;
+ bool GetRalt() const;
+ bool GetCtrl() const;
+ bool GetLctrl() const;
+ bool GetRctrl() const;
+ bool GetShift() const;
+ bool GetLshift() const;
+ bool GetRshift() const;
+ bool GetCmd() const;
+ bool GetMenu() const;
+ bool GetCapslock() const;
 };
 
 
@@ -7144,6 +7416,14 @@ public:
    return TPointerEvent((event_t*)nativeObj);
  }
 
+ static TPointerEvent cast(TEvent& obj) {
+   return TPointerEvent(obj.nativeObj);
+ }
+
+ static TPointerEvent cast(const TEvent& obj) {
+   return TPointerEvent(obj.nativeObj);
+ }
+
 
 /**
  * 把event对象转pointer_event_t对象，主要给脚本语言使用。
@@ -7153,15 +7433,15 @@ public:
  * @return event对象。
  */
  static TPointerEvent Cast(TEvent& event) ;
- xy_t getX() const;
- xy_t getY() const;
- uint8_t getButton() const;
- bool getPressed() const;
- bool getAlt() const;
- bool getCtrl() const;
- bool getCmd() const;
- bool getMenu() const;
- bool getShift() const;
+ xy_t GetX() const;
+ xy_t GetY() const;
+ uint8_t GetButton() const;
+ bool GetPressed() const;
+ bool GetAlt() const;
+ bool GetCtrl() const;
+ bool GetCmd() const;
+ bool GetMenu() const;
+ bool GetShift() const;
 };
 
 
@@ -7185,6 +7465,14 @@ public:
    return TOrientationEvent((event_t*)nativeObj);
  }
 
+ static TOrientationEvent cast(TEvent& obj) {
+   return TOrientationEvent(obj.nativeObj);
+ }
+
+ static TOrientationEvent cast(const TEvent& obj) {
+   return TOrientationEvent(obj.nativeObj);
+ }
+
 
 /**
  * 把event对象转orientation_event_t对象，主要给脚本语言使用。
@@ -7194,7 +7482,7 @@ public:
  * @return event对象。
  */
  static TOrientationEvent Cast(TEvent& event) ;
- int32_t getOrientation() const;
+ int32_t GetOrientation() const;
 };
 
 
@@ -7218,6 +7506,14 @@ public:
    return TWheelEvent((event_t*)nativeObj);
  }
 
+ static TWheelEvent cast(TEvent& obj) {
+   return TWheelEvent(obj.nativeObj);
+ }
+
+ static TWheelEvent cast(const TEvent& obj) {
+   return TWheelEvent(obj.nativeObj);
+ }
+
 
 /**
  * 把event对象转wheel_event_t对象，主要给脚本语言使用。
@@ -7227,10 +7523,10 @@ public:
  * @return event对象。
  */
  static TWheelEvent Cast(TEvent& event) ;
- int32_t getDy() const;
- bool getAlt() const;
- bool getCtrl() const;
- bool getShift() const;
+ int32_t GetDy() const;
+ bool GetAlt() const;
+ bool GetCtrl() const;
+ bool GetShift() const;
 };
 
 
@@ -7279,6 +7575,14 @@ public:
 
  static TAppBar cast(const widget_t* nativeObj) {
    return TAppBar((widget_t*)nativeObj);
+ }
+
+ static TAppBar cast(TWidget& obj) {
+   return TAppBar(obj.nativeObj);
+ }
+
+ static TAppBar cast(const TWidget& obj) {
+   return TAppBar(obj.nativeObj);
  }
 
 
@@ -7349,6 +7653,14 @@ public:
 
  static TButtonGroup cast(const widget_t* nativeObj) {
    return TButtonGroup((widget_t*)nativeObj);
+ }
+
+ static TButtonGroup cast(TWidget& obj) {
+   return TButtonGroup(obj.nativeObj);
+ }
+
+ static TButtonGroup cast(const TWidget& obj) {
+   return TButtonGroup(obj.nativeObj);
  }
 
 
@@ -7434,6 +7746,14 @@ public:
    return TButton((widget_t*)nativeObj);
  }
 
+ static TButton cast(TWidget& obj) {
+   return TButton(obj.nativeObj);
+ }
+
+ static TButton cast(const TWidget& obj) {
+   return TButton(obj.nativeObj);
+ }
+
 
 /**
  * 创建button对象
@@ -7474,8 +7794,8 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetEnableLongPress(bool enable_long_press) ;
- int32_t getRepeat() const;
- bool getEnableLongPress() const;
+ int32_t GetRepeat() const;
+ bool GetEnableLongPress() const;
 };
 
 
@@ -7542,6 +7862,14 @@ public:
    return TCheckButton((widget_t*)nativeObj);
  }
 
+ static TCheckButton cast(TWidget& obj) {
+   return TCheckButton(obj.nativeObj);
+ }
+
+ static TCheckButton cast(const TWidget& obj) {
+   return TCheckButton(obj.nativeObj);
+ }
+
 
 /**
  * 创建多选按钮对象
@@ -7586,7 +7914,7 @@ public:
  * @return check_button对象。
  */
  static TCheckButton Cast(TWidget& widget) ;
- bool getValue() const;
+ bool GetValue() const;
 };
 
 
@@ -7632,6 +7960,14 @@ public:
 
  static TClipView cast(const widget_t* nativeObj) {
    return TClipView((widget_t*)nativeObj);
+ }
+
+ static TClipView cast(TWidget& obj) {
+   return TClipView(obj.nativeObj);
+ }
+
+ static TClipView cast(const TWidget& obj) {
+   return TClipView(obj.nativeObj);
  }
 
 
@@ -7698,6 +8034,14 @@ public:
    return TColorTile((widget_t*)nativeObj);
  }
 
+ static TColorTile cast(TWidget& obj) {
+   return TColorTile(obj.nativeObj);
+ }
+
+ static TColorTile cast(const TWidget& obj) {
+   return TColorTile(obj.nativeObj);
+ }
+
 
 /**
  * 创建color_tile对象
@@ -7729,8 +8073,8 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetBgColor(const char* color) ;
- const char* getBgColor() const;
- const char* getBorderColor() const;
+ const char* GetBgColor() const;
+ const char* GetBorderColor() const;
 };
 
 
@@ -7777,6 +8121,14 @@ public:
 
  static TColumn cast(const widget_t* nativeObj) {
    return TColumn((widget_t*)nativeObj);
+ }
+
+ static TColumn cast(TWidget& obj) {
+   return TColumn(obj.nativeObj);
+ }
+
+ static TColumn cast(const TWidget& obj) {
+   return TColumn(obj.nativeObj);
  }
 
 
@@ -7826,6 +8178,14 @@ public:
    return TComboBoxItem((widget_t*)nativeObj);
  }
 
+ static TComboBoxItem cast(TWidget& obj) {
+   return TComboBoxItem(obj.nativeObj);
+ }
+
+ static TComboBoxItem cast(const TWidget& obj) {
+   return TComboBoxItem(obj.nativeObj);
+ }
+
 
 /**
  * 创建combo_box_item对象
@@ -7866,8 +8226,8 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetValue(int32_t value) ;
- int32_t getValue() const;
- bool getChecked() const;
+ int32_t GetValue() const;
+ bool GetChecked() const;
 };
 
 
@@ -7993,6 +8353,14 @@ public:
    return TComboBox((widget_t*)nativeObj);
  }
 
+ static TComboBox cast(TWidget& obj) {
+   return TComboBox(obj.nativeObj);
+ }
+
+ static TComboBox cast(const TWidget& obj) {
+   return TComboBox(obj.nativeObj);
+ }
+
 
 /**
  * 创建combo_box对象
@@ -8111,12 +8479,12 @@ public:
  * @return 返回文本。
  */
  const char* GetTextValue() ;
- char* getOpenWindow() const;
- int32_t getSelectedIndex() const;
- int32_t getValue() const;
- bool getLocalizeOptions() const;
- char* getOptions() const;
- int32_t getItemHeight() const;
+ char* GetOpenWindow() const;
+ int32_t GetSelectedIndex() const;
+ int32_t GetValue() const;
+ bool GetLocalizeOptions() const;
+ char* GetOptions() const;
+ int32_t GetItemHeight() const;
 };
 
 
@@ -8159,6 +8527,14 @@ public:
 
  static TDialogClient cast(const widget_t* nativeObj) {
    return TDialogClient((widget_t*)nativeObj);
+ }
+
+ static TDialogClient cast(TWidget& obj) {
+   return TDialogClient(obj.nativeObj);
+ }
+
+ static TDialogClient cast(const TWidget& obj) {
+   return TDialogClient(obj.nativeObj);
  }
 
 
@@ -8225,6 +8601,14 @@ public:
 
  static TDialogTitle cast(const widget_t* nativeObj) {
    return TDialogTitle((widget_t*)nativeObj);
+ }
+
+ static TDialogTitle cast(TWidget& obj) {
+   return TDialogTitle(obj.nativeObj);
+ }
+
+ static TDialogTitle cast(const TWidget& obj) {
+   return TDialogTitle(obj.nativeObj);
  }
 
 
@@ -8300,6 +8684,14 @@ public:
    return TDigitClock((widget_t*)nativeObj);
  }
 
+ static TDigitClock cast(TWidget& obj) {
+   return TDigitClock(obj.nativeObj);
+ }
+
+ static TDigitClock cast(const TWidget& obj) {
+   return TDigitClock(obj.nativeObj);
+ }
+
 
 /**
  * 创建digit_clock对象
@@ -8331,7 +8723,7 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetFormat(const char* format) ;
- char* getFormat() const;
+ char* GetFormat() const;
 };
 
 
@@ -8355,6 +8747,14 @@ public:
 
  static TDragger cast(const widget_t* nativeObj) {
    return TDragger((widget_t*)nativeObj);
+ }
+
+ static TDragger cast(TWidget& obj) {
+   return TDragger(obj.nativeObj);
+ }
+
+ static TDragger cast(const TWidget& obj) {
+   return TDragger(obj.nativeObj);
  }
 
 
@@ -8391,10 +8791,10 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetRange(xy_t x_min, xy_t y_min, xy_t x_max, xy_t y_max) ;
- xy_t getXMin() const;
- xy_t getYMin() const;
- xy_t getXMax() const;
- xy_t getYMax() const;
+ xy_t GetXMin() const;
+ xy_t GetYMin() const;
+ xy_t GetXMax() const;
+ xy_t GetYMax() const;
 };
 
 
@@ -8465,6 +8865,14 @@ public:
 
  static TEdit cast(const widget_t* nativeObj) {
    return TEdit((widget_t*)nativeObj);
+ }
+
+ static TEdit cast(TWidget& obj) {
+   return TEdit(obj.nativeObj);
+ }
+
+ static TEdit cast(const TWidget& obj) {
+   return TEdit(obj.nativeObj);
  }
 
 
@@ -8636,16 +9044,16 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetCursor(uint32_t cursor) ;
- bool getReadonly() const;
- bool getPasswordVisible() const;
- bool getAutoFix() const;
- bool getSelectNoneWhenFocused() const;
- bool getOpenImWhenFocused() const;
- char* getTips() const;
- input_type_t getInputType() const;
- double getMin() const;
- double getMax() const;
- double getStep() const;
+ bool GetReadonly() const;
+ bool GetPasswordVisible() const;
+ bool GetAutoFix() const;
+ bool GetSelectNoneWhenFocused() const;
+ bool GetOpenImWhenFocused() const;
+ char* GetTips() const;
+ input_type_t GetInputType() const;
+ double GetMin() const;
+ double GetMax() const;
+ double GetStep() const;
 };
 
 
@@ -8674,7 +9082,9 @@ public:
  *<grid_item>
  *<button x="c" y="m" w="80%" h="30" name="3" text="3"/>
  *</grid_item>
- *</grid>```
+ *</grid>
+ *
+ *```
  *
  *可用通过style来设置控件的显示风格，如背景颜色等。如：
  *
@@ -8699,6 +9109,14 @@ public:
 
  static TGridItem cast(const widget_t* nativeObj) {
    return TGridItem((widget_t*)nativeObj);
+ }
+
+ static TGridItem cast(TWidget& obj) {
+   return TGridItem(obj.nativeObj);
+ }
+
+ static TGridItem cast(const TWidget& obj) {
+   return TGridItem(obj.nativeObj);
  }
 
 
@@ -8771,6 +9189,14 @@ public:
    return TGrid((widget_t*)nativeObj);
  }
 
+ static TGrid cast(TWidget& obj) {
+   return TGrid(obj.nativeObj);
+ }
+
+ static TGrid cast(const TWidget& obj) {
+   return TGrid(obj.nativeObj);
+ }
+
 
 /**
  * 创建grid对象
@@ -8840,6 +9266,14 @@ public:
 
  static TGroupBox cast(const widget_t* nativeObj) {
    return TGroupBox((widget_t*)nativeObj);
+ }
+
+ static TGroupBox cast(TWidget& obj) {
+   return TGroupBox(obj.nativeObj);
+ }
+
+ static TGroupBox cast(const TWidget& obj) {
+   return TGroupBox(obj.nativeObj);
  }
 
 
@@ -8922,6 +9356,14 @@ public:
    return TLabel((widget_t*)nativeObj);
  }
 
+ static TLabel cast(TWidget& obj) {
+   return TLabel(obj.nativeObj);
+ }
+
+ static TLabel cast(const TWidget& obj) {
+   return TLabel(obj.nativeObj);
+ }
+
 
 /**
  * 创建label对象
@@ -8965,7 +9407,7 @@ public:
  * @return label对象。
  */
  static TLabel Cast(TWidget& widget) ;
- int32_t getLength() const;
+ int32_t GetLength() const;
 };
 
 
@@ -9021,6 +9463,14 @@ public:
 
  static TOverlay cast(const widget_t* nativeObj) {
    return TOverlay((widget_t*)nativeObj);
+ }
+
+ static TOverlay cast(TWidget& obj) {
+   return TOverlay(obj.nativeObj);
+ }
+
+ static TOverlay cast(const TWidget& obj) {
+   return TOverlay(obj.nativeObj);
  }
 
 
@@ -9090,6 +9540,14 @@ public:
    return TPages((widget_t*)nativeObj);
  }
 
+ static TPages cast(TWidget& obj) {
+   return TPages(obj.nativeObj);
+ }
+
+ static TPages cast(const TWidget& obj) {
+   return TPages(obj.nativeObj);
+ }
+
 
 /**
  * 创建pages对象
@@ -9130,7 +9588,7 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetActiveByName(char* name) ;
- uint32_t getActive() const;
+ uint32_t GetActive() const;
 };
 
 
@@ -9184,6 +9642,14 @@ public:
 
  static TProgressBar cast(const widget_t* nativeObj) {
    return TProgressBar((widget_t*)nativeObj);
+ }
+
+ static TProgressBar cast(TWidget& obj) {
+   return TProgressBar(obj.nativeObj);
+ }
+
+ static TProgressBar cast(const TWidget& obj) {
+   return TProgressBar(obj.nativeObj);
  }
 
 
@@ -9254,10 +9720,10 @@ public:
  * @return 返回百分比。
  */
  uint32_t GetPercent() ;
- float_t getValue() const;
- float_t getMax() const;
- bool getVertical() const;
- bool getShowText() const;
+ float_t GetValue() const;
+ float_t GetMax() const;
+ bool GetVertical() const;
+ bool GetShowText() const;
 };
 
 
@@ -9304,6 +9770,14 @@ public:
 
  static TRow cast(const widget_t* nativeObj) {
    return TRow((widget_t*)nativeObj);
+ }
+
+ static TRow cast(TWidget& obj) {
+   return TRow(obj.nativeObj);
+ }
+
+ static TRow cast(const TWidget& obj) {
+   return TRow(obj.nativeObj);
  }
 
 
@@ -9384,6 +9858,14 @@ public:
    return TSlider((widget_t*)nativeObj);
  }
 
+ static TSlider cast(TWidget& obj) {
+   return TSlider(obj.nativeObj);
+ }
+
+ static TSlider cast(const TWidget& obj) {
+   return TSlider(obj.nativeObj);
+ }
+
 
 /**
  * 创建slider对象
@@ -9460,15 +9942,15 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetVertical(bool vertical) ;
- double getValue() const;
- double getMin() const;
- double getMax() const;
- double getStep() const;
- bool getVertical() const;
- uint32_t getBarSize() const;
- uint32_t getDraggerSize() const;
- bool getDraggerAdaptToIcon() const;
- bool getSlideWithBar() const;
+ double GetValue() const;
+ double GetMin() const;
+ double GetMax() const;
+ double GetStep() const;
+ bool GetVertical() const;
+ uint32_t GetBarSize() const;
+ uint32_t GetDraggerSize() const;
+ bool GetDraggerAdaptToIcon() const;
+ bool GetSlideWithBar() const;
 };
 
 
@@ -9520,6 +10002,14 @@ public:
    return TTabButtonGroup((widget_t*)nativeObj);
  }
 
+ static TTabButtonGroup cast(TWidget& obj) {
+   return TTabButtonGroup(obj.nativeObj);
+ }
+
+ static TTabButtonGroup cast(const TWidget& obj) {
+   return TTabButtonGroup(obj.nativeObj);
+ }
+
 
 /**
  * 创建tab_button_group对象
@@ -9560,8 +10050,8 @@ public:
  * @return tab_button_group对象。
  */
  static TTabButtonGroup Cast(TWidget& widget) ;
- bool getCompact() const;
- bool getScrollable() const;
+ bool GetCompact() const;
+ bool GetScrollable() const;
 };
 
 
@@ -9642,6 +10132,14 @@ public:
    return TTabButton((widget_t*)nativeObj);
  }
 
+ static TTabButton cast(TWidget& obj) {
+   return TTabButton(obj.nativeObj);
+ }
+
+ static TTabButton cast(const TWidget& obj) {
+   return TTabButton(obj.nativeObj);
+ }
+
 
 /**
  * 创建tab_button对象
@@ -9700,10 +10198,10 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetLoadUi(char* name) ;
- bool getValue() const;
- char* getLoadUi() const;
- char* getActiveIcon() const;
- char* getIcon() const;
+ bool GetValue() const;
+ char* GetLoadUi() const;
+ char* GetActiveIcon() const;
+ char* GetIcon() const;
 };
 
 
@@ -9750,6 +10248,14 @@ public:
 
  static TTabControl cast(const widget_t* nativeObj) {
    return TTabControl((widget_t*)nativeObj);
+ }
+
+ static TTabControl cast(TWidget& obj) {
+   return TTabControl(obj.nativeObj);
+ }
+
+ static TTabControl cast(const TWidget& obj) {
+   return TTabControl(obj.nativeObj);
  }
 
 
@@ -9818,6 +10324,14 @@ public:
    return TView((widget_t*)nativeObj);
  }
 
+ static TView cast(TWidget& obj) {
+   return TView(obj.nativeObj);
+ }
+
+ static TView cast(const TWidget& obj) {
+   return TView(obj.nativeObj);
+ }
+
 
 /**
  * 创建view对象
@@ -9863,6 +10377,14 @@ public:
    return TIdleInfo((emitter_t*)nativeObj);
  }
 
+ static TIdleInfo cast(TEmitter& obj) {
+   return TIdleInfo(obj.nativeObj);
+ }
+
+ static TIdleInfo cast(const TEmitter& obj) {
+   return TIdleInfo(obj.nativeObj);
+ }
+
 
 /**
  * 转换为idle_info对象(供脚本语言使用)。
@@ -9872,8 +10394,8 @@ public:
  * @return idle_info对象。
  */
  static TIdleInfo Cast(TIdleInfo& idle) ;
- void* getCtx() const;
- uint32_t getId() const;
+ void* GetCtx() const;
+ uint32_t GetId() const;
 };
 
 
@@ -9925,6 +10447,14 @@ public:
    return TMutableImage((widget_t*)nativeObj);
  }
 
+ static TMutableImage cast(TWidget& obj) {
+   return TMutableImage(obj.nativeObj);
+ }
+
+ static TMutableImage cast(const TWidget& obj) {
+   return TMutableImage(obj.nativeObj);
+ }
+
 };
 
 
@@ -9953,6 +10483,14 @@ public:
    return TObjectArray((emitter_t*)nativeObj);
  }
 
+ static TObjectArray cast(TEmitter& obj) {
+   return TObjectArray(obj.nativeObj);
+ }
+
+ static TObjectArray cast(const TEmitter& obj) {
+   return TObjectArray(obj.nativeObj);
+ }
+
 
 /**
  * 创建对象。
@@ -9977,7 +10515,7 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t ClearProps() ;
- uint32_t getPropsSize() const;
+ uint32_t GetPropsSize() const;
 };
 
 
@@ -10039,6 +10577,14 @@ public:
    return TGifImage((widget_t*)nativeObj);
  }
 
+ static TGifImage cast(TWidget& obj) {
+   return TGifImage(obj.nativeObj);
+ }
+
+ static TGifImage cast(const TWidget& obj) {
+   return TGifImage(obj.nativeObj);
+ }
+
 
 /**
  * 创建gif_image对象
@@ -10086,6 +10632,14 @@ public:
    return TObjectDefault((emitter_t*)nativeObj);
  }
 
+ static TObjectDefault cast(TEmitter& obj) {
+   return TObjectDefault(obj.nativeObj);
+ }
+
+ static TObjectDefault cast(const TEmitter& obj) {
+   return TObjectDefault(obj.nativeObj);
+ }
+
 
 /**
  * 创建对象。
@@ -10110,7 +10664,7 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t ClearProps() ;
- uint32_t getPropsSize() const;
+ uint32_t GetPropsSize() const;
 };
 
 
@@ -10186,6 +10740,14 @@ public:
    return TImage((widget_t*)nativeObj);
  }
 
+ static TImage cast(TWidget& obj) {
+   return TImage(obj.nativeObj);
+ }
+
+ static TImage cast(const TWidget& obj) {
+   return TImage(obj.nativeObj);
+ }
+
 
 /**
  * 创建image对象
@@ -10217,7 +10779,7 @@ public:
  * @return image对象。
  */
  static TImage Cast(TWidget& widget) ;
- image_draw_type_t getDrawType() const;
+ image_draw_type_t GetDrawType() const;
 };
 
 
@@ -10241,6 +10803,14 @@ public:
    return TComboBoxEx((widget_t*)nativeObj);
  }
 
+ static TComboBoxEx cast(TWidget& obj) {
+   return TComboBoxEx(obj.nativeObj);
+ }
+
+ static TComboBoxEx cast(const TWidget& obj) {
+   return TComboBoxEx(obj.nativeObj);
+ }
+
 
 /**
  * 创建combo_box_ex对象
@@ -10254,6 +10824,64 @@ public:
  * @return 对象。
  */
  static TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
+};
+
+
+/**
+ * 电阻屏校准窗口。
+ *
+ *calibration\_win\_t是[window\_base\_t](window_base_t.md)的子类控件，
+ *window\_base\_t的函数均适用于calibration\_win\_t控件。
+ *
+ *在xml中使用"calibration\_win"标签创建电阻屏校准窗口。如：
+ *
+ *```xml
+ *<calibration_win name="cali" w="100%" h="100%" text="Please click the center of cross">
+ *</calibration_win>
+ *```
+ *
+ *> 更多用法请参考：
+ *[window.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/calibration_win.xml)
+ *
+ *在c代码中使用函数calibration\_win\_create创建窗口。如：
+ *
+ *
+ *通过calibration\_win\_set\_on\_done注册回调函数，用于保存校准数据。
+ *
+ */
+class TCalibrationWin : public TWindowBase { 
+public:
+ TCalibrationWin(widget_t* nativeObj) : TWindowBase(nativeObj) {
+ }
+
+ TCalibrationWin(const calibration_win_t* nativeObj) : TWindowBase((widget_t*)nativeObj) {
+ }
+
+ static TCalibrationWin cast(widget_t* nativeObj) {
+   return TCalibrationWin(nativeObj);
+ }
+
+ static TCalibrationWin cast(const widget_t* nativeObj) {
+   return TCalibrationWin((widget_t*)nativeObj);
+ }
+
+ static TCalibrationWin cast(TWidget& obj) {
+   return TCalibrationWin(obj.nativeObj);
+ }
+
+ static TCalibrationWin cast(const TWidget& obj) {
+   return TCalibrationWin(obj.nativeObj);
+ }
+
+
+/**
+ * 转换为calibration_win对象(供脚本语言使用)。
+ * 
+ * @param widget calibration_win对象。
+ 
+ * @return calibration_win对象。
+ */
+ static TCalibrationWin Cast(TWidget& widget) ;
 };
 
 
@@ -10318,6 +10946,14 @@ public:
    return TPopup((widget_t*)nativeObj);
  }
 
+ static TPopup cast(TWidget& obj) {
+   return TPopup(obj.nativeObj);
+ }
+
+ static TPopup cast(const TWidget& obj) {
+   return TPopup(obj.nativeObj);
+ }
+
 
 /**
  * 创建popup对象。
@@ -10358,8 +10994,8 @@ public:
  * @return 返回RET_OK表示成功，否则表示失败。
  */
  ret_t SetCloseWhenClickOutside(bool close_when_click_outside) ;
- bool getCloseWhenClick() const;
- bool getCloseWhenClickOutside() const;
+ bool GetCloseWhenClick() const;
+ bool GetCloseWhenClickOutside() const;
 };
 
 
@@ -10413,6 +11049,14 @@ public:
 
  static TSvgImage cast(const widget_t* nativeObj) {
    return TSvgImage((widget_t*)nativeObj);
+ }
+
+ static TSvgImage cast(TWidget& obj) {
+   return TSvgImage(obj.nativeObj);
+ }
+
+ static TSvgImage cast(const TWidget& obj) {
+   return TSvgImage(obj.nativeObj);
  }
 
 
@@ -10471,6 +11115,14 @@ public:
    return TTimerInfo((emitter_t*)nativeObj);
  }
 
+ static TTimerInfo cast(TEmitter& obj) {
+   return TTimerInfo(obj.nativeObj);
+ }
+
+ static TTimerInfo cast(const TEmitter& obj) {
+   return TTimerInfo(obj.nativeObj);
+ }
+
 
 /**
  * 转换为timer_info对象(供脚本语言使用)。
@@ -10480,9 +11132,9 @@ public:
  * @return timer_info对象。
  */
  static TTimerInfo Cast(TTimerInfo& timer) ;
- void* getCtx() const;
- uint32_t getId() const;
- uint64_t getNow() const;
+ void* GetCtx() const;
+ uint32_t GetId() const;
+ uint64_t GetNow() const;
 };
 
 
@@ -10547,6 +11199,14 @@ public:
 
  static TSpinBox cast(const widget_t* nativeObj) {
    return TSpinBox((widget_t*)nativeObj);
+ }
+
+ static TSpinBox cast(TWidget& obj) {
+   return TSpinBox(obj.nativeObj);
+ }
+
+ static TSpinBox cast(const TWidget& obj) {
+   return TSpinBox(obj.nativeObj);
  }
 
 
@@ -10639,6 +11299,14 @@ public:
    return TSystemBar((widget_t*)nativeObj);
  }
 
+ static TSystemBar cast(TWidget& obj) {
+   return TSystemBar(obj.nativeObj);
+ }
+
+ static TSystemBar cast(const TWidget& obj) {
+   return TSystemBar(obj.nativeObj);
+ }
+
 
 /**
  * 创建system_bar对象。
@@ -10718,6 +11386,14 @@ public:
    return TWindow((widget_t*)nativeObj);
  }
 
+ static TWindow cast(TWidget& obj) {
+   return TWindow(obj.nativeObj);
+ }
+
+ static TWindow cast(const TWidget& obj) {
+   return TWindow(obj.nativeObj);
+ }
+
 
 /**
  * 创建window对象
@@ -10758,7 +11434,7 @@ public:
  
  * @return 对象。
  */
- static TWidget Open(char* name) ;
+ static TWidget Open(const char* name) ;
 
 /**
  * 从资源文件中加载并创建window对象。本函数在ui_loader/ui_builder_default里实现。
@@ -10768,7 +11444,7 @@ public:
  
  * @return 对象。
  */
- static TWidget OpenAndClose(char* name, TWidget& to_close) ;
+ static TWidget OpenAndClose(const char* name, TWidget& to_close) ;
 
 /**
  * 关闭窗口。
@@ -10794,7 +11470,7 @@ public:
  * @return window对象。
  */
  static TWindow Cast(TWidget& widget) ;
- bool getFullscreen() const;
+ bool GetFullscreen() const;
 };
 
 
@@ -10852,6 +11528,14 @@ public:
 
  static TKeyboard cast(const widget_t* nativeObj) {
    return TKeyboard((widget_t*)nativeObj);
+ }
+
+ static TKeyboard cast(TWidget& obj) {
+   return TKeyboard(obj.nativeObj);
+ }
+
+ static TKeyboard cast(const TWidget& obj) {
+   return TKeyboard(obj.nativeObj);
  }
 
 
@@ -10964,6 +11648,14 @@ public:
 
  static TDialog cast(const widget_t* nativeObj) {
    return TDialog((widget_t*)nativeObj);
+ }
+
+ static TDialog cast(TWidget& obj) {
+   return TDialog(obj.nativeObj);
+ }
+
+ static TDialog cast(const TWidget& obj) {
+   return TDialog(obj.nativeObj);
  }
 
 
@@ -11122,7 +11814,7 @@ public:
  * @return 返回RET_OK表示确认，否则表示取消。
  */
  static ret_t Confirm(const char* title, const char* text) ;
- const char* getHighlight() const;
+ const char* GetHighlight() const;
 };
 
 #endif/*AWTK_CPP_HPP*/

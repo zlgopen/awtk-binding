@@ -20808,7 +20808,7 @@
     "events": [],
     "properties": [],
     "header": "widgets/grid_item.h",
-    "desc": "grid_item。一个简单的容器控件，一般作为grid的子控件。\n\n它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。\n子控件的布局可用layout\\_children属性指定。\n请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。\n\ngrid\\_item\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于grid\\_item\\_t控件。\n\n在xml中使用\"grid\\_item\"标签创建grid\\_item。如：\n\n```xml\n<grid x=\"0\" y=\"0\" w=\"100%\" h=\"100%\" children_layout=\"default(c=2,r=2,m=5,s=5)\">\n<grid_item>\n<button x=\"c\" y=\"m\" w=\"80%\" h=\"30\" name=\"0\" text=\"0\"/>\n</grid_item>\n<grid_item>\n<button x=\"c\" y=\"m\" w=\"80%\" h=\"30\" name=\"1\" text=\"1\"/>\n</grid_item>\n<grid_item>\n<button x=\"c\" y=\"m\" w=\"80%\" h=\"30\" name=\"2\" text=\"2\"/>\n</grid_item>\n<grid_item>\n<button x=\"c\" y=\"m\" w=\"80%\" h=\"30\" name=\"3\" text=\"3\"/>\n</grid_item>\n</grid>```\n\n可用通过style来设置控件的显示风格，如背景颜色等。如：\n\n```xml\n<style name=\"default\" border_color=\"#a0a0a0\">\n<normal     bg_color=\"#f0f0f0\" />\n</style>\n```",
+    "desc": "grid_item。一个简单的容器控件，一般作为grid的子控件。\n\n它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。\n子控件的布局可用layout\\_children属性指定。\n请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。\n\ngrid\\_item\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于grid\\_item\\_t控件。\n\n在xml中使用\"grid\\_item\"标签创建grid\\_item。如：\n\n```xml\n<grid x=\"0\" y=\"0\" w=\"100%\" h=\"100%\" children_layout=\"default(c=2,r=2,m=5,s=5)\">\n<grid_item>\n<button x=\"c\" y=\"m\" w=\"80%\" h=\"30\" name=\"0\" text=\"0\"/>\n</grid_item>\n<grid_item>\n<button x=\"c\" y=\"m\" w=\"80%\" h=\"30\" name=\"1\" text=\"1\"/>\n</grid_item>\n<grid_item>\n<button x=\"c\" y=\"m\" w=\"80%\" h=\"30\" name=\"2\" text=\"2\"/>\n</grid_item>\n<grid_item>\n<button x=\"c\" y=\"m\" w=\"80%\" h=\"30\" name=\"3\" text=\"3\"/>\n</grid_item>\n</grid>\n\n```\n\n可用通过style来设置控件的显示风格，如背景颜色等。如：\n\n```xml\n<style name=\"default\" border_color=\"#a0a0a0\">\n<normal     bg_color=\"#f0f0f0\" />\n</style>\n```",
     "name": "grid_item_t",
     "parent": "widget_t",
     "annotation": {
@@ -23013,6 +23013,43 @@
         "params": [
           {
             "type": "widget_t*",
+            "name": "widget",
+            "desc": "calibration_win对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
+        "desc": "转换为calibration_win对象(供脚本语言使用)。",
+        "name": "calibration_win_cast",
+        "return": {
+          "type": "widget_t*",
+          "desc": "calibration_win对象。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [],
+    "header": "widgets/calibration_win.h",
+    "desc": "电阻屏校准窗口。\n\ncalibration\\_win\\_t是[window\\_base\\_t](window_base_t.md)的子类控件，\nwindow\\_base\\_t的函数均适用于calibration\\_win\\_t控件。\n\n在xml中使用\"calibration\\_win\"标签创建电阻屏校准窗口。如：\n\n```xml\n<calibration_win name=\"cali\" w=\"100%\" h=\"100%\" text=\"Please click the center of cross\">\n</calibration_win>\n```\n\n> 更多用法请参考：\n[window.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/calibration_win.xml)\n\n在c代码中使用函数calibration\\_win\\_create创建窗口。如：\n\n```c\nwidget_t* win = calibration_win_create(NULL, 0, 0, 320, 480);\n```\n\n通过calibration\\_win\\_set\\_on\\_done注册回调函数，用于保存校准数据。",
+    "name": "calibration_win_t",
+    "parent": "window_base_t",
+    "annotation": {
+      "scriptable": true,
+      "design": true,
+      "widget": true,
+      "window": true
+    },
+    "level": 3
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
+            "type": "widget_t*",
             "name": "parent",
             "desc": "父控件"
           },
@@ -23548,7 +23585,7 @@
       {
         "params": [
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "name",
             "desc": "window的名称。"
           }
@@ -23567,7 +23604,7 @@
       {
         "params": [
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "name",
             "desc": "window的名称。"
           },

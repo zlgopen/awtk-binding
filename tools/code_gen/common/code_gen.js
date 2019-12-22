@@ -167,6 +167,14 @@ class CodeGen {
 
     return cls.methods.find(iter => (iter.name === settter));
   }
+  
+  getBaseClassInfo(cls) {
+    if(cls && cls.parent) {
+      return this.getBaseClassInfo(this.getClassInfo(cls.parent));
+    } else {
+      return cls;
+    }
+  }
 
   getClassInfo(name) {
     const json = this.json;

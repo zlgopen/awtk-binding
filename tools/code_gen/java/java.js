@@ -86,7 +86,8 @@ class JavaGenerator extends TargetGen {
 /**
  * 原生对象。
  */
- result += ' public long nativeObj;\n\n';
+ public long nativeObj;
+
 `
     }
 

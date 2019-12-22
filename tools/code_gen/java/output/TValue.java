@@ -15,9 +15,8 @@ public class TValue {
 /**
  * 原生对象。
  */
- result += ' public long nativeObj;
+ public long nativeObj;
 
-';
 
 /**
  * 通过nativeObj构造Java对象。

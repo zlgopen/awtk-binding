@@ -168,7 +168,7 @@ window\_base\_t的函数均适用于system\_bar\_t控件。
 
 *Overrides [TWindowBase](_awtk_.twindowbase.md).[constructor](_awtk_.twindowbase.md#constructor)*
 
-*Defined in [awtk.ts:20011](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L20011)*
+*Defined in [awtk.ts:20011](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L20011)*
 
 **Parameters:**
 
@@ -186,7 +186,7 @@ Name | Type |
 
 *Overrides [TWindowBase](_awtk_.twindowbase.md).[nativeObj](_awtk_.twindowbase.md#nativeobj)*
 
-*Defined in [awtk.ts:20011](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L20011)*
+*Defined in [awtk.ts:20011](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L20011)*
 
 ## Accessors
 
@@ -196,7 +196,7 @@ Name | Type |
 
 *Inherited from [TWidget](_awtk_.twidget.md).[animation](_awtk_.twidget.md#animation)*
 
-*Defined in [awtk.ts:8420](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8420)*
+*Defined in [awtk.ts:8420](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8420)*
 
 动画参数。请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
 
@@ -206,7 +206,7 @@ Name | Type |
 
 *Inherited from [TWidget](_awtk_.twidget.md).[animation](_awtk_.twidget.md#animation)*
 
-*Defined in [awtk.ts:8424](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8424)*
+*Defined in [awtk.ts:8424](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8424)*
 
 动画参数。请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
 
@@ -226,7 +226,7 @@ ___
 
 *Inherited from [TWindowBase](_awtk_.twindowbase.md).[closable](_awtk_.twindowbase.md#closable)*
 
-*Defined in [awtk.ts:15293](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L15293)*
+*Defined in [awtk.ts:15293](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L15293)*
 
 收到EVT_REQUEST_CLOSE_WINDOW是否自动关闭窗口。
 
@@ -248,7 +248,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[enable](_awtk_.twidget.md#enable)*
 
-*Defined in [awtk.ts:8433](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8433)*
+*Defined in [awtk.ts:8433](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8433)*
 
 启用/禁用状态。
 
@@ -258,7 +258,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[enable](_awtk_.twidget.md#enable)*
 
-*Defined in [awtk.ts:8437](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8437)*
+*Defined in [awtk.ts:8437](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8437)*
 
 启用/禁用状态。
 
@@ -278,7 +278,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[feedback](_awtk_.twidget.md#feedback)*
 
-*Defined in [awtk.ts:8446](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8446)*
+*Defined in [awtk.ts:8446](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8446)*
 
 是否启用按键音、触屏音和震动等反馈。
 
@@ -288,7 +288,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[feedback](_awtk_.twidget.md#feedback)*
 
-*Defined in [awtk.ts:8450](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8450)*
+*Defined in [awtk.ts:8450](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8450)*
 
 是否启用按键音、触屏音和震动等反馈。
 
@@ -308,7 +308,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[floating](_awtk_.twidget.md#floating)*
 
-*Defined in [awtk.ts:8512](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8512)*
+*Defined in [awtk.ts:8512](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8512)*
 
 标识控件是否启用浮动布局，不受父控件的children_layout的控制。
 
@@ -318,7 +318,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[floating](_awtk_.twidget.md#floating)*
 
-*Defined in [awtk.ts:8516](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8516)*
+*Defined in [awtk.ts:8516](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8516)*
 
 标识控件是否启用浮动布局，不受父控件的children_layout的控制。
 
@@ -338,7 +338,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[focusable](_awtk_.twidget.md#focusable)*
 
-*Defined in [awtk.ts:8485](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8485)*
+*Defined in [awtk.ts:8485](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8485)*
 
 是否支持焦点停留。
 
@@ -348,7 +348,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[focusable](_awtk_.twidget.md#focusable)*
 
-*Defined in [awtk.ts:8489](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8489)*
+*Defined in [awtk.ts:8489](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8489)*
 
 是否支持焦点停留。
 
@@ -368,7 +368,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[h](_awtk_.twidget.md#h)*
 
-*Defined in [awtk.ts:8376](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8376)*
+*Defined in [awtk.ts:8376](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8376)*
 
 高度。
 
@@ -382,7 +382,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[name](_awtk_.twidget.md#name)*
 
-*Defined in [awtk.ts:8385](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8385)*
+*Defined in [awtk.ts:8385](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8385)*
 
 控件名字。
 
@@ -392,7 +392,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[name](_awtk_.twidget.md#name)*
 
-*Defined in [awtk.ts:8389](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8389)*
+*Defined in [awtk.ts:8389](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8389)*
 
 控件名字。
 
@@ -412,7 +412,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[parent](_awtk_.twidget.md#parent)*
 
-*Defined in [awtk.ts:8525](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8525)*
+*Defined in [awtk.ts:8525](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8525)*
 
 父控件
 
@@ -426,7 +426,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[sensitive](_awtk_.twidget.md#sensitive)*
 
-*Defined in [awtk.ts:8472](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8472)*
+*Defined in [awtk.ts:8472](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8472)*
 
 是否接受用户事件。
 
@@ -436,7 +436,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[sensitive](_awtk_.twidget.md#sensitive)*
 
-*Defined in [awtk.ts:8476](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8476)*
+*Defined in [awtk.ts:8476](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8476)*
 
 是否接受用户事件。
 
@@ -456,7 +456,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[style](_awtk_.twidget.md#style)*
 
-*Defined in [awtk.ts:8411](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8411)*
+*Defined in [awtk.ts:8411](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8411)*
 
 style的名称。
 
@@ -470,7 +470,7 @@ ___
 
 *Inherited from [TWindowBase](_awtk_.twindowbase.md).[theme](_awtk_.twindowbase.md#theme)*
 
-*Defined in [awtk.ts:15276](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L15276)*
+*Defined in [awtk.ts:15276](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L15276)*
 
 主题资源的名称。
 每个窗口都可以有独立的主题文件，如果没指定，则使用系统缺省的主题文件。
@@ -487,7 +487,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[trText](_awtk_.twidget.md#trtext)*
 
-*Defined in [awtk.ts:8398](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8398)*
+*Defined in [awtk.ts:8398](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8398)*
 
 保存用于翻译的字符串。
 
@@ -497,7 +497,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[trText](_awtk_.twidget.md#trtext)*
 
-*Defined in [awtk.ts:8402](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8402)*
+*Defined in [awtk.ts:8402](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8402)*
 
 保存用于翻译的字符串。
 
@@ -517,7 +517,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[visible](_awtk_.twidget.md#visible)*
 
-*Defined in [awtk.ts:8459](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8459)*
+*Defined in [awtk.ts:8459](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8459)*
 
 是否可见。
 
@@ -527,7 +527,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[visible](_awtk_.twidget.md#visible)*
 
-*Defined in [awtk.ts:8463](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8463)*
+*Defined in [awtk.ts:8463](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8463)*
 
 是否可见。
 
@@ -547,7 +547,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[w](_awtk_.twidget.md#w)*
 
-*Defined in [awtk.ts:8367](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8367)*
+*Defined in [awtk.ts:8367](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8367)*
 
 宽度。
 
@@ -561,7 +561,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[withFocusState](_awtk_.twidget.md#withfocusstate)*
 
-*Defined in [awtk.ts:8499](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8499)*
+*Defined in [awtk.ts:8499](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8499)*
 
 是否支持焦点状态。
 > 如果希望style支持焦点状态，但有不希望焦点停留，可用本属性。
@@ -572,7 +572,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[withFocusState](_awtk_.twidget.md#withfocusstate)*
 
-*Defined in [awtk.ts:8503](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8503)*
+*Defined in [awtk.ts:8503](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8503)*
 
 是否支持焦点状态。
 > 如果希望style支持焦点状态，但有不希望焦点停留，可用本属性。
@@ -593,7 +593,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[x](_awtk_.twidget.md#x)*
 
-*Defined in [awtk.ts:8349](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8349)*
+*Defined in [awtk.ts:8349](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8349)*
 
 x坐标(相对于父控件的x坐标)。
 
@@ -607,7 +607,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[y](_awtk_.twidget.md#y)*
 
-*Defined in [awtk.ts:8358](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8358)*
+*Defined in [awtk.ts:8358](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8358)*
 
 y坐标(相对于父控件的y坐标)。
 
@@ -621,7 +621,7 @@ y坐标(相对于父控件的y坐标)。
 
 *Inherited from [TWidget](_awtk_.twidget.md).[addChild](_awtk_.twidget.md#addchild)*
 
-*Defined in [awtk.ts:7870](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7870)*
+*Defined in [awtk.ts:7870](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7870)*
 
 加入一个子控件。
 
@@ -643,7 +643,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[addValue](_awtk_.twidget.md#addvalue)*
 
-*Defined in [awtk.ts:7547](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7547)*
+*Defined in [awtk.ts:7547](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7547)*
 
 增加控件的值。
 只是对widget\_set\_prop的包装，值的意义由子类控件决定。
@@ -666,7 +666,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[animateValueTo](_awtk_.twidget.md#animatevalueto)*
 
-*Defined in [awtk.ts:7534](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7534)*
+*Defined in [awtk.ts:7534](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7534)*
 
 设置控件的值(以动画形式变化到指定的值)。
 只是对widget\_set\_prop的包装，值的意义由子类控件决定。
@@ -690,7 +690,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[child](_awtk_.twidget.md#child)*
 
-*Defined in [awtk.ts:7919](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7919)*
+*Defined in [awtk.ts:7919](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7919)*
 
 查找指定名称的子控件(同widget_lookup(widget, name, FALSE))。
 
@@ -712,7 +712,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[clone](_awtk_.twidget.md#clone)*
 
-*Defined in [awtk.ts:8203](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8203)*
+*Defined in [awtk.ts:8203](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8203)*
 
 clone。
 
@@ -734,7 +734,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[countChildren](_awtk_.twidget.md#countchildren)*
 
-*Defined in [awtk.ts:7443](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7443)*
+*Defined in [awtk.ts:7443](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7443)*
 
 获取子控件的个数。
 
@@ -750,7 +750,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[createAnimator](_awtk_.twidget.md#createanimator)*
 
-*Defined in [awtk.ts:7674](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7674)*
+*Defined in [awtk.ts:7674](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7674)*
 
 创建动画。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
@@ -776,7 +776,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[destroy](_awtk_.twidget.md#destroy)*
 
-*Defined in [awtk.ts:8240](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8240)*
+*Defined in [awtk.ts:8240](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8240)*
 
 从父控件中移除控件，并调用unref函数销毁控件。
 
@@ -794,7 +794,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[destroyAnimator](_awtk_.twidget.md#destroyanimator)*
 
-*Defined in [awtk.ts:7760](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7760)*
+*Defined in [awtk.ts:7760](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7760)*
 
 销毁动画。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
@@ -821,7 +821,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[destroyChildren](_awtk_.twidget.md#destroychildren)*
 
-*Defined in [awtk.ts:7858](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7858)*
+*Defined in [awtk.ts:7858](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7858)*
 
 销毁全部子控件。
 
@@ -837,7 +837,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[equal](_awtk_.twidget.md#equal)*
 
-*Defined in [awtk.ts:8215](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8215)*
+*Defined in [awtk.ts:8215](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8215)*
 
 判断两个widget是否相同。
 
@@ -859,7 +859,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[foreach](_awtk_.twidget.md#foreach)*
 
-*Defined in [awtk.ts:8158](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8158)*
+*Defined in [awtk.ts:8158](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8158)*
 
 遍历当前控件及子控件。
 
@@ -882,7 +882,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[getChild](_awtk_.twidget.md#getchild)*
 
-*Defined in [awtk.ts:7455](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7455)*
+*Defined in [awtk.ts:7455](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7455)*
 
 获取指定索引的子控件。
 
@@ -904,7 +904,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[getPropBool](_awtk_.twidget.md#getpropbool)*
 
-*Defined in [awtk.ts:8101](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8101)*
+*Defined in [awtk.ts:8101](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8101)*
 
 获取布尔格式的属性。
 
@@ -927,7 +927,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[getPropInt](_awtk_.twidget.md#getpropint)*
 
-*Defined in [awtk.ts:8075](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8075)*
+*Defined in [awtk.ts:8075](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8075)*
 
 获取整数格式的属性。
 
@@ -950,7 +950,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[getPropStr](_awtk_.twidget.md#getpropstr)*
 
-*Defined in [awtk.ts:8049](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8049)*
+*Defined in [awtk.ts:8049](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8049)*
 
 获取字符串格式的属性。
 
@@ -973,7 +973,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[getText](_awtk_.twidget.md#gettext)*
 
-*Defined in [awtk.ts:7607](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7607)*
+*Defined in [awtk.ts:7607](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7607)*
 
 获取控件的文本。
 只是对widget\_get\_prop的包装，文本的意义由子类控件决定。
@@ -990,7 +990,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[getType](_awtk_.twidget.md#gettype)*
 
-*Defined in [awtk.ts:8191](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8191)*
+*Defined in [awtk.ts:8191](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8191)*
 
 获取当前控件的类型名称。
 
@@ -1006,7 +1006,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[getValue](_awtk_.twidget.md#getvalue)*
 
-*Defined in [awtk.ts:7595](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7595)*
+*Defined in [awtk.ts:7595](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7595)*
 
 获取控件的值。只是对widget\_get\_prop的包装，值的意义由子类控件决定。
 
@@ -1022,7 +1022,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[getWindow](_awtk_.twidget.md#getwindow)*
 
-*Defined in [awtk.ts:8169](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8169)*
+*Defined in [awtk.ts:8169](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8169)*
 
 获取当前控件所在的窗口。
 
@@ -1038,7 +1038,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[getWindowManager](_awtk_.twidget.md#getwindowmanager)*
 
-*Defined in [awtk.ts:8180](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8180)*
+*Defined in [awtk.ts:8180](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8180)*
 
 获取当前的窗口管理器。
 
@@ -1054,7 +1054,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[indexOf](_awtk_.twidget.md#indexof)*
 
-*Defined in [awtk.ts:7466](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7466)*
+*Defined in [awtk.ts:7466](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7466)*
 
 获取控件在父控件中的索引编号。
 
@@ -1070,7 +1070,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[insertChild](_awtk_.twidget.md#insertchild)*
 
-*Defined in [awtk.ts:7895](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7895)*
+*Defined in [awtk.ts:7895](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7895)*
 
 插入子控件到指定的位置。
 
@@ -1093,7 +1093,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[invalidateForce](_awtk_.twidget.md#invalidateforce)*
 
-*Defined in [awtk.ts:8023](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8023)*
+*Defined in [awtk.ts:8023](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8023)*
 
 请求强制重绘控件。
 
@@ -1115,7 +1115,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[isDesigningWindow](_awtk_.twidget.md#isdesigningwindow)*
 
-*Defined in [awtk.ts:8134](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8134)*
+*Defined in [awtk.ts:8134](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8134)*
 
 判断当前控件是否是设计窗口。
 
@@ -1131,7 +1131,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[isWindow](_awtk_.twidget.md#iswindow)*
 
-*Defined in [awtk.ts:8123](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8123)*
+*Defined in [awtk.ts:8123](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8123)*
 
 判断当前控件是否是窗口。
 
@@ -1147,7 +1147,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[isWindowManager](_awtk_.twidget.md#iswindowmanager)*
 
-*Defined in [awtk.ts:8145](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8145)*
+*Defined in [awtk.ts:8145](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8145)*
 
 判断当前控件是否是窗口管理器。
 
@@ -1163,7 +1163,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[isWindowOpened](_awtk_.twidget.md#iswindowopened)*
 
-*Defined in [awtk.ts:8112](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8112)*
+*Defined in [awtk.ts:8112](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8112)*
 
 判断当前控件所在的窗口是否已经打开。
 
@@ -1179,7 +1179,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[layout](_awtk_.twidget.md#layout)*
 
-*Defined in [awtk.ts:8262](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8262)*
+*Defined in [awtk.ts:8262](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8262)*
 
 布局当前控件及子控件。
 
@@ -1195,7 +1195,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[lookup](_awtk_.twidget.md#lookup)*
 
-*Defined in [awtk.ts:7932](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7932)*
+*Defined in [awtk.ts:7932](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7932)*
 
 查找指定名称的子控件(返回第一个)。
 
@@ -1218,7 +1218,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[lookupByType](_awtk_.twidget.md#lookupbytype)*
 
-*Defined in [awtk.ts:7945](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7945)*
+*Defined in [awtk.ts:7945](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7945)*
 
 查找指定类型的子控件(返回第一个)。
 
@@ -1241,7 +1241,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[move](_awtk_.twidget.md#move)*
 
-*Defined in [awtk.ts:7479](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7479)*
+*Defined in [awtk.ts:7479](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7479)*
 
 移动控件。
 
@@ -1264,7 +1264,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[moveResize](_awtk_.twidget.md#moveresize)*
 
-*Defined in [awtk.ts:7507](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7507)*
+*Defined in [awtk.ts:7507](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7507)*
 
 移动控件并调整控件的大小。
 
@@ -1289,7 +1289,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[off](_awtk_.twidget.md#off)*
 
-*Defined in [awtk.ts:8011](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8011)*
+*Defined in [awtk.ts:8011](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8011)*
 
 注销指定事件的处理函数。
 
@@ -1311,7 +1311,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[on](_awtk_.twidget.md#on)*
 
-*Defined in [awtk.ts:7999](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7999)*
+*Defined in [awtk.ts:7999](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7999)*
 
 widget_t* ok = button_create(win, 10, 10, 80, 30);
 widget_on(ok, EVT_CLICK, on_click, NULL);
@@ -1342,7 +1342,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[pauseAnimator](_awtk_.twidget.md#pauseanimator)*
 
-*Defined in [awtk.ts:7726](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7726)*
+*Defined in [awtk.ts:7726](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7726)*
 
 暂停动画。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
@@ -1369,7 +1369,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[removeChild](_awtk_.twidget.md#removechild)*
 
-*Defined in [awtk.ts:7882](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7882)*
+*Defined in [awtk.ts:7882](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7882)*
 
 移出指定的子控件(并不销毁)。
 
@@ -1391,7 +1391,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[resize](_awtk_.twidget.md#resize)*
 
-*Defined in [awtk.ts:7492](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7492)*
+*Defined in [awtk.ts:7492](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7492)*
 
 调整控件的大小。
 
@@ -1414,7 +1414,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[restack](_awtk_.twidget.md#restack)*
 
-*Defined in [awtk.ts:7907](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7907)*
+*Defined in [awtk.ts:7907](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7907)*
 
 调整控件在父控件中的位置序数。
 
@@ -1436,7 +1436,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setAnimation](_awtk_.twidget.md#setanimation)*
 
-*Defined in [awtk.ts:7658](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7658)*
+*Defined in [awtk.ts:7658](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7658)*
 
 设置控件的动画参数(仅用于在UI文件使用)。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
@@ -1459,7 +1459,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setAnimatorTimeScale](_awtk_.twidget.md#setanimatortimescale)*
 
-*Defined in [awtk.ts:7709](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7709)*
+*Defined in [awtk.ts:7709](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7709)*
 
 设置动画的时间倍率，<0: 时间倒退，<1: 时间变慢，>1 时间变快。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
@@ -1487,7 +1487,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setChildrenLayout](_awtk_.twidget.md#setchildrenlayout)*
 
-*Defined in [awtk.ts:8286](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8286)*
+*Defined in [awtk.ts:8286](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8286)*
 
 设置子控件的布局参数。
 
@@ -1509,7 +1509,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setEnable](_awtk_.twidget.md#setenable)*
 
-*Defined in [awtk.ts:7772](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7772)*
+*Defined in [awtk.ts:7772](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7772)*
 
 设置控件的可用性。
 
@@ -1531,7 +1531,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setFeedback](_awtk_.twidget.md#setfeedback)*
 
-*Defined in [awtk.ts:7784](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7784)*
+*Defined in [awtk.ts:7784](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7784)*
 
 设置控件是否启用反馈。
 
@@ -1553,7 +1553,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setFloating](_awtk_.twidget.md#setfloating)*
 
-*Defined in [awtk.ts:7797](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7797)*
+*Defined in [awtk.ts:7797](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7797)*
 
 设置控件的floating标志。
 > floating的控件不受父控件的子控件布局参数的影响。
@@ -1576,7 +1576,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setFocusable](_awtk_.twidget.md#setfocusable)*
 
-*Defined in [awtk.ts:7821](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7821)*
+*Defined in [awtk.ts:7821](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7821)*
 
 设置控件是否可获得焦点。
 
@@ -1598,7 +1598,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setFocused](_awtk_.twidget.md#setfocused)*
 
-*Defined in [awtk.ts:7809](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7809)*
+*Defined in [awtk.ts:7809](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7809)*
 
 设置控件是否获得焦点。
 
@@ -1620,7 +1620,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setName](_awtk_.twidget.md#setname)*
 
-*Defined in [awtk.ts:7619](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7619)*
+*Defined in [awtk.ts:7619](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7619)*
 
 设置控件的名称。
 
@@ -1642,7 +1642,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setOpacity](_awtk_.twidget.md#setopacity)*
 
-*Defined in [awtk.ts:7847](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7847)*
+*Defined in [awtk.ts:7847](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7847)*
 
 设置控件的不透明度。
 
@@ -1666,7 +1666,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setPointerCursor](_awtk_.twidget.md#setpointercursor)*
 
-*Defined in [awtk.ts:7645](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7645)*
+*Defined in [awtk.ts:7645](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7645)*
 
 设置鼠标指针的图片名。
 
@@ -1688,7 +1688,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setPropBool](_awtk_.twidget.md#setpropbool)*
 
-*Defined in [awtk.ts:8088](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8088)*
+*Defined in [awtk.ts:8088](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8088)*
 
 设置布尔格式的属性。
 
@@ -1711,7 +1711,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setPropInt](_awtk_.twidget.md#setpropint)*
 
-*Defined in [awtk.ts:8062](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8062)*
+*Defined in [awtk.ts:8062](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8062)*
 
 设置整数格式的属性。
 
@@ -1734,7 +1734,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setPropStr](_awtk_.twidget.md#setpropstr)*
 
-*Defined in [awtk.ts:8036](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8036)*
+*Defined in [awtk.ts:8036](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8036)*
 
 设置字符串格式的属性。
 
@@ -1757,7 +1757,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setSelfLayout](_awtk_.twidget.md#setselflayout)*
 
-*Defined in [awtk.ts:8274](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8274)*
+*Defined in [awtk.ts:8274](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8274)*
 
 设置控件自己的布局参数。
 
@@ -1779,7 +1779,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setSelfLayoutParams](_awtk_.twidget.md#setselflayoutparams)*
 
-*Defined in [awtk.ts:8301](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8301)*
+*Defined in [awtk.ts:8301](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8301)*
 
 设置控件自己的布局(缺省布局器)参数(过时，请用widget\_set\_self\_layout)。
 
@@ -1804,7 +1804,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setSensitive](_awtk_.twidget.md#setsensitive)*
 
-*Defined in [awtk.ts:7982](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7982)*
+*Defined in [awtk.ts:7982](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7982)*
 
 设置控件是否接受用户事件。
 
@@ -1826,7 +1826,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setState](_awtk_.twidget.md#setstate)*
 
-*Defined in [awtk.ts:7833](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7833)*
+*Defined in [awtk.ts:7833](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7833)*
 
 设置控件的状态。
 
@@ -1848,7 +1848,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setStyleColor](_awtk_.twidget.md#setstylecolor)*
 
-*Defined in [awtk.ts:8340](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8340)*
+*Defined in [awtk.ts:8340](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8340)*
 
 设置颜色类型的style。
 
@@ -1871,7 +1871,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setStyleInt](_awtk_.twidget.md#setstyleint)*
 
-*Defined in [awtk.ts:8314](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8314)*
+*Defined in [awtk.ts:8314](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8314)*
 
 设置整数类型的style。
 
@@ -1894,7 +1894,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setStyleStr](_awtk_.twidget.md#setstylestr)*
 
-*Defined in [awtk.ts:8327](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8327)*
+*Defined in [awtk.ts:8327](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8327)*
 
 设置字符串类型的style。
 
@@ -1917,7 +1917,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setText](_awtk_.twidget.md#settext)*
 
-*Defined in [awtk.ts:7572](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7572)*
+*Defined in [awtk.ts:7572](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7572)*
 
 设置控件的文本。
 只是对widget\_set\_prop的包装，文本的意义由子类控件决定。
@@ -1940,7 +1940,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setTheme](_awtk_.twidget.md#settheme)*
 
-*Defined in [awtk.ts:7633](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7633)*
+*Defined in [awtk.ts:7633](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7633)*
 
 设置theme的名称，用于动态切换主题。名称与当前主题名称相同，则重新加载全部资源。
 
@@ -1964,7 +1964,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setTrText](_awtk_.twidget.md#settrtext)*
 
-*Defined in [awtk.ts:7584](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7584)*
+*Defined in [awtk.ts:7584](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7584)*
 
 获取翻译之后的文本，然后调用widget_set_text。
 
@@ -1986,7 +1986,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setValue](_awtk_.twidget.md#setvalue)*
 
-*Defined in [awtk.ts:7520](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7520)*
+*Defined in [awtk.ts:7520](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7520)*
 
 设置控件的值。
 只是对widget\_set\_prop的包装，值的意义由子类控件决定。
@@ -2009,7 +2009,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setVisible](_awtk_.twidget.md#setvisible)*
 
-*Defined in [awtk.ts:7958](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7958)*
+*Defined in [awtk.ts:7958](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7958)*
 
 设置控件的可见性。
 
@@ -2032,7 +2032,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[setVisibleOnly](_awtk_.twidget.md#setvisibleonly)*
 
-*Defined in [awtk.ts:7970](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7970)*
+*Defined in [awtk.ts:7970](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7970)*
 
 设置控件的可见性(不触发repaint和relayout)。
 
@@ -2054,7 +2054,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[startAnimator](_awtk_.twidget.md#startanimator)*
 
-*Defined in [awtk.ts:7691](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7691)*
+*Defined in [awtk.ts:7691](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7691)*
 
 播放动画。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
@@ -2081,7 +2081,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[stopAnimator](_awtk_.twidget.md#stopanimator)*
 
-*Defined in [awtk.ts:7743](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7743)*
+*Defined in [awtk.ts:7743](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7743)*
 
 停止动画(控件的相应属性回归原位)。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
@@ -2108,7 +2108,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[unref](_awtk_.twidget.md#unref)*
 
-*Defined in [awtk.ts:8251](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L8251)*
+*Defined in [awtk.ts:8251](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8251)*
 
 减少控件的引用计数。引用计数为0时销毁控件。
 
@@ -2124,7 +2124,7 @@ ___
 
 *Inherited from [TWidget](_awtk_.twidget.md).[useStyle](_awtk_.twidget.md#usestyle)*
 
-*Defined in [awtk.ts:7559](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L7559)*
+*Defined in [awtk.ts:7559](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L7559)*
 
 启用指定的主题。
 
@@ -2146,7 +2146,7 @@ ___
 
 *Overrides [TWindowBase](_awtk_.twindowbase.md).[cast](_awtk_.twindowbase.md#static-cast)*
 
-*Defined in [awtk.ts:20040](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L20040)*
+*Defined in [awtk.ts:20040](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L20040)*
 
 转换为system_bar对象(供脚本语言使用)。
 
@@ -2166,7 +2166,7 @@ ___
 
 ▸ **create**(`parent`: [TWidget](_awtk_.twidget.md), `x`: number, `y`: number, `w`: number, `h`: number): *[TWidget](_awtk_.twidget.md)*
 
-*Defined in [awtk.ts:20028](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L20028)*
+*Defined in [awtk.ts:20028](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L20028)*
 
 创建system_bar对象。
 

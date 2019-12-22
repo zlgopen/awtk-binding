@@ -6,7 +6,7 @@ var searchData=
   ['uint',['UINT',['../enumawtk_1_1_t_input_type.html#a13916efbeb545e8c67e8cbe8a900b9d3',1,'awtk::TInputType']]],
   ['uint16',['UINT16',['../enumawtk_1_1_t_value_type.html#a822bb38d25e5d55836915760e5b26ab3',1,'awtk.TValueType.UINT16()'],['../classawtk_1_1_t_value.html#a5757f705a332b510ae97b07ca464ea87',1,'awtk.TValue.uint16()']]],
   ['uint32',['UINT32',['../enumawtk_1_1_t_value_type.html#a1050258e3144f07e9869077e2af08fa1',1,'awtk::TValueType']]],
-  ['uint64',['UINT64',['../enumawtk_1_1_t_value_type.html#a724004eca2725c3f65779657d53b11e4',1,'awtk.TValueType.UINT64()'],['../classawtk_1_1_t_value.html#ab967cb6dd676265d3198312eb4005a60',1,'awtk.TValue.uint64()']]],
+  ['uint64',['uint64',['../classawtk_1_1_t_value.html#ab967cb6dd676265d3198312eb4005a60',1,'awtk.TValue.uint64()'],['../enumawtk_1_1_t_value_type.html#a724004eca2725c3f65779657d53b11e4',1,'awtk.TValueType.UINT64()']]],
   ['uint8',['uint8',['../classawtk_1_1_t_value.html#ac03f64ae363915f6e8f188b67e7eaea7',1,'awtk.TValue.uint8()'],['../enumawtk_1_1_t_value_type.html#a551fd5a1d989937408162baf258da65a',1,'awtk.TValueType.UINT8()']]],
   ['unloadall',['unloadAll',['../classawtk_1_1_t_font_manager.html#aadac238e0b575b1587ae4be0ba606d46',1,'awtk::TFontManager']]],
   ['unloadfont',['unloadFont',['../classawtk_1_1_t_font_manager.html#a31ff405c295223c9e97f0a8c3e2ca7e1',1,'awtk::TFontManager']]],

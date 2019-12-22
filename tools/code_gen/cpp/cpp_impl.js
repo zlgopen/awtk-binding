@@ -63,7 +63,7 @@ class CppImplGenerator extends CppGenerator {
     const nativeType = this.typeToNativeName(type);
     const classInfo = this.getClassInfo(nativeType);
     const propGetter = this.genGetNativeObj(cls.name + '*', 'this') + `->${name}`;
-    result += ` ${this.mapType(type)} ${clsName}::get${this.upperCamelName(name)}() const {\n`;
+    result += ` ${this.mapType(type)} ${clsName}::Get${this.upperCamelName(name)}() const {\n`;
     if (classInfo) {
       result += `   return ${retType}(${propGetter});\n`;
     } else {

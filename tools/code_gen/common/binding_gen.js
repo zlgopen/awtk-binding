@@ -13,6 +13,18 @@ class BindingGen extends CodeGen {
     return '';
   }
 
+  genGeneralParamDecl(type, name) {
+    let result = `  ${type} ${name} = `;
+
+    if(type.indexOf('*') > 0) {
+      result += 'NULL;\n';
+    } else {
+      result += '0;\n';
+    }
+
+    return result;
+  }
+
   genGetGlobalObject() {
     return '';
   }

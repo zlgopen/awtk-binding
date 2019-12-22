@@ -60,6 +60,19 @@ class CppIntfGenerator extends CppGenerator {
     result += ` static ${name} cast(const ${nativeObjType} nativeObj) {\n`;
     result += `   return ${name}((${nativeObjType})nativeObj);\n`;
     result += ' }\n\n';
+   
+    if(cls.parent) {
+      let base = this.getBaseClassInfo(cls);
+      let baseName = this.toClassName(base.name);
+
+      result += ` static ${name} cast(${baseName}& obj) {\n`;
+      result += `   return ${name}(obj.nativeObj);\n`;
+      result += ' }\n\n';
+
+      result += ` static ${name} cast(const ${baseName}& obj) {\n`;
+      result += `   return ${name}(obj.nativeObj);\n`;
+      result += ' }\n\n';
+    }
 
     return result;
   }
@@ -91,7 +104,7 @@ class CppIntfGenerator extends CppGenerator {
     const classInfo = this.getClassInfo(nativeType);
 
     if (name != 'Value') {
-      result += ` ${this.mapType(type)} get${this.upperCamelName(name)}() const;\n`;
+      result += ` ${this.mapType(type)} Get${this.upperCamelName(name)}() const;\n`;
     }
 
     return result;

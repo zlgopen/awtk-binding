@@ -75,6 +75,7 @@ $(function() {
  <div class="center">
   <img src="class_t_window.png" usemap="#TWindow_map" alt=""/>
   <map id="TWindow_map" name="TWindow_map">
+<area href="class_t_window_base.html" alt="TWindowBase" shape="rect" coords="0,56,91,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -95,6 +96,19 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ad39f08d64375efda68b0728012489be9"><td class="memItemLeft" align="right" valign="top"><a id="ad39f08d64375efda68b0728012489be9"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFullscreen</b> () const</td></tr>
 <tr class="separator:ad39f08d64375efda68b0728012489be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_t_window_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_t_window_base')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_t_window_base.html">TWindowBase</a></td></tr>
+<tr class="memitem:a8ee82f7d1d7c5d8ec69d3013587ad497 inherit pub_methods_class_t_window_base"><td class="memItemLeft" align="right" valign="top"><a id="a8ee82f7d1d7c5d8ec69d3013587ad497"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TWindowBase</b> (widget_t *nativeObj)</td></tr>
+<tr class="separator:a8ee82f7d1d7c5d8ec69d3013587ad497 inherit pub_methods_class_t_window_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf3bcfc0b3a710b7b466c2b16446123c inherit pub_methods_class_t_window_base"><td class="memItemLeft" align="right" valign="top"><a id="abf3bcfc0b3a710b7b466c2b16446123c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TWindowBase</b> (const window_base_t *nativeObj)</td></tr>
+<tr class="separator:abf3bcfc0b3a710b7b466c2b16446123c inherit pub_methods_class_t_window_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad4d51872e4ee8ebe3b3804b2c275853 inherit pub_methods_class_t_window_base"><td class="memItemLeft" align="right" valign="top"><a id="aad4d51872e4ee8ebe3b3804b2c275853"></a>
+char *&#160;</td><td class="memItemRight" valign="bottom"><b>getTheme</b> () const</td></tr>
+<tr class="separator:aad4d51872e4ee8ebe3b3804b2c275853 inherit pub_methods_class_t_window_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ca1c0cf2520278683305c5c2f27077f inherit pub_methods_class_t_window_base"><td class="memItemLeft" align="right" valign="top"><a id="a4ca1c0cf2520278683305c5c2f27077f"></a>
+window_closable_t&#160;</td><td class="memItemRight" valign="bottom"><b>getClosable</b> () const</td></tr>
+<tr class="separator:a4ca1c0cf2520278683305c5c2f27077f inherit pub_methods_class_t_window_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -106,24 +120,47 @@ static <a class="el" href="class_t_window.html">TWindow</a>&#160;</td><td class=
 <tr class="separator:aa7d2056003fe9b9178c725224d740005"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4fc6b5d8fac2932134569302a8488f9"><td class="memItemLeft" align="right" valign="top">static TWidget&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window.html#ac4fc6b5d8fac2932134569302a8488f9">Create</a> (TWidget &amp;parent, xy_t x, xy_t y, wh_t w, wh_t h)</td></tr>
 <tr class="separator:ac4fc6b5d8fac2932134569302a8488f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd0434544323d6bd4ee8b19a238ec4b"><td class="memItemLeft" align="right" valign="top">static TWidget&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window.html#addd0434544323d6bd4ee8b19a238ec4b">CreateDefault</a> ()</td></tr>
+<tr class="separator:addd0434544323d6bd4ee8b19a238ec4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7569b6f8da56acbff437cdeb1a1ccb27"><td class="memItemLeft" align="right" valign="top">static TWidget&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window.html#a7569b6f8da56acbff437cdeb1a1ccb27">Open</a> (char *name)</td></tr>
 <tr class="separator:a7569b6f8da56acbff437cdeb1a1ccb27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5767705f54d16b367039f64bbb4e81a2"><td class="memItemLeft" align="right" valign="top">static TWidget&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window.html#a5767705f54d16b367039f64bbb4e81a2">OpenAndClose</a> (char *name, TWidget &amp;to_close)</td></tr>
 <tr class="separator:a5767705f54d16b367039f64bbb4e81a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a800f6ceb3b067d33258cc0c8b14907bb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_window.html">TWindow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window.html#a800f6ceb3b067d33258cc0c8b14907bb">Cast</a> (TWidget &amp;widget)</td></tr>
 <tr class="separator:a800f6ceb3b067d33258cc0c8b14907bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_t_window_base"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_t_window_base')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="class_t_window_base.html">TWindowBase</a></td></tr>
+<tr class="memitem:a3e289709c97d6f3a5e2c8c19cf7121fd inherit pub_static_methods_class_t_window_base"><td class="memItemLeft" align="right" valign="top"><a id="a3e289709c97d6f3a5e2c8c19cf7121fd"></a>
+static <a class="el" href="class_t_window_base.html">TWindowBase</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cast</b> (widget_t *nativeObj)</td></tr>
+<tr class="separator:a3e289709c97d6f3a5e2c8c19cf7121fd inherit pub_static_methods_class_t_window_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e2929fc1104df9f2f24db57f715449f inherit pub_static_methods_class_t_window_base"><td class="memItemLeft" align="right" valign="top"><a id="a1e2929fc1104df9f2f24db57f715449f"></a>
+static <a class="el" href="class_t_window_base.html">TWindowBase</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cast</b> (const widget_t *nativeObj)</td></tr>
+<tr class="separator:a1e2929fc1104df9f2f24db57f715449f inherit pub_static_methods_class_t_window_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14e35bf121a72705e7d55057f2e6f491 inherit pub_static_methods_class_t_window_base"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_window_base.html">TWindowBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_base.html#a14e35bf121a72705e7d55057f2e6f491">Cast</a> (TWidget &amp;widget)</td></tr>
+<tr class="separator:a14e35bf121a72705e7d55057f2e6f491 inherit pub_static_methods_class_t_window_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>窗口。</p>
 <p>缺省的应用程序窗口，占用除system_bar_t之外的整个区域，请不要修改它的位置和大小(除非你清楚后果)。</p>
 <p>window_t是window的子类控件，window_base_t的函数均适用于window_t控件。</p>
 <p>在xml中使用"window"标签创建窗口。无需指定坐标和大小，可以指定主题和动画名称。如：</p>
-<div class="fragment"><div class="line">&lt;<span class="keywordtype">window</span> <span class="keyword">theme</span>=<span class="stringliteral">&quot;basic&quot;</span> <span class="keyword">anim_hint</span>=<span class="stringliteral">&quot;htranslate&quot;</span>&gt;</div><div class="line">...</div><div class="line">&lt;/<span class="keywordtype">window</span>&gt;</div></div><!-- fragment --><p>更多用法请参考：<a href="https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/">window.xml</a></p>
+<div class="fragment"><div class="line">*&lt;<span class="keywordtype">window</span> <span class="keyword">theme</span>=<span class="stringliteral">&quot;basic&quot;</span> <span class="keyword">anim_hint</span>=<span class="stringliteral">&quot;htranslate&quot;</span>&gt;</div><div class="line">*...</div><div class="line">*&lt;/<span class="keywordtype">window</span>&gt;</div></div><!-- fragment --><blockquote class="doxtable">
+<p></p>
+<p></p>
+</blockquote>
+<p>更多用法请参考：<a href="https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/">window.xml</a></p>
 <p>在c代码中使用函数window_create创建窗口。如：</p>
-<p>无需指定父控件、坐标和大小，使用0即可。</p>
-<p>完整示例请参考：<a href="https://github.com/zlgopen/awtk-c-demos/blob/master/demos/">window demo</a></p>
+<blockquote class="doxtable">
+<p>无需指定父控件、坐标和大小，使用0即可。 </p>
+</blockquote>
+<blockquote class="doxtable">
+<p>完整示例请参考：[window </p>
+</blockquote>
+<p>demo](<a href="https://github.com/zlgopen/awtk-c-demos/blob/master/demos/">https://github.com/zlgopen/awtk-c-demos/blob/master/demos/</a>)</p>
 <p>可用通过style来设置窗口的风格，如背景颜色或图片等。如：</p>
-<div class="fragment"><div class="line">&lt;<span class="keywordtype">style</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;bricks&quot;</span>&gt;</div><div class="line">&lt;<span class="keywordtype">normal</span> <span class="keyword">bg_image</span>=<span class="stringliteral">&quot;bricks&quot;</span>  <span class="keyword">bg_image_draw_type</span>=<span class="stringliteral">&quot;repeat&quot;</span>/&gt;</div><div class="line">&lt;/<span class="keywordtype">style</span>&gt;</div></div><!-- fragment --><p>更多用法请参考：<a href="https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L0">theme default</a> </p>
+<div class="fragment"><div class="line">*&lt;<span class="keywordtype">style</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;bricks&quot;</span>&gt;</div><div class="line">*&lt;<span class="keywordtype">normal</span> <span class="keyword">bg_image</span>=<span class="stringliteral">&quot;bricks&quot;</span>  <span class="keyword">bg_image_draw_type</span>=<span class="stringliteral">&quot;repeat&quot;</span>/&gt;</div><div class="line">*&lt;/<span class="keywordtype">style</span>&gt;</div></div><!-- fragment --><blockquote class="doxtable">
+<p>更多用法请参考：[theme </p>
+</blockquote>
+<p>default](<a href="https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L0">https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L0</a>) </p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a800f6ceb3b067d33258cc0c8b14907bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a800f6ceb3b067d33258cc0c8b14907bb">&#9670;&nbsp;</a></span>Cast()</h2>
@@ -263,6 +300,33 @@ static <a class="el" href="class_t_window.html">TWindow</a>&#160;</td><td class=
 
 </div>
 </div>
+<a id="addd0434544323d6bd4ee8b19a238ec4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addd0434544323d6bd4ee8b19a238ec4b">&#9670;&nbsp;</a></span>CreateDefault()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TWidget TWindow::CreateDefault </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>以缺省的方式创建window对象。</p>
+<dl class="section return"><dt>返回</dt><dd>对象。 </dd></dl>
+
+</div>
+</div>
 <a id="a7569b6f8da56acbff437cdeb1a1ccb27"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7569b6f8da56acbff437cdeb1a1ccb27">&#9670;&nbsp;</a></span>Open()</h2>
 
@@ -358,7 +422,7 @@ static <a class="el" href="class_t_window.html">TWindow</a>&#160;</td><td class=
       </table>
 </div><div class="memdoc">
 <p>设置为全屏窗口。</p>
-<p>这里全屏是指与LCD相同大小，而非让SDL窗口全屏。</p>
+<p>&gt;这里全屏是指与LCD相同大小，而非让SDL窗口全屏。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">fullscreen</td><td>是否全屏。</td></tr>

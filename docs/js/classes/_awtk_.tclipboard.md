@@ -29,7 +29,7 @@
 
 \+ **new TClipBoard**(`nativeObj`: any): *[TClipBoard](_awtk_.tclipboard.md)*
 
-*Defined in [awtk.ts:9998](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L9998)*
+*Defined in [awtk.ts:9998](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L9998)*
 
 **Parameters:**
 
@@ -45,7 +45,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:9998](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L9998)*
+*Defined in [awtk.ts:9998](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L9998)*
 
 ## Methods
 
@@ -53,7 +53,7 @@ Name | Type |
 
 ▸ **getText**(): *string*
 
-*Defined in [awtk.ts:10022](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L10022)*
+*Defined in [awtk.ts:10022](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L10022)*
 
 从剪切板中获取文本(UTF8)数据。
 
@@ -67,7 +67,7 @@ ___
 
 ▸ **setText**(`text`: string): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:10011](https://github.com/zlgopen/awtk-binding/blob/d9c773a/tools/code_gen/js/output/awtk.ts#L10011)*
+*Defined in [awtk.ts:10011](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L10011)*
 
 设置文本(UTF8)数据到剪切板。
 
