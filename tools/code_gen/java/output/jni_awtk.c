@@ -15943,6 +15943,8 @@ int awtk_TDialog_dialog_t_get_prop_highlight(Runtime *runtime, JClass *clazz) {
 
 
 static java_native_method s_metho_awtk_table[] = {
+{"awtk/AWTK",  "init",  "(III)I",  awtk_AWTK_init},
+{"awtk/AWTK",  "run",  "()I",  awtk_AWTK_run},
 
 {"awtk/TEvent",  "event_cast",  "(J)J",  awtk_TEvent_event_cast},
 {"awtk/TEvent",  "event_create",  "(I)J",  awtk_TEvent_event_create},
