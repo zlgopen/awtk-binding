@@ -289,6 +289,8 @@ class MiniJVMGenerator extends BindingGen {
   genInit(json) {
     return `
 static java_native_method s_metho_awtk_table[] = {
+{"awtk/AWTK",  "init",  "(III)I",  awtk_AWTK_init},
+{"awtk/AWTK",  "run",  "()I",  awtk_AWTK_run},
 ${this.regEntries}
 };
 
