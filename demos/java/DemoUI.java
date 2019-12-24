@@ -39,8 +39,23 @@ class DemoUI {
   }
 
   static void openWindow(String name) {
-    TWidget win = TWindow.open(name);
-
+    TWidget win;
+   
+    if(name.equals("toast")) {
+      TDialog.toast("Hello AWTK, This is Toast!", 3000);
+      return;
+    } else if(name.equals("info")) {
+      TDialog.info("Info", "Hello AWTK, Timeout!");
+      return;
+    } else if(name.equals("warn")) {
+      TDialog.warn("Warnning", "Hello AWTK, Timeout!");
+      return;
+    } else if(name.equals("confirm")) {
+      TDialog.confirm("Confirm", "Hello AWTK, Are You Sure to Quit?");
+      return;
+    }
+    win = TWindow.open(name);
+    
     win.foreach(new TOnWidget() {
       @Override
       public TRet onWidget(TWidget widget) {
