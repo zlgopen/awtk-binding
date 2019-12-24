@@ -24,7 +24,7 @@
 
 \+ **new TTimerManager**(`nativeObj`: any): *[TTimerManager](_awtk_.ttimermanager.md)*
 
-*Defined in [awtk.ts:8669](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8669)*
+*Defined in [awtk.ts:8718](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L8718)*
 
 **Parameters:**
 
@@ -40,4 +40,4 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:8669](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L8669)*
+*Defined in [awtk.ts:8718](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L8718)*

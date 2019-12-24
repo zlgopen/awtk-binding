@@ -88,7 +88,7 @@
 
 *Overrides [TEmitter](_awtk_.temitter.md).[constructor](_awtk_.temitter.md#constructor)*
 
-*Defined in [awtk.ts:2490](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2490)*
+*Defined in [awtk.ts:2495](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2495)*
 
 **Parameters:**
 
@@ -106,7 +106,7 @@ Name | Type |
 
 *Overrides [TEmitter](_awtk_.temitter.md).[nativeObj](_awtk_.temitter.md#nativeobj)*
 
-*Defined in [awtk.ts:2490](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2490)*
+*Defined in [awtk.ts:2495](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2495)*
 
 ## Accessors
 
@@ -114,7 +114,7 @@ Name | Type |
 
 • **get name**(): *string*
 
-*Defined in [awtk.ts:2928](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2928)*
+*Defined in [awtk.ts:2933](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2933)*
 
 对象的名称。
 
@@ -122,7 +122,7 @@ Name | Type |
 
 • **set name**(`v`: string): *void*
 
-*Defined in [awtk.ts:2932](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2932)*
+*Defined in [awtk.ts:2937](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2937)*
 
 对象的名称。
 
@@ -140,7 +140,7 @@ ___
 
 • **get refCount**(): *number*
 
-*Defined in [awtk.ts:2919](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2919)*
+*Defined in [awtk.ts:2924](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2924)*
 
 引用计数。
 
@@ -152,7 +152,7 @@ ___
 
 ▸ **canExec**(`name`: string, `args`: string): *boolean*
 
-*Defined in [awtk.ts:2811](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2811)*
+*Defined in [awtk.ts:2816](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2816)*
 
 检查是否可以执行指定的命令。
 
@@ -173,7 +173,7 @@ ___
 
 ▸ **compare**(`other`: [TObject](_awtk_.tobject.md)): *number*
 
-*Defined in [awtk.ts:2582](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2582)*
+*Defined in [awtk.ts:2587](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2587)*
 
 比较两个对象。
 
@@ -193,7 +193,7 @@ ___
 
 ▸ **copyProp**(`src`: [TObject](_awtk_.tobject.md), `name`: string): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2773](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2773)*
+*Defined in [awtk.ts:2778](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2778)*
 
 拷贝指定的属性。
 
@@ -216,7 +216,7 @@ ___
 
 *Inherited from [TEmitter](_awtk_.temitter.md).[destroy](_awtk_.temitter.md#destroy)*
 
-*Defined in [awtk.ts:1954](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L1954)*
+*Defined in [awtk.ts:1959](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L1959)*
 
 销毁。
 
@@ -232,7 +232,7 @@ ___
 
 *Inherited from [TEmitter](_awtk_.temitter.md).[disable](_awtk_.temitter.md#disable)*
 
-*Defined in [awtk.ts:1932](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L1932)*
+*Defined in [awtk.ts:1937](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L1937)*
 
 禁用。
 
@@ -250,7 +250,7 @@ ___
 
 *Inherited from [TEmitter](_awtk_.temitter.md).[dispatch](_awtk_.temitter.md#dispatch)*
 
-*Defined in [awtk.ts:1868](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L1868)*
+*Defined in [awtk.ts:1873](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L1873)*
 
 分发事件。如果当前分发的回调函数返回RET_REMOVE，该回调函数将被移出。
 禁用状态下，本函数不做任何事情。
@@ -273,7 +273,7 @@ ___
 
 *Inherited from [TEmitter](_awtk_.temitter.md).[dispatchSimpleEvent](_awtk_.temitter.md#dispatchsimpleevent)*
 
-*Defined in [awtk.ts:1882](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L1882)*
+*Defined in [awtk.ts:1887](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L1887)*
 
 分发事件。
 > 对emitter_dispatch的包装，分发一个简单的事件。
@@ -295,7 +295,7 @@ ___
 
 *Inherited from [TEmitter](_awtk_.temitter.md).[enable](_awtk_.temitter.md#enable)*
 
-*Defined in [awtk.ts:1919](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L1919)*
+*Defined in [awtk.ts:1924](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L1924)*
 
 启用。
 
@@ -309,7 +309,7 @@ ___
 
 ▸ **eval**(`expr`: string, `v`: [TValue](_awtk_.tvalue.md)): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2798](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2798)*
+*Defined in [awtk.ts:2803](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2803)*
 
 计算一个表达式，表达式中引用的变量从prop中获取。
 
@@ -330,7 +330,7 @@ ___
 
 ▸ **execute**(`name`: string, `args`: string): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2824](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2824)*
+*Defined in [awtk.ts:2829](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2829)*
 
 执行指定的命令。
 
@@ -351,7 +351,7 @@ ___
 
 ▸ **getDesc**(): *string*
 
-*Defined in [awtk.ts:2536](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2536)*
+*Defined in [awtk.ts:2541](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2541)*
 
 获取对象的描述信息。
 
@@ -365,7 +365,7 @@ ___
 
 ▸ **getProp**(`name`: string, `v`: [TValue](_awtk_.tvalue.md)): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2595](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2595)*
+*Defined in [awtk.ts:2600](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2600)*
 
 获取指定属性的值。
 
@@ -386,7 +386,7 @@ ___
 
 ▸ **getPropBool**(`name`: string, `defval`: boolean): *boolean*
 
-*Defined in [awtk.ts:2657](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2657)*
+*Defined in [awtk.ts:2662](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2662)*
 
 获取指定属性的bool类型的值。
 
@@ -407,7 +407,7 @@ ___
 
 ▸ **getPropBoolByPath**(`path`: string, `defval`: boolean): *boolean*
 
-*Defined in [awtk.ts:2897](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2897)*
+*Defined in [awtk.ts:2902](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2902)*
 
 获取指定属性的bool类型的值。
 
@@ -428,7 +428,7 @@ ___
 
 ▸ **getPropFloat**(`name`: string, `defval`: number): *number*
 
-*Defined in [awtk.ts:2670](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2670)*
+*Defined in [awtk.ts:2675](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2675)*
 
 获取指定属性的浮点数类型的值。
 
@@ -449,7 +449,7 @@ ___
 
 ▸ **getPropFloatByPath**(`path`: string, `defval`: number): *number*
 
-*Defined in [awtk.ts:2910](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2910)*
+*Defined in [awtk.ts:2915](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2915)*
 
 获取指定属性的浮点数类型的值。
 
@@ -470,7 +470,7 @@ ___
 
 ▸ **getPropInt**(`name`: string, `defval`: number): *number*
 
-*Defined in [awtk.ts:2644](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2644)*
+*Defined in [awtk.ts:2649](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2649)*
 
 获取指定属性的整数类型的值。
 
@@ -491,7 +491,7 @@ ___
 
 ▸ **getPropIntByPath**(`path`: string, `defval`: number): *number*
 
-*Defined in [awtk.ts:2884](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2884)*
+*Defined in [awtk.ts:2889](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2889)*
 
 获取指定属性的整数类型的值。
 
@@ -512,7 +512,7 @@ ___
 
 ▸ **getPropObject**(`name`: string): *[TObject](_awtk_.tobject.md)*
 
-*Defined in [awtk.ts:2631](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2631)*
+*Defined in [awtk.ts:2636](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2636)*
 
 获取指定属性的object类型的值。
 
@@ -532,7 +532,7 @@ ___
 
 ▸ **getPropObjectByPath**(`path`: string): *[TObject](_awtk_.tobject.md)*
 
-*Defined in [awtk.ts:2871](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2871)*
+*Defined in [awtk.ts:2876](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2876)*
 
 获取指定属性的object类型的值。
 
@@ -552,7 +552,7 @@ ___
 
 ▸ **getPropPointer**(`name`: string): *any*
 
-*Defined in [awtk.ts:2619](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2619)*
+*Defined in [awtk.ts:2624](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2624)*
 
 获取指定属性的指针类型的值。
 
@@ -572,7 +572,7 @@ ___
 
 ▸ **getPropPointerByPath**(`path`: string): *any*
 
-*Defined in [awtk.ts:2859](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2859)*
+*Defined in [awtk.ts:2864](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2864)*
 
 获取指定属性的指针类型的值。
 
@@ -592,7 +592,7 @@ ___
 
 ▸ **getPropStr**(`name`: string): *string*
 
-*Defined in [awtk.ts:2607](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2607)*
+*Defined in [awtk.ts:2612](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2612)*
 
 获取指定属性的字符串类型的值。
 
@@ -612,7 +612,7 @@ ___
 
 ▸ **getPropStrByPath**(`path`: string): *string*
 
-*Defined in [awtk.ts:2847](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2847)*
+*Defined in [awtk.ts:2852](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2852)*
 
 获取指定属性的字符串类型的值。
 
@@ -632,7 +632,7 @@ ___
 
 ▸ **getSize**(): *number*
 
-*Defined in [awtk.ts:2547](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2547)*
+*Defined in [awtk.ts:2552](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2552)*
 
 获取对象占用内存的大小。
 
@@ -646,7 +646,7 @@ ___
 
 ▸ **getType**(): *string*
 
-*Defined in [awtk.ts:2525](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2525)*
+*Defined in [awtk.ts:2530](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2530)*
 
 获取对象的类型名称。
 
@@ -660,7 +660,7 @@ ___
 
 ▸ **hasProp**(`name`: string): *boolean*
 
-*Defined in [awtk.ts:2785](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2785)*
+*Defined in [awtk.ts:2790](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2790)*
 
 检查是否存在指定的属性。
 
@@ -680,7 +680,7 @@ ___
 
 ▸ **isCollection**(): *boolean*
 
-*Defined in [awtk.ts:2558](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2558)*
+*Defined in [awtk.ts:2563](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2563)*
 
 判断对象是否是集合。
 
@@ -694,7 +694,7 @@ ___
 
 ▸ **notifyChanged**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2835](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2835)*
+*Defined in [awtk.ts:2840](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2840)*
 
 触发EVT_PROPS_CHANGED事件。
 
@@ -710,7 +710,7 @@ ___
 
 *Inherited from [TEmitter](_awtk_.temitter.md).[off](_awtk_.temitter.md#off)*
 
-*Defined in [awtk.ts:1908](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L1908)*
+*Defined in [awtk.ts:1913](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L1913)*
 
 注销指定事件的处理函数。
 
@@ -732,7 +732,7 @@ ___
 
 *Inherited from [TEmitter](_awtk_.temitter.md).[on](_awtk_.temitter.md#on)*
 
-*Defined in [awtk.ts:1896](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L1896)*
+*Defined in [awtk.ts:1901](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L1901)*
 
 注册指定事件的处理函数。
 
@@ -754,7 +754,7 @@ ___
 
 ▸ **removeProp**(`name`: string): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2682](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2682)*
+*Defined in [awtk.ts:2687](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2687)*
 
 删除指定属性。
 
@@ -774,7 +774,7 @@ ___
 
 ▸ **setName**(`name`: string): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2570](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2570)*
+*Defined in [awtk.ts:2575](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2575)*
 
 设置对象的名称。
 
@@ -794,7 +794,7 @@ ___
 
 ▸ **setProp**(`name`: string, `value`: [TValue](_awtk_.tvalue.md)): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2695](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2695)*
+*Defined in [awtk.ts:2700](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2700)*
 
 设置指定属性的值。
 
@@ -815,7 +815,7 @@ ___
 
 ▸ **setPropBool**(`name`: string, `value`: any): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2747](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2747)*
+*Defined in [awtk.ts:2752](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2752)*
 
 设置指定属性的bool类型的值。
 
@@ -836,7 +836,7 @@ ___
 
 ▸ **setPropFloat**(`name`: string, `value`: any): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2760](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2760)*
+*Defined in [awtk.ts:2765](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2765)*
 
 设置指定属性的浮点数类型的值。
 
@@ -857,7 +857,7 @@ ___
 
 ▸ **setPropInt**(`name`: string, `value`: any): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2734](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2734)*
+*Defined in [awtk.ts:2739](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2739)*
 
 设置指定属性的整数类型的值。
 
@@ -878,7 +878,7 @@ ___
 
 ▸ **setPropObject**(`name`: string, `value`: [TObject](_awtk_.tobject.md)): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2721](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2721)*
+*Defined in [awtk.ts:2726](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2726)*
 
 设置指定属性的object类型的值。
 
@@ -899,7 +899,7 @@ ___
 
 ▸ **setPropStr**(`name`: string, `value`: string): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2708](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2708)*
+*Defined in [awtk.ts:2713](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2713)*
 
 设置指定属性的字符串类型的值。
 
@@ -922,7 +922,7 @@ ___
 
 *Inherited from [TEmitter](_awtk_.temitter.md).[size](_awtk_.temitter.md#size)*
 
-*Defined in [awtk.ts:1943](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L1943)*
+*Defined in [awtk.ts:1948](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L1948)*
 
 获取注册的回调函数个数，主要用于辅助测试。
 
@@ -936,7 +936,7 @@ ___
 
 ▸ **unref**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2502](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2502)*
+*Defined in [awtk.ts:2507](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2507)*
 
 引用计数减1。引用计数为0时，销毁对象。
 
@@ -952,7 +952,7 @@ ___
 
 *Inherited from [TEmitter](_awtk_.temitter.md).[cast](_awtk_.temitter.md#static-cast)*
 
-*Defined in [awtk.ts:1968](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L1968)*
+*Defined in [awtk.ts:1973](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L1973)*
 
 转换为emitter对象(供脚本语言使用)。
 
@@ -976,7 +976,7 @@ ___
 
 *Inherited from [TEmitter](_awtk_.temitter.md).[create](_awtk_.temitter.md#static-create)*
 
-*Defined in [awtk.ts:1855](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L1855)*
+*Defined in [awtk.ts:1860](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L1860)*
 
 创建emitter对象。
 
@@ -990,7 +990,7 @@ ___
 
 ▸ **ref**(`obj`: [TObject](_awtk_.tobject.md)): *[TObject](_awtk_.tobject.md)*
 
-*Defined in [awtk.ts:2514](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L2514)*
+*Defined in [awtk.ts:2519](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2519)*
 
 引用计数加1。
 

@@ -1007,6 +1007,22 @@
    return widget_unref(((widget_t*)(this->nativeObj)));
  }
 
+ bool TWidget::IsSystemBar()  {
+    return widget_is_system_bar(((widget_t*)(this->nativeObj)));
+ }
+
+ bool TWidget::IsNormalWindow()  {
+    return widget_is_normal_window(((widget_t*)(this->nativeObj)));
+ }
+
+ bool TWidget::IsDialog()  {
+    return widget_is_dialog(((widget_t*)(this->nativeObj)));
+ }
+
+ bool TWidget::IsPopup()  {
+    return widget_is_popup(((widget_t*)(this->nativeObj)));
+ }
+
  ret_t TWidget::Layout()  {
    return widget_layout(((widget_t*)(this->nativeObj)));
  }

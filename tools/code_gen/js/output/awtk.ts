@@ -775,6 +775,10 @@ declare function widget_equal(widget : TWidget, other : TWidget) : boolean;
 declare function widget_cast(widget : TWidget) : TWidget;
 declare function widget_destroy(widget : TWidget) : TRet;
 declare function widget_unref(widget : TWidget) : TRet;
+declare function widget_is_system_bar(widget : TWidget) : boolean;
+declare function widget_is_normal_window(widget : TWidget) : boolean;
+declare function widget_is_dialog(widget : TWidget) : boolean;
+declare function widget_is_popup(widget : TWidget) : boolean;
 declare function widget_layout(widget : TWidget) : TRet;
 declare function widget_set_self_layout(widget : TWidget, params : string) : TRet;
 declare function widget_set_children_layout(widget : TWidget, params : string) : TRet;
@@ -1581,6 +1585,7 @@ declare function image_set_draw_type(widget : TWidget, draw_type : TImageDrawTyp
 declare function image_cast(widget : TWidget) : TWidget;
 declare function image_t_get_prop_draw_type(nativeObj : any);
 declare function combo_box_ex_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
+declare function calibration_win_cast(widget : TWidget) : TWidget;
 declare function popup_create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget;
 declare function popup_cast(widget : TWidget) : TWidget;
 declare function popup_set_close_when_click(widget : TWidget, close_when_click : boolean) : TRet;
@@ -8250,6 +8255,50 @@ class TWidget {
  */
  unref() : TRet  {
     return widget_unref(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+/**
+ * 检查控件是否是system bar类型。
+ * 
+ 
+ * @returns 返回FALSE表示不是，否则表示是。
+ */
+ isSystemBar() : boolean  {
+    return widget_is_system_bar(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+/**
+ * 检查控件是否是普通窗口类型。
+ * 
+ 
+ * @returns 返回FALSE表示不是，否则表示是。
+ */
+ isNormalWindow() : boolean  {
+    return widget_is_normal_window(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+/**
+ * 检查控件是否是对话框类型。
+ * 
+ 
+ * @returns 返回FALSE表示不是，否则表示是。
+ */
+ isDialog() : boolean  {
+    return widget_is_dialog(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+/**
+ * 检查控件是否是弹出窗口类型。
+ * 
+ 
+ * @returns 返回FALSE表示不是，否则表示是。
+ */
+ isPopup() : boolean  {
+    return widget_is_popup(this != null ? (this.nativeObj || this) : null);
  }
 
 
@@ -17797,7 +17846,9 @@ class TEdit extends TWidget {
  *<grid_item>
  *<button x="c" y="m" w="80%" h="30" name="3" text="3"/>
  *</grid_item>
- *</grid>```
+ *</grid>
+ *
+ *```
  *
  *可用通过style来设置控件的显示风格，如背景颜色等。如：
  *
@@ -19606,6 +19657,47 @@ class TComboBoxEx extends TComboBox {
  */
  static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TComboBoxEx(combo_box_ex_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+};
+/**
+ * 电阻屏校准窗口。
+ *
+ *calibration\_win\_t是[window\_base\_t](window_base_t.md)的子类控件，
+ *window\_base\_t的函数均适用于calibration\_win\_t控件。
+ *
+ *在xml中使用"calibration\_win"标签创建电阻屏校准窗口。如：
+ *
+ *```xml
+ *<calibration_win name="cali" w="100%" h="100%" text="Please click the center of cross">
+ *</calibration_win>
+ *```
+ *
+ *> 更多用法请参考：
+ *[window.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/calibration_win.xml)
+ *
+ *在c代码中使用函数calibration\_win\_create创建窗口。如：
+ *
+ *
+ *通过calibration\_win\_set\_on\_done注册回调函数，用于保存校准数据。
+ *
+ */
+class TCalibrationWin extends TWindowBase { 
+ public nativeObj : any;
+ constructor(nativeObj) {
+   super(nativeObj);
+ }
+
+
+/**
+ * 转换为calibration_win对象(供脚本语言使用)。
+ * 
+ * @param widget calibration_win对象。
+ 
+ * @returns calibration_win对象。
+ */
+ static cast(widget : TWidget) : TCalibrationWin  {
+    return new TCalibrationWin(calibration_win_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 };

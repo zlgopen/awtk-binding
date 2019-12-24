@@ -2709,6 +2709,38 @@ public:
  ret_t Unref() ;
 
 /**
+ * 检查控件是否是system bar类型。
+ * 
+ 
+ * @return 返回FALSE表示不是，否则表示是。
+ */
+ bool IsSystemBar() ;
+
+/**
+ * 检查控件是否是普通窗口类型。
+ * 
+ 
+ * @return 返回FALSE表示不是，否则表示是。
+ */
+ bool IsNormalWindow() ;
+
+/**
+ * 检查控件是否是对话框类型。
+ * 
+ 
+ * @return 返回FALSE表示不是，否则表示是。
+ */
+ bool IsDialog() ;
+
+/**
+ * 检查控件是否是弹出窗口类型。
+ * 
+ 
+ * @return 返回FALSE表示不是，否则表示是。
+ */
+ bool IsPopup() ;
+
+/**
  * 布局当前控件及子控件。
  * 
  

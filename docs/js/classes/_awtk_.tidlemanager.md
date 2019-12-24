@@ -24,7 +24,7 @@ idle_manager_t管理器。
 
 \+ **new TIdleManager**(`nativeObj`: any): *[TIdleManager](_awtk_.tidlemanager.md)*
 
-*Defined in [awtk.ts:9929](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L9929)*
+*Defined in [awtk.ts:9978](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L9978)*
 
 **Parameters:**
 
@@ -40,4 +40,4 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:9929](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L9929)*
+*Defined in [awtk.ts:9978](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L9978)*

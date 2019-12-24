@@ -23,7 +23,7 @@
 
 • **CANCEL**: =  DIALOG_QUIT_CANCEL()
 
-*Defined in [awtk.ts:3044](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L3044)*
+*Defined in [awtk.ts:3049](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L3049)*
 
 点击“CANCEL”按钮关闭。
 
@@ -33,7 +33,7 @@ ___
 
 • **NO**: =  DIALOG_QUIT_NO()
 
-*Defined in [awtk.ts:3050](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L3050)*
+*Defined in [awtk.ts:3055](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L3055)*
 
 点击“NO”按钮关闭。
 
@@ -43,7 +43,7 @@ ___
 
 • **NONE**: =  DIALOG_QUIT_NONE()
 
-*Defined in [awtk.ts:3026](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L3026)*
+*Defined in [awtk.ts:3031](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L3031)*
 
 对话框被强行关闭或不关心关闭原因。
 
@@ -53,7 +53,7 @@ ___
 
 • **OK**: =  DIALOG_QUIT_OK()
 
-*Defined in [awtk.ts:3032](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L3032)*
+*Defined in [awtk.ts:3037](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L3037)*
 
 点击“OK”按钮关闭。
 
@@ -63,7 +63,7 @@ ___
 
 • **OTHER**: =  DIALOG_QUIT_OTHER()
 
-*Defined in [awtk.ts:3056](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L3056)*
+*Defined in [awtk.ts:3061](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L3061)*
 
 点击其它按钮关闭。
 
@@ -73,6 +73,6 @@ ___
 
 • **YES**: =  DIALOG_QUIT_YES()
 
-*Defined in [awtk.ts:3038](https://github.com/zlgopen/awtk-binding/blob/5d4a8e9/tools/code_gen/js/output/awtk.ts#L3038)*
+*Defined in [awtk.ts:3043](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L3043)*
 
 点击“YES”按钮关闭。

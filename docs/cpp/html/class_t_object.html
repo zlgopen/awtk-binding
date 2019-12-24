@@ -75,7 +75,11 @@ $(function() {
  <div class="center">
   <img src="class_t_object.png" usemap="#TObject_map" alt=""/>
   <map id="TObject_map" name="TObject_map">
-<area href="class_t_emitter.html" alt="TEmitter" shape="rect" coords="0,0,57,24"/>
+<area href="class_t_emitter.html" alt="TEmitter" shape="rect" coords="159,0,255,24"/>
+<area href="class_t_idle_info.html" alt="TIdleInfo" shape="rect" coords="0,112,96,136"/>
+<area href="class_t_object_array.html" alt="TObjectArray" shape="rect" coords="106,112,202,136"/>
+<area href="class_t_object_default.html" alt="TObjectDefault" shape="rect" coords="212,112,308,136"/>
+<area href="class_t_timer_info.html" alt="TTimerInfo" shape="rect" coords="318,112,414,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -153,12 +157,12 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a547a9330c84728a6699e46705e22e655"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf739a4ae16e9735e1bf48393827f5f3"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#adf739a4ae16e9735e1bf48393827f5f3">GetPropFloatByPath</a> (const char *path, float_t defval)</td></tr>
 <tr class="separator:adf739a4ae16e9735e1bf48393827f5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5c1b6a3695cd52f842172e240b565ca"><td class="memItemLeft" align="right" valign="top"><a id="ac5c1b6a3695cd52f842172e240b565ca"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>getRefCount</b> () const</td></tr>
-<tr class="separator:ac5c1b6a3695cd52f842172e240b565ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5aef1e262dcd7b14a9bea1c1350a2f5"><td class="memItemLeft" align="right" valign="top"><a id="af5aef1e262dcd7b14a9bea1c1350a2f5"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const</td></tr>
-<tr class="separator:af5aef1e262dcd7b14a9bea1c1350a2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf88f8baf905e1ec672b47d2beebb193"><td class="memItemLeft" align="right" valign="top"><a id="abf88f8baf905e1ec672b47d2beebb193"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetRefCount</b> () const</td></tr>
+<tr class="separator:abf88f8baf905e1ec672b47d2beebb193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad49dccfbf4ceccd4c61211841a7d74d7"><td class="memItemLeft" align="right" valign="top"><a id="ad49dccfbf4ceccd4c61211841a7d74d7"></a>
+char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetName</b> () const</td></tr>
+<tr class="separator:ad49dccfbf4ceccd4c61211841a7d74d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_t_emitter"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_t_emitter')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_t_emitter.html">TEmitter</a></td></tr>
 <tr class="memitem:a6ca92e86b5b1096926e6c1027391c8d9 inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top"><a id="a6ca92e86b5b1096926e6c1027391c8d9"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TEmitter</b> (emitter_t *nativeObj)</td></tr>
@@ -191,6 +195,12 @@ static <a class="el" href="class_t_object.html">TObject</a>&#160;</td><td class=
 <tr class="memitem:a69764afafa39dbd523473cc6b90f0ac7"><td class="memItemLeft" align="right" valign="top"><a id="a69764afafa39dbd523473cc6b90f0ac7"></a>
 static <a class="el" href="class_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cast</b> (const emitter_t *nativeObj)</td></tr>
 <tr class="separator:a69764afafa39dbd523473cc6b90f0ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a730adc745fe6d1a9f3b37c0b8c836e28"><td class="memItemLeft" align="right" valign="top"><a id="a730adc745fe6d1a9f3b37c0b8c836e28"></a>
+static <a class="el" href="class_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cast</b> (<a class="el" href="class_t_emitter.html">TEmitter</a> &amp;obj)</td></tr>
+<tr class="separator:a730adc745fe6d1a9f3b37c0b8c836e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a915f1e6b3eabd52c8dd1f7b3f9fcf5c5"><td class="memItemLeft" align="right" valign="top"><a id="a915f1e6b3eabd52c8dd1f7b3f9fcf5c5"></a>
+static <a class="el" href="class_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cast</b> (const <a class="el" href="class_t_emitter.html">TEmitter</a> &amp;obj)</td></tr>
+<tr class="separator:a915f1e6b3eabd52c8dd1f7b3f9fcf5c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf537435d8cfe6994777b886e25cc2ba"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#aaf537435d8cfe6994777b886e25cc2ba">Ref</a> (<a class="el" href="class_t_object.html">TObject</a> &amp;obj)</td></tr>
 <tr class="separator:aaf537435d8cfe6994777b886e25cc2ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_class_t_emitter"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_t_emitter')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="class_t_emitter.html">TEmitter</a></td></tr>

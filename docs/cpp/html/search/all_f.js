@@ -7,6 +7,7 @@ var searchData=
   ['removeprop',['RemoveProp',['../class_t_object.html#a6df251ace441dc55a9845214b51838ca',1,'TObject']]],
   ['reset',['Reset',['../class_t_value.html#a8eb43bd88605d89fba08abe75a8abc59',1,'TValue::Reset()'],['../class_t_timer.html#afc9845f46017626f309008a839cbfdae',1,'TTimer::Reset()'],['../class_t_canvas.html#a319fccdc99e75b5bbafedcecb799689e',1,'TCanvas::Reset()']]],
   ['resetoptions',['ResetOptions',['../class_t_text_selector.html#a057ed0caeeca7dfce136e5780f9f2e86',1,'TTextSelector::ResetOptions()'],['../class_t_combo_box.html#a29786cff3f4704b5273beda838fd5ec5',1,'TComboBox::ResetOptions()']]],
+  ['resizetocontent',['ResizeToContent',['../class_t_label.html#a860e9d860c6db925b9420c395b29a0d6',1,'TLabel']]],
   ['restore',['Restore',['../class_t_vgcanvas.html#ae12a84c37394b11f68b76e585cb22ef8',1,'TVgcanvas']]],
   ['rotate',['Rotate',['../class_t_vgcanvas.html#a4692739271712eaec24aeabf3d43c566',1,'TVgcanvas']]],
   ['roundedrect',['RoundedRect',['../class_t_vgcanvas.html#a069e7639457908edfd9e37e804e83ac2',1,'TVgcanvas']]],
