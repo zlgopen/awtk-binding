@@ -68,6 +68,15 @@ class MiniJVMGenerator extends BindingGen {
     };
   }
   
+  mapTypeBool(type) {
+    return {
+      type:type,
+      jvmDesc:"Z",
+      getArg:"jni_ctx_get_int(&ctx)",
+      returnResult: "jni_ctx_return_int(&ctx, (int32_t)(ret))"
+    };
+  }
+  
   mapTypeInt64(type) {
     return {
       type:type,
@@ -121,6 +130,28 @@ class MiniJVMGenerator extends BindingGen {
       returnResult: "jni_ctx_return_object(&ctx, (void*)(ret))"
     };
   }
+  
+  mapTypeFunc(type) {
+    let intf = 'TOnEvent';
+    if(type === "tk_visit_t") {
+      intf = 'TOnWidget';
+    } else if(type === "event_func_t") {
+      intf = 'TOnEvent';
+    } else if(type === "idle_func_t") {
+      intf = 'TOnIdle';
+    } else if(type === "timer_func_t") {
+      intf = 'TOnTimer';
+    } else {
+      console.log('not supported');
+    }
+
+    return {
+      type:type,
+      jvmDesc:`Lawtk/${intf};`,
+      getArg:"jni_ctx_get_object(&ctx)",
+      returnResult: "jni_ctx_return_object(&ctx, (void*)(ret))"
+    };
+  }
 
   mapType(type) {
     let name = this.typeToName(type);
@@ -145,14 +176,15 @@ class MiniJVMGenerator extends BindingGen {
     } else if (this.typeIsFloat(type)) {
        return this.mapTypeFloat(type);
     } else if (this.typeIsBool(type)) {
-       return this.mapTypeInt(type);
+       return this.mapTypeBool(type);
     } else if (this.typeIsFunction(type)) {
-      /*TODO*/
-      return this.mapTypeInt(type);
+      return this.mapTypeFunc(type);
     } else if (this.typeIsString(type)) {
        return this.mapTypeString(type);
     } else if (this.typeIsWString(type)) {
        return this.mapTypeWString(type);
+    } else if (type.indexOf('*') >= 0) {
+      return this.mapTypeInt64(type);
     } else {
       return this.mapTypeInt(type);
     }
