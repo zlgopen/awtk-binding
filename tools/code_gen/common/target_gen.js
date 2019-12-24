@@ -171,25 +171,25 @@ class TargetGen extends CodeGen {
     return result;
   }
 
-  tidyDoc(desc) {
+  tidyDoc(desc, spaces) {
     let result = this.removeCode(desc, '<!-- c_doc_begin -->', '<!-- c_doc_end -->');
     result = this.removeCode(result, '```c\n', '```\n');
     result = this.removeCode(result, '```graphviz', '```');
 
     result = result.replace(/\r\n/g, '\n');
     result = result.replace(/\r/g, '\n');
-    result = result.replace(/\n/g, '\n' + this.docPrefix);
+    result = result.replace(/\n/g, '\n' + (spaces || '') + this.docPrefix);
     result = result.replace(/ * >/g, '');
     return result;
   }
 
-  genGeneralDoc(item) {
-    let desc = this.tidyDoc(item.desc);
+  genGeneralDoc(item, spaces) {
+    let desc = this.tidyDoc(item.desc, spaces);
     let result = `
-${this.docPrefixFirst}
-${this.docPrefix} ${desc}
-${this.docPrefix}
-${this.docPrefixLast}
+${spaces||''}${this.docPrefixFirst}
+${spaces||''}${this.docPrefix} ${desc}
+${spaces||''}${this.docPrefix}
+${spaces||''}${this.docPrefixLast}
 `;
 
     return result;
@@ -199,26 +199,26 @@ ${this.docPrefixLast}
     return this.genGeneralDoc(cls);
   }
 
-  genConstDoc(c) {
-    return this.genGeneralDoc(c);
-  }
-
   genEnumDoc(c) {
     return this.genGeneralDoc(c);
   }
 
+  genConstDoc(c) {
+    return this.genGeneralDoc(c, '  ');
+  }
+
   genEnumItemDoc(c) {
-    return this.genGeneralDoc(c);
+    return this.genGeneralDoc(c, '  ');
   }
 
   genPropDoc(p) {
-    return this.genGeneralDoc(p);
+    return this.genGeneralDoc(p, '  ');
   }
 
   genFuncDoc(cls, m) {
     let paramsDesc = '';
     let retDesc = m.return.desc;
-    let desc = this.tidyDoc(m.desc);
+    let desc = this.tidyDoc(m.desc, '  ');
     let isNormalMethod = this.isNormalMethod(m);
 
     m.params.forEach((iter, index) => {
@@ -226,15 +226,15 @@ ${this.docPrefixLast}
         return;
       }
 
-      paramsDesc += `${this.docPrefix} @param ${iter.name} ${iter.desc}\n`;
+      paramsDesc += `  ${this.docPrefix} @param ${iter.name} ${iter.desc}\n`;
     });
 
     return `
-${this.docPrefixFirst}
-${this.docPrefix} ${desc}
-${this.docPrefix} \n${paramsDesc} 
-${this.docPrefix} @${this.returnDocKey} ${retDesc}
-${this.docPrefixLast}
+  ${this.docPrefixFirst}
+  ${this.docPrefix} ${desc}
+  ${this.docPrefix} \n${paramsDesc}  ${this.docPrefix}
+  ${this.docPrefix} @${this.returnDocKey} ${retDesc}
+  ${this.docPrefixLast}
 `;
   }
 
