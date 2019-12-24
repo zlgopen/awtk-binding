@@ -1,8 +1,4 @@
 ﻿#include "awtk_cpp.hpp"
- TEvent TEvent::Cast(TEvent& event)  {
-   return TEvent(event_cast(((event_t*)(event.nativeObj))));
- }
-
  TEvent TEvent::Create(uint32_t type)  {
    return TEvent((event_t*)(event_create(type)));
  }
@@ -29,10 +25,6 @@
 
  TRect TRect::Set(xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TRect((rect_t*)(rect_set(((rect_t*)(this->nativeObj)), x, y, w, h)));
- }
-
- TRect TRect::Cast(TRect& rect)  {
-   return TRect(rect_cast(((rect_t*)(rect.nativeObj))));
  }
 
  ret_t TRect::Destroy()  {
@@ -89,10 +81,6 @@
 
  ret_t TEmitter::Destroy()  {
    return emitter_destroy(((emitter_t*)(this->nativeObj)));
- }
-
- TEmitter TEmitter::Cast(TEmitter& emitter)  {
-   return TEmitter(emitter_cast(((emitter_t*)(emitter.nativeObj))));
  }
 
  TBitmap TBitmap::Create()  {
@@ -261,10 +249,6 @@
 
  ret_t TValue::Reset()  {
    return value_reset(((value_t*)(this->nativeObj)));
- }
-
- TValue TValue::Cast(TValue& value)  {
-   return TValue(value_cast(((value_t*)(value.nativeObj))));
  }
 
  ret_t TObject::Unref()  {
@@ -529,10 +513,6 @@
 
  ret_t TTimer::Modify(uint32_t timer_id, uint32_t duration)  {
    return timer_modify(timer_id, duration);
- }
-
- TVgcanvas TVgcanvas::Cast(TVgcanvas& vg)  {
-   return TVgcanvas(vgcanvas_cast(((vgcanvas_t*)(vg.nativeObj))));
  }
 
  ret_t TVgcanvas::Flush()  {
@@ -995,10 +975,6 @@
     return widget_equal(((widget_t*)(this->nativeObj)), ((widget_t*)(other.nativeObj)));
  }
 
- TWidget TWidget::Cast(TWidget& widget)  {
-   return TWidget(widget_cast(((widget_t*)(widget.nativeObj))));
- }
-
  ret_t TWidget::Destroy()  {
    return widget_destroy(((widget_t*)(this->nativeObj)));
  }
@@ -1215,10 +1191,6 @@
    return TVgcanvas((vgcanvas_t*)(canvas_get_vgcanvas(((canvas_t*)(this->nativeObj)))));
  }
 
- TCanvas TCanvas::Cast(TCanvas& c)  {
-   return TCanvas(canvas_cast(((canvas_t*)(c.nativeObj))));
- }
-
  ret_t TCanvas::Reset()  {
    return canvas_reset(((canvas_t*)(this->nativeObj)));
  }
@@ -1245,10 +1217,6 @@
 
  TNamedValue TNamedValue::Create()  {
    return TNamedValue((named_value_t*)(named_value_create()));
- }
-
- TNamedValue TNamedValue::Cast(TNamedValue& nv)  {
-   return TNamedValue(named_value_cast(((named_value_t*)(nv.nativeObj))));
  }
 
  ret_t TNamedValue::SetName(const char* name)  {
@@ -1343,10 +1311,6 @@
     return color_a(((color_t*)(this->nativeObj)));
  }
 
- TColor TColor::Cast(TColor& color)  {
-   return TColor(color_cast(((color_t*)(color.nativeObj))));
- }
-
  ret_t TColor::Destroy()  {
    return color_destroy(((color_t*)(this->nativeObj)));
  }
@@ -1395,16 +1359,8 @@
    return TCanvasWidget((widget_t*)(canvas_widget_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TCanvasWidget TCanvasWidget::Cast(TWidget& widget)  {
-   return TCanvasWidget(canvas_widget_cast(((widget_t*)(widget.nativeObj))));
- }
-
  TWidget TTimeClock::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TTimeClock((widget_t*)(time_clock_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TTimeClock TTimeClock::Cast(TWidget& widget)  {
-   return TTimeClock(time_clock_cast(((widget_t*)(widget.nativeObj))));
  }
 
  ret_t TTimeClock::SetHour(int32_t hour)  {
@@ -1511,10 +1467,6 @@
    return TTextSelector((widget_t*)(text_selector_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TTextSelector TTextSelector::Cast(TWidget& widget)  {
-   return TTextSelector(text_selector_cast(((widget_t*)(widget.nativeObj))));
- }
-
  ret_t TTextSelector::ResetOptions()  {
    return text_selector_reset_options(((widget_t*)(this->nativeObj)));
  }
@@ -1571,20 +1523,12 @@
    return ((text_selector_t*)(this->nativeObj))->options;
  }
 
- TPropChangeEvent TPropChangeEvent::Cast(TEvent& event)  {
-   return TPropChangeEvent(prop_change_event_cast(((event_t*)(event.nativeObj))));
- }
-
  const char* TPropChangeEvent::GetName() const {
    return ((prop_change_event_t*)(this->nativeObj))->name;
  }
 
  TValue TPropChangeEvent::GetValue() const {
    return TValue(((prop_change_event_t*)(this->nativeObj))->value);
- }
-
- TProgressEvent TProgressEvent::Cast(TEvent& event)  {
-   return TProgressEvent(progress_event_cast(((event_t*)(event.nativeObj))));
  }
 
  uint32_t TProgressEvent::GetPercent() const {
@@ -1599,10 +1543,6 @@
    return switch_set_value(((widget_t*)(this->nativeObj)), value);
  }
 
- TSwitch TSwitch::Cast(TWidget& widget)  {
-   return TSwitch(switch_cast(((widget_t*)(widget.nativeObj))));
- }
-
  bool TSwitch::GetValue() const {
    return ((switch_t*)(this->nativeObj))->value;
  }
@@ -1613,10 +1553,6 @@
 
  TWidget TSlideView::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TSlideView((widget_t*)(slide_view_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TSlideView TSlideView::Cast(TWidget& widget)  {
-   return TSlideView(slide_view_cast(((widget_t*)(widget.nativeObj))));
  }
 
  ret_t TSlideView::SetAutoPlay(uint16_t auto_play)  {
@@ -1665,10 +1601,6 @@
 
  TWidget TSlideIndicator::CreateArc(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TSlideIndicator((widget_t*)(slide_indicator_create_arc(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TSlideIndicator TSlideIndicator::Cast(TWidget& widget)  {
-   return TSlideIndicator(slide_indicator_cast(((widget_t*)(widget.nativeObj))));
  }
 
  ret_t TSlideIndicator::SetValue(uint32_t value)  {
@@ -1751,10 +1683,6 @@
    return TSlideMenu((widget_t*)(slide_menu_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TSlideMenu TSlideMenu::Cast(TWidget& widget)  {
-   return TSlideMenu(slide_menu_cast(((widget_t*)(widget.nativeObj))));
- }
-
  ret_t TSlideMenu::SetValue(uint32_t value)  {
    return slide_menu_set_value(((widget_t*)(this->nativeObj)), value);
  }
@@ -1781,10 +1709,6 @@
 
  TWidget TScrollView::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TScrollView((widget_t*)(scroll_view_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TScrollView TScrollView::Cast(TWidget& widget)  {
-   return TScrollView(scroll_view_cast(((widget_t*)(widget.nativeObj))));
  }
 
  ret_t TScrollView::SetVirtualW(wh_t w)  {
@@ -1855,10 +1779,6 @@
    return TScrollBar((widget_t*)(scroll_bar_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TScrollBar TScrollBar::Cast(TWidget& widget)  {
-   return TScrollBar(scroll_bar_cast(((widget_t*)(widget.nativeObj))));
- }
-
  TWidget TScrollBar::CreateMobile(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TScrollBar((widget_t*)(scroll_bar_create_mobile(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
@@ -1927,10 +1847,6 @@
    return list_view_set_auto_hide_scroll_bar(((widget_t*)(this->nativeObj)), auto_hide_scroll_bar);
  }
 
- TListView TListView::Cast(TWidget& widget)  {
-   return TListView(list_view_cast(((widget_t*)(widget.nativeObj))));
- }
-
  int32_t TListView::GetItemHeight() const {
    return ((list_view_t*)(this->nativeObj))->item_height;
  }
@@ -1955,10 +1871,6 @@
    return list_view_h_set_spacing(((widget_t*)(this->nativeObj)), spacing);
  }
 
- TListViewH TListViewH::Cast(TWidget& widget)  {
-   return TListViewH(list_view_h_cast(((widget_t*)(widget.nativeObj))));
- }
-
  int32_t TListViewH::GetItemWidth() const {
    return ((list_view_h_t*)(this->nativeObj))->item_width;
  }
@@ -1969,10 +1881,6 @@
 
  TWidget TListItem::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TListItem((widget_t*)(list_item_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TListItem TListItem::Cast(TWidget& widget)  {
-   return TListItem(list_item_cast(((widget_t*)(widget.nativeObj))));
  }
 
  TWidget THscrollLabel::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -2019,10 +1927,6 @@
    return hscroll_label_stop(((widget_t*)(this->nativeObj)));
  }
 
- THscrollLabel THscrollLabel::Cast(TWidget& widget)  {
-   return THscrollLabel(hscroll_label_cast(((widget_t*)(widget.nativeObj))));
- }
-
  bool THscrollLabel::GetOnlyFocus() const {
    return ((hscroll_label_t*)(this->nativeObj))->only_focus;
  }
@@ -2067,10 +1971,6 @@
    return rich_text_set_text(((widget_t*)(this->nativeObj)), text);
  }
 
- TRichText TRichText::Cast(TWidget& widget)  {
-   return TRichText(rich_text_cast(((widget_t*)(widget.nativeObj))));
- }
-
  uint32_t TRichText::GetLineGap() const {
    return ((rich_text_t*)(this->nativeObj))->line_gap;
  }
@@ -2081,10 +1981,6 @@
 
  TWidget TProgressCircle::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TProgressCircle((widget_t*)(progress_circle_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TProgressCircle TProgressCircle::Cast(TWidget& widget)  {
-   return TProgressCircle(progress_circle_cast(((widget_t*)(widget.nativeObj))));
  }
 
  ret_t TProgressCircle::SetValue(float_t value)  {
@@ -2175,10 +2071,6 @@
    return mledit_set_scroll_line(((widget_t*)(this->nativeObj)), scroll_line);
  }
 
- TMledit TMledit::Cast(TWidget& widget)  {
-   return TMledit(mledit_cast(((widget_t*)(widget.nativeObj))));
- }
-
  bool TMledit::GetReadonly() const {
    return ((mledit_t*)(this->nativeObj))->readonly;
  }
@@ -2219,10 +2111,6 @@
    return line_number_set_yoffset(((widget_t*)(this->nativeObj)), yoffset);
  }
 
- TLineNumber TLineNumber::Cast(TWidget& widget)  {
-   return TLineNumber(line_number_cast(((widget_t*)(widget.nativeObj))));
- }
-
  TWidget TImageValue::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TImageValue((widget_t*)(image_value_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
@@ -2237,10 +2125,6 @@
 
  ret_t TImageValue::SetValue(float_t value)  {
    return image_value_set_value(((widget_t*)(this->nativeObj)), value);
- }
-
- TImageValue TImageValue::Cast(TWidget& widget)  {
-   return TImageValue(image_value_cast(((widget_t*)(widget.nativeObj))));
  }
 
  char* TImageValue::GetImage() const {
@@ -2311,10 +2195,6 @@
    return image_animation_set_unload_after_paint(((widget_t*)(this->nativeObj)), unload_after_paint);
  }
 
- TImageAnimation TImageAnimation::Cast(TWidget& widget)  {
-   return TImageAnimation(image_animation_cast(((widget_t*)(widget.nativeObj))));
- }
-
  char* TImageAnimation::GetImage() const {
    return ((image_animation_t*)(this->nativeObj))->image;
  }
@@ -2359,10 +2239,6 @@
    return TGuage((widget_t*)(guage_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TGuage TGuage::Cast(TWidget& widget)  {
-   return TGuage(guage_cast(((widget_t*)(widget.nativeObj))));
- }
-
  ret_t TGuage::SetImage(char* name)  {
    return guage_set_image(((widget_t*)(this->nativeObj)), name);
  }
@@ -2381,10 +2257,6 @@
 
  TWidget TGuagePointer::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TGuagePointer((widget_t*)(guage_pointer_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TGuagePointer TGuagePointer::Cast(TWidget& widget)  {
-   return TGuagePointer(guage_pointer_cast(((widget_t*)(widget.nativeObj))));
  }
 
  ret_t TGuagePointer::SetAngle(int32_t angle)  {
@@ -2417,10 +2289,6 @@
 
  TWidget TDraggable::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TDraggable((widget_t*)(draggable_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TDraggable TDraggable::Cast(TWidget& widget)  {
-   return TDraggable(draggable_cast(((widget_t*)(widget.nativeObj))));
  }
 
  ret_t TDraggable::SetTop(int32_t top)  {
@@ -2487,24 +2355,8 @@
    return color_picker_set_color(((widget_t*)(this->nativeObj)), color);
  }
 
- TColorPicker TColorPicker::Cast(TWidget& widget)  {
-   return TColorPicker(color_picker_cast(((widget_t*)(widget.nativeObj))));
- }
-
  const char* TColorPicker::GetValue() const {
    return ((color_picker_t*)(this->nativeObj))->value;
- }
-
- TColorComponent TColorComponent::Cast(TWidget& widget)  {
-   return TColorComponent(color_component_cast(((widget_t*)(widget.nativeObj))));
- }
-
- TWindowManager TWindowManager::Instance()  {
-   return TWindowManager(window_manager());
- }
-
- TWindowManager TWindowManager::Cast(TWidget& widget)  {
-   return TWindowManager(window_manager_cast(((widget_t*)(widget.nativeObj))));
  }
 
  TWidget TWindowManager::GetTopMainWindow()  {
@@ -2555,10 +2407,6 @@
    return window_manager_back_to(((widget_t*)(this->nativeObj)), target);
  }
 
- TWindowBase TWindowBase::Cast(TWidget& widget)  {
-   return TWindowBase(window_base_cast(((widget_t*)(widget.nativeObj))));
- }
-
  char* TWindowBase::GetTheme() const {
    return ((window_base_t*)(this->nativeObj))->theme;
  }
@@ -2573,10 +2421,6 @@
 
  ret_t TStyleMutable::SetInt(const char* state, const char* name, uint32_t val)  {
    return style_mutable_set_int(((style_t*)(this->nativeObj)), state, name, val);
- }
-
- TStyleMutable TStyleMutable::Cast(TStyle& s)  {
-   return TStyleMutable(style_mutable_cast(((style_t*)(s.nativeObj))));
  }
 
  TStyle TStyleMutable::Create(TWidget& widget, TStyle& default_style)  {
@@ -2615,10 +2459,6 @@
    return image_base_set_clickable(((widget_t*)(this->nativeObj)), clickable);
  }
 
- TImageBase TImageBase::Cast(TWidget& widget)  {
-   return TImageBase(image_base_cast(((widget_t*)(widget.nativeObj))));
- }
-
  char* TImageBase::GetImage() const {
    return ((image_base_t*)(this->nativeObj))->image;
  }
@@ -2655,24 +2495,12 @@
    return ((image_base_t*)(this->nativeObj))->selected;
  }
 
- TWindowEvent TWindowEvent::Cast(TEvent& event)  {
-   return TWindowEvent(window_event_cast(((event_t*)(event.nativeObj))));
- }
-
  TWidget TWindowEvent::GetWindow() const {
    return TWidget(((window_event_t*)(this->nativeObj))->window);
  }
 
- TPaintEvent TPaintEvent::Cast(TEvent& event)  {
-   return TPaintEvent(paint_event_cast(((event_t*)(event.nativeObj))));
- }
-
  TCanvas TPaintEvent::GetC() const {
    return TCanvas(((paint_event_t*)(this->nativeObj))->c);
- }
-
- TKeyEvent TKeyEvent::Cast(TEvent& event)  {
-   return TKeyEvent(key_event_cast(((event_t*)(event.nativeObj))));
  }
 
  uint32_t TKeyEvent::GetKey() const {
@@ -2727,10 +2555,6 @@
    return ((key_event_t*)(this->nativeObj))->capslock;
  }
 
- TPointerEvent TPointerEvent::Cast(TEvent& event)  {
-   return TPointerEvent(pointer_event_cast(((event_t*)(event.nativeObj))));
- }
-
  xy_t TPointerEvent::GetX() const {
    return ((pointer_event_t*)(this->nativeObj))->x;
  }
@@ -2767,16 +2591,8 @@
    return ((pointer_event_t*)(this->nativeObj))->shift;
  }
 
- TOrientationEvent TOrientationEvent::Cast(TEvent& event)  {
-   return TOrientationEvent(orientation_event_cast(((event_t*)(event.nativeObj))));
- }
-
  int32_t TOrientationEvent::GetOrientation() const {
    return ((orientation_event_t*)(this->nativeObj))->orientation;
- }
-
- TWheelEvent TWheelEvent::Cast(TEvent& event)  {
-   return TWheelEvent(wheel_event_cast(((event_t*)(event.nativeObj))));
  }
 
  int32_t TWheelEvent::GetDy() const {
@@ -2799,24 +2615,12 @@
    return TAppBar((widget_t*)(app_bar_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TAppBar TAppBar::Cast(TWidget& widget)  {
-   return TAppBar(app_bar_cast(((widget_t*)(widget.nativeObj))));
- }
-
  TWidget TButtonGroup::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TButtonGroup((widget_t*)(button_group_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TButtonGroup TButtonGroup::Cast(TWidget& widget)  {
-   return TButtonGroup(button_group_cast(((widget_t*)(widget.nativeObj))));
- }
-
  TWidget TButton::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TButton((widget_t*)(button_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TButton TButton::Cast(TWidget& widget)  {
-   return TButton(button_cast(((widget_t*)(widget.nativeObj))));
  }
 
  ret_t TButton::SetRepeat(int32_t repeat)  {
@@ -2847,10 +2651,6 @@
    return check_button_set_value(((widget_t*)(this->nativeObj)), value);
  }
 
- TCheckButton TCheckButton::Cast(TWidget& widget)  {
-   return TCheckButton(check_button_cast(((widget_t*)(widget.nativeObj))));
- }
-
  bool TCheckButton::GetValue() const {
    return ((check_button_t*)(this->nativeObj))->value;
  }
@@ -2859,16 +2659,8 @@
    return TClipView((widget_t*)(clip_view_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TClipView TClipView::Cast(TWidget& widget)  {
-   return TClipView(clip_view_cast(((widget_t*)(widget.nativeObj))));
- }
-
  TWidget TColorTile::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TColorTile((widget_t*)(color_tile_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TColorTile TColorTile::Cast(TWidget& widget)  {
-   return TColorTile(color_tile_cast(((widget_t*)(widget.nativeObj))));
  }
 
  ret_t TColorTile::SetBgColor(const char* color)  {
@@ -2887,16 +2679,8 @@
    return TColumn((widget_t*)(column_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TColumn TColumn::Cast(TWidget& widget)  {
-   return TColumn(column_cast(((widget_t*)(widget.nativeObj))));
- }
-
  TWidget TComboBoxItem::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TComboBoxItem((widget_t*)(combo_box_item_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TComboBoxItem TComboBoxItem::Cast(TWidget& widget)  {
-   return TComboBoxItem(combo_box_item_cast(((widget_t*)(widget.nativeObj))));
  }
 
  ret_t TComboBoxItem::SetChecked(bool checked)  {
@@ -2917,10 +2701,6 @@
 
  TWidget TComboBox::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TComboBox((widget_t*)(combo_box_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TComboBox TComboBox::Cast(TWidget& widget)  {
-   return TComboBox(combo_box_cast(((widget_t*)(widget.nativeObj))));
  }
 
  ret_t TComboBox::SetOpenWindow(const char* open_window)  {
@@ -2995,24 +2775,12 @@
    return TDialogClient((widget_t*)(dialog_client_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TDialogClient TDialogClient::Cast(TWidget& widget)  {
-   return TDialogClient(dialog_client_cast(((widget_t*)(widget.nativeObj))));
- }
-
  TWidget TDialogTitle::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TDialogTitle((widget_t*)(dialog_title_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TDialogTitle TDialogTitle::Cast(TWidget& widget)  {
-   return TDialogTitle(dialog_title_cast(((widget_t*)(widget.nativeObj))));
- }
-
  TWidget TDigitClock::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TDigitClock((widget_t*)(digit_clock_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TDigitClock TDigitClock::Cast(TWidget& widget)  {
-   return TDigitClock(digit_clock_cast(((widget_t*)(widget.nativeObj))));
  }
 
  ret_t TDigitClock::SetFormat(const char* format)  {
@@ -3025,10 +2793,6 @@
 
  TWidget TDragger::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TDragger((widget_t*)(dragger_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TDragger TDragger::Cast(TWidget& widget)  {
-   return TDragger(dragger_cast(((widget_t*)(widget.nativeObj))));
  }
 
  ret_t TDragger::SetRange(xy_t x_min, xy_t y_min, xy_t x_max, xy_t y_max)  {
@@ -3053,10 +2817,6 @@
 
  TWidget TEdit::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TEdit((widget_t*)(edit_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TEdit TEdit::Cast(TWidget& widget)  {
-   return TEdit(edit_cast(((widget_t*)(widget.nativeObj))));
  }
 
  int32_t TEdit::GetInt()  {
@@ -3167,24 +2927,12 @@
    return TGridItem((widget_t*)(grid_item_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TGridItem TGridItem::Cast(TWidget& widget)  {
-   return TGridItem(grid_item_cast(((widget_t*)(widget.nativeObj))));
- }
-
  TWidget TGrid::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TGrid((widget_t*)(grid_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TGrid TGrid::Cast(TWidget& widget)  {
-   return TGrid(grid_cast(((widget_t*)(widget.nativeObj))));
- }
-
  TWidget TGroupBox::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TGroupBox((widget_t*)(group_box_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TGroupBox TGroupBox::Cast(TWidget& widget)  {
-   return TGroupBox(group_box_cast(((widget_t*)(widget.nativeObj))));
  }
 
  TWidget TLabel::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -3199,10 +2947,6 @@
    return label_resize_to_content(((widget_t*)(this->nativeObj)), min_w, max_w, min_h, max_h);
  }
 
- TLabel TLabel::Cast(TWidget& widget)  {
-   return TLabel(label_cast(((widget_t*)(widget.nativeObj))));
- }
-
  int32_t TLabel::GetLength() const {
    return ((label_t*)(this->nativeObj))->length;
  }
@@ -3211,16 +2955,8 @@
    return TOverlay((widget_t*)(overlay_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TOverlay TOverlay::Cast(TWidget& widget)  {
-   return TOverlay(overlay_cast(((widget_t*)(widget.nativeObj))));
- }
-
  TWidget TPages::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TPages((widget_t*)(pages_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TPages TPages::Cast(TWidget& widget)  {
-   return TPages(pages_cast(((widget_t*)(widget.nativeObj))));
  }
 
  ret_t TPages::SetActive(uint32_t index)  {
@@ -3237,10 +2973,6 @@
 
  TWidget TProgressBar::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TProgressBar((widget_t*)(progress_bar_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TProgressBar TProgressBar::Cast(TWidget& widget)  {
-   return TProgressBar(progress_bar_cast(((widget_t*)(widget.nativeObj))));
  }
 
  ret_t TProgressBar::SetValue(float_t value)  {
@@ -3283,16 +3015,8 @@
    return TRow((widget_t*)(row_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TRow TRow::Cast(TWidget& widget)  {
-   return TRow(row_cast(((widget_t*)(widget.nativeObj))));
- }
-
  TWidget TSlider::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TSlider((widget_t*)(slider_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TSlider TSlider::Cast(TWidget& widget)  {
-   return TSlider(slider_cast(((widget_t*)(widget.nativeObj))));
  }
 
  ret_t TSlider::SetValue(double value)  {
@@ -3367,10 +3091,6 @@
    return tab_button_group_set_scrollable(((widget_t*)(this->nativeObj)), scrollable);
  }
 
- TTabButtonGroup TTabButtonGroup::Cast(TWidget& widget)  {
-   return TTabButtonGroup(tab_button_group_cast(((widget_t*)(widget.nativeObj))));
- }
-
  bool TTabButtonGroup::GetCompact() const {
    return ((tab_button_group_t*)(this->nativeObj))->compact;
  }
@@ -3381,10 +3101,6 @@
 
  TWidget TTabButton::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TTabButton((widget_t*)(tab_button_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TTabButton TTabButton::Cast(TWidget& widget)  {
-   return TTabButton(tab_button_cast(((widget_t*)(widget.nativeObj))));
  }
 
  ret_t TTabButton::SetValue(uint32_t value)  {
@@ -3423,20 +3139,8 @@
    return TTabControl((widget_t*)(tab_control_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TTabControl TTabControl::Cast(TWidget& widget)  {
-   return TTabControl(tab_control_cast(((widget_t*)(widget.nativeObj))));
- }
-
  TWidget TView::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TView((widget_t*)(view_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TView TView::Cast(TWidget& widget)  {
-   return TView(view_cast(((widget_t*)(widget.nativeObj))));
- }
-
- TIdleInfo TIdleInfo::Cast(TIdleInfo& idle)  {
-   return TIdleInfo(idle_info_cast(((idle_info_t*)(idle.nativeObj))));
  }
 
  void* TIdleInfo::GetCtx() const {
@@ -3467,10 +3171,6 @@
    return TGifImage((widget_t*)(gif_image_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TGifImage TGifImage::Cast(TWidget& widget)  {
-   return TGifImage(gif_image_cast(((widget_t*)(widget.nativeObj))));
- }
-
  TObject TObjectDefault::Create()  {
    return TObjectDefault((emitter_t*)(object_default_create()));
  }
@@ -3495,10 +3195,6 @@
    return image_set_draw_type(((widget_t*)(this->nativeObj)), draw_type);
  }
 
- TImage TImage::Cast(TWidget& widget)  {
-   return TImage(image_cast(((widget_t*)(widget.nativeObj))));
- }
-
  image_draw_type_t TImage::GetDrawType() const {
    return ((image_t*)(this->nativeObj))->draw_type;
  }
@@ -3507,16 +3203,8 @@
    return TComboBoxEx((widget_t*)(combo_box_ex_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TCalibrationWin TCalibrationWin::Cast(TWidget& widget)  {
-   return TCalibrationWin(calibration_win_cast(((widget_t*)(widget.nativeObj))));
- }
-
  TWidget TPopup::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TPopup((widget_t*)(popup_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TPopup TPopup::Cast(TWidget& widget)  {
-   return TPopup(popup_cast(((widget_t*)(widget.nativeObj))));
  }
 
  ret_t TPopup::SetCloseWhenClick(bool close_when_click)  {
@@ -3543,14 +3231,6 @@
    return svg_image_set_image(((widget_t*)(this->nativeObj)), name);
  }
 
- TSvgImage TSvgImage::Cast(TWidget& widget)  {
-   return TSvgImage(svg_image_cast(((widget_t*)(widget.nativeObj))));
- }
-
- TTimerInfo TTimerInfo::Cast(TTimerInfo& timer)  {
-   return TTimerInfo(timer_info_cast(((timer_info_t*)(timer.nativeObj))));
- }
-
  void* TTimerInfo::GetCtx() const {
    return ((timer_info_t*)(this->nativeObj))->ctx;
  }
@@ -3567,16 +3247,8 @@
    return TSpinBox((widget_t*)(spin_box_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TSpinBox TSpinBox::Cast(TWidget& widget)  {
-   return TSpinBox(spin_box_cast(((widget_t*)(widget.nativeObj))));
- }
-
  TWidget TSystemBar::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TSystemBar((widget_t*)(system_bar_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TSystemBar TSystemBar::Cast(TWidget& widget)  {
-   return TSystemBar(system_bar_cast(((widget_t*)(widget.nativeObj))));
  }
 
  TWidget TWindow::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -3607,10 +3279,6 @@
    return window_close_force(((widget_t*)(this->nativeObj)));
  }
 
- TWindow TWindow::Cast(TWidget& widget)  {
-   return TWindow(window_cast(((widget_t*)(widget.nativeObj))));
- }
-
  bool TWindow::GetFullscreen() const {
    return ((window_t*)(this->nativeObj))->fullscreen;
  }
@@ -3619,20 +3287,12 @@
    return TKeyboard((widget_t*)(keyboard_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TKeyboard TKeyboard::Cast(TWidget& widget)  {
-   return TKeyboard(keyboard_cast(((widget_t*)(widget.nativeObj))));
- }
-
  TWidget TDialog::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TDialog((widget_t*)(dialog_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
  TWidget TDialog::CreateSimple(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TDialog((widget_t*)(dialog_create_simple(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TDialog TDialog::Cast(TWidget& widget)  {
-   return TDialog(dialog_cast(((widget_t*)(widget.nativeObj))));
  }
 
  TWidget TDialog::GetTitle()  {

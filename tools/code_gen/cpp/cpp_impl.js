@@ -38,6 +38,10 @@ class CppImplGenerator extends CppGenerator {
   genFunc(cls, m) {
     let result = '';
     const name = this.toFuncName(cls.name, m.alias || m.name);
+    
+    if(this.isCast(m)) {
+      return '';
+    }
 
     result += ` ${this.genFuncDecl(cls, m, name)} {\n`;
     result += this.genCallMethod(cls, m);

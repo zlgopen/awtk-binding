@@ -53,11 +53,11 @@ class CppIntfGenerator extends CppGenerator {
     }
     result += ' }\n\n';
 
-    result += ` static ${name} cast(${nativeObjType} nativeObj) {\n`;
+    result += ` static ${name} Cast(${nativeObjType} nativeObj) {\n`;
     result += `   return ${name}(nativeObj);\n`;
     result += ' }\n\n';
 
-    result += ` static ${name} cast(const ${nativeObjType} nativeObj) {\n`;
+    result += ` static ${name} Cast(const ${nativeObjType} nativeObj) {\n`;
     result += `   return ${name}((${nativeObjType})nativeObj);\n`;
     result += ' }\n\n';
    
@@ -65,11 +65,11 @@ class CppIntfGenerator extends CppGenerator {
       let base = this.getBaseClassInfo(cls);
       let baseName = this.toClassName(base.name);
 
-      result += ` static ${name} cast(${baseName}& obj) {\n`;
+      result += ` static ${name} Cast(${baseName}& obj) {\n`;
       result += `   return ${name}(obj.nativeObj);\n`;
       result += ' }\n\n';
 
-      result += ` static ${name} cast(const ${baseName}& obj) {\n`;
+      result += ` static ${name} Cast(const ${baseName}& obj) {\n`;
       result += `   return ${name}(obj.nativeObj);\n`;
       result += ' }\n\n';
     }
@@ -83,6 +83,10 @@ class CppIntfGenerator extends CppGenerator {
   }
 
   genFunc(cls, m) {
+    if(this.isCast(m)) {
+      return '';
+    }
+
     let result = '';
     const name = this.toFuncName(cls.name, m.alias || m.name);
 

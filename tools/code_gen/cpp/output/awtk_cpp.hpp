@@ -25,11 +25,11 @@ public:
    this->nativeObj = (event_t*)nativeObj;
  }
 
- static TEvent cast(event_t* nativeObj) {
+ static TEvent Cast(event_t* nativeObj) {
    return TEvent(nativeObj);
  }
 
- static TEvent cast(const event_t* nativeObj) {
+ static TEvent Cast(const event_t* nativeObj) {
    return TEvent((event_t*)nativeObj);
  }
 
@@ -43,7 +43,6 @@ public:
  
  * @return event对象。
  */
- static TEvent Cast(TEvent& event) ;
 
 /**
  * 创建event对象。
@@ -87,11 +86,11 @@ public:
    this->nativeObj = (rect_t*)nativeObj;
  }
 
- static TRect cast(rect_t* nativeObj) {
+ static TRect Cast(rect_t* nativeObj) {
    return TRect(nativeObj);
  }
 
- static TRect cast(const rect_t* nativeObj) {
+ static TRect Cast(const rect_t* nativeObj) {
    return TRect((rect_t*)nativeObj);
  }
 
@@ -133,7 +132,6 @@ public:
  
  * @return rect对象。
  */
- static TRect Cast(TRect& rect) ;
 
 /**
  * 销毁rect对象。
@@ -167,11 +165,11 @@ public:
    this->nativeObj = (pointf_t*)nativeObj;
  }
 
- static TPointf cast(pointf_t* nativeObj) {
+ static TPointf Cast(pointf_t* nativeObj) {
    return TPointf(nativeObj);
  }
 
- static TPointf cast(const pointf_t* nativeObj) {
+ static TPointf Cast(const pointf_t* nativeObj) {
    return TPointf((pointf_t*)nativeObj);
  }
 
@@ -194,11 +192,11 @@ public:
    this->nativeObj = (point_t*)nativeObj;
  }
 
- static TPoint cast(point_t* nativeObj) {
+ static TPoint Cast(point_t* nativeObj) {
    return TPoint(nativeObj);
  }
 
- static TPoint cast(const point_t* nativeObj) {
+ static TPoint Cast(const point_t* nativeObj) {
    return TPoint((point_t*)nativeObj);
  }
 
@@ -221,11 +219,11 @@ public:
    this->nativeObj = (emitter_t*)nativeObj;
  }
 
- static TEmitter cast(emitter_t* nativeObj) {
+ static TEmitter Cast(emitter_t* nativeObj) {
    return TEmitter(nativeObj);
  }
 
- static TEmitter cast(const emitter_t* nativeObj) {
+ static TEmitter Cast(const emitter_t* nativeObj) {
    return TEmitter((emitter_t*)nativeObj);
  }
 
@@ -322,7 +320,6 @@ public:
  
  * @return 对象。
  */
- static TEmitter Cast(TEmitter& emitter) ;
 };
 
 
@@ -342,11 +339,11 @@ public:
    this->nativeObj = (bitmap_t*)nativeObj;
  }
 
- static TBitmap cast(bitmap_t* nativeObj) {
+ static TBitmap Cast(bitmap_t* nativeObj) {
    return TBitmap(nativeObj);
  }
 
- static TBitmap cast(const bitmap_t* nativeObj) {
+ static TBitmap Cast(const bitmap_t* nativeObj) {
    return TBitmap((bitmap_t*)nativeObj);
  }
 
@@ -416,11 +413,11 @@ public:
    this->nativeObj = (value_t*)nativeObj;
  }
 
- static TValue cast(value_t* nativeObj) {
+ static TValue Cast(value_t* nativeObj) {
    return TValue(nativeObj);
  }
 
- static TValue cast(const value_t* nativeObj) {
+ static TValue Cast(const value_t* nativeObj) {
    return TValue((value_t*)nativeObj);
  }
 
@@ -707,7 +704,6 @@ public:
  
  * @return 对象。
  */
- static TValue Cast(TValue& value) ;
 };
 
 
@@ -723,19 +719,19 @@ public:
  TObject(const object_t* nativeObj) : TEmitter((emitter_t*)nativeObj) {
  }
 
- static TObject cast(emitter_t* nativeObj) {
+ static TObject Cast(emitter_t* nativeObj) {
    return TObject(nativeObj);
  }
 
- static TObject cast(const emitter_t* nativeObj) {
+ static TObject Cast(const emitter_t* nativeObj) {
    return TObject((emitter_t*)nativeObj);
  }
 
- static TObject cast(TEmitter& obj) {
+ static TObject Cast(TEmitter& obj) {
    return TObject(obj.nativeObj);
  }
 
- static TObject cast(const TEmitter& obj) {
+ static TObject Cast(const TEmitter& obj) {
    return TObject(obj.nativeObj);
  }
 
@@ -1140,11 +1136,11 @@ public:
    this->nativeObj = (font_manager_t*)nativeObj;
  }
 
- static TFontManager cast(font_manager_t* nativeObj) {
+ static TFontManager Cast(font_manager_t* nativeObj) {
    return TFontManager(nativeObj);
  }
 
- static TFontManager cast(const font_manager_t* nativeObj) {
+ static TFontManager Cast(const font_manager_t* nativeObj) {
    return TFontManager((font_manager_t*)nativeObj);
  }
 
@@ -1220,11 +1216,11 @@ public:
    this->nativeObj = (image_manager_t*)nativeObj;
  }
 
- static TImageManager cast(image_manager_t* nativeObj) {
+ static TImageManager Cast(image_manager_t* nativeObj) {
    return TImageManager(nativeObj);
  }
 
- static TImageManager cast(const image_manager_t* nativeObj) {
+ static TImageManager Cast(const image_manager_t* nativeObj) {
    return TImageManager((image_manager_t*)nativeObj);
  }
 
@@ -1278,11 +1274,11 @@ public:
    this->nativeObj = (input_method_t*)nativeObj;
  }
 
- static TInputMethod cast(input_method_t* nativeObj) {
+ static TInputMethod Cast(input_method_t* nativeObj) {
    return TInputMethod(nativeObj);
  }
 
- static TInputMethod cast(const input_method_t* nativeObj) {
+ static TInputMethod Cast(const input_method_t* nativeObj) {
    return TInputMethod((input_method_t*)nativeObj);
  }
 
@@ -1331,11 +1327,11 @@ public:
    this->nativeObj = (locale_info_t*)nativeObj;
  }
 
- static TLocaleInfo cast(locale_info_t* nativeObj) {
+ static TLocaleInfo Cast(locale_info_t* nativeObj) {
    return TLocaleInfo(nativeObj);
  }
 
- static TLocaleInfo cast(const locale_info_t* nativeObj) {
+ static TLocaleInfo Cast(const locale_info_t* nativeObj) {
    return TLocaleInfo((locale_info_t*)nativeObj);
  }
 
@@ -1399,11 +1395,11 @@ public:
    this->nativeObj = (style_t*)nativeObj;
  }
 
- static TStyle cast(style_t* nativeObj) {
+ static TStyle Cast(style_t* nativeObj) {
    return TStyle(nativeObj);
  }
 
- static TStyle cast(const style_t* nativeObj) {
+ static TStyle Cast(const style_t* nativeObj) {
    return TStyle((style_t*)nativeObj);
  }
 
@@ -1484,11 +1480,11 @@ public:
    this->nativeObj = (theme_t*)nativeObj;
  }
 
- static TTheme cast(theme_t* nativeObj) {
+ static TTheme Cast(theme_t* nativeObj) {
    return TTheme(nativeObj);
  }
 
- static TTheme cast(const theme_t* nativeObj) {
+ static TTheme Cast(const theme_t* nativeObj) {
    return TTheme((theme_t*)nativeObj);
  }
 
@@ -1592,11 +1588,11 @@ public:
    this->nativeObj = (vgcanvas_t*)nativeObj;
  }
 
- static TVgcanvas cast(vgcanvas_t* nativeObj) {
+ static TVgcanvas Cast(vgcanvas_t* nativeObj) {
    return TVgcanvas(nativeObj);
  }
 
- static TVgcanvas cast(const vgcanvas_t* nativeObj) {
+ static TVgcanvas Cast(const vgcanvas_t* nativeObj) {
    return TVgcanvas((vgcanvas_t*)nativeObj);
  }
 
@@ -1608,7 +1604,6 @@ public:
  
  * @return vgcanvas对象。
  */
- static TVgcanvas Cast(TVgcanvas& vg) ;
 
 /**
  * flush
@@ -2072,11 +2067,11 @@ public:
    this->nativeObj = (widget_t*)nativeObj;
  }
 
- static TWidget cast(widget_t* nativeObj) {
+ static TWidget Cast(widget_t* nativeObj) {
    return TWidget(nativeObj);
  }
 
- static TWidget cast(const widget_t* nativeObj) {
+ static TWidget Cast(const widget_t* nativeObj) {
    return TWidget((widget_t*)nativeObj);
  }
 
@@ -2688,7 +2683,6 @@ public:
  
  * @return widget对象。
  */
- static TWidget Cast(TWidget& widget) ;
 
 /**
  * 从父控件中移除控件，并调用unref函数销毁控件。
@@ -2842,11 +2836,11 @@ public:
    this->nativeObj = (timer_manager_t*)nativeObj;
  }
 
- static TTimerManager cast(timer_manager_t* nativeObj) {
+ static TTimerManager Cast(timer_manager_t* nativeObj) {
    return TTimerManager(nativeObj);
  }
 
- static TTimerManager cast(const timer_manager_t* nativeObj) {
+ static TTimerManager Cast(const timer_manager_t* nativeObj) {
    return TTimerManager((timer_manager_t*)nativeObj);
  }
 
@@ -2896,11 +2890,11 @@ public:
    this->nativeObj = (canvas_t*)nativeObj;
  }
 
- static TCanvas cast(canvas_t* nativeObj) {
+ static TCanvas Cast(canvas_t* nativeObj) {
    return TCanvas(nativeObj);
  }
 
- static TCanvas cast(const canvas_t* nativeObj) {
+ static TCanvas Cast(const canvas_t* nativeObj) {
    return TCanvas((canvas_t*)nativeObj);
  }
 
@@ -3151,7 +3145,6 @@ public:
  
  * @return canvas对象。
  */
- static TCanvas Cast(TCanvas& c) ;
 
 /**
  * 释放相关资源。
@@ -3184,11 +3177,11 @@ public:
    this->nativeObj = (named_value_t*)nativeObj;
  }
 
- static TNamedValue cast(named_value_t* nativeObj) {
+ static TNamedValue Cast(named_value_t* nativeObj) {
    return TNamedValue(nativeObj);
  }
 
- static TNamedValue cast(const named_value_t* nativeObj) {
+ static TNamedValue Cast(const named_value_t* nativeObj) {
    return TNamedValue((named_value_t*)nativeObj);
  }
 
@@ -3208,7 +3201,6 @@ public:
  
  * @return 返回named_value对象。
  */
- static TNamedValue Cast(TNamedValue& nv) ;
 
 /**
  * 设置名称。
@@ -3263,11 +3255,11 @@ public:
    this->nativeObj = (idle_manager_t*)nativeObj;
  }
 
- static TIdleManager cast(idle_manager_t* nativeObj) {
+ static TIdleManager Cast(idle_manager_t* nativeObj) {
    return TIdleManager(nativeObj);
  }
 
- static TIdleManager cast(const idle_manager_t* nativeObj) {
+ static TIdleManager Cast(const idle_manager_t* nativeObj) {
    return TIdleManager((idle_manager_t*)nativeObj);
  }
 
@@ -3290,11 +3282,11 @@ public:
    this->nativeObj = (clip_board_t*)nativeObj;
  }
 
- static TClipBoard cast(clip_board_t* nativeObj) {
+ static TClipBoard Cast(clip_board_t* nativeObj) {
    return TClipBoard(nativeObj);
  }
 
- static TClipBoard cast(const clip_board_t* nativeObj) {
+ static TClipBoard Cast(const clip_board_t* nativeObj) {
    return TClipBoard((clip_board_t*)nativeObj);
  }
 
@@ -3336,11 +3328,11 @@ public:
    this->nativeObj = (date_time_t*)nativeObj;
  }
 
- static TDateTime cast(date_time_t* nativeObj) {
+ static TDateTime Cast(date_time_t* nativeObj) {
    return TDateTime(nativeObj);
  }
 
- static TDateTime cast(const date_time_t* nativeObj) {
+ static TDateTime Cast(const date_time_t* nativeObj) {
    return TDateTime((date_time_t*)nativeObj);
  }
 
@@ -3394,11 +3386,11 @@ public:
    this->nativeObj = (color_t*)nativeObj;
  }
 
- static TColor cast(color_t* nativeObj) {
+ static TColor Cast(color_t* nativeObj) {
    return TColor(nativeObj);
  }
 
- static TColor cast(const color_t* nativeObj) {
+ static TColor Cast(const color_t* nativeObj) {
    return TColor((color_t*)nativeObj);
  }
 
@@ -3477,7 +3469,6 @@ public:
  
  * @return color对象。
  */
- static TColor Cast(TColor& color) ;
 
 /**
  * 销毁color对象。
@@ -3507,11 +3498,11 @@ public:
    this->nativeObj = (asset_info_t*)nativeObj;
  }
 
- static TAssetInfo cast(asset_info_t* nativeObj) {
+ static TAssetInfo Cast(asset_info_t* nativeObj) {
    return TAssetInfo(nativeObj);
  }
 
- static TAssetInfo cast(const asset_info_t* nativeObj) {
+ static TAssetInfo Cast(const asset_info_t* nativeObj) {
    return TAssetInfo((asset_info_t*)nativeObj);
  }
 
@@ -3568,11 +3559,11 @@ public:
    this->nativeObj = (assets_manager_t*)nativeObj;
  }
 
- static TAssetsManager cast(assets_manager_t* nativeObj) {
+ static TAssetsManager Cast(assets_manager_t* nativeObj) {
    return TAssetsManager(nativeObj);
  }
 
- static TAssetsManager cast(const assets_manager_t* nativeObj) {
+ static TAssetsManager Cast(const assets_manager_t* nativeObj) {
    return TAssetsManager((assets_manager_t*)nativeObj);
  }
 
@@ -3649,19 +3640,19 @@ public:
  TCanvasWidget(const canvas_widget_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TCanvasWidget cast(widget_t* nativeObj) {
+ static TCanvasWidget Cast(widget_t* nativeObj) {
    return TCanvasWidget(nativeObj);
  }
 
- static TCanvasWidget cast(const widget_t* nativeObj) {
+ static TCanvasWidget Cast(const widget_t* nativeObj) {
    return TCanvasWidget((widget_t*)nativeObj);
  }
 
- static TCanvasWidget cast(TWidget& obj) {
+ static TCanvasWidget Cast(TWidget& obj) {
    return TCanvasWidget(obj.nativeObj);
  }
 
- static TCanvasWidget cast(const TWidget& obj) {
+ static TCanvasWidget Cast(const TWidget& obj) {
    return TCanvasWidget(obj.nativeObj);
  }
 
@@ -3686,7 +3677,6 @@ public:
  
  * @return canvas_widget对象。
  */
- static TCanvasWidget Cast(TWidget& widget) ;
 };
 
 
@@ -3722,19 +3712,19 @@ public:
  TTimeClock(const time_clock_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TTimeClock cast(widget_t* nativeObj) {
+ static TTimeClock Cast(widget_t* nativeObj) {
    return TTimeClock(nativeObj);
  }
 
- static TTimeClock cast(const widget_t* nativeObj) {
+ static TTimeClock Cast(const widget_t* nativeObj) {
    return TTimeClock((widget_t*)nativeObj);
  }
 
- static TTimeClock cast(TWidget& obj) {
+ static TTimeClock Cast(TWidget& obj) {
    return TTimeClock(obj.nativeObj);
  }
 
- static TTimeClock cast(const TWidget& obj) {
+ static TTimeClock Cast(const TWidget& obj) {
    return TTimeClock(obj.nativeObj);
  }
 
@@ -3759,7 +3749,6 @@ public:
  
  * @return time_clock对象。
  */
- static TTimeClock Cast(TWidget& widget) ;
 
 /**
  * 设置小时的值。
@@ -3924,19 +3913,19 @@ public:
  TTextSelector(const text_selector_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TTextSelector cast(widget_t* nativeObj) {
+ static TTextSelector Cast(widget_t* nativeObj) {
    return TTextSelector(nativeObj);
  }
 
- static TTextSelector cast(const widget_t* nativeObj) {
+ static TTextSelector Cast(const widget_t* nativeObj) {
    return TTextSelector((widget_t*)nativeObj);
  }
 
- static TTextSelector cast(TWidget& obj) {
+ static TTextSelector Cast(TWidget& obj) {
    return TTextSelector(obj.nativeObj);
  }
 
- static TTextSelector cast(const TWidget& obj) {
+ static TTextSelector Cast(const TWidget& obj) {
    return TTextSelector(obj.nativeObj);
  }
 
@@ -3961,7 +3950,6 @@ public:
  
  * @return text_selector对象。
  */
- static TTextSelector Cast(TWidget& widget) ;
 
 /**
  * 重置所有选项。
@@ -4078,19 +4066,19 @@ public:
  TPropChangeEvent(const prop_change_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
  }
 
- static TPropChangeEvent cast(event_t* nativeObj) {
+ static TPropChangeEvent Cast(event_t* nativeObj) {
    return TPropChangeEvent(nativeObj);
  }
 
- static TPropChangeEvent cast(const event_t* nativeObj) {
+ static TPropChangeEvent Cast(const event_t* nativeObj) {
    return TPropChangeEvent((event_t*)nativeObj);
  }
 
- static TPropChangeEvent cast(TEvent& obj) {
+ static TPropChangeEvent Cast(TEvent& obj) {
    return TPropChangeEvent(obj.nativeObj);
  }
 
- static TPropChangeEvent cast(const TEvent& obj) {
+ static TPropChangeEvent Cast(const TEvent& obj) {
    return TPropChangeEvent(obj.nativeObj);
  }
 
@@ -4102,7 +4090,6 @@ public:
  
  * @return 返回event对象。
  */
- static TPropChangeEvent Cast(TEvent& event) ;
  const char* GetName() const;
  TValue GetValue() const;
 };
@@ -4120,19 +4107,19 @@ public:
  TProgressEvent(const progress_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
  }
 
- static TProgressEvent cast(event_t* nativeObj) {
+ static TProgressEvent Cast(event_t* nativeObj) {
    return TProgressEvent(nativeObj);
  }
 
- static TProgressEvent cast(const event_t* nativeObj) {
+ static TProgressEvent Cast(const event_t* nativeObj) {
    return TProgressEvent((event_t*)nativeObj);
  }
 
- static TProgressEvent cast(TEvent& obj) {
+ static TProgressEvent Cast(TEvent& obj) {
    return TProgressEvent(obj.nativeObj);
  }
 
- static TProgressEvent cast(const TEvent& obj) {
+ static TProgressEvent Cast(const TEvent& obj) {
    return TProgressEvent(obj.nativeObj);
  }
 
@@ -4144,7 +4131,6 @@ public:
  
  * @return 返回event对象。
  */
- static TProgressEvent Cast(TEvent& event) ;
  uint32_t GetPercent() const;
 };
 
@@ -4189,19 +4175,19 @@ public:
  TSwitch(const switch_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TSwitch cast(widget_t* nativeObj) {
+ static TSwitch Cast(widget_t* nativeObj) {
    return TSwitch(nativeObj);
  }
 
- static TSwitch cast(const widget_t* nativeObj) {
+ static TSwitch Cast(const widget_t* nativeObj) {
    return TSwitch((widget_t*)nativeObj);
  }
 
- static TSwitch cast(TWidget& obj) {
+ static TSwitch Cast(TWidget& obj) {
    return TSwitch(obj.nativeObj);
  }
 
- static TSwitch cast(const TWidget& obj) {
+ static TSwitch Cast(const TWidget& obj) {
    return TSwitch(obj.nativeObj);
  }
 
@@ -4235,7 +4221,6 @@ public:
  
  * @return switch对象。
  */
- static TSwitch Cast(TWidget& widget) ;
  bool GetValue() const;
  float_t GetMaxXoffsetRatio() const;
 };
@@ -4293,19 +4278,19 @@ public:
  TSlideView(const slide_view_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TSlideView cast(widget_t* nativeObj) {
+ static TSlideView Cast(widget_t* nativeObj) {
    return TSlideView(nativeObj);
  }
 
- static TSlideView cast(const widget_t* nativeObj) {
+ static TSlideView Cast(const widget_t* nativeObj) {
    return TSlideView((widget_t*)nativeObj);
  }
 
- static TSlideView cast(TWidget& obj) {
+ static TSlideView Cast(TWidget& obj) {
    return TSlideView(obj.nativeObj);
  }
 
- static TSlideView cast(const TWidget& obj) {
+ static TSlideView Cast(const TWidget& obj) {
    return TSlideView(obj.nativeObj);
  }
 
@@ -4330,7 +4315,6 @@ public:
  
  * @return slide_view对象。
  */
- static TSlideView Cast(TWidget& widget) ;
 
 /**
  * 设置为自动播放模式。
@@ -4434,19 +4418,19 @@ public:
  TSlideIndicator(const slide_indicator_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TSlideIndicator cast(widget_t* nativeObj) {
+ static TSlideIndicator Cast(widget_t* nativeObj) {
    return TSlideIndicator(nativeObj);
  }
 
- static TSlideIndicator cast(const widget_t* nativeObj) {
+ static TSlideIndicator Cast(const widget_t* nativeObj) {
    return TSlideIndicator((widget_t*)nativeObj);
  }
 
- static TSlideIndicator cast(TWidget& obj) {
+ static TSlideIndicator Cast(TWidget& obj) {
    return TSlideIndicator(obj.nativeObj);
  }
 
- static TSlideIndicator cast(const TWidget& obj) {
+ static TSlideIndicator Cast(const TWidget& obj) {
    return TSlideIndicator(obj.nativeObj);
  }
 
@@ -4497,7 +4481,6 @@ public:
  
  * @return slide_indicator对象。
  */
- static TSlideIndicator Cast(TWidget& widget) ;
 
 /**
  * 设置当前页的序号。
@@ -4647,19 +4630,19 @@ public:
  TSlideMenu(const slide_menu_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TSlideMenu cast(widget_t* nativeObj) {
+ static TSlideMenu Cast(widget_t* nativeObj) {
    return TSlideMenu(nativeObj);
  }
 
- static TSlideMenu cast(const widget_t* nativeObj) {
+ static TSlideMenu Cast(const widget_t* nativeObj) {
    return TSlideMenu((widget_t*)nativeObj);
  }
 
- static TSlideMenu cast(TWidget& obj) {
+ static TSlideMenu Cast(TWidget& obj) {
    return TSlideMenu(obj.nativeObj);
  }
 
- static TSlideMenu cast(const TWidget& obj) {
+ static TSlideMenu Cast(const TWidget& obj) {
    return TSlideMenu(obj.nativeObj);
  }
 
@@ -4684,7 +4667,6 @@ public:
  
  * @return slide_menu对象。
  */
- static TSlideMenu Cast(TWidget& widget) ;
 
 /**
  * 设置当前项。
@@ -4758,19 +4740,19 @@ public:
  TScrollView(const scroll_view_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TScrollView cast(widget_t* nativeObj) {
+ static TScrollView Cast(widget_t* nativeObj) {
    return TScrollView(nativeObj);
  }
 
- static TScrollView cast(const widget_t* nativeObj) {
+ static TScrollView Cast(const widget_t* nativeObj) {
    return TScrollView((widget_t*)nativeObj);
  }
 
- static TScrollView cast(TWidget& obj) {
+ static TScrollView Cast(TWidget& obj) {
    return TScrollView(obj.nativeObj);
  }
 
- static TScrollView cast(const TWidget& obj) {
+ static TScrollView Cast(const TWidget& obj) {
    return TScrollView(obj.nativeObj);
  }
 
@@ -4795,7 +4777,6 @@ public:
  
  * @return scroll_view对象。
  */
- static TScrollView Cast(TWidget& widget) ;
 
 /**
  * 设置虚拟宽度。
@@ -4929,19 +4910,19 @@ public:
  TScrollBar(const scroll_bar_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TScrollBar cast(widget_t* nativeObj) {
+ static TScrollBar Cast(widget_t* nativeObj) {
    return TScrollBar(nativeObj);
  }
 
- static TScrollBar cast(const widget_t* nativeObj) {
+ static TScrollBar Cast(const widget_t* nativeObj) {
    return TScrollBar((widget_t*)nativeObj);
  }
 
- static TScrollBar cast(TWidget& obj) {
+ static TScrollBar Cast(TWidget& obj) {
    return TScrollBar(obj.nativeObj);
  }
 
- static TScrollBar cast(const TWidget& obj) {
+ static TScrollBar Cast(const TWidget& obj) {
    return TScrollBar(obj.nativeObj);
  }
 
@@ -4968,7 +4949,6 @@ public:
  
  * @return scroll_bar对象。
  */
- static TScrollBar Cast(TWidget& widget) ;
 
 /**
  * 创建mobile风格的scroll_bar对象
@@ -5120,19 +5100,19 @@ public:
  TListView(const list_view_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TListView cast(widget_t* nativeObj) {
+ static TListView Cast(widget_t* nativeObj) {
    return TListView(nativeObj);
  }
 
- static TListView cast(const widget_t* nativeObj) {
+ static TListView Cast(const widget_t* nativeObj) {
    return TListView((widget_t*)nativeObj);
  }
 
- static TListView cast(TWidget& obj) {
+ static TListView Cast(TWidget& obj) {
    return TListView(obj.nativeObj);
  }
 
- static TListView cast(const TWidget& obj) {
+ static TListView Cast(const TWidget& obj) {
    return TListView(obj.nativeObj);
  }
 
@@ -5184,7 +5164,6 @@ public:
  
  * @return list_view对象。
  */
- static TListView Cast(TWidget& widget) ;
  int32_t GetItemHeight() const;
  int32_t GetDefaultItemHeight() const;
  bool GetAutoHideScrollBar() const;
@@ -5230,19 +5209,19 @@ public:
  TListViewH(const list_view_h_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TListViewH cast(widget_t* nativeObj) {
+ static TListViewH Cast(widget_t* nativeObj) {
    return TListViewH(nativeObj);
  }
 
- static TListViewH cast(const widget_t* nativeObj) {
+ static TListViewH Cast(const widget_t* nativeObj) {
    return TListViewH((widget_t*)nativeObj);
  }
 
- static TListViewH cast(TWidget& obj) {
+ static TListViewH Cast(TWidget& obj) {
    return TListViewH(obj.nativeObj);
  }
 
- static TListViewH cast(const TWidget& obj) {
+ static TListViewH Cast(const TWidget& obj) {
    return TListViewH(obj.nativeObj);
  }
 
@@ -5285,7 +5264,6 @@ public:
  
  * @return list_view_h对象。
  */
- static TListViewH Cast(TWidget& widget) ;
  int32_t GetItemWidth() const;
  int32_t GetSpacing() const;
 };
@@ -5344,19 +5322,19 @@ public:
  TListItem(const list_item_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TListItem cast(widget_t* nativeObj) {
+ static TListItem Cast(widget_t* nativeObj) {
    return TListItem(nativeObj);
  }
 
- static TListItem cast(const widget_t* nativeObj) {
+ static TListItem Cast(const widget_t* nativeObj) {
    return TListItem((widget_t*)nativeObj);
  }
 
- static TListItem cast(TWidget& obj) {
+ static TListItem Cast(TWidget& obj) {
    return TListItem(obj.nativeObj);
  }
 
- static TListItem cast(const TWidget& obj) {
+ static TListItem Cast(const TWidget& obj) {
    return TListItem(obj.nativeObj);
  }
 
@@ -5381,7 +5359,6 @@ public:
  
  * @return list_item对象。
  */
- static TListItem Cast(TWidget& widget) ;
 };
 
 
@@ -5421,19 +5398,19 @@ public:
  THscrollLabel(const hscroll_label_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static THscrollLabel cast(widget_t* nativeObj) {
+ static THscrollLabel Cast(widget_t* nativeObj) {
    return THscrollLabel(nativeObj);
  }
 
- static THscrollLabel cast(const widget_t* nativeObj) {
+ static THscrollLabel Cast(const widget_t* nativeObj) {
    return THscrollLabel((widget_t*)nativeObj);
  }
 
- static THscrollLabel cast(TWidget& obj) {
+ static THscrollLabel Cast(TWidget& obj) {
    return THscrollLabel(obj.nativeObj);
  }
 
- static THscrollLabel cast(const TWidget& obj) {
+ static THscrollLabel Cast(const TWidget& obj) {
    return THscrollLabel(obj.nativeObj);
  }
 
@@ -5546,7 +5523,6 @@ public:
  
  * @return hscroll_label对象。
  */
- static THscrollLabel Cast(TWidget& widget) ;
  bool GetOnlyFocus() const;
  bool GetOnlyParentFocus() const;
  bool GetLoop() const;
@@ -5607,19 +5583,19 @@ public:
  TRichText(const rich_text_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TRichText cast(widget_t* nativeObj) {
+ static TRichText Cast(widget_t* nativeObj) {
    return TRichText(nativeObj);
  }
 
- static TRichText cast(const widget_t* nativeObj) {
+ static TRichText Cast(const widget_t* nativeObj) {
    return TRichText((widget_t*)nativeObj);
  }
 
- static TRichText cast(TWidget& obj) {
+ static TRichText Cast(TWidget& obj) {
    return TRichText(obj.nativeObj);
  }
 
- static TRichText cast(const TWidget& obj) {
+ static TRichText Cast(const TWidget& obj) {
    return TRichText(obj.nativeObj);
  }
 
@@ -5653,7 +5629,6 @@ public:
  
  * @return rich_text对象。
  */
- static TRichText Cast(TWidget& widget) ;
  uint32_t GetLineGap() const;
  uint32_t GetMargin() const;
 };
@@ -5701,19 +5676,19 @@ public:
  TProgressCircle(const progress_circle_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TProgressCircle cast(widget_t* nativeObj) {
+ static TProgressCircle Cast(widget_t* nativeObj) {
    return TProgressCircle(nativeObj);
  }
 
- static TProgressCircle cast(const widget_t* nativeObj) {
+ static TProgressCircle Cast(const widget_t* nativeObj) {
    return TProgressCircle((widget_t*)nativeObj);
  }
 
- static TProgressCircle cast(TWidget& obj) {
+ static TProgressCircle Cast(TWidget& obj) {
    return TProgressCircle(obj.nativeObj);
  }
 
- static TProgressCircle cast(const TWidget& obj) {
+ static TProgressCircle Cast(const TWidget& obj) {
    return TProgressCircle(obj.nativeObj);
  }
 
@@ -5738,7 +5713,6 @@ public:
  
  * @return progress_circle对象。
  */
- static TProgressCircle Cast(TWidget& widget) ;
 
 /**
  * 设置值。
@@ -5843,19 +5817,19 @@ public:
  TMledit(const mledit_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TMledit cast(widget_t* nativeObj) {
+ static TMledit Cast(widget_t* nativeObj) {
    return TMledit(nativeObj);
  }
 
- static TMledit cast(const widget_t* nativeObj) {
+ static TMledit Cast(const widget_t* nativeObj) {
    return TMledit((widget_t*)nativeObj);
  }
 
- static TMledit cast(TWidget& obj) {
+ static TMledit Cast(TWidget& obj) {
    return TMledit(obj.nativeObj);
  }
 
- static TMledit cast(const TWidget& obj) {
+ static TMledit Cast(const TWidget& obj) {
    return TMledit(obj.nativeObj);
  }
 
@@ -5943,7 +5917,6 @@ public:
  
  * @return mledit对象。
  */
- static TMledit Cast(TWidget& widget) ;
  bool GetReadonly() const;
  char* GetTips() const;
  bool GetWrapWord() const;
@@ -5993,19 +5966,19 @@ public:
  TLineNumber(const line_number_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TLineNumber cast(widget_t* nativeObj) {
+ static TLineNumber Cast(widget_t* nativeObj) {
    return TLineNumber(nativeObj);
  }
 
- static TLineNumber cast(const widget_t* nativeObj) {
+ static TLineNumber Cast(const widget_t* nativeObj) {
    return TLineNumber((widget_t*)nativeObj);
  }
 
- static TLineNumber cast(TWidget& obj) {
+ static TLineNumber Cast(TWidget& obj) {
    return TLineNumber(obj.nativeObj);
  }
 
- static TLineNumber cast(const TWidget& obj) {
+ static TLineNumber Cast(const TWidget& obj) {
    return TLineNumber(obj.nativeObj);
  }
 
@@ -6066,7 +6039,6 @@ public:
  
  * @return line_number对象。
  */
- static TLineNumber Cast(TWidget& widget) ;
 };
 
 
@@ -6109,19 +6081,19 @@ public:
  TImageValue(const image_value_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TImageValue cast(widget_t* nativeObj) {
+ static TImageValue Cast(widget_t* nativeObj) {
    return TImageValue(nativeObj);
  }
 
- static TImageValue cast(const widget_t* nativeObj) {
+ static TImageValue Cast(const widget_t* nativeObj) {
    return TImageValue((widget_t*)nativeObj);
  }
 
- static TImageValue cast(TWidget& obj) {
+ static TImageValue Cast(TWidget& obj) {
    return TImageValue(obj.nativeObj);
  }
 
- static TImageValue cast(const TWidget& obj) {
+ static TImageValue Cast(const TWidget& obj) {
    return TImageValue(obj.nativeObj);
  }
 
@@ -6173,7 +6145,6 @@ public:
  
  * @return image_value对象。
  */
- static TImageValue Cast(TWidget& widget) ;
  char* GetImage() const;
  char* GetFormat() const;
  float_t GetValue() const;
@@ -6215,19 +6186,19 @@ public:
  TImageAnimation(const image_animation_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TImageAnimation cast(widget_t* nativeObj) {
+ static TImageAnimation Cast(widget_t* nativeObj) {
    return TImageAnimation(nativeObj);
  }
 
- static TImageAnimation cast(const widget_t* nativeObj) {
+ static TImageAnimation Cast(const widget_t* nativeObj) {
    return TImageAnimation((widget_t*)nativeObj);
  }
 
- static TImageAnimation cast(TWidget& obj) {
+ static TImageAnimation Cast(TWidget& obj) {
    return TImageAnimation(obj.nativeObj);
  }
 
- static TImageAnimation cast(const TWidget& obj) {
+ static TImageAnimation Cast(const TWidget& obj) {
    return TImageAnimation(obj.nativeObj);
  }
 
@@ -6377,7 +6348,6 @@ public:
  
  * @return image_animation对象。
  */
- static TImageAnimation Cast(TWidget& widget) ;
  char* GetImage() const;
  char* GetSequence() const;
  uint32_t GetStartIndex() const;
@@ -6433,19 +6403,19 @@ public:
  TGuage(const guage_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TGuage cast(widget_t* nativeObj) {
+ static TGuage Cast(widget_t* nativeObj) {
    return TGuage(nativeObj);
  }
 
- static TGuage cast(const widget_t* nativeObj) {
+ static TGuage Cast(const widget_t* nativeObj) {
    return TGuage((widget_t*)nativeObj);
  }
 
- static TGuage cast(TWidget& obj) {
+ static TGuage Cast(TWidget& obj) {
    return TGuage(obj.nativeObj);
  }
 
- static TGuage cast(const TWidget& obj) {
+ static TGuage Cast(const TWidget& obj) {
    return TGuage(obj.nativeObj);
  }
 
@@ -6470,7 +6440,6 @@ public:
  
  * @return guage对象。
  */
- static TGuage Cast(TWidget& widget) ;
 
 /**
  * 设置背景图片的名称。
@@ -6529,19 +6498,19 @@ public:
  TGuagePointer(const guage_pointer_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TGuagePointer cast(widget_t* nativeObj) {
+ static TGuagePointer Cast(widget_t* nativeObj) {
    return TGuagePointer(nativeObj);
  }
 
- static TGuagePointer cast(const widget_t* nativeObj) {
+ static TGuagePointer Cast(const widget_t* nativeObj) {
    return TGuagePointer((widget_t*)nativeObj);
  }
 
- static TGuagePointer cast(TWidget& obj) {
+ static TGuagePointer Cast(TWidget& obj) {
    return TGuagePointer(obj.nativeObj);
  }
 
- static TGuagePointer cast(const TWidget& obj) {
+ static TGuagePointer Cast(const TWidget& obj) {
    return TGuagePointer(obj.nativeObj);
  }
 
@@ -6566,7 +6535,6 @@ public:
  
  * @return guage_pointer对象。
  */
- static TGuagePointer Cast(TWidget& widget) ;
 
 /**
  * 设置指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。
@@ -6640,19 +6608,19 @@ public:
  TDraggable(const draggable_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TDraggable cast(widget_t* nativeObj) {
+ static TDraggable Cast(widget_t* nativeObj) {
    return TDraggable(nativeObj);
  }
 
- static TDraggable cast(const widget_t* nativeObj) {
+ static TDraggable Cast(const widget_t* nativeObj) {
    return TDraggable((widget_t*)nativeObj);
  }
 
- static TDraggable cast(TWidget& obj) {
+ static TDraggable Cast(TWidget& obj) {
    return TDraggable(obj.nativeObj);
  }
 
- static TDraggable cast(const TWidget& obj) {
+ static TDraggable Cast(const TWidget& obj) {
    return TDraggable(obj.nativeObj);
  }
 
@@ -6677,7 +6645,6 @@ public:
  
  * @return draggable对象。
  */
- static TDraggable Cast(TWidget& widget) ;
 
 /**
  * 设置top。
@@ -6792,19 +6759,19 @@ public:
  TColorPicker(const color_picker_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TColorPicker cast(widget_t* nativeObj) {
+ static TColorPicker Cast(widget_t* nativeObj) {
    return TColorPicker(nativeObj);
  }
 
- static TColorPicker cast(const widget_t* nativeObj) {
+ static TColorPicker Cast(const widget_t* nativeObj) {
    return TColorPicker((widget_t*)nativeObj);
  }
 
- static TColorPicker cast(TWidget& obj) {
+ static TColorPicker Cast(TWidget& obj) {
    return TColorPicker(obj.nativeObj);
  }
 
- static TColorPicker cast(const TWidget& obj) {
+ static TColorPicker Cast(const TWidget& obj) {
    return TColorPicker(obj.nativeObj);
  }
 
@@ -6838,7 +6805,6 @@ public:
  
  * @return color_picker对象。
  */
- static TColorPicker Cast(TWidget& widget) ;
  const char* GetValue() const;
 };
 
@@ -6858,19 +6824,19 @@ public:
  TColorComponent(const color_component_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TColorComponent cast(widget_t* nativeObj) {
+ static TColorComponent Cast(widget_t* nativeObj) {
    return TColorComponent(nativeObj);
  }
 
- static TColorComponent cast(const widget_t* nativeObj) {
+ static TColorComponent Cast(const widget_t* nativeObj) {
    return TColorComponent((widget_t*)nativeObj);
  }
 
- static TColorComponent cast(TWidget& obj) {
+ static TColorComponent Cast(TWidget& obj) {
    return TColorComponent(obj.nativeObj);
  }
 
- static TColorComponent cast(const TWidget& obj) {
+ static TColorComponent Cast(const TWidget& obj) {
    return TColorComponent(obj.nativeObj);
  }
 
@@ -6882,7 +6848,6 @@ public:
  
  * @return color_component对象。
  */
- static TColorComponent Cast(TWidget& widget) ;
 };
 
 
@@ -6898,19 +6863,19 @@ public:
  TWindowManager(const window_manager_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TWindowManager cast(widget_t* nativeObj) {
+ static TWindowManager Cast(widget_t* nativeObj) {
    return TWindowManager(nativeObj);
  }
 
- static TWindowManager cast(const widget_t* nativeObj) {
+ static TWindowManager Cast(const widget_t* nativeObj) {
    return TWindowManager((widget_t*)nativeObj);
  }
 
- static TWindowManager cast(TWidget& obj) {
+ static TWindowManager Cast(TWidget& obj) {
    return TWindowManager(obj.nativeObj);
  }
 
- static TWindowManager cast(const TWidget& obj) {
+ static TWindowManager Cast(const TWidget& obj) {
    return TWindowManager(obj.nativeObj);
  }
 
@@ -6921,7 +6886,6 @@ public:
  
  * @return 对象。
  */
- static TWindowManager Instance() ;
 
 /**
  * 转换为window_manager对象(供脚本语言使用)。
@@ -6930,7 +6894,6 @@ public:
  
  * @return window_manager对象。
  */
- static TWindowManager Cast(TWidget& widget) ;
 
 /**
  * 获取最上面的主窗口。
@@ -7058,19 +7021,19 @@ public:
  TWindowBase(const window_base_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TWindowBase cast(widget_t* nativeObj) {
+ static TWindowBase Cast(widget_t* nativeObj) {
    return TWindowBase(nativeObj);
  }
 
- static TWindowBase cast(const widget_t* nativeObj) {
+ static TWindowBase Cast(const widget_t* nativeObj) {
    return TWindowBase((widget_t*)nativeObj);
  }
 
- static TWindowBase cast(TWidget& obj) {
+ static TWindowBase Cast(TWidget& obj) {
    return TWindowBase(obj.nativeObj);
  }
 
- static TWindowBase cast(const TWidget& obj) {
+ static TWindowBase Cast(const TWidget& obj) {
    return TWindowBase(obj.nativeObj);
  }
 
@@ -7082,7 +7045,6 @@ public:
  
  * @return window_base对象。
  */
- static TWindowBase Cast(TWidget& widget) ;
  char* GetTheme() const;
  window_closable_t GetClosable() const;
 };
@@ -7102,19 +7064,19 @@ public:
  TStyleMutable(const style_mutable_t* nativeObj) : TStyle((style_t*)nativeObj) {
  }
 
- static TStyleMutable cast(style_t* nativeObj) {
+ static TStyleMutable Cast(style_t* nativeObj) {
    return TStyleMutable(nativeObj);
  }
 
- static TStyleMutable cast(const style_t* nativeObj) {
+ static TStyleMutable Cast(const style_t* nativeObj) {
    return TStyleMutable((style_t*)nativeObj);
  }
 
- static TStyleMutable cast(TStyle& obj) {
+ static TStyleMutable Cast(TStyle& obj) {
    return TStyleMutable(obj.nativeObj);
  }
 
- static TStyleMutable cast(const TStyle& obj) {
+ static TStyleMutable Cast(const TStyle& obj) {
    return TStyleMutable(obj.nativeObj);
  }
 
@@ -7146,7 +7108,6 @@ public:
  
  * @return style对象。
  */
- static TStyleMutable Cast(TStyle& s) ;
 
 /**
  * 创建style\_mutable对象。
@@ -7189,19 +7150,19 @@ public:
  TImageBase(const image_base_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TImageBase cast(widget_t* nativeObj) {
+ static TImageBase Cast(widget_t* nativeObj) {
    return TImageBase(nativeObj);
  }
 
- static TImageBase cast(const widget_t* nativeObj) {
+ static TImageBase Cast(const widget_t* nativeObj) {
    return TImageBase((widget_t*)nativeObj);
  }
 
- static TImageBase cast(TWidget& obj) {
+ static TImageBase Cast(TWidget& obj) {
    return TImageBase(obj.nativeObj);
  }
 
- static TImageBase cast(const TWidget& obj) {
+ static TImageBase Cast(const TWidget& obj) {
    return TImageBase(obj.nativeObj);
  }
 
@@ -7280,7 +7241,6 @@ public:
  
  * @return image_base对象。
  */
- static TImageBase Cast(TWidget& widget) ;
  char* GetImage() const;
  float_t GetAnchorX() const;
  float_t GetAnchorY() const;
@@ -7305,19 +7265,19 @@ public:
  TWindowEvent(const window_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
  }
 
- static TWindowEvent cast(event_t* nativeObj) {
+ static TWindowEvent Cast(event_t* nativeObj) {
    return TWindowEvent(nativeObj);
  }
 
- static TWindowEvent cast(const event_t* nativeObj) {
+ static TWindowEvent Cast(const event_t* nativeObj) {
    return TWindowEvent((event_t*)nativeObj);
  }
 
- static TWindowEvent cast(TEvent& obj) {
+ static TWindowEvent Cast(TEvent& obj) {
    return TWindowEvent(obj.nativeObj);
  }
 
- static TWindowEvent cast(const TEvent& obj) {
+ static TWindowEvent Cast(const TEvent& obj) {
    return TWindowEvent(obj.nativeObj);
  }
 
@@ -7329,7 +7289,6 @@ public:
  
  * @return 对象。
  */
- static TWindowEvent Cast(TEvent& event) ;
  TWidget GetWindow() const;
 };
 
@@ -7346,19 +7305,19 @@ public:
  TPaintEvent(const paint_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
  }
 
- static TPaintEvent cast(event_t* nativeObj) {
+ static TPaintEvent Cast(event_t* nativeObj) {
    return TPaintEvent(nativeObj);
  }
 
- static TPaintEvent cast(const event_t* nativeObj) {
+ static TPaintEvent Cast(const event_t* nativeObj) {
    return TPaintEvent((event_t*)nativeObj);
  }
 
- static TPaintEvent cast(TEvent& obj) {
+ static TPaintEvent Cast(TEvent& obj) {
    return TPaintEvent(obj.nativeObj);
  }
 
- static TPaintEvent cast(const TEvent& obj) {
+ static TPaintEvent Cast(const TEvent& obj) {
    return TPaintEvent(obj.nativeObj);
  }
 
@@ -7370,7 +7329,6 @@ public:
  
  * @return event 对象。
  */
- static TPaintEvent Cast(TEvent& event) ;
  TCanvas GetC() const;
 };
 
@@ -7387,19 +7345,19 @@ public:
  TKeyEvent(const key_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
  }
 
- static TKeyEvent cast(event_t* nativeObj) {
+ static TKeyEvent Cast(event_t* nativeObj) {
    return TKeyEvent(nativeObj);
  }
 
- static TKeyEvent cast(const event_t* nativeObj) {
+ static TKeyEvent Cast(const event_t* nativeObj) {
    return TKeyEvent((event_t*)nativeObj);
  }
 
- static TKeyEvent cast(TEvent& obj) {
+ static TKeyEvent Cast(TEvent& obj) {
    return TKeyEvent(obj.nativeObj);
  }
 
- static TKeyEvent cast(const TEvent& obj) {
+ static TKeyEvent Cast(const TEvent& obj) {
    return TKeyEvent(obj.nativeObj);
  }
 
@@ -7411,7 +7369,6 @@ public:
  
  * @return event对象。
  */
- static TKeyEvent Cast(TEvent& event) ;
  uint32_t GetKey() const;
  bool GetAlt() const;
  bool GetLalt() const;
@@ -7440,19 +7397,19 @@ public:
  TPointerEvent(const pointer_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
  }
 
- static TPointerEvent cast(event_t* nativeObj) {
+ static TPointerEvent Cast(event_t* nativeObj) {
    return TPointerEvent(nativeObj);
  }
 
- static TPointerEvent cast(const event_t* nativeObj) {
+ static TPointerEvent Cast(const event_t* nativeObj) {
    return TPointerEvent((event_t*)nativeObj);
  }
 
- static TPointerEvent cast(TEvent& obj) {
+ static TPointerEvent Cast(TEvent& obj) {
    return TPointerEvent(obj.nativeObj);
  }
 
- static TPointerEvent cast(const TEvent& obj) {
+ static TPointerEvent Cast(const TEvent& obj) {
    return TPointerEvent(obj.nativeObj);
  }
 
@@ -7464,7 +7421,6 @@ public:
  
  * @return event对象。
  */
- static TPointerEvent Cast(TEvent& event) ;
  xy_t GetX() const;
  xy_t GetY() const;
  uint8_t GetButton() const;
@@ -7489,19 +7445,19 @@ public:
  TOrientationEvent(const orientation_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
  }
 
- static TOrientationEvent cast(event_t* nativeObj) {
+ static TOrientationEvent Cast(event_t* nativeObj) {
    return TOrientationEvent(nativeObj);
  }
 
- static TOrientationEvent cast(const event_t* nativeObj) {
+ static TOrientationEvent Cast(const event_t* nativeObj) {
    return TOrientationEvent((event_t*)nativeObj);
  }
 
- static TOrientationEvent cast(TEvent& obj) {
+ static TOrientationEvent Cast(TEvent& obj) {
    return TOrientationEvent(obj.nativeObj);
  }
 
- static TOrientationEvent cast(const TEvent& obj) {
+ static TOrientationEvent Cast(const TEvent& obj) {
    return TOrientationEvent(obj.nativeObj);
  }
 
@@ -7513,7 +7469,6 @@ public:
  
  * @return event对象。
  */
- static TOrientationEvent Cast(TEvent& event) ;
  int32_t GetOrientation() const;
 };
 
@@ -7530,19 +7485,19 @@ public:
  TWheelEvent(const wheel_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
  }
 
- static TWheelEvent cast(event_t* nativeObj) {
+ static TWheelEvent Cast(event_t* nativeObj) {
    return TWheelEvent(nativeObj);
  }
 
- static TWheelEvent cast(const event_t* nativeObj) {
+ static TWheelEvent Cast(const event_t* nativeObj) {
    return TWheelEvent((event_t*)nativeObj);
  }
 
- static TWheelEvent cast(TEvent& obj) {
+ static TWheelEvent Cast(TEvent& obj) {
    return TWheelEvent(obj.nativeObj);
  }
 
- static TWheelEvent cast(const TEvent& obj) {
+ static TWheelEvent Cast(const TEvent& obj) {
    return TWheelEvent(obj.nativeObj);
  }
 
@@ -7554,7 +7509,6 @@ public:
  
  * @return event对象。
  */
- static TWheelEvent Cast(TEvent& event) ;
  int32_t GetDy() const;
  bool GetAlt() const;
  bool GetCtrl() const;
@@ -7601,19 +7555,19 @@ public:
  TAppBar(const app_bar_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TAppBar cast(widget_t* nativeObj) {
+ static TAppBar Cast(widget_t* nativeObj) {
    return TAppBar(nativeObj);
  }
 
- static TAppBar cast(const widget_t* nativeObj) {
+ static TAppBar Cast(const widget_t* nativeObj) {
    return TAppBar((widget_t*)nativeObj);
  }
 
- static TAppBar cast(TWidget& obj) {
+ static TAppBar Cast(TWidget& obj) {
    return TAppBar(obj.nativeObj);
  }
 
- static TAppBar cast(const TWidget& obj) {
+ static TAppBar Cast(const TWidget& obj) {
    return TAppBar(obj.nativeObj);
  }
 
@@ -7638,7 +7592,6 @@ public:
  
  * @return app_bar对象。
  */
- static TAppBar Cast(TWidget& widget) ;
 };
 
 
@@ -7679,19 +7632,19 @@ public:
  TButtonGroup(const button_group_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TButtonGroup cast(widget_t* nativeObj) {
+ static TButtonGroup Cast(widget_t* nativeObj) {
    return TButtonGroup(nativeObj);
  }
 
- static TButtonGroup cast(const widget_t* nativeObj) {
+ static TButtonGroup Cast(const widget_t* nativeObj) {
    return TButtonGroup((widget_t*)nativeObj);
  }
 
- static TButtonGroup cast(TWidget& obj) {
+ static TButtonGroup Cast(TWidget& obj) {
    return TButtonGroup(obj.nativeObj);
  }
 
- static TButtonGroup cast(const TWidget& obj) {
+ static TButtonGroup Cast(const TWidget& obj) {
    return TButtonGroup(obj.nativeObj);
  }
 
@@ -7716,7 +7669,6 @@ public:
  
  * @return button_group对象。
  */
- static TButtonGroup Cast(TWidget& widget) ;
 };
 
 
@@ -7770,19 +7722,19 @@ public:
  TButton(const button_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TButton cast(widget_t* nativeObj) {
+ static TButton Cast(widget_t* nativeObj) {
    return TButton(nativeObj);
  }
 
- static TButton cast(const widget_t* nativeObj) {
+ static TButton Cast(const widget_t* nativeObj) {
    return TButton((widget_t*)nativeObj);
  }
 
- static TButton cast(TWidget& obj) {
+ static TButton Cast(TWidget& obj) {
    return TButton(obj.nativeObj);
  }
 
- static TButton cast(const TWidget& obj) {
+ static TButton Cast(const TWidget& obj) {
    return TButton(obj.nativeObj);
  }
 
@@ -7807,7 +7759,6 @@ public:
  
  * @return button对象。
  */
- static TButton Cast(TWidget& widget) ;
 
 /**
  * 设置触发EVT\_CLICK事件的时间间隔。为0则不重复触发EVT\_CLICK事件。
@@ -7886,19 +7837,19 @@ public:
  TCheckButton(const check_button_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TCheckButton cast(widget_t* nativeObj) {
+ static TCheckButton Cast(widget_t* nativeObj) {
    return TCheckButton(nativeObj);
  }
 
- static TCheckButton cast(const widget_t* nativeObj) {
+ static TCheckButton Cast(const widget_t* nativeObj) {
    return TCheckButton((widget_t*)nativeObj);
  }
 
- static TCheckButton cast(TWidget& obj) {
+ static TCheckButton Cast(TWidget& obj) {
    return TCheckButton(obj.nativeObj);
  }
 
- static TCheckButton cast(const TWidget& obj) {
+ static TCheckButton Cast(const TWidget& obj) {
    return TCheckButton(obj.nativeObj);
  }
 
@@ -7945,7 +7896,6 @@ public:
  
  * @return check_button对象。
  */
- static TCheckButton Cast(TWidget& widget) ;
  bool GetValue() const;
 };
 
@@ -7986,19 +7936,19 @@ public:
  TClipView(const clip_view_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TClipView cast(widget_t* nativeObj) {
+ static TClipView Cast(widget_t* nativeObj) {
    return TClipView(nativeObj);
  }
 
- static TClipView cast(const widget_t* nativeObj) {
+ static TClipView Cast(const widget_t* nativeObj) {
    return TClipView((widget_t*)nativeObj);
  }
 
- static TClipView cast(TWidget& obj) {
+ static TClipView Cast(TWidget& obj) {
    return TClipView(obj.nativeObj);
  }
 
- static TClipView cast(const TWidget& obj) {
+ static TClipView Cast(const TWidget& obj) {
    return TClipView(obj.nativeObj);
  }
 
@@ -8023,7 +7973,6 @@ public:
  
  * @return clip_view对象。
  */
- static TClipView Cast(TWidget& widget) ;
 };
 
 
@@ -8058,19 +8007,19 @@ public:
  TColorTile(const color_tile_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TColorTile cast(widget_t* nativeObj) {
+ static TColorTile Cast(widget_t* nativeObj) {
    return TColorTile(nativeObj);
  }
 
- static TColorTile cast(const widget_t* nativeObj) {
+ static TColorTile Cast(const widget_t* nativeObj) {
    return TColorTile((widget_t*)nativeObj);
  }
 
- static TColorTile cast(TWidget& obj) {
+ static TColorTile Cast(TWidget& obj) {
    return TColorTile(obj.nativeObj);
  }
 
- static TColorTile cast(const TWidget& obj) {
+ static TColorTile Cast(const TWidget& obj) {
    return TColorTile(obj.nativeObj);
  }
 
@@ -8095,7 +8044,6 @@ public:
  
  * @return color_tile对象。
  */
- static TColorTile Cast(TWidget& widget) ;
 
 /**
  * 设置背景颜色。
@@ -8147,19 +8095,19 @@ public:
  TColumn(const column_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TColumn cast(widget_t* nativeObj) {
+ static TColumn Cast(widget_t* nativeObj) {
    return TColumn(nativeObj);
  }
 
- static TColumn cast(const widget_t* nativeObj) {
+ static TColumn Cast(const widget_t* nativeObj) {
    return TColumn((widget_t*)nativeObj);
  }
 
- static TColumn cast(TWidget& obj) {
+ static TColumn Cast(TWidget& obj) {
    return TColumn(obj.nativeObj);
  }
 
- static TColumn cast(const TWidget& obj) {
+ static TColumn Cast(const TWidget& obj) {
    return TColumn(obj.nativeObj);
  }
 
@@ -8184,7 +8132,6 @@ public:
  
  * @return column对象。
  */
- static TColumn Cast(TWidget& widget) ;
 };
 
 
@@ -8202,19 +8149,19 @@ public:
  TComboBoxItem(const combo_box_item_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TComboBoxItem cast(widget_t* nativeObj) {
+ static TComboBoxItem Cast(widget_t* nativeObj) {
    return TComboBoxItem(nativeObj);
  }
 
- static TComboBoxItem cast(const widget_t* nativeObj) {
+ static TComboBoxItem Cast(const widget_t* nativeObj) {
    return TComboBoxItem((widget_t*)nativeObj);
  }
 
- static TComboBoxItem cast(TWidget& obj) {
+ static TComboBoxItem Cast(TWidget& obj) {
    return TComboBoxItem(obj.nativeObj);
  }
 
- static TComboBoxItem cast(const TWidget& obj) {
+ static TComboBoxItem Cast(const TWidget& obj) {
    return TComboBoxItem(obj.nativeObj);
  }
 
@@ -8239,7 +8186,6 @@ public:
  
  * @return combo_box_item对象。
  */
- static TComboBoxItem Cast(TWidget& widget) ;
 
 /**
  * 设置控件是否被选中。
@@ -8377,19 +8323,19 @@ public:
  TComboBox(const combo_box_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TComboBox cast(widget_t* nativeObj) {
+ static TComboBox Cast(widget_t* nativeObj) {
    return TComboBox(nativeObj);
  }
 
- static TComboBox cast(const widget_t* nativeObj) {
+ static TComboBox Cast(const widget_t* nativeObj) {
    return TComboBox((widget_t*)nativeObj);
  }
 
- static TComboBox cast(TWidget& obj) {
+ static TComboBox Cast(TWidget& obj) {
    return TComboBox(obj.nativeObj);
  }
 
- static TComboBox cast(const TWidget& obj) {
+ static TComboBox Cast(const TWidget& obj) {
    return TComboBox(obj.nativeObj);
  }
 
@@ -8414,7 +8360,6 @@ public:
  
  * @return combo_box对象。
  */
- static TComboBox Cast(TWidget& widget) ;
 
 /**
  * 点击按钮时可以打开popup窗口，本函数可设置窗口的名称。
@@ -8553,19 +8498,19 @@ public:
  TDialogClient(const dialog_client_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TDialogClient cast(widget_t* nativeObj) {
+ static TDialogClient Cast(widget_t* nativeObj) {
    return TDialogClient(nativeObj);
  }
 
- static TDialogClient cast(const widget_t* nativeObj) {
+ static TDialogClient Cast(const widget_t* nativeObj) {
    return TDialogClient((widget_t*)nativeObj);
  }
 
- static TDialogClient cast(TWidget& obj) {
+ static TDialogClient Cast(TWidget& obj) {
    return TDialogClient(obj.nativeObj);
  }
 
- static TDialogClient cast(const TWidget& obj) {
+ static TDialogClient Cast(const TWidget& obj) {
    return TDialogClient(obj.nativeObj);
  }
 
@@ -8590,7 +8535,6 @@ public:
  
  * @return dialog_client对象。
  */
- static TDialogClient Cast(TWidget& widget) ;
 };
 
 
@@ -8627,19 +8571,19 @@ public:
  TDialogTitle(const dialog_title_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TDialogTitle cast(widget_t* nativeObj) {
+ static TDialogTitle Cast(widget_t* nativeObj) {
    return TDialogTitle(nativeObj);
  }
 
- static TDialogTitle cast(const widget_t* nativeObj) {
+ static TDialogTitle Cast(const widget_t* nativeObj) {
    return TDialogTitle((widget_t*)nativeObj);
  }
 
- static TDialogTitle cast(TWidget& obj) {
+ static TDialogTitle Cast(TWidget& obj) {
    return TDialogTitle(obj.nativeObj);
  }
 
- static TDialogTitle cast(const TWidget& obj) {
+ static TDialogTitle Cast(const TWidget& obj) {
    return TDialogTitle(obj.nativeObj);
  }
 
@@ -8664,7 +8608,6 @@ public:
  
  * @return dialog_title对象。
  */
- static TDialogTitle Cast(TWidget& widget) ;
 };
 
 
@@ -8708,19 +8651,19 @@ public:
  TDigitClock(const digit_clock_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TDigitClock cast(widget_t* nativeObj) {
+ static TDigitClock Cast(widget_t* nativeObj) {
    return TDigitClock(nativeObj);
  }
 
- static TDigitClock cast(const widget_t* nativeObj) {
+ static TDigitClock Cast(const widget_t* nativeObj) {
    return TDigitClock((widget_t*)nativeObj);
  }
 
- static TDigitClock cast(TWidget& obj) {
+ static TDigitClock Cast(TWidget& obj) {
    return TDigitClock(obj.nativeObj);
  }
 
- static TDigitClock cast(const TWidget& obj) {
+ static TDigitClock Cast(const TWidget& obj) {
    return TDigitClock(obj.nativeObj);
  }
 
@@ -8745,7 +8688,6 @@ public:
  
  * @return digit_clock对象。
  */
- static TDigitClock Cast(TWidget& widget) ;
 
 /**
  * 设置显示格式。
@@ -8773,19 +8715,19 @@ public:
  TDragger(const dragger_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TDragger cast(widget_t* nativeObj) {
+ static TDragger Cast(widget_t* nativeObj) {
    return TDragger(nativeObj);
  }
 
- static TDragger cast(const widget_t* nativeObj) {
+ static TDragger Cast(const widget_t* nativeObj) {
    return TDragger((widget_t*)nativeObj);
  }
 
- static TDragger cast(TWidget& obj) {
+ static TDragger Cast(TWidget& obj) {
    return TDragger(obj.nativeObj);
  }
 
- static TDragger cast(const TWidget& obj) {
+ static TDragger Cast(const TWidget& obj) {
    return TDragger(obj.nativeObj);
  }
 
@@ -8810,7 +8752,6 @@ public:
  
  * @return dragger对象。
  */
- static TDragger Cast(TWidget& widget) ;
 
 /**
  * 设置拖动的范围。
@@ -8891,19 +8832,19 @@ public:
  TEdit(const edit_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TEdit cast(widget_t* nativeObj) {
+ static TEdit Cast(widget_t* nativeObj) {
    return TEdit(nativeObj);
  }
 
- static TEdit cast(const widget_t* nativeObj) {
+ static TEdit Cast(const widget_t* nativeObj) {
    return TEdit((widget_t*)nativeObj);
  }
 
- static TEdit cast(TWidget& obj) {
+ static TEdit Cast(TWidget& obj) {
    return TEdit(obj.nativeObj);
  }
 
- static TEdit cast(const TWidget& obj) {
+ static TEdit Cast(const TWidget& obj) {
    return TEdit(obj.nativeObj);
  }
 
@@ -8928,7 +8869,6 @@ public:
  
  * @return edit对象。
  */
- static TEdit Cast(TWidget& widget) ;
 
 /**
  * 获取int类型的值。
@@ -9135,19 +9075,19 @@ public:
  TGridItem(const grid_item_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TGridItem cast(widget_t* nativeObj) {
+ static TGridItem Cast(widget_t* nativeObj) {
    return TGridItem(nativeObj);
  }
 
- static TGridItem cast(const widget_t* nativeObj) {
+ static TGridItem Cast(const widget_t* nativeObj) {
    return TGridItem((widget_t*)nativeObj);
  }
 
- static TGridItem cast(TWidget& obj) {
+ static TGridItem Cast(TWidget& obj) {
    return TGridItem(obj.nativeObj);
  }
 
- static TGridItem cast(const TWidget& obj) {
+ static TGridItem Cast(const TWidget& obj) {
    return TGridItem(obj.nativeObj);
  }
 
@@ -9172,7 +9112,6 @@ public:
  
  * @return grid_item对象。
  */
- static TGridItem Cast(TWidget& widget) ;
 };
 
 
@@ -9213,19 +9152,19 @@ public:
  TGrid(const grid_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TGrid cast(widget_t* nativeObj) {
+ static TGrid Cast(widget_t* nativeObj) {
    return TGrid(nativeObj);
  }
 
- static TGrid cast(const widget_t* nativeObj) {
+ static TGrid Cast(const widget_t* nativeObj) {
    return TGrid((widget_t*)nativeObj);
  }
 
- static TGrid cast(TWidget& obj) {
+ static TGrid Cast(TWidget& obj) {
    return TGrid(obj.nativeObj);
  }
 
- static TGrid cast(const TWidget& obj) {
+ static TGrid Cast(const TWidget& obj) {
    return TGrid(obj.nativeObj);
  }
 
@@ -9250,7 +9189,6 @@ public:
  
  * @return grid对象。
  */
- static TGrid Cast(TWidget& widget) ;
 };
 
 
@@ -9292,19 +9230,19 @@ public:
  TGroupBox(const group_box_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TGroupBox cast(widget_t* nativeObj) {
+ static TGroupBox Cast(widget_t* nativeObj) {
    return TGroupBox(nativeObj);
  }
 
- static TGroupBox cast(const widget_t* nativeObj) {
+ static TGroupBox Cast(const widget_t* nativeObj) {
    return TGroupBox((widget_t*)nativeObj);
  }
 
- static TGroupBox cast(TWidget& obj) {
+ static TGroupBox Cast(TWidget& obj) {
    return TGroupBox(obj.nativeObj);
  }
 
- static TGroupBox cast(const TWidget& obj) {
+ static TGroupBox Cast(const TWidget& obj) {
    return TGroupBox(obj.nativeObj);
  }
 
@@ -9329,7 +9267,6 @@ public:
  
  * @return group_box对象。
  */
- static TGroupBox Cast(TWidget& widget) ;
 };
 
 
@@ -9380,19 +9317,19 @@ public:
  TLabel(const label_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TLabel cast(widget_t* nativeObj) {
+ static TLabel Cast(widget_t* nativeObj) {
    return TLabel(nativeObj);
  }
 
- static TLabel cast(const widget_t* nativeObj) {
+ static TLabel Cast(const widget_t* nativeObj) {
    return TLabel((widget_t*)nativeObj);
  }
 
- static TLabel cast(TWidget& obj) {
+ static TLabel Cast(TWidget& obj) {
    return TLabel(obj.nativeObj);
  }
 
- static TLabel cast(const TWidget& obj) {
+ static TLabel Cast(const TWidget& obj) {
    return TLabel(obj.nativeObj);
  }
 
@@ -9438,7 +9375,6 @@ public:
  
  * @return label对象。
  */
- static TLabel Cast(TWidget& widget) ;
  int32_t GetLength() const;
 };
 
@@ -9489,19 +9425,19 @@ public:
  TOverlay(const overlay_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TOverlay cast(widget_t* nativeObj) {
+ static TOverlay Cast(widget_t* nativeObj) {
    return TOverlay(nativeObj);
  }
 
- static TOverlay cast(const widget_t* nativeObj) {
+ static TOverlay Cast(const widget_t* nativeObj) {
    return TOverlay((widget_t*)nativeObj);
  }
 
- static TOverlay cast(TWidget& obj) {
+ static TOverlay Cast(TWidget& obj) {
    return TOverlay(obj.nativeObj);
  }
 
- static TOverlay cast(const TWidget& obj) {
+ static TOverlay Cast(const TWidget& obj) {
    return TOverlay(obj.nativeObj);
  }
 
@@ -9526,7 +9462,6 @@ public:
  
  * @return overlay对象。
  */
- static TOverlay Cast(TWidget& widget) ;
 };
 
 
@@ -9564,19 +9499,19 @@ public:
  TPages(const pages_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TPages cast(widget_t* nativeObj) {
+ static TPages Cast(widget_t* nativeObj) {
    return TPages(nativeObj);
  }
 
- static TPages cast(const widget_t* nativeObj) {
+ static TPages Cast(const widget_t* nativeObj) {
    return TPages((widget_t*)nativeObj);
  }
 
- static TPages cast(TWidget& obj) {
+ static TPages Cast(TWidget& obj) {
    return TPages(obj.nativeObj);
  }
 
- static TPages cast(const TWidget& obj) {
+ static TPages Cast(const TWidget& obj) {
    return TPages(obj.nativeObj);
  }
 
@@ -9601,7 +9536,6 @@ public:
  
  * @return pages对象。
  */
- static TPages Cast(TWidget& widget) ;
 
 /**
  * 设置当前的Page。
@@ -9668,19 +9602,19 @@ public:
  TProgressBar(const progress_bar_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TProgressBar cast(widget_t* nativeObj) {
+ static TProgressBar Cast(widget_t* nativeObj) {
    return TProgressBar(nativeObj);
  }
 
- static TProgressBar cast(const widget_t* nativeObj) {
+ static TProgressBar Cast(const widget_t* nativeObj) {
    return TProgressBar((widget_t*)nativeObj);
  }
 
- static TProgressBar cast(TWidget& obj) {
+ static TProgressBar Cast(TWidget& obj) {
    return TProgressBar(obj.nativeObj);
  }
 
- static TProgressBar cast(const TWidget& obj) {
+ static TProgressBar Cast(const TWidget& obj) {
    return TProgressBar(obj.nativeObj);
  }
 
@@ -9705,7 +9639,6 @@ public:
  
  * @return progress_bar对象。
  */
- static TProgressBar Cast(TWidget& widget) ;
 
 /**
  * 设置进度条的进度。
@@ -9796,19 +9729,19 @@ public:
  TRow(const row_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TRow cast(widget_t* nativeObj) {
+ static TRow Cast(widget_t* nativeObj) {
    return TRow(nativeObj);
  }
 
- static TRow cast(const widget_t* nativeObj) {
+ static TRow Cast(const widget_t* nativeObj) {
    return TRow((widget_t*)nativeObj);
  }
 
- static TRow cast(TWidget& obj) {
+ static TRow Cast(TWidget& obj) {
    return TRow(obj.nativeObj);
  }
 
- static TRow cast(const TWidget& obj) {
+ static TRow Cast(const TWidget& obj) {
    return TRow(obj.nativeObj);
  }
 
@@ -9833,7 +9766,6 @@ public:
  
  * @return row对象。
  */
- static TRow Cast(TWidget& widget) ;
 };
 
 
@@ -9882,19 +9814,19 @@ public:
  TSlider(const slider_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TSlider cast(widget_t* nativeObj) {
+ static TSlider Cast(widget_t* nativeObj) {
    return TSlider(nativeObj);
  }
 
- static TSlider cast(const widget_t* nativeObj) {
+ static TSlider Cast(const widget_t* nativeObj) {
    return TSlider((widget_t*)nativeObj);
  }
 
- static TSlider cast(TWidget& obj) {
+ static TSlider Cast(TWidget& obj) {
    return TSlider(obj.nativeObj);
  }
 
- static TSlider cast(const TWidget& obj) {
+ static TSlider Cast(const TWidget& obj) {
    return TSlider(obj.nativeObj);
  }
 
@@ -9919,7 +9851,6 @@ public:
  
  * @return slider对象。
  */
- static TSlider Cast(TWidget& widget) ;
 
 /**
  * 设置滑块的值。
@@ -10026,19 +9957,19 @@ public:
  TTabButtonGroup(const tab_button_group_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TTabButtonGroup cast(widget_t* nativeObj) {
+ static TTabButtonGroup Cast(widget_t* nativeObj) {
    return TTabButtonGroup(nativeObj);
  }
 
- static TTabButtonGroup cast(const widget_t* nativeObj) {
+ static TTabButtonGroup Cast(const widget_t* nativeObj) {
    return TTabButtonGroup((widget_t*)nativeObj);
  }
 
- static TTabButtonGroup cast(TWidget& obj) {
+ static TTabButtonGroup Cast(TWidget& obj) {
    return TTabButtonGroup(obj.nativeObj);
  }
 
- static TTabButtonGroup cast(const TWidget& obj) {
+ static TTabButtonGroup Cast(const TWidget& obj) {
    return TTabButtonGroup(obj.nativeObj);
  }
 
@@ -10081,7 +10012,6 @@ public:
  
  * @return tab_button_group对象。
  */
- static TTabButtonGroup Cast(TWidget& widget) ;
  bool GetCompact() const;
  bool GetScrollable() const;
 };
@@ -10156,19 +10086,19 @@ public:
  TTabButton(const tab_button_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TTabButton cast(widget_t* nativeObj) {
+ static TTabButton Cast(widget_t* nativeObj) {
    return TTabButton(nativeObj);
  }
 
- static TTabButton cast(const widget_t* nativeObj) {
+ static TTabButton Cast(const widget_t* nativeObj) {
    return TTabButton((widget_t*)nativeObj);
  }
 
- static TTabButton cast(TWidget& obj) {
+ static TTabButton Cast(TWidget& obj) {
    return TTabButton(obj.nativeObj);
  }
 
- static TTabButton cast(const TWidget& obj) {
+ static TTabButton Cast(const TWidget& obj) {
    return TTabButton(obj.nativeObj);
  }
 
@@ -10193,7 +10123,6 @@ public:
  
  * @return tab_button对象。
  */
- static TTabButton Cast(TWidget& widget) ;
 
 /**
  * 设置为当前标签。
@@ -10274,19 +10203,19 @@ public:
  TTabControl(const tab_control_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TTabControl cast(widget_t* nativeObj) {
+ static TTabControl Cast(widget_t* nativeObj) {
    return TTabControl(nativeObj);
  }
 
- static TTabControl cast(const widget_t* nativeObj) {
+ static TTabControl Cast(const widget_t* nativeObj) {
    return TTabControl((widget_t*)nativeObj);
  }
 
- static TTabControl cast(TWidget& obj) {
+ static TTabControl Cast(TWidget& obj) {
    return TTabControl(obj.nativeObj);
  }
 
- static TTabControl cast(const TWidget& obj) {
+ static TTabControl Cast(const TWidget& obj) {
    return TTabControl(obj.nativeObj);
  }
 
@@ -10311,7 +10240,6 @@ public:
  
  * @return tab_control对象。
  */
- static TTabControl Cast(TWidget& widget) ;
 };
 
 
@@ -10348,19 +10276,19 @@ public:
  TView(const view_t* nativeObj) : TWidget((widget_t*)nativeObj) {
  }
 
- static TView cast(widget_t* nativeObj) {
+ static TView Cast(widget_t* nativeObj) {
    return TView(nativeObj);
  }
 
- static TView cast(const widget_t* nativeObj) {
+ static TView Cast(const widget_t* nativeObj) {
    return TView((widget_t*)nativeObj);
  }
 
- static TView cast(TWidget& obj) {
+ static TView Cast(TWidget& obj) {
    return TView(obj.nativeObj);
  }
 
- static TView cast(const TWidget& obj) {
+ static TView Cast(const TWidget& obj) {
    return TView(obj.nativeObj);
  }
 
@@ -10385,7 +10313,6 @@ public:
  
  * @return view对象。
  */
- static TView Cast(TWidget& widget) ;
 };
 
 
@@ -10401,19 +10328,19 @@ public:
  TIdleInfo(const idle_info_t* nativeObj) : TObject((emitter_t*)nativeObj) {
  }
 
- static TIdleInfo cast(emitter_t* nativeObj) {
+ static TIdleInfo Cast(emitter_t* nativeObj) {
    return TIdleInfo(nativeObj);
  }
 
- static TIdleInfo cast(const emitter_t* nativeObj) {
+ static TIdleInfo Cast(const emitter_t* nativeObj) {
    return TIdleInfo((emitter_t*)nativeObj);
  }
 
- static TIdleInfo cast(TEmitter& obj) {
+ static TIdleInfo Cast(TEmitter& obj) {
    return TIdleInfo(obj.nativeObj);
  }
 
- static TIdleInfo cast(const TEmitter& obj) {
+ static TIdleInfo Cast(const TEmitter& obj) {
    return TIdleInfo(obj.nativeObj);
  }
 
@@ -10425,7 +10352,6 @@ public:
  
  * @return idle_info对象。
  */
- static TIdleInfo Cast(TIdleInfo& idle) ;
  void* GetCtx() const;
  uint32_t GetId() const;
 };
@@ -10471,19 +10397,19 @@ public:
  TMutableImage(const mutable_image_t* nativeObj) : TImageBase((widget_t*)nativeObj) {
  }
 
- static TMutableImage cast(widget_t* nativeObj) {
+ static TMutableImage Cast(widget_t* nativeObj) {
    return TMutableImage(nativeObj);
  }
 
- static TMutableImage cast(const widget_t* nativeObj) {
+ static TMutableImage Cast(const widget_t* nativeObj) {
    return TMutableImage((widget_t*)nativeObj);
  }
 
- static TMutableImage cast(TWidget& obj) {
+ static TMutableImage Cast(TWidget& obj) {
    return TMutableImage(obj.nativeObj);
  }
 
- static TMutableImage cast(const TWidget& obj) {
+ static TMutableImage Cast(const TWidget& obj) {
    return TMutableImage(obj.nativeObj);
  }
 
@@ -10507,19 +10433,19 @@ public:
  TObjectArray(const object_array_t* nativeObj) : TObject((emitter_t*)nativeObj) {
  }
 
- static TObjectArray cast(emitter_t* nativeObj) {
+ static TObjectArray Cast(emitter_t* nativeObj) {
    return TObjectArray(nativeObj);
  }
 
- static TObjectArray cast(const emitter_t* nativeObj) {
+ static TObjectArray Cast(const emitter_t* nativeObj) {
    return TObjectArray((emitter_t*)nativeObj);
  }
 
- static TObjectArray cast(TEmitter& obj) {
+ static TObjectArray Cast(TEmitter& obj) {
    return TObjectArray(obj.nativeObj);
  }
 
- static TObjectArray cast(const TEmitter& obj) {
+ static TObjectArray Cast(const TEmitter& obj) {
    return TObjectArray(obj.nativeObj);
  }
 
@@ -10601,19 +10527,19 @@ public:
  TGifImage(const gif_image_t* nativeObj) : TImageBase((widget_t*)nativeObj) {
  }
 
- static TGifImage cast(widget_t* nativeObj) {
+ static TGifImage Cast(widget_t* nativeObj) {
    return TGifImage(nativeObj);
  }
 
- static TGifImage cast(const widget_t* nativeObj) {
+ static TGifImage Cast(const widget_t* nativeObj) {
    return TGifImage((widget_t*)nativeObj);
  }
 
- static TGifImage cast(TWidget& obj) {
+ static TGifImage Cast(TWidget& obj) {
    return TGifImage(obj.nativeObj);
  }
 
- static TGifImage cast(const TWidget& obj) {
+ static TGifImage Cast(const TWidget& obj) {
    return TGifImage(obj.nativeObj);
  }
 
@@ -10638,7 +10564,6 @@ public:
  
  * @return gif_image对象。
  */
- static TGifImage Cast(TWidget& widget) ;
 };
 
 
@@ -10656,19 +10581,19 @@ public:
  TObjectDefault(const object_default_t* nativeObj) : TObject((emitter_t*)nativeObj) {
  }
 
- static TObjectDefault cast(emitter_t* nativeObj) {
+ static TObjectDefault Cast(emitter_t* nativeObj) {
    return TObjectDefault(nativeObj);
  }
 
- static TObjectDefault cast(const emitter_t* nativeObj) {
+ static TObjectDefault Cast(const emitter_t* nativeObj) {
    return TObjectDefault((emitter_t*)nativeObj);
  }
 
- static TObjectDefault cast(TEmitter& obj) {
+ static TObjectDefault Cast(TEmitter& obj) {
    return TObjectDefault(obj.nativeObj);
  }
 
- static TObjectDefault cast(const TEmitter& obj) {
+ static TObjectDefault Cast(const TEmitter& obj) {
    return TObjectDefault(obj.nativeObj);
  }
 
@@ -10764,19 +10689,19 @@ public:
  TImage(const image_t* nativeObj) : TImageBase((widget_t*)nativeObj) {
  }
 
- static TImage cast(widget_t* nativeObj) {
+ static TImage Cast(widget_t* nativeObj) {
    return TImage(nativeObj);
  }
 
- static TImage cast(const widget_t* nativeObj) {
+ static TImage Cast(const widget_t* nativeObj) {
    return TImage((widget_t*)nativeObj);
  }
 
- static TImage cast(TWidget& obj) {
+ static TImage Cast(TWidget& obj) {
    return TImage(obj.nativeObj);
  }
 
- static TImage cast(const TWidget& obj) {
+ static TImage Cast(const TWidget& obj) {
    return TImage(obj.nativeObj);
  }
 
@@ -10810,7 +10735,6 @@ public:
  
  * @return image对象。
  */
- static TImage Cast(TWidget& widget) ;
  image_draw_type_t GetDrawType() const;
 };
 
@@ -10827,19 +10751,19 @@ public:
  TComboBoxEx(const combo_box_ex_t* nativeObj) : TComboBox((widget_t*)nativeObj) {
  }
 
- static TComboBoxEx cast(widget_t* nativeObj) {
+ static TComboBoxEx Cast(widget_t* nativeObj) {
    return TComboBoxEx(nativeObj);
  }
 
- static TComboBoxEx cast(const widget_t* nativeObj) {
+ static TComboBoxEx Cast(const widget_t* nativeObj) {
    return TComboBoxEx((widget_t*)nativeObj);
  }
 
- static TComboBoxEx cast(TWidget& obj) {
+ static TComboBoxEx Cast(TWidget& obj) {
    return TComboBoxEx(obj.nativeObj);
  }
 
- static TComboBoxEx cast(const TWidget& obj) {
+ static TComboBoxEx Cast(const TWidget& obj) {
    return TComboBoxEx(obj.nativeObj);
  }
 
@@ -10889,19 +10813,19 @@ public:
  TCalibrationWin(const calibration_win_t* nativeObj) : TWindowBase((widget_t*)nativeObj) {
  }
 
- static TCalibrationWin cast(widget_t* nativeObj) {
+ static TCalibrationWin Cast(widget_t* nativeObj) {
    return TCalibrationWin(nativeObj);
  }
 
- static TCalibrationWin cast(const widget_t* nativeObj) {
+ static TCalibrationWin Cast(const widget_t* nativeObj) {
    return TCalibrationWin((widget_t*)nativeObj);
  }
 
- static TCalibrationWin cast(TWidget& obj) {
+ static TCalibrationWin Cast(TWidget& obj) {
    return TCalibrationWin(obj.nativeObj);
  }
 
- static TCalibrationWin cast(const TWidget& obj) {
+ static TCalibrationWin Cast(const TWidget& obj) {
    return TCalibrationWin(obj.nativeObj);
  }
 
@@ -10913,7 +10837,6 @@ public:
  
  * @return calibration_win对象。
  */
- static TCalibrationWin Cast(TWidget& widget) ;
 };
 
 
@@ -10970,19 +10893,19 @@ public:
  TPopup(const popup_t* nativeObj) : TWindowBase((widget_t*)nativeObj) {
  }
 
- static TPopup cast(widget_t* nativeObj) {
+ static TPopup Cast(widget_t* nativeObj) {
    return TPopup(nativeObj);
  }
 
- static TPopup cast(const widget_t* nativeObj) {
+ static TPopup Cast(const widget_t* nativeObj) {
    return TPopup((widget_t*)nativeObj);
  }
 
- static TPopup cast(TWidget& obj) {
+ static TPopup Cast(TWidget& obj) {
    return TPopup(obj.nativeObj);
  }
 
- static TPopup cast(const TWidget& obj) {
+ static TPopup Cast(const TWidget& obj) {
    return TPopup(obj.nativeObj);
  }
 
@@ -11007,7 +10930,6 @@ public:
  
  * @return popup对象。
  */
- static TPopup Cast(TWidget& widget) ;
 
 /**
  * 设置点击时是否关闭窗口。
@@ -11075,19 +10997,19 @@ public:
  TSvgImage(const svg_image_t* nativeObj) : TImageBase((widget_t*)nativeObj) {
  }
 
- static TSvgImage cast(widget_t* nativeObj) {
+ static TSvgImage Cast(widget_t* nativeObj) {
    return TSvgImage(nativeObj);
  }
 
- static TSvgImage cast(const widget_t* nativeObj) {
+ static TSvgImage Cast(const widget_t* nativeObj) {
    return TSvgImage((widget_t*)nativeObj);
  }
 
- static TSvgImage cast(TWidget& obj) {
+ static TSvgImage Cast(TWidget& obj) {
    return TSvgImage(obj.nativeObj);
  }
 
- static TSvgImage cast(const TWidget& obj) {
+ static TSvgImage Cast(const TWidget& obj) {
    return TSvgImage(obj.nativeObj);
  }
 
@@ -11123,7 +11045,6 @@ public:
  
  * @return svg_image对象。
  */
- static TSvgImage Cast(TWidget& widget) ;
 };
 
 
@@ -11139,19 +11060,19 @@ public:
  TTimerInfo(const timer_info_t* nativeObj) : TObject((emitter_t*)nativeObj) {
  }
 
- static TTimerInfo cast(emitter_t* nativeObj) {
+ static TTimerInfo Cast(emitter_t* nativeObj) {
    return TTimerInfo(nativeObj);
  }
 
- static TTimerInfo cast(const emitter_t* nativeObj) {
+ static TTimerInfo Cast(const emitter_t* nativeObj) {
    return TTimerInfo((emitter_t*)nativeObj);
  }
 
- static TTimerInfo cast(TEmitter& obj) {
+ static TTimerInfo Cast(TEmitter& obj) {
    return TTimerInfo(obj.nativeObj);
  }
 
- static TTimerInfo cast(const TEmitter& obj) {
+ static TTimerInfo Cast(const TEmitter& obj) {
    return TTimerInfo(obj.nativeObj);
  }
 
@@ -11163,7 +11084,6 @@ public:
  
  * @return timer_info对象。
  */
- static TTimerInfo Cast(TTimerInfo& timer) ;
  void* GetCtx() const;
  uint32_t GetId() const;
  uint64_t GetNow() const;
@@ -11225,19 +11145,19 @@ public:
  TSpinBox(const spin_box_t* nativeObj) : TEdit((widget_t*)nativeObj) {
  }
 
- static TSpinBox cast(widget_t* nativeObj) {
+ static TSpinBox Cast(widget_t* nativeObj) {
    return TSpinBox(nativeObj);
  }
 
- static TSpinBox cast(const widget_t* nativeObj) {
+ static TSpinBox Cast(const widget_t* nativeObj) {
    return TSpinBox((widget_t*)nativeObj);
  }
 
- static TSpinBox cast(TWidget& obj) {
+ static TSpinBox Cast(TWidget& obj) {
    return TSpinBox(obj.nativeObj);
  }
 
- static TSpinBox cast(const TWidget& obj) {
+ static TSpinBox Cast(const TWidget& obj) {
    return TSpinBox(obj.nativeObj);
  }
 
@@ -11262,7 +11182,6 @@ public:
  
  * @return spin_box对象。
  */
- static TSpinBox Cast(TWidget& widget) ;
 };
 
 
@@ -11323,19 +11242,19 @@ public:
  TSystemBar(const system_bar_t* nativeObj) : TWindowBase((widget_t*)nativeObj) {
  }
 
- static TSystemBar cast(widget_t* nativeObj) {
+ static TSystemBar Cast(widget_t* nativeObj) {
    return TSystemBar(nativeObj);
  }
 
- static TSystemBar cast(const widget_t* nativeObj) {
+ static TSystemBar Cast(const widget_t* nativeObj) {
    return TSystemBar((widget_t*)nativeObj);
  }
 
- static TSystemBar cast(TWidget& obj) {
+ static TSystemBar Cast(TWidget& obj) {
    return TSystemBar(obj.nativeObj);
  }
 
- static TSystemBar cast(const TWidget& obj) {
+ static TSystemBar Cast(const TWidget& obj) {
    return TSystemBar(obj.nativeObj);
  }
 
@@ -11360,7 +11279,6 @@ public:
  
  * @return system_bar对象。
  */
- static TSystemBar Cast(TWidget& widget) ;
 };
 
 
@@ -11410,19 +11328,19 @@ public:
  TWindow(const window_t* nativeObj) : TWindowBase((widget_t*)nativeObj) {
  }
 
- static TWindow cast(widget_t* nativeObj) {
+ static TWindow Cast(widget_t* nativeObj) {
    return TWindow(nativeObj);
  }
 
- static TWindow cast(const widget_t* nativeObj) {
+ static TWindow Cast(const widget_t* nativeObj) {
    return TWindow((widget_t*)nativeObj);
  }
 
- static TWindow cast(TWidget& obj) {
+ static TWindow Cast(TWidget& obj) {
    return TWindow(obj.nativeObj);
  }
 
- static TWindow cast(const TWidget& obj) {
+ static TWindow Cast(const TWidget& obj) {
    return TWindow(obj.nativeObj);
  }
 
@@ -11501,7 +11419,6 @@ public:
  
  * @return window对象。
  */
- static TWindow Cast(TWidget& widget) ;
  bool GetFullscreen() const;
 };
 
@@ -11554,19 +11471,19 @@ public:
  TKeyboard(const keyboard_t* nativeObj) : TWindowBase((widget_t*)nativeObj) {
  }
 
- static TKeyboard cast(widget_t* nativeObj) {
+ static TKeyboard Cast(widget_t* nativeObj) {
    return TKeyboard(nativeObj);
  }
 
- static TKeyboard cast(const widget_t* nativeObj) {
+ static TKeyboard Cast(const widget_t* nativeObj) {
    return TKeyboard((widget_t*)nativeObj);
  }
 
- static TKeyboard cast(TWidget& obj) {
+ static TKeyboard Cast(TWidget& obj) {
    return TKeyboard(obj.nativeObj);
  }
 
- static TKeyboard cast(const TWidget& obj) {
+ static TKeyboard Cast(const TWidget& obj) {
    return TKeyboard(obj.nativeObj);
  }
 
@@ -11591,7 +11508,6 @@ public:
  
  * @return keyboard对象。
  */
- static TKeyboard Cast(TWidget& widget) ;
 };
 
 
@@ -11674,19 +11590,19 @@ public:
  TDialog(const dialog_t* nativeObj) : TWindowBase((widget_t*)nativeObj) {
  }
 
- static TDialog cast(widget_t* nativeObj) {
+ static TDialog Cast(widget_t* nativeObj) {
    return TDialog(nativeObj);
  }
 
- static TDialog cast(const widget_t* nativeObj) {
+ static TDialog Cast(const widget_t* nativeObj) {
    return TDialog((widget_t*)nativeObj);
  }
 
- static TDialog cast(TWidget& obj) {
+ static TDialog Cast(TWidget& obj) {
    return TDialog(obj.nativeObj);
  }
 
- static TDialog cast(const TWidget& obj) {
+ static TDialog Cast(const TWidget& obj) {
    return TDialog(obj.nativeObj);
  }
 
@@ -11724,7 +11640,6 @@ public:
  
  * @return dialog对象。
  */
- static TDialog Cast(TWidget& widget) ;
 
 /**
  * 获取title控件。
