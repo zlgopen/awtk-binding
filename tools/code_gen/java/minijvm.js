@@ -45,7 +45,7 @@ class MiniJVMGenerator extends BindingGen {
     const clsName = this.toClassName(cls.name);
     const funcName = this.genFuncName(clsName, jfuncName);
     const typeInfo = this.mapType(p.type);
-    const signature = `(${typeInfo.jvmDesc})I`;
+    const signature = `(J${typeInfo.jvmDesc})I`;
 
     this.addRegEntry(clsName, jfuncName, signature, funcName);
   }
@@ -54,7 +54,7 @@ class MiniJVMGenerator extends BindingGen {
     const clsName = this.toClassName(cls.name);
     const funcName = this.genFuncName(clsName, jfuncName);
     const typeInfo = this.mapType(p.type);
-    const signature = `()${typeInfo.jvmDesc}`;
+    const signature = `(J)${typeInfo.jvmDesc}`;
 
     this.addRegEntry(clsName, jfuncName, signature, funcName);
   }
