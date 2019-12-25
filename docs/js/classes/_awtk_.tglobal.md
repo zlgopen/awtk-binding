@@ -25,7 +25,7 @@ TK全局对象。
 
 ▸ **getPointerX**(): *number*
 
-*Defined in [awtk.ts:2992](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2992)*
+*Defined in [awtk.ts:2992](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L2992)*
 
 获取全局指针的X坐标。
 
@@ -39,7 +39,7 @@ ___
 
 ▸ **getPointerY**(): *number*
 
-*Defined in [awtk.ts:3003](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L3003)*
+*Defined in [awtk.ts:3003](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3003)*
 
 获取全局指针的Y坐标。
 
@@ -53,7 +53,7 @@ ___
 
 ▸ **init**(`w`: number, `h`: number, `app_type`: [TAppType](../enums/_awtk_.tapptype.md), `app_name`: string, `app_root`: string): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2959](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2959)*
+*Defined in [awtk.ts:2959](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L2959)*
 
 初始化TK。
 
@@ -77,7 +77,7 @@ ___
 
 ▸ **isPointerPressed**(): *boolean*
 
-*Defined in [awtk.ts:3014](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L3014)*
+*Defined in [awtk.ts:3014](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3014)*
 
 获取全局指针是否按下。
 
@@ -91,7 +91,7 @@ ___
 
 ▸ **quit**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2981](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2981)*
+*Defined in [awtk.ts:2981](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L2981)*
 
 退出TK事件主循环。
 
@@ -105,7 +105,7 @@ ___
 
 ▸ **run**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:2970](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L2970)*
+*Defined in [awtk.ts:2970](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L2970)*
 
 进入TK事件主循环。
 

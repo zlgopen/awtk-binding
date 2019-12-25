@@ -6,22 +6,31 @@ class TypescriptGenerator extends TargetGen {
     super()
     this.returnDocKey = 'returns';
   }
-  
+
   genGetNativeObj(type, name, isCast) {
     return `${name} != ${this.nullPtr} ? (${name}.nativeObj || ${name}) : ${this.nullNativePtr}`;
   }
-  
-  mapType(type) {
-    let name = this.typeToName(type); 
-    if(name) {
-      return name; 
-    } else  if(this.typeIsNumber(type)) {
+
+  mapType(type, isNative) {
+    let name = this.typeToName(type);
+
+    if (name) {
+      if (isNative) {
+        if (this.isEnumName(type)) {
+          return name;
+        } else {
+          return 'any';
+        }
+      } else {
+        return name;
+      }
+    } else if (this.typeIsNumber(type)) {
       return 'number';
-    } else if(this.typeIsBool(type)) {
+    } else if (this.typeIsBool(type)) {
       return 'boolean';
-    } else if(this.typeIsFunction(type)) {
+    } else if (this.typeIsFunction(type)) {
       return 'Function';
-    } else if(this.typeIsString(type)) {
+    } else if (this.typeIsString(type)) {
       return 'string';
     } else {
       console.log(type);
@@ -29,11 +38,11 @@ class TypescriptGenerator extends TargetGen {
     }
   }
 
-  mapTypeVar(type, name) {
-    if((this.typeIsBool(type) || this.typeIsNumber(type)) && name === 'value') {
+  mapTypeVar(type, name, isNative) {
+    if ((this.typeIsBool(type) || this.typeIsNumber(type)) && name === 'value') {
       return name + ' : any'
     } else {
-      return name + ' : ' + this.mapType(type);
+      return name + ' : ' + this.mapType(type, isNative);
     }
   }
 
@@ -41,7 +50,7 @@ class TypescriptGenerator extends TargetGen {
     let result = '';
 
     result += ' public nativeObj : any;\n';
-    result += ' constructor(nativeObj) {\n';
+    result += ' constructor(nativeObj : any) {\n';
     if (cls.parent) {
       result += '   super(nativeObj);\n';
     } else {
@@ -60,9 +69,9 @@ class TypescriptGenerator extends TargetGen {
   }
 
   genFuncDecl(cls, m, name) {
-    let retType = this.isCast(m) ? cls.name : m.return.type;
+    const returnType = this.isCast(m) ? cls.name : m.return.type;
 
-    return `${name}${this.genParamsDecl(m)} : ${this.mapType(retType)} `;
+    return `${name}${this.genParamsDecl(m)} : ${this.mapType(returnType)} `;
   }
 
   genFunc(cls, m) {
@@ -83,7 +92,7 @@ class TypescriptGenerator extends TargetGen {
   genSetPropertyWithSetter(cls, p) {
     let result = '';
     const name = this.toFuncName(cls.name, p.name);
-    const setter = this.toFuncName(cls.name, "set_"+ p.name);
+    const setter = this.toFuncName(cls.name, "set_" + p.name);
     const funcName = this.getSetPropertyFuncName(cls, p);
 
     result += ` set ${name}(${this.mapTypeVar(p.type, 'v')}) {\n`;
@@ -104,38 +113,41 @@ class TypescriptGenerator extends TargetGen {
 
     return result;
   }
-  
+
   genGetProperty(cls, p) {
     let result = '';
     const type = p.type;
-    const retType = this.typeToName(type); 
+    const returnType = this.typeToName(type);
     const name = this.toFuncName(cls.name, p.name);
     const funcName = this.getGetPropertyFuncName(cls, p);
 
     result += this.genPropDoc(p);
     result += ` get ${name}() : ${this.mapType(type)} {\n`;
-      if(retType && this.typeIsPointer(type)) {
-        result += `   return new ${retType}(${funcName}(this.nativeObj));\n`;
-      } else {
-        result += `   return ${funcName}(this.nativeObj);\n`;
-      }
+    if (returnType && this.typeIsPointer(type)) {
+      result += `   return new ${returnType}(${funcName}(this.nativeObj));\n`;
+    } else {
+      result += `   return ${funcName}(this.nativeObj);\n`;
+    }
     result += ' }\n\n'
 
     return result;
   }
 
   genFuncNativeDecl(cls, m) {
-    return `declare function ${m.name}${this.genParamsDeclNative(m)} : ${this.mapType(m.return.type)};\n`;
+    const returnType = this.mapType(m.return.type, true);
+    return `declare function ${m.name}${this.genParamsDeclNative(m)} : ${returnType};\n`;
   }
 
   genGetPropNativeDecl(cls, p) {
+    const returnType = this.mapType(p.type, true);
     const funcName = this.getGetPropertyFuncName(cls, p);
-    return `declare function ${funcName}(nativeObj : any);\n`;
+    return `declare function ${funcName}(nativeObj : any) : ${returnType};\n`;
   }
 
   genSetPropNativeDecl(cls, p) {
+    const propType = this.mapTypeVar(p.type, 'v', true);
     const funcName = this.getSetPropertyFuncName(cls, p);
-    return `declare function ${funcName}(nativeObj : any, ${this.mapTypeVar(p.type, 'v')});\n`;
+    return `declare function ${funcName}(nativeObj : any, ${propType})\n`;
   }
 
   genConstNativeDecl(cls, c) {
@@ -143,7 +155,7 @@ class TypescriptGenerator extends TargetGen {
   }
 
   genEnum(cls) {
-    let clsName = this.toClassName(cls.name);
+    const clsName = this.toClassName(cls.name);
     let result = this.genEnumDoc(cls);
     result += `enum ${clsName} {\n`;
 

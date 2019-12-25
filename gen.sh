@@ -13,7 +13,7 @@ cd tools/code_gen/js/output && tsc
 cd -
 
 #java
-cd tools/code_gen/java && rm output/* && node java.js && node jni.js
+cd tools/code_gen/java && rm output/* && node java.js && node jni.js && node minijvm.js
 ./gendoc.sh
 cd -
 

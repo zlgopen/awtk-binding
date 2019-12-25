@@ -26,7 +26,7 @@
 
 • **ABGR8888**: =  BITMAP_FMT_ABGR8888()
 
-*Defined in [awtk.ts:5290](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L5290)*
+*Defined in [awtk.ts:5290](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L5290)*
 
 一个像素占用4个字节，ABGR占一个字节，按内存地址递增。
 
@@ -36,7 +36,7 @@ ___
 
 • **ARGB8888**: =  BITMAP_FMT_ARGB8888()
 
-*Defined in [awtk.ts:5302](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L5302)*
+*Defined in [awtk.ts:5302](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L5302)*
 
 一个像素占用4个字节，ARGB占一个字节，按内存地址递增。
 
@@ -46,7 +46,7 @@ ___
 
 • **BGR565**: =  BITMAP_FMT_BGR565()
 
-*Defined in [awtk.ts:5314](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L5314)*
+*Defined in [awtk.ts:5314](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L5314)*
 
 一个像素占用2个字节，BGR分别占用5,6,5位, 按内存地址递增。
 
@@ -56,7 +56,7 @@ ___
 
 • **BGR888**: =  BITMAP_FMT_BGR888()
 
-*Defined in [awtk.ts:5326](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L5326)*
+*Defined in [awtk.ts:5326](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L5326)*
 
 一个像素占用3个字节，RGB占一个字节，按内存地址递增。
 
@@ -66,7 +66,7 @@ ___
 
 • **BGRA8888**: =  BITMAP_FMT_BGRA8888()
 
-*Defined in [awtk.ts:5296](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L5296)*
+*Defined in [awtk.ts:5296](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L5296)*
 
 一个像素占用4个字节，BGRA占一个字节，按内存地址递增。
 
@@ -76,7 +76,7 @@ ___
 
 • **GRAY**: =  BITMAP_FMT_GRAY()
 
-*Defined in [awtk.ts:5332](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L5332)*
+*Defined in [awtk.ts:5332](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L5332)*
 
 一个像素占用1个字节。
 
@@ -86,7 +86,7 @@ ___
 
 • **MONO**: =  BITMAP_FMT_MONO()
 
-*Defined in [awtk.ts:5338](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L5338)*
+*Defined in [awtk.ts:5338](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L5338)*
 
 一个像素占用1比特。
 
@@ -96,7 +96,7 @@ ___
 
 • **NONE**: =  BITMAP_FMT_NONE()
 
-*Defined in [awtk.ts:5278](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L5278)*
+*Defined in [awtk.ts:5278](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L5278)*
 
 无效格式。
 
@@ -106,7 +106,7 @@ ___
 
 • **RGB565**: =  BITMAP_FMT_RGB565()
 
-*Defined in [awtk.ts:5308](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L5308)*
+*Defined in [awtk.ts:5308](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L5308)*
 
 一个像素占用2个字节，RGB分别占用5,6,5位, 按内存地址递增。
 
@@ -116,7 +116,7 @@ ___
 
 • **RGB888**: =  BITMAP_FMT_RGB888()
 
-*Defined in [awtk.ts:5320](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L5320)*
+*Defined in [awtk.ts:5320](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L5320)*
 
 一个像素占用3个字节，RGB占一个字节，按内存地址递增。
 
@@ -126,6 +126,6 @@ ___
 
 • **RGBA8888**: =  BITMAP_FMT_RGBA8888()
 
-*Defined in [awtk.ts:5284](https://github.com/zlgopen/awtk-binding/blob/066f953/tools/code_gen/js/output/awtk.ts#L5284)*
+*Defined in [awtk.ts:5284](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L5284)*
 
 一个像素占用4个字节，RGBA占一个字节，按内存地址递增。
