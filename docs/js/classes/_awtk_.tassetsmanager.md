@@ -58,7 +58,7 @@ ui      UI描述数据。
 
 \+ **new TAssetsManager**(`nativeObj`: any): *[TAssetsManager](_awtk_.tassetsmanager.md)*
 
-*Defined in [awtk.ts:10631](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10631)*
+*Defined in [awtk.ts:10658](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10658)*
 
 **Parameters:**
 
@@ -74,7 +74,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:10631](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10631)*
+*Defined in [awtk.ts:10658](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10658)*
 
 ## Methods
 
@@ -82,7 +82,7 @@ Name | Type |
 
 ▸ **ref**(`type`: [TAssetType](../enums/_awtk_.tassettype.md), `name`: string): *[TAssetInfo](_awtk_.tassetinfo.md)*
 
-*Defined in [awtk.ts:10656](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10656)*
+*Defined in [awtk.ts:10683](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10683)*
 
 在资源管理器的缓存中查找指定的资源并引用它，如果缓存中不存在，尝试加载该资源。
 
@@ -103,7 +103,7 @@ ___
 
 ▸ **unref**(`info`: [TAssetInfo](_awtk_.tassetinfo.md)): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:10668](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10668)*
+*Defined in [awtk.ts:10695](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10695)*
 
 释放指定的资源。
 
@@ -123,7 +123,7 @@ ___
 
 ▸ **instance**(): *[TAssetsManager](_awtk_.tassetsmanager.md)*
 
-*Defined in [awtk.ts:10643](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10643)*
+*Defined in [awtk.ts:10670](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10670)*
 
 获取缺省资源管理器。
 

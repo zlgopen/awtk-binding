@@ -26,7 +26,7 @@
 
 • **CUSTOM**: =  INPUT_CUSTOM()
 
-*Defined in [awtk.ts:3734](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3734)*
+*Defined in [awtk.ts:3736](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3736)*
 
 使用自定义的软键盘(如计算器等应用不希望弹出系统软键盘)。
 
@@ -36,7 +36,7 @@ ___
 
 • **CUSTOM_PASSWORD**: =  INPUT_CUSTOM_PASSWORD()
 
-*Defined in [awtk.ts:3740](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3740)*
+*Defined in [awtk.ts:3742](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3742)*
 
 使用自定义的密码软键盘。
 
@@ -46,7 +46,7 @@ ___
 
 • **EMAIL**: =  INPUT_EMAIL()
 
-*Defined in [awtk.ts:3716](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3716)*
+*Defined in [awtk.ts:3718](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3718)*
 
 邮件地址。
 
@@ -56,7 +56,7 @@ ___
 
 • **FLOAT**: =  INPUT_FLOAT()
 
-*Defined in [awtk.ts:3704](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3704)*
+*Defined in [awtk.ts:3706](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3706)*
 
 浮点数。
 
@@ -66,7 +66,7 @@ ___
 
 • **HEX**: =  INPUT_HEX()
 
-*Defined in [awtk.ts:3698](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3698)*
+*Defined in [awtk.ts:3700](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3700)*
 
 16进制整数。
 
@@ -76,7 +76,7 @@ ___
 
 • **INT**: =  INPUT_INT()
 
-*Defined in [awtk.ts:3686](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3686)*
+*Defined in [awtk.ts:3688](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3688)*
 
 整数。
 
@@ -86,7 +86,7 @@ ___
 
 • **PASSWORD**: =  INPUT_PASSWORD()
 
-*Defined in [awtk.ts:3722](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3722)*
+*Defined in [awtk.ts:3724](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3724)*
 
 密码。
 
@@ -96,7 +96,7 @@ ___
 
 • **PHONE**: =  INPUT_PHONE()
 
-*Defined in [awtk.ts:3728](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3728)*
+*Defined in [awtk.ts:3730](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3730)*
 
 电话号码。
 
@@ -106,7 +106,7 @@ ___
 
 • **TEXT**: =  INPUT_TEXT()
 
-*Defined in [awtk.ts:3680](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3680)*
+*Defined in [awtk.ts:3682](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3682)*
 
 文本。
 
@@ -116,7 +116,7 @@ ___
 
 • **UFLOAT**: =  INPUT_UFLOAT()
 
-*Defined in [awtk.ts:3710](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3710)*
+*Defined in [awtk.ts:3712](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3712)*
 
 非负浮点数。
 
@@ -126,6 +126,6 @@ ___
 
 • **UINT**: =  INPUT_UINT()
 
-*Defined in [awtk.ts:3692](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3692)*
+*Defined in [awtk.ts:3694](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3694)*
 
 非负整数。

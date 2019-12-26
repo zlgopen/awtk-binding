@@ -27,7 +27,7 @@ idle可以看作是duration为0的定时器。
 
 ▸ **add**(`on_idle`: Function, `ctx`: any): *number*
 
-*Defined in [awtk.ts:3617](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3617)*
+*Defined in [awtk.ts:3619](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3619)*
 
 增加一个idle。
 
@@ -48,7 +48,7 @@ ___
 
 ▸ **remove**(`idle_id`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:3629](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3629)*
+*Defined in [awtk.ts:3631](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3631)*
 
 删除指定的idle。
 

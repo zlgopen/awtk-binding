@@ -42,7 +42,7 @@
 
 \+ **new TDateTime**(`nativeObj`: any): *[TDateTime](_awtk_.tdatetime.md)*
 
-*Defined in [awtk.ts:10235](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10235)*
+*Defined in [awtk.ts:10262](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10262)*
 
 **Parameters:**
 
@@ -58,7 +58,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:10235](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10235)*
+*Defined in [awtk.ts:10262](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10262)*
 
 ## Accessors
 
@@ -66,7 +66,7 @@ Name | Type |
 
 • **get day**(): *number*
 
-*Defined in [awtk.ts:10305](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10305)*
+*Defined in [awtk.ts:10332](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10332)*
 
 日(1-31)。
 
@@ -78,7 +78,7 @@ ___
 
 • **get hour**(): *number*
 
-*Defined in [awtk.ts:10296](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10296)*
+*Defined in [awtk.ts:10323](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10323)*
 
 时(0 - 23)。
 
@@ -90,7 +90,7 @@ ___
 
 • **get minute**(): *number*
 
-*Defined in [awtk.ts:10287](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10287)*
+*Defined in [awtk.ts:10314](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10314)*
 
 分(0 - 59)。
 
@@ -102,7 +102,7 @@ ___
 
 • **get month**(): *number*
 
-*Defined in [awtk.ts:10323](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10323)*
+*Defined in [awtk.ts:10350](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10350)*
 
 月(1-12)。
 
@@ -114,7 +114,7 @@ ___
 
 • **get second**(): *number*
 
-*Defined in [awtk.ts:10278](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10278)*
+*Defined in [awtk.ts:10305](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10305)*
 
 秒(0 - 59)。
 
@@ -126,7 +126,7 @@ ___
 
 • **get wday**(): *number*
 
-*Defined in [awtk.ts:10314](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10314)*
+*Defined in [awtk.ts:10341](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10341)*
 
 星期几(0-6, Sunday = 0)。
 
@@ -138,7 +138,7 @@ ___
 
 • **get year**(): *number*
 
-*Defined in [awtk.ts:10332](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10332)*
+*Defined in [awtk.ts:10359](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10359)*
 
 年。
 
@@ -150,7 +150,7 @@ ___
 
 ▸ **destroy**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:10269](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10269)*
+*Defined in [awtk.ts:10296](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10296)*
 
 销毁date_time对象(一般供脚本语言中使用)。
 
@@ -164,7 +164,7 @@ ___
 
 ▸ **set**(): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:10258](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10258)*
+*Defined in [awtk.ts:10285](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10285)*
 
 设置当前时间。
 
@@ -178,7 +178,7 @@ ___
 
 ▸ **create**(): *[TDateTime](_awtk_.tdatetime.md)*
 
-*Defined in [awtk.ts:10247](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10247)*
+*Defined in [awtk.ts:10274](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10274)*
 
 创建date_time对象，并初始为当前日期和时间(一般供脚本语言中使用)。
 

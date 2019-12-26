@@ -4865,6 +4865,29 @@
             "desc": "vgcanvas对象。"
           },
           {
+            "type": "bool_t",
+            "name": "dir",
+            "desc": "填充方法。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置路径填充实心与否。\n\n>CCW(1)为实心，CW(2)为镂空，设置其他则默认根据非零环绕规则判断(nonzero)。",
+        "name": "vgcanvas_path_winding",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "vgcanvas_t*",
+            "name": "vg",
+            "desc": "vgcanvas对象。"
+          },
+          {
             "type": "float_t",
             "name": "rad",
             "desc": "角度"
@@ -6729,6 +6752,25 @@
         "return": {
           "type": "int32_t",
           "desc": "在父控件中的索引编号。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          }
+        ],
+        "annotation": {
+          "deconstructor": true,
+          "scriptable": true
+        },
+        "desc": "关闭控件所在的窗口。",
+        "name": "widget_close_window",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
         }
       },
       {

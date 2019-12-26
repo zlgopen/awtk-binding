@@ -39,7 +39,7 @@
 
 • **BACK_IN**: =  EASING_BACK_IN()
 
-*Defined in [awtk.ts:10194](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10194)*
+*Defined in [awtk.ts:10221](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10221)*
 
 EASING_BACK_IN
 
@@ -49,7 +49,7 @@ ___
 
 • **BACK_INOUT**: =  EASING_BACK_INOUT()
 
-*Defined in [awtk.ts:10206](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10206)*
+*Defined in [awtk.ts:10233](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10233)*
 
 EASING_BACK_INOUT
 
@@ -59,7 +59,7 @@ ___
 
 • **BACK_OUT**: =  EASING_BACK_OUT()
 
-*Defined in [awtk.ts:10200](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10200)*
+*Defined in [awtk.ts:10227](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10227)*
 
 EASING_BACK_OUT
 
@@ -69,7 +69,7 @@ ___
 
 • **BOUNCE_IN**: =  EASING_BOUNCE_IN()
 
-*Defined in [awtk.ts:10212](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10212)*
+*Defined in [awtk.ts:10239](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10239)*
 
 EASING_BOUNCE_IN
 
@@ -79,7 +79,7 @@ ___
 
 • **BOUNCE_INOUT**: =  EASING_BOUNCE_INOUT()
 
-*Defined in [awtk.ts:10224](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10224)*
+*Defined in [awtk.ts:10251](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10251)*
 
 EASING_BOUNCE_INOUT
 
@@ -89,7 +89,7 @@ ___
 
 • **BOUNCE_OUT**: =  EASING_BOUNCE_OUT()
 
-*Defined in [awtk.ts:10218](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10218)*
+*Defined in [awtk.ts:10245](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10245)*
 
 EASING_BOUNCE_OUT
 
@@ -99,7 +99,7 @@ ___
 
 • **CIRCULAR_IN**: =  EASING_CIRCULAR_IN()
 
-*Defined in [awtk.ts:10158](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10158)*
+*Defined in [awtk.ts:10185](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10185)*
 
 EASING_CIRCULAR_IN
 
@@ -109,7 +109,7 @@ ___
 
 • **CIRCULAR_INOUT**: =  EASING_CIRCULAR_INOUT()
 
-*Defined in [awtk.ts:10170](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10170)*
+*Defined in [awtk.ts:10197](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10197)*
 
 EASING_CIRCULAR_INOUT
 
@@ -119,7 +119,7 @@ ___
 
 • **CIRCULAR_OUT**: =  EASING_CIRCULAR_OUT()
 
-*Defined in [awtk.ts:10164](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10164)*
+*Defined in [awtk.ts:10191](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10191)*
 
 EASING_CIRCULAR_OUT
 
@@ -129,7 +129,7 @@ ___
 
 • **CUBIC_IN**: =  EASING_CUBIC_IN()
 
-*Defined in [awtk.ts:10110](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10110)*
+*Defined in [awtk.ts:10137](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10137)*
 
 EASING_CUBIC_IN
 
@@ -139,7 +139,7 @@ ___
 
 • **CUBIC_OUT**: =  EASING_CUBIC_OUT()
 
-*Defined in [awtk.ts:10116](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10116)*
+*Defined in [awtk.ts:10143](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10143)*
 
 EASING_CUBIC_OUT
 
@@ -149,7 +149,7 @@ ___
 
 • **ELASTIC_IN**: =  EASING_ELASTIC_IN()
 
-*Defined in [awtk.ts:10176](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10176)*
+*Defined in [awtk.ts:10203](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10203)*
 
 EASING_ELASTIC_IN
 
@@ -159,7 +159,7 @@ ___
 
 • **ELASTIC_INOUT**: =  EASING_ELASTIC_INOUT()
 
-*Defined in [awtk.ts:10188](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10188)*
+*Defined in [awtk.ts:10215](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10215)*
 
 EASING_ELASTIC_INOUT
 
@@ -169,7 +169,7 @@ ___
 
 • **ELASTIC_OUT**: =  EASING_ELASTIC_OUT()
 
-*Defined in [awtk.ts:10182](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10182)*
+*Defined in [awtk.ts:10209](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10209)*
 
 EASING_ELASTIC_OUT
 
@@ -179,7 +179,7 @@ ___
 
 • **LINEAR**: =  EASING_LINEAR()
 
-*Defined in [awtk.ts:10086](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10086)*
+*Defined in [awtk.ts:10113](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10113)*
 
 EASING_LINEAR。
 
@@ -189,7 +189,7 @@ ___
 
 • **POW_IN**: =  EASING_POW_IN()
 
-*Defined in [awtk.ts:10140](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10140)*
+*Defined in [awtk.ts:10167](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10167)*
 
 EASING_POW_IN
 
@@ -199,7 +199,7 @@ ___
 
 • **POW_INOUT**: =  EASING_POW_INOUT()
 
-*Defined in [awtk.ts:10152](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10152)*
+*Defined in [awtk.ts:10179](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10179)*
 
 EASING_POW_INOUT
 
@@ -209,7 +209,7 @@ ___
 
 • **POW_OUT**: =  EASING_POW_OUT()
 
-*Defined in [awtk.ts:10146](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10146)*
+*Defined in [awtk.ts:10173](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10173)*
 
 EASING_POW_OUT
 
@@ -219,7 +219,7 @@ ___
 
 • **QUADRATIC_IN**: =  EASING_QUADRATIC_IN()
 
-*Defined in [awtk.ts:10092](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10092)*
+*Defined in [awtk.ts:10119](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10119)*
 
 EASING_QUADRATIC_IN
 
@@ -229,7 +229,7 @@ ___
 
 • **QUADRATIC_INOUT**: =  EASING_QUADRATIC_INOUT()
 
-*Defined in [awtk.ts:10104](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10104)*
+*Defined in [awtk.ts:10131](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10131)*
 
 EASING_QUADRATIC_INOUT
 
@@ -239,7 +239,7 @@ ___
 
 • **QUADRATIC_OUT**: =  EASING_QUADRATIC_OUT()
 
-*Defined in [awtk.ts:10098](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10098)*
+*Defined in [awtk.ts:10125](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10125)*
 
 EASING_QUADRATIC_OUT
 
@@ -249,7 +249,7 @@ ___
 
 • **SIN_IN**: =  EASING_SIN_IN()
 
-*Defined in [awtk.ts:10122](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10122)*
+*Defined in [awtk.ts:10149](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10149)*
 
 EASING_SIN_IN
 
@@ -259,7 +259,7 @@ ___
 
 • **SIN_INOUT**: =  EASING_SIN_INOUT()
 
-*Defined in [awtk.ts:10134](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10134)*
+*Defined in [awtk.ts:10161](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10161)*
 
 EASING_SIN_OUT
 
@@ -269,6 +269,6 @@ ___
 
 • **SIN_OUT**: =  EASING_SIN_OUT()
 
-*Defined in [awtk.ts:10128](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10128)*
+*Defined in [awtk.ts:10155](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10155)*
 
 EASING_SIN_OUT

@@ -40,7 +40,7 @@
 
 \+ **new TInputMethod**(`nativeObj`: any): *[TInputMethod](_awtk_.tinputmethod.md)*
 
-*Defined in [awtk.ts:3895](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3895)*
+*Defined in [awtk.ts:3897](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3897)*
 
 **Parameters:**
 
@@ -56,7 +56,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:3895](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3895)*
+*Defined in [awtk.ts:3897](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3897)*
 
 ## Methods
 
@@ -64,7 +64,7 @@ Name | Type |
 
 ▸ **commitText**(`text`: string): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:3908](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3908)*
+*Defined in [awtk.ts:3910](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3910)*
 
 提交输入文本。
 
@@ -84,7 +84,7 @@ ___
 
 ▸ **dispatchKey**(`key`: number): *[TRet](../enums/_awtk_.tret.md)*
 
-*Defined in [awtk.ts:3920](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3920)*
+*Defined in [awtk.ts:3922](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3922)*
 
 提交按键。
 
@@ -104,7 +104,7 @@ ___
 
 ▸ **instance**(): *[TInputMethod](_awtk_.tinputmethod.md)*
 
-*Defined in [awtk.ts:3931](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3931)*
+*Defined in [awtk.ts:3933](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3933)*
 
 获取全局输入法对象。
 

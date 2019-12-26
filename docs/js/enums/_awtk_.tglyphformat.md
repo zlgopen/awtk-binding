@@ -18,7 +18,7 @@
 
 • **ALPHA**: =  GLYPH_FMT_ALPHA()
 
-*Defined in [awtk.ts:3580](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3580)*
+*Defined in [awtk.ts:3582](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3582)*
 
 每个像素占用1个字节(缺省)。
 
@@ -28,7 +28,7 @@ ___
 
 • **MONO**: =  GLYPH_FMT_MONO()
 
-*Defined in [awtk.ts:3586](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3586)*
+*Defined in [awtk.ts:3588](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3588)*
 
 每个像素占用1个比特。
 
@@ -38,6 +38,6 @@ ___
 
 • **RGBA**: =  GLYPH_FMT_RGBA()
 
-*Defined in [awtk.ts:3592](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L3592)*
+*Defined in [awtk.ts:3594](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L3594)*
 
 每个像素占用4个字节。

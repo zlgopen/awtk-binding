@@ -10,6 +10,7 @@ var searchData=
   ['patch3_5fy',['PATCH3_Y',['../enumawtk_1_1_t_image_draw_type.html#a5af708d8e7882e777dce06f6cf43d2f7',1,'awtk::TImageDrawType']]],
   ['patch3_5fy_5fscale_5fx',['PATCH3_Y_SCALE_X',['../enumawtk_1_1_t_image_draw_type.html#a51a0c0aa3799ac782c640123d4c2056d',1,'awtk::TImageDrawType']]],
   ['patch9',['PATCH9',['../enumawtk_1_1_t_image_draw_type.html#a51ef6c2389782df92f1d678aa36e4bcc',1,'awtk::TImageDrawType']]],
+  ['pathwinding',['pathWinding',['../classawtk_1_1_t_vgcanvas.html#a40fcddcfd024cecbecf99bc79037b490',1,'awtk::TVgcanvas']]],
   ['pause',['pause',['../classawtk_1_1_t_image_animation.html#ab545ab833404a2643325887839c6b029',1,'awtk::TImageAnimation']]],
   ['phone',['PHONE',['../enumawtk_1_1_t_input_type.html#aa84026deee2e16470f0514cc78d7388d',1,'awtk::TInputType']]],
   ['play',['play',['../classawtk_1_1_t_image_animation.html#af030fdaa9115e96909fabbaf39029205',1,'awtk::TImageAnimation']]],

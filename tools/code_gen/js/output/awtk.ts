@@ -1,120 +1,120 @@
 ﻿
 declare function print(str);
-if (this['console'] === undefined) {
+if(this['console'] === undefined) {
   this.console = {}
-  this.console.log = function (str) {
-    print(str);
+  this.console.log = function(str) {
+      print(str);
   }
 }
-declare function event_cast(event: any): any;
-declare function event_create(type: number): any;
-declare function event_destroy(event: any): TRet;
-declare function event_t_get_prop_type(nativeObj: any): number;
-declare function event_t_get_prop_time(nativeObj: any): number;
-declare function event_t_get_prop_target(nativeObj: any): any;
-declare function rect_create(x: number, y: number, w: number, h: number): any;
-declare function rect_set(rect: any, x: number, y: number, w: number, h: number): any;
-declare function rect_cast(rect: any): any;
-declare function rect_destroy(r: any): TRet;
-declare function rect_t_get_prop_x(nativeObj: any): number;
-declare function rect_t_get_prop_y(nativeObj: any): number;
-declare function rect_t_get_prop_w(nativeObj: any): number;
-declare function rect_t_get_prop_h(nativeObj: any): number;
-declare function emitter_create(): any;
-declare function emitter_dispatch(emitter: any, e: any): TRet;
-declare function emitter_dispatch_simple_event(emitter: any, type: TEventType): TRet;
-declare function emitter_on(emitter: any, type: TEventType, on_event: Function, ctx: any): number;
-declare function emitter_off(emitter: any, id: number): TRet;
-declare function emitter_enable(emitter: any): TRet;
-declare function emitter_disable(emitter: any): TRet;
-declare function emitter_size(emitter: any): number;
-declare function emitter_destroy(emitter: any): TRet;
-declare function emitter_cast(emitter: any): any;
-declare function bitmap_create(): any;
-declare function bitmap_create_ex(w: number, h: number, line_length: number, format: TBitmapFormat): any;
-declare function bitmap_get_bpp(bitmap: any): number;
-declare function bitmap_destroy(bitmap: any): TRet;
-declare function bitmap_t_get_prop_w(nativeObj: any): number;
-declare function bitmap_t_get_prop_h(nativeObj: any): number;
-declare function bitmap_t_get_prop_line_length(nativeObj: any): number;
-declare function bitmap_t_get_prop_flags(nativeObj: any): number;
-declare function bitmap_t_get_prop_format(nativeObj: any): number;
-declare function bitmap_t_get_prop_name(nativeObj: any): string;
-declare function value_set_bool(v: any, value: any): any;
-declare function value_bool(v: any): boolean;
-declare function value_set_int8(v: any, value: any): any;
-declare function value_int8(v: any): number;
-declare function value_set_uint8(v: any, value: any): any;
-declare function value_uint8(v: any): number;
-declare function value_set_int16(v: any, value: any): any;
-declare function value_int16(v: any): number;
-declare function value_set_uint16(v: any, value: any): any;
-declare function value_uint16(v: any): number;
-declare function value_set_int32(v: any, value: any): any;
-declare function value_int32(v: any): number;
-declare function value_set_uint32(v: any, value: any): any;
-declare function value_set_int64(v: any, value: any): any;
-declare function value_int64(v: any): number;
-declare function value_set_uint64(v: any, value: any): any;
-declare function value_uint64(v: any): number;
-declare function value_set_float(v: any, value: any): any;
-declare function value_float32(v: any): number;
-declare function value_set_double(v: any, value: any): any;
-declare function value_double(v: any): number;
-declare function value_dup_str(v: any, value: string): any;
-declare function value_str(v: any): string;
-declare function value_is_null(value: any): boolean;
-declare function value_set_int(v: any, value: any): any;
-declare function value_set_object(v: any, value: any): any;
-declare function value_object(v: any): any;
-declare function value_set_token(v: any, value: any): any;
-declare function value_token(v: any): number;
-declare function value_create(): any;
-declare function value_destroy(v: any): TRet;
-declare function value_reset(v: any): TRet;
-declare function value_cast(value: any): any;
-declare function object_unref(obj: any): TRet;
-declare function object_ref(obj: any): any;
-declare function object_get_type(obj: any): string;
-declare function object_get_desc(obj: any): string;
-declare function object_get_size(obj: any): number;
-declare function object_is_collection(obj: any): boolean;
-declare function object_set_name(obj: any, name: string): TRet;
-declare function object_compare(obj: any, other: any): number;
-declare function object_get_prop(obj: any, name: string, v: any): TRet;
-declare function object_get_prop_str(obj: any, name: string): string;
-declare function object_get_prop_pointer(obj: any, name: string): any;
-declare function object_get_prop_object(obj: any, name: string): any;
-declare function object_get_prop_int(obj: any, name: string, defval: number): number;
-declare function object_get_prop_bool(obj: any, name: string, defval: boolean): boolean;
-declare function object_get_prop_float(obj: any, name: string, defval: number): number;
-declare function object_remove_prop(obj: any, name: string): TRet;
-declare function object_set_prop(obj: any, name: string, value: any): TRet;
-declare function object_set_prop_str(obj: any, name: string, value: string): TRet;
-declare function object_set_prop_object(obj: any, name: string, value: any): TRet;
-declare function object_set_prop_int(obj: any, name: string, value: any): TRet;
-declare function object_set_prop_bool(obj: any, name: string, value: any): TRet;
-declare function object_set_prop_float(obj: any, name: string, value: any): TRet;
-declare function object_copy_prop(obj: any, src: any, name: string): TRet;
-declare function object_has_prop(obj: any, name: string): boolean;
-declare function object_eval(obj: any, expr: string, v: any): TRet;
-declare function object_can_exec(obj: any, name: string, args: string): boolean;
-declare function object_exec(obj: any, name: string, args: string): TRet;
-declare function object_notify_changed(obj: any): TRet;
-declare function object_get_prop_str_by_path(obj: any, path: string): string;
-declare function object_get_prop_pointer_by_path(obj: any, path: string): any;
-declare function object_get_prop_object_by_path(obj: any, path: string): any;
-declare function object_get_prop_int_by_path(obj: any, path: string, defval: number): number;
-declare function object_get_prop_bool_by_path(obj: any, path: string, defval: boolean): boolean;
-declare function object_get_prop_float_by_path(obj: any, path: string, defval: number): number;
-declare function object_t_get_prop_ref_count(nativeObj: any): number;
-declare function object_t_get_prop_name(nativeObj: any): string;
-declare function tk_init(w: number, h: number, app_type: TAppType, app_name: string, app_root: string): TRet;
-declare function tk_run(): TRet;
-declare function tk_quit(): TRet;
-declare function tk_get_pointer_x(): number;
-declare function tk_get_pointer_y(): number;
-declare function tk_is_pointer_pressed(): boolean;
+declare function event_cast(event : any) : any;
+declare function event_create(type : number) : any;
+declare function event_destroy(event : any) : TRet;
+declare function event_t_get_prop_type(nativeObj : any) : number;
+declare function event_t_get_prop_time(nativeObj : any) : number;
+declare function event_t_get_prop_target(nativeObj : any) : any;
+declare function rect_create(x : number, y : number, w : number, h : number) : any;
+declare function rect_set(rect : any, x : number, y : number, w : number, h : number) : any;
+declare function rect_cast(rect : any) : any;
+declare function rect_destroy(r : any) : TRet;
+declare function rect_t_get_prop_x(nativeObj : any) : number;
+declare function rect_t_get_prop_y(nativeObj : any) : number;
+declare function rect_t_get_prop_w(nativeObj : any) : number;
+declare function rect_t_get_prop_h(nativeObj : any) : number;
+declare function emitter_create() : any;
+declare function emitter_dispatch(emitter : any, e : any) : TRet;
+declare function emitter_dispatch_simple_event(emitter : any, type : TEventType) : TRet;
+declare function emitter_on(emitter : any, type : TEventType, on_event : Function, ctx : any) : number;
+declare function emitter_off(emitter : any, id : number) : TRet;
+declare function emitter_enable(emitter : any) : TRet;
+declare function emitter_disable(emitter : any) : TRet;
+declare function emitter_size(emitter : any) : number;
+declare function emitter_destroy(emitter : any) : TRet;
+declare function emitter_cast(emitter : any) : any;
+declare function bitmap_create() : any;
+declare function bitmap_create_ex(w : number, h : number, line_length : number, format : TBitmapFormat) : any;
+declare function bitmap_get_bpp(bitmap : any) : number;
+declare function bitmap_destroy(bitmap : any) : TRet;
+declare function bitmap_t_get_prop_w(nativeObj : any) : number;
+declare function bitmap_t_get_prop_h(nativeObj : any) : number;
+declare function bitmap_t_get_prop_line_length(nativeObj : any) : number;
+declare function bitmap_t_get_prop_flags(nativeObj : any) : number;
+declare function bitmap_t_get_prop_format(nativeObj : any) : number;
+declare function bitmap_t_get_prop_name(nativeObj : any) : string;
+declare function value_set_bool(v : any, value : any) : any;
+declare function value_bool(v : any) : boolean;
+declare function value_set_int8(v : any, value : any) : any;
+declare function value_int8(v : any) : number;
+declare function value_set_uint8(v : any, value : any) : any;
+declare function value_uint8(v : any) : number;
+declare function value_set_int16(v : any, value : any) : any;
+declare function value_int16(v : any) : number;
+declare function value_set_uint16(v : any, value : any) : any;
+declare function value_uint16(v : any) : number;
+declare function value_set_int32(v : any, value : any) : any;
+declare function value_int32(v : any) : number;
+declare function value_set_uint32(v : any, value : any) : any;
+declare function value_set_int64(v : any, value : any) : any;
+declare function value_int64(v : any) : number;
+declare function value_set_uint64(v : any, value : any) : any;
+declare function value_uint64(v : any) : number;
+declare function value_set_float(v : any, value : any) : any;
+declare function value_float32(v : any) : number;
+declare function value_set_double(v : any, value : any) : any;
+declare function value_double(v : any) : number;
+declare function value_dup_str(v : any, value : string) : any;
+declare function value_str(v : any) : string;
+declare function value_is_null(value : any) : boolean;
+declare function value_set_int(v : any, value : any) : any;
+declare function value_set_object(v : any, value : any) : any;
+declare function value_object(v : any) : any;
+declare function value_set_token(v : any, value : any) : any;
+declare function value_token(v : any) : number;
+declare function value_create() : any;
+declare function value_destroy(v : any) : TRet;
+declare function value_reset(v : any) : TRet;
+declare function value_cast(value : any) : any;
+declare function object_unref(obj : any) : TRet;
+declare function object_ref(obj : any) : any;
+declare function object_get_type(obj : any) : string;
+declare function object_get_desc(obj : any) : string;
+declare function object_get_size(obj : any) : number;
+declare function object_is_collection(obj : any) : boolean;
+declare function object_set_name(obj : any, name : string) : TRet;
+declare function object_compare(obj : any, other : any) : number;
+declare function object_get_prop(obj : any, name : string, v : any) : TRet;
+declare function object_get_prop_str(obj : any, name : string) : string;
+declare function object_get_prop_pointer(obj : any, name : string) : any;
+declare function object_get_prop_object(obj : any, name : string) : any;
+declare function object_get_prop_int(obj : any, name : string, defval : number) : number;
+declare function object_get_prop_bool(obj : any, name : string, defval : boolean) : boolean;
+declare function object_get_prop_float(obj : any, name : string, defval : number) : number;
+declare function object_remove_prop(obj : any, name : string) : TRet;
+declare function object_set_prop(obj : any, name : string, value : any) : TRet;
+declare function object_set_prop_str(obj : any, name : string, value : string) : TRet;
+declare function object_set_prop_object(obj : any, name : string, value : any) : TRet;
+declare function object_set_prop_int(obj : any, name : string, value : any) : TRet;
+declare function object_set_prop_bool(obj : any, name : string, value : any) : TRet;
+declare function object_set_prop_float(obj : any, name : string, value : any) : TRet;
+declare function object_copy_prop(obj : any, src : any, name : string) : TRet;
+declare function object_has_prop(obj : any, name : string) : boolean;
+declare function object_eval(obj : any, expr : string, v : any) : TRet;
+declare function object_can_exec(obj : any, name : string, args : string) : boolean;
+declare function object_exec(obj : any, name : string, args : string) : TRet;
+declare function object_notify_changed(obj : any) : TRet;
+declare function object_get_prop_str_by_path(obj : any, path : string) : string;
+declare function object_get_prop_pointer_by_path(obj : any, path : string) : any;
+declare function object_get_prop_object_by_path(obj : any, path : string) : any;
+declare function object_get_prop_int_by_path(obj : any, path : string, defval : number) : number;
+declare function object_get_prop_bool_by_path(obj : any, path : string, defval : boolean) : boolean;
+declare function object_get_prop_float_by_path(obj : any, path : string, defval : number) : number;
+declare function object_t_get_prop_ref_count(nativeObj : any) : number;
+declare function object_t_get_prop_name(nativeObj : any) : string;
+declare function tk_init(w : number, h : number, app_type : TAppType, app_name : string, app_root : string) : TRet;
+declare function tk_run() : TRet;
+declare function tk_quit() : TRet;
+declare function tk_get_pointer_x() : number;
+declare function tk_get_pointer_y() : number;
+declare function tk_is_pointer_pressed() : boolean;
 declare function DIALOG_QUIT_NONE();
 declare function DIALOG_QUIT_OK();
 declare function DIALOG_QUIT_YES();
@@ -197,15 +197,15 @@ declare function EVT_ITEMS_CHANGED();
 declare function EVT_PROPS_CHANGED();
 declare function EVT_PROGRESS();
 declare function EVT_DESTROY();
-declare function font_manager_unload_font(fm: any, name: string, size: number): TRet;
-declare function font_manager_unload_all(fm: any): TRet;
+declare function font_manager_unload_font(fm : any, name : string, size : number) : TRet;
+declare function font_manager_unload_all(fm : any) : TRet;
 declare function GLYPH_FMT_ALPHA();
 declare function GLYPH_FMT_MONO();
 declare function GLYPH_FMT_RGBA();
-declare function idle_add(on_idle: Function, ctx: any): number;
-declare function idle_remove(idle_id: number): TRet;
-declare function image_manager(): any;
-declare function image_manager_get_bitmap(imm: any, name: string, image: any): TRet;
+declare function idle_add(on_idle : Function, ctx : any) : number;
+declare function idle_remove(idle_id : number) : TRet;
+declare function image_manager() : any;
+declare function image_manager_get_bitmap(imm : any, name : string, image : any) : TRet;
 declare function INPUT_TEXT();
 declare function INPUT_INT();
 declare function INPUT_UINT();
@@ -238,9 +238,9 @@ declare function VALUE_TYPE_SIZED_STRING();
 declare function VALUE_TYPE_BINARY();
 declare function VALUE_TYPE_UBJSON();
 declare function VALUE_TYPE_TOKEN();
-declare function input_method_commit_text(im: any, text: string): TRet;
-declare function input_method_dispatch_key(im: any, key: number): TRet;
-declare function input_method(): any;
+declare function input_method_commit_text(im : any, text : string) : TRet;
+declare function input_method_dispatch_key(im : any, key : number) : TRet;
+declare function input_method() : any;
 declare function TK_KEY_RETURN();
 declare function TK_KEY_ESCAPE();
 declare function TK_KEY_BACKSPACE();
@@ -372,10 +372,10 @@ declare function TK_KEY_MENU();
 declare function TK_KEY_COMMAND();
 declare function TK_KEY_BACK();
 declare function TK_KEY_CANCEL();
-declare function locale_info(): any;
-declare function locale_info_tr(locale_info: any, text: string): string;
-declare function locale_info_change(locale_info: any, language: string, country: string): TRet;
-declare function locale_info_off(locale_info: any, id: number): TRet;
+declare function locale_info() : any;
+declare function locale_info_tr(locale_info : any, text : string) : string;
+declare function locale_info_change(locale_info : any, language : string, country : string) : TRet;
+declare function locale_info_off(locale_info : any, id : number) : TRet;
 declare function STYLE_ID_BG_COLOR();
 declare function STYLE_ID_FG_COLOR();
 declare function STYLE_ID_MASK_COLOR();
@@ -410,17 +410,17 @@ declare function STYLE_ID_SELECTED_TEXT_COLOR();
 declare function STYLE_ID_ROUND_RADIUS();
 declare function STYLE_ID_CHILDREN_LAYOUT();
 declare function STYLE_ID_SELF_LAYOUT();
-declare function style_notify_widget_state_changed(s: any, widget: any): TRet;
-declare function style_is_valid(s: any): boolean;
-declare function style_get_int(s: any, name: string, defval: number): number;
-declare function style_get_str(s: any, name: string, defval: string): string;
-declare function style_set(s: any, state: string, name: string, value: any): TRet;
-declare function style_is_mutable(s: any): boolean;
-declare function theme(): any;
-declare function timer_add(on_timer: Function, ctx: any, duration: number): number;
-declare function timer_remove(timer_id: number): TRet;
-declare function timer_reset(timer_id: number): TRet;
-declare function timer_modify(timer_id: number, duration: number): TRet;
+declare function style_notify_widget_state_changed(s : any, widget : any) : TRet;
+declare function style_is_valid(s : any) : boolean;
+declare function style_get_int(s : any, name : string, defval : number) : number;
+declare function style_get_str(s : any, name : string, defval : string) : string;
+declare function style_set(s : any, state : string, name : string, value : any) : TRet;
+declare function style_is_mutable(s : any) : boolean;
+declare function theme() : any;
+declare function timer_add(on_timer : Function, ctx : any, duration : number) : number;
+declare function timer_remove(timer_id : number) : TRet;
+declare function timer_reset(timer_id : number) : TRet;
+declare function timer_modify(timer_id : number, duration : number) : TRet;
 declare function ALIGN_V_NONE();
 declare function ALIGN_V_MIDDLE();
 declare function ALIGN_V_TOP();
@@ -449,61 +449,62 @@ declare function BITMAP_FLAG_IMMUTABLE();
 declare function BITMAP_FLAG_TEXTURE();
 declare function BITMAP_FLAG_CHANGED();
 declare function BITMAP_FLAG_PREMULTI_ALPHA();
-declare function vgcanvas_cast(vg: any): any;
-declare function vgcanvas_flush(vg: any): TRet;
-declare function vgcanvas_begin_path(vg: any): TRet;
-declare function vgcanvas_move_to(vg: any, x: number, y: number): TRet;
-declare function vgcanvas_line_to(vg: any, x: number, y: number): TRet;
-declare function vgcanvas_quad_to(vg: any, cpx: number, cpy: number, x: number, y: number): TRet;
-declare function vgcanvas_bezier_to(vg: any, cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number, y: number): TRet;
-declare function vgcanvas_arc_to(vg: any, x1: number, y1: number, x2: number, y2: number, r: number): TRet;
-declare function vgcanvas_arc(vg: any, x: number, y: number, r: number, start_angle: number, end_angle: number, ccw: boolean): TRet;
-declare function vgcanvas_is_point_in_path(vg: any, x: number, y: number): boolean;
-declare function vgcanvas_rect(vg: any, x: number, y: number, w: number, h: number): TRet;
-declare function vgcanvas_rounded_rect(vg: any, x: number, y: number, w: number, h: number, r: number): TRet;
-declare function vgcanvas_ellipse(vg: any, x: number, y: number, rx: number, ry: number): TRet;
-declare function vgcanvas_close_path(vg: any): TRet;
-declare function vgcanvas_rotate(vg: any, rad: number): TRet;
-declare function vgcanvas_scale(vg: any, x: number, y: number): TRet;
-declare function vgcanvas_translate(vg: any, x: number, y: number): TRet;
-declare function vgcanvas_transform(vg: any, a: number, b: number, c: number, d: number, e: number, f: number): TRet;
-declare function vgcanvas_set_transform(vg: any, a: number, b: number, c: number, d: number, e: number, f: number): TRet;
-declare function vgcanvas_clip_rect(vg: any, x: number, y: number, w: number, h: number): TRet;
-declare function vgcanvas_fill(vg: any): TRet;
-declare function vgcanvas_stroke(vg: any): TRet;
-declare function vgcanvas_paint(vg: any, stroke: boolean, img: any): TRet;
-declare function vgcanvas_set_font(vg: any, font: string): TRet;
-declare function vgcanvas_set_font_size(vg: any, font: number): TRet;
-declare function vgcanvas_set_text_align(vg: any, value: string): TRet;
-declare function vgcanvas_set_text_baseline(vg: any, value: string): TRet;
-declare function vgcanvas_fill_text(vg: any, text: string, x: number, y: number, max_width: number): TRet;
-declare function vgcanvas_measure_text(vg: any, text: string): number;
-declare function vgcanvas_draw_image(vg: any, img: any, sx: number, sy: number, sw: number, sh: number, dx: number, dy: number, dw: number, dh: number): TRet;
-declare function vgcanvas_draw_icon(vg: any, img: any, sx: number, sy: number, sw: number, sh: number, dx: number, dy: number, dw: number, dh: number): TRet;
-declare function vgcanvas_set_antialias(vg: any, value: any): TRet;
-declare function vgcanvas_set_global_alpha(vg: any, alpha: number): TRet;
-declare function vgcanvas_set_line_width(vg: any, value: any): TRet;
-declare function vgcanvas_set_fill_color_str(vg: any, color: string): TRet;
-declare function vgcanvas_set_stroke_color_str(vg: any, color: string): TRet;
-declare function vgcanvas_set_line_cap(vg: any, value: string): TRet;
-declare function vgcanvas_set_line_join(vg: any, value: string): TRet;
-declare function vgcanvas_set_miter_limit(vg: any, value: any): TRet;
-declare function vgcanvas_save(vg: any): TRet;
-declare function vgcanvas_restore(vg: any): TRet;
-declare function vgcanvas_t_get_prop_w(nativeObj: any): number;
-declare function vgcanvas_t_get_prop_h(nativeObj: any): number;
-declare function vgcanvas_t_get_prop_stride(nativeObj: any): number;
-declare function vgcanvas_t_get_prop_ratio(nativeObj: any): number;
-declare function vgcanvas_t_get_prop_anti_alias(nativeObj: any): boolean;
-declare function vgcanvas_t_get_prop_line_width(nativeObj: any): number;
-declare function vgcanvas_t_get_prop_global_alpha(nativeObj: any): number;
-declare function vgcanvas_t_get_prop_miter_limit(nativeObj: any): number;
-declare function vgcanvas_t_get_prop_line_cap(nativeObj: any): string;
-declare function vgcanvas_t_get_prop_line_join(nativeObj: any): string;
-declare function vgcanvas_t_get_prop_font(nativeObj: any): string;
-declare function vgcanvas_t_get_prop_font_size(nativeObj: any): number;
-declare function vgcanvas_t_get_prop_text_align(nativeObj: any): string;
-declare function vgcanvas_t_get_prop_text_baseline(nativeObj: any): string;
+declare function vgcanvas_cast(vg : any) : any;
+declare function vgcanvas_flush(vg : any) : TRet;
+declare function vgcanvas_begin_path(vg : any) : TRet;
+declare function vgcanvas_move_to(vg : any, x : number, y : number) : TRet;
+declare function vgcanvas_line_to(vg : any, x : number, y : number) : TRet;
+declare function vgcanvas_quad_to(vg : any, cpx : number, cpy : number, x : number, y : number) : TRet;
+declare function vgcanvas_bezier_to(vg : any, cp1x : number, cp1y : number, cp2x : number, cp2y : number, x : number, y : number) : TRet;
+declare function vgcanvas_arc_to(vg : any, x1 : number, y1 : number, x2 : number, y2 : number, r : number) : TRet;
+declare function vgcanvas_arc(vg : any, x : number, y : number, r : number, start_angle : number, end_angle : number, ccw : boolean) : TRet;
+declare function vgcanvas_is_point_in_path(vg : any, x : number, y : number) : boolean;
+declare function vgcanvas_rect(vg : any, x : number, y : number, w : number, h : number) : TRet;
+declare function vgcanvas_rounded_rect(vg : any, x : number, y : number, w : number, h : number, r : number) : TRet;
+declare function vgcanvas_ellipse(vg : any, x : number, y : number, rx : number, ry : number) : TRet;
+declare function vgcanvas_close_path(vg : any) : TRet;
+declare function vgcanvas_path_winding(vg : any, dir : boolean) : TRet;
+declare function vgcanvas_rotate(vg : any, rad : number) : TRet;
+declare function vgcanvas_scale(vg : any, x : number, y : number) : TRet;
+declare function vgcanvas_translate(vg : any, x : number, y : number) : TRet;
+declare function vgcanvas_transform(vg : any, a : number, b : number, c : number, d : number, e : number, f : number) : TRet;
+declare function vgcanvas_set_transform(vg : any, a : number, b : number, c : number, d : number, e : number, f : number) : TRet;
+declare function vgcanvas_clip_rect(vg : any, x : number, y : number, w : number, h : number) : TRet;
+declare function vgcanvas_fill(vg : any) : TRet;
+declare function vgcanvas_stroke(vg : any) : TRet;
+declare function vgcanvas_paint(vg : any, stroke : boolean, img : any) : TRet;
+declare function vgcanvas_set_font(vg : any, font : string) : TRet;
+declare function vgcanvas_set_font_size(vg : any, font : number) : TRet;
+declare function vgcanvas_set_text_align(vg : any, value : string) : TRet;
+declare function vgcanvas_set_text_baseline(vg : any, value : string) : TRet;
+declare function vgcanvas_fill_text(vg : any, text : string, x : number, y : number, max_width : number) : TRet;
+declare function vgcanvas_measure_text(vg : any, text : string) : number;
+declare function vgcanvas_draw_image(vg : any, img : any, sx : number, sy : number, sw : number, sh : number, dx : number, dy : number, dw : number, dh : number) : TRet;
+declare function vgcanvas_draw_icon(vg : any, img : any, sx : number, sy : number, sw : number, sh : number, dx : number, dy : number, dw : number, dh : number) : TRet;
+declare function vgcanvas_set_antialias(vg : any, value : any) : TRet;
+declare function vgcanvas_set_global_alpha(vg : any, alpha : number) : TRet;
+declare function vgcanvas_set_line_width(vg : any, value : any) : TRet;
+declare function vgcanvas_set_fill_color_str(vg : any, color : string) : TRet;
+declare function vgcanvas_set_stroke_color_str(vg : any, color : string) : TRet;
+declare function vgcanvas_set_line_cap(vg : any, value : string) : TRet;
+declare function vgcanvas_set_line_join(vg : any, value : string) : TRet;
+declare function vgcanvas_set_miter_limit(vg : any, value : any) : TRet;
+declare function vgcanvas_save(vg : any) : TRet;
+declare function vgcanvas_restore(vg : any) : TRet;
+declare function vgcanvas_t_get_prop_w(nativeObj : any) : number;
+declare function vgcanvas_t_get_prop_h(nativeObj : any) : number;
+declare function vgcanvas_t_get_prop_stride(nativeObj : any) : number;
+declare function vgcanvas_t_get_prop_ratio(nativeObj : any) : number;
+declare function vgcanvas_t_get_prop_anti_alias(nativeObj : any) : boolean;
+declare function vgcanvas_t_get_prop_line_width(nativeObj : any) : number;
+declare function vgcanvas_t_get_prop_global_alpha(nativeObj : any) : number;
+declare function vgcanvas_t_get_prop_miter_limit(nativeObj : any) : number;
+declare function vgcanvas_t_get_prop_line_cap(nativeObj : any) : string;
+declare function vgcanvas_t_get_prop_line_join(nativeObj : any) : string;
+declare function vgcanvas_t_get_prop_font(nativeObj : any) : string;
+declare function vgcanvas_t_get_prop_font_size(nativeObj : any) : number;
+declare function vgcanvas_t_get_prop_text_align(nativeObj : any) : string;
+declare function vgcanvas_t_get_prop_text_baseline(nativeObj : any) : string;
 declare function WIDGET_PROP_EXEC();
 declare function WIDGET_PROP_X();
 declare function WIDGET_PROP_Y();
@@ -711,101 +712,102 @@ declare function WIDGET_STATE_NORMAL_OF_ACTIVE();
 declare function WIDGET_STATE_PRESSED_OF_ACTIVE();
 declare function WIDGET_STATE_OVER_OF_ACTIVE();
 declare function WIDGET_STATE_FOCUSED_OF_ACTIVE();
-declare function widget_count_children(widget: any): number;
-declare function widget_get_child(widget: any, index: number): any;
-declare function widget_index_of(widget: any): number;
-declare function widget_move(widget: any, x: number, y: number): TRet;
-declare function widget_resize(widget: any, w: number, h: number): TRet;
-declare function widget_move_resize(widget: any, x: number, y: number, w: number, h: number): TRet;
-declare function widget_set_value(widget: any, value: any): TRet;
-declare function widget_animate_value_to(widget: any, value: any, duration: number): TRet;
-declare function widget_add_value(widget: any, delta: number): TRet;
-declare function widget_use_style(widget: any, style: string): TRet;
-declare function widget_set_text_utf8(widget: any, text: string): TRet;
-declare function widget_set_tr_text(widget: any, text: string): TRet;
-declare function widget_get_value(widget: any): number;
-declare function widget_get_text(widget: any): any;
-declare function widget_set_name(widget: any, name: string): TRet;
-declare function widget_set_theme(widget: any, name: string): TRet;
-declare function widget_set_pointer_cursor(widget: any, cursor: string): TRet;
-declare function widget_set_animation(widget: any, animation: string): TRet;
-declare function widget_create_animator(widget: any, animation: string): TRet;
-declare function widget_start_animator(widget: any, name: string): TRet;
-declare function widget_set_animator_time_scale(widget: any, name: string, time_scale: number): TRet;
-declare function widget_pause_animator(widget: any, name: string): TRet;
-declare function widget_stop_animator(widget: any, name: string): TRet;
-declare function widget_destroy_animator(widget: any, name: string): TRet;
-declare function widget_set_enable(widget: any, enable: boolean): TRet;
-declare function widget_set_feedback(widget: any, feedback: boolean): TRet;
-declare function widget_set_floating(widget: any, floating: boolean): TRet;
-declare function widget_set_focused(widget: any, focused: boolean): TRet;
-declare function widget_set_focusable(widget: any, focusable: boolean): TRet;
-declare function widget_set_state(widget: any, state: string): TRet;
-declare function widget_set_opacity(widget: any, opacity: number): TRet;
-declare function widget_destroy_children(widget: any): TRet;
-declare function widget_add_child(widget: any, child: any): TRet;
-declare function widget_remove_child(widget: any, child: any): TRet;
-declare function widget_insert_child(widget: any, index: number, child: any): TRet;
-declare function widget_restack(widget: any, index: number): TRet;
-declare function widget_child(widget: any, name: string): any;
-declare function widget_lookup(widget: any, name: string, recursive: boolean): any;
-declare function widget_lookup_by_type(widget: any, type: string, recursive: boolean): any;
-declare function widget_set_visible(widget: any, visible: boolean, recursive: boolean): TRet;
-declare function widget_set_visible_only(widget: any, visible: boolean): TRet;
-declare function widget_set_sensitive(widget: any, sensitive: boolean): TRet;
-declare function widget_on(widget: any, type: TEventType, on_event: Function, ctx: any): number;
-declare function widget_off(widget: any, id: number): TRet;
-declare function widget_invalidate_force(widget: any, r: any): TRet;
-declare function widget_set_prop_str(widget: any, name: string, v: string): TRet;
-declare function widget_get_prop_str(widget: any, name: string, defval: string): string;
-declare function widget_set_prop_int(widget: any, name: string, v: number): TRet;
-declare function widget_get_prop_int(widget: any, name: string, defval: number): number;
-declare function widget_set_prop_bool(widget: any, name: string, v: boolean): TRet;
-declare function widget_get_prop_bool(widget: any, name: string, defval: boolean): boolean;
-declare function widget_is_window_opened(widget: any): boolean;
-declare function widget_is_window(widget: any): boolean;
-declare function widget_is_designing_window(widget: any): boolean;
-declare function widget_is_window_manager(widget: any): boolean;
-declare function widget_foreach(widget: any, visit: Function, ctx: any): TRet;
-declare function widget_get_window(widget: any): any;
-declare function widget_get_window_manager(widget: any): any;
-declare function widget_get_type(widget: any): string;
-declare function widget_clone(widget: any, parent: any): any;
-declare function widget_equal(widget: any, other: any): boolean;
-declare function widget_cast(widget: any): any;
-declare function widget_destroy(widget: any): TRet;
-declare function widget_unref(widget: any): TRet;
-declare function widget_is_system_bar(widget: any): boolean;
-declare function widget_is_normal_window(widget: any): boolean;
-declare function widget_is_dialog(widget: any): boolean;
-declare function widget_is_popup(widget: any): boolean;
-declare function widget_layout(widget: any): TRet;
-declare function widget_set_self_layout(widget: any, params: string): TRet;
-declare function widget_set_children_layout(widget: any, params: string): TRet;
-declare function widget_set_self_layout_params(widget: any, x: string, y: string, w: string, h: string): TRet;
-declare function widget_set_style_int(widget: any, state_and_name: string, value: any): TRet;
-declare function widget_set_style_str(widget: any, state_and_name: string, value: string): TRet;
-declare function widget_set_style_color(widget: any, state_and_name: string, value: any): TRet;
-declare function widget_t_get_prop_x(nativeObj: any): number;
-declare function widget_t_get_prop_y(nativeObj: any): number;
-declare function widget_t_get_prop_w(nativeObj: any): number;
-declare function widget_t_get_prop_h(nativeObj: any): number;
-declare function widget_t_get_prop_name(nativeObj: any): string;
-declare function widget_t_get_prop_tr_text(nativeObj: any): string;
-declare function widget_t_get_prop_style(nativeObj: any): string;
-declare function widget_t_get_prop_animation(nativeObj: any): string;
-declare function widget_t_get_prop_enable(nativeObj: any): boolean;
-declare function widget_t_get_prop_feedback(nativeObj: any): boolean;
-declare function widget_t_get_prop_visible(nativeObj: any): boolean;
-declare function widget_t_set_prop_visible(nativeObj: any, v: boolean)
-declare function widget_t_get_prop_sensitive(nativeObj: any): boolean;
-declare function widget_t_set_prop_sensitive(nativeObj: any, v: boolean)
-declare function widget_t_get_prop_focusable(nativeObj: any): boolean;
-declare function widget_t_set_prop_focusable(nativeObj: any, v: boolean)
-declare function widget_t_get_prop_with_focus_state(nativeObj: any): boolean;
-declare function widget_t_set_prop_with_focus_state(nativeObj: any, v: boolean)
-declare function widget_t_get_prop_floating(nativeObj: any): boolean;
-declare function widget_t_get_prop_parent(nativeObj: any): any;
+declare function widget_count_children(widget : any) : number;
+declare function widget_get_child(widget : any, index : number) : any;
+declare function widget_index_of(widget : any) : number;
+declare function widget_close_window(widget : any) : TRet;
+declare function widget_move(widget : any, x : number, y : number) : TRet;
+declare function widget_resize(widget : any, w : number, h : number) : TRet;
+declare function widget_move_resize(widget : any, x : number, y : number, w : number, h : number) : TRet;
+declare function widget_set_value(widget : any, value : any) : TRet;
+declare function widget_animate_value_to(widget : any, value : any, duration : number) : TRet;
+declare function widget_add_value(widget : any, delta : number) : TRet;
+declare function widget_use_style(widget : any, style : string) : TRet;
+declare function widget_set_text_utf8(widget : any, text : string) : TRet;
+declare function widget_set_tr_text(widget : any, text : string) : TRet;
+declare function widget_get_value(widget : any) : number;
+declare function widget_get_text(widget : any) : any;
+declare function widget_set_name(widget : any, name : string) : TRet;
+declare function widget_set_theme(widget : any, name : string) : TRet;
+declare function widget_set_pointer_cursor(widget : any, cursor : string) : TRet;
+declare function widget_set_animation(widget : any, animation : string) : TRet;
+declare function widget_create_animator(widget : any, animation : string) : TRet;
+declare function widget_start_animator(widget : any, name : string) : TRet;
+declare function widget_set_animator_time_scale(widget : any, name : string, time_scale : number) : TRet;
+declare function widget_pause_animator(widget : any, name : string) : TRet;
+declare function widget_stop_animator(widget : any, name : string) : TRet;
+declare function widget_destroy_animator(widget : any, name : string) : TRet;
+declare function widget_set_enable(widget : any, enable : boolean) : TRet;
+declare function widget_set_feedback(widget : any, feedback : boolean) : TRet;
+declare function widget_set_floating(widget : any, floating : boolean) : TRet;
+declare function widget_set_focused(widget : any, focused : boolean) : TRet;
+declare function widget_set_focusable(widget : any, focusable : boolean) : TRet;
+declare function widget_set_state(widget : any, state : string) : TRet;
+declare function widget_set_opacity(widget : any, opacity : number) : TRet;
+declare function widget_destroy_children(widget : any) : TRet;
+declare function widget_add_child(widget : any, child : any) : TRet;
+declare function widget_remove_child(widget : any, child : any) : TRet;
+declare function widget_insert_child(widget : any, index : number, child : any) : TRet;
+declare function widget_restack(widget : any, index : number) : TRet;
+declare function widget_child(widget : any, name : string) : any;
+declare function widget_lookup(widget : any, name : string, recursive : boolean) : any;
+declare function widget_lookup_by_type(widget : any, type : string, recursive : boolean) : any;
+declare function widget_set_visible(widget : any, visible : boolean, recursive : boolean) : TRet;
+declare function widget_set_visible_only(widget : any, visible : boolean) : TRet;
+declare function widget_set_sensitive(widget : any, sensitive : boolean) : TRet;
+declare function widget_on(widget : any, type : TEventType, on_event : Function, ctx : any) : number;
+declare function widget_off(widget : any, id : number) : TRet;
+declare function widget_invalidate_force(widget : any, r : any) : TRet;
+declare function widget_set_prop_str(widget : any, name : string, v : string) : TRet;
+declare function widget_get_prop_str(widget : any, name : string, defval : string) : string;
+declare function widget_set_prop_int(widget : any, name : string, v : number) : TRet;
+declare function widget_get_prop_int(widget : any, name : string, defval : number) : number;
+declare function widget_set_prop_bool(widget : any, name : string, v : boolean) : TRet;
+declare function widget_get_prop_bool(widget : any, name : string, defval : boolean) : boolean;
+declare function widget_is_window_opened(widget : any) : boolean;
+declare function widget_is_window(widget : any) : boolean;
+declare function widget_is_designing_window(widget : any) : boolean;
+declare function widget_is_window_manager(widget : any) : boolean;
+declare function widget_foreach(widget : any, visit : Function, ctx : any) : TRet;
+declare function widget_get_window(widget : any) : any;
+declare function widget_get_window_manager(widget : any) : any;
+declare function widget_get_type(widget : any) : string;
+declare function widget_clone(widget : any, parent : any) : any;
+declare function widget_equal(widget : any, other : any) : boolean;
+declare function widget_cast(widget : any) : any;
+declare function widget_destroy(widget : any) : TRet;
+declare function widget_unref(widget : any) : TRet;
+declare function widget_is_system_bar(widget : any) : boolean;
+declare function widget_is_normal_window(widget : any) : boolean;
+declare function widget_is_dialog(widget : any) : boolean;
+declare function widget_is_popup(widget : any) : boolean;
+declare function widget_layout(widget : any) : TRet;
+declare function widget_set_self_layout(widget : any, params : string) : TRet;
+declare function widget_set_children_layout(widget : any, params : string) : TRet;
+declare function widget_set_self_layout_params(widget : any, x : string, y : string, w : string, h : string) : TRet;
+declare function widget_set_style_int(widget : any, state_and_name : string, value : any) : TRet;
+declare function widget_set_style_str(widget : any, state_and_name : string, value : string) : TRet;
+declare function widget_set_style_color(widget : any, state_and_name : string, value : any) : TRet;
+declare function widget_t_get_prop_x(nativeObj : any) : number;
+declare function widget_t_get_prop_y(nativeObj : any) : number;
+declare function widget_t_get_prop_w(nativeObj : any) : number;
+declare function widget_t_get_prop_h(nativeObj : any) : number;
+declare function widget_t_get_prop_name(nativeObj : any) : string;
+declare function widget_t_get_prop_tr_text(nativeObj : any) : string;
+declare function widget_t_get_prop_style(nativeObj : any) : string;
+declare function widget_t_get_prop_animation(nativeObj : any) : string;
+declare function widget_t_get_prop_enable(nativeObj : any) : boolean;
+declare function widget_t_get_prop_feedback(nativeObj : any) : boolean;
+declare function widget_t_get_prop_visible(nativeObj : any) : boolean;
+declare function widget_t_set_prop_visible(nativeObj : any, v : boolean)
+declare function widget_t_get_prop_sensitive(nativeObj : any) : boolean;
+declare function widget_t_set_prop_sensitive(nativeObj : any, v : boolean)
+declare function widget_t_get_prop_focusable(nativeObj : any) : boolean;
+declare function widget_t_set_prop_focusable(nativeObj : any, v : boolean)
+declare function widget_t_get_prop_with_focus_state(nativeObj : any) : boolean;
+declare function widget_t_set_prop_with_focus_state(nativeObj : any, v : boolean)
+declare function widget_t_get_prop_floating(nativeObj : any) : boolean;
+declare function widget_t_get_prop_parent(nativeObj : any) : any;
 declare function RET_OK();
 declare function RET_OOM();
 declare function RET_FAIL();
@@ -827,8 +829,8 @@ declare function RET_TIMEOUT();
 declare function RET_CRC();
 declare function RET_IO();
 declare function RET_EOS();
-declare function time_now_s(): number;
-declare function time_now_ms(): number;
+declare function time_now_s() : number;
+declare function time_now_ms() : number;
 declare function IMAGE_DRAW_DEFAULT();
 declare function IMAGE_DRAW_CENTER();
 declare function IMAGE_DRAW_ICON();
@@ -846,43 +848,43 @@ declare function IMAGE_DRAW_PATCH3_X();
 declare function IMAGE_DRAW_PATCH3_Y();
 declare function IMAGE_DRAW_PATCH3_X_SCALE_Y();
 declare function IMAGE_DRAW_PATCH3_Y_SCALE_X();
-declare function canvas_get_width(c: any): number;
-declare function canvas_get_height(c: any): number;
-declare function canvas_get_clip_rect(c: any, r: any): TRet;
-declare function canvas_set_clip_rect(c: any, r: any): TRet;
-declare function canvas_set_clip_rect_ex(c: any, r: any, translate: boolean): TRet;
-declare function canvas_set_fill_color_str(c: any, color: string): TRet;
-declare function canvas_set_text_color_str(c: any, color: string): TRet;
-declare function canvas_set_stroke_color_str(c: any, color: string): TRet;
-declare function canvas_set_global_alpha(c: any, alpha: number): TRet;
-declare function canvas_translate(c: any, dx: number, dy: number): TRet;
-declare function canvas_untranslate(c: any, dx: number, dy: number): TRet;
-declare function canvas_draw_vline(c: any, x: number, y: number, h: number): TRet;
-declare function canvas_draw_hline(c: any, x: number, y: number, w: number): TRet;
-declare function canvas_fill_rect(c: any, x: number, y: number, w: number, h: number): TRet;
-declare function canvas_stroke_rect(c: any, x: number, y: number, w: number, h: number): TRet;
-declare function canvas_set_font(c: any, name: string, size: number): TRet;
-declare function canvas_measure_utf8(c: any, str: string): number;
-declare function canvas_draw_utf8(c: any, str: string, x: number, y: number): TRet;
-declare function canvas_draw_utf8_in_rect(c: any, str: string, r: any): TRet;
-declare function canvas_draw_icon(c: any, img: any, cx: number, cy: number): TRet;
-declare function canvas_draw_image(c: any, img: any, src: any, dst: any): TRet;
-declare function canvas_draw_image_ex(c: any, img: any, draw_type: TImageDrawType, dst: any): TRet;
-declare function canvas_get_vgcanvas(c: any): any;
-declare function canvas_cast(c: any): any;
-declare function canvas_reset(c: any): TRet;
-declare function canvas_t_get_prop_ox(nativeObj: any): number;
-declare function canvas_t_get_prop_oy(nativeObj: any): number;
-declare function canvas_t_get_prop_font_name(nativeObj: any): string;
-declare function canvas_t_get_prop_font_size(nativeObj: any): number;
-declare function canvas_t_get_prop_global_alpha(nativeObj: any): number;
-declare function named_value_create(): any;
-declare function named_value_cast(nv: any): any;
-declare function named_value_set_name(nv: any, name: string): TRet;
-declare function named_value_set_value(nv: any, value: any): TRet;
-declare function named_value_get_value(nv: any): any;
-declare function named_value_destroy(nv: any): TRet;
-declare function named_value_t_get_prop_name(nativeObj: any): string;
+declare function canvas_get_width(c : any) : number;
+declare function canvas_get_height(c : any) : number;
+declare function canvas_get_clip_rect(c : any, r : any) : TRet;
+declare function canvas_set_clip_rect(c : any, r : any) : TRet;
+declare function canvas_set_clip_rect_ex(c : any, r : any, translate : boolean) : TRet;
+declare function canvas_set_fill_color_str(c : any, color : string) : TRet;
+declare function canvas_set_text_color_str(c : any, color : string) : TRet;
+declare function canvas_set_stroke_color_str(c : any, color : string) : TRet;
+declare function canvas_set_global_alpha(c : any, alpha : number) : TRet;
+declare function canvas_translate(c : any, dx : number, dy : number) : TRet;
+declare function canvas_untranslate(c : any, dx : number, dy : number) : TRet;
+declare function canvas_draw_vline(c : any, x : number, y : number, h : number) : TRet;
+declare function canvas_draw_hline(c : any, x : number, y : number, w : number) : TRet;
+declare function canvas_fill_rect(c : any, x : number, y : number, w : number, h : number) : TRet;
+declare function canvas_stroke_rect(c : any, x : number, y : number, w : number, h : number) : TRet;
+declare function canvas_set_font(c : any, name : string, size : number) : TRet;
+declare function canvas_measure_utf8(c : any, str : string) : number;
+declare function canvas_draw_utf8(c : any, str : string, x : number, y : number) : TRet;
+declare function canvas_draw_utf8_in_rect(c : any, str : string, r : any) : TRet;
+declare function canvas_draw_icon(c : any, img : any, cx : number, cy : number) : TRet;
+declare function canvas_draw_image(c : any, img : any, src : any, dst : any) : TRet;
+declare function canvas_draw_image_ex(c : any, img : any, draw_type : TImageDrawType, dst : any) : TRet;
+declare function canvas_get_vgcanvas(c : any) : any;
+declare function canvas_cast(c : any) : any;
+declare function canvas_reset(c : any) : TRet;
+declare function canvas_t_get_prop_ox(nativeObj : any) : number;
+declare function canvas_t_get_prop_oy(nativeObj : any) : number;
+declare function canvas_t_get_prop_font_name(nativeObj : any) : string;
+declare function canvas_t_get_prop_font_size(nativeObj : any) : number;
+declare function canvas_t_get_prop_global_alpha(nativeObj : any) : number;
+declare function named_value_create() : any;
+declare function named_value_cast(nv : any) : any;
+declare function named_value_set_name(nv : any, name : string) : TRet;
+declare function named_value_set_value(nv : any, value : any) : TRet;
+declare function named_value_get_value(nv : any) : any;
+declare function named_value_destroy(nv : any) : TRet;
+declare function named_value_t_get_prop_name(nativeObj : any) : string;
 declare function MIME_TYPE_APPLICATION_ENVOY();
 declare function MIME_TYPE_APPLICATION_FRACTALS();
 declare function MIME_TYPE_APPLICATION_FUTURESPLASH();
@@ -992,8 +994,8 @@ declare function INDICATOR_DEFAULT_PAINT_FILL_RECT();
 declare function INDICATOR_DEFAULT_PAINT_STROKE_RECT();
 declare function CLIP_BOARD_DATA_TYPE_NONE();
 declare function CLIP_BOARD_DATA_TYPE_TEXT();
-declare function clip_board_set_text(text: string): TRet;
-declare function clip_board_get_text(): string;
+declare function clip_board_set_text(text : string) : TRet;
+declare function clip_board_get_text() : string;
 declare function EASING_LINEAR();
 declare function EASING_QUADRATIC_IN();
 declare function EASING_QUADRATIC_OUT();
@@ -1018,32 +1020,32 @@ declare function EASING_BACK_INOUT();
 declare function EASING_BOUNCE_IN();
 declare function EASING_BOUNCE_OUT();
 declare function EASING_BOUNCE_INOUT();
-declare function date_time_create(): any;
-declare function date_time_set(dt: any): TRet;
-declare function date_time_destroy(dt: any): TRet;
-declare function date_time_t_get_prop_second(nativeObj: any): number;
-declare function date_time_t_get_prop_minute(nativeObj: any): number;
-declare function date_time_t_get_prop_hour(nativeObj: any): number;
-declare function date_time_t_get_prop_day(nativeObj: any): number;
-declare function date_time_t_get_prop_wday(nativeObj: any): number;
-declare function date_time_t_get_prop_month(nativeObj: any): number;
-declare function date_time_t_get_prop_year(nativeObj: any): number;
-declare function color_create(r: number, b: number, g: number, a: number): any;
-declare function color_from_str(c: any, str: string): any;
-declare function color_r(c: any): number;
-declare function color_g(c: any): number;
-declare function color_b(c: any): number;
-declare function color_a(c: any): number;
-declare function color_cast(color: any): any;
-declare function color_destroy(c: any): TRet;
-declare function color_t_get_prop_color(nativeObj: any): number;
-declare function color_t_set_prop_color(nativeObj: any, v: number)
-declare function asset_info_t_get_prop_type(nativeObj: any): number;
-declare function asset_info_t_get_prop_subtype(nativeObj: any): number;
-declare function asset_info_t_get_prop_is_in_rom(nativeObj: any): number;
-declare function asset_info_t_get_prop_size(nativeObj: any): number;
-declare function asset_info_t_get_prop_refcount(nativeObj: any): number;
-declare function asset_info_t_get_prop_name(nativeObj: any): string;
+declare function date_time_create() : any;
+declare function date_time_set(dt : any) : TRet;
+declare function date_time_destroy(dt : any) : TRet;
+declare function date_time_t_get_prop_second(nativeObj : any) : number;
+declare function date_time_t_get_prop_minute(nativeObj : any) : number;
+declare function date_time_t_get_prop_hour(nativeObj : any) : number;
+declare function date_time_t_get_prop_day(nativeObj : any) : number;
+declare function date_time_t_get_prop_wday(nativeObj : any) : number;
+declare function date_time_t_get_prop_month(nativeObj : any) : number;
+declare function date_time_t_get_prop_year(nativeObj : any) : number;
+declare function color_create(r : number, b : number, g : number, a : number) : any;
+declare function color_from_str(c : any, str : string) : any;
+declare function color_r(c : any) : number;
+declare function color_g(c : any) : number;
+declare function color_b(c : any) : number;
+declare function color_a(c : any) : number;
+declare function color_cast(color : any) : any;
+declare function color_destroy(c : any) : TRet;
+declare function color_t_get_prop_color(nativeObj : any) : number;
+declare function color_t_set_prop_color(nativeObj : any, v : number)
+declare function asset_info_t_get_prop_type(nativeObj : any) : number;
+declare function asset_info_t_get_prop_subtype(nativeObj : any) : number;
+declare function asset_info_t_get_prop_is_in_rom(nativeObj : any) : number;
+declare function asset_info_t_get_prop_size(nativeObj : any) : number;
+declare function asset_info_t_get_prop_refcount(nativeObj : any) : number;
+declare function asset_info_t_get_prop_name(nativeObj : any) : string;
 declare function ASSET_TYPE_NONE();
 declare function ASSET_TYPE_FONT();
 declare function ASSET_TYPE_IMAGE();
@@ -1053,593 +1055,593 @@ declare function ASSET_TYPE_XML();
 declare function ASSET_TYPE_STRINGS();
 declare function ASSET_TYPE_SCRIPT();
 declare function ASSET_TYPE_DATA();
-declare function assets_manager(): any;
-declare function assets_manager_ref(am: any, type: TAssetType, name: string): any;
-declare function assets_manager_unref(am: any, info: any): TRet;
-declare function canvas_widget_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function canvas_widget_cast(widget: any): any;
-declare function time_clock_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function time_clock_cast(widget: any): any;
-declare function time_clock_set_hour(widget: any, hour: number): TRet;
-declare function time_clock_set_minute(widget: any, minute: number): TRet;
-declare function time_clock_set_second(widget: any, second: number): TRet;
-declare function time_clock_set_hour_image(widget: any, hour: string): TRet;
-declare function time_clock_set_minute_image(widget: any, minute_image: string): TRet;
-declare function time_clock_set_second_image(widget: any, second_image: string): TRet;
-declare function time_clock_set_bg_image(widget: any, bg_image: string): TRet;
-declare function time_clock_set_image(widget: any, image: string): TRet;
-declare function time_clock_set_hour_anchor(widget: any, anchor_x: string, anchor_y: string): TRet;
-declare function time_clock_set_minute_anchor(widget: any, anchor_x: string, anchor_y: string): TRet;
-declare function time_clock_set_second_anchor(widget: any, anchor_x: string, anchor_y: string): TRet;
-declare function time_clock_t_get_prop_hour(nativeObj: any): number;
-declare function time_clock_t_get_prop_minute(nativeObj: any): number;
-declare function time_clock_t_get_prop_second(nativeObj: any): number;
-declare function time_clock_t_get_prop_image(nativeObj: any): string;
-declare function time_clock_t_get_prop_bg_image(nativeObj: any): string;
-declare function time_clock_t_get_prop_hour_image(nativeObj: any): string;
-declare function time_clock_t_get_prop_minute_image(nativeObj: any): string;
-declare function time_clock_t_get_prop_second_image(nativeObj: any): string;
-declare function time_clock_t_get_prop_hour_anchor_x(nativeObj: any): string;
-declare function time_clock_t_get_prop_hour_anchor_y(nativeObj: any): string;
-declare function time_clock_t_get_prop_minute_anchor_x(nativeObj: any): string;
-declare function time_clock_t_get_prop_minute_anchor_y(nativeObj: any): string;
-declare function time_clock_t_get_prop_second_anchor_x(nativeObj: any): string;
-declare function time_clock_t_get_prop_second_anchor_y(nativeObj: any): string;
-declare function text_selector_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function text_selector_cast(widget: any): any;
-declare function text_selector_reset_options(widget: any): TRet;
-declare function text_selector_count_options(widget: any): number;
-declare function text_selector_append_option(widget: any, value: any, text: string): TRet;
-declare function text_selector_set_options(widget: any, options: string): TRet;
-declare function text_selector_set_range_options(widget: any, start: number, nr: number, step: number): TRet;
-declare function text_selector_get_value(widget: any): number;
-declare function text_selector_set_value(widget: any, value: any): TRet;
-declare function text_selector_get_text(widget: any): string;
-declare function text_selector_set_text(widget: any, text: string): TRet;
-declare function text_selector_set_selected_index(widget: any, index: number): TRet;
-declare function text_selector_set_visible_nr(widget: any, visible_nr: number): TRet;
-declare function text_selector_t_get_prop_visible_nr(nativeObj: any): number;
-declare function text_selector_t_get_prop_selected_index(nativeObj: any): number;
-declare function text_selector_t_get_prop_options(nativeObj: any): string;
-declare function prop_change_event_cast(event: any): any;
-declare function prop_change_event_t_get_prop_name(nativeObj: any): string;
-declare function prop_change_event_t_get_prop_value(nativeObj: any): any;
-declare function progress_event_cast(event: any): any;
-declare function progress_event_t_get_prop_percent(nativeObj: any): number;
-declare function switch_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function switch_set_value(widget: any, value: any): TRet;
-declare function switch_cast(widget: any): any;
-declare function switch_t_get_prop_value(nativeObj: any): boolean;
-declare function switch_t_get_prop_max_xoffset_ratio(nativeObj: any): number;
-declare function slide_view_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function slide_view_cast(widget: any): any;
-declare function slide_view_set_auto_play(widget: any, auto_play: number): TRet;
-declare function slide_view_set_active(widget: any, index: number): TRet;
-declare function slide_view_set_vertical(widget: any, vertical: boolean): TRet;
-declare function slide_view_set_anim_hint(widget: any, anim_hint: string): TRet;
-declare function slide_view_set_loop(widget: any, loop: boolean): TRet;
-declare function slide_view_t_get_prop_vertical(nativeObj: any): boolean;
-declare function slide_view_t_get_prop_auto_play(nativeObj: any): number;
-declare function slide_view_t_get_prop_loop(nativeObj: any): boolean;
-declare function slide_view_t_get_prop_anim_hint(nativeObj: any): string;
-declare function slide_indicator_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function slide_indicator_create_linear(parent: any, x: number, y: number, w: number, h: number): any;
-declare function slide_indicator_create_arc(parent: any, x: number, y: number, w: number, h: number): any;
-declare function slide_indicator_cast(widget: any): any;
-declare function slide_indicator_set_value(widget: any, value: any): TRet;
-declare function slide_indicator_set_max(widget: any, max: number): TRet;
-declare function slide_indicator_set_default_paint(widget: any, default_paint: TIndicatorDefaultPaint): TRet;
-declare function slide_indicator_set_auto_hide(widget: any, auto_hide: number): TRet;
-declare function slide_indicator_set_margin(widget: any, margin: number): TRet;
-declare function slide_indicator_set_spacing(widget: any, spacing: number): TRet;
-declare function slide_indicator_set_size(widget: any, size: number): TRet;
-declare function slide_indicator_set_anchor(widget: any, anchor_x: string, anchor_y: string): TRet;
-declare function slide_indicator_set_indicated_target(widget: any, indicated_target: string): TRet;
-declare function slide_indicator_t_get_prop_value(nativeObj: any): number;
-declare function slide_indicator_t_get_prop_max(nativeObj: any): number;
-declare function slide_indicator_t_get_prop_default_paint(nativeObj: any): TIndicatorDefaultPaint;
-declare function slide_indicator_t_get_prop_auto_hide(nativeObj: any): number;
-declare function slide_indicator_t_get_prop_margin(nativeObj: any): number;
-declare function slide_indicator_t_get_prop_spacing(nativeObj: any): number;
-declare function slide_indicator_t_get_prop_size(nativeObj: any): number;
-declare function slide_indicator_t_get_prop_anchor_x(nativeObj: any): number;
-declare function slide_indicator_t_get_prop_anchor_y(nativeObj: any): number;
-declare function slide_indicator_t_get_prop_indicated_target(nativeObj: any): string;
-declare function slide_menu_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function slide_menu_cast(widget: any): any;
-declare function slide_menu_set_value(widget: any, value: any): TRet;
-declare function slide_menu_set_align_v(widget: any, align_v: TAlignV): TRet;
-declare function slide_menu_set_min_scale(widget: any, min_scale: number): TRet;
-declare function slide_menu_t_get_prop_value(nativeObj: any): number;
-declare function slide_menu_t_get_prop_align_v(nativeObj: any): TAlignV;
-declare function slide_menu_t_get_prop_min_scale(nativeObj: any): number;
-declare function scroll_view_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function scroll_view_cast(widget: any): any;
-declare function scroll_view_set_virtual_w(widget: any, w: number): TRet;
-declare function scroll_view_set_virtual_h(widget: any, h: number): TRet;
-declare function scroll_view_set_xslidable(widget: any, xslidable: boolean): TRet;
-declare function scroll_view_set_yslidable(widget: any, yslidable: boolean): TRet;
-declare function scroll_view_set_offset(widget: any, xoffset: number, yoffset: number): TRet;
-declare function scroll_view_set_speed_scale(widget: any, xspeed_scale: number, yspeed_scale: number): TRet;
-declare function scroll_view_scroll_to(widget: any, xoffset_end: number, yoffset_end: number, duration: number): TRet;
-declare function scroll_view_scroll_delta_to(widget: any, xoffset_delta: number, yoffset_delta: number, duration: number): TRet;
-declare function scroll_view_t_get_prop_virtual_w(nativeObj: any): number;
-declare function scroll_view_t_get_prop_virtual_h(nativeObj: any): number;
-declare function scroll_view_t_get_prop_xoffset(nativeObj: any): number;
-declare function scroll_view_t_get_prop_yoffset(nativeObj: any): number;
-declare function scroll_view_t_get_prop_xspeed_scale(nativeObj: any): number;
-declare function scroll_view_t_get_prop_yspeed_scale(nativeObj: any): number;
-declare function scroll_view_t_get_prop_xslidable(nativeObj: any): boolean;
-declare function scroll_view_t_get_prop_yslidable(nativeObj: any): boolean;
-declare function scroll_bar_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function scroll_bar_cast(widget: any): any;
-declare function scroll_bar_create_mobile(parent: any, x: number, y: number, w: number, h: number): any;
-declare function scroll_bar_create_desktop(parent: any, x: number, y: number, w: number, h: number): any;
-declare function scroll_bar_set_params(widget: any, virtual_size: number, row: number): TRet;
-declare function scroll_bar_scroll_to(widget: any, value: any, duration: number): TRet;
-declare function scroll_bar_set_value(widget: any, value: any): TRet;
-declare function scroll_bar_add_delta(widget: any, delta: number): TRet;
-declare function scroll_bar_scroll_delta(widget: any, delta: number): TRet;
-declare function scroll_bar_set_value_only(widget: any, value: any): TRet;
-declare function scroll_bar_is_mobile(widget: any): boolean;
-declare function scroll_bar_t_get_prop_virtual_size(nativeObj: any): number;
-declare function scroll_bar_t_get_prop_value(nativeObj: any): number;
-declare function scroll_bar_t_get_prop_row(nativeObj: any): number;
-declare function scroll_bar_t_get_prop_animatable(nativeObj: any): boolean;
-declare function list_view_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function list_view_set_item_height(widget: any, item_height: number): TRet;
-declare function list_view_set_default_item_height(widget: any, default_item_height: number): TRet;
-declare function list_view_set_auto_hide_scroll_bar(widget: any, auto_hide_scroll_bar: boolean): TRet;
-declare function list_view_cast(widget: any): any;
-declare function list_view_t_get_prop_item_height(nativeObj: any): number;
-declare function list_view_t_get_prop_default_item_height(nativeObj: any): number;
-declare function list_view_t_get_prop_auto_hide_scroll_bar(nativeObj: any): boolean;
-declare function list_view_h_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function list_view_h_set_item_width(widget: any, item_width: number): TRet;
-declare function list_view_h_set_spacing(widget: any, spacing: number): TRet;
-declare function list_view_h_cast(widget: any): any;
-declare function list_view_h_t_get_prop_item_width(nativeObj: any): number;
-declare function list_view_h_t_get_prop_spacing(nativeObj: any): number;
-declare function list_item_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function list_item_cast(widget: any): any;
-declare function hscroll_label_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function hscroll_label_set_lull(widget: any, lull: number): TRet;
-declare function hscroll_label_set_duration(widget: any, duration: number): TRet;
-declare function hscroll_label_set_only_focus(widget: any, only_focus: boolean): TRet;
-declare function hscroll_label_set_only_parent_focus(widget: any, only_parent_focus: boolean): TRet;
-declare function hscroll_label_set_loop(widget: any, loop: boolean): TRet;
-declare function hscroll_label_set_yoyo(widget: any, yoyo: boolean): TRet;
-declare function hscroll_label_set_ellipses(widget: any, ellipses: boolean): TRet;
-declare function hscroll_label_set_xoffset(widget: any, xoffset: number): TRet;
-declare function hscroll_label_start(widget: any): TRet;
-declare function hscroll_label_stop(widget: any): TRet;
-declare function hscroll_label_cast(widget: any): any;
-declare function hscroll_label_t_get_prop_only_focus(nativeObj: any): boolean;
-declare function hscroll_label_t_get_prop_only_parent_focus(nativeObj: any): boolean;
-declare function hscroll_label_t_get_prop_loop(nativeObj: any): boolean;
-declare function hscroll_label_t_get_prop_yoyo(nativeObj: any): boolean;
-declare function hscroll_label_t_get_prop_ellipses(nativeObj: any): boolean;
-declare function hscroll_label_t_get_prop_lull(nativeObj: any): number;
-declare function hscroll_label_t_get_prop_duration(nativeObj: any): number;
-declare function hscroll_label_t_get_prop_xoffset(nativeObj: any): number;
-declare function hscroll_label_t_get_prop_text_w(nativeObj: any): number;
-declare function rich_text_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function rich_text_set_text(widget: any, text: string): TRet;
-declare function rich_text_cast(widget: any): any;
-declare function rich_text_t_get_prop_line_gap(nativeObj: any): number;
-declare function rich_text_t_get_prop_margin(nativeObj: any): number;
-declare function progress_circle_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function progress_circle_cast(widget: any): any;
-declare function progress_circle_set_value(widget: any, value: any): TRet;
-declare function progress_circle_set_max(widget: any, max: number): TRet;
-declare function progress_circle_set_line_width(widget: any, line_width: number): TRet;
-declare function progress_circle_set_start_angle(widget: any, start_angle: number): TRet;
-declare function progress_circle_set_unit(widget: any, unit: string): TRet;
-declare function progress_circle_set_show_text(widget: any, show_text: boolean): TRet;
-declare function progress_circle_set_counter_clock_wise(widget: any, counter_clock_wise: boolean): TRet;
-declare function progress_circle_t_get_prop_value(nativeObj: any): number;
-declare function progress_circle_t_get_prop_max(nativeObj: any): number;
-declare function progress_circle_t_get_prop_start_angle(nativeObj: any): number;
-declare function progress_circle_t_get_prop_line_width(nativeObj: any): number;
-declare function progress_circle_t_get_prop_unit(nativeObj: any): string;
-declare function progress_circle_t_get_prop_counter_clock_wise(nativeObj: any): boolean;
-declare function progress_circle_t_get_prop_show_text(nativeObj: any): boolean;
-declare function mledit_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function mledit_set_readonly(widget: any, readonly: boolean): TRet;
-declare function mledit_set_focus(widget: any, focus: boolean): TRet;
-declare function mledit_set_wrap_word(widget: any, wrap_word: boolean): TRet;
-declare function mledit_set_max_lines(widget: any, max_lines: number): TRet;
-declare function mledit_set_input_tips(widget: any, tips: string): TRet;
-declare function mledit_set_cursor(widget: any, cursor: number): TRet;
-declare function mledit_set_scroll_line(widget: any, scroll_line: number): TRet;
-declare function mledit_cast(widget: any): any;
-declare function mledit_t_get_prop_readonly(nativeObj: any): boolean;
-declare function mledit_t_get_prop_tips(nativeObj: any): string;
-declare function mledit_t_get_prop_wrap_word(nativeObj: any): boolean;
-declare function mledit_t_get_prop_max_lines(nativeObj: any): number;
-declare function mledit_t_get_prop_scroll_line(nativeObj: any): number;
-declare function line_number_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function line_number_set_top_margin(widget: any, top_margin: number): TRet;
-declare function line_number_set_bottom_margin(widget: any, bottom_margin: number): TRet;
-declare function line_number_set_line_height(widget: any, line_height: number): TRet;
-declare function line_number_set_yoffset(widget: any, yoffset: number): TRet;
-declare function line_number_cast(widget: any): any;
-declare function image_value_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function image_value_set_image(widget: any, image: string): TRet;
-declare function image_value_set_format(widget: any, format: string): TRet;
-declare function image_value_set_value(widget: any, value: any): TRet;
-declare function image_value_cast(widget: any): any;
-declare function image_value_t_get_prop_image(nativeObj: any): string;
-declare function image_value_t_get_prop_format(nativeObj: any): string;
-declare function image_value_t_get_prop_value(nativeObj: any): number;
-declare function image_animation_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function image_animation_set_loop(widget: any, loop: boolean): TRet;
-declare function image_animation_set_image(widget: any, image: string): TRet;
-declare function image_animation_set_interval(widget: any, interval: number): TRet;
-declare function image_animation_set_delay(widget: any, delay: number): TRet;
-declare function image_animation_set_auto_play(widget: any, auto_play: boolean): TRet;
-declare function image_animation_set_sequence(widget: any, sequence: string): TRet;
-declare function image_animation_set_range_sequence(widget: any, start_index: number, end_index: number): TRet;
-declare function image_animation_play(widget: any): TRet;
-declare function image_animation_stop(widget: any): TRet;
-declare function image_animation_pause(widget: any): TRet;
-declare function image_animation_next(widget: any): TRet;
-declare function image_animation_set_format(widget: any, format: string): TRet;
-declare function image_animation_set_unload_after_paint(widget: any, unload_after_paint: boolean): TRet;
-declare function image_animation_cast(widget: any): any;
-declare function image_animation_t_get_prop_image(nativeObj: any): string;
-declare function image_animation_t_get_prop_sequence(nativeObj: any): string;
-declare function image_animation_t_get_prop_start_index(nativeObj: any): number;
-declare function image_animation_t_get_prop_end_index(nativeObj: any): number;
-declare function image_animation_t_get_prop_loop(nativeObj: any): boolean;
-declare function image_animation_t_get_prop_auto_play(nativeObj: any): boolean;
-declare function image_animation_t_get_prop_unload_after_paint(nativeObj: any): boolean;
-declare function image_animation_t_get_prop_format(nativeObj: any): string;
-declare function image_animation_t_get_prop_interval(nativeObj: any): number;
-declare function image_animation_t_get_prop_delay(nativeObj: any): number;
-declare function guage_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function guage_cast(widget: any): any;
-declare function guage_set_image(widget: any, name: string): TRet;
-declare function guage_set_draw_type(widget: any, draw_type: TImageDrawType): TRet;
-declare function guage_t_get_prop_image(nativeObj: any): string;
-declare function guage_t_get_prop_draw_type(nativeObj: any): TImageDrawType;
-declare function guage_pointer_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function guage_pointer_cast(widget: any): any;
-declare function guage_pointer_set_angle(widget: any, angle: number): TRet;
-declare function guage_pointer_set_image(widget: any, image: string): TRet;
-declare function guage_pointer_set_anchor(widget: any, anchor_x: string, anchor_y: string): TRet;
-declare function guage_pointer_t_get_prop_angle(nativeObj: any): number;
-declare function guage_pointer_t_get_prop_image(nativeObj: any): string;
-declare function guage_pointer_t_get_prop_anchor_x(nativeObj: any): number;
-declare function guage_pointer_t_get_prop_anchor_y(nativeObj: any): number;
-declare function draggable_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function draggable_cast(widget: any): any;
-declare function draggable_set_top(widget: any, top: number): TRet;
-declare function draggable_set_bottom(widget: any, bottom: number): TRet;
-declare function draggable_set_left(widget: any, left: number): TRet;
-declare function draggable_set_right(widget: any, right: number): TRet;
-declare function draggable_set_vertical_only(widget: any, vertical_only: boolean): TRet;
-declare function draggable_set_horizontal_only(widget: any, horizontal_only: boolean): TRet;
-declare function draggable_set_drag_window(widget: any, drag_window: boolean): TRet;
-declare function draggable_t_get_prop_top(nativeObj: any): number;
-declare function draggable_t_get_prop_bottom(nativeObj: any): number;
-declare function draggable_t_get_prop_left(nativeObj: any): number;
-declare function draggable_t_get_prop_right(nativeObj: any): number;
-declare function draggable_t_get_prop_vertical_only(nativeObj: any): boolean;
-declare function draggable_t_get_prop_horizontal_only(nativeObj: any): boolean;
-declare function draggable_t_get_prop_drag_window(nativeObj: any): boolean;
-declare function color_picker_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function color_picker_set_color(widget: any, color: string): TRet;
-declare function color_picker_cast(widget: any): any;
-declare function color_picker_t_get_prop_value(nativeObj: any): string;
-declare function color_component_cast(widget: any): any;
-declare function window_manager(): any;
-declare function window_manager_cast(widget: any): any;
-declare function window_manager_get_top_main_window(widget: any): any;
-declare function window_manager_get_top_window(widget: any): any;
-declare function window_manager_get_prev_window(widget: any): any;
-declare function window_manager_get_pointer_x(widget: any): number;
-declare function window_manager_get_pointer_y(widget: any): number;
-declare function window_manager_get_pointer_pressed(widget: any): boolean;
-declare function window_manager_set_show_fps(widget: any, show_fps: boolean): TRet;
-declare function window_manager_set_screen_saver_time(widget: any, screen_saver_time: number): TRet;
-declare function window_manager_set_cursor(widget: any, cursor: string): TRet;
-declare function window_manager_back(widget: any): TRet;
-declare function window_manager_back_to_home(widget: any): TRet;
-declare function window_manager_back_to(widget: any, target: string): TRet;
-declare function window_base_cast(widget: any): any;
-declare function window_base_t_get_prop_theme(nativeObj: any): string;
-declare function window_base_t_get_prop_closable(nativeObj: any): TWindowClosable;
-declare function style_mutable_set_name(s: any, name: string): TRet;
-declare function style_mutable_set_int(s: any, state: string, name: string, val: number): TRet;
-declare function style_mutable_cast(s: any): any;
-declare function style_mutable_create(widget: any, default_style: any): any;
-declare function style_mutable_t_get_prop_name(nativeObj: any): string;
-declare function image_base_set_image(widget: any, name: string): TRet;
-declare function image_base_set_rotation(widget: any, rotation: number): TRet;
-declare function image_base_set_scale(widget: any, scale_x: number, scale_y: number): TRet;
-declare function image_base_set_anchor(widget: any, anchor_x: number, anchor_y: number): TRet;
-declare function image_base_set_selected(widget: any, selected: boolean): TRet;
-declare function image_base_set_selectable(widget: any, selectable: boolean): TRet;
-declare function image_base_set_clickable(widget: any, clickable: boolean): TRet;
-declare function image_base_cast(widget: any): any;
-declare function image_base_t_get_prop_image(nativeObj: any): string;
-declare function image_base_t_get_prop_anchor_x(nativeObj: any): number;
-declare function image_base_t_get_prop_anchor_y(nativeObj: any): number;
-declare function image_base_t_get_prop_scale_x(nativeObj: any): number;
-declare function image_base_t_get_prop_scale_y(nativeObj: any): number;
-declare function image_base_t_get_prop_rotation(nativeObj: any): number;
-declare function image_base_t_get_prop_clickable(nativeObj: any): boolean;
-declare function image_base_t_get_prop_selectable(nativeObj: any): boolean;
-declare function image_base_t_get_prop_selected(nativeObj: any): boolean;
-declare function window_event_cast(event: any): any;
-declare function window_event_t_get_prop_window(nativeObj: any): any;
-declare function paint_event_cast(event: any): any;
-declare function paint_event_t_get_prop_c(nativeObj: any): any;
-declare function key_event_cast(event: any): any;
-declare function key_event_t_get_prop_key(nativeObj: any): number;
-declare function key_event_t_get_prop_alt(nativeObj: any): boolean;
-declare function key_event_t_get_prop_lalt(nativeObj: any): boolean;
-declare function key_event_t_get_prop_ralt(nativeObj: any): boolean;
-declare function key_event_t_get_prop_ctrl(nativeObj: any): boolean;
-declare function key_event_t_get_prop_lctrl(nativeObj: any): boolean;
-declare function key_event_t_get_prop_rctrl(nativeObj: any): boolean;
-declare function key_event_t_get_prop_shift(nativeObj: any): boolean;
-declare function key_event_t_get_prop_lshift(nativeObj: any): boolean;
-declare function key_event_t_get_prop_rshift(nativeObj: any): boolean;
-declare function key_event_t_get_prop_cmd(nativeObj: any): boolean;
-declare function key_event_t_get_prop_menu(nativeObj: any): boolean;
-declare function key_event_t_get_prop_capslock(nativeObj: any): boolean;
-declare function pointer_event_cast(event: any): any;
-declare function pointer_event_t_get_prop_x(nativeObj: any): number;
-declare function pointer_event_t_get_prop_y(nativeObj: any): number;
-declare function pointer_event_t_get_prop_button(nativeObj: any): number;
-declare function pointer_event_t_get_prop_pressed(nativeObj: any): boolean;
-declare function pointer_event_t_get_prop_alt(nativeObj: any): boolean;
-declare function pointer_event_t_get_prop_ctrl(nativeObj: any): boolean;
-declare function pointer_event_t_get_prop_cmd(nativeObj: any): boolean;
-declare function pointer_event_t_get_prop_menu(nativeObj: any): boolean;
-declare function pointer_event_t_get_prop_shift(nativeObj: any): boolean;
-declare function orientation_event_cast(event: any): any;
-declare function orientation_event_t_get_prop_orientation(nativeObj: any): number;
-declare function wheel_event_cast(event: any): any;
-declare function wheel_event_t_get_prop_dy(nativeObj: any): number;
-declare function wheel_event_t_get_prop_alt(nativeObj: any): boolean;
-declare function wheel_event_t_get_prop_ctrl(nativeObj: any): boolean;
-declare function wheel_event_t_get_prop_shift(nativeObj: any): boolean;
-declare function app_bar_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function app_bar_cast(widget: any): any;
-declare function button_group_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function button_group_cast(widget: any): any;
-declare function button_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function button_cast(widget: any): any;
-declare function button_set_repeat(widget: any, repeat: number): TRet;
-declare function button_set_enable_long_press(widget: any, enable_long_press: boolean): TRet;
-declare function button_t_get_prop_repeat(nativeObj: any): number;
-declare function button_t_get_prop_enable_long_press(nativeObj: any): boolean;
-declare function check_button_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function check_button_create_radio(parent: any, x: number, y: number, w: number, h: number): any;
-declare function check_button_set_value(widget: any, value: any): TRet;
-declare function check_button_cast(widget: any): any;
-declare function check_button_t_get_prop_value(nativeObj: any): boolean;
-declare function clip_view_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function clip_view_cast(widget: any): any;
-declare function color_tile_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function color_tile_cast(widget: any): any;
-declare function color_tile_set_bg_color(widget: any, color: string): TRet;
-declare function color_tile_t_get_prop_bg_color(nativeObj: any): string;
-declare function color_tile_t_get_prop_border_color(nativeObj: any): string;
-declare function column_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function column_cast(widget: any): any;
-declare function combo_box_item_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function combo_box_item_cast(widget: any): any;
-declare function combo_box_item_set_checked(widget: any, checked: boolean): TRet;
-declare function combo_box_item_set_value(widget: any, value: any): TRet;
-declare function combo_box_item_t_get_prop_value(nativeObj: any): number;
-declare function combo_box_item_t_get_prop_checked(nativeObj: any): boolean;
-declare function combo_box_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function combo_box_cast(widget: any): any;
-declare function combo_box_set_open_window(widget: any, open_window: string): TRet;
-declare function combo_box_reset_options(widget: any): TRet;
-declare function combo_box_count_options(widget: any): number;
-declare function combo_box_set_selected_index(widget: any, index: number): TRet;
-declare function combo_box_set_localize_options(widget: any, localize_options: boolean): TRet;
-declare function combo_box_set_value(widget: any, value: any): TRet;
-declare function combo_box_set_item_height(widget: any, item_height: number): TRet;
-declare function combo_box_append_option(widget: any, value: any, text: string): TRet;
-declare function combo_box_set_options(widget: any, options: string): TRet;
-declare function combo_box_get_value(widget: any): number;
-declare function combo_box_get_text(widget: any): string;
-declare function combo_box_t_get_prop_open_window(nativeObj: any): string;
-declare function combo_box_t_get_prop_selected_index(nativeObj: any): number;
-declare function combo_box_t_get_prop_value(nativeObj: any): number;
-declare function combo_box_t_get_prop_localize_options(nativeObj: any): boolean;
-declare function combo_box_t_get_prop_options(nativeObj: any): string;
-declare function combo_box_t_get_prop_item_height(nativeObj: any): number;
-declare function dialog_client_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function dialog_client_cast(widget: any): any;
-declare function dialog_title_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function dialog_title_cast(widget: any): any;
-declare function digit_clock_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function digit_clock_cast(widget: any): any;
-declare function digit_clock_set_format(widget: any, format: string): TRet;
-declare function digit_clock_t_get_prop_format(nativeObj: any): string;
-declare function dragger_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function dragger_cast(widget: any): any;
-declare function dragger_set_range(widget: any, x_min: number, y_min: number, x_max: number, y_max: number): TRet;
-declare function dragger_t_get_prop_x_min(nativeObj: any): number;
-declare function dragger_t_get_prop_y_min(nativeObj: any): number;
-declare function dragger_t_get_prop_x_max(nativeObj: any): number;
-declare function dragger_t_get_prop_y_max(nativeObj: any): number;
-declare function edit_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function edit_cast(widget: any): any;
-declare function edit_get_int(widget: any): number;
-declare function edit_get_double(widget: any): number;
-declare function edit_set_int(widget: any, value: any): TRet;
-declare function edit_set_double(widget: any, value: any): TRet;
-declare function edit_set_text_limit(widget: any, min: number, max: number): TRet;
-declare function edit_set_int_limit(widget: any, min: number, max: number, step: number): TRet;
-declare function edit_set_float_limit(widget: any, min: number, max: number, step: number): TRet;
-declare function edit_set_readonly(widget: any, readonly: boolean): TRet;
-declare function edit_set_auto_fix(widget: any, auto_fix: boolean): TRet;
-declare function edit_set_select_none_when_focused(widget: any, select_none_when_focused: boolean): TRet;
-declare function edit_set_open_im_when_focused(widget: any, open_im_when_focused: boolean): TRet;
-declare function edit_set_input_type(widget: any, type: TInputType): TRet;
-declare function edit_set_input_tips(widget: any, tips: string): TRet;
-declare function edit_set_password_visible(widget: any, password_visible: boolean): TRet;
-declare function edit_set_focus(widget: any, focus: boolean): TRet;
-declare function edit_set_cursor(widget: any, cursor: number): TRet;
-declare function edit_t_get_prop_readonly(nativeObj: any): boolean;
-declare function edit_t_get_prop_password_visible(nativeObj: any): boolean;
-declare function edit_t_get_prop_auto_fix(nativeObj: any): boolean;
-declare function edit_t_get_prop_select_none_when_focused(nativeObj: any): boolean;
-declare function edit_t_get_prop_open_im_when_focused(nativeObj: any): boolean;
-declare function edit_t_get_prop_tips(nativeObj: any): string;
-declare function edit_t_get_prop_input_type(nativeObj: any): TInputType;
-declare function edit_t_get_prop_min(nativeObj: any): number;
-declare function edit_t_get_prop_max(nativeObj: any): number;
-declare function edit_t_get_prop_step(nativeObj: any): number;
-declare function grid_item_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function grid_item_cast(widget: any): any;
-declare function grid_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function grid_cast(widget: any): any;
-declare function group_box_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function group_box_cast(widget: any): any;
-declare function label_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function label_set_length(widget: any, length: number): TRet;
-declare function label_resize_to_content(widget: any, min_w: number, max_w: number, min_h: number, max_h: number): TRet;
-declare function label_cast(widget: any): any;
-declare function label_t_get_prop_length(nativeObj: any): number;
-declare function overlay_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function overlay_cast(widget: any): any;
-declare function pages_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function pages_cast(widget: any): any;
-declare function pages_set_active(widget: any, index: number): TRet;
-declare function pages_set_active_by_name(widget: any, name: string): TRet;
-declare function pages_t_get_prop_active(nativeObj: any): number;
-declare function progress_bar_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function progress_bar_cast(widget: any): any;
-declare function progress_bar_set_value(widget: any, value: any): TRet;
-declare function progress_bar_set_max(widget: any, max: number): TRet;
-declare function progress_bar_set_vertical(widget: any, vertical: boolean): TRet;
-declare function progress_bar_set_show_text(widget: any, show_text: boolean): TRet;
-declare function progress_bar_get_percent(widget: any): number;
-declare function progress_bar_t_get_prop_value(nativeObj: any): number;
-declare function progress_bar_t_get_prop_max(nativeObj: any): number;
-declare function progress_bar_t_get_prop_vertical(nativeObj: any): boolean;
-declare function progress_bar_t_get_prop_show_text(nativeObj: any): boolean;
-declare function row_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function row_cast(widget: any): any;
-declare function slider_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function slider_cast(widget: any): any;
-declare function slider_set_value(widget: any, value: any): TRet;
-declare function slider_set_min(widget: any, min: number): TRet;
-declare function slider_set_max(widget: any, max: number): TRet;
-declare function slider_set_step(widget: any, step: number): TRet;
-declare function slider_set_bar_size(widget: any, bar_size: number): TRet;
-declare function slider_set_vertical(widget: any, vertical: boolean): TRet;
-declare function slider_t_get_prop_value(nativeObj: any): number;
-declare function slider_t_get_prop_min(nativeObj: any): number;
-declare function slider_t_get_prop_max(nativeObj: any): number;
-declare function slider_t_get_prop_step(nativeObj: any): number;
-declare function slider_t_get_prop_vertical(nativeObj: any): boolean;
-declare function slider_t_get_prop_bar_size(nativeObj: any): number;
-declare function slider_t_get_prop_dragger_size(nativeObj: any): number;
-declare function slider_t_get_prop_dragger_adapt_to_icon(nativeObj: any): boolean;
-declare function slider_t_get_prop_slide_with_bar(nativeObj: any): boolean;
-declare function tab_button_group_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function tab_button_group_set_compact(widget: any, compact: boolean): TRet;
-declare function tab_button_group_set_scrollable(widget: any, scrollable: boolean): TRet;
-declare function tab_button_group_cast(widget: any): any;
-declare function tab_button_group_t_get_prop_compact(nativeObj: any): boolean;
-declare function tab_button_group_t_get_prop_scrollable(nativeObj: any): boolean;
-declare function tab_button_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function tab_button_cast(widget: any): any;
-declare function tab_button_set_value(widget: any, value: any): TRet;
-declare function tab_button_set_icon(widget: any, name: string): TRet;
-declare function tab_button_set_active_icon(widget: any, name: string): TRet;
-declare function tab_button_set_load_ui(widget: any, name: string): TRet;
-declare function tab_button_t_get_prop_value(nativeObj: any): boolean;
-declare function tab_button_t_get_prop_load_ui(nativeObj: any): string;
-declare function tab_button_t_get_prop_active_icon(nativeObj: any): string;
-declare function tab_button_t_get_prop_icon(nativeObj: any): string;
-declare function tab_control_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function tab_control_cast(widget: any): any;
-declare function view_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function view_cast(widget: any): any;
-declare function idle_info_cast(idle: any): any;
-declare function idle_info_t_get_prop_ctx(nativeObj: any): any;
-declare function idle_info_t_get_prop_id(nativeObj: any): number;
-declare function object_array_create(): any;
-declare function object_array_unref(obj: any): TRet;
-declare function object_array_clear_props(obj: any): TRet;
-declare function object_array_t_get_prop_props_size(nativeObj: any): number;
-declare function gif_image_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function gif_image_cast(widget: any): any;
-declare function object_default_create(): any;
-declare function object_default_unref(obj: any): TRet;
-declare function object_default_clear_props(obj: any): TRet;
-declare function object_default_t_get_prop_props_size(nativeObj: any): number;
-declare function image_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function image_set_draw_type(widget: any, draw_type: TImageDrawType): TRet;
-declare function image_cast(widget: any): any;
-declare function image_t_get_prop_draw_type(nativeObj: any): TImageDrawType;
-declare function combo_box_ex_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function calibration_win_cast(widget: any): any;
-declare function popup_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function popup_cast(widget: any): any;
-declare function popup_set_close_when_click(widget: any, close_when_click: boolean): TRet;
-declare function popup_set_close_when_click_outside(widget: any, close_when_click_outside: boolean): TRet;
-declare function popup_t_get_prop_close_when_click(nativeObj: any): boolean;
-declare function popup_t_get_prop_close_when_click_outside(nativeObj: any): boolean;
-declare function svg_image_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function svg_image_set_image(widget: any, name: string): TRet;
-declare function svg_image_cast(widget: any): any;
-declare function timer_info_cast(timer: any): any;
-declare function timer_info_t_get_prop_ctx(nativeObj: any): any;
-declare function timer_info_t_get_prop_id(nativeObj: any): number;
-declare function timer_info_t_get_prop_now(nativeObj: any): number;
-declare function spin_box_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function spin_box_cast(widget: any): any;
-declare function system_bar_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function system_bar_cast(widget: any): any;
-declare function window_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function window_create_default(): any;
-declare function window_set_fullscreen(widget: any, fullscreen: boolean): TRet;
-declare function window_open(name: string): any;
-declare function window_open_and_close(name: string, to_close: any): any;
-declare function window_close(widget: any): TRet;
-declare function window_close_force(widget: any): TRet;
-declare function window_cast(widget: any): any;
-declare function window_t_get_prop_fullscreen(nativeObj: any): boolean;
-declare function keyboard_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function keyboard_cast(widget: any): any;
-declare function dialog_create(parent: any, x: number, y: number, w: number, h: number): any;
-declare function dialog_create_simple(parent: any, x: number, y: number, w: number, h: number): any;
-declare function dialog_cast(widget: any): any;
-declare function dialog_get_title(widget: any): any;
-declare function dialog_get_client(widget: any): any;
-declare function dialog_open(name: string): any;
-declare function dialog_set_title(widget: any, title: string): TRet;
-declare function dialog_modal(widget: any): TDialogQuitCode;
-declare function dialog_quit(widget: any, code: number): TRet;
-declare function dialog_is_quited(widget: any): boolean;
-declare function dialog_is_modal(widget: any): boolean;
-declare function dialog_toast(text: string, duration: number): TRet;
-declare function dialog_info(title: string, text: string): TRet;
-declare function dialog_warn(title: string, text: string): TRet;
-declare function dialog_confirm(title: string, text: string): TRet;
-declare function dialog_t_get_prop_highlight(nativeObj: any): string;
+declare function assets_manager() : any;
+declare function assets_manager_ref(am : any, type : TAssetType, name : string) : any;
+declare function assets_manager_unref(am : any, info : any) : TRet;
+declare function canvas_widget_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function canvas_widget_cast(widget : any) : any;
+declare function time_clock_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function time_clock_cast(widget : any) : any;
+declare function time_clock_set_hour(widget : any, hour : number) : TRet;
+declare function time_clock_set_minute(widget : any, minute : number) : TRet;
+declare function time_clock_set_second(widget : any, second : number) : TRet;
+declare function time_clock_set_hour_image(widget : any, hour : string) : TRet;
+declare function time_clock_set_minute_image(widget : any, minute_image : string) : TRet;
+declare function time_clock_set_second_image(widget : any, second_image : string) : TRet;
+declare function time_clock_set_bg_image(widget : any, bg_image : string) : TRet;
+declare function time_clock_set_image(widget : any, image : string) : TRet;
+declare function time_clock_set_hour_anchor(widget : any, anchor_x : string, anchor_y : string) : TRet;
+declare function time_clock_set_minute_anchor(widget : any, anchor_x : string, anchor_y : string) : TRet;
+declare function time_clock_set_second_anchor(widget : any, anchor_x : string, anchor_y : string) : TRet;
+declare function time_clock_t_get_prop_hour(nativeObj : any) : number;
+declare function time_clock_t_get_prop_minute(nativeObj : any) : number;
+declare function time_clock_t_get_prop_second(nativeObj : any) : number;
+declare function time_clock_t_get_prop_image(nativeObj : any) : string;
+declare function time_clock_t_get_prop_bg_image(nativeObj : any) : string;
+declare function time_clock_t_get_prop_hour_image(nativeObj : any) : string;
+declare function time_clock_t_get_prop_minute_image(nativeObj : any) : string;
+declare function time_clock_t_get_prop_second_image(nativeObj : any) : string;
+declare function time_clock_t_get_prop_hour_anchor_x(nativeObj : any) : string;
+declare function time_clock_t_get_prop_hour_anchor_y(nativeObj : any) : string;
+declare function time_clock_t_get_prop_minute_anchor_x(nativeObj : any) : string;
+declare function time_clock_t_get_prop_minute_anchor_y(nativeObj : any) : string;
+declare function time_clock_t_get_prop_second_anchor_x(nativeObj : any) : string;
+declare function time_clock_t_get_prop_second_anchor_y(nativeObj : any) : string;
+declare function text_selector_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function text_selector_cast(widget : any) : any;
+declare function text_selector_reset_options(widget : any) : TRet;
+declare function text_selector_count_options(widget : any) : number;
+declare function text_selector_append_option(widget : any, value : any, text : string) : TRet;
+declare function text_selector_set_options(widget : any, options : string) : TRet;
+declare function text_selector_set_range_options(widget : any, start : number, nr : number, step : number) : TRet;
+declare function text_selector_get_value(widget : any) : number;
+declare function text_selector_set_value(widget : any, value : any) : TRet;
+declare function text_selector_get_text(widget : any) : string;
+declare function text_selector_set_text(widget : any, text : string) : TRet;
+declare function text_selector_set_selected_index(widget : any, index : number) : TRet;
+declare function text_selector_set_visible_nr(widget : any, visible_nr : number) : TRet;
+declare function text_selector_t_get_prop_visible_nr(nativeObj : any) : number;
+declare function text_selector_t_get_prop_selected_index(nativeObj : any) : number;
+declare function text_selector_t_get_prop_options(nativeObj : any) : string;
+declare function prop_change_event_cast(event : any) : any;
+declare function prop_change_event_t_get_prop_name(nativeObj : any) : string;
+declare function prop_change_event_t_get_prop_value(nativeObj : any) : any;
+declare function progress_event_cast(event : any) : any;
+declare function progress_event_t_get_prop_percent(nativeObj : any) : number;
+declare function switch_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function switch_set_value(widget : any, value : any) : TRet;
+declare function switch_cast(widget : any) : any;
+declare function switch_t_get_prop_value(nativeObj : any) : boolean;
+declare function switch_t_get_prop_max_xoffset_ratio(nativeObj : any) : number;
+declare function slide_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function slide_view_cast(widget : any) : any;
+declare function slide_view_set_auto_play(widget : any, auto_play : number) : TRet;
+declare function slide_view_set_active(widget : any, index : number) : TRet;
+declare function slide_view_set_vertical(widget : any, vertical : boolean) : TRet;
+declare function slide_view_set_anim_hint(widget : any, anim_hint : string) : TRet;
+declare function slide_view_set_loop(widget : any, loop : boolean) : TRet;
+declare function slide_view_t_get_prop_vertical(nativeObj : any) : boolean;
+declare function slide_view_t_get_prop_auto_play(nativeObj : any) : number;
+declare function slide_view_t_get_prop_loop(nativeObj : any) : boolean;
+declare function slide_view_t_get_prop_anim_hint(nativeObj : any) : string;
+declare function slide_indicator_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function slide_indicator_create_linear(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function slide_indicator_create_arc(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function slide_indicator_cast(widget : any) : any;
+declare function slide_indicator_set_value(widget : any, value : any) : TRet;
+declare function slide_indicator_set_max(widget : any, max : number) : TRet;
+declare function slide_indicator_set_default_paint(widget : any, default_paint : TIndicatorDefaultPaint) : TRet;
+declare function slide_indicator_set_auto_hide(widget : any, auto_hide : number) : TRet;
+declare function slide_indicator_set_margin(widget : any, margin : number) : TRet;
+declare function slide_indicator_set_spacing(widget : any, spacing : number) : TRet;
+declare function slide_indicator_set_size(widget : any, size : number) : TRet;
+declare function slide_indicator_set_anchor(widget : any, anchor_x : string, anchor_y : string) : TRet;
+declare function slide_indicator_set_indicated_target(widget : any, indicated_target : string) : TRet;
+declare function slide_indicator_t_get_prop_value(nativeObj : any) : number;
+declare function slide_indicator_t_get_prop_max(nativeObj : any) : number;
+declare function slide_indicator_t_get_prop_default_paint(nativeObj : any) : TIndicatorDefaultPaint;
+declare function slide_indicator_t_get_prop_auto_hide(nativeObj : any) : number;
+declare function slide_indicator_t_get_prop_margin(nativeObj : any) : number;
+declare function slide_indicator_t_get_prop_spacing(nativeObj : any) : number;
+declare function slide_indicator_t_get_prop_size(nativeObj : any) : number;
+declare function slide_indicator_t_get_prop_anchor_x(nativeObj : any) : number;
+declare function slide_indicator_t_get_prop_anchor_y(nativeObj : any) : number;
+declare function slide_indicator_t_get_prop_indicated_target(nativeObj : any) : string;
+declare function slide_menu_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function slide_menu_cast(widget : any) : any;
+declare function slide_menu_set_value(widget : any, value : any) : TRet;
+declare function slide_menu_set_align_v(widget : any, align_v : TAlignV) : TRet;
+declare function slide_menu_set_min_scale(widget : any, min_scale : number) : TRet;
+declare function slide_menu_t_get_prop_value(nativeObj : any) : number;
+declare function slide_menu_t_get_prop_align_v(nativeObj : any) : TAlignV;
+declare function slide_menu_t_get_prop_min_scale(nativeObj : any) : number;
+declare function scroll_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function scroll_view_cast(widget : any) : any;
+declare function scroll_view_set_virtual_w(widget : any, w : number) : TRet;
+declare function scroll_view_set_virtual_h(widget : any, h : number) : TRet;
+declare function scroll_view_set_xslidable(widget : any, xslidable : boolean) : TRet;
+declare function scroll_view_set_yslidable(widget : any, yslidable : boolean) : TRet;
+declare function scroll_view_set_offset(widget : any, xoffset : number, yoffset : number) : TRet;
+declare function scroll_view_set_speed_scale(widget : any, xspeed_scale : number, yspeed_scale : number) : TRet;
+declare function scroll_view_scroll_to(widget : any, xoffset_end : number, yoffset_end : number, duration : number) : TRet;
+declare function scroll_view_scroll_delta_to(widget : any, xoffset_delta : number, yoffset_delta : number, duration : number) : TRet;
+declare function scroll_view_t_get_prop_virtual_w(nativeObj : any) : number;
+declare function scroll_view_t_get_prop_virtual_h(nativeObj : any) : number;
+declare function scroll_view_t_get_prop_xoffset(nativeObj : any) : number;
+declare function scroll_view_t_get_prop_yoffset(nativeObj : any) : number;
+declare function scroll_view_t_get_prop_xspeed_scale(nativeObj : any) : number;
+declare function scroll_view_t_get_prop_yspeed_scale(nativeObj : any) : number;
+declare function scroll_view_t_get_prop_xslidable(nativeObj : any) : boolean;
+declare function scroll_view_t_get_prop_yslidable(nativeObj : any) : boolean;
+declare function scroll_bar_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function scroll_bar_cast(widget : any) : any;
+declare function scroll_bar_create_mobile(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function scroll_bar_create_desktop(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function scroll_bar_set_params(widget : any, virtual_size : number, row : number) : TRet;
+declare function scroll_bar_scroll_to(widget : any, value : any, duration : number) : TRet;
+declare function scroll_bar_set_value(widget : any, value : any) : TRet;
+declare function scroll_bar_add_delta(widget : any, delta : number) : TRet;
+declare function scroll_bar_scroll_delta(widget : any, delta : number) : TRet;
+declare function scroll_bar_set_value_only(widget : any, value : any) : TRet;
+declare function scroll_bar_is_mobile(widget : any) : boolean;
+declare function scroll_bar_t_get_prop_virtual_size(nativeObj : any) : number;
+declare function scroll_bar_t_get_prop_value(nativeObj : any) : number;
+declare function scroll_bar_t_get_prop_row(nativeObj : any) : number;
+declare function scroll_bar_t_get_prop_animatable(nativeObj : any) : boolean;
+declare function list_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function list_view_set_item_height(widget : any, item_height : number) : TRet;
+declare function list_view_set_default_item_height(widget : any, default_item_height : number) : TRet;
+declare function list_view_set_auto_hide_scroll_bar(widget : any, auto_hide_scroll_bar : boolean) : TRet;
+declare function list_view_cast(widget : any) : any;
+declare function list_view_t_get_prop_item_height(nativeObj : any) : number;
+declare function list_view_t_get_prop_default_item_height(nativeObj : any) : number;
+declare function list_view_t_get_prop_auto_hide_scroll_bar(nativeObj : any) : boolean;
+declare function list_view_h_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function list_view_h_set_item_width(widget : any, item_width : number) : TRet;
+declare function list_view_h_set_spacing(widget : any, spacing : number) : TRet;
+declare function list_view_h_cast(widget : any) : any;
+declare function list_view_h_t_get_prop_item_width(nativeObj : any) : number;
+declare function list_view_h_t_get_prop_spacing(nativeObj : any) : number;
+declare function list_item_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function list_item_cast(widget : any) : any;
+declare function hscroll_label_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function hscroll_label_set_lull(widget : any, lull : number) : TRet;
+declare function hscroll_label_set_duration(widget : any, duration : number) : TRet;
+declare function hscroll_label_set_only_focus(widget : any, only_focus : boolean) : TRet;
+declare function hscroll_label_set_only_parent_focus(widget : any, only_parent_focus : boolean) : TRet;
+declare function hscroll_label_set_loop(widget : any, loop : boolean) : TRet;
+declare function hscroll_label_set_yoyo(widget : any, yoyo : boolean) : TRet;
+declare function hscroll_label_set_ellipses(widget : any, ellipses : boolean) : TRet;
+declare function hscroll_label_set_xoffset(widget : any, xoffset : number) : TRet;
+declare function hscroll_label_start(widget : any) : TRet;
+declare function hscroll_label_stop(widget : any) : TRet;
+declare function hscroll_label_cast(widget : any) : any;
+declare function hscroll_label_t_get_prop_only_focus(nativeObj : any) : boolean;
+declare function hscroll_label_t_get_prop_only_parent_focus(nativeObj : any) : boolean;
+declare function hscroll_label_t_get_prop_loop(nativeObj : any) : boolean;
+declare function hscroll_label_t_get_prop_yoyo(nativeObj : any) : boolean;
+declare function hscroll_label_t_get_prop_ellipses(nativeObj : any) : boolean;
+declare function hscroll_label_t_get_prop_lull(nativeObj : any) : number;
+declare function hscroll_label_t_get_prop_duration(nativeObj : any) : number;
+declare function hscroll_label_t_get_prop_xoffset(nativeObj : any) : number;
+declare function hscroll_label_t_get_prop_text_w(nativeObj : any) : number;
+declare function rich_text_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function rich_text_set_text(widget : any, text : string) : TRet;
+declare function rich_text_cast(widget : any) : any;
+declare function rich_text_t_get_prop_line_gap(nativeObj : any) : number;
+declare function rich_text_t_get_prop_margin(nativeObj : any) : number;
+declare function progress_circle_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function progress_circle_cast(widget : any) : any;
+declare function progress_circle_set_value(widget : any, value : any) : TRet;
+declare function progress_circle_set_max(widget : any, max : number) : TRet;
+declare function progress_circle_set_line_width(widget : any, line_width : number) : TRet;
+declare function progress_circle_set_start_angle(widget : any, start_angle : number) : TRet;
+declare function progress_circle_set_unit(widget : any, unit : string) : TRet;
+declare function progress_circle_set_show_text(widget : any, show_text : boolean) : TRet;
+declare function progress_circle_set_counter_clock_wise(widget : any, counter_clock_wise : boolean) : TRet;
+declare function progress_circle_t_get_prop_value(nativeObj : any) : number;
+declare function progress_circle_t_get_prop_max(nativeObj : any) : number;
+declare function progress_circle_t_get_prop_start_angle(nativeObj : any) : number;
+declare function progress_circle_t_get_prop_line_width(nativeObj : any) : number;
+declare function progress_circle_t_get_prop_unit(nativeObj : any) : string;
+declare function progress_circle_t_get_prop_counter_clock_wise(nativeObj : any) : boolean;
+declare function progress_circle_t_get_prop_show_text(nativeObj : any) : boolean;
+declare function mledit_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function mledit_set_readonly(widget : any, readonly : boolean) : TRet;
+declare function mledit_set_focus(widget : any, focus : boolean) : TRet;
+declare function mledit_set_wrap_word(widget : any, wrap_word : boolean) : TRet;
+declare function mledit_set_max_lines(widget : any, max_lines : number) : TRet;
+declare function mledit_set_input_tips(widget : any, tips : string) : TRet;
+declare function mledit_set_cursor(widget : any, cursor : number) : TRet;
+declare function mledit_set_scroll_line(widget : any, scroll_line : number) : TRet;
+declare function mledit_cast(widget : any) : any;
+declare function mledit_t_get_prop_readonly(nativeObj : any) : boolean;
+declare function mledit_t_get_prop_tips(nativeObj : any) : string;
+declare function mledit_t_get_prop_wrap_word(nativeObj : any) : boolean;
+declare function mledit_t_get_prop_max_lines(nativeObj : any) : number;
+declare function mledit_t_get_prop_scroll_line(nativeObj : any) : number;
+declare function line_number_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function line_number_set_top_margin(widget : any, top_margin : number) : TRet;
+declare function line_number_set_bottom_margin(widget : any, bottom_margin : number) : TRet;
+declare function line_number_set_line_height(widget : any, line_height : number) : TRet;
+declare function line_number_set_yoffset(widget : any, yoffset : number) : TRet;
+declare function line_number_cast(widget : any) : any;
+declare function image_value_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function image_value_set_image(widget : any, image : string) : TRet;
+declare function image_value_set_format(widget : any, format : string) : TRet;
+declare function image_value_set_value(widget : any, value : any) : TRet;
+declare function image_value_cast(widget : any) : any;
+declare function image_value_t_get_prop_image(nativeObj : any) : string;
+declare function image_value_t_get_prop_format(nativeObj : any) : string;
+declare function image_value_t_get_prop_value(nativeObj : any) : number;
+declare function image_animation_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function image_animation_set_loop(widget : any, loop : boolean) : TRet;
+declare function image_animation_set_image(widget : any, image : string) : TRet;
+declare function image_animation_set_interval(widget : any, interval : number) : TRet;
+declare function image_animation_set_delay(widget : any, delay : number) : TRet;
+declare function image_animation_set_auto_play(widget : any, auto_play : boolean) : TRet;
+declare function image_animation_set_sequence(widget : any, sequence : string) : TRet;
+declare function image_animation_set_range_sequence(widget : any, start_index : number, end_index : number) : TRet;
+declare function image_animation_play(widget : any) : TRet;
+declare function image_animation_stop(widget : any) : TRet;
+declare function image_animation_pause(widget : any) : TRet;
+declare function image_animation_next(widget : any) : TRet;
+declare function image_animation_set_format(widget : any, format : string) : TRet;
+declare function image_animation_set_unload_after_paint(widget : any, unload_after_paint : boolean) : TRet;
+declare function image_animation_cast(widget : any) : any;
+declare function image_animation_t_get_prop_image(nativeObj : any) : string;
+declare function image_animation_t_get_prop_sequence(nativeObj : any) : string;
+declare function image_animation_t_get_prop_start_index(nativeObj : any) : number;
+declare function image_animation_t_get_prop_end_index(nativeObj : any) : number;
+declare function image_animation_t_get_prop_loop(nativeObj : any) : boolean;
+declare function image_animation_t_get_prop_auto_play(nativeObj : any) : boolean;
+declare function image_animation_t_get_prop_unload_after_paint(nativeObj : any) : boolean;
+declare function image_animation_t_get_prop_format(nativeObj : any) : string;
+declare function image_animation_t_get_prop_interval(nativeObj : any) : number;
+declare function image_animation_t_get_prop_delay(nativeObj : any) : number;
+declare function guage_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function guage_cast(widget : any) : any;
+declare function guage_set_image(widget : any, name : string) : TRet;
+declare function guage_set_draw_type(widget : any, draw_type : TImageDrawType) : TRet;
+declare function guage_t_get_prop_image(nativeObj : any) : string;
+declare function guage_t_get_prop_draw_type(nativeObj : any) : TImageDrawType;
+declare function guage_pointer_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function guage_pointer_cast(widget : any) : any;
+declare function guage_pointer_set_angle(widget : any, angle : number) : TRet;
+declare function guage_pointer_set_image(widget : any, image : string) : TRet;
+declare function guage_pointer_set_anchor(widget : any, anchor_x : string, anchor_y : string) : TRet;
+declare function guage_pointer_t_get_prop_angle(nativeObj : any) : number;
+declare function guage_pointer_t_get_prop_image(nativeObj : any) : string;
+declare function guage_pointer_t_get_prop_anchor_x(nativeObj : any) : number;
+declare function guage_pointer_t_get_prop_anchor_y(nativeObj : any) : number;
+declare function draggable_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function draggable_cast(widget : any) : any;
+declare function draggable_set_top(widget : any, top : number) : TRet;
+declare function draggable_set_bottom(widget : any, bottom : number) : TRet;
+declare function draggable_set_left(widget : any, left : number) : TRet;
+declare function draggable_set_right(widget : any, right : number) : TRet;
+declare function draggable_set_vertical_only(widget : any, vertical_only : boolean) : TRet;
+declare function draggable_set_horizontal_only(widget : any, horizontal_only : boolean) : TRet;
+declare function draggable_set_drag_window(widget : any, drag_window : boolean) : TRet;
+declare function draggable_t_get_prop_top(nativeObj : any) : number;
+declare function draggable_t_get_prop_bottom(nativeObj : any) : number;
+declare function draggable_t_get_prop_left(nativeObj : any) : number;
+declare function draggable_t_get_prop_right(nativeObj : any) : number;
+declare function draggable_t_get_prop_vertical_only(nativeObj : any) : boolean;
+declare function draggable_t_get_prop_horizontal_only(nativeObj : any) : boolean;
+declare function draggable_t_get_prop_drag_window(nativeObj : any) : boolean;
+declare function color_picker_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function color_picker_set_color(widget : any, color : string) : TRet;
+declare function color_picker_cast(widget : any) : any;
+declare function color_picker_t_get_prop_value(nativeObj : any) : string;
+declare function color_component_cast(widget : any) : any;
+declare function window_manager() : any;
+declare function window_manager_cast(widget : any) : any;
+declare function window_manager_get_top_main_window(widget : any) : any;
+declare function window_manager_get_top_window(widget : any) : any;
+declare function window_manager_get_prev_window(widget : any) : any;
+declare function window_manager_get_pointer_x(widget : any) : number;
+declare function window_manager_get_pointer_y(widget : any) : number;
+declare function window_manager_get_pointer_pressed(widget : any) : boolean;
+declare function window_manager_set_show_fps(widget : any, show_fps : boolean) : TRet;
+declare function window_manager_set_screen_saver_time(widget : any, screen_saver_time : number) : TRet;
+declare function window_manager_set_cursor(widget : any, cursor : string) : TRet;
+declare function window_manager_back(widget : any) : TRet;
+declare function window_manager_back_to_home(widget : any) : TRet;
+declare function window_manager_back_to(widget : any, target : string) : TRet;
+declare function window_base_cast(widget : any) : any;
+declare function window_base_t_get_prop_theme(nativeObj : any) : string;
+declare function window_base_t_get_prop_closable(nativeObj : any) : TWindowClosable;
+declare function style_mutable_set_name(s : any, name : string) : TRet;
+declare function style_mutable_set_int(s : any, state : string, name : string, val : number) : TRet;
+declare function style_mutable_cast(s : any) : any;
+declare function style_mutable_create(widget : any, default_style : any) : any;
+declare function style_mutable_t_get_prop_name(nativeObj : any) : string;
+declare function image_base_set_image(widget : any, name : string) : TRet;
+declare function image_base_set_rotation(widget : any, rotation : number) : TRet;
+declare function image_base_set_scale(widget : any, scale_x : number, scale_y : number) : TRet;
+declare function image_base_set_anchor(widget : any, anchor_x : number, anchor_y : number) : TRet;
+declare function image_base_set_selected(widget : any, selected : boolean) : TRet;
+declare function image_base_set_selectable(widget : any, selectable : boolean) : TRet;
+declare function image_base_set_clickable(widget : any, clickable : boolean) : TRet;
+declare function image_base_cast(widget : any) : any;
+declare function image_base_t_get_prop_image(nativeObj : any) : string;
+declare function image_base_t_get_prop_anchor_x(nativeObj : any) : number;
+declare function image_base_t_get_prop_anchor_y(nativeObj : any) : number;
+declare function image_base_t_get_prop_scale_x(nativeObj : any) : number;
+declare function image_base_t_get_prop_scale_y(nativeObj : any) : number;
+declare function image_base_t_get_prop_rotation(nativeObj : any) : number;
+declare function image_base_t_get_prop_clickable(nativeObj : any) : boolean;
+declare function image_base_t_get_prop_selectable(nativeObj : any) : boolean;
+declare function image_base_t_get_prop_selected(nativeObj : any) : boolean;
+declare function window_event_cast(event : any) : any;
+declare function window_event_t_get_prop_window(nativeObj : any) : any;
+declare function paint_event_cast(event : any) : any;
+declare function paint_event_t_get_prop_c(nativeObj : any) : any;
+declare function key_event_cast(event : any) : any;
+declare function key_event_t_get_prop_key(nativeObj : any) : number;
+declare function key_event_t_get_prop_alt(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_lalt(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_ralt(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_ctrl(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_lctrl(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_rctrl(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_shift(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_lshift(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_rshift(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_cmd(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_menu(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_capslock(nativeObj : any) : boolean;
+declare function pointer_event_cast(event : any) : any;
+declare function pointer_event_t_get_prop_x(nativeObj : any) : number;
+declare function pointer_event_t_get_prop_y(nativeObj : any) : number;
+declare function pointer_event_t_get_prop_button(nativeObj : any) : number;
+declare function pointer_event_t_get_prop_pressed(nativeObj : any) : boolean;
+declare function pointer_event_t_get_prop_alt(nativeObj : any) : boolean;
+declare function pointer_event_t_get_prop_ctrl(nativeObj : any) : boolean;
+declare function pointer_event_t_get_prop_cmd(nativeObj : any) : boolean;
+declare function pointer_event_t_get_prop_menu(nativeObj : any) : boolean;
+declare function pointer_event_t_get_prop_shift(nativeObj : any) : boolean;
+declare function orientation_event_cast(event : any) : any;
+declare function orientation_event_t_get_prop_orientation(nativeObj : any) : number;
+declare function wheel_event_cast(event : any) : any;
+declare function wheel_event_t_get_prop_dy(nativeObj : any) : number;
+declare function wheel_event_t_get_prop_alt(nativeObj : any) : boolean;
+declare function wheel_event_t_get_prop_ctrl(nativeObj : any) : boolean;
+declare function wheel_event_t_get_prop_shift(nativeObj : any) : boolean;
+declare function app_bar_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function app_bar_cast(widget : any) : any;
+declare function button_group_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function button_group_cast(widget : any) : any;
+declare function button_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function button_cast(widget : any) : any;
+declare function button_set_repeat(widget : any, repeat : number) : TRet;
+declare function button_set_enable_long_press(widget : any, enable_long_press : boolean) : TRet;
+declare function button_t_get_prop_repeat(nativeObj : any) : number;
+declare function button_t_get_prop_enable_long_press(nativeObj : any) : boolean;
+declare function check_button_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function check_button_create_radio(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function check_button_set_value(widget : any, value : any) : TRet;
+declare function check_button_cast(widget : any) : any;
+declare function check_button_t_get_prop_value(nativeObj : any) : boolean;
+declare function clip_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function clip_view_cast(widget : any) : any;
+declare function color_tile_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function color_tile_cast(widget : any) : any;
+declare function color_tile_set_bg_color(widget : any, color : string) : TRet;
+declare function color_tile_t_get_prop_bg_color(nativeObj : any) : string;
+declare function color_tile_t_get_prop_border_color(nativeObj : any) : string;
+declare function column_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function column_cast(widget : any) : any;
+declare function combo_box_item_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function combo_box_item_cast(widget : any) : any;
+declare function combo_box_item_set_checked(widget : any, checked : boolean) : TRet;
+declare function combo_box_item_set_value(widget : any, value : any) : TRet;
+declare function combo_box_item_t_get_prop_value(nativeObj : any) : number;
+declare function combo_box_item_t_get_prop_checked(nativeObj : any) : boolean;
+declare function combo_box_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function combo_box_cast(widget : any) : any;
+declare function combo_box_set_open_window(widget : any, open_window : string) : TRet;
+declare function combo_box_reset_options(widget : any) : TRet;
+declare function combo_box_count_options(widget : any) : number;
+declare function combo_box_set_selected_index(widget : any, index : number) : TRet;
+declare function combo_box_set_localize_options(widget : any, localize_options : boolean) : TRet;
+declare function combo_box_set_value(widget : any, value : any) : TRet;
+declare function combo_box_set_item_height(widget : any, item_height : number) : TRet;
+declare function combo_box_append_option(widget : any, value : any, text : string) : TRet;
+declare function combo_box_set_options(widget : any, options : string) : TRet;
+declare function combo_box_get_value(widget : any) : number;
+declare function combo_box_get_text(widget : any) : string;
+declare function combo_box_t_get_prop_open_window(nativeObj : any) : string;
+declare function combo_box_t_get_prop_selected_index(nativeObj : any) : number;
+declare function combo_box_t_get_prop_value(nativeObj : any) : number;
+declare function combo_box_t_get_prop_localize_options(nativeObj : any) : boolean;
+declare function combo_box_t_get_prop_options(nativeObj : any) : string;
+declare function combo_box_t_get_prop_item_height(nativeObj : any) : number;
+declare function dialog_client_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function dialog_client_cast(widget : any) : any;
+declare function dialog_title_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function dialog_title_cast(widget : any) : any;
+declare function digit_clock_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function digit_clock_cast(widget : any) : any;
+declare function digit_clock_set_format(widget : any, format : string) : TRet;
+declare function digit_clock_t_get_prop_format(nativeObj : any) : string;
+declare function dragger_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function dragger_cast(widget : any) : any;
+declare function dragger_set_range(widget : any, x_min : number, y_min : number, x_max : number, y_max : number) : TRet;
+declare function dragger_t_get_prop_x_min(nativeObj : any) : number;
+declare function dragger_t_get_prop_y_min(nativeObj : any) : number;
+declare function dragger_t_get_prop_x_max(nativeObj : any) : number;
+declare function dragger_t_get_prop_y_max(nativeObj : any) : number;
+declare function edit_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function edit_cast(widget : any) : any;
+declare function edit_get_int(widget : any) : number;
+declare function edit_get_double(widget : any) : number;
+declare function edit_set_int(widget : any, value : any) : TRet;
+declare function edit_set_double(widget : any, value : any) : TRet;
+declare function edit_set_text_limit(widget : any, min : number, max : number) : TRet;
+declare function edit_set_int_limit(widget : any, min : number, max : number, step : number) : TRet;
+declare function edit_set_float_limit(widget : any, min : number, max : number, step : number) : TRet;
+declare function edit_set_readonly(widget : any, readonly : boolean) : TRet;
+declare function edit_set_auto_fix(widget : any, auto_fix : boolean) : TRet;
+declare function edit_set_select_none_when_focused(widget : any, select_none_when_focused : boolean) : TRet;
+declare function edit_set_open_im_when_focused(widget : any, open_im_when_focused : boolean) : TRet;
+declare function edit_set_input_type(widget : any, type : TInputType) : TRet;
+declare function edit_set_input_tips(widget : any, tips : string) : TRet;
+declare function edit_set_password_visible(widget : any, password_visible : boolean) : TRet;
+declare function edit_set_focus(widget : any, focus : boolean) : TRet;
+declare function edit_set_cursor(widget : any, cursor : number) : TRet;
+declare function edit_t_get_prop_readonly(nativeObj : any) : boolean;
+declare function edit_t_get_prop_password_visible(nativeObj : any) : boolean;
+declare function edit_t_get_prop_auto_fix(nativeObj : any) : boolean;
+declare function edit_t_get_prop_select_none_when_focused(nativeObj : any) : boolean;
+declare function edit_t_get_prop_open_im_when_focused(nativeObj : any) : boolean;
+declare function edit_t_get_prop_tips(nativeObj : any) : string;
+declare function edit_t_get_prop_input_type(nativeObj : any) : TInputType;
+declare function edit_t_get_prop_min(nativeObj : any) : number;
+declare function edit_t_get_prop_max(nativeObj : any) : number;
+declare function edit_t_get_prop_step(nativeObj : any) : number;
+declare function grid_item_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function grid_item_cast(widget : any) : any;
+declare function grid_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function grid_cast(widget : any) : any;
+declare function group_box_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function group_box_cast(widget : any) : any;
+declare function label_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function label_set_length(widget : any, length : number) : TRet;
+declare function label_resize_to_content(widget : any, min_w : number, max_w : number, min_h : number, max_h : number) : TRet;
+declare function label_cast(widget : any) : any;
+declare function label_t_get_prop_length(nativeObj : any) : number;
+declare function overlay_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function overlay_cast(widget : any) : any;
+declare function pages_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function pages_cast(widget : any) : any;
+declare function pages_set_active(widget : any, index : number) : TRet;
+declare function pages_set_active_by_name(widget : any, name : string) : TRet;
+declare function pages_t_get_prop_active(nativeObj : any) : number;
+declare function progress_bar_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function progress_bar_cast(widget : any) : any;
+declare function progress_bar_set_value(widget : any, value : any) : TRet;
+declare function progress_bar_set_max(widget : any, max : number) : TRet;
+declare function progress_bar_set_vertical(widget : any, vertical : boolean) : TRet;
+declare function progress_bar_set_show_text(widget : any, show_text : boolean) : TRet;
+declare function progress_bar_get_percent(widget : any) : number;
+declare function progress_bar_t_get_prop_value(nativeObj : any) : number;
+declare function progress_bar_t_get_prop_max(nativeObj : any) : number;
+declare function progress_bar_t_get_prop_vertical(nativeObj : any) : boolean;
+declare function progress_bar_t_get_prop_show_text(nativeObj : any) : boolean;
+declare function row_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function row_cast(widget : any) : any;
+declare function slider_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function slider_cast(widget : any) : any;
+declare function slider_set_value(widget : any, value : any) : TRet;
+declare function slider_set_min(widget : any, min : number) : TRet;
+declare function slider_set_max(widget : any, max : number) : TRet;
+declare function slider_set_step(widget : any, step : number) : TRet;
+declare function slider_set_bar_size(widget : any, bar_size : number) : TRet;
+declare function slider_set_vertical(widget : any, vertical : boolean) : TRet;
+declare function slider_t_get_prop_value(nativeObj : any) : number;
+declare function slider_t_get_prop_min(nativeObj : any) : number;
+declare function slider_t_get_prop_max(nativeObj : any) : number;
+declare function slider_t_get_prop_step(nativeObj : any) : number;
+declare function slider_t_get_prop_vertical(nativeObj : any) : boolean;
+declare function slider_t_get_prop_bar_size(nativeObj : any) : number;
+declare function slider_t_get_prop_dragger_size(nativeObj : any) : number;
+declare function slider_t_get_prop_dragger_adapt_to_icon(nativeObj : any) : boolean;
+declare function slider_t_get_prop_slide_with_bar(nativeObj : any) : boolean;
+declare function tab_button_group_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function tab_button_group_set_compact(widget : any, compact : boolean) : TRet;
+declare function tab_button_group_set_scrollable(widget : any, scrollable : boolean) : TRet;
+declare function tab_button_group_cast(widget : any) : any;
+declare function tab_button_group_t_get_prop_compact(nativeObj : any) : boolean;
+declare function tab_button_group_t_get_prop_scrollable(nativeObj : any) : boolean;
+declare function tab_button_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function tab_button_cast(widget : any) : any;
+declare function tab_button_set_value(widget : any, value : any) : TRet;
+declare function tab_button_set_icon(widget : any, name : string) : TRet;
+declare function tab_button_set_active_icon(widget : any, name : string) : TRet;
+declare function tab_button_set_load_ui(widget : any, name : string) : TRet;
+declare function tab_button_t_get_prop_value(nativeObj : any) : boolean;
+declare function tab_button_t_get_prop_load_ui(nativeObj : any) : string;
+declare function tab_button_t_get_prop_active_icon(nativeObj : any) : string;
+declare function tab_button_t_get_prop_icon(nativeObj : any) : string;
+declare function tab_control_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function tab_control_cast(widget : any) : any;
+declare function view_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function view_cast(widget : any) : any;
+declare function idle_info_cast(idle : any) : any;
+declare function idle_info_t_get_prop_ctx(nativeObj : any) : any;
+declare function idle_info_t_get_prop_id(nativeObj : any) : number;
+declare function object_array_create() : any;
+declare function object_array_unref(obj : any) : TRet;
+declare function object_array_clear_props(obj : any) : TRet;
+declare function object_array_t_get_prop_props_size(nativeObj : any) : number;
+declare function gif_image_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function gif_image_cast(widget : any) : any;
+declare function object_default_create() : any;
+declare function object_default_unref(obj : any) : TRet;
+declare function object_default_clear_props(obj : any) : TRet;
+declare function object_default_t_get_prop_props_size(nativeObj : any) : number;
+declare function image_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function image_set_draw_type(widget : any, draw_type : TImageDrawType) : TRet;
+declare function image_cast(widget : any) : any;
+declare function image_t_get_prop_draw_type(nativeObj : any) : TImageDrawType;
+declare function combo_box_ex_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function calibration_win_cast(widget : any) : any;
+declare function popup_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function popup_cast(widget : any) : any;
+declare function popup_set_close_when_click(widget : any, close_when_click : boolean) : TRet;
+declare function popup_set_close_when_click_outside(widget : any, close_when_click_outside : boolean) : TRet;
+declare function popup_t_get_prop_close_when_click(nativeObj : any) : boolean;
+declare function popup_t_get_prop_close_when_click_outside(nativeObj : any) : boolean;
+declare function svg_image_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function svg_image_set_image(widget : any, name : string) : TRet;
+declare function svg_image_cast(widget : any) : any;
+declare function timer_info_cast(timer : any) : any;
+declare function timer_info_t_get_prop_ctx(nativeObj : any) : any;
+declare function timer_info_t_get_prop_id(nativeObj : any) : number;
+declare function timer_info_t_get_prop_now(nativeObj : any) : number;
+declare function spin_box_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function spin_box_cast(widget : any) : any;
+declare function system_bar_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function system_bar_cast(widget : any) : any;
+declare function window_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function window_create_default() : any;
+declare function window_set_fullscreen(widget : any, fullscreen : boolean) : TRet;
+declare function window_open(name : string) : any;
+declare function window_open_and_close(name : string, to_close : any) : any;
+declare function window_close(widget : any) : TRet;
+declare function window_close_force(widget : any) : TRet;
+declare function window_cast(widget : any) : any;
+declare function window_t_get_prop_fullscreen(nativeObj : any) : boolean;
+declare function keyboard_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function keyboard_cast(widget : any) : any;
+declare function dialog_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function dialog_create_simple(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function dialog_cast(widget : any) : any;
+declare function dialog_get_title(widget : any) : any;
+declare function dialog_get_client(widget : any) : any;
+declare function dialog_open(name : string) : any;
+declare function dialog_set_title(widget : any, title : string) : TRet;
+declare function dialog_modal(widget : any) : TDialogQuitCode;
+declare function dialog_quit(widget : any, code : number) : TRet;
+declare function dialog_is_quited(widget : any) : boolean;
+declare function dialog_is_modal(widget : any) : boolean;
+declare function dialog_toast(text : string, duration : number) : TRet;
+declare function dialog_info(title : string, text : string) : TRet;
+declare function dialog_warn(title : string, text : string) : TRet;
+declare function dialog_confirm(title : string, text : string) : TRet;
+declare function dialog_t_get_prop_highlight(nativeObj : any) : string;
 
 /**
  * 事件基类。
  *
  */
-class TEvent {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
@@ -1651,9 +1653,9 @@ class TEvent {
    *
    * @returns event对象。
    */
-  static cast(event: TEvent): TEvent {
+ static cast(event : TEvent) : TEvent  {
     return new TEvent(event_cast(event != null ? (event.nativeObj || event) : null));
-  }
+ }
 
 
   /**
@@ -1665,9 +1667,9 @@ class TEvent {
    *
    * @returns 返回事件对象。
    */
-  static create(type: number): TEvent {
+ static create(type : number) : TEvent  {
     return new TEvent(event_create(type));
-  }
+ }
 
 
   /**
@@ -1678,47 +1680,47 @@ class TEvent {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  destroy(): TRet {
+ destroy() : TRet  {
     return event_destroy(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
    * 类型。
    *
    */
-  get type(): number {
-    return event_t_get_prop_type(this.nativeObj);
-  }
+ get type() : number {
+   return event_t_get_prop_type(this.nativeObj);
+ }
 
 
   /**
    * 事件发生的时间。
    *
    */
-  get time(): number {
-    return event_t_get_prop_time(this.nativeObj);
-  }
+ get time() : number {
+   return event_t_get_prop_time(this.nativeObj);
+ }
 
 
   /**
    * 事件发生的目标对象。
    *
    */
-  get target(): any {
-    return event_t_get_prop_target(this.nativeObj);
-  }
+ get target() : any {
+   return event_t_get_prop_target(this.nativeObj);
+ }
 
 };
 /**
  * 矩形。包括一个x坐标、y坐标、宽度和高度。
  *
  */
-class TRect {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TRect { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
@@ -1733,9 +1735,9 @@ class TRect {
    *
    * @returns rect对象。
    */
-  static create(x: number, y: number, w: number, h: number): TRect {
+ static create(x : number, y : number, w : number, h : number) : TRect  {
     return new TRect(rect_create(x, y, w, h));
-  }
+ }
 
 
   /**
@@ -1750,9 +1752,9 @@ class TRect {
    *
    * @returns rect对象。
    */
-  set(x: number, y: number, w: number, h: number): TRect {
+ set(x : number, y : number, w : number, h : number) : TRect  {
     return new TRect(rect_set(this != null ? (this.nativeObj || this) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -1764,9 +1766,9 @@ class TRect {
    *
    * @returns rect对象。
    */
-  static cast(rect: TRect): TRect {
+ static cast(rect : TRect) : TRect  {
     return new TRect(rect_cast(rect != null ? (rect.nativeObj || rect) : null));
-  }
+ }
 
 
   /**
@@ -1777,78 +1779,78 @@ class TRect {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  destroy(): TRet {
+ destroy() : TRet  {
     return rect_destroy(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
    * x坐标。
    *
    */
-  get x(): number {
-    return rect_t_get_prop_x(this.nativeObj);
-  }
+ get x() : number {
+   return rect_t_get_prop_x(this.nativeObj);
+ }
 
 
   /**
    * y坐标。
    *
    */
-  get y(): number {
-    return rect_t_get_prop_y(this.nativeObj);
-  }
+ get y() : number {
+   return rect_t_get_prop_y(this.nativeObj);
+ }
 
 
   /**
    * 宽度。
    *
    */
-  get w(): number {
-    return rect_t_get_prop_w(this.nativeObj);
-  }
+ get w() : number {
+   return rect_t_get_prop_w(this.nativeObj);
+ }
 
 
   /**
    * 高度。
    *
    */
-  get h(): number {
-    return rect_t_get_prop_h(this.nativeObj);
-  }
+ get h() : number {
+   return rect_t_get_prop_h(this.nativeObj);
+ }
 
 };
 /**
  * 点(浮点数)。包括一个x坐标和一个y坐标。
  *
  */
-class TPointf {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TPointf { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 };
 /**
  * 点。包括一个x坐标和一个y坐标。
  *
  */
-class TPoint {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TPoint { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 };
 /**
  * 事件分发器, 用于实现观察者模式。
  *
  */
-class TEmitter {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TEmitter { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
@@ -1857,9 +1859,9 @@ class TEmitter {
    *
    * @returns 对象。
    */
-  static create(): TEmitter {
+ static create() : TEmitter  {
     return new TEmitter(emitter_create());
-  }
+ }
 
 
   /**
@@ -1870,9 +1872,9 @@ class TEmitter {
    *
    * @returns 如果当前分发的回调函数返回RET_STOP，dispatch中断分发，并返回RET_STOP，否则返回RET_OK。
    */
-  dispatch(e: TEvent): TRet {
+ dispatch(e : TEvent) : TRet  {
     return emitter_dispatch(this != null ? (this.nativeObj || this) : null, e != null ? (e.nativeObj || e) : null);
-  }
+ }
 
 
   /**
@@ -1884,9 +1886,9 @@ class TEmitter {
    *
    * @returns 
    */
-  dispatchSimpleEvent(type: TEventType): TRet {
+ dispatchSimpleEvent(type : TEventType) : TRet  {
     return emitter_dispatch_simple_event(this != null ? (this.nativeObj || this) : null, type);
-  }
+ }
 
 
   /**
@@ -1898,9 +1900,9 @@ class TEmitter {
    *
    * @returns 返回id，用于emitter_off。
    */
-  on(type: TEventType, on_event: Function, ctx: any): number {
+ on(type : TEventType, on_event : Function, ctx : any) : number  {
     return emitter_on(this != null ? (this.nativeObj || this) : null, type, on_event, ctx);
-  }
+ }
 
 
   /**
@@ -1910,9 +1912,9 @@ class TEmitter {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  off(id: number): TRet {
+ off(id : number) : TRet  {
     return emitter_off(this != null ? (this.nativeObj || this) : null, id);
-  }
+ }
 
 
   /**
@@ -1921,9 +1923,9 @@ class TEmitter {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  enable(): TRet {
+ enable() : TRet  {
     return emitter_enable(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -1934,9 +1936,9 @@ class TEmitter {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  disable(): TRet {
+ disable() : TRet  {
     return emitter_disable(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -1945,9 +1947,9 @@ class TEmitter {
    *
    * @returns 回调函数个数。
    */
-  size(): number {
+ size() : number  {
     return emitter_size(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -1956,9 +1958,9 @@ class TEmitter {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  destroy(): TRet {
+ destroy() : TRet  {
     return emitter_destroy(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -1970,20 +1972,20 @@ class TEmitter {
    *
    * @returns 对象。
    */
-  static cast(emitter: TEmitter): TEmitter {
+ static cast(emitter : TEmitter) : TEmitter  {
     return new TEmitter(emitter_cast(emitter != null ? (emitter.nativeObj || emitter) : null));
-  }
+ }
 
 };
 /**
  * 位图。
  *
  */
-class TBitmap {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TBitmap { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
@@ -1992,9 +1994,9 @@ class TBitmap {
    *
    * @returns 返回bitmap对象。
    */
-  static create(): TBitmap {
+ static create() : TBitmap  {
     return new TBitmap(bitmap_create());
-  }
+ }
 
 
   /**
@@ -2007,9 +2009,9 @@ class TBitmap {
    *
    * @returns 返回bitmap对象。
    */
-  static createEx(w: number, h: number, line_length: number, format: TBitmapFormat): TBitmap {
+ static createEx(w : number, h : number, line_length : number, format : TBitmapFormat) : TBitmap  {
     return new TBitmap(bitmap_create_ex(w, h, line_length, format));
-  }
+ }
 
 
   /**
@@ -2018,9 +2020,9 @@ class TBitmap {
    *
    * @returns 返回一个像素占用的字节数。
    */
-  getBpp(): number {
+ getBpp() : number  {
     return bitmap_get_bpp(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2029,63 +2031,63 @@ class TBitmap {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  destroy(): TRet {
+ destroy() : TRet  {
     return bitmap_destroy(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
    * 宽度。
    *
    */
-  get w(): number {
-    return bitmap_t_get_prop_w(this.nativeObj);
-  }
+ get w() : number {
+   return bitmap_t_get_prop_w(this.nativeObj);
+ }
 
 
   /**
    * 高度。
    *
    */
-  get h(): number {
-    return bitmap_t_get_prop_h(this.nativeObj);
-  }
+ get h() : number {
+   return bitmap_t_get_prop_h(this.nativeObj);
+ }
 
 
   /**
    * 每一行实际占用的内存(也称为stride或pitch)，一般情况下为w*bpp。
    *
    */
-  get lineLength(): number {
-    return bitmap_t_get_prop_line_length(this.nativeObj);
-  }
+ get lineLength() : number {
+   return bitmap_t_get_prop_line_length(this.nativeObj);
+ }
 
 
   /**
    * 标志。请参考{bitmap_flag_t}。
    *
    */
-  get flags(): number {
-    return bitmap_t_get_prop_flags(this.nativeObj);
-  }
+ get flags() : number {
+   return bitmap_t_get_prop_flags(this.nativeObj);
+ }
 
 
   /**
    * 格式。请参考{bitmap_format_t}。
    *
    */
-  get format(): number {
-    return bitmap_t_get_prop_format(this.nativeObj);
-  }
+ get format() : number {
+   return bitmap_t_get_prop_format(this.nativeObj);
+ }
 
 
   /**
    * 名称。
    *
    */
-  get name(): string {
-    return bitmap_t_get_prop_name(this.nativeObj);
-  }
+ get name() : string {
+   return bitmap_t_get_prop_name(this.nativeObj);
+ }
 
 };
 /**
@@ -2097,11 +2099,11 @@ class TBitmap {
  *> 在脚本语言中，需要动态创建对象。
  *
  */
-class TValue {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TValue { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
@@ -2111,9 +2113,9 @@ class TValue {
    *
    * @returns value对象本身。
    */
-  setBool(value: any): TValue {
+ setBool(value : any) : TValue  {
     return new TValue(value_set_bool(this != null ? (this.nativeObj || this) : null, value));
-  }
+ }
 
 
   /**
@@ -2122,9 +2124,9 @@ class TValue {
    *
    * @returns 值。
    */
-  bool(): boolean {
+ bool() : boolean  {
     return value_bool(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2134,9 +2136,9 @@ class TValue {
    *
    * @returns value对象本身。
    */
-  setInt8(value: any): TValue {
+ setInt8(value : any) : TValue  {
     return new TValue(value_set_int8(this != null ? (this.nativeObj || this) : null, value));
-  }
+ }
 
 
   /**
@@ -2145,9 +2147,9 @@ class TValue {
    *
    * @returns 值。
    */
-  int8(): number {
+ int8() : number  {
     return value_int8(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2157,9 +2159,9 @@ class TValue {
    *
    * @returns value对象本身。
    */
-  setUint8(value: any): TValue {
+ setUint8(value : any) : TValue  {
     return new TValue(value_set_uint8(this != null ? (this.nativeObj || this) : null, value));
-  }
+ }
 
 
   /**
@@ -2168,9 +2170,9 @@ class TValue {
    *
    * @returns 值。
    */
-  uint8(): number {
+ uint8() : number  {
     return value_uint8(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2180,9 +2182,9 @@ class TValue {
    *
    * @returns value对象本身。
    */
-  setInt16(value: any): TValue {
+ setInt16(value : any) : TValue  {
     return new TValue(value_set_int16(this != null ? (this.nativeObj || this) : null, value));
-  }
+ }
 
 
   /**
@@ -2191,9 +2193,9 @@ class TValue {
    *
    * @returns 值。
    */
-  int16(): number {
+ int16() : number  {
     return value_int16(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2203,9 +2205,9 @@ class TValue {
    *
    * @returns value对象本身。
    */
-  setUint16(value: any): TValue {
+ setUint16(value : any) : TValue  {
     return new TValue(value_set_uint16(this != null ? (this.nativeObj || this) : null, value));
-  }
+ }
 
 
   /**
@@ -2214,9 +2216,9 @@ class TValue {
    *
    * @returns 值。
    */
-  uint16(): number {
+ uint16() : number  {
     return value_uint16(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2226,9 +2228,9 @@ class TValue {
    *
    * @returns value对象本身。
    */
-  setInt32(value: any): TValue {
+ setInt32(value : any) : TValue  {
     return new TValue(value_set_int32(this != null ? (this.nativeObj || this) : null, value));
-  }
+ }
 
 
   /**
@@ -2237,9 +2239,9 @@ class TValue {
    *
    * @returns 值。
    */
-  int32(): number {
+ int32() : number  {
     return value_int32(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2249,9 +2251,9 @@ class TValue {
    *
    * @returns value对象本身。
    */
-  setUint32(value: any): TValue {
+ setUint32(value : any) : TValue  {
     return new TValue(value_set_uint32(this != null ? (this.nativeObj || this) : null, value));
-  }
+ }
 
 
   /**
@@ -2261,9 +2263,9 @@ class TValue {
    *
    * @returns value对象本身。
    */
-  setInt64(value: any): TValue {
+ setInt64(value : any) : TValue  {
     return new TValue(value_set_int64(this != null ? (this.nativeObj || this) : null, value));
-  }
+ }
 
 
   /**
@@ -2272,9 +2274,9 @@ class TValue {
    *
    * @returns 值。
    */
-  int64(): number {
+ int64() : number  {
     return value_int64(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2284,9 +2286,9 @@ class TValue {
    *
    * @returns value对象本身。
    */
-  setUint64(value: any): TValue {
+ setUint64(value : any) : TValue  {
     return new TValue(value_set_uint64(this != null ? (this.nativeObj || this) : null, value));
-  }
+ }
 
 
   /**
@@ -2295,9 +2297,9 @@ class TValue {
    *
    * @returns 值。
    */
-  uint64(): number {
+ uint64() : number  {
     return value_uint64(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2307,9 +2309,9 @@ class TValue {
    *
    * @returns value对象本身。
    */
-  setFloat(value: any): TValue {
+ setFloat(value : any) : TValue  {
     return new TValue(value_set_float(this != null ? (this.nativeObj || this) : null, value));
-  }
+ }
 
 
   /**
@@ -2318,9 +2320,9 @@ class TValue {
    *
    * @returns 值。
    */
-  float32(): number {
+ float32() : number  {
     return value_float32(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2330,9 +2332,9 @@ class TValue {
    *
    * @returns value对象本身。
    */
-  setFloat64(value: any): TValue {
+ setFloat64(value : any) : TValue  {
     return new TValue(value_set_double(this != null ? (this.nativeObj || this) : null, value));
-  }
+ }
 
 
   /**
@@ -2341,9 +2343,9 @@ class TValue {
    *
    * @returns 值。
    */
-  float64(): number {
+ float64() : number  {
     return value_double(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2355,9 +2357,9 @@ class TValue {
    *
    * @returns value对象本身。
    */
-  setStr(value: string): TValue {
+ setStr(value : string) : TValue  {
     return new TValue(value_dup_str(this != null ? (this.nativeObj || this) : null, value));
-  }
+ }
 
 
   /**
@@ -2366,9 +2368,9 @@ class TValue {
    *
    * @returns 值。
    */
-  str(): string {
+ str() : string  {
     return value_str(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2377,9 +2379,9 @@ class TValue {
    *
    * @returns 为空值返回TRUE，否则返回FALSE。
    */
-  isNull(): boolean {
+ isNull() : boolean  {
     return value_is_null(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2389,9 +2391,9 @@ class TValue {
    *
    * @returns value对象本身。
    */
-  setInt(value: any): TValue {
+ setInt(value : any) : TValue  {
     return new TValue(value_set_int(this != null ? (this.nativeObj || this) : null, value));
-  }
+ }
 
 
   /**
@@ -2401,9 +2403,9 @@ class TValue {
    *
    * @returns value对象本身。
    */
-  setObject(value: TObject): TValue {
+ setObject(value : TObject) : TValue  {
     return new TValue(value_set_object(this != null ? (this.nativeObj || this) : null, value != null ? (value.nativeObj || value) : null));
-  }
+ }
 
 
   /**
@@ -2412,9 +2414,9 @@ class TValue {
    *
    * @returns 值。
    */
-  object(): TObject {
+ object() : TObject  {
     return new TObject(value_object(this != null ? (this.nativeObj || this) : null));
-  }
+ }
 
 
   /**
@@ -2424,9 +2426,9 @@ class TValue {
    *
    * @returns value对象本身。
    */
-  setToken(value: any): TValue {
+ setToken(value : any) : TValue  {
     return new TValue(value_set_token(this != null ? (this.nativeObj || this) : null, value));
-  }
+ }
 
 
   /**
@@ -2435,9 +2437,9 @@ class TValue {
    *
    * @returns 值。
    */
-  token(): number {
+ token() : number  {
     return value_token(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2446,9 +2448,9 @@ class TValue {
    *
    * @returns 对象。
    */
-  static create(): TValue {
+ static create() : TValue  {
     return new TValue(value_create());
-  }
+ }
 
 
   /**
@@ -2457,9 +2459,9 @@ class TValue {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  destroy(): TRet {
+ destroy() : TRet  {
     return value_destroy(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2468,9 +2470,9 @@ class TValue {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  reset(): TRet {
+ reset() : TRet  {
     return value_reset(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2482,20 +2484,20 @@ class TValue {
    *
    * @returns 对象。
    */
-  static cast(value: TValue): TValue {
+ static cast(value : TValue) : TValue  {
     return new TValue(value_cast(value != null ? (value.nativeObj || value) : null));
-  }
+ }
 
 };
 /**
  * 对象接口。
  *
  */
-class TObject extends TEmitter {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TObject extends TEmitter { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -2504,9 +2506,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  unref(): TRet {
+ unref() : TRet  {
     return object_unref(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2516,9 +2518,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回object对象。
    */
-  static ref(obj: TObject): TObject {
+ static ref(obj : TObject) : TObject  {
     return new TObject(object_ref(obj != null ? (obj.nativeObj || obj) : null));
-  }
+ }
 
 
   /**
@@ -2527,9 +2529,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回对象的类型名称。
    */
-  getType(): string {
+ getType() : string  {
     return object_get_type(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2538,9 +2540,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回对象的描述信息。
    */
-  getDesc(): string {
+ getDesc() : string  {
     return object_get_desc(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2549,9 +2551,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回对象占用内存的大小。
    */
-  getSize(): number {
+ getSize() : number  {
     return object_get_size(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2560,9 +2562,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回TRUE表示是集合，否则不是。
    */
-  isCollection(): boolean {
+ isCollection() : boolean  {
     return object_is_collection(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2572,9 +2574,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setName(name: string): TRet {
+ setName(name : string) : TRet  {
     return object_set_name(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
@@ -2584,9 +2586,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回比较结果。
    */
-  compare(other: TObject): number {
+ compare(other : TObject) : number  {
     return object_compare(this != null ? (this.nativeObj || this) : null, other != null ? (other.nativeObj || other) : null);
-  }
+ }
 
 
   /**
@@ -2597,9 +2599,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  getProp(name: string, v: TValue): TRet {
+ getProp(name : string, v : TValue) : TRet  {
     return object_get_prop(this != null ? (this.nativeObj || this) : null, name, v != null ? (v.nativeObj || v) : null);
-  }
+ }
 
 
   /**
@@ -2609,9 +2611,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回指定属性的字符串类型的值。
    */
-  getPropStr(name: string): string {
+ getPropStr(name : string) : string  {
     return object_get_prop_str(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
@@ -2621,9 +2623,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回指定属性的指针类型的值。
    */
-  getPropPointer(name: string): any {
+ getPropPointer(name : string) : any  {
     return object_get_prop_pointer(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
@@ -2633,9 +2635,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回指定属性的object类型的值。
    */
-  getPropObject(name: string): TObject {
+ getPropObject(name : string) : TObject  {
     return new TObject(object_get_prop_object(this != null ? (this.nativeObj || this) : null, name));
-  }
+ }
 
 
   /**
@@ -2646,9 +2648,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回指定属性的整数类型的值。
    */
-  getPropInt(name: string, defval: number): number {
+ getPropInt(name : string, defval : number) : number  {
     return object_get_prop_int(this != null ? (this.nativeObj || this) : null, name, defval);
-  }
+ }
 
 
   /**
@@ -2659,9 +2661,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回指定属性的bool类型的值。
    */
-  getPropBool(name: string, defval: boolean): boolean {
+ getPropBool(name : string, defval : boolean) : boolean  {
     return object_get_prop_bool(this != null ? (this.nativeObj || this) : null, name, defval);
-  }
+ }
 
 
   /**
@@ -2672,9 +2674,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回指定属性的浮点数类型的值。
    */
-  getPropFloat(name: string, defval: number): number {
+ getPropFloat(name : string, defval : number) : number  {
     return object_get_prop_float(this != null ? (this.nativeObj || this) : null, name, defval);
-  }
+ }
 
 
   /**
@@ -2684,9 +2686,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  removeProp(name: string): TRet {
+ removeProp(name : string) : TRet  {
     return object_remove_prop(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
@@ -2697,9 +2699,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setProp(name: string, value: TValue): TRet {
+ setProp(name : string, value : TValue) : TRet  {
     return object_set_prop(this != null ? (this.nativeObj || this) : null, name, value != null ? (value.nativeObj || value) : null);
-  }
+ }
 
 
   /**
@@ -2710,9 +2712,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setPropStr(name: string, value: string): TRet {
+ setPropStr(name : string, value : string) : TRet  {
     return object_set_prop_str(this != null ? (this.nativeObj || this) : null, name, value);
-  }
+ }
 
 
   /**
@@ -2723,9 +2725,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setPropObject(name: string, value: TObject): TRet {
+ setPropObject(name : string, value : TObject) : TRet  {
     return object_set_prop_object(this != null ? (this.nativeObj || this) : null, name, value != null ? (value.nativeObj || value) : null);
-  }
+ }
 
 
   /**
@@ -2736,9 +2738,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setPropInt(name: string, value: any): TRet {
+ setPropInt(name : string, value : any) : TRet  {
     return object_set_prop_int(this != null ? (this.nativeObj || this) : null, name, value);
-  }
+ }
 
 
   /**
@@ -2749,9 +2751,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setPropBool(name: string, value: any): TRet {
+ setPropBool(name : string, value : any) : TRet  {
     return object_set_prop_bool(this != null ? (this.nativeObj || this) : null, name, value);
-  }
+ }
 
 
   /**
@@ -2762,9 +2764,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setPropFloat(name: string, value: any): TRet {
+ setPropFloat(name : string, value : any) : TRet  {
     return object_set_prop_float(this != null ? (this.nativeObj || this) : null, name, value);
-  }
+ }
 
 
   /**
@@ -2775,9 +2777,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  copyProp(src: TObject, name: string): TRet {
+ copyProp(src : TObject, name : string) : TRet  {
     return object_copy_prop(this != null ? (this.nativeObj || this) : null, src != null ? (src.nativeObj || src) : null, name);
-  }
+ }
 
 
   /**
@@ -2787,9 +2789,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回TRUE表示存在，否则表示不存在。
    */
-  hasProp(name: string): boolean {
+ hasProp(name : string) : boolean  {
     return object_has_prop(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
@@ -2800,9 +2802,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  eval(expr: string, v: TValue): TRet {
+ eval(expr : string, v : TValue) : TRet  {
     return object_eval(this != null ? (this.nativeObj || this) : null, expr, v != null ? (v.nativeObj || v) : null);
-  }
+ }
 
 
   /**
@@ -2813,9 +2815,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回TRUE表示可以执行，否则表示不可以执行。
    */
-  canExec(name: string, args: string): boolean {
+ canExec(name : string, args : string) : boolean  {
     return object_can_exec(this != null ? (this.nativeObj || this) : null, name, args);
-  }
+ }
 
 
   /**
@@ -2826,9 +2828,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  execute(name: string, args: string): TRet {
+ execute(name : string, args : string) : TRet  {
     return object_exec(this != null ? (this.nativeObj || this) : null, name, args);
-  }
+ }
 
 
   /**
@@ -2837,9 +2839,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  notifyChanged(): TRet {
+ notifyChanged() : TRet  {
     return object_notify_changed(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -2849,9 +2851,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回指定属性的字符串类型的值。
    */
-  getPropStrByPath(path: string): string {
+ getPropStrByPath(path : string) : string  {
     return object_get_prop_str_by_path(this != null ? (this.nativeObj || this) : null, path);
-  }
+ }
 
 
   /**
@@ -2861,9 +2863,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回指定属性的指针类型的值。
    */
-  getPropPointerByPath(path: string): any {
+ getPropPointerByPath(path : string) : any  {
     return object_get_prop_pointer_by_path(this != null ? (this.nativeObj || this) : null, path);
-  }
+ }
 
 
   /**
@@ -2873,9 +2875,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回指定属性的object类型的值。
    */
-  getPropObjectByPath(path: string): TObject {
+ getPropObjectByPath(path : string) : TObject  {
     return new TObject(object_get_prop_object_by_path(this != null ? (this.nativeObj || this) : null, path));
-  }
+ }
 
 
   /**
@@ -2886,9 +2888,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回指定属性的整数类型的值。
    */
-  getPropIntByPath(path: string, defval: number): number {
+ getPropIntByPath(path : string, defval : number) : number  {
     return object_get_prop_int_by_path(this != null ? (this.nativeObj || this) : null, path, defval);
-  }
+ }
 
 
   /**
@@ -2899,9 +2901,9 @@ class TObject extends TEmitter {
    *
    * @returns 返回指定属性的bool类型的值。
    */
-  getPropBoolByPath(path: string, defval: boolean): boolean {
+ getPropBoolByPath(path : string, defval : boolean) : boolean  {
     return object_get_prop_bool_by_path(this != null ? (this.nativeObj || this) : null, path, defval);
-  }
+ }
 
 
   /**
@@ -2912,38 +2914,38 @@ class TObject extends TEmitter {
    *
    * @returns 返回指定属性的浮点数类型的值。
    */
-  getPropFloatByPath(path: string, defval: number): number {
+ getPropFloatByPath(path : string, defval : number) : number  {
     return object_get_prop_float_by_path(this != null ? (this.nativeObj || this) : null, path, defval);
-  }
+ }
 
 
   /**
    * 引用计数。
    *
    */
-  get refCount(): number {
-    return object_t_get_prop_ref_count(this.nativeObj);
-  }
+ get refCount() : number {
+   return object_t_get_prop_ref_count(this.nativeObj);
+ }
 
 
   /**
    * 对象的名称。
    *
    */
-  get name(): string {
-    return object_t_get_prop_name(this.nativeObj);
-  }
+ get name() : string {
+   return object_t_get_prop_name(this.nativeObj);
+ }
 
-  set name(v: string) {
-    this.setName(v);
-  }
+ set name(v : string) {
+   this.setName(v);
+ }
 
 };
 /**
  * TK全局对象。
  *
  */
-class TGlobal {
+class TGlobal { 
 
   /**
    * 初始化TK。
@@ -2956,9 +2958,9 @@ class TGlobal {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  static init(w: number, h: number, app_type: TAppType, app_name: string, app_root: string): TRet {
+ static init(w : number, h : number, app_type : TAppType, app_name : string, app_root : string) : TRet  {
     return tk_init(w, h, app_type, app_name, app_root);
-  }
+ }
 
 
   /**
@@ -2967,9 +2969,9 @@ class TGlobal {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  static run(): TRet {
+ static run() : TRet  {
     return tk_run();
-  }
+ }
 
 
   /**
@@ -2978,9 +2980,9 @@ class TGlobal {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  static quit(): TRet {
+ static quit() : TRet  {
     return tk_quit();
-  }
+ }
 
 
   /**
@@ -2989,9 +2991,9 @@ class TGlobal {
    *
    * @returns 返回全局指针的X坐标。
    */
-  static getPointerX(): number {
+ static getPointerX() : number  {
     return tk_get_pointer_x();
-  }
+ }
 
 
   /**
@@ -3000,9 +3002,9 @@ class TGlobal {
    *
    * @returns 返回全局指针的X坐标。
    */
-  static getPointerY(): number {
+ static getPointerY() : number  {
     return tk_get_pointer_y();
-  }
+ }
 
 
   /**
@@ -3011,9 +3013,9 @@ class TGlobal {
    *
    * @returns 返回全局指针是否按下。
    */
-  static isPointerPressed(): boolean {
+ static isPointerPressed() : boolean  {
     return tk_is_pointer_pressed();
-  }
+ }
 
 };
 /**
@@ -3028,37 +3030,37 @@ enum TDialogQuitCode {
    * 对话框被强行关闭或不关心关闭原因。
    *
    */
-  NONE = DIALOG_QUIT_NONE(),
+ NONE = DIALOG_QUIT_NONE(),
 
   /**
    * 点击“OK”按钮关闭。
    *
    */
-  OK = DIALOG_QUIT_OK(),
+ OK = DIALOG_QUIT_OK(),
 
   /**
    * 点击“YES”按钮关闭。
    *
    */
-  YES = DIALOG_QUIT_YES(),
+ YES = DIALOG_QUIT_YES(),
 
   /**
    * 点击“CANCEL”按钮关闭。
    *
    */
-  CANCEL = DIALOG_QUIT_CANCEL(),
+ CANCEL = DIALOG_QUIT_CANCEL(),
 
   /**
    * 点击“NO”按钮关闭。
    *
    */
-  NO = DIALOG_QUIT_NO(),
+ NO = DIALOG_QUIT_NO(),
 
   /**
    * 点击其它按钮关闭。
    *
    */
-  OTHER = DIALOG_QUIT_OTHER(),
+ OTHER = DIALOG_QUIT_OTHER(),
 };
 
 
@@ -3072,462 +3074,462 @@ enum TEventType {
    * 指针按下事件名(pointer_event_t)。
    *
    */
-  POINTER_DOWN = EVT_POINTER_DOWN(),
+ POINTER_DOWN = EVT_POINTER_DOWN(),
 
   /**
    * 指针按下事件名，在子控件处理之前触发(pointer_event_t)。
    *
    */
-  POINTER_DOWN_BEFORE_CHILDREN = EVT_POINTER_DOWN_BEFORE_CHILDREN(),
+ POINTER_DOWN_BEFORE_CHILDREN = EVT_POINTER_DOWN_BEFORE_CHILDREN(),
 
   /**
    * 指针移动事件名(pointer_event_t)。
    *
    */
-  POINTER_MOVE = EVT_POINTER_MOVE(),
+ POINTER_MOVE = EVT_POINTER_MOVE(),
 
   /**
    * 指针移动事件名，在子控件处理之前触发(pointer_event_t)。
    *
    */
-  POINTER_MOVE_BEFORE_CHILDREN = EVT_POINTER_MOVE_BEFORE_CHILDREN(),
+ POINTER_MOVE_BEFORE_CHILDREN = EVT_POINTER_MOVE_BEFORE_CHILDREN(),
 
   /**
    * 指针抬起事件名(pointer_event_t)。
    *
    */
-  POINTER_UP = EVT_POINTER_UP(),
+ POINTER_UP = EVT_POINTER_UP(),
 
   /**
    * 指针抬起事件名，在子控件处理之前触发(pointer_event_t)。
    *
    */
-  POINTER_UP_BEFORE_CHILDREN = EVT_POINTER_UP_BEFORE_CHILDREN(),
+ POINTER_UP_BEFORE_CHILDREN = EVT_POINTER_UP_BEFORE_CHILDREN(),
 
   /**
    * 滚轮事件名(pointer_event_t)。
    *
    */
-  WHEEL = EVT_WHEEL(),
+ WHEEL = EVT_WHEEL(),
 
   /**
    * 鼠标滚轮事件名，在子控件处理之前触发(key_event_t)。
    *
    */
-  WHEEL_BEFORE_CHILDREN = EVT_WHEEL_BEFORE_CHILDREN(),
+ WHEEL_BEFORE_CHILDREN = EVT_WHEEL_BEFORE_CHILDREN(),
 
   /**
    * 取消前一个指针按下事件名(pointer_event_t)。
    *
    */
-  POINTER_DOWN_ABORT = EVT_POINTER_DOWN_ABORT(),
+ POINTER_DOWN_ABORT = EVT_POINTER_DOWN_ABORT(),
 
   /**
    * 右键/长按弹出上下文菜单的事件名(pointer_event_t)。
    *
    */
-  CONTEXT_MENU = EVT_CONTEXT_MENU(),
+ CONTEXT_MENU = EVT_CONTEXT_MENU(),
 
   /**
    * 指针进入事件名(pointer_event_t)。
    *
    */
-  POINTER_ENTER = EVT_POINTER_ENTER(),
+ POINTER_ENTER = EVT_POINTER_ENTER(),
 
   /**
    * 指针离开事件名(pointer_event_t)。
    *
    */
-  POINTER_LEAVE = EVT_POINTER_LEAVE(),
+ POINTER_LEAVE = EVT_POINTER_LEAVE(),
 
   /**
    * 长按事件名(pointer_event_t)。
    *
    */
-  LONG_PRESS = EVT_LONG_PRESS(),
+ LONG_PRESS = EVT_LONG_PRESS(),
 
   /**
    * 点击事件名(pointer_event_t)。
    *
    */
-  CLICK = EVT_CLICK(),
+ CLICK = EVT_CLICK(),
 
   /**
    * 得到焦点事件名(event_t)。
    *
    */
-  FOCUS = EVT_FOCUS(),
+ FOCUS = EVT_FOCUS(),
 
   /**
    * 失去焦点事件名(event_t)。
    *
    */
-  BLUR = EVT_BLUR(),
+ BLUR = EVT_BLUR(),
 
   /**
    * 键按下事件名(key_event_t)。
    *
    */
-  KEY_DOWN = EVT_KEY_DOWN(),
+ KEY_DOWN = EVT_KEY_DOWN(),
 
   /**
    * 键按下事件名，在子控件处理之前触发(key_event_t)。
    *
    */
-  KEY_DOWN_BEFORE_CHILDREN = EVT_KEY_DOWN_BEFORE_CHILDREN(),
+ KEY_DOWN_BEFORE_CHILDREN = EVT_KEY_DOWN_BEFORE_CHILDREN(),
 
   /**
    * 按键repeat事件名(key_event_t)。
    *
    */
-  KEY_REPEAT = EVT_KEY_REPEAT(),
+ KEY_REPEAT = EVT_KEY_REPEAT(),
 
   /**
    * 键抬起事件名(key_event_t)。
    *
    */
-  KEY_UP = EVT_KEY_UP(),
+ KEY_UP = EVT_KEY_UP(),
 
   /**
    * 键抬起事件名，在子控件处理之前触发(key_event_t)。
    *
    */
-  KEY_UP_BEFORE_CHILDREN = EVT_KEY_UP_BEFORE_CHILDREN(),
+ KEY_UP_BEFORE_CHILDREN = EVT_KEY_UP_BEFORE_CHILDREN(),
 
   /**
    * 即将移动Widget的事件名(event_t)。
    *
    */
-  WILL_MOVE = EVT_WILL_MOVE(),
+ WILL_MOVE = EVT_WILL_MOVE(),
 
   /**
    * 移动Widget的事件名(event_t)。
    *
    */
-  MOVE = EVT_MOVE(),
+ MOVE = EVT_MOVE(),
 
   /**
    * 即将调整Widget大小的事件名(event_t)。
    *
    */
-  WILL_RESIZE = EVT_WILL_RESIZE(),
+ WILL_RESIZE = EVT_WILL_RESIZE(),
 
   /**
    * 调整Widget大小的事件名(event_t)。
    *
    */
-  RESIZE = EVT_RESIZE(),
+ RESIZE = EVT_RESIZE(),
 
   /**
    * 即将调整Widget大小/位置的事件名(event_t)。
    *
    */
-  WILL_MOVE_RESIZE = EVT_WILL_MOVE_RESIZE(),
+ WILL_MOVE_RESIZE = EVT_WILL_MOVE_RESIZE(),
 
   /**
    * 调整Widget大小/位置的事件名(event_t)。
    *
    */
-  MOVE_RESIZE = EVT_MOVE_RESIZE(),
+ MOVE_RESIZE = EVT_MOVE_RESIZE(),
 
   /**
    * 控件的值即将改变的事件名(event_t)。
    *
    */
-  VALUE_WILL_CHANGE = EVT_VALUE_WILL_CHANGE(),
+ VALUE_WILL_CHANGE = EVT_VALUE_WILL_CHANGE(),
 
   /**
    * 控件的值改变的事件名(event_t)。
    *
    */
-  VALUE_CHANGED = EVT_VALUE_CHANGED(),
+ VALUE_CHANGED = EVT_VALUE_CHANGED(),
 
   /**
    * 控件的值持续改变(如编辑器正在编辑)的事件名(event_t)。
    *
    */
-  VALUE_CHANGING = EVT_VALUE_CHANGING(),
+ VALUE_CHANGING = EVT_VALUE_CHANGING(),
 
   /**
    * 绘制的事件名(paint_event_t)。
    *
    */
-  PAINT = EVT_PAINT(),
+ PAINT = EVT_PAINT(),
 
   /**
    * 即将绘制的事件名(paint_event_t)。
    *
    */
-  BEFORE_PAINT = EVT_BEFORE_PAINT(),
+ BEFORE_PAINT = EVT_BEFORE_PAINT(),
 
   /**
    * 绘制完成的事件名(paint_event_t)。
    *
    */
-  AFTER_PAINT = EVT_AFTER_PAINT(),
+ AFTER_PAINT = EVT_AFTER_PAINT(),
 
   /**
    * 绘制完成(canvas状态已经恢复)的事件名(paint_event_t)。
    *
    */
-  PAINT_DONE = EVT_PAINT_DONE(),
+ PAINT_DONE = EVT_PAINT_DONE(),
 
   /**
    * locale改变的事件(event_t)。
    *
    */
-  LOCALE_CHANGED = EVT_LOCALE_CHANGED(),
+ LOCALE_CHANGED = EVT_LOCALE_CHANGED(),
 
   /**
    * 控件动画开始事件(event_t)。
    *
    */
-  ANIM_START = EVT_ANIM_START(),
+ ANIM_START = EVT_ANIM_START(),
 
   /**
    * 控件动画被主动停止的事件(event_t)。
    *
    */
-  ANIM_STOP = EVT_ANIM_STOP(),
+ ANIM_STOP = EVT_ANIM_STOP(),
 
   /**
    * 控件动画被暂停的事件(event_t)。
    *
    */
-  ANIM_PAUSE = EVT_ANIM_PAUSE(),
+ ANIM_PAUSE = EVT_ANIM_PAUSE(),
 
   /**
    * 控件动画yoyo/repeat时，完成一次的事件(event_t)。
    *
    */
-  ANIM_ONCE = EVT_ANIM_ONCE(),
+ ANIM_ONCE = EVT_ANIM_ONCE(),
 
   /**
    * 控件动画完成事件(event_t)。
    *
    */
-  ANIM_END = EVT_ANIM_END(),
+ ANIM_END = EVT_ANIM_END(),
 
   /**
    * 窗口加载完成事件(event_t)。
    *
    */
-  WINDOW_LOAD = EVT_WINDOW_LOAD(),
+ WINDOW_LOAD = EVT_WINDOW_LOAD(),
 
   /**
    * 控件加载完成事件(event_t)。
    *
    */
-  WIDGET_LOAD = EVT_WIDGET_LOAD(),
+ WIDGET_LOAD = EVT_WIDGET_LOAD(),
 
   /**
    * 窗口即将打开事件(event_t)。
    *如果有窗口动画，在窗口动画开始前触发。如果没有窗口动画，在窗口被加载后的下一次循环中触发。
    *
    */
-  WINDOW_WILL_OPEN = EVT_WINDOW_WILL_OPEN(),
+ WINDOW_WILL_OPEN = EVT_WINDOW_WILL_OPEN(),
 
   /**
    * 窗口打开事件(event_t)。
    *如果有窗口动画，在窗口动画完成时触发。如果没有窗口动画，在窗口被加载后的下一次循环中触发。
    *
    */
-  WINDOW_OPEN = EVT_WINDOW_OPEN(),
+ WINDOW_OPEN = EVT_WINDOW_OPEN(),
 
   /**
    * 窗口被切换到后台事件(event_t)。
    *打开新窗口时，当前窗口被切换到后台时，对当前窗口触发本事件。
    *
    */
-  WINDOW_TO_BACKGROUND = EVT_WINDOW_TO_BACKGROUND(),
+ WINDOW_TO_BACKGROUND = EVT_WINDOW_TO_BACKGROUND(),
 
   /**
    * 窗口被切换到前台事件(event_t)。
    *关闭当前窗口时，前一个窗口被切换到前台时，对前一个窗口触发本事件。
    *
    */
-  WINDOW_TO_FOREGROUND = EVT_WINDOW_TO_FOREGROUND(),
+ WINDOW_TO_FOREGROUND = EVT_WINDOW_TO_FOREGROUND(),
 
   /**
    * 窗口关闭事件。
    *
    */
-  WINDOW_CLOSE = EVT_WINDOW_CLOSE(),
+ WINDOW_CLOSE = EVT_WINDOW_CLOSE(),
 
   /**
    * 请求关闭窗口的事件(event_t)。
    *
    */
-  REQUEST_CLOSE_WINDOW = EVT_REQUEST_CLOSE_WINDOW(),
+ REQUEST_CLOSE_WINDOW = EVT_REQUEST_CLOSE_WINDOW(),
 
   /**
    * 顶层窗口改变的事件(window_event_t)。
    *
    */
-  TOP_WINDOW_CHANGED = EVT_TOP_WINDOW_CHANGED(),
+ TOP_WINDOW_CHANGED = EVT_TOP_WINDOW_CHANGED(),
 
   /**
    * 输入法提交输入的文本事件(im_commit_event_t)。
    *
    */
-  IM_COMMIT = EVT_IM_COMMIT(),
+ IM_COMMIT = EVT_IM_COMMIT(),
 
   /**
    * 输入法请求显示候选字事件(im_candidates_event_t)。
    *
    */
-  IM_SHOW_CANDIDATES = EVT_IM_SHOW_CANDIDATES(),
+ IM_SHOW_CANDIDATES = EVT_IM_SHOW_CANDIDATES(),
 
   /**
    * 软键盘Action点击事件(event_t)。
    *
    */
-  IM_ACTION = EVT_IM_ACTION(),
+ IM_ACTION = EVT_IM_ACTION(),
 
   /**
    * 请求更新软键盘上的Action按钮的信息(im_action_button_info_event_t)。
    *
    */
-  IM_ACTION_INFO = EVT_IM_ACTION_INFO(),
+ IM_ACTION_INFO = EVT_IM_ACTION_INFO(),
 
   /**
    * 开始拖动(event_t)。
    *
    */
-  DRAG_START = EVT_DRAG_START(),
+ DRAG_START = EVT_DRAG_START(),
 
   /**
    * 拖动(event_t)。
    *
    */
-  DRAG = EVT_DRAG(),
+ DRAG = EVT_DRAG(),
 
   /**
    * 结束拖动(event_t)。
    *
    */
-  DRAG_END = EVT_DRAG_END(),
+ DRAG_END = EVT_DRAG_END(),
 
   /**
    * 在指定的时间内(WITH_SCREEN_SAVER_TIME)，没有用户输入事件，由窗口管理器触发。
    *
    */
-  SCREEN_SAVER = EVT_SCREEN_SAVER(),
+ SCREEN_SAVER = EVT_SCREEN_SAVER(),
 
   /**
    * 内存不足(event_t)。
    *
    */
-  LOW_MEMORY = EVT_LOW_MEMORY(),
+ LOW_MEMORY = EVT_LOW_MEMORY(),
 
   /**
    * 内存耗尽(event_t)。
    *
    */
-  OUT_OF_MEMORY = EVT_OUT_OF_MEMORY(),
+ OUT_OF_MEMORY = EVT_OUT_OF_MEMORY(),
 
   /**
    * 屏幕即将旋转(event_t)。
    *
    */
-  ORIENTATION_WILL_CHANGED = EVT_ORIENTATION_WILL_CHANGED(),
+ ORIENTATION_WILL_CHANGED = EVT_ORIENTATION_WILL_CHANGED(),
 
   /**
    * 屏幕旋转(event_t)。
    *
    */
-  ORIENTATION_CHANGED = EVT_ORIENTATION_CHANGED(),
+ ORIENTATION_CHANGED = EVT_ORIENTATION_CHANGED(),
 
   /**
    * 控件创建事件(event_t)。
    *
    */
-  WIDGET_CREATED = EVT_WIDGET_CREATED(),
+ WIDGET_CREATED = EVT_WIDGET_CREATED(),
 
   /**
    * 请求退出应用程序事件。
    *点击原生窗口关闭按钮时，通过窗口管理器触发，注册该事件并返回RET_STOP，可以阻止窗口关闭。
    *
    */
-  REQUEST_QUIT_APP = EVT_REQUEST_QUIT_APP(),
+ REQUEST_QUIT_APP = EVT_REQUEST_QUIT_APP(),
 
   /**
    * 主题变化(event_t)。
    *
    */
-  THEME_CHANGED = EVT_THEME_CHANGED(),
+ THEME_CHANGED = EVT_THEME_CHANGED(),
 
   /**
    * 控件加载新的子控件(event_t)。
    *
    */
-  WIDGET_ADD_CHILD = EVT_WIDGET_ADD_CHILD(),
+ WIDGET_ADD_CHILD = EVT_WIDGET_ADD_CHILD(),
 
   /**
    * 控件移除子控件(event_t)。
    *
    */
-  WIDGET_REMOVE_CHILD = EVT_WIDGET_REMOVE_CHILD(),
+ WIDGET_REMOVE_CHILD = EVT_WIDGET_REMOVE_CHILD(),
 
   /**
    * event queue其它请求编号起始值。
    *
    */
-  REQ_START = EVT_REQ_START(),
+ REQ_START = EVT_REQ_START(),
 
   /**
    * 用户定义事件起始值。
    *
    */
-  USER_START = EVT_USER_START(),
+ USER_START = EVT_USER_START(),
 
   /**
    * 无效事件名称。
    *
    */
-  NONE = EVT_NONE(),
+ NONE = EVT_NONE(),
 
   /**
    * 对象的属性即将改变的事件名(prop_change_event_t)。
    *
    */
-  PROP_WILL_CHANGE = EVT_PROP_WILL_CHANGE(),
+ PROP_WILL_CHANGE = EVT_PROP_WILL_CHANGE(),
 
   /**
    * 对象的属性改变的事件名(prop_change_event_t)。
    *
    */
-  PROP_CHANGED = EVT_PROP_CHANGED(),
+ PROP_CHANGED = EVT_PROP_CHANGED(),
 
   /**
    * 即将增加和删除集合中的项目(event_t)。
    *
    */
-  ITEMS_WILL_CHANGE = EVT_ITEMS_WILL_CHANGE(),
+ ITEMS_WILL_CHANGE = EVT_ITEMS_WILL_CHANGE(),
 
   /**
    * 完成增加和删除集合中的项目(event_t)。
    *
    */
-  ITEMS_CHANGED = EVT_ITEMS_CHANGED(),
+ ITEMS_CHANGED = EVT_ITEMS_CHANGED(),
 
   /**
    * 对象的属性改变的事件名(props_event_t)。
    *
    */
-  PROPS_CHANGED = EVT_PROPS_CHANGED(),
+ PROPS_CHANGED = EVT_PROPS_CHANGED(),
 
   /**
    * 进度状态(progress_event_t)。
    *
    */
-  PROGRESS = EVT_PROGRESS(),
+ PROGRESS = EVT_PROGRESS(),
 
   /**
    * 对象销毁事件名(event_t)。
    *
    */
-  DESTROY = EVT_DESTROY(),
+ DESTROY = EVT_DESTROY(),
 };
 
 
@@ -3536,11 +3538,11 @@ enum TEventType {
  *(如果使用nanovg，字体由nanovg内部管理)
  *
  */
-class TFontManager {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TFontManager { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
@@ -3551,9 +3553,9 @@ class TFontManager {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  unloadFont(name: string, size: number): TRet {
+ unloadFont(name : string, size : number) : TRet  {
     return font_manager_unload_font(this != null ? (this.nativeObj || this) : null, name, size);
-  }
+ }
 
 
   /**
@@ -3562,9 +3564,9 @@ class TFontManager {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  unloadAll(): TRet {
+ unloadAll() : TRet  {
     return font_manager_unload_all(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 };
 /**
@@ -3577,19 +3579,19 @@ enum TGlyphFormat {
    * 每个像素占用1个字节(缺省)。
    *
    */
-  ALPHA = GLYPH_FMT_ALPHA(),
+ ALPHA = GLYPH_FMT_ALPHA(),
 
   /**
    * 每个像素占用1个比特。
    *
    */
-  MONO = GLYPH_FMT_MONO(),
+ MONO = GLYPH_FMT_MONO(),
 
   /**
    * 每个像素占用4个字节。
    *
    */
-  RGBA = GLYPH_FMT_RGBA(),
+ RGBA = GLYPH_FMT_RGBA(),
 };
 
 
@@ -3604,7 +3606,7 @@ enum TGlyphFormat {
  *> 在非GUI线程请用idle\_queue。
  *
  */
-class TIdle {
+class TIdle { 
 
   /**
    * 增加一个idle。
@@ -3614,9 +3616,9 @@ class TIdle {
    *
    * @returns 返回idle的ID，0表示失败。
    */
-  static add(on_idle: Function, ctx: any): number {
+ static add(on_idle : Function, ctx : any) : number  {
     return idle_add(on_idle, ctx);
-  }
+ }
 
 
   /**
@@ -3626,20 +3628,20 @@ class TIdle {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  static remove(idle_id: number): TRet {
+ static remove(idle_id : number) : TRet  {
     return idle_remove(idle_id);
-  }
+ }
 
 };
 /**
  * 图片管理器。负责加载，解码和缓存图片。
  *
  */
-class TImageManager {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TImageManager { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
@@ -3648,9 +3650,9 @@ class TImageManager {
    *
    * @returns 返回图片管理器对象。
    */
-  static instance(): TImageManager {
+ static instance() : TImageManager  {
     return new TImageManager(image_manager());
-  }
+ }
 
 
   /**
@@ -3662,9 +3664,9 @@ class TImageManager {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  getBitmap(name: string, image: TBitmap): TRet {
+ getBitmap(name : string, image : TBitmap) : TRet  {
     return image_manager_get_bitmap(this != null ? (this.nativeObj || this) : null, name, image != null ? (image.nativeObj || image) : null);
-  }
+ }
 
 };
 /**
@@ -3677,67 +3679,67 @@ enum TInputType {
    * 文本。
    *
    */
-  TEXT = INPUT_TEXT(),
+ TEXT = INPUT_TEXT(),
 
   /**
    * 整数。
    *
    */
-  INT = INPUT_INT(),
+ INT = INPUT_INT(),
 
   /**
    * 非负整数。
    *
    */
-  UINT = INPUT_UINT(),
+ UINT = INPUT_UINT(),
 
   /**
    * 16进制整数。
    *
    */
-  HEX = INPUT_HEX(),
+ HEX = INPUT_HEX(),
 
   /**
    * 浮点数。
    *
    */
-  FLOAT = INPUT_FLOAT(),
+ FLOAT = INPUT_FLOAT(),
 
   /**
    * 非负浮点数。
    *
    */
-  UFLOAT = INPUT_UFLOAT(),
+ UFLOAT = INPUT_UFLOAT(),
 
   /**
    * 邮件地址。
    *
    */
-  EMAIL = INPUT_EMAIL(),
+ EMAIL = INPUT_EMAIL(),
 
   /**
    * 密码。
    *
    */
-  PASSWORD = INPUT_PASSWORD(),
+ PASSWORD = INPUT_PASSWORD(),
 
   /**
    * 电话号码。
    *
    */
-  PHONE = INPUT_PHONE(),
+ PHONE = INPUT_PHONE(),
 
   /**
    * 使用自定义的软键盘(如计算器等应用不希望弹出系统软键盘)。
    *
    */
-  CUSTOM = INPUT_CUSTOM(),
+ CUSTOM = INPUT_CUSTOM(),
 
   /**
    * 使用自定义的密码软键盘。
    *
    */
-  CUSTOM_PASSWORD = INPUT_CUSTOM_PASSWORD(),
+ CUSTOM_PASSWORD = INPUT_CUSTOM_PASSWORD(),
 };
 
 
@@ -3751,127 +3753,127 @@ enum TValueType {
    * 无效类型。
    *
    */
-  INVALID = VALUE_TYPE_INVALID(),
+ INVALID = VALUE_TYPE_INVALID(),
 
   /**
    * BOOL类型。
    *
    */
-  BOOL = VALUE_TYPE_BOOL(),
+ BOOL = VALUE_TYPE_BOOL(),
 
   /**
    * int8_t类型。
    *
    */
-  INT8 = VALUE_TYPE_INT8(),
+ INT8 = VALUE_TYPE_INT8(),
 
   /**
    * uint8_t类型。
    *
    */
-  UINT8 = VALUE_TYPE_UINT8(),
+ UINT8 = VALUE_TYPE_UINT8(),
 
   /**
    * int16_t类型。
    *
    */
-  INT16 = VALUE_TYPE_INT16(),
+ INT16 = VALUE_TYPE_INT16(),
 
   /**
    * uint16_t类型。
    *
    */
-  UINT16 = VALUE_TYPE_UINT16(),
+ UINT16 = VALUE_TYPE_UINT16(),
 
   /**
    * int32_t类型。
    *
    */
-  INT32 = VALUE_TYPE_INT32(),
+ INT32 = VALUE_TYPE_INT32(),
 
   /**
    * uint32_t类型。
    *
    */
-  UINT32 = VALUE_TYPE_UINT32(),
+ UINT32 = VALUE_TYPE_UINT32(),
 
   /**
    * int64_t类型。
    *
    */
-  INT64 = VALUE_TYPE_INT64(),
+ INT64 = VALUE_TYPE_INT64(),
 
   /**
    * uint64_t类型。
    *
    */
-  UINT64 = VALUE_TYPE_UINT64(),
+ UINT64 = VALUE_TYPE_UINT64(),
 
   /**
    * void*类型。
    *
    */
-  POINTER = VALUE_TYPE_POINTER(),
+ POINTER = VALUE_TYPE_POINTER(),
 
   /**
    * float_t类型。
    *
    */
-  FLOAT = VALUE_TYPE_FLOAT(),
+ FLOAT = VALUE_TYPE_FLOAT(),
 
   /**
    * float类型。
    *
    */
-  FLOAT32 = VALUE_TYPE_FLOAT32(),
+ FLOAT32 = VALUE_TYPE_FLOAT32(),
 
   /**
    * double类型。
    *
    */
-  DOUBLE = VALUE_TYPE_DOUBLE(),
+ DOUBLE = VALUE_TYPE_DOUBLE(),
 
   /**
    * char*类型。
    *
    */
-  STRING = VALUE_TYPE_STRING(),
+ STRING = VALUE_TYPE_STRING(),
 
   /**
    * wchar_t*类型。
    *
    */
-  WSTRING = VALUE_TYPE_WSTRING(),
+ WSTRING = VALUE_TYPE_WSTRING(),
 
   /**
    * object_t*类型。
    *
    */
-  OBJECT = VALUE_TYPE_OBJECT(),
+ OBJECT = VALUE_TYPE_OBJECT(),
 
   /**
    * 带长度的字符串。
    *
    */
-  SIZED_STRING = VALUE_TYPE_SIZED_STRING(),
+ SIZED_STRING = VALUE_TYPE_SIZED_STRING(),
 
   /**
    * 二进制数据。
    *
    */
-  BINARY = VALUE_TYPE_BINARY(),
+ BINARY = VALUE_TYPE_BINARY(),
 
   /**
    * 二进制数据(UBJSON)。
    *
    */
-  UBJSON = VALUE_TYPE_UBJSON(),
+ UBJSON = VALUE_TYPE_UBJSON(),
 
   /**
    * 特殊用途。
    *
    */
-  TOKEN = VALUE_TYPE_TOKEN(),
+ TOKEN = VALUE_TYPE_TOKEN(),
 };
 
 
@@ -3891,11 +3893,11 @@ enum TValueType {
  *> 输入类型请参考：[input\_type](input_type_t.md)
  *
  */
-class TInputMethod {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TInputMethod { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
@@ -3905,9 +3907,9 @@ class TInputMethod {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  commitText(text: string): TRet {
+ commitText(text : string) : TRet  {
     return input_method_commit_text(this != null ? (this.nativeObj || this) : null, text);
-  }
+ }
 
 
   /**
@@ -3917,9 +3919,9 @@ class TInputMethod {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  dispatchKey(key: number): TRet {
+ dispatchKey(key : number) : TRet  {
     return input_method_dispatch_key(this != null ? (this.nativeObj || this) : null, key);
-  }
+ }
 
 
   /**
@@ -3928,9 +3930,9 @@ class TInputMethod {
    *
    * @returns 成功返回输入法对象，失败返回NULL。
    */
-  static instance(): TInputMethod {
+ static instance() : TInputMethod  {
     return new TInputMethod(input_method());
-  }
+ }
 
 };
 /**
@@ -3943,787 +3945,787 @@ enum TKeyCode {
    * TK_KEY_RETURN
    *
    */
-  KEY_RETURN = TK_KEY_RETURN(),
+ KEY_RETURN = TK_KEY_RETURN(),
 
   /**
    * TK_KEY_ESCAPE
    *
    */
-  KEY_ESCAPE = TK_KEY_ESCAPE(),
+ KEY_ESCAPE = TK_KEY_ESCAPE(),
 
   /**
    * TK_KEY_BACKSPACE
    *
    */
-  KEY_BACKSPACE = TK_KEY_BACKSPACE(),
+ KEY_BACKSPACE = TK_KEY_BACKSPACE(),
 
   /**
    * TK_KEY_TAB
    *
    */
-  KEY_TAB = TK_KEY_TAB(),
+ KEY_TAB = TK_KEY_TAB(),
 
   /**
    * TK_KEY_SPACE
    *
    */
-  KEY_SPACE = TK_KEY_SPACE(),
+ KEY_SPACE = TK_KEY_SPACE(),
 
   /**
    * TK_KEY_EXCLAIM
    *
    */
-  KEY_EXCLAIM = TK_KEY_EXCLAIM(),
+ KEY_EXCLAIM = TK_KEY_EXCLAIM(),
 
   /**
    * TK_KEY_QUOTEDBL
    *
    */
-  KEY_QUOTEDBL = TK_KEY_QUOTEDBL(),
+ KEY_QUOTEDBL = TK_KEY_QUOTEDBL(),
 
   /**
    * TK_KEY_HASH
    *
    */
-  KEY_HASH = TK_KEY_HASH(),
+ KEY_HASH = TK_KEY_HASH(),
 
   /**
    * TK_KEY_PERCENT
    *
    */
-  KEY_PERCENT = TK_KEY_PERCENT(),
+ KEY_PERCENT = TK_KEY_PERCENT(),
 
   /**
    * TK_KEY_DOLLAR
    *
    */
-  KEY_DOLLAR = TK_KEY_DOLLAR(),
+ KEY_DOLLAR = TK_KEY_DOLLAR(),
 
   /**
    * TK_KEY_AMPERSAND
    *
    */
-  KEY_AMPERSAND = TK_KEY_AMPERSAND(),
+ KEY_AMPERSAND = TK_KEY_AMPERSAND(),
 
   /**
    * TK_KEY_QUOTE
    *
    */
-  KEY_QUOTE = TK_KEY_QUOTE(),
+ KEY_QUOTE = TK_KEY_QUOTE(),
 
   /**
    * TK_KEY_LEFTPAREN
    *
    */
-  KEY_LEFTPAREN = TK_KEY_LEFTPAREN(),
+ KEY_LEFTPAREN = TK_KEY_LEFTPAREN(),
 
   /**
    * TK_KEY_RIGHTPAREN
    *
    */
-  KEY_RIGHTPAREN = TK_KEY_RIGHTPAREN(),
+ KEY_RIGHTPAREN = TK_KEY_RIGHTPAREN(),
 
   /**
    * TK_KEY_ASTERISK
    *
    */
-  KEY_ASTERISK = TK_KEY_ASTERISK(),
+ KEY_ASTERISK = TK_KEY_ASTERISK(),
 
   /**
    * TK_KEY_PLUS
    *
    */
-  KEY_PLUS = TK_KEY_PLUS(),
+ KEY_PLUS = TK_KEY_PLUS(),
 
   /**
    * TK_KEY_COMMA
    *
    */
-  KEY_COMMA = TK_KEY_COMMA(),
+ KEY_COMMA = TK_KEY_COMMA(),
 
   /**
    * TK_KEY_MINUS
    *
    */
-  KEY_MINUS = TK_KEY_MINUS(),
+ KEY_MINUS = TK_KEY_MINUS(),
 
   /**
    * TK_KEY_PERIOD
    *
    */
-  KEY_PERIOD = TK_KEY_PERIOD(),
+ KEY_PERIOD = TK_KEY_PERIOD(),
 
   /**
    * TK_KEY_SLASH
    *
    */
-  KEY_SLASH = TK_KEY_SLASH(),
+ KEY_SLASH = TK_KEY_SLASH(),
 
   /**
    * TK_KEY_0
    *
    */
-  KEY_0 = TK_KEY_0(),
+ KEY_0 = TK_KEY_0(),
 
   /**
    * TK_KEY_1
    *
    */
-  KEY_1 = TK_KEY_1(),
+ KEY_1 = TK_KEY_1(),
 
   /**
    * TK_KEY_2
    *
    */
-  KEY_2 = TK_KEY_2(),
+ KEY_2 = TK_KEY_2(),
 
   /**
    * TK_KEY_3
    *
    */
-  KEY_3 = TK_KEY_3(),
+ KEY_3 = TK_KEY_3(),
 
   /**
    * TK_KEY_4
    *
    */
-  KEY_4 = TK_KEY_4(),
+ KEY_4 = TK_KEY_4(),
 
   /**
    * TK_KEY_5
    *
    */
-  KEY_5 = TK_KEY_5(),
+ KEY_5 = TK_KEY_5(),
 
   /**
    * TK_KEY_6
    *
    */
-  KEY_6 = TK_KEY_6(),
+ KEY_6 = TK_KEY_6(),
 
   /**
    * TK_KEY_7
    *
    */
-  KEY_7 = TK_KEY_7(),
+ KEY_7 = TK_KEY_7(),
 
   /**
    * TK_KEY_8
    *
    */
-  KEY_8 = TK_KEY_8(),
+ KEY_8 = TK_KEY_8(),
 
   /**
    * TK_KEY_9
    *
    */
-  KEY_9 = TK_KEY_9(),
+ KEY_9 = TK_KEY_9(),
 
   /**
    * TK_KEY_COLON
    *
    */
-  KEY_COLON = TK_KEY_COLON(),
+ KEY_COLON = TK_KEY_COLON(),
 
   /**
    * TK_KEY_SEMICOLON
    *
    */
-  KEY_SEMICOLON = TK_KEY_SEMICOLON(),
+ KEY_SEMICOLON = TK_KEY_SEMICOLON(),
 
   /**
    * TK_KEY_LESS
    *
    */
-  KEY_LESS = TK_KEY_LESS(),
+ KEY_LESS = TK_KEY_LESS(),
 
   /**
    * TK_KEY_EQUAL
    *
    */
-  KEY_EQUAL = TK_KEY_EQUAL(),
+ KEY_EQUAL = TK_KEY_EQUAL(),
 
   /**
    * TK_KEY_GREATER
    *
    */
-  KEY_GREATER = TK_KEY_GREATER(),
+ KEY_GREATER = TK_KEY_GREATER(),
 
   /**
    * TK_KEY_QUESTION
    *
    */
-  KEY_QUESTION = TK_KEY_QUESTION(),
+ KEY_QUESTION = TK_KEY_QUESTION(),
 
   /**
    * TK_KEY_AT
    *
    */
-  KEY_AT = TK_KEY_AT(),
+ KEY_AT = TK_KEY_AT(),
 
   /**
    * TK_KEY_LEFTBRACKET
    *
    */
-  KEY_LEFTBRACKET = TK_KEY_LEFTBRACKET(),
+ KEY_LEFTBRACKET = TK_KEY_LEFTBRACKET(),
 
   /**
    * TK_KEY_BACKSLASH
    *
    */
-  KEY_BACKSLASH = TK_KEY_BACKSLASH(),
+ KEY_BACKSLASH = TK_KEY_BACKSLASH(),
 
   /**
    * TK_KEY_RIGHTBRACKET
    *
    */
-  KEY_RIGHTBRACKET = TK_KEY_RIGHTBRACKET(),
+ KEY_RIGHTBRACKET = TK_KEY_RIGHTBRACKET(),
 
   /**
    * TK_KEY_CARET
    *
    */
-  KEY_CARET = TK_KEY_CARET(),
+ KEY_CARET = TK_KEY_CARET(),
 
   /**
    * TK_KEY_UNDERSCORE
    *
    */
-  KEY_UNDERSCORE = TK_KEY_UNDERSCORE(),
+ KEY_UNDERSCORE = TK_KEY_UNDERSCORE(),
 
   /**
    * TK_KEY_BACKQUOTE
    *
    */
-  KEY_BACKQUOTE = TK_KEY_BACKQUOTE(),
+ KEY_BACKQUOTE = TK_KEY_BACKQUOTE(),
 
   /**
    * TK_KEY_a
    *
    */
-  KEY_a = TK_KEY_a(),
+ KEY_a = TK_KEY_a(),
 
   /**
    * TK_KEY_b
    *
    */
-  KEY_b = TK_KEY_b(),
+ KEY_b = TK_KEY_b(),
 
   /**
    * TK_KEY_c
    *
    */
-  KEY_c = TK_KEY_c(),
+ KEY_c = TK_KEY_c(),
 
   /**
    * TK_KEY_d
    *
    */
-  KEY_d = TK_KEY_d(),
+ KEY_d = TK_KEY_d(),
 
   /**
    * TK_KEY_e
    *
    */
-  KEY_e = TK_KEY_e(),
+ KEY_e = TK_KEY_e(),
 
   /**
    * TK_KEY_f
    *
    */
-  KEY_f = TK_KEY_f(),
+ KEY_f = TK_KEY_f(),
 
   /**
    * TK_KEY_g
    *
    */
-  KEY_g = TK_KEY_g(),
+ KEY_g = TK_KEY_g(),
 
   /**
    * TK_KEY_h
    *
    */
-  KEY_h = TK_KEY_h(),
+ KEY_h = TK_KEY_h(),
 
   /**
    * TK_KEY_i
    *
    */
-  KEY_i = TK_KEY_i(),
+ KEY_i = TK_KEY_i(),
 
   /**
    * TK_KEY_j
    *
    */
-  KEY_j = TK_KEY_j(),
+ KEY_j = TK_KEY_j(),
 
   /**
    * TK_KEY_k
    *
    */
-  KEY_k = TK_KEY_k(),
+ KEY_k = TK_KEY_k(),
 
   /**
    * TK_KEY_l
    *
    */
-  KEY_l = TK_KEY_l(),
+ KEY_l = TK_KEY_l(),
 
   /**
    * TK_KEY_m
    *
    */
-  KEY_m = TK_KEY_m(),
+ KEY_m = TK_KEY_m(),
 
   /**
    * TK_KEY_n
    *
    */
-  KEY_n = TK_KEY_n(),
+ KEY_n = TK_KEY_n(),
 
   /**
    * TK_KEY_o
    *
    */
-  KEY_o = TK_KEY_o(),
+ KEY_o = TK_KEY_o(),
 
   /**
    * TK_KEY_p
    *
    */
-  KEY_p = TK_KEY_p(),
+ KEY_p = TK_KEY_p(),
 
   /**
    * TK_KEY_q
    *
    */
-  KEY_q = TK_KEY_q(),
+ KEY_q = TK_KEY_q(),
 
   /**
    * TK_KEY_r
    *
    */
-  KEY_r = TK_KEY_r(),
+ KEY_r = TK_KEY_r(),
 
   /**
    * TK_KEY_s
    *
    */
-  KEY_s = TK_KEY_s(),
+ KEY_s = TK_KEY_s(),
 
   /**
    * TK_KEY_t
    *
    */
-  KEY_t = TK_KEY_t(),
+ KEY_t = TK_KEY_t(),
 
   /**
    * TK_KEY_u
    *
    */
-  KEY_u = TK_KEY_u(),
+ KEY_u = TK_KEY_u(),
 
   /**
    * TK_KEY_v
    *
    */
-  KEY_v = TK_KEY_v(),
+ KEY_v = TK_KEY_v(),
 
   /**
    * TK_KEY_w
    *
    */
-  KEY_w = TK_KEY_w(),
+ KEY_w = TK_KEY_w(),
 
   /**
    * TK_KEY_x
    *
    */
-  KEY_x = TK_KEY_x(),
+ KEY_x = TK_KEY_x(),
 
   /**
    * TK_KEY_y
    *
    */
-  KEY_y = TK_KEY_y(),
+ KEY_y = TK_KEY_y(),
 
   /**
    * TK_KEY_z
    *
    */
-  KEY_z = TK_KEY_z(),
+ KEY_z = TK_KEY_z(),
 
   /**
    * TK_KEY_A
    *
    */
-  KEY_A = TK_KEY_A(),
+ KEY_A = TK_KEY_A(),
 
   /**
    * TK_KEY_B
    *
    */
-  KEY_B = TK_KEY_B(),
+ KEY_B = TK_KEY_B(),
 
   /**
    * TK_KEY_C
    *
    */
-  KEY_C = TK_KEY_C(),
+ KEY_C = TK_KEY_C(),
 
   /**
    * TK_KEY_D
    *
    */
-  KEY_D = TK_KEY_D(),
+ KEY_D = TK_KEY_D(),
 
   /**
    * TK_KEY_E
    *
    */
-  KEY_E = TK_KEY_E(),
+ KEY_E = TK_KEY_E(),
 
   /**
    * TK_KEY_F
    *
    */
-  KEY_F = TK_KEY_F(),
+ KEY_F = TK_KEY_F(),
 
   /**
    * TK_KEY_G
    *
    */
-  KEY_G = TK_KEY_G(),
+ KEY_G = TK_KEY_G(),
 
   /**
    * TK_KEY_H
    *
    */
-  KEY_H = TK_KEY_H(),
+ KEY_H = TK_KEY_H(),
 
   /**
    * TK_KEY_I
    *
    */
-  KEY_I = TK_KEY_I(),
+ KEY_I = TK_KEY_I(),
 
   /**
    * TK_KEY_J
    *
    */
-  KEY_J = TK_KEY_J(),
+ KEY_J = TK_KEY_J(),
 
   /**
    * TK_KEY_K
    *
    */
-  KEY_K = TK_KEY_K(),
+ KEY_K = TK_KEY_K(),
 
   /**
    * TK_KEY_L
    *
    */
-  KEY_L = TK_KEY_L(),
+ KEY_L = TK_KEY_L(),
 
   /**
    * TK_KEY_M
    *
    */
-  KEY_M = TK_KEY_M(),
+ KEY_M = TK_KEY_M(),
 
   /**
    * TK_KEY_N
    *
    */
-  KEY_N = TK_KEY_N(),
+ KEY_N = TK_KEY_N(),
 
   /**
    * TK_KEY_O
    *
    */
-  KEY_O = TK_KEY_O(),
+ KEY_O = TK_KEY_O(),
 
   /**
    * TK_KEY_P
    *
    */
-  KEY_P = TK_KEY_P(),
+ KEY_P = TK_KEY_P(),
 
   /**
    * TK_KEY_Q
    *
    */
-  KEY_Q = TK_KEY_Q(),
+ KEY_Q = TK_KEY_Q(),
 
   /**
    * TK_KEY_R
    *
    */
-  KEY_R = TK_KEY_R(),
+ KEY_R = TK_KEY_R(),
 
   /**
    * TK_KEY_S
    *
    */
-  KEY_S = TK_KEY_S(),
+ KEY_S = TK_KEY_S(),
 
   /**
    * TK_KEY_T
    *
    */
-  KEY_T = TK_KEY_T(),
+ KEY_T = TK_KEY_T(),
 
   /**
    * TK_KEY_U
    *
    */
-  KEY_U = TK_KEY_U(),
+ KEY_U = TK_KEY_U(),
 
   /**
    * TK_KEY_V
    *
    */
-  KEY_V = TK_KEY_V(),
+ KEY_V = TK_KEY_V(),
 
   /**
    * TK_KEY_W
    *
    */
-  KEY_W = TK_KEY_W(),
+ KEY_W = TK_KEY_W(),
 
   /**
    * TK_KEY_X
    *
    */
-  KEY_X = TK_KEY_X(),
+ KEY_X = TK_KEY_X(),
 
   /**
    * TK_KEY_Y
    *
    */
-  KEY_Y = TK_KEY_Y(),
+ KEY_Y = TK_KEY_Y(),
 
   /**
    * TK_KEY_Z
    *
    */
-  KEY_Z = TK_KEY_Z(),
+ KEY_Z = TK_KEY_Z(),
 
   /**
    * TK_KEY_DOT
    *
    */
-  KEY_DOT = TK_KEY_DOT(),
+ KEY_DOT = TK_KEY_DOT(),
 
   /**
    * TK_KEY_DELETE
    *
    */
-  KEY_DELETE = TK_KEY_DELETE(),
+ KEY_DELETE = TK_KEY_DELETE(),
 
   /**
    * TK_KEY_LEFTBRACE
    *
    */
-  KEY_LEFTBRACE = TK_KEY_LEFTBRACE(),
+ KEY_LEFTBRACE = TK_KEY_LEFTBRACE(),
 
   /**
    * TK_KEY_RIGHTBRACE
    *
    */
-  KEY_RIGHTBRACE = TK_KEY_RIGHTBRACE(),
+ KEY_RIGHTBRACE = TK_KEY_RIGHTBRACE(),
 
   /**
    * TK_KEY_LSHIFT
    *
    */
-  KEY_LSHIFT = TK_KEY_LSHIFT(),
+ KEY_LSHIFT = TK_KEY_LSHIFT(),
 
   /**
    * TK_KEY_RSHIFT
    *
    */
-  KEY_RSHIFT = TK_KEY_RSHIFT(),
+ KEY_RSHIFT = TK_KEY_RSHIFT(),
 
   /**
    * TK_KEY_LCTRL
    *
    */
-  KEY_LCTRL = TK_KEY_LCTRL(),
+ KEY_LCTRL = TK_KEY_LCTRL(),
 
   /**
    * TK_KEY_RCTRL
    *
    */
-  KEY_RCTRL = TK_KEY_RCTRL(),
+ KEY_RCTRL = TK_KEY_RCTRL(),
 
   /**
    * TK_KEY_LALT
    *
    */
-  KEY_LALT = TK_KEY_LALT(),
+ KEY_LALT = TK_KEY_LALT(),
 
   /**
    * TK_KEY_RALT
    *
    */
-  KEY_RALT = TK_KEY_RALT(),
+ KEY_RALT = TK_KEY_RALT(),
 
   /**
    * TK_KEY_CAPSLOCK
    *
    */
-  KEY_CAPSLOCK = TK_KEY_CAPSLOCK(),
+ KEY_CAPSLOCK = TK_KEY_CAPSLOCK(),
 
   /**
    * TK_KEY_HOME
    *
    */
-  KEY_HOME = TK_KEY_HOME(),
+ KEY_HOME = TK_KEY_HOME(),
 
   /**
    * TK_KEY_END
    *
    */
-  KEY_END = TK_KEY_END(),
+ KEY_END = TK_KEY_END(),
 
   /**
    * TK_KEY_INSERT
    *
    */
-  KEY_INSERT = TK_KEY_INSERT(),
+ KEY_INSERT = TK_KEY_INSERT(),
 
   /**
    * TK_KEY_UP
    *
    */
-  KEY_UP = TK_KEY_UP(),
+ KEY_UP = TK_KEY_UP(),
 
   /**
    * TK_KEY_DOWN
    *
    */
-  KEY_DOWN = TK_KEY_DOWN(),
+ KEY_DOWN = TK_KEY_DOWN(),
 
   /**
    * TK_KEY_LEFT
    *
    */
-  KEY_LEFT = TK_KEY_LEFT(),
+ KEY_LEFT = TK_KEY_LEFT(),
 
   /**
    * TK_KEY_RIGHT
    *
    */
-  KEY_RIGHT = TK_KEY_RIGHT(),
+ KEY_RIGHT = TK_KEY_RIGHT(),
 
   /**
    * TK_KEY_PAGEUP
    *
    */
-  KEY_PAGEUP = TK_KEY_PAGEUP(),
+ KEY_PAGEUP = TK_KEY_PAGEUP(),
 
   /**
    * TK_KEY_PAGEDOWN
    *
    */
-  KEY_PAGEDOWN = TK_KEY_PAGEDOWN(),
+ KEY_PAGEDOWN = TK_KEY_PAGEDOWN(),
 
   /**
    * TK_KEY_F1
    *
    */
-  KEY_F1 = TK_KEY_F1(),
+ KEY_F1 = TK_KEY_F1(),
 
   /**
    * TK_KEY_F2
    *
    */
-  KEY_F2 = TK_KEY_F2(),
+ KEY_F2 = TK_KEY_F2(),
 
   /**
    * TK_KEY_F3
    *
    */
-  KEY_F3 = TK_KEY_F3(),
+ KEY_F3 = TK_KEY_F3(),
 
   /**
    * TK_KEY_F4
    *
    */
-  KEY_F4 = TK_KEY_F4(),
+ KEY_F4 = TK_KEY_F4(),
 
   /**
    * TK_KEY_F5
    *
    */
-  KEY_F5 = TK_KEY_F5(),
+ KEY_F5 = TK_KEY_F5(),
 
   /**
    * TK_KEY_F6
    *
    */
-  KEY_F6 = TK_KEY_F6(),
+ KEY_F6 = TK_KEY_F6(),
 
   /**
    * TK_KEY_F7
    *
    */
-  KEY_F7 = TK_KEY_F7(),
+ KEY_F7 = TK_KEY_F7(),
 
   /**
    * TK_KEY_F8
    *
    */
-  KEY_F8 = TK_KEY_F8(),
+ KEY_F8 = TK_KEY_F8(),
 
   /**
    * TK_KEY_F9
    *
    */
-  KEY_F9 = TK_KEY_F9(),
+ KEY_F9 = TK_KEY_F9(),
 
   /**
    * TK_KEY_F10
    *
    */
-  KEY_F10 = TK_KEY_F10(),
+ KEY_F10 = TK_KEY_F10(),
 
   /**
    * TK_KEY_F11
    *
    */
-  KEY_F11 = TK_KEY_F11(),
+ KEY_F11 = TK_KEY_F11(),
 
   /**
    * TK_KEY_F12
    *
    */
-  KEY_F12 = TK_KEY_F12(),
+ KEY_F12 = TK_KEY_F12(),
 
   /**
    * TK_KEY_MENU
    *
    */
-  KEY_MENU = TK_KEY_MENU(),
+ KEY_MENU = TK_KEY_MENU(),
 
   /**
    * TK_KEY_COMMAND
    *
    */
-  KEY_COMMAND = TK_KEY_COMMAND(),
+ KEY_COMMAND = TK_KEY_COMMAND(),
 
   /**
    * TK_KEY_BACK
    *
    */
-  KEY_BACK = TK_KEY_BACK(),
+ KEY_BACK = TK_KEY_BACK(),
 
   /**
    * TK_KEY_CANCEL
    *
    */
-  KEY_CANCEL = TK_KEY_CANCEL(),
+ KEY_CANCEL = TK_KEY_CANCEL(),
 };
 
 
@@ -4731,11 +4733,11 @@ enum TKeyCode {
  * 本地化信息。提供字符串翻译数据管理，当前语言改变的事件通知等等。
  *
  */
-class TLocaleInfo {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TLocaleInfo { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
@@ -4744,9 +4746,9 @@ class TLocaleInfo {
    *
    * @returns 返回locale_info对象。
    */
-  static instance(): TLocaleInfo {
+ static instance() : TLocaleInfo  {
     return new TLocaleInfo(locale_info());
-  }
+ }
 
 
   /**
@@ -4756,9 +4758,9 @@ class TLocaleInfo {
    *
    * @returns 返回翻译之后的字符串。
    */
-  tr(text: string): string {
+ tr(text : string) : string  {
     return locale_info_tr(this != null ? (this.nativeObj || this) : null, text);
-  }
+ }
 
 
   /**
@@ -4769,9 +4771,9 @@ class TLocaleInfo {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  change(language: string, country: string): TRet {
+ change(language : string, country : string) : TRet  {
     return locale_info_change(this != null ? (this.nativeObj || this) : null, language, country);
-  }
+ }
 
 
   /**
@@ -4781,9 +4783,9 @@ class TLocaleInfo {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  off(id: number): TRet {
+ off(id : number) : TRet  {
     return locale_info_off(this != null ? (this.nativeObj || this) : null, id);
-  }
+ }
 
 };
 /**
@@ -4796,205 +4798,205 @@ enum TStyleId {
    * 背景颜色。
    *
    */
-  _ID_BG_COLOR = STYLE_ID_BG_COLOR(),
+ _ID_BG_COLOR = STYLE_ID_BG_COLOR(),
 
   /**
    * 前景颜色。
    *
    */
-  _ID_FG_COLOR = STYLE_ID_FG_COLOR(),
+ _ID_FG_COLOR = STYLE_ID_FG_COLOR(),
 
   /**
    * 蒙版颜色。
    *
    */
-  _ID_MASK_COLOR = STYLE_ID_MASK_COLOR(),
+ _ID_MASK_COLOR = STYLE_ID_MASK_COLOR(),
 
   /**
    * 字体名称。
    *
    */
-  _ID_FONT_NAME = STYLE_ID_FONT_NAME(),
+ _ID_FONT_NAME = STYLE_ID_FONT_NAME(),
 
   /**
    * 字体大小。
    *
    */
-  _ID_FONT_SIZE = STYLE_ID_FONT_SIZE(),
+ _ID_FONT_SIZE = STYLE_ID_FONT_SIZE(),
 
   /**
    * 字体风格(粗体、斜体等)。
    *
    */
-  _ID_FONT_STYLE = STYLE_ID_FONT_STYLE(),
+ _ID_FONT_STYLE = STYLE_ID_FONT_STYLE(),
 
   /**
    * 文本颜色。
    *
    */
-  _ID_TEXT_COLOR = STYLE_ID_TEXT_COLOR(),
+ _ID_TEXT_COLOR = STYLE_ID_TEXT_COLOR(),
 
   /**
    * 提示文本颜色。
    *
    */
-  _ID_TIPS_TEXT_COLOR = STYLE_ID_TIPS_TEXT_COLOR(),
+ _ID_TIPS_TEXT_COLOR = STYLE_ID_TIPS_TEXT_COLOR(),
 
   /**
    * 文本水平对齐的方式。
    *
    */
-  _ID_TEXT_ALIGN_H = STYLE_ID_TEXT_ALIGN_H(),
+ _ID_TEXT_ALIGN_H = STYLE_ID_TEXT_ALIGN_H(),
 
   /**
    * 文本垂直对齐的方式。
    *
    */
-  _ID_TEXT_ALIGN_V = STYLE_ID_TEXT_ALIGN_V(),
+ _ID_TEXT_ALIGN_V = STYLE_ID_TEXT_ALIGN_V(),
 
   /**
    * 边框颜色。
    *
    */
-  _ID_BORDER_COLOR = STYLE_ID_BORDER_COLOR(),
+ _ID_BORDER_COLOR = STYLE_ID_BORDER_COLOR(),
 
   /**
    * 边框线宽。
    *
    */
-  _ID_BORDER_WIDTH = STYLE_ID_BORDER_WIDTH(),
+ _ID_BORDER_WIDTH = STYLE_ID_BORDER_WIDTH(),
 
   /**
    * 边框类型。
    *
    */
-  _ID_BORDER = STYLE_ID_BORDER(),
+ _ID_BORDER = STYLE_ID_BORDER(),
 
   /**
    * 图片的名称。
    *
    */
-  _ID_BG_IMAGE = STYLE_ID_BG_IMAGE(),
+ _ID_BG_IMAGE = STYLE_ID_BG_IMAGE(),
 
   /**
    * 图片的显示方式。
    *
    */
-  _ID_BG_IMAGE_DRAW_TYPE = STYLE_ID_BG_IMAGE_DRAW_TYPE(),
+ _ID_BG_IMAGE_DRAW_TYPE = STYLE_ID_BG_IMAGE_DRAW_TYPE(),
 
   /**
    * 图标的名称。
    *
    */
-  _ID_ICON = STYLE_ID_ICON(),
+ _ID_ICON = STYLE_ID_ICON(),
 
   /**
    * 图片的名称。
    *
    */
-  _ID_FG_IMAGE = STYLE_ID_FG_IMAGE(),
+ _ID_FG_IMAGE = STYLE_ID_FG_IMAGE(),
 
   /**
    * 图片的显示方式。
    *
    */
-  _ID_FG_IMAGE_DRAW_TYPE = STYLE_ID_FG_IMAGE_DRAW_TYPE(),
+ _ID_FG_IMAGE_DRAW_TYPE = STYLE_ID_FG_IMAGE_DRAW_TYPE(),
 
   /**
    * 间距。
    *
    */
-  _ID_SPACER = STYLE_ID_SPACER(),
+ _ID_SPACER = STYLE_ID_SPACER(),
 
   /**
    * 边距。
    *
    */
-  _ID_MARGIN = STYLE_ID_MARGIN(),
+ _ID_MARGIN = STYLE_ID_MARGIN(),
 
   /**
    * 左边距。
    *
    */
-  _ID_MARGIN_LEFT = STYLE_ID_MARGIN_LEFT(),
+ _ID_MARGIN_LEFT = STYLE_ID_MARGIN_LEFT(),
 
   /**
    * 右边距。
    *
    */
-  _ID_MARGIN_RIGHT = STYLE_ID_MARGIN_RIGHT(),
+ _ID_MARGIN_RIGHT = STYLE_ID_MARGIN_RIGHT(),
 
   /**
    * 顶边距。
    *
    */
-  _ID_MARGIN_TOP = STYLE_ID_MARGIN_TOP(),
+ _ID_MARGIN_TOP = STYLE_ID_MARGIN_TOP(),
 
   /**
    * 底边距。
    *
    */
-  _ID_MARGIN_BOTTOM = STYLE_ID_MARGIN_BOTTOM(),
+ _ID_MARGIN_BOTTOM = STYLE_ID_MARGIN_BOTTOM(),
 
   /**
    * 图标的位置。
    *
    */
-  _ID_ICON_AT = STYLE_ID_ICON_AT(),
+ _ID_ICON_AT = STYLE_ID_ICON_AT(),
 
   /**
    * Active图标的名称。
    *
    */
-  _ID_ACTIVE_ICON = STYLE_ID_ACTIVE_ICON(),
+ _ID_ACTIVE_ICON = STYLE_ID_ACTIVE_ICON(),
 
   /**
    * X方向的偏移，方便实现按下的效果。
    *
    */
-  _ID_X_OFFSET = STYLE_ID_X_OFFSET(),
+ _ID_X_OFFSET = STYLE_ID_X_OFFSET(),
 
   /**
    * Y方向的偏移，方便实现按下的效果。
    *
    */
-  _ID_Y_OFFSET = STYLE_ID_Y_OFFSET(),
+ _ID_Y_OFFSET = STYLE_ID_Y_OFFSET(),
 
   /**
    * 编辑器中选中区域的背景颜色。
    *
    */
-  _ID_SELECTED_BG_COLOR = STYLE_ID_SELECTED_BG_COLOR(),
+ _ID_SELECTED_BG_COLOR = STYLE_ID_SELECTED_BG_COLOR(),
 
   /**
    * 编辑器中选中区域的前景颜色。
    *
    */
-  _ID_SELECTED_FG_COLOR = STYLE_ID_SELECTED_FG_COLOR(),
+ _ID_SELECTED_FG_COLOR = STYLE_ID_SELECTED_FG_COLOR(),
 
   /**
    * 编辑器中选中区域的文本颜色。
    *
    */
-  _ID_SELECTED_TEXT_COLOR = STYLE_ID_SELECTED_TEXT_COLOR(),
+ _ID_SELECTED_TEXT_COLOR = STYLE_ID_SELECTED_TEXT_COLOR(),
 
   /**
    * 圆角半径(仅在WITH_VGCANVAS定义时生效)。
    *
    */
-  _ID_ROUND_RADIUS = STYLE_ID_ROUND_RADIUS(),
+ _ID_ROUND_RADIUS = STYLE_ID_ROUND_RADIUS(),
 
   /**
    * 子控件布局参数。
    *
    */
-  _ID_CHILDREN_LAYOUT = STYLE_ID_CHILDREN_LAYOUT(),
+ _ID_CHILDREN_LAYOUT = STYLE_ID_CHILDREN_LAYOUT(),
 
   /**
    * 控件布局参数。
    *
    */
-  _ID_SELF_LAYOUT = STYLE_ID_SELF_LAYOUT(),
+ _ID_SELF_LAYOUT = STYLE_ID_SELF_LAYOUT(),
 };
 
 
@@ -5007,11 +5009,11 @@ enum TStyleId {
  *属性名称的请参考[style\_id](style_id_t.md)
  *
  */
-class TStyle {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TStyle { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
@@ -5021,9 +5023,9 @@ class TStyle {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  notifyWidgetStateChanged(widget: TWidget): TRet {
+ notifyWidgetStateChanged(widget : TWidget) : TRet  {
     return style_notify_widget_state_changed(this != null ? (this.nativeObj || this) : null, widget != null ? (widget.nativeObj || widget) : null);
-  }
+ }
 
 
   /**
@@ -5032,9 +5034,9 @@ class TStyle {
    *
    * @returns 返回是否有效。
    */
-  isValid(): boolean {
+ isValid() : boolean  {
     return style_is_valid(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -5045,9 +5047,9 @@ class TStyle {
    *
    * @returns 返回整数格式的值。
    */
-  getInt(name: string, defval: number): number {
+ getInt(name : string, defval : number) : number  {
     return style_get_int(this != null ? (this.nativeObj || this) : null, name, defval);
-  }
+ }
 
 
   /**
@@ -5058,9 +5060,9 @@ class TStyle {
    *
    * @returns 返回字符串格式的值。
    */
-  getStr(name: string, defval: string): string {
+ getStr(name : string, defval : string) : string  {
     return style_get_str(this != null ? (this.nativeObj || this) : null, name, defval);
-  }
+ }
 
 
   /**
@@ -5072,9 +5074,9 @@ class TStyle {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  set(state: string, name: string, value: TValue): TRet {
+ set(state : string, name : string, value : TValue) : TRet  {
     return style_set(this != null ? (this.nativeObj || this) : null, state, name, value != null ? (value.nativeObj || value) : null);
-  }
+ }
 
 
   /**
@@ -5083,9 +5085,9 @@ class TStyle {
    *
    * @returns 返回TRUE表示是，否则表示不是。
    */
-  isMutable(): boolean {
+ isMutable() : boolean  {
     return style_is_mutable(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 };
 /**
@@ -5094,11 +5096,11 @@ class TStyle {
  *负责管理缺省的主题数据，方便实现style\_const。
  *
  */
-class TTheme {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TTheme { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
@@ -5107,9 +5109,9 @@ class TTheme {
    *
    * @returns 返回主题对象。
    */
-  static instance(): TTheme {
+ static instance() : TTheme  {
     return new TTheme(theme());
-  }
+ }
 
 };
 /**
@@ -5122,7 +5124,7 @@ class TTheme {
  *> 在非GUI线程请用timer\_queue。
  *
  */
-class TTimer {
+class TTimer { 
 
   /**
    * 增加一个timer。
@@ -5133,9 +5135,9 @@ class TTimer {
    *
    * @returns 返回timer的ID，TK_INVALID_ID表示失败。
    */
-  static add(on_timer: Function, ctx: any, duration: number): number {
+ static add(on_timer : Function, ctx : any, duration : number) : number  {
     return timer_add(on_timer, ctx, duration);
-  }
+ }
 
 
   /**
@@ -5145,9 +5147,9 @@ class TTimer {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  static remove(timer_id: number): TRet {
+ static remove(timer_id : number) : TRet  {
     return timer_remove(timer_id);
-  }
+ }
 
 
   /**
@@ -5157,9 +5159,9 @@ class TTimer {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  static reset(timer_id: number): TRet {
+ static reset(timer_id : number) : TRet  {
     return timer_reset(timer_id);
-  }
+ }
 
 
   /**
@@ -5170,9 +5172,9 @@ class TTimer {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  static modify(timer_id: number, duration: number): TRet {
+ static modify(timer_id : number, duration : number) : TRet  {
     return timer_modify(timer_id, duration);
-  }
+ }
 
 };
 /**
@@ -5185,25 +5187,25 @@ enum TAlignV {
    * 无效对齐方式。
    *
    */
-  NONE = ALIGN_V_NONE(),
+ NONE = ALIGN_V_NONE(),
 
   /**
    * 居中对齐。
    *
    */
-  MIDDLE = ALIGN_V_MIDDLE(),
+ MIDDLE = ALIGN_V_MIDDLE(),
 
   /**
    * 顶部对齐。
    *
    */
-  TOP = ALIGN_V_TOP(),
+ TOP = ALIGN_V_TOP(),
 
   /**
    * 底部对齐。
    *
    */
-  BOTTOM = ALIGN_V_BOTTOM(),
+ BOTTOM = ALIGN_V_BOTTOM(),
 };
 
 
@@ -5217,25 +5219,25 @@ enum TAlignH {
    * 无效对齐方式。
    *
    */
-  NONE = ALIGN_H_NONE(),
+ NONE = ALIGN_H_NONE(),
 
   /**
    * 居中对齐。
    *
    */
-  CENTER = ALIGN_H_CENTER(),
+ CENTER = ALIGN_H_CENTER(),
 
   /**
    * 左边对齐。
    *
    */
-  LEFT = ALIGN_H_LEFT(),
+ LEFT = ALIGN_H_LEFT(),
 
   /**
    * 右边对齐。
    *
    */
-  RIGHT = ALIGN_H_RIGHT(),
+ RIGHT = ALIGN_H_RIGHT(),
 };
 
 
@@ -5249,19 +5251,19 @@ enum TAppType {
    * 嵌入式或移动APP
    *
    */
-  MOBILE = APP_MOBILE(),
+ MOBILE = APP_MOBILE(),
 
   /**
    * 模拟器。
    *
    */
-  SIMULATOR = APP_SIMULATOR(),
+ SIMULATOR = APP_SIMULATOR(),
 
   /**
    * 桌面应用程序。
    *
    */
-  DESKTOP = APP_DESKTOP(),
+ DESKTOP = APP_DESKTOP(),
 };
 
 
@@ -5275,67 +5277,67 @@ enum TBitmapFormat {
    * 无效格式。
    *
    */
-  NONE = BITMAP_FMT_NONE(),
+ NONE = BITMAP_FMT_NONE(),
 
   /**
    * 一个像素占用4个字节，RGBA占一个字节，按内存地址递增。
    *
    */
-  RGBA8888 = BITMAP_FMT_RGBA8888(),
+ RGBA8888 = BITMAP_FMT_RGBA8888(),
 
   /**
    * 一个像素占用4个字节，ABGR占一个字节，按内存地址递增。
    *
    */
-  ABGR8888 = BITMAP_FMT_ABGR8888(),
+ ABGR8888 = BITMAP_FMT_ABGR8888(),
 
   /**
    * 一个像素占用4个字节，BGRA占一个字节，按内存地址递增。
    *
    */
-  BGRA8888 = BITMAP_FMT_BGRA8888(),
+ BGRA8888 = BITMAP_FMT_BGRA8888(),
 
   /**
    * 一个像素占用4个字节，ARGB占一个字节，按内存地址递增。
    *
    */
-  ARGB8888 = BITMAP_FMT_ARGB8888(),
+ ARGB8888 = BITMAP_FMT_ARGB8888(),
 
   /**
    * 一个像素占用2个字节，RGB分别占用5,6,5位, 按内存地址递增。
    *
    */
-  RGB565 = BITMAP_FMT_RGB565(),
+ RGB565 = BITMAP_FMT_RGB565(),
 
   /**
    * 一个像素占用2个字节，BGR分别占用5,6,5位, 按内存地址递增。
    *
    */
-  BGR565 = BITMAP_FMT_BGR565(),
+ BGR565 = BITMAP_FMT_BGR565(),
 
   /**
    * 一个像素占用3个字节，RGB占一个字节，按内存地址递增。
    *
    */
-  RGB888 = BITMAP_FMT_RGB888(),
+ RGB888 = BITMAP_FMT_RGB888(),
 
   /**
    * 一个像素占用3个字节，RGB占一个字节，按内存地址递增。
    *
    */
-  BGR888 = BITMAP_FMT_BGR888(),
+ BGR888 = BITMAP_FMT_BGR888(),
 
   /**
    * 一个像素占用1个字节。
    *
    */
-  GRAY = BITMAP_FMT_GRAY(),
+ GRAY = BITMAP_FMT_GRAY(),
 
   /**
    * 一个像素占用1比特。
    *
    */
-  MONO = BITMAP_FMT_MONO(),
+ MONO = BITMAP_FMT_MONO(),
 };
 
 
@@ -5349,37 +5351,37 @@ enum TBitmapFlag {
    * 无特殊标志。
    *
    */
-  NONE = BITMAP_FLAG_NONE(),
+ NONE = BITMAP_FLAG_NONE(),
 
   /**
    * 不透明图片。
    *
    */
-  OPAQUE = BITMAP_FLAG_OPAQUE(),
+ OPAQUE = BITMAP_FLAG_OPAQUE(),
 
   /**
    * 图片内容不会变化。
    *
    */
-  IMMUTABLE = BITMAP_FLAG_IMMUTABLE(),
+ IMMUTABLE = BITMAP_FLAG_IMMUTABLE(),
 
   /**
    * OpenGL Texture, bitmap的id是有效的texture id。
    *
    */
-  TEXTURE = BITMAP_FLAG_TEXTURE(),
+ TEXTURE = BITMAP_FLAG_TEXTURE(),
 
   /**
    * 如果是MUTABLE的图片，更新时需要设置此标志，底层可能会做特殊处理，比如更新图片到GPU。
    *
    */
-  CHANGED = BITMAP_FLAG_CHANGED(),
+ CHANGED = BITMAP_FLAG_CHANGED(),
 
   /**
    * 预乘alpha。
    *
    */
-  PREMULTI_ALPHA = BITMAP_FLAG_PREMULTI_ALPHA(),
+ PREMULTI_ALPHA = BITMAP_FLAG_PREMULTI_ALPHA(),
 };
 
 
@@ -5406,11 +5408,11 @@ enum TBitmapFlag {
  *>请参考：https://www.w3schools.com/tags/ref_canvas.asp
  *
  */
-class TVgcanvas {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TVgcanvas { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
@@ -5420,9 +5422,9 @@ class TVgcanvas {
    *
    * @returns vgcanvas对象。
    */
-  static cast(vg: TVgcanvas): TVgcanvas {
+ static cast(vg : TVgcanvas) : TVgcanvas  {
     return new TVgcanvas(vgcanvas_cast(vg != null ? (vg.nativeObj || vg) : null));
-  }
+ }
 
 
   /**
@@ -5431,9 +5433,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  flush(): TRet {
+ flush() : TRet  {
     return vgcanvas_flush(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -5442,9 +5444,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  beginPath(): TRet {
+ beginPath() : TRet  {
     return vgcanvas_begin_path(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -5455,9 +5457,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  moveTo(x: number, y: number): TRet {
+ moveTo(x : number, y : number) : TRet  {
     return vgcanvas_move_to(this != null ? (this.nativeObj || this) : null, x, y);
-  }
+ }
 
 
   /**
@@ -5468,9 +5470,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  lineTo(x: number, y: number): TRet {
+ lineTo(x : number, y : number) : TRet  {
     return vgcanvas_line_to(this != null ? (this.nativeObj || this) : null, x, y);
-  }
+ }
 
 
   /**
@@ -5483,9 +5485,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  quadTo(cpx: number, cpy: number, x: number, y: number): TRet {
+ quadTo(cpx : number, cpy : number, x : number, y : number) : TRet  {
     return vgcanvas_quad_to(this != null ? (this.nativeObj || this) : null, cpx, cpy, x, y);
-  }
+ }
 
 
   /**
@@ -5500,9 +5502,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  bezierTo(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number, y: number): TRet {
+ bezierTo(cp1x : number, cp1y : number, cp2x : number, cp2y : number, x : number, y : number) : TRet  {
     return vgcanvas_bezier_to(this != null ? (this.nativeObj || this) : null, cp1x, cp1y, cp2x, cp2y, x, y);
-  }
+ }
 
 
   /**
@@ -5516,9 +5518,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  arcTo(x1: number, y1: number, x2: number, y2: number, r: number): TRet {
+ arcTo(x1 : number, y1 : number, x2 : number, y2 : number, r : number) : TRet  {
     return vgcanvas_arc_to(this != null ? (this.nativeObj || this) : null, x1, y1, x2, y2, r);
-  }
+ }
 
 
   /**
@@ -5533,9 +5535,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  arc(x: number, y: number, r: number, start_angle: number, end_angle: number, ccw: boolean): TRet {
+ arc(x : number, y : number, r : number, start_angle : number, end_angle : number, ccw : boolean) : TRet  {
     return vgcanvas_arc(this != null ? (this.nativeObj || this) : null, x, y, r, start_angle, end_angle, ccw);
-  }
+ }
 
 
   /**
@@ -5546,9 +5548,9 @@ class TVgcanvas {
    *
    * @returns 返回TRUE表示在，否则表示不在。
    */
-  isPointInPath(x: number, y: number): boolean {
+ isPointInPath(x : number, y : number) : boolean  {
     return vgcanvas_is_point_in_path(this != null ? (this.nativeObj || this) : null, x, y);
-  }
+ }
 
 
   /**
@@ -5561,9 +5563,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  rect(x: number, y: number, w: number, h: number): TRet {
+ rect(x : number, y : number, w : number, h : number) : TRet  {
     return vgcanvas_rect(this != null ? (this.nativeObj || this) : null, x, y, w, h);
-  }
+ }
 
 
   /**
@@ -5577,9 +5579,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  roundedRect(x: number, y: number, w: number, h: number, r: number): TRet {
+ roundedRect(x : number, y : number, w : number, h : number, r : number) : TRet  {
     return vgcanvas_rounded_rect(this != null ? (this.nativeObj || this) : null, x, y, w, h, r);
-  }
+ }
 
 
   /**
@@ -5592,9 +5594,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  ellipse(x: number, y: number, rx: number, ry: number): TRet {
+ ellipse(x : number, y : number, rx : number, ry : number) : TRet  {
     return vgcanvas_ellipse(this != null ? (this.nativeObj || this) : null, x, y, rx, ry);
-  }
+ }
 
 
   /**
@@ -5605,9 +5607,23 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  closePath(): TRet {
+ closePath() : TRet  {
     return vgcanvas_close_path(this != null ? (this.nativeObj || this) : null);
-  }
+ }
+
+
+  /**
+   * 设置路径填充实心与否。
+   *
+   *>CCW(1)为实心，CW(2)为镂空，设置其他则默认根据非零环绕规则判断(nonzero)。
+   * 
+   * @param dir 填充方法。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ pathWinding(dir : boolean) : TRet  {
+    return vgcanvas_path_winding(this != null ? (this.nativeObj || this) : null, dir);
+ }
 
 
   /**
@@ -5617,9 +5633,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  rotate(rad: number): TRet {
+ rotate(rad : number) : TRet  {
     return vgcanvas_rotate(this != null ? (this.nativeObj || this) : null, rad);
-  }
+ }
 
 
   /**
@@ -5630,9 +5646,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  scale(x: number, y: number): TRet {
+ scale(x : number, y : number) : TRet  {
     return vgcanvas_scale(this != null ? (this.nativeObj || this) : null, x, y);
-  }
+ }
 
 
   /**
@@ -5643,9 +5659,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  translate(x: number, y: number): TRet {
+ translate(x : number, y : number) : TRet  {
     return vgcanvas_translate(this != null ? (this.nativeObj || this) : null, x, y);
-  }
+ }
 
 
   /**
@@ -5660,9 +5676,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  transform(a: number, b: number, c: number, d: number, e: number, f: number): TRet {
+ transform(a : number, b : number, c : number, d : number, e : number, f : number) : TRet  {
     return vgcanvas_transform(this != null ? (this.nativeObj || this) : null, a, b, c, d, e, f);
-  }
+ }
 
 
   /**
@@ -5677,9 +5693,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setTransform(a: number, b: number, c: number, d: number, e: number, f: number): TRet {
+ setTransform(a : number, b : number, c : number, d : number, e : number, f : number) : TRet  {
     return vgcanvas_set_transform(this != null ? (this.nativeObj || this) : null, a, b, c, d, e, f);
-  }
+ }
 
 
   /**
@@ -5692,9 +5708,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  clipRect(x: number, y: number, w: number, h: number): TRet {
+ clipRect(x : number, y : number, w : number, h : number) : TRet  {
     return vgcanvas_clip_rect(this != null ? (this.nativeObj || this) : null, x, y, w, h);
-  }
+ }
 
 
   /**
@@ -5703,9 +5719,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  fill(): TRet {
+ fill() : TRet  {
     return vgcanvas_fill(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -5714,9 +5730,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  stroke(): TRet {
+ stroke() : TRet  {
     return vgcanvas_stroke(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -5728,9 +5744,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  paint(stroke: boolean, img: TBitmap): TRet {
+ paint(stroke : boolean, img : TBitmap) : TRet  {
     return vgcanvas_paint(this != null ? (this.nativeObj || this) : null, stroke, img != null ? (img.nativeObj || img) : null);
-  }
+ }
 
 
   /**
@@ -5740,9 +5756,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setFont(font: string): TRet {
+ setFont(font : string) : TRet  {
     return vgcanvas_set_font(this != null ? (this.nativeObj || this) : null, font);
-  }
+ }
 
 
   /**
@@ -5752,9 +5768,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setFontSize(font: number): TRet {
+ setFontSize(font : number) : TRet  {
     return vgcanvas_set_font_size(this != null ? (this.nativeObj || this) : null, font);
-  }
+ }
 
 
   /**
@@ -5764,9 +5780,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setTextAlign(value: string): TRet {
+ setTextAlign(value : string) : TRet  {
     return vgcanvas_set_text_align(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -5776,9 +5792,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setTextBaseline(value: string): TRet {
+ setTextBaseline(value : string) : TRet  {
     return vgcanvas_set_text_baseline(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -5791,9 +5807,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  fillText(text: string, x: number, y: number, max_width: number): TRet {
+ fillText(text : string, x : number, y : number, max_width : number) : TRet  {
     return vgcanvas_fill_text(this != null ? (this.nativeObj || this) : null, text, x, y, max_width);
-  }
+ }
 
 
   /**
@@ -5803,9 +5819,9 @@ class TVgcanvas {
    *
    * @returns 返回text的宽度。
    */
-  measureText(text: string): number {
+ measureText(text : string) : number  {
     return vgcanvas_measure_text(this != null ? (this.nativeObj || this) : null, text);
-  }
+ }
 
 
   /**
@@ -5823,9 +5839,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  drawImage(img: TBitmap, sx: number, sy: number, sw: number, sh: number, dx: number, dy: number, dw: number, dh: number): TRet {
+ drawImage(img : TBitmap, sx : number, sy : number, sw : number, sh : number, dx : number, dy : number, dw : number, dh : number) : TRet  {
     return vgcanvas_draw_image(this != null ? (this.nativeObj || this) : null, img != null ? (img.nativeObj || img) : null, sx, sy, sw, sh, dx, dy, dw, dh);
-  }
+ }
 
 
   /**
@@ -5845,9 +5861,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  drawIcon(img: TBitmap, sx: number, sy: number, sw: number, sh: number, dx: number, dy: number, dw: number, dh: number): TRet {
+ drawIcon(img : TBitmap, sx : number, sy : number, sw : number, sh : number, dx : number, dy : number, dw : number, dh : number) : TRet  {
     return vgcanvas_draw_icon(this != null ? (this.nativeObj || this) : null, img != null ? (img.nativeObj || img) : null, sx, sy, sw, sh, dx, dy, dw, dh);
-  }
+ }
 
 
   /**
@@ -5857,9 +5873,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setAntialias(value: any): TRet {
+ setAntialias(value : any) : TRet  {
     return vgcanvas_set_antialias(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -5869,9 +5885,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setGlobalAlpha(alpha: number): TRet {
+ setGlobalAlpha(alpha : number) : TRet  {
     return vgcanvas_set_global_alpha(this != null ? (this.nativeObj || this) : null, alpha);
-  }
+ }
 
 
   /**
@@ -5881,9 +5897,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setLineWidth(value: any): TRet {
+ setLineWidth(value : any) : TRet  {
     return vgcanvas_set_line_width(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -5893,9 +5909,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setFillColor(color: string): TRet {
+ setFillColor(color : string) : TRet  {
     return vgcanvas_set_fill_color_str(this != null ? (this.nativeObj || this) : null, color);
-  }
+ }
 
 
   /**
@@ -5905,9 +5921,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setStrokeColor(color: string): TRet {
+ setStrokeColor(color : string) : TRet  {
     return vgcanvas_set_stroke_color_str(this != null ? (this.nativeObj || this) : null, color);
-  }
+ }
 
 
   /**
@@ -5917,9 +5933,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setLineCap(value: string): TRet {
+ setLineCap(value : string) : TRet  {
     return vgcanvas_set_line_cap(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -5929,9 +5945,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setLineJoin(value: string): TRet {
+ setLineJoin(value : string) : TRet  {
     return vgcanvas_set_line_join(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -5941,9 +5957,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setMiterLimit(value: any): TRet {
+ setMiterLimit(value : any) : TRet  {
     return vgcanvas_set_miter_limit(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -5954,9 +5970,9 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  save(): TRet {
+ save() : TRet  {
     return vgcanvas_save(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -5967,80 +5983,80 @@ class TVgcanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  restore(): TRet {
+ restore() : TRet  {
     return vgcanvas_restore(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
    * canvas的宽度
    *
    */
-  get w(): number {
-    return vgcanvas_t_get_prop_w(this.nativeObj);
-  }
+ get w() : number {
+   return vgcanvas_t_get_prop_w(this.nativeObj);
+ }
 
 
   /**
    * canvas的高度
    *
    */
-  get h(): number {
-    return vgcanvas_t_get_prop_h(this.nativeObj);
-  }
+ get h() : number {
+   return vgcanvas_t_get_prop_h(this.nativeObj);
+ }
 
 
   /**
    * 一行占的字节
    *
    */
-  get stride(): number {
-    return vgcanvas_t_get_prop_stride(this.nativeObj);
-  }
+ get stride() : number {
+   return vgcanvas_t_get_prop_stride(this.nativeObj);
+ }
 
 
   /**
    * 显示比例。
    *
    */
-  get ratio(): number {
-    return vgcanvas_t_get_prop_ratio(this.nativeObj);
-  }
+ get ratio() : number {
+   return vgcanvas_t_get_prop_ratio(this.nativeObj);
+ }
 
 
   /**
    * 是否启用反走样功能。
    *
    */
-  get antiAlias(): boolean {
-    return vgcanvas_t_get_prop_anti_alias(this.nativeObj);
-  }
+ get antiAlias() : boolean {
+   return vgcanvas_t_get_prop_anti_alias(this.nativeObj);
+ }
 
 
   /**
    * 线宽。
    *
    */
-  get lineWidth(): number {
-    return vgcanvas_t_get_prop_line_width(this.nativeObj);
-  }
+ get lineWidth() : number {
+   return vgcanvas_t_get_prop_line_width(this.nativeObj);
+ }
 
-  set lineWidth(v: number) {
-    this.setLineWidth(v);
-  }
+ set lineWidth(v : number) {
+   this.setLineWidth(v);
+ }
 
 
   /**
    * 全局alpha。
    *
    */
-  get globalAlpha(): number {
-    return vgcanvas_t_get_prop_global_alpha(this.nativeObj);
-  }
+ get globalAlpha() : number {
+   return vgcanvas_t_get_prop_global_alpha(this.nativeObj);
+ }
 
-  set globalAlpha(v: number) {
-    this.setGlobalAlpha(v);
-  }
+ set globalAlpha(v : number) {
+   this.setGlobalAlpha(v);
+ }
 
 
   /**
@@ -6048,13 +6064,13 @@ class TVgcanvas {
    *@see http://www.w3school.com.cn/tags/canvas_miterlimit.asp
    *
    */
-  get miterLimit(): number {
-    return vgcanvas_t_get_prop_miter_limit(this.nativeObj);
-  }
+ get miterLimit() : number {
+   return vgcanvas_t_get_prop_miter_limit(this.nativeObj);
+ }
 
-  set miterLimit(v: number) {
-    this.setMiterLimit(v);
-  }
+ set miterLimit(v : number) {
+   this.setMiterLimit(v);
+ }
 
 
   /**
@@ -6062,13 +6078,13 @@ class TVgcanvas {
    *@see http://www.w3school.com.cn/tags/canvas_linecap.asp
    *
    */
-  get lineCap(): string {
-    return vgcanvas_t_get_prop_line_cap(this.nativeObj);
-  }
+ get lineCap() : string {
+   return vgcanvas_t_get_prop_line_cap(this.nativeObj);
+ }
 
-  set lineCap(v: string) {
-    this.setLineCap(v);
-  }
+ set lineCap(v : string) {
+   this.setLineCap(v);
+ }
 
 
   /**
@@ -6076,39 +6092,39 @@ class TVgcanvas {
    *@see http://www.w3school.com.cn/tags/canvas_linejoin.asp
    *
    */
-  get lineJoin(): string {
-    return vgcanvas_t_get_prop_line_join(this.nativeObj);
-  }
+ get lineJoin() : string {
+   return vgcanvas_t_get_prop_line_join(this.nativeObj);
+ }
 
-  set lineJoin(v: string) {
-    this.setLineJoin(v);
-  }
+ set lineJoin(v : string) {
+   this.setLineJoin(v);
+ }
 
 
   /**
    * 字体。
    *
    */
-  get font(): string {
-    return vgcanvas_t_get_prop_font(this.nativeObj);
-  }
+ get font() : string {
+   return vgcanvas_t_get_prop_font(this.nativeObj);
+ }
 
-  set font(v: string) {
-    this.setFont(v);
-  }
+ set font(v : string) {
+   this.setFont(v);
+ }
 
 
   /**
    * 字体大小。
    *
    */
-  get fontSize(): number {
-    return vgcanvas_t_get_prop_font_size(this.nativeObj);
-  }
+ get fontSize() : number {
+   return vgcanvas_t_get_prop_font_size(this.nativeObj);
+ }
 
-  set fontSize(v: number) {
-    this.setFontSize(v);
-  }
+ set fontSize(v : number) {
+   this.setFontSize(v);
+ }
 
 
   /**
@@ -6117,13 +6133,13 @@ class TVgcanvas {
    *@see http://www.w3school.com.cn/tags/canvas_textalign.asp
    *
    */
-  get textAlign(): string {
-    return vgcanvas_t_get_prop_text_align(this.nativeObj);
-  }
+ get textAlign() : string {
+   return vgcanvas_t_get_prop_text_align(this.nativeObj);
+ }
 
-  set textAlign(v: string) {
-    this.setTextAlign(v);
-  }
+ set textAlign(v : string) {
+   this.setTextAlign(v);
+ }
 
 
   /**
@@ -6132,13 +6148,13 @@ class TVgcanvas {
    *@see http://www.w3school.com.cn/tags/canvas_textbaseline.asp
    *
    */
-  get textBaseline(): string {
-    return vgcanvas_t_get_prop_text_baseline(this.nativeObj);
-  }
+ get textBaseline() : string {
+   return vgcanvas_t_get_prop_text_baseline(this.nativeObj);
+ }
 
-  set textBaseline(v: string) {
-    this.setTextBaseline(v);
-  }
+ set textBaseline(v : string) {
+   this.setTextBaseline(v);
+ }
 
 };
 /**
@@ -6151,751 +6167,751 @@ enum TWidgetProp {
    * 用于执行某些特殊的命令（比如控制动画的启停），主要是方便MVVM通过属性来控制动画。
    *
    */
-  EXEC = WIDGET_PROP_EXEC(),
+ EXEC = WIDGET_PROP_EXEC(),
 
   /**
    * X坐标。
    *
    */
-  X = WIDGET_PROP_X(),
+ X = WIDGET_PROP_X(),
 
   /**
    * Y坐标。
    *
    */
-  Y = WIDGET_PROP_Y(),
+ Y = WIDGET_PROP_Y(),
 
   /**
    * 宽度。
    *
    */
-  W = WIDGET_PROP_W(),
+ W = WIDGET_PROP_W(),
 
   /**
    * 高度。
    *
    */
-  H = WIDGET_PROP_H(),
+ H = WIDGET_PROP_H(),
 
   /**
    * Canvas。
    *
    */
-  CANVAS = WIDGET_PROP_CANVAS(),
+ CANVAS = WIDGET_PROP_CANVAS(),
 
   /**
    * Canvas。
    *
    */
-  LOCALIZE_OPTIONS = WIDGET_PROP_LOCALIZE_OPTIONS(),
+ LOCALIZE_OPTIONS = WIDGET_PROP_LOCALIZE_OPTIONS(),
 
   /**
    * Native Window。
    *
    */
-  NATIVE_WINDOW = WIDGET_PROP_NATIVE_WINDOW(),
+ NATIVE_WINDOW = WIDGET_PROP_NATIVE_WINDOW(),
 
   /**
    * dialog highlight。
    *
    */
-  HIGHLIGHT = WIDGET_PROP_HIGHLIGHT(),
+ HIGHLIGHT = WIDGET_PROP_HIGHLIGHT(),
 
   /**
    * slider中的bar的的宽度或高度。
    *
    */
-  BAR_SIZE = WIDGET_PROP_BAR_SIZE(),
+ BAR_SIZE = WIDGET_PROP_BAR_SIZE(),
 
   /**
    * 不透明度。
    *
    */
-  OPACITY = WIDGET_PROP_OPACITY(),
+ OPACITY = WIDGET_PROP_OPACITY(),
 
   /**
    * 最小宽度。
    *
    */
-  MIN_W = WIDGET_PROP_MIN_W(),
+ MIN_W = WIDGET_PROP_MIN_W(),
 
   /**
    * 最大宽度。
    *
    */
-  MAX_W = WIDGET_PROP_MAX_W(),
+ MAX_W = WIDGET_PROP_MAX_W(),
 
   /**
    * 子控件布局参数。
    *
    */
-  CHILDREN_LAYOUT = WIDGET_PROP_CHILDREN_LAYOUT(),
+ CHILDREN_LAYOUT = WIDGET_PROP_CHILDREN_LAYOUT(),
 
   /**
    * 子控件布局参数(过时)。
    *
    */
-  LAYOUT = WIDGET_PROP_LAYOUT(),
+ LAYOUT = WIDGET_PROP_LAYOUT(),
 
   /**
    * 控件布局参数。
    *
    */
-  SELF_LAYOUT = WIDGET_PROP_SELF_LAYOUT(),
+ SELF_LAYOUT = WIDGET_PROP_SELF_LAYOUT(),
 
   /**
    * layout宽度。
    *
    */
-  LAYOUT_W = WIDGET_PROP_LAYOUT_W(),
+ LAYOUT_W = WIDGET_PROP_LAYOUT_W(),
 
   /**
    * layout高度。
    *
    */
-  LAYOUT_H = WIDGET_PROP_LAYOUT_H(),
+ LAYOUT_H = WIDGET_PROP_LAYOUT_H(),
 
   /**
    * 虚拟宽度。
    *
    */
-  VIRTUAL_W = WIDGET_PROP_VIRTUAL_W(),
+ VIRTUAL_W = WIDGET_PROP_VIRTUAL_W(),
 
   /**
    * 虚拟高度。
    *
    */
-  VIRTUAL_H = WIDGET_PROP_VIRTUAL_H(),
+ VIRTUAL_H = WIDGET_PROP_VIRTUAL_H(),
 
   /**
    * 名称。
    *
    */
-  NAME = WIDGET_PROP_NAME(),
+ NAME = WIDGET_PROP_NAME(),
 
   /**
    * 类型。
    *
    */
-  TYPE = WIDGET_PROP_TYPE(),
+ TYPE = WIDGET_PROP_TYPE(),
 
   /**
    * 是否可以关闭。
    *
    */
-  CLOSABLE = WIDGET_PROP_CLOSABLE(),
+ CLOSABLE = WIDGET_PROP_CLOSABLE(),
 
   /**
    * 鼠标指针。
    *
    */
-  CURSOR = WIDGET_PROP_CURSOR(),
+ CURSOR = WIDGET_PROP_CURSOR(),
 
   /**
    * 值。
    *
    */
-  VALUE = WIDGET_PROP_VALUE(),
+ VALUE = WIDGET_PROP_VALUE(),
 
   /**
    * 长度。
    *
    */
-  LENGTH = WIDGET_PROP_LENGTH(),
+ LENGTH = WIDGET_PROP_LENGTH(),
 
   /**
    * 文本。
    *
    */
-  TEXT = WIDGET_PROP_TEXT(),
+ TEXT = WIDGET_PROP_TEXT(),
 
   /**
    * 待翻译文本。
    *
    */
-  TR_TEXT = WIDGET_PROP_TR_TEXT(),
+ TR_TEXT = WIDGET_PROP_TR_TEXT(),
 
   /**
    * style。
    *
    */
-  STYLE = WIDGET_PROP_STYLE(),
+ STYLE = WIDGET_PROP_STYLE(),
 
   /**
    * 是否启用。
    *
    */
-  ENABLE = WIDGET_PROP_ENABLE(),
+ ENABLE = WIDGET_PROP_ENABLE(),
 
   /**
    * 是否启用按键音等反馈。
    *
    */
-  FEEDBACK = WIDGET_PROP_FEEDBACK(),
+ FEEDBACK = WIDGET_PROP_FEEDBACK(),
 
   /**
    * 是否启用floating布局。
    *
    */
-  FLOATING = WIDGET_PROP_FLOATING(),
+ FLOATING = WIDGET_PROP_FLOATING(),
 
   /**
    * 边距。
    *
    */
-  MARGIN = WIDGET_PROP_MARGIN(),
+ MARGIN = WIDGET_PROP_MARGIN(),
 
   /**
    * 间距。
    *
    */
-  SPACING = WIDGET_PROP_SPACING(),
+ SPACING = WIDGET_PROP_SPACING(),
 
   /**
    * 左边距。
    *
    */
-  LEFT_MARGIN = WIDGET_PROP_LEFT_MARGIN(),
+ LEFT_MARGIN = WIDGET_PROP_LEFT_MARGIN(),
 
   /**
    * 右边距。
    *
    */
-  RIGHT_MARGIN = WIDGET_PROP_RIGHT_MARGIN(),
+ RIGHT_MARGIN = WIDGET_PROP_RIGHT_MARGIN(),
 
   /**
    * 顶边距。
    *
    */
-  TOP_MARGIN = WIDGET_PROP_TOP_MARGIN(),
+ TOP_MARGIN = WIDGET_PROP_TOP_MARGIN(),
 
   /**
    * 底边距。
    *
    */
-  BOTTOM_MARGIN = WIDGET_PROP_BOTTOM_MARGIN(),
+ BOTTOM_MARGIN = WIDGET_PROP_BOTTOM_MARGIN(),
 
   /**
    * 步长。
    *
    */
-  STEP = WIDGET_PROP_STEP(),
+ STEP = WIDGET_PROP_STEP(),
 
   /**
    * 是否可见。
    *
    */
-  VISIBLE = WIDGET_PROP_VISIBLE(),
+ VISIBLE = WIDGET_PROP_VISIBLE(),
 
   /**
    * 是否接受用户事件。
    *
    */
-  SENSITIVE = WIDGET_PROP_SENSITIVE(),
+ SENSITIVE = WIDGET_PROP_SENSITIVE(),
 
   /**
    * 控件动画。
    *
    */
-  ANIMATION = WIDGET_PROP_ANIMATION(),
+ ANIMATION = WIDGET_PROP_ANIMATION(),
 
   /**
    * 窗口动画。
    *
    */
-  ANIM_HINT = WIDGET_PROP_ANIM_HINT(),
+ ANIM_HINT = WIDGET_PROP_ANIM_HINT(),
 
   /**
    * 窗口设置为全部大小。
    *
    */
-  FULLSCREEN = WIDGET_PROP_FULLSCREEN(),
+ FULLSCREEN = WIDGET_PROP_FULLSCREEN(),
 
   /**
    * 打开窗口动画。
    *
    */
-  OPEN_ANIM_HINT = WIDGET_PROP_OPEN_ANIM_HINT(),
+ OPEN_ANIM_HINT = WIDGET_PROP_OPEN_ANIM_HINT(),
 
   /**
    * 关闭窗口动画。
    *
    */
-  CLOSE_ANIM_HINT = WIDGET_PROP_CLOSE_ANIM_HINT(),
+ CLOSE_ANIM_HINT = WIDGET_PROP_CLOSE_ANIM_HINT(),
 
   /**
    * 最小值。
    *
    */
-  MIN = WIDGET_PROP_MIN(),
+ MIN = WIDGET_PROP_MIN(),
 
   /**
    * 提示信息。
    *
    */
-  TIPS = WIDGET_PROP_TIPS(),
+ TIPS = WIDGET_PROP_TIPS(),
 
   /**
    * 输入类型。
    *
    */
-  INPUT_TYPE = WIDGET_PROP_INPUT_TYPE(),
+ INPUT_TYPE = WIDGET_PROP_INPUT_TYPE(),
 
   /**
    * 只读模式。
    *
    */
-  READONLY = WIDGET_PROP_READONLY(),
+ READONLY = WIDGET_PROP_READONLY(),
 
   /**
    * 密码是否可见。
    *
    */
-  PASSWORD_VISIBLE = WIDGET_PROP_PASSWORD_VISIBLE(),
+ PASSWORD_VISIBLE = WIDGET_PROP_PASSWORD_VISIBLE(),
 
   /**
    * 是否处于active状态。
    *
    */
-  ACTIVE = WIDGET_PROP_ACTIVE(),
+ ACTIVE = WIDGET_PROP_ACTIVE(),
 
   /**
    * 是否为垂直模式。
    *
    */
-  VERTICAL = WIDGET_PROP_VERTICAL(),
+ VERTICAL = WIDGET_PROP_VERTICAL(),
 
   /**
    * 是否显示文本。
    *
    */
-  SHOW_TEXT = WIDGET_PROP_SHOW_TEXT(),
+ SHOW_TEXT = WIDGET_PROP_SHOW_TEXT(),
 
   /**
    * X方向的偏移。
    *
    */
-  XOFFSET = WIDGET_PROP_XOFFSET(),
+ XOFFSET = WIDGET_PROP_XOFFSET(),
 
   /**
    * Y方向的偏移。
    *
    */
-  YOFFSET = WIDGET_PROP_YOFFSET(),
+ YOFFSET = WIDGET_PROP_YOFFSET(),
 
   /**
    * 垂直对齐模式。
    *
    */
-  ALIGN_V = WIDGET_PROP_ALIGN_V(),
+ ALIGN_V = WIDGET_PROP_ALIGN_V(),
 
   /**
    * 水平对齐模式。
    *
    */
-  ALIGN_H = WIDGET_PROP_ALIGN_H(),
+ ALIGN_H = WIDGET_PROP_ALIGN_H(),
 
   /**
    * 是否自动播放或指定播放的时间。
    *
    */
-  AUTO_PLAY = WIDGET_PROP_AUTO_PLAY(),
+ AUTO_PLAY = WIDGET_PROP_AUTO_PLAY(),
 
   /**
    * 是否循环播放或循环播放的次数。
    *
    */
-  LOOP = WIDGET_PROP_LOOP(),
+ LOOP = WIDGET_PROP_LOOP(),
 
   /**
    * 是否启用自动更正功能。
    *
    */
-  AUTO_FIX = WIDGET_PROP_AUTO_FIX(),
+ AUTO_FIX = WIDGET_PROP_AUTO_FIX(),
 
   /**
    * 编辑器在获得焦点时是否不选中文本。
    *
    */
-  SELECT_NONE_WHEN_FOCUSED = WIDGET_PROP_SELECT_NONE_WHEN_FOCUSED(),
+ SELECT_NONE_WHEN_FOCUSED = WIDGET_PROP_SELECT_NONE_WHEN_FOCUSED(),
 
   /**
    * 编辑器在获得焦点时是否打开输入法。
    *
    */
-  OPEN_IM_WHEN_FOCUSED = WIDGET_PROP_OPEN_IM_WHEN_FOCUSED(),
+ OPEN_IM_WHEN_FOCUSED = WIDGET_PROP_OPEN_IM_WHEN_FOCUSED(),
 
   /**
    * X最小值。
    *
    */
-  X_MIN = WIDGET_PROP_X_MIN(),
+ X_MIN = WIDGET_PROP_X_MIN(),
 
   /**
    * X最大值。
    *
    */
-  X_MAX = WIDGET_PROP_X_MAX(),
+ X_MAX = WIDGET_PROP_X_MAX(),
 
   /**
    * Y最小值。
    *
    */
-  Y_MIN = WIDGET_PROP_Y_MIN(),
+ Y_MIN = WIDGET_PROP_Y_MIN(),
 
   /**
    * Y最大值。
    *
    */
-  Y_MAX = WIDGET_PROP_Y_MAX(),
+ Y_MAX = WIDGET_PROP_Y_MAX(),
 
   /**
    * 最大值。
    *
    */
-  MAX = WIDGET_PROP_MAX(),
+ MAX = WIDGET_PROP_MAX(),
 
   /**
    * 让窗口管理器直接把按键发给自己。
    *
    */
-  GRAB_KEYS = WIDGET_PROP_GRAB_KEYS(),
+ GRAB_KEYS = WIDGET_PROP_GRAB_KEYS(),
 
   /**
    * 行数或每行的高度。
    *
    */
-  ROW = WIDGET_PROP_ROW(),
+ ROW = WIDGET_PROP_ROW(),
 
   /**
    * 控件状态。
    *
    */
-  STATE_FOR_STYLE = WIDGET_PROP_STATE_FOR_STYLE(),
+ STATE_FOR_STYLE = WIDGET_PROP_STATE_FOR_STYLE(),
 
   /**
    * 窗口主题名称。
    *
    */
-  THEME = WIDGET_PROP_THEME(),
+ THEME = WIDGET_PROP_THEME(),
 
   /**
    * window stage
    *
    */
-  STAGE = WIDGET_PROP_STAGE(),
+ STAGE = WIDGET_PROP_STAGE(),
 
   /**
    * 图片管理器。
    *
    */
-  IMAGE_MANAGER = WIDGET_PROP_IMAGE_MANAGER(),
+ IMAGE_MANAGER = WIDGET_PROP_IMAGE_MANAGER(),
 
   /**
    * 资源管理器。
    *
    */
-  ASSETS_MANAGER = WIDGET_PROP_ASSETS_MANAGER(),
+ ASSETS_MANAGER = WIDGET_PROP_ASSETS_MANAGER(),
 
   /**
    * locale_info。
    *
    */
-  LOCALE_INFO = WIDGET_PROP_LOCALE_INFO(),
+ LOCALE_INFO = WIDGET_PROP_LOCALE_INFO(),
 
   /**
    * 字体管理器。
    *
    */
-  FONT_MANAGER = WIDGET_PROP_FONT_MANAGER(),
+ FONT_MANAGER = WIDGET_PROP_FONT_MANAGER(),
 
   /**
    * 窗口的主题对象。
    *
    */
-  THEME_OBJ = WIDGET_PROP_THEME_OBJ(),
+ THEME_OBJ = WIDGET_PROP_THEME_OBJ(),
 
   /**
    * 缺省的主题对象。
    *
    */
-  DEFAULT_THEME_OBJ = WIDGET_PROP_DEFAULT_THEME_OBJ(),
+ DEFAULT_THEME_OBJ = WIDGET_PROP_DEFAULT_THEME_OBJ(),
 
   /**
    * 项的宽度。
    *
    */
-  ITEM_WIDTH = WIDGET_PROP_ITEM_WIDTH(),
+ ITEM_WIDTH = WIDGET_PROP_ITEM_WIDTH(),
 
   /**
    * 项的高度。
    *
    */
-  ITEM_HEIGHT = WIDGET_PROP_ITEM_HEIGHT(),
+ ITEM_HEIGHT = WIDGET_PROP_ITEM_HEIGHT(),
 
   /**
    * 项的缺省高度。
    *
    */
-  DEFAULT_ITEM_HEIGHT = WIDGET_PROP_DEFAULT_ITEM_HEIGHT(),
+ DEFAULT_ITEM_HEIGHT = WIDGET_PROP_DEFAULT_ITEM_HEIGHT(),
 
   /**
    * X方向是否可拖动。
    *
    */
-  XSLIDABLE = WIDGET_PROP_XSLIDABLE(),
+ XSLIDABLE = WIDGET_PROP_XSLIDABLE(),
 
   /**
    * Y方向是否可拖动。
    *
    */
-  YSLIDABLE = WIDGET_PROP_YSLIDABLE(),
+ YSLIDABLE = WIDGET_PROP_YSLIDABLE(),
 
   /**
    * 重复次数。
    *
    */
-  REPEAT = WIDGET_PROP_REPEAT(),
+ REPEAT = WIDGET_PROP_REPEAT(),
 
   /**
    * 是否启用长按。
    *
    */
-  ENABLE_LONG_PRESS = WIDGET_PROP_ENABLE_LONG_PRESS(),
+ ENABLE_LONG_PRESS = WIDGET_PROP_ENABLE_LONG_PRESS(),
 
   /**
    * 是否启用动画。
    *
    */
-  ANIMATABLE = WIDGET_PROP_ANIMATABLE(),
+ ANIMATABLE = WIDGET_PROP_ANIMATABLE(),
 
   /**
    * 是否自动隐藏滚动条。
    *
    */
-  AUTO_HIDE_SCROLL_BAR = WIDGET_PROP_AUTO_HIDE_SCROLL_BAR(),
+ AUTO_HIDE_SCROLL_BAR = WIDGET_PROP_AUTO_HIDE_SCROLL_BAR(),
 
   /**
    * 图片名称。
    *
    */
-  IMAGE = WIDGET_PROP_IMAGE(),
+ IMAGE = WIDGET_PROP_IMAGE(),
 
   /**
    * 显示格式。
    *
    */
-  FORMAT = WIDGET_PROP_FORMAT(),
+ FORMAT = WIDGET_PROP_FORMAT(),
 
   /**
    * 图片绘制类型。
    *
    */
-  DRAW_TYPE = WIDGET_PROP_DRAW_TYPE(),
+ DRAW_TYPE = WIDGET_PROP_DRAW_TYPE(),
 
   /**
    * 是否可选择。
    *
    */
-  SELECTABLE = WIDGET_PROP_SELECTABLE(),
+ SELECTABLE = WIDGET_PROP_SELECTABLE(),
 
   /**
    * 是否可点击。
    *
    */
-  CLICKABLE = WIDGET_PROP_CLICKABLE(),
+ CLICKABLE = WIDGET_PROP_CLICKABLE(),
 
   /**
    * X方向缩放比例。
    *
    */
-  SCALE_X = WIDGET_PROP_SCALE_X(),
+ SCALE_X = WIDGET_PROP_SCALE_X(),
 
   /**
    * Y方向缩放比例。
    *
    */
-  SCALE_Y = WIDGET_PROP_SCALE_Y(),
+ SCALE_Y = WIDGET_PROP_SCALE_Y(),
 
   /**
    * x锚点。
    *
    */
-  ANCHOR_X = WIDGET_PROP_ANCHOR_X(),
+ ANCHOR_X = WIDGET_PROP_ANCHOR_X(),
 
   /**
    * y锚点。
    *
    */
-  ANCHOR_Y = WIDGET_PROP_ANCHOR_Y(),
+ ANCHOR_Y = WIDGET_PROP_ANCHOR_Y(),
 
   /**
    * 选中角度(幅度)
    *
    */
-  ROTATION = WIDGET_PROP_ROTATION(),
+ ROTATION = WIDGET_PROP_ROTATION(),
 
   /**
    * 紧凑模式。
    *
    */
-  COMPACT = WIDGET_PROP_COMPACT(),
+ COMPACT = WIDGET_PROP_COMPACT(),
 
   /**
    * 是否支持滚动。
    *
    */
-  SCROLLABLE = WIDGET_PROP_SCROLLABLE(),
+ SCROLLABLE = WIDGET_PROP_SCROLLABLE(),
 
   /**
    * 图标名称。
    *
    */
-  ICON = WIDGET_PROP_ICON(),
+ ICON = WIDGET_PROP_ICON(),
 
   /**
    * 选项集合。
    *
    */
-  OPTIONS = WIDGET_PROP_OPTIONS(),
+ OPTIONS = WIDGET_PROP_OPTIONS(),
 
   /**
    * 是否被选中。
    *
    */
-  SELECTED = WIDGET_PROP_SELECTED(),
+ SELECTED = WIDGET_PROP_SELECTED(),
 
   /**
    * 是否被勾选。
    *
    */
-  CHECKED = WIDGET_PROP_CHECKED(),
+ CHECKED = WIDGET_PROP_CHECKED(),
 
   /**
    * active状态下的图标。
    *
    */
-  ACTIVE_ICON = WIDGET_PROP_ACTIVE_ICON(),
+ ACTIVE_ICON = WIDGET_PROP_ACTIVE_ICON(),
 
   /**
    * 动态加载UI名字。
    *
    */
-  LOAD_UI = WIDGET_PROP_LOAD_UI(),
+ LOAD_UI = WIDGET_PROP_LOAD_UI(),
 
   /**
    * 要打开窗口的名称。
    *
    */
-  OPEN_WINDOW = WIDGET_PROP_OPEN_WINDOW(),
+ OPEN_WINDOW = WIDGET_PROP_OPEN_WINDOW(),
 
   /**
    * 被选中项的索引。
    *
    */
-  SELECTED_INDEX = WIDGET_PROP_SELECTED_INDEX(),
+ SELECTED_INDEX = WIDGET_PROP_SELECTED_INDEX(),
 
   /**
    * 点击窗口时关闭窗口。
    *
    */
-  CLOSE_WHEN_CLICK = WIDGET_PROP_CLOSE_WHEN_CLICK(),
+ CLOSE_WHEN_CLICK = WIDGET_PROP_CLOSE_WHEN_CLICK(),
 
   /**
    * 点击窗口外部时关闭窗口。
    *
    */
-  CLOSE_WHEN_CLICK_OUTSIDE = WIDGET_PROP_CLOSE_WHEN_CLICK_OUTSIDE(),
+ CLOSE_WHEN_CLICK_OUTSIDE = WIDGET_PROP_CLOSE_WHEN_CLICK_OUTSIDE(),
 
   /**
    * 行间距。
    *
    */
-  LINE_GAP = WIDGET_PROP_LINE_GAP(),
+ LINE_GAP = WIDGET_PROP_LINE_GAP(),
 
   /**
    * 背景颜色(仅仅使用于color tile)。
    *
    */
-  BG_COLOR = WIDGET_PROP_BG_COLOR(),
+ BG_COLOR = WIDGET_PROP_BG_COLOR(),
 
   /**
    * 边框颜色(仅仅使用于color tile)。
    *
    */
-  BORDER_COLOR = WIDGET_PROP_BORDER_COLOR(),
+ BORDER_COLOR = WIDGET_PROP_BORDER_COLOR(),
 
   /**
    * 延迟时间(毫秒)
    *
    */
-  DELAY = WIDGET_PROP_DELAY(),
+ DELAY = WIDGET_PROP_DELAY(),
 
   /**
    * 是否为键盘。
    *
    */
-  IS_KEYBOARD = WIDGET_PROP_IS_KEYBOARD(),
+ IS_KEYBOARD = WIDGET_PROP_IS_KEYBOARD(),
 
   /**
    * 是否为焦点控件。
    *
    */
-  FOCUSED = WIDGET_PROP_FOCUSED(),
+ FOCUSED = WIDGET_PROP_FOCUSED(),
 
   /**
    * (过时请用focused)。
    *
    */
-  FOCUS = WIDGET_PROP_FOCUS(),
+ FOCUS = WIDGET_PROP_FOCUS(),
 
   /**
    * 是否支持焦点停留。
    *
    */
-  FOCUSABLE = WIDGET_PROP_FOCUSABLE(),
+ FOCUSABLE = WIDGET_PROP_FOCUSABLE(),
 
   /**
    * 是否支持焦点状态(如果希望style支持焦点状态，但有不希望焦点停留，可用本属性)。
    *
    */
-  WITH_FOCUS_STATE = WIDGET_PROP_WITH_FOCUS_STATE(),
+ WITH_FOCUS_STATE = WIDGET_PROP_WITH_FOCUS_STATE(),
 
   /**
    * 将焦点移到前一个的键值。
    *
    */
-  MOVE_FOCUS_PREV_KEY = WIDGET_PROP_MOVE_FOCUS_PREV_KEY(),
+ MOVE_FOCUS_PREV_KEY = WIDGET_PROP_MOVE_FOCUS_PREV_KEY(),
 
   /**
    * 将焦点移到后一个的键值。
    *
    */
-  MOVE_FOCUS_NEXT_KEY = WIDGET_PROP_MOVE_FOCUS_NEXT_KEY(),
+ MOVE_FOCUS_NEXT_KEY = WIDGET_PROP_MOVE_FOCUS_NEXT_KEY(),
 
   /**
    * 将焦点向上移动的键值。
    *
    */
-  MOVE_FOCUS_UP_KEY = WIDGET_PROP_MOVE_FOCUS_UP_KEY(),
+ MOVE_FOCUS_UP_KEY = WIDGET_PROP_MOVE_FOCUS_UP_KEY(),
 
   /**
    * 将焦点向下移动的键值。
    *
    */
-  MOVE_FOCUS_DOWN_KEY = WIDGET_PROP_MOVE_FOCUS_DOWN_KEY(),
+ MOVE_FOCUS_DOWN_KEY = WIDGET_PROP_MOVE_FOCUS_DOWN_KEY(),
 
   /**
    * 将焦点向左移动的键值。
    *
    */
-  MOVE_FOCUS_LEFT_KEY = WIDGET_PROP_MOVE_FOCUS_LEFT_KEY(),
+ MOVE_FOCUS_LEFT_KEY = WIDGET_PROP_MOVE_FOCUS_LEFT_KEY(),
 
   /**
    * 将焦点向右移动的键值。
    *
    */
-  MOVE_FOCUS_RIGHT_KEY = WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY(),
+ MOVE_FOCUS_RIGHT_KEY = WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY(),
 };
 
 
@@ -6909,331 +6925,331 @@ enum TWidgetType {
    * 无特殊类型。
    *
    */
-  NONE = WIDGET_TYPE_NONE(),
+ NONE = WIDGET_TYPE_NONE(),
 
   /**
    * 窗口管理器。
    *
    */
-  WINDOW_MANAGER = WIDGET_TYPE_WINDOW_MANAGER(),
+ WINDOW_MANAGER = WIDGET_TYPE_WINDOW_MANAGER(),
 
   /**
    * 普通窗口。
    *
    */
-  NORMAL_WINDOW = WIDGET_TYPE_NORMAL_WINDOW(),
+ NORMAL_WINDOW = WIDGET_TYPE_NORMAL_WINDOW(),
 
   /**
    * overlay窗口。
    *
    */
-  OVERLAY = WIDGET_TYPE_OVERLAY(),
+ OVERLAY = WIDGET_TYPE_OVERLAY(),
 
   /**
    * 工具条。
    *
    */
-  TOOL_BAR = WIDGET_TYPE_TOOL_BAR(),
+ TOOL_BAR = WIDGET_TYPE_TOOL_BAR(),
 
   /**
    * 对话框。
    *
    */
-  DIALOG = WIDGET_TYPE_DIALOG(),
+ DIALOG = WIDGET_TYPE_DIALOG(),
 
   /**
    * 弹出窗口。
    *
    */
-  POPUP = WIDGET_TYPE_POPUP(),
+ POPUP = WIDGET_TYPE_POPUP(),
 
   /**
    * system bar window
    *
    */
-  SYSTEM_BAR = WIDGET_TYPE_SYSTEM_BAR(),
+ SYSTEM_BAR = WIDGET_TYPE_SYSTEM_BAR(),
 
   /**
    * system bar window ato bottom
    *
    */
-  SYSTEM_BAR_BOTTOM = WIDGET_TYPE_SYSTEM_BAR_BOTTOM(),
+ SYSTEM_BAR_BOTTOM = WIDGET_TYPE_SYSTEM_BAR_BOTTOM(),
 
   /**
    * 精灵窗口。
    *
    */
-  SPRITE = WIDGET_TYPE_SPRITE(),
+ SPRITE = WIDGET_TYPE_SPRITE(),
 
   /**
    * 键盘窗口。
    *
    */
-  KEYBOARD = WIDGET_TYPE_KEYBOARD(),
+ KEYBOARD = WIDGET_TYPE_KEYBOARD(),
 
   /**
    * 拖放状态窗口。
    *
    */
-  DND = WIDGET_TYPE_DND(),
+ DND = WIDGET_TYPE_DND(),
 
   /**
    * 文本控件。
    *
    */
-  LABEL = WIDGET_TYPE_LABEL(),
+ LABEL = WIDGET_TYPE_LABEL(),
 
   /**
    * 按钮控件。
    *
    */
-  BUTTON = WIDGET_TYPE_BUTTON(),
+ BUTTON = WIDGET_TYPE_BUTTON(),
 
   /**
    * 图片控件。
    *
    */
-  IMAGE = WIDGET_TYPE_IMAGE(),
+ IMAGE = WIDGET_TYPE_IMAGE(),
 
   /**
    * 文本编辑控件。
    *
    */
-  EDIT = WIDGET_TYPE_EDIT(),
+ EDIT = WIDGET_TYPE_EDIT(),
 
   /**
    * 进度条控件。
    *
    */
-  PROGRESS_BAR = WIDGET_TYPE_PROGRESS_BAR(),
+ PROGRESS_BAR = WIDGET_TYPE_PROGRESS_BAR(),
 
   /**
    * 分组控件。
    *
    */
-  GROUP_BOX = WIDGET_TYPE_GROUP_BOX(),
+ GROUP_BOX = WIDGET_TYPE_GROUP_BOX(),
 
   /**
    * 多选按钮控件。
    *
    */
-  CHECK_BUTTON = WIDGET_TYPE_CHECK_BUTTON(),
+ CHECK_BUTTON = WIDGET_TYPE_CHECK_BUTTON(),
 
   /**
    * 单选按钮控件。
    *
    */
-  RADIO_BUTTON = WIDGET_TYPE_RADIO_BUTTON(),
+ RADIO_BUTTON = WIDGET_TYPE_RADIO_BUTTON(),
 
   /**
    * 对话框标题。
    *
    */
-  DIALOG_TITLE = WIDGET_TYPE_DIALOG_TITLE(),
+ DIALOG_TITLE = WIDGET_TYPE_DIALOG_TITLE(),
 
   /**
    * 对话框客户区域。
    *
    */
-  DIALOG_CLIENT = WIDGET_TYPE_DIALOG_CLIENT(),
+ DIALOG_CLIENT = WIDGET_TYPE_DIALOG_CLIENT(),
 
   /**
    * 滑块控件。
    *
    */
-  SLIDER = WIDGET_TYPE_SLIDER(),
+ SLIDER = WIDGET_TYPE_SLIDER(),
 
   /**
    * 视图控件。
    *
    */
-  VIEW = WIDGET_TYPE_VIEW(),
+ VIEW = WIDGET_TYPE_VIEW(),
 
   /**
    * 下拉选择框控件。
    *
    */
-  COMBO_BOX = WIDGET_TYPE_COMBO_BOX(),
+ COMBO_BOX = WIDGET_TYPE_COMBO_BOX(),
 
   /**
    * 下拉选择框的列表项控件。
    *
    */
-  COMBO_BOX_ITEM = WIDGET_TYPE_COMBO_BOX_ITEM(),
+ COMBO_BOX_ITEM = WIDGET_TYPE_COMBO_BOX_ITEM(),
 
   /**
    * 滑动视图控件。
    *
    */
-  SLIDE_VIEW = WIDGET_TYPE_SLIDE_VIEW(),
+ SLIDE_VIEW = WIDGET_TYPE_SLIDE_VIEW(),
 
   /**
    * 滑动视图的指示器控件。
    *
    */
-  SLIDE_INDICATOR = WIDGET_TYPE_SLIDE_INDICATOR(),
+ SLIDE_INDICATOR = WIDGET_TYPE_SLIDE_INDICATOR(),
 
   /**
    * 滑动视图的指示器控件（圆弧显示）。
    *
    */
-  SLIDE_INDICATOR_ARC = WIDGET_TYPE_SLIDE_INDICATOR_ARC(),
+ SLIDE_INDICATOR_ARC = WIDGET_TYPE_SLIDE_INDICATOR_ARC(),
 
   /**
    * 多页控件。
    *
    */
-  PAGES = WIDGET_TYPE_PAGES(),
+ PAGES = WIDGET_TYPE_PAGES(),
 
   /**
    * 标签按钮控件。
    *
    */
-  TAB_BUTTON = WIDGET_TYPE_TAB_BUTTON(),
+ TAB_BUTTON = WIDGET_TYPE_TAB_BUTTON(),
 
   /**
    * 标签控件。
    *
    */
-  TAB_CONTROL = WIDGET_TYPE_TAB_CONTROL(),
+ TAB_CONTROL = WIDGET_TYPE_TAB_CONTROL(),
 
   /**
    * 标签按钮分组控件。
    *
    */
-  TAB_BUTTON_GROUP = WIDGET_TYPE_TAB_BUTTON_GROUP(),
+ TAB_BUTTON_GROUP = WIDGET_TYPE_TAB_BUTTON_GROUP(),
 
   /**
    * 按钮分组控件。
    *
    */
-  BUTTON_GROUP = WIDGET_TYPE_BUTTON_GROUP(),
+ BUTTON_GROUP = WIDGET_TYPE_BUTTON_GROUP(),
 
   /**
    * 候选字控件。
    *
    */
-  CANDIDATES = WIDGET_TYPE_CANDIDATES(),
+ CANDIDATES = WIDGET_TYPE_CANDIDATES(),
 
   /**
    * 数值编辑控件。
    *
    */
-  SPIN_BOX = WIDGET_TYPE_SPIN_BOX(),
+ SPIN_BOX = WIDGET_TYPE_SPIN_BOX(),
 
   /**
    * 拖动块控件。
    *
    */
-  DRAGGER = WIDGET_TYPE_DRAGGER(),
+ DRAGGER = WIDGET_TYPE_DRAGGER(),
 
   /**
    * 滚动条控件。
    *
    */
-  SCROLL_BAR = WIDGET_TYPE_SCROLL_BAR(),
+ SCROLL_BAR = WIDGET_TYPE_SCROLL_BAR(),
 
   /**
    * 桌面版滚动条控件。
    *
    */
-  SCROLL_BAR_DESKTOP = WIDGET_TYPE_SCROLL_BAR_DESKTOP(),
+ SCROLL_BAR_DESKTOP = WIDGET_TYPE_SCROLL_BAR_DESKTOP(),
 
   /**
    * 移动版滚动条控件。
    *
    */
-  SCROLL_BAR_MOBILE = WIDGET_TYPE_SCROLL_BAR_MOBILE(),
+ SCROLL_BAR_MOBILE = WIDGET_TYPE_SCROLL_BAR_MOBILE(),
 
   /**
    * 滚动视图控件。
    *
    */
-  SCROLL_VIEW = WIDGET_TYPE_SCROLL_VIEW(),
+ SCROLL_VIEW = WIDGET_TYPE_SCROLL_VIEW(),
 
   /**
    * 列表视图控件。
    *
    */
-  LIST_VIEW = WIDGET_TYPE_LIST_VIEW(),
+ LIST_VIEW = WIDGET_TYPE_LIST_VIEW(),
 
   /**
    * 水平列表视图控件。
    *
    */
-  LIST_VIEW_H = WIDGET_TYPE_LIST_VIEW_H(),
+ LIST_VIEW_H = WIDGET_TYPE_LIST_VIEW_H(),
 
   /**
    * 列表项控件。
    *
    */
-  LIST_ITEM = WIDGET_TYPE_LIST_ITEM(),
+ LIST_ITEM = WIDGET_TYPE_LIST_ITEM(),
 
   /**
    * 颜色选择器控件。
    *
    */
-  COLOR_PICKER = WIDGET_TYPE_COLOR_PICKER(),
+ COLOR_PICKER = WIDGET_TYPE_COLOR_PICKER(),
 
   /**
    * 颜色选择器组件控件。
    *
    */
-  COLOR_COMPONENT = WIDGET_TYPE_COLOR_COMPONENT(),
+ COLOR_COMPONENT = WIDGET_TYPE_COLOR_COMPONENT(),
 
   /**
    * 颜色块控件。
    *
    */
-  COLOR_TILE = WIDGET_TYPE_COLOR_TILE(),
+ COLOR_TILE = WIDGET_TYPE_COLOR_TILE(),
 
   /**
    * 裁剪控件。
    *
    */
-  CLIP_VIEW = WIDGET_TYPE_CLIP_VIEW(),
+ CLIP_VIEW = WIDGET_TYPE_CLIP_VIEW(),
 
   /**
    * 富文本控件。
    *
    */
-  RICH_TEXT = WIDGET_TYPE_RICH_TEXT(),
+ RICH_TEXT = WIDGET_TYPE_RICH_TEXT(),
 
   /**
    * AppBar控件。
    *
    */
-  APP_BAR = WIDGET_TYPE_APP_BAR(),
+ APP_BAR = WIDGET_TYPE_APP_BAR(),
 
   /**
    * 网格控件。
    *
    */
-  GRID = WIDGET_TYPE_GRID(),
+ GRID = WIDGET_TYPE_GRID(),
 
   /**
    * 网格项目控件。
    *
    */
-  GRID_ITEM = WIDGET_TYPE_GRID_ITEM(),
+ GRID_ITEM = WIDGET_TYPE_GRID_ITEM(),
 
   /**
    * 行控件。
    *
    */
-  ROW = WIDGET_TYPE_ROW(),
+ ROW = WIDGET_TYPE_ROW(),
 
   /**
    * 列控件。
    *
    */
-  COLUMN = WIDGET_TYPE_COLUMN(),
+ COLUMN = WIDGET_TYPE_COLUMN(),
 
   /**
    * 电阻屏校准窗口。
    *
    */
-  CALIBRATION_WIN = WIDGET_TYPE_CALIBRATION_WIN(),
+ CALIBRATION_WIN = WIDGET_TYPE_CALIBRATION_WIN(),
 };
 
 
@@ -7247,25 +7263,25 @@ enum TWindowStage {
    * 初始状态。
    *
    */
-  NONE = WINDOW_STAGE_NONE(),
+ NONE = WINDOW_STAGE_NONE(),
 
   /**
    * 创建完成。
    *
    */
-  CREATED = WINDOW_STAGE_CREATED(),
+ CREATED = WINDOW_STAGE_CREATED(),
 
   /**
    * 窗口已经打开(窗口打开动画完成后，处于该状态，直到窗口被关闭)
    *
    */
-  OPENED = WINDOW_STAGE_OPENED(),
+ OPENED = WINDOW_STAGE_OPENED(),
 
   /**
    * 窗口已关闭。
    *
    */
-  CLOSED = WINDOW_STAGE_CLOSED(),
+ CLOSED = WINDOW_STAGE_CLOSED(),
 };
 
 
@@ -7279,19 +7295,19 @@ enum TWindowClosable {
    * 窗口可关闭。
    *
    */
-  YES = WINDOW_CLOSABLE_YES(),
+ YES = WINDOW_CLOSABLE_YES(),
 
   /**
    * 窗口不可关闭。
    *
    */
-  NO = WINDOW_CLOSABLE_NO(),
+ NO = WINDOW_CLOSABLE_NO(),
 
   /**
    * 窗口需要确认后才能关闭。
    *
    */
-  CONFIRM = WINDOW_CLOSABLE_CONFIRM(),
+ CONFIRM = WINDOW_CLOSABLE_CONFIRM(),
 };
 
 
@@ -7307,121 +7323,121 @@ enum TWidgetState {
    * 无效状态。
    *
    */
-  STATE_NONE = WIDGET_STATE_NONE(),
+ STATE_NONE = WIDGET_STATE_NONE(),
 
   /**
    * 正常状态。
    *
    */
-  STATE_NORMAL = WIDGET_STATE_NORMAL(),
+ STATE_NORMAL = WIDGET_STATE_NORMAL(),
 
   /**
    * 指针按下状态。
    *
    */
-  STATE_PRESSED = WIDGET_STATE_PRESSED(),
+ STATE_PRESSED = WIDGET_STATE_PRESSED(),
 
   /**
    * 指针悬浮状态。
    *
    */
-  STATE_OVER = WIDGET_STATE_OVER(),
+ STATE_OVER = WIDGET_STATE_OVER(),
 
   /**
    * 禁用状态。
    *
    */
-  STATE_DISABLE = WIDGET_STATE_DISABLE(),
+ STATE_DISABLE = WIDGET_STATE_DISABLE(),
 
   /**
    * 聚焦状态。
    *
    */
-  STATE_FOCUSED = WIDGET_STATE_FOCUSED(),
+ STATE_FOCUSED = WIDGET_STATE_FOCUSED(),
 
   /**
    * 勾选状态。
    *
    */
-  STATE_CHECKED = WIDGET_STATE_CHECKED(),
+ STATE_CHECKED = WIDGET_STATE_CHECKED(),
 
   /**
    * 没勾选状态。
    *
    */
-  STATE_UNCHECKED = WIDGET_STATE_UNCHECKED(),
+ STATE_UNCHECKED = WIDGET_STATE_UNCHECKED(),
 
   /**
    * 编辑器无内容状态。
    *
    */
-  STATE_EMPTY = WIDGET_STATE_EMPTY(),
+ STATE_EMPTY = WIDGET_STATE_EMPTY(),
 
   /**
    * 编辑器无内容同时聚焦的状态。
    *
    */
-  STATE_EMPTY_FOCUS = WIDGET_STATE_EMPTY_FOCUS(),
+ STATE_EMPTY_FOCUS = WIDGET_STATE_EMPTY_FOCUS(),
 
   /**
    * 输入错误状态。
    *
    */
-  STATE_ERROR = WIDGET_STATE_ERROR(),
+ STATE_ERROR = WIDGET_STATE_ERROR(),
 
   /**
    * 选中状态。
    *
    */
-  STATE_SELECTED = WIDGET_STATE_SELECTED(),
+ STATE_SELECTED = WIDGET_STATE_SELECTED(),
 
   /**
    * 正常状态(选中项)。
    *
    */
-  STATE_NORMAL_OF_CHECKED = WIDGET_STATE_NORMAL_OF_CHECKED(),
+ STATE_NORMAL_OF_CHECKED = WIDGET_STATE_NORMAL_OF_CHECKED(),
 
   /**
    * 指针按下状态(选中项)。
    *
    */
-  STATE_PRESSED_OF_CHECKED = WIDGET_STATE_PRESSED_OF_CHECKED(),
+ STATE_PRESSED_OF_CHECKED = WIDGET_STATE_PRESSED_OF_CHECKED(),
 
   /**
    * 指针悬浮状态(选中项)。
    *
    */
-  STATE_OVER_OF_CHECKED = WIDGET_STATE_OVER_OF_CHECKED(),
+ STATE_OVER_OF_CHECKED = WIDGET_STATE_OVER_OF_CHECKED(),
 
   /**
    * 焦点状态(选中项)。
    *
    */
-  STATE_FOCUSED_OF_CHECKED = WIDGET_STATE_FOCUSED_OF_CHECKED(),
+ STATE_FOCUSED_OF_CHECKED = WIDGET_STATE_FOCUSED_OF_CHECKED(),
 
   /**
    * 正常状态(当前项)。
    *
    */
-  STATE_NORMAL_OF_ACTIVE = WIDGET_STATE_NORMAL_OF_ACTIVE(),
+ STATE_NORMAL_OF_ACTIVE = WIDGET_STATE_NORMAL_OF_ACTIVE(),
 
   /**
    * 指针按下状态(当前项)。
    *
    */
-  STATE_PRESSED_OF_ACTIVE = WIDGET_STATE_PRESSED_OF_ACTIVE(),
+ STATE_PRESSED_OF_ACTIVE = WIDGET_STATE_PRESSED_OF_ACTIVE(),
 
   /**
    * 指针悬浮状态(当前项)。
    *
    */
-  STATE_OVER_OF_ACTIVE = WIDGET_STATE_OVER_OF_ACTIVE(),
+ STATE_OVER_OF_ACTIVE = WIDGET_STATE_OVER_OF_ACTIVE(),
 
   /**
    * 焦点状态(当前项)。
    *
    */
-  STATE_FOCUSED_OF_ACTIVE = WIDGET_STATE_FOCUSED_OF_ACTIVE(),
+ STATE_FOCUSED_OF_ACTIVE = WIDGET_STATE_FOCUSED_OF_ACTIVE(),
 };
 
 
@@ -7432,11 +7448,11 @@ enum TWidgetState {
  *```
  *
  */
-class TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
@@ -7445,9 +7461,9 @@ class TWidget {
    *
    * @returns 子控件的个数。
    */
-  countChildren(): number {
+ countChildren() : number  {
     return widget_count_children(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -7457,9 +7473,9 @@ class TWidget {
    *
    * @returns 子控件。
    */
-  getChild(index: number): TWidget {
+ getChild(index : number) : TWidget  {
     return new TWidget(widget_get_child(this != null ? (this.nativeObj || this) : null, index));
-  }
+ }
 
 
   /**
@@ -7468,9 +7484,20 @@ class TWidget {
    *
    * @returns 在父控件中的索引编号。
    */
-  indexOf(): number {
+ indexOf() : number  {
     return widget_index_of(this != null ? (this.nativeObj || this) : null);
-  }
+ }
+
+
+  /**
+   * 关闭控件所在的窗口。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ closeWindow() : TRet  {
+    return widget_close_window(this != null ? (this.nativeObj || this) : null);
+ }
 
 
   /**
@@ -7481,9 +7508,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  move(x: number, y: number): TRet {
+ move(x : number, y : number) : TRet  {
     return widget_move(this != null ? (this.nativeObj || this) : null, x, y);
-  }
+ }
 
 
   /**
@@ -7494,9 +7521,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  resize(w: number, h: number): TRet {
+ resize(w : number, h : number) : TRet  {
     return widget_resize(this != null ? (this.nativeObj || this) : null, w, h);
-  }
+ }
 
 
   /**
@@ -7509,9 +7536,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  moveResize(x: number, y: number, w: number, h: number): TRet {
+ moveResize(x : number, y : number, w : number, h : number) : TRet  {
     return widget_move_resize(this != null ? (this.nativeObj || this) : null, x, y, w, h);
-  }
+ }
 
 
   /**
@@ -7522,9 +7549,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setValue(value: any): TRet {
+ setValue(value : any) : TRet  {
     return widget_set_value(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -7536,9 +7563,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  animateValueTo(value: any, duration: number): TRet {
+ animateValueTo(value : any, duration : number) : TRet  {
     return widget_animate_value_to(this != null ? (this.nativeObj || this) : null, value, duration);
-  }
+ }
 
 
   /**
@@ -7549,9 +7576,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  addValue(delta: number): TRet {
+ addValue(delta : number) : TRet  {
     return widget_add_value(this != null ? (this.nativeObj || this) : null, delta);
-  }
+ }
 
 
   /**
@@ -7561,9 +7588,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  useStyle(style: string): TRet {
+ useStyle(style : string) : TRet  {
     return widget_use_style(this != null ? (this.nativeObj || this) : null, style);
-  }
+ }
 
 
   /**
@@ -7574,9 +7601,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setText(text: string): TRet {
+ setText(text : string) : TRet  {
     return widget_set_text_utf8(this != null ? (this.nativeObj || this) : null, text);
-  }
+ }
 
 
   /**
@@ -7586,9 +7613,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setTrText(text: string): TRet {
+ setTrText(text : string) : TRet  {
     return widget_set_tr_text(this != null ? (this.nativeObj || this) : null, text);
-  }
+ }
 
 
   /**
@@ -7597,9 +7624,9 @@ class TWidget {
    *
    * @returns 返回值。
    */
-  getValue(): number {
+ getValue() : number  {
     return widget_get_value(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -7609,9 +7636,9 @@ class TWidget {
    *
    * @returns 返回文本。
    */
-  getText(): any {
+ getText() : any  {
     return widget_get_text(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -7621,9 +7648,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setName(name: string): TRet {
+ setName(name : string) : TRet  {
     return widget_set_name(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
@@ -7635,9 +7662,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setTheme(name: string): TRet {
+ setTheme(name : string) : TRet  {
     return widget_set_theme(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
@@ -7647,9 +7674,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setPointerCursor(cursor: string): TRet {
+ setPointerCursor(cursor : string) : TRet  {
     return widget_set_pointer_cursor(this != null ? (this.nativeObj || this) : null, cursor);
-  }
+ }
 
 
   /**
@@ -7660,9 +7687,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setAnimation(animation: string): TRet {
+ setAnimation(animation : string) : TRet  {
     return widget_set_animation(this != null ? (this.nativeObj || this) : null, animation);
-  }
+ }
 
 
   /**
@@ -7676,9 +7703,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  createAnimator(animation: string): TRet {
+ createAnimator(animation : string) : TRet  {
     return widget_create_animator(this != null ? (this.nativeObj || this) : null, animation);
-  }
+ }
 
 
   /**
@@ -7693,9 +7720,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  startAnimator(name: string): TRet {
+ startAnimator(name : string) : TRet  {
     return widget_start_animator(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
@@ -7711,9 +7738,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setAnimatorTimeScale(name: string, time_scale: number): TRet {
+ setAnimatorTimeScale(name : string, time_scale : number) : TRet  {
     return widget_set_animator_time_scale(this != null ? (this.nativeObj || this) : null, name, time_scale);
-  }
+ }
 
 
   /**
@@ -7728,9 +7755,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  pauseAnimator(name: string): TRet {
+ pauseAnimator(name : string) : TRet  {
     return widget_pause_animator(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
@@ -7745,9 +7772,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  stopAnimator(name: string): TRet {
+ stopAnimator(name : string) : TRet  {
     return widget_stop_animator(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
@@ -7762,9 +7789,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  destroyAnimator(name: string): TRet {
+ destroyAnimator(name : string) : TRet  {
     return widget_destroy_animator(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
@@ -7774,9 +7801,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setEnable(enable: boolean): TRet {
+ setEnable(enable : boolean) : TRet  {
     return widget_set_enable(this != null ? (this.nativeObj || this) : null, enable);
-  }
+ }
 
 
   /**
@@ -7786,9 +7813,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setFeedback(feedback: boolean): TRet {
+ setFeedback(feedback : boolean) : TRet  {
     return widget_set_feedback(this != null ? (this.nativeObj || this) : null, feedback);
-  }
+ }
 
 
   /**
@@ -7799,9 +7826,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setFloating(floating: boolean): TRet {
+ setFloating(floating : boolean) : TRet  {
     return widget_set_floating(this != null ? (this.nativeObj || this) : null, floating);
-  }
+ }
 
 
   /**
@@ -7811,9 +7838,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setFocused(focused: boolean): TRet {
+ setFocused(focused : boolean) : TRet  {
     return widget_set_focused(this != null ? (this.nativeObj || this) : null, focused);
-  }
+ }
 
 
   /**
@@ -7823,9 +7850,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setFocusable(focusable: boolean): TRet {
+ setFocusable(focusable : boolean) : TRet  {
     return widget_set_focusable(this != null ? (this.nativeObj || this) : null, focusable);
-  }
+ }
 
 
   /**
@@ -7835,9 +7862,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setState(state: string): TRet {
+ setState(state : string) : TRet  {
     return widget_set_state(this != null ? (this.nativeObj || this) : null, state);
-  }
+ }
 
 
   /**
@@ -7849,9 +7876,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setOpacity(opacity: number): TRet {
+ setOpacity(opacity : number) : TRet  {
     return widget_set_opacity(this != null ? (this.nativeObj || this) : null, opacity);
-  }
+ }
 
 
   /**
@@ -7860,9 +7887,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  destroyChildren(): TRet {
+ destroyChildren() : TRet  {
     return widget_destroy_children(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -7872,9 +7899,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  addChild(child: TWidget): TRet {
+ addChild(child : TWidget) : TRet  {
     return widget_add_child(this != null ? (this.nativeObj || this) : null, child != null ? (child.nativeObj || child) : null);
-  }
+ }
 
 
   /**
@@ -7884,9 +7911,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  removeChild(child: TWidget): TRet {
+ removeChild(child : TWidget) : TRet  {
     return widget_remove_child(this != null ? (this.nativeObj || this) : null, child != null ? (child.nativeObj || child) : null);
-  }
+ }
 
 
   /**
@@ -7897,9 +7924,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  insertChild(index: number, child: TWidget): TRet {
+ insertChild(index : number, child : TWidget) : TRet  {
     return widget_insert_child(this != null ? (this.nativeObj || this) : null, index, child != null ? (child.nativeObj || child) : null);
-  }
+ }
 
 
   /**
@@ -7909,9 +7936,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  restack(index: number): TRet {
+ restack(index : number) : TRet  {
     return widget_restack(this != null ? (this.nativeObj || this) : null, index);
-  }
+ }
 
 
   /**
@@ -7921,9 +7948,9 @@ class TWidget {
    *
    * @returns 子控件或NULL。
    */
-  child(name: string): TWidget {
+ child(name : string) : TWidget  {
     return new TWidget(widget_child(this != null ? (this.nativeObj || this) : null, name));
-  }
+ }
 
 
   /**
@@ -7934,9 +7961,9 @@ class TWidget {
    *
    * @returns 子控件或NULL。
    */
-  lookup(name: string, recursive: boolean): TWidget {
+ lookup(name : string, recursive : boolean) : TWidget  {
     return new TWidget(widget_lookup(this != null ? (this.nativeObj || this) : null, name, recursive));
-  }
+ }
 
 
   /**
@@ -7947,9 +7974,9 @@ class TWidget {
    *
    * @returns 子控件或NULL。
    */
-  lookupByType(type: string, recursive: boolean): TWidget {
+ lookupByType(type : string, recursive : boolean) : TWidget  {
     return new TWidget(widget_lookup_by_type(this != null ? (this.nativeObj || this) : null, type, recursive));
-  }
+ }
 
 
   /**
@@ -7960,9 +7987,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setVisible(visible: boolean, recursive: boolean): TRet {
+ setVisible(visible : boolean, recursive : boolean) : TRet  {
     return widget_set_visible(this != null ? (this.nativeObj || this) : null, visible, recursive);
-  }
+ }
 
 
   /**
@@ -7972,9 +7999,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setVisibleOnly(visible: boolean): TRet {
+ setVisibleOnly(visible : boolean) : TRet  {
     return widget_set_visible_only(this != null ? (this.nativeObj || this) : null, visible);
-  }
+ }
 
 
   /**
@@ -7984,9 +8011,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setSensitive(sensitive: boolean): TRet {
+ setSensitive(sensitive : boolean) : TRet  {
     return widget_set_sensitive(this != null ? (this.nativeObj || this) : null, sensitive);
-  }
+ }
 
 
   /**
@@ -8001,9 +8028,9 @@ class TWidget {
    *
    * @returns 返回id，用于widget_off。
    */
-  on(type: TEventType, on_event: Function, ctx: any): number {
+ on(type : TEventType, on_event : Function, ctx : any) : number  {
     return widget_on(this != null ? (this.nativeObj || this) : null, type, on_event, ctx);
-  }
+ }
 
 
   /**
@@ -8013,9 +8040,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  off(id: number): TRet {
+ off(id : number) : TRet  {
     return widget_off(this != null ? (this.nativeObj || this) : null, id);
-  }
+ }
 
 
   /**
@@ -8025,9 +8052,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  invalidateForce(r: TRect): TRet {
+ invalidateForce(r : TRect) : TRet  {
     return widget_invalidate_force(this != null ? (this.nativeObj || this) : null, r != null ? (r.nativeObj || r) : null);
-  }
+ }
 
 
   /**
@@ -8038,9 +8065,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setPropStr(name: string, v: string): TRet {
+ setPropStr(name : string, v : string) : TRet  {
     return widget_set_prop_str(this != null ? (this.nativeObj || this) : null, name, v);
-  }
+ }
 
 
   /**
@@ -8051,9 +8078,9 @@ class TWidget {
    *
    * @returns 返回属性的值。
    */
-  getPropStr(name: string, defval: string): string {
+ getPropStr(name : string, defval : string) : string  {
     return widget_get_prop_str(this != null ? (this.nativeObj || this) : null, name, defval);
-  }
+ }
 
 
   /**
@@ -8064,9 +8091,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setPropInt(name: string, v: number): TRet {
+ setPropInt(name : string, v : number) : TRet  {
     return widget_set_prop_int(this != null ? (this.nativeObj || this) : null, name, v);
-  }
+ }
 
 
   /**
@@ -8077,9 +8104,9 @@ class TWidget {
    *
    * @returns 返回属性的值。
    */
-  getPropInt(name: string, defval: number): number {
+ getPropInt(name : string, defval : number) : number  {
     return widget_get_prop_int(this != null ? (this.nativeObj || this) : null, name, defval);
-  }
+ }
 
 
   /**
@@ -8090,9 +8117,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setPropBool(name: string, v: boolean): TRet {
+ setPropBool(name : string, v : boolean) : TRet  {
     return widget_set_prop_bool(this != null ? (this.nativeObj || this) : null, name, v);
-  }
+ }
 
 
   /**
@@ -8103,9 +8130,9 @@ class TWidget {
    *
    * @returns 返回属性的值。
    */
-  getPropBool(name: string, defval: boolean): boolean {
+ getPropBool(name : string, defval : boolean) : boolean  {
     return widget_get_prop_bool(this != null ? (this.nativeObj || this) : null, name, defval);
-  }
+ }
 
 
   /**
@@ -8114,9 +8141,9 @@ class TWidget {
    *
    * @returns 返回当前控件所在的窗口是否已经打开。
    */
-  isWindowOpened(): boolean {
+ isWindowOpened() : boolean  {
     return widget_is_window_opened(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -8125,9 +8152,9 @@ class TWidget {
    *
    * @returns 返回当前控件是否是窗口。
    */
-  isWindow(): boolean {
+ isWindow() : boolean  {
     return widget_is_window(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -8136,9 +8163,9 @@ class TWidget {
    *
    * @returns 返回当前控件是否是设计窗口。
    */
-  isDesigningWindow(): boolean {
+ isDesigningWindow() : boolean  {
     return widget_is_designing_window(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -8147,9 +8174,9 @@ class TWidget {
    *
    * @returns 返回当前控件是否是窗口管理器。
    */
-  isWindowManager(): boolean {
+ isWindowManager() : boolean  {
     return widget_is_window_manager(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -8160,9 +8187,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  foreach(visit: Function, ctx: any): TRet {
+ foreach(visit : Function, ctx : any) : TRet  {
     return widget_foreach(this != null ? (this.nativeObj || this) : null, visit, ctx);
-  }
+ }
 
 
   /**
@@ -8171,9 +8198,9 @@ class TWidget {
    *
    * @returns 窗口对象。
    */
-  getWindow(): TWidget {
+ getWindow() : TWidget  {
     return new TWidget(widget_get_window(this != null ? (this.nativeObj || this) : null));
-  }
+ }
 
 
   /**
@@ -8182,9 +8209,9 @@ class TWidget {
    *
    * @returns 窗口管理器对象。
    */
-  getWindowManager(): TWidget {
+ getWindowManager() : TWidget  {
     return new TWidget(widget_get_window_manager(this != null ? (this.nativeObj || this) : null));
-  }
+ }
 
 
   /**
@@ -8193,9 +8220,9 @@ class TWidget {
    *
    * @returns 返回类型名。
    */
-  getType(): string {
+ getType() : string  {
     return widget_get_type(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -8205,9 +8232,9 @@ class TWidget {
    *
    * @returns 返回clone的对象。
    */
-  clone(parent: TWidget): TWidget {
+ clone(parent : TWidget) : TWidget  {
     return new TWidget(widget_clone(this != null ? (this.nativeObj || this) : null, parent != null ? (parent.nativeObj || parent) : null));
-  }
+ }
 
 
   /**
@@ -8217,9 +8244,9 @@ class TWidget {
    *
    * @returns 返回TRUE表示相同，否则表示不同。
    */
-  equal(other: TWidget): boolean {
+ equal(other : TWidget) : boolean  {
     return widget_equal(this != null ? (this.nativeObj || this) : null, other != null ? (other.nativeObj || other) : null);
-  }
+ }
 
 
   /**
@@ -8229,9 +8256,9 @@ class TWidget {
    *
    * @returns widget对象。
    */
-  static cast(widget: TWidget): TWidget {
+ static cast(widget : TWidget) : TWidget  {
     return new TWidget(widget_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -8242,9 +8269,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  destroy(): TRet {
+ destroy() : TRet  {
     return widget_destroy(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -8253,9 +8280,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  unref(): TRet {
+ unref() : TRet  {
     return widget_unref(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -8264,9 +8291,9 @@ class TWidget {
    *
    * @returns 返回FALSE表示不是，否则表示是。
    */
-  isSystemBar(): boolean {
+ isSystemBar() : boolean  {
     return widget_is_system_bar(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -8275,9 +8302,9 @@ class TWidget {
    *
    * @returns 返回FALSE表示不是，否则表示是。
    */
-  isNormalWindow(): boolean {
+ isNormalWindow() : boolean  {
     return widget_is_normal_window(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -8286,9 +8313,9 @@ class TWidget {
    *
    * @returns 返回FALSE表示不是，否则表示是。
    */
-  isDialog(): boolean {
+ isDialog() : boolean  {
     return widget_is_dialog(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -8297,9 +8324,9 @@ class TWidget {
    *
    * @returns 返回FALSE表示不是，否则表示是。
    */
-  isPopup(): boolean {
+ isPopup() : boolean  {
     return widget_is_popup(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -8308,9 +8335,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  layout(): TRet {
+ layout() : TRet  {
     return widget_layout(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -8320,9 +8347,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setSelfLayout(params: string): TRet {
+ setSelfLayout(params : string) : TRet  {
     return widget_set_self_layout(this != null ? (this.nativeObj || this) : null, params);
-  }
+ }
 
 
   /**
@@ -8332,9 +8359,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setChildrenLayout(params: string): TRet {
+ setChildrenLayout(params : string) : TRet  {
     return widget_set_children_layout(this != null ? (this.nativeObj || this) : null, params);
-  }
+ }
 
 
   /**
@@ -8347,9 +8374,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setSelfLayoutParams(x: string, y: string, w: string, h: string): TRet {
+ setSelfLayoutParams(x : string, y : string, w : string, h : string) : TRet  {
     return widget_set_self_layout_params(this != null ? (this.nativeObj || this) : null, x, y, w, h);
-  }
+ }
 
 
   /**
@@ -8360,9 +8387,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setStyleInt(state_and_name: string, value: any): TRet {
+ setStyleInt(state_and_name : string, value : any) : TRet  {
     return widget_set_style_int(this != null ? (this.nativeObj || this) : null, state_and_name, value);
-  }
+ }
 
 
   /**
@@ -8373,9 +8400,9 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setStyleStr(state_and_name: string, value: string): TRet {
+ setStyleStr(state_and_name : string, value : string) : TRet  {
     return widget_set_style_str(this != null ? (this.nativeObj || this) : null, state_and_name, value);
-  }
+ }
 
 
   /**
@@ -8386,158 +8413,158 @@ class TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setStyleColor(state_and_name: string, value: any): TRet {
+ setStyleColor(state_and_name : string, value : any) : TRet  {
     return widget_set_style_color(this != null ? (this.nativeObj || this) : null, state_and_name, value);
-  }
+ }
 
 
   /**
    * x坐标(相对于父控件的x坐标)。
    *
    */
-  get x(): number {
-    return widget_t_get_prop_x(this.nativeObj);
-  }
+ get x() : number {
+   return widget_t_get_prop_x(this.nativeObj);
+ }
 
 
   /**
    * y坐标(相对于父控件的y坐标)。
    *
    */
-  get y(): number {
-    return widget_t_get_prop_y(this.nativeObj);
-  }
+ get y() : number {
+   return widget_t_get_prop_y(this.nativeObj);
+ }
 
 
   /**
    * 宽度。
    *
    */
-  get w(): number {
-    return widget_t_get_prop_w(this.nativeObj);
-  }
+ get w() : number {
+   return widget_t_get_prop_w(this.nativeObj);
+ }
 
 
   /**
    * 高度。
    *
    */
-  get h(): number {
-    return widget_t_get_prop_h(this.nativeObj);
-  }
+ get h() : number {
+   return widget_t_get_prop_h(this.nativeObj);
+ }
 
 
   /**
    * 控件名字。
    *
    */
-  get name(): string {
-    return widget_t_get_prop_name(this.nativeObj);
-  }
+ get name() : string {
+   return widget_t_get_prop_name(this.nativeObj);
+ }
 
-  set name(v: string) {
-    this.setName(v);
-  }
+ set name(v : string) {
+   this.setName(v);
+ }
 
 
   /**
    * 保存用于翻译的字符串。
    *
    */
-  get trText(): string {
-    return widget_t_get_prop_tr_text(this.nativeObj);
-  }
+ get trText() : string {
+   return widget_t_get_prop_tr_text(this.nativeObj);
+ }
 
-  set trText(v: string) {
-    this.setTrText(v);
-  }
+ set trText(v : string) {
+   this.setTrText(v);
+ }
 
 
   /**
    * style的名称。
    *
    */
-  get style(): string {
-    return widget_t_get_prop_style(this.nativeObj);
-  }
+ get style() : string {
+   return widget_t_get_prop_style(this.nativeObj);
+ }
 
 
   /**
    * 动画参数。请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
    *
    */
-  get animation(): string {
-    return widget_t_get_prop_animation(this.nativeObj);
-  }
+ get animation() : string {
+   return widget_t_get_prop_animation(this.nativeObj);
+ }
 
-  set animation(v: string) {
-    this.setAnimation(v);
-  }
+ set animation(v : string) {
+   this.setAnimation(v);
+ }
 
 
   /**
    * 启用/禁用状态。
    *
    */
-  get enable(): boolean {
-    return widget_t_get_prop_enable(this.nativeObj);
-  }
+ get enable() : boolean {
+   return widget_t_get_prop_enable(this.nativeObj);
+ }
 
-  set enable(v: boolean) {
-    this.setEnable(v);
-  }
+ set enable(v : boolean) {
+   this.setEnable(v);
+ }
 
 
   /**
    * 是否启用按键音、触屏音和震动等反馈。
    *
    */
-  get feedback(): boolean {
-    return widget_t_get_prop_feedback(this.nativeObj);
-  }
+ get feedback() : boolean {
+   return widget_t_get_prop_feedback(this.nativeObj);
+ }
 
-  set feedback(v: boolean) {
-    this.setFeedback(v);
-  }
+ set feedback(v : boolean) {
+   this.setFeedback(v);
+ }
 
 
   /**
    * 是否可见。
    *
    */
-  get visible(): boolean {
-    return widget_t_get_prop_visible(this.nativeObj);
-  }
+ get visible() : boolean {
+   return widget_t_get_prop_visible(this.nativeObj);
+ }
 
-  set visible(v: boolean) {
-    widget_t_set_prop_visible(this.nativeObj, v);
-  }
+ set visible(v : boolean) {
+   widget_t_set_prop_visible(this.nativeObj, v);
+ }
 
 
   /**
    * 是否接受用户事件。
    *
    */
-  get sensitive(): boolean {
-    return widget_t_get_prop_sensitive(this.nativeObj);
-  }
+ get sensitive() : boolean {
+   return widget_t_get_prop_sensitive(this.nativeObj);
+ }
 
-  set sensitive(v: boolean) {
-    widget_t_set_prop_sensitive(this.nativeObj, v);
-  }
+ set sensitive(v : boolean) {
+   widget_t_set_prop_sensitive(this.nativeObj, v);
+ }
 
 
   /**
    * 是否支持焦点停留。
    *
    */
-  get focusable(): boolean {
-    return widget_t_get_prop_focusable(this.nativeObj);
-  }
+ get focusable() : boolean {
+   return widget_t_get_prop_focusable(this.nativeObj);
+ }
 
-  set focusable(v: boolean) {
-    widget_t_set_prop_focusable(this.nativeObj, v);
-  }
+ set focusable(v : boolean) {
+   widget_t_set_prop_focusable(this.nativeObj, v);
+ }
 
 
   /**
@@ -8545,35 +8572,35 @@ class TWidget {
    *> 如果希望style支持焦点状态，但有不希望焦点停留，可用本属性。
    *
    */
-  get withFocusState(): boolean {
-    return widget_t_get_prop_with_focus_state(this.nativeObj);
-  }
+ get withFocusState() : boolean {
+   return widget_t_get_prop_with_focus_state(this.nativeObj);
+ }
 
-  set withFocusState(v: boolean) {
-    widget_t_set_prop_with_focus_state(this.nativeObj, v);
-  }
+ set withFocusState(v : boolean) {
+   widget_t_set_prop_with_focus_state(this.nativeObj, v);
+ }
 
 
   /**
    * 标识控件是否启用浮动布局，不受父控件的children_layout的控制。
    *
    */
-  get floating(): boolean {
-    return widget_t_get_prop_floating(this.nativeObj);
-  }
+ get floating() : boolean {
+   return widget_t_get_prop_floating(this.nativeObj);
+ }
 
-  set floating(v: boolean) {
-    this.setFloating(v);
-  }
+ set floating(v : boolean) {
+   this.setFloating(v);
+ }
 
 
   /**
    * 父控件
    *
    */
-  get parent(): TWidget {
-    return new TWidget(widget_t_get_prop_parent(this.nativeObj));
-  }
+ get parent() : TWidget {
+   return new TWidget(widget_t_get_prop_parent(this.nativeObj));
+ }
 
 };
 /**
@@ -8586,127 +8613,127 @@ enum TRet {
    * 成功。
    *
    */
-  OK = RET_OK(),
+ OK = RET_OK(),
 
   /**
    * Out of memory。
    *
    */
-  OOM = RET_OOM(),
+ OOM = RET_OOM(),
 
   /**
    * 失败。
    *
    */
-  FAIL = RET_FAIL(),
+ FAIL = RET_FAIL(),
 
   /**
    * 没有实现/不支持。
    *
    */
-  NOT_IMPL = RET_NOT_IMPL(),
+ NOT_IMPL = RET_NOT_IMPL(),
 
   /**
    * 退出。通常用于主循环。
    *
    */
-  QUIT = RET_QUIT(),
+ QUIT = RET_QUIT(),
 
   /**
    * 找到。
    *
    */
-  FOUND = RET_FOUND(),
+ FOUND = RET_FOUND(),
 
   /**
    * 对象忙。
    *
    */
-  BUSY = RET_BUSY(),
+ BUSY = RET_BUSY(),
 
   /**
    * 移出。通常用于定时器。
    *
    */
-  REMOVE = RET_REMOVE(),
+ REMOVE = RET_REMOVE(),
 
   /**
    * 重复。通常用于定时器。
    *
    */
-  REPEAT = RET_REPEAT(),
+ REPEAT = RET_REPEAT(),
 
   /**
    * 没找到。
    *
    */
-  NOT_FOUND = RET_NOT_FOUND(),
+ NOT_FOUND = RET_NOT_FOUND(),
 
   /**
    * 操作完成。
    *
    */
-  DONE = RET_DONE(),
+ DONE = RET_DONE(),
 
   /**
    * 停止后续操作。
    *
    */
-  STOP = RET_STOP(),
+ STOP = RET_STOP(),
 
   /**
    * 跳过当前项。
    *
    */
-  SKIP = RET_SKIP(),
+ SKIP = RET_SKIP(),
 
   /**
    * 继续后续操作。
    *
    */
-  CONTINUE = RET_CONTINUE(),
+ CONTINUE = RET_CONTINUE(),
 
   /**
    * 对象属性变化。
    *
    */
-  OBJECT_CHANGED = RET_OBJECT_CHANGED(),
+ OBJECT_CHANGED = RET_OBJECT_CHANGED(),
 
   /**
    * 集合数目变化。
    *
    */
-  ITEMS_CHANGED = RET_ITEMS_CHANGED(),
+ ITEMS_CHANGED = RET_ITEMS_CHANGED(),
 
   /**
    * 无效参数。
    *
    */
-  BAD_PARAMS = RET_BAD_PARAMS(),
+ BAD_PARAMS = RET_BAD_PARAMS(),
 
   /**
    * 超时。
    *
    */
-  TIMEOUT = RET_TIMEOUT(),
+ TIMEOUT = RET_TIMEOUT(),
 
   /**
    * CRC错误。
    *
    */
-  CRC = RET_CRC(),
+ CRC = RET_CRC(),
 
   /**
    * IO错误。
    *
    */
-  IO = RET_IO(),
+ IO = RET_IO(),
 
   /**
    * End of Stream
    *
    */
-  EOS = RET_EOS(),
+ EOS = RET_EOS(),
 };
 
 
@@ -8714,11 +8741,11 @@ enum TRet {
  * 定时器管理器。
  *
  */
-class TTimerManager {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TTimerManager { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 };
 /**
@@ -8727,7 +8754,7 @@ class TTimerManager {
  *它本身并没有任何意义，一般用来计算时间间隔，如实现定时器和动画等等。
  *
  */
-class TTimeNow {
+class TTimeNow { 
 
   /**
    * 获取当前时间(秒)。
@@ -8735,9 +8762,9 @@ class TTimeNow {
    *
    * @returns 返回当前时间(秒)。
    */
-  static s(): number {
+ static s() : number  {
     return time_now_s();
-  }
+ }
 
 
   /**
@@ -8746,9 +8773,9 @@ class TTimeNow {
    *
    * @returns 返回当前时间(毫秒)。
    */
-  static ms(): number {
+ static ms() : number  {
     return time_now_ms();
-  }
+ }
 
 };
 /**
@@ -8761,108 +8788,108 @@ enum TImageDrawType {
    * 缺省显示。将图片按原大小显示在目标矩形的左上角。
    *
    */
-  DEFAULT = IMAGE_DRAW_DEFAULT(),
+ DEFAULT = IMAGE_DRAW_DEFAULT(),
 
   /**
    * 居中显示。将图片按原大小显示在目标矩形的中央。
    *
    */
-  CENTER = IMAGE_DRAW_CENTER(),
+ CENTER = IMAGE_DRAW_CENTER(),
 
   /**
    * 图标显示。同居中显示，但会根据屏幕密度调整大小。
    *
    */
-  ICON = IMAGE_DRAW_ICON(),
+ ICON = IMAGE_DRAW_ICON(),
 
   /**
    * 缩放显示。将图片缩放至目标矩形的大小(不保证宽高成比例)。
    *
    */
-  SCALE = IMAGE_DRAW_SCALE(),
+ SCALE = IMAGE_DRAW_SCALE(),
 
   /**
    * 自动缩放显示。将图片缩放至目标矩形的宽度或高度(选取最小的比例)，并居中显示。
    *
    */
-  SCALE_AUTO = IMAGE_DRAW_SCALE_AUTO(),
+ SCALE_AUTO = IMAGE_DRAW_SCALE_AUTO(),
 
   /**
    * 如果图片比目标矩形大，自动缩小显示，否则居中显示。
    *
    */
-  SCALE_DOWN = IMAGE_DRAW_SCALE_DOWN(),
+ SCALE_DOWN = IMAGE_DRAW_SCALE_DOWN(),
 
   /**
    * 宽度缩放显示。 将图片缩放至目标矩形的宽度，高度按此比例进行缩放，超出不部分不显示。
    *
    */
-  SCALE_W = IMAGE_DRAW_SCALE_W(),
+ SCALE_W = IMAGE_DRAW_SCALE_W(),
 
   /**
    * 高度缩放显示。将图片缩放至目标矩形的高度，宽度按此比例进行缩放，超出不部分不显示。
    *
    */
-  SCALE_H = IMAGE_DRAW_SCALE_H(),
+ SCALE_H = IMAGE_DRAW_SCALE_H(),
 
   /**
    * 平铺显示。
    *
    */
-  REPEAT = IMAGE_DRAW_REPEAT(),
+ REPEAT = IMAGE_DRAW_REPEAT(),
 
   /**
    * 水平方向平铺显示，垂直方向缩放。
    *
    */
-  REPEAT_X = IMAGE_DRAW_REPEAT_X(),
+ REPEAT_X = IMAGE_DRAW_REPEAT_X(),
 
   /**
    * 垂直方向平铺显示，水平方向缩放。
    *
    */
-  REPEAT_Y = IMAGE_DRAW_REPEAT_Y(),
+ REPEAT_Y = IMAGE_DRAW_REPEAT_Y(),
 
   /**
    * 垂直方向平铺显示，水平方向缩放(从底部到顶部)。
    *
    */
-  REPEAT_Y_INVERSE = IMAGE_DRAW_REPEAT_Y_INVERSE(),
+ REPEAT_Y_INVERSE = IMAGE_DRAW_REPEAT_Y_INVERSE(),
 
   /**
    * 9宫格显示。
    *将图片分成等大小的9块，4个角按原大小显示在目标矩形的4个角，左右上下和中间5块分别缩放显示在对应的目标区域。
    *
    */
-  PATCH9 = IMAGE_DRAW_PATCH9(),
+ PATCH9 = IMAGE_DRAW_PATCH9(),
 
   /**
    * 水平方向3宫格显示，垂直方向居中显示。
    *将图片在水平方向上分成等大小的3块，左右两块按原大小显示在目标矩形的左右，中间一块缩放显示在目标区域中间剩余部分。
    *
    */
-  PATCH3_X = IMAGE_DRAW_PATCH3_X(),
+ PATCH3_X = IMAGE_DRAW_PATCH3_X(),
 
   /**
    * 垂直方向3宫格显示，水平方向居中显示。
    *将图片在垂直方向上分成等大小的3块，上下两块按原大小显示在目标矩形的上下，中间一块缩放显示在目标区域中间剩余部分。
    *
    */
-  PATCH3_Y = IMAGE_DRAW_PATCH3_Y(),
+ PATCH3_Y = IMAGE_DRAW_PATCH3_Y(),
 
   /**
    * 水平方向3宫格显示，垂直方向缩放显示。
    *将图片在水平方向上分成等大小的3块，左右两块按原大小显示在目标矩形的左右，中间一块缩放显示在目标区域中间剩余部分。
    *
    */
-  PATCH3_X_SCALE_Y = IMAGE_DRAW_PATCH3_X_SCALE_Y(),
+ PATCH3_X_SCALE_Y = IMAGE_DRAW_PATCH3_X_SCALE_Y(),
 
   /**
    * 垂直方向3宫格显示，水平方向缩放显示。
    *将图片在垂直方向上分成等大小的3块，上下两块按原大小显示在目标矩形的上下，中间一块缩放显示在目标区域中间剩余部分。
    *
    */
-  PATCH3_Y_SCALE_X = IMAGE_DRAW_PATCH3_Y_SCALE_X(),
+ PATCH3_Y_SCALE_X = IMAGE_DRAW_PATCH3_Y_SCALE_X(),
 };
 
 
@@ -8870,11 +8897,11 @@ enum TImageDrawType {
  * 提供基本的绘图功能和状态管理。
  *
  */
-class TCanvas {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TCanvas { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
@@ -8883,9 +8910,9 @@ class TCanvas {
    *
    * @returns 返回画布的宽度。
    */
-  getWidth(): number {
+ getWidth() : number  {
     return canvas_get_width(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -8894,9 +8921,9 @@ class TCanvas {
    *
    * @returns 返回画布的高度。
    */
-  getHeight(): number {
+ getHeight() : number  {
     return canvas_get_height(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -8906,9 +8933,9 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  getClipRect(r: TRect): TRet {
+ getClipRect(r : TRect) : TRet  {
     return canvas_get_clip_rect(this != null ? (this.nativeObj || this) : null, r != null ? (r.nativeObj || r) : null);
-  }
+ }
 
 
   /**
@@ -8918,9 +8945,9 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setClipRect(r: TRect): TRet {
+ setClipRect(r : TRect) : TRet  {
     return canvas_set_clip_rect(this != null ? (this.nativeObj || this) : null, r != null ? (r.nativeObj || r) : null);
-  }
+ }
 
 
   /**
@@ -8931,9 +8958,9 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setClipRectEx(r: TRect, translate: boolean): TRet {
+ setClipRectEx(r : TRect, translate : boolean) : TRet  {
     return canvas_set_clip_rect_ex(this != null ? (this.nativeObj || this) : null, r != null ? (r.nativeObj || r) : null, translate);
-  }
+ }
 
 
   /**
@@ -8945,9 +8972,9 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setFillColor(color: string): TRet {
+ setFillColor(color : string) : TRet  {
     return canvas_set_fill_color_str(this != null ? (this.nativeObj || this) : null, color);
-  }
+ }
 
 
   /**
@@ -8959,9 +8986,9 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setTextColor(color: string): TRet {
+ setTextColor(color : string) : TRet  {
     return canvas_set_text_color_str(this != null ? (this.nativeObj || this) : null, color);
-  }
+ }
 
 
   /**
@@ -8973,9 +9000,9 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setStrokeColor(color: string): TRet {
+ setStrokeColor(color : string) : TRet  {
     return canvas_set_stroke_color_str(this != null ? (this.nativeObj || this) : null, color);
-  }
+ }
 
 
   /**
@@ -8985,9 +9012,9 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setGlobalAlpha(alpha: number): TRet {
+ setGlobalAlpha(alpha : number) : TRet  {
     return canvas_set_global_alpha(this != null ? (this.nativeObj || this) : null, alpha);
-  }
+ }
 
 
   /**
@@ -8998,9 +9025,9 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  translate(dx: number, dy: number): TRet {
+ translate(dx : number, dy : number) : TRet  {
     return canvas_translate(this != null ? (this.nativeObj || this) : null, dx, dy);
-  }
+ }
 
 
   /**
@@ -9011,9 +9038,9 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  untranslate(dx: number, dy: number): TRet {
+ untranslate(dx : number, dy : number) : TRet  {
     return canvas_untranslate(this != null ? (this.nativeObj || this) : null, dx, dy);
-  }
+ }
 
 
   /**
@@ -9025,9 +9052,9 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  drawVline(x: number, y: number, h: number): TRet {
+ drawVline(x : number, y : number, h : number) : TRet  {
     return canvas_draw_vline(this != null ? (this.nativeObj || this) : null, x, y, h);
-  }
+ }
 
 
   /**
@@ -9039,9 +9066,9 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  drawHline(x: number, y: number, w: number): TRet {
+ drawHline(x : number, y : number, w : number) : TRet  {
     return canvas_draw_hline(this != null ? (this.nativeObj || this) : null, x, y, w);
-  }
+ }
 
 
   /**
@@ -9054,9 +9081,9 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  fillRect(x: number, y: number, w: number, h: number): TRet {
+ fillRect(x : number, y : number, w : number, h : number) : TRet  {
     return canvas_fill_rect(this != null ? (this.nativeObj || this) : null, x, y, w, h);
-  }
+ }
 
 
   /**
@@ -9069,9 +9096,9 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  strokeRect(x: number, y: number, w: number, h: number): TRet {
+ strokeRect(x : number, y : number, w : number, h : number) : TRet  {
     return canvas_stroke_rect(this != null ? (this.nativeObj || this) : null, x, y, w, h);
-  }
+ }
 
 
   /**
@@ -9082,9 +9109,9 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setFont(name: string, size: number): TRet {
+ setFont(name : string, size : number) : TRet  {
     return canvas_set_font(this != null ? (this.nativeObj || this) : null, name, size);
-  }
+ }
 
 
   /**
@@ -9096,9 +9123,9 @@ class TCanvas {
    *
    * @returns 返回文本所占的宽度。
    */
-  measureText(str: string): number {
+ measureText(str : string) : number  {
     return canvas_measure_utf8(this != null ? (this.nativeObj || this) : null, str);
-  }
+ }
 
 
   /**
@@ -9112,9 +9139,9 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  drawText(str: string, x: number, y: number): TRet {
+ drawText(str : string, x : number, y : number) : TRet  {
     return canvas_draw_utf8(this != null ? (this.nativeObj || this) : null, str, x, y);
-  }
+ }
 
 
   /**
@@ -9127,9 +9154,9 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  drawTextInRect(str: string, r: TRect): TRet {
+ drawTextInRect(str : string, r : TRect) : TRet  {
     return canvas_draw_utf8_in_rect(this != null ? (this.nativeObj || this) : null, str, r != null ? (r.nativeObj || r) : null);
-  }
+ }
 
 
   /**
@@ -9141,9 +9168,9 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  drawIcon(img: TBitmap, cx: number, cy: number): TRet {
+ drawIcon(img : TBitmap, cx : number, cy : number) : TRet  {
     return canvas_draw_icon(this != null ? (this.nativeObj || this) : null, img != null ? (img.nativeObj || img) : null, cx, cy);
-  }
+ }
 
 
   /**
@@ -9155,9 +9182,9 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  drawImage(img: TBitmap, src: TRect, dst: TRect): TRet {
+ drawImage(img : TBitmap, src : TRect, dst : TRect) : TRet  {
     return canvas_draw_image(this != null ? (this.nativeObj || this) : null, img != null ? (img.nativeObj || img) : null, src != null ? (src.nativeObj || src) : null, dst != null ? (dst.nativeObj || dst) : null);
-  }
+ }
 
 
   /**
@@ -9169,9 +9196,9 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  drawImageEx(img: TBitmap, draw_type: TImageDrawType, dst: TRect): TRet {
+ drawImageEx(img : TBitmap, draw_type : TImageDrawType, dst : TRect) : TRet  {
     return canvas_draw_image_ex(this != null ? (this.nativeObj || this) : null, img != null ? (img.nativeObj || img) : null, draw_type, dst != null ? (dst.nativeObj || dst) : null);
-  }
+ }
 
 
   /**
@@ -9180,9 +9207,9 @@ class TCanvas {
    *
    * @returns 返回vgcanvas对象。
    */
-  getVgcanvas(): TVgcanvas {
+ getVgcanvas() : TVgcanvas  {
     return new TVgcanvas(canvas_get_vgcanvas(this != null ? (this.nativeObj || this) : null));
-  }
+ }
 
 
   /**
@@ -9192,9 +9219,9 @@ class TCanvas {
    *
    * @returns canvas对象。
    */
-  static cast(c: TCanvas): TCanvas {
+ static cast(c : TCanvas) : TCanvas  {
     return new TCanvas(canvas_cast(c != null ? (c.nativeObj || c) : null));
-  }
+ }
 
 
   /**
@@ -9203,69 +9230,69 @@ class TCanvas {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  reset(): TRet {
+ reset() : TRet  {
     return canvas_reset(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
    * x坐标偏移。
    *
    */
-  get ox(): number {
-    return canvas_t_get_prop_ox(this.nativeObj);
-  }
+ get ox() : number {
+   return canvas_t_get_prop_ox(this.nativeObj);
+ }
 
 
   /**
    * y坐标偏移。
    *
    */
-  get oy(): number {
-    return canvas_t_get_prop_oy(this.nativeObj);
-  }
+ get oy() : number {
+   return canvas_t_get_prop_oy(this.nativeObj);
+ }
 
 
   /**
    * 当前字体名称。
    *
    */
-  get fontName(): string {
-    return canvas_t_get_prop_font_name(this.nativeObj);
-  }
+ get fontName() : string {
+   return canvas_t_get_prop_font_name(this.nativeObj);
+ }
 
 
   /**
    * 当前字体大小。
    *
    */
-  get fontSize(): number {
-    return canvas_t_get_prop_font_size(this.nativeObj);
-  }
+ get fontSize() : number {
+   return canvas_t_get_prop_font_size(this.nativeObj);
+ }
 
 
   /**
    * 当前全局alpha。
    *
    */
-  get globalAlpha(): number {
-    return canvas_t_get_prop_global_alpha(this.nativeObj);
-  }
+ get globalAlpha() : number {
+   return canvas_t_get_prop_global_alpha(this.nativeObj);
+ }
 
-  set globalAlpha(v: number) {
-    this.setGlobalAlpha(v);
-  }
+ set globalAlpha(v : number) {
+   this.setGlobalAlpha(v);
+ }
 
 };
 /**
  * 命名的值。
  *
  */
-class TNamedValue {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TNamedValue { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
@@ -9274,9 +9301,9 @@ class TNamedValue {
    *
    * @returns 返回named_value对象。
    */
-  static create(): TNamedValue {
+ static create() : TNamedValue  {
     return new TNamedValue(named_value_create());
-  }
+ }
 
 
   /**
@@ -9286,9 +9313,9 @@ class TNamedValue {
    *
    * @returns 返回named_value对象。
    */
-  static cast(nv: TNamedValue): TNamedValue {
+ static cast(nv : TNamedValue) : TNamedValue  {
     return new TNamedValue(named_value_cast(nv != null ? (nv.nativeObj || nv) : null));
-  }
+ }
 
 
   /**
@@ -9298,9 +9325,9 @@ class TNamedValue {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setName(name: string): TRet {
+ setName(name : string) : TRet  {
     return named_value_set_name(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
@@ -9310,9 +9337,9 @@ class TNamedValue {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setValue(value: TValue): TRet {
+ setValue(value : TValue) : TRet  {
     return named_value_set_value(this != null ? (this.nativeObj || this) : null, value != null ? (value.nativeObj || value) : null);
-  }
+ }
 
 
   /**
@@ -9321,9 +9348,9 @@ class TNamedValue {
    *
    * @returns 返回值对象。
    */
-  getValue(): TValue {
+ getValue() : TValue  {
     return new TValue(named_value_get_value(this != null ? (this.nativeObj || this) : null));
-  }
+ }
 
 
   /**
@@ -9332,22 +9359,22 @@ class TNamedValue {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  destroy(): TRet {
+ destroy() : TRet  {
     return named_value_destroy(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
    * 名称。
    *
    */
-  get name(): string {
-    return named_value_t_get_prop_name(this.nativeObj);
-  }
+ get name() : string {
+   return named_value_t_get_prop_name(this.nativeObj);
+ }
 
-  set name(v: string) {
-    this.setName(v);
-  }
+ set name(v : string) {
+   this.setName(v);
+ }
 
 };
 /**
@@ -9360,613 +9387,613 @@ enum TMIME_TYPE {
    * "application/envoy"。
    *
    */
-  APPLICATION_ENVOY = MIME_TYPE_APPLICATION_ENVOY(),
+ APPLICATION_ENVOY = MIME_TYPE_APPLICATION_ENVOY(),
 
   /**
    * "application/fractals"。
    *
    */
-  APPLICATION_FRACTALS = MIME_TYPE_APPLICATION_FRACTALS(),
+ APPLICATION_FRACTALS = MIME_TYPE_APPLICATION_FRACTALS(),
 
   /**
    * "application/futuresplash"。
    *
    */
-  APPLICATION_FUTURESPLASH = MIME_TYPE_APPLICATION_FUTURESPLASH(),
+ APPLICATION_FUTURESPLASH = MIME_TYPE_APPLICATION_FUTURESPLASH(),
 
   /**
    * "application/hta"。
    *
    */
-  APPLICATION_HTA = MIME_TYPE_APPLICATION_HTA(),
+ APPLICATION_HTA = MIME_TYPE_APPLICATION_HTA(),
 
   /**
    * "application/json"。
    *
    */
-  APPLICATION_JSON = MIME_TYPE_APPLICATION_JSON(),
+ APPLICATION_JSON = MIME_TYPE_APPLICATION_JSON(),
 
   /**
    * "application/ubjson"。
    *
    */
-  APPLICATION_UBJSON = MIME_TYPE_APPLICATION_UBJSON(),
+ APPLICATION_UBJSON = MIME_TYPE_APPLICATION_UBJSON(),
 
   /**
    * "application/mac-binhex40"。
    *
    */
-  APPLICATION_MAC_BINHEX40 = MIME_TYPE_APPLICATION_MAC_BINHEX40(),
+ APPLICATION_MAC_BINHEX40 = MIME_TYPE_APPLICATION_MAC_BINHEX40(),
 
   /**
    * "application/msword"。
    *
    */
-  APPLICATION_MSWORD = MIME_TYPE_APPLICATION_MSWORD(),
+ APPLICATION_MSWORD = MIME_TYPE_APPLICATION_MSWORD(),
 
   /**
    * "application/octet-stream"。
    *
    */
-  APPLICATION_OCTET_STREAM = MIME_TYPE_APPLICATION_OCTET_STREAM(),
+ APPLICATION_OCTET_STREAM = MIME_TYPE_APPLICATION_OCTET_STREAM(),
 
   /**
    * "application/oda"。
    *
    */
-  APPLICATION_ODA = MIME_TYPE_APPLICATION_ODA(),
+ APPLICATION_ODA = MIME_TYPE_APPLICATION_ODA(),
 
   /**
    * "application/olescript"。
    *
    */
-  APPLICATION_OLESCRIPT = MIME_TYPE_APPLICATION_OLESCRIPT(),
+ APPLICATION_OLESCRIPT = MIME_TYPE_APPLICATION_OLESCRIPT(),
 
   /**
    * "application/pdf"。
    *
    */
-  APPLICATION_PDF = MIME_TYPE_APPLICATION_PDF(),
+ APPLICATION_PDF = MIME_TYPE_APPLICATION_PDF(),
 
   /**
    * "application/pics-rules"。
    *
    */
-  APPLICATION_PICS_RULES = MIME_TYPE_APPLICATION_PICS_RULES(),
+ APPLICATION_PICS_RULES = MIME_TYPE_APPLICATION_PICS_RULES(),
 
   /**
    * "application/pkcs10"。
    *
    */
-  APPLICATION_PKCS10 = MIME_TYPE_APPLICATION_PKCS10(),
+ APPLICATION_PKCS10 = MIME_TYPE_APPLICATION_PKCS10(),
 
   /**
    * "application/pkix-crl"。
    *
    */
-  APPLICATION_PKIX_CRL = MIME_TYPE_APPLICATION_PKIX_CRL(),
+ APPLICATION_PKIX_CRL = MIME_TYPE_APPLICATION_PKIX_CRL(),
 
   /**
    * "application/postscript"。
    *
    */
-  APPLICATION_POSTSCRIPT = MIME_TYPE_APPLICATION_POSTSCRIPT(),
+ APPLICATION_POSTSCRIPT = MIME_TYPE_APPLICATION_POSTSCRIPT(),
 
   /**
    * "application/rtf"。
    *
    */
-  APPLICATION_RTF = MIME_TYPE_APPLICATION_RTF(),
+ APPLICATION_RTF = MIME_TYPE_APPLICATION_RTF(),
 
   /**
    * "application/vnd.ms-excel"。
    *
    */
-  APPLICATION_VND_MS_EXCEL = MIME_TYPE_APPLICATION_VND_MS_EXCEL(),
+ APPLICATION_VND_MS_EXCEL = MIME_TYPE_APPLICATION_VND_MS_EXCEL(),
 
   /**
    * "application/vnd.ms-outlook"。
    *
    */
-  APPLICATION_VND_MS_OUTLOOK = MIME_TYPE_APPLICATION_VND_MS_OUTLOOK(),
+ APPLICATION_VND_MS_OUTLOOK = MIME_TYPE_APPLICATION_VND_MS_OUTLOOK(),
 
   /**
    * "application/vnd.ms-pkicertstore"。
    *
    */
-  APPLICATION_VND_MS_PKICERTSTORE = MIME_TYPE_APPLICATION_VND_MS_PKICERTSTORE(),
+ APPLICATION_VND_MS_PKICERTSTORE = MIME_TYPE_APPLICATION_VND_MS_PKICERTSTORE(),
 
   /**
    * "application/vnd.ms-pkiseccat"。
    *
    */
-  APPLICATION_VND_MS_PKISECCAT = MIME_TYPE_APPLICATION_VND_MS_PKISECCAT(),
+ APPLICATION_VND_MS_PKISECCAT = MIME_TYPE_APPLICATION_VND_MS_PKISECCAT(),
 
   /**
    * "application/vnd.ms-pkistl"。
    *
    */
-  APPLICATION_VND_MS_PKISTL = MIME_TYPE_APPLICATION_VND_MS_PKISTL(),
+ APPLICATION_VND_MS_PKISTL = MIME_TYPE_APPLICATION_VND_MS_PKISTL(),
 
   /**
    * "application/vnd.ms-powerpoint"。
    *
    */
-  APPLICATION_VND_MS_POWERPOINT = MIME_TYPE_APPLICATION_VND_MS_POWERPOINT(),
+ APPLICATION_VND_MS_POWERPOINT = MIME_TYPE_APPLICATION_VND_MS_POWERPOINT(),
 
   /**
    * "application/vnd.ms-project"。
    *
    */
-  APPLICATION_VND_MS_PROJECT = MIME_TYPE_APPLICATION_VND_MS_PROJECT(),
+ APPLICATION_VND_MS_PROJECT = MIME_TYPE_APPLICATION_VND_MS_PROJECT(),
 
   /**
    * "application/vnd.ms-works"。
    *
    */
-  APPLICATION_VND_MS_WORKS = MIME_TYPE_APPLICATION_VND_MS_WORKS(),
+ APPLICATION_VND_MS_WORKS = MIME_TYPE_APPLICATION_VND_MS_WORKS(),
 
   /**
    * "application/winhlp"。
    *
    */
-  APPLICATION_WINHLP = MIME_TYPE_APPLICATION_WINHLP(),
+ APPLICATION_WINHLP = MIME_TYPE_APPLICATION_WINHLP(),
 
   /**
    * "application/x-bcpio"。
    *
    */
-  APPLICATION_X_BCPIO = MIME_TYPE_APPLICATION_X_BCPIO(),
+ APPLICATION_X_BCPIO = MIME_TYPE_APPLICATION_X_BCPIO(),
 
   /**
    * "application/x-cdf"。
    *
    */
-  APPLICATION_X_CDF = MIME_TYPE_APPLICATION_X_CDF(),
+ APPLICATION_X_CDF = MIME_TYPE_APPLICATION_X_CDF(),
 
   /**
    * "application/x-compress"。
    *
    */
-  APPLICATION_X_COMPRESS = MIME_TYPE_APPLICATION_X_COMPRESS(),
+ APPLICATION_X_COMPRESS = MIME_TYPE_APPLICATION_X_COMPRESS(),
 
   /**
    * "application/x-compressed"。
    *
    */
-  APPLICATION_X_COMPRESSED = MIME_TYPE_APPLICATION_X_COMPRESSED(),
+ APPLICATION_X_COMPRESSED = MIME_TYPE_APPLICATION_X_COMPRESSED(),
 
   /**
    * "application/x-cpio"。
    *
    */
-  APPLICATION_X_CPIO = MIME_TYPE_APPLICATION_X_CPIO(),
+ APPLICATION_X_CPIO = MIME_TYPE_APPLICATION_X_CPIO(),
 
   /**
    * "application/x-csh"。
    *
    */
-  APPLICATION_X_CSH = MIME_TYPE_APPLICATION_X_CSH(),
+ APPLICATION_X_CSH = MIME_TYPE_APPLICATION_X_CSH(),
 
   /**
    * "application/x-director"。
    *
    */
-  APPLICATION_X_DIRECTOR = MIME_TYPE_APPLICATION_X_DIRECTOR(),
+ APPLICATION_X_DIRECTOR = MIME_TYPE_APPLICATION_X_DIRECTOR(),
 
   /**
    * "application/x-dvi"。
    *
    */
-  APPLICATION_X_DVI = MIME_TYPE_APPLICATION_X_DVI(),
+ APPLICATION_X_DVI = MIME_TYPE_APPLICATION_X_DVI(),
 
   /**
    * "application/x-gtar"。
    *
    */
-  APPLICATION_X_GTAR = MIME_TYPE_APPLICATION_X_GTAR(),
+ APPLICATION_X_GTAR = MIME_TYPE_APPLICATION_X_GTAR(),
 
   /**
    * "application/x-gzip"。
    *
    */
-  APPLICATION_X_GZIP = MIME_TYPE_APPLICATION_X_GZIP(),
+ APPLICATION_X_GZIP = MIME_TYPE_APPLICATION_X_GZIP(),
 
   /**
    * "application/x-hdf"。
    *
    */
-  APPLICATION_X_HDF = MIME_TYPE_APPLICATION_X_HDF(),
+ APPLICATION_X_HDF = MIME_TYPE_APPLICATION_X_HDF(),
 
   /**
    * "application/x-iphone"。
    *
    */
-  APPLICATION_X_IPHONE = MIME_TYPE_APPLICATION_X_IPHONE(),
+ APPLICATION_X_IPHONE = MIME_TYPE_APPLICATION_X_IPHONE(),
 
   /**
    * "application/x-javascript"。
    *
    */
-  APPLICATION_X_JAVASCRIPT = MIME_TYPE_APPLICATION_X_JAVASCRIPT(),
+ APPLICATION_X_JAVASCRIPT = MIME_TYPE_APPLICATION_X_JAVASCRIPT(),
 
   /**
    * "application/x-latex"。
    *
    */
-  APPLICATION_X_LATEX = MIME_TYPE_APPLICATION_X_LATEX(),
+ APPLICATION_X_LATEX = MIME_TYPE_APPLICATION_X_LATEX(),
 
   /**
    * "application/x-msaccess"。
    *
    */
-  APPLICATION_X_MSACCESS = MIME_TYPE_APPLICATION_X_MSACCESS(),
+ APPLICATION_X_MSACCESS = MIME_TYPE_APPLICATION_X_MSACCESS(),
 
   /**
    * "application/x-mscardfile"。
    *
    */
-  APPLICATION_X_MSCARDFILE = MIME_TYPE_APPLICATION_X_MSCARDFILE(),
+ APPLICATION_X_MSCARDFILE = MIME_TYPE_APPLICATION_X_MSCARDFILE(),
 
   /**
    * "application/x-msclip"。
    *
    */
-  APPLICATION_X_MSCLIP = MIME_TYPE_APPLICATION_X_MSCLIP(),
+ APPLICATION_X_MSCLIP = MIME_TYPE_APPLICATION_X_MSCLIP(),
 
   /**
    * "application/x-msdownload"。
    *
    */
-  APPLICATION_X_MSDOWNLOAD = MIME_TYPE_APPLICATION_X_MSDOWNLOAD(),
+ APPLICATION_X_MSDOWNLOAD = MIME_TYPE_APPLICATION_X_MSDOWNLOAD(),
 
   /**
    * "application/x-msmediaview"。
    *
    */
-  APPLICATION_X_MSMEDIAVIEW = MIME_TYPE_APPLICATION_X_MSMEDIAVIEW(),
+ APPLICATION_X_MSMEDIAVIEW = MIME_TYPE_APPLICATION_X_MSMEDIAVIEW(),
 
   /**
    * "application/x-msmetafile"。
    *
    */
-  APPLICATION_X_MSMETAFILE = MIME_TYPE_APPLICATION_X_MSMETAFILE(),
+ APPLICATION_X_MSMETAFILE = MIME_TYPE_APPLICATION_X_MSMETAFILE(),
 
   /**
    * "application/x-msmoney"。
    *
    */
-  APPLICATION_X_MSMONEY = MIME_TYPE_APPLICATION_X_MSMONEY(),
+ APPLICATION_X_MSMONEY = MIME_TYPE_APPLICATION_X_MSMONEY(),
 
   /**
    * "application/x-mspublisher"。
    *
    */
-  APPLICATION_X_MSPUBLISHER = MIME_TYPE_APPLICATION_X_MSPUBLISHER(),
+ APPLICATION_X_MSPUBLISHER = MIME_TYPE_APPLICATION_X_MSPUBLISHER(),
 
   /**
    * "application/x-msschedule"。
    *
    */
-  APPLICATION_X_MSSCHEDULE = MIME_TYPE_APPLICATION_X_MSSCHEDULE(),
+ APPLICATION_X_MSSCHEDULE = MIME_TYPE_APPLICATION_X_MSSCHEDULE(),
 
   /**
    * "application/x-msterminal"。
    *
    */
-  APPLICATION_X_MSTERMINAL = MIME_TYPE_APPLICATION_X_MSTERMINAL(),
+ APPLICATION_X_MSTERMINAL = MIME_TYPE_APPLICATION_X_MSTERMINAL(),
 
   /**
    * "application/x-mswrite"。
    *
    */
-  APPLICATION_X_MSWRITE = MIME_TYPE_APPLICATION_X_MSWRITE(),
+ APPLICATION_X_MSWRITE = MIME_TYPE_APPLICATION_X_MSWRITE(),
 
   /**
    * "application/x-netcdf"。
    *
    */
-  APPLICATION_X_NETCDF = MIME_TYPE_APPLICATION_X_NETCDF(),
+ APPLICATION_X_NETCDF = MIME_TYPE_APPLICATION_X_NETCDF(),
 
   /**
    * "application/x-perfmon"。
    *
    */
-  APPLICATION_X_PERFMON = MIME_TYPE_APPLICATION_X_PERFMON(),
+ APPLICATION_X_PERFMON = MIME_TYPE_APPLICATION_X_PERFMON(),
 
   /**
    * "application/x-pkcs12"。
    *
    */
-  APPLICATION_X_PKCS12 = MIME_TYPE_APPLICATION_X_PKCS12(),
+ APPLICATION_X_PKCS12 = MIME_TYPE_APPLICATION_X_PKCS12(),
 
   /**
    * "application/x-sh"。
    *
    */
-  APPLICATION_X_SH = MIME_TYPE_APPLICATION_X_SH(),
+ APPLICATION_X_SH = MIME_TYPE_APPLICATION_X_SH(),
 
   /**
    * "application/x-shar"。
    *
    */
-  APPLICATION_X_SHAR = MIME_TYPE_APPLICATION_X_SHAR(),
+ APPLICATION_X_SHAR = MIME_TYPE_APPLICATION_X_SHAR(),
 
   /**
    * "application/x-shockwave-flash"。
    *
    */
-  APPLICATION_X_SHOCKWAVE_FLASH = MIME_TYPE_APPLICATION_X_SHOCKWAVE_FLASH(),
+ APPLICATION_X_SHOCKWAVE_FLASH = MIME_TYPE_APPLICATION_X_SHOCKWAVE_FLASH(),
 
   /**
    * "application/x-stuffit"。
    *
    */
-  APPLICATION_X_STUFFIT = MIME_TYPE_APPLICATION_X_STUFFIT(),
+ APPLICATION_X_STUFFIT = MIME_TYPE_APPLICATION_X_STUFFIT(),
 
   /**
    * "application/x-sv4cpio"。
    *
    */
-  APPLICATION_X_SV4CPIO = MIME_TYPE_APPLICATION_X_SV4CPIO(),
+ APPLICATION_X_SV4CPIO = MIME_TYPE_APPLICATION_X_SV4CPIO(),
 
   /**
    * "application/x-sv4crc"。
    *
    */
-  APPLICATION_X_SV4CRC = MIME_TYPE_APPLICATION_X_SV4CRC(),
+ APPLICATION_X_SV4CRC = MIME_TYPE_APPLICATION_X_SV4CRC(),
 
   /**
    * "application/x-tar"。
    *
    */
-  APPLICATION_X_TAR = MIME_TYPE_APPLICATION_X_TAR(),
+ APPLICATION_X_TAR = MIME_TYPE_APPLICATION_X_TAR(),
 
   /**
    * "application/x-tcl"。
    *
    */
-  APPLICATION_X_TCL = MIME_TYPE_APPLICATION_X_TCL(),
+ APPLICATION_X_TCL = MIME_TYPE_APPLICATION_X_TCL(),
 
   /**
    * "application/x-tex"。
    *
    */
-  APPLICATION_X_TEX = MIME_TYPE_APPLICATION_X_TEX(),
+ APPLICATION_X_TEX = MIME_TYPE_APPLICATION_X_TEX(),
 
   /**
    * "application/x-texinfo"。
    *
    */
-  APPLICATION_X_TEXINFO = MIME_TYPE_APPLICATION_X_TEXINFO(),
+ APPLICATION_X_TEXINFO = MIME_TYPE_APPLICATION_X_TEXINFO(),
 
   /**
    * "application/x-troff"。
    *
    */
-  APPLICATION_X_TROFF = MIME_TYPE_APPLICATION_X_TROFF(),
+ APPLICATION_X_TROFF = MIME_TYPE_APPLICATION_X_TROFF(),
 
   /**
    * "application/x-ustar"。
    *
    */
-  APPLICATION_X_USTAR = MIME_TYPE_APPLICATION_X_USTAR(),
+ APPLICATION_X_USTAR = MIME_TYPE_APPLICATION_X_USTAR(),
 
   /**
    * "application/zip"。
    *
    */
-  APPLICATION_ZIP = MIME_TYPE_APPLICATION_ZIP(),
+ APPLICATION_ZIP = MIME_TYPE_APPLICATION_ZIP(),
 
   /**
    * "audio/basic"。
    *
    */
-  AUDIO_BASIC = MIME_TYPE_AUDIO_BASIC(),
+ AUDIO_BASIC = MIME_TYPE_AUDIO_BASIC(),
 
   /**
    * "audio/mid"。
    *
    */
-  AUDIO_MID = MIME_TYPE_AUDIO_MID(),
+ AUDIO_MID = MIME_TYPE_AUDIO_MID(),
 
   /**
    * "audio/mpeg"。
    *
    */
-  AUDIO_MPEG = MIME_TYPE_AUDIO_MPEG(),
+ AUDIO_MPEG = MIME_TYPE_AUDIO_MPEG(),
 
   /**
    * "audio/x-aiff"。
    *
    */
-  AUDIO_X_AIFF = MIME_TYPE_AUDIO_X_AIFF(),
+ AUDIO_X_AIFF = MIME_TYPE_AUDIO_X_AIFF(),
 
   /**
    * "audio/x-mpegurl"。
    *
    */
-  AUDIO_X_MPEGURL = MIME_TYPE_AUDIO_X_MPEGURL(),
+ AUDIO_X_MPEGURL = MIME_TYPE_AUDIO_X_MPEGURL(),
 
   /**
    * "audio/x-wav"。
    *
    */
-  AUDIO_X_WAV = MIME_TYPE_AUDIO_X_WAV(),
+ AUDIO_X_WAV = MIME_TYPE_AUDIO_X_WAV(),
 
   /**
    * "image/bmp"。
    *
    */
-  IMAGE_BMP = MIME_TYPE_IMAGE_BMP(),
+ IMAGE_BMP = MIME_TYPE_IMAGE_BMP(),
 
   /**
    * "image/cis-cod"。
    *
    */
-  IMAGE_CIS_COD = MIME_TYPE_IMAGE_CIS_COD(),
+ IMAGE_CIS_COD = MIME_TYPE_IMAGE_CIS_COD(),
 
   /**
    * "image/gif"。
    *
    */
-  IMAGE_GIF = MIME_TYPE_IMAGE_GIF(),
+ IMAGE_GIF = MIME_TYPE_IMAGE_GIF(),
 
   /**
    * "image/ief"。
    *
    */
-  IMAGE_IEF = MIME_TYPE_IMAGE_IEF(),
+ IMAGE_IEF = MIME_TYPE_IMAGE_IEF(),
 
   /**
    * "image/jpeg"。
    *
    */
-  IMAGE_JPEG = MIME_TYPE_IMAGE_JPEG(),
+ IMAGE_JPEG = MIME_TYPE_IMAGE_JPEG(),
 
   /**
    * "image/pipeg"。
    *
    */
-  IMAGE_PIPEG = MIME_TYPE_IMAGE_PIPEG(),
+ IMAGE_PIPEG = MIME_TYPE_IMAGE_PIPEG(),
 
   /**
    * "image/svg+xml"。
    *
    */
-  IMAGE_SVG_XML = MIME_TYPE_IMAGE_SVG_XML(),
+ IMAGE_SVG_XML = MIME_TYPE_IMAGE_SVG_XML(),
 
   /**
    * "image/tiff"。
    *
    */
-  IMAGE_TIFF = MIME_TYPE_IMAGE_TIFF(),
+ IMAGE_TIFF = MIME_TYPE_IMAGE_TIFF(),
 
   /**
    * "image/x-cmx"。
    *
    */
-  IMAGE_X_CMX = MIME_TYPE_IMAGE_X_CMX(),
+ IMAGE_X_CMX = MIME_TYPE_IMAGE_X_CMX(),
 
   /**
    * "image/x-icon"。
    *
    */
-  IMAGE_X_ICON = MIME_TYPE_IMAGE_X_ICON(),
+ IMAGE_X_ICON = MIME_TYPE_IMAGE_X_ICON(),
 
   /**
    * "image/x-rgb"。
    *
    */
-  IMAGE_X_RGB = MIME_TYPE_IMAGE_X_RGB(),
+ IMAGE_X_RGB = MIME_TYPE_IMAGE_X_RGB(),
 
   /**
    * "image/x-xbitmap"。
    *
    */
-  IMAGE_X_XBITMAP = MIME_TYPE_IMAGE_X_XBITMAP(),
+ IMAGE_X_XBITMAP = MIME_TYPE_IMAGE_X_XBITMAP(),
 
   /**
    * "image/x-xpixmap"。
    *
    */
-  IMAGE_X_XPIXMAP = MIME_TYPE_IMAGE_X_XPIXMAP(),
+ IMAGE_X_XPIXMAP = MIME_TYPE_IMAGE_X_XPIXMAP(),
 
   /**
    * "image/x-xwindowdump"。
    *
    */
-  IMAGE_X_XWINDOWDUMP = MIME_TYPE_IMAGE_X_XWINDOWDUMP(),
+ IMAGE_X_XWINDOWDUMP = MIME_TYPE_IMAGE_X_XWINDOWDUMP(),
 
   /**
    * "message/rfc822"。
    *
    */
-  MESSAGE_RFC822 = MIME_TYPE_MESSAGE_RFC822(),
+ MESSAGE_RFC822 = MIME_TYPE_MESSAGE_RFC822(),
 
   /**
    * "text/css"。
    *
    */
-  TEXT_CSS = MIME_TYPE_TEXT_CSS(),
+ TEXT_CSS = MIME_TYPE_TEXT_CSS(),
 
   /**
    * "text/h323"。
    *
    */
-  TEXT_H323 = MIME_TYPE_TEXT_H323(),
+ TEXT_H323 = MIME_TYPE_TEXT_H323(),
 
   /**
    * "text/html"。
    *
    */
-  TEXT_HTML = MIME_TYPE_TEXT_HTML(),
+ TEXT_HTML = MIME_TYPE_TEXT_HTML(),
 
   /**
    * "text/iuls"。
    *
    */
-  TEXT_IULS = MIME_TYPE_TEXT_IULS(),
+ TEXT_IULS = MIME_TYPE_TEXT_IULS(),
 
   /**
    * "text/plain"。
    *
    */
-  TEXT_PLAIN = MIME_TYPE_TEXT_PLAIN(),
+ TEXT_PLAIN = MIME_TYPE_TEXT_PLAIN(),
 
   /**
    * "text/richtext"。
    *
    */
-  TEXT_RICHTEXT = MIME_TYPE_TEXT_RICHTEXT(),
+ TEXT_RICHTEXT = MIME_TYPE_TEXT_RICHTEXT(),
 
   /**
    * "text/scriptlet"。
    *
    */
-  TEXT_SCRIPTLET = MIME_TYPE_TEXT_SCRIPTLET(),
+ TEXT_SCRIPTLET = MIME_TYPE_TEXT_SCRIPTLET(),
 
   /**
    * "text/webviewhtml"。
    *
    */
-  TEXT_WEBVIEWHTML = MIME_TYPE_TEXT_WEBVIEWHTML(),
+ TEXT_WEBVIEWHTML = MIME_TYPE_TEXT_WEBVIEWHTML(),
 
   /**
    * "text/x-component"。
    *
    */
-  TEXT_X_COMPONENT = MIME_TYPE_TEXT_X_COMPONENT(),
+ TEXT_X_COMPONENT = MIME_TYPE_TEXT_X_COMPONENT(),
 
   /**
    * "text/x-setext"。
    *
    */
-  TEXT_X_SETEXT = MIME_TYPE_TEXT_X_SETEXT(),
+ TEXT_X_SETEXT = MIME_TYPE_TEXT_X_SETEXT(),
 
   /**
    * "text/x-vcard"。
    *
    */
-  TEXT_X_VCARD = MIME_TYPE_TEXT_X_VCARD(),
+ TEXT_X_VCARD = MIME_TYPE_TEXT_X_VCARD(),
 
   /**
    * "video/mpeg"。
    *
    */
-  VIDEO_MPEG = MIME_TYPE_VIDEO_MPEG(),
+ VIDEO_MPEG = MIME_TYPE_VIDEO_MPEG(),
 
   /**
    * "video/quicktime"。
    *
    */
-  VIDEO_QUICKTIME = MIME_TYPE_VIDEO_QUICKTIME(),
+ VIDEO_QUICKTIME = MIME_TYPE_VIDEO_QUICKTIME(),
 
   /**
    * "video/x-msvideo"。
    *
    */
-  VIDEO_X_MSVIDEO = MIME_TYPE_VIDEO_X_MSVIDEO(),
+ VIDEO_X_MSVIDEO = MIME_TYPE_VIDEO_X_MSVIDEO(),
 };
 
 
@@ -9974,11 +10001,11 @@ enum TMIME_TYPE {
  * idle_manager_t管理器。
  *
  */
-class TIdleManager {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TIdleManager { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 };
 /**
@@ -9991,31 +10018,31 @@ enum TIndicatorDefaultPaint {
    * 自动选择。
    *
    */
-  AUTO = INDICATOR_DEFAULT_PAINT_AUTO(),
+ AUTO = INDICATOR_DEFAULT_PAINT_AUTO(),
 
   /**
    * 实心圆点指示器，当前项填充selected_fg_color，其他填充fg_color。
    *
    */
-  FILL_DOT = INDICATOR_DEFAULT_PAINT_FILL_DOT(),
+ FILL_DOT = INDICATOR_DEFAULT_PAINT_FILL_DOT(),
 
   /**
    * 镂空圆点指示器，当前项填充selected_fg_color，其他镂空fg_color。
    *
    */
-  STROKE_DOT = INDICATOR_DEFAULT_PAINT_STROKE_DOT(),
+ STROKE_DOT = INDICATOR_DEFAULT_PAINT_STROKE_DOT(),
 
   /**
    * 实心矩形指示器，当前项填充selected_fg_color，其他填充fg_color。
    *
    */
-  FILL_RECT = INDICATOR_DEFAULT_PAINT_FILL_RECT(),
+ FILL_RECT = INDICATOR_DEFAULT_PAINT_FILL_RECT(),
 
   /**
    * 镂空矩形指示器，当前项填充selected_fg_color，其他镂空fg_color。
    *
    */
-  STROKE_RECT = INDICATOR_DEFAULT_PAINT_STROKE_RECT(),
+ STROKE_RECT = INDICATOR_DEFAULT_PAINT_STROKE_RECT(),
 };
 
 
@@ -10029,13 +10056,13 @@ enum TClipBoardDataType {
    * 无数据。
    *
    */
-  NONE = CLIP_BOARD_DATA_TYPE_NONE(),
+ NONE = CLIP_BOARD_DATA_TYPE_NONE(),
 
   /**
    * UTF8文本。
    *
    */
-  TEXT = CLIP_BOARD_DATA_TYPE_TEXT(),
+ TEXT = CLIP_BOARD_DATA_TYPE_TEXT(),
 };
 
 
@@ -10043,11 +10070,11 @@ enum TClipBoardDataType {
  * 剪切板接口。
  *
  */
-class TClipBoard {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TClipBoard { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
@@ -10057,9 +10084,9 @@ class TClipBoard {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  static setText(text: string): TRet {
+ static setText(text : string) : TRet  {
     return clip_board_set_text(text);
-  }
+ }
 
 
   /**
@@ -10068,9 +10095,9 @@ class TClipBoard {
    *
    * @returns 返回文本数据。
    */
-  static getText(): string {
+ static getText() : string  {
     return clip_board_get_text();
-  }
+ }
 
 };
 /**
@@ -10083,145 +10110,145 @@ enum TEasingType {
    * EASING_LINEAR。
    *
    */
-  LINEAR = EASING_LINEAR(),
+ LINEAR = EASING_LINEAR(),
 
   /**
    * EASING_QUADRATIC_IN
    *
    */
-  QUADRATIC_IN = EASING_QUADRATIC_IN(),
+ QUADRATIC_IN = EASING_QUADRATIC_IN(),
 
   /**
    * EASING_QUADRATIC_OUT
    *
    */
-  QUADRATIC_OUT = EASING_QUADRATIC_OUT(),
+ QUADRATIC_OUT = EASING_QUADRATIC_OUT(),
 
   /**
    * EASING_QUADRATIC_INOUT
    *
    */
-  QUADRATIC_INOUT = EASING_QUADRATIC_INOUT(),
+ QUADRATIC_INOUT = EASING_QUADRATIC_INOUT(),
 
   /**
    * EASING_CUBIC_IN
    *
    */
-  CUBIC_IN = EASING_CUBIC_IN(),
+ CUBIC_IN = EASING_CUBIC_IN(),
 
   /**
    * EASING_CUBIC_OUT
    *
    */
-  CUBIC_OUT = EASING_CUBIC_OUT(),
+ CUBIC_OUT = EASING_CUBIC_OUT(),
 
   /**
    * EASING_SIN_IN
    *
    */
-  SIN_IN = EASING_SIN_IN(),
+ SIN_IN = EASING_SIN_IN(),
 
   /**
    * EASING_SIN_OUT
    *
    */
-  SIN_OUT = EASING_SIN_OUT(),
+ SIN_OUT = EASING_SIN_OUT(),
 
   /**
    * EASING_SIN_OUT
    *
    */
-  SIN_INOUT = EASING_SIN_INOUT(),
+ SIN_INOUT = EASING_SIN_INOUT(),
 
   /**
    * EASING_POW_IN
    *
    */
-  POW_IN = EASING_POW_IN(),
+ POW_IN = EASING_POW_IN(),
 
   /**
    * EASING_POW_OUT
    *
    */
-  POW_OUT = EASING_POW_OUT(),
+ POW_OUT = EASING_POW_OUT(),
 
   /**
    * EASING_POW_INOUT
    *
    */
-  POW_INOUT = EASING_POW_INOUT(),
+ POW_INOUT = EASING_POW_INOUT(),
 
   /**
    * EASING_CIRCULAR_IN
    *
    */
-  CIRCULAR_IN = EASING_CIRCULAR_IN(),
+ CIRCULAR_IN = EASING_CIRCULAR_IN(),
 
   /**
    * EASING_CIRCULAR_OUT
    *
    */
-  CIRCULAR_OUT = EASING_CIRCULAR_OUT(),
+ CIRCULAR_OUT = EASING_CIRCULAR_OUT(),
 
   /**
    * EASING_CIRCULAR_INOUT
    *
    */
-  CIRCULAR_INOUT = EASING_CIRCULAR_INOUT(),
+ CIRCULAR_INOUT = EASING_CIRCULAR_INOUT(),
 
   /**
    * EASING_ELASTIC_IN
    *
    */
-  ELASTIC_IN = EASING_ELASTIC_IN(),
+ ELASTIC_IN = EASING_ELASTIC_IN(),
 
   /**
    * EASING_ELASTIC_OUT
    *
    */
-  ELASTIC_OUT = EASING_ELASTIC_OUT(),
+ ELASTIC_OUT = EASING_ELASTIC_OUT(),
 
   /**
    * EASING_ELASTIC_INOUT
    *
    */
-  ELASTIC_INOUT = EASING_ELASTIC_INOUT(),
+ ELASTIC_INOUT = EASING_ELASTIC_INOUT(),
 
   /**
    * EASING_BACK_IN
    *
    */
-  BACK_IN = EASING_BACK_IN(),
+ BACK_IN = EASING_BACK_IN(),
 
   /**
    * EASING_BACK_OUT
    *
    */
-  BACK_OUT = EASING_BACK_OUT(),
+ BACK_OUT = EASING_BACK_OUT(),
 
   /**
    * EASING_BACK_INOUT
    *
    */
-  BACK_INOUT = EASING_BACK_INOUT(),
+ BACK_INOUT = EASING_BACK_INOUT(),
 
   /**
    * EASING_BOUNCE_IN
    *
    */
-  BOUNCE_IN = EASING_BOUNCE_IN(),
+ BOUNCE_IN = EASING_BOUNCE_IN(),
 
   /**
    * EASING_BOUNCE_OUT
    *
    */
-  BOUNCE_OUT = EASING_BOUNCE_OUT(),
+ BOUNCE_OUT = EASING_BOUNCE_OUT(),
 
   /**
    * EASING_BOUNCE_INOUT
    *
    */
-  BOUNCE_INOUT = EASING_BOUNCE_INOUT(),
+ BOUNCE_INOUT = EASING_BOUNCE_INOUT(),
 };
 
 
@@ -10231,11 +10258,11 @@ enum TEasingType {
  *> 在嵌入式平台中，在系统初始时，需要调用date\_time\_global\_init设置实际获取/设置系统时间的函数。
  *
  */
-class TDateTime {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TDateTime { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
@@ -10244,9 +10271,9 @@ class TDateTime {
    *
    * @returns 返回date_time对象。
    */
-  static create(): TDateTime {
+ static create() : TDateTime  {
     return new TDateTime(date_time_create());
-  }
+ }
 
 
   /**
@@ -10255,9 +10282,9 @@ class TDateTime {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  set(): TRet {
+ set() : TRet  {
     return date_time_set(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -10266,83 +10293,83 @@ class TDateTime {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  destroy(): TRet {
+ destroy() : TRet  {
     return date_time_destroy(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
    * 秒(0 - 59)。
    *
    */
-  get second(): number {
-    return date_time_t_get_prop_second(this.nativeObj);
-  }
+ get second() : number {
+   return date_time_t_get_prop_second(this.nativeObj);
+ }
 
 
   /**
    * 分(0 - 59)。
    *
    */
-  get minute(): number {
-    return date_time_t_get_prop_minute(this.nativeObj);
-  }
+ get minute() : number {
+   return date_time_t_get_prop_minute(this.nativeObj);
+ }
 
 
   /**
    * 时(0 - 23)。
    *
    */
-  get hour(): number {
-    return date_time_t_get_prop_hour(this.nativeObj);
-  }
+ get hour() : number {
+   return date_time_t_get_prop_hour(this.nativeObj);
+ }
 
 
   /**
    * 日(1-31)。
    *
    */
-  get day(): number {
-    return date_time_t_get_prop_day(this.nativeObj);
-  }
+ get day() : number {
+   return date_time_t_get_prop_day(this.nativeObj);
+ }
 
 
   /**
    * 星期几(0-6, Sunday = 0)。
    *
    */
-  get wday(): number {
-    return date_time_t_get_prop_wday(this.nativeObj);
-  }
+ get wday() : number {
+   return date_time_t_get_prop_wday(this.nativeObj);
+ }
 
 
   /**
    * 月(1-12)。
    *
    */
-  get month(): number {
-    return date_time_t_get_prop_month(this.nativeObj);
-  }
+ get month() : number {
+   return date_time_t_get_prop_month(this.nativeObj);
+ }
 
 
   /**
    * 年。
    *
    */
-  get year(): number {
-    return date_time_t_get_prop_year(this.nativeObj);
-  }
+ get year() : number {
+   return date_time_t_get_prop_year(this.nativeObj);
+ }
 
 };
 /**
  * 颜色。
  *
  */
-class TColor {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TColor { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
@@ -10357,9 +10384,9 @@ class TColor {
    *
    * @returns color对象。
    */
-  static create(r: number, b: number, g: number, a: number): TColor {
+ static create(r : number, b : number, g : number, a : number) : TColor  {
     return new TColor(color_create(r, b, g, a));
-  }
+ }
 
 
   /**
@@ -10371,9 +10398,9 @@ class TColor {
    *
    * @returns color对象。
    */
-  fromStr(str: string): TColor {
+ fromStr(str : string) : TColor  {
     return new TColor(color_from_str(this != null ? (this.nativeObj || this) : null, str));
-  }
+ }
 
 
   /**
@@ -10384,9 +10411,9 @@ class TColor {
    *
    * @returns 返回红色通道的值。
    */
-  r(): number {
+ r() : number  {
     return color_r(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -10397,9 +10424,9 @@ class TColor {
    *
    * @returns 返回绿色通道的值。
    */
-  g(): number {
+ g() : number  {
     return color_g(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -10410,9 +10437,9 @@ class TColor {
    *
    * @returns 返回蓝色通道的值。
    */
-  b(): number {
+ b() : number  {
     return color_b(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -10423,9 +10450,9 @@ class TColor {
    *
    * @returns 返回alpha通道的值。
    */
-  a(): number {
+ a() : number  {
     return color_a(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -10437,9 +10464,9 @@ class TColor {
    *
    * @returns color对象。
    */
-  static cast(color: TColor): TColor {
+ static cast(color : TColor) : TColor  {
     return new TColor(color_cast(color != null ? (color.nativeObj || color) : null));
-  }
+ }
 
 
   /**
@@ -10449,69 +10476,69 @@ class TColor {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  destroy(): TRet {
+ destroy() : TRet  {
     return color_destroy(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
    * 颜色的数值。
    *
    */
-  get color(): number {
-    return color_t_get_prop_color(this.nativeObj);
-  }
+ get color() : number {
+   return color_t_get_prop_color(this.nativeObj);
+ }
 
-  set color(v: number) {
-    color_t_set_prop_color(this.nativeObj, v);
-  }
+ set color(v : number) {
+   color_t_set_prop_color(this.nativeObj, v);
+ }
 
 };
 /**
  * 单个资源的描述信息。
  *
  */
-class TAssetInfo {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TAssetInfo { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
    * 类型。
    *
    */
-  get type(): number {
-    return asset_info_t_get_prop_type(this.nativeObj);
-  }
+ get type() : number {
+   return asset_info_t_get_prop_type(this.nativeObj);
+ }
 
 
   /**
    * 子类型。
    *
    */
-  get subtype(): number {
-    return asset_info_t_get_prop_subtype(this.nativeObj);
-  }
+ get subtype() : number {
+   return asset_info_t_get_prop_subtype(this.nativeObj);
+ }
 
 
   /**
    * 资源是否在ROM中。
    *
    */
-  get isInRom(): number {
-    return asset_info_t_get_prop_is_in_rom(this.nativeObj);
-  }
+ get isInRom() : number {
+   return asset_info_t_get_prop_is_in_rom(this.nativeObj);
+ }
 
 
   /**
    * 大小。
    *
    */
-  get size(): number {
-    return asset_info_t_get_prop_size(this.nativeObj);
-  }
+ get size() : number {
+   return asset_info_t_get_prop_size(this.nativeObj);
+ }
 
 
   /**
@@ -10519,18 +10546,18 @@ class TAssetInfo {
    *is\_in\_rom == FALSE时才有效。
    *
    */
-  get refcount(): number {
-    return asset_info_t_get_prop_refcount(this.nativeObj);
-  }
+ get refcount() : number {
+   return asset_info_t_get_prop_refcount(this.nativeObj);
+ }
 
 
   /**
    * 名称。
    *
    */
-  get name(): string {
-    return asset_info_t_get_prop_name(this.nativeObj);
-  }
+ get name() : string {
+   return asset_info_t_get_prop_name(this.nativeObj);
+ }
 
 };
 /**
@@ -10543,55 +10570,55 @@ enum TAssetType {
    * 无效资源。
    *
    */
-  NONE = ASSET_TYPE_NONE(),
+ NONE = ASSET_TYPE_NONE(),
 
   /**
    * 字体资源。
    *
    */
-  FONT = ASSET_TYPE_FONT(),
+ FONT = ASSET_TYPE_FONT(),
 
   /**
    * 图片资源。
    *
    */
-  IMAGE = ASSET_TYPE_IMAGE(),
+ IMAGE = ASSET_TYPE_IMAGE(),
 
   /**
    * 主题资源。
    *
    */
-  STYLE = ASSET_TYPE_STYLE(),
+ STYLE = ASSET_TYPE_STYLE(),
 
   /**
    * UI数据资源。
    *
    */
-  UI = ASSET_TYPE_UI(),
+ UI = ASSET_TYPE_UI(),
 
   /**
    * XML数据资源。
    *
    */
-  XML = ASSET_TYPE_XML(),
+ XML = ASSET_TYPE_XML(),
 
   /**
    * 字符串数据资源。
    *
    */
-  STRINGS = ASSET_TYPE_STRINGS(),
+ STRINGS = ASSET_TYPE_STRINGS(),
 
   /**
    * JS等脚本资源。
    *
    */
-  SCRIPT = ASSET_TYPE_SCRIPT(),
+ SCRIPT = ASSET_TYPE_SCRIPT(),
 
   /**
    * 其它数据资源。
    *
    */
-  DATA = ASSET_TYPE_DATA(),
+ DATA = ASSET_TYPE_DATA(),
 };
 
 
@@ -10627,11 +10654,11 @@ enum TAssetType {
  *```
  *
  */
-class TAssetsManager {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    this.nativeObj = nativeObj;
-  }
+class TAssetsManager { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
   /**
@@ -10640,9 +10667,9 @@ class TAssetsManager {
    *
    * @returns 返回asset manager对象。
    */
-  static instance(): TAssetsManager {
+ static instance() : TAssetsManager  {
     return new TAssetsManager(assets_manager());
-  }
+ }
 
 
   /**
@@ -10653,9 +10680,9 @@ class TAssetsManager {
    *
    * @returns 返回资源。
    */
-  ref(type: TAssetType, name: string): TAssetInfo {
+ ref(type : TAssetType, name : string) : TAssetInfo  {
     return new TAssetInfo(assets_manager_ref(this != null ? (this.nativeObj || this) : null, type, name));
-  }
+ }
 
 
   /**
@@ -10665,9 +10692,9 @@ class TAssetsManager {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  unref(info: TAssetInfo): TRet {
+ unref(info : TAssetInfo) : TRet  {
     return assets_manager_unref(this != null ? (this.nativeObj || this) : null, info != null ? (info.nativeObj || info) : null);
-  }
+ }
 
 };
 /**
@@ -10705,11 +10732,11 @@ class TAssetsManager {
  ** [vgcanvas接口描述](vgcanvas_t.md)
  *
  */
-class TCanvasWidget extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TCanvasWidget extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -10723,9 +10750,9 @@ class TCanvasWidget extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TCanvasWidget(canvas_widget_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -10735,9 +10762,9 @@ class TCanvasWidget extends TWidget {
    *
    * @returns canvas_widget对象。
    */
-  static cast(widget: TWidget): TCanvasWidget {
+ static cast(widget : TWidget) : TCanvasWidget  {
     return new TCanvasWidget(canvas_widget_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -10764,11 +10791,11 @@ class TCanvasWidget extends TWidget {
  *time\_clock一般不需要设置style。
  *
  */
-class TTimeClock extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TTimeClock extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -10782,9 +10809,9 @@ class TTimeClock extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TTimeClock(time_clock_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -10794,9 +10821,9 @@ class TTimeClock extends TWidget {
    *
    * @returns time_clock对象。
    */
-  static cast(widget: TWidget): TTimeClock {
+ static cast(widget : TWidget) : TTimeClock  {
     return new TTimeClock(time_clock_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -10806,9 +10833,9 @@ class TTimeClock extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setHour(hour: number): TRet {
+ setHour(hour : number) : TRet  {
     return time_clock_set_hour(this != null ? (this.nativeObj || this) : null, hour);
-  }
+ }
 
 
   /**
@@ -10818,9 +10845,9 @@ class TTimeClock extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setMinute(minute: number): TRet {
+ setMinute(minute : number) : TRet  {
     return time_clock_set_minute(this != null ? (this.nativeObj || this) : null, minute);
-  }
+ }
 
 
   /**
@@ -10830,9 +10857,9 @@ class TTimeClock extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setSecond(second: number): TRet {
+ setSecond(second : number) : TRet  {
     return time_clock_set_second(this != null ? (this.nativeObj || this) : null, second);
-  }
+ }
 
 
   /**
@@ -10842,9 +10869,9 @@ class TTimeClock extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setHourImage(hour: string): TRet {
+ setHourImage(hour : string) : TRet  {
     return time_clock_set_hour_image(this != null ? (this.nativeObj || this) : null, hour);
-  }
+ }
 
 
   /**
@@ -10854,9 +10881,9 @@ class TTimeClock extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setMinuteImage(minute_image: string): TRet {
+ setMinuteImage(minute_image : string) : TRet  {
     return time_clock_set_minute_image(this != null ? (this.nativeObj || this) : null, minute_image);
-  }
+ }
 
 
   /**
@@ -10866,9 +10893,9 @@ class TTimeClock extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setSecondImage(second_image: string): TRet {
+ setSecondImage(second_image : string) : TRet  {
     return time_clock_set_second_image(this != null ? (this.nativeObj || this) : null, second_image);
-  }
+ }
 
 
   /**
@@ -10878,9 +10905,9 @@ class TTimeClock extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setBgImage(bg_image: string): TRet {
+ setBgImage(bg_image : string) : TRet  {
     return time_clock_set_bg_image(this != null ? (this.nativeObj || this) : null, bg_image);
-  }
+ }
 
 
   /**
@@ -10890,9 +10917,9 @@ class TTimeClock extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setImage(image: string): TRet {
+ setImage(image : string) : TRet  {
     return time_clock_set_image(this != null ? (this.nativeObj || this) : null, image);
-  }
+ }
 
 
   /**
@@ -10904,9 +10931,9 @@ class TTimeClock extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setHourAnchor(anchor_x: string, anchor_y: string): TRet {
+ setHourAnchor(anchor_x : string, anchor_y : string) : TRet  {
     return time_clock_set_hour_anchor(this != null ? (this.nativeObj || this) : null, anchor_x, anchor_y);
-  }
+ }
 
 
   /**
@@ -10918,9 +10945,9 @@ class TTimeClock extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setMinuteAnchor(anchor_x: string, anchor_y: string): TRet {
+ setMinuteAnchor(anchor_x : string, anchor_y : string) : TRet  {
     return time_clock_set_minute_anchor(this != null ? (this.nativeObj || this) : null, anchor_x, anchor_y);
-  }
+ }
 
 
   /**
@@ -10932,167 +10959,167 @@ class TTimeClock extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setSecondAnchor(anchor_x: string, anchor_y: string): TRet {
+ setSecondAnchor(anchor_x : string, anchor_y : string) : TRet  {
     return time_clock_set_second_anchor(this != null ? (this.nativeObj || this) : null, anchor_x, anchor_y);
-  }
+ }
 
 
   /**
    * 小时。
    *
    */
-  get hour(): number {
-    return time_clock_t_get_prop_hour(this.nativeObj);
-  }
+ get hour() : number {
+   return time_clock_t_get_prop_hour(this.nativeObj);
+ }
 
-  set hour(v: number) {
-    this.setHour(v);
-  }
+ set hour(v : number) {
+   this.setHour(v);
+ }
 
 
   /**
    * 分钟。
    *
    */
-  get minute(): number {
-    return time_clock_t_get_prop_minute(this.nativeObj);
-  }
+ get minute() : number {
+   return time_clock_t_get_prop_minute(this.nativeObj);
+ }
 
-  set minute(v: number) {
-    this.setMinute(v);
-  }
+ set minute(v : number) {
+   this.setMinute(v);
+ }
 
 
   /**
    * 秒。
    *
    */
-  get second(): number {
-    return time_clock_t_get_prop_second(this.nativeObj);
-  }
+ get second() : number {
+   return time_clock_t_get_prop_second(this.nativeObj);
+ }
 
-  set second(v: number) {
-    this.setSecond(v);
-  }
+ set second(v : number) {
+   this.setSecond(v);
+ }
 
 
   /**
    * 中心图片。
    *
    */
-  get image(): string {
-    return time_clock_t_get_prop_image(this.nativeObj);
-  }
+ get image() : string {
+   return time_clock_t_get_prop_image(this.nativeObj);
+ }
 
-  set image(v: string) {
-    this.setImage(v);
-  }
+ set image(v : string) {
+   this.setImage(v);
+ }
 
 
   /**
    * 背景图片。
    *
    */
-  get bgImage(): string {
-    return time_clock_t_get_prop_bg_image(this.nativeObj);
-  }
+ get bgImage() : string {
+   return time_clock_t_get_prop_bg_image(this.nativeObj);
+ }
 
-  set bgImage(v: string) {
-    this.setBgImage(v);
-  }
+ set bgImage(v : string) {
+   this.setBgImage(v);
+ }
 
 
   /**
    * 时针图片。
    *
    */
-  get hourImage(): string {
-    return time_clock_t_get_prop_hour_image(this.nativeObj);
-  }
+ get hourImage() : string {
+   return time_clock_t_get_prop_hour_image(this.nativeObj);
+ }
 
-  set hourImage(v: string) {
-    this.setHourImage(v);
-  }
+ set hourImage(v : string) {
+   this.setHourImage(v);
+ }
 
 
   /**
    * 分针图片。
    *
    */
-  get minuteImage(): string {
-    return time_clock_t_get_prop_minute_image(this.nativeObj);
-  }
+ get minuteImage() : string {
+   return time_clock_t_get_prop_minute_image(this.nativeObj);
+ }
 
-  set minuteImage(v: string) {
-    this.setMinuteImage(v);
-  }
+ set minuteImage(v : string) {
+   this.setMinuteImage(v);
+ }
 
 
   /**
    * 秒针图片。
    *
    */
-  get secondImage(): string {
-    return time_clock_t_get_prop_second_image(this.nativeObj);
-  }
+ get secondImage() : string {
+   return time_clock_t_get_prop_second_image(this.nativeObj);
+ }
 
-  set secondImage(v: string) {
-    this.setSecondImage(v);
-  }
+ set secondImage(v : string) {
+   this.setSecondImage(v);
+ }
 
 
   /**
    * 时针图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
    *
    */
-  get hourAnchorX(): string {
-    return time_clock_t_get_prop_hour_anchor_x(this.nativeObj);
-  }
+ get hourAnchorX() : string {
+   return time_clock_t_get_prop_hour_anchor_x(this.nativeObj);
+ }
 
 
   /**
    * 时针图片旋转锚点y坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
    *
    */
-  get hourAnchorY(): string {
-    return time_clock_t_get_prop_hour_anchor_y(this.nativeObj);
-  }
+ get hourAnchorY() : string {
+   return time_clock_t_get_prop_hour_anchor_y(this.nativeObj);
+ }
 
 
   /**
    * 分针图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
    *
    */
-  get minuteAnchorX(): string {
-    return time_clock_t_get_prop_minute_anchor_x(this.nativeObj);
-  }
+ get minuteAnchorX() : string {
+   return time_clock_t_get_prop_minute_anchor_x(this.nativeObj);
+ }
 
 
   /**
    * 分针图片旋转锚点y坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
    *
    */
-  get minuteAnchorY(): string {
-    return time_clock_t_get_prop_minute_anchor_y(this.nativeObj);
-  }
+ get minuteAnchorY() : string {
+   return time_clock_t_get_prop_minute_anchor_y(this.nativeObj);
+ }
 
 
   /**
    * 秒针图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
    *
    */
-  get secondAnchorX(): string {
-    return time_clock_t_get_prop_second_anchor_x(this.nativeObj);
-  }
+ get secondAnchorX() : string {
+   return time_clock_t_get_prop_second_anchor_x(this.nativeObj);
+ }
 
 
   /**
    * 秒针图片旋转锚点y坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
    *
    */
-  get secondAnchorY(): string {
-    return time_clock_t_get_prop_second_anchor_y(this.nativeObj);
-  }
+ get secondAnchorY() : string {
+   return time_clock_t_get_prop_second_anchor_y(this.nativeObj);
+ }
 
 };
 /**
@@ -11129,11 +11156,11 @@ class TTimeClock extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L443)
  *
  */
-class TTextSelector extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TTextSelector extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -11147,9 +11174,9 @@ class TTextSelector extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TTextSelector(text_selector_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -11159,9 +11186,9 @@ class TTextSelector extends TWidget {
    *
    * @returns text_selector对象。
    */
-  static cast(widget: TWidget): TTextSelector {
+ static cast(widget : TWidget) : TTextSelector  {
     return new TTextSelector(text_selector_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -11170,9 +11197,9 @@ class TTextSelector extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  resetOptions(): TRet {
+ resetOptions() : TRet  {
     return text_selector_reset_options(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -11181,9 +11208,9 @@ class TTextSelector extends TWidget {
    *
    * @returns 返回选项个数。
    */
-  countOptions(): number {
+ countOptions() : number  {
     return text_selector_count_options(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -11194,9 +11221,9 @@ class TTextSelector extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  appendOption(value: any, text: string): TRet {
+ appendOption(value : any, text : string) : TRet  {
     return text_selector_append_option(this != null ? (this.nativeObj || this) : null, value, text);
-  }
+ }
 
 
   /**
@@ -11206,9 +11233,9 @@ class TTextSelector extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setOptions(options: string): TRet {
+ setOptions(options : string) : TRet  {
     return text_selector_set_options(this != null ? (this.nativeObj || this) : null, options);
-  }
+ }
 
 
   /**
@@ -11220,9 +11247,9 @@ class TTextSelector extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setRangeOptions(start: number, nr: number, step: number): TRet {
+ setRangeOptions(start : number, nr : number, step : number) : TRet  {
     return text_selector_set_range_options(this != null ? (this.nativeObj || this) : null, start, nr, step);
-  }
+ }
 
 
   /**
@@ -11231,9 +11258,9 @@ class TTextSelector extends TWidget {
    *
    * @returns 返回值。
    */
-  getValue(): number {
+ getValue() : number  {
     return text_selector_get_value(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -11243,9 +11270,9 @@ class TTextSelector extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setValue(value: any): TRet {
+ setValue(value : any) : TRet  {
     return text_selector_set_value(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -11254,9 +11281,9 @@ class TTextSelector extends TWidget {
    *
    * @returns 返回文本。
    */
-  getTextValue(): string {
+ getTextValue() : string  {
     return text_selector_get_text(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -11266,9 +11293,9 @@ class TTextSelector extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setText(text: string): TRet {
+ setText(text : string) : TRet  {
     return text_selector_set_text(this != null ? (this.nativeObj || this) : null, text);
-  }
+ }
 
 
   /**
@@ -11278,9 +11305,9 @@ class TTextSelector extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setSelectedIndex(index: number): TRet {
+ setSelectedIndex(index : number) : TRet  {
     return text_selector_set_selected_index(this != null ? (this.nativeObj || this) : null, index);
-  }
+ }
 
 
   /**
@@ -11290,35 +11317,35 @@ class TTextSelector extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setVisibleNr(visible_nr: number): TRet {
+ setVisibleNr(visible_nr : number) : TRet  {
     return text_selector_set_visible_nr(this != null ? (this.nativeObj || this) : null, visible_nr);
-  }
+ }
 
 
   /**
    * 可见的选项数量(只能是3或者5，缺省为5)。
    *
    */
-  get visibleNr(): number {
-    return text_selector_t_get_prop_visible_nr(this.nativeObj);
-  }
+ get visibleNr() : number {
+   return text_selector_t_get_prop_visible_nr(this.nativeObj);
+ }
 
-  set visibleNr(v: number) {
-    this.setVisibleNr(v);
-  }
+ set visibleNr(v : number) {
+   this.setVisibleNr(v);
+ }
 
 
   /**
    * 当前选中的选项。
    *
    */
-  get selectedIndex(): number {
-    return text_selector_t_get_prop_selected_index(this.nativeObj);
-  }
+ get selectedIndex() : number {
+   return text_selector_t_get_prop_selected_index(this.nativeObj);
+ }
 
-  set selectedIndex(v: number) {
-    this.setSelectedIndex(v);
-  }
+ set selectedIndex(v : number) {
+   this.setSelectedIndex(v);
+ }
 
 
   /**
@@ -11327,24 +11354,24 @@ class TTextSelector extends TWidget {
    *如："1-7-%02d"表示1到7，格式为『02d』，格式为可选，缺省为『%d』。
    *
    */
-  get options(): string {
-    return text_selector_t_get_prop_options(this.nativeObj);
-  }
+ get options() : string {
+   return text_selector_t_get_prop_options(this.nativeObj);
+ }
 
-  set options(v: string) {
-    this.setOptions(v);
-  }
+ set options(v : string) {
+   this.setOptions(v);
+ }
 
 };
 /**
  * 对象属性变化事件。
  *
  */
-class TPropChangeEvent extends TEvent {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TPropChangeEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -11354,38 +11381,38 @@ class TPropChangeEvent extends TEvent {
    *
    * @returns 返回event对象。
    */
-  static cast(event: TEvent): TPropChangeEvent {
+ static cast(event : TEvent) : TPropChangeEvent  {
     return new TPropChangeEvent(prop_change_event_cast(event != null ? (event.nativeObj || event) : null));
-  }
+ }
 
 
   /**
    * 属性的名称。
    *
    */
-  get name(): string {
-    return prop_change_event_t_get_prop_name(this.nativeObj);
-  }
+ get name() : string {
+   return prop_change_event_t_get_prop_name(this.nativeObj);
+ }
 
 
   /**
    * 属性的值。
    *
    */
-  get value(): TValue {
-    return new TValue(prop_change_event_t_get_prop_value(this.nativeObj));
-  }
+ get value() : TValue {
+   return new TValue(prop_change_event_t_get_prop_value(this.nativeObj));
+ }
 
 };
 /**
  * 进度变化事件。
  *
  */
-class TProgressEvent extends TEvent {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TProgressEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -11395,18 +11422,18 @@ class TProgressEvent extends TEvent {
    *
    * @returns 返回event对象。
    */
-  static cast(event: TEvent): TProgressEvent {
+ static cast(event : TEvent) : TProgressEvent  {
     return new TProgressEvent(progress_event_cast(event != null ? (event.nativeObj || event) : null));
-  }
+ }
 
 
   /**
    * 进度百分比。
    *
    */
-  get percent(): number {
-    return progress_event_t_get_prop_percent(this.nativeObj);
-  }
+ get percent() : number {
+   return progress_event_t_get_prop_percent(this.nativeObj);
+ }
 
 };
 /**
@@ -11441,11 +11468,11 @@ class TProgressEvent extends TEvent {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L452)
  *
  */
-class TSwitch extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TSwitch extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -11459,9 +11486,9 @@ class TSwitch extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TSwitch(switch_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -11471,9 +11498,9 @@ class TSwitch extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setValue(value: any): TRet {
+ setValue(value : any) : TRet  {
     return switch_set_value(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -11483,31 +11510,31 @@ class TSwitch extends TWidget {
    *
    * @returns switch对象。
    */
-  static cast(widget: TWidget): TSwitch {
+ static cast(widget : TWidget) : TSwitch  {
     return new TSwitch(switch_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
    * 值。
    *
    */
-  get value(): boolean {
-    return switch_t_get_prop_value(this.nativeObj);
-  }
+ get value() : boolean {
+   return switch_t_get_prop_value(this.nativeObj);
+ }
 
-  set value(v: boolean) {
-    this.setValue(v);
-  }
+ set value(v : boolean) {
+   this.setValue(v);
+ }
 
 
   /**
    * 当开关处于关闭时，图片偏移相对于图片宽度的比例(缺省为1/3)。
    *
    */
-  get maxXoffsetRatio(): number {
-    return switch_t_get_prop_max_xoffset_ratio(this.nativeObj);
-  }
+ get maxXoffsetRatio() : number {
+   return switch_t_get_prop_max_xoffset_ratio(this.nativeObj);
+ }
 
 };
 /**
@@ -11554,11 +11581,11 @@ class TSwitch extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L458)
  *
  */
-class TSlideView extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TSlideView extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -11572,9 +11599,9 @@ class TSlideView extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TSlideView(slide_view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -11584,9 +11611,9 @@ class TSlideView extends TWidget {
    *
    * @returns slide_view对象。
    */
-  static cast(widget: TWidget): TSlideView {
+ static cast(widget : TWidget) : TSlideView  {
     return new TSlideView(slide_view_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -11596,9 +11623,9 @@ class TSlideView extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setAutoPlay(auto_play: number): TRet {
+ setAutoPlay(auto_play : number) : TRet  {
     return slide_view_set_auto_play(this != null ? (this.nativeObj || this) : null, auto_play);
-  }
+ }
 
 
   /**
@@ -11608,9 +11635,9 @@ class TSlideView extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setActive(index: number): TRet {
+ setActive(index : number) : TRet  {
     return slide_view_set_active(this != null ? (this.nativeObj || this) : null, index);
-  }
+ }
 
 
   /**
@@ -11620,9 +11647,9 @@ class TSlideView extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setVertical(vertical: boolean): TRet {
+ setVertical(vertical : boolean) : TRet  {
     return slide_view_set_vertical(this != null ? (this.nativeObj || this) : null, vertical);
-  }
+ }
 
 
   /**
@@ -11643,9 +11670,9 @@ class TSlideView extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setAnimHint(anim_hint: string): TRet {
+ setAnimHint(anim_hint : string) : TRet  {
     return slide_view_set_anim_hint(this != null ? (this.nativeObj || this) : null, anim_hint);
-  }
+ }
 
 
   /**
@@ -11655,35 +11682,35 @@ class TSlideView extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setLoop(loop: boolean): TRet {
+ setLoop(loop : boolean) : TRet  {
     return slide_view_set_loop(this != null ? (this.nativeObj || this) : null, loop);
-  }
+ }
 
 
   /**
    * 是否为上下滑动模式。
    *
    */
-  get vertical(): boolean {
-    return slide_view_t_get_prop_vertical(this.nativeObj);
-  }
+ get vertical() : boolean {
+   return slide_view_t_get_prop_vertical(this.nativeObj);
+ }
 
-  set vertical(v: boolean) {
-    this.setVertical(v);
-  }
+ set vertical(v : boolean) {
+   this.setVertical(v);
+ }
 
 
   /**
    * 自动播放。0表示禁止自动播放，非0表示自动播放时每一页播放的时间。
    *
    */
-  get autoPlay(): number {
-    return slide_view_t_get_prop_auto_play(this.nativeObj);
-  }
+ get autoPlay() : number {
+   return slide_view_t_get_prop_auto_play(this.nativeObj);
+ }
 
-  set autoPlay(v: number) {
-    this.setAutoPlay(v);
-  }
+ set autoPlay(v : number) {
+   this.setAutoPlay(v);
+ }
 
 
   /**
@@ -11693,26 +11720,26 @@ class TSlideView extends TWidget {
    *向前切换：切换到第一页时，再往前切换就到最后一页。
    *
    */
-  get loop(): boolean {
-    return slide_view_t_get_prop_loop(this.nativeObj);
-  }
+ get loop() : boolean {
+   return slide_view_t_get_prop_loop(this.nativeObj);
+ }
 
-  set loop(v: boolean) {
-    this.setLoop(v);
-  }
+ set loop(v : boolean) {
+   this.setLoop(v);
+ }
 
 
   /**
    * 页面切换效果。
    *
    */
-  get animHint(): string {
-    return slide_view_t_get_prop_anim_hint(this.nativeObj);
-  }
+ get animHint() : string {
+   return slide_view_t_get_prop_anim_hint(this.nativeObj);
+ }
 
-  set animHint(v: string) {
-    this.setAnimHint(v);
-  }
+ set animHint(v : string) {
+   this.setAnimHint(v);
+ }
 
 };
 /**
@@ -11747,11 +11774,11 @@ class TSlideView extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L350)
  *
  */
-class TSlideIndicator extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TSlideIndicator extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -11765,9 +11792,9 @@ class TSlideIndicator extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TSlideIndicator(slide_indicator_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -11781,9 +11808,9 @@ class TSlideIndicator extends TWidget {
    *
    * @returns 对象。
    */
-  static createLinear(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static createLinear(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TSlideIndicator(slide_indicator_create_linear(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -11797,9 +11824,9 @@ class TSlideIndicator extends TWidget {
    *
    * @returns 对象。
    */
-  static createArc(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static createArc(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TSlideIndicator(slide_indicator_create_arc(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -11809,9 +11836,9 @@ class TSlideIndicator extends TWidget {
    *
    * @returns slide_indicator对象。
    */
-  static cast(widget: TWidget): TSlideIndicator {
+ static cast(widget : TWidget) : TSlideIndicator  {
     return new TSlideIndicator(slide_indicator_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -11821,9 +11848,9 @@ class TSlideIndicator extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setValue(value: any): TRet {
+ setValue(value : any) : TRet  {
     return slide_indicator_set_value(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -11833,9 +11860,9 @@ class TSlideIndicator extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setMax(max: number): TRet {
+ setMax(max : number) : TRet  {
     return slide_indicator_set_max(this != null ? (this.nativeObj || this) : null, max);
-  }
+ }
 
 
   /**
@@ -11845,9 +11872,9 @@ class TSlideIndicator extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setDefaultPaint(default_paint: TIndicatorDefaultPaint): TRet {
+ setDefaultPaint(default_paint : TIndicatorDefaultPaint) : TRet  {
     return slide_indicator_set_default_paint(this != null ? (this.nativeObj || this) : null, default_paint);
-  }
+ }
 
 
   /**
@@ -11857,9 +11884,9 @@ class TSlideIndicator extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setAutoHide(auto_hide: number): TRet {
+ setAutoHide(auto_hide : number) : TRet  {
     return slide_indicator_set_auto_hide(this != null ? (this.nativeObj || this) : null, auto_hide);
-  }
+ }
 
 
   /**
@@ -11869,9 +11896,9 @@ class TSlideIndicator extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setMargin(margin: number): TRet {
+ setMargin(margin : number) : TRet  {
     return slide_indicator_set_margin(this != null ? (this.nativeObj || this) : null, margin);
-  }
+ }
 
 
   /**
@@ -11881,9 +11908,9 @@ class TSlideIndicator extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setSpacing(spacing: number): TRet {
+ setSpacing(spacing : number) : TRet  {
     return slide_indicator_set_spacing(this != null ? (this.nativeObj || this) : null, spacing);
-  }
+ }
 
 
   /**
@@ -11893,9 +11920,9 @@ class TSlideIndicator extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setSize(size: number): TRet {
+ setSize(size : number) : TRet  {
     return slide_indicator_set_size(this != null ? (this.nativeObj || this) : null, size);
-  }
+ }
 
 
   /**
@@ -11906,9 +11933,9 @@ class TSlideIndicator extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setAnchor(anchor_x: string, anchor_y: string): TRet {
+ setAnchor(anchor_x : string, anchor_y : string) : TRet  {
     return slide_indicator_set_anchor(this != null ? (this.nativeObj || this) : null, anchor_x, anchor_y);
-  }
+ }
 
 
   /**
@@ -11918,131 +11945,131 @@ class TSlideIndicator extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setIndicatedTarget(indicated_target: string): TRet {
+ setIndicatedTarget(indicated_target : string) : TRet  {
     return slide_indicator_set_indicated_target(this != null ? (this.nativeObj || this) : null, indicated_target);
-  }
+ }
 
 
   /**
    * 值(缺省为0)。
    *
    */
-  get value(): number {
-    return slide_indicator_t_get_prop_value(this.nativeObj);
-  }
+ get value() : number {
+   return slide_indicator_t_get_prop_value(this.nativeObj);
+ }
 
-  set value(v: number) {
-    this.setValue(v);
-  }
+ set value(v : number) {
+   this.setValue(v);
+ }
 
 
   /**
    * 最大值(缺省为100)。
    *
    */
-  get max(): number {
-    return slide_indicator_t_get_prop_max(this.nativeObj);
-  }
+ get max() : number {
+   return slide_indicator_t_get_prop_max(this.nativeObj);
+ }
 
-  set max(v: number) {
-    this.setMax(v);
-  }
+ set max(v : number) {
+   this.setMax(v);
+ }
 
 
   /**
    * 指示器的类型。
    *
    */
-  get defaultPaint(): TIndicatorDefaultPaint {
-    return slide_indicator_t_get_prop_default_paint(this.nativeObj);
-  }
+ get defaultPaint() : TIndicatorDefaultPaint {
+   return slide_indicator_t_get_prop_default_paint(this.nativeObj);
+ }
 
-  set defaultPaint(v: TIndicatorDefaultPaint) {
-    this.setDefaultPaint(v);
-  }
+ set defaultPaint(v : TIndicatorDefaultPaint) {
+   this.setDefaultPaint(v);
+ }
 
 
   /**
    * 自动隐藏。0表示禁止，非0表示无操作后延迟多久隐藏。
    *
    */
-  get autoHide(): number {
-    return slide_indicator_t_get_prop_auto_hide(this.nativeObj);
-  }
+ get autoHide() : number {
+   return slide_indicator_t_get_prop_auto_hide(this.nativeObj);
+ }
 
-  set autoHide(v: number) {
-    this.setAutoHide(v);
-  }
+ set autoHide(v : number) {
+   this.setAutoHide(v);
+ }
 
 
   /**
    * 指示器与边缘的边距。
    *
    */
-  get margin(): number {
-    return slide_indicator_t_get_prop_margin(this.nativeObj);
-  }
+ get margin() : number {
+   return slide_indicator_t_get_prop_margin(this.nativeObj);
+ }
 
-  set margin(v: number) {
-    this.setMargin(v);
-  }
+ set margin(v : number) {
+   this.setMargin(v);
+ }
 
 
   /**
    * 指示器的中心之间的间距（圆弧显示时，间距的单位为弧度，否则为像素）。
    *
    */
-  get spacing(): number {
-    return slide_indicator_t_get_prop_spacing(this.nativeObj);
-  }
+ get spacing() : number {
+   return slide_indicator_t_get_prop_spacing(this.nativeObj);
+ }
 
-  set spacing(v: number) {
-    this.setSpacing(v);
-  }
+ set spacing(v : number) {
+   this.setSpacing(v);
+ }
 
 
   /**
    * 指示器的大小。
    *
    */
-  get size(): number {
-    return slide_indicator_t_get_prop_size(this.nativeObj);
-  }
+ get size() : number {
+   return slide_indicator_t_get_prop_size(this.nativeObj);
+ }
 
-  set size(v: number) {
-    this.setSize(v);
-  }
+ set size(v : number) {
+   this.setSize(v);
+ }
 
 
   /**
    * 锚点x坐标。
    *
    */
-  get anchorX(): number {
-    return slide_indicator_t_get_prop_anchor_x(this.nativeObj);
-  }
+ get anchorX() : number {
+   return slide_indicator_t_get_prop_anchor_x(this.nativeObj);
+ }
 
 
   /**
    * 锚点y坐标。
    *
    */
-  get anchorY(): number {
-    return slide_indicator_t_get_prop_anchor_y(this.nativeObj);
-  }
+ get anchorY() : number {
+   return slide_indicator_t_get_prop_anchor_y(this.nativeObj);
+ }
 
 
   /**
    * 指示器指示的目标。
    *
    */
-  get indicatedTarget(): string {
-    return slide_indicator_t_get_prop_indicated_target(this.nativeObj);
-  }
+ get indicatedTarget() : string {
+   return slide_indicator_t_get_prop_indicated_target(this.nativeObj);
+ }
 
-  set indicatedTarget(v: string) {
-    this.setIndicatedTarget(v);
-  }
+ set indicatedTarget(v : string) {
+   this.setIndicatedTarget(v);
+ }
 
 };
 /**
@@ -12091,11 +12118,11 @@ class TSlideIndicator extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L493)
  *
  */
-class TSlideMenu extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TSlideMenu extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -12109,9 +12136,9 @@ class TSlideMenu extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TSlideMenu(slide_menu_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -12121,9 +12148,9 @@ class TSlideMenu extends TWidget {
    *
    * @returns slide_menu对象。
    */
-  static cast(widget: TWidget): TSlideMenu {
+ static cast(widget : TWidget) : TSlideMenu  {
     return new TSlideMenu(slide_menu_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -12133,9 +12160,9 @@ class TSlideMenu extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setValue(value: any): TRet {
+ setValue(value : any) : TRet  {
     return slide_menu_set_value(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -12145,9 +12172,9 @@ class TSlideMenu extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setAlignV(align_v: TAlignV): TRet {
+ setAlignV(align_v : TAlignV) : TRet  {
     return slide_menu_set_align_v(this != null ? (this.nativeObj || this) : null, align_v);
-  }
+ }
 
 
   /**
@@ -12157,48 +12184,48 @@ class TSlideMenu extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setMinScale(min_scale: number): TRet {
+ setMinScale(min_scale : number) : TRet  {
     return slide_menu_set_min_scale(this != null ? (this.nativeObj || this) : null, min_scale);
-  }
+ }
 
 
   /**
    * 值。代表当前选中项的索引。
    *
    */
-  get value(): number {
-    return slide_menu_t_get_prop_value(this.nativeObj);
-  }
+ get value() : number {
+   return slide_menu_t_get_prop_value(this.nativeObj);
+ }
 
-  set value(v: number) {
-    this.setValue(v);
-  }
+ set value(v : number) {
+   this.setValue(v);
+ }
 
 
   /**
    * 垂直对齐方式。
    *
    */
-  get alignV(): TAlignV {
-    return slide_menu_t_get_prop_align_v(this.nativeObj);
-  }
+ get alignV() : TAlignV {
+   return slide_menu_t_get_prop_align_v(this.nativeObj);
+ }
 
-  set alignV(v: TAlignV) {
-    this.setAlignV(v);
-  }
+ set alignV(v : TAlignV) {
+   this.setAlignV(v);
+ }
 
 
   /**
    * 最小缩放比例。
    *
    */
-  get minScale(): number {
-    return slide_menu_t_get_prop_min_scale(this.nativeObj);
-  }
+ get minScale() : number {
+   return slide_menu_t_get_prop_min_scale(this.nativeObj);
+ }
 
-  set minScale(v: number) {
-    this.setMinScale(v);
-  }
+ set minScale(v : number) {
+   this.setMinScale(v);
+ }
 
 };
 /**
@@ -12233,11 +12260,11 @@ class TSlideMenu extends TWidget {
  *可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。
  *
  */
-class TScrollView extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TScrollView extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -12251,9 +12278,9 @@ class TScrollView extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TScrollView(scroll_view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -12263,9 +12290,9 @@ class TScrollView extends TWidget {
    *
    * @returns scroll_view对象。
    */
-  static cast(widget: TWidget): TScrollView {
+ static cast(widget : TWidget) : TScrollView  {
     return new TScrollView(scroll_view_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -12275,9 +12302,9 @@ class TScrollView extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setVirtualW(w: number): TRet {
+ setVirtualW(w : number) : TRet  {
     return scroll_view_set_virtual_w(this != null ? (this.nativeObj || this) : null, w);
-  }
+ }
 
 
   /**
@@ -12287,9 +12314,9 @@ class TScrollView extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setVirtualH(h: number): TRet {
+ setVirtualH(h : number) : TRet  {
     return scroll_view_set_virtual_h(this != null ? (this.nativeObj || this) : null, h);
-  }
+ }
 
 
   /**
@@ -12299,9 +12326,9 @@ class TScrollView extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setXslidable(xslidable: boolean): TRet {
+ setXslidable(xslidable : boolean) : TRet  {
     return scroll_view_set_xslidable(this != null ? (this.nativeObj || this) : null, xslidable);
-  }
+ }
 
 
   /**
@@ -12311,9 +12338,9 @@ class TScrollView extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setYslidable(yslidable: boolean): TRet {
+ setYslidable(yslidable : boolean) : TRet  {
     return scroll_view_set_yslidable(this != null ? (this.nativeObj || this) : null, yslidable);
-  }
+ }
 
 
   /**
@@ -12324,9 +12351,9 @@ class TScrollView extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setOffset(xoffset: number, yoffset: number): TRet {
+ setOffset(xoffset : number, yoffset : number) : TRet  {
     return scroll_view_set_offset(this != null ? (this.nativeObj || this) : null, xoffset, yoffset);
-  }
+ }
 
 
   /**
@@ -12337,9 +12364,9 @@ class TScrollView extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setSpeedScale(xspeed_scale: number, yspeed_scale: number): TRet {
+ setSpeedScale(xspeed_scale : number, yspeed_scale : number) : TRet  {
     return scroll_view_set_speed_scale(this != null ? (this.nativeObj || this) : null, xspeed_scale, yspeed_scale);
-  }
+ }
 
 
   /**
@@ -12351,9 +12378,9 @@ class TScrollView extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  scrollTo(xoffset_end: number, yoffset_end: number, duration: number): TRet {
+ scrollTo(xoffset_end : number, yoffset_end : number, duration : number) : TRet  {
     return scroll_view_scroll_to(this != null ? (this.nativeObj || this) : null, xoffset_end, yoffset_end, duration);
-  }
+ }
 
 
   /**
@@ -12365,97 +12392,97 @@ class TScrollView extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  scrollDeltaTo(xoffset_delta: number, yoffset_delta: number, duration: number): TRet {
+ scrollDeltaTo(xoffset_delta : number, yoffset_delta : number, duration : number) : TRet  {
     return scroll_view_scroll_delta_to(this != null ? (this.nativeObj || this) : null, xoffset_delta, yoffset_delta, duration);
-  }
+ }
 
 
   /**
    * 虚拟宽度。
    *
    */
-  get virtualW(): number {
-    return scroll_view_t_get_prop_virtual_w(this.nativeObj);
-  }
+ get virtualW() : number {
+   return scroll_view_t_get_prop_virtual_w(this.nativeObj);
+ }
 
-  set virtualW(v: number) {
-    this.setVirtualW(v);
-  }
+ set virtualW(v : number) {
+   this.setVirtualW(v);
+ }
 
 
   /**
    * 虚拟高度。
    *
    */
-  get virtualH(): number {
-    return scroll_view_t_get_prop_virtual_h(this.nativeObj);
-  }
+ get virtualH() : number {
+   return scroll_view_t_get_prop_virtual_h(this.nativeObj);
+ }
 
-  set virtualH(v: number) {
-    this.setVirtualH(v);
-  }
+ set virtualH(v : number) {
+   this.setVirtualH(v);
+ }
 
 
   /**
    * x偏移量。
    *
    */
-  get xoffset(): number {
-    return scroll_view_t_get_prop_xoffset(this.nativeObj);
-  }
+ get xoffset() : number {
+   return scroll_view_t_get_prop_xoffset(this.nativeObj);
+ }
 
 
   /**
    * y偏移量。
    *
    */
-  get yoffset(): number {
-    return scroll_view_t_get_prop_yoffset(this.nativeObj);
-  }
+ get yoffset() : number {
+   return scroll_view_t_get_prop_yoffset(this.nativeObj);
+ }
 
 
   /**
    * x偏移速度比例。
    *
    */
-  get xspeedScale(): number {
-    return scroll_view_t_get_prop_xspeed_scale(this.nativeObj);
-  }
+ get xspeedScale() : number {
+   return scroll_view_t_get_prop_xspeed_scale(this.nativeObj);
+ }
 
 
   /**
    * y偏移速度比例。
    *
    */
-  get yspeedScale(): number {
-    return scroll_view_t_get_prop_yspeed_scale(this.nativeObj);
-  }
+ get yspeedScale() : number {
+   return scroll_view_t_get_prop_yspeed_scale(this.nativeObj);
+ }
 
 
   /**
    * 是否允许x方向滑动。
    *
    */
-  get xslidable(): boolean {
-    return scroll_view_t_get_prop_xslidable(this.nativeObj);
-  }
+ get xslidable() : boolean {
+   return scroll_view_t_get_prop_xslidable(this.nativeObj);
+ }
 
-  set xslidable(v: boolean) {
-    this.setXslidable(v);
-  }
+ set xslidable(v : boolean) {
+   this.setXslidable(v);
+ }
 
 
   /**
    * 是否允许y方向滑动。
    *
    */
-  get yslidable(): boolean {
-    return scroll_view_t_get_prop_yslidable(this.nativeObj);
-  }
+ get yslidable() : boolean {
+   return scroll_view_t_get_prop_yslidable(this.nativeObj);
+ }
 
-  set yslidable(v: boolean) {
-    this.setYslidable(v);
-  }
+ set yslidable(v : boolean) {
+   this.setYslidable(v);
+ }
 
 };
 /**
@@ -12494,11 +12521,11 @@ class TScrollView extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L350)
  *
  */
-class TScrollBar extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TScrollBar extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -12514,9 +12541,9 @@ class TScrollBar extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TScrollBar(scroll_bar_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -12526,9 +12553,9 @@ class TScrollBar extends TWidget {
    *
    * @returns scroll_bar对象。
    */
-  static cast(widget: TWidget): TScrollBar {
+ static cast(widget : TWidget) : TScrollBar  {
     return new TScrollBar(scroll_bar_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -12542,9 +12569,9 @@ class TScrollBar extends TWidget {
    *
    * @returns 对象。
    */
-  static createMobile(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static createMobile(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TScrollBar(scroll_bar_create_mobile(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -12558,9 +12585,9 @@ class TScrollBar extends TWidget {
    *
    * @returns 对象。
    */
-  static createDesktop(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static createDesktop(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TScrollBar(scroll_bar_create_desktop(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -12571,9 +12598,9 @@ class TScrollBar extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setParams(virtual_size: number, row: number): TRet {
+ setParams(virtual_size : number, row : number) : TRet  {
     return scroll_bar_set_params(this != null ? (this.nativeObj || this) : null, virtual_size, row);
-  }
+ }
 
 
   /**
@@ -12584,9 +12611,9 @@ class TScrollBar extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  scrollTo(value: any, duration: number): TRet {
+ scrollTo(value : any, duration : number) : TRet  {
     return scroll_bar_scroll_to(this != null ? (this.nativeObj || this) : null, value, duration);
-  }
+ }
 
 
   /**
@@ -12596,9 +12623,9 @@ class TScrollBar extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setValue(value: any): TRet {
+ setValue(value : any) : TRet  {
     return scroll_bar_set_value(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -12608,9 +12635,9 @@ class TScrollBar extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  addDelta(delta: number): TRet {
+ addDelta(delta : number) : TRet  {
     return scroll_bar_add_delta(this != null ? (this.nativeObj || this) : null, delta);
-  }
+ }
 
 
   /**
@@ -12620,9 +12647,9 @@ class TScrollBar extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  scrollDelta(delta: number): TRet {
+ scrollDelta(delta : number) : TRet  {
     return scroll_bar_scroll_delta(this != null ? (this.nativeObj || this) : null, delta);
-  }
+ }
 
 
   /**
@@ -12632,9 +12659,9 @@ class TScrollBar extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setValueOnly(value: any): TRet {
+ setValueOnly(value : any) : TRet  {
     return scroll_bar_set_value_only(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -12643,49 +12670,49 @@ class TScrollBar extends TWidget {
    *
    * @returns 返回TRUE表示是mobile风格的，否则表示不是mobile风格的。
    */
-  isMobile(): boolean {
+ isMobile() : boolean  {
     return scroll_bar_is_mobile(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
    * 虚拟宽度或高度。
    *
    */
-  get virtualSize(): number {
-    return scroll_bar_t_get_prop_virtual_size(this.nativeObj);
-  }
+ get virtualSize() : number {
+   return scroll_bar_t_get_prop_virtual_size(this.nativeObj);
+ }
 
 
   /**
    * 当前的值。
    *
    */
-  get value(): number {
-    return scroll_bar_t_get_prop_value(this.nativeObj);
-  }
+ get value() : number {
+   return scroll_bar_t_get_prop_value(this.nativeObj);
+ }
 
-  set value(v: number) {
-    this.setValue(v);
-  }
+ set value(v : number) {
+   this.setValue(v);
+ }
 
 
   /**
    * 行的高度。
    *
    */
-  get row(): number {
-    return scroll_bar_t_get_prop_row(this.nativeObj);
-  }
+ get row() : number {
+   return scroll_bar_t_get_prop_row(this.nativeObj);
+ }
 
 
   /**
    * 滚动时是否启用动画。
    *
    */
-  get animatable(): boolean {
-    return scroll_bar_t_get_prop_animatable(this.nativeObj);
-  }
+ get animatable() : boolean {
+   return scroll_bar_t_get_prop_animatable(this.nativeObj);
+ }
 
 };
 /**
@@ -12734,11 +12761,11 @@ class TScrollBar extends TWidget {
  *可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。
  *
  */
-class TListView extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TListView extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -12752,9 +12779,9 @@ class TListView extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TListView(list_view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -12764,9 +12791,9 @@ class TListView extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setItemHeight(item_height: number): TRet {
+ setItemHeight(item_height : number) : TRet  {
     return list_view_set_item_height(this != null ? (this.nativeObj || this) : null, item_height);
-  }
+ }
 
 
   /**
@@ -12776,9 +12803,9 @@ class TListView extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setDefaultItemHeight(default_item_height: number): TRet {
+ setDefaultItemHeight(default_item_height : number) : TRet  {
     return list_view_set_default_item_height(this != null ? (this.nativeObj || this) : null, default_item_height);
-  }
+ }
 
 
   /**
@@ -12788,9 +12815,9 @@ class TListView extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setAutoHideScrollBar(auto_hide_scroll_bar: boolean): TRet {
+ setAutoHideScrollBar(auto_hide_scroll_bar : boolean) : TRet  {
     return list_view_set_auto_hide_scroll_bar(this != null ? (this.nativeObj || this) : null, auto_hide_scroll_bar);
-  }
+ }
 
 
   /**
@@ -12800,48 +12827,48 @@ class TListView extends TWidget {
    *
    * @returns list_view对象。
    */
-  static cast(widget: TWidget): TListView {
+ static cast(widget : TWidget) : TListView  {
     return new TListView(list_view_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
    * 列表项的高度。如果 item_height 0，所有列表项使用固定高度，否则使用列表项自身的高度。
    *
    */
-  get itemHeight(): number {
-    return list_view_t_get_prop_item_height(this.nativeObj);
-  }
+ get itemHeight() : number {
+   return list_view_t_get_prop_item_height(this.nativeObj);
+ }
 
-  set itemHeight(v: number) {
-    this.setItemHeight(v);
-  }
+ set itemHeight(v : number) {
+   this.setItemHeight(v);
+ }
 
 
   /**
    * 列表项的缺省高度。如果item_height <= 0 而且列表项自身的高度 <= 0，则使用缺省高度。
    *
    */
-  get defaultItemHeight(): number {
-    return list_view_t_get_prop_default_item_height(this.nativeObj);
-  }
+ get defaultItemHeight() : number {
+   return list_view_t_get_prop_default_item_height(this.nativeObj);
+ }
 
-  set defaultItemHeight(v: number) {
-    this.setDefaultItemHeight(v);
-  }
+ set defaultItemHeight(v : number) {
+   this.setDefaultItemHeight(v);
+ }
 
 
   /**
    * 如果不需要滚动条时，自动隐藏滚动条。
    *
    */
-  get autoHideScrollBar(): boolean {
-    return list_view_t_get_prop_auto_hide_scroll_bar(this.nativeObj);
-  }
+ get autoHideScrollBar() : boolean {
+   return list_view_t_get_prop_auto_hide_scroll_bar(this.nativeObj);
+ }
 
-  set autoHideScrollBar(v: boolean) {
-    this.setAutoHideScrollBar(v);
-  }
+ set autoHideScrollBar(v : boolean) {
+   this.setAutoHideScrollBar(v);
+ }
 
 };
 /**
@@ -12875,11 +12902,11 @@ class TListView extends TWidget {
  *可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。
  *
  */
-class TListViewH extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TListViewH extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -12893,9 +12920,9 @@ class TListViewH extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TListViewH(list_view_h_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -12905,9 +12932,9 @@ class TListViewH extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setItemWidth(item_width: number): TRet {
+ setItemWidth(item_width : number) : TRet  {
     return list_view_h_set_item_width(this != null ? (this.nativeObj || this) : null, item_width);
-  }
+ }
 
 
   /**
@@ -12917,9 +12944,9 @@ class TListViewH extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setSpacing(spacing: number): TRet {
+ setSpacing(spacing : number) : TRet  {
     return list_view_h_set_spacing(this != null ? (this.nativeObj || this) : null, spacing);
-  }
+ }
 
 
   /**
@@ -12929,35 +12956,35 @@ class TListViewH extends TWidget {
    *
    * @returns list_view_h对象。
    */
-  static cast(widget: TWidget): TListViewH {
+ static cast(widget : TWidget) : TListViewH  {
     return new TListViewH(list_view_h_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
    * 列表项的宽度。
    *
    */
-  get itemWidth(): number {
-    return list_view_h_t_get_prop_item_width(this.nativeObj);
-  }
+ get itemWidth() : number {
+   return list_view_h_t_get_prop_item_width(this.nativeObj);
+ }
 
-  set itemWidth(v: number) {
-    this.setItemWidth(v);
-  }
+ set itemWidth(v : number) {
+   this.setItemWidth(v);
+ }
 
 
   /**
    * 间距。
    *
    */
-  get spacing(): number {
-    return list_view_h_t_get_prop_spacing(this.nativeObj);
-  }
+ get spacing() : number {
+   return list_view_h_t_get_prop_spacing(this.nativeObj);
+ }
 
-  set spacing(v: number) {
-    this.setSpacing(v);
-  }
+ set spacing(v : number) {
+   this.setSpacing(v);
+ }
 
 };
 /**
@@ -13005,11 +13032,11 @@ class TListViewH extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L372)
  *
  */
-class TListItem extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TListItem extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -13023,9 +13050,9 @@ class TListItem extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TListItem(list_item_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -13035,9 +13062,9 @@ class TListItem extends TWidget {
    *
    * @returns list_item对象。
    */
-  static cast(widget: TWidget): TListItem {
+ static cast(widget : TWidget) : TListItem  {
     return new TListItem(list_item_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -13068,11 +13095,11 @@ class TListItem extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
  *
  */
-class THscrollLabel extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class THscrollLabel extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -13086,9 +13113,9 @@ class THscrollLabel extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new THscrollLabel(hscroll_label_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -13098,9 +13125,9 @@ class THscrollLabel extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setLull(lull: number): TRet {
+ setLull(lull : number) : TRet  {
     return hscroll_label_set_lull(this != null ? (this.nativeObj || this) : null, lull);
-  }
+ }
 
 
   /**
@@ -13110,9 +13137,9 @@ class THscrollLabel extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setDuration(duration: number): TRet {
+ setDuration(duration : number) : TRet  {
     return hscroll_label_set_duration(this != null ? (this.nativeObj || this) : null, duration);
-  }
+ }
 
 
   /**
@@ -13122,9 +13149,9 @@ class THscrollLabel extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setOnlyFocus(only_focus: boolean): TRet {
+ setOnlyFocus(only_focus : boolean) : TRet  {
     return hscroll_label_set_only_focus(this != null ? (this.nativeObj || this) : null, only_focus);
-  }
+ }
 
 
   /**
@@ -13134,9 +13161,9 @@ class THscrollLabel extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setOnlyParentFocus(only_parent_focus: boolean): TRet {
+ setOnlyParentFocus(only_parent_focus : boolean) : TRet  {
     return hscroll_label_set_only_parent_focus(this != null ? (this.nativeObj || this) : null, only_parent_focus);
-  }
+ }
 
 
   /**
@@ -13146,9 +13173,9 @@ class THscrollLabel extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setLoop(loop: boolean): TRet {
+ setLoop(loop : boolean) : TRet  {
     return hscroll_label_set_loop(this != null ? (this.nativeObj || this) : null, loop);
-  }
+ }
 
 
   /**
@@ -13158,9 +13185,9 @@ class THscrollLabel extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setYoyo(yoyo: boolean): TRet {
+ setYoyo(yoyo : boolean) : TRet  {
     return hscroll_label_set_yoyo(this != null ? (this.nativeObj || this) : null, yoyo);
-  }
+ }
 
 
   /**
@@ -13170,9 +13197,9 @@ class THscrollLabel extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setEllipses(ellipses: boolean): TRet {
+ setEllipses(ellipses : boolean) : TRet  {
     return hscroll_label_set_ellipses(this != null ? (this.nativeObj || this) : null, ellipses);
-  }
+ }
 
 
   /**
@@ -13182,9 +13209,9 @@ class THscrollLabel extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setXoffset(xoffset: number): TRet {
+ setXoffset(xoffset : number) : TRet  {
     return hscroll_label_set_xoffset(this != null ? (this.nativeObj || this) : null, xoffset);
-  }
+ }
 
 
   /**
@@ -13193,9 +13220,9 @@ class THscrollLabel extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  start(): TRet {
+ start() : TRet  {
     return hscroll_label_start(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -13204,9 +13231,9 @@ class THscrollLabel extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  stop(): TRet {
+ stop() : TRet  {
     return hscroll_label_stop(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -13216,122 +13243,122 @@ class THscrollLabel extends TWidget {
    *
    * @returns hscroll_label对象。
    */
-  static cast(widget: TWidget): THscrollLabel {
+ static cast(widget : TWidget) : THscrollLabel  {
     return new THscrollLabel(hscroll_label_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
    * 只有处于focus时才滚动(缺省否)。
    *
    */
-  get onlyFocus(): boolean {
-    return hscroll_label_t_get_prop_only_focus(this.nativeObj);
-  }
+ get onlyFocus() : boolean {
+   return hscroll_label_t_get_prop_only_focus(this.nativeObj);
+ }
 
-  set onlyFocus(v: boolean) {
-    this.setOnlyFocus(v);
-  }
+ set onlyFocus(v : boolean) {
+   this.setOnlyFocus(v);
+ }
 
 
   /**
    * 只有父控件处于focus时才滚动(缺省否)。
    *
    */
-  get onlyParentFocus(): boolean {
-    return hscroll_label_t_get_prop_only_parent_focus(this.nativeObj);
-  }
+ get onlyParentFocus() : boolean {
+   return hscroll_label_t_get_prop_only_parent_focus(this.nativeObj);
+ }
 
-  set onlyParentFocus(v: boolean) {
-    this.setOnlyParentFocus(v);
-  }
+ set onlyParentFocus(v : boolean) {
+   this.setOnlyParentFocus(v);
+ }
 
 
   /**
    * loop是否循环滚动(缺省FALSE)。
    *
    */
-  get loop(): boolean {
-    return hscroll_label_t_get_prop_loop(this.nativeObj);
-  }
+ get loop() : boolean {
+   return hscroll_label_t_get_prop_loop(this.nativeObj);
+ }
 
-  set loop(v: boolean) {
-    this.setLoop(v);
-  }
+ set loop(v : boolean) {
+   this.setLoop(v);
+ }
 
 
   /**
    * 是否往返滚动(缺省FALSE)。
    *
    */
-  get yoyo(): boolean {
-    return hscroll_label_t_get_prop_yoyo(this.nativeObj);
-  }
+ get yoyo() : boolean {
+   return hscroll_label_t_get_prop_yoyo(this.nativeObj);
+ }
 
-  set yoyo(v: boolean) {
-    this.setYoyo(v);
-  }
+ set yoyo(v : boolean) {
+   this.setYoyo(v);
+ }
 
 
   /**
    * 文本显示不下时，在行尾显示省略号(缺省FALSE)。
    *
    */
-  get ellipses(): boolean {
-    return hscroll_label_t_get_prop_ellipses(this.nativeObj);
-  }
+ get ellipses() : boolean {
+   return hscroll_label_t_get_prop_ellipses(this.nativeObj);
+ }
 
-  set ellipses(v: boolean) {
-    this.setEllipses(v);
-  }
+ set ellipses(v : boolean) {
+   this.setEllipses(v);
+ }
 
 
   /**
    * 滚动之间的间歇时间(ms)，缺省3000ms。
    *
    */
-  get lull(): number {
-    return hscroll_label_t_get_prop_lull(this.nativeObj);
-  }
+ get lull() : number {
+   return hscroll_label_t_get_prop_lull(this.nativeObj);
+ }
 
-  set lull(v: number) {
-    this.setLull(v);
-  }
+ set lull(v : number) {
+   this.setLull(v);
+ }
 
 
   /**
    * 完整的滚动一次需要的时间(ms)，缺省5000ms。
    *
    */
-  get duration(): number {
-    return hscroll_label_t_get_prop_duration(this.nativeObj);
-  }
+ get duration() : number {
+   return hscroll_label_t_get_prop_duration(this.nativeObj);
+ }
 
-  set duration(v: number) {
-    this.setDuration(v);
-  }
+ set duration(v : number) {
+   this.setDuration(v);
+ }
 
 
   /**
    * 偏移量。
    *
    */
-  get xoffset(): number {
-    return hscroll_label_t_get_prop_xoffset(this.nativeObj);
-  }
+ get xoffset() : number {
+   return hscroll_label_t_get_prop_xoffset(this.nativeObj);
+ }
 
-  set xoffset(v: number) {
-    this.setXoffset(v);
-  }
+ set xoffset(v : number) {
+   this.setXoffset(v);
+ }
 
 
   /**
    * 文本的宽度。
    *
    */
-  get textW(): number {
-    return hscroll_label_t_get_prop_text_w(this.nativeObj);
-  }
+ get textW() : number {
+   return hscroll_label_t_get_prop_text_w(this.nativeObj);
+ }
 
 };
 /**
@@ -13374,11 +13401,11 @@ class THscrollLabel extends TWidget {
  ** underline 下划线(暂不支持)
  *
  */
-class TRichText extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TRichText extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -13392,9 +13419,9 @@ class TRichText extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TRichText(rich_text_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -13404,9 +13431,9 @@ class TRichText extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setText(text: string): TRet {
+ setText(text : string) : TRet  {
     return rich_text_set_text(this != null ? (this.nativeObj || this) : null, text);
-  }
+ }
 
 
   /**
@@ -13416,27 +13443,27 @@ class TRichText extends TWidget {
    *
    * @returns rich_text对象。
    */
-  static cast(widget: TWidget): TRichText {
+ static cast(widget : TWidget) : TRichText  {
     return new TRichText(rich_text_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
    * 行间距。
    *
    */
-  get lineGap(): number {
-    return rich_text_t_get_prop_line_gap(this.nativeObj);
-  }
+ get lineGap() : number {
+   return rich_text_t_get_prop_line_gap(this.nativeObj);
+ }
 
 
   /**
    * 边距。
    *
    */
-  get margin(): number {
-    return rich_text_t_get_prop_margin(this.nativeObj);
-  }
+ get margin() : number {
+   return rich_text_t_get_prop_margin(this.nativeObj);
+ }
 
 };
 /**
@@ -13473,11 +13500,11 @@ class TRichText extends TWidget {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L467)
  *
  */
-class TProgressCircle extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TProgressCircle extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -13491,9 +13518,9 @@ class TProgressCircle extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TProgressCircle(progress_circle_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -13503,9 +13530,9 @@ class TProgressCircle extends TWidget {
    *
    * @returns progress_circle对象。
    */
-  static cast(widget: TWidget): TProgressCircle {
+ static cast(widget : TWidget) : TProgressCircle  {
     return new TProgressCircle(progress_circle_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -13515,9 +13542,9 @@ class TProgressCircle extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setValue(value: any): TRet {
+ setValue(value : any) : TRet  {
     return progress_circle_set_value(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -13527,9 +13554,9 @@ class TProgressCircle extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setMax(max: number): TRet {
+ setMax(max : number) : TRet  {
     return progress_circle_set_max(this != null ? (this.nativeObj || this) : null, max);
-  }
+ }
 
 
   /**
@@ -13539,9 +13566,9 @@ class TProgressCircle extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setLineWidth(line_width: number): TRet {
+ setLineWidth(line_width : number) : TRet  {
     return progress_circle_set_line_width(this != null ? (this.nativeObj || this) : null, line_width);
-  }
+ }
 
 
   /**
@@ -13551,9 +13578,9 @@ class TProgressCircle extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setStartAngle(start_angle: number): TRet {
+ setStartAngle(start_angle : number) : TRet  {
     return progress_circle_set_start_angle(this != null ? (this.nativeObj || this) : null, start_angle);
-  }
+ }
 
 
   /**
@@ -13563,9 +13590,9 @@ class TProgressCircle extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setUnit(unit: string): TRet {
+ setUnit(unit : string) : TRet  {
     return progress_circle_set_unit(this != null ? (this.nativeObj || this) : null, unit);
-  }
+ }
 
 
   /**
@@ -13575,9 +13602,9 @@ class TProgressCircle extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setShowText(show_text: boolean): TRet {
+ setShowText(show_text : boolean) : TRet  {
     return progress_circle_set_show_text(this != null ? (this.nativeObj || this) : null, show_text);
-  }
+ }
 
 
   /**
@@ -13587,100 +13614,100 @@ class TProgressCircle extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setCounterClockWise(counter_clock_wise: boolean): TRet {
+ setCounterClockWise(counter_clock_wise : boolean) : TRet  {
     return progress_circle_set_counter_clock_wise(this != null ? (this.nativeObj || this) : null, counter_clock_wise);
-  }
+ }
 
 
   /**
    * 值(缺省为0)。
    *
    */
-  get value(): number {
-    return progress_circle_t_get_prop_value(this.nativeObj);
-  }
+ get value() : number {
+   return progress_circle_t_get_prop_value(this.nativeObj);
+ }
 
-  set value(v: number) {
-    this.setValue(v);
-  }
+ set value(v : number) {
+   this.setValue(v);
+ }
 
 
   /**
    * 最大值(缺省为100)。
    *
    */
-  get max(): number {
-    return progress_circle_t_get_prop_max(this.nativeObj);
-  }
+ get max() : number {
+   return progress_circle_t_get_prop_max(this.nativeObj);
+ }
 
-  set max(v: number) {
-    this.setMax(v);
-  }
+ set max(v : number) {
+   this.setMax(v);
+ }
 
 
   /**
    * 起始角度(单位为度，缺省-90)。
    *
    */
-  get startAngle(): number {
-    return progress_circle_t_get_prop_start_angle(this.nativeObj);
-  }
+ get startAngle() : number {
+   return progress_circle_t_get_prop_start_angle(this.nativeObj);
+ }
 
-  set startAngle(v: number) {
-    this.setStartAngle(v);
-  }
+ set startAngle(v : number) {
+   this.setStartAngle(v);
+ }
 
 
   /**
    * 环线的厚度(缺省为8)。
    *
    */
-  get lineWidth(): number {
-    return progress_circle_t_get_prop_line_width(this.nativeObj);
-  }
+ get lineWidth() : number {
+   return progress_circle_t_get_prop_line_width(this.nativeObj);
+ }
 
-  set lineWidth(v: number) {
-    this.setLineWidth(v);
-  }
+ set lineWidth(v : number) {
+   this.setLineWidth(v);
+ }
 
 
   /**
    * 单元(缺省无)。
    *
    */
-  get unit(): string {
-    return progress_circle_t_get_prop_unit(this.nativeObj);
-  }
+ get unit() : string {
+   return progress_circle_t_get_prop_unit(this.nativeObj);
+ }
 
-  set unit(v: string) {
-    this.setUnit(v);
-  }
+ set unit(v : string) {
+   this.setUnit(v);
+ }
 
 
   /**
    * 是否为逆时针方向(缺省为FALSE)。
    *
    */
-  get counterClockWise(): boolean {
-    return progress_circle_t_get_prop_counter_clock_wise(this.nativeObj);
-  }
+ get counterClockWise() : boolean {
+   return progress_circle_t_get_prop_counter_clock_wise(this.nativeObj);
+ }
 
-  set counterClockWise(v: boolean) {
-    this.setCounterClockWise(v);
-  }
+ set counterClockWise(v : boolean) {
+   this.setCounterClockWise(v);
+ }
 
 
   /**
    * 是否显示文本(缺省为TRUE)。
    *
    */
-  get showText(): boolean {
-    return progress_circle_t_get_prop_show_text(this.nativeObj);
-  }
+ get showText() : boolean {
+   return progress_circle_t_get_prop_show_text(this.nativeObj);
+ }
 
-  set showText(v: boolean) {
-    this.setShowText(v);
-  }
+ set showText(v : boolean) {
+   this.setShowText(v);
+ }
 
 };
 /**
@@ -13706,11 +13733,11 @@ class TProgressCircle extends TWidget {
  *time\_clock一般不需要设置style。
  *
  */
-class TMledit extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TMledit extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -13724,9 +13751,9 @@ class TMledit extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TMledit(mledit_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -13736,9 +13763,9 @@ class TMledit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setReadonly(readonly: boolean): TRet {
+ setReadonly(readonly : boolean) : TRet  {
     return mledit_set_readonly(this != null ? (this.nativeObj || this) : null, readonly);
-  }
+ }
 
 
   /**
@@ -13748,9 +13775,9 @@ class TMledit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setFocus(focus: boolean): TRet {
+ setFocus(focus : boolean) : TRet  {
     return mledit_set_focus(this != null ? (this.nativeObj || this) : null, focus);
-  }
+ }
 
 
   /**
@@ -13760,9 +13787,9 @@ class TMledit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setWrapWord(wrap_word: boolean): TRet {
+ setWrapWord(wrap_word : boolean) : TRet  {
     return mledit_set_wrap_word(this != null ? (this.nativeObj || this) : null, wrap_word);
-  }
+ }
 
 
   /**
@@ -13772,9 +13799,9 @@ class TMledit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setMaxLines(max_lines: number): TRet {
+ setMaxLines(max_lines : number) : TRet  {
     return mledit_set_max_lines(this != null ? (this.nativeObj || this) : null, max_lines);
-  }
+ }
 
 
   /**
@@ -13784,9 +13811,9 @@ class TMledit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setInputTips(tips: string): TRet {
+ setInputTips(tips : string) : TRet  {
     return mledit_set_input_tips(this != null ? (this.nativeObj || this) : null, tips);
-  }
+ }
 
 
   /**
@@ -13796,9 +13823,9 @@ class TMledit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setCursor(cursor: number): TRet {
+ setCursor(cursor : number) : TRet  {
     return mledit_set_cursor(this != null ? (this.nativeObj || this) : null, cursor);
-  }
+ }
 
 
   /**
@@ -13808,9 +13835,9 @@ class TMledit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setScrollLine(scroll_line: number): TRet {
+ setScrollLine(scroll_line : number) : TRet  {
     return mledit_set_scroll_line(this != null ? (this.nativeObj || this) : null, scroll_line);
-  }
+ }
 
 
   /**
@@ -13820,70 +13847,70 @@ class TMledit extends TWidget {
    *
    * @returns mledit对象。
    */
-  static cast(widget: TWidget): TMledit {
+ static cast(widget : TWidget) : TMledit  {
     return new TMledit(mledit_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
    * 编辑器是否为只读。
    *
    */
-  get readonly(): boolean {
-    return mledit_t_get_prop_readonly(this.nativeObj);
-  }
+ get readonly() : boolean {
+   return mledit_t_get_prop_readonly(this.nativeObj);
+ }
 
-  set readonly(v: boolean) {
-    this.setReadonly(v);
-  }
+ set readonly(v : boolean) {
+   this.setReadonly(v);
+ }
 
 
   /**
    * 输入提示。
    *
    */
-  get tips(): string {
-    return mledit_t_get_prop_tips(this.nativeObj);
-  }
+ get tips() : string {
+   return mledit_t_get_prop_tips(this.nativeObj);
+ }
 
 
   /**
    * 是否自动折行。
    *
    */
-  get wrapWord(): boolean {
-    return mledit_t_get_prop_wrap_word(this.nativeObj);
-  }
+ get wrapWord() : boolean {
+   return mledit_t_get_prop_wrap_word(this.nativeObj);
+ }
 
-  set wrapWord(v: boolean) {
-    this.setWrapWord(v);
-  }
+ set wrapWord(v : boolean) {
+   this.setWrapWord(v);
+ }
 
 
   /**
    * 最大行数。
    *
    */
-  get maxLines(): number {
-    return mledit_t_get_prop_max_lines(this.nativeObj);
-  }
+ get maxLines() : number {
+   return mledit_t_get_prop_max_lines(this.nativeObj);
+ }
 
-  set maxLines(v: number) {
-    this.setMaxLines(v);
-  }
+ set maxLines(v : number) {
+   this.setMaxLines(v);
+ }
 
 
   /**
    * 鼠标一次滚动行数。
    *
    */
-  get scrollLine(): number {
-    return mledit_t_get_prop_scroll_line(this.nativeObj);
-  }
+ get scrollLine() : number {
+   return mledit_t_get_prop_scroll_line(this.nativeObj);
+ }
 
-  set scrollLine(v: number) {
-    this.setScrollLine(v);
-  }
+ set scrollLine(v : number) {
+   this.setScrollLine(v);
+ }
 
 };
 /**
@@ -13919,11 +13946,11 @@ class TMledit extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L556)
  *
  */
-class TLineNumber extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TLineNumber extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -13937,9 +13964,9 @@ class TLineNumber extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TLineNumber(line_number_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -13949,9 +13976,9 @@ class TLineNumber extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setTopMargin(top_margin: number): TRet {
+ setTopMargin(top_margin : number) : TRet  {
     return line_number_set_top_margin(this != null ? (this.nativeObj || this) : null, top_margin);
-  }
+ }
 
 
   /**
@@ -13961,9 +13988,9 @@ class TLineNumber extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setBottomMargin(bottom_margin: number): TRet {
+ setBottomMargin(bottom_margin : number) : TRet  {
     return line_number_set_bottom_margin(this != null ? (this.nativeObj || this) : null, bottom_margin);
-  }
+ }
 
 
   /**
@@ -13973,9 +14000,9 @@ class TLineNumber extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setLineHeight(line_height: number): TRet {
+ setLineHeight(line_height : number) : TRet  {
     return line_number_set_line_height(this != null ? (this.nativeObj || this) : null, line_height);
-  }
+ }
 
 
   /**
@@ -13985,9 +14012,9 @@ class TLineNumber extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setYoffset(yoffset: number): TRet {
+ setYoffset(yoffset : number) : TRet  {
     return line_number_set_yoffset(this != null ? (this.nativeObj || this) : null, yoffset);
-  }
+ }
 
 
   /**
@@ -13997,9 +14024,9 @@ class TLineNumber extends TWidget {
    *
    * @returns line_number对象。
    */
-  static cast(widget: TWidget): TLineNumber {
+ static cast(widget : TWidget) : TLineNumber  {
     return new TLineNumber(line_number_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -14033,11 +14060,11 @@ class TLineNumber extends TWidget {
  *可用通过style来设置控件的显示风格，如背景颜色和边框等等，不过一般情况并不需要。
  *
  */
-class TImageValue extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TImageValue extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -14051,9 +14078,9 @@ class TImageValue extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TImageValue(image_value_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -14063,9 +14090,9 @@ class TImageValue extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setImage(image: string): TRet {
+ setImage(image : string) : TRet  {
     return image_value_set_image(this != null ? (this.nativeObj || this) : null, image);
-  }
+ }
 
 
   /**
@@ -14075,9 +14102,9 @@ class TImageValue extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setFormat(format: string): TRet {
+ setFormat(format : string) : TRet  {
     return image_value_set_format(this != null ? (this.nativeObj || this) : null, format);
-  }
+ }
 
 
   /**
@@ -14087,9 +14114,9 @@ class TImageValue extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setValue(value: any): TRet {
+ setValue(value : any) : TRet  {
     return image_value_set_value(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -14099,48 +14126,48 @@ class TImageValue extends TWidget {
    *
    * @returns image_value对象。
    */
-  static cast(widget: TWidget): TImageValue {
+ static cast(widget : TWidget) : TImageValue  {
     return new TImageValue(image_value_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
    * 图片名称的前缀。
    *
    */
-  get image(): string {
-    return image_value_t_get_prop_image(this.nativeObj);
-  }
+ get image() : string {
+   return image_value_t_get_prop_image(this.nativeObj);
+ }
 
-  set image(v: string) {
-    this.setImage(v);
-  }
+ set image(v : string) {
+   this.setImage(v);
+ }
 
 
   /**
    * 数值到字符串转换时的格式，缺省为"%d"。
    *
    */
-  get format(): string {
-    return image_value_t_get_prop_format(this.nativeObj);
-  }
+ get format() : string {
+   return image_value_t_get_prop_format(this.nativeObj);
+ }
 
-  set format(v: string) {
-    this.setFormat(v);
-  }
+ set format(v : string) {
+   this.setFormat(v);
+ }
 
 
   /**
    * 值。
    *
    */
-  get value(): number {
-    return image_value_t_get_prop_value(this.nativeObj);
-  }
+ get value() : number {
+   return image_value_t_get_prop_value(this.nativeObj);
+ }
 
-  set value(v: number) {
-    this.setValue(v);
-  }
+ set value(v : number) {
+   this.setValue(v);
+ }
 
 };
 /**
@@ -14170,11 +14197,11 @@ class TImageValue extends TWidget {
  *可用通过style来设置控件的显示风格，如背景颜色和边框等等，不过一般情况并不需要。
  *
  */
-class TImageAnimation extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TImageAnimation extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -14188,9 +14215,9 @@ class TImageAnimation extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TImageAnimation(image_animation_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -14200,9 +14227,9 @@ class TImageAnimation extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setLoop(loop: boolean): TRet {
+ setLoop(loop : boolean) : TRet  {
     return image_animation_set_loop(this != null ? (this.nativeObj || this) : null, loop);
-  }
+ }
 
 
   /**
@@ -14212,9 +14239,9 @@ class TImageAnimation extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setImage(image: string): TRet {
+ setImage(image : string) : TRet  {
     return image_animation_set_image(this != null ? (this.nativeObj || this) : null, image);
-  }
+ }
 
 
   /**
@@ -14224,9 +14251,9 @@ class TImageAnimation extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setInterval(interval: number): TRet {
+ setInterval(interval : number) : TRet  {
     return image_animation_set_interval(this != null ? (this.nativeObj || this) : null, interval);
-  }
+ }
 
 
   /**
@@ -14236,9 +14263,9 @@ class TImageAnimation extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setDelay(delay: number): TRet {
+ setDelay(delay : number) : TRet  {
     return image_animation_set_delay(this != null ? (this.nativeObj || this) : null, delay);
-  }
+ }
 
 
   /**
@@ -14248,9 +14275,9 @@ class TImageAnimation extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setAutoPlay(auto_play: boolean): TRet {
+ setAutoPlay(auto_play : boolean) : TRet  {
     return image_animation_set_auto_play(this != null ? (this.nativeObj || this) : null, auto_play);
-  }
+ }
 
 
   /**
@@ -14261,9 +14288,9 @@ class TImageAnimation extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setSequence(sequence: string): TRet {
+ setSequence(sequence : string) : TRet  {
     return image_animation_set_sequence(this != null ? (this.nativeObj || this) : null, sequence);
-  }
+ }
 
 
   /**
@@ -14277,9 +14304,9 @@ class TImageAnimation extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setRangeSequence(start_index: number, end_index: number): TRet {
+ setRangeSequence(start_index : number, end_index : number) : TRet  {
     return image_animation_set_range_sequence(this != null ? (this.nativeObj || this) : null, start_index, end_index);
-  }
+ }
 
 
   /**
@@ -14288,9 +14315,9 @@ class TImageAnimation extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  play(): TRet {
+ play() : TRet  {
     return image_animation_play(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -14299,9 +14326,9 @@ class TImageAnimation extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  stop(): TRet {
+ stop() : TRet  {
     return image_animation_stop(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -14310,9 +14337,9 @@ class TImageAnimation extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  pause(): TRet {
+ pause() : TRet  {
     return image_animation_pause(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -14321,9 +14348,9 @@ class TImageAnimation extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  next(): TRet {
+ next() : TRet  {
     return image_animation_next(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -14340,9 +14367,9 @@ class TImageAnimation extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setFormat(format: string): TRet {
+ setFormat(format : string) : TRet  {
     return image_animation_set_format(this != null ? (this.nativeObj || this) : null, format);
-  }
+ }
 
 
   /**
@@ -14352,9 +14379,9 @@ class TImageAnimation extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setUnloadAfterPaint(unload_after_paint: boolean): TRet {
+ setUnloadAfterPaint(unload_after_paint : boolean) : TRet  {
     return image_animation_set_unload_after_paint(this != null ? (this.nativeObj || this) : null, unload_after_paint);
-  }
+ }
 
 
   /**
@@ -14364,131 +14391,131 @@ class TImageAnimation extends TWidget {
    *
    * @returns image_animation对象。
    */
-  static cast(widget: TWidget): TImageAnimation {
+ static cast(widget : TWidget) : TImageAnimation  {
     return new TImageAnimation(image_animation_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
    * 图片名称的前缀。
    *
    */
-  get image(): string {
-    return image_animation_t_get_prop_image(this.nativeObj);
-  }
+ get image() : string {
+   return image_animation_t_get_prop_image(this.nativeObj);
+ }
 
-  set image(v: string) {
-    this.setImage(v);
-  }
+ set image(v : string) {
+   this.setImage(v);
+ }
 
 
   /**
    * 播放的序列，字符可选值为数字和英文大小写字母，字符可以重复。如：0123456789或者123123abcd。
    *
    */
-  get sequence(): string {
-    return image_animation_t_get_prop_sequence(this.nativeObj);
-  }
+ get sequence() : string {
+   return image_animation_t_get_prop_sequence(this.nativeObj);
+ }
 
-  set sequence(v: string) {
-    this.setSequence(v);
-  }
+ set sequence(v : string) {
+   this.setSequence(v);
+ }
 
 
   /**
    * 图片起始序数。
    *
    */
-  get startIndex(): number {
-    return image_animation_t_get_prop_start_index(this.nativeObj);
-  }
+ get startIndex() : number {
+   return image_animation_t_get_prop_start_index(this.nativeObj);
+ }
 
 
   /**
    * 图片结束序数。
    *
    */
-  get endIndex(): number {
-    return image_animation_t_get_prop_end_index(this.nativeObj);
-  }
+ get endIndex() : number {
+   return image_animation_t_get_prop_end_index(this.nativeObj);
+ }
 
 
   /**
    * 是否循环播放。
    *
    */
-  get loop(): boolean {
-    return image_animation_t_get_prop_loop(this.nativeObj);
-  }
+ get loop() : boolean {
+   return image_animation_t_get_prop_loop(this.nativeObj);
+ }
 
-  set loop(v: boolean) {
-    this.setLoop(v);
-  }
+ set loop(v : boolean) {
+   this.setLoop(v);
+ }
 
 
   /**
    * 是否自动播放。
    *
    */
-  get autoPlay(): boolean {
-    return image_animation_t_get_prop_auto_play(this.nativeObj);
-  }
+ get autoPlay() : boolean {
+   return image_animation_t_get_prop_auto_play(this.nativeObj);
+ }
 
-  set autoPlay(v: boolean) {
-    this.setAutoPlay(v);
-  }
+ set autoPlay(v : boolean) {
+   this.setAutoPlay(v);
+ }
 
 
   /**
    * 绘制完成后unload图片，以释放内存空间。
    *
    */
-  get unloadAfterPaint(): boolean {
-    return image_animation_t_get_prop_unload_after_paint(this.nativeObj);
-  }
+ get unloadAfterPaint() : boolean {
+   return image_animation_t_get_prop_unload_after_paint(this.nativeObj);
+ }
 
-  set unloadAfterPaint(v: boolean) {
-    this.setUnloadAfterPaint(v);
-  }
+ set unloadAfterPaint(v : boolean) {
+   this.setUnloadAfterPaint(v);
+ }
 
 
   /**
    * 索引到图片名转换时的格式，缺省为"%s%d"。
    *
    */
-  get format(): string {
-    return image_animation_t_get_prop_format(this.nativeObj);
-  }
+ get format() : string {
+   return image_animation_t_get_prop_format(this.nativeObj);
+ }
 
-  set format(v: string) {
-    this.setFormat(v);
-  }
+ set format(v : string) {
+   this.setFormat(v);
+ }
 
 
   /**
    * 每张图片播放的时间(毫秒)。
    *
    */
-  get interval(): number {
-    return image_animation_t_get_prop_interval(this.nativeObj);
-  }
+ get interval() : number {
+   return image_animation_t_get_prop_interval(this.nativeObj);
+ }
 
-  set interval(v: number) {
-    this.setInterval(v);
-  }
+ set interval(v : number) {
+   this.setInterval(v);
+ }
 
 
   /**
    * 自动播放时延迟播放的时间(毫秒)。
    *
    */
-  get delay(): number {
-    return image_animation_t_get_prop_delay(this.nativeObj);
-  }
+ get delay() : number {
+   return image_animation_t_get_prop_delay(this.nativeObj);
+ }
 
-  set delay(v: number) {
-    this.setDelay(v);
-  }
+ set delay(v : number) {
+   this.setDelay(v);
+ }
 
 };
 /**
@@ -14525,11 +14552,11 @@ class TImageAnimation extends TWidget {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
  *
  */
-class TGuage extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TGuage extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -14543,9 +14570,9 @@ class TGuage extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TGuage(guage_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -14555,9 +14582,9 @@ class TGuage extends TWidget {
    *
    * @returns guage对象。
    */
-  static cast(widget: TWidget): TGuage {
+ static cast(widget : TWidget) : TGuage  {
     return new TGuage(guage_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -14567,9 +14594,9 @@ class TGuage extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setImage(name: string): TRet {
+ setImage(name : string) : TRet  {
     return guage_set_image(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
@@ -14582,35 +14609,35 @@ class TGuage extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setDrawType(draw_type: TImageDrawType): TRet {
+ setDrawType(draw_type : TImageDrawType) : TRet  {
     return guage_set_draw_type(this != null ? (this.nativeObj || this) : null, draw_type);
-  }
+ }
 
 
   /**
    * 背景图片。
    *
    */
-  get image(): string {
-    return guage_t_get_prop_image(this.nativeObj);
-  }
+ get image() : string {
+   return guage_t_get_prop_image(this.nativeObj);
+ }
 
-  set image(v: string) {
-    this.setImage(v);
-  }
+ set image(v : string) {
+   this.setImage(v);
+ }
 
 
   /**
    * 图片的绘制方式。
    *
    */
-  get drawType(): TImageDrawType {
-    return guage_t_get_prop_draw_type(this.nativeObj);
-  }
+ get drawType() : TImageDrawType {
+   return guage_t_get_prop_draw_type(this.nativeObj);
+ }
 
-  set drawType(v: TImageDrawType) {
-    this.setDrawType(v);
-  }
+ set drawType(v : TImageDrawType) {
+   this.setDrawType(v);
+ }
 
 };
 /**
@@ -14637,11 +14664,11 @@ class TGuage extends TWidget {
  *> 创建之后，需要用guage\_pointer\_set\_image设置仪表指针图片。
  *
  */
-class TGuagePointer extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TGuagePointer extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -14655,9 +14682,9 @@ class TGuagePointer extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TGuagePointer(guage_pointer_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -14667,9 +14694,9 @@ class TGuagePointer extends TWidget {
    *
    * @returns guage_pointer对象。
    */
-  static cast(widget: TWidget): TGuagePointer {
+ static cast(widget : TWidget) : TGuagePointer  {
     return new TGuagePointer(guage_pointer_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -14679,9 +14706,9 @@ class TGuagePointer extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setAngle(angle: number): TRet {
+ setAngle(angle : number) : TRet  {
     return guage_pointer_set_angle(this != null ? (this.nativeObj || this) : null, angle);
-  }
+ }
 
 
   /**
@@ -14691,9 +14718,9 @@ class TGuagePointer extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setImage(image: string): TRet {
+ setImage(image : string) : TRet  {
     return guage_pointer_set_image(this != null ? (this.nativeObj || this) : null, image);
-  }
+ }
 
 
   /**
@@ -14704,22 +14731,22 @@ class TGuagePointer extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setAnchor(anchor_x: string, anchor_y: string): TRet {
+ setAnchor(anchor_x : string, anchor_y : string) : TRet  {
     return guage_pointer_set_anchor(this != null ? (this.nativeObj || this) : null, anchor_x, anchor_y);
-  }
+ }
 
 
   /**
    * 指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。
    *
    */
-  get angle(): number {
-    return guage_pointer_t_get_prop_angle(this.nativeObj);
-  }
+ get angle() : number {
+   return guage_pointer_t_get_prop_angle(this.nativeObj);
+ }
 
-  set angle(v: number) {
-    this.setAngle(v);
-  }
+ set angle(v : number) {
+   this.setAngle(v);
+ }
 
 
   /**
@@ -14728,31 +14755,31 @@ class TGuagePointer extends TWidget {
    *图片须垂直向上，图片的中心点为旋转方向。
    *
    */
-  get image(): string {
-    return guage_pointer_t_get_prop_image(this.nativeObj);
-  }
+ get image() : string {
+   return guage_pointer_t_get_prop_image(this.nativeObj);
+ }
 
-  set image(v: string) {
-    this.setImage(v);
-  }
+ set image(v : string) {
+   this.setImage(v);
+ }
 
 
   /**
    * 旋转锚点x坐标。
    *
    */
-  get anchorX(): number {
-    return guage_pointer_t_get_prop_anchor_x(this.nativeObj);
-  }
+ get anchorX() : number {
+   return guage_pointer_t_get_prop_anchor_x(this.nativeObj);
+ }
 
 
   /**
    * 旋转锚点y坐标。
    *
    */
-  get anchorY(): number {
-    return guage_pointer_t_get_prop_anchor_y(this.nativeObj);
-  }
+ get anchorY() : number {
+   return guage_pointer_t_get_prop_anchor_y(this.nativeObj);
+ }
 
 };
 /**
@@ -14785,11 +14812,11 @@ class TGuagePointer extends TWidget {
  *> draggable本身不可见，故无需style。
  *
  */
-class TDraggable extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TDraggable extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -14803,9 +14830,9 @@ class TDraggable extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TDraggable(draggable_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -14815,9 +14842,9 @@ class TDraggable extends TWidget {
    *
    * @returns draggable对象。
    */
-  static cast(widget: TWidget): TDraggable {
+ static cast(widget : TWidget) : TDraggable  {
     return new TDraggable(draggable_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -14827,9 +14854,9 @@ class TDraggable extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setTop(top: number): TRet {
+ setTop(top : number) : TRet  {
     return draggable_set_top(this != null ? (this.nativeObj || this) : null, top);
-  }
+ }
 
 
   /**
@@ -14839,9 +14866,9 @@ class TDraggable extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setBottom(bottom: number): TRet {
+ setBottom(bottom : number) : TRet  {
     return draggable_set_bottom(this != null ? (this.nativeObj || this) : null, bottom);
-  }
+ }
 
 
   /**
@@ -14851,9 +14878,9 @@ class TDraggable extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setLeft(left: number): TRet {
+ setLeft(left : number) : TRet  {
     return draggable_set_left(this != null ? (this.nativeObj || this) : null, left);
-  }
+ }
 
 
   /**
@@ -14863,9 +14890,9 @@ class TDraggable extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setRight(right: number): TRet {
+ setRight(right : number) : TRet  {
     return draggable_set_right(this != null ? (this.nativeObj || this) : null, right);
-  }
+ }
 
 
   /**
@@ -14875,9 +14902,9 @@ class TDraggable extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setVerticalOnly(vertical_only: boolean): TRet {
+ setVerticalOnly(vertical_only : boolean) : TRet  {
     return draggable_set_vertical_only(this != null ? (this.nativeObj || this) : null, vertical_only);
-  }
+ }
 
 
   /**
@@ -14887,9 +14914,9 @@ class TDraggable extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setHorizontalOnly(horizontal_only: boolean): TRet {
+ setHorizontalOnly(horizontal_only : boolean) : TRet  {
     return draggable_set_horizontal_only(this != null ? (this.nativeObj || this) : null, horizontal_only);
-  }
+ }
 
 
   /**
@@ -14900,100 +14927,100 @@ class TDraggable extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setDragWindow(drag_window: boolean): TRet {
+ setDragWindow(drag_window : boolean) : TRet  {
     return draggable_set_drag_window(this != null ? (this.nativeObj || this) : null, drag_window);
-  }
+ }
 
 
   /**
    * 拖动范围的顶部限制。缺省为父控件的顶部。
    *
    */
-  get top(): number {
-    return draggable_t_get_prop_top(this.nativeObj);
-  }
+ get top() : number {
+   return draggable_t_get_prop_top(this.nativeObj);
+ }
 
-  set top(v: number) {
-    this.setTop(v);
-  }
+ set top(v : number) {
+   this.setTop(v);
+ }
 
 
   /**
    * 拖动范围的底部限制。缺省为父控件的底部。
    *
    */
-  get bottom(): number {
-    return draggable_t_get_prop_bottom(this.nativeObj);
-  }
+ get bottom() : number {
+   return draggable_t_get_prop_bottom(this.nativeObj);
+ }
 
-  set bottom(v: number) {
-    this.setBottom(v);
-  }
+ set bottom(v : number) {
+   this.setBottom(v);
+ }
 
 
   /**
    * 拖动范围的左边限制。缺省为父控件的左边。
    *
    */
-  get left(): number {
-    return draggable_t_get_prop_left(this.nativeObj);
-  }
+ get left() : number {
+   return draggable_t_get_prop_left(this.nativeObj);
+ }
 
-  set left(v: number) {
-    this.setLeft(v);
-  }
+ set left(v : number) {
+   this.setLeft(v);
+ }
 
 
   /**
    * 拖动范围的右边限制。缺省为父控件的右边边。
    *
    */
-  get right(): number {
-    return draggable_t_get_prop_right(this.nativeObj);
-  }
+ get right() : number {
+   return draggable_t_get_prop_right(this.nativeObj);
+ }
 
-  set right(v: number) {
-    this.setRight(v);
-  }
+ set right(v : number) {
+   this.setRight(v);
+ }
 
 
   /**
    * 只允许垂直拖动。
    *
    */
-  get verticalOnly(): boolean {
-    return draggable_t_get_prop_vertical_only(this.nativeObj);
-  }
+ get verticalOnly() : boolean {
+   return draggable_t_get_prop_vertical_only(this.nativeObj);
+ }
 
-  set verticalOnly(v: boolean) {
-    this.setVerticalOnly(v);
-  }
+ set verticalOnly(v : boolean) {
+   this.setVerticalOnly(v);
+ }
 
 
   /**
    * 只允许水平拖动。
    *
    */
-  get horizontalOnly(): boolean {
-    return draggable_t_get_prop_horizontal_only(this.nativeObj);
-  }
+ get horizontalOnly() : boolean {
+   return draggable_t_get_prop_horizontal_only(this.nativeObj);
+ }
 
-  set horizontalOnly(v: boolean) {
-    this.setHorizontalOnly(v);
-  }
+ set horizontalOnly(v : boolean) {
+   this.setHorizontalOnly(v);
+ }
 
 
   /**
    * 拖动窗口而不是父控件。比如放在对话框的titlebar上，拖动titlebar其实是希望拖动对话框。
    *
    */
-  get dragWindow(): boolean {
-    return draggable_t_get_prop_drag_window(this.nativeObj);
-  }
+ get dragWindow() : boolean {
+   return draggable_t_get_prop_drag_window(this.nativeObj);
+ }
 
-  set dragWindow(v: boolean) {
-    this.setDragWindow(v);
-  }
+ set dragWindow(v : boolean) {
+   this.setDragWindow(v);
+ }
 
 };
 /**
@@ -15028,11 +15055,11 @@ class TDraggable extends TWidget {
  ** new 新的值。可以是spin_box、edit和color_tile。
  *
  */
-class TColorPicker extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TColorPicker extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -15046,9 +15073,9 @@ class TColorPicker extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TColorPicker(color_picker_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -15058,9 +15085,9 @@ class TColorPicker extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setColor(color: string): TRet {
+ setColor(color : string) : TRet  {
     return color_picker_set_color(this != null ? (this.nativeObj || this) : null, color);
-  }
+ }
 
 
   /**
@@ -15070,18 +15097,18 @@ class TColorPicker extends TWidget {
    *
    * @returns color_picker对象。
    */
-  static cast(widget: TWidget): TColorPicker {
+ static cast(widget : TWidget) : TColorPicker  {
     return new TColorPicker(color_picker_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
    * 颜色。
    *
    */
-  get value(): string {
-    return color_picker_t_get_prop_value(this.nativeObj);
-  }
+ get value() : string {
+   return color_picker_t_get_prop_value(this.nativeObj);
+ }
 
 };
 /**
@@ -15091,11 +15118,11 @@ class TColorPicker extends TWidget {
  *COLOR_PICKER_CHILD_H: 水平为同色，垂直为Hue(递减)。
  *
  */
-class TColorComponent extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TColorComponent extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -15105,20 +15132,20 @@ class TColorComponent extends TWidget {
    *
    * @returns color_component对象。
    */
-  static cast(widget: TWidget): TColorComponent {
+ static cast(widget : TWidget) : TColorComponent  {
     return new TColorComponent(color_component_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
  * 窗口管理器。
  *
  */
-class TWindowManager extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TWindowManager extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -15127,9 +15154,9 @@ class TWindowManager extends TWidget {
    *
    * @returns 对象。
    */
-  static instance(): TWindowManager {
+ static instance() : TWindowManager  {
     return new TWindowManager(window_manager());
-  }
+ }
 
 
   /**
@@ -15139,9 +15166,9 @@ class TWindowManager extends TWidget {
    *
    * @returns window_manager对象。
    */
-  static cast(widget: TWidget): TWindowManager {
+ static cast(widget : TWidget) : TWindowManager  {
     return new TWindowManager(window_manager_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -15150,9 +15177,9 @@ class TWindowManager extends TWidget {
    *
    * @returns 返回窗口对象。
    */
-  getTopMainWindow(): TWidget {
+ getTopMainWindow() : TWidget  {
     return new TWidget(window_manager_get_top_main_window(this != null ? (this.nativeObj || this) : null));
-  }
+ }
 
 
   /**
@@ -15161,9 +15188,9 @@ class TWindowManager extends TWidget {
    *
    * @returns 返回窗口对象。
    */
-  getTopWindow(): TWidget {
+ getTopWindow() : TWidget  {
     return new TWidget(window_manager_get_top_window(this != null ? (this.nativeObj || this) : null));
-  }
+ }
 
 
   /**
@@ -15172,9 +15199,9 @@ class TWindowManager extends TWidget {
    *
    * @returns 返回窗口对象。
    */
-  getPrevWindow(): TWidget {
+ getPrevWindow() : TWidget  {
     return new TWidget(window_manager_get_prev_window(this != null ? (this.nativeObj || this) : null));
-  }
+ }
 
 
   /**
@@ -15183,9 +15210,9 @@ class TWindowManager extends TWidget {
    *
    * @returns 返回指针当前的X坐标。
    */
-  getPointerX(): number {
+ getPointerX() : number  {
     return window_manager_get_pointer_x(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -15194,9 +15221,9 @@ class TWindowManager extends TWidget {
    *
    * @returns 返回指针当前的X坐标。
    */
-  getPointerY(): number {
+ getPointerY() : number  {
     return window_manager_get_pointer_y(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -15205,9 +15232,9 @@ class TWindowManager extends TWidget {
    *
    * @returns 返回指针当前是否按下。
    */
-  getPointerPressed(): boolean {
+ getPointerPressed() : boolean  {
     return window_manager_get_pointer_pressed(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -15217,9 +15244,9 @@ class TWindowManager extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setShowFps(show_fps: boolean): TRet {
+ setShowFps(show_fps : boolean) : TRet  {
     return window_manager_set_show_fps(this != null ? (this.nativeObj || this) : null, show_fps);
-  }
+ }
 
 
   /**
@@ -15229,9 +15256,9 @@ class TWindowManager extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setScreenSaverTime(screen_saver_time: number): TRet {
+ setScreenSaverTime(screen_saver_time : number) : TRet  {
     return window_manager_set_screen_saver_time(this != null ? (this.nativeObj || this) : null, screen_saver_time);
-  }
+ }
 
 
   /**
@@ -15241,9 +15268,9 @@ class TWindowManager extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setCursor(cursor: string): TRet {
+ setCursor(cursor : string) : TRet  {
     return window_manager_set_cursor(this != null ? (this.nativeObj || this) : null, cursor);
-  }
+ }
 
 
   /**
@@ -15254,9 +15281,9 @@ class TWindowManager extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  back(): TRet {
+ back() : TRet  {
     return window_manager_back(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -15267,9 +15294,9 @@ class TWindowManager extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  backToHome(): TRet {
+ backToHome() : TRet  {
     return window_manager_back_to_home(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -15281,9 +15308,9 @@ class TWindowManager extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  backTo(target: string): TRet {
+ backTo(target : string) : TRet  {
     return window_manager_back_to(this != null ? (this.nativeObj || this) : null, target);
-  }
+ }
 
 };
 /**
@@ -15296,11 +15323,11 @@ class TWindowManager extends TWidget {
  *> 本类是一个抽象类，不能进行实例化。请在应用程序中使用具体的类，如window\_t。
  *
  */
-class TWindowBase extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TWindowBase extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -15310,9 +15337,9 @@ class TWindowBase extends TWidget {
    *
    * @returns window_base对象。
    */
-  static cast(widget: TWidget): TWindowBase {
+ static cast(widget : TWidget) : TWindowBase  {
     return new TWindowBase(window_base_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -15322,9 +15349,9 @@ class TWindowBase extends TWidget {
    *请参考[主题](https://github.com/zlgopen/awtk/blob/master/docs/theme.md)
    *
    */
-  get theme(): string {
-    return window_base_t_get_prop_theme(this.nativeObj);
-  }
+ get theme() : string {
+   return window_base_t_get_prop_theme(this.nativeObj);
+ }
 
 
   /**
@@ -15339,9 +15366,9 @@ class TWindowBase extends TWidget {
    *> closable在XML中取值为：yes/no/confirm，缺省为yes。
    *
    */
-  get closable(): TWindowClosable {
-    return window_base_t_get_prop_closable(this.nativeObj);
-  }
+ get closable() : TWindowClosable {
+   return window_base_t_get_prop_closable(this.nativeObj);
+ }
 
 };
 /**
@@ -15350,11 +15377,11 @@ class TWindowBase extends TWidget {
  *style\_mutable也对style\_const进行了包装，当用户没修改某个值时，便从style\_const中获取。
  *
  */
-class TStyleMutable extends TStyle {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TStyleMutable extends TStyle { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -15364,9 +15391,9 @@ class TStyleMutable extends TStyle {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setName(name: string): TRet {
+ setName(name : string) : TRet  {
     return style_mutable_set_name(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
@@ -15378,9 +15405,9 @@ class TStyleMutable extends TStyle {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setInt(state: string, name: string, val: number): TRet {
+ setInt(state : string, name : string, val : number) : TRet  {
     return style_mutable_set_int(this != null ? (this.nativeObj || this) : null, state, name, val);
-  }
+ }
 
 
   /**
@@ -15390,9 +15417,9 @@ class TStyleMutable extends TStyle {
    *
    * @returns style对象。
    */
-  static cast(s: TStyle): TStyleMutable {
+ static cast(s : TStyle) : TStyleMutable  {
     return new TStyleMutable(style_mutable_cast(s != null ? (s.nativeObj || s) : null));
-  }
+ }
 
 
   /**
@@ -15405,22 +15432,22 @@ class TStyleMutable extends TStyle {
    *
    * @returns style对象。
    */
-  static create(widget: TWidget, default_style: TStyle): TStyle {
+ static create(widget : TWidget, default_style : TStyle) : TStyle  {
     return new TStyleMutable(style_mutable_create(widget != null ? (widget.nativeObj || widget) : null, default_style != null ? (default_style.nativeObj || default_style) : null));
-  }
+ }
 
 
   /**
    * 名称。
    *
    */
-  get name(): string {
-    return style_mutable_t_get_prop_name(this.nativeObj);
-  }
+ get name() : string {
+   return style_mutable_t_get_prop_name(this.nativeObj);
+ }
 
-  set name(v: string) {
-    this.setName(v);
-  }
+ set name(v : string) {
+   this.setName(v);
+ }
 
 };
 /**
@@ -15441,11 +15468,11 @@ class TStyleMutable extends TStyle {
  *```
  *
  */
-class TImageBase extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TImageBase extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -15457,9 +15484,9 @@ class TImageBase extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setImage(name: string): TRet {
+ setImage(name : string) : TRet  {
     return image_base_set_image(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
@@ -15469,9 +15496,9 @@ class TImageBase extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setRotation(rotation: number): TRet {
+ setRotation(rotation : number) : TRet  {
     return image_base_set_rotation(this != null ? (this.nativeObj || this) : null, rotation);
-  }
+ }
 
 
   /**
@@ -15482,9 +15509,9 @@ class TImageBase extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setScale(scale_x: number, scale_y: number): TRet {
+ setScale(scale_x : number, scale_y : number) : TRet  {
     return image_base_set_scale(this != null ? (this.nativeObj || this) : null, scale_x, scale_y);
-  }
+ }
 
 
   /**
@@ -15495,9 +15522,9 @@ class TImageBase extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setAnchor(anchor_x: number, anchor_y: number): TRet {
+ setAnchor(anchor_x : number, anchor_y : number) : TRet  {
     return image_base_set_anchor(this != null ? (this.nativeObj || this) : null, anchor_x, anchor_y);
-  }
+ }
 
 
   /**
@@ -15507,9 +15534,9 @@ class TImageBase extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setSelected(selected: boolean): TRet {
+ setSelected(selected : boolean) : TRet  {
     return image_base_set_selected(this != null ? (this.nativeObj || this) : null, selected);
-  }
+ }
 
 
   /**
@@ -15519,9 +15546,9 @@ class TImageBase extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setSelectable(selectable: boolean): TRet {
+ setSelectable(selectable : boolean) : TRet  {
     return image_base_set_selectable(this != null ? (this.nativeObj || this) : null, selectable);
-  }
+ }
 
 
   /**
@@ -15531,9 +15558,9 @@ class TImageBase extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setClickable(clickable: boolean): TRet {
+ setClickable(clickable : boolean) : TRet  {
     return image_base_set_clickable(this != null ? (this.nativeObj || this) : null, clickable);
-  }
+ }
 
 
   /**
@@ -15543,121 +15570,121 @@ class TImageBase extends TWidget {
    *
    * @returns image_base对象。
    */
-  static cast(widget: TWidget): TImageBase {
+ static cast(widget : TWidget) : TImageBase  {
     return new TImageBase(image_base_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
    * 图片的名称。
    *
    */
-  get image(): string {
-    return image_base_t_get_prop_image(this.nativeObj);
-  }
+ get image() : string {
+   return image_base_t_get_prop_image(this.nativeObj);
+ }
 
-  set image(v: string) {
-    this.setImage(v);
-  }
+ set image(v : string) {
+   this.setImage(v);
+ }
 
 
   /**
    * 锚点X(0-1)。0在控件左边，0.5在控件中间，1在控件右边。
    *
    */
-  get anchorX(): number {
-    return image_base_t_get_prop_anchor_x(this.nativeObj);
-  }
+ get anchorX() : number {
+   return image_base_t_get_prop_anchor_x(this.nativeObj);
+ }
 
 
   /**
    * 锚点Y(0-1)。0在控件顶部，0.5在控件中间，1在控件底部。
    *
    */
-  get anchorY(): number {
-    return image_base_t_get_prop_anchor_y(this.nativeObj);
-  }
+ get anchorY() : number {
+   return image_base_t_get_prop_anchor_y(this.nativeObj);
+ }
 
 
   /**
    * 控件在X方向上的缩放比例。
    *
    */
-  get scaleX(): number {
-    return image_base_t_get_prop_scale_x(this.nativeObj);
-  }
+ get scaleX() : number {
+   return image_base_t_get_prop_scale_x(this.nativeObj);
+ }
 
 
   /**
    * 控件在Y方向上的缩放比例。
    *
    */
-  get scaleY(): number {
-    return image_base_t_get_prop_scale_y(this.nativeObj);
-  }
+ get scaleY() : number {
+   return image_base_t_get_prop_scale_y(this.nativeObj);
+ }
 
 
   /**
    * 控件的旋转角度(幅度)。
    *
    */
-  get rotation(): number {
-    return image_base_t_get_prop_rotation(this.nativeObj);
-  }
+ get rotation() : number {
+   return image_base_t_get_prop_rotation(this.nativeObj);
+ }
 
-  set rotation(v: number) {
-    this.setRotation(v);
-  }
+ set rotation(v : number) {
+   this.setRotation(v);
+ }
 
 
   /**
    * 点击时，是否触发EVT_CLICK事件。
    *
    */
-  get clickable(): boolean {
-    return image_base_t_get_prop_clickable(this.nativeObj);
-  }
+ get clickable() : boolean {
+   return image_base_t_get_prop_clickable(this.nativeObj);
+ }
 
-  set clickable(v: boolean) {
-    this.setClickable(v);
-  }
+ set clickable(v : boolean) {
+   this.setClickable(v);
+ }
 
 
   /**
    * 是否设置选中状态。
    *
    */
-  get selectable(): boolean {
-    return image_base_t_get_prop_selectable(this.nativeObj);
-  }
+ get selectable() : boolean {
+   return image_base_t_get_prop_selectable(this.nativeObj);
+ }
 
-  set selectable(v: boolean) {
-    this.setSelectable(v);
-  }
+ set selectable(v : boolean) {
+   this.setSelectable(v);
+ }
 
 
   /**
    * 当前是否被选中。
    *
    */
-  get selected(): boolean {
-    return image_base_t_get_prop_selected(this.nativeObj);
-  }
+ get selected() : boolean {
+   return image_base_t_get_prop_selected(this.nativeObj);
+ }
 
-  set selected(v: boolean) {
-    this.setSelected(v);
-  }
+ set selected(v : boolean) {
+   this.setSelected(v);
+ }
 
 };
 /**
  * 窗口事件，由窗口管理器触发。
  *
  */
-class TWindowEvent extends TEvent {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TWindowEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -15667,29 +15694,29 @@ class TWindowEvent extends TEvent {
    *
    * @returns 对象。
    */
-  static cast(event: TEvent): TWindowEvent {
+ static cast(event : TEvent) : TWindowEvent  {
     return new TWindowEvent(window_event_cast(event != null ? (event.nativeObj || event) : null));
-  }
+ }
 
 
   /**
    * canvas。
    *
    */
-  get window(): TWidget {
-    return new TWidget(window_event_t_get_prop_window(this.nativeObj));
-  }
+ get window() : TWidget {
+   return new TWidget(window_event_t_get_prop_window(this.nativeObj));
+ }
 
 };
 /**
  * 绘制事件。
  *
  */
-class TPaintEvent extends TEvent {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TPaintEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -15699,29 +15726,29 @@ class TPaintEvent extends TEvent {
    *
    * @returns event 对象。
    */
-  static cast(event: TEvent): TPaintEvent {
+ static cast(event : TEvent) : TPaintEvent  {
     return new TPaintEvent(paint_event_cast(event != null ? (event.nativeObj || event) : null));
-  }
+ }
 
 
   /**
    * canvas。
    *
    */
-  get c(): TCanvas {
-    return new TCanvas(paint_event_t_get_prop_c(this.nativeObj));
-  }
+ get c() : TCanvas {
+   return new TCanvas(paint_event_t_get_prop_c(this.nativeObj));
+ }
 
 };
 /**
  * 按键事件。
  *
  */
-class TKeyEvent extends TEvent {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TKeyEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -15731,45 +15758,45 @@ class TKeyEvent extends TEvent {
    *
    * @returns event对象。
    */
-  static cast(event: TEvent): TKeyEvent {
+ static cast(event : TEvent) : TKeyEvent  {
     return new TKeyEvent(key_event_cast(event != null ? (event.nativeObj || event) : null));
-  }
+ }
 
 
   /**
    * 键值。
    *
    */
-  get key(): number {
-    return key_event_t_get_prop_key(this.nativeObj);
-  }
+ get key() : number {
+   return key_event_t_get_prop_key(this.nativeObj);
+ }
 
 
   /**
    * alt键是否按下。
    *
    */
-  get alt(): boolean {
-    return key_event_t_get_prop_alt(this.nativeObj);
-  }
+ get alt() : boolean {
+   return key_event_t_get_prop_alt(this.nativeObj);
+ }
 
 
   /**
    * left alt键是否按下。
    *
    */
-  get lalt(): boolean {
-    return key_event_t_get_prop_lalt(this.nativeObj);
-  }
+ get lalt() : boolean {
+   return key_event_t_get_prop_lalt(this.nativeObj);
+ }
 
 
   /**
    * right alt键是否按下。
    *
    */
-  get ralt(): boolean {
-    return key_event_t_get_prop_ralt(this.nativeObj);
-  }
+ get ralt() : boolean {
+   return key_event_t_get_prop_ralt(this.nativeObj);
+ }
 
 
   /**
@@ -15777,54 +15804,54 @@ class TKeyEvent extends TEvent {
    *ctrl键是否按下。
    *
    */
-  get ctrl(): boolean {
-    return key_event_t_get_prop_ctrl(this.nativeObj);
-  }
+ get ctrl() : boolean {
+   return key_event_t_get_prop_ctrl(this.nativeObj);
+ }
 
 
   /**
    * left ctrl键是否按下。
    *
    */
-  get lctrl(): boolean {
-    return key_event_t_get_prop_lctrl(this.nativeObj);
-  }
+ get lctrl() : boolean {
+   return key_event_t_get_prop_lctrl(this.nativeObj);
+ }
 
 
   /**
    * right ctrl键是否按下。
    *
    */
-  get rctrl(): boolean {
-    return key_event_t_get_prop_rctrl(this.nativeObj);
-  }
+ get rctrl() : boolean {
+   return key_event_t_get_prop_rctrl(this.nativeObj);
+ }
 
 
   /**
    * shift键是否按下。
    *
    */
-  get shift(): boolean {
-    return key_event_t_get_prop_shift(this.nativeObj);
-  }
+ get shift() : boolean {
+   return key_event_t_get_prop_shift(this.nativeObj);
+ }
 
 
   /**
    * left shift键是否按下。
    *
    */
-  get lshift(): boolean {
-    return key_event_t_get_prop_lshift(this.nativeObj);
-  }
+ get lshift() : boolean {
+   return key_event_t_get_prop_lshift(this.nativeObj);
+ }
 
 
   /**
    * right shift键是否按下。
    *
    */
-  get rshift(): boolean {
-    return key_event_t_get_prop_rshift(this.nativeObj);
-  }
+ get rshift() : boolean {
+   return key_event_t_get_prop_rshift(this.nativeObj);
+ }
 
 
   /**
@@ -15832,38 +15859,38 @@ class TKeyEvent extends TEvent {
    *cmd/win键是否按下。
    *
    */
-  get cmd(): boolean {
-    return key_event_t_get_prop_cmd(this.nativeObj);
-  }
+ get cmd() : boolean {
+   return key_event_t_get_prop_cmd(this.nativeObj);
+ }
 
 
   /**
    * menu键是否按下。
    *
    */
-  get menu(): boolean {
-    return key_event_t_get_prop_menu(this.nativeObj);
-  }
+ get menu() : boolean {
+   return key_event_t_get_prop_menu(this.nativeObj);
+ }
 
 
   /**
    * capslock键是否按下。
    *
    */
-  get capslock(): boolean {
-    return key_event_t_get_prop_capslock(this.nativeObj);
-  }
+ get capslock() : boolean {
+   return key_event_t_get_prop_capslock(this.nativeObj);
+ }
 
 };
 /**
  * 指针事件。
  *
  */
-class TPointerEvent extends TEvent {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TPointerEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -15873,101 +15900,101 @@ class TPointerEvent extends TEvent {
    *
    * @returns event对象。
    */
-  static cast(event: TEvent): TPointerEvent {
+ static cast(event : TEvent) : TPointerEvent  {
     return new TPointerEvent(pointer_event_cast(event != null ? (event.nativeObj || event) : null));
-  }
+ }
 
 
   /**
    * x坐标。
    *
    */
-  get x(): number {
-    return pointer_event_t_get_prop_x(this.nativeObj);
-  }
+ get x() : number {
+   return pointer_event_t_get_prop_x(this.nativeObj);
+ }
 
 
   /**
    * y坐标。
    *
    */
-  get y(): number {
-    return pointer_event_t_get_prop_y(this.nativeObj);
-  }
+ get y() : number {
+   return pointer_event_t_get_prop_y(this.nativeObj);
+ }
 
 
   /**
    * button。
    *
    */
-  get button(): number {
-    return pointer_event_t_get_prop_button(this.nativeObj);
-  }
+ get button() : number {
+   return pointer_event_t_get_prop_button(this.nativeObj);
+ }
 
 
   /**
    * 指针是否按下。
    *
    */
-  get pressed(): boolean {
-    return pointer_event_t_get_prop_pressed(this.nativeObj);
-  }
+ get pressed() : boolean {
+   return pointer_event_t_get_prop_pressed(this.nativeObj);
+ }
 
 
   /**
    * alt键是否按下。
    *
    */
-  get alt(): boolean {
-    return pointer_event_t_get_prop_alt(this.nativeObj);
-  }
+ get alt() : boolean {
+   return pointer_event_t_get_prop_alt(this.nativeObj);
+ }
 
 
   /**
    * ctrl键是否按下。
    *
    */
-  get ctrl(): boolean {
-    return pointer_event_t_get_prop_ctrl(this.nativeObj);
-  }
+ get ctrl() : boolean {
+   return pointer_event_t_get_prop_ctrl(this.nativeObj);
+ }
 
 
   /**
    * cmd键是否按下。
    *
    */
-  get cmd(): boolean {
-    return pointer_event_t_get_prop_cmd(this.nativeObj);
-  }
+ get cmd() : boolean {
+   return pointer_event_t_get_prop_cmd(this.nativeObj);
+ }
 
 
   /**
    * menu键是否按下。
    *
    */
-  get menu(): boolean {
-    return pointer_event_t_get_prop_menu(this.nativeObj);
-  }
+ get menu() : boolean {
+   return pointer_event_t_get_prop_menu(this.nativeObj);
+ }
 
 
   /**
    * shift键是否按下。
    *
    */
-  get shift(): boolean {
-    return pointer_event_t_get_prop_shift(this.nativeObj);
-  }
+ get shift() : boolean {
+   return pointer_event_t_get_prop_shift(this.nativeObj);
+ }
 
 };
 /**
  * 滚轮事件。
  *
  */
-class TOrientationEvent extends TEvent {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TOrientationEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -15977,29 +16004,29 @@ class TOrientationEvent extends TEvent {
    *
    * @returns event对象。
    */
-  static cast(event: TEvent): TOrientationEvent {
+ static cast(event : TEvent) : TOrientationEvent  {
     return new TOrientationEvent(orientation_event_cast(event != null ? (event.nativeObj || event) : null));
-  }
+ }
 
 
   /**
    * 屏幕方向。
    *
    */
-  get orientation(): number {
-    return orientation_event_t_get_prop_orientation(this.nativeObj);
-  }
+ get orientation() : number {
+   return orientation_event_t_get_prop_orientation(this.nativeObj);
+ }
 
 };
 /**
  * 滚轮事件。
  *
  */
-class TWheelEvent extends TEvent {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TWheelEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -16009,45 +16036,45 @@ class TWheelEvent extends TEvent {
    *
    * @returns event对象。
    */
-  static cast(event: TEvent): TWheelEvent {
+ static cast(event : TEvent) : TWheelEvent  {
     return new TWheelEvent(wheel_event_cast(event != null ? (event.nativeObj || event) : null));
-  }
+ }
 
 
   /**
    * 滚轮的y值。
    *
    */
-  get dy(): number {
-    return wheel_event_t_get_prop_dy(this.nativeObj);
-  }
+ get dy() : number {
+   return wheel_event_t_get_prop_dy(this.nativeObj);
+ }
 
 
   /**
    * alt键是否按下。
    *
    */
-  get alt(): boolean {
-    return wheel_event_t_get_prop_alt(this.nativeObj);
-  }
+ get alt() : boolean {
+   return wheel_event_t_get_prop_alt(this.nativeObj);
+ }
 
 
   /**
    * ctrl键是否按下。
    *
    */
-  get ctrl(): boolean {
-    return wheel_event_t_get_prop_ctrl(this.nativeObj);
-  }
+ get ctrl() : boolean {
+   return wheel_event_t_get_prop_ctrl(this.nativeObj);
+ }
 
 
   /**
    * shift键是否按下。
    *
    */
-  get shift(): boolean {
-    return wheel_event_t_get_prop_shift(this.nativeObj);
-  }
+ get shift() : boolean {
+   return wheel_event_t_get_prop_shift(this.nativeObj);
+ }
 
 };
 /**
@@ -16081,11 +16108,11 @@ class TWheelEvent extends TEvent {
  *```
  *
  */
-class TAppBar extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TAppBar extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -16099,9 +16126,9 @@ class TAppBar extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TAppBar(app_bar_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -16111,9 +16138,9 @@ class TAppBar extends TWidget {
    *
    * @returns app_bar对象。
    */
-  static cast(widget: TWidget): TAppBar {
+ static cast(widget : TWidget) : TAppBar  {
     return new TAppBar(app_bar_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -16145,11 +16172,11 @@ class TAppBar extends TWidget {
  *```
  *
  */
-class TButtonGroup extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TButtonGroup extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -16163,9 +16190,9 @@ class TButtonGroup extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TButtonGroup(button_group_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -16175,9 +16202,9 @@ class TButtonGroup extends TWidget {
    *
    * @returns button_group对象。
    */
-  static cast(widget: TWidget): TButtonGroup {
+ static cast(widget : TWidget) : TButtonGroup  {
     return new TButtonGroup(button_group_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -16222,11 +16249,11 @@ class TButtonGroup extends TWidget {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L31)
  *
  */
-class TButton extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TButton extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -16240,9 +16267,9 @@ class TButton extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TButton(button_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -16252,9 +16279,9 @@ class TButton extends TWidget {
    *
    * @returns button对象。
    */
-  static cast(widget: TWidget): TButton {
+ static cast(widget : TWidget) : TButton  {
     return new TButton(button_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -16264,9 +16291,9 @@ class TButton extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setRepeat(repeat: number): TRet {
+ setRepeat(repeat : number) : TRet  {
     return button_set_repeat(this != null ? (this.nativeObj || this) : null, repeat);
-  }
+ }
 
 
   /**
@@ -16276,9 +16303,9 @@ class TButton extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setEnableLongPress(enable_long_press: boolean): TRet {
+ setEnableLongPress(enable_long_press : boolean) : TRet  {
     return button_set_enable_long_press(this != null ? (this.nativeObj || this) : null, enable_long_press);
-  }
+ }
 
 
   /**
@@ -16287,13 +16314,13 @@ class TButton extends TWidget {
    *为0则不重复触发EVT\_CLICK事件。
    *
    */
-  get repeat(): number {
-    return button_t_get_prop_repeat(this.nativeObj);
-  }
+ get repeat() : number {
+   return button_t_get_prop_repeat(this.nativeObj);
+ }
 
-  set repeat(v: number) {
-    this.setRepeat(v);
-  }
+ set repeat(v : number) {
+   this.setRepeat(v);
+ }
 
 
   /**
@@ -16303,13 +16330,13 @@ class TButton extends TWidget {
    *缺省不启用。
    *
    */
-  get enableLongPress(): boolean {
-    return button_t_get_prop_enable_long_press(this.nativeObj);
-  }
+ get enableLongPress() : boolean {
+   return button_t_get_prop_enable_long_press(this.nativeObj);
+ }
 
-  set enableLongPress(v: boolean) {
-    this.setEnableLongPress(v);
-  }
+ set enableLongPress(v : boolean) {
+   this.setEnableLongPress(v);
+ }
 
 };
 /**
@@ -16359,11 +16386,11 @@ class TButton extends TWidget {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L227)
  *
  */
-class TCheckButton extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TCheckButton extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -16377,9 +16404,9 @@ class TCheckButton extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TCheckButton(check_button_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -16393,9 +16420,9 @@ class TCheckButton extends TWidget {
    *
    * @returns 对象。
    */
-  static createRadio(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static createRadio(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TCheckButton(check_button_create_radio(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -16405,9 +16432,9 @@ class TCheckButton extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setValue(value: any): TRet {
+ setValue(value : any) : TRet  {
     return check_button_set_value(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -16417,22 +16444,22 @@ class TCheckButton extends TWidget {
    *
    * @returns check_button对象。
    */
-  static cast(widget: TWidget): TCheckButton {
+ static cast(widget : TWidget) : TCheckButton  {
     return new TCheckButton(check_button_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
    * 值。
    *
    */
-  get value(): boolean {
-    return check_button_t_get_prop_value(this.nativeObj);
-  }
+ get value() : boolean {
+   return check_button_t_get_prop_value(this.nativeObj);
+ }
 
-  set value(v: boolean) {
-    this.setValue(v);
-  }
+ set value(v : boolean) {
+   this.setValue(v);
+ }
 
 };
 /**
@@ -16463,11 +16490,11 @@ class TCheckButton extends TWidget {
  *```
  *
  */
-class TClipView extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TClipView extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -16481,9 +16508,9 @@ class TClipView extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TClipView(clip_view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -16493,9 +16520,9 @@ class TClipView extends TWidget {
    *
    * @returns clip_view对象。
    */
-  static cast(widget: TWidget): TClipView {
+ static cast(widget : TWidget) : TClipView  {
     return new TClipView(clip_view_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -16521,11 +16548,11 @@ class TClipView extends TWidget {
  *> 创建之后，用color\_tile\_set\_bg\_color设置背景颜色。
  *
  */
-class TColorTile extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TColorTile extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -16539,9 +16566,9 @@ class TColorTile extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TColorTile(color_tile_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -16551,9 +16578,9 @@ class TColorTile extends TWidget {
    *
    * @returns color_tile对象。
    */
-  static cast(widget: TWidget): TColorTile {
+ static cast(widget : TWidget) : TColorTile  {
     return new TColorTile(color_tile_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -16563,31 +16590,31 @@ class TColorTile extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setBgColor(color: string): TRet {
+ setBgColor(color : string) : TRet  {
     return color_tile_set_bg_color(this != null ? (this.nativeObj || this) : null, color);
-  }
+ }
 
 
   /**
    * 背景颜色。
    *
    */
-  get bgColor(): string {
-    return color_tile_t_get_prop_bg_color(this.nativeObj);
-  }
+ get bgColor() : string {
+   return color_tile_t_get_prop_bg_color(this.nativeObj);
+ }
 
-  set bgColor(v: string) {
-    this.setBgColor(v);
-  }
+ set bgColor(v : string) {
+   this.setBgColor(v);
+ }
 
 
   /**
    * 边框颜色。
    *
    */
-  get borderColor(): string {
-    return color_tile_t_get_prop_border_color(this.nativeObj);
-  }
+ get borderColor() : string {
+   return color_tile_t_get_prop_border_color(this.nativeObj);
+ }
 
 };
 /**
@@ -16619,11 +16646,11 @@ class TColorTile extends TWidget {
  *```
  *
  */
-class TColumn extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TColumn extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -16637,9 +16664,9 @@ class TColumn extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TColumn(column_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -16649,9 +16676,9 @@ class TColumn extends TWidget {
    *
    * @returns column对象。
    */
-  static cast(widget: TWidget): TColumn {
+ static cast(widget : TWidget) : TColumn  {
     return new TColumn(column_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -16660,11 +16687,11 @@ class TColumn extends TWidget {
  *本类仅供combo\_box控件内部使用。
  *
  */
-class TComboBoxItem extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TComboBoxItem extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -16678,9 +16705,9 @@ class TComboBoxItem extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TComboBoxItem(combo_box_item_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -16690,9 +16717,9 @@ class TComboBoxItem extends TWidget {
    *
    * @returns combo_box_item对象。
    */
-  static cast(widget: TWidget): TComboBoxItem {
+ static cast(widget : TWidget) : TComboBoxItem  {
     return new TComboBoxItem(combo_box_item_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -16702,9 +16729,9 @@ class TComboBoxItem extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setChecked(checked: boolean): TRet {
+ setChecked(checked : boolean) : TRet  {
     return combo_box_item_set_checked(this != null ? (this.nativeObj || this) : null, checked);
-  }
+ }
 
 
   /**
@@ -16714,35 +16741,35 @@ class TComboBoxItem extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setValue(value: any): TRet {
+ setValue(value : any) : TRet  {
     return combo_box_item_set_value(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
    * 值。
    *
    */
-  get value(): number {
-    return combo_box_item_t_get_prop_value(this.nativeObj);
-  }
+ get value() : number {
+   return combo_box_item_t_get_prop_value(this.nativeObj);
+ }
 
-  set value(v: number) {
-    this.setValue(v);
-  }
+ set value(v : number) {
+   this.setValue(v);
+ }
 
 
   /**
    * 是否被选中。
    *
    */
-  get checked(): boolean {
-    return combo_box_item_t_get_prop_checked(this.nativeObj);
-  }
+ get checked() : boolean {
+   return combo_box_item_t_get_prop_checked(this.nativeObj);
+ }
 
-  set checked(v: boolean) {
-    this.setChecked(v);
-  }
+ set checked(v : boolean) {
+   this.setChecked(v);
+ }
 
 };
 /**
@@ -16851,11 +16878,11 @@ class TComboBoxItem extends TWidget {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L422)
  *
  */
-class TComboBox extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TComboBox extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -16869,9 +16896,9 @@ class TComboBox extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TComboBox(combo_box_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -16881,9 +16908,9 @@ class TComboBox extends TWidget {
    *
    * @returns combo_box对象。
    */
-  static cast(widget: TWidget): TComboBox {
+ static cast(widget : TWidget) : TComboBox  {
     return new TComboBox(combo_box_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -16893,9 +16920,9 @@ class TComboBox extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setOpenWindow(open_window: string): TRet {
+ setOpenWindow(open_window : string) : TRet  {
     return combo_box_set_open_window(this != null ? (this.nativeObj || this) : null, open_window);
-  }
+ }
 
 
   /**
@@ -16904,9 +16931,9 @@ class TComboBox extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  resetOptions(): TRet {
+ resetOptions() : TRet  {
     return combo_box_reset_options(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -16915,9 +16942,9 @@ class TComboBox extends TWidget {
    *
    * @returns 返回选项个数。
    */
-  countOptions(): number {
+ countOptions() : number  {
     return combo_box_count_options(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -16927,9 +16954,9 @@ class TComboBox extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setSelectedIndex(index: number): TRet {
+ setSelectedIndex(index : number) : TRet  {
     return combo_box_set_selected_index(this != null ? (this.nativeObj || this) : null, index);
-  }
+ }
 
 
   /**
@@ -16939,9 +16966,9 @@ class TComboBox extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setLocalizeOptions(localize_options: boolean): TRet {
+ setLocalizeOptions(localize_options : boolean) : TRet  {
     return combo_box_set_localize_options(this != null ? (this.nativeObj || this) : null, localize_options);
-  }
+ }
 
 
   /**
@@ -16951,9 +16978,9 @@ class TComboBox extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setValue(value: any): TRet {
+ setValue(value : any) : TRet  {
     return combo_box_set_value(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -16963,9 +16990,9 @@ class TComboBox extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setItemHeight(item_height: number): TRet {
+ setItemHeight(item_height : number) : TRet  {
     return combo_box_set_item_height(this != null ? (this.nativeObj || this) : null, item_height);
-  }
+ }
 
 
   /**
@@ -16976,9 +17003,9 @@ class TComboBox extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  appendOption(value: any, text: string): TRet {
+ appendOption(value : any, text : string) : TRet  {
     return combo_box_append_option(this != null ? (this.nativeObj || this) : null, value, text);
-  }
+ }
 
 
   /**
@@ -16988,9 +17015,9 @@ class TComboBox extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setOptions(options: string): TRet {
+ setOptions(options : string) : TRet  {
     return combo_box_set_options(this != null ? (this.nativeObj || this) : null, options);
-  }
+ }
 
 
   /**
@@ -16999,9 +17026,9 @@ class TComboBox extends TWidget {
    *
    * @returns 返回值。
    */
-  getValue(): number {
+ getValue() : number  {
     return combo_box_get_value(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -17010,87 +17037,87 @@ class TComboBox extends TWidget {
    *
    * @returns 返回文本。
    */
-  getTextValue(): string {
+ getTextValue() : string  {
     return combo_box_get_text(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
    * 为点击按钮时，要打开窗口的名称。
    *
    */
-  get openWindow(): string {
-    return combo_box_t_get_prop_open_window(this.nativeObj);
-  }
+ get openWindow() : string {
+   return combo_box_t_get_prop_open_window(this.nativeObj);
+ }
 
-  set openWindow(v: string) {
-    this.setOpenWindow(v);
-  }
+ set openWindow(v : string) {
+   this.setOpenWindow(v);
+ }
 
 
   /**
    * 当前选中的选项。
    *
    */
-  get selectedIndex(): number {
-    return combo_box_t_get_prop_selected_index(this.nativeObj);
-  }
+ get selectedIndex() : number {
+   return combo_box_t_get_prop_selected_index(this.nativeObj);
+ }
 
-  set selectedIndex(v: number) {
-    this.setSelectedIndex(v);
-  }
+ set selectedIndex(v : number) {
+   this.setSelectedIndex(v);
+ }
 
 
   /**
    * 值。
    *
    */
-  get value(): number {
-    return combo_box_t_get_prop_value(this.nativeObj);
-  }
+ get value() : number {
+   return combo_box_t_get_prop_value(this.nativeObj);
+ }
 
-  set value(v: number) {
-    this.setValue(v);
-  }
+ set value(v : number) {
+   this.setValue(v);
+ }
 
 
   /**
    * 是否本地化(翻译)选项(缺省为TRUE)。
    *
    */
-  get localizeOptions(): boolean {
-    return combo_box_t_get_prop_localize_options(this.nativeObj);
-  }
+ get localizeOptions() : boolean {
+   return combo_box_t_get_prop_localize_options(this.nativeObj);
+ }
 
-  set localizeOptions(v: boolean) {
-    this.setLocalizeOptions(v);
-  }
+ set localizeOptions(v : boolean) {
+   this.setLocalizeOptions(v);
+ }
 
 
   /**
    * 设置可选项(冒号分隔值和文本，分号分隔选项，如:1:red;2:green;3:blue)。
    *
    */
-  get options(): string {
-    return combo_box_t_get_prop_options(this.nativeObj);
-  }
+ get options() : string {
+   return combo_box_t_get_prop_options(this.nativeObj);
+ }
 
-  set options(v: string) {
-    this.setOptions(v);
-  }
+ set options(v : string) {
+   this.setOptions(v);
+ }
 
 
   /**
    * 下拉选项的高度。如果open_window为空，则使用缺省高度。
    *
    */
-  get itemHeight(): number {
-    return combo_box_t_get_prop_item_height(this.nativeObj);
-  }
+ get itemHeight() : number {
+   return combo_box_t_get_prop_item_height(this.nativeObj);
+ }
 
-  set itemHeight(v: number) {
-    this.setItemHeight(v);
-  }
+ set itemHeight(v : number) {
+   this.setItemHeight(v);
+ }
 
 };
 /**
@@ -17118,11 +17145,11 @@ class TComboBox extends TWidget {
  *在c代码中，用dialog\_create\_simple创建对话框时，自动创建dialog客户区对象。
  *
  */
-class TDialogClient extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TDialogClient extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -17136,9 +17163,9 @@ class TDialogClient extends TWidget {
    *
    * @returns dialog对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TDialogClient(dialog_client_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -17148,9 +17175,9 @@ class TDialogClient extends TWidget {
    *
    * @returns dialog_client对象。
    */
-  static cast(widget: TWidget): TDialogClient {
+ static cast(widget : TWidget) : TDialogClient  {
     return new TDialogClient(dialog_client_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -17178,11 +17205,11 @@ class TDialogClient extends TWidget {
  *在c代码中，用dialog\_create\_simple创建对话框时，自动创建dialog标题对象。
  *
  */
-class TDialogTitle extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TDialogTitle extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -17196,9 +17223,9 @@ class TDialogTitle extends TWidget {
    *
    * @returns dialog对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TDialogTitle(dialog_title_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -17208,9 +17235,9 @@ class TDialogTitle extends TWidget {
    *
    * @returns dialog_title对象。
    */
-  static cast(widget: TWidget): TDialogTitle {
+ static cast(widget : TWidget) : TDialogTitle  {
     return new TDialogTitle(dialog_title_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -17245,11 +17272,11 @@ class TDialogTitle extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L138)
  *
  */
-class TDigitClock extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TDigitClock extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -17263,9 +17290,9 @@ class TDigitClock extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TDigitClock(digit_clock_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -17275,9 +17302,9 @@ class TDigitClock extends TWidget {
    *
    * @returns digit_clock对象。
    */
-  static cast(widget: TWidget): TDigitClock {
+ static cast(widget : TWidget) : TDigitClock  {
     return new TDigitClock(digit_clock_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -17287,9 +17314,9 @@ class TDigitClock extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setFormat(format: string): TRet {
+ setFormat(format : string) : TRet  {
     return digit_clock_set_format(this != null ? (this.nativeObj || this) : null, format);
-  }
+ }
 
 
   /**
@@ -17318,13 +17345,13 @@ class TDigitClock extends TWidget {
    ** "Y-D-M hh:mm:ss"显示为"2018-11-12 09:10:20"
    *
    */
-  get format(): string {
-    return digit_clock_t_get_prop_format(this.nativeObj);
-  }
+ get format() : string {
+   return digit_clock_t_get_prop_format(this.nativeObj);
+ }
 
-  set format(v: string) {
-    this.setFormat(v);
-  }
+ set format(v : string) {
+   this.setFormat(v);
+ }
 
 };
 /**
@@ -17333,11 +17360,11 @@ class TDigitClock extends TWidget {
  *目前主要用于scrollbar里的滑块。
  *
  */
-class TDragger extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TDragger extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -17351,9 +17378,9 @@ class TDragger extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TDragger(dragger_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -17363,9 +17390,9 @@ class TDragger extends TWidget {
    *
    * @returns dragger对象。
    */
-  static cast(widget: TWidget): TDragger {
+ static cast(widget : TWidget) : TDragger  {
     return new TDragger(dragger_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -17378,45 +17405,45 @@ class TDragger extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setRange(x_min: number, y_min: number, x_max: number, y_max: number): TRet {
+ setRange(x_min : number, y_min : number, x_max : number, y_max : number) : TRet  {
     return dragger_set_range(this != null ? (this.nativeObj || this) : null, x_min, y_min, x_max, y_max);
-  }
+ }
 
 
   /**
    * x坐标的最小值。
    *
    */
-  get xMin(): number {
-    return dragger_t_get_prop_x_min(this.nativeObj);
-  }
+ get xMin() : number {
+   return dragger_t_get_prop_x_min(this.nativeObj);
+ }
 
 
   /**
    * y坐标的最小值。
    *
    */
-  get yMin(): number {
-    return dragger_t_get_prop_y_min(this.nativeObj);
-  }
+ get yMin() : number {
+   return dragger_t_get_prop_y_min(this.nativeObj);
+ }
 
 
   /**
    * x坐标的最大值。
    *
    */
-  get xMax(): number {
-    return dragger_t_get_prop_x_max(this.nativeObj);
-  }
+ get xMax() : number {
+   return dragger_t_get_prop_x_max(this.nativeObj);
+ }
 
 
   /**
    * y坐标的最大值。
    *
    */
-  get yMax(): number {
-    return dragger_t_get_prop_y_max(this.nativeObj);
-  }
+ get yMax() : number {
+   return dragger_t_get_prop_y_max(this.nativeObj);
+ }
 
 };
 /**
@@ -17472,11 +17499,11 @@ class TDragger extends TWidget {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L104)
  *
  */
-class TEdit extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TEdit extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -17490,9 +17517,9 @@ class TEdit extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TEdit(edit_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -17502,9 +17529,9 @@ class TEdit extends TWidget {
    *
    * @returns edit对象。
    */
-  static cast(widget: TWidget): TEdit {
+ static cast(widget : TWidget) : TEdit  {
     return new TEdit(edit_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -17513,9 +17540,9 @@ class TEdit extends TWidget {
    *
    * @returns 返回int的值。
    */
-  getInt(): number {
+ getInt() : number  {
     return edit_get_int(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -17524,9 +17551,9 @@ class TEdit extends TWidget {
    *
    * @returns 返回double的值。
    */
-  getDouble(): number {
+ getDouble() : number  {
     return edit_get_double(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -17536,9 +17563,9 @@ class TEdit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setInt(value: any): TRet {
+ setInt(value : any) : TRet  {
     return edit_set_int(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -17548,9 +17575,9 @@ class TEdit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setDouble(value: any): TRet {
+ setDouble(value : any) : TRet  {
     return edit_set_double(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -17561,9 +17588,9 @@ class TEdit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setTextLimit(min: number, max: number): TRet {
+ setTextLimit(min : number, max : number) : TRet  {
     return edit_set_text_limit(this != null ? (this.nativeObj || this) : null, min, max);
-  }
+ }
 
 
   /**
@@ -17575,9 +17602,9 @@ class TEdit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setIntLimit(min: number, max: number, step: number): TRet {
+ setIntLimit(min : number, max : number, step : number) : TRet  {
     return edit_set_int_limit(this != null ? (this.nativeObj || this) : null, min, max, step);
-  }
+ }
 
 
   /**
@@ -17589,9 +17616,9 @@ class TEdit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setFloatLimit(min: number, max: number, step: number): TRet {
+ setFloatLimit(min : number, max : number, step : number) : TRet  {
     return edit_set_float_limit(this != null ? (this.nativeObj || this) : null, min, max, step);
-  }
+ }
 
 
   /**
@@ -17601,9 +17628,9 @@ class TEdit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setReadonly(readonly: boolean): TRet {
+ setReadonly(readonly : boolean) : TRet  {
     return edit_set_readonly(this != null ? (this.nativeObj || this) : null, readonly);
-  }
+ }
 
 
   /**
@@ -17613,9 +17640,9 @@ class TEdit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setAutoFix(auto_fix: boolean): TRet {
+ setAutoFix(auto_fix : boolean) : TRet  {
     return edit_set_auto_fix(this != null ? (this.nativeObj || this) : null, auto_fix);
-  }
+ }
 
 
   /**
@@ -17625,9 +17652,9 @@ class TEdit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setSelectNoneWhenFocused(select_none_when_focused: boolean): TRet {
+ setSelectNoneWhenFocused(select_none_when_focused : boolean) : TRet  {
     return edit_set_select_none_when_focused(this != null ? (this.nativeObj || this) : null, select_none_when_focused);
-  }
+ }
 
 
   /**
@@ -17637,9 +17664,9 @@ class TEdit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setOpenImWhenFocused(open_im_when_focused: boolean): TRet {
+ setOpenImWhenFocused(open_im_when_focused : boolean) : TRet  {
     return edit_set_open_im_when_focused(this != null ? (this.nativeObj || this) : null, open_im_when_focused);
-  }
+ }
 
 
   /**
@@ -17649,9 +17676,9 @@ class TEdit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setInputType(type: TInputType): TRet {
+ setInputType(type : TInputType) : TRet  {
     return edit_set_input_type(this != null ? (this.nativeObj || this) : null, type);
-  }
+ }
 
 
   /**
@@ -17661,9 +17688,9 @@ class TEdit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setInputTips(tips: string): TRet {
+ setInputTips(tips : string) : TRet  {
     return edit_set_input_tips(this != null ? (this.nativeObj || this) : null, tips);
-  }
+ }
 
 
   /**
@@ -17673,9 +17700,9 @@ class TEdit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setPasswordVisible(password_visible: boolean): TRet {
+ setPasswordVisible(password_visible : boolean) : TRet  {
     return edit_set_password_visible(this != null ? (this.nativeObj || this) : null, password_visible);
-  }
+ }
 
 
   /**
@@ -17685,9 +17712,9 @@ class TEdit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setFocus(focus: boolean): TRet {
+ setFocus(focus : boolean) : TRet  {
     return edit_set_focus(this != null ? (this.nativeObj || this) : null, focus);
-  }
+ }
 
 
   /**
@@ -17697,48 +17724,48 @@ class TEdit extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setCursor(cursor: number): TRet {
+ setCursor(cursor : number) : TRet  {
     return edit_set_cursor(this != null ? (this.nativeObj || this) : null, cursor);
-  }
+ }
 
 
   /**
    * 编辑器是否为只读。
    *
    */
-  get readonly(): boolean {
-    return edit_t_get_prop_readonly(this.nativeObj);
-  }
+ get readonly() : boolean {
+   return edit_t_get_prop_readonly(this.nativeObj);
+ }
 
-  set readonly(v: boolean) {
-    this.setReadonly(v);
-  }
+ set readonly(v : boolean) {
+   this.setReadonly(v);
+ }
 
 
   /**
    * 密码是否可见。
    *
    */
-  get passwordVisible(): boolean {
-    return edit_t_get_prop_password_visible(this.nativeObj);
-  }
+ get passwordVisible() : boolean {
+   return edit_t_get_prop_password_visible(this.nativeObj);
+ }
 
-  set passwordVisible(v: boolean) {
-    this.setPasswordVisible(v);
-  }
+ set passwordVisible(v : boolean) {
+   this.setPasswordVisible(v);
+ }
 
 
   /**
    * 输入无效时，是否自动改正。
    *
    */
-  get autoFix(): boolean {
-    return edit_t_get_prop_auto_fix(this.nativeObj);
-  }
+ get autoFix() : boolean {
+   return edit_t_get_prop_auto_fix(this.nativeObj);
+ }
 
-  set autoFix(v: boolean) {
-    this.setAutoFix(v);
-  }
+ set autoFix(v : boolean) {
+   this.setAutoFix(v);
+ }
 
 
   /**
@@ -17747,13 +17774,13 @@ class TEdit extends TWidget {
    *> 主要用于没有指针设备的情况，否则软键盘无法取消选中文本。
    *
    */
-  get selectNoneWhenFocused(): boolean {
-    return edit_t_get_prop_select_none_when_focused(this.nativeObj);
-  }
+ get selectNoneWhenFocused() : boolean {
+   return edit_t_get_prop_select_none_when_focused(this.nativeObj);
+ }
 
-  set selectNoneWhenFocused(v: boolean) {
-    this.setSelectNoneWhenFocused(v);
-  }
+ set selectNoneWhenFocused(v : boolean) {
+   this.setSelectNoneWhenFocused(v);
+ }
 
 
   /**
@@ -17762,53 +17789,53 @@ class TEdit extends TWidget {
    *> 主要用于没有指针设备的情况，否则每次切换焦点时都打开输入法。
    *
    */
-  get openImWhenFocused(): boolean {
-    return edit_t_get_prop_open_im_when_focused(this.nativeObj);
-  }
+ get openImWhenFocused() : boolean {
+   return edit_t_get_prop_open_im_when_focused(this.nativeObj);
+ }
 
-  set openImWhenFocused(v: boolean) {
-    this.setOpenImWhenFocused(v);
-  }
+ set openImWhenFocused(v : boolean) {
+   this.setOpenImWhenFocused(v);
+ }
 
 
   /**
    * 输入提示。
    *
    */
-  get tips(): string {
-    return edit_t_get_prop_tips(this.nativeObj);
-  }
+ get tips() : string {
+   return edit_t_get_prop_tips(this.nativeObj);
+ }
 
 
   /**
    * 输入类型。
    *
    */
-  get inputType(): TInputType {
-    return edit_t_get_prop_input_type(this.nativeObj);
-  }
+ get inputType() : TInputType {
+   return edit_t_get_prop_input_type(this.nativeObj);
+ }
 
-  set inputType(v: TInputType) {
-    this.setInputType(v);
-  }
+ set inputType(v : TInputType) {
+   this.setInputType(v);
+ }
 
 
   /**
    * 最小值或最小长度。
    *
    */
-  get min(): number {
-    return edit_t_get_prop_min(this.nativeObj);
-  }
+ get min() : number {
+   return edit_t_get_prop_min(this.nativeObj);
+ }
 
 
   /**
    * 最大值或最大长度。
    *
    */
-  get max(): number {
-    return edit_t_get_prop_max(this.nativeObj);
-  }
+ get max() : number {
+   return edit_t_get_prop_max(this.nativeObj);
+ }
 
 
   /**
@@ -17816,9 +17843,9 @@ class TEdit extends TWidget {
    *作为数值型编辑器时，一次增加和减少时的数值。
    *
    */
-  get step(): number {
-    return edit_t_get_prop_step(this.nativeObj);
-  }
+ get step() : number {
+   return edit_t_get_prop_step(this.nativeObj);
+ }
 
 };
 /**
@@ -17859,11 +17886,11 @@ class TEdit extends TWidget {
  *```
  *
  */
-class TGridItem extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TGridItem extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -17877,9 +17904,9 @@ class TGridItem extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TGridItem(grid_item_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -17889,9 +17916,9 @@ class TGridItem extends TWidget {
    *
    * @returns grid_item对象。
    */
-  static cast(widget: TWidget): TGridItem {
+ static cast(widget : TWidget) : TGridItem  {
     return new TGridItem(grid_item_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -17923,11 +17950,11 @@ class TGridItem extends TWidget {
  *```
  *
  */
-class TGrid extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TGrid extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -17941,9 +17968,9 @@ class TGrid extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TGrid(grid_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -17953,9 +17980,9 @@ class TGrid extends TWidget {
    *
    * @returns grid对象。
    */
-  static cast(widget: TWidget): TGrid {
+ static cast(widget : TWidget) : TGrid  {
     return new TGrid(grid_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -17988,11 +18015,11 @@ class TGrid extends TWidget {
  *```
  *
  */
-class TGroupBox extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TGroupBox extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -18006,9 +18033,9 @@ class TGroupBox extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TGroupBox(group_box_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -18018,9 +18045,9 @@ class TGroupBox extends TWidget {
    *
    * @returns group_box对象。
    */
-  static cast(widget: TWidget): TGroupBox {
+ static cast(widget : TWidget) : TGroupBox  {
     return new TGroupBox(group_box_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -18062,11 +18089,11 @@ class TGroupBox extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L144)
  *
  */
-class TLabel extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TLabel extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -18080,9 +18107,9 @@ class TLabel extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TLabel(label_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -18092,9 +18119,9 @@ class TLabel extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setLength(length: number): TRet {
+ setLength(length : number) : TRet  {
     return label_set_length(this != null ? (this.nativeObj || this) : null, length);
-  }
+ }
 
 
   /**
@@ -18107,9 +18134,9 @@ class TLabel extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  resizeToContent(min_w: number, max_w: number, min_h: number, max_h: number): TRet {
+ resizeToContent(min_w : number, max_w : number, min_h : number, max_h : number) : TRet  {
     return label_resize_to_content(this != null ? (this.nativeObj || this) : null, min_w, max_w, min_h, max_h);
-  }
+ }
 
 
   /**
@@ -18119,9 +18146,9 @@ class TLabel extends TWidget {
    *
    * @returns label对象。
    */
-  static cast(widget: TWidget): TLabel {
+ static cast(widget : TWidget) : TLabel  {
     return new TLabel(label_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -18129,13 +18156,13 @@ class TLabel extends TWidget {
    *主要用于动态改变显示字符的个数，来实现类似[拨号中...]的动画效果。
    *
    */
-  get length(): number {
-    return label_t_get_prop_length(this.nativeObj);
-  }
+ get length() : number {
+   return label_t_get_prop_length(this.nativeObj);
+ }
 
-  set length(v: number) {
-    this.setLength(v);
-  }
+ set length(v : number) {
+   this.setLength(v);
+ }
 
 };
 /**
@@ -18176,11 +18203,11 @@ class TLabel extends TWidget {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L0)
  *
  */
-class TOverlay extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TOverlay extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -18194,9 +18221,9 @@ class TOverlay extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TOverlay(overlay_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -18206,9 +18233,9 @@ class TOverlay extends TWidget {
    *
    * @returns overlay对象。
    */
-  static cast(widget: TWidget): TOverlay {
+ static cast(widget : TWidget) : TOverlay  {
     return new TOverlay(overlay_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -18237,11 +18264,11 @@ class TOverlay extends TWidget {
  *[tab control](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
  *
  */
-class TPages extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TPages extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -18255,9 +18282,9 @@ class TPages extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TPages(pages_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -18267,9 +18294,9 @@ class TPages extends TWidget {
    *
    * @returns pages对象。
    */
-  static cast(widget: TWidget): TPages {
+ static cast(widget : TWidget) : TPages  {
     return new TPages(pages_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -18279,9 +18306,9 @@ class TPages extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setActive(index: number): TRet {
+ setActive(index : number) : TRet  {
     return pages_set_active(this != null ? (this.nativeObj || this) : null, index);
-  }
+ }
 
 
   /**
@@ -18291,22 +18318,22 @@ class TPages extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setActiveByName(name: string): TRet {
+ setActiveByName(name : string) : TRet  {
     return pages_set_active_by_name(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
    * 当前活跃的page。
    *
    */
-  get active(): number {
-    return pages_t_get_prop_active(this.nativeObj);
-  }
+ get active() : number {
+   return pages_t_get_prop_active(this.nativeObj);
+ }
 
-  set active(v: number) {
-    this.setActive(v);
-  }
+ set active(v : number) {
+   this.setActive(v);
+ }
 
 };
 /**
@@ -18345,11 +18372,11 @@ class TPages extends TWidget {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L183)
  *
  */
-class TProgressBar extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TProgressBar extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -18363,9 +18390,9 @@ class TProgressBar extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TProgressBar(progress_bar_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -18375,9 +18402,9 @@ class TProgressBar extends TWidget {
    *
    * @returns progress_bar对象。
    */
-  static cast(widget: TWidget): TProgressBar {
+ static cast(widget : TWidget) : TProgressBar  {
     return new TProgressBar(progress_bar_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -18387,9 +18414,9 @@ class TProgressBar extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setValue(value: any): TRet {
+ setValue(value : any) : TRet  {
     return progress_bar_set_value(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -18399,9 +18426,9 @@ class TProgressBar extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setMax(max: number): TRet {
+ setMax(max : number) : TRet  {
     return progress_bar_set_max(this != null ? (this.nativeObj || this) : null, max);
-  }
+ }
 
 
   /**
@@ -18411,9 +18438,9 @@ class TProgressBar extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setVertical(vertical: boolean): TRet {
+ setVertical(vertical : boolean) : TRet  {
     return progress_bar_set_vertical(this != null ? (this.nativeObj || this) : null, vertical);
-  }
+ }
 
 
   /**
@@ -18423,9 +18450,9 @@ class TProgressBar extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setShowText(show_text: boolean): TRet {
+ setShowText(show_text : boolean) : TRet  {
     return progress_bar_set_show_text(this != null ? (this.nativeObj || this) : null, show_text);
-  }
+ }
 
 
   /**
@@ -18436,61 +18463,61 @@ class TProgressBar extends TWidget {
    *
    * @returns 返回百分比。
    */
-  getPercent(): number {
+ getPercent() : number  {
     return progress_bar_get_percent(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
    * 进度条的值[0-100]。
    *
    */
-  get value(): number {
-    return progress_bar_t_get_prop_value(this.nativeObj);
-  }
+ get value() : number {
+   return progress_bar_t_get_prop_value(this.nativeObj);
+ }
 
-  set value(v: number) {
-    this.setValue(v);
-  }
+ set value(v : number) {
+   this.setValue(v);
+ }
 
 
   /**
    * 最大值(缺省为100)。
    *
    */
-  get max(): number {
-    return progress_bar_t_get_prop_max(this.nativeObj);
-  }
+ get max() : number {
+   return progress_bar_t_get_prop_max(this.nativeObj);
+ }
 
-  set max(v: number) {
-    this.setMax(v);
-  }
+ set max(v : number) {
+   this.setMax(v);
+ }
 
 
   /**
    * 进度条的是否为垂直方向。
    *
    */
-  get vertical(): boolean {
-    return progress_bar_t_get_prop_vertical(this.nativeObj);
-  }
+ get vertical() : boolean {
+   return progress_bar_t_get_prop_vertical(this.nativeObj);
+ }
 
-  set vertical(v: boolean) {
-    this.setVertical(v);
-  }
+ set vertical(v : boolean) {
+   this.setVertical(v);
+ }
 
 
   /**
    * 是否显示文本。
    *
    */
-  get showText(): boolean {
-    return progress_bar_t_get_prop_show_text(this.nativeObj);
-  }
+ get showText() : boolean {
+   return progress_bar_t_get_prop_show_text(this.nativeObj);
+ }
 
-  set showText(v: boolean) {
-    this.setShowText(v);
-  }
+ set showText(v : boolean) {
+   this.setShowText(v);
+ }
 
 };
 /**
@@ -18522,11 +18549,11 @@ class TProgressBar extends TWidget {
  *```
  *
  */
-class TRow extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TRow extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -18540,9 +18567,9 @@ class TRow extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TRow(row_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -18552,9 +18579,9 @@ class TRow extends TWidget {
    *
    * @returns row对象。
    */
-  static cast(widget: TWidget): TRow {
+ static cast(widget : TWidget) : TRow  {
     return new TRow(row_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -18594,11 +18621,11 @@ class TRow extends TWidget {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L179)
  *
  */
-class TSlider extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TSlider extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -18612,9 +18639,9 @@ class TSlider extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TSlider(slider_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -18624,9 +18651,9 @@ class TSlider extends TWidget {
    *
    * @returns slider对象。
    */
-  static cast(widget: TWidget): TSlider {
+ static cast(widget : TWidget) : TSlider  {
     return new TSlider(slider_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -18636,9 +18663,9 @@ class TSlider extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setValue(value: any): TRet {
+ setValue(value : any) : TRet  {
     return slider_set_value(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -18648,9 +18675,9 @@ class TSlider extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setMin(min: number): TRet {
+ setMin(min : number) : TRet  {
     return slider_set_min(this != null ? (this.nativeObj || this) : null, min);
-  }
+ }
 
 
   /**
@@ -18660,9 +18687,9 @@ class TSlider extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setMax(max: number): TRet {
+ setMax(max : number) : TRet  {
     return slider_set_max(this != null ? (this.nativeObj || this) : null, max);
-  }
+ }
 
 
   /**
@@ -18672,9 +18699,9 @@ class TSlider extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setStep(step: number): TRet {
+ setStep(step : number) : TRet  {
     return slider_set_step(this != null ? (this.nativeObj || this) : null, step);
-  }
+ }
 
 
   /**
@@ -18684,9 +18711,9 @@ class TSlider extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setBarSize(bar_size: number): TRet {
+ setBarSize(bar_size : number) : TRet  {
     return slider_set_bar_size(this != null ? (this.nativeObj || this) : null, bar_size);
-  }
+ }
 
 
   /**
@@ -18696,114 +18723,114 @@ class TSlider extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setVertical(vertical: boolean): TRet {
+ setVertical(vertical : boolean) : TRet  {
     return slider_set_vertical(this != null ? (this.nativeObj || this) : null, vertical);
-  }
+ }
 
 
   /**
    * 值。
    *
    */
-  get value(): number {
-    return slider_t_get_prop_value(this.nativeObj);
-  }
+ get value() : number {
+   return slider_t_get_prop_value(this.nativeObj);
+ }
 
-  set value(v: number) {
-    this.setValue(v);
-  }
+ set value(v : number) {
+   this.setValue(v);
+ }
 
 
   /**
    * 最小值。
    *
    */
-  get min(): number {
-    return slider_t_get_prop_min(this.nativeObj);
-  }
+ get min() : number {
+   return slider_t_get_prop_min(this.nativeObj);
+ }
 
-  set min(v: number) {
-    this.setMin(v);
-  }
+ set min(v : number) {
+   this.setMin(v);
+ }
 
 
   /**
    * 最大值。
    *
    */
-  get max(): number {
-    return slider_t_get_prop_max(this.nativeObj);
-  }
+ get max() : number {
+   return slider_t_get_prop_max(this.nativeObj);
+ }
 
-  set max(v: number) {
-    this.setMax(v);
-  }
+ set max(v : number) {
+   this.setMax(v);
+ }
 
 
   /**
    * 拖动的最小单位。
    *
    */
-  get step(): number {
-    return slider_t_get_prop_step(this.nativeObj);
-  }
+ get step() : number {
+   return slider_t_get_prop_step(this.nativeObj);
+ }
 
-  set step(v: number) {
-    this.setStep(v);
-  }
+ set step(v : number) {
+   this.setStep(v);
+ }
 
 
   /**
    * 滑块的是否为垂直方向。
    *
    */
-  get vertical(): boolean {
-    return slider_t_get_prop_vertical(this.nativeObj);
-  }
+ get vertical() : boolean {
+   return slider_t_get_prop_vertical(this.nativeObj);
+ }
 
-  set vertical(v: boolean) {
-    this.setVertical(v);
-  }
+ set vertical(v : boolean) {
+   this.setVertical(v);
+ }
 
 
   /**
    * 轴的宽度或高度（单位：像素），为0表示为控件的宽度或高度的一半，缺省为0。
    *
    */
-  get barSize(): number {
-    return slider_t_get_prop_bar_size(this.nativeObj);
-  }
+ get barSize() : number {
+   return slider_t_get_prop_bar_size(this.nativeObj);
+ }
 
-  set barSize(v: number) {
-    this.setBarSize(v);
-  }
+ set barSize(v : number) {
+   this.setBarSize(v);
+ }
 
 
   /**
    * 滑块的宽度或高度（单位：像素），缺省为10。
    *
    */
-  get draggerSize(): number {
-    return slider_t_get_prop_dragger_size(this.nativeObj);
-  }
+ get draggerSize() : number {
+   return slider_t_get_prop_dragger_size(this.nativeObj);
+ }
 
 
   /**
    * 滑块的宽度或高度是否与icon适应，缺省为true。
    *
    */
-  get draggerAdaptToIcon(): boolean {
-    return slider_t_get_prop_dragger_adapt_to_icon(this.nativeObj);
-  }
+ get draggerAdaptToIcon() : boolean {
+   return slider_t_get_prop_dragger_adapt_to_icon(this.nativeObj);
+ }
 
 
   /**
    * 是否允许在轴上滑动来改变滑块位置，缺省为FALSE。
    *
    */
-  get slideWithBar(): boolean {
-    return slider_t_get_prop_slide_with_bar(this.nativeObj);
-  }
+ get slideWithBar() : boolean {
+   return slider_t_get_prop_slide_with_bar(this.nativeObj);
+ }
 
 };
 /**
@@ -18838,11 +18865,11 @@ class TSlider extends TWidget {
  *```
  *
  */
-class TTabButtonGroup extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TTabButtonGroup extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -18856,9 +18883,9 @@ class TTabButtonGroup extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TTabButtonGroup(tab_button_group_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -18868,9 +18895,9 @@ class TTabButtonGroup extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setCompact(compact: boolean): TRet {
+ setCompact(compact : boolean) : TRet  {
     return tab_button_group_set_compact(this != null ? (this.nativeObj || this) : null, compact);
-  }
+ }
 
 
   /**
@@ -18880,9 +18907,9 @@ class TTabButtonGroup extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setScrollable(scrollable: boolean): TRet {
+ setScrollable(scrollable : boolean) : TRet  {
     return tab_button_group_set_scrollable(this != null ? (this.nativeObj || this) : null, scrollable);
-  }
+ }
 
 
   /**
@@ -18892,22 +18919,22 @@ class TTabButtonGroup extends TWidget {
    *
    * @returns tab_button_group对象。
    */
-  static cast(widget: TWidget): TTabButtonGroup {
+ static cast(widget : TWidget) : TTabButtonGroup  {
     return new TTabButtonGroup(tab_button_group_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
    * 紧凑型排版子控件(缺省FALSE)。
    *
    */
-  get compact(): boolean {
-    return tab_button_group_t_get_prop_compact(this.nativeObj);
-  }
+ get compact() : boolean {
+   return tab_button_group_t_get_prop_compact(this.nativeObj);
+ }
 
-  set compact(v: boolean) {
-    this.setCompact(v);
-  }
+ set compact(v : boolean) {
+   this.setCompact(v);
+ }
 
 
   /**
@@ -18916,13 +18943,13 @@ class TTabButtonGroup extends TWidget {
    *> 紧凑型排版子控件时才支持滚动。
    *
    */
-  get scrollable(): boolean {
-    return tab_button_group_t_get_prop_scrollable(this.nativeObj);
-  }
+ get scrollable() : boolean {
+   return tab_button_group_t_get_prop_scrollable(this.nativeObj);
+ }
 
-  set scrollable(v: boolean) {
-    this.setScrollable(v);
-  }
+ set scrollable(v : boolean) {
+   this.setScrollable(v);
+ }
 
 };
 /**
@@ -18986,11 +19013,11 @@ class TTabButtonGroup extends TWidget {
  *```
  *
  */
-class TTabButton extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TTabButton extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -19004,9 +19031,9 @@ class TTabButton extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TTabButton(tab_button_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -19016,9 +19043,9 @@ class TTabButton extends TWidget {
    *
    * @returns tab_button对象。
    */
-  static cast(widget: TWidget): TTabButton {
+ static cast(widget : TWidget) : TTabButton  {
     return new TTabButton(tab_button_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -19028,9 +19055,9 @@ class TTabButton extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setValue(value: any): TRet {
+ setValue(value : any) : TRet  {
     return tab_button_set_value(this != null ? (this.nativeObj || this) : null, value);
-  }
+ }
 
 
   /**
@@ -19040,9 +19067,9 @@ class TTabButton extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setIcon(name: string): TRet {
+ setIcon(name : string) : TRet  {
     return tab_button_set_icon(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
@@ -19052,9 +19079,9 @@ class TTabButton extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setActiveIcon(name: string): TRet {
+ setActiveIcon(name : string) : TRet  {
     return tab_button_set_active_icon(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
@@ -19064,61 +19091,61 @@ class TTabButton extends TWidget {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setLoadUi(name: string): TRet {
+ setLoadUi(name : string) : TRet  {
     return tab_button_set_load_ui(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
    * 值。
    *
    */
-  get value(): boolean {
-    return tab_button_t_get_prop_value(this.nativeObj);
-  }
+ get value() : boolean {
+   return tab_button_t_get_prop_value(this.nativeObj);
+ }
 
-  set value(v: boolean) {
-    this.setValue(v);
-  }
+ set value(v : boolean) {
+   this.setValue(v);
+ }
 
 
   /**
    * 激活后加载的UI名字。
    *
    */
-  get loadUi(): string {
-    return tab_button_t_get_prop_load_ui(this.nativeObj);
-  }
+ get loadUi() : string {
+   return tab_button_t_get_prop_load_ui(this.nativeObj);
+ }
 
-  set loadUi(v: string) {
-    this.setLoadUi(v);
-  }
+ set loadUi(v : string) {
+   this.setLoadUi(v);
+ }
 
 
   /**
    * 当前项的图标的名称。
    *
    */
-  get activeIcon(): string {
-    return tab_button_t_get_prop_active_icon(this.nativeObj);
-  }
+ get activeIcon() : string {
+   return tab_button_t_get_prop_active_icon(this.nativeObj);
+ }
 
-  set activeIcon(v: string) {
-    this.setActiveIcon(v);
-  }
+ set activeIcon(v : string) {
+   this.setActiveIcon(v);
+ }
 
 
   /**
    * 非当前项的图标的名称。
    *
    */
-  get icon(): string {
-    return tab_button_t_get_prop_icon(this.nativeObj);
-  }
+ get icon() : string {
+   return tab_button_t_get_prop_icon(this.nativeObj);
+ }
 
-  set icon(v: string) {
-    this.setIcon(v);
-  }
+ set icon(v : string) {
+   this.setIcon(v);
+ }
 
 };
 /**
@@ -19150,11 +19177,11 @@ class TTabButton extends TWidget {
  *[tab control](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
  *
  */
-class TTabControl extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TTabControl extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -19168,9 +19195,9 @@ class TTabControl extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TTabControl(tab_control_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -19180,9 +19207,9 @@ class TTabControl extends TWidget {
    *
    * @returns tab_control对象。
    */
-  static cast(widget: TWidget): TTabControl {
+ static cast(widget : TWidget) : TTabControl  {
     return new TTabControl(tab_control_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -19210,11 +19237,11 @@ class TTabControl extends TWidget {
  *```
  *
  */
-class TView extends TWidget {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TView extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -19228,9 +19255,9 @@ class TView extends TWidget {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TView(view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -19240,20 +19267,20 @@ class TView extends TWidget {
    *
    * @returns view对象。
    */
-  static cast(widget: TWidget): TView {
+ static cast(widget : TWidget) : TView  {
     return new TView(view_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
  * 单个idle的信息。
  *
  */
-class TIdleInfo extends TObject {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TIdleInfo extends TObject { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -19263,18 +19290,18 @@ class TIdleInfo extends TObject {
    *
    * @returns idle_info对象。
    */
-  static cast(idle: TIdleInfo): TIdleInfo {
+ static cast(idle : TIdleInfo) : TIdleInfo  {
     return new TIdleInfo(idle_info_cast(idle != null ? (idle.nativeObj || idle) : null));
-  }
+ }
 
 
   /**
    * idle回调函数上下文。
    *
    */
-  get ctx(): any {
-    return idle_info_t_get_prop_ctx(this.nativeObj);
-  }
+ get ctx() : any {
+   return idle_info_t_get_prop_ctx(this.nativeObj);
+ }
 
 
   /**
@@ -19283,9 +19310,9 @@ class TIdleInfo extends TObject {
    *> 为TK\_INVALID\_ID时表示无效idle。
    *
    */
-  get id(): number {
-    return idle_info_t_get_prop_id(this.nativeObj);
-  }
+ get id() : number {
+   return idle_info_t_get_prop_id(this.nativeObj);
+ }
 
 };
 /**
@@ -19320,11 +19347,11 @@ class TIdleInfo extends TObject {
  *一般不需通过style来设置控件的显示风格，如果在特殊情况下需要，可以参考其它控件。
  *
  */
-class TMutableImage extends TImageBase {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TMutableImage extends TImageBase { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 };
 /**
@@ -19336,11 +19363,11 @@ class TMutableImage extends TImageBase {
  ** index 用于访问属性，-1可以用来追加新元素。
  *
  */
-class TObjectArray extends TObject {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TObjectArray extends TObject { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -19349,9 +19376,9 @@ class TObjectArray extends TObject {
    *
    * @returns 返回object对象。
    */
-  static create(): TObject {
+ static create() : TObject  {
     return new TObjectArray(object_array_create());
-  }
+ }
 
 
   /**
@@ -19360,9 +19387,9 @@ class TObjectArray extends TObject {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  unref(): TRet {
+ unref() : TRet  {
     return object_array_unref(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -19371,18 +19398,18 @@ class TObjectArray extends TObject {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  clearProps(): TRet {
+ clearProps() : TRet  {
     return object_array_clear_props(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
    * 属性个数。
    *
    */
-  get propsSize(): number {
-    return object_array_t_get_prop_props_size(this.nativeObj);
-  }
+ get propsSize() : number {
+   return object_array_t_get_prop_props_size(this.nativeObj);
+ }
 
 };
 /**
@@ -19427,11 +19454,11 @@ class TObjectArray extends TObject {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
  *
  */
-class TGifImage extends TImageBase {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TGifImage extends TImageBase { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -19445,9 +19472,9 @@ class TGifImage extends TImageBase {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TGifImage(gif_image_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -19457,9 +19484,9 @@ class TGifImage extends TImageBase {
    *
    * @returns gif_image对象。
    */
-  static cast(widget: TWidget): TGifImage {
+ static cast(widget : TWidget) : TGifImage  {
     return new TGifImage(gif_image_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -19468,11 +19495,11 @@ class TGifImage extends TImageBase {
  *内部使用有序数组保存所有属性，可以快速查找指定名称的属性。
  *
  */
-class TObjectDefault extends TObject {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TObjectDefault extends TObject { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -19481,9 +19508,9 @@ class TObjectDefault extends TObject {
    *
    * @returns 返回object对象。
    */
-  static create(): TObject {
+ static create() : TObject  {
     return new TObjectDefault(object_default_create());
-  }
+ }
 
 
   /**
@@ -19492,9 +19519,9 @@ class TObjectDefault extends TObject {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  unref(): TRet {
+ unref() : TRet  {
     return object_default_unref(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -19503,18 +19530,18 @@ class TObjectDefault extends TObject {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  clearProps(): TRet {
+ clearProps() : TRet  {
     return object_default_clear_props(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
    * 属性个数。
    *
    */
-  get propsSize(): number {
-    return object_default_t_get_prop_props_size(this.nativeObj);
-  }
+ get propsSize() : number {
+   return object_default_t_get_prop_props_size(this.nativeObj);
+ }
 
 };
 /**
@@ -19573,11 +19600,11 @@ class TObjectDefault extends TObject {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L313)
  *
  */
-class TImage extends TImageBase {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TImage extends TImageBase { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -19591,9 +19618,9 @@ class TImage extends TImageBase {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TImage(image_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -19603,9 +19630,9 @@ class TImage extends TImageBase {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setDrawType(draw_type: TImageDrawType): TRet {
+ setDrawType(draw_type : TImageDrawType) : TRet  {
     return image_set_draw_type(this != null ? (this.nativeObj || this) : null, draw_type);
-  }
+ }
 
 
   /**
@@ -19615,33 +19642,33 @@ class TImage extends TImageBase {
    *
    * @returns image对象。
    */
-  static cast(widget: TWidget): TImage {
+ static cast(widget : TWidget) : TImage  {
     return new TImage(image_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
    * 图片的绘制方式(仅在没有旋转和缩放时生效)。
    *
    */
-  get drawType(): TImageDrawType {
-    return image_t_get_prop_draw_type(this.nativeObj);
-  }
+ get drawType() : TImageDrawType {
+   return image_t_get_prop_draw_type(this.nativeObj);
+ }
 
-  set drawType(v: TImageDrawType) {
-    this.setDrawType(v);
-  }
+ set drawType(v : TImageDrawType) {
+   this.setDrawType(v);
+ }
 
 };
 /**
  * 可滚动的combo_box控件。
  *
  */
-class TComboBoxEx extends TComboBox {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TComboBoxEx extends TComboBox { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -19655,9 +19682,9 @@ class TComboBoxEx extends TComboBox {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TComboBoxEx(combo_box_ex_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 };
 /**
@@ -19682,11 +19709,11 @@ class TComboBoxEx extends TComboBox {
  *通过calibration\_win\_set\_on\_done注册回调函数，用于保存校准数据。
  *
  */
-class TCalibrationWin extends TWindowBase {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TCalibrationWin extends TWindowBase { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -19696,9 +19723,9 @@ class TCalibrationWin extends TWindowBase {
    *
    * @returns calibration_win对象。
    */
-  static cast(widget: TWidget): TCalibrationWin {
+ static cast(widget : TWidget) : TCalibrationWin  {
     return new TCalibrationWin(calibration_win_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -19746,11 +19773,11 @@ class TCalibrationWin extends TWindowBase {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L324)
  *
  */
-class TPopup extends TWindowBase {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TPopup extends TWindowBase { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -19764,9 +19791,9 @@ class TPopup extends TWindowBase {
    *
    * @returns popup对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TPopup(popup_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -19776,9 +19803,9 @@ class TPopup extends TWindowBase {
    *
    * @returns popup对象。
    */
-  static cast(widget: TWidget): TPopup {
+ static cast(widget : TWidget) : TPopup  {
     return new TPopup(popup_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -19788,9 +19815,9 @@ class TPopup extends TWindowBase {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setCloseWhenClick(close_when_click: boolean): TRet {
+ setCloseWhenClick(close_when_click : boolean) : TRet  {
     return popup_set_close_when_click(this != null ? (this.nativeObj || this) : null, close_when_click);
-  }
+ }
 
 
   /**
@@ -19800,35 +19827,35 @@ class TPopup extends TWindowBase {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setCloseWhenClickOutside(close_when_click_outside: boolean): TRet {
+ setCloseWhenClickOutside(close_when_click_outside : boolean) : TRet  {
     return popup_set_close_when_click_outside(this != null ? (this.nativeObj || this) : null, close_when_click_outside);
-  }
+ }
 
 
   /**
    * 点击时是否关闭窗口。
    *
    */
-  get closeWhenClick(): boolean {
-    return popup_t_get_prop_close_when_click(this.nativeObj);
-  }
+ get closeWhenClick() : boolean {
+   return popup_t_get_prop_close_when_click(this.nativeObj);
+ }
 
-  set closeWhenClick(v: boolean) {
-    this.setCloseWhenClick(v);
-  }
+ set closeWhenClick(v : boolean) {
+   this.setCloseWhenClick(v);
+ }
 
 
   /**
    * 点击到窗口外时是否关闭窗口。
    *
    */
-  get closeWhenClickOutside(): boolean {
-    return popup_t_get_prop_close_when_click_outside(this.nativeObj);
-  }
+ get closeWhenClickOutside() : boolean {
+   return popup_t_get_prop_close_when_click_outside(this.nativeObj);
+ }
 
-  set closeWhenClickOutside(v: boolean) {
-    this.setCloseWhenClickOutside(v);
-  }
+ set closeWhenClickOutside(v : boolean) {
+   this.setCloseWhenClickOutside(v);
+ }
 
 };
 /**
@@ -19867,11 +19894,11 @@ class TPopup extends TWindowBase {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
  *
  */
-class TSvgImage extends TImageBase {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TSvgImage extends TImageBase { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -19885,9 +19912,9 @@ class TSvgImage extends TImageBase {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TSvgImage(svg_image_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -19899,9 +19926,9 @@ class TSvgImage extends TImageBase {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setImage(name: string): TRet {
+ setImage(name : string) : TRet  {
     return svg_image_set_image(this != null ? (this.nativeObj || this) : null, name);
-  }
+ }
 
 
   /**
@@ -19911,20 +19938,20 @@ class TSvgImage extends TImageBase {
    *
    * @returns svg_image对象。
    */
-  static cast(widget: TWidget): TSvgImage {
+ static cast(widget : TWidget) : TSvgImage  {
     return new TSvgImage(svg_image_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
  * 单个定时器的信息。
  *
  */
-class TTimerInfo extends TObject {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TTimerInfo extends TObject { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -19934,18 +19961,18 @@ class TTimerInfo extends TObject {
    *
    * @returns timer_info对象。
    */
-  static cast(timer: TTimerInfo): TTimerInfo {
+ static cast(timer : TTimerInfo) : TTimerInfo  {
     return new TTimerInfo(timer_info_cast(timer != null ? (timer.nativeObj || timer) : null));
-  }
+ }
 
 
   /**
    * 定时器回调函数的上下文
    *
    */
-  get ctx(): any {
-    return timer_info_t_get_prop_ctx(this.nativeObj);
-  }
+ get ctx() : any {
+   return timer_info_t_get_prop_ctx(this.nativeObj);
+ }
 
 
   /**
@@ -19954,18 +19981,18 @@ class TTimerInfo extends TObject {
    *> 为TK\_INVALID\_ID时表示无效定时器。
    *
    */
-  get id(): number {
-    return timer_info_t_get_prop_id(this.nativeObj);
-  }
+ get id() : number {
+   return timer_info_t_get_prop_id(this.nativeObj);
+ }
 
 
   /**
    * 当前时间(相对时间，单位为毫秒)。
    *
    */
-  get now(): number {
-    return timer_info_t_get_prop_now(this.nativeObj);
-  }
+ get now() : number {
+   return timer_info_t_get_prop_now(this.nativeObj);
+ }
 
 };
 /**
@@ -20015,11 +20042,11 @@ class TTimerInfo extends TObject {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L128)
  *
  */
-class TSpinBox extends TEdit {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TSpinBox extends TEdit { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -20033,9 +20060,9 @@ class TSpinBox extends TEdit {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TSpinBox(spin_box_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -20045,9 +20072,9 @@ class TSpinBox extends TEdit {
    *
    * @returns spin_box对象。
    */
-  static cast(widget: TWidget): TSpinBox {
+ static cast(widget : TWidget) : TSpinBox  {
     return new TSpinBox(spin_box_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -20099,11 +20126,11 @@ class TSpinBox extends TEdit {
  *[system_bar.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/system_bar.xml)
  *
  */
-class TSystemBar extends TWindowBase {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TSystemBar extends TWindowBase { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -20117,9 +20144,9 @@ class TSystemBar extends TWindowBase {
    *
    * @returns system_bar对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TSystemBar(system_bar_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -20129,9 +20156,9 @@ class TSystemBar extends TWindowBase {
    *
    * @returns system_bar对象。
    */
-  static cast(widget: TWidget): TSystemBar {
+ static cast(widget : TWidget) : TSystemBar  {
     return new TSystemBar(system_bar_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -20172,11 +20199,11 @@ class TSystemBar extends TWindowBase {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L0)
  *
  */
-class TWindow extends TWindowBase {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TWindow extends TWindowBase { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -20190,9 +20217,9 @@ class TWindow extends TWindowBase {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TWindow(window_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -20201,9 +20228,9 @@ class TWindow extends TWindowBase {
    *
    * @returns 对象。
    */
-  static createDefault(): TWidget {
+ static createDefault() : TWidget  {
     return new TWindow(window_create_default());
-  }
+ }
 
 
   /**
@@ -20215,9 +20242,9 @@ class TWindow extends TWindowBase {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setFullscreen(fullscreen: boolean): TRet {
+ setFullscreen(fullscreen : boolean) : TRet  {
     return window_set_fullscreen(this != null ? (this.nativeObj || this) : null, fullscreen);
-  }
+ }
 
 
   /**
@@ -20227,9 +20254,9 @@ class TWindow extends TWindowBase {
    *
    * @returns 对象。
    */
-  static open(name: string): TWidget {
+ static open(name : string) : TWidget  {
     return new TWindow(window_open(name));
-  }
+ }
 
 
   /**
@@ -20240,9 +20267,9 @@ class TWindow extends TWindowBase {
    *
    * @returns 对象。
    */
-  static openAndClose(name: string, to_close: TWidget): TWidget {
+ static openAndClose(name : string, to_close : TWidget) : TWidget  {
     return new TWindow(window_open_and_close(name, to_close != null ? (to_close.nativeObj || to_close) : null));
-  }
+ }
 
 
   /**
@@ -20251,9 +20278,9 @@ class TWindow extends TWindowBase {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  close(): TRet {
+ close() : TRet  {
     return window_close(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -20262,9 +20289,9 @@ class TWindow extends TWindowBase {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  closeForce(): TRet {
+ closeForce() : TRet  {
     return window_close_force(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -20274,9 +20301,9 @@ class TWindow extends TWindowBase {
    *
    * @returns window对象。
    */
-  static cast(widget: TWidget): TWindow {
+ static cast(widget : TWidget) : TWindow  {
     return new TWindow(window_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -20285,13 +20312,13 @@ class TWindow extends TWindowBase {
    *>这里全屏是指与LCD相同大小，而非让SDL窗口全屏。
    *
    */
-  get fullscreen(): boolean {
-    return window_t_get_prop_fullscreen(this.nativeObj);
-  }
+ get fullscreen() : boolean {
+   return window_t_get_prop_fullscreen(this.nativeObj);
+ }
 
-  set fullscreen(v: boolean) {
-    this.setFullscreen(v);
-  }
+ set fullscreen(v : boolean) {
+   this.setFullscreen(v);
+ }
 
 };
 /**
@@ -20334,11 +20361,11 @@ class TWindow extends TWindowBase {
  *[kb_default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/kb_default.xml)
  *
  */
-class TKeyboard extends TWindowBase {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TKeyboard extends TWindowBase { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -20352,9 +20379,9 @@ class TKeyboard extends TWindowBase {
    *
    * @returns 对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TKeyboard(keyboard_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -20364,9 +20391,9 @@ class TKeyboard extends TWindowBase {
    *
    * @returns keyboard对象。
    */
-  static cast(widget: TWidget): TKeyboard {
+ static cast(widget : TWidget) : TKeyboard  {
     return new TKeyboard(keyboard_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 };
 /**
@@ -20440,11 +20467,11 @@ class TKeyboard extends TWindowBase {
  *(https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L324)
  *
  */
-class TDialog extends TWindowBase {
-  public nativeObj: any;
-  constructor(nativeObj: any) {
-    super(nativeObj);
-  }
+class TDialog extends TWindowBase { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
 
 
   /**
@@ -20458,9 +20485,9 @@ class TDialog extends TWindowBase {
    *
    * @returns dialog对象。
    */
-  static create(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TDialog(dialog_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -20474,9 +20501,9 @@ class TDialog extends TWindowBase {
    *
    * @returns dialog对象。
    */
-  static createSimple(parent: TWidget, x: number, y: number, w: number, h: number): TWidget {
+ static createSimple(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
     return new TDialog(dialog_create_simple(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
-  }
+ }
 
 
   /**
@@ -20486,9 +20513,9 @@ class TDialog extends TWindowBase {
    *
    * @returns dialog对象。
    */
-  static cast(widget: TWidget): TDialog {
+ static cast(widget : TWidget) : TDialog  {
     return new TDialog(dialog_cast(widget != null ? (widget.nativeObj || widget) : null));
-  }
+ }
 
 
   /**
@@ -20497,9 +20524,9 @@ class TDialog extends TWindowBase {
    *
    * @returns title对象。
    */
-  getTitle(): TWidget {
+ getTitle() : TWidget  {
     return new TWidget(dialog_get_title(this != null ? (this.nativeObj || this) : null));
-  }
+ }
 
 
   /**
@@ -20508,9 +20535,9 @@ class TDialog extends TWindowBase {
    *
    * @returns client对象。
    */
-  getClient(): TWidget {
+ getClient() : TWidget  {
     return new TWidget(dialog_get_client(this != null ? (this.nativeObj || this) : null));
-  }
+ }
 
 
   /**
@@ -20522,9 +20549,9 @@ class TDialog extends TWindowBase {
    *
    * @returns 对象。
    */
-  static open(name: string): TWidget {
+ static open(name : string) : TWidget  {
     return new TDialog(dialog_open(name));
-  }
+ }
 
 
   /**
@@ -20534,9 +20561,9 @@ class TDialog extends TWindowBase {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  setTitle(title: string): TRet {
+ setTitle(title : string) : TRet  {
     return dialog_set_title(this != null ? (this.nativeObj || this) : null, title);
-  }
+ }
 
 
   /**
@@ -20547,9 +20574,9 @@ class TDialog extends TWindowBase {
    *
    * @returns 返回退出吗。
    */
-  modal(): TDialogQuitCode {
+ modal() : TDialogQuitCode  {
     return dialog_modal(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -20561,9 +20588,9 @@ class TDialog extends TWindowBase {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  quit(code: number): TRet {
+ quit(code : number) : TRet  {
     return dialog_quit(this != null ? (this.nativeObj || this) : null, code);
-  }
+ }
 
 
   /**
@@ -20572,9 +20599,9 @@ class TDialog extends TWindowBase {
    *
    * @returns 返回TRUE表示已经退出，否则表示没有。
    */
-  isQuited(): boolean {
+ isQuited() : boolean  {
     return dialog_is_quited(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -20583,9 +20610,9 @@ class TDialog extends TWindowBase {
    *
    * @returns 返回TRUE表示是模态对话框，否则表示不是。
    */
-  isModal(): boolean {
+ isModal() : boolean  {
     return dialog_is_modal(this != null ? (this.nativeObj || this) : null);
-  }
+ }
 
 
   /**
@@ -20598,9 +20625,9 @@ class TDialog extends TWindowBase {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  static toast(text: string, duration: number): TRet {
+ static toast(text : string, duration : number) : TRet  {
     return dialog_toast(text, duration);
-  }
+ }
 
 
   /**
@@ -20613,9 +20640,9 @@ class TDialog extends TWindowBase {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  static info(title: string, text: string): TRet {
+ static info(title : string, text : string) : TRet  {
     return dialog_info(title, text);
-  }
+ }
 
 
   /**
@@ -20628,9 +20655,9 @@ class TDialog extends TWindowBase {
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
-  static warn(title: string, text: string): TRet {
+ static warn(title : string, text : string) : TRet  {
     return dialog_warn(title, text);
-  }
+ }
 
 
   /**
@@ -20643,9 +20670,9 @@ class TDialog extends TWindowBase {
    *
    * @returns 返回RET_OK表示确认，否则表示取消。
    */
-  static confirm(title: string, text: string): TRet {
+ static confirm(title : string, text : string) : TRet  {
     return dialog_confirm(title, text);
-  }
+ }
 
 
   /**
@@ -20654,8 +20681,8 @@ class TDialog extends TWindowBase {
    *> 请参考 [对话框高亮策略](https://github.com/zlgopen/awtk/blob/master/docs/dialog_highlight.md)
    *
    */
-  get highlight(): string {
-    return dialog_t_get_prop_highlight(this.nativeObj);
-  }
+ get highlight() : string {
+   return dialog_t_get_prop_highlight(this.nativeObj);
+ }
 
 };

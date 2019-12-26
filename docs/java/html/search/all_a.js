@@ -83,7 +83,7 @@ var searchData=
   ['key_5fquestion',['KEY_QUESTION',['../enumawtk_1_1_t_key_code.html#a0219c0658d65a2b237ef43c4d89f0640',1,'awtk::TKeyCode']]],
   ['key_5fquote',['KEY_QUOTE',['../enumawtk_1_1_t_key_code.html#a815cb64fad7acb1022f777620450ee81',1,'awtk::TKeyCode']]],
   ['key_5fquotedbl',['KEY_QUOTEDBL',['../enumawtk_1_1_t_key_code.html#a5f7e3e54e585c64946662f057cfc93b4',1,'awtk::TKeyCode']]],
-  ['key_5fr',['KEY_R',['../enumawtk_1_1_t_key_code.html#a7622d3fb8f8645fb790fe5202b2d9266',1,'awtk.TKeyCode.KEY_R()'],['../enumawtk_1_1_t_key_code.html#a1d22ec0114058bd16795e61cdf147346',1,'awtk.TKeyCode.KEY_r()']]],
+  ['key_5fr',['KEY_r',['../enumawtk_1_1_t_key_code.html#a1d22ec0114058bd16795e61cdf147346',1,'awtk.TKeyCode.KEY_r()'],['../enumawtk_1_1_t_key_code.html#a7622d3fb8f8645fb790fe5202b2d9266',1,'awtk.TKeyCode.KEY_R()']]],
   ['key_5fralt',['KEY_RALT',['../enumawtk_1_1_t_key_code.html#a3882b6e5da149784281f1d29c503f0a9',1,'awtk::TKeyCode']]],
   ['key_5frctrl',['KEY_RCTRL',['../enumawtk_1_1_t_key_code.html#a3c6b29536aeb698294e888efc516b1db',1,'awtk::TKeyCode']]],
   ['key_5frepeat',['KEY_REPEAT',['../enumawtk_1_1_t_event_type.html#a1cfbce20931d7b1a5a7a7e133b0243f8',1,'awtk::TEventType']]],

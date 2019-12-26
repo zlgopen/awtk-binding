@@ -105,6 +105,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a481191e63898c7baef8552bc662e49dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a093edb0bc723b63f6cec458bcbd7aa5c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a093edb0bc723b63f6cec458bcbd7aa5c">ClosePath</a> ()</td></tr>
 <tr class="separator:a093edb0bc723b63f6cec458bcbd7aa5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af61cd3dd4d904843c1d0c9e979c1b47c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#af61cd3dd4d904843c1d0c9e979c1b47c">PathWinding</a> (bool dir)</td></tr>
+<tr class="separator:af61cd3dd4d904843c1d0c9e979c1b47c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4692739271712eaec24aeabf3d43c566"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a4692739271712eaec24aeabf3d43c566">Rotate</a> (float_t rad)</td></tr>
 <tr class="separator:a4692739271712eaec24aeabf3d43c566"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8803bf0876568ea4abe87fd7cc68944f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a8803bf0876568ea4abe87fd7cc68944f">Scale</a> (float_t x, float_t y)</td></tr>
@@ -1226,6 +1228,33 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
   <table class="params">
     <tr><td class="paramname">stroke</td><td>TRUE表示画线FALSE表示填充。 </td></tr>
     <tr><td class="paramname">img</td><td>图片。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="af61cd3dd4d904843c1d0c9e979c1b47c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af61cd3dd4d904843c1d0c9e979c1b47c">&#9670;&nbsp;</a></span>PathWinding()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TVgcanvas::PathWinding </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置路径填充实心与否。</p>
+<p>&gt;CCW(1)为实心，CW(2)为镂空，设置其他则默认根据非零环绕规则判断(nonzero)。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir</td><td>填充方法。</td></tr>
   </table>
   </dd>
 </dl>

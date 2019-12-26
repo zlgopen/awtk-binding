@@ -24,7 +24,7 @@
 
 • **DATA**: =  ASSET_TYPE_DATA()
 
-*Defined in [awtk.ts:10594](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10594)*
+*Defined in [awtk.ts:10621](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10621)*
 
 其它数据资源。
 
@@ -34,7 +34,7 @@ ___
 
 • **FONT**: =  ASSET_TYPE_FONT()
 
-*Defined in [awtk.ts:10552](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10552)*
+*Defined in [awtk.ts:10579](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10579)*
 
 字体资源。
 
@@ -44,7 +44,7 @@ ___
 
 • **IMAGE**: =  ASSET_TYPE_IMAGE()
 
-*Defined in [awtk.ts:10558](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10558)*
+*Defined in [awtk.ts:10585](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10585)*
 
 图片资源。
 
@@ -54,7 +54,7 @@ ___
 
 • **NONE**: =  ASSET_TYPE_NONE()
 
-*Defined in [awtk.ts:10546](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10546)*
+*Defined in [awtk.ts:10573](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10573)*
 
 无效资源。
 
@@ -64,7 +64,7 @@ ___
 
 • **SCRIPT**: =  ASSET_TYPE_SCRIPT()
 
-*Defined in [awtk.ts:10588](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10588)*
+*Defined in [awtk.ts:10615](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10615)*
 
 JS等脚本资源。
 
@@ -74,7 +74,7 @@ ___
 
 • **STRINGS**: =  ASSET_TYPE_STRINGS()
 
-*Defined in [awtk.ts:10582](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10582)*
+*Defined in [awtk.ts:10609](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10609)*
 
 字符串数据资源。
 
@@ -84,7 +84,7 @@ ___
 
 • **STYLE**: =  ASSET_TYPE_STYLE()
 
-*Defined in [awtk.ts:10564](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10564)*
+*Defined in [awtk.ts:10591](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10591)*
 
 主题资源。
 
@@ -94,7 +94,7 @@ ___
 
 • **UI**: =  ASSET_TYPE_UI()
 
-*Defined in [awtk.ts:10570](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10570)*
+*Defined in [awtk.ts:10597](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10597)*
 
 UI数据资源。
 
@@ -104,6 +104,6 @@ ___
 
 • **XML**: =  ASSET_TYPE_XML()
 
-*Defined in [awtk.ts:10576](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L10576)*
+*Defined in [awtk.ts:10603](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L10603)*
 
 XML数据资源。

@@ -30,7 +30,7 @@
 
 \+ **new TTheme**(`nativeObj`: any): *[TTheme](_awtk_.ttheme.md)*
 
-*Defined in [awtk.ts:5098](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L5098)*
+*Defined in [awtk.ts:5100](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L5100)*
 
 **Parameters:**
 
@@ -46,7 +46,7 @@ Name | Type |
 
 • **nativeObj**: *any*
 
-*Defined in [awtk.ts:5098](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L5098)*
+*Defined in [awtk.ts:5100](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L5100)*
 
 ## Methods
 
@@ -54,7 +54,7 @@ Name | Type |
 
 ▸ **instance**(): *[TTheme](_awtk_.ttheme.md)*
 
-*Defined in [awtk.ts:5110](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L5110)*
+*Defined in [awtk.ts:5112](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L5112)*
 
 获取缺省的主题对象。
 

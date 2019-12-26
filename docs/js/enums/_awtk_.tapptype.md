@@ -18,7 +18,7 @@
 
 • **DESKTOP**: =  APP_DESKTOP()
 
-*Defined in [awtk.ts:5264](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L5264)*
+*Defined in [awtk.ts:5266](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L5266)*
 
 桌面应用程序。
 
@@ -28,7 +28,7 @@ ___
 
 • **MOBILE**: =  APP_MOBILE()
 
-*Defined in [awtk.ts:5252](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L5252)*
+*Defined in [awtk.ts:5254](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L5254)*
 
 嵌入式或移动APP
 
@@ -38,6 +38,6 @@ ___
 
 • **SIMULATOR**: =  APP_SIMULATOR()
 
-*Defined in [awtk.ts:5258](https://github.com/zlgopen/awtk-binding/blob/d723364/tools/code_gen/js/output/awtk.ts#L5258)*
+*Defined in [awtk.ts:5260](https://github.com/zlgopen/awtk-binding/blob/78b9c61/tools/code_gen/js/output/awtk.ts#L5260)*
 
 模拟器。
