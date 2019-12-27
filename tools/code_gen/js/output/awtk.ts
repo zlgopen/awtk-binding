@@ -1637,7 +1637,7 @@ declare function dialog_t_get_prop_highlight(nativeObj : any) : string;
  * 事件基类。
  *
  */
-class TEvent { 
+export class TEvent { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -1716,7 +1716,7 @@ class TEvent {
  * 矩形。包括一个x坐标、y坐标、宽度和高度。
  *
  */
-class TRect { 
+export class TRect { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -1824,7 +1824,7 @@ class TRect {
  * 点(浮点数)。包括一个x坐标和一个y坐标。
  *
  */
-class TPointf { 
+export class TPointf { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -1835,7 +1835,7 @@ class TPointf {
  * 点。包括一个x坐标和一个y坐标。
  *
  */
-class TPoint { 
+export class TPoint { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -1846,7 +1846,7 @@ class TPoint {
  * 事件分发器, 用于实现观察者模式。
  *
  */
-class TEmitter { 
+export class TEmitter { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -1981,7 +1981,7 @@ class TEmitter {
  * 位图。
  *
  */
-class TBitmap { 
+export class TBitmap { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -2099,7 +2099,7 @@ class TBitmap {
  *> 在脚本语言中，需要动态创建对象。
  *
  */
-class TValue { 
+export class TValue { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -2493,7 +2493,7 @@ class TValue {
  * 对象接口。
  *
  */
-class TObject extends TEmitter { 
+export class TObject extends TEmitter { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -2945,7 +2945,7 @@ class TObject extends TEmitter {
  * TK全局对象。
  *
  */
-class TGlobal { 
+export class TGlobal { 
 
   /**
    * 初始化TK。
@@ -3538,7 +3538,7 @@ enum TEventType {
  *(如果使用nanovg，字体由nanovg内部管理)
  *
  */
-class TFontManager { 
+export class TFontManager { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -3606,7 +3606,7 @@ enum TGlyphFormat {
  *> 在非GUI线程请用idle\_queue。
  *
  */
-class TIdle { 
+export class TIdle { 
 
   /**
    * 增加一个idle。
@@ -3637,7 +3637,7 @@ class TIdle {
  * 图片管理器。负责加载，解码和缓存图片。
  *
  */
-class TImageManager { 
+export class TImageManager { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -3893,7 +3893,7 @@ enum TValueType {
  *> 输入类型请参考：[input\_type](input_type_t.md)
  *
  */
-class TInputMethod { 
+export class TInputMethod { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -4733,7 +4733,7 @@ enum TKeyCode {
  * 本地化信息。提供字符串翻译数据管理，当前语言改变的事件通知等等。
  *
  */
-class TLocaleInfo { 
+export class TLocaleInfo { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -5009,7 +5009,7 @@ enum TStyleId {
  *属性名称的请参考[style\_id](style_id_t.md)
  *
  */
-class TStyle { 
+export class TStyle { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -5096,7 +5096,7 @@ class TStyle {
  *负责管理缺省的主题数据，方便实现style\_const。
  *
  */
-class TTheme { 
+export class TTheme { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -5124,7 +5124,7 @@ class TTheme {
  *> 在非GUI线程请用timer\_queue。
  *
  */
-class TTimer { 
+export class TTimer { 
 
   /**
    * 增加一个timer。
@@ -5408,7 +5408,7 @@ enum TBitmapFlag {
  *>请参考：https://www.w3schools.com/tags/ref_canvas.asp
  *
  */
-class TVgcanvas { 
+export class TVgcanvas { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -7448,7 +7448,7 @@ enum TWidgetState {
  *```
  *
  */
-class TWidget { 
+export class TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -8741,7 +8741,7 @@ enum TRet {
  * 定时器管理器。
  *
  */
-class TTimerManager { 
+export class TTimerManager { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -8754,7 +8754,7 @@ class TTimerManager {
  *它本身并没有任何意义，一般用来计算时间间隔，如实现定时器和动画等等。
  *
  */
-class TTimeNow { 
+export class TTimeNow { 
 
   /**
    * 获取当前时间(秒)。
@@ -8897,7 +8897,7 @@ enum TImageDrawType {
  * 提供基本的绘图功能和状态管理。
  *
  */
-class TCanvas { 
+export class TCanvas { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -9288,7 +9288,7 @@ class TCanvas {
  * 命名的值。
  *
  */
-class TNamedValue { 
+export class TNamedValue { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -10001,7 +10001,7 @@ enum TMIME_TYPE {
  * idle_manager_t管理器。
  *
  */
-class TIdleManager { 
+export class TIdleManager { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -10070,7 +10070,7 @@ enum TClipBoardDataType {
  * 剪切板接口。
  *
  */
-class TClipBoard { 
+export class TClipBoard { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -10258,7 +10258,7 @@ enum TEasingType {
  *> 在嵌入式平台中，在系统初始时，需要调用date\_time\_global\_init设置实际获取/设置系统时间的函数。
  *
  */
-class TDateTime { 
+export class TDateTime { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -10365,7 +10365,7 @@ class TDateTime {
  * 颜色。
  *
  */
-class TColor { 
+export class TColor { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -10498,7 +10498,7 @@ class TColor {
  * 单个资源的描述信息。
  *
  */
-class TAssetInfo { 
+export class TAssetInfo { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -10654,7 +10654,7 @@ enum TAssetType {
  *```
  *
  */
-class TAssetsManager { 
+export class TAssetsManager { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
@@ -10732,7 +10732,7 @@ class TAssetsManager {
  ** [vgcanvas接口描述](vgcanvas_t.md)
  *
  */
-class TCanvasWidget extends TWidget { 
+export class TCanvasWidget extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -10791,7 +10791,7 @@ class TCanvasWidget extends TWidget {
  *time\_clock一般不需要设置style。
  *
  */
-class TTimeClock extends TWidget { 
+export class TTimeClock extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -11156,7 +11156,7 @@ class TTimeClock extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L443)
  *
  */
-class TTextSelector extends TWidget { 
+export class TTextSelector extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -11367,7 +11367,7 @@ class TTextSelector extends TWidget {
  * 对象属性变化事件。
  *
  */
-class TPropChangeEvent extends TEvent { 
+export class TPropChangeEvent extends TEvent { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -11408,7 +11408,7 @@ class TPropChangeEvent extends TEvent {
  * 进度变化事件。
  *
  */
-class TProgressEvent extends TEvent { 
+export class TProgressEvent extends TEvent { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -11468,7 +11468,7 @@ class TProgressEvent extends TEvent {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L452)
  *
  */
-class TSwitch extends TWidget { 
+export class TSwitch extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -11581,7 +11581,7 @@ class TSwitch extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L458)
  *
  */
-class TSlideView extends TWidget { 
+export class TSlideView extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -11774,7 +11774,7 @@ class TSlideView extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L350)
  *
  */
-class TSlideIndicator extends TWidget { 
+export class TSlideIndicator extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -12118,7 +12118,7 @@ class TSlideIndicator extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L493)
  *
  */
-class TSlideMenu extends TWidget { 
+export class TSlideMenu extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -12260,7 +12260,7 @@ class TSlideMenu extends TWidget {
  *可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。
  *
  */
-class TScrollView extends TWidget { 
+export class TScrollView extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -12521,7 +12521,7 @@ class TScrollView extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L350)
  *
  */
-class TScrollBar extends TWidget { 
+export class TScrollBar extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -12761,7 +12761,7 @@ class TScrollBar extends TWidget {
  *可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。
  *
  */
-class TListView extends TWidget { 
+export class TListView extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -12902,7 +12902,7 @@ class TListView extends TWidget {
  *可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。
  *
  */
-class TListViewH extends TWidget { 
+export class TListViewH extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -13032,7 +13032,7 @@ class TListViewH extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L372)
  *
  */
-class TListItem extends TWidget { 
+export class TListItem extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -13095,7 +13095,7 @@ class TListItem extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
  *
  */
-class THscrollLabel extends TWidget { 
+export class THscrollLabel extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -13401,7 +13401,7 @@ class THscrollLabel extends TWidget {
  ** underline 下划线(暂不支持)
  *
  */
-class TRichText extends TWidget { 
+export class TRichText extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -13500,7 +13500,7 @@ class TRichText extends TWidget {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L467)
  *
  */
-class TProgressCircle extends TWidget { 
+export class TProgressCircle extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -13733,7 +13733,7 @@ class TProgressCircle extends TWidget {
  *time\_clock一般不需要设置style。
  *
  */
-class TMledit extends TWidget { 
+export class TMledit extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -13946,7 +13946,7 @@ class TMledit extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L556)
  *
  */
-class TLineNumber extends TWidget { 
+export class TLineNumber extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -14060,7 +14060,7 @@ class TLineNumber extends TWidget {
  *可用通过style来设置控件的显示风格，如背景颜色和边框等等，不过一般情况并不需要。
  *
  */
-class TImageValue extends TWidget { 
+export class TImageValue extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -14197,7 +14197,7 @@ class TImageValue extends TWidget {
  *可用通过style来设置控件的显示风格，如背景颜色和边框等等，不过一般情况并不需要。
  *
  */
-class TImageAnimation extends TWidget { 
+export class TImageAnimation extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -14552,7 +14552,7 @@ class TImageAnimation extends TWidget {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
  *
  */
-class TGuage extends TWidget { 
+export class TGuage extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -14664,7 +14664,7 @@ class TGuage extends TWidget {
  *> 创建之后，需要用guage\_pointer\_set\_image设置仪表指针图片。
  *
  */
-class TGuagePointer extends TWidget { 
+export class TGuagePointer extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -14812,7 +14812,7 @@ class TGuagePointer extends TWidget {
  *> draggable本身不可见，故无需style。
  *
  */
-class TDraggable extends TWidget { 
+export class TDraggable extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -15055,7 +15055,7 @@ class TDraggable extends TWidget {
  ** new 新的值。可以是spin_box、edit和color_tile。
  *
  */
-class TColorPicker extends TWidget { 
+export class TColorPicker extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -15118,7 +15118,7 @@ class TColorPicker extends TWidget {
  *COLOR_PICKER_CHILD_H: 水平为同色，垂直为Hue(递减)。
  *
  */
-class TColorComponent extends TWidget { 
+export class TColorComponent extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -15141,7 +15141,7 @@ class TColorComponent extends TWidget {
  * 窗口管理器。
  *
  */
-class TWindowManager extends TWidget { 
+export class TWindowManager extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -15323,7 +15323,7 @@ class TWindowManager extends TWidget {
  *> 本类是一个抽象类，不能进行实例化。请在应用程序中使用具体的类，如window\_t。
  *
  */
-class TWindowBase extends TWidget { 
+export class TWindowBase extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -15377,7 +15377,7 @@ class TWindowBase extends TWidget {
  *style\_mutable也对style\_const进行了包装，当用户没修改某个值时，便从style\_const中获取。
  *
  */
-class TStyleMutable extends TStyle { 
+export class TStyleMutable extends TStyle { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -15468,7 +15468,7 @@ class TStyleMutable extends TStyle {
  *```
  *
  */
-class TImageBase extends TWidget { 
+export class TImageBase extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -15680,7 +15680,7 @@ class TImageBase extends TWidget {
  * 窗口事件，由窗口管理器触发。
  *
  */
-class TWindowEvent extends TEvent { 
+export class TWindowEvent extends TEvent { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -15712,7 +15712,7 @@ class TWindowEvent extends TEvent {
  * 绘制事件。
  *
  */
-class TPaintEvent extends TEvent { 
+export class TPaintEvent extends TEvent { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -15744,7 +15744,7 @@ class TPaintEvent extends TEvent {
  * 按键事件。
  *
  */
-class TKeyEvent extends TEvent { 
+export class TKeyEvent extends TEvent { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -15886,7 +15886,7 @@ class TKeyEvent extends TEvent {
  * 指针事件。
  *
  */
-class TPointerEvent extends TEvent { 
+export class TPointerEvent extends TEvent { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -15990,7 +15990,7 @@ class TPointerEvent extends TEvent {
  * 滚轮事件。
  *
  */
-class TOrientationEvent extends TEvent { 
+export class TOrientationEvent extends TEvent { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -16022,7 +16022,7 @@ class TOrientationEvent extends TEvent {
  * 滚轮事件。
  *
  */
-class TWheelEvent extends TEvent { 
+export class TWheelEvent extends TEvent { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -16108,7 +16108,7 @@ class TWheelEvent extends TEvent {
  *```
  *
  */
-class TAppBar extends TWidget { 
+export class TAppBar extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -16172,7 +16172,7 @@ class TAppBar extends TWidget {
  *```
  *
  */
-class TButtonGroup extends TWidget { 
+export class TButtonGroup extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -16249,7 +16249,7 @@ class TButtonGroup extends TWidget {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L31)
  *
  */
-class TButton extends TWidget { 
+export class TButton extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -16386,7 +16386,7 @@ class TButton extends TWidget {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L227)
  *
  */
-class TCheckButton extends TWidget { 
+export class TCheckButton extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -16490,7 +16490,7 @@ class TCheckButton extends TWidget {
  *```
  *
  */
-class TClipView extends TWidget { 
+export class TClipView extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -16548,7 +16548,7 @@ class TClipView extends TWidget {
  *> 创建之后，用color\_tile\_set\_bg\_color设置背景颜色。
  *
  */
-class TColorTile extends TWidget { 
+export class TColorTile extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -16646,7 +16646,7 @@ class TColorTile extends TWidget {
  *```
  *
  */
-class TColumn extends TWidget { 
+export class TColumn extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -16687,7 +16687,7 @@ class TColumn extends TWidget {
  *本类仅供combo\_box控件内部使用。
  *
  */
-class TComboBoxItem extends TWidget { 
+export class TComboBoxItem extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -16878,7 +16878,7 @@ class TComboBoxItem extends TWidget {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L422)
  *
  */
-class TComboBox extends TWidget { 
+export class TComboBox extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -17145,7 +17145,7 @@ class TComboBox extends TWidget {
  *在c代码中，用dialog\_create\_simple创建对话框时，自动创建dialog客户区对象。
  *
  */
-class TDialogClient extends TWidget { 
+export class TDialogClient extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -17205,7 +17205,7 @@ class TDialogClient extends TWidget {
  *在c代码中，用dialog\_create\_simple创建对话框时，自动创建dialog标题对象。
  *
  */
-class TDialogTitle extends TWidget { 
+export class TDialogTitle extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -17272,7 +17272,7 @@ class TDialogTitle extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L138)
  *
  */
-class TDigitClock extends TWidget { 
+export class TDigitClock extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -17360,7 +17360,7 @@ class TDigitClock extends TWidget {
  *目前主要用于scrollbar里的滑块。
  *
  */
-class TDragger extends TWidget { 
+export class TDragger extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -17499,7 +17499,7 @@ class TDragger extends TWidget {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L104)
  *
  */
-class TEdit extends TWidget { 
+export class TEdit extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -17886,7 +17886,7 @@ class TEdit extends TWidget {
  *```
  *
  */
-class TGridItem extends TWidget { 
+export class TGridItem extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -17950,7 +17950,7 @@ class TGridItem extends TWidget {
  *```
  *
  */
-class TGrid extends TWidget { 
+export class TGrid extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -18015,7 +18015,7 @@ class TGrid extends TWidget {
  *```
  *
  */
-class TGroupBox extends TWidget { 
+export class TGroupBox extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -18089,7 +18089,7 @@ class TGroupBox extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L144)
  *
  */
-class TLabel extends TWidget { 
+export class TLabel extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -18203,7 +18203,7 @@ class TLabel extends TWidget {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L0)
  *
  */
-class TOverlay extends TWidget { 
+export class TOverlay extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -18264,7 +18264,7 @@ class TOverlay extends TWidget {
  *[tab control](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
  *
  */
-class TPages extends TWidget { 
+export class TPages extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -18372,7 +18372,7 @@ class TPages extends TWidget {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L183)
  *
  */
-class TProgressBar extends TWidget { 
+export class TProgressBar extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -18549,7 +18549,7 @@ class TProgressBar extends TWidget {
  *```
  *
  */
-class TRow extends TWidget { 
+export class TRow extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -18621,7 +18621,7 @@ class TRow extends TWidget {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L179)
  *
  */
-class TSlider extends TWidget { 
+export class TSlider extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -18865,7 +18865,7 @@ class TSlider extends TWidget {
  *```
  *
  */
-class TTabButtonGroup extends TWidget { 
+export class TTabButtonGroup extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -19013,7 +19013,7 @@ class TTabButtonGroup extends TWidget {
  *```
  *
  */
-class TTabButton extends TWidget { 
+export class TTabButton extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -19177,7 +19177,7 @@ class TTabButton extends TWidget {
  *[tab control](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
  *
  */
-class TTabControl extends TWidget { 
+export class TTabControl extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -19237,7 +19237,7 @@ class TTabControl extends TWidget {
  *```
  *
  */
-class TView extends TWidget { 
+export class TView extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -19276,7 +19276,7 @@ class TView extends TWidget {
  * 单个idle的信息。
  *
  */
-class TIdleInfo extends TObject { 
+export class TIdleInfo extends TObject { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -19347,7 +19347,7 @@ class TIdleInfo extends TObject {
  *一般不需通过style来设置控件的显示风格，如果在特殊情况下需要，可以参考其它控件。
  *
  */
-class TMutableImage extends TImageBase { 
+export class TMutableImage extends TImageBase { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -19363,7 +19363,7 @@ class TMutableImage extends TImageBase {
  ** index 用于访问属性，-1可以用来追加新元素。
  *
  */
-class TObjectArray extends TObject { 
+export class TObjectArray extends TObject { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -19454,7 +19454,7 @@ class TObjectArray extends TObject {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
  *
  */
-class TGifImage extends TImageBase { 
+export class TGifImage extends TImageBase { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -19495,7 +19495,7 @@ class TGifImage extends TImageBase {
  *内部使用有序数组保存所有属性，可以快速查找指定名称的属性。
  *
  */
-class TObjectDefault extends TObject { 
+export class TObjectDefault extends TObject { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -19600,7 +19600,7 @@ class TObjectDefault extends TObject {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L313)
  *
  */
-class TImage extends TImageBase { 
+export class TImage extends TImageBase { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -19664,7 +19664,7 @@ class TImage extends TImageBase {
  * 可滚动的combo_box控件。
  *
  */
-class TComboBoxEx extends TComboBox { 
+export class TComboBoxEx extends TComboBox { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -19709,7 +19709,7 @@ class TComboBoxEx extends TComboBox {
  *通过calibration\_win\_set\_on\_done注册回调函数，用于保存校准数据。
  *
  */
-class TCalibrationWin extends TWindowBase { 
+export class TCalibrationWin extends TWindowBase { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -19773,7 +19773,7 @@ class TCalibrationWin extends TWindowBase {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L324)
  *
  */
-class TPopup extends TWindowBase { 
+export class TPopup extends TWindowBase { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -19894,7 +19894,7 @@ class TPopup extends TWindowBase {
  *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
  *
  */
-class TSvgImage extends TImageBase { 
+export class TSvgImage extends TImageBase { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -19947,7 +19947,7 @@ class TSvgImage extends TImageBase {
  * 单个定时器的信息。
  *
  */
-class TTimerInfo extends TObject { 
+export class TTimerInfo extends TObject { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -20042,7 +20042,7 @@ class TTimerInfo extends TObject {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L128)
  *
  */
-class TSpinBox extends TEdit { 
+export class TSpinBox extends TEdit { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -20126,7 +20126,7 @@ class TSpinBox extends TEdit {
  *[system_bar.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/system_bar.xml)
  *
  */
-class TSystemBar extends TWindowBase { 
+export class TSystemBar extends TWindowBase { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -20199,7 +20199,7 @@ class TSystemBar extends TWindowBase {
  *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L0)
  *
  */
-class TWindow extends TWindowBase { 
+export class TWindow extends TWindowBase { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -20361,7 +20361,7 @@ class TWindow extends TWindowBase {
  *[kb_default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/kb_default.xml)
  *
  */
-class TKeyboard extends TWindowBase { 
+export class TKeyboard extends TWindowBase { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -20467,7 +20467,7 @@ class TKeyboard extends TWindowBase {
  *(https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L324)
  *
  */
-class TDialog extends TWindowBase { 
+export class TDialog extends TWindowBase { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);

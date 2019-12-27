@@ -286,6 +286,10 @@ class BindingGen extends CodeGen {
     return result;
   }
 
+  genPost(ojson) {
+    return '';
+  }
+
   genJsonAll(ojson) {
     let json = this.filterScriptableJson(ojson);
     let result = this.genIncludes(json);
@@ -297,6 +301,7 @@ class BindingGen extends CodeGen {
     });
 
     result += this.genInit(json);
+    result += this.genPost(json);
 
     this.result = result;
   }

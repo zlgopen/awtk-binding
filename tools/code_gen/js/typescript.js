@@ -6,6 +6,10 @@ class TypescriptGenerator extends TargetGen {
     super()
     this.returnDocKey = 'returns';
   }
+  
+  genClassDecl(clsName) {
+    return `export class ${clsName}`;
+  }
 
   genGetNativeObj(type, name, isCast) {
     return `${name} != ${this.nullPtr} ? (${name}.nativeObj || ${name}) : ${this.nullNativePtr}`;

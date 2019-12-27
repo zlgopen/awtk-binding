@@ -6,17 +6,26 @@ class JsBindingGenerator extends BindingGen {
     super();
   }
 
+  genDeclJRet() {
+    return '  jsvalue_t jret = JS_NULL;\n';
+  }
+  
+  genReturnJRet() {
+    return '  return jret;\n';
+  }
+
   genFuncImpl(cls, m) {
     let result = '';
     const name = m.name;
     const nr = m.params.length;
 
-    result += '  jsvalue_t jret = JS_NULL;\n';
+    result += this.genDeclJRet();
     result += `  if(argc >= ${nr}) {\n`;
     result += this.genParamsDecl(m);
     result += this.genCallMethod(cls, m);
     result += '  }\n';
-    result += '  return jret;\n';
+    result += this.genReturnJRet();
+
     return result;
   }
 
@@ -25,10 +34,10 @@ class JsBindingGenerator extends BindingGen {
     const type = p.type;
     const name = p.name;
 
-    result += '  jsvalue_t jret = JS_NULL;\n';
+    result += this.genDeclJRet();
     result += this.genParamDecl(0, cls.name + '*', 'obj');
     result += this.genReturnData(null, type, `obj->${name}`);
-    result += '  return jret;\n';
+    result += this.genReturnJRet();
 
     return result;
   }
@@ -52,10 +61,12 @@ class JsBindingGenerator extends BindingGen {
     const type = p.type;
     const name = p.name;
 
+    result += this.genDeclJRet();
     result += this.genParamDecl(0, cls.name + '*', 'obj');
     result += this.genParamDecl(1, type, name);
     result += `  obj->${name} = ${name};\n`;
-    result += '  return jsvalue_create_int(ctx, RET_OK);\n'
+    result += this.genReturnData(null, type, `obj->${name}`);
+    result += this.genReturnJRet();
 
     return result;
   }
@@ -67,7 +78,7 @@ class JsBindingGenerator extends BindingGen {
       if (type.indexOf('*') >= 0) {
         result += 'NULL;\n';
       } else {
-        result += '0;\n';
+        result += `(${type})0;\n`;
       }
     } else {
       if (type.indexOf('char*') >= 0) {
@@ -125,8 +136,12 @@ class JsBindingGenerator extends BindingGen {
     return result;
   }
 
+  genInitDecl(name) {
+    return `ret_t ${name}_init(JSContext *ctx) {\n`;
+  }
+
   genClassInitDecl(cls) {
-    return `ret_t ${cls.name}_init(JSContext *ctx) {\n`;
+    return this.genInitDecl(cls.name);
   }
 
   getSetPropertyFuncName(cls, p) {
@@ -138,7 +153,7 @@ class JsBindingGenerator extends BindingGen {
   }
 
   genInit(json) {
-    let result = 'ret_t awtk_js_init(JSContext *ctx) {\n';
+    let result = this.genInitDecl('awtk_js'); 
 
     json.forEach(cls => {
       if (cls.type == 'class' || cls.type == 'enum') {
