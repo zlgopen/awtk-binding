@@ -3024,7 +3024,7 @@ export class TGlobal {
  *> 一般用作dialog_quit函数的参数。
  *
  */
-enum TDialogQuitCode {
+export enum TDialogQuitCode {
 
   /**
    * 对话框被强行关闭或不关心关闭原因。
@@ -3068,7 +3068,7 @@ enum TDialogQuitCode {
  * 类型常量定义。
  *
  */
-enum TEventType {
+export enum TEventType {
 
   /**
    * 指针按下事件名(pointer_event_t)。
@@ -3573,7 +3573,7 @@ export class TFontManager {
  * 字模格式常量定义。
  *
  */
-enum TGlyphFormat {
+export enum TGlyphFormat {
 
   /**
    * 每个像素占用1个字节(缺省)。
@@ -3673,7 +3673,7 @@ export class TImageManager {
  * 输入类型常量定义。
  *
  */
-enum TInputType {
+export enum TInputType {
 
   /**
    * 文本。
@@ -3747,7 +3747,7 @@ enum TInputType {
  * 类型常量定义。
  *
  */
-enum TValueType {
+export enum TValueType {
 
   /**
    * 无效类型。
@@ -3939,7 +3939,7 @@ export class TInputMethod {
  * key code。
  *
  */
-enum TKeyCode {
+export enum TKeyCode {
 
   /**
    * TK_KEY_RETURN
@@ -4792,7 +4792,7 @@ export class TLocaleInfo {
  * style常量定义。
  *
  */
-enum TStyleId {
+export enum TStyleId {
 
   /**
    * 背景颜色。
@@ -5181,7 +5181,7 @@ export class TTimer {
  * 垂直对齐的常量定义。
  *
  */
-enum TAlignV {
+export enum TAlignV {
 
   /**
    * 无效对齐方式。
@@ -5213,7 +5213,7 @@ enum TAlignV {
  * 水平对齐的常量定义。
  *
  */
-enum TAlignH {
+export enum TAlignH {
 
   /**
    * 无效对齐方式。
@@ -5245,7 +5245,7 @@ enum TAlignH {
  * 应用程序类型。
  *
  */
-enum TAppType {
+export enum TAppType {
 
   /**
    * 嵌入式或移动APP
@@ -5271,7 +5271,7 @@ enum TAppType {
  * 位图格式常量定义。
  *
  */
-enum TBitmapFormat {
+export enum TBitmapFormat {
 
   /**
    * 无效格式。
@@ -5345,7 +5345,7 @@ enum TBitmapFormat {
  * 位图标志常量定义。
  *
  */
-enum TBitmapFlag {
+export enum TBitmapFlag {
 
   /**
    * 无特殊标志。
@@ -6161,7 +6161,7 @@ export class TVgcanvas {
  * 控件的属性。
  *
  */
-enum TWidgetProp {
+export enum TWidgetProp {
 
   /**
    * 用于执行某些特殊的命令（比如控制动画的启停），主要是方便MVVM通过属性来控制动画。
@@ -6919,7 +6919,7 @@ enum TWidgetProp {
  * 控件的类型。
  *
  */
-enum TWidgetType {
+export enum TWidgetType {
 
   /**
    * 无特殊类型。
@@ -7257,7 +7257,7 @@ enum TWidgetType {
  * 窗口的生命周期常量定义。
  *
  */
-enum TWindowStage {
+export enum TWindowStage {
 
   /**
    * 初始状态。
@@ -7289,7 +7289,7 @@ enum TWindowStage {
  * 窗口的closable常量定义。
  *
  */
-enum TWindowClosable {
+export enum TWindowClosable {
 
   /**
    * 窗口可关闭。
@@ -7317,7 +7317,7 @@ enum TWindowClosable {
  *这里指定常用的状态值，扩展控件可以在自己的头文件中定义私有的状态。
  *
  */
-enum TWidgetState {
+export enum TWidgetState {
 
   /**
    * 无效状态。
@@ -8607,7 +8607,7 @@ export class TWidget {
  * 函数返回值常量定义。
  *
  */
-enum TRet {
+export enum TRet {
 
   /**
    * 成功。
@@ -8782,7 +8782,7 @@ export class TTimeNow {
  * 图片绘制方法常量定义。
  *
  */
-enum TImageDrawType {
+export enum TImageDrawType {
 
   /**
    * 缺省显示。将图片按原大小显示在目标矩形的左上角。
@@ -9381,7 +9381,7 @@ export class TNamedValue {
  * MIME_TYPE。
  *
  */
-enum TMIME_TYPE {
+export enum TMIME_TYPE {
 
   /**
    * "application/envoy"。
@@ -10012,7 +10012,7 @@ export class TIdleManager {
  * 指示器默认绘制的类型。
  *
  */
-enum TIndicatorDefaultPaint {
+export enum TIndicatorDefaultPaint {
 
   /**
    * 自动选择。
@@ -10050,7 +10050,7 @@ enum TIndicatorDefaultPaint {
  * 剪切板数据类型定义。
  *
  */
-enum TClipBoardDataType {
+export enum TClipBoardDataType {
 
   /**
    * 无数据。
@@ -10104,7 +10104,7 @@ export class TClipBoard {
  * 缓动作动画常量定义。
  *
  */
-enum TEasingType {
+export enum TEasingType {
 
   /**
    * EASING_LINEAR。
@@ -10564,7 +10564,7 @@ export class TAssetInfo {
  * 资源类型常量定义。
  *
  */
-enum TAssetType {
+export enum TAssetType {
 
   /**
    * 无效资源。

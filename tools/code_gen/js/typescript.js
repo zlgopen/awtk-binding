@@ -161,7 +161,7 @@ class TypescriptGenerator extends TargetGen {
   genEnum(cls) {
     const clsName = this.toClassName(cls.name);
     let result = this.genEnumDoc(cls);
-    result += `enum ${clsName} {\n`;
+    result += `export enum ${clsName} {\n`;
 
     if (cls.consts) {
       cls.consts.forEach(iter => {
