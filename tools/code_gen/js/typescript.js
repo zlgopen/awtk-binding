@@ -73,7 +73,7 @@ class TypescriptGenerator extends TargetGen {
   }
 
   genFuncDecl(cls, m, name) {
-    const returnType = this.isCast(m) ? cls.name : m.return.type;
+    const returnType = (this.isCast(m) || this.isConstructor(m)) ? cls.name : m.return.type;
 
     return `${name}${this.genParamsDecl(m)} : ${this.mapType(returnType)} `;
   }

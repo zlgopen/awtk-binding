@@ -10750,7 +10750,7 @@ export class TCanvasWidget extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TCanvasWidget  {
     return new TCanvasWidget(canvas_widget_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -10809,7 +10809,7 @@ export class TTimeClock extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TTimeClock  {
     return new TTimeClock(time_clock_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -11174,7 +11174,7 @@ export class TTextSelector extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TTextSelector  {
     return new TTextSelector(text_selector_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -11486,7 +11486,7 @@ export class TSwitch extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TSwitch  {
     return new TSwitch(switch_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -11599,7 +11599,7 @@ export class TSlideView extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TSlideView  {
     return new TSlideView(slide_view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -11792,7 +11792,7 @@ export class TSlideIndicator extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TSlideIndicator  {
     return new TSlideIndicator(slide_indicator_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -11808,7 +11808,7 @@ export class TSlideIndicator extends TWidget {
    *
    * @returns 对象。
    */
- static createLinear(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static createLinear(parent : TWidget, x : number, y : number, w : number, h : number) : TSlideIndicator  {
     return new TSlideIndicator(slide_indicator_create_linear(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -11824,7 +11824,7 @@ export class TSlideIndicator extends TWidget {
    *
    * @returns 对象。
    */
- static createArc(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static createArc(parent : TWidget, x : number, y : number, w : number, h : number) : TSlideIndicator  {
     return new TSlideIndicator(slide_indicator_create_arc(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -12136,7 +12136,7 @@ export class TSlideMenu extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TSlideMenu  {
     return new TSlideMenu(slide_menu_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -12278,7 +12278,7 @@ export class TScrollView extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TScrollView  {
     return new TScrollView(scroll_view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -12541,7 +12541,7 @@ export class TScrollBar extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TScrollBar  {
     return new TScrollBar(scroll_bar_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -12569,7 +12569,7 @@ export class TScrollBar extends TWidget {
    *
    * @returns 对象。
    */
- static createMobile(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static createMobile(parent : TWidget, x : number, y : number, w : number, h : number) : TScrollBar  {
     return new TScrollBar(scroll_bar_create_mobile(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -12585,7 +12585,7 @@ export class TScrollBar extends TWidget {
    *
    * @returns 对象。
    */
- static createDesktop(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static createDesktop(parent : TWidget, x : number, y : number, w : number, h : number) : TScrollBar  {
     return new TScrollBar(scroll_bar_create_desktop(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -12779,7 +12779,7 @@ export class TListView extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TListView  {
     return new TListView(list_view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -12920,7 +12920,7 @@ export class TListViewH extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TListViewH  {
     return new TListViewH(list_view_h_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -13050,7 +13050,7 @@ export class TListItem extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TListItem  {
     return new TListItem(list_item_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -13113,7 +13113,7 @@ export class THscrollLabel extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : THscrollLabel  {
     return new THscrollLabel(hscroll_label_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -13419,7 +13419,7 @@ export class TRichText extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TRichText  {
     return new TRichText(rich_text_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -13518,7 +13518,7 @@ export class TProgressCircle extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TProgressCircle  {
     return new TProgressCircle(progress_circle_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -13751,7 +13751,7 @@ export class TMledit extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TMledit  {
     return new TMledit(mledit_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -13964,7 +13964,7 @@ export class TLineNumber extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TLineNumber  {
     return new TLineNumber(line_number_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -14078,7 +14078,7 @@ export class TImageValue extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TImageValue  {
     return new TImageValue(image_value_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -14215,7 +14215,7 @@ export class TImageAnimation extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TImageAnimation  {
     return new TImageAnimation(image_animation_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -14570,7 +14570,7 @@ export class TGuage extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGuage  {
     return new TGuage(guage_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -14682,7 +14682,7 @@ export class TGuagePointer extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGuagePointer  {
     return new TGuagePointer(guage_pointer_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -14830,7 +14830,7 @@ export class TDraggable extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TDraggable  {
     return new TDraggable(draggable_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -15073,7 +15073,7 @@ export class TColorPicker extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TColorPicker  {
     return new TColorPicker(color_picker_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -15432,7 +15432,7 @@ export class TStyleMutable extends TStyle {
    *
    * @returns style对象。
    */
- static create(widget : TWidget, default_style : TStyle) : TStyle  {
+ static create(widget : TWidget, default_style : TStyle) : TStyleMutable  {
     return new TStyleMutable(style_mutable_create(widget != null ? (widget.nativeObj || widget) : null, default_style != null ? (default_style.nativeObj || default_style) : null));
  }
 
@@ -16126,7 +16126,7 @@ export class TAppBar extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TAppBar  {
     return new TAppBar(app_bar_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -16190,7 +16190,7 @@ export class TButtonGroup extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TButtonGroup  {
     return new TButtonGroup(button_group_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -16267,7 +16267,7 @@ export class TButton extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TButton  {
     return new TButton(button_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -16404,7 +16404,7 @@ export class TCheckButton extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TCheckButton  {
     return new TCheckButton(check_button_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -16420,7 +16420,7 @@ export class TCheckButton extends TWidget {
    *
    * @returns 对象。
    */
- static createRadio(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static createRadio(parent : TWidget, x : number, y : number, w : number, h : number) : TCheckButton  {
     return new TCheckButton(check_button_create_radio(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -16508,7 +16508,7 @@ export class TClipView extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TClipView  {
     return new TClipView(clip_view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -16566,7 +16566,7 @@ export class TColorTile extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TColorTile  {
     return new TColorTile(color_tile_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -16664,7 +16664,7 @@ export class TColumn extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TColumn  {
     return new TColumn(column_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -16705,7 +16705,7 @@ export class TComboBoxItem extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TComboBoxItem  {
     return new TComboBoxItem(combo_box_item_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -16896,7 +16896,7 @@ export class TComboBox extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TComboBox  {
     return new TComboBox(combo_box_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -17163,7 +17163,7 @@ export class TDialogClient extends TWidget {
    *
    * @returns dialog对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TDialogClient  {
     return new TDialogClient(dialog_client_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -17223,7 +17223,7 @@ export class TDialogTitle extends TWidget {
    *
    * @returns dialog对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TDialogTitle  {
     return new TDialogTitle(dialog_title_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -17290,7 +17290,7 @@ export class TDigitClock extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TDigitClock  {
     return new TDigitClock(digit_clock_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -17378,7 +17378,7 @@ export class TDragger extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TDragger  {
     return new TDragger(dragger_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -17517,7 +17517,7 @@ export class TEdit extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TEdit  {
     return new TEdit(edit_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -17904,7 +17904,7 @@ export class TGridItem extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGridItem  {
     return new TGridItem(grid_item_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -17968,7 +17968,7 @@ export class TGrid extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGrid  {
     return new TGrid(grid_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -18033,7 +18033,7 @@ export class TGroupBox extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGroupBox  {
     return new TGroupBox(group_box_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -18107,7 +18107,7 @@ export class TLabel extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TLabel  {
     return new TLabel(label_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -18221,7 +18221,7 @@ export class TOverlay extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TOverlay  {
     return new TOverlay(overlay_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -18282,7 +18282,7 @@ export class TPages extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TPages  {
     return new TPages(pages_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -18390,7 +18390,7 @@ export class TProgressBar extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TProgressBar  {
     return new TProgressBar(progress_bar_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -18567,7 +18567,7 @@ export class TRow extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TRow  {
     return new TRow(row_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -18639,7 +18639,7 @@ export class TSlider extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TSlider  {
     return new TSlider(slider_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -18883,7 +18883,7 @@ export class TTabButtonGroup extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TTabButtonGroup  {
     return new TTabButtonGroup(tab_button_group_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -19031,7 +19031,7 @@ export class TTabButton extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TTabButton  {
     return new TTabButton(tab_button_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -19195,7 +19195,7 @@ export class TTabControl extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TTabControl  {
     return new TTabControl(tab_control_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -19255,7 +19255,7 @@ export class TView extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TView  {
     return new TView(view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -19376,7 +19376,7 @@ export class TObjectArray extends TObject {
    *
    * @returns 返回object对象。
    */
- static create() : TObject  {
+ static create() : TObjectArray  {
     return new TObjectArray(object_array_create());
  }
 
@@ -19472,7 +19472,7 @@ export class TGifImage extends TImageBase {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGifImage  {
     return new TGifImage(gif_image_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -19508,7 +19508,7 @@ export class TObjectDefault extends TObject {
    *
    * @returns 返回object对象。
    */
- static create() : TObject  {
+ static create() : TObjectDefault  {
     return new TObjectDefault(object_default_create());
  }
 
@@ -19618,7 +19618,7 @@ export class TImage extends TImageBase {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TImage  {
     return new TImage(image_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -19682,7 +19682,7 @@ export class TComboBoxEx extends TComboBox {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TComboBoxEx  {
     return new TComboBoxEx(combo_box_ex_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -19791,7 +19791,7 @@ export class TPopup extends TWindowBase {
    *
    * @returns popup对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TPopup  {
     return new TPopup(popup_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -19912,7 +19912,7 @@ export class TSvgImage extends TImageBase {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TSvgImage  {
     return new TSvgImage(svg_image_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -20060,7 +20060,7 @@ export class TSpinBox extends TEdit {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TSpinBox  {
     return new TSpinBox(spin_box_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -20144,7 +20144,7 @@ export class TSystemBar extends TWindowBase {
    *
    * @returns system_bar对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TSystemBar  {
     return new TSystemBar(system_bar_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -20217,7 +20217,7 @@ export class TWindow extends TWindowBase {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWindow  {
     return new TWindow(window_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -20228,7 +20228,7 @@ export class TWindow extends TWindowBase {
    *
    * @returns 对象。
    */
- static createDefault() : TWidget  {
+ static createDefault() : TWindow  {
     return new TWindow(window_create_default());
  }
 
@@ -20254,7 +20254,7 @@ export class TWindow extends TWindowBase {
    *
    * @returns 对象。
    */
- static open(name : string) : TWidget  {
+ static open(name : string) : TWindow  {
     return new TWindow(window_open(name));
  }
 
@@ -20267,7 +20267,7 @@ export class TWindow extends TWindowBase {
    *
    * @returns 对象。
    */
- static openAndClose(name : string, to_close : TWidget) : TWidget  {
+ static openAndClose(name : string, to_close : TWidget) : TWindow  {
     return new TWindow(window_open_and_close(name, to_close != null ? (to_close.nativeObj || to_close) : null));
  }
 
@@ -20379,7 +20379,7 @@ export class TKeyboard extends TWindowBase {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TKeyboard  {
     return new TKeyboard(keyboard_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -20485,7 +20485,7 @@ export class TDialog extends TWindowBase {
    *
    * @returns dialog对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TDialog  {
     return new TDialog(dialog_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -20501,7 +20501,7 @@ export class TDialog extends TWindowBase {
    *
    * @returns dialog对象。
    */
- static createSimple(parent : TWidget, x : number, y : number, w : number, h : number) : TWidget  {
+ static createSimple(parent : TWidget, x : number, y : number, w : number, h : number) : TDialog  {
     return new TDialog(dialog_create_simple(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
@@ -20549,7 +20549,7 @@ export class TDialog extends TWindowBase {
    *
    * @returns 对象。
    */
- static open(name : string) : TWidget  {
+ static open(name : string) : TDialog  {
     return new TDialog(dialog_open(name));
  }
 
