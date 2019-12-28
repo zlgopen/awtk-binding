@@ -169,7 +169,12 @@ static void wrap_event_t_get_prop_target(const Nan::FunctionCallbackInfo<v8::Val
 }
 
 ret_t event_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "event_cast", wrap_event_cast);Nan::Export(ctx, "event_create", wrap_event_create);Nan::Export(ctx, "event_t_get_prop_type", wrap_event_t_get_prop_type);Nan::Export(ctx, "event_t_get_prop_time", wrap_event_t_get_prop_time);Nan::Export(ctx, "event_t_get_prop_target", wrap_event_t_get_prop_target);
+  Nan::Export(ctx, "event_cast", wrap_event_cast);
+  Nan::Export(ctx, "event_create", wrap_event_create);
+  Nan::Export(ctx, "event_t_get_prop_type", wrap_event_t_get_prop_type);
+  Nan::Export(ctx, "event_t_get_prop_time", wrap_event_t_get_prop_time);
+  Nan::Export(ctx, "event_t_get_prop_target", wrap_event_t_get_prop_target);
+
  return RET_OK;
 }
 
@@ -263,7 +268,14 @@ static void wrap_rect_t_get_prop_h(const Nan::FunctionCallbackInfo<v8::Value>& a
 }
 
 ret_t rect_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "rect_create", wrap_rect_create);Nan::Export(ctx, "rect_set", wrap_rect_set);Nan::Export(ctx, "rect_cast", wrap_rect_cast);Nan::Export(ctx, "rect_t_get_prop_x", wrap_rect_t_get_prop_x);Nan::Export(ctx, "rect_t_get_prop_y", wrap_rect_t_get_prop_y);Nan::Export(ctx, "rect_t_get_prop_w", wrap_rect_t_get_prop_w);Nan::Export(ctx, "rect_t_get_prop_h", wrap_rect_t_get_prop_h);
+  Nan::Export(ctx, "rect_create", wrap_rect_create);
+  Nan::Export(ctx, "rect_set", wrap_rect_set);
+  Nan::Export(ctx, "rect_cast", wrap_rect_cast);
+  Nan::Export(ctx, "rect_t_get_prop_x", wrap_rect_t_get_prop_x);
+  Nan::Export(ctx, "rect_t_get_prop_y", wrap_rect_t_get_prop_y);
+  Nan::Export(ctx, "rect_t_get_prop_w", wrap_rect_t_get_prop_w);
+  Nan::Export(ctx, "rect_t_get_prop_h", wrap_rect_t_get_prop_h);
+
  return RET_OK;
 }
 
@@ -392,7 +404,16 @@ static void wrap_emitter_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv) 
 }
 
 ret_t emitter_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "emitter_create", wrap_emitter_create);Nan::Export(ctx, "emitter_dispatch", wrap_emitter_dispatch);Nan::Export(ctx, "emitter_dispatch_simple_event", wrap_emitter_dispatch_simple_event);Nan::Export(ctx, "emitter_on", wrap_emitter_on);Nan::Export(ctx, "emitter_off", wrap_emitter_off);Nan::Export(ctx, "emitter_enable", wrap_emitter_enable);Nan::Export(ctx, "emitter_disable", wrap_emitter_disable);Nan::Export(ctx, "emitter_size", wrap_emitter_size);Nan::Export(ctx, "emitter_cast", wrap_emitter_cast);
+  Nan::Export(ctx, "emitter_create", wrap_emitter_create);
+  Nan::Export(ctx, "emitter_dispatch", wrap_emitter_dispatch);
+  Nan::Export(ctx, "emitter_dispatch_simple_event", wrap_emitter_dispatch_simple_event);
+  Nan::Export(ctx, "emitter_on", wrap_emitter_on);
+  Nan::Export(ctx, "emitter_off", wrap_emitter_off);
+  Nan::Export(ctx, "emitter_enable", wrap_emitter_enable);
+  Nan::Export(ctx, "emitter_disable", wrap_emitter_disable);
+  Nan::Export(ctx, "emitter_size", wrap_emitter_size);
+  Nan::Export(ctx, "emitter_cast", wrap_emitter_cast);
+
  return RET_OK;
 }
 
@@ -503,7 +524,16 @@ static void wrap_bitmap_t_get_prop_name(const Nan::FunctionCallbackInfo<v8::Valu
 }
 
 ret_t bitmap_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "bitmap_create", wrap_bitmap_create);Nan::Export(ctx, "bitmap_create_ex", wrap_bitmap_create_ex);Nan::Export(ctx, "bitmap_get_bpp", wrap_bitmap_get_bpp);Nan::Export(ctx, "bitmap_t_get_prop_w", wrap_bitmap_t_get_prop_w);Nan::Export(ctx, "bitmap_t_get_prop_h", wrap_bitmap_t_get_prop_h);Nan::Export(ctx, "bitmap_t_get_prop_line_length", wrap_bitmap_t_get_prop_line_length);Nan::Export(ctx, "bitmap_t_get_prop_flags", wrap_bitmap_t_get_prop_flags);Nan::Export(ctx, "bitmap_t_get_prop_format", wrap_bitmap_t_get_prop_format);Nan::Export(ctx, "bitmap_t_get_prop_name", wrap_bitmap_t_get_prop_name);
+  Nan::Export(ctx, "bitmap_create", wrap_bitmap_create);
+  Nan::Export(ctx, "bitmap_create_ex", wrap_bitmap_create_ex);
+  Nan::Export(ctx, "bitmap_get_bpp", wrap_bitmap_get_bpp);
+  Nan::Export(ctx, "bitmap_t_get_prop_w", wrap_bitmap_t_get_prop_w);
+  Nan::Export(ctx, "bitmap_t_get_prop_h", wrap_bitmap_t_get_prop_h);
+  Nan::Export(ctx, "bitmap_t_get_prop_line_length", wrap_bitmap_t_get_prop_line_length);
+  Nan::Export(ctx, "bitmap_t_get_prop_flags", wrap_bitmap_t_get_prop_flags);
+  Nan::Export(ctx, "bitmap_t_get_prop_format", wrap_bitmap_t_get_prop_format);
+  Nan::Export(ctx, "bitmap_t_get_prop_name", wrap_bitmap_t_get_prop_name);
+
  return RET_OK;
 }
 
@@ -973,7 +1003,39 @@ static void wrap_value_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
 }
 
 ret_t value_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "value_set_bool", wrap_value_set_bool);Nan::Export(ctx, "value_bool", wrap_value_bool);Nan::Export(ctx, "value_set_int8", wrap_value_set_int8);Nan::Export(ctx, "value_int8", wrap_value_int8);Nan::Export(ctx, "value_set_uint8", wrap_value_set_uint8);Nan::Export(ctx, "value_uint8", wrap_value_uint8);Nan::Export(ctx, "value_set_int16", wrap_value_set_int16);Nan::Export(ctx, "value_int16", wrap_value_int16);Nan::Export(ctx, "value_set_uint16", wrap_value_set_uint16);Nan::Export(ctx, "value_uint16", wrap_value_uint16);Nan::Export(ctx, "value_set_int32", wrap_value_set_int32);Nan::Export(ctx, "value_int32", wrap_value_int32);Nan::Export(ctx, "value_set_uint32", wrap_value_set_uint32);Nan::Export(ctx, "value_set_int64", wrap_value_set_int64);Nan::Export(ctx, "value_int64", wrap_value_int64);Nan::Export(ctx, "value_set_uint64", wrap_value_set_uint64);Nan::Export(ctx, "value_uint64", wrap_value_uint64);Nan::Export(ctx, "value_set_float", wrap_value_set_float);Nan::Export(ctx, "value_float32", wrap_value_float32);Nan::Export(ctx, "value_set_double", wrap_value_set_double);Nan::Export(ctx, "value_double", wrap_value_double);Nan::Export(ctx, "value_dup_str", wrap_value_dup_str);Nan::Export(ctx, "value_str", wrap_value_str);Nan::Export(ctx, "value_is_null", wrap_value_is_null);Nan::Export(ctx, "value_set_int", wrap_value_set_int);Nan::Export(ctx, "value_set_object", wrap_value_set_object);Nan::Export(ctx, "value_object", wrap_value_object);Nan::Export(ctx, "value_set_token", wrap_value_set_token);Nan::Export(ctx, "value_token", wrap_value_token);Nan::Export(ctx, "value_create", wrap_value_create);Nan::Export(ctx, "value_reset", wrap_value_reset);Nan::Export(ctx, "value_cast", wrap_value_cast);
+  Nan::Export(ctx, "value_set_bool", wrap_value_set_bool);
+  Nan::Export(ctx, "value_bool", wrap_value_bool);
+  Nan::Export(ctx, "value_set_int8", wrap_value_set_int8);
+  Nan::Export(ctx, "value_int8", wrap_value_int8);
+  Nan::Export(ctx, "value_set_uint8", wrap_value_set_uint8);
+  Nan::Export(ctx, "value_uint8", wrap_value_uint8);
+  Nan::Export(ctx, "value_set_int16", wrap_value_set_int16);
+  Nan::Export(ctx, "value_int16", wrap_value_int16);
+  Nan::Export(ctx, "value_set_uint16", wrap_value_set_uint16);
+  Nan::Export(ctx, "value_uint16", wrap_value_uint16);
+  Nan::Export(ctx, "value_set_int32", wrap_value_set_int32);
+  Nan::Export(ctx, "value_int32", wrap_value_int32);
+  Nan::Export(ctx, "value_set_uint32", wrap_value_set_uint32);
+  Nan::Export(ctx, "value_set_int64", wrap_value_set_int64);
+  Nan::Export(ctx, "value_int64", wrap_value_int64);
+  Nan::Export(ctx, "value_set_uint64", wrap_value_set_uint64);
+  Nan::Export(ctx, "value_uint64", wrap_value_uint64);
+  Nan::Export(ctx, "value_set_float", wrap_value_set_float);
+  Nan::Export(ctx, "value_float32", wrap_value_float32);
+  Nan::Export(ctx, "value_set_double", wrap_value_set_double);
+  Nan::Export(ctx, "value_double", wrap_value_double);
+  Nan::Export(ctx, "value_dup_str", wrap_value_dup_str);
+  Nan::Export(ctx, "value_str", wrap_value_str);
+  Nan::Export(ctx, "value_is_null", wrap_value_is_null);
+  Nan::Export(ctx, "value_set_int", wrap_value_set_int);
+  Nan::Export(ctx, "value_set_object", wrap_value_set_object);
+  Nan::Export(ctx, "value_object", wrap_value_object);
+  Nan::Export(ctx, "value_set_token", wrap_value_set_token);
+  Nan::Export(ctx, "value_token", wrap_value_token);
+  Nan::Export(ctx, "value_create", wrap_value_create);
+  Nan::Export(ctx, "value_reset", wrap_value_reset);
+  Nan::Export(ctx, "value_cast", wrap_value_cast);
+
  return RET_OK;
 }
 
@@ -1543,7 +1605,42 @@ static void wrap_object_t_get_prop_name(const Nan::FunctionCallbackInfo<v8::Valu
 }
 
 ret_t object_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "object_ref", wrap_object_ref);Nan::Export(ctx, "object_get_type", wrap_object_get_type);Nan::Export(ctx, "object_get_desc", wrap_object_get_desc);Nan::Export(ctx, "object_get_size", wrap_object_get_size);Nan::Export(ctx, "object_is_collection", wrap_object_is_collection);Nan::Export(ctx, "object_set_name", wrap_object_set_name);Nan::Export(ctx, "object_compare", wrap_object_compare);Nan::Export(ctx, "object_get_prop", wrap_object_get_prop);Nan::Export(ctx, "object_get_prop_str", wrap_object_get_prop_str);Nan::Export(ctx, "object_get_prop_pointer", wrap_object_get_prop_pointer);Nan::Export(ctx, "object_get_prop_object", wrap_object_get_prop_object);Nan::Export(ctx, "object_get_prop_int", wrap_object_get_prop_int);Nan::Export(ctx, "object_get_prop_bool", wrap_object_get_prop_bool);Nan::Export(ctx, "object_get_prop_float", wrap_object_get_prop_float);Nan::Export(ctx, "object_remove_prop", wrap_object_remove_prop);Nan::Export(ctx, "object_set_prop", wrap_object_set_prop);Nan::Export(ctx, "object_set_prop_str", wrap_object_set_prop_str);Nan::Export(ctx, "object_set_prop_object", wrap_object_set_prop_object);Nan::Export(ctx, "object_set_prop_int", wrap_object_set_prop_int);Nan::Export(ctx, "object_set_prop_bool", wrap_object_set_prop_bool);Nan::Export(ctx, "object_set_prop_float", wrap_object_set_prop_float);Nan::Export(ctx, "object_copy_prop", wrap_object_copy_prop);Nan::Export(ctx, "object_has_prop", wrap_object_has_prop);Nan::Export(ctx, "object_eval", wrap_object_eval);Nan::Export(ctx, "object_can_exec", wrap_object_can_exec);Nan::Export(ctx, "object_exec", wrap_object_exec);Nan::Export(ctx, "object_notify_changed", wrap_object_notify_changed);Nan::Export(ctx, "object_get_prop_str_by_path", wrap_object_get_prop_str_by_path);Nan::Export(ctx, "object_get_prop_pointer_by_path", wrap_object_get_prop_pointer_by_path);Nan::Export(ctx, "object_get_prop_object_by_path", wrap_object_get_prop_object_by_path);Nan::Export(ctx, "object_get_prop_int_by_path", wrap_object_get_prop_int_by_path);Nan::Export(ctx, "object_get_prop_bool_by_path", wrap_object_get_prop_bool_by_path);Nan::Export(ctx, "object_get_prop_float_by_path", wrap_object_get_prop_float_by_path);Nan::Export(ctx, "object_t_get_prop_ref_count", wrap_object_t_get_prop_ref_count);Nan::Export(ctx, "object_t_get_prop_name", wrap_object_t_get_prop_name);
+  Nan::Export(ctx, "object_ref", wrap_object_ref);
+  Nan::Export(ctx, "object_get_type", wrap_object_get_type);
+  Nan::Export(ctx, "object_get_desc", wrap_object_get_desc);
+  Nan::Export(ctx, "object_get_size", wrap_object_get_size);
+  Nan::Export(ctx, "object_is_collection", wrap_object_is_collection);
+  Nan::Export(ctx, "object_set_name", wrap_object_set_name);
+  Nan::Export(ctx, "object_compare", wrap_object_compare);
+  Nan::Export(ctx, "object_get_prop", wrap_object_get_prop);
+  Nan::Export(ctx, "object_get_prop_str", wrap_object_get_prop_str);
+  Nan::Export(ctx, "object_get_prop_pointer", wrap_object_get_prop_pointer);
+  Nan::Export(ctx, "object_get_prop_object", wrap_object_get_prop_object);
+  Nan::Export(ctx, "object_get_prop_int", wrap_object_get_prop_int);
+  Nan::Export(ctx, "object_get_prop_bool", wrap_object_get_prop_bool);
+  Nan::Export(ctx, "object_get_prop_float", wrap_object_get_prop_float);
+  Nan::Export(ctx, "object_remove_prop", wrap_object_remove_prop);
+  Nan::Export(ctx, "object_set_prop", wrap_object_set_prop);
+  Nan::Export(ctx, "object_set_prop_str", wrap_object_set_prop_str);
+  Nan::Export(ctx, "object_set_prop_object", wrap_object_set_prop_object);
+  Nan::Export(ctx, "object_set_prop_int", wrap_object_set_prop_int);
+  Nan::Export(ctx, "object_set_prop_bool", wrap_object_set_prop_bool);
+  Nan::Export(ctx, "object_set_prop_float", wrap_object_set_prop_float);
+  Nan::Export(ctx, "object_copy_prop", wrap_object_copy_prop);
+  Nan::Export(ctx, "object_has_prop", wrap_object_has_prop);
+  Nan::Export(ctx, "object_eval", wrap_object_eval);
+  Nan::Export(ctx, "object_can_exec", wrap_object_can_exec);
+  Nan::Export(ctx, "object_exec", wrap_object_exec);
+  Nan::Export(ctx, "object_notify_changed", wrap_object_notify_changed);
+  Nan::Export(ctx, "object_get_prop_str_by_path", wrap_object_get_prop_str_by_path);
+  Nan::Export(ctx, "object_get_prop_pointer_by_path", wrap_object_get_prop_pointer_by_path);
+  Nan::Export(ctx, "object_get_prop_object_by_path", wrap_object_get_prop_object_by_path);
+  Nan::Export(ctx, "object_get_prop_int_by_path", wrap_object_get_prop_int_by_path);
+  Nan::Export(ctx, "object_get_prop_bool_by_path", wrap_object_get_prop_bool_by_path);
+  Nan::Export(ctx, "object_get_prop_float_by_path", wrap_object_get_prop_float_by_path);
+  Nan::Export(ctx, "object_t_get_prop_ref_count", wrap_object_t_get_prop_ref_count);
+  Nan::Export(ctx, "object_t_get_prop_name", wrap_object_t_get_prop_name);
+
  return RET_OK;
 }
 
@@ -1633,7 +1730,13 @@ static void wrap_tk_is_pointer_pressed(const Nan::FunctionCallbackInfo<v8::Value
 }
 
 ret_t global_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "tk_init", wrap_tk_init);Nan::Export(ctx, "tk_run", wrap_tk_run);Nan::Export(ctx, "tk_quit", wrap_tk_quit);Nan::Export(ctx, "tk_get_pointer_x", wrap_tk_get_pointer_x);Nan::Export(ctx, "tk_get_pointer_y", wrap_tk_get_pointer_y);Nan::Export(ctx, "tk_is_pointer_pressed", wrap_tk_is_pointer_pressed);
+  Nan::Export(ctx, "tk_init", wrap_tk_init);
+  Nan::Export(ctx, "tk_run", wrap_tk_run);
+  Nan::Export(ctx, "tk_quit", wrap_tk_quit);
+  Nan::Export(ctx, "tk_get_pointer_x", wrap_tk_get_pointer_x);
+  Nan::Export(ctx, "tk_get_pointer_y", wrap_tk_get_pointer_y);
+  Nan::Export(ctx, "tk_is_pointer_pressed", wrap_tk_is_pointer_pressed);
+
  return RET_OK;
 }
 
@@ -1686,7 +1789,13 @@ static void get_DIALOG_QUIT_OTHER(const Nan::FunctionCallbackInfo<v8::Value>& ar
 }
 
 ret_t dialog_quit_code_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "DIALOG_QUIT_NONE", get_DIALOG_QUIT_NONE);Nan::Export(ctx, "DIALOG_QUIT_OK", get_DIALOG_QUIT_OK);Nan::Export(ctx, "DIALOG_QUIT_YES", get_DIALOG_QUIT_YES);Nan::Export(ctx, "DIALOG_QUIT_CANCEL", get_DIALOG_QUIT_CANCEL);Nan::Export(ctx, "DIALOG_QUIT_NO", get_DIALOG_QUIT_NO);Nan::Export(ctx, "DIALOG_QUIT_OTHER", get_DIALOG_QUIT_OTHER);
+  Nan::Export(ctx, "DIALOG_QUIT_NONE", get_DIALOG_QUIT_NONE);
+  Nan::Export(ctx, "DIALOG_QUIT_OK", get_DIALOG_QUIT_OK);
+  Nan::Export(ctx, "DIALOG_QUIT_YES", get_DIALOG_QUIT_YES);
+  Nan::Export(ctx, "DIALOG_QUIT_CANCEL", get_DIALOG_QUIT_CANCEL);
+  Nan::Export(ctx, "DIALOG_QUIT_NO", get_DIALOG_QUIT_NO);
+  Nan::Export(ctx, "DIALOG_QUIT_OTHER", get_DIALOG_QUIT_OTHER);
+
  return RET_OK;
 }
 
@@ -2299,7 +2408,83 @@ static void get_EVT_DESTROY(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
 }
 
 ret_t event_type_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "EVT_POINTER_DOWN", get_EVT_POINTER_DOWN);Nan::Export(ctx, "EVT_POINTER_DOWN_BEFORE_CHILDREN", get_EVT_POINTER_DOWN_BEFORE_CHILDREN);Nan::Export(ctx, "EVT_POINTER_MOVE", get_EVT_POINTER_MOVE);Nan::Export(ctx, "EVT_POINTER_MOVE_BEFORE_CHILDREN", get_EVT_POINTER_MOVE_BEFORE_CHILDREN);Nan::Export(ctx, "EVT_POINTER_UP", get_EVT_POINTER_UP);Nan::Export(ctx, "EVT_POINTER_UP_BEFORE_CHILDREN", get_EVT_POINTER_UP_BEFORE_CHILDREN);Nan::Export(ctx, "EVT_WHEEL", get_EVT_WHEEL);Nan::Export(ctx, "EVT_WHEEL_BEFORE_CHILDREN", get_EVT_WHEEL_BEFORE_CHILDREN);Nan::Export(ctx, "EVT_POINTER_DOWN_ABORT", get_EVT_POINTER_DOWN_ABORT);Nan::Export(ctx, "EVT_CONTEXT_MENU", get_EVT_CONTEXT_MENU);Nan::Export(ctx, "EVT_POINTER_ENTER", get_EVT_POINTER_ENTER);Nan::Export(ctx, "EVT_POINTER_LEAVE", get_EVT_POINTER_LEAVE);Nan::Export(ctx, "EVT_LONG_PRESS", get_EVT_LONG_PRESS);Nan::Export(ctx, "EVT_CLICK", get_EVT_CLICK);Nan::Export(ctx, "EVT_FOCUS", get_EVT_FOCUS);Nan::Export(ctx, "EVT_BLUR", get_EVT_BLUR);Nan::Export(ctx, "EVT_KEY_DOWN", get_EVT_KEY_DOWN);Nan::Export(ctx, "EVT_KEY_DOWN_BEFORE_CHILDREN", get_EVT_KEY_DOWN_BEFORE_CHILDREN);Nan::Export(ctx, "EVT_KEY_REPEAT", get_EVT_KEY_REPEAT);Nan::Export(ctx, "EVT_KEY_UP", get_EVT_KEY_UP);Nan::Export(ctx, "EVT_KEY_UP_BEFORE_CHILDREN", get_EVT_KEY_UP_BEFORE_CHILDREN);Nan::Export(ctx, "EVT_WILL_MOVE", get_EVT_WILL_MOVE);Nan::Export(ctx, "EVT_MOVE", get_EVT_MOVE);Nan::Export(ctx, "EVT_WILL_RESIZE", get_EVT_WILL_RESIZE);Nan::Export(ctx, "EVT_RESIZE", get_EVT_RESIZE);Nan::Export(ctx, "EVT_WILL_MOVE_RESIZE", get_EVT_WILL_MOVE_RESIZE);Nan::Export(ctx, "EVT_MOVE_RESIZE", get_EVT_MOVE_RESIZE);Nan::Export(ctx, "EVT_VALUE_WILL_CHANGE", get_EVT_VALUE_WILL_CHANGE);Nan::Export(ctx, "EVT_VALUE_CHANGED", get_EVT_VALUE_CHANGED);Nan::Export(ctx, "EVT_VALUE_CHANGING", get_EVT_VALUE_CHANGING);Nan::Export(ctx, "EVT_PAINT", get_EVT_PAINT);Nan::Export(ctx, "EVT_BEFORE_PAINT", get_EVT_BEFORE_PAINT);Nan::Export(ctx, "EVT_AFTER_PAINT", get_EVT_AFTER_PAINT);Nan::Export(ctx, "EVT_PAINT_DONE", get_EVT_PAINT_DONE);Nan::Export(ctx, "EVT_LOCALE_CHANGED", get_EVT_LOCALE_CHANGED);Nan::Export(ctx, "EVT_ANIM_START", get_EVT_ANIM_START);Nan::Export(ctx, "EVT_ANIM_STOP", get_EVT_ANIM_STOP);Nan::Export(ctx, "EVT_ANIM_PAUSE", get_EVT_ANIM_PAUSE);Nan::Export(ctx, "EVT_ANIM_ONCE", get_EVT_ANIM_ONCE);Nan::Export(ctx, "EVT_ANIM_END", get_EVT_ANIM_END);Nan::Export(ctx, "EVT_WINDOW_LOAD", get_EVT_WINDOW_LOAD);Nan::Export(ctx, "EVT_WIDGET_LOAD", get_EVT_WIDGET_LOAD);Nan::Export(ctx, "EVT_WINDOW_WILL_OPEN", get_EVT_WINDOW_WILL_OPEN);Nan::Export(ctx, "EVT_WINDOW_OPEN", get_EVT_WINDOW_OPEN);Nan::Export(ctx, "EVT_WINDOW_TO_BACKGROUND", get_EVT_WINDOW_TO_BACKGROUND);Nan::Export(ctx, "EVT_WINDOW_TO_FOREGROUND", get_EVT_WINDOW_TO_FOREGROUND);Nan::Export(ctx, "EVT_WINDOW_CLOSE", get_EVT_WINDOW_CLOSE);Nan::Export(ctx, "EVT_REQUEST_CLOSE_WINDOW", get_EVT_REQUEST_CLOSE_WINDOW);Nan::Export(ctx, "EVT_TOP_WINDOW_CHANGED", get_EVT_TOP_WINDOW_CHANGED);Nan::Export(ctx, "EVT_IM_COMMIT", get_EVT_IM_COMMIT);Nan::Export(ctx, "EVT_IM_SHOW_CANDIDATES", get_EVT_IM_SHOW_CANDIDATES);Nan::Export(ctx, "EVT_IM_ACTION", get_EVT_IM_ACTION);Nan::Export(ctx, "EVT_IM_ACTION_INFO", get_EVT_IM_ACTION_INFO);Nan::Export(ctx, "EVT_DRAG_START", get_EVT_DRAG_START);Nan::Export(ctx, "EVT_DRAG", get_EVT_DRAG);Nan::Export(ctx, "EVT_DRAG_END", get_EVT_DRAG_END);Nan::Export(ctx, "EVT_SCREEN_SAVER", get_EVT_SCREEN_SAVER);Nan::Export(ctx, "EVT_LOW_MEMORY", get_EVT_LOW_MEMORY);Nan::Export(ctx, "EVT_OUT_OF_MEMORY", get_EVT_OUT_OF_MEMORY);Nan::Export(ctx, "EVT_ORIENTATION_WILL_CHANGED", get_EVT_ORIENTATION_WILL_CHANGED);Nan::Export(ctx, "EVT_ORIENTATION_CHANGED", get_EVT_ORIENTATION_CHANGED);Nan::Export(ctx, "EVT_WIDGET_CREATED", get_EVT_WIDGET_CREATED);Nan::Export(ctx, "EVT_REQUEST_QUIT_APP", get_EVT_REQUEST_QUIT_APP);Nan::Export(ctx, "EVT_THEME_CHANGED", get_EVT_THEME_CHANGED);Nan::Export(ctx, "EVT_WIDGET_ADD_CHILD", get_EVT_WIDGET_ADD_CHILD);Nan::Export(ctx, "EVT_WIDGET_REMOVE_CHILD", get_EVT_WIDGET_REMOVE_CHILD);Nan::Export(ctx, "EVT_REQ_START", get_EVT_REQ_START);Nan::Export(ctx, "EVT_USER_START", get_EVT_USER_START);Nan::Export(ctx, "EVT_NONE", get_EVT_NONE);Nan::Export(ctx, "EVT_PROP_WILL_CHANGE", get_EVT_PROP_WILL_CHANGE);Nan::Export(ctx, "EVT_PROP_CHANGED", get_EVT_PROP_CHANGED);Nan::Export(ctx, "EVT_ITEMS_WILL_CHANGE", get_EVT_ITEMS_WILL_CHANGE);Nan::Export(ctx, "EVT_ITEMS_CHANGED", get_EVT_ITEMS_CHANGED);Nan::Export(ctx, "EVT_PROPS_CHANGED", get_EVT_PROPS_CHANGED);Nan::Export(ctx, "EVT_PROGRESS", get_EVT_PROGRESS);Nan::Export(ctx, "EVT_DESTROY", get_EVT_DESTROY);
+  Nan::Export(ctx, "EVT_POINTER_DOWN", get_EVT_POINTER_DOWN);
+  Nan::Export(ctx, "EVT_POINTER_DOWN_BEFORE_CHILDREN", get_EVT_POINTER_DOWN_BEFORE_CHILDREN);
+  Nan::Export(ctx, "EVT_POINTER_MOVE", get_EVT_POINTER_MOVE);
+  Nan::Export(ctx, "EVT_POINTER_MOVE_BEFORE_CHILDREN", get_EVT_POINTER_MOVE_BEFORE_CHILDREN);
+  Nan::Export(ctx, "EVT_POINTER_UP", get_EVT_POINTER_UP);
+  Nan::Export(ctx, "EVT_POINTER_UP_BEFORE_CHILDREN", get_EVT_POINTER_UP_BEFORE_CHILDREN);
+  Nan::Export(ctx, "EVT_WHEEL", get_EVT_WHEEL);
+  Nan::Export(ctx, "EVT_WHEEL_BEFORE_CHILDREN", get_EVT_WHEEL_BEFORE_CHILDREN);
+  Nan::Export(ctx, "EVT_POINTER_DOWN_ABORT", get_EVT_POINTER_DOWN_ABORT);
+  Nan::Export(ctx, "EVT_CONTEXT_MENU", get_EVT_CONTEXT_MENU);
+  Nan::Export(ctx, "EVT_POINTER_ENTER", get_EVT_POINTER_ENTER);
+  Nan::Export(ctx, "EVT_POINTER_LEAVE", get_EVT_POINTER_LEAVE);
+  Nan::Export(ctx, "EVT_LONG_PRESS", get_EVT_LONG_PRESS);
+  Nan::Export(ctx, "EVT_CLICK", get_EVT_CLICK);
+  Nan::Export(ctx, "EVT_FOCUS", get_EVT_FOCUS);
+  Nan::Export(ctx, "EVT_BLUR", get_EVT_BLUR);
+  Nan::Export(ctx, "EVT_KEY_DOWN", get_EVT_KEY_DOWN);
+  Nan::Export(ctx, "EVT_KEY_DOWN_BEFORE_CHILDREN", get_EVT_KEY_DOWN_BEFORE_CHILDREN);
+  Nan::Export(ctx, "EVT_KEY_REPEAT", get_EVT_KEY_REPEAT);
+  Nan::Export(ctx, "EVT_KEY_UP", get_EVT_KEY_UP);
+  Nan::Export(ctx, "EVT_KEY_UP_BEFORE_CHILDREN", get_EVT_KEY_UP_BEFORE_CHILDREN);
+  Nan::Export(ctx, "EVT_WILL_MOVE", get_EVT_WILL_MOVE);
+  Nan::Export(ctx, "EVT_MOVE", get_EVT_MOVE);
+  Nan::Export(ctx, "EVT_WILL_RESIZE", get_EVT_WILL_RESIZE);
+  Nan::Export(ctx, "EVT_RESIZE", get_EVT_RESIZE);
+  Nan::Export(ctx, "EVT_WILL_MOVE_RESIZE", get_EVT_WILL_MOVE_RESIZE);
+  Nan::Export(ctx, "EVT_MOVE_RESIZE", get_EVT_MOVE_RESIZE);
+  Nan::Export(ctx, "EVT_VALUE_WILL_CHANGE", get_EVT_VALUE_WILL_CHANGE);
+  Nan::Export(ctx, "EVT_VALUE_CHANGED", get_EVT_VALUE_CHANGED);
+  Nan::Export(ctx, "EVT_VALUE_CHANGING", get_EVT_VALUE_CHANGING);
+  Nan::Export(ctx, "EVT_PAINT", get_EVT_PAINT);
+  Nan::Export(ctx, "EVT_BEFORE_PAINT", get_EVT_BEFORE_PAINT);
+  Nan::Export(ctx, "EVT_AFTER_PAINT", get_EVT_AFTER_PAINT);
+  Nan::Export(ctx, "EVT_PAINT_DONE", get_EVT_PAINT_DONE);
+  Nan::Export(ctx, "EVT_LOCALE_CHANGED", get_EVT_LOCALE_CHANGED);
+  Nan::Export(ctx, "EVT_ANIM_START", get_EVT_ANIM_START);
+  Nan::Export(ctx, "EVT_ANIM_STOP", get_EVT_ANIM_STOP);
+  Nan::Export(ctx, "EVT_ANIM_PAUSE", get_EVT_ANIM_PAUSE);
+  Nan::Export(ctx, "EVT_ANIM_ONCE", get_EVT_ANIM_ONCE);
+  Nan::Export(ctx, "EVT_ANIM_END", get_EVT_ANIM_END);
+  Nan::Export(ctx, "EVT_WINDOW_LOAD", get_EVT_WINDOW_LOAD);
+  Nan::Export(ctx, "EVT_WIDGET_LOAD", get_EVT_WIDGET_LOAD);
+  Nan::Export(ctx, "EVT_WINDOW_WILL_OPEN", get_EVT_WINDOW_WILL_OPEN);
+  Nan::Export(ctx, "EVT_WINDOW_OPEN", get_EVT_WINDOW_OPEN);
+  Nan::Export(ctx, "EVT_WINDOW_TO_BACKGROUND", get_EVT_WINDOW_TO_BACKGROUND);
+  Nan::Export(ctx, "EVT_WINDOW_TO_FOREGROUND", get_EVT_WINDOW_TO_FOREGROUND);
+  Nan::Export(ctx, "EVT_WINDOW_CLOSE", get_EVT_WINDOW_CLOSE);
+  Nan::Export(ctx, "EVT_REQUEST_CLOSE_WINDOW", get_EVT_REQUEST_CLOSE_WINDOW);
+  Nan::Export(ctx, "EVT_TOP_WINDOW_CHANGED", get_EVT_TOP_WINDOW_CHANGED);
+  Nan::Export(ctx, "EVT_IM_COMMIT", get_EVT_IM_COMMIT);
+  Nan::Export(ctx, "EVT_IM_SHOW_CANDIDATES", get_EVT_IM_SHOW_CANDIDATES);
+  Nan::Export(ctx, "EVT_IM_ACTION", get_EVT_IM_ACTION);
+  Nan::Export(ctx, "EVT_IM_ACTION_INFO", get_EVT_IM_ACTION_INFO);
+  Nan::Export(ctx, "EVT_DRAG_START", get_EVT_DRAG_START);
+  Nan::Export(ctx, "EVT_DRAG", get_EVT_DRAG);
+  Nan::Export(ctx, "EVT_DRAG_END", get_EVT_DRAG_END);
+  Nan::Export(ctx, "EVT_SCREEN_SAVER", get_EVT_SCREEN_SAVER);
+  Nan::Export(ctx, "EVT_LOW_MEMORY", get_EVT_LOW_MEMORY);
+  Nan::Export(ctx, "EVT_OUT_OF_MEMORY", get_EVT_OUT_OF_MEMORY);
+  Nan::Export(ctx, "EVT_ORIENTATION_WILL_CHANGED", get_EVT_ORIENTATION_WILL_CHANGED);
+  Nan::Export(ctx, "EVT_ORIENTATION_CHANGED", get_EVT_ORIENTATION_CHANGED);
+  Nan::Export(ctx, "EVT_WIDGET_CREATED", get_EVT_WIDGET_CREATED);
+  Nan::Export(ctx, "EVT_REQUEST_QUIT_APP", get_EVT_REQUEST_QUIT_APP);
+  Nan::Export(ctx, "EVT_THEME_CHANGED", get_EVT_THEME_CHANGED);
+  Nan::Export(ctx, "EVT_WIDGET_ADD_CHILD", get_EVT_WIDGET_ADD_CHILD);
+  Nan::Export(ctx, "EVT_WIDGET_REMOVE_CHILD", get_EVT_WIDGET_REMOVE_CHILD);
+  Nan::Export(ctx, "EVT_REQ_START", get_EVT_REQ_START);
+  Nan::Export(ctx, "EVT_USER_START", get_EVT_USER_START);
+  Nan::Export(ctx, "EVT_NONE", get_EVT_NONE);
+  Nan::Export(ctx, "EVT_PROP_WILL_CHANGE", get_EVT_PROP_WILL_CHANGE);
+  Nan::Export(ctx, "EVT_PROP_CHANGED", get_EVT_PROP_CHANGED);
+  Nan::Export(ctx, "EVT_ITEMS_WILL_CHANGE", get_EVT_ITEMS_WILL_CHANGE);
+  Nan::Export(ctx, "EVT_ITEMS_CHANGED", get_EVT_ITEMS_CHANGED);
+  Nan::Export(ctx, "EVT_PROPS_CHANGED", get_EVT_PROPS_CHANGED);
+  Nan::Export(ctx, "EVT_PROGRESS", get_EVT_PROGRESS);
+  Nan::Export(ctx, "EVT_DESTROY", get_EVT_DESTROY);
+
  return RET_OK;
 }
 
@@ -2335,7 +2520,9 @@ static void wrap_font_manager_unload_all(const Nan::FunctionCallbackInfo<v8::Val
 }
 
 ret_t font_manager_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "font_manager_unload_font", wrap_font_manager_unload_font);Nan::Export(ctx, "font_manager_unload_all", wrap_font_manager_unload_all);
+  Nan::Export(ctx, "font_manager_unload_font", wrap_font_manager_unload_font);
+  Nan::Export(ctx, "font_manager_unload_all", wrap_font_manager_unload_all);
+
  return RET_OK;
 }
 
@@ -2364,7 +2551,10 @@ static void get_GLYPH_FMT_RGBA(const Nan::FunctionCallbackInfo<v8::Value>& argv)
 }
 
 ret_t glyph_format_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "GLYPH_FMT_ALPHA", get_GLYPH_FMT_ALPHA);Nan::Export(ctx, "GLYPH_FMT_MONO", get_GLYPH_FMT_MONO);Nan::Export(ctx, "GLYPH_FMT_RGBA", get_GLYPH_FMT_RGBA);
+  Nan::Export(ctx, "GLYPH_FMT_ALPHA", get_GLYPH_FMT_ALPHA);
+  Nan::Export(ctx, "GLYPH_FMT_MONO", get_GLYPH_FMT_MONO);
+  Nan::Export(ctx, "GLYPH_FMT_RGBA", get_GLYPH_FMT_RGBA);
+
  return RET_OK;
 }
 
@@ -2383,7 +2573,9 @@ static void wrap_idle_remove(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
 }
 
 ret_t idle_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "idle_add", wrap_idle_add);Nan::Export(ctx, "idle_remove", wrap_idle_remove);
+  Nan::Export(ctx, "idle_add", wrap_idle_add);
+  Nan::Export(ctx, "idle_remove", wrap_idle_remove);
+
  return RET_OK;
 }
 
@@ -2418,7 +2610,9 @@ static void wrap_image_manager_get_bitmap(const Nan::FunctionCallbackInfo<v8::Va
 }
 
 ret_t image_manager_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "image_manager", wrap_image_manager);Nan::Export(ctx, "image_manager_get_bitmap", wrap_image_manager_get_bitmap);
+  Nan::Export(ctx, "image_manager", wrap_image_manager);
+  Nan::Export(ctx, "image_manager_get_bitmap", wrap_image_manager_get_bitmap);
+
  return RET_OK;
 }
 
@@ -2511,7 +2705,18 @@ static void get_INPUT_CUSTOM_PASSWORD(const Nan::FunctionCallbackInfo<v8::Value>
 }
 
 ret_t input_type_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "INPUT_TEXT", get_INPUT_TEXT);Nan::Export(ctx, "INPUT_INT", get_INPUT_INT);Nan::Export(ctx, "INPUT_UINT", get_INPUT_UINT);Nan::Export(ctx, "INPUT_HEX", get_INPUT_HEX);Nan::Export(ctx, "INPUT_FLOAT", get_INPUT_FLOAT);Nan::Export(ctx, "INPUT_UFLOAT", get_INPUT_UFLOAT);Nan::Export(ctx, "INPUT_EMAIL", get_INPUT_EMAIL);Nan::Export(ctx, "INPUT_PASSWORD", get_INPUT_PASSWORD);Nan::Export(ctx, "INPUT_PHONE", get_INPUT_PHONE);Nan::Export(ctx, "INPUT_CUSTOM", get_INPUT_CUSTOM);Nan::Export(ctx, "INPUT_CUSTOM_PASSWORD", get_INPUT_CUSTOM_PASSWORD);
+  Nan::Export(ctx, "INPUT_TEXT", get_INPUT_TEXT);
+  Nan::Export(ctx, "INPUT_INT", get_INPUT_INT);
+  Nan::Export(ctx, "INPUT_UINT", get_INPUT_UINT);
+  Nan::Export(ctx, "INPUT_HEX", get_INPUT_HEX);
+  Nan::Export(ctx, "INPUT_FLOAT", get_INPUT_FLOAT);
+  Nan::Export(ctx, "INPUT_UFLOAT", get_INPUT_UFLOAT);
+  Nan::Export(ctx, "INPUT_EMAIL", get_INPUT_EMAIL);
+  Nan::Export(ctx, "INPUT_PASSWORD", get_INPUT_PASSWORD);
+  Nan::Export(ctx, "INPUT_PHONE", get_INPUT_PHONE);
+  Nan::Export(ctx, "INPUT_CUSTOM", get_INPUT_CUSTOM);
+  Nan::Export(ctx, "INPUT_CUSTOM_PASSWORD", get_INPUT_CUSTOM_PASSWORD);
+
  return RET_OK;
 }
 
@@ -2684,7 +2889,28 @@ static void get_VALUE_TYPE_TOKEN(const Nan::FunctionCallbackInfo<v8::Value>& arg
 }
 
 ret_t value_type_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "VALUE_TYPE_INVALID", get_VALUE_TYPE_INVALID);Nan::Export(ctx, "VALUE_TYPE_BOOL", get_VALUE_TYPE_BOOL);Nan::Export(ctx, "VALUE_TYPE_INT8", get_VALUE_TYPE_INT8);Nan::Export(ctx, "VALUE_TYPE_UINT8", get_VALUE_TYPE_UINT8);Nan::Export(ctx, "VALUE_TYPE_INT16", get_VALUE_TYPE_INT16);Nan::Export(ctx, "VALUE_TYPE_UINT16", get_VALUE_TYPE_UINT16);Nan::Export(ctx, "VALUE_TYPE_INT32", get_VALUE_TYPE_INT32);Nan::Export(ctx, "VALUE_TYPE_UINT32", get_VALUE_TYPE_UINT32);Nan::Export(ctx, "VALUE_TYPE_INT64", get_VALUE_TYPE_INT64);Nan::Export(ctx, "VALUE_TYPE_UINT64", get_VALUE_TYPE_UINT64);Nan::Export(ctx, "VALUE_TYPE_POINTER", get_VALUE_TYPE_POINTER);Nan::Export(ctx, "VALUE_TYPE_FLOAT", get_VALUE_TYPE_FLOAT);Nan::Export(ctx, "VALUE_TYPE_FLOAT32", get_VALUE_TYPE_FLOAT32);Nan::Export(ctx, "VALUE_TYPE_DOUBLE", get_VALUE_TYPE_DOUBLE);Nan::Export(ctx, "VALUE_TYPE_STRING", get_VALUE_TYPE_STRING);Nan::Export(ctx, "VALUE_TYPE_WSTRING", get_VALUE_TYPE_WSTRING);Nan::Export(ctx, "VALUE_TYPE_OBJECT", get_VALUE_TYPE_OBJECT);Nan::Export(ctx, "VALUE_TYPE_SIZED_STRING", get_VALUE_TYPE_SIZED_STRING);Nan::Export(ctx, "VALUE_TYPE_BINARY", get_VALUE_TYPE_BINARY);Nan::Export(ctx, "VALUE_TYPE_UBJSON", get_VALUE_TYPE_UBJSON);Nan::Export(ctx, "VALUE_TYPE_TOKEN", get_VALUE_TYPE_TOKEN);
+  Nan::Export(ctx, "VALUE_TYPE_INVALID", get_VALUE_TYPE_INVALID);
+  Nan::Export(ctx, "VALUE_TYPE_BOOL", get_VALUE_TYPE_BOOL);
+  Nan::Export(ctx, "VALUE_TYPE_INT8", get_VALUE_TYPE_INT8);
+  Nan::Export(ctx, "VALUE_TYPE_UINT8", get_VALUE_TYPE_UINT8);
+  Nan::Export(ctx, "VALUE_TYPE_INT16", get_VALUE_TYPE_INT16);
+  Nan::Export(ctx, "VALUE_TYPE_UINT16", get_VALUE_TYPE_UINT16);
+  Nan::Export(ctx, "VALUE_TYPE_INT32", get_VALUE_TYPE_INT32);
+  Nan::Export(ctx, "VALUE_TYPE_UINT32", get_VALUE_TYPE_UINT32);
+  Nan::Export(ctx, "VALUE_TYPE_INT64", get_VALUE_TYPE_INT64);
+  Nan::Export(ctx, "VALUE_TYPE_UINT64", get_VALUE_TYPE_UINT64);
+  Nan::Export(ctx, "VALUE_TYPE_POINTER", get_VALUE_TYPE_POINTER);
+  Nan::Export(ctx, "VALUE_TYPE_FLOAT", get_VALUE_TYPE_FLOAT);
+  Nan::Export(ctx, "VALUE_TYPE_FLOAT32", get_VALUE_TYPE_FLOAT32);
+  Nan::Export(ctx, "VALUE_TYPE_DOUBLE", get_VALUE_TYPE_DOUBLE);
+  Nan::Export(ctx, "VALUE_TYPE_STRING", get_VALUE_TYPE_STRING);
+  Nan::Export(ctx, "VALUE_TYPE_WSTRING", get_VALUE_TYPE_WSTRING);
+  Nan::Export(ctx, "VALUE_TYPE_OBJECT", get_VALUE_TYPE_OBJECT);
+  Nan::Export(ctx, "VALUE_TYPE_SIZED_STRING", get_VALUE_TYPE_SIZED_STRING);
+  Nan::Export(ctx, "VALUE_TYPE_BINARY", get_VALUE_TYPE_BINARY);
+  Nan::Export(ctx, "VALUE_TYPE_UBJSON", get_VALUE_TYPE_UBJSON);
+  Nan::Export(ctx, "VALUE_TYPE_TOKEN", get_VALUE_TYPE_TOKEN);
+
  return RET_OK;
 }
 
@@ -2733,7 +2959,10 @@ static void wrap_input_method(const Nan::FunctionCallbackInfo<v8::Value>& argv) 
 }
 
 ret_t input_method_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "input_method_commit_text", wrap_input_method_commit_text);Nan::Export(ctx, "input_method_dispatch_key", wrap_input_method_dispatch_key);Nan::Export(ctx, "input_method", wrap_input_method);
+  Nan::Export(ctx, "input_method_commit_text", wrap_input_method_commit_text);
+  Nan::Export(ctx, "input_method_dispatch_key", wrap_input_method_dispatch_key);
+  Nan::Export(ctx, "input_method", wrap_input_method);
+
  return RET_OK;
 }
 
@@ -3786,7 +4015,138 @@ static void get_TK_KEY_CANCEL(const Nan::FunctionCallbackInfo<v8::Value>& argv) 
 }
 
 ret_t key_code_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "TK_KEY_RETURN", get_TK_KEY_RETURN);Nan::Export(ctx, "TK_KEY_ESCAPE", get_TK_KEY_ESCAPE);Nan::Export(ctx, "TK_KEY_BACKSPACE", get_TK_KEY_BACKSPACE);Nan::Export(ctx, "TK_KEY_TAB", get_TK_KEY_TAB);Nan::Export(ctx, "TK_KEY_SPACE", get_TK_KEY_SPACE);Nan::Export(ctx, "TK_KEY_EXCLAIM", get_TK_KEY_EXCLAIM);Nan::Export(ctx, "TK_KEY_QUOTEDBL", get_TK_KEY_QUOTEDBL);Nan::Export(ctx, "TK_KEY_HASH", get_TK_KEY_HASH);Nan::Export(ctx, "TK_KEY_PERCENT", get_TK_KEY_PERCENT);Nan::Export(ctx, "TK_KEY_DOLLAR", get_TK_KEY_DOLLAR);Nan::Export(ctx, "TK_KEY_AMPERSAND", get_TK_KEY_AMPERSAND);Nan::Export(ctx, "TK_KEY_QUOTE", get_TK_KEY_QUOTE);Nan::Export(ctx, "TK_KEY_LEFTPAREN", get_TK_KEY_LEFTPAREN);Nan::Export(ctx, "TK_KEY_RIGHTPAREN", get_TK_KEY_RIGHTPAREN);Nan::Export(ctx, "TK_KEY_ASTERISK", get_TK_KEY_ASTERISK);Nan::Export(ctx, "TK_KEY_PLUS", get_TK_KEY_PLUS);Nan::Export(ctx, "TK_KEY_COMMA", get_TK_KEY_COMMA);Nan::Export(ctx, "TK_KEY_MINUS", get_TK_KEY_MINUS);Nan::Export(ctx, "TK_KEY_PERIOD", get_TK_KEY_PERIOD);Nan::Export(ctx, "TK_KEY_SLASH", get_TK_KEY_SLASH);Nan::Export(ctx, "TK_KEY_0", get_TK_KEY_0);Nan::Export(ctx, "TK_KEY_1", get_TK_KEY_1);Nan::Export(ctx, "TK_KEY_2", get_TK_KEY_2);Nan::Export(ctx, "TK_KEY_3", get_TK_KEY_3);Nan::Export(ctx, "TK_KEY_4", get_TK_KEY_4);Nan::Export(ctx, "TK_KEY_5", get_TK_KEY_5);Nan::Export(ctx, "TK_KEY_6", get_TK_KEY_6);Nan::Export(ctx, "TK_KEY_7", get_TK_KEY_7);Nan::Export(ctx, "TK_KEY_8", get_TK_KEY_8);Nan::Export(ctx, "TK_KEY_9", get_TK_KEY_9);Nan::Export(ctx, "TK_KEY_COLON", get_TK_KEY_COLON);Nan::Export(ctx, "TK_KEY_SEMICOLON", get_TK_KEY_SEMICOLON);Nan::Export(ctx, "TK_KEY_LESS", get_TK_KEY_LESS);Nan::Export(ctx, "TK_KEY_EQUAL", get_TK_KEY_EQUAL);Nan::Export(ctx, "TK_KEY_GREATER", get_TK_KEY_GREATER);Nan::Export(ctx, "TK_KEY_QUESTION", get_TK_KEY_QUESTION);Nan::Export(ctx, "TK_KEY_AT", get_TK_KEY_AT);Nan::Export(ctx, "TK_KEY_LEFTBRACKET", get_TK_KEY_LEFTBRACKET);Nan::Export(ctx, "TK_KEY_BACKSLASH", get_TK_KEY_BACKSLASH);Nan::Export(ctx, "TK_KEY_RIGHTBRACKET", get_TK_KEY_RIGHTBRACKET);Nan::Export(ctx, "TK_KEY_CARET", get_TK_KEY_CARET);Nan::Export(ctx, "TK_KEY_UNDERSCORE", get_TK_KEY_UNDERSCORE);Nan::Export(ctx, "TK_KEY_BACKQUOTE", get_TK_KEY_BACKQUOTE);Nan::Export(ctx, "TK_KEY_a", get_TK_KEY_a);Nan::Export(ctx, "TK_KEY_b", get_TK_KEY_b);Nan::Export(ctx, "TK_KEY_c", get_TK_KEY_c);Nan::Export(ctx, "TK_KEY_d", get_TK_KEY_d);Nan::Export(ctx, "TK_KEY_e", get_TK_KEY_e);Nan::Export(ctx, "TK_KEY_f", get_TK_KEY_f);Nan::Export(ctx, "TK_KEY_g", get_TK_KEY_g);Nan::Export(ctx, "TK_KEY_h", get_TK_KEY_h);Nan::Export(ctx, "TK_KEY_i", get_TK_KEY_i);Nan::Export(ctx, "TK_KEY_j", get_TK_KEY_j);Nan::Export(ctx, "TK_KEY_k", get_TK_KEY_k);Nan::Export(ctx, "TK_KEY_l", get_TK_KEY_l);Nan::Export(ctx, "TK_KEY_m", get_TK_KEY_m);Nan::Export(ctx, "TK_KEY_n", get_TK_KEY_n);Nan::Export(ctx, "TK_KEY_o", get_TK_KEY_o);Nan::Export(ctx, "TK_KEY_p", get_TK_KEY_p);Nan::Export(ctx, "TK_KEY_q", get_TK_KEY_q);Nan::Export(ctx, "TK_KEY_r", get_TK_KEY_r);Nan::Export(ctx, "TK_KEY_s", get_TK_KEY_s);Nan::Export(ctx, "TK_KEY_t", get_TK_KEY_t);Nan::Export(ctx, "TK_KEY_u", get_TK_KEY_u);Nan::Export(ctx, "TK_KEY_v", get_TK_KEY_v);Nan::Export(ctx, "TK_KEY_w", get_TK_KEY_w);Nan::Export(ctx, "TK_KEY_x", get_TK_KEY_x);Nan::Export(ctx, "TK_KEY_y", get_TK_KEY_y);Nan::Export(ctx, "TK_KEY_z", get_TK_KEY_z);Nan::Export(ctx, "TK_KEY_A", get_TK_KEY_A);Nan::Export(ctx, "TK_KEY_B", get_TK_KEY_B);Nan::Export(ctx, "TK_KEY_C", get_TK_KEY_C);Nan::Export(ctx, "TK_KEY_D", get_TK_KEY_D);Nan::Export(ctx, "TK_KEY_E", get_TK_KEY_E);Nan::Export(ctx, "TK_KEY_F", get_TK_KEY_F);Nan::Export(ctx, "TK_KEY_G", get_TK_KEY_G);Nan::Export(ctx, "TK_KEY_H", get_TK_KEY_H);Nan::Export(ctx, "TK_KEY_I", get_TK_KEY_I);Nan::Export(ctx, "TK_KEY_J", get_TK_KEY_J);Nan::Export(ctx, "TK_KEY_K", get_TK_KEY_K);Nan::Export(ctx, "TK_KEY_L", get_TK_KEY_L);Nan::Export(ctx, "TK_KEY_M", get_TK_KEY_M);Nan::Export(ctx, "TK_KEY_N", get_TK_KEY_N);Nan::Export(ctx, "TK_KEY_O", get_TK_KEY_O);Nan::Export(ctx, "TK_KEY_P", get_TK_KEY_P);Nan::Export(ctx, "TK_KEY_Q", get_TK_KEY_Q);Nan::Export(ctx, "TK_KEY_R", get_TK_KEY_R);Nan::Export(ctx, "TK_KEY_S", get_TK_KEY_S);Nan::Export(ctx, "TK_KEY_T", get_TK_KEY_T);Nan::Export(ctx, "TK_KEY_U", get_TK_KEY_U);Nan::Export(ctx, "TK_KEY_V", get_TK_KEY_V);Nan::Export(ctx, "TK_KEY_W", get_TK_KEY_W);Nan::Export(ctx, "TK_KEY_X", get_TK_KEY_X);Nan::Export(ctx, "TK_KEY_Y", get_TK_KEY_Y);Nan::Export(ctx, "TK_KEY_Z", get_TK_KEY_Z);Nan::Export(ctx, "TK_KEY_DOT", get_TK_KEY_DOT);Nan::Export(ctx, "TK_KEY_DELETE", get_TK_KEY_DELETE);Nan::Export(ctx, "TK_KEY_LEFTBRACE", get_TK_KEY_LEFTBRACE);Nan::Export(ctx, "TK_KEY_RIGHTBRACE", get_TK_KEY_RIGHTBRACE);Nan::Export(ctx, "TK_KEY_LSHIFT", get_TK_KEY_LSHIFT);Nan::Export(ctx, "TK_KEY_RSHIFT", get_TK_KEY_RSHIFT);Nan::Export(ctx, "TK_KEY_LCTRL", get_TK_KEY_LCTRL);Nan::Export(ctx, "TK_KEY_RCTRL", get_TK_KEY_RCTRL);Nan::Export(ctx, "TK_KEY_LALT", get_TK_KEY_LALT);Nan::Export(ctx, "TK_KEY_RALT", get_TK_KEY_RALT);Nan::Export(ctx, "TK_KEY_CAPSLOCK", get_TK_KEY_CAPSLOCK);Nan::Export(ctx, "TK_KEY_HOME", get_TK_KEY_HOME);Nan::Export(ctx, "TK_KEY_END", get_TK_KEY_END);Nan::Export(ctx, "TK_KEY_INSERT", get_TK_KEY_INSERT);Nan::Export(ctx, "TK_KEY_UP", get_TK_KEY_UP);Nan::Export(ctx, "TK_KEY_DOWN", get_TK_KEY_DOWN);Nan::Export(ctx, "TK_KEY_LEFT", get_TK_KEY_LEFT);Nan::Export(ctx, "TK_KEY_RIGHT", get_TK_KEY_RIGHT);Nan::Export(ctx, "TK_KEY_PAGEUP", get_TK_KEY_PAGEUP);Nan::Export(ctx, "TK_KEY_PAGEDOWN", get_TK_KEY_PAGEDOWN);Nan::Export(ctx, "TK_KEY_F1", get_TK_KEY_F1);Nan::Export(ctx, "TK_KEY_F2", get_TK_KEY_F2);Nan::Export(ctx, "TK_KEY_F3", get_TK_KEY_F3);Nan::Export(ctx, "TK_KEY_F4", get_TK_KEY_F4);Nan::Export(ctx, "TK_KEY_F5", get_TK_KEY_F5);Nan::Export(ctx, "TK_KEY_F6", get_TK_KEY_F6);Nan::Export(ctx, "TK_KEY_F7", get_TK_KEY_F7);Nan::Export(ctx, "TK_KEY_F8", get_TK_KEY_F8);Nan::Export(ctx, "TK_KEY_F9", get_TK_KEY_F9);Nan::Export(ctx, "TK_KEY_F10", get_TK_KEY_F10);Nan::Export(ctx, "TK_KEY_F11", get_TK_KEY_F11);Nan::Export(ctx, "TK_KEY_F12", get_TK_KEY_F12);Nan::Export(ctx, "TK_KEY_MENU", get_TK_KEY_MENU);Nan::Export(ctx, "TK_KEY_COMMAND", get_TK_KEY_COMMAND);Nan::Export(ctx, "TK_KEY_BACK", get_TK_KEY_BACK);Nan::Export(ctx, "TK_KEY_CANCEL", get_TK_KEY_CANCEL);
+  Nan::Export(ctx, "TK_KEY_RETURN", get_TK_KEY_RETURN);
+  Nan::Export(ctx, "TK_KEY_ESCAPE", get_TK_KEY_ESCAPE);
+  Nan::Export(ctx, "TK_KEY_BACKSPACE", get_TK_KEY_BACKSPACE);
+  Nan::Export(ctx, "TK_KEY_TAB", get_TK_KEY_TAB);
+  Nan::Export(ctx, "TK_KEY_SPACE", get_TK_KEY_SPACE);
+  Nan::Export(ctx, "TK_KEY_EXCLAIM", get_TK_KEY_EXCLAIM);
+  Nan::Export(ctx, "TK_KEY_QUOTEDBL", get_TK_KEY_QUOTEDBL);
+  Nan::Export(ctx, "TK_KEY_HASH", get_TK_KEY_HASH);
+  Nan::Export(ctx, "TK_KEY_PERCENT", get_TK_KEY_PERCENT);
+  Nan::Export(ctx, "TK_KEY_DOLLAR", get_TK_KEY_DOLLAR);
+  Nan::Export(ctx, "TK_KEY_AMPERSAND", get_TK_KEY_AMPERSAND);
+  Nan::Export(ctx, "TK_KEY_QUOTE", get_TK_KEY_QUOTE);
+  Nan::Export(ctx, "TK_KEY_LEFTPAREN", get_TK_KEY_LEFTPAREN);
+  Nan::Export(ctx, "TK_KEY_RIGHTPAREN", get_TK_KEY_RIGHTPAREN);
+  Nan::Export(ctx, "TK_KEY_ASTERISK", get_TK_KEY_ASTERISK);
+  Nan::Export(ctx, "TK_KEY_PLUS", get_TK_KEY_PLUS);
+  Nan::Export(ctx, "TK_KEY_COMMA", get_TK_KEY_COMMA);
+  Nan::Export(ctx, "TK_KEY_MINUS", get_TK_KEY_MINUS);
+  Nan::Export(ctx, "TK_KEY_PERIOD", get_TK_KEY_PERIOD);
+  Nan::Export(ctx, "TK_KEY_SLASH", get_TK_KEY_SLASH);
+  Nan::Export(ctx, "TK_KEY_0", get_TK_KEY_0);
+  Nan::Export(ctx, "TK_KEY_1", get_TK_KEY_1);
+  Nan::Export(ctx, "TK_KEY_2", get_TK_KEY_2);
+  Nan::Export(ctx, "TK_KEY_3", get_TK_KEY_3);
+  Nan::Export(ctx, "TK_KEY_4", get_TK_KEY_4);
+  Nan::Export(ctx, "TK_KEY_5", get_TK_KEY_5);
+  Nan::Export(ctx, "TK_KEY_6", get_TK_KEY_6);
+  Nan::Export(ctx, "TK_KEY_7", get_TK_KEY_7);
+  Nan::Export(ctx, "TK_KEY_8", get_TK_KEY_8);
+  Nan::Export(ctx, "TK_KEY_9", get_TK_KEY_9);
+  Nan::Export(ctx, "TK_KEY_COLON", get_TK_KEY_COLON);
+  Nan::Export(ctx, "TK_KEY_SEMICOLON", get_TK_KEY_SEMICOLON);
+  Nan::Export(ctx, "TK_KEY_LESS", get_TK_KEY_LESS);
+  Nan::Export(ctx, "TK_KEY_EQUAL", get_TK_KEY_EQUAL);
+  Nan::Export(ctx, "TK_KEY_GREATER", get_TK_KEY_GREATER);
+  Nan::Export(ctx, "TK_KEY_QUESTION", get_TK_KEY_QUESTION);
+  Nan::Export(ctx, "TK_KEY_AT", get_TK_KEY_AT);
+  Nan::Export(ctx, "TK_KEY_LEFTBRACKET", get_TK_KEY_LEFTBRACKET);
+  Nan::Export(ctx, "TK_KEY_BACKSLASH", get_TK_KEY_BACKSLASH);
+  Nan::Export(ctx, "TK_KEY_RIGHTBRACKET", get_TK_KEY_RIGHTBRACKET);
+  Nan::Export(ctx, "TK_KEY_CARET", get_TK_KEY_CARET);
+  Nan::Export(ctx, "TK_KEY_UNDERSCORE", get_TK_KEY_UNDERSCORE);
+  Nan::Export(ctx, "TK_KEY_BACKQUOTE", get_TK_KEY_BACKQUOTE);
+  Nan::Export(ctx, "TK_KEY_a", get_TK_KEY_a);
+  Nan::Export(ctx, "TK_KEY_b", get_TK_KEY_b);
+  Nan::Export(ctx, "TK_KEY_c", get_TK_KEY_c);
+  Nan::Export(ctx, "TK_KEY_d", get_TK_KEY_d);
+  Nan::Export(ctx, "TK_KEY_e", get_TK_KEY_e);
+  Nan::Export(ctx, "TK_KEY_f", get_TK_KEY_f);
+  Nan::Export(ctx, "TK_KEY_g", get_TK_KEY_g);
+  Nan::Export(ctx, "TK_KEY_h", get_TK_KEY_h);
+  Nan::Export(ctx, "TK_KEY_i", get_TK_KEY_i);
+  Nan::Export(ctx, "TK_KEY_j", get_TK_KEY_j);
+  Nan::Export(ctx, "TK_KEY_k", get_TK_KEY_k);
+  Nan::Export(ctx, "TK_KEY_l", get_TK_KEY_l);
+  Nan::Export(ctx, "TK_KEY_m", get_TK_KEY_m);
+  Nan::Export(ctx, "TK_KEY_n", get_TK_KEY_n);
+  Nan::Export(ctx, "TK_KEY_o", get_TK_KEY_o);
+  Nan::Export(ctx, "TK_KEY_p", get_TK_KEY_p);
+  Nan::Export(ctx, "TK_KEY_q", get_TK_KEY_q);
+  Nan::Export(ctx, "TK_KEY_r", get_TK_KEY_r);
+  Nan::Export(ctx, "TK_KEY_s", get_TK_KEY_s);
+  Nan::Export(ctx, "TK_KEY_t", get_TK_KEY_t);
+  Nan::Export(ctx, "TK_KEY_u", get_TK_KEY_u);
+  Nan::Export(ctx, "TK_KEY_v", get_TK_KEY_v);
+  Nan::Export(ctx, "TK_KEY_w", get_TK_KEY_w);
+  Nan::Export(ctx, "TK_KEY_x", get_TK_KEY_x);
+  Nan::Export(ctx, "TK_KEY_y", get_TK_KEY_y);
+  Nan::Export(ctx, "TK_KEY_z", get_TK_KEY_z);
+  Nan::Export(ctx, "TK_KEY_A", get_TK_KEY_A);
+  Nan::Export(ctx, "TK_KEY_B", get_TK_KEY_B);
+  Nan::Export(ctx, "TK_KEY_C", get_TK_KEY_C);
+  Nan::Export(ctx, "TK_KEY_D", get_TK_KEY_D);
+  Nan::Export(ctx, "TK_KEY_E", get_TK_KEY_E);
+  Nan::Export(ctx, "TK_KEY_F", get_TK_KEY_F);
+  Nan::Export(ctx, "TK_KEY_G", get_TK_KEY_G);
+  Nan::Export(ctx, "TK_KEY_H", get_TK_KEY_H);
+  Nan::Export(ctx, "TK_KEY_I", get_TK_KEY_I);
+  Nan::Export(ctx, "TK_KEY_J", get_TK_KEY_J);
+  Nan::Export(ctx, "TK_KEY_K", get_TK_KEY_K);
+  Nan::Export(ctx, "TK_KEY_L", get_TK_KEY_L);
+  Nan::Export(ctx, "TK_KEY_M", get_TK_KEY_M);
+  Nan::Export(ctx, "TK_KEY_N", get_TK_KEY_N);
+  Nan::Export(ctx, "TK_KEY_O", get_TK_KEY_O);
+  Nan::Export(ctx, "TK_KEY_P", get_TK_KEY_P);
+  Nan::Export(ctx, "TK_KEY_Q", get_TK_KEY_Q);
+  Nan::Export(ctx, "TK_KEY_R", get_TK_KEY_R);
+  Nan::Export(ctx, "TK_KEY_S", get_TK_KEY_S);
+  Nan::Export(ctx, "TK_KEY_T", get_TK_KEY_T);
+  Nan::Export(ctx, "TK_KEY_U", get_TK_KEY_U);
+  Nan::Export(ctx, "TK_KEY_V", get_TK_KEY_V);
+  Nan::Export(ctx, "TK_KEY_W", get_TK_KEY_W);
+  Nan::Export(ctx, "TK_KEY_X", get_TK_KEY_X);
+  Nan::Export(ctx, "TK_KEY_Y", get_TK_KEY_Y);
+  Nan::Export(ctx, "TK_KEY_Z", get_TK_KEY_Z);
+  Nan::Export(ctx, "TK_KEY_DOT", get_TK_KEY_DOT);
+  Nan::Export(ctx, "TK_KEY_DELETE", get_TK_KEY_DELETE);
+  Nan::Export(ctx, "TK_KEY_LEFTBRACE", get_TK_KEY_LEFTBRACE);
+  Nan::Export(ctx, "TK_KEY_RIGHTBRACE", get_TK_KEY_RIGHTBRACE);
+  Nan::Export(ctx, "TK_KEY_LSHIFT", get_TK_KEY_LSHIFT);
+  Nan::Export(ctx, "TK_KEY_RSHIFT", get_TK_KEY_RSHIFT);
+  Nan::Export(ctx, "TK_KEY_LCTRL", get_TK_KEY_LCTRL);
+  Nan::Export(ctx, "TK_KEY_RCTRL", get_TK_KEY_RCTRL);
+  Nan::Export(ctx, "TK_KEY_LALT", get_TK_KEY_LALT);
+  Nan::Export(ctx, "TK_KEY_RALT", get_TK_KEY_RALT);
+  Nan::Export(ctx, "TK_KEY_CAPSLOCK", get_TK_KEY_CAPSLOCK);
+  Nan::Export(ctx, "TK_KEY_HOME", get_TK_KEY_HOME);
+  Nan::Export(ctx, "TK_KEY_END", get_TK_KEY_END);
+  Nan::Export(ctx, "TK_KEY_INSERT", get_TK_KEY_INSERT);
+  Nan::Export(ctx, "TK_KEY_UP", get_TK_KEY_UP);
+  Nan::Export(ctx, "TK_KEY_DOWN", get_TK_KEY_DOWN);
+  Nan::Export(ctx, "TK_KEY_LEFT", get_TK_KEY_LEFT);
+  Nan::Export(ctx, "TK_KEY_RIGHT", get_TK_KEY_RIGHT);
+  Nan::Export(ctx, "TK_KEY_PAGEUP", get_TK_KEY_PAGEUP);
+  Nan::Export(ctx, "TK_KEY_PAGEDOWN", get_TK_KEY_PAGEDOWN);
+  Nan::Export(ctx, "TK_KEY_F1", get_TK_KEY_F1);
+  Nan::Export(ctx, "TK_KEY_F2", get_TK_KEY_F2);
+  Nan::Export(ctx, "TK_KEY_F3", get_TK_KEY_F3);
+  Nan::Export(ctx, "TK_KEY_F4", get_TK_KEY_F4);
+  Nan::Export(ctx, "TK_KEY_F5", get_TK_KEY_F5);
+  Nan::Export(ctx, "TK_KEY_F6", get_TK_KEY_F6);
+  Nan::Export(ctx, "TK_KEY_F7", get_TK_KEY_F7);
+  Nan::Export(ctx, "TK_KEY_F8", get_TK_KEY_F8);
+  Nan::Export(ctx, "TK_KEY_F9", get_TK_KEY_F9);
+  Nan::Export(ctx, "TK_KEY_F10", get_TK_KEY_F10);
+  Nan::Export(ctx, "TK_KEY_F11", get_TK_KEY_F11);
+  Nan::Export(ctx, "TK_KEY_F12", get_TK_KEY_F12);
+  Nan::Export(ctx, "TK_KEY_MENU", get_TK_KEY_MENU);
+  Nan::Export(ctx, "TK_KEY_COMMAND", get_TK_KEY_COMMAND);
+  Nan::Export(ctx, "TK_KEY_BACK", get_TK_KEY_BACK);
+  Nan::Export(ctx, "TK_KEY_CANCEL", get_TK_KEY_CANCEL);
+
  return RET_OK;
 }
 
@@ -3855,7 +4215,11 @@ static void wrap_locale_info_off(const Nan::FunctionCallbackInfo<v8::Value>& arg
 }
 
 ret_t locale_info_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "locale_info", wrap_locale_info);Nan::Export(ctx, "locale_info_tr", wrap_locale_info_tr);Nan::Export(ctx, "locale_info_change", wrap_locale_info_change);Nan::Export(ctx, "locale_info_off", wrap_locale_info_off);
+  Nan::Export(ctx, "locale_info", wrap_locale_info);
+  Nan::Export(ctx, "locale_info_tr", wrap_locale_info_tr);
+  Nan::Export(ctx, "locale_info_change", wrap_locale_info_change);
+  Nan::Export(ctx, "locale_info_off", wrap_locale_info_off);
+
  return RET_OK;
 }
 
@@ -4132,7 +4496,41 @@ static void get_STYLE_ID_SELF_LAYOUT(const Nan::FunctionCallbackInfo<v8::Value>&
 }
 
 ret_t style_id_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "STYLE_ID_BG_COLOR", get_STYLE_ID_BG_COLOR);Nan::Export(ctx, "STYLE_ID_FG_COLOR", get_STYLE_ID_FG_COLOR);Nan::Export(ctx, "STYLE_ID_MASK_COLOR", get_STYLE_ID_MASK_COLOR);Nan::Export(ctx, "STYLE_ID_FONT_NAME", get_STYLE_ID_FONT_NAME);Nan::Export(ctx, "STYLE_ID_FONT_SIZE", get_STYLE_ID_FONT_SIZE);Nan::Export(ctx, "STYLE_ID_FONT_STYLE", get_STYLE_ID_FONT_STYLE);Nan::Export(ctx, "STYLE_ID_TEXT_COLOR", get_STYLE_ID_TEXT_COLOR);Nan::Export(ctx, "STYLE_ID_TIPS_TEXT_COLOR", get_STYLE_ID_TIPS_TEXT_COLOR);Nan::Export(ctx, "STYLE_ID_TEXT_ALIGN_H", get_STYLE_ID_TEXT_ALIGN_H);Nan::Export(ctx, "STYLE_ID_TEXT_ALIGN_V", get_STYLE_ID_TEXT_ALIGN_V);Nan::Export(ctx, "STYLE_ID_BORDER_COLOR", get_STYLE_ID_BORDER_COLOR);Nan::Export(ctx, "STYLE_ID_BORDER_WIDTH", get_STYLE_ID_BORDER_WIDTH);Nan::Export(ctx, "STYLE_ID_BORDER", get_STYLE_ID_BORDER);Nan::Export(ctx, "STYLE_ID_BG_IMAGE", get_STYLE_ID_BG_IMAGE);Nan::Export(ctx, "STYLE_ID_BG_IMAGE_DRAW_TYPE", get_STYLE_ID_BG_IMAGE_DRAW_TYPE);Nan::Export(ctx, "STYLE_ID_ICON", get_STYLE_ID_ICON);Nan::Export(ctx, "STYLE_ID_FG_IMAGE", get_STYLE_ID_FG_IMAGE);Nan::Export(ctx, "STYLE_ID_FG_IMAGE_DRAW_TYPE", get_STYLE_ID_FG_IMAGE_DRAW_TYPE);Nan::Export(ctx, "STYLE_ID_SPACER", get_STYLE_ID_SPACER);Nan::Export(ctx, "STYLE_ID_MARGIN", get_STYLE_ID_MARGIN);Nan::Export(ctx, "STYLE_ID_MARGIN_LEFT", get_STYLE_ID_MARGIN_LEFT);Nan::Export(ctx, "STYLE_ID_MARGIN_RIGHT", get_STYLE_ID_MARGIN_RIGHT);Nan::Export(ctx, "STYLE_ID_MARGIN_TOP", get_STYLE_ID_MARGIN_TOP);Nan::Export(ctx, "STYLE_ID_MARGIN_BOTTOM", get_STYLE_ID_MARGIN_BOTTOM);Nan::Export(ctx, "STYLE_ID_ICON_AT", get_STYLE_ID_ICON_AT);Nan::Export(ctx, "STYLE_ID_ACTIVE_ICON", get_STYLE_ID_ACTIVE_ICON);Nan::Export(ctx, "STYLE_ID_X_OFFSET", get_STYLE_ID_X_OFFSET);Nan::Export(ctx, "STYLE_ID_Y_OFFSET", get_STYLE_ID_Y_OFFSET);Nan::Export(ctx, "STYLE_ID_SELECTED_BG_COLOR", get_STYLE_ID_SELECTED_BG_COLOR);Nan::Export(ctx, "STYLE_ID_SELECTED_FG_COLOR", get_STYLE_ID_SELECTED_FG_COLOR);Nan::Export(ctx, "STYLE_ID_SELECTED_TEXT_COLOR", get_STYLE_ID_SELECTED_TEXT_COLOR);Nan::Export(ctx, "STYLE_ID_ROUND_RADIUS", get_STYLE_ID_ROUND_RADIUS);Nan::Export(ctx, "STYLE_ID_CHILDREN_LAYOUT", get_STYLE_ID_CHILDREN_LAYOUT);Nan::Export(ctx, "STYLE_ID_SELF_LAYOUT", get_STYLE_ID_SELF_LAYOUT);
+  Nan::Export(ctx, "STYLE_ID_BG_COLOR", get_STYLE_ID_BG_COLOR);
+  Nan::Export(ctx, "STYLE_ID_FG_COLOR", get_STYLE_ID_FG_COLOR);
+  Nan::Export(ctx, "STYLE_ID_MASK_COLOR", get_STYLE_ID_MASK_COLOR);
+  Nan::Export(ctx, "STYLE_ID_FONT_NAME", get_STYLE_ID_FONT_NAME);
+  Nan::Export(ctx, "STYLE_ID_FONT_SIZE", get_STYLE_ID_FONT_SIZE);
+  Nan::Export(ctx, "STYLE_ID_FONT_STYLE", get_STYLE_ID_FONT_STYLE);
+  Nan::Export(ctx, "STYLE_ID_TEXT_COLOR", get_STYLE_ID_TEXT_COLOR);
+  Nan::Export(ctx, "STYLE_ID_TIPS_TEXT_COLOR", get_STYLE_ID_TIPS_TEXT_COLOR);
+  Nan::Export(ctx, "STYLE_ID_TEXT_ALIGN_H", get_STYLE_ID_TEXT_ALIGN_H);
+  Nan::Export(ctx, "STYLE_ID_TEXT_ALIGN_V", get_STYLE_ID_TEXT_ALIGN_V);
+  Nan::Export(ctx, "STYLE_ID_BORDER_COLOR", get_STYLE_ID_BORDER_COLOR);
+  Nan::Export(ctx, "STYLE_ID_BORDER_WIDTH", get_STYLE_ID_BORDER_WIDTH);
+  Nan::Export(ctx, "STYLE_ID_BORDER", get_STYLE_ID_BORDER);
+  Nan::Export(ctx, "STYLE_ID_BG_IMAGE", get_STYLE_ID_BG_IMAGE);
+  Nan::Export(ctx, "STYLE_ID_BG_IMAGE_DRAW_TYPE", get_STYLE_ID_BG_IMAGE_DRAW_TYPE);
+  Nan::Export(ctx, "STYLE_ID_ICON", get_STYLE_ID_ICON);
+  Nan::Export(ctx, "STYLE_ID_FG_IMAGE", get_STYLE_ID_FG_IMAGE);
+  Nan::Export(ctx, "STYLE_ID_FG_IMAGE_DRAW_TYPE", get_STYLE_ID_FG_IMAGE_DRAW_TYPE);
+  Nan::Export(ctx, "STYLE_ID_SPACER", get_STYLE_ID_SPACER);
+  Nan::Export(ctx, "STYLE_ID_MARGIN", get_STYLE_ID_MARGIN);
+  Nan::Export(ctx, "STYLE_ID_MARGIN_LEFT", get_STYLE_ID_MARGIN_LEFT);
+  Nan::Export(ctx, "STYLE_ID_MARGIN_RIGHT", get_STYLE_ID_MARGIN_RIGHT);
+  Nan::Export(ctx, "STYLE_ID_MARGIN_TOP", get_STYLE_ID_MARGIN_TOP);
+  Nan::Export(ctx, "STYLE_ID_MARGIN_BOTTOM", get_STYLE_ID_MARGIN_BOTTOM);
+  Nan::Export(ctx, "STYLE_ID_ICON_AT", get_STYLE_ID_ICON_AT);
+  Nan::Export(ctx, "STYLE_ID_ACTIVE_ICON", get_STYLE_ID_ACTIVE_ICON);
+  Nan::Export(ctx, "STYLE_ID_X_OFFSET", get_STYLE_ID_X_OFFSET);
+  Nan::Export(ctx, "STYLE_ID_Y_OFFSET", get_STYLE_ID_Y_OFFSET);
+  Nan::Export(ctx, "STYLE_ID_SELECTED_BG_COLOR", get_STYLE_ID_SELECTED_BG_COLOR);
+  Nan::Export(ctx, "STYLE_ID_SELECTED_FG_COLOR", get_STYLE_ID_SELECTED_FG_COLOR);
+  Nan::Export(ctx, "STYLE_ID_SELECTED_TEXT_COLOR", get_STYLE_ID_SELECTED_TEXT_COLOR);
+  Nan::Export(ctx, "STYLE_ID_ROUND_RADIUS", get_STYLE_ID_ROUND_RADIUS);
+  Nan::Export(ctx, "STYLE_ID_CHILDREN_LAYOUT", get_STYLE_ID_CHILDREN_LAYOUT);
+  Nan::Export(ctx, "STYLE_ID_SELF_LAYOUT", get_STYLE_ID_SELF_LAYOUT);
+
  return RET_OK;
 }
 
@@ -4236,7 +4634,13 @@ static void wrap_style_is_mutable(const Nan::FunctionCallbackInfo<v8::Value>& ar
 }
 
 ret_t style_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "style_notify_widget_state_changed", wrap_style_notify_widget_state_changed);Nan::Export(ctx, "style_is_valid", wrap_style_is_valid);Nan::Export(ctx, "style_get_int", wrap_style_get_int);Nan::Export(ctx, "style_get_str", wrap_style_get_str);Nan::Export(ctx, "style_set", wrap_style_set);Nan::Export(ctx, "style_is_mutable", wrap_style_is_mutable);
+  Nan::Export(ctx, "style_notify_widget_state_changed", wrap_style_notify_widget_state_changed);
+  Nan::Export(ctx, "style_is_valid", wrap_style_is_valid);
+  Nan::Export(ctx, "style_get_int", wrap_style_get_int);
+  Nan::Export(ctx, "style_get_str", wrap_style_get_str);
+  Nan::Export(ctx, "style_set", wrap_style_set);
+  Nan::Export(ctx, "style_is_mutable", wrap_style_is_mutable);
+
  return RET_OK;
 }
 
@@ -4254,7 +4658,8 @@ static void wrap_theme(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
 }
 
 ret_t theme_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "theme", wrap_theme);
+  Nan::Export(ctx, "theme", wrap_theme);
+
  return RET_OK;
 }
 
@@ -4302,7 +4707,11 @@ static void wrap_timer_modify(const Nan::FunctionCallbackInfo<v8::Value>& argv) 
 }
 
 ret_t timer_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "timer_add", wrap_timer_add);Nan::Export(ctx, "timer_remove", wrap_timer_remove);Nan::Export(ctx, "timer_reset", wrap_timer_reset);Nan::Export(ctx, "timer_modify", wrap_timer_modify);
+  Nan::Export(ctx, "timer_add", wrap_timer_add);
+  Nan::Export(ctx, "timer_remove", wrap_timer_remove);
+  Nan::Export(ctx, "timer_reset", wrap_timer_reset);
+  Nan::Export(ctx, "timer_modify", wrap_timer_modify);
+
  return RET_OK;
 }
 
@@ -4339,7 +4748,11 @@ static void get_ALIGN_V_BOTTOM(const Nan::FunctionCallbackInfo<v8::Value>& argv)
 }
 
 ret_t align_v_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "ALIGN_V_NONE", get_ALIGN_V_NONE);Nan::Export(ctx, "ALIGN_V_MIDDLE", get_ALIGN_V_MIDDLE);Nan::Export(ctx, "ALIGN_V_TOP", get_ALIGN_V_TOP);Nan::Export(ctx, "ALIGN_V_BOTTOM", get_ALIGN_V_BOTTOM);
+  Nan::Export(ctx, "ALIGN_V_NONE", get_ALIGN_V_NONE);
+  Nan::Export(ctx, "ALIGN_V_MIDDLE", get_ALIGN_V_MIDDLE);
+  Nan::Export(ctx, "ALIGN_V_TOP", get_ALIGN_V_TOP);
+  Nan::Export(ctx, "ALIGN_V_BOTTOM", get_ALIGN_V_BOTTOM);
+
  return RET_OK;
 }
 
@@ -4376,7 +4789,11 @@ static void get_ALIGN_H_RIGHT(const Nan::FunctionCallbackInfo<v8::Value>& argv) 
 }
 
 ret_t align_h_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "ALIGN_H_NONE", get_ALIGN_H_NONE);Nan::Export(ctx, "ALIGN_H_CENTER", get_ALIGN_H_CENTER);Nan::Export(ctx, "ALIGN_H_LEFT", get_ALIGN_H_LEFT);Nan::Export(ctx, "ALIGN_H_RIGHT", get_ALIGN_H_RIGHT);
+  Nan::Export(ctx, "ALIGN_H_NONE", get_ALIGN_H_NONE);
+  Nan::Export(ctx, "ALIGN_H_CENTER", get_ALIGN_H_CENTER);
+  Nan::Export(ctx, "ALIGN_H_LEFT", get_ALIGN_H_LEFT);
+  Nan::Export(ctx, "ALIGN_H_RIGHT", get_ALIGN_H_RIGHT);
+
  return RET_OK;
 }
 
@@ -4405,7 +4822,10 @@ static void get_APP_DESKTOP(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
 }
 
 ret_t app_type_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "APP_MOBILE", get_APP_MOBILE);Nan::Export(ctx, "APP_SIMULATOR", get_APP_SIMULATOR);Nan::Export(ctx, "APP_DESKTOP", get_APP_DESKTOP);
+  Nan::Export(ctx, "APP_MOBILE", get_APP_MOBILE);
+  Nan::Export(ctx, "APP_SIMULATOR", get_APP_SIMULATOR);
+  Nan::Export(ctx, "APP_DESKTOP", get_APP_DESKTOP);
+
  return RET_OK;
 }
 
@@ -4498,7 +4918,18 @@ static void get_BITMAP_FMT_MONO(const Nan::FunctionCallbackInfo<v8::Value>& argv
 }
 
 ret_t bitmap_format_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "BITMAP_FMT_NONE", get_BITMAP_FMT_NONE);Nan::Export(ctx, "BITMAP_FMT_RGBA8888", get_BITMAP_FMT_RGBA8888);Nan::Export(ctx, "BITMAP_FMT_ABGR8888", get_BITMAP_FMT_ABGR8888);Nan::Export(ctx, "BITMAP_FMT_BGRA8888", get_BITMAP_FMT_BGRA8888);Nan::Export(ctx, "BITMAP_FMT_ARGB8888", get_BITMAP_FMT_ARGB8888);Nan::Export(ctx, "BITMAP_FMT_RGB565", get_BITMAP_FMT_RGB565);Nan::Export(ctx, "BITMAP_FMT_BGR565", get_BITMAP_FMT_BGR565);Nan::Export(ctx, "BITMAP_FMT_RGB888", get_BITMAP_FMT_RGB888);Nan::Export(ctx, "BITMAP_FMT_BGR888", get_BITMAP_FMT_BGR888);Nan::Export(ctx, "BITMAP_FMT_GRAY", get_BITMAP_FMT_GRAY);Nan::Export(ctx, "BITMAP_FMT_MONO", get_BITMAP_FMT_MONO);
+  Nan::Export(ctx, "BITMAP_FMT_NONE", get_BITMAP_FMT_NONE);
+  Nan::Export(ctx, "BITMAP_FMT_RGBA8888", get_BITMAP_FMT_RGBA8888);
+  Nan::Export(ctx, "BITMAP_FMT_ABGR8888", get_BITMAP_FMT_ABGR8888);
+  Nan::Export(ctx, "BITMAP_FMT_BGRA8888", get_BITMAP_FMT_BGRA8888);
+  Nan::Export(ctx, "BITMAP_FMT_ARGB8888", get_BITMAP_FMT_ARGB8888);
+  Nan::Export(ctx, "BITMAP_FMT_RGB565", get_BITMAP_FMT_RGB565);
+  Nan::Export(ctx, "BITMAP_FMT_BGR565", get_BITMAP_FMT_BGR565);
+  Nan::Export(ctx, "BITMAP_FMT_RGB888", get_BITMAP_FMT_RGB888);
+  Nan::Export(ctx, "BITMAP_FMT_BGR888", get_BITMAP_FMT_BGR888);
+  Nan::Export(ctx, "BITMAP_FMT_GRAY", get_BITMAP_FMT_GRAY);
+  Nan::Export(ctx, "BITMAP_FMT_MONO", get_BITMAP_FMT_MONO);
+
  return RET_OK;
 }
 
@@ -4551,7 +4982,13 @@ static void get_BITMAP_FLAG_PREMULTI_ALPHA(const Nan::FunctionCallbackInfo<v8::V
 }
 
 ret_t bitmap_flag_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "BITMAP_FLAG_NONE", get_BITMAP_FLAG_NONE);Nan::Export(ctx, "BITMAP_FLAG_OPAQUE", get_BITMAP_FLAG_OPAQUE);Nan::Export(ctx, "BITMAP_FLAG_IMMUTABLE", get_BITMAP_FLAG_IMMUTABLE);Nan::Export(ctx, "BITMAP_FLAG_TEXTURE", get_BITMAP_FLAG_TEXTURE);Nan::Export(ctx, "BITMAP_FLAG_CHANGED", get_BITMAP_FLAG_CHANGED);Nan::Export(ctx, "BITMAP_FLAG_PREMULTI_ALPHA", get_BITMAP_FLAG_PREMULTI_ALPHA);
+  Nan::Export(ctx, "BITMAP_FLAG_NONE", get_BITMAP_FLAG_NONE);
+  Nan::Export(ctx, "BITMAP_FLAG_OPAQUE", get_BITMAP_FLAG_OPAQUE);
+  Nan::Export(ctx, "BITMAP_FLAG_IMMUTABLE", get_BITMAP_FLAG_IMMUTABLE);
+  Nan::Export(ctx, "BITMAP_FLAG_TEXTURE", get_BITMAP_FLAG_TEXTURE);
+  Nan::Export(ctx, "BITMAP_FLAG_CHANGED", get_BITMAP_FLAG_CHANGED);
+  Nan::Export(ctx, "BITMAP_FLAG_PREMULTI_ALPHA", get_BITMAP_FLAG_PREMULTI_ALPHA);
+
  return RET_OK;
 }
 
@@ -5402,7 +5839,63 @@ static void wrap_vgcanvas_t_get_prop_text_baseline(const Nan::FunctionCallbackIn
 }
 
 ret_t vgcanvas_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "vgcanvas_cast", wrap_vgcanvas_cast);Nan::Export(ctx, "vgcanvas_flush", wrap_vgcanvas_flush);Nan::Export(ctx, "vgcanvas_begin_path", wrap_vgcanvas_begin_path);Nan::Export(ctx, "vgcanvas_move_to", wrap_vgcanvas_move_to);Nan::Export(ctx, "vgcanvas_line_to", wrap_vgcanvas_line_to);Nan::Export(ctx, "vgcanvas_quad_to", wrap_vgcanvas_quad_to);Nan::Export(ctx, "vgcanvas_bezier_to", wrap_vgcanvas_bezier_to);Nan::Export(ctx, "vgcanvas_arc_to", wrap_vgcanvas_arc_to);Nan::Export(ctx, "vgcanvas_arc", wrap_vgcanvas_arc);Nan::Export(ctx, "vgcanvas_is_point_in_path", wrap_vgcanvas_is_point_in_path);Nan::Export(ctx, "vgcanvas_rect", wrap_vgcanvas_rect);Nan::Export(ctx, "vgcanvas_rounded_rect", wrap_vgcanvas_rounded_rect);Nan::Export(ctx, "vgcanvas_ellipse", wrap_vgcanvas_ellipse);Nan::Export(ctx, "vgcanvas_close_path", wrap_vgcanvas_close_path);Nan::Export(ctx, "vgcanvas_path_winding", wrap_vgcanvas_path_winding);Nan::Export(ctx, "vgcanvas_rotate", wrap_vgcanvas_rotate);Nan::Export(ctx, "vgcanvas_scale", wrap_vgcanvas_scale);Nan::Export(ctx, "vgcanvas_translate", wrap_vgcanvas_translate);Nan::Export(ctx, "vgcanvas_transform", wrap_vgcanvas_transform);Nan::Export(ctx, "vgcanvas_set_transform", wrap_vgcanvas_set_transform);Nan::Export(ctx, "vgcanvas_clip_rect", wrap_vgcanvas_clip_rect);Nan::Export(ctx, "vgcanvas_fill", wrap_vgcanvas_fill);Nan::Export(ctx, "vgcanvas_stroke", wrap_vgcanvas_stroke);Nan::Export(ctx, "vgcanvas_paint", wrap_vgcanvas_paint);Nan::Export(ctx, "vgcanvas_set_font", wrap_vgcanvas_set_font);Nan::Export(ctx, "vgcanvas_set_font_size", wrap_vgcanvas_set_font_size);Nan::Export(ctx, "vgcanvas_set_text_align", wrap_vgcanvas_set_text_align);Nan::Export(ctx, "vgcanvas_set_text_baseline", wrap_vgcanvas_set_text_baseline);Nan::Export(ctx, "vgcanvas_fill_text", wrap_vgcanvas_fill_text);Nan::Export(ctx, "vgcanvas_measure_text", wrap_vgcanvas_measure_text);Nan::Export(ctx, "vgcanvas_draw_image", wrap_vgcanvas_draw_image);Nan::Export(ctx, "vgcanvas_draw_icon", wrap_vgcanvas_draw_icon);Nan::Export(ctx, "vgcanvas_set_antialias", wrap_vgcanvas_set_antialias);Nan::Export(ctx, "vgcanvas_set_global_alpha", wrap_vgcanvas_set_global_alpha);Nan::Export(ctx, "vgcanvas_set_line_width", wrap_vgcanvas_set_line_width);Nan::Export(ctx, "vgcanvas_set_fill_color_str", wrap_vgcanvas_set_fill_color_str);Nan::Export(ctx, "vgcanvas_set_stroke_color_str", wrap_vgcanvas_set_stroke_color_str);Nan::Export(ctx, "vgcanvas_set_line_cap", wrap_vgcanvas_set_line_cap);Nan::Export(ctx, "vgcanvas_set_line_join", wrap_vgcanvas_set_line_join);Nan::Export(ctx, "vgcanvas_set_miter_limit", wrap_vgcanvas_set_miter_limit);Nan::Export(ctx, "vgcanvas_save", wrap_vgcanvas_save);Nan::Export(ctx, "vgcanvas_restore", wrap_vgcanvas_restore);Nan::Export(ctx, "vgcanvas_t_get_prop_w", wrap_vgcanvas_t_get_prop_w);Nan::Export(ctx, "vgcanvas_t_get_prop_h", wrap_vgcanvas_t_get_prop_h);Nan::Export(ctx, "vgcanvas_t_get_prop_stride", wrap_vgcanvas_t_get_prop_stride);Nan::Export(ctx, "vgcanvas_t_get_prop_ratio", wrap_vgcanvas_t_get_prop_ratio);Nan::Export(ctx, "vgcanvas_t_get_prop_anti_alias", wrap_vgcanvas_t_get_prop_anti_alias);Nan::Export(ctx, "vgcanvas_t_get_prop_line_width", wrap_vgcanvas_t_get_prop_line_width);Nan::Export(ctx, "vgcanvas_t_get_prop_global_alpha", wrap_vgcanvas_t_get_prop_global_alpha);Nan::Export(ctx, "vgcanvas_t_get_prop_miter_limit", wrap_vgcanvas_t_get_prop_miter_limit);Nan::Export(ctx, "vgcanvas_t_get_prop_line_cap", wrap_vgcanvas_t_get_prop_line_cap);Nan::Export(ctx, "vgcanvas_t_get_prop_line_join", wrap_vgcanvas_t_get_prop_line_join);Nan::Export(ctx, "vgcanvas_t_get_prop_font", wrap_vgcanvas_t_get_prop_font);Nan::Export(ctx, "vgcanvas_t_get_prop_font_size", wrap_vgcanvas_t_get_prop_font_size);Nan::Export(ctx, "vgcanvas_t_get_prop_text_align", wrap_vgcanvas_t_get_prop_text_align);Nan::Export(ctx, "vgcanvas_t_get_prop_text_baseline", wrap_vgcanvas_t_get_prop_text_baseline);
+  Nan::Export(ctx, "vgcanvas_cast", wrap_vgcanvas_cast);
+  Nan::Export(ctx, "vgcanvas_flush", wrap_vgcanvas_flush);
+  Nan::Export(ctx, "vgcanvas_begin_path", wrap_vgcanvas_begin_path);
+  Nan::Export(ctx, "vgcanvas_move_to", wrap_vgcanvas_move_to);
+  Nan::Export(ctx, "vgcanvas_line_to", wrap_vgcanvas_line_to);
+  Nan::Export(ctx, "vgcanvas_quad_to", wrap_vgcanvas_quad_to);
+  Nan::Export(ctx, "vgcanvas_bezier_to", wrap_vgcanvas_bezier_to);
+  Nan::Export(ctx, "vgcanvas_arc_to", wrap_vgcanvas_arc_to);
+  Nan::Export(ctx, "vgcanvas_arc", wrap_vgcanvas_arc);
+  Nan::Export(ctx, "vgcanvas_is_point_in_path", wrap_vgcanvas_is_point_in_path);
+  Nan::Export(ctx, "vgcanvas_rect", wrap_vgcanvas_rect);
+  Nan::Export(ctx, "vgcanvas_rounded_rect", wrap_vgcanvas_rounded_rect);
+  Nan::Export(ctx, "vgcanvas_ellipse", wrap_vgcanvas_ellipse);
+  Nan::Export(ctx, "vgcanvas_close_path", wrap_vgcanvas_close_path);
+  Nan::Export(ctx, "vgcanvas_path_winding", wrap_vgcanvas_path_winding);
+  Nan::Export(ctx, "vgcanvas_rotate", wrap_vgcanvas_rotate);
+  Nan::Export(ctx, "vgcanvas_scale", wrap_vgcanvas_scale);
+  Nan::Export(ctx, "vgcanvas_translate", wrap_vgcanvas_translate);
+  Nan::Export(ctx, "vgcanvas_transform", wrap_vgcanvas_transform);
+  Nan::Export(ctx, "vgcanvas_set_transform", wrap_vgcanvas_set_transform);
+  Nan::Export(ctx, "vgcanvas_clip_rect", wrap_vgcanvas_clip_rect);
+  Nan::Export(ctx, "vgcanvas_fill", wrap_vgcanvas_fill);
+  Nan::Export(ctx, "vgcanvas_stroke", wrap_vgcanvas_stroke);
+  Nan::Export(ctx, "vgcanvas_paint", wrap_vgcanvas_paint);
+  Nan::Export(ctx, "vgcanvas_set_font", wrap_vgcanvas_set_font);
+  Nan::Export(ctx, "vgcanvas_set_font_size", wrap_vgcanvas_set_font_size);
+  Nan::Export(ctx, "vgcanvas_set_text_align", wrap_vgcanvas_set_text_align);
+  Nan::Export(ctx, "vgcanvas_set_text_baseline", wrap_vgcanvas_set_text_baseline);
+  Nan::Export(ctx, "vgcanvas_fill_text", wrap_vgcanvas_fill_text);
+  Nan::Export(ctx, "vgcanvas_measure_text", wrap_vgcanvas_measure_text);
+  Nan::Export(ctx, "vgcanvas_draw_image", wrap_vgcanvas_draw_image);
+  Nan::Export(ctx, "vgcanvas_draw_icon", wrap_vgcanvas_draw_icon);
+  Nan::Export(ctx, "vgcanvas_set_antialias", wrap_vgcanvas_set_antialias);
+  Nan::Export(ctx, "vgcanvas_set_global_alpha", wrap_vgcanvas_set_global_alpha);
+  Nan::Export(ctx, "vgcanvas_set_line_width", wrap_vgcanvas_set_line_width);
+  Nan::Export(ctx, "vgcanvas_set_fill_color_str", wrap_vgcanvas_set_fill_color_str);
+  Nan::Export(ctx, "vgcanvas_set_stroke_color_str", wrap_vgcanvas_set_stroke_color_str);
+  Nan::Export(ctx, "vgcanvas_set_line_cap", wrap_vgcanvas_set_line_cap);
+  Nan::Export(ctx, "vgcanvas_set_line_join", wrap_vgcanvas_set_line_join);
+  Nan::Export(ctx, "vgcanvas_set_miter_limit", wrap_vgcanvas_set_miter_limit);
+  Nan::Export(ctx, "vgcanvas_save", wrap_vgcanvas_save);
+  Nan::Export(ctx, "vgcanvas_restore", wrap_vgcanvas_restore);
+  Nan::Export(ctx, "vgcanvas_t_get_prop_w", wrap_vgcanvas_t_get_prop_w);
+  Nan::Export(ctx, "vgcanvas_t_get_prop_h", wrap_vgcanvas_t_get_prop_h);
+  Nan::Export(ctx, "vgcanvas_t_get_prop_stride", wrap_vgcanvas_t_get_prop_stride);
+  Nan::Export(ctx, "vgcanvas_t_get_prop_ratio", wrap_vgcanvas_t_get_prop_ratio);
+  Nan::Export(ctx, "vgcanvas_t_get_prop_anti_alias", wrap_vgcanvas_t_get_prop_anti_alias);
+  Nan::Export(ctx, "vgcanvas_t_get_prop_line_width", wrap_vgcanvas_t_get_prop_line_width);
+  Nan::Export(ctx, "vgcanvas_t_get_prop_global_alpha", wrap_vgcanvas_t_get_prop_global_alpha);
+  Nan::Export(ctx, "vgcanvas_t_get_prop_miter_limit", wrap_vgcanvas_t_get_prop_miter_limit);
+  Nan::Export(ctx, "vgcanvas_t_get_prop_line_cap", wrap_vgcanvas_t_get_prop_line_cap);
+  Nan::Export(ctx, "vgcanvas_t_get_prop_line_join", wrap_vgcanvas_t_get_prop_line_join);
+  Nan::Export(ctx, "vgcanvas_t_get_prop_font", wrap_vgcanvas_t_get_prop_font);
+  Nan::Export(ctx, "vgcanvas_t_get_prop_font_size", wrap_vgcanvas_t_get_prop_font_size);
+  Nan::Export(ctx, "vgcanvas_t_get_prop_text_align", wrap_vgcanvas_t_get_prop_text_align);
+  Nan::Export(ctx, "vgcanvas_t_get_prop_text_baseline", wrap_vgcanvas_t_get_prop_text_baseline);
+
  return RET_OK;
 }
 
@@ -6407,7 +6900,132 @@ static void get_WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY(const Nan::FunctionCallbackInfo
 }
 
 ret_t widget_prop_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "WIDGET_PROP_EXEC", get_WIDGET_PROP_EXEC);Nan::Export(ctx, "WIDGET_PROP_X", get_WIDGET_PROP_X);Nan::Export(ctx, "WIDGET_PROP_Y", get_WIDGET_PROP_Y);Nan::Export(ctx, "WIDGET_PROP_W", get_WIDGET_PROP_W);Nan::Export(ctx, "WIDGET_PROP_H", get_WIDGET_PROP_H);Nan::Export(ctx, "WIDGET_PROP_CANVAS", get_WIDGET_PROP_CANVAS);Nan::Export(ctx, "WIDGET_PROP_LOCALIZE_OPTIONS", get_WIDGET_PROP_LOCALIZE_OPTIONS);Nan::Export(ctx, "WIDGET_PROP_NATIVE_WINDOW", get_WIDGET_PROP_NATIVE_WINDOW);Nan::Export(ctx, "WIDGET_PROP_HIGHLIGHT", get_WIDGET_PROP_HIGHLIGHT);Nan::Export(ctx, "WIDGET_PROP_BAR_SIZE", get_WIDGET_PROP_BAR_SIZE);Nan::Export(ctx, "WIDGET_PROP_OPACITY", get_WIDGET_PROP_OPACITY);Nan::Export(ctx, "WIDGET_PROP_MIN_W", get_WIDGET_PROP_MIN_W);Nan::Export(ctx, "WIDGET_PROP_MAX_W", get_WIDGET_PROP_MAX_W);Nan::Export(ctx, "WIDGET_PROP_CHILDREN_LAYOUT", get_WIDGET_PROP_CHILDREN_LAYOUT);Nan::Export(ctx, "WIDGET_PROP_LAYOUT", get_WIDGET_PROP_LAYOUT);Nan::Export(ctx, "WIDGET_PROP_SELF_LAYOUT", get_WIDGET_PROP_SELF_LAYOUT);Nan::Export(ctx, "WIDGET_PROP_LAYOUT_W", get_WIDGET_PROP_LAYOUT_W);Nan::Export(ctx, "WIDGET_PROP_LAYOUT_H", get_WIDGET_PROP_LAYOUT_H);Nan::Export(ctx, "WIDGET_PROP_VIRTUAL_W", get_WIDGET_PROP_VIRTUAL_W);Nan::Export(ctx, "WIDGET_PROP_VIRTUAL_H", get_WIDGET_PROP_VIRTUAL_H);Nan::Export(ctx, "WIDGET_PROP_NAME", get_WIDGET_PROP_NAME);Nan::Export(ctx, "WIDGET_PROP_TYPE", get_WIDGET_PROP_TYPE);Nan::Export(ctx, "WIDGET_PROP_CLOSABLE", get_WIDGET_PROP_CLOSABLE);Nan::Export(ctx, "WIDGET_PROP_CURSOR", get_WIDGET_PROP_CURSOR);Nan::Export(ctx, "WIDGET_PROP_VALUE", get_WIDGET_PROP_VALUE);Nan::Export(ctx, "WIDGET_PROP_LENGTH", get_WIDGET_PROP_LENGTH);Nan::Export(ctx, "WIDGET_PROP_TEXT", get_WIDGET_PROP_TEXT);Nan::Export(ctx, "WIDGET_PROP_TR_TEXT", get_WIDGET_PROP_TR_TEXT);Nan::Export(ctx, "WIDGET_PROP_STYLE", get_WIDGET_PROP_STYLE);Nan::Export(ctx, "WIDGET_PROP_ENABLE", get_WIDGET_PROP_ENABLE);Nan::Export(ctx, "WIDGET_PROP_FEEDBACK", get_WIDGET_PROP_FEEDBACK);Nan::Export(ctx, "WIDGET_PROP_FLOATING", get_WIDGET_PROP_FLOATING);Nan::Export(ctx, "WIDGET_PROP_MARGIN", get_WIDGET_PROP_MARGIN);Nan::Export(ctx, "WIDGET_PROP_SPACING", get_WIDGET_PROP_SPACING);Nan::Export(ctx, "WIDGET_PROP_LEFT_MARGIN", get_WIDGET_PROP_LEFT_MARGIN);Nan::Export(ctx, "WIDGET_PROP_RIGHT_MARGIN", get_WIDGET_PROP_RIGHT_MARGIN);Nan::Export(ctx, "WIDGET_PROP_TOP_MARGIN", get_WIDGET_PROP_TOP_MARGIN);Nan::Export(ctx, "WIDGET_PROP_BOTTOM_MARGIN", get_WIDGET_PROP_BOTTOM_MARGIN);Nan::Export(ctx, "WIDGET_PROP_STEP", get_WIDGET_PROP_STEP);Nan::Export(ctx, "WIDGET_PROP_VISIBLE", get_WIDGET_PROP_VISIBLE);Nan::Export(ctx, "WIDGET_PROP_SENSITIVE", get_WIDGET_PROP_SENSITIVE);Nan::Export(ctx, "WIDGET_PROP_ANIMATION", get_WIDGET_PROP_ANIMATION);Nan::Export(ctx, "WIDGET_PROP_ANIM_HINT", get_WIDGET_PROP_ANIM_HINT);Nan::Export(ctx, "WIDGET_PROP_FULLSCREEN", get_WIDGET_PROP_FULLSCREEN);Nan::Export(ctx, "WIDGET_PROP_OPEN_ANIM_HINT", get_WIDGET_PROP_OPEN_ANIM_HINT);Nan::Export(ctx, "WIDGET_PROP_CLOSE_ANIM_HINT", get_WIDGET_PROP_CLOSE_ANIM_HINT);Nan::Export(ctx, "WIDGET_PROP_MIN", get_WIDGET_PROP_MIN);Nan::Export(ctx, "WIDGET_PROP_TIPS", get_WIDGET_PROP_TIPS);Nan::Export(ctx, "WIDGET_PROP_INPUT_TYPE", get_WIDGET_PROP_INPUT_TYPE);Nan::Export(ctx, "WIDGET_PROP_READONLY", get_WIDGET_PROP_READONLY);Nan::Export(ctx, "WIDGET_PROP_PASSWORD_VISIBLE", get_WIDGET_PROP_PASSWORD_VISIBLE);Nan::Export(ctx, "WIDGET_PROP_ACTIVE", get_WIDGET_PROP_ACTIVE);Nan::Export(ctx, "WIDGET_PROP_VERTICAL", get_WIDGET_PROP_VERTICAL);Nan::Export(ctx, "WIDGET_PROP_SHOW_TEXT", get_WIDGET_PROP_SHOW_TEXT);Nan::Export(ctx, "WIDGET_PROP_XOFFSET", get_WIDGET_PROP_XOFFSET);Nan::Export(ctx, "WIDGET_PROP_YOFFSET", get_WIDGET_PROP_YOFFSET);Nan::Export(ctx, "WIDGET_PROP_ALIGN_V", get_WIDGET_PROP_ALIGN_V);Nan::Export(ctx, "WIDGET_PROP_ALIGN_H", get_WIDGET_PROP_ALIGN_H);Nan::Export(ctx, "WIDGET_PROP_AUTO_PLAY", get_WIDGET_PROP_AUTO_PLAY);Nan::Export(ctx, "WIDGET_PROP_LOOP", get_WIDGET_PROP_LOOP);Nan::Export(ctx, "WIDGET_PROP_AUTO_FIX", get_WIDGET_PROP_AUTO_FIX);Nan::Export(ctx, "WIDGET_PROP_SELECT_NONE_WHEN_FOCUSED", get_WIDGET_PROP_SELECT_NONE_WHEN_FOCUSED);Nan::Export(ctx, "WIDGET_PROP_OPEN_IM_WHEN_FOCUSED", get_WIDGET_PROP_OPEN_IM_WHEN_FOCUSED);Nan::Export(ctx, "WIDGET_PROP_X_MIN", get_WIDGET_PROP_X_MIN);Nan::Export(ctx, "WIDGET_PROP_X_MAX", get_WIDGET_PROP_X_MAX);Nan::Export(ctx, "WIDGET_PROP_Y_MIN", get_WIDGET_PROP_Y_MIN);Nan::Export(ctx, "WIDGET_PROP_Y_MAX", get_WIDGET_PROP_Y_MAX);Nan::Export(ctx, "WIDGET_PROP_MAX", get_WIDGET_PROP_MAX);Nan::Export(ctx, "WIDGET_PROP_GRAB_KEYS", get_WIDGET_PROP_GRAB_KEYS);Nan::Export(ctx, "WIDGET_PROP_ROW", get_WIDGET_PROP_ROW);Nan::Export(ctx, "WIDGET_PROP_STATE_FOR_STYLE", get_WIDGET_PROP_STATE_FOR_STYLE);Nan::Export(ctx, "WIDGET_PROP_THEME", get_WIDGET_PROP_THEME);Nan::Export(ctx, "WIDGET_PROP_STAGE", get_WIDGET_PROP_STAGE);Nan::Export(ctx, "WIDGET_PROP_IMAGE_MANAGER", get_WIDGET_PROP_IMAGE_MANAGER);Nan::Export(ctx, "WIDGET_PROP_ASSETS_MANAGER", get_WIDGET_PROP_ASSETS_MANAGER);Nan::Export(ctx, "WIDGET_PROP_LOCALE_INFO", get_WIDGET_PROP_LOCALE_INFO);Nan::Export(ctx, "WIDGET_PROP_FONT_MANAGER", get_WIDGET_PROP_FONT_MANAGER);Nan::Export(ctx, "WIDGET_PROP_THEME_OBJ", get_WIDGET_PROP_THEME_OBJ);Nan::Export(ctx, "WIDGET_PROP_DEFAULT_THEME_OBJ", get_WIDGET_PROP_DEFAULT_THEME_OBJ);Nan::Export(ctx, "WIDGET_PROP_ITEM_WIDTH", get_WIDGET_PROP_ITEM_WIDTH);Nan::Export(ctx, "WIDGET_PROP_ITEM_HEIGHT", get_WIDGET_PROP_ITEM_HEIGHT);Nan::Export(ctx, "WIDGET_PROP_DEFAULT_ITEM_HEIGHT", get_WIDGET_PROP_DEFAULT_ITEM_HEIGHT);Nan::Export(ctx, "WIDGET_PROP_XSLIDABLE", get_WIDGET_PROP_XSLIDABLE);Nan::Export(ctx, "WIDGET_PROP_YSLIDABLE", get_WIDGET_PROP_YSLIDABLE);Nan::Export(ctx, "WIDGET_PROP_REPEAT", get_WIDGET_PROP_REPEAT);Nan::Export(ctx, "WIDGET_PROP_ENABLE_LONG_PRESS", get_WIDGET_PROP_ENABLE_LONG_PRESS);Nan::Export(ctx, "WIDGET_PROP_ANIMATABLE", get_WIDGET_PROP_ANIMATABLE);Nan::Export(ctx, "WIDGET_PROP_AUTO_HIDE_SCROLL_BAR", get_WIDGET_PROP_AUTO_HIDE_SCROLL_BAR);Nan::Export(ctx, "WIDGET_PROP_IMAGE", get_WIDGET_PROP_IMAGE);Nan::Export(ctx, "WIDGET_PROP_FORMAT", get_WIDGET_PROP_FORMAT);Nan::Export(ctx, "WIDGET_PROP_DRAW_TYPE", get_WIDGET_PROP_DRAW_TYPE);Nan::Export(ctx, "WIDGET_PROP_SELECTABLE", get_WIDGET_PROP_SELECTABLE);Nan::Export(ctx, "WIDGET_PROP_CLICKABLE", get_WIDGET_PROP_CLICKABLE);Nan::Export(ctx, "WIDGET_PROP_SCALE_X", get_WIDGET_PROP_SCALE_X);Nan::Export(ctx, "WIDGET_PROP_SCALE_Y", get_WIDGET_PROP_SCALE_Y);Nan::Export(ctx, "WIDGET_PROP_ANCHOR_X", get_WIDGET_PROP_ANCHOR_X);Nan::Export(ctx, "WIDGET_PROP_ANCHOR_Y", get_WIDGET_PROP_ANCHOR_Y);Nan::Export(ctx, "WIDGET_PROP_ROTATION", get_WIDGET_PROP_ROTATION);Nan::Export(ctx, "WIDGET_PROP_COMPACT", get_WIDGET_PROP_COMPACT);Nan::Export(ctx, "WIDGET_PROP_SCROLLABLE", get_WIDGET_PROP_SCROLLABLE);Nan::Export(ctx, "WIDGET_PROP_ICON", get_WIDGET_PROP_ICON);Nan::Export(ctx, "WIDGET_PROP_OPTIONS", get_WIDGET_PROP_OPTIONS);Nan::Export(ctx, "WIDGET_PROP_SELECTED", get_WIDGET_PROP_SELECTED);Nan::Export(ctx, "WIDGET_PROP_CHECKED", get_WIDGET_PROP_CHECKED);Nan::Export(ctx, "WIDGET_PROP_ACTIVE_ICON", get_WIDGET_PROP_ACTIVE_ICON);Nan::Export(ctx, "WIDGET_PROP_LOAD_UI", get_WIDGET_PROP_LOAD_UI);Nan::Export(ctx, "WIDGET_PROP_OPEN_WINDOW", get_WIDGET_PROP_OPEN_WINDOW);Nan::Export(ctx, "WIDGET_PROP_SELECTED_INDEX", get_WIDGET_PROP_SELECTED_INDEX);Nan::Export(ctx, "WIDGET_PROP_CLOSE_WHEN_CLICK", get_WIDGET_PROP_CLOSE_WHEN_CLICK);Nan::Export(ctx, "WIDGET_PROP_CLOSE_WHEN_CLICK_OUTSIDE", get_WIDGET_PROP_CLOSE_WHEN_CLICK_OUTSIDE);Nan::Export(ctx, "WIDGET_PROP_LINE_GAP", get_WIDGET_PROP_LINE_GAP);Nan::Export(ctx, "WIDGET_PROP_BG_COLOR", get_WIDGET_PROP_BG_COLOR);Nan::Export(ctx, "WIDGET_PROP_BORDER_COLOR", get_WIDGET_PROP_BORDER_COLOR);Nan::Export(ctx, "WIDGET_PROP_DELAY", get_WIDGET_PROP_DELAY);Nan::Export(ctx, "WIDGET_PROP_IS_KEYBOARD", get_WIDGET_PROP_IS_KEYBOARD);Nan::Export(ctx, "WIDGET_PROP_FOCUSED", get_WIDGET_PROP_FOCUSED);Nan::Export(ctx, "WIDGET_PROP_FOCUS", get_WIDGET_PROP_FOCUS);Nan::Export(ctx, "WIDGET_PROP_FOCUSABLE", get_WIDGET_PROP_FOCUSABLE);Nan::Export(ctx, "WIDGET_PROP_WITH_FOCUS_STATE", get_WIDGET_PROP_WITH_FOCUS_STATE);Nan::Export(ctx, "WIDGET_PROP_MOVE_FOCUS_PREV_KEY", get_WIDGET_PROP_MOVE_FOCUS_PREV_KEY);Nan::Export(ctx, "WIDGET_PROP_MOVE_FOCUS_NEXT_KEY", get_WIDGET_PROP_MOVE_FOCUS_NEXT_KEY);Nan::Export(ctx, "WIDGET_PROP_MOVE_FOCUS_UP_KEY", get_WIDGET_PROP_MOVE_FOCUS_UP_KEY);Nan::Export(ctx, "WIDGET_PROP_MOVE_FOCUS_DOWN_KEY", get_WIDGET_PROP_MOVE_FOCUS_DOWN_KEY);Nan::Export(ctx, "WIDGET_PROP_MOVE_FOCUS_LEFT_KEY", get_WIDGET_PROP_MOVE_FOCUS_LEFT_KEY);Nan::Export(ctx, "WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY", get_WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY);
+  Nan::Export(ctx, "WIDGET_PROP_EXEC", get_WIDGET_PROP_EXEC);
+  Nan::Export(ctx, "WIDGET_PROP_X", get_WIDGET_PROP_X);
+  Nan::Export(ctx, "WIDGET_PROP_Y", get_WIDGET_PROP_Y);
+  Nan::Export(ctx, "WIDGET_PROP_W", get_WIDGET_PROP_W);
+  Nan::Export(ctx, "WIDGET_PROP_H", get_WIDGET_PROP_H);
+  Nan::Export(ctx, "WIDGET_PROP_CANVAS", get_WIDGET_PROP_CANVAS);
+  Nan::Export(ctx, "WIDGET_PROP_LOCALIZE_OPTIONS", get_WIDGET_PROP_LOCALIZE_OPTIONS);
+  Nan::Export(ctx, "WIDGET_PROP_NATIVE_WINDOW", get_WIDGET_PROP_NATIVE_WINDOW);
+  Nan::Export(ctx, "WIDGET_PROP_HIGHLIGHT", get_WIDGET_PROP_HIGHLIGHT);
+  Nan::Export(ctx, "WIDGET_PROP_BAR_SIZE", get_WIDGET_PROP_BAR_SIZE);
+  Nan::Export(ctx, "WIDGET_PROP_OPACITY", get_WIDGET_PROP_OPACITY);
+  Nan::Export(ctx, "WIDGET_PROP_MIN_W", get_WIDGET_PROP_MIN_W);
+  Nan::Export(ctx, "WIDGET_PROP_MAX_W", get_WIDGET_PROP_MAX_W);
+  Nan::Export(ctx, "WIDGET_PROP_CHILDREN_LAYOUT", get_WIDGET_PROP_CHILDREN_LAYOUT);
+  Nan::Export(ctx, "WIDGET_PROP_LAYOUT", get_WIDGET_PROP_LAYOUT);
+  Nan::Export(ctx, "WIDGET_PROP_SELF_LAYOUT", get_WIDGET_PROP_SELF_LAYOUT);
+  Nan::Export(ctx, "WIDGET_PROP_LAYOUT_W", get_WIDGET_PROP_LAYOUT_W);
+  Nan::Export(ctx, "WIDGET_PROP_LAYOUT_H", get_WIDGET_PROP_LAYOUT_H);
+  Nan::Export(ctx, "WIDGET_PROP_VIRTUAL_W", get_WIDGET_PROP_VIRTUAL_W);
+  Nan::Export(ctx, "WIDGET_PROP_VIRTUAL_H", get_WIDGET_PROP_VIRTUAL_H);
+  Nan::Export(ctx, "WIDGET_PROP_NAME", get_WIDGET_PROP_NAME);
+  Nan::Export(ctx, "WIDGET_PROP_TYPE", get_WIDGET_PROP_TYPE);
+  Nan::Export(ctx, "WIDGET_PROP_CLOSABLE", get_WIDGET_PROP_CLOSABLE);
+  Nan::Export(ctx, "WIDGET_PROP_CURSOR", get_WIDGET_PROP_CURSOR);
+  Nan::Export(ctx, "WIDGET_PROP_VALUE", get_WIDGET_PROP_VALUE);
+  Nan::Export(ctx, "WIDGET_PROP_LENGTH", get_WIDGET_PROP_LENGTH);
+  Nan::Export(ctx, "WIDGET_PROP_TEXT", get_WIDGET_PROP_TEXT);
+  Nan::Export(ctx, "WIDGET_PROP_TR_TEXT", get_WIDGET_PROP_TR_TEXT);
+  Nan::Export(ctx, "WIDGET_PROP_STYLE", get_WIDGET_PROP_STYLE);
+  Nan::Export(ctx, "WIDGET_PROP_ENABLE", get_WIDGET_PROP_ENABLE);
+  Nan::Export(ctx, "WIDGET_PROP_FEEDBACK", get_WIDGET_PROP_FEEDBACK);
+  Nan::Export(ctx, "WIDGET_PROP_FLOATING", get_WIDGET_PROP_FLOATING);
+  Nan::Export(ctx, "WIDGET_PROP_MARGIN", get_WIDGET_PROP_MARGIN);
+  Nan::Export(ctx, "WIDGET_PROP_SPACING", get_WIDGET_PROP_SPACING);
+  Nan::Export(ctx, "WIDGET_PROP_LEFT_MARGIN", get_WIDGET_PROP_LEFT_MARGIN);
+  Nan::Export(ctx, "WIDGET_PROP_RIGHT_MARGIN", get_WIDGET_PROP_RIGHT_MARGIN);
+  Nan::Export(ctx, "WIDGET_PROP_TOP_MARGIN", get_WIDGET_PROP_TOP_MARGIN);
+  Nan::Export(ctx, "WIDGET_PROP_BOTTOM_MARGIN", get_WIDGET_PROP_BOTTOM_MARGIN);
+  Nan::Export(ctx, "WIDGET_PROP_STEP", get_WIDGET_PROP_STEP);
+  Nan::Export(ctx, "WIDGET_PROP_VISIBLE", get_WIDGET_PROP_VISIBLE);
+  Nan::Export(ctx, "WIDGET_PROP_SENSITIVE", get_WIDGET_PROP_SENSITIVE);
+  Nan::Export(ctx, "WIDGET_PROP_ANIMATION", get_WIDGET_PROP_ANIMATION);
+  Nan::Export(ctx, "WIDGET_PROP_ANIM_HINT", get_WIDGET_PROP_ANIM_HINT);
+  Nan::Export(ctx, "WIDGET_PROP_FULLSCREEN", get_WIDGET_PROP_FULLSCREEN);
+  Nan::Export(ctx, "WIDGET_PROP_OPEN_ANIM_HINT", get_WIDGET_PROP_OPEN_ANIM_HINT);
+  Nan::Export(ctx, "WIDGET_PROP_CLOSE_ANIM_HINT", get_WIDGET_PROP_CLOSE_ANIM_HINT);
+  Nan::Export(ctx, "WIDGET_PROP_MIN", get_WIDGET_PROP_MIN);
+  Nan::Export(ctx, "WIDGET_PROP_TIPS", get_WIDGET_PROP_TIPS);
+  Nan::Export(ctx, "WIDGET_PROP_INPUT_TYPE", get_WIDGET_PROP_INPUT_TYPE);
+  Nan::Export(ctx, "WIDGET_PROP_READONLY", get_WIDGET_PROP_READONLY);
+  Nan::Export(ctx, "WIDGET_PROP_PASSWORD_VISIBLE", get_WIDGET_PROP_PASSWORD_VISIBLE);
+  Nan::Export(ctx, "WIDGET_PROP_ACTIVE", get_WIDGET_PROP_ACTIVE);
+  Nan::Export(ctx, "WIDGET_PROP_VERTICAL", get_WIDGET_PROP_VERTICAL);
+  Nan::Export(ctx, "WIDGET_PROP_SHOW_TEXT", get_WIDGET_PROP_SHOW_TEXT);
+  Nan::Export(ctx, "WIDGET_PROP_XOFFSET", get_WIDGET_PROP_XOFFSET);
+  Nan::Export(ctx, "WIDGET_PROP_YOFFSET", get_WIDGET_PROP_YOFFSET);
+  Nan::Export(ctx, "WIDGET_PROP_ALIGN_V", get_WIDGET_PROP_ALIGN_V);
+  Nan::Export(ctx, "WIDGET_PROP_ALIGN_H", get_WIDGET_PROP_ALIGN_H);
+  Nan::Export(ctx, "WIDGET_PROP_AUTO_PLAY", get_WIDGET_PROP_AUTO_PLAY);
+  Nan::Export(ctx, "WIDGET_PROP_LOOP", get_WIDGET_PROP_LOOP);
+  Nan::Export(ctx, "WIDGET_PROP_AUTO_FIX", get_WIDGET_PROP_AUTO_FIX);
+  Nan::Export(ctx, "WIDGET_PROP_SELECT_NONE_WHEN_FOCUSED", get_WIDGET_PROP_SELECT_NONE_WHEN_FOCUSED);
+  Nan::Export(ctx, "WIDGET_PROP_OPEN_IM_WHEN_FOCUSED", get_WIDGET_PROP_OPEN_IM_WHEN_FOCUSED);
+  Nan::Export(ctx, "WIDGET_PROP_X_MIN", get_WIDGET_PROP_X_MIN);
+  Nan::Export(ctx, "WIDGET_PROP_X_MAX", get_WIDGET_PROP_X_MAX);
+  Nan::Export(ctx, "WIDGET_PROP_Y_MIN", get_WIDGET_PROP_Y_MIN);
+  Nan::Export(ctx, "WIDGET_PROP_Y_MAX", get_WIDGET_PROP_Y_MAX);
+  Nan::Export(ctx, "WIDGET_PROP_MAX", get_WIDGET_PROP_MAX);
+  Nan::Export(ctx, "WIDGET_PROP_GRAB_KEYS", get_WIDGET_PROP_GRAB_KEYS);
+  Nan::Export(ctx, "WIDGET_PROP_ROW", get_WIDGET_PROP_ROW);
+  Nan::Export(ctx, "WIDGET_PROP_STATE_FOR_STYLE", get_WIDGET_PROP_STATE_FOR_STYLE);
+  Nan::Export(ctx, "WIDGET_PROP_THEME", get_WIDGET_PROP_THEME);
+  Nan::Export(ctx, "WIDGET_PROP_STAGE", get_WIDGET_PROP_STAGE);
+  Nan::Export(ctx, "WIDGET_PROP_IMAGE_MANAGER", get_WIDGET_PROP_IMAGE_MANAGER);
+  Nan::Export(ctx, "WIDGET_PROP_ASSETS_MANAGER", get_WIDGET_PROP_ASSETS_MANAGER);
+  Nan::Export(ctx, "WIDGET_PROP_LOCALE_INFO", get_WIDGET_PROP_LOCALE_INFO);
+  Nan::Export(ctx, "WIDGET_PROP_FONT_MANAGER", get_WIDGET_PROP_FONT_MANAGER);
+  Nan::Export(ctx, "WIDGET_PROP_THEME_OBJ", get_WIDGET_PROP_THEME_OBJ);
+  Nan::Export(ctx, "WIDGET_PROP_DEFAULT_THEME_OBJ", get_WIDGET_PROP_DEFAULT_THEME_OBJ);
+  Nan::Export(ctx, "WIDGET_PROP_ITEM_WIDTH", get_WIDGET_PROP_ITEM_WIDTH);
+  Nan::Export(ctx, "WIDGET_PROP_ITEM_HEIGHT", get_WIDGET_PROP_ITEM_HEIGHT);
+  Nan::Export(ctx, "WIDGET_PROP_DEFAULT_ITEM_HEIGHT", get_WIDGET_PROP_DEFAULT_ITEM_HEIGHT);
+  Nan::Export(ctx, "WIDGET_PROP_XSLIDABLE", get_WIDGET_PROP_XSLIDABLE);
+  Nan::Export(ctx, "WIDGET_PROP_YSLIDABLE", get_WIDGET_PROP_YSLIDABLE);
+  Nan::Export(ctx, "WIDGET_PROP_REPEAT", get_WIDGET_PROP_REPEAT);
+  Nan::Export(ctx, "WIDGET_PROP_ENABLE_LONG_PRESS", get_WIDGET_PROP_ENABLE_LONG_PRESS);
+  Nan::Export(ctx, "WIDGET_PROP_ANIMATABLE", get_WIDGET_PROP_ANIMATABLE);
+  Nan::Export(ctx, "WIDGET_PROP_AUTO_HIDE_SCROLL_BAR", get_WIDGET_PROP_AUTO_HIDE_SCROLL_BAR);
+  Nan::Export(ctx, "WIDGET_PROP_IMAGE", get_WIDGET_PROP_IMAGE);
+  Nan::Export(ctx, "WIDGET_PROP_FORMAT", get_WIDGET_PROP_FORMAT);
+  Nan::Export(ctx, "WIDGET_PROP_DRAW_TYPE", get_WIDGET_PROP_DRAW_TYPE);
+  Nan::Export(ctx, "WIDGET_PROP_SELECTABLE", get_WIDGET_PROP_SELECTABLE);
+  Nan::Export(ctx, "WIDGET_PROP_CLICKABLE", get_WIDGET_PROP_CLICKABLE);
+  Nan::Export(ctx, "WIDGET_PROP_SCALE_X", get_WIDGET_PROP_SCALE_X);
+  Nan::Export(ctx, "WIDGET_PROP_SCALE_Y", get_WIDGET_PROP_SCALE_Y);
+  Nan::Export(ctx, "WIDGET_PROP_ANCHOR_X", get_WIDGET_PROP_ANCHOR_X);
+  Nan::Export(ctx, "WIDGET_PROP_ANCHOR_Y", get_WIDGET_PROP_ANCHOR_Y);
+  Nan::Export(ctx, "WIDGET_PROP_ROTATION", get_WIDGET_PROP_ROTATION);
+  Nan::Export(ctx, "WIDGET_PROP_COMPACT", get_WIDGET_PROP_COMPACT);
+  Nan::Export(ctx, "WIDGET_PROP_SCROLLABLE", get_WIDGET_PROP_SCROLLABLE);
+  Nan::Export(ctx, "WIDGET_PROP_ICON", get_WIDGET_PROP_ICON);
+  Nan::Export(ctx, "WIDGET_PROP_OPTIONS", get_WIDGET_PROP_OPTIONS);
+  Nan::Export(ctx, "WIDGET_PROP_SELECTED", get_WIDGET_PROP_SELECTED);
+  Nan::Export(ctx, "WIDGET_PROP_CHECKED", get_WIDGET_PROP_CHECKED);
+  Nan::Export(ctx, "WIDGET_PROP_ACTIVE_ICON", get_WIDGET_PROP_ACTIVE_ICON);
+  Nan::Export(ctx, "WIDGET_PROP_LOAD_UI", get_WIDGET_PROP_LOAD_UI);
+  Nan::Export(ctx, "WIDGET_PROP_OPEN_WINDOW", get_WIDGET_PROP_OPEN_WINDOW);
+  Nan::Export(ctx, "WIDGET_PROP_SELECTED_INDEX", get_WIDGET_PROP_SELECTED_INDEX);
+  Nan::Export(ctx, "WIDGET_PROP_CLOSE_WHEN_CLICK", get_WIDGET_PROP_CLOSE_WHEN_CLICK);
+  Nan::Export(ctx, "WIDGET_PROP_CLOSE_WHEN_CLICK_OUTSIDE", get_WIDGET_PROP_CLOSE_WHEN_CLICK_OUTSIDE);
+  Nan::Export(ctx, "WIDGET_PROP_LINE_GAP", get_WIDGET_PROP_LINE_GAP);
+  Nan::Export(ctx, "WIDGET_PROP_BG_COLOR", get_WIDGET_PROP_BG_COLOR);
+  Nan::Export(ctx, "WIDGET_PROP_BORDER_COLOR", get_WIDGET_PROP_BORDER_COLOR);
+  Nan::Export(ctx, "WIDGET_PROP_DELAY", get_WIDGET_PROP_DELAY);
+  Nan::Export(ctx, "WIDGET_PROP_IS_KEYBOARD", get_WIDGET_PROP_IS_KEYBOARD);
+  Nan::Export(ctx, "WIDGET_PROP_FOCUSED", get_WIDGET_PROP_FOCUSED);
+  Nan::Export(ctx, "WIDGET_PROP_FOCUS", get_WIDGET_PROP_FOCUS);
+  Nan::Export(ctx, "WIDGET_PROP_FOCUSABLE", get_WIDGET_PROP_FOCUSABLE);
+  Nan::Export(ctx, "WIDGET_PROP_WITH_FOCUS_STATE", get_WIDGET_PROP_WITH_FOCUS_STATE);
+  Nan::Export(ctx, "WIDGET_PROP_MOVE_FOCUS_PREV_KEY", get_WIDGET_PROP_MOVE_FOCUS_PREV_KEY);
+  Nan::Export(ctx, "WIDGET_PROP_MOVE_FOCUS_NEXT_KEY", get_WIDGET_PROP_MOVE_FOCUS_NEXT_KEY);
+  Nan::Export(ctx, "WIDGET_PROP_MOVE_FOCUS_UP_KEY", get_WIDGET_PROP_MOVE_FOCUS_UP_KEY);
+  Nan::Export(ctx, "WIDGET_PROP_MOVE_FOCUS_DOWN_KEY", get_WIDGET_PROP_MOVE_FOCUS_DOWN_KEY);
+  Nan::Export(ctx, "WIDGET_PROP_MOVE_FOCUS_LEFT_KEY", get_WIDGET_PROP_MOVE_FOCUS_LEFT_KEY);
+  Nan::Export(ctx, "WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY", get_WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY);
+
  return RET_OK;
 }
 
@@ -6852,7 +7470,62 @@ static void get_WIDGET_TYPE_CALIBRATION_WIN(const Nan::FunctionCallbackInfo<v8::
 }
 
 ret_t widget_type_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "WIDGET_TYPE_NONE", get_WIDGET_TYPE_NONE);Nan::Export(ctx, "WIDGET_TYPE_WINDOW_MANAGER", get_WIDGET_TYPE_WINDOW_MANAGER);Nan::Export(ctx, "WIDGET_TYPE_NORMAL_WINDOW", get_WIDGET_TYPE_NORMAL_WINDOW);Nan::Export(ctx, "WIDGET_TYPE_OVERLAY", get_WIDGET_TYPE_OVERLAY);Nan::Export(ctx, "WIDGET_TYPE_TOOL_BAR", get_WIDGET_TYPE_TOOL_BAR);Nan::Export(ctx, "WIDGET_TYPE_DIALOG", get_WIDGET_TYPE_DIALOG);Nan::Export(ctx, "WIDGET_TYPE_POPUP", get_WIDGET_TYPE_POPUP);Nan::Export(ctx, "WIDGET_TYPE_SYSTEM_BAR", get_WIDGET_TYPE_SYSTEM_BAR);Nan::Export(ctx, "WIDGET_TYPE_SYSTEM_BAR_BOTTOM", get_WIDGET_TYPE_SYSTEM_BAR_BOTTOM);Nan::Export(ctx, "WIDGET_TYPE_SPRITE", get_WIDGET_TYPE_SPRITE);Nan::Export(ctx, "WIDGET_TYPE_KEYBOARD", get_WIDGET_TYPE_KEYBOARD);Nan::Export(ctx, "WIDGET_TYPE_DND", get_WIDGET_TYPE_DND);Nan::Export(ctx, "WIDGET_TYPE_LABEL", get_WIDGET_TYPE_LABEL);Nan::Export(ctx, "WIDGET_TYPE_BUTTON", get_WIDGET_TYPE_BUTTON);Nan::Export(ctx, "WIDGET_TYPE_IMAGE", get_WIDGET_TYPE_IMAGE);Nan::Export(ctx, "WIDGET_TYPE_EDIT", get_WIDGET_TYPE_EDIT);Nan::Export(ctx, "WIDGET_TYPE_PROGRESS_BAR", get_WIDGET_TYPE_PROGRESS_BAR);Nan::Export(ctx, "WIDGET_TYPE_GROUP_BOX", get_WIDGET_TYPE_GROUP_BOX);Nan::Export(ctx, "WIDGET_TYPE_CHECK_BUTTON", get_WIDGET_TYPE_CHECK_BUTTON);Nan::Export(ctx, "WIDGET_TYPE_RADIO_BUTTON", get_WIDGET_TYPE_RADIO_BUTTON);Nan::Export(ctx, "WIDGET_TYPE_DIALOG_TITLE", get_WIDGET_TYPE_DIALOG_TITLE);Nan::Export(ctx, "WIDGET_TYPE_DIALOG_CLIENT", get_WIDGET_TYPE_DIALOG_CLIENT);Nan::Export(ctx, "WIDGET_TYPE_SLIDER", get_WIDGET_TYPE_SLIDER);Nan::Export(ctx, "WIDGET_TYPE_VIEW", get_WIDGET_TYPE_VIEW);Nan::Export(ctx, "WIDGET_TYPE_COMBO_BOX", get_WIDGET_TYPE_COMBO_BOX);Nan::Export(ctx, "WIDGET_TYPE_COMBO_BOX_ITEM", get_WIDGET_TYPE_COMBO_BOX_ITEM);Nan::Export(ctx, "WIDGET_TYPE_SLIDE_VIEW", get_WIDGET_TYPE_SLIDE_VIEW);Nan::Export(ctx, "WIDGET_TYPE_SLIDE_INDICATOR", get_WIDGET_TYPE_SLIDE_INDICATOR);Nan::Export(ctx, "WIDGET_TYPE_SLIDE_INDICATOR_ARC", get_WIDGET_TYPE_SLIDE_INDICATOR_ARC);Nan::Export(ctx, "WIDGET_TYPE_PAGES", get_WIDGET_TYPE_PAGES);Nan::Export(ctx, "WIDGET_TYPE_TAB_BUTTON", get_WIDGET_TYPE_TAB_BUTTON);Nan::Export(ctx, "WIDGET_TYPE_TAB_CONTROL", get_WIDGET_TYPE_TAB_CONTROL);Nan::Export(ctx, "WIDGET_TYPE_TAB_BUTTON_GROUP", get_WIDGET_TYPE_TAB_BUTTON_GROUP);Nan::Export(ctx, "WIDGET_TYPE_BUTTON_GROUP", get_WIDGET_TYPE_BUTTON_GROUP);Nan::Export(ctx, "WIDGET_TYPE_CANDIDATES", get_WIDGET_TYPE_CANDIDATES);Nan::Export(ctx, "WIDGET_TYPE_SPIN_BOX", get_WIDGET_TYPE_SPIN_BOX);Nan::Export(ctx, "WIDGET_TYPE_DRAGGER", get_WIDGET_TYPE_DRAGGER);Nan::Export(ctx, "WIDGET_TYPE_SCROLL_BAR", get_WIDGET_TYPE_SCROLL_BAR);Nan::Export(ctx, "WIDGET_TYPE_SCROLL_BAR_DESKTOP", get_WIDGET_TYPE_SCROLL_BAR_DESKTOP);Nan::Export(ctx, "WIDGET_TYPE_SCROLL_BAR_MOBILE", get_WIDGET_TYPE_SCROLL_BAR_MOBILE);Nan::Export(ctx, "WIDGET_TYPE_SCROLL_VIEW", get_WIDGET_TYPE_SCROLL_VIEW);Nan::Export(ctx, "WIDGET_TYPE_LIST_VIEW", get_WIDGET_TYPE_LIST_VIEW);Nan::Export(ctx, "WIDGET_TYPE_LIST_VIEW_H", get_WIDGET_TYPE_LIST_VIEW_H);Nan::Export(ctx, "WIDGET_TYPE_LIST_ITEM", get_WIDGET_TYPE_LIST_ITEM);Nan::Export(ctx, "WIDGET_TYPE_COLOR_PICKER", get_WIDGET_TYPE_COLOR_PICKER);Nan::Export(ctx, "WIDGET_TYPE_COLOR_COMPONENT", get_WIDGET_TYPE_COLOR_COMPONENT);Nan::Export(ctx, "WIDGET_TYPE_COLOR_TILE", get_WIDGET_TYPE_COLOR_TILE);Nan::Export(ctx, "WIDGET_TYPE_CLIP_VIEW", get_WIDGET_TYPE_CLIP_VIEW);Nan::Export(ctx, "WIDGET_TYPE_RICH_TEXT", get_WIDGET_TYPE_RICH_TEXT);Nan::Export(ctx, "WIDGET_TYPE_APP_BAR", get_WIDGET_TYPE_APP_BAR);Nan::Export(ctx, "WIDGET_TYPE_GRID", get_WIDGET_TYPE_GRID);Nan::Export(ctx, "WIDGET_TYPE_GRID_ITEM", get_WIDGET_TYPE_GRID_ITEM);Nan::Export(ctx, "WIDGET_TYPE_ROW", get_WIDGET_TYPE_ROW);Nan::Export(ctx, "WIDGET_TYPE_COLUMN", get_WIDGET_TYPE_COLUMN);Nan::Export(ctx, "WIDGET_TYPE_CALIBRATION_WIN", get_WIDGET_TYPE_CALIBRATION_WIN);
+  Nan::Export(ctx, "WIDGET_TYPE_NONE", get_WIDGET_TYPE_NONE);
+  Nan::Export(ctx, "WIDGET_TYPE_WINDOW_MANAGER", get_WIDGET_TYPE_WINDOW_MANAGER);
+  Nan::Export(ctx, "WIDGET_TYPE_NORMAL_WINDOW", get_WIDGET_TYPE_NORMAL_WINDOW);
+  Nan::Export(ctx, "WIDGET_TYPE_OVERLAY", get_WIDGET_TYPE_OVERLAY);
+  Nan::Export(ctx, "WIDGET_TYPE_TOOL_BAR", get_WIDGET_TYPE_TOOL_BAR);
+  Nan::Export(ctx, "WIDGET_TYPE_DIALOG", get_WIDGET_TYPE_DIALOG);
+  Nan::Export(ctx, "WIDGET_TYPE_POPUP", get_WIDGET_TYPE_POPUP);
+  Nan::Export(ctx, "WIDGET_TYPE_SYSTEM_BAR", get_WIDGET_TYPE_SYSTEM_BAR);
+  Nan::Export(ctx, "WIDGET_TYPE_SYSTEM_BAR_BOTTOM", get_WIDGET_TYPE_SYSTEM_BAR_BOTTOM);
+  Nan::Export(ctx, "WIDGET_TYPE_SPRITE", get_WIDGET_TYPE_SPRITE);
+  Nan::Export(ctx, "WIDGET_TYPE_KEYBOARD", get_WIDGET_TYPE_KEYBOARD);
+  Nan::Export(ctx, "WIDGET_TYPE_DND", get_WIDGET_TYPE_DND);
+  Nan::Export(ctx, "WIDGET_TYPE_LABEL", get_WIDGET_TYPE_LABEL);
+  Nan::Export(ctx, "WIDGET_TYPE_BUTTON", get_WIDGET_TYPE_BUTTON);
+  Nan::Export(ctx, "WIDGET_TYPE_IMAGE", get_WIDGET_TYPE_IMAGE);
+  Nan::Export(ctx, "WIDGET_TYPE_EDIT", get_WIDGET_TYPE_EDIT);
+  Nan::Export(ctx, "WIDGET_TYPE_PROGRESS_BAR", get_WIDGET_TYPE_PROGRESS_BAR);
+  Nan::Export(ctx, "WIDGET_TYPE_GROUP_BOX", get_WIDGET_TYPE_GROUP_BOX);
+  Nan::Export(ctx, "WIDGET_TYPE_CHECK_BUTTON", get_WIDGET_TYPE_CHECK_BUTTON);
+  Nan::Export(ctx, "WIDGET_TYPE_RADIO_BUTTON", get_WIDGET_TYPE_RADIO_BUTTON);
+  Nan::Export(ctx, "WIDGET_TYPE_DIALOG_TITLE", get_WIDGET_TYPE_DIALOG_TITLE);
+  Nan::Export(ctx, "WIDGET_TYPE_DIALOG_CLIENT", get_WIDGET_TYPE_DIALOG_CLIENT);
+  Nan::Export(ctx, "WIDGET_TYPE_SLIDER", get_WIDGET_TYPE_SLIDER);
+  Nan::Export(ctx, "WIDGET_TYPE_VIEW", get_WIDGET_TYPE_VIEW);
+  Nan::Export(ctx, "WIDGET_TYPE_COMBO_BOX", get_WIDGET_TYPE_COMBO_BOX);
+  Nan::Export(ctx, "WIDGET_TYPE_COMBO_BOX_ITEM", get_WIDGET_TYPE_COMBO_BOX_ITEM);
+  Nan::Export(ctx, "WIDGET_TYPE_SLIDE_VIEW", get_WIDGET_TYPE_SLIDE_VIEW);
+  Nan::Export(ctx, "WIDGET_TYPE_SLIDE_INDICATOR", get_WIDGET_TYPE_SLIDE_INDICATOR);
+  Nan::Export(ctx, "WIDGET_TYPE_SLIDE_INDICATOR_ARC", get_WIDGET_TYPE_SLIDE_INDICATOR_ARC);
+  Nan::Export(ctx, "WIDGET_TYPE_PAGES", get_WIDGET_TYPE_PAGES);
+  Nan::Export(ctx, "WIDGET_TYPE_TAB_BUTTON", get_WIDGET_TYPE_TAB_BUTTON);
+  Nan::Export(ctx, "WIDGET_TYPE_TAB_CONTROL", get_WIDGET_TYPE_TAB_CONTROL);
+  Nan::Export(ctx, "WIDGET_TYPE_TAB_BUTTON_GROUP", get_WIDGET_TYPE_TAB_BUTTON_GROUP);
+  Nan::Export(ctx, "WIDGET_TYPE_BUTTON_GROUP", get_WIDGET_TYPE_BUTTON_GROUP);
+  Nan::Export(ctx, "WIDGET_TYPE_CANDIDATES", get_WIDGET_TYPE_CANDIDATES);
+  Nan::Export(ctx, "WIDGET_TYPE_SPIN_BOX", get_WIDGET_TYPE_SPIN_BOX);
+  Nan::Export(ctx, "WIDGET_TYPE_DRAGGER", get_WIDGET_TYPE_DRAGGER);
+  Nan::Export(ctx, "WIDGET_TYPE_SCROLL_BAR", get_WIDGET_TYPE_SCROLL_BAR);
+  Nan::Export(ctx, "WIDGET_TYPE_SCROLL_BAR_DESKTOP", get_WIDGET_TYPE_SCROLL_BAR_DESKTOP);
+  Nan::Export(ctx, "WIDGET_TYPE_SCROLL_BAR_MOBILE", get_WIDGET_TYPE_SCROLL_BAR_MOBILE);
+  Nan::Export(ctx, "WIDGET_TYPE_SCROLL_VIEW", get_WIDGET_TYPE_SCROLL_VIEW);
+  Nan::Export(ctx, "WIDGET_TYPE_LIST_VIEW", get_WIDGET_TYPE_LIST_VIEW);
+  Nan::Export(ctx, "WIDGET_TYPE_LIST_VIEW_H", get_WIDGET_TYPE_LIST_VIEW_H);
+  Nan::Export(ctx, "WIDGET_TYPE_LIST_ITEM", get_WIDGET_TYPE_LIST_ITEM);
+  Nan::Export(ctx, "WIDGET_TYPE_COLOR_PICKER", get_WIDGET_TYPE_COLOR_PICKER);
+  Nan::Export(ctx, "WIDGET_TYPE_COLOR_COMPONENT", get_WIDGET_TYPE_COLOR_COMPONENT);
+  Nan::Export(ctx, "WIDGET_TYPE_COLOR_TILE", get_WIDGET_TYPE_COLOR_TILE);
+  Nan::Export(ctx, "WIDGET_TYPE_CLIP_VIEW", get_WIDGET_TYPE_CLIP_VIEW);
+  Nan::Export(ctx, "WIDGET_TYPE_RICH_TEXT", get_WIDGET_TYPE_RICH_TEXT);
+  Nan::Export(ctx, "WIDGET_TYPE_APP_BAR", get_WIDGET_TYPE_APP_BAR);
+  Nan::Export(ctx, "WIDGET_TYPE_GRID", get_WIDGET_TYPE_GRID);
+  Nan::Export(ctx, "WIDGET_TYPE_GRID_ITEM", get_WIDGET_TYPE_GRID_ITEM);
+  Nan::Export(ctx, "WIDGET_TYPE_ROW", get_WIDGET_TYPE_ROW);
+  Nan::Export(ctx, "WIDGET_TYPE_COLUMN", get_WIDGET_TYPE_COLUMN);
+  Nan::Export(ctx, "WIDGET_TYPE_CALIBRATION_WIN", get_WIDGET_TYPE_CALIBRATION_WIN);
+
  return RET_OK;
 }
 
@@ -6889,7 +7562,11 @@ static void get_WINDOW_STAGE_CLOSED(const Nan::FunctionCallbackInfo<v8::Value>& 
 }
 
 ret_t window_stage_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "WINDOW_STAGE_NONE", get_WINDOW_STAGE_NONE);Nan::Export(ctx, "WINDOW_STAGE_CREATED", get_WINDOW_STAGE_CREATED);Nan::Export(ctx, "WINDOW_STAGE_OPENED", get_WINDOW_STAGE_OPENED);Nan::Export(ctx, "WINDOW_STAGE_CLOSED", get_WINDOW_STAGE_CLOSED);
+  Nan::Export(ctx, "WINDOW_STAGE_NONE", get_WINDOW_STAGE_NONE);
+  Nan::Export(ctx, "WINDOW_STAGE_CREATED", get_WINDOW_STAGE_CREATED);
+  Nan::Export(ctx, "WINDOW_STAGE_OPENED", get_WINDOW_STAGE_OPENED);
+  Nan::Export(ctx, "WINDOW_STAGE_CLOSED", get_WINDOW_STAGE_CLOSED);
+
  return RET_OK;
 }
 
@@ -6918,7 +7595,10 @@ static void get_WINDOW_CLOSABLE_CONFIRM(const Nan::FunctionCallbackInfo<v8::Valu
 }
 
 ret_t window_closable_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "WINDOW_CLOSABLE_YES", get_WINDOW_CLOSABLE_YES);Nan::Export(ctx, "WINDOW_CLOSABLE_NO", get_WINDOW_CLOSABLE_NO);Nan::Export(ctx, "WINDOW_CLOSABLE_CONFIRM", get_WINDOW_CLOSABLE_CONFIRM);
+  Nan::Export(ctx, "WINDOW_CLOSABLE_YES", get_WINDOW_CLOSABLE_YES);
+  Nan::Export(ctx, "WINDOW_CLOSABLE_NO", get_WINDOW_CLOSABLE_NO);
+  Nan::Export(ctx, "WINDOW_CLOSABLE_CONFIRM", get_WINDOW_CLOSABLE_CONFIRM);
+
  return RET_OK;
 }
 
@@ -7083,7 +7763,27 @@ static void get_WIDGET_STATE_FOCUSED_OF_ACTIVE(const Nan::FunctionCallbackInfo<v
 }
 
 ret_t widget_state_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "WIDGET_STATE_NONE", get_WIDGET_STATE_NONE);Nan::Export(ctx, "WIDGET_STATE_NORMAL", get_WIDGET_STATE_NORMAL);Nan::Export(ctx, "WIDGET_STATE_PRESSED", get_WIDGET_STATE_PRESSED);Nan::Export(ctx, "WIDGET_STATE_OVER", get_WIDGET_STATE_OVER);Nan::Export(ctx, "WIDGET_STATE_DISABLE", get_WIDGET_STATE_DISABLE);Nan::Export(ctx, "WIDGET_STATE_FOCUSED", get_WIDGET_STATE_FOCUSED);Nan::Export(ctx, "WIDGET_STATE_CHECKED", get_WIDGET_STATE_CHECKED);Nan::Export(ctx, "WIDGET_STATE_UNCHECKED", get_WIDGET_STATE_UNCHECKED);Nan::Export(ctx, "WIDGET_STATE_EMPTY", get_WIDGET_STATE_EMPTY);Nan::Export(ctx, "WIDGET_STATE_EMPTY_FOCUS", get_WIDGET_STATE_EMPTY_FOCUS);Nan::Export(ctx, "WIDGET_STATE_ERROR", get_WIDGET_STATE_ERROR);Nan::Export(ctx, "WIDGET_STATE_SELECTED", get_WIDGET_STATE_SELECTED);Nan::Export(ctx, "WIDGET_STATE_NORMAL_OF_CHECKED", get_WIDGET_STATE_NORMAL_OF_CHECKED);Nan::Export(ctx, "WIDGET_STATE_PRESSED_OF_CHECKED", get_WIDGET_STATE_PRESSED_OF_CHECKED);Nan::Export(ctx, "WIDGET_STATE_OVER_OF_CHECKED", get_WIDGET_STATE_OVER_OF_CHECKED);Nan::Export(ctx, "WIDGET_STATE_FOCUSED_OF_CHECKED", get_WIDGET_STATE_FOCUSED_OF_CHECKED);Nan::Export(ctx, "WIDGET_STATE_NORMAL_OF_ACTIVE", get_WIDGET_STATE_NORMAL_OF_ACTIVE);Nan::Export(ctx, "WIDGET_STATE_PRESSED_OF_ACTIVE", get_WIDGET_STATE_PRESSED_OF_ACTIVE);Nan::Export(ctx, "WIDGET_STATE_OVER_OF_ACTIVE", get_WIDGET_STATE_OVER_OF_ACTIVE);Nan::Export(ctx, "WIDGET_STATE_FOCUSED_OF_ACTIVE", get_WIDGET_STATE_FOCUSED_OF_ACTIVE);
+  Nan::Export(ctx, "WIDGET_STATE_NONE", get_WIDGET_STATE_NONE);
+  Nan::Export(ctx, "WIDGET_STATE_NORMAL", get_WIDGET_STATE_NORMAL);
+  Nan::Export(ctx, "WIDGET_STATE_PRESSED", get_WIDGET_STATE_PRESSED);
+  Nan::Export(ctx, "WIDGET_STATE_OVER", get_WIDGET_STATE_OVER);
+  Nan::Export(ctx, "WIDGET_STATE_DISABLE", get_WIDGET_STATE_DISABLE);
+  Nan::Export(ctx, "WIDGET_STATE_FOCUSED", get_WIDGET_STATE_FOCUSED);
+  Nan::Export(ctx, "WIDGET_STATE_CHECKED", get_WIDGET_STATE_CHECKED);
+  Nan::Export(ctx, "WIDGET_STATE_UNCHECKED", get_WIDGET_STATE_UNCHECKED);
+  Nan::Export(ctx, "WIDGET_STATE_EMPTY", get_WIDGET_STATE_EMPTY);
+  Nan::Export(ctx, "WIDGET_STATE_EMPTY_FOCUS", get_WIDGET_STATE_EMPTY_FOCUS);
+  Nan::Export(ctx, "WIDGET_STATE_ERROR", get_WIDGET_STATE_ERROR);
+  Nan::Export(ctx, "WIDGET_STATE_SELECTED", get_WIDGET_STATE_SELECTED);
+  Nan::Export(ctx, "WIDGET_STATE_NORMAL_OF_CHECKED", get_WIDGET_STATE_NORMAL_OF_CHECKED);
+  Nan::Export(ctx, "WIDGET_STATE_PRESSED_OF_CHECKED", get_WIDGET_STATE_PRESSED_OF_CHECKED);
+  Nan::Export(ctx, "WIDGET_STATE_OVER_OF_CHECKED", get_WIDGET_STATE_OVER_OF_CHECKED);
+  Nan::Export(ctx, "WIDGET_STATE_FOCUSED_OF_CHECKED", get_WIDGET_STATE_FOCUSED_OF_CHECKED);
+  Nan::Export(ctx, "WIDGET_STATE_NORMAL_OF_ACTIVE", get_WIDGET_STATE_NORMAL_OF_ACTIVE);
+  Nan::Export(ctx, "WIDGET_STATE_PRESSED_OF_ACTIVE", get_WIDGET_STATE_PRESSED_OF_ACTIVE);
+  Nan::Export(ctx, "WIDGET_STATE_OVER_OF_ACTIVE", get_WIDGET_STATE_OVER_OF_ACTIVE);
+  Nan::Export(ctx, "WIDGET_STATE_FOCUSED_OF_ACTIVE", get_WIDGET_STATE_FOCUSED_OF_ACTIVE);
+
  return RET_OK;
 }
 
@@ -8459,7 +9159,103 @@ static void wrap_widget_t_get_prop_parent(const Nan::FunctionCallbackInfo<v8::Va
 }
 
 ret_t widget_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "widget_count_children", wrap_widget_count_children);Nan::Export(ctx, "widget_get_child", wrap_widget_get_child);Nan::Export(ctx, "widget_index_of", wrap_widget_index_of);Nan::Export(ctx, "widget_close_window", wrap_widget_close_window);Nan::Export(ctx, "widget_move", wrap_widget_move);Nan::Export(ctx, "widget_resize", wrap_widget_resize);Nan::Export(ctx, "widget_move_resize", wrap_widget_move_resize);Nan::Export(ctx, "widget_set_value", wrap_widget_set_value);Nan::Export(ctx, "widget_animate_value_to", wrap_widget_animate_value_to);Nan::Export(ctx, "widget_add_value", wrap_widget_add_value);Nan::Export(ctx, "widget_use_style", wrap_widget_use_style);Nan::Export(ctx, "widget_set_text_utf8", wrap_widget_set_text_utf8);Nan::Export(ctx, "widget_set_tr_text", wrap_widget_set_tr_text);Nan::Export(ctx, "widget_get_value", wrap_widget_get_value);Nan::Export(ctx, "widget_get_text", wrap_widget_get_text);Nan::Export(ctx, "widget_set_name", wrap_widget_set_name);Nan::Export(ctx, "widget_set_theme", wrap_widget_set_theme);Nan::Export(ctx, "widget_set_pointer_cursor", wrap_widget_set_pointer_cursor);Nan::Export(ctx, "widget_set_animation", wrap_widget_set_animation);Nan::Export(ctx, "widget_create_animator", wrap_widget_create_animator);Nan::Export(ctx, "widget_start_animator", wrap_widget_start_animator);Nan::Export(ctx, "widget_set_animator_time_scale", wrap_widget_set_animator_time_scale);Nan::Export(ctx, "widget_pause_animator", wrap_widget_pause_animator);Nan::Export(ctx, "widget_stop_animator", wrap_widget_stop_animator);Nan::Export(ctx, "widget_destroy_animator", wrap_widget_destroy_animator);Nan::Export(ctx, "widget_set_enable", wrap_widget_set_enable);Nan::Export(ctx, "widget_set_feedback", wrap_widget_set_feedback);Nan::Export(ctx, "widget_set_floating", wrap_widget_set_floating);Nan::Export(ctx, "widget_set_focused", wrap_widget_set_focused);Nan::Export(ctx, "widget_set_focusable", wrap_widget_set_focusable);Nan::Export(ctx, "widget_set_state", wrap_widget_set_state);Nan::Export(ctx, "widget_set_opacity", wrap_widget_set_opacity);Nan::Export(ctx, "widget_destroy_children", wrap_widget_destroy_children);Nan::Export(ctx, "widget_add_child", wrap_widget_add_child);Nan::Export(ctx, "widget_remove_child", wrap_widget_remove_child);Nan::Export(ctx, "widget_insert_child", wrap_widget_insert_child);Nan::Export(ctx, "widget_restack", wrap_widget_restack);Nan::Export(ctx, "widget_child", wrap_widget_child);Nan::Export(ctx, "widget_lookup", wrap_widget_lookup);Nan::Export(ctx, "widget_lookup_by_type", wrap_widget_lookup_by_type);Nan::Export(ctx, "widget_set_visible", wrap_widget_set_visible);Nan::Export(ctx, "widget_set_visible_only", wrap_widget_set_visible_only);Nan::Export(ctx, "widget_set_sensitive", wrap_widget_set_sensitive);Nan::Export(ctx, "widget_on", wrap_widget_on);Nan::Export(ctx, "widget_off", wrap_widget_off);Nan::Export(ctx, "widget_invalidate_force", wrap_widget_invalidate_force);Nan::Export(ctx, "widget_set_prop_str", wrap_widget_set_prop_str);Nan::Export(ctx, "widget_get_prop_str", wrap_widget_get_prop_str);Nan::Export(ctx, "widget_set_prop_int", wrap_widget_set_prop_int);Nan::Export(ctx, "widget_get_prop_int", wrap_widget_get_prop_int);Nan::Export(ctx, "widget_set_prop_bool", wrap_widget_set_prop_bool);Nan::Export(ctx, "widget_get_prop_bool", wrap_widget_get_prop_bool);Nan::Export(ctx, "widget_is_window_opened", wrap_widget_is_window_opened);Nan::Export(ctx, "widget_is_window", wrap_widget_is_window);Nan::Export(ctx, "widget_is_designing_window", wrap_widget_is_designing_window);Nan::Export(ctx, "widget_is_window_manager", wrap_widget_is_window_manager);Nan::Export(ctx, "widget_foreach", wrap_widget_foreach);Nan::Export(ctx, "widget_get_window", wrap_widget_get_window);Nan::Export(ctx, "widget_get_window_manager", wrap_widget_get_window_manager);Nan::Export(ctx, "widget_get_type", wrap_widget_get_type);Nan::Export(ctx, "widget_clone", wrap_widget_clone);Nan::Export(ctx, "widget_equal", wrap_widget_equal);Nan::Export(ctx, "widget_cast", wrap_widget_cast);Nan::Export(ctx, "widget_destroy", wrap_widget_destroy);Nan::Export(ctx, "widget_unref", wrap_widget_unref);Nan::Export(ctx, "widget_is_system_bar", wrap_widget_is_system_bar);Nan::Export(ctx, "widget_is_normal_window", wrap_widget_is_normal_window);Nan::Export(ctx, "widget_is_dialog", wrap_widget_is_dialog);Nan::Export(ctx, "widget_is_popup", wrap_widget_is_popup);Nan::Export(ctx, "widget_layout", wrap_widget_layout);Nan::Export(ctx, "widget_set_self_layout", wrap_widget_set_self_layout);Nan::Export(ctx, "widget_set_children_layout", wrap_widget_set_children_layout);Nan::Export(ctx, "widget_set_self_layout_params", wrap_widget_set_self_layout_params);Nan::Export(ctx, "widget_set_style_int", wrap_widget_set_style_int);Nan::Export(ctx, "widget_set_style_str", wrap_widget_set_style_str);Nan::Export(ctx, "widget_set_style_color", wrap_widget_set_style_color);Nan::Export(ctx, "widget_t_get_prop_x", wrap_widget_t_get_prop_x);Nan::Export(ctx, "widget_t_get_prop_y", wrap_widget_t_get_prop_y);Nan::Export(ctx, "widget_t_get_prop_w", wrap_widget_t_get_prop_w);Nan::Export(ctx, "widget_t_get_prop_h", wrap_widget_t_get_prop_h);Nan::Export(ctx, "widget_t_get_prop_name", wrap_widget_t_get_prop_name);Nan::Export(ctx, "widget_t_get_prop_tr_text", wrap_widget_t_get_prop_tr_text);Nan::Export(ctx, "widget_t_get_prop_style", wrap_widget_t_get_prop_style);Nan::Export(ctx, "widget_t_get_prop_animation", wrap_widget_t_get_prop_animation);Nan::Export(ctx, "widget_t_get_prop_enable", wrap_widget_t_get_prop_enable);Nan::Export(ctx, "widget_t_get_prop_feedback", wrap_widget_t_get_prop_feedback);Nan::Export(ctx, "widget_t_set_prop_visible", wrap_widget_t_set_prop_visible);Nan::Export(ctx, "widget_t_get_prop_visible", wrap_widget_t_get_prop_visible);Nan::Export(ctx, "widget_t_set_prop_sensitive", wrap_widget_t_set_prop_sensitive);Nan::Export(ctx, "widget_t_get_prop_sensitive", wrap_widget_t_get_prop_sensitive);Nan::Export(ctx, "widget_t_set_prop_focusable", wrap_widget_t_set_prop_focusable);Nan::Export(ctx, "widget_t_get_prop_focusable", wrap_widget_t_get_prop_focusable);Nan::Export(ctx, "widget_t_set_prop_with_focus_state", wrap_widget_t_set_prop_with_focus_state);Nan::Export(ctx, "widget_t_get_prop_with_focus_state", wrap_widget_t_get_prop_with_focus_state);Nan::Export(ctx, "widget_t_get_prop_floating", wrap_widget_t_get_prop_floating);Nan::Export(ctx, "widget_t_get_prop_parent", wrap_widget_t_get_prop_parent);
+  Nan::Export(ctx, "widget_count_children", wrap_widget_count_children);
+  Nan::Export(ctx, "widget_get_child", wrap_widget_get_child);
+  Nan::Export(ctx, "widget_index_of", wrap_widget_index_of);
+  Nan::Export(ctx, "widget_close_window", wrap_widget_close_window);
+  Nan::Export(ctx, "widget_move", wrap_widget_move);
+  Nan::Export(ctx, "widget_resize", wrap_widget_resize);
+  Nan::Export(ctx, "widget_move_resize", wrap_widget_move_resize);
+  Nan::Export(ctx, "widget_set_value", wrap_widget_set_value);
+  Nan::Export(ctx, "widget_animate_value_to", wrap_widget_animate_value_to);
+  Nan::Export(ctx, "widget_add_value", wrap_widget_add_value);
+  Nan::Export(ctx, "widget_use_style", wrap_widget_use_style);
+  Nan::Export(ctx, "widget_set_text_utf8", wrap_widget_set_text_utf8);
+  Nan::Export(ctx, "widget_set_tr_text", wrap_widget_set_tr_text);
+  Nan::Export(ctx, "widget_get_value", wrap_widget_get_value);
+  Nan::Export(ctx, "widget_get_text", wrap_widget_get_text);
+  Nan::Export(ctx, "widget_set_name", wrap_widget_set_name);
+  Nan::Export(ctx, "widget_set_theme", wrap_widget_set_theme);
+  Nan::Export(ctx, "widget_set_pointer_cursor", wrap_widget_set_pointer_cursor);
+  Nan::Export(ctx, "widget_set_animation", wrap_widget_set_animation);
+  Nan::Export(ctx, "widget_create_animator", wrap_widget_create_animator);
+  Nan::Export(ctx, "widget_start_animator", wrap_widget_start_animator);
+  Nan::Export(ctx, "widget_set_animator_time_scale", wrap_widget_set_animator_time_scale);
+  Nan::Export(ctx, "widget_pause_animator", wrap_widget_pause_animator);
+  Nan::Export(ctx, "widget_stop_animator", wrap_widget_stop_animator);
+  Nan::Export(ctx, "widget_destroy_animator", wrap_widget_destroy_animator);
+  Nan::Export(ctx, "widget_set_enable", wrap_widget_set_enable);
+  Nan::Export(ctx, "widget_set_feedback", wrap_widget_set_feedback);
+  Nan::Export(ctx, "widget_set_floating", wrap_widget_set_floating);
+  Nan::Export(ctx, "widget_set_focused", wrap_widget_set_focused);
+  Nan::Export(ctx, "widget_set_focusable", wrap_widget_set_focusable);
+  Nan::Export(ctx, "widget_set_state", wrap_widget_set_state);
+  Nan::Export(ctx, "widget_set_opacity", wrap_widget_set_opacity);
+  Nan::Export(ctx, "widget_destroy_children", wrap_widget_destroy_children);
+  Nan::Export(ctx, "widget_add_child", wrap_widget_add_child);
+  Nan::Export(ctx, "widget_remove_child", wrap_widget_remove_child);
+  Nan::Export(ctx, "widget_insert_child", wrap_widget_insert_child);
+  Nan::Export(ctx, "widget_restack", wrap_widget_restack);
+  Nan::Export(ctx, "widget_child", wrap_widget_child);
+  Nan::Export(ctx, "widget_lookup", wrap_widget_lookup);
+  Nan::Export(ctx, "widget_lookup_by_type", wrap_widget_lookup_by_type);
+  Nan::Export(ctx, "widget_set_visible", wrap_widget_set_visible);
+  Nan::Export(ctx, "widget_set_visible_only", wrap_widget_set_visible_only);
+  Nan::Export(ctx, "widget_set_sensitive", wrap_widget_set_sensitive);
+  Nan::Export(ctx, "widget_on", wrap_widget_on);
+  Nan::Export(ctx, "widget_off", wrap_widget_off);
+  Nan::Export(ctx, "widget_invalidate_force", wrap_widget_invalidate_force);
+  Nan::Export(ctx, "widget_set_prop_str", wrap_widget_set_prop_str);
+  Nan::Export(ctx, "widget_get_prop_str", wrap_widget_get_prop_str);
+  Nan::Export(ctx, "widget_set_prop_int", wrap_widget_set_prop_int);
+  Nan::Export(ctx, "widget_get_prop_int", wrap_widget_get_prop_int);
+  Nan::Export(ctx, "widget_set_prop_bool", wrap_widget_set_prop_bool);
+  Nan::Export(ctx, "widget_get_prop_bool", wrap_widget_get_prop_bool);
+  Nan::Export(ctx, "widget_is_window_opened", wrap_widget_is_window_opened);
+  Nan::Export(ctx, "widget_is_window", wrap_widget_is_window);
+  Nan::Export(ctx, "widget_is_designing_window", wrap_widget_is_designing_window);
+  Nan::Export(ctx, "widget_is_window_manager", wrap_widget_is_window_manager);
+  Nan::Export(ctx, "widget_foreach", wrap_widget_foreach);
+  Nan::Export(ctx, "widget_get_window", wrap_widget_get_window);
+  Nan::Export(ctx, "widget_get_window_manager", wrap_widget_get_window_manager);
+  Nan::Export(ctx, "widget_get_type", wrap_widget_get_type);
+  Nan::Export(ctx, "widget_clone", wrap_widget_clone);
+  Nan::Export(ctx, "widget_equal", wrap_widget_equal);
+  Nan::Export(ctx, "widget_cast", wrap_widget_cast);
+  Nan::Export(ctx, "widget_destroy", wrap_widget_destroy);
+  Nan::Export(ctx, "widget_unref", wrap_widget_unref);
+  Nan::Export(ctx, "widget_is_system_bar", wrap_widget_is_system_bar);
+  Nan::Export(ctx, "widget_is_normal_window", wrap_widget_is_normal_window);
+  Nan::Export(ctx, "widget_is_dialog", wrap_widget_is_dialog);
+  Nan::Export(ctx, "widget_is_popup", wrap_widget_is_popup);
+  Nan::Export(ctx, "widget_layout", wrap_widget_layout);
+  Nan::Export(ctx, "widget_set_self_layout", wrap_widget_set_self_layout);
+  Nan::Export(ctx, "widget_set_children_layout", wrap_widget_set_children_layout);
+  Nan::Export(ctx, "widget_set_self_layout_params", wrap_widget_set_self_layout_params);
+  Nan::Export(ctx, "widget_set_style_int", wrap_widget_set_style_int);
+  Nan::Export(ctx, "widget_set_style_str", wrap_widget_set_style_str);
+  Nan::Export(ctx, "widget_set_style_color", wrap_widget_set_style_color);
+  Nan::Export(ctx, "widget_t_get_prop_x", wrap_widget_t_get_prop_x);
+  Nan::Export(ctx, "widget_t_get_prop_y", wrap_widget_t_get_prop_y);
+  Nan::Export(ctx, "widget_t_get_prop_w", wrap_widget_t_get_prop_w);
+  Nan::Export(ctx, "widget_t_get_prop_h", wrap_widget_t_get_prop_h);
+  Nan::Export(ctx, "widget_t_get_prop_name", wrap_widget_t_get_prop_name);
+  Nan::Export(ctx, "widget_t_get_prop_tr_text", wrap_widget_t_get_prop_tr_text);
+  Nan::Export(ctx, "widget_t_get_prop_style", wrap_widget_t_get_prop_style);
+  Nan::Export(ctx, "widget_t_get_prop_animation", wrap_widget_t_get_prop_animation);
+  Nan::Export(ctx, "widget_t_get_prop_enable", wrap_widget_t_get_prop_enable);
+  Nan::Export(ctx, "widget_t_get_prop_feedback", wrap_widget_t_get_prop_feedback);
+  Nan::Export(ctx, "widget_t_set_prop_visible", wrap_widget_t_set_prop_visible);
+  Nan::Export(ctx, "widget_t_get_prop_visible", wrap_widget_t_get_prop_visible);
+  Nan::Export(ctx, "widget_t_set_prop_sensitive", wrap_widget_t_set_prop_sensitive);
+  Nan::Export(ctx, "widget_t_get_prop_sensitive", wrap_widget_t_get_prop_sensitive);
+  Nan::Export(ctx, "widget_t_set_prop_focusable", wrap_widget_t_set_prop_focusable);
+  Nan::Export(ctx, "widget_t_get_prop_focusable", wrap_widget_t_get_prop_focusable);
+  Nan::Export(ctx, "widget_t_set_prop_with_focus_state", wrap_widget_t_set_prop_with_focus_state);
+  Nan::Export(ctx, "widget_t_get_prop_with_focus_state", wrap_widget_t_get_prop_with_focus_state);
+  Nan::Export(ctx, "widget_t_get_prop_floating", wrap_widget_t_get_prop_floating);
+  Nan::Export(ctx, "widget_t_get_prop_parent", wrap_widget_t_get_prop_parent);
+
  return RET_OK;
 }
 
@@ -8632,7 +9428,28 @@ static void get_RET_EOS(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
 }
 
 ret_t ret_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "RET_OK", get_RET_OK);Nan::Export(ctx, "RET_OOM", get_RET_OOM);Nan::Export(ctx, "RET_FAIL", get_RET_FAIL);Nan::Export(ctx, "RET_NOT_IMPL", get_RET_NOT_IMPL);Nan::Export(ctx, "RET_QUIT", get_RET_QUIT);Nan::Export(ctx, "RET_FOUND", get_RET_FOUND);Nan::Export(ctx, "RET_BUSY", get_RET_BUSY);Nan::Export(ctx, "RET_REMOVE", get_RET_REMOVE);Nan::Export(ctx, "RET_REPEAT", get_RET_REPEAT);Nan::Export(ctx, "RET_NOT_FOUND", get_RET_NOT_FOUND);Nan::Export(ctx, "RET_DONE", get_RET_DONE);Nan::Export(ctx, "RET_STOP", get_RET_STOP);Nan::Export(ctx, "RET_SKIP", get_RET_SKIP);Nan::Export(ctx, "RET_CONTINUE", get_RET_CONTINUE);Nan::Export(ctx, "RET_OBJECT_CHANGED", get_RET_OBJECT_CHANGED);Nan::Export(ctx, "RET_ITEMS_CHANGED", get_RET_ITEMS_CHANGED);Nan::Export(ctx, "RET_BAD_PARAMS", get_RET_BAD_PARAMS);Nan::Export(ctx, "RET_TIMEOUT", get_RET_TIMEOUT);Nan::Export(ctx, "RET_CRC", get_RET_CRC);Nan::Export(ctx, "RET_IO", get_RET_IO);Nan::Export(ctx, "RET_EOS", get_RET_EOS);
+  Nan::Export(ctx, "RET_OK", get_RET_OK);
+  Nan::Export(ctx, "RET_OOM", get_RET_OOM);
+  Nan::Export(ctx, "RET_FAIL", get_RET_FAIL);
+  Nan::Export(ctx, "RET_NOT_IMPL", get_RET_NOT_IMPL);
+  Nan::Export(ctx, "RET_QUIT", get_RET_QUIT);
+  Nan::Export(ctx, "RET_FOUND", get_RET_FOUND);
+  Nan::Export(ctx, "RET_BUSY", get_RET_BUSY);
+  Nan::Export(ctx, "RET_REMOVE", get_RET_REMOVE);
+  Nan::Export(ctx, "RET_REPEAT", get_RET_REPEAT);
+  Nan::Export(ctx, "RET_NOT_FOUND", get_RET_NOT_FOUND);
+  Nan::Export(ctx, "RET_DONE", get_RET_DONE);
+  Nan::Export(ctx, "RET_STOP", get_RET_STOP);
+  Nan::Export(ctx, "RET_SKIP", get_RET_SKIP);
+  Nan::Export(ctx, "RET_CONTINUE", get_RET_CONTINUE);
+  Nan::Export(ctx, "RET_OBJECT_CHANGED", get_RET_OBJECT_CHANGED);
+  Nan::Export(ctx, "RET_ITEMS_CHANGED", get_RET_ITEMS_CHANGED);
+  Nan::Export(ctx, "RET_BAD_PARAMS", get_RET_BAD_PARAMS);
+  Nan::Export(ctx, "RET_TIMEOUT", get_RET_TIMEOUT);
+  Nan::Export(ctx, "RET_CRC", get_RET_CRC);
+  Nan::Export(ctx, "RET_IO", get_RET_IO);
+  Nan::Export(ctx, "RET_EOS", get_RET_EOS);
+
  return RET_OK;
 }
 
@@ -8668,7 +9485,9 @@ static void wrap_time_now_ms(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
 }
 
 ret_t time_now_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "time_now_s", wrap_time_now_s);Nan::Export(ctx, "time_now_ms", wrap_time_now_ms);
+  Nan::Export(ctx, "time_now_s", wrap_time_now_s);
+  Nan::Export(ctx, "time_now_ms", wrap_time_now_ms);
+
  return RET_OK;
 }
 
@@ -8809,7 +9628,24 @@ static void get_IMAGE_DRAW_PATCH3_Y_SCALE_X(const Nan::FunctionCallbackInfo<v8::
 }
 
 ret_t image_draw_type_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "IMAGE_DRAW_DEFAULT", get_IMAGE_DRAW_DEFAULT);Nan::Export(ctx, "IMAGE_DRAW_CENTER", get_IMAGE_DRAW_CENTER);Nan::Export(ctx, "IMAGE_DRAW_ICON", get_IMAGE_DRAW_ICON);Nan::Export(ctx, "IMAGE_DRAW_SCALE", get_IMAGE_DRAW_SCALE);Nan::Export(ctx, "IMAGE_DRAW_SCALE_AUTO", get_IMAGE_DRAW_SCALE_AUTO);Nan::Export(ctx, "IMAGE_DRAW_SCALE_DOWN", get_IMAGE_DRAW_SCALE_DOWN);Nan::Export(ctx, "IMAGE_DRAW_SCALE_W", get_IMAGE_DRAW_SCALE_W);Nan::Export(ctx, "IMAGE_DRAW_SCALE_H", get_IMAGE_DRAW_SCALE_H);Nan::Export(ctx, "IMAGE_DRAW_REPEAT", get_IMAGE_DRAW_REPEAT);Nan::Export(ctx, "IMAGE_DRAW_REPEAT_X", get_IMAGE_DRAW_REPEAT_X);Nan::Export(ctx, "IMAGE_DRAW_REPEAT_Y", get_IMAGE_DRAW_REPEAT_Y);Nan::Export(ctx, "IMAGE_DRAW_REPEAT_Y_INVERSE", get_IMAGE_DRAW_REPEAT_Y_INVERSE);Nan::Export(ctx, "IMAGE_DRAW_PATCH9", get_IMAGE_DRAW_PATCH9);Nan::Export(ctx, "IMAGE_DRAW_PATCH3_X", get_IMAGE_DRAW_PATCH3_X);Nan::Export(ctx, "IMAGE_DRAW_PATCH3_Y", get_IMAGE_DRAW_PATCH3_Y);Nan::Export(ctx, "IMAGE_DRAW_PATCH3_X_SCALE_Y", get_IMAGE_DRAW_PATCH3_X_SCALE_Y);Nan::Export(ctx, "IMAGE_DRAW_PATCH3_Y_SCALE_X", get_IMAGE_DRAW_PATCH3_Y_SCALE_X);
+  Nan::Export(ctx, "IMAGE_DRAW_DEFAULT", get_IMAGE_DRAW_DEFAULT);
+  Nan::Export(ctx, "IMAGE_DRAW_CENTER", get_IMAGE_DRAW_CENTER);
+  Nan::Export(ctx, "IMAGE_DRAW_ICON", get_IMAGE_DRAW_ICON);
+  Nan::Export(ctx, "IMAGE_DRAW_SCALE", get_IMAGE_DRAW_SCALE);
+  Nan::Export(ctx, "IMAGE_DRAW_SCALE_AUTO", get_IMAGE_DRAW_SCALE_AUTO);
+  Nan::Export(ctx, "IMAGE_DRAW_SCALE_DOWN", get_IMAGE_DRAW_SCALE_DOWN);
+  Nan::Export(ctx, "IMAGE_DRAW_SCALE_W", get_IMAGE_DRAW_SCALE_W);
+  Nan::Export(ctx, "IMAGE_DRAW_SCALE_H", get_IMAGE_DRAW_SCALE_H);
+  Nan::Export(ctx, "IMAGE_DRAW_REPEAT", get_IMAGE_DRAW_REPEAT);
+  Nan::Export(ctx, "IMAGE_DRAW_REPEAT_X", get_IMAGE_DRAW_REPEAT_X);
+  Nan::Export(ctx, "IMAGE_DRAW_REPEAT_Y", get_IMAGE_DRAW_REPEAT_Y);
+  Nan::Export(ctx, "IMAGE_DRAW_REPEAT_Y_INVERSE", get_IMAGE_DRAW_REPEAT_Y_INVERSE);
+  Nan::Export(ctx, "IMAGE_DRAW_PATCH9", get_IMAGE_DRAW_PATCH9);
+  Nan::Export(ctx, "IMAGE_DRAW_PATCH3_X", get_IMAGE_DRAW_PATCH3_X);
+  Nan::Export(ctx, "IMAGE_DRAW_PATCH3_Y", get_IMAGE_DRAW_PATCH3_Y);
+  Nan::Export(ctx, "IMAGE_DRAW_PATCH3_X_SCALE_Y", get_IMAGE_DRAW_PATCH3_X_SCALE_Y);
+  Nan::Export(ctx, "IMAGE_DRAW_PATCH3_Y_SCALE_X", get_IMAGE_DRAW_PATCH3_Y_SCALE_X);
+
  return RET_OK;
 }
 
@@ -9266,7 +10102,37 @@ static void wrap_canvas_t_get_prop_global_alpha(const Nan::FunctionCallbackInfo<
 }
 
 ret_t canvas_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "canvas_get_width", wrap_canvas_get_width);Nan::Export(ctx, "canvas_get_height", wrap_canvas_get_height);Nan::Export(ctx, "canvas_get_clip_rect", wrap_canvas_get_clip_rect);Nan::Export(ctx, "canvas_set_clip_rect", wrap_canvas_set_clip_rect);Nan::Export(ctx, "canvas_set_clip_rect_ex", wrap_canvas_set_clip_rect_ex);Nan::Export(ctx, "canvas_set_fill_color_str", wrap_canvas_set_fill_color_str);Nan::Export(ctx, "canvas_set_text_color_str", wrap_canvas_set_text_color_str);Nan::Export(ctx, "canvas_set_stroke_color_str", wrap_canvas_set_stroke_color_str);Nan::Export(ctx, "canvas_set_global_alpha", wrap_canvas_set_global_alpha);Nan::Export(ctx, "canvas_translate", wrap_canvas_translate);Nan::Export(ctx, "canvas_untranslate", wrap_canvas_untranslate);Nan::Export(ctx, "canvas_draw_vline", wrap_canvas_draw_vline);Nan::Export(ctx, "canvas_draw_hline", wrap_canvas_draw_hline);Nan::Export(ctx, "canvas_fill_rect", wrap_canvas_fill_rect);Nan::Export(ctx, "canvas_stroke_rect", wrap_canvas_stroke_rect);Nan::Export(ctx, "canvas_set_font", wrap_canvas_set_font);Nan::Export(ctx, "canvas_measure_utf8", wrap_canvas_measure_utf8);Nan::Export(ctx, "canvas_draw_utf8", wrap_canvas_draw_utf8);Nan::Export(ctx, "canvas_draw_utf8_in_rect", wrap_canvas_draw_utf8_in_rect);Nan::Export(ctx, "canvas_draw_icon", wrap_canvas_draw_icon);Nan::Export(ctx, "canvas_draw_image", wrap_canvas_draw_image);Nan::Export(ctx, "canvas_draw_image_ex", wrap_canvas_draw_image_ex);Nan::Export(ctx, "canvas_get_vgcanvas", wrap_canvas_get_vgcanvas);Nan::Export(ctx, "canvas_cast", wrap_canvas_cast);Nan::Export(ctx, "canvas_reset", wrap_canvas_reset);Nan::Export(ctx, "canvas_t_get_prop_ox", wrap_canvas_t_get_prop_ox);Nan::Export(ctx, "canvas_t_get_prop_oy", wrap_canvas_t_get_prop_oy);Nan::Export(ctx, "canvas_t_get_prop_font_name", wrap_canvas_t_get_prop_font_name);Nan::Export(ctx, "canvas_t_get_prop_font_size", wrap_canvas_t_get_prop_font_size);Nan::Export(ctx, "canvas_t_get_prop_global_alpha", wrap_canvas_t_get_prop_global_alpha);
+  Nan::Export(ctx, "canvas_get_width", wrap_canvas_get_width);
+  Nan::Export(ctx, "canvas_get_height", wrap_canvas_get_height);
+  Nan::Export(ctx, "canvas_get_clip_rect", wrap_canvas_get_clip_rect);
+  Nan::Export(ctx, "canvas_set_clip_rect", wrap_canvas_set_clip_rect);
+  Nan::Export(ctx, "canvas_set_clip_rect_ex", wrap_canvas_set_clip_rect_ex);
+  Nan::Export(ctx, "canvas_set_fill_color_str", wrap_canvas_set_fill_color_str);
+  Nan::Export(ctx, "canvas_set_text_color_str", wrap_canvas_set_text_color_str);
+  Nan::Export(ctx, "canvas_set_stroke_color_str", wrap_canvas_set_stroke_color_str);
+  Nan::Export(ctx, "canvas_set_global_alpha", wrap_canvas_set_global_alpha);
+  Nan::Export(ctx, "canvas_translate", wrap_canvas_translate);
+  Nan::Export(ctx, "canvas_untranslate", wrap_canvas_untranslate);
+  Nan::Export(ctx, "canvas_draw_vline", wrap_canvas_draw_vline);
+  Nan::Export(ctx, "canvas_draw_hline", wrap_canvas_draw_hline);
+  Nan::Export(ctx, "canvas_fill_rect", wrap_canvas_fill_rect);
+  Nan::Export(ctx, "canvas_stroke_rect", wrap_canvas_stroke_rect);
+  Nan::Export(ctx, "canvas_set_font", wrap_canvas_set_font);
+  Nan::Export(ctx, "canvas_measure_utf8", wrap_canvas_measure_utf8);
+  Nan::Export(ctx, "canvas_draw_utf8", wrap_canvas_draw_utf8);
+  Nan::Export(ctx, "canvas_draw_utf8_in_rect", wrap_canvas_draw_utf8_in_rect);
+  Nan::Export(ctx, "canvas_draw_icon", wrap_canvas_draw_icon);
+  Nan::Export(ctx, "canvas_draw_image", wrap_canvas_draw_image);
+  Nan::Export(ctx, "canvas_draw_image_ex", wrap_canvas_draw_image_ex);
+  Nan::Export(ctx, "canvas_get_vgcanvas", wrap_canvas_get_vgcanvas);
+  Nan::Export(ctx, "canvas_cast", wrap_canvas_cast);
+  Nan::Export(ctx, "canvas_reset", wrap_canvas_reset);
+  Nan::Export(ctx, "canvas_t_get_prop_ox", wrap_canvas_t_get_prop_ox);
+  Nan::Export(ctx, "canvas_t_get_prop_oy", wrap_canvas_t_get_prop_oy);
+  Nan::Export(ctx, "canvas_t_get_prop_font_name", wrap_canvas_t_get_prop_font_name);
+  Nan::Export(ctx, "canvas_t_get_prop_font_size", wrap_canvas_t_get_prop_font_size);
+  Nan::Export(ctx, "canvas_t_get_prop_global_alpha", wrap_canvas_t_get_prop_global_alpha);
+
  return RET_OK;
 }
 
@@ -9355,7 +10221,13 @@ static void wrap_named_value_t_get_prop_name(const Nan::FunctionCallbackInfo<v8:
 }
 
 ret_t named_value_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "named_value_create", wrap_named_value_create);Nan::Export(ctx, "named_value_cast", wrap_named_value_cast);Nan::Export(ctx, "named_value_set_name", wrap_named_value_set_name);Nan::Export(ctx, "named_value_set_value", wrap_named_value_set_value);Nan::Export(ctx, "named_value_get_value", wrap_named_value_get_value);Nan::Export(ctx, "named_value_t_get_prop_name", wrap_named_value_t_get_prop_name);
+  Nan::Export(ctx, "named_value_create", wrap_named_value_create);
+  Nan::Export(ctx, "named_value_cast", wrap_named_value_cast);
+  Nan::Export(ctx, "named_value_set_name", wrap_named_value_set_name);
+  Nan::Export(ctx, "named_value_set_value", wrap_named_value_set_value);
+  Nan::Export(ctx, "named_value_get_value", wrap_named_value_get_value);
+  Nan::Export(ctx, "named_value_t_get_prop_name", wrap_named_value_t_get_prop_name);
+
  return RET_OK;
 }
 
@@ -10176,7 +11048,109 @@ static void get_MIME_TYPE_VIDEO_X_MSVIDEO(const Nan::FunctionCallbackInfo<v8::Va
 }
 
 ret_t MIME_TYPE_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "MIME_TYPE_APPLICATION_ENVOY", get_MIME_TYPE_APPLICATION_ENVOY);Nan::Export(ctx, "MIME_TYPE_APPLICATION_FRACTALS", get_MIME_TYPE_APPLICATION_FRACTALS);Nan::Export(ctx, "MIME_TYPE_APPLICATION_FUTURESPLASH", get_MIME_TYPE_APPLICATION_FUTURESPLASH);Nan::Export(ctx, "MIME_TYPE_APPLICATION_HTA", get_MIME_TYPE_APPLICATION_HTA);Nan::Export(ctx, "MIME_TYPE_APPLICATION_JSON", get_MIME_TYPE_APPLICATION_JSON);Nan::Export(ctx, "MIME_TYPE_APPLICATION_UBJSON", get_MIME_TYPE_APPLICATION_UBJSON);Nan::Export(ctx, "MIME_TYPE_APPLICATION_MAC_BINHEX40", get_MIME_TYPE_APPLICATION_MAC_BINHEX40);Nan::Export(ctx, "MIME_TYPE_APPLICATION_MSWORD", get_MIME_TYPE_APPLICATION_MSWORD);Nan::Export(ctx, "MIME_TYPE_APPLICATION_OCTET_STREAM", get_MIME_TYPE_APPLICATION_OCTET_STREAM);Nan::Export(ctx, "MIME_TYPE_APPLICATION_ODA", get_MIME_TYPE_APPLICATION_ODA);Nan::Export(ctx, "MIME_TYPE_APPLICATION_OLESCRIPT", get_MIME_TYPE_APPLICATION_OLESCRIPT);Nan::Export(ctx, "MIME_TYPE_APPLICATION_PDF", get_MIME_TYPE_APPLICATION_PDF);Nan::Export(ctx, "MIME_TYPE_APPLICATION_PICS_RULES", get_MIME_TYPE_APPLICATION_PICS_RULES);Nan::Export(ctx, "MIME_TYPE_APPLICATION_PKCS10", get_MIME_TYPE_APPLICATION_PKCS10);Nan::Export(ctx, "MIME_TYPE_APPLICATION_PKIX_CRL", get_MIME_TYPE_APPLICATION_PKIX_CRL);Nan::Export(ctx, "MIME_TYPE_APPLICATION_POSTSCRIPT", get_MIME_TYPE_APPLICATION_POSTSCRIPT);Nan::Export(ctx, "MIME_TYPE_APPLICATION_RTF", get_MIME_TYPE_APPLICATION_RTF);Nan::Export(ctx, "MIME_TYPE_APPLICATION_VND_MS_EXCEL", get_MIME_TYPE_APPLICATION_VND_MS_EXCEL);Nan::Export(ctx, "MIME_TYPE_APPLICATION_VND_MS_OUTLOOK", get_MIME_TYPE_APPLICATION_VND_MS_OUTLOOK);Nan::Export(ctx, "MIME_TYPE_APPLICATION_VND_MS_PKICERTSTORE", get_MIME_TYPE_APPLICATION_VND_MS_PKICERTSTORE);Nan::Export(ctx, "MIME_TYPE_APPLICATION_VND_MS_PKISECCAT", get_MIME_TYPE_APPLICATION_VND_MS_PKISECCAT);Nan::Export(ctx, "MIME_TYPE_APPLICATION_VND_MS_PKISTL", get_MIME_TYPE_APPLICATION_VND_MS_PKISTL);Nan::Export(ctx, "MIME_TYPE_APPLICATION_VND_MS_POWERPOINT", get_MIME_TYPE_APPLICATION_VND_MS_POWERPOINT);Nan::Export(ctx, "MIME_TYPE_APPLICATION_VND_MS_PROJECT", get_MIME_TYPE_APPLICATION_VND_MS_PROJECT);Nan::Export(ctx, "MIME_TYPE_APPLICATION_VND_MS_WORKS", get_MIME_TYPE_APPLICATION_VND_MS_WORKS);Nan::Export(ctx, "MIME_TYPE_APPLICATION_WINHLP", get_MIME_TYPE_APPLICATION_WINHLP);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_BCPIO", get_MIME_TYPE_APPLICATION_X_BCPIO);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_CDF", get_MIME_TYPE_APPLICATION_X_CDF);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_COMPRESS", get_MIME_TYPE_APPLICATION_X_COMPRESS);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_COMPRESSED", get_MIME_TYPE_APPLICATION_X_COMPRESSED);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_CPIO", get_MIME_TYPE_APPLICATION_X_CPIO);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_CSH", get_MIME_TYPE_APPLICATION_X_CSH);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_DIRECTOR", get_MIME_TYPE_APPLICATION_X_DIRECTOR);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_DVI", get_MIME_TYPE_APPLICATION_X_DVI);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_GTAR", get_MIME_TYPE_APPLICATION_X_GTAR);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_GZIP", get_MIME_TYPE_APPLICATION_X_GZIP);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_HDF", get_MIME_TYPE_APPLICATION_X_HDF);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_IPHONE", get_MIME_TYPE_APPLICATION_X_IPHONE);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_JAVASCRIPT", get_MIME_TYPE_APPLICATION_X_JAVASCRIPT);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_LATEX", get_MIME_TYPE_APPLICATION_X_LATEX);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSACCESS", get_MIME_TYPE_APPLICATION_X_MSACCESS);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSCARDFILE", get_MIME_TYPE_APPLICATION_X_MSCARDFILE);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSCLIP", get_MIME_TYPE_APPLICATION_X_MSCLIP);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSDOWNLOAD", get_MIME_TYPE_APPLICATION_X_MSDOWNLOAD);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSMEDIAVIEW", get_MIME_TYPE_APPLICATION_X_MSMEDIAVIEW);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSMETAFILE", get_MIME_TYPE_APPLICATION_X_MSMETAFILE);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSMONEY", get_MIME_TYPE_APPLICATION_X_MSMONEY);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSPUBLISHER", get_MIME_TYPE_APPLICATION_X_MSPUBLISHER);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSSCHEDULE", get_MIME_TYPE_APPLICATION_X_MSSCHEDULE);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSTERMINAL", get_MIME_TYPE_APPLICATION_X_MSTERMINAL);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSWRITE", get_MIME_TYPE_APPLICATION_X_MSWRITE);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_NETCDF", get_MIME_TYPE_APPLICATION_X_NETCDF);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_PERFMON", get_MIME_TYPE_APPLICATION_X_PERFMON);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_PKCS12", get_MIME_TYPE_APPLICATION_X_PKCS12);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_SH", get_MIME_TYPE_APPLICATION_X_SH);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_SHAR", get_MIME_TYPE_APPLICATION_X_SHAR);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_SHOCKWAVE_FLASH", get_MIME_TYPE_APPLICATION_X_SHOCKWAVE_FLASH);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_STUFFIT", get_MIME_TYPE_APPLICATION_X_STUFFIT);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_SV4CPIO", get_MIME_TYPE_APPLICATION_X_SV4CPIO);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_SV4CRC", get_MIME_TYPE_APPLICATION_X_SV4CRC);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_TAR", get_MIME_TYPE_APPLICATION_X_TAR);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_TCL", get_MIME_TYPE_APPLICATION_X_TCL);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_TEX", get_MIME_TYPE_APPLICATION_X_TEX);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_TEXINFO", get_MIME_TYPE_APPLICATION_X_TEXINFO);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_TROFF", get_MIME_TYPE_APPLICATION_X_TROFF);Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_USTAR", get_MIME_TYPE_APPLICATION_X_USTAR);Nan::Export(ctx, "MIME_TYPE_APPLICATION_ZIP", get_MIME_TYPE_APPLICATION_ZIP);Nan::Export(ctx, "MIME_TYPE_AUDIO_BASIC", get_MIME_TYPE_AUDIO_BASIC);Nan::Export(ctx, "MIME_TYPE_AUDIO_MID", get_MIME_TYPE_AUDIO_MID);Nan::Export(ctx, "MIME_TYPE_AUDIO_MPEG", get_MIME_TYPE_AUDIO_MPEG);Nan::Export(ctx, "MIME_TYPE_AUDIO_X_AIFF", get_MIME_TYPE_AUDIO_X_AIFF);Nan::Export(ctx, "MIME_TYPE_AUDIO_X_MPEGURL", get_MIME_TYPE_AUDIO_X_MPEGURL);Nan::Export(ctx, "MIME_TYPE_AUDIO_X_WAV", get_MIME_TYPE_AUDIO_X_WAV);Nan::Export(ctx, "MIME_TYPE_IMAGE_BMP", get_MIME_TYPE_IMAGE_BMP);Nan::Export(ctx, "MIME_TYPE_IMAGE_CIS_COD", get_MIME_TYPE_IMAGE_CIS_COD);Nan::Export(ctx, "MIME_TYPE_IMAGE_GIF", get_MIME_TYPE_IMAGE_GIF);Nan::Export(ctx, "MIME_TYPE_IMAGE_IEF", get_MIME_TYPE_IMAGE_IEF);Nan::Export(ctx, "MIME_TYPE_IMAGE_JPEG", get_MIME_TYPE_IMAGE_JPEG);Nan::Export(ctx, "MIME_TYPE_IMAGE_PIPEG", get_MIME_TYPE_IMAGE_PIPEG);Nan::Export(ctx, "MIME_TYPE_IMAGE_SVG_XML", get_MIME_TYPE_IMAGE_SVG_XML);Nan::Export(ctx, "MIME_TYPE_IMAGE_TIFF", get_MIME_TYPE_IMAGE_TIFF);Nan::Export(ctx, "MIME_TYPE_IMAGE_X_CMX", get_MIME_TYPE_IMAGE_X_CMX);Nan::Export(ctx, "MIME_TYPE_IMAGE_X_ICON", get_MIME_TYPE_IMAGE_X_ICON);Nan::Export(ctx, "MIME_TYPE_IMAGE_X_RGB", get_MIME_TYPE_IMAGE_X_RGB);Nan::Export(ctx, "MIME_TYPE_IMAGE_X_XBITMAP", get_MIME_TYPE_IMAGE_X_XBITMAP);Nan::Export(ctx, "MIME_TYPE_IMAGE_X_XPIXMAP", get_MIME_TYPE_IMAGE_X_XPIXMAP);Nan::Export(ctx, "MIME_TYPE_IMAGE_X_XWINDOWDUMP", get_MIME_TYPE_IMAGE_X_XWINDOWDUMP);Nan::Export(ctx, "MIME_TYPE_MESSAGE_RFC822", get_MIME_TYPE_MESSAGE_RFC822);Nan::Export(ctx, "MIME_TYPE_TEXT_CSS", get_MIME_TYPE_TEXT_CSS);Nan::Export(ctx, "MIME_TYPE_TEXT_H323", get_MIME_TYPE_TEXT_H323);Nan::Export(ctx, "MIME_TYPE_TEXT_HTML", get_MIME_TYPE_TEXT_HTML);Nan::Export(ctx, "MIME_TYPE_TEXT_IULS", get_MIME_TYPE_TEXT_IULS);Nan::Export(ctx, "MIME_TYPE_TEXT_PLAIN", get_MIME_TYPE_TEXT_PLAIN);Nan::Export(ctx, "MIME_TYPE_TEXT_RICHTEXT", get_MIME_TYPE_TEXT_RICHTEXT);Nan::Export(ctx, "MIME_TYPE_TEXT_SCRIPTLET", get_MIME_TYPE_TEXT_SCRIPTLET);Nan::Export(ctx, "MIME_TYPE_TEXT_WEBVIEWHTML", get_MIME_TYPE_TEXT_WEBVIEWHTML);Nan::Export(ctx, "MIME_TYPE_TEXT_X_COMPONENT", get_MIME_TYPE_TEXT_X_COMPONENT);Nan::Export(ctx, "MIME_TYPE_TEXT_X_SETEXT", get_MIME_TYPE_TEXT_X_SETEXT);Nan::Export(ctx, "MIME_TYPE_TEXT_X_VCARD", get_MIME_TYPE_TEXT_X_VCARD);Nan::Export(ctx, "MIME_TYPE_VIDEO_MPEG", get_MIME_TYPE_VIDEO_MPEG);Nan::Export(ctx, "MIME_TYPE_VIDEO_QUICKTIME", get_MIME_TYPE_VIDEO_QUICKTIME);Nan::Export(ctx, "MIME_TYPE_VIDEO_X_MSVIDEO", get_MIME_TYPE_VIDEO_X_MSVIDEO);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_ENVOY", get_MIME_TYPE_APPLICATION_ENVOY);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_FRACTALS", get_MIME_TYPE_APPLICATION_FRACTALS);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_FUTURESPLASH", get_MIME_TYPE_APPLICATION_FUTURESPLASH);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_HTA", get_MIME_TYPE_APPLICATION_HTA);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_JSON", get_MIME_TYPE_APPLICATION_JSON);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_UBJSON", get_MIME_TYPE_APPLICATION_UBJSON);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_MAC_BINHEX40", get_MIME_TYPE_APPLICATION_MAC_BINHEX40);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_MSWORD", get_MIME_TYPE_APPLICATION_MSWORD);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_OCTET_STREAM", get_MIME_TYPE_APPLICATION_OCTET_STREAM);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_ODA", get_MIME_TYPE_APPLICATION_ODA);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_OLESCRIPT", get_MIME_TYPE_APPLICATION_OLESCRIPT);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_PDF", get_MIME_TYPE_APPLICATION_PDF);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_PICS_RULES", get_MIME_TYPE_APPLICATION_PICS_RULES);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_PKCS10", get_MIME_TYPE_APPLICATION_PKCS10);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_PKIX_CRL", get_MIME_TYPE_APPLICATION_PKIX_CRL);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_POSTSCRIPT", get_MIME_TYPE_APPLICATION_POSTSCRIPT);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_RTF", get_MIME_TYPE_APPLICATION_RTF);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_VND_MS_EXCEL", get_MIME_TYPE_APPLICATION_VND_MS_EXCEL);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_VND_MS_OUTLOOK", get_MIME_TYPE_APPLICATION_VND_MS_OUTLOOK);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_VND_MS_PKICERTSTORE", get_MIME_TYPE_APPLICATION_VND_MS_PKICERTSTORE);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_VND_MS_PKISECCAT", get_MIME_TYPE_APPLICATION_VND_MS_PKISECCAT);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_VND_MS_PKISTL", get_MIME_TYPE_APPLICATION_VND_MS_PKISTL);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_VND_MS_POWERPOINT", get_MIME_TYPE_APPLICATION_VND_MS_POWERPOINT);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_VND_MS_PROJECT", get_MIME_TYPE_APPLICATION_VND_MS_PROJECT);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_VND_MS_WORKS", get_MIME_TYPE_APPLICATION_VND_MS_WORKS);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_WINHLP", get_MIME_TYPE_APPLICATION_WINHLP);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_BCPIO", get_MIME_TYPE_APPLICATION_X_BCPIO);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_CDF", get_MIME_TYPE_APPLICATION_X_CDF);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_COMPRESS", get_MIME_TYPE_APPLICATION_X_COMPRESS);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_COMPRESSED", get_MIME_TYPE_APPLICATION_X_COMPRESSED);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_CPIO", get_MIME_TYPE_APPLICATION_X_CPIO);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_CSH", get_MIME_TYPE_APPLICATION_X_CSH);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_DIRECTOR", get_MIME_TYPE_APPLICATION_X_DIRECTOR);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_DVI", get_MIME_TYPE_APPLICATION_X_DVI);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_GTAR", get_MIME_TYPE_APPLICATION_X_GTAR);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_GZIP", get_MIME_TYPE_APPLICATION_X_GZIP);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_HDF", get_MIME_TYPE_APPLICATION_X_HDF);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_IPHONE", get_MIME_TYPE_APPLICATION_X_IPHONE);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_JAVASCRIPT", get_MIME_TYPE_APPLICATION_X_JAVASCRIPT);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_LATEX", get_MIME_TYPE_APPLICATION_X_LATEX);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSACCESS", get_MIME_TYPE_APPLICATION_X_MSACCESS);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSCARDFILE", get_MIME_TYPE_APPLICATION_X_MSCARDFILE);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSCLIP", get_MIME_TYPE_APPLICATION_X_MSCLIP);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSDOWNLOAD", get_MIME_TYPE_APPLICATION_X_MSDOWNLOAD);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSMEDIAVIEW", get_MIME_TYPE_APPLICATION_X_MSMEDIAVIEW);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSMETAFILE", get_MIME_TYPE_APPLICATION_X_MSMETAFILE);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSMONEY", get_MIME_TYPE_APPLICATION_X_MSMONEY);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSPUBLISHER", get_MIME_TYPE_APPLICATION_X_MSPUBLISHER);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSSCHEDULE", get_MIME_TYPE_APPLICATION_X_MSSCHEDULE);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSTERMINAL", get_MIME_TYPE_APPLICATION_X_MSTERMINAL);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_MSWRITE", get_MIME_TYPE_APPLICATION_X_MSWRITE);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_NETCDF", get_MIME_TYPE_APPLICATION_X_NETCDF);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_PERFMON", get_MIME_TYPE_APPLICATION_X_PERFMON);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_PKCS12", get_MIME_TYPE_APPLICATION_X_PKCS12);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_SH", get_MIME_TYPE_APPLICATION_X_SH);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_SHAR", get_MIME_TYPE_APPLICATION_X_SHAR);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_SHOCKWAVE_FLASH", get_MIME_TYPE_APPLICATION_X_SHOCKWAVE_FLASH);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_STUFFIT", get_MIME_TYPE_APPLICATION_X_STUFFIT);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_SV4CPIO", get_MIME_TYPE_APPLICATION_X_SV4CPIO);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_SV4CRC", get_MIME_TYPE_APPLICATION_X_SV4CRC);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_TAR", get_MIME_TYPE_APPLICATION_X_TAR);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_TCL", get_MIME_TYPE_APPLICATION_X_TCL);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_TEX", get_MIME_TYPE_APPLICATION_X_TEX);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_TEXINFO", get_MIME_TYPE_APPLICATION_X_TEXINFO);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_TROFF", get_MIME_TYPE_APPLICATION_X_TROFF);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_X_USTAR", get_MIME_TYPE_APPLICATION_X_USTAR);
+  Nan::Export(ctx, "MIME_TYPE_APPLICATION_ZIP", get_MIME_TYPE_APPLICATION_ZIP);
+  Nan::Export(ctx, "MIME_TYPE_AUDIO_BASIC", get_MIME_TYPE_AUDIO_BASIC);
+  Nan::Export(ctx, "MIME_TYPE_AUDIO_MID", get_MIME_TYPE_AUDIO_MID);
+  Nan::Export(ctx, "MIME_TYPE_AUDIO_MPEG", get_MIME_TYPE_AUDIO_MPEG);
+  Nan::Export(ctx, "MIME_TYPE_AUDIO_X_AIFF", get_MIME_TYPE_AUDIO_X_AIFF);
+  Nan::Export(ctx, "MIME_TYPE_AUDIO_X_MPEGURL", get_MIME_TYPE_AUDIO_X_MPEGURL);
+  Nan::Export(ctx, "MIME_TYPE_AUDIO_X_WAV", get_MIME_TYPE_AUDIO_X_WAV);
+  Nan::Export(ctx, "MIME_TYPE_IMAGE_BMP", get_MIME_TYPE_IMAGE_BMP);
+  Nan::Export(ctx, "MIME_TYPE_IMAGE_CIS_COD", get_MIME_TYPE_IMAGE_CIS_COD);
+  Nan::Export(ctx, "MIME_TYPE_IMAGE_GIF", get_MIME_TYPE_IMAGE_GIF);
+  Nan::Export(ctx, "MIME_TYPE_IMAGE_IEF", get_MIME_TYPE_IMAGE_IEF);
+  Nan::Export(ctx, "MIME_TYPE_IMAGE_JPEG", get_MIME_TYPE_IMAGE_JPEG);
+  Nan::Export(ctx, "MIME_TYPE_IMAGE_PIPEG", get_MIME_TYPE_IMAGE_PIPEG);
+  Nan::Export(ctx, "MIME_TYPE_IMAGE_SVG_XML", get_MIME_TYPE_IMAGE_SVG_XML);
+  Nan::Export(ctx, "MIME_TYPE_IMAGE_TIFF", get_MIME_TYPE_IMAGE_TIFF);
+  Nan::Export(ctx, "MIME_TYPE_IMAGE_X_CMX", get_MIME_TYPE_IMAGE_X_CMX);
+  Nan::Export(ctx, "MIME_TYPE_IMAGE_X_ICON", get_MIME_TYPE_IMAGE_X_ICON);
+  Nan::Export(ctx, "MIME_TYPE_IMAGE_X_RGB", get_MIME_TYPE_IMAGE_X_RGB);
+  Nan::Export(ctx, "MIME_TYPE_IMAGE_X_XBITMAP", get_MIME_TYPE_IMAGE_X_XBITMAP);
+  Nan::Export(ctx, "MIME_TYPE_IMAGE_X_XPIXMAP", get_MIME_TYPE_IMAGE_X_XPIXMAP);
+  Nan::Export(ctx, "MIME_TYPE_IMAGE_X_XWINDOWDUMP", get_MIME_TYPE_IMAGE_X_XWINDOWDUMP);
+  Nan::Export(ctx, "MIME_TYPE_MESSAGE_RFC822", get_MIME_TYPE_MESSAGE_RFC822);
+  Nan::Export(ctx, "MIME_TYPE_TEXT_CSS", get_MIME_TYPE_TEXT_CSS);
+  Nan::Export(ctx, "MIME_TYPE_TEXT_H323", get_MIME_TYPE_TEXT_H323);
+  Nan::Export(ctx, "MIME_TYPE_TEXT_HTML", get_MIME_TYPE_TEXT_HTML);
+  Nan::Export(ctx, "MIME_TYPE_TEXT_IULS", get_MIME_TYPE_TEXT_IULS);
+  Nan::Export(ctx, "MIME_TYPE_TEXT_PLAIN", get_MIME_TYPE_TEXT_PLAIN);
+  Nan::Export(ctx, "MIME_TYPE_TEXT_RICHTEXT", get_MIME_TYPE_TEXT_RICHTEXT);
+  Nan::Export(ctx, "MIME_TYPE_TEXT_SCRIPTLET", get_MIME_TYPE_TEXT_SCRIPTLET);
+  Nan::Export(ctx, "MIME_TYPE_TEXT_WEBVIEWHTML", get_MIME_TYPE_TEXT_WEBVIEWHTML);
+  Nan::Export(ctx, "MIME_TYPE_TEXT_X_COMPONENT", get_MIME_TYPE_TEXT_X_COMPONENT);
+  Nan::Export(ctx, "MIME_TYPE_TEXT_X_SETEXT", get_MIME_TYPE_TEXT_X_SETEXT);
+  Nan::Export(ctx, "MIME_TYPE_TEXT_X_VCARD", get_MIME_TYPE_TEXT_X_VCARD);
+  Nan::Export(ctx, "MIME_TYPE_VIDEO_MPEG", get_MIME_TYPE_VIDEO_MPEG);
+  Nan::Export(ctx, "MIME_TYPE_VIDEO_QUICKTIME", get_MIME_TYPE_VIDEO_QUICKTIME);
+  Nan::Export(ctx, "MIME_TYPE_VIDEO_X_MSVIDEO", get_MIME_TYPE_VIDEO_X_MSVIDEO);
+
  return RET_OK;
 }
 
@@ -10226,7 +11200,12 @@ static void get_INDICATOR_DEFAULT_PAINT_STROKE_RECT(const Nan::FunctionCallbackI
 }
 
 ret_t indicator_default_paint_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "INDICATOR_DEFAULT_PAINT_AUTO", get_INDICATOR_DEFAULT_PAINT_AUTO);Nan::Export(ctx, "INDICATOR_DEFAULT_PAINT_FILL_DOT", get_INDICATOR_DEFAULT_PAINT_FILL_DOT);Nan::Export(ctx, "INDICATOR_DEFAULT_PAINT_STROKE_DOT", get_INDICATOR_DEFAULT_PAINT_STROKE_DOT);Nan::Export(ctx, "INDICATOR_DEFAULT_PAINT_FILL_RECT", get_INDICATOR_DEFAULT_PAINT_FILL_RECT);Nan::Export(ctx, "INDICATOR_DEFAULT_PAINT_STROKE_RECT", get_INDICATOR_DEFAULT_PAINT_STROKE_RECT);
+  Nan::Export(ctx, "INDICATOR_DEFAULT_PAINT_AUTO", get_INDICATOR_DEFAULT_PAINT_AUTO);
+  Nan::Export(ctx, "INDICATOR_DEFAULT_PAINT_FILL_DOT", get_INDICATOR_DEFAULT_PAINT_FILL_DOT);
+  Nan::Export(ctx, "INDICATOR_DEFAULT_PAINT_STROKE_DOT", get_INDICATOR_DEFAULT_PAINT_STROKE_DOT);
+  Nan::Export(ctx, "INDICATOR_DEFAULT_PAINT_FILL_RECT", get_INDICATOR_DEFAULT_PAINT_FILL_RECT);
+  Nan::Export(ctx, "INDICATOR_DEFAULT_PAINT_STROKE_RECT", get_INDICATOR_DEFAULT_PAINT_STROKE_RECT);
+
  return RET_OK;
 }
 
@@ -10247,7 +11226,9 @@ static void get_CLIP_BOARD_DATA_TYPE_TEXT(const Nan::FunctionCallbackInfo<v8::Va
 }
 
 ret_t clip_board_data_type_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "CLIP_BOARD_DATA_TYPE_NONE", get_CLIP_BOARD_DATA_TYPE_NONE);Nan::Export(ctx, "CLIP_BOARD_DATA_TYPE_TEXT", get_CLIP_BOARD_DATA_TYPE_TEXT);
+  Nan::Export(ctx, "CLIP_BOARD_DATA_TYPE_NONE", get_CLIP_BOARD_DATA_TYPE_NONE);
+  Nan::Export(ctx, "CLIP_BOARD_DATA_TYPE_TEXT", get_CLIP_BOARD_DATA_TYPE_TEXT);
+
  return RET_OK;
 }
 
@@ -10282,7 +11263,9 @@ static void wrap_clip_board_get_text(const Nan::FunctionCallbackInfo<v8::Value>&
 }
 
 ret_t clip_board_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "clip_board_set_text", wrap_clip_board_set_text);Nan::Export(ctx, "clip_board_get_text", wrap_clip_board_get_text);
+  Nan::Export(ctx, "clip_board_set_text", wrap_clip_board_set_text);
+  Nan::Export(ctx, "clip_board_get_text", wrap_clip_board_get_text);
+
  return RET_OK;
 }
 
@@ -10479,7 +11462,31 @@ static void get_EASING_BOUNCE_INOUT(const Nan::FunctionCallbackInfo<v8::Value>& 
 }
 
 ret_t easing_type_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "EASING_LINEAR", get_EASING_LINEAR);Nan::Export(ctx, "EASING_QUADRATIC_IN", get_EASING_QUADRATIC_IN);Nan::Export(ctx, "EASING_QUADRATIC_OUT", get_EASING_QUADRATIC_OUT);Nan::Export(ctx, "EASING_QUADRATIC_INOUT", get_EASING_QUADRATIC_INOUT);Nan::Export(ctx, "EASING_CUBIC_IN", get_EASING_CUBIC_IN);Nan::Export(ctx, "EASING_CUBIC_OUT", get_EASING_CUBIC_OUT);Nan::Export(ctx, "EASING_SIN_IN", get_EASING_SIN_IN);Nan::Export(ctx, "EASING_SIN_OUT", get_EASING_SIN_OUT);Nan::Export(ctx, "EASING_SIN_INOUT", get_EASING_SIN_INOUT);Nan::Export(ctx, "EASING_POW_IN", get_EASING_POW_IN);Nan::Export(ctx, "EASING_POW_OUT", get_EASING_POW_OUT);Nan::Export(ctx, "EASING_POW_INOUT", get_EASING_POW_INOUT);Nan::Export(ctx, "EASING_CIRCULAR_IN", get_EASING_CIRCULAR_IN);Nan::Export(ctx, "EASING_CIRCULAR_OUT", get_EASING_CIRCULAR_OUT);Nan::Export(ctx, "EASING_CIRCULAR_INOUT", get_EASING_CIRCULAR_INOUT);Nan::Export(ctx, "EASING_ELASTIC_IN", get_EASING_ELASTIC_IN);Nan::Export(ctx, "EASING_ELASTIC_OUT", get_EASING_ELASTIC_OUT);Nan::Export(ctx, "EASING_ELASTIC_INOUT", get_EASING_ELASTIC_INOUT);Nan::Export(ctx, "EASING_BACK_IN", get_EASING_BACK_IN);Nan::Export(ctx, "EASING_BACK_OUT", get_EASING_BACK_OUT);Nan::Export(ctx, "EASING_BACK_INOUT", get_EASING_BACK_INOUT);Nan::Export(ctx, "EASING_BOUNCE_IN", get_EASING_BOUNCE_IN);Nan::Export(ctx, "EASING_BOUNCE_OUT", get_EASING_BOUNCE_OUT);Nan::Export(ctx, "EASING_BOUNCE_INOUT", get_EASING_BOUNCE_INOUT);
+  Nan::Export(ctx, "EASING_LINEAR", get_EASING_LINEAR);
+  Nan::Export(ctx, "EASING_QUADRATIC_IN", get_EASING_QUADRATIC_IN);
+  Nan::Export(ctx, "EASING_QUADRATIC_OUT", get_EASING_QUADRATIC_OUT);
+  Nan::Export(ctx, "EASING_QUADRATIC_INOUT", get_EASING_QUADRATIC_INOUT);
+  Nan::Export(ctx, "EASING_CUBIC_IN", get_EASING_CUBIC_IN);
+  Nan::Export(ctx, "EASING_CUBIC_OUT", get_EASING_CUBIC_OUT);
+  Nan::Export(ctx, "EASING_SIN_IN", get_EASING_SIN_IN);
+  Nan::Export(ctx, "EASING_SIN_OUT", get_EASING_SIN_OUT);
+  Nan::Export(ctx, "EASING_SIN_INOUT", get_EASING_SIN_INOUT);
+  Nan::Export(ctx, "EASING_POW_IN", get_EASING_POW_IN);
+  Nan::Export(ctx, "EASING_POW_OUT", get_EASING_POW_OUT);
+  Nan::Export(ctx, "EASING_POW_INOUT", get_EASING_POW_INOUT);
+  Nan::Export(ctx, "EASING_CIRCULAR_IN", get_EASING_CIRCULAR_IN);
+  Nan::Export(ctx, "EASING_CIRCULAR_OUT", get_EASING_CIRCULAR_OUT);
+  Nan::Export(ctx, "EASING_CIRCULAR_INOUT", get_EASING_CIRCULAR_INOUT);
+  Nan::Export(ctx, "EASING_ELASTIC_IN", get_EASING_ELASTIC_IN);
+  Nan::Export(ctx, "EASING_ELASTIC_OUT", get_EASING_ELASTIC_OUT);
+  Nan::Export(ctx, "EASING_ELASTIC_INOUT", get_EASING_ELASTIC_INOUT);
+  Nan::Export(ctx, "EASING_BACK_IN", get_EASING_BACK_IN);
+  Nan::Export(ctx, "EASING_BACK_OUT", get_EASING_BACK_OUT);
+  Nan::Export(ctx, "EASING_BACK_INOUT", get_EASING_BACK_INOUT);
+  Nan::Export(ctx, "EASING_BOUNCE_IN", get_EASING_BOUNCE_IN);
+  Nan::Export(ctx, "EASING_BOUNCE_OUT", get_EASING_BOUNCE_OUT);
+  Nan::Export(ctx, "EASING_BOUNCE_INOUT", get_EASING_BOUNCE_INOUT);
+
  return RET_OK;
 }
 
@@ -10581,7 +11588,16 @@ static void wrap_date_time_t_get_prop_year(const Nan::FunctionCallbackInfo<v8::V
 }
 
 ret_t date_time_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "date_time_create", wrap_date_time_create);Nan::Export(ctx, "date_time_set", wrap_date_time_set);Nan::Export(ctx, "date_time_t_get_prop_second", wrap_date_time_t_get_prop_second);Nan::Export(ctx, "date_time_t_get_prop_minute", wrap_date_time_t_get_prop_minute);Nan::Export(ctx, "date_time_t_get_prop_hour", wrap_date_time_t_get_prop_hour);Nan::Export(ctx, "date_time_t_get_prop_day", wrap_date_time_t_get_prop_day);Nan::Export(ctx, "date_time_t_get_prop_wday", wrap_date_time_t_get_prop_wday);Nan::Export(ctx, "date_time_t_get_prop_month", wrap_date_time_t_get_prop_month);Nan::Export(ctx, "date_time_t_get_prop_year", wrap_date_time_t_get_prop_year);
+  Nan::Export(ctx, "date_time_create", wrap_date_time_create);
+  Nan::Export(ctx, "date_time_set", wrap_date_time_set);
+  Nan::Export(ctx, "date_time_t_get_prop_second", wrap_date_time_t_get_prop_second);
+  Nan::Export(ctx, "date_time_t_get_prop_minute", wrap_date_time_t_get_prop_minute);
+  Nan::Export(ctx, "date_time_t_get_prop_hour", wrap_date_time_t_get_prop_hour);
+  Nan::Export(ctx, "date_time_t_get_prop_day", wrap_date_time_t_get_prop_day);
+  Nan::Export(ctx, "date_time_t_get_prop_wday", wrap_date_time_t_get_prop_wday);
+  Nan::Export(ctx, "date_time_t_get_prop_month", wrap_date_time_t_get_prop_month);
+  Nan::Export(ctx, "date_time_t_get_prop_year", wrap_date_time_t_get_prop_year);
+
  return RET_OK;
 }
 
@@ -10711,7 +11727,16 @@ static void wrap_color_t_get_prop_color(const Nan::FunctionCallbackInfo<v8::Valu
 }
 
 ret_t color_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "color_create", wrap_color_create);Nan::Export(ctx, "color_from_str", wrap_color_from_str);Nan::Export(ctx, "color_r", wrap_color_r);Nan::Export(ctx, "color_g", wrap_color_g);Nan::Export(ctx, "color_b", wrap_color_b);Nan::Export(ctx, "color_a", wrap_color_a);Nan::Export(ctx, "color_cast", wrap_color_cast);Nan::Export(ctx, "color_t_set_prop_color", wrap_color_t_set_prop_color);Nan::Export(ctx, "color_t_get_prop_color", wrap_color_t_get_prop_color);
+  Nan::Export(ctx, "color_create", wrap_color_create);
+  Nan::Export(ctx, "color_from_str", wrap_color_from_str);
+  Nan::Export(ctx, "color_r", wrap_color_r);
+  Nan::Export(ctx, "color_g", wrap_color_g);
+  Nan::Export(ctx, "color_b", wrap_color_b);
+  Nan::Export(ctx, "color_a", wrap_color_a);
+  Nan::Export(ctx, "color_cast", wrap_color_cast);
+  Nan::Export(ctx, "color_t_set_prop_color", wrap_color_t_set_prop_color);
+  Nan::Export(ctx, "color_t_get_prop_color", wrap_color_t_get_prop_color);
+
  return RET_OK;
 }
 
@@ -10778,7 +11803,13 @@ static void wrap_asset_info_t_get_prop_name(const Nan::FunctionCallbackInfo<v8::
 }
 
 ret_t asset_info_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "asset_info_t_get_prop_type", wrap_asset_info_t_get_prop_type);Nan::Export(ctx, "asset_info_t_get_prop_subtype", wrap_asset_info_t_get_prop_subtype);Nan::Export(ctx, "asset_info_t_get_prop_is_in_rom", wrap_asset_info_t_get_prop_is_in_rom);Nan::Export(ctx, "asset_info_t_get_prop_size", wrap_asset_info_t_get_prop_size);Nan::Export(ctx, "asset_info_t_get_prop_refcount", wrap_asset_info_t_get_prop_refcount);Nan::Export(ctx, "asset_info_t_get_prop_name", wrap_asset_info_t_get_prop_name);
+  Nan::Export(ctx, "asset_info_t_get_prop_type", wrap_asset_info_t_get_prop_type);
+  Nan::Export(ctx, "asset_info_t_get_prop_subtype", wrap_asset_info_t_get_prop_subtype);
+  Nan::Export(ctx, "asset_info_t_get_prop_is_in_rom", wrap_asset_info_t_get_prop_is_in_rom);
+  Nan::Export(ctx, "asset_info_t_get_prop_size", wrap_asset_info_t_get_prop_size);
+  Nan::Export(ctx, "asset_info_t_get_prop_refcount", wrap_asset_info_t_get_prop_refcount);
+  Nan::Export(ctx, "asset_info_t_get_prop_name", wrap_asset_info_t_get_prop_name);
+
  return RET_OK;
 }
 
@@ -10855,7 +11886,16 @@ static void get_ASSET_TYPE_DATA(const Nan::FunctionCallbackInfo<v8::Value>& argv
 }
 
 ret_t asset_type_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "ASSET_TYPE_NONE", get_ASSET_TYPE_NONE);Nan::Export(ctx, "ASSET_TYPE_FONT", get_ASSET_TYPE_FONT);Nan::Export(ctx, "ASSET_TYPE_IMAGE", get_ASSET_TYPE_IMAGE);Nan::Export(ctx, "ASSET_TYPE_STYLE", get_ASSET_TYPE_STYLE);Nan::Export(ctx, "ASSET_TYPE_UI", get_ASSET_TYPE_UI);Nan::Export(ctx, "ASSET_TYPE_XML", get_ASSET_TYPE_XML);Nan::Export(ctx, "ASSET_TYPE_STRINGS", get_ASSET_TYPE_STRINGS);Nan::Export(ctx, "ASSET_TYPE_SCRIPT", get_ASSET_TYPE_SCRIPT);Nan::Export(ctx, "ASSET_TYPE_DATA", get_ASSET_TYPE_DATA);
+  Nan::Export(ctx, "ASSET_TYPE_NONE", get_ASSET_TYPE_NONE);
+  Nan::Export(ctx, "ASSET_TYPE_FONT", get_ASSET_TYPE_FONT);
+  Nan::Export(ctx, "ASSET_TYPE_IMAGE", get_ASSET_TYPE_IMAGE);
+  Nan::Export(ctx, "ASSET_TYPE_STYLE", get_ASSET_TYPE_STYLE);
+  Nan::Export(ctx, "ASSET_TYPE_UI", get_ASSET_TYPE_UI);
+  Nan::Export(ctx, "ASSET_TYPE_XML", get_ASSET_TYPE_XML);
+  Nan::Export(ctx, "ASSET_TYPE_STRINGS", get_ASSET_TYPE_STRINGS);
+  Nan::Export(ctx, "ASSET_TYPE_SCRIPT", get_ASSET_TYPE_SCRIPT);
+  Nan::Export(ctx, "ASSET_TYPE_DATA", get_ASSET_TYPE_DATA);
+
  return RET_OK;
 }
 
@@ -10905,7 +11945,10 @@ static void wrap_assets_manager_unref(const Nan::FunctionCallbackInfo<v8::Value>
 }
 
 ret_t assets_manager_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "assets_manager", wrap_assets_manager);Nan::Export(ctx, "assets_manager_ref", wrap_assets_manager_ref);Nan::Export(ctx, "assets_manager_unref", wrap_assets_manager_unref);
+  Nan::Export(ctx, "assets_manager", wrap_assets_manager);
+  Nan::Export(ctx, "assets_manager_ref", wrap_assets_manager_ref);
+  Nan::Export(ctx, "assets_manager_unref", wrap_assets_manager_unref);
+
  return RET_OK;
 }
 
@@ -10942,7 +11985,9 @@ static void wrap_canvas_widget_cast(const Nan::FunctionCallbackInfo<v8::Value>& 
 }
 
 ret_t canvas_widget_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "canvas_widget_create", wrap_canvas_widget_create);Nan::Export(ctx, "canvas_widget_cast", wrap_canvas_widget_cast);
+  Nan::Export(ctx, "canvas_widget_create", wrap_canvas_widget_create);
+  Nan::Export(ctx, "canvas_widget_cast", wrap_canvas_widget_cast);
+
  return RET_OK;
 }
 
@@ -11320,7 +12365,34 @@ static void wrap_time_clock_t_get_prop_second_anchor_y(const Nan::FunctionCallba
 }
 
 ret_t time_clock_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "time_clock_create", wrap_time_clock_create);Nan::Export(ctx, "time_clock_cast", wrap_time_clock_cast);Nan::Export(ctx, "time_clock_set_hour", wrap_time_clock_set_hour);Nan::Export(ctx, "time_clock_set_minute", wrap_time_clock_set_minute);Nan::Export(ctx, "time_clock_set_second", wrap_time_clock_set_second);Nan::Export(ctx, "time_clock_set_hour_image", wrap_time_clock_set_hour_image);Nan::Export(ctx, "time_clock_set_minute_image", wrap_time_clock_set_minute_image);Nan::Export(ctx, "time_clock_set_second_image", wrap_time_clock_set_second_image);Nan::Export(ctx, "time_clock_set_bg_image", wrap_time_clock_set_bg_image);Nan::Export(ctx, "time_clock_set_image", wrap_time_clock_set_image);Nan::Export(ctx, "time_clock_set_hour_anchor", wrap_time_clock_set_hour_anchor);Nan::Export(ctx, "time_clock_set_minute_anchor", wrap_time_clock_set_minute_anchor);Nan::Export(ctx, "time_clock_set_second_anchor", wrap_time_clock_set_second_anchor);Nan::Export(ctx, "time_clock_t_get_prop_hour", wrap_time_clock_t_get_prop_hour);Nan::Export(ctx, "time_clock_t_get_prop_minute", wrap_time_clock_t_get_prop_minute);Nan::Export(ctx, "time_clock_t_get_prop_second", wrap_time_clock_t_get_prop_second);Nan::Export(ctx, "time_clock_t_get_prop_image", wrap_time_clock_t_get_prop_image);Nan::Export(ctx, "time_clock_t_get_prop_bg_image", wrap_time_clock_t_get_prop_bg_image);Nan::Export(ctx, "time_clock_t_get_prop_hour_image", wrap_time_clock_t_get_prop_hour_image);Nan::Export(ctx, "time_clock_t_get_prop_minute_image", wrap_time_clock_t_get_prop_minute_image);Nan::Export(ctx, "time_clock_t_get_prop_second_image", wrap_time_clock_t_get_prop_second_image);Nan::Export(ctx, "time_clock_t_get_prop_hour_anchor_x", wrap_time_clock_t_get_prop_hour_anchor_x);Nan::Export(ctx, "time_clock_t_get_prop_hour_anchor_y", wrap_time_clock_t_get_prop_hour_anchor_y);Nan::Export(ctx, "time_clock_t_get_prop_minute_anchor_x", wrap_time_clock_t_get_prop_minute_anchor_x);Nan::Export(ctx, "time_clock_t_get_prop_minute_anchor_y", wrap_time_clock_t_get_prop_minute_anchor_y);Nan::Export(ctx, "time_clock_t_get_prop_second_anchor_x", wrap_time_clock_t_get_prop_second_anchor_x);Nan::Export(ctx, "time_clock_t_get_prop_second_anchor_y", wrap_time_clock_t_get_prop_second_anchor_y);
+  Nan::Export(ctx, "time_clock_create", wrap_time_clock_create);
+  Nan::Export(ctx, "time_clock_cast", wrap_time_clock_cast);
+  Nan::Export(ctx, "time_clock_set_hour", wrap_time_clock_set_hour);
+  Nan::Export(ctx, "time_clock_set_minute", wrap_time_clock_set_minute);
+  Nan::Export(ctx, "time_clock_set_second", wrap_time_clock_set_second);
+  Nan::Export(ctx, "time_clock_set_hour_image", wrap_time_clock_set_hour_image);
+  Nan::Export(ctx, "time_clock_set_minute_image", wrap_time_clock_set_minute_image);
+  Nan::Export(ctx, "time_clock_set_second_image", wrap_time_clock_set_second_image);
+  Nan::Export(ctx, "time_clock_set_bg_image", wrap_time_clock_set_bg_image);
+  Nan::Export(ctx, "time_clock_set_image", wrap_time_clock_set_image);
+  Nan::Export(ctx, "time_clock_set_hour_anchor", wrap_time_clock_set_hour_anchor);
+  Nan::Export(ctx, "time_clock_set_minute_anchor", wrap_time_clock_set_minute_anchor);
+  Nan::Export(ctx, "time_clock_set_second_anchor", wrap_time_clock_set_second_anchor);
+  Nan::Export(ctx, "time_clock_t_get_prop_hour", wrap_time_clock_t_get_prop_hour);
+  Nan::Export(ctx, "time_clock_t_get_prop_minute", wrap_time_clock_t_get_prop_minute);
+  Nan::Export(ctx, "time_clock_t_get_prop_second", wrap_time_clock_t_get_prop_second);
+  Nan::Export(ctx, "time_clock_t_get_prop_image", wrap_time_clock_t_get_prop_image);
+  Nan::Export(ctx, "time_clock_t_get_prop_bg_image", wrap_time_clock_t_get_prop_bg_image);
+  Nan::Export(ctx, "time_clock_t_get_prop_hour_image", wrap_time_clock_t_get_prop_hour_image);
+  Nan::Export(ctx, "time_clock_t_get_prop_minute_image", wrap_time_clock_t_get_prop_minute_image);
+  Nan::Export(ctx, "time_clock_t_get_prop_second_image", wrap_time_clock_t_get_prop_second_image);
+  Nan::Export(ctx, "time_clock_t_get_prop_hour_anchor_x", wrap_time_clock_t_get_prop_hour_anchor_x);
+  Nan::Export(ctx, "time_clock_t_get_prop_hour_anchor_y", wrap_time_clock_t_get_prop_hour_anchor_y);
+  Nan::Export(ctx, "time_clock_t_get_prop_minute_anchor_x", wrap_time_clock_t_get_prop_minute_anchor_x);
+  Nan::Export(ctx, "time_clock_t_get_prop_minute_anchor_y", wrap_time_clock_t_get_prop_minute_anchor_y);
+  Nan::Export(ctx, "time_clock_t_get_prop_second_anchor_x", wrap_time_clock_t_get_prop_second_anchor_x);
+  Nan::Export(ctx, "time_clock_t_get_prop_second_anchor_y", wrap_time_clock_t_get_prop_second_anchor_y);
+
  return RET_OK;
 }
 
@@ -11558,7 +12630,23 @@ static void wrap_text_selector_t_get_prop_options(const Nan::FunctionCallbackInf
 }
 
 ret_t text_selector_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "text_selector_create", wrap_text_selector_create);Nan::Export(ctx, "text_selector_cast", wrap_text_selector_cast);Nan::Export(ctx, "text_selector_reset_options", wrap_text_selector_reset_options);Nan::Export(ctx, "text_selector_count_options", wrap_text_selector_count_options);Nan::Export(ctx, "text_selector_append_option", wrap_text_selector_append_option);Nan::Export(ctx, "text_selector_set_options", wrap_text_selector_set_options);Nan::Export(ctx, "text_selector_set_range_options", wrap_text_selector_set_range_options);Nan::Export(ctx, "text_selector_get_value", wrap_text_selector_get_value);Nan::Export(ctx, "text_selector_set_value", wrap_text_selector_set_value);Nan::Export(ctx, "text_selector_get_text", wrap_text_selector_get_text);Nan::Export(ctx, "text_selector_set_text", wrap_text_selector_set_text);Nan::Export(ctx, "text_selector_set_selected_index", wrap_text_selector_set_selected_index);Nan::Export(ctx, "text_selector_set_visible_nr", wrap_text_selector_set_visible_nr);Nan::Export(ctx, "text_selector_t_get_prop_visible_nr", wrap_text_selector_t_get_prop_visible_nr);Nan::Export(ctx, "text_selector_t_get_prop_selected_index", wrap_text_selector_t_get_prop_selected_index);Nan::Export(ctx, "text_selector_t_get_prop_options", wrap_text_selector_t_get_prop_options);
+  Nan::Export(ctx, "text_selector_create", wrap_text_selector_create);
+  Nan::Export(ctx, "text_selector_cast", wrap_text_selector_cast);
+  Nan::Export(ctx, "text_selector_reset_options", wrap_text_selector_reset_options);
+  Nan::Export(ctx, "text_selector_count_options", wrap_text_selector_count_options);
+  Nan::Export(ctx, "text_selector_append_option", wrap_text_selector_append_option);
+  Nan::Export(ctx, "text_selector_set_options", wrap_text_selector_set_options);
+  Nan::Export(ctx, "text_selector_set_range_options", wrap_text_selector_set_range_options);
+  Nan::Export(ctx, "text_selector_get_value", wrap_text_selector_get_value);
+  Nan::Export(ctx, "text_selector_set_value", wrap_text_selector_set_value);
+  Nan::Export(ctx, "text_selector_get_text", wrap_text_selector_get_text);
+  Nan::Export(ctx, "text_selector_set_text", wrap_text_selector_set_text);
+  Nan::Export(ctx, "text_selector_set_selected_index", wrap_text_selector_set_selected_index);
+  Nan::Export(ctx, "text_selector_set_visible_nr", wrap_text_selector_set_visible_nr);
+  Nan::Export(ctx, "text_selector_t_get_prop_visible_nr", wrap_text_selector_t_get_prop_visible_nr);
+  Nan::Export(ctx, "text_selector_t_get_prop_selected_index", wrap_text_selector_t_get_prop_selected_index);
+  Nan::Export(ctx, "text_selector_t_get_prop_options", wrap_text_selector_t_get_prop_options);
+
  return RET_OK;
 }
 
@@ -11599,7 +12687,10 @@ static void wrap_prop_change_event_t_get_prop_value(const Nan::FunctionCallbackI
 }
 
 ret_t prop_change_event_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "prop_change_event_cast", wrap_prop_change_event_cast);Nan::Export(ctx, "prop_change_event_t_get_prop_name", wrap_prop_change_event_t_get_prop_name);Nan::Export(ctx, "prop_change_event_t_get_prop_value", wrap_prop_change_event_t_get_prop_value);
+  Nan::Export(ctx, "prop_change_event_cast", wrap_prop_change_event_cast);
+  Nan::Export(ctx, "prop_change_event_t_get_prop_name", wrap_prop_change_event_t_get_prop_name);
+  Nan::Export(ctx, "prop_change_event_t_get_prop_value", wrap_prop_change_event_t_get_prop_value);
+
  return RET_OK;
 }
 
@@ -11628,7 +12719,9 @@ static void wrap_progress_event_t_get_prop_percent(const Nan::FunctionCallbackIn
 }
 
 ret_t progress_event_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "progress_event_cast", wrap_progress_event_cast);Nan::Export(ctx, "progress_event_t_get_prop_percent", wrap_progress_event_t_get_prop_percent);
+  Nan::Export(ctx, "progress_event_cast", wrap_progress_event_cast);
+  Nan::Export(ctx, "progress_event_t_get_prop_percent", wrap_progress_event_t_get_prop_percent);
+
  return RET_OK;
 }
 
@@ -11700,7 +12793,12 @@ static void wrap_switch_t_get_prop_max_xoffset_ratio(const Nan::FunctionCallback
 }
 
 ret_t switch_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "switch_create", wrap_switch_create);Nan::Export(ctx, "switch_set_value", wrap_switch_set_value);Nan::Export(ctx, "switch_cast", wrap_switch_cast);Nan::Export(ctx, "switch_t_get_prop_value", wrap_switch_t_get_prop_value);Nan::Export(ctx, "switch_t_get_prop_max_xoffset_ratio", wrap_switch_t_get_prop_max_xoffset_ratio);
+  Nan::Export(ctx, "switch_create", wrap_switch_create);
+  Nan::Export(ctx, "switch_set_value", wrap_switch_set_value);
+  Nan::Export(ctx, "switch_cast", wrap_switch_cast);
+  Nan::Export(ctx, "switch_t_get_prop_value", wrap_switch_t_get_prop_value);
+  Nan::Export(ctx, "switch_t_get_prop_max_xoffset_ratio", wrap_switch_t_get_prop_max_xoffset_ratio);
+
  return RET_OK;
 }
 
@@ -11855,7 +12953,18 @@ static void wrap_slide_view_t_get_prop_anim_hint(const Nan::FunctionCallbackInfo
 }
 
 ret_t slide_view_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "slide_view_create", wrap_slide_view_create);Nan::Export(ctx, "slide_view_cast", wrap_slide_view_cast);Nan::Export(ctx, "slide_view_set_auto_play", wrap_slide_view_set_auto_play);Nan::Export(ctx, "slide_view_set_active", wrap_slide_view_set_active);Nan::Export(ctx, "slide_view_set_vertical", wrap_slide_view_set_vertical);Nan::Export(ctx, "slide_view_set_anim_hint", wrap_slide_view_set_anim_hint);Nan::Export(ctx, "slide_view_set_loop", wrap_slide_view_set_loop);Nan::Export(ctx, "slide_view_t_get_prop_vertical", wrap_slide_view_t_get_prop_vertical);Nan::Export(ctx, "slide_view_t_get_prop_auto_play", wrap_slide_view_t_get_prop_auto_play);Nan::Export(ctx, "slide_view_t_get_prop_loop", wrap_slide_view_t_get_prop_loop);Nan::Export(ctx, "slide_view_t_get_prop_anim_hint", wrap_slide_view_t_get_prop_anim_hint);
+  Nan::Export(ctx, "slide_view_create", wrap_slide_view_create);
+  Nan::Export(ctx, "slide_view_cast", wrap_slide_view_cast);
+  Nan::Export(ctx, "slide_view_set_auto_play", wrap_slide_view_set_auto_play);
+  Nan::Export(ctx, "slide_view_set_active", wrap_slide_view_set_active);
+  Nan::Export(ctx, "slide_view_set_vertical", wrap_slide_view_set_vertical);
+  Nan::Export(ctx, "slide_view_set_anim_hint", wrap_slide_view_set_anim_hint);
+  Nan::Export(ctx, "slide_view_set_loop", wrap_slide_view_set_loop);
+  Nan::Export(ctx, "slide_view_t_get_prop_vertical", wrap_slide_view_t_get_prop_vertical);
+  Nan::Export(ctx, "slide_view_t_get_prop_auto_play", wrap_slide_view_t_get_prop_auto_play);
+  Nan::Export(ctx, "slide_view_t_get_prop_loop", wrap_slide_view_t_get_prop_loop);
+  Nan::Export(ctx, "slide_view_t_get_prop_anim_hint", wrap_slide_view_t_get_prop_anim_hint);
+
  return RET_OK;
 }
 
@@ -12169,7 +13278,30 @@ static void wrap_slide_indicator_t_get_prop_indicated_target(const Nan::Function
 }
 
 ret_t slide_indicator_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "slide_indicator_create", wrap_slide_indicator_create);Nan::Export(ctx, "slide_indicator_create_linear", wrap_slide_indicator_create_linear);Nan::Export(ctx, "slide_indicator_create_arc", wrap_slide_indicator_create_arc);Nan::Export(ctx, "slide_indicator_cast", wrap_slide_indicator_cast);Nan::Export(ctx, "slide_indicator_set_value", wrap_slide_indicator_set_value);Nan::Export(ctx, "slide_indicator_set_max", wrap_slide_indicator_set_max);Nan::Export(ctx, "slide_indicator_set_default_paint", wrap_slide_indicator_set_default_paint);Nan::Export(ctx, "slide_indicator_set_auto_hide", wrap_slide_indicator_set_auto_hide);Nan::Export(ctx, "slide_indicator_set_margin", wrap_slide_indicator_set_margin);Nan::Export(ctx, "slide_indicator_set_spacing", wrap_slide_indicator_set_spacing);Nan::Export(ctx, "slide_indicator_set_size", wrap_slide_indicator_set_size);Nan::Export(ctx, "slide_indicator_set_anchor", wrap_slide_indicator_set_anchor);Nan::Export(ctx, "slide_indicator_set_indicated_target", wrap_slide_indicator_set_indicated_target);Nan::Export(ctx, "slide_indicator_t_get_prop_value", wrap_slide_indicator_t_get_prop_value);Nan::Export(ctx, "slide_indicator_t_get_prop_max", wrap_slide_indicator_t_get_prop_max);Nan::Export(ctx, "slide_indicator_t_get_prop_default_paint", wrap_slide_indicator_t_get_prop_default_paint);Nan::Export(ctx, "slide_indicator_t_get_prop_auto_hide", wrap_slide_indicator_t_get_prop_auto_hide);Nan::Export(ctx, "slide_indicator_t_get_prop_margin", wrap_slide_indicator_t_get_prop_margin);Nan::Export(ctx, "slide_indicator_t_get_prop_spacing", wrap_slide_indicator_t_get_prop_spacing);Nan::Export(ctx, "slide_indicator_t_get_prop_size", wrap_slide_indicator_t_get_prop_size);Nan::Export(ctx, "slide_indicator_t_get_prop_anchor_x", wrap_slide_indicator_t_get_prop_anchor_x);Nan::Export(ctx, "slide_indicator_t_get_prop_anchor_y", wrap_slide_indicator_t_get_prop_anchor_y);Nan::Export(ctx, "slide_indicator_t_get_prop_indicated_target", wrap_slide_indicator_t_get_prop_indicated_target);
+  Nan::Export(ctx, "slide_indicator_create", wrap_slide_indicator_create);
+  Nan::Export(ctx, "slide_indicator_create_linear", wrap_slide_indicator_create_linear);
+  Nan::Export(ctx, "slide_indicator_create_arc", wrap_slide_indicator_create_arc);
+  Nan::Export(ctx, "slide_indicator_cast", wrap_slide_indicator_cast);
+  Nan::Export(ctx, "slide_indicator_set_value", wrap_slide_indicator_set_value);
+  Nan::Export(ctx, "slide_indicator_set_max", wrap_slide_indicator_set_max);
+  Nan::Export(ctx, "slide_indicator_set_default_paint", wrap_slide_indicator_set_default_paint);
+  Nan::Export(ctx, "slide_indicator_set_auto_hide", wrap_slide_indicator_set_auto_hide);
+  Nan::Export(ctx, "slide_indicator_set_margin", wrap_slide_indicator_set_margin);
+  Nan::Export(ctx, "slide_indicator_set_spacing", wrap_slide_indicator_set_spacing);
+  Nan::Export(ctx, "slide_indicator_set_size", wrap_slide_indicator_set_size);
+  Nan::Export(ctx, "slide_indicator_set_anchor", wrap_slide_indicator_set_anchor);
+  Nan::Export(ctx, "slide_indicator_set_indicated_target", wrap_slide_indicator_set_indicated_target);
+  Nan::Export(ctx, "slide_indicator_t_get_prop_value", wrap_slide_indicator_t_get_prop_value);
+  Nan::Export(ctx, "slide_indicator_t_get_prop_max", wrap_slide_indicator_t_get_prop_max);
+  Nan::Export(ctx, "slide_indicator_t_get_prop_default_paint", wrap_slide_indicator_t_get_prop_default_paint);
+  Nan::Export(ctx, "slide_indicator_t_get_prop_auto_hide", wrap_slide_indicator_t_get_prop_auto_hide);
+  Nan::Export(ctx, "slide_indicator_t_get_prop_margin", wrap_slide_indicator_t_get_prop_margin);
+  Nan::Export(ctx, "slide_indicator_t_get_prop_spacing", wrap_slide_indicator_t_get_prop_spacing);
+  Nan::Export(ctx, "slide_indicator_t_get_prop_size", wrap_slide_indicator_t_get_prop_size);
+  Nan::Export(ctx, "slide_indicator_t_get_prop_anchor_x", wrap_slide_indicator_t_get_prop_anchor_x);
+  Nan::Export(ctx, "slide_indicator_t_get_prop_anchor_y", wrap_slide_indicator_t_get_prop_anchor_y);
+  Nan::Export(ctx, "slide_indicator_t_get_prop_indicated_target", wrap_slide_indicator_t_get_prop_indicated_target);
+
  return RET_OK;
 }
 
@@ -12281,7 +13413,15 @@ static void wrap_slide_menu_t_get_prop_min_scale(const Nan::FunctionCallbackInfo
 }
 
 ret_t slide_menu_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "slide_menu_create", wrap_slide_menu_create);Nan::Export(ctx, "slide_menu_cast", wrap_slide_menu_cast);Nan::Export(ctx, "slide_menu_set_value", wrap_slide_menu_set_value);Nan::Export(ctx, "slide_menu_set_align_v", wrap_slide_menu_set_align_v);Nan::Export(ctx, "slide_menu_set_min_scale", wrap_slide_menu_set_min_scale);Nan::Export(ctx, "slide_menu_t_get_prop_value", wrap_slide_menu_t_get_prop_value);Nan::Export(ctx, "slide_menu_t_get_prop_align_v", wrap_slide_menu_t_get_prop_align_v);Nan::Export(ctx, "slide_menu_t_get_prop_min_scale", wrap_slide_menu_t_get_prop_min_scale);
+  Nan::Export(ctx, "slide_menu_create", wrap_slide_menu_create);
+  Nan::Export(ctx, "slide_menu_cast", wrap_slide_menu_cast);
+  Nan::Export(ctx, "slide_menu_set_value", wrap_slide_menu_set_value);
+  Nan::Export(ctx, "slide_menu_set_align_v", wrap_slide_menu_set_align_v);
+  Nan::Export(ctx, "slide_menu_set_min_scale", wrap_slide_menu_set_min_scale);
+  Nan::Export(ctx, "slide_menu_t_get_prop_value", wrap_slide_menu_t_get_prop_value);
+  Nan::Export(ctx, "slide_menu_t_get_prop_align_v", wrap_slide_menu_t_get_prop_align_v);
+  Nan::Export(ctx, "slide_menu_t_get_prop_min_scale", wrap_slide_menu_t_get_prop_min_scale);
+
  return RET_OK;
 }
 
@@ -12524,7 +13664,25 @@ static void wrap_scroll_view_t_get_prop_yslidable(const Nan::FunctionCallbackInf
 }
 
 ret_t scroll_view_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "scroll_view_create", wrap_scroll_view_create);Nan::Export(ctx, "scroll_view_cast", wrap_scroll_view_cast);Nan::Export(ctx, "scroll_view_set_virtual_w", wrap_scroll_view_set_virtual_w);Nan::Export(ctx, "scroll_view_set_virtual_h", wrap_scroll_view_set_virtual_h);Nan::Export(ctx, "scroll_view_set_xslidable", wrap_scroll_view_set_xslidable);Nan::Export(ctx, "scroll_view_set_yslidable", wrap_scroll_view_set_yslidable);Nan::Export(ctx, "scroll_view_set_offset", wrap_scroll_view_set_offset);Nan::Export(ctx, "scroll_view_set_speed_scale", wrap_scroll_view_set_speed_scale);Nan::Export(ctx, "scroll_view_scroll_to", wrap_scroll_view_scroll_to);Nan::Export(ctx, "scroll_view_scroll_delta_to", wrap_scroll_view_scroll_delta_to);Nan::Export(ctx, "scroll_view_t_get_prop_virtual_w", wrap_scroll_view_t_get_prop_virtual_w);Nan::Export(ctx, "scroll_view_t_get_prop_virtual_h", wrap_scroll_view_t_get_prop_virtual_h);Nan::Export(ctx, "scroll_view_t_get_prop_xoffset", wrap_scroll_view_t_get_prop_xoffset);Nan::Export(ctx, "scroll_view_t_get_prop_yoffset", wrap_scroll_view_t_get_prop_yoffset);Nan::Export(ctx, "scroll_view_t_get_prop_xspeed_scale", wrap_scroll_view_t_get_prop_xspeed_scale);Nan::Export(ctx, "scroll_view_t_get_prop_yspeed_scale", wrap_scroll_view_t_get_prop_yspeed_scale);Nan::Export(ctx, "scroll_view_t_get_prop_xslidable", wrap_scroll_view_t_get_prop_xslidable);Nan::Export(ctx, "scroll_view_t_get_prop_yslidable", wrap_scroll_view_t_get_prop_yslidable);
+  Nan::Export(ctx, "scroll_view_create", wrap_scroll_view_create);
+  Nan::Export(ctx, "scroll_view_cast", wrap_scroll_view_cast);
+  Nan::Export(ctx, "scroll_view_set_virtual_w", wrap_scroll_view_set_virtual_w);
+  Nan::Export(ctx, "scroll_view_set_virtual_h", wrap_scroll_view_set_virtual_h);
+  Nan::Export(ctx, "scroll_view_set_xslidable", wrap_scroll_view_set_xslidable);
+  Nan::Export(ctx, "scroll_view_set_yslidable", wrap_scroll_view_set_yslidable);
+  Nan::Export(ctx, "scroll_view_set_offset", wrap_scroll_view_set_offset);
+  Nan::Export(ctx, "scroll_view_set_speed_scale", wrap_scroll_view_set_speed_scale);
+  Nan::Export(ctx, "scroll_view_scroll_to", wrap_scroll_view_scroll_to);
+  Nan::Export(ctx, "scroll_view_scroll_delta_to", wrap_scroll_view_scroll_delta_to);
+  Nan::Export(ctx, "scroll_view_t_get_prop_virtual_w", wrap_scroll_view_t_get_prop_virtual_w);
+  Nan::Export(ctx, "scroll_view_t_get_prop_virtual_h", wrap_scroll_view_t_get_prop_virtual_h);
+  Nan::Export(ctx, "scroll_view_t_get_prop_xoffset", wrap_scroll_view_t_get_prop_xoffset);
+  Nan::Export(ctx, "scroll_view_t_get_prop_yoffset", wrap_scroll_view_t_get_prop_yoffset);
+  Nan::Export(ctx, "scroll_view_t_get_prop_xspeed_scale", wrap_scroll_view_t_get_prop_xspeed_scale);
+  Nan::Export(ctx, "scroll_view_t_get_prop_yspeed_scale", wrap_scroll_view_t_get_prop_yspeed_scale);
+  Nan::Export(ctx, "scroll_view_t_get_prop_xslidable", wrap_scroll_view_t_get_prop_xslidable);
+  Nan::Export(ctx, "scroll_view_t_get_prop_yslidable", wrap_scroll_view_t_get_prop_yslidable);
+
  return RET_OK;
 }
 
@@ -12743,7 +13901,22 @@ static void wrap_scroll_bar_t_get_prop_animatable(const Nan::FunctionCallbackInf
 }
 
 ret_t scroll_bar_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "scroll_bar_create", wrap_scroll_bar_create);Nan::Export(ctx, "scroll_bar_cast", wrap_scroll_bar_cast);Nan::Export(ctx, "scroll_bar_create_mobile", wrap_scroll_bar_create_mobile);Nan::Export(ctx, "scroll_bar_create_desktop", wrap_scroll_bar_create_desktop);Nan::Export(ctx, "scroll_bar_set_params", wrap_scroll_bar_set_params);Nan::Export(ctx, "scroll_bar_scroll_to", wrap_scroll_bar_scroll_to);Nan::Export(ctx, "scroll_bar_set_value", wrap_scroll_bar_set_value);Nan::Export(ctx, "scroll_bar_add_delta", wrap_scroll_bar_add_delta);Nan::Export(ctx, "scroll_bar_scroll_delta", wrap_scroll_bar_scroll_delta);Nan::Export(ctx, "scroll_bar_set_value_only", wrap_scroll_bar_set_value_only);Nan::Export(ctx, "scroll_bar_is_mobile", wrap_scroll_bar_is_mobile);Nan::Export(ctx, "scroll_bar_t_get_prop_virtual_size", wrap_scroll_bar_t_get_prop_virtual_size);Nan::Export(ctx, "scroll_bar_t_get_prop_value", wrap_scroll_bar_t_get_prop_value);Nan::Export(ctx, "scroll_bar_t_get_prop_row", wrap_scroll_bar_t_get_prop_row);Nan::Export(ctx, "scroll_bar_t_get_prop_animatable", wrap_scroll_bar_t_get_prop_animatable);
+  Nan::Export(ctx, "scroll_bar_create", wrap_scroll_bar_create);
+  Nan::Export(ctx, "scroll_bar_cast", wrap_scroll_bar_cast);
+  Nan::Export(ctx, "scroll_bar_create_mobile", wrap_scroll_bar_create_mobile);
+  Nan::Export(ctx, "scroll_bar_create_desktop", wrap_scroll_bar_create_desktop);
+  Nan::Export(ctx, "scroll_bar_set_params", wrap_scroll_bar_set_params);
+  Nan::Export(ctx, "scroll_bar_scroll_to", wrap_scroll_bar_scroll_to);
+  Nan::Export(ctx, "scroll_bar_set_value", wrap_scroll_bar_set_value);
+  Nan::Export(ctx, "scroll_bar_add_delta", wrap_scroll_bar_add_delta);
+  Nan::Export(ctx, "scroll_bar_scroll_delta", wrap_scroll_bar_scroll_delta);
+  Nan::Export(ctx, "scroll_bar_set_value_only", wrap_scroll_bar_set_value_only);
+  Nan::Export(ctx, "scroll_bar_is_mobile", wrap_scroll_bar_is_mobile);
+  Nan::Export(ctx, "scroll_bar_t_get_prop_virtual_size", wrap_scroll_bar_t_get_prop_virtual_size);
+  Nan::Export(ctx, "scroll_bar_t_get_prop_value", wrap_scroll_bar_t_get_prop_value);
+  Nan::Export(ctx, "scroll_bar_t_get_prop_row", wrap_scroll_bar_t_get_prop_row);
+  Nan::Export(ctx, "scroll_bar_t_get_prop_animatable", wrap_scroll_bar_t_get_prop_animatable);
+
  return RET_OK;
 }
 
@@ -12855,7 +14028,15 @@ static void wrap_list_view_t_get_prop_auto_hide_scroll_bar(const Nan::FunctionCa
 }
 
 ret_t list_view_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "list_view_create", wrap_list_view_create);Nan::Export(ctx, "list_view_set_item_height", wrap_list_view_set_item_height);Nan::Export(ctx, "list_view_set_default_item_height", wrap_list_view_set_default_item_height);Nan::Export(ctx, "list_view_set_auto_hide_scroll_bar", wrap_list_view_set_auto_hide_scroll_bar);Nan::Export(ctx, "list_view_cast", wrap_list_view_cast);Nan::Export(ctx, "list_view_t_get_prop_item_height", wrap_list_view_t_get_prop_item_height);Nan::Export(ctx, "list_view_t_get_prop_default_item_height", wrap_list_view_t_get_prop_default_item_height);Nan::Export(ctx, "list_view_t_get_prop_auto_hide_scroll_bar", wrap_list_view_t_get_prop_auto_hide_scroll_bar);
+  Nan::Export(ctx, "list_view_create", wrap_list_view_create);
+  Nan::Export(ctx, "list_view_set_item_height", wrap_list_view_set_item_height);
+  Nan::Export(ctx, "list_view_set_default_item_height", wrap_list_view_set_default_item_height);
+  Nan::Export(ctx, "list_view_set_auto_hide_scroll_bar", wrap_list_view_set_auto_hide_scroll_bar);
+  Nan::Export(ctx, "list_view_cast", wrap_list_view_cast);
+  Nan::Export(ctx, "list_view_t_get_prop_item_height", wrap_list_view_t_get_prop_item_height);
+  Nan::Export(ctx, "list_view_t_get_prop_default_item_height", wrap_list_view_t_get_prop_default_item_height);
+  Nan::Export(ctx, "list_view_t_get_prop_auto_hide_scroll_bar", wrap_list_view_t_get_prop_auto_hide_scroll_bar);
+
  return RET_OK;
 }
 
@@ -12942,7 +14123,13 @@ static void wrap_list_view_h_t_get_prop_spacing(const Nan::FunctionCallbackInfo<
 }
 
 ret_t list_view_h_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "list_view_h_create", wrap_list_view_h_create);Nan::Export(ctx, "list_view_h_set_item_width", wrap_list_view_h_set_item_width);Nan::Export(ctx, "list_view_h_set_spacing", wrap_list_view_h_set_spacing);Nan::Export(ctx, "list_view_h_cast", wrap_list_view_h_cast);Nan::Export(ctx, "list_view_h_t_get_prop_item_width", wrap_list_view_h_t_get_prop_item_width);Nan::Export(ctx, "list_view_h_t_get_prop_spacing", wrap_list_view_h_t_get_prop_spacing);
+  Nan::Export(ctx, "list_view_h_create", wrap_list_view_h_create);
+  Nan::Export(ctx, "list_view_h_set_item_width", wrap_list_view_h_set_item_width);
+  Nan::Export(ctx, "list_view_h_set_spacing", wrap_list_view_h_set_spacing);
+  Nan::Export(ctx, "list_view_h_cast", wrap_list_view_h_cast);
+  Nan::Export(ctx, "list_view_h_t_get_prop_item_width", wrap_list_view_h_t_get_prop_item_width);
+  Nan::Export(ctx, "list_view_h_t_get_prop_spacing", wrap_list_view_h_t_get_prop_spacing);
+
  return RET_OK;
 }
 
@@ -12979,7 +14166,9 @@ static void wrap_list_item_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv
 }
 
 ret_t list_item_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "list_item_create", wrap_list_item_create);Nan::Export(ctx, "list_item_cast", wrap_list_item_cast);
+  Nan::Export(ctx, "list_item_create", wrap_list_item_create);
+  Nan::Export(ctx, "list_item_cast", wrap_list_item_cast);
+
  return RET_OK;
 }
 
@@ -13254,7 +14443,28 @@ static void wrap_hscroll_label_t_get_prop_text_w(const Nan::FunctionCallbackInfo
 }
 
 ret_t hscroll_label_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "hscroll_label_create", wrap_hscroll_label_create);Nan::Export(ctx, "hscroll_label_set_lull", wrap_hscroll_label_set_lull);Nan::Export(ctx, "hscroll_label_set_duration", wrap_hscroll_label_set_duration);Nan::Export(ctx, "hscroll_label_set_only_focus", wrap_hscroll_label_set_only_focus);Nan::Export(ctx, "hscroll_label_set_only_parent_focus", wrap_hscroll_label_set_only_parent_focus);Nan::Export(ctx, "hscroll_label_set_loop", wrap_hscroll_label_set_loop);Nan::Export(ctx, "hscroll_label_set_yoyo", wrap_hscroll_label_set_yoyo);Nan::Export(ctx, "hscroll_label_set_ellipses", wrap_hscroll_label_set_ellipses);Nan::Export(ctx, "hscroll_label_set_xoffset", wrap_hscroll_label_set_xoffset);Nan::Export(ctx, "hscroll_label_start", wrap_hscroll_label_start);Nan::Export(ctx, "hscroll_label_stop", wrap_hscroll_label_stop);Nan::Export(ctx, "hscroll_label_cast", wrap_hscroll_label_cast);Nan::Export(ctx, "hscroll_label_t_get_prop_only_focus", wrap_hscroll_label_t_get_prop_only_focus);Nan::Export(ctx, "hscroll_label_t_get_prop_only_parent_focus", wrap_hscroll_label_t_get_prop_only_parent_focus);Nan::Export(ctx, "hscroll_label_t_get_prop_loop", wrap_hscroll_label_t_get_prop_loop);Nan::Export(ctx, "hscroll_label_t_get_prop_yoyo", wrap_hscroll_label_t_get_prop_yoyo);Nan::Export(ctx, "hscroll_label_t_get_prop_ellipses", wrap_hscroll_label_t_get_prop_ellipses);Nan::Export(ctx, "hscroll_label_t_get_prop_lull", wrap_hscroll_label_t_get_prop_lull);Nan::Export(ctx, "hscroll_label_t_get_prop_duration", wrap_hscroll_label_t_get_prop_duration);Nan::Export(ctx, "hscroll_label_t_get_prop_xoffset", wrap_hscroll_label_t_get_prop_xoffset);Nan::Export(ctx, "hscroll_label_t_get_prop_text_w", wrap_hscroll_label_t_get_prop_text_w);
+  Nan::Export(ctx, "hscroll_label_create", wrap_hscroll_label_create);
+  Nan::Export(ctx, "hscroll_label_set_lull", wrap_hscroll_label_set_lull);
+  Nan::Export(ctx, "hscroll_label_set_duration", wrap_hscroll_label_set_duration);
+  Nan::Export(ctx, "hscroll_label_set_only_focus", wrap_hscroll_label_set_only_focus);
+  Nan::Export(ctx, "hscroll_label_set_only_parent_focus", wrap_hscroll_label_set_only_parent_focus);
+  Nan::Export(ctx, "hscroll_label_set_loop", wrap_hscroll_label_set_loop);
+  Nan::Export(ctx, "hscroll_label_set_yoyo", wrap_hscroll_label_set_yoyo);
+  Nan::Export(ctx, "hscroll_label_set_ellipses", wrap_hscroll_label_set_ellipses);
+  Nan::Export(ctx, "hscroll_label_set_xoffset", wrap_hscroll_label_set_xoffset);
+  Nan::Export(ctx, "hscroll_label_start", wrap_hscroll_label_start);
+  Nan::Export(ctx, "hscroll_label_stop", wrap_hscroll_label_stop);
+  Nan::Export(ctx, "hscroll_label_cast", wrap_hscroll_label_cast);
+  Nan::Export(ctx, "hscroll_label_t_get_prop_only_focus", wrap_hscroll_label_t_get_prop_only_focus);
+  Nan::Export(ctx, "hscroll_label_t_get_prop_only_parent_focus", wrap_hscroll_label_t_get_prop_only_parent_focus);
+  Nan::Export(ctx, "hscroll_label_t_get_prop_loop", wrap_hscroll_label_t_get_prop_loop);
+  Nan::Export(ctx, "hscroll_label_t_get_prop_yoyo", wrap_hscroll_label_t_get_prop_yoyo);
+  Nan::Export(ctx, "hscroll_label_t_get_prop_ellipses", wrap_hscroll_label_t_get_prop_ellipses);
+  Nan::Export(ctx, "hscroll_label_t_get_prop_lull", wrap_hscroll_label_t_get_prop_lull);
+  Nan::Export(ctx, "hscroll_label_t_get_prop_duration", wrap_hscroll_label_t_get_prop_duration);
+  Nan::Export(ctx, "hscroll_label_t_get_prop_xoffset", wrap_hscroll_label_t_get_prop_xoffset);
+  Nan::Export(ctx, "hscroll_label_t_get_prop_text_w", wrap_hscroll_label_t_get_prop_text_w);
+
  return RET_OK;
 }
 
@@ -13327,7 +14537,12 @@ static void wrap_rich_text_t_get_prop_margin(const Nan::FunctionCallbackInfo<v8:
 }
 
 ret_t rich_text_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "rich_text_create", wrap_rich_text_create);Nan::Export(ctx, "rich_text_set_text", wrap_rich_text_set_text);Nan::Export(ctx, "rich_text_cast", wrap_rich_text_cast);Nan::Export(ctx, "rich_text_t_get_prop_line_gap", wrap_rich_text_t_get_prop_line_gap);Nan::Export(ctx, "rich_text_t_get_prop_margin", wrap_rich_text_t_get_prop_margin);
+  Nan::Export(ctx, "rich_text_create", wrap_rich_text_create);
+  Nan::Export(ctx, "rich_text_set_text", wrap_rich_text_set_text);
+  Nan::Export(ctx, "rich_text_cast", wrap_rich_text_cast);
+  Nan::Export(ctx, "rich_text_t_get_prop_line_gap", wrap_rich_text_t_get_prop_line_gap);
+  Nan::Export(ctx, "rich_text_t_get_prop_margin", wrap_rich_text_t_get_prop_margin);
+
  return RET_OK;
 }
 
@@ -13542,7 +14757,23 @@ static void wrap_progress_circle_t_get_prop_show_text(const Nan::FunctionCallbac
 }
 
 ret_t progress_circle_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "progress_circle_create", wrap_progress_circle_create);Nan::Export(ctx, "progress_circle_cast", wrap_progress_circle_cast);Nan::Export(ctx, "progress_circle_set_value", wrap_progress_circle_set_value);Nan::Export(ctx, "progress_circle_set_max", wrap_progress_circle_set_max);Nan::Export(ctx, "progress_circle_set_line_width", wrap_progress_circle_set_line_width);Nan::Export(ctx, "progress_circle_set_start_angle", wrap_progress_circle_set_start_angle);Nan::Export(ctx, "progress_circle_set_unit", wrap_progress_circle_set_unit);Nan::Export(ctx, "progress_circle_set_show_text", wrap_progress_circle_set_show_text);Nan::Export(ctx, "progress_circle_set_counter_clock_wise", wrap_progress_circle_set_counter_clock_wise);Nan::Export(ctx, "progress_circle_t_get_prop_value", wrap_progress_circle_t_get_prop_value);Nan::Export(ctx, "progress_circle_t_get_prop_max", wrap_progress_circle_t_get_prop_max);Nan::Export(ctx, "progress_circle_t_get_prop_start_angle", wrap_progress_circle_t_get_prop_start_angle);Nan::Export(ctx, "progress_circle_t_get_prop_line_width", wrap_progress_circle_t_get_prop_line_width);Nan::Export(ctx, "progress_circle_t_get_prop_unit", wrap_progress_circle_t_get_prop_unit);Nan::Export(ctx, "progress_circle_t_get_prop_counter_clock_wise", wrap_progress_circle_t_get_prop_counter_clock_wise);Nan::Export(ctx, "progress_circle_t_get_prop_show_text", wrap_progress_circle_t_get_prop_show_text);
+  Nan::Export(ctx, "progress_circle_create", wrap_progress_circle_create);
+  Nan::Export(ctx, "progress_circle_cast", wrap_progress_circle_cast);
+  Nan::Export(ctx, "progress_circle_set_value", wrap_progress_circle_set_value);
+  Nan::Export(ctx, "progress_circle_set_max", wrap_progress_circle_set_max);
+  Nan::Export(ctx, "progress_circle_set_line_width", wrap_progress_circle_set_line_width);
+  Nan::Export(ctx, "progress_circle_set_start_angle", wrap_progress_circle_set_start_angle);
+  Nan::Export(ctx, "progress_circle_set_unit", wrap_progress_circle_set_unit);
+  Nan::Export(ctx, "progress_circle_set_show_text", wrap_progress_circle_set_show_text);
+  Nan::Export(ctx, "progress_circle_set_counter_clock_wise", wrap_progress_circle_set_counter_clock_wise);
+  Nan::Export(ctx, "progress_circle_t_get_prop_value", wrap_progress_circle_t_get_prop_value);
+  Nan::Export(ctx, "progress_circle_t_get_prop_max", wrap_progress_circle_t_get_prop_max);
+  Nan::Export(ctx, "progress_circle_t_get_prop_start_angle", wrap_progress_circle_t_get_prop_start_angle);
+  Nan::Export(ctx, "progress_circle_t_get_prop_line_width", wrap_progress_circle_t_get_prop_line_width);
+  Nan::Export(ctx, "progress_circle_t_get_prop_unit", wrap_progress_circle_t_get_prop_unit);
+  Nan::Export(ctx, "progress_circle_t_get_prop_counter_clock_wise", wrap_progress_circle_t_get_prop_counter_clock_wise);
+  Nan::Export(ctx, "progress_circle_t_get_prop_show_text", wrap_progress_circle_t_get_prop_show_text);
+
  return RET_OK;
 }
 
@@ -13737,7 +14968,21 @@ static void wrap_mledit_t_get_prop_scroll_line(const Nan::FunctionCallbackInfo<v
 }
 
 ret_t mledit_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "mledit_create", wrap_mledit_create);Nan::Export(ctx, "mledit_set_readonly", wrap_mledit_set_readonly);Nan::Export(ctx, "mledit_set_focus", wrap_mledit_set_focus);Nan::Export(ctx, "mledit_set_wrap_word", wrap_mledit_set_wrap_word);Nan::Export(ctx, "mledit_set_max_lines", wrap_mledit_set_max_lines);Nan::Export(ctx, "mledit_set_input_tips", wrap_mledit_set_input_tips);Nan::Export(ctx, "mledit_set_cursor", wrap_mledit_set_cursor);Nan::Export(ctx, "mledit_set_scroll_line", wrap_mledit_set_scroll_line);Nan::Export(ctx, "mledit_cast", wrap_mledit_cast);Nan::Export(ctx, "mledit_t_get_prop_readonly", wrap_mledit_t_get_prop_readonly);Nan::Export(ctx, "mledit_t_get_prop_tips", wrap_mledit_t_get_prop_tips);Nan::Export(ctx, "mledit_t_get_prop_wrap_word", wrap_mledit_t_get_prop_wrap_word);Nan::Export(ctx, "mledit_t_get_prop_max_lines", wrap_mledit_t_get_prop_max_lines);Nan::Export(ctx, "mledit_t_get_prop_scroll_line", wrap_mledit_t_get_prop_scroll_line);
+  Nan::Export(ctx, "mledit_create", wrap_mledit_create);
+  Nan::Export(ctx, "mledit_set_readonly", wrap_mledit_set_readonly);
+  Nan::Export(ctx, "mledit_set_focus", wrap_mledit_set_focus);
+  Nan::Export(ctx, "mledit_set_wrap_word", wrap_mledit_set_wrap_word);
+  Nan::Export(ctx, "mledit_set_max_lines", wrap_mledit_set_max_lines);
+  Nan::Export(ctx, "mledit_set_input_tips", wrap_mledit_set_input_tips);
+  Nan::Export(ctx, "mledit_set_cursor", wrap_mledit_set_cursor);
+  Nan::Export(ctx, "mledit_set_scroll_line", wrap_mledit_set_scroll_line);
+  Nan::Export(ctx, "mledit_cast", wrap_mledit_cast);
+  Nan::Export(ctx, "mledit_t_get_prop_readonly", wrap_mledit_t_get_prop_readonly);
+  Nan::Export(ctx, "mledit_t_get_prop_tips", wrap_mledit_t_get_prop_tips);
+  Nan::Export(ctx, "mledit_t_get_prop_wrap_word", wrap_mledit_t_get_prop_wrap_word);
+  Nan::Export(ctx, "mledit_t_get_prop_max_lines", wrap_mledit_t_get_prop_max_lines);
+  Nan::Export(ctx, "mledit_t_get_prop_scroll_line", wrap_mledit_t_get_prop_scroll_line);
+
  return RET_OK;
 }
 
@@ -13834,7 +15079,13 @@ static void wrap_line_number_cast(const Nan::FunctionCallbackInfo<v8::Value>& ar
 }
 
 ret_t line_number_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "line_number_create", wrap_line_number_create);Nan::Export(ctx, "line_number_set_top_margin", wrap_line_number_set_top_margin);Nan::Export(ctx, "line_number_set_bottom_margin", wrap_line_number_set_bottom_margin);Nan::Export(ctx, "line_number_set_line_height", wrap_line_number_set_line_height);Nan::Export(ctx, "line_number_set_yoffset", wrap_line_number_set_yoffset);Nan::Export(ctx, "line_number_cast", wrap_line_number_cast);
+  Nan::Export(ctx, "line_number_create", wrap_line_number_create);
+  Nan::Export(ctx, "line_number_set_top_margin", wrap_line_number_set_top_margin);
+  Nan::Export(ctx, "line_number_set_bottom_margin", wrap_line_number_set_bottom_margin);
+  Nan::Export(ctx, "line_number_set_line_height", wrap_line_number_set_line_height);
+  Nan::Export(ctx, "line_number_set_yoffset", wrap_line_number_set_yoffset);
+  Nan::Export(ctx, "line_number_cast", wrap_line_number_cast);
+
  return RET_OK;
 }
 
@@ -13952,7 +15203,15 @@ static void wrap_image_value_t_get_prop_value(const Nan::FunctionCallbackInfo<v8
 }
 
 ret_t image_value_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "image_value_create", wrap_image_value_create);Nan::Export(ctx, "image_value_set_image", wrap_image_value_set_image);Nan::Export(ctx, "image_value_set_format", wrap_image_value_set_format);Nan::Export(ctx, "image_value_set_value", wrap_image_value_set_value);Nan::Export(ctx, "image_value_cast", wrap_image_value_cast);Nan::Export(ctx, "image_value_t_get_prop_image", wrap_image_value_t_get_prop_image);Nan::Export(ctx, "image_value_t_get_prop_format", wrap_image_value_t_get_prop_format);Nan::Export(ctx, "image_value_t_get_prop_value", wrap_image_value_t_get_prop_value);
+  Nan::Export(ctx, "image_value_create", wrap_image_value_create);
+  Nan::Export(ctx, "image_value_set_image", wrap_image_value_set_image);
+  Nan::Export(ctx, "image_value_set_format", wrap_image_value_set_format);
+  Nan::Export(ctx, "image_value_set_value", wrap_image_value_set_value);
+  Nan::Export(ctx, "image_value_cast", wrap_image_value_cast);
+  Nan::Export(ctx, "image_value_t_get_prop_image", wrap_image_value_t_get_prop_image);
+  Nan::Export(ctx, "image_value_t_get_prop_format", wrap_image_value_t_get_prop_format);
+  Nan::Export(ctx, "image_value_t_get_prop_value", wrap_image_value_t_get_prop_value);
+
  return RET_OK;
 }
 
@@ -14290,7 +15549,32 @@ static void wrap_image_animation_t_get_prop_delay(const Nan::FunctionCallbackInf
 }
 
 ret_t image_animation_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "image_animation_create", wrap_image_animation_create);Nan::Export(ctx, "image_animation_set_loop", wrap_image_animation_set_loop);Nan::Export(ctx, "image_animation_set_image", wrap_image_animation_set_image);Nan::Export(ctx, "image_animation_set_interval", wrap_image_animation_set_interval);Nan::Export(ctx, "image_animation_set_delay", wrap_image_animation_set_delay);Nan::Export(ctx, "image_animation_set_auto_play", wrap_image_animation_set_auto_play);Nan::Export(ctx, "image_animation_set_sequence", wrap_image_animation_set_sequence);Nan::Export(ctx, "image_animation_set_range_sequence", wrap_image_animation_set_range_sequence);Nan::Export(ctx, "image_animation_play", wrap_image_animation_play);Nan::Export(ctx, "image_animation_stop", wrap_image_animation_stop);Nan::Export(ctx, "image_animation_pause", wrap_image_animation_pause);Nan::Export(ctx, "image_animation_next", wrap_image_animation_next);Nan::Export(ctx, "image_animation_set_format", wrap_image_animation_set_format);Nan::Export(ctx, "image_animation_set_unload_after_paint", wrap_image_animation_set_unload_after_paint);Nan::Export(ctx, "image_animation_cast", wrap_image_animation_cast);Nan::Export(ctx, "image_animation_t_get_prop_image", wrap_image_animation_t_get_prop_image);Nan::Export(ctx, "image_animation_t_get_prop_sequence", wrap_image_animation_t_get_prop_sequence);Nan::Export(ctx, "image_animation_t_get_prop_start_index", wrap_image_animation_t_get_prop_start_index);Nan::Export(ctx, "image_animation_t_get_prop_end_index", wrap_image_animation_t_get_prop_end_index);Nan::Export(ctx, "image_animation_t_get_prop_loop", wrap_image_animation_t_get_prop_loop);Nan::Export(ctx, "image_animation_t_get_prop_auto_play", wrap_image_animation_t_get_prop_auto_play);Nan::Export(ctx, "image_animation_t_get_prop_unload_after_paint", wrap_image_animation_t_get_prop_unload_after_paint);Nan::Export(ctx, "image_animation_t_get_prop_format", wrap_image_animation_t_get_prop_format);Nan::Export(ctx, "image_animation_t_get_prop_interval", wrap_image_animation_t_get_prop_interval);Nan::Export(ctx, "image_animation_t_get_prop_delay", wrap_image_animation_t_get_prop_delay);
+  Nan::Export(ctx, "image_animation_create", wrap_image_animation_create);
+  Nan::Export(ctx, "image_animation_set_loop", wrap_image_animation_set_loop);
+  Nan::Export(ctx, "image_animation_set_image", wrap_image_animation_set_image);
+  Nan::Export(ctx, "image_animation_set_interval", wrap_image_animation_set_interval);
+  Nan::Export(ctx, "image_animation_set_delay", wrap_image_animation_set_delay);
+  Nan::Export(ctx, "image_animation_set_auto_play", wrap_image_animation_set_auto_play);
+  Nan::Export(ctx, "image_animation_set_sequence", wrap_image_animation_set_sequence);
+  Nan::Export(ctx, "image_animation_set_range_sequence", wrap_image_animation_set_range_sequence);
+  Nan::Export(ctx, "image_animation_play", wrap_image_animation_play);
+  Nan::Export(ctx, "image_animation_stop", wrap_image_animation_stop);
+  Nan::Export(ctx, "image_animation_pause", wrap_image_animation_pause);
+  Nan::Export(ctx, "image_animation_next", wrap_image_animation_next);
+  Nan::Export(ctx, "image_animation_set_format", wrap_image_animation_set_format);
+  Nan::Export(ctx, "image_animation_set_unload_after_paint", wrap_image_animation_set_unload_after_paint);
+  Nan::Export(ctx, "image_animation_cast", wrap_image_animation_cast);
+  Nan::Export(ctx, "image_animation_t_get_prop_image", wrap_image_animation_t_get_prop_image);
+  Nan::Export(ctx, "image_animation_t_get_prop_sequence", wrap_image_animation_t_get_prop_sequence);
+  Nan::Export(ctx, "image_animation_t_get_prop_start_index", wrap_image_animation_t_get_prop_start_index);
+  Nan::Export(ctx, "image_animation_t_get_prop_end_index", wrap_image_animation_t_get_prop_end_index);
+  Nan::Export(ctx, "image_animation_t_get_prop_loop", wrap_image_animation_t_get_prop_loop);
+  Nan::Export(ctx, "image_animation_t_get_prop_auto_play", wrap_image_animation_t_get_prop_auto_play);
+  Nan::Export(ctx, "image_animation_t_get_prop_unload_after_paint", wrap_image_animation_t_get_prop_unload_after_paint);
+  Nan::Export(ctx, "image_animation_t_get_prop_format", wrap_image_animation_t_get_prop_format);
+  Nan::Export(ctx, "image_animation_t_get_prop_interval", wrap_image_animation_t_get_prop_interval);
+  Nan::Export(ctx, "image_animation_t_get_prop_delay", wrap_image_animation_t_get_prop_delay);
+
  return RET_OK;
 }
 
@@ -14380,7 +15664,13 @@ static void wrap_guage_t_get_prop_draw_type(const Nan::FunctionCallbackInfo<v8::
 }
 
 ret_t guage_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "guage_create", wrap_guage_create);Nan::Export(ctx, "guage_cast", wrap_guage_cast);Nan::Export(ctx, "guage_set_image", wrap_guage_set_image);Nan::Export(ctx, "guage_set_draw_type", wrap_guage_set_draw_type);Nan::Export(ctx, "guage_t_get_prop_image", wrap_guage_t_get_prop_image);Nan::Export(ctx, "guage_t_get_prop_draw_type", wrap_guage_t_get_prop_draw_type);
+  Nan::Export(ctx, "guage_create", wrap_guage_create);
+  Nan::Export(ctx, "guage_cast", wrap_guage_cast);
+  Nan::Export(ctx, "guage_set_image", wrap_guage_set_image);
+  Nan::Export(ctx, "guage_set_draw_type", wrap_guage_set_draw_type);
+  Nan::Export(ctx, "guage_t_get_prop_image", wrap_guage_t_get_prop_image);
+  Nan::Export(ctx, "guage_t_get_prop_draw_type", wrap_guage_t_get_prop_draw_type);
+
  return RET_OK;
 }
 
@@ -14508,7 +15798,16 @@ static void wrap_guage_pointer_t_get_prop_anchor_y(const Nan::FunctionCallbackIn
 }
 
 ret_t guage_pointer_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "guage_pointer_create", wrap_guage_pointer_create);Nan::Export(ctx, "guage_pointer_cast", wrap_guage_pointer_cast);Nan::Export(ctx, "guage_pointer_set_angle", wrap_guage_pointer_set_angle);Nan::Export(ctx, "guage_pointer_set_image", wrap_guage_pointer_set_image);Nan::Export(ctx, "guage_pointer_set_anchor", wrap_guage_pointer_set_anchor);Nan::Export(ctx, "guage_pointer_t_get_prop_angle", wrap_guage_pointer_t_get_prop_angle);Nan::Export(ctx, "guage_pointer_t_get_prop_image", wrap_guage_pointer_t_get_prop_image);Nan::Export(ctx, "guage_pointer_t_get_prop_anchor_x", wrap_guage_pointer_t_get_prop_anchor_x);Nan::Export(ctx, "guage_pointer_t_get_prop_anchor_y", wrap_guage_pointer_t_get_prop_anchor_y);
+  Nan::Export(ctx, "guage_pointer_create", wrap_guage_pointer_create);
+  Nan::Export(ctx, "guage_pointer_cast", wrap_guage_pointer_cast);
+  Nan::Export(ctx, "guage_pointer_set_angle", wrap_guage_pointer_set_angle);
+  Nan::Export(ctx, "guage_pointer_set_image", wrap_guage_pointer_set_image);
+  Nan::Export(ctx, "guage_pointer_set_anchor", wrap_guage_pointer_set_anchor);
+  Nan::Export(ctx, "guage_pointer_t_get_prop_angle", wrap_guage_pointer_t_get_prop_angle);
+  Nan::Export(ctx, "guage_pointer_t_get_prop_image", wrap_guage_pointer_t_get_prop_image);
+  Nan::Export(ctx, "guage_pointer_t_get_prop_anchor_x", wrap_guage_pointer_t_get_prop_anchor_x);
+  Nan::Export(ctx, "guage_pointer_t_get_prop_anchor_y", wrap_guage_pointer_t_get_prop_anchor_y);
+
  return RET_OK;
 }
 
@@ -14720,7 +16019,23 @@ static void wrap_draggable_t_get_prop_drag_window(const Nan::FunctionCallbackInf
 }
 
 ret_t draggable_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "draggable_create", wrap_draggable_create);Nan::Export(ctx, "draggable_cast", wrap_draggable_cast);Nan::Export(ctx, "draggable_set_top", wrap_draggable_set_top);Nan::Export(ctx, "draggable_set_bottom", wrap_draggable_set_bottom);Nan::Export(ctx, "draggable_set_left", wrap_draggable_set_left);Nan::Export(ctx, "draggable_set_right", wrap_draggable_set_right);Nan::Export(ctx, "draggable_set_vertical_only", wrap_draggable_set_vertical_only);Nan::Export(ctx, "draggable_set_horizontal_only", wrap_draggable_set_horizontal_only);Nan::Export(ctx, "draggable_set_drag_window", wrap_draggable_set_drag_window);Nan::Export(ctx, "draggable_t_get_prop_top", wrap_draggable_t_get_prop_top);Nan::Export(ctx, "draggable_t_get_prop_bottom", wrap_draggable_t_get_prop_bottom);Nan::Export(ctx, "draggable_t_get_prop_left", wrap_draggable_t_get_prop_left);Nan::Export(ctx, "draggable_t_get_prop_right", wrap_draggable_t_get_prop_right);Nan::Export(ctx, "draggable_t_get_prop_vertical_only", wrap_draggable_t_get_prop_vertical_only);Nan::Export(ctx, "draggable_t_get_prop_horizontal_only", wrap_draggable_t_get_prop_horizontal_only);Nan::Export(ctx, "draggable_t_get_prop_drag_window", wrap_draggable_t_get_prop_drag_window);
+  Nan::Export(ctx, "draggable_create", wrap_draggable_create);
+  Nan::Export(ctx, "draggable_cast", wrap_draggable_cast);
+  Nan::Export(ctx, "draggable_set_top", wrap_draggable_set_top);
+  Nan::Export(ctx, "draggable_set_bottom", wrap_draggable_set_bottom);
+  Nan::Export(ctx, "draggable_set_left", wrap_draggable_set_left);
+  Nan::Export(ctx, "draggable_set_right", wrap_draggable_set_right);
+  Nan::Export(ctx, "draggable_set_vertical_only", wrap_draggable_set_vertical_only);
+  Nan::Export(ctx, "draggable_set_horizontal_only", wrap_draggable_set_horizontal_only);
+  Nan::Export(ctx, "draggable_set_drag_window", wrap_draggable_set_drag_window);
+  Nan::Export(ctx, "draggable_t_get_prop_top", wrap_draggable_t_get_prop_top);
+  Nan::Export(ctx, "draggable_t_get_prop_bottom", wrap_draggable_t_get_prop_bottom);
+  Nan::Export(ctx, "draggable_t_get_prop_left", wrap_draggable_t_get_prop_left);
+  Nan::Export(ctx, "draggable_t_get_prop_right", wrap_draggable_t_get_prop_right);
+  Nan::Export(ctx, "draggable_t_get_prop_vertical_only", wrap_draggable_t_get_prop_vertical_only);
+  Nan::Export(ctx, "draggable_t_get_prop_horizontal_only", wrap_draggable_t_get_prop_horizontal_only);
+  Nan::Export(ctx, "draggable_t_get_prop_drag_window", wrap_draggable_t_get_prop_drag_window);
+
  return RET_OK;
 }
 
@@ -14785,7 +16100,11 @@ static void wrap_color_picker_t_get_prop_value(const Nan::FunctionCallbackInfo<v
 }
 
 ret_t color_picker_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "color_picker_create", wrap_color_picker_create);Nan::Export(ctx, "color_picker_set_color", wrap_color_picker_set_color);Nan::Export(ctx, "color_picker_cast", wrap_color_picker_cast);Nan::Export(ctx, "color_picker_t_get_prop_value", wrap_color_picker_t_get_prop_value);
+  Nan::Export(ctx, "color_picker_create", wrap_color_picker_create);
+  Nan::Export(ctx, "color_picker_set_color", wrap_color_picker_set_color);
+  Nan::Export(ctx, "color_picker_cast", wrap_color_picker_cast);
+  Nan::Export(ctx, "color_picker_t_get_prop_value", wrap_color_picker_t_get_prop_value);
+
  return RET_OK;
 }
 
@@ -14804,7 +16123,8 @@ static void wrap_color_component_cast(const Nan::FunctionCallbackInfo<v8::Value>
 }
 
 ret_t color_component_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "color_component_cast", wrap_color_component_cast);
+  Nan::Export(ctx, "color_component_cast", wrap_color_component_cast);
+
  return RET_OK;
 }
 
@@ -15010,7 +16330,21 @@ static void wrap_window_manager_back_to(const Nan::FunctionCallbackInfo<v8::Valu
 }
 
 ret_t window_manager_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "window_manager", wrap_window_manager);Nan::Export(ctx, "window_manager_cast", wrap_window_manager_cast);Nan::Export(ctx, "window_manager_get_top_main_window", wrap_window_manager_get_top_main_window);Nan::Export(ctx, "window_manager_get_top_window", wrap_window_manager_get_top_window);Nan::Export(ctx, "window_manager_get_prev_window", wrap_window_manager_get_prev_window);Nan::Export(ctx, "window_manager_get_pointer_x", wrap_window_manager_get_pointer_x);Nan::Export(ctx, "window_manager_get_pointer_y", wrap_window_manager_get_pointer_y);Nan::Export(ctx, "window_manager_get_pointer_pressed", wrap_window_manager_get_pointer_pressed);Nan::Export(ctx, "window_manager_set_show_fps", wrap_window_manager_set_show_fps);Nan::Export(ctx, "window_manager_set_screen_saver_time", wrap_window_manager_set_screen_saver_time);Nan::Export(ctx, "window_manager_set_cursor", wrap_window_manager_set_cursor);Nan::Export(ctx, "window_manager_back", wrap_window_manager_back);Nan::Export(ctx, "window_manager_back_to_home", wrap_window_manager_back_to_home);Nan::Export(ctx, "window_manager_back_to", wrap_window_manager_back_to);
+  Nan::Export(ctx, "window_manager", wrap_window_manager);
+  Nan::Export(ctx, "window_manager_cast", wrap_window_manager_cast);
+  Nan::Export(ctx, "window_manager_get_top_main_window", wrap_window_manager_get_top_main_window);
+  Nan::Export(ctx, "window_manager_get_top_window", wrap_window_manager_get_top_window);
+  Nan::Export(ctx, "window_manager_get_prev_window", wrap_window_manager_get_prev_window);
+  Nan::Export(ctx, "window_manager_get_pointer_x", wrap_window_manager_get_pointer_x);
+  Nan::Export(ctx, "window_manager_get_pointer_y", wrap_window_manager_get_pointer_y);
+  Nan::Export(ctx, "window_manager_get_pointer_pressed", wrap_window_manager_get_pointer_pressed);
+  Nan::Export(ctx, "window_manager_set_show_fps", wrap_window_manager_set_show_fps);
+  Nan::Export(ctx, "window_manager_set_screen_saver_time", wrap_window_manager_set_screen_saver_time);
+  Nan::Export(ctx, "window_manager_set_cursor", wrap_window_manager_set_cursor);
+  Nan::Export(ctx, "window_manager_back", wrap_window_manager_back);
+  Nan::Export(ctx, "window_manager_back_to_home", wrap_window_manager_back_to_home);
+  Nan::Export(ctx, "window_manager_back_to", wrap_window_manager_back_to);
+
  return RET_OK;
 }
 
@@ -15051,7 +16385,10 @@ static void wrap_window_base_t_get_prop_closable(const Nan::FunctionCallbackInfo
 }
 
 ret_t window_base_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "window_base_cast", wrap_window_base_cast);Nan::Export(ctx, "window_base_t_get_prop_theme", wrap_window_base_t_get_prop_theme);Nan::Export(ctx, "window_base_t_get_prop_closable", wrap_window_base_t_get_prop_closable);
+  Nan::Export(ctx, "window_base_cast", wrap_window_base_cast);
+  Nan::Export(ctx, "window_base_t_get_prop_theme", wrap_window_base_t_get_prop_theme);
+  Nan::Export(ctx, "window_base_t_get_prop_closable", wrap_window_base_t_get_prop_closable);
+
  return RET_OK;
 }
 
@@ -15132,7 +16469,12 @@ static void wrap_style_mutable_t_get_prop_name(const Nan::FunctionCallbackInfo<v
 }
 
 ret_t style_mutable_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "style_mutable_set_name", wrap_style_mutable_set_name);Nan::Export(ctx, "style_mutable_set_int", wrap_style_mutable_set_int);Nan::Export(ctx, "style_mutable_cast", wrap_style_mutable_cast);Nan::Export(ctx, "style_mutable_create", wrap_style_mutable_create);Nan::Export(ctx, "style_mutable_t_get_prop_name", wrap_style_mutable_t_get_prop_name);
+  Nan::Export(ctx, "style_mutable_set_name", wrap_style_mutable_set_name);
+  Nan::Export(ctx, "style_mutable_set_int", wrap_style_mutable_set_int);
+  Nan::Export(ctx, "style_mutable_cast", wrap_style_mutable_cast);
+  Nan::Export(ctx, "style_mutable_create", wrap_style_mutable_create);
+  Nan::Export(ctx, "style_mutable_t_get_prop_name", wrap_style_mutable_t_get_prop_name);
+
  return RET_OK;
 }
 
@@ -15351,7 +16693,24 @@ static void wrap_image_base_t_get_prop_selected(const Nan::FunctionCallbackInfo<
 }
 
 ret_t image_base_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "image_base_set_image", wrap_image_base_set_image);Nan::Export(ctx, "image_base_set_rotation", wrap_image_base_set_rotation);Nan::Export(ctx, "image_base_set_scale", wrap_image_base_set_scale);Nan::Export(ctx, "image_base_set_anchor", wrap_image_base_set_anchor);Nan::Export(ctx, "image_base_set_selected", wrap_image_base_set_selected);Nan::Export(ctx, "image_base_set_selectable", wrap_image_base_set_selectable);Nan::Export(ctx, "image_base_set_clickable", wrap_image_base_set_clickable);Nan::Export(ctx, "image_base_cast", wrap_image_base_cast);Nan::Export(ctx, "image_base_t_get_prop_image", wrap_image_base_t_get_prop_image);Nan::Export(ctx, "image_base_t_get_prop_anchor_x", wrap_image_base_t_get_prop_anchor_x);Nan::Export(ctx, "image_base_t_get_prop_anchor_y", wrap_image_base_t_get_prop_anchor_y);Nan::Export(ctx, "image_base_t_get_prop_scale_x", wrap_image_base_t_get_prop_scale_x);Nan::Export(ctx, "image_base_t_get_prop_scale_y", wrap_image_base_t_get_prop_scale_y);Nan::Export(ctx, "image_base_t_get_prop_rotation", wrap_image_base_t_get_prop_rotation);Nan::Export(ctx, "image_base_t_get_prop_clickable", wrap_image_base_t_get_prop_clickable);Nan::Export(ctx, "image_base_t_get_prop_selectable", wrap_image_base_t_get_prop_selectable);Nan::Export(ctx, "image_base_t_get_prop_selected", wrap_image_base_t_get_prop_selected);
+  Nan::Export(ctx, "image_base_set_image", wrap_image_base_set_image);
+  Nan::Export(ctx, "image_base_set_rotation", wrap_image_base_set_rotation);
+  Nan::Export(ctx, "image_base_set_scale", wrap_image_base_set_scale);
+  Nan::Export(ctx, "image_base_set_anchor", wrap_image_base_set_anchor);
+  Nan::Export(ctx, "image_base_set_selected", wrap_image_base_set_selected);
+  Nan::Export(ctx, "image_base_set_selectable", wrap_image_base_set_selectable);
+  Nan::Export(ctx, "image_base_set_clickable", wrap_image_base_set_clickable);
+  Nan::Export(ctx, "image_base_cast", wrap_image_base_cast);
+  Nan::Export(ctx, "image_base_t_get_prop_image", wrap_image_base_t_get_prop_image);
+  Nan::Export(ctx, "image_base_t_get_prop_anchor_x", wrap_image_base_t_get_prop_anchor_x);
+  Nan::Export(ctx, "image_base_t_get_prop_anchor_y", wrap_image_base_t_get_prop_anchor_y);
+  Nan::Export(ctx, "image_base_t_get_prop_scale_x", wrap_image_base_t_get_prop_scale_x);
+  Nan::Export(ctx, "image_base_t_get_prop_scale_y", wrap_image_base_t_get_prop_scale_y);
+  Nan::Export(ctx, "image_base_t_get_prop_rotation", wrap_image_base_t_get_prop_rotation);
+  Nan::Export(ctx, "image_base_t_get_prop_clickable", wrap_image_base_t_get_prop_clickable);
+  Nan::Export(ctx, "image_base_t_get_prop_selectable", wrap_image_base_t_get_prop_selectable);
+  Nan::Export(ctx, "image_base_t_get_prop_selected", wrap_image_base_t_get_prop_selected);
+
  return RET_OK;
 }
 
@@ -15380,7 +16739,9 @@ static void wrap_window_event_t_get_prop_window(const Nan::FunctionCallbackInfo<
 }
 
 ret_t window_event_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "window_event_cast", wrap_window_event_cast);Nan::Export(ctx, "window_event_t_get_prop_window", wrap_window_event_t_get_prop_window);
+  Nan::Export(ctx, "window_event_cast", wrap_window_event_cast);
+  Nan::Export(ctx, "window_event_t_get_prop_window", wrap_window_event_t_get_prop_window);
+
  return RET_OK;
 }
 
@@ -15409,7 +16770,9 @@ static void wrap_paint_event_t_get_prop_c(const Nan::FunctionCallbackInfo<v8::Va
 }
 
 ret_t paint_event_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "paint_event_cast", wrap_paint_event_cast);Nan::Export(ctx, "paint_event_t_get_prop_c", wrap_paint_event_t_get_prop_c);
+  Nan::Export(ctx, "paint_event_cast", wrap_paint_event_cast);
+  Nan::Export(ctx, "paint_event_t_get_prop_c", wrap_paint_event_t_get_prop_c);
+
  return RET_OK;
 }
 
@@ -15558,7 +16921,21 @@ static void wrap_key_event_t_get_prop_capslock(const Nan::FunctionCallbackInfo<v
 }
 
 ret_t key_event_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "key_event_cast", wrap_key_event_cast);Nan::Export(ctx, "key_event_t_get_prop_key", wrap_key_event_t_get_prop_key);Nan::Export(ctx, "key_event_t_get_prop_alt", wrap_key_event_t_get_prop_alt);Nan::Export(ctx, "key_event_t_get_prop_lalt", wrap_key_event_t_get_prop_lalt);Nan::Export(ctx, "key_event_t_get_prop_ralt", wrap_key_event_t_get_prop_ralt);Nan::Export(ctx, "key_event_t_get_prop_ctrl", wrap_key_event_t_get_prop_ctrl);Nan::Export(ctx, "key_event_t_get_prop_lctrl", wrap_key_event_t_get_prop_lctrl);Nan::Export(ctx, "key_event_t_get_prop_rctrl", wrap_key_event_t_get_prop_rctrl);Nan::Export(ctx, "key_event_t_get_prop_shift", wrap_key_event_t_get_prop_shift);Nan::Export(ctx, "key_event_t_get_prop_lshift", wrap_key_event_t_get_prop_lshift);Nan::Export(ctx, "key_event_t_get_prop_rshift", wrap_key_event_t_get_prop_rshift);Nan::Export(ctx, "key_event_t_get_prop_cmd", wrap_key_event_t_get_prop_cmd);Nan::Export(ctx, "key_event_t_get_prop_menu", wrap_key_event_t_get_prop_menu);Nan::Export(ctx, "key_event_t_get_prop_capslock", wrap_key_event_t_get_prop_capslock);
+  Nan::Export(ctx, "key_event_cast", wrap_key_event_cast);
+  Nan::Export(ctx, "key_event_t_get_prop_key", wrap_key_event_t_get_prop_key);
+  Nan::Export(ctx, "key_event_t_get_prop_alt", wrap_key_event_t_get_prop_alt);
+  Nan::Export(ctx, "key_event_t_get_prop_lalt", wrap_key_event_t_get_prop_lalt);
+  Nan::Export(ctx, "key_event_t_get_prop_ralt", wrap_key_event_t_get_prop_ralt);
+  Nan::Export(ctx, "key_event_t_get_prop_ctrl", wrap_key_event_t_get_prop_ctrl);
+  Nan::Export(ctx, "key_event_t_get_prop_lctrl", wrap_key_event_t_get_prop_lctrl);
+  Nan::Export(ctx, "key_event_t_get_prop_rctrl", wrap_key_event_t_get_prop_rctrl);
+  Nan::Export(ctx, "key_event_t_get_prop_shift", wrap_key_event_t_get_prop_shift);
+  Nan::Export(ctx, "key_event_t_get_prop_lshift", wrap_key_event_t_get_prop_lshift);
+  Nan::Export(ctx, "key_event_t_get_prop_rshift", wrap_key_event_t_get_prop_rshift);
+  Nan::Export(ctx, "key_event_t_get_prop_cmd", wrap_key_event_t_get_prop_cmd);
+  Nan::Export(ctx, "key_event_t_get_prop_menu", wrap_key_event_t_get_prop_menu);
+  Nan::Export(ctx, "key_event_t_get_prop_capslock", wrap_key_event_t_get_prop_capslock);
+
  return RET_OK;
 }
 
@@ -15667,7 +17044,17 @@ static void wrap_pointer_event_t_get_prop_shift(const Nan::FunctionCallbackInfo<
 }
 
 ret_t pointer_event_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "pointer_event_cast", wrap_pointer_event_cast);Nan::Export(ctx, "pointer_event_t_get_prop_x", wrap_pointer_event_t_get_prop_x);Nan::Export(ctx, "pointer_event_t_get_prop_y", wrap_pointer_event_t_get_prop_y);Nan::Export(ctx, "pointer_event_t_get_prop_button", wrap_pointer_event_t_get_prop_button);Nan::Export(ctx, "pointer_event_t_get_prop_pressed", wrap_pointer_event_t_get_prop_pressed);Nan::Export(ctx, "pointer_event_t_get_prop_alt", wrap_pointer_event_t_get_prop_alt);Nan::Export(ctx, "pointer_event_t_get_prop_ctrl", wrap_pointer_event_t_get_prop_ctrl);Nan::Export(ctx, "pointer_event_t_get_prop_cmd", wrap_pointer_event_t_get_prop_cmd);Nan::Export(ctx, "pointer_event_t_get_prop_menu", wrap_pointer_event_t_get_prop_menu);Nan::Export(ctx, "pointer_event_t_get_prop_shift", wrap_pointer_event_t_get_prop_shift);
+  Nan::Export(ctx, "pointer_event_cast", wrap_pointer_event_cast);
+  Nan::Export(ctx, "pointer_event_t_get_prop_x", wrap_pointer_event_t_get_prop_x);
+  Nan::Export(ctx, "pointer_event_t_get_prop_y", wrap_pointer_event_t_get_prop_y);
+  Nan::Export(ctx, "pointer_event_t_get_prop_button", wrap_pointer_event_t_get_prop_button);
+  Nan::Export(ctx, "pointer_event_t_get_prop_pressed", wrap_pointer_event_t_get_prop_pressed);
+  Nan::Export(ctx, "pointer_event_t_get_prop_alt", wrap_pointer_event_t_get_prop_alt);
+  Nan::Export(ctx, "pointer_event_t_get_prop_ctrl", wrap_pointer_event_t_get_prop_ctrl);
+  Nan::Export(ctx, "pointer_event_t_get_prop_cmd", wrap_pointer_event_t_get_prop_cmd);
+  Nan::Export(ctx, "pointer_event_t_get_prop_menu", wrap_pointer_event_t_get_prop_menu);
+  Nan::Export(ctx, "pointer_event_t_get_prop_shift", wrap_pointer_event_t_get_prop_shift);
+
  return RET_OK;
 }
 
@@ -15696,7 +17083,9 @@ static void wrap_orientation_event_t_get_prop_orientation(const Nan::FunctionCal
 }
 
 ret_t orientation_event_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "orientation_event_cast", wrap_orientation_event_cast);Nan::Export(ctx, "orientation_event_t_get_prop_orientation", wrap_orientation_event_t_get_prop_orientation);
+  Nan::Export(ctx, "orientation_event_cast", wrap_orientation_event_cast);
+  Nan::Export(ctx, "orientation_event_t_get_prop_orientation", wrap_orientation_event_t_get_prop_orientation);
+
  return RET_OK;
 }
 
@@ -15755,7 +17144,12 @@ static void wrap_wheel_event_t_get_prop_shift(const Nan::FunctionCallbackInfo<v8
 }
 
 ret_t wheel_event_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "wheel_event_cast", wrap_wheel_event_cast);Nan::Export(ctx, "wheel_event_t_get_prop_dy", wrap_wheel_event_t_get_prop_dy);Nan::Export(ctx, "wheel_event_t_get_prop_alt", wrap_wheel_event_t_get_prop_alt);Nan::Export(ctx, "wheel_event_t_get_prop_ctrl", wrap_wheel_event_t_get_prop_ctrl);Nan::Export(ctx, "wheel_event_t_get_prop_shift", wrap_wheel_event_t_get_prop_shift);
+  Nan::Export(ctx, "wheel_event_cast", wrap_wheel_event_cast);
+  Nan::Export(ctx, "wheel_event_t_get_prop_dy", wrap_wheel_event_t_get_prop_dy);
+  Nan::Export(ctx, "wheel_event_t_get_prop_alt", wrap_wheel_event_t_get_prop_alt);
+  Nan::Export(ctx, "wheel_event_t_get_prop_ctrl", wrap_wheel_event_t_get_prop_ctrl);
+  Nan::Export(ctx, "wheel_event_t_get_prop_shift", wrap_wheel_event_t_get_prop_shift);
+
  return RET_OK;
 }
 
@@ -15792,7 +17186,9 @@ static void wrap_app_bar_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv) 
 }
 
 ret_t app_bar_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "app_bar_create", wrap_app_bar_create);Nan::Export(ctx, "app_bar_cast", wrap_app_bar_cast);
+  Nan::Export(ctx, "app_bar_create", wrap_app_bar_create);
+  Nan::Export(ctx, "app_bar_cast", wrap_app_bar_cast);
+
  return RET_OK;
 }
 
@@ -15829,7 +17225,9 @@ static void wrap_button_group_cast(const Nan::FunctionCallbackInfo<v8::Value>& a
 }
 
 ret_t button_group_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "button_group_create", wrap_button_group_create);Nan::Export(ctx, "button_group_cast", wrap_button_group_cast);
+  Nan::Export(ctx, "button_group_create", wrap_button_group_create);
+  Nan::Export(ctx, "button_group_cast", wrap_button_group_cast);
+
  return RET_OK;
 }
 
@@ -15916,7 +17314,13 @@ static void wrap_button_t_get_prop_enable_long_press(const Nan::FunctionCallback
 }
 
 ret_t button_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "button_create", wrap_button_create);Nan::Export(ctx, "button_cast", wrap_button_cast);Nan::Export(ctx, "button_set_repeat", wrap_button_set_repeat);Nan::Export(ctx, "button_set_enable_long_press", wrap_button_set_enable_long_press);Nan::Export(ctx, "button_t_get_prop_repeat", wrap_button_t_get_prop_repeat);Nan::Export(ctx, "button_t_get_prop_enable_long_press", wrap_button_t_get_prop_enable_long_press);
+  Nan::Export(ctx, "button_create", wrap_button_create);
+  Nan::Export(ctx, "button_cast", wrap_button_cast);
+  Nan::Export(ctx, "button_set_repeat", wrap_button_set_repeat);
+  Nan::Export(ctx, "button_set_enable_long_press", wrap_button_set_enable_long_press);
+  Nan::Export(ctx, "button_t_get_prop_repeat", wrap_button_t_get_prop_repeat);
+  Nan::Export(ctx, "button_t_get_prop_enable_long_press", wrap_button_t_get_prop_enable_long_press);
+
  return RET_OK;
 }
 
@@ -15996,7 +17400,12 @@ static void wrap_check_button_t_get_prop_value(const Nan::FunctionCallbackInfo<v
 }
 
 ret_t check_button_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "check_button_create", wrap_check_button_create);Nan::Export(ctx, "check_button_create_radio", wrap_check_button_create_radio);Nan::Export(ctx, "check_button_set_value", wrap_check_button_set_value);Nan::Export(ctx, "check_button_cast", wrap_check_button_cast);Nan::Export(ctx, "check_button_t_get_prop_value", wrap_check_button_t_get_prop_value);
+  Nan::Export(ctx, "check_button_create", wrap_check_button_create);
+  Nan::Export(ctx, "check_button_create_radio", wrap_check_button_create_radio);
+  Nan::Export(ctx, "check_button_set_value", wrap_check_button_set_value);
+  Nan::Export(ctx, "check_button_cast", wrap_check_button_cast);
+  Nan::Export(ctx, "check_button_t_get_prop_value", wrap_check_button_t_get_prop_value);
+
  return RET_OK;
 }
 
@@ -16033,7 +17442,9 @@ static void wrap_clip_view_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv
 }
 
 ret_t clip_view_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "clip_view_create", wrap_clip_view_create);Nan::Export(ctx, "clip_view_cast", wrap_clip_view_cast);
+  Nan::Export(ctx, "clip_view_create", wrap_clip_view_create);
+  Nan::Export(ctx, "clip_view_cast", wrap_clip_view_cast);
+
  return RET_OK;
 }
 
@@ -16110,7 +17521,12 @@ static void wrap_color_tile_t_get_prop_border_color(const Nan::FunctionCallbackI
 }
 
 ret_t color_tile_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "color_tile_create", wrap_color_tile_create);Nan::Export(ctx, "color_tile_cast", wrap_color_tile_cast);Nan::Export(ctx, "color_tile_set_bg_color", wrap_color_tile_set_bg_color);Nan::Export(ctx, "color_tile_t_get_prop_bg_color", wrap_color_tile_t_get_prop_bg_color);Nan::Export(ctx, "color_tile_t_get_prop_border_color", wrap_color_tile_t_get_prop_border_color);
+  Nan::Export(ctx, "color_tile_create", wrap_color_tile_create);
+  Nan::Export(ctx, "color_tile_cast", wrap_color_tile_cast);
+  Nan::Export(ctx, "color_tile_set_bg_color", wrap_color_tile_set_bg_color);
+  Nan::Export(ctx, "color_tile_t_get_prop_bg_color", wrap_color_tile_t_get_prop_bg_color);
+  Nan::Export(ctx, "color_tile_t_get_prop_border_color", wrap_color_tile_t_get_prop_border_color);
+
  return RET_OK;
 }
 
@@ -16147,7 +17563,9 @@ static void wrap_column_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
 }
 
 ret_t column_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "column_create", wrap_column_create);Nan::Export(ctx, "column_cast", wrap_column_cast);
+  Nan::Export(ctx, "column_create", wrap_column_create);
+  Nan::Export(ctx, "column_cast", wrap_column_cast);
+
  return RET_OK;
 }
 
@@ -16234,7 +17652,13 @@ static void wrap_combo_box_item_t_get_prop_checked(const Nan::FunctionCallbackIn
 }
 
 ret_t combo_box_item_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "combo_box_item_create", wrap_combo_box_item_create);Nan::Export(ctx, "combo_box_item_cast", wrap_combo_box_item_cast);Nan::Export(ctx, "combo_box_item_set_checked", wrap_combo_box_item_set_checked);Nan::Export(ctx, "combo_box_item_set_value", wrap_combo_box_item_set_value);Nan::Export(ctx, "combo_box_item_t_get_prop_value", wrap_combo_box_item_t_get_prop_value);Nan::Export(ctx, "combo_box_item_t_get_prop_checked", wrap_combo_box_item_t_get_prop_checked);
+  Nan::Export(ctx, "combo_box_item_create", wrap_combo_box_item_create);
+  Nan::Export(ctx, "combo_box_item_cast", wrap_combo_box_item_cast);
+  Nan::Export(ctx, "combo_box_item_set_checked", wrap_combo_box_item_set_checked);
+  Nan::Export(ctx, "combo_box_item_set_value", wrap_combo_box_item_set_value);
+  Nan::Export(ctx, "combo_box_item_t_get_prop_value", wrap_combo_box_item_t_get_prop_value);
+  Nan::Export(ctx, "combo_box_item_t_get_prop_checked", wrap_combo_box_item_t_get_prop_checked);
+
  return RET_OK;
 }
 
@@ -16502,7 +17926,26 @@ static void wrap_combo_box_t_get_prop_item_height(const Nan::FunctionCallbackInf
 }
 
 ret_t combo_box_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "combo_box_create", wrap_combo_box_create);Nan::Export(ctx, "combo_box_cast", wrap_combo_box_cast);Nan::Export(ctx, "combo_box_set_open_window", wrap_combo_box_set_open_window);Nan::Export(ctx, "combo_box_reset_options", wrap_combo_box_reset_options);Nan::Export(ctx, "combo_box_count_options", wrap_combo_box_count_options);Nan::Export(ctx, "combo_box_set_selected_index", wrap_combo_box_set_selected_index);Nan::Export(ctx, "combo_box_set_localize_options", wrap_combo_box_set_localize_options);Nan::Export(ctx, "combo_box_set_value", wrap_combo_box_set_value);Nan::Export(ctx, "combo_box_set_item_height", wrap_combo_box_set_item_height);Nan::Export(ctx, "combo_box_append_option", wrap_combo_box_append_option);Nan::Export(ctx, "combo_box_set_options", wrap_combo_box_set_options);Nan::Export(ctx, "combo_box_get_value", wrap_combo_box_get_value);Nan::Export(ctx, "combo_box_get_text", wrap_combo_box_get_text);Nan::Export(ctx, "combo_box_t_get_prop_open_window", wrap_combo_box_t_get_prop_open_window);Nan::Export(ctx, "combo_box_t_get_prop_selected_index", wrap_combo_box_t_get_prop_selected_index);Nan::Export(ctx, "combo_box_t_get_prop_value", wrap_combo_box_t_get_prop_value);Nan::Export(ctx, "combo_box_t_get_prop_localize_options", wrap_combo_box_t_get_prop_localize_options);Nan::Export(ctx, "combo_box_t_get_prop_options", wrap_combo_box_t_get_prop_options);Nan::Export(ctx, "combo_box_t_get_prop_item_height", wrap_combo_box_t_get_prop_item_height);
+  Nan::Export(ctx, "combo_box_create", wrap_combo_box_create);
+  Nan::Export(ctx, "combo_box_cast", wrap_combo_box_cast);
+  Nan::Export(ctx, "combo_box_set_open_window", wrap_combo_box_set_open_window);
+  Nan::Export(ctx, "combo_box_reset_options", wrap_combo_box_reset_options);
+  Nan::Export(ctx, "combo_box_count_options", wrap_combo_box_count_options);
+  Nan::Export(ctx, "combo_box_set_selected_index", wrap_combo_box_set_selected_index);
+  Nan::Export(ctx, "combo_box_set_localize_options", wrap_combo_box_set_localize_options);
+  Nan::Export(ctx, "combo_box_set_value", wrap_combo_box_set_value);
+  Nan::Export(ctx, "combo_box_set_item_height", wrap_combo_box_set_item_height);
+  Nan::Export(ctx, "combo_box_append_option", wrap_combo_box_append_option);
+  Nan::Export(ctx, "combo_box_set_options", wrap_combo_box_set_options);
+  Nan::Export(ctx, "combo_box_get_value", wrap_combo_box_get_value);
+  Nan::Export(ctx, "combo_box_get_text", wrap_combo_box_get_text);
+  Nan::Export(ctx, "combo_box_t_get_prop_open_window", wrap_combo_box_t_get_prop_open_window);
+  Nan::Export(ctx, "combo_box_t_get_prop_selected_index", wrap_combo_box_t_get_prop_selected_index);
+  Nan::Export(ctx, "combo_box_t_get_prop_value", wrap_combo_box_t_get_prop_value);
+  Nan::Export(ctx, "combo_box_t_get_prop_localize_options", wrap_combo_box_t_get_prop_localize_options);
+  Nan::Export(ctx, "combo_box_t_get_prop_options", wrap_combo_box_t_get_prop_options);
+  Nan::Export(ctx, "combo_box_t_get_prop_item_height", wrap_combo_box_t_get_prop_item_height);
+
  return RET_OK;
 }
 
@@ -16539,7 +17982,9 @@ static void wrap_dialog_client_cast(const Nan::FunctionCallbackInfo<v8::Value>& 
 }
 
 ret_t dialog_client_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "dialog_client_create", wrap_dialog_client_create);Nan::Export(ctx, "dialog_client_cast", wrap_dialog_client_cast);
+  Nan::Export(ctx, "dialog_client_create", wrap_dialog_client_create);
+  Nan::Export(ctx, "dialog_client_cast", wrap_dialog_client_cast);
+
  return RET_OK;
 }
 
@@ -16576,7 +18021,9 @@ static void wrap_dialog_title_cast(const Nan::FunctionCallbackInfo<v8::Value>& a
 }
 
 ret_t dialog_title_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "dialog_title_create", wrap_dialog_title_create);Nan::Export(ctx, "dialog_title_cast", wrap_dialog_title_cast);
+  Nan::Export(ctx, "dialog_title_create", wrap_dialog_title_create);
+  Nan::Export(ctx, "dialog_title_cast", wrap_dialog_title_cast);
+
  return RET_OK;
 }
 
@@ -16641,7 +18088,11 @@ static void wrap_digit_clock_t_get_prop_format(const Nan::FunctionCallbackInfo<v
 }
 
 ret_t digit_clock_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "digit_clock_create", wrap_digit_clock_create);Nan::Export(ctx, "digit_clock_cast", wrap_digit_clock_cast);Nan::Export(ctx, "digit_clock_set_format", wrap_digit_clock_set_format);Nan::Export(ctx, "digit_clock_t_get_prop_format", wrap_digit_clock_t_get_prop_format);
+  Nan::Export(ctx, "digit_clock_create", wrap_digit_clock_create);
+  Nan::Export(ctx, "digit_clock_cast", wrap_digit_clock_cast);
+  Nan::Export(ctx, "digit_clock_set_format", wrap_digit_clock_set_format);
+  Nan::Export(ctx, "digit_clock_t_get_prop_format", wrap_digit_clock_t_get_prop_format);
+
  return RET_OK;
 }
 
@@ -16736,7 +18187,14 @@ static void wrap_dragger_t_get_prop_y_max(const Nan::FunctionCallbackInfo<v8::Va
 }
 
 ret_t dragger_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "dragger_create", wrap_dragger_create);Nan::Export(ctx, "dragger_cast", wrap_dragger_cast);Nan::Export(ctx, "dragger_set_range", wrap_dragger_set_range);Nan::Export(ctx, "dragger_t_get_prop_x_min", wrap_dragger_t_get_prop_x_min);Nan::Export(ctx, "dragger_t_get_prop_y_min", wrap_dragger_t_get_prop_y_min);Nan::Export(ctx, "dragger_t_get_prop_x_max", wrap_dragger_t_get_prop_x_max);Nan::Export(ctx, "dragger_t_get_prop_y_max", wrap_dragger_t_get_prop_y_max);
+  Nan::Export(ctx, "dragger_create", wrap_dragger_create);
+  Nan::Export(ctx, "dragger_cast", wrap_dragger_cast);
+  Nan::Export(ctx, "dragger_set_range", wrap_dragger_set_range);
+  Nan::Export(ctx, "dragger_t_get_prop_x_min", wrap_dragger_t_get_prop_x_min);
+  Nan::Export(ctx, "dragger_t_get_prop_y_min", wrap_dragger_t_get_prop_y_min);
+  Nan::Export(ctx, "dragger_t_get_prop_x_max", wrap_dragger_t_get_prop_x_max);
+  Nan::Export(ctx, "dragger_t_get_prop_y_max", wrap_dragger_t_get_prop_y_max);
+
  return RET_OK;
 }
 
@@ -17119,7 +18577,35 @@ static void wrap_edit_t_get_prop_step(const Nan::FunctionCallbackInfo<v8::Value>
 }
 
 ret_t edit_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "edit_create", wrap_edit_create);Nan::Export(ctx, "edit_cast", wrap_edit_cast);Nan::Export(ctx, "edit_get_int", wrap_edit_get_int);Nan::Export(ctx, "edit_get_double", wrap_edit_get_double);Nan::Export(ctx, "edit_set_int", wrap_edit_set_int);Nan::Export(ctx, "edit_set_double", wrap_edit_set_double);Nan::Export(ctx, "edit_set_text_limit", wrap_edit_set_text_limit);Nan::Export(ctx, "edit_set_int_limit", wrap_edit_set_int_limit);Nan::Export(ctx, "edit_set_float_limit", wrap_edit_set_float_limit);Nan::Export(ctx, "edit_set_readonly", wrap_edit_set_readonly);Nan::Export(ctx, "edit_set_auto_fix", wrap_edit_set_auto_fix);Nan::Export(ctx, "edit_set_select_none_when_focused", wrap_edit_set_select_none_when_focused);Nan::Export(ctx, "edit_set_open_im_when_focused", wrap_edit_set_open_im_when_focused);Nan::Export(ctx, "edit_set_input_type", wrap_edit_set_input_type);Nan::Export(ctx, "edit_set_input_tips", wrap_edit_set_input_tips);Nan::Export(ctx, "edit_set_password_visible", wrap_edit_set_password_visible);Nan::Export(ctx, "edit_set_focus", wrap_edit_set_focus);Nan::Export(ctx, "edit_set_cursor", wrap_edit_set_cursor);Nan::Export(ctx, "edit_t_get_prop_readonly", wrap_edit_t_get_prop_readonly);Nan::Export(ctx, "edit_t_get_prop_password_visible", wrap_edit_t_get_prop_password_visible);Nan::Export(ctx, "edit_t_get_prop_auto_fix", wrap_edit_t_get_prop_auto_fix);Nan::Export(ctx, "edit_t_get_prop_select_none_when_focused", wrap_edit_t_get_prop_select_none_when_focused);Nan::Export(ctx, "edit_t_get_prop_open_im_when_focused", wrap_edit_t_get_prop_open_im_when_focused);Nan::Export(ctx, "edit_t_get_prop_tips", wrap_edit_t_get_prop_tips);Nan::Export(ctx, "edit_t_get_prop_input_type", wrap_edit_t_get_prop_input_type);Nan::Export(ctx, "edit_t_get_prop_min", wrap_edit_t_get_prop_min);Nan::Export(ctx, "edit_t_get_prop_max", wrap_edit_t_get_prop_max);Nan::Export(ctx, "edit_t_get_prop_step", wrap_edit_t_get_prop_step);
+  Nan::Export(ctx, "edit_create", wrap_edit_create);
+  Nan::Export(ctx, "edit_cast", wrap_edit_cast);
+  Nan::Export(ctx, "edit_get_int", wrap_edit_get_int);
+  Nan::Export(ctx, "edit_get_double", wrap_edit_get_double);
+  Nan::Export(ctx, "edit_set_int", wrap_edit_set_int);
+  Nan::Export(ctx, "edit_set_double", wrap_edit_set_double);
+  Nan::Export(ctx, "edit_set_text_limit", wrap_edit_set_text_limit);
+  Nan::Export(ctx, "edit_set_int_limit", wrap_edit_set_int_limit);
+  Nan::Export(ctx, "edit_set_float_limit", wrap_edit_set_float_limit);
+  Nan::Export(ctx, "edit_set_readonly", wrap_edit_set_readonly);
+  Nan::Export(ctx, "edit_set_auto_fix", wrap_edit_set_auto_fix);
+  Nan::Export(ctx, "edit_set_select_none_when_focused", wrap_edit_set_select_none_when_focused);
+  Nan::Export(ctx, "edit_set_open_im_when_focused", wrap_edit_set_open_im_when_focused);
+  Nan::Export(ctx, "edit_set_input_type", wrap_edit_set_input_type);
+  Nan::Export(ctx, "edit_set_input_tips", wrap_edit_set_input_tips);
+  Nan::Export(ctx, "edit_set_password_visible", wrap_edit_set_password_visible);
+  Nan::Export(ctx, "edit_set_focus", wrap_edit_set_focus);
+  Nan::Export(ctx, "edit_set_cursor", wrap_edit_set_cursor);
+  Nan::Export(ctx, "edit_t_get_prop_readonly", wrap_edit_t_get_prop_readonly);
+  Nan::Export(ctx, "edit_t_get_prop_password_visible", wrap_edit_t_get_prop_password_visible);
+  Nan::Export(ctx, "edit_t_get_prop_auto_fix", wrap_edit_t_get_prop_auto_fix);
+  Nan::Export(ctx, "edit_t_get_prop_select_none_when_focused", wrap_edit_t_get_prop_select_none_when_focused);
+  Nan::Export(ctx, "edit_t_get_prop_open_im_when_focused", wrap_edit_t_get_prop_open_im_when_focused);
+  Nan::Export(ctx, "edit_t_get_prop_tips", wrap_edit_t_get_prop_tips);
+  Nan::Export(ctx, "edit_t_get_prop_input_type", wrap_edit_t_get_prop_input_type);
+  Nan::Export(ctx, "edit_t_get_prop_min", wrap_edit_t_get_prop_min);
+  Nan::Export(ctx, "edit_t_get_prop_max", wrap_edit_t_get_prop_max);
+  Nan::Export(ctx, "edit_t_get_prop_step", wrap_edit_t_get_prop_step);
+
  return RET_OK;
 }
 
@@ -17156,7 +18642,9 @@ static void wrap_grid_item_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv
 }
 
 ret_t grid_item_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "grid_item_create", wrap_grid_item_create);Nan::Export(ctx, "grid_item_cast", wrap_grid_item_cast);
+  Nan::Export(ctx, "grid_item_create", wrap_grid_item_create);
+  Nan::Export(ctx, "grid_item_cast", wrap_grid_item_cast);
+
  return RET_OK;
 }
 
@@ -17193,7 +18681,9 @@ static void wrap_grid_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
 }
 
 ret_t grid_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "grid_create", wrap_grid_create);Nan::Export(ctx, "grid_cast", wrap_grid_cast);
+  Nan::Export(ctx, "grid_create", wrap_grid_create);
+  Nan::Export(ctx, "grid_cast", wrap_grid_cast);
+
  return RET_OK;
 }
 
@@ -17230,7 +18720,9 @@ static void wrap_group_box_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv
 }
 
 ret_t group_box_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "group_box_create", wrap_group_box_create);Nan::Export(ctx, "group_box_cast", wrap_group_box_cast);
+  Nan::Export(ctx, "group_box_create", wrap_group_box_create);
+  Nan::Export(ctx, "group_box_cast", wrap_group_box_cast);
+
  return RET_OK;
 }
 
@@ -17310,7 +18802,12 @@ static void wrap_label_t_get_prop_length(const Nan::FunctionCallbackInfo<v8::Val
 }
 
 ret_t label_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "label_create", wrap_label_create);Nan::Export(ctx, "label_set_length", wrap_label_set_length);Nan::Export(ctx, "label_resize_to_content", wrap_label_resize_to_content);Nan::Export(ctx, "label_cast", wrap_label_cast);Nan::Export(ctx, "label_t_get_prop_length", wrap_label_t_get_prop_length);
+  Nan::Export(ctx, "label_create", wrap_label_create);
+  Nan::Export(ctx, "label_set_length", wrap_label_set_length);
+  Nan::Export(ctx, "label_resize_to_content", wrap_label_resize_to_content);
+  Nan::Export(ctx, "label_cast", wrap_label_cast);
+  Nan::Export(ctx, "label_t_get_prop_length", wrap_label_t_get_prop_length);
+
  return RET_OK;
 }
 
@@ -17347,7 +18844,9 @@ static void wrap_overlay_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv) 
 }
 
 ret_t overlay_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "overlay_create", wrap_overlay_create);Nan::Export(ctx, "overlay_cast", wrap_overlay_cast);
+  Nan::Export(ctx, "overlay_create", wrap_overlay_create);
+  Nan::Export(ctx, "overlay_cast", wrap_overlay_cast);
+
  return RET_OK;
 }
 
@@ -17425,7 +18924,12 @@ static void wrap_pages_t_get_prop_active(const Nan::FunctionCallbackInfo<v8::Val
 }
 
 ret_t pages_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "pages_create", wrap_pages_create);Nan::Export(ctx, "pages_cast", wrap_pages_cast);Nan::Export(ctx, "pages_set_active", wrap_pages_set_active);Nan::Export(ctx, "pages_set_active_by_name", wrap_pages_set_active_by_name);Nan::Export(ctx, "pages_t_get_prop_active", wrap_pages_t_get_prop_active);
+  Nan::Export(ctx, "pages_create", wrap_pages_create);
+  Nan::Export(ctx, "pages_cast", wrap_pages_cast);
+  Nan::Export(ctx, "pages_set_active", wrap_pages_set_active);
+  Nan::Export(ctx, "pages_set_active_by_name", wrap_pages_set_active_by_name);
+  Nan::Export(ctx, "pages_t_get_prop_active", wrap_pages_t_get_prop_active);
+
  return RET_OK;
 }
 
@@ -17576,7 +19080,18 @@ static void wrap_progress_bar_t_get_prop_show_text(const Nan::FunctionCallbackIn
 }
 
 ret_t progress_bar_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "progress_bar_create", wrap_progress_bar_create);Nan::Export(ctx, "progress_bar_cast", wrap_progress_bar_cast);Nan::Export(ctx, "progress_bar_set_value", wrap_progress_bar_set_value);Nan::Export(ctx, "progress_bar_set_max", wrap_progress_bar_set_max);Nan::Export(ctx, "progress_bar_set_vertical", wrap_progress_bar_set_vertical);Nan::Export(ctx, "progress_bar_set_show_text", wrap_progress_bar_set_show_text);Nan::Export(ctx, "progress_bar_get_percent", wrap_progress_bar_get_percent);Nan::Export(ctx, "progress_bar_t_get_prop_value", wrap_progress_bar_t_get_prop_value);Nan::Export(ctx, "progress_bar_t_get_prop_max", wrap_progress_bar_t_get_prop_max);Nan::Export(ctx, "progress_bar_t_get_prop_vertical", wrap_progress_bar_t_get_prop_vertical);Nan::Export(ctx, "progress_bar_t_get_prop_show_text", wrap_progress_bar_t_get_prop_show_text);
+  Nan::Export(ctx, "progress_bar_create", wrap_progress_bar_create);
+  Nan::Export(ctx, "progress_bar_cast", wrap_progress_bar_cast);
+  Nan::Export(ctx, "progress_bar_set_value", wrap_progress_bar_set_value);
+  Nan::Export(ctx, "progress_bar_set_max", wrap_progress_bar_set_max);
+  Nan::Export(ctx, "progress_bar_set_vertical", wrap_progress_bar_set_vertical);
+  Nan::Export(ctx, "progress_bar_set_show_text", wrap_progress_bar_set_show_text);
+  Nan::Export(ctx, "progress_bar_get_percent", wrap_progress_bar_get_percent);
+  Nan::Export(ctx, "progress_bar_t_get_prop_value", wrap_progress_bar_t_get_prop_value);
+  Nan::Export(ctx, "progress_bar_t_get_prop_max", wrap_progress_bar_t_get_prop_max);
+  Nan::Export(ctx, "progress_bar_t_get_prop_vertical", wrap_progress_bar_t_get_prop_vertical);
+  Nan::Export(ctx, "progress_bar_t_get_prop_show_text", wrap_progress_bar_t_get_prop_show_text);
+
  return RET_OK;
 }
 
@@ -17613,7 +19128,9 @@ static void wrap_row_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
 }
 
 ret_t row_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "row_create", wrap_row_create);Nan::Export(ctx, "row_cast", wrap_row_cast);
+  Nan::Export(ctx, "row_create", wrap_row_create);
+  Nan::Export(ctx, "row_cast", wrap_row_cast);
+
  return RET_OK;
 }
 
@@ -17830,7 +19347,24 @@ static void wrap_slider_t_get_prop_slide_with_bar(const Nan::FunctionCallbackInf
 }
 
 ret_t slider_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "slider_create", wrap_slider_create);Nan::Export(ctx, "slider_cast", wrap_slider_cast);Nan::Export(ctx, "slider_set_value", wrap_slider_set_value);Nan::Export(ctx, "slider_set_min", wrap_slider_set_min);Nan::Export(ctx, "slider_set_max", wrap_slider_set_max);Nan::Export(ctx, "slider_set_step", wrap_slider_set_step);Nan::Export(ctx, "slider_set_bar_size", wrap_slider_set_bar_size);Nan::Export(ctx, "slider_set_vertical", wrap_slider_set_vertical);Nan::Export(ctx, "slider_t_get_prop_value", wrap_slider_t_get_prop_value);Nan::Export(ctx, "slider_t_get_prop_min", wrap_slider_t_get_prop_min);Nan::Export(ctx, "slider_t_get_prop_max", wrap_slider_t_get_prop_max);Nan::Export(ctx, "slider_t_get_prop_step", wrap_slider_t_get_prop_step);Nan::Export(ctx, "slider_t_get_prop_vertical", wrap_slider_t_get_prop_vertical);Nan::Export(ctx, "slider_t_get_prop_bar_size", wrap_slider_t_get_prop_bar_size);Nan::Export(ctx, "slider_t_get_prop_dragger_size", wrap_slider_t_get_prop_dragger_size);Nan::Export(ctx, "slider_t_get_prop_dragger_adapt_to_icon", wrap_slider_t_get_prop_dragger_adapt_to_icon);Nan::Export(ctx, "slider_t_get_prop_slide_with_bar", wrap_slider_t_get_prop_slide_with_bar);
+  Nan::Export(ctx, "slider_create", wrap_slider_create);
+  Nan::Export(ctx, "slider_cast", wrap_slider_cast);
+  Nan::Export(ctx, "slider_set_value", wrap_slider_set_value);
+  Nan::Export(ctx, "slider_set_min", wrap_slider_set_min);
+  Nan::Export(ctx, "slider_set_max", wrap_slider_set_max);
+  Nan::Export(ctx, "slider_set_step", wrap_slider_set_step);
+  Nan::Export(ctx, "slider_set_bar_size", wrap_slider_set_bar_size);
+  Nan::Export(ctx, "slider_set_vertical", wrap_slider_set_vertical);
+  Nan::Export(ctx, "slider_t_get_prop_value", wrap_slider_t_get_prop_value);
+  Nan::Export(ctx, "slider_t_get_prop_min", wrap_slider_t_get_prop_min);
+  Nan::Export(ctx, "slider_t_get_prop_max", wrap_slider_t_get_prop_max);
+  Nan::Export(ctx, "slider_t_get_prop_step", wrap_slider_t_get_prop_step);
+  Nan::Export(ctx, "slider_t_get_prop_vertical", wrap_slider_t_get_prop_vertical);
+  Nan::Export(ctx, "slider_t_get_prop_bar_size", wrap_slider_t_get_prop_bar_size);
+  Nan::Export(ctx, "slider_t_get_prop_dragger_size", wrap_slider_t_get_prop_dragger_size);
+  Nan::Export(ctx, "slider_t_get_prop_dragger_adapt_to_icon", wrap_slider_t_get_prop_dragger_adapt_to_icon);
+  Nan::Export(ctx, "slider_t_get_prop_slide_with_bar", wrap_slider_t_get_prop_slide_with_bar);
+
  return RET_OK;
 }
 
@@ -17917,7 +19451,13 @@ static void wrap_tab_button_group_t_get_prop_scrollable(const Nan::FunctionCallb
 }
 
 ret_t tab_button_group_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "tab_button_group_create", wrap_tab_button_group_create);Nan::Export(ctx, "tab_button_group_set_compact", wrap_tab_button_group_set_compact);Nan::Export(ctx, "tab_button_group_set_scrollable", wrap_tab_button_group_set_scrollable);Nan::Export(ctx, "tab_button_group_cast", wrap_tab_button_group_cast);Nan::Export(ctx, "tab_button_group_t_get_prop_compact", wrap_tab_button_group_t_get_prop_compact);Nan::Export(ctx, "tab_button_group_t_get_prop_scrollable", wrap_tab_button_group_t_get_prop_scrollable);
+  Nan::Export(ctx, "tab_button_group_create", wrap_tab_button_group_create);
+  Nan::Export(ctx, "tab_button_group_set_compact", wrap_tab_button_group_set_compact);
+  Nan::Export(ctx, "tab_button_group_set_scrollable", wrap_tab_button_group_set_scrollable);
+  Nan::Export(ctx, "tab_button_group_cast", wrap_tab_button_group_cast);
+  Nan::Export(ctx, "tab_button_group_t_get_prop_compact", wrap_tab_button_group_t_get_prop_compact);
+  Nan::Export(ctx, "tab_button_group_t_get_prop_scrollable", wrap_tab_button_group_t_get_prop_scrollable);
+
  return RET_OK;
 }
 
@@ -18063,7 +19603,17 @@ static void wrap_tab_button_t_get_prop_icon(const Nan::FunctionCallbackInfo<v8::
 }
 
 ret_t tab_button_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "tab_button_create", wrap_tab_button_create);Nan::Export(ctx, "tab_button_cast", wrap_tab_button_cast);Nan::Export(ctx, "tab_button_set_value", wrap_tab_button_set_value);Nan::Export(ctx, "tab_button_set_icon", wrap_tab_button_set_icon);Nan::Export(ctx, "tab_button_set_active_icon", wrap_tab_button_set_active_icon);Nan::Export(ctx, "tab_button_set_load_ui", wrap_tab_button_set_load_ui);Nan::Export(ctx, "tab_button_t_get_prop_value", wrap_tab_button_t_get_prop_value);Nan::Export(ctx, "tab_button_t_get_prop_load_ui", wrap_tab_button_t_get_prop_load_ui);Nan::Export(ctx, "tab_button_t_get_prop_active_icon", wrap_tab_button_t_get_prop_active_icon);Nan::Export(ctx, "tab_button_t_get_prop_icon", wrap_tab_button_t_get_prop_icon);
+  Nan::Export(ctx, "tab_button_create", wrap_tab_button_create);
+  Nan::Export(ctx, "tab_button_cast", wrap_tab_button_cast);
+  Nan::Export(ctx, "tab_button_set_value", wrap_tab_button_set_value);
+  Nan::Export(ctx, "tab_button_set_icon", wrap_tab_button_set_icon);
+  Nan::Export(ctx, "tab_button_set_active_icon", wrap_tab_button_set_active_icon);
+  Nan::Export(ctx, "tab_button_set_load_ui", wrap_tab_button_set_load_ui);
+  Nan::Export(ctx, "tab_button_t_get_prop_value", wrap_tab_button_t_get_prop_value);
+  Nan::Export(ctx, "tab_button_t_get_prop_load_ui", wrap_tab_button_t_get_prop_load_ui);
+  Nan::Export(ctx, "tab_button_t_get_prop_active_icon", wrap_tab_button_t_get_prop_active_icon);
+  Nan::Export(ctx, "tab_button_t_get_prop_icon", wrap_tab_button_t_get_prop_icon);
+
  return RET_OK;
 }
 
@@ -18100,7 +19650,9 @@ static void wrap_tab_control_cast(const Nan::FunctionCallbackInfo<v8::Value>& ar
 }
 
 ret_t tab_control_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "tab_control_create", wrap_tab_control_create);Nan::Export(ctx, "tab_control_cast", wrap_tab_control_cast);
+  Nan::Export(ctx, "tab_control_create", wrap_tab_control_create);
+  Nan::Export(ctx, "tab_control_cast", wrap_tab_control_cast);
+
  return RET_OK;
 }
 
@@ -18137,7 +19689,9 @@ static void wrap_view_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
 }
 
 ret_t view_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "view_create", wrap_view_create);Nan::Export(ctx, "view_cast", wrap_view_cast);
+  Nan::Export(ctx, "view_create", wrap_view_create);
+  Nan::Export(ctx, "view_cast", wrap_view_cast);
+
  return RET_OK;
 }
 
@@ -18176,7 +19730,10 @@ static void wrap_idle_info_t_get_prop_id(const Nan::FunctionCallbackInfo<v8::Val
 }
 
 ret_t idle_info_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "idle_info_cast", wrap_idle_info_cast);Nan::Export(ctx, "idle_info_t_get_prop_ctx", wrap_idle_info_t_get_prop_ctx);Nan::Export(ctx, "idle_info_t_get_prop_id", wrap_idle_info_t_get_prop_id);
+  Nan::Export(ctx, "idle_info_cast", wrap_idle_info_cast);
+  Nan::Export(ctx, "idle_info_t_get_prop_ctx", wrap_idle_info_t_get_prop_ctx);
+  Nan::Export(ctx, "idle_info_t_get_prop_id", wrap_idle_info_t_get_prop_id);
+
  return RET_OK;
 }
 
@@ -18223,7 +19780,10 @@ static void wrap_object_array_t_get_prop_props_size(const Nan::FunctionCallbackI
 }
 
 ret_t object_array_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "object_array_create", wrap_object_array_create);Nan::Export(ctx, "object_array_clear_props", wrap_object_array_clear_props);Nan::Export(ctx, "object_array_t_get_prop_props_size", wrap_object_array_t_get_prop_props_size);
+  Nan::Export(ctx, "object_array_create", wrap_object_array_create);
+  Nan::Export(ctx, "object_array_clear_props", wrap_object_array_clear_props);
+  Nan::Export(ctx, "object_array_t_get_prop_props_size", wrap_object_array_t_get_prop_props_size);
+
  return RET_OK;
 }
 
@@ -18260,7 +19820,9 @@ static void wrap_gif_image_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv
 }
 
 ret_t gif_image_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "gif_image_create", wrap_gif_image_create);Nan::Export(ctx, "gif_image_cast", wrap_gif_image_cast);
+  Nan::Export(ctx, "gif_image_create", wrap_gif_image_create);
+  Nan::Export(ctx, "gif_image_cast", wrap_gif_image_cast);
+
  return RET_OK;
 }
 
@@ -18302,7 +19864,10 @@ static void wrap_object_default_t_get_prop_props_size(const Nan::FunctionCallbac
 }
 
 ret_t object_default_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "object_default_create", wrap_object_default_create);Nan::Export(ctx, "object_default_clear_props", wrap_object_default_clear_props);Nan::Export(ctx, "object_default_t_get_prop_props_size", wrap_object_default_t_get_prop_props_size);
+  Nan::Export(ctx, "object_default_create", wrap_object_default_create);
+  Nan::Export(ctx, "object_default_clear_props", wrap_object_default_clear_props);
+  Nan::Export(ctx, "object_default_t_get_prop_props_size", wrap_object_default_t_get_prop_props_size);
+
  return RET_OK;
 }
 
@@ -18364,7 +19929,11 @@ static void wrap_image_t_get_prop_draw_type(const Nan::FunctionCallbackInfo<v8::
 }
 
 ret_t image_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "image_create", wrap_image_create);Nan::Export(ctx, "image_set_draw_type", wrap_image_set_draw_type);Nan::Export(ctx, "image_cast", wrap_image_cast);Nan::Export(ctx, "image_t_get_prop_draw_type", wrap_image_t_get_prop_draw_type);
+  Nan::Export(ctx, "image_create", wrap_image_create);
+  Nan::Export(ctx, "image_set_draw_type", wrap_image_set_draw_type);
+  Nan::Export(ctx, "image_cast", wrap_image_cast);
+  Nan::Export(ctx, "image_t_get_prop_draw_type", wrap_image_t_get_prop_draw_type);
+
  return RET_OK;
 }
 
@@ -18387,7 +19956,8 @@ static void wrap_combo_box_ex_create(const Nan::FunctionCallbackInfo<v8::Value>&
 }
 
 ret_t combo_box_ex_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "combo_box_ex_create", wrap_combo_box_ex_create);
+  Nan::Export(ctx, "combo_box_ex_create", wrap_combo_box_ex_create);
+
  return RET_OK;
 }
 
@@ -18406,7 +19976,8 @@ static void wrap_calibration_win_cast(const Nan::FunctionCallbackInfo<v8::Value>
 }
 
 ret_t calibration_win_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "calibration_win_cast", wrap_calibration_win_cast);
+  Nan::Export(ctx, "calibration_win_cast", wrap_calibration_win_cast);
+
  return RET_OK;
 }
 
@@ -18493,7 +20064,13 @@ static void wrap_popup_t_get_prop_close_when_click_outside(const Nan::FunctionCa
 }
 
 ret_t popup_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "popup_create", wrap_popup_create);Nan::Export(ctx, "popup_cast", wrap_popup_cast);Nan::Export(ctx, "popup_set_close_when_click", wrap_popup_set_close_when_click);Nan::Export(ctx, "popup_set_close_when_click_outside", wrap_popup_set_close_when_click_outside);Nan::Export(ctx, "popup_t_get_prop_close_when_click", wrap_popup_t_get_prop_close_when_click);Nan::Export(ctx, "popup_t_get_prop_close_when_click_outside", wrap_popup_t_get_prop_close_when_click_outside);
+  Nan::Export(ctx, "popup_create", wrap_popup_create);
+  Nan::Export(ctx, "popup_cast", wrap_popup_cast);
+  Nan::Export(ctx, "popup_set_close_when_click", wrap_popup_set_close_when_click);
+  Nan::Export(ctx, "popup_set_close_when_click_outside", wrap_popup_set_close_when_click_outside);
+  Nan::Export(ctx, "popup_t_get_prop_close_when_click", wrap_popup_t_get_prop_close_when_click);
+  Nan::Export(ctx, "popup_t_get_prop_close_when_click_outside", wrap_popup_t_get_prop_close_when_click_outside);
+
  return RET_OK;
 }
 
@@ -18546,7 +20123,10 @@ static void wrap_svg_image_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv
 }
 
 ret_t svg_image_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "svg_image_create", wrap_svg_image_create);Nan::Export(ctx, "svg_image_set_image", wrap_svg_image_set_image);Nan::Export(ctx, "svg_image_cast", wrap_svg_image_cast);
+  Nan::Export(ctx, "svg_image_create", wrap_svg_image_create);
+  Nan::Export(ctx, "svg_image_set_image", wrap_svg_image_set_image);
+  Nan::Export(ctx, "svg_image_cast", wrap_svg_image_cast);
+
  return RET_OK;
 }
 
@@ -18595,7 +20175,11 @@ static void wrap_timer_info_t_get_prop_now(const Nan::FunctionCallbackInfo<v8::V
 }
 
 ret_t timer_info_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "timer_info_cast", wrap_timer_info_cast);Nan::Export(ctx, "timer_info_t_get_prop_ctx", wrap_timer_info_t_get_prop_ctx);Nan::Export(ctx, "timer_info_t_get_prop_id", wrap_timer_info_t_get_prop_id);Nan::Export(ctx, "timer_info_t_get_prop_now", wrap_timer_info_t_get_prop_now);
+  Nan::Export(ctx, "timer_info_cast", wrap_timer_info_cast);
+  Nan::Export(ctx, "timer_info_t_get_prop_ctx", wrap_timer_info_t_get_prop_ctx);
+  Nan::Export(ctx, "timer_info_t_get_prop_id", wrap_timer_info_t_get_prop_id);
+  Nan::Export(ctx, "timer_info_t_get_prop_now", wrap_timer_info_t_get_prop_now);
+
  return RET_OK;
 }
 
@@ -18632,7 +20216,9 @@ static void wrap_spin_box_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv)
 }
 
 ret_t spin_box_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "spin_box_create", wrap_spin_box_create);Nan::Export(ctx, "spin_box_cast", wrap_spin_box_cast);
+  Nan::Export(ctx, "spin_box_create", wrap_spin_box_create);
+  Nan::Export(ctx, "spin_box_cast", wrap_spin_box_cast);
+
  return RET_OK;
 }
 
@@ -18669,7 +20255,9 @@ static void wrap_system_bar_cast(const Nan::FunctionCallbackInfo<v8::Value>& arg
 }
 
 ret_t system_bar_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "system_bar_create", wrap_system_bar_create);Nan::Export(ctx, "system_bar_cast", wrap_system_bar_cast);
+  Nan::Export(ctx, "system_bar_create", wrap_system_bar_create);
+  Nan::Export(ctx, "system_bar_cast", wrap_system_bar_cast);
+
  return RET_OK;
 }
 
@@ -18803,7 +20391,16 @@ static void wrap_window_t_get_prop_fullscreen(const Nan::FunctionCallbackInfo<v8
 }
 
 ret_t window_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "window_create", wrap_window_create);Nan::Export(ctx, "window_create_default", wrap_window_create_default);Nan::Export(ctx, "window_set_fullscreen", wrap_window_set_fullscreen);Nan::Export(ctx, "window_open", wrap_window_open);Nan::Export(ctx, "window_open_and_close", wrap_window_open_and_close);Nan::Export(ctx, "window_close", wrap_window_close);Nan::Export(ctx, "window_close_force", wrap_window_close_force);Nan::Export(ctx, "window_cast", wrap_window_cast);Nan::Export(ctx, "window_t_get_prop_fullscreen", wrap_window_t_get_prop_fullscreen);
+  Nan::Export(ctx, "window_create", wrap_window_create);
+  Nan::Export(ctx, "window_create_default", wrap_window_create_default);
+  Nan::Export(ctx, "window_set_fullscreen", wrap_window_set_fullscreen);
+  Nan::Export(ctx, "window_open", wrap_window_open);
+  Nan::Export(ctx, "window_open_and_close", wrap_window_open_and_close);
+  Nan::Export(ctx, "window_close", wrap_window_close);
+  Nan::Export(ctx, "window_close_force", wrap_window_close_force);
+  Nan::Export(ctx, "window_cast", wrap_window_cast);
+  Nan::Export(ctx, "window_t_get_prop_fullscreen", wrap_window_t_get_prop_fullscreen);
+
  return RET_OK;
 }
 
@@ -18840,7 +20437,9 @@ static void wrap_keyboard_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv)
 }
 
 ret_t keyboard_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "keyboard_create", wrap_keyboard_create);Nan::Export(ctx, "keyboard_cast", wrap_keyboard_cast);
+  Nan::Export(ctx, "keyboard_create", wrap_keyboard_create);
+  Nan::Export(ctx, "keyboard_cast", wrap_keyboard_cast);
+
  return RET_OK;
 }
 
@@ -19090,7 +20689,23 @@ static void wrap_dialog_t_get_prop_highlight(const Nan::FunctionCallbackInfo<v8:
 }
 
 ret_t dialog_t_init(v8::Local<v8::Object> ctx) {
-Nan::Export(ctx, "dialog_create", wrap_dialog_create);Nan::Export(ctx, "dialog_create_simple", wrap_dialog_create_simple);Nan::Export(ctx, "dialog_cast", wrap_dialog_cast);Nan::Export(ctx, "dialog_get_title", wrap_dialog_get_title);Nan::Export(ctx, "dialog_get_client", wrap_dialog_get_client);Nan::Export(ctx, "dialog_open", wrap_dialog_open);Nan::Export(ctx, "dialog_set_title", wrap_dialog_set_title);Nan::Export(ctx, "dialog_modal", wrap_dialog_modal);Nan::Export(ctx, "dialog_quit", wrap_dialog_quit);Nan::Export(ctx, "dialog_is_quited", wrap_dialog_is_quited);Nan::Export(ctx, "dialog_is_modal", wrap_dialog_is_modal);Nan::Export(ctx, "dialog_toast", wrap_dialog_toast);Nan::Export(ctx, "dialog_info", wrap_dialog_info);Nan::Export(ctx, "dialog_warn", wrap_dialog_warn);Nan::Export(ctx, "dialog_confirm", wrap_dialog_confirm);Nan::Export(ctx, "dialog_t_get_prop_highlight", wrap_dialog_t_get_prop_highlight);
+  Nan::Export(ctx, "dialog_create", wrap_dialog_create);
+  Nan::Export(ctx, "dialog_create_simple", wrap_dialog_create_simple);
+  Nan::Export(ctx, "dialog_cast", wrap_dialog_cast);
+  Nan::Export(ctx, "dialog_get_title", wrap_dialog_get_title);
+  Nan::Export(ctx, "dialog_get_client", wrap_dialog_get_client);
+  Nan::Export(ctx, "dialog_open", wrap_dialog_open);
+  Nan::Export(ctx, "dialog_set_title", wrap_dialog_set_title);
+  Nan::Export(ctx, "dialog_modal", wrap_dialog_modal);
+  Nan::Export(ctx, "dialog_quit", wrap_dialog_quit);
+  Nan::Export(ctx, "dialog_is_quited", wrap_dialog_is_quited);
+  Nan::Export(ctx, "dialog_is_modal", wrap_dialog_is_modal);
+  Nan::Export(ctx, "dialog_toast", wrap_dialog_toast);
+  Nan::Export(ctx, "dialog_info", wrap_dialog_info);
+  Nan::Export(ctx, "dialog_warn", wrap_dialog_warn);
+  Nan::Export(ctx, "dialog_confirm", wrap_dialog_confirm);
+  Nan::Export(ctx, "dialog_t_get_prop_highlight", wrap_dialog_t_get_prop_highlight);
+
  return RET_OK;
 }
 

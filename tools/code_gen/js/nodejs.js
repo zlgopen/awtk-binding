@@ -44,7 +44,7 @@ class NodeJSGenerator extends JsBindingGenerator {
 
   genRegFunc(prefix, name) {
     const funcName = `${prefix}_${name}`
-    return `Nan::Export(ctx, "${name}", ${funcName});`;
+    return `  Nan::Export(ctx, "${name}", ${funcName});\n`;
   }
    
   genGlobalInfo(json) {
