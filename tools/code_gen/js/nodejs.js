@@ -15,7 +15,7 @@ class NodeJSGenerator extends JsBindingGenerator {
     prefix = prefix || 'wrap';
     let result = `static void ${prefix}_${name}` + this.genFuncArgs() + ' {\n';
     result += '  JSContext* ctx = NULL; \n';
-    result += '  uint32_t argc = argv.Length(); \n';
+    result += '  int32_t argc = (int32_t)(argv.Length()); \n';
     return result;
   }
 
