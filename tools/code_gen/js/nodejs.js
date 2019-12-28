@@ -44,9 +44,7 @@ class NodeJSGenerator extends JsBindingGenerator {
 
   genRegFunc(prefix, name) {
     const funcName = `${prefix}_${name}`
-    return `  ctx->Set(Nan::New("${name}").ToLocalChecked(),
-               Nan::New<v8::FunctionTemplate>(${funcName})->GetFunction());
-`;
+    return `Nan::Export(ctx, "${name}", ${funcName});`;
   }
    
   genGlobalInfo(json) {
@@ -117,10 +115,10 @@ class NodeJSGenerator extends JsBindingGenerator {
     return `
 void Init(v8::Local<v8::Object> exports) {
   v8::Local<v8::Object> global =  Nan::GetCurrentContext()->Global();
-  exports->Set(Nan::New("init").ToLocalChecked(),
-               Nan::New<v8::FunctionTemplate>(wrap_awtk_init)->GetFunction());
-  exports->Set(Nan::New("step").ToLocalChecked(),
-               Nan::New<v8::FunctionTemplate>(wrap_awtk_main_loop_step)->GetFunction());
+
+  Nan::Export(exports, "init", wrap_awtk_init);
+  Nan::Export(exports, "step", wrap_awtk_main_loop_step);
+
   awtk_js_init(global);
 }
 
