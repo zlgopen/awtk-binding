@@ -79,6 +79,21 @@ function installHandlers(win) {
 function openWindow(name, toClose) {
   var win = null;
   console.log('open ' + name);
+
+  if(name === "toast") {
+    TDialog.toast("Hello AWTK, This is Toast!", 3000);
+    return;
+  } else if(name === "info") {
+    TDialog.info("Info", "Hello AWTK, Timeout!");
+    return;
+  } else if(name === "warn") {
+    TDialog.warn("Warnning", "Hello AWTK, Timeout!");
+    return;
+  } else if(name === "confirm") {
+    TDialog.confirm("Confirm", "Hello AWTK, Are You Sure to Quit?");
+    return;
+  }
+
   if(toClose) {
     win = TWindow.openAndClose(name, toClose);
   } else {
@@ -111,7 +126,6 @@ function showPreloadResWindow() {
   TTimer.add(function(info) { 
     if(finish == total) {
       console.log('done')
-      TWindow.open('system_bar');
       openWindow('main', win);
       bitmap = null;
 
