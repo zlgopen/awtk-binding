@@ -103,7 +103,7 @@ class JsBindingGenerator extends BindingGen {
       } else if (type.indexOf('func_t') >= 0 || type.indexOf('visit_t') >= 0) {
         result += `(${type})jsvalue_get_pointer(ctx, argv[${index}], "${type}");\n`;
       } else {
-        result += `(${type})jsvalue_get_number_value(ctx, argv[${index}]);\n`;
+        result += `(${type})jsvalue_get_int_value(ctx, argv[${index}]);\n`;
       }
     }
 

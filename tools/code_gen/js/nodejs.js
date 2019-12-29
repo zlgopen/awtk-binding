@@ -85,7 +85,7 @@ class NodeJSGenerator extends JsBindingGenerator {
     } else if (type.indexOf('bool_t') >= 0) {
       result += `  v8::Local<v8::Boolean> jret= Nan::New((bool)(${name}));\n`;
     } else {
-      result += `  v8::Local<v8::Number> jret= Nan::New((double)(${name}));\n`;
+      result += `  v8::Local<v8::Int32> jret= Nan::New((int32_t)(${name}));\n`;
     }
     result += `  argv.GetReturnValue().Set(jret);\n`
 

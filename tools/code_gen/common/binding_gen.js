@@ -271,10 +271,10 @@ class BindingGen extends CodeGen {
   genIncludes(json) {
     let result = '/*XXX: GENERATED CODE, DONT EDIT IT.*/\n';
 
-    result += '#include "tkc/utf8.h"\n';
-    result += '#include "tkc/mem.h"\n';
     result += this.genTargetIncludes();
 
+    result += '#include "tkc/utf8.h"\n';
+    result += '#include "tkc/mem.h"\n';
     json.forEach(iter => {
       if (result.indexOf(iter.header) <= 0) {
         result += `#include "${iter.header}"\n`;
