@@ -1,7 +1,7 @@
 ﻿/*XXX: GENERATED CODE, DONT EDIT IT.*/
+#include <jni.h>
 #include "tkc/utf8.h"
 #include "tkc/mem.h"
-#include <jni.h>
 #include "tkc/event.h"
 #include "tkc/rect.h"
 #include "tkc/emitter.h"
@@ -55,6 +55,7 @@
 #include "progress_circle/progress_circle.h"
 #include "mledit/mledit.h"
 #include "mledit/line_number.h"
+#include "keyboard/candidates.h"
 #include "image_value/image_value.h"
 #include "image_animation/image_animation.h"
 #include "guage/guage.h"
@@ -1419,6 +1420,16 @@ JNIEXPORT jint JNICALL Java_awtk_TImageManager_image_1manager_1get_1bitmap(JNIEn
   char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
   bitmap_t* image = (bitmap_t*)jimage;
   ret = (ret_t)image_manager_get_bitmap(imm, name, image);
+  (*env)->ReleaseStringUTFChars(env, jname, name);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TImageManager_image_1manager_1preload(JNIEnv* env,  jclass ajc, jlong jimm, jstring jname) { /*func*/
+  ret_t ret;
+  image_manager_t* imm = (image_manager_t*)jimm;
+  char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
+  ret = (ret_t)image_manager_preload(imm, name);
   (*env)->ReleaseStringUTFChars(env, jname, name);
 
   return (jint)(ret);
@@ -7928,6 +7939,14 @@ JNIEXPORT jlong JNICALL Java_awtk_TLineNumber_line_1number_1cast(JNIEnv* env,  j
   widget_t* ret;
   widget_t* widget = (widget_t*)jwidget;
   ret = (widget_t*)line_number_cast(widget);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TCandidates_candidates_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  widget_t* ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (widget_t*)candidates_cast(widget);
 
   return (jlong)(ret);
 }

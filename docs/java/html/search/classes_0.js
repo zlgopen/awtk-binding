@@ -13,6 +13,7 @@ var searchData=
   ['tbutton',['TButton',['../classawtk_1_1_t_button.html',1,'awtk']]],
   ['tbuttongroup',['TButtonGroup',['../classawtk_1_1_t_button_group.html',1,'awtk']]],
   ['tcalibrationwin',['TCalibrationWin',['../classawtk_1_1_t_calibration_win.html',1,'awtk']]],
+  ['tcandidates',['TCandidates',['../classawtk_1_1_t_candidates.html',1,'awtk']]],
   ['tcanvas',['TCanvas',['../classawtk_1_1_t_canvas.html',1,'awtk']]],
   ['tcanvaswidget',['TCanvasWidget',['../classawtk_1_1_t_canvas_widget.html',1,'awtk']]],
   ['tcheckbutton',['TCheckButton',['../classawtk_1_1_t_check_button.html',1,'awtk']]],

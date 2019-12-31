@@ -2899,6 +2899,29 @@
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "image_manager_t*",
+            "name": "imm",
+            "desc": "图片管理器对象。"
+          },
+          {
+            "type": "char*",
+            "name": "name",
+            "desc": "图片名称。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "预加载指定的图片。",
+        "name": "image_manager_preload",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
       }
     ],
     "events": [],
@@ -15741,6 +15764,42 @@
     "header": "mledit/line_number.h",
     "desc": "行号。多行编辑器的行号。\n\nline\\_number\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于line\\_number\\_t控件。\n\n在xml中使用\"lin\\e_number\"标签创建行号控件，一般配合mledit使用。如：\n\n```xml\n<mledit x=\"c\" y=\"10\" h=\"40%\" w=\"90%\" focus=\"true\" left_margin=\"36\" right_margin=\"16\"\nwrap_word=\"true\">\n<line_number x=\"0\" y=\"0\" w=\"32\" h=\"100%\" value=\"0\"/>\n<scroll_bar_d x=\"right\" y=\"0\" w=\"14\" h=\"100%\" value=\"0\"/>\n</mledit>\n```\n\n> 更多用法请参考：[mledit.xml](\nhttps://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/mledit.xml)\n\n可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：\n\n```xml\n<line_number>\n<style name=\"default\">\n<normal text_color=\"black\" bg_color=\"#d0d0d0\" text_align_h=\"right\"/>\n</style>\n</line_number>\n```\n\n> 更多用法请参考：\n[theme default](\nhttps://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L556)",
     "name": "line_number_t",
+    "parent": "widget_t",
+    "annotation": {
+      "scriptable": true,
+      "design": true,
+      "widget": true
+    },
+    "level": 2
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "candidates对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
+        "desc": "转换为candidates对象(供脚本语言使用)。",
+        "name": "candidates_cast",
+        "return": {
+          "type": "widget_t*",
+          "desc": "candidates对象。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [],
+    "header": "keyboard/candidates.h",
+    "desc": "输入法候选字词控件。\n\n如果希望启用用数字选择对应的候选字，请设置属性grab_keys=\"true\"。如：\n\n```xml\n<candidates x=\"0\" y=\"0\" w=\"100%\" h=\"30\" grab_keys=\"true\"/>\n```\n\n>相关文件： assets/default/raw/ui/kb_default.xml\n\n如果希望通过左右键切换不同的候选字，除了设置属性grab_keys=\"true\"，还需要设置按钮的focused状态的style。\n\n```xml\n<style name=\"candidates\" text_color=\"black\">\n<normal  />\n<pressed    bg_color=\"#c0c0c0\" border_color=\"#a0a0a0\"/>\n<over       bg_color=\"#e0e0e0\" border_color=\"#a0a0a0\"/>\n<focused    border_color=\"#a0a0a0\"/>\n</style>\n```\n\n>相关文件：assets/default/raw/styles/keyboard.xml",
+    "name": "candidates_t",
     "parent": "widget_t",
     "annotation": {
       "scriptable": true,

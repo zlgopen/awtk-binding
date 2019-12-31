@@ -206,6 +206,7 @@ declare function idle_add(on_idle : Function, ctx : any) : number;
 declare function idle_remove(idle_id : number) : TRet;
 declare function image_manager() : any;
 declare function image_manager_get_bitmap(imm : any, name : string, image : any) : TRet;
+declare function image_manager_preload(imm : any, name : string) : TRet;
 declare function INPUT_TEXT();
 declare function INPUT_INT();
 declare function INPUT_UINT();
@@ -1266,6 +1267,7 @@ declare function line_number_set_bottom_margin(widget : any, bottom_margin : num
 declare function line_number_set_line_height(widget : any, line_height : number) : TRet;
 declare function line_number_set_yoffset(widget : any, yoffset : number) : TRet;
 declare function line_number_cast(widget : any) : any;
+declare function candidates_cast(widget : any) : any;
 declare function image_value_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function image_value_set_image(widget : any, image : string) : TRet;
 declare function image_value_set_format(widget : any, format : string) : TRet;
@@ -3666,6 +3668,18 @@ export class TImageManager {
    */
  getBitmap(name : string, image : TBitmap) : TRet  {
     return image_manager_get_bitmap(this != null ? (this.nativeObj || this) : null, name, image != null ? (image.nativeObj || image) : null);
+ }
+
+
+  /**
+   * 预加载指定的图片。
+   * 
+   * @param name 图片名称。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ preload(name : string) : TRet  {
+    return image_manager_preload(this != null ? (this.nativeObj || this) : null, name);
  }
 
 };
@@ -14026,6 +14040,50 @@ export class TLineNumber extends TWidget {
    */
  static cast(widget : TWidget) : TLineNumber  {
     return new TLineNumber(line_number_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+};
+/**
+ * 输入法候选字词控件。
+ *
+ *如果希望启用用数字选择对应的候选字，请设置属性grab_keys="true"。如：
+ *
+ *```xml
+ *<candidates x="0" y="0" w="100%" h="30" grab_keys="true"/>
+ *```
+ *
+ *>相关文件： assets/default/raw/ui/kb_default.xml
+ *
+ *如果希望通过左右键切换不同的候选字，除了设置属性grab_keys="true"，还需要设置按钮的focused状态的style。
+ *
+ *```xml
+ *<style name="candidates" text_color="black">
+ *<normal  />
+ *<pressed    bg_color="#c0c0c0" border_color="#a0a0a0"/>
+ *<over       bg_color="#e0e0e0" border_color="#a0a0a0"/>
+ *<focused    border_color="#a0a0a0"/>
+ *</style>
+ *```
+ *
+ *>相关文件：assets/default/raw/styles/keyboard.xml
+ *
+ */
+export class TCandidates extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 转换为candidates对象(供脚本语言使用)。
+   * 
+   * @param widget candidates对象。
+   *
+   * @returns candidates对象。
+   */
+ static cast(widget : TWidget) : TCandidates  {
+    return new TCandidates(candidates_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 };

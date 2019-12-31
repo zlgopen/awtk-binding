@@ -1,8 +1,8 @@
 ﻿/*XXX: GENERATED CODE, DONT EDIT IT.*/
-#include "tkc/utf8.h"
-#include "tkc/mem.h"
 #include "jerryscript.h"
 #include "jerryscript-ext/handler.h"
+#include "tkc/utf8.h"
+#include "tkc/mem.h"
 #include "tkc/event.h"
 #include "tkc/rect.h"
 #include "tkc/emitter.h"
@@ -56,6 +56,7 @@
 #include "progress_circle/progress_circle.h"
 #include "mledit/mledit.h"
 #include "mledit/line_number.h"
+#include "keyboard/candidates.h"
 #include "image_value/image_value.h"
 #include "image_animation/image_animation.h"
 #include "guage/guage.h"
@@ -418,7 +419,7 @@ jsvalue_t wrap_emitter_dispatch_simple_event(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   emitter_t* emitter = (emitter_t*)jsvalue_get_pointer(ctx, argv[0], "emitter_t*");
-  event_type_t type = (event_type_t)jsvalue_get_number_value(ctx, argv[1]);
+  event_type_t type = (event_type_t)jsvalue_get_int_value(ctx, argv[1]);
   ret = (ret_t)emitter_dispatch_simple_event(emitter, type);
 
   jret = jsvalue_create_int(ctx, ret);
@@ -561,7 +562,7 @@ jsvalue_t wrap_bitmap_create_ex(
   uint32_t w = (uint32_t)jsvalue_get_int_value(ctx, argv[0]);
   uint32_t h = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
   uint32_t line_length = (uint32_t)jsvalue_get_int_value(ctx, argv[2]);
-  bitmap_format_t format = (bitmap_format_t)jsvalue_get_number_value(ctx, argv[3]);
+  bitmap_format_t format = (bitmap_format_t)jsvalue_get_int_value(ctx, argv[3]);
   ret = (bitmap_t*)bitmap_create_ex(w, h, line_length, format);
 
   jret = jsvalue_create_object(ctx, ret, "bitmap_t*", &s_bitmap_destroy_info);
@@ -2060,7 +2061,7 @@ jsvalue_t wrap_tk_init(
   ret_t ret = (ret_t)0;
   wh_t w = (wh_t)jsvalue_get_int_value(ctx, argv[0]);
   wh_t h = (wh_t)jsvalue_get_int_value(ctx, argv[1]);
-  app_type_t app_type = (app_type_t)jsvalue_get_number_value(ctx, argv[2]);
+  app_type_t app_type = (app_type_t)jsvalue_get_int_value(ctx, argv[2]);
   const char* app_name = (const char*)jsvalue_get_utf8_string(ctx, argv[3]);
   const char* app_root = (const char*)jsvalue_get_utf8_string(ctx, argv[4]);
   ret = (ret_t)tk_init(w, h, app_type, app_name, app_root);
@@ -3092,7 +3093,7 @@ jsvalue_t wrap_font_manager_unload_font(
   ret_t ret = (ret_t)0;
   font_manager_t* fm = (font_manager_t*)jsvalue_get_pointer(ctx, argv[0], "font_manager_t*");
   char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
-  font_size_t size = (font_size_t)jsvalue_get_number_value(ctx, argv[2]);
+  font_size_t size = (font_size_t)jsvalue_get_int_value(ctx, argv[2]);
   ret = (ret_t)font_manager_unload_font(fm, name, size);
   TKMEM_FREE(name);
 
@@ -3227,9 +3228,30 @@ jsvalue_t wrap_image_manager_get_bitmap(
   return jret;
 }
 
+jsvalue_t wrap_image_manager_preload(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  image_manager_t* imm = (image_manager_t*)jsvalue_get_pointer(ctx, argv[0], "image_manager_t*");
+  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  ret = (ret_t)image_manager_preload(imm, name);
+  TKMEM_FREE(name);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 ret_t image_manager_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"image_manager", wrap_image_manager);
   jerryx_handler_register_global((const jerry_char_t*)"image_manager_get_bitmap", wrap_image_manager_get_bitmap);
+  jerryx_handler_register_global((const jerry_char_t*)"image_manager_preload", wrap_image_manager_preload);
 
  return RET_OK;
 }
@@ -12164,7 +12186,7 @@ jsvalue_t wrap_canvas_set_font(
   ret_t ret = (ret_t)0;
   canvas_t* c = (canvas_t*)jsvalue_get_pointer(ctx, argv[0], "canvas_t*");
   const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
-  font_size_t size = (font_size_t)jsvalue_get_number_value(ctx, argv[2]);
+  font_size_t size = (font_size_t)jsvalue_get_int_value(ctx, argv[2]);
   ret = (ret_t)canvas_set_font(c, name, size);
   TKMEM_FREE(name);
 
@@ -12290,7 +12312,7 @@ jsvalue_t wrap_canvas_draw_image_ex(
   ret_t ret = (ret_t)0;
   canvas_t* c = (canvas_t*)jsvalue_get_pointer(ctx, argv[0], "canvas_t*");
   bitmap_t* img = (bitmap_t*)jsvalue_get_pointer(ctx, argv[1], "bitmap_t*");
-  image_draw_type_t draw_type = (image_draw_type_t)jsvalue_get_number_value(ctx, argv[2]);
+  image_draw_type_t draw_type = (image_draw_type_t)jsvalue_get_int_value(ctx, argv[2]);
   rect_t* dst = (rect_t*)jsvalue_get_pointer(ctx, argv[3], "rect_t*");
   ret = (ret_t)canvas_draw_image_ex(c, img, draw_type, dst);
 
@@ -14655,7 +14677,7 @@ jsvalue_t wrap_assets_manager_ref(
   if(argc >= 3) {
   asset_info_t* ret = NULL;
   assets_manager_t* am = (assets_manager_t*)jsvalue_get_pointer(ctx, argv[0], "assets_manager_t*");
-  asset_type_t type = (asset_type_t)jsvalue_get_number_value(ctx, argv[1]);
+  asset_type_t type = (asset_type_t)jsvalue_get_int_value(ctx, argv[1]);
   char* name = (char*)jsvalue_get_utf8_string(ctx, argv[2]);
   ret = (asset_info_t*)assets_manager_ref(am, type, name);
   TKMEM_FREE(name);
@@ -16439,7 +16461,7 @@ jsvalue_t wrap_slide_menu_set_align_v(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  align_v_t align_v = (align_v_t)jsvalue_get_number_value(ctx, argv[1]);
+  align_v_t align_v = (align_v_t)jsvalue_get_int_value(ctx, argv[1]);
   ret = (ret_t)slide_menu_set_align_v(widget, align_v);
 
   jret = jsvalue_create_int(ctx, ret);
@@ -18625,6 +18647,30 @@ ret_t line_number_t_init(JSContext *ctx) {
  return RET_OK;
 }
 
+jsvalue_t wrap_candidates_cast(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  widget_t* ret = NULL;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  ret = (widget_t*)candidates_cast(widget);
+
+  jret = jsvalue_create_pointer(ctx, ret, "candidates_t*");
+  }
+  return jret;
+}
+
+ret_t candidates_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"candidates_cast", wrap_candidates_cast);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_image_value_create(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -19307,7 +19353,7 @@ jsvalue_t wrap_guage_set_draw_type(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  image_draw_type_t draw_type = (image_draw_type_t)jsvalue_get_number_value(ctx, argv[1]);
+  image_draw_type_t draw_type = (image_draw_type_t)jsvalue_get_int_value(ctx, argv[1]);
   ret = (ret_t)guage_set_draw_type(widget, draw_type);
 
   jret = jsvalue_create_int(ctx, ret);
@@ -22791,7 +22837,7 @@ jsvalue_t wrap_edit_set_input_type(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  input_type_t type = (input_type_t)jsvalue_get_number_value(ctx, argv[1]);
+  input_type_t type = (input_type_t)jsvalue_get_int_value(ctx, argv[1]);
   ret = (ret_t)edit_set_input_type(widget, type);
 
   jret = jsvalue_create_int(ctx, ret);
@@ -24654,7 +24700,7 @@ jsvalue_t wrap_image_set_draw_type(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  image_draw_type_t draw_type = (image_draw_type_t)jsvalue_get_number_value(ctx, argv[1]);
+  image_draw_type_t draw_type = (image_draw_type_t)jsvalue_get_int_value(ctx, argv[1]);
   ret = (ret_t)image_set_draw_type(widget, draw_type);
 
   jret = jsvalue_create_int(ctx, ret);
@@ -25730,6 +25776,7 @@ ret_t awtk_js_init(JSContext *ctx) {
   progress_circle_t_init(ctx);
   mledit_t_init(ctx);
   line_number_t_init(ctx);
+  candidates_t_init(ctx);
   image_value_t_init(ctx);
   image_animation_t_init(ctx);
   guage_t_init(ctx);

@@ -28,6 +28,7 @@ var searchData=
   ['pow_5fin',['POW_IN',['../enumawtk_1_1_t_easing_type.html#a4ac3adfb6b96a902c9250065591c4cf5',1,'awtk::TEasingType']]],
   ['pow_5finout',['POW_INOUT',['../enumawtk_1_1_t_easing_type.html#ac3d04ceb357d56721b1c21e8271297cd',1,'awtk::TEasingType']]],
   ['pow_5fout',['POW_OUT',['../enumawtk_1_1_t_easing_type.html#ac5148778a75f4b4bf4ec9ac30fb01bb4',1,'awtk::TEasingType']]],
+  ['preload',['preload',['../classawtk_1_1_t_image_manager.html#a2fc3c54de7d76796eab0220c69be5299',1,'awtk::TImageManager']]],
   ['premulti_5falpha',['PREMULTI_ALPHA',['../enumawtk_1_1_t_bitmap_flag.html#abb67ef9ba99dca4a834966d9ae65a4e3',1,'awtk::TBitmapFlag']]],
   ['progress',['PROGRESS',['../enumawtk_1_1_t_event_type.html#a5af0f1a0b9e01c26e4e94b1acad7662b',1,'awtk::TEventType']]],
   ['progress_5fbar',['PROGRESS_BAR',['../enumawtk_1_1_t_widget_type.html#ae756a44bf475f22c9af655e5d97a5ef6',1,'awtk::TWidgetType']]],

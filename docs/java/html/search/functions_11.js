@@ -7,6 +7,7 @@ var searchData=
   ['tbutton',['TButton',['../classawtk_1_1_t_button.html#addcd8d17ded371686126bccab64b1dfd',1,'awtk::TButton']]],
   ['tbuttongroup',['TButtonGroup',['../classawtk_1_1_t_button_group.html#aab607a58a44865b7c53a2caff459b22d',1,'awtk::TButtonGroup']]],
   ['tcalibrationwin',['TCalibrationWin',['../classawtk_1_1_t_calibration_win.html#a130661e11cdc7566f15a269699a94895',1,'awtk::TCalibrationWin']]],
+  ['tcandidates',['TCandidates',['../classawtk_1_1_t_candidates.html#ac02d4a570cee708dba6543464e71638b',1,'awtk::TCandidates']]],
   ['tcanvas',['TCanvas',['../classawtk_1_1_t_canvas.html#ae6ce537f347427f4212c76aa222fb1be',1,'awtk::TCanvas']]],
   ['tcanvaswidget',['TCanvasWidget',['../classawtk_1_1_t_canvas_widget.html#ab9a9b05cdeb60a30f458fd80e9e04c40',1,'awtk::TCanvasWidget']]],
   ['tcheckbutton',['TCheckButton',['../classawtk_1_1_t_check_button.html#aa224cf25ebdd1d36ef695acc28dc5777',1,'awtk::TCheckButton']]],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['object',['OBJECT',['../enumawtk_1_1_t_value_type.html#af6ed116362479e627c484585f2ef463e',1,'awtk.TValueType.OBJECT()'],['../classawtk_1_1_t_value.html#a1a6ca7a8d19057cf3d220d4e5d89e3d3',1,'awtk.TValue.object()']]],
+  ['object',['object',['../classawtk_1_1_t_value.html#a1a6ca7a8d19057cf3d220d4e5d89e3d3',1,'awtk.TValue.object()'],['../enumawtk_1_1_t_value_type.html#af6ed116362479e627c484585f2ef463e',1,'awtk.TValueType.OBJECT()']]],
   ['object_5fchanged',['OBJECT_CHANGED',['../enumawtk_1_1_t_ret.html#a0e51ac8f73062ee2cd11a66bc164f5b7',1,'awtk::TRet']]],
   ['off',['off',['../classawtk_1_1_t_emitter.html#a4515856b77cd3f885a2fd628e4801ab7',1,'awtk.TEmitter.off()'],['../classawtk_1_1_t_locale_info.html#a07f49ebed086ebef45978a49fba454df',1,'awtk.TLocaleInfo.off()']]],
   ['ok',['OK',['../enumawtk_1_1_t_dialog_quit_code.html#af1bf0c64e127abb5e51433e6709a7a78',1,'awtk.TDialogQuitCode.OK()'],['../enumawtk_1_1_t_ret.html#a8879287e0403ac38149f07ae867fb8e8',1,'awtk.TRet.OK()']]],

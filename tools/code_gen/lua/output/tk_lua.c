@@ -56,6 +56,7 @@
 #include "progress_circle/progress_circle.h"
 #include "mledit/mledit.h"
 #include "mledit/line_number.h"
+#include "keyboard/candidates.h"
 #include "image_value/image_value.h"
 #include "image_animation/image_animation.h"
 #include "guage/guage.h"
@@ -200,6 +201,8 @@ static int wrap_mledit_t_get_prop(lua_State* L);
 static int wrap_mledit_t_set_prop(lua_State* L);
 static int wrap_line_number_t_get_prop(lua_State* L);
 static int wrap_line_number_t_set_prop(lua_State* L);
+static int wrap_candidates_t_get_prop(lua_State* L);
+static int wrap_candidates_t_set_prop(lua_State* L);
 static int wrap_image_value_t_get_prop(lua_State* L);
 static int wrap_image_value_t_set_prop(lua_State* L);
 static int wrap_image_animation_t_get_prop(lua_State* L);
@@ -2309,9 +2312,21 @@ static int wrap_image_manager_get_bitmap(lua_State* L) {
   return 1;
 }
 
+static int wrap_image_manager_preload(lua_State* L) {
+  ret_t ret = 0;
+  image_manager_t* imm = (image_manager_t*)tk_checkudata(L, 1, "image_manager_t");
+  char* name = (char*)luaL_checkstring(L, 2);
+  ret = (ret_t)image_manager_preload(imm, name);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 
 static const struct luaL_Reg image_manager_t_member_funcs[] = {
   {"get_bitmap", wrap_image_manager_get_bitmap},
+  {"preload", wrap_image_manager_preload},
   {NULL, NULL}
 };
 
@@ -11020,6 +11035,63 @@ static void line_number_t_init(lua_State* L) {
   luaL_openlib(L, "LineNumber", static_funcs, 0);
   lua_settop(L, 0);
 }
+static int wrap_candidates_cast(lua_State* L) {
+  widget_t* ret = NULL;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  ret = (widget_t*)candidates_cast(widget);
+
+  return tk_newuserdata(L, (void*)ret, "/candidates_t/widget_t", "awtk.candidates_t");
+}
+
+
+static const struct luaL_Reg candidates_t_member_funcs[] = {
+  {NULL, NULL}
+};
+
+static int wrap_candidates_t_set_prop(lua_State* L) {
+  candidates_t* obj = (candidates_t*)tk_checkudata(L, 1, "candidates_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  (void)obj;
+  (void)name;
+    return wrap_widget_t_set_prop(L);
+}
+
+static int wrap_candidates_t_get_prop(lua_State* L) {
+  candidates_t* obj = (candidates_t*)tk_checkudata(L, 1, "candidates_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  const luaL_Reg* ret = find_member(candidates_t_member_funcs, name);
+
+  (void)obj;
+  (void)name;
+  if(ret) {
+    lua_pushcfunction(L, ret->func);
+    return 1;
+  }
+  else {
+    return wrap_widget_t_get_prop(L);
+  }
+}
+
+static void candidates_t_init(lua_State* L) {
+  static const struct luaL_Reg static_funcs[] = {
+    {"cast", wrap_candidates_cast},
+    {NULL, NULL}
+  };
+
+  static const struct luaL_Reg index_funcs[] = {
+    {"__index", wrap_candidates_t_get_prop},
+    {"__newindex", wrap_candidates_t_set_prop},
+    {NULL, NULL}
+  };
+
+  luaL_newmetatable(L, "awtk.candidates_t");
+  lua_pushstring(L, "__index");
+  lua_pushvalue(L, -2);
+  lua_settable(L, -3);
+  luaL_openlib(L, NULL, index_funcs, 0);
+  luaL_openlib(L, "Candidates", static_funcs, 0);
+  lua_settop(L, 0);
+}
 static int wrap_image_value_create(lua_State* L) {
   widget_t* ret = NULL;
   widget_t* parent = (widget_t*)tk_checkudata(L, 1, "widget_t");
@@ -17285,6 +17357,7 @@ void luaL_openawtk(lua_State* L) {
   progress_circle_t_init(L);
   mledit_t_init(L);
   line_number_t_init(L);
+  candidates_t_init(L);
   image_value_t_init(L);
   image_animation_t_init(L);
   guage_t_init(L);

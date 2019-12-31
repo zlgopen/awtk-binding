@@ -1278,6 +1278,15 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t GetBitmap(char* name, TBitmap& image) ;
+
+  /**
+   * 预加载指定的图片。
+   * 
+   * @param name 图片名称。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Preload(char* name) ;
 };
 
 
@@ -6558,6 +6567,58 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t SetYoffset(int32_t yoffset) ;
+};
+
+
+/**
+ * 输入法候选字词控件。
+ *
+ *如果希望启用用数字选择对应的候选字，请设置属性grab_keys="true"。如：
+ *
+ *```xml
+ *<candidates x="0" y="0" w="100%" h="30" grab_keys="true"/>
+ *```
+ *
+ *>相关文件： assets/default/raw/ui/kb_default.xml
+ *
+ *如果希望通过左右键切换不同的候选字，除了设置属性grab_keys="true"，还需要设置按钮的focused状态的style。
+ *
+ *```xml
+ *<style name="candidates" text_color="black">
+ *<normal  />
+ *<pressed    bg_color="#c0c0c0" border_color="#a0a0a0"/>
+ *<over       bg_color="#e0e0e0" border_color="#a0a0a0"/>
+ *<focused    border_color="#a0a0a0"/>
+ *</style>
+ *```
+ *
+ *>相关文件：assets/default/raw/styles/keyboard.xml
+ *
+ */
+class TCandidates : public TWidget { 
+public:
+  TCandidates(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TCandidates(const candidates_t* nativeObj) : TWidget((widget_t*)nativeObj) {
+  }
+
+  static TCandidates Cast(widget_t* nativeObj) {
+    return TCandidates(nativeObj);
+  }
+
+  static TCandidates Cast(const widget_t* nativeObj) {
+    return TCandidates((widget_t*)nativeObj);
+  }
+
+  static TCandidates Cast(TWidget& obj) {
+    return TCandidates(obj.nativeObj);
+  }
+
+  static TCandidates Cast(const TWidget& obj) {
+    return TCandidates(obj.nativeObj);
+  }
+
 };
 
 

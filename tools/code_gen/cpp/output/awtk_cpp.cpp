@@ -443,6 +443,10 @@
    return image_manager_get_bitmap(((image_manager_t*)(this->nativeObj)), name, ((bitmap_t*)(image.nativeObj)));
  }
 
+ ret_t TImageManager::Preload(char* name)  {
+   return image_manager_preload(((image_manager_t*)(this->nativeObj)), name);
+ }
+
  ret_t TInputMethod::CommitText(char* text)  {
    return input_method_commit_text(((input_method_t*)(this->nativeObj)), text);
  }

@@ -1936,6 +1936,19 @@ int awtk_TImageManager_image_manager_get_bitmap(Runtime *runtime, JClass *clazz)
   return 0;
 }
 
+int awtk_TImageManager_image_manager_preload(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  image_manager_t* imm = (image_manager_t*)jni_ctx_get_object(&ctx);
+  char* name = (char*)jni_ctx_get_str(&ctx);
+  ret = (ret_t)image_manager_preload(imm, name);
+  TKMEM_FREE(name);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TInputType_INPUT_TEXT(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -11930,6 +11943,17 @@ int awtk_TLineNumber_line_number_cast(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TCandidates_candidates_cast(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  ret = (widget_t*)candidates_cast(widget);
+  jni_ctx_return_object(&ctx, (void*)(ret));
+
+  return 0;
+}
+
 int awtk_TImageValue_image_value_create(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -16207,6 +16231,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TIdle",  "idle_remove",  "(I)I",  awtk_TIdle_idle_remove},
 {"awtk/TImageManager",  "image_manager",  "()J",  awtk_TImageManager_image_manager},
 {"awtk/TImageManager",  "image_manager_get_bitmap",  "(JLjava/lang/String;J)I",  awtk_TImageManager_image_manager_get_bitmap},
+{"awtk/TImageManager",  "image_manager_preload",  "(JLjava/lang/String;)I",  awtk_TImageManager_image_manager_preload},
 {"awtk/TInputType",  "INPUT_TEXT",  "()I",  awtk_TInputType_INPUT_TEXT},
 {"awtk/TInputType",  "INPUT_INT",  "()I",  awtk_TInputType_INPUT_INT},
 {"awtk/TInputType",  "INPUT_UINT",  "()I",  awtk_TInputType_INPUT_UINT},
@@ -17264,6 +17289,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TLineNumber",  "line_number_set_line_height",  "(JI)I",  awtk_TLineNumber_line_number_set_line_height},
 {"awtk/TLineNumber",  "line_number_set_yoffset",  "(JI)I",  awtk_TLineNumber_line_number_set_yoffset},
 {"awtk/TLineNumber",  "line_number_cast",  "(J)J",  awtk_TLineNumber_line_number_cast},
+{"awtk/TCandidates",  "candidates_cast",  "(J)J",  awtk_TCandidates_candidates_cast},
 {"awtk/TImageValue",  "image_value_create",  "(JIIII)J",  awtk_TImageValue_image_value_create},
 {"awtk/TImageValue",  "image_value_set_image",  "(JLjava/lang/String;)I",  awtk_TImageValue_image_value_set_image},
 {"awtk/TImageValue",  "image_value_set_format",  "(JLjava/lang/String;)I",  awtk_TImageValue_image_value_set_format},
