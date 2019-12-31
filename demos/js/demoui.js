@@ -1,8 +1,8 @@
 
 var sPreloadRes = [
-  {type : TAssetType.IMAGE, name : "bg800x480"},
+  {type : TAssetType.IMAGE, name : "1"},
+  {type : TAssetType.IMAGE, name : "2"},
   {type : TAssetType.IMAGE, name : "earth"},
-  {type : TAssetType.IMAGE, name : "dialogTitle"},
   {type : TAssetType.IMAGE, name : "rgb"},
   {type : TAssetType.IMAGE, name : "rgba"}
 ]
@@ -118,7 +118,6 @@ function showPreloadResWindow() {
   var status = win.lookup('status', true);
   var total = sPreloadRes.length;
   var finish = 0;
-  var bitmap = TBitmap.create();
 
   status.setText('ready');
   bar.setValue(10);
@@ -127,7 +126,6 @@ function showPreloadResWindow() {
     if(finish == total) {
       console.log('done')
       openWindow('main', win);
-      bitmap = null;
 
       return TRet.REMOVE;
     } else {
@@ -135,7 +133,7 @@ function showPreloadResWindow() {
       var name = sPreloadRes[finish].name;
 
       if(type == TAssetType.IMAGE) {
-        TImageManager.instance().getBitmap(name, bitmap);
+        TImageManager.instance().preload(name);
       }
 
       finish = finish + 1;
