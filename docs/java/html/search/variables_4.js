@@ -10,6 +10,7 @@ var searchData=
   ['dialog',['DIALOG',['../enumawtk_1_1_t_widget_type.html#af3f05cfc2650c4bf1eb04facdc2092d5',1,'awtk::TWidgetType']]],
   ['dialog_5fclient',['DIALOG_CLIENT',['../enumawtk_1_1_t_widget_type.html#ab66193ea01c47d48f96fd194ecf1a7d2',1,'awtk::TWidgetType']]],
   ['dialog_5ftitle',['DIALOG_TITLE',['../enumawtk_1_1_t_widget_type.html#af806a7e1f284b6d6264fab147cc75c0e',1,'awtk::TWidgetType']]],
+  ['dirty_5frect_5ftolerance',['DIRTY_RECT_TOLERANCE',['../enumawtk_1_1_t_widget_prop.html#ab5df2becd43f367ea6439e223db32dd7',1,'awtk::TWidgetProp']]],
   ['dnd',['DND',['../enumawtk_1_1_t_widget_type.html#a37e1439a14c98e75e1d02fdebe861003',1,'awtk::TWidgetType']]],
   ['done',['DONE',['../enumawtk_1_1_t_ret.html#aa80e2d94d9d19726e9ab1f33244d6476',1,'awtk::TRet']]],
   ['double',['DOUBLE',['../enumawtk_1_1_t_value_type.html#aadf61a5d7ca766f641593f375af00411',1,'awtk::TValueType']]],

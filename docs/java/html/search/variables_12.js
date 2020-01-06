@@ -63,6 +63,7 @@ var searchData=
   ['stroke_5fdot',['STROKE_DOT',['../enumawtk_1_1_t_indicator_default_paint.html#af488b3494eb8622d6fd6477098848260',1,'awtk::TIndicatorDefaultPaint']]],
   ['stroke_5frect',['STROKE_RECT',['../enumawtk_1_1_t_indicator_default_paint.html#a97cc9d3a93d2f9b9eda9f7f699039dfd',1,'awtk::TIndicatorDefaultPaint']]],
   ['style',['STYLE',['../enumawtk_1_1_t_asset_type.html#a02f075d0e484563ff534b8f74feffdfc',1,'awtk.TAssetType.STYLE()'],['../enumawtk_1_1_t_widget_prop.html#a94f092aec9d222ab5bd98d1dbb137a56',1,'awtk.TWidgetProp.STYLE()']]],
+  ['suspend',['SUSPEND',['../enumawtk_1_1_t_window_stage.html#a9ed381f79b12c3cc484f2331fe4eb768',1,'awtk::TWindowStage']]],
   ['system_5fbar',['SYSTEM_BAR',['../enumawtk_1_1_t_widget_type.html#a01a3e1f331504cb34f8bb54e2aff2f8e',1,'awtk::TWidgetType']]],
   ['system_5fbar_5fbottom',['SYSTEM_BAR_BOTTOM',['../enumawtk_1_1_t_widget_type.html#a9a3353e9f5b7df43ae3bf566c295fb51',1,'awtk::TWidgetType']]]
 ];

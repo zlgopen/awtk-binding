@@ -511,6 +511,7 @@ declare function WIDGET_PROP_X();
 declare function WIDGET_PROP_Y();
 declare function WIDGET_PROP_W();
 declare function WIDGET_PROP_H();
+declare function WIDGET_PROP_DIRTY_RECT_TOLERANCE();
 declare function WIDGET_PROP_CANVAS();
 declare function WIDGET_PROP_LOCALIZE_OPTIONS();
 declare function WIDGET_PROP_NATIVE_WINDOW();
@@ -690,6 +691,7 @@ declare function WINDOW_STAGE_NONE();
 declare function WINDOW_STAGE_CREATED();
 declare function WINDOW_STAGE_OPENED();
 declare function WINDOW_STAGE_CLOSED();
+declare function WINDOW_STAGE_SUSPEND();
 declare function WINDOW_CLOSABLE_YES();
 declare function WINDOW_CLOSABLE_NO();
 declare function WINDOW_CLOSABLE_CONFIRM();
@@ -745,6 +747,7 @@ declare function widget_set_focused(widget : any, focused : boolean) : TRet;
 declare function widget_set_focusable(widget : any, focusable : boolean) : TRet;
 declare function widget_set_state(widget : any, state : string) : TRet;
 declare function widget_set_opacity(widget : any, opacity : number) : TRet;
+declare function widget_set_dirty_rect_tolerance(widget : any, dirty_rect_tolerance : number) : TRet;
 declare function widget_destroy_children(widget : any) : TRet;
 declare function widget_add_child(widget : any, child : any) : TRet;
 declare function widget_remove_child(widget : any, child : any) : TRet;
@@ -782,6 +785,7 @@ declare function widget_is_system_bar(widget : any) : boolean;
 declare function widget_is_normal_window(widget : any) : boolean;
 declare function widget_is_dialog(widget : any) : boolean;
 declare function widget_is_popup(widget : any) : boolean;
+declare function widget_is_opened_popup(widget : any) : boolean;
 declare function widget_layout(widget : any) : TRet;
 declare function widget_set_self_layout(widget : any, params : string) : TRet;
 declare function widget_set_children_layout(widget : any, params : string) : TRet;
@@ -808,6 +812,7 @@ declare function widget_t_set_prop_focusable(nativeObj : any, v : boolean)
 declare function widget_t_get_prop_with_focus_state(nativeObj : any) : boolean;
 declare function widget_t_set_prop_with_focus_state(nativeObj : any, v : boolean)
 declare function widget_t_get_prop_floating(nativeObj : any) : boolean;
+declare function widget_t_get_prop_dirty_rect_tolerance(nativeObj : any) : number;
 declare function widget_t_get_prop_parent(nativeObj : any) : any;
 declare function RET_OK();
 declare function RET_OOM();
@@ -849,6 +854,9 @@ declare function IMAGE_DRAW_PATCH3_X();
 declare function IMAGE_DRAW_PATCH3_Y();
 declare function IMAGE_DRAW_PATCH3_X_SCALE_Y();
 declare function IMAGE_DRAW_PATCH3_Y_SCALE_X();
+declare function IMAGE_DRAW_REPEAT9();
+declare function IMAGE_DRAW_REPEAT3_X();
+declare function IMAGE_DRAW_REPEAT3_Y();
 declare function canvas_get_width(c : any) : number;
 declare function canvas_get_height(c : any) : number;
 declare function canvas_get_clip_rect(c : any, r : any) : TRet;
@@ -1194,6 +1202,7 @@ declare function list_view_set_item_height(widget : any, item_height : number) :
 declare function list_view_set_default_item_height(widget : any, default_item_height : number) : TRet;
 declare function list_view_set_auto_hide_scroll_bar(widget : any, auto_hide_scroll_bar : boolean) : TRet;
 declare function list_view_cast(widget : any) : any;
+declare function list_view_reinit(widget : any) : TRet;
 declare function list_view_t_get_prop_item_height(nativeObj : any) : number;
 declare function list_view_t_get_prop_default_item_height(nativeObj : any) : number;
 declare function list_view_t_get_prop_auto_hide_scroll_bar(nativeObj : any) : boolean;
@@ -1314,8 +1323,8 @@ declare function guage_pointer_set_image(widget : any, image : string) : TRet;
 declare function guage_pointer_set_anchor(widget : any, anchor_x : string, anchor_y : string) : TRet;
 declare function guage_pointer_t_get_prop_angle(nativeObj : any) : number;
 declare function guage_pointer_t_get_prop_image(nativeObj : any) : string;
-declare function guage_pointer_t_get_prop_anchor_x(nativeObj : any) : number;
-declare function guage_pointer_t_get_prop_anchor_y(nativeObj : any) : number;
+declare function guage_pointer_t_get_prop_anchor_x(nativeObj : any) : string;
+declare function guage_pointer_t_get_prop_anchor_y(nativeObj : any) : string;
 declare function draggable_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function draggable_cast(widget : any) : any;
 declare function draggable_set_top(widget : any, top : number) : TRet;
@@ -1345,12 +1354,14 @@ declare function window_manager_get_prev_window(widget : any) : any;
 declare function window_manager_get_pointer_x(widget : any) : number;
 declare function window_manager_get_pointer_y(widget : any) : number;
 declare function window_manager_get_pointer_pressed(widget : any) : boolean;
+declare function window_manager_is_animating(widget : any) : boolean;
 declare function window_manager_set_show_fps(widget : any, show_fps : boolean) : TRet;
 declare function window_manager_set_screen_saver_time(widget : any, screen_saver_time : number) : TRet;
 declare function window_manager_set_cursor(widget : any, cursor : string) : TRet;
 declare function window_manager_back(widget : any) : TRet;
 declare function window_manager_back_to_home(widget : any) : TRet;
 declare function window_manager_back_to(widget : any, target : string) : TRet;
+declare function window_manager_resize(widget : any, w : number, h : number) : TRet;
 declare function window_base_cast(widget : any) : any;
 declare function window_base_t_get_prop_theme(nativeObj : any) : string;
 declare function window_base_t_get_prop_closable(nativeObj : any) : TWindowClosable;
@@ -6208,6 +6219,12 @@ export enum TWidgetProp {
  H = WIDGET_PROP_H(),
 
   /**
+   * 脏矩形超出控件本身大小的最大范围。
+   *
+   */
+ DIRTY_RECT_TOLERANCE = WIDGET_PROP_DIRTY_RECT_TOLERANCE(),
+
+  /**
    * Canvas。
    *
    */
@@ -7286,7 +7303,7 @@ export enum TWindowStage {
  CREATED = WINDOW_STAGE_CREATED(),
 
   /**
-   * 窗口已经打开(窗口打开动画完成后，处于该状态，直到窗口被关闭)
+   * 窗口已经打开(窗口打开动画完成后)
    *
    */
  OPENED = WINDOW_STAGE_OPENED(),
@@ -7296,6 +7313,12 @@ export enum TWindowStage {
    *
    */
  CLOSED = WINDOW_STAGE_CLOSED(),
+
+  /**
+   * 窗口挂起状态。
+   *
+   */
+ SUSPEND = WINDOW_STAGE_SUSPEND(),
 };
 
 
@@ -7896,6 +7919,18 @@ export class TWidget {
 
 
   /**
+   * 设置控件脏矩形超出控件本身大小的最大范围(一般不用指定)。
+   * 
+   * @param dirty_rect_tolerance 控件脏脏矩形超出控件本身大小的最大范。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setDirtyRectTolerance(dirty_rect_tolerance : number) : TRet  {
+    return widget_set_dirty_rect_tolerance(this != null ? (this.nativeObj || this) : null, dirty_rect_tolerance);
+ }
+
+
+  /**
    * 销毁全部子控件。
    * 
    *
@@ -8344,6 +8379,17 @@ export class TWidget {
 
 
   /**
+   * 检查控件弹出窗口控件是否已经打开了。
+   * 
+   *
+   * @returns 返回FALSE表示不是，否则表示是。
+   */
+ isOpenedPopup() : boolean  {
+    return widget_is_opened_popup(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
    * 布局当前控件及子控件。
    * 
    *
@@ -8605,6 +8651,21 @@ export class TWidget {
 
  set floating(v : boolean) {
    this.setFloating(v);
+ }
+
+
+  /**
+   * 脏矩形超出控件本身大小的最大范围(一般不用指定)。
+   *
+   *> 如果 border 太粗或 offset 太大等原因，导致脏矩形超出控件本身大小太多（大于缺省值）时，才需要指定。
+   *
+   */
+ get dirtyRectTolerance() : number {
+   return widget_t_get_prop_dirty_rect_tolerance(this.nativeObj);
+ }
+
+ set dirtyRectTolerance(v : number) {
+   this.setDirtyRectTolerance(v);
  }
 
 
@@ -8904,6 +8965,33 @@ export enum TImageDrawType {
    *
    */
  PATCH3_Y_SCALE_X = IMAGE_DRAW_PATCH3_Y_SCALE_X(),
+
+  /**
+   * 平铺9宫格显示。
+   *将图片分成4个角和5块平铺块，4个角按原大小显示在目标矩形的4个角，其余5块会平铺对应的目标区域。
+   *切割方法为（如下图）：
+   *如果图片宽度为奇数，则中间一块为一列数据，如果图片宽度为偶数，则中间一块为二列数据，其他数据分为左右块
+   *如果图片高度为奇数，则中间一块为一行数据，如果图片高度为偶数，则中间一块为二行数据，其他数据分为上下块
+   *中间一块数据根据上面两条规则组成4中情况，分别是一列一行数据，一列两行数据，两列一行数据和两行两列数据
+   *
+   */
+ REPEAT9 = IMAGE_DRAW_REPEAT9(),
+
+  /**
+   * 水平方向3宫格显示，垂直方向居中显示。
+   *将图片在水平方向上分成左右相等两块和中间一块，如果图片宽度为奇数，则中间一块为一列数据，如果图片宽度为偶数，则中间一块为二列数据，其他数据分为左右块。
+   *左右两块按原大小显示在目标矩形的左右，中间一列像素点平铺显示在目标区域中间剩余部分。
+   *
+   */
+ REPEAT3_X = IMAGE_DRAW_REPEAT3_X(),
+
+  /**
+   * 垂直方向3宫格显示，水平方向居中显示。
+   *将图片在垂直方向上分成上下相等两块和中间一块，如果图片高度为奇数，则中间一块为一行数据，如果图片高度为偶数，则中间一块为二行数据，其他数据分为上下块
+   *上下两块按原大小显示在目标矩形的上下，中间一块平铺显示在目标区域中间剩余部分。
+   *
+   */
+ REPEAT3_Y = IMAGE_DRAW_REPEAT3_Y(),
 };
 
 
@@ -12847,6 +12935,17 @@ export class TListView extends TWidget {
 
 
   /**
+   * list_view重新初始化。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ reinit() : TRet  {
+    return list_view_reinit(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
    * 列表项的高度。如果 item_height 0，所有列表项使用固定高度，否则使用列表项自身的高度。
    *
    */
@@ -14823,19 +14922,19 @@ export class TGuagePointer extends TWidget {
 
 
   /**
-   * 旋转锚点x坐标。
+   * 图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
    *
    */
- get anchorX() : number {
+ get anchorX() : string {
    return guage_pointer_t_get_prop_anchor_x(this.nativeObj);
  }
 
 
   /**
-   * 旋转锚点y坐标。
+   * 图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
    *
    */
- get anchorY() : number {
+ get anchorY() : string {
    return guage_pointer_t_get_prop_anchor_y(this.nativeObj);
  }
 
@@ -15296,6 +15395,17 @@ export class TWindowManager extends TWidget {
 
 
   /**
+   * 获取当前窗口动画是否正在播放。
+   * 
+   *
+   * @returns 返回TRUE表示正在播放，FALSE表示没有播放。
+   */
+ isAnimating() : boolean  {
+    return window_manager_is_animating(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
    * 设置是否显示FPS。
    * 
    * @param show_fps 是否显示FPS。
@@ -15368,6 +15478,19 @@ export class TWindowManager extends TWidget {
    */
  backTo(target : string) : TRet  {
     return window_manager_back_to(this != null ? (this.nativeObj || this) : null, target);
+ }
+
+
+  /**
+   * 调整原生窗口的大小。
+   * 
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ resize(w : number, h : number) : TRet  {
+    return window_manager_resize(this != null ? (this.nativeObj || this) : null, w, h);
  }
 
 };
@@ -20411,9 +20534,29 @@ export class TWindow extends TWindowBase {
  *| tab            | tab键           |
  *| space          | 空格键          |
  *| close          | 关闭软键盘      |
- *| 前缀key:       | 键值            |
- *| 前缀page:      | 切换到页面      |
+ *| 前缀key:        | 键值           |
+ *| 前缀hard_key:   | 模拟物理键盘    |
+ *| 前缀page:       | 切换到页面      |
  *
+ *示例：
+ *
+ ** 按键"a"，提交输入法处理。
+ *
+ *```xml
+ *<button repeat="300" name="key:a" text="a"/>
+ *```
+ *
+ ** 字符"a"，直接提交到编辑器。
+ *
+ *```xml
+ *<button repeat="300" name="a" text="a"/>
+ *```
+ *
+ ** 模拟物理键盘数字"1"，触发key down/up事件（可以用来选择候选字）。
+ *
+ *```xml
+ *<button repeat="300" name="hard_key:1" text="1"/>
+ *```
  *
  *> 更多用法请参考：
  *[kb_default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/kb_default.xml)

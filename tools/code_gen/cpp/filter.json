@@ -5844,6 +5844,10 @@
         "name": "WIDGET_PROP_H"
       },
       {
+        "desc": "脏矩形超出控件本身大小的最大范围。",
+        "name": "WIDGET_PROP_DIRTY_RECT_TOLERANCE"
+      },
+      {
         "desc": "Canvas。",
         "name": "WIDGET_PROP_CANVAS"
       },
@@ -6580,12 +6584,16 @@
         "name": "WINDOW_STAGE_CREATED"
       },
       {
-        "desc": "窗口已经打开(窗口打开动画完成后，处于该状态，直到窗口被关闭)",
+        "desc": "窗口已经打开(窗口打开动画完成后)",
         "name": "WINDOW_STAGE_OPENED"
       },
       {
         "desc": "窗口已关闭。",
         "name": "WINDOW_STAGE_CLOSED"
+      },
+      {
+        "desc": "窗口挂起状态。",
+        "name": "WINDOW_STAGE_SUSPEND"
       }
     ],
     "header": "base/widget_consts.h",
@@ -7472,6 +7480,29 @@
             "type": "widget_t*",
             "name": "widget",
             "desc": "控件对象。"
+          },
+          {
+            "type": "uint16_t",
+            "name": "dirty_rect_tolerance",
+            "desc": "控件脏脏矩形超出控件本身大小的最大范。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置控件脏矩形超出控件本身大小的最大范围(一般不用指定)。",
+        "name": "widget_set_dirty_rect_tolerance",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
           }
         ],
         "annotation": {
@@ -8319,6 +8350,24 @@
         "annotation": {
           "scriptable": true
         },
+        "desc": "检查控件弹出窗口控件是否已经打开了。",
+        "name": "widget_is_opened_popup",
+        "return": {
+          "type": "bool_t",
+          "desc": "返回FALSE表示不是，否则表示是。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
         "desc": "布局当前控件及子控件。",
         "name": "widget_layout",
         "return": {
@@ -8808,6 +8857,16 @@
         }
       },
       {
+        "name": "dirty_rect_tolerance",
+        "desc": "脏矩形超出控件本身大小的最大范围(一般不用指定)。\n\n> 如果 border 太粗或 offset 太大等原因，导致脏矩形超出控件本身大小太多（大于缺省值）时，才需要指定。",
+        "type": "uint16_t",
+        "annotation": {
+          "readable": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
         "name": "parent",
         "desc": "父控件",
         "type": "widget_t*",
@@ -9047,6 +9106,18 @@
       {
         "desc": "垂直方向3宫格显示，水平方向缩放显示。\n将图片在垂直方向上分成等大小的3块，上下两块按原大小显示在目标矩形的上下，中间一块缩放显示在目标区域中间剩余部分。",
         "name": "IMAGE_DRAW_PATCH3_Y_SCALE_X"
+      },
+      {
+        "desc": "平铺9宫格显示。\n将图片分成4个角和5块平铺块，4个角按原大小显示在目标矩形的4个角，其余5块会平铺对应的目标区域。\n切割方法为（如下图）：\n如果图片宽度为奇数，则中间一块为一列数据，如果图片宽度为偶数，则中间一块为二列数据，其他数据分为左右块\n如果图片高度为奇数，则中间一块为一行数据，如果图片高度为偶数，则中间一块为二行数据，其他数据分为上下块\n中间一块数据根据上面两条规则组成4中情况，分别是一列一行数据，一列两行数据，两列一行数据和两行两列数据",
+        "name": "IMAGE_DRAW_REPEAT9"
+      },
+      {
+        "desc": "水平方向3宫格显示，垂直方向居中显示。\n将图片在水平方向上分成左右相等两块和中间一块，如果图片宽度为奇数，则中间一块为一列数据，如果图片宽度为偶数，则中间一块为二列数据，其他数据分为左右块。\n左右两块按原大小显示在目标矩形的左右，中间一列像素点平铺显示在目标区域中间剩余部分。",
+        "name": "IMAGE_DRAW_REPEAT3_X"
+      },
+      {
+        "desc": "垂直方向3宫格显示，水平方向居中显示。\n将图片在垂直方向上分成上下相等两块和中间一块，如果图片高度为奇数，则中间一块为一行数据，如果图片高度为偶数，则中间一块为二行数据，其他数据分为上下块\n上下两块按原大小显示在目标矩形的上下，中间一块平铺显示在目标区域中间剩余部分。",
+        "name": "IMAGE_DRAW_REPEAT3_Y"
       }
     ],
     "header": "base/bitmap.h",
@@ -14143,6 +14214,24 @@
           "type": "widget_t*",
           "desc": "list_view对象。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "list_view对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "list_view重新初始化。",
+        "name": "list_view_reinit",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
       }
     ],
     "events": [],
@@ -16796,8 +16885,8 @@
       },
       {
         "name": "anchor_x",
-        "desc": "旋转锚点x坐标。",
-        "type": "float_t",
+        "desc": "图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)",
+        "type": "char*",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -16809,8 +16898,8 @@
       },
       {
         "name": "anchor_y",
-        "desc": "旋转锚点y坐标。",
-        "type": "float_t",
+        "desc": "图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)",
+        "type": "char*",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -17470,6 +17559,24 @@
             "type": "widget_t*",
             "name": "widget",
             "desc": "窗口管理器对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取当前窗口动画是否正在播放。",
+        "name": "window_manager_is_animating",
+        "return": {
+          "type": "bool_t",
+          "desc": "返回TRUE表示正在播放，FALSE表示没有播放。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "窗口管理器对象。"
           },
           {
             "type": "bool_t",
@@ -17587,6 +17694,34 @@
         },
         "desc": "回到指定的窗口，关闭之上的全部窗口。\n\n> 如果顶层窗口时模态对话框，用DIALOG\\_QUIT\\_NONE调用dialog\\_quit。",
         "name": "window_manager_back_to",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "窗口管理器对象。"
+          },
+          {
+            "type": "wh_t",
+            "name": "w",
+            "desc": "宽度"
+          },
+          {
+            "type": "wh_t",
+            "name": "h",
+            "desc": "高度"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "调整原生窗口的大小。",
+        "name": "window_manager_resize",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -23949,7 +24084,7 @@
     "events": [],
     "properties": [],
     "header": "keyboard/keyboard.h",
-    "desc": "软键盘。\n\n软键盘是一个特殊的窗口，由编辑器通过输入法自动打开和关闭。\n\n这里介绍一下定制软键盘的方法：\n\n编辑器输入类型和软键盘UI资源文件的对应关系:\n\n| 输入类型       | 软键盘UI资源文件|\n|----------------|:---------------:|\n| INPUT\\_PHONE    | kb\\_phone.xml    |\n| INPUT\\_INT      | kb\\_int.xml      |\n| INPUT\\_FLOAT    | kb\\_float.xml    |\n| INPUT\\_UINT     | kb\\_uint.xml     |\n| INPUT\\_UFLOAT   | kb\\_ufloat.xml   |\n| INPUT\\_HEX      | kb\\_hex.xml      |\n| INPUT\\_EMAIL    | kb\\_ascii.xml    |\n| INPUT\\_PASSWORD | kb\\_ascii.xml    |\n| INPUT\\_CUSTOM   | 使用自定义的键盘 |\n| 其它            | kb\\_default.xml  |\n\nkeyboard中按钮子控件的名称有些特殊要求：\n\n|  名称          | 功能            |\n|----------------|:---------------:|\n| return         | 回车键          |\n| action         | 定制按钮        |\n| backspace      | 删除键          |\n| tab            | tab键           |\n| space          | 空格键          |\n| close          | 关闭软键盘      |\n| 前缀key:       | 键值            |\n| 前缀page:      | 切换到页面      |\n\n\n> 更多用法请参考：\n[kb_default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/kb_default.xml)",
+    "desc": "软键盘。\n\n软键盘是一个特殊的窗口，由编辑器通过输入法自动打开和关闭。\n\n这里介绍一下定制软键盘的方法：\n\n编辑器输入类型和软键盘UI资源文件的对应关系:\n\n| 输入类型       | 软键盘UI资源文件|\n|----------------|:---------------:|\n| INPUT\\_PHONE    | kb\\_phone.xml    |\n| INPUT\\_INT      | kb\\_int.xml      |\n| INPUT\\_FLOAT    | kb\\_float.xml    |\n| INPUT\\_UINT     | kb\\_uint.xml     |\n| INPUT\\_UFLOAT   | kb\\_ufloat.xml   |\n| INPUT\\_HEX      | kb\\_hex.xml      |\n| INPUT\\_EMAIL    | kb\\_ascii.xml    |\n| INPUT\\_PASSWORD | kb\\_ascii.xml    |\n| INPUT\\_CUSTOM   | 使用自定义的键盘 |\n| 其它            | kb\\_default.xml  |\n\nkeyboard中按钮子控件的名称有些特殊要求：\n\n|  名称          | 功能            |\n|----------------|:---------------:|\n| return         | 回车键          |\n| action         | 定制按钮        |\n| backspace      | 删除键          |\n| tab            | tab键           |\n| space          | 空格键          |\n| close          | 关闭软键盘      |\n| 前缀key:        | 键值           |\n| 前缀hard_key:   | 模拟物理键盘    |\n| 前缀page:       | 切换到页面      |\n\n示例：\n\n* 按键\"a\"，提交输入法处理。\n\n```xml\n<button repeat=\"300\" name=\"key:a\" text=\"a\"/>\n```\n\n* 字符\"a\"，直接提交到编辑器。\n\n```xml\n<button repeat=\"300\" name=\"a\" text=\"a\"/>\n```\n\n* 模拟物理键盘数字\"1\"，触发key down/up事件（可以用来选择候选字）。\n\n```xml\n<button repeat=\"300\" name=\"hard_key:1\" text=\"1\"/>\n```\n\n> 更多用法请参考：\n[kb_default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/kb_default.xml)",
     "name": "keyboard_t",
     "parent": "window_base_t",
     "annotation": {

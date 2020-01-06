@@ -96,6 +96,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a5b6bee6e8e514a98ef962c80f456c9b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf028121f6d36249463073088b282667"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_window_manager.html#aaf028121f6d36249463073088b282667">getPointerPressed</a> ()</td></tr>
 <tr class="separator:aaf028121f6d36249463073088b282667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4203c24a05cb4dc4dda5ef4aea45565a"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_window_manager.html#a4203c24a05cb4dc4dda5ef4aea45565a">isAnimating</a> ()</td></tr>
+<tr class="separator:a4203c24a05cb4dc4dda5ef4aea45565a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a255e08dc5e0a8a7d7dac1b7365f1e6b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_window_manager.html#a255e08dc5e0a8a7d7dac1b7365f1e6b1">setShowFps</a> (boolean show_fps)</td></tr>
 <tr class="separator:a255e08dc5e0a8a7d7dac1b7365f1e6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e020645665b87ab939670d969056468"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_window_manager.html#a8e020645665b87ab939670d969056468">setScreenSaverTime</a> (int screen_saver_time)</td></tr>
@@ -108,6 +110,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a22221563ecc725783be951376422ce1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdcf4f12ce9531caf9316f51a48a9ea7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_window_manager.html#abdcf4f12ce9531caf9316f51a48a9ea7">backTo</a> (String target)</td></tr>
 <tr class="separator:abdcf4f12ce9531caf9316f51a48a9ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b743d5b8349c7071558c388ba13c994"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_window_manager.html#a1b743d5b8349c7071558c388ba13c994">resize</a> (int w, int h)</td></tr>
+<tr class="separator:a1b743d5b8349c7071558c388ba13c994"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -507,6 +511,78 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p>获取全局window_manager对象</p>
 <dl class="section return"><dt>返回</dt><dd>对象。 </dd></dl>
+
+</div>
+</div>
+<a id="a4203c24a05cb4dc4dda5ef4aea45565a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4203c24a05cb4dc4dda5ef4aea45565a">&#9670;&nbsp;</a></span>isAnimating()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean awtk.TWindowManager.isAnimating </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取当前窗口动画是否正在播放。</p>
+<dl class="section return"><dt>返回</dt><dd>返回TRUE表示正在播放，FALSE表示没有播放。 </dd></dl>
+
+</div>
+</div>
+<a id="a1b743d5b8349c7071558c388ba13c994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b743d5b8349c7071558c388ba13c994">&#9670;&nbsp;</a></span>resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TWindowManager.resize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>调整原生窗口的大小。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">w</td><td>宽度 </td></tr>
+    <tr><td class="paramname">h</td><td>高度</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>

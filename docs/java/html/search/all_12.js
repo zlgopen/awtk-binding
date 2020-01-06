@@ -222,7 +222,7 @@ var searchData=
   ['state_5fselected',['STATE_SELECTED',['../enumawtk_1_1_t_widget_state.html#affb462e5492b10d11754413a26506ca8',1,'awtk::TWidgetState']]],
   ['state_5funchecked',['STATE_UNCHECKED',['../enumawtk_1_1_t_widget_state.html#a358ce9c294beeb117f8d01f127eca1e2',1,'awtk::TWidgetState']]],
   ['step',['STEP',['../enumawtk_1_1_t_widget_prop.html#a2c7e8123b501f194976c8f5e6f5da767',1,'awtk::TWidgetProp']]],
-  ['stop',['STOP',['../enumawtk_1_1_t_ret.html#a9b1c4abaf38c0cc2ec5c0c0cbd79cf4e',1,'awtk.TRet.STOP()'],['../classawtk_1_1_t_hscroll_label.html#a86bcf7e983b1d8e852c09827aa52fe4d',1,'awtk.THscrollLabel.stop()'],['../classawtk_1_1_t_image_animation.html#a654282de4b45d0d5a10e03bd1100f97a',1,'awtk.TImageAnimation.stop()']]],
+  ['stop',['stop',['../classawtk_1_1_t_hscroll_label.html#a86bcf7e983b1d8e852c09827aa52fe4d',1,'awtk.THscrollLabel.stop()'],['../classawtk_1_1_t_image_animation.html#a654282de4b45d0d5a10e03bd1100f97a',1,'awtk.TImageAnimation.stop()'],['../enumawtk_1_1_t_ret.html#a9b1c4abaf38c0cc2ec5c0c0cbd79cf4e',1,'awtk.TRet.STOP()']]],
   ['str',['str',['../classawtk_1_1_t_value.html#ad36adbd7e5a6e542265204bebdea4741',1,'awtk::TValue']]],
   ['string',['STRING',['../enumawtk_1_1_t_value_type.html#a772d076d15198e5294cb64ee5ca5b5a1',1,'awtk::TValueType']]],
   ['strings',['STRINGS',['../enumawtk_1_1_t_asset_type.html#a247492f02dc23a1c86658c53741ce2cd',1,'awtk::TAssetType']]],
@@ -231,6 +231,7 @@ var searchData=
   ['stroke_5frect',['STROKE_RECT',['../enumawtk_1_1_t_indicator_default_paint.html#a97cc9d3a93d2f9b9eda9f7f699039dfd',1,'awtk::TIndicatorDefaultPaint']]],
   ['strokerect',['strokeRect',['../classawtk_1_1_t_canvas.html#a8d69197b88b37cb9105c190cb797f047',1,'awtk::TCanvas']]],
   ['style',['STYLE',['../enumawtk_1_1_t_asset_type.html#a02f075d0e484563ff534b8f74feffdfc',1,'awtk.TAssetType.STYLE()'],['../enumawtk_1_1_t_widget_prop.html#a94f092aec9d222ab5bd98d1dbb137a56',1,'awtk.TWidgetProp.STYLE()']]],
+  ['suspend',['SUSPEND',['../enumawtk_1_1_t_window_stage.html#a9ed381f79b12c3cc484f2331fe4eb768',1,'awtk::TWindowStage']]],
   ['system_5fbar',['SYSTEM_BAR',['../enumawtk_1_1_t_widget_type.html#a01a3e1f331504cb34f8bb54e2aff2f8e',1,'awtk::TWidgetType']]],
   ['system_5fbar_5fbottom',['SYSTEM_BAR_BOTTOM',['../enumawtk_1_1_t_widget_type.html#a9a3353e9f5b7df43ae3bf566c295fb51',1,'awtk::TWidgetType']]]
 ];

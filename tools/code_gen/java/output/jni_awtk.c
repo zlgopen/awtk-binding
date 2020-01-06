@@ -4693,6 +4693,14 @@ int awtk_TWidgetProp_WIDGET_PROP_H(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TWidgetProp_WIDGET_PROP_DIRTY_RECT_TOLERANCE(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_str(&ctx, (char*)(WIDGET_PROP_DIRTY_RECT_TOLERANCE));
+
+  return 0;
+}
+
 int awtk_TWidgetProp_WIDGET_PROP_CANVAS(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -6125,6 +6133,14 @@ int awtk_TWindowStage_WINDOW_STAGE_CLOSED(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TWindowStage_WINDOW_STAGE_SUSPEND(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(WINDOW_STAGE_SUSPEND));
+
+  return 0;
+}
+
 int awtk_TWindowClosable_WINDOW_CLOSABLE_YES(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -6709,6 +6725,18 @@ int awtk_TWidget_widget_set_opacity(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TWidget_widget_set_dirty_rect_tolerance(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  uint16_t dirty_rect_tolerance = (uint16_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)widget_set_dirty_rect_tolerance(widget, dirty_rect_tolerance);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TWidget_widget_destroy_children(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -7135,6 +7163,17 @@ int awtk_TWidget_widget_is_popup(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TWidget_widget_is_opened_popup(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  bool_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  ret = (bool_t)widget_is_opened_popup(widget);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TWidget_widget_layout(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -7405,6 +7444,15 @@ int awtk_TWidget_widget_t_get_prop_floating(Runtime *runtime, JClass *clazz) {
 
   widget_t* obj = (widget_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_int(&ctx, (int32_t)(obj->floating));
+
+  return 0;
+}
+
+int awtk_TWidget_widget_t_get_prop_dirty_rect_tolerance(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  widget_t* obj = (widget_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->dirty_rect_tolerance));
 
   return 0;
 }
@@ -7738,6 +7786,30 @@ int awtk_TImageDrawType_IMAGE_DRAW_PATCH3_Y_SCALE_X(Runtime *runtime, JClass *cl
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   jni_ctx_return_int(&ctx, (int32_t)(IMAGE_DRAW_PATCH3_Y_SCALE_X));
+
+  return 0;
+}
+
+int awtk_TImageDrawType_IMAGE_DRAW_REPEAT9(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(IMAGE_DRAW_REPEAT9));
+
+  return 0;
+}
+
+int awtk_TImageDrawType_IMAGE_DRAW_REPEAT3_X(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(IMAGE_DRAW_REPEAT3_X));
+
+  return 0;
+}
+
+int awtk_TImageDrawType_IMAGE_DRAW_REPEAT3_Y(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(IMAGE_DRAW_REPEAT3_Y));
 
   return 0;
 }
@@ -11136,6 +11208,17 @@ int awtk_TListView_list_view_cast(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TListView_list_view_reinit(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  ret = (ret_t)list_view_reinit(widget);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TListView_list_view_t_get_prop_item_height(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -12474,7 +12557,7 @@ int awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_x(Runtime *runtime, JClas
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   guage_pointer_t* obj = (guage_pointer_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_float(&ctx, (float)(obj->anchor_x));
+  jni_ctx_return_str(&ctx, (char*)(obj->anchor_x));
 
   return 0;
 }
@@ -12483,7 +12566,7 @@ int awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_y(Runtime *runtime, JClas
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   guage_pointer_t* obj = (guage_pointer_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_float(&ctx, (float)(obj->anchor_y));
+  jni_ctx_return_str(&ctx, (char*)(obj->anchor_y));
 
   return 0;
 }
@@ -12807,6 +12890,17 @@ int awtk_TWindowManager_window_manager_get_pointer_pressed(Runtime *runtime, JCl
   return 0;
 }
 
+int awtk_TWindowManager_window_manager_is_animating(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  bool_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  ret = (bool_t)window_manager_is_animating(widget);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TWindowManager_window_manager_set_show_fps(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -12874,6 +12968,19 @@ int awtk_TWindowManager_window_manager_back_to(Runtime *runtime, JClass *clazz) 
   const char* target = (const char*)jni_ctx_get_str(&ctx);
   ret = (ret_t)window_manager_back_to(widget, target);
   TKMEM_FREE(target);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TWindowManager_window_manager_resize(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
+  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)window_manager_resize(widget, w, h);
   jni_ctx_return_int(&ctx, (int32_t)(ret));
 
   return 0;
@@ -16536,6 +16643,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidgetProp",  "WIDGET_PROP_Y",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_Y},
 {"awtk/TWidgetProp",  "WIDGET_PROP_W",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_W},
 {"awtk/TWidgetProp",  "WIDGET_PROP_H",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_H},
+{"awtk/TWidgetProp",  "WIDGET_PROP_DIRTY_RECT_TOLERANCE",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_DIRTY_RECT_TOLERANCE},
 {"awtk/TWidgetProp",  "WIDGET_PROP_CANVAS",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_CANVAS},
 {"awtk/TWidgetProp",  "WIDGET_PROP_LOCALIZE_OPTIONS",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_LOCALIZE_OPTIONS},
 {"awtk/TWidgetProp",  "WIDGET_PROP_NATIVE_WINDOW",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_NATIVE_WINDOW},
@@ -16715,6 +16823,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWindowStage",  "WINDOW_STAGE_CREATED",  "()I",  awtk_TWindowStage_WINDOW_STAGE_CREATED},
 {"awtk/TWindowStage",  "WINDOW_STAGE_OPENED",  "()I",  awtk_TWindowStage_WINDOW_STAGE_OPENED},
 {"awtk/TWindowStage",  "WINDOW_STAGE_CLOSED",  "()I",  awtk_TWindowStage_WINDOW_STAGE_CLOSED},
+{"awtk/TWindowStage",  "WINDOW_STAGE_SUSPEND",  "()I",  awtk_TWindowStage_WINDOW_STAGE_SUSPEND},
 {"awtk/TWindowClosable",  "WINDOW_CLOSABLE_YES",  "()I",  awtk_TWindowClosable_WINDOW_CLOSABLE_YES},
 {"awtk/TWindowClosable",  "WINDOW_CLOSABLE_NO",  "()I",  awtk_TWindowClosable_WINDOW_CLOSABLE_NO},
 {"awtk/TWindowClosable",  "WINDOW_CLOSABLE_CONFIRM",  "()I",  awtk_TWindowClosable_WINDOW_CLOSABLE_CONFIRM},
@@ -16770,6 +16879,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidget",  "widget_set_focusable",  "(JZ)I",  awtk_TWidget_widget_set_focusable},
 {"awtk/TWidget",  "widget_set_state",  "(JLjava/lang/String;)I",  awtk_TWidget_widget_set_state},
 {"awtk/TWidget",  "widget_set_opacity",  "(JI)I",  awtk_TWidget_widget_set_opacity},
+{"awtk/TWidget",  "widget_set_dirty_rect_tolerance",  "(JI)I",  awtk_TWidget_widget_set_dirty_rect_tolerance},
 {"awtk/TWidget",  "widget_destroy_children",  "(J)I",  awtk_TWidget_widget_destroy_children},
 {"awtk/TWidget",  "widget_add_child",  "(JJ)I",  awtk_TWidget_widget_add_child},
 {"awtk/TWidget",  "widget_remove_child",  "(JJ)I",  awtk_TWidget_widget_remove_child},
@@ -16807,6 +16917,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidget",  "widget_is_normal_window",  "(J)Z",  awtk_TWidget_widget_is_normal_window},
 {"awtk/TWidget",  "widget_is_dialog",  "(J)Z",  awtk_TWidget_widget_is_dialog},
 {"awtk/TWidget",  "widget_is_popup",  "(J)Z",  awtk_TWidget_widget_is_popup},
+{"awtk/TWidget",  "widget_is_opened_popup",  "(J)Z",  awtk_TWidget_widget_is_opened_popup},
 {"awtk/TWidget",  "widget_layout",  "(J)I",  awtk_TWidget_widget_layout},
 {"awtk/TWidget",  "widget_set_self_layout",  "(JLjava/lang/String;)I",  awtk_TWidget_widget_set_self_layout},
 {"awtk/TWidget",  "widget_set_children_layout",  "(JLjava/lang/String;)I",  awtk_TWidget_widget_set_children_layout},
@@ -16833,6 +16944,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidget",  "widget_t_set_prop_with_focus_state",  "(JZ)I",  awtk_TWidget_widget_t_set_prop_with_focus_state},
 {"awtk/TWidget",  "widget_t_get_prop_with_focus_state",  "(J)Z",  awtk_TWidget_widget_t_get_prop_with_focus_state},
 {"awtk/TWidget",  "widget_t_get_prop_floating",  "(J)Z",  awtk_TWidget_widget_t_get_prop_floating},
+{"awtk/TWidget",  "widget_t_get_prop_dirty_rect_tolerance",  "(J)I",  awtk_TWidget_widget_t_get_prop_dirty_rect_tolerance},
 {"awtk/TWidget",  "widget_t_get_prop_parent",  "(J)J",  awtk_TWidget_widget_t_get_prop_parent},
 {"awtk/TRet",  "RET_OK",  "()I",  awtk_TRet_RET_OK},
 {"awtk/TRet",  "RET_OOM",  "()I",  awtk_TRet_RET_OOM},
@@ -16874,6 +16986,9 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TImageDrawType",  "IMAGE_DRAW_PATCH3_Y",  "()I",  awtk_TImageDrawType_IMAGE_DRAW_PATCH3_Y},
 {"awtk/TImageDrawType",  "IMAGE_DRAW_PATCH3_X_SCALE_Y",  "()I",  awtk_TImageDrawType_IMAGE_DRAW_PATCH3_X_SCALE_Y},
 {"awtk/TImageDrawType",  "IMAGE_DRAW_PATCH3_Y_SCALE_X",  "()I",  awtk_TImageDrawType_IMAGE_DRAW_PATCH3_Y_SCALE_X},
+{"awtk/TImageDrawType",  "IMAGE_DRAW_REPEAT9",  "()I",  awtk_TImageDrawType_IMAGE_DRAW_REPEAT9},
+{"awtk/TImageDrawType",  "IMAGE_DRAW_REPEAT3_X",  "()I",  awtk_TImageDrawType_IMAGE_DRAW_REPEAT3_X},
+{"awtk/TImageDrawType",  "IMAGE_DRAW_REPEAT3_Y",  "()I",  awtk_TImageDrawType_IMAGE_DRAW_REPEAT3_Y},
 {"awtk/TCanvas",  "canvas_get_width",  "(J)I",  awtk_TCanvas_canvas_get_width},
 {"awtk/TCanvas",  "canvas_get_height",  "(J)I",  awtk_TCanvas_canvas_get_height},
 {"awtk/TCanvas",  "canvas_get_clip_rect",  "(JJ)I",  awtk_TCanvas_canvas_get_clip_rect},
@@ -17216,6 +17331,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TListView",  "list_view_set_default_item_height",  "(JI)I",  awtk_TListView_list_view_set_default_item_height},
 {"awtk/TListView",  "list_view_set_auto_hide_scroll_bar",  "(JZ)I",  awtk_TListView_list_view_set_auto_hide_scroll_bar},
 {"awtk/TListView",  "list_view_cast",  "(J)J",  awtk_TListView_list_view_cast},
+{"awtk/TListView",  "list_view_reinit",  "(J)I",  awtk_TListView_list_view_reinit},
 {"awtk/TListView",  "list_view_t_get_prop_item_height",  "(J)I",  awtk_TListView_list_view_t_get_prop_item_height},
 {"awtk/TListView",  "list_view_t_get_prop_default_item_height",  "(J)I",  awtk_TListView_list_view_t_get_prop_default_item_height},
 {"awtk/TListView",  "list_view_t_get_prop_auto_hide_scroll_bar",  "(J)Z",  awtk_TListView_list_view_t_get_prop_auto_hide_scroll_bar},
@@ -17336,8 +17452,8 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TGuagePointer",  "guage_pointer_set_anchor",  "(JLjava/lang/String;Ljava/lang/String;)I",  awtk_TGuagePointer_guage_pointer_set_anchor},
 {"awtk/TGuagePointer",  "guage_pointer_t_get_prop_angle",  "(J)I",  awtk_TGuagePointer_guage_pointer_t_get_prop_angle},
 {"awtk/TGuagePointer",  "guage_pointer_t_get_prop_image",  "(J)Ljava/lang/String;",  awtk_TGuagePointer_guage_pointer_t_get_prop_image},
-{"awtk/TGuagePointer",  "guage_pointer_t_get_prop_anchor_x",  "(J)F",  awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_x},
-{"awtk/TGuagePointer",  "guage_pointer_t_get_prop_anchor_y",  "(J)F",  awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_y},
+{"awtk/TGuagePointer",  "guage_pointer_t_get_prop_anchor_x",  "(J)Ljava/lang/String;",  awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_x},
+{"awtk/TGuagePointer",  "guage_pointer_t_get_prop_anchor_y",  "(J)Ljava/lang/String;",  awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_y},
 {"awtk/TDraggable",  "draggable_create",  "(JIIII)J",  awtk_TDraggable_draggable_create},
 {"awtk/TDraggable",  "draggable_cast",  "(J)J",  awtk_TDraggable_draggable_cast},
 {"awtk/TDraggable",  "draggable_set_top",  "(JI)I",  awtk_TDraggable_draggable_set_top},
@@ -17367,12 +17483,14 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWindowManager",  "window_manager_get_pointer_x",  "(J)I",  awtk_TWindowManager_window_manager_get_pointer_x},
 {"awtk/TWindowManager",  "window_manager_get_pointer_y",  "(J)I",  awtk_TWindowManager_window_manager_get_pointer_y},
 {"awtk/TWindowManager",  "window_manager_get_pointer_pressed",  "(J)Z",  awtk_TWindowManager_window_manager_get_pointer_pressed},
+{"awtk/TWindowManager",  "window_manager_is_animating",  "(J)Z",  awtk_TWindowManager_window_manager_is_animating},
 {"awtk/TWindowManager",  "window_manager_set_show_fps",  "(JZ)I",  awtk_TWindowManager_window_manager_set_show_fps},
 {"awtk/TWindowManager",  "window_manager_set_screen_saver_time",  "(JI)I",  awtk_TWindowManager_window_manager_set_screen_saver_time},
 {"awtk/TWindowManager",  "window_manager_set_cursor",  "(JLjava/lang/String;)I",  awtk_TWindowManager_window_manager_set_cursor},
 {"awtk/TWindowManager",  "window_manager_back",  "(J)I",  awtk_TWindowManager_window_manager_back},
 {"awtk/TWindowManager",  "window_manager_back_to_home",  "(J)I",  awtk_TWindowManager_window_manager_back_to_home},
 {"awtk/TWindowManager",  "window_manager_back_to",  "(JLjava/lang/String;)I",  awtk_TWindowManager_window_manager_back_to},
+{"awtk/TWindowManager",  "window_manager_resize",  "(JII)I",  awtk_TWindowManager_window_manager_resize},
 {"awtk/TWindowBase",  "window_base_cast",  "(J)J",  awtk_TWindowBase_window_base_cast},
 {"awtk/TWindowBase",  "window_base_t_get_prop_theme",  "(J)Ljava/lang/String;",  awtk_TWindowBase_window_base_t_get_prop_theme},
 {"awtk/TWindowBase",  "window_base_t_get_prop_closable",  "(J)I",  awtk_TWindowBase_window_base_t_get_prop_closable},

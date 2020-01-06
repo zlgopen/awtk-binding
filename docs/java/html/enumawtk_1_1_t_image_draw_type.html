@@ -119,6 +119,12 @@ Public 属性</h2></td></tr>
 <tr class="separator:afaab8baaafd8985ddcf0d1c071a98b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51a0c0aa3799ac782c640123d4c2056d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_image_draw_type.html#a51a0c0aa3799ac782c640123d4c2056d">PATCH3_Y_SCALE_X</a> =(IMAGE_DRAW_PATCH3_Y_SCALE_X())</td></tr>
 <tr class="separator:a51a0c0aa3799ac782c640123d4c2056d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ef7a85abdf576bad694cba82d420c9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_image_draw_type.html#a8ef7a85abdf576bad694cba82d420c9b">REPEAT9</a> =(IMAGE_DRAW_REPEAT9())</td></tr>
+<tr class="separator:a8ef7a85abdf576bad694cba82d420c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96765b3cc48d01f8bd3f7b3a70c387af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_image_draw_type.html#a96765b3cc48d01f8bd3f7b3a70c387af">REPEAT3_X</a> =(IMAGE_DRAW_REPEAT3_X())</td></tr>
+<tr class="separator:a96765b3cc48d01f8bd3f7b3a70c387af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3872ef082c67db1c1f753ae3d127ade"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_image_draw_type.html#ac3872ef082c67db1c1f753ae3d127ade">REPEAT3_Y</a> =(IMAGE_DRAW_REPEAT3_Y())</td></tr>
+<tr class="separator:ac3872ef082c67db1c1f753ae3d127ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>图片绘制方法常量定义。 </p>
@@ -317,6 +323,51 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>平铺显示。 </p>
+
+</div>
+</div>
+<a id="a96765b3cc48d01f8bd3f7b3a70c387af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96765b3cc48d01f8bd3f7b3a70c387af">&#9670;&nbsp;</a></span>REPEAT3_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">awtk.TImageDrawType.REPEAT3_X =(IMAGE_DRAW_REPEAT3_X())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>水平方向3宫格显示，垂直方向居中显示。 将图片在水平方向上分成左右相等两块和中间一块，如果图片宽度为奇数，则中间一块为一列数据，如果图片宽度为偶数，则中间一块为二列数据，其他数据分为左右块。 左右两块按原大小显示在目标矩形的左右，中间一列像素点平铺显示在目标区域中间剩余部分。 </p>
+
+</div>
+</div>
+<a id="ac3872ef082c67db1c1f753ae3d127ade"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3872ef082c67db1c1f753ae3d127ade">&#9670;&nbsp;</a></span>REPEAT3_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">awtk.TImageDrawType.REPEAT3_Y =(IMAGE_DRAW_REPEAT3_Y())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>垂直方向3宫格显示，水平方向居中显示。 将图片在垂直方向上分成上下相等两块和中间一块，如果图片高度为奇数，则中间一块为一行数据，如果图片高度为偶数，则中间一块为二行数据，其他数据分为上下块 上下两块按原大小显示在目标矩形的上下，中间一块平铺显示在目标区域中间剩余部分。 </p>
+
+</div>
+</div>
+<a id="a8ef7a85abdf576bad694cba82d420c9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ef7a85abdf576bad694cba82d420c9b">&#9670;&nbsp;</a></span>REPEAT9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">awtk.TImageDrawType.REPEAT9 =(IMAGE_DRAW_REPEAT9())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>平铺9宫格显示。 将图片分成4个角和5块平铺块，4个角按原大小显示在目标矩形的4个角，其余5块会平铺对应的目标区域。 切割方法为（如下图）： 如果图片宽度为奇数，则中间一块为一列数据，如果图片宽度为偶数，则中间一块为二列数据，其他数据分为左右块 如果图片高度为奇数，则中间一块为一行数据，如果图片高度为偶数，则中间一块为二行数据，其他数据分为上下块 中间一块数据根据上面两条规则组成4中情况，分别是一列一行数据，一列两行数据，两列一行数据和两行两列数据 </p>
 
 </div>
 </div>

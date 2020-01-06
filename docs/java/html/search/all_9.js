@@ -34,6 +34,7 @@ var searchData=
   ['invalid',['INVALID',['../enumawtk_1_1_t_value_type.html#a7e98498f65bb51b8d9a0487fad1915fd',1,'awtk::TValueType']]],
   ['io',['IO',['../enumawtk_1_1_t_ret.html#aae96e728c9ca79ef25ba4c1b7399e14c',1,'awtk::TRet']]],
   ['is_5fkeyboard',['IS_KEYBOARD',['../enumawtk_1_1_t_widget_prop.html#ad782ca60af48944db98396e1761802c8',1,'awtk::TWidgetProp']]],
+  ['isanimating',['isAnimating',['../classawtk_1_1_t_window_manager.html#a4203c24a05cb4dc4dda5ef4aea45565a',1,'awtk::TWindowManager']]],
   ['iscollection',['isCollection',['../classawtk_1_1_t_object.html#ad20f2fb95684a2fa64f471ba949eb95e',1,'awtk::TObject']]],
   ['ismobile',['isMobile',['../classawtk_1_1_t_scroll_bar.html#ab54fd12f2f7694d357eac18c13f769ac',1,'awtk::TScrollBar']]],
   ['ismodal',['isModal',['../classawtk_1_1_t_dialog.html#a63f9cfcb94b459737eb7a6af21b3510f',1,'awtk::TDialog']]],

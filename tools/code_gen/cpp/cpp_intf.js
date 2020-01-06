@@ -40,6 +40,7 @@ class CppIntfGenerator extends CppGenerator {
     let name = this.toClassName(cls.name);
 
     if (!cls.parent) {
+      result += '  //nativeObj is public for internal use only.\n';
       result += `  ${nativeObjType} nativeObj;\n\n`;
     }
 

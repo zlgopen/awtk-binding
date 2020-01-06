@@ -4445,6 +4445,10 @@ static void widget_prop_t_init(lua_State* L) {
   lua_pushstring(L, WIDGET_PROP_H);
   lua_settable(L, -3); 
 
+  lua_pushstring(L, "DIRTY_RECT_TOLERANCE");
+  lua_pushstring(L, WIDGET_PROP_DIRTY_RECT_TOLERANCE);
+  lua_settable(L, -3); 
+
   lua_pushstring(L, "CANVAS");
   lua_pushstring(L, WIDGET_PROP_CANVAS);
   lua_settable(L, -3); 
@@ -5175,6 +5179,10 @@ static void window_stage_t_init(lua_State* L) {
   lua_pushinteger(L, WINDOW_STAGE_CLOSED);
   lua_settable(L, -3); 
 
+  lua_pushstring(L, "SUSPEND");
+  lua_pushinteger(L, WINDOW_STAGE_SUSPEND);
+  lua_settable(L, -3); 
+
 }
 
 static void window_closable_t_init(lua_State* L) {
@@ -5635,6 +5643,17 @@ static int wrap_widget_set_opacity(lua_State* L) {
   return 1;
 }
 
+static int wrap_widget_set_dirty_rect_tolerance(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  uint16_t dirty_rect_tolerance = (uint16_t)luaL_checkinteger(L, 2);
+  ret = (ret_t)widget_set_dirty_rect_tolerance(widget, dirty_rect_tolerance);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 static int wrap_widget_destroy_children(lua_State* L) {
   ret_t ret = 0;
   widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
@@ -6001,6 +6020,16 @@ static int wrap_widget_is_popup(lua_State* L) {
   return 1;
 }
 
+static int wrap_widget_is_opened_popup(lua_State* L) {
+  bool_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  ret = (bool_t)widget_is_opened_popup(widget);
+
+  lua_pushboolean(L,(lua_Integer)(ret));
+
+  return 1;
+}
+
 static int wrap_widget_layout(lua_State* L) {
   ret_t ret = 0;
   widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
@@ -6117,6 +6146,7 @@ static const struct luaL_Reg widget_t_member_funcs[] = {
   {"set_focusable", wrap_widget_set_focusable},
   {"set_state", wrap_widget_set_state},
   {"set_opacity", wrap_widget_set_opacity},
+  {"set_dirty_rect_tolerance", wrap_widget_set_dirty_rect_tolerance},
   {"destroy_children", wrap_widget_destroy_children},
   {"add_child", wrap_widget_add_child},
   {"remove_child", wrap_widget_remove_child},
@@ -6153,6 +6183,7 @@ static const struct luaL_Reg widget_t_member_funcs[] = {
   {"is_normal_window", wrap_widget_is_normal_window},
   {"is_dialog", wrap_widget_is_dialog},
   {"is_popup", wrap_widget_is_popup},
+  {"is_opened_popup", wrap_widget_is_opened_popup},
   {"layout", wrap_widget_layout},
   {"set_self_layout", wrap_widget_set_self_layout},
   {"set_children_layout", wrap_widget_set_children_layout},
@@ -6277,6 +6308,11 @@ static int wrap_widget_t_get_prop(lua_State* L) {
   }
   else if(strcmp(name, "floating") == 0) {
     lua_pushboolean(L,(lua_Integer)(obj->floating));
+
+  return 1;
+  }
+  else if(strcmp(name, "dirty_rect_tolerance") == 0) {
+    lua_pushinteger(L,(lua_Integer)(obj->dirty_rect_tolerance));
 
   return 1;
   }
@@ -6553,6 +6589,18 @@ static void image_draw_type_t_init(lua_State* L) {
 
   lua_pushstring(L, "PATCH3_Y_SCALE_X");
   lua_pushinteger(L, IMAGE_DRAW_PATCH3_Y_SCALE_X);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "REPEAT9");
+  lua_pushinteger(L, IMAGE_DRAW_REPEAT9);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "REPEAT3_X");
+  lua_pushinteger(L, IMAGE_DRAW_REPEAT3_X);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "REPEAT3_Y");
+  lua_pushinteger(L, IMAGE_DRAW_REPEAT3_Y);
   lua_settable(L, -3); 
 
 }
@@ -9982,11 +10030,22 @@ static int wrap_list_view_cast(lua_State* L) {
   return tk_newuserdata(L, (void*)ret, "/list_view_t/widget_t", "awtk.list_view_t");
 }
 
+static int wrap_list_view_reinit(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  ret = (ret_t)list_view_reinit(widget);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 
 static const struct luaL_Reg list_view_t_member_funcs[] = {
   {"set_item_height", wrap_list_view_set_item_height},
   {"set_default_item_height", wrap_list_view_set_default_item_height},
   {"set_auto_hide_scroll_bar", wrap_list_view_set_auto_hide_scroll_bar},
+  {"reinit", wrap_list_view_reinit},
   {NULL, NULL}
 };
 
@@ -11682,12 +11741,12 @@ static int wrap_guage_pointer_t_get_prop(lua_State* L) {
   return 1;
   }
   else if(strcmp(name, "anchor_x") == 0) {
-    lua_pushnumber(L,(lua_Number)(obj->anchor_x));
+    lua_pushstring(L,(char*)(obj->anchor_x));
 
   return 1;
   }
   else if(strcmp(name, "anchor_y") == 0) {
-    lua_pushnumber(L,(lua_Number)(obj->anchor_y));
+    lua_pushstring(L,(char*)(obj->anchor_y));
 
   return 1;
   }
@@ -12119,6 +12178,16 @@ static int wrap_window_manager_get_pointer_pressed(lua_State* L) {
   return 1;
 }
 
+static int wrap_window_manager_is_animating(lua_State* L) {
+  bool_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  ret = (bool_t)window_manager_is_animating(widget);
+
+  lua_pushboolean(L,(lua_Integer)(ret));
+
+  return 1;
+}
+
 static int wrap_window_manager_set_show_fps(lua_State* L) {
   ret_t ret = 0;
   widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
@@ -12183,6 +12252,18 @@ static int wrap_window_manager_back_to(lua_State* L) {
   return 1;
 }
 
+static int wrap_window_manager_resize(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  wh_t w = (wh_t)luaL_checkinteger(L, 2);
+  wh_t h = (wh_t)luaL_checkinteger(L, 3);
+  ret = (ret_t)window_manager_resize(widget, w, h);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 
 static const struct luaL_Reg window_manager_t_member_funcs[] = {
   {"get_top_main_window", wrap_window_manager_get_top_main_window},
@@ -12191,12 +12272,14 @@ static const struct luaL_Reg window_manager_t_member_funcs[] = {
   {"get_pointer_x", wrap_window_manager_get_pointer_x},
   {"get_pointer_y", wrap_window_manager_get_pointer_y},
   {"get_pointer_pressed", wrap_window_manager_get_pointer_pressed},
+  {"is_animating", wrap_window_manager_is_animating},
   {"set_show_fps", wrap_window_manager_set_show_fps},
   {"set_screen_saver_time", wrap_window_manager_set_screen_saver_time},
   {"set_cursor", wrap_window_manager_set_cursor},
   {"back", wrap_window_manager_back},
   {"back_to_home", wrap_window_manager_back_to_home},
   {"back_to", wrap_window_manager_back_to},
+  {"resize", wrap_window_manager_resize},
   {NULL, NULL}
 };
 

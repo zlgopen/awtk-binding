@@ -7,6 +7,7 @@ var searchData=
   ['int32',['int32',['../classawtk_1_1_t_value.html#accbb6cc65d0e9c758b26fd981d35b34f',1,'awtk::TValue']]],
   ['int64',['int64',['../classawtk_1_1_t_value.html#ab6d257aea9e23f54c1a6eed397f40816',1,'awtk::TValue']]],
   ['int8',['int8',['../classawtk_1_1_t_value.html#a96859b44fd51cb3eb3b70a3f1e64dcca',1,'awtk::TValue']]],
+  ['isanimating',['isAnimating',['../classawtk_1_1_t_window_manager.html#a4203c24a05cb4dc4dda5ef4aea45565a',1,'awtk::TWindowManager']]],
   ['iscollection',['isCollection',['../classawtk_1_1_t_object.html#ad20f2fb95684a2fa64f471ba949eb95e',1,'awtk::TObject']]],
   ['ismobile',['isMobile',['../classawtk_1_1_t_scroll_bar.html#ab54fd12f2f7694d357eac18c13f769ac',1,'awtk::TScrollBar']]],
   ['ismodal',['isModal',['../classawtk_1_1_t_dialog.html#a63f9cfcb94b459737eb7a6af21b3510f',1,'awtk::TDialog']]],

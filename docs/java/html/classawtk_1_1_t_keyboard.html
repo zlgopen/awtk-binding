@@ -155,9 +155,15 @@ Public 成员函数</h2></td></tr>
 <tr>
 <td>前缀key: </td><td align="center">键值 </td></tr>
 <tr>
+<td>前缀hard_key: </td><td align="center">模拟物理键盘 </td></tr>
+<tr>
 <td>前缀page: </td><td align="center">切换到页面 </td></tr>
 </table>
-<blockquote class="doxtable">
+<p>示例：</p>
+<p>按键"a"，提交输入法处理。</p>
+<div class="fragment"><div class="line">*&lt;<span class="keywordtype">button</span> <span class="keyword">repeat</span>=<span class="stringliteral">&quot;300&quot;</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;key:a&quot;</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;a&quot;</span>/&gt;</div></div><!-- fragment --><p>字符"a"，直接提交到编辑器。</p>
+<div class="fragment"><div class="line">*&lt;<span class="keywordtype">button</span> <span class="keyword">repeat</span>=<span class="stringliteral">&quot;300&quot;</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;a&quot;</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;a&quot;</span>/&gt;</div></div><!-- fragment --><p>模拟物理键盘数字"1"，触发key down/up事件（可以用来选择候选字）。</p>
+<div class="fragment"><div class="line">*&lt;<span class="keywordtype">button</span> <span class="keyword">repeat</span>=<span class="stringliteral">&quot;300&quot;</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;hard_key:1&quot;</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;1&quot;</span>/&gt;</div></div><!-- fragment --><blockquote class="doxtable">
 <p>更多用法请参考： </p>
 </blockquote>
 <p><a href="https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/kb_default.xml">kb_default</a> </p>
