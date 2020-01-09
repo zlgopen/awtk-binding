@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TImage类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -30,21 +30,18 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.8.13 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'搜索');
-/* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','搜索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -81,8 +78,8 @@ $(function() {
   <img src="classawtk_1_1_t_image.png" usemap="#awtk.TImage_map" alt=""/>
   <map id="awtk.TImage_map" name="awtk.TImage_map">
 <area href="classawtk_1_1_t_image_base.html" alt="awtk.TImageBase" shape="rect" coords="0,56,109,80"/>
-  </map>
-</div></div>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
@@ -136,18 +133,22 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ac5166a1ccaa9f7b7e8162bbc5b9015bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1be9793c136fe31c28b92cf1a488c6d6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_image.html">TImage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_image.html#a1be9793c136fe31c28b92cf1a488c6d6">cast</a> (TWidget widget)</td></tr>
 <tr class="separator:a1be9793c136fe31c28b92cf1a488c6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_classawtk_1_1_t_image_base"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classawtk_1_1_t_image_base')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="classawtk_1_1_t_image_base.html">awtk.TImageBase</a></td></tr>
+<tr class="memitem:a7da6ee71e180dfb1d8d20977f972a289 inherit pub_static_methods_classawtk_1_1_t_image_base"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_image_base.html">TImageBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_image_base.html#a7da6ee71e180dfb1d8d20977f972a289">cast</a> (long nativeObj)</td></tr>
+<tr class="separator:a7da6ee71e180dfb1d8d20977f972a289 inherit pub_static_methods_classawtk_1_1_t_image_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac34e5f92ee6131cbf242f3b3454fe4fe inherit pub_static_methods_classawtk_1_1_t_image_base"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_image_base.html">TImageBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_image_base.html#ac34e5f92ee6131cbf242f3b3454fe4fe">cast</a> (TWidget widget)</td></tr>
+<tr class="separator:ac34e5f92ee6131cbf242f3b3454fe4fe inherit pub_static_methods_classawtk_1_1_t_image_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>图片控件。</p>
 <p>用来显示一张静态图片，目前支持bmp/png/jpg等格式。</p>
-<p>如果要显示gif文件，请用gif\_image。</p>
-<p>如果要显示svg文件，请用svg\_image。</p>
+<p>如果要显示gif文件，请用gif。</p>
+<p>如果要显示svg文件，请用svg。</p>
 <p>如果需要支持勾选效果，请设置**selectable**属性。</p>
 <p>如果需要支持点击效果，请设置**clickable**属性。</p>
-<p>image_t是image\_base\_t的子类控件，image_base_t的函数均适用于image_t控件。</p>
+<p>image_t是image的子类控件，image_base_t的函数均适用于image_t控件。</p>
 <p>在xml中使用"image"标签创建图片控件。如：</p>
-<div class="fragment"><div class="line">*&lt;<span class="keywordtype">image</span> <span class="keyword">style</span>=<span class="stringliteral">&quot;border&quot;</span> <span class="keyword">image</span>=<span class="stringliteral">&quot;earth&quot;</span> <span class="keyword">draw_type</span>=<span class="stringliteral">&quot;icon&quot;</span> /&gt;</div>
-</div><!-- fragment --><blockquote class="doxtable">
+<div class="fragment"><div class="line">*&lt;<span class="keywordtype">image</span> <span class="keyword">style</span>=<span class="stringliteral">&quot;border&quot;</span> <span class="keyword">image</span>=<span class="stringliteral">&quot;earth&quot;</span> <span class="keyword">draw_type</span>=<span class="stringliteral">&quot;icon&quot;</span> /&gt;</div></div><!-- fragment --><blockquote class="doxtable">
 <p>更多用法请参考： </p>
 </blockquote>
 <p><a href="https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/images.xml">image.xml</a></p>
@@ -158,7 +159,7 @@ Public 成员函数</h2></td></tr>
 <p>可以用image_set_draw_type设置图片的绘制方式。 </p>
 </blockquote>
 <blockquote class="doxtable">
-<p>绘制方式请参考image\_draw\_type\_t </p>
+<p>绘制方式请参考image </p>
 </blockquote>
 <blockquote class="doxtable">
 <p>绘制方式的属性值和枚举值: </p>
@@ -169,12 +170,7 @@ Public 成员函数</h2></td></tr>
 </blockquote>
 <p><a href="https://github.com/zlgopen/awtk-c-demos/blob/master/demos/image.c">image demo</a></p>
 <p>可用通过style来设置控件的显示风格，如背景和边框等。如：</p>
-<div class="fragment"><div class="line">*&lt;<span class="keywordtype">image</span>&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">style</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;border&quot;</span>&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">normal</span> <span class="keyword">border_color</span>=<span class="stringliteral">&quot;#000000&quot;</span> <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#e0e0e0&quot;</span> <span class="keyword">text_color</span>=<span class="stringliteral">&quot;black&quot;</span>/&gt;</div>
-<div class="line">*&lt;/<span class="keywordtype">style</span>&gt;</div>
-<div class="line">*&lt;/<span class="keywordtype">image</span>&gt;</div>
-</div><!-- fragment --><blockquote class="doxtable">
+<div class="fragment"><div class="line">*&lt;<span class="keywordtype">image</span>&gt;</div><div class="line">*&lt;<span class="keywordtype">style</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;border&quot;</span>&gt;</div><div class="line">*&lt;<span class="keywordtype">normal</span> <span class="keyword">border_color</span>=<span class="stringliteral">&quot;#000000&quot;</span> <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#e0e0e0&quot;</span> <span class="keyword">text_color</span>=<span class="stringliteral">&quot;black&quot;</span>/&gt;</div><div class="line">*&lt;/<span class="keywordtype">style</span>&gt;</div><div class="line">*&lt;/<span class="keywordtype">image</span>&gt;</div></div><!-- fragment --><blockquote class="doxtable">
 <p>更多用法请参考： </p>
 </blockquote>
 <p><a href="https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L313">theme default</a> </p>
@@ -246,8 +242,6 @@ Public 成员函数</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>对应的Java对象。 </dd></dl>
 
-<p>重载 <a class="el" href="classawtk_1_1_t_image_base.html#a7da6ee71e180dfb1d8d20977f972a289">awtk.TImageBase</a> .</p>
-
 </div>
 </div>
 <a id="a1be9793c136fe31c28b92cf1a488c6d6"></a>
@@ -281,8 +275,6 @@ Public 成员函数</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>image对象。 </dd></dl>
-
-<p>重载 <a class="el" href="classawtk_1_1_t_image_base.html#ac34e5f92ee6131cbf242f3b3454fe4fe">awtk.TImageBase</a> .</p>
 
 </div>
 </div>
@@ -420,7 +412,7 @@ Public 成员函数</h2></td></tr>
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
+</a> 1.8.13
 </small></address>
 </body>
 </html>
