@@ -1112,16 +1112,18 @@ declare function text_selector_set_visible_nr(widget : any, visible_nr : number)
 declare function text_selector_t_get_prop_visible_nr(nativeObj : any) : number;
 declare function text_selector_t_get_prop_selected_index(nativeObj : any) : number;
 declare function text_selector_t_get_prop_options(nativeObj : any) : string;
-declare function prop_change_event_cast(event : any) : any;
-declare function prop_change_event_t_get_prop_name(nativeObj : any) : string;
-declare function prop_change_event_t_get_prop_value(nativeObj : any) : any;
-declare function progress_event_cast(event : any) : any;
-declare function progress_event_t_get_prop_percent(nativeObj : any) : number;
 declare function switch_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function switch_set_value(widget : any, value : any) : TRet;
 declare function switch_cast(widget : any) : any;
 declare function switch_t_get_prop_value(nativeObj : any) : boolean;
 declare function switch_t_get_prop_max_xoffset_ratio(nativeObj : any) : number;
+declare function prop_change_event_cast(event : any) : any;
+declare function prop_change_event_t_get_prop_name(nativeObj : any) : string;
+declare function prop_change_event_t_get_prop_value(nativeObj : any) : any;
+declare function progress_event_cast(event : any) : any;
+declare function progress_event_t_get_prop_percent(nativeObj : any) : number;
+declare function view_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function view_cast(widget : any) : any;
 declare function slide_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function slide_view_cast(widget : any) : any;
 declare function slide_view_set_auto_play(widget : any, auto_play : number) : TRet;
@@ -1197,6 +1199,8 @@ declare function scroll_bar_t_get_prop_virtual_size(nativeObj : any) : number;
 declare function scroll_bar_t_get_prop_value(nativeObj : any) : number;
 declare function scroll_bar_t_get_prop_row(nativeObj : any) : number;
 declare function scroll_bar_t_get_prop_animatable(nativeObj : any) : boolean;
+declare function tab_control_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function tab_control_cast(widget : any) : any;
 declare function list_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function list_view_set_item_height(widget : any, item_height : number) : TRet;
 declare function list_view_set_default_item_height(widget : any, default_item_height : number) : TRet;
@@ -1212,6 +1216,22 @@ declare function list_view_h_set_spacing(widget : any, spacing : number) : TRet;
 declare function list_view_h_cast(widget : any) : any;
 declare function list_view_h_t_get_prop_item_width(nativeObj : any) : number;
 declare function list_view_h_t_get_prop_spacing(nativeObj : any) : number;
+declare function tab_button_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function tab_button_cast(widget : any) : any;
+declare function tab_button_set_value(widget : any, value : any) : TRet;
+declare function tab_button_set_icon(widget : any, name : string) : TRet;
+declare function tab_button_set_active_icon(widget : any, name : string) : TRet;
+declare function tab_button_set_load_ui(widget : any, name : string) : TRet;
+declare function tab_button_t_get_prop_value(nativeObj : any) : boolean;
+declare function tab_button_t_get_prop_load_ui(nativeObj : any) : string;
+declare function tab_button_t_get_prop_active_icon(nativeObj : any) : string;
+declare function tab_button_t_get_prop_icon(nativeObj : any) : string;
+declare function tab_button_group_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function tab_button_group_set_compact(widget : any, compact : boolean) : TRet;
+declare function tab_button_group_set_scrollable(widget : any, scrollable : boolean) : TRet;
+declare function tab_button_group_cast(widget : any) : any;
+declare function tab_button_group_t_get_prop_compact(nativeObj : any) : boolean;
+declare function tab_button_group_t_get_prop_scrollable(nativeObj : any) : boolean;
 declare function list_item_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function list_item_cast(widget : any) : any;
 declare function hscroll_label_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -1256,6 +1276,23 @@ declare function progress_circle_t_get_prop_line_width(nativeObj : any) : number
 declare function progress_circle_t_get_prop_unit(nativeObj : any) : string;
 declare function progress_circle_t_get_prop_counter_clock_wise(nativeObj : any) : boolean;
 declare function progress_circle_t_get_prop_show_text(nativeObj : any) : boolean;
+declare function slider_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function slider_cast(widget : any) : any;
+declare function slider_set_value(widget : any, value : any) : TRet;
+declare function slider_set_min(widget : any, min : number) : TRet;
+declare function slider_set_max(widget : any, max : number) : TRet;
+declare function slider_set_step(widget : any, step : number) : TRet;
+declare function slider_set_bar_size(widget : any, bar_size : number) : TRet;
+declare function slider_set_vertical(widget : any, vertical : boolean) : TRet;
+declare function slider_t_get_prop_value(nativeObj : any) : number;
+declare function slider_t_get_prop_min(nativeObj : any) : number;
+declare function slider_t_get_prop_max(nativeObj : any) : number;
+declare function slider_t_get_prop_step(nativeObj : any) : number;
+declare function slider_t_get_prop_vertical(nativeObj : any) : boolean;
+declare function slider_t_get_prop_bar_size(nativeObj : any) : number;
+declare function slider_t_get_prop_dragger_size(nativeObj : any) : number;
+declare function slider_t_get_prop_dragger_adapt_to_icon(nativeObj : any) : boolean;
+declare function slider_t_get_prop_slide_with_bar(nativeObj : any) : boolean;
 declare function mledit_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function mledit_set_readonly(widget : any, readonly : boolean) : TRet;
 declare function mledit_set_focus(widget : any, focus : boolean) : TRet;
@@ -1270,12 +1307,32 @@ declare function mledit_t_get_prop_tips(nativeObj : any) : string;
 declare function mledit_t_get_prop_wrap_word(nativeObj : any) : boolean;
 declare function mledit_t_get_prop_max_lines(nativeObj : any) : number;
 declare function mledit_t_get_prop_scroll_line(nativeObj : any) : number;
+declare function row_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function row_cast(widget : any) : any;
+declare function progress_bar_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function progress_bar_cast(widget : any) : any;
+declare function progress_bar_set_value(widget : any, value : any) : TRet;
+declare function progress_bar_set_max(widget : any, max : number) : TRet;
+declare function progress_bar_set_vertical(widget : any, vertical : boolean) : TRet;
+declare function progress_bar_set_show_text(widget : any, show_text : boolean) : TRet;
+declare function progress_bar_get_percent(widget : any) : number;
+declare function progress_bar_t_get_prop_value(nativeObj : any) : number;
+declare function progress_bar_t_get_prop_max(nativeObj : any) : number;
+declare function progress_bar_t_get_prop_vertical(nativeObj : any) : boolean;
+declare function progress_bar_t_get_prop_show_text(nativeObj : any) : boolean;
 declare function line_number_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function line_number_set_top_margin(widget : any, top_margin : number) : TRet;
 declare function line_number_set_bottom_margin(widget : any, bottom_margin : number) : TRet;
 declare function line_number_set_line_height(widget : any, line_height : number) : TRet;
 declare function line_number_set_yoffset(widget : any, yoffset : number) : TRet;
 declare function line_number_cast(widget : any) : any;
+declare function pages_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function pages_cast(widget : any) : any;
+declare function pages_set_active(widget : any, index : number) : TRet;
+declare function pages_set_active_by_name(widget : any, name : string) : TRet;
+declare function pages_t_get_prop_active(nativeObj : any) : number;
+declare function overlay_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function overlay_cast(widget : any) : any;
 declare function candidates_cast(widget : any) : any;
 declare function image_value_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function image_value_set_image(widget : any, image : string) : TRet;
@@ -1325,6 +1382,21 @@ declare function guage_pointer_t_get_prop_angle(nativeObj : any) : number;
 declare function guage_pointer_t_get_prop_image(nativeObj : any) : string;
 declare function guage_pointer_t_get_prop_anchor_x(nativeObj : any) : string;
 declare function guage_pointer_t_get_prop_anchor_y(nativeObj : any) : string;
+declare function label_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function label_set_length(widget : any, length : number) : TRet;
+declare function label_resize_to_content(widget : any, min_w : number, max_w : number, min_h : number, max_h : number) : TRet;
+declare function label_cast(widget : any) : any;
+declare function label_t_get_prop_length(nativeObj : any) : number;
+declare function file_browser_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function file_browser_view_cast(widget : any) : any;
+declare function file_browser_view_set_init_dir(widget : any, init_dir : string) : TRet;
+declare function file_browser_view_set_file_icon(widget : any, file_icon : string) : TRet;
+declare function file_browser_view_set_folder_icon(widget : any, folder_icon : string) : TRet;
+declare function file_browser_view_set_return_up_icon(widget : any, return_up_icon : string) : TRet;
+declare function file_browser_view_t_get_prop_init_dir(nativeObj : any) : string;
+declare function file_browser_view_t_get_prop_file_icon(nativeObj : any) : string;
+declare function file_browser_view_t_get_prop_folder_icon(nativeObj : any) : string;
+declare function file_browser_view_t_get_prop_return_up_icon(nativeObj : any) : string;
 declare function draggable_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function draggable_cast(widget : any) : any;
 declare function draggable_set_top(widget : any, top : number) : TRet;
@@ -1341,11 +1413,17 @@ declare function draggable_t_get_prop_right(nativeObj : any) : number;
 declare function draggable_t_get_prop_vertical_only(nativeObj : any) : boolean;
 declare function draggable_t_get_prop_horizontal_only(nativeObj : any) : boolean;
 declare function draggable_t_get_prop_drag_window(nativeObj : any) : boolean;
+declare function group_box_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function group_box_cast(widget : any) : any;
 declare function color_picker_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function color_picker_set_color(widget : any, color : string) : TRet;
 declare function color_picker_cast(widget : any) : any;
 declare function color_picker_t_get_prop_value(nativeObj : any) : string;
 declare function color_component_cast(widget : any) : any;
+declare function grid_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function grid_cast(widget : any) : any;
+declare function grid_item_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function grid_item_cast(widget : any) : any;
 declare function window_manager() : any;
 declare function window_manager_cast(widget : any) : any;
 declare function window_manager_get_top_main_window(widget : any) : any;
@@ -1365,11 +1443,46 @@ declare function window_manager_resize(widget : any, w : number, h : number) : T
 declare function window_base_cast(widget : any) : any;
 declare function window_base_t_get_prop_theme(nativeObj : any) : string;
 declare function window_base_t_get_prop_closable(nativeObj : any) : TWindowClosable;
+declare function edit_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function edit_cast(widget : any) : any;
+declare function edit_get_int(widget : any) : number;
+declare function edit_get_double(widget : any) : number;
+declare function edit_set_int(widget : any, value : any) : TRet;
+declare function edit_set_double(widget : any, value : any) : TRet;
+declare function edit_set_text_limit(widget : any, min : number, max : number) : TRet;
+declare function edit_set_int_limit(widget : any, min : number, max : number, step : number) : TRet;
+declare function edit_set_float_limit(widget : any, min : number, max : number, step : number) : TRet;
+declare function edit_set_readonly(widget : any, readonly : boolean) : TRet;
+declare function edit_set_auto_fix(widget : any, auto_fix : boolean) : TRet;
+declare function edit_set_select_none_when_focused(widget : any, select_none_when_focused : boolean) : TRet;
+declare function edit_set_open_im_when_focused(widget : any, open_im_when_focused : boolean) : TRet;
+declare function edit_set_input_type(widget : any, type : TInputType) : TRet;
+declare function edit_set_input_tips(widget : any, tips : string) : TRet;
+declare function edit_set_password_visible(widget : any, password_visible : boolean) : TRet;
+declare function edit_set_focus(widget : any, focus : boolean) : TRet;
+declare function edit_set_cursor(widget : any, cursor : number) : TRet;
+declare function edit_t_get_prop_readonly(nativeObj : any) : boolean;
+declare function edit_t_get_prop_password_visible(nativeObj : any) : boolean;
+declare function edit_t_get_prop_auto_fix(nativeObj : any) : boolean;
+declare function edit_t_get_prop_select_none_when_focused(nativeObj : any) : boolean;
+declare function edit_t_get_prop_open_im_when_focused(nativeObj : any) : boolean;
+declare function edit_t_get_prop_tips(nativeObj : any) : string;
+declare function edit_t_get_prop_input_type(nativeObj : any) : TInputType;
+declare function edit_t_get_prop_min(nativeObj : any) : number;
+declare function edit_t_get_prop_max(nativeObj : any) : number;
+declare function edit_t_get_prop_step(nativeObj : any) : number;
 declare function style_mutable_set_name(s : any, name : string) : TRet;
 declare function style_mutable_set_int(s : any, state : string, name : string, val : number) : TRet;
 declare function style_mutable_cast(s : any) : any;
 declare function style_mutable_create(widget : any, default_style : any) : any;
 declare function style_mutable_t_get_prop_name(nativeObj : any) : string;
+declare function dragger_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function dragger_cast(widget : any) : any;
+declare function dragger_set_range(widget : any, x_min : number, y_min : number, x_max : number, y_max : number) : TRet;
+declare function dragger_t_get_prop_x_min(nativeObj : any) : number;
+declare function dragger_t_get_prop_y_min(nativeObj : any) : number;
+declare function dragger_t_get_prop_x_max(nativeObj : any) : number;
+declare function dragger_t_get_prop_y_max(nativeObj : any) : number;
 declare function image_base_set_image(widget : any, name : string) : TRet;
 declare function image_base_set_rotation(widget : any, rotation : number) : TRet;
 declare function image_base_set_scale(widget : any, scale_x : number, scale_y : number) : TRet;
@@ -1432,6 +1545,10 @@ declare function button_set_repeat(widget : any, repeat : number) : TRet;
 declare function button_set_enable_long_press(widget : any, enable_long_press : boolean) : TRet;
 declare function button_t_get_prop_repeat(nativeObj : any) : number;
 declare function button_t_get_prop_enable_long_press(nativeObj : any) : boolean;
+declare function digit_clock_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function digit_clock_cast(widget : any) : any;
+declare function digit_clock_set_format(widget : any, format : string) : TRet;
+declare function digit_clock_t_get_prop_format(nativeObj : any) : string;
 declare function check_button_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function check_button_create_radio(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function check_button_set_value(widget : any, value : any) : TRet;
@@ -1475,149 +1592,11 @@ declare function dialog_client_create(parent : any, x : number, y : number, w : 
 declare function dialog_client_cast(widget : any) : any;
 declare function dialog_title_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function dialog_title_cast(widget : any) : any;
-declare function digit_clock_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function digit_clock_cast(widget : any) : any;
-declare function digit_clock_set_format(widget : any, format : string) : TRet;
-declare function digit_clock_t_get_prop_format(nativeObj : any) : string;
-declare function dragger_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function dragger_cast(widget : any) : any;
-declare function dragger_set_range(widget : any, x_min : number, y_min : number, x_max : number, y_max : number) : TRet;
-declare function dragger_t_get_prop_x_min(nativeObj : any) : number;
-declare function dragger_t_get_prop_y_min(nativeObj : any) : number;
-declare function dragger_t_get_prop_x_max(nativeObj : any) : number;
-declare function dragger_t_get_prop_y_max(nativeObj : any) : number;
-declare function edit_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function edit_cast(widget : any) : any;
-declare function edit_get_int(widget : any) : number;
-declare function edit_get_double(widget : any) : number;
-declare function edit_set_int(widget : any, value : any) : TRet;
-declare function edit_set_double(widget : any, value : any) : TRet;
-declare function edit_set_text_limit(widget : any, min : number, max : number) : TRet;
-declare function edit_set_int_limit(widget : any, min : number, max : number, step : number) : TRet;
-declare function edit_set_float_limit(widget : any, min : number, max : number, step : number) : TRet;
-declare function edit_set_readonly(widget : any, readonly : boolean) : TRet;
-declare function edit_set_auto_fix(widget : any, auto_fix : boolean) : TRet;
-declare function edit_set_select_none_when_focused(widget : any, select_none_when_focused : boolean) : TRet;
-declare function edit_set_open_im_when_focused(widget : any, open_im_when_focused : boolean) : TRet;
-declare function edit_set_input_type(widget : any, type : TInputType) : TRet;
-declare function edit_set_input_tips(widget : any, tips : string) : TRet;
-declare function edit_set_password_visible(widget : any, password_visible : boolean) : TRet;
-declare function edit_set_focus(widget : any, focus : boolean) : TRet;
-declare function edit_set_cursor(widget : any, cursor : number) : TRet;
-declare function edit_t_get_prop_readonly(nativeObj : any) : boolean;
-declare function edit_t_get_prop_password_visible(nativeObj : any) : boolean;
-declare function edit_t_get_prop_auto_fix(nativeObj : any) : boolean;
-declare function edit_t_get_prop_select_none_when_focused(nativeObj : any) : boolean;
-declare function edit_t_get_prop_open_im_when_focused(nativeObj : any) : boolean;
-declare function edit_t_get_prop_tips(nativeObj : any) : string;
-declare function edit_t_get_prop_input_type(nativeObj : any) : TInputType;
-declare function edit_t_get_prop_min(nativeObj : any) : number;
-declare function edit_t_get_prop_max(nativeObj : any) : number;
-declare function edit_t_get_prop_step(nativeObj : any) : number;
-declare function grid_item_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function grid_item_cast(widget : any) : any;
-declare function grid_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function grid_cast(widget : any) : any;
-declare function group_box_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function group_box_cast(widget : any) : any;
-declare function label_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function label_set_length(widget : any, length : number) : TRet;
-declare function label_resize_to_content(widget : any, min_w : number, max_w : number, min_h : number, max_h : number) : TRet;
-declare function label_cast(widget : any) : any;
-declare function label_t_get_prop_length(nativeObj : any) : number;
-declare function overlay_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function overlay_cast(widget : any) : any;
-declare function pages_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function pages_cast(widget : any) : any;
-declare function pages_set_active(widget : any, index : number) : TRet;
-declare function pages_set_active_by_name(widget : any, name : string) : TRet;
-declare function pages_t_get_prop_active(nativeObj : any) : number;
-declare function progress_bar_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function progress_bar_cast(widget : any) : any;
-declare function progress_bar_set_value(widget : any, value : any) : TRet;
-declare function progress_bar_set_max(widget : any, max : number) : TRet;
-declare function progress_bar_set_vertical(widget : any, vertical : boolean) : TRet;
-declare function progress_bar_set_show_text(widget : any, show_text : boolean) : TRet;
-declare function progress_bar_get_percent(widget : any) : number;
-declare function progress_bar_t_get_prop_value(nativeObj : any) : number;
-declare function progress_bar_t_get_prop_max(nativeObj : any) : number;
-declare function progress_bar_t_get_prop_vertical(nativeObj : any) : boolean;
-declare function progress_bar_t_get_prop_show_text(nativeObj : any) : boolean;
-declare function row_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function row_cast(widget : any) : any;
-declare function slider_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function slider_cast(widget : any) : any;
-declare function slider_set_value(widget : any, value : any) : TRet;
-declare function slider_set_min(widget : any, min : number) : TRet;
-declare function slider_set_max(widget : any, max : number) : TRet;
-declare function slider_set_step(widget : any, step : number) : TRet;
-declare function slider_set_bar_size(widget : any, bar_size : number) : TRet;
-declare function slider_set_vertical(widget : any, vertical : boolean) : TRet;
-declare function slider_t_get_prop_value(nativeObj : any) : number;
-declare function slider_t_get_prop_min(nativeObj : any) : number;
-declare function slider_t_get_prop_max(nativeObj : any) : number;
-declare function slider_t_get_prop_step(nativeObj : any) : number;
-declare function slider_t_get_prop_vertical(nativeObj : any) : boolean;
-declare function slider_t_get_prop_bar_size(nativeObj : any) : number;
-declare function slider_t_get_prop_dragger_size(nativeObj : any) : number;
-declare function slider_t_get_prop_dragger_adapt_to_icon(nativeObj : any) : boolean;
-declare function slider_t_get_prop_slide_with_bar(nativeObj : any) : boolean;
-declare function tab_button_group_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function tab_button_group_set_compact(widget : any, compact : boolean) : TRet;
-declare function tab_button_group_set_scrollable(widget : any, scrollable : boolean) : TRet;
-declare function tab_button_group_cast(widget : any) : any;
-declare function tab_button_group_t_get_prop_compact(nativeObj : any) : boolean;
-declare function tab_button_group_t_get_prop_scrollable(nativeObj : any) : boolean;
-declare function tab_button_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function tab_button_cast(widget : any) : any;
-declare function tab_button_set_value(widget : any, value : any) : TRet;
-declare function tab_button_set_icon(widget : any, name : string) : TRet;
-declare function tab_button_set_active_icon(widget : any, name : string) : TRet;
-declare function tab_button_set_load_ui(widget : any, name : string) : TRet;
-declare function tab_button_t_get_prop_value(nativeObj : any) : boolean;
-declare function tab_button_t_get_prop_load_ui(nativeObj : any) : string;
-declare function tab_button_t_get_prop_active_icon(nativeObj : any) : string;
-declare function tab_button_t_get_prop_icon(nativeObj : any) : string;
-declare function tab_control_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function tab_control_cast(widget : any) : any;
-declare function view_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function view_cast(widget : any) : any;
-declare function idle_info_cast(idle : any) : any;
-declare function idle_info_t_get_prop_ctx(nativeObj : any) : any;
-declare function idle_info_t_get_prop_id(nativeObj : any) : number;
-declare function object_array_create() : any;
-declare function object_array_unref(obj : any) : TRet;
-declare function object_array_clear_props(obj : any) : TRet;
-declare function object_array_t_get_prop_props_size(nativeObj : any) : number;
-declare function gif_image_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function gif_image_cast(widget : any) : any;
 declare function object_default_create() : any;
 declare function object_default_unref(obj : any) : TRet;
 declare function object_default_clear_props(obj : any) : TRet;
 declare function object_default_t_get_prop_props_size(nativeObj : any) : number;
-declare function image_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function image_set_draw_type(widget : any, draw_type : TImageDrawType) : TRet;
-declare function image_cast(widget : any) : any;
-declare function image_t_get_prop_draw_type(nativeObj : any) : TImageDrawType;
-declare function combo_box_ex_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function calibration_win_cast(widget : any) : any;
-declare function popup_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function popup_cast(widget : any) : any;
-declare function popup_set_close_when_click(widget : any, close_when_click : boolean) : TRet;
-declare function popup_set_close_when_click_outside(widget : any, close_when_click_outside : boolean) : TRet;
-declare function popup_t_get_prop_close_when_click(nativeObj : any) : boolean;
-declare function popup_t_get_prop_close_when_click_outside(nativeObj : any) : boolean;
-declare function svg_image_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function svg_image_set_image(widget : any, name : string) : TRet;
-declare function svg_image_cast(widget : any) : any;
-declare function timer_info_cast(timer : any) : any;
-declare function timer_info_t_get_prop_ctx(nativeObj : any) : any;
-declare function timer_info_t_get_prop_id(nativeObj : any) : number;
-declare function timer_info_t_get_prop_now(nativeObj : any) : number;
-declare function spin_box_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function spin_box_cast(widget : any) : any;
-declare function system_bar_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function system_bar_cast(widget : any) : any;
 declare function window_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function window_create_default() : any;
 declare function window_set_fullscreen(widget : any, fullscreen : boolean) : TRet;
@@ -1627,8 +1606,39 @@ declare function window_close(widget : any) : TRet;
 declare function window_close_force(widget : any) : TRet;
 declare function window_cast(widget : any) : any;
 declare function window_t_get_prop_fullscreen(nativeObj : any) : boolean;
+declare function timer_info_cast(timer : any) : any;
+declare function timer_info_t_get_prop_ctx(nativeObj : any) : any;
+declare function timer_info_t_get_prop_id(nativeObj : any) : number;
+declare function timer_info_t_get_prop_now(nativeObj : any) : number;
+declare function combo_box_ex_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function image_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function image_set_draw_type(widget : any, draw_type : TImageDrawType) : TRet;
+declare function image_cast(widget : any) : any;
+declare function image_t_get_prop_draw_type(nativeObj : any) : TImageDrawType;
+declare function gif_image_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function gif_image_cast(widget : any) : any;
 declare function keyboard_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function keyboard_cast(widget : any) : any;
+declare function popup_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function popup_cast(widget : any) : any;
+declare function popup_set_close_when_click(widget : any, close_when_click : boolean) : TRet;
+declare function popup_set_close_when_click_outside(widget : any, close_when_click_outside : boolean) : TRet;
+declare function popup_t_get_prop_close_when_click(nativeObj : any) : boolean;
+declare function popup_t_get_prop_close_when_click_outside(nativeObj : any) : boolean;
+declare function object_array_create() : any;
+declare function object_array_unref(obj : any) : TRet;
+declare function object_array_clear_props(obj : any) : TRet;
+declare function object_array_t_get_prop_props_size(nativeObj : any) : number;
+declare function spin_box_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function spin_box_cast(widget : any) : any;
+declare function system_bar_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function system_bar_cast(widget : any) : any;
+declare function idle_info_cast(idle : any) : any;
+declare function idle_info_t_get_prop_ctx(nativeObj : any) : any;
+declare function idle_info_t_get_prop_id(nativeObj : any) : number;
+declare function svg_image_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function svg_image_set_image(widget : any, name : string) : TRet;
+declare function svg_image_cast(widget : any) : any;
 declare function dialog_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function dialog_create_simple(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function dialog_cast(widget : any) : any;
@@ -8379,7 +8389,7 @@ export class TWidget {
 
 
   /**
-   * 检查控件弹出窗口控件是否已经打开了。
+   * 检查控件弹出窗口控件是否已经打开了（而非挂起状态）。
    * 
    *
    * @returns 返回FALSE表示不是，否则表示是。
@@ -11466,79 +11476,6 @@ export class TTextSelector extends TWidget {
 
 };
 /**
- * 对象属性变化事件。
- *
- */
-export class TPropChangeEvent extends TEvent { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 把event对象转prop_change_event_t对象，主要给脚本语言使用。
-   * 
-   * @param event event对象。
-   *
-   * @returns 返回event对象。
-   */
- static cast(event : TEvent) : TPropChangeEvent  {
-    return new TPropChangeEvent(prop_change_event_cast(event != null ? (event.nativeObj || event) : null));
- }
-
-
-  /**
-   * 属性的名称。
-   *
-   */
- get name() : string {
-   return prop_change_event_t_get_prop_name(this.nativeObj);
- }
-
-
-  /**
-   * 属性的值。
-   *
-   */
- get value() : TValue {
-   return new TValue(prop_change_event_t_get_prop_value(this.nativeObj));
- }
-
-};
-/**
- * 进度变化事件。
- *
- */
-export class TProgressEvent extends TEvent { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 把event对象转progress_event_t对象，主要给脚本语言使用。
-   * 
-   * @param event event对象。
-   *
-   * @returns 返回event对象。
-   */
- static cast(event : TEvent) : TProgressEvent  {
-    return new TProgressEvent(progress_event_cast(event != null ? (event.nativeObj || event) : null));
- }
-
-
-  /**
-   * 进度百分比。
-   *
-   */
- get percent() : number {
-   return progress_event_t_get_prop_percent(this.nativeObj);
- }
-
-};
-/**
  * 开关控件。
  *
  *switch\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于switch\_t控件。
@@ -11636,6 +11573,139 @@ export class TSwitch extends TWidget {
    */
  get maxXoffsetRatio() : number {
    return switch_t_get_prop_max_xoffset_ratio(this.nativeObj);
+ }
+
+};
+/**
+ * 对象属性变化事件。
+ *
+ */
+export class TPropChangeEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转prop_change_event_t对象，主要给脚本语言使用。
+   * 
+   * @param event event对象。
+   *
+   * @returns 返回event对象。
+   */
+ static cast(event : TEvent) : TPropChangeEvent  {
+    return new TPropChangeEvent(prop_change_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+
+  /**
+   * 属性的名称。
+   *
+   */
+ get name() : string {
+   return prop_change_event_t_get_prop_name(this.nativeObj);
+ }
+
+
+  /**
+   * 属性的值。
+   *
+   */
+ get value() : TValue {
+   return new TValue(prop_change_event_t_get_prop_value(this.nativeObj));
+ }
+
+};
+/**
+ * 进度变化事件。
+ *
+ */
+export class TProgressEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转progress_event_t对象，主要给脚本语言使用。
+   * 
+   * @param event event对象。
+   *
+   * @returns 返回event对象。
+   */
+ static cast(event : TEvent) : TProgressEvent  {
+    return new TProgressEvent(progress_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+
+  /**
+   * 进度百分比。
+   *
+   */
+ get percent() : number {
+   return progress_event_t_get_prop_percent(this.nativeObj);
+ }
+
+};
+/**
+ * 一个通用的容器控件。
+ *
+ *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
+ *子控件的布局可用layout\_children属性指定。
+ *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
+ *
+ *view\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于view\_t控件。
+ *
+ *在xml中使用"view"标签创建view。如：
+ *
+ *```xml
+ *<view x="0" y="0" w="100%" h="100%" children_layout="default(c=2,r=2,m=5,s=5)">
+ *</view>
+ *```
+ *
+ *可用通过style来设置控件的显示风格，如背景颜色等。如：
+ *
+ *```xml
+ *<style name="default" border_color="#a0a0a0">
+ *<normal     bg_color="#f0f0f0" />
+ *</style>
+ *```
+ *
+ */
+export class TView extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建view对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TView  {
+    return new TView(view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为view对象(供脚本语言使用)。
+   * 
+   * @param widget view对象。
+   *
+   * @returns view对象。
+   */
+ static cast(widget : TWidget) : TView  {
+    return new TView(view_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 };
@@ -12818,6 +12888,70 @@ export class TScrollBar extends TWidget {
 
 };
 /**
+ * 标签控件。
+ *
+ *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
+ *
+ *标签控件通常会包含一个pages控件和一个tab\_button\_group控件。
+ *
+ *
+ *
+ *tab\_control\_t是[widget\_t](widget_t.md)的子类控件，
+ *widget\_t的函数均适用于tab\_control\_t控件。
+ *
+ *在xml中使用"tab\_control"标签创建标签控件。如：
+ *
+ *```xml
+ *<tab_control x="0" y="0" w="100%" h="100%"
+ *<pages x="c" y="20" w="90%" h="-60" value="1">
+ *...
+ *</pages>
+ *<tab_button_group>
+ *...
+ *</tab_button_group>
+ *</tab_control>
+ *```
+ *
+ *> 更多用法请参考：
+ *[tab control](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
+ *
+ */
+export class TTabControl extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建tab_control对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TTabControl  {
+    return new TTabControl(tab_control_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换tab_control对象(供脚本语言使用)。
+   * 
+   * @param widget tab_control对象。
+   *
+   * @returns tab_control对象。
+   */
+ static cast(widget : TWidget) : TTabControl  {
+    return new TTabControl(tab_control_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+};
+/**
  * 列表视图控件。
  *
  *列表视图控件是一个可以垂直滚动的列表控件。
@@ -13097,6 +13231,321 @@ export class TListViewH extends TWidget {
 
  set spacing(v : number) {
    this.setSpacing(v);
+ }
+
+};
+/**
+ * 标签按钮控件。
+ *
+ *标签按钮有点类似单选按钮，但点击标签按钮之后会自动切换当前的标签页。
+ *
+ *tab\_button\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于tab\_button\_t控件。
+ *
+ *在xml中使用"tab\_button"标签创建标签按钮控件。如：
+ *
+ *```xml
+ *<!-- tab_button_view_page1.xml -->
+ *<view w="100%" h="100%">
+ *<label x="c" y="m" w="100%" h="60" text="page1" />
+ *<button name="close" x="c" y="bottom:100" w="80" h="40" text="Close" />
+ *</view>
+ *```
+ *
+ *```xml
+ *<!-- tab_button dynamic load UI -->
+ *<pages name="pages" x="right" y="0" w="70%" h="100%">
+ *</pages>
+ *<list_view x="0" y="0" w="30%" h="100%" item_height="40" auto_hide_scroll_bar="true">
+ *<scroll_view name="view" x="0"  y="0" w="-12" h="100%">
+ *<tab_button text="page1" load_ui="tab_button_view_page1" value="true"/>
+ *<tab_button text="page2" load_ui="tab_button_view_page2" />
+ *<tab_button text="page3" load_ui="tab_button_view_page3" />
+ *<scroll_view />
+ *<scroll_bar_d name="bar" x="right" y="0" w="12" h="100%" value="0"/>
+ *</list_view>
+ *```
+ *
+ *```xml
+ *<!-- tab_button static load UI -->
+ *<tab_button_group x="c" y="bottom:10" w="90%" h="30" compact="true"
+ *<tab_button text="General"/>
+ *<tab_button text="Network" value="true" />
+ *<tab_button text="Security"/>
+ *</tab_button_group>
+ *```
+ *
+ *标签按钮一般放在标签按钮分组中，布局由标签按钮分组控件决定，不需要指定自己的布局参数和坐标。
+ *
+ *> 更多用法请参考：
+ *[tab control](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
+ *
+ *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
+ *
+ *```xml
+ *<tab_button>
+ *<style name="default" border_color="#a0a0a0"  text_color="black">
+ *<normal     bg_color="#d0d0d0" />
+ *<pressed    bg_color="#f0f0f0" />
+ *<over       bg_color="#e0e0e0" />
+ *<normal_of_active     bg_color="#f0f0f0" />
+ *<pressed_of_active    bg_color="#f0f0f0" />
+ *<over_of_active       bg_color="#f0f0f0" />
+ *</style>
+ *</tab_button>
+ *```
+ *
+ */
+export class TTabButton extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建tab_button对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TTabButton  {
+    return new TTabButton(tab_button_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换tab_button对象(供脚本语言使用)。
+   * 
+   * @param widget tab_button对象。
+   *
+   * @returns tab_button对象。
+   */
+ static cast(widget : TWidget) : TTabButton  {
+    return new TTabButton(tab_button_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 设置为当前标签。
+   * 
+   * @param value 是否为当前标签。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setValue(value : any) : TRet  {
+    return tab_button_set_value(this != null ? (this.nativeObj || this) : null, value);
+ }
+
+
+  /**
+   * 设置控件的图标。
+   * 
+   * @param name 当前项的图标。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setIcon(name : string) : TRet  {
+    return tab_button_set_icon(this != null ? (this.nativeObj || this) : null, name);
+ }
+
+
+  /**
+   * 设置控件的active图标。
+   * 
+   * @param name 当前项的图标。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setActiveIcon(name : string) : TRet  {
+    return tab_button_set_active_icon(this != null ? (this.nativeObj || this) : null, name);
+ }
+
+
+  /**
+   * 设置控件动态加载显示UI。
+   * 
+   * @param name 动态加载UI的资源名称。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setLoadUi(name : string) : TRet  {
+    return tab_button_set_load_ui(this != null ? (this.nativeObj || this) : null, name);
+ }
+
+
+  /**
+   * 值。
+   *
+   */
+ get value() : boolean {
+   return tab_button_t_get_prop_value(this.nativeObj);
+ }
+
+ set value(v : boolean) {
+   this.setValue(v);
+ }
+
+
+  /**
+   * 激活后加载的UI名字。
+   *
+   */
+ get loadUi() : string {
+   return tab_button_t_get_prop_load_ui(this.nativeObj);
+ }
+
+ set loadUi(v : string) {
+   this.setLoadUi(v);
+ }
+
+
+  /**
+   * 当前项的图标的名称。
+   *
+   */
+ get activeIcon() : string {
+   return tab_button_t_get_prop_active_icon(this.nativeObj);
+ }
+
+ set activeIcon(v : string) {
+   this.setActiveIcon(v);
+ }
+
+
+  /**
+   * 非当前项的图标的名称。
+   *
+   */
+ get icon() : string {
+   return tab_button_t_get_prop_icon(this.nativeObj);
+ }
+
+ set icon(v : string) {
+   this.setIcon(v);
+ }
+
+};
+/**
+ * 标签按钮分组控件。
+ *
+ *一个简单的容器，主要用于对标签按钮进行布局和管理。
+ *
+ *tab\_button\_group\_t是[widget\_t](widget_t.md)的子类控件，
+ *widget\_t的函数均适用于tab\_button\_group\_t控件。
+ *
+ *在xml中使用"tab\_button\_group"标签创建标签按钮分组控件。如：
+ *
+ *```xml
+ *<tab_button_group x="c" y="bottom:10" w="90%" h="30" compact="true"
+ *<tab_button text="General"/>
+ *<tab_button text="Network" value="true" />
+ *<tab_button text="Security"/>
+ *</tab_button_group>
+ *```
+ *
+ *> 更多用法请参考：
+ *[tab control](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
+ *
+ *可用通过style来设置控件的显示风格，如颜色等等。如：
+ *
+ *```xml
+ *<tab_button_group>
+ *<style name="default">
+ *<normal/>
+ *</style>
+ *</tab_button_group>
+ *```
+ *
+ */
+export class TTabButtonGroup extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建tab_button_group对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TTabButtonGroup  {
+    return new TTabButtonGroup(tab_button_group_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 设置compact。
+   * 
+   * @param compact 是否使用紧凑布局(缺省FALSE)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setCompact(compact : boolean) : TRet  {
+    return tab_button_group_set_compact(this != null ? (this.nativeObj || this) : null, compact);
+ }
+
+
+  /**
+   * 设置scrollable。
+   * 
+   * @param scrollable 是否允许滚动(缺省FALSE)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setScrollable(scrollable : boolean) : TRet  {
+    return tab_button_group_set_scrollable(this != null ? (this.nativeObj || this) : null, scrollable);
+ }
+
+
+  /**
+   * 转换tab_button_group对象(供脚本语言使用)。
+   * 
+   * @param widget tab_button_group对象。
+   *
+   * @returns tab_button_group对象。
+   */
+ static cast(widget : TWidget) : TTabButtonGroup  {
+    return new TTabButtonGroup(tab_button_group_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 紧凑型排版子控件(缺省FALSE)。
+   *
+   */
+ get compact() : boolean {
+   return tab_button_group_t_get_prop_compact(this.nativeObj);
+ }
+
+ set compact(v : boolean) {
+   this.setCompact(v);
+ }
+
+
+  /**
+   * 是否支持滚动(缺省FALSE)。
+   *
+   *> 紧凑型排版子控件时才支持滚动。
+   *
+   */
+ get scrollable() : boolean {
+   return tab_button_group_t_get_prop_scrollable(this.nativeObj);
+ }
+
+ set scrollable(v : boolean) {
+   this.setScrollable(v);
  }
 
 };
@@ -13824,6 +14273,255 @@ export class TProgressCircle extends TWidget {
 
 };
 /**
+ * 滑块控件。
+ *
+ *slider\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于slider\_t控件。
+ *
+ *在xml中使用"slider"标签创建滑块控件。如：
+ *
+ *```xml
+ *<slider x="center" y="10" w="80%" h="20" value="10"/>
+ *<slider style="img" x="center" y="50" w="80%" h="30" value="20" />
+ *<slider style="img" x="center" y="90" w="80%" h="30" value="30" min="5" max="50" step="5"/>
+ *```
+ *
+ *> 更多用法请参考：
+ *[basic](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/basic.xml)
+ *
+ *在c代码中使用函数slider\_create创建滑块控件。如：
+ *
+ *
+ *> 完整示例请参考：
+ *[slider demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/slider.c)
+ *
+ *可用通过style来设置控件的显示风格，如图片和颜色等等。如：
+ *
+ *```xml
+ *<style name="img" bg_image="slider_bg" fg_image="slider_fg">
+ *<normal icon="slider_drag"/>
+ *<pressed icon="slider_drag_p"/>
+ *<over icon="slider_drag_o"/>
+ *</style>
+ *```
+ *
+ *> 更多用法请参考：
+ *[theme
+ *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L179)
+ *
+ */
+export class TSlider extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建slider对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TSlider  {
+    return new TSlider(slider_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为slider对象(供脚本语言使用)。
+   * 
+   * @param widget slider对象。
+   *
+   * @returns slider对象。
+   */
+ static cast(widget : TWidget) : TSlider  {
+    return new TSlider(slider_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 设置滑块的值。
+   * 
+   * @param value 值
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setValue(value : any) : TRet  {
+    return slider_set_value(this != null ? (this.nativeObj || this) : null, value);
+ }
+
+
+  /**
+   * 设置滑块的最小值。
+   * 
+   * @param min 最小值
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setMin(min : number) : TRet  {
+    return slider_set_min(this != null ? (this.nativeObj || this) : null, min);
+ }
+
+
+  /**
+   * 设置滑块的最大值。
+   * 
+   * @param max 最大值
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setMax(max : number) : TRet  {
+    return slider_set_max(this != null ? (this.nativeObj || this) : null, max);
+ }
+
+
+  /**
+   * 设置滑块的拖动的最小单位。
+   * 
+   * @param step 拖动的最小单位。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setStep(step : number) : TRet  {
+    return slider_set_step(this != null ? (this.nativeObj || this) : null, step);
+ }
+
+
+  /**
+   * 设置bar的宽度或高度。
+   * 
+   * @param bar_size bar的宽度或高度。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setBarSize(bar_size : number) : TRet  {
+    return slider_set_bar_size(this != null ? (this.nativeObj || this) : null, bar_size);
+ }
+
+
+  /**
+   * 设置滑块的方向。
+   * 
+   * @param vertical 是否为垂直方向。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setVertical(vertical : boolean) : TRet  {
+    return slider_set_vertical(this != null ? (this.nativeObj || this) : null, vertical);
+ }
+
+
+  /**
+   * 值。
+   *
+   */
+ get value() : number {
+   return slider_t_get_prop_value(this.nativeObj);
+ }
+
+ set value(v : number) {
+   this.setValue(v);
+ }
+
+
+  /**
+   * 最小值。
+   *
+   */
+ get min() : number {
+   return slider_t_get_prop_min(this.nativeObj);
+ }
+
+ set min(v : number) {
+   this.setMin(v);
+ }
+
+
+  /**
+   * 最大值。
+   *
+   */
+ get max() : number {
+   return slider_t_get_prop_max(this.nativeObj);
+ }
+
+ set max(v : number) {
+   this.setMax(v);
+ }
+
+
+  /**
+   * 拖动的最小单位。
+   *
+   */
+ get step() : number {
+   return slider_t_get_prop_step(this.nativeObj);
+ }
+
+ set step(v : number) {
+   this.setStep(v);
+ }
+
+
+  /**
+   * 滑块的是否为垂直方向。
+   *
+   */
+ get vertical() : boolean {
+   return slider_t_get_prop_vertical(this.nativeObj);
+ }
+
+ set vertical(v : boolean) {
+   this.setVertical(v);
+ }
+
+
+  /**
+   * 轴的宽度或高度（单位：像素），为0表示为控件的宽度或高度的一半，缺省为0。
+   *
+   */
+ get barSize() : number {
+   return slider_t_get_prop_bar_size(this.nativeObj);
+ }
+
+ set barSize(v : number) {
+   this.setBarSize(v);
+ }
+
+
+  /**
+   * 滑块的宽度或高度（单位：像素），缺省为10。
+   *
+   */
+ get draggerSize() : number {
+   return slider_t_get_prop_dragger_size(this.nativeObj);
+ }
+
+
+  /**
+   * 滑块的宽度或高度是否与icon适应，缺省为true。
+   *
+   */
+ get draggerAdaptToIcon() : boolean {
+   return slider_t_get_prop_dragger_adapt_to_icon(this.nativeObj);
+ }
+
+
+  /**
+   * 是否允许在轴上滑动来改变滑块位置，缺省为FALSE。
+   *
+   */
+ get slideWithBar() : boolean {
+   return slider_t_get_prop_slide_with_bar(this.nativeObj);
+ }
+
+};
+/**
  * 多行编辑器控件。
  *
  *mledit\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于mledit\_t控件。
@@ -14027,6 +14725,254 @@ export class TMledit extends TWidget {
 
 };
 /**
+ * row。一个简单的容器控件，用于水平排列其子控件。
+ *
+ *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
+ *子控件的布局可用layout\_children属性指定。
+ *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
+ *
+ *row\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于row\_t控件。
+ *
+ *在xml中使用"row"标签创建row。如：
+ *
+ *```xml
+ *<row x="0" y="0" w="100%" h="100%" children_layout="default(c=0,r=1)">
+ *<button name="open:basic" text="Basic"/>
+ *<button name="open:button" text="Buttons"/>
+ *<button name="open:edit" text="Edits"/>
+ *<button name="open:keyboard" text="KeyBoard"/>
+ *</row>
+ *```
+ *
+ *可用通过style来设置控件的显示风格，如背景颜色等。如：
+ *
+ *```xml
+ *<style name="default" border_color="#a0a0a0">
+ *<normal     bg_color="#f0f0f0" />
+ *</style>
+ *```
+ *
+ */
+export class TRow extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建row对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TRow  {
+    return new TRow(row_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为row对象(供脚本语言使用)。
+   * 
+   * @param widget row对象。
+   *
+   * @returns row对象。
+   */
+ static cast(widget : TWidget) : TRow  {
+    return new TRow(row_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+};
+/**
+ * 进度条控件。
+ *
+ *进度条控件可以水平显示也可以垂直显示，由vertical属性决定。
+ *
+ *progress\_bar\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于progress\_bar\_t控件。
+ *
+ *在xml中使用"progress\_bar"标签创建进度条控件。如：
+ *
+ *```xml
+ *<progress_bar name="bar1" x="10" y="128" w="240" h="30" value="40"/>
+ *<progress_bar name="bar2" x="280" y="128" w="30" h="118" value="20" vertical="true"/>
+ *```
+ *
+ *> 更多用法请参考：
+ *[basic demo](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/basic.xml)
+ *
+ *在c代码中使用函数progress\_bar\_create创建进度条控件。如：
+ *
+ *
+ *> 完整示例请参考：
+ *[progress_bar demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/progress_bar.c)
+ *
+ *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
+ *
+ *```xml
+ *<style>
+ *<normal bg_color="#f0f0f0" text_color="gold" fg_color="#c0c0c0" border_color="#a0a0a0" />
+ *</style>
+ *```
+ *
+ *> 更多用法请参考：
+ *[theme
+ *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L183)
+ *
+ */
+export class TProgressBar extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建progress_bar对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TProgressBar  {
+    return new TProgressBar(progress_bar_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为progress_bar对象(供脚本语言使用)。
+   * 
+   * @param widget progress_bar对象。
+   *
+   * @returns progress_bar对象。
+   */
+ static cast(widget : TWidget) : TProgressBar  {
+    return new TProgressBar(progress_bar_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 设置进度条的进度。
+   * 
+   * @param value 进度
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setValue(value : any) : TRet  {
+    return progress_bar_set_value(this != null ? (this.nativeObj || this) : null, value);
+ }
+
+
+  /**
+   * 设置最大值。
+   * 
+   * @param max 最大值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setMax(max : number) : TRet  {
+    return progress_bar_set_max(this != null ? (this.nativeObj || this) : null, max);
+ }
+
+
+  /**
+   * 设置进度条的方向。
+   * 
+   * @param vertical 是否为垂直方向。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setVertical(vertical : boolean) : TRet  {
+    return progress_bar_set_vertical(this != null ? (this.nativeObj || this) : null, vertical);
+ }
+
+
+  /**
+   * 设置进度条的是否显示文本。
+   * 
+   * @param show_text 是否显示文本。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setShowText(show_text : boolean) : TRet  {
+    return progress_bar_set_show_text(this != null ? (this.nativeObj || this) : null, show_text);
+ }
+
+
+  /**
+   * 获取进度百分比。
+   *
+   *> 当max为100时，percent和value取整后一致。
+   * 
+   *
+   * @returns 返回百分比。
+   */
+ getPercent() : number  {
+    return progress_bar_get_percent(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 进度条的值[0-100]。
+   *
+   */
+ get value() : number {
+   return progress_bar_t_get_prop_value(this.nativeObj);
+ }
+
+ set value(v : number) {
+   this.setValue(v);
+ }
+
+
+  /**
+   * 最大值(缺省为100)。
+   *
+   */
+ get max() : number {
+   return progress_bar_t_get_prop_max(this.nativeObj);
+ }
+
+ set max(v : number) {
+   this.setMax(v);
+ }
+
+
+  /**
+   * 进度条的是否为垂直方向。
+   *
+   */
+ get vertical() : boolean {
+   return progress_bar_t_get_prop_vertical(this.nativeObj);
+ }
+
+ set vertical(v : boolean) {
+   this.setVertical(v);
+ }
+
+
+  /**
+   * 是否显示文本。
+   *
+   */
+ get showText() : boolean {
+   return progress_bar_t_get_prop_show_text(this.nativeObj);
+ }
+
+ set showText(v : boolean) {
+   this.setShowText(v);
+ }
+
+};
+/**
  * 行号。多行编辑器的行号。
  *
  *line\_number\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于line\_number\_t控件。
@@ -14139,6 +15085,177 @@ export class TLineNumber extends TWidget {
    */
  static cast(widget : TWidget) : TLineNumber  {
     return new TLineNumber(line_number_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+};
+/**
+ * 页面管理控件。
+ *
+ *只有一个Page处于active状态，处于active状态的Page才能显示并接收事件。
+ *常用于实现标签控件中的页面管理。
+ *
+ *pages\_t是[widget\_t](widget_t.md)的子类控件，
+ *widget\_t的函数均适用于pages\_t控件。
+ *
+ *在xml中使用"pages"标签创建页面管理控件。如：
+ *
+ *```xml
+ *<tab_control x="0" y="0" w="100%" h="100%"
+ *<pages x="c" y="20" w="90%" h="-60" value="1">
+ *...
+ *</pages>
+ *<tab_button_group>
+ *...
+ *</tab_button_group>
+ *</tab_control>
+ *```
+ *
+ *> 更多用法请参考：
+ *[tab control](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
+ *
+ */
+export class TPages extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建pages对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TPages  {
+    return new TPages(pages_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为pages对象(供脚本语言使用)。
+   * 
+   * @param widget pages对象。
+   *
+   * @returns pages对象。
+   */
+ static cast(widget : TWidget) : TPages  {
+    return new TPages(pages_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 设置当前的Page。
+   * 
+   * @param index 当前Page的序号。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setActive(index : number) : TRet  {
+    return pages_set_active(this != null ? (this.nativeObj || this) : null, index);
+ }
+
+
+  /**
+   * 通过页面的名字设置当前的Page。
+   * 
+   * @param name 当前Page的名字。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setActiveByName(name : string) : TRet  {
+    return pages_set_active_by_name(this != null ? (this.nativeObj || this) : null, name);
+ }
+
+
+  /**
+   * 当前活跃的page。
+   *
+   */
+ get active() : number {
+   return pages_t_get_prop_active(this.nativeObj);
+ }
+
+ set active(v : number) {
+   this.setActive(v);
+ }
+
+};
+/**
+ * overlay窗口。
+ *
+ *overlay窗口有点类似于非模态的dialog，但是它位置和大小是完全自由的，窗口管理器不会对它做任何限制。
+ *
+ *如果overlay窗口有透明或半透效果，则不支持窗口动画，但可以通过移动窗口位置来实现类似动画的效果。
+ *
+ *overlay\_t是[window\_base\_t](window_base_t.md)的子类控件，window\_base\_t的函数均适用于overlay\_t控件。
+ *
+ *在xml中使用"overlay"标签创建窗口。需要指定坐标和大小，可以指定主题和动画名称。如：
+ *
+ *```xml
+ *<overlay theme="basic" x="100" y="100" w="200" h="300">
+ *...
+ *</overlay>
+ *```
+ *
+ *>
+ *更多用法请参考：[overlay.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
+ *
+ *在c代码中使用函数overlay\_create创建窗口。如：
+ *
+ *
+ *> 完整示例请参考：[overlay
+ *demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/)
+ *
+ *可用通过style来设置窗口的风格，如背景颜色或图片等。如：
+ *
+ *```xml
+ *<style name="bricks">
+ *<normal bg_image="bricks"  bg_image_draw_type="repeat"/>
+ *</style>
+ *```
+ *
+ *> 更多用法请参考：[theme
+ *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L0)
+ *
+ */
+export class TOverlay extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建overlay对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TOverlay  {
+    return new TOverlay(overlay_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为overlay对象(供脚本语言使用)。
+   * 
+   * @param widget overlay对象。
+   *
+   * @returns overlay对象。
+   */
+ static cast(widget : TWidget) : TOverlay  {
+    return new TOverlay(overlay_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 };
@@ -14940,6 +16057,260 @@ export class TGuagePointer extends TWidget {
 
 };
 /**
+ * 文本控件。用于显示一行或多行文本。
+ *
+ *文本控件不会根据文本的长度自动换行，只有文本内容包含换行符时才会换行。
+ *
+ *如需自动换行请使用[rich\_text\_t](rich_text_t.md)控件。
+ *
+ *label\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于label\_t控件。
+ *
+ *在xml中使用"label"标签创建文本控件。如：
+ *
+ *```xml
+ *<label style="center" text="center"/>
+ *```
+ *
+ *> 更多用法请参考：[label.xml](
+ *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/label.xml)
+ *
+ *在c代码中使用函数label\_create创建文本控件。如：
+ *
+ *
+ *> 创建之后，需要用widget\_set\_text或widget\_set\_text\_utf8设置文本内容。
+ *
+ *> 完整示例请参考：[label demo](
+ *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/label.c)
+ *
+ *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
+ *
+ *```xml
+ *<style name="left">
+ *<normal text_color="red" text_align_h="left" border_color="#a0a0a0" margin="4" />
+ *</style>
+ *```
+ *
+ *> 更多用法请参考：
+ *[theme default](
+ *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L144)
+ *
+ */
+export class TLabel extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建label对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TLabel  {
+    return new TLabel(label_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 设置显示字符的个数(小余0时全部显示)。。
+   * 
+   * @param length 最大可显示字符个数。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setLength(length : number) : TRet  {
+    return label_set_length(this != null ? (this.nativeObj || this) : null, length);
+ }
+
+
+  /**
+   * 根据文本内容调节控件大小。
+   * 
+   * @param min_w 最小宽度。
+   * @param max_w 最大宽度。
+   * @param min_h 最小高度。
+   * @param max_h 最大高度。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ resizeToContent(min_w : number, max_w : number, min_h : number, max_h : number) : TRet  {
+    return label_resize_to_content(this != null ? (this.nativeObj || this) : null, min_w, max_w, min_h, max_h);
+ }
+
+
+  /**
+   * 转换为label对象(供脚本语言使用)。
+   * 
+   * @param widget label对象。
+   *
+   * @returns label对象。
+   */
+ static cast(widget : TWidget) : TLabel  {
+    return new TLabel(label_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 显示字符的个数(小余0时全部显示)。
+   *主要用于动态改变显示字符的个数，来实现类似[拨号中...]的动画效果。
+   *
+   */
+ get length() : number {
+   return label_t_get_prop_length(this.nativeObj);
+ }
+
+ set length(v : number) {
+   this.setLength(v);
+ }
+
+};
+/**
+ * 文件管理/浏览/选择控件
+ *
+ */
+export class TFileBrowserView extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建file_browser_view对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TFileBrowserView  {
+    return new TFileBrowserView(file_browser_view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为file_browser_view对象(供脚本语言使用)。
+   * 
+   * @param widget file_browser_view对象。
+   *
+   * @returns file_browser_view对象。
+   */
+ static cast(widget : TWidget) : TFileBrowserView  {
+    return new TFileBrowserView(file_browser_view_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 设置 初始目录。
+   * 
+   * @param init_dir 初始目录。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setInitDir(init_dir : string) : TRet  {
+    return file_browser_view_set_init_dir(this != null ? (this.nativeObj || this) : null, init_dir);
+ }
+
+
+  /**
+   * 设置 文件项的图标。
+   * 
+   * @param file_icon 文件项的图标。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setFileIcon(file_icon : string) : TRet  {
+    return file_browser_view_set_file_icon(this != null ? (this.nativeObj || this) : null, file_icon);
+ }
+
+
+  /**
+   * 设置 目录项的图标。
+   * 
+   * @param folder_icon 目录项的图标。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setFolderIcon(folder_icon : string) : TRet  {
+    return file_browser_view_set_folder_icon(this != null ? (this.nativeObj || this) : null, folder_icon);
+ }
+
+
+  /**
+   * 设置 返回上一级目录的图标。
+   * 
+   * @param return_up_icon 返回上一级目录的图标。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setReturnUpIcon(return_up_icon : string) : TRet  {
+    return file_browser_view_set_return_up_icon(this != null ? (this.nativeObj || this) : null, return_up_icon);
+ }
+
+
+  /**
+   * 初始目录。
+   *
+   */
+ get initDir() : string {
+   return file_browser_view_t_get_prop_init_dir(this.nativeObj);
+ }
+
+ set initDir(v : string) {
+   this.setInitDir(v);
+ }
+
+
+  /**
+   * 文件项的图标。
+   *
+   */
+ get fileIcon() : string {
+   return file_browser_view_t_get_prop_file_icon(this.nativeObj);
+ }
+
+ set fileIcon(v : string) {
+   this.setFileIcon(v);
+ }
+
+
+  /**
+   * 目录项的图标。
+   *
+   */
+ get folderIcon() : string {
+   return file_browser_view_t_get_prop_folder_icon(this.nativeObj);
+ }
+
+ set folderIcon(v : string) {
+   this.setFolderIcon(v);
+ }
+
+
+  /**
+   * 返回上一级目录的图标。
+   *
+   */
+ get returnUpIcon() : string {
+   return file_browser_view_t_get_prop_return_up_icon(this.nativeObj);
+ }
+
+ set returnUpIcon(v : string) {
+   this.setReturnUpIcon(v);
+ }
+
+};
+/**
  * 将draggable放入目标控件，即可让目标控件或当前窗口可以被拖动。
  *
  *draggable\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于draggable\_t控件。
@@ -15181,6 +16552,71 @@ export class TDraggable extends TWidget {
 
 };
 /**
+ * 分组控件。
+ *
+ *单选按钮在同一个父控件中是互斥的，所以通常将相关的单选按钮放在一个group\_box中。
+ *
+ *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
+ *子控件的布局可用layout\_children属性指定。
+ *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
+ *
+ *group\_box\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于group\_box\_t控件。
+ *
+ *在xml中使用"group\_box"标签创建group\_box。如：
+ *
+ *```xml
+ *<group_box x="20" y="230" w="50%" h="90" children_layout="default(r=3,c=1,ym=2,s=10)"
+ *<radio_button name="r1" text="Book"/>
+ *<radio_button name="r2" text="Food"/>
+ *<radio_button name="r3" text="Pencil" value="true"/>
+ *</group_box>
+ *```
+ *
+ *可用通过style来设置控件的显示风格，如背景颜色等。如：
+ *
+ *```xml
+ *<style name="default" border_color="#a0a0a0">
+ *<normal     bg_color="#f0f0f0" />
+ *</style>
+ *```
+ *
+ */
+export class TGroupBox extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建group_box对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGroupBox  {
+    return new TGroupBox(group_box_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为group_box对象(供脚本语言使用)。
+   * 
+   * @param widget group_box对象。
+   *
+   * @returns group_box对象。
+   */
+ static cast(widget : TWidget) : TGroupBox  {
+    return new TGroupBox(group_box_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+};
+/**
  * 颜色选择器。
  *
  *color\_picker\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于color\_picker\_t控件。
@@ -15291,6 +16727,143 @@ export class TColorComponent extends TWidget {
    */
  static cast(widget : TWidget) : TColorComponent  {
     return new TColorComponent(color_component_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+};
+/**
+ * grid控件。一个简单的容器控件，用于网格排列一组控件。
+ *
+ *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
+ *子控件的布局可用layout\_children属性指定。
+ *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
+ *
+ *grid\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于grid\_t控件。
+ *
+ *在xml中使用"grid"标签创建grid。如：
+ *
+ *```xml
+ *<grid x="0" y="0" w="100%" h="100%" children_layout="default(c=2,r=2,m=5,s=5)">
+ *<button name="open:basic" text="Basic"/>
+ *<button name="open:button" text="Buttons"/>
+ *<button name="open:edit" text="Edits"/>
+ *<button name="open:keyboard" text="KeyBoard"/>
+ *</grid>
+ *```
+ *
+ *可用通过style来设置控件的显示风格，如背景颜色等。如：
+ *
+ *```xml
+ *<style name="default" border_color="#a0a0a0">
+ *<normal     bg_color="#f0f0f0" />
+ *</style>
+ *```
+ *
+ */
+export class TGrid extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建grid对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGrid  {
+    return new TGrid(grid_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为grid对象(供脚本语言使用)。
+   * 
+   * @param widget grid对象。
+   *
+   * @returns grid对象。
+   */
+ static cast(widget : TWidget) : TGrid  {
+    return new TGrid(grid_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+};
+/**
+ * grid_item。一个简单的容器控件，一般作为grid的子控件。
+ *
+ *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
+ *子控件的布局可用layout\_children属性指定。
+ *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
+ *
+ *grid\_item\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于grid\_item\_t控件。
+ *
+ *在xml中使用"grid\_item"标签创建grid\_item。如：
+ *
+ *```xml
+ *<grid x="0" y="0" w="100%" h="100%" children_layout="default(c=2,r=2,m=5,s=5)">
+ *<grid_item>
+ *<button x="c" y="m" w="80%" h="30" name="0" text="0"/>
+ *</grid_item>
+ *<grid_item>
+ *<button x="c" y="m" w="80%" h="30" name="1" text="1"/>
+ *</grid_item>
+ *<grid_item>
+ *<button x="c" y="m" w="80%" h="30" name="2" text="2"/>
+ *</grid_item>
+ *<grid_item>
+ *<button x="c" y="m" w="80%" h="30" name="3" text="3"/>
+ *</grid_item>
+ *</grid>
+ *
+ *```
+ *
+ *可用通过style来设置控件的显示风格，如背景颜色等。如：
+ *
+ *```xml
+ *<style name="default" border_color="#a0a0a0">
+ *<normal     bg_color="#f0f0f0" />
+ *</style>
+ *```
+ *
+ */
+export class TGridItem extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建grid_item对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGridItem  {
+    return new TGridItem(grid_item_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为grid_item对象(供脚本语言使用)。
+   * 
+   * @param widget grid_item对象。
+   *
+   * @returns grid_item对象。
+   */
+ static cast(widget : TWidget) : TGridItem  {
+    return new TGridItem(grid_item_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 };
@@ -15553,6 +17126,408 @@ export class TWindowBase extends TWidget {
 
 };
 /**
+ * 单行编辑器控件。
+ *
+ *在基于SDL的平台，单行编辑器控件使用平台原生的输入法，对于嵌入式平台使用内置的输入法。
+ *
+ *在使用内置的输入法时，软键盘由输入类型决定，开发者可以自定义软键盘的界面。
+ *
+ *edit\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于edit\_t控件。
+ *
+ *edit\_t本身可以做为容器，放入按钮等控件。有几个特殊的子控件：
+ *
+ ** 名为"clear"的按钮。点击时清除编辑器中的内容。
+ ** 名为"inc"的按钮。点击时增加编辑器的值，用于实现类似于spinbox的功能。
+ ** 名为"dec"的按钮。点击时减少编辑器的值，用于实现类似于spinbox的功能。
+ ** 名为"visible"的复选框。勾选时显示密码，反之不显示密码。
+ *
+ *在xml中使用"edit"标签创建编辑器控件。如：
+ *
+ *```xml
+ *<edit x="c" y="m" w="80" h="30"
+ *tips="age" input_type="uint" min="0" max="150" step="1" auto_fix="true" style="number" />
+ *```
+ *
+ *> XXX：需要在min/max/step之前设置input\_type。
+ *
+ *>更多用法请参考：
+ *[edit.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/edit.xml)
+ *
+ *在c代码中使用函数edit\_create创建编辑器控件。如：
+ *
+ *
+ *> 创建之后，可以用widget\_set\_text或widget\_set\_text\_utf8设置文本内容。
+ *
+ *> 完整示例请参考：
+ *[edit demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/edit.c)
+ *
+ *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
+ *
+ *```xml
+ *<style name="default" border_color="#a0a0a0"  text_color="black" text_align_h="left">
+ *<normal     bg_color="#f0f0f0" />
+ *<focused    bg_color="#f0f0f0" border_color="black"/>
+ *<disable    bg_color="gray" text_color="#d0d0d0" />
+ *<error      bg_color="#f0f0f0" text_color="red" />
+ *<empty      bg_color="#f0f0f0" text_color="#a0a0a0" />
+ *</style>
+ *```
+ *
+ *> 更多用法请参考：
+ *[theme
+ *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L104)
+ *
+ */
+export class TEdit extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建edit对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TEdit  {
+    return new TEdit(edit_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为edit对象(供脚本语言使用)。
+   * 
+   * @param widget edit对象。
+   *
+   * @returns edit对象。
+   */
+ static cast(widget : TWidget) : TEdit  {
+    return new TEdit(edit_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 获取int类型的值。
+   * 
+   *
+   * @returns 返回int的值。
+   */
+ getInt() : number  {
+    return edit_get_int(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 获取double类型的值。
+   * 
+   *
+   * @returns 返回double的值。
+   */
+ getDouble() : number  {
+    return edit_get_double(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 设置int类型的值。
+   * 
+   * @param value 值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setInt(value : any) : TRet  {
+    return edit_set_int(this != null ? (this.nativeObj || this) : null, value);
+ }
+
+
+  /**
+   * 设置double类型的值。
+   * 
+   * @param value 值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setDouble(value : any) : TRet  {
+    return edit_set_double(this != null ? (this.nativeObj || this) : null, value);
+ }
+
+
+  /**
+   * 设置为文本输入及其长度限制，不允许输入超过max个字符，少于min个字符时进入error状态。
+   * 
+   * @param min 最小长度。
+   * @param max 最大长度。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setTextLimit(min : number, max : number) : TRet  {
+    return edit_set_text_limit(this != null ? (this.nativeObj || this) : null, min, max);
+ }
+
+
+  /**
+   * 设置为整数输入及取值范围。
+   * 
+   * @param min 最小值。
+   * @param max 最大值。
+   * @param step 步长。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setIntLimit(min : number, max : number, step : number) : TRet  {
+    return edit_set_int_limit(this != null ? (this.nativeObj || this) : null, min, max, step);
+ }
+
+
+  /**
+   * 设置为浮点数输入及取值范围。
+   * 
+   * @param min 最小值。
+   * @param max 最大值。
+   * @param step 步长。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setFloatLimit(min : number, max : number, step : number) : TRet  {
+    return edit_set_float_limit(this != null ? (this.nativeObj || this) : null, min, max, step);
+ }
+
+
+  /**
+   * 设置编辑器是否为只读。
+   * 
+   * @param readonly 只读。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setReadonly(readonly : boolean) : TRet  {
+    return edit_set_readonly(this != null ? (this.nativeObj || this) : null, readonly);
+ }
+
+
+  /**
+   * 设置编辑器是否为自动改正。
+   * 
+   * @param auto_fix 自动改正。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setAutoFix(auto_fix : boolean) : TRet  {
+    return edit_set_auto_fix(this != null ? (this.nativeObj || this) : null, auto_fix);
+ }
+
+
+  /**
+   * 设置编辑器是否在获得焦点时不选中文本。
+   * 
+   * @param select_none_when_focused 是否在获得焦点时不选中文本。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setSelectNoneWhenFocused(select_none_when_focused : boolean) : TRet  {
+    return edit_set_select_none_when_focused(this != null ? (this.nativeObj || this) : null, select_none_when_focused);
+ }
+
+
+  /**
+   * 设置编辑器是否在获得焦点时打开输入法。
+   * 
+   * @param open_im_when_focused 是否在获得焦点时打开输入法。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setOpenImWhenFocused(open_im_when_focused : boolean) : TRet  {
+    return edit_set_open_im_when_focused(this != null ? (this.nativeObj || this) : null, open_im_when_focused);
+ }
+
+
+  /**
+   * 设置编辑器的输入类型。
+   * 
+   * @param type 输入类型。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setInputType(type : TInputType) : TRet  {
+    return edit_set_input_type(this != null ? (this.nativeObj || this) : null, type);
+ }
+
+
+  /**
+   * 设置编辑器的输入提示。
+   * 
+   * @param tips 输入提示。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setInputTips(tips : string) : TRet  {
+    return edit_set_input_tips(this != null ? (this.nativeObj || this) : null, tips);
+ }
+
+
+  /**
+   * 当编辑器输入类型为密码时，设置密码是否可见。
+   * 
+   * @param password_visible 密码是否可见。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setPasswordVisible(password_visible : boolean) : TRet  {
+    return edit_set_password_visible(this != null ? (this.nativeObj || this) : null, password_visible);
+ }
+
+
+  /**
+   * 设置为焦点。
+   * 
+   * @param focus 是否为焦点。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setFocus(focus : boolean) : TRet  {
+    return edit_set_focus(this != null ? (this.nativeObj || this) : null, focus);
+ }
+
+
+  /**
+   * 设置输入框的光标坐标。
+   * 
+   * @param cursor 是否为焦点。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setCursor(cursor : number) : TRet  {
+    return edit_set_cursor(this != null ? (this.nativeObj || this) : null, cursor);
+ }
+
+
+  /**
+   * 编辑器是否为只读。
+   *
+   */
+ get readonly() : boolean {
+   return edit_t_get_prop_readonly(this.nativeObj);
+ }
+
+ set readonly(v : boolean) {
+   this.setReadonly(v);
+ }
+
+
+  /**
+   * 密码是否可见。
+   *
+   */
+ get passwordVisible() : boolean {
+   return edit_t_get_prop_password_visible(this.nativeObj);
+ }
+
+ set passwordVisible(v : boolean) {
+   this.setPasswordVisible(v);
+ }
+
+
+  /**
+   * 输入无效时，是否自动改正。
+   *
+   */
+ get autoFix() : boolean {
+   return edit_t_get_prop_auto_fix(this.nativeObj);
+ }
+
+ set autoFix(v : boolean) {
+   this.setAutoFix(v);
+ }
+
+
+  /**
+   * 获得焦点时不选中文本。
+   *
+   *> 主要用于没有指针设备的情况，否则软键盘无法取消选中文本。
+   *
+   */
+ get selectNoneWhenFocused() : boolean {
+   return edit_t_get_prop_select_none_when_focused(this.nativeObj);
+ }
+
+ set selectNoneWhenFocused(v : boolean) {
+   this.setSelectNoneWhenFocused(v);
+ }
+
+
+  /**
+   * 获得焦点时打开输入法。
+   *
+   *> 主要用于没有指针设备的情况，否则每次切换焦点时都打开输入法。
+   *
+   */
+ get openImWhenFocused() : boolean {
+   return edit_t_get_prop_open_im_when_focused(this.nativeObj);
+ }
+
+ set openImWhenFocused(v : boolean) {
+   this.setOpenImWhenFocused(v);
+ }
+
+
+  /**
+   * 输入提示。
+   *
+   */
+ get tips() : string {
+   return edit_t_get_prop_tips(this.nativeObj);
+ }
+
+
+  /**
+   * 输入类型。
+   *
+   */
+ get inputType() : TInputType {
+   return edit_t_get_prop_input_type(this.nativeObj);
+ }
+
+ set inputType(v : TInputType) {
+   this.setInputType(v);
+ }
+
+
+  /**
+   * 最小值或最小长度。
+   *
+   */
+ get min() : number {
+   return edit_t_get_prop_min(this.nativeObj);
+ }
+
+
+  /**
+   * 最大值或最大长度。
+   *
+   */
+ get max() : number {
+   return edit_t_get_prop_max(this.nativeObj);
+ }
+
+
+  /**
+   * 步长。
+   *作为数值型编辑器时，一次增加和减少时的数值。
+   *
+   */
+ get step() : number {
+   return edit_t_get_prop_step(this.nativeObj);
+ }
+
+};
+/**
  * 可变的style(可实时修改并生效，主要用于在designer中被编辑的控件，或者一些特殊控件)。
  *
  *style\_mutable也对style\_const进行了包装，当用户没修改某个值时，便从style\_const中获取。
@@ -15628,6 +17603,98 @@ export class TStyleMutable extends TStyle {
 
  set name(v : string) {
    this.setName(v);
+ }
+
+};
+/**
+ * dragger控件。
+ *
+ *目前主要用于scrollbar里的滑块。
+ *
+ */
+export class TDragger extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建dragger对象。
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TDragger  {
+    return new TDragger(dragger_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为dragger对象(供脚本语言使用)。
+   * 
+   * @param widget dragger对象。
+   *
+   * @returns dragger对象。
+   */
+ static cast(widget : TWidget) : TDragger  {
+    return new TDragger(dragger_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 设置拖动的范围。
+   * 
+   * @param x_min x坐标最小值。
+   * @param y_min y坐标最小值。
+   * @param x_max x坐标最大值。
+   * @param y_max y坐标最大值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setRange(x_min : number, y_min : number, x_max : number, y_max : number) : TRet  {
+    return dragger_set_range(this != null ? (this.nativeObj || this) : null, x_min, y_min, x_max, y_max);
+ }
+
+
+  /**
+   * x坐标的最小值。
+   *
+   */
+ get xMin() : number {
+   return dragger_t_get_prop_x_min(this.nativeObj);
+ }
+
+
+  /**
+   * y坐标的最小值。
+   *
+   */
+ get yMin() : number {
+   return dragger_t_get_prop_y_min(this.nativeObj);
+ }
+
+
+  /**
+   * x坐标的最大值。
+   *
+   */
+ get xMax() : number {
+   return dragger_t_get_prop_x_max(this.nativeObj);
+ }
+
+
+  /**
+   * y坐标的最大值。
+   *
+   */
+ get yMax() : number {
+   return dragger_t_get_prop_y_max(this.nativeObj);
  }
 
 };
@@ -16517,6 +18584,120 @@ export class TButton extends TWidget {
 
  set enableLongPress(v : boolean) {
    this.setEnableLongPress(v);
+ }
+
+};
+/**
+ * 数字时钟控件。
+ *
+ *digit\_clock\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于digit\_clock\_t控件。
+ *
+ *在xml中使用"digit\_clock"标签创建数字时钟控件。如：
+ *
+ *```xml
+ *<digit_clock format="YY/MM/DD h:mm:ss"/>
+ *```
+ *
+ *> 更多用法请参考：[digit\_clock.xml](
+ *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/digit_clock.xml)
+ *
+ *在c代码中使用函数digit\_clock\_create创建数字时钟控件。如：
+ *
+ *
+ *> 完整示例请参考：[digit\_clock demo](
+ *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/digit_clock.c)
+ *
+ *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
+ *
+ *```xml
+ *<style name="default">
+ *<normal text_color="black" />
+ *</style>
+ *```
+ *
+ *> 更多用法请参考：[theme default](
+ *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L138)
+ *
+ */
+export class TDigitClock extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建digit_clock对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TDigitClock  {
+    return new TDigitClock(digit_clock_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为digit_clock对象(供脚本语言使用)。
+   * 
+   * @param widget digit_clock对象。
+   *
+   * @returns digit_clock对象。
+   */
+ static cast(widget : TWidget) : TDigitClock  {
+    return new TDigitClock(digit_clock_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 设置显示格式。
+   * 
+   * @param format 格式。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setFormat(format : string) : TRet  {
+    return digit_clock_set_format(this != null ? (this.nativeObj || this) : null, format);
+ }
+
+
+  /**
+   * 显示格式。
+   *
+   ** Y 代表年(完整显示)
+   ** M 代表月(1-12)
+   ** D 代表日(1-31)
+   ** h 代表时(0-23)
+   ** m 代表分(0-59)
+   ** s 代表秒(0-59)
+   ** w 代表星期(0-6)
+   ** W 代表星期的英文缩写(支持翻译)
+   ** YY 代表年(只显示末两位)
+   ** MM 代表月(01-12)
+   ** DD 代表日(01-31)
+   ** hh 代表时(00-23)
+   ** mm 代表分(00-59)
+   ** ss 代表秒(00-59)
+   ** MMM 代表月的英文缩写(支持翻译)
+   *
+   *如 日期时间为：2018/11/12 9:10:20
+   ** "Y/D/M"显示为"2018/11/12"
+   ** "Y-D-M"显示为"2018-11-12"
+   ** "Y-D-M h:m:s"显示为"2018-11-12 9:10:20"
+   ** "Y-D-M hh:mm:ss"显示为"2018-11-12 09:10:20"
+   *
+   */
+ get format() : string {
+   return digit_clock_t_get_prop_format(this.nativeObj);
+ }
+
+ set format(v : string) {
+   this.setFormat(v);
  }
 
 };
@@ -17422,2255 +19603,6 @@ export class TDialogTitle extends TWidget {
 
 };
 /**
- * 数字时钟控件。
- *
- *digit\_clock\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于digit\_clock\_t控件。
- *
- *在xml中使用"digit\_clock"标签创建数字时钟控件。如：
- *
- *```xml
- *<digit_clock format="YY/MM/DD h:mm:ss"/>
- *```
- *
- *> 更多用法请参考：[digit\_clock.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/digit_clock.xml)
- *
- *在c代码中使用函数digit\_clock\_create创建数字时钟控件。如：
- *
- *
- *> 完整示例请参考：[digit\_clock demo](
- *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/digit_clock.c)
- *
- *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
- *
- *```xml
- *<style name="default">
- *<normal text_color="black" />
- *</style>
- *```
- *
- *> 更多用法请参考：[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L138)
- *
- */
-export class TDigitClock extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建digit_clock对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TDigitClock  {
-    return new TDigitClock(digit_clock_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换为digit_clock对象(供脚本语言使用)。
-   * 
-   * @param widget digit_clock对象。
-   *
-   * @returns digit_clock对象。
-   */
- static cast(widget : TWidget) : TDigitClock  {
-    return new TDigitClock(digit_clock_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-
-  /**
-   * 设置显示格式。
-   * 
-   * @param format 格式。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setFormat(format : string) : TRet  {
-    return digit_clock_set_format(this != null ? (this.nativeObj || this) : null, format);
- }
-
-
-  /**
-   * 显示格式。
-   *
-   ** Y 代表年(完整显示)
-   ** M 代表月(1-12)
-   ** D 代表日(1-31)
-   ** h 代表时(0-23)
-   ** m 代表分(0-59)
-   ** s 代表秒(0-59)
-   ** w 代表星期(0-6)
-   ** W 代表星期的英文缩写(支持翻译)
-   ** YY 代表年(只显示末两位)
-   ** MM 代表月(01-12)
-   ** DD 代表日(01-31)
-   ** hh 代表时(00-23)
-   ** mm 代表分(00-59)
-   ** ss 代表秒(00-59)
-   ** MMM 代表月的英文缩写(支持翻译)
-   *
-   *如 日期时间为：2018/11/12 9:10:20
-   ** "Y/D/M"显示为"2018/11/12"
-   ** "Y-D-M"显示为"2018-11-12"
-   ** "Y-D-M h:m:s"显示为"2018-11-12 9:10:20"
-   ** "Y-D-M hh:mm:ss"显示为"2018-11-12 09:10:20"
-   *
-   */
- get format() : string {
-   return digit_clock_t_get_prop_format(this.nativeObj);
- }
-
- set format(v : string) {
-   this.setFormat(v);
- }
-
-};
-/**
- * dragger控件。
- *
- *目前主要用于scrollbar里的滑块。
- *
- */
-export class TDragger extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建dragger对象。
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TDragger  {
-    return new TDragger(dragger_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换为dragger对象(供脚本语言使用)。
-   * 
-   * @param widget dragger对象。
-   *
-   * @returns dragger对象。
-   */
- static cast(widget : TWidget) : TDragger  {
-    return new TDragger(dragger_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-
-  /**
-   * 设置拖动的范围。
-   * 
-   * @param x_min x坐标最小值。
-   * @param y_min y坐标最小值。
-   * @param x_max x坐标最大值。
-   * @param y_max y坐标最大值。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setRange(x_min : number, y_min : number, x_max : number, y_max : number) : TRet  {
-    return dragger_set_range(this != null ? (this.nativeObj || this) : null, x_min, y_min, x_max, y_max);
- }
-
-
-  /**
-   * x坐标的最小值。
-   *
-   */
- get xMin() : number {
-   return dragger_t_get_prop_x_min(this.nativeObj);
- }
-
-
-  /**
-   * y坐标的最小值。
-   *
-   */
- get yMin() : number {
-   return dragger_t_get_prop_y_min(this.nativeObj);
- }
-
-
-  /**
-   * x坐标的最大值。
-   *
-   */
- get xMax() : number {
-   return dragger_t_get_prop_x_max(this.nativeObj);
- }
-
-
-  /**
-   * y坐标的最大值。
-   *
-   */
- get yMax() : number {
-   return dragger_t_get_prop_y_max(this.nativeObj);
- }
-
-};
-/**
- * 单行编辑器控件。
- *
- *在基于SDL的平台，单行编辑器控件使用平台原生的输入法，对于嵌入式平台使用内置的输入法。
- *
- *在使用内置的输入法时，软键盘由输入类型决定，开发者可以自定义软键盘的界面。
- *
- *edit\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于edit\_t控件。
- *
- *edit\_t本身可以做为容器，放入按钮等控件。有几个特殊的子控件：
- *
- ** 名为"clear"的按钮。点击时清除编辑器中的内容。
- ** 名为"inc"的按钮。点击时增加编辑器的值，用于实现类似于spinbox的功能。
- ** 名为"dec"的按钮。点击时减少编辑器的值，用于实现类似于spinbox的功能。
- ** 名为"visible"的复选框。勾选时显示密码，反之不显示密码。
- *
- *在xml中使用"edit"标签创建编辑器控件。如：
- *
- *```xml
- *<edit x="c" y="m" w="80" h="30"
- *tips="age" input_type="uint" min="0" max="150" step="1" auto_fix="true" style="number" />
- *```
- *
- *> XXX：需要在min/max/step之前设置input\_type。
- *
- *>更多用法请参考：
- *[edit.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/edit.xml)
- *
- *在c代码中使用函数edit\_create创建编辑器控件。如：
- *
- *
- *> 创建之后，可以用widget\_set\_text或widget\_set\_text\_utf8设置文本内容。
- *
- *> 完整示例请参考：
- *[edit demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/edit.c)
- *
- *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
- *
- *```xml
- *<style name="default" border_color="#a0a0a0"  text_color="black" text_align_h="left">
- *<normal     bg_color="#f0f0f0" />
- *<focused    bg_color="#f0f0f0" border_color="black"/>
- *<disable    bg_color="gray" text_color="#d0d0d0" />
- *<error      bg_color="#f0f0f0" text_color="red" />
- *<empty      bg_color="#f0f0f0" text_color="#a0a0a0" />
- *</style>
- *```
- *
- *> 更多用法请参考：
- *[theme
- *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L104)
- *
- */
-export class TEdit extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建edit对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TEdit  {
-    return new TEdit(edit_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换为edit对象(供脚本语言使用)。
-   * 
-   * @param widget edit对象。
-   *
-   * @returns edit对象。
-   */
- static cast(widget : TWidget) : TEdit  {
-    return new TEdit(edit_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-
-  /**
-   * 获取int类型的值。
-   * 
-   *
-   * @returns 返回int的值。
-   */
- getInt() : number  {
-    return edit_get_int(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 获取double类型的值。
-   * 
-   *
-   * @returns 返回double的值。
-   */
- getDouble() : number  {
-    return edit_get_double(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 设置int类型的值。
-   * 
-   * @param value 值。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setInt(value : any) : TRet  {
-    return edit_set_int(this != null ? (this.nativeObj || this) : null, value);
- }
-
-
-  /**
-   * 设置double类型的值。
-   * 
-   * @param value 值。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setDouble(value : any) : TRet  {
-    return edit_set_double(this != null ? (this.nativeObj || this) : null, value);
- }
-
-
-  /**
-   * 设置为文本输入及其长度限制，不允许输入超过max个字符，少于min个字符时进入error状态。
-   * 
-   * @param min 最小长度。
-   * @param max 最大长度。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setTextLimit(min : number, max : number) : TRet  {
-    return edit_set_text_limit(this != null ? (this.nativeObj || this) : null, min, max);
- }
-
-
-  /**
-   * 设置为整数输入及取值范围。
-   * 
-   * @param min 最小值。
-   * @param max 最大值。
-   * @param step 步长。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setIntLimit(min : number, max : number, step : number) : TRet  {
-    return edit_set_int_limit(this != null ? (this.nativeObj || this) : null, min, max, step);
- }
-
-
-  /**
-   * 设置为浮点数输入及取值范围。
-   * 
-   * @param min 最小值。
-   * @param max 最大值。
-   * @param step 步长。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setFloatLimit(min : number, max : number, step : number) : TRet  {
-    return edit_set_float_limit(this != null ? (this.nativeObj || this) : null, min, max, step);
- }
-
-
-  /**
-   * 设置编辑器是否为只读。
-   * 
-   * @param readonly 只读。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setReadonly(readonly : boolean) : TRet  {
-    return edit_set_readonly(this != null ? (this.nativeObj || this) : null, readonly);
- }
-
-
-  /**
-   * 设置编辑器是否为自动改正。
-   * 
-   * @param auto_fix 自动改正。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setAutoFix(auto_fix : boolean) : TRet  {
-    return edit_set_auto_fix(this != null ? (this.nativeObj || this) : null, auto_fix);
- }
-
-
-  /**
-   * 设置编辑器是否在获得焦点时不选中文本。
-   * 
-   * @param select_none_when_focused 是否在获得焦点时不选中文本。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setSelectNoneWhenFocused(select_none_when_focused : boolean) : TRet  {
-    return edit_set_select_none_when_focused(this != null ? (this.nativeObj || this) : null, select_none_when_focused);
- }
-
-
-  /**
-   * 设置编辑器是否在获得焦点时打开输入法。
-   * 
-   * @param open_im_when_focused 是否在获得焦点时打开输入法。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setOpenImWhenFocused(open_im_when_focused : boolean) : TRet  {
-    return edit_set_open_im_when_focused(this != null ? (this.nativeObj || this) : null, open_im_when_focused);
- }
-
-
-  /**
-   * 设置编辑器的输入类型。
-   * 
-   * @param type 输入类型。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setInputType(type : TInputType) : TRet  {
-    return edit_set_input_type(this != null ? (this.nativeObj || this) : null, type);
- }
-
-
-  /**
-   * 设置编辑器的输入提示。
-   * 
-   * @param tips 输入提示。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setInputTips(tips : string) : TRet  {
-    return edit_set_input_tips(this != null ? (this.nativeObj || this) : null, tips);
- }
-
-
-  /**
-   * 当编辑器输入类型为密码时，设置密码是否可见。
-   * 
-   * @param password_visible 密码是否可见。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setPasswordVisible(password_visible : boolean) : TRet  {
-    return edit_set_password_visible(this != null ? (this.nativeObj || this) : null, password_visible);
- }
-
-
-  /**
-   * 设置为焦点。
-   * 
-   * @param focus 是否为焦点。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setFocus(focus : boolean) : TRet  {
-    return edit_set_focus(this != null ? (this.nativeObj || this) : null, focus);
- }
-
-
-  /**
-   * 设置输入框的光标坐标。
-   * 
-   * @param cursor 是否为焦点。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setCursor(cursor : number) : TRet  {
-    return edit_set_cursor(this != null ? (this.nativeObj || this) : null, cursor);
- }
-
-
-  /**
-   * 编辑器是否为只读。
-   *
-   */
- get readonly() : boolean {
-   return edit_t_get_prop_readonly(this.nativeObj);
- }
-
- set readonly(v : boolean) {
-   this.setReadonly(v);
- }
-
-
-  /**
-   * 密码是否可见。
-   *
-   */
- get passwordVisible() : boolean {
-   return edit_t_get_prop_password_visible(this.nativeObj);
- }
-
- set passwordVisible(v : boolean) {
-   this.setPasswordVisible(v);
- }
-
-
-  /**
-   * 输入无效时，是否自动改正。
-   *
-   */
- get autoFix() : boolean {
-   return edit_t_get_prop_auto_fix(this.nativeObj);
- }
-
- set autoFix(v : boolean) {
-   this.setAutoFix(v);
- }
-
-
-  /**
-   * 获得焦点时不选中文本。
-   *
-   *> 主要用于没有指针设备的情况，否则软键盘无法取消选中文本。
-   *
-   */
- get selectNoneWhenFocused() : boolean {
-   return edit_t_get_prop_select_none_when_focused(this.nativeObj);
- }
-
- set selectNoneWhenFocused(v : boolean) {
-   this.setSelectNoneWhenFocused(v);
- }
-
-
-  /**
-   * 获得焦点时打开输入法。
-   *
-   *> 主要用于没有指针设备的情况，否则每次切换焦点时都打开输入法。
-   *
-   */
- get openImWhenFocused() : boolean {
-   return edit_t_get_prop_open_im_when_focused(this.nativeObj);
- }
-
- set openImWhenFocused(v : boolean) {
-   this.setOpenImWhenFocused(v);
- }
-
-
-  /**
-   * 输入提示。
-   *
-   */
- get tips() : string {
-   return edit_t_get_prop_tips(this.nativeObj);
- }
-
-
-  /**
-   * 输入类型。
-   *
-   */
- get inputType() : TInputType {
-   return edit_t_get_prop_input_type(this.nativeObj);
- }
-
- set inputType(v : TInputType) {
-   this.setInputType(v);
- }
-
-
-  /**
-   * 最小值或最小长度。
-   *
-   */
- get min() : number {
-   return edit_t_get_prop_min(this.nativeObj);
- }
-
-
-  /**
-   * 最大值或最大长度。
-   *
-   */
- get max() : number {
-   return edit_t_get_prop_max(this.nativeObj);
- }
-
-
-  /**
-   * 步长。
-   *作为数值型编辑器时，一次增加和减少时的数值。
-   *
-   */
- get step() : number {
-   return edit_t_get_prop_step(this.nativeObj);
- }
-
-};
-/**
- * grid_item。一个简单的容器控件，一般作为grid的子控件。
- *
- *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
- *子控件的布局可用layout\_children属性指定。
- *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
- *
- *grid\_item\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于grid\_item\_t控件。
- *
- *在xml中使用"grid\_item"标签创建grid\_item。如：
- *
- *```xml
- *<grid x="0" y="0" w="100%" h="100%" children_layout="default(c=2,r=2,m=5,s=5)">
- *<grid_item>
- *<button x="c" y="m" w="80%" h="30" name="0" text="0"/>
- *</grid_item>
- *<grid_item>
- *<button x="c" y="m" w="80%" h="30" name="1" text="1"/>
- *</grid_item>
- *<grid_item>
- *<button x="c" y="m" w="80%" h="30" name="2" text="2"/>
- *</grid_item>
- *<grid_item>
- *<button x="c" y="m" w="80%" h="30" name="3" text="3"/>
- *</grid_item>
- *</grid>
- *
- *```
- *
- *可用通过style来设置控件的显示风格，如背景颜色等。如：
- *
- *```xml
- *<style name="default" border_color="#a0a0a0">
- *<normal     bg_color="#f0f0f0" />
- *</style>
- *```
- *
- */
-export class TGridItem extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建grid_item对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGridItem  {
-    return new TGridItem(grid_item_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换为grid_item对象(供脚本语言使用)。
-   * 
-   * @param widget grid_item对象。
-   *
-   * @returns grid_item对象。
-   */
- static cast(widget : TWidget) : TGridItem  {
-    return new TGridItem(grid_item_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-};
-/**
- * grid控件。一个简单的容器控件，用于网格排列一组控件。
- *
- *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
- *子控件的布局可用layout\_children属性指定。
- *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
- *
- *grid\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于grid\_t控件。
- *
- *在xml中使用"grid"标签创建grid。如：
- *
- *```xml
- *<grid x="0" y="0" w="100%" h="100%" children_layout="default(c=2,r=2,m=5,s=5)">
- *<button name="open:basic" text="Basic"/>
- *<button name="open:button" text="Buttons"/>
- *<button name="open:edit" text="Edits"/>
- *<button name="open:keyboard" text="KeyBoard"/>
- *</grid>
- *```
- *
- *可用通过style来设置控件的显示风格，如背景颜色等。如：
- *
- *```xml
- *<style name="default" border_color="#a0a0a0">
- *<normal     bg_color="#f0f0f0" />
- *</style>
- *```
- *
- */
-export class TGrid extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建grid对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGrid  {
-    return new TGrid(grid_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换为grid对象(供脚本语言使用)。
-   * 
-   * @param widget grid对象。
-   *
-   * @returns grid对象。
-   */
- static cast(widget : TWidget) : TGrid  {
-    return new TGrid(grid_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-};
-/**
- * 分组控件。
- *
- *单选按钮在同一个父控件中是互斥的，所以通常将相关的单选按钮放在一个group\_box中。
- *
- *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
- *子控件的布局可用layout\_children属性指定。
- *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
- *
- *group\_box\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于group\_box\_t控件。
- *
- *在xml中使用"group\_box"标签创建group\_box。如：
- *
- *```xml
- *<group_box x="20" y="230" w="50%" h="90" children_layout="default(r=3,c=1,ym=2,s=10)"
- *<radio_button name="r1" text="Book"/>
- *<radio_button name="r2" text="Food"/>
- *<radio_button name="r3" text="Pencil" value="true"/>
- *</group_box>
- *```
- *
- *可用通过style来设置控件的显示风格，如背景颜色等。如：
- *
- *```xml
- *<style name="default" border_color="#a0a0a0">
- *<normal     bg_color="#f0f0f0" />
- *</style>
- *```
- *
- */
-export class TGroupBox extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建group_box对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGroupBox  {
-    return new TGroupBox(group_box_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换为group_box对象(供脚本语言使用)。
-   * 
-   * @param widget group_box对象。
-   *
-   * @returns group_box对象。
-   */
- static cast(widget : TWidget) : TGroupBox  {
-    return new TGroupBox(group_box_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-};
-/**
- * 文本控件。用于显示一行或多行文本。
- *
- *文本控件不会根据文本的长度自动换行，只有文本内容包含换行符时才会换行。
- *
- *如需自动换行请使用[rich\_text\_t](rich_text_t.md)控件。
- *
- *label\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于label\_t控件。
- *
- *在xml中使用"label"标签创建文本控件。如：
- *
- *```xml
- *<label style="center" text="center"/>
- *```
- *
- *> 更多用法请参考：[label.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/label.xml)
- *
- *在c代码中使用函数label\_create创建文本控件。如：
- *
- *
- *> 创建之后，需要用widget\_set\_text或widget\_set\_text\_utf8设置文本内容。
- *
- *> 完整示例请参考：[label demo](
- *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/label.c)
- *
- *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
- *
- *```xml
- *<style name="left">
- *<normal text_color="red" text_align_h="left" border_color="#a0a0a0" margin="4" />
- *</style>
- *```
- *
- *> 更多用法请参考：
- *[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L144)
- *
- */
-export class TLabel extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建label对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TLabel  {
-    return new TLabel(label_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 设置显示字符的个数(小余0时全部显示)。。
-   * 
-   * @param length 最大可显示字符个数。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setLength(length : number) : TRet  {
-    return label_set_length(this != null ? (this.nativeObj || this) : null, length);
- }
-
-
-  /**
-   * 根据文本内容调节控件大小。
-   * 
-   * @param min_w 最小宽度。
-   * @param max_w 最大宽度。
-   * @param min_h 最小高度。
-   * @param max_h 最大高度。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- resizeToContent(min_w : number, max_w : number, min_h : number, max_h : number) : TRet  {
-    return label_resize_to_content(this != null ? (this.nativeObj || this) : null, min_w, max_w, min_h, max_h);
- }
-
-
-  /**
-   * 转换为label对象(供脚本语言使用)。
-   * 
-   * @param widget label对象。
-   *
-   * @returns label对象。
-   */
- static cast(widget : TWidget) : TLabel  {
-    return new TLabel(label_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-
-  /**
-   * 显示字符的个数(小余0时全部显示)。
-   *主要用于动态改变显示字符的个数，来实现类似[拨号中...]的动画效果。
-   *
-   */
- get length() : number {
-   return label_t_get_prop_length(this.nativeObj);
- }
-
- set length(v : number) {
-   this.setLength(v);
- }
-
-};
-/**
- * overlay窗口。
- *
- *overlay窗口有点类似于非模态的dialog，但是它位置和大小是完全自由的，窗口管理器不会对它做任何限制。
- *
- *如果overlay窗口有透明或半透效果，则不支持窗口动画，但可以通过移动窗口位置来实现类似动画的效果。
- *
- *overlay\_t是[window\_base\_t](window_base_t.md)的子类控件，window\_base\_t的函数均适用于overlay\_t控件。
- *
- *在xml中使用"overlay"标签创建窗口。需要指定坐标和大小，可以指定主题和动画名称。如：
- *
- *```xml
- *<overlay theme="basic" x="100" y="100" w="200" h="300">
- *...
- *</overlay>
- *```
- *
- *>
- *更多用法请参考：[overlay.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
- *
- *在c代码中使用函数overlay\_create创建窗口。如：
- *
- *
- *> 完整示例请参考：[overlay
- *demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/)
- *
- *可用通过style来设置窗口的风格，如背景颜色或图片等。如：
- *
- *```xml
- *<style name="bricks">
- *<normal bg_image="bricks"  bg_image_draw_type="repeat"/>
- *</style>
- *```
- *
- *> 更多用法请参考：[theme
- *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L0)
- *
- */
-export class TOverlay extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建overlay对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TOverlay  {
-    return new TOverlay(overlay_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换为overlay对象(供脚本语言使用)。
-   * 
-   * @param widget overlay对象。
-   *
-   * @returns overlay对象。
-   */
- static cast(widget : TWidget) : TOverlay  {
-    return new TOverlay(overlay_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-};
-/**
- * 页面管理控件。
- *
- *只有一个Page处于active状态，处于active状态的Page才能显示并接收事件。
- *常用于实现标签控件中的页面管理。
- *
- *pages\_t是[widget\_t](widget_t.md)的子类控件，
- *widget\_t的函数均适用于pages\_t控件。
- *
- *在xml中使用"pages"标签创建页面管理控件。如：
- *
- *```xml
- *<tab_control x="0" y="0" w="100%" h="100%"
- *<pages x="c" y="20" w="90%" h="-60" value="1">
- *...
- *</pages>
- *<tab_button_group>
- *...
- *</tab_button_group>
- *</tab_control>
- *```
- *
- *> 更多用法请参考：
- *[tab control](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
- *
- */
-export class TPages extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建pages对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TPages  {
-    return new TPages(pages_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换为pages对象(供脚本语言使用)。
-   * 
-   * @param widget pages对象。
-   *
-   * @returns pages对象。
-   */
- static cast(widget : TWidget) : TPages  {
-    return new TPages(pages_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-
-  /**
-   * 设置当前的Page。
-   * 
-   * @param index 当前Page的序号。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setActive(index : number) : TRet  {
-    return pages_set_active(this != null ? (this.nativeObj || this) : null, index);
- }
-
-
-  /**
-   * 通过页面的名字设置当前的Page。
-   * 
-   * @param name 当前Page的名字。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setActiveByName(name : string) : TRet  {
-    return pages_set_active_by_name(this != null ? (this.nativeObj || this) : null, name);
- }
-
-
-  /**
-   * 当前活跃的page。
-   *
-   */
- get active() : number {
-   return pages_t_get_prop_active(this.nativeObj);
- }
-
- set active(v : number) {
-   this.setActive(v);
- }
-
-};
-/**
- * 进度条控件。
- *
- *进度条控件可以水平显示也可以垂直显示，由vertical属性决定。
- *
- *progress\_bar\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于progress\_bar\_t控件。
- *
- *在xml中使用"progress\_bar"标签创建进度条控件。如：
- *
- *```xml
- *<progress_bar name="bar1" x="10" y="128" w="240" h="30" value="40"/>
- *<progress_bar name="bar2" x="280" y="128" w="30" h="118" value="20" vertical="true"/>
- *```
- *
- *> 更多用法请参考：
- *[basic demo](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/basic.xml)
- *
- *在c代码中使用函数progress\_bar\_create创建进度条控件。如：
- *
- *
- *> 完整示例请参考：
- *[progress_bar demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/progress_bar.c)
- *
- *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
- *
- *```xml
- *<style>
- *<normal bg_color="#f0f0f0" text_color="gold" fg_color="#c0c0c0" border_color="#a0a0a0" />
- *</style>
- *```
- *
- *> 更多用法请参考：
- *[theme
- *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L183)
- *
- */
-export class TProgressBar extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建progress_bar对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TProgressBar  {
-    return new TProgressBar(progress_bar_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换为progress_bar对象(供脚本语言使用)。
-   * 
-   * @param widget progress_bar对象。
-   *
-   * @returns progress_bar对象。
-   */
- static cast(widget : TWidget) : TProgressBar  {
-    return new TProgressBar(progress_bar_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-
-  /**
-   * 设置进度条的进度。
-   * 
-   * @param value 进度
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setValue(value : any) : TRet  {
-    return progress_bar_set_value(this != null ? (this.nativeObj || this) : null, value);
- }
-
-
-  /**
-   * 设置最大值。
-   * 
-   * @param max 最大值。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setMax(max : number) : TRet  {
-    return progress_bar_set_max(this != null ? (this.nativeObj || this) : null, max);
- }
-
-
-  /**
-   * 设置进度条的方向。
-   * 
-   * @param vertical 是否为垂直方向。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setVertical(vertical : boolean) : TRet  {
-    return progress_bar_set_vertical(this != null ? (this.nativeObj || this) : null, vertical);
- }
-
-
-  /**
-   * 设置进度条的是否显示文本。
-   * 
-   * @param show_text 是否显示文本。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setShowText(show_text : boolean) : TRet  {
-    return progress_bar_set_show_text(this != null ? (this.nativeObj || this) : null, show_text);
- }
-
-
-  /**
-   * 获取进度百分比。
-   *
-   *> 当max为100时，percent和value取整后一致。
-   * 
-   *
-   * @returns 返回百分比。
-   */
- getPercent() : number  {
-    return progress_bar_get_percent(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 进度条的值[0-100]。
-   *
-   */
- get value() : number {
-   return progress_bar_t_get_prop_value(this.nativeObj);
- }
-
- set value(v : number) {
-   this.setValue(v);
- }
-
-
-  /**
-   * 最大值(缺省为100)。
-   *
-   */
- get max() : number {
-   return progress_bar_t_get_prop_max(this.nativeObj);
- }
-
- set max(v : number) {
-   this.setMax(v);
- }
-
-
-  /**
-   * 进度条的是否为垂直方向。
-   *
-   */
- get vertical() : boolean {
-   return progress_bar_t_get_prop_vertical(this.nativeObj);
- }
-
- set vertical(v : boolean) {
-   this.setVertical(v);
- }
-
-
-  /**
-   * 是否显示文本。
-   *
-   */
- get showText() : boolean {
-   return progress_bar_t_get_prop_show_text(this.nativeObj);
- }
-
- set showText(v : boolean) {
-   this.setShowText(v);
- }
-
-};
-/**
- * row。一个简单的容器控件，用于水平排列其子控件。
- *
- *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
- *子控件的布局可用layout\_children属性指定。
- *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
- *
- *row\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于row\_t控件。
- *
- *在xml中使用"row"标签创建row。如：
- *
- *```xml
- *<row x="0" y="0" w="100%" h="100%" children_layout="default(c=0,r=1)">
- *<button name="open:basic" text="Basic"/>
- *<button name="open:button" text="Buttons"/>
- *<button name="open:edit" text="Edits"/>
- *<button name="open:keyboard" text="KeyBoard"/>
- *</row>
- *```
- *
- *可用通过style来设置控件的显示风格，如背景颜色等。如：
- *
- *```xml
- *<style name="default" border_color="#a0a0a0">
- *<normal     bg_color="#f0f0f0" />
- *</style>
- *```
- *
- */
-export class TRow extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建row对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TRow  {
-    return new TRow(row_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换为row对象(供脚本语言使用)。
-   * 
-   * @param widget row对象。
-   *
-   * @returns row对象。
-   */
- static cast(widget : TWidget) : TRow  {
-    return new TRow(row_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-};
-/**
- * 滑块控件。
- *
- *slider\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于slider\_t控件。
- *
- *在xml中使用"slider"标签创建滑块控件。如：
- *
- *```xml
- *<slider x="center" y="10" w="80%" h="20" value="10"/>
- *<slider style="img" x="center" y="50" w="80%" h="30" value="20" />
- *<slider style="img" x="center" y="90" w="80%" h="30" value="30" min="5" max="50" step="5"/>
- *```
- *
- *> 更多用法请参考：
- *[basic](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/basic.xml)
- *
- *在c代码中使用函数slider\_create创建滑块控件。如：
- *
- *
- *> 完整示例请参考：
- *[slider demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/slider.c)
- *
- *可用通过style来设置控件的显示风格，如图片和颜色等等。如：
- *
- *```xml
- *<style name="img" bg_image="slider_bg" fg_image="slider_fg">
- *<normal icon="slider_drag"/>
- *<pressed icon="slider_drag_p"/>
- *<over icon="slider_drag_o"/>
- *</style>
- *```
- *
- *> 更多用法请参考：
- *[theme
- *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L179)
- *
- */
-export class TSlider extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建slider对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TSlider  {
-    return new TSlider(slider_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换为slider对象(供脚本语言使用)。
-   * 
-   * @param widget slider对象。
-   *
-   * @returns slider对象。
-   */
- static cast(widget : TWidget) : TSlider  {
-    return new TSlider(slider_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-
-  /**
-   * 设置滑块的值。
-   * 
-   * @param value 值
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setValue(value : any) : TRet  {
-    return slider_set_value(this != null ? (this.nativeObj || this) : null, value);
- }
-
-
-  /**
-   * 设置滑块的最小值。
-   * 
-   * @param min 最小值
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setMin(min : number) : TRet  {
-    return slider_set_min(this != null ? (this.nativeObj || this) : null, min);
- }
-
-
-  /**
-   * 设置滑块的最大值。
-   * 
-   * @param max 最大值
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setMax(max : number) : TRet  {
-    return slider_set_max(this != null ? (this.nativeObj || this) : null, max);
- }
-
-
-  /**
-   * 设置滑块的拖动的最小单位。
-   * 
-   * @param step 拖动的最小单位。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setStep(step : number) : TRet  {
-    return slider_set_step(this != null ? (this.nativeObj || this) : null, step);
- }
-
-
-  /**
-   * 设置bar的宽度或高度。
-   * 
-   * @param bar_size bar的宽度或高度。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setBarSize(bar_size : number) : TRet  {
-    return slider_set_bar_size(this != null ? (this.nativeObj || this) : null, bar_size);
- }
-
-
-  /**
-   * 设置滑块的方向。
-   * 
-   * @param vertical 是否为垂直方向。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setVertical(vertical : boolean) : TRet  {
-    return slider_set_vertical(this != null ? (this.nativeObj || this) : null, vertical);
- }
-
-
-  /**
-   * 值。
-   *
-   */
- get value() : number {
-   return slider_t_get_prop_value(this.nativeObj);
- }
-
- set value(v : number) {
-   this.setValue(v);
- }
-
-
-  /**
-   * 最小值。
-   *
-   */
- get min() : number {
-   return slider_t_get_prop_min(this.nativeObj);
- }
-
- set min(v : number) {
-   this.setMin(v);
- }
-
-
-  /**
-   * 最大值。
-   *
-   */
- get max() : number {
-   return slider_t_get_prop_max(this.nativeObj);
- }
-
- set max(v : number) {
-   this.setMax(v);
- }
-
-
-  /**
-   * 拖动的最小单位。
-   *
-   */
- get step() : number {
-   return slider_t_get_prop_step(this.nativeObj);
- }
-
- set step(v : number) {
-   this.setStep(v);
- }
-
-
-  /**
-   * 滑块的是否为垂直方向。
-   *
-   */
- get vertical() : boolean {
-   return slider_t_get_prop_vertical(this.nativeObj);
- }
-
- set vertical(v : boolean) {
-   this.setVertical(v);
- }
-
-
-  /**
-   * 轴的宽度或高度（单位：像素），为0表示为控件的宽度或高度的一半，缺省为0。
-   *
-   */
- get barSize() : number {
-   return slider_t_get_prop_bar_size(this.nativeObj);
- }
-
- set barSize(v : number) {
-   this.setBarSize(v);
- }
-
-
-  /**
-   * 滑块的宽度或高度（单位：像素），缺省为10。
-   *
-   */
- get draggerSize() : number {
-   return slider_t_get_prop_dragger_size(this.nativeObj);
- }
-
-
-  /**
-   * 滑块的宽度或高度是否与icon适应，缺省为true。
-   *
-   */
- get draggerAdaptToIcon() : boolean {
-   return slider_t_get_prop_dragger_adapt_to_icon(this.nativeObj);
- }
-
-
-  /**
-   * 是否允许在轴上滑动来改变滑块位置，缺省为FALSE。
-   *
-   */
- get slideWithBar() : boolean {
-   return slider_t_get_prop_slide_with_bar(this.nativeObj);
- }
-
-};
-/**
- * 标签按钮分组控件。
- *
- *一个简单的容器，主要用于对标签按钮进行布局和管理。
- *
- *tab\_button\_group\_t是[widget\_t](widget_t.md)的子类控件，
- *widget\_t的函数均适用于tab\_button\_group\_t控件。
- *
- *在xml中使用"tab\_button\_group"标签创建标签按钮分组控件。如：
- *
- *```xml
- *<tab_button_group x="c" y="bottom:10" w="90%" h="30" compact="true"
- *<tab_button text="General"/>
- *<tab_button text="Network" value="true" />
- *<tab_button text="Security"/>
- *</tab_button_group>
- *```
- *
- *> 更多用法请参考：
- *[tab control](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
- *
- *可用通过style来设置控件的显示风格，如颜色等等。如：
- *
- *```xml
- *<tab_button_group>
- *<style name="default">
- *<normal/>
- *</style>
- *</tab_button_group>
- *```
- *
- */
-export class TTabButtonGroup extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建tab_button_group对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TTabButtonGroup  {
-    return new TTabButtonGroup(tab_button_group_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 设置compact。
-   * 
-   * @param compact 是否使用紧凑布局(缺省FALSE)。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setCompact(compact : boolean) : TRet  {
-    return tab_button_group_set_compact(this != null ? (this.nativeObj || this) : null, compact);
- }
-
-
-  /**
-   * 设置scrollable。
-   * 
-   * @param scrollable 是否允许滚动(缺省FALSE)。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setScrollable(scrollable : boolean) : TRet  {
-    return tab_button_group_set_scrollable(this != null ? (this.nativeObj || this) : null, scrollable);
- }
-
-
-  /**
-   * 转换tab_button_group对象(供脚本语言使用)。
-   * 
-   * @param widget tab_button_group对象。
-   *
-   * @returns tab_button_group对象。
-   */
- static cast(widget : TWidget) : TTabButtonGroup  {
-    return new TTabButtonGroup(tab_button_group_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-
-  /**
-   * 紧凑型排版子控件(缺省FALSE)。
-   *
-   */
- get compact() : boolean {
-   return tab_button_group_t_get_prop_compact(this.nativeObj);
- }
-
- set compact(v : boolean) {
-   this.setCompact(v);
- }
-
-
-  /**
-   * 是否支持滚动(缺省FALSE)。
-   *
-   *> 紧凑型排版子控件时才支持滚动。
-   *
-   */
- get scrollable() : boolean {
-   return tab_button_group_t_get_prop_scrollable(this.nativeObj);
- }
-
- set scrollable(v : boolean) {
-   this.setScrollable(v);
- }
-
-};
-/**
- * 标签按钮控件。
- *
- *标签按钮有点类似单选按钮，但点击标签按钮之后会自动切换当前的标签页。
- *
- *tab\_button\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于tab\_button\_t控件。
- *
- *在xml中使用"tab\_button"标签创建标签按钮控件。如：
- *
- *```xml
- *<!-- tab_button_view_page1.xml -->
- *<view w="100%" h="100%">
- *<label x="c" y="m" w="100%" h="60" text="page1" />
- *<button name="close" x="c" y="bottom:100" w="80" h="40" text="Close" />
- *</view>
- *```
- *
- *```xml
- *<!-- tab_button dynamic load UI -->
- *<pages name="pages" x="right" y="0" w="70%" h="100%">
- *</pages>
- *<list_view x="0" y="0" w="30%" h="100%" item_height="40" auto_hide_scroll_bar="true">
- *<scroll_view name="view" x="0"  y="0" w="-12" h="100%">
- *<tab_button text="page1" load_ui="tab_button_view_page1" value="true"/>
- *<tab_button text="page2" load_ui="tab_button_view_page2" />
- *<tab_button text="page3" load_ui="tab_button_view_page3" />
- *<scroll_view />
- *<scroll_bar_d name="bar" x="right" y="0" w="12" h="100%" value="0"/>
- *</list_view>
- *```
- *
- *```xml
- *<!-- tab_button static load UI -->
- *<tab_button_group x="c" y="bottom:10" w="90%" h="30" compact="true"
- *<tab_button text="General"/>
- *<tab_button text="Network" value="true" />
- *<tab_button text="Security"/>
- *</tab_button_group>
- *```
- *
- *标签按钮一般放在标签按钮分组中，布局由标签按钮分组控件决定，不需要指定自己的布局参数和坐标。
- *
- *> 更多用法请参考：
- *[tab control](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
- *
- *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
- *
- *```xml
- *<tab_button>
- *<style name="default" border_color="#a0a0a0"  text_color="black">
- *<normal     bg_color="#d0d0d0" />
- *<pressed    bg_color="#f0f0f0" />
- *<over       bg_color="#e0e0e0" />
- *<normal_of_active     bg_color="#f0f0f0" />
- *<pressed_of_active    bg_color="#f0f0f0" />
- *<over_of_active       bg_color="#f0f0f0" />
- *</style>
- *</tab_button>
- *```
- *
- */
-export class TTabButton extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建tab_button对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TTabButton  {
-    return new TTabButton(tab_button_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换tab_button对象(供脚本语言使用)。
-   * 
-   * @param widget tab_button对象。
-   *
-   * @returns tab_button对象。
-   */
- static cast(widget : TWidget) : TTabButton  {
-    return new TTabButton(tab_button_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-
-  /**
-   * 设置为当前标签。
-   * 
-   * @param value 是否为当前标签。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setValue(value : any) : TRet  {
-    return tab_button_set_value(this != null ? (this.nativeObj || this) : null, value);
- }
-
-
-  /**
-   * 设置控件的图标。
-   * 
-   * @param name 当前项的图标。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setIcon(name : string) : TRet  {
-    return tab_button_set_icon(this != null ? (this.nativeObj || this) : null, name);
- }
-
-
-  /**
-   * 设置控件的active图标。
-   * 
-   * @param name 当前项的图标。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setActiveIcon(name : string) : TRet  {
-    return tab_button_set_active_icon(this != null ? (this.nativeObj || this) : null, name);
- }
-
-
-  /**
-   * 设置控件动态加载显示UI。
-   * 
-   * @param name 动态加载UI的资源名称。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setLoadUi(name : string) : TRet  {
-    return tab_button_set_load_ui(this != null ? (this.nativeObj || this) : null, name);
- }
-
-
-  /**
-   * 值。
-   *
-   */
- get value() : boolean {
-   return tab_button_t_get_prop_value(this.nativeObj);
- }
-
- set value(v : boolean) {
-   this.setValue(v);
- }
-
-
-  /**
-   * 激活后加载的UI名字。
-   *
-   */
- get loadUi() : string {
-   return tab_button_t_get_prop_load_ui(this.nativeObj);
- }
-
- set loadUi(v : string) {
-   this.setLoadUi(v);
- }
-
-
-  /**
-   * 当前项的图标的名称。
-   *
-   */
- get activeIcon() : string {
-   return tab_button_t_get_prop_active_icon(this.nativeObj);
- }
-
- set activeIcon(v : string) {
-   this.setActiveIcon(v);
- }
-
-
-  /**
-   * 非当前项的图标的名称。
-   *
-   */
- get icon() : string {
-   return tab_button_t_get_prop_icon(this.nativeObj);
- }
-
- set icon(v : string) {
-   this.setIcon(v);
- }
-
-};
-/**
- * 标签控件。
- *
- *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
- *
- *标签控件通常会包含一个pages控件和一个tab\_button\_group控件。
- *
- *
- *
- *tab\_control\_t是[widget\_t](widget_t.md)的子类控件，
- *widget\_t的函数均适用于tab\_control\_t控件。
- *
- *在xml中使用"tab\_control"标签创建标签控件。如：
- *
- *```xml
- *<tab_control x="0" y="0" w="100%" h="100%"
- *<pages x="c" y="20" w="90%" h="-60" value="1">
- *...
- *</pages>
- *<tab_button_group>
- *...
- *</tab_button_group>
- *</tab_control>
- *```
- *
- *> 更多用法请参考：
- *[tab control](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
- *
- */
-export class TTabControl extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建tab_control对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TTabControl  {
-    return new TTabControl(tab_control_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换tab_control对象(供脚本语言使用)。
-   * 
-   * @param widget tab_control对象。
-   *
-   * @returns tab_control对象。
-   */
- static cast(widget : TWidget) : TTabControl  {
-    return new TTabControl(tab_control_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-};
-/**
- * 一个通用的容器控件。
- *
- *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
- *子控件的布局可用layout\_children属性指定。
- *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
- *
- *view\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于view\_t控件。
- *
- *在xml中使用"view"标签创建view。如：
- *
- *```xml
- *<view x="0" y="0" w="100%" h="100%" children_layout="default(c=2,r=2,m=5,s=5)">
- *</view>
- *```
- *
- *可用通过style来设置控件的显示风格，如背景颜色等。如：
- *
- *```xml
- *<style name="default" border_color="#a0a0a0">
- *<normal     bg_color="#f0f0f0" />
- *</style>
- *```
- *
- */
-export class TView extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建view对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TView  {
-    return new TView(view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换为view对象(供脚本语言使用)。
-   * 
-   * @param widget view对象。
-   *
-   * @returns view对象。
-   */
- static cast(widget : TWidget) : TView  {
-    return new TView(view_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-};
-/**
- * 单个idle的信息。
- *
- */
-export class TIdleInfo extends TObject { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 转换为idle_info对象(供脚本语言使用)。
-   * 
-   * @param idle idle_info对象。
-   *
-   * @returns idle_info对象。
-   */
- static cast(idle : TIdleInfo) : TIdleInfo  {
-    return new TIdleInfo(idle_info_cast(idle != null ? (idle.nativeObj || idle) : null));
- }
-
-
-  /**
-   * idle回调函数上下文。
-   *
-   */
- get ctx() : any {
-   return idle_info_t_get_prop_ctx(this.nativeObj);
- }
-
-
-  /**
-   * idle的ID
-   *
-   *> 为TK\_INVALID\_ID时表示无效idle。
-   *
-   */
- get id() : number {
-   return idle_info_t_get_prop_id(this.nativeObj);
- }
-
-};
-/**
- * mutable图片控件。
- *
- *像摄像头和视频的图像是变化的，每一帧都不同，我们把这类图片称为mutable image。
- *
- *本控件辅助实现摄像头和视频的显示功能。
- *
- *mutable\_image\_t是[image\_base\_t](image_base_t.md)的子类控件，image\_base\_t的函数均适用于mutable\_image\_t控件。
- *
- *在xml中使用"mutable\_image"标签创建mutable图片控件。如：
- *
- *```xml
- *<mutable_image w="100%" h="100%"/>
- *```
- *
- *>更多用法请参考：
- *[mutable
- *image](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/mutable_image.xml)
- *
- *在c代码中使用函数mutable\_image\_create创建mutable图片控件。如：
- *
- *
- *> 创建之后:
- *>
- *> 需要用mutable\_image\_set\_prepare\_image设置准备图片的回调函数。
- *
- *> 完整示例请参考：[mutable image demo](
- *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/mutable_image.c)
- *
- *一般不需通过style来设置控件的显示风格，如果在特殊情况下需要，可以参考其它控件。
- *
- */
-export class TMutableImage extends TImageBase { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-};
-/**
- * 简单的动态数组，内部存放value对象。
- *
- *访问时属性名称为：
- *
- ** "size"/"length" 用于获取数组的长度。
- ** index 用于访问属性，-1可以用来追加新元素。
- *
- */
-export class TObjectArray extends TObject { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建对象。
-   * 
-   *
-   * @returns 返回object对象。
-   */
- static create() : TObjectArray  {
-    return new TObjectArray(object_array_create());
- }
-
-
-  /**
-   * for script gc
-   * 
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- unref() : TRet  {
-    return object_array_unref(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 清除全部属性。
-   * 
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- clearProps() : TRet  {
-    return object_array_clear_props(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 属性个数。
-   *
-   */
- get propsSize() : number {
-   return object_array_t_get_prop_props_size(this.nativeObj);
- }
-
-};
-/**
- * GIF图片控件。
- *
- *> 注意：GIF图片的尺寸大于控件大小时会自动缩小图片，但一般的嵌入式系统的硬件加速都不支持图片缩放，
- *所以缩放图片会导致性能明显下降。如果性能不满意时，请确认一下GIF图片的尺寸是否小余控件大小。
- *
- *gif\_image\_t是[image\_base\_t](image_base_t.md)的子类控件，image\_base\_t的函数均适用于gif\_image\_t控件。
- *
- *在xml中使用"gif"标签创建GIF图片控件。如：
- *
- *```xml
- *<gif image="bee"/>
- *```
- *
- *>更多用法请参考：
- *[gif
- *image](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/gif_image.xml)
- *
- *在c代码中使用函数gif\_image\_create创建GIF图片控件。如：
- *
- *
- *> 创建之后:
- *>
- *> 需要用widget\_set\_image设置图片名称。
- *
- *> 完整示例请参考：[gif image demo](
- *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/gif_image.c)
- *
- *可用通过style来设置控件的显示风格，如背景和边框等。如：
- *
- *```xml
- *<gif>
- *<style name="border">
- *<normal border_color="#000000" bg_color="#e0e0e0" text_color="black"/>
- *</style>
- *</gif>
- *```
- *
- *> 更多用法请参考：[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
- *
- */
-export class TGifImage extends TImageBase { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建gif_image对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGifImage  {
-    return new TGifImage(gif_image_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换为gif_image对象(供脚本语言使用)。
-   * 
-   * @param widget gif_image对象。
-   *
-   * @returns gif_image对象。
-   */
- static cast(widget : TWidget) : TGifImage  {
-    return new TGifImage(gif_image_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-};
-/**
  * 对象接口的缺省实现。
  *
  *内部使用有序数组保存所有属性，可以快速查找指定名称的属性。
@@ -19722,6 +19654,286 @@ export class TObjectDefault extends TObject {
    */
  get propsSize() : number {
    return object_default_t_get_prop_props_size(this.nativeObj);
+ }
+
+};
+/**
+ * 电阻屏校准窗口。
+ *
+ *calibration\_win\_t是[window\_base\_t](window_base_t.md)的子类控件，
+ *window\_base\_t的函数均适用于calibration\_win\_t控件。
+ *
+ *在xml中使用"calibration\_win"标签创建电阻屏校准窗口。如：
+ *
+ *```xml
+ *<calibration_win name="cali" w="100%" h="100%" text="Please click the center of cross">
+ *</calibration_win>
+ *```
+ *
+ *> 更多用法请参考：
+ *[window.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/calibration_win.xml)
+ *
+ *在c代码中使用函数calibration\_win\_create创建窗口。如：
+ *
+ *
+ *通过calibration\_win\_set\_on\_done注册回调函数，用于保存校准数据。
+ *
+ */
+export class TCalibrationWin extends TWindowBase { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 转换为calibration_win对象(供脚本语言使用)。
+   * 
+   * @param widget calibration_win对象。
+   *
+   * @returns calibration_win对象。
+   */
+ static cast(widget : TWidget) : TCalibrationWin  {
+    return new TCalibrationWin(calibration_win_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+};
+/**
+ * 窗口。
+ *
+ *缺省的应用程序窗口，占用除system\_bar\_t之外的整个区域，请不要修改它的位置和大小(除非你清楚后果)。
+ *
+ *window\_t是[window\_base\_t](window_base_t.md)的子类控件，window\_base\_t的函数均适用于window\_t控件。
+ *
+ *在xml中使用"window"标签创建窗口。无需指定坐标和大小，可以指定主题和动画名称。如：
+ *
+ *```xml
+ *<window theme="basic" anim_hint="htranslate">
+ *...
+ *</window>
+ *```
+ *
+ *>
+ *更多用法请参考：[window.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
+ *
+ *在c代码中使用函数window\_create创建窗口。如：
+ *
+ *
+ *> 无需指定父控件、坐标和大小，使用0即可。
+ *
+ *> 完整示例请参考：[window
+ *demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/)
+ *
+ *可用通过style来设置窗口的风格，如背景颜色或图片等。如：
+ *
+ *```xml
+ *<style name="bricks">
+ *<normal bg_image="bricks"  bg_image_draw_type="repeat"/>
+ *</style>
+ *```
+ *
+ *> 更多用法请参考：[theme
+ *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L0)
+ *
+ */
+export class TWindow extends TWindowBase { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建window对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWindow  {
+    return new TWindow(window_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 以缺省的方式创建window对象。
+   * 
+   *
+   * @returns 对象。
+   */
+ static createDefault() : TWindow  {
+    return new TWindow(window_create_default());
+ }
+
+
+  /**
+   * 设置为全屏窗口。
+   *
+   *>这里全屏是指与LCD相同大小，而非让SDL窗口全屏。
+   * 
+   * @param fullscreen 是否全屏。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setFullscreen(fullscreen : boolean) : TRet  {
+    return window_set_fullscreen(this != null ? (this.nativeObj || this) : null, fullscreen);
+ }
+
+
+  /**
+   * 从资源文件中加载并创建window_base对象。本函数在ui_loader/ui_builder_default里实现。
+   * 
+   * @param name window的名称。
+   *
+   * @returns 对象。
+   */
+ static open(name : string) : TWindow  {
+    return new TWindow(window_open(name));
+ }
+
+
+  /**
+   * 从资源文件中加载并创建window对象。本函数在ui_loader/ui_builder_default里实现。
+   * 
+   * @param name window的名称。
+   * @param to_close 关闭该窗口。
+   *
+   * @returns 对象。
+   */
+ static openAndClose(name : string, to_close : TWidget) : TWindow  {
+    return new TWindow(window_open_and_close(name, to_close != null ? (to_close.nativeObj || to_close) : null));
+ }
+
+
+  /**
+   * 关闭窗口。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ close() : TRet  {
+    return window_close(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 立即无条件关闭窗口(无动画)。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ closeForce() : TRet  {
+    return window_close_force(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 转换为window对象(供脚本语言使用)。
+   * 
+   * @param widget window对象。
+   *
+   * @returns window对象。
+   */
+ static cast(widget : TWidget) : TWindow  {
+    return new TWindow(window_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 是否全屏。
+   *
+   *>这里全屏是指与LCD相同大小，而非让SDL窗口全屏。
+   *
+   */
+ get fullscreen() : boolean {
+   return window_t_get_prop_fullscreen(this.nativeObj);
+ }
+
+ set fullscreen(v : boolean) {
+   this.setFullscreen(v);
+ }
+
+};
+/**
+ * 单个定时器的信息。
+ *
+ */
+export class TTimerInfo extends TObject { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 转换为timer_info对象(供脚本语言使用)。
+   * 
+   * @param timer timer_info对象。
+   *
+   * @returns timer_info对象。
+   */
+ static cast(timer : TTimerInfo) : TTimerInfo  {
+    return new TTimerInfo(timer_info_cast(timer != null ? (timer.nativeObj || timer) : null));
+ }
+
+
+  /**
+   * 定时器回调函数的上下文
+   *
+   */
+ get ctx() : any {
+   return timer_info_t_get_prop_ctx(this.nativeObj);
+ }
+
+
+  /**
+   * 定时器的ID
+   *
+   *> 为TK\_INVALID\_ID时表示无效定时器。
+   *
+   */
+ get id() : number {
+   return timer_info_t_get_prop_id(this.nativeObj);
+ }
+
+
+  /**
+   * 当前时间(相对时间，单位为毫秒)。
+   *
+   */
+ get now() : number {
+   return timer_info_t_get_prop_now(this.nativeObj);
+ }
+
+};
+/**
+ * 可滚动的combo_box控件。
+ *
+ */
+export class TComboBoxEx extends TComboBox { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建combo_box_ex对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TComboBoxEx  {
+    return new TComboBoxEx(combo_box_ex_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
 };
@@ -19842,10 +20054,48 @@ export class TImage extends TImageBase {
 
 };
 /**
- * 可滚动的combo_box控件。
+ * GIF图片控件。
+ *
+ *> 注意：GIF图片的尺寸大于控件大小时会自动缩小图片，但一般的嵌入式系统的硬件加速都不支持图片缩放，
+ *所以缩放图片会导致性能明显下降。如果性能不满意时，请确认一下GIF图片的尺寸是否小余控件大小。
+ *
+ *gif\_image\_t是[image\_base\_t](image_base_t.md)的子类控件，image\_base\_t的函数均适用于gif\_image\_t控件。
+ *
+ *在xml中使用"gif"标签创建GIF图片控件。如：
+ *
+ *```xml
+ *<gif image="bee"/>
+ *```
+ *
+ *>更多用法请参考：
+ *[gif
+ *image](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/gif_image.xml)
+ *
+ *在c代码中使用函数gif\_image\_create创建GIF图片控件。如：
+ *
+ *
+ *> 创建之后:
+ *>
+ *> 需要用widget\_set\_image设置图片名称。
+ *
+ *> 完整示例请参考：[gif image demo](
+ *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/gif_image.c)
+ *
+ *可用通过style来设置控件的显示风格，如背景和边框等。如：
+ *
+ *```xml
+ *<gif>
+ *<style name="border">
+ *<normal border_color="#000000" bg_color="#e0e0e0" text_color="black"/>
+ *</style>
+ *</gif>
+ *```
+ *
+ *> 更多用法请参考：[theme default](
+ *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
  *
  */
-export class TComboBoxEx extends TComboBox { 
+export class TGifImage extends TImageBase { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -19853,7 +20103,7 @@ export class TComboBoxEx extends TComboBox {
 
 
   /**
-   * 创建combo_box_ex对象
+   * 创建gif_image对象
    * 
    * @param parent 父控件
    * @param x x坐标
@@ -19863,34 +20113,84 @@ export class TComboBoxEx extends TComboBox {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TComboBoxEx  {
-    return new TComboBoxEx(combo_box_ex_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGifImage  {
+    return new TGifImage(gif_image_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为gif_image对象(供脚本语言使用)。
+   * 
+   * @param widget gif_image对象。
+   *
+   * @returns gif_image对象。
+   */
+ static cast(widget : TWidget) : TGifImage  {
+    return new TGifImage(gif_image_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 };
 /**
- * 电阻屏校准窗口。
+ * 软键盘。
  *
- *calibration\_win\_t是[window\_base\_t](window_base_t.md)的子类控件，
- *window\_base\_t的函数均适用于calibration\_win\_t控件。
+ *软键盘是一个特殊的窗口，由编辑器通过输入法自动打开和关闭。
  *
- *在xml中使用"calibration\_win"标签创建电阻屏校准窗口。如：
+ *这里介绍一下定制软键盘的方法：
+ *
+ *编辑器输入类型和软键盘UI资源文件的对应关系:
+ *
+ *| 输入类型       | 软键盘UI资源文件|
+ *|----------------|:---------------:|
+ *| INPUT\_PHONE    | kb\_phone.xml    |
+ *| INPUT\_INT      | kb\_int.xml      |
+ *| INPUT\_FLOAT    | kb\_float.xml    |
+ *| INPUT\_UINT     | kb\_uint.xml     |
+ *| INPUT\_UFLOAT   | kb\_ufloat.xml   |
+ *| INPUT\_HEX      | kb\_hex.xml      |
+ *| INPUT\_EMAIL    | kb\_ascii.xml    |
+ *| INPUT\_PASSWORD | kb\_ascii.xml    |
+ *| INPUT\_CUSTOM   | 使用自定义的键盘 |
+ *| 其它            | kb\_default.xml  |
+ *
+ *keyboard中按钮子控件的名称有些特殊要求：
+ *
+ *|  名称          | 功能            |
+ *|----------------|:---------------:|
+ *| return         | 回车键          |
+ *| action         | 定制按钮        |
+ *| backspace      | 删除键          |
+ *| tab            | tab键           |
+ *| space          | 空格键          |
+ *| close          | 关闭软键盘      |
+ *| 前缀key:        | 键值           |
+ *| 前缀hard_key:   | 模拟物理键盘    |
+ *| 前缀page:       | 切换到页面      |
+ *
+ *示例：
+ *
+ ** 按键"a"，提交输入法处理。
  *
  *```xml
- *<calibration_win name="cali" w="100%" h="100%" text="Please click the center of cross">
- *</calibration_win>
+ *<button repeat="300" name="key:a" text="a"/>
+ *```
+ *
+ ** 字符"a"，直接提交到编辑器。
+ *
+ *```xml
+ *<button repeat="300" name="a" text="a"/>
+ *```
+ *
+ ** 模拟物理键盘数字"1"，触发key down/up事件（可以用来选择候选字）。
+ *
+ *```xml
+ *<button repeat="300" name="hard_key:1" text="1"/>
  *```
  *
  *> 更多用法请参考：
- *[window.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/calibration_win.xml)
- *
- *在c代码中使用函数calibration\_win\_create创建窗口。如：
- *
- *
- *通过calibration\_win\_set\_on\_done注册回调函数，用于保存校准数据。
+ *[kb_default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/kb_default.xml)
  *
  */
-export class TCalibrationWin extends TWindowBase { 
+export class TKeyboard extends TWindowBase { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -19898,14 +20198,30 @@ export class TCalibrationWin extends TWindowBase {
 
 
   /**
-   * 转换为calibration_win对象(供脚本语言使用)。
+   * 创建keyboard对象
    * 
-   * @param widget calibration_win对象。
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
    *
-   * @returns calibration_win对象。
+   * @returns 对象。
    */
- static cast(widget : TWidget) : TCalibrationWin  {
-    return new TCalibrationWin(calibration_win_cast(widget != null ? (widget.nativeObj || widget) : null));
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TKeyboard  {
+    return new TKeyboard(keyboard_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为keyboard对象(供脚本语言使用)。
+   * 
+   * @param widget keyboard对象。
+   *
+   * @returns keyboard对象。
+   */
+ static cast(widget : TWidget) : TKeyboard  {
+    return new TKeyboard(keyboard_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 };
@@ -20040,42 +20356,15 @@ export class TPopup extends TWindowBase {
 
 };
 /**
- * SVG图片控件。
+ * 简单的动态数组，内部存放value对象。
  *
- *svg\_image\_t是[image\_base\_t](image_base_t.md)的子类控件，image\_base\_t的函数均适用于svg\_image\_t控件。
+ *访问时属性名称为：
  *
- *在xml中使用"svg"标签创建SVG图片控件。如：
- *
- *```xml
- *<svg image="girl"/>
- *```
- *
- *>更多用法请参考：[svg image](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/svg_image.xml)
- *
- *在c代码中使用函数svg\_image\_create创建SVG图片控件。如：
- *
- *
- *> 创建之后: 需要用widget\_set\_image设置图片名称。
- *
- *> 完整示例请参考：[svg image demo](
- *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/svg_image.c)
- *
- *可用通过style来设置控件的显示风格，如背景和边框等。如：
- *
- *```xml
- *<svg>
- *<style name="default">
- *<normal border_color="green" fg_color="red" />
- *</style>
- *</svg>
- *```
- *
- *> 更多用法请参考：[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
+ ** "size"/"length" 用于获取数组的长度。
+ ** index 用于访问属性，-1可以用来追加新元素。
  *
  */
-export class TSvgImage extends TImageBase { 
+export class TObjectArray extends TObject { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -20083,96 +20372,83 @@ export class TSvgImage extends TImageBase {
 
 
   /**
-   * 创建svg_image对象
+   * 创建对象。
    * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
    *
-   * @returns 对象。
+   * @returns 返回object对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TSvgImage  {
-    return new TSvgImage(svg_image_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ static create() : TObjectArray  {
+    return new TObjectArray(object_array_create());
  }
 
 
   /**
-   * 设置控件的图片名称。
-   *
-   *> 如果需要显示文件系统中的图片，只需将图片名称换成实际的文件名，并加上"file://"前缀即可。
+   * for script gc
    * 
-   * @param name 图片名称，该图片必须存在于资源管理器。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
- setImage(name : string) : TRet  {
-    return svg_image_set_image(this != null ? (this.nativeObj || this) : null, name);
+ unref() : TRet  {
+    return object_array_unref(this != null ? (this.nativeObj || this) : null);
  }
 
 
   /**
-   * 转换为svg_image对象(供脚本语言使用)。
+   * 清除全部属性。
    * 
-   * @param widget svg_image对象。
    *
-   * @returns svg_image对象。
+   * @returns 返回RET_OK表示成功，否则表示失败。
    */
- static cast(widget : TWidget) : TSvgImage  {
-    return new TSvgImage(svg_image_cast(widget != null ? (widget.nativeObj || widget) : null));
+ clearProps() : TRet  {
+    return object_array_clear_props(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 属性个数。
+   *
+   */
+ get propsSize() : number {
+   return object_array_t_get_prop_props_size(this.nativeObj);
  }
 
 };
 /**
- * 单个定时器的信息。
+ * mutable图片控件。
+ *
+ *像摄像头和视频的图像是变化的，每一帧都不同，我们把这类图片称为mutable image。
+ *
+ *本控件辅助实现摄像头和视频的显示功能。
+ *
+ *mutable\_image\_t是[image\_base\_t](image_base_t.md)的子类控件，image\_base\_t的函数均适用于mutable\_image\_t控件。
+ *
+ *在xml中使用"mutable\_image"标签创建mutable图片控件。如：
+ *
+ *```xml
+ *<mutable_image w="100%" h="100%"/>
+ *```
+ *
+ *>更多用法请参考：
+ *[mutable
+ *image](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/mutable_image.xml)
+ *
+ *在c代码中使用函数mutable\_image\_create创建mutable图片控件。如：
+ *
+ *
+ *> 创建之后:
+ *>
+ *> 需要用mutable\_image\_set\_prepare\_image设置准备图片的回调函数。
+ *
+ *> 完整示例请参考：[mutable image demo](
+ *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/mutable_image.c)
+ *
+ *一般不需通过style来设置控件的显示风格，如果在特殊情况下需要，可以参考其它控件。
  *
  */
-export class TTimerInfo extends TObject { 
+export class TMutableImage extends TImageBase { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
- }
-
-
-  /**
-   * 转换为timer_info对象(供脚本语言使用)。
-   * 
-   * @param timer timer_info对象。
-   *
-   * @returns timer_info对象。
-   */
- static cast(timer : TTimerInfo) : TTimerInfo  {
-    return new TTimerInfo(timer_info_cast(timer != null ? (timer.nativeObj || timer) : null));
- }
-
-
-  /**
-   * 定时器回调函数的上下文
-   *
-   */
- get ctx() : any {
-   return timer_info_t_get_prop_ctx(this.nativeObj);
- }
-
-
-  /**
-   * 定时器的ID
-   *
-   *> 为TK\_INVALID\_ID时表示无效定时器。
-   *
-   */
- get id() : number {
-   return timer_info_t_get_prop_id(this.nativeObj);
- }
-
-
-  /**
-   * 当前时间(相对时间，单位为毫秒)。
-   *
-   */
- get now() : number {
-   return timer_info_t_get_prop_now(this.nativeObj);
  }
 
 };
@@ -20343,44 +20619,10 @@ export class TSystemBar extends TWindowBase {
 
 };
 /**
- * 窗口。
- *
- *缺省的应用程序窗口，占用除system\_bar\_t之外的整个区域，请不要修改它的位置和大小(除非你清楚后果)。
- *
- *window\_t是[window\_base\_t](window_base_t.md)的子类控件，window\_base\_t的函数均适用于window\_t控件。
- *
- *在xml中使用"window"标签创建窗口。无需指定坐标和大小，可以指定主题和动画名称。如：
- *
- *```xml
- *<window theme="basic" anim_hint="htranslate">
- *...
- *</window>
- *```
- *
- *>
- *更多用法请参考：[window.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
- *
- *在c代码中使用函数window\_create创建窗口。如：
- *
- *
- *> 无需指定父控件、坐标和大小，使用0即可。
- *
- *> 完整示例请参考：[window
- *demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/)
- *
- *可用通过style来设置窗口的风格，如背景颜色或图片等。如：
- *
- *```xml
- *<style name="bricks">
- *<normal bg_image="bricks"  bg_image_draw_type="repeat"/>
- *</style>
- *```
- *
- *> 更多用法请参考：[theme
- *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L0)
+ * 单个idle的信息。
  *
  */
-export class TWindow extends TWindowBase { 
+export class TIdleInfo extends TObject { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -20388,181 +20630,74 @@ export class TWindow extends TWindowBase {
 
 
   /**
-   * 创建window对象
+   * 转换为idle_info对象(供脚本语言使用)。
    * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
+   * @param idle idle_info对象。
    *
-   * @returns 对象。
+   * @returns idle_info对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TWindow  {
-    return new TWindow(window_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ static cast(idle : TIdleInfo) : TIdleInfo  {
+    return new TIdleInfo(idle_info_cast(idle != null ? (idle.nativeObj || idle) : null));
  }
 
 
   /**
-   * 以缺省的方式创建window对象。
-   * 
+   * idle回调函数上下文。
    *
-   * @returns 对象。
    */
- static createDefault() : TWindow  {
-    return new TWindow(window_create_default());
+ get ctx() : any {
+   return idle_info_t_get_prop_ctx(this.nativeObj);
  }
 
 
   /**
-   * 设置为全屏窗口。
+   * idle的ID
    *
-   *>这里全屏是指与LCD相同大小，而非让SDL窗口全屏。
-   * 
-   * @param fullscreen 是否全屏。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setFullscreen(fullscreen : boolean) : TRet  {
-    return window_set_fullscreen(this != null ? (this.nativeObj || this) : null, fullscreen);
- }
-
-
-  /**
-   * 从资源文件中加载并创建window_base对象。本函数在ui_loader/ui_builder_default里实现。
-   * 
-   * @param name window的名称。
-   *
-   * @returns 对象。
-   */
- static open(name : string) : TWindow  {
-    return new TWindow(window_open(name));
- }
-
-
-  /**
-   * 从资源文件中加载并创建window对象。本函数在ui_loader/ui_builder_default里实现。
-   * 
-   * @param name window的名称。
-   * @param to_close 关闭该窗口。
-   *
-   * @returns 对象。
-   */
- static openAndClose(name : string, to_close : TWidget) : TWindow  {
-    return new TWindow(window_open_and_close(name, to_close != null ? (to_close.nativeObj || to_close) : null));
- }
-
-
-  /**
-   * 关闭窗口。
-   * 
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- close() : TRet  {
-    return window_close(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 立即无条件关闭窗口(无动画)。
-   * 
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- closeForce() : TRet  {
-    return window_close_force(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 转换为window对象(供脚本语言使用)。
-   * 
-   * @param widget window对象。
-   *
-   * @returns window对象。
-   */
- static cast(widget : TWidget) : TWindow  {
-    return new TWindow(window_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-
-  /**
-   * 是否全屏。
-   *
-   *>这里全屏是指与LCD相同大小，而非让SDL窗口全屏。
+   *> 为TK\_INVALID\_ID时表示无效idle。
    *
    */
- get fullscreen() : boolean {
-   return window_t_get_prop_fullscreen(this.nativeObj);
- }
-
- set fullscreen(v : boolean) {
-   this.setFullscreen(v);
+ get id() : number {
+   return idle_info_t_get_prop_id(this.nativeObj);
  }
 
 };
 /**
- * 软键盘。
+ * SVG图片控件。
  *
- *软键盘是一个特殊的窗口，由编辑器通过输入法自动打开和关闭。
+ *svg\_image\_t是[image\_base\_t](image_base_t.md)的子类控件，image\_base\_t的函数均适用于svg\_image\_t控件。
  *
- *这里介绍一下定制软键盘的方法：
- *
- *编辑器输入类型和软键盘UI资源文件的对应关系:
- *
- *| 输入类型       | 软键盘UI资源文件|
- *|----------------|:---------------:|
- *| INPUT\_PHONE    | kb\_phone.xml    |
- *| INPUT\_INT      | kb\_int.xml      |
- *| INPUT\_FLOAT    | kb\_float.xml    |
- *| INPUT\_UINT     | kb\_uint.xml     |
- *| INPUT\_UFLOAT   | kb\_ufloat.xml   |
- *| INPUT\_HEX      | kb\_hex.xml      |
- *| INPUT\_EMAIL    | kb\_ascii.xml    |
- *| INPUT\_PASSWORD | kb\_ascii.xml    |
- *| INPUT\_CUSTOM   | 使用自定义的键盘 |
- *| 其它            | kb\_default.xml  |
- *
- *keyboard中按钮子控件的名称有些特殊要求：
- *
- *|  名称          | 功能            |
- *|----------------|:---------------:|
- *| return         | 回车键          |
- *| action         | 定制按钮        |
- *| backspace      | 删除键          |
- *| tab            | tab键           |
- *| space          | 空格键          |
- *| close          | 关闭软键盘      |
- *| 前缀key:        | 键值           |
- *| 前缀hard_key:   | 模拟物理键盘    |
- *| 前缀page:       | 切换到页面      |
- *
- *示例：
- *
- ** 按键"a"，提交输入法处理。
+ *在xml中使用"svg"标签创建SVG图片控件。如：
  *
  *```xml
- *<button repeat="300" name="key:a" text="a"/>
+ *<svg image="girl"/>
  *```
  *
- ** 字符"a"，直接提交到编辑器。
+ *>更多用法请参考：[svg image](
+ *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/svg_image.xml)
+ *
+ *在c代码中使用函数svg\_image\_create创建SVG图片控件。如：
+ *
+ *
+ *> 创建之后: 需要用widget\_set\_image设置图片名称。
+ *
+ *> 完整示例请参考：[svg image demo](
+ *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/svg_image.c)
+ *
+ *可用通过style来设置控件的显示风格，如背景和边框等。如：
  *
  *```xml
- *<button repeat="300" name="a" text="a"/>
+ *<svg>
+ *<style name="default">
+ *<normal border_color="green" fg_color="red" />
+ *</style>
+ *</svg>
  *```
  *
- ** 模拟物理键盘数字"1"，触发key down/up事件（可以用来选择候选字）。
- *
- *```xml
- *<button repeat="300" name="hard_key:1" text="1"/>
- *```
- *
- *> 更多用法请参考：
- *[kb_default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/kb_default.xml)
+ *> 更多用法请参考：[theme default](
+ *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
  *
  */
-export class TKeyboard extends TWindowBase { 
+export class TSvgImage extends TImageBase { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -20570,7 +20705,7 @@ export class TKeyboard extends TWindowBase {
 
 
   /**
-   * 创建keyboard对象
+   * 创建svg_image对象
    * 
    * @param parent 父控件
    * @param x x坐标
@@ -20580,20 +20715,34 @@ export class TKeyboard extends TWindowBase {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TKeyboard  {
-    return new TKeyboard(keyboard_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TSvgImage  {
+    return new TSvgImage(svg_image_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
 
   /**
-   * 转换为keyboard对象(供脚本语言使用)。
-   * 
-   * @param widget keyboard对象。
+   * 设置控件的图片名称。
    *
-   * @returns keyboard对象。
+   *> 如果需要显示文件系统中的图片，只需将图片名称换成实际的文件名，并加上"file://"前缀即可。
+   * 
+   * @param name 图片名称，该图片必须存在于资源管理器。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
    */
- static cast(widget : TWidget) : TKeyboard  {
-    return new TKeyboard(keyboard_cast(widget != null ? (widget.nativeObj || widget) : null));
+ setImage(name : string) : TRet  {
+    return svg_image_set_image(this != null ? (this.nativeObj || this) : null, name);
+ }
+
+
+  /**
+   * 转换为svg_image对象(供脚本语言使用)。
+   * 
+   * @param widget svg_image对象。
+   *
+   * @returns svg_image对象。
+   */
+ static cast(widget : TWidget) : TSvgImage  {
+    return new TSvgImage(svg_image_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 };
