@@ -84,6 +84,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a07e587547eda97c2bf7b2385e7520318"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef712604bfd25647022f50024026cdcd"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#aef712604bfd25647022f50024026cdcd">Set</a> ()</td></tr>
 <tr class="separator:aef712604bfd25647022f50024026cdcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28627e07d81bc96254bd6c9e2c1c4bd8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a28627e07d81bc96254bd6c9e2c1c4bd8">FromTime</a> (uint64_t time)</td></tr>
+<tr class="separator:a28627e07d81bc96254bd6c9e2c1c4bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63840776299c0f42d3f3a0d8948d2ce4"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a63840776299c0f42d3f3a0d8948d2ce4">Destroy</a> ()</td></tr>
 <tr class="separator:a63840776299c0f42d3f3a0d8948d2ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d80192d883027677bcd01afce27bd1"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a46d80192d883027677bcd01afce27bd1">GetSecond</a> () const</td></tr>
@@ -166,6 +168,32 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
       </table>
 </div><div class="memdoc">
 <p>销毁date_time对象(一般供脚本语言中使用)。</p>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a28627e07d81bc96254bd6c9e2c1c4bd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28627e07d81bc96254bd6c9e2c1c4bd8">&#9670;&nbsp;</a></span>FromTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TDateTime::FromTime </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>从time转换而来。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>时间。</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>

@@ -99,6 +99,22 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a601f1606bf5af9351729e8cf6d9a66b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a785e621ad5b45b66df5407042c967f95"><td class="memItemLeft" align="right" valign="top">window_closable_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_base.html#a785e621ad5b45b66df5407042c967f95">GetClosable</a> () const</td></tr>
 <tr class="separator:a785e621ad5b45b66df5407042c967f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a999ec9d1a83b966a1dca2d41bcbbe61f"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_base.html#a999ec9d1a83b966a1dca2d41bcbbe61f">GetOpenAnimHint</a> () const</td></tr>
+<tr class="separator:a999ec9d1a83b966a1dca2d41bcbbe61f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a916fe8622c4e893c76fd3a505eb898d8"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_base.html#a916fe8622c4e893c76fd3a505eb898d8">GetCloseAnimHint</a> () const</td></tr>
+<tr class="separator:a916fe8622c4e893c76fd3a505eb898d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c891e673ad398018e950b2123518096"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_base.html#a2c891e673ad398018e950b2123518096">GetMoveFocusPrevKey</a> () const</td></tr>
+<tr class="separator:a2c891e673ad398018e950b2123518096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a779b72528696980bc6e8216f975b7552"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_base.html#a779b72528696980bc6e8216f975b7552">GetMoveFocusNextKey</a> () const</td></tr>
+<tr class="separator:a779b72528696980bc6e8216f975b7552"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08702c73171683fadc8cfcdd88a9b78b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_base.html#a08702c73171683fadc8cfcdd88a9b78b">GetMoveFocusUpKey</a> () const</td></tr>
+<tr class="separator:a08702c73171683fadc8cfcdd88a9b78b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a298b383e463a6c6855e4789b97329649"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_base.html#a298b383e463a6c6855e4789b97329649">GetMoveFocusDownKey</a> () const</td></tr>
+<tr class="separator:a298b383e463a6c6855e4789b97329649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2812b0aec83f6358c93382ade42251cb"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_base.html#a2812b0aec83f6358c93382ade42251cb">GetMoveFocusLeftKey</a> () const</td></tr>
+<tr class="separator:a2812b0aec83f6358c93382ade42251cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75401bad5c3a209a65087ed952347dc4"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_base.html#a75401bad5c3a209a65087ed952347dc4">GetMoveFocusRightKey</a> () const</td></tr>
+<tr class="separator:a75401bad5c3a209a65087ed952347dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -143,6 +159,156 @@ static <a class="el" href="class_t_window_base.html">TWindowBase</a>&#160;</td><
 <blockquote class="doxtable">
 <p>closable在XML中取值为：yes/no/confirm，缺省为yes。 </p>
 </blockquote>
+
+</div>
+</div>
+<a id="a916fe8622c4e893c76fd3a505eb898d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a916fe8622c4e893c76fd3a505eb898d8">&#9670;&nbsp;</a></span>GetCloseAnimHint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * TWindowBase::GetCloseAnimHint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>关闭窗口动画的名称。 请参考<a href="https://github.com/zlgopen/awtk/blob/master/docs/window_animator.md">窗口动画</a> </p>
+
+</div>
+</div>
+<a id="a298b383e463a6c6855e4789b97329649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a298b383e463a6c6855e4789b97329649">&#9670;&nbsp;</a></span>GetMoveFocusDownKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * TWindowBase::GetMoveFocusDownKey </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>向下移动焦点的键值。</p>
+<p>请参考<a href="https://github.com/zlgopen/awtk/blob/master/docs/widget_focus.md">控件焦点</a> </p>
+
+</div>
+</div>
+<a id="a2812b0aec83f6358c93382ade42251cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2812b0aec83f6358c93382ade42251cb">&#9670;&nbsp;</a></span>GetMoveFocusLeftKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * TWindowBase::GetMoveFocusLeftKey </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>向左移动焦点的键值。</p>
+<p>请参考<a href="https://github.com/zlgopen/awtk/blob/master/docs/widget_focus.md">控件焦点</a> </p>
+
+</div>
+</div>
+<a id="a779b72528696980bc6e8216f975b7552"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a779b72528696980bc6e8216f975b7552">&#9670;&nbsp;</a></span>GetMoveFocusNextKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * TWindowBase::GetMoveFocusNextKey </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>向后移动焦点的键值。</p>
+<p>请参考<a href="https://github.com/zlgopen/awtk/blob/master/docs/widget_focus.md">控件焦点</a> </p>
+
+</div>
+</div>
+<a id="a2c891e673ad398018e950b2123518096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c891e673ad398018e950b2123518096">&#9670;&nbsp;</a></span>GetMoveFocusPrevKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * TWindowBase::GetMoveFocusPrevKey </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>向前移动焦点的键值。</p>
+<p>请参考<a href="https://github.com/zlgopen/awtk/blob/master/docs/widget_focus.md">控件焦点</a> </p>
+
+</div>
+</div>
+<a id="a75401bad5c3a209a65087ed952347dc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75401bad5c3a209a65087ed952347dc4">&#9670;&nbsp;</a></span>GetMoveFocusRightKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * TWindowBase::GetMoveFocusRightKey </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>向右移动焦点的键值。</p>
+<p>请参考<a href="https://github.com/zlgopen/awtk/blob/master/docs/widget_focus.md">控件焦点</a> </p>
+
+</div>
+</div>
+<a id="a08702c73171683fadc8cfcdd88a9b78b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08702c73171683fadc8cfcdd88a9b78b">&#9670;&nbsp;</a></span>GetMoveFocusUpKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * TWindowBase::GetMoveFocusUpKey </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>向上移动焦点的键值。</p>
+<p>请参考<a href="https://github.com/zlgopen/awtk/blob/master/docs/widget_focus.md">控件焦点</a> </p>
+
+</div>
+</div>
+<a id="a999ec9d1a83b966a1dca2d41bcbbe61f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a999ec9d1a83b966a1dca2d41bcbbe61f">&#9670;&nbsp;</a></span>GetOpenAnimHint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * TWindowBase::GetOpenAnimHint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>打开窗口动画的名称。 请参考<a href="https://github.com/zlgopen/awtk/blob/master/docs/window_animator.md">窗口动画</a> </p>
 
 </div>
 </div>

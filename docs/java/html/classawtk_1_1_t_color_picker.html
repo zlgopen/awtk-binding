@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TColorPicker类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -30,18 +30,21 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.13 -->
+<!-- 制作者 Doxygen 1.8.17 -->
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','搜索');
   $(document).ready(function() { init_search(); });
 });
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -75,9 +78,7 @@ $(function() {
 类 awtk.TColorPicker 继承关系图:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classawtk_1_1_t_color_picker.png" usemap="#awtk.TColorPicker_map" alt=""/>
-  <map id="awtk.TColorPicker_map" name="awtk.TColorPicker_map">
-</map>
+  <img src="classawtk_1_1_t_color_picker.png" alt=""/>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -98,9 +99,15 @@ Public 成员函数</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>颜色选择器。</p>
-<p>color_picker_t是widget的子类控件，widget_t的函数均适用于color_picker_t控件。</p>
+<p>color_picker_t是widget\_t的子类控件，widget_t的函数均适用于color_picker_t控件。</p>
 <p>在xml中使用"color\_picker"标签创建颜色选择器控件。如：</p>
-<div class="fragment"><div class="line">*&lt;<span class="keywordtype">color_picker</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">value</span>=<span class="stringliteral">&quot;orange&quot;</span>&gt;</div><div class="line">*&lt;<span class="keywordtype">color_component</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;200&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;200&quot;</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;sv&quot;</span>/&gt;</div><div class="line">*&lt;<span class="keywordtype">color_component</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;210&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;20&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;200&quot;</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;h&quot;</span>/&gt;</div><div class="line">*&lt;<span class="keywordtype">color_tile</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;210&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;50%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;20&quot;</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;new&quot;</span> <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;green&quot;</span>/&gt;</div><div class="line">*&lt;<span class="keywordtype">color_tile</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;right&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;210&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;50%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;20&quot;</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;old&quot;</span> <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;blue&quot;</span>/&gt;</div><div class="line">*&lt;/<span class="keywordtype">color_picker</span>&gt;</div></div><!-- fragment --><blockquote class="doxtable">
+<div class="fragment"><div class="line">*&lt;<span class="keywordtype">color_picker</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">value</span>=<span class="stringliteral">&quot;orange&quot;</span>&gt;</div>
+<div class="line">*&lt;<span class="keywordtype">color_component</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;200&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;200&quot;</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;sv&quot;</span>/&gt;</div>
+<div class="line">*&lt;<span class="keywordtype">color_component</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;210&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;20&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;200&quot;</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;h&quot;</span>/&gt;</div>
+<div class="line">*&lt;<span class="keywordtype">color_tile</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;210&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;50%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;20&quot;</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;new&quot;</span> <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;green&quot;</span>/&gt;</div>
+<div class="line">*&lt;<span class="keywordtype">color_tile</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;right&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;210&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;50%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;20&quot;</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;old&quot;</span> <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;blue&quot;</span>/&gt;</div>
+<div class="line">*&lt;/<span class="keywordtype">color_picker</span>&gt;</div>
+</div><!-- fragment --><blockquote class="doxtable">
 <p>更多用法请参考： </p>
 </blockquote>
 <p><a href="https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/color_picker.xml">color_picker</a></p>
@@ -318,7 +325,7 @@ Public 成员函数</h2></td></tr>
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
+</a> 1.8.17
 </small></address>
 </body>
 </html>
