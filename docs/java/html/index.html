@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: 首页</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -30,21 +30,18 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.8.13 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'搜索');
-/* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','搜索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <!-- window showing the filter options -->
@@ -61,7 +58,7 @@ $(function() {
 </iframe>
 </div>
 
-<div class="PageDoc"><div class="header">
+<div class="header">
   <div class="headertitle">
 <div class="title">AWTK-JAVA 文档</div>  </div>
 </div><!--header-->
@@ -76,35 +73,13 @@ $(function() {
 <li>ZLG 物联网操作系统 AWorks 内置 GUI。</li>
 </ul>
 <h2>JAVA 示例代码</h2>
-<div class="fragment"><div class="line"><span class="keyword">import</span> awtk.*;</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">class </span>DemoButton {</div>
-<div class="line"> <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> main(String[] args) {</div>
-<div class="line">   AWTK.init(320, 480, AppType.SIMULATOR);</div>
-<div class="line"> </div>
-<div class="line">   Widget win = Window.create(<span class="keyword">null</span>, 0, 0, 0, 0);</div>
-<div class="line">   Widget button = Button.create(win, 10, 0, 0, 0);</div>
-<div class="line">   </div>
-<div class="line">   button.setName(<span class="stringliteral">&quot;OK&quot;</span>);</div>
-<div class="line">   button.setText(<span class="stringliteral">&quot;OK&quot;</span>);</div>
-<div class="line">   button.setSelfLayout(<span class="stringliteral">&quot;default(x=c,y=m,w=200,h=40)&quot;</span>);</div>
-<div class="line">   button.on(EventType.CLICK, <span class="keyword">new</span> PrintOnClicked(), 0);</div>
-<div class="line"> </div>
-<div class="line">   AWTK.run();</div>
-<div class="line"> }</div>
-<div class="line"> </div>
-<div class="line"> <span class="keyword">static</span> {</div>
-<div class="line">   System.loadLibrary(<span class="stringliteral">&quot;awtk-jni&quot;</span>);</div>
-<div class="line"> }</div>
-<div class="line">}</div>
-</div><!-- fragment --><p><a href="classes.html">类列表</a> </p>
-</div></div><!-- PageDoc -->
-</div><!-- contents -->
+<div class="fragment"><div class="line"><span class="keyword">import</span> <a class="code" href="namespaceawtk.html">awtk</a>.*;</div><div class="line"></div><div class="line"><span class="keyword">class </span>DemoButton {</div><div class="line"> <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> main(String[] args) {</div><div class="line">   AWTK.init(320, 480, AppType.SIMULATOR);</div><div class="line"></div><div class="line">   Widget win = Window.create(null, 0, 0, 0, 0);</div><div class="line">   Widget button = Button.create(win, 10, 0, 0, 0);</div><div class="line"></div><div class="line">   button.setName(<span class="stringliteral">&quot;OK&quot;</span>);</div><div class="line">   button.setText(<span class="stringliteral">&quot;OK&quot;</span>);</div><div class="line">   button.setSelfLayout(<span class="stringliteral">&quot;default(x=c,y=m,w=200,h=40)&quot;</span>);</div><div class="line">   button.on(EventType.CLICK, <span class="keyword">new</span> PrintOnClicked(), 0);</div><div class="line"></div><div class="line">   AWTK.run();</div><div class="line"> }</div><div class="line"></div><div class="line"> <span class="keyword">static</span> {</div><div class="line">   System.loadLibrary(<span class="stringliteral">&quot;awtk-jni&quot;</span>);</div><div class="line"> }</div><div class="line">}</div></div><!-- fragment --><p><a href="classes.html">类列表</a> </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
+</a> 1.8.13
 </small></address>
 </body>
 </html>

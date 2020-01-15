@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TTabButton类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -30,21 +30,18 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.8.13 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'搜索');
-/* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','搜索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -78,7 +75,9 @@ $(function() {
 类 awtk.TTabButton 继承关系图:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classawtk_1_1_t_tab_button.png" alt=""/>
+  <img src="classawtk_1_1_t_tab_button.png" usemap="#awtk.TTabButton_map" alt=""/>
+  <map id="awtk.TTabButton_map" name="awtk.TTabButton_map">
+</map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -112,47 +111,15 @@ Public 成员函数</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>标签按钮控件。</p>
 <p>标签按钮有点类似单选按钮，但点击标签按钮之后会自动切换当前的标签页。</p>
-<p>tab_button_t是widget\_t的子类控件，widget_t的函数均适用于tab_button_t控件。</p>
+<p>tab_button_t是widget的子类控件，widget_t的函数均适用于tab_button_t控件。</p>
 <p>在xml中使用"tab\_button"标签创建标签按钮控件。如：</p>
-<div class="fragment"><div class="line">*<span class="comment">&lt;!-- tab_button_view_page1.xml --&gt;</span></div>
-<div class="line">*&lt;<span class="keywordtype">view</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;100%&quot;</span>&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">label</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;c&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;m&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;60&quot;</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;page1&quot;</span> /&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">button</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;close&quot;</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;c&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;bottom:100&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;80&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;40&quot;</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;Close&quot;</span> /&gt;</div>
-<div class="line">*&lt;/<span class="keywordtype">view</span>&gt;</div>
-</div><!-- fragment --><div class="fragment"><div class="line">*<span class="comment">&lt;!-- tab_button dynamic load UI --&gt;</span></div>
-<div class="line">*&lt;<span class="keywordtype">pages</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;pages&quot;</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;right&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;70%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;100%&quot;</span>&gt;</div>
-<div class="line">*&lt;/<span class="keywordtype">pages</span>&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">list_view</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;30%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">item_height</span>=<span class="stringliteral">&quot;40&quot;</span> <span class="keyword">auto_hide_scroll_bar</span>=<span class="stringliteral">&quot;true&quot;</span>&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">scroll_view</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;view&quot;</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;0&quot;</span>  <span class="keyword">y</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;-12&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;100%&quot;</span>&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">tab_button</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;page1&quot;</span> <span class="keyword">load_ui</span>=<span class="stringliteral">&quot;tab_button_view_page1&quot;</span> <span class="keyword">value</span>=<span class="stringliteral">&quot;true&quot;</span>/&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">tab_button</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;page2&quot;</span> <span class="keyword">load_ui</span>=<span class="stringliteral">&quot;tab_button_view_page2&quot;</span> /&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">tab_button</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;page3&quot;</span> <span class="keyword">load_ui</span>=<span class="stringliteral">&quot;tab_button_view_page3&quot;</span> /&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">scroll_view</span> /&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">scroll_bar_d</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;bar&quot;</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;right&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;12&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">value</span>=<span class="stringliteral">&quot;0&quot;</span>/&gt;</div>
-<div class="line">*&lt;/<span class="keywordtype">list_view</span>&gt;</div>
-</div><!-- fragment --><div class="fragment"><div class="line">*<span class="comment">&lt;!-- tab_button static load UI --&gt;</span></div>
-<div class="line">*&lt;<span class="keywordtype">tab_button_group</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;c&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;bottom:10&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;90%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;30&quot;</span> <span class="keyword">compact</span>=<span class="stringliteral">&quot;true&quot;</span></div>
-<div class="line">*&lt;<span class="keywordtype">tab_button</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;General&quot;</span>/&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">tab_button</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;Network&quot;</span> <span class="keyword">value</span>=<span class="stringliteral">&quot;true&quot;</span> /&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">tab_button</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;Security&quot;</span>/&gt;</div>
-<div class="line">*&lt;/<span class="keywordtype">tab_button_group</span>&gt;</div>
-</div><!-- fragment --><p>标签按钮一般放在标签按钮分组中，布局由标签按钮分组控件决定，不需要指定自己的布局参数和坐标。</p>
+<div class="fragment"><div class="line">*</div><div class="line">*&lt;<span class="keywordtype">view</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;100%&quot;</span>&gt;</div><div class="line">*&lt;<span class="keywordtype">label</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;c&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;m&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;60&quot;</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;page1&quot;</span> /&gt;</div><div class="line">*&lt;<span class="keywordtype">button</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;close&quot;</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;c&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;bottom:100&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;80&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;40&quot;</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;Close&quot;</span> /&gt;</div><div class="line">*&lt;/<span class="keywordtype">view</span>&gt;</div></div><!-- fragment --><div class="fragment"><div class="line">*</div><div class="line">*&lt;<span class="keywordtype">pages</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;pages&quot;</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;right&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;70%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;100%&quot;</span>&gt;</div><div class="line">*&lt;/<span class="keywordtype">pages</span>&gt;</div><div class="line">*&lt;<span class="keywordtype">list_view</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;30%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">item_height</span>=<span class="stringliteral">&quot;40&quot;</span> <span class="keyword">auto_hide_scroll_bar</span>=<span class="stringliteral">&quot;true&quot;</span>&gt;</div><div class="line">*&lt;<span class="keywordtype">scroll_view</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;view&quot;</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;0&quot;</span>  <span class="keyword">y</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;-12&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;100%&quot;</span>&gt;</div><div class="line">*&lt;<span class="keywordtype">tab_button</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;page1&quot;</span> <span class="keyword">load_ui</span>=<span class="stringliteral">&quot;tab_button_view_page1&quot;</span> <span class="keyword">value</span>=<span class="stringliteral">&quot;true&quot;</span>/&gt;</div><div class="line">*&lt;<span class="keywordtype">tab_button</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;page2&quot;</span> <span class="keyword">load_ui</span>=<span class="stringliteral">&quot;tab_button_view_page2&quot;</span> /&gt;</div><div class="line">*&lt;<span class="keywordtype">tab_button</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;page3&quot;</span> <span class="keyword">load_ui</span>=<span class="stringliteral">&quot;tab_button_view_page3&quot;</span> /&gt;</div><div class="line">*&lt;<span class="keywordtype">scroll_view</span> /&gt;</div><div class="line">*&lt;<span class="keywordtype">scroll_bar_d</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;bar&quot;</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;right&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;12&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">value</span>=<span class="stringliteral">&quot;0&quot;</span>/&gt;</div><div class="line">*&lt;/<span class="keywordtype">list_view</span>&gt;</div></div><!-- fragment --><div class="fragment"><div class="line">*</div><div class="line">*&lt;<span class="keywordtype">tab_button_group</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;c&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;bottom:10&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;90%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;30&quot;</span> <span class="keyword">compact</span>=<span class="stringliteral">&quot;true&quot;</span></div><div class="line">*&lt;<span class="keywordtype">tab_button</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;General&quot;</span>/&gt;</div><div class="line">*&lt;<span class="keywordtype">tab_button</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;Network&quot;</span> <span class="keyword">value</span>=<span class="stringliteral">&quot;true&quot;</span> /&gt;</div><div class="line">*&lt;<span class="keywordtype">tab_button</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;Security&quot;</span>/&gt;</div><div class="line">*&lt;/<span class="keywordtype">tab_button_group</span>&gt;</div></div><!-- fragment --><p>标签按钮一般放在标签按钮分组中，布局由标签按钮分组控件决定，不需要指定自己的布局参数和坐标。</p>
 <blockquote class="doxtable">
 <p>更多用法请参考： </p>
 </blockquote>
 <p><a href="https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/">tab control</a></p>
 <p>可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：</p>
-<div class="fragment"><div class="line">*&lt;<span class="keywordtype">tab_button</span>&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">style</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;default&quot;</span> <span class="keyword">border_color</span>=<span class="stringliteral">&quot;#a0a0a0&quot;</span>  <span class="keyword">text_color</span>=<span class="stringliteral">&quot;black&quot;</span>&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">normal</span>     <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#d0d0d0&quot;</span> /&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">pressed</span>    <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#f0f0f0&quot;</span> /&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">over</span>       <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#e0e0e0&quot;</span> /&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">normal_of_active</span>     <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#f0f0f0&quot;</span> /&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">pressed_of_active</span>    <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#f0f0f0&quot;</span> /&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">over_of_active</span>       <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#f0f0f0&quot;</span> /&gt;</div>
-<div class="line">*&lt;/<span class="keywordtype">style</span>&gt;</div>
-<div class="line">*&lt;/<span class="keywordtype">tab_button</span>&gt;</div>
-</div><!-- fragment --> </div><h2 class="groupheader">构造及析构函数说明</h2>
+<div class="fragment"><div class="line">*&lt;<span class="keywordtype">tab_button</span>&gt;</div><div class="line">*&lt;<span class="keywordtype">style</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;default&quot;</span> <span class="keyword">border_color</span>=<span class="stringliteral">&quot;#a0a0a0&quot;</span>  <span class="keyword">text_color</span>=<span class="stringliteral">&quot;black&quot;</span>&gt;</div><div class="line">*&lt;<span class="keywordtype">normal</span>     <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#d0d0d0&quot;</span> /&gt;</div><div class="line">*&lt;<span class="keywordtype">pressed</span>    <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#f0f0f0&quot;</span> /&gt;</div><div class="line">*&lt;<span class="keywordtype">over</span>       <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#e0e0e0&quot;</span> /&gt;</div><div class="line">*&lt;<span class="keywordtype">normal_of_active</span>     <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#f0f0f0&quot;</span> /&gt;</div><div class="line">*&lt;<span class="keywordtype">pressed_of_active</span>    <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#f0f0f0&quot;</span> /&gt;</div><div class="line">*&lt;<span class="keywordtype">over_of_active</span>       <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#f0f0f0&quot;</span> /&gt;</div><div class="line">*&lt;/<span class="keywordtype">style</span>&gt;</div><div class="line">*&lt;/<span class="keywordtype">tab_button</span>&gt;</div></div><!-- fragment --> </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a2874042fab08f9917fa4afb099f095fb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2874042fab08f9917fa4afb099f095fb">&#9670;&nbsp;</a></span>TTabButton()</h2>
 
@@ -544,7 +511,7 @@ Public 成员函数</h2></td></tr>
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
+</a> 1.8.13
 </small></address>
 </body>
 </html>

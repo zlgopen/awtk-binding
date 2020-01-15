@@ -113,7 +113,7 @@ class NodeJSGenerator extends JsBindingGenerator {
   
   genPost(json) {
     return `
-void Init(v8::Local<v8::Object> exports) {
+void Init(v8::Local<v8::Object> exports, v8::Local<v8::Value> module, void* priv) {
   v8::Local<v8::Object> global =  Nan::GetCurrentContext()->Global();
 
   Nan::Export(exports, "init", wrap_awtk_init);
