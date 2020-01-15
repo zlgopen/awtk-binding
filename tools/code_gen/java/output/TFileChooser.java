@@ -5,13 +5,7 @@ package awtk;
  * 文件/目录选择器
  *
  */
-public class TFileChooser { 
-
-/**
- * 原生对象。
- */
- public long nativeObj;
-
+public class TFileChooser extends TEmitter { 
 
 /**
  * 通过nativeObj构造Java对象。
@@ -21,7 +15,7 @@ public class TFileChooser {
  * @return 对应的Java对象。
  */
  public TFileChooser(long nativeObj) {
-   this.nativeObj = nativeObj;
+   super(nativeObj);
  }
 
 

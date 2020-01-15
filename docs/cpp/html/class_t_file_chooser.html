@@ -65,7 +65,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="#pub-attribs">Public 属性</a> &#124;
 <a href="class_t_file_chooser-members.html">所有成员列表</a>  </div>
   <div class="headertitle">
 <div class="title">TFileChooser类 参考</div>  </div>
@@ -73,12 +72,21 @@ $(function() {
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a>&gt;</code></p>
+<div class="dynheader">
+类 TFileChooser 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_t_file_chooser.png" usemap="#TFileChooser_map" alt=""/>
+  <map id="TFileChooser_map" name="TFileChooser_map">
+<area href="class_t_emitter.html" alt="TEmitter" shape="rect" coords="0,0,88,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:ad21091338b9f2fae98ee0edc72d97390"><td class="memItemLeft" align="right" valign="top"><a id="ad21091338b9f2fae98ee0edc72d97390"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TFileChooser</b> (file_chooser_t *nativeObj)</td></tr>
-<tr class="separator:ad21091338b9f2fae98ee0edc72d97390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff14981203d64f7b2210034f101eb5a0"><td class="memItemLeft" align="right" valign="top"><a id="aff14981203d64f7b2210034f101eb5a0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TFileChooser</b> (emitter_t *nativeObj)</td></tr>
+<tr class="separator:aff14981203d64f7b2210034f101eb5a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d89fd26d02f6ab54504b1d1b2b4f93c"><td class="memItemLeft" align="right" valign="top"><a id="a1d89fd26d02f6ab54504b1d1b2b4f93c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TFileChooser</b> (const file_chooser_t *nativeObj)</td></tr>
 <tr class="separator:a1d89fd26d02f6ab54504b1d1b2b4f93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -94,23 +102,62 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ad7c98f1db4eaf305730ba12997e268d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0348f0a734c53c21586d36ec625e8aae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_chooser.html#a0348f0a734c53c21586d36ec625e8aae">IsAborted</a> ()</td></tr>
 <tr class="separator:a0348f0a734c53c21586d36ec625e8aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_t_emitter"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_t_emitter')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_t_emitter.html">TEmitter</a></td></tr>
+<tr class="memitem:a6ca92e86b5b1096926e6c1027391c8d9 inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top"><a id="a6ca92e86b5b1096926e6c1027391c8d9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEmitter</b> (emitter_t *nativeObj)</td></tr>
+<tr class="separator:a6ca92e86b5b1096926e6c1027391c8d9 inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1164e76c026d546bcd229514e1896be7 inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top"><a id="a1164e76c026d546bcd229514e1896be7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEmitter</b> (const emitter_t *nativeObj)</td></tr>
+<tr class="separator:a1164e76c026d546bcd229514e1896be7 inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f3943b7219c16dd7d171aaa66fad97e inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a0f3943b7219c16dd7d171aaa66fad97e">Dispatch</a> (<a class="el" href="class_t_event.html">TEvent</a> &amp;e)</td></tr>
+<tr class="separator:a0f3943b7219c16dd7d171aaa66fad97e inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e7f7275f8121abe718e1d8d5fa3627a inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a6e7f7275f8121abe718e1d8d5fa3627a">DispatchSimpleEvent</a> (event_type_t type)</td></tr>
+<tr class="separator:a6e7f7275f8121abe718e1d8d5fa3627a inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c83308d267eb93d89b8c0c145539ca8 inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a0c83308d267eb93d89b8c0c145539ca8">On</a> (event_type_t type, event_func_t on_event, void *ctx)</td></tr>
+<tr class="separator:a0c83308d267eb93d89b8c0c145539ca8 inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9cfdac85eba8396ffb90a2beea66d3f inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#ad9cfdac85eba8396ffb90a2beea66d3f">Off</a> (uint32_t id)</td></tr>
+<tr class="separator:ad9cfdac85eba8396ffb90a2beea66d3f inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d3788d19cabda5e7be335a8d6b713fb inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a7d3788d19cabda5e7be335a8d6b713fb">Enable</a> ()</td></tr>
+<tr class="separator:a7d3788d19cabda5e7be335a8d6b713fb inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab009db7ef16ca18fdf8eac10559501c0 inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#ab009db7ef16ca18fdf8eac10559501c0">Disable</a> ()</td></tr>
+<tr class="separator:ab009db7ef16ca18fdf8eac10559501c0 inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5529112d290584cada5d2bbdafa99f71 inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a5529112d290584cada5d2bbdafa99f71">Size</a> ()</td></tr>
+<tr class="separator:a5529112d290584cada5d2bbdafa99f71 inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a67a712b6749c37f56c95e37fbcee92 inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a0a67a712b6749c37f56c95e37fbcee92">Destroy</a> ()</td></tr>
+<tr class="separator:a0a67a712b6749c37f56c95e37fbcee92 inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a09894789697366f6d5606ccfff0373aa"><td class="memItemLeft" align="right" valign="top"><a id="a09894789697366f6d5606ccfff0373aa"></a>
-static <a class="el" href="class_t_file_chooser.html">TFileChooser</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (file_chooser_t *nativeObj)</td></tr>
-<tr class="separator:a09894789697366f6d5606ccfff0373aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b33e697faf7d9d582177ae8d81079e2"><td class="memItemLeft" align="right" valign="top"><a id="a9b33e697faf7d9d582177ae8d81079e2"></a>
-static <a class="el" href="class_t_file_chooser.html">TFileChooser</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const file_chooser_t *nativeObj)</td></tr>
-<tr class="separator:a9b33e697faf7d9d582177ae8d81079e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad62c4d9b4b44230893e6c7e33feac325"><td class="memItemLeft" align="right" valign="top"><a id="ad62c4d9b4b44230893e6c7e33feac325"></a>
+static <a class="el" href="class_t_file_chooser.html">TFileChooser</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (emitter_t *nativeObj)</td></tr>
+<tr class="separator:ad62c4d9b4b44230893e6c7e33feac325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fbaf1193e95dd37136cdb4ef84f60ca"><td class="memItemLeft" align="right" valign="top"><a id="a9fbaf1193e95dd37136cdb4ef84f60ca"></a>
+static <a class="el" href="class_t_file_chooser.html">TFileChooser</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const emitter_t *nativeObj)</td></tr>
+<tr class="separator:a9fbaf1193e95dd37136cdb4ef84f60ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a726021825934a40f44fc32e6f008cb51"><td class="memItemLeft" align="right" valign="top"><a id="a726021825934a40f44fc32e6f008cb51"></a>
+static <a class="el" href="class_t_file_chooser.html">TFileChooser</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (<a class="el" href="class_t_emitter.html">TEmitter</a> &amp;obj)</td></tr>
+<tr class="separator:a726021825934a40f44fc32e6f008cb51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42ab4fa0a8a97552980dd92d54a970df"><td class="memItemLeft" align="right" valign="top"><a id="a42ab4fa0a8a97552980dd92d54a970df"></a>
+static <a class="el" href="class_t_file_chooser.html">TFileChooser</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const <a class="el" href="class_t_emitter.html">TEmitter</a> &amp;obj)</td></tr>
+<tr class="separator:a42ab4fa0a8a97552980dd92d54a970df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2bd598a2ab95dee068e6d4607898ad0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_file_chooser.html">TFileChooser</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_chooser.html#ae2bd598a2ab95dee068e6d4607898ad0">Create</a> (const char *init_dir, const char *filter)</td></tr>
 <tr class="separator:ae2bd598a2ab95dee068e6d4607898ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_t_emitter"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_t_emitter')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="class_t_emitter.html">TEmitter</a></td></tr>
+<tr class="memitem:a519410f20fbc260357c72f17fae29c61 inherit pub_static_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top"><a id="a519410f20fbc260357c72f17fae29c61"></a>
+static <a class="el" href="class_t_emitter.html">TEmitter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (emitter_t *nativeObj)</td></tr>
+<tr class="separator:a519410f20fbc260357c72f17fae29c61 inherit pub_static_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ddf47a8480c17fdd0875da2d9a77ed9 inherit pub_static_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top"><a id="a9ddf47a8480c17fdd0875da2d9a77ed9"></a>
+static <a class="el" href="class_t_emitter.html">TEmitter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const emitter_t *nativeObj)</td></tr>
+<tr class="separator:a9ddf47a8480c17fdd0875da2d9a77ed9 inherit pub_static_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70ef09f38ab28ee7cd4f1fddb2c5e450 inherit pub_static_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_emitter.html">TEmitter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a70ef09f38ab28ee7cd4f1fddb2c5e450">Create</a> ()</td></tr>
+<tr class="separator:a70ef09f38ab28ee7cd4f1fddb2c5e450 inherit pub_static_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public 属性</h2></td></tr>
-<tr class="memitem:a2ac930ee1e00c83e8ed2759c6ec378e7"><td class="memItemLeft" align="right" valign="top"><a id="a2ac930ee1e00c83e8ed2759c6ec378e7"></a>
-file_chooser_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td></tr>
-<tr class="separator:a2ac930ee1e00c83e8ed2759c6ec378e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_attribs_class_t_emitter"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_t_emitter')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="class_t_emitter.html">TEmitter</a></td></tr>
+<tr class="memitem:a476ec4fc4b3a97af70c2d5e91df7a0cc inherit pub_attribs_class_t_emitter"><td class="memItemLeft" align="right" valign="top"><a id="a476ec4fc4b3a97af70c2d5e91df7a0cc"></a>
+emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td></tr>
+<tr class="separator:a476ec4fc4b3a97af70c2d5e91df7a0cc inherit pub_attribs_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>文件/目录选择器 </p>

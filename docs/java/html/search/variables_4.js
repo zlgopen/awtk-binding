@@ -12,7 +12,7 @@ var searchData=
   ['dialog_5ftitle_2277',['DIALOG_TITLE',['../enumawtk_1_1_t_widget_type.html#af806a7e1f284b6d6264fab147cc75c0e',1,'awtk::TWidgetType']]],
   ['dirty_5frect_5ftolerance_2278',['DIRTY_RECT_TOLERANCE',['../enumawtk_1_1_t_widget_prop.html#ab5df2becd43f367ea6439e223db32dd7',1,'awtk::TWidgetProp']]],
   ['dnd_2279',['DND',['../enumawtk_1_1_t_widget_type.html#a37e1439a14c98e75e1d02fdebe861003',1,'awtk::TWidgetType']]],
-  ['done_2280',['DONE',['../enumawtk_1_1_t_ret.html#aa80e2d94d9d19726e9ab1f33244d6476',1,'awtk::TRet']]],
+  ['done_2280',['DONE',['../enumawtk_1_1_t_event_type.html#a787cbec48f4b7ee248fe253e938165b0',1,'awtk.TEventType.DONE()'],['../enumawtk_1_1_t_ret.html#aa80e2d94d9d19726e9ab1f33244d6476',1,'awtk.TRet.DONE()']]],
   ['double_2281',['DOUBLE',['../enumawtk_1_1_t_value_type.html#aadf61a5d7ca766f641593f375af00411',1,'awtk::TValueType']]],
   ['drag_2282',['DRAG',['../enumawtk_1_1_t_event_type.html#a63ba5aa1c321e3562a7cded212c0fab4',1,'awtk::TEventType']]],
   ['drag_5fend_2283',['DRAG_END',['../enumawtk_1_1_t_event_type.html#ab7d3bad09b2b1568711127f1fbf384df',1,'awtk::TEventType']]],

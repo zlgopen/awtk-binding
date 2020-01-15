@@ -16,7 +16,7 @@ var searchData=
   ['dispatchkey_241',['dispatchKey',['../classawtk_1_1_t_input_method.html#a2deec4e42a069fc71633c944a0e089ca',1,'awtk::TInputMethod']]],
   ['dispatchsimpleevent_242',['dispatchSimpleEvent',['../classawtk_1_1_t_emitter.html#abf6b367450ff271497e535debed153d2',1,'awtk::TEmitter']]],
   ['dnd_243',['DND',['../enumawtk_1_1_t_widget_type.html#a37e1439a14c98e75e1d02fdebe861003',1,'awtk::TWidgetType']]],
-  ['done_244',['DONE',['../enumawtk_1_1_t_ret.html#aa80e2d94d9d19726e9ab1f33244d6476',1,'awtk::TRet']]],
+  ['done_244',['DONE',['../enumawtk_1_1_t_event_type.html#a787cbec48f4b7ee248fe253e938165b0',1,'awtk.TEventType.DONE()'],['../enumawtk_1_1_t_ret.html#aa80e2d94d9d19726e9ab1f33244d6476',1,'awtk.TRet.DONE()']]],
   ['double_245',['DOUBLE',['../enumawtk_1_1_t_value_type.html#aadf61a5d7ca766f641593f375af00411',1,'awtk::TValueType']]],
   ['drag_246',['DRAG',['../enumawtk_1_1_t_event_type.html#a63ba5aa1c321e3562a7cded212c0fab4',1,'awtk::TEventType']]],
   ['drag_5fend_247',['DRAG_END',['../enumawtk_1_1_t_event_type.html#ab7d3bad09b2b1568711127f1fbf384df',1,'awtk::TEventType']]],
