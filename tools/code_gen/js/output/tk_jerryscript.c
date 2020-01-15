@@ -20951,8 +20951,8 @@ jsvalue_t wrap_file_chooser_cast(
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
   file_chooser_t* ret = NULL;
-  void* data = (void*)jsvalue_get_pointer(ctx, argv[0], "void*");
-  ret = (file_chooser_t*)file_chooser_cast(data);
+  file_chooser_t* chooser = (file_chooser_t*)jsvalue_get_pointer(ctx, argv[0], "file_chooser_t*");
+  ret = (file_chooser_t*)file_chooser_cast(chooser);
 
   jret = jsvalue_create_pointer(ctx, ret, "file_chooser_t*");
   }

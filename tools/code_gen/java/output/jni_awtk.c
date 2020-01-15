@@ -13301,8 +13301,8 @@ int awtk_TFileChooser_file_chooser_cast(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   file_chooser_t* ret = NULL;
-  void* data = (void*)jni_ctx_get_int64(&ctx);
-  ret = (file_chooser_t*)file_chooser_cast(data);
+  file_chooser_t* chooser = (file_chooser_t*)jni_ctx_get_object(&ctx);
+  ret = (file_chooser_t*)file_chooser_cast(chooser);
   jni_ctx_return_object(&ctx, (void*)(ret));
 
   return 0;

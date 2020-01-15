@@ -8850,9 +8850,10 @@ JNIEXPORT jlong JNICALL Java_awtk_TFileChooser_file_1chooser_1create(JNIEnv* env
   return (jlong)(ret);
 }
 
-JNIEXPORT jlong JNICALL Java_awtk_TFileChooser_file_1chooser_1cast(JNIEnv* env,  jclass ajc, jlong data) { /*func*/
+JNIEXPORT jlong JNICALL Java_awtk_TFileChooser_file_1chooser_1cast(JNIEnv* env,  jclass ajc, jlong jchooser) { /*func*/
   file_chooser_t* ret;
-  ret = (file_chooser_t*)file_chooser_cast(data);
+  file_chooser_t* chooser = (file_chooser_t*)jchooser;
+  ret = (file_chooser_t*)file_chooser_cast(chooser);
 
   return (jlong)(ret);
 }

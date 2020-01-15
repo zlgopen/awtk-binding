@@ -47,12 +47,12 @@ public class TFileChooser extends TEmitter {
   /**
    * 转换为file_chooser对象(供脚本语言使用)。
    * 
-   * @param data file_chooser对象。
+   * @param chooser file_chooser对象。
    *
    * @return 对象。
    */
- public  static TFileChooser cast(long data)  {
-    return new TFileChooser(file_chooser_cast(data != null ? (data.nativeObj) : 0));
+ public  static TFileChooser cast(TFileChooser chooser)  {
+    return new TFileChooser(file_chooser_cast(chooser != null ? (chooser.nativeObj) : 0));
  }
 
 
@@ -122,7 +122,7 @@ public class TFileChooser extends TEmitter {
  }
 
 static private native long file_chooser_create(String init_dir, String filter);
-static private native long file_chooser_cast(long data);
+static private native long file_chooser_cast(long chooser);
 static private native int file_chooser_choose_file_for_save(long chooser);
 static private native int file_chooser_choose_file_for_open(long chooser);
 static private native int file_chooser_choose_folder(long chooser);

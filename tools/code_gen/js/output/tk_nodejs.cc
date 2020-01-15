@@ -16954,8 +16954,8 @@ static void wrap_file_chooser_cast(const Nan::FunctionCallbackInfo<v8::Value>& a
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 1) {
   file_chooser_t* ret = NULL;
-  void* data = (void*)jsvalue_get_pointer(ctx, argv[0], "void*");
-  ret = (file_chooser_t*)file_chooser_cast(data);
+  file_chooser_t* chooser = (file_chooser_t*)jsvalue_get_pointer(ctx, argv[0], "file_chooser_t*");
+  ret = (file_chooser_t*)file_chooser_cast(chooser);
 
   v8::Local<v8::Number> jret= Nan::New((double)((int64_t)(ret)));
   argv.GetReturnValue().Set(jret);

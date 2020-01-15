@@ -12855,8 +12855,8 @@ static int wrap_file_chooser_create(lua_State* L) {
 
 static int wrap_file_chooser_cast(lua_State* L) {
   file_chooser_t* ret = NULL;
-  void* data = (void*)lua_touserdata(L, 1);
-  ret = (file_chooser_t*)file_chooser_cast(data);
+  file_chooser_t* chooser = (file_chooser_t*)tk_checkudata(L, 1, "file_chooser_t");
+  ret = (file_chooser_t*)file_chooser_cast(chooser);
 
   return tk_newuserdata(L, (void*)ret, "/file_chooser_t/emitter_t", "awtk.file_chooser_t");
 }

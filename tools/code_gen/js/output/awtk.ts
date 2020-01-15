@@ -1389,7 +1389,7 @@ declare function label_resize_to_content(widget : any, min_w : number, max_w : n
 declare function label_cast(widget : any) : any;
 declare function label_t_get_prop_length(nativeObj : any) : number;
 declare function file_chooser_create(init_dir : string, filter : string) : any;
-declare function file_chooser_cast(data : any) : any;
+declare function file_chooser_cast(chooser : any) : any;
 declare function file_chooser_choose_file_for_save(chooser : any) : TRet;
 declare function file_chooser_choose_file_for_open(chooser : any) : TRet;
 declare function file_chooser_choose_folder(chooser : any) : TRet;
@@ -16195,12 +16195,12 @@ export class TFileChooser extends TEmitter {
   /**
    * 转换为file_chooser对象(供脚本语言使用)。
    * 
-   * @param data file_chooser对象。
+   * @param chooser file_chooser对象。
    *
    * @returns 对象。
    */
- static cast(data : any) : TFileChooser  {
-    return new TFileChooser(file_chooser_cast(data != null ? (data.nativeObj || data) : null));
+ static cast(chooser : TFileChooser) : TFileChooser  {
+    return new TFileChooser(file_chooser_cast(chooser != null ? (chooser.nativeObj || chooser) : null));
  }
 
 

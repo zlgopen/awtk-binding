@@ -13221,12 +13221,12 @@ var TFileChooser = /** @class */ (function (_super) {
     /**
      * 转换为file_chooser对象(供脚本语言使用)。
      *
-     * @param data file_chooser对象。
+     * @param chooser file_chooser对象。
      *
      * @returns 对象。
      */
-    TFileChooser.cast = function (data) {
-        return new TFileChooser(file_chooser_cast(data != null ? (data.nativeObj || data) : null));
+    TFileChooser.cast = function (chooser) {
+        return new TFileChooser(file_chooser_cast(chooser != null ? (chooser.nativeObj || chooser) : null));
     };
     /**
      * 为了保存而选择文件。
