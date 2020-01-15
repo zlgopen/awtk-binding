@@ -13287,12 +13287,34 @@ int awtk_TFileChooser_file_chooser_create(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   file_chooser_t* ret = NULL;
-  const char* init_dir = (const char*)jni_ctx_get_str(&ctx);
-  const char* filter = (const char*)jni_ctx_get_str(&ctx);
-  ret = (file_chooser_t*)file_chooser_create(init_dir, filter);
-  TKMEM_FREE(init_dir);
-  TKMEM_FREE(filter);
+  ret = (file_chooser_t*)file_chooser_create();
   jni_ctx_return_object(&ctx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TFileChooser_file_chooser_set_init_dir(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  file_chooser_t* chooser = (file_chooser_t*)jni_ctx_get_object(&ctx);
+  const char* init_dir = (const char*)jni_ctx_get_str(&ctx);
+  ret = (ret_t)file_chooser_set_init_dir(chooser, init_dir);
+  TKMEM_FREE(init_dir);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TFileChooser_file_chooser_set_filter(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  file_chooser_t* chooser = (file_chooser_t*)jni_ctx_get_object(&ctx);
+  const char* filter = (const char*)jni_ctx_get_str(&ctx);
+  ret = (ret_t)file_chooser_set_filter(chooser, filter);
+  TKMEM_FREE(filter);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
 
   return 0;
 }
@@ -17873,7 +17895,9 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TLabel",  "label_resize_to_content",  "(JIIII)I",  awtk_TLabel_label_resize_to_content},
 {"awtk/TLabel",  "label_cast",  "(J)J",  awtk_TLabel_label_cast},
 {"awtk/TLabel",  "label_t_get_prop_length",  "(J)I",  awtk_TLabel_label_t_get_prop_length},
-{"awtk/TFileChooser",  "file_chooser_create",  "(Ljava/lang/String;Ljava/lang/String;)J",  awtk_TFileChooser_file_chooser_create},
+{"awtk/TFileChooser",  "file_chooser_create",  "()J",  awtk_TFileChooser_file_chooser_create},
+{"awtk/TFileChooser",  "file_chooser_set_init_dir",  "(JLjava/lang/String;)I",  awtk_TFileChooser_file_chooser_set_init_dir},
+{"awtk/TFileChooser",  "file_chooser_set_filter",  "(JLjava/lang/String;)I",  awtk_TFileChooser_file_chooser_set_filter},
 {"awtk/TFileChooser",  "file_chooser_cast",  "(J)J",  awtk_TFileChooser_file_chooser_cast},
 {"awtk/TFileChooser",  "file_chooser_choose_file_for_save",  "(J)I",  awtk_TFileChooser_file_chooser_choose_file_for_save},
 {"awtk/TFileChooser",  "file_chooser_choose_file_for_open",  "(J)I",  awtk_TFileChooser_file_chooser_choose_file_for_open},

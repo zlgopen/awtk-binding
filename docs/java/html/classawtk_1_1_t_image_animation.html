@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TImageAnimation类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -30,18 +30,21 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.13 -->
+<!-- 制作者 Doxygen 1.8.17 -->
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','搜索');
   $(document).ready(function() { init_search(); });
 });
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -75,9 +78,7 @@ $(function() {
 类 awtk.TImageAnimation 继承关系图:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classawtk_1_1_t_image_animation.png" usemap="#awtk.TImageAnimation_map" alt=""/>
-  <map id="awtk.TImageAnimation_map" name="awtk.TImageAnimation_map">
-</map>
+  <img src="classawtk_1_1_t_image_animation.png" alt=""/>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -143,9 +144,11 @@ Public 成员函数</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>图片动画控件，指定一个图片前缀，依次显示指定序列的图片，从而形成动画效果。</p>
 <p>图片序列可以用sequence指定，也可以用start_index和end_index指定一个范围。</p>
-<p>image_animation_t是widget的子类控件，widget_t的函数均适用于image_animation_t控件。</p>
+<p>image_animation_t是widget\_t的子类控件，widget_t的函数均适用于image_animation_t控件。</p>
 <p>在xml中使用"image\_animation"标签创建图片动画控件。如：</p>
-<div class="fragment"><div class="line">*&lt;<span class="keywordtype">image_animation</span> <span class="keyword">image</span>=<span class="stringliteral">&quot;ani&quot;</span> <span class="keyword">start_index</span>=<span class="stringliteral">&quot;1&quot;</span> <span class="keyword">end_index</span>=<span class="stringliteral">&quot;9&quot;</span> <span class="keyword">auto_play</span>=<span class="stringliteral">&quot;true&quot;</span> <span class="keyword">interval</span>=<span class="stringliteral">&quot;50&quot;</span></div><div class="line">*<span class="keyword">delay</span>=<span class="stringliteral">&quot;100&quot;</span>/&gt;</div></div><!-- fragment --><blockquote class="doxtable">
+<div class="fragment"><div class="line">*&lt;<span class="keywordtype">image_animation</span> <span class="keyword">image</span>=<span class="stringliteral">&quot;ani&quot;</span> <span class="keyword">start_index</span>=<span class="stringliteral">&quot;1&quot;</span> <span class="keyword">end_index</span>=<span class="stringliteral">&quot;9&quot;</span> <span class="keyword">auto_play</span>=<span class="stringliteral">&quot;true&quot;</span> <span class="keyword">interval</span>=<span class="stringliteral">&quot;50&quot;</span></div>
+<div class="line">*<span class="keyword">delay</span>=<span class="stringliteral">&quot;100&quot;</span>/&gt;</div>
+</div><!-- fragment --><blockquote class="doxtable">
 <p>更多用法请参考： </p>
 </blockquote>
 <p><a href="https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/image_animation.xml">image_animation.xml</a></p>
@@ -759,7 +762,9 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p>设置生成图片名的格式。</p>
 <p>XXX:生成图片名时，第一个参数是图片名前缀，第二个是序数，只能在此前提下设置格式。</p>
-<div class="fragment"><div class="line">*<span class="keyword">const</span> <span class="keywordtype">char</span>* format = image_animation-&gt;format ? image_animation-&gt;format : <span class="stringliteral">&quot;%s%d&quot;</span>;</div><div class="line">*tk_snprintf(name, TK_NAME_LEN, format, image_animation-&gt;image, image_animation-&gt;index);</div></div><!-- fragment --><dl class="params"><dt>参数</dt><dd>
+<div class="fragment"><div class="line">*<span class="keyword">const</span> <span class="keywordtype">char</span>* format = image_animation-&gt;format ? image_animation-&gt;format : <span class="stringliteral">&quot;%s%d&quot;</span>;</div>
+<div class="line">*tk_snprintf(name, TK_NAME_LEN, format, image_animation-&gt;image, image_animation-&gt;index);</div>
+</div><!-- fragment --><dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">format</td><td>格式。</td></tr>
   </table>
@@ -1020,7 +1025,7 @@ Public 成员函数</h2></td></tr>
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
+</a> 1.8.17
 </small></address>
 </body>
 </html>

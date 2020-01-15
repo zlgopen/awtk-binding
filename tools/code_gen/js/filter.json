@@ -16988,7 +16988,7 @@
     "properties": [
       {
         "name": "value",
-        "desc": "进度条的值[0-100]。",
+        "desc": "进度条的值[0-max]。",
         "type": "float_t",
         "annotation": {
           "set_prop": true,
@@ -18486,18 +18486,7 @@
     "type": "class",
     "methods": [
       {
-        "params": [
-          {
-            "type": "const char*",
-            "name": "init_dir",
-            "desc": "初始目录"
-          },
-          {
-            "type": "const char*",
-            "name": "filter",
-            "desc": "过滤规则(如\".jpg.png.gif\")。"
-          }
-        ],
+        "params": [],
         "annotation": {
           "constructor": true,
           "scriptable": true
@@ -18507,6 +18496,52 @@
         "return": {
           "type": "file_chooser_t*",
           "desc": "对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "file_chooser_t*",
+            "name": "chooser",
+            "desc": "file_chooser对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "init_dir",
+            "desc": "初始目录"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置初始目录。",
+        "name": "file_chooser_set_init_dir",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "file_chooser_t*",
+            "name": "chooser",
+            "desc": "file_chooser对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "filter",
+            "desc": "过滤规则(如\".jpg.png.gif\")。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置过滤规则。",
+        "name": "file_chooser_set_filter",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
         }
       },
       {
@@ -21265,7 +21300,8 @@
     "name": "image_base_t",
     "parent": "widget_t",
     "annotation": {
-      "scriptable": true
+      "scriptable": true,
+      "widget": true
     },
     "level": 2
   },

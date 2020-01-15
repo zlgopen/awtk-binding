@@ -7369,7 +7369,7 @@ public:
   uint32_t GetPercent() ;
 
   /**
-   * 进度条的值[0-100]。
+   * 进度条的值[0-max]。
    *
    */
   float_t GetValue() const;
@@ -8346,12 +8346,28 @@ public:
   /**
    * 创建file_chooser对象
    * 
-   * @param init_dir 初始目录
-   * @param filter 过滤规则(如".jpg.png.gif")。
    *
    * @return 对象。
    */
-  static  TFileChooser Create(const char* init_dir, const char* filter) ;
+  static  TFileChooser Create() ;
+
+  /**
+   * 设置初始目录。
+   * 
+   * @param init_dir 初始目录
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetInitDir(const char* init_dir) ;
+
+  /**
+   * 设置过滤规则。
+   * 
+   * @param filter 过滤规则(如".jpg.png.gif")。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetFilter(const char* filter) ;
 
   /**
    * 为了保存而选择文件。

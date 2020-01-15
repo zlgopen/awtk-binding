@@ -2523,8 +2523,16 @@
    return ((label_t*)(this->nativeObj))->length;
  }
 
- TFileChooser TFileChooser::Create(const char* init_dir, const char* filter)  {
-   return TFileChooser((emitter_t*)(file_chooser_create(init_dir, filter)));
+ TFileChooser TFileChooser::Create()  {
+   return TFileChooser((emitter_t*)(file_chooser_create()));
+ }
+
+ ret_t TFileChooser::SetInitDir(const char* init_dir)  {
+   return file_chooser_set_init_dir(((file_chooser_t*)(this->nativeObj)), init_dir);
+ }
+
+ ret_t TFileChooser::SetFilter(const char* filter)  {
+   return file_chooser_set_filter(((file_chooser_t*)(this->nativeObj)), filter);
  }
 
  ret_t TFileChooser::ChooseFileForSave()  {

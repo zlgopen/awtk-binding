@@ -1388,7 +1388,9 @@ declare function label_set_length(widget : any, length : number) : TRet;
 declare function label_resize_to_content(widget : any, min_w : number, max_w : number, min_h : number, max_h : number) : TRet;
 declare function label_cast(widget : any) : any;
 declare function label_t_get_prop_length(nativeObj : any) : number;
-declare function file_chooser_create(init_dir : string, filter : string) : any;
+declare function file_chooser_create() : any;
+declare function file_chooser_set_init_dir(chooser : any, init_dir : string) : TRet;
+declare function file_chooser_set_filter(chooser : any, filter : string) : TRet;
 declare function file_chooser_cast(chooser : any) : any;
 declare function file_chooser_choose_file_for_save(chooser : any) : TRet;
 declare function file_chooser_choose_file_for_open(chooser : any) : TRet;
@@ -15034,7 +15036,7 @@ export class TProgressBar extends TWidget {
 
 
   /**
-   * 进度条的值[0-100]。
+   * 进度条的值[0-max]。
    *
    */
  get value() : number {
@@ -16182,13 +16184,35 @@ export class TFileChooser extends TEmitter {
   /**
    * 创建file_chooser对象
    * 
-   * @param init_dir 初始目录
-   * @param filter 过滤规则(如".jpg.png.gif")。
    *
    * @returns 对象。
    */
- static create(init_dir : string, filter : string) : TFileChooser  {
-    return new TFileChooser(file_chooser_create(init_dir, filter));
+ static create() : TFileChooser  {
+    return new TFileChooser(file_chooser_create());
+ }
+
+
+  /**
+   * 设置初始目录。
+   * 
+   * @param init_dir 初始目录
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setInitDir(init_dir : string) : TRet  {
+    return file_chooser_set_init_dir(this != null ? (this.nativeObj || this) : null, init_dir);
+ }
+
+
+  /**
+   * 设置过滤规则。
+   * 
+   * @param filter 过滤规则(如".jpg.png.gif")。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setFilter(filter : string) : TRet  {
+    return file_chooser_set_filter(this != null ? (this.nativeObj || this) : null, filter);
  }
 
 

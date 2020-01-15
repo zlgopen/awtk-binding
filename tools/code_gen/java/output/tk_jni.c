@@ -8839,15 +8839,31 @@ JNIEXPORT jint JNICALL Java_awtk_TLabel_label_1t_1get_1prop_1length(JNIEnv* env,
   return (jint)(obj->length);
 }
 
-JNIEXPORT jlong JNICALL Java_awtk_TFileChooser_file_1chooser_1create(JNIEnv* env,  jclass ajc, jstring jinit_dir, jstring jfilter) { /*func*/
+JNIEXPORT jlong JNICALL Java_awtk_TFileChooser_file_1chooser_1create(JNIEnv* env,  jclass ajc) { /*func*/
   file_chooser_t* ret;
-  const char* init_dir = (char*)(*env)->GetStringUTFChars(env, jinit_dir, 0);
-  const char* filter = (char*)(*env)->GetStringUTFChars(env, jfilter, 0);
-  ret = (file_chooser_t*)file_chooser_create(init_dir, filter);
-  (*env)->ReleaseStringUTFChars(env, jinit_dir, init_dir);
-  (*env)->ReleaseStringUTFChars(env, jfilter, filter);
+  ret = (file_chooser_t*)file_chooser_create();
 
   return (jlong)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TFileChooser_file_1chooser_1set_1init_1dir(JNIEnv* env,  jclass ajc, jlong jchooser, jstring jinit_dir) { /*func*/
+  ret_t ret;
+  file_chooser_t* chooser = (file_chooser_t*)jchooser;
+  const char* init_dir = (char*)(*env)->GetStringUTFChars(env, jinit_dir, 0);
+  ret = (ret_t)file_chooser_set_init_dir(chooser, init_dir);
+  (*env)->ReleaseStringUTFChars(env, jinit_dir, init_dir);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TFileChooser_file_1chooser_1set_1filter(JNIEnv* env,  jclass ajc, jlong jchooser, jstring jfilter) { /*func*/
+  ret_t ret;
+  file_chooser_t* chooser = (file_chooser_t*)jchooser;
+  const char* filter = (char*)(*env)->GetStringUTFChars(env, jfilter, 0);
+  ret = (ret_t)file_chooser_set_filter(chooser, filter);
+  (*env)->ReleaseStringUTFChars(env, jfilter, filter);
+
+  return (jint)(ret);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TFileChooser_file_1chooser_1cast(JNIEnv* env,  jclass ajc, jlong jchooser) { /*func*/

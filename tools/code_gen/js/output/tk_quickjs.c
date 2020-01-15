@@ -21159,15 +21159,49 @@ jsvalue_t wrap_file_chooser_create(
     jsvalue_const_t *argv
   ) {
   jsvalue_t jret = JS_NULL;
-  if(argc >= 2) {
+  if(argc >= 0) {
   file_chooser_t* ret = NULL;
-  const char* init_dir = (const char*)jsvalue_get_utf8_string(ctx, argv[0]);
-  const char* filter = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
-  ret = (file_chooser_t*)file_chooser_create(init_dir, filter);
-  jsvalue_free_str(ctx, init_dir);
-  jsvalue_free_str(ctx, filter);
+  ret = (file_chooser_t*)file_chooser_create();
 
   jret = jsvalue_create_pointer(ctx, ret, "file_chooser_t*");
+  }
+  return jret;
+}
+
+jsvalue_t wrap_file_chooser_set_init_dir(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  file_chooser_t* chooser = (file_chooser_t*)jsvalue_get_pointer(ctx, argv[0], "file_chooser_t*");
+  const char* init_dir = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  ret = (ret_t)file_chooser_set_init_dir(chooser, init_dir);
+  jsvalue_free_str(ctx, init_dir);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_file_chooser_set_filter(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  file_chooser_t* chooser = (file_chooser_t*)jsvalue_get_pointer(ctx, argv[0], "file_chooser_t*");
+  const char* filter = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  ret = (ret_t)file_chooser_set_filter(chooser, filter);
+  jsvalue_free_str(ctx, filter);
+
+  jret = jsvalue_create_int(ctx, ret);
   }
   return jret;
 }
@@ -21295,6 +21329,10 @@ ret_t file_chooser_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
   JS_SetPropertyStr(ctx, global_obj, "file_chooser_create",
                       JS_NewCFunction(ctx, wrap_file_chooser_create, "file_chooser_create", 1));
+  JS_SetPropertyStr(ctx, global_obj, "file_chooser_set_init_dir",
+                      JS_NewCFunction(ctx, wrap_file_chooser_set_init_dir, "file_chooser_set_init_dir", 1));
+  JS_SetPropertyStr(ctx, global_obj, "file_chooser_set_filter",
+                      JS_NewCFunction(ctx, wrap_file_chooser_set_filter, "file_chooser_set_filter", 1));
   JS_SetPropertyStr(ctx, global_obj, "file_chooser_cast",
                       JS_NewCFunction(ctx, wrap_file_chooser_cast, "file_chooser_cast", 1));
   JS_SetPropertyStr(ctx, global_obj, "file_chooser_choose_file_for_save",

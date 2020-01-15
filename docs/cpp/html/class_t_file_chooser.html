@@ -90,6 +90,10 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a1d89fd26d02f6ab54504b1d1b2b4f93c"><td class="memItemLeft" align="right" valign="top"><a id="a1d89fd26d02f6ab54504b1d1b2b4f93c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TFileChooser</b> (const file_chooser_t *nativeObj)</td></tr>
 <tr class="separator:a1d89fd26d02f6ab54504b1d1b2b4f93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8203a495ea5b5b359e2f7a422d15942"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_chooser.html#af8203a495ea5b5b359e2f7a422d15942">SetInitDir</a> (const char *init_dir)</td></tr>
+<tr class="separator:af8203a495ea5b5b359e2f7a422d15942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a7dd23ea3f18cfe9f637799ee13787a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_chooser.html#a5a7dd23ea3f18cfe9f637799ee13787a">SetFilter</a> (const char *filter)</td></tr>
+<tr class="separator:a5a7dd23ea3f18cfe9f637799ee13787a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52518346d1cfb468ead5649613e515a8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_chooser.html#a52518346d1cfb468ead5649613e515a8">ChooseFileForSave</a> ()</td></tr>
 <tr class="separator:a52518346d1cfb468ead5649613e515a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafc606b0b78e8e7b531abb0ffee35f16"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_chooser.html#aafc606b0b78e8e7b531abb0ffee35f16">ChooseFileForOpen</a> ()</td></tr>
@@ -140,8 +144,8 @@ static <a class="el" href="class_t_file_chooser.html">TFileChooser</a>&#160;</td
 <tr class="memitem:a42ab4fa0a8a97552980dd92d54a970df"><td class="memItemLeft" align="right" valign="top"><a id="a42ab4fa0a8a97552980dd92d54a970df"></a>
 static <a class="el" href="class_t_file_chooser.html">TFileChooser</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const <a class="el" href="class_t_emitter.html">TEmitter</a> &amp;obj)</td></tr>
 <tr class="separator:a42ab4fa0a8a97552980dd92d54a970df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2bd598a2ab95dee068e6d4607898ad0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_file_chooser.html">TFileChooser</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_chooser.html#ae2bd598a2ab95dee068e6d4607898ad0">Create</a> (const char *init_dir, const char *filter)</td></tr>
-<tr class="separator:ae2bd598a2ab95dee068e6d4607898ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a105b80bff207186bb870d96d0831f268"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_file_chooser.html">TFileChooser</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_chooser.html#a105b80bff207186bb870d96d0831f268">Create</a> ()</td></tr>
+<tr class="separator:a105b80bff207186bb870d96d0831f268"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_class_t_emitter"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_t_emitter')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="class_t_emitter.html">TEmitter</a></td></tr>
 <tr class="memitem:a519410f20fbc260357c72f17fae29c61 inherit pub_static_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top"><a id="a519410f20fbc260357c72f17fae29c61"></a>
 static <a class="el" href="class_t_emitter.html">TEmitter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (emitter_t *nativeObj)</td></tr>
@@ -219,8 +223,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="ae2bd598a2ab95dee068e6d4607898ad0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2bd598a2ab95dee068e6d4607898ad0">&#9670;&nbsp;</a></span>Create()</h2>
+<a id="a105b80bff207186bb870d96d0831f268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a105b80bff207186bb870d96d0831f268">&#9670;&nbsp;</a></span>Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -231,19 +235,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname"><a class="el" href="class_t_file_chooser.html">TFileChooser</a> TFileChooser::Create </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>init_dir</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>filter</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -253,13 +246,6 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 </table>
 </div><div class="memdoc">
 <p>创建file_chooser对象</p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">init_dir</td><td>初始目录 </td></tr>
-    <tr><td class="paramname">filter</td><td>过滤规则(如".jpg.png.gif")。</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>返回</dt><dd>对象。 </dd></dl>
 
 </div>
@@ -318,6 +304,58 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 </div><div class="memdoc">
 <p>用户是否取消了选择。</p>
 <dl class="section return"><dt>返回</dt><dd>返回用户是否取消了选择。 </dd></dl>
+
+</div>
+</div>
+<a id="a5a7dd23ea3f18cfe9f637799ee13787a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a7dd23ea3f18cfe9f637799ee13787a">&#9670;&nbsp;</a></span>SetFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TFileChooser::SetFilter </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置过滤规则。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter</td><td>过滤规则(如".jpg.png.gif")。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="af8203a495ea5b5b359e2f7a422d15942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8203a495ea5b5b359e2f7a422d15942">&#9670;&nbsp;</a></span>SetInitDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TFileChooser::SetInitDir </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>init_dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置初始目录。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">init_dir</td><td>初始目录</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>
