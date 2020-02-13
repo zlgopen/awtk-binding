@@ -9,7 +9,8 @@ var searchData=
   ['enable_264',['enable',['../classawtk_1_1_t_emitter.html#ac74c2f4cb04791b650ad9c54b2b13707',1,'awtk.TEmitter.enable()'],['../enumawtk_1_1_t_widget_prop.html#a01cd8c47fb2137b29d9ce448a94135d3',1,'awtk.TWidgetProp.ENABLE()']]],
   ['enable_5flong_5fpress_265',['ENABLE_LONG_PRESS',['../enumawtk_1_1_t_widget_prop.html#a2b41b1e9d7627abb03d411aa6c7b2045',1,'awtk::TWidgetProp']]],
   ['eos_266',['EOS',['../enumawtk_1_1_t_ret.html#ae871894a013cafd5a3579d5777f3d713',1,'awtk::TRet']]],
-  ['eval_267',['eval',['../classawtk_1_1_t_object.html#a6f8f65ee50225e5420aa14a1d6282021',1,'awtk::TObject']]],
-  ['exec_268',['EXEC',['../enumawtk_1_1_t_widget_prop.html#a06fa13345601c200ef784b4e30077093',1,'awtk::TWidgetProp']]],
-  ['execute_269',['execute',['../classawtk_1_1_t_object.html#aa7cf12830497d90811f120c2509d8822',1,'awtk::TObject']]]
+  ['error_267',['ERROR',['../enumawtk_1_1_t_event_type.html#a347c42e6f5f44799f7a01835a5b6cd75',1,'awtk::TEventType']]],
+  ['eval_268',['eval',['../classawtk_1_1_t_object.html#a6f8f65ee50225e5420aa14a1d6282021',1,'awtk::TObject']]],
+  ['exec_269',['EXEC',['../enumawtk_1_1_t_widget_prop.html#a06fa13345601c200ef784b4e30077093',1,'awtk::TWidgetProp']]],
+  ['execute_270',['execute',['../classawtk_1_1_t_object.html#aa7cf12830497d90811f120c2509d8822',1,'awtk::TObject']]]
 ];
