@@ -6364,6 +6364,17 @@ int awtk_TWidget_widget_get_child(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TWidget_widget_get_native_window(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  native_window_t* ret = NULL;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  ret = (native_window_t*)widget_get_native_window(widget);
+  jni_ctx_return_object(&ctx, (void*)(ret));
+
+  return 0;
+}
+
 int awtk_TWidget_widget_index_of(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -15964,6 +15975,102 @@ int awtk_TComboBox_combo_box_t_get_prop_item_height(Runtime *runtime, JClass *cl
   return 0;
 }
 
+int awtk_TNativeWindow_native_window_move(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  native_window_t* win = (native_window_t*)jni_ctx_get_object(&ctx);
+  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
+  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
+  bool_t force = (bool_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)native_window_move(win, x, y, force);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TNativeWindow_native_window_resize(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  native_window_t* win = (native_window_t*)jni_ctx_get_object(&ctx);
+  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
+  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
+  bool_t force = (bool_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)native_window_resize(win, w, h, force);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TNativeWindow_native_window_minimize(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  native_window_t* win = (native_window_t*)jni_ctx_get_object(&ctx);
+  ret = (ret_t)native_window_minimize(win);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TNativeWindow_native_window_maximize(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  native_window_t* win = (native_window_t*)jni_ctx_get_object(&ctx);
+  ret = (ret_t)native_window_maximize(win);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TNativeWindow_native_window_restore(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  native_window_t* win = (native_window_t*)jni_ctx_get_object(&ctx);
+  ret = (ret_t)native_window_restore(win);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TNativeWindow_native_window_center(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  native_window_t* win = (native_window_t*)jni_ctx_get_object(&ctx);
+  ret = (ret_t)native_window_center(win);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TNativeWindow_native_window_show_border(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  native_window_t* win = (native_window_t*)jni_ctx_get_object(&ctx);
+  bool_t show = (bool_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)native_window_show_border(win, show);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TNativeWindow_native_window_set_fullscreen(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  native_window_t* win = (native_window_t*)jni_ctx_get_object(&ctx);
+  bool_t fullscreen = (bool_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)native_window_set_fullscreen(win, fullscreen);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TWindow_window_create(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -17358,6 +17465,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidgetState",  "WIDGET_STATE_FOCUSED_OF_ACTIVE",  "()Ljava/lang/String;",  awtk_TWidgetState_WIDGET_STATE_FOCUSED_OF_ACTIVE},
 {"awtk/TWidget",  "widget_count_children",  "(J)I",  awtk_TWidget_widget_count_children},
 {"awtk/TWidget",  "widget_get_child",  "(JI)J",  awtk_TWidget_widget_get_child},
+{"awtk/TWidget",  "widget_get_native_window",  "(J)J",  awtk_TWidget_widget_get_native_window},
 {"awtk/TWidget",  "widget_index_of",  "(J)I",  awtk_TWidget_widget_index_of},
 {"awtk/TWidget",  "widget_close_window",  "(J)I",  awtk_TWidget_widget_close_window},
 {"awtk/TWidget",  "widget_move",  "(JII)I",  awtk_TWidget_widget_move},
@@ -18270,6 +18378,14 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TComboBox",  "combo_box_t_get_prop_localize_options",  "(J)Z",  awtk_TComboBox_combo_box_t_get_prop_localize_options},
 {"awtk/TComboBox",  "combo_box_t_get_prop_options",  "(J)Ljava/lang/String;",  awtk_TComboBox_combo_box_t_get_prop_options},
 {"awtk/TComboBox",  "combo_box_t_get_prop_item_height",  "(J)I",  awtk_TComboBox_combo_box_t_get_prop_item_height},
+{"awtk/TNativeWindow",  "native_window_move",  "(JIIZ)I",  awtk_TNativeWindow_native_window_move},
+{"awtk/TNativeWindow",  "native_window_resize",  "(JIIZ)I",  awtk_TNativeWindow_native_window_resize},
+{"awtk/TNativeWindow",  "native_window_minimize",  "(J)I",  awtk_TNativeWindow_native_window_minimize},
+{"awtk/TNativeWindow",  "native_window_maximize",  "(J)I",  awtk_TNativeWindow_native_window_maximize},
+{"awtk/TNativeWindow",  "native_window_restore",  "(J)I",  awtk_TNativeWindow_native_window_restore},
+{"awtk/TNativeWindow",  "native_window_center",  "(J)I",  awtk_TNativeWindow_native_window_center},
+{"awtk/TNativeWindow",  "native_window_show_border",  "(JZ)I",  awtk_TNativeWindow_native_window_show_border},
+{"awtk/TNativeWindow",  "native_window_set_fullscreen",  "(JZ)I",  awtk_TNativeWindow_native_window_set_fullscreen},
 {"awtk/TWindow",  "window_create",  "(JIIII)J",  awtk_TWindow_window_create},
 {"awtk/TWindow",  "window_create_default",  "()J",  awtk_TWindow_window_create_default},
 {"awtk/TWindow",  "window_set_fullscreen",  "(JZ)I",  awtk_TWindow_window_set_fullscreen},

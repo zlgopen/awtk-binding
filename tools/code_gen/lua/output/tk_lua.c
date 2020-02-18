@@ -98,6 +98,7 @@
 #include "widgets/dialog_title.h"
 #include "tkc/object_default.h"
 #include "widgets/combo_box.h"
+#include "base/native_window.h"
 #include "base/window.h"
 #include "tkc/timer_info.h"
 #include "widgets/image.h"
@@ -303,6 +304,8 @@ static int wrap_object_default_t_get_prop(lua_State* L);
 static int wrap_object_default_t_set_prop(lua_State* L);
 static int wrap_combo_box_t_get_prop(lua_State* L);
 static int wrap_combo_box_t_set_prop(lua_State* L);
+static int wrap_native_window_t_get_prop(lua_State* L);
+static int wrap_native_window_t_set_prop(lua_State* L);
 static int wrap_window_t_get_prop(lua_State* L);
 static int wrap_window_t_set_prop(lua_State* L);
 static int wrap_timer_info_t_get_prop(lua_State* L);
@@ -5328,6 +5331,14 @@ static int wrap_widget_get_child(lua_State* L) {
   return tk_newuserdata(L, (void*)ret, "/widget_t", "awtk.widget_t");
 }
 
+static int wrap_widget_get_native_window(lua_State* L) {
+  native_window_t* ret = NULL;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  ret = (native_window_t*)widget_get_native_window(widget);
+
+  return tk_newuserdata(L, (void*)ret, "/native_window_t/object_t/emitter_t", "awtk.native_window_t");
+}
+
 static int wrap_widget_index_of(lua_State* L) {
   int32_t ret = 0;
   widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
@@ -6134,6 +6145,7 @@ static int wrap_widget_set_style_color(lua_State* L) {
 static const struct luaL_Reg widget_t_member_funcs[] = {
   {"count_children", wrap_widget_count_children},
   {"get_child", wrap_widget_get_child},
+  {"get_native_window", wrap_widget_get_native_window},
   {"index_of", wrap_widget_index_of},
   {"close_window", wrap_widget_close_window},
   {"move", wrap_widget_move},
@@ -16658,6 +16670,150 @@ static void combo_box_t_init(lua_State* L) {
   luaL_openlib(L, "ComboBox", static_funcs, 0);
   lua_settop(L, 0);
 }
+static int wrap_native_window_move(lua_State* L) {
+  ret_t ret = 0;
+  native_window_t* win = (native_window_t*)tk_checkudata(L, 1, "native_window_t");
+  xy_t x = (xy_t)luaL_checkinteger(L, 2);
+  xy_t y = (xy_t)luaL_checkinteger(L, 3);
+  bool_t force = (bool_t)lua_toboolean(L, 4);
+  ret = (ret_t)native_window_move(win, x, y, force);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_native_window_resize(lua_State* L) {
+  ret_t ret = 0;
+  native_window_t* win = (native_window_t*)tk_checkudata(L, 1, "native_window_t");
+  wh_t w = (wh_t)luaL_checkinteger(L, 2);
+  wh_t h = (wh_t)luaL_checkinteger(L, 3);
+  bool_t force = (bool_t)lua_toboolean(L, 4);
+  ret = (ret_t)native_window_resize(win, w, h, force);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_native_window_minimize(lua_State* L) {
+  ret_t ret = 0;
+  native_window_t* win = (native_window_t*)tk_checkudata(L, 1, "native_window_t");
+  ret = (ret_t)native_window_minimize(win);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_native_window_maximize(lua_State* L) {
+  ret_t ret = 0;
+  native_window_t* win = (native_window_t*)tk_checkudata(L, 1, "native_window_t");
+  ret = (ret_t)native_window_maximize(win);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_native_window_restore(lua_State* L) {
+  ret_t ret = 0;
+  native_window_t* win = (native_window_t*)tk_checkudata(L, 1, "native_window_t");
+  ret = (ret_t)native_window_restore(win);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_native_window_center(lua_State* L) {
+  ret_t ret = 0;
+  native_window_t* win = (native_window_t*)tk_checkudata(L, 1, "native_window_t");
+  ret = (ret_t)native_window_center(win);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_native_window_show_border(lua_State* L) {
+  ret_t ret = 0;
+  native_window_t* win = (native_window_t*)tk_checkudata(L, 1, "native_window_t");
+  bool_t show = (bool_t)lua_toboolean(L, 2);
+  ret = (ret_t)native_window_show_border(win, show);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_native_window_set_fullscreen(lua_State* L) {
+  ret_t ret = 0;
+  native_window_t* win = (native_window_t*)tk_checkudata(L, 1, "native_window_t");
+  bool_t fullscreen = (bool_t)lua_toboolean(L, 2);
+  ret = (ret_t)native_window_set_fullscreen(win, fullscreen);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+
+static const struct luaL_Reg native_window_t_member_funcs[] = {
+  {"move", wrap_native_window_move},
+  {"resize", wrap_native_window_resize},
+  {"minimize", wrap_native_window_minimize},
+  {"maximize", wrap_native_window_maximize},
+  {"restore", wrap_native_window_restore},
+  {"center", wrap_native_window_center},
+  {"show_border", wrap_native_window_show_border},
+  {"set_fullscreen", wrap_native_window_set_fullscreen},
+  {NULL, NULL}
+};
+
+static int wrap_native_window_t_set_prop(lua_State* L) {
+  native_window_t* obj = (native_window_t*)tk_checkudata(L, 1, "native_window_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  (void)obj;
+  (void)name;
+    return wrap_object_t_set_prop(L);
+}
+
+static int wrap_native_window_t_get_prop(lua_State* L) {
+  native_window_t* obj = (native_window_t*)tk_checkudata(L, 1, "native_window_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  const luaL_Reg* ret = find_member(native_window_t_member_funcs, name);
+
+  (void)obj;
+  (void)name;
+  if(ret) {
+    lua_pushcfunction(L, ret->func);
+    return 1;
+  }
+  else {
+    return wrap_object_t_get_prop(L);
+  }
+}
+
+static void native_window_t_init(lua_State* L) {
+  static const struct luaL_Reg static_funcs[] = {
+    {NULL, NULL}
+  };
+
+  static const struct luaL_Reg index_funcs[] = {
+    {"__index", wrap_native_window_t_get_prop},
+    {"__newindex", wrap_native_window_t_set_prop},
+    {NULL, NULL}
+  };
+
+  luaL_newmetatable(L, "awtk.native_window_t");
+  lua_pushstring(L, "__index");
+  lua_pushvalue(L, -2);
+  lua_settable(L, -3);
+  luaL_openlib(L, NULL, index_funcs, 0);
+  luaL_openlib(L, "NativeWindow", static_funcs, 0);
+  lua_settop(L, 0);
+}
 static int wrap_window_create(lua_State* L) {
   widget_t* ret = NULL;
   widget_t* parent = (widget_t*)tk_checkudata(L, 1, "widget_t");
@@ -18076,6 +18232,7 @@ void luaL_openawtk(lua_State* L) {
   dialog_title_t_init(L);
   object_default_t_init(L);
   combo_box_t_init(L);
+  native_window_t_init(L);
   window_t_init(L);
   timer_info_t_init(L);
   image_t_init(L);

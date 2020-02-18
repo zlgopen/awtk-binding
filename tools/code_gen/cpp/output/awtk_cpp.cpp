@@ -747,6 +747,10 @@
    return TWidget((widget_t*)(widget_get_child(((widget_t*)(this->nativeObj)), index)));
  }
 
+ TNativeWindow TWidget::GetNativeWindow()  {
+   return TNativeWindow((emitter_t*)(widget_get_native_window(((widget_t*)(this->nativeObj)))));
+ }
+
  int32_t TWidget::IndexOf()  {
     return widget_index_of(((widget_t*)(this->nativeObj)));
  }
@@ -3365,6 +3369,38 @@
 
  int32_t TComboBox::GetItemHeight() const {
    return ((combo_box_t*)(this->nativeObj))->item_height;
+ }
+
+ ret_t TNativeWindow::Move(xy_t x, xy_t y, bool force)  {
+   return native_window_move(((native_window_t*)(this->nativeObj)), x, y, force);
+ }
+
+ ret_t TNativeWindow::Resize(wh_t w, wh_t h, bool force)  {
+   return native_window_resize(((native_window_t*)(this->nativeObj)), w, h, force);
+ }
+
+ ret_t TNativeWindow::Minimize()  {
+   return native_window_minimize(((native_window_t*)(this->nativeObj)));
+ }
+
+ ret_t TNativeWindow::Maximize()  {
+   return native_window_maximize(((native_window_t*)(this->nativeObj)));
+ }
+
+ ret_t TNativeWindow::Restore()  {
+   return native_window_restore(((native_window_t*)(this->nativeObj)));
+ }
+
+ ret_t TNativeWindow::Center()  {
+   return native_window_center(((native_window_t*)(this->nativeObj)));
+ }
+
+ ret_t TNativeWindow::ShowBorder(bool show)  {
+   return native_window_show_border(((native_window_t*)(this->nativeObj)), show);
+ }
+
+ ret_t TNativeWindow::SetFullscreen(bool fullscreen)  {
+   return native_window_set_fullscreen(((native_window_t*)(this->nativeObj)), fullscreen);
  }
 
  TWidget TWindow::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {

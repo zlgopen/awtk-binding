@@ -719,6 +719,7 @@ declare function WIDGET_STATE_OVER_OF_ACTIVE();
 declare function WIDGET_STATE_FOCUSED_OF_ACTIVE();
 declare function widget_count_children(widget : any) : number;
 declare function widget_get_child(widget : any, index : number) : any;
+declare function widget_get_native_window(widget : any) : any;
 declare function widget_index_of(widget : any) : number;
 declare function widget_close_window(widget : any) : TRet;
 declare function widget_move(widget : any, x : number, y : number) : TRet;
@@ -1635,6 +1636,14 @@ declare function combo_box_t_get_prop_value(nativeObj : any) : number;
 declare function combo_box_t_get_prop_localize_options(nativeObj : any) : boolean;
 declare function combo_box_t_get_prop_options(nativeObj : any) : string;
 declare function combo_box_t_get_prop_item_height(nativeObj : any) : number;
+declare function native_window_move(win : any, x : number, y : number, force : boolean) : TRet;
+declare function native_window_resize(win : any, w : number, h : number, force : boolean) : TRet;
+declare function native_window_minimize(win : any) : TRet;
+declare function native_window_maximize(win : any) : TRet;
+declare function native_window_restore(win : any) : TRet;
+declare function native_window_center(win : any) : TRet;
+declare function native_window_show_border(win : any, show : boolean) : TRet;
+declare function native_window_set_fullscreen(win : any, fullscreen : boolean) : TRet;
 declare function window_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function window_create_default() : any;
 declare function window_set_fullscreen(widget : any, fullscreen : boolean) : TRet;
@@ -7573,6 +7582,17 @@ export class TWidget {
    */
  getChild(index : number) : TWidget  {
     return new TWidget(widget_get_child(this != null ? (this.nativeObj || this) : null, index));
+ }
+
+
+  /**
+   * 获取原生窗口对象。
+   * 
+   *
+   * @returns 原生窗口对象。
+   */
+ getNativeWindow() : TNativeWindow  {
+    return new TNativeWindow(widget_get_native_window(this != null ? (this.nativeObj || this) : null));
  }
 
 
@@ -19633,10 +19653,10 @@ export class TDigitClock extends TWidget {
    ** MMM 代表月的英文缩写(支持翻译)
    *
    *如 日期时间为：2018/11/12 9:10:20
-   ** "Y/D/M"显示为"2018/11/12"
-   ** "Y-D-M"显示为"2018-11-12"
-   ** "Y-D-M h:m:s"显示为"2018-11-12 9:10:20"
-   ** "Y-D-M hh:mm:ss"显示为"2018-11-12 09:10:20"
+   ** "Y/M/D"显示为"2018/11/12"
+   ** "Y-M-D"显示为"2018-11-12"
+   ** "Y-M-D h:m:s"显示为"2018-11-12 9:10:20"
+   ** "Y-M-D hh:mm:ss"显示为"2018-11-12 09:10:20"
    *
    */
  get format() : string {
@@ -20168,6 +20188,113 @@ export class TComboBox extends TEdit {
 
  set itemHeight(v : number) {
    this.setItemHeight(v);
+ }
+
+};
+/**
+ * 原生窗口。
+ *
+ */
+export class TNativeWindow extends TObject { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 移动窗口。
+   * 
+   * @param x x坐标。
+   * @param y y坐标。
+   * @param force 无论是否shared都move。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ move(x : number, y : number, force : boolean) : TRet  {
+    return native_window_move(this != null ? (this.nativeObj || this) : null, x, y, force);
+ }
+
+
+  /**
+   * 调整窗口大小。
+   * 
+   * @param w 宽。
+   * @param h 高。
+   * @param force 无论是否shared都resize。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ resize(w : number, h : number, force : boolean) : TRet  {
+    return native_window_resize(this != null ? (this.nativeObj || this) : null, w, h, force);
+ }
+
+
+  /**
+   * 最小化窗口。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ minimize() : TRet  {
+    return native_window_minimize(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 最大化窗口。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ maximize() : TRet  {
+    return native_window_maximize(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 恢复窗口大小。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ restore() : TRet  {
+    return native_window_restore(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 窗口居中。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ center() : TRet  {
+    return native_window_center(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 是否显示边框。
+   * 
+   * @param show 是否显示。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ showBorder(show : boolean) : TRet  {
+    return native_window_show_border(this != null ? (this.nativeObj || this) : null, show);
+ }
+
+
+  /**
+   * 是否全屏。
+   * 
+   * @param fullscreen 是否全屏。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setFullscreen(fullscreen : boolean) : TRet  {
+    return native_window_set_fullscreen(this != null ? (this.nativeObj || this) : null, fullscreen);
  }
 
 };

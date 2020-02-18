@@ -97,6 +97,7 @@
 #include "widgets/dialog_title.h"
 #include "tkc/object_default.h"
 #include "widgets/combo_box.h"
+#include "base/native_window.h"
 #include "base/window.h"
 #include "tkc/timer_info.h"
 #include "widgets/image.h"
@@ -4220,6 +4221,14 @@ JNIEXPORT jlong JNICALL Java_awtk_TWidget_widget_1get_1child(JNIEnv* env,  jclas
   widget_t* ret;
   widget_t* widget = (widget_t*)jwidget;
   ret = (widget_t*)widget_get_child(widget, index);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TWidget_widget_1get_1native_1window(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  native_window_t* ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (native_window_t*)widget_get_native_window(widget);
 
   return (jlong)(ret);
 }
@@ -10636,6 +10645,70 @@ JNIEXPORT jint JNICALL Java_awtk_TComboBox_combo_1box_1t_1get_1prop_1item_1heigh
   combo_box_t* obj = (combo_box_t*)jobj;
 
   return (jint)(obj->item_height);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TNativeWindow_native_1window_1move(JNIEnv* env,  jclass ajc, jlong jwin, jint x, jint y, jboolean force) { /*func*/
+  ret_t ret;
+  native_window_t* win = (native_window_t*)jwin;
+  ret = (ret_t)native_window_move(win, x, y, force);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TNativeWindow_native_1window_1resize(JNIEnv* env,  jclass ajc, jlong jwin, jint w, jint h, jboolean force) { /*func*/
+  ret_t ret;
+  native_window_t* win = (native_window_t*)jwin;
+  ret = (ret_t)native_window_resize(win, w, h, force);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TNativeWindow_native_1window_1minimize(JNIEnv* env,  jclass ajc, jlong jwin) { /*func*/
+  ret_t ret;
+  native_window_t* win = (native_window_t*)jwin;
+  ret = (ret_t)native_window_minimize(win);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TNativeWindow_native_1window_1maximize(JNIEnv* env,  jclass ajc, jlong jwin) { /*func*/
+  ret_t ret;
+  native_window_t* win = (native_window_t*)jwin;
+  ret = (ret_t)native_window_maximize(win);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TNativeWindow_native_1window_1restore(JNIEnv* env,  jclass ajc, jlong jwin) { /*func*/
+  ret_t ret;
+  native_window_t* win = (native_window_t*)jwin;
+  ret = (ret_t)native_window_restore(win);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TNativeWindow_native_1window_1center(JNIEnv* env,  jclass ajc, jlong jwin) { /*func*/
+  ret_t ret;
+  native_window_t* win = (native_window_t*)jwin;
+  ret = (ret_t)native_window_center(win);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TNativeWindow_native_1window_1show_1border(JNIEnv* env,  jclass ajc, jlong jwin, jboolean show) { /*func*/
+  ret_t ret;
+  native_window_t* win = (native_window_t*)jwin;
+  ret = (ret_t)native_window_show_border(win, show);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TNativeWindow_native_1window_1set_1fullscreen(JNIEnv* env,  jclass ajc, jlong jwin, jboolean fullscreen) { /*func*/
+  ret_t ret;
+  native_window_t* win = (native_window_t*)jwin;
+  ret = (ret_t)native_window_set_fullscreen(win, fullscreen);
+
+  return (jint)(ret);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TWindow_window_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/

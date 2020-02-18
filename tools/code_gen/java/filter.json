@@ -6786,6 +6786,24 @@
         "annotation": {
           "scriptable": true
         },
+        "desc": "获取原生窗口对象。",
+        "name": "widget_get_native_window",
+        "return": {
+          "type": "native_window_t*",
+          "desc": "原生窗口对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
         "desc": "获取控件在父控件中的索引编号。",
         "name": "widget_index_of",
         "return": {
@@ -23141,7 +23159,7 @@
     "properties": [
       {
         "name": "format",
-        "desc": "显示格式。\n\n* Y 代表年(完整显示)\n* M 代表月(1-12)\n* D 代表日(1-31)\n* h 代表时(0-23)\n* m 代表分(0-59)\n* s 代表秒(0-59)\n* w 代表星期(0-6)\n* W 代表星期的英文缩写(支持翻译)\n* YY 代表年(只显示末两位)\n* MM 代表月(01-12)\n* DD 代表日(01-31)\n* hh 代表时(00-23)\n* mm 代表分(00-59)\n* ss 代表秒(00-59)\n* MMM 代表月的英文缩写(支持翻译)\n\n如 日期时间为：2018/11/12 9:10:20\n* \"Y/D/M\"显示为\"2018/11/12\"\n* \"Y-D-M\"显示为\"2018-11-12\"\n* \"Y-D-M h:m:s\"显示为\"2018-11-12 9:10:20\"\n* \"Y-D-M hh:mm:ss\"显示为\"2018-11-12 09:10:20\"",
+        "desc": "显示格式。\n\n* Y 代表年(完整显示)\n* M 代表月(1-12)\n* D 代表日(1-31)\n* h 代表时(0-23)\n* m 代表分(0-59)\n* s 代表秒(0-59)\n* w 代表星期(0-6)\n* W 代表星期的英文缩写(支持翻译)\n* YY 代表年(只显示末两位)\n* MM 代表月(01-12)\n* DD 代表日(01-31)\n* hh 代表时(00-23)\n* mm 代表分(00-59)\n* ss 代表秒(00-59)\n* MMM 代表月的英文缩写(支持翻译)\n\n如 日期时间为：2018/11/12 9:10:20\n* \"Y/M/D\"显示为\"2018/11/12\"\n* \"Y-M-D\"显示为\"2018-11-12\"\n* \"Y-M-D h:m:s\"显示为\"2018-11-12 9:10:20\"\n* \"Y-M-D hh:mm:ss\"显示为\"2018-11-12 09:10:20\"",
         "type": "char*",
         "annotation": {
           "set_prop": true,
@@ -23792,6 +23810,205 @@
       "scriptable": true,
       "design": true,
       "widget": true
+    },
+    "level": 3
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
+            "type": "native_window_t*",
+            "name": "win",
+            "desc": "win对象。"
+          },
+          {
+            "type": "xy_t",
+            "name": "x",
+            "desc": "x坐标。"
+          },
+          {
+            "type": "xy_t",
+            "name": "y",
+            "desc": "y坐标。"
+          },
+          {
+            "type": "bool_t",
+            "name": "force",
+            "desc": "无论是否shared都move。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "移动窗口。",
+        "name": "native_window_move",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "native_window_t*",
+            "name": "win",
+            "desc": "win对象。"
+          },
+          {
+            "type": "wh_t",
+            "name": "w",
+            "desc": "宽。"
+          },
+          {
+            "type": "wh_t",
+            "name": "h",
+            "desc": "高。"
+          },
+          {
+            "type": "bool_t",
+            "name": "force",
+            "desc": "无论是否shared都resize。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "调整窗口大小。",
+        "name": "native_window_resize",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "native_window_t*",
+            "name": "win",
+            "desc": "win对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "最小化窗口。",
+        "name": "native_window_minimize",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "native_window_t*",
+            "name": "win",
+            "desc": "win对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "最大化窗口。",
+        "name": "native_window_maximize",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "native_window_t*",
+            "name": "win",
+            "desc": "win对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "恢复窗口大小。",
+        "name": "native_window_restore",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "native_window_t*",
+            "name": "win",
+            "desc": "win对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "窗口居中。",
+        "name": "native_window_center",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "native_window_t*",
+            "name": "win",
+            "desc": "win对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "show",
+            "desc": "是否显示。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "是否显示边框。",
+        "name": "native_window_show_border",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "native_window_t*",
+            "name": "win",
+            "desc": "win对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "fullscreen",
+            "desc": "是否全屏。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "是否全屏。",
+        "name": "native_window_set_fullscreen",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [],
+    "header": "base/native_window.h",
+    "desc": "原生窗口。",
+    "name": "native_window_t",
+    "parent": "object_t",
+    "annotation": {
+      "scriptable": true
     },
     "level": 3
   },

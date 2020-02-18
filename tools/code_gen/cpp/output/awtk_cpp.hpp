@@ -2233,6 +2233,14 @@ public:
   TWidget GetChild(int32_t index) ;
 
   /**
+   * 获取原生窗口对象。
+   * 
+   *
+   * @return 原生窗口对象。
+   */
+  TNativeWindow GetNativeWindow() ;
+
+  /**
    * 获取控件在父控件中的索引编号。
    * 
    *
@@ -11314,10 +11322,10 @@ public:
    ** MMM 代表月的英文缩写(支持翻译)
    *
    *如 日期时间为：2018/11/12 9:10:20
-   ** "Y/D/M"显示为"2018/11/12"
-   ** "Y-D-M"显示为"2018-11-12"
-   ** "Y-D-M h:m:s"显示为"2018-11-12 9:10:20"
-   ** "Y-D-M hh:mm:ss"显示为"2018-11-12 09:10:20"
+   ** "Y/M/D"显示为"2018/11/12"
+   ** "Y-M-D"显示为"2018-11-12"
+   ** "Y-M-D h:m:s"显示为"2018-11-12 9:10:20"
+   ** "Y-M-D hh:mm:ss"显示为"2018-11-12 09:10:20"
    *
    */
   char* GetFormat() const;
@@ -11792,6 +11800,109 @@ public:
    *
    */
   int32_t GetItemHeight() const;
+};
+
+
+/**
+ * 原生窗口。
+ *
+ */
+class TNativeWindow : public TObject { 
+public:
+  TNativeWindow(emitter_t* nativeObj) : TObject(nativeObj) {
+  }
+
+  TNativeWindow(const native_window_t* nativeObj) : TObject((emitter_t*)nativeObj) {
+  }
+
+  static TNativeWindow Cast(emitter_t* nativeObj) {
+    return TNativeWindow(nativeObj);
+  }
+
+  static TNativeWindow Cast(const emitter_t* nativeObj) {
+    return TNativeWindow((emitter_t*)nativeObj);
+  }
+
+  static TNativeWindow Cast(TEmitter& obj) {
+    return TNativeWindow(obj.nativeObj);
+  }
+
+  static TNativeWindow Cast(const TEmitter& obj) {
+    return TNativeWindow(obj.nativeObj);
+  }
+
+
+  /**
+   * 移动窗口。
+   * 
+   * @param x x坐标。
+   * @param y y坐标。
+   * @param force 无论是否shared都move。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Move(xy_t x, xy_t y, bool force) ;
+
+  /**
+   * 调整窗口大小。
+   * 
+   * @param w 宽。
+   * @param h 高。
+   * @param force 无论是否shared都resize。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Resize(wh_t w, wh_t h, bool force) ;
+
+  /**
+   * 最小化窗口。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Minimize() ;
+
+  /**
+   * 最大化窗口。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Maximize() ;
+
+  /**
+   * 恢复窗口大小。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Restore() ;
+
+  /**
+   * 窗口居中。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Center() ;
+
+  /**
+   * 是否显示边框。
+   * 
+   * @param show 是否显示。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t ShowBorder(bool show) ;
+
+  /**
+   * 是否全屏。
+   * 
+   * @param fullscreen 是否全屏。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetFullscreen(bool fullscreen) ;
 };
 
 
