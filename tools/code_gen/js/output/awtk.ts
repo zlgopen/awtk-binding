@@ -473,6 +473,7 @@ declare function vgcanvas_translate(vg : any, x : number, y : number) : TRet;
 declare function vgcanvas_transform(vg : any, a : number, b : number, c : number, d : number, e : number, f : number) : TRet;
 declare function vgcanvas_set_transform(vg : any, a : number, b : number, c : number, d : number, e : number, f : number) : TRet;
 declare function vgcanvas_clip_rect(vg : any, x : number, y : number, w : number, h : number) : TRet;
+declare function vgcanvas_intersect_clip_rect(vg : any, x : number, y : number, w : number, h : number) : TRet;
 declare function vgcanvas_fill(vg : any) : TRet;
 declare function vgcanvas_stroke(vg : any) : TRet;
 declare function vgcanvas_paint(vg : any, stroke : boolean, img : any) : TRet;
@@ -5805,6 +5806,34 @@ export class TVgcanvas {
    */
  clipRect(x : number, y : number, w : number, h : number) : TRet  {
     return vgcanvas_clip_rect(this != null ? (this.nativeObj || this) : null, x, y, w, h);
+ }
+
+
+  /**
+   * 设置一个与前一个裁剪区做交集的矩形裁剪区。
+   *如果下面这种情况，则不能直接调用 rect_intersect 函数来做矩形交集和 vgcanvas_clip_rect 函数设置裁剪区，而采用本函数做交集。
+   *由于缩放和旋转以及平移会导致 vg 的坐标系和上一个裁剪区的坐标系不同，
+   *导致直接使用做交集的话，裁剪区会出错。
+   *
+   *```
+   *vgcanvas_clip_rect(vg, old_r.x, old_r.y, old_r.w, old_r.h);
+   *vgcanvas_save(vg);
+   *vgcanvas_scale(vg, scale_x, scale_y);
+   *vgcanvas_rotate(vg, TK_D2R(15));
+   *vgcanvas_intersect_clip_rect(vg, r.x, r.y, r.w, r.h);
+   *..................
+   *vgcanvas_restore(vg);
+   *```
+   * 
+   * @param x x坐标。
+   * @param y y坐标。
+   * @param w 宽度。
+   * @param h 高度。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ intersectClipRect(x : number, y : number, w : number, h : number) : TRet  {
+    return vgcanvas_intersect_clip_rect(this != null ? (this.nativeObj || this) : null, x, y, w, h);
  }
 
 

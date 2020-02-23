@@ -4032,6 +4032,20 @@ static int wrap_vgcanvas_clip_rect(lua_State* L) {
   return 1;
 }
 
+static int wrap_vgcanvas_intersect_clip_rect(lua_State* L) {
+  ret_t ret = 0;
+  vgcanvas_t* vg = (vgcanvas_t*)tk_checkudata(L, 1, "vgcanvas_t");
+  float_t x = (float_t)luaL_checknumber(L, 2);
+  float_t y = (float_t)luaL_checknumber(L, 3);
+  float_t w = (float_t)luaL_checknumber(L, 4);
+  float_t h = (float_t)luaL_checknumber(L, 5);
+  ret = (ret_t)vgcanvas_intersect_clip_rect(vg, x, y, w, h);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 static int wrap_vgcanvas_fill(lua_State* L) {
   ret_t ret = 0;
   vgcanvas_t* vg = (vgcanvas_t*)tk_checkudata(L, 1, "vgcanvas_t");
@@ -4301,6 +4315,7 @@ static const struct luaL_Reg vgcanvas_t_member_funcs[] = {
   {"transform", wrap_vgcanvas_transform},
   {"set_transform", wrap_vgcanvas_set_transform},
   {"clip_rect", wrap_vgcanvas_clip_rect},
+  {"intersect_clip_rect", wrap_vgcanvas_intersect_clip_rect},
   {"fill", wrap_vgcanvas_fill},
   {"stroke", wrap_vgcanvas_stroke},
   {"paint", wrap_vgcanvas_paint},

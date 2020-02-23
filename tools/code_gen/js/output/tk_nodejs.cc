@@ -5387,6 +5387,24 @@ static void wrap_vgcanvas_clip_rect(const Nan::FunctionCallbackInfo<v8::Value>& 
   (void)argc;(void)ctx;
 }
 
+static void wrap_vgcanvas_intersect_clip_rect(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 5) {
+  ret_t ret = (ret_t)0;
+  vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
+  float_t x = (float_t)jsvalue_get_number_value(ctx, argv[1]);
+  float_t y = (float_t)jsvalue_get_number_value(ctx, argv[2]);
+  float_t w = (float_t)jsvalue_get_number_value(ctx, argv[3]);
+  float_t h = (float_t)jsvalue_get_number_value(ctx, argv[4]);
+  ret = (ret_t)vgcanvas_intersect_clip_rect(vg, x, y, w, h);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_vgcanvas_fill(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -5899,6 +5917,7 @@ ret_t vgcanvas_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "vgcanvas_transform", wrap_vgcanvas_transform);
   Nan::Export(ctx, "vgcanvas_set_transform", wrap_vgcanvas_set_transform);
   Nan::Export(ctx, "vgcanvas_clip_rect", wrap_vgcanvas_clip_rect);
+  Nan::Export(ctx, "vgcanvas_intersect_clip_rect", wrap_vgcanvas_intersect_clip_rect);
   Nan::Export(ctx, "vgcanvas_fill", wrap_vgcanvas_fill);
   Nan::Export(ctx, "vgcanvas_stroke", wrap_vgcanvas_stroke);
   Nan::Export(ctx, "vgcanvas_paint", wrap_vgcanvas_paint);

@@ -599,6 +599,10 @@
    return vgcanvas_clip_rect(((vgcanvas_t*)(this->nativeObj)), x, y, w, h);
  }
 
+ ret_t TVgcanvas::IntersectClipRect(float_t x, float_t y, float_t w, float_t h)  {
+   return vgcanvas_intersect_clip_rect(((vgcanvas_t*)(this->nativeObj)), x, y, w, h);
+ }
+
  ret_t TVgcanvas::Fill()  {
    return vgcanvas_fill(((vgcanvas_t*)(this->nativeObj)));
  }

@@ -2891,6 +2891,14 @@ JNIEXPORT jint JNICALL Java_awtk_TVgcanvas_vgcanvas_1clip_1rect(JNIEnv* env,  jc
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TVgcanvas_vgcanvas_1intersect_1clip_1rect(JNIEnv* env,  jclass ajc, jlong jvg, jdouble x, jdouble y, jdouble w, jdouble h) { /*func*/
+  ret_t ret;
+  vgcanvas_t* vg = (vgcanvas_t*)jvg;
+  ret = (ret_t)vgcanvas_intersect_clip_rect(vg, x, y, w, h);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TVgcanvas_vgcanvas_1fill(JNIEnv* env,  jclass ajc, jlong jvg) { /*func*/
   ret_t ret;
   vgcanvas_t* vg = (vgcanvas_t*)jvg;

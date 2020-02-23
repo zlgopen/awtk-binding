@@ -6646,6 +6646,27 @@ jsvalue_t wrap_vgcanvas_clip_rect(
   return jret;
 }
 
+jsvalue_t wrap_vgcanvas_intersect_clip_rect(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 5) {
+  ret_t ret = (ret_t)0;
+  vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
+  float_t x = (float_t)jsvalue_get_number_value(ctx, argv[1]);
+  float_t y = (float_t)jsvalue_get_number_value(ctx, argv[2]);
+  float_t w = (float_t)jsvalue_get_number_value(ctx, argv[3]);
+  float_t h = (float_t)jsvalue_get_number_value(ctx, argv[4]);
+  ret = (ret_t)vgcanvas_intersect_clip_rect(vg, x, y, w, h);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_vgcanvas_fill(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -7275,6 +7296,8 @@ ret_t vgcanvas_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_vgcanvas_set_transform, "vgcanvas_set_transform", 1));
   JS_SetPropertyStr(ctx, global_obj, "vgcanvas_clip_rect",
                       JS_NewCFunction(ctx, wrap_vgcanvas_clip_rect, "vgcanvas_clip_rect", 1));
+  JS_SetPropertyStr(ctx, global_obj, "vgcanvas_intersect_clip_rect",
+                      JS_NewCFunction(ctx, wrap_vgcanvas_intersect_clip_rect, "vgcanvas_intersect_clip_rect", 1));
   JS_SetPropertyStr(ctx, global_obj, "vgcanvas_fill",
                       JS_NewCFunction(ctx, wrap_vgcanvas_fill, "vgcanvas_fill", 1));
   JS_SetPropertyStr(ctx, global_obj, "vgcanvas_stroke",
