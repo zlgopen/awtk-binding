@@ -55,6 +55,9 @@ class DefaultGenerator extends PythonBindingGenerator {
       if (this.typeIsString(type)) {
         ret.signature = 's';
         ret.type = 'const char*';
+      } else if (this.typeIsWString(type)) {
+        ret.signature = 'u';
+        ret.type = 'const wchar_t*';
       } else if (this.typeIsBool(type)) {
         ret.signature = 'c';
         ret.type = 'bool_t';
