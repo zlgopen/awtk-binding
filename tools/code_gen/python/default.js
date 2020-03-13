@@ -67,6 +67,11 @@ class DefaultGenerator extends PythonBindingGenerator {
       } else if (this.typeIsFloat(type)) {
         ret.signature = 'd';
         ret.type = 'double';
+      } else if (type.indexOf('*') >= 0) {
+        ret.type = type;
+        ret.signature = 'O&';
+        ret.parse = `, &parse_voidp, &${name}`
+        ret.isVoidP = true;
       } else {
         ret.signature = 'i';
         ret.type = 'int32_t';

@@ -16,6 +16,13 @@ class PythonGenerator extends TargetGen {
     this.nullNativePtr = 'None'
     this.newOperator = '';
   }
+  
+  toFuncName(clsName, mName) {
+    let prefix = clsName.replace(/_t$/, '');
+    let name = mName.replace(prefix + '_', '');
+
+    return name;
+  }
 
   mapTypeVar(type, name) {
     return name;
@@ -30,7 +37,7 @@ class PythonGenerator extends TargetGen {
   }
 
   genGetNativeObj(type, name, isCast) {
-    return `${name}.nativeObj`;
+    return `awtk_get_native_obj(${name})`;
   }
 
   genConstructor(cls) {
@@ -186,9 +193,15 @@ class PythonGenerator extends TargetGen {
   }
 
   genJsonAll(ojson) {
-    let result = 'from awtk_native import *\n'
+    let result = `
+from awtk_native import *\n
+def awtk_get_native_obj(obj):
+    if(isinstance(obj, int)) :
+        return obj;
+    else:
+        return obj.nativeObj;
+`
     let json = this.filterScriptableJson(ojson);
-
     result += this.genFuncsDecl(json);
     json.forEach(iter => {
       result += this.genOne(iter);
