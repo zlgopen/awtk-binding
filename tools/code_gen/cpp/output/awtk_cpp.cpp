@@ -419,6 +419,14 @@
     return tk_is_pointer_pressed();
  }
 
+ ret_t TClipBoard::SetText(const char* text)  {
+   return clip_board_set_text(text);
+ }
+
+ const char* TClipBoard::GetText()  {
+    return clip_board_get_text();
+ }
+
  ret_t TFontManager::UnloadFont(char* name, font_size_t size)  {
    return font_manager_unload_font(((font_manager_t*)(this->nativeObj)), name, size);
  }
@@ -433,6 +441,22 @@
 
  ret_t TIdle::Remove(uint32_t idle_id)  {
    return idle_remove(idle_id);
+ }
+
+ TAssetsManager TAssetsManager::Instance()  {
+   return TAssetsManager((assets_manager_t*)(assets_manager()));
+ }
+
+ ret_t TAssetsManager::SetTheme(const char* theme)  {
+   return assets_manager_set_theme(((assets_manager_t*)(this->nativeObj)), theme);
+ }
+
+ TAssetInfo TAssetsManager::Ref(asset_type_t type, char* name)  {
+   return TAssetInfo((asset_info_t*)(assets_manager_ref(((assets_manager_t*)(this->nativeObj)), type, name)));
+ }
+
+ ret_t TAssetsManager::Unref(TAssetInfo& info)  {
+   return assets_manager_unref(((assets_manager_t*)(this->nativeObj)), ((asset_info_t*)(info.nativeObj)));
  }
 
  TImageManager TImageManager::Instance()  {
@@ -787,7 +811,7 @@
    return widget_add_value(((widget_t*)(this->nativeObj)), delta);
  }
 
- ret_t TWidget::UseStyle(char* style)  {
+ ret_t TWidget::UseStyle(const char* style)  {
    return widget_use_style(((widget_t*)(this->nativeObj)), style);
  }
 
@@ -795,7 +819,7 @@
    return widget_set_text_utf8(((widget_t*)(this->nativeObj)), text);
  }
 
- ret_t TWidget::SetTrText(char* text)  {
+ ret_t TWidget::SetTrText(const char* text)  {
    return widget_set_tr_text(((widget_t*)(this->nativeObj)), text);
  }
 
@@ -807,15 +831,15 @@
     return widget_get_text(((widget_t*)(this->nativeObj)));
  }
 
- ret_t TWidget::SetName(char* name)  {
+ ret_t TWidget::SetName(const char* name)  {
    return widget_set_name(((widget_t*)(this->nativeObj)), name);
  }
 
- ret_t TWidget::SetTheme(char* name)  {
+ ret_t TWidget::SetTheme(const char* name)  {
    return widget_set_theme(((widget_t*)(this->nativeObj)), name);
  }
 
- ret_t TWidget::SetPointerCursor(char* cursor)  {
+ ret_t TWidget::SetPointerCursor(const char* cursor)  {
    return widget_set_pointer_cursor(((widget_t*)(this->nativeObj)), cursor);
  }
 
@@ -835,15 +859,15 @@
    return widget_set_animator_time_scale(((widget_t*)(this->nativeObj)), name, time_scale);
  }
 
- ret_t TWidget::PauseAnimator(char* name)  {
+ ret_t TWidget::PauseAnimator(const char* name)  {
    return widget_pause_animator(((widget_t*)(this->nativeObj)), name);
  }
 
- ret_t TWidget::StopAnimator(char* name)  {
+ ret_t TWidget::StopAnimator(const char* name)  {
    return widget_stop_animator(((widget_t*)(this->nativeObj)), name);
  }
 
- ret_t TWidget::DestroyAnimator(char* name)  {
+ ret_t TWidget::DestroyAnimator(const char* name)  {
    return widget_destroy_animator(((widget_t*)(this->nativeObj)), name);
  }
 
@@ -899,15 +923,15 @@
    return widget_restack(((widget_t*)(this->nativeObj)), index);
  }
 
- TWidget TWidget::Child(char* name)  {
+ TWidget TWidget::Child(const char* name)  {
    return TWidget((widget_t*)(widget_child(((widget_t*)(this->nativeObj)), name)));
  }
 
- TWidget TWidget::Lookup(char* name, bool recursive)  {
+ TWidget TWidget::Lookup(const char* name, bool recursive)  {
    return TWidget((widget_t*)(widget_lookup(((widget_t*)(this->nativeObj)), name, recursive)));
  }
 
- TWidget TWidget::LookupByType(char* type, bool recursive)  {
+ TWidget TWidget::LookupByType(const char* type, bool recursive)  {
    return TWidget((widget_t*)(widget_lookup_by_type(((widget_t*)(this->nativeObj)), type, recursive)));
  }
 
@@ -1271,14 +1295,6 @@
    return ((named_value_t*)(this->nativeObj))->name;
  }
 
- ret_t TClipBoard::SetText(const char* text)  {
-   return clip_board_set_text(text);
- }
-
- const char* TClipBoard::GetText()  {
-    return clip_board_get_text();
- }
-
  TDateTime TDateTime::Create()  {
    return TDateTime((date_time_t*)(date_time_create()));
  }
@@ -1377,18 +1393,6 @@
 
  char* TAssetInfo::GetName() const {
    return ((asset_info_t*)(this->nativeObj))->name;
- }
-
- TAssetsManager TAssetsManager::Instance()  {
-   return TAssetsManager((assets_manager_t*)(assets_manager()));
- }
-
- TAssetInfo TAssetsManager::Ref(asset_type_t type, char* name)  {
-   return TAssetInfo((asset_info_t*)(assets_manager_ref(((assets_manager_t*)(this->nativeObj)), type, name)));
- }
-
- ret_t TAssetsManager::Unref(TAssetInfo& info)  {
-   return assets_manager_unref(((assets_manager_t*)(this->nativeObj)), ((asset_info_t*)(info.nativeObj)));
  }
 
  ret_t TStyleMutable::SetName(const char* name)  {
@@ -2307,7 +2311,7 @@
    return ((mledit_t*)(this->nativeObj))->max_lines;
  }
 
- float_t TMledit::GetScrollLine() const {
+ uint32_t TMledit::GetScrollLine() const {
    return ((mledit_t*)(this->nativeObj))->scroll_line;
  }
 
@@ -2407,8 +2411,20 @@
    return image_value_set_format(((widget_t*)(this->nativeObj)), format);
  }
 
+ ret_t TImageValue::SetClickAddDelta(float_t delta)  {
+   return image_value_set_click_add_delta(((widget_t*)(this->nativeObj)), delta);
+ }
+
  ret_t TImageValue::SetValue(float_t value)  {
    return image_value_set_value(((widget_t*)(this->nativeObj)), value);
+ }
+
+ ret_t TImageValue::SetMin(float_t min)  {
+   return image_value_set_min(((widget_t*)(this->nativeObj)), min);
+ }
+
+ ret_t TImageValue::SetMax(float_t max)  {
+   return image_value_set_max(((widget_t*)(this->nativeObj)), max);
  }
 
  char* TImageValue::GetImage() const {
@@ -2419,8 +2435,20 @@
    return ((image_value_t*)(this->nativeObj))->format;
  }
 
+ float_t TImageValue::GetClickAddDelta() const {
+   return ((image_value_t*)(this->nativeObj))->click_add_delta;
+ }
+
  float_t TImageValue::GetValue() const {
    return ((image_value_t*)(this->nativeObj))->value;
+ }
+
+ float_t TImageValue::GetMin() const {
+   return ((image_value_t*)(this->nativeObj))->min;
+ }
+
+ float_t TImageValue::GetMax() const {
+   return ((image_value_t*)(this->nativeObj))->max;
  }
 
  TWidget TImageAnimation::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {

@@ -115,6 +115,8 @@ declare function tk_quit() : TRet;
 declare function tk_get_pointer_x() : number;
 declare function tk_get_pointer_y() : number;
 declare function tk_is_pointer_pressed() : boolean;
+declare function clip_board_set_text(text : string) : TRet;
+declare function clip_board_get_text() : string;
 declare function DIALOG_QUIT_NONE();
 declare function DIALOG_QUIT_OK();
 declare function DIALOG_QUIT_YES();
@@ -206,6 +208,10 @@ declare function GLYPH_FMT_MONO();
 declare function GLYPH_FMT_RGBA();
 declare function idle_add(on_idle : Function, ctx : any) : number;
 declare function idle_remove(idle_id : number) : TRet;
+declare function assets_manager() : any;
+declare function assets_manager_set_theme(am : any, theme : string) : TRet;
+declare function assets_manager_ref(am : any, type : TAssetType, name : string) : any;
+declare function assets_manager_unref(am : any, info : any) : TRet;
 declare function image_manager() : any;
 declare function image_manager_get_bitmap(imm : any, name : string, image : any) : TRet;
 declare function image_manager_preload(imm : any, name : string) : TRet;
@@ -386,6 +392,9 @@ declare function STYLE_ID_FONT_NAME();
 declare function STYLE_ID_FONT_SIZE();
 declare function STYLE_ID_FONT_STYLE();
 declare function STYLE_ID_TEXT_COLOR();
+declare function STYLE_ID_HIGHLIGHT_FONT_NAME();
+declare function STYLE_ID_HIGHLIGHT_FONT_SIZE();
+declare function STYLE_ID_HIGHLIGHT_TEXT_COLOR();
 declare function STYLE_ID_TIPS_TEXT_COLOR();
 declare function STYLE_ID_TEXT_ALIGN_H();
 declare function STYLE_ID_TEXT_ALIGN_V();
@@ -1007,8 +1016,6 @@ declare function INDICATOR_DEFAULT_PAINT_FILL_RECT();
 declare function INDICATOR_DEFAULT_PAINT_STROKE_RECT();
 declare function CLIP_BOARD_DATA_TYPE_NONE();
 declare function CLIP_BOARD_DATA_TYPE_TEXT();
-declare function clip_board_set_text(text : string) : TRet;
-declare function clip_board_get_text() : string;
 declare function EASING_LINEAR();
 declare function EASING_QUADRATIC_IN();
 declare function EASING_QUADRATIC_OUT();
@@ -1069,9 +1076,6 @@ declare function ASSET_TYPE_XML();
 declare function ASSET_TYPE_STRINGS();
 declare function ASSET_TYPE_SCRIPT();
 declare function ASSET_TYPE_DATA();
-declare function assets_manager() : any;
-declare function assets_manager_ref(am : any, type : TAssetType, name : string) : any;
-declare function assets_manager_unref(am : any, info : any) : TRet;
 declare function style_mutable_set_name(s : any, name : string) : TRet;
 declare function style_mutable_set_int(s : any, state : string, name : string, val : number) : TRet;
 declare function style_mutable_cast(s : any) : any;
@@ -1358,11 +1362,17 @@ declare function candidates_cast(widget : any) : any;
 declare function image_value_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function image_value_set_image(widget : any, image : string) : TRet;
 declare function image_value_set_format(widget : any, format : string) : TRet;
+declare function image_value_set_click_add_delta(widget : any, delta : number) : TRet;
 declare function image_value_set_value(widget : any, value : any) : TRet;
+declare function image_value_set_min(widget : any, min : number) : TRet;
+declare function image_value_set_max(widget : any, max : number) : TRet;
 declare function image_value_cast(widget : any) : any;
 declare function image_value_t_get_prop_image(nativeObj : any) : string;
 declare function image_value_t_get_prop_format(nativeObj : any) : string;
+declare function image_value_t_get_prop_click_add_delta(nativeObj : any) : number;
 declare function image_value_t_get_prop_value(nativeObj : any) : number;
+declare function image_value_t_get_prop_min(nativeObj : any) : number;
+declare function image_value_t_get_prop_max(nativeObj : any) : number;
 declare function image_animation_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function image_animation_set_loop(widget : any, loop : boolean) : TRet;
 declare function image_animation_set_image(widget : any, image : string) : TRet;
@@ -3091,6 +3101,40 @@ export class TGlobal {
 
 };
 /**
+ * 剪切板接口。
+ *
+ */
+export class TClipBoard { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
+
+
+  /**
+   * 设置文本(UTF8)数据到剪切板。
+   * 
+   * @param text 文本。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ static setText(text : string) : TRet  {
+    return clip_board_set_text(text);
+ }
+
+
+  /**
+   * 从剪切板中获取文本(UTF8)数据。
+   * 
+   *
+   * @returns 返回文本数据。
+   */
+ static getText() : string  {
+    return clip_board_get_text();
+ }
+
+};
+/**
  * 对话框退出码。
  *
  *> 一般用作dialog_quit函数的参数。
@@ -3714,6 +3758,93 @@ export class TIdle {
    */
  static remove(idle_id : number) : TRet  {
     return idle_remove(idle_id);
+ }
+
+};
+/**
+ * 资源管理器。
+ *这里的资源管理器并非Windows下的文件浏览器，而是负责对各种资源，比如字体、主题、图片、界面数据、字符串和其它数据的进行集中管理的组件。引入资源管理器的目的有以下几个：
+ *
+ ** 让上层不需要了解存储的方式。
+ *在没有文件系统时或者内存紧缺时，把资源转成常量数组直接编译到代码中。在有文件系统而且内存充足时，资源放在文件系统中。在有网络时，资源也可以存放在服务器上(暂未实现)。资源管理器为上层提供统一的接口，让上层而不用关心底层的存储方式。
+ *
+ ** 让上层不需要了解资源的具体格式。
+ *比如一个名为earth的图片，没有文件系统或内存紧缺，图片直接用位图数据格式存在ROM中，而有文件系统时，则用PNG格式存放在文件系统中。资源管理器让上层不需要关心图片的格式，访问时指定图片的名称即可(不用指定扩展名)。
+ *
+ ** 让上层不需要了解屏幕的密度。
+ *不同的屏幕密度下需要加载不同的图片，比如MacPro的Retina屏就需要用双倍解析度的图片，否则就出现界面模糊。AWTK以后会支持PC软件和手机软件的开发，所以资源管理器需要为此提供支持，让上层不需关心屏幕的密度。
+ *
+ ** 对资源进行内存缓存。
+ *不同类型的资源使用方式是不一样的，比如字体和主题加载之后会一直使用，UI文件在生成界面之后就暂时不需要了，PNG文件解码之后就只需要保留解码的位图数据即可。资源管理器配合图片管理器等其它组件实现资源的自动缓存。
+ *
+ *当从文件系统加载资源时，目录结构要求如下：
+ *
+ *```
+ *assets/{theme}/raw/
+ *fonts   字体
+ *images  图片
+ *x1   普通密度屏幕的图片。
+ *x2   2倍密度屏幕的图片。
+ *x3   3倍密度屏幕的图片。
+ *xx   密度无关的图片。
+ *strings 需要翻译的字符串。
+ *styles  主题数据。
+ *ui      UI描述数据。
+ *```
+ *
+ */
+export class TAssetsManager { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
+
+
+  /**
+   * 获取缺省资源管理器。
+   * 
+   *
+   * @returns 返回asset manager对象。
+   */
+ static instance() : TAssetsManager  {
+    return new TAssetsManager(assets_manager());
+ }
+
+
+  /**
+   * 设置当前的主题。
+   * 
+   * @param theme 主题名称。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setTheme(theme : string) : TRet  {
+    return assets_manager_set_theme(this != null ? (this.nativeObj || this) : null, theme);
+ }
+
+
+  /**
+   * 在资源管理器的缓存中查找指定的资源并引用它，如果缓存中不存在，尝试加载该资源。
+   * 
+   * @param type 资源的类型。
+   * @param name 资源的名称。
+   *
+   * @returns 返回资源。
+   */
+ ref(type : TAssetType, name : string) : TAssetInfo  {
+    return new TAssetInfo(assets_manager_ref(this != null ? (this.nativeObj || this) : null, type, name));
+ }
+
+
+  /**
+   * 释放指定的资源。
+   * 
+   * @param info 资源。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ unref(info : TAssetInfo) : TRet  {
+    return assets_manager_unref(this != null ? (this.nativeObj || this) : null, info != null ? (info.nativeObj || info) : null);
  }
 
 };
@@ -4931,6 +5062,24 @@ export enum TStyleId {
    *
    */
  _ID_TEXT_COLOR = STYLE_ID_TEXT_COLOR(),
+
+  /**
+   * 高亮文本的字体名称。
+   *
+   */
+ _ID_HIGHLIGHT_FONT_NAME = STYLE_ID_HIGHLIGHT_FONT_NAME(),
+
+  /**
+   * 高亮文本的字体大小。
+   *
+   */
+ _ID_HIGHLIGHT_FONT_SIZE = STYLE_ID_HIGHLIGHT_FONT_SIZE(),
+
+  /**
+   * 高亮文本的文本颜色。
+   *
+   */
+ _ID_HIGHLIGHT_TEXT_COLOR = STYLE_ID_HIGHLIGHT_TEXT_COLOR(),
 
   /**
    * 提示文本颜色。
@@ -10279,40 +10428,6 @@ export enum TClipBoardDataType {
 
 
 /**
- * 剪切板接口。
- *
- */
-export class TClipBoard { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   this.nativeObj = nativeObj;
- }
-
-
-  /**
-   * 设置文本(UTF8)数据到剪切板。
-   * 
-   * @param text 文本。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- static setText(text : string) : TRet  {
-    return clip_board_set_text(text);
- }
-
-
-  /**
-   * 从剪切板中获取文本(UTF8)数据。
-   * 
-   *
-   * @returns 返回文本数据。
-   */
- static getText() : string  {
-    return clip_board_get_text();
- }
-
-};
-/**
  * 缓动作动画常量定义。
  *
  */
@@ -10846,81 +10961,6 @@ export enum TAssetType {
 };
 
 
-/**
- * 资源管理器。
- *这里的资源管理器并非Windows下的文件浏览器，而是负责对各种资源，比如字体、主题、图片、界面数据、字符串和其它数据的进行集中管理的组件。引入资源管理器的目的有以下几个：
- *
- ** 让上层不需要了解存储的方式。
- *在没有文件系统时或者内存紧缺时，把资源转成常量数组直接编译到代码中。在有文件系统而且内存充足时，资源放在文件系统中。在有网络时，资源也可以存放在服务器上(暂未实现)。资源管理器为上层提供统一的接口，让上层而不用关心底层的存储方式。
- *
- ** 让上层不需要了解资源的具体格式。
- *比如一个名为earth的图片，没有文件系统或内存紧缺，图片直接用位图数据格式存在ROM中，而有文件系统时，则用PNG格式存放在文件系统中。资源管理器让上层不需要关心图片的格式，访问时指定图片的名称即可(不用指定扩展名)。
- *
- ** 让上层不需要了解屏幕的密度。
- *不同的屏幕密度下需要加载不同的图片，比如MacPro的Retina屏就需要用双倍解析度的图片，否则就出现界面模糊。AWTK以后会支持PC软件和手机软件的开发，所以资源管理器需要为此提供支持，让上层不需关心屏幕的密度。
- *
- ** 对资源进行内存缓存。
- *不同类型的资源使用方式是不一样的，比如字体和主题加载之后会一直使用，UI文件在生成界面之后就暂时不需要了，PNG文件解码之后就只需要保留解码的位图数据即可。资源管理器配合图片管理器等其它组件实现资源的自动缓存。
- *
- *当从文件系统加载资源时，目录结构要求如下：
- *
- *```
- *assets/{theme}/raw/
- *fonts   字体
- *images  图片
- *x1   普通密度屏幕的图片。
- *x2   2倍密度屏幕的图片。
- *x3   3倍密度屏幕的图片。
- *xx   密度无关的图片。
- *strings 需要翻译的字符串。
- *styles  主题数据。
- *ui      UI描述数据。
- *```
- *
- */
-export class TAssetsManager { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   this.nativeObj = nativeObj;
- }
-
-
-  /**
-   * 获取缺省资源管理器。
-   * 
-   *
-   * @returns 返回asset manager对象。
-   */
- static instance() : TAssetsManager  {
-    return new TAssetsManager(assets_manager());
- }
-
-
-  /**
-   * 在资源管理器的缓存中查找指定的资源并引用它，如果缓存中不存在，尝试加载该资源。
-   * 
-   * @param type 资源的类型。
-   * @param name 资源的名称。
-   *
-   * @returns 返回资源。
-   */
- ref(type : TAssetType, name : string) : TAssetInfo  {
-    return new TAssetInfo(assets_manager_ref(this != null ? (this.nativeObj || this) : null, type, name));
- }
-
-
-  /**
-   * 释放指定的资源。
-   * 
-   * @param info 资源。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- unref(info : TAssetInfo) : TRet  {
-    return assets_manager_unref(this != null ? (this.nativeObj || this) : null, info != null ? (info.nativeObj || info) : null);
- }
-
-};
 /**
  * 可变的style(可实时修改并生效，主要用于在designer中被编辑的控件，或者一些特殊控件)。
  *
@@ -15632,6 +15672,9 @@ export class TCandidates extends TWidget {
  ** 2.把每个字符与image(图片文件名前缀)映射成一个图片名。
  ** 3.最后把这些图片显示出来。
  *
+ *如果设置click\_add\_delta为非0，那么点击时自动增加指定的增量，值超过最大值时回到最小值,
+ *或者值超过最小值时回到最大值。
+ *
  *image\_value\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于image\_value\_t控件。
  *
  *在xml中使用"image\_value"标签创建图片值控件。如：
@@ -15700,6 +15743,18 @@ export class TImageValue extends TWidget {
 
 
   /**
+   * 设置点击时加上的增量。
+   * 
+   * @param delta 增量。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setClickAddDelta(delta : number) : TRet  {
+    return image_value_set_click_add_delta(this != null ? (this.nativeObj || this) : null, delta);
+ }
+
+
+  /**
    * 设置值。
    * 
    * @param value 值。
@@ -15708,6 +15763,30 @@ export class TImageValue extends TWidget {
    */
  setValue(value : any) : TRet  {
     return image_value_set_value(this != null ? (this.nativeObj || this) : null, value);
+ }
+
+
+  /**
+   * 设置最小值。
+   * 
+   * @param min 最小值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setMin(min : number) : TRet  {
+    return image_value_set_min(this != null ? (this.nativeObj || this) : null, min);
+ }
+
+
+  /**
+   * 设置最大值。
+   * 
+   * @param max 最大值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setMax(max : number) : TRet  {
+    return image_value_set_max(this != null ? (this.nativeObj || this) : null, max);
  }
 
 
@@ -15750,6 +15829,19 @@ export class TImageValue extends TWidget {
 
 
   /**
+   * 点击时加上一个增量。
+   *
+   */
+ get clickAddDelta() : number {
+   return image_value_t_get_prop_click_add_delta(this.nativeObj);
+ }
+
+ set clickAddDelta(v : number) {
+   this.setClickAddDelta(v);
+ }
+
+
+  /**
    * 值。
    *
    */
@@ -15759,6 +15851,32 @@ export class TImageValue extends TWidget {
 
  set value(v : number) {
    this.setValue(v);
+ }
+
+
+  /**
+   * 最小值(如果设置了click\_add\_delta，到达最小值后回到最大值)。
+   *
+   */
+ get min() : number {
+   return image_value_t_get_prop_min(this.nativeObj);
+ }
+
+ set min(v : number) {
+   this.setMin(v);
+ }
+
+
+  /**
+   * 最大值(如果设置了click\_add\_delta，到达最大值后回到最小值)。
+   *
+   */
+ get max() : number {
+   return image_value_t_get_prop_max(this.nativeObj);
+ }
+
+ set max(v : number) {
+   this.setMax(v);
  }
 
 };
@@ -21080,6 +21198,7 @@ export class TObjectArray extends TObject {
  *
  *> 创建之后:
  *>
+ *> 需要用mutable\_image\_set\_create\_image设置创建图片的回调函数。
  *> 需要用mutable\_image\_set\_prepare\_image设置准备图片的回调函数。
  *
  *> 完整示例请参考：[mutable image demo](

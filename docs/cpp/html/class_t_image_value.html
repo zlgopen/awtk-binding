@@ -91,14 +91,26 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a0bb86ce55dea9b6b9149559e8789462f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32c809eaaaa47b81b30226ca89f6b7da"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_image_value.html#a32c809eaaaa47b81b30226ca89f6b7da">SetFormat</a> (const char *format)</td></tr>
 <tr class="separator:a32c809eaaaa47b81b30226ca89f6b7da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f17a0db932a9fde2ffafdc0d5217f2"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_image_value.html#ae6f17a0db932a9fde2ffafdc0d5217f2">SetClickAddDelta</a> (float_t delta)</td></tr>
+<tr class="separator:ae6f17a0db932a9fde2ffafdc0d5217f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30d815724b664902eff7518fffd07089"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_image_value.html#a30d815724b664902eff7518fffd07089">SetValue</a> (float_t value)</td></tr>
 <tr class="separator:a30d815724b664902eff7518fffd07089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10474aa6585e7dd537406c687d1935d1"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_image_value.html#a10474aa6585e7dd537406c687d1935d1">SetMin</a> (float_t min)</td></tr>
+<tr class="separator:a10474aa6585e7dd537406c687d1935d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad995cb4a42dc964635a901499ae97030"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_image_value.html#ad995cb4a42dc964635a901499ae97030">SetMax</a> (float_t max)</td></tr>
+<tr class="separator:ad995cb4a42dc964635a901499ae97030"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1accac40e18f5356d11a62c1d8930735"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_image_value.html#a1accac40e18f5356d11a62c1d8930735">GetImage</a> () const</td></tr>
 <tr class="separator:a1accac40e18f5356d11a62c1d8930735"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a920b0433bb59e1399eda075a9b9ccf"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_image_value.html#a0a920b0433bb59e1399eda075a9b9ccf">GetFormat</a> () const</td></tr>
 <tr class="separator:a0a920b0433bb59e1399eda075a9b9ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae87f8ac91cafd87147858c3897315612"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_image_value.html#ae87f8ac91cafd87147858c3897315612">GetClickAddDelta</a> () const</td></tr>
+<tr class="separator:ae87f8ac91cafd87147858c3897315612"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e7c53fb0149c0281f501f16e384b72d"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_image_value.html#a8e7c53fb0149c0281f501f16e384b72d">GetValue</a> () const</td></tr>
 <tr class="separator:a8e7c53fb0149c0281f501f16e384b72d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc9c119e55ce6ef29e682c9d7c832101"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_image_value.html#afc9c119e55ce6ef29e682c9d7c832101">GetMin</a> () const</td></tr>
+<tr class="separator:afc9c119e55ce6ef29e682c9d7c832101"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5492210a150074190d3b1e3c345192b"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_image_value.html#ad5492210a150074190d3b1e3c345192b">GetMax</a> () const</td></tr>
+<tr class="separator:ad5492210a150074190d3b1e3c345192b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -122,6 +134,7 @@ static <a class="el" href="class_t_image_value.html">TImageValue</a>&#160;</td><
 <p>可以用图片来表示如电池电量、WIFI信号强度和其它各种数值的值。</p>
 <p>其原理如下：</p>
 <p>1.把value以format为格式转换成字符串。 2.把每个字符与image(图片文件名前缀)映射成一个图片名。 3.最后把这些图片显示出来。</p>
+<p>如果设置click_add_delta为非0，那么点击时自动增加指定的增量，值超过最大值时回到最小值, 或者值超过最小值时回到最大值。</p>
 <p>image_value_t是widget\_t的子类控件，widget_t的函数均适用于image_value_t控件。</p>
 <p>在xml中使用"image\_value"标签创建图片值控件。如：</p>
 <div class="fragment"><div class="line">*&lt;<span class="keywordtype">image_value</span>  <span class="keyword">value</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">image</span>=<span class="stringliteral">&quot;num_&quot;</span> /&gt;</div>
@@ -202,6 +215,24 @@ static <a class="el" href="class_t_image_value.html">TImageValue</a>&#160;</td><
 
 </div>
 </div>
+<a id="ae87f8ac91cafd87147858c3897315612"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae87f8ac91cafd87147858c3897315612">&#9670;&nbsp;</a></span>GetClickAddDelta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float_t TImageValue::GetClickAddDelta </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>点击时加上一个增量。 </p>
+
+</div>
+</div>
 <a id="a0a920b0433bb59e1399eda075a9b9ccf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0a920b0433bb59e1399eda075a9b9ccf">&#9670;&nbsp;</a></span>GetFormat()</h2>
 
@@ -238,6 +269,42 @@ static <a class="el" href="class_t_image_value.html">TImageValue</a>&#160;</td><
 
 </div>
 </div>
+<a id="ad5492210a150074190d3b1e3c345192b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5492210a150074190d3b1e3c345192b">&#9670;&nbsp;</a></span>GetMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float_t TImageValue::GetMax </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>最大值(如果设置了click_add_delta，到达最大值后回到最小值)。 </p>
+
+</div>
+</div>
+<a id="afc9c119e55ce6ef29e682c9d7c832101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc9c119e55ce6ef29e682c9d7c832101">&#9670;&nbsp;</a></span>GetMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float_t TImageValue::GetMin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>最小值(如果设置了click_add_delta，到达最小值后回到最大值)。 </p>
+
+</div>
+</div>
 <a id="a8e7c53fb0149c0281f501f16e384b72d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8e7c53fb0149c0281f501f16e384b72d">&#9670;&nbsp;</a></span>GetValue()</h2>
 
@@ -253,6 +320,32 @@ static <a class="el" href="class_t_image_value.html">TImageValue</a>&#160;</td><
       </table>
 </div><div class="memdoc">
 <p>值。 </p>
+
+</div>
+</div>
+<a id="ae6f17a0db932a9fde2ffafdc0d5217f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6f17a0db932a9fde2ffafdc0d5217f2">&#9670;&nbsp;</a></span>SetClickAddDelta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TImageValue::SetClickAddDelta </td>
+          <td>(</td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>delta</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置点击时加上的增量。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delta</td><td>增量。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>
@@ -301,6 +394,58 @@ static <a class="el" href="class_t_image_value.html">TImageValue</a>&#160;</td><
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">image</td><td>图片前缀。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="ad995cb4a42dc964635a901499ae97030"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad995cb4a42dc964635a901499ae97030">&#9670;&nbsp;</a></span>SetMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TImageValue::SetMax </td>
+          <td>(</td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>max</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置最大值。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max</td><td>最大值。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a10474aa6585e7dd537406c687d1935d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10474aa6585e7dd537406c687d1935d1">&#9670;&nbsp;</a></span>SetMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TImageValue::SetMin </td>
+          <td>(</td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>min</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置最小值。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min</td><td>最小值。</td></tr>
   </table>
   </dd>
 </dl>

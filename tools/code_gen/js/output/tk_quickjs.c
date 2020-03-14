@@ -9,11 +9,13 @@
 #include "tkc/value.h"
 #include "tkc/object.h"
 #include "src/awtk_global.h"
+#include "base/clip_board.h"
 #include "base/dialog.h"
 #include "base/events.h"
 #include "base/font_manager.h"
 #include "base/font.h"
 #include "base/idle.h"
+#include "base/assets_manager.h"
 #include "base/image_manager.h"
 #include "base/input_method.h"
 #include "base/keys.h"
@@ -33,12 +35,10 @@
 #include "tkc/mime_types.h"
 #include "tkc/idle_manager.h"
 #include "slide_view/slide_indicator.h"
-#include "base/clip_board.h"
 #include "tkc/easing.h"
 #include "tkc/date_time.h"
 #include "tkc/color.h"
 #include "tkc/asset_info.h"
-#include "base/assets_manager.h"
 #include "base/style_mutable.h"
 #include "color_picker/color_picker.h"
 #include "time_clock/time_clock.h"
@@ -2166,6 +2166,52 @@ ret_t global_t_init(JSContext *ctx) {
  return RET_OK;
 }
 
+jsvalue_t wrap_clip_board_set_text(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  ret_t ret = (ret_t)0;
+  const char* text = (const char*)jsvalue_get_utf8_string(ctx, argv[0]);
+  ret = (ret_t)clip_board_set_text(text);
+  jsvalue_free_str(ctx, text);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_clip_board_get_text(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 0) {
+  const char* ret = NULL;
+  ret = (const char*)clip_board_get_text();
+
+  jret = jsvalue_create_string(ctx, ret);
+  }
+  return jret;
+}
+
+ret_t clip_board_t_init(JSContext *ctx) {
+  jsvalue_t global_obj = JS_GetGlobalObject(ctx);
+  JS_SetPropertyStr(ctx, global_obj, "clip_board_set_text",
+                      JS_NewCFunction(ctx, wrap_clip_board_set_text, "clip_board_set_text", 1));
+  JS_SetPropertyStr(ctx, global_obj, "clip_board_get_text",
+                      JS_NewCFunction(ctx, wrap_clip_board_get_text, "clip_board_get_text", 1));
+
+ jsvalue_unref(ctx, global_obj);
+
+ return RET_OK;
+}
+
 jsvalue_t get_DIALOG_QUIT_NONE(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -3219,6 +3265,95 @@ ret_t idle_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_idle_add, "idle_add", 1));
   JS_SetPropertyStr(ctx, global_obj, "idle_remove",
                       JS_NewCFunction(ctx, wrap_idle_remove, "idle_remove", 1));
+
+ jsvalue_unref(ctx, global_obj);
+
+ return RET_OK;
+}
+
+jsvalue_t wrap_assets_manager(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 0) {
+  assets_manager_t* ret = NULL;
+  ret = (assets_manager_t*)assets_manager();
+
+  jret = jsvalue_create_pointer(ctx, ret, "assets_manager_t*");
+  }
+  return jret;
+}
+
+jsvalue_t wrap_assets_manager_set_theme(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  assets_manager_t* am = (assets_manager_t*)jsvalue_get_pointer(ctx, argv[0], "assets_manager_t*");
+  const char* theme = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  ret = (ret_t)assets_manager_set_theme(am, theme);
+  jsvalue_free_str(ctx, theme);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_assets_manager_ref(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 3) {
+  asset_info_t* ret = NULL;
+  assets_manager_t* am = (assets_manager_t*)jsvalue_get_pointer(ctx, argv[0], "assets_manager_t*");
+  asset_type_t type = (asset_type_t)jsvalue_get_int_value(ctx, argv[1]);
+  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[2]);
+  ret = (asset_info_t*)assets_manager_ref(am, type, name);
+  jsvalue_free_str(ctx, name);
+
+  jret = jsvalue_create_pointer(ctx, ret, "asset_info_t*");
+  }
+  return jret;
+}
+
+jsvalue_t wrap_assets_manager_unref(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  assets_manager_t* am = (assets_manager_t*)jsvalue_get_pointer(ctx, argv[0], "assets_manager_t*");
+  asset_info_t* info = (asset_info_t*)jsvalue_get_pointer(ctx, argv[1], "asset_info_t*");
+  ret = (ret_t)assets_manager_unref(am, info);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+ret_t assets_manager_t_init(JSContext *ctx) {
+  jsvalue_t global_obj = JS_GetGlobalObject(ctx);
+  JS_SetPropertyStr(ctx, global_obj, "assets_manager",
+                      JS_NewCFunction(ctx, wrap_assets_manager, "assets_manager", 1));
+  JS_SetPropertyStr(ctx, global_obj, "assets_manager_set_theme",
+                      JS_NewCFunction(ctx, wrap_assets_manager_set_theme, "assets_manager_set_theme", 1));
+  JS_SetPropertyStr(ctx, global_obj, "assets_manager_ref",
+                      JS_NewCFunction(ctx, wrap_assets_manager_ref, "assets_manager_ref", 1));
+  JS_SetPropertyStr(ctx, global_obj, "assets_manager_unref",
+                      JS_NewCFunction(ctx, wrap_assets_manager_unref, "assets_manager_unref", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -5331,6 +5466,33 @@ jsvalue_t get_STYLE_ID_TEXT_COLOR(
   return jsvalue_create_string(ctx, STYLE_ID_TEXT_COLOR);
 }
 
+jsvalue_t get_STYLE_ID_HIGHLIGHT_FONT_NAME(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, STYLE_ID_HIGHLIGHT_FONT_NAME);
+}
+
+jsvalue_t get_STYLE_ID_HIGHLIGHT_FONT_SIZE(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, STYLE_ID_HIGHLIGHT_FONT_SIZE);
+}
+
+jsvalue_t get_STYLE_ID_HIGHLIGHT_TEXT_COLOR(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, STYLE_ID_HIGHLIGHT_TEXT_COLOR);
+}
+
 jsvalue_t get_STYLE_ID_TIPS_TEXT_COLOR(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -5590,6 +5752,12 @@ ret_t style_id_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_STYLE_ID_FONT_STYLE, "STYLE_ID_FONT_STYLE", 1));
   JS_SetPropertyStr(ctx, global_obj, "STYLE_ID_TEXT_COLOR",
                       JS_NewCFunction(ctx, get_STYLE_ID_TEXT_COLOR, "STYLE_ID_TEXT_COLOR", 1));
+  JS_SetPropertyStr(ctx, global_obj, "STYLE_ID_HIGHLIGHT_FONT_NAME",
+                      JS_NewCFunction(ctx, get_STYLE_ID_HIGHLIGHT_FONT_NAME, "STYLE_ID_HIGHLIGHT_FONT_NAME", 1));
+  JS_SetPropertyStr(ctx, global_obj, "STYLE_ID_HIGHLIGHT_FONT_SIZE",
+                      JS_NewCFunction(ctx, get_STYLE_ID_HIGHLIGHT_FONT_SIZE, "STYLE_ID_HIGHLIGHT_FONT_SIZE", 1));
+  JS_SetPropertyStr(ctx, global_obj, "STYLE_ID_HIGHLIGHT_TEXT_COLOR",
+                      JS_NewCFunction(ctx, get_STYLE_ID_HIGHLIGHT_TEXT_COLOR, "STYLE_ID_HIGHLIGHT_TEXT_COLOR", 1));
   JS_SetPropertyStr(ctx, global_obj, "STYLE_ID_TIPS_TEXT_COLOR",
                       JS_NewCFunction(ctx, get_STYLE_ID_TIPS_TEXT_COLOR, "STYLE_ID_TIPS_TEXT_COLOR", 1));
   JS_SetPropertyStr(ctx, global_obj, "STYLE_ID_TEXT_ALIGN_H",
@@ -9923,7 +10091,7 @@ jsvalue_t wrap_widget_use_style(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* style = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* style = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)widget_use_style(widget, style);
   jsvalue_free_str(ctx, style);
 
@@ -9961,7 +10129,7 @@ jsvalue_t wrap_widget_set_tr_text(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* text = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* text = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)widget_set_tr_text(widget, text);
   jsvalue_free_str(ctx, text);
 
@@ -10014,7 +10182,7 @@ jsvalue_t wrap_widget_set_name(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)widget_set_name(widget, name);
   jsvalue_free_str(ctx, name);
 
@@ -10033,7 +10201,7 @@ jsvalue_t wrap_widget_set_theme(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)widget_set_theme(widget, name);
   jsvalue_free_str(ctx, name);
 
@@ -10052,7 +10220,7 @@ jsvalue_t wrap_widget_set_pointer_cursor(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* cursor = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* cursor = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)widget_set_pointer_cursor(widget, cursor);
   jsvalue_free_str(ctx, cursor);
 
@@ -10148,7 +10316,7 @@ jsvalue_t wrap_widget_pause_animator(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)widget_pause_animator(widget, name);
   jsvalue_free_str(ctx, name);
 
@@ -10167,7 +10335,7 @@ jsvalue_t wrap_widget_stop_animator(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)widget_stop_animator(widget, name);
   jsvalue_free_str(ctx, name);
 
@@ -10186,7 +10354,7 @@ jsvalue_t wrap_widget_destroy_animator(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)widget_destroy_animator(widget, name);
   jsvalue_free_str(ctx, name);
 
@@ -10440,7 +10608,7 @@ jsvalue_t wrap_widget_child(
   if(argc >= 2) {
   widget_t* ret = NULL;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (widget_t*)widget_child(widget, name);
   jsvalue_free_str(ctx, name);
 
@@ -10459,7 +10627,7 @@ jsvalue_t wrap_widget_lookup(
   if(argc >= 3) {
   widget_t* ret = NULL;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   bool_t recursive = (bool_t)jsvalue_get_boolean_value(ctx, argv[2]);
   ret = (widget_t*)widget_lookup(widget, name, recursive);
   jsvalue_free_str(ctx, name);
@@ -10479,7 +10647,7 @@ jsvalue_t wrap_widget_lookup_by_type(
   if(argc >= 3) {
   widget_t* ret = NULL;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* type = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* type = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   bool_t recursive = (bool_t)jsvalue_get_boolean_value(ctx, argv[2]);
   ret = (widget_t*)widget_lookup_by_type(widget, type, recursive);
   jsvalue_free_str(ctx, type);
@@ -14101,52 +14269,6 @@ ret_t clip_board_data_type_t_init(JSContext *ctx) {
  return RET_OK;
 }
 
-jsvalue_t wrap_clip_board_set_text(
-    JSContext *ctx, 
-    jsvalue_const_t this_val,
-    int argc, 
-    jsvalue_const_t *argv
-  ) {
-  jsvalue_t jret = JS_NULL;
-  if(argc >= 1) {
-  ret_t ret = (ret_t)0;
-  const char* text = (const char*)jsvalue_get_utf8_string(ctx, argv[0]);
-  ret = (ret_t)clip_board_set_text(text);
-  jsvalue_free_str(ctx, text);
-
-  jret = jsvalue_create_int(ctx, ret);
-  }
-  return jret;
-}
-
-jsvalue_t wrap_clip_board_get_text(
-    JSContext *ctx, 
-    jsvalue_const_t this_val,
-    int argc, 
-    jsvalue_const_t *argv
-  ) {
-  jsvalue_t jret = JS_NULL;
-  if(argc >= 0) {
-  const char* ret = NULL;
-  ret = (const char*)clip_board_get_text();
-
-  jret = jsvalue_create_string(ctx, ret);
-  }
-  return jret;
-}
-
-ret_t clip_board_t_init(JSContext *ctx) {
-  jsvalue_t global_obj = JS_GetGlobalObject(ctx);
-  JS_SetPropertyStr(ctx, global_obj, "clip_board_set_text",
-                      JS_NewCFunction(ctx, wrap_clip_board_set_text, "clip_board_set_text", 1));
-  JS_SetPropertyStr(ctx, global_obj, "clip_board_get_text",
-                      JS_NewCFunction(ctx, wrap_clip_board_get_text, "clip_board_get_text", 1));
-
- jsvalue_unref(ctx, global_obj);
-
- return RET_OK;
-}
-
 jsvalue_t get_EASING_LINEAR(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -14966,74 +15088,6 @@ ret_t asset_type_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_ASSET_TYPE_SCRIPT, "ASSET_TYPE_SCRIPT", 1));
   JS_SetPropertyStr(ctx, global_obj, "ASSET_TYPE_DATA",
                       JS_NewCFunction(ctx, get_ASSET_TYPE_DATA, "ASSET_TYPE_DATA", 1));
-
- jsvalue_unref(ctx, global_obj);
-
- return RET_OK;
-}
-
-jsvalue_t wrap_assets_manager(
-    JSContext *ctx, 
-    jsvalue_const_t this_val,
-    int argc, 
-    jsvalue_const_t *argv
-  ) {
-  jsvalue_t jret = JS_NULL;
-  if(argc >= 0) {
-  assets_manager_t* ret = NULL;
-  ret = (assets_manager_t*)assets_manager();
-
-  jret = jsvalue_create_pointer(ctx, ret, "assets_manager_t*");
-  }
-  return jret;
-}
-
-jsvalue_t wrap_assets_manager_ref(
-    JSContext *ctx, 
-    jsvalue_const_t this_val,
-    int argc, 
-    jsvalue_const_t *argv
-  ) {
-  jsvalue_t jret = JS_NULL;
-  if(argc >= 3) {
-  asset_info_t* ret = NULL;
-  assets_manager_t* am = (assets_manager_t*)jsvalue_get_pointer(ctx, argv[0], "assets_manager_t*");
-  asset_type_t type = (asset_type_t)jsvalue_get_int_value(ctx, argv[1]);
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[2]);
-  ret = (asset_info_t*)assets_manager_ref(am, type, name);
-  jsvalue_free_str(ctx, name);
-
-  jret = jsvalue_create_pointer(ctx, ret, "asset_info_t*");
-  }
-  return jret;
-}
-
-jsvalue_t wrap_assets_manager_unref(
-    JSContext *ctx, 
-    jsvalue_const_t this_val,
-    int argc, 
-    jsvalue_const_t *argv
-  ) {
-  jsvalue_t jret = JS_NULL;
-  if(argc >= 2) {
-  ret_t ret = (ret_t)0;
-  assets_manager_t* am = (assets_manager_t*)jsvalue_get_pointer(ctx, argv[0], "assets_manager_t*");
-  asset_info_t* info = (asset_info_t*)jsvalue_get_pointer(ctx, argv[1], "asset_info_t*");
-  ret = (ret_t)assets_manager_unref(am, info);
-
-  jret = jsvalue_create_int(ctx, ret);
-  }
-  return jret;
-}
-
-ret_t assets_manager_t_init(JSContext *ctx) {
-  jsvalue_t global_obj = JS_GetGlobalObject(ctx);
-  JS_SetPropertyStr(ctx, global_obj, "assets_manager",
-                      JS_NewCFunction(ctx, wrap_assets_manager, "assets_manager", 1));
-  JS_SetPropertyStr(ctx, global_obj, "assets_manager_ref",
-                      JS_NewCFunction(ctx, wrap_assets_manager_ref, "assets_manager_ref", 1));
-  JS_SetPropertyStr(ctx, global_obj, "assets_manager_unref",
-                      JS_NewCFunction(ctx, wrap_assets_manager_unref, "assets_manager_unref", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -19891,7 +19945,7 @@ jsvalue_t wrap_mledit_t_get_prop_scroll_line(
   jsvalue_t jret = JS_NULL;
   mledit_t* obj = (mledit_t*)jsvalue_get_pointer(ctx, argv[0], "mledit_t*");
 
-  jret = jsvalue_create_number(ctx, obj->scroll_line);
+  jret = jsvalue_create_int(ctx, obj->scroll_line);
   return jret;
 }
 
@@ -20570,6 +20624,24 @@ jsvalue_t wrap_image_value_set_format(
   return jret;
 }
 
+jsvalue_t wrap_image_value_set_click_add_delta(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  float_t delta = (float_t)jsvalue_get_number_value(ctx, argv[1]);
+  ret = (ret_t)image_value_set_click_add_delta(widget, delta);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_image_value_set_value(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -20582,6 +20654,42 @@ jsvalue_t wrap_image_value_set_value(
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
   float_t value = (float_t)jsvalue_get_number_value(ctx, argv[1]);
   ret = (ret_t)image_value_set_value(widget, value);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_image_value_set_min(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  float_t min = (float_t)jsvalue_get_number_value(ctx, argv[1]);
+  ret = (ret_t)image_value_set_min(widget, min);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_image_value_set_max(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  float_t max = (float_t)jsvalue_get_number_value(ctx, argv[1]);
+  ret = (ret_t)image_value_set_max(widget, max);
 
   jret = jsvalue_create_int(ctx, ret);
   }
@@ -20631,6 +20739,19 @@ jsvalue_t wrap_image_value_t_get_prop_format(
   return jret;
 }
 
+jsvalue_t wrap_image_value_t_get_prop_click_add_delta(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  image_value_t* obj = (image_value_t*)jsvalue_get_pointer(ctx, argv[0], "image_value_t*");
+
+  jret = jsvalue_create_number(ctx, obj->click_add_delta);
+  return jret;
+}
+
 jsvalue_t wrap_image_value_t_get_prop_value(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -20644,6 +20765,32 @@ jsvalue_t wrap_image_value_t_get_prop_value(
   return jret;
 }
 
+jsvalue_t wrap_image_value_t_get_prop_min(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  image_value_t* obj = (image_value_t*)jsvalue_get_pointer(ctx, argv[0], "image_value_t*");
+
+  jret = jsvalue_create_number(ctx, obj->min);
+  return jret;
+}
+
+jsvalue_t wrap_image_value_t_get_prop_max(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  image_value_t* obj = (image_value_t*)jsvalue_get_pointer(ctx, argv[0], "image_value_t*");
+
+  jret = jsvalue_create_number(ctx, obj->max);
+  return jret;
+}
+
 ret_t image_value_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
   JS_SetPropertyStr(ctx, global_obj, "image_value_create",
@@ -20652,16 +20799,28 @@ ret_t image_value_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_image_value_set_image, "image_value_set_image", 1));
   JS_SetPropertyStr(ctx, global_obj, "image_value_set_format",
                       JS_NewCFunction(ctx, wrap_image_value_set_format, "image_value_set_format", 1));
+  JS_SetPropertyStr(ctx, global_obj, "image_value_set_click_add_delta",
+                      JS_NewCFunction(ctx, wrap_image_value_set_click_add_delta, "image_value_set_click_add_delta", 1));
   JS_SetPropertyStr(ctx, global_obj, "image_value_set_value",
                       JS_NewCFunction(ctx, wrap_image_value_set_value, "image_value_set_value", 1));
+  JS_SetPropertyStr(ctx, global_obj, "image_value_set_min",
+                      JS_NewCFunction(ctx, wrap_image_value_set_min, "image_value_set_min", 1));
+  JS_SetPropertyStr(ctx, global_obj, "image_value_set_max",
+                      JS_NewCFunction(ctx, wrap_image_value_set_max, "image_value_set_max", 1));
   JS_SetPropertyStr(ctx, global_obj, "image_value_cast",
                       JS_NewCFunction(ctx, wrap_image_value_cast, "image_value_cast", 1));
   JS_SetPropertyStr(ctx, global_obj, "image_value_t_get_prop_image",
                       JS_NewCFunction(ctx, wrap_image_value_t_get_prop_image, "image_value_t_get_prop_image", 1));
   JS_SetPropertyStr(ctx, global_obj, "image_value_t_get_prop_format",
                       JS_NewCFunction(ctx, wrap_image_value_t_get_prop_format, "image_value_t_get_prop_format", 1));
+  JS_SetPropertyStr(ctx, global_obj, "image_value_t_get_prop_click_add_delta",
+                      JS_NewCFunction(ctx, wrap_image_value_t_get_prop_click_add_delta, "image_value_t_get_prop_click_add_delta", 1));
   JS_SetPropertyStr(ctx, global_obj, "image_value_t_get_prop_value",
                       JS_NewCFunction(ctx, wrap_image_value_t_get_prop_value, "image_value_t_get_prop_value", 1));
+  JS_SetPropertyStr(ctx, global_obj, "image_value_t_get_prop_min",
+                      JS_NewCFunction(ctx, wrap_image_value_t_get_prop_min, "image_value_t_get_prop_min", 1));
+  JS_SetPropertyStr(ctx, global_obj, "image_value_t_get_prop_max",
+                      JS_NewCFunction(ctx, wrap_image_value_t_get_prop_max, "image_value_t_get_prop_max", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -27337,11 +27496,13 @@ ret_t awtk_js_init(JSContext *ctx) {
   value_t_init(ctx);
   object_t_init(ctx);
   global_t_init(ctx);
+  clip_board_t_init(ctx);
   dialog_quit_code_t_init(ctx);
   event_type_t_init(ctx);
   font_manager_t_init(ctx);
   glyph_format_t_init(ctx);
   idle_t_init(ctx);
+  assets_manager_t_init(ctx);
   image_manager_t_init(ctx);
   input_type_t_init(ctx);
   value_type_t_init(ctx);
@@ -27374,13 +27535,11 @@ ret_t awtk_js_init(JSContext *ctx) {
   idle_manager_t_init(ctx);
   indicator_default_paint_t_init(ctx);
   clip_board_data_type_t_init(ctx);
-  clip_board_t_init(ctx);
   easing_type_t_init(ctx);
   date_time_t_init(ctx);
   color_t_init(ctx);
   asset_info_t_init(ctx);
   asset_type_t_init(ctx);
-  assets_manager_t_init(ctx);
   style_mutable_t_init(ctx);
   color_picker_t_init(ctx);
   time_clock_t_init(ctx);
