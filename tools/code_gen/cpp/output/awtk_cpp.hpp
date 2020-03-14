@@ -8,6 +8,7 @@ class TEmitter;
 class TEvent;
 class TWidget;
 class TWindow;
+class TAssetInfo;
 class TNativeWindow;
 
 /**
