@@ -78,7 +78,7 @@ var searchData=
   ['setitemwidth_435',['SetItemWidth',['../class_t_list_view_h.html#a5e21526f9cb63f695f06479da6e866f3',1,'TListViewH']]],
   ['setleft_436',['SetLeft',['../class_t_draggable.html#a89091401784ec29b1dd9c9483d4afa0b',1,'TDraggable']]],
   ['setlength_437',['SetLength',['../class_t_label.html#a95b6681ad924162dd2300b68f262fa87',1,'TLabel']]],
-  ['setlinecap_438',['SetLineCap',['../class_t_vgcanvas.html#aba7db55821d362a897966b9513febae9',1,'TVgcanvas']]],
+  ['setlinecap_438',['SetLineCap',['../class_t_vgcanvas.html#aba7db55821d362a897966b9513febae9',1,'TVgcanvas::SetLineCap()'],['../class_t_progress_circle.html#a3e8f2af91d84b66bc183f331b902f89a',1,'TProgressCircle::SetLineCap()']]],
   ['setlineheight_439',['SetLineHeight',['../class_t_line_number.html#a8bc62d6d6952d2ab1f4ecec7993333f2',1,'TLineNumber']]],
   ['setlinejoin_440',['SetLineJoin',['../class_t_vgcanvas.html#a3f605b5a2fe7d2d593ec04d8a6dc01b1',1,'TVgcanvas']]],
   ['setlinewidth_441',['SetLineWidth',['../class_t_vgcanvas.html#a1373d9f061e4c78e9a042c4b674b322b',1,'TVgcanvas::SetLineWidth()'],['../class_t_progress_circle.html#ab1d68698fa7d43e07193dd25e14ad52a',1,'TProgressCircle::SetLineWidth()']]],

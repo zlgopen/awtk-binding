@@ -97,6 +97,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:acff533461eca2271fa4070c315512201"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c2925ae8d2ef70e1df06343baa709fe"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_circle.html#a6c2925ae8d2ef70e1df06343baa709fe">SetUnit</a> (const char *unit)</td></tr>
 <tr class="separator:a6c2925ae8d2ef70e1df06343baa709fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8f2af91d84b66bc183f331b902f89a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_circle.html#a3e8f2af91d84b66bc183f331b902f89a">SetLineCap</a> (const char *line_cap)</td></tr>
+<tr class="separator:a3e8f2af91d84b66bc183f331b902f89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa59bbbfe3dbc463596ca78b9857b8f3c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_circle.html#aa59bbbfe3dbc463596ca78b9857b8f3c">SetShowText</a> (bool show_text)</td></tr>
 <tr class="separator:aa59bbbfe3dbc463596ca78b9857b8f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa62b2f0fad7ceaef323b02b219388a0c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_circle.html#aa62b2f0fad7ceaef323b02b219388a0c">SetCounterClockWise</a> (bool counter_clock_wise)</td></tr>
@@ -111,6 +113,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a1b6f44c7efef1d1de6f1bd7067c76822"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a781f8c75f2f22bcbbaa18656a1332283"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_circle.html#a781f8c75f2f22bcbbaa18656a1332283">GetUnit</a> () const</td></tr>
 <tr class="separator:a781f8c75f2f22bcbbaa18656a1332283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a4978be6400678d35cd93065bb6b560"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_circle.html#a6a4978be6400678d35cd93065bb6b560">GetLineCap</a> () const</td></tr>
+<tr class="separator:a6a4978be6400678d35cd93065bb6b560"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7863e6262513ce6391f813511400cac1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_circle.html#a7863e6262513ce6391f813511400cac1">GetCounterClockWise</a> () const</td></tr>
 <tr class="separator:a7863e6262513ce6391f813511400cac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b9ec8a9812a40395a43ac19dd967746"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_circle.html#a1b9ec8a9812a40395a43ac19dd967746">GetShowText</a> () const</td></tr>
@@ -237,6 +241,24 @@ static <a class="el" href="class_t_progress_circle.html">TProgressCircle</a>&#16
       </table>
 </div><div class="memdoc">
 <p>是否为逆时针方向(缺省为FALSE)。 </p>
+
+</div>
+</div>
+<a id="a6a4978be6400678d35cd93065bb6b560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a4978be6400678d35cd93065bb6b560">&#9670;&nbsp;</a></span>GetLineCap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * TProgressCircle::GetLineCap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>线帽类型(round:圆头，square:方头)。 </p>
 
 </div>
 </div>
@@ -367,6 +389,32 @@ static <a class="el" href="class_t_progress_circle.html">TProgressCircle</a>&#16
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">counter_clock_wise</td><td>是否为逆时针方向。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a3e8f2af91d84b66bc183f331b902f89a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e8f2af91d84b66bc183f331b902f89a">&#9670;&nbsp;</a></span>SetLineCap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TProgressCircle::SetLineCap </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>line_cap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置线帽类型。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line_cap</td><td>线帽类型(round:圆头，square:方头)。。</td></tr>
   </table>
   </dd>
 </dl>

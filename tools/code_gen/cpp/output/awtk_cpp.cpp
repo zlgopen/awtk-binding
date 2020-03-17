@@ -1527,6 +1527,30 @@
    return ((time_clock_t*)(this->nativeObj))->second_anchor_y;
  }
 
+ const char* TPropChangeEvent::GetName() const {
+   return ((prop_change_event_t*)(this->nativeObj))->name;
+ }
+
+ TValue TPropChangeEvent::GetValue() const {
+   return TValue(((prop_change_event_t*)(this->nativeObj))->value);
+ }
+
+ uint32_t TProgressEvent::GetPercent() const {
+   return ((progress_event_t*)(this->nativeObj))->percent;
+ }
+
+ ret_t TDoneEvent::GetResult() const {
+   return ((done_event_t*)(this->nativeObj))->result;
+ }
+
+ int32_t TErrorEvent::GetCode() const {
+   return ((error_event_t*)(this->nativeObj))->code;
+ }
+
+ const char* TErrorEvent::GetMessage() const {
+   return ((error_event_t*)(this->nativeObj))->message;
+ }
+
  TWidget TTextSelector::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TTextSelector((widget_t*)(text_selector_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
@@ -1601,30 +1625,6 @@
 
  float_t TSwitch::GetMaxXoffsetRatio() const {
    return ((switch_t*)(this->nativeObj))->max_xoffset_ratio;
- }
-
- const char* TPropChangeEvent::GetName() const {
-   return ((prop_change_event_t*)(this->nativeObj))->name;
- }
-
- TValue TPropChangeEvent::GetValue() const {
-   return TValue(((prop_change_event_t*)(this->nativeObj))->value);
- }
-
- uint32_t TProgressEvent::GetPercent() const {
-   return ((progress_event_t*)(this->nativeObj))->percent;
- }
-
- ret_t TDoneEvent::GetResult() const {
-   return ((done_event_t*)(this->nativeObj))->result;
- }
-
- int32_t TErrorEvent::GetCode() const {
-   return ((error_event_t*)(this->nativeObj))->code;
- }
-
- const char* TErrorEvent::GetMessage() const {
-   return ((error_event_t*)(this->nativeObj))->message;
  }
 
  TWidget TView::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -1787,6 +1787,10 @@
    return ((slide_menu_t*)(this->nativeObj))->min_scale;
  }
 
+ TWidget TTabControl::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
+   return TTabControl((widget_t*)(tab_control_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
+ }
+
  TWidget TScrollView::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TScrollView((widget_t*)(scroll_view_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
@@ -1911,62 +1915,6 @@
    return ((scroll_bar_t*)(this->nativeObj))->animatable;
  }
 
- TWidget TTabControl::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
-   return TTabControl((widget_t*)(tab_control_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TWidget TListView::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
-   return TListView((widget_t*)(list_view_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- ret_t TListView::SetItemHeight(int32_t item_height)  {
-   return list_view_set_item_height(((widget_t*)(this->nativeObj)), item_height);
- }
-
- ret_t TListView::SetDefaultItemHeight(int32_t default_item_height)  {
-   return list_view_set_default_item_height(((widget_t*)(this->nativeObj)), default_item_height);
- }
-
- ret_t TListView::SetAutoHideScrollBar(bool auto_hide_scroll_bar)  {
-   return list_view_set_auto_hide_scroll_bar(((widget_t*)(this->nativeObj)), auto_hide_scroll_bar);
- }
-
- ret_t TListView::Reinit()  {
-   return list_view_reinit(((widget_t*)(this->nativeObj)));
- }
-
- int32_t TListView::GetItemHeight() const {
-   return ((list_view_t*)(this->nativeObj))->item_height;
- }
-
- int32_t TListView::GetDefaultItemHeight() const {
-   return ((list_view_t*)(this->nativeObj))->default_item_height;
- }
-
- bool TListView::GetAutoHideScrollBar() const {
-   return ((list_view_t*)(this->nativeObj))->auto_hide_scroll_bar;
- }
-
- TWidget TListViewH::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
-   return TListViewH((widget_t*)(list_view_h_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- ret_t TListViewH::SetItemWidth(int32_t item_width)  {
-   return list_view_h_set_item_width(((widget_t*)(this->nativeObj)), item_width);
- }
-
- ret_t TListViewH::SetSpacing(int32_t spacing)  {
-   return list_view_h_set_spacing(((widget_t*)(this->nativeObj)), spacing);
- }
-
- int32_t TListViewH::GetItemWidth() const {
-   return ((list_view_h_t*)(this->nativeObj))->item_width;
- }
-
- int32_t TListViewH::GetSpacing() const {
-   return ((list_view_h_t*)(this->nativeObj))->spacing;
- }
-
  TWidget TTabButton::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TTabButton((widget_t*)(tab_button_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
@@ -2021,6 +1969,58 @@
 
  bool TTabButtonGroup::GetScrollable() const {
    return ((tab_button_group_t*)(this->nativeObj))->scrollable;
+ }
+
+ TWidget TListView::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
+   return TListView((widget_t*)(list_view_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
+ }
+
+ ret_t TListView::SetItemHeight(int32_t item_height)  {
+   return list_view_set_item_height(((widget_t*)(this->nativeObj)), item_height);
+ }
+
+ ret_t TListView::SetDefaultItemHeight(int32_t default_item_height)  {
+   return list_view_set_default_item_height(((widget_t*)(this->nativeObj)), default_item_height);
+ }
+
+ ret_t TListView::SetAutoHideScrollBar(bool auto_hide_scroll_bar)  {
+   return list_view_set_auto_hide_scroll_bar(((widget_t*)(this->nativeObj)), auto_hide_scroll_bar);
+ }
+
+ ret_t TListView::Reinit()  {
+   return list_view_reinit(((widget_t*)(this->nativeObj)));
+ }
+
+ int32_t TListView::GetItemHeight() const {
+   return ((list_view_t*)(this->nativeObj))->item_height;
+ }
+
+ int32_t TListView::GetDefaultItemHeight() const {
+   return ((list_view_t*)(this->nativeObj))->default_item_height;
+ }
+
+ bool TListView::GetAutoHideScrollBar() const {
+   return ((list_view_t*)(this->nativeObj))->auto_hide_scroll_bar;
+ }
+
+ TWidget TListViewH::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
+   return TListViewH((widget_t*)(list_view_h_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
+ }
+
+ ret_t TListViewH::SetItemWidth(int32_t item_width)  {
+   return list_view_h_set_item_width(((widget_t*)(this->nativeObj)), item_width);
+ }
+
+ ret_t TListViewH::SetSpacing(int32_t spacing)  {
+   return list_view_h_set_spacing(((widget_t*)(this->nativeObj)), spacing);
+ }
+
+ int32_t TListViewH::GetItemWidth() const {
+   return ((list_view_h_t*)(this->nativeObj))->item_width;
+ }
+
+ int32_t TListViewH::GetSpacing() const {
+   return ((list_view_h_t*)(this->nativeObj))->spacing;
  }
 
  TWidget TListItem::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -2147,6 +2147,10 @@
    return progress_circle_set_unit(((widget_t*)(this->nativeObj)), unit);
  }
 
+ ret_t TProgressCircle::SetLineCap(const char* line_cap)  {
+   return progress_circle_set_line_cap(((widget_t*)(this->nativeObj)), line_cap);
+ }
+
  ret_t TProgressCircle::SetShowText(bool show_text)  {
    return progress_circle_set_show_text(((widget_t*)(this->nativeObj)), show_text);
  }
@@ -2173,6 +2177,10 @@
 
  char* TProgressCircle::GetUnit() const {
    return ((progress_circle_t*)(this->nativeObj))->unit;
+ }
+
+ char* TProgressCircle::GetLineCap() const {
+   return ((progress_circle_t*)(this->nativeObj))->line_cap;
  }
 
  bool TProgressCircle::GetCounterClockWise() const {
@@ -2247,6 +2255,66 @@
    return ((slider_t*)(this->nativeObj))->slide_with_bar;
  }
 
+ TWidget TRow::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
+   return TRow((widget_t*)(row_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
+ }
+
+ TWidget TProgressBar::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
+   return TProgressBar((widget_t*)(progress_bar_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
+ }
+
+ ret_t TProgressBar::SetValue(float_t value)  {
+   return progress_bar_set_value(((widget_t*)(this->nativeObj)), value);
+ }
+
+ ret_t TProgressBar::SetMax(uint32_t max)  {
+   return progress_bar_set_max(((widget_t*)(this->nativeObj)), max);
+ }
+
+ ret_t TProgressBar::SetVertical(bool vertical)  {
+   return progress_bar_set_vertical(((widget_t*)(this->nativeObj)), vertical);
+ }
+
+ ret_t TProgressBar::SetShowText(bool show_text)  {
+   return progress_bar_set_show_text(((widget_t*)(this->nativeObj)), show_text);
+ }
+
+ uint32_t TProgressBar::GetPercent()  {
+    return progress_bar_get_percent(((widget_t*)(this->nativeObj)));
+ }
+
+ float_t TProgressBar::GetValue() const {
+   return ((progress_bar_t*)(this->nativeObj))->value;
+ }
+
+ float_t TProgressBar::GetMax() const {
+   return ((progress_bar_t*)(this->nativeObj))->max;
+ }
+
+ bool TProgressBar::GetVertical() const {
+   return ((progress_bar_t*)(this->nativeObj))->vertical;
+ }
+
+ bool TProgressBar::GetShowText() const {
+   return ((progress_bar_t*)(this->nativeObj))->show_text;
+ }
+
+ TWidget TPages::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
+   return TPages((widget_t*)(pages_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
+ }
+
+ ret_t TPages::SetActive(uint32_t index)  {
+   return pages_set_active(((widget_t*)(this->nativeObj)), index);
+ }
+
+ ret_t TPages::SetActiveByName(char* name)  {
+   return pages_set_active_by_name(((widget_t*)(this->nativeObj)), name);
+ }
+
+ uint32_t TPages::GetActive() const {
+   return ((pages_t*)(this->nativeObj))->active;
+ }
+
  TWidget TMledit::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TMledit((widget_t*)(mledit_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
@@ -2315,50 +2383,6 @@
    return ((mledit_t*)(this->nativeObj))->scroll_line;
  }
 
- TWidget TRow::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
-   return TRow((widget_t*)(row_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TWidget TProgressBar::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
-   return TProgressBar((widget_t*)(progress_bar_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- ret_t TProgressBar::SetValue(float_t value)  {
-   return progress_bar_set_value(((widget_t*)(this->nativeObj)), value);
- }
-
- ret_t TProgressBar::SetMax(uint32_t max)  {
-   return progress_bar_set_max(((widget_t*)(this->nativeObj)), max);
- }
-
- ret_t TProgressBar::SetVertical(bool vertical)  {
-   return progress_bar_set_vertical(((widget_t*)(this->nativeObj)), vertical);
- }
-
- ret_t TProgressBar::SetShowText(bool show_text)  {
-   return progress_bar_set_show_text(((widget_t*)(this->nativeObj)), show_text);
- }
-
- uint32_t TProgressBar::GetPercent()  {
-    return progress_bar_get_percent(((widget_t*)(this->nativeObj)));
- }
-
- float_t TProgressBar::GetValue() const {
-   return ((progress_bar_t*)(this->nativeObj))->value;
- }
-
- float_t TProgressBar::GetMax() const {
-   return ((progress_bar_t*)(this->nativeObj))->max;
- }
-
- bool TProgressBar::GetVertical() const {
-   return ((progress_bar_t*)(this->nativeObj))->vertical;
- }
-
- bool TProgressBar::GetShowText() const {
-   return ((progress_bar_t*)(this->nativeObj))->show_text;
- }
-
  TWidget TLineNumber::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TLineNumber((widget_t*)(line_number_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
@@ -2377,22 +2401,6 @@
 
  ret_t TLineNumber::SetYoffset(int32_t yoffset)  {
    return line_number_set_yoffset(((widget_t*)(this->nativeObj)), yoffset);
- }
-
- TWidget TPages::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
-   return TPages((widget_t*)(pages_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- ret_t TPages::SetActive(uint32_t index)  {
-   return pages_set_active(((widget_t*)(this->nativeObj)), index);
- }
-
- ret_t TPages::SetActiveByName(char* name)  {
-   return pages_set_active_by_name(((widget_t*)(this->nativeObj)), name);
- }
-
- uint32_t TPages::GetActive() const {
-   return ((pages_t*)(this->nativeObj))->active;
  }
 
  TWidget TOverlay::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -3315,22 +3323,6 @@
    return TDialogTitle((widget_t*)(dialog_title_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- TObject TObjectDefault::Create()  {
-   return TObjectDefault((emitter_t*)(object_default_create()));
- }
-
- ret_t TObjectDefault::Unref()  {
-   return object_default_unref(((object_t*)(this->nativeObj)));
- }
-
- ret_t TObjectDefault::ClearProps()  {
-   return object_default_clear_props(((object_t*)(this->nativeObj)));
- }
-
- uint32_t TObjectDefault::GetPropsSize() const {
-   return ((object_default_t*)(this->nativeObj))->props_size;
- }
-
  TWidget TComboBox::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TComboBox((widget_t*)(combo_box_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
@@ -3517,6 +3509,22 @@
 
  bool TPopup::GetCloseWhenClickOutside() const {
    return ((popup_t*)(this->nativeObj))->close_when_click_outside;
+ }
+
+ TObject TObjectDefault::Create()  {
+   return TObjectDefault((emitter_t*)(object_default_create()));
+ }
+
+ ret_t TObjectDefault::Unref()  {
+   return object_default_unref(((object_t*)(this->nativeObj)));
+ }
+
+ ret_t TObjectDefault::ClearProps()  {
+   return object_default_clear_props(((object_t*)(this->nativeObj)));
+ }
+
+ uint32_t TObjectDefault::GetPropsSize() const {
+   return ((object_default_t*)(this->nativeObj))->props_size;
  }
 
  TObject TObjectArray::Create()  {
