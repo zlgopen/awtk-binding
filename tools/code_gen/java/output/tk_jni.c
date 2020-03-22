@@ -4427,6 +4427,30 @@ JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1set_1text_1utf8(JNIEnv* env,  j
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1set_1child_1text_1utf8(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jname, jstring jtext) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  const char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
+  const char* text = (char*)(*env)->GetStringUTFChars(env, jtext, 0);
+  ret = (ret_t)widget_set_child_text_utf8(widget, name, text);
+  (*env)->ReleaseStringUTFChars(env, jname, name);
+  (*env)->ReleaseStringUTFChars(env, jtext, text);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1set_1child_1text_1with_1double(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jname, jstring jformat, jdouble value) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  const char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
+  const char* format = (char*)(*env)->GetStringUTFChars(env, jformat, 0);
+  ret = (ret_t)widget_set_child_text_with_double(widget, name, format, value);
+  (*env)->ReleaseStringUTFChars(env, jname, name);
+  (*env)->ReleaseStringUTFChars(env, jformat, format);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1set_1tr_1text(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jtext) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;

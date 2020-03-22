@@ -2503,6 +2503,29 @@ public:
   ret_t SetText(const char* text) ;
 
   /**
+   * 设置子控件的文本。
+   *只是对widget\_set\_prop的包装，文本的意义由子类控件决定。
+   * 
+   * @param name 子控件的名称。
+   * @param text 文本。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetChildText(const char* name, const char* text) ;
+
+  /**
+   * 用一个浮点数去设置子控件的文本。
+   *只是对widget\_set\_prop的包装，文本的意义由子类控件决定。
+   * 
+   * @param name 子控件的名称。
+   * @param format 格式字符串(如："%2.2lf")。
+   * @param value 浮点数值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetChildTextWithDouble(const char* name, const char* format, double value) ;
+
+  /**
    * 获取翻译之后的文本，然后调用widget_set_text。
    * 
    * @param text 文本。

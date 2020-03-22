@@ -819,6 +819,14 @@
    return widget_set_text_utf8(((widget_t*)(this->nativeObj)), text);
  }
 
+ ret_t TWidget::SetChildText(const char* name, const char* text)  {
+   return widget_set_child_text_utf8(((widget_t*)(this->nativeObj)), name, text);
+ }
+
+ ret_t TWidget::SetChildTextWithDouble(const char* name, const char* format, double value)  {
+   return widget_set_child_text_with_double(((widget_t*)(this->nativeObj)), name, format, value);
+ }
+
  ret_t TWidget::SetTrText(const char* text)  {
    return widget_set_tr_text(((widget_t*)(this->nativeObj)), text);
  }

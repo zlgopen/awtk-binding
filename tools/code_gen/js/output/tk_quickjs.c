@@ -10212,6 +10212,49 @@ jsvalue_t wrap_widget_set_text_utf8(
   return jret;
 }
 
+jsvalue_t wrap_widget_set_child_text_utf8(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 3) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* text = (const char*)jsvalue_get_utf8_string(ctx, argv[2]);
+  ret = (ret_t)widget_set_child_text_utf8(widget, name, text);
+  jsvalue_free_str(ctx, name);
+  jsvalue_free_str(ctx, text);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_widget_set_child_text_with_double(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 4) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* format = (const char*)jsvalue_get_utf8_string(ctx, argv[2]);
+  double value = (double)jsvalue_get_number_value(ctx, argv[3]);
+  ret = (ret_t)widget_set_child_text_with_double(widget, name, format, value);
+  jsvalue_free_str(ctx, name);
+  jsvalue_free_str(ctx, format);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_widget_set_tr_text(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -11704,6 +11747,10 @@ ret_t widget_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_widget_use_style, "widget_use_style", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_set_text_utf8",
                       JS_NewCFunction(ctx, wrap_widget_set_text_utf8, "widget_set_text_utf8", 1));
+  JS_SetPropertyStr(ctx, global_obj, "widget_set_child_text_utf8",
+                      JS_NewCFunction(ctx, wrap_widget_set_child_text_utf8, "widget_set_child_text_utf8", 1));
+  JS_SetPropertyStr(ctx, global_obj, "widget_set_child_text_with_double",
+                      JS_NewCFunction(ctx, wrap_widget_set_child_text_with_double, "widget_set_child_text_with_double", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_set_tr_text",
                       JS_NewCFunction(ctx, wrap_widget_set_tr_text, "widget_set_tr_text", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_get_value",

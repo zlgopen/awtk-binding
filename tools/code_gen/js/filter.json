@@ -7308,6 +7308,68 @@
           },
           {
             "type": "const char*",
+            "name": "name",
+            "desc": "子控件的名称。"
+          },
+          {
+            "type": "const char*",
+            "name": "text",
+            "desc": "文本。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置子控件的文本。\n只是对widget\\_set\\_prop的包装，文本的意义由子类控件决定。",
+        "name": "widget_set_child_text_utf8",
+        "alias": "set_child_text",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "子控件的名称。"
+          },
+          {
+            "type": "const char*",
+            "name": "format",
+            "desc": "格式字符串(如：\"%2.2lf\")。"
+          },
+          {
+            "type": "double",
+            "name": "value",
+            "desc": "浮点数值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "用一个浮点数去设置子控件的文本。\n只是对widget\\_set\\_prop的包装，文本的意义由子类控件决定。",
+        "name": "widget_set_child_text_with_double",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "const char*",
             "name": "text",
             "desc": "文本。"
           }

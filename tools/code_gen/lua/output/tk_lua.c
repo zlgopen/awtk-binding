@@ -5686,6 +5686,31 @@ static int wrap_widget_set_text_utf8(lua_State* L) {
   return 1;
 }
 
+static int wrap_widget_set_child_text_utf8(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  const char* text = (const char*)luaL_checkstring(L, 3);
+  ret = (ret_t)widget_set_child_text_utf8(widget, name, text);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_widget_set_child_text_with_double(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  const char* format = (const char*)luaL_checkstring(L, 3);
+  double value = (double)luaL_checknumber(L, 4);
+  ret = (ret_t)widget_set_child_text_with_double(widget, name, format, value);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 static int wrap_widget_set_tr_text(lua_State* L) {
   ret_t ret = 0;
   widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
@@ -6389,6 +6414,8 @@ static const struct luaL_Reg widget_t_member_funcs[] = {
   {"add_value", wrap_widget_add_value},
   {"use_style", wrap_widget_use_style},
   {"set_text", wrap_widget_set_text_utf8},
+  {"set_child_text", wrap_widget_set_child_text_utf8},
+  {"set_child_text_with_double", wrap_widget_set_child_text_with_double},
   {"set_tr_text", wrap_widget_set_tr_text},
   {"get_value", wrap_widget_get_value},
   {"get_text", wrap_widget_get_text},

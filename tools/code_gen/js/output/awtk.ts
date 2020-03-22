@@ -747,6 +747,8 @@ declare function widget_animate_value_to(widget : any, value : any, duration : n
 declare function widget_add_value(widget : any, delta : number) : TRet;
 declare function widget_use_style(widget : any, style : string) : TRet;
 declare function widget_set_text_utf8(widget : any, text : string) : TRet;
+declare function widget_set_child_text_utf8(widget : any, name : string, text : string) : TRet;
+declare function widget_set_child_text_with_double(widget : any, name : string, format : string, value : any) : TRet;
 declare function widget_set_tr_text(widget : any, text : string) : TRet;
 declare function widget_get_value(widget : any) : number;
 declare function widget_get_text(widget : any) : any;
@@ -7966,6 +7968,35 @@ export class TWidget {
    */
  setText(text : string) : TRet  {
     return widget_set_text_utf8(this != null ? (this.nativeObj || this) : null, text);
+ }
+
+
+  /**
+   * 设置子控件的文本。
+   *只是对widget\_set\_prop的包装，文本的意义由子类控件决定。
+   * 
+   * @param name 子控件的名称。
+   * @param text 文本。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setChildText(name : string, text : string) : TRet  {
+    return widget_set_child_text_utf8(this != null ? (this.nativeObj || this) : null, name, text);
+ }
+
+
+  /**
+   * 用一个浮点数去设置子控件的文本。
+   *只是对widget\_set\_prop的包装，文本的意义由子类控件决定。
+   * 
+   * @param name 子控件的名称。
+   * @param format 格式字符串(如："%2.2lf")。
+   * @param value 浮点数值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setChildTextWithDouble(name : string, format : string, value : any) : TRet  {
+    return widget_set_child_text_with_double(this != null ? (this.nativeObj || this) : null, name, format, value);
  }
 
 

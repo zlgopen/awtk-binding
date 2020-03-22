@@ -8269,6 +8269,43 @@ static void wrap_widget_set_text_utf8(const Nan::FunctionCallbackInfo<v8::Value>
   (void)argc;(void)ctx;
 }
 
+static void wrap_widget_set_child_text_utf8(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 3) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* text = (const char*)jsvalue_get_utf8_string(ctx, argv[2]);
+  ret = (ret_t)widget_set_child_text_utf8(widget, name, text);
+  jsvalue_free_str(ctx, name);
+  jsvalue_free_str(ctx, text);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
+static void wrap_widget_set_child_text_with_double(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 4) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* format = (const char*)jsvalue_get_utf8_string(ctx, argv[2]);
+  double value = (double)jsvalue_get_number_value(ctx, argv[3]);
+  ret = (ret_t)widget_set_child_text_with_double(widget, name, format, value);
+  jsvalue_free_str(ctx, name);
+  jsvalue_free_str(ctx, format);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_widget_set_tr_text(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -9508,6 +9545,8 @@ ret_t widget_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "widget_add_value", wrap_widget_add_value);
   Nan::Export(ctx, "widget_use_style", wrap_widget_use_style);
   Nan::Export(ctx, "widget_set_text_utf8", wrap_widget_set_text_utf8);
+  Nan::Export(ctx, "widget_set_child_text_utf8", wrap_widget_set_child_text_utf8);
+  Nan::Export(ctx, "widget_set_child_text_with_double", wrap_widget_set_child_text_with_double);
   Nan::Export(ctx, "widget_set_tr_text", wrap_widget_set_tr_text);
   Nan::Export(ctx, "widget_get_value", wrap_widget_get_value);
   Nan::Export(ctx, "widget_get_text", wrap_widget_get_text);
