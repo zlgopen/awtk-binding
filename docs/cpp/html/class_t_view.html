@@ -87,6 +87,10 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:af5290ba705dc103f10cb6f9da403fa2e"><td class="memItemLeft" align="right" valign="top"><a id="af5290ba705dc103f10cb6f9da403fa2e"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TView</b> (const view_t *nativeObj)</td></tr>
 <tr class="separator:af5290ba705dc103f10cb6f9da403fa2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb66461d15e4d277c9d8765797f9f796"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_view.html#abb66461d15e4d277c9d8765797f9f796">SetDefaultFocusedChild</a> (const char *default_focused_child)</td></tr>
+<tr class="separator:abb66461d15e4d277c9d8765797f9f796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af36b4f85e943c4bea4d1aeca4922bdf6"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_view.html#af36b4f85e943c4bea4d1aeca4922bdf6">GetDefaultFocusedChild</a> () const</td></tr>
+<tr class="separator:af36b4f85e943c4bea4d1aeca4922bdf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -180,6 +184,53 @@ static <a class="el" href="class_t_view.html">TView</a>&#160;</td><td class="mem
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>对象。 </dd></dl>
+
+</div>
+</div>
+<a id="af36b4f85e943c4bea4d1aeca4922bdf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af36b4f85e943c4bea4d1aeca4922bdf6">&#9670;&nbsp;</a></span>GetDefaultFocusedChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * TView::GetDefaultFocusedChild </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>缺省获得焦点的子控件(可用控件名或类型)。</p>
+<blockquote class="doxtable">
+<p>view作为pages/slideview的直接子控件才需要设置。 正常情况下，一个窗口只能指定一个初始焦点。 但是对于pages/slideview来说，可能希望每一个页面都有一个初始焦点，此时可用default_focused_child来指定。 </p>
+</blockquote>
+
+</div>
+</div>
+<a id="abb66461d15e4d277c9d8765797f9f796"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb66461d15e4d277c9d8765797f9f796">&#9670;&nbsp;</a></span>SetDefaultFocusedChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TView::SetDefaultFocusedChild </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>default_focused_child</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置缺省获得焦点的子控件(可用控件名或类型)。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">default_focused_child</td><td>缺省获得焦点的子控件(可用控件名或类型)。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>

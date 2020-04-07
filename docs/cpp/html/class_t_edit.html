@@ -118,6 +118,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a07719518ea4a28b57e7874d6556dbcbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdc5e1e76ac66aa2c8eafed2e230d6e7"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#abdc5e1e76ac66aa2c8eafed2e230d6e7">SetInputTips</a> (char *tips)</td></tr>
 <tr class="separator:abdc5e1e76ac66aa2c8eafed2e230d6e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44949062caf59c8c4d9479964b87ecc2"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#a44949062caf59c8c4d9479964b87ecc2">SetKeyboard</a> (char *keyboard)</td></tr>
+<tr class="separator:a44949062caf59c8c4d9479964b87ecc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af67611a4bfdd8cc10cc5b366b264147e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#af67611a4bfdd8cc10cc5b366b264147e">SetPasswordVisible</a> (bool password_visible)</td></tr>
 <tr class="separator:af67611a4bfdd8cc10cc5b366b264147e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5911767134a7130de49b877e9fc1964"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#af5911767134a7130de49b877e9fc1964">SetFocus</a> (bool focus)</td></tr>
@@ -144,6 +146,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a3f151a9892f0528031672183931d0fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21b711e8d494ca01cb5a3169f536b3ce"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#a21b711e8d494ca01cb5a3169f536b3ce">GetTips</a> () const</td></tr>
 <tr class="separator:a21b711e8d494ca01cb5a3169f536b3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9290a2fc8d16239266551958b4e0c4c0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#a9290a2fc8d16239266551958b4e0c4c0">GetKeyboard</a> () const</td></tr>
+<tr class="separator:a9290a2fc8d16239266551958b4e0c4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e81845aa7ea582699641556f4dfef9d"><td class="memItemLeft" align="right" valign="top">input_type_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#a7e81845aa7ea582699641556f4dfef9d">GetInputType</a> () const</td></tr>
 <tr class="separator:a7e81845aa7ea582699641556f4dfef9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaed7dd1cf6132e65e5f26959d8e77614"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#aaed7dd1cf6132e65e5f26959d8e77614">GetMin</a> () const</td></tr>
@@ -360,6 +364,24 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
 </div><div class="memdoc">
 <p>获取int类型的值。</p>
 <dl class="section return"><dt>返回</dt><dd>返回int的值。 </dd></dl>
+
+</div>
+</div>
+<a id="a9290a2fc8d16239266551958b4e0c4c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9290a2fc8d16239266551958b4e0c4c0">&#9670;&nbsp;</a></span>GetKeyboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * TEdit::GetKeyboard </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>自定义软键盘名称。 </p>
 
 </div>
 </div>
@@ -830,6 +852,32 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
     <tr><td class="paramname">min</td><td>最小值。 </td></tr>
     <tr><td class="paramname">max</td><td>最大值。 </td></tr>
     <tr><td class="paramname">step</td><td>步长。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a44949062caf59c8c4d9479964b87ecc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44949062caf59c8c4d9479964b87ecc2">&#9670;&nbsp;</a></span>SetKeyboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TEdit::SetKeyboard </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>keyboard</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置自定义软键盘名称。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keyboard</td><td>键盘名称(相应UI资源必须存在)。</td></tr>
   </table>
   </dd>
 </dl>

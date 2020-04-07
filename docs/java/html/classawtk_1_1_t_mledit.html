@@ -95,6 +95,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a4ea15571ceb52cfa22640c37a8ba716d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8aa8be69dc1dad1a41e9c118d5ac1142"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_mledit.html#a8aa8be69dc1dad1a41e9c118d5ac1142">setInputTips</a> (String tips)</td></tr>
 <tr class="separator:a8aa8be69dc1dad1a41e9c118d5ac1142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b85c56fca856872bf966daedb6966e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_mledit.html#a7b85c56fca856872bf966daedb6966e0">setKeyboard</a> (String keyboard)</td></tr>
+<tr class="separator:a7b85c56fca856872bf966daedb6966e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c60172ce3b4298b15deabe2ca5e1dc5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_mledit.html#a3c60172ce3b4298b15deabe2ca5e1dc5">setCursor</a> (int cursor)</td></tr>
 <tr class="separator:a3c60172ce3b4298b15deabe2ca5e1dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a258dfe4db9f13f8ed634a19fdee4c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_mledit.html#a2a258dfe4db9f13f8ed634a19fdee4c2">setScrollLine</a> (int scroll_line)</td></tr>
@@ -111,6 +113,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ac6dc3d1b1a9235cd9b75ba78645ddd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea3c36679c71463e875dc5291cb311fc"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_mledit.html#aea3c36679c71463e875dc5291cb311fc">getTips</a> ()</td></tr>
 <tr class="separator:aea3c36679c71463e875dc5291cb311fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d16834202f50704405588a3345d4da4"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_mledit.html#a4d16834202f50704405588a3345d4da4">getKeyboard</a> ()</td></tr>
+<tr class="separator:a4d16834202f50704405588a3345d4da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e2156ce33a751dd55f6818c42e7d755"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_mledit.html#a0e2156ce33a751dd55f6818c42e7d755">getWrapWord</a> ()</td></tr>
 <tr class="separator:a0e2156ce33a751dd55f6818c42e7d755"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab92660972ff26af31b416ead9d33159f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_mledit.html#ab92660972ff26af31b416ead9d33159f">getMaxLines</a> ()</td></tr>
@@ -335,6 +339,32 @@ Public 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>下边距。 </p>
+
+</div>
+</div>
+<a id="a4d16834202f50704405588a3345d4da4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d16834202f50704405588a3345d4da4">&#9670;&nbsp;</a></span>getKeyboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String awtk.TMledit.getKeyboard </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>自定义软键盘名称。 </p>
 
 </div>
 </div>
@@ -641,6 +671,40 @@ Public 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">tips</td><td>输入提示。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a7b85c56fca856872bf966daedb6966e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b85c56fca856872bf966daedb6966e0">&#9670;&nbsp;</a></span>setKeyboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TMledit.setKeyboard </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>keyboard</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置自定义软键盘名称。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keyboard</td><td>键盘名称(相应UI资源必须存在)。</td></tr>
   </table>
   </dd>
 </dl>

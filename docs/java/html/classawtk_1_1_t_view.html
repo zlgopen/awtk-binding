@@ -85,6 +85,10 @@ $(function() {
 Public 成员函数</h2></td></tr>
 <tr class="memitem:abcbe65a97e79e5937a399510b457043a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_view.html#abcbe65a97e79e5937a399510b457043a">TView</a> (long nativeObj)</td></tr>
 <tr class="separator:abcbe65a97e79e5937a399510b457043a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae172d35106fc503e32053ea328170628"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_view.html#ae172d35106fc503e32053ea328170628">setDefaultFocusedChild</a> (String default_focused_child)</td></tr>
+<tr class="separator:ae172d35106fc503e32053ea328170628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00833df3fa4656020ca27034014f3d3b"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_view.html#a00833df3fa4656020ca27034014f3d3b">getDefaultFocusedChild</a> ()</td></tr>
+<tr class="separator:a00833df3fa4656020ca27034014f3d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -273,6 +277,69 @@ Public 成员函数</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>对象。 </dd></dl>
+
+</div>
+</div>
+<a id="a00833df3fa4656020ca27034014f3d3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00833df3fa4656020ca27034014f3d3b">&#9670;&nbsp;</a></span>getDefaultFocusedChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String awtk.TView.getDefaultFocusedChild </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>缺省获得焦点的子控件(可用控件名或类型)。</p>
+<blockquote class="doxtable">
+<p>view作为pages/slideview的直接子控件才需要设置。 正常情况下，一个窗口只能指定一个初始焦点。 但是对于pages/slideview来说，可能希望每一个页面都有一个初始焦点，此时可用default_focused_child来指定。 </p>
+</blockquote>
+
+</div>
+</div>
+<a id="ae172d35106fc503e32053ea328170628"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae172d35106fc503e32053ea328170628">&#9670;&nbsp;</a></span>setDefaultFocusedChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TView.setDefaultFocusedChild </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>default_focused_child</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置缺省获得焦点的子控件(可用控件名或类型)。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">default_focused_child</td><td>缺省获得焦点的子控件(可用控件名或类型)。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>
