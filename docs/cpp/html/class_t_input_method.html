@@ -82,10 +82,22 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:aac15b07e3065cb798f75d25df6bc6461"><td class="memItemLeft" align="right" valign="top"><a id="aac15b07e3065cb798f75d25df6bc6461"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TInputMethod</b> (const input_method_t *nativeObj)</td></tr>
 <tr class="separator:aac15b07e3065cb798f75d25df6bc6461"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a568a702fb525dd02cd6a6ece1cc6632b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_input_method.html#a568a702fb525dd02cd6a6ece1cc6632b">CommitText</a> (char *text)</td></tr>
-<tr class="separator:a568a702fb525dd02cd6a6ece1cc6632b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfc3baefddac2f2c5ee69d5dafeb8714"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_input_method.html#adfc3baefddac2f2c5ee69d5dafeb8714">CommitText</a> (const char *text)</td></tr>
+<tr class="separator:adfc3baefddac2f2c5ee69d5dafeb8714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a498411665d7fdabb61a4bf70db32a379"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_input_method.html#a498411665d7fdabb61a4bf70db32a379">SetLang</a> (const char *lang)</td></tr>
+<tr class="separator:a498411665d7fdabb61a4bf70db32a379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad5dc45d2a1541e151b5bbb3b33f6ee6"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_input_method.html#aad5dc45d2a1541e151b5bbb3b33f6ee6">GetLang</a> ()</td></tr>
+<tr class="separator:aad5dc45d2a1541e151b5bbb3b33f6ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36159e392001b71358ee35b84ae60691"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_input_method.html#a36159e392001b71358ee35b84ae60691">DispatchKey</a> (uint32_t key)</td></tr>
 <tr class="separator:a36159e392001b71358ee35b84ae60691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb3b13a56c4a3a82c03e8af89b91ae8c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_input_method.html#aeb3b13a56c4a3a82c03e8af89b91ae8c">DispatchKeys</a> (const char *key)</td></tr>
+<tr class="separator:aeb3b13a56c4a3a82c03e8af89b91ae8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4064965bbb3574c9f95dced6d0e7a787"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_input_method.html#a4064965bbb3574c9f95dced6d0e7a787">DispatchPreedit</a> ()</td></tr>
+<tr class="separator:a4064965bbb3574c9f95dced6d0e7a787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f6514e00d37e9ccef96f4ce4182df2a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_input_method.html#a4f6514e00d37e9ccef96f4ce4182df2a">DispatchPreeditConfirm</a> ()</td></tr>
+<tr class="separator:a4f6514e00d37e9ccef96f4ce4182df2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77c1de1ddc3bcd95a3ff5b4ef88d981f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_input_method.html#a77c1de1ddc3bcd95a3ff5b4ef88d981f">DispatchPreeditAbort</a> ()</td></tr>
+<tr class="separator:a77c1de1ddc3bcd95a3ff5b4ef88d981f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -114,8 +126,8 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
 <p>输入类型请参考：input\_type </p>
 </blockquote>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a568a702fb525dd02cd6a6ece1cc6632b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a568a702fb525dd02cd6a6ece1cc6632b">&#9670;&nbsp;</a></span>CommitText()</h2>
+<a id="adfc3baefddac2f2c5ee69d5dafeb8714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfc3baefddac2f2c5ee69d5dafeb8714">&#9670;&nbsp;</a></span>CommitText()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -123,7 +135,7 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
         <tr>
           <td class="memname">ret_t TInputMethod::CommitText </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>text</em></td><td>)</td>
           <td></td>
         </tr>
@@ -166,6 +178,108 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
 
 </div>
 </div>
+<a id="aeb3b13a56c4a3a82c03e8af89b91ae8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb3b13a56c4a3a82c03e8af89b91ae8c">&#9670;&nbsp;</a></span>DispatchKeys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TInputMethod::DispatchKeys </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>提交按键。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键值。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a4064965bbb3574c9f95dced6d0e7a787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4064965bbb3574c9f95dced6d0e7a787">&#9670;&nbsp;</a></span>DispatchPreedit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TInputMethod::DispatchPreedit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>分发进入预编辑状态的事件。</p>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a77c1de1ddc3bcd95a3ff5b4ef88d981f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77c1de1ddc3bcd95a3ff5b4ef88d981f">&#9670;&nbsp;</a></span>DispatchPreeditAbort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TInputMethod::DispatchPreeditAbort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>分发取消预编辑状态的事件(提交预编辑内容，退出预编辑状态)。</p>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a4f6514e00d37e9ccef96f4ce4182df2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f6514e00d37e9ccef96f4ce4182df2a">&#9670;&nbsp;</a></span>DispatchPreeditConfirm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TInputMethod::DispatchPreeditConfirm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>分发确认预编辑状态的事件(提交预编辑内容，退出预编辑状态)。</p>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="aad5dc45d2a1541e151b5bbb3b33f6ee6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad5dc45d2a1541e151b5bbb3b33f6ee6">&#9670;&nbsp;</a></span>GetLang()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * TInputMethod::GetLang </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取语言。</p>
+<dl class="section return"><dt>返回</dt><dd>返回语言。 </dd></dl>
+
+</div>
+</div>
 <a id="ae652b2cad41da7d9f73b44c7bd99ec9a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae652b2cad41da7d9f73b44c7bd99ec9a">&#9670;&nbsp;</a></span>Instance()</h2>
 
@@ -190,6 +304,35 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
 </div><div class="memdoc">
 <p>获取全局输入法对象。</p>
 <dl class="section return"><dt>返回</dt><dd>成功返回输入法对象，失败返回NULL。 </dd></dl>
+
+</div>
+</div>
+<a id="a498411665d7fdabb61a4bf70db32a379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a498411665d7fdabb61a4bf70db32a379">&#9670;&nbsp;</a></span>SetLang()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TInputMethod::SetLang </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>lang</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置语言。</p>
+<blockquote class="doxtable">
+<p>有时在同一种语言环境下，也需要输入多种文字，典型的情况是同时输入中文和英文。 比如T9输入法，可以同时支持中文和英文输入，配合软键盘随时切换输入的语言。 数字、小写字母、大写字母和符合也可以视为输入的语言。 主要用于提示输入法引擎选择适当的输入方法。 </p>
+</blockquote>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lang</td><td>语言。格式为语言+国家/地区码。如：zh_cn和en_us等。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>
