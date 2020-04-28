@@ -231,27 +231,6 @@ declare function assets_manager() : any;
 declare function assets_manager_set_theme(am : any, theme : string) : TRet;
 declare function assets_manager_ref(am : any, type : TAssetType, name : string) : any;
 declare function assets_manager_unref(am : any, info : any) : TRet;
-declare function VALUE_TYPE_INVALID();
-declare function VALUE_TYPE_BOOL();
-declare function VALUE_TYPE_INT8();
-declare function VALUE_TYPE_UINT8();
-declare function VALUE_TYPE_INT16();
-declare function VALUE_TYPE_UINT16();
-declare function VALUE_TYPE_INT32();
-declare function VALUE_TYPE_UINT32();
-declare function VALUE_TYPE_INT64();
-declare function VALUE_TYPE_UINT64();
-declare function VALUE_TYPE_POINTER();
-declare function VALUE_TYPE_FLOAT();
-declare function VALUE_TYPE_FLOAT32();
-declare function VALUE_TYPE_DOUBLE();
-declare function VALUE_TYPE_STRING();
-declare function VALUE_TYPE_WSTRING();
-declare function VALUE_TYPE_OBJECT();
-declare function VALUE_TYPE_SIZED_STRING();
-declare function VALUE_TYPE_BINARY();
-declare function VALUE_TYPE_UBJSON();
-declare function VALUE_TYPE_TOKEN();
 declare function input_method_commit_text(im : any, text : string) : TRet;
 declare function input_method_set_lang(im : any, lang : string) : TRet;
 declare function input_method_get_lang(im : any) : string;
@@ -392,6 +371,27 @@ declare function TK_KEY_MENU();
 declare function TK_KEY_COMMAND();
 declare function TK_KEY_BACK();
 declare function TK_KEY_CANCEL();
+declare function VALUE_TYPE_INVALID();
+declare function VALUE_TYPE_BOOL();
+declare function VALUE_TYPE_INT8();
+declare function VALUE_TYPE_UINT8();
+declare function VALUE_TYPE_INT16();
+declare function VALUE_TYPE_UINT16();
+declare function VALUE_TYPE_INT32();
+declare function VALUE_TYPE_UINT32();
+declare function VALUE_TYPE_INT64();
+declare function VALUE_TYPE_UINT64();
+declare function VALUE_TYPE_POINTER();
+declare function VALUE_TYPE_FLOAT();
+declare function VALUE_TYPE_FLOAT32();
+declare function VALUE_TYPE_DOUBLE();
+declare function VALUE_TYPE_STRING();
+declare function VALUE_TYPE_WSTRING();
+declare function VALUE_TYPE_OBJECT();
+declare function VALUE_TYPE_SIZED_STRING();
+declare function VALUE_TYPE_BINARY();
+declare function VALUE_TYPE_UBJSON();
+declare function VALUE_TYPE_TOKEN();
 declare function locale_info() : any;
 declare function locale_info_tr(locale_info : any, text : string) : string;
 declare function locale_info_change(locale_info : any, language : string, country : string) : TRet;
@@ -1105,10 +1105,21 @@ declare function style_mutable_set_int(s : any, state : string, name : string, v
 declare function style_mutable_cast(s : any) : any;
 declare function style_mutable_create(widget : any, default_style : any) : any;
 declare function style_mutable_t_get_prop_name(nativeObj : any) : string;
-declare function view_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function view_set_default_focused_child(widget : any, default_focused_child : string) : TRet;
-declare function view_cast(widget : any) : any;
-declare function view_t_get_prop_default_focused_child(nativeObj : any) : string;
+declare function wheel_event_cast(event : any) : any;
+declare function wheel_event_t_get_prop_dy(nativeObj : any) : number;
+declare function wheel_event_t_get_prop_alt(nativeObj : any) : boolean;
+declare function wheel_event_t_get_prop_ctrl(nativeObj : any) : boolean;
+declare function wheel_event_t_get_prop_shift(nativeObj : any) : boolean;
+declare function prop_change_event_cast(event : any) : any;
+declare function prop_change_event_t_get_prop_name(nativeObj : any) : string;
+declare function prop_change_event_t_get_prop_value(nativeObj : any) : any;
+declare function progress_event_cast(event : any) : any;
+declare function progress_event_t_get_prop_percent(nativeObj : any) : number;
+declare function done_event_cast(event : any) : any;
+declare function done_event_t_get_prop_result(nativeObj : any) : TRet;
+declare function error_event_cast(event : any) : any;
+declare function error_event_t_get_prop_code(nativeObj : any) : number;
+declare function error_event_t_get_prop_message(nativeObj : any) : string;
 declare function time_clock_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function time_clock_cast(widget : any) : any;
 declare function time_clock_set_hour(widget : any, hour : number) : TRet;
@@ -1136,16 +1147,6 @@ declare function time_clock_t_get_prop_minute_anchor_x(nativeObj : any) : string
 declare function time_clock_t_get_prop_minute_anchor_y(nativeObj : any) : string;
 declare function time_clock_t_get_prop_second_anchor_x(nativeObj : any) : string;
 declare function time_clock_t_get_prop_second_anchor_y(nativeObj : any) : string;
-declare function prop_change_event_cast(event : any) : any;
-declare function prop_change_event_t_get_prop_name(nativeObj : any) : string;
-declare function prop_change_event_t_get_prop_value(nativeObj : any) : any;
-declare function progress_event_cast(event : any) : any;
-declare function progress_event_t_get_prop_percent(nativeObj : any) : number;
-declare function done_event_cast(event : any) : any;
-declare function done_event_t_get_prop_result(nativeObj : any) : TRet;
-declare function error_event_cast(event : any) : any;
-declare function error_event_t_get_prop_code(nativeObj : any) : number;
-declare function error_event_t_get_prop_message(nativeObj : any) : string;
 declare function text_selector_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function text_selector_cast(widget : any) : any;
 declare function text_selector_reset_options(widget : any) : TRet;
@@ -1523,11 +1524,6 @@ declare function pointer_event_t_get_prop_menu(nativeObj : any) : boolean;
 declare function pointer_event_t_get_prop_shift(nativeObj : any) : boolean;
 declare function orientation_event_cast(event : any) : any;
 declare function orientation_event_t_get_prop_orientation(nativeObj : any) : number;
-declare function wheel_event_cast(event : any) : any;
-declare function wheel_event_t_get_prop_dy(nativeObj : any) : number;
-declare function wheel_event_t_get_prop_alt(nativeObj : any) : boolean;
-declare function wheel_event_t_get_prop_ctrl(nativeObj : any) : boolean;
-declare function wheel_event_t_get_prop_shift(nativeObj : any) : boolean;
 declare function app_bar_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function app_bar_cast(widget : any) : any;
 declare function button_group_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -1673,6 +1669,13 @@ declare function tab_button_t_get_prop_active_icon(nativeObj : any) : string;
 declare function tab_button_t_get_prop_icon(nativeObj : any) : string;
 declare function tab_control_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function tab_control_cast(widget : any) : any;
+declare function view_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function view_set_default_focused_child(widget : any, default_focused_child : string) : TRet;
+declare function view_cast(widget : any) : any;
+declare function view_t_get_prop_default_focused_child(nativeObj : any) : string;
+declare function idle_info_cast(idle : any) : any;
+declare function idle_info_t_get_prop_ctx(nativeObj : any) : any;
+declare function idle_info_t_get_prop_id(nativeObj : any) : number;
 declare function native_window_move(win : any, x : number, y : number, force : boolean) : TRet;
 declare function native_window_resize(win : any, w : number, h : number, force : boolean) : TRet;
 declare function native_window_minimize(win : any) : TRet;
@@ -1681,22 +1684,36 @@ declare function native_window_restore(win : any) : TRet;
 declare function native_window_center(win : any) : TRet;
 declare function native_window_show_border(win : any, show : boolean) : TRet;
 declare function native_window_set_fullscreen(win : any, fullscreen : boolean) : TRet;
-declare function idle_info_cast(idle : any) : any;
-declare function idle_info_t_get_prop_ctx(nativeObj : any) : any;
-declare function idle_info_t_get_prop_id(nativeObj : any) : number;
-declare function keyboard_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function keyboard_cast(widget : any) : any;
+declare function dialog_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function dialog_create_simple(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function dialog_cast(widget : any) : any;
+declare function dialog_get_title(widget : any) : any;
+declare function dialog_get_client(widget : any) : any;
+declare function dialog_open(name : string) : any;
+declare function dialog_set_title(widget : any, title : string) : TRet;
+declare function dialog_modal(widget : any) : TDialogQuitCode;
+declare function dialog_quit(widget : any, code : number) : TRet;
+declare function dialog_is_quited(widget : any) : boolean;
+declare function dialog_is_modal(widget : any) : boolean;
+declare function dialog_toast(text : string, duration : number) : TRet;
+declare function dialog_info(title : string, text : string) : TRet;
+declare function dialog_warn(title : string, text : string) : TRet;
+declare function dialog_confirm(title : string, text : string) : TRet;
+declare function dialog_t_get_prop_highlight(nativeObj : any) : string;
 declare function timer_info_cast(timer : any) : any;
 declare function timer_info_t_get_prop_ctx(nativeObj : any) : any;
 declare function timer_info_t_get_prop_id(nativeObj : any) : number;
 declare function timer_info_t_get_prop_now(nativeObj : any) : number;
+declare function keyboard_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function keyboard_cast(widget : any) : any;
 declare function image_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function image_set_draw_type(widget : any, draw_type : TImageDrawType) : TRet;
 declare function image_cast(widget : any) : any;
 declare function image_t_get_prop_draw_type(nativeObj : any) : TImageDrawType;
-declare function svg_image_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function svg_image_set_image(widget : any, name : string) : TRet;
-declare function svg_image_cast(widget : any) : any;
+declare function object_array_create() : any;
+declare function object_array_unref(obj : any) : TRet;
+declare function object_array_clear_props(obj : any) : TRet;
+declare function object_array_t_get_prop_props_size(nativeObj : any) : number;
 declare function overlay_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function overlay_cast(widget : any) : any;
 declare function calibration_win_cast(widget : any) : any;
@@ -1706,10 +1723,10 @@ declare function popup_set_close_when_click(widget : any, close_when_click : boo
 declare function popup_set_close_when_click_outside(widget : any, close_when_click_outside : boolean) : TRet;
 declare function popup_t_get_prop_close_when_click(nativeObj : any) : boolean;
 declare function popup_t_get_prop_close_when_click_outside(nativeObj : any) : boolean;
-declare function object_array_create() : any;
-declare function object_array_unref(obj : any) : TRet;
-declare function object_array_clear_props(obj : any) : TRet;
-declare function object_array_t_get_prop_props_size(nativeObj : any) : number;
+declare function object_default_create() : any;
+declare function object_default_unref(obj : any) : TRet;
+declare function object_default_clear_props(obj : any) : TRet;
+declare function object_default_t_get_prop_props_size(nativeObj : any) : number;
 declare function window_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function window_create_default() : any;
 declare function window_set_fullscreen(widget : any, fullscreen : boolean) : TRet;
@@ -1719,10 +1736,9 @@ declare function window_close(widget : any) : TRet;
 declare function window_close_force(widget : any) : TRet;
 declare function window_cast(widget : any) : any;
 declare function window_t_get_prop_fullscreen(nativeObj : any) : boolean;
-declare function object_default_create() : any;
-declare function object_default_unref(obj : any) : TRet;
-declare function object_default_clear_props(obj : any) : TRet;
-declare function object_default_t_get_prop_props_size(nativeObj : any) : number;
+declare function svg_image_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function svg_image_set_image(widget : any, name : string) : TRet;
+declare function svg_image_cast(widget : any) : any;
 declare function spin_box_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function spin_box_cast(widget : any) : any;
 declare function system_bar_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -1748,22 +1764,6 @@ declare function combo_box_t_get_prop_options(nativeObj : any) : string;
 declare function combo_box_t_get_prop_item_height(nativeObj : any) : number;
 declare function gif_image_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function gif_image_cast(widget : any) : any;
-declare function dialog_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function dialog_create_simple(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function dialog_cast(widget : any) : any;
-declare function dialog_get_title(widget : any) : any;
-declare function dialog_get_client(widget : any) : any;
-declare function dialog_open(name : string) : any;
-declare function dialog_set_title(widget : any, title : string) : TRet;
-declare function dialog_modal(widget : any) : TDialogQuitCode;
-declare function dialog_quit(widget : any, code : number) : TRet;
-declare function dialog_is_quited(widget : any) : boolean;
-declare function dialog_is_modal(widget : any) : boolean;
-declare function dialog_toast(text : string, duration : number) : TRet;
-declare function dialog_info(title : string, text : string) : TRet;
-declare function dialog_warn(title : string, text : string) : TRet;
-declare function dialog_confirm(title : string, text : string) : TRet;
-declare function dialog_t_get_prop_highlight(nativeObj : any) : string;
 declare function combo_box_ex_create(parent : any, x : number, y : number, w : number, h : number) : any;
 
 /**
@@ -4052,140 +4052,6 @@ export class TAssetsManager {
 
 };
 /**
- * 类型常量定义。
- *
- */
-export enum TValueType {
-
-  /**
-   * 无效类型。
-   *
-   */
- INVALID = VALUE_TYPE_INVALID(),
-
-  /**
-   * BOOL类型。
-   *
-   */
- BOOL = VALUE_TYPE_BOOL(),
-
-  /**
-   * int8_t类型。
-   *
-   */
- INT8 = VALUE_TYPE_INT8(),
-
-  /**
-   * uint8_t类型。
-   *
-   */
- UINT8 = VALUE_TYPE_UINT8(),
-
-  /**
-   * int16_t类型。
-   *
-   */
- INT16 = VALUE_TYPE_INT16(),
-
-  /**
-   * uint16_t类型。
-   *
-   */
- UINT16 = VALUE_TYPE_UINT16(),
-
-  /**
-   * int32_t类型。
-   *
-   */
- INT32 = VALUE_TYPE_INT32(),
-
-  /**
-   * uint32_t类型。
-   *
-   */
- UINT32 = VALUE_TYPE_UINT32(),
-
-  /**
-   * int64_t类型。
-   *
-   */
- INT64 = VALUE_TYPE_INT64(),
-
-  /**
-   * uint64_t类型。
-   *
-   */
- UINT64 = VALUE_TYPE_UINT64(),
-
-  /**
-   * void*类型。
-   *
-   */
- POINTER = VALUE_TYPE_POINTER(),
-
-  /**
-   * float_t类型。
-   *
-   */
- FLOAT = VALUE_TYPE_FLOAT(),
-
-  /**
-   * float类型。
-   *
-   */
- FLOAT32 = VALUE_TYPE_FLOAT32(),
-
-  /**
-   * double类型。
-   *
-   */
- DOUBLE = VALUE_TYPE_DOUBLE(),
-
-  /**
-   * char*类型。
-   *
-   */
- STRING = VALUE_TYPE_STRING(),
-
-  /**
-   * wchar_t*类型。
-   *
-   */
- WSTRING = VALUE_TYPE_WSTRING(),
-
-  /**
-   * object_t*类型。
-   *
-   */
- OBJECT = VALUE_TYPE_OBJECT(),
-
-  /**
-   * 带长度的字符串。
-   *
-   */
- SIZED_STRING = VALUE_TYPE_SIZED_STRING(),
-
-  /**
-   * 二进制数据。
-   *
-   */
- BINARY = VALUE_TYPE_BINARY(),
-
-  /**
-   * 二进制数据(UBJSON)。
-   *
-   */
- UBJSON = VALUE_TYPE_UBJSON(),
-
-  /**
-   * 特殊用途。
-   *
-   */
- TOKEN = VALUE_TYPE_TOKEN(),
-};
-
-
-/**
  * 输入法接口。
  *
  *常见的实现方式有以下几种：
@@ -5107,6 +4973,140 @@ export enum TKeyCode {
    *
    */
  KEY_CANCEL = TK_KEY_CANCEL(),
+};
+
+
+/**
+ * 类型常量定义。
+ *
+ */
+export enum TValueType {
+
+  /**
+   * 无效类型。
+   *
+   */
+ INVALID = VALUE_TYPE_INVALID(),
+
+  /**
+   * BOOL类型。
+   *
+   */
+ BOOL = VALUE_TYPE_BOOL(),
+
+  /**
+   * int8_t类型。
+   *
+   */
+ INT8 = VALUE_TYPE_INT8(),
+
+  /**
+   * uint8_t类型。
+   *
+   */
+ UINT8 = VALUE_TYPE_UINT8(),
+
+  /**
+   * int16_t类型。
+   *
+   */
+ INT16 = VALUE_TYPE_INT16(),
+
+  /**
+   * uint16_t类型。
+   *
+   */
+ UINT16 = VALUE_TYPE_UINT16(),
+
+  /**
+   * int32_t类型。
+   *
+   */
+ INT32 = VALUE_TYPE_INT32(),
+
+  /**
+   * uint32_t类型。
+   *
+   */
+ UINT32 = VALUE_TYPE_UINT32(),
+
+  /**
+   * int64_t类型。
+   *
+   */
+ INT64 = VALUE_TYPE_INT64(),
+
+  /**
+   * uint64_t类型。
+   *
+   */
+ UINT64 = VALUE_TYPE_UINT64(),
+
+  /**
+   * void*类型。
+   *
+   */
+ POINTER = VALUE_TYPE_POINTER(),
+
+  /**
+   * float_t类型。
+   *
+   */
+ FLOAT = VALUE_TYPE_FLOAT(),
+
+  /**
+   * float类型。
+   *
+   */
+ FLOAT32 = VALUE_TYPE_FLOAT32(),
+
+  /**
+   * double类型。
+   *
+   */
+ DOUBLE = VALUE_TYPE_DOUBLE(),
+
+  /**
+   * char*类型。
+   *
+   */
+ STRING = VALUE_TYPE_STRING(),
+
+  /**
+   * wchar_t*类型。
+   *
+   */
+ WSTRING = VALUE_TYPE_WSTRING(),
+
+  /**
+   * object_t*类型。
+   *
+   */
+ OBJECT = VALUE_TYPE_OBJECT(),
+
+  /**
+   * 带长度的字符串。
+   *
+   */
+ SIZED_STRING = VALUE_TYPE_SIZED_STRING(),
+
+  /**
+   * 二进制数据。
+   *
+   */
+ BINARY = VALUE_TYPE_BINARY(),
+
+  /**
+   * 二进制数据(UBJSON)。
+   *
+   */
+ UBJSON = VALUE_TYPE_UBJSON(),
+
+  /**
+   * 特殊用途。
+   *
+   */
+ TOKEN = VALUE_TYPE_TOKEN(),
 };
 
 
@@ -11310,31 +11310,10 @@ export class TStyleMutable extends TStyle {
 
 };
 /**
- * 一个通用的容器控件。
- *
- *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
- *子控件的布局可用layout\_children属性指定。
- *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
- *
- *view\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于view\_t控件。
- *
- *在xml中使用"view"标签创建view。如：
- *
- *```xml
- *<view x="0" y="0" w="100%" h="100%" children_layout="default(c=2,r=2,m=5,s=5)">
- *</view>
- *```
- *
- *可用通过style来设置控件的显示风格，如背景颜色等。如：
- *
- *```xml
- *<style name="default" border_color="#a0a0a0">
- *<normal     bg_color="#f0f0f0" />
- *</style>
- *```
+ * 滚轮事件。
  *
  */
-export class TView extends TWidget { 
+export class TWheelEvent extends TEvent { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -11342,59 +11321,196 @@ export class TView extends TWidget {
 
 
   /**
-   * 创建view对象
+   * 把event对象转wheel_event_t对象，主要给脚本语言使用。
    * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
+   * @param event event对象。
    *
-   * @returns 对象。
+   * @returns event对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TView  {
-    return new TView(view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ static cast(event : TEvent) : TWheelEvent  {
+    return new TWheelEvent(wheel_event_cast(event != null ? (event.nativeObj || event) : null));
  }
 
 
   /**
-   * 设置缺省获得焦点的子控件(可用控件名或类型)。
-   * 
-   * @param default_focused_child 缺省获得焦点的子控件(可用控件名或类型)。
+   * 滚轮的y值。
    *
-   * @returns 返回RET_OK表示成功，否则表示失败。
    */
- setDefaultFocusedChild(default_focused_child : string) : TRet  {
-    return view_set_default_focused_child(this != null ? (this.nativeObj || this) : null, default_focused_child);
+ get dy() : number {
+   return wheel_event_t_get_prop_dy(this.nativeObj);
  }
 
 
   /**
-   * 转换为view对象(供脚本语言使用)。
-   * 
-   * @param widget view对象。
+   * alt键是否按下。
    *
-   * @returns view对象。
    */
- static cast(widget : TWidget) : TView  {
-    return new TView(view_cast(widget != null ? (widget.nativeObj || widget) : null));
+ get alt() : boolean {
+   return wheel_event_t_get_prop_alt(this.nativeObj);
  }
 
 
   /**
-   * 缺省获得焦点的子控件(可用控件名或类型)。
-   *
-   *> view作为pages/slideview的直接子控件才需要设置。
-   *> 正常情况下，一个窗口只能指定一个初始焦点。
-   *> 但是对于pages/slideview来说，可能希望每一个页面都有一个初始焦点，此时可用default\_focused\_child来指定。
+   * ctrl键是否按下。
    *
    */
- get defaultFocusedChild() : string {
-   return view_t_get_prop_default_focused_child(this.nativeObj);
+ get ctrl() : boolean {
+   return wheel_event_t_get_prop_ctrl(this.nativeObj);
  }
 
- set defaultFocusedChild(v : string) {
-   this.setDefaultFocusedChild(v);
+
+  /**
+   * shift键是否按下。
+   *
+   */
+ get shift() : boolean {
+   return wheel_event_t_get_prop_shift(this.nativeObj);
+ }
+
+};
+/**
+ * 对象属性变化事件。
+ *
+ */
+export class TPropChangeEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转prop_change_event_t对象，主要给脚本语言使用。
+   * 
+   * @param event event对象。
+   *
+   * @returns 返回event对象。
+   */
+ static cast(event : TEvent) : TPropChangeEvent  {
+    return new TPropChangeEvent(prop_change_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+
+  /**
+   * 属性的名称。
+   *
+   */
+ get name() : string {
+   return prop_change_event_t_get_prop_name(this.nativeObj);
+ }
+
+
+  /**
+   * 属性的值。
+   *
+   */
+ get value() : TValue {
+   return new TValue(prop_change_event_t_get_prop_value(this.nativeObj));
+ }
+
+};
+/**
+ * 进度变化事件。
+ *
+ */
+export class TProgressEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转progress_event_t对象，主要给脚本语言使用。
+   * 
+   * @param event event对象。
+   *
+   * @returns 返回event对象。
+   */
+ static cast(event : TEvent) : TProgressEvent  {
+    return new TProgressEvent(progress_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+
+  /**
+   * 进度百分比。
+   *
+   */
+ get percent() : number {
+   return progress_event_t_get_prop_percent(this.nativeObj);
+ }
+
+};
+/**
+ * 执行完成事件。
+ *
+ */
+export class TDoneEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转done_event_t对象，主要给脚本语言使用。
+   * 
+   * @param event event对象。
+   *
+   * @returns 返回event对象。
+   */
+ static cast(event : TEvent) : TDoneEvent  {
+    return new TDoneEvent(done_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+
+  /**
+   * 执行结果。
+   *
+   */
+ get result() : TRet {
+   return done_event_t_get_prop_result(this.nativeObj);
+ }
+
+};
+/**
+ * 执行完成事件。
+ *
+ */
+export class TErrorEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转error_event_t对象，主要给脚本语言使用。
+   * 
+   * @param event event对象。
+   *
+   * @returns 返回event对象。
+   */
+ static cast(event : TEvent) : TErrorEvent  {
+    return new TErrorEvent(error_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+
+  /**
+   * 错误码。
+   *
+   */
+ get code() : number {
+   return error_event_t_get_prop_code(this.nativeObj);
+ }
+
+
+  /**
+   * 错误信息。
+   *
+   */
+ get message() : string {
+   return error_event_t_get_prop_message(this.nativeObj);
  }
 
 };
@@ -11750,152 +11866,6 @@ export class TTimeClock extends TWidget {
    */
  get secondAnchorY() : string {
    return time_clock_t_get_prop_second_anchor_y(this.nativeObj);
- }
-
-};
-/**
- * 对象属性变化事件。
- *
- */
-export class TPropChangeEvent extends TEvent { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 把event对象转prop_change_event_t对象，主要给脚本语言使用。
-   * 
-   * @param event event对象。
-   *
-   * @returns 返回event对象。
-   */
- static cast(event : TEvent) : TPropChangeEvent  {
-    return new TPropChangeEvent(prop_change_event_cast(event != null ? (event.nativeObj || event) : null));
- }
-
-
-  /**
-   * 属性的名称。
-   *
-   */
- get name() : string {
-   return prop_change_event_t_get_prop_name(this.nativeObj);
- }
-
-
-  /**
-   * 属性的值。
-   *
-   */
- get value() : TValue {
-   return new TValue(prop_change_event_t_get_prop_value(this.nativeObj));
- }
-
-};
-/**
- * 进度变化事件。
- *
- */
-export class TProgressEvent extends TEvent { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 把event对象转progress_event_t对象，主要给脚本语言使用。
-   * 
-   * @param event event对象。
-   *
-   * @returns 返回event对象。
-   */
- static cast(event : TEvent) : TProgressEvent  {
-    return new TProgressEvent(progress_event_cast(event != null ? (event.nativeObj || event) : null));
- }
-
-
-  /**
-   * 进度百分比。
-   *
-   */
- get percent() : number {
-   return progress_event_t_get_prop_percent(this.nativeObj);
- }
-
-};
-/**
- * 执行完成事件。
- *
- */
-export class TDoneEvent extends TEvent { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 把event对象转done_event_t对象，主要给脚本语言使用。
-   * 
-   * @param event event对象。
-   *
-   * @returns 返回event对象。
-   */
- static cast(event : TEvent) : TDoneEvent  {
-    return new TDoneEvent(done_event_cast(event != null ? (event.nativeObj || event) : null));
- }
-
-
-  /**
-   * 执行结果。
-   *
-   */
- get result() : TRet {
-   return done_event_t_get_prop_result(this.nativeObj);
- }
-
-};
-/**
- * 执行完成事件。
- *
- */
-export class TErrorEvent extends TEvent { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 把event对象转error_event_t对象，主要给脚本语言使用。
-   * 
-   * @param event event对象。
-   *
-   * @returns 返回event对象。
-   */
- static cast(event : TEvent) : TErrorEvent  {
-    return new TErrorEvent(error_event_cast(event != null ? (event.nativeObj || event) : null));
- }
-
-
-  /**
-   * 错误码。
-   *
-   */
- get code() : number {
-   return error_event_t_get_prop_code(this.nativeObj);
- }
-
-
-  /**
-   * 错误信息。
-   *
-   */
- get message() : string {
-   return error_event_t_get_prop_message(this.nativeObj);
  }
 
 };
@@ -17688,65 +17658,6 @@ export class TOrientationEvent extends TEvent {
 
 };
 /**
- * 滚轮事件。
- *
- */
-export class TWheelEvent extends TEvent { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 把event对象转wheel_event_t对象，主要给脚本语言使用。
-   * 
-   * @param event event对象。
-   *
-   * @returns event对象。
-   */
- static cast(event : TEvent) : TWheelEvent  {
-    return new TWheelEvent(wheel_event_cast(event != null ? (event.nativeObj || event) : null));
- }
-
-
-  /**
-   * 滚轮的y值。
-   *
-   */
- get dy() : number {
-   return wheel_event_t_get_prop_dy(this.nativeObj);
- }
-
-
-  /**
-   * alt键是否按下。
-   *
-   */
- get alt() : boolean {
-   return wheel_event_t_get_prop_alt(this.nativeObj);
- }
-
-
-  /**
-   * ctrl键是否按下。
-   *
-   */
- get ctrl() : boolean {
-   return wheel_event_t_get_prop_ctrl(this.nativeObj);
- }
-
-
-  /**
-   * shift键是否按下。
-   *
-   */
- get shift() : boolean {
-   return wheel_event_t_get_prop_shift(this.nativeObj);
- }
-
-};
-/**
  * app_bar控件。
  *
  *一个简单的容器控件，一般在窗口的顶部，用于显示本窗口的状态和信息。
@@ -20551,42 +20462,134 @@ export class TTabControl extends TWidget {
 
 };
 /**
- * mutable图片控件。
+ * 一个通用的容器控件。
  *
- *像摄像头和视频的图像是变化的，每一帧都不同，我们把这类图片称为mutable image。
+ *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
+ *子控件的布局可用layout\_children属性指定。
+ *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
  *
- *本控件辅助实现摄像头和视频的显示功能。
+ *view\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于view\_t控件。
  *
- *mutable\_image\_t是[image\_base\_t](image_base_t.md)的子类控件，image\_base\_t的函数均适用于mutable\_image\_t控件。
- *
- *在xml中使用"mutable\_image"标签创建mutable图片控件。如：
+ *在xml中使用"view"标签创建view。如：
  *
  *```xml
- *<mutable_image w="100%" h="100%"/>
+ *<view x="0" y="0" w="100%" h="100%" children_layout="default(c=2,r=2,m=5,s=5)">
+ *</view>
  *```
  *
- *>更多用法请参考：
- *[mutable
- *image](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/mutable_image.xml)
+ *可用通过style来设置控件的显示风格，如背景颜色等。如：
  *
- *在c代码中使用函数mutable\_image\_create创建mutable图片控件。如：
- *
- *
- *> 创建之后:
- *>
- *> 需要用mutable\_image\_set\_create\_image设置创建图片的回调函数。
- *> 需要用mutable\_image\_set\_prepare\_image设置准备图片的回调函数。
- *
- *> 完整示例请参考：[mutable image demo](
- *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/mutable_image.c)
- *
- *一般不需通过style来设置控件的显示风格，如果在特殊情况下需要，可以参考其它控件。
+ *```xml
+ *<style name="default" border_color="#a0a0a0">
+ *<normal     bg_color="#f0f0f0" />
+ *</style>
+ *```
  *
  */
-export class TMutableImage extends TImageBase { 
+export class TView extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
+ }
+
+
+  /**
+   * 创建view对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TView  {
+    return new TView(view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 设置缺省获得焦点的子控件(可用控件名或类型)。
+   * 
+   * @param default_focused_child 缺省获得焦点的子控件(可用控件名或类型)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setDefaultFocusedChild(default_focused_child : string) : TRet  {
+    return view_set_default_focused_child(this != null ? (this.nativeObj || this) : null, default_focused_child);
+ }
+
+
+  /**
+   * 转换为view对象(供脚本语言使用)。
+   * 
+   * @param widget view对象。
+   *
+   * @returns view对象。
+   */
+ static cast(widget : TWidget) : TView  {
+    return new TView(view_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 缺省获得焦点的子控件(可用控件名或类型)。
+   *
+   *> view作为pages/slideview的直接子控件才需要设置。
+   *> 正常情况下，一个窗口只能指定一个初始焦点。
+   *> 但是对于pages/slideview来说，可能希望每一个页面都有一个初始焦点，此时可用default\_focused\_child来指定。
+   *
+   */
+ get defaultFocusedChild() : string {
+   return view_t_get_prop_default_focused_child(this.nativeObj);
+ }
+
+ set defaultFocusedChild(v : string) {
+   this.setDefaultFocusedChild(v);
+ }
+
+};
+/**
+ * 单个idle的信息。
+ *
+ */
+export class TIdleInfo extends TObject { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 转换为idle_info对象(供脚本语言使用)。
+   * 
+   * @param idle idle_info对象。
+   *
+   * @returns idle_info对象。
+   */
+ static cast(idle : TIdleInfo) : TIdleInfo  {
+    return new TIdleInfo(idle_info_cast(idle != null ? (idle.nativeObj || idle) : null));
+ }
+
+
+  /**
+   * idle回调函数上下文。
+   *
+   */
+ get ctx() : any {
+   return idle_info_t_get_prop_ctx(this.nativeObj);
+ }
+
+
+  /**
+   * idle的ID
+   *
+   *> 为TK\_INVALID\_ID时表示无效idle。
+   *
+   */
+ get id() : number {
+   return idle_info_t_get_prop_id(this.nativeObj);
  }
 
 };
@@ -20698,10 +20701,77 @@ export class TNativeWindow extends TObject {
 
 };
 /**
- * 单个idle的信息。
+ * 对话框。 对话框是一种特殊的窗口，大小和位置可以自由设置。
+ *
+ *AWTK中的对话框可以是模态的，也可以是非模态的。
+ *
+ *如果dialog有透明或半透效果则不支持窗口动画。
+ *
+ *> 由于浏览器中无法实现主循环嵌套，因此无法实现模态对话框。
+ *如果希望自己写的AWTK应用程序可以在浏览器(包括各种小程序)中运行或演示，
+ *请避免使用模态对话框。
+ *
+ *对话框通常由对话框标题和对话框客户区两部分组成：
+ *
+ *
+ *
+ *dialog\_t是[window\_base\_t](window_base_t.md)的子类控件，window\_base\_t的函数均适用于dialog\_t控件。
+ *
+ *在xml中使用"dialog"标签创建对话框。如：
+ *
+ *```xml
+ *<dialog anim_hint="center_scale(duration=300)" x="c" y="m" w="80%" h="160" text="Dialog">
+ *<dialog_title x="0" y="0" w="100%" h="30" text="Hello AWTK" />
+ *<dialog_client x="0" y="bottom" w="100%" h="-30">
+ *<label name="" x="center" y="middle:-20" w="200" h="30" text="Are you ready?"/>
+ *<button name="quit" x="10" y="bottom:10" w="40%" h="30" text="确定"/>
+ *<button name="quit" x="right:10" y="bottom:10" w="40%" h="30" text="取消"/>
+ *</dialog_client>
+ *</dialog>
+ *```
+ *
+ *如果你不需要对话框的标题，可以这样写：
+ *
+ *```xml
+ *<dialog anim_hint="center_scale(duration=300)" x="c" y="m" w="80%" h="160" text="Dialog">
+ *<label name="" x="center" y="middle:-20" w="200" h="30" text="Are you ready?"/>
+ *<button name="quit" x="10" y="bottom:10" w="40%" h="30" text="确定"/>
+ *<button name="quit" x="right:10" y="bottom:10" w="40%" h="30" text="取消"/>
+ *</dialog>
+ *```
+ *
+ *打开非模态对话框时，其用法与普通窗口一样。打开非模态对话框时，还需要调用dialog\_modal。
+ *
+ *
+ *关闭模态对话框用dialog\_quit
+ *
+ *
+ *关闭非模态对话框用window\_close。
+ *
+ *
+ *> 更多用法请参考：
+ *[dialog.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
+ *
+ *> 完整C代码示例请参考：
+ *
+ ** [非模态对话框](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/dialog.c)
+ *
+ ** [模态对话框](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/dialog_modal.c)
+ *
+ *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
+ *
+ *```xml
+ *<style name="default">
+ *<normal border_color="#606060" />
+ *</style>
+ *```
+ *
+ *> 更多用法请参考：
+ *[theme default]
+ *(https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L324)
  *
  */
-export class TIdleInfo extends TObject { 
+export class TDialog extends TWindowBase { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -20709,34 +20779,266 @@ export class TIdleInfo extends TObject {
 
 
   /**
-   * 转换为idle_info对象(供脚本语言使用)。
+   * 创建dialog对象。
    * 
-   * @param idle idle_info对象。
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
    *
-   * @returns idle_info对象。
+   * @returns dialog对象。
    */
- static cast(idle : TIdleInfo) : TIdleInfo  {
-    return new TIdleInfo(idle_info_cast(idle != null ? (idle.nativeObj || idle) : null));
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TDialog  {
+    return new TDialog(dialog_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
 
   /**
-   * idle回调函数上下文。
+   * 创建dialog对象，同时创建title/client。
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns dialog对象。
+   */
+ static createSimple(parent : TWidget, x : number, y : number, w : number, h : number) : TDialog  {
+    return new TDialog(dialog_create_simple(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换dialog对象(供脚本语言使用)。
+   * 
+   * @param widget dialog对象。
+   *
+   * @returns dialog对象。
+   */
+ static cast(widget : TWidget) : TDialog  {
+    return new TDialog(dialog_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 获取title控件。
+   * 
+   *
+   * @returns title对象。
+   */
+ getTitle() : TWidget  {
+    return new TWidget(dialog_get_title(this != null ? (this.nativeObj || this) : null));
+ }
+
+
+  /**
+   * 获取client控件。
+   * 
+   *
+   * @returns client对象。
+   */
+ getClient() : TWidget  {
+    return new TWidget(dialog_get_client(this != null ? (this.nativeObj || this) : null));
+ }
+
+
+  /**
+   * 从资源文件中加载并创建Dialog对象。
+   *
+   *本函数在ui\_loader/ui\_builder_default里实现。
+   * 
+   * @param name dialog的名称。
+   *
+   * @returns 对象。
+   */
+ static open(name : string) : TDialog  {
+    return new TDialog(dialog_open(name));
+ }
+
+
+  /**
+   * 设置对话框的标题文本。
+   * 
+   * @param title 标题。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setTitle(title : string) : TRet  {
+    return dialog_set_title(this != null ? (this.nativeObj || this) : null, title);
+ }
+
+
+  /**
+   * 模态显示对话框。
+   *dialog_modal返回后，dialog对象将在下一个idle函数中回收。
+   *也就是在dialog_modal调用完成后仍然可以访问dialog中控件，直到本次事件结束。
+   * 
+   *
+   * @returns 返回退出吗。
+   */
+ modal() : TDialogQuitCode  {
+    return dialog_modal(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 退出模态显示，关闭对话框。
+   *
+   *> 比如，在对话框中关闭按钮的事件处理函数中，调用本函数关闭对话框。
+   * 
+   * @param code 退出码，作为dialog_modal的返回值(参考：[dialog_quit_code_t](dialog_quit_code_t.md))。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ quit(code : number) : TRet  {
+    return dialog_quit(this != null ? (this.nativeObj || this) : null, code);
+ }
+
+
+  /**
+   * 检查对话框是否已经退出模态。
+   * 
+   *
+   * @returns 返回TRUE表示已经退出，否则表示没有。
+   */
+ isQuited() : boolean  {
+    return dialog_is_quited(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 检查对话框是否为模态对话框。
+   * 
+   *
+   * @returns 返回TRUE表示是模态对话框，否则表示不是。
+   */
+ isModal() : boolean  {
+    return dialog_is_modal(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 显示『短暂提示信息』对话框。
+   *
+   *主题由dialog_toast.xml文件决定。
+   * 
+   * @param text 文本内容。
+   * @param duration 显示时间(单位为毫秒)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ static toast(text : string, duration : number) : TRet  {
+    return dialog_toast(text, duration);
+ }
+
+
+  /**
+   * 显示『提示信息』对话框。
+   *
+   *主题由dialog_info.xml文件决定。
+   * 
+   * @param title 标题。
+   * @param text 文本内容。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ static info(title : string, text : string) : TRet  {
+    return dialog_info(title, text);
+ }
+
+
+  /**
+   * 显示『警告』对话框。
+   *
+   *主题由dialog_warn.xml文件决定。
+   * 
+   * @param title 标题。
+   * @param text 文本内容。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ static warn(title : string, text : string) : TRet  {
+    return dialog_warn(title, text);
+ }
+
+
+  /**
+   * 显示『确认』对话框。
+   *
+   *主题由dialog_confirm.xml文件决定。
+   * 
+   * @param title 标题。
+   * @param text 文本内容。
+   *
+   * @returns 返回RET_OK表示确认，否则表示取消。
+   */
+ static confirm(title : string, text : string) : TRet  {
+    return dialog_confirm(title, text);
+ }
+
+
+  /**
+   * 对话框高亮策略。
+   *
+   *> 请参考 [对话框高亮策略](https://github.com/zlgopen/awtk/blob/master/docs/dialog_highlight.md)
+   *
+   */
+ get highlight() : string {
+   return dialog_t_get_prop_highlight(this.nativeObj);
+ }
+
+};
+/**
+ * 单个定时器的信息。
+ *
+ */
+export class TTimerInfo extends TObject { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 转换为timer_info对象(供脚本语言使用)。
+   * 
+   * @param timer timer_info对象。
+   *
+   * @returns timer_info对象。
+   */
+ static cast(timer : TTimerInfo) : TTimerInfo  {
+    return new TTimerInfo(timer_info_cast(timer != null ? (timer.nativeObj || timer) : null));
+ }
+
+
+  /**
+   * 定时器回调函数的上下文
    *
    */
  get ctx() : any {
-   return idle_info_t_get_prop_ctx(this.nativeObj);
+   return timer_info_t_get_prop_ctx(this.nativeObj);
  }
 
 
   /**
-   * idle的ID
+   * 定时器的ID
    *
-   *> 为TK\_INVALID\_ID时表示无效idle。
+   *> 为TK\_INVALID\_ID时表示无效定时器。
    *
    */
  get id() : number {
-   return idle_info_t_get_prop_id(this.nativeObj);
+   return timer_info_t_get_prop_id(this.nativeObj);
+ }
+
+
+  /**
+   * 当前时间(相对时间，单位为毫秒)。
+   *
+   */
+ get now() : number {
+   return timer_info_t_get_prop_now(this.nativeObj);
  }
 
 };
@@ -20866,58 +21168,6 @@ export class TKeyboard extends TWindowBase {
 
 };
 /**
- * 单个定时器的信息。
- *
- */
-export class TTimerInfo extends TObject { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 转换为timer_info对象(供脚本语言使用)。
-   * 
-   * @param timer timer_info对象。
-   *
-   * @returns timer_info对象。
-   */
- static cast(timer : TTimerInfo) : TTimerInfo  {
-    return new TTimerInfo(timer_info_cast(timer != null ? (timer.nativeObj || timer) : null));
- }
-
-
-  /**
-   * 定时器回调函数的上下文
-   *
-   */
- get ctx() : any {
-   return timer_info_t_get_prop_ctx(this.nativeObj);
- }
-
-
-  /**
-   * 定时器的ID
-   *
-   *> 为TK\_INVALID\_ID时表示无效定时器。
-   *
-   */
- get id() : number {
-   return timer_info_t_get_prop_id(this.nativeObj);
- }
-
-
-  /**
-   * 当前时间(相对时间，单位为毫秒)。
-   *
-   */
- get now() : number {
-   return timer_info_t_get_prop_now(this.nativeObj);
- }
-
-};
-/**
  * 图片控件。
  *
  *用来显示一张静态图片，目前支持bmp/png/jpg等格式。
@@ -21034,42 +21284,15 @@ export class TImage extends TImageBase {
 
 };
 /**
- * SVG图片控件。
+ * 简单的动态数组，内部存放value对象。
  *
- *svg\_image\_t是[image\_base\_t](image_base_t.md)的子类控件，image\_base\_t的函数均适用于svg\_image\_t控件。
+ *访问时属性名称为：
  *
- *在xml中使用"svg"标签创建SVG图片控件。如：
- *
- *```xml
- *<svg image="girl"/>
- *```
- *
- *>更多用法请参考：[svg image](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/svg_image.xml)
- *
- *在c代码中使用函数svg\_image\_create创建SVG图片控件。如：
- *
- *
- *> 创建之后: 需要用widget\_set\_image设置图片名称。
- *
- *> 完整示例请参考：[svg image demo](
- *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/svg_image.c)
- *
- *可用通过style来设置控件的显示风格，如背景和边框等。如：
- *
- *```xml
- *<svg>
- *<style name="default">
- *<normal border_color="green" fg_color="red" />
- *</style>
- *</svg>
- *```
- *
- *> 更多用法请参考：[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
+ ** "size"/"length" 用于获取数组的长度。
+ ** index 用于访问属性，-1可以用来追加新元素。
  *
  */
-export class TSvgImage extends TImageBase { 
+export class TObjectArray extends TObject { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -21077,44 +21300,44 @@ export class TSvgImage extends TImageBase {
 
 
   /**
-   * 创建svg_image对象
+   * 创建对象。
    * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
    *
-   * @returns 对象。
+   * @returns 返回object对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TSvgImage  {
-    return new TSvgImage(svg_image_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ static create() : TObjectArray  {
+    return new TObjectArray(object_array_create());
  }
 
 
   /**
-   * 设置控件的图片名称。
-   *
-   *> 如果需要显示文件系统中的图片，只需将图片名称换成实际的文件名，并加上"file://"前缀即可。
+   * for script gc
    * 
-   * @param name 图片名称，该图片必须存在于资源管理器。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
- setImage(name : string) : TRet  {
-    return svg_image_set_image(this != null ? (this.nativeObj || this) : null, name);
+ unref() : TRet  {
+    return object_array_unref(this != null ? (this.nativeObj || this) : null);
  }
 
 
   /**
-   * 转换为svg_image对象(供脚本语言使用)。
+   * 清除全部属性。
    * 
-   * @param widget svg_image对象。
    *
-   * @returns svg_image对象。
+   * @returns 返回RET_OK表示成功，否则表示失败。
    */
- static cast(widget : TWidget) : TSvgImage  {
-    return new TSvgImage(svg_image_cast(widget != null ? (widget.nativeObj || widget) : null));
+ clearProps() : TRet  {
+    return object_array_clear_props(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 属性个数。
+   *
+   */
+ get propsSize() : number {
+   return object_array_t_get_prop_props_size(this.nativeObj);
  }
 
 };
@@ -21363,15 +21586,12 @@ export class TPopup extends TWindowBase {
 
 };
 /**
- * 简单的动态数组，内部存放value对象。
+ * 对象接口的缺省实现。
  *
- *访问时属性名称为：
- *
- ** "size"/"length" 用于获取数组的长度。
- ** index 用于访问属性，-1可以用来追加新元素。
+ *内部使用有序数组保存所有属性，可以快速查找指定名称的属性。
  *
  */
-export class TObjectArray extends TObject { 
+export class TObjectDefault extends TObject { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -21384,8 +21604,8 @@ export class TObjectArray extends TObject {
    *
    * @returns 返回object对象。
    */
- static create() : TObjectArray  {
-    return new TObjectArray(object_array_create());
+ static create() : TObjectDefault  {
+    return new TObjectDefault(object_default_create());
  }
 
 
@@ -21396,7 +21616,7 @@ export class TObjectArray extends TObject {
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
  unref() : TRet  {
-    return object_array_unref(this != null ? (this.nativeObj || this) : null);
+    return object_default_unref(this != null ? (this.nativeObj || this) : null);
  }
 
 
@@ -21407,7 +21627,7 @@ export class TObjectArray extends TObject {
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
  clearProps() : TRet  {
-    return object_array_clear_props(this != null ? (this.nativeObj || this) : null);
+    return object_default_clear_props(this != null ? (this.nativeObj || this) : null);
  }
 
 
@@ -21416,7 +21636,7 @@ export class TObjectArray extends TObject {
    *
    */
  get propsSize() : number {
-   return object_array_t_get_prop_props_size(this.nativeObj);
+   return object_default_t_get_prop_props_size(this.nativeObj);
  }
 
 };
@@ -21581,12 +21801,42 @@ export class TWindow extends TWindowBase {
 
 };
 /**
- * 对象接口的缺省实现。
+ * SVG图片控件。
  *
- *内部使用有序数组保存所有属性，可以快速查找指定名称的属性。
+ *svg\_image\_t是[image\_base\_t](image_base_t.md)的子类控件，image\_base\_t的函数均适用于svg\_image\_t控件。
+ *
+ *在xml中使用"svg"标签创建SVG图片控件。如：
+ *
+ *```xml
+ *<svg image="girl"/>
+ *```
+ *
+ *>更多用法请参考：[svg image](
+ *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/svg_image.xml)
+ *
+ *在c代码中使用函数svg\_image\_create创建SVG图片控件。如：
+ *
+ *
+ *> 创建之后: 需要用widget\_set\_image设置图片名称。
+ *
+ *> 完整示例请参考：[svg image demo](
+ *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/svg_image.c)
+ *
+ *可用通过style来设置控件的显示风格，如背景和边框等。如：
+ *
+ *```xml
+ *<svg>
+ *<style name="default">
+ *<normal border_color="green" fg_color="red" />
+ *</style>
+ *</svg>
+ *```
+ *
+ *> 更多用法请参考：[theme default](
+ *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
  *
  */
-export class TObjectDefault extends TObject { 
+export class TSvgImage extends TImageBase { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -21594,44 +21844,44 @@ export class TObjectDefault extends TObject {
 
 
   /**
-   * 创建对象。
+   * 创建svg_image对象
    * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
    *
-   * @returns 返回object对象。
+   * @returns 对象。
    */
- static create() : TObjectDefault  {
-    return new TObjectDefault(object_default_create());
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TSvgImage  {
+    return new TSvgImage(svg_image_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
 
   /**
-   * for script gc
+   * 设置控件的图片名称。
+   *
+   *> 如果需要显示文件系统中的图片，只需将图片名称换成实际的文件名，并加上"file://"前缀即可。
    * 
+   * @param name 图片名称，该图片必须存在于资源管理器。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
- unref() : TRet  {
-    return object_default_unref(this != null ? (this.nativeObj || this) : null);
+ setImage(name : string) : TRet  {
+    return svg_image_set_image(this != null ? (this.nativeObj || this) : null, name);
  }
 
 
   /**
-   * 清除全部属性。
+   * 转换为svg_image对象(供脚本语言使用)。
    * 
+   * @param widget svg_image对象。
    *
-   * @returns 返回RET_OK表示成功，否则表示失败。
+   * @returns svg_image对象。
    */
- clearProps() : TRet  {
-    return object_default_clear_props(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 属性个数。
-   *
-   */
- get propsSize() : number {
-   return object_default_t_get_prop_props_size(this.nativeObj);
+ static cast(widget : TWidget) : TSvgImage  {
+    return new TSvgImage(svg_image_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 };
@@ -22227,292 +22477,42 @@ export class TGifImage extends TImageBase {
 
 };
 /**
- * 对话框。 对话框是一种特殊的窗口，大小和位置可以自由设置。
+ * mutable图片控件。
  *
- *AWTK中的对话框可以是模态的，也可以是非模态的。
+ *像摄像头和视频的图像是变化的，每一帧都不同，我们把这类图片称为mutable image。
  *
- *如果dialog有透明或半透效果则不支持窗口动画。
+ *本控件辅助实现摄像头和视频的显示功能。
  *
- *> 由于浏览器中无法实现主循环嵌套，因此无法实现模态对话框。
- *如果希望自己写的AWTK应用程序可以在浏览器(包括各种小程序)中运行或演示，
- *请避免使用模态对话框。
+ *mutable\_image\_t是[image\_base\_t](image_base_t.md)的子类控件，image\_base\_t的函数均适用于mutable\_image\_t控件。
  *
- *对话框通常由对话框标题和对话框客户区两部分组成：
- *
- *
- *
- *dialog\_t是[window\_base\_t](window_base_t.md)的子类控件，window\_base\_t的函数均适用于dialog\_t控件。
- *
- *在xml中使用"dialog"标签创建对话框。如：
+ *在xml中使用"mutable\_image"标签创建mutable图片控件。如：
  *
  *```xml
- *<dialog anim_hint="center_scale(duration=300)" x="c" y="m" w="80%" h="160" text="Dialog">
- *<dialog_title x="0" y="0" w="100%" h="30" text="Hello AWTK" />
- *<dialog_client x="0" y="bottom" w="100%" h="-30">
- *<label name="" x="center" y="middle:-20" w="200" h="30" text="Are you ready?"/>
- *<button name="quit" x="10" y="bottom:10" w="40%" h="30" text="确定"/>
- *<button name="quit" x="right:10" y="bottom:10" w="40%" h="30" text="取消"/>
- *</dialog_client>
- *</dialog>
+ *<mutable_image w="100%" h="100%"/>
  *```
  *
- *如果你不需要对话框的标题，可以这样写：
+ *>更多用法请参考：
+ *[mutable
+ *image](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/mutable_image.xml)
  *
- *```xml
- *<dialog anim_hint="center_scale(duration=300)" x="c" y="m" w="80%" h="160" text="Dialog">
- *<label name="" x="center" y="middle:-20" w="200" h="30" text="Are you ready?"/>
- *<button name="quit" x="10" y="bottom:10" w="40%" h="30" text="确定"/>
- *<button name="quit" x="right:10" y="bottom:10" w="40%" h="30" text="取消"/>
- *</dialog>
- *```
- *
- *打开非模态对话框时，其用法与普通窗口一样。打开非模态对话框时，还需要调用dialog\_modal。
+ *在c代码中使用函数mutable\_image\_create创建mutable图片控件。如：
  *
  *
- *关闭模态对话框用dialog\_quit
+ *> 创建之后:
+ *>
+ *> 需要用mutable\_image\_set\_create\_image设置创建图片的回调函数。
+ *> 需要用mutable\_image\_set\_prepare\_image设置准备图片的回调函数。
  *
+ *> 完整示例请参考：[mutable image demo](
+ *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/mutable_image.c)
  *
- *关闭非模态对话框用window\_close。
- *
- *
- *> 更多用法请参考：
- *[dialog.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
- *
- *> 完整C代码示例请参考：
- *
- ** [非模态对话框](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/dialog.c)
- *
- ** [模态对话框](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/dialog_modal.c)
- *
- *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
- *
- *```xml
- *<style name="default">
- *<normal border_color="#606060" />
- *</style>
- *```
- *
- *> 更多用法请参考：
- *[theme default]
- *(https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L324)
+ *一般不需通过style来设置控件的显示风格，如果在特殊情况下需要，可以参考其它控件。
  *
  */
-export class TDialog extends TWindowBase { 
+export class TMutableImage extends TImageBase { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
- }
-
-
-  /**
-   * 创建dialog对象。
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns dialog对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TDialog  {
-    return new TDialog(dialog_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 创建dialog对象，同时创建title/client。
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns dialog对象。
-   */
- static createSimple(parent : TWidget, x : number, y : number, w : number, h : number) : TDialog  {
-    return new TDialog(dialog_create_simple(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换dialog对象(供脚本语言使用)。
-   * 
-   * @param widget dialog对象。
-   *
-   * @returns dialog对象。
-   */
- static cast(widget : TWidget) : TDialog  {
-    return new TDialog(dialog_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-
-  /**
-   * 获取title控件。
-   * 
-   *
-   * @returns title对象。
-   */
- getTitle() : TWidget  {
-    return new TWidget(dialog_get_title(this != null ? (this.nativeObj || this) : null));
- }
-
-
-  /**
-   * 获取client控件。
-   * 
-   *
-   * @returns client对象。
-   */
- getClient() : TWidget  {
-    return new TWidget(dialog_get_client(this != null ? (this.nativeObj || this) : null));
- }
-
-
-  /**
-   * 从资源文件中加载并创建Dialog对象。
-   *
-   *本函数在ui\_loader/ui\_builder_default里实现。
-   * 
-   * @param name dialog的名称。
-   *
-   * @returns 对象。
-   */
- static open(name : string) : TDialog  {
-    return new TDialog(dialog_open(name));
- }
-
-
-  /**
-   * 设置对话框的标题文本。
-   * 
-   * @param title 标题。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setTitle(title : string) : TRet  {
-    return dialog_set_title(this != null ? (this.nativeObj || this) : null, title);
- }
-
-
-  /**
-   * 模态显示对话框。
-   *dialog_modal返回后，dialog对象将在下一个idle函数中回收。
-   *也就是在dialog_modal调用完成后仍然可以访问dialog中控件，直到本次事件结束。
-   * 
-   *
-   * @returns 返回退出吗。
-   */
- modal() : TDialogQuitCode  {
-    return dialog_modal(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 退出模态显示，关闭对话框。
-   *
-   *> 比如，在对话框中关闭按钮的事件处理函数中，调用本函数关闭对话框。
-   * 
-   * @param code 退出码，作为dialog_modal的返回值(参考：[dialog_quit_code_t](dialog_quit_code_t.md))。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- quit(code : number) : TRet  {
-    return dialog_quit(this != null ? (this.nativeObj || this) : null, code);
- }
-
-
-  /**
-   * 检查对话框是否已经退出模态。
-   * 
-   *
-   * @returns 返回TRUE表示已经退出，否则表示没有。
-   */
- isQuited() : boolean  {
-    return dialog_is_quited(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 检查对话框是否为模态对话框。
-   * 
-   *
-   * @returns 返回TRUE表示是模态对话框，否则表示不是。
-   */
- isModal() : boolean  {
-    return dialog_is_modal(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 显示『短暂提示信息』对话框。
-   *
-   *主题由dialog_toast.xml文件决定。
-   * 
-   * @param text 文本内容。
-   * @param duration 显示时间(单位为毫秒)。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- static toast(text : string, duration : number) : TRet  {
-    return dialog_toast(text, duration);
- }
-
-
-  /**
-   * 显示『提示信息』对话框。
-   *
-   *主题由dialog_info.xml文件决定。
-   * 
-   * @param title 标题。
-   * @param text 文本内容。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- static info(title : string, text : string) : TRet  {
-    return dialog_info(title, text);
- }
-
-
-  /**
-   * 显示『警告』对话框。
-   *
-   *主题由dialog_warn.xml文件决定。
-   * 
-   * @param title 标题。
-   * @param text 文本内容。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- static warn(title : string, text : string) : TRet  {
-    return dialog_warn(title, text);
- }
-
-
-  /**
-   * 显示『确认』对话框。
-   *
-   *主题由dialog_confirm.xml文件决定。
-   * 
-   * @param title 标题。
-   * @param text 文本内容。
-   *
-   * @returns 返回RET_OK表示确认，否则表示取消。
-   */
- static confirm(title : string, text : string) : TRet  {
-    return dialog_confirm(title, text);
- }
-
-
-  /**
-   * 对话框高亮策略。
-   *
-   *> 请参考 [对话框高亮策略](https://github.com/zlgopen/awtk/blob/master/docs/dialog_highlight.md)
-   *
-   */
- get highlight() : string {
-   return dialog_t_get_prop_highlight(this.nativeObj);
  }
 
 };
