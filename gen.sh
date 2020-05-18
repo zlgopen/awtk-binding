@@ -27,3 +27,9 @@ cd tools/code_gen/lua
 node lua.js
 cd -
 
+#python
+cd tools/code_gen/python
+node python.js
+node default.js
+cd -
+
