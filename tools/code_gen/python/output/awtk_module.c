@@ -4176,8 +4176,8 @@ pyobject_t get_WIDGET_PROP_CLOSABLE(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("s", WIDGET_PROP_CLOSABLE);
 }
 
-pyobject_t get_WIDGET_PROP_CURSOR(pyobject_t self, pyobject_t pyargs) {
-  return Py_BuildValue("s", WIDGET_PROP_CURSOR);
+pyobject_t get_WIDGET_PROP_POINTER_CURSOR(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", WIDGET_PROP_POINTER_CURSOR);
 }
 
 pyobject_t get_WIDGET_PROP_VALUE(pyobject_t self, pyobject_t pyargs) {
@@ -4274,6 +4274,10 @@ pyobject_t get_WIDGET_PROP_CLOSE_ANIM_HINT(pyobject_t self, pyobject_t pyargs) {
 
 pyobject_t get_WIDGET_PROP_MIN(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("s", WIDGET_PROP_MIN);
+}
+
+pyobject_t get_WIDGET_PROP_ACTION_TEXT(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", WIDGET_PROP_ACTION_TEXT);
 }
 
 pyobject_t get_WIDGET_PROP_TIPS(pyobject_t self, pyobject_t pyargs) {
@@ -4912,6 +4916,10 @@ pyobject_t get_WIDGET_STATE_OVER_OF_CHECKED(pyobject_t self, pyobject_t pyargs) 
   return Py_BuildValue("s", WIDGET_STATE_OVER_OF_CHECKED);
 }
 
+pyobject_t get_WIDGET_STATE_DISABLE_OF_CHECKED(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", WIDGET_STATE_DISABLE_OF_CHECKED);
+}
+
 pyobject_t get_WIDGET_STATE_FOCUSED_OF_CHECKED(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("s", WIDGET_STATE_FOCUSED_OF_CHECKED);
 }
@@ -4928,8 +4936,56 @@ pyobject_t get_WIDGET_STATE_OVER_OF_ACTIVE(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("s", WIDGET_STATE_OVER_OF_ACTIVE);
 }
 
+pyobject_t get_WIDGET_STATE_DISABLE_OF_ACTIVE(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", WIDGET_STATE_DISABLE_OF_ACTIVE);
+}
+
 pyobject_t get_WIDGET_STATE_FOCUSED_OF_ACTIVE(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("s", WIDGET_STATE_FOCUSED_OF_ACTIVE);
+}
+
+pyobject_t get_WIDGET_CURSOR_DEFAULT(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", WIDGET_CURSOR_DEFAULT);
+}
+
+pyobject_t get_WIDGET_CURSOR_EDIT(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", WIDGET_CURSOR_EDIT);
+}
+
+pyobject_t get_WIDGET_CURSOR_HAND(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", WIDGET_CURSOR_HAND);
+}
+
+pyobject_t get_WIDGET_CURSOR_WAIT(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", WIDGET_CURSOR_WAIT);
+}
+
+pyobject_t get_WIDGET_CURSOR_CROSS(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", WIDGET_CURSOR_CROSS);
+}
+
+pyobject_t get_WIDGET_CURSOR_NO(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", WIDGET_CURSOR_NO);
+}
+
+pyobject_t get_WIDGET_CURSOR_SIZENWSE(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", WIDGET_CURSOR_SIZENWSE);
+}
+
+pyobject_t get_WIDGET_CURSOR_SIZENESW(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", WIDGET_CURSOR_SIZENESW);
+}
+
+pyobject_t get_WIDGET_CURSOR_SIZEWE(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", WIDGET_CURSOR_SIZEWE);
+}
+
+pyobject_t get_WIDGET_CURSOR_SIZENS(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", WIDGET_CURSOR_SIZENS);
+}
+
+pyobject_t get_WIDGET_CURSOR_SIZEALL(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", WIDGET_CURSOR_SIZEALL);
 }
 
 pyobject_t wrap_widget_count_children(pyobject_t self, pyobject_t pyargs) {
@@ -6094,6 +6150,17 @@ pyobject_t wrap_widget_t_get_prop_name(pyobject_t self, pyobject_t pyargs) {
   }
 
   return Py_BuildValue("s", obj->name);
+}
+
+pyobject_t wrap_widget_t_get_prop_pointer_cursor(pyobject_t self, pyobject_t pyargs) {
+  widget_t* obj = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&", &parse_voidp, &obj)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  return Py_BuildValue("s", obj->pointer_cursor);
 }
 
 pyobject_t wrap_widget_t_get_prop_tr_text(pyobject_t self, pyobject_t pyargs) {
@@ -14100,6 +14167,20 @@ pyobject_t wrap_edit_set_input_type(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", ret);
 }
 
+pyobject_t wrap_edit_set_action_text(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  widget_t* widget = NULL;
+  char* action_text = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&s" , &parse_voidp, &widget, &action_text)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)edit_set_action_text(widget, action_text);
+  return Py_BuildValue("i", ret);
+}
+
 pyobject_t wrap_edit_set_tips(pyobject_t self, pyobject_t pyargs) {
   ret_t ret = 0;
   widget_t* widget = NULL;
@@ -14303,6 +14384,17 @@ pyobject_t wrap_edit_t_get_prop_tr_tips(pyobject_t self, pyobject_t pyargs) {
   }
 
   return Py_BuildValue("s", obj->tr_tips);
+}
+
+pyobject_t wrap_edit_t_get_prop_action_text(pyobject_t self, pyobject_t pyargs) {
+  edit_t* obj = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&", &parse_voidp, &obj)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  return Py_BuildValue("s", obj->action_text);
 }
 
 pyobject_t wrap_edit_t_get_prop_keyboard(pyobject_t self, pyobject_t pyargs) {
@@ -15416,6 +15508,21 @@ pyobject_t wrap_native_window_set_fullscreen(pyobject_t self, pyobject_t pyargs)
   }
 
   ret = (ret_t)native_window_set_fullscreen(win, fullscreen);
+  return Py_BuildValue("i", ret);
+}
+
+pyobject_t wrap_native_window_set_cursor(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  native_window_t* win = NULL;
+  const char* name = NULL;
+  bitmap_t* img = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&sO&" , &parse_voidp, &win, &name, &parse_voidp, &img)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)native_window_set_cursor(win, name, img);
   return Py_BuildValue("i", ret);
 }
 
@@ -17033,7 +17140,7 @@ static PyMethodDef awtk_methods[] = {
 {"WIDGET_PROP_NAME", get_WIDGET_PROP_NAME, METH_VARARGS, "WIDGET_PROP_NAME"},
 {"WIDGET_PROP_TYPE", get_WIDGET_PROP_TYPE, METH_VARARGS, "WIDGET_PROP_TYPE"},
 {"WIDGET_PROP_CLOSABLE", get_WIDGET_PROP_CLOSABLE, METH_VARARGS, "WIDGET_PROP_CLOSABLE"},
-{"WIDGET_PROP_CURSOR", get_WIDGET_PROP_CURSOR, METH_VARARGS, "WIDGET_PROP_CURSOR"},
+{"WIDGET_PROP_POINTER_CURSOR", get_WIDGET_PROP_POINTER_CURSOR, METH_VARARGS, "WIDGET_PROP_POINTER_CURSOR"},
 {"WIDGET_PROP_VALUE", get_WIDGET_PROP_VALUE, METH_VARARGS, "WIDGET_PROP_VALUE"},
 {"WIDGET_PROP_LENGTH", get_WIDGET_PROP_LENGTH, METH_VARARGS, "WIDGET_PROP_LENGTH"},
 {"WIDGET_PROP_TEXT", get_WIDGET_PROP_TEXT, METH_VARARGS, "WIDGET_PROP_TEXT"},
@@ -17058,6 +17165,7 @@ static PyMethodDef awtk_methods[] = {
 {"WIDGET_PROP_OPEN_ANIM_HINT", get_WIDGET_PROP_OPEN_ANIM_HINT, METH_VARARGS, "WIDGET_PROP_OPEN_ANIM_HINT"},
 {"WIDGET_PROP_CLOSE_ANIM_HINT", get_WIDGET_PROP_CLOSE_ANIM_HINT, METH_VARARGS, "WIDGET_PROP_CLOSE_ANIM_HINT"},
 {"WIDGET_PROP_MIN", get_WIDGET_PROP_MIN, METH_VARARGS, "WIDGET_PROP_MIN"},
+{"WIDGET_PROP_ACTION_TEXT", get_WIDGET_PROP_ACTION_TEXT, METH_VARARGS, "WIDGET_PROP_ACTION_TEXT"},
 {"WIDGET_PROP_TIPS", get_WIDGET_PROP_TIPS, METH_VARARGS, "WIDGET_PROP_TIPS"},
 {"WIDGET_PROP_TR_TIPS", get_WIDGET_PROP_TR_TIPS, METH_VARARGS, "WIDGET_PROP_TR_TIPS"},
 {"WIDGET_PROP_INPUT_TYPE", get_WIDGET_PROP_INPUT_TYPE, METH_VARARGS, "WIDGET_PROP_INPUT_TYPE"},
@@ -17217,11 +17325,24 @@ static PyMethodDef awtk_methods[] = {
 {"WIDGET_STATE_NORMAL_OF_CHECKED", get_WIDGET_STATE_NORMAL_OF_CHECKED, METH_VARARGS, "WIDGET_STATE_NORMAL_OF_CHECKED"},
 {"WIDGET_STATE_PRESSED_OF_CHECKED", get_WIDGET_STATE_PRESSED_OF_CHECKED, METH_VARARGS, "WIDGET_STATE_PRESSED_OF_CHECKED"},
 {"WIDGET_STATE_OVER_OF_CHECKED", get_WIDGET_STATE_OVER_OF_CHECKED, METH_VARARGS, "WIDGET_STATE_OVER_OF_CHECKED"},
+{"WIDGET_STATE_DISABLE_OF_CHECKED", get_WIDGET_STATE_DISABLE_OF_CHECKED, METH_VARARGS, "WIDGET_STATE_DISABLE_OF_CHECKED"},
 {"WIDGET_STATE_FOCUSED_OF_CHECKED", get_WIDGET_STATE_FOCUSED_OF_CHECKED, METH_VARARGS, "WIDGET_STATE_FOCUSED_OF_CHECKED"},
 {"WIDGET_STATE_NORMAL_OF_ACTIVE", get_WIDGET_STATE_NORMAL_OF_ACTIVE, METH_VARARGS, "WIDGET_STATE_NORMAL_OF_ACTIVE"},
 {"WIDGET_STATE_PRESSED_OF_ACTIVE", get_WIDGET_STATE_PRESSED_OF_ACTIVE, METH_VARARGS, "WIDGET_STATE_PRESSED_OF_ACTIVE"},
 {"WIDGET_STATE_OVER_OF_ACTIVE", get_WIDGET_STATE_OVER_OF_ACTIVE, METH_VARARGS, "WIDGET_STATE_OVER_OF_ACTIVE"},
+{"WIDGET_STATE_DISABLE_OF_ACTIVE", get_WIDGET_STATE_DISABLE_OF_ACTIVE, METH_VARARGS, "WIDGET_STATE_DISABLE_OF_ACTIVE"},
 {"WIDGET_STATE_FOCUSED_OF_ACTIVE", get_WIDGET_STATE_FOCUSED_OF_ACTIVE, METH_VARARGS, "WIDGET_STATE_FOCUSED_OF_ACTIVE"},
+{"WIDGET_CURSOR_DEFAULT", get_WIDGET_CURSOR_DEFAULT, METH_VARARGS, "WIDGET_CURSOR_DEFAULT"},
+{"WIDGET_CURSOR_EDIT", get_WIDGET_CURSOR_EDIT, METH_VARARGS, "WIDGET_CURSOR_EDIT"},
+{"WIDGET_CURSOR_HAND", get_WIDGET_CURSOR_HAND, METH_VARARGS, "WIDGET_CURSOR_HAND"},
+{"WIDGET_CURSOR_WAIT", get_WIDGET_CURSOR_WAIT, METH_VARARGS, "WIDGET_CURSOR_WAIT"},
+{"WIDGET_CURSOR_CROSS", get_WIDGET_CURSOR_CROSS, METH_VARARGS, "WIDGET_CURSOR_CROSS"},
+{"WIDGET_CURSOR_NO", get_WIDGET_CURSOR_NO, METH_VARARGS, "WIDGET_CURSOR_NO"},
+{"WIDGET_CURSOR_SIZENWSE", get_WIDGET_CURSOR_SIZENWSE, METH_VARARGS, "WIDGET_CURSOR_SIZENWSE"},
+{"WIDGET_CURSOR_SIZENESW", get_WIDGET_CURSOR_SIZENESW, METH_VARARGS, "WIDGET_CURSOR_SIZENESW"},
+{"WIDGET_CURSOR_SIZEWE", get_WIDGET_CURSOR_SIZEWE, METH_VARARGS, "WIDGET_CURSOR_SIZEWE"},
+{"WIDGET_CURSOR_SIZENS", get_WIDGET_CURSOR_SIZENS, METH_VARARGS, "WIDGET_CURSOR_SIZENS"},
+{"WIDGET_CURSOR_SIZEALL", get_WIDGET_CURSOR_SIZEALL, METH_VARARGS, "WIDGET_CURSOR_SIZEALL"},
 {"widget_count_children", wrap_widget_count_children, METH_VARARGS, "widget_count_children"},
 {"widget_get_child", wrap_widget_get_child, METH_VARARGS, "widget_get_child"},
 {"widget_get_native_window", wrap_widget_get_native_window, METH_VARARGS, "widget_get_native_window"},
@@ -17308,6 +17429,7 @@ static PyMethodDef awtk_methods[] = {
 {"widget_t_get_prop_w", wrap_widget_t_get_prop_w, METH_VARARGS, "widget_t_get_prop_w"},
 {"widget_t_get_prop_h", wrap_widget_t_get_prop_h, METH_VARARGS, "widget_t_get_prop_h"},
 {"widget_t_get_prop_name", wrap_widget_t_get_prop_name, METH_VARARGS, "widget_t_get_prop_name"},
+{"widget_t_get_prop_pointer_cursor", wrap_widget_t_get_prop_pointer_cursor, METH_VARARGS, "widget_t_get_prop_pointer_cursor"},
 {"widget_t_get_prop_tr_text", wrap_widget_t_get_prop_tr_text, METH_VARARGS, "widget_t_get_prop_tr_text"},
 {"widget_t_get_prop_style", wrap_widget_t_get_prop_style, METH_VARARGS, "widget_t_get_prop_style"},
 {"widget_t_get_prop_animation", wrap_widget_t_get_prop_animation, METH_VARARGS, "widget_t_get_prop_animation"},
@@ -18053,6 +18175,7 @@ static PyMethodDef awtk_methods[] = {
 {"edit_set_select_none_when_focused", wrap_edit_set_select_none_when_focused, METH_VARARGS, "edit_set_select_none_when_focused"},
 {"edit_set_open_im_when_focused", wrap_edit_set_open_im_when_focused, METH_VARARGS, "edit_set_open_im_when_focused"},
 {"edit_set_input_type", wrap_edit_set_input_type, METH_VARARGS, "edit_set_input_type"},
+{"edit_set_action_text", wrap_edit_set_action_text, METH_VARARGS, "edit_set_action_text"},
 {"edit_set_tips", wrap_edit_set_tips, METH_VARARGS, "edit_set_tips"},
 {"edit_set_tr_tips", wrap_edit_set_tr_tips, METH_VARARGS, "edit_set_tr_tips"},
 {"edit_set_keyboard", wrap_edit_set_keyboard, METH_VARARGS, "edit_set_keyboard"},
@@ -18070,6 +18193,7 @@ static PyMethodDef awtk_methods[] = {
 {"edit_t_get_prop_right_margin", wrap_edit_t_get_prop_right_margin, METH_VARARGS, "edit_t_get_prop_right_margin"},
 {"edit_t_get_prop_tips", wrap_edit_t_get_prop_tips, METH_VARARGS, "edit_t_get_prop_tips"},
 {"edit_t_get_prop_tr_tips", wrap_edit_t_get_prop_tr_tips, METH_VARARGS, "edit_t_get_prop_tr_tips"},
+{"edit_t_get_prop_action_text", wrap_edit_t_get_prop_action_text, METH_VARARGS, "edit_t_get_prop_action_text"},
 {"edit_t_get_prop_keyboard", wrap_edit_t_get_prop_keyboard, METH_VARARGS, "edit_t_get_prop_keyboard"},
 {"edit_t_get_prop_input_type", wrap_edit_t_get_prop_input_type, METH_VARARGS, "edit_t_get_prop_input_type"},
 {"edit_t_get_prop_min", wrap_edit_t_get_prop_min, METH_VARARGS, "edit_t_get_prop_min"},
@@ -18154,6 +18278,7 @@ static PyMethodDef awtk_methods[] = {
 {"native_window_center", wrap_native_window_center, METH_VARARGS, "native_window_center"},
 {"native_window_show_border", wrap_native_window_show_border, METH_VARARGS, "native_window_show_border"},
 {"native_window_set_fullscreen", wrap_native_window_set_fullscreen, METH_VARARGS, "native_window_set_fullscreen"},
+{"native_window_set_cursor", wrap_native_window_set_cursor, METH_VARARGS, "native_window_set_cursor"},
 {"dialog_create", wrap_dialog_create, METH_VARARGS, "dialog_create"},
 {"dialog_create_simple", wrap_dialog_create_simple, METH_VARARGS, "dialog_create_simple"},
 {"dialog_cast", wrap_dialog_cast, METH_VARARGS, "dialog_cast"},

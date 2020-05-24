@@ -68,7 +68,7 @@ public:
    * 事件发生的时间。
    *
    */
-  int32_t GetTime() const;
+  uint64_t GetTime() const;
 
   /**
    * 事件发生的目标对象。
@@ -3241,6 +3241,12 @@ public:
    *
    */
   char* GetName() const;
+
+  /**
+   * 鼠标光标图片名称。
+   *
+   */
+  char* GetPointerCursor() const;
 
   /**
    * 保存用于翻译的字符串。
@@ -10470,6 +10476,15 @@ public:
   ret_t SetInputType(input_type_t type) ;
 
   /**
+   * 设置软键盘上action按钮的文本。
+   * 
+   * @param action_text 软键盘上action按钮的文本。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetActionText(char* action_text) ;
+
+  /**
    * 设置编辑器的输入提示。
    * 
    * @param tips 输入提示。
@@ -10592,6 +10607,17 @@ public:
    *
    */
   char* GetTrTips() const;
+
+  /**
+   * 软键盘上action按钮的文本。内置取值有：
+   *
+   ** next 将焦点切换到下一个控件。
+   ** done 完成，关闭软键盘。
+   *
+   *也可以使用其它文本，比如send表示发送。这个需要自己实现相应的功能，处理EVT\_IM\_ACTION事件即可。
+   *
+   */
+  char* GetActionText() const;
 
   /**
    * 自定义软键盘名称。
@@ -12003,6 +12029,16 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t SetFullscreen(bool fullscreen) ;
+
+  /**
+   * 设置鼠标光标。
+   * 
+   * @param name 鼠标光标的名称。
+   * @param img 鼠标光标的图片。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetCursor(const char* name, TBitmap& img) ;
 };
 
 

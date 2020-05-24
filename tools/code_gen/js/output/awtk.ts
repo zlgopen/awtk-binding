@@ -560,7 +560,7 @@ declare function WIDGET_PROP_VIRTUAL_H();
 declare function WIDGET_PROP_NAME();
 declare function WIDGET_PROP_TYPE();
 declare function WIDGET_PROP_CLOSABLE();
-declare function WIDGET_PROP_CURSOR();
+declare function WIDGET_PROP_POINTER_CURSOR();
 declare function WIDGET_PROP_VALUE();
 declare function WIDGET_PROP_LENGTH();
 declare function WIDGET_PROP_TEXT();
@@ -585,6 +585,7 @@ declare function WIDGET_PROP_DISABLE_ANIM();
 declare function WIDGET_PROP_OPEN_ANIM_HINT();
 declare function WIDGET_PROP_CLOSE_ANIM_HINT();
 declare function WIDGET_PROP_MIN();
+declare function WIDGET_PROP_ACTION_TEXT();
 declare function WIDGET_PROP_TIPS();
 declare function WIDGET_PROP_TR_TIPS();
 declare function WIDGET_PROP_INPUT_TYPE();
@@ -744,11 +745,24 @@ declare function WIDGET_STATE_SELECTED();
 declare function WIDGET_STATE_NORMAL_OF_CHECKED();
 declare function WIDGET_STATE_PRESSED_OF_CHECKED();
 declare function WIDGET_STATE_OVER_OF_CHECKED();
+declare function WIDGET_STATE_DISABLE_OF_CHECKED();
 declare function WIDGET_STATE_FOCUSED_OF_CHECKED();
 declare function WIDGET_STATE_NORMAL_OF_ACTIVE();
 declare function WIDGET_STATE_PRESSED_OF_ACTIVE();
 declare function WIDGET_STATE_OVER_OF_ACTIVE();
+declare function WIDGET_STATE_DISABLE_OF_ACTIVE();
 declare function WIDGET_STATE_FOCUSED_OF_ACTIVE();
+declare function WIDGET_CURSOR_DEFAULT();
+declare function WIDGET_CURSOR_EDIT();
+declare function WIDGET_CURSOR_HAND();
+declare function WIDGET_CURSOR_WAIT();
+declare function WIDGET_CURSOR_CROSS();
+declare function WIDGET_CURSOR_NO();
+declare function WIDGET_CURSOR_SIZENWSE();
+declare function WIDGET_CURSOR_SIZENESW();
+declare function WIDGET_CURSOR_SIZEWE();
+declare function WIDGET_CURSOR_SIZENS();
+declare function WIDGET_CURSOR_SIZEALL();
 declare function widget_count_children(widget : any) : number;
 declare function widget_get_child(widget : any, index : number) : any;
 declare function widget_get_native_window(widget : any) : any;
@@ -835,6 +849,7 @@ declare function widget_t_get_prop_y(nativeObj : any) : number;
 declare function widget_t_get_prop_w(nativeObj : any) : number;
 declare function widget_t_get_prop_h(nativeObj : any) : number;
 declare function widget_t_get_prop_name(nativeObj : any) : string;
+declare function widget_t_get_prop_pointer_cursor(nativeObj : any) : string;
 declare function widget_t_get_prop_tr_text(nativeObj : any) : string;
 declare function widget_t_get_prop_style(nativeObj : any) : string;
 declare function widget_t_get_prop_animation(nativeObj : any) : string;
@@ -1583,6 +1598,7 @@ declare function edit_set_auto_fix(widget : any, auto_fix : boolean) : TRet;
 declare function edit_set_select_none_when_focused(widget : any, select_none_when_focused : boolean) : TRet;
 declare function edit_set_open_im_when_focused(widget : any, open_im_when_focused : boolean) : TRet;
 declare function edit_set_input_type(widget : any, type : TInputType) : TRet;
+declare function edit_set_action_text(widget : any, action_text : string) : TRet;
 declare function edit_set_tips(widget : any, tips : string) : TRet;
 declare function edit_set_tr_tips(widget : any, tr_tips : string) : TRet;
 declare function edit_set_keyboard(widget : any, keyboard : string) : TRet;
@@ -1600,6 +1616,7 @@ declare function edit_t_get_prop_left_margin(nativeObj : any) : number;
 declare function edit_t_get_prop_right_margin(nativeObj : any) : number;
 declare function edit_t_get_prop_tips(nativeObj : any) : string;
 declare function edit_t_get_prop_tr_tips(nativeObj : any) : string;
+declare function edit_t_get_prop_action_text(nativeObj : any) : string;
 declare function edit_t_get_prop_keyboard(nativeObj : any) : string;
 declare function edit_t_get_prop_input_type(nativeObj : any) : TInputType;
 declare function edit_t_get_prop_min(nativeObj : any) : number;
@@ -1684,6 +1701,7 @@ declare function native_window_restore(win : any) : TRet;
 declare function native_window_center(win : any) : TRet;
 declare function native_window_show_border(win : any, show : boolean) : TRet;
 declare function native_window_set_fullscreen(win : any, fullscreen : boolean) : TRet;
+declare function native_window_set_cursor(win : any, name : string, img : any) : TRet;
 declare function dialog_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function dialog_create_simple(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function dialog_cast(widget : any) : any;
@@ -6796,7 +6814,7 @@ export enum TWidgetProp {
    * 鼠标指针。
    *
    */
- CURSOR = WIDGET_PROP_CURSOR(),
+ POINTER_CURSOR = WIDGET_PROP_POINTER_CURSOR(),
 
   /**
    * 值。
@@ -6941,6 +6959,12 @@ export enum TWidgetProp {
    *
    */
  MIN = WIDGET_PROP_MIN(),
+
+  /**
+   * 软键盘上action按钮的文本。
+   *
+   */
+ ACTION_TEXT = WIDGET_PROP_ACTION_TEXT(),
 
   /**
    * 提示信息。
@@ -7931,6 +7955,12 @@ export enum TWidgetState {
  STATE_OVER_OF_CHECKED = WIDGET_STATE_OVER_OF_CHECKED(),
 
   /**
+   * 禁用状态(选中项)。
+   *
+   */
+ STATE_DISABLE_OF_CHECKED = WIDGET_STATE_DISABLE_OF_CHECKED(),
+
+  /**
    * 焦点状态(选中项)。
    *
    */
@@ -7955,10 +7985,90 @@ export enum TWidgetState {
  STATE_OVER_OF_ACTIVE = WIDGET_STATE_OVER_OF_ACTIVE(),
 
   /**
+   * 禁用状态(当前项)。
+   *
+   */
+ STATE_DISABLE_OF_ACTIVE = WIDGET_STATE_DISABLE_OF_ACTIVE(),
+
+  /**
    * 焦点状态(当前项)。
    *
    */
  STATE_FOCUSED_OF_ACTIVE = WIDGET_STATE_FOCUSED_OF_ACTIVE(),
+};
+
+
+/**
+ * 控件鼠标光标常量定义。
+ *
+ */
+export enum TWidgetCursor {
+
+  /**
+   * 默认光标。
+   *
+   */
+ CURSOR_DEFAULT = WIDGET_CURSOR_DEFAULT(),
+
+  /**
+   * 文本选择光标。
+   *
+   */
+ CURSOR_EDIT = WIDGET_CURSOR_EDIT(),
+
+  /**
+   * 手指光标。
+   *
+   */
+ CURSOR_HAND = WIDGET_CURSOR_HAND(),
+
+  /**
+   * 等待光标。
+   *
+   */
+ CURSOR_WAIT = WIDGET_CURSOR_WAIT(),
+
+  /**
+   * 叉光标。
+   *
+   */
+ CURSOR_CROSS = WIDGET_CURSOR_CROSS(),
+
+  /**
+   * Slashed circle or crossbones。
+   *
+   */
+ CURSOR_NO = WIDGET_CURSOR_NO(),
+
+  /**
+   * Double arrow pointing northwest and southeast。
+   *
+   */
+ CURSOR_SIZENWSE = WIDGET_CURSOR_SIZENWSE(),
+
+  /**
+   * Double arrow pointing northeast and southwest。
+   *
+   */
+ CURSOR_SIZENESW = WIDGET_CURSOR_SIZENESW(),
+
+  /**
+   * Double arrow pointing west and east。
+   *
+   */
+ CURSOR_SIZEWE = WIDGET_CURSOR_SIZEWE(),
+
+  /**
+   * Double arrow pointing north and south。
+   *
+   */
+ CURSOR_SIZENS = WIDGET_CURSOR_SIZENS(),
+
+  /**
+   * Four pointed arrow pointing north, south, east, and west。
+   *
+   */
+ CURSOR_SIZEALL = WIDGET_CURSOR_SIZEALL(),
 };
 
 
@@ -9052,6 +9162,19 @@ export class TWidget {
 
  set name(v : string) {
    this.setName(v);
+ }
+
+
+  /**
+   * 鼠标光标图片名称。
+   *
+   */
+ get pointerCursor() : string {
+   return widget_t_get_prop_pointer_cursor(this.nativeObj);
+ }
+
+ set pointerCursor(v : string) {
+   this.setPointerCursor(v);
  }
 
 
@@ -18914,6 +19037,18 @@ export class TEdit extends TWidget {
 
 
   /**
+   * 设置软键盘上action按钮的文本。
+   * 
+   * @param action_text 软键盘上action按钮的文本。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setActionText(action_text : string) : TRet  {
+    return edit_set_action_text(this != null ? (this.nativeObj || this) : null, action_text);
+ }
+
+
+  /**
    * 设置编辑器的输入提示。
    * 
    * @param tips 输入提示。
@@ -19113,6 +19248,24 @@ export class TEdit extends TWidget {
 
  set trTips(v : string) {
    this.setTrTips(v);
+ }
+
+
+  /**
+   * 软键盘上action按钮的文本。内置取值有：
+   *
+   ** next 将焦点切换到下一个控件。
+   ** done 完成，关闭软键盘。
+   *
+   *也可以使用其它文本，比如send表示发送。这个需要自己实现相应的功能，处理EVT\_IM\_ACTION事件即可。
+   *
+   */
+ get actionText() : string {
+   return edit_t_get_prop_action_text(this.nativeObj);
+ }
+
+ set actionText(v : string) {
+   this.setActionText(v);
  }
 
 
@@ -20697,6 +20850,19 @@ export class TNativeWindow extends TObject {
    */
  setFullscreen(fullscreen : boolean) : TRet  {
     return native_window_set_fullscreen(this != null ? (this.nativeObj || this) : null, fullscreen);
+ }
+
+
+  /**
+   * 设置鼠标光标。
+   * 
+   * @param name 鼠标光标的名称。
+   * @param img 鼠标光标的图片。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setCursor(name : string, img : TBitmap) : TRet  {
+    return native_window_set_cursor(this != null ? (this.nativeObj || this) : null, name, img != null ? (img.nativeObj || img) : null);
  }
 
 };

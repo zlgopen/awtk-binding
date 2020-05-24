@@ -8022,13 +8022,13 @@ jsvalue_t get_WIDGET_PROP_CLOSABLE(
   return jsvalue_create_string(ctx, WIDGET_PROP_CLOSABLE);
 }
 
-jsvalue_t get_WIDGET_PROP_CURSOR(
+jsvalue_t get_WIDGET_PROP_POINTER_CURSOR(
     JSContext *ctx, 
     jsvalue_const_t this_val,
     int argc, 
     jsvalue_const_t *argv
   ) {
-  return jsvalue_create_string(ctx, WIDGET_PROP_CURSOR);
+  return jsvalue_create_string(ctx, WIDGET_PROP_POINTER_CURSOR);
 }
 
 jsvalue_t get_WIDGET_PROP_VALUE(
@@ -8245,6 +8245,15 @@ jsvalue_t get_WIDGET_PROP_MIN(
     jsvalue_const_t *argv
   ) {
   return jsvalue_create_string(ctx, WIDGET_PROP_MIN);
+}
+
+jsvalue_t get_WIDGET_PROP_ACTION_TEXT(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, WIDGET_PROP_ACTION_TEXT);
 }
 
 jsvalue_t get_WIDGET_PROP_TIPS(
@@ -9030,8 +9039,8 @@ ret_t widget_prop_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_WIDGET_PROP_TYPE, "WIDGET_PROP_TYPE", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_CLOSABLE",
                       JS_NewCFunction(ctx, get_WIDGET_PROP_CLOSABLE, "WIDGET_PROP_CLOSABLE", 1));
-  JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_CURSOR",
-                      JS_NewCFunction(ctx, get_WIDGET_PROP_CURSOR, "WIDGET_PROP_CURSOR", 1));
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_POINTER_CURSOR",
+                      JS_NewCFunction(ctx, get_WIDGET_PROP_POINTER_CURSOR, "WIDGET_PROP_POINTER_CURSOR", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_VALUE",
                       JS_NewCFunction(ctx, get_WIDGET_PROP_VALUE, "WIDGET_PROP_VALUE", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_LENGTH",
@@ -9080,6 +9089,8 @@ ret_t widget_prop_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_WIDGET_PROP_CLOSE_ANIM_HINT, "WIDGET_PROP_CLOSE_ANIM_HINT", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_MIN",
                       JS_NewCFunction(ctx, get_WIDGET_PROP_MIN, "WIDGET_PROP_MIN", 1));
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_ACTION_TEXT",
+                      JS_NewCFunction(ctx, get_WIDGET_PROP_ACTION_TEXT, "WIDGET_PROP_ACTION_TEXT", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_TIPS",
                       JS_NewCFunction(ctx, get_WIDGET_PROP_TIPS, "WIDGET_PROP_TIPS", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_TR_TIPS",
@@ -10100,6 +10111,15 @@ jsvalue_t get_WIDGET_STATE_OVER_OF_CHECKED(
   return jsvalue_create_string(ctx, WIDGET_STATE_OVER_OF_CHECKED);
 }
 
+jsvalue_t get_WIDGET_STATE_DISABLE_OF_CHECKED(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, WIDGET_STATE_DISABLE_OF_CHECKED);
+}
+
 jsvalue_t get_WIDGET_STATE_FOCUSED_OF_CHECKED(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -10134,6 +10154,15 @@ jsvalue_t get_WIDGET_STATE_OVER_OF_ACTIVE(
     jsvalue_const_t *argv
   ) {
   return jsvalue_create_string(ctx, WIDGET_STATE_OVER_OF_ACTIVE);
+}
+
+jsvalue_t get_WIDGET_STATE_DISABLE_OF_ACTIVE(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, WIDGET_STATE_DISABLE_OF_ACTIVE);
 }
 
 jsvalue_t get_WIDGET_STATE_FOCUSED_OF_ACTIVE(
@@ -10177,6 +10206,8 @@ ret_t widget_state_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_WIDGET_STATE_PRESSED_OF_CHECKED, "WIDGET_STATE_PRESSED_OF_CHECKED", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_STATE_OVER_OF_CHECKED",
                       JS_NewCFunction(ctx, get_WIDGET_STATE_OVER_OF_CHECKED, "WIDGET_STATE_OVER_OF_CHECKED", 1));
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_STATE_DISABLE_OF_CHECKED",
+                      JS_NewCFunction(ctx, get_WIDGET_STATE_DISABLE_OF_CHECKED, "WIDGET_STATE_DISABLE_OF_CHECKED", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_STATE_FOCUSED_OF_CHECKED",
                       JS_NewCFunction(ctx, get_WIDGET_STATE_FOCUSED_OF_CHECKED, "WIDGET_STATE_FOCUSED_OF_CHECKED", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_STATE_NORMAL_OF_ACTIVE",
@@ -10185,8 +10216,139 @@ ret_t widget_state_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_WIDGET_STATE_PRESSED_OF_ACTIVE, "WIDGET_STATE_PRESSED_OF_ACTIVE", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_STATE_OVER_OF_ACTIVE",
                       JS_NewCFunction(ctx, get_WIDGET_STATE_OVER_OF_ACTIVE, "WIDGET_STATE_OVER_OF_ACTIVE", 1));
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_STATE_DISABLE_OF_ACTIVE",
+                      JS_NewCFunction(ctx, get_WIDGET_STATE_DISABLE_OF_ACTIVE, "WIDGET_STATE_DISABLE_OF_ACTIVE", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_STATE_FOCUSED_OF_ACTIVE",
                       JS_NewCFunction(ctx, get_WIDGET_STATE_FOCUSED_OF_ACTIVE, "WIDGET_STATE_FOCUSED_OF_ACTIVE", 1));
+
+ jsvalue_unref(ctx, global_obj);
+
+ return RET_OK;
+}
+
+jsvalue_t get_WIDGET_CURSOR_DEFAULT(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, WIDGET_CURSOR_DEFAULT);
+}
+
+jsvalue_t get_WIDGET_CURSOR_EDIT(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, WIDGET_CURSOR_EDIT);
+}
+
+jsvalue_t get_WIDGET_CURSOR_HAND(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, WIDGET_CURSOR_HAND);
+}
+
+jsvalue_t get_WIDGET_CURSOR_WAIT(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, WIDGET_CURSOR_WAIT);
+}
+
+jsvalue_t get_WIDGET_CURSOR_CROSS(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, WIDGET_CURSOR_CROSS);
+}
+
+jsvalue_t get_WIDGET_CURSOR_NO(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, WIDGET_CURSOR_NO);
+}
+
+jsvalue_t get_WIDGET_CURSOR_SIZENWSE(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, WIDGET_CURSOR_SIZENWSE);
+}
+
+jsvalue_t get_WIDGET_CURSOR_SIZENESW(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, WIDGET_CURSOR_SIZENESW);
+}
+
+jsvalue_t get_WIDGET_CURSOR_SIZEWE(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, WIDGET_CURSOR_SIZEWE);
+}
+
+jsvalue_t get_WIDGET_CURSOR_SIZENS(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, WIDGET_CURSOR_SIZENS);
+}
+
+jsvalue_t get_WIDGET_CURSOR_SIZEALL(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, WIDGET_CURSOR_SIZEALL);
+}
+
+ret_t widget_cursor_t_init(JSContext *ctx) {
+  jsvalue_t global_obj = JS_GetGlobalObject(ctx);
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_CURSOR_DEFAULT",
+                      JS_NewCFunction(ctx, get_WIDGET_CURSOR_DEFAULT, "WIDGET_CURSOR_DEFAULT", 1));
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_CURSOR_EDIT",
+                      JS_NewCFunction(ctx, get_WIDGET_CURSOR_EDIT, "WIDGET_CURSOR_EDIT", 1));
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_CURSOR_HAND",
+                      JS_NewCFunction(ctx, get_WIDGET_CURSOR_HAND, "WIDGET_CURSOR_HAND", 1));
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_CURSOR_WAIT",
+                      JS_NewCFunction(ctx, get_WIDGET_CURSOR_WAIT, "WIDGET_CURSOR_WAIT", 1));
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_CURSOR_CROSS",
+                      JS_NewCFunction(ctx, get_WIDGET_CURSOR_CROSS, "WIDGET_CURSOR_CROSS", 1));
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_CURSOR_NO",
+                      JS_NewCFunction(ctx, get_WIDGET_CURSOR_NO, "WIDGET_CURSOR_NO", 1));
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_CURSOR_SIZENWSE",
+                      JS_NewCFunction(ctx, get_WIDGET_CURSOR_SIZENWSE, "WIDGET_CURSOR_SIZENWSE", 1));
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_CURSOR_SIZENESW",
+                      JS_NewCFunction(ctx, get_WIDGET_CURSOR_SIZENESW, "WIDGET_CURSOR_SIZENESW", 1));
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_CURSOR_SIZEWE",
+                      JS_NewCFunction(ctx, get_WIDGET_CURSOR_SIZEWE, "WIDGET_CURSOR_SIZEWE", 1));
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_CURSOR_SIZENS",
+                      JS_NewCFunction(ctx, get_WIDGET_CURSOR_SIZENS, "WIDGET_CURSOR_SIZENS", 1));
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_CURSOR_SIZEALL",
+                      JS_NewCFunction(ctx, get_WIDGET_CURSOR_SIZEALL, "WIDGET_CURSOR_SIZEALL", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -11722,6 +11884,19 @@ jsvalue_t wrap_widget_t_get_prop_name(
   return jret;
 }
 
+jsvalue_t wrap_widget_t_get_prop_pointer_cursor(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  widget_t* obj = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+
+  jret = jsvalue_create_string(ctx, obj->pointer_cursor);
+  return jret;
+}
+
 jsvalue_t wrap_widget_t_get_prop_tr_text(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -12112,6 +12287,8 @@ ret_t widget_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_widget_t_get_prop_h, "widget_t_get_prop_h", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_t_get_prop_name",
                       JS_NewCFunction(ctx, wrap_widget_t_get_prop_name, "widget_t_get_prop_name", 1));
+  JS_SetPropertyStr(ctx, global_obj, "widget_t_get_prop_pointer_cursor",
+                      JS_NewCFunction(ctx, wrap_widget_t_get_prop_pointer_cursor, "widget_t_get_prop_pointer_cursor", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_t_get_prop_tr_text",
                       JS_NewCFunction(ctx, wrap_widget_t_get_prop_tr_text, "widget_t_get_prop_tr_text", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_t_get_prop_style",
@@ -24695,6 +24872,25 @@ jsvalue_t wrap_edit_set_input_type(
   return jret;
 }
 
+jsvalue_t wrap_edit_set_action_text(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  char* action_text = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  ret = (ret_t)edit_set_action_text(widget, action_text);
+  jsvalue_free_str(ctx, action_text);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_edit_set_tips(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -24949,6 +25145,19 @@ jsvalue_t wrap_edit_t_get_prop_tr_tips(
   return jret;
 }
 
+jsvalue_t wrap_edit_t_get_prop_action_text(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  edit_t* obj = (edit_t*)jsvalue_get_pointer(ctx, argv[0], "edit_t*");
+
+  jret = jsvalue_create_string(ctx, obj->action_text);
+  return jret;
+}
+
 jsvalue_t wrap_edit_t_get_prop_keyboard(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -25044,6 +25253,8 @@ ret_t edit_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_edit_set_open_im_when_focused, "edit_set_open_im_when_focused", 1));
   JS_SetPropertyStr(ctx, global_obj, "edit_set_input_type",
                       JS_NewCFunction(ctx, wrap_edit_set_input_type, "edit_set_input_type", 1));
+  JS_SetPropertyStr(ctx, global_obj, "edit_set_action_text",
+                      JS_NewCFunction(ctx, wrap_edit_set_action_text, "edit_set_action_text", 1));
   JS_SetPropertyStr(ctx, global_obj, "edit_set_tips",
                       JS_NewCFunction(ctx, wrap_edit_set_tips, "edit_set_tips", 1));
   JS_SetPropertyStr(ctx, global_obj, "edit_set_tr_tips",
@@ -25078,6 +25289,8 @@ ret_t edit_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_edit_t_get_prop_tips, "edit_t_get_prop_tips", 1));
   JS_SetPropertyStr(ctx, global_obj, "edit_t_get_prop_tr_tips",
                       JS_NewCFunction(ctx, wrap_edit_t_get_prop_tr_tips, "edit_t_get_prop_tr_tips", 1));
+  JS_SetPropertyStr(ctx, global_obj, "edit_t_get_prop_action_text",
+                      JS_NewCFunction(ctx, wrap_edit_t_get_prop_action_text, "edit_t_get_prop_action_text", 1));
   JS_SetPropertyStr(ctx, global_obj, "edit_t_get_prop_keyboard",
                       JS_NewCFunction(ctx, wrap_edit_t_get_prop_keyboard, "edit_t_get_prop_keyboard", 1));
   JS_SetPropertyStr(ctx, global_obj, "edit_t_get_prop_input_type",
@@ -26672,6 +26885,26 @@ jsvalue_t wrap_native_window_set_fullscreen(
   return jret;
 }
 
+jsvalue_t wrap_native_window_set_cursor(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 3) {
+  ret_t ret = (ret_t)0;
+  native_window_t* win = (native_window_t*)jsvalue_get_pointer(ctx, argv[0], "native_window_t*");
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  bitmap_t* img = (bitmap_t*)jsvalue_get_pointer(ctx, argv[2], "bitmap_t*");
+  ret = (ret_t)native_window_set_cursor(win, name, img);
+  jsvalue_free_str(ctx, name);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 ret_t native_window_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
   JS_SetPropertyStr(ctx, global_obj, "native_window_move",
@@ -26690,6 +26923,8 @@ ret_t native_window_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_native_window_show_border, "native_window_show_border", 1));
   JS_SetPropertyStr(ctx, global_obj, "native_window_set_fullscreen",
                       JS_NewCFunction(ctx, wrap_native_window_set_fullscreen, "native_window_set_fullscreen", 1));
+  JS_SetPropertyStr(ctx, global_obj, "native_window_set_cursor",
+                      JS_NewCFunction(ctx, wrap_native_window_set_cursor, "native_window_set_cursor", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -28393,6 +28628,7 @@ ret_t awtk_js_init(JSContext *ctx) {
   window_stage_t_init(ctx);
   window_closable_t_init(ctx);
   widget_state_t_init(ctx);
+  widget_cursor_t_init(ctx);
   widget_t_init(ctx);
   ret_t_init(ctx);
   timer_manager_t_init(ctx);

@@ -42,7 +42,7 @@ var searchData=
   ['gettext_287',['GetText',['../class_t_clip_board.html#af53d6d2b3aa390ff09dd5a3fd041cbb4',1,'TClipBoard']]],
   ['gettextalign_288',['GetTextAlign',['../class_t_vgcanvas.html#ad69ede3dc5f7dad1d229e16c3dc2da2e',1,'TVgcanvas']]],
   ['gettextbaseline_289',['GetTextBaseline',['../class_t_vgcanvas.html#a3c2662e85440828207bdd24f2f3c5295',1,'TVgcanvas']]],
-  ['gettime_290',['GetTime',['../class_t_event.html#a2095563399b7dc00443046abd71485d3',1,'TEvent']]],
+  ['gettime_290',['GetTime',['../class_t_event.html#ae3ab3af3ce97f88ce711b22f56526618',1,'TEvent']]],
   ['gettype_291',['GetType',['../class_t_event.html#a7501c5161e93cccdf1fd6411d87a7187',1,'TEvent::GetType()'],['../class_t_object.html#acae28bf5cc087c2a7a6892755816403b',1,'TObject::GetType()']]],
   ['getw_292',['GetW',['../class_t_rect.html#a31ee91aae879a629ad590f1e47c0b8ee',1,'TRect::GetW()'],['../class_t_bitmap.html#a74eeb69cbd3aab2a8ef0f98a65689619',1,'TBitmap::GetW()'],['../class_t_vgcanvas.html#a4ac1b13a17217b7f366d65a010b0a685',1,'TVgcanvas::GetW()']]],
   ['getx_293',['GetX',['../class_t_rect.html#a9cc205c171035f79f00570531b5047fa',1,'TRect']]],

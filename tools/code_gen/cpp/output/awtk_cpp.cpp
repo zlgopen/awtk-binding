@@ -11,7 +11,7 @@
    return ((event_t*)(this->nativeObj))->type;
  }
 
- int32_t TEvent::GetTime() const {
+ uint64_t TEvent::GetTime() const {
    return ((event_t*)(this->nativeObj))->time;
  }
 
@@ -1129,6 +1129,10 @@
 
  char* TWidget::GetName() const {
    return ((widget_t*)(this->nativeObj))->name;
+ }
+
+ char* TWidget::GetPointerCursor() const {
+   return ((widget_t*)(this->nativeObj))->pointer_cursor;
  }
 
  char* TWidget::GetTrText() const {
@@ -3131,6 +3135,10 @@
    return edit_set_input_type(((widget_t*)(this->nativeObj)), type);
  }
 
+ ret_t TEdit::SetActionText(char* action_text)  {
+   return edit_set_action_text(((widget_t*)(this->nativeObj)), action_text);
+ }
+
  ret_t TEdit::SetTips(char* tips)  {
    return edit_set_tips(((widget_t*)(this->nativeObj)), tips);
  }
@@ -3197,6 +3205,10 @@
 
  char* TEdit::GetTrTips() const {
    return ((edit_t*)(this->nativeObj))->tr_tips;
+ }
+
+ char* TEdit::GetActionText() const {
+   return ((edit_t*)(this->nativeObj))->action_text;
  }
 
  char* TEdit::GetKeyboard() const {
@@ -3481,6 +3493,10 @@
 
  ret_t TNativeWindow::SetFullscreen(bool fullscreen)  {
    return native_window_set_fullscreen(((native_window_t*)(this->nativeObj)), fullscreen);
+ }
+
+ ret_t TNativeWindow::SetCursor(const char* name, TBitmap& img)  {
+   return native_window_set_cursor(((native_window_t*)(this->nativeObj)), name, ((bitmap_t*)(img.nativeObj)));
  }
 
  TWidget TDialog::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {

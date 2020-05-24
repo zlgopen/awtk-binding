@@ -4832,7 +4832,7 @@ class TWidgetProp:
   # 鼠标指针。
   #
   #
-  CURSOR = WIDGET_PROP_CURSOR();
+  POINTER_CURSOR = WIDGET_PROP_POINTER_CURSOR();
 
   #
   # 值。
@@ -4977,6 +4977,12 @@ class TWidgetProp:
   #
   #
   MIN = WIDGET_PROP_MIN();
+
+  #
+  # 软键盘上action按钮的文本。
+  #
+  #
+  ACTION_TEXT = WIDGET_PROP_ACTION_TEXT();
 
   #
   # 提示信息。
@@ -5959,6 +5965,12 @@ class TWidgetState:
   STATE_OVER_OF_CHECKED = WIDGET_STATE_OVER_OF_CHECKED();
 
   #
+  # 禁用状态(选中项)。
+  #
+  #
+  STATE_DISABLE_OF_CHECKED = WIDGET_STATE_DISABLE_OF_CHECKED();
+
+  #
   # 焦点状态(选中项)。
   #
   #
@@ -5983,10 +5995,88 @@ class TWidgetState:
   STATE_OVER_OF_ACTIVE = WIDGET_STATE_OVER_OF_ACTIVE();
 
   #
+  # 禁用状态(当前项)。
+  #
+  #
+  STATE_DISABLE_OF_ACTIVE = WIDGET_STATE_DISABLE_OF_ACTIVE();
+
+  #
   # 焦点状态(当前项)。
   #
   #
   STATE_FOCUSED_OF_ACTIVE = WIDGET_STATE_FOCUSED_OF_ACTIVE();
+
+#
+# 控件鼠标光标常量定义。
+#
+#
+class TWidgetCursor: 
+
+  #
+  # 默认光标。
+  #
+  #
+  CURSOR_DEFAULT = WIDGET_CURSOR_DEFAULT();
+
+  #
+  # 文本选择光标。
+  #
+  #
+  CURSOR_EDIT = WIDGET_CURSOR_EDIT();
+
+  #
+  # 手指光标。
+  #
+  #
+  CURSOR_HAND = WIDGET_CURSOR_HAND();
+
+  #
+  # 等待光标。
+  #
+  #
+  CURSOR_WAIT = WIDGET_CURSOR_WAIT();
+
+  #
+  # 叉光标。
+  #
+  #
+  CURSOR_CROSS = WIDGET_CURSOR_CROSS();
+
+  #
+  # Slashed circle or crossbones。
+  #
+  #
+  CURSOR_NO = WIDGET_CURSOR_NO();
+
+  #
+  # Double arrow pointing northwest and southeast。
+  #
+  #
+  CURSOR_SIZENWSE = WIDGET_CURSOR_SIZENWSE();
+
+  #
+  # Double arrow pointing northeast and southwest。
+  #
+  #
+  CURSOR_SIZENESW = WIDGET_CURSOR_SIZENESW();
+
+  #
+  # Double arrow pointing west and east。
+  #
+  #
+  CURSOR_SIZEWE = WIDGET_CURSOR_SIZEWE();
+
+  #
+  # Double arrow pointing north and south。
+  #
+  #
+  CURSOR_SIZENS = WIDGET_CURSOR_SIZENS();
+
+  #
+  # Four pointed arrow pointing north, south, east, and west。
+  #
+  #
+  CURSOR_SIZEALL = WIDGET_CURSOR_SIZEALL();
 
 #
 # widget_t* button = button_create(win, 10, 10, 128, 30);
@@ -6997,6 +7087,19 @@ class TWidget(object):
   @name.setter
   def name(self, v):
    this.set_name(v);
+
+
+  #
+  # 鼠标光标图片名称。
+  #
+  #
+  @property
+  def pointer_cursor(self):
+    return widget_t_get_prop_pointer_cursor(self.nativeObj);
+
+  @pointer_cursor.setter
+  def pointer_cursor(self, v):
+   this.set_pointer_cursor(v);
 
 
   #
@@ -16492,6 +16595,17 @@ class TEdit (TWidget):
 
 
   #
+  # 设置软键盘上action按钮的文本。
+  # 
+  # @param action_text 软键盘上action按钮的文本。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_action_text(self, action_text): 
+    return edit_set_action_text(awtk_get_native_obj(self), action_text);
+
+
+  #
   # 设置编辑器的输入提示。
   # 
   # @param tips 输入提示。
@@ -16686,6 +16800,24 @@ class TEdit (TWidget):
   @tr_tips.setter
   def tr_tips(self, v):
    this.set_tr_tips(v);
+
+
+  #
+  # 软键盘上action按钮的文本。内置取值有：
+  #
+  #* next 将焦点切换到下一个控件。
+  #* done 完成，关闭软键盘。
+  #
+  #也可以使用其它文本，比如send表示发送。这个需要自己实现相应的功能，处理EVT\_IM\_ACTION事件即可。
+  #
+  #
+  @property
+  def action_text(self):
+    return edit_t_get_prop_action_text(self.nativeObj);
+
+  @action_text.setter
+  def action_text(self, v):
+   this.set_action_text(v);
 
 
   #
@@ -18212,6 +18344,18 @@ class TNativeWindow (TObject):
   #
   def set_fullscreen(self, fullscreen): 
     return native_window_set_fullscreen(awtk_get_native_obj(self), fullscreen);
+
+
+  #
+  # 设置鼠标光标。
+  # 
+  # @param name 鼠标光标的名称。
+  # @param img 鼠标光标的图片。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_cursor(self, name, img): 
+    return native_window_set_cursor(awtk_get_native_obj(self), name, awtk_get_native_obj(img));
 
 
 #

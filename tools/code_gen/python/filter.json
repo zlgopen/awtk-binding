@@ -76,7 +76,7 @@
       {
         "name": "time",
         "desc": "事件发生的时间。",
-        "type": "int32_t",
+        "type": "uint64_t",
         "annotation": {
           "readable": true,
           "scriptable": true
@@ -6321,7 +6321,7 @@
       },
       {
         "desc": "鼠标指针。",
-        "name": "WIDGET_PROP_CURSOR"
+        "name": "WIDGET_PROP_POINTER_CURSOR"
       },
       {
         "desc": "值。",
@@ -6418,6 +6418,10 @@
       {
         "desc": "最小值。",
         "name": "WIDGET_PROP_MIN"
+      },
+      {
+        "desc": "软键盘上action按钮的文本。",
+        "name": "WIDGET_PROP_ACTION_TEXT"
       },
       {
         "desc": "提示信息。",
@@ -7110,6 +7114,10 @@
         "name": "WIDGET_STATE_OVER_OF_CHECKED"
       },
       {
+        "desc": "禁用状态(选中项)。",
+        "name": "WIDGET_STATE_DISABLE_OF_CHECKED"
+      },
+      {
         "desc": "焦点状态(选中项)。",
         "name": "WIDGET_STATE_FOCUSED_OF_CHECKED"
       },
@@ -7126,12 +7134,74 @@
         "name": "WIDGET_STATE_OVER_OF_ACTIVE"
       },
       {
+        "desc": "禁用状态(当前项)。",
+        "name": "WIDGET_STATE_DISABLE_OF_ACTIVE"
+      },
+      {
         "desc": "焦点状态(当前项)。",
         "name": "WIDGET_STATE_FOCUSED_OF_ACTIVE"
       }
     ],
     "header": "base/widget_consts.h",
     "name": "widget_state_t",
+    "prefix": "WIDGET_",
+    "annotation": {
+      "scriptable": true,
+      "string": true
+    },
+    "level": 1
+  },
+  {
+    "type": "enum",
+    "desc": "控件鼠标光标常量定义。",
+    "consts": [
+      {
+        "desc": "默认光标。",
+        "name": "WIDGET_CURSOR_DEFAULT"
+      },
+      {
+        "desc": "文本选择光标。",
+        "name": "WIDGET_CURSOR_EDIT"
+      },
+      {
+        "desc": "手指光标。",
+        "name": "WIDGET_CURSOR_HAND"
+      },
+      {
+        "desc": "等待光标。",
+        "name": "WIDGET_CURSOR_WAIT"
+      },
+      {
+        "desc": "叉光标。",
+        "name": "WIDGET_CURSOR_CROSS"
+      },
+      {
+        "desc": "Slashed circle or crossbones。",
+        "name": "WIDGET_CURSOR_NO"
+      },
+      {
+        "desc": "Double arrow pointing northwest and southeast。",
+        "name": "WIDGET_CURSOR_SIZENWSE"
+      },
+      {
+        "desc": "Double arrow pointing northeast and southwest。",
+        "name": "WIDGET_CURSOR_SIZENESW"
+      },
+      {
+        "desc": "Double arrow pointing west and east。",
+        "name": "WIDGET_CURSOR_SIZEWE"
+      },
+      {
+        "desc": "Double arrow pointing north and south。",
+        "name": "WIDGET_CURSOR_SIZENS"
+      },
+      {
+        "desc": "Four pointed arrow pointing north, south, east, and west。",
+        "name": "WIDGET_CURSOR_SIZEALL"
+      }
+    ],
+    "header": "base/widget_consts.h",
+    "name": "widget_cursor_t",
     "prefix": "WIDGET_",
     "annotation": {
       "scriptable": true,
@@ -9208,6 +9278,19 @@
       {
         "name": "name",
         "desc": "控件名字。",
+        "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "pointer_cursor",
+        "desc": "鼠标光标图片名称。",
         "type": "char*",
         "annotation": {
           "set_prop": true,
@@ -22161,6 +22244,29 @@
           },
           {
             "type": "char*",
+            "name": "action_text",
+            "desc": "软键盘上action按钮的文本。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置软键盘上action按钮的文本。",
+        "name": "edit_set_action_text",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          },
+          {
+            "type": "char*",
             "name": "tips",
             "desc": "输入提示。"
           }
@@ -22437,6 +22543,19 @@
       {
         "name": "tr_tips",
         "desc": "保存用于翻译的提示信息。",
+        "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "action_text",
+        "desc": "软键盘上action按钮的文本。内置取值有：\n\n* next 将焦点切换到下一个控件。\n* done 完成，关闭软键盘。\n\n也可以使用其它文本，比如send表示发送。这个需要自己实现相应的功能，处理EVT\\_IM\\_ACTION事件即可。",
         "type": "char*",
         "annotation": {
           "set_prop": true,
@@ -24517,6 +24636,34 @@
         },
         "desc": "是否全屏。",
         "name": "native_window_set_fullscreen",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "native_window_t*",
+            "name": "win",
+            "desc": "win对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "鼠标光标的名称。"
+          },
+          {
+            "type": "bitmap_t*",
+            "name": "img",
+            "desc": "鼠标光标的图片。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置鼠标光标。",
+        "name": "native_window_set_cursor",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
