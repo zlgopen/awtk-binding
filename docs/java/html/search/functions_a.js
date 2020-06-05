@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['maximize_1856',['maximize',['../classawtk_1_1_t_native_window.html#a17e75ea083330087dee01ac4087d1535',1,'awtk::TNativeWindow']]],
-  ['measuretext_1857',['measureText',['../classawtk_1_1_t_canvas.html#a8ef35196e05c486a40b00fe2fc5c8dc0',1,'awtk.TCanvas.measureText()'],['../classawtk_1_1_t_vgcanvas.html#aac9a70b2d4e742624a411d4e27ebfb79',1,'awtk.TVgcanvas.measureText()']]],
-  ['minimize_1858',['minimize',['../classawtk_1_1_t_native_window.html#aef4a8a5d321879ad9fa4a661b2f5be1a',1,'awtk::TNativeWindow']]],
-  ['modal_1859',['modal',['../classawtk_1_1_t_dialog.html#ac55fd4ece3cfc03be8e14abc57b86248',1,'awtk::TDialog']]],
-  ['modify_1860',['modify',['../classawtk_1_1_t_timer.html#a2b2196b6aeac5988564497a3b5a12dcb',1,'awtk::TTimer']]],
-  ['move_1861',['move',['../classawtk_1_1_t_native_window.html#a3260a579345ba8cea1ce6b02d83a53e2',1,'awtk::TNativeWindow']]],
-  ['moveto_1862',['moveTo',['../classawtk_1_1_t_vgcanvas.html#ae7e3562cfb3a47165926caa1eed3b514',1,'awtk::TVgcanvas']]],
-  ['ms_1863',['ms',['../classawtk_1_1_t_time_now.html#a7846d34d60605f991cafb44fb4351c5d',1,'awtk::TTimeNow']]]
+  ['maximize_1859',['maximize',['../classawtk_1_1_t_native_window.html#a17e75ea083330087dee01ac4087d1535',1,'awtk::TNativeWindow']]],
+  ['measuretext_1860',['measureText',['../classawtk_1_1_t_canvas.html#a8ef35196e05c486a40b00fe2fc5c8dc0',1,'awtk.TCanvas.measureText()'],['../classawtk_1_1_t_vgcanvas.html#aac9a70b2d4e742624a411d4e27ebfb79',1,'awtk.TVgcanvas.measureText()']]],
+  ['minimize_1861',['minimize',['../classawtk_1_1_t_native_window.html#aef4a8a5d321879ad9fa4a661b2f5be1a',1,'awtk::TNativeWindow']]],
+  ['modal_1862',['modal',['../classawtk_1_1_t_dialog.html#ac55fd4ece3cfc03be8e14abc57b86248',1,'awtk::TDialog']]],
+  ['modify_1863',['modify',['../classawtk_1_1_t_timer.html#a2b2196b6aeac5988564497a3b5a12dcb',1,'awtk::TTimer']]],
+  ['move_1864',['move',['../classawtk_1_1_t_native_window.html#a3260a579345ba8cea1ce6b02d83a53e2',1,'awtk::TNativeWindow']]],
+  ['moveto_1865',['moveTo',['../classawtk_1_1_t_vgcanvas.html#ae7e3562cfb3a47165926caa1eed3b514',1,'awtk::TVgcanvas']]],
+  ['ms_1866',['ms',['../classawtk_1_1_t_time_now.html#a7846d34d60605f991cafb44fb4351c5d',1,'awtk::TTimeNow']]]
 ];
