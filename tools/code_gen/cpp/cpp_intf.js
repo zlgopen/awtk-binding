@@ -130,6 +130,8 @@ class CppIntfGenerator extends CppGenerator {
     this.result = '#ifndef AWTK_CPP_HPP\n';
     this.result += '#define AWTK_CPP_HPP\n';
     this.result += '#include "awtk.h"\n';
+    this.result += '#include "conf_io/app_conf.h"\n';
+
     this.result += 'class TValue;\n';
     this.result += 'class TRect;\n';
     this.result += 'class TObject;\n';

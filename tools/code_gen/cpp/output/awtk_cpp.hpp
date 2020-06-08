@@ -1,6 +1,7 @@
 ﻿#ifndef AWTK_CPP_HPP
 #define AWTK_CPP_HPP
 #include "awtk.h"
+#include "conf_io/app_conf.h"
 class TValue;
 class TRect;
 class TObject;
