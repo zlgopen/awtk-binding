@@ -2730,6 +2730,18 @@
         "name": "EVT_WIDGET_REMOVE_CHILD"
       },
       {
+        "desc": "scroll view开始滚动(event_t)。",
+        "name": "EVT_SCROLL_START"
+      },
+      {
+        "desc": "scroll view滚动(event_t)。",
+        "name": "EVT_SCROLL"
+      },
+      {
+        "desc": "scroll view结束滚动(event_t)。",
+        "name": "EVT_SCROLL_END"
+      },
+      {
         "desc": "event queue其它请求编号起始值。",
         "name": "EVT_REQ_START"
       },
@@ -18454,7 +18466,23 @@
         }
       }
     ],
-    "events": [],
+    "events": [
+      {
+        "name": "EVT_SCROLL_START",
+        "desc": "开始滚动事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_SCROLL_END",
+        "desc": "结束滚动事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_SCROLL",
+        "desc": "滚动事件。",
+        "type": "event_t"
+      }
+    ],
     "properties": [
       {
         "name": "virtual_w",
@@ -20045,6 +20073,81 @@
           "constructor": true,
           "scriptable": true
         },
+        "desc": "创建app_bar对象",
+        "name": "app_bar_create",
+        "return": {
+          "type": "widget_t*",
+          "desc": "对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "app_bar对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
+        "desc": "转换为app_bar对象(供脚本语言使用)。",
+        "name": "app_bar_cast",
+        "return": {
+          "type": "widget_t*",
+          "desc": "app_bar对象。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [],
+    "header": "widgets/app_bar.h",
+    "desc": "app_bar控件。\n\n一个简单的容器控件，一般在窗口的顶部，用于显示本窗口的状态和信息。\n\n它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。\n子控件的布局可用layout\\_children属性指定。\n请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。\n\napp\\_bar\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于app\\_bar\\_t控件。\n\n在xml中使用\"app\\_bar\"标签创建app\\_bar。如：\n\n```xml\n<app_bar x=\"0\" y=\"0\" w=\"100%\" h=\"30\" >\n<label x=\"0\" y=\"0\" w=\"100%\" h=\"100%\" text=\"Basic Controls\" />\n</app_bar>\n```\n\n在c代码中使用函数app\\_bar\\_create创建app\\_bar。如：\n\n```c\nwidget_t* app_bar = app_bar_create(win, 0, 0, 320, 30);\n```\n\n可用通过style来设置控件的显示风格，如背景颜色等。如：\n\n```xml\n<style name=\"default\" border_color=\"#a0a0a0\">\n<normal     bg_color=\"#f0f0f0\" />\n</style>\n```",
+    "name": "app_bar_t",
+    "parent": "widget_t",
+    "annotation": {
+      "scriptable": true,
+      "design": true,
+      "widget": true
+    },
+    "level": 2
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "parent",
+            "desc": "父控件"
+          },
+          {
+            "type": "xy_t",
+            "name": "x",
+            "desc": "x坐标"
+          },
+          {
+            "type": "xy_t",
+            "name": "y",
+            "desc": "y坐标"
+          },
+          {
+            "type": "wh_t",
+            "name": "w",
+            "desc": "宽度"
+          },
+          {
+            "type": "wh_t",
+            "name": "h",
+            "desc": "高度"
+          }
+        ],
+        "annotation": {
+          "constructor": true,
+          "scriptable": true
+        },
         "desc": "创建rich_text对象",
         "name": "rich_text_create",
         "return": {
@@ -20141,73 +20244,42 @@
       {
         "params": [
           {
-            "type": "widget_t*",
-            "name": "parent",
-            "desc": "父控件"
-          },
-          {
-            "type": "xy_t",
-            "name": "x",
-            "desc": "x坐标"
-          },
-          {
-            "type": "xy_t",
-            "name": "y",
-            "desc": "y坐标"
-          },
-          {
-            "type": "wh_t",
-            "name": "w",
-            "desc": "宽度"
-          },
-          {
-            "type": "wh_t",
-            "name": "h",
-            "desc": "高度"
-          }
-        ],
-        "annotation": {
-          "constructor": true,
-          "scriptable": true
-        },
-        "desc": "创建app_bar对象",
-        "name": "app_bar_create",
-        "return": {
-          "type": "widget_t*",
-          "desc": "对象。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "widget_t*",
-            "name": "widget",
-            "desc": "app_bar对象。"
+            "type": "event_t*",
+            "name": "event",
+            "desc": "event对象。"
           }
         ],
         "annotation": {
           "cast": true,
           "scriptable": true
         },
-        "desc": "转换为app_bar对象(供脚本语言使用)。",
-        "name": "app_bar_cast",
+        "desc": "把event对象转orientation_event_t对象，主要给脚本语言使用。",
+        "name": "orientation_event_cast",
         "return": {
-          "type": "widget_t*",
-          "desc": "app_bar对象。"
+          "type": "orientation_event_t*",
+          "desc": "event对象。"
         }
       }
     ],
     "events": [],
-    "properties": [],
-    "header": "widgets/app_bar.h",
-    "desc": "app_bar控件。\n\n一个简单的容器控件，一般在窗口的顶部，用于显示本窗口的状态和信息。\n\n它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。\n子控件的布局可用layout\\_children属性指定。\n请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。\n\napp\\_bar\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于app\\_bar\\_t控件。\n\n在xml中使用\"app\\_bar\"标签创建app\\_bar。如：\n\n```xml\n<app_bar x=\"0\" y=\"0\" w=\"100%\" h=\"30\" >\n<label x=\"0\" y=\"0\" w=\"100%\" h=\"100%\" text=\"Basic Controls\" />\n</app_bar>\n```\n\n在c代码中使用函数app\\_bar\\_create创建app\\_bar。如：\n\n```c\nwidget_t* app_bar = app_bar_create(win, 0, 0, 320, 30);\n```\n\n可用通过style来设置控件的显示风格，如背景颜色等。如：\n\n```xml\n<style name=\"default\" border_color=\"#a0a0a0\">\n<normal     bg_color=\"#f0f0f0\" />\n</style>\n```",
-    "name": "app_bar_t",
-    "parent": "widget_t",
+    "properties": [
+      {
+        "name": "orientation",
+        "desc": "屏幕方向。",
+        "type": "int32_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      }
+    ],
+    "header": "base/events.h",
+    "desc": "滚轮事件。",
+    "name": "orientation_event_t",
     "annotation": {
-      "scriptable": true,
-      "design": true,
-      "widget": true
+      "scriptable": true
     },
+    "parent": "event_t",
     "level": 2
   },
   {
@@ -20675,10 +20747,10 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转orientation_event_t对象，主要给脚本语言使用。",
-        "name": "orientation_event_cast",
+        "desc": "把event对象转pointer_event_t对象，主要给脚本语言使用。",
+        "name": "pointer_event_cast",
         "return": {
-          "type": "orientation_event_t*",
+          "type": "pointer_event_t*",
           "desc": "event对象。"
         }
       }
@@ -20686,9 +20758,81 @@
     "events": [],
     "properties": [
       {
-        "name": "orientation",
-        "desc": "屏幕方向。",
-        "type": "int32_t",
+        "name": "x",
+        "desc": "x坐标。",
+        "type": "xy_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "y",
+        "desc": "y坐标。",
+        "type": "xy_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "button",
+        "desc": "button。",
+        "type": "uint8_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "pressed",
+        "desc": "指针是否按下。",
+        "type": "bool_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "alt",
+        "desc": "alt键是否按下。",
+        "type": "bool_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "ctrl",
+        "desc": "ctrl键是否按下。",
+        "type": "bool_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "cmd",
+        "desc": "cmd键是否按下。",
+        "type": "bool_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "menu",
+        "desc": "menu键是否按下。",
+        "type": "bool_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "shift",
+        "desc": "shift键是否按下。",
+        "type": "bool_t",
         "annotation": {
           "readable": true,
           "scriptable": true
@@ -20696,8 +20840,8 @@
       }
     ],
     "header": "base/events.h",
-    "desc": "滚轮事件。",
-    "name": "orientation_event_t",
+    "desc": "指针事件。",
+    "name": "pointer_event_t",
     "annotation": {
       "scriptable": true
     },
@@ -21435,10 +21579,10 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转pointer_event_t对象，主要给脚本语言使用。",
-        "name": "pointer_event_cast",
+        "desc": "把event对象转key_event_t对象，主要给脚本语言使用。",
+        "name": "key_event_cast",
         "return": {
-          "type": "pointer_event_t*",
+          "type": "key_event_t*",
           "desc": "event对象。"
         }
       }
@@ -21446,36 +21590,9 @@
     "events": [],
     "properties": [
       {
-        "name": "x",
-        "desc": "x坐标。",
-        "type": "xy_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "y",
-        "desc": "y坐标。",
-        "type": "xy_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "button",
-        "desc": "button。",
-        "type": "uint8_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "pressed",
-        "desc": "指针是否按下。",
-        "type": "bool_t",
+        "name": "key",
+        "desc": "键值。",
+        "type": "uint32_t",
         "annotation": {
           "readable": true,
           "scriptable": true
@@ -21491,8 +21608,71 @@
         }
       },
       {
+        "name": "lalt",
+        "desc": "left alt键是否按下。",
+        "type": "bool_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "ralt",
+        "desc": "right alt键是否按下。",
+        "type": "bool_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
         "name": "ctrl",
-        "desc": "ctrl键是否按下。",
+        "desc": "right alt键是否按下。\nctrl键是否按下。",
+        "type": "bool_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "lctrl",
+        "desc": "left ctrl键是否按下。",
+        "type": "bool_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "rctrl",
+        "desc": "right ctrl键是否按下。",
+        "type": "bool_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "shift",
+        "desc": "shift键是否按下。",
+        "type": "bool_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "lshift",
+        "desc": "left shift键是否按下。",
+        "type": "bool_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "rshift",
+        "desc": "right shift键是否按下。",
         "type": "bool_t",
         "annotation": {
           "readable": true,
@@ -21501,7 +21681,7 @@
       },
       {
         "name": "cmd",
-        "desc": "cmd键是否按下。",
+        "desc": "left shift键是否按下。\ncmd/win键是否按下。",
         "type": "bool_t",
         "annotation": {
           "readable": true,
@@ -21518,8 +21698,8 @@
         }
       },
       {
-        "name": "shift",
-        "desc": "shift键是否按下。",
+        "name": "capslock",
+        "desc": "capslock键是否按下。",
         "type": "bool_t",
         "annotation": {
           "readable": true,
@@ -21528,8 +21708,8 @@
       }
     ],
     "header": "base/events.h",
-    "desc": "指针事件。",
-    "name": "pointer_event_t",
+    "desc": "按键事件。",
+    "name": "key_event_t",
     "annotation": {
       "scriptable": true
     },
@@ -22858,158 +23038,6 @@
       "design": true,
       "widget": true
     },
-    "level": 2
-  },
-  {
-    "type": "class",
-    "methods": [
-      {
-        "params": [
-          {
-            "type": "event_t*",
-            "name": "event",
-            "desc": "event对象。"
-          }
-        ],
-        "annotation": {
-          "cast": true,
-          "scriptable": true
-        },
-        "desc": "把event对象转key_event_t对象，主要给脚本语言使用。",
-        "name": "key_event_cast",
-        "return": {
-          "type": "key_event_t*",
-          "desc": "event对象。"
-        }
-      }
-    ],
-    "events": [],
-    "properties": [
-      {
-        "name": "key",
-        "desc": "键值。",
-        "type": "uint32_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "alt",
-        "desc": "alt键是否按下。",
-        "type": "bool_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "lalt",
-        "desc": "left alt键是否按下。",
-        "type": "bool_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "ralt",
-        "desc": "right alt键是否按下。",
-        "type": "bool_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "ctrl",
-        "desc": "right alt键是否按下。\nctrl键是否按下。",
-        "type": "bool_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "lctrl",
-        "desc": "left ctrl键是否按下。",
-        "type": "bool_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "rctrl",
-        "desc": "right ctrl键是否按下。",
-        "type": "bool_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "shift",
-        "desc": "shift键是否按下。",
-        "type": "bool_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "lshift",
-        "desc": "left shift键是否按下。",
-        "type": "bool_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "rshift",
-        "desc": "right shift键是否按下。",
-        "type": "bool_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "cmd",
-        "desc": "left shift键是否按下。\ncmd/win键是否按下。",
-        "type": "bool_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "menu",
-        "desc": "menu键是否按下。",
-        "type": "bool_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "capslock",
-        "desc": "capslock键是否按下。",
-        "type": "bool_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      }
-    ],
-    "header": "base/events.h",
-    "desc": "按键事件。",
-    "name": "key_event_t",
-    "annotation": {
-      "scriptable": true
-    },
-    "parent": "event_t",
     "level": 2
   },
   {
@@ -24823,6 +24851,43 @@
       {
         "params": [
           {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "calibration_win对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
+        "desc": "转换为calibration_win对象(供脚本语言使用)。",
+        "name": "calibration_win_cast",
+        "return": {
+          "type": "widget_t*",
+          "desc": "calibration_win对象。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [],
+    "header": "widgets/calibration_win.h",
+    "desc": "电阻屏校准窗口。\n\ncalibration\\_win\\_t是[window\\_base\\_t](window_base_t.md)的子类控件，\nwindow\\_base\\_t的函数均适用于calibration\\_win\\_t控件。\n\n在xml中使用\"calibration\\_win\"标签创建电阻屏校准窗口。如：\n\n```xml\n<calibration_win name=\"cali\" w=\"100%\" h=\"100%\" text=\"Please click the center of cross\">\n</calibration_win>\n```\n\n> 更多用法请参考：\n[window.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/calibration_win.xml)\n\n在c代码中使用函数calibration\\_win\\_create创建窗口。如：\n\n```c\nwidget_t* win = calibration_win_create(NULL, 0, 0, 320, 480);\n```\n\n通过calibration\\_win\\_set\\_on\\_done注册回调函数，用于保存校准数据。",
+    "name": "calibration_win_t",
+    "parent": "window_base_t",
+    "annotation": {
+      "scriptable": true,
+      "design": true,
+      "widget": true,
+      "window": true
+    },
+    "level": 3
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
             "type": "native_window_t*",
             "name": "win",
             "desc": "win对象。"
@@ -25424,43 +25489,6 @@
     "parent": "object_t",
     "annotation": {
       "scriptable": true
-    },
-    "level": 3
-  },
-  {
-    "type": "class",
-    "methods": [
-      {
-        "params": [
-          {
-            "type": "widget_t*",
-            "name": "widget",
-            "desc": "calibration_win对象。"
-          }
-        ],
-        "annotation": {
-          "cast": true,
-          "scriptable": true
-        },
-        "desc": "转换为calibration_win对象(供脚本语言使用)。",
-        "name": "calibration_win_cast",
-        "return": {
-          "type": "widget_t*",
-          "desc": "calibration_win对象。"
-        }
-      }
-    ],
-    "events": [],
-    "properties": [],
-    "header": "widgets/calibration_win.h",
-    "desc": "电阻屏校准窗口。\n\ncalibration\\_win\\_t是[window\\_base\\_t](window_base_t.md)的子类控件，\nwindow\\_base\\_t的函数均适用于calibration\\_win\\_t控件。\n\n在xml中使用\"calibration\\_win\"标签创建电阻屏校准窗口。如：\n\n```xml\n<calibration_win name=\"cali\" w=\"100%\" h=\"100%\" text=\"Please click the center of cross\">\n</calibration_win>\n```\n\n> 更多用法请参考：\n[window.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/calibration_win.xml)\n\n在c代码中使用函数calibration\\_win\\_create创建窗口。如：\n\n```c\nwidget_t* win = calibration_win_create(NULL, 0, 0, 320, 480);\n```\n\n通过calibration\\_win\\_set\\_on\\_done注册回调函数，用于保存校准数据。",
-    "name": "calibration_win_t",
-    "parent": "window_base_t",
-    "annotation": {
-      "scriptable": true,
-      "design": true,
-      "widget": true,
-      "window": true
     },
     "level": 3
   },

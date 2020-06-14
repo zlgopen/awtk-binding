@@ -194,6 +194,9 @@ declare function EVT_REQUEST_QUIT_APP();
 declare function EVT_THEME_CHANGED();
 declare function EVT_WIDGET_ADD_CHILD();
 declare function EVT_WIDGET_REMOVE_CHILD();
+declare function EVT_SCROLL_START();
+declare function EVT_SCROLL();
+declare function EVT_SCROLL_END();
 declare function EVT_REQ_START();
 declare function EVT_USER_START();
 declare function EVT_NONE();
@@ -1474,13 +1477,15 @@ declare function button_t_get_prop_repeat(nativeObj : any) : number;
 declare function button_t_get_prop_enable_long_press(nativeObj : any) : boolean;
 declare function button_group_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function button_group_cast(widget : any) : any;
+declare function app_bar_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function app_bar_cast(widget : any) : any;
 declare function rich_text_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function rich_text_set_text(widget : any, text : string) : TRet;
 declare function rich_text_cast(widget : any) : any;
 declare function rich_text_t_get_prop_line_gap(nativeObj : any) : number;
 declare function rich_text_t_get_prop_margin(nativeObj : any) : number;
-declare function app_bar_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function app_bar_cast(widget : any) : any;
+declare function orientation_event_cast(event : any) : any;
+declare function orientation_event_t_get_prop_orientation(nativeObj : any) : number;
 declare function rich_text_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function rich_text_view_cast(widget : any) : any;
 declare function progress_circle_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -1501,8 +1506,16 @@ declare function progress_circle_t_get_prop_unit(nativeObj : any) : string;
 declare function progress_circle_t_get_prop_line_cap(nativeObj : any) : string;
 declare function progress_circle_t_get_prop_counter_clock_wise(nativeObj : any) : boolean;
 declare function progress_circle_t_get_prop_show_text(nativeObj : any) : boolean;
-declare function orientation_event_cast(event : any) : any;
-declare function orientation_event_t_get_prop_orientation(nativeObj : any) : number;
+declare function pointer_event_cast(event : any) : any;
+declare function pointer_event_t_get_prop_x(nativeObj : any) : number;
+declare function pointer_event_t_get_prop_y(nativeObj : any) : number;
+declare function pointer_event_t_get_prop_button(nativeObj : any) : number;
+declare function pointer_event_t_get_prop_pressed(nativeObj : any) : boolean;
+declare function pointer_event_t_get_prop_alt(nativeObj : any) : boolean;
+declare function pointer_event_t_get_prop_ctrl(nativeObj : any) : boolean;
+declare function pointer_event_t_get_prop_cmd(nativeObj : any) : boolean;
+declare function pointer_event_t_get_prop_menu(nativeObj : any) : boolean;
+declare function pointer_event_t_get_prop_shift(nativeObj : any) : boolean;
 declare function mledit_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function mledit_set_readonly(widget : any, readonly : boolean) : TRet;
 declare function mledit_set_focus(widget : any, focus : boolean) : TRet;
@@ -1535,16 +1548,20 @@ declare function lang_indicator_create(parent : any, x : number, y : number, w :
 declare function lang_indicator_set_image(widget : any, image : string) : TRet;
 declare function lang_indicator_cast(widget : any) : any;
 declare function lang_indicator_t_get_prop_image(nativeObj : any) : string;
-declare function pointer_event_cast(event : any) : any;
-declare function pointer_event_t_get_prop_x(nativeObj : any) : number;
-declare function pointer_event_t_get_prop_y(nativeObj : any) : number;
-declare function pointer_event_t_get_prop_button(nativeObj : any) : number;
-declare function pointer_event_t_get_prop_pressed(nativeObj : any) : boolean;
-declare function pointer_event_t_get_prop_alt(nativeObj : any) : boolean;
-declare function pointer_event_t_get_prop_ctrl(nativeObj : any) : boolean;
-declare function pointer_event_t_get_prop_cmd(nativeObj : any) : boolean;
-declare function pointer_event_t_get_prop_menu(nativeObj : any) : boolean;
-declare function pointer_event_t_get_prop_shift(nativeObj : any) : boolean;
+declare function key_event_cast(event : any) : any;
+declare function key_event_t_get_prop_key(nativeObj : any) : number;
+declare function key_event_t_get_prop_alt(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_lalt(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_ralt(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_ctrl(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_lctrl(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_rctrl(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_shift(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_lshift(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_rshift(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_cmd(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_menu(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_capslock(nativeObj : any) : boolean;
 declare function candidates_cast(widget : any) : any;
 declare function candidates_set_pre(widget : any, pre : boolean) : TRet;
 declare function candidates_set_select_by_num(widget : any, select_by_num : boolean) : TRet;
@@ -1608,20 +1625,6 @@ declare function guage_pointer_t_get_prop_angle(nativeObj : any) : number;
 declare function guage_pointer_t_get_prop_image(nativeObj : any) : string;
 declare function guage_pointer_t_get_prop_anchor_x(nativeObj : any) : string;
 declare function guage_pointer_t_get_prop_anchor_y(nativeObj : any) : string;
-declare function key_event_cast(event : any) : any;
-declare function key_event_t_get_prop_key(nativeObj : any) : number;
-declare function key_event_t_get_prop_alt(nativeObj : any) : boolean;
-declare function key_event_t_get_prop_lalt(nativeObj : any) : boolean;
-declare function key_event_t_get_prop_ralt(nativeObj : any) : boolean;
-declare function key_event_t_get_prop_ctrl(nativeObj : any) : boolean;
-declare function key_event_t_get_prop_lctrl(nativeObj : any) : boolean;
-declare function key_event_t_get_prop_rctrl(nativeObj : any) : boolean;
-declare function key_event_t_get_prop_shift(nativeObj : any) : boolean;
-declare function key_event_t_get_prop_lshift(nativeObj : any) : boolean;
-declare function key_event_t_get_prop_rshift(nativeObj : any) : boolean;
-declare function key_event_t_get_prop_cmd(nativeObj : any) : boolean;
-declare function key_event_t_get_prop_menu(nativeObj : any) : boolean;
-declare function key_event_t_get_prop_capslock(nativeObj : any) : boolean;
 declare function file_chooser_create() : any;
 declare function file_chooser_set_init_dir(chooser : any, init_dir : string) : TRet;
 declare function file_chooser_set_filter(chooser : any, filter : string) : TRet;
@@ -1709,6 +1712,7 @@ declare function style_mutable_set_int(s : any, state : string, name : string, v
 declare function style_mutable_cast(s : any) : any;
 declare function style_mutable_create(widget : any, default_style : any) : any;
 declare function style_mutable_t_get_prop_name(nativeObj : any) : string;
+declare function calibration_win_cast(widget : any) : any;
 declare function native_window_move(win : any, x : number, y : number, force : boolean) : TRet;
 declare function native_window_resize(win : any, w : number, h : number, force : boolean) : TRet;
 declare function native_window_minimize(win : any) : TRet;
@@ -1734,7 +1738,6 @@ declare function object_array_create() : any;
 declare function object_array_unref(obj : any) : TRet;
 declare function object_array_clear_props(obj : any) : TRet;
 declare function object_array_t_get_prop_props_size(nativeObj : any) : number;
-declare function calibration_win_cast(widget : any) : any;
 declare function window_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function window_create_default() : any;
 declare function window_set_fullscreen(widget : any, fullscreen : boolean) : TRet;
@@ -3704,6 +3707,24 @@ export enum TEventType {
    *
    */
  WIDGET_REMOVE_CHILD = EVT_WIDGET_REMOVE_CHILD(),
+
+  /**
+   * scroll view开始滚动(event_t)。
+   *
+   */
+ SCROLL_START = EVT_SCROLL_START(),
+
+  /**
+   * scroll view滚动(event_t)。
+   *
+   */
+ SCROLL = EVT_SCROLL(),
+
+  /**
+   * scroll view结束滚动(event_t)。
+   *
+   */
+ SCROLL_END = EVT_SCROLL_END(),
 
   /**
    * event queue其它请求编号起始值。
@@ -17450,6 +17471,72 @@ export class TButtonGroup extends TWidget {
 
 };
 /**
+ * app_bar控件。
+ *
+ *一个简单的容器控件，一般在窗口的顶部，用于显示本窗口的状态和信息。
+ *
+ *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
+ *子控件的布局可用layout\_children属性指定。
+ *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
+ *
+ *app\_bar\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于app\_bar\_t控件。
+ *
+ *在xml中使用"app\_bar"标签创建app\_bar。如：
+ *
+ *```xml
+ *<app_bar x="0" y="0" w="100%" h="30"
+ *<label x="0" y="0" w="100%" h="100%" text="Basic Controls" />
+ *</app_bar>
+ *```
+ *
+ *在c代码中使用函数app\_bar\_create创建app\_bar。如：
+ *
+ *
+ *可用通过style来设置控件的显示风格，如背景颜色等。如：
+ *
+ *```xml
+ *<style name="default" border_color="#a0a0a0">
+ *<normal     bg_color="#f0f0f0" />
+ *</style>
+ *```
+ *
+ */
+export class TAppBar extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建app_bar对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TAppBar  {
+    return new TAppBar(app_bar_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为app_bar对象(供脚本语言使用)。
+   * 
+   * @param widget app_bar对象。
+   *
+   * @returns app_bar对象。
+   */
+ static cast(widget : TWidget) : TAppBar  {
+    return new TAppBar(app_bar_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+};
+/**
  * 图文混排控件，实现简单的图文混排。
  *
  *rich\_text\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于rich\_text\_t控件。
@@ -17555,37 +17642,10 @@ export class TRichText extends TWidget {
 
 };
 /**
- * app_bar控件。
- *
- *一个简单的容器控件，一般在窗口的顶部，用于显示本窗口的状态和信息。
- *
- *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
- *子控件的布局可用layout\_children属性指定。
- *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
- *
- *app\_bar\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于app\_bar\_t控件。
- *
- *在xml中使用"app\_bar"标签创建app\_bar。如：
- *
- *```xml
- *<app_bar x="0" y="0" w="100%" h="30"
- *<label x="0" y="0" w="100%" h="100%" text="Basic Controls" />
- *</app_bar>
- *```
- *
- *在c代码中使用函数app\_bar\_create创建app\_bar。如：
- *
- *
- *可用通过style来设置控件的显示风格，如背景颜色等。如：
- *
- *```xml
- *<style name="default" border_color="#a0a0a0">
- *<normal     bg_color="#f0f0f0" />
- *</style>
- *```
+ * 滚轮事件。
  *
  */
-export class TAppBar extends TWidget { 
+export class TOrientationEvent extends TEvent { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -17593,30 +17653,23 @@ export class TAppBar extends TWidget {
 
 
   /**
-   * 创建app_bar对象
+   * 把event对象转orientation_event_t对象，主要给脚本语言使用。
    * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
+   * @param event event对象。
    *
-   * @returns 对象。
+   * @returns event对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TAppBar  {
-    return new TAppBar(app_bar_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ static cast(event : TEvent) : TOrientationEvent  {
+    return new TOrientationEvent(orientation_event_cast(event != null ? (event.nativeObj || event) : null));
  }
 
 
   /**
-   * 转换为app_bar对象(供脚本语言使用)。
-   * 
-   * @param widget app_bar对象。
+   * 屏幕方向。
    *
-   * @returns app_bar对象。
    */
- static cast(widget : TWidget) : TAppBar  {
-    return new TAppBar(app_bar_cast(widget != null ? (widget.nativeObj || widget) : null));
+ get orientation() : number {
+   return orientation_event_t_get_prop_orientation(this.nativeObj);
  }
 
 };
@@ -17950,10 +18003,10 @@ export class TProgressCircle extends TWidget {
 
 };
 /**
- * 滚轮事件。
+ * 指针事件。
  *
  */
-export class TOrientationEvent extends TEvent { 
+export class TPointerEvent extends TEvent { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -17961,23 +18014,95 @@ export class TOrientationEvent extends TEvent {
 
 
   /**
-   * 把event对象转orientation_event_t对象，主要给脚本语言使用。
+   * 把event对象转pointer_event_t对象，主要给脚本语言使用。
    * 
    * @param event event对象。
    *
    * @returns event对象。
    */
- static cast(event : TEvent) : TOrientationEvent  {
-    return new TOrientationEvent(orientation_event_cast(event != null ? (event.nativeObj || event) : null));
+ static cast(event : TEvent) : TPointerEvent  {
+    return new TPointerEvent(pointer_event_cast(event != null ? (event.nativeObj || event) : null));
  }
 
 
   /**
-   * 屏幕方向。
+   * x坐标。
    *
    */
- get orientation() : number {
-   return orientation_event_t_get_prop_orientation(this.nativeObj);
+ get x() : number {
+   return pointer_event_t_get_prop_x(this.nativeObj);
+ }
+
+
+  /**
+   * y坐标。
+   *
+   */
+ get y() : number {
+   return pointer_event_t_get_prop_y(this.nativeObj);
+ }
+
+
+  /**
+   * button。
+   *
+   */
+ get button() : number {
+   return pointer_event_t_get_prop_button(this.nativeObj);
+ }
+
+
+  /**
+   * 指针是否按下。
+   *
+   */
+ get pressed() : boolean {
+   return pointer_event_t_get_prop_pressed(this.nativeObj);
+ }
+
+
+  /**
+   * alt键是否按下。
+   *
+   */
+ get alt() : boolean {
+   return pointer_event_t_get_prop_alt(this.nativeObj);
+ }
+
+
+  /**
+   * ctrl键是否按下。
+   *
+   */
+ get ctrl() : boolean {
+   return pointer_event_t_get_prop_ctrl(this.nativeObj);
+ }
+
+
+  /**
+   * cmd键是否按下。
+   *
+   */
+ get cmd() : boolean {
+   return pointer_event_t_get_prop_cmd(this.nativeObj);
+ }
+
+
+  /**
+   * menu键是否按下。
+   *
+   */
+ get menu() : boolean {
+   return pointer_event_t_get_prop_menu(this.nativeObj);
+ }
+
+
+  /**
+   * shift键是否按下。
+   *
+   */
+ get shift() : boolean {
+   return pointer_event_t_get_prop_shift(this.nativeObj);
  }
 
 };
@@ -18474,10 +18599,10 @@ export class TLangIndicator extends TWidget {
 
 };
 /**
- * 指针事件。
+ * 按键事件。
  *
  */
-export class TPointerEvent extends TEvent { 
+export class TKeyEvent extends TEvent { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -18485,50 +18610,23 @@ export class TPointerEvent extends TEvent {
 
 
   /**
-   * 把event对象转pointer_event_t对象，主要给脚本语言使用。
+   * 把event对象转key_event_t对象，主要给脚本语言使用。
    * 
    * @param event event对象。
    *
    * @returns event对象。
    */
- static cast(event : TEvent) : TPointerEvent  {
-    return new TPointerEvent(pointer_event_cast(event != null ? (event.nativeObj || event) : null));
+ static cast(event : TEvent) : TKeyEvent  {
+    return new TKeyEvent(key_event_cast(event != null ? (event.nativeObj || event) : null));
  }
 
 
   /**
-   * x坐标。
+   * 键值。
    *
    */
- get x() : number {
-   return pointer_event_t_get_prop_x(this.nativeObj);
- }
-
-
-  /**
-   * y坐标。
-   *
-   */
- get y() : number {
-   return pointer_event_t_get_prop_y(this.nativeObj);
- }
-
-
-  /**
-   * button。
-   *
-   */
- get button() : number {
-   return pointer_event_t_get_prop_button(this.nativeObj);
- }
-
-
-  /**
-   * 指针是否按下。
-   *
-   */
- get pressed() : boolean {
-   return pointer_event_t_get_prop_pressed(this.nativeObj);
+ get key() : number {
+   return key_event_t_get_prop_key(this.nativeObj);
  }
 
 
@@ -18537,34 +18635,53 @@ export class TPointerEvent extends TEvent {
    *
    */
  get alt() : boolean {
-   return pointer_event_t_get_prop_alt(this.nativeObj);
+   return key_event_t_get_prop_alt(this.nativeObj);
  }
 
 
   /**
-   * ctrl键是否按下。
+   * left alt键是否按下。
+   *
+   */
+ get lalt() : boolean {
+   return key_event_t_get_prop_lalt(this.nativeObj);
+ }
+
+
+  /**
+   * right alt键是否按下。
+   *
+   */
+ get ralt() : boolean {
+   return key_event_t_get_prop_ralt(this.nativeObj);
+ }
+
+
+  /**
+   * right alt键是否按下。
+   *ctrl键是否按下。
    *
    */
  get ctrl() : boolean {
-   return pointer_event_t_get_prop_ctrl(this.nativeObj);
+   return key_event_t_get_prop_ctrl(this.nativeObj);
  }
 
 
   /**
-   * cmd键是否按下。
+   * left ctrl键是否按下。
    *
    */
- get cmd() : boolean {
-   return pointer_event_t_get_prop_cmd(this.nativeObj);
+ get lctrl() : boolean {
+   return key_event_t_get_prop_lctrl(this.nativeObj);
  }
 
 
   /**
-   * menu键是否按下。
+   * right ctrl键是否按下。
    *
    */
- get menu() : boolean {
-   return pointer_event_t_get_prop_menu(this.nativeObj);
+ get rctrl() : boolean {
+   return key_event_t_get_prop_rctrl(this.nativeObj);
  }
 
 
@@ -18573,7 +18690,53 @@ export class TPointerEvent extends TEvent {
    *
    */
  get shift() : boolean {
-   return pointer_event_t_get_prop_shift(this.nativeObj);
+   return key_event_t_get_prop_shift(this.nativeObj);
+ }
+
+
+  /**
+   * left shift键是否按下。
+   *
+   */
+ get lshift() : boolean {
+   return key_event_t_get_prop_lshift(this.nativeObj);
+ }
+
+
+  /**
+   * right shift键是否按下。
+   *
+   */
+ get rshift() : boolean {
+   return key_event_t_get_prop_rshift(this.nativeObj);
+ }
+
+
+  /**
+   * left shift键是否按下。
+   *cmd/win键是否按下。
+   *
+   */
+ get cmd() : boolean {
+   return key_event_t_get_prop_cmd(this.nativeObj);
+ }
+
+
+  /**
+   * menu键是否按下。
+   *
+   */
+ get menu() : boolean {
+   return key_event_t_get_prop_menu(this.nativeObj);
+ }
+
+
+  /**
+   * capslock键是否按下。
+   *
+   */
+ get capslock() : boolean {
+   return key_event_t_get_prop_capslock(this.nativeObj);
  }
 
 };
@@ -19554,148 +19717,6 @@ export class TGuagePointer extends TWidget {
    */
  get anchorY() : string {
    return guage_pointer_t_get_prop_anchor_y(this.nativeObj);
- }
-
-};
-/**
- * 按键事件。
- *
- */
-export class TKeyEvent extends TEvent { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 把event对象转key_event_t对象，主要给脚本语言使用。
-   * 
-   * @param event event对象。
-   *
-   * @returns event对象。
-   */
- static cast(event : TEvent) : TKeyEvent  {
-    return new TKeyEvent(key_event_cast(event != null ? (event.nativeObj || event) : null));
- }
-
-
-  /**
-   * 键值。
-   *
-   */
- get key() : number {
-   return key_event_t_get_prop_key(this.nativeObj);
- }
-
-
-  /**
-   * alt键是否按下。
-   *
-   */
- get alt() : boolean {
-   return key_event_t_get_prop_alt(this.nativeObj);
- }
-
-
-  /**
-   * left alt键是否按下。
-   *
-   */
- get lalt() : boolean {
-   return key_event_t_get_prop_lalt(this.nativeObj);
- }
-
-
-  /**
-   * right alt键是否按下。
-   *
-   */
- get ralt() : boolean {
-   return key_event_t_get_prop_ralt(this.nativeObj);
- }
-
-
-  /**
-   * right alt键是否按下。
-   *ctrl键是否按下。
-   *
-   */
- get ctrl() : boolean {
-   return key_event_t_get_prop_ctrl(this.nativeObj);
- }
-
-
-  /**
-   * left ctrl键是否按下。
-   *
-   */
- get lctrl() : boolean {
-   return key_event_t_get_prop_lctrl(this.nativeObj);
- }
-
-
-  /**
-   * right ctrl键是否按下。
-   *
-   */
- get rctrl() : boolean {
-   return key_event_t_get_prop_rctrl(this.nativeObj);
- }
-
-
-  /**
-   * shift键是否按下。
-   *
-   */
- get shift() : boolean {
-   return key_event_t_get_prop_shift(this.nativeObj);
- }
-
-
-  /**
-   * left shift键是否按下。
-   *
-   */
- get lshift() : boolean {
-   return key_event_t_get_prop_lshift(this.nativeObj);
- }
-
-
-  /**
-   * right shift键是否按下。
-   *
-   */
- get rshift() : boolean {
-   return key_event_t_get_prop_rshift(this.nativeObj);
- }
-
-
-  /**
-   * left shift键是否按下。
-   *cmd/win键是否按下。
-   *
-   */
- get cmd() : boolean {
-   return key_event_t_get_prop_cmd(this.nativeObj);
- }
-
-
-  /**
-   * menu键是否按下。
-   *
-   */
- get menu() : boolean {
-   return key_event_t_get_prop_menu(this.nativeObj);
- }
-
-
-  /**
-   * capslock键是否按下。
-   *
-   */
- get capslock() : boolean {
-   return key_event_t_get_prop_capslock(this.nativeObj);
  }
 
 };
@@ -20972,6 +20993,47 @@ export class TStyleMutable extends TStyle {
 
 };
 /**
+ * 电阻屏校准窗口。
+ *
+ *calibration\_win\_t是[window\_base\_t](window_base_t.md)的子类控件，
+ *window\_base\_t的函数均适用于calibration\_win\_t控件。
+ *
+ *在xml中使用"calibration\_win"标签创建电阻屏校准窗口。如：
+ *
+ *```xml
+ *<calibration_win name="cali" w="100%" h="100%" text="Please click the center of cross">
+ *</calibration_win>
+ *```
+ *
+ *> 更多用法请参考：
+ *[window.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/calibration_win.xml)
+ *
+ *在c代码中使用函数calibration\_win\_create创建窗口。如：
+ *
+ *
+ *通过calibration\_win\_set\_on\_done注册回调函数，用于保存校准数据。
+ *
+ */
+export class TCalibrationWin extends TWindowBase { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 转换为calibration_win对象(供脚本语言使用)。
+   * 
+   * @param widget calibration_win对象。
+   *
+   * @returns calibration_win对象。
+   */
+ static cast(widget : TWidget) : TCalibrationWin  {
+    return new TCalibrationWin(calibration_win_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+};
+/**
  * 原生窗口。
  *
  */
@@ -21495,47 +21557,6 @@ export class TObjectArray extends TObject {
    */
  get propsSize() : number {
    return object_array_t_get_prop_props_size(this.nativeObj);
- }
-
-};
-/**
- * 电阻屏校准窗口。
- *
- *calibration\_win\_t是[window\_base\_t](window_base_t.md)的子类控件，
- *window\_base\_t的函数均适用于calibration\_win\_t控件。
- *
- *在xml中使用"calibration\_win"标签创建电阻屏校准窗口。如：
- *
- *```xml
- *<calibration_win name="cali" w="100%" h="100%" text="Please click the center of cross">
- *</calibration_win>
- *```
- *
- *> 更多用法请参考：
- *[window.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/calibration_win.xml)
- *
- *在c代码中使用函数calibration\_win\_create创建窗口。如：
- *
- *
- *通过calibration\_win\_set\_on\_done注册回调函数，用于保存校准数据。
- *
- */
-export class TCalibrationWin extends TWindowBase { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 转换为calibration_win对象(供脚本语言使用)。
-   * 
-   * @param widget calibration_win对象。
-   *
-   * @returns calibration_win对象。
-   */
- static cast(widget : TWidget) : TCalibrationWin  {
-    return new TCalibrationWin(calibration_win_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 };

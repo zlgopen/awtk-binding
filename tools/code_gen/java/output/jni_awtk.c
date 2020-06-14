@@ -1834,6 +1834,30 @@ int awtk_TEventType_EVT_WIDGET_REMOVE_CHILD(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TEventType_EVT_SCROLL_START(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(EVT_SCROLL_START));
+
+  return 0;
+}
+
+int awtk_TEventType_EVT_SCROLL(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(EVT_SCROLL));
+
+  return 0;
+}
+
+int awtk_TEventType_EVT_SCROLL_END(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(EVT_SCROLL_END));
+
+  return 0;
+}
+
 int awtk_TEventType_EVT_REQ_START(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -14186,6 +14210,32 @@ int awtk_TButtonGroup_button_group_cast(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TAppBar_app_bar_create(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* parent = (widget_t*)jni_ctx_get_object(&ctx);
+  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
+  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
+  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
+  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
+  ret = (widget_t*)app_bar_create(parent, x, y, w, h);
+  jni_ctx_return_object(&ctx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TAppBar_app_bar_cast(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  ret = (widget_t*)app_bar_cast(widget);
+  jni_ctx_return_object(&ctx, (void*)(ret));
+
+  return 0;
+}
+
 int awtk_TRichText_rich_text_create(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -14243,28 +14293,22 @@ int awtk_TRichText_rich_text_t_get_prop_margin(Runtime *runtime, JClass *clazz) 
   return 0;
 }
 
-int awtk_TAppBar_app_bar_create(Runtime *runtime, JClass *clazz) {
+int awtk_TOrientationEvent_orientation_event_cast(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  widget_t* ret = NULL;
-  widget_t* parent = (widget_t*)jni_ctx_get_object(&ctx);
-  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
-  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
-  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
-  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
-  ret = (widget_t*)app_bar_create(parent, x, y, w, h);
+  orientation_event_t* ret = NULL;
+  event_t* event = (event_t*)jni_ctx_get_object(&ctx);
+  ret = (orientation_event_t*)orientation_event_cast(event);
   jni_ctx_return_object(&ctx, (void*)(ret));
 
   return 0;
 }
 
-int awtk_TAppBar_app_bar_cast(Runtime *runtime, JClass *clazz) {
+int awtk_TOrientationEvent_orientation_event_t_get_prop_orientation(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  widget_t* ret = NULL;
-  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  ret = (widget_t*)app_bar_cast(widget);
-  jni_ctx_return_object(&ctx, (void*)(ret));
+  orientation_event_t* obj = (orientation_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->orientation));
 
   return 0;
 }
@@ -14491,22 +14535,94 @@ int awtk_TProgressCircle_progress_circle_t_get_prop_show_text(Runtime *runtime, 
   return 0;
 }
 
-int awtk_TOrientationEvent_orientation_event_cast(Runtime *runtime, JClass *clazz) {
+int awtk_TPointerEvent_pointer_event_cast(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  orientation_event_t* ret = NULL;
+  pointer_event_t* ret = NULL;
   event_t* event = (event_t*)jni_ctx_get_object(&ctx);
-  ret = (orientation_event_t*)orientation_event_cast(event);
+  ret = (pointer_event_t*)pointer_event_cast(event);
   jni_ctx_return_object(&ctx, (void*)(ret));
 
   return 0;
 }
 
-int awtk_TOrientationEvent_orientation_event_t_get_prop_orientation(Runtime *runtime, JClass *clazz) {
+int awtk_TPointerEvent_pointer_event_t_get_prop_x(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  orientation_event_t* obj = (orientation_event_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->orientation));
+  pointer_event_t* obj = (pointer_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->x));
+
+  return 0;
+}
+
+int awtk_TPointerEvent_pointer_event_t_get_prop_y(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  pointer_event_t* obj = (pointer_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->y));
+
+  return 0;
+}
+
+int awtk_TPointerEvent_pointer_event_t_get_prop_button(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  pointer_event_t* obj = (pointer_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->button));
+
+  return 0;
+}
+
+int awtk_TPointerEvent_pointer_event_t_get_prop_pressed(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  pointer_event_t* obj = (pointer_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->pressed));
+
+  return 0;
+}
+
+int awtk_TPointerEvent_pointer_event_t_get_prop_alt(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  pointer_event_t* obj = (pointer_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->alt));
+
+  return 0;
+}
+
+int awtk_TPointerEvent_pointer_event_t_get_prop_ctrl(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  pointer_event_t* obj = (pointer_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->ctrl));
+
+  return 0;
+}
+
+int awtk_TPointerEvent_pointer_event_t_get_prop_cmd(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  pointer_event_t* obj = (pointer_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->cmd));
+
+  return 0;
+}
+
+int awtk_TPointerEvent_pointer_event_t_get_prop_menu(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  pointer_event_t* obj = (pointer_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->menu));
+
+  return 0;
+}
+
+int awtk_TPointerEvent_pointer_event_t_get_prop_shift(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  pointer_event_t* obj = (pointer_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->shift));
 
   return 0;
 }
@@ -14869,94 +14985,130 @@ int awtk_TLangIndicator_lang_indicator_t_get_prop_image(Runtime *runtime, JClass
   return 0;
 }
 
-int awtk_TPointerEvent_pointer_event_cast(Runtime *runtime, JClass *clazz) {
+int awtk_TKeyEvent_key_event_cast(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  pointer_event_t* ret = NULL;
+  key_event_t* ret = NULL;
   event_t* event = (event_t*)jni_ctx_get_object(&ctx);
-  ret = (pointer_event_t*)pointer_event_cast(event);
+  ret = (key_event_t*)key_event_cast(event);
   jni_ctx_return_object(&ctx, (void*)(ret));
 
   return 0;
 }
 
-int awtk_TPointerEvent_pointer_event_t_get_prop_x(Runtime *runtime, JClass *clazz) {
+int awtk_TKeyEvent_key_event_t_get_prop_key(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  pointer_event_t* obj = (pointer_event_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->x));
+  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->key));
 
   return 0;
 }
 
-int awtk_TPointerEvent_pointer_event_t_get_prop_y(Runtime *runtime, JClass *clazz) {
+int awtk_TKeyEvent_key_event_t_get_prop_alt(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  pointer_event_t* obj = (pointer_event_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->y));
-
-  return 0;
-}
-
-int awtk_TPointerEvent_pointer_event_t_get_prop_button(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  pointer_event_t* obj = (pointer_event_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->button));
-
-  return 0;
-}
-
-int awtk_TPointerEvent_pointer_event_t_get_prop_pressed(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  pointer_event_t* obj = (pointer_event_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->pressed));
-
-  return 0;
-}
-
-int awtk_TPointerEvent_pointer_event_t_get_prop_alt(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  pointer_event_t* obj = (pointer_event_t*)jni_ctx_get_object(&ctx);
+  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_int(&ctx, (int32_t)(obj->alt));
 
   return 0;
 }
 
-int awtk_TPointerEvent_pointer_event_t_get_prop_ctrl(Runtime *runtime, JClass *clazz) {
+int awtk_TKeyEvent_key_event_t_get_prop_lalt(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  pointer_event_t* obj = (pointer_event_t*)jni_ctx_get_object(&ctx);
+  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->lalt));
+
+  return 0;
+}
+
+int awtk_TKeyEvent_key_event_t_get_prop_ralt(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->ralt));
+
+  return 0;
+}
+
+int awtk_TKeyEvent_key_event_t_get_prop_ctrl(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_int(&ctx, (int32_t)(obj->ctrl));
 
   return 0;
 }
 
-int awtk_TPointerEvent_pointer_event_t_get_prop_cmd(Runtime *runtime, JClass *clazz) {
+int awtk_TKeyEvent_key_event_t_get_prop_lctrl(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  pointer_event_t* obj = (pointer_event_t*)jni_ctx_get_object(&ctx);
+  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->lctrl));
+
+  return 0;
+}
+
+int awtk_TKeyEvent_key_event_t_get_prop_rctrl(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->rctrl));
+
+  return 0;
+}
+
+int awtk_TKeyEvent_key_event_t_get_prop_shift(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->shift));
+
+  return 0;
+}
+
+int awtk_TKeyEvent_key_event_t_get_prop_lshift(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->lshift));
+
+  return 0;
+}
+
+int awtk_TKeyEvent_key_event_t_get_prop_rshift(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->rshift));
+
+  return 0;
+}
+
+int awtk_TKeyEvent_key_event_t_get_prop_cmd(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_int(&ctx, (int32_t)(obj->cmd));
 
   return 0;
 }
 
-int awtk_TPointerEvent_pointer_event_t_get_prop_menu(Runtime *runtime, JClass *clazz) {
+int awtk_TKeyEvent_key_event_t_get_prop_menu(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  pointer_event_t* obj = (pointer_event_t*)jni_ctx_get_object(&ctx);
+  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_int(&ctx, (int32_t)(obj->menu));
 
   return 0;
 }
 
-int awtk_TPointerEvent_pointer_event_t_get_prop_shift(Runtime *runtime, JClass *clazz) {
+int awtk_TKeyEvent_key_event_t_get_prop_capslock(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  pointer_event_t* obj = (pointer_event_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->shift));
+  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->capslock));
 
   return 0;
 }
@@ -15650,134 +15802,6 @@ int awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_y(Runtime *runtime, JClas
 
   guage_pointer_t* obj = (guage_pointer_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_str(&ctx, (char*)(obj->anchor_y));
-
-  return 0;
-}
-
-int awtk_TKeyEvent_key_event_cast(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  key_event_t* ret = NULL;
-  event_t* event = (event_t*)jni_ctx_get_object(&ctx);
-  ret = (key_event_t*)key_event_cast(event);
-  jni_ctx_return_object(&ctx, (void*)(ret));
-
-  return 0;
-}
-
-int awtk_TKeyEvent_key_event_t_get_prop_key(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->key));
-
-  return 0;
-}
-
-int awtk_TKeyEvent_key_event_t_get_prop_alt(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->alt));
-
-  return 0;
-}
-
-int awtk_TKeyEvent_key_event_t_get_prop_lalt(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->lalt));
-
-  return 0;
-}
-
-int awtk_TKeyEvent_key_event_t_get_prop_ralt(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->ralt));
-
-  return 0;
-}
-
-int awtk_TKeyEvent_key_event_t_get_prop_ctrl(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->ctrl));
-
-  return 0;
-}
-
-int awtk_TKeyEvent_key_event_t_get_prop_lctrl(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->lctrl));
-
-  return 0;
-}
-
-int awtk_TKeyEvent_key_event_t_get_prop_rctrl(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->rctrl));
-
-  return 0;
-}
-
-int awtk_TKeyEvent_key_event_t_get_prop_shift(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->shift));
-
-  return 0;
-}
-
-int awtk_TKeyEvent_key_event_t_get_prop_lshift(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->lshift));
-
-  return 0;
-}
-
-int awtk_TKeyEvent_key_event_t_get_prop_rshift(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->rshift));
-
-  return 0;
-}
-
-int awtk_TKeyEvent_key_event_t_get_prop_cmd(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->cmd));
-
-  return 0;
-}
-
-int awtk_TKeyEvent_key_event_t_get_prop_menu(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->menu));
-
-  return 0;
-}
-
-int awtk_TKeyEvent_key_event_t_get_prop_capslock(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  key_event_t* obj = (key_event_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->capslock));
 
   return 0;
 }
@@ -16726,6 +16750,17 @@ int awtk_TStyleMutable_style_mutable_t_get_prop_name(Runtime *runtime, JClass *c
   return 0;
 }
 
+int awtk_TCalibrationWin_calibration_win_cast(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  ret = (widget_t*)calibration_win_cast(widget);
+  jni_ctx_return_object(&ctx, (void*)(ret));
+
+  return 0;
+}
+
 int awtk_TNativeWindow_native_window_move(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -16982,17 +17017,6 @@ int awtk_TObjectArray_object_array_t_get_prop_props_size(Runtime *runtime, JClas
 
   object_array_t* obj = (object_array_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_int(&ctx, (int32_t)(obj->props_size));
-
-  return 0;
-}
-
-int awtk_TCalibrationWin_calibration_win_cast(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  widget_t* ret = NULL;
-  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  ret = (widget_t*)calibration_win_cast(widget);
-  jni_ctx_return_object(&ctx, (void*)(ret));
 
   return 0;
 }
@@ -17973,6 +17997,9 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TEventType",  "EVT_THEME_CHANGED",  "()I",  awtk_TEventType_EVT_THEME_CHANGED},
 {"awtk/TEventType",  "EVT_WIDGET_ADD_CHILD",  "()I",  awtk_TEventType_EVT_WIDGET_ADD_CHILD},
 {"awtk/TEventType",  "EVT_WIDGET_REMOVE_CHILD",  "()I",  awtk_TEventType_EVT_WIDGET_REMOVE_CHILD},
+{"awtk/TEventType",  "EVT_SCROLL_START",  "()I",  awtk_TEventType_EVT_SCROLL_START},
+{"awtk/TEventType",  "EVT_SCROLL",  "()I",  awtk_TEventType_EVT_SCROLL},
+{"awtk/TEventType",  "EVT_SCROLL_END",  "()I",  awtk_TEventType_EVT_SCROLL_END},
 {"awtk/TEventType",  "EVT_REQ_START",  "()I",  awtk_TEventType_EVT_REQ_START},
 {"awtk/TEventType",  "EVT_USER_START",  "()I",  awtk_TEventType_EVT_USER_START},
 {"awtk/TEventType",  "EVT_NONE",  "()I",  awtk_TEventType_EVT_NONE},
@@ -19250,13 +19277,15 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TButton",  "button_t_get_prop_enable_long_press",  "(J)Z",  awtk_TButton_button_t_get_prop_enable_long_press},
 {"awtk/TButtonGroup",  "button_group_create",  "(JIIII)J",  awtk_TButtonGroup_button_group_create},
 {"awtk/TButtonGroup",  "button_group_cast",  "(J)J",  awtk_TButtonGroup_button_group_cast},
+{"awtk/TAppBar",  "app_bar_create",  "(JIIII)J",  awtk_TAppBar_app_bar_create},
+{"awtk/TAppBar",  "app_bar_cast",  "(J)J",  awtk_TAppBar_app_bar_cast},
 {"awtk/TRichText",  "rich_text_create",  "(JIIII)J",  awtk_TRichText_rich_text_create},
 {"awtk/TRichText",  "rich_text_set_text",  "(JLjava/lang/String;)I",  awtk_TRichText_rich_text_set_text},
 {"awtk/TRichText",  "rich_text_cast",  "(J)J",  awtk_TRichText_rich_text_cast},
 {"awtk/TRichText",  "rich_text_t_get_prop_line_gap",  "(J)I",  awtk_TRichText_rich_text_t_get_prop_line_gap},
 {"awtk/TRichText",  "rich_text_t_get_prop_margin",  "(J)I",  awtk_TRichText_rich_text_t_get_prop_margin},
-{"awtk/TAppBar",  "app_bar_create",  "(JIIII)J",  awtk_TAppBar_app_bar_create},
-{"awtk/TAppBar",  "app_bar_cast",  "(J)J",  awtk_TAppBar_app_bar_cast},
+{"awtk/TOrientationEvent",  "orientation_event_cast",  "(J)J",  awtk_TOrientationEvent_orientation_event_cast},
+{"awtk/TOrientationEvent",  "orientation_event_t_get_prop_orientation",  "(J)I",  awtk_TOrientationEvent_orientation_event_t_get_prop_orientation},
 {"awtk/TRichTextView",  "rich_text_view_create",  "(JIIII)J",  awtk_TRichTextView_rich_text_view_create},
 {"awtk/TRichTextView",  "rich_text_view_cast",  "(J)J",  awtk_TRichTextView_rich_text_view_cast},
 {"awtk/TProgressCircle",  "progress_circle_create",  "(JIIII)J",  awtk_TProgressCircle_progress_circle_create},
@@ -19277,8 +19306,16 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TProgressCircle",  "progress_circle_t_get_prop_line_cap",  "(J)Ljava/lang/String;",  awtk_TProgressCircle_progress_circle_t_get_prop_line_cap},
 {"awtk/TProgressCircle",  "progress_circle_t_get_prop_counter_clock_wise",  "(J)Z",  awtk_TProgressCircle_progress_circle_t_get_prop_counter_clock_wise},
 {"awtk/TProgressCircle",  "progress_circle_t_get_prop_show_text",  "(J)Z",  awtk_TProgressCircle_progress_circle_t_get_prop_show_text},
-{"awtk/TOrientationEvent",  "orientation_event_cast",  "(J)J",  awtk_TOrientationEvent_orientation_event_cast},
-{"awtk/TOrientationEvent",  "orientation_event_t_get_prop_orientation",  "(J)I",  awtk_TOrientationEvent_orientation_event_t_get_prop_orientation},
+{"awtk/TPointerEvent",  "pointer_event_cast",  "(J)J",  awtk_TPointerEvent_pointer_event_cast},
+{"awtk/TPointerEvent",  "pointer_event_t_get_prop_x",  "(J)I",  awtk_TPointerEvent_pointer_event_t_get_prop_x},
+{"awtk/TPointerEvent",  "pointer_event_t_get_prop_y",  "(J)I",  awtk_TPointerEvent_pointer_event_t_get_prop_y},
+{"awtk/TPointerEvent",  "pointer_event_t_get_prop_button",  "(J)I",  awtk_TPointerEvent_pointer_event_t_get_prop_button},
+{"awtk/TPointerEvent",  "pointer_event_t_get_prop_pressed",  "(J)Z",  awtk_TPointerEvent_pointer_event_t_get_prop_pressed},
+{"awtk/TPointerEvent",  "pointer_event_t_get_prop_alt",  "(J)Z",  awtk_TPointerEvent_pointer_event_t_get_prop_alt},
+{"awtk/TPointerEvent",  "pointer_event_t_get_prop_ctrl",  "(J)Z",  awtk_TPointerEvent_pointer_event_t_get_prop_ctrl},
+{"awtk/TPointerEvent",  "pointer_event_t_get_prop_cmd",  "(J)Z",  awtk_TPointerEvent_pointer_event_t_get_prop_cmd},
+{"awtk/TPointerEvent",  "pointer_event_t_get_prop_menu",  "(J)Z",  awtk_TPointerEvent_pointer_event_t_get_prop_menu},
+{"awtk/TPointerEvent",  "pointer_event_t_get_prop_shift",  "(J)Z",  awtk_TPointerEvent_pointer_event_t_get_prop_shift},
 {"awtk/TMledit",  "mledit_create",  "(JIIII)J",  awtk_TMledit_mledit_create},
 {"awtk/TMledit",  "mledit_set_readonly",  "(JZ)I",  awtk_TMledit_mledit_set_readonly},
 {"awtk/TMledit",  "mledit_set_focus",  "(JZ)I",  awtk_TMledit_mledit_set_focus},
@@ -19311,16 +19348,20 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TLangIndicator",  "lang_indicator_set_image",  "(JLjava/lang/String;)I",  awtk_TLangIndicator_lang_indicator_set_image},
 {"awtk/TLangIndicator",  "lang_indicator_cast",  "(J)J",  awtk_TLangIndicator_lang_indicator_cast},
 {"awtk/TLangIndicator",  "lang_indicator_t_get_prop_image",  "(J)Ljava/lang/String;",  awtk_TLangIndicator_lang_indicator_t_get_prop_image},
-{"awtk/TPointerEvent",  "pointer_event_cast",  "(J)J",  awtk_TPointerEvent_pointer_event_cast},
-{"awtk/TPointerEvent",  "pointer_event_t_get_prop_x",  "(J)I",  awtk_TPointerEvent_pointer_event_t_get_prop_x},
-{"awtk/TPointerEvent",  "pointer_event_t_get_prop_y",  "(J)I",  awtk_TPointerEvent_pointer_event_t_get_prop_y},
-{"awtk/TPointerEvent",  "pointer_event_t_get_prop_button",  "(J)I",  awtk_TPointerEvent_pointer_event_t_get_prop_button},
-{"awtk/TPointerEvent",  "pointer_event_t_get_prop_pressed",  "(J)Z",  awtk_TPointerEvent_pointer_event_t_get_prop_pressed},
-{"awtk/TPointerEvent",  "pointer_event_t_get_prop_alt",  "(J)Z",  awtk_TPointerEvent_pointer_event_t_get_prop_alt},
-{"awtk/TPointerEvent",  "pointer_event_t_get_prop_ctrl",  "(J)Z",  awtk_TPointerEvent_pointer_event_t_get_prop_ctrl},
-{"awtk/TPointerEvent",  "pointer_event_t_get_prop_cmd",  "(J)Z",  awtk_TPointerEvent_pointer_event_t_get_prop_cmd},
-{"awtk/TPointerEvent",  "pointer_event_t_get_prop_menu",  "(J)Z",  awtk_TPointerEvent_pointer_event_t_get_prop_menu},
-{"awtk/TPointerEvent",  "pointer_event_t_get_prop_shift",  "(J)Z",  awtk_TPointerEvent_pointer_event_t_get_prop_shift},
+{"awtk/TKeyEvent",  "key_event_cast",  "(J)J",  awtk_TKeyEvent_key_event_cast},
+{"awtk/TKeyEvent",  "key_event_t_get_prop_key",  "(J)I",  awtk_TKeyEvent_key_event_t_get_prop_key},
+{"awtk/TKeyEvent",  "key_event_t_get_prop_alt",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_alt},
+{"awtk/TKeyEvent",  "key_event_t_get_prop_lalt",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_lalt},
+{"awtk/TKeyEvent",  "key_event_t_get_prop_ralt",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_ralt},
+{"awtk/TKeyEvent",  "key_event_t_get_prop_ctrl",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_ctrl},
+{"awtk/TKeyEvent",  "key_event_t_get_prop_lctrl",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_lctrl},
+{"awtk/TKeyEvent",  "key_event_t_get_prop_rctrl",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_rctrl},
+{"awtk/TKeyEvent",  "key_event_t_get_prop_shift",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_shift},
+{"awtk/TKeyEvent",  "key_event_t_get_prop_lshift",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_lshift},
+{"awtk/TKeyEvent",  "key_event_t_get_prop_rshift",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_rshift},
+{"awtk/TKeyEvent",  "key_event_t_get_prop_cmd",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_cmd},
+{"awtk/TKeyEvent",  "key_event_t_get_prop_menu",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_menu},
+{"awtk/TKeyEvent",  "key_event_t_get_prop_capslock",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_capslock},
 {"awtk/TCandidates",  "candidates_cast",  "(J)J",  awtk_TCandidates_candidates_cast},
 {"awtk/TCandidates",  "candidates_set_pre",  "(JZ)I",  awtk_TCandidates_candidates_set_pre},
 {"awtk/TCandidates",  "candidates_set_select_by_num",  "(JZ)I",  awtk_TCandidates_candidates_set_select_by_num},
@@ -19384,20 +19425,6 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TGuagePointer",  "guage_pointer_t_get_prop_image",  "(J)Ljava/lang/String;",  awtk_TGuagePointer_guage_pointer_t_get_prop_image},
 {"awtk/TGuagePointer",  "guage_pointer_t_get_prop_anchor_x",  "(J)Ljava/lang/String;",  awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_x},
 {"awtk/TGuagePointer",  "guage_pointer_t_get_prop_anchor_y",  "(J)Ljava/lang/String;",  awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_y},
-{"awtk/TKeyEvent",  "key_event_cast",  "(J)J",  awtk_TKeyEvent_key_event_cast},
-{"awtk/TKeyEvent",  "key_event_t_get_prop_key",  "(J)I",  awtk_TKeyEvent_key_event_t_get_prop_key},
-{"awtk/TKeyEvent",  "key_event_t_get_prop_alt",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_alt},
-{"awtk/TKeyEvent",  "key_event_t_get_prop_lalt",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_lalt},
-{"awtk/TKeyEvent",  "key_event_t_get_prop_ralt",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_ralt},
-{"awtk/TKeyEvent",  "key_event_t_get_prop_ctrl",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_ctrl},
-{"awtk/TKeyEvent",  "key_event_t_get_prop_lctrl",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_lctrl},
-{"awtk/TKeyEvent",  "key_event_t_get_prop_rctrl",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_rctrl},
-{"awtk/TKeyEvent",  "key_event_t_get_prop_shift",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_shift},
-{"awtk/TKeyEvent",  "key_event_t_get_prop_lshift",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_lshift},
-{"awtk/TKeyEvent",  "key_event_t_get_prop_rshift",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_rshift},
-{"awtk/TKeyEvent",  "key_event_t_get_prop_cmd",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_cmd},
-{"awtk/TKeyEvent",  "key_event_t_get_prop_menu",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_menu},
-{"awtk/TKeyEvent",  "key_event_t_get_prop_capslock",  "(J)Z",  awtk_TKeyEvent_key_event_t_get_prop_capslock},
 {"awtk/TFileChooser",  "file_chooser_create",  "()J",  awtk_TFileChooser_file_chooser_create},
 {"awtk/TFileChooser",  "file_chooser_set_init_dir",  "(JLjava/lang/String;)I",  awtk_TFileChooser_file_chooser_set_init_dir},
 {"awtk/TFileChooser",  "file_chooser_set_filter",  "(JLjava/lang/String;)I",  awtk_TFileChooser_file_chooser_set_filter},
@@ -19485,6 +19512,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TStyleMutable",  "style_mutable_cast",  "(J)J",  awtk_TStyleMutable_style_mutable_cast},
 {"awtk/TStyleMutable",  "style_mutable_create",  "(JJ)J",  awtk_TStyleMutable_style_mutable_create},
 {"awtk/TStyleMutable",  "style_mutable_t_get_prop_name",  "(J)Ljava/lang/String;",  awtk_TStyleMutable_style_mutable_t_get_prop_name},
+{"awtk/TCalibrationWin",  "calibration_win_cast",  "(J)J",  awtk_TCalibrationWin_calibration_win_cast},
 {"awtk/TNativeWindow",  "native_window_move",  "(JIIZ)I",  awtk_TNativeWindow_native_window_move},
 {"awtk/TNativeWindow",  "native_window_resize",  "(JIIZ)I",  awtk_TNativeWindow_native_window_resize},
 {"awtk/TNativeWindow",  "native_window_minimize",  "(J)I",  awtk_TNativeWindow_native_window_minimize},
@@ -19508,7 +19536,6 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TObjectArray",  "object_array_create",  "()J",  awtk_TObjectArray_object_array_create},
 {"awtk/TObjectArray",  "object_array_clear_props",  "(J)I",  awtk_TObjectArray_object_array_clear_props},
 {"awtk/TObjectArray",  "object_array_t_get_prop_props_size",  "(J)I",  awtk_TObjectArray_object_array_t_get_prop_props_size},
-{"awtk/TCalibrationWin",  "calibration_win_cast",  "(J)J",  awtk_TCalibrationWin_calibration_win_cast},
 {"awtk/TWindow",  "window_create",  "(JIIII)J",  awtk_TWindow_window_create},
 {"awtk/TWindow",  "window_create_default",  "()J",  awtk_TWindow_window_create_default},
 {"awtk/TWindow",  "window_set_fullscreen",  "(JZ)I",  awtk_TWindow_window_set_fullscreen},
