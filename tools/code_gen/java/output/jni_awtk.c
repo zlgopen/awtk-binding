@@ -7987,29 +7987,6 @@ int awtk_TAppConf_app_conf_save(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
-int awtk_TAppConf_app_conf_on_changed(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  uint32_t ret = 0;
-  event_func_t on_event = (event_func_t)jni_ctx_get_object(&ctx);
-  void* ctx = (void*)jni_ctx_get_int64(&ctx);
-  ret = (uint32_t)app_conf_on_changed(on_event, ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TAppConf_app_conf_off_changed(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  uint32_t id = (uint32_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)app_conf_off_changed(id);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
 int awtk_TAppConf_app_conf_deinit(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -18673,8 +18650,6 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidget",  "widget_t_get_prop_dirty_rect_tolerance",  "(J)I",  awtk_TWidget_widget_t_get_prop_dirty_rect_tolerance},
 {"awtk/TWidget",  "widget_t_get_prop_parent",  "(J)J",  awtk_TWidget_widget_t_get_prop_parent},
 {"awtk/TAppConf",  "app_conf_save",  "()I",  awtk_TAppConf_app_conf_save},
-{"awtk/TAppConf",  "app_conf_on_changed",  "(Lawtk/TOnEvent;J)I",  awtk_TAppConf_app_conf_on_changed},
-{"awtk/TAppConf",  "app_conf_off_changed",  "(I)I",  awtk_TAppConf_app_conf_off_changed},
 {"awtk/TAppConf",  "app_conf_deinit",  "()I",  awtk_TAppConf_app_conf_deinit},
 {"awtk/TAppConf",  "app_conf_exist",  "(Ljava/lang/String;)Z",  awtk_TAppConf_app_conf_exist},
 {"awtk/TAppConf",  "app_conf_set_int",  "(Ljava/lang/String;I)I",  awtk_TAppConf_app_conf_set_int},

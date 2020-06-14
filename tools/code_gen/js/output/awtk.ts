@@ -870,8 +870,6 @@ declare function widget_t_get_prop_floating(nativeObj : any) : boolean;
 declare function widget_t_get_prop_dirty_rect_tolerance(nativeObj : any) : number;
 declare function widget_t_get_prop_parent(nativeObj : any) : any;
 declare function app_conf_save() : TRet;
-declare function app_conf_on_changed(on_event : Function, ctx : any) : number;
-declare function app_conf_off_changed(id : number) : TRet;
 declare function app_conf_deinit() : TRet;
 declare function app_conf_exist(key : string) : boolean;
 declare function app_conf_set_int(key : string, v : number) : TRet;
@@ -9387,31 +9385,6 @@ export class TAppConf {
    */
  static save() : TRet  {
     return app_conf_save();
- }
-
-
-  /**
-   * 注册配置变化事件。
-   * 
-   * @param on_event 事件处理函数。
-   * @param ctx 事件处理函数上下文。
-   *
-   * @returns 返回id，用于app_conf_off_changed。
-   */
- static onChanged(on_event : Function, ctx : any) : number  {
-    return app_conf_on_changed(on_event, ctx);
- }
-
-
-  /**
-   * 注销配置变化事件。
-   * 
-   * @param id app_conf_on_changed返回的ID。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- static offChanged(id : number) : TRet  {
-    return app_conf_off_changed(id);
  }
 
 

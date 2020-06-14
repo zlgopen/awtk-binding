@@ -5361,20 +5361,6 @@ JNIEXPORT jint JNICALL Java_awtk_TAppConf_app_1conf_1save(JNIEnv* env,  jclass a
   return (jint)(ret);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TAppConf_app_1conf_1on_1changed(JNIEnv* env,  jclass ajc, jobject on_event, jlong ctx) { /*func*/
-  uint32_t ret;
-  ret = (uint32_t)app_conf_on_changed(on_event, ctx);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TAppConf_app_1conf_1off_1changed(JNIEnv* env,  jclass ajc, jint id) { /*func*/
-  ret_t ret;
-  ret = (ret_t)app_conf_off_changed(id);
-
-  return (jint)(ret);
-}
-
 JNIEXPORT jint JNICALL Java_awtk_TAppConf_app_1conf_1deinit(JNIEnv* env,  jclass ajc) { /*func*/
   ret_t ret;
   ret = (ret_t)app_conf_deinit();

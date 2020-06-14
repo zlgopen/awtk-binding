@@ -10002,35 +10002,6 @@ static void wrap_app_conf_save(const Nan::FunctionCallbackInfo<v8::Value>& argv)
   (void)argc;(void)ctx;
 }
 
-static void wrap_app_conf_on_changed(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
-  JSContext* ctx = NULL; 
-  int32_t argc = (int32_t)(argv.Length()); 
-  if(argc >= 2) {
-  uint32_t ret = (uint32_t)0;
-  event_func_t on_event = (event_func_t)jsvalue_get_pointer(ctx, argv[0], "event_func_t");
-  void* ctx =  NULL;
-  ret = (uint32_t)app_conf_on_changed(on_event, ctx);
-
-  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
-  argv.GetReturnValue().Set(jret);
-  }
-  (void)argc;(void)ctx;
-}
-
-static void wrap_app_conf_off_changed(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
-  JSContext* ctx = NULL; 
-  int32_t argc = (int32_t)(argv.Length()); 
-  if(argc >= 1) {
-  ret_t ret = (ret_t)0;
-  uint32_t id = (uint32_t)jsvalue_get_int_value(ctx, argv[0]);
-  ret = (ret_t)app_conf_off_changed(id);
-
-  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
-  argv.GetReturnValue().Set(jret);
-  }
-  (void)argc;(void)ctx;
-}
-
 static void wrap_app_conf_deinit(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -10240,8 +10211,6 @@ static void wrap_app_conf_remove(const Nan::FunctionCallbackInfo<v8::Value>& arg
 
 ret_t app_conf_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "app_conf_save", wrap_app_conf_save);
-  Nan::Export(ctx, "app_conf_on_changed", wrap_app_conf_on_changed);
-  Nan::Export(ctx, "app_conf_off_changed", wrap_app_conf_off_changed);
   Nan::Export(ctx, "app_conf_deinit", wrap_app_conf_deinit);
   Nan::Export(ctx, "app_conf_exist", wrap_app_conf_exist);
   Nan::Export(ctx, "app_conf_set_int", wrap_app_conf_set_int);

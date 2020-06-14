@@ -6372,33 +6372,6 @@ pyobject_t wrap_app_conf_save(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", ret);
 }
 
-pyobject_t wrap_app_conf_on_changed(pyobject_t self, pyobject_t pyargs) {
-  uint32_t ret = 0;
-  event_func_t on_event = 0;
-  void* ctx = NULL;
-
-  if (!PyArg_ParseTuple(pyargs, "iO&" , &on_event, &parse_voidp, &ctx)) {
-    PyErr_SetString(PyExc_TypeError, "invalid arguments");
-    return NULL;
-  }
-
-  ret = (uint32_t)app_conf_on_changed(on_event, ctx);
-  return Py_BuildValue("i", ret);
-}
-
-pyobject_t wrap_app_conf_off_changed(pyobject_t self, pyobject_t pyargs) {
-  ret_t ret = 0;
-  uint32_t id = 0;
-
-  if (!PyArg_ParseTuple(pyargs, "i" , &id)) {
-    PyErr_SetString(PyExc_TypeError, "invalid arguments");
-    return NULL;
-  }
-
-  ret = (ret_t)app_conf_off_changed(id);
-  return Py_BuildValue("i", ret);
-}
-
 pyobject_t wrap_app_conf_deinit(pyobject_t self, pyobject_t pyargs) {
   ret_t ret = 0;
 
@@ -17718,8 +17691,6 @@ static PyMethodDef awtk_methods[] = {
 {"widget_t_get_prop_dirty_rect_tolerance", wrap_widget_t_get_prop_dirty_rect_tolerance, METH_VARARGS, "widget_t_get_prop_dirty_rect_tolerance"},
 {"widget_t_get_prop_parent", wrap_widget_t_get_prop_parent, METH_VARARGS, "widget_t_get_prop_parent"},
 {"app_conf_save", wrap_app_conf_save, METH_VARARGS, "app_conf_save"},
-{"app_conf_on_changed", wrap_app_conf_on_changed, METH_VARARGS, "app_conf_on_changed"},
-{"app_conf_off_changed", wrap_app_conf_off_changed, METH_VARARGS, "app_conf_off_changed"},
 {"app_conf_deinit", wrap_app_conf_deinit, METH_VARARGS, "app_conf_deinit"},
 {"app_conf_exist", wrap_app_conf_exist, METH_VARARGS, "app_conf_exist"},
 {"app_conf_set_int", wrap_app_conf_set_int, METH_VARARGS, "app_conf_set_int"},

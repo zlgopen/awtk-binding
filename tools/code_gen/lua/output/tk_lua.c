@@ -6839,27 +6839,6 @@ static int wrap_app_conf_save(lua_State* L) {
   return 1;
 }
 
-static int wrap_app_conf_on_changed(lua_State* L) {
-  uint32_t ret = 0;
-  event_func_t on_event = (event_func_t)lua_tocfunction(L, 1);
-  void* ctx =  NULL;
-  ret = (uint32_t)app_conf_on_changed(on_event, ctx);
-
-  lua_pushinteger(L,(lua_Integer)(ret));
-
-  return 1;
-}
-
-static int wrap_app_conf_off_changed(lua_State* L) {
-  ret_t ret = 0;
-  uint32_t id = (uint32_t)luaL_checkinteger(L, 1);
-  ret = (ret_t)app_conf_off_changed(id);
-
-  lua_pushnumber(L,(lua_Number)(ret));
-
-  return 1;
-}
-
 static int wrap_app_conf_deinit(lua_State* L) {
   ret_t ret = 0;
   ret = (ret_t)app_conf_deinit();
@@ -7002,8 +6981,6 @@ static int wrap_app_conf_remove(lua_State* L) {
 static void app_conf_t_init(lua_State* L) {
   static const struct luaL_Reg static_funcs[] = {
     {"save", wrap_app_conf_save},
-    {"on_changed", wrap_app_conf_on_changed},
-    {"off_changed", wrap_app_conf_off_changed},
     {"deinit", wrap_app_conf_deinit},
     {"exist", wrap_app_conf_exist},
     {"set_int", wrap_app_conf_set_int},

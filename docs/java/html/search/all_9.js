@@ -35,7 +35,7 @@ var searchData=
   ['int16_610',['int16',['../classawtk_1_1_t_value.html#a38ba646794294635c970f39c761e1f69',1,'awtk.TValue.int16()'],['../enumawtk_1_1_t_value_type.html#ae76c32ecbe4dd92907372b64d283d573',1,'awtk.TValueType.INT16()']]],
   ['int32_611',['int32',['../classawtk_1_1_t_value.html#accbb6cc65d0e9c758b26fd981d35b34f',1,'awtk.TValue.int32()'],['../enumawtk_1_1_t_value_type.html#af6b7a965c65334b10da9cbd602c8d2ba',1,'awtk.TValueType.INT32()']]],
   ['int64_612',['int64',['../classawtk_1_1_t_value.html#ab6d257aea9e23f54c1a6eed397f40816',1,'awtk.TValue.int64()'],['../enumawtk_1_1_t_value_type.html#abf9d23fafaaa8a684092f94765605300',1,'awtk.TValueType.INT64()']]],
-  ['int8_613',['INT8',['../enumawtk_1_1_t_value_type.html#a52addf82041b70b9470b43508e930bd9',1,'awtk.TValueType.INT8()'],['../classawtk_1_1_t_value.html#a96859b44fd51cb3eb3b70a3f1e64dcca',1,'awtk.TValue.int8()']]],
+  ['int8_613',['int8',['../classawtk_1_1_t_value.html#a96859b44fd51cb3eb3b70a3f1e64dcca',1,'awtk.TValue.int8()'],['../enumawtk_1_1_t_value_type.html#a52addf82041b70b9470b43508e930bd9',1,'awtk.TValueType.INT8()']]],
   ['intersectcliprect_614',['intersectClipRect',['../classawtk_1_1_t_vgcanvas.html#a1007694efed054b3272c66dee48cab80',1,'awtk::TVgcanvas']]],
   ['invalid_615',['INVALID',['../enumawtk_1_1_t_value_type.html#a7e98498f65bb51b8d9a0487fad1915fd',1,'awtk::TValueType']]],
   ['io_616',['IO',['../enumawtk_1_1_t_ret.html#aae96e728c9ca79ef25ba4c1b7399e14c',1,'awtk::TRet']]],

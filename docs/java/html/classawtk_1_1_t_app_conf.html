@@ -78,10 +78,6 @@ $(function() {
 静态 Public 成员函数</h2></td></tr>
 <tr class="memitem:aec4b992d030a548778e2e320f1c70494"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#aec4b992d030a548778e2e320f1c70494">save</a> ()</td></tr>
 <tr class="separator:aec4b992d030a548778e2e320f1c70494"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9e6bf7235a9edcd4b60ca60888c08b5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#ab9e6bf7235a9edcd4b60ca60888c08b5">onChanged</a> (TOnEvent on_event, long ctx)</td></tr>
-<tr class="separator:ab9e6bf7235a9edcd4b60ca60888c08b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08cdb101ebc75338738951f8175af29f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#a08cdb101ebc75338738951f8175af29f">offChanged</a> (int id)</td></tr>
-<tr class="separator:a08cdb101ebc75338738951f8175af29f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcc95df36fa7d794a021dfce9709e1fd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#adcc95df36fa7d794a021dfce9709e1fd">deinit</a> ()</td></tr>
 <tr class="separator:adcc95df36fa7d794a021dfce9709e1fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0de3c3439a9239a83107489e600f8d97"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#a0de3c3439a9239a83107489e600f8d97">exist</a> (String key)</td></tr>
@@ -397,85 +393,6 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>返回配置项的值（如果不存在返回缺省值）。 </dd></dl>
-
-</div>
-</div>
-<a id="a08cdb101ebc75338738951f8175af29f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08cdb101ebc75338738951f8175af29f">&#9670;&nbsp;</a></span>offChanged()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TAppConf.offChanged </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>注销配置变化事件。</p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>app_conf_on_changed返回的ID。</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
-
-</div>
-</div>
-<a id="ab9e6bf7235a9edcd4b60ca60888c08b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9e6bf7235a9edcd4b60ca60888c08b5">&#9670;&nbsp;</a></span>onChanged()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static int awtk.TAppConf.onChanged </td>
-          <td>(</td>
-          <td class="paramtype">TOnEvent&#160;</td>
-          <td class="paramname"><em>on_event</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>ctx</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>注册配置变化事件。</p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">on_event</td><td>事件处理函数。 </td></tr>
-    <tr><td class="paramname">ctx</td><td>事件处理函数上下文。</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>返回</dt><dd>返回id，用于app_conf_off_changed。 </dd></dl>
 
 </div>
 </div>
