@@ -3346,6 +3346,14 @@ public:
   static  ret_t Save() ;
 
   /**
+   * 重新加载配置(内存中的配置丢失)。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  static  ret_t Reload() ;
+
+  /**
    * 释放conf对象。
    * 
    *
@@ -4216,70 +4224,56 @@ public:
 
 
 /**
- * 文件管理/浏览/选择控件。
+ * 仪表指针控件。
  *
- *file\_browser\_view\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于file\_browser\_view\_t控件。
+ *仪表指针就是一张旋转的图片，图片可以是普通图片也可以是SVG图片。
  *
- *考虑到文件浏览器界面呈现的多样性，界面呈现工作完全有子控件来完成。
+ *在嵌入式平台上，对于旋转的图片，SVG图片的效率比位图高数倍，所以推荐使用SVG图片。
  *
- *file\_browser\_view\_t负责关联文件/文件夹数据到子控件上，子控件需要特定的规范命名。
+ *guage\_pointer\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于guage\_pointer\_t控件。
  *
- ** 名为 "cwd" 的子控件用于显示当前路径。
+ *在xml中使用"guage\_pointer"标签创建仪表指针控件。如：
  *
- ** 名为 "selected_file" 的子控件用于显示当前选择的文件。
+ *```xml
+ *<guage_pointer x="c" y="50" w="24" h="140" value="-128" image="guage_pointer" />
+ *```
  *
- ** 名为 "file" 的子控件用于显示文件项的模板控件。
+ *> 更多用法请参考：
+ *[guage.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/guage.xml)
  *
- ** 名为 "folder" 的子控件用于显示文件夹项的模板控件。
+ *在c代码中使用函数guage\_pointer\_create创建仪表指针控件。如：
  *
- ** 名为 "return_up" 的子控件用于返回上一级文件夹的模板控件。
  *
- ** 名为 "container" 的子控件为容器控件，通常是scrollview。
- *
- ** 名为 "name" 的子控件用于显示文件和文件夹的名称(放在列表项目内)。
- *
- ** 名为 "size" 的子控件用于显示文件和文件夹的大小(放在列表项目内)。
- *
- ** 名为 "mtime" 的子控件用于显示文件和文件夹的修改时间(放在列表项目内)。
- *
- ** 名为 "ctime" 的子控件用于显示文件和文件夹的创建时间(放在列表项目内)。
- *
- ** 名为 "icon" 的子控件用于显示文件和文件夹的图标(放在列表项目内)。
- *
- ** 类型为 "check_button" 的子控件用于选择(放在列表项目内)。
- *
- *完整示例请参考：
- *
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/file_chooser_for_open.xml
+ *> 创建之后，需要用guage\_pointer\_set\_image设置仪表指针图片。
  *
  */
-class TFileBrowserView : public TWidget { 
+class TGuagePointer : public TWidget { 
 public:
-  TFileBrowserView(widget_t* nativeObj) : TWidget(nativeObj) {
+  TGuagePointer(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
-  TFileBrowserView(const file_browser_view_t* nativeObj) : TWidget((widget_t*)nativeObj) {
+  TGuagePointer(const guage_pointer_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
-  static TFileBrowserView Cast(widget_t* nativeObj) {
-    return TFileBrowserView(nativeObj);
+  static TGuagePointer Cast(widget_t* nativeObj) {
+    return TGuagePointer(nativeObj);
   }
 
-  static TFileBrowserView Cast(const widget_t* nativeObj) {
-    return TFileBrowserView((widget_t*)nativeObj);
+  static TGuagePointer Cast(const widget_t* nativeObj) {
+    return TGuagePointer((widget_t*)nativeObj);
   }
 
-  static TFileBrowserView Cast(TWidget& obj) {
-    return TFileBrowserView(obj.nativeObj);
+  static TGuagePointer Cast(TWidget& obj) {
+    return TGuagePointer(obj.nativeObj);
   }
 
-  static TFileBrowserView Cast(const TWidget& obj) {
-    return TFileBrowserView(obj.nativeObj);
+  static TGuagePointer Cast(const TWidget& obj) {
+    return TGuagePointer(obj.nativeObj);
   }
 
 
   /**
-   * 创建file_browser_view对象
+   * 创建guage_pointer对象
    * 
    * @param parent 父控件
    * @param x x坐标
@@ -4292,131 +4286,58 @@ public:
   static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
 
   /**
-   * 设置 初始文件夹。
+   * 设置指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。
    * 
-   * @param init_dir 初始文件夹。
+   * @param angle 指针角度。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetInitDir(const char* init_dir) ;
+  ret_t SetAngle(int32_t angle) ;
 
   /**
-   * 设置 过滤规则。
-   *> files_only 表示只列出文件，dir_only 表示只列出目录，其它表示只列出满足扩展名文件集合(如：.jpg.png.gif)。
+   * 设置指针的图片。
    * 
-   * @param filter 过滤规则。
+   * @param image 指针的图片。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetFilter(const char* filter) ;
+  ret_t SetImage(const char* image) ;
 
   /**
-   * 重新加载。
+   * 设置指针的旋转锚点。
    * 
+   * @param anchor_x 指针的锚点坐标x。(后面加上px为像素点，不加px为相对百分比坐标)
+   * @param anchor_y 指针的锚点坐标y。(后面加上px为像素点，不加px为相对百分比坐标)
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t Reload() ;
+  ret_t SetAnchor(const char* anchor_x, const char* anchor_y) ;
 
   /**
-   * 设置 忽略隐藏文件。
-   * 
-   * @param ignore_hidden_files 忽略隐藏文件。
+   * 指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。
    *
-   * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetIgnoreHiddenFiles(bool ignore_hidden_files) ;
+  int32_t GetAngle() const;
 
   /**
-   * 设置 是否为升序排序。
-   * 
-   * @param sort_ascending 是否为升序排序。
+   * 指针图片。
    *
-   * @return 返回RET_OK表示成功，否则表示失败。
+   *图片须垂直向上，图片的中心点为旋转方向。
+   *
    */
-  ret_t SetSortAscending(bool sort_ascending) ;
+  char* GetImage() const;
 
   /**
-   * 设置 是否显示checkbutton。
-   * 
-   * @param show_check_button 是否显示checkbutton。
+   * 图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
    *
-   * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetShowCheckButton(bool show_check_button) ;
+  char* GetAnchorX() const;
 
   /**
-   * 设置 排序方式。可选值(name, size, mtime, type)。
-   * 
-   * @param sort_by 排序方式。可选值(name, size, mtime, type)。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetSortBy(const char* sort_by) ;
-
-  /**
-   * 获取当前路径。
-   * 
-   *
-   * @return 返回当前路径。
-   */
-  const char* GetCwd() ;
-
-  /**
-   * 在当前文件夹创建子文件夹。
-   * 
-   * @param name 子文件夹名。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t CreateDir(const char* name) ;
-
-  /**
-   * 在当前文件夹创建文件。
-   * 
-   * @param name 文件名。
-   * @param data 数据。
-   * @param size 数据长度。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t CreateFile(const char* name, const char* data, uint32_t size) ;
-
-  /**
-   * 初始文件夹。
+   * 图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
    *
    */
-  char* GetInitDir() const;
-
-  /**
-   * 过滤规则。
-   *
-   */
-  char* GetFilter() const;
-
-  /**
-   * 是否忽略隐藏文件。
-   *
-   */
-  bool GetIgnoreHiddenFiles() const;
-
-  /**
-   * 是否为升序排序。
-   *
-   */
-  bool GetSortAscending() const;
-
-  /**
-   * 是否显示checkbutton。
-   *
-   */
-  bool GetShowCheckButton() const;
-
-  /**
-   * 排序方式。可选值(name, size, mtime, type)。
-   *
-   */
-  char* GetSortBy() const;
+  char* GetAnchorY() const;
 };
 
 
@@ -7251,6 +7172,90 @@ public:
 
 
 /**
+ * 色块控件。
+ *
+ *用来显示一个颜色块，它通过属性而不是主题来设置颜色，方便在运行时动态改变颜色。
+ *
+ *可以使用value属性访问背景颜色的颜色值。
+ *
+ *color\_tile\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于color\_tile\_t控件。
+ *
+ *在xml中使用"color_tile"标签创建色块控件。如：
+ *
+ *```xml
+ *<color_tile x="c" y="m" w="80" h="30" bg_color="green" />
+ *```
+ *
+ *> 更多用法请参考：
+ *[color_tile](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/color_picker_rgb.xml)
+ *
+ *在c代码中使用函数color_tile\_create创建色块控件。如：
+ *
+ *> 创建之后，用color\_tile\_set\_bg\_color设置背景颜色。
+ *
+ */
+class TColorTile : public TWidget { 
+public:
+  TColorTile(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TColorTile(const color_tile_t* nativeObj) : TWidget((widget_t*)nativeObj) {
+  }
+
+  static TColorTile Cast(widget_t* nativeObj) {
+    return TColorTile(nativeObj);
+  }
+
+  static TColorTile Cast(const widget_t* nativeObj) {
+    return TColorTile((widget_t*)nativeObj);
+  }
+
+  static TColorTile Cast(TWidget& obj) {
+    return TColorTile(obj.nativeObj);
+  }
+
+  static TColorTile Cast(const TWidget& obj) {
+    return TColorTile(obj.nativeObj);
+  }
+
+
+  /**
+   * 创建color_tile对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @return 对象。
+   */
+  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
+
+  /**
+   * 设置背景颜色。
+   * 
+   * @param color 背景颜色。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetBgColor(const char* color) ;
+
+  /**
+   * 背景颜色。
+   *
+   */
+  const char* GetBgColor() const;
+
+  /**
+   * 边框颜色。
+   *
+   */
+  const char* GetBorderColor() const;
+};
+
+
+/**
  * 滑动视图。
  *
  *滑动视图可以管理多个页面，并通过滑动来切换当前页面。也可以管理多张图片，让它们自动切换。
@@ -7414,90 +7419,6 @@ public:
    *
    */
   char* GetAnimHint() const;
-};
-
-
-/**
- * 色块控件。
- *
- *用来显示一个颜色块，它通过属性而不是主题来设置颜色，方便在运行时动态改变颜色。
- *
- *可以使用value属性访问背景颜色的颜色值。
- *
- *color\_tile\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于color\_tile\_t控件。
- *
- *在xml中使用"color_tile"标签创建色块控件。如：
- *
- *```xml
- *<color_tile x="c" y="m" w="80" h="30" bg_color="green" />
- *```
- *
- *> 更多用法请参考：
- *[color_tile](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/color_picker_rgb.xml)
- *
- *在c代码中使用函数color_tile\_create创建色块控件。如：
- *
- *> 创建之后，用color\_tile\_set\_bg\_color设置背景颜色。
- *
- */
-class TColorTile : public TWidget { 
-public:
-  TColorTile(widget_t* nativeObj) : TWidget(nativeObj) {
-  }
-
-  TColorTile(const color_tile_t* nativeObj) : TWidget((widget_t*)nativeObj) {
-  }
-
-  static TColorTile Cast(widget_t* nativeObj) {
-    return TColorTile(nativeObj);
-  }
-
-  static TColorTile Cast(const widget_t* nativeObj) {
-    return TColorTile((widget_t*)nativeObj);
-  }
-
-  static TColorTile Cast(TWidget& obj) {
-    return TColorTile(obj.nativeObj);
-  }
-
-  static TColorTile Cast(const TWidget& obj) {
-    return TColorTile(obj.nativeObj);
-  }
-
-
-  /**
-   * 创建color_tile对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @return 对象。
-   */
-  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
-
-  /**
-   * 设置背景颜色。
-   * 
-   * @param color 背景颜色。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetBgColor(const char* color) ;
-
-  /**
-   * 背景颜色。
-   *
-   */
-  const char* GetBgColor() const;
-
-  /**
-   * 边框颜色。
-   *
-   */
-  const char* GetBorderColor() const;
 };
 
 
@@ -7742,137 +7663,6 @@ public:
 
 
 /**
- * 左右滑动菜单控件。
- *
- *一般用一组按钮作为子控件，通过左右滑动改变当前的项。除了当菜单使用外，也可以用来切换页面。
- *
- *slide\_menu\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于slide\_menu\_t控件。
- *
- *在xml中使用"slide\_menu"标签创建左右滑动菜单控件。如：
- *
- *```xml
- *<slide_menu style="mask" align_v="top">
- *<button style="slide_button" text="0"/>
- *<button style="slide_button" text="1"/>
- *<button style="slide_button" text="2"/>
- *<button style="slide_button" text="3"/>
- *<button style="slide_button" text="4"/>
- *</slide_menu>
- *```
- *
- *> 更多用法请参考：[slide_menu.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/slide_menu.xml)
- *
- *在c代码中使用函数slide\_menu\_create创建左右滑动菜单控件。如：
- *
- *
- *可按下面的方法关注当前项改变的事件：
- *
- *
- *可按下面的方法关注当前按钮被点击的事件：
- *
- *
- *> 完整示例请参考：[slide_menu demo](
- *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/slide_menu.c)
- *
- *可用通过style来设置控件的显示风格，如背景颜色和蒙版颜色等等。如：
- *
- *```xml
- *<style name="mask">
- *<normal     bg_color="#f0f0f0" mask_color="#f0f0f0"/>
- *</style>
- *```
- *
- *> 更多用法请参考：[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L493)
- *
- */
-class TSlideMenu : public TWidget { 
-public:
-  TSlideMenu(widget_t* nativeObj) : TWidget(nativeObj) {
-  }
-
-  TSlideMenu(const slide_menu_t* nativeObj) : TWidget((widget_t*)nativeObj) {
-  }
-
-  static TSlideMenu Cast(widget_t* nativeObj) {
-    return TSlideMenu(nativeObj);
-  }
-
-  static TSlideMenu Cast(const widget_t* nativeObj) {
-    return TSlideMenu((widget_t*)nativeObj);
-  }
-
-  static TSlideMenu Cast(TWidget& obj) {
-    return TSlideMenu(obj.nativeObj);
-  }
-
-  static TSlideMenu Cast(const TWidget& obj) {
-    return TSlideMenu(obj.nativeObj);
-  }
-
-
-  /**
-   * 创建slide_menu对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @return 对象。
-   */
-  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
-
-  /**
-   * 设置当前项。
-   * 
-   * @param value 当前项的索引。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetValue(uint32_t value) ;
-
-  /**
-   * 设置垂直对齐方式。
-   * 
-   * @param align_v 对齐方式。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetAlignV(align_v_t align_v) ;
-
-  /**
-   * 设置最小缩放比例。
-   * 
-   * @param min_scale 最小缩放比例，范围[0.5-1]。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetMinScale(float_t min_scale) ;
-
-  /**
-   * 值。代表当前选中项的索引。
-   *
-   */
-  int32_t GetValue() const;
-
-  /**
-   * 垂直对齐方式。
-   *
-   */
-  align_v_t GetAlignV() const;
-
-  /**
-   * 最小缩放比例。
-   *
-   */
-  float_t GetMinScale() const;
-};
-
-
-/**
  * 一个裁剪子控件的容器控件。
  *
  *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
@@ -8021,7 +7811,7 @@ public:
    * @param w 宽度
    * @param h 高度
    *
-   * @return 对象。
+   * @return widget对象。
    */
   static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
 
@@ -8034,7 +7824,7 @@ public:
    * @param w 宽度
    * @param h 高度
    *
-   * @return 对象。
+   * @return widget对象。
    */
   static  TWidget CreateRadio(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
 
@@ -8052,6 +7842,137 @@ public:
    *
    */
   bool GetValue() const;
+};
+
+
+/**
+ * 左右滑动菜单控件。
+ *
+ *一般用一组按钮作为子控件，通过左右滑动改变当前的项。除了当菜单使用外，也可以用来切换页面。
+ *
+ *slide\_menu\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于slide\_menu\_t控件。
+ *
+ *在xml中使用"slide\_menu"标签创建左右滑动菜单控件。如：
+ *
+ *```xml
+ *<slide_menu style="mask" align_v="top">
+ *<button style="slide_button" text="0"/>
+ *<button style="slide_button" text="1"/>
+ *<button style="slide_button" text="2"/>
+ *<button style="slide_button" text="3"/>
+ *<button style="slide_button" text="4"/>
+ *</slide_menu>
+ *```
+ *
+ *> 更多用法请参考：[slide_menu.xml](
+ *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/slide_menu.xml)
+ *
+ *在c代码中使用函数slide\_menu\_create创建左右滑动菜单控件。如：
+ *
+ *
+ *可按下面的方法关注当前项改变的事件：
+ *
+ *
+ *可按下面的方法关注当前按钮被点击的事件：
+ *
+ *
+ *> 完整示例请参考：[slide_menu demo](
+ *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/slide_menu.c)
+ *
+ *可用通过style来设置控件的显示风格，如背景颜色和蒙版颜色等等。如：
+ *
+ *```xml
+ *<style name="mask">
+ *<normal     bg_color="#f0f0f0" mask_color="#f0f0f0"/>
+ *</style>
+ *```
+ *
+ *> 更多用法请参考：[theme default](
+ *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L493)
+ *
+ */
+class TSlideMenu : public TWidget { 
+public:
+  TSlideMenu(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TSlideMenu(const slide_menu_t* nativeObj) : TWidget((widget_t*)nativeObj) {
+  }
+
+  static TSlideMenu Cast(widget_t* nativeObj) {
+    return TSlideMenu(nativeObj);
+  }
+
+  static TSlideMenu Cast(const widget_t* nativeObj) {
+    return TSlideMenu((widget_t*)nativeObj);
+  }
+
+  static TSlideMenu Cast(TWidget& obj) {
+    return TSlideMenu(obj.nativeObj);
+  }
+
+  static TSlideMenu Cast(const TWidget& obj) {
+    return TSlideMenu(obj.nativeObj);
+  }
+
+
+  /**
+   * 创建slide_menu对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @return 对象。
+   */
+  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
+
+  /**
+   * 设置当前项。
+   * 
+   * @param value 当前项的索引。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetValue(uint32_t value) ;
+
+  /**
+   * 设置垂直对齐方式。
+   * 
+   * @param align_v 对齐方式。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetAlignV(align_v_t align_v) ;
+
+  /**
+   * 设置最小缩放比例。
+   * 
+   * @param min_scale 最小缩放比例，范围[0.5-1]。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetMinScale(float_t min_scale) ;
+
+  /**
+   * 值。代表当前选中项的索引。
+   *
+   */
+  int32_t GetValue() const;
+
+  /**
+   * 垂直对齐方式。
+   *
+   */
+  align_v_t GetAlignV() const;
+
+  /**
+   * 最小缩放比例。
+   *
+   */
+  float_t GetMinScale() const;
 };
 
 
@@ -10868,124 +10789,6 @@ public:
 
 
 /**
- * 仪表指针控件。
- *
- *仪表指针就是一张旋转的图片，图片可以是普通图片也可以是SVG图片。
- *
- *在嵌入式平台上，对于旋转的图片，SVG图片的效率比位图高数倍，所以推荐使用SVG图片。
- *
- *guage\_pointer\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于guage\_pointer\_t控件。
- *
- *在xml中使用"guage\_pointer"标签创建仪表指针控件。如：
- *
- *```xml
- *<guage_pointer x="c" y="50" w="24" h="140" value="-128" image="guage_pointer" />
- *```
- *
- *> 更多用法请参考：
- *[guage.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/guage.xml)
- *
- *在c代码中使用函数guage\_pointer\_create创建仪表指针控件。如：
- *
- *
- *> 创建之后，需要用guage\_pointer\_set\_image设置仪表指针图片。
- *
- */
-class TGuagePointer : public TWidget { 
-public:
-  TGuagePointer(widget_t* nativeObj) : TWidget(nativeObj) {
-  }
-
-  TGuagePointer(const guage_pointer_t* nativeObj) : TWidget((widget_t*)nativeObj) {
-  }
-
-  static TGuagePointer Cast(widget_t* nativeObj) {
-    return TGuagePointer(nativeObj);
-  }
-
-  static TGuagePointer Cast(const widget_t* nativeObj) {
-    return TGuagePointer((widget_t*)nativeObj);
-  }
-
-  static TGuagePointer Cast(TWidget& obj) {
-    return TGuagePointer(obj.nativeObj);
-  }
-
-  static TGuagePointer Cast(const TWidget& obj) {
-    return TGuagePointer(obj.nativeObj);
-  }
-
-
-  /**
-   * 创建guage_pointer对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @return 对象。
-   */
-  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
-
-  /**
-   * 设置指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。
-   * 
-   * @param angle 指针角度。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetAngle(int32_t angle) ;
-
-  /**
-   * 设置指针的图片。
-   * 
-   * @param image 指针的图片。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetImage(const char* image) ;
-
-  /**
-   * 设置指针的旋转锚点。
-   * 
-   * @param anchor_x 指针的锚点坐标x。(后面加上px为像素点，不加px为相对百分比坐标)
-   * @param anchor_y 指针的锚点坐标y。(后面加上px为像素点，不加px为相对百分比坐标)
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetAnchor(const char* anchor_x, const char* anchor_y) ;
-
-  /**
-   * 指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。
-   *
-   */
-  int32_t GetAngle() const;
-
-  /**
-   * 指针图片。
-   *
-   *图片须垂直向上，图片的中心点为旋转方向。
-   *
-   */
-  char* GetImage() const;
-
-  /**
-   * 图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
-   *
-   */
-  char* GetAnchorX() const;
-
-  /**
-   * 图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
-   *
-   */
-  char* GetAnchorY() const;
-};
-
-
-/**
  * 文件/目录选择器
  *
  */
@@ -11088,6 +10891,211 @@ public:
    * @return 返回用户是否取消了选择。
    */
   bool IsAborted() ;
+};
+
+
+/**
+ * 文件管理/浏览/选择控件。
+ *
+ *file\_browser\_view\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于file\_browser\_view\_t控件。
+ *
+ *考虑到文件浏览器界面呈现的多样性，界面呈现工作完全有子控件来完成。
+ *
+ *file\_browser\_view\_t负责关联文件/文件夹数据到子控件上，子控件需要特定的规范命名。
+ *
+ ** 名为 "cwd" 的子控件用于显示当前路径。
+ *
+ ** 名为 "selected_file" 的子控件用于显示当前选择的文件。
+ *
+ ** 名为 "file" 的子控件用于显示文件项的模板控件。
+ *
+ ** 名为 "folder" 的子控件用于显示文件夹项的模板控件。
+ *
+ ** 名为 "return_up" 的子控件用于返回上一级文件夹的模板控件。
+ *
+ ** 名为 "container" 的子控件为容器控件，通常是scrollview。
+ *
+ ** 名为 "name" 的子控件用于显示文件和文件夹的名称(放在列表项目内)。
+ *
+ ** 名为 "size" 的子控件用于显示文件和文件夹的大小(放在列表项目内)。
+ *
+ ** 名为 "mtime" 的子控件用于显示文件和文件夹的修改时间(放在列表项目内)。
+ *
+ ** 名为 "ctime" 的子控件用于显示文件和文件夹的创建时间(放在列表项目内)。
+ *
+ ** 名为 "icon" 的子控件用于显示文件和文件夹的图标(放在列表项目内)。
+ *
+ ** 类型为 "check_button" 的子控件用于选择(放在列表项目内)。
+ *
+ *完整示例请参考：
+ *
+ *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/file_chooser_for_open.xml
+ *
+ */
+class TFileBrowserView : public TWidget { 
+public:
+  TFileBrowserView(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TFileBrowserView(const file_browser_view_t* nativeObj) : TWidget((widget_t*)nativeObj) {
+  }
+
+  static TFileBrowserView Cast(widget_t* nativeObj) {
+    return TFileBrowserView(nativeObj);
+  }
+
+  static TFileBrowserView Cast(const widget_t* nativeObj) {
+    return TFileBrowserView((widget_t*)nativeObj);
+  }
+
+  static TFileBrowserView Cast(TWidget& obj) {
+    return TFileBrowserView(obj.nativeObj);
+  }
+
+  static TFileBrowserView Cast(const TWidget& obj) {
+    return TFileBrowserView(obj.nativeObj);
+  }
+
+
+  /**
+   * 创建file_browser_view对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @return 对象。
+   */
+  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
+
+  /**
+   * 设置 初始文件夹。
+   * 
+   * @param init_dir 初始文件夹。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetInitDir(const char* init_dir) ;
+
+  /**
+   * 设置 过滤规则。
+   *> files_only 表示只列出文件，dir_only 表示只列出目录，其它表示只列出满足扩展名文件集合(如：.jpg.png.gif)。
+   * 
+   * @param filter 过滤规则。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetFilter(const char* filter) ;
+
+  /**
+   * 重新加载。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Reload() ;
+
+  /**
+   * 设置 忽略隐藏文件。
+   * 
+   * @param ignore_hidden_files 忽略隐藏文件。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetIgnoreHiddenFiles(bool ignore_hidden_files) ;
+
+  /**
+   * 设置 是否为升序排序。
+   * 
+   * @param sort_ascending 是否为升序排序。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetSortAscending(bool sort_ascending) ;
+
+  /**
+   * 设置 是否显示checkbutton。
+   * 
+   * @param show_check_button 是否显示checkbutton。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetShowCheckButton(bool show_check_button) ;
+
+  /**
+   * 设置 排序方式。可选值(name, size, mtime, type)。
+   * 
+   * @param sort_by 排序方式。可选值(name, size, mtime, type)。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetSortBy(const char* sort_by) ;
+
+  /**
+   * 获取当前路径。
+   * 
+   *
+   * @return 返回当前路径。
+   */
+  const char* GetCwd() ;
+
+  /**
+   * 在当前文件夹创建子文件夹。
+   * 
+   * @param name 子文件夹名。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t CreateDir(const char* name) ;
+
+  /**
+   * 在当前文件夹创建文件。
+   * 
+   * @param name 文件名。
+   * @param data 数据。
+   * @param size 数据长度。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t CreateFile(const char* name, const char* data, uint32_t size) ;
+
+  /**
+   * 初始文件夹。
+   *
+   */
+  char* GetInitDir() const;
+
+  /**
+   * 过滤规则。
+   *
+   */
+  char* GetFilter() const;
+
+  /**
+   * 是否忽略隐藏文件。
+   *
+   */
+  bool GetIgnoreHiddenFiles() const;
+
+  /**
+   * 是否为升序排序。
+   *
+   */
+  bool GetSortAscending() const;
+
+  /**
+   * 是否显示checkbutton。
+   *
+   */
+  bool GetShowCheckButton() const;
+
+  /**
+   * 排序方式。可选值(name, size, mtime, type)。
+   *
+   */
+  char* GetSortBy() const;
 };
 
 
@@ -11800,7 +11808,7 @@ public:
   /**
    * 设置屏保时间。
    * 
-   * @param screen_saver_time 屏保时间(单位毫秒)。
+   * @param screen_saver_time 屏保时间(单位毫秒), 为0关闭屏保。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */

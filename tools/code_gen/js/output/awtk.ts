@@ -870,6 +870,7 @@ declare function widget_t_get_prop_floating(nativeObj : any) : boolean;
 declare function widget_t_get_prop_dirty_rect_tolerance(nativeObj : any) : number;
 declare function widget_t_get_prop_parent(nativeObj : any) : any;
 declare function app_conf_save() : TRet;
+declare function app_conf_reload() : TRet;
 declare function app_conf_deinit() : TRet;
 declare function app_conf_exist(key : string) : boolean;
 declare function app_conf_set_int(key : string, v : number) : TRet;
@@ -1132,24 +1133,15 @@ declare function ASSET_TYPE_XML();
 declare function ASSET_TYPE_STRINGS();
 declare function ASSET_TYPE_SCRIPT();
 declare function ASSET_TYPE_DATA();
-declare function file_browser_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function file_browser_view_cast(widget : any) : any;
-declare function file_browser_view_set_init_dir(widget : any, init_dir : string) : TRet;
-declare function file_browser_view_set_filter(widget : any, filter : string) : TRet;
-declare function file_browser_view_reload(widget : any) : TRet;
-declare function file_browser_view_set_ignore_hidden_files(widget : any, ignore_hidden_files : boolean) : TRet;
-declare function file_browser_view_set_sort_ascending(widget : any, sort_ascending : boolean) : TRet;
-declare function file_browser_view_set_show_check_button(widget : any, show_check_button : boolean) : TRet;
-declare function file_browser_view_set_sort_by(widget : any, sort_by : string) : TRet;
-declare function file_browser_view_get_cwd(widget : any) : string;
-declare function file_browser_view_create_dir(widget : any, name : string) : TRet;
-declare function file_browser_view_create_file(widget : any, name : string, data : string, size : number) : TRet;
-declare function file_browser_view_t_get_prop_init_dir(nativeObj : any) : string;
-declare function file_browser_view_t_get_prop_filter(nativeObj : any) : string;
-declare function file_browser_view_t_get_prop_ignore_hidden_files(nativeObj : any) : boolean;
-declare function file_browser_view_t_get_prop_sort_ascending(nativeObj : any) : boolean;
-declare function file_browser_view_t_get_prop_show_check_button(nativeObj : any) : boolean;
-declare function file_browser_view_t_get_prop_sort_by(nativeObj : any) : string;
+declare function guage_pointer_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function guage_pointer_cast(widget : any) : any;
+declare function guage_pointer_set_angle(widget : any, angle : number) : TRet;
+declare function guage_pointer_set_image(widget : any, image : string) : TRet;
+declare function guage_pointer_set_anchor(widget : any, anchor_x : string, anchor_y : string) : TRet;
+declare function guage_pointer_t_get_prop_angle(nativeObj : any) : number;
+declare function guage_pointer_t_get_prop_image(nativeObj : any) : string;
+declare function guage_pointer_t_get_prop_anchor_x(nativeObj : any) : string;
+declare function guage_pointer_t_get_prop_anchor_y(nativeObj : any) : string;
 declare function wheel_event_cast(event : any) : any;
 declare function wheel_event_t_get_prop_dy(nativeObj : any) : number;
 declare function wheel_event_t_get_prop_alt(nativeObj : any) : boolean;
@@ -1342,6 +1334,11 @@ declare function switch_t_get_prop_value(nativeObj : any) : boolean;
 declare function switch_t_get_prop_max_xoffset_ratio(nativeObj : any) : number;
 declare function column_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function column_cast(widget : any) : any;
+declare function color_tile_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function color_tile_cast(widget : any) : any;
+declare function color_tile_set_bg_color(widget : any, color : string) : TRet;
+declare function color_tile_t_get_prop_bg_color(nativeObj : any) : string;
+declare function color_tile_t_get_prop_border_color(nativeObj : any) : string;
 declare function slide_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function slide_view_cast(widget : any) : any;
 declare function slide_view_set_auto_play(widget : any, auto_play : number) : TRet;
@@ -1353,11 +1350,6 @@ declare function slide_view_t_get_prop_vertical(nativeObj : any) : boolean;
 declare function slide_view_t_get_prop_auto_play(nativeObj : any) : number;
 declare function slide_view_t_get_prop_loop(nativeObj : any) : boolean;
 declare function slide_view_t_get_prop_anim_hint(nativeObj : any) : string;
-declare function color_tile_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function color_tile_cast(widget : any) : any;
-declare function color_tile_set_bg_color(widget : any, color : string) : TRet;
-declare function color_tile_t_get_prop_bg_color(nativeObj : any) : string;
-declare function color_tile_t_get_prop_border_color(nativeObj : any) : string;
 declare function slide_indicator_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function slide_indicator_create_linear(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function slide_indicator_create_arc(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -1381,6 +1373,13 @@ declare function slide_indicator_t_get_prop_size(nativeObj : any) : number;
 declare function slide_indicator_t_get_prop_anchor_x(nativeObj : any) : number;
 declare function slide_indicator_t_get_prop_anchor_y(nativeObj : any) : number;
 declare function slide_indicator_t_get_prop_indicated_target(nativeObj : any) : string;
+declare function clip_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function clip_view_cast(widget : any) : any;
+declare function check_button_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function check_button_create_radio(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function check_button_set_value(widget : any, value : any) : TRet;
+declare function check_button_cast(widget : any) : any;
+declare function check_button_t_get_prop_value(nativeObj : any) : boolean;
 declare function slide_menu_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function slide_menu_cast(widget : any) : any;
 declare function slide_menu_set_value(widget : any, value : any) : TRet;
@@ -1389,13 +1388,6 @@ declare function slide_menu_set_min_scale(widget : any, min_scale : number) : TR
 declare function slide_menu_t_get_prop_value(nativeObj : any) : number;
 declare function slide_menu_t_get_prop_align_v(nativeObj : any) : TAlignV;
 declare function slide_menu_t_get_prop_min_scale(nativeObj : any) : number;
-declare function clip_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function clip_view_cast(widget : any) : any;
-declare function check_button_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function check_button_create_radio(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function check_button_set_value(widget : any, value : any) : TRet;
-declare function check_button_cast(widget : any) : any;
-declare function check_button_t_get_prop_value(nativeObj : any) : boolean;
 declare function scroll_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function scroll_view_cast(widget : any) : any;
 declare function scroll_view_set_virtual_w(widget : any, w : number) : TRet;
@@ -1614,15 +1606,6 @@ declare function guage_set_image(widget : any, name : string) : TRet;
 declare function guage_set_draw_type(widget : any, draw_type : TImageDrawType) : TRet;
 declare function guage_t_get_prop_image(nativeObj : any) : string;
 declare function guage_t_get_prop_draw_type(nativeObj : any) : TImageDrawType;
-declare function guage_pointer_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function guage_pointer_cast(widget : any) : any;
-declare function guage_pointer_set_angle(widget : any, angle : number) : TRet;
-declare function guage_pointer_set_image(widget : any, image : string) : TRet;
-declare function guage_pointer_set_anchor(widget : any, anchor_x : string, anchor_y : string) : TRet;
-declare function guage_pointer_t_get_prop_angle(nativeObj : any) : number;
-declare function guage_pointer_t_get_prop_image(nativeObj : any) : string;
-declare function guage_pointer_t_get_prop_anchor_x(nativeObj : any) : string;
-declare function guage_pointer_t_get_prop_anchor_y(nativeObj : any) : string;
 declare function file_chooser_create() : any;
 declare function file_chooser_set_init_dir(chooser : any, init_dir : string) : TRet;
 declare function file_chooser_set_filter(chooser : any, filter : string) : TRet;
@@ -1633,6 +1616,24 @@ declare function file_chooser_choose_folder(chooser : any) : TRet;
 declare function file_chooser_get_dir(chooser : any) : string;
 declare function file_chooser_get_filename(chooser : any) : string;
 declare function file_chooser_is_aborted(chooser : any) : boolean;
+declare function file_browser_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function file_browser_view_cast(widget : any) : any;
+declare function file_browser_view_set_init_dir(widget : any, init_dir : string) : TRet;
+declare function file_browser_view_set_filter(widget : any, filter : string) : TRet;
+declare function file_browser_view_reload(widget : any) : TRet;
+declare function file_browser_view_set_ignore_hidden_files(widget : any, ignore_hidden_files : boolean) : TRet;
+declare function file_browser_view_set_sort_ascending(widget : any, sort_ascending : boolean) : TRet;
+declare function file_browser_view_set_show_check_button(widget : any, show_check_button : boolean) : TRet;
+declare function file_browser_view_set_sort_by(widget : any, sort_by : string) : TRet;
+declare function file_browser_view_get_cwd(widget : any) : string;
+declare function file_browser_view_create_dir(widget : any, name : string) : TRet;
+declare function file_browser_view_create_file(widget : any, name : string, data : string, size : number) : TRet;
+declare function file_browser_view_t_get_prop_init_dir(nativeObj : any) : string;
+declare function file_browser_view_t_get_prop_filter(nativeObj : any) : string;
+declare function file_browser_view_t_get_prop_ignore_hidden_files(nativeObj : any) : boolean;
+declare function file_browser_view_t_get_prop_sort_ascending(nativeObj : any) : boolean;
+declare function file_browser_view_t_get_prop_show_check_button(nativeObj : any) : boolean;
+declare function file_browser_view_t_get_prop_sort_by(nativeObj : any) : string;
 declare function draggable_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function draggable_cast(widget : any) : any;
 declare function draggable_set_top(widget : any, top : number) : TRet;
@@ -9389,6 +9390,17 @@ export class TAppConf {
 
 
   /**
+   * 重新加载配置(内存中的配置丢失)。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ static reload() : TRet  {
+    return app_conf_reload();
+ }
+
+
+  /**
    * 释放conf对象。
    * 
    *
@@ -11578,44 +11590,30 @@ export enum TAssetType {
 
 
 /**
- * 文件管理/浏览/选择控件。
+ * 仪表指针控件。
  *
- *file\_browser\_view\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于file\_browser\_view\_t控件。
+ *仪表指针就是一张旋转的图片，图片可以是普通图片也可以是SVG图片。
  *
- *考虑到文件浏览器界面呈现的多样性，界面呈现工作完全有子控件来完成。
+ *在嵌入式平台上，对于旋转的图片，SVG图片的效率比位图高数倍，所以推荐使用SVG图片。
  *
- *file\_browser\_view\_t负责关联文件/文件夹数据到子控件上，子控件需要特定的规范命名。
+ *guage\_pointer\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于guage\_pointer\_t控件。
  *
- ** 名为 "cwd" 的子控件用于显示当前路径。
+ *在xml中使用"guage\_pointer"标签创建仪表指针控件。如：
  *
- ** 名为 "selected_file" 的子控件用于显示当前选择的文件。
+ *```xml
+ *<guage_pointer x="c" y="50" w="24" h="140" value="-128" image="guage_pointer" />
+ *```
  *
- ** 名为 "file" 的子控件用于显示文件项的模板控件。
+ *> 更多用法请参考：
+ *[guage.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/guage.xml)
  *
- ** 名为 "folder" 的子控件用于显示文件夹项的模板控件。
+ *在c代码中使用函数guage\_pointer\_create创建仪表指针控件。如：
  *
- ** 名为 "return_up" 的子控件用于返回上一级文件夹的模板控件。
  *
- ** 名为 "container" 的子控件为容器控件，通常是scrollview。
- *
- ** 名为 "name" 的子控件用于显示文件和文件夹的名称(放在列表项目内)。
- *
- ** 名为 "size" 的子控件用于显示文件和文件夹的大小(放在列表项目内)。
- *
- ** 名为 "mtime" 的子控件用于显示文件和文件夹的修改时间(放在列表项目内)。
- *
- ** 名为 "ctime" 的子控件用于显示文件和文件夹的创建时间(放在列表项目内)。
- *
- ** 名为 "icon" 的子控件用于显示文件和文件夹的图标(放在列表项目内)。
- *
- ** 类型为 "check_button" 的子控件用于选择(放在列表项目内)。
- *
- *完整示例请参考：
- *
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/file_chooser_for_open.xml
+ *> 创建之后，需要用guage\_pointer\_set\_image设置仪表指针图片。
  *
  */
-export class TFileBrowserView extends TWidget { 
+export class TGuagePointer extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -11623,7 +11621,7 @@ export class TFileBrowserView extends TWidget {
 
 
   /**
-   * 创建file_browser_view对象
+   * 创建guage_pointer对象
    * 
    * @param parent 父控件
    * @param x x坐标
@@ -11633,219 +11631,103 @@ export class TFileBrowserView extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TFileBrowserView  {
-    return new TFileBrowserView(file_browser_view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGuagePointer  {
+    return new TGuagePointer(guage_pointer_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
 
   /**
-   * 转换为file_browser_view对象(供脚本语言使用)。
+   * 转换为guage_pointer对象(供脚本语言使用)。
    * 
-   * @param widget file_browser_view对象。
+   * @param widget guage_pointer对象。
    *
-   * @returns file_browser_view对象。
+   * @returns guage_pointer对象。
    */
- static cast(widget : TWidget) : TFileBrowserView  {
-    return new TFileBrowserView(file_browser_view_cast(widget != null ? (widget.nativeObj || widget) : null));
+ static cast(widget : TWidget) : TGuagePointer  {
+    return new TGuagePointer(guage_pointer_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 
   /**
-   * 设置 初始文件夹。
+   * 设置指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。
    * 
-   * @param init_dir 初始文件夹。
+   * @param angle 指针角度。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
- setInitDir(init_dir : string) : TRet  {
-    return file_browser_view_set_init_dir(this != null ? (this.nativeObj || this) : null, init_dir);
+ setAngle(angle : number) : TRet  {
+    return guage_pointer_set_angle(this != null ? (this.nativeObj || this) : null, angle);
  }
 
 
   /**
-   * 设置 过滤规则。
-   *> files_only 表示只列出文件，dir_only 表示只列出目录，其它表示只列出满足扩展名文件集合(如：.jpg.png.gif)。
+   * 设置指针的图片。
    * 
-   * @param filter 过滤规则。
+   * @param image 指针的图片。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
- setFilter(filter : string) : TRet  {
-    return file_browser_view_set_filter(this != null ? (this.nativeObj || this) : null, filter);
+ setImage(image : string) : TRet  {
+    return guage_pointer_set_image(this != null ? (this.nativeObj || this) : null, image);
  }
 
 
   /**
-   * 重新加载。
+   * 设置指针的旋转锚点。
    * 
+   * @param anchor_x 指针的锚点坐标x。(后面加上px为像素点，不加px为相对百分比坐标)
+   * @param anchor_y 指针的锚点坐标y。(后面加上px为像素点，不加px为相对百分比坐标)
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
- reload() : TRet  {
-    return file_browser_view_reload(this != null ? (this.nativeObj || this) : null);
+ setAnchor(anchor_x : string, anchor_y : string) : TRet  {
+    return guage_pointer_set_anchor(this != null ? (this.nativeObj || this) : null, anchor_x, anchor_y);
  }
 
 
   /**
-   * 设置 忽略隐藏文件。
-   * 
-   * @param ignore_hidden_files 忽略隐藏文件。
+   * 指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。
    *
-   * @returns 返回RET_OK表示成功，否则表示失败。
    */
- setIgnoreHiddenFiles(ignore_hidden_files : boolean) : TRet  {
-    return file_browser_view_set_ignore_hidden_files(this != null ? (this.nativeObj || this) : null, ignore_hidden_files);
+ get angle() : number {
+   return guage_pointer_t_get_prop_angle(this.nativeObj);
+ }
+
+ set angle(v : number) {
+   this.setAngle(v);
  }
 
 
   /**
-   * 设置 是否为升序排序。
-   * 
-   * @param sort_ascending 是否为升序排序。
+   * 指针图片。
    *
-   * @returns 返回RET_OK表示成功，否则表示失败。
+   *图片须垂直向上，图片的中心点为旋转方向。
+   *
    */
- setSortAscending(sort_ascending : boolean) : TRet  {
-    return file_browser_view_set_sort_ascending(this != null ? (this.nativeObj || this) : null, sort_ascending);
+ get image() : string {
+   return guage_pointer_t_get_prop_image(this.nativeObj);
+ }
+
+ set image(v : string) {
+   this.setImage(v);
  }
 
 
   /**
-   * 设置 是否显示checkbutton。
-   * 
-   * @param show_check_button 是否显示checkbutton。
+   * 图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
    *
-   * @returns 返回RET_OK表示成功，否则表示失败。
    */
- setShowCheckButton(show_check_button : boolean) : TRet  {
-    return file_browser_view_set_show_check_button(this != null ? (this.nativeObj || this) : null, show_check_button);
+ get anchorX() : string {
+   return guage_pointer_t_get_prop_anchor_x(this.nativeObj);
  }
 
 
   /**
-   * 设置 排序方式。可选值(name, size, mtime, type)。
-   * 
-   * @param sort_by 排序方式。可选值(name, size, mtime, type)。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setSortBy(sort_by : string) : TRet  {
-    return file_browser_view_set_sort_by(this != null ? (this.nativeObj || this) : null, sort_by);
- }
-
-
-  /**
-   * 获取当前路径。
-   * 
-   *
-   * @returns 返回当前路径。
-   */
- getCwd() : string  {
-    return file_browser_view_get_cwd(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 在当前文件夹创建子文件夹。
-   * 
-   * @param name 子文件夹名。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- createDir(name : string) : TRet  {
-    return file_browser_view_create_dir(this != null ? (this.nativeObj || this) : null, name);
- }
-
-
-  /**
-   * 在当前文件夹创建文件。
-   * 
-   * @param name 文件名。
-   * @param data 数据。
-   * @param size 数据长度。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- createFile(name : string, data : string, size : number) : TRet  {
-    return file_browser_view_create_file(this != null ? (this.nativeObj || this) : null, name, data, size);
- }
-
-
-  /**
-   * 初始文件夹。
+   * 图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
    *
    */
- get initDir() : string {
-   return file_browser_view_t_get_prop_init_dir(this.nativeObj);
- }
-
- set initDir(v : string) {
-   this.setInitDir(v);
- }
-
-
-  /**
-   * 过滤规则。
-   *
-   */
- get filter() : string {
-   return file_browser_view_t_get_prop_filter(this.nativeObj);
- }
-
- set filter(v : string) {
-   this.setFilter(v);
- }
-
-
-  /**
-   * 是否忽略隐藏文件。
-   *
-   */
- get ignoreHiddenFiles() : boolean {
-   return file_browser_view_t_get_prop_ignore_hidden_files(this.nativeObj);
- }
-
- set ignoreHiddenFiles(v : boolean) {
-   this.setIgnoreHiddenFiles(v);
- }
-
-
-  /**
-   * 是否为升序排序。
-   *
-   */
- get sortAscending() : boolean {
-   return file_browser_view_t_get_prop_sort_ascending(this.nativeObj);
- }
-
- set sortAscending(v : boolean) {
-   this.setSortAscending(v);
- }
-
-
-  /**
-   * 是否显示checkbutton。
-   *
-   */
- get showCheckButton() : boolean {
-   return file_browser_view_t_get_prop_show_check_button(this.nativeObj);
- }
-
- set showCheckButton(v : boolean) {
-   this.setShowCheckButton(v);
- }
-
-
-  /**
-   * 排序方式。可选值(name, size, mtime, type)。
-   *
-   */
- get sortBy() : string {
-   return file_browser_view_t_get_prop_sort_by(this.nativeObj);
- }
-
- set sortBy(v : string) {
-   this.setSortBy(v);
+ get anchorY() : string {
+   return guage_pointer_t_get_prop_anchor_y(this.nativeObj);
  }
 
 };
@@ -15135,6 +15017,98 @@ export class TColumn extends TWidget {
 
 };
 /**
+ * 色块控件。
+ *
+ *用来显示一个颜色块，它通过属性而不是主题来设置颜色，方便在运行时动态改变颜色。
+ *
+ *可以使用value属性访问背景颜色的颜色值。
+ *
+ *color\_tile\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于color\_tile\_t控件。
+ *
+ *在xml中使用"color_tile"标签创建色块控件。如：
+ *
+ *```xml
+ *<color_tile x="c" y="m" w="80" h="30" bg_color="green" />
+ *```
+ *
+ *> 更多用法请参考：
+ *[color_tile](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/color_picker_rgb.xml)
+ *
+ *在c代码中使用函数color_tile\_create创建色块控件。如：
+ *
+ *> 创建之后，用color\_tile\_set\_bg\_color设置背景颜色。
+ *
+ */
+export class TColorTile extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建color_tile对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TColorTile  {
+    return new TColorTile(color_tile_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为color_tile对象(供脚本语言使用)。
+   * 
+   * @param widget color_tile对象。
+   *
+   * @returns color_tile对象。
+   */
+ static cast(widget : TWidget) : TColorTile  {
+    return new TColorTile(color_tile_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 设置背景颜色。
+   * 
+   * @param color 背景颜色。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setBgColor(color : string) : TRet  {
+    return color_tile_set_bg_color(this != null ? (this.nativeObj || this) : null, color);
+ }
+
+
+  /**
+   * 背景颜色。
+   *
+   */
+ get bgColor() : string {
+   return color_tile_t_get_prop_bg_color(this.nativeObj);
+ }
+
+ set bgColor(v : string) {
+   this.setBgColor(v);
+ }
+
+
+  /**
+   * 边框颜色。
+   *
+   */
+ get borderColor() : string {
+   return color_tile_t_get_prop_border_color(this.nativeObj);
+ }
+
+};
+/**
  * 滑动视图。
  *
  *滑动视图可以管理多个页面，并通过滑动来切换当前页面。也可以管理多张图片，让它们自动切换。
@@ -15336,98 +15310,6 @@ export class TSlideView extends TWidget {
 
  set animHint(v : string) {
    this.setAnimHint(v);
- }
-
-};
-/**
- * 色块控件。
- *
- *用来显示一个颜色块，它通过属性而不是主题来设置颜色，方便在运行时动态改变颜色。
- *
- *可以使用value属性访问背景颜色的颜色值。
- *
- *color\_tile\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于color\_tile\_t控件。
- *
- *在xml中使用"color_tile"标签创建色块控件。如：
- *
- *```xml
- *<color_tile x="c" y="m" w="80" h="30" bg_color="green" />
- *```
- *
- *> 更多用法请参考：
- *[color_tile](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/color_picker_rgb.xml)
- *
- *在c代码中使用函数color_tile\_create创建色块控件。如：
- *
- *> 创建之后，用color\_tile\_set\_bg\_color设置背景颜色。
- *
- */
-export class TColorTile extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建color_tile对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TColorTile  {
-    return new TColorTile(color_tile_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换为color_tile对象(供脚本语言使用)。
-   * 
-   * @param widget color_tile对象。
-   *
-   * @returns color_tile对象。
-   */
- static cast(widget : TWidget) : TColorTile  {
-    return new TColorTile(color_tile_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-
-  /**
-   * 设置背景颜色。
-   * 
-   * @param color 背景颜色。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setBgColor(color : string) : TRet  {
-    return color_tile_set_bg_color(this != null ? (this.nativeObj || this) : null, color);
- }
-
-
-  /**
-   * 背景颜色。
-   *
-   */
- get bgColor() : string {
-   return color_tile_t_get_prop_bg_color(this.nativeObj);
- }
-
- set bgColor(v : string) {
-   this.setBgColor(v);
- }
-
-
-  /**
-   * 边框颜色。
-   *
-   */
- get borderColor() : string {
-   return color_tile_t_get_prop_border_color(this.nativeObj);
  }
 
 };
@@ -15762,6 +15644,192 @@ export class TSlideIndicator extends TWidget {
 
 };
 /**
+ * 一个裁剪子控件的容器控件。
+ *
+ *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
+ *子控件的布局可用layout\_children属性指定。
+ *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
+ *
+ *clip\_view\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于clip\_view\_t控件。
+ *
+ *在xml中使用"clip_view"标签创建clip_view，在clip_view控件下的所有子控件都会被裁剪。如下button控件会被裁剪，无法画出clip_view控件 ：
+ *
+ *```xml
+ *<clip_view x="0" y="0" w="100" h="100">
+ *<button x="50" y="10" w="100" h="50" />
+ *</clip_view>
+ *```
+ *
+ *备注：在clip_view控件下的所有子控件都会被裁剪，如果子控件本身会设置裁剪区的话，在子控件中计算裁剪区的交集，具体请参考scroll_view控件的scroll_view_on_paint_children函数。
+ *
+ *可用通过style来设置控件的显示风格，如背景颜色等。如：
+ *
+ *```xml
+ *<style name="default" border_color="#a0a0a0">
+ *<normal     bg_color="#f0f0f0" />
+ *</style>
+ *```
+ *
+ */
+export class TClipView extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建clip_view对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TClipView  {
+    return new TClipView(clip_view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为clip_view对象(供脚本语言使用)。
+   * 
+   * @param widget clip_view对象。
+   *
+   * @returns clip_view对象。
+   */
+ static cast(widget : TWidget) : TClipView  {
+    return new TClipView(clip_view_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+};
+/**
+ * 勾选按钮控件(单选/多选)。
+ *
+ *check\_button\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于check\_button\_t控件。
+ *
+ *在xml中使用"check_button"标签创建多选按钮控件。如：
+ *
+ *```xml
+ *<check_button name="c1" text="Book"/>
+ *```
+ *
+ *在xml中使用"radio_button"标签创建单选按钮控件。如：
+ *
+ *```xml
+ *<radio_button name="r1" text="Book"/>
+ *```
+ *
+ *> 更多用法请参考：
+ *[button.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/basic.xml)
+ *
+ *在c代码中使用函数check\_button\_create创建多选按钮控件。如：
+ *
+ *
+ *在c代码中使用函数check\_button\_create\_radio创建单选按钮控件。如：
+ *
+ *
+ *> 完整示例请参考：
+ *[button demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/check_button.c)
+ *
+ *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
+ *
+ *```xml
+ *<style name="default" icon_at="left">
+ *<normal  icon="unchecked" />
+ *<pressed icon="unchecked" />
+ *<over    icon="unchecked" text_color="green"/>
+ *<normal_of_checked icon="checked" text_color="blue"/>
+ *<pressed_of_checked icon="checked" text_color="blue"/>
+ *<over_of_checked icon="checked" text_color="green"/>
+ *</style>
+ *```
+ *
+ *> 更多用法请参考：
+ *[theme
+ *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L227)
+ *
+ */
+export class TCheckButton extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建多选按钮对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns widget对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TCheckButton  {
+    return new TCheckButton(check_button_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 创建单选按钮对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns widget对象。
+   */
+ static createRadio(parent : TWidget, x : number, y : number, w : number, h : number) : TCheckButton  {
+    return new TCheckButton(check_button_create_radio(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 设置控件的值。
+   * 
+   * @param value 值(勾选为TRUE，非勾选为FALSE)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setValue(value : any) : TRet  {
+    return check_button_set_value(this != null ? (this.nativeObj || this) : null, value);
+ }
+
+
+  /**
+   * 转换check_button对象(供脚本语言使用)。
+   * 
+   * @param widget check_button对象。
+   *
+   * @returns check_button对象。
+   */
+ static cast(widget : TWidget) : TCheckButton  {
+    return new TCheckButton(check_button_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 值(勾选为TRUE，非勾选为FALSE)。
+   *
+   */
+ get value() : boolean {
+   return check_button_t_get_prop_value(this.nativeObj);
+ }
+
+ set value(v : boolean) {
+   this.setValue(v);
+ }
+
+};
+/**
  * 左右滑动菜单控件。
  *
  *一般用一组按钮作为子控件，通过左右滑动改变当前的项。除了当菜单使用外，也可以用来切换页面。
@@ -15914,192 +15982,6 @@ export class TSlideMenu extends TWidget {
 
  set minScale(v : number) {
    this.setMinScale(v);
- }
-
-};
-/**
- * 一个裁剪子控件的容器控件。
- *
- *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
- *子控件的布局可用layout\_children属性指定。
- *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
- *
- *clip\_view\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于clip\_view\_t控件。
- *
- *在xml中使用"clip_view"标签创建clip_view，在clip_view控件下的所有子控件都会被裁剪。如下button控件会被裁剪，无法画出clip_view控件 ：
- *
- *```xml
- *<clip_view x="0" y="0" w="100" h="100">
- *<button x="50" y="10" w="100" h="50" />
- *</clip_view>
- *```
- *
- *备注：在clip_view控件下的所有子控件都会被裁剪，如果子控件本身会设置裁剪区的话，在子控件中计算裁剪区的交集，具体请参考scroll_view控件的scroll_view_on_paint_children函数。
- *
- *可用通过style来设置控件的显示风格，如背景颜色等。如：
- *
- *```xml
- *<style name="default" border_color="#a0a0a0">
- *<normal     bg_color="#f0f0f0" />
- *</style>
- *```
- *
- */
-export class TClipView extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建clip_view对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TClipView  {
-    return new TClipView(clip_view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换为clip_view对象(供脚本语言使用)。
-   * 
-   * @param widget clip_view对象。
-   *
-   * @returns clip_view对象。
-   */
- static cast(widget : TWidget) : TClipView  {
-    return new TClipView(clip_view_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-};
-/**
- * 勾选按钮控件(单选/多选)。
- *
- *check\_button\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于check\_button\_t控件。
- *
- *在xml中使用"check_button"标签创建多选按钮控件。如：
- *
- *```xml
- *<check_button name="c1" text="Book"/>
- *```
- *
- *在xml中使用"radio_button"标签创建单选按钮控件。如：
- *
- *```xml
- *<radio_button name="r1" text="Book"/>
- *```
- *
- *> 更多用法请参考：
- *[button.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/basic.xml)
- *
- *在c代码中使用函数check\_button\_create创建多选按钮控件。如：
- *
- *
- *在c代码中使用函数check\_button\_create\_radio创建单选按钮控件。如：
- *
- *
- *> 完整示例请参考：
- *[button demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/check_button.c)
- *
- *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
- *
- *```xml
- *<style name="default" icon_at="left">
- *<normal  icon="unchecked" />
- *<pressed icon="unchecked" />
- *<over    icon="unchecked" text_color="green"/>
- *<normal_of_checked icon="checked" text_color="blue"/>
- *<pressed_of_checked icon="checked" text_color="blue"/>
- *<over_of_checked icon="checked" text_color="green"/>
- *</style>
- *```
- *
- *> 更多用法请参考：
- *[theme
- *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L227)
- *
- */
-export class TCheckButton extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建多选按钮对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TCheckButton  {
-    return new TCheckButton(check_button_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 创建单选按钮对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static createRadio(parent : TWidget, x : number, y : number, w : number, h : number) : TCheckButton  {
-    return new TCheckButton(check_button_create_radio(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 设置控件的值。
-   * 
-   * @param value 值(勾选为TRUE，非勾选为FALSE)。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setValue(value : any) : TRet  {
-    return check_button_set_value(this != null ? (this.nativeObj || this) : null, value);
- }
-
-
-  /**
-   * 转换check_button对象(供脚本语言使用)。
-   * 
-   * @param widget check_button对象。
-   *
-   * @returns check_button对象。
-   */
- static cast(widget : TWidget) : TCheckButton  {
-    return new TCheckButton(check_button_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-
-  /**
-   * 值(勾选为TRUE，非勾选为FALSE)。
-   *
-   */
- get value() : boolean {
-   return check_button_t_get_prop_value(this.nativeObj);
- }
-
- set value(v : boolean) {
-   this.setValue(v);
  }
 
 };
@@ -19552,148 +19434,6 @@ export class TGuage extends TWidget {
 
 };
 /**
- * 仪表指针控件。
- *
- *仪表指针就是一张旋转的图片，图片可以是普通图片也可以是SVG图片。
- *
- *在嵌入式平台上，对于旋转的图片，SVG图片的效率比位图高数倍，所以推荐使用SVG图片。
- *
- *guage\_pointer\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于guage\_pointer\_t控件。
- *
- *在xml中使用"guage\_pointer"标签创建仪表指针控件。如：
- *
- *```xml
- *<guage_pointer x="c" y="50" w="24" h="140" value="-128" image="guage_pointer" />
- *```
- *
- *> 更多用法请参考：
- *[guage.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/guage.xml)
- *
- *在c代码中使用函数guage\_pointer\_create创建仪表指针控件。如：
- *
- *
- *> 创建之后，需要用guage\_pointer\_set\_image设置仪表指针图片。
- *
- */
-export class TGuagePointer extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建guage_pointer对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGuagePointer  {
-    return new TGuagePointer(guage_pointer_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换为guage_pointer对象(供脚本语言使用)。
-   * 
-   * @param widget guage_pointer对象。
-   *
-   * @returns guage_pointer对象。
-   */
- static cast(widget : TWidget) : TGuagePointer  {
-    return new TGuagePointer(guage_pointer_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-
-  /**
-   * 设置指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。
-   * 
-   * @param angle 指针角度。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setAngle(angle : number) : TRet  {
-    return guage_pointer_set_angle(this != null ? (this.nativeObj || this) : null, angle);
- }
-
-
-  /**
-   * 设置指针的图片。
-   * 
-   * @param image 指针的图片。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setImage(image : string) : TRet  {
-    return guage_pointer_set_image(this != null ? (this.nativeObj || this) : null, image);
- }
-
-
-  /**
-   * 设置指针的旋转锚点。
-   * 
-   * @param anchor_x 指针的锚点坐标x。(后面加上px为像素点，不加px为相对百分比坐标)
-   * @param anchor_y 指针的锚点坐标y。(后面加上px为像素点，不加px为相对百分比坐标)
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setAnchor(anchor_x : string, anchor_y : string) : TRet  {
-    return guage_pointer_set_anchor(this != null ? (this.nativeObj || this) : null, anchor_x, anchor_y);
- }
-
-
-  /**
-   * 指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。
-   *
-   */
- get angle() : number {
-   return guage_pointer_t_get_prop_angle(this.nativeObj);
- }
-
- set angle(v : number) {
-   this.setAngle(v);
- }
-
-
-  /**
-   * 指针图片。
-   *
-   *图片须垂直向上，图片的中心点为旋转方向。
-   *
-   */
- get image() : string {
-   return guage_pointer_t_get_prop_image(this.nativeObj);
- }
-
- set image(v : string) {
-   this.setImage(v);
- }
-
-
-  /**
-   * 图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
-   *
-   */
- get anchorX() : string {
-   return guage_pointer_t_get_prop_anchor_x(this.nativeObj);
- }
-
-
-  /**
-   * 图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
-   *
-   */
- get anchorY() : string {
-   return guage_pointer_t_get_prop_anchor_y(this.nativeObj);
- }
-
-};
-/**
  * 文件/目录选择器
  *
  */
@@ -19815,6 +19555,278 @@ export class TFileChooser extends TEmitter {
    */
  isAborted() : boolean  {
     return file_chooser_is_aborted(this != null ? (this.nativeObj || this) : null);
+ }
+
+};
+/**
+ * 文件管理/浏览/选择控件。
+ *
+ *file\_browser\_view\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于file\_browser\_view\_t控件。
+ *
+ *考虑到文件浏览器界面呈现的多样性，界面呈现工作完全有子控件来完成。
+ *
+ *file\_browser\_view\_t负责关联文件/文件夹数据到子控件上，子控件需要特定的规范命名。
+ *
+ ** 名为 "cwd" 的子控件用于显示当前路径。
+ *
+ ** 名为 "selected_file" 的子控件用于显示当前选择的文件。
+ *
+ ** 名为 "file" 的子控件用于显示文件项的模板控件。
+ *
+ ** 名为 "folder" 的子控件用于显示文件夹项的模板控件。
+ *
+ ** 名为 "return_up" 的子控件用于返回上一级文件夹的模板控件。
+ *
+ ** 名为 "container" 的子控件为容器控件，通常是scrollview。
+ *
+ ** 名为 "name" 的子控件用于显示文件和文件夹的名称(放在列表项目内)。
+ *
+ ** 名为 "size" 的子控件用于显示文件和文件夹的大小(放在列表项目内)。
+ *
+ ** 名为 "mtime" 的子控件用于显示文件和文件夹的修改时间(放在列表项目内)。
+ *
+ ** 名为 "ctime" 的子控件用于显示文件和文件夹的创建时间(放在列表项目内)。
+ *
+ ** 名为 "icon" 的子控件用于显示文件和文件夹的图标(放在列表项目内)。
+ *
+ ** 类型为 "check_button" 的子控件用于选择(放在列表项目内)。
+ *
+ *完整示例请参考：
+ *
+ *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/file_chooser_for_open.xml
+ *
+ */
+export class TFileBrowserView extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建file_browser_view对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TFileBrowserView  {
+    return new TFileBrowserView(file_browser_view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为file_browser_view对象(供脚本语言使用)。
+   * 
+   * @param widget file_browser_view对象。
+   *
+   * @returns file_browser_view对象。
+   */
+ static cast(widget : TWidget) : TFileBrowserView  {
+    return new TFileBrowserView(file_browser_view_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 设置 初始文件夹。
+   * 
+   * @param init_dir 初始文件夹。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setInitDir(init_dir : string) : TRet  {
+    return file_browser_view_set_init_dir(this != null ? (this.nativeObj || this) : null, init_dir);
+ }
+
+
+  /**
+   * 设置 过滤规则。
+   *> files_only 表示只列出文件，dir_only 表示只列出目录，其它表示只列出满足扩展名文件集合(如：.jpg.png.gif)。
+   * 
+   * @param filter 过滤规则。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setFilter(filter : string) : TRet  {
+    return file_browser_view_set_filter(this != null ? (this.nativeObj || this) : null, filter);
+ }
+
+
+  /**
+   * 重新加载。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ reload() : TRet  {
+    return file_browser_view_reload(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 设置 忽略隐藏文件。
+   * 
+   * @param ignore_hidden_files 忽略隐藏文件。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setIgnoreHiddenFiles(ignore_hidden_files : boolean) : TRet  {
+    return file_browser_view_set_ignore_hidden_files(this != null ? (this.nativeObj || this) : null, ignore_hidden_files);
+ }
+
+
+  /**
+   * 设置 是否为升序排序。
+   * 
+   * @param sort_ascending 是否为升序排序。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setSortAscending(sort_ascending : boolean) : TRet  {
+    return file_browser_view_set_sort_ascending(this != null ? (this.nativeObj || this) : null, sort_ascending);
+ }
+
+
+  /**
+   * 设置 是否显示checkbutton。
+   * 
+   * @param show_check_button 是否显示checkbutton。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setShowCheckButton(show_check_button : boolean) : TRet  {
+    return file_browser_view_set_show_check_button(this != null ? (this.nativeObj || this) : null, show_check_button);
+ }
+
+
+  /**
+   * 设置 排序方式。可选值(name, size, mtime, type)。
+   * 
+   * @param sort_by 排序方式。可选值(name, size, mtime, type)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setSortBy(sort_by : string) : TRet  {
+    return file_browser_view_set_sort_by(this != null ? (this.nativeObj || this) : null, sort_by);
+ }
+
+
+  /**
+   * 获取当前路径。
+   * 
+   *
+   * @returns 返回当前路径。
+   */
+ getCwd() : string  {
+    return file_browser_view_get_cwd(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 在当前文件夹创建子文件夹。
+   * 
+   * @param name 子文件夹名。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ createDir(name : string) : TRet  {
+    return file_browser_view_create_dir(this != null ? (this.nativeObj || this) : null, name);
+ }
+
+
+  /**
+   * 在当前文件夹创建文件。
+   * 
+   * @param name 文件名。
+   * @param data 数据。
+   * @param size 数据长度。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ createFile(name : string, data : string, size : number) : TRet  {
+    return file_browser_view_create_file(this != null ? (this.nativeObj || this) : null, name, data, size);
+ }
+
+
+  /**
+   * 初始文件夹。
+   *
+   */
+ get initDir() : string {
+   return file_browser_view_t_get_prop_init_dir(this.nativeObj);
+ }
+
+ set initDir(v : string) {
+   this.setInitDir(v);
+ }
+
+
+  /**
+   * 过滤规则。
+   *
+   */
+ get filter() : string {
+   return file_browser_view_t_get_prop_filter(this.nativeObj);
+ }
+
+ set filter(v : string) {
+   this.setFilter(v);
+ }
+
+
+  /**
+   * 是否忽略隐藏文件。
+   *
+   */
+ get ignoreHiddenFiles() : boolean {
+   return file_browser_view_t_get_prop_ignore_hidden_files(this.nativeObj);
+ }
+
+ set ignoreHiddenFiles(v : boolean) {
+   this.setIgnoreHiddenFiles(v);
+ }
+
+
+  /**
+   * 是否为升序排序。
+   *
+   */
+ get sortAscending() : boolean {
+   return file_browser_view_t_get_prop_sort_ascending(this.nativeObj);
+ }
+
+ set sortAscending(v : boolean) {
+   this.setSortAscending(v);
+ }
+
+
+  /**
+   * 是否显示checkbutton。
+   *
+   */
+ get showCheckButton() : boolean {
+   return file_browser_view_t_get_prop_show_check_button(this.nativeObj);
+ }
+
+ set showCheckButton(v : boolean) {
+   this.setShowCheckButton(v);
+ }
+
+
+  /**
+   * 排序方式。可选值(name, size, mtime, type)。
+   *
+   */
+ get sortBy() : string {
+   return file_browser_view_t_get_prop_sort_by(this.nativeObj);
+ }
+
+ set sortBy(v : string) {
+   this.setSortBy(v);
  }
 
 };
@@ -20659,7 +20671,7 @@ export class TWindowManager extends TWidget {
   /**
    * 设置屏保时间。
    * 
-   * @param screen_saver_time 屏保时间(单位毫秒)。
+   * @param screen_saver_time 屏保时间(单位毫秒), 为0关闭屏保。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */

@@ -40,7 +40,7 @@
 #include "tkc/date_time.h"
 #include "tkc/color.h"
 #include "tkc/asset_info.h"
-#include "file_browser/file_browser_view.h"
+#include "guage/guage_pointer.h"
 #include "widgets/view.h"
 #include "widgets/tab_control.h"
 #include "widgets/tab_button.h"
@@ -63,11 +63,11 @@
 #include "text_selector/text_selector.h"
 #include "switch/switch.h"
 #include "widgets/column.h"
-#include "slide_view/slide_view.h"
 #include "widgets/color_tile.h"
-#include "slide_menu/slide_menu.h"
+#include "slide_view/slide_view.h"
 #include "widgets/clip_view.h"
 #include "widgets/check_button.h"
+#include "slide_menu/slide_menu.h"
 #include "scroll_view/scroll_view.h"
 #include "scroll_view/scroll_bar.h"
 #include "scroll_view/list_view.h"
@@ -87,8 +87,8 @@
 #include "image_value/image_value.h"
 #include "image_animation/image_animation.h"
 #include "guage/guage.h"
-#include "guage/guage_pointer.h"
 #include "file_browser/file_chooser.h"
+#include "file_browser/file_browser_view.h"
 #include "features/draggable.h"
 #include "color_picker/color_picker.h"
 #include "color_picker/color_component.h"
@@ -5361,6 +5361,13 @@ JNIEXPORT jint JNICALL Java_awtk_TAppConf_app_1conf_1save(JNIEnv* env,  jclass a
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TAppConf_app_1conf_1reload(JNIEnv* env,  jclass ajc) { /*func*/
+  ret_t ret;
+  ret = (ret_t)app_conf_reload();
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TAppConf_app_1conf_1deinit(JNIEnv* env,  jclass ajc) { /*func*/
   ret_t ret;
   ret = (ret_t)app_conf_deinit();
@@ -6880,148 +6887,74 @@ JNIEXPORT jint JNICALL Java_awtk_TAssetType_ASSET_1TYPE_1DATA(JNIEnv* env,  jcla
   return (jint)(ASSET_TYPE_DATA);
 }
 
-JNIEXPORT jlong JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
+JNIEXPORT jlong JNICALL Java_awtk_TGuagePointer_guage_1pointer_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
   widget_t* ret;
   widget_t* parent = (widget_t*)jparent;
-  ret = (widget_t*)file_browser_view_create(parent, x, y, w, h);
+  ret = (widget_t*)guage_pointer_create(parent, x, y, w, h);
 
   return (jlong)(ret);
 }
 
-JNIEXPORT jlong JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+JNIEXPORT jlong JNICALL Java_awtk_TGuagePointer_guage_1pointer_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
   widget_t* ret;
   widget_t* widget = (widget_t*)jwidget;
-  ret = (widget_t*)file_browser_view_cast(widget);
+  ret = (widget_t*)guage_pointer_cast(widget);
 
   return (jlong)(ret);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1set_1init_1dir(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jinit_dir) { /*func*/
+JNIEXPORT jint JNICALL Java_awtk_TGuagePointer_guage_1pointer_1set_1angle(JNIEnv* env,  jclass ajc, jlong jwidget, jint angle) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
-  const char* init_dir = (char*)(*env)->GetStringUTFChars(env, jinit_dir, 0);
-  ret = (ret_t)file_browser_view_set_init_dir(widget, init_dir);
-  (*env)->ReleaseStringUTFChars(env, jinit_dir, init_dir);
+  ret = (ret_t)guage_pointer_set_angle(widget, angle);
 
   return (jint)(ret);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1set_1filter(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jfilter) { /*func*/
+JNIEXPORT jint JNICALL Java_awtk_TGuagePointer_guage_1pointer_1set_1image(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jimage) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
-  const char* filter = (char*)(*env)->GetStringUTFChars(env, jfilter, 0);
-  ret = (ret_t)file_browser_view_set_filter(widget, filter);
-  (*env)->ReleaseStringUTFChars(env, jfilter, filter);
+  const char* image = (char*)(*env)->GetStringUTFChars(env, jimage, 0);
+  ret = (ret_t)guage_pointer_set_image(widget, image);
+  (*env)->ReleaseStringUTFChars(env, jimage, image);
 
   return (jint)(ret);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1reload(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+JNIEXPORT jint JNICALL Java_awtk_TGuagePointer_guage_1pointer_1set_1anchor(JNIEnv* env,  jclass ajc, jlong jwidget, jstring janchor_x, jstring janchor_y) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
-  ret = (ret_t)file_browser_view_reload(widget);
+  const char* anchor_x = (char*)(*env)->GetStringUTFChars(env, janchor_x, 0);
+  const char* anchor_y = (char*)(*env)->GetStringUTFChars(env, janchor_y, 0);
+  ret = (ret_t)guage_pointer_set_anchor(widget, anchor_x, anchor_y);
+  (*env)->ReleaseStringUTFChars(env, janchor_x, anchor_x);
+  (*env)->ReleaseStringUTFChars(env, janchor_y, anchor_y);
 
   return (jint)(ret);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1set_1ignore_1hidden_1files(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean ignore_hidden_files) { /*func*/
-  ret_t ret;
-  widget_t* widget = (widget_t*)jwidget;
-  ret = (ret_t)file_browser_view_set_ignore_hidden_files(widget, ignore_hidden_files);
+JNIEXPORT jint JNICALL Java_awtk_TGuagePointer_guage_1pointer_1t_1get_1prop_1angle(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  guage_pointer_t* obj = (guage_pointer_t*)jobj;
 
-  return (jint)(ret);
+  return (jint)(obj->angle);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1set_1sort_1ascending(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean sort_ascending) { /*func*/
-  ret_t ret;
-  widget_t* widget = (widget_t*)jwidget;
-  ret = (ret_t)file_browser_view_set_sort_ascending(widget, sort_ascending);
+JNIEXPORT jstring JNICALL Java_awtk_TGuagePointer_guage_1pointer_1t_1get_1prop_1image(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  guage_pointer_t* obj = (guage_pointer_t*)jobj;
 
-  return (jint)(ret);
+  return (*env)->NewStringUTF(env, obj->image);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1set_1show_1check_1button(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean show_check_button) { /*func*/
-  ret_t ret;
-  widget_t* widget = (widget_t*)jwidget;
-  ret = (ret_t)file_browser_view_set_show_check_button(widget, show_check_button);
+JNIEXPORT jstring JNICALL Java_awtk_TGuagePointer_guage_1pointer_1t_1get_1prop_1anchor_1x(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  guage_pointer_t* obj = (guage_pointer_t*)jobj;
 
-  return (jint)(ret);
+  return (*env)->NewStringUTF(env, obj->anchor_x);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1set_1sort_1by(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jsort_by) { /*func*/
-  ret_t ret;
-  widget_t* widget = (widget_t*)jwidget;
-  const char* sort_by = (char*)(*env)->GetStringUTFChars(env, jsort_by, 0);
-  ret = (ret_t)file_browser_view_set_sort_by(widget, sort_by);
-  (*env)->ReleaseStringUTFChars(env, jsort_by, sort_by);
+JNIEXPORT jstring JNICALL Java_awtk_TGuagePointer_guage_1pointer_1t_1get_1prop_1anchor_1y(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  guage_pointer_t* obj = (guage_pointer_t*)jobj;
 
-  return (jint)(ret);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1get_1cwd(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
-  const char* ret;
-  widget_t* widget = (widget_t*)jwidget;
-  ret = (const char*)file_browser_view_get_cwd(widget);
-
-  return (*env)->NewStringUTF(env, ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1create_1dir(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jname) { /*func*/
-  ret_t ret;
-  widget_t* widget = (widget_t*)jwidget;
-  const char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
-  ret = (ret_t)file_browser_view_create_dir(widget, name);
-  (*env)->ReleaseStringUTFChars(env, jname, name);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1create_1file(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jname, jstring jdata, jint size) { /*func*/
-  ret_t ret;
-  widget_t* widget = (widget_t*)jwidget;
-  const char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
-  const char* data = (char*)(*env)->GetStringUTFChars(env, jdata, 0);
-  ret = (ret_t)file_browser_view_create_file(widget, name, data, size);
-  (*env)->ReleaseStringUTFChars(env, jname, name);
-  (*env)->ReleaseStringUTFChars(env, jdata, data);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1t_1get_1prop_1init_1dir(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  file_browser_view_t* obj = (file_browser_view_t*)jobj;
-
-  return (*env)->NewStringUTF(env, obj->init_dir);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1t_1get_1prop_1filter(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  file_browser_view_t* obj = (file_browser_view_t*)jobj;
-
-  return (*env)->NewStringUTF(env, obj->filter);
-}
-
-JNIEXPORT jboolean JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1t_1get_1prop_1ignore_1hidden_1files(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  file_browser_view_t* obj = (file_browser_view_t*)jobj;
-
-  return (jboolean)(obj->ignore_hidden_files);
-}
-
-JNIEXPORT jboolean JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1t_1get_1prop_1sort_1ascending(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  file_browser_view_t* obj = (file_browser_view_t*)jobj;
-
-  return (jboolean)(obj->sort_ascending);
-}
-
-JNIEXPORT jboolean JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1t_1get_1prop_1show_1check_1button(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  file_browser_view_t* obj = (file_browser_view_t*)jobj;
-
-  return (jboolean)(obj->show_check_button);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1t_1get_1prop_1sort_1by(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  file_browser_view_t* obj = (file_browser_view_t*)jobj;
-
-  return (*env)->NewStringUTF(env, obj->sort_by);
+  return (*env)->NewStringUTF(env, obj->anchor_y);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TWheelEvent_wheel_1event_1cast(JNIEnv* env,  jclass ajc, jlong jevent) { /*func*/
@@ -8458,6 +8391,44 @@ JNIEXPORT jlong JNICALL Java_awtk_TColumn_column_1cast(JNIEnv* env,  jclass ajc,
   return (jlong)(ret);
 }
 
+JNIEXPORT jlong JNICALL Java_awtk_TColorTile_color_1tile_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
+  widget_t* ret;
+  widget_t* parent = (widget_t*)jparent;
+  ret = (widget_t*)color_tile_create(parent, x, y, w, h);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TColorTile_color_1tile_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  widget_t* ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (widget_t*)color_tile_cast(widget);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TColorTile_color_1tile_1set_1bg_1color(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jcolor) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  const char* color = (char*)(*env)->GetStringUTFChars(env, jcolor, 0);
+  ret = (ret_t)color_tile_set_bg_color(widget, color);
+  (*env)->ReleaseStringUTFChars(env, jcolor, color);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TColorTile_color_1tile_1t_1get_1prop_1bg_1color(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  color_tile_t* obj = (color_tile_t*)jobj;
+
+  return (*env)->NewStringUTF(env, obj->bg_color);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TColorTile_color_1tile_1t_1get_1prop_1border_1color(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  color_tile_t* obj = (color_tile_t*)jobj;
+
+  return (*env)->NewStringUTF(env, obj->border_color);
+}
+
 JNIEXPORT jlong JNICALL Java_awtk_TSlideView_slide_1view_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
   widget_t* ret;
   widget_t* parent = (widget_t*)jparent;
@@ -8538,44 +8509,6 @@ JNIEXPORT jstring JNICALL Java_awtk_TSlideView_slide_1view_1t_1get_1prop_1anim_1
   slide_view_t* obj = (slide_view_t*)jobj;
 
   return (*env)->NewStringUTF(env, obj->anim_hint);
-}
-
-JNIEXPORT jlong JNICALL Java_awtk_TColorTile_color_1tile_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
-  widget_t* ret;
-  widget_t* parent = (widget_t*)jparent;
-  ret = (widget_t*)color_tile_create(parent, x, y, w, h);
-
-  return (jlong)(ret);
-}
-
-JNIEXPORT jlong JNICALL Java_awtk_TColorTile_color_1tile_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
-  widget_t* ret;
-  widget_t* widget = (widget_t*)jwidget;
-  ret = (widget_t*)color_tile_cast(widget);
-
-  return (jlong)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TColorTile_color_1tile_1set_1bg_1color(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jcolor) { /*func*/
-  ret_t ret;
-  widget_t* widget = (widget_t*)jwidget;
-  const char* color = (char*)(*env)->GetStringUTFChars(env, jcolor, 0);
-  ret = (ret_t)color_tile_set_bg_color(widget, color);
-  (*env)->ReleaseStringUTFChars(env, jcolor, color);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TColorTile_color_1tile_1t_1get_1prop_1bg_1color(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  color_tile_t* obj = (color_tile_t*)jobj;
-
-  return (*env)->NewStringUTF(env, obj->bg_color);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TColorTile_color_1tile_1t_1get_1prop_1border_1color(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  color_tile_t* obj = (color_tile_t*)jobj;
-
-  return (*env)->NewStringUTF(env, obj->border_color);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TSlideIndicator_slide_1indicator_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
@@ -8748,6 +8681,60 @@ JNIEXPORT jstring JNICALL Java_awtk_TSlideIndicator_slide_1indicator_1t_1get_1pr
   return (*env)->NewStringUTF(env, obj->indicated_target);
 }
 
+JNIEXPORT jlong JNICALL Java_awtk_TClipView_clip_1view_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
+  widget_t* ret;
+  widget_t* parent = (widget_t*)jparent;
+  ret = (widget_t*)clip_view_create(parent, x, y, w, h);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TClipView_clip_1view_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  widget_t* ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (widget_t*)clip_view_cast(widget);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TCheckButton_check_1button_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
+  widget_t* ret;
+  widget_t* parent = (widget_t*)jparent;
+  ret = (widget_t*)check_button_create(parent, x, y, w, h);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TCheckButton_check_1button_1create_1radio(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
+  widget_t* ret;
+  widget_t* parent = (widget_t*)jparent;
+  ret = (widget_t*)check_button_create_radio(parent, x, y, w, h);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCheckButton_check_1button_1set_1value(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean value) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)check_button_set_value(widget, value);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TCheckButton_check_1button_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  widget_t* ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (widget_t*)check_button_cast(widget);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TCheckButton_check_1button_1t_1get_1prop_1value(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  check_button_t* obj = (check_button_t*)jobj;
+
+  return (jboolean)(obj->value);
+}
+
 JNIEXPORT jlong JNICALL Java_awtk_TSlideMenu_slide_1menu_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
   widget_t* ret;
   widget_t* parent = (widget_t*)jparent;
@@ -8804,60 +8791,6 @@ JNIEXPORT jdouble JNICALL Java_awtk_TSlideMenu_slide_1menu_1t_1get_1prop_1min_1s
   slide_menu_t* obj = (slide_menu_t*)jobj;
 
   return (jdouble)(obj->min_scale);
-}
-
-JNIEXPORT jlong JNICALL Java_awtk_TClipView_clip_1view_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
-  widget_t* ret;
-  widget_t* parent = (widget_t*)jparent;
-  ret = (widget_t*)clip_view_create(parent, x, y, w, h);
-
-  return (jlong)(ret);
-}
-
-JNIEXPORT jlong JNICALL Java_awtk_TClipView_clip_1view_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
-  widget_t* ret;
-  widget_t* widget = (widget_t*)jwidget;
-  ret = (widget_t*)clip_view_cast(widget);
-
-  return (jlong)(ret);
-}
-
-JNIEXPORT jlong JNICALL Java_awtk_TCheckButton_check_1button_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
-  widget_t* ret;
-  widget_t* parent = (widget_t*)jparent;
-  ret = (widget_t*)check_button_create(parent, x, y, w, h);
-
-  return (jlong)(ret);
-}
-
-JNIEXPORT jlong JNICALL Java_awtk_TCheckButton_check_1button_1create_1radio(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
-  widget_t* ret;
-  widget_t* parent = (widget_t*)jparent;
-  ret = (widget_t*)check_button_create_radio(parent, x, y, w, h);
-
-  return (jlong)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCheckButton_check_1button_1set_1value(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean value) { /*func*/
-  ret_t ret;
-  widget_t* widget = (widget_t*)jwidget;
-  ret = (ret_t)check_button_set_value(widget, value);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jlong JNICALL Java_awtk_TCheckButton_check_1button_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
-  widget_t* ret;
-  widget_t* widget = (widget_t*)jwidget;
-  ret = (widget_t*)check_button_cast(widget);
-
-  return (jlong)(ret);
-}
-
-JNIEXPORT jboolean JNICALL Java_awtk_TCheckButton_check_1button_1t_1get_1prop_1value(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  check_button_t* obj = (check_button_t*)jobj;
-
-  return (jboolean)(obj->value);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TScrollView_scroll_1view_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
@@ -10442,76 +10375,6 @@ JNIEXPORT jint JNICALL Java_awtk_TGuage_guage_1t_1get_1prop_1draw_1type(JNIEnv* 
   return (jint)(obj->draw_type);
 }
 
-JNIEXPORT jlong JNICALL Java_awtk_TGuagePointer_guage_1pointer_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
-  widget_t* ret;
-  widget_t* parent = (widget_t*)jparent;
-  ret = (widget_t*)guage_pointer_create(parent, x, y, w, h);
-
-  return (jlong)(ret);
-}
-
-JNIEXPORT jlong JNICALL Java_awtk_TGuagePointer_guage_1pointer_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
-  widget_t* ret;
-  widget_t* widget = (widget_t*)jwidget;
-  ret = (widget_t*)guage_pointer_cast(widget);
-
-  return (jlong)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TGuagePointer_guage_1pointer_1set_1angle(JNIEnv* env,  jclass ajc, jlong jwidget, jint angle) { /*func*/
-  ret_t ret;
-  widget_t* widget = (widget_t*)jwidget;
-  ret = (ret_t)guage_pointer_set_angle(widget, angle);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TGuagePointer_guage_1pointer_1set_1image(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jimage) { /*func*/
-  ret_t ret;
-  widget_t* widget = (widget_t*)jwidget;
-  const char* image = (char*)(*env)->GetStringUTFChars(env, jimage, 0);
-  ret = (ret_t)guage_pointer_set_image(widget, image);
-  (*env)->ReleaseStringUTFChars(env, jimage, image);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TGuagePointer_guage_1pointer_1set_1anchor(JNIEnv* env,  jclass ajc, jlong jwidget, jstring janchor_x, jstring janchor_y) { /*func*/
-  ret_t ret;
-  widget_t* widget = (widget_t*)jwidget;
-  const char* anchor_x = (char*)(*env)->GetStringUTFChars(env, janchor_x, 0);
-  const char* anchor_y = (char*)(*env)->GetStringUTFChars(env, janchor_y, 0);
-  ret = (ret_t)guage_pointer_set_anchor(widget, anchor_x, anchor_y);
-  (*env)->ReleaseStringUTFChars(env, janchor_x, anchor_x);
-  (*env)->ReleaseStringUTFChars(env, janchor_y, anchor_y);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TGuagePointer_guage_1pointer_1t_1get_1prop_1angle(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  guage_pointer_t* obj = (guage_pointer_t*)jobj;
-
-  return (jint)(obj->angle);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TGuagePointer_guage_1pointer_1t_1get_1prop_1image(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  guage_pointer_t* obj = (guage_pointer_t*)jobj;
-
-  return (*env)->NewStringUTF(env, obj->image);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TGuagePointer_guage_1pointer_1t_1get_1prop_1anchor_1x(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  guage_pointer_t* obj = (guage_pointer_t*)jobj;
-
-  return (*env)->NewStringUTF(env, obj->anchor_x);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TGuagePointer_guage_1pointer_1t_1get_1prop_1anchor_1y(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  guage_pointer_t* obj = (guage_pointer_t*)jobj;
-
-  return (*env)->NewStringUTF(env, obj->anchor_y);
-}
-
 JNIEXPORT jlong JNICALL Java_awtk_TFileChooser_file_1chooser_1create(JNIEnv* env,  jclass ajc) { /*func*/
   file_chooser_t* ret;
   ret = (file_chooser_t*)file_chooser_create();
@@ -10593,6 +10456,150 @@ JNIEXPORT jboolean JNICALL Java_awtk_TFileChooser_file_1chooser_1is_1aborted(JNI
   ret = (bool_t)file_chooser_is_aborted(chooser);
 
   return (jboolean)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
+  widget_t* ret;
+  widget_t* parent = (widget_t*)jparent;
+  ret = (widget_t*)file_browser_view_create(parent, x, y, w, h);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  widget_t* ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (widget_t*)file_browser_view_cast(widget);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1set_1init_1dir(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jinit_dir) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  const char* init_dir = (char*)(*env)->GetStringUTFChars(env, jinit_dir, 0);
+  ret = (ret_t)file_browser_view_set_init_dir(widget, init_dir);
+  (*env)->ReleaseStringUTFChars(env, jinit_dir, init_dir);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1set_1filter(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jfilter) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  const char* filter = (char*)(*env)->GetStringUTFChars(env, jfilter, 0);
+  ret = (ret_t)file_browser_view_set_filter(widget, filter);
+  (*env)->ReleaseStringUTFChars(env, jfilter, filter);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1reload(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)file_browser_view_reload(widget);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1set_1ignore_1hidden_1files(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean ignore_hidden_files) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)file_browser_view_set_ignore_hidden_files(widget, ignore_hidden_files);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1set_1sort_1ascending(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean sort_ascending) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)file_browser_view_set_sort_ascending(widget, sort_ascending);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1set_1show_1check_1button(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean show_check_button) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)file_browser_view_set_show_check_button(widget, show_check_button);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1set_1sort_1by(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jsort_by) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  const char* sort_by = (char*)(*env)->GetStringUTFChars(env, jsort_by, 0);
+  ret = (ret_t)file_browser_view_set_sort_by(widget, sort_by);
+  (*env)->ReleaseStringUTFChars(env, jsort_by, sort_by);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1get_1cwd(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  const char* ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (const char*)file_browser_view_get_cwd(widget);
+
+  return (*env)->NewStringUTF(env, ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1create_1dir(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jname) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  const char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
+  ret = (ret_t)file_browser_view_create_dir(widget, name);
+  (*env)->ReleaseStringUTFChars(env, jname, name);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1create_1file(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jname, jstring jdata, jint size) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  const char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
+  const char* data = (char*)(*env)->GetStringUTFChars(env, jdata, 0);
+  ret = (ret_t)file_browser_view_create_file(widget, name, data, size);
+  (*env)->ReleaseStringUTFChars(env, jname, name);
+  (*env)->ReleaseStringUTFChars(env, jdata, data);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1t_1get_1prop_1init_1dir(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  file_browser_view_t* obj = (file_browser_view_t*)jobj;
+
+  return (*env)->NewStringUTF(env, obj->init_dir);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1t_1get_1prop_1filter(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  file_browser_view_t* obj = (file_browser_view_t*)jobj;
+
+  return (*env)->NewStringUTF(env, obj->filter);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1t_1get_1prop_1ignore_1hidden_1files(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  file_browser_view_t* obj = (file_browser_view_t*)jobj;
+
+  return (jboolean)(obj->ignore_hidden_files);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1t_1get_1prop_1sort_1ascending(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  file_browser_view_t* obj = (file_browser_view_t*)jobj;
+
+  return (jboolean)(obj->sort_ascending);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1t_1get_1prop_1show_1check_1button(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  file_browser_view_t* obj = (file_browser_view_t*)jobj;
+
+  return (jboolean)(obj->show_check_button);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TFileBrowserView_file_1browser_1view_1t_1get_1prop_1sort_1by(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  file_browser_view_t* obj = (file_browser_view_t*)jobj;
+
+  return (*env)->NewStringUTF(env, obj->sort_by);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TDraggable_draggable_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/

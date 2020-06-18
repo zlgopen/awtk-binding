@@ -1187,6 +1187,10 @@
    return app_conf_save();
  }
 
+ ret_t TAppConf::Reload()  {
+   return app_conf_reload();
+ }
+
  ret_t TAppConf::Deinit()  {
    return app_conf_deinit();
  }
@@ -1487,72 +1491,36 @@
    return ((asset_info_t*)(this->nativeObj))->name;
  }
 
- TWidget TFileBrowserView::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
-   return TFileBrowserView((widget_t*)(file_browser_view_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
+ TWidget TGuagePointer::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
+   return TGuagePointer((widget_t*)(guage_pointer_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- ret_t TFileBrowserView::SetInitDir(const char* init_dir)  {
-   return file_browser_view_set_init_dir(((widget_t*)(this->nativeObj)), init_dir);
+ ret_t TGuagePointer::SetAngle(int32_t angle)  {
+   return guage_pointer_set_angle(((widget_t*)(this->nativeObj)), angle);
  }
 
- ret_t TFileBrowserView::SetFilter(const char* filter)  {
-   return file_browser_view_set_filter(((widget_t*)(this->nativeObj)), filter);
+ ret_t TGuagePointer::SetImage(const char* image)  {
+   return guage_pointer_set_image(((widget_t*)(this->nativeObj)), image);
  }
 
- ret_t TFileBrowserView::Reload()  {
-   return file_browser_view_reload(((widget_t*)(this->nativeObj)));
+ ret_t TGuagePointer::SetAnchor(const char* anchor_x, const char* anchor_y)  {
+   return guage_pointer_set_anchor(((widget_t*)(this->nativeObj)), anchor_x, anchor_y);
  }
 
- ret_t TFileBrowserView::SetIgnoreHiddenFiles(bool ignore_hidden_files)  {
-   return file_browser_view_set_ignore_hidden_files(((widget_t*)(this->nativeObj)), ignore_hidden_files);
+ int32_t TGuagePointer::GetAngle() const {
+   return ((guage_pointer_t*)(this->nativeObj))->angle;
  }
 
- ret_t TFileBrowserView::SetSortAscending(bool sort_ascending)  {
-   return file_browser_view_set_sort_ascending(((widget_t*)(this->nativeObj)), sort_ascending);
+ char* TGuagePointer::GetImage() const {
+   return ((guage_pointer_t*)(this->nativeObj))->image;
  }
 
- ret_t TFileBrowserView::SetShowCheckButton(bool show_check_button)  {
-   return file_browser_view_set_show_check_button(((widget_t*)(this->nativeObj)), show_check_button);
+ char* TGuagePointer::GetAnchorX() const {
+   return ((guage_pointer_t*)(this->nativeObj))->anchor_x;
  }
 
- ret_t TFileBrowserView::SetSortBy(const char* sort_by)  {
-   return file_browser_view_set_sort_by(((widget_t*)(this->nativeObj)), sort_by);
- }
-
- const char* TFileBrowserView::GetCwd()  {
-    return file_browser_view_get_cwd(((widget_t*)(this->nativeObj)));
- }
-
- ret_t TFileBrowserView::CreateDir(const char* name)  {
-   return file_browser_view_create_dir(((widget_t*)(this->nativeObj)), name);
- }
-
- ret_t TFileBrowserView::CreateFile(const char* name, const char* data, uint32_t size)  {
-   return file_browser_view_create_file(((widget_t*)(this->nativeObj)), name, data, size);
- }
-
- char* TFileBrowserView::GetInitDir() const {
-   return ((file_browser_view_t*)(this->nativeObj))->init_dir;
- }
-
- char* TFileBrowserView::GetFilter() const {
-   return ((file_browser_view_t*)(this->nativeObj))->filter;
- }
-
- bool TFileBrowserView::GetIgnoreHiddenFiles() const {
-   return ((file_browser_view_t*)(this->nativeObj))->ignore_hidden_files;
- }
-
- bool TFileBrowserView::GetSortAscending() const {
-   return ((file_browser_view_t*)(this->nativeObj))->sort_ascending;
- }
-
- bool TFileBrowserView::GetShowCheckButton() const {
-   return ((file_browser_view_t*)(this->nativeObj))->show_check_button;
- }
-
- char* TFileBrowserView::GetSortBy() const {
-   return ((file_browser_view_t*)(this->nativeObj))->sort_by;
+ char* TGuagePointer::GetAnchorY() const {
+   return ((guage_pointer_t*)(this->nativeObj))->anchor_y;
  }
 
  int32_t TWheelEvent::GetDy() const {
@@ -2215,6 +2183,22 @@
    return TColumn((widget_t*)(column_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
+ TWidget TColorTile::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
+   return TColorTile((widget_t*)(color_tile_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
+ }
+
+ ret_t TColorTile::SetBgColor(const char* color)  {
+   return color_tile_set_bg_color(((widget_t*)(this->nativeObj)), color);
+ }
+
+ const char* TColorTile::GetBgColor() const {
+   return ((color_tile_t*)(this->nativeObj))->bg_color;
+ }
+
+ const char* TColorTile::GetBorderColor() const {
+   return ((color_tile_t*)(this->nativeObj))->border_color;
+ }
+
  TWidget TSlideView::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TSlideView((widget_t*)(slide_view_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
@@ -2253,22 +2237,6 @@
 
  char* TSlideView::GetAnimHint() const {
    return ((slide_view_t*)(this->nativeObj))->anim_hint;
- }
-
- TWidget TColorTile::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
-   return TColorTile((widget_t*)(color_tile_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- ret_t TColorTile::SetBgColor(const char* color)  {
-   return color_tile_set_bg_color(((widget_t*)(this->nativeObj)), color);
- }
-
- const char* TColorTile::GetBgColor() const {
-   return ((color_tile_t*)(this->nativeObj))->bg_color;
- }
-
- const char* TColorTile::GetBorderColor() const {
-   return ((color_tile_t*)(this->nativeObj))->border_color;
  }
 
  TWidget TSlideIndicator::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -2359,6 +2327,26 @@
    return ((slide_indicator_t*)(this->nativeObj))->indicated_target;
  }
 
+ TWidget TClipView::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
+   return TClipView((widget_t*)(clip_view_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
+ }
+
+ TWidget TCheckButton::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
+   return TCheckButton((widget_t*)(check_button_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
+ }
+
+ TWidget TCheckButton::CreateRadio(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
+   return TCheckButton((widget_t*)(check_button_create_radio(((widget_t*)(parent.nativeObj)), x, y, w, h)));
+ }
+
+ ret_t TCheckButton::SetValue(bool value)  {
+   return check_button_set_value(((widget_t*)(this->nativeObj)), value);
+ }
+
+ bool TCheckButton::GetValue() const {
+   return ((check_button_t*)(this->nativeObj))->value;
+ }
+
  TWidget TSlideMenu::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TSlideMenu((widget_t*)(slide_menu_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
@@ -2385,26 +2373,6 @@
 
  float_t TSlideMenu::GetMinScale() const {
    return ((slide_menu_t*)(this->nativeObj))->min_scale;
- }
-
- TWidget TClipView::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
-   return TClipView((widget_t*)(clip_view_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TWidget TCheckButton::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
-   return TCheckButton((widget_t*)(check_button_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- TWidget TCheckButton::CreateRadio(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
-   return TCheckButton((widget_t*)(check_button_create_radio(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- ret_t TCheckButton::SetValue(bool value)  {
-   return check_button_set_value(((widget_t*)(this->nativeObj)), value);
- }
-
- bool TCheckButton::GetValue() const {
-   return ((check_button_t*)(this->nativeObj))->value;
  }
 
  TWidget TScrollView::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -3191,38 +3159,6 @@
    return ((guage_t*)(this->nativeObj))->draw_type;
  }
 
- TWidget TGuagePointer::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
-   return TGuagePointer((widget_t*)(guage_pointer_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
- }
-
- ret_t TGuagePointer::SetAngle(int32_t angle)  {
-   return guage_pointer_set_angle(((widget_t*)(this->nativeObj)), angle);
- }
-
- ret_t TGuagePointer::SetImage(const char* image)  {
-   return guage_pointer_set_image(((widget_t*)(this->nativeObj)), image);
- }
-
- ret_t TGuagePointer::SetAnchor(const char* anchor_x, const char* anchor_y)  {
-   return guage_pointer_set_anchor(((widget_t*)(this->nativeObj)), anchor_x, anchor_y);
- }
-
- int32_t TGuagePointer::GetAngle() const {
-   return ((guage_pointer_t*)(this->nativeObj))->angle;
- }
-
- char* TGuagePointer::GetImage() const {
-   return ((guage_pointer_t*)(this->nativeObj))->image;
- }
-
- char* TGuagePointer::GetAnchorX() const {
-   return ((guage_pointer_t*)(this->nativeObj))->anchor_x;
- }
-
- char* TGuagePointer::GetAnchorY() const {
-   return ((guage_pointer_t*)(this->nativeObj))->anchor_y;
- }
-
  TFileChooser TFileChooser::Create()  {
    return TFileChooser((emitter_t*)(file_chooser_create()));
  }
@@ -3257,6 +3193,74 @@
 
  bool TFileChooser::IsAborted()  {
     return file_chooser_is_aborted(((file_chooser_t*)(this->nativeObj)));
+ }
+
+ TWidget TFileBrowserView::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
+   return TFileBrowserView((widget_t*)(file_browser_view_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
+ }
+
+ ret_t TFileBrowserView::SetInitDir(const char* init_dir)  {
+   return file_browser_view_set_init_dir(((widget_t*)(this->nativeObj)), init_dir);
+ }
+
+ ret_t TFileBrowserView::SetFilter(const char* filter)  {
+   return file_browser_view_set_filter(((widget_t*)(this->nativeObj)), filter);
+ }
+
+ ret_t TFileBrowserView::Reload()  {
+   return file_browser_view_reload(((widget_t*)(this->nativeObj)));
+ }
+
+ ret_t TFileBrowserView::SetIgnoreHiddenFiles(bool ignore_hidden_files)  {
+   return file_browser_view_set_ignore_hidden_files(((widget_t*)(this->nativeObj)), ignore_hidden_files);
+ }
+
+ ret_t TFileBrowserView::SetSortAscending(bool sort_ascending)  {
+   return file_browser_view_set_sort_ascending(((widget_t*)(this->nativeObj)), sort_ascending);
+ }
+
+ ret_t TFileBrowserView::SetShowCheckButton(bool show_check_button)  {
+   return file_browser_view_set_show_check_button(((widget_t*)(this->nativeObj)), show_check_button);
+ }
+
+ ret_t TFileBrowserView::SetSortBy(const char* sort_by)  {
+   return file_browser_view_set_sort_by(((widget_t*)(this->nativeObj)), sort_by);
+ }
+
+ const char* TFileBrowserView::GetCwd()  {
+    return file_browser_view_get_cwd(((widget_t*)(this->nativeObj)));
+ }
+
+ ret_t TFileBrowserView::CreateDir(const char* name)  {
+   return file_browser_view_create_dir(((widget_t*)(this->nativeObj)), name);
+ }
+
+ ret_t TFileBrowserView::CreateFile(const char* name, const char* data, uint32_t size)  {
+   return file_browser_view_create_file(((widget_t*)(this->nativeObj)), name, data, size);
+ }
+
+ char* TFileBrowserView::GetInitDir() const {
+   return ((file_browser_view_t*)(this->nativeObj))->init_dir;
+ }
+
+ char* TFileBrowserView::GetFilter() const {
+   return ((file_browser_view_t*)(this->nativeObj))->filter;
+ }
+
+ bool TFileBrowserView::GetIgnoreHiddenFiles() const {
+   return ((file_browser_view_t*)(this->nativeObj))->ignore_hidden_files;
+ }
+
+ bool TFileBrowserView::GetSortAscending() const {
+   return ((file_browser_view_t*)(this->nativeObj))->sort_ascending;
+ }
+
+ bool TFileBrowserView::GetShowCheckButton() const {
+   return ((file_browser_view_t*)(this->nativeObj))->show_check_button;
+ }
+
+ char* TFileBrowserView::GetSortBy() const {
+   return ((file_browser_view_t*)(this->nativeObj))->sort_by;
  }
 
  TWidget TDraggable::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {

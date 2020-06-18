@@ -7987,6 +7987,16 @@ int awtk_TAppConf_app_conf_save(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TAppConf_app_conf_reload(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  ret = (ret_t)app_conf_reload();
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TAppConf_app_conf_deinit(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -10324,7 +10334,7 @@ int awtk_TAssetType_ASSET_TYPE_DATA(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
-int awtk_TFileBrowserView_file_browser_view_create(Runtime *runtime, JClass *clazz) {
+int awtk_TGuagePointer_guage_pointer_create(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   widget_t* ret = NULL;
@@ -10333,199 +10343,95 @@ int awtk_TFileBrowserView_file_browser_view_create(Runtime *runtime, JClass *cla
   xy_t y = (xy_t)jni_ctx_get_int(&ctx);
   wh_t w = (wh_t)jni_ctx_get_int(&ctx);
   wh_t h = (wh_t)jni_ctx_get_int(&ctx);
-  ret = (widget_t*)file_browser_view_create(parent, x, y, w, h);
+  ret = (widget_t*)guage_pointer_create(parent, x, y, w, h);
   jni_ctx_return_object(&ctx, (void*)(ret));
 
   return 0;
 }
 
-int awtk_TFileBrowserView_file_browser_view_cast(Runtime *runtime, JClass *clazz) {
+int awtk_TGuagePointer_guage_pointer_cast(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   widget_t* ret = NULL;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  ret = (widget_t*)file_browser_view_cast(widget);
+  ret = (widget_t*)guage_pointer_cast(widget);
   jni_ctx_return_object(&ctx, (void*)(ret));
 
   return 0;
 }
 
-int awtk_TFileBrowserView_file_browser_view_set_init_dir(Runtime *runtime, JClass *clazz) {
+int awtk_TGuagePointer_guage_pointer_set_angle(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  const char* init_dir = (const char*)jni_ctx_get_str(&ctx);
-  ret = (ret_t)file_browser_view_set_init_dir(widget, init_dir);
-  TKMEM_FREE(init_dir);
+  int32_t angle = (int32_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)guage_pointer_set_angle(widget, angle);
   jni_ctx_return_int(&ctx, (int32_t)(ret));
 
   return 0;
 }
 
-int awtk_TFileBrowserView_file_browser_view_set_filter(Runtime *runtime, JClass *clazz) {
+int awtk_TGuagePointer_guage_pointer_set_image(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  const char* filter = (const char*)jni_ctx_get_str(&ctx);
-  ret = (ret_t)file_browser_view_set_filter(widget, filter);
-  TKMEM_FREE(filter);
+  const char* image = (const char*)jni_ctx_get_str(&ctx);
+  ret = (ret_t)guage_pointer_set_image(widget, image);
+  TKMEM_FREE(image);
   jni_ctx_return_int(&ctx, (int32_t)(ret));
 
   return 0;
 }
 
-int awtk_TFileBrowserView_file_browser_view_reload(Runtime *runtime, JClass *clazz) {
+int awtk_TGuagePointer_guage_pointer_set_anchor(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  ret = (ret_t)file_browser_view_reload(widget);
+  const char* anchor_x = (const char*)jni_ctx_get_str(&ctx);
+  const char* anchor_y = (const char*)jni_ctx_get_str(&ctx);
+  ret = (ret_t)guage_pointer_set_anchor(widget, anchor_x, anchor_y);
+  TKMEM_FREE(anchor_x);
+  TKMEM_FREE(anchor_y);
   jni_ctx_return_int(&ctx, (int32_t)(ret));
 
   return 0;
 }
 
-int awtk_TFileBrowserView_file_browser_view_set_ignore_hidden_files(Runtime *runtime, JClass *clazz) {
+int awtk_TGuagePointer_guage_pointer_t_get_prop_angle(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  ret_t ret = 0;
-  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  bool_t ignore_hidden_files = (bool_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)file_browser_view_set_ignore_hidden_files(widget, ignore_hidden_files);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
+  guage_pointer_t* obj = (guage_pointer_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->angle));
 
   return 0;
 }
 
-int awtk_TFileBrowserView_file_browser_view_set_sort_ascending(Runtime *runtime, JClass *clazz) {
+int awtk_TGuagePointer_guage_pointer_t_get_prop_image(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  ret_t ret = 0;
-  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  bool_t sort_ascending = (bool_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)file_browser_view_set_sort_ascending(widget, sort_ascending);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
+  guage_pointer_t* obj = (guage_pointer_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_str(&ctx, (char*)(obj->image));
 
   return 0;
 }
 
-int awtk_TFileBrowserView_file_browser_view_set_show_check_button(Runtime *runtime, JClass *clazz) {
+int awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_x(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  ret_t ret = 0;
-  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  bool_t show_check_button = (bool_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)file_browser_view_set_show_check_button(widget, show_check_button);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
+  guage_pointer_t* obj = (guage_pointer_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_str(&ctx, (char*)(obj->anchor_x));
 
   return 0;
 }
 
-int awtk_TFileBrowserView_file_browser_view_set_sort_by(Runtime *runtime, JClass *clazz) {
+int awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_y(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  ret_t ret = 0;
-  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  const char* sort_by = (const char*)jni_ctx_get_str(&ctx);
-  ret = (ret_t)file_browser_view_set_sort_by(widget, sort_by);
-  TKMEM_FREE(sort_by);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TFileBrowserView_file_browser_view_get_cwd(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  const char* ret = NULL;
-  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  ret = (const char*)file_browser_view_get_cwd(widget);
-  jni_ctx_return_str(&ctx, (char*)(ret));
-
-  return 0;
-}
-
-int awtk_TFileBrowserView_file_browser_view_create_dir(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  const char* name = (const char*)jni_ctx_get_str(&ctx);
-  ret = (ret_t)file_browser_view_create_dir(widget, name);
-  TKMEM_FREE(name);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TFileBrowserView_file_browser_view_create_file(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  const char* name = (const char*)jni_ctx_get_str(&ctx);
-  const char* data = (const char*)jni_ctx_get_str(&ctx);
-  uint32_t size = (uint32_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)file_browser_view_create_file(widget, name, data, size);
-  TKMEM_FREE(name);
-  TKMEM_FREE(data);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TFileBrowserView_file_browser_view_t_get_prop_init_dir(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  file_browser_view_t* obj = (file_browser_view_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_str(&ctx, (char*)(obj->init_dir));
-
-  return 0;
-}
-
-int awtk_TFileBrowserView_file_browser_view_t_get_prop_filter(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  file_browser_view_t* obj = (file_browser_view_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_str(&ctx, (char*)(obj->filter));
-
-  return 0;
-}
-
-int awtk_TFileBrowserView_file_browser_view_t_get_prop_ignore_hidden_files(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  file_browser_view_t* obj = (file_browser_view_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->ignore_hidden_files));
-
-  return 0;
-}
-
-int awtk_TFileBrowserView_file_browser_view_t_get_prop_sort_ascending(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  file_browser_view_t* obj = (file_browser_view_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->sort_ascending));
-
-  return 0;
-}
-
-int awtk_TFileBrowserView_file_browser_view_t_get_prop_show_check_button(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  file_browser_view_t* obj = (file_browser_view_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->show_check_button));
-
-  return 0;
-}
-
-int awtk_TFileBrowserView_file_browser_view_t_get_prop_sort_by(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  file_browser_view_t* obj = (file_browser_view_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_str(&ctx, (char*)(obj->sort_by));
+  guage_pointer_t* obj = (guage_pointer_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_str(&ctx, (char*)(obj->anchor_y));
 
   return 0;
 }
@@ -12682,6 +12588,63 @@ int awtk_TColumn_column_cast(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TColorTile_color_tile_create(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* parent = (widget_t*)jni_ctx_get_object(&ctx);
+  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
+  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
+  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
+  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
+  ret = (widget_t*)color_tile_create(parent, x, y, w, h);
+  jni_ctx_return_object(&ctx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TColorTile_color_tile_cast(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  ret = (widget_t*)color_tile_cast(widget);
+  jni_ctx_return_object(&ctx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TColorTile_color_tile_set_bg_color(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  const char* color = (const char*)jni_ctx_get_str(&ctx);
+  ret = (ret_t)color_tile_set_bg_color(widget, color);
+  TKMEM_FREE(color);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TColorTile_color_tile_t_get_prop_bg_color(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  color_tile_t* obj = (color_tile_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_str(&ctx, (char*)(obj->bg_color));
+
+  return 0;
+}
+
+int awtk_TColorTile_color_tile_t_get_prop_border_color(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  color_tile_t* obj = (color_tile_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_str(&ctx, (char*)(obj->border_color));
+
+  return 0;
+}
+
 int awtk_TSlideView_slide_view_create(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -12801,63 +12764,6 @@ int awtk_TSlideView_slide_view_t_get_prop_anim_hint(Runtime *runtime, JClass *cl
 
   slide_view_t* obj = (slide_view_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_str(&ctx, (char*)(obj->anim_hint));
-
-  return 0;
-}
-
-int awtk_TColorTile_color_tile_create(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  widget_t* ret = NULL;
-  widget_t* parent = (widget_t*)jni_ctx_get_object(&ctx);
-  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
-  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
-  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
-  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
-  ret = (widget_t*)color_tile_create(parent, x, y, w, h);
-  jni_ctx_return_object(&ctx, (void*)(ret));
-
-  return 0;
-}
-
-int awtk_TColorTile_color_tile_cast(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  widget_t* ret = NULL;
-  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  ret = (widget_t*)color_tile_cast(widget);
-  jni_ctx_return_object(&ctx, (void*)(ret));
-
-  return 0;
-}
-
-int awtk_TColorTile_color_tile_set_bg_color(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  const char* color = (const char*)jni_ctx_get_str(&ctx);
-  ret = (ret_t)color_tile_set_bg_color(widget, color);
-  TKMEM_FREE(color);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TColorTile_color_tile_t_get_prop_bg_color(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  color_tile_t* obj = (color_tile_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_str(&ctx, (char*)(obj->bg_color));
-
-  return 0;
-}
-
-int awtk_TColorTile_color_tile_t_get_prop_border_color(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  color_tile_t* obj = (color_tile_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_str(&ctx, (char*)(obj->border_color));
 
   return 0;
 }
@@ -13120,6 +13026,94 @@ int awtk_TSlideIndicator_slide_indicator_t_get_prop_indicated_target(Runtime *ru
   return 0;
 }
 
+int awtk_TClipView_clip_view_create(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* parent = (widget_t*)jni_ctx_get_object(&ctx);
+  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
+  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
+  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
+  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
+  ret = (widget_t*)clip_view_create(parent, x, y, w, h);
+  jni_ctx_return_object(&ctx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TClipView_clip_view_cast(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  ret = (widget_t*)clip_view_cast(widget);
+  jni_ctx_return_object(&ctx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TCheckButton_check_button_create(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* parent = (widget_t*)jni_ctx_get_object(&ctx);
+  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
+  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
+  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
+  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
+  ret = (widget_t*)check_button_create(parent, x, y, w, h);
+  jni_ctx_return_object(&ctx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TCheckButton_check_button_create_radio(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* parent = (widget_t*)jni_ctx_get_object(&ctx);
+  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
+  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
+  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
+  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
+  ret = (widget_t*)check_button_create_radio(parent, x, y, w, h);
+  jni_ctx_return_object(&ctx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TCheckButton_check_button_set_value(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  bool_t value = (bool_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)check_button_set_value(widget, value);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCheckButton_check_button_cast(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  ret = (widget_t*)check_button_cast(widget);
+  jni_ctx_return_object(&ctx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TCheckButton_check_button_t_get_prop_value(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  check_button_t* obj = (check_button_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->value));
+
+  return 0;
+}
+
 int awtk_TSlideMenu_slide_menu_create(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -13205,94 +13199,6 @@ int awtk_TSlideMenu_slide_menu_t_get_prop_min_scale(Runtime *runtime, JClass *cl
 
   slide_menu_t* obj = (slide_menu_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_float(&ctx, (float)(obj->min_scale));
-
-  return 0;
-}
-
-int awtk_TClipView_clip_view_create(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  widget_t* ret = NULL;
-  widget_t* parent = (widget_t*)jni_ctx_get_object(&ctx);
-  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
-  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
-  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
-  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
-  ret = (widget_t*)clip_view_create(parent, x, y, w, h);
-  jni_ctx_return_object(&ctx, (void*)(ret));
-
-  return 0;
-}
-
-int awtk_TClipView_clip_view_cast(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  widget_t* ret = NULL;
-  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  ret = (widget_t*)clip_view_cast(widget);
-  jni_ctx_return_object(&ctx, (void*)(ret));
-
-  return 0;
-}
-
-int awtk_TCheckButton_check_button_create(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  widget_t* ret = NULL;
-  widget_t* parent = (widget_t*)jni_ctx_get_object(&ctx);
-  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
-  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
-  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
-  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
-  ret = (widget_t*)check_button_create(parent, x, y, w, h);
-  jni_ctx_return_object(&ctx, (void*)(ret));
-
-  return 0;
-}
-
-int awtk_TCheckButton_check_button_create_radio(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  widget_t* ret = NULL;
-  widget_t* parent = (widget_t*)jni_ctx_get_object(&ctx);
-  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
-  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
-  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
-  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
-  ret = (widget_t*)check_button_create_radio(parent, x, y, w, h);
-  jni_ctx_return_object(&ctx, (void*)(ret));
-
-  return 0;
-}
-
-int awtk_TCheckButton_check_button_set_value(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  bool_t value = (bool_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)check_button_set_value(widget, value);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCheckButton_check_button_cast(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  widget_t* ret = NULL;
-  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  ret = (widget_t*)check_button_cast(widget);
-  jni_ctx_return_object(&ctx, (void*)(ret));
-
-  return 0;
-}
-
-int awtk_TCheckButton_check_button_t_get_prop_value(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  check_button_t* obj = (check_button_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->value));
 
   return 0;
 }
@@ -15681,108 +15587,6 @@ int awtk_TGuage_guage_t_get_prop_draw_type(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
-int awtk_TGuagePointer_guage_pointer_create(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  widget_t* ret = NULL;
-  widget_t* parent = (widget_t*)jni_ctx_get_object(&ctx);
-  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
-  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
-  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
-  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
-  ret = (widget_t*)guage_pointer_create(parent, x, y, w, h);
-  jni_ctx_return_object(&ctx, (void*)(ret));
-
-  return 0;
-}
-
-int awtk_TGuagePointer_guage_pointer_cast(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  widget_t* ret = NULL;
-  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  ret = (widget_t*)guage_pointer_cast(widget);
-  jni_ctx_return_object(&ctx, (void*)(ret));
-
-  return 0;
-}
-
-int awtk_TGuagePointer_guage_pointer_set_angle(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  int32_t angle = (int32_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)guage_pointer_set_angle(widget, angle);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TGuagePointer_guage_pointer_set_image(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  const char* image = (const char*)jni_ctx_get_str(&ctx);
-  ret = (ret_t)guage_pointer_set_image(widget, image);
-  TKMEM_FREE(image);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TGuagePointer_guage_pointer_set_anchor(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  const char* anchor_x = (const char*)jni_ctx_get_str(&ctx);
-  const char* anchor_y = (const char*)jni_ctx_get_str(&ctx);
-  ret = (ret_t)guage_pointer_set_anchor(widget, anchor_x, anchor_y);
-  TKMEM_FREE(anchor_x);
-  TKMEM_FREE(anchor_y);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TGuagePointer_guage_pointer_t_get_prop_angle(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  guage_pointer_t* obj = (guage_pointer_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->angle));
-
-  return 0;
-}
-
-int awtk_TGuagePointer_guage_pointer_t_get_prop_image(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  guage_pointer_t* obj = (guage_pointer_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_str(&ctx, (char*)(obj->image));
-
-  return 0;
-}
-
-int awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_x(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  guage_pointer_t* obj = (guage_pointer_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_str(&ctx, (char*)(obj->anchor_x));
-
-  return 0;
-}
-
-int awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_y(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  guage_pointer_t* obj = (guage_pointer_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_str(&ctx, (char*)(obj->anchor_y));
-
-  return 0;
-}
-
 int awtk_TFileChooser_file_chooser_create(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -15892,6 +15696,212 @@ int awtk_TFileChooser_file_chooser_is_aborted(Runtime *runtime, JClass *clazz) {
   file_chooser_t* chooser = (file_chooser_t*)jni_ctx_get_object(&ctx);
   ret = (bool_t)file_chooser_is_aborted(chooser);
   jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TFileBrowserView_file_browser_view_create(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* parent = (widget_t*)jni_ctx_get_object(&ctx);
+  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
+  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
+  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
+  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
+  ret = (widget_t*)file_browser_view_create(parent, x, y, w, h);
+  jni_ctx_return_object(&ctx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TFileBrowserView_file_browser_view_cast(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  ret = (widget_t*)file_browser_view_cast(widget);
+  jni_ctx_return_object(&ctx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TFileBrowserView_file_browser_view_set_init_dir(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  const char* init_dir = (const char*)jni_ctx_get_str(&ctx);
+  ret = (ret_t)file_browser_view_set_init_dir(widget, init_dir);
+  TKMEM_FREE(init_dir);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TFileBrowserView_file_browser_view_set_filter(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  const char* filter = (const char*)jni_ctx_get_str(&ctx);
+  ret = (ret_t)file_browser_view_set_filter(widget, filter);
+  TKMEM_FREE(filter);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TFileBrowserView_file_browser_view_reload(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  ret = (ret_t)file_browser_view_reload(widget);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TFileBrowserView_file_browser_view_set_ignore_hidden_files(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  bool_t ignore_hidden_files = (bool_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)file_browser_view_set_ignore_hidden_files(widget, ignore_hidden_files);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TFileBrowserView_file_browser_view_set_sort_ascending(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  bool_t sort_ascending = (bool_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)file_browser_view_set_sort_ascending(widget, sort_ascending);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TFileBrowserView_file_browser_view_set_show_check_button(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  bool_t show_check_button = (bool_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)file_browser_view_set_show_check_button(widget, show_check_button);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TFileBrowserView_file_browser_view_set_sort_by(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  const char* sort_by = (const char*)jni_ctx_get_str(&ctx);
+  ret = (ret_t)file_browser_view_set_sort_by(widget, sort_by);
+  TKMEM_FREE(sort_by);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TFileBrowserView_file_browser_view_get_cwd(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  const char* ret = NULL;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  ret = (const char*)file_browser_view_get_cwd(widget);
+  jni_ctx_return_str(&ctx, (char*)(ret));
+
+  return 0;
+}
+
+int awtk_TFileBrowserView_file_browser_view_create_dir(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  const char* name = (const char*)jni_ctx_get_str(&ctx);
+  ret = (ret_t)file_browser_view_create_dir(widget, name);
+  TKMEM_FREE(name);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TFileBrowserView_file_browser_view_create_file(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  const char* name = (const char*)jni_ctx_get_str(&ctx);
+  const char* data = (const char*)jni_ctx_get_str(&ctx);
+  uint32_t size = (uint32_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)file_browser_view_create_file(widget, name, data, size);
+  TKMEM_FREE(name);
+  TKMEM_FREE(data);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TFileBrowserView_file_browser_view_t_get_prop_init_dir(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  file_browser_view_t* obj = (file_browser_view_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_str(&ctx, (char*)(obj->init_dir));
+
+  return 0;
+}
+
+int awtk_TFileBrowserView_file_browser_view_t_get_prop_filter(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  file_browser_view_t* obj = (file_browser_view_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_str(&ctx, (char*)(obj->filter));
+
+  return 0;
+}
+
+int awtk_TFileBrowserView_file_browser_view_t_get_prop_ignore_hidden_files(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  file_browser_view_t* obj = (file_browser_view_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->ignore_hidden_files));
+
+  return 0;
+}
+
+int awtk_TFileBrowserView_file_browser_view_t_get_prop_sort_ascending(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  file_browser_view_t* obj = (file_browser_view_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->sort_ascending));
+
+  return 0;
+}
+
+int awtk_TFileBrowserView_file_browser_view_t_get_prop_show_check_button(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  file_browser_view_t* obj = (file_browser_view_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->show_check_button));
+
+  return 0;
+}
+
+int awtk_TFileBrowserView_file_browser_view_t_get_prop_sort_by(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  file_browser_view_t* obj = (file_browser_view_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_str(&ctx, (char*)(obj->sort_by));
 
   return 0;
 }
@@ -18650,6 +18660,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidget",  "widget_t_get_prop_dirty_rect_tolerance",  "(J)I",  awtk_TWidget_widget_t_get_prop_dirty_rect_tolerance},
 {"awtk/TWidget",  "widget_t_get_prop_parent",  "(J)J",  awtk_TWidget_widget_t_get_prop_parent},
 {"awtk/TAppConf",  "app_conf_save",  "()I",  awtk_TAppConf_app_conf_save},
+{"awtk/TAppConf",  "app_conf_reload",  "()I",  awtk_TAppConf_app_conf_reload},
 {"awtk/TAppConf",  "app_conf_deinit",  "()I",  awtk_TAppConf_app_conf_deinit},
 {"awtk/TAppConf",  "app_conf_exist",  "(Ljava/lang/String;)Z",  awtk_TAppConf_app_conf_exist},
 {"awtk/TAppConf",  "app_conf_set_int",  "(Ljava/lang/String;I)I",  awtk_TAppConf_app_conf_set_int},
@@ -18909,24 +18920,15 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TAssetType",  "ASSET_TYPE_STRINGS",  "()I",  awtk_TAssetType_ASSET_TYPE_STRINGS},
 {"awtk/TAssetType",  "ASSET_TYPE_SCRIPT",  "()I",  awtk_TAssetType_ASSET_TYPE_SCRIPT},
 {"awtk/TAssetType",  "ASSET_TYPE_DATA",  "()I",  awtk_TAssetType_ASSET_TYPE_DATA},
-{"awtk/TFileBrowserView",  "file_browser_view_create",  "(JIIII)J",  awtk_TFileBrowserView_file_browser_view_create},
-{"awtk/TFileBrowserView",  "file_browser_view_cast",  "(J)J",  awtk_TFileBrowserView_file_browser_view_cast},
-{"awtk/TFileBrowserView",  "file_browser_view_set_init_dir",  "(JLjava/lang/String;)I",  awtk_TFileBrowserView_file_browser_view_set_init_dir},
-{"awtk/TFileBrowserView",  "file_browser_view_set_filter",  "(JLjava/lang/String;)I",  awtk_TFileBrowserView_file_browser_view_set_filter},
-{"awtk/TFileBrowserView",  "file_browser_view_reload",  "(J)I",  awtk_TFileBrowserView_file_browser_view_reload},
-{"awtk/TFileBrowserView",  "file_browser_view_set_ignore_hidden_files",  "(JZ)I",  awtk_TFileBrowserView_file_browser_view_set_ignore_hidden_files},
-{"awtk/TFileBrowserView",  "file_browser_view_set_sort_ascending",  "(JZ)I",  awtk_TFileBrowserView_file_browser_view_set_sort_ascending},
-{"awtk/TFileBrowserView",  "file_browser_view_set_show_check_button",  "(JZ)I",  awtk_TFileBrowserView_file_browser_view_set_show_check_button},
-{"awtk/TFileBrowserView",  "file_browser_view_set_sort_by",  "(JLjava/lang/String;)I",  awtk_TFileBrowserView_file_browser_view_set_sort_by},
-{"awtk/TFileBrowserView",  "file_browser_view_get_cwd",  "(J)Ljava/lang/String;",  awtk_TFileBrowserView_file_browser_view_get_cwd},
-{"awtk/TFileBrowserView",  "file_browser_view_create_dir",  "(JLjava/lang/String;)I",  awtk_TFileBrowserView_file_browser_view_create_dir},
-{"awtk/TFileBrowserView",  "file_browser_view_create_file",  "(JLjava/lang/String;Ljava/lang/String;I)I",  awtk_TFileBrowserView_file_browser_view_create_file},
-{"awtk/TFileBrowserView",  "file_browser_view_t_get_prop_init_dir",  "(J)Ljava/lang/String;",  awtk_TFileBrowserView_file_browser_view_t_get_prop_init_dir},
-{"awtk/TFileBrowserView",  "file_browser_view_t_get_prop_filter",  "(J)Ljava/lang/String;",  awtk_TFileBrowserView_file_browser_view_t_get_prop_filter},
-{"awtk/TFileBrowserView",  "file_browser_view_t_get_prop_ignore_hidden_files",  "(J)Z",  awtk_TFileBrowserView_file_browser_view_t_get_prop_ignore_hidden_files},
-{"awtk/TFileBrowserView",  "file_browser_view_t_get_prop_sort_ascending",  "(J)Z",  awtk_TFileBrowserView_file_browser_view_t_get_prop_sort_ascending},
-{"awtk/TFileBrowserView",  "file_browser_view_t_get_prop_show_check_button",  "(J)Z",  awtk_TFileBrowserView_file_browser_view_t_get_prop_show_check_button},
-{"awtk/TFileBrowserView",  "file_browser_view_t_get_prop_sort_by",  "(J)Ljava/lang/String;",  awtk_TFileBrowserView_file_browser_view_t_get_prop_sort_by},
+{"awtk/TGuagePointer",  "guage_pointer_create",  "(JIIII)J",  awtk_TGuagePointer_guage_pointer_create},
+{"awtk/TGuagePointer",  "guage_pointer_cast",  "(J)J",  awtk_TGuagePointer_guage_pointer_cast},
+{"awtk/TGuagePointer",  "guage_pointer_set_angle",  "(JI)I",  awtk_TGuagePointer_guage_pointer_set_angle},
+{"awtk/TGuagePointer",  "guage_pointer_set_image",  "(JLjava/lang/String;)I",  awtk_TGuagePointer_guage_pointer_set_image},
+{"awtk/TGuagePointer",  "guage_pointer_set_anchor",  "(JLjava/lang/String;Ljava/lang/String;)I",  awtk_TGuagePointer_guage_pointer_set_anchor},
+{"awtk/TGuagePointer",  "guage_pointer_t_get_prop_angle",  "(J)I",  awtk_TGuagePointer_guage_pointer_t_get_prop_angle},
+{"awtk/TGuagePointer",  "guage_pointer_t_get_prop_image",  "(J)Ljava/lang/String;",  awtk_TGuagePointer_guage_pointer_t_get_prop_image},
+{"awtk/TGuagePointer",  "guage_pointer_t_get_prop_anchor_x",  "(J)Ljava/lang/String;",  awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_x},
+{"awtk/TGuagePointer",  "guage_pointer_t_get_prop_anchor_y",  "(J)Ljava/lang/String;",  awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_y},
 {"awtk/TWheelEvent",  "wheel_event_cast",  "(J)J",  awtk_TWheelEvent_wheel_event_cast},
 {"awtk/TWheelEvent",  "wheel_event_t_get_prop_dy",  "(J)I",  awtk_TWheelEvent_wheel_event_t_get_prop_dy},
 {"awtk/TWheelEvent",  "wheel_event_t_get_prop_alt",  "(J)Z",  awtk_TWheelEvent_wheel_event_t_get_prop_alt},
@@ -19119,6 +19121,11 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TSwitch",  "switch_t_get_prop_max_xoffset_ratio",  "(J)F",  awtk_TSwitch_switch_t_get_prop_max_xoffset_ratio},
 {"awtk/TColumn",  "column_create",  "(JIIII)J",  awtk_TColumn_column_create},
 {"awtk/TColumn",  "column_cast",  "(J)J",  awtk_TColumn_column_cast},
+{"awtk/TColorTile",  "color_tile_create",  "(JIIII)J",  awtk_TColorTile_color_tile_create},
+{"awtk/TColorTile",  "color_tile_cast",  "(J)J",  awtk_TColorTile_color_tile_cast},
+{"awtk/TColorTile",  "color_tile_set_bg_color",  "(JLjava/lang/String;)I",  awtk_TColorTile_color_tile_set_bg_color},
+{"awtk/TColorTile",  "color_tile_t_get_prop_bg_color",  "(J)Ljava/lang/String;",  awtk_TColorTile_color_tile_t_get_prop_bg_color},
+{"awtk/TColorTile",  "color_tile_t_get_prop_border_color",  "(J)Ljava/lang/String;",  awtk_TColorTile_color_tile_t_get_prop_border_color},
 {"awtk/TSlideView",  "slide_view_create",  "(JIIII)J",  awtk_TSlideView_slide_view_create},
 {"awtk/TSlideView",  "slide_view_cast",  "(J)J",  awtk_TSlideView_slide_view_cast},
 {"awtk/TSlideView",  "slide_view_set_auto_play",  "(JI)I",  awtk_TSlideView_slide_view_set_auto_play},
@@ -19130,11 +19137,6 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TSlideView",  "slide_view_t_get_prop_auto_play",  "(J)I",  awtk_TSlideView_slide_view_t_get_prop_auto_play},
 {"awtk/TSlideView",  "slide_view_t_get_prop_loop",  "(J)Z",  awtk_TSlideView_slide_view_t_get_prop_loop},
 {"awtk/TSlideView",  "slide_view_t_get_prop_anim_hint",  "(J)Ljava/lang/String;",  awtk_TSlideView_slide_view_t_get_prop_anim_hint},
-{"awtk/TColorTile",  "color_tile_create",  "(JIIII)J",  awtk_TColorTile_color_tile_create},
-{"awtk/TColorTile",  "color_tile_cast",  "(J)J",  awtk_TColorTile_color_tile_cast},
-{"awtk/TColorTile",  "color_tile_set_bg_color",  "(JLjava/lang/String;)I",  awtk_TColorTile_color_tile_set_bg_color},
-{"awtk/TColorTile",  "color_tile_t_get_prop_bg_color",  "(J)Ljava/lang/String;",  awtk_TColorTile_color_tile_t_get_prop_bg_color},
-{"awtk/TColorTile",  "color_tile_t_get_prop_border_color",  "(J)Ljava/lang/String;",  awtk_TColorTile_color_tile_t_get_prop_border_color},
 {"awtk/TSlideIndicator",  "slide_indicator_create",  "(JIIII)J",  awtk_TSlideIndicator_slide_indicator_create},
 {"awtk/TSlideIndicator",  "slide_indicator_create_linear",  "(JIIII)J",  awtk_TSlideIndicator_slide_indicator_create_linear},
 {"awtk/TSlideIndicator",  "slide_indicator_create_arc",  "(JIIII)J",  awtk_TSlideIndicator_slide_indicator_create_arc},
@@ -19158,6 +19160,13 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TSlideIndicator",  "slide_indicator_t_get_prop_anchor_x",  "(J)F",  awtk_TSlideIndicator_slide_indicator_t_get_prop_anchor_x},
 {"awtk/TSlideIndicator",  "slide_indicator_t_get_prop_anchor_y",  "(J)F",  awtk_TSlideIndicator_slide_indicator_t_get_prop_anchor_y},
 {"awtk/TSlideIndicator",  "slide_indicator_t_get_prop_indicated_target",  "(J)Ljava/lang/String;",  awtk_TSlideIndicator_slide_indicator_t_get_prop_indicated_target},
+{"awtk/TClipView",  "clip_view_create",  "(JIIII)J",  awtk_TClipView_clip_view_create},
+{"awtk/TClipView",  "clip_view_cast",  "(J)J",  awtk_TClipView_clip_view_cast},
+{"awtk/TCheckButton",  "check_button_create",  "(JIIII)J",  awtk_TCheckButton_check_button_create},
+{"awtk/TCheckButton",  "check_button_create_radio",  "(JIIII)J",  awtk_TCheckButton_check_button_create_radio},
+{"awtk/TCheckButton",  "check_button_set_value",  "(JZ)I",  awtk_TCheckButton_check_button_set_value},
+{"awtk/TCheckButton",  "check_button_cast",  "(J)J",  awtk_TCheckButton_check_button_cast},
+{"awtk/TCheckButton",  "check_button_t_get_prop_value",  "(J)Z",  awtk_TCheckButton_check_button_t_get_prop_value},
 {"awtk/TSlideMenu",  "slide_menu_create",  "(JIIII)J",  awtk_TSlideMenu_slide_menu_create},
 {"awtk/TSlideMenu",  "slide_menu_cast",  "(J)J",  awtk_TSlideMenu_slide_menu_cast},
 {"awtk/TSlideMenu",  "slide_menu_set_value",  "(JI)I",  awtk_TSlideMenu_slide_menu_set_value},
@@ -19166,13 +19175,6 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TSlideMenu",  "slide_menu_t_get_prop_value",  "(J)I",  awtk_TSlideMenu_slide_menu_t_get_prop_value},
 {"awtk/TSlideMenu",  "slide_menu_t_get_prop_align_v",  "(J)I",  awtk_TSlideMenu_slide_menu_t_get_prop_align_v},
 {"awtk/TSlideMenu",  "slide_menu_t_get_prop_min_scale",  "(J)F",  awtk_TSlideMenu_slide_menu_t_get_prop_min_scale},
-{"awtk/TClipView",  "clip_view_create",  "(JIIII)J",  awtk_TClipView_clip_view_create},
-{"awtk/TClipView",  "clip_view_cast",  "(J)J",  awtk_TClipView_clip_view_cast},
-{"awtk/TCheckButton",  "check_button_create",  "(JIIII)J",  awtk_TCheckButton_check_button_create},
-{"awtk/TCheckButton",  "check_button_create_radio",  "(JIIII)J",  awtk_TCheckButton_check_button_create_radio},
-{"awtk/TCheckButton",  "check_button_set_value",  "(JZ)I",  awtk_TCheckButton_check_button_set_value},
-{"awtk/TCheckButton",  "check_button_cast",  "(J)J",  awtk_TCheckButton_check_button_cast},
-{"awtk/TCheckButton",  "check_button_t_get_prop_value",  "(J)Z",  awtk_TCheckButton_check_button_t_get_prop_value},
 {"awtk/TScrollView",  "scroll_view_create",  "(JIIII)J",  awtk_TScrollView_scroll_view_create},
 {"awtk/TScrollView",  "scroll_view_cast",  "(J)J",  awtk_TScrollView_scroll_view_cast},
 {"awtk/TScrollView",  "scroll_view_set_virtual_w",  "(JI)I",  awtk_TScrollView_scroll_view_set_virtual_w},
@@ -19391,15 +19393,6 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TGuage",  "guage_set_draw_type",  "(JI)I",  awtk_TGuage_guage_set_draw_type},
 {"awtk/TGuage",  "guage_t_get_prop_image",  "(J)Ljava/lang/String;",  awtk_TGuage_guage_t_get_prop_image},
 {"awtk/TGuage",  "guage_t_get_prop_draw_type",  "(J)I",  awtk_TGuage_guage_t_get_prop_draw_type},
-{"awtk/TGuagePointer",  "guage_pointer_create",  "(JIIII)J",  awtk_TGuagePointer_guage_pointer_create},
-{"awtk/TGuagePointer",  "guage_pointer_cast",  "(J)J",  awtk_TGuagePointer_guage_pointer_cast},
-{"awtk/TGuagePointer",  "guage_pointer_set_angle",  "(JI)I",  awtk_TGuagePointer_guage_pointer_set_angle},
-{"awtk/TGuagePointer",  "guage_pointer_set_image",  "(JLjava/lang/String;)I",  awtk_TGuagePointer_guage_pointer_set_image},
-{"awtk/TGuagePointer",  "guage_pointer_set_anchor",  "(JLjava/lang/String;Ljava/lang/String;)I",  awtk_TGuagePointer_guage_pointer_set_anchor},
-{"awtk/TGuagePointer",  "guage_pointer_t_get_prop_angle",  "(J)I",  awtk_TGuagePointer_guage_pointer_t_get_prop_angle},
-{"awtk/TGuagePointer",  "guage_pointer_t_get_prop_image",  "(J)Ljava/lang/String;",  awtk_TGuagePointer_guage_pointer_t_get_prop_image},
-{"awtk/TGuagePointer",  "guage_pointer_t_get_prop_anchor_x",  "(J)Ljava/lang/String;",  awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_x},
-{"awtk/TGuagePointer",  "guage_pointer_t_get_prop_anchor_y",  "(J)Ljava/lang/String;",  awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_y},
 {"awtk/TFileChooser",  "file_chooser_create",  "()J",  awtk_TFileChooser_file_chooser_create},
 {"awtk/TFileChooser",  "file_chooser_set_init_dir",  "(JLjava/lang/String;)I",  awtk_TFileChooser_file_chooser_set_init_dir},
 {"awtk/TFileChooser",  "file_chooser_set_filter",  "(JLjava/lang/String;)I",  awtk_TFileChooser_file_chooser_set_filter},
@@ -19410,6 +19403,24 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TFileChooser",  "file_chooser_get_dir",  "(J)Ljava/lang/String;",  awtk_TFileChooser_file_chooser_get_dir},
 {"awtk/TFileChooser",  "file_chooser_get_filename",  "(J)Ljava/lang/String;",  awtk_TFileChooser_file_chooser_get_filename},
 {"awtk/TFileChooser",  "file_chooser_is_aborted",  "(J)Z",  awtk_TFileChooser_file_chooser_is_aborted},
+{"awtk/TFileBrowserView",  "file_browser_view_create",  "(JIIII)J",  awtk_TFileBrowserView_file_browser_view_create},
+{"awtk/TFileBrowserView",  "file_browser_view_cast",  "(J)J",  awtk_TFileBrowserView_file_browser_view_cast},
+{"awtk/TFileBrowserView",  "file_browser_view_set_init_dir",  "(JLjava/lang/String;)I",  awtk_TFileBrowserView_file_browser_view_set_init_dir},
+{"awtk/TFileBrowserView",  "file_browser_view_set_filter",  "(JLjava/lang/String;)I",  awtk_TFileBrowserView_file_browser_view_set_filter},
+{"awtk/TFileBrowserView",  "file_browser_view_reload",  "(J)I",  awtk_TFileBrowserView_file_browser_view_reload},
+{"awtk/TFileBrowserView",  "file_browser_view_set_ignore_hidden_files",  "(JZ)I",  awtk_TFileBrowserView_file_browser_view_set_ignore_hidden_files},
+{"awtk/TFileBrowserView",  "file_browser_view_set_sort_ascending",  "(JZ)I",  awtk_TFileBrowserView_file_browser_view_set_sort_ascending},
+{"awtk/TFileBrowserView",  "file_browser_view_set_show_check_button",  "(JZ)I",  awtk_TFileBrowserView_file_browser_view_set_show_check_button},
+{"awtk/TFileBrowserView",  "file_browser_view_set_sort_by",  "(JLjava/lang/String;)I",  awtk_TFileBrowserView_file_browser_view_set_sort_by},
+{"awtk/TFileBrowserView",  "file_browser_view_get_cwd",  "(J)Ljava/lang/String;",  awtk_TFileBrowserView_file_browser_view_get_cwd},
+{"awtk/TFileBrowserView",  "file_browser_view_create_dir",  "(JLjava/lang/String;)I",  awtk_TFileBrowserView_file_browser_view_create_dir},
+{"awtk/TFileBrowserView",  "file_browser_view_create_file",  "(JLjava/lang/String;Ljava/lang/String;I)I",  awtk_TFileBrowserView_file_browser_view_create_file},
+{"awtk/TFileBrowserView",  "file_browser_view_t_get_prop_init_dir",  "(J)Ljava/lang/String;",  awtk_TFileBrowserView_file_browser_view_t_get_prop_init_dir},
+{"awtk/TFileBrowserView",  "file_browser_view_t_get_prop_filter",  "(J)Ljava/lang/String;",  awtk_TFileBrowserView_file_browser_view_t_get_prop_filter},
+{"awtk/TFileBrowserView",  "file_browser_view_t_get_prop_ignore_hidden_files",  "(J)Z",  awtk_TFileBrowserView_file_browser_view_t_get_prop_ignore_hidden_files},
+{"awtk/TFileBrowserView",  "file_browser_view_t_get_prop_sort_ascending",  "(J)Z",  awtk_TFileBrowserView_file_browser_view_t_get_prop_sort_ascending},
+{"awtk/TFileBrowserView",  "file_browser_view_t_get_prop_show_check_button",  "(J)Z",  awtk_TFileBrowserView_file_browser_view_t_get_prop_show_check_button},
+{"awtk/TFileBrowserView",  "file_browser_view_t_get_prop_sort_by",  "(J)Ljava/lang/String;",  awtk_TFileBrowserView_file_browser_view_t_get_prop_sort_by},
 {"awtk/TDraggable",  "draggable_create",  "(JIIII)J",  awtk_TDraggable_draggable_create},
 {"awtk/TDraggable",  "draggable_cast",  "(J)J",  awtk_TDraggable_draggable_cast},
 {"awtk/TDraggable",  "draggable_set_top",  "(JI)I",  awtk_TDraggable_draggable_set_top},

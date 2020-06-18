@@ -4,7 +4,7 @@ var searchData=
   ['rect_1896',['rect',['../classawtk_1_1_t_vgcanvas.html#a482195f71ccdf98dc68adce23c448488',1,'awtk::TVgcanvas']]],
   ['ref_1897',['ref',['../classawtk_1_1_t_assets_manager.html#ac063b5ff6c0620cf87368fdddb33b165',1,'awtk.TAssetsManager.ref()'],['../classawtk_1_1_t_object.html#a061dbbad49785d66c518927ebbb57f03',1,'awtk.TObject.ref()']]],
   ['reinit_1898',['reinit',['../classawtk_1_1_t_list_view.html#a6e15f8b3b6580e17229f0061580de789',1,'awtk::TListView']]],
-  ['reload_1899',['reload',['../classawtk_1_1_t_file_browser_view.html#aee652c8414ce180eb81a67f3003a9267',1,'awtk::TFileBrowserView']]],
+  ['reload_1899',['reload',['../classawtk_1_1_t_app_conf.html#a3fe4e4f9941105735f7ddfc65bb5cda0',1,'awtk.TAppConf.reload()'],['../classawtk_1_1_t_file_browser_view.html#aee652c8414ce180eb81a67f3003a9267',1,'awtk.TFileBrowserView.reload()']]],
   ['remove_1900',['remove',['../classawtk_1_1_t_app_conf.html#aa3143d7772a74ae3d9e7356435f88b32',1,'awtk.TAppConf.remove()'],['../classawtk_1_1_t_idle.html#a05f23f08f2206834cabcf5ad9a9df364',1,'awtk.TIdle.remove()'],['../classawtk_1_1_t_timer.html#aa98fdd8bd7ea95cc0efaf28d68c7807d',1,'awtk.TTimer.remove()']]],
   ['removeprop_1901',['removeProp',['../classawtk_1_1_t_object.html#accb710cc8e5be738420a208d8c1f37b9',1,'awtk::TObject']]],
   ['reset_1902',['reset',['../classawtk_1_1_t_canvas.html#ada3d9b9d00bba75d18a10c182ed1e45e',1,'awtk.TCanvas.reset()'],['../classawtk_1_1_t_timer.html#a6e60d742d29ccbe48e3a285ce497822d',1,'awtk.TTimer.reset()'],['../classawtk_1_1_t_value.html#af7deeb294b0288dd4313c5985d999bd2',1,'awtk.TValue.reset()']]],
