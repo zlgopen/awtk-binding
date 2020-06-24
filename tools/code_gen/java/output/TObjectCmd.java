@@ -53,7 +53,23 @@ public enum TObjectCmd {
    *
    */
  
-  CLEAR (OBJECT_CMD_CLEAR());
+  CLEAR (OBJECT_CMD_CLEAR()),
+  
+  /**
+   * 增加子项。
+   *>参数为属性的名称或路径。
+   *
+   */
+ 
+  ADD (OBJECT_CMD_ADD()),
+  
+  /**
+   * 编辑子项。
+   *>参数为属性的名称或路径。
+   *
+   */
+ 
+  EDIT (OBJECT_CMD_EDIT());
  
  
   private TObjectCmd(String value) {
@@ -94,5 +110,7 @@ public enum TObjectCmd {
   static private native String OBJECT_CMD_MOVE_DOWN();
   static private native String OBJECT_CMD_REMOVE();
   static private native String OBJECT_CMD_CLEAR();
+  static private native String OBJECT_CMD_ADD();
+  static private native String OBJECT_CMD_EDIT();
 
 }

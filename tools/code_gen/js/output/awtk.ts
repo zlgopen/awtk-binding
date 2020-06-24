@@ -202,6 +202,9 @@ declare function EVT_USER_START();
 declare function EVT_NONE();
 declare function EVT_PROP_WILL_CHANGE();
 declare function EVT_PROP_CHANGED();
+declare function EVT_CMD_WILL_EXEC();
+declare function EVT_CMD_EXECED();
+declare function EVT_CMD_CAN_EXEC();
 declare function EVT_ITEMS_WILL_CHANGE();
 declare function EVT_ITEMS_CHANGED();
 declare function EVT_PROPS_CHANGED();
@@ -963,6 +966,8 @@ declare function OBJECT_CMD_MOVE_UP();
 declare function OBJECT_CMD_MOVE_DOWN();
 declare function OBJECT_CMD_REMOVE();
 declare function OBJECT_CMD_CLEAR();
+declare function OBJECT_CMD_ADD();
+declare function OBJECT_CMD_EDIT();
 declare function named_value_create() : any;
 declare function named_value_cast(nv : any) : any;
 declare function named_value_set_name(nv : any, name : string) : TRet;
@@ -1157,6 +1162,10 @@ declare function done_event_t_get_prop_result(nativeObj : any) : TRet;
 declare function error_event_cast(event : any) : any;
 declare function error_event_t_get_prop_code(nativeObj : any) : number;
 declare function error_event_t_get_prop_message(nativeObj : any) : string;
+declare function cmd_exec_event_cast(event : any) : any;
+declare function cmd_exec_event_t_get_prop_name(nativeObj : any) : string;
+declare function cmd_exec_event_t_get_prop_args(nativeObj : any) : string;
+declare function cmd_exec_event_t_get_prop_result(nativeObj : any) : TRet;
 declare function time_clock_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function time_clock_cast(widget : any) : any;
 declare function time_clock_set_hour(widget : any, hour : number) : TRet;
@@ -1200,31 +1209,20 @@ declare function text_selector_set_visible_nr(widget : any, visible_nr : number)
 declare function text_selector_t_get_prop_visible_nr(nativeObj : any) : number;
 declare function text_selector_t_get_prop_selected_index(nativeObj : any) : number;
 declare function text_selector_t_get_prop_options(nativeObj : any) : string;
-declare function switch_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function switch_set_value(widget : any, value : any) : TRet;
-declare function switch_cast(widget : any) : any;
-declare function switch_t_get_prop_value(nativeObj : any) : boolean;
-declare function switch_t_get_prop_max_xoffset_ratio(nativeObj : any) : number;
 declare function wheel_event_cast(event : any) : any;
 declare function wheel_event_t_get_prop_dy(nativeObj : any) : number;
 declare function wheel_event_t_get_prop_alt(nativeObj : any) : boolean;
 declare function wheel_event_t_get_prop_ctrl(nativeObj : any) : boolean;
 declare function wheel_event_t_get_prop_shift(nativeObj : any) : boolean;
+declare function switch_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function switch_set_value(widget : any, value : any) : TRet;
+declare function switch_cast(widget : any) : any;
+declare function switch_t_get_prop_value(nativeObj : any) : boolean;
+declare function switch_t_get_prop_max_xoffset_ratio(nativeObj : any) : number;
 declare function view_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function view_set_default_focused_child(widget : any, default_focused_child : string) : TRet;
 declare function view_cast(widget : any) : any;
 declare function view_t_get_prop_default_focused_child(nativeObj : any) : string;
-declare function slide_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function slide_view_cast(widget : any) : any;
-declare function slide_view_set_auto_play(widget : any, auto_play : number) : TRet;
-declare function slide_view_set_active(widget : any, index : number) : TRet;
-declare function slide_view_set_vertical(widget : any, vertical : boolean) : TRet;
-declare function slide_view_set_anim_hint(widget : any, anim_hint : string) : TRet;
-declare function slide_view_set_loop(widget : any, loop : boolean) : TRet;
-declare function slide_view_t_get_prop_vertical(nativeObj : any) : boolean;
-declare function slide_view_t_get_prop_auto_play(nativeObj : any) : number;
-declare function slide_view_t_get_prop_loop(nativeObj : any) : boolean;
-declare function slide_view_t_get_prop_anim_hint(nativeObj : any) : string;
 declare function tab_control_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function tab_control_cast(widget : any) : any;
 declare function tab_button_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -1237,6 +1235,17 @@ declare function tab_button_t_get_prop_value(nativeObj : any) : boolean;
 declare function tab_button_t_get_prop_load_ui(nativeObj : any) : string;
 declare function tab_button_t_get_prop_active_icon(nativeObj : any) : string;
 declare function tab_button_t_get_prop_icon(nativeObj : any) : string;
+declare function slide_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function slide_view_cast(widget : any) : any;
+declare function slide_view_set_auto_play(widget : any, auto_play : number) : TRet;
+declare function slide_view_set_active(widget : any, index : number) : TRet;
+declare function slide_view_set_vertical(widget : any, vertical : boolean) : TRet;
+declare function slide_view_set_anim_hint(widget : any, anim_hint : string) : TRet;
+declare function slide_view_set_loop(widget : any, loop : boolean) : TRet;
+declare function slide_view_t_get_prop_vertical(nativeObj : any) : boolean;
+declare function slide_view_t_get_prop_auto_play(nativeObj : any) : number;
+declare function slide_view_t_get_prop_loop(nativeObj : any) : boolean;
+declare function slide_view_t_get_prop_anim_hint(nativeObj : any) : string;
 declare function slide_indicator_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function slide_indicator_create_linear(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function slide_indicator_create_arc(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -3760,6 +3769,24 @@ export enum TEventType {
    *
    */
  PROP_CHANGED = EVT_PROP_CHANGED(),
+
+  /**
+   * 对象即将执行命令(cmd_exec_event_t)。
+   *
+   */
+ CMD_WILL_EXEC = EVT_CMD_WILL_EXEC(),
+
+  /**
+   * 对象完成执行命令(cmd_exec_event_t)。
+   *
+   */
+ CMD_EXECED = EVT_CMD_EXECED(),
+
+  /**
+   * 对象命令是否能执行指定的命令(cmd_exec_event_t)。
+   *
+   */
+ CMD_CAN_EXEC = EVT_CMD_CAN_EXEC(),
 
   /**
    * 即将增加和删除集合中的项目(event_t)。
@@ -10324,6 +10351,20 @@ export enum TObjectCmd {
    *
    */
  CLEAR = OBJECT_CMD_CLEAR(),
+
+  /**
+   * 增加子项。
+   *>参数为属性的名称或路径。
+   *
+   */
+ ADD = OBJECT_CMD_ADD(),
+
+  /**
+   * 编辑子项。
+   *>参数为属性的名称或路径。
+   *
+   */
+ EDIT = OBJECT_CMD_EDIT(),
 };
 
 
@@ -11982,6 +12023,56 @@ export class TErrorEvent extends TEvent {
 
 };
 /**
+ * 对象执行命令的事件。
+ *
+ */
+export class TCmdExecEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转cmd_exec_event_t对象，主要给脚本语言使用。
+   * 
+   * @param event event对象。
+   *
+   * @returns 返回event对象。
+   */
+ static cast(event : TEvent) : TCmdExecEvent  {
+    return new TCmdExecEvent(cmd_exec_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+
+  /**
+   * 命令的名称。
+   *
+   */
+ get name() : string {
+   return cmd_exec_event_t_get_prop_name(this.nativeObj);
+ }
+
+
+  /**
+   * 命令的参数。
+   *
+   */
+ get args() : string {
+   return cmd_exec_event_t_get_prop_args(this.nativeObj);
+ }
+
+
+  /**
+   * 执行结果(适用于EXECED)。
+   *
+   */
+ get result() : TRet {
+   return cmd_exec_event_t_get_prop_result(this.nativeObj);
+ }
+
+};
+/**
  * 模拟时钟控件。
  *
  *time\_clock\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于time\_clock\_t控件。
@@ -12578,6 +12669,65 @@ export class TTextSelector extends TWidget {
 
 };
 /**
+ * 滚轮事件。
+ *
+ */
+export class TWheelEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转wheel_event_t对象，主要给脚本语言使用。
+   * 
+   * @param event event对象。
+   *
+   * @returns event对象。
+   */
+ static cast(event : TEvent) : TWheelEvent  {
+    return new TWheelEvent(wheel_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+
+  /**
+   * 滚轮的y值。
+   *
+   */
+ get dy() : number {
+   return wheel_event_t_get_prop_dy(this.nativeObj);
+ }
+
+
+  /**
+   * alt键是否按下。
+   *
+   */
+ get alt() : boolean {
+   return wheel_event_t_get_prop_alt(this.nativeObj);
+ }
+
+
+  /**
+   * ctrl键是否按下。
+   *
+   */
+ get ctrl() : boolean {
+   return wheel_event_t_get_prop_ctrl(this.nativeObj);
+ }
+
+
+  /**
+   * shift键是否按下。
+   *
+   */
+ get shift() : boolean {
+   return wheel_event_t_get_prop_shift(this.nativeObj);
+ }
+
+};
+/**
  * 开关控件。
  *
  *switch\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于switch\_t控件。
@@ -12679,65 +12829,6 @@ export class TSwitch extends TWidget {
 
 };
 /**
- * 滚轮事件。
- *
- */
-export class TWheelEvent extends TEvent { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 把event对象转wheel_event_t对象，主要给脚本语言使用。
-   * 
-   * @param event event对象。
-   *
-   * @returns event对象。
-   */
- static cast(event : TEvent) : TWheelEvent  {
-    return new TWheelEvent(wheel_event_cast(event != null ? (event.nativeObj || event) : null));
- }
-
-
-  /**
-   * 滚轮的y值。
-   *
-   */
- get dy() : number {
-   return wheel_event_t_get_prop_dy(this.nativeObj);
- }
-
-
-  /**
-   * alt键是否按下。
-   *
-   */
- get alt() : boolean {
-   return wheel_event_t_get_prop_alt(this.nativeObj);
- }
-
-
-  /**
-   * ctrl键是否按下。
-   *
-   */
- get ctrl() : boolean {
-   return wheel_event_t_get_prop_ctrl(this.nativeObj);
- }
-
-
-  /**
-   * shift键是否按下。
-   *
-   */
- get shift() : boolean {
-   return wheel_event_t_get_prop_shift(this.nativeObj);
- }
-
-};
-/**
  * 一个通用的容器控件。
  *
  *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
@@ -12823,211 +12914,6 @@ export class TView extends TWidget {
 
  set defaultFocusedChild(v : string) {
    this.setDefaultFocusedChild(v);
- }
-
-};
-/**
- * 滑动视图。
- *
- *滑动视图可以管理多个页面，并通过滑动来切换当前页面。也可以管理多张图片，让它们自动切换。
- *
- *slide\_view\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于slide\_view\_t控件。
- *
- *在xml中使用"slide\_view"标签创建滑动视图控件。如：
- *
- *```xml
- *<slide_view x="0" y="0" w="100%" h="100%" style="dot">
- *<view x="0" y="0" w="100%" h="100%" children_layout="default(w=60,h=60,m=5,s=10)">
- *...
- *</view>
- *<view x="0" y="0" w="100%" h="100%" children_layout="default(w=60,h=60,m=5,s=10)">
- *...
- *</view>
- *</slide_view>
- *```
- *
- *> 更多用法请参考：[slide_view.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/slide_view.xml)
- *
- *在c代码中使用函数slide\_view\_create创建滑动视图控件。如：
- *
- *
- *> 完整示例请参考：
- *[slide_view demo](
- *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/slide_view.c)
- *
- *可用通过style来设置控件的显示风格，如背景颜色和指示器的图标等等。如：
- *
- *```xml
- *<style name="dot">
- *<normal  icon="dot" active_icon="active_dot"/>
- *</style>
- *```
- *
- *> 如果希望背景图片跟随滚动，请将背景图片设置到页面上，否则设置到slide\_view上。
- *
- *> 更多用法请参考：[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L458)
- *
- */
-export class TSlideView extends TWidget { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 创建slide_view对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @returns 对象。
-   */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TSlideView  {
-    return new TSlideView(slide_view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
- }
-
-
-  /**
-   * 转换为slide_view对象(供脚本语言使用)。
-   * 
-   * @param widget slide_view对象。
-   *
-   * @returns slide_view对象。
-   */
- static cast(widget : TWidget) : TSlideView  {
-    return new TSlideView(slide_view_cast(widget != null ? (widget.nativeObj || widget) : null));
- }
-
-
-  /**
-   * 设置为自动播放模式。
-   * 
-   * @param auto_play 0表示禁止自动播放，非0表示自动播放时每一页播放的时间。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setAutoPlay(auto_play : number) : TRet  {
-    return slide_view_set_auto_play(this != null ? (this.nativeObj || this) : null, auto_play);
- }
-
-
-  /**
-   * 设置当前页的序号。
-   * 
-   * @param index 当前页的序号。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setActive(index : number) : TRet  {
-    return slide_view_set_active(this != null ? (this.nativeObj || this) : null, index);
- }
-
-
-  /**
-   * 设置为上下滑动(缺省为左右滑动)。
-   * 
-   * @param vertical TRUE表示上下滑动，FALSE表示左右滑动。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setVertical(vertical : boolean) : TRet  {
-    return slide_view_set_vertical(this != null ? (this.nativeObj || this) : null, vertical);
- }
-
-
-  /**
-   * 设置页面切换动画。
-   *
-   *anim_hint取值如下：
-   *
-   ** "translate"：平移。
-   ** "overlap"：覆盖。
-   ** "overlap\_with\_alpha"：覆盖并改变透明度。
-   *
-   *> 使用"overlap"或"overlap\_with\_alpha"动画时，背景图片最好指定到page上。
-   *>
-   *> 使用"overlap\_with\_alpha"动画时，slideview的背景设置为黑色，
-   *> 或slideview的背景设置为透明，窗口的背景设置为黑色，以获得更好的视觉效果和性能。
-   * 
-   * @param anim_hint 页面切换动画。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setAnimHint(anim_hint : string) : TRet  {
-    return slide_view_set_anim_hint(this != null ? (this.nativeObj || this) : null, anim_hint);
- }
-
-
-  /**
-   * 设置循环切换模式。
-   * 
-   * @param loop 是否启用循环切换模式。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setLoop(loop : boolean) : TRet  {
-    return slide_view_set_loop(this != null ? (this.nativeObj || this) : null, loop);
- }
-
-
-  /**
-   * 是否为上下滑动模式。
-   *
-   */
- get vertical() : boolean {
-   return slide_view_t_get_prop_vertical(this.nativeObj);
- }
-
- set vertical(v : boolean) {
-   this.setVertical(v);
- }
-
-
-  /**
-   * 自动播放。0表示禁止自动播放，非0表示自动播放时每一页播放的时间。
-   *
-   */
- get autoPlay() : number {
-   return slide_view_t_get_prop_auto_play(this.nativeObj);
- }
-
- set autoPlay(v : number) {
-   this.setAutoPlay(v);
- }
-
-
-  /**
-   * 循环切换模式。
-   *
-   *向后切换：切换到最后一页时，再往后切换就到第一页。
-   *向前切换：切换到第一页时，再往前切换就到最后一页。
-   *
-   */
- get loop() : boolean {
-   return slide_view_t_get_prop_loop(this.nativeObj);
- }
-
- set loop(v : boolean) {
-   this.setLoop(v);
- }
-
-
-  /**
-   * 页面切换效果。
-   *
-   */
- get animHint() : string {
-   return slide_view_t_get_prop_anim_hint(this.nativeObj);
- }
-
- set animHint(v : string) {
-   this.setAnimHint(v);
  }
 
 };
@@ -13288,6 +13174,211 @@ export class TTabButton extends TWidget {
 
  set icon(v : string) {
    this.setIcon(v);
+ }
+
+};
+/**
+ * 滑动视图。
+ *
+ *滑动视图可以管理多个页面，并通过滑动来切换当前页面。也可以管理多张图片，让它们自动切换。
+ *
+ *slide\_view\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于slide\_view\_t控件。
+ *
+ *在xml中使用"slide\_view"标签创建滑动视图控件。如：
+ *
+ *```xml
+ *<slide_view x="0" y="0" w="100%" h="100%" style="dot">
+ *<view x="0" y="0" w="100%" h="100%" children_layout="default(w=60,h=60,m=5,s=10)">
+ *...
+ *</view>
+ *<view x="0" y="0" w="100%" h="100%" children_layout="default(w=60,h=60,m=5,s=10)">
+ *...
+ *</view>
+ *</slide_view>
+ *```
+ *
+ *> 更多用法请参考：[slide_view.xml](
+ *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/slide_view.xml)
+ *
+ *在c代码中使用函数slide\_view\_create创建滑动视图控件。如：
+ *
+ *
+ *> 完整示例请参考：
+ *[slide_view demo](
+ *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/slide_view.c)
+ *
+ *可用通过style来设置控件的显示风格，如背景颜色和指示器的图标等等。如：
+ *
+ *```xml
+ *<style name="dot">
+ *<normal  icon="dot" active_icon="active_dot"/>
+ *</style>
+ *```
+ *
+ *> 如果希望背景图片跟随滚动，请将背景图片设置到页面上，否则设置到slide\_view上。
+ *
+ *> 更多用法请参考：[theme default](
+ *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L458)
+ *
+ */
+export class TSlideView extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建slide_view对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TSlideView  {
+    return new TSlideView(slide_view_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为slide_view对象(供脚本语言使用)。
+   * 
+   * @param widget slide_view对象。
+   *
+   * @returns slide_view对象。
+   */
+ static cast(widget : TWidget) : TSlideView  {
+    return new TSlideView(slide_view_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 设置为自动播放模式。
+   * 
+   * @param auto_play 0表示禁止自动播放，非0表示自动播放时每一页播放的时间。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setAutoPlay(auto_play : number) : TRet  {
+    return slide_view_set_auto_play(this != null ? (this.nativeObj || this) : null, auto_play);
+ }
+
+
+  /**
+   * 设置当前页的序号。
+   * 
+   * @param index 当前页的序号。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setActive(index : number) : TRet  {
+    return slide_view_set_active(this != null ? (this.nativeObj || this) : null, index);
+ }
+
+
+  /**
+   * 设置为上下滑动(缺省为左右滑动)。
+   * 
+   * @param vertical TRUE表示上下滑动，FALSE表示左右滑动。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setVertical(vertical : boolean) : TRet  {
+    return slide_view_set_vertical(this != null ? (this.nativeObj || this) : null, vertical);
+ }
+
+
+  /**
+   * 设置页面切换动画。
+   *
+   *anim_hint取值如下：
+   *
+   ** "translate"：平移。
+   ** "overlap"：覆盖。
+   ** "overlap\_with\_alpha"：覆盖并改变透明度。
+   *
+   *> 使用"overlap"或"overlap\_with\_alpha"动画时，背景图片最好指定到page上。
+   *>
+   *> 使用"overlap\_with\_alpha"动画时，slideview的背景设置为黑色，
+   *> 或slideview的背景设置为透明，窗口的背景设置为黑色，以获得更好的视觉效果和性能。
+   * 
+   * @param anim_hint 页面切换动画。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setAnimHint(anim_hint : string) : TRet  {
+    return slide_view_set_anim_hint(this != null ? (this.nativeObj || this) : null, anim_hint);
+ }
+
+
+  /**
+   * 设置循环切换模式。
+   * 
+   * @param loop 是否启用循环切换模式。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setLoop(loop : boolean) : TRet  {
+    return slide_view_set_loop(this != null ? (this.nativeObj || this) : null, loop);
+ }
+
+
+  /**
+   * 是否为上下滑动模式。
+   *
+   */
+ get vertical() : boolean {
+   return slide_view_t_get_prop_vertical(this.nativeObj);
+ }
+
+ set vertical(v : boolean) {
+   this.setVertical(v);
+ }
+
+
+  /**
+   * 自动播放。0表示禁止自动播放，非0表示自动播放时每一页播放的时间。
+   *
+   */
+ get autoPlay() : number {
+   return slide_view_t_get_prop_auto_play(this.nativeObj);
+ }
+
+ set autoPlay(v : number) {
+   this.setAutoPlay(v);
+ }
+
+
+  /**
+   * 循环切换模式。
+   *
+   *向后切换：切换到最后一页时，再往后切换就到第一页。
+   *向前切换：切换到第一页时，再往前切换就到最后一页。
+   *
+   */
+ get loop() : boolean {
+   return slide_view_t_get_prop_loop(this.nativeObj);
+ }
+
+ set loop(v : boolean) {
+   this.setLoop(v);
+ }
+
+
+  /**
+   * 页面切换效果。
+   *
+   */
+ get animHint() : string {
+   return slide_view_t_get_prop_anim_hint(this.nativeObj);
+ }
+
+ set animHint(v : string) {
+   this.setAnimHint(v);
  }
 
 };

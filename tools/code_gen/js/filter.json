@@ -2762,6 +2762,18 @@
         "name": "EVT_PROP_CHANGED"
       },
       {
+        "desc": "对象即将执行命令(cmd_exec_event_t)。",
+        "name": "EVT_CMD_WILL_EXEC"
+      },
+      {
+        "desc": "对象完成执行命令(cmd_exec_event_t)。",
+        "name": "EVT_CMD_EXECED"
+      },
+      {
+        "desc": "对象命令是否能执行指定的命令(cmd_exec_event_t)。",
+        "name": "EVT_CMD_CAN_EXEC"
+      },
+      {
         "desc": "即将增加和删除集合中的项目(event_t)。",
         "name": "EVT_ITEMS_WILL_CHANGE"
       },
@@ -10811,6 +10823,14 @@
       {
         "desc": "清除全部属性。\n>参数为属性的名称或路径。",
         "name": "OBJECT_CMD_CLEAR"
+      },
+      {
+        "desc": "增加子项。\n>参数为属性的名称或路径。",
+        "name": "OBJECT_CMD_ADD"
+      },
+      {
+        "desc": "编辑子项。\n>参数为属性的名称或路径。",
+        "name": "OBJECT_CMD_EDIT"
       }
     ],
     "header": "tkc/object.h",
@@ -12448,6 +12468,68 @@
       {
         "params": [
           {
+            "type": "event_t*",
+            "name": "event",
+            "desc": "event对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
+        "desc": "把event对象转cmd_exec_event_t对象，主要给脚本语言使用。",
+        "name": "cmd_exec_event_cast",
+        "return": {
+          "type": "cmd_exec_event_t*",
+          "desc": "返回event对象。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [
+      {
+        "name": "name",
+        "desc": "命令的名称。",
+        "type": "const char*",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "args",
+        "desc": "命令的参数。",
+        "type": "const char*",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "result",
+        "desc": "执行结果(适用于EXECED)。",
+        "type": "ret_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      }
+    ],
+    "header": "tkc/event.h",
+    "desc": "对象执行命令的事件。",
+    "name": "cmd_exec_event_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "parent": "event_t",
+    "level": 2
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
             "type": "widget_t*",
             "name": "parent",
             "desc": "父控件"
@@ -13349,6 +13431,77 @@
       {
         "params": [
           {
+            "type": "event_t*",
+            "name": "event",
+            "desc": "event对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
+        "desc": "把event对象转wheel_event_t对象，主要给脚本语言使用。",
+        "name": "wheel_event_cast",
+        "return": {
+          "type": "wheel_event_t*",
+          "desc": "event对象。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [
+      {
+        "name": "dy",
+        "desc": "滚轮的y值。",
+        "type": "int32_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "alt",
+        "desc": "alt键是否按下。",
+        "type": "bool_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "ctrl",
+        "desc": "ctrl键是否按下。",
+        "type": "bool_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "shift",
+        "desc": "shift键是否按下。",
+        "type": "bool_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      }
+    ],
+    "header": "base/events.h",
+    "desc": "滚轮事件。",
+    "name": "wheel_event_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "parent": "event_t",
+    "level": 2
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
             "type": "widget_t*",
             "name": "parent",
             "desc": "父控件"
@@ -13485,77 +13638,6 @@
       {
         "params": [
           {
-            "type": "event_t*",
-            "name": "event",
-            "desc": "event对象。"
-          }
-        ],
-        "annotation": {
-          "cast": true,
-          "scriptable": true
-        },
-        "desc": "把event对象转wheel_event_t对象，主要给脚本语言使用。",
-        "name": "wheel_event_cast",
-        "return": {
-          "type": "wheel_event_t*",
-          "desc": "event对象。"
-        }
-      }
-    ],
-    "events": [],
-    "properties": [
-      {
-        "name": "dy",
-        "desc": "滚轮的y值。",
-        "type": "int32_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "alt",
-        "desc": "alt键是否按下。",
-        "type": "bool_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "ctrl",
-        "desc": "ctrl键是否按下。",
-        "type": "bool_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "shift",
-        "desc": "shift键是否按下。",
-        "type": "bool_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      }
-    ],
-    "header": "base/events.h",
-    "desc": "滚轮事件。",
-    "name": "wheel_event_t",
-    "annotation": {
-      "scriptable": true
-    },
-    "parent": "event_t",
-    "level": 2
-  },
-  {
-    "type": "class",
-    "methods": [
-      {
-        "params": [
-          {
             "type": "widget_t*",
             "name": "parent",
             "desc": "父控件"
@@ -13654,260 +13736,6 @@
     "header": "widgets/view.h",
     "desc": "一个通用的容器控件。\n\n它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。\n子控件的布局可用layout\\_children属性指定。\n请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。\n\nview\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于view\\_t控件。\n\n在xml中使用\"view\"标签创建view。如：\n\n```xml\n<view x=\"0\" y=\"0\" w=\"100%\" h=\"100%\" children_layout=\"default(c=2,r=2,m=5,s=5)\">\n</view>\n```\n\n可用通过style来设置控件的显示风格，如背景颜色等。如：\n\n```xml\n<style name=\"default\" border_color=\"#a0a0a0\">\n<normal     bg_color=\"#f0f0f0\" />\n</style>\n```",
     "name": "view_t",
-    "parent": "widget_t",
-    "annotation": {
-      "scriptable": true,
-      "design": true,
-      "widget": true
-    },
-    "level": 2
-  },
-  {
-    "type": "class",
-    "methods": [
-      {
-        "params": [
-          {
-            "type": "widget_t*",
-            "name": "parent",
-            "desc": "父控件"
-          },
-          {
-            "type": "xy_t",
-            "name": "x",
-            "desc": "x坐标"
-          },
-          {
-            "type": "xy_t",
-            "name": "y",
-            "desc": "y坐标"
-          },
-          {
-            "type": "wh_t",
-            "name": "w",
-            "desc": "宽度"
-          },
-          {
-            "type": "wh_t",
-            "name": "h",
-            "desc": "高度"
-          }
-        ],
-        "annotation": {
-          "constructor": true,
-          "scriptable": true
-        },
-        "desc": "创建slide_view对象",
-        "name": "slide_view_create",
-        "return": {
-          "type": "widget_t*",
-          "desc": "对象。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "widget_t*",
-            "name": "widget",
-            "desc": "slide_view对象。"
-          }
-        ],
-        "annotation": {
-          "cast": true,
-          "scriptable": true
-        },
-        "desc": "转换为slide_view对象(供脚本语言使用)。",
-        "name": "slide_view_cast",
-        "return": {
-          "type": "widget_t*",
-          "desc": "slide_view对象。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "widget_t*",
-            "name": "widget",
-            "desc": "slide_view对象。"
-          },
-          {
-            "type": "uint16_t",
-            "name": "auto_play",
-            "desc": "0表示禁止自动播放，非0表示自动播放时每一页播放的时间。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "设置为自动播放模式。",
-        "name": "slide_view_set_auto_play",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "widget_t*",
-            "name": "widget",
-            "desc": "slide_view对象。"
-          },
-          {
-            "type": "uint32_t",
-            "name": "index",
-            "desc": "当前页的序号。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "设置当前页的序号。",
-        "name": "slide_view_set_active",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "widget_t*",
-            "name": "widget",
-            "desc": "slide_view对象。"
-          },
-          {
-            "type": "bool_t",
-            "name": "vertical",
-            "desc": "TRUE表示上下滑动，FALSE表示左右滑动。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "设置为上下滑动(缺省为左右滑动)。",
-        "name": "slide_view_set_vertical",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "widget_t*",
-            "name": "widget",
-            "desc": "slide_view对象。"
-          },
-          {
-            "type": "const char*",
-            "name": "anim_hint",
-            "desc": "页面切换动画。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "设置页面切换动画。\n\nanim_hint取值如下：\n\n* \"translate\"：平移。\n* \"overlap\"：覆盖。\n* \"overlap\\_with\\_alpha\"：覆盖并改变透明度。\n\n> 使用\"overlap\"或\"overlap\\_with\\_alpha\"动画时，背景图片最好指定到page上。\n>\n> 使用\"overlap\\_with\\_alpha\"动画时，slideview的背景设置为黑色，\n> 或slideview的背景设置为透明，窗口的背景设置为黑色，以获得更好的视觉效果和性能。",
-        "name": "slide_view_set_anim_hint",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "widget_t*",
-            "name": "widget",
-            "desc": "slide_view对象。"
-          },
-          {
-            "type": "bool_t",
-            "name": "loop",
-            "desc": "是否启用循环切换模式。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "设置循环切换模式。",
-        "name": "slide_view_set_loop",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      }
-    ],
-    "events": [
-      {
-        "name": "EVT_VALUE_WILL_CHANGE",
-        "desc": "值(当前页)即将改变事件。",
-        "type": "event_t"
-      },
-      {
-        "name": "EVT_VALUE_CHANGED",
-        "desc": "值(当前页)改变事件。",
-        "type": "event_t"
-      }
-    ],
-    "properties": [
-      {
-        "name": "vertical",
-        "desc": "是否为上下滑动模式。",
-        "type": "bool_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "auto_play",
-        "desc": "自动播放。0表示禁止自动播放，非0表示自动播放时每一页播放的时间。",
-        "type": "uint16_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "loop",
-        "desc": "循环切换模式。\n\n向后切换：切换到最后一页时，再往后切换就到第一页。\n向前切换：切换到第一页时，再往前切换就到最后一页。",
-        "type": "bool_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "anim_hint",
-        "desc": "页面切换效果。",
-        "type": "char*",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      }
-    ],
-    "header": "slide_view/slide_view.h",
-    "desc": "滑动视图。\n\n滑动视图可以管理多个页面，并通过滑动来切换当前页面。也可以管理多张图片，让它们自动切换。\n\nslide\\_view\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于slide\\_view\\_t控件。\n\n在xml中使用\"slide\\_view\"标签创建滑动视图控件。如：\n\n```xml\n<slide_view x=\"0\" y=\"0\" w=\"100%\" h=\"100%\" style=\"dot\">\n<view x=\"0\" y=\"0\" w=\"100%\" h=\"100%\" children_layout=\"default(w=60,h=60,m=5,s=10)\">\n...\n</view>\n<view x=\"0\" y=\"0\" w=\"100%\" h=\"100%\" children_layout=\"default(w=60,h=60,m=5,s=10)\">\n...\n</view>\n</slide_view>\n```\n\n> 更多用法请参考：[slide_view.xml](\nhttps://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/slide_view.xml)\n\n在c代码中使用函数slide\\_view\\_create创建滑动视图控件。如：\n\n```c\nslide_view = slide_view_create(win, 0, 0, win->w, win->h);\n```\n\n> 完整示例请参考：\n[slide_view demo](\nhttps://github.com/zlgopen/awtk-c-demos/blob/master/demos/slide_view.c)\n\n可用通过style来设置控件的显示风格，如背景颜色和指示器的图标等等。如：\n\n```xml\n<style name=\"dot\">\n<normal  icon=\"dot\" active_icon=\"active_dot\"/>\n</style>\n```\n\n> 如果希望背景图片跟随滚动，请将背景图片设置到页面上，否则设置到slide\\_view上。\n\n> 更多用法请参考：[theme default](\nhttps://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L458)",
-    "name": "slide_view_t",
     "parent": "widget_t",
     "annotation": {
       "scriptable": true,
@@ -14214,6 +14042,260 @@
     "header": "widgets/tab_button.h",
     "desc": "标签按钮控件。\n\n标签按钮有点类似单选按钮，但点击标签按钮之后会自动切换当前的标签页。\n\ntab\\_button\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于tab\\_button\\_t控件。\n\n在xml中使用\"tab\\_button\"标签创建标签按钮控件。如：\n\n```xml\n<!-- tab_button_view_page1.xml -->\n<view w=\"100%\" h=\"100%\">\n<label x=\"c\" y=\"m\" w=\"100%\" h=\"60\" text=\"page1\" />\n<button name=\"close\" x=\"c\" y=\"bottom:100\" w=\"80\" h=\"40\" text=\"Close\" />\n</view>\n```\n\n```xml\n<!-- tab_button dynamic load UI -->\n<pages name=\"pages\" x=\"right\" y=\"0\" w=\"70%\" h=\"100%\">\n</pages>\n<list_view x=\"0\" y=\"0\" w=\"30%\" h=\"100%\" item_height=\"40\" auto_hide_scroll_bar=\"true\">\n<scroll_view name=\"view\" x=\"0\"  y=\"0\" w=\"-12\" h=\"100%\">\n<tab_button text=\"page1\" load_ui=\"tab_button_view_page1\" value=\"true\"/>\n<tab_button text=\"page2\" load_ui=\"tab_button_view_page2\" />\n<tab_button text=\"page3\" load_ui=\"tab_button_view_page3\" />\n<scroll_view />\n<scroll_bar_d name=\"bar\" x=\"right\" y=\"0\" w=\"12\" h=\"100%\" value=\"0\"/>\n</list_view>\n```\n\n```xml\n<!-- tab_button static load UI -->\n<tab_button_group x=\"c\" y=\"bottom:10\" w=\"90%\" h=\"30\" compact=\"true\" >\n<tab_button text=\"General\"/>\n<tab_button text=\"Network\" value=\"true\" />\n<tab_button text=\"Security\"/>\n</tab_button_group>\n```\n\n标签按钮一般放在标签按钮分组中，布局由标签按钮分组控件决定，不需要指定自己的布局参数和坐标。\n\n> 更多用法请参考：\n[tab control](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)\n\n可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：\n\n```xml\n<tab_button>\n<style name=\"default\" border_color=\"#a0a0a0\"  text_color=\"black\">\n<normal     bg_color=\"#d0d0d0\" />\n<pressed    bg_color=\"#f0f0f0\" />\n<over       bg_color=\"#e0e0e0\" />\n<normal_of_active     bg_color=\"#f0f0f0\" />\n<pressed_of_active    bg_color=\"#f0f0f0\" />\n<over_of_active       bg_color=\"#f0f0f0\" />\n</style>\n</tab_button>\n```",
     "name": "tab_button_t",
+    "parent": "widget_t",
+    "annotation": {
+      "scriptable": true,
+      "design": true,
+      "widget": true
+    },
+    "level": 2
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "parent",
+            "desc": "父控件"
+          },
+          {
+            "type": "xy_t",
+            "name": "x",
+            "desc": "x坐标"
+          },
+          {
+            "type": "xy_t",
+            "name": "y",
+            "desc": "y坐标"
+          },
+          {
+            "type": "wh_t",
+            "name": "w",
+            "desc": "宽度"
+          },
+          {
+            "type": "wh_t",
+            "name": "h",
+            "desc": "高度"
+          }
+        ],
+        "annotation": {
+          "constructor": true,
+          "scriptable": true
+        },
+        "desc": "创建slide_view对象",
+        "name": "slide_view_create",
+        "return": {
+          "type": "widget_t*",
+          "desc": "对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "slide_view对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
+        "desc": "转换为slide_view对象(供脚本语言使用)。",
+        "name": "slide_view_cast",
+        "return": {
+          "type": "widget_t*",
+          "desc": "slide_view对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "slide_view对象。"
+          },
+          {
+            "type": "uint16_t",
+            "name": "auto_play",
+            "desc": "0表示禁止自动播放，非0表示自动播放时每一页播放的时间。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置为自动播放模式。",
+        "name": "slide_view_set_auto_play",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "slide_view对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "index",
+            "desc": "当前页的序号。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置当前页的序号。",
+        "name": "slide_view_set_active",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "slide_view对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "vertical",
+            "desc": "TRUE表示上下滑动，FALSE表示左右滑动。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置为上下滑动(缺省为左右滑动)。",
+        "name": "slide_view_set_vertical",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "slide_view对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "anim_hint",
+            "desc": "页面切换动画。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置页面切换动画。\n\nanim_hint取值如下：\n\n* \"translate\"：平移。\n* \"overlap\"：覆盖。\n* \"overlap\\_with\\_alpha\"：覆盖并改变透明度。\n\n> 使用\"overlap\"或\"overlap\\_with\\_alpha\"动画时，背景图片最好指定到page上。\n>\n> 使用\"overlap\\_with\\_alpha\"动画时，slideview的背景设置为黑色，\n> 或slideview的背景设置为透明，窗口的背景设置为黑色，以获得更好的视觉效果和性能。",
+        "name": "slide_view_set_anim_hint",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "slide_view对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "loop",
+            "desc": "是否启用循环切换模式。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置循环切换模式。",
+        "name": "slide_view_set_loop",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "EVT_VALUE_WILL_CHANGE",
+        "desc": "值(当前页)即将改变事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_VALUE_CHANGED",
+        "desc": "值(当前页)改变事件。",
+        "type": "event_t"
+      }
+    ],
+    "properties": [
+      {
+        "name": "vertical",
+        "desc": "是否为上下滑动模式。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "auto_play",
+        "desc": "自动播放。0表示禁止自动播放，非0表示自动播放时每一页播放的时间。",
+        "type": "uint16_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "loop",
+        "desc": "循环切换模式。\n\n向后切换：切换到最后一页时，再往后切换就到第一页。\n向前切换：切换到第一页时，再往前切换就到最后一页。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "anim_hint",
+        "desc": "页面切换效果。",
+        "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      }
+    ],
+    "header": "slide_view/slide_view.h",
+    "desc": "滑动视图。\n\n滑动视图可以管理多个页面，并通过滑动来切换当前页面。也可以管理多张图片，让它们自动切换。\n\nslide\\_view\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于slide\\_view\\_t控件。\n\n在xml中使用\"slide\\_view\"标签创建滑动视图控件。如：\n\n```xml\n<slide_view x=\"0\" y=\"0\" w=\"100%\" h=\"100%\" style=\"dot\">\n<view x=\"0\" y=\"0\" w=\"100%\" h=\"100%\" children_layout=\"default(w=60,h=60,m=5,s=10)\">\n...\n</view>\n<view x=\"0\" y=\"0\" w=\"100%\" h=\"100%\" children_layout=\"default(w=60,h=60,m=5,s=10)\">\n...\n</view>\n</slide_view>\n```\n\n> 更多用法请参考：[slide_view.xml](\nhttps://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/slide_view.xml)\n\n在c代码中使用函数slide\\_view\\_create创建滑动视图控件。如：\n\n```c\nslide_view = slide_view_create(win, 0, 0, win->w, win->h);\n```\n\n> 完整示例请参考：\n[slide_view demo](\nhttps://github.com/zlgopen/awtk-c-demos/blob/master/demos/slide_view.c)\n\n可用通过style来设置控件的显示风格，如背景颜色和指示器的图标等等。如：\n\n```xml\n<style name=\"dot\">\n<normal  icon=\"dot\" active_icon=\"active_dot\"/>\n</style>\n```\n\n> 如果希望背景图片跟随滚动，请将背景图片设置到页面上，否则设置到slide\\_view上。\n\n> 更多用法请参考：[theme default](\nhttps://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L458)",
+    "name": "slide_view_t",
     "parent": "widget_t",
     "annotation": {
       "scriptable": true,
