@@ -2147,6 +2147,38 @@ int awtk_TInputType_INPUT_PHONE(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TInputType_INPUT_IPV4(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(INPUT_IPV4));
+
+  return 0;
+}
+
+int awtk_TInputType_INPUT_DATE(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(INPUT_DATE));
+
+  return 0;
+}
+
+int awtk_TInputType_INPUT_TIME(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(INPUT_TIME));
+
+  return 0;
+}
+
+int awtk_TInputType_INPUT_TIME_FULL(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(INPUT_TIME_FULL));
+
+  return 0;
+}
+
 int awtk_TInputType_INPUT_CUSTOM(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -18147,6 +18179,10 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TInputType",  "INPUT_EMAIL",  "()I",  awtk_TInputType_INPUT_EMAIL},
 {"awtk/TInputType",  "INPUT_PASSWORD",  "()I",  awtk_TInputType_INPUT_PASSWORD},
 {"awtk/TInputType",  "INPUT_PHONE",  "()I",  awtk_TInputType_INPUT_PHONE},
+{"awtk/TInputType",  "INPUT_IPV4",  "()I",  awtk_TInputType_INPUT_IPV4},
+{"awtk/TInputType",  "INPUT_DATE",  "()I",  awtk_TInputType_INPUT_DATE},
+{"awtk/TInputType",  "INPUT_TIME",  "()I",  awtk_TInputType_INPUT_TIME},
+{"awtk/TInputType",  "INPUT_TIME_FULL",  "()I",  awtk_TInputType_INPUT_TIME_FULL},
 {"awtk/TInputType",  "INPUT_CUSTOM",  "()I",  awtk_TInputType_INPUT_CUSTOM},
 {"awtk/TInputType",  "INPUT_CUSTOM_PASSWORD",  "()I",  awtk_TInputType_INPUT_CUSTOM_PASSWORD},
 {"awtk/TInputMethod",  "input_method_commit_text",  "(JLjava/lang/String;)I",  awtk_TInputMethod_input_method_commit_text},

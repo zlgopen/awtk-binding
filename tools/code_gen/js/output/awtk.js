@@ -1978,6 +1978,26 @@ var TInputType;
      */
     TInputType[TInputType["PHONE"] = INPUT_PHONE()] = "PHONE";
     /**
+     * IP Addr V4。如：192.168.1.1
+     *
+     */
+    TInputType[TInputType["IPV4"] = INPUT_IPV4()] = "IPV4";
+    /**
+     * 日期。如：2020/02/20。
+     *
+     */
+    TInputType[TInputType["DATE"] = INPUT_DATE()] = "DATE";
+    /**
+     * 时间(时分)。如：12:00。
+     *
+     */
+    TInputType[TInputType["TIME"] = INPUT_TIME()] = "TIME";
+    /**
+     * 时间(时分秒)。如：12:00:00。
+     *
+     */
+    TInputType[TInputType["TIME_FULL"] = INPUT_TIME_FULL()] = "TIME_FULL";
+    /**
      * 使用自定义的软键盘(如计算器等应用不希望弹出系统软键盘)。
      *
      */

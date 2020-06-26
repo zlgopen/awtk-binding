@@ -3073,6 +3073,22 @@
         "name": "INPUT_PHONE"
       },
       {
+        "desc": "IP Addr V4。如：192.168.1.1",
+        "name": "INPUT_IPV4"
+      },
+      {
+        "desc": "日期。如：2020/02/20。",
+        "name": "INPUT_DATE"
+      },
+      {
+        "desc": "时间(时分)。如：12:00。",
+        "name": "INPUT_TIME"
+      },
+      {
+        "desc": "时间(时分秒)。如：12:00:00。",
+        "name": "INPUT_TIME_FULL"
+      },
+      {
         "desc": "使用自定义的软键盘(如计算器等应用不希望弹出系统软键盘)。",
         "name": "INPUT_CUSTOM"
       },

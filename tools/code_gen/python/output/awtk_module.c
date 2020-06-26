@@ -2017,6 +2017,22 @@ pyobject_t get_INPUT_PHONE(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", INPUT_PHONE);
 }
 
+pyobject_t get_INPUT_IPV4(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("i", INPUT_IPV4);
+}
+
+pyobject_t get_INPUT_DATE(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("i", INPUT_DATE);
+}
+
+pyobject_t get_INPUT_TIME(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("i", INPUT_TIME);
+}
+
+pyobject_t get_INPUT_TIME_FULL(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("i", INPUT_TIME_FULL);
+}
+
 pyobject_t get_INPUT_CUSTOM(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", INPUT_CUSTOM);
 }
@@ -17154,6 +17170,10 @@ static PyMethodDef awtk_methods[] = {
 {"INPUT_EMAIL", get_INPUT_EMAIL, METH_VARARGS, "INPUT_EMAIL"},
 {"INPUT_PASSWORD", get_INPUT_PASSWORD, METH_VARARGS, "INPUT_PASSWORD"},
 {"INPUT_PHONE", get_INPUT_PHONE, METH_VARARGS, "INPUT_PHONE"},
+{"INPUT_IPV4", get_INPUT_IPV4, METH_VARARGS, "INPUT_IPV4"},
+{"INPUT_DATE", get_INPUT_DATE, METH_VARARGS, "INPUT_DATE"},
+{"INPUT_TIME", get_INPUT_TIME, METH_VARARGS, "INPUT_TIME"},
+{"INPUT_TIME_FULL", get_INPUT_TIME_FULL, METH_VARARGS, "INPUT_TIME_FULL"},
 {"INPUT_CUSTOM", get_INPUT_CUSTOM, METH_VARARGS, "INPUT_CUSTOM"},
 {"INPUT_CUSTOM_PASSWORD", get_INPUT_CUSTOM_PASSWORD, METH_VARARGS, "INPUT_CUSTOM_PASSWORD"},
 {"input_method_commit_text", wrap_input_method_commit_text, METH_VARARGS, "input_method_commit_text"},

@@ -1567,6 +1567,26 @@ JNIEXPORT jint JNICALL Java_awtk_TInputType_INPUT_1PHONE(JNIEnv* env,  jclass aj
   return (jint)(INPUT_PHONE);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TInputType_INPUT_1IPV4(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(INPUT_IPV4);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TInputType_INPUT_1DATE(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(INPUT_DATE);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TInputType_INPUT_1TIME(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(INPUT_TIME);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TInputType_INPUT_1TIME_1FULL(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(INPUT_TIME_FULL);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TInputType_INPUT_1CUSTOM(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (jint)(INPUT_CUSTOM);

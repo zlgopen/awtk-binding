@@ -2866,6 +2866,38 @@ static void get_INPUT_PHONE(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   (void)argc;(void)ctx;
 }
 
+static void get_INPUT_IPV4(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)INPUT_IPV4);
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
+static void get_INPUT_DATE(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)INPUT_DATE);
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
+static void get_INPUT_TIME(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)INPUT_TIME);
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
+static void get_INPUT_TIME_FULL(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)INPUT_TIME_FULL);
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
 static void get_INPUT_CUSTOM(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -2892,6 +2924,10 @@ ret_t input_type_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "INPUT_EMAIL", get_INPUT_EMAIL);
   Nan::Export(ctx, "INPUT_PASSWORD", get_INPUT_PASSWORD);
   Nan::Export(ctx, "INPUT_PHONE", get_INPUT_PHONE);
+  Nan::Export(ctx, "INPUT_IPV4", get_INPUT_IPV4);
+  Nan::Export(ctx, "INPUT_DATE", get_INPUT_DATE);
+  Nan::Export(ctx, "INPUT_TIME", get_INPUT_TIME);
+  Nan::Export(ctx, "INPUT_TIME_FULL", get_INPUT_TIME_FULL);
   Nan::Export(ctx, "INPUT_CUSTOM", get_INPUT_CUSTOM);
   Nan::Export(ctx, "INPUT_CUSTOM_PASSWORD", get_INPUT_CUSTOM_PASSWORD);
 

@@ -2562,6 +2562,22 @@ static void input_type_t_init(lua_State* L) {
   lua_pushinteger(L, INPUT_PHONE);
   lua_settable(L, -3); 
 
+  lua_pushstring(L, "IPV4");
+  lua_pushinteger(L, INPUT_IPV4);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "DATE");
+  lua_pushinteger(L, INPUT_DATE);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "TIME");
+  lua_pushinteger(L, INPUT_TIME);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "TIME_FULL");
+  lua_pushinteger(L, INPUT_TIME_FULL);
+  lua_settable(L, -3); 
+
   lua_pushstring(L, "CUSTOM");
   lua_pushinteger(L, INPUT_CUSTOM);
   lua_settable(L, -3); 

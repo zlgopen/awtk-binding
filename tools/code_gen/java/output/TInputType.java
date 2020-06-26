@@ -73,6 +73,34 @@ public enum TInputType {
   PHONE (INPUT_PHONE()),
   
   /**
+   * IP Addr V4。如：192.168.1.1
+   *
+   */
+ 
+  IPV4 (INPUT_IPV4()),
+  
+  /**
+   * 日期。如：2020/02/20。
+   *
+   */
+ 
+  DATE (INPUT_DATE()),
+  
+  /**
+   * 时间(时分)。如：12:00。
+   *
+   */
+ 
+  TIME (INPUT_TIME()),
+  
+  /**
+   * 时间(时分秒)。如：12:00:00。
+   *
+   */
+ 
+  TIME_FULL (INPUT_TIME_FULL()),
+  
+  /**
    * 使用自定义的软键盘(如计算器等应用不希望弹出系统软键盘)。
    *
    */
@@ -128,6 +156,10 @@ public enum TInputType {
   static private native int INPUT_EMAIL();
   static private native int INPUT_PASSWORD();
   static private native int INPUT_PHONE();
+  static private native int INPUT_IPV4();
+  static private native int INPUT_DATE();
+  static private native int INPUT_TIME();
+  static private native int INPUT_TIME_FULL();
   static private native int INPUT_CUSTOM();
   static private native int INPUT_CUSTOM_PASSWORD();
 
