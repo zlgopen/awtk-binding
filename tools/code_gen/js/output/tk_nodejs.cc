@@ -2666,6 +2666,21 @@ static void wrap_font_manager_unload_font(const Nan::FunctionCallbackInfo<v8::Va
   (void)argc;(void)ctx;
 }
 
+static void wrap_font_manager_shrink_cache(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  font_manager_t* fm = (font_manager_t*)jsvalue_get_pointer(ctx, argv[0], "font_manager_t*");
+  uint32_t cache_size = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)font_manager_shrink_cache(fm, cache_size);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_font_manager_unload_all(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -2682,6 +2697,7 @@ static void wrap_font_manager_unload_all(const Nan::FunctionCallbackInfo<v8::Val
 
 ret_t font_manager_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "font_manager_unload_font", wrap_font_manager_unload_font);
+  Nan::Export(ctx, "font_manager_shrink_cache", wrap_font_manager_shrink_cache);
   Nan::Export(ctx, "font_manager_unload_all", wrap_font_manager_unload_all);
 
  return RET_OK;

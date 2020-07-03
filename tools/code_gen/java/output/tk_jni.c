@@ -1464,6 +1464,14 @@ JNIEXPORT jint JNICALL Java_awtk_TFontManager_font_1manager_1unload_1font(JNIEnv
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TFontManager_font_1manager_1shrink_1cache(JNIEnv* env,  jclass ajc, jlong jfm, jint cache_size) { /*func*/
+  ret_t ret;
+  font_manager_t* fm = (font_manager_t*)jfm;
+  ret = (ret_t)font_manager_shrink_cache(fm, cache_size);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TFontManager_font_1manager_1unload_1all(JNIEnv* env,  jclass ajc, jlong jfm) { /*func*/
   ret_t ret;
   font_manager_t* fm = (font_manager_t*)jfm;

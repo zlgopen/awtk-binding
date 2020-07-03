@@ -457,7 +457,7 @@ public class TEdit extends TWidget {
 
 
   /**
-   * 自定义软键盘名称。
+   * 自定义软键盘名称。AWTK优先查找keyboard属性设置的键盘文件名（该键盘的XML文件需要在default\raw\ui目录下存在），如果keyboard为空就找input_type设置的键盘类型
    *
    */
  public String getKeyboard() {

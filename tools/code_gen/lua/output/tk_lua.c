@@ -2337,6 +2337,17 @@ static int wrap_font_manager_unload_font(lua_State* L) {
   return 1;
 }
 
+static int wrap_font_manager_shrink_cache(lua_State* L) {
+  ret_t ret = 0;
+  font_manager_t* fm = (font_manager_t*)tk_checkudata(L, 1, "font_manager_t");
+  uint32_t cache_size = (uint32_t)luaL_checkinteger(L, 2);
+  ret = (ret_t)font_manager_shrink_cache(fm, cache_size);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 static int wrap_font_manager_unload_all(lua_State* L) {
   ret_t ret = 0;
   font_manager_t* fm = (font_manager_t*)tk_checkudata(L, 1, "font_manager_t");
@@ -2350,6 +2361,7 @@ static int wrap_font_manager_unload_all(lua_State* L) {
 
 static const struct luaL_Reg font_manager_t_member_funcs[] = {
   {"unload_font", wrap_font_manager_unload_font},
+  {"shrink_cache", wrap_font_manager_shrink_cache},
   {"unload_all", wrap_font_manager_unload_all},
   {NULL, NULL}
 };

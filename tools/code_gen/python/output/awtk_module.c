@@ -1902,6 +1902,20 @@ pyobject_t wrap_font_manager_unload_font(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", ret);
 }
 
+pyobject_t wrap_font_manager_shrink_cache(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  font_manager_t* fm = NULL;
+  uint32_t cache_size = 0;
+
+  if (!PyArg_ParseTuple(pyargs, "O&i" , &parse_voidp, &fm, &cache_size)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)font_manager_shrink_cache(fm, cache_size);
+  return Py_BuildValue("i", ret);
+}
+
 pyobject_t wrap_font_manager_unload_all(pyobject_t self, pyobject_t pyargs) {
   ret_t ret = 0;
   font_manager_t* fm = NULL;
@@ -17152,6 +17166,7 @@ static PyMethodDef awtk_methods[] = {
 {"EVT_ERROR", get_EVT_ERROR, METH_VARARGS, "EVT_ERROR"},
 {"EVT_DESTROY", get_EVT_DESTROY, METH_VARARGS, "EVT_DESTROY"},
 {"font_manager_unload_font", wrap_font_manager_unload_font, METH_VARARGS, "font_manager_unload_font"},
+{"font_manager_shrink_cache", wrap_font_manager_shrink_cache, METH_VARARGS, "font_manager_shrink_cache"},
 {"font_manager_unload_all", wrap_font_manager_unload_all, METH_VARARGS, "font_manager_unload_all"},
 {"GLYPH_FMT_ALPHA", get_GLYPH_FMT_ALPHA, METH_VARARGS, "GLYPH_FMT_ALPHA"},
 {"GLYPH_FMT_MONO", get_GLYPH_FMT_MONO, METH_VARARGS, "GLYPH_FMT_MONO"},

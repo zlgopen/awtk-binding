@@ -431,6 +431,10 @@
    return font_manager_unload_font(((font_manager_t*)(this->nativeObj)), name, size);
  }
 
+ ret_t TFontManager::ShrinkCache(uint32_t cache_size)  {
+   return font_manager_shrink_cache(((font_manager_t*)(this->nativeObj)), cache_size);
+ }
+
  ret_t TFontManager::UnloadAll()  {
    return font_manager_unload_all(((font_manager_t*)(this->nativeObj)));
  }

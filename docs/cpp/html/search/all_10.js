@@ -41,7 +41,8 @@ var searchData=
   ['setuint32_157',['SetUint32',['../class_t_value.html#a8735c63a64e73852442146adf88438f8',1,'TValue']]],
   ['setuint64_158',['SetUint64',['../class_t_value.html#a2bd4e4da66b2b9bf0faadfccfda42864',1,'TValue']]],
   ['setuint8_159',['SetUint8',['../class_t_value.html#ab909d172aee3452c2306c443250b82f1',1,'TValue']]],
-  ['size_160',['Size',['../class_t_emitter.html#a5529112d290584cada5d2bbdafa99f71',1,'TEmitter']]],
-  ['str_161',['Str',['../class_t_value.html#a03365d89e6a44ab5a69978ea5a0bdaf5',1,'TValue']]],
-  ['stroke_162',['Stroke',['../class_t_vgcanvas.html#a280cbf1d9b4ef38763216f0ea9ea0c0a',1,'TVgcanvas']]]
+  ['shrinkcache_160',['ShrinkCache',['../class_t_font_manager.html#aa4cffca713fa0189985928ba83c86cdb',1,'TFontManager']]],
+  ['size_161',['Size',['../class_t_emitter.html#a5529112d290584cada5d2bbdafa99f71',1,'TEmitter']]],
+  ['str_162',['Str',['../class_t_value.html#a03365d89e6a44ab5a69978ea5a0bdaf5',1,'TValue']]],
+  ['stroke_163',['Stroke',['../class_t_vgcanvas.html#a280cbf1d9b4ef38763216f0ea9ea0c0a',1,'TVgcanvas']]]
 ];

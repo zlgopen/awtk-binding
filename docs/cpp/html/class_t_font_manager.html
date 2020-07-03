@@ -84,6 +84,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a27081b069f54aa395f03d67d760582d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d67c9784fcace494aa0f8017283b661"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_font_manager.html#a2d67c9784fcace494aa0f8017283b661">UnloadFont</a> (char *name, font_size_t size)</td></tr>
 <tr class="separator:a2d67c9784fcace494aa0f8017283b661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4cffca713fa0189985928ba83c86cdb"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_font_manager.html#aa4cffca713fa0189985928ba83c86cdb">ShrinkCache</a> (uint32_t cache_size)</td></tr>
+<tr class="separator:aa4cffca713fa0189985928ba83c86cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76e951191090aa518b07594095baf8e5"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_font_manager.html#a76e951191090aa518b07594095baf8e5">UnloadAll</a> ()</td></tr>
 <tr class="separator:a76e951191090aa518b07594095baf8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -105,6 +107,32 @@ font_manager_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>字体管理器，负责字体的加载和缓存管理。 (如果使用nanovg，字体由nanovg内部管理) </p>
 </div><h2 class="groupheader">成员函数说明</h2>
+<a id="aa4cffca713fa0189985928ba83c86cdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4cffca713fa0189985928ba83c86cdb">&#9670;&nbsp;</a></span>ShrinkCache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TFontManager::ShrinkCache </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>cache_size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>清除最久没有被使用的缓冲字模。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cache_size</td><td>每种字体保留缓存字模的个数。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="a76e951191090aa518b07594095baf8e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a76e951191090aa518b07594095baf8e5">&#9670;&nbsp;</a></span>UnloadAll()</h2>
 

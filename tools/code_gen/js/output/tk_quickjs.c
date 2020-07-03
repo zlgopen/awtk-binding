@@ -3296,6 +3296,24 @@ jsvalue_t wrap_font_manager_unload_font(
   return jret;
 }
 
+jsvalue_t wrap_font_manager_shrink_cache(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  font_manager_t* fm = (font_manager_t*)jsvalue_get_pointer(ctx, argv[0], "font_manager_t*");
+  uint32_t cache_size = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)font_manager_shrink_cache(fm, cache_size);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_font_manager_unload_all(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -3317,6 +3335,8 @@ ret_t font_manager_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
   JS_SetPropertyStr(ctx, global_obj, "font_manager_unload_font",
                       JS_NewCFunction(ctx, wrap_font_manager_unload_font, "font_manager_unload_font", 1));
+  JS_SetPropertyStr(ctx, global_obj, "font_manager_shrink_cache",
+                      JS_NewCFunction(ctx, wrap_font_manager_shrink_cache, "font_manager_shrink_cache", 1));
   JS_SetPropertyStr(ctx, global_obj, "font_manager_unload_all",
                       JS_NewCFunction(ctx, wrap_font_manager_unload_all, "font_manager_unload_all", 1));
 

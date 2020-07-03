@@ -213,6 +213,7 @@ declare function EVT_DONE();
 declare function EVT_ERROR();
 declare function EVT_DESTROY();
 declare function font_manager_unload_font(fm : any, name : string, size : number) : TRet;
+declare function font_manager_shrink_cache(fm : any, cache_size : number) : TRet;
 declare function font_manager_unload_all(fm : any) : TRet;
 declare function GLYPH_FMT_ALPHA();
 declare function GLYPH_FMT_MONO();
@@ -3858,6 +3859,18 @@ export class TFontManager {
    */
  unloadFont(name : string, size : number) : TRet  {
     return font_manager_unload_font(this != null ? (this.nativeObj || this) : null, name, size);
+ }
+
+
+  /**
+   * 清除最久没有被使用的缓冲字模。
+   * 
+   * @param cache_size 每种字体保留缓存字模的个数。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ shrinkCache(cache_size : number) : TRet  {
+    return font_manager_shrink_cache(this != null ? (this.nativeObj || this) : null, cache_size);
  }
 
 
@@ -19076,7 +19089,7 @@ export class TEdit extends TWidget {
 
 
   /**
-   * 自定义软键盘名称。
+   * 自定义软键盘名称。AWTK优先查找keyboard属性设置的键盘文件名（该键盘的XML文件需要在default\raw\ui目录下存在），如果keyboard为空就找input_type设置的键盘类型
    *
    */
  get keyboard() : string {

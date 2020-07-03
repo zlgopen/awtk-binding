@@ -1992,6 +1992,18 @@ int awtk_TFontManager_font_manager_unload_font(Runtime *runtime, JClass *clazz) 
   return 0;
 }
 
+int awtk_TFontManager_font_manager_shrink_cache(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  font_manager_t* fm = (font_manager_t*)jni_ctx_get_object(&ctx);
+  uint32_t cache_size = (uint32_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)font_manager_shrink_cache(fm, cache_size);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TFontManager_font_manager_unload_all(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -18161,6 +18173,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TEventType",  "EVT_ERROR",  "()I",  awtk_TEventType_EVT_ERROR},
 {"awtk/TEventType",  "EVT_DESTROY",  "()I",  awtk_TEventType_EVT_DESTROY},
 {"awtk/TFontManager",  "font_manager_unload_font",  "(JLjava/lang/String;I)I",  awtk_TFontManager_font_manager_unload_font},
+{"awtk/TFontManager",  "font_manager_shrink_cache",  "(JI)I",  awtk_TFontManager_font_manager_shrink_cache},
 {"awtk/TFontManager",  "font_manager_unload_all",  "(J)I",  awtk_TFontManager_font_manager_unload_all},
 {"awtk/TGlyphFormat",  "GLYPH_FMT_ALPHA",  "()I",  awtk_TGlyphFormat_GLYPH_FMT_ALPHA},
 {"awtk/TGlyphFormat",  "GLYPH_FMT_MONO",  "()I",  awtk_TGlyphFormat_GLYPH_FMT_MONO},
