@@ -1196,6 +1196,22 @@ int awtk_TGlobal_tk_is_pointer_pressed(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TClipBoardDataType_CLIP_BOARD_DATA_TYPE_NONE(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(CLIP_BOARD_DATA_TYPE_NONE));
+
+  return 0;
+}
+
+int awtk_TClipBoardDataType_CLIP_BOARD_DATA_TYPE_TEXT(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(CLIP_BOARD_DATA_TYPE_TEXT));
+
+  return 0;
+}
+
 int awtk_TClipBoard_clip_board_set_text(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -8419,6 +8435,110 @@ int awtk_TTimeNow_time_now_ms(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TBidiType_BIDI_TYPE_AUTO(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(BIDI_TYPE_AUTO));
+
+  return 0;
+}
+
+int awtk_TBidiType_BIDI_TYPE_LTR(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(BIDI_TYPE_LTR));
+
+  return 0;
+}
+
+int awtk_TBidiType_BIDI_TYPE_RTL(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(BIDI_TYPE_RTL));
+
+  return 0;
+}
+
+int awtk_TBidiType_BIDI_TYPE_WLTR(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(BIDI_TYPE_WLTR));
+
+  return 0;
+}
+
+int awtk_TBidiType_BIDI_TYPE_WRTL(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(BIDI_TYPE_WRTL));
+
+  return 0;
+}
+
+int awtk_TObjectCmd_OBJECT_CMD_SAVE(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_str(&ctx, (char*)(OBJECT_CMD_SAVE));
+
+  return 0;
+}
+
+int awtk_TObjectCmd_OBJECT_CMD_RELOAD(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_str(&ctx, (char*)(OBJECT_CMD_RELOAD));
+
+  return 0;
+}
+
+int awtk_TObjectCmd_OBJECT_CMD_MOVE_UP(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_str(&ctx, (char*)(OBJECT_CMD_MOVE_UP));
+
+  return 0;
+}
+
+int awtk_TObjectCmd_OBJECT_CMD_MOVE_DOWN(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_str(&ctx, (char*)(OBJECT_CMD_MOVE_DOWN));
+
+  return 0;
+}
+
+int awtk_TObjectCmd_OBJECT_CMD_REMOVE(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_str(&ctx, (char*)(OBJECT_CMD_REMOVE));
+
+  return 0;
+}
+
+int awtk_TObjectCmd_OBJECT_CMD_CLEAR(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_str(&ctx, (char*)(OBJECT_CMD_CLEAR));
+
+  return 0;
+}
+
+int awtk_TObjectCmd_OBJECT_CMD_ADD(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_str(&ctx, (char*)(OBJECT_CMD_ADD));
+
+  return 0;
+}
+
+int awtk_TObjectCmd_OBJECT_CMD_EDIT(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_str(&ctx, (char*)(OBJECT_CMD_EDIT));
+
+  return 0;
+}
+
 int awtk_TImageDrawType_IMAGE_DRAW_DEFAULT(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -8575,440 +8695,6 @@ int awtk_TImageDrawType_IMAGE_DRAW_REPEAT3_Y(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   jni_ctx_return_int(&ctx, (int32_t)(IMAGE_DRAW_REPEAT3_Y));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_get_width(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  wh_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  ret = (wh_t)canvas_get_width(c);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_get_height(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  wh_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  ret = (wh_t)canvas_get_height(c);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_get_clip_rect(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  rect_t* r = (rect_t*)jni_ctx_get_object(&ctx);
-  ret = (ret_t)canvas_get_clip_rect(c, r);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_set_clip_rect(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  const rect_t* r = (const rect_t*)jni_ctx_get_object(&ctx);
-  ret = (ret_t)canvas_set_clip_rect(c, r);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_set_clip_rect_ex(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  const rect_t* r = (const rect_t*)jni_ctx_get_object(&ctx);
-  bool_t translate = (bool_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)canvas_set_clip_rect_ex(c, r, translate);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_set_fill_color_str(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  const char* color = (const char*)jni_ctx_get_str(&ctx);
-  ret = (ret_t)canvas_set_fill_color_str(c, color);
-  TKMEM_FREE(color);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_set_text_color_str(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  const char* color = (const char*)jni_ctx_get_str(&ctx);
-  ret = (ret_t)canvas_set_text_color_str(c, color);
-  TKMEM_FREE(color);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_set_stroke_color_str(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  const char* color = (const char*)jni_ctx_get_str(&ctx);
-  ret = (ret_t)canvas_set_stroke_color_str(c, color);
-  TKMEM_FREE(color);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_set_global_alpha(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  uint8_t alpha = (uint8_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)canvas_set_global_alpha(c, alpha);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_translate(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  xy_t dx = (xy_t)jni_ctx_get_int(&ctx);
-  xy_t dy = (xy_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)canvas_translate(c, dx, dy);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_untranslate(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  xy_t dx = (xy_t)jni_ctx_get_int(&ctx);
-  xy_t dy = (xy_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)canvas_untranslate(c, dx, dy);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_draw_vline(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
-  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
-  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)canvas_draw_vline(c, x, y, h);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_draw_hline(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
-  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
-  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)canvas_draw_hline(c, x, y, w);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_fill_rect(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
-  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
-  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
-  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)canvas_fill_rect(c, x, y, w, h);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_stroke_rect(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
-  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
-  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
-  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)canvas_stroke_rect(c, x, y, w, h);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_set_font(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  const char* name = (const char*)jni_ctx_get_str(&ctx);
-  font_size_t size = (font_size_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)canvas_set_font(c, name, size);
-  TKMEM_FREE(name);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_measure_utf8(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  float_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  const char* str = (const char*)jni_ctx_get_str(&ctx);
-  ret = (float_t)canvas_measure_utf8(c, str);
-  TKMEM_FREE(str);
-  jni_ctx_return_float(&ctx, (float)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_draw_utf8(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  const char* str = (const char*)jni_ctx_get_str(&ctx);
-  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
-  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)canvas_draw_utf8(c, str, x, y);
-  TKMEM_FREE(str);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_draw_utf8_in_rect(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  const char* str = (const char*)jni_ctx_get_str(&ctx);
-  const rect_t* r = (const rect_t*)jni_ctx_get_object(&ctx);
-  ret = (ret_t)canvas_draw_utf8_in_rect(c, str, r);
-  TKMEM_FREE(str);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_draw_icon(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  bitmap_t* img = (bitmap_t*)jni_ctx_get_object(&ctx);
-  xy_t cx = (xy_t)jni_ctx_get_int(&ctx);
-  xy_t cy = (xy_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)canvas_draw_icon(c, img, cx, cy);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_draw_image(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  bitmap_t* img = (bitmap_t*)jni_ctx_get_object(&ctx);
-  rect_t* src = (rect_t*)jni_ctx_get_object(&ctx);
-  rect_t* dst = (rect_t*)jni_ctx_get_object(&ctx);
-  ret = (ret_t)canvas_draw_image(c, img, src, dst);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_draw_image_ex(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  bitmap_t* img = (bitmap_t*)jni_ctx_get_object(&ctx);
-  image_draw_type_t draw_type = (image_draw_type_t)jni_ctx_get_int(&ctx);
-  rect_t* dst = (rect_t*)jni_ctx_get_object(&ctx);
-  ret = (ret_t)canvas_draw_image_ex(c, img, draw_type, dst);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_get_vgcanvas(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  vgcanvas_t* ret = NULL;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  ret = (vgcanvas_t*)canvas_get_vgcanvas(c);
-  jni_ctx_return_object(&ctx, (void*)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_cast(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  canvas_t* ret = NULL;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  ret = (canvas_t*)canvas_cast(c);
-  jni_ctx_return_object(&ctx, (void*)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_reset(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  ret = (ret_t)canvas_reset(c);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_t_get_prop_ox(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  canvas_t* obj = (canvas_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->ox));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_t_get_prop_oy(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  canvas_t* obj = (canvas_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->oy));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_t_get_prop_font_name(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  canvas_t* obj = (canvas_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_str(&ctx, (char*)(obj->font_name));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_t_get_prop_font_size(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  canvas_t* obj = (canvas_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->font_size));
-
-  return 0;
-}
-
-int awtk_TCanvas_canvas_t_get_prop_global_alpha(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  canvas_t* obj = (canvas_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->global_alpha));
-
-  return 0;
-}
-
-int awtk_TObjectCmd_OBJECT_CMD_SAVE(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  jni_ctx_return_str(&ctx, (char*)(OBJECT_CMD_SAVE));
-
-  return 0;
-}
-
-int awtk_TObjectCmd_OBJECT_CMD_RELOAD(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  jni_ctx_return_str(&ctx, (char*)(OBJECT_CMD_RELOAD));
-
-  return 0;
-}
-
-int awtk_TObjectCmd_OBJECT_CMD_MOVE_UP(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  jni_ctx_return_str(&ctx, (char*)(OBJECT_CMD_MOVE_UP));
-
-  return 0;
-}
-
-int awtk_TObjectCmd_OBJECT_CMD_MOVE_DOWN(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  jni_ctx_return_str(&ctx, (char*)(OBJECT_CMD_MOVE_DOWN));
-
-  return 0;
-}
-
-int awtk_TObjectCmd_OBJECT_CMD_REMOVE(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  jni_ctx_return_str(&ctx, (char*)(OBJECT_CMD_REMOVE));
-
-  return 0;
-}
-
-int awtk_TObjectCmd_OBJECT_CMD_CLEAR(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  jni_ctx_return_str(&ctx, (char*)(OBJECT_CMD_CLEAR));
-
-  return 0;
-}
-
-int awtk_TObjectCmd_OBJECT_CMD_ADD(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  jni_ctx_return_str(&ctx, (char*)(OBJECT_CMD_ADD));
-
-  return 0;
-}
-
-int awtk_TObjectCmd_OBJECT_CMD_EDIT(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  jni_ctx_return_str(&ctx, (char*)(OBJECT_CMD_EDIT));
 
   return 0;
 }
@@ -9935,18 +9621,372 @@ int awtk_TIndicatorDefaultPaint_INDICATOR_DEFAULT_PAINT_STROKE_RECT(Runtime *run
   return 0;
 }
 
-int awtk_TClipBoardDataType_CLIP_BOARD_DATA_TYPE_NONE(Runtime *runtime, JClass *clazz) {
+int awtk_TCanvas_canvas_get_width(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  jni_ctx_return_int(&ctx, (int32_t)(CLIP_BOARD_DATA_TYPE_NONE));
+  wh_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  ret = (wh_t)canvas_get_width(c);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
 
   return 0;
 }
 
-int awtk_TClipBoardDataType_CLIP_BOARD_DATA_TYPE_TEXT(Runtime *runtime, JClass *clazz) {
+int awtk_TCanvas_canvas_get_height(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  jni_ctx_return_int(&ctx, (int32_t)(CLIP_BOARD_DATA_TYPE_TEXT));
+  wh_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  ret = (wh_t)canvas_get_height(c);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_get_clip_rect(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  rect_t* r = (rect_t*)jni_ctx_get_object(&ctx);
+  ret = (ret_t)canvas_get_clip_rect(c, r);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_set_clip_rect(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  const rect_t* r = (const rect_t*)jni_ctx_get_object(&ctx);
+  ret = (ret_t)canvas_set_clip_rect(c, r);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_set_clip_rect_ex(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  const rect_t* r = (const rect_t*)jni_ctx_get_object(&ctx);
+  bool_t translate = (bool_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)canvas_set_clip_rect_ex(c, r, translate);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_set_fill_color_str(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  const char* color = (const char*)jni_ctx_get_str(&ctx);
+  ret = (ret_t)canvas_set_fill_color_str(c, color);
+  TKMEM_FREE(color);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_set_text_color_str(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  const char* color = (const char*)jni_ctx_get_str(&ctx);
+  ret = (ret_t)canvas_set_text_color_str(c, color);
+  TKMEM_FREE(color);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_set_stroke_color_str(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  const char* color = (const char*)jni_ctx_get_str(&ctx);
+  ret = (ret_t)canvas_set_stroke_color_str(c, color);
+  TKMEM_FREE(color);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_set_global_alpha(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  uint8_t alpha = (uint8_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)canvas_set_global_alpha(c, alpha);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_translate(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  xy_t dx = (xy_t)jni_ctx_get_int(&ctx);
+  xy_t dy = (xy_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)canvas_translate(c, dx, dy);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_untranslate(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  xy_t dx = (xy_t)jni_ctx_get_int(&ctx);
+  xy_t dy = (xy_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)canvas_untranslate(c, dx, dy);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_draw_vline(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
+  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
+  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)canvas_draw_vline(c, x, y, h);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_draw_hline(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
+  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
+  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)canvas_draw_hline(c, x, y, w);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_fill_rect(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
+  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
+  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
+  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)canvas_fill_rect(c, x, y, w, h);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_stroke_rect(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
+  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
+  wh_t w = (wh_t)jni_ctx_get_int(&ctx);
+  wh_t h = (wh_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)canvas_stroke_rect(c, x, y, w, h);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_set_font(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  const char* name = (const char*)jni_ctx_get_str(&ctx);
+  font_size_t size = (font_size_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)canvas_set_font(c, name, size);
+  TKMEM_FREE(name);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_measure_utf8(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  float_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  const char* str = (const char*)jni_ctx_get_str(&ctx);
+  ret = (float_t)canvas_measure_utf8(c, str);
+  TKMEM_FREE(str);
+  jni_ctx_return_float(&ctx, (float)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_draw_utf8(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  const char* str = (const char*)jni_ctx_get_str(&ctx);
+  xy_t x = (xy_t)jni_ctx_get_int(&ctx);
+  xy_t y = (xy_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)canvas_draw_utf8(c, str, x, y);
+  TKMEM_FREE(str);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_draw_utf8_in_rect(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  const char* str = (const char*)jni_ctx_get_str(&ctx);
+  const rect_t* r = (const rect_t*)jni_ctx_get_object(&ctx);
+  ret = (ret_t)canvas_draw_utf8_in_rect(c, str, r);
+  TKMEM_FREE(str);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_draw_icon(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  bitmap_t* img = (bitmap_t*)jni_ctx_get_object(&ctx);
+  xy_t cx = (xy_t)jni_ctx_get_int(&ctx);
+  xy_t cy = (xy_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)canvas_draw_icon(c, img, cx, cy);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_draw_image(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  bitmap_t* img = (bitmap_t*)jni_ctx_get_object(&ctx);
+  rect_t* src = (rect_t*)jni_ctx_get_object(&ctx);
+  rect_t* dst = (rect_t*)jni_ctx_get_object(&ctx);
+  ret = (ret_t)canvas_draw_image(c, img, src, dst);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_draw_image_ex(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  bitmap_t* img = (bitmap_t*)jni_ctx_get_object(&ctx);
+  image_draw_type_t draw_type = (image_draw_type_t)jni_ctx_get_int(&ctx);
+  rect_t* dst = (rect_t*)jni_ctx_get_object(&ctx);
+  ret = (ret_t)canvas_draw_image_ex(c, img, draw_type, dst);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_get_vgcanvas(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  vgcanvas_t* ret = NULL;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  ret = (vgcanvas_t*)canvas_get_vgcanvas(c);
+  jni_ctx_return_object(&ctx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_cast(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  canvas_t* ret = NULL;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  ret = (canvas_t*)canvas_cast(c);
+  jni_ctx_return_object(&ctx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_reset(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
+  ret = (ret_t)canvas_reset(c);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_t_get_prop_ox(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  canvas_t* obj = (canvas_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->ox));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_t_get_prop_oy(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  canvas_t* obj = (canvas_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->oy));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_t_get_prop_font_name(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  canvas_t* obj = (canvas_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_str(&ctx, (char*)(obj->font_name));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_t_get_prop_font_size(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  canvas_t* obj = (canvas_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->font_size));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_t_get_prop_global_alpha(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  canvas_t* obj = (canvas_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->global_alpha));
 
   return 0;
 }
@@ -10171,6 +10211,42 @@ int awtk_TDateTime_date_time_from_time(Runtime *runtime, JClass *clazz) {
   date_time_t* dt = (date_time_t*)jni_ctx_get_object(&ctx);
   uint64_t time = (uint64_t)jni_ctx_get_int64(&ctx);
   ret = (ret_t)date_time_from_time(dt, time);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TDateTime_date_time_is_leap(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  bool_t ret = 0;
+  uint32_t year = (uint32_t)jni_ctx_get_int(&ctx);
+  ret = (bool_t)date_time_is_leap(year);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TDateTime_date_time_get_days(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  int32_t ret = 0;
+  uint32_t year = (uint32_t)jni_ctx_get_int(&ctx);
+  uint32_t montn = (uint32_t)jni_ctx_get_int(&ctx);
+  ret = (int32_t)date_time_get_days(year, montn);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TDateTime_date_time_get_wday(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  int32_t ret = 0;
+  uint32_t year = (uint32_t)jni_ctx_get_int(&ctx);
+  uint32_t montn = (uint32_t)jni_ctx_get_int(&ctx);
+  uint32_t day = (uint32_t)jni_ctx_get_int(&ctx);
+  ret = (int32_t)date_time_get_wday(year, montn, day);
   jni_ctx_return_int(&ctx, (int32_t)(ret));
 
   return 0;
@@ -18075,6 +18151,8 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TGlobal",  "tk_get_pointer_x",  "()I",  awtk_TGlobal_tk_get_pointer_x},
 {"awtk/TGlobal",  "tk_get_pointer_y",  "()I",  awtk_TGlobal_tk_get_pointer_y},
 {"awtk/TGlobal",  "tk_is_pointer_pressed",  "()Z",  awtk_TGlobal_tk_is_pointer_pressed},
+{"awtk/TClipBoardDataType",  "CLIP_BOARD_DATA_TYPE_NONE",  "()I",  awtk_TClipBoardDataType_CLIP_BOARD_DATA_TYPE_NONE},
+{"awtk/TClipBoardDataType",  "CLIP_BOARD_DATA_TYPE_TEXT",  "()I",  awtk_TClipBoardDataType_CLIP_BOARD_DATA_TYPE_TEXT},
 {"awtk/TClipBoard",  "clip_board_set_text",  "(Ljava/lang/String;)I",  awtk_TClipBoard_clip_board_set_text},
 {"awtk/TClipBoard",  "clip_board_get_text",  "()Ljava/lang/String;",  awtk_TClipBoard_clip_board_get_text},
 {"awtk/TDialogQuitCode",  "DIALOG_QUIT_NONE",  "()I",  awtk_TDialogQuitCode_DIALOG_QUIT_NONE},
@@ -18875,6 +18953,19 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TRet",  "RET_EOS",  "()I",  awtk_TRet_RET_EOS},
 {"awtk/TTimeNow",  "time_now_s",  "()J",  awtk_TTimeNow_time_now_s},
 {"awtk/TTimeNow",  "time_now_ms",  "()J",  awtk_TTimeNow_time_now_ms},
+{"awtk/TBidiType",  "BIDI_TYPE_AUTO",  "()I",  awtk_TBidiType_BIDI_TYPE_AUTO},
+{"awtk/TBidiType",  "BIDI_TYPE_LTR",  "()I",  awtk_TBidiType_BIDI_TYPE_LTR},
+{"awtk/TBidiType",  "BIDI_TYPE_RTL",  "()I",  awtk_TBidiType_BIDI_TYPE_RTL},
+{"awtk/TBidiType",  "BIDI_TYPE_WLTR",  "()I",  awtk_TBidiType_BIDI_TYPE_WLTR},
+{"awtk/TBidiType",  "BIDI_TYPE_WRTL",  "()I",  awtk_TBidiType_BIDI_TYPE_WRTL},
+{"awtk/TObjectCmd",  "OBJECT_CMD_SAVE",  "()Ljava/lang/String;",  awtk_TObjectCmd_OBJECT_CMD_SAVE},
+{"awtk/TObjectCmd",  "OBJECT_CMD_RELOAD",  "()Ljava/lang/String;",  awtk_TObjectCmd_OBJECT_CMD_RELOAD},
+{"awtk/TObjectCmd",  "OBJECT_CMD_MOVE_UP",  "()Ljava/lang/String;",  awtk_TObjectCmd_OBJECT_CMD_MOVE_UP},
+{"awtk/TObjectCmd",  "OBJECT_CMD_MOVE_DOWN",  "()Ljava/lang/String;",  awtk_TObjectCmd_OBJECT_CMD_MOVE_DOWN},
+{"awtk/TObjectCmd",  "OBJECT_CMD_REMOVE",  "()Ljava/lang/String;",  awtk_TObjectCmd_OBJECT_CMD_REMOVE},
+{"awtk/TObjectCmd",  "OBJECT_CMD_CLEAR",  "()Ljava/lang/String;",  awtk_TObjectCmd_OBJECT_CMD_CLEAR},
+{"awtk/TObjectCmd",  "OBJECT_CMD_ADD",  "()Ljava/lang/String;",  awtk_TObjectCmd_OBJECT_CMD_ADD},
+{"awtk/TObjectCmd",  "OBJECT_CMD_EDIT",  "()Ljava/lang/String;",  awtk_TObjectCmd_OBJECT_CMD_EDIT},
 {"awtk/TImageDrawType",  "IMAGE_DRAW_DEFAULT",  "()I",  awtk_TImageDrawType_IMAGE_DRAW_DEFAULT},
 {"awtk/TImageDrawType",  "IMAGE_DRAW_CENTER",  "()I",  awtk_TImageDrawType_IMAGE_DRAW_CENTER},
 {"awtk/TImageDrawType",  "IMAGE_DRAW_ICON",  "()I",  awtk_TImageDrawType_IMAGE_DRAW_ICON},
@@ -18895,44 +18986,6 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TImageDrawType",  "IMAGE_DRAW_REPEAT9",  "()I",  awtk_TImageDrawType_IMAGE_DRAW_REPEAT9},
 {"awtk/TImageDrawType",  "IMAGE_DRAW_REPEAT3_X",  "()I",  awtk_TImageDrawType_IMAGE_DRAW_REPEAT3_X},
 {"awtk/TImageDrawType",  "IMAGE_DRAW_REPEAT3_Y",  "()I",  awtk_TImageDrawType_IMAGE_DRAW_REPEAT3_Y},
-{"awtk/TCanvas",  "canvas_get_width",  "(J)I",  awtk_TCanvas_canvas_get_width},
-{"awtk/TCanvas",  "canvas_get_height",  "(J)I",  awtk_TCanvas_canvas_get_height},
-{"awtk/TCanvas",  "canvas_get_clip_rect",  "(JJ)I",  awtk_TCanvas_canvas_get_clip_rect},
-{"awtk/TCanvas",  "canvas_set_clip_rect",  "(JJ)I",  awtk_TCanvas_canvas_set_clip_rect},
-{"awtk/TCanvas",  "canvas_set_clip_rect_ex",  "(JJZ)I",  awtk_TCanvas_canvas_set_clip_rect_ex},
-{"awtk/TCanvas",  "canvas_set_fill_color_str",  "(JLjava/lang/String;)I",  awtk_TCanvas_canvas_set_fill_color_str},
-{"awtk/TCanvas",  "canvas_set_text_color_str",  "(JLjava/lang/String;)I",  awtk_TCanvas_canvas_set_text_color_str},
-{"awtk/TCanvas",  "canvas_set_stroke_color_str",  "(JLjava/lang/String;)I",  awtk_TCanvas_canvas_set_stroke_color_str},
-{"awtk/TCanvas",  "canvas_set_global_alpha",  "(JI)I",  awtk_TCanvas_canvas_set_global_alpha},
-{"awtk/TCanvas",  "canvas_translate",  "(JII)I",  awtk_TCanvas_canvas_translate},
-{"awtk/TCanvas",  "canvas_untranslate",  "(JII)I",  awtk_TCanvas_canvas_untranslate},
-{"awtk/TCanvas",  "canvas_draw_vline",  "(JIII)I",  awtk_TCanvas_canvas_draw_vline},
-{"awtk/TCanvas",  "canvas_draw_hline",  "(JIII)I",  awtk_TCanvas_canvas_draw_hline},
-{"awtk/TCanvas",  "canvas_fill_rect",  "(JIIII)I",  awtk_TCanvas_canvas_fill_rect},
-{"awtk/TCanvas",  "canvas_stroke_rect",  "(JIIII)I",  awtk_TCanvas_canvas_stroke_rect},
-{"awtk/TCanvas",  "canvas_set_font",  "(JLjava/lang/String;I)I",  awtk_TCanvas_canvas_set_font},
-{"awtk/TCanvas",  "canvas_measure_utf8",  "(JLjava/lang/String;)F",  awtk_TCanvas_canvas_measure_utf8},
-{"awtk/TCanvas",  "canvas_draw_utf8",  "(JLjava/lang/String;II)I",  awtk_TCanvas_canvas_draw_utf8},
-{"awtk/TCanvas",  "canvas_draw_utf8_in_rect",  "(JLjava/lang/String;J)I",  awtk_TCanvas_canvas_draw_utf8_in_rect},
-{"awtk/TCanvas",  "canvas_draw_icon",  "(JJII)I",  awtk_TCanvas_canvas_draw_icon},
-{"awtk/TCanvas",  "canvas_draw_image",  "(JJJJ)I",  awtk_TCanvas_canvas_draw_image},
-{"awtk/TCanvas",  "canvas_draw_image_ex",  "(JJIJ)I",  awtk_TCanvas_canvas_draw_image_ex},
-{"awtk/TCanvas",  "canvas_get_vgcanvas",  "(J)J",  awtk_TCanvas_canvas_get_vgcanvas},
-{"awtk/TCanvas",  "canvas_cast",  "(J)J",  awtk_TCanvas_canvas_cast},
-{"awtk/TCanvas",  "canvas_reset",  "(J)I",  awtk_TCanvas_canvas_reset},
-{"awtk/TCanvas",  "canvas_t_get_prop_ox",  "(J)I",  awtk_TCanvas_canvas_t_get_prop_ox},
-{"awtk/TCanvas",  "canvas_t_get_prop_oy",  "(J)I",  awtk_TCanvas_canvas_t_get_prop_oy},
-{"awtk/TCanvas",  "canvas_t_get_prop_font_name",  "(J)Ljava/lang/String;",  awtk_TCanvas_canvas_t_get_prop_font_name},
-{"awtk/TCanvas",  "canvas_t_get_prop_font_size",  "(J)I",  awtk_TCanvas_canvas_t_get_prop_font_size},
-{"awtk/TCanvas",  "canvas_t_get_prop_global_alpha",  "(J)I",  awtk_TCanvas_canvas_t_get_prop_global_alpha},
-{"awtk/TObjectCmd",  "OBJECT_CMD_SAVE",  "()Ljava/lang/String;",  awtk_TObjectCmd_OBJECT_CMD_SAVE},
-{"awtk/TObjectCmd",  "OBJECT_CMD_RELOAD",  "()Ljava/lang/String;",  awtk_TObjectCmd_OBJECT_CMD_RELOAD},
-{"awtk/TObjectCmd",  "OBJECT_CMD_MOVE_UP",  "()Ljava/lang/String;",  awtk_TObjectCmd_OBJECT_CMD_MOVE_UP},
-{"awtk/TObjectCmd",  "OBJECT_CMD_MOVE_DOWN",  "()Ljava/lang/String;",  awtk_TObjectCmd_OBJECT_CMD_MOVE_DOWN},
-{"awtk/TObjectCmd",  "OBJECT_CMD_REMOVE",  "()Ljava/lang/String;",  awtk_TObjectCmd_OBJECT_CMD_REMOVE},
-{"awtk/TObjectCmd",  "OBJECT_CMD_CLEAR",  "()Ljava/lang/String;",  awtk_TObjectCmd_OBJECT_CMD_CLEAR},
-{"awtk/TObjectCmd",  "OBJECT_CMD_ADD",  "()Ljava/lang/String;",  awtk_TObjectCmd_OBJECT_CMD_ADD},
-{"awtk/TObjectCmd",  "OBJECT_CMD_EDIT",  "()Ljava/lang/String;",  awtk_TObjectCmd_OBJECT_CMD_EDIT},
 {"awtk/TNamedValue",  "named_value_create",  "()J",  awtk_TNamedValue_named_value_create},
 {"awtk/TNamedValue",  "named_value_cast",  "(J)J",  awtk_TNamedValue_named_value_cast},
 {"awtk/TNamedValue",  "named_value_set_name",  "(JLjava/lang/String;)I",  awtk_TNamedValue_named_value_set_name},
@@ -19046,8 +19099,36 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TIndicatorDefaultPaint",  "INDICATOR_DEFAULT_PAINT_STROKE_DOT",  "()I",  awtk_TIndicatorDefaultPaint_INDICATOR_DEFAULT_PAINT_STROKE_DOT},
 {"awtk/TIndicatorDefaultPaint",  "INDICATOR_DEFAULT_PAINT_FILL_RECT",  "()I",  awtk_TIndicatorDefaultPaint_INDICATOR_DEFAULT_PAINT_FILL_RECT},
 {"awtk/TIndicatorDefaultPaint",  "INDICATOR_DEFAULT_PAINT_STROKE_RECT",  "()I",  awtk_TIndicatorDefaultPaint_INDICATOR_DEFAULT_PAINT_STROKE_RECT},
-{"awtk/TClipBoardDataType",  "CLIP_BOARD_DATA_TYPE_NONE",  "()I",  awtk_TClipBoardDataType_CLIP_BOARD_DATA_TYPE_NONE},
-{"awtk/TClipBoardDataType",  "CLIP_BOARD_DATA_TYPE_TEXT",  "()I",  awtk_TClipBoardDataType_CLIP_BOARD_DATA_TYPE_TEXT},
+{"awtk/TCanvas",  "canvas_get_width",  "(J)I",  awtk_TCanvas_canvas_get_width},
+{"awtk/TCanvas",  "canvas_get_height",  "(J)I",  awtk_TCanvas_canvas_get_height},
+{"awtk/TCanvas",  "canvas_get_clip_rect",  "(JJ)I",  awtk_TCanvas_canvas_get_clip_rect},
+{"awtk/TCanvas",  "canvas_set_clip_rect",  "(JJ)I",  awtk_TCanvas_canvas_set_clip_rect},
+{"awtk/TCanvas",  "canvas_set_clip_rect_ex",  "(JJZ)I",  awtk_TCanvas_canvas_set_clip_rect_ex},
+{"awtk/TCanvas",  "canvas_set_fill_color_str",  "(JLjava/lang/String;)I",  awtk_TCanvas_canvas_set_fill_color_str},
+{"awtk/TCanvas",  "canvas_set_text_color_str",  "(JLjava/lang/String;)I",  awtk_TCanvas_canvas_set_text_color_str},
+{"awtk/TCanvas",  "canvas_set_stroke_color_str",  "(JLjava/lang/String;)I",  awtk_TCanvas_canvas_set_stroke_color_str},
+{"awtk/TCanvas",  "canvas_set_global_alpha",  "(JI)I",  awtk_TCanvas_canvas_set_global_alpha},
+{"awtk/TCanvas",  "canvas_translate",  "(JII)I",  awtk_TCanvas_canvas_translate},
+{"awtk/TCanvas",  "canvas_untranslate",  "(JII)I",  awtk_TCanvas_canvas_untranslate},
+{"awtk/TCanvas",  "canvas_draw_vline",  "(JIII)I",  awtk_TCanvas_canvas_draw_vline},
+{"awtk/TCanvas",  "canvas_draw_hline",  "(JIII)I",  awtk_TCanvas_canvas_draw_hline},
+{"awtk/TCanvas",  "canvas_fill_rect",  "(JIIII)I",  awtk_TCanvas_canvas_fill_rect},
+{"awtk/TCanvas",  "canvas_stroke_rect",  "(JIIII)I",  awtk_TCanvas_canvas_stroke_rect},
+{"awtk/TCanvas",  "canvas_set_font",  "(JLjava/lang/String;I)I",  awtk_TCanvas_canvas_set_font},
+{"awtk/TCanvas",  "canvas_measure_utf8",  "(JLjava/lang/String;)F",  awtk_TCanvas_canvas_measure_utf8},
+{"awtk/TCanvas",  "canvas_draw_utf8",  "(JLjava/lang/String;II)I",  awtk_TCanvas_canvas_draw_utf8},
+{"awtk/TCanvas",  "canvas_draw_utf8_in_rect",  "(JLjava/lang/String;J)I",  awtk_TCanvas_canvas_draw_utf8_in_rect},
+{"awtk/TCanvas",  "canvas_draw_icon",  "(JJII)I",  awtk_TCanvas_canvas_draw_icon},
+{"awtk/TCanvas",  "canvas_draw_image",  "(JJJJ)I",  awtk_TCanvas_canvas_draw_image},
+{"awtk/TCanvas",  "canvas_draw_image_ex",  "(JJIJ)I",  awtk_TCanvas_canvas_draw_image_ex},
+{"awtk/TCanvas",  "canvas_get_vgcanvas",  "(J)J",  awtk_TCanvas_canvas_get_vgcanvas},
+{"awtk/TCanvas",  "canvas_cast",  "(J)J",  awtk_TCanvas_canvas_cast},
+{"awtk/TCanvas",  "canvas_reset",  "(J)I",  awtk_TCanvas_canvas_reset},
+{"awtk/TCanvas",  "canvas_t_get_prop_ox",  "(J)I",  awtk_TCanvas_canvas_t_get_prop_ox},
+{"awtk/TCanvas",  "canvas_t_get_prop_oy",  "(J)I",  awtk_TCanvas_canvas_t_get_prop_oy},
+{"awtk/TCanvas",  "canvas_t_get_prop_font_name",  "(J)Ljava/lang/String;",  awtk_TCanvas_canvas_t_get_prop_font_name},
+{"awtk/TCanvas",  "canvas_t_get_prop_font_size",  "(J)I",  awtk_TCanvas_canvas_t_get_prop_font_size},
+{"awtk/TCanvas",  "canvas_t_get_prop_global_alpha",  "(J)I",  awtk_TCanvas_canvas_t_get_prop_global_alpha},
 {"awtk/TEasingType",  "EASING_LINEAR",  "()I",  awtk_TEasingType_EASING_LINEAR},
 {"awtk/TEasingType",  "EASING_QUADRATIC_IN",  "()I",  awtk_TEasingType_EASING_QUADRATIC_IN},
 {"awtk/TEasingType",  "EASING_QUADRATIC_OUT",  "()I",  awtk_TEasingType_EASING_QUADRATIC_OUT},
@@ -19075,6 +19156,9 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TDateTime",  "date_time_create",  "()J",  awtk_TDateTime_date_time_create},
 {"awtk/TDateTime",  "date_time_set",  "(J)I",  awtk_TDateTime_date_time_set},
 {"awtk/TDateTime",  "date_time_from_time",  "(JJ)I",  awtk_TDateTime_date_time_from_time},
+{"awtk/TDateTime",  "date_time_is_leap",  "(I)Z",  awtk_TDateTime_date_time_is_leap},
+{"awtk/TDateTime",  "date_time_get_days",  "(II)I",  awtk_TDateTime_date_time_get_days},
+{"awtk/TDateTime",  "date_time_get_wday",  "(III)I",  awtk_TDateTime_date_time_get_wday},
 {"awtk/TDateTime",  "date_time_t_get_prop_second",  "(J)I",  awtk_TDateTime_date_time_t_get_prop_second},
 {"awtk/TDateTime",  "date_time_t_get_prop_minute",  "(J)I",  awtk_TDateTime_date_time_t_get_prop_minute},
 {"awtk/TDateTime",  "date_time_t_get_prop_hour",  "(J)I",  awtk_TDateTime_date_time_t_get_prop_hour},

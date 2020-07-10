@@ -107,6 +107,12 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a8cd031c35edc0ad587c5a11302394f42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a591414f54431f6dbacd5cf4638d58224"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_date_time.html">TDateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_date_time.html#a591414f54431f6dbacd5cf4638d58224">create</a> ()</td></tr>
 <tr class="separator:a591414f54431f6dbacd5cf4638d58224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaffafe7009c644e039ebf2360d9f7728"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_date_time.html#aaffafe7009c644e039ebf2360d9f7728">isLeap</a> (int year)</td></tr>
+<tr class="separator:aaffafe7009c644e039ebf2360d9f7728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a191001b37539424e2d69491dd3439a37"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_date_time.html#a191001b37539424e2d69491dd3439a37">getDays</a> (int year, int montn)</td></tr>
+<tr class="separator:a191001b37539424e2d69491dd3439a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaec13146fa1268cfe3b18b548950ebe"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_date_time.html#aeaec13146fa1268cfe3b18b548950ebe">getWday</a> (int year, int montn, int day)</td></tr>
+<tr class="separator:aeaec13146fa1268cfe3b18b548950ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 属性</h2></td></tr>
@@ -302,6 +308,51 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a191001b37539424e2d69491dd3439a37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a191001b37539424e2d69491dd3439a37">&#9670;&nbsp;</a></span>getDays()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int awtk.TDateTime.getDays </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>montn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取指定年份月份的天数。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">year</td><td>年份。 </td></tr>
+    <tr><td class="paramname">montn</td><td>月份(1-12)。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回大于0表示天数，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="a2bd9a0e52a2bccbebfafc214c55758e3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2bd9a0e52a2bccbebfafc214c55758e3">&#9670;&nbsp;</a></span>getHour()</h2>
 
@@ -407,7 +458,7 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <a id="a81a0d4f6c0b88209bc39d476fb97062c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81a0d4f6c0b88209bc39d476fb97062c">&#9670;&nbsp;</a></span>getWday()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a0d4f6c0b88209bc39d476fb97062c">&#9670;&nbsp;</a></span>getWday() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -429,6 +480,58 @@ Public 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>星期几(0-6, Sunday = 0)。 </p>
+
+</div>
+</div>
+<a id="aeaec13146fa1268cfe3b18b548950ebe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaec13146fa1268cfe3b18b548950ebe">&#9670;&nbsp;</a></span>getWday() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int awtk.TDateTime.getWday </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>montn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>day</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取指定日期是周几(0-6)。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">year</td><td>年份。 </td></tr>
+    <tr><td class="paramname">montn</td><td>月份(1-12)。 </td></tr>
+    <tr><td class="paramname">day</td><td>日(1-31)。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回大于等于0表示周几(0-6)，否则表示失败。 </dd></dl>
 
 </div>
 </div>
@@ -455,6 +558,40 @@ Public 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>年。 </p>
+
+</div>
+</div>
+<a id="aaffafe7009c644e039ebf2360d9f7728"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaffafe7009c644e039ebf2360d9f7728">&#9670;&nbsp;</a></span>isLeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean awtk.TDateTime.isLeap </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>year</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>是否是闰年。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">year</td><td>年份。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回TRUE表示是，否则表示否。 </dd></dl>
 
 </div>
 </div>

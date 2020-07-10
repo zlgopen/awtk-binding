@@ -1255,6 +1255,30 @@
     return time_now_ms();
  }
 
+ TNamedValue TNamedValue::Create()  {
+   return TNamedValue((named_value_t*)(named_value_create()));
+ }
+
+ ret_t TNamedValue::SetName(const char* name)  {
+   return named_value_set_name(((named_value_t*)(this->nativeObj)), name);
+ }
+
+ ret_t TNamedValue::SetValue(TValue& value)  {
+   return named_value_set_value(((named_value_t*)(this->nativeObj)), ((const value_t*)(value.nativeObj)));
+ }
+
+ TValue TNamedValue::GetValue()  {
+   return TValue((value_t*)(named_value_get_value(((named_value_t*)(this->nativeObj)))));
+ }
+
+ ret_t TNamedValue::Destroy()  {
+   return named_value_destroy(((named_value_t*)(this->nativeObj)));
+ }
+
+ char* TNamedValue::GetName() const {
+   return ((named_value_t*)(this->nativeObj))->name;
+ }
+
  wh_t TCanvas::GetWidth()  {
     return canvas_get_width(((canvas_t*)(this->nativeObj)));
  }
@@ -1371,30 +1395,6 @@
    return ((canvas_t*)(this->nativeObj))->global_alpha;
  }
 
- TNamedValue TNamedValue::Create()  {
-   return TNamedValue((named_value_t*)(named_value_create()));
- }
-
- ret_t TNamedValue::SetName(const char* name)  {
-   return named_value_set_name(((named_value_t*)(this->nativeObj)), name);
- }
-
- ret_t TNamedValue::SetValue(TValue& value)  {
-   return named_value_set_value(((named_value_t*)(this->nativeObj)), ((const value_t*)(value.nativeObj)));
- }
-
- TValue TNamedValue::GetValue()  {
-   return TValue((value_t*)(named_value_get_value(((named_value_t*)(this->nativeObj)))));
- }
-
- ret_t TNamedValue::Destroy()  {
-   return named_value_destroy(((named_value_t*)(this->nativeObj)));
- }
-
- char* TNamedValue::GetName() const {
-   return ((named_value_t*)(this->nativeObj))->name;
- }
-
  TDateTime TDateTime::Create()  {
    return TDateTime((date_time_t*)(date_time_create()));
  }
@@ -1405,6 +1405,18 @@
 
  ret_t TDateTime::FromTime(uint64_t time)  {
    return date_time_from_time(((date_time_t*)(this->nativeObj)), time);
+ }
+
+ bool TDateTime::IsLeap(uint32_t year)  {
+    return date_time_is_leap(year);
+ }
+
+ int32_t TDateTime::GetDays(uint32_t year, uint32_t montn)  {
+    return date_time_get_days(year, montn);
+ }
+
+ int32_t TDateTime::GetWday(uint32_t year, uint32_t montn, uint32_t day)  {
+    return date_time_get_wday(year, montn, day);
  }
 
  ret_t TDateTime::Destroy()  {

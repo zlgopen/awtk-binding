@@ -31,11 +31,13 @@
 #include "tkc/types_def.h"
 #include "tkc/timer_manager.h"
 #include "tkc/time_now.h"
-#include "base/canvas.h"
+#include "base/bidi.h"
 #include "tkc/named_value.h"
 #include "tkc/mime_types.h"
 #include "slide_view/slide_indicator.h"
 #include "tkc/idle_manager.h"
+#include "base/canvas_offline.h"
+#include "base/canvas.h"
 #include "tkc/easing.h"
 #include "tkc/date_time.h"
 #include "tkc/color.h"
@@ -961,6 +963,16 @@ JNIEXPORT jboolean JNICALL Java_awtk_TGlobal_tk_1is_1pointer_1pressed(JNIEnv* en
   ret = (bool_t)tk_is_pointer_pressed();
 
   return (jboolean)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TClipBoardDataType_CLIP_1BOARD_1DATA_1TYPE_1NONE(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(CLIP_BOARD_DATA_TYPE_NONE);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TClipBoardDataType_CLIP_1BOARD_1DATA_1TYPE_1TEXT(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(CLIP_BOARD_DATA_TYPE_TEXT);
 }
 
 JNIEXPORT jint JNICALL Java_awtk_TClipBoard_clip_1board_1set_1text(JNIEnv* env,  jclass ajc, jstring jtext) { /*func*/
@@ -5649,6 +5661,71 @@ JNIEXPORT jlong JNICALL Java_awtk_TTimeNow_time_1now_1ms(JNIEnv* env,  jclass aj
   return (jlong)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TBidiType_BIDI_1TYPE_1AUTO(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(BIDI_TYPE_AUTO);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TBidiType_BIDI_1TYPE_1LTR(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(BIDI_TYPE_LTR);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TBidiType_BIDI_1TYPE_1RTL(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(BIDI_TYPE_RTL);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TBidiType_BIDI_1TYPE_1WLTR(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(BIDI_TYPE_WLTR);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TBidiType_BIDI_1TYPE_1WRTL(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(BIDI_TYPE_WRTL);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1SAVE(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, OBJECT_CMD_SAVE);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1RELOAD(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, OBJECT_CMD_RELOAD);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1MOVE_1UP(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, OBJECT_CMD_MOVE_UP);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1MOVE_1DOWN(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, OBJECT_CMD_MOVE_DOWN);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1REMOVE(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, OBJECT_CMD_REMOVE);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1CLEAR(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, OBJECT_CMD_CLEAR);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1ADD(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, OBJECT_CMD_ADD);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1EDIT(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, OBJECT_CMD_EDIT);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TImageDrawType_IMAGE_1DRAW_1DEFAULT(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (jint)(IMAGE_DRAW_DEFAULT);
@@ -5747,300 +5824,6 @@ JNIEXPORT jint JNICALL Java_awtk_TImageDrawType_IMAGE_1DRAW_1REPEAT3_1X(JNIEnv* 
 JNIEXPORT jint JNICALL Java_awtk_TImageDrawType_IMAGE_1DRAW_1REPEAT3_1Y(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (jint)(IMAGE_DRAW_REPEAT3_Y);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1get_1width(JNIEnv* env,  jclass ajc, jlong jc) { /*func*/
-  wh_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  ret = (wh_t)canvas_get_width(c);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1get_1height(JNIEnv* env,  jclass ajc, jlong jc) { /*func*/
-  wh_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  ret = (wh_t)canvas_get_height(c);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1get_1clip_1rect(JNIEnv* env,  jclass ajc, jlong jc, jlong jr) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  rect_t* r = (rect_t*)jr;
-  ret = (ret_t)canvas_get_clip_rect(c, r);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1set_1clip_1rect(JNIEnv* env,  jclass ajc, jlong jc, jlong jr) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  const rect_t* r = (const rect_t*)jr;
-  ret = (ret_t)canvas_set_clip_rect(c, r);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1set_1clip_1rect_1ex(JNIEnv* env,  jclass ajc, jlong jc, jlong jr, jboolean translate) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  const rect_t* r = (const rect_t*)jr;
-  ret = (ret_t)canvas_set_clip_rect_ex(c, r, translate);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1set_1fill_1color_1str(JNIEnv* env,  jclass ajc, jlong jc, jstring jcolor) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  const char* color = (char*)(*env)->GetStringUTFChars(env, jcolor, 0);
-  ret = (ret_t)canvas_set_fill_color_str(c, color);
-  (*env)->ReleaseStringUTFChars(env, jcolor, color);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1set_1text_1color_1str(JNIEnv* env,  jclass ajc, jlong jc, jstring jcolor) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  const char* color = (char*)(*env)->GetStringUTFChars(env, jcolor, 0);
-  ret = (ret_t)canvas_set_text_color_str(c, color);
-  (*env)->ReleaseStringUTFChars(env, jcolor, color);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1set_1stroke_1color_1str(JNIEnv* env,  jclass ajc, jlong jc, jstring jcolor) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  const char* color = (char*)(*env)->GetStringUTFChars(env, jcolor, 0);
-  ret = (ret_t)canvas_set_stroke_color_str(c, color);
-  (*env)->ReleaseStringUTFChars(env, jcolor, color);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1set_1global_1alpha(JNIEnv* env,  jclass ajc, jlong jc, jint alpha) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  ret = (ret_t)canvas_set_global_alpha(c, alpha);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1translate(JNIEnv* env,  jclass ajc, jlong jc, jint dx, jint dy) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  ret = (ret_t)canvas_translate(c, dx, dy);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1untranslate(JNIEnv* env,  jclass ajc, jlong jc, jint dx, jint dy) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  ret = (ret_t)canvas_untranslate(c, dx, dy);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1draw_1vline(JNIEnv* env,  jclass ajc, jlong jc, jint x, jint y, jint h) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  ret = (ret_t)canvas_draw_vline(c, x, y, h);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1draw_1hline(JNIEnv* env,  jclass ajc, jlong jc, jint x, jint y, jint w) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  ret = (ret_t)canvas_draw_hline(c, x, y, w);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1fill_1rect(JNIEnv* env,  jclass ajc, jlong jc, jint x, jint y, jint w, jint h) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  ret = (ret_t)canvas_fill_rect(c, x, y, w, h);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1stroke_1rect(JNIEnv* env,  jclass ajc, jlong jc, jint x, jint y, jint w, jint h) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  ret = (ret_t)canvas_stroke_rect(c, x, y, w, h);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1set_1font(JNIEnv* env,  jclass ajc, jlong jc, jstring jname, jint size) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  const char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
-  ret = (ret_t)canvas_set_font(c, name, size);
-  (*env)->ReleaseStringUTFChars(env, jname, name);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jdouble JNICALL Java_awtk_TCanvas_canvas_1measure_1utf8(JNIEnv* env,  jclass ajc, jlong jc, jstring jstr) { /*func*/
-  float_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  const char* str = (char*)(*env)->GetStringUTFChars(env, jstr, 0);
-  ret = (float_t)canvas_measure_utf8(c, str);
-  (*env)->ReleaseStringUTFChars(env, jstr, str);
-
-  return (jdouble)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1draw_1utf8(JNIEnv* env,  jclass ajc, jlong jc, jstring jstr, jint x, jint y) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  const char* str = (char*)(*env)->GetStringUTFChars(env, jstr, 0);
-  ret = (ret_t)canvas_draw_utf8(c, str, x, y);
-  (*env)->ReleaseStringUTFChars(env, jstr, str);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1draw_1utf8_1in_1rect(JNIEnv* env,  jclass ajc, jlong jc, jstring jstr, jlong jr) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  const char* str = (char*)(*env)->GetStringUTFChars(env, jstr, 0);
-  const rect_t* r = (const rect_t*)jr;
-  ret = (ret_t)canvas_draw_utf8_in_rect(c, str, r);
-  (*env)->ReleaseStringUTFChars(env, jstr, str);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1draw_1icon(JNIEnv* env,  jclass ajc, jlong jc, jlong jimg, jint cx, jint cy) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  bitmap_t* img = (bitmap_t*)jimg;
-  ret = (ret_t)canvas_draw_icon(c, img, cx, cy);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1draw_1image(JNIEnv* env,  jclass ajc, jlong jc, jlong jimg, jlong jsrc, jlong jdst) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  bitmap_t* img = (bitmap_t*)jimg;
-  rect_t* src = (rect_t*)jsrc;
-  rect_t* dst = (rect_t*)jdst;
-  ret = (ret_t)canvas_draw_image(c, img, src, dst);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1draw_1image_1ex(JNIEnv* env,  jclass ajc, jlong jc, jlong jimg, jint draw_type, jlong jdst) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  bitmap_t* img = (bitmap_t*)jimg;
-  rect_t* dst = (rect_t*)jdst;
-  ret = (ret_t)canvas_draw_image_ex(c, img, draw_type, dst);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jlong JNICALL Java_awtk_TCanvas_canvas_1get_1vgcanvas(JNIEnv* env,  jclass ajc, jlong jc) { /*func*/
-  vgcanvas_t* ret;
-  canvas_t* c = (canvas_t*)jc;
-  ret = (vgcanvas_t*)canvas_get_vgcanvas(c);
-
-  return (jlong)(ret);
-}
-
-JNIEXPORT jlong JNICALL Java_awtk_TCanvas_canvas_1cast(JNIEnv* env,  jclass ajc, jlong jc) { /*func*/
-  canvas_t* ret;
-  canvas_t* c = (canvas_t*)jc;
-  ret = (canvas_t*)canvas_cast(c);
-
-  return (jlong)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1reset(JNIEnv* env,  jclass ajc, jlong jc) { /*func*/
-  ret_t ret;
-  canvas_t* c = (canvas_t*)jc;
-  ret = (ret_t)canvas_reset(c);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1t_1get_1prop_1ox(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  canvas_t* obj = (canvas_t*)jobj;
-
-  return (jint)(obj->ox);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1t_1get_1prop_1oy(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  canvas_t* obj = (canvas_t*)jobj;
-
-  return (jint)(obj->oy);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TCanvas_canvas_1t_1get_1prop_1font_1name(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  canvas_t* obj = (canvas_t*)jobj;
-
-  return (*env)->NewStringUTF(env, obj->font_name);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1t_1get_1prop_1font_1size(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  canvas_t* obj = (canvas_t*)jobj;
-
-  return (jint)(obj->font_size);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1t_1get_1prop_1global_1alpha(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  canvas_t* obj = (canvas_t*)jobj;
-
-  return (jint)(obj->global_alpha);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1SAVE(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (*env)->NewStringUTF(env, OBJECT_CMD_SAVE);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1RELOAD(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (*env)->NewStringUTF(env, OBJECT_CMD_RELOAD);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1MOVE_1UP(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (*env)->NewStringUTF(env, OBJECT_CMD_MOVE_UP);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1MOVE_1DOWN(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (*env)->NewStringUTF(env, OBJECT_CMD_MOVE_DOWN);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1REMOVE(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (*env)->NewStringUTF(env, OBJECT_CMD_REMOVE);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1CLEAR(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (*env)->NewStringUTF(env, OBJECT_CMD_CLEAR);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1ADD(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (*env)->NewStringUTF(env, OBJECT_CMD_ADD);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1EDIT(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (*env)->NewStringUTF(env, OBJECT_CMD_EDIT);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TNamedValue_named_1value_1create(JNIEnv* env,  jclass ajc) { /*func*/
@@ -6626,14 +6409,258 @@ JNIEXPORT jint JNICALL Java_awtk_TIndicatorDefaultPaint_INDICATOR_1DEFAULT_1PAIN
   return (jint)(INDICATOR_DEFAULT_PAINT_STROKE_RECT);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TClipBoardDataType_CLIP_1BOARD_1DATA_1TYPE_1NONE(JNIEnv* env,  jclass ajc) {/*const*/
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1get_1width(JNIEnv* env,  jclass ajc, jlong jc) { /*func*/
+  wh_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  ret = (wh_t)canvas_get_width(c);
 
-  return (jint)(CLIP_BOARD_DATA_TYPE_NONE);
+  return (jint)(ret);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TClipBoardDataType_CLIP_1BOARD_1DATA_1TYPE_1TEXT(JNIEnv* env,  jclass ajc) {/*const*/
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1get_1height(JNIEnv* env,  jclass ajc, jlong jc) { /*func*/
+  wh_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  ret = (wh_t)canvas_get_height(c);
 
-  return (jint)(CLIP_BOARD_DATA_TYPE_TEXT);
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1get_1clip_1rect(JNIEnv* env,  jclass ajc, jlong jc, jlong jr) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  rect_t* r = (rect_t*)jr;
+  ret = (ret_t)canvas_get_clip_rect(c, r);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1set_1clip_1rect(JNIEnv* env,  jclass ajc, jlong jc, jlong jr) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  const rect_t* r = (const rect_t*)jr;
+  ret = (ret_t)canvas_set_clip_rect(c, r);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1set_1clip_1rect_1ex(JNIEnv* env,  jclass ajc, jlong jc, jlong jr, jboolean translate) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  const rect_t* r = (const rect_t*)jr;
+  ret = (ret_t)canvas_set_clip_rect_ex(c, r, translate);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1set_1fill_1color_1str(JNIEnv* env,  jclass ajc, jlong jc, jstring jcolor) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  const char* color = (char*)(*env)->GetStringUTFChars(env, jcolor, 0);
+  ret = (ret_t)canvas_set_fill_color_str(c, color);
+  (*env)->ReleaseStringUTFChars(env, jcolor, color);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1set_1text_1color_1str(JNIEnv* env,  jclass ajc, jlong jc, jstring jcolor) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  const char* color = (char*)(*env)->GetStringUTFChars(env, jcolor, 0);
+  ret = (ret_t)canvas_set_text_color_str(c, color);
+  (*env)->ReleaseStringUTFChars(env, jcolor, color);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1set_1stroke_1color_1str(JNIEnv* env,  jclass ajc, jlong jc, jstring jcolor) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  const char* color = (char*)(*env)->GetStringUTFChars(env, jcolor, 0);
+  ret = (ret_t)canvas_set_stroke_color_str(c, color);
+  (*env)->ReleaseStringUTFChars(env, jcolor, color);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1set_1global_1alpha(JNIEnv* env,  jclass ajc, jlong jc, jint alpha) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  ret = (ret_t)canvas_set_global_alpha(c, alpha);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1translate(JNIEnv* env,  jclass ajc, jlong jc, jint dx, jint dy) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  ret = (ret_t)canvas_translate(c, dx, dy);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1untranslate(JNIEnv* env,  jclass ajc, jlong jc, jint dx, jint dy) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  ret = (ret_t)canvas_untranslate(c, dx, dy);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1draw_1vline(JNIEnv* env,  jclass ajc, jlong jc, jint x, jint y, jint h) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  ret = (ret_t)canvas_draw_vline(c, x, y, h);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1draw_1hline(JNIEnv* env,  jclass ajc, jlong jc, jint x, jint y, jint w) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  ret = (ret_t)canvas_draw_hline(c, x, y, w);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1fill_1rect(JNIEnv* env,  jclass ajc, jlong jc, jint x, jint y, jint w, jint h) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  ret = (ret_t)canvas_fill_rect(c, x, y, w, h);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1stroke_1rect(JNIEnv* env,  jclass ajc, jlong jc, jint x, jint y, jint w, jint h) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  ret = (ret_t)canvas_stroke_rect(c, x, y, w, h);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1set_1font(JNIEnv* env,  jclass ajc, jlong jc, jstring jname, jint size) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  const char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
+  ret = (ret_t)canvas_set_font(c, name, size);
+  (*env)->ReleaseStringUTFChars(env, jname, name);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jdouble JNICALL Java_awtk_TCanvas_canvas_1measure_1utf8(JNIEnv* env,  jclass ajc, jlong jc, jstring jstr) { /*func*/
+  float_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  const char* str = (char*)(*env)->GetStringUTFChars(env, jstr, 0);
+  ret = (float_t)canvas_measure_utf8(c, str);
+  (*env)->ReleaseStringUTFChars(env, jstr, str);
+
+  return (jdouble)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1draw_1utf8(JNIEnv* env,  jclass ajc, jlong jc, jstring jstr, jint x, jint y) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  const char* str = (char*)(*env)->GetStringUTFChars(env, jstr, 0);
+  ret = (ret_t)canvas_draw_utf8(c, str, x, y);
+  (*env)->ReleaseStringUTFChars(env, jstr, str);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1draw_1utf8_1in_1rect(JNIEnv* env,  jclass ajc, jlong jc, jstring jstr, jlong jr) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  const char* str = (char*)(*env)->GetStringUTFChars(env, jstr, 0);
+  const rect_t* r = (const rect_t*)jr;
+  ret = (ret_t)canvas_draw_utf8_in_rect(c, str, r);
+  (*env)->ReleaseStringUTFChars(env, jstr, str);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1draw_1icon(JNIEnv* env,  jclass ajc, jlong jc, jlong jimg, jint cx, jint cy) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  bitmap_t* img = (bitmap_t*)jimg;
+  ret = (ret_t)canvas_draw_icon(c, img, cx, cy);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1draw_1image(JNIEnv* env,  jclass ajc, jlong jc, jlong jimg, jlong jsrc, jlong jdst) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  bitmap_t* img = (bitmap_t*)jimg;
+  rect_t* src = (rect_t*)jsrc;
+  rect_t* dst = (rect_t*)jdst;
+  ret = (ret_t)canvas_draw_image(c, img, src, dst);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1draw_1image_1ex(JNIEnv* env,  jclass ajc, jlong jc, jlong jimg, jint draw_type, jlong jdst) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  bitmap_t* img = (bitmap_t*)jimg;
+  rect_t* dst = (rect_t*)jdst;
+  ret = (ret_t)canvas_draw_image_ex(c, img, draw_type, dst);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TCanvas_canvas_1get_1vgcanvas(JNIEnv* env,  jclass ajc, jlong jc) { /*func*/
+  vgcanvas_t* ret;
+  canvas_t* c = (canvas_t*)jc;
+  ret = (vgcanvas_t*)canvas_get_vgcanvas(c);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TCanvas_canvas_1cast(JNIEnv* env,  jclass ajc, jlong jc) { /*func*/
+  canvas_t* ret;
+  canvas_t* c = (canvas_t*)jc;
+  ret = (canvas_t*)canvas_cast(c);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1reset(JNIEnv* env,  jclass ajc, jlong jc) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  ret = (ret_t)canvas_reset(c);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1t_1get_1prop_1ox(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  canvas_t* obj = (canvas_t*)jobj;
+
+  return (jint)(obj->ox);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1t_1get_1prop_1oy(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  canvas_t* obj = (canvas_t*)jobj;
+
+  return (jint)(obj->oy);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TCanvas_canvas_1t_1get_1prop_1font_1name(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  canvas_t* obj = (canvas_t*)jobj;
+
+  return (*env)->NewStringUTF(env, obj->font_name);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1t_1get_1prop_1font_1size(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  canvas_t* obj = (canvas_t*)jobj;
+
+  return (jint)(obj->font_size);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1t_1get_1prop_1global_1alpha(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  canvas_t* obj = (canvas_t*)jobj;
+
+  return (jint)(obj->global_alpha);
 }
 
 JNIEXPORT jint JNICALL Java_awtk_TEasingType_EASING_1LINEAR(JNIEnv* env,  jclass ajc) {/*const*/
@@ -6775,6 +6802,27 @@ JNIEXPORT jint JNICALL Java_awtk_TDateTime_date_1time_1from_1time(JNIEnv* env,  
   ret_t ret;
   date_time_t* dt = (date_time_t*)jdt;
   ret = (ret_t)date_time_from_time(dt, time);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TDateTime_date_1time_1is_1leap(JNIEnv* env,  jclass ajc, jint year) { /*func*/
+  bool_t ret;
+  ret = (bool_t)date_time_is_leap(year);
+
+  return (jboolean)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TDateTime_date_1time_1get_1days(JNIEnv* env,  jclass ajc, jint year, jint montn) { /*func*/
+  int32_t ret;
+  ret = (int32_t)date_time_get_days(year, montn);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TDateTime_date_1time_1get_1wday(JNIEnv* env,  jclass ajc, jint year, jint montn, jint day) { /*func*/
+  int32_t ret;
+  ret = (int32_t)date_time_get_wday(year, montn, day);
 
   return (jint)(ret);
 }

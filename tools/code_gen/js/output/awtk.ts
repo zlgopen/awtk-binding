@@ -115,6 +115,8 @@ declare function tk_quit() : TRet;
 declare function tk_get_pointer_x() : number;
 declare function tk_get_pointer_y() : number;
 declare function tk_is_pointer_pressed() : boolean;
+declare function CLIP_BOARD_DATA_TYPE_NONE();
+declare function CLIP_BOARD_DATA_TYPE_TEXT();
 declare function clip_board_set_text(text : string) : TRet;
 declare function clip_board_get_text() : string;
 declare function DIALOG_QUIT_NONE();
@@ -915,6 +917,19 @@ declare function RET_IO();
 declare function RET_EOS();
 declare function time_now_s() : number;
 declare function time_now_ms() : number;
+declare function BIDI_TYPE_AUTO();
+declare function BIDI_TYPE_LTR();
+declare function BIDI_TYPE_RTL();
+declare function BIDI_TYPE_WLTR();
+declare function BIDI_TYPE_WRTL();
+declare function OBJECT_CMD_SAVE();
+declare function OBJECT_CMD_RELOAD();
+declare function OBJECT_CMD_MOVE_UP();
+declare function OBJECT_CMD_MOVE_DOWN();
+declare function OBJECT_CMD_REMOVE();
+declare function OBJECT_CMD_CLEAR();
+declare function OBJECT_CMD_ADD();
+declare function OBJECT_CMD_EDIT();
 declare function IMAGE_DRAW_DEFAULT();
 declare function IMAGE_DRAW_CENTER();
 declare function IMAGE_DRAW_ICON();
@@ -935,44 +950,6 @@ declare function IMAGE_DRAW_PATCH3_Y_SCALE_X();
 declare function IMAGE_DRAW_REPEAT9();
 declare function IMAGE_DRAW_REPEAT3_X();
 declare function IMAGE_DRAW_REPEAT3_Y();
-declare function canvas_get_width(c : any) : number;
-declare function canvas_get_height(c : any) : number;
-declare function canvas_get_clip_rect(c : any, r : any) : TRet;
-declare function canvas_set_clip_rect(c : any, r : any) : TRet;
-declare function canvas_set_clip_rect_ex(c : any, r : any, translate : boolean) : TRet;
-declare function canvas_set_fill_color_str(c : any, color : string) : TRet;
-declare function canvas_set_text_color_str(c : any, color : string) : TRet;
-declare function canvas_set_stroke_color_str(c : any, color : string) : TRet;
-declare function canvas_set_global_alpha(c : any, alpha : number) : TRet;
-declare function canvas_translate(c : any, dx : number, dy : number) : TRet;
-declare function canvas_untranslate(c : any, dx : number, dy : number) : TRet;
-declare function canvas_draw_vline(c : any, x : number, y : number, h : number) : TRet;
-declare function canvas_draw_hline(c : any, x : number, y : number, w : number) : TRet;
-declare function canvas_fill_rect(c : any, x : number, y : number, w : number, h : number) : TRet;
-declare function canvas_stroke_rect(c : any, x : number, y : number, w : number, h : number) : TRet;
-declare function canvas_set_font(c : any, name : string, size : number) : TRet;
-declare function canvas_measure_utf8(c : any, str : string) : number;
-declare function canvas_draw_utf8(c : any, str : string, x : number, y : number) : TRet;
-declare function canvas_draw_utf8_in_rect(c : any, str : string, r : any) : TRet;
-declare function canvas_draw_icon(c : any, img : any, cx : number, cy : number) : TRet;
-declare function canvas_draw_image(c : any, img : any, src : any, dst : any) : TRet;
-declare function canvas_draw_image_ex(c : any, img : any, draw_type : TImageDrawType, dst : any) : TRet;
-declare function canvas_get_vgcanvas(c : any) : any;
-declare function canvas_cast(c : any) : any;
-declare function canvas_reset(c : any) : TRet;
-declare function canvas_t_get_prop_ox(nativeObj : any) : number;
-declare function canvas_t_get_prop_oy(nativeObj : any) : number;
-declare function canvas_t_get_prop_font_name(nativeObj : any) : string;
-declare function canvas_t_get_prop_font_size(nativeObj : any) : number;
-declare function canvas_t_get_prop_global_alpha(nativeObj : any) : number;
-declare function OBJECT_CMD_SAVE();
-declare function OBJECT_CMD_RELOAD();
-declare function OBJECT_CMD_MOVE_UP();
-declare function OBJECT_CMD_MOVE_DOWN();
-declare function OBJECT_CMD_REMOVE();
-declare function OBJECT_CMD_CLEAR();
-declare function OBJECT_CMD_ADD();
-declare function OBJECT_CMD_EDIT();
 declare function named_value_create() : any;
 declare function named_value_cast(nv : any) : any;
 declare function named_value_set_name(nv : any, name : string) : TRet;
@@ -1087,8 +1064,36 @@ declare function INDICATOR_DEFAULT_PAINT_FILL_DOT();
 declare function INDICATOR_DEFAULT_PAINT_STROKE_DOT();
 declare function INDICATOR_DEFAULT_PAINT_FILL_RECT();
 declare function INDICATOR_DEFAULT_PAINT_STROKE_RECT();
-declare function CLIP_BOARD_DATA_TYPE_NONE();
-declare function CLIP_BOARD_DATA_TYPE_TEXT();
+declare function canvas_get_width(c : any) : number;
+declare function canvas_get_height(c : any) : number;
+declare function canvas_get_clip_rect(c : any, r : any) : TRet;
+declare function canvas_set_clip_rect(c : any, r : any) : TRet;
+declare function canvas_set_clip_rect_ex(c : any, r : any, translate : boolean) : TRet;
+declare function canvas_set_fill_color_str(c : any, color : string) : TRet;
+declare function canvas_set_text_color_str(c : any, color : string) : TRet;
+declare function canvas_set_stroke_color_str(c : any, color : string) : TRet;
+declare function canvas_set_global_alpha(c : any, alpha : number) : TRet;
+declare function canvas_translate(c : any, dx : number, dy : number) : TRet;
+declare function canvas_untranslate(c : any, dx : number, dy : number) : TRet;
+declare function canvas_draw_vline(c : any, x : number, y : number, h : number) : TRet;
+declare function canvas_draw_hline(c : any, x : number, y : number, w : number) : TRet;
+declare function canvas_fill_rect(c : any, x : number, y : number, w : number, h : number) : TRet;
+declare function canvas_stroke_rect(c : any, x : number, y : number, w : number, h : number) : TRet;
+declare function canvas_set_font(c : any, name : string, size : number) : TRet;
+declare function canvas_measure_utf8(c : any, str : string) : number;
+declare function canvas_draw_utf8(c : any, str : string, x : number, y : number) : TRet;
+declare function canvas_draw_utf8_in_rect(c : any, str : string, r : any) : TRet;
+declare function canvas_draw_icon(c : any, img : any, cx : number, cy : number) : TRet;
+declare function canvas_draw_image(c : any, img : any, src : any, dst : any) : TRet;
+declare function canvas_draw_image_ex(c : any, img : any, draw_type : TImageDrawType, dst : any) : TRet;
+declare function canvas_get_vgcanvas(c : any) : any;
+declare function canvas_cast(c : any) : any;
+declare function canvas_reset(c : any) : TRet;
+declare function canvas_t_get_prop_ox(nativeObj : any) : number;
+declare function canvas_t_get_prop_oy(nativeObj : any) : number;
+declare function canvas_t_get_prop_font_name(nativeObj : any) : string;
+declare function canvas_t_get_prop_font_size(nativeObj : any) : number;
+declare function canvas_t_get_prop_global_alpha(nativeObj : any) : number;
 declare function EASING_LINEAR();
 declare function EASING_QUADRATIC_IN();
 declare function EASING_QUADRATIC_OUT();
@@ -1116,6 +1121,9 @@ declare function EASING_BOUNCE_INOUT();
 declare function date_time_create() : any;
 declare function date_time_set(dt : any) : TRet;
 declare function date_time_from_time(dt : any, time : number) : TRet;
+declare function date_time_is_leap(year : number) : boolean;
+declare function date_time_get_days(year : number, montn : number) : number;
+declare function date_time_get_wday(year : number, montn : number, day : number) : number;
 declare function date_time_destroy(dt : any) : TRet;
 declare function date_time_t_get_prop_second(nativeObj : any) : number;
 declare function date_time_t_get_prop_minute(nativeObj : any) : number;
@@ -3210,6 +3218,26 @@ export class TGlobal {
  }
 
 };
+/**
+ * 剪切板数据类型定义。
+ *
+ */
+export enum TClipBoardDataType {
+
+  /**
+   * 无数据。
+   *
+   */
+ NONE = CLIP_BOARD_DATA_TYPE_NONE(),
+
+  /**
+   * UTF8文本。
+   *
+   */
+ TEXT = CLIP_BOARD_DATA_TYPE_TEXT(),
+};
+
+
 /**
  * 剪切板接口。
  *
@@ -9815,6 +9843,106 @@ export class TTimeNow {
 
 };
 /**
+ * bidi 类型常量定义。
+ *
+ */
+export enum TBidiType {
+
+  /**
+   * 自动检查。
+   *
+   */
+ AUTO = BIDI_TYPE_AUTO(),
+
+  /**
+   * Left-To-Right letter。
+   *
+   */
+ LTR = BIDI_TYPE_LTR(),
+
+  /**
+   * Right-To-Left letter。
+   *
+   */
+ RTL = BIDI_TYPE_RTL(),
+
+  /**
+   * Weak Left To Right paragraph。
+   *
+   */
+ WLTR = BIDI_TYPE_WLTR(),
+
+  /**
+   * Weak Right To Left paragraph。
+   *
+   */
+ WRTL = BIDI_TYPE_WRTL(),
+};
+
+
+/**
+ * 对象常见命令定义
+ *
+ */
+export enum TObjectCmd {
+
+  /**
+   * 保存命令
+   *
+   */
+ SAVE = OBJECT_CMD_SAVE(),
+
+  /**
+   * 重新加载命令
+   *
+   */
+ RELOAD = OBJECT_CMD_RELOAD(),
+
+  /**
+   * 和前一个属性交换位置
+   *>参数为属性的名称或路径。
+   *
+   */
+ MOVE_UP = OBJECT_CMD_MOVE_UP(),
+
+  /**
+   * 和后一个属性交换位置
+   *>参数为属性的名称或路径。
+   *
+   */
+ MOVE_DOWN = OBJECT_CMD_MOVE_DOWN(),
+
+  /**
+   * 删除属性。
+   *>参数为属性的名称或路径。
+   *
+   */
+ REMOVE = OBJECT_CMD_REMOVE(),
+
+  /**
+   * 清除全部属性。
+   *>参数为属性的名称或路径。
+   *
+   */
+ CLEAR = OBJECT_CMD_CLEAR(),
+
+  /**
+   * 增加子项。
+   *>参数为属性的名称或路径。
+   *
+   */
+ ADD = OBJECT_CMD_ADD(),
+
+  /**
+   * 编辑子项。
+   *>参数为属性的名称或路径。
+   *
+   */
+ EDIT = OBJECT_CMD_EDIT(),
+};
+
+
+/**
  * 图片绘制方法常量定义。
  *
  */
@@ -9953,459 +10081,6 @@ export enum TImageDrawType {
    *
    */
  REPEAT3_Y = IMAGE_DRAW_REPEAT3_Y(),
-};
-
-
-/**
- * 提供基本的绘图功能和状态管理。
- *
- */
-export class TCanvas { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   this.nativeObj = nativeObj;
- }
-
-
-  /**
-   * 获取画布的宽度。
-   * 
-   *
-   * @returns 返回画布的宽度。
-   */
- getWidth() : number  {
-    return canvas_get_width(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 获取画布的高度。
-   * 
-   *
-   * @returns 返回画布的高度。
-   */
- getHeight() : number  {
-    return canvas_get_height(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 获取裁剪区。
-   * 
-   * @param r rect对象。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- getClipRect(r : TRect) : TRet  {
-    return canvas_get_clip_rect(this != null ? (this.nativeObj || this) : null, r != null ? (r.nativeObj || r) : null);
- }
-
-
-  /**
-   * 设置裁剪区。
-   * 
-   * @param r rect对象。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setClipRect(r : TRect) : TRet  {
-    return canvas_set_clip_rect(this != null ? (this.nativeObj || this) : null, r != null ? (r.nativeObj || r) : null);
- }
-
-
-  /**
-   * 设置裁剪区。
-   * 
-   * @param r rect对象。
-   * @param translate 是否将裁剪区的位置加上canvas当前的偏移。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setClipRectEx(r : TRect, translate : boolean) : TRet  {
-    return canvas_set_clip_rect_ex(this != null ? (this.nativeObj || this) : null, r != null ? (r.nativeObj || r) : null, translate);
- }
-
-
-  /**
-   * 设置填充颜色。
-   *
-   *> 供脚本语言使用。
-   * 
-   * @param color 颜色。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setFillColor(color : string) : TRet  {
-    return canvas_set_fill_color_str(this != null ? (this.nativeObj || this) : null, color);
- }
-
-
-  /**
-   * 设置文本颜色。
-   *
-   *> 供脚本语言使用。
-   * 
-   * @param color 颜色。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setTextColor(color : string) : TRet  {
-    return canvas_set_text_color_str(this != null ? (this.nativeObj || this) : null, color);
- }
-
-
-  /**
-   * 设置线条颜色。
-   *
-   *> 供脚本语言使用。
-   * 
-   * @param color 颜色。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setStrokeColor(color : string) : TRet  {
-    return canvas_set_stroke_color_str(this != null ? (this.nativeObj || this) : null, color);
- }
-
-
-  /**
-   * 设置全局alpha值。
-   * 
-   * @param alpha alpha值。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setGlobalAlpha(alpha : number) : TRet  {
-    return canvas_set_global_alpha(this != null ? (this.nativeObj || this) : null, alpha);
- }
-
-
-  /**
-   * 平移原点坐标。
-   * 
-   * @param dx x偏移。
-   * @param dy y偏移。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- translate(dx : number, dy : number) : TRet  {
-    return canvas_translate(this != null ? (this.nativeObj || this) : null, dx, dy);
- }
-
-
-  /**
-   * 反向平移原点坐标。
-   * 
-   * @param dx x偏移。
-   * @param dy y偏移。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- untranslate(dx : number, dy : number) : TRet  {
-    return canvas_untranslate(this != null ? (this.nativeObj || this) : null, dx, dy);
- }
-
-
-  /**
-   * 画垂直线。
-   * 
-   * @param x x坐标。
-   * @param y y坐标。
-   * @param h 高度。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- drawVline(x : number, y : number, h : number) : TRet  {
-    return canvas_draw_vline(this != null ? (this.nativeObj || this) : null, x, y, h);
- }
-
-
-  /**
-   * 画水平线。
-   * 
-   * @param x x坐标。
-   * @param y y坐标。
-   * @param w 宽度。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- drawHline(x : number, y : number, w : number) : TRet  {
-    return canvas_draw_hline(this != null ? (this.nativeObj || this) : null, x, y, w);
- }
-
-
-  /**
-   * 填充矩形。
-   * 
-   * @param x x坐标。
-   * @param y y坐标。
-   * @param w 宽度。
-   * @param h 高度。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- fillRect(x : number, y : number, w : number, h : number) : TRet  {
-    return canvas_fill_rect(this != null ? (this.nativeObj || this) : null, x, y, w, h);
- }
-
-
-  /**
-   * 绘制矩形。
-   * 
-   * @param x x坐标。
-   * @param y y坐标。
-   * @param w 宽度。
-   * @param h 高度。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- strokeRect(x : number, y : number, w : number, h : number) : TRet  {
-    return canvas_stroke_rect(this != null ? (this.nativeObj || this) : null, x, y, w, h);
- }
-
-
-  /**
-   * 设置字体。
-   * 
-   * @param name 字体名称。
-   * @param size 字体大小。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setFont(name : string, size : number) : TRet  {
-    return canvas_set_font(this != null ? (this.nativeObj || this) : null, name, size);
- }
-
-
-  /**
-   * 计算文本所占的宽度。
-   *
-   *> 供脚本语言使用。
-   * 
-   * @param str 字符串。
-   *
-   * @returns 返回文本所占的宽度。
-   */
- measureText(str : string) : number  {
-    return canvas_measure_utf8(this != null ? (this.nativeObj || this) : null, str);
- }
-
-
-  /**
-   * 绘制文本。
-   *
-   *> 供脚本语言使用。
-   * 
-   * @param str 字符串。
-   * @param x x坐标。
-   * @param y y坐标。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- drawText(str : string, x : number, y : number) : TRet  {
-    return canvas_draw_utf8(this != null ? (this.nativeObj || this) : null, str, x, y);
- }
-
-
-  /**
-   * 绘制文本。
-   *
-   *> 供脚本语言使用。
-   * 
-   * @param str 字符串。
-   * @param r 矩形区域。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- drawTextInRect(str : string, r : TRect) : TRet  {
-    return canvas_draw_utf8_in_rect(this != null ? (this.nativeObj || this) : null, str, r != null ? (r.nativeObj || r) : null);
- }
-
-
-  /**
-   * 绘制图标。
-   * 
-   * @param img 图片对象。
-   * @param cx 中心点x坐标。
-   * @param cy 中心点y坐标。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- drawIcon(img : TBitmap, cx : number, cy : number) : TRet  {
-    return canvas_draw_icon(this != null ? (this.nativeObj || this) : null, img != null ? (img.nativeObj || img) : null, cx, cy);
- }
-
-
-  /**
-   * 绘制图片。
-   * 
-   * @param img 图片对象。
-   * @param src 源区域。
-   * @param dst 目的区域。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- drawImage(img : TBitmap, src : TRect, dst : TRect) : TRet  {
-    return canvas_draw_image(this != null ? (this.nativeObj || this) : null, img != null ? (img.nativeObj || img) : null, src != null ? (src.nativeObj || src) : null, dst != null ? (dst.nativeObj || dst) : null);
- }
-
-
-  /**
-   * 绘制图片。
-   * 
-   * @param img 图片对象。
-   * @param draw_type 绘制类型。
-   * @param dst 目的区域。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- drawImageEx(img : TBitmap, draw_type : TImageDrawType, dst : TRect) : TRet  {
-    return canvas_draw_image_ex(this != null ? (this.nativeObj || this) : null, img != null ? (img.nativeObj || img) : null, draw_type, dst != null ? (dst.nativeObj || dst) : null);
- }
-
-
-  /**
-   * 获取vgcanvas对象。
-   * 
-   *
-   * @returns 返回vgcanvas对象。
-   */
- getVgcanvas() : TVgcanvas  {
-    return new TVgcanvas(canvas_get_vgcanvas(this != null ? (this.nativeObj || this) : null));
- }
-
-
-  /**
-   * 转换为canvas对象(供脚本语言使用)。
-   * 
-   * @param c canvas对象。
-   *
-   * @returns canvas对象。
-   */
- static cast(c : TCanvas) : TCanvas  {
-    return new TCanvas(canvas_cast(c != null ? (c.nativeObj || c) : null));
- }
-
-
-  /**
-   * 释放相关资源。
-   * 
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- reset() : TRet  {
-    return canvas_reset(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * x坐标偏移。
-   *
-   */
- get ox() : number {
-   return canvas_t_get_prop_ox(this.nativeObj);
- }
-
-
-  /**
-   * y坐标偏移。
-   *
-   */
- get oy() : number {
-   return canvas_t_get_prop_oy(this.nativeObj);
- }
-
-
-  /**
-   * 当前字体名称。
-   *
-   */
- get fontName() : string {
-   return canvas_t_get_prop_font_name(this.nativeObj);
- }
-
-
-  /**
-   * 当前字体大小。
-   *
-   */
- get fontSize() : number {
-   return canvas_t_get_prop_font_size(this.nativeObj);
- }
-
-
-  /**
-   * 当前全局alpha。
-   *
-   */
- get globalAlpha() : number {
-   return canvas_t_get_prop_global_alpha(this.nativeObj);
- }
-
- set globalAlpha(v : number) {
-   this.setGlobalAlpha(v);
- }
-
-};
-/**
- * 对象常见命令定义
- *
- */
-export enum TObjectCmd {
-
-  /**
-   * 保存命令
-   *
-   */
- SAVE = OBJECT_CMD_SAVE(),
-
-  /**
-   * 重新加载命令
-   *
-   */
- RELOAD = OBJECT_CMD_RELOAD(),
-
-  /**
-   * 和前一个属性交换位置
-   *>参数为属性的名称或路径。
-   *
-   */
- MOVE_UP = OBJECT_CMD_MOVE_UP(),
-
-  /**
-   * 和后一个属性交换位置
-   *>参数为属性的名称或路径。
-   *
-   */
- MOVE_DOWN = OBJECT_CMD_MOVE_DOWN(),
-
-  /**
-   * 删除属性。
-   *>参数为属性的名称或路径。
-   *
-   */
- REMOVE = OBJECT_CMD_REMOVE(),
-
-  /**
-   * 清除全部属性。
-   *>参数为属性的名称或路径。
-   *
-   */
- CLEAR = OBJECT_CMD_CLEAR(),
-
-  /**
-   * 增加子项。
-   *>参数为属性的名称或路径。
-   *
-   */
- ADD = OBJECT_CMD_ADD(),
-
-  /**
-   * 编辑子项。
-   *>参数为属性的名称或路径。
-   *
-   */
- EDIT = OBJECT_CMD_EDIT(),
 };
 
 
@@ -11172,25 +10847,407 @@ export class TIdleManager {
 
 };
 /**
- * 剪切板数据类型定义。
+ * 离线画布 canvas。
  *
  */
-export enum TClipBoardDataType {
+export class TCanvasOffline { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
-  /**
-   * 无数据。
-   *
-   */
- NONE = CLIP_BOARD_DATA_TYPE_NONE(),
-
-  /**
-   * UTF8文本。
-   *
-   */
- TEXT = CLIP_BOARD_DATA_TYPE_TEXT(),
 };
+/**
+ * 提供基本的绘图功能和状态管理。
+ *
+ */
+export class TCanvas { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
 
 
+  /**
+   * 获取画布的宽度。
+   * 
+   *
+   * @returns 返回画布的宽度。
+   */
+ getWidth() : number  {
+    return canvas_get_width(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 获取画布的高度。
+   * 
+   *
+   * @returns 返回画布的高度。
+   */
+ getHeight() : number  {
+    return canvas_get_height(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 获取裁剪区。
+   * 
+   * @param r rect对象。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ getClipRect(r : TRect) : TRet  {
+    return canvas_get_clip_rect(this != null ? (this.nativeObj || this) : null, r != null ? (r.nativeObj || r) : null);
+ }
+
+
+  /**
+   * 设置裁剪区。
+   * 
+   * @param r rect对象。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setClipRect(r : TRect) : TRet  {
+    return canvas_set_clip_rect(this != null ? (this.nativeObj || this) : null, r != null ? (r.nativeObj || r) : null);
+ }
+
+
+  /**
+   * 设置裁剪区。
+   * 
+   * @param r rect对象。
+   * @param translate 是否将裁剪区的位置加上canvas当前的偏移。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setClipRectEx(r : TRect, translate : boolean) : TRet  {
+    return canvas_set_clip_rect_ex(this != null ? (this.nativeObj || this) : null, r != null ? (r.nativeObj || r) : null, translate);
+ }
+
+
+  /**
+   * 设置填充颜色。
+   *
+   *> 供脚本语言使用。
+   * 
+   * @param color 颜色。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setFillColor(color : string) : TRet  {
+    return canvas_set_fill_color_str(this != null ? (this.nativeObj || this) : null, color);
+ }
+
+
+  /**
+   * 设置文本颜色。
+   *
+   *> 供脚本语言使用。
+   * 
+   * @param color 颜色。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setTextColor(color : string) : TRet  {
+    return canvas_set_text_color_str(this != null ? (this.nativeObj || this) : null, color);
+ }
+
+
+  /**
+   * 设置线条颜色。
+   *
+   *> 供脚本语言使用。
+   * 
+   * @param color 颜色。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setStrokeColor(color : string) : TRet  {
+    return canvas_set_stroke_color_str(this != null ? (this.nativeObj || this) : null, color);
+ }
+
+
+  /**
+   * 设置全局alpha值。
+   * 
+   * @param alpha alpha值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setGlobalAlpha(alpha : number) : TRet  {
+    return canvas_set_global_alpha(this != null ? (this.nativeObj || this) : null, alpha);
+ }
+
+
+  /**
+   * 平移原点坐标。
+   * 
+   * @param dx x偏移。
+   * @param dy y偏移。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ translate(dx : number, dy : number) : TRet  {
+    return canvas_translate(this != null ? (this.nativeObj || this) : null, dx, dy);
+ }
+
+
+  /**
+   * 反向平移原点坐标。
+   * 
+   * @param dx x偏移。
+   * @param dy y偏移。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ untranslate(dx : number, dy : number) : TRet  {
+    return canvas_untranslate(this != null ? (this.nativeObj || this) : null, dx, dy);
+ }
+
+
+  /**
+   * 画垂直线。
+   * 
+   * @param x x坐标。
+   * @param y y坐标。
+   * @param h 高度。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ drawVline(x : number, y : number, h : number) : TRet  {
+    return canvas_draw_vline(this != null ? (this.nativeObj || this) : null, x, y, h);
+ }
+
+
+  /**
+   * 画水平线。
+   * 
+   * @param x x坐标。
+   * @param y y坐标。
+   * @param w 宽度。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ drawHline(x : number, y : number, w : number) : TRet  {
+    return canvas_draw_hline(this != null ? (this.nativeObj || this) : null, x, y, w);
+ }
+
+
+  /**
+   * 填充矩形。
+   * 
+   * @param x x坐标。
+   * @param y y坐标。
+   * @param w 宽度。
+   * @param h 高度。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ fillRect(x : number, y : number, w : number, h : number) : TRet  {
+    return canvas_fill_rect(this != null ? (this.nativeObj || this) : null, x, y, w, h);
+ }
+
+
+  /**
+   * 绘制矩形。
+   * 
+   * @param x x坐标。
+   * @param y y坐标。
+   * @param w 宽度。
+   * @param h 高度。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ strokeRect(x : number, y : number, w : number, h : number) : TRet  {
+    return canvas_stroke_rect(this != null ? (this.nativeObj || this) : null, x, y, w, h);
+ }
+
+
+  /**
+   * 设置字体。
+   * 
+   * @param name 字体名称。
+   * @param size 字体大小。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setFont(name : string, size : number) : TRet  {
+    return canvas_set_font(this != null ? (this.nativeObj || this) : null, name, size);
+ }
+
+
+  /**
+   * 计算文本所占的宽度。
+   *
+   *> 供脚本语言使用。
+   * 
+   * @param str 字符串。
+   *
+   * @returns 返回文本所占的宽度。
+   */
+ measureText(str : string) : number  {
+    return canvas_measure_utf8(this != null ? (this.nativeObj || this) : null, str);
+ }
+
+
+  /**
+   * 绘制文本。
+   *
+   *> 供脚本语言使用。
+   * 
+   * @param str 字符串。
+   * @param x x坐标。
+   * @param y y坐标。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ drawText(str : string, x : number, y : number) : TRet  {
+    return canvas_draw_utf8(this != null ? (this.nativeObj || this) : null, str, x, y);
+ }
+
+
+  /**
+   * 绘制文本。
+   *
+   *> 供脚本语言使用。
+   * 
+   * @param str 字符串。
+   * @param r 矩形区域。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ drawTextInRect(str : string, r : TRect) : TRet  {
+    return canvas_draw_utf8_in_rect(this != null ? (this.nativeObj || this) : null, str, r != null ? (r.nativeObj || r) : null);
+ }
+
+
+  /**
+   * 绘制图标。
+   * 
+   * @param img 图片对象。
+   * @param cx 中心点x坐标。
+   * @param cy 中心点y坐标。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ drawIcon(img : TBitmap, cx : number, cy : number) : TRet  {
+    return canvas_draw_icon(this != null ? (this.nativeObj || this) : null, img != null ? (img.nativeObj || img) : null, cx, cy);
+ }
+
+
+  /**
+   * 绘制图片。
+   * 
+   * @param img 图片对象。
+   * @param src 源区域。
+   * @param dst 目的区域。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ drawImage(img : TBitmap, src : TRect, dst : TRect) : TRet  {
+    return canvas_draw_image(this != null ? (this.nativeObj || this) : null, img != null ? (img.nativeObj || img) : null, src != null ? (src.nativeObj || src) : null, dst != null ? (dst.nativeObj || dst) : null);
+ }
+
+
+  /**
+   * 绘制图片。
+   * 
+   * @param img 图片对象。
+   * @param draw_type 绘制类型。
+   * @param dst 目的区域。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ drawImageEx(img : TBitmap, draw_type : TImageDrawType, dst : TRect) : TRet  {
+    return canvas_draw_image_ex(this != null ? (this.nativeObj || this) : null, img != null ? (img.nativeObj || img) : null, draw_type, dst != null ? (dst.nativeObj || dst) : null);
+ }
+
+
+  /**
+   * 获取vgcanvas对象。
+   * 
+   *
+   * @returns 返回vgcanvas对象。
+   */
+ getVgcanvas() : TVgcanvas  {
+    return new TVgcanvas(canvas_get_vgcanvas(this != null ? (this.nativeObj || this) : null));
+ }
+
+
+  /**
+   * 转换为canvas对象(供脚本语言使用)。
+   * 
+   * @param c canvas对象。
+   *
+   * @returns canvas对象。
+   */
+ static cast(c : TCanvas) : TCanvas  {
+    return new TCanvas(canvas_cast(c != null ? (c.nativeObj || c) : null));
+ }
+
+
+  /**
+   * 释放相关资源。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ reset() : TRet  {
+    return canvas_reset(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * x坐标偏移。
+   *
+   */
+ get ox() : number {
+   return canvas_t_get_prop_ox(this.nativeObj);
+ }
+
+
+  /**
+   * y坐标偏移。
+   *
+   */
+ get oy() : number {
+   return canvas_t_get_prop_oy(this.nativeObj);
+ }
+
+
+  /**
+   * 当前字体名称。
+   *
+   */
+ get fontName() : string {
+   return canvas_t_get_prop_font_name(this.nativeObj);
+ }
+
+
+  /**
+   * 当前字体大小。
+   *
+   */
+ get fontSize() : number {
+   return canvas_t_get_prop_font_size(this.nativeObj);
+ }
+
+
+  /**
+   * 当前全局alpha。
+   *
+   */
+ get globalAlpha() : number {
+   return canvas_t_get_prop_global_alpha(this.nativeObj);
+ }
+
+ set globalAlpha(v : number) {
+   this.setGlobalAlpha(v);
+ }
+
+};
 /**
  * 缓动作动画常量定义。
  *
@@ -11387,6 +11444,45 @@ export class TDateTime {
    */
  fromTime(time : number) : TRet  {
     return date_time_from_time(this != null ? (this.nativeObj || this) : null, time);
+ }
+
+
+  /**
+   * 是否是闰年。
+   * 
+   * @param year 年份。
+   *
+   * @returns 返回TRUE表示是，否则表示否。
+   */
+ static isLeap(year : number) : boolean  {
+    return date_time_is_leap(year);
+ }
+
+
+  /**
+   * 获取指定年份月份的天数。
+   * 
+   * @param year 年份。
+   * @param montn 月份(1-12)。
+   *
+   * @returns 返回大于0表示天数，否则表示失败。
+   */
+ static getDays(year : number, montn : number) : number  {
+    return date_time_get_days(year, montn);
+ }
+
+
+  /**
+   * 获取指定日期是周几(0-6)。
+   * 
+   * @param year 年份。
+   * @param montn 月份(1-12)。
+   * @param day 日(1-31)。
+   *
+   * @returns 返回大于等于0表示周几(0-6)，否则表示失败。
+   */
+ static getWday(year : number, montn : number, day : number) : number  {
+    return date_time_get_wday(year, montn, day);
  }
 
 

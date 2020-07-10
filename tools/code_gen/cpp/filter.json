@@ -2359,6 +2359,27 @@
     "level": 1
   },
   {
+    "type": "enum",
+    "desc": "剪切板数据类型定义。",
+    "consts": [
+      {
+        "desc": "无数据。",
+        "name": "CLIP_BOARD_DATA_TYPE_NONE"
+      },
+      {
+        "desc": "UTF8文本。",
+        "name": "CLIP_BOARD_DATA_TYPE_TEXT"
+      }
+    ],
+    "header": "base/clip_board.h",
+    "name": "clip_board_data_type_t",
+    "prefix": "CLIP_BOARD_DATA_TYPE_",
+    "annotation": {
+      "scriptable": true
+    },
+    "level": 1
+  },
+  {
     "type": "class",
     "methods": [
       {
@@ -10012,6 +10033,85 @@
   },
   {
     "type": "enum",
+    "desc": "bidi 类型常量定义。",
+    "consts": [
+      {
+        "desc": "自动检查。",
+        "name": "BIDI_TYPE_AUTO"
+      },
+      {
+        "desc": "Left-To-Right letter。",
+        "name": "BIDI_TYPE_LTR"
+      },
+      {
+        "desc": "Right-To-Left letter。",
+        "name": "BIDI_TYPE_RTL"
+      },
+      {
+        "desc": "Weak Left To Right paragraph。",
+        "name": "BIDI_TYPE_WLTR"
+      },
+      {
+        "desc": "Weak Right To Left paragraph。",
+        "name": "BIDI_TYPE_WRTL"
+      }
+    ],
+    "header": "base/bidi.h",
+    "name": "bidi_type_t",
+    "prefix": "BIDI_TYPE_",
+    "annotation": {
+      "scriptable": true
+    },
+    "level": 1
+  },
+  {
+    "type": "enum",
+    "desc": "对象常见命令定义",
+    "consts": [
+      {
+        "desc": "保存命令",
+        "name": "OBJECT_CMD_SAVE"
+      },
+      {
+        "desc": "重新加载命令",
+        "name": "OBJECT_CMD_RELOAD"
+      },
+      {
+        "desc": "和前一个属性交换位置\n>参数为属性的名称或路径。",
+        "name": "OBJECT_CMD_MOVE_UP"
+      },
+      {
+        "desc": "和后一个属性交换位置\n>参数为属性的名称或路径。",
+        "name": "OBJECT_CMD_MOVE_DOWN"
+      },
+      {
+        "desc": "删除属性。\n>参数为属性的名称或路径。",
+        "name": "OBJECT_CMD_REMOVE"
+      },
+      {
+        "desc": "清除全部属性。\n>参数为属性的名称或路径。",
+        "name": "OBJECT_CMD_CLEAR"
+      },
+      {
+        "desc": "增加子项。\n>参数为属性的名称或路径。",
+        "name": "OBJECT_CMD_ADD"
+      },
+      {
+        "desc": "编辑子项。\n>参数为属性的名称或路径。",
+        "name": "OBJECT_CMD_EDIT"
+      }
+    ],
+    "header": "tkc/object.h",
+    "name": "object_cmd_t",
+    "prefix": "OBJECT_CMD_",
+    "annotation": {
+      "scriptable": true,
+      "string": true
+    },
+    "level": 1
+  },
+  {
+    "type": "enum",
     "desc": "图片绘制方法常量定义。",
     "consts": [
       {
@@ -10098,6 +10198,628 @@
     "header": "base/bitmap.h",
     "name": "image_draw_type_t",
     "prefix": "IMAGE_DRAW_",
+    "annotation": {
+      "scriptable": true
+    },
+    "level": 1
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [],
+        "annotation": {
+          "constructor": true,
+          "scriptable": true,
+          "gc": true
+        },
+        "desc": "创建named_value对象。",
+        "name": "named_value_create",
+        "return": {
+          "type": "named_value_t*",
+          "desc": "返回named_value对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_t*",
+            "name": "nv",
+            "desc": "named_value对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
+        "desc": "转换为named_value对象(供脚本语言使用)。",
+        "name": "named_value_cast",
+        "return": {
+          "type": "named_value_t*",
+          "desc": "返回named_value对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_t*",
+            "name": "nv",
+            "desc": "named_value对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "名称。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置名称。",
+        "name": "named_value_set_name",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_t*",
+            "name": "nv",
+            "desc": "named_value对象。"
+          },
+          {
+            "type": "const value_t*",
+            "name": "value",
+            "desc": "值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置值。",
+        "name": "named_value_set_value",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_t*",
+            "name": "nv",
+            "desc": "named_value对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取值对象(主要给脚本语言使用)。",
+        "name": "named_value_get_value",
+        "return": {
+          "type": "value_t*",
+          "desc": "返回值对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_t*",
+            "name": "nv",
+            "desc": "named_value对象。"
+          }
+        ],
+        "annotation": {
+          "deconstructor": true,
+          "scriptable": true,
+          "gc": true
+        },
+        "desc": "销毁named_value对象。",
+        "name": "named_value_destroy",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [
+      {
+        "name": "name",
+        "desc": "名称。",
+        "type": "char*",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      }
+    ],
+    "header": "tkc/named_value.h",
+    "desc": "命名的值。",
+    "name": "named_value_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "level": 1
+  },
+  {
+    "type": "enum",
+    "desc": "MIME_TYPE。",
+    "consts": [
+      {
+        "desc": "\"application/envoy\"。",
+        "name": "MIME_TYPE_APPLICATION_ENVOY"
+      },
+      {
+        "desc": "\"application/fractals\"。",
+        "name": "MIME_TYPE_APPLICATION_FRACTALS"
+      },
+      {
+        "desc": "\"application/futuresplash\"。",
+        "name": "MIME_TYPE_APPLICATION_FUTURESPLASH"
+      },
+      {
+        "desc": "\"application/hta\"。",
+        "name": "MIME_TYPE_APPLICATION_HTA"
+      },
+      {
+        "desc": "\"application/json\"。",
+        "name": "MIME_TYPE_APPLICATION_JSON"
+      },
+      {
+        "desc": "\"application/ubjson\"。",
+        "name": "MIME_TYPE_APPLICATION_UBJSON"
+      },
+      {
+        "desc": "\"application/mac-binhex40\"。",
+        "name": "MIME_TYPE_APPLICATION_MAC_BINHEX40"
+      },
+      {
+        "desc": "\"application/msword\"。",
+        "name": "MIME_TYPE_APPLICATION_MSWORD"
+      },
+      {
+        "desc": "\"application/octet-stream\"。",
+        "name": "MIME_TYPE_APPLICATION_OCTET_STREAM"
+      },
+      {
+        "desc": "\"application/oda\"。",
+        "name": "MIME_TYPE_APPLICATION_ODA"
+      },
+      {
+        "desc": "\"application/olescript\"。",
+        "name": "MIME_TYPE_APPLICATION_OLESCRIPT"
+      },
+      {
+        "desc": "\"application/pdf\"。",
+        "name": "MIME_TYPE_APPLICATION_PDF"
+      },
+      {
+        "desc": "\"application/pics-rules\"。",
+        "name": "MIME_TYPE_APPLICATION_PICS_RULES"
+      },
+      {
+        "desc": "\"application/pkcs10\"。",
+        "name": "MIME_TYPE_APPLICATION_PKCS10"
+      },
+      {
+        "desc": "\"application/pkix-crl\"。",
+        "name": "MIME_TYPE_APPLICATION_PKIX_CRL"
+      },
+      {
+        "desc": "\"application/postscript\"。",
+        "name": "MIME_TYPE_APPLICATION_POSTSCRIPT"
+      },
+      {
+        "desc": "\"application/rtf\"。",
+        "name": "MIME_TYPE_APPLICATION_RTF"
+      },
+      {
+        "desc": "\"application/vnd.ms-excel\"。",
+        "name": "MIME_TYPE_APPLICATION_VND_MS_EXCEL"
+      },
+      {
+        "desc": "\"application/vnd.ms-outlook\"。",
+        "name": "MIME_TYPE_APPLICATION_VND_MS_OUTLOOK"
+      },
+      {
+        "desc": "\"application/vnd.ms-pkicertstore\"。",
+        "name": "MIME_TYPE_APPLICATION_VND_MS_PKICERTSTORE"
+      },
+      {
+        "desc": "\"application/vnd.ms-pkiseccat\"。",
+        "name": "MIME_TYPE_APPLICATION_VND_MS_PKISECCAT"
+      },
+      {
+        "desc": "\"application/vnd.ms-pkistl\"。",
+        "name": "MIME_TYPE_APPLICATION_VND_MS_PKISTL"
+      },
+      {
+        "desc": "\"application/vnd.ms-powerpoint\"。",
+        "name": "MIME_TYPE_APPLICATION_VND_MS_POWERPOINT"
+      },
+      {
+        "desc": "\"application/vnd.ms-project\"。",
+        "name": "MIME_TYPE_APPLICATION_VND_MS_PROJECT"
+      },
+      {
+        "desc": "\"application/vnd.ms-works\"。",
+        "name": "MIME_TYPE_APPLICATION_VND_MS_WORKS"
+      },
+      {
+        "desc": "\"application/winhlp\"。",
+        "name": "MIME_TYPE_APPLICATION_WINHLP"
+      },
+      {
+        "desc": "\"application/x-bcpio\"。",
+        "name": "MIME_TYPE_APPLICATION_X_BCPIO"
+      },
+      {
+        "desc": "\"application/x-cdf\"。",
+        "name": "MIME_TYPE_APPLICATION_X_CDF"
+      },
+      {
+        "desc": "\"application/x-compress\"。",
+        "name": "MIME_TYPE_APPLICATION_X_COMPRESS"
+      },
+      {
+        "desc": "\"application/x-compressed\"。",
+        "name": "MIME_TYPE_APPLICATION_X_COMPRESSED"
+      },
+      {
+        "desc": "\"application/x-cpio\"。",
+        "name": "MIME_TYPE_APPLICATION_X_CPIO"
+      },
+      {
+        "desc": "\"application/x-csh\"。",
+        "name": "MIME_TYPE_APPLICATION_X_CSH"
+      },
+      {
+        "desc": "\"application/x-director\"。",
+        "name": "MIME_TYPE_APPLICATION_X_DIRECTOR"
+      },
+      {
+        "desc": "\"application/x-dvi\"。",
+        "name": "MIME_TYPE_APPLICATION_X_DVI"
+      },
+      {
+        "desc": "\"application/x-gtar\"。",
+        "name": "MIME_TYPE_APPLICATION_X_GTAR"
+      },
+      {
+        "desc": "\"application/x-gzip\"。",
+        "name": "MIME_TYPE_APPLICATION_X_GZIP"
+      },
+      {
+        "desc": "\"application/x-hdf\"。",
+        "name": "MIME_TYPE_APPLICATION_X_HDF"
+      },
+      {
+        "desc": "\"application/x-iphone\"。",
+        "name": "MIME_TYPE_APPLICATION_X_IPHONE"
+      },
+      {
+        "desc": "\"application/x-javascript\"。",
+        "name": "MIME_TYPE_APPLICATION_X_JAVASCRIPT"
+      },
+      {
+        "desc": "\"application/x-latex\"。",
+        "name": "MIME_TYPE_APPLICATION_X_LATEX"
+      },
+      {
+        "desc": "\"application/x-msaccess\"。",
+        "name": "MIME_TYPE_APPLICATION_X_MSACCESS"
+      },
+      {
+        "desc": "\"application/x-mscardfile\"。",
+        "name": "MIME_TYPE_APPLICATION_X_MSCARDFILE"
+      },
+      {
+        "desc": "\"application/x-msclip\"。",
+        "name": "MIME_TYPE_APPLICATION_X_MSCLIP"
+      },
+      {
+        "desc": "\"application/x-msdownload\"。",
+        "name": "MIME_TYPE_APPLICATION_X_MSDOWNLOAD"
+      },
+      {
+        "desc": "\"application/x-msmediaview\"。",
+        "name": "MIME_TYPE_APPLICATION_X_MSMEDIAVIEW"
+      },
+      {
+        "desc": "\"application/x-msmetafile\"。",
+        "name": "MIME_TYPE_APPLICATION_X_MSMETAFILE"
+      },
+      {
+        "desc": "\"application/x-msmoney\"。",
+        "name": "MIME_TYPE_APPLICATION_X_MSMONEY"
+      },
+      {
+        "desc": "\"application/x-mspublisher\"。",
+        "name": "MIME_TYPE_APPLICATION_X_MSPUBLISHER"
+      },
+      {
+        "desc": "\"application/x-msschedule\"。",
+        "name": "MIME_TYPE_APPLICATION_X_MSSCHEDULE"
+      },
+      {
+        "desc": "\"application/x-msterminal\"。",
+        "name": "MIME_TYPE_APPLICATION_X_MSTERMINAL"
+      },
+      {
+        "desc": "\"application/x-mswrite\"。",
+        "name": "MIME_TYPE_APPLICATION_X_MSWRITE"
+      },
+      {
+        "desc": "\"application/x-netcdf\"。",
+        "name": "MIME_TYPE_APPLICATION_X_NETCDF"
+      },
+      {
+        "desc": "\"application/x-perfmon\"。",
+        "name": "MIME_TYPE_APPLICATION_X_PERFMON"
+      },
+      {
+        "desc": "\"application/x-pkcs12\"。",
+        "name": "MIME_TYPE_APPLICATION_X_PKCS12"
+      },
+      {
+        "desc": "\"application/x-sh\"。",
+        "name": "MIME_TYPE_APPLICATION_X_SH"
+      },
+      {
+        "desc": "\"application/x-shar\"。",
+        "name": "MIME_TYPE_APPLICATION_X_SHAR"
+      },
+      {
+        "desc": "\"application/x-shockwave-flash\"。",
+        "name": "MIME_TYPE_APPLICATION_X_SHOCKWAVE_FLASH"
+      },
+      {
+        "desc": "\"application/x-stuffit\"。",
+        "name": "MIME_TYPE_APPLICATION_X_STUFFIT"
+      },
+      {
+        "desc": "\"application/x-sv4cpio\"。",
+        "name": "MIME_TYPE_APPLICATION_X_SV4CPIO"
+      },
+      {
+        "desc": "\"application/x-sv4crc\"。",
+        "name": "MIME_TYPE_APPLICATION_X_SV4CRC"
+      },
+      {
+        "desc": "\"application/x-tar\"。",
+        "name": "MIME_TYPE_APPLICATION_X_TAR"
+      },
+      {
+        "desc": "\"application/x-tcl\"。",
+        "name": "MIME_TYPE_APPLICATION_X_TCL"
+      },
+      {
+        "desc": "\"application/x-tex\"。",
+        "name": "MIME_TYPE_APPLICATION_X_TEX"
+      },
+      {
+        "desc": "\"application/x-texinfo\"。",
+        "name": "MIME_TYPE_APPLICATION_X_TEXINFO"
+      },
+      {
+        "desc": "\"application/x-troff\"。",
+        "name": "MIME_TYPE_APPLICATION_X_TROFF"
+      },
+      {
+        "desc": "\"application/x-ustar\"。",
+        "name": "MIME_TYPE_APPLICATION_X_USTAR"
+      },
+      {
+        "desc": "\"application/zip\"。",
+        "name": "MIME_TYPE_APPLICATION_ZIP"
+      },
+      {
+        "desc": "\"audio/basic\"。",
+        "name": "MIME_TYPE_AUDIO_BASIC"
+      },
+      {
+        "desc": "\"audio/mid\"。",
+        "name": "MIME_TYPE_AUDIO_MID"
+      },
+      {
+        "desc": "\"audio/mpeg\"。",
+        "name": "MIME_TYPE_AUDIO_MPEG"
+      },
+      {
+        "desc": "\"audio/x-aiff\"。",
+        "name": "MIME_TYPE_AUDIO_X_AIFF"
+      },
+      {
+        "desc": "\"audio/x-mpegurl\"。",
+        "name": "MIME_TYPE_AUDIO_X_MPEGURL"
+      },
+      {
+        "desc": "\"audio/x-wav\"。",
+        "name": "MIME_TYPE_AUDIO_X_WAV"
+      },
+      {
+        "desc": "\"image/bmp\"。",
+        "name": "MIME_TYPE_IMAGE_BMP"
+      },
+      {
+        "desc": "\"image/cis-cod\"。",
+        "name": "MIME_TYPE_IMAGE_CIS_COD"
+      },
+      {
+        "desc": "\"image/gif\"。",
+        "name": "MIME_TYPE_IMAGE_GIF"
+      },
+      {
+        "desc": "\"image/ief\"。",
+        "name": "MIME_TYPE_IMAGE_IEF"
+      },
+      {
+        "desc": "\"image/jpeg\"。",
+        "name": "MIME_TYPE_IMAGE_JPEG"
+      },
+      {
+        "desc": "\"image/pipeg\"。",
+        "name": "MIME_TYPE_IMAGE_PIPEG"
+      },
+      {
+        "desc": "\"image/svg+xml\"。",
+        "name": "MIME_TYPE_IMAGE_SVG_XML"
+      },
+      {
+        "desc": "\"image/tiff\"。",
+        "name": "MIME_TYPE_IMAGE_TIFF"
+      },
+      {
+        "desc": "\"image/x-cmx\"。",
+        "name": "MIME_TYPE_IMAGE_X_CMX"
+      },
+      {
+        "desc": "\"image/x-icon\"。",
+        "name": "MIME_TYPE_IMAGE_X_ICON"
+      },
+      {
+        "desc": "\"image/x-rgb\"。",
+        "name": "MIME_TYPE_IMAGE_X_RGB"
+      },
+      {
+        "desc": "\"image/x-xbitmap\"。",
+        "name": "MIME_TYPE_IMAGE_X_XBITMAP"
+      },
+      {
+        "desc": "\"image/x-xpixmap\"。",
+        "name": "MIME_TYPE_IMAGE_X_XPIXMAP"
+      },
+      {
+        "desc": "\"image/x-xwindowdump\"。",
+        "name": "MIME_TYPE_IMAGE_X_XWINDOWDUMP"
+      },
+      {
+        "desc": "\"message/rfc822\"。",
+        "name": "MIME_TYPE_MESSAGE_RFC822"
+      },
+      {
+        "desc": "\"text/css\"。",
+        "name": "MIME_TYPE_TEXT_CSS"
+      },
+      {
+        "desc": "\"text/h323\"。",
+        "name": "MIME_TYPE_TEXT_H323"
+      },
+      {
+        "desc": "\"text/html\"。",
+        "name": "MIME_TYPE_TEXT_HTML"
+      },
+      {
+        "desc": "\"text/iuls\"。",
+        "name": "MIME_TYPE_TEXT_IULS"
+      },
+      {
+        "desc": "\"text/plain\"。",
+        "name": "MIME_TYPE_TEXT_PLAIN"
+      },
+      {
+        "desc": "\"text/richtext\"。",
+        "name": "MIME_TYPE_TEXT_RICHTEXT"
+      },
+      {
+        "desc": "\"text/scriptlet\"。",
+        "name": "MIME_TYPE_TEXT_SCRIPTLET"
+      },
+      {
+        "desc": "\"text/webviewhtml\"。",
+        "name": "MIME_TYPE_TEXT_WEBVIEWHTML"
+      },
+      {
+        "desc": "\"text/x-component\"。",
+        "name": "MIME_TYPE_TEXT_X_COMPONENT"
+      },
+      {
+        "desc": "\"text/x-setext\"。",
+        "name": "MIME_TYPE_TEXT_X_SETEXT"
+      },
+      {
+        "desc": "\"text/x-vcard\"。",
+        "name": "MIME_TYPE_TEXT_X_VCARD"
+      },
+      {
+        "desc": "\"video/mpeg\"。",
+        "name": "MIME_TYPE_VIDEO_MPEG"
+      },
+      {
+        "desc": "\"video/quicktime\"。",
+        "name": "MIME_TYPE_VIDEO_QUICKTIME"
+      },
+      {
+        "desc": "\"video/x-msvideo\"。",
+        "name": "MIME_TYPE_VIDEO_X_MSVIDEO"
+      }
+    ],
+    "header": "tkc/mime_types.h",
+    "name": "MIME_TYPE",
+    "prefix": "MIME_TYPE_",
+    "annotation": {
+      "scriptable": true,
+      "string": true
+    },
+    "level": 1
+  },
+  {
+    "type": "enum",
+    "desc": "指示器默认绘制的类型。",
+    "consts": [
+      {
+        "desc": "自动选择。",
+        "name": "INDICATOR_DEFAULT_PAINT_AUTO"
+      },
+      {
+        "desc": "实心圆点指示器，当前项填充selected_fg_color，其他填充fg_color。",
+        "name": "INDICATOR_DEFAULT_PAINT_FILL_DOT"
+      },
+      {
+        "desc": "镂空圆点指示器，当前项填充selected_fg_color，其他镂空fg_color。",
+        "name": "INDICATOR_DEFAULT_PAINT_STROKE_DOT"
+      },
+      {
+        "desc": "实心矩形指示器，当前项填充selected_fg_color，其他填充fg_color。",
+        "name": "INDICATOR_DEFAULT_PAINT_FILL_RECT"
+      },
+      {
+        "desc": "镂空矩形指示器，当前项填充selected_fg_color，其他镂空fg_color。",
+        "name": "INDICATOR_DEFAULT_PAINT_STROKE_RECT"
+      }
+    ],
+    "header": "slide_view/slide_indicator.h",
+    "name": "indicator_default_paint_t",
+    "prefix": "INDICATOR_DEFAULT_PAINT_",
+    "annotation": {
+      "scriptable": true
+    },
+    "level": 1
+  },
+  {
+    "type": "class",
+    "methods": [],
+    "events": [],
+    "properties": [],
+    "header": "tkc/idle_manager.h",
+    "desc": "idle_manager_t管理器。",
+    "name": "idle_manager_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "level": 1
+  },
+  {
+    "type": "class",
+    "methods": [],
+    "events": [],
+    "properties": [],
+    "header": "base/canvas_offline.h",
+    "desc": "离线画布 canvas。",
+    "name": "canvas_offline_t",
     "annotation": {
       "scriptable": true
     },
@@ -10837,682 +11559,6 @@
   },
   {
     "type": "enum",
-    "desc": "对象常见命令定义",
-    "consts": [
-      {
-        "desc": "保存命令",
-        "name": "OBJECT_CMD_SAVE"
-      },
-      {
-        "desc": "重新加载命令",
-        "name": "OBJECT_CMD_RELOAD"
-      },
-      {
-        "desc": "和前一个属性交换位置\n>参数为属性的名称或路径。",
-        "name": "OBJECT_CMD_MOVE_UP"
-      },
-      {
-        "desc": "和后一个属性交换位置\n>参数为属性的名称或路径。",
-        "name": "OBJECT_CMD_MOVE_DOWN"
-      },
-      {
-        "desc": "删除属性。\n>参数为属性的名称或路径。",
-        "name": "OBJECT_CMD_REMOVE"
-      },
-      {
-        "desc": "清除全部属性。\n>参数为属性的名称或路径。",
-        "name": "OBJECT_CMD_CLEAR"
-      },
-      {
-        "desc": "增加子项。\n>参数为属性的名称或路径。",
-        "name": "OBJECT_CMD_ADD"
-      },
-      {
-        "desc": "编辑子项。\n>参数为属性的名称或路径。",
-        "name": "OBJECT_CMD_EDIT"
-      }
-    ],
-    "header": "tkc/object.h",
-    "name": "object_cmd_t",
-    "prefix": "OBJECT_CMD_",
-    "annotation": {
-      "scriptable": true,
-      "string": true
-    },
-    "level": 1
-  },
-  {
-    "type": "class",
-    "methods": [
-      {
-        "params": [],
-        "annotation": {
-          "constructor": true,
-          "scriptable": true,
-          "gc": true
-        },
-        "desc": "创建named_value对象。",
-        "name": "named_value_create",
-        "return": {
-          "type": "named_value_t*",
-          "desc": "返回named_value对象。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "named_value_t*",
-            "name": "nv",
-            "desc": "named_value对象。"
-          }
-        ],
-        "annotation": {
-          "cast": true,
-          "scriptable": true
-        },
-        "desc": "转换为named_value对象(供脚本语言使用)。",
-        "name": "named_value_cast",
-        "return": {
-          "type": "named_value_t*",
-          "desc": "返回named_value对象。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "named_value_t*",
-            "name": "nv",
-            "desc": "named_value对象。"
-          },
-          {
-            "type": "const char*",
-            "name": "name",
-            "desc": "名称。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "设置名称。",
-        "name": "named_value_set_name",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "named_value_t*",
-            "name": "nv",
-            "desc": "named_value对象。"
-          },
-          {
-            "type": "const value_t*",
-            "name": "value",
-            "desc": "值。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "设置值。",
-        "name": "named_value_set_value",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "named_value_t*",
-            "name": "nv",
-            "desc": "named_value对象。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "获取值对象(主要给脚本语言使用)。",
-        "name": "named_value_get_value",
-        "return": {
-          "type": "value_t*",
-          "desc": "返回值对象。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "named_value_t*",
-            "name": "nv",
-            "desc": "named_value对象。"
-          }
-        ],
-        "annotation": {
-          "deconstructor": true,
-          "scriptable": true,
-          "gc": true
-        },
-        "desc": "销毁named_value对象。",
-        "name": "named_value_destroy",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      }
-    ],
-    "events": [],
-    "properties": [
-      {
-        "name": "name",
-        "desc": "名称。",
-        "type": "char*",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      }
-    ],
-    "header": "tkc/named_value.h",
-    "desc": "命名的值。",
-    "name": "named_value_t",
-    "annotation": {
-      "scriptable": true
-    },
-    "level": 1
-  },
-  {
-    "type": "enum",
-    "desc": "MIME_TYPE。",
-    "consts": [
-      {
-        "desc": "\"application/envoy\"。",
-        "name": "MIME_TYPE_APPLICATION_ENVOY"
-      },
-      {
-        "desc": "\"application/fractals\"。",
-        "name": "MIME_TYPE_APPLICATION_FRACTALS"
-      },
-      {
-        "desc": "\"application/futuresplash\"。",
-        "name": "MIME_TYPE_APPLICATION_FUTURESPLASH"
-      },
-      {
-        "desc": "\"application/hta\"。",
-        "name": "MIME_TYPE_APPLICATION_HTA"
-      },
-      {
-        "desc": "\"application/json\"。",
-        "name": "MIME_TYPE_APPLICATION_JSON"
-      },
-      {
-        "desc": "\"application/ubjson\"。",
-        "name": "MIME_TYPE_APPLICATION_UBJSON"
-      },
-      {
-        "desc": "\"application/mac-binhex40\"。",
-        "name": "MIME_TYPE_APPLICATION_MAC_BINHEX40"
-      },
-      {
-        "desc": "\"application/msword\"。",
-        "name": "MIME_TYPE_APPLICATION_MSWORD"
-      },
-      {
-        "desc": "\"application/octet-stream\"。",
-        "name": "MIME_TYPE_APPLICATION_OCTET_STREAM"
-      },
-      {
-        "desc": "\"application/oda\"。",
-        "name": "MIME_TYPE_APPLICATION_ODA"
-      },
-      {
-        "desc": "\"application/olescript\"。",
-        "name": "MIME_TYPE_APPLICATION_OLESCRIPT"
-      },
-      {
-        "desc": "\"application/pdf\"。",
-        "name": "MIME_TYPE_APPLICATION_PDF"
-      },
-      {
-        "desc": "\"application/pics-rules\"。",
-        "name": "MIME_TYPE_APPLICATION_PICS_RULES"
-      },
-      {
-        "desc": "\"application/pkcs10\"。",
-        "name": "MIME_TYPE_APPLICATION_PKCS10"
-      },
-      {
-        "desc": "\"application/pkix-crl\"。",
-        "name": "MIME_TYPE_APPLICATION_PKIX_CRL"
-      },
-      {
-        "desc": "\"application/postscript\"。",
-        "name": "MIME_TYPE_APPLICATION_POSTSCRIPT"
-      },
-      {
-        "desc": "\"application/rtf\"。",
-        "name": "MIME_TYPE_APPLICATION_RTF"
-      },
-      {
-        "desc": "\"application/vnd.ms-excel\"。",
-        "name": "MIME_TYPE_APPLICATION_VND_MS_EXCEL"
-      },
-      {
-        "desc": "\"application/vnd.ms-outlook\"。",
-        "name": "MIME_TYPE_APPLICATION_VND_MS_OUTLOOK"
-      },
-      {
-        "desc": "\"application/vnd.ms-pkicertstore\"。",
-        "name": "MIME_TYPE_APPLICATION_VND_MS_PKICERTSTORE"
-      },
-      {
-        "desc": "\"application/vnd.ms-pkiseccat\"。",
-        "name": "MIME_TYPE_APPLICATION_VND_MS_PKISECCAT"
-      },
-      {
-        "desc": "\"application/vnd.ms-pkistl\"。",
-        "name": "MIME_TYPE_APPLICATION_VND_MS_PKISTL"
-      },
-      {
-        "desc": "\"application/vnd.ms-powerpoint\"。",
-        "name": "MIME_TYPE_APPLICATION_VND_MS_POWERPOINT"
-      },
-      {
-        "desc": "\"application/vnd.ms-project\"。",
-        "name": "MIME_TYPE_APPLICATION_VND_MS_PROJECT"
-      },
-      {
-        "desc": "\"application/vnd.ms-works\"。",
-        "name": "MIME_TYPE_APPLICATION_VND_MS_WORKS"
-      },
-      {
-        "desc": "\"application/winhlp\"。",
-        "name": "MIME_TYPE_APPLICATION_WINHLP"
-      },
-      {
-        "desc": "\"application/x-bcpio\"。",
-        "name": "MIME_TYPE_APPLICATION_X_BCPIO"
-      },
-      {
-        "desc": "\"application/x-cdf\"。",
-        "name": "MIME_TYPE_APPLICATION_X_CDF"
-      },
-      {
-        "desc": "\"application/x-compress\"。",
-        "name": "MIME_TYPE_APPLICATION_X_COMPRESS"
-      },
-      {
-        "desc": "\"application/x-compressed\"。",
-        "name": "MIME_TYPE_APPLICATION_X_COMPRESSED"
-      },
-      {
-        "desc": "\"application/x-cpio\"。",
-        "name": "MIME_TYPE_APPLICATION_X_CPIO"
-      },
-      {
-        "desc": "\"application/x-csh\"。",
-        "name": "MIME_TYPE_APPLICATION_X_CSH"
-      },
-      {
-        "desc": "\"application/x-director\"。",
-        "name": "MIME_TYPE_APPLICATION_X_DIRECTOR"
-      },
-      {
-        "desc": "\"application/x-dvi\"。",
-        "name": "MIME_TYPE_APPLICATION_X_DVI"
-      },
-      {
-        "desc": "\"application/x-gtar\"。",
-        "name": "MIME_TYPE_APPLICATION_X_GTAR"
-      },
-      {
-        "desc": "\"application/x-gzip\"。",
-        "name": "MIME_TYPE_APPLICATION_X_GZIP"
-      },
-      {
-        "desc": "\"application/x-hdf\"。",
-        "name": "MIME_TYPE_APPLICATION_X_HDF"
-      },
-      {
-        "desc": "\"application/x-iphone\"。",
-        "name": "MIME_TYPE_APPLICATION_X_IPHONE"
-      },
-      {
-        "desc": "\"application/x-javascript\"。",
-        "name": "MIME_TYPE_APPLICATION_X_JAVASCRIPT"
-      },
-      {
-        "desc": "\"application/x-latex\"。",
-        "name": "MIME_TYPE_APPLICATION_X_LATEX"
-      },
-      {
-        "desc": "\"application/x-msaccess\"。",
-        "name": "MIME_TYPE_APPLICATION_X_MSACCESS"
-      },
-      {
-        "desc": "\"application/x-mscardfile\"。",
-        "name": "MIME_TYPE_APPLICATION_X_MSCARDFILE"
-      },
-      {
-        "desc": "\"application/x-msclip\"。",
-        "name": "MIME_TYPE_APPLICATION_X_MSCLIP"
-      },
-      {
-        "desc": "\"application/x-msdownload\"。",
-        "name": "MIME_TYPE_APPLICATION_X_MSDOWNLOAD"
-      },
-      {
-        "desc": "\"application/x-msmediaview\"。",
-        "name": "MIME_TYPE_APPLICATION_X_MSMEDIAVIEW"
-      },
-      {
-        "desc": "\"application/x-msmetafile\"。",
-        "name": "MIME_TYPE_APPLICATION_X_MSMETAFILE"
-      },
-      {
-        "desc": "\"application/x-msmoney\"。",
-        "name": "MIME_TYPE_APPLICATION_X_MSMONEY"
-      },
-      {
-        "desc": "\"application/x-mspublisher\"。",
-        "name": "MIME_TYPE_APPLICATION_X_MSPUBLISHER"
-      },
-      {
-        "desc": "\"application/x-msschedule\"。",
-        "name": "MIME_TYPE_APPLICATION_X_MSSCHEDULE"
-      },
-      {
-        "desc": "\"application/x-msterminal\"。",
-        "name": "MIME_TYPE_APPLICATION_X_MSTERMINAL"
-      },
-      {
-        "desc": "\"application/x-mswrite\"。",
-        "name": "MIME_TYPE_APPLICATION_X_MSWRITE"
-      },
-      {
-        "desc": "\"application/x-netcdf\"。",
-        "name": "MIME_TYPE_APPLICATION_X_NETCDF"
-      },
-      {
-        "desc": "\"application/x-perfmon\"。",
-        "name": "MIME_TYPE_APPLICATION_X_PERFMON"
-      },
-      {
-        "desc": "\"application/x-pkcs12\"。",
-        "name": "MIME_TYPE_APPLICATION_X_PKCS12"
-      },
-      {
-        "desc": "\"application/x-sh\"。",
-        "name": "MIME_TYPE_APPLICATION_X_SH"
-      },
-      {
-        "desc": "\"application/x-shar\"。",
-        "name": "MIME_TYPE_APPLICATION_X_SHAR"
-      },
-      {
-        "desc": "\"application/x-shockwave-flash\"。",
-        "name": "MIME_TYPE_APPLICATION_X_SHOCKWAVE_FLASH"
-      },
-      {
-        "desc": "\"application/x-stuffit\"。",
-        "name": "MIME_TYPE_APPLICATION_X_STUFFIT"
-      },
-      {
-        "desc": "\"application/x-sv4cpio\"。",
-        "name": "MIME_TYPE_APPLICATION_X_SV4CPIO"
-      },
-      {
-        "desc": "\"application/x-sv4crc\"。",
-        "name": "MIME_TYPE_APPLICATION_X_SV4CRC"
-      },
-      {
-        "desc": "\"application/x-tar\"。",
-        "name": "MIME_TYPE_APPLICATION_X_TAR"
-      },
-      {
-        "desc": "\"application/x-tcl\"。",
-        "name": "MIME_TYPE_APPLICATION_X_TCL"
-      },
-      {
-        "desc": "\"application/x-tex\"。",
-        "name": "MIME_TYPE_APPLICATION_X_TEX"
-      },
-      {
-        "desc": "\"application/x-texinfo\"。",
-        "name": "MIME_TYPE_APPLICATION_X_TEXINFO"
-      },
-      {
-        "desc": "\"application/x-troff\"。",
-        "name": "MIME_TYPE_APPLICATION_X_TROFF"
-      },
-      {
-        "desc": "\"application/x-ustar\"。",
-        "name": "MIME_TYPE_APPLICATION_X_USTAR"
-      },
-      {
-        "desc": "\"application/zip\"。",
-        "name": "MIME_TYPE_APPLICATION_ZIP"
-      },
-      {
-        "desc": "\"audio/basic\"。",
-        "name": "MIME_TYPE_AUDIO_BASIC"
-      },
-      {
-        "desc": "\"audio/mid\"。",
-        "name": "MIME_TYPE_AUDIO_MID"
-      },
-      {
-        "desc": "\"audio/mpeg\"。",
-        "name": "MIME_TYPE_AUDIO_MPEG"
-      },
-      {
-        "desc": "\"audio/x-aiff\"。",
-        "name": "MIME_TYPE_AUDIO_X_AIFF"
-      },
-      {
-        "desc": "\"audio/x-mpegurl\"。",
-        "name": "MIME_TYPE_AUDIO_X_MPEGURL"
-      },
-      {
-        "desc": "\"audio/x-wav\"。",
-        "name": "MIME_TYPE_AUDIO_X_WAV"
-      },
-      {
-        "desc": "\"image/bmp\"。",
-        "name": "MIME_TYPE_IMAGE_BMP"
-      },
-      {
-        "desc": "\"image/cis-cod\"。",
-        "name": "MIME_TYPE_IMAGE_CIS_COD"
-      },
-      {
-        "desc": "\"image/gif\"。",
-        "name": "MIME_TYPE_IMAGE_GIF"
-      },
-      {
-        "desc": "\"image/ief\"。",
-        "name": "MIME_TYPE_IMAGE_IEF"
-      },
-      {
-        "desc": "\"image/jpeg\"。",
-        "name": "MIME_TYPE_IMAGE_JPEG"
-      },
-      {
-        "desc": "\"image/pipeg\"。",
-        "name": "MIME_TYPE_IMAGE_PIPEG"
-      },
-      {
-        "desc": "\"image/svg+xml\"。",
-        "name": "MIME_TYPE_IMAGE_SVG_XML"
-      },
-      {
-        "desc": "\"image/tiff\"。",
-        "name": "MIME_TYPE_IMAGE_TIFF"
-      },
-      {
-        "desc": "\"image/x-cmx\"。",
-        "name": "MIME_TYPE_IMAGE_X_CMX"
-      },
-      {
-        "desc": "\"image/x-icon\"。",
-        "name": "MIME_TYPE_IMAGE_X_ICON"
-      },
-      {
-        "desc": "\"image/x-rgb\"。",
-        "name": "MIME_TYPE_IMAGE_X_RGB"
-      },
-      {
-        "desc": "\"image/x-xbitmap\"。",
-        "name": "MIME_TYPE_IMAGE_X_XBITMAP"
-      },
-      {
-        "desc": "\"image/x-xpixmap\"。",
-        "name": "MIME_TYPE_IMAGE_X_XPIXMAP"
-      },
-      {
-        "desc": "\"image/x-xwindowdump\"。",
-        "name": "MIME_TYPE_IMAGE_X_XWINDOWDUMP"
-      },
-      {
-        "desc": "\"message/rfc822\"。",
-        "name": "MIME_TYPE_MESSAGE_RFC822"
-      },
-      {
-        "desc": "\"text/css\"。",
-        "name": "MIME_TYPE_TEXT_CSS"
-      },
-      {
-        "desc": "\"text/h323\"。",
-        "name": "MIME_TYPE_TEXT_H323"
-      },
-      {
-        "desc": "\"text/html\"。",
-        "name": "MIME_TYPE_TEXT_HTML"
-      },
-      {
-        "desc": "\"text/iuls\"。",
-        "name": "MIME_TYPE_TEXT_IULS"
-      },
-      {
-        "desc": "\"text/plain\"。",
-        "name": "MIME_TYPE_TEXT_PLAIN"
-      },
-      {
-        "desc": "\"text/richtext\"。",
-        "name": "MIME_TYPE_TEXT_RICHTEXT"
-      },
-      {
-        "desc": "\"text/scriptlet\"。",
-        "name": "MIME_TYPE_TEXT_SCRIPTLET"
-      },
-      {
-        "desc": "\"text/webviewhtml\"。",
-        "name": "MIME_TYPE_TEXT_WEBVIEWHTML"
-      },
-      {
-        "desc": "\"text/x-component\"。",
-        "name": "MIME_TYPE_TEXT_X_COMPONENT"
-      },
-      {
-        "desc": "\"text/x-setext\"。",
-        "name": "MIME_TYPE_TEXT_X_SETEXT"
-      },
-      {
-        "desc": "\"text/x-vcard\"。",
-        "name": "MIME_TYPE_TEXT_X_VCARD"
-      },
-      {
-        "desc": "\"video/mpeg\"。",
-        "name": "MIME_TYPE_VIDEO_MPEG"
-      },
-      {
-        "desc": "\"video/quicktime\"。",
-        "name": "MIME_TYPE_VIDEO_QUICKTIME"
-      },
-      {
-        "desc": "\"video/x-msvideo\"。",
-        "name": "MIME_TYPE_VIDEO_X_MSVIDEO"
-      }
-    ],
-    "header": "tkc/mime_types.h",
-    "name": "MIME_TYPE",
-    "prefix": "MIME_TYPE_",
-    "annotation": {
-      "scriptable": true,
-      "string": true
-    },
-    "level": 1
-  },
-  {
-    "type": "enum",
-    "desc": "指示器默认绘制的类型。",
-    "consts": [
-      {
-        "desc": "自动选择。",
-        "name": "INDICATOR_DEFAULT_PAINT_AUTO"
-      },
-      {
-        "desc": "实心圆点指示器，当前项填充selected_fg_color，其他填充fg_color。",
-        "name": "INDICATOR_DEFAULT_PAINT_FILL_DOT"
-      },
-      {
-        "desc": "镂空圆点指示器，当前项填充selected_fg_color，其他镂空fg_color。",
-        "name": "INDICATOR_DEFAULT_PAINT_STROKE_DOT"
-      },
-      {
-        "desc": "实心矩形指示器，当前项填充selected_fg_color，其他填充fg_color。",
-        "name": "INDICATOR_DEFAULT_PAINT_FILL_RECT"
-      },
-      {
-        "desc": "镂空矩形指示器，当前项填充selected_fg_color，其他镂空fg_color。",
-        "name": "INDICATOR_DEFAULT_PAINT_STROKE_RECT"
-      }
-    ],
-    "header": "slide_view/slide_indicator.h",
-    "name": "indicator_default_paint_t",
-    "prefix": "INDICATOR_DEFAULT_PAINT_",
-    "annotation": {
-      "scriptable": true
-    },
-    "level": 1
-  },
-  {
-    "type": "class",
-    "methods": [],
-    "events": [],
-    "properties": [],
-    "header": "tkc/idle_manager.h",
-    "desc": "idle_manager_t管理器。",
-    "name": "idle_manager_t",
-    "annotation": {
-      "scriptable": true
-    },
-    "level": 1
-  },
-  {
-    "type": "enum",
-    "desc": "剪切板数据类型定义。",
-    "consts": [
-      {
-        "desc": "无数据。",
-        "name": "CLIP_BOARD_DATA_TYPE_NONE"
-      },
-      {
-        "desc": "UTF8文本。",
-        "name": "CLIP_BOARD_DATA_TYPE_TEXT"
-      }
-    ],
-    "header": "base/clip_board.h",
-    "name": "clip_board_data_type_t",
-    "prefix": "CLIP_BOARD_DATA_TYPE_",
-    "annotation": {
-      "scriptable": true
-    },
-    "level": 1
-  },
-  {
-    "type": "enum",
     "desc": "缓动作动画常量定义。",
     "consts": [
       {
@@ -11676,6 +11722,78 @@
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "uint32_t",
+            "name": "year",
+            "desc": "年份。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true,
+          "static": true
+        },
+        "desc": "是否是闰年。",
+        "name": "date_time_is_leap",
+        "return": {
+          "type": "bool_t",
+          "desc": "返回TRUE表示是，否则表示否。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "uint32_t",
+            "name": "year",
+            "desc": "年份。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "montn",
+            "desc": "月份(1-12)。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true,
+          "static": true
+        },
+        "desc": "获取指定年份月份的天数。",
+        "name": "date_time_get_days",
+        "return": {
+          "type": "int32_t",
+          "desc": "返回大于0表示天数，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "uint32_t",
+            "name": "year",
+            "desc": "年份。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "montn",
+            "desc": "月份(1-12)。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "day",
+            "desc": "日(1-31)。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true,
+          "static": true
+        },
+        "desc": "获取指定日期是周几(0-6)。",
+        "name": "date_time_get_wday",
+        "return": {
+          "type": "int32_t",
+          "desc": "返回大于等于0表示周几(0-6)，否则表示失败。"
         }
       },
       {
