@@ -4933,6 +4933,14 @@ int awtk_TWidgetProp_WIDGET_PROP_DIRTY_RECT_TOLERANCE(Runtime *runtime, JClass *
   return 0;
 }
 
+int awtk_TWidgetProp_WIDGET_PROP_BIDI(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_str(&ctx, (char*)(WIDGET_PROP_BIDI));
+
+  return 0;
+}
+
 int awtk_TWidgetProp_WIDGET_PROP_CANVAS(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -8455,6 +8463,22 @@ int awtk_TBidiType_BIDI_TYPE_RTL(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   jni_ctx_return_int(&ctx, (int32_t)(BIDI_TYPE_RTL));
+
+  return 0;
+}
+
+int awtk_TBidiType_BIDI_TYPE_LRO(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(BIDI_TYPE_LRO));
+
+  return 0;
+}
+
+int awtk_TBidiType_BIDI_TYPE_RLO(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(BIDI_TYPE_RLO));
 
   return 0;
 }
@@ -18570,6 +18594,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidgetProp",  "WIDGET_PROP_CARET_X",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_CARET_X},
 {"awtk/TWidgetProp",  "WIDGET_PROP_CARET_Y",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_CARET_Y},
 {"awtk/TWidgetProp",  "WIDGET_PROP_DIRTY_RECT_TOLERANCE",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_DIRTY_RECT_TOLERANCE},
+{"awtk/TWidgetProp",  "WIDGET_PROP_BIDI",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_BIDI},
 {"awtk/TWidgetProp",  "WIDGET_PROP_CANVAS",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_CANVAS},
 {"awtk/TWidgetProp",  "WIDGET_PROP_LOCALIZE_OPTIONS",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_LOCALIZE_OPTIONS},
 {"awtk/TWidgetProp",  "WIDGET_PROP_NATIVE_WINDOW",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_NATIVE_WINDOW},
@@ -18956,6 +18981,8 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TBidiType",  "BIDI_TYPE_AUTO",  "()I",  awtk_TBidiType_BIDI_TYPE_AUTO},
 {"awtk/TBidiType",  "BIDI_TYPE_LTR",  "()I",  awtk_TBidiType_BIDI_TYPE_LTR},
 {"awtk/TBidiType",  "BIDI_TYPE_RTL",  "()I",  awtk_TBidiType_BIDI_TYPE_RTL},
+{"awtk/TBidiType",  "BIDI_TYPE_LRO",  "()I",  awtk_TBidiType_BIDI_TYPE_LRO},
+{"awtk/TBidiType",  "BIDI_TYPE_RLO",  "()I",  awtk_TBidiType_BIDI_TYPE_RLO},
 {"awtk/TBidiType",  "BIDI_TYPE_WLTR",  "()I",  awtk_TBidiType_BIDI_TYPE_WLTR},
 {"awtk/TBidiType",  "BIDI_TYPE_WRTL",  "()I",  awtk_TBidiType_BIDI_TYPE_WRTL},
 {"awtk/TObjectCmd",  "OBJECT_CMD_SAVE",  "()Ljava/lang/String;",  awtk_TObjectCmd_OBJECT_CMD_SAVE},

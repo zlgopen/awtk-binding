@@ -4780,6 +4780,10 @@ static void widget_prop_t_init(lua_State* L) {
   lua_pushstring(L, WIDGET_PROP_DIRTY_RECT_TOLERANCE);
   lua_settable(L, -3); 
 
+  lua_pushstring(L, "BIDI");
+  lua_pushstring(L, WIDGET_PROP_BIDI);
+  lua_settable(L, -3); 
+
   lua_pushstring(L, "CANVAS");
   lua_pushstring(L, WIDGET_PROP_CANVAS);
   lua_settable(L, -3); 
@@ -7255,6 +7259,14 @@ static void bidi_type_t_init(lua_State* L) {
 
   lua_pushstring(L, "RTL");
   lua_pushinteger(L, BIDI_TYPE_RTL);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "LRO");
+  lua_pushinteger(L, BIDI_TYPE_LRO);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "RLO");
+  lua_pushinteger(L, BIDI_TYPE_RLO);
   lua_settable(L, -3); 
 
   lua_pushstring(L, "WLTR");

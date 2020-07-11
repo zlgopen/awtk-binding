@@ -3349,6 +3349,11 @@ JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1DIRTY_1RECT_1TOLER
   return (*env)->NewStringUTF(env, WIDGET_PROP_DIRTY_RECT_TOLERANCE);
 }
 
+JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1BIDI(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, WIDGET_PROP_BIDI);
+}
+
 JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1CANVAS(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (*env)->NewStringUTF(env, WIDGET_PROP_CANVAS);
@@ -5674,6 +5679,16 @@ JNIEXPORT jint JNICALL Java_awtk_TBidiType_BIDI_1TYPE_1LTR(JNIEnv* env,  jclass 
 JNIEXPORT jint JNICALL Java_awtk_TBidiType_BIDI_1TYPE_1RTL(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (jint)(BIDI_TYPE_RTL);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TBidiType_BIDI_1TYPE_1LRO(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(BIDI_TYPE_LRO);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TBidiType_BIDI_1TYPE_1RLO(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(BIDI_TYPE_RLO);
 }
 
 JNIEXPORT jint JNICALL Java_awtk_TBidiType_BIDI_1TYPE_1WLTR(JNIEnv* env,  jclass ajc) {/*const*/

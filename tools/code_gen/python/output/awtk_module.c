@@ -4085,6 +4085,10 @@ pyobject_t get_WIDGET_PROP_DIRTY_RECT_TOLERANCE(pyobject_t self, pyobject_t pyar
   return Py_BuildValue("s", WIDGET_PROP_DIRTY_RECT_TOLERANCE);
 }
 
+pyobject_t get_WIDGET_PROP_BIDI(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", WIDGET_PROP_BIDI);
+}
+
 pyobject_t get_WIDGET_PROP_CANVAS(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("s", WIDGET_PROP_CANVAS);
 }
@@ -6732,6 +6736,14 @@ pyobject_t get_BIDI_TYPE_LTR(pyobject_t self, pyobject_t pyargs) {
 
 pyobject_t get_BIDI_TYPE_RTL(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", BIDI_TYPE_RTL);
+}
+
+pyobject_t get_BIDI_TYPE_LRO(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("i", BIDI_TYPE_LRO);
+}
+
+pyobject_t get_BIDI_TYPE_RLO(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("i", BIDI_TYPE_RLO);
 }
 
 pyobject_t get_BIDI_TYPE_WLTR(pyobject_t self, pyobject_t pyargs) {
@@ -17551,6 +17563,7 @@ static PyMethodDef awtk_methods[] = {
 {"WIDGET_PROP_CARET_X", get_WIDGET_PROP_CARET_X, METH_VARARGS, "WIDGET_PROP_CARET_X"},
 {"WIDGET_PROP_CARET_Y", get_WIDGET_PROP_CARET_Y, METH_VARARGS, "WIDGET_PROP_CARET_Y"},
 {"WIDGET_PROP_DIRTY_RECT_TOLERANCE", get_WIDGET_PROP_DIRTY_RECT_TOLERANCE, METH_VARARGS, "WIDGET_PROP_DIRTY_RECT_TOLERANCE"},
+{"WIDGET_PROP_BIDI", get_WIDGET_PROP_BIDI, METH_VARARGS, "WIDGET_PROP_BIDI"},
 {"WIDGET_PROP_CANVAS", get_WIDGET_PROP_CANVAS, METH_VARARGS, "WIDGET_PROP_CANVAS"},
 {"WIDGET_PROP_LOCALIZE_OPTIONS", get_WIDGET_PROP_LOCALIZE_OPTIONS, METH_VARARGS, "WIDGET_PROP_LOCALIZE_OPTIONS"},
 {"WIDGET_PROP_NATIVE_WINDOW", get_WIDGET_PROP_NATIVE_WINDOW, METH_VARARGS, "WIDGET_PROP_NATIVE_WINDOW"},
@@ -17937,6 +17950,8 @@ static PyMethodDef awtk_methods[] = {
 {"BIDI_TYPE_AUTO", get_BIDI_TYPE_AUTO, METH_VARARGS, "BIDI_TYPE_AUTO"},
 {"BIDI_TYPE_LTR", get_BIDI_TYPE_LTR, METH_VARARGS, "BIDI_TYPE_LTR"},
 {"BIDI_TYPE_RTL", get_BIDI_TYPE_RTL, METH_VARARGS, "BIDI_TYPE_RTL"},
+{"BIDI_TYPE_LRO", get_BIDI_TYPE_LRO, METH_VARARGS, "BIDI_TYPE_LRO"},
+{"BIDI_TYPE_RLO", get_BIDI_TYPE_RLO, METH_VARARGS, "BIDI_TYPE_RLO"},
 {"BIDI_TYPE_WLTR", get_BIDI_TYPE_WLTR, METH_VARARGS, "BIDI_TYPE_WLTR"},
 {"BIDI_TYPE_WRTL", get_BIDI_TYPE_WRTL, METH_VARARGS, "BIDI_TYPE_WRTL"},
 {"OBJECT_CMD_SAVE", get_OBJECT_CMD_SAVE, METH_VARARGS, "OBJECT_CMD_SAVE"},

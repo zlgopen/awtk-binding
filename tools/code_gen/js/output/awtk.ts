@@ -534,6 +534,7 @@ declare function WIDGET_PROP_H();
 declare function WIDGET_PROP_CARET_X();
 declare function WIDGET_PROP_CARET_Y();
 declare function WIDGET_PROP_DIRTY_RECT_TOLERANCE();
+declare function WIDGET_PROP_BIDI();
 declare function WIDGET_PROP_CANVAS();
 declare function WIDGET_PROP_LOCALIZE_OPTIONS();
 declare function WIDGET_PROP_NATIVE_WINDOW();
@@ -920,6 +921,8 @@ declare function time_now_ms() : number;
 declare function BIDI_TYPE_AUTO();
 declare function BIDI_TYPE_LTR();
 declare function BIDI_TYPE_RTL();
+declare function BIDI_TYPE_LRO();
+declare function BIDI_TYPE_RLO();
 declare function BIDI_TYPE_WLTR();
 declare function BIDI_TYPE_WRTL();
 declare function OBJECT_CMD_SAVE();
@@ -6710,6 +6713,12 @@ export enum TWidgetProp {
  DIRTY_RECT_TOLERANCE = WIDGET_PROP_DIRTY_RECT_TOLERANCE(),
 
   /**
+   * bidi type(rtl,ltr,auto,wrtl,wltr,lro,rlo)。
+   *
+   */
+ BIDI = WIDGET_PROP_BIDI(),
+
+  /**
    * Canvas。
    *
    */
@@ -9865,6 +9874,18 @@ export enum TBidiType {
    *
    */
  RTL = BIDI_TYPE_RTL(),
+
+  /**
+   * Left-To-Right letter Override。
+   *
+   */
+ LRO = BIDI_TYPE_LRO(),
+
+  /**
+   * Right-To-Left letter Override。
+   *
+   */
+ RLO = BIDI_TYPE_RLO(),
 
   /**
    * Weak Left To Right paragraph。

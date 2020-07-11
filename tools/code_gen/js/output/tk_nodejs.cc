@@ -6291,6 +6291,14 @@ static void get_WIDGET_PROP_DIRTY_RECT_TOLERANCE(const Nan::FunctionCallbackInfo
   (void)argc;(void)ctx;
 }
 
+static void get_WIDGET_PROP_BIDI(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  v8::Local<v8::String> jret= Nan::New((const char*)WIDGET_PROP_BIDI).ToLocalChecked();
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
 static void get_WIDGET_PROP_CANVAS(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -7300,6 +7308,7 @@ ret_t widget_prop_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "WIDGET_PROP_CARET_X", get_WIDGET_PROP_CARET_X);
   Nan::Export(ctx, "WIDGET_PROP_CARET_Y", get_WIDGET_PROP_CARET_Y);
   Nan::Export(ctx, "WIDGET_PROP_DIRTY_RECT_TOLERANCE", get_WIDGET_PROP_DIRTY_RECT_TOLERANCE);
+  Nan::Export(ctx, "WIDGET_PROP_BIDI", get_WIDGET_PROP_BIDI);
   Nan::Export(ctx, "WIDGET_PROP_CANVAS", get_WIDGET_PROP_CANVAS);
   Nan::Export(ctx, "WIDGET_PROP_LOCALIZE_OPTIONS", get_WIDGET_PROP_LOCALIZE_OPTIONS);
   Nan::Export(ctx, "WIDGET_PROP_NATIVE_WINDOW", get_WIDGET_PROP_NATIVE_WINDOW);
@@ -10602,6 +10611,22 @@ static void get_BIDI_TYPE_RTL(const Nan::FunctionCallbackInfo<v8::Value>& argv) 
   (void)argc;(void)ctx;
 }
 
+static void get_BIDI_TYPE_LRO(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)BIDI_TYPE_LRO);
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
+static void get_BIDI_TYPE_RLO(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)BIDI_TYPE_RLO);
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
 static void get_BIDI_TYPE_WLTR(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -10622,6 +10647,8 @@ ret_t bidi_type_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "BIDI_TYPE_AUTO", get_BIDI_TYPE_AUTO);
   Nan::Export(ctx, "BIDI_TYPE_LTR", get_BIDI_TYPE_LTR);
   Nan::Export(ctx, "BIDI_TYPE_RTL", get_BIDI_TYPE_RTL);
+  Nan::Export(ctx, "BIDI_TYPE_LRO", get_BIDI_TYPE_LRO);
+  Nan::Export(ctx, "BIDI_TYPE_RLO", get_BIDI_TYPE_RLO);
   Nan::Export(ctx, "BIDI_TYPE_WLTR", get_BIDI_TYPE_WLTR);
   Nan::Export(ctx, "BIDI_TYPE_WRTL", get_BIDI_TYPE_WRTL);
 

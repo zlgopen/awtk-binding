@@ -4678,6 +4678,12 @@ class TWidgetProp:
   DIRTY_RECT_TOLERANCE = WIDGET_PROP_DIRTY_RECT_TOLERANCE();
 
   #
+  # bidi type(rtl,ltr,auto,wrtl,wltr,lro,rlo)。
+  #
+  #
+  BIDI = WIDGET_PROP_BIDI();
+
+  #
   # Canvas。
   #
   #
@@ -7733,6 +7739,18 @@ class TBidiType:
   #
   #
   RTL = BIDI_TYPE_RTL();
+
+  #
+  # Left-To-Right letter Override。
+  #
+  #
+  LRO = BIDI_TYPE_LRO();
+
+  #
+  # Right-To-Left letter Override。
+  #
+  #
+  RLO = BIDI_TYPE_RLO();
 
   #
   # Weak Left To Right paragraph。

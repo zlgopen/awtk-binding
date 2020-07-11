@@ -6235,6 +6235,10 @@
         "name": "WIDGET_PROP_DIRTY_RECT_TOLERANCE"
       },
       {
+        "desc": "bidi type(rtl,ltr,auto,wrtl,wltr,lro,rlo)。",
+        "name": "WIDGET_PROP_BIDI"
+      },
+      {
         "desc": "Canvas。",
         "name": "WIDGET_PROP_CANVAS"
       },
@@ -10046,6 +10050,14 @@
       {
         "desc": "Right-To-Left letter。",
         "name": "BIDI_TYPE_RTL"
+      },
+      {
+        "desc": "Left-To-Right letter Override。",
+        "name": "BIDI_TYPE_LRO"
+      },
+      {
+        "desc": "Right-To-Left letter Override。",
+        "name": "BIDI_TYPE_RLO"
       },
       {
         "desc": "Weak Left To Right paragraph。",

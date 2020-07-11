@@ -7784,6 +7784,15 @@ jsvalue_t get_WIDGET_PROP_DIRTY_RECT_TOLERANCE(
   return jsvalue_create_string(ctx, WIDGET_PROP_DIRTY_RECT_TOLERANCE);
 }
 
+jsvalue_t get_WIDGET_PROP_BIDI(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, WIDGET_PROP_BIDI);
+}
+
 jsvalue_t get_WIDGET_PROP_CANVAS(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -8927,6 +8936,8 @@ ret_t widget_prop_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_WIDGET_PROP_CARET_Y, "WIDGET_PROP_CARET_Y", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_DIRTY_RECT_TOLERANCE",
                       JS_NewCFunction(ctx, get_WIDGET_PROP_DIRTY_RECT_TOLERANCE, "WIDGET_PROP_DIRTY_RECT_TOLERANCE", 1));
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_BIDI",
+                      JS_NewCFunction(ctx, get_WIDGET_PROP_BIDI, "WIDGET_PROP_BIDI", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_CANVAS",
                       JS_NewCFunction(ctx, get_WIDGET_PROP_CANVAS, "WIDGET_PROP_CANVAS", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_LOCALIZE_OPTIONS",
@@ -13122,6 +13133,24 @@ jsvalue_t get_BIDI_TYPE_RTL(
   return jsvalue_create_int(ctx, BIDI_TYPE_RTL);
 }
 
+jsvalue_t get_BIDI_TYPE_LRO(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, BIDI_TYPE_LRO);
+}
+
+jsvalue_t get_BIDI_TYPE_RLO(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, BIDI_TYPE_RLO);
+}
+
 jsvalue_t get_BIDI_TYPE_WLTR(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -13148,6 +13177,10 @@ ret_t bidi_type_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_BIDI_TYPE_LTR, "BIDI_TYPE_LTR", 1));
   JS_SetPropertyStr(ctx, global_obj, "BIDI_TYPE_RTL",
                       JS_NewCFunction(ctx, get_BIDI_TYPE_RTL, "BIDI_TYPE_RTL", 1));
+  JS_SetPropertyStr(ctx, global_obj, "BIDI_TYPE_LRO",
+                      JS_NewCFunction(ctx, get_BIDI_TYPE_LRO, "BIDI_TYPE_LRO", 1));
+  JS_SetPropertyStr(ctx, global_obj, "BIDI_TYPE_RLO",
+                      JS_NewCFunction(ctx, get_BIDI_TYPE_RLO, "BIDI_TYPE_RLO", 1));
   JS_SetPropertyStr(ctx, global_obj, "BIDI_TYPE_WLTR",
                       JS_NewCFunction(ctx, get_BIDI_TYPE_WLTR, "BIDI_TYPE_WLTR", 1));
   JS_SetPropertyStr(ctx, global_obj, "BIDI_TYPE_WRTL",
