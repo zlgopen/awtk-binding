@@ -99,6 +99,10 @@
    return bitmap_destroy(((bitmap_t*)(this->nativeObj)));
  }
 
+ uint32_t TBitmap::GetBppOfFormat()  {
+    return bitmap_get_bpp_of_format(((bitmap_format_t)(this->nativeObj)));
+ }
+
  wh_t TBitmap::GetW() const {
    return ((bitmap_t*)(this->nativeObj))->w;
  }
@@ -1067,6 +1071,54 @@
    return widget_unref(((widget_t*)(this->nativeObj)));
  }
 
+ ret_t TWidget::IsKeyboard()  {
+   return widget_is_keyboard(((widget_t*)(this->nativeObj)));
+ }
+
+ ret_t TWidget::StrokeBorderRect(TCanvas& c, TRect& r)  {
+   return widget_stroke_border_rect(((widget_t*)(this->nativeObj)), ((canvas_t*)(c.nativeObj)), ((rect_t*)(r.nativeObj)));
+ }
+
+ ret_t TWidget::FillBgRect(TCanvas& c, TRect& r, image_draw_type_t draw_type)  {
+   return widget_fill_bg_rect(((widget_t*)(this->nativeObj)), ((canvas_t*)(c.nativeObj)), ((rect_t*)(r.nativeObj)), draw_type);
+ }
+
+ ret_t TWidget::FillFgRect(TCanvas& c, TRect& r, image_draw_type_t draw_type)  {
+   return widget_fill_fg_rect(((widget_t*)(this->nativeObj)), ((canvas_t*)(c.nativeObj)), ((rect_t*)(r.nativeObj)), draw_type);
+ }
+
+ ret_t TWidget::DispatchToTarget(TEvent& e)  {
+   return widget_dispatch_to_target(((widget_t*)(this->nativeObj)), ((event_t*)(e.nativeObj)));
+ }
+
+ ret_t TWidget::DispatchToKeyTarget(TEvent& e)  {
+   return widget_dispatch_to_key_target(((widget_t*)(this->nativeObj)), ((event_t*)(e.nativeObj)));
+ }
+
+ ret_t TWidget::UpdateStyle()  {
+   return widget_update_style(((widget_t*)(this->nativeObj)));
+ }
+
+ ret_t TWidget::UpdateStyleRecursive()  {
+   return widget_update_style_recursive(((widget_t*)(this->nativeObj)));
+ }
+
+ ret_t TWidget::SetAsKeyTarget()  {
+   return widget_set_as_key_target(((widget_t*)(this->nativeObj)));
+ }
+
+ ret_t TWidget::FocusNext()  {
+   return widget_focus_next(((widget_t*)(this->nativeObj)));
+ }
+
+ ret_t TWidget::FocusPrev()  {
+   return widget_focus_prev(((widget_t*)(this->nativeObj)));
+ }
+
+ const char* TWidget::GetStateForStyle(bool active, bool checked)  {
+    return widget_get_state_for_style(((widget_t*)(this->nativeObj)), active, checked);
+ }
+
  bool TWidget::IsSystemBar()  {
     return widget_is_system_bar(((widget_t*)(this->nativeObj)));
  }
@@ -1419,6 +1471,14 @@
     return date_time_get_wday(year, montn, day);
  }
 
+ const char* TDateTime::GetMonthName(uint32_t montn)  {
+    return date_time_get_month_name(montn);
+ }
+
+ const char* TDateTime::GetWdayName(uint32_t wday)  {
+    return date_time_get_wday_name(wday);
+ }
+
  ret_t TDateTime::Destroy()  {
    return date_time_destroy(((date_time_t*)(this->nativeObj)));
  }
@@ -1671,6 +1731,22 @@
    return ((time_clock_t*)(this->nativeObj))->second_anchor_y;
  }
 
+ int32_t TWheelEvent::GetDy() const {
+   return ((wheel_event_t*)(this->nativeObj))->dy;
+ }
+
+ bool TWheelEvent::GetAlt() const {
+   return ((wheel_event_t*)(this->nativeObj))->alt;
+ }
+
+ bool TWheelEvent::GetCtrl() const {
+   return ((wheel_event_t*)(this->nativeObj))->ctrl;
+ }
+
+ bool TWheelEvent::GetShift() const {
+   return ((wheel_event_t*)(this->nativeObj))->shift;
+ }
+
  TWidget TTextSelector::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TTextSelector((widget_t*)(text_selector_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
@@ -1729,22 +1805,6 @@
 
  char* TTextSelector::GetOptions() const {
    return ((text_selector_t*)(this->nativeObj))->options;
- }
-
- int32_t TWheelEvent::GetDy() const {
-   return ((wheel_event_t*)(this->nativeObj))->dy;
- }
-
- bool TWheelEvent::GetAlt() const {
-   return ((wheel_event_t*)(this->nativeObj))->alt;
- }
-
- bool TWheelEvent::GetCtrl() const {
-   return ((wheel_event_t*)(this->nativeObj))->ctrl;
- }
-
- bool TWheelEvent::GetShift() const {
-   return ((wheel_event_t*)(this->nativeObj))->shift;
  }
 
  TWidget TSwitch::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {

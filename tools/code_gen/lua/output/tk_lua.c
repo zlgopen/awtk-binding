@@ -189,10 +189,10 @@ static int wrap_cmd_exec_event_t_get_prop(lua_State* L);
 static int wrap_cmd_exec_event_t_set_prop(lua_State* L);
 static int wrap_time_clock_t_get_prop(lua_State* L);
 static int wrap_time_clock_t_set_prop(lua_State* L);
-static int wrap_text_selector_t_get_prop(lua_State* L);
-static int wrap_text_selector_t_set_prop(lua_State* L);
 static int wrap_wheel_event_t_get_prop(lua_State* L);
 static int wrap_wheel_event_t_set_prop(lua_State* L);
+static int wrap_text_selector_t_get_prop(lua_State* L);
+static int wrap_text_selector_t_set_prop(lua_State* L);
 static int wrap_switch_t_get_prop(lua_State* L);
 static int wrap_switch_t_set_prop(lua_State* L);
 static int wrap_view_t_get_prop(lua_State* L);
@@ -850,10 +850,21 @@ static int wrap_bitmap_destroy(lua_State* L) {
   return 1;
 }
 
+static int wrap_bitmap_get_bpp_of_format(lua_State* L) {
+  uint32_t ret = 0;
+  bitmap_format_t format = (bitmap_format_t)luaL_checkinteger(L, 1);
+  ret = (uint32_t)bitmap_get_bpp_of_format(format);
+
+  lua_pushinteger(L,(lua_Integer)(ret));
+
+  return 1;
+}
+
 
 static const struct luaL_Reg bitmap_t_member_funcs[] = {
   {"get_bpp", wrap_bitmap_get_bpp},
   {"destroy", wrap_bitmap_destroy},
+  {"get_bpp_of_format", wrap_bitmap_get_bpp_of_format},
   {NULL, NULL}
 };
 
@@ -6518,6 +6529,138 @@ static int wrap_widget_unref(lua_State* L) {
   return 1;
 }
 
+static int wrap_widget_is_keyboard(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  ret = (ret_t)widget_is_keyboard(widget);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_widget_stroke_border_rect(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  canvas_t* c = (canvas_t*)tk_checkudata(L, 2, "canvas_t");
+  rect_t* r = (rect_t*)tk_checkudata(L, 3, "rect_t");
+  ret = (ret_t)widget_stroke_border_rect(widget, c, r);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_widget_fill_bg_rect(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  canvas_t* c = (canvas_t*)tk_checkudata(L, 2, "canvas_t");
+  rect_t* r = (rect_t*)tk_checkudata(L, 3, "rect_t");
+  image_draw_type_t draw_type = (image_draw_type_t)luaL_checkinteger(L, 4);
+  ret = (ret_t)widget_fill_bg_rect(widget, c, r, draw_type);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_widget_fill_fg_rect(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  canvas_t* c = (canvas_t*)tk_checkudata(L, 2, "canvas_t");
+  rect_t* r = (rect_t*)tk_checkudata(L, 3, "rect_t");
+  image_draw_type_t draw_type = (image_draw_type_t)luaL_checkinteger(L, 4);
+  ret = (ret_t)widget_fill_fg_rect(widget, c, r, draw_type);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_widget_dispatch_to_target(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  event_t* e = (event_t*)tk_checkudata(L, 2, "event_t");
+  ret = (ret_t)widget_dispatch_to_target(widget, e);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_widget_dispatch_to_key_target(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  event_t* e = (event_t*)tk_checkudata(L, 2, "event_t");
+  ret = (ret_t)widget_dispatch_to_key_target(widget, e);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_widget_update_style(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  ret = (ret_t)widget_update_style(widget);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_widget_update_style_recursive(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  ret = (ret_t)widget_update_style_recursive(widget);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_widget_set_as_key_target(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  ret = (ret_t)widget_set_as_key_target(widget);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_widget_focus_next(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  ret = (ret_t)widget_focus_next(widget);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_widget_focus_prev(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  ret = (ret_t)widget_focus_prev(widget);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_widget_get_state_for_style(lua_State* L) {
+  const char* ret = NULL;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  bool_t active = (bool_t)lua_toboolean(L, 2);
+  bool_t checked = (bool_t)lua_toboolean(L, 3);
+  ret = (const char*)widget_get_state_for_style(widget, active, checked);
+
+  lua_pushstring(L,(char*)(ret));
+
+  return 1;
+}
+
 static int wrap_widget_is_system_bar(lua_State* L) {
   bool_t ret = 0;
   widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
@@ -6720,6 +6863,18 @@ static const struct luaL_Reg widget_t_member_funcs[] = {
   {"equal", wrap_widget_equal},
   {"destroy", wrap_widget_destroy},
   {"unref", wrap_widget_unref},
+  {"is_keyboard", wrap_widget_is_keyboard},
+  {"stroke_border_rect", wrap_widget_stroke_border_rect},
+  {"fill_bg_rect", wrap_widget_fill_bg_rect},
+  {"fill_fg_rect", wrap_widget_fill_fg_rect},
+  {"dispatch_to_target", wrap_widget_dispatch_to_target},
+  {"dispatch_to_key_target", wrap_widget_dispatch_to_key_target},
+  {"update_style", wrap_widget_update_style},
+  {"update_style_recursive", wrap_widget_update_style_recursive},
+  {"set_as_key_target", wrap_widget_set_as_key_target},
+  {"focus_next", wrap_widget_focus_next},
+  {"focus_prev", wrap_widget_focus_prev},
+  {"get_state_for_style", wrap_widget_get_state_for_style},
   {"is_system_bar", wrap_widget_is_system_bar},
   {"is_normal_window", wrap_widget_is_normal_window},
   {"is_dialog", wrap_widget_is_dialog},
@@ -7279,6 +7434,21 @@ static void bidi_type_t_init(lua_State* L) {
 
 }
 
+static void object_prop_t_init(lua_State* L) {
+  lua_newtable(L);
+  lua_setglobal(L, "ObjectProp");
+  lua_getglobal(L, "ObjectProp");
+
+  lua_pushstring(L, "SIZE");
+  lua_pushstring(L, OBJECT_PROP_SIZE);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "CHECKED");
+  lua_pushstring(L, OBJECT_PROP_CHECKED);
+  lua_settable(L, -3); 
+
+}
+
 static void object_cmd_t_init(lua_State* L) {
   lua_newtable(L);
   lua_setglobal(L, "ObjectCmd");
@@ -7302,6 +7472,10 @@ static void object_cmd_t_init(lua_State* L) {
 
   lua_pushstring(L, "REMOVE");
   lua_pushstring(L, OBJECT_CMD_REMOVE);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "REMOVE_CHECKED");
+  lua_pushstring(L, OBJECT_CMD_REMOVE_CHECKED);
   lua_settable(L, -3); 
 
   lua_pushstring(L, "CLEAR");
@@ -8616,6 +8790,26 @@ static int wrap_date_time_get_wday(lua_State* L) {
   return 1;
 }
 
+static int wrap_date_time_get_month_name(lua_State* L) {
+  const char* ret = NULL;
+  uint32_t montn = (uint32_t)luaL_checkinteger(L, 1);
+  ret = (const char*)date_time_get_month_name(montn);
+
+  lua_pushstring(L,(char*)(ret));
+
+  return 1;
+}
+
+static int wrap_date_time_get_wday_name(lua_State* L) {
+  const char* ret = NULL;
+  uint32_t wday = (uint32_t)luaL_checkinteger(L, 1);
+  ret = (const char*)date_time_get_wday_name(wday);
+
+  lua_pushstring(L,(char*)(ret));
+
+  return 1;
+}
+
 static int wrap_date_time_destroy(lua_State* L) {
   ret_t ret = 0;
   date_time_t* dt = (date_time_t*)tk_checkudata(L, 1, "date_time_t");
@@ -8701,6 +8895,8 @@ static void date_time_t_init(lua_State* L) {
     {"is_leap", wrap_date_time_is_leap},
     {"get_days", wrap_date_time_get_days},
     {"get_wday", wrap_date_time_get_wday},
+    {"get_month_name", wrap_date_time_get_month_name},
+    {"get_wday_name", wrap_date_time_get_wday_name},
     {NULL, NULL}
   };
 
@@ -9766,6 +9962,83 @@ static void time_clock_t_init(lua_State* L) {
   luaL_openlib(L, "TimeClock", static_funcs, 0);
   lua_settop(L, 0);
 }
+static int wrap_wheel_event_cast(lua_State* L) {
+  wheel_event_t* ret = NULL;
+  event_t* event = (event_t*)tk_checkudata(L, 1, "event_t");
+  ret = (wheel_event_t*)wheel_event_cast(event);
+
+  return tk_newuserdata(L, (void*)ret, "/wheel_event_t/event_t", "awtk.wheel_event_t");
+}
+
+
+static const struct luaL_Reg wheel_event_t_member_funcs[] = {
+  {NULL, NULL}
+};
+
+static int wrap_wheel_event_t_set_prop(lua_State* L) {
+  wheel_event_t* obj = (wheel_event_t*)tk_checkudata(L, 1, "wheel_event_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  (void)obj;
+  (void)name;
+    return wrap_event_t_set_prop(L);
+}
+
+static int wrap_wheel_event_t_get_prop(lua_State* L) {
+  wheel_event_t* obj = (wheel_event_t*)tk_checkudata(L, 1, "wheel_event_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  const luaL_Reg* ret = find_member(wheel_event_t_member_funcs, name);
+
+  (void)obj;
+  (void)name;
+  if(ret) {
+    lua_pushcfunction(L, ret->func);
+    return 1;
+  }
+  if(strcmp(name, "dy") == 0) {
+    lua_pushinteger(L,(lua_Integer)(obj->dy));
+
+  return 1;
+  }
+  else if(strcmp(name, "alt") == 0) {
+    lua_pushboolean(L,(lua_Integer)(obj->alt));
+
+  return 1;
+  }
+  else if(strcmp(name, "ctrl") == 0) {
+    lua_pushboolean(L,(lua_Integer)(obj->ctrl));
+
+  return 1;
+  }
+  else if(strcmp(name, "shift") == 0) {
+    lua_pushboolean(L,(lua_Integer)(obj->shift));
+
+  return 1;
+  }
+  else {
+    return wrap_event_t_get_prop(L);
+  }
+}
+
+static void wheel_event_t_init(lua_State* L) {
+  static const struct luaL_Reg static_funcs[] = {
+    {"cast", wrap_wheel_event_cast},
+    {NULL, NULL}
+  };
+
+  static const struct luaL_Reg index_funcs[] = {
+    {"__index", wrap_wheel_event_t_get_prop},
+    {"__newindex", wrap_wheel_event_t_set_prop},
+    {NULL, NULL}
+  };
+
+  luaL_newmetatable(L, "awtk.wheel_event_t");
+  lua_pushstring(L, "__index");
+  lua_pushvalue(L, -2);
+  lua_settable(L, -3);
+  luaL_openlib(L, NULL, index_funcs, 0);
+  luaL_openlib(L, "WheelEvent", static_funcs, 0);
+  lua_settop(L, 0);
+}
 static int wrap_text_selector_create(lua_State* L) {
   widget_t* ret = NULL;
   widget_t* parent = (widget_t*)tk_checkudata(L, 1, "widget_t");
@@ -9980,83 +10253,6 @@ static void text_selector_t_init(lua_State* L) {
   lua_settable(L, -3);
   luaL_openlib(L, NULL, index_funcs, 0);
   luaL_openlib(L, "TextSelector", static_funcs, 0);
-  lua_settop(L, 0);
-}
-static int wrap_wheel_event_cast(lua_State* L) {
-  wheel_event_t* ret = NULL;
-  event_t* event = (event_t*)tk_checkudata(L, 1, "event_t");
-  ret = (wheel_event_t*)wheel_event_cast(event);
-
-  return tk_newuserdata(L, (void*)ret, "/wheel_event_t/event_t", "awtk.wheel_event_t");
-}
-
-
-static const struct luaL_Reg wheel_event_t_member_funcs[] = {
-  {NULL, NULL}
-};
-
-static int wrap_wheel_event_t_set_prop(lua_State* L) {
-  wheel_event_t* obj = (wheel_event_t*)tk_checkudata(L, 1, "wheel_event_t");
-  const char* name = (const char*)luaL_checkstring(L, 2);
-  (void)obj;
-  (void)name;
-    return wrap_event_t_set_prop(L);
-}
-
-static int wrap_wheel_event_t_get_prop(lua_State* L) {
-  wheel_event_t* obj = (wheel_event_t*)tk_checkudata(L, 1, "wheel_event_t");
-  const char* name = (const char*)luaL_checkstring(L, 2);
-  const luaL_Reg* ret = find_member(wheel_event_t_member_funcs, name);
-
-  (void)obj;
-  (void)name;
-  if(ret) {
-    lua_pushcfunction(L, ret->func);
-    return 1;
-  }
-  if(strcmp(name, "dy") == 0) {
-    lua_pushinteger(L,(lua_Integer)(obj->dy));
-
-  return 1;
-  }
-  else if(strcmp(name, "alt") == 0) {
-    lua_pushboolean(L,(lua_Integer)(obj->alt));
-
-  return 1;
-  }
-  else if(strcmp(name, "ctrl") == 0) {
-    lua_pushboolean(L,(lua_Integer)(obj->ctrl));
-
-  return 1;
-  }
-  else if(strcmp(name, "shift") == 0) {
-    lua_pushboolean(L,(lua_Integer)(obj->shift));
-
-  return 1;
-  }
-  else {
-    return wrap_event_t_get_prop(L);
-  }
-}
-
-static void wheel_event_t_init(lua_State* L) {
-  static const struct luaL_Reg static_funcs[] = {
-    {"cast", wrap_wheel_event_cast},
-    {NULL, NULL}
-  };
-
-  static const struct luaL_Reg index_funcs[] = {
-    {"__index", wrap_wheel_event_t_get_prop},
-    {"__newindex", wrap_wheel_event_t_set_prop},
-    {NULL, NULL}
-  };
-
-  luaL_newmetatable(L, "awtk.wheel_event_t");
-  lua_pushstring(L, "__index");
-  lua_pushvalue(L, -2);
-  lua_settable(L, -3);
-  luaL_openlib(L, NULL, index_funcs, 0);
-  luaL_openlib(L, "WheelEvent", static_funcs, 0);
   lua_settop(L, 0);
 }
 static int wrap_switch_create(lua_State* L) {
@@ -19359,6 +19555,7 @@ void luaL_openawtk(lua_State* L) {
   timer_manager_t_init(L);
   time_now_t_init(L);
   bidi_type_t_init(L);
+  object_prop_t_init(L);
   object_cmd_t_init(L);
   image_draw_type_t_init(L);
   named_value_t_init(L);
@@ -19380,8 +19577,8 @@ void luaL_openawtk(lua_State* L) {
   error_event_t_init(L);
   cmd_exec_event_t_init(L);
   time_clock_t_init(L);
-  text_selector_t_init(L);
   wheel_event_t_init(L);
+  text_selector_t_init(L);
   switch_t_init(L);
   view_t_init(L);
   tab_control_t_init(L);

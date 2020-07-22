@@ -99,6 +99,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:abf3bcfc0b3a710b7b466c2b16446123c inherit pub_methods_class_t_window_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a601f1606bf5af9351729e8cf6d9a66b3 inherit pub_methods_class_t_window_base"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_base.html#a601f1606bf5af9351729e8cf6d9a66b3">GetTheme</a> () const</td></tr>
 <tr class="separator:a601f1606bf5af9351729e8cf6d9a66b3 inherit pub_methods_class_t_window_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe3c785954bb7f9b36aef0c8404791b7 inherit pub_methods_class_t_window_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_base.html#abe3c785954bb7f9b36aef0c8404791b7">GetDisableAnim</a> () const</td></tr>
+<tr class="separator:abe3c785954bb7f9b36aef0c8404791b7 inherit pub_methods_class_t_window_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a785e621ad5b45b66df5407042c967f95 inherit pub_methods_class_t_window_base"><td class="memItemLeft" align="right" valign="top">window_closable_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_base.html#a785e621ad5b45b66df5407042c967f95">GetClosable</a> () const</td></tr>
 <tr class="separator:a785e621ad5b45b66df5407042c967f95 inherit pub_methods_class_t_window_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a999ec9d1a83b966a1dca2d41bcbbe61f inherit pub_methods_class_t_window_base"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_base.html#a999ec9d1a83b966a1dca2d41bcbbe61f">GetOpenAnimHint</a> () const</td></tr>
@@ -199,6 +201,8 @@ static <a class="el" href="class_t_window_base.html">TWindowBase</a>&#160;</td><
 <td class="markdownTableBodyNone">前缀hard_key: </td><td class="markdownTableBodyCenter">模拟物理键盘  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">前缀page: </td><td class="markdownTableBodyCenter">切换到页面  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">前缀opt: </td><td class="markdownTableBodyCenter">多个字符选择一个，点击切换到下一个，超时提交字符(用于实现九宫格输入)  </td></tr>
 </table>
 <p>示例：</p>
 <p>按键"a"，提交输入法处理。</p>
@@ -207,6 +211,23 @@ static <a class="el" href="class_t_window_base.html">TWindowBase</a>&#160;</td><
 <div class="fragment"><div class="line">*&lt;<span class="keywordtype">button</span> <span class="keyword">repeat</span>=<span class="stringliteral">&quot;300&quot;</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;a&quot;</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;a&quot;</span>/&gt;</div>
 </div><!-- fragment --><p>模拟物理键盘数字"1"，触发key down/up事件（可以用来选择候选字）。</p>
 <div class="fragment"><div class="line">*&lt;<span class="keywordtype">button</span> <span class="keyword">repeat</span>=<span class="stringliteral">&quot;300&quot;</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;hard_key:1&quot;</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;1&quot;</span>/&gt;</div>
+</div><!-- fragment --><p>九宫格输入</p>
+<div class="fragment"><div class="line">*&lt;<span class="keywordtype">button</span> <span class="keyword">repeat</span>=<span class="stringliteral">&quot;300&quot;</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;opt:._@/#&quot;</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;._@/#&quot;</span>/&gt;</div>
+<div class="line">*&lt;<span class="keywordtype">button</span> <span class="keyword">repeat</span>=<span class="stringliteral">&quot;300&quot;</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;opt:abc&quot;</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;abc&quot;</span>/&gt;</div>
+<div class="line">*&lt;<span class="keywordtype">button</span> <span class="keyword">repeat</span>=<span class="stringliteral">&quot;300&quot;</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;opt:def&quot;</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;def&quot;</span>/&gt;</div>
+</div><!-- fragment --><p>输入语言切换</p>
+<p>有的输入法，同时支持输入多种语言。 比如T9，可以同时支持中文和英文输入，配合软键盘随时切换输入的语言。</p>
+<p>可以在pages的页面里指定lang属性，切换到该页面时会设置输入法的语言。如：</p>
+<div class="fragment"><div class="line">*&lt;<span class="keywordtype">pages</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;bottom&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;-28&quot;</span> <span class="keyword">active</span>=<span class="stringliteral">&quot;2&quot;</span>&gt;</div>
+<div class="line">*&lt;<span class="keywordtype">view</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;lower&quot;</span> <span class="keyword">lang</span>=<span class="stringliteral">&quot;en_us&quot;</span></div>
+<div class="line">*<span class="keyword">x</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">children_layout</span>=<span class="stringliteral">&quot;default(r=4,c=4,s=2,m=2)&quot;</span>&gt;</div>
+<div class="line">*...</div>
+<div class="line">*&lt;/<span class="keywordtype">view</span>&gt;</div>
+<div class="line">*&lt;<span class="keywordtype">view</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;chinese&quot;</span> <span class="keyword">lang</span>=<span class="stringliteral">&quot;zh_cn&quot;</span></div>
+<div class="line">*<span class="keyword">x</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">children_layout</span>=<span class="stringliteral">&quot;default(r=4,c=4,s=2,m=2)&quot;</span>&gt;</div>
+<div class="line">*...</div>
+<div class="line">*&lt;/<span class="keywordtype">view</span>&gt;</div>
+<div class="line">*&lt;/<span class="keywordtype">pages</span>&gt;</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>更多用法请参考： </p>
 </blockquote>

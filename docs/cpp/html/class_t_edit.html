@@ -116,8 +116,12 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a9e0cc4ee6e18087696865c15a74e9381"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07719518ea4a28b57e7874d6556dbcbe"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#a07719518ea4a28b57e7874d6556dbcbe">SetInputType</a> (input_type_t type)</td></tr>
 <tr class="separator:a07719518ea4a28b57e7874d6556dbcbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdc5e1e76ac66aa2c8eafed2e230d6e7"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#abdc5e1e76ac66aa2c8eafed2e230d6e7">SetInputTips</a> (char *tips)</td></tr>
-<tr class="separator:abdc5e1e76ac66aa2c8eafed2e230d6e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad901938006ad775aefb71deada0e6b3c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#ad901938006ad775aefb71deada0e6b3c">SetActionText</a> (char *action_text)</td></tr>
+<tr class="separator:ad901938006ad775aefb71deada0e6b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a5ade957d24582724d488ef71b5d240"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#a3a5ade957d24582724d488ef71b5d240">SetTips</a> (char *tips)</td></tr>
+<tr class="separator:a3a5ade957d24582724d488ef71b5d240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6434df850d2d74735c9c8acfeb2581f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#aa6434df850d2d74735c9c8acfeb2581f">SetTrTips</a> (const char *tr_tips)</td></tr>
+<tr class="separator:aa6434df850d2d74735c9c8acfeb2581f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44949062caf59c8c4d9479964b87ecc2"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#a44949062caf59c8c4d9479964b87ecc2">SetKeyboard</a> (char *keyboard)</td></tr>
 <tr class="separator:a44949062caf59c8c4d9479964b87ecc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af67611a4bfdd8cc10cc5b366b264147e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#af67611a4bfdd8cc10cc5b366b264147e">SetPasswordVisible</a> (bool password_visible)</td></tr>
@@ -146,6 +150,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a3f151a9892f0528031672183931d0fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21b711e8d494ca01cb5a3169f536b3ce"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#a21b711e8d494ca01cb5a3169f536b3ce">GetTips</a> () const</td></tr>
 <tr class="separator:a21b711e8d494ca01cb5a3169f536b3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58485d30ef1da24cb25853b3992239da"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#a58485d30ef1da24cb25853b3992239da">GetTrTips</a> () const</td></tr>
+<tr class="separator:a58485d30ef1da24cb25853b3992239da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8de6404e2ac04f2736edd7dd3854c2d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#aa8de6404e2ac04f2736edd7dd3854c2d">GetActionText</a> () const</td></tr>
+<tr class="separator:aa8de6404e2ac04f2736edd7dd3854c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9290a2fc8d16239266551958b4e0c4c0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#a9290a2fc8d16239266551958b4e0c4c0">GetKeyboard</a> () const</td></tr>
 <tr class="separator:a9290a2fc8d16239266551958b4e0c4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e81845aa7ea582699641556f4dfef9d"><td class="memItemLeft" align="right" valign="top">input_type_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#a7e81845aa7ea582699641556f4dfef9d">GetInputType</a> () const</td></tr>
@@ -275,6 +283,26 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
 
 </div>
 </div>
+<a id="aa8de6404e2ac04f2736edd7dd3854c2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8de6404e2ac04f2736edd7dd3854c2d">&#9670;&nbsp;</a></span>GetActionText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * TEdit::GetActionText </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>软键盘上action按钮的文本。内置取值有：</p>
+<p>next 将焦点切换到下一个控件。 done 完成，关闭软键盘。</p>
+<p>也可以使用其它文本，比如send表示发送。这个需要自己实现相应的功能，处理EVT_IM_ACTION事件即可。 </p>
+
+</div>
+</div>
 <a id="afd148cd2cc2f7a92ae330c22ea47add1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afd148cd2cc2f7a92ae330c22ea47add1">&#9670;&nbsp;</a></span>GetAutoFix()</h2>
 
@@ -381,7 +409,7 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
         </tr>
       </table>
 </div><div class="memdoc">
-<p>自定义软键盘名称。 </p>
+<p>自定义软键盘名称。AWTK优先查找keyboard属性设置的键盘文件名（该键盘的XML文件需要在default\raw\ui目录下存在），如果keyboard为空就找input_type设置的键盘类型 </p>
 
 </div>
 </div>
@@ -589,6 +617,50 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
 
 </div>
 </div>
+<a id="a58485d30ef1da24cb25853b3992239da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58485d30ef1da24cb25853b3992239da">&#9670;&nbsp;</a></span>GetTrTips()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * TEdit::GetTrTips </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>保存用于翻译的提示信息。 </p>
+
+</div>
+</div>
+<a id="ad901938006ad775aefb71deada0e6b3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad901938006ad775aefb71deada0e6b3c">&#9670;&nbsp;</a></span>SetActionText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TEdit::SetActionText </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>action_text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置软键盘上action按钮的文本。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">action_text</td><td>软键盘上action按钮的文本。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="adcbcb29229a00fbd7ee8bd4aa74c61de"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adcbcb29229a00fbd7ee8bd4aa74c61de">&#9670;&nbsp;</a></span>SetAutoFix()</h2>
 
@@ -730,32 +802,6 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">focus</td><td>是否为焦点。</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
-
-</div>
-</div>
-<a id="abdc5e1e76ac66aa2c8eafed2e230d6e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdc5e1e76ac66aa2c8eafed2e230d6e7">&#9670;&nbsp;</a></span>SetInputTips()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ret_t TEdit::SetInputTips </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>tips</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>设置编辑器的输入提示。</p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">tips</td><td>输入提示。</td></tr>
   </table>
   </dd>
 </dl>
@@ -1019,6 +1065,58 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
   <table class="params">
     <tr><td class="paramname">min</td><td>最小长度。 </td></tr>
     <tr><td class="paramname">max</td><td>最大长度。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a3a5ade957d24582724d488ef71b5d240"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a5ade957d24582724d488ef71b5d240">&#9670;&nbsp;</a></span>SetTips()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TEdit::SetTips </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>tips</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置编辑器的输入提示。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tips</td><td>输入提示。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="aa6434df850d2d74735c9c8acfeb2581f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6434df850d2d74735c9c8acfeb2581f">&#9670;&nbsp;</a></span>SetTrTips()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TEdit::SetTrTips </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>tr_tips</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取翻译之后的文本，然后调用edit_set_tips。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tr_tips</td><td>提示信息。</td></tr>
   </table>
   </dd>
 </dl>

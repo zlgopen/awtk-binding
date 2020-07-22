@@ -399,6 +399,14 @@ public:
   ret_t Destroy() ;
 
   /**
+   * 获取位图格式对应的颜色位数。
+   * 
+   *
+   * @return 成功返回颜色位数，失败返回0。
+   */
+  uint32_t GetBppOfFormat() ;
+
+  /**
    * 宽度。
    *
    */
@@ -3115,6 +3123,119 @@ public:
   ret_t Unref() ;
 
   /**
+   * widget_set_prop_bool(group, WIDGET_PROP_IS_KEYBOARD, TRUE);
+   *```
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t IsKeyboard() ;
+
+  /**
+   * 根据控件的style绘制边框矩形。
+   * 
+   * @param c 画布对象。
+   * @param r 矩形区域。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t StrokeBorderRect(TCanvas& c, TRect& r) ;
+
+  /**
+   * 根据控件的style绘制背景矩形。
+   * 
+   * @param c 画布对象。
+   * @param r 矩形区域。
+   * @param draw_type 图片缺省绘制方式。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t FillBgRect(TCanvas& c, TRect& r, image_draw_type_t draw_type) ;
+
+  /**
+   * 根据控件的style绘制前景矩形。
+   * 
+   * @param c 画布对象。
+   * @param r 矩形区域。
+   * @param draw_type 图片缺省绘制方式。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t FillFgRect(TCanvas& c, TRect& r, image_draw_type_t draw_type) ;
+
+  /**
+   * 递归的分发一个事件到所有target子控件。
+   * 
+   * @param e 事件。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t DispatchToTarget(TEvent& e) ;
+
+  /**
+   * 递归的分发一个事件到所有key_target子控件。
+   * 
+   * @param e 事件。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t DispatchToKeyTarget(TEvent& e) ;
+
+  /**
+   * 让控件根据自己当前状态更新style。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t UpdateStyle() ;
+
+  /**
+   * 让控件及子控件根据自己当前状态更新style。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t UpdateStyleRecursive() ;
+
+  /**
+   * 递归的把父控件的key_target设置为自己。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetAsKeyTarget() ;
+
+  /**
+   * 把焦点移动下一个控件。
+   *
+   *>widget必须是当前焦点控件。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t FocusNext() ;
+
+  /**
+   * 把焦点移动前一个控件。
+   *
+   *>widget必须是当前焦点控件。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t FocusPrev() ;
+
+  /**
+   * 把控件的状态转成获取style选要的状态，一般只在子类中使用。
+   * 
+   * @param active 控件是否为当前项。
+   * @param checked 控件是否为选中项。
+   *
+   * @return 返回状态值。
+   */
+  const char* GetStateForStyle(bool active, bool checked) ;
+
+  /**
    * 检查控件是否是system bar类型。
    * 
    *
@@ -4055,7 +4176,7 @@ public:
   static  int32_t GetDays(uint32_t year, uint32_t montn) ;
 
   /**
-   * 获取指定日期是周几(0-6)。
+   * 获取指定日期是周几(0-6, Sunday = 0)。。
    * 
    * @param year 年份。
    * @param montn 月份(1-12)。
@@ -4064,6 +4185,24 @@ public:
    * @return 返回大于等于0表示周几(0-6)，否则表示失败。
    */
   static  int32_t GetWday(uint32_t year, uint32_t montn, uint32_t day) ;
+
+  /**
+   * 获取指定月份的英文名称(简写)。
+   * 
+   * @param montn 月份(1-12)。
+   *
+   * @return 返回指定月份的英文名称(简写)。
+   */
+  static  const char* GetMonthName(uint32_t montn) ;
+
+  /**
+   * 获取周几的英文名称(简写)。
+   * 
+   * @param wday 星期几(0-6, Sunday = 0)。
+   *
+   * @return 返回指定周几的英文名称(简写)。
+   */
+  static  const char* GetWdayName(uint32_t wday) ;
 
   /**
    * 销毁date_time对象(一般供脚本语言中使用)。
@@ -4935,6 +5074,61 @@ public:
 
 
 /**
+ * 滚轮事件。
+ *
+ */
+class TWheelEvent : public TEvent { 
+public:
+  TWheelEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  }
+
+  TWheelEvent(const wheel_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
+  }
+
+  static TWheelEvent Cast(event_t* nativeObj) {
+    return TWheelEvent(nativeObj);
+  }
+
+  static TWheelEvent Cast(const event_t* nativeObj) {
+    return TWheelEvent((event_t*)nativeObj);
+  }
+
+  static TWheelEvent Cast(TEvent& obj) {
+    return TWheelEvent(obj.nativeObj);
+  }
+
+  static TWheelEvent Cast(const TEvent& obj) {
+    return TWheelEvent(obj.nativeObj);
+  }
+
+
+  /**
+   * 滚轮的y值。
+   *
+   */
+  int32_t GetDy() const;
+
+  /**
+   * alt键是否按下。
+   *
+   */
+  bool GetAlt() const;
+
+  /**
+   * ctrl键是否按下。
+   *
+   */
+  bool GetCtrl() const;
+
+  /**
+   * shift键是否按下。
+   *
+   */
+  bool GetShift() const;
+};
+
+
+/**
  * 文本选择器控件，通常用于选择日期和时间等。
  *
  *> XXX: 目前需要先设置options和visible_nr，再设置其它参数(在XML中也需要按此顺序)。
@@ -5123,61 +5317,6 @@ public:
    *
    */
   char* GetOptions() const;
-};
-
-
-/**
- * 滚轮事件。
- *
- */
-class TWheelEvent : public TEvent { 
-public:
-  TWheelEvent(event_t* nativeObj) : TEvent(nativeObj) {
-  }
-
-  TWheelEvent(const wheel_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
-  }
-
-  static TWheelEvent Cast(event_t* nativeObj) {
-    return TWheelEvent(nativeObj);
-  }
-
-  static TWheelEvent Cast(const event_t* nativeObj) {
-    return TWheelEvent((event_t*)nativeObj);
-  }
-
-  static TWheelEvent Cast(TEvent& obj) {
-    return TWheelEvent(obj.nativeObj);
-  }
-
-  static TWheelEvent Cast(const TEvent& obj) {
-    return TWheelEvent(obj.nativeObj);
-  }
-
-
-  /**
-   * 滚轮的y值。
-   *
-   */
-  int32_t GetDy() const;
-
-  /**
-   * alt键是否按下。
-   *
-   */
-  bool GetAlt() const;
-
-  /**
-   * ctrl键是否按下。
-   *
-   */
-  bool GetCtrl() const;
-
-  /**
-   * shift键是否按下。
-   *
-   */
-  bool GetShift() const;
 };
 
 

@@ -89,6 +89,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a80ec786d60d999f0f3ed162aff7e0652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90d187486f99ed784c28508028f5b1bc"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_browser_view.html#a90d187486f99ed784c28508028f5b1bc">SetInitDir</a> (const char *init_dir)</td></tr>
 <tr class="separator:a90d187486f99ed784c28508028f5b1bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac080602544ecef8af3e46c3ecc32e998"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_browser_view.html#ac080602544ecef8af3e46c3ecc32e998">SetFilter</a> (const char *filter)</td></tr>
+<tr class="separator:ac080602544ecef8af3e46c3ecc32e998"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9a9e5614856ecd4b5ff9e88aabf8177"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_browser_view.html#ad9a9e5614856ecd4b5ff9e88aabf8177">Reload</a> ()</td></tr>
+<tr class="separator:ad9a9e5614856ecd4b5ff9e88aabf8177"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf91400cfd209ea48aad1980ddef24fb"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_browser_view.html#adf91400cfd209ea48aad1980ddef24fb">SetIgnoreHiddenFiles</a> (bool ignore_hidden_files)</td></tr>
 <tr class="separator:adf91400cfd209ea48aad1980ddef24fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7781f1882bd56bbd0f6bfe239758cce3"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_browser_view.html#a7781f1882bd56bbd0f6bfe239758cce3">SetSortAscending</a> (bool sort_ascending)</td></tr>
@@ -105,6 +109,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ab02f1afd2a0cf3badba9cbc80bd5d2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad76f7e533834b4760486b6079156f11d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_browser_view.html#ad76f7e533834b4760486b6079156f11d">GetInitDir</a> () const</td></tr>
 <tr class="separator:ad76f7e533834b4760486b6079156f11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14177a6f1caa645266de63ee529c53d6"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_browser_view.html#a14177a6f1caa645266de63ee529c53d6">GetFilter</a> () const</td></tr>
+<tr class="separator:a14177a6f1caa645266de63ee529c53d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37420c4fb0868aab3b5a52083810cb4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_browser_view.html#a37420c4fb0868aab3b5a52083810cb4f">GetIgnoreHiddenFiles</a> () const</td></tr>
 <tr class="separator:a37420c4fb0868aab3b5a52083810cb4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78caecfce2f36376f3f0c32a6d955a46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_browser_view.html#a78caecfce2f36376f3f0c32a6d955a46">GetSortAscending</a> () const</td></tr>
@@ -306,6 +312,24 @@ static <a class="el" href="class_t_file_browser_view.html">TFileBrowserView</a>&
 
 </div>
 </div>
+<a id="a14177a6f1caa645266de63ee529c53d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14177a6f1caa645266de63ee529c53d6">&#9670;&nbsp;</a></span>GetFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * TFileBrowserView::GetFilter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>过滤规则。 </p>
+
+</div>
+</div>
 <a id="a37420c4fb0868aab3b5a52083810cb4f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a37420c4fb0868aab3b5a52083810cb4f">&#9670;&nbsp;</a></span>GetIgnoreHiddenFiles()</h2>
 
@@ -393,6 +417,53 @@ static <a class="el" href="class_t_file_browser_view.html">TFileBrowserView</a>&
       </table>
 </div><div class="memdoc">
 <p>排序方式。可选值(name, size, mtime, type)。 </p>
+
+</div>
+</div>
+<a id="ad9a9e5614856ecd4b5ff9e88aabf8177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9a9e5614856ecd4b5ff9e88aabf8177">&#9670;&nbsp;</a></span>Reload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TFileBrowserView::Reload </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>重新加载。</p>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="ac080602544ecef8af3e46c3ecc32e998"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac080602544ecef8af3e46c3ecc32e998">&#9670;&nbsp;</a></span>SetFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TFileBrowserView::SetFilter </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置 过滤规则。 </p><blockquote class="doxtable">
+<p>files_only 表示只列出文件，dir_only 表示只列出目录，其它表示只列出满足扩展名文件集合(如：.jpg.png.gif)。 </p>
+</blockquote>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter</td><td>过滤规则。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>

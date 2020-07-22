@@ -113,6 +113,16 @@ static <a class="el" href="class_t_date_time.html">TDateTime</a>&#160;</td><td c
 <tr class="separator:a695305d464989eaa4bd33a394223ec4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a767f92f2b0d91f90298445768c207cba"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_date_time.html">TDateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a767f92f2b0d91f90298445768c207cba">Create</a> ()</td></tr>
 <tr class="separator:a767f92f2b0d91f90298445768c207cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a59a8949b59c4fdd08a0b80182417c8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a9a59a8949b59c4fdd08a0b80182417c8">IsLeap</a> (uint32_t year)</td></tr>
+<tr class="separator:a9a59a8949b59c4fdd08a0b80182417c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d7806698c105f6ec23bb1d35634089c"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a7d7806698c105f6ec23bb1d35634089c">GetDays</a> (uint32_t year, uint32_t montn)</td></tr>
+<tr class="separator:a7d7806698c105f6ec23bb1d35634089c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf080a96d7865548108f3efeb91f893b"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#adf080a96d7865548108f3efeb91f893b">GetWday</a> (uint32_t year, uint32_t montn, uint32_t day)</td></tr>
+<tr class="separator:adf080a96d7865548108f3efeb91f893b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab831de7643160ab08f8d73bb741f10d3"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#ab831de7643160ab08f8d73bb741f10d3">GetMonthName</a> (uint32_t montn)</td></tr>
+<tr class="separator:ab831de7643160ab08f8d73bb741f10d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9834f8ca646a0b45d01a6b4cc8b56f52"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a9834f8ca646a0b45d01a6b4cc8b56f52">GetWdayName</a> (uint32_t wday)</td></tr>
+<tr class="separator:a9834f8ca646a0b45d01a6b4cc8b56f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 属性</h2></td></tr>
@@ -216,6 +226,51 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
+<a id="a7d7806698c105f6ec23bb1d35634089c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d7806698c105f6ec23bb1d35634089c">&#9670;&nbsp;</a></span>GetDays()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t TDateTime::GetDays </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>montn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取指定年份月份的天数。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">year</td><td>年份。 </td></tr>
+    <tr><td class="paramname">montn</td><td>月份(1-12)。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回大于0表示天数，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="a91d867390b1a6b591be9fe11c0701278"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a91d867390b1a6b591be9fe11c0701278">&#9670;&nbsp;</a></span>GetHour()</h2>
 
@@ -270,6 +325,40 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
+<a id="ab831de7643160ab08f8d73bb741f10d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab831de7643160ab08f8d73bb741f10d3">&#9670;&nbsp;</a></span>GetMonthName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * TDateTime::GetMonthName </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>montn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取指定月份的英文名称(简写)。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">montn</td><td>月份(1-12)。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回指定月份的英文名称(简写)。 </dd></dl>
+
+</div>
+</div>
 <a id="a46d80192d883027677bcd01afce27bd1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a46d80192d883027677bcd01afce27bd1">&#9670;&nbsp;</a></span>GetSecond()</h2>
 
@@ -289,7 +378,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 </div>
 </div>
 <a id="aa84a65eea32263946c4a5eea9c712cdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa84a65eea32263946c4a5eea9c712cdf">&#9670;&nbsp;</a></span>GetWday()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa84a65eea32263946c4a5eea9c712cdf">&#9670;&nbsp;</a></span>GetWday() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -303,6 +392,92 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
       </table>
 </div><div class="memdoc">
 <p>星期几(0-6, Sunday = 0)。 </p>
+
+</div>
+</div>
+<a id="adf080a96d7865548108f3efeb91f893b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf080a96d7865548108f3efeb91f893b">&#9670;&nbsp;</a></span>GetWday() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t TDateTime::GetWday </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>montn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>day</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取指定日期是周几(0-6, Sunday = 0)。。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">year</td><td>年份。 </td></tr>
+    <tr><td class="paramname">montn</td><td>月份(1-12)。 </td></tr>
+    <tr><td class="paramname">day</td><td>日(1-31)。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回大于等于0表示周几(0-6)，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a9834f8ca646a0b45d01a6b4cc8b56f52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9834f8ca646a0b45d01a6b4cc8b56f52">&#9670;&nbsp;</a></span>GetWdayName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * TDateTime::GetWdayName </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>wday</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取周几的英文名称(简写)。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wday</td><td>星期几(0-6, Sunday = 0)。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回指定周几的英文名称(简写)。 </dd></dl>
 
 </div>
 </div>
@@ -321,6 +496,40 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
       </table>
 </div><div class="memdoc">
 <p>年。 </p>
+
+</div>
+</div>
+<a id="a9a59a8949b59c4fdd08a0b80182417c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a59a8949b59c4fdd08a0b80182417c8">&#9670;&nbsp;</a></span>IsLeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TDateTime::IsLeap </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>year</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>是否是闰年。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">year</td><td>年份。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回TRUE表示是，否则表示否。 </dd></dl>
 
 </div>
 </div>

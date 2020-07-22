@@ -386,6 +386,16 @@ class TBitmap(object):
 
 
   #
+  # 获取位图格式对应的颜色位数。
+  # 
+  #
+  # @return 成功返回颜色位数，失败返回0。
+  #
+  def get_bpp_of_format(self): 
+    return bitmap_get_bpp_of_format(awtk_get_native_obj(self));
+
+
+  #
   # 宽度。
   #
   #
@@ -7004,6 +7014,143 @@ class TWidget(object):
 
 
   #
+  # widget_set_prop_bool(group, WIDGET_PROP_IS_KEYBOARD, TRUE);
+  #```
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def is_keyboard(self): 
+    return widget_is_keyboard(awtk_get_native_obj(self));
+
+
+  #
+  # 根据控件的style绘制边框矩形。
+  # 
+  # @param c 画布对象。
+  # @param r 矩形区域。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def stroke_border_rect(self, c, r): 
+    return widget_stroke_border_rect(awtk_get_native_obj(self), awtk_get_native_obj(c), awtk_get_native_obj(r));
+
+
+  #
+  # 根据控件的style绘制背景矩形。
+  # 
+  # @param c 画布对象。
+  # @param r 矩形区域。
+  # @param draw_type 图片缺省绘制方式。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def fill_bg_rect(self, c, r, draw_type): 
+    return widget_fill_bg_rect(awtk_get_native_obj(self), awtk_get_native_obj(c), awtk_get_native_obj(r), draw_type);
+
+
+  #
+  # 根据控件的style绘制前景矩形。
+  # 
+  # @param c 画布对象。
+  # @param r 矩形区域。
+  # @param draw_type 图片缺省绘制方式。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def fill_fg_rect(self, c, r, draw_type): 
+    return widget_fill_fg_rect(awtk_get_native_obj(self), awtk_get_native_obj(c), awtk_get_native_obj(r), draw_type);
+
+
+  #
+  # 递归的分发一个事件到所有target子控件。
+  # 
+  # @param e 事件。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def dispatch_to_target(self, e): 
+    return widget_dispatch_to_target(awtk_get_native_obj(self), awtk_get_native_obj(e));
+
+
+  #
+  # 递归的分发一个事件到所有key_target子控件。
+  # 
+  # @param e 事件。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def dispatch_to_key_target(self, e): 
+    return widget_dispatch_to_key_target(awtk_get_native_obj(self), awtk_get_native_obj(e));
+
+
+  #
+  # 让控件根据自己当前状态更新style。
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def update_style(self): 
+    return widget_update_style(awtk_get_native_obj(self));
+
+
+  #
+  # 让控件及子控件根据自己当前状态更新style。
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def update_style_recursive(self): 
+    return widget_update_style_recursive(awtk_get_native_obj(self));
+
+
+  #
+  # 递归的把父控件的key_target设置为自己。
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_as_key_target(self): 
+    return widget_set_as_key_target(awtk_get_native_obj(self));
+
+
+  #
+  # 把焦点移动下一个控件。
+  #
+  #>widget必须是当前焦点控件。
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def focus_next(self): 
+    return widget_focus_next(awtk_get_native_obj(self));
+
+
+  #
+  # 把焦点移动前一个控件。
+  #
+  #>widget必须是当前焦点控件。
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def focus_prev(self): 
+    return widget_focus_prev(awtk_get_native_obj(self));
+
+
+  #
+  # 把控件的状态转成获取style选要的状态，一般只在子类中使用。
+  # 
+  # @param active 控件是否为当前项。
+  # @param checked 控件是否为选中项。
+  #
+  # @return 返回状态值。
+  #
+  def get_state_for_style(self, active, checked): 
+    return widget_get_state_for_style(awtk_get_native_obj(self), active, checked);
+
+
+  #
   # 检查控件是否是system bar类型。
   # 
   #
@@ -7765,6 +7912,24 @@ class TBidiType:
   WRTL = BIDI_TYPE_WRTL();
 
 #
+# 对象常见属性定义
+#
+#
+class TObjectProp: 
+
+  #
+  # 属性的个数。
+  #
+  #
+  SIZE = OBJECT_PROP_SIZE();
+
+  #
+  # 属性是否勾选。
+  #
+  #
+  CHECKED = OBJECT_PROP_CHECKED();
+
+#
 # 对象常见命令定义
 #
 #
@@ -7802,6 +7967,13 @@ class TObjectCmd:
   #
   #
   REMOVE = OBJECT_CMD_REMOVE();
+
+  #
+  # 删除勾选的属性。
+  #>参数为属性的名称或路径。
+  #
+  #
+  REMOVE_CHECKED = OBJECT_CMD_REMOVE_CHECKED();
 
   #
   # 清除全部属性。
@@ -9307,7 +9479,7 @@ class TDateTime(object):
 
 
   #
-  # 获取指定日期是周几(0-6)。
+  # 获取指定日期是周几(0-6, Sunday = 0)。。
   # 
   # @param year 年份。
   # @param montn 月份(1-12)。
@@ -9318,6 +9490,30 @@ class TDateTime(object):
   @classmethod
   def get_wday(cls, year, montn, day): 
     return date_time_get_wday(year, montn, day);
+
+
+  #
+  # 获取指定月份的英文名称(简写)。
+  # 
+  # @param montn 月份(1-12)。
+  #
+  # @return 返回指定月份的英文名称(简写)。
+  #
+  @classmethod
+  def get_month_name(cls, montn): 
+    return date_time_get_month_name(montn);
+
+
+  #
+  # 获取周几的英文名称(简写)。
+  # 
+  # @param wday 星期几(0-6, Sunday = 0)。
+  #
+  # @return 返回指定周几的英文名称(简写)。
+  #
+  @classmethod
+  def get_wday_name(cls, wday): 
+    return date_time_get_wday_name(wday);
 
 
   #
@@ -10357,6 +10553,63 @@ class TTimeClock (TWidget):
 
 
 #
+# 滚轮事件。
+#
+#
+class TWheelEvent (TEvent):
+  def __init__(self, nativeObj):
+    super(TWheelEvent, self).__init__(nativeObj)
+
+
+  #
+  # 把event对象转wheel_event_t对象，主要给脚本语言使用。
+  # 
+  # @param event event对象。
+  #
+  # @return event对象。
+  #
+  @classmethod
+  def cast(cls, event): 
+    return  TWheelEvent(wheel_event_cast(awtk_get_native_obj(event)));
+
+
+  #
+  # 滚轮的y值。
+  #
+  #
+  @property
+  def dy(self):
+    return wheel_event_t_get_prop_dy(self.nativeObj);
+
+
+  #
+  # alt键是否按下。
+  #
+  #
+  @property
+  def alt(self):
+    return wheel_event_t_get_prop_alt(self.nativeObj);
+
+
+  #
+  # ctrl键是否按下。
+  #
+  #
+  @property
+  def ctrl(self):
+    return wheel_event_t_get_prop_ctrl(self.nativeObj);
+
+
+  #
+  # shift键是否按下。
+  #
+  #
+  @property
+  def shift(self):
+    return wheel_event_t_get_prop_shift(self.nativeObj);
+
+
+#
 # 文本选择器控件，通常用于选择日期和时间等。
 #
 #> XXX: 目前需要先设置options和visible_nr，再设置其它参数(在XML中也需要按此顺序)。
@@ -10582,63 +10835,6 @@ class TTextSelector (TWidget):
   @options.setter
   def options(self, v):
    this.set_options(v);
-
-
-#
-# 滚轮事件。
-#
-#
-class TWheelEvent (TEvent):
-  def __init__(self, nativeObj):
-    super(TWheelEvent, self).__init__(nativeObj)
-
-
-  #
-  # 把event对象转wheel_event_t对象，主要给脚本语言使用。
-  # 
-  # @param event event对象。
-  #
-  # @return event对象。
-  #
-  @classmethod
-  def cast(cls, event): 
-    return  TWheelEvent(wheel_event_cast(awtk_get_native_obj(event)));
-
-
-  #
-  # 滚轮的y值。
-  #
-  #
-  @property
-  def dy(self):
-    return wheel_event_t_get_prop_dy(self.nativeObj);
-
-
-  #
-  # alt键是否按下。
-  #
-  #
-  @property
-  def alt(self):
-    return wheel_event_t_get_prop_alt(self.nativeObj);
-
-
-  #
-  # ctrl键是否按下。
-  #
-  #
-  @property
-  def ctrl(self):
-    return wheel_event_t_get_prop_ctrl(self.nativeObj);
-
-
-  #
-  # shift键是否按下。
-  #
-  #
-  @property
-  def shift(self):
-    return wheel_event_t_get_prop_shift(self.nativeObj);
 
 
 #

@@ -927,6 +927,155 @@ public class TWidget {
 
 
   /**
+   * widget_set_prop_bool(group, WIDGET_PROP_IS_KEYBOARD, TRUE);
+   *```
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet isKeyboard()  {
+   return TRet.from(widget_is_keyboard(this != null ? (this.nativeObj) : 0));
+ }
+
+
+  /**
+   * 根据控件的style绘制边框矩形。
+   * 
+   * @param c 画布对象。
+   * @param r 矩形区域。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet strokeBorderRect(TCanvas c, TRect r)  {
+   return TRet.from(widget_stroke_border_rect(this != null ? (this.nativeObj) : 0, c != null ? (c.nativeObj) : 0, r != null ? (r.nativeObj) : 0));
+ }
+
+
+  /**
+   * 根据控件的style绘制背景矩形。
+   * 
+   * @param c 画布对象。
+   * @param r 矩形区域。
+   * @param draw_type 图片缺省绘制方式。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet fillBgRect(TCanvas c, TRect r, TImageDrawType draw_type)  {
+   return TRet.from(widget_fill_bg_rect(this != null ? (this.nativeObj) : 0, c != null ? (c.nativeObj) : 0, r != null ? (r.nativeObj) : 0, draw_type.value()));
+ }
+
+
+  /**
+   * 根据控件的style绘制前景矩形。
+   * 
+   * @param c 画布对象。
+   * @param r 矩形区域。
+   * @param draw_type 图片缺省绘制方式。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet fillFgRect(TCanvas c, TRect r, TImageDrawType draw_type)  {
+   return TRet.from(widget_fill_fg_rect(this != null ? (this.nativeObj) : 0, c != null ? (c.nativeObj) : 0, r != null ? (r.nativeObj) : 0, draw_type.value()));
+ }
+
+
+  /**
+   * 递归的分发一个事件到所有target子控件。
+   * 
+   * @param e 事件。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet dispatchToTarget(TEvent e)  {
+   return TRet.from(widget_dispatch_to_target(this != null ? (this.nativeObj) : 0, e != null ? (e.nativeObj) : 0));
+ }
+
+
+  /**
+   * 递归的分发一个事件到所有key_target子控件。
+   * 
+   * @param e 事件。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet dispatchToKeyTarget(TEvent e)  {
+   return TRet.from(widget_dispatch_to_key_target(this != null ? (this.nativeObj) : 0, e != null ? (e.nativeObj) : 0));
+ }
+
+
+  /**
+   * 让控件根据自己当前状态更新style。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet updateStyle()  {
+   return TRet.from(widget_update_style(this != null ? (this.nativeObj) : 0));
+ }
+
+
+  /**
+   * 让控件及子控件根据自己当前状态更新style。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet updateStyleRecursive()  {
+   return TRet.from(widget_update_style_recursive(this != null ? (this.nativeObj) : 0));
+ }
+
+
+  /**
+   * 递归的把父控件的key_target设置为自己。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setAsKeyTarget()  {
+   return TRet.from(widget_set_as_key_target(this != null ? (this.nativeObj) : 0));
+ }
+
+
+  /**
+   * 把焦点移动下一个控件。
+   *
+   *>widget必须是当前焦点控件。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet focusNext()  {
+   return TRet.from(widget_focus_next(this != null ? (this.nativeObj) : 0));
+ }
+
+
+  /**
+   * 把焦点移动前一个控件。
+   *
+   *>widget必须是当前焦点控件。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet focusPrev()  {
+   return TRet.from(widget_focus_prev(this != null ? (this.nativeObj) : 0));
+ }
+
+
+  /**
+   * 把控件的状态转成获取style选要的状态，一般只在子类中使用。
+   * 
+   * @param active 控件是否为当前项。
+   * @param checked 控件是否为选中项。
+   *
+   * @return 返回状态值。
+   */
+ public  String getStateForStyle(boolean active, boolean checked)  {
+    return widget_get_state_for_style(this != null ? (this.nativeObj) : 0, active, checked);
+ }
+
+
+  /**
    * 检查控件是否是system bar类型。
    * 
    *
@@ -1303,6 +1452,18 @@ static private native boolean widget_equal(long widget, long other);
 static private native long widget_cast(long widget);
 static private native int widget_destroy(long widget);
 static private native int widget_unref(long widget);
+static private native int widget_is_keyboard(long widget);
+static private native int widget_stroke_border_rect(long widget, long c, long r);
+static private native int widget_fill_bg_rect(long widget, long c, long r, int draw_type);
+static private native int widget_fill_fg_rect(long widget, long c, long r, int draw_type);
+static private native int widget_dispatch_to_target(long widget, long e);
+static private native int widget_dispatch_to_key_target(long widget, long e);
+static private native int widget_update_style(long widget);
+static private native int widget_update_style_recursive(long widget);
+static private native int widget_set_as_key_target(long widget);
+static private native int widget_focus_next(long widget);
+static private native int widget_focus_prev(long widget);
+static private native String widget_get_state_for_style(long widget, boolean active, boolean checked);
 static private native boolean widget_is_system_bar(long widget);
 static private native boolean widget_is_normal_window(long widget);
 static private native boolean widget_is_dialog(long widget);

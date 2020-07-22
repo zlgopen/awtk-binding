@@ -34,6 +34,7 @@ declare function bitmap_create() : any;
 declare function bitmap_create_ex(w : number, h : number, line_length : number, format : TBitmapFormat) : any;
 declare function bitmap_get_bpp(bitmap : any) : number;
 declare function bitmap_destroy(bitmap : any) : TRet;
+declare function bitmap_get_bpp_of_format(format : TBitmapFormat) : number;
 declare function bitmap_t_get_prop_w(nativeObj : any) : number;
 declare function bitmap_t_get_prop_h(nativeObj : any) : number;
 declare function bitmap_t_get_prop_line_length(nativeObj : any) : number;
@@ -846,6 +847,18 @@ declare function widget_equal(widget : any, other : any) : boolean;
 declare function widget_cast(widget : any) : any;
 declare function widget_destroy(widget : any) : TRet;
 declare function widget_unref(widget : any) : TRet;
+declare function widget_is_keyboard(widget : any) : TRet;
+declare function widget_stroke_border_rect(widget : any, c : any, r : any) : TRet;
+declare function widget_fill_bg_rect(widget : any, c : any, r : any, draw_type : TImageDrawType) : TRet;
+declare function widget_fill_fg_rect(widget : any, c : any, r : any, draw_type : TImageDrawType) : TRet;
+declare function widget_dispatch_to_target(widget : any, e : any) : TRet;
+declare function widget_dispatch_to_key_target(widget : any, e : any) : TRet;
+declare function widget_update_style(widget : any) : TRet;
+declare function widget_update_style_recursive(widget : any) : TRet;
+declare function widget_set_as_key_target(widget : any) : TRet;
+declare function widget_focus_next(widget : any) : TRet;
+declare function widget_focus_prev(widget : any) : TRet;
+declare function widget_get_state_for_style(widget : any, active : boolean, checked : boolean) : string;
 declare function widget_is_system_bar(widget : any) : boolean;
 declare function widget_is_normal_window(widget : any) : boolean;
 declare function widget_is_dialog(widget : any) : boolean;
@@ -925,11 +938,14 @@ declare function BIDI_TYPE_LRO();
 declare function BIDI_TYPE_RLO();
 declare function BIDI_TYPE_WLTR();
 declare function BIDI_TYPE_WRTL();
+declare function OBJECT_PROP_SIZE();
+declare function OBJECT_PROP_CHECKED();
 declare function OBJECT_CMD_SAVE();
 declare function OBJECT_CMD_RELOAD();
 declare function OBJECT_CMD_MOVE_UP();
 declare function OBJECT_CMD_MOVE_DOWN();
 declare function OBJECT_CMD_REMOVE();
+declare function OBJECT_CMD_REMOVE_CHECKED();
 declare function OBJECT_CMD_CLEAR();
 declare function OBJECT_CMD_ADD();
 declare function OBJECT_CMD_EDIT();
@@ -1127,6 +1143,8 @@ declare function date_time_from_time(dt : any, time : number) : TRet;
 declare function date_time_is_leap(year : number) : boolean;
 declare function date_time_get_days(year : number, montn : number) : number;
 declare function date_time_get_wday(year : number, montn : number, day : number) : number;
+declare function date_time_get_month_name(montn : number) : string;
+declare function date_time_get_wday_name(wday : number) : string;
 declare function date_time_destroy(dt : any) : TRet;
 declare function date_time_t_get_prop_second(nativeObj : any) : number;
 declare function date_time_t_get_prop_minute(nativeObj : any) : number;
@@ -1209,6 +1227,11 @@ declare function time_clock_t_get_prop_minute_anchor_x(nativeObj : any) : string
 declare function time_clock_t_get_prop_minute_anchor_y(nativeObj : any) : string;
 declare function time_clock_t_get_prop_second_anchor_x(nativeObj : any) : string;
 declare function time_clock_t_get_prop_second_anchor_y(nativeObj : any) : string;
+declare function wheel_event_cast(event : any) : any;
+declare function wheel_event_t_get_prop_dy(nativeObj : any) : number;
+declare function wheel_event_t_get_prop_alt(nativeObj : any) : boolean;
+declare function wheel_event_t_get_prop_ctrl(nativeObj : any) : boolean;
+declare function wheel_event_t_get_prop_shift(nativeObj : any) : boolean;
 declare function text_selector_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function text_selector_cast(widget : any) : any;
 declare function text_selector_reset_options(widget : any) : TRet;
@@ -1225,11 +1248,6 @@ declare function text_selector_set_visible_nr(widget : any, visible_nr : number)
 declare function text_selector_t_get_prop_visible_nr(nativeObj : any) : number;
 declare function text_selector_t_get_prop_selected_index(nativeObj : any) : number;
 declare function text_selector_t_get_prop_options(nativeObj : any) : string;
-declare function wheel_event_cast(event : any) : any;
-declare function wheel_event_t_get_prop_dy(nativeObj : any) : number;
-declare function wheel_event_t_get_prop_alt(nativeObj : any) : boolean;
-declare function wheel_event_t_get_prop_ctrl(nativeObj : any) : boolean;
-declare function wheel_event_t_get_prop_shift(nativeObj : any) : boolean;
 declare function switch_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function switch_set_value(widget : any, value : any) : TRet;
 declare function switch_cast(widget : any) : any;
@@ -2236,6 +2254,17 @@ export class TBitmap {
    */
  destroy() : TRet  {
     return bitmap_destroy(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 获取位图格式对应的颜色位数。
+   * 
+   *
+   * @returns 成功返回颜色位数，失败返回0。
+   */
+ getBppOfFormat() : number  {
+    return bitmap_get_bpp_of_format(this != null ? (this.nativeObj || this) : null);
  }
 
 
@@ -9123,6 +9152,155 @@ export class TWidget {
 
 
   /**
+   * widget_set_prop_bool(group, WIDGET_PROP_IS_KEYBOARD, TRUE);
+   *```
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ isKeyboard() : TRet  {
+    return widget_is_keyboard(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 根据控件的style绘制边框矩形。
+   * 
+   * @param c 画布对象。
+   * @param r 矩形区域。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ strokeBorderRect(c : TCanvas, r : TRect) : TRet  {
+    return widget_stroke_border_rect(this != null ? (this.nativeObj || this) : null, c != null ? (c.nativeObj || c) : null, r != null ? (r.nativeObj || r) : null);
+ }
+
+
+  /**
+   * 根据控件的style绘制背景矩形。
+   * 
+   * @param c 画布对象。
+   * @param r 矩形区域。
+   * @param draw_type 图片缺省绘制方式。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ fillBgRect(c : TCanvas, r : TRect, draw_type : TImageDrawType) : TRet  {
+    return widget_fill_bg_rect(this != null ? (this.nativeObj || this) : null, c != null ? (c.nativeObj || c) : null, r != null ? (r.nativeObj || r) : null, draw_type);
+ }
+
+
+  /**
+   * 根据控件的style绘制前景矩形。
+   * 
+   * @param c 画布对象。
+   * @param r 矩形区域。
+   * @param draw_type 图片缺省绘制方式。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ fillFgRect(c : TCanvas, r : TRect, draw_type : TImageDrawType) : TRet  {
+    return widget_fill_fg_rect(this != null ? (this.nativeObj || this) : null, c != null ? (c.nativeObj || c) : null, r != null ? (r.nativeObj || r) : null, draw_type);
+ }
+
+
+  /**
+   * 递归的分发一个事件到所有target子控件。
+   * 
+   * @param e 事件。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ dispatchToTarget(e : TEvent) : TRet  {
+    return widget_dispatch_to_target(this != null ? (this.nativeObj || this) : null, e != null ? (e.nativeObj || e) : null);
+ }
+
+
+  /**
+   * 递归的分发一个事件到所有key_target子控件。
+   * 
+   * @param e 事件。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ dispatchToKeyTarget(e : TEvent) : TRet  {
+    return widget_dispatch_to_key_target(this != null ? (this.nativeObj || this) : null, e != null ? (e.nativeObj || e) : null);
+ }
+
+
+  /**
+   * 让控件根据自己当前状态更新style。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ updateStyle() : TRet  {
+    return widget_update_style(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 让控件及子控件根据自己当前状态更新style。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ updateStyleRecursive() : TRet  {
+    return widget_update_style_recursive(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 递归的把父控件的key_target设置为自己。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setAsKeyTarget() : TRet  {
+    return widget_set_as_key_target(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 把焦点移动下一个控件。
+   *
+   *>widget必须是当前焦点控件。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ focusNext() : TRet  {
+    return widget_focus_next(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 把焦点移动前一个控件。
+   *
+   *>widget必须是当前焦点控件。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ focusPrev() : TRet  {
+    return widget_focus_prev(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 把控件的状态转成获取style选要的状态，一般只在子类中使用。
+   * 
+   * @param active 控件是否为当前项。
+   * @param checked 控件是否为选中项。
+   *
+   * @returns 返回状态值。
+   */
+ getStateForStyle(active : boolean, checked : boolean) : string  {
+    return widget_get_state_for_style(this != null ? (this.nativeObj || this) : null, active, checked);
+ }
+
+
+  /**
    * 检查控件是否是system bar类型。
    * 
    *
@@ -9902,6 +10080,26 @@ export enum TBidiType {
 
 
 /**
+ * 对象常见属性定义
+ *
+ */
+export enum TObjectProp {
+
+  /**
+   * 属性的个数。
+   *
+   */
+ SIZE = OBJECT_PROP_SIZE(),
+
+  /**
+   * 属性是否勾选。
+   *
+   */
+ CHECKED = OBJECT_PROP_CHECKED(),
+};
+
+
+/**
  * 对象常见命令定义
  *
  */
@@ -9939,6 +10137,13 @@ export enum TObjectCmd {
    *
    */
  REMOVE = OBJECT_CMD_REMOVE(),
+
+  /**
+   * 删除勾选的属性。
+   *>参数为属性的名称或路径。
+   *
+   */
+ REMOVE_CHECKED = OBJECT_CMD_REMOVE_CHECKED(),
 
   /**
    * 清除全部属性。
@@ -11494,7 +11699,7 @@ export class TDateTime {
 
 
   /**
-   * 获取指定日期是周几(0-6)。
+   * 获取指定日期是周几(0-6, Sunday = 0)。。
    * 
    * @param year 年份。
    * @param montn 月份(1-12)。
@@ -11504,6 +11709,30 @@ export class TDateTime {
    */
  static getWday(year : number, montn : number, day : number) : number  {
     return date_time_get_wday(year, montn, day);
+ }
+
+
+  /**
+   * 获取指定月份的英文名称(简写)。
+   * 
+   * @param montn 月份(1-12)。
+   *
+   * @returns 返回指定月份的英文名称(简写)。
+   */
+ static getMonthName(montn : number) : string  {
+    return date_time_get_month_name(montn);
+ }
+
+
+  /**
+   * 获取周几的英文名称(简写)。
+   * 
+   * @param wday 星期几(0-6, Sunday = 0)。
+   *
+   * @returns 返回指定周几的英文名称(简写)。
+   */
+ static getWdayName(wday : number) : string  {
+    return date_time_get_wday_name(wday);
  }
 
 
@@ -12586,6 +12815,65 @@ export class TTimeClock extends TWidget {
 
 };
 /**
+ * 滚轮事件。
+ *
+ */
+export class TWheelEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转wheel_event_t对象，主要给脚本语言使用。
+   * 
+   * @param event event对象。
+   *
+   * @returns event对象。
+   */
+ static cast(event : TEvent) : TWheelEvent  {
+    return new TWheelEvent(wheel_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+
+  /**
+   * 滚轮的y值。
+   *
+   */
+ get dy() : number {
+   return wheel_event_t_get_prop_dy(this.nativeObj);
+ }
+
+
+  /**
+   * alt键是否按下。
+   *
+   */
+ get alt() : boolean {
+   return wheel_event_t_get_prop_alt(this.nativeObj);
+ }
+
+
+  /**
+   * ctrl键是否按下。
+   *
+   */
+ get ctrl() : boolean {
+   return wheel_event_t_get_prop_ctrl(this.nativeObj);
+ }
+
+
+  /**
+   * shift键是否按下。
+   *
+   */
+ get shift() : boolean {
+   return wheel_event_t_get_prop_shift(this.nativeObj);
+ }
+
+};
+/**
  * 文本选择器控件，通常用于选择日期和时间等。
  *
  *> XXX: 目前需要先设置options和visible_nr，再设置其它参数(在XML中也需要按此顺序)。
@@ -12823,65 +13111,6 @@ export class TTextSelector extends TWidget {
 
  set options(v : string) {
    this.setOptions(v);
- }
-
-};
-/**
- * 滚轮事件。
- *
- */
-export class TWheelEvent extends TEvent { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 把event对象转wheel_event_t对象，主要给脚本语言使用。
-   * 
-   * @param event event对象。
-   *
-   * @returns event对象。
-   */
- static cast(event : TEvent) : TWheelEvent  {
-    return new TWheelEvent(wheel_event_cast(event != null ? (event.nativeObj || event) : null));
- }
-
-
-  /**
-   * 滚轮的y值。
-   *
-   */
- get dy() : number {
-   return wheel_event_t_get_prop_dy(this.nativeObj);
- }
-
-
-  /**
-   * alt键是否按下。
-   *
-   */
- get alt() : boolean {
-   return wheel_event_t_get_prop_alt(this.nativeObj);
- }
-
-
-  /**
-   * ctrl键是否按下。
-   *
-   */
- get ctrl() : boolean {
-   return wheel_event_t_get_prop_ctrl(this.nativeObj);
- }
-
-
-  /**
-   * shift键是否按下。
-   *
-   */
- get shift() : boolean {
-   return wheel_event_t_get_prop_shift(this.nativeObj);
  }
 
 };

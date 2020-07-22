@@ -87,6 +87,22 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:aa43cf24b6e6ba7b9b7dddddf0034b8fc"><td class="memItemLeft" align="right" valign="top"><a id="aa43cf24b6e6ba7b9b7dddddf0034b8fc"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TCandidates</b> (const candidates_t *nativeObj)</td></tr>
 <tr class="separator:aa43cf24b6e6ba7b9b7dddddf0034b8fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7f55972089e6fb99f2907f1949f1b4b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_candidates.html#ab7f55972089e6fb99f2907f1949f1b4b">SetPre</a> (bool pre)</td></tr>
+<tr class="separator:ab7f55972089e6fb99f2907f1949f1b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2904ab214ded964c59da2f10d4ae4829"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_candidates.html#a2904ab214ded964c59da2f10d4ae4829">SetSelectByNum</a> (bool select_by_num)</td></tr>
+<tr class="separator:a2904ab214ded964c59da2f10d4ae4829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1484f8463098f06d70f16db0538292e3"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_candidates.html#a1484f8463098f06d70f16db0538292e3">SetAutoHide</a> (bool auto_hide)</td></tr>
+<tr class="separator:a1484f8463098f06d70f16db0538292e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d32c3c0c104446a302c43bfad0a884d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_candidates.html#a3d32c3c0c104446a302c43bfad0a884d">SetButtonStyle</a> (const char *button_style)</td></tr>
+<tr class="separator:a3d32c3c0c104446a302c43bfad0a884d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa63a979e0e420d0bbe96b7efd361ffdd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_candidates.html#aa63a979e0e420d0bbe96b7efd361ffdd">GetPre</a> () const</td></tr>
+<tr class="separator:aa63a979e0e420d0bbe96b7efd361ffdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addf5d1208bf721756ac769ad6e31cc42"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_candidates.html#addf5d1208bf721756ac769ad6e31cc42">GetSelectByNum</a> () const</td></tr>
+<tr class="separator:addf5d1208bf721756ac769ad6e31cc42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5a34d49cc0c54cdf3e4a7e0bdfbc4bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_candidates.html#aa5a34d49cc0c54cdf3e4a7e0bdfbc4bb">GetAutoHide</a> () const</td></tr>
+<tr class="separator:aa5a34d49cc0c54cdf3e4a7e0bdfbc4bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88c4133e179a12005cad12fdfe6cc5b1"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_candidates.html#a88c4133e179a12005cad12fdfe6cc5b1">GetButtonStyle</a> () const</td></tr>
+<tr class="separator:a88c4133e179a12005cad12fdfe6cc5b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -116,8 +132,192 @@ static <a class="el" href="class_t_candidates.html">TCandidates</a>&#160;</td><t
 <div class="line">*&lt;<span class="keywordtype">focused</span>    <span class="keyword">border_color</span>=<span class="stringliteral">&quot;#a0a0a0&quot;</span>/&gt;</div>
 <div class="line">*&lt;/<span class="keywordtype">style</span>&gt;</div>
 </div><!-- fragment --><p>&gt;相关文件：assets/default/raw/styles/keyboard.xml </p>
-</div><hr/>该类的文档由以下文件生成:<ul>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="aa5a34d49cc0c54cdf3e4a7e0bdfbc4bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5a34d49cc0c54cdf3e4a7e0bdfbc4bb">&#9670;&nbsp;</a></span>GetAutoHide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TCandidates::GetAutoHide </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>没有候选字时，是否自动隐藏控件。 </p>
+
+</div>
+</div>
+<a id="a88c4133e179a12005cad12fdfe6cc5b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88c4133e179a12005cad12fdfe6cc5b1">&#9670;&nbsp;</a></span>GetButtonStyle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * TCandidates::GetButtonStyle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>按钮的style名称。 </p>
+
+</div>
+</div>
+<a id="aa63a979e0e420d0bbe96b7efd361ffdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa63a979e0e420d0bbe96b7efd361ffdd">&#9670;&nbsp;</a></span>GetPre()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TCandidates::GetPre </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>是否为预候选字。</p>
+<blockquote class="doxtable">
+<p>预候选字: 在有的输入法中，比如T9硬键盘输入时，按下12两个键时，预候选字会显示可用的拼音列表。 从预候选字列表中选择拼音，再查询拼音对应的候选字列表。 </p>
+</blockquote>
+
+</div>
+</div>
+<a id="addf5d1208bf721756ac769ad6e31cc42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addf5d1208bf721756ac769ad6e31cc42">&#9670;&nbsp;</a></span>GetSelectByNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TCandidates::GetSelectByNum </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>是否启用用数字选择候选字。比如按下1选择第1个候选字，按下2选择第2个候选字。 </p>
+
+</div>
+</div>
+<a id="a1484f8463098f06d70f16db0538292e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1484f8463098f06d70f16db0538292e3">&#9670;&nbsp;</a></span>SetAutoHide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TCandidates::SetAutoHide </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>auto_hide</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置是否自动隐藏。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">auto_hide</td><td>是否自动隐藏。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a3d32c3c0c104446a302c43bfad0a884d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d32c3c0c104446a302c43bfad0a884d">&#9670;&nbsp;</a></span>SetButtonStyle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TCandidates::SetButtonStyle </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>button_style</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置按钮的style名称。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button_style</td><td>按钮的style名称。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="ab7f55972089e6fb99f2907f1949f1b4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7f55972089e6fb99f2907f1949f1b4b">&#9670;&nbsp;</a></span>SetPre()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TCandidates::SetPre </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pre</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置是否为预候选字列表。</p>
+<blockquote class="doxtable">
+<p>为预候选字列表则注册EVT_IM_SHOW_PRE_CANDIDATES，否则注册EVT_IM_SHOW_CANDIDATES事件。 </p>
+</blockquote>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pre</td><td>是否为预候选字列表。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a2904ab214ded964c59da2f10d4ae4829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2904ab214ded964c59da2f10d4ae4829">&#9670;&nbsp;</a></span>SetSelectByNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TCandidates::SetSelectByNum </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>select_by_num</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置是否启用用数字选择候选字。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">select_by_num</td><td>是否启用用数字选择候选字。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
+<li>output/awtk_cpp.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

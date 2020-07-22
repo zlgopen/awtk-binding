@@ -107,6 +107,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:abe897a8adae7d881c8afcfbb84cadc02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3685615c2c2a0f135b3764b477485e9b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_native_window.html#a3685615c2c2a0f135b3764b477485e9b">SetFullscreen</a> (bool fullscreen)</td></tr>
 <tr class="separator:a3685615c2c2a0f135b3764b477485e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aa509ba69185d2cb0d330e85426151c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_native_window.html#a9aa509ba69185d2cb0d330e85426151c">SetCursor</a> (const char *name, <a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;img)</td></tr>
+<tr class="separator:a9aa509ba69185d2cb0d330e85426151c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_t_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_t_object')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_t_object.html">TObject</a></td></tr>
 <tr class="memitem:a2c8bccc43117e0936901231aa9ad6e0b inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top"><a id="a2c8bccc43117e0936901231aa9ad6e0b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TObject</b> (emitter_t *nativeObj)</td></tr>
@@ -417,6 +419,43 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
       </table>
 </div><div class="memdoc">
 <p>恢复窗口大小。</p>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a9aa509ba69185d2cb0d330e85426151c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aa509ba69185d2cb0d330e85426151c">&#9670;&nbsp;</a></span>SetCursor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TNativeWindow::SetCursor </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;&#160;</td>
+          <td class="paramname"><em>img</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置鼠标光标。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>鼠标光标的名称。 </td></tr>
+    <tr><td class="paramname">img</td><td>鼠标光标的图片。</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>

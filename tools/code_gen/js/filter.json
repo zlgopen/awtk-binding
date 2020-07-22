@@ -606,6 +606,26 @@
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "bitmap_format_t",
+            "name": "format",
+            "desc": "位图格式。"
+          }
+        ],
+        "annotation": {
+          "deconstructor": true,
+          "scriptable": true,
+          "gc": true
+        },
+        "desc": "获取位图格式对应的颜色位数。",
+        "name": "bitmap_get_bpp_of_format",
+        "return": {
+          "type": "uint32_t",
+          "desc": "成功返回颜色位数，失败返回0。"
+        }
       }
     ],
     "events": [],
@@ -8926,6 +8946,282 @@
           {
             "type": "widget_t*",
             "name": "widget",
+            "desc": "控件对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "判断当前控件是否是keyboard。\n\n> keyboard收到pointer事件时，不会让当前控件失去焦点。\n\n在自定义软键盘时，将所有按钮放到一个容器当中，并设置为is_keyboard。\n\n```c\nwidget_set_prop_bool(group, WIDGET_PROP_IS_KEYBOARD, TRUE);\n```",
+        "name": "widget_is_keyboard",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "canvas_t*",
+            "name": "c",
+            "desc": "画布对象。"
+          },
+          {
+            "type": "rect_t*",
+            "name": "r",
+            "desc": "矩形区域。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "根据控件的style绘制边框矩形。",
+        "name": "widget_stroke_border_rect",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "canvas_t*",
+            "name": "c",
+            "desc": "画布对象。"
+          },
+          {
+            "type": "rect_t*",
+            "name": "r",
+            "desc": "矩形区域。"
+          },
+          {
+            "type": "image_draw_type_t",
+            "name": "draw_type",
+            "desc": "图片缺省绘制方式。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "根据控件的style绘制背景矩形。",
+        "name": "widget_fill_bg_rect",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "canvas_t*",
+            "name": "c",
+            "desc": "画布对象。"
+          },
+          {
+            "type": "rect_t*",
+            "name": "r",
+            "desc": "矩形区域。"
+          },
+          {
+            "type": "image_draw_type_t",
+            "name": "draw_type",
+            "desc": "图片缺省绘制方式。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "根据控件的style绘制前景矩形。",
+        "name": "widget_fill_fg_rect",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "event_t*",
+            "name": "e",
+            "desc": "事件。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "递归的分发一个事件到所有target子控件。",
+        "name": "widget_dispatch_to_target",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "event_t*",
+            "name": "e",
+            "desc": "事件。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "递归的分发一个事件到所有key_target子控件。",
+        "name": "widget_dispatch_to_key_target",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "让控件根据自己当前状态更新style。",
+        "name": "widget_update_style",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "让控件及子控件根据自己当前状态更新style。",
+        "name": "widget_update_style_recursive",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "递归的把父控件的key_target设置为自己。",
+        "name": "widget_set_as_key_target",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "把焦点移动下一个控件。\n\n>widget必须是当前焦点控件。",
+        "name": "widget_focus_next",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "把焦点移动前一个控件。\n\n>widget必须是当前焦点控件。",
+        "name": "widget_focus_prev",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "active",
+            "desc": "控件是否为当前项。"
+          },
+          {
+            "type": "bool_t",
+            "name": "checked",
+            "desc": "控件是否为选中项。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "把控件的状态转成获取style选要的状态，一般只在子类中使用。",
+        "name": "widget_get_state_for_style",
+        "return": {
+          "type": "const char*",
+          "desc": "返回状态值。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
             "desc": "widget对象。"
           }
         ],
@@ -10078,6 +10374,28 @@
   },
   {
     "type": "enum",
+    "desc": "对象常见属性定义",
+    "consts": [
+      {
+        "desc": "属性的个数。",
+        "name": "OBJECT_PROP_SIZE"
+      },
+      {
+        "desc": "属性是否勾选。",
+        "name": "OBJECT_PROP_CHECKED"
+      }
+    ],
+    "header": "tkc/object.h",
+    "name": "object_prop_t",
+    "prefix": "OBJECT_PROP_",
+    "annotation": {
+      "scriptable": true,
+      "string": true
+    },
+    "level": 1
+  },
+  {
+    "type": "enum",
     "desc": "对象常见命令定义",
     "consts": [
       {
@@ -10099,6 +10417,10 @@
       {
         "desc": "删除属性。\n>参数为属性的名称或路径。",
         "name": "OBJECT_CMD_REMOVE"
+      },
+      {
+        "desc": "删除勾选的属性。\n>参数为属性的名称或路径。",
+        "name": "OBJECT_CMD_REMOVE_CHECKED"
       },
       {
         "desc": "清除全部属性。\n>参数为属性的名称或路径。",
@@ -11801,11 +12123,49 @@
           "scriptable": true,
           "static": true
         },
-        "desc": "获取指定日期是周几(0-6)。",
+        "desc": "获取指定日期是周几(0-6, Sunday = 0)。。",
         "name": "date_time_get_wday",
         "return": {
           "type": "int32_t",
           "desc": "返回大于等于0表示周几(0-6)，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "uint32_t",
+            "name": "montn",
+            "desc": "月份(1-12)。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true,
+          "static": true
+        },
+        "desc": "获取指定月份的英文名称(简写)。",
+        "name": "date_time_get_month_name",
+        "return": {
+          "type": "const char*",
+          "desc": "返回指定月份的英文名称(简写)。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "uint32_t",
+            "name": "wday",
+            "desc": "星期几(0-6, Sunday = 0)。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true,
+          "static": true
+        },
+        "desc": "获取周几的英文名称(简写)。",
+        "name": "date_time_get_wday_name",
+        "return": {
+          "type": "const char*",
+          "desc": "返回指定周几的英文名称(简写)。"
         }
       },
       {
@@ -13225,6 +13585,77 @@
       {
         "params": [
           {
+            "type": "event_t*",
+            "name": "event",
+            "desc": "event对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
+        "desc": "把event对象转wheel_event_t对象，主要给脚本语言使用。",
+        "name": "wheel_event_cast",
+        "return": {
+          "type": "wheel_event_t*",
+          "desc": "event对象。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [
+      {
+        "name": "dy",
+        "desc": "滚轮的y值。",
+        "type": "int32_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "alt",
+        "desc": "alt键是否按下。",
+        "type": "bool_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "ctrl",
+        "desc": "ctrl键是否按下。",
+        "type": "bool_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "shift",
+        "desc": "shift键是否按下。",
+        "type": "bool_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      }
+    ],
+    "header": "base/events.h",
+    "desc": "滚轮事件。",
+    "name": "wheel_event_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "parent": "event_t",
+    "level": 2
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
             "type": "widget_t*",
             "name": "parent",
             "desc": "父控件"
@@ -13592,77 +14023,6 @@
       "design": true,
       "widget": true
     },
-    "level": 2
-  },
-  {
-    "type": "class",
-    "methods": [
-      {
-        "params": [
-          {
-            "type": "event_t*",
-            "name": "event",
-            "desc": "event对象。"
-          }
-        ],
-        "annotation": {
-          "cast": true,
-          "scriptable": true
-        },
-        "desc": "把event对象转wheel_event_t对象，主要给脚本语言使用。",
-        "name": "wheel_event_cast",
-        "return": {
-          "type": "wheel_event_t*",
-          "desc": "event对象。"
-        }
-      }
-    ],
-    "events": [],
-    "properties": [
-      {
-        "name": "dy",
-        "desc": "滚轮的y值。",
-        "type": "int32_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "alt",
-        "desc": "alt键是否按下。",
-        "type": "bool_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "ctrl",
-        "desc": "ctrl键是否按下。",
-        "type": "bool_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "shift",
-        "desc": "shift键是否按下。",
-        "type": "bool_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      }
-    ],
-    "header": "base/events.h",
-    "desc": "滚轮事件。",
-    "name": "wheel_event_t",
-    "annotation": {
-      "scriptable": true
-    },
-    "parent": "event_t",
     "level": 2
   },
   {
