@@ -416,6 +416,19 @@ pyobject_t wrap_bitmap_get_bpp(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", ret);
 }
 
+pyobject_t wrap_bitmap_get_bpp_of_format(pyobject_t self, pyobject_t pyargs) {
+  uint32_t ret = 0;
+  bitmap_format_t format = 0;
+
+  if (!PyArg_ParseTuple(pyargs, "i" , &format)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (uint32_t)bitmap_get_bpp_of_format(format);
+  return Py_BuildValue("i", ret);
+}
+
 pyobject_t wrap_bitmap_t_get_prop_w(pyobject_t self, pyobject_t pyargs) {
   bitmap_t* obj = NULL;
 
@@ -5853,6 +5866,34 @@ pyobject_t wrap_widget_is_window_opened(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("b", ret);
 }
 
+pyobject_t wrap_widget_is_parent_of(pyobject_t self, pyobject_t pyargs) {
+  bool_t ret = 0;
+  widget_t* widget = NULL;
+  widget_t* child = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&O&" , &parse_voidp, &widget, &parse_voidp, &child)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (bool_t)widget_is_parent_of(widget, child);
+  return Py_BuildValue("b", ret);
+}
+
+pyobject_t wrap_widget_is_direct_parent_of(pyobject_t self, pyobject_t pyargs) {
+  bool_t ret = 0;
+  widget_t* widget = NULL;
+  widget_t* child = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&O&" , &parse_voidp, &widget, &parse_voidp, &child)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (bool_t)widget_is_direct_parent_of(widget, child);
+  return Py_BuildValue("b", ret);
+}
+
 pyobject_t wrap_widget_is_window(pyobject_t self, pyobject_t pyargs) {
   bool_t ret = 0;
   widget_t* widget = NULL;
@@ -8747,6 +8788,17 @@ pyobject_t wrap_cmd_exec_event_t_get_prop_result(pyobject_t self, pyobject_t pya
   }
 
   return Py_BuildValue("i", obj->result);
+}
+
+pyobject_t wrap_cmd_exec_event_t_get_prop_can_exec(pyobject_t self, pyobject_t pyargs) {
+  cmd_exec_event_t* obj = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&", &parse_voidp, &obj)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  return Py_BuildValue("b", obj->can_exec);
 }
 
 pyobject_t wrap_time_clock_create(pyobject_t self, pyobject_t pyargs) {
@@ -17271,6 +17323,7 @@ static PyMethodDef awtk_methods[] = {
 {"bitmap_create", wrap_bitmap_create, METH_VARARGS, "bitmap_create"},
 {"bitmap_create_ex", wrap_bitmap_create_ex, METH_VARARGS, "bitmap_create_ex"},
 {"bitmap_get_bpp", wrap_bitmap_get_bpp, METH_VARARGS, "bitmap_get_bpp"},
+{"bitmap_get_bpp_of_format", wrap_bitmap_get_bpp_of_format, METH_VARARGS, "bitmap_get_bpp_of_format"},
 {"bitmap_t_get_prop_w", wrap_bitmap_t_get_prop_w, METH_VARARGS, "bitmap_t_get_prop_w"},
 {"bitmap_t_get_prop_h", wrap_bitmap_t_get_prop_h, METH_VARARGS, "bitmap_t_get_prop_h"},
 {"bitmap_t_get_prop_line_length", wrap_bitmap_t_get_prop_line_length, METH_VARARGS, "bitmap_t_get_prop_line_length"},
@@ -18069,6 +18122,8 @@ static PyMethodDef awtk_methods[] = {
 {"widget_set_prop_bool", wrap_widget_set_prop_bool, METH_VARARGS, "widget_set_prop_bool"},
 {"widget_get_prop_bool", wrap_widget_get_prop_bool, METH_VARARGS, "widget_get_prop_bool"},
 {"widget_is_window_opened", wrap_widget_is_window_opened, METH_VARARGS, "widget_is_window_opened"},
+{"widget_is_parent_of", wrap_widget_is_parent_of, METH_VARARGS, "widget_is_parent_of"},
+{"widget_is_direct_parent_of", wrap_widget_is_direct_parent_of, METH_VARARGS, "widget_is_direct_parent_of"},
 {"widget_is_window", wrap_widget_is_window, METH_VARARGS, "widget_is_window"},
 {"widget_is_designing_window", wrap_widget_is_designing_window, METH_VARARGS, "widget_is_designing_window"},
 {"widget_is_window_manager", wrap_widget_is_window_manager, METH_VARARGS, "widget_is_window_manager"},
@@ -18431,6 +18486,7 @@ static PyMethodDef awtk_methods[] = {
 {"cmd_exec_event_t_get_prop_name", wrap_cmd_exec_event_t_get_prop_name, METH_VARARGS, "cmd_exec_event_t_get_prop_name"},
 {"cmd_exec_event_t_get_prop_args", wrap_cmd_exec_event_t_get_prop_args, METH_VARARGS, "cmd_exec_event_t_get_prop_args"},
 {"cmd_exec_event_t_get_prop_result", wrap_cmd_exec_event_t_get_prop_result, METH_VARARGS, "cmd_exec_event_t_get_prop_result"},
+{"cmd_exec_event_t_get_prop_can_exec", wrap_cmd_exec_event_t_get_prop_can_exec, METH_VARARGS, "cmd_exec_event_t_get_prop_can_exec"},
 {"time_clock_create", wrap_time_clock_create, METH_VARARGS, "time_clock_create"},
 {"time_clock_cast", wrap_time_clock_cast, METH_VARARGS, "time_clock_cast"},
 {"time_clock_set_hour", wrap_time_clock_set_hour, METH_VARARGS, "time_clock_set_hour"},

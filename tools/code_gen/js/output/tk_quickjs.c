@@ -533,7 +533,7 @@ jsvalue_t wrap_bitmap_create(
   bitmap_t* ret = NULL;
   ret = (bitmap_t*)bitmap_create();
 
-  jret = jsvalue_create_object(ctx, ret, "bitmap_t*", (tk_destroy_t)bitmap_get_bpp_of_format);
+  jret = jsvalue_create_object(ctx, ret, "bitmap_t*", (tk_destroy_t)bitmap_destroy);
   }
   return jret;
 }
@@ -553,7 +553,7 @@ jsvalue_t wrap_bitmap_create_ex(
   bitmap_format_t format = (bitmap_format_t)jsvalue_get_int_value(ctx, argv[3]);
   ret = (bitmap_t*)bitmap_create_ex(w, h, line_length, format);
 
-  jret = jsvalue_create_object(ctx, ret, "bitmap_t*", (tk_destroy_t)bitmap_get_bpp_of_format);
+  jret = jsvalue_create_object(ctx, ret, "bitmap_t*", (tk_destroy_t)bitmap_destroy);
   }
   return jret;
 }
@@ -569,6 +569,23 @@ jsvalue_t wrap_bitmap_get_bpp(
   uint32_t ret = (uint32_t)0;
   bitmap_t* bitmap = (bitmap_t*)jsvalue_get_pointer(ctx, argv[0], "bitmap_t*");
   ret = (uint32_t)bitmap_get_bpp(bitmap);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_bitmap_get_bpp_of_format(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  uint32_t ret = (uint32_t)0;
+  bitmap_format_t format = (bitmap_format_t)jsvalue_get_int_value(ctx, argv[0]);
+  ret = (uint32_t)bitmap_get_bpp_of_format(format);
 
   jret = jsvalue_create_int(ctx, ret);
   }
@@ -661,6 +678,8 @@ ret_t bitmap_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_bitmap_create_ex, "bitmap_create_ex", 1));
   JS_SetPropertyStr(ctx, global_obj, "bitmap_get_bpp",
                       JS_NewCFunction(ctx, wrap_bitmap_get_bpp, "bitmap_get_bpp", 1));
+  JS_SetPropertyStr(ctx, global_obj, "bitmap_get_bpp_of_format",
+                      JS_NewCFunction(ctx, wrap_bitmap_get_bpp_of_format, "bitmap_get_bpp_of_format", 1));
   JS_SetPropertyStr(ctx, global_obj, "bitmap_t_get_prop_w",
                       JS_NewCFunction(ctx, wrap_bitmap_t_get_prop_w, "bitmap_t_get_prop_w", 1));
   JS_SetPropertyStr(ctx, global_obj, "bitmap_t_get_prop_h",
@@ -11578,6 +11597,42 @@ jsvalue_t wrap_widget_is_window_opened(
   return jret;
 }
 
+jsvalue_t wrap_widget_is_parent_of(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  bool_t ret = (bool_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  widget_t* child = (widget_t*)jsvalue_get_pointer(ctx, argv[1], "widget_t*");
+  ret = (bool_t)widget_is_parent_of(widget, child);
+
+  jret = jsvalue_create_bool(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_widget_is_direct_parent_of(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  bool_t ret = (bool_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  widget_t* child = (widget_t*)jsvalue_get_pointer(ctx, argv[1], "widget_t*");
+  ret = (bool_t)widget_is_direct_parent_of(widget, child);
+
+  jret = jsvalue_create_bool(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_widget_is_window(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -12619,6 +12674,10 @@ ret_t widget_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_widget_get_prop_bool, "widget_get_prop_bool", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_is_window_opened",
                       JS_NewCFunction(ctx, wrap_widget_is_window_opened, "widget_is_window_opened", 1));
+  JS_SetPropertyStr(ctx, global_obj, "widget_is_parent_of",
+                      JS_NewCFunction(ctx, wrap_widget_is_parent_of, "widget_is_parent_of", 1));
+  JS_SetPropertyStr(ctx, global_obj, "widget_is_direct_parent_of",
+                      JS_NewCFunction(ctx, wrap_widget_is_direct_parent_of, "widget_is_direct_parent_of", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_is_window",
                       JS_NewCFunction(ctx, wrap_widget_is_window, "widget_is_window", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_is_designing_window",
@@ -17081,6 +17140,19 @@ jsvalue_t wrap_cmd_exec_event_t_get_prop_result(
   return jret;
 }
 
+jsvalue_t wrap_cmd_exec_event_t_get_prop_can_exec(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  cmd_exec_event_t* obj = (cmd_exec_event_t*)jsvalue_get_pointer(ctx, argv[0], "cmd_exec_event_t*");
+
+  jret = jsvalue_create_bool(ctx, obj->can_exec);
+  return jret;
+}
+
 ret_t cmd_exec_event_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
   JS_SetPropertyStr(ctx, global_obj, "cmd_exec_event_cast",
@@ -17091,6 +17163,8 @@ ret_t cmd_exec_event_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_cmd_exec_event_t_get_prop_args, "cmd_exec_event_t_get_prop_args", 1));
   JS_SetPropertyStr(ctx, global_obj, "cmd_exec_event_t_get_prop_result",
                       JS_NewCFunction(ctx, wrap_cmd_exec_event_t_get_prop_result, "cmd_exec_event_t_get_prop_result", 1));
+  JS_SetPropertyStr(ctx, global_obj, "cmd_exec_event_t_get_prop_can_exec",
+                      JS_NewCFunction(ctx, wrap_cmd_exec_event_t_get_prop_can_exec, "cmd_exec_event_t_get_prop_can_exec", 1));
 
  jsvalue_unref(ctx, global_obj);
 

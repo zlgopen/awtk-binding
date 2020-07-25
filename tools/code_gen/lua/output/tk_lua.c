@@ -6425,6 +6425,28 @@ static int wrap_widget_is_window_opened(lua_State* L) {
   return 1;
 }
 
+static int wrap_widget_is_parent_of(lua_State* L) {
+  bool_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  widget_t* child = (widget_t*)tk_checkudata(L, 2, "widget_t");
+  ret = (bool_t)widget_is_parent_of(widget, child);
+
+  lua_pushboolean(L,(lua_Integer)(ret));
+
+  return 1;
+}
+
+static int wrap_widget_is_direct_parent_of(lua_State* L) {
+  bool_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  widget_t* child = (widget_t*)tk_checkudata(L, 2, "widget_t");
+  ret = (bool_t)widget_is_direct_parent_of(widget, child);
+
+  lua_pushboolean(L,(lua_Integer)(ret));
+
+  return 1;
+}
+
 static int wrap_widget_is_window(lua_State* L) {
   bool_t ret = 0;
   widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
@@ -6852,6 +6874,8 @@ static const struct luaL_Reg widget_t_member_funcs[] = {
   {"set_prop_bool", wrap_widget_set_prop_bool},
   {"get_prop_bool", wrap_widget_get_prop_bool},
   {"is_window_opened", wrap_widget_is_window_opened},
+  {"is_parent_of", wrap_widget_is_parent_of},
+  {"is_direct_parent_of", wrap_widget_is_direct_parent_of},
   {"is_window", wrap_widget_is_window},
   {"is_designing_window", wrap_widget_is_designing_window},
   {"is_window_manager", wrap_widget_is_window_manager},
@@ -9659,6 +9683,11 @@ static int wrap_cmd_exec_event_t_get_prop(lua_State* L) {
   }
   else if(strcmp(name, "result") == 0) {
     lua_pushnumber(L,(lua_Number)(obj->result));
+
+  return 1;
+  }
+  else if(strcmp(name, "can_exec") == 0) {
+    lua_pushboolean(L,(lua_Integer)(obj->can_exec));
 
   return 1;
   }

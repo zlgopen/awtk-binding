@@ -6223,6 +6223,26 @@ var TWidget = /** @class */ (function () {
         return widget_is_window_opened(this != null ? (this.nativeObj || this) : null);
     };
     /**
+     * 判断当前控件是否是指定控件的父控件(包括非直系)。
+     *
+     * @param child 控件对象。
+     *
+     * @returns 返回TRUE表示是，否则表示不是。
+     */
+    TWidget.prototype.isParentOf = function (child) {
+        return widget_is_parent_of(this != null ? (this.nativeObj || this) : null, child != null ? (child.nativeObj || child) : null);
+    };
+    /**
+     * 判断当前控件是否是指定控件的直系父控件。
+     *
+     * @param child 控件对象。
+     *
+     * @returns 返回TRUE表示是，否则表示不是。
+     */
+    TWidget.prototype.isDirectParentOf = function (child) {
+        return widget_is_direct_parent_of(this != null ? (this.nativeObj || this) : null, child != null ? (child.nativeObj || child) : null);
+    };
+    /**
      * 判断当前控件是否是窗口。
      *
      *
@@ -9355,6 +9375,17 @@ var TCmdExecEvent = /** @class */ (function (_super) {
          */
         get: function () {
             return cmd_exec_event_t_get_prop_result(this.nativeObj);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(TCmdExecEvent.prototype, "canExec", {
+        /**
+         * 执行结果(适用于CAN_EXEC)。
+         *
+         */
+        get: function () {
+            return cmd_exec_event_t_get_prop_can_exec(this.nativeObj);
         },
         enumerable: true,
         configurable: true

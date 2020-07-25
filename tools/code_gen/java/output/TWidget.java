@@ -788,6 +788,30 @@ public class TWidget {
 
 
   /**
+   * 判断当前控件是否是指定控件的父控件(包括非直系)。
+   * 
+   * @param child 控件对象。
+   *
+   * @return 返回TRUE表示是，否则表示不是。
+   */
+ public  boolean isParentOf(TWidget child)  {
+    return widget_is_parent_of(this != null ? (this.nativeObj) : 0, child != null ? (child.nativeObj) : 0);
+ }
+
+
+  /**
+   * 判断当前控件是否是指定控件的直系父控件。
+   * 
+   * @param child 控件对象。
+   *
+   * @return 返回TRUE表示是，否则表示不是。
+   */
+ public  boolean isDirectParentOf(TWidget child)  {
+    return widget_is_direct_parent_of(this != null ? (this.nativeObj) : 0, child != null ? (child.nativeObj) : 0);
+ }
+
+
+  /**
    * 判断当前控件是否是窗口。
    * 
    *
@@ -1440,6 +1464,8 @@ static private native int widget_get_prop_int(long widget, String name, int defv
 static private native int widget_set_prop_bool(long widget, String name, boolean v);
 static private native boolean widget_get_prop_bool(long widget, String name, boolean defval);
 static private native boolean widget_is_window_opened(long widget);
+static private native boolean widget_is_parent_of(long widget, long child);
+static private native boolean widget_is_direct_parent_of(long widget, long child);
 static private native boolean widget_is_window(long widget);
 static private native boolean widget_is_designing_window(long widget);
 static private native boolean widget_is_window_manager(long widget);

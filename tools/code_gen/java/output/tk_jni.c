@@ -285,6 +285,13 @@ JNIEXPORT jint JNICALL Java_awtk_TBitmap_bitmap_1get_1bpp(JNIEnv* env,  jclass a
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TBitmap_bitmap_1get_1bpp_1of_1format(JNIEnv* env,  jclass ajc, jint format) { /*func*/
+  uint32_t ret;
+  ret = (uint32_t)bitmap_get_bpp_of_format(format);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TBitmap_bitmap_1t_1get_1prop_1w(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
   bitmap_t* obj = (bitmap_t*)jobj;
 
@@ -5080,6 +5087,24 @@ JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1window_1opened(JNIEnv* 
   return (jboolean)(ret);
 }
 
+JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1parent_1of(JNIEnv* env,  jclass ajc, jlong jwidget, jlong jchild) { /*func*/
+  bool_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  widget_t* child = (widget_t*)jchild;
+  ret = (bool_t)widget_is_parent_of(widget, child);
+
+  return (jboolean)(ret);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1direct_1parent_1of(JNIEnv* env,  jclass ajc, jlong jwidget, jlong jchild) { /*func*/
+  bool_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  widget_t* child = (widget_t*)jchild;
+  ret = (bool_t)widget_is_direct_parent_of(widget, child);
+
+  return (jboolean)(ret);
+}
+
 JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1window(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
   bool_t ret;
   widget_t* widget = (widget_t*)jwidget;
@@ -7320,6 +7345,12 @@ JNIEXPORT jint JNICALL Java_awtk_TCmdExecEvent_cmd_1exec_1event_1t_1get_1prop_1r
   cmd_exec_event_t* obj = (cmd_exec_event_t*)jobj;
 
   return (jint)(obj->result);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TCmdExecEvent_cmd_1exec_1event_1t_1get_1prop_1can_1exec(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  cmd_exec_event_t* obj = (cmd_exec_event_t*)jobj;
+
+  return (jboolean)(obj->can_exec);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TTimeClock_time_1clock_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/

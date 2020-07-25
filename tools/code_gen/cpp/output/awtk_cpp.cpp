@@ -1027,6 +1027,14 @@
     return widget_is_window_opened(((widget_t*)(this->nativeObj)));
  }
 
+ bool TWidget::IsParentOf(TWidget& child)  {
+    return widget_is_parent_of(((widget_t*)(this->nativeObj)), ((widget_t*)(child.nativeObj)));
+ }
+
+ bool TWidget::IsDirectParentOf(TWidget& child)  {
+    return widget_is_direct_parent_of(((widget_t*)(this->nativeObj)), ((widget_t*)(child.nativeObj)));
+ }
+
  bool TWidget::IsWindow()  {
     return widget_is_window(((widget_t*)(this->nativeObj)));
  }
@@ -1625,6 +1633,10 @@
 
  ret_t TCmdExecEvent::GetResult() const {
    return ((cmd_exec_event_t*)(this->nativeObj))->result;
+ }
+
+ bool TCmdExecEvent::GetCanExec() const {
+   return ((cmd_exec_event_t*)(this->nativeObj))->can_exec;
  }
 
  TWidget TTimeClock::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {

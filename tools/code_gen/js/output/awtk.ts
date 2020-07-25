@@ -835,6 +835,8 @@ declare function widget_get_prop_int(widget : any, name : string, defval : numbe
 declare function widget_set_prop_bool(widget : any, name : string, v : boolean) : TRet;
 declare function widget_get_prop_bool(widget : any, name : string, defval : boolean) : boolean;
 declare function widget_is_window_opened(widget : any) : boolean;
+declare function widget_is_parent_of(widget : any, child : any) : boolean;
+declare function widget_is_direct_parent_of(widget : any, child : any) : boolean;
 declare function widget_is_window(widget : any) : boolean;
 declare function widget_is_designing_window(widget : any) : boolean;
 declare function widget_is_window_manager(widget : any) : boolean;
@@ -1200,6 +1202,7 @@ declare function cmd_exec_event_cast(event : any) : any;
 declare function cmd_exec_event_t_get_prop_name(nativeObj : any) : string;
 declare function cmd_exec_event_t_get_prop_args(nativeObj : any) : string;
 declare function cmd_exec_event_t_get_prop_result(nativeObj : any) : TRet;
+declare function cmd_exec_event_t_get_prop_can_exec(nativeObj : any) : boolean;
 declare function time_clock_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function time_clock_cast(widget : any) : any;
 declare function time_clock_set_hour(widget : any, hour : number) : TRet;
@@ -9013,6 +9016,30 @@ export class TWidget {
 
 
   /**
+   * 判断当前控件是否是指定控件的父控件(包括非直系)。
+   * 
+   * @param child 控件对象。
+   *
+   * @returns 返回TRUE表示是，否则表示不是。
+   */
+ isParentOf(child : TWidget) : boolean  {
+    return widget_is_parent_of(this != null ? (this.nativeObj || this) : null, child != null ? (child.nativeObj || child) : null);
+ }
+
+
+  /**
+   * 判断当前控件是否是指定控件的直系父控件。
+   * 
+   * @param child 控件对象。
+   *
+   * @returns 返回TRUE表示是，否则表示不是。
+   */
+ isDirectParentOf(child : TWidget) : boolean  {
+    return widget_is_direct_parent_of(this != null ? (this.nativeObj || this) : null, child != null ? (child.nativeObj || child) : null);
+ }
+
+
+  /**
    * 判断当前控件是否是窗口。
    * 
    *
@@ -12456,6 +12483,15 @@ export class TCmdExecEvent extends TEvent {
    */
  get result() : TRet {
    return cmd_exec_event_t_get_prop_result(this.nativeObj);
+ }
+
+
+  /**
+   * 执行结果(适用于CAN_EXEC)。
+   *
+   */
+ get canExec() : boolean {
+   return cmd_exec_event_t_get_prop_can_exec(this.nativeObj);
  }
 
 };

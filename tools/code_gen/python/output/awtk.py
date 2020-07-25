@@ -6886,6 +6886,28 @@ class TWidget(object):
 
 
   #
+  # 判断当前控件是否是指定控件的父控件(包括非直系)。
+  # 
+  # @param child 控件对象。
+  #
+  # @return 返回TRUE表示是，否则表示不是。
+  #
+  def is_parent_of(self, child): 
+    return widget_is_parent_of(awtk_get_native_obj(self), awtk_get_native_obj(child));
+
+
+  #
+  # 判断当前控件是否是指定控件的直系父控件。
+  # 
+  # @param child 控件对象。
+  #
+  # @return 返回TRUE表示是，否则表示不是。
+  #
+  def is_direct_parent_of(self, child): 
+    return widget_is_direct_parent_of(awtk_get_native_obj(self), awtk_get_native_obj(child));
+
+
+  #
   # 判断当前控件是否是窗口。
   # 
   #
@@ -10208,6 +10230,15 @@ class TCmdExecEvent (TEvent):
   @property
   def result(self):
     return cmd_exec_event_t_get_prop_result(self.nativeObj);
+
+
+  #
+  # 执行结果(适用于CAN_EXEC)。
+  #
+  #
+  @property
+  def can_exec(self):
+    return cmd_exec_event_t_get_prop_can_exec(self.nativeObj);
 
 
 #

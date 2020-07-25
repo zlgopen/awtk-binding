@@ -470,6 +470,20 @@ static void wrap_bitmap_get_bpp(const Nan::FunctionCallbackInfo<v8::Value>& argv
   (void)argc;(void)ctx;
 }
 
+static void wrap_bitmap_get_bpp_of_format(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 1) {
+  uint32_t ret = (uint32_t)0;
+  bitmap_format_t format = (bitmap_format_t)jsvalue_get_int_value(ctx, argv[0]);
+  ret = (uint32_t)bitmap_get_bpp_of_format(format);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_bitmap_t_get_prop_w(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -536,6 +550,7 @@ ret_t bitmap_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "bitmap_create", wrap_bitmap_create);
   Nan::Export(ctx, "bitmap_create_ex", wrap_bitmap_create_ex);
   Nan::Export(ctx, "bitmap_get_bpp", wrap_bitmap_get_bpp);
+  Nan::Export(ctx, "bitmap_get_bpp_of_format", wrap_bitmap_get_bpp_of_format);
   Nan::Export(ctx, "bitmap_t_get_prop_w", wrap_bitmap_t_get_prop_w);
   Nan::Export(ctx, "bitmap_t_get_prop_h", wrap_bitmap_t_get_prop_h);
   Nan::Export(ctx, "bitmap_t_get_prop_line_length", wrap_bitmap_t_get_prop_line_length);
@@ -9408,6 +9423,36 @@ static void wrap_widget_is_window_opened(const Nan::FunctionCallbackInfo<v8::Val
   (void)argc;(void)ctx;
 }
 
+static void wrap_widget_is_parent_of(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  bool_t ret = (bool_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  widget_t* child = (widget_t*)jsvalue_get_pointer(ctx, argv[1], "widget_t*");
+  ret = (bool_t)widget_is_parent_of(widget, child);
+
+  v8::Local<v8::Boolean> jret= Nan::New((bool)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
+static void wrap_widget_is_direct_parent_of(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  bool_t ret = (bool_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  widget_t* child = (widget_t*)jsvalue_get_pointer(ctx, argv[1], "widget_t*");
+  ret = (bool_t)widget_is_direct_parent_of(widget, child);
+
+  v8::Local<v8::Boolean> jret= Nan::New((bool)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_widget_is_window(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -10234,6 +10279,8 @@ ret_t widget_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "widget_set_prop_bool", wrap_widget_set_prop_bool);
   Nan::Export(ctx, "widget_get_prop_bool", wrap_widget_get_prop_bool);
   Nan::Export(ctx, "widget_is_window_opened", wrap_widget_is_window_opened);
+  Nan::Export(ctx, "widget_is_parent_of", wrap_widget_is_parent_of);
+  Nan::Export(ctx, "widget_is_direct_parent_of", wrap_widget_is_direct_parent_of);
   Nan::Export(ctx, "widget_is_window", wrap_widget_is_window);
   Nan::Export(ctx, "widget_is_designing_window", wrap_widget_is_designing_window);
   Nan::Export(ctx, "widget_is_window_manager", wrap_widget_is_window_manager);
@@ -13769,11 +13816,22 @@ static void wrap_cmd_exec_event_t_get_prop_result(const Nan::FunctionCallbackInf
   (void)argc;(void)ctx;
 }
 
+static void wrap_cmd_exec_event_t_get_prop_can_exec(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  cmd_exec_event_t* obj = (cmd_exec_event_t*)jsvalue_get_pointer(ctx, argv[0], "cmd_exec_event_t*");
+
+  v8::Local<v8::Boolean> jret= Nan::New((bool)(obj->can_exec));
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
 ret_t cmd_exec_event_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "cmd_exec_event_cast", wrap_cmd_exec_event_cast);
   Nan::Export(ctx, "cmd_exec_event_t_get_prop_name", wrap_cmd_exec_event_t_get_prop_name);
   Nan::Export(ctx, "cmd_exec_event_t_get_prop_args", wrap_cmd_exec_event_t_get_prop_args);
   Nan::Export(ctx, "cmd_exec_event_t_get_prop_result", wrap_cmd_exec_event_t_get_prop_result);
+  Nan::Export(ctx, "cmd_exec_event_t_get_prop_can_exec", wrap_cmd_exec_event_t_get_prop_can_exec);
 
  return RET_OK;
 }

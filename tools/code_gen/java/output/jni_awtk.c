@@ -254,6 +254,17 @@ int awtk_TBitmap_bitmap_get_bpp(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TBitmap_bitmap_get_bpp_of_format(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  uint32_t ret = 0;
+  bitmap_format_t format = (bitmap_format_t)jni_ctx_get_int(&ctx);
+  ret = (uint32_t)bitmap_get_bpp_of_format(format);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TBitmap_bitmap_t_get_prop_w(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -7590,6 +7601,30 @@ int awtk_TWidget_widget_is_window_opened(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TWidget_widget_is_parent_of(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  bool_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  widget_t* child = (widget_t*)jni_ctx_get_object(&ctx);
+  ret = (bool_t)widget_is_parent_of(widget, child);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TWidget_widget_is_direct_parent_of(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  bool_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  widget_t* child = (widget_t*)jni_ctx_get_object(&ctx);
+  ret = (bool_t)widget_is_direct_parent_of(widget, child);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TWidget_widget_is_window(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -10983,6 +11018,15 @@ int awtk_TCmdExecEvent_cmd_exec_event_t_get_prop_result(Runtime *runtime, JClass
 
   cmd_exec_event_t* obj = (cmd_exec_event_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_int(&ctx, (int32_t)(obj->result));
+
+  return 0;
+}
+
+int awtk_TCmdExecEvent_cmd_exec_event_t_get_prop_can_exec(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  cmd_exec_event_t* obj = (cmd_exec_event_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->can_exec));
 
   return 0;
 }
@@ -18286,6 +18330,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TBitmap",  "bitmap_create",  "()J",  awtk_TBitmap_bitmap_create},
 {"awtk/TBitmap",  "bitmap_create_ex",  "(IIII)J",  awtk_TBitmap_bitmap_create_ex},
 {"awtk/TBitmap",  "bitmap_get_bpp",  "(J)I",  awtk_TBitmap_bitmap_get_bpp},
+{"awtk/TBitmap",  "bitmap_get_bpp_of_format",  "(I)I",  awtk_TBitmap_bitmap_get_bpp_of_format},
 {"awtk/TBitmap",  "bitmap_t_get_prop_w",  "(J)I",  awtk_TBitmap_bitmap_t_get_prop_w},
 {"awtk/TBitmap",  "bitmap_t_get_prop_h",  "(J)I",  awtk_TBitmap_bitmap_t_get_prop_h},
 {"awtk/TBitmap",  "bitmap_t_get_prop_line_length",  "(J)I",  awtk_TBitmap_bitmap_t_get_prop_line_length},
@@ -19084,6 +19129,8 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidget",  "widget_set_prop_bool",  "(JLjava/lang/String;Z)I",  awtk_TWidget_widget_set_prop_bool},
 {"awtk/TWidget",  "widget_get_prop_bool",  "(JLjava/lang/String;Z)Z",  awtk_TWidget_widget_get_prop_bool},
 {"awtk/TWidget",  "widget_is_window_opened",  "(J)Z",  awtk_TWidget_widget_is_window_opened},
+{"awtk/TWidget",  "widget_is_parent_of",  "(JJ)Z",  awtk_TWidget_widget_is_parent_of},
+{"awtk/TWidget",  "widget_is_direct_parent_of",  "(JJ)Z",  awtk_TWidget_widget_is_direct_parent_of},
 {"awtk/TWidget",  "widget_is_window",  "(J)Z",  awtk_TWidget_widget_is_window},
 {"awtk/TWidget",  "widget_is_designing_window",  "(J)Z",  awtk_TWidget_widget_is_designing_window},
 {"awtk/TWidget",  "widget_is_window_manager",  "(J)Z",  awtk_TWidget_widget_is_window_manager},
@@ -19446,6 +19493,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TCmdExecEvent",  "cmd_exec_event_t_get_prop_name",  "(J)Ljava/lang/String;",  awtk_TCmdExecEvent_cmd_exec_event_t_get_prop_name},
 {"awtk/TCmdExecEvent",  "cmd_exec_event_t_get_prop_args",  "(J)Ljava/lang/String;",  awtk_TCmdExecEvent_cmd_exec_event_t_get_prop_args},
 {"awtk/TCmdExecEvent",  "cmd_exec_event_t_get_prop_result",  "(J)I",  awtk_TCmdExecEvent_cmd_exec_event_t_get_prop_result},
+{"awtk/TCmdExecEvent",  "cmd_exec_event_t_get_prop_can_exec",  "(J)Z",  awtk_TCmdExecEvent_cmd_exec_event_t_get_prop_can_exec},
 {"awtk/TTimeClock",  "time_clock_create",  "(JIIII)J",  awtk_TTimeClock_time_clock_create},
 {"awtk/TTimeClock",  "time_clock_cast",  "(J)J",  awtk_TTimeClock_time_clock_cast},
 {"awtk/TTimeClock",  "time_clock_set_hour",  "(JI)I",  awtk_TTimeClock_time_clock_set_hour},
