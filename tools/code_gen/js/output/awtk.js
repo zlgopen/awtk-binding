@@ -344,6 +344,16 @@ var TEmitter = /** @class */ (function () {
     TEmitter.cast = function (emitter) {
         return new TEmitter(emitter_cast(emitter != null ? (emitter.nativeObj || emitter) : null));
     };
+    /**
+     * 分发事件
+     *
+     * @param e 分发的事件。
+     *
+     * @returns 返回RET_OK表示成功，否则表示失败。
+     */
+    TEmitter.prototype.forward = function (e) {
+        return emitter_forward(this != null ? (this.nativeObj || this) : null, e != null ? (e.nativeObj || e) : null);
+    };
     return TEmitter;
 }());
 exports.TEmitter = TEmitter;
@@ -1672,6 +1682,11 @@ var TEventType;
      *
      */
     TEventType[TEventType["DRAG_END"] = EVT_DRAG_END()] = "DRAG_END";
+    /**
+     * Reset(event_t)。
+     *
+     */
+    TEventType[TEventType["RESET"] = EVT_RESET()] = "RESET";
     /**
      * 在指定的时间内(WITH_SCREEN_SAVER_TIME)，没有用户输入事件，由窗口管理器触发。
      *
@@ -4297,6 +4312,11 @@ var TWidgetProp;
      */
     TWidgetProp[TWidgetProp["H"] = WIDGET_PROP_H()] = "H";
     /**
+     * inputing。
+     *
+     */
+    TWidgetProp[TWidgetProp["INPUTING"] = WIDGET_PROP_INPUTING()] = "INPUTING";
+    /**
      * caret x。
      *
      */
@@ -6347,6 +6367,17 @@ var TWidget = /** @class */ (function () {
      */
     TWidget.prototype.destroy = function () {
         return widget_destroy(this != null ? (this.nativeObj || this) : null);
+    };
+    /**
+     * 从父控件中移除控件，并调用unref函数销毁控件。
+     *
+     *> 一般无需直接调用，关闭窗口时，自动销毁相关控件。
+     *
+     *
+     * @returns 返回RET_OK表示成功，否则表示失败。
+     */
+    TWidget.prototype.destroyAsync = function () {
+        return widget_destroy_async(this != null ? (this.nativeObj || this) : null);
     };
     /**
      * 减少控件的引用计数。引用计数为0时销毁控件。
@@ -18886,7 +18917,9 @@ exports.TGifImage = TGifImage;
  *| backspace      | 删除键          |
  *| tab            | tab键           |
  *| space          | 空格键          |
- *| close          | 关闭软键盘      |
+ *| close          | 关闭软键盘       |
+ *| back           | 关闭当前窗口     |
+ *| back_to_home   | 返回home窗口    |
  *| 前缀key:        | 键值           |
  *| 前缀hard_key:   | 模拟物理键盘    |
  *| 前缀page:       | 切换到页面      |

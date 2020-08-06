@@ -375,6 +375,20 @@ pyobject_t wrap_emitter_cast(pyobject_t self, pyobject_t pyargs) {
   return PyLong_FromVoidPtr((void*)ret);
 }
 
+pyobject_t wrap_emitter_forward(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  void* ctx = NULL;
+  event_t* e = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&O&" , &parse_voidp, &ctx, &parse_voidp, &e)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)emitter_forward(ctx, e);
+  return Py_BuildValue("i", ret);
+}
+
 pyobject_t wrap_bitmap_create(pyobject_t self, pyobject_t pyargs) {
   bitmap_t* ret = NULL;
 
@@ -1796,6 +1810,10 @@ pyobject_t get_EVT_DRAG(pyobject_t self, pyobject_t pyargs) {
 
 pyobject_t get_EVT_DRAG_END(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", EVT_DRAG_END);
+}
+
+pyobject_t get_EVT_RESET(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("i", EVT_RESET);
 }
 
 pyobject_t get_EVT_SCREEN_SAVER(pyobject_t self, pyobject_t pyargs) {
@@ -4086,6 +4104,10 @@ pyobject_t get_WIDGET_PROP_H(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("s", WIDGET_PROP_H);
 }
 
+pyobject_t get_WIDGET_PROP_INPUTING(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", WIDGET_PROP_INPUTING);
+}
+
 pyobject_t get_WIDGET_PROP_CARET_X(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("s", WIDGET_PROP_CARET_X);
 }
@@ -6023,6 +6045,19 @@ pyobject_t wrap_widget_destroy(pyobject_t self, pyobject_t pyargs) {
   }
 
   ret = (ret_t)widget_destroy(widget);
+  return Py_BuildValue("i", ret);
+}
+
+pyobject_t wrap_widget_destroy_async(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  widget_t* widget = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&" , &parse_voidp, &widget)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)widget_destroy_async(widget);
   return Py_BuildValue("i", ret);
 }
 
@@ -17320,6 +17355,7 @@ static PyMethodDef awtk_methods[] = {
 {"emitter_disable", wrap_emitter_disable, METH_VARARGS, "emitter_disable"},
 {"emitter_size", wrap_emitter_size, METH_VARARGS, "emitter_size"},
 {"emitter_cast", wrap_emitter_cast, METH_VARARGS, "emitter_cast"},
+{"emitter_forward", wrap_emitter_forward, METH_VARARGS, "emitter_forward"},
 {"bitmap_create", wrap_bitmap_create, METH_VARARGS, "bitmap_create"},
 {"bitmap_create_ex", wrap_bitmap_create_ex, METH_VARARGS, "bitmap_create_ex"},
 {"bitmap_get_bpp", wrap_bitmap_get_bpp, METH_VARARGS, "bitmap_get_bpp"},
@@ -17474,6 +17510,7 @@ static PyMethodDef awtk_methods[] = {
 {"EVT_DRAG_START", get_EVT_DRAG_START, METH_VARARGS, "EVT_DRAG_START"},
 {"EVT_DRAG", get_EVT_DRAG, METH_VARARGS, "EVT_DRAG"},
 {"EVT_DRAG_END", get_EVT_DRAG_END, METH_VARARGS, "EVT_DRAG_END"},
+{"EVT_RESET", get_EVT_RESET, METH_VARARGS, "EVT_RESET"},
 {"EVT_SCREEN_SAVER", get_EVT_SCREEN_SAVER, METH_VARARGS, "EVT_SCREEN_SAVER"},
 {"EVT_LOW_MEMORY", get_EVT_LOW_MEMORY, METH_VARARGS, "EVT_LOW_MEMORY"},
 {"EVT_OUT_OF_MEMORY", get_EVT_OUT_OF_MEMORY, METH_VARARGS, "EVT_OUT_OF_MEMORY"},
@@ -17819,6 +17856,7 @@ static PyMethodDef awtk_methods[] = {
 {"WIDGET_PROP_Y", get_WIDGET_PROP_Y, METH_VARARGS, "WIDGET_PROP_Y"},
 {"WIDGET_PROP_W", get_WIDGET_PROP_W, METH_VARARGS, "WIDGET_PROP_W"},
 {"WIDGET_PROP_H", get_WIDGET_PROP_H, METH_VARARGS, "WIDGET_PROP_H"},
+{"WIDGET_PROP_INPUTING", get_WIDGET_PROP_INPUTING, METH_VARARGS, "WIDGET_PROP_INPUTING"},
 {"WIDGET_PROP_CARET_X", get_WIDGET_PROP_CARET_X, METH_VARARGS, "WIDGET_PROP_CARET_X"},
 {"WIDGET_PROP_CARET_Y", get_WIDGET_PROP_CARET_Y, METH_VARARGS, "WIDGET_PROP_CARET_Y"},
 {"WIDGET_PROP_DIRTY_RECT_TOLERANCE", get_WIDGET_PROP_DIRTY_RECT_TOLERANCE, METH_VARARGS, "WIDGET_PROP_DIRTY_RECT_TOLERANCE"},
@@ -18135,6 +18173,7 @@ static PyMethodDef awtk_methods[] = {
 {"widget_equal", wrap_widget_equal, METH_VARARGS, "widget_equal"},
 {"widget_cast", wrap_widget_cast, METH_VARARGS, "widget_cast"},
 {"widget_destroy", wrap_widget_destroy, METH_VARARGS, "widget_destroy"},
+{"widget_destroy_async", wrap_widget_destroy_async, METH_VARARGS, "widget_destroy_async"},
 {"widget_unref", wrap_widget_unref, METH_VARARGS, "widget_unref"},
 {"widget_is_keyboard", wrap_widget_is_keyboard, METH_VARARGS, "widget_is_keyboard"},
 {"widget_stroke_border_rect", wrap_widget_stroke_border_rect, METH_VARARGS, "widget_stroke_border_rect"},

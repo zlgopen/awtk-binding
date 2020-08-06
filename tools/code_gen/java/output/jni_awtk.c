@@ -219,6 +219,18 @@ int awtk_TEmitter_emitter_cast(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TEmitter_emitter_forward(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  void* ctx = (void*)jni_ctx_get_int64(&ctx);
+  event_t* e = (event_t*)jni_ctx_get_object(&ctx);
+  ret = (ret_t)emitter_forward(ctx, e);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TBitmap_bitmap_create(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -1777,6 +1789,14 @@ int awtk_TEventType_EVT_DRAG_END(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   jni_ctx_return_int(&ctx, (int32_t)(EVT_DRAG_END));
+
+  return 0;
+}
+
+int awtk_TEventType_EVT_RESET(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(EVT_RESET));
 
   return 0;
 }
@@ -4920,6 +4940,14 @@ int awtk_TWidgetProp_WIDGET_PROP_H(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TWidgetProp_WIDGET_PROP_INPUTING(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_str(&ctx, (char*)(WIDGET_PROP_INPUTING));
+
+  return 0;
+}
+
 int awtk_TWidgetProp_WIDGET_PROP_CARET_X(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -7732,6 +7760,17 @@ int awtk_TWidget_widget_destroy(Runtime *runtime, JClass *clazz) {
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
   ret = (ret_t)widget_destroy(widget);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TWidget_widget_destroy_async(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  ret = (ret_t)widget_destroy_async(widget);
   jni_ctx_return_int(&ctx, (int32_t)(ret));
 
   return 0;
@@ -18327,6 +18366,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TEmitter",  "emitter_disable",  "(J)I",  awtk_TEmitter_emitter_disable},
 {"awtk/TEmitter",  "emitter_size",  "(J)I",  awtk_TEmitter_emitter_size},
 {"awtk/TEmitter",  "emitter_cast",  "(J)J",  awtk_TEmitter_emitter_cast},
+{"awtk/TEmitter",  "emitter_forward",  "(JJ)I",  awtk_TEmitter_emitter_forward},
 {"awtk/TBitmap",  "bitmap_create",  "()J",  awtk_TBitmap_bitmap_create},
 {"awtk/TBitmap",  "bitmap_create_ex",  "(IIII)J",  awtk_TBitmap_bitmap_create_ex},
 {"awtk/TBitmap",  "bitmap_get_bpp",  "(J)I",  awtk_TBitmap_bitmap_get_bpp},
@@ -18481,6 +18521,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TEventType",  "EVT_DRAG_START",  "()I",  awtk_TEventType_EVT_DRAG_START},
 {"awtk/TEventType",  "EVT_DRAG",  "()I",  awtk_TEventType_EVT_DRAG},
 {"awtk/TEventType",  "EVT_DRAG_END",  "()I",  awtk_TEventType_EVT_DRAG_END},
+{"awtk/TEventType",  "EVT_RESET",  "()I",  awtk_TEventType_EVT_RESET},
 {"awtk/TEventType",  "EVT_SCREEN_SAVER",  "()I",  awtk_TEventType_EVT_SCREEN_SAVER},
 {"awtk/TEventType",  "EVT_LOW_MEMORY",  "()I",  awtk_TEventType_EVT_LOW_MEMORY},
 {"awtk/TEventType",  "EVT_OUT_OF_MEMORY",  "()I",  awtk_TEventType_EVT_OUT_OF_MEMORY},
@@ -18826,6 +18867,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidgetProp",  "WIDGET_PROP_Y",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_Y},
 {"awtk/TWidgetProp",  "WIDGET_PROP_W",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_W},
 {"awtk/TWidgetProp",  "WIDGET_PROP_H",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_H},
+{"awtk/TWidgetProp",  "WIDGET_PROP_INPUTING",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_INPUTING},
 {"awtk/TWidgetProp",  "WIDGET_PROP_CARET_X",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_CARET_X},
 {"awtk/TWidgetProp",  "WIDGET_PROP_CARET_Y",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_CARET_Y},
 {"awtk/TWidgetProp",  "WIDGET_PROP_DIRTY_RECT_TOLERANCE",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_DIRTY_RECT_TOLERANCE},
@@ -19142,6 +19184,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidget",  "widget_equal",  "(JJ)Z",  awtk_TWidget_widget_equal},
 {"awtk/TWidget",  "widget_cast",  "(J)J",  awtk_TWidget_widget_cast},
 {"awtk/TWidget",  "widget_destroy",  "(J)I",  awtk_TWidget_widget_destroy},
+{"awtk/TWidget",  "widget_destroy_async",  "(J)I",  awtk_TWidget_widget_destroy_async},
 {"awtk/TWidget",  "widget_unref",  "(J)I",  awtk_TWidget_widget_unref},
 {"awtk/TWidget",  "widget_is_keyboard",  "(J)I",  awtk_TWidget_widget_is_keyboard},
 {"awtk/TWidget",  "widget_stroke_border_rect",  "(JJJ)I",  awtk_TWidget_widget_stroke_border_rect},

@@ -330,6 +330,17 @@ class TEmitter(object):
     return  TEmitter(emitter_cast(awtk_get_native_obj(emitter)));
 
 
+  #
+  # 分发事件
+  # 
+  # @param e 分发的事件。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def forward(self, e): 
+    return emitter_forward(awtk_get_native_obj(self), awtk_get_native_obj(e));
+
+
 #
 # 位图。
 #
@@ -1778,6 +1789,12 @@ class TEventType:
   #
   #
   DRAG_END = EVT_DRAG_END();
+
+  #
+  # Reset(event_t)。
+  #
+  #
+  RESET = EVT_RESET();
 
   #
   # 在指定的时间内(WITH_SCREEN_SAVER_TIME)，没有用户输入事件，由窗口管理器触发。
@@ -4670,6 +4687,12 @@ class TWidgetProp:
   H = WIDGET_PROP_H();
 
   #
+  # inputing。
+  #
+  #
+  INPUTING = WIDGET_PROP_INPUTING();
+
+  #
   # caret x。
   #
   #
@@ -7023,6 +7046,18 @@ class TWidget(object):
   #
   def destroy(self): 
     return widget_destroy(awtk_get_native_obj(self));
+
+
+  #
+  # 从父控件中移除控件，并调用unref函数销毁控件。
+  #
+  #> 一般无需直接调用，关闭窗口时，自动销毁相关控件。
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def destroy_async(self): 
+    return widget_destroy_async(awtk_get_native_obj(self));
 
 
   #
@@ -19634,7 +19669,9 @@ class TGifImage (TImageBase):
 #| backspace      | 删除键          |
 #| tab            | tab键           |
 #| space          | 空格键          |
-#| close          | 关闭软键盘      |
+#| close          | 关闭软键盘       |
+#| back           | 关闭当前窗口     |
+#| back_to_home   | 返回home窗口    |
 #| 前缀key:        | 键值           |
 #| 前缀hard_key:   | 模拟物理键盘    |
 #| 前缀page:       | 切换到页面      |

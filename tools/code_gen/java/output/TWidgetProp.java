@@ -45,6 +45,13 @@ public enum TWidgetProp {
   H (WIDGET_PROP_H()),
   
   /**
+   * inputing。
+   *
+   */
+ 
+  INPUTING (WIDGET_PROP_INPUTING()),
+  
+  /**
    * caret x。
    *
    */
@@ -985,6 +992,7 @@ public enum TWidgetProp {
   static private native String WIDGET_PROP_Y();
   static private native String WIDGET_PROP_W();
   static private native String WIDGET_PROP_H();
+  static private native String WIDGET_PROP_INPUTING();
   static private native String WIDGET_PROP_CARET_X();
   static private native String WIDGET_PROP_CARET_Y();
   static private native String WIDGET_PROP_DIRTY_RECT_TOLERANCE();

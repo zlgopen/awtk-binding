@@ -412,6 +412,21 @@ static void wrap_emitter_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv) 
   (void)argc;(void)ctx;
 }
 
+static void wrap_emitter_forward(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  void* ctx =  NULL;
+  event_t* e = (event_t*)jsvalue_get_pointer(ctx, argv[1], "event_t*");
+  ret = (ret_t)emitter_forward(ctx, e);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 ret_t emitter_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "emitter_create", wrap_emitter_create);
   Nan::Export(ctx, "emitter_dispatch", wrap_emitter_dispatch);
@@ -422,6 +437,7 @@ ret_t emitter_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "emitter_disable", wrap_emitter_disable);
   Nan::Export(ctx, "emitter_size", wrap_emitter_size);
   Nan::Export(ctx, "emitter_cast", wrap_emitter_cast);
+  Nan::Export(ctx, "emitter_forward", wrap_emitter_forward);
 
  return RET_OK;
 }
@@ -2371,6 +2387,14 @@ static void get_EVT_DRAG_END(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   (void)argc;(void)ctx;
 }
 
+static void get_EVT_RESET(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)EVT_RESET);
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
 static void get_EVT_SCREEN_SAVER(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -2657,6 +2681,7 @@ ret_t event_type_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "EVT_DRAG_START", get_EVT_DRAG_START);
   Nan::Export(ctx, "EVT_DRAG", get_EVT_DRAG);
   Nan::Export(ctx, "EVT_DRAG_END", get_EVT_DRAG_END);
+  Nan::Export(ctx, "EVT_RESET", get_EVT_RESET);
   Nan::Export(ctx, "EVT_SCREEN_SAVER", get_EVT_SCREEN_SAVER);
   Nan::Export(ctx, "EVT_LOW_MEMORY", get_EVT_LOW_MEMORY);
   Nan::Export(ctx, "EVT_OUT_OF_MEMORY", get_EVT_OUT_OF_MEMORY);
@@ -6282,6 +6307,14 @@ static void get_WIDGET_PROP_H(const Nan::FunctionCallbackInfo<v8::Value>& argv) 
   (void)argc;(void)ctx;
 }
 
+static void get_WIDGET_PROP_INPUTING(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  v8::Local<v8::String> jret= Nan::New((const char*)WIDGET_PROP_INPUTING).ToLocalChecked();
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
 static void get_WIDGET_PROP_CARET_X(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -7320,6 +7353,7 @@ ret_t widget_prop_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "WIDGET_PROP_Y", get_WIDGET_PROP_Y);
   Nan::Export(ctx, "WIDGET_PROP_W", get_WIDGET_PROP_W);
   Nan::Export(ctx, "WIDGET_PROP_H", get_WIDGET_PROP_H);
+  Nan::Export(ctx, "WIDGET_PROP_INPUTING", get_WIDGET_PROP_INPUTING);
   Nan::Export(ctx, "WIDGET_PROP_CARET_X", get_WIDGET_PROP_CARET_X);
   Nan::Export(ctx, "WIDGET_PROP_CARET_Y", get_WIDGET_PROP_CARET_Y);
   Nan::Export(ctx, "WIDGET_PROP_DIRTY_RECT_TOLERANCE", get_WIDGET_PROP_DIRTY_RECT_TOLERANCE);
@@ -9597,6 +9631,20 @@ static void wrap_widget_destroy(const Nan::FunctionCallbackInfo<v8::Value>& argv
   (void)argc;(void)ctx;
 }
 
+static void wrap_widget_destroy_async(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 1) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  ret = (ret_t)widget_destroy_async(widget);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_widget_unref(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -10292,6 +10340,7 @@ ret_t widget_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "widget_equal", wrap_widget_equal);
   Nan::Export(ctx, "widget_cast", wrap_widget_cast);
   Nan::Export(ctx, "widget_destroy", wrap_widget_destroy);
+  Nan::Export(ctx, "widget_destroy_async", wrap_widget_destroy_async);
   Nan::Export(ctx, "widget_unref", wrap_widget_unref);
   Nan::Export(ctx, "widget_is_keyboard", wrap_widget_is_keyboard);
   Nan::Export(ctx, "widget_stroke_border_rect", wrap_widget_stroke_border_rect);

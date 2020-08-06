@@ -263,6 +263,14 @@ JNIEXPORT jlong JNICALL Java_awtk_TEmitter_emitter_1cast(JNIEnv* env,  jclass aj
   return (jlong)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TEmitter_emitter_1forward(JNIEnv* env,  jclass ajc, jlong ctx, jlong je) { /*func*/
+  ret_t ret;
+  event_t* e = (event_t*)je;
+  ret = (ret_t)emitter_forward(ctx, e);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jlong JNICALL Java_awtk_TBitmap_bitmap_1create(JNIEnv* env,  jclass ajc) { /*func*/
   bitmap_t* ret;
   ret = (bitmap_t*)bitmap_create();
@@ -1331,6 +1339,11 @@ JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1DRAG(JNIEnv* env,  jclass ajc) 
 JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1DRAG_1END(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (jint)(EVT_DRAG_END);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1RESET(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_RESET);
 }
 
 JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1SCREEN_1SAVER(JNIEnv* env,  jclass ajc) {/*const*/
@@ -3341,6 +3354,11 @@ JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1H(JNIEnv* env,  jc
   return (*env)->NewStringUTF(env, WIDGET_PROP_H);
 }
 
+JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1INPUTING(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, WIDGET_PROP_INPUTING);
+}
+
 JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1CARET_1X(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (*env)->NewStringUTF(env, WIDGET_PROP_CARET_X);
@@ -5183,6 +5201,14 @@ JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1destroy(JNIEnv* env,  jclass aj
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
   ret = (ret_t)widget_destroy(widget);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1destroy_1async(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)widget_destroy_async(widget);
 
   return (jint)(ret);
 }

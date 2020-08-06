@@ -940,6 +940,19 @@ public class TWidget {
 
 
   /**
+   * 从父控件中移除控件，并调用unref函数销毁控件。
+   *
+   *> 一般无需直接调用，关闭窗口时，自动销毁相关控件。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet destroyAsync()  {
+   return TRet.from(widget_destroy_async(this != null ? (this.nativeObj) : 0));
+ }
+
+
+  /**
    * 减少控件的引用计数。引用计数为0时销毁控件。
    * 
    *
@@ -1477,6 +1490,7 @@ static private native long widget_clone(long widget, long parent);
 static private native boolean widget_equal(long widget, long other);
 static private native long widget_cast(long widget);
 static private native int widget_destroy(long widget);
+static private native int widget_destroy_async(long widget);
 static private native int widget_unref(long widget);
 static private native int widget_is_keyboard(long widget);
 static private native int widget_stroke_border_rect(long widget, long c, long r);

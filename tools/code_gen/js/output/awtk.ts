@@ -30,6 +30,7 @@ declare function emitter_disable(emitter : any) : TRet;
 declare function emitter_size(emitter : any) : number;
 declare function emitter_destroy(emitter : any) : TRet;
 declare function emitter_cast(emitter : any) : any;
+declare function emitter_forward(ctx : any, e : any) : TRet;
 declare function bitmap_create() : any;
 declare function bitmap_create_ex(w : number, h : number, line_length : number, format : TBitmapFormat) : any;
 declare function bitmap_get_bpp(bitmap : any) : number;
@@ -187,6 +188,7 @@ declare function EVT_IM_ACTION_INFO();
 declare function EVT_DRAG_START();
 declare function EVT_DRAG();
 declare function EVT_DRAG_END();
+declare function EVT_RESET();
 declare function EVT_SCREEN_SAVER();
 declare function EVT_LOW_MEMORY();
 declare function EVT_OUT_OF_MEMORY();
@@ -532,6 +534,7 @@ declare function WIDGET_PROP_X();
 declare function WIDGET_PROP_Y();
 declare function WIDGET_PROP_W();
 declare function WIDGET_PROP_H();
+declare function WIDGET_PROP_INPUTING();
 declare function WIDGET_PROP_CARET_X();
 declare function WIDGET_PROP_CARET_Y();
 declare function WIDGET_PROP_DIRTY_RECT_TOLERANCE();
@@ -848,6 +851,7 @@ declare function widget_clone(widget : any, parent : any) : any;
 declare function widget_equal(widget : any, other : any) : boolean;
 declare function widget_cast(widget : any) : any;
 declare function widget_destroy(widget : any) : TRet;
+declare function widget_destroy_async(widget : any) : TRet;
 declare function widget_unref(widget : any) : TRet;
 declare function widget_is_keyboard(widget : any) : TRet;
 declare function widget_stroke_border_rect(widget : any, c : any, r : any) : TRet;
@@ -2198,6 +2202,18 @@ export class TEmitter {
    */
  static cast(emitter : TEmitter) : TEmitter  {
     return new TEmitter(emitter_cast(emitter != null ? (emitter.nativeObj || emitter) : null));
+ }
+
+
+  /**
+   * 分发事件
+   * 
+   * @param e 分发的事件。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ forward(e : TEvent) : TRet  {
+    return emitter_forward(this != null ? (this.nativeObj || this) : null, e != null ? (e.nativeObj || e) : null);
  }
 
 };
@@ -3728,6 +3744,12 @@ export enum TEventType {
    *
    */
  DRAG_END = EVT_DRAG_END(),
+
+  /**
+   * Reset(event_t)。
+   *
+   */
+ RESET = EVT_RESET(),
 
   /**
    * 在指定的时间内(WITH_SCREEN_SAVER_TIME)，没有用户输入事件，由窗口管理器触发。
@@ -6727,6 +6749,12 @@ export enum TWidgetProp {
  H = WIDGET_PROP_H(),
 
   /**
+   * inputing。
+   *
+   */
+ INPUTING = WIDGET_PROP_INPUTING(),
+
+  /**
    * caret x。
    *
    */
@@ -9164,6 +9192,19 @@ export class TWidget {
    */
  destroy() : TRet  {
     return widget_destroy(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 从父控件中移除控件，并调用unref函数销毁控件。
+   *
+   *> 一般无需直接调用，关闭窗口时，自动销毁相关控件。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ destroyAsync() : TRet  {
+    return widget_destroy_async(this != null ? (this.nativeObj || this) : null);
  }
 
 
@@ -22254,7 +22295,9 @@ export class TGifImage extends TImageBase {
  *| backspace      | 删除键          |
  *| tab            | tab键           |
  *| space          | 空格键          |
- *| close          | 关闭软键盘      |
+ *| close          | 关闭软键盘       |
+ *| back           | 关闭当前窗口     |
+ *| back_to_home   | 返回home窗口    |
  *| 前缀key:        | 键值           |
  *| 前缀hard_key:   | 模拟物理键盘    |
  *| 前缀page:       | 切换到页面      |

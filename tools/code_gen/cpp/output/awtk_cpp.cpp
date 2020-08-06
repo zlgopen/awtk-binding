@@ -83,6 +83,10 @@
    return emitter_destroy(((emitter_t*)(this->nativeObj)));
  }
 
+ ret_t TEmitter::Forward(TEvent& e)  {
+   return emitter_forward(((void*)(this->nativeObj)), ((event_t*)(e.nativeObj)));
+ }
+
  TBitmap TBitmap::Create()  {
    return TBitmap((bitmap_t*)(bitmap_create()));
  }
@@ -1073,6 +1077,10 @@
 
  ret_t TWidget::Destroy()  {
    return widget_destroy(((widget_t*)(this->nativeObj)));
+ }
+
+ ret_t TWidget::DestroyAsync()  {
+   return widget_destroy_async(((widget_t*)(this->nativeObj)));
  }
 
  ret_t TWidget::Unref()  {

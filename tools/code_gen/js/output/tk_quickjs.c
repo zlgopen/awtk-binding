@@ -496,6 +496,24 @@ jsvalue_t wrap_emitter_cast(
   return jret;
 }
 
+jsvalue_t wrap_emitter_forward(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  void* ctx =  NULL;
+  event_t* e = (event_t*)jsvalue_get_pointer(ctx, argv[1], "event_t*");
+  ret = (ret_t)emitter_forward(ctx, e);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 ret_t emitter_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
   JS_SetPropertyStr(ctx, global_obj, "emitter_create",
@@ -516,6 +534,8 @@ ret_t emitter_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_emitter_size, "emitter_size", 1));
   JS_SetPropertyStr(ctx, global_obj, "emitter_cast",
                       JS_NewCFunction(ctx, wrap_emitter_cast, "emitter_cast", 1));
+  JS_SetPropertyStr(ctx, global_obj, "emitter_forward",
+                      JS_NewCFunction(ctx, wrap_emitter_forward, "emitter_forward", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -2889,6 +2909,15 @@ jsvalue_t get_EVT_DRAG_END(
   return jsvalue_create_int(ctx, EVT_DRAG_END);
 }
 
+jsvalue_t get_EVT_RESET(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, EVT_RESET);
+}
+
 jsvalue_t get_EVT_SCREEN_SAVER(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -3265,6 +3294,8 @@ ret_t event_type_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_EVT_DRAG, "EVT_DRAG", 1));
   JS_SetPropertyStr(ctx, global_obj, "EVT_DRAG_END",
                       JS_NewCFunction(ctx, get_EVT_DRAG_END, "EVT_DRAG_END", 1));
+  JS_SetPropertyStr(ctx, global_obj, "EVT_RESET",
+                      JS_NewCFunction(ctx, get_EVT_RESET, "EVT_RESET", 1));
   JS_SetPropertyStr(ctx, global_obj, "EVT_SCREEN_SAVER",
                       JS_NewCFunction(ctx, get_EVT_SCREEN_SAVER, "EVT_SCREEN_SAVER", 1));
   JS_SetPropertyStr(ctx, global_obj, "EVT_LOW_MEMORY",
@@ -7776,6 +7807,15 @@ jsvalue_t get_WIDGET_PROP_H(
   return jsvalue_create_string(ctx, WIDGET_PROP_H);
 }
 
+jsvalue_t get_WIDGET_PROP_INPUTING(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, WIDGET_PROP_INPUTING);
+}
+
 jsvalue_t get_WIDGET_PROP_CARET_X(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -8949,6 +8989,8 @@ ret_t widget_prop_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_WIDGET_PROP_W, "WIDGET_PROP_W", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_H",
                       JS_NewCFunction(ctx, get_WIDGET_PROP_H, "WIDGET_PROP_H", 1));
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_INPUTING",
+                      JS_NewCFunction(ctx, get_WIDGET_PROP_INPUTING, "WIDGET_PROP_INPUTING", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_CARET_X",
                       JS_NewCFunction(ctx, get_WIDGET_PROP_CARET_X, "WIDGET_PROP_CARET_X", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_CARET_Y",
@@ -11805,6 +11847,23 @@ jsvalue_t wrap_widget_destroy(
   return jret;
 }
 
+jsvalue_t wrap_widget_destroy_async(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  ret = (ret_t)widget_destroy_async(widget);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_widget_unref(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -12700,6 +12759,8 @@ ret_t widget_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_widget_cast, "widget_cast", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_destroy",
                       JS_NewCFunction(ctx, wrap_widget_destroy, "widget_destroy", 1));
+  JS_SetPropertyStr(ctx, global_obj, "widget_destroy_async",
+                      JS_NewCFunction(ctx, wrap_widget_destroy_async, "widget_destroy_async", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_unref",
                       JS_NewCFunction(ctx, wrap_widget_unref, "widget_unref", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_is_keyboard",

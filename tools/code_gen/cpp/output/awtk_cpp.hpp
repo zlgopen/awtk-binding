@@ -333,6 +333,15 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t Destroy() ;
+
+  /**
+   * 分发事件
+   * 
+   * @param e 分发的事件。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Forward(TEvent& e) ;
 };
 
 
@@ -3131,6 +3140,16 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t Destroy() ;
+
+  /**
+   * 从父控件中移除控件，并调用unref函数销毁控件。
+   *
+   *> 一般无需直接调用，关闭窗口时，自动销毁相关控件。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t DestroyAsync() ;
 
   /**
    * 减少控件的引用计数。引用计数为0时销毁控件。
@@ -12975,7 +12994,9 @@ public:
  *| backspace      | 删除键          |
  *| tab            | tab键           |
  *| space          | 空格键          |
- *| close          | 关闭软键盘      |
+ *| close          | 关闭软键盘       |
+ *| back           | 关闭当前窗口     |
+ *| back_to_home   | 返回home窗口    |
  *| 前缀key:        | 键值           |
  *| 前缀hard_key:   | 模拟物理键盘    |
  *| 前缀page:       | 切换到页面      |

@@ -441,6 +441,13 @@ public enum TEventType {
   DRAG_END (EVT_DRAG_END()),
   
   /**
+   * Reset(event_t)。
+   *
+   */
+ 
+  RESET (EVT_RESET()),
+  
+  /**
    * 在指定的时间内(WITH_SCREEN_SAVER_TIME)，没有用户输入事件，由窗口管理器触发。
    *
    */
@@ -731,6 +738,7 @@ public enum TEventType {
   static private native int EVT_DRAG_START();
   static private native int EVT_DRAG();
   static private native int EVT_DRAG_END();
+  static private native int EVT_RESET();
   static private native int EVT_SCREEN_SAVER();
   static private native int EVT_LOW_MEMORY();
   static private native int EVT_OUT_OF_MEMORY();
