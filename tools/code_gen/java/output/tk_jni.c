@@ -263,14 +263,6 @@ JNIEXPORT jlong JNICALL Java_awtk_TEmitter_emitter_1cast(JNIEnv* env,  jclass aj
   return (jlong)(ret);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TEmitter_emitter_1forward(JNIEnv* env,  jclass ajc, jlong ctx, jlong je) { /*func*/
-  ret_t ret;
-  event_t* e = (event_t*)je;
-  ret = (ret_t)emitter_forward(ctx, e);
-
-  return (jint)(ret);
-}
-
 JNIEXPORT jlong JNICALL Java_awtk_TBitmap_bitmap_1create(JNIEnv* env,  jclass ajc) { /*func*/
   bitmap_t* ret;
   ret = (bitmap_t*)bitmap_create();

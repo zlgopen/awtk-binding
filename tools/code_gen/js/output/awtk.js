@@ -344,16 +344,6 @@ var TEmitter = /** @class */ (function () {
     TEmitter.cast = function (emitter) {
         return new TEmitter(emitter_cast(emitter != null ? (emitter.nativeObj || emitter) : null));
     };
-    /**
-     * 分发事件
-     *
-     * @param e 分发的事件。
-     *
-     * @returns 返回RET_OK表示成功，否则表示失败。
-     */
-    TEmitter.prototype.forward = function (e) {
-        return emitter_forward(this != null ? (this.nativeObj || this) : null, e != null ? (e.nativeObj || e) : null);
-    };
     return TEmitter;
 }());
 exports.TEmitter = TEmitter;
@@ -409,11 +399,12 @@ var TBitmap = /** @class */ (function () {
     /**
      * 获取位图格式对应的颜色位数。
      *
+     * @param format 位图格式。
      *
      * @returns 成功返回颜色位数，失败返回0。
      */
-    TBitmap.prototype.getBppOfFormat = function () {
-        return bitmap_get_bpp_of_format(this != null ? (this.nativeObj || this) : null);
+    TBitmap.getBppOfFormat = function (format) {
+        return bitmap_get_bpp_of_format(format);
     };
     Object.defineProperty(TBitmap.prototype, "w", {
         /**

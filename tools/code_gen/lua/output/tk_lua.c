@@ -752,17 +752,6 @@ static int wrap_emitter_cast(lua_State* L) {
   return tk_newuserdata(L, (void*)ret, "/emitter_t", "awtk.emitter_t");
 }
 
-static int wrap_emitter_forward(lua_State* L) {
-  ret_t ret = 0;
-  void* ctx =  NULL;
-  event_t* e = (event_t*)tk_checkudata(L, 2, "event_t");
-  ret = (ret_t)emitter_forward(ctx, e);
-
-  lua_pushnumber(L,(lua_Number)(ret));
-
-  return 1;
-}
-
 
 static const struct luaL_Reg emitter_t_member_funcs[] = {
   {"dispatch", wrap_emitter_dispatch},
@@ -773,7 +762,6 @@ static const struct luaL_Reg emitter_t_member_funcs[] = {
   {"disable", wrap_emitter_disable},
   {"size", wrap_emitter_size},
   {"destroy", wrap_emitter_destroy},
-  {"forward", wrap_emitter_forward},
   {NULL, NULL}
 };
 
@@ -876,7 +864,6 @@ static int wrap_bitmap_get_bpp_of_format(lua_State* L) {
 static const struct luaL_Reg bitmap_t_member_funcs[] = {
   {"get_bpp", wrap_bitmap_get_bpp},
   {"destroy", wrap_bitmap_destroy},
-  {"get_bpp_of_format", wrap_bitmap_get_bpp_of_format},
   {NULL, NULL}
 };
 
@@ -940,6 +927,7 @@ static void bitmap_t_init(lua_State* L) {
   static const struct luaL_Reg static_funcs[] = {
     {"create", wrap_bitmap_create},
     {"create_ex", wrap_bitmap_create_ex},
+    {"get_bpp_of_format", wrap_bitmap_get_bpp_of_format},
     {NULL, NULL}
   };
 

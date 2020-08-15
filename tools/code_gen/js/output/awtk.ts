@@ -30,7 +30,6 @@ declare function emitter_disable(emitter : any) : TRet;
 declare function emitter_size(emitter : any) : number;
 declare function emitter_destroy(emitter : any) : TRet;
 declare function emitter_cast(emitter : any) : any;
-declare function emitter_forward(ctx : any, e : any) : TRet;
 declare function bitmap_create() : any;
 declare function bitmap_create_ex(w : number, h : number, line_length : number, format : TBitmapFormat) : any;
 declare function bitmap_get_bpp(bitmap : any) : number;
@@ -2204,18 +2203,6 @@ export class TEmitter {
     return new TEmitter(emitter_cast(emitter != null ? (emitter.nativeObj || emitter) : null));
  }
 
-
-  /**
-   * 分发事件
-   * 
-   * @param e 分发的事件。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- forward(e : TEvent) : TRet  {
-    return emitter_forward(this != null ? (this.nativeObj || this) : null, e != null ? (e.nativeObj || e) : null);
- }
-
 };
 /**
  * 位图。
@@ -2279,11 +2266,12 @@ export class TBitmap {
   /**
    * 获取位图格式对应的颜色位数。
    * 
+   * @param format 位图格式。
    *
    * @returns 成功返回颜色位数，失败返回0。
    */
- getBppOfFormat() : number  {
-    return bitmap_get_bpp_of_format(this != null ? (this.nativeObj || this) : null);
+ static getBppOfFormat(format : TBitmapFormat) : number  {
+    return bitmap_get_bpp_of_format(format);
  }
 
 

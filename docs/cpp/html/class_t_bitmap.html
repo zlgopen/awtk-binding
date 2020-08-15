@@ -86,8 +86,6 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a8ad8c5307fa80003c42462a50b96e894"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b1f901f4eb9650446e6a4ad8736f7b4"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_bitmap.html#a7b1f901f4eb9650446e6a4ad8736f7b4">Destroy</a> ()</td></tr>
 <tr class="separator:a7b1f901f4eb9650446e6a4ad8736f7b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a594ee0fbd48f5e4d7375b6867baac96e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_bitmap.html#a594ee0fbd48f5e4d7375b6867baac96e">GetBppOfFormat</a> ()</td></tr>
-<tr class="separator:a594ee0fbd48f5e4d7375b6867baac96e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74eeb69cbd3aab2a8ef0f98a65689619"><td class="memItemLeft" align="right" valign="top">wh_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_bitmap.html#a74eeb69cbd3aab2a8ef0f98a65689619">GetW</a> () const</td></tr>
 <tr class="separator:a74eeb69cbd3aab2a8ef0f98a65689619"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94e03670e066e80b6f58d5df423ffb1d"><td class="memItemLeft" align="right" valign="top">wh_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_bitmap.html#a94e03670e066e80b6f58d5df423ffb1d">GetH</a> () const</td></tr>
@@ -113,6 +111,8 @@ static <a class="el" href="class_t_bitmap.html">TBitmap</a>&#160;</td><td class=
 <tr class="separator:a6e02a250a63c03b6730f371c453252ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c609fbeba442c5c03ca9577b2ffc67b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_bitmap.html">TBitmap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_bitmap.html#a6c609fbeba442c5c03ca9577b2ffc67b">CreateEx</a> (uint32_t w, uint32_t h, uint32_t line_length, bitmap_format_t format)</td></tr>
 <tr class="separator:a6c609fbeba442c5c03ca9577b2ffc67b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a849cde5bc09e281891a467933c1797ac"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_bitmap.html#a849cde5bc09e281891a467933c1797ac">GetBppOfFormat</a> (bitmap_format_t format)</td></tr>
+<tr class="separator:a849cde5bc09e281891a467933c1797ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 属性</h2></td></tr>
@@ -247,21 +247,36 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
 
 </div>
 </div>
-<a id="a594ee0fbd48f5e4d7375b6867baac96e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a594ee0fbd48f5e4d7375b6867baac96e">&#9670;&nbsp;</a></span>GetBppOfFormat()</h2>
+<a id="a849cde5bc09e281891a467933c1797ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a849cde5bc09e281891a467933c1797ac">&#9670;&nbsp;</a></span>GetBppOfFormat()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">uint32_t TBitmap::GetBppOfFormat </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bitmap_format_t&#160;</td>
+          <td class="paramname"><em>format</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>获取位图格式对应的颜色位数。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>位图格式。</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>返回</dt><dd>成功返回颜色位数，失败返回0。 </dd></dl>
 
 </div>

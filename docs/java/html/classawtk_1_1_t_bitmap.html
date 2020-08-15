@@ -84,8 +84,6 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ae4db448f77b0995d184d1861ba75f74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addcdad47c51d818cb20f7c2c9eaca8fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_bitmap.html#addcdad47c51d818cb20f7c2c9eaca8fb">destroy</a> ()</td></tr>
 <tr class="separator:addcdad47c51d818cb20f7c2c9eaca8fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea455db37071062e8b516f9951dd0ae1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_bitmap.html#aea455db37071062e8b516f9951dd0ae1">getBppOfFormat</a> ()</td></tr>
-<tr class="separator:aea455db37071062e8b516f9951dd0ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3ea53d749d89fd2b54ba46cf64a0c77"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_bitmap.html#ac3ea53d749d89fd2b54ba46cf64a0c77">getW</a> ()</td></tr>
 <tr class="separator:ac3ea53d749d89fd2b54ba46cf64a0c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58b617a08718b5127326812b22cefd23"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_bitmap.html#a58b617a08718b5127326812b22cefd23">getH</a> ()</td></tr>
@@ -107,6 +105,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a99761d375d39f27ccbed4b3351be6510"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab70781d406d75233a546ec45a7fcf46f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_bitmap.html#ab70781d406d75233a546ec45a7fcf46f">createEx</a> (int w, int h, int line_length, <a class="el" href="enumawtk_1_1_t_bitmap_format.html">TBitmapFormat</a> format)</td></tr>
 <tr class="separator:ab70781d406d75233a546ec45a7fcf46f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68a28ee1dab14f61cabb11ed5387caf0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_bitmap.html#a68a28ee1dab14f61cabb11ed5387caf0">getBppOfFormat</a> (<a class="el" href="enumawtk_1_1_t_bitmap_format.html">TBitmapFormat</a> format)</td></tr>
+<tr class="separator:a68a28ee1dab14f61cabb11ed5387caf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 属性</h2></td></tr>
@@ -325,8 +325,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aea455db37071062e8b516f9951dd0ae1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea455db37071062e8b516f9951dd0ae1">&#9670;&nbsp;</a></span>getBppOfFormat()</h2>
+<a id="a68a28ee1dab14f61cabb11ed5387caf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68a28ee1dab14f61cabb11ed5387caf0">&#9670;&nbsp;</a></span>getBppOfFormat()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -335,19 +335,26 @@ Public 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int awtk.TBitmap.getBppOfFormat </td>
+          <td class="memname">static int awtk.TBitmap.getBppOfFormat </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="enumawtk_1_1_t_bitmap_format.html">TBitmapFormat</a>&#160;</td>
+          <td class="paramname"><em>format</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>获取位图格式对应的颜色位数。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>位图格式。</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>返回</dt><dd>成功返回颜色位数，失败返回0。 </dd></dl>
 
 </div>

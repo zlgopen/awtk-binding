@@ -219,18 +219,6 @@ int awtk_TEmitter_emitter_cast(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
-int awtk_TEmitter_emitter_forward(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  void* ctx = (void*)jni_ctx_get_int64(&ctx);
-  event_t* e = (event_t*)jni_ctx_get_object(&ctx);
-  ret = (ret_t)emitter_forward(ctx, e);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
 int awtk_TBitmap_bitmap_create(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -18366,7 +18354,6 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TEmitter",  "emitter_disable",  "(J)I",  awtk_TEmitter_emitter_disable},
 {"awtk/TEmitter",  "emitter_size",  "(J)I",  awtk_TEmitter_emitter_size},
 {"awtk/TEmitter",  "emitter_cast",  "(J)J",  awtk_TEmitter_emitter_cast},
-{"awtk/TEmitter",  "emitter_forward",  "(JJ)I",  awtk_TEmitter_emitter_forward},
 {"awtk/TBitmap",  "bitmap_create",  "()J",  awtk_TBitmap_bitmap_create},
 {"awtk/TBitmap",  "bitmap_create_ex",  "(IIII)J",  awtk_TBitmap_bitmap_create_ex},
 {"awtk/TBitmap",  "bitmap_get_bpp",  "(J)I",  awtk_TBitmap_bitmap_get_bpp},

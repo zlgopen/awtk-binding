@@ -375,20 +375,6 @@ pyobject_t wrap_emitter_cast(pyobject_t self, pyobject_t pyargs) {
   return PyLong_FromVoidPtr((void*)ret);
 }
 
-pyobject_t wrap_emitter_forward(pyobject_t self, pyobject_t pyargs) {
-  ret_t ret = 0;
-  void* ctx = NULL;
-  event_t* e = NULL;
-
-  if (!PyArg_ParseTuple(pyargs, "O&O&" , &parse_voidp, &ctx, &parse_voidp, &e)) {
-    PyErr_SetString(PyExc_TypeError, "invalid arguments");
-    return NULL;
-  }
-
-  ret = (ret_t)emitter_forward(ctx, e);
-  return Py_BuildValue("i", ret);
-}
-
 pyobject_t wrap_bitmap_create(pyobject_t self, pyobject_t pyargs) {
   bitmap_t* ret = NULL;
 
@@ -17355,7 +17341,6 @@ static PyMethodDef awtk_methods[] = {
 {"emitter_disable", wrap_emitter_disable, METH_VARARGS, "emitter_disable"},
 {"emitter_size", wrap_emitter_size, METH_VARARGS, "emitter_size"},
 {"emitter_cast", wrap_emitter_cast, METH_VARARGS, "emitter_cast"},
-{"emitter_forward", wrap_emitter_forward, METH_VARARGS, "emitter_forward"},
 {"bitmap_create", wrap_bitmap_create, METH_VARARGS, "bitmap_create"},
 {"bitmap_create_ex", wrap_bitmap_create_ex, METH_VARARGS, "bitmap_create_ex"},
 {"bitmap_get_bpp", wrap_bitmap_get_bpp, METH_VARARGS, "bitmap_get_bpp"},

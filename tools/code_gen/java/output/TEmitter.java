@@ -160,18 +160,6 @@ public class TEmitter {
     return new TEmitter(emitter_cast(emitter != null ? (emitter.nativeObj) : 0));
  }
 
-
-  /**
-   * 分发事件
-   * 
-   * @param e 分发的事件。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
- public  TRet forward(TEvent e)  {
-   return TRet.from(emitter_forward(this != null ? (this.nativeObj) : 0, e != null ? (e.nativeObj) : 0));
- }
-
 static private native long emitter_create();
 static private native int emitter_dispatch(long emitter, long e);
 static private native int emitter_dispatch_simple_event(long emitter, int type);
@@ -182,5 +170,4 @@ static private native int emitter_disable(long emitter);
 static private native int emitter_size(long emitter);
 static private native int emitter_destroy(long emitter);
 static private native long emitter_cast(long emitter);
-static private native int emitter_forward(long ctx, long e);
 };

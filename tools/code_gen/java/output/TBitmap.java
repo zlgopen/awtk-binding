@@ -88,11 +88,12 @@ public class TBitmap {
   /**
    * 获取位图格式对应的颜色位数。
    * 
+   * @param format 位图格式。
    *
    * @return 成功返回颜色位数，失败返回0。
    */
- public  int getBppOfFormat()  {
-    return bitmap_get_bpp_of_format(this != null ? (this.nativeObj) : 0);
+ public  static int getBppOfFormat(TBitmapFormat format)  {
+    return bitmap_get_bpp_of_format(format.value());
  }
 
 

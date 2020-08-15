@@ -330,17 +330,6 @@ class TEmitter(object):
     return  TEmitter(emitter_cast(awtk_get_native_obj(emitter)));
 
 
-  #
-  # 分发事件
-  # 
-  # @param e 分发的事件。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def forward(self, e): 
-    return emitter_forward(awtk_get_native_obj(self), awtk_get_native_obj(e));
-
-
 #
 # 位图。
 #
@@ -399,11 +388,13 @@ class TBitmap(object):
   #
   # 获取位图格式对应的颜色位数。
   # 
+  # @param format 位图格式。
   #
   # @return 成功返回颜色位数，失败返回0。
   #
-  def get_bpp_of_format(self): 
-    return bitmap_get_bpp_of_format(awtk_get_native_obj(self));
+  @classmethod
+  def get_bpp_of_format(cls, format): 
+    return bitmap_get_bpp_of_format(format);
 
 
   #

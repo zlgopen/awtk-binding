@@ -504,29 +504,6 @@
           "type": "emitter_t*",
           "desc": "对象。"
         }
-      },
-      {
-        "params": [
-          {
-            "type": "void*",
-            "name": "ctx",
-            "desc": "emitter对象。"
-          },
-          {
-            "type": "event_t*",
-            "name": "e",
-            "desc": "分发的事件。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "分发事件",
-        "name": "emitter_forward",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
       }
     ],
     "events": [],
@@ -639,7 +616,8 @@
           }
         ],
         "annotation": {
-          "scriptable": true
+          "scriptable": true,
+          "static": true
         },
         "desc": "获取位图格式对应的颜色位数。",
         "name": "bitmap_get_bpp_of_format",

@@ -333,15 +333,6 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t Destroy() ;
-
-  /**
-   * 分发事件
-   * 
-   * @param e 分发的事件。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t Forward(TEvent& e) ;
 };
 
 
@@ -410,10 +401,11 @@ public:
   /**
    * 获取位图格式对应的颜色位数。
    * 
+   * @param format 位图格式。
    *
    * @return 成功返回颜色位数，失败返回0。
    */
-  uint32_t GetBppOfFormat() ;
+  static  uint32_t GetBppOfFormat(bitmap_format_t format) ;
 
   /**
    * 宽度。

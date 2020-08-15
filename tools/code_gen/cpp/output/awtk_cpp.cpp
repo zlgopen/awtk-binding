@@ -83,10 +83,6 @@
    return emitter_destroy(((emitter_t*)(this->nativeObj)));
  }
 
- ret_t TEmitter::Forward(TEvent& e)  {
-   return emitter_forward(((void*)(this->nativeObj)), ((event_t*)(e.nativeObj)));
- }
-
  TBitmap TBitmap::Create()  {
    return TBitmap((bitmap_t*)(bitmap_create()));
  }
@@ -103,8 +99,8 @@
    return bitmap_destroy(((bitmap_t*)(this->nativeObj)));
  }
 
- uint32_t TBitmap::GetBppOfFormat()  {
-    return bitmap_get_bpp_of_format(((bitmap_format_t)(this->nativeObj)));
+ uint32_t TBitmap::GetBppOfFormat(bitmap_format_t format)  {
+    return bitmap_get_bpp_of_format(format);
  }
 
  wh_t TBitmap::GetW() const {

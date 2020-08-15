@@ -412,21 +412,6 @@ static void wrap_emitter_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv) 
   (void)argc;(void)ctx;
 }
 
-static void wrap_emitter_forward(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
-  JSContext* ctx = NULL; 
-  int32_t argc = (int32_t)(argv.Length()); 
-  if(argc >= 2) {
-  ret_t ret = (ret_t)0;
-  void* ctx =  NULL;
-  event_t* e = (event_t*)jsvalue_get_pointer(ctx, argv[1], "event_t*");
-  ret = (ret_t)emitter_forward(ctx, e);
-
-  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
-  argv.GetReturnValue().Set(jret);
-  }
-  (void)argc;(void)ctx;
-}
-
 ret_t emitter_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "emitter_create", wrap_emitter_create);
   Nan::Export(ctx, "emitter_dispatch", wrap_emitter_dispatch);
@@ -437,7 +422,6 @@ ret_t emitter_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "emitter_disable", wrap_emitter_disable);
   Nan::Export(ctx, "emitter_size", wrap_emitter_size);
   Nan::Export(ctx, "emitter_cast", wrap_emitter_cast);
-  Nan::Export(ctx, "emitter_forward", wrap_emitter_forward);
 
  return RET_OK;
 }
