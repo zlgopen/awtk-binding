@@ -124,6 +124,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a0e8864c61f8cdd4c64463edcb1f7a180"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d370677c6e1de65fbede6a725359d5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a7d370677c6e1de65fbede6a725359d5e">drawImageEx</a> (<a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img, <a class="el" href="enumawtk_1_1_t_image_draw_type.html">TImageDrawType</a> draw_type, <a class="el" href="classawtk_1_1_t_rect.html">TRect</a> dst)</td></tr>
 <tr class="separator:a7d370677c6e1de65fbede6a725359d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0173328ea80b08b344d3395df0be5802"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a0173328ea80b08b344d3395df0be5802">drawImageEx2</a> (<a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img, <a class="el" href="enumawtk_1_1_t_image_draw_type.html">TImageDrawType</a> draw_type, <a class="el" href="classawtk_1_1_t_rect.html">TRect</a> src, <a class="el" href="classawtk_1_1_t_rect.html">TRect</a> dst)</td></tr>
+<tr class="separator:a0173328ea80b08b344d3395df0be5802"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c2e9c2d947c6be5986557542e3f0cb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_vgcanvas.html">TVgcanvas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a1c2e9c2d947c6be5986557542e3f0cb3">getVgcanvas</a> ()</td></tr>
 <tr class="separator:a1c2e9c2d947c6be5986557542e3f0cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada3d9b9d00bba75d18a10c182ed1e45e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#ada3d9b9d00bba75d18a10c182ed1e45e">reset</a> ()</td></tr>
@@ -457,6 +459,65 @@ Public 属性</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">img</td><td>图片对象。 </td></tr>
     <tr><td class="paramname">draw_type</td><td>绘制类型。 </td></tr>
+    <tr><td class="paramname">dst</td><td>目的区域。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a0173328ea80b08b344d3395df0be5802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0173328ea80b08b344d3395df0be5802">&#9670;&nbsp;</a></span>drawImageEx2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.drawImageEx2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a>&#160;</td>
+          <td class="paramname"><em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="enumawtk_1_1_t_image_draw_type.html">TImageDrawType</a>&#160;</td>
+          <td class="paramname"><em>draw_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a>&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>绘制图片。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>图片对象。 </td></tr>
+    <tr><td class="paramname">draw_type</td><td>绘制类型。 </td></tr>
+    <tr><td class="paramname">src</td><td>源区域。 </td></tr>
     <tr><td class="paramname">dst</td><td>目的区域。</td></tr>
   </table>
   </dd>

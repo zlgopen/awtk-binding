@@ -87,12 +87,16 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:addcd8d17ded371686126bccab64b1dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4bfbd8cf327422340567f2aad75b67b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_button.html#aa4bfbd8cf327422340567f2aad75b67b">setRepeat</a> (int repeat)</td></tr>
 <tr class="separator:aa4bfbd8cf327422340567f2aad75b67b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9eb809fb4072ee3476f774ab266e19c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_button.html#aa9eb809fb4072ee3476f774ab266e19c">setLongPressTime</a> (int long_press_time)</td></tr>
+<tr class="separator:aa9eb809fb4072ee3476f774ab266e19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29d4092b0dd0d01c77f927a8f0343a27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_button.html#a29d4092b0dd0d01c77f927a8f0343a27">setEnableLongPress</a> (boolean enable_long_press)</td></tr>
 <tr class="separator:a29d4092b0dd0d01c77f927a8f0343a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0c47eccea136ab447293f70a3644b33"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_button.html#af0c47eccea136ab447293f70a3644b33">getRepeat</a> ()</td></tr>
 <tr class="separator:af0c47eccea136ab447293f70a3644b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc64465bbbec89d2246f76202e063af4"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_button.html#adc64465bbbec89d2246f76202e063af4">getEnableLongPress</a> ()</td></tr>
 <tr class="separator:adc64465bbbec89d2246f76202e063af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa17c200e33b71bffaee674b9abe1d69f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_button.html#aa17c200e33b71bffaee674b9abe1d69f">getLongPressTime</a> ()</td></tr>
+<tr class="separator:aa17c200e33b71bffaee674b9abe1d69f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -113,7 +117,7 @@ Public 成员函数</h2></td></tr>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>更多用法请参考： </p>
 </blockquote>
-<p><a href="https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/button.xml">button.xml</a></p>
+<p><a href="https://github.com/zlgopen/awtk/blob/master/design/default/ui/button.xml">button.xml</a></p>
 <p>在c代码中使用函数button_create创建按钮控件。如：</p>
 <blockquote class="doxtable">
 <p>创建之后，需要用widget_set_text或widget_set_text_utf8设置文本内容。 </p>
@@ -132,7 +136,7 @@ Public 成员函数</h2></td></tr>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>更多用法请参考： </p>
 </blockquote>
-<p><a href="https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L31">theme default</a> </p>
+<p><a href="https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L31">theme default</a> </p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="addcd8d17ded371686126bccab64b1dfd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#addcd8d17ded371686126bccab64b1dfd">&#9670;&nbsp;</a></span>TButton()</h2>
@@ -330,6 +334,32 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="aa17c200e33b71bffaee674b9abe1d69f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa17c200e33b71bffaee674b9abe1d69f">&#9670;&nbsp;</a></span>getLongPressTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int awtk.TButton.getLongPressTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>触发长按事件的时间(ms) </p>
+
+</div>
+</div>
 <a id="af0c47eccea136ab447293f70a3644b33"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af0c47eccea136ab447293f70a3644b33">&#9670;&nbsp;</a></span>getRepeat()</h2>
 
@@ -384,6 +414,40 @@ Public 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">enable_long_press</td><td>是否启用长按事件。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="aa9eb809fb4072ee3476f774ab266e19c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9eb809fb4072ee3476f774ab266e19c">&#9670;&nbsp;</a></span>setLongPressTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TButton.setLongPressTime </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>long_press_time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置触发长按事件的时间。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">long_press_time</td><td>触发长按事件的时间(毫秒)。</td></tr>
   </table>
   </dd>
 </dl>

@@ -430,6 +430,13 @@ public enum TWidgetProp {
   READONLY (WIDGET_PROP_READONLY()),
   
   /**
+   * 是否可取消。
+   *
+   */
+ 
+  CANCELABLE (WIDGET_PROP_CANCELABLE()),
+  
+  /**
    * 密码是否可见。
    *
    */
@@ -519,6 +526,13 @@ public enum TWidgetProp {
    */
  
   OPEN_IM_WHEN_FOCUSED (WIDGET_PROP_OPEN_IM_WHEN_FOCUSED()),
+  
+  /**
+   * 编辑器在失去焦点时是否关闭输入法。
+   *
+   */
+ 
+  CLOSE_IM_WHEN_BLURED (WIDGET_PROP_CLOSE_IM_WHEN_BLURED()),
   
   /**
    * X最小值。
@@ -675,11 +689,25 @@ public enum TWidgetProp {
   REPEAT (WIDGET_PROP_REPEAT()),
   
   /**
+   * 触发长按事件的时间(ms)。
+   *
+   */
+ 
+  LONG_PRESS_TIME (WIDGET_PROP_LONG_PRESS_TIME()),
+  
+  /**
    * 是否启用长按。
    *
    */
  
   ENABLE_LONG_PRESS (WIDGET_PROP_ENABLE_LONG_PRESS()),
+  
+  /**
+   * 是否启用点击穿透。
+   *
+   */
+ 
+  CLICK_THROUGH (WIDGET_PROP_CLICK_THROUGH()),
   
   /**
    * 是否启用动画。
@@ -1047,6 +1075,7 @@ public enum TWidgetProp {
   static private native String WIDGET_PROP_KEYBOARD();
   static private native String WIDGET_PROP_DEFAULT_FOCUSED_CHILD();
   static private native String WIDGET_PROP_READONLY();
+  static private native String WIDGET_PROP_CANCELABLE();
   static private native String WIDGET_PROP_PASSWORD_VISIBLE();
   static private native String WIDGET_PROP_ACTIVE();
   static private native String WIDGET_PROP_VERTICAL();
@@ -1060,6 +1089,7 @@ public enum TWidgetProp {
   static private native String WIDGET_PROP_AUTO_FIX();
   static private native String WIDGET_PROP_SELECT_NONE_WHEN_FOCUSED();
   static private native String WIDGET_PROP_OPEN_IM_WHEN_FOCUSED();
+  static private native String WIDGET_PROP_CLOSE_IM_WHEN_BLURED();
   static private native String WIDGET_PROP_X_MIN();
   static private native String WIDGET_PROP_X_MAX();
   static private native String WIDGET_PROP_Y_MIN();
@@ -1082,7 +1112,9 @@ public enum TWidgetProp {
   static private native String WIDGET_PROP_XSLIDABLE();
   static private native String WIDGET_PROP_YSLIDABLE();
   static private native String WIDGET_PROP_REPEAT();
+  static private native String WIDGET_PROP_LONG_PRESS_TIME();
   static private native String WIDGET_PROP_ENABLE_LONG_PRESS();
+  static private native String WIDGET_PROP_CLICK_THROUGH();
   static private native String WIDGET_PROP_ANIMATABLE();
   static private native String WIDGET_PROP_AUTO_HIDE_SCROLL_BAR();
   static private native String WIDGET_PROP_IMAGE();

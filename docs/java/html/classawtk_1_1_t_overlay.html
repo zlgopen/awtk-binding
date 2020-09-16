@@ -88,6 +88,10 @@ $(function() {
 Public 成员函数</h2></td></tr>
 <tr class="memitem:ae0b4914a4f2456e1598283d2da8a8d2d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_overlay.html#ae0b4914a4f2456e1598283d2da8a8d2d">TOverlay</a> (long nativeObj)</td></tr>
 <tr class="separator:ae0b4914a4f2456e1598283d2da8a8d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a938780835906ab2f202022db9f8bec7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_overlay.html#a938780835906ab2f202022db9f8bec7d">setClickThrough</a> (boolean click_through)</td></tr>
+<tr class="separator:a938780835906ab2f202022db9f8bec7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5280d6a4e5af42da2f765ab272569c99"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_overlay.html#a5280d6a4e5af42da2f765ab272569c99">getClickThrough</a> ()</td></tr>
+<tr class="separator:a5280d6a4e5af42da2f765ab272569c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classawtk_1_1_t_window_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classawtk_1_1_t_window_base')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classawtk_1_1_t_window_base.html">awtk.TWindowBase</a></td></tr>
 <tr class="memitem:a3d4fd3b3e59eca66364479f9c5906a29 inherit pub_methods_classawtk_1_1_t_window_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_window_base.html#a3d4fd3b3e59eca66364479f9c5906a29">TWindowBase</a> (long nativeObj)</td></tr>
 <tr class="separator:a3d4fd3b3e59eca66364479f9c5906a29 inherit pub_methods_classawtk_1_1_t_window_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,7 +140,7 @@ Public 成员函数</h2></td></tr>
 <p></p>
 <p></p>
 </blockquote>
-<p>更多用法请参考：<a href="https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/">overlay.xml</a></p>
+<p>更多用法请参考：<a href="https://github.com/zlgopen/awtk/blob/master/design/default/ui/">overlay.xml</a></p>
 <p>在c代码中使用函数overlay_create创建窗口。如：</p>
 <blockquote class="doxtable">
 <p>完整示例请参考：[overlay </p>
@@ -149,7 +153,7 @@ Public 成员函数</h2></td></tr>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>更多用法请参考：[theme </p>
 </blockquote>
-<p>default](<a href="https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L0">https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L0</a>) </p>
+<p>default](<a href="https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L0">https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L0</a>) </p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="ae0b4914a4f2456e1598283d2da8a8d2d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae0b4914a4f2456e1598283d2da8a8d2d">&#9670;&nbsp;</a></span>TOverlay()</h2>
@@ -321,6 +325,67 @@ Public 成员函数</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>对象。 </dd></dl>
+
+</div>
+</div>
+<a id="a5280d6a4e5af42da2f765ab272569c99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5280d6a4e5af42da2f765ab272569c99">&#9670;&nbsp;</a></span>getClickThrough()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean awtk.TOverlay.getClickThrough </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>点击穿透。点击没有子控件的位置，是否穿透到底层窗口。</p>
+<p>缺省不启用。 </p>
+
+</div>
+</div>
+<a id="a938780835906ab2f202022db9f8bec7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a938780835906ab2f202022db9f8bec7d">&#9670;&nbsp;</a></span>setClickThrough()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TOverlay.setClickThrough </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>click_through</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置是否启用点击穿透。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">click_through</td><td>是否启用点击穿透。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>

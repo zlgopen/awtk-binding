@@ -138,6 +138,7 @@ class CppIntfGenerator extends CppGenerator {
     this.result += 'class TEmitter;\n';
     this.result += 'class TEvent;\n';
     this.result += 'class TWidget;\n';
+    this.result += 'class TCanvas;\n';
     this.result += 'class TWindow;\n';
     this.result += 'class TAssetInfo;\n';
     this.result += 'class TNativeWindow;\n';

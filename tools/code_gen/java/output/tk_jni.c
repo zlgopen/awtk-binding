@@ -19,8 +19,8 @@
 #include "base/input_method.h"
 #include "base/keys.h"
 #include "base/locale_info.h"
-#include "base/style.h"
 #include "base/assets_manager.h"
+#include "base/style.h"
 #include "base/theme.h"
 #include "base/timer.h"
 #include "base/types_def.h"
@@ -62,8 +62,8 @@
 #include "widgets/dialog_client.h"
 #include "widgets/combo_box_item.h"
 #include "time_clock/time_clock.h"
-#include "widgets/column.h"
 #include "text_selector/text_selector.h"
+#include "widgets/column.h"
 #include "switch/switch.h"
 #include "widgets/color_tile.h"
 #include "widgets/clip_view.h"
@@ -1113,6 +1113,11 @@ JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1KEY_1DOWN(JNIEnv* env,  jclass 
   return (jint)(EVT_KEY_DOWN);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1KEY_1LONG_1PRESS(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_KEY_LONG_PRESS);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1KEY_1DOWN_1BEFORE_1CHILDREN(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (jint)(EVT_KEY_DOWN_BEFORE_CHILDREN);
@@ -1278,6 +1283,16 @@ JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1IM_1COMMIT(JNIEnv* env,  jclass
   return (jint)(EVT_IM_COMMIT);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1IM_1CLEAR(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_IM_CLEAR);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1IM_1CANCEL(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_IM_CANCEL);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1IM_1PREEDIT(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (jint)(EVT_IM_PREEDIT);
@@ -1401,6 +1416,11 @@ JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1SCROLL(JNIEnv* env,  jclass ajc
 JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1SCROLL_1END(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (jint)(EVT_SCROLL_END);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1MULTI_1GESTURE(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_MULTI_GESTURE);
 }
 
 JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1REQ_1START(JNIEnv* env,  jclass ajc) {/*const*/
@@ -2398,6 +2418,42 @@ JNIEXPORT jint JNICALL Java_awtk_TLocaleInfo_locale_1info_1off(JNIEnv* env,  jcl
   return (jint)(ret);
 }
 
+JNIEXPORT jlong JNICALL Java_awtk_TAssetsManager_assets_1manager(JNIEnv* env,  jclass ajc) { /*func*/
+  assets_manager_t* ret;
+  ret = (assets_manager_t*)assets_manager();
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TAssetsManager_assets_1manager_1set_1theme(JNIEnv* env,  jclass ajc, jlong jam, jstring jtheme) { /*func*/
+  ret_t ret;
+  assets_manager_t* am = (assets_manager_t*)jam;
+  const char* theme = (char*)(*env)->GetStringUTFChars(env, jtheme, 0);
+  ret = (ret_t)assets_manager_set_theme(am, theme);
+  (*env)->ReleaseStringUTFChars(env, jtheme, theme);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TAssetsManager_assets_1manager_1ref(JNIEnv* env,  jclass ajc, jlong jam, jint type, jstring jname) { /*func*/
+  asset_info_t* ret;
+  assets_manager_t* am = (assets_manager_t*)jam;
+  char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
+  ret = (asset_info_t*)assets_manager_ref(am, type, name);
+  (*env)->ReleaseStringUTFChars(env, jname, name);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TAssetsManager_assets_1manager_1unref(JNIEnv* env,  jclass ajc, jlong jam, jlong jinfo) { /*func*/
+  ret_t ret;
+  assets_manager_t* am = (assets_manager_t*)jam;
+  asset_info_t* info = (asset_info_t*)jinfo;
+  ret = (ret_t)assets_manager_unref(am, info);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jstring JNICALL Java_awtk_TStyleId_STYLE_1ID_1BG_1COLOR(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (*env)->NewStringUTF(env, STYLE_ID_BG_COLOR);
@@ -2573,6 +2629,26 @@ JNIEXPORT jstring JNICALL Java_awtk_TStyleId_STYLE_1ID_1ROUND_1RADIUS(JNIEnv* en
   return (*env)->NewStringUTF(env, STYLE_ID_ROUND_RADIUS);
 }
 
+JNIEXPORT jstring JNICALL Java_awtk_TStyleId_STYLE_1ID_1ROUND_1RADIUS_1TOP_1LETF(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, STYLE_ID_ROUND_RADIUS_TOP_LETF);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TStyleId_STYLE_1ID_1ROUND_1RADIUS_1TOP_1RIGHT(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, STYLE_ID_ROUND_RADIUS_TOP_RIGHT);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TStyleId_STYLE_1ID_1ROUND_1RADIUS_1BOTTOM_1LETF(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, STYLE_ID_ROUND_RADIUS_BOTTOM_LETF);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TStyleId_STYLE_1ID_1ROUND_1RADIUS_1BOTTOM_1RIGHT(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, STYLE_ID_ROUND_RADIUS_BOTTOM_RIGHT);
+}
+
 JNIEXPORT jstring JNICALL Java_awtk_TStyleId_STYLE_1ID_1CHILDREN_1LAYOUT(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (*env)->NewStringUTF(env, STYLE_ID_CHILDREN_LAYOUT);
@@ -2643,40 +2719,109 @@ JNIEXPORT jboolean JNICALL Java_awtk_TStyle_style_1is_1mutable(JNIEnv* env,  jcl
   return (jboolean)(ret);
 }
 
-JNIEXPORT jlong JNICALL Java_awtk_TAssetsManager_assets_1manager(JNIEnv* env,  jclass ajc) { /*func*/
-  assets_manager_t* ret;
-  ret = (assets_manager_t*)assets_manager();
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1INVALID(JNIEnv* env,  jclass ajc) {/*const*/
 
-  return (jlong)(ret);
+  return (jint)(VALUE_TYPE_INVALID);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TAssetsManager_assets_1manager_1set_1theme(JNIEnv* env,  jclass ajc, jlong jam, jstring jtheme) { /*func*/
-  ret_t ret;
-  assets_manager_t* am = (assets_manager_t*)jam;
-  const char* theme = (char*)(*env)->GetStringUTFChars(env, jtheme, 0);
-  ret = (ret_t)assets_manager_set_theme(am, theme);
-  (*env)->ReleaseStringUTFChars(env, jtheme, theme);
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1BOOL(JNIEnv* env,  jclass ajc) {/*const*/
 
-  return (jint)(ret);
+  return (jint)(VALUE_TYPE_BOOL);
 }
 
-JNIEXPORT jlong JNICALL Java_awtk_TAssetsManager_assets_1manager_1ref(JNIEnv* env,  jclass ajc, jlong jam, jint type, jstring jname) { /*func*/
-  asset_info_t* ret;
-  assets_manager_t* am = (assets_manager_t*)jam;
-  char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
-  ret = (asset_info_t*)assets_manager_ref(am, type, name);
-  (*env)->ReleaseStringUTFChars(env, jname, name);
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1INT8(JNIEnv* env,  jclass ajc) {/*const*/
 
-  return (jlong)(ret);
+  return (jint)(VALUE_TYPE_INT8);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TAssetsManager_assets_1manager_1unref(JNIEnv* env,  jclass ajc, jlong jam, jlong jinfo) { /*func*/
-  ret_t ret;
-  assets_manager_t* am = (assets_manager_t*)jam;
-  asset_info_t* info = (asset_info_t*)jinfo;
-  ret = (ret_t)assets_manager_unref(am, info);
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1UINT8(JNIEnv* env,  jclass ajc) {/*const*/
 
-  return (jint)(ret);
+  return (jint)(VALUE_TYPE_UINT8);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1INT16(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VALUE_TYPE_INT16);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1UINT16(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VALUE_TYPE_UINT16);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1INT32(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VALUE_TYPE_INT32);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1UINT32(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VALUE_TYPE_UINT32);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1INT64(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VALUE_TYPE_INT64);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1UINT64(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VALUE_TYPE_UINT64);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1POINTER(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VALUE_TYPE_POINTER);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1FLOAT(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VALUE_TYPE_FLOAT);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1FLOAT32(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VALUE_TYPE_FLOAT32);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1DOUBLE(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VALUE_TYPE_DOUBLE);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1STRING(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VALUE_TYPE_STRING);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1WSTRING(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VALUE_TYPE_WSTRING);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1OBJECT(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VALUE_TYPE_OBJECT);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1SIZED_1STRING(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VALUE_TYPE_SIZED_STRING);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1BINARY(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VALUE_TYPE_BINARY);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1UBJSON(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VALUE_TYPE_UBJSON);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1TOKEN(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VALUE_TYPE_TOKEN);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TTheme_theme(JNIEnv* env,  jclass ajc) { /*func*/
@@ -3621,6 +3766,11 @@ JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1READONLY(JNIEnv* e
   return (*env)->NewStringUTF(env, WIDGET_PROP_READONLY);
 }
 
+JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1CANCELABLE(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, WIDGET_PROP_CANCELABLE);
+}
+
 JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1PASSWORD_1VISIBLE(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (*env)->NewStringUTF(env, WIDGET_PROP_PASSWORD_VISIBLE);
@@ -3684,6 +3834,11 @@ JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1SELECT_1NONE_1WHEN
 JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1OPEN_1IM_1WHEN_1FOCUSED(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (*env)->NewStringUTF(env, WIDGET_PROP_OPEN_IM_WHEN_FOCUSED);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1CLOSE_1IM_1WHEN_1BLURED(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, WIDGET_PROP_CLOSE_IM_WHEN_BLURED);
 }
 
 JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1X_1MIN(JNIEnv* env,  jclass ajc) {/*const*/
@@ -3796,9 +3951,19 @@ JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1REPEAT(JNIEnv* env
   return (*env)->NewStringUTF(env, WIDGET_PROP_REPEAT);
 }
 
+JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1LONG_1PRESS_1TIME(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, WIDGET_PROP_LONG_PRESS_TIME);
+}
+
 JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1ENABLE_1LONG_1PRESS(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (*env)->NewStringUTF(env, WIDGET_PROP_ENABLE_LONG_PRESS);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1CLICK_1THROUGH(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, WIDGET_PROP_CLICK_THROUGH);
 }
 
 JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1ANIMATABLE(JNIEnv* env,  jclass ajc) {/*const*/
@@ -4321,6 +4486,11 @@ JNIEXPORT jstring JNICALL Java_awtk_TWidgetState_WIDGET_1STATE_1NORMAL(JNIEnv* e
   return (*env)->NewStringUTF(env, WIDGET_STATE_NORMAL);
 }
 
+JNIEXPORT jstring JNICALL Java_awtk_TWidgetState_WIDGET_1STATE_1CHANGED(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, WIDGET_STATE_CHANGED);
+}
+
 JNIEXPORT jstring JNICALL Java_awtk_TWidgetState_WIDGET_1STATE_1PRESSED(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (*env)->NewStringUTF(env, WIDGET_STATE_PRESSED);
@@ -4476,111 +4646,6 @@ JNIEXPORT jstring JNICALL Java_awtk_TWidgetCursor_WIDGET_1CURSOR_1SIZEALL(JNIEnv
   return (*env)->NewStringUTF(env, WIDGET_CURSOR_SIZEALL);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1INVALID(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_INVALID);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1BOOL(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_BOOL);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1INT8(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_INT8);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1UINT8(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_UINT8);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1INT16(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_INT16);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1UINT16(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_UINT16);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1INT32(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_INT32);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1UINT32(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_UINT32);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1INT64(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_INT64);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1UINT64(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_UINT64);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1POINTER(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_POINTER);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1FLOAT(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_FLOAT);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1FLOAT32(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_FLOAT32);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1DOUBLE(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_DOUBLE);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1STRING(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_STRING);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1WSTRING(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_WSTRING);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1OBJECT(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_OBJECT);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1SIZED_1STRING(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_SIZED_STRING);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1BINARY(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_BINARY);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1UBJSON(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_UBJSON);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TValueType_VALUE_1TYPE_1TOKEN(JNIEnv* env,  jclass ajc) {/*const*/
-
-  return (jint)(VALUE_TYPE_TOKEN);
-}
-
 JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1count_1children(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
   int32_t ret;
   widget_t* widget = (widget_t*)jwidget;
@@ -4707,6 +4772,18 @@ JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1set_1child_1text_1with_1double(
   const char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
   const char* format = (char*)(*env)->GetStringUTFChars(env, jformat, 0);
   ret = (ret_t)widget_set_child_text_with_double(widget, name, format, value);
+  (*env)->ReleaseStringUTFChars(env, jname, name);
+  (*env)->ReleaseStringUTFChars(env, jformat, format);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1set_1child_1text_1with_1int(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jname, jstring jformat, jint value) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  const char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
+  const char* format = (char*)(*env)->GetStringUTFChars(env, jformat, 0);
+  ret = (ret_t)widget_set_child_text_with_int(widget, name, format, value);
   (*env)->ReleaseStringUTFChars(env, jname, name);
   (*env)->ReleaseStringUTFChars(env, jformat, format);
 
@@ -5123,6 +5200,54 @@ JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1window(JNIEnv* env,  jc
   return (jboolean)(ret);
 }
 
+JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1system_1bar(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  bool_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (bool_t)widget_is_system_bar(widget);
+
+  return (jboolean)(ret);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1normal_1window(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  bool_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (bool_t)widget_is_normal_window(widget);
+
+  return (jboolean)(ret);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1dialog(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  bool_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (bool_t)widget_is_dialog(widget);
+
+  return (jboolean)(ret);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1popup(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  bool_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (bool_t)widget_is_popup(widget);
+
+  return (jboolean)(ret);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1opened_1popup(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  bool_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (bool_t)widget_is_opened_popup(widget);
+
+  return (jboolean)(ret);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1keyboard(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  bool_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (bool_t)widget_is_keyboard(widget);
+
+  return (jboolean)(ret);
+}
+
 JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1designing_1window(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
   bool_t ret;
   widget_t* widget = (widget_t*)jwidget;
@@ -5209,14 +5334,6 @@ JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1unref(JNIEnv* env,  jclass ajc,
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
   ret = (ret_t)widget_unref(widget);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1is_1keyboard(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
-  ret_t ret;
-  widget_t* widget = (widget_t*)jwidget;
-  ret = (ret_t)widget_is_keyboard(widget);
 
   return (jint)(ret);
 }
@@ -5315,46 +5432,6 @@ JNIEXPORT jstring JNICALL Java_awtk_TWidget_widget_1get_1state_1for_1style(JNIEn
   ret = (const char*)widget_get_state_for_style(widget, active, checked);
 
   return (*env)->NewStringUTF(env, ret);
-}
-
-JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1system_1bar(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
-  bool_t ret;
-  widget_t* widget = (widget_t*)jwidget;
-  ret = (bool_t)widget_is_system_bar(widget);
-
-  return (jboolean)(ret);
-}
-
-JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1normal_1window(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
-  bool_t ret;
-  widget_t* widget = (widget_t*)jwidget;
-  ret = (bool_t)widget_is_normal_window(widget);
-
-  return (jboolean)(ret);
-}
-
-JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1dialog(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
-  bool_t ret;
-  widget_t* widget = (widget_t*)jwidget;
-  ret = (bool_t)widget_is_dialog(widget);
-
-  return (jboolean)(ret);
-}
-
-JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1popup(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
-  bool_t ret;
-  widget_t* widget = (widget_t*)jwidget;
-  ret = (bool_t)widget_is_popup(widget);
-
-  return (jboolean)(ret);
-}
-
-JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1opened_1popup(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
-  bool_t ret;
-  widget_t* widget = (widget_t*)jwidget;
-  ret = (bool_t)widget_is_opened_popup(widget);
-
-  return (jboolean)(ret);
 }
 
 JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1layout(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
@@ -5896,6 +5973,11 @@ JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1CLEAR(JNIEnv* env,  
 JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1ADD(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (*env)->NewStringUTF(env, OBJECT_CMD_ADD);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1DETAIL(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, OBJECT_CMD_DETAIL);
 }
 
 JNIEXPORT jstring JNICALL Java_awtk_TObjectCmd_OBJECT_1CMD_1EDIT(JNIEnv* env,  jclass ajc) {/*const*/
@@ -6769,8 +6851,8 @@ JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1draw_1image(JNIEnv* env,  jclas
   ret_t ret;
   canvas_t* c = (canvas_t*)jc;
   bitmap_t* img = (bitmap_t*)jimg;
-  rect_t* src = (rect_t*)jsrc;
-  rect_t* dst = (rect_t*)jdst;
+  const rect_t* src = (const rect_t*)jsrc;
+  const rect_t* dst = (const rect_t*)jdst;
   ret = (ret_t)canvas_draw_image(c, img, src, dst);
 
   return (jint)(ret);
@@ -6780,8 +6862,19 @@ JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1draw_1image_1ex(JNIEnv* env,  j
   ret_t ret;
   canvas_t* c = (canvas_t*)jc;
   bitmap_t* img = (bitmap_t*)jimg;
-  rect_t* dst = (rect_t*)jdst;
+  const rect_t* dst = (const rect_t*)jdst;
   ret = (ret_t)canvas_draw_image_ex(c, img, draw_type, dst);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TCanvas_canvas_1draw_1image_1ex2(JNIEnv* env,  jclass ajc, jlong jc, jlong jimg, jint draw_type, jlong jsrc, jlong jdst) { /*func*/
+  ret_t ret;
+  canvas_t* c = (canvas_t*)jc;
+  bitmap_t* img = (bitmap_t*)jimg;
+  const rect_t* src = (const rect_t*)jsrc;
+  const rect_t* dst = (const rect_t*)jdst;
+  ret = (ret_t)canvas_draw_image_ex2(c, img, draw_type, src, dst);
 
   return (jint)(ret);
 }
@@ -7877,6 +7970,14 @@ JNIEXPORT jint JNICALL Java_awtk_TEdit_edit_1set_1readonly(JNIEnv* env,  jclass 
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TEdit_edit_1set_1cancelable(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean cancelable) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)edit_set_cancelable(widget, cancelable);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TEdit_edit_1set_1auto_1fix(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean auto_fix) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
@@ -7897,6 +7998,14 @@ JNIEXPORT jint JNICALL Java_awtk_TEdit_edit_1set_1open_1im_1when_1focused(JNIEnv
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
   ret = (ret_t)edit_set_open_im_when_focused(widget, open_im_when_focused);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TEdit_edit_1set_1close_1im_1when_1blured(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean close_im_when_blured) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)edit_set_close_im_when_blured(widget, close_im_when_blured);
 
   return (jint)(ret);
 }
@@ -8003,6 +8112,12 @@ JNIEXPORT jboolean JNICALL Java_awtk_TEdit_edit_1t_1get_1prop_1open_1im_1when_1f
   return (jboolean)(obj->open_im_when_focused);
 }
 
+JNIEXPORT jboolean JNICALL Java_awtk_TEdit_edit_1t_1get_1prop_1close_1im_1when_1blured(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  edit_t* obj = (edit_t*)jobj;
+
+  return (jboolean)(obj->close_im_when_blured);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TEdit_edit_1t_1get_1prop_1top_1margin(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
   edit_t* obj = (edit_t*)jobj;
 
@@ -8073,6 +8188,12 @@ JNIEXPORT jdouble JNICALL Java_awtk_TEdit_edit_1t_1get_1prop_1step(JNIEnv* env, 
   edit_t* obj = (edit_t*)jobj;
 
   return (jdouble)(obj->step);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TEdit_edit_1t_1get_1prop_1cancelable(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  edit_t* obj = (edit_t*)jobj;
+
+  return (jboolean)(obj->cancelable);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TDragger_dragger_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
@@ -8541,22 +8662,6 @@ JNIEXPORT jstring JNICALL Java_awtk_TTimeClock_time_1clock_1t_1get_1prop_1second
   return (*env)->NewStringUTF(env, obj->second_anchor_y);
 }
 
-JNIEXPORT jlong JNICALL Java_awtk_TColumn_column_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
-  widget_t* ret;
-  widget_t* parent = (widget_t*)jparent;
-  ret = (widget_t*)column_create(parent, x, y, w, h);
-
-  return (jlong)(ret);
-}
-
-JNIEXPORT jlong JNICALL Java_awtk_TColumn_column_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
-  widget_t* ret;
-  widget_t* widget = (widget_t*)jwidget;
-  ret = (widget_t*)column_cast(widget);
-
-  return (jlong)(ret);
-}
-
 JNIEXPORT jlong JNICALL Java_awtk_TTextSelector_text_1selector_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
   widget_t* ret;
   widget_t* parent = (widget_t*)jparent;
@@ -8683,6 +8788,22 @@ JNIEXPORT jstring JNICALL Java_awtk_TTextSelector_text_1selector_1t_1get_1prop_1
   text_selector_t* obj = (text_selector_t*)jobj;
 
   return (*env)->NewStringUTF(env, obj->options);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TColumn_column_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
+  widget_t* ret;
+  widget_t* parent = (widget_t*)jparent;
+  ret = (widget_t*)column_create(parent, x, y, w, h);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TColumn_column_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  widget_t* ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (widget_t*)column_cast(widget);
+
+  return (jlong)(ret);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TSwitch_switch_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
@@ -9513,6 +9634,14 @@ JNIEXPORT jint JNICALL Java_awtk_TButton_button_1set_1repeat(JNIEnv* env,  jclas
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TButton_button_1set_1long_1press_1time(JNIEnv* env,  jclass ajc, jlong jwidget, jint long_press_time) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)button_set_long_press_time(widget, long_press_time);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TButton_button_1set_1enable_1long_1press(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean enable_long_press) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
@@ -9531,6 +9660,12 @@ JNIEXPORT jboolean JNICALL Java_awtk_TButton_button_1t_1get_1prop_1enable_1long_
   button_t* obj = (button_t*)jobj;
 
   return (jboolean)(obj->enable_long_press);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TButton_button_1t_1get_1prop_1long_1press_1time(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  button_t* obj = (button_t*)jobj;
+
+  return (jint)(obj->long_press_time);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TButtonGroup_button_1group_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
@@ -9767,6 +9902,22 @@ JNIEXPORT jint JNICALL Java_awtk_TRichText_rich_1text_1t_1get_1prop_1margin(JNIE
   return (jint)(obj->margin);
 }
 
+JNIEXPORT jlong JNICALL Java_awtk_TRichTextView_rich_1text_1view_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
+  widget_t* ret;
+  widget_t* parent = (widget_t*)jparent;
+  ret = (widget_t*)rich_text_view_create(parent, x, y, w, h);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TRichTextView_rich_1text_1view_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  widget_t* ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (widget_t*)rich_text_view_cast(widget);
+
+  return (jlong)(ret);
+}
+
 JNIEXPORT jlong JNICALL Java_awtk_TPointerEvent_pointer_1event_1cast(JNIEnv* env,  jclass ajc, jlong jevent) { /*func*/
   pointer_event_t* ret;
   event_t* event = (event_t*)jevent;
@@ -9827,22 +9978,6 @@ JNIEXPORT jboolean JNICALL Java_awtk_TPointerEvent_pointer_1event_1t_1get_1prop_
   pointer_event_t* obj = (pointer_event_t*)jobj;
 
   return (jboolean)(obj->shift);
-}
-
-JNIEXPORT jlong JNICALL Java_awtk_TRichTextView_rich_1text_1view_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
-  widget_t* ret;
-  widget_t* parent = (widget_t*)jparent;
-  ret = (widget_t*)rich_text_view_create(parent, x, y, w, h);
-
-  return (jlong)(ret);
-}
-
-JNIEXPORT jlong JNICALL Java_awtk_TRichTextView_rich_1text_1view_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
-  widget_t* ret;
-  widget_t* widget = (widget_t*)jwidget;
-  ret = (widget_t*)rich_text_view_cast(widget);
-
-  return (jlong)(ret);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TProgressCircle_progress_1circle_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
@@ -10079,6 +10214,14 @@ JNIEXPORT jint JNICALL Java_awtk_TMledit_mledit_1set_1readonly(JNIEnv* env,  jcl
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TMledit_mledit_1set_1cancelable(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean cancelable) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)mledit_set_cancelable(widget, cancelable);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TMledit_mledit_1set_1focus(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean focus) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
@@ -10221,6 +10364,12 @@ JNIEXPORT jint JNICALL Java_awtk_TMledit_mledit_1t_1get_1prop_1scroll_1line(JNIE
   mledit_t* obj = (mledit_t*)jobj;
 
   return (jint)(obj->scroll_line);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TMledit_mledit_1t_1get_1prop_1cancelable(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  mledit_t* obj = (mledit_t*)jobj;
+
+  return (jboolean)(obj->cancelable);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TLineNumber_line_1number_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
@@ -11154,6 +11303,50 @@ JNIEXPORT jlong JNICALL Java_awtk_TWindowEvent_window_1event_1t_1get_1prop_1wind
   return (jlong)(obj->window);
 }
 
+JNIEXPORT jlong JNICALL Java_awtk_TMultiGestureEvent_multi_1gesture_1event_1cast(JNIEnv* env,  jclass ajc, jlong jevent) { /*func*/
+  multi_gesture_event_t* ret;
+  event_t* event = (event_t*)jevent;
+  ret = (multi_gesture_event_t*)multi_gesture_event_cast(event);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TMultiGestureEvent_multi_1gesture_1event_1t_1get_1prop_1touch_1id(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  multi_gesture_event_t* obj = (multi_gesture_event_t*)jobj;
+
+  return (jlong)(obj->touch_id);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TMultiGestureEvent_multi_1gesture_1event_1t_1get_1prop_1x(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  multi_gesture_event_t* obj = (multi_gesture_event_t*)jobj;
+
+  return (jint)(obj->x);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TMultiGestureEvent_multi_1gesture_1event_1t_1get_1prop_1y(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  multi_gesture_event_t* obj = (multi_gesture_event_t*)jobj;
+
+  return (jint)(obj->y);
+}
+
+JNIEXPORT jdouble JNICALL Java_awtk_TMultiGestureEvent_multi_1gesture_1event_1t_1get_1prop_1rotation(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  multi_gesture_event_t* obj = (multi_gesture_event_t*)jobj;
+
+  return (jdouble)(obj->rotation);
+}
+
+JNIEXPORT jdouble JNICALL Java_awtk_TMultiGestureEvent_multi_1gesture_1event_1t_1get_1prop_1distance(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  multi_gesture_event_t* obj = (multi_gesture_event_t*)jobj;
+
+  return (jdouble)(obj->distance);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TMultiGestureEvent_multi_1gesture_1event_1t_1get_1prop_1fingers(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  multi_gesture_event_t* obj = (multi_gesture_event_t*)jobj;
+
+  return (jint)(obj->fingers);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TImageBase_image_1base_1set_1image(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jname) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
@@ -12009,12 +12202,26 @@ JNIEXPORT jlong JNICALL Java_awtk_TOverlay_overlay_1create(JNIEnv* env,  jclass 
   return (jlong)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TOverlay_overlay_1set_1click_1through(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean click_through) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)overlay_set_click_through(widget, click_through);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jlong JNICALL Java_awtk_TOverlay_overlay_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
   widget_t* ret;
   widget_t* widget = (widget_t*)jwidget;
   ret = (widget_t*)overlay_cast(widget);
 
   return (jlong)(ret);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TOverlay_overlay_1t_1get_1prop_1click_1through(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  overlay_t* obj = (overlay_t*)jobj;
+
+  return (jboolean)(obj->click_through);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TPopup_popup_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/

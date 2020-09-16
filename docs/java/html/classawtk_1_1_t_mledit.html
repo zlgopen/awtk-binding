@@ -87,6 +87,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:af9bc23415672b5a931b1778089e8d8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0722e464223c03cf0cd6f417368c49b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_mledit.html#a0722e464223c03cf0cd6f417368c49b1">setReadonly</a> (boolean readonly)</td></tr>
 <tr class="separator:a0722e464223c03cf0cd6f417368c49b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb544fc3c958938cba691fd9e3c4d599"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_mledit.html#adb544fc3c958938cba691fd9e3c4d599">setCancelable</a> (boolean cancelable)</td></tr>
+<tr class="separator:adb544fc3c958938cba691fd9e3c4d599"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2e887dcb8bcc5953a13a39792b6c790"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_mledit.html#ad2e887dcb8bcc5953a13a39792b6c790">setFocus</a> (boolean focus)</td></tr>
 <tr class="separator:ad2e887dcb8bcc5953a13a39792b6c790"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86b65665ba4365e879ab242f106e3b42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_mledit.html#a86b65665ba4365e879ab242f106e3b42">setWrapWord</a> (boolean wrap_word)</td></tr>
@@ -125,6 +127,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ab92660972ff26af31b416ead9d33159f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a557a575e40b2724fb75a56d924e0d310"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_mledit.html#a557a575e40b2724fb75a56d924e0d310">getScrollLine</a> ()</td></tr>
 <tr class="separator:a557a575e40b2724fb75a56d924e0d310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9df9d525ac9df9341b2bf1cbfc66250c"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_mledit.html#a9df9d525ac9df9341b2bf1cbfc66250c">getCancelable</a> ()</td></tr>
+<tr class="separator:a9df9d525ac9df9341b2bf1cbfc66250c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -143,7 +147,7 @@ Public 成员函数</h2></td></tr>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>更多用法请参考：[mledit.xml]( </p>
 </blockquote>
-<p><a href="https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/mledit.xml">https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/mledit.xml</a>)</p>
+<p><a href="https://github.com/zlgopen/awtk/blob/master/design/default/ui/mledit.xml">https://github.com/zlgopen/awtk/blob/master/design/default/ui/mledit.xml</a>)</p>
 <p>在c代码中使用函数mledit_create创建多行编辑器控件。如：</p>
 <blockquote class="doxtable">
 <p>完整示例请参考：[mledit demo]( </p>
@@ -343,6 +347,38 @@ Public 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>下边距。 </p>
+
+</div>
+</div>
+<a id="a9df9d525ac9df9341b2bf1cbfc66250c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9df9d525ac9df9341b2bf1cbfc66250c">&#9670;&nbsp;</a></span>getCancelable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean awtk.TMledit.getCancelable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>是否支持撤销编辑。如果为TRUE，在失去焦点之前可以撤销所有修改(恢复获得焦点之前的内容)。</p>
+<blockquote class="doxtable">
+<ul>
+<li>1.一般配合keyboard的"cancel"按钮使用。</li>
+<li>2.为TRUE时，如果内容有变化，会设置编辑器的状态为changed，所以此时编辑器需要支持changed状态的style。 </li>
+</ul>
+</blockquote>
 
 </div>
 </div>
@@ -603,6 +639,40 @@ Public 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>是否自动折行。 </p>
+
+</div>
+</div>
+<a id="adb544fc3c958938cba691fd9e3c4d599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb544fc3c958938cba691fd9e3c4d599">&#9670;&nbsp;</a></span>setCancelable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TMledit.setCancelable </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>cancelable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置编辑器是否为可撤销修改。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cancelable</td><td>是否为可撤销修。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>

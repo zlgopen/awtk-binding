@@ -8,6 +8,7 @@ class TObject;
 class TEmitter;
 class TEvent;
 class TWidget;
+class TCanvas;
 class TWindow;
 class TAssetInfo;
 class TNativeWindow;
@@ -1551,95 +1552,6 @@ public:
 
 
 /**
- * 控件风格。
- *
- *widget从style对象中，获取诸如字体、颜色和图片相关的参数，根据这些参数来绘制界面。
- *
- *
- *属性名称的请参考[style\_id](style_id_t.md)
- *
- */
-class TStyle { 
-public:
-  //nativeObj is public for internal use only.
-  style_t* nativeObj;
-
-  TStyle(style_t* nativeObj) {
-    this->nativeObj = nativeObj;
-  }
-
-  TStyle(const style_t* nativeObj) {
-    this->nativeObj = (style_t*)nativeObj;
-  }
-
-  static TStyle Cast(style_t* nativeObj) {
-    return TStyle(nativeObj);
-  }
-
-  static TStyle Cast(const style_t* nativeObj) {
-    return TStyle((style_t*)nativeObj);
-  }
-
-
-  /**
-   * widget状态改变时，通知style更新数据。
-   * 
-   * @param widget 控件对象。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t NotifyWidgetStateChanged(TWidget& widget) ;
-
-  /**
-   * 检查style对象是否有效
-   * 
-   *
-   * @return 返回是否有效。
-   */
-  bool IsValid() ;
-
-  /**
-   * 获取指定name的整数格式的值。
-   * 
-   * @param name 属性名。
-   * @param defval 缺省值。
-   *
-   * @return 返回整数格式的值。
-   */
-  int32_t GetInt(const char* name, int32_t defval) ;
-
-  /**
-   * 获取指定name的字符串格式的值。
-   * 
-   * @param name 属性名。
-   * @param defval 缺省值。
-   *
-   * @return 返回字符串格式的值。
-   */
-  const char* GetStr(const char* name, const char* defval) ;
-
-  /**
-   * 设置指定状态的指定属性的值(仅仅对mutable的style有效)。
-   * 
-   * @param state 状态。
-   * @param name 属性名。
-   * @param value 值。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t Set(const char* state, const char* name, TValue& value) ;
-
-  /**
-   * 检查style是否是mutable的。
-   * 
-   *
-   * @return 返回TRUE表示是，否则表示不是。
-   */
-  bool IsMutable() ;
-};
-
-
-/**
  * 资源管理器。
  *这里的资源管理器并非Windows下的文件浏览器，而是负责对各种资源，比如字体、主题、图片、界面数据、字符串和其它数据的进行集中管理的组件。引入资源管理器的目的有以下几个：
  *
@@ -1728,6 +1640,95 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t Unref(TAssetInfo& info) ;
+};
+
+
+/**
+ * 控件风格。
+ *
+ *widget从style对象中，获取诸如字体、颜色和图片相关的参数，根据这些参数来绘制界面。
+ *
+ *
+ *属性名称的请参考[style\_id](style_id_t.md)
+ *
+ */
+class TStyle { 
+public:
+  //nativeObj is public for internal use only.
+  style_t* nativeObj;
+
+  TStyle(style_t* nativeObj) {
+    this->nativeObj = nativeObj;
+  }
+
+  TStyle(const style_t* nativeObj) {
+    this->nativeObj = (style_t*)nativeObj;
+  }
+
+  static TStyle Cast(style_t* nativeObj) {
+    return TStyle(nativeObj);
+  }
+
+  static TStyle Cast(const style_t* nativeObj) {
+    return TStyle((style_t*)nativeObj);
+  }
+
+
+  /**
+   * widget状态改变时，通知style更新数据。
+   * 
+   * @param widget 控件对象。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t NotifyWidgetStateChanged(TWidget& widget) ;
+
+  /**
+   * 检查style对象是否有效
+   * 
+   *
+   * @return 返回是否有效。
+   */
+  bool IsValid() ;
+
+  /**
+   * 获取指定name的整数格式的值。
+   * 
+   * @param name 属性名。
+   * @param defval 缺省值。
+   *
+   * @return 返回整数格式的值。
+   */
+  int32_t GetInt(const char* name, int32_t defval) ;
+
+  /**
+   * 获取指定name的字符串格式的值。
+   * 
+   * @param name 属性名。
+   * @param defval 缺省值。
+   *
+   * @return 返回字符串格式的值。
+   */
+  const char* GetStr(const char* name, const char* defval) ;
+
+  /**
+   * 设置指定状态的指定属性的值(仅仅对mutable的style有效)。
+   * 
+   * @param state 状态。
+   * @param name 属性名。
+   * @param value 值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Set(const char* state, const char* name, TValue& value) ;
+
+  /**
+   * 检查style是否是mutable的。
+   * 
+   *
+   * @return 返回TRUE表示是，否则表示不是。
+   */
+  bool IsMutable() ;
 };
 
 
@@ -2558,7 +2559,7 @@ public:
   ret_t AddValue(int32_t delta) ;
 
   /**
-   * 启用指定的主题。
+   * 启用指定的style。
    * 
    * @param style style的名称。
    *
@@ -2598,6 +2599,18 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t SetChildTextWithDouble(const char* name, const char* format, double value) ;
+
+  /**
+   * 用一个整数去设置子控件的文本。
+   *只是对widget\_set\_prop的包装，文本的意义由子类控件决定。
+   * 
+   * @param name 子控件的名称。
+   * @param format 格式字符串(如："%d")。
+   * @param value 值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetChildTextWithInt(const char* name, const char* format, int value) ;
 
   /**
    * 获取翻译之后的文本，然后调用widget_set_text。
@@ -3056,6 +3069,55 @@ public:
   bool IsWindow() ;
 
   /**
+   * 检查控件是否是system bar类型。
+   * 
+   *
+   * @return 返回FALSE表示不是，否则表示是。
+   */
+  bool IsSystemBar() ;
+
+  /**
+   * 检查控件是否是普通窗口类型。
+   * 
+   *
+   * @return 返回FALSE表示不是，否则表示是。
+   */
+  bool IsNormalWindow() ;
+
+  /**
+   * 检查控件是否是对话框类型。
+   * 
+   *
+   * @return 返回FALSE表示不是，否则表示是。
+   */
+  bool IsDialog() ;
+
+  /**
+   * 检查控件是否是弹出窗口类型。
+   * 
+   *
+   * @return 返回FALSE表示不是，否则表示是。
+   */
+  bool IsPopup() ;
+
+  /**
+   * 检查控件弹出窗口控件是否已经打开了（而非挂起状态）。
+   * 
+   *
+   * @return 返回FALSE表示不是，否则表示是。
+   */
+  bool IsOpenedPopup() ;
+
+  /**
+   * widget_set_prop_bool(group, WIDGET_PROP_IS_KEYBOARD, TRUE);
+   *```
+   * 
+   *
+   * @return 返回FALSE表示不是，否则表示是。
+   */
+  bool IsKeyboard() ;
+
+  /**
    * 判断当前控件是否是设计窗口。
    * 
    *
@@ -3150,15 +3212,6 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t Unref() ;
-
-  /**
-   * widget_set_prop_bool(group, WIDGET_PROP_IS_KEYBOARD, TRUE);
-   *```
-   * 
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t IsKeyboard() ;
 
   /**
    * 根据控件的style绘制边框矩形。
@@ -3265,46 +3318,6 @@ public:
   const char* GetStateForStyle(bool active, bool checked) ;
 
   /**
-   * 检查控件是否是system bar类型。
-   * 
-   *
-   * @return 返回FALSE表示不是，否则表示是。
-   */
-  bool IsSystemBar() ;
-
-  /**
-   * 检查控件是否是普通窗口类型。
-   * 
-   *
-   * @return 返回FALSE表示不是，否则表示是。
-   */
-  bool IsNormalWindow() ;
-
-  /**
-   * 检查控件是否是对话框类型。
-   * 
-   *
-   * @return 返回FALSE表示不是，否则表示是。
-   */
-  bool IsDialog() ;
-
-  /**
-   * 检查控件是否是弹出窗口类型。
-   * 
-   *
-   * @return 返回FALSE表示不是，否则表示是。
-   */
-  bool IsPopup() ;
-
-  /**
-   * 检查控件弹出窗口控件是否已经打开了（而非挂起状态）。
-   * 
-   *
-   * @return 返回FALSE表示不是，否则表示是。
-   */
-  bool IsOpenedPopup() ;
-
-  /**
    * 布局当前控件及子控件。
    * 
    *
@@ -3344,6 +3357,9 @@ public:
 
   /**
    * 设置整数类型的style。
+   *
+   *> * [state 的取值](https://github.com/zlgopen/awtk/blob/master/docs/manual/widget_state_t.md)
+   *> * [name 的取值](https://github.com/zlgopen/awtk/blob/master/docs/theme.md)
    * 
    * @param state_and_name 状态和名字，用英文的冒号分隔。
    * @param value 值。
@@ -3354,6 +3370,9 @@ public:
 
   /**
    * 设置字符串类型的style。
+   *
+   *> * [state 的取值](https://github.com/zlgopen/awtk/blob/master/docs/manual/widget_state_t.md)
+   *> * [name 的取值](https://github.com/zlgopen/awtk/blob/master/docs/theme.md)
    * 
    * @param state_and_name 状态和名字，用英文的冒号分隔。
    * @param value 值。
@@ -3363,10 +3382,11 @@ public:
   ret_t SetStyleStr(const char* state_and_name, const char* value) ;
 
   /**
-   * 设置颜色类型的style。
+   * widget_set_style_color(label, "style:normal:bg_color", 0xFF332211);
+   *```
    * 
    * @param state_and_name 状态和名字，用英文的冒号分隔。
-   * @param value 值。
+   * @param value 值。颜色值一般用十六进制表示，每两个数字表示一个颜色通道，从高位到低位，依次是ABGR。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -4085,6 +4105,18 @@ public:
   ret_t DrawImageEx(TBitmap& img, image_draw_type_t draw_type, TRect& dst) ;
 
   /**
+   * 绘制图片。
+   * 
+   * @param img 图片对象。
+   * @param draw_type 绘制类型。
+   * @param src 源区域。
+   * @param dst 目的区域。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t DrawImageEx2(TBitmap& img, image_draw_type_t draw_type, TRect& src, TRect& dst) ;
+
+  /**
    * 获取vgcanvas对象。
    * 
    *
@@ -4472,7 +4504,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[guage.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/guage.xml)
+ *[guage.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/guage.xml)
  *
  *在c代码中使用函数guage\_create创建表盘控件。如：
  *
@@ -4489,7 +4521,7 @@ public:
  *
  *> 更多用法请参考：
  *[theme
- *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
+ *default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml)
  *
  */
 class TGuage : public TWidget { 
@@ -4730,7 +4762,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[tab control](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
+ *[tab control](https://github.com/zlgopen/awtk/blob/master/design/default/ui/)
  *
  */
 class TTabControl : public TWidget { 
@@ -4816,7 +4848,7 @@ public:
  *标签按钮一般放在标签按钮分组中，布局由标签按钮分组控件决定，不需要指定自己的布局参数和坐标。
  *
  *> 更多用法请参考：
- *[tab control](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
+ *[tab control](https://github.com/zlgopen/awtk/blob/master/design/default/ui/)
  *
  *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
  *
@@ -4953,7 +4985,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[tab control](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
+ *[tab control](https://github.com/zlgopen/awtk/blob/master/design/default/ui/)
  *
  *可用通过style来设置控件的显示风格，如颜色等等。如：
  *
@@ -5052,7 +5084,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[basic](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/basic.xml)
+ *[basic](https://github.com/zlgopen/awtk/blob/master/design/default/ui/basic.xml)
  *
  *在c代码中使用函数slider\_create创建滑块控件。如：
  *
@@ -5072,7 +5104,7 @@ public:
  *
  *> 更多用法请参考：
  *[theme
- *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L179)
+ *default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L179)
  *
  */
 class TSlider : public TWidget { 
@@ -5307,7 +5339,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[basic demo](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/basic.xml)
+ *[basic demo](https://github.com/zlgopen/awtk/blob/master/design/default/ui/basic.xml)
  *
  *在c代码中使用函数progress\_bar\_create创建进度条控件。如：
  *
@@ -5325,7 +5357,7 @@ public:
  *
  *> 更多用法请参考：
  *[theme
- *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L183)
+ *default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L183)
  *
  */
 class TProgressBar : public TWidget { 
@@ -5461,7 +5493,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[tab control](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
+ *[tab control](https://github.com/zlgopen/awtk/blob/master/design/default/ui/)
  *
  */
 class TPages : public TWidget { 
@@ -5544,7 +5576,7 @@ public:
  *```
  *
  *> 更多用法请参考：[label.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/label.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/label.xml)
  *
  *在c代码中使用函数label\_create创建文本控件。如：
  *
@@ -5564,7 +5596,7 @@ public:
  *
  *> 更多用法请参考：
  *[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L144)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L144)
  *
  */
 class TLabel : public TWidget { 
@@ -5878,7 +5910,7 @@ public:
  *> XXX：需要在min/max/step之前设置input\_type。
  *
  *>更多用法请参考：
- *[edit.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/edit.xml)
+ *[edit.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/edit.xml)
  *
  *在c代码中使用函数edit\_create创建编辑器控件。如：
  *
@@ -5902,7 +5934,7 @@ public:
  *
  *> 更多用法请参考：
  *[theme
- *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L104)
+ *default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L104)
  *
  */
 class TEdit : public TWidget { 
@@ -6019,6 +6051,15 @@ public:
   ret_t SetReadonly(bool readonly) ;
 
   /**
+   * 设置编辑器是否为可撤销修改。
+   * 
+   * @param cancelable 是否为可撤销修。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetCancelable(bool cancelable) ;
+
+  /**
    * 设置编辑器是否为自动改正。
    * 
    * @param auto_fix 自动改正。
@@ -6038,12 +6079,24 @@ public:
 
   /**
    * 设置编辑器是否在获得焦点时打开输入法。
+   *
+   *> * 设置默认焦点时，打开窗口时不弹出软键盘。
+   *> * 用键盘切换焦点时，编辑器获得焦点时不弹出软键盘。
    * 
    * @param open_im_when_focused 是否在获得焦点时打开输入法。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t SetOpenImWhenFocused(bool open_im_when_focused) ;
+
+  /**
+   * 设置编辑器是否在失去焦点时关闭输入法。
+   * 
+   * @param close_im_when_blured 是否是否在失去焦点时关闭输入法。在失去焦点时关闭输入法。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetCloseImWhenBlured(bool close_im_when_blured) ;
 
   /**
    * 设置编辑器的输入类型。
@@ -6152,6 +6205,12 @@ public:
   bool GetOpenImWhenFocused() const;
 
   /**
+   * 是否在失去焦点时关闭输入法(默认是)。
+   *
+   */
+  bool GetCloseImWhenBlured() const;
+
+  /**
    * 上边距。
    *
    */
@@ -6228,6 +6287,15 @@ public:
    *
    */
   double GetStep() const;
+
+  /**
+   * 是否支持撤销编辑。如果为TRUE，在失去焦点之前可以撤销所有修改(恢复获得焦点之前的内容)。
+   *
+   *> * 1.一般配合keyboard的"cancel"按钮使用。
+   *> * 2.为TRUE时，如果内容有变化，会设置编辑器的状态为changed，所以此时编辑器需要支持changed状态的style。
+   *
+   */
+  bool GetCancelable() const;
 };
 
 
@@ -6325,7 +6393,7 @@ public:
  *```
  *
  *> 更多用法请参考：[digit\_clock.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/digit_clock.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/digit_clock.xml)
  *
  *在c代码中使用函数digit\_clock\_create创建数字时钟控件。如：
  *
@@ -6342,7 +6410,7 @@ public:
  *```
  *
  *> 更多用法请参考：[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L138)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L138)
  *
  */
 class TDigitClock : public TWidget { 
@@ -6856,7 +6924,7 @@ public:
  *```
  *
  *> 更多用法请参考：[time\_clock.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/time_clock.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/time_clock.xml)
  *
  *在c代码中使用函数time\_clock\_create创建模拟时钟控件。如：
  *
@@ -7097,75 +7165,6 @@ public:
 
 
 /**
- * column。一个简单的容器控件，垂直排列其子控件。
- *
- *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
- *子控件的布局可用layout\_children属性指定。
- *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
- *
- *column\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于column\_t控件。
- *
- *在xml中使用"column"标签创建column。如：
- *
- *```xml
- *<column x="0" y="0" w="100%" h="100%" children_layout="default(c=1,r=0)">
- *<button name="open:basic" text="Basic"/>
- *<button name="open:button" text="Buttons"/>
- *<button name="open:edit" text="Edits"/>
- *<button name="open:keyboard" text="KeyBoard"/>
- *</column>
- *```
- *
- *可用通过style来设置控件的显示风格，如背景颜色等。如：
- *
- *```xml
- *<style name="default" border_color="#a0a0a0">
- *<normal     bg_color="#f0f0f0" />
- *</style>
- *```
- *
- */
-class TColumn : public TWidget { 
-public:
-  TColumn(widget_t* nativeObj) : TWidget(nativeObj) {
-  }
-
-  TColumn(const column_t* nativeObj) : TWidget((widget_t*)nativeObj) {
-  }
-
-  static TColumn Cast(widget_t* nativeObj) {
-    return TColumn(nativeObj);
-  }
-
-  static TColumn Cast(const widget_t* nativeObj) {
-    return TColumn((widget_t*)nativeObj);
-  }
-
-  static TColumn Cast(TWidget& obj) {
-    return TColumn(obj.nativeObj);
-  }
-
-  static TColumn Cast(const TWidget& obj) {
-    return TColumn(obj.nativeObj);
-  }
-
-
-  /**
-   * 创建column对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @return 对象。
-   */
-  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
-};
-
-
-/**
  * 文本选择器控件，通常用于选择日期和时间等。
  *
  *> XXX: 目前需要先设置options和visible_nr，再设置其它参数(在XML中也需要按此顺序)。
@@ -7179,7 +7178,7 @@ public:
  *```
  *
  *> 更多用法请参考：[text\_selector.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/text_selector.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/text_selector.xml)
  *
  *在c代码中使用函数text\_selector\_create创建文本选择器控件。如：
  *
@@ -7196,7 +7195,7 @@ public:
  *```
  *
  *> 更多用法请参考：[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L443)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L443)
  *
  */
 class TTextSelector : public TWidget { 
@@ -7358,6 +7357,75 @@ public:
 
 
 /**
+ * column。一个简单的容器控件，垂直排列其子控件。
+ *
+ *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
+ *子控件的布局可用layout\_children属性指定。
+ *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
+ *
+ *column\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于column\_t控件。
+ *
+ *在xml中使用"column"标签创建column。如：
+ *
+ *```xml
+ *<column x="0" y="0" w="100%" h="100%" children_layout="default(c=1,r=0)">
+ *<button name="open:basic" text="Basic"/>
+ *<button name="open:button" text="Buttons"/>
+ *<button name="open:edit" text="Edits"/>
+ *<button name="open:keyboard" text="KeyBoard"/>
+ *</column>
+ *```
+ *
+ *可用通过style来设置控件的显示风格，如背景颜色等。如：
+ *
+ *```xml
+ *<style name="default" border_color="#a0a0a0">
+ *<normal     bg_color="#f0f0f0" />
+ *</style>
+ *```
+ *
+ */
+class TColumn : public TWidget { 
+public:
+  TColumn(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TColumn(const column_t* nativeObj) : TWidget((widget_t*)nativeObj) {
+  }
+
+  static TColumn Cast(widget_t* nativeObj) {
+    return TColumn(nativeObj);
+  }
+
+  static TColumn Cast(const widget_t* nativeObj) {
+    return TColumn((widget_t*)nativeObj);
+  }
+
+  static TColumn Cast(TWidget& obj) {
+    return TColumn(obj.nativeObj);
+  }
+
+  static TColumn Cast(const TWidget& obj) {
+    return TColumn(obj.nativeObj);
+  }
+
+
+  /**
+   * 创建column对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @return 对象。
+   */
+  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
+};
+
+
+/**
  * 开关控件。
  *
  *switch\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于switch\_t控件。
@@ -7369,7 +7437,7 @@ public:
  *```
  *
  *> 更多用法请参考：[switch.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/switch.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/switch.xml)
  *
  *在c代码中使用函数switch\_create创建开关控件。如：
  *
@@ -7386,7 +7454,7 @@ public:
  *```
  *
  *> 更多用法请参考：[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L452)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L452)
  *
  */
 class TSwitch : public TWidget { 
@@ -7466,7 +7534,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[color_tile](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/color_picker_rgb.xml)
+ *[color_tile](https://github.com/zlgopen/awtk/blob/master/design/default/ui/color_picker_rgb.xml)
  *
  *在c代码中使用函数color_tile\_create创建色块控件。如：
  *
@@ -7620,7 +7688,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[button.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/basic.xml)
+ *[button.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/basic.xml)
  *
  *在c代码中使用函数check\_button\_create创建多选按钮控件。如：
  *
@@ -7646,7 +7714,7 @@ public:
  *
  *> 更多用法请参考：
  *[theme
- *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L227)
+ *default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L227)
  *
  */
 class TCheckButton : public TWidget { 
@@ -7738,7 +7806,7 @@ public:
  *```
  *
  *> 更多用法请参考：[slide_view.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/slide_view.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/slide_view.xml)
  *
  *在c代码中使用函数slide\_view\_create创建滑动视图控件。如：
  *
@@ -7758,7 +7826,7 @@ public:
  *> 如果希望背景图片跟随滚动，请将背景图片设置到页面上，否则设置到slide\_view上。
  *
  *> 更多用法请参考：[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L458)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L458)
  *
  */
 class TSlideView : public TWidget { 
@@ -7901,7 +7969,7 @@ public:
  *```
  *
  *> 更多用法请参考：[slide\_view.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/slide_view.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/slide_view.xml)
  *
  *在c代码中使用函数slide\_indicator\_create创建指示器控件。如：
  *
@@ -7913,7 +7981,7 @@ public:
  *```
  *
  *> 更多用法请参考：[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L350)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L350)
  *
  */
 class TSlideIndicator : public TWidget { 
@@ -8144,7 +8212,7 @@ public:
  *```
  *
  *> 更多用法请参考：[slide_menu.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/slide_menu.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/slide_menu.xml)
  *
  *在c代码中使用函数slide\_menu\_create创建左右滑动菜单控件。如：
  *
@@ -8167,7 +8235,7 @@ public:
  *```
  *
  *> 更多用法请参考：[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L493)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L493)
  *
  */
 class TSlideMenu : public TWidget { 
@@ -8279,7 +8347,7 @@ public:
  *> 滚动视图一般作为列表视图的子控件使用。
  *
  *> 更多用法请参考：[list\_view\_m.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/list_view_m.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)
  *
  *在c代码中使用函数scroll\_view\_create创建列表视图控件。如：
  *
@@ -8472,7 +8540,7 @@ public:
  *```
  *
  *> 更多用法请参考：[list\_view\_m.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/list_view_m.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)
  *
  *在c代码中使用函数scroll\_bar\_create创建列表项控件。如：
  *
@@ -8486,7 +8554,7 @@ public:
  *```
  *
  *> 更多用法请参考：[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L350)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L350)
  *
  */
 class TScrollBar : public TWidget { 
@@ -8653,7 +8721,7 @@ public:
  *如果不需要滚动，可以用view控件配置适当的layout参数作为列表控件。
  *
  *列表视图中的列表项可以固定高度，也可以使用不同高度。请参考[变高列表项](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/list_view_vh.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_vh.xml)
  *
  *列表视图控件的中可以有滚动条，也可以没有滚动条。
  *可以使用移动设备风格的滚动条，也可以使用桌面风格的滚动条。
@@ -8680,7 +8748,7 @@ public:
  *
  *
  *> 更多用法请参考：[list\_view\_m.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/list_view_m.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)
  *
  *在c代码中使用函数list\_view\_create创建列表视图控件。如：
  *
@@ -8804,7 +8872,7 @@ public:
  *
  *
  *> 更多用法请参考：[list\_view\_h.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/list_view_h.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_h.xml)
  *
  *在c代码中使用函数list\_view\_h\_create创建水平列表视图控件。如：
  *
@@ -8909,7 +8977,7 @@ public:
  *```
  *
  *> 更多用法请参考：[list\_view\_m.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/list_view_m.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)
  *
  *在c代码中使用函数list\_item\_create创建列表项控件。如：
  *
@@ -8927,7 +8995,7 @@ public:
  *```
  *
  *> 更多用法请参考：[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L372)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L372)
  *
  */
 class TListItem : public TWidget { 
@@ -8986,7 +9054,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[button.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/button.xml)
+ *[button.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/button.xml)
  *
  *在c代码中使用函数button\_create创建按钮控件。如：
  *
@@ -9009,7 +9077,7 @@ public:
  *
  *> 更多用法请参考：
  *[theme
- *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L31)
+ *default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L31)
  *
  */
 class TButton : public TWidget { 
@@ -9060,6 +9128,15 @@ public:
   ret_t SetRepeat(int32_t repeat) ;
 
   /**
+   * 设置触发长按事件的时间。
+   * 
+   * @param long_press_time 触发长按事件的时间(毫秒)。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetLongPressTime(uint32_t long_press_time) ;
+
+  /**
    * 设置是否启用长按事件。
    * 
    * @param enable_long_press 是否启用长按事件。
@@ -9084,6 +9161,12 @@ public:
    *
    */
   bool GetEnableLongPress() const;
+
+  /**
+   * 触发长按事件的时间(ms)
+   *
+   */
+  uint32_t GetLongPressTime() const;
 };
 
 
@@ -9276,7 +9359,7 @@ public:
  *```
  *
  *> 更多用法请参考：[mledit.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/mledit.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/mledit.xml)
  *
  *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
  *
@@ -9289,7 +9372,7 @@ public:
  *
  *> 更多用法请参考：
  *[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml)
  *
  */
 class THscrollLabel : public TWidget { 
@@ -9488,7 +9571,7 @@ public:
  *>
  *
  *> 更多用法请参考：
- *[rich_text.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/rich_text.xml)
+ *[rich_text.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/rich_text.xml)
  *
  *在c代码中使用函数rich\_text\_create创建图文混排控件。如：
  *
@@ -9572,6 +9655,71 @@ public:
    *
    */
   uint32_t GetMargin() const;
+};
+
+
+/**
+ * rich_text_view是一个专用容器，用来放rich text和 scroll bar，并在两者之间建立联系。
+ *
+ *rich_text_view\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于rich_text_view\_t控件。
+ *
+ *在xml中使用"rich_text_view"标签创建rich_text_view。如：
+ *
+ *```xml
+ *<rich_text_view x="0" y="10" w="100%" h="300">
+ *<rich_text line_gap="5" x="0" y="10" w="-12" h="100%" margin="10">
+ *...
+ *</rich_text>
+ *<scroll_bar_d name="bar" x="right" y="0" w="12" h="100%" value="0"/>
+ *</rich_text_view>
+ *```
+ *
+ *可用通过style来设置控件的显示风格，如背景颜色等。如：
+ *
+ *```xml
+ *<style name="default" border_color="#a0a0a0">
+ *<normal     bg_color="#f0f0f0" />
+ *</style>
+ *```
+ *
+ */
+class TRichTextView : public TWidget { 
+public:
+  TRichTextView(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TRichTextView(const rich_text_view_t* nativeObj) : TWidget((widget_t*)nativeObj) {
+  }
+
+  static TRichTextView Cast(widget_t* nativeObj) {
+    return TRichTextView(nativeObj);
+  }
+
+  static TRichTextView Cast(const widget_t* nativeObj) {
+    return TRichTextView((widget_t*)nativeObj);
+  }
+
+  static TRichTextView Cast(TWidget& obj) {
+    return TRichTextView(obj.nativeObj);
+  }
+
+  static TRichTextView Cast(const TWidget& obj) {
+    return TRichTextView(obj.nativeObj);
+  }
+
+
+  /**
+   * 创建rich_text_view对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @return 对象。
+   */
+  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
 };
 
 
@@ -9661,71 +9809,6 @@ public:
 
 
 /**
- * rich_text_view是一个专用容器，用来放rich text和 scroll bar，并在两者之间建立联系。
- *
- *rich_text_view\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于rich_text_view\_t控件。
- *
- *在xml中使用"rich_text_view"标签创建rich_text_view。如：
- *
- *```xml
- *<rich_text_view x="0" y="10" w="100%" h="300">
- *<rich_text line_gap="5" x="0" y="10" w="-12" h="100%" margin="10">
- *...
- *</rich_text>
- *<scroll_bar_d name="bar" x="right" y="0" w="12" h="100%" value="0"/>
- *</rich_text_view>
- *```
- *
- *可用通过style来设置控件的显示风格，如背景颜色等。如：
- *
- *```xml
- *<style name="default" border_color="#a0a0a0">
- *<normal     bg_color="#f0f0f0" />
- *</style>
- *```
- *
- */
-class TRichTextView : public TWidget { 
-public:
-  TRichTextView(widget_t* nativeObj) : TWidget(nativeObj) {
-  }
-
-  TRichTextView(const rich_text_view_t* nativeObj) : TWidget((widget_t*)nativeObj) {
-  }
-
-  static TRichTextView Cast(widget_t* nativeObj) {
-    return TRichTextView(nativeObj);
-  }
-
-  static TRichTextView Cast(const widget_t* nativeObj) {
-    return TRichTextView((widget_t*)nativeObj);
-  }
-
-  static TRichTextView Cast(TWidget& obj) {
-    return TRichTextView(obj.nativeObj);
-  }
-
-  static TRichTextView Cast(const TWidget& obj) {
-    return TRichTextView(obj.nativeObj);
-  }
-
-
-  /**
-   * 创建rich_text_view对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @return 对象。
-   */
-  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
-};
-
-
-/**
  * 进度圆环控件。
  *
  *progress\_circle\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于progress\_circle\_t控件。
@@ -9737,7 +9820,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[progress_circle.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/progress_circle.xml)
+ *[progress_circle.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/progress_circle.xml)
  *
  *在c代码中使用函数progress\_circle\_create创建进度圆环控件。如：
  *
@@ -9756,7 +9839,7 @@ public:
  *
  *> 更多用法请参考：
  *[theme
- *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L467)
+ *default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L467)
  *
  */
 class TProgressCircle : public TWidget { 
@@ -10042,7 +10125,7 @@ public:
  *```
  *
  *> 更多用法请参考：[mledit.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/mledit.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/mledit.xml)
  *
  *在c代码中使用函数mledit\_create创建多行编辑器控件。如：
  *
@@ -10099,6 +10182,15 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t SetReadonly(bool readonly) ;
+
+  /**
+   * 设置编辑器是否为可撤销修改。
+   * 
+   * @param cancelable 是否为可撤销修。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetCancelable(bool cancelable) ;
 
   /**
    * 设置为焦点。
@@ -10237,6 +10329,15 @@ public:
    *
    */
   uint32_t GetScrollLine() const;
+
+  /**
+   * 是否支持撤销编辑。如果为TRUE，在失去焦点之前可以撤销所有修改(恢复获得焦点之前的内容)。
+   *
+   *> * 1.一般配合keyboard的"cancel"按钮使用。
+   *> * 2.为TRUE时，如果内容有变化，会设置编辑器的状态为changed，所以此时编辑器需要支持changed状态的style。
+   *
+   */
+  bool GetCancelable() const;
 };
 
 
@@ -10256,7 +10357,7 @@ public:
  *```
  *
  *> 更多用法请参考：[mledit.xml](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/mledit.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/mledit.xml)
  *
  *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
  *
@@ -10270,7 +10371,7 @@ public:
  *
  *> 更多用法请参考：
  *[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L556)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L556)
  *
  */
 class TLineNumber : public TWidget { 
@@ -10567,7 +10668,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[image\_value](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/image_value.xml)
+ *[image\_value](https://github.com/zlgopen/awtk/blob/master/design/default/ui/image_value.xml)
  *
  *在c代码中使用函数image\_value\_create创建图片值控件。如：
  *
@@ -10723,7 +10824,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[image_animation.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/image_animation.xml)
+ *[image_animation.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/image_animation.xml)
  *
  *在c代码中使用函数image\_animation\_create创建图片动画控件。如：
  *
@@ -10976,7 +11077,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[guage.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/guage.xml)
+ *[guage.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/guage.xml)
  *
  *在c代码中使用函数guage\_pointer\_create创建仪表指针控件。如：
  *
@@ -11219,7 +11320,7 @@ public:
  *
  *完整示例请参考：
  *
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/file_chooser_for_open.xml
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/file_chooser_for_open.xml
  *
  */
 class TFileBrowserView : public TWidget { 
@@ -11411,7 +11512,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[draggable.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/draggable.xml)
+ *[draggable.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/draggable.xml)
  *
  *在c代码中使用函数draggable\_create创建按钮控件。如：
  *
@@ -11582,7 +11683,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[color\_picker](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/color_picker.xml)
+ *[color\_picker](https://github.com/zlgopen/awtk/blob/master/design/default/ui/color_picker.xml)
  *
  *其中的子控件必须按下列规则命名：
  *
@@ -11700,7 +11801,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[canvas_widget.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/vgcanvas.xml)
+ *[canvas_widget.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/vgcanvas.xml)
  *
  *在c代码中使用函数canvas\_widget\_create创建画布控件。如：
  *
@@ -11836,6 +11937,73 @@ public:
 
 
 /**
+ * 多点触摸手势事件。
+ *
+ */
+class TMultiGestureEvent : public TEvent { 
+public:
+  TMultiGestureEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  }
+
+  TMultiGestureEvent(const multi_gesture_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
+  }
+
+  static TMultiGestureEvent Cast(event_t* nativeObj) {
+    return TMultiGestureEvent(nativeObj);
+  }
+
+  static TMultiGestureEvent Cast(const event_t* nativeObj) {
+    return TMultiGestureEvent((event_t*)nativeObj);
+  }
+
+  static TMultiGestureEvent Cast(TEvent& obj) {
+    return TMultiGestureEvent(obj.nativeObj);
+  }
+
+  static TMultiGestureEvent Cast(const TEvent& obj) {
+    return TMultiGestureEvent(obj.nativeObj);
+  }
+
+
+  /**
+   * touch device id。
+   *
+   */
+  int64_t GetTouchId() const;
+
+  /**
+   * 中心点x坐标。
+   *
+   */
+  xy_t GetX() const;
+
+  /**
+   * 中心点y坐标。
+   *
+   */
+  xy_t GetY() const;
+
+  /**
+   * 旋转角度(幅度)增量。
+   *
+   */
+  float GetRotation() const;
+
+  /**
+   * 两点间的距离增量。(-1,0)表示缩小，(0-1)表示增加。
+   *
+   */
+  float GetDistance() const;
+
+  /**
+   * 本事件用到手指数。
+   *
+   */
+  uint32_t GetFingers() const;
+};
+
+
+/**
  * 图片控件基类。
  *
  *本类把图片相关控件的公共行为进行抽象，放到一起方便重用。目前已知的具体实现如下图：
@@ -11847,9 +12015,9 @@ public:
  *如果需要显示文件系统中的图片，只需将图片名称换成实际的文件名，并加上"file://"前缀即可。如：
  *
  *```
- *<image draw_type="center" image="file://./demos/assets/default/raw/images/xx/flag_CN.png" />
- *<gif image="file://./demos/assets/default/raw/images/x2/bee.gif" />
- *<svg image="file://./demos/assets/default/raw/images/svg/china.bsvg" />
+ *<image draw_type="center" image="file://./design/default/images/xx/flag_CN.png" />
+ *<gif image="file://./design/default/images/x2/bee.gif" />
+ *<svg image="file://./design/default/images/svg/china.bsvg" />
  *```
  *
  */
@@ -12369,7 +12537,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[window.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/calibration_win.xml)
+ *[window.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/calibration_win.xml)
  *
  *在c代码中使用函数calibration\_win\_create创建窗口。如：
  *
@@ -12584,7 +12752,7 @@ public:
  *
  *>更多用法请参考：
  *[gif
- *image](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/gif_image.xml)
+ *image](https://github.com/zlgopen/awtk/blob/master/design/default/ui/gif_image.xml)
  *
  *在c代码中使用函数gif\_image\_create创建GIF图片控件。如：
  *
@@ -12607,7 +12775,7 @@ public:
  *```
  *
  *> 更多用法请参考：[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml)
  *
  */
 class TGifImage : public TImageBase { 
@@ -12682,6 +12850,8 @@ public:
  *| tab            | tab键           |
  *| space          | 空格键          |
  *| close          | 关闭软键盘       |
+ *| clear          | 清除编辑器的内容 |
+ *| cancel         | 恢复编辑器的内容 |
  *| back           | 关闭当前窗口     |
  *| back_to_home   | 返回home窗口    |
  *| 前缀key:        | 键值           |
@@ -12739,7 +12909,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[kb_default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/kb_default.xml)
+ *[kb_default](https://github.com/zlgopen/awtk/blob/master/design/default/ui/kb_default.xml)
  *
  */
 class TKeyboard : public TWindowBase { 
@@ -12799,7 +12969,7 @@ public:
  *
  *>更多用法请参考：
  *[mutable
- *image](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/mutable_image.xml)
+ *image](https://github.com/zlgopen/awtk/blob/master/design/default/ui/mutable_image.xml)
  *
  *在c代码中使用函数mutable\_image\_create创建mutable图片控件。如：
  *
@@ -12987,7 +13157,7 @@ public:
  *```
  *
  *>
- *更多用法请参考：[window.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
+ *更多用法请参考：[window.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/)
  *
  *在c代码中使用函数window\_create创建窗口。如：
  *
@@ -13006,7 +13176,7 @@ public:
  *```
  *
  *> 更多用法请参考：[theme
- *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L0)
+ *default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L0)
  *
  */
 class TWindow : public TWindowBase { 
@@ -13123,7 +13293,7 @@ public:
  *```
  *
  *>更多用法请参考：[svg image](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/svg_image.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/svg_image.xml)
  *
  *在c代码中使用函数svg\_image\_create创建SVG图片控件。如：
  *
@@ -13144,7 +13314,7 @@ public:
  *```
  *
  *> 更多用法请参考：[theme default](
- *https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml)
+ *https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml)
  *
  */
 class TSvgImage : public TImageBase { 
@@ -13280,7 +13450,7 @@ public:
  *</popup>
  *```
  *
- *> 更多用法请参考：[combo_box.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/combo_box.xml)
+ *> 更多用法请参考：[combo_box.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/combo_box.xml)
  *
  *
  *
@@ -13346,7 +13516,7 @@ public:
  *```
  *
  *> 更多用法请参考：[theme
- *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L422)
+ *default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L422)
  *
  */
 class TComboBox : public TEdit { 
@@ -13543,7 +13713,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[image.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/images.xml)
+ *[image.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/images.xml)
  *
  *在c代码中使用函数image\_create创建图片控件。如：
  *
@@ -13574,7 +13744,7 @@ public:
  *
  *> 更多用法请参考：
  *[theme
- *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L313)
+ *default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L313)
  *
  */
 class TImage : public TImageBase { 
@@ -13650,7 +13820,7 @@ public:
  *```
  *
  *>
- *更多用法请参考：[overlay.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
+ *更多用法请参考：[overlay.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/)
  *
  *在c代码中使用函数overlay\_create创建窗口。如：
  *
@@ -13667,7 +13837,7 @@ public:
  *```
  *
  *> 更多用法请参考：[theme
- *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L0)
+ *default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L0)
  *
  */
 class TOverlay : public TWindowBase { 
@@ -13707,6 +13877,23 @@ public:
    * @return 对象。
    */
   static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
+
+  /**
+   * 设置是否启用点击穿透。
+   * 
+   * @param click_through 是否启用点击穿透。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetClickThrough(bool click_through) ;
+
+  /**
+   * 点击穿透。点击没有子控件的位置，是否穿透到底层窗口。
+   *
+   *缺省不启用。
+   *
+   */
+  bool GetClickThrough() const;
 };
 
 
@@ -13732,7 +13919,7 @@ public:
  *```
  *
  *>
- *更多用法请参考：[popup](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
+ *更多用法请参考：[popup](https://github.com/zlgopen/awtk/blob/master/design/default/ui/)
  *
  *在c代码中使用函数popup\_create创建弹出窗口。如：
  *
@@ -13752,7 +13939,7 @@ public:
  *```
  *
  *> 更多用法请参考：[theme
- *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L324)
+ *default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L324)
  *
  */
 class TPopup : public TWindowBase { 
@@ -13842,7 +14029,7 @@ public:
  *```
  *
  *>
- *更多用法请参考：[spin_box.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/spinbox.xml)
+ *更多用法请参考：[spin_box.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/spinbox.xml)
  *
  *在c代码中使用函数spin_box\_create创建spinbox控件。如：
  *
@@ -13869,7 +14056,7 @@ public:
  *```
  *
  *> 更多用法请参考：[theme
- *default](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L128)
+ *default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L128)
  *
  */
 class TSpinBox : public TEdit { 
@@ -13940,7 +14127,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[system_bar](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/system_bar.xml)
+ *[system_bar](https://github.com/zlgopen/awtk/blob/master/design/default/ui/system_bar.xml)
  *
  *在c代码中使用函数system\_bar\_create创建system\_bar窗口。如：
  *
@@ -13958,7 +14145,7 @@ public:
  *```
  *
  *> 更多用法请参考：
- *[system_bar.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/system_bar.xml)
+ *[system_bar.xml](https://github.com/zlgopen/awtk/blob/master/design/default/styles/system_bar.xml)
  *
  */
 class TSystemBar : public TWindowBase { 
@@ -14051,7 +14238,7 @@ public:
  *
  *
  *> 更多用法请参考：
- *[dialog.xml](https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/)
+ *[dialog.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/)
  *
  *> 完整C代码示例请参考：
  *
@@ -14069,7 +14256,7 @@ public:
  *
  *> 更多用法请参考：
  *[theme default]
- *(https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L324)
+ *(https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L324)
  *
  */
 class TDialog : public TWindowBase { 
