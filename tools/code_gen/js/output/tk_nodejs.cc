@@ -9448,7 +9448,7 @@ static void wrap_widget_invalidate_force(const Nan::FunctionCallbackInfo<v8::Val
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  rect_t* r = (rect_t*)jsvalue_get_pointer(ctx, argv[1], "rect_t*");
+  const rect_t* r = (const rect_t*)jsvalue_get_pointer(ctx, argv[1], "const rect_t*");
   ret = (ret_t)widget_invalidate_force(widget, r);
 
   v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
@@ -9870,7 +9870,7 @@ static void wrap_widget_stroke_border_rect(const Nan::FunctionCallbackInfo<v8::V
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
   canvas_t* c = (canvas_t*)jsvalue_get_pointer(ctx, argv[1], "canvas_t*");
-  rect_t* r = (rect_t*)jsvalue_get_pointer(ctx, argv[2], "rect_t*");
+  const rect_t* r = (const rect_t*)jsvalue_get_pointer(ctx, argv[2], "const rect_t*");
   ret = (ret_t)widget_stroke_border_rect(widget, c, r);
 
   v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
@@ -9886,7 +9886,7 @@ static void wrap_widget_fill_bg_rect(const Nan::FunctionCallbackInfo<v8::Value>&
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
   canvas_t* c = (canvas_t*)jsvalue_get_pointer(ctx, argv[1], "canvas_t*");
-  rect_t* r = (rect_t*)jsvalue_get_pointer(ctx, argv[2], "rect_t*");
+  const rect_t* r = (const rect_t*)jsvalue_get_pointer(ctx, argv[2], "const rect_t*");
   image_draw_type_t draw_type = (image_draw_type_t)jsvalue_get_int_value(ctx, argv[3]);
   ret = (ret_t)widget_fill_bg_rect(widget, c, r, draw_type);
 
@@ -9903,7 +9903,7 @@ static void wrap_widget_fill_fg_rect(const Nan::FunctionCallbackInfo<v8::Value>&
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
   canvas_t* c = (canvas_t*)jsvalue_get_pointer(ctx, argv[1], "canvas_t*");
-  rect_t* r = (rect_t*)jsvalue_get_pointer(ctx, argv[2], "rect_t*");
+  const rect_t* r = (const rect_t*)jsvalue_get_pointer(ctx, argv[2], "const rect_t*");
   image_draw_type_t draw_type = (image_draw_type_t)jsvalue_get_int_value(ctx, argv[3]);
   ret = (ret_t)widget_fill_fg_rect(widget, c, r, draw_type);
 

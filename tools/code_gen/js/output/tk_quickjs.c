@@ -11637,7 +11637,7 @@ jsvalue_t wrap_widget_invalidate_force(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  rect_t* r = (rect_t*)jsvalue_get_pointer(ctx, argv[1], "rect_t*");
+  const rect_t* r = (const rect_t*)jsvalue_get_pointer(ctx, argv[1], "const rect_t*");
   ret = (ret_t)widget_invalidate_force(widget, r);
 
   jret = jsvalue_create_int(ctx, ret);
@@ -12139,7 +12139,7 @@ jsvalue_t wrap_widget_stroke_border_rect(
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
   canvas_t* c = (canvas_t*)jsvalue_get_pointer(ctx, argv[1], "canvas_t*");
-  rect_t* r = (rect_t*)jsvalue_get_pointer(ctx, argv[2], "rect_t*");
+  const rect_t* r = (const rect_t*)jsvalue_get_pointer(ctx, argv[2], "const rect_t*");
   ret = (ret_t)widget_stroke_border_rect(widget, c, r);
 
   jret = jsvalue_create_int(ctx, ret);
@@ -12158,7 +12158,7 @@ jsvalue_t wrap_widget_fill_bg_rect(
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
   canvas_t* c = (canvas_t*)jsvalue_get_pointer(ctx, argv[1], "canvas_t*");
-  rect_t* r = (rect_t*)jsvalue_get_pointer(ctx, argv[2], "rect_t*");
+  const rect_t* r = (const rect_t*)jsvalue_get_pointer(ctx, argv[2], "const rect_t*");
   image_draw_type_t draw_type = (image_draw_type_t)jsvalue_get_int_value(ctx, argv[3]);
   ret = (ret_t)widget_fill_bg_rect(widget, c, r, draw_type);
 
@@ -12178,7 +12178,7 @@ jsvalue_t wrap_widget_fill_fg_rect(
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
   canvas_t* c = (canvas_t*)jsvalue_get_pointer(ctx, argv[1], "canvas_t*");
-  rect_t* r = (rect_t*)jsvalue_get_pointer(ctx, argv[2], "rect_t*");
+  const rect_t* r = (const rect_t*)jsvalue_get_pointer(ctx, argv[2], "const rect_t*");
   image_draw_type_t draw_type = (image_draw_type_t)jsvalue_get_int_value(ctx, argv[3]);
   ret = (ret_t)widget_fill_fg_rect(widget, c, r, draw_type);
 

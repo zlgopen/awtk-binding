@@ -5096,7 +5096,7 @@ JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1off(JNIEnv* env,  jclass ajc, j
 JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1invalidate_1force(JNIEnv* env,  jclass ajc, jlong jwidget, jlong jr) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
-  rect_t* r = (rect_t*)jr;
+  const rect_t* r = (const rect_t*)jr;
   ret = (ret_t)widget_invalidate_force(widget, r);
 
   return (jint)(ret);
@@ -5342,7 +5342,7 @@ JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1stroke_1border_1rect(JNIEnv* en
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
   canvas_t* c = (canvas_t*)jc;
-  rect_t* r = (rect_t*)jr;
+  const rect_t* r = (const rect_t*)jr;
   ret = (ret_t)widget_stroke_border_rect(widget, c, r);
 
   return (jint)(ret);
@@ -5352,7 +5352,7 @@ JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1fill_1bg_1rect(JNIEnv* env,  jc
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
   canvas_t* c = (canvas_t*)jc;
-  rect_t* r = (rect_t*)jr;
+  const rect_t* r = (const rect_t*)jr;
   ret = (ret_t)widget_fill_bg_rect(widget, c, r, draw_type);
 
   return (jint)(ret);
@@ -5362,7 +5362,7 @@ JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1fill_1fg_1rect(JNIEnv* env,  jc
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
   canvas_t* c = (canvas_t*)jc;
-  rect_t* r = (rect_t*)jr;
+  const rect_t* r = (const rect_t*)jr;
   ret = (ret_t)widget_fill_fg_rect(widget, c, r, draw_type);
 
   return (jint)(ret);

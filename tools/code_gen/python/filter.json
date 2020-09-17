@@ -8595,7 +8595,7 @@
             "desc": "控件对象。"
           },
           {
-            "type": "rect_t*",
+            "type": "const rect_t*",
             "name": "r",
             "desc": "矩形对象(widget本地坐标)。"
           }
@@ -9218,7 +9218,7 @@
             "desc": "画布对象。"
           },
           {
-            "type": "rect_t*",
+            "type": "const rect_t*",
             "name": "r",
             "desc": "矩形区域。"
           }
@@ -9246,7 +9246,7 @@
             "desc": "画布对象。"
           },
           {
-            "type": "rect_t*",
+            "type": "const rect_t*",
             "name": "r",
             "desc": "矩形区域。"
           },
@@ -9279,7 +9279,7 @@
             "desc": "画布对象。"
           },
           {
-            "type": "rect_t*",
+            "type": "const rect_t*",
             "name": "r",
             "desc": "矩形区域。"
           },

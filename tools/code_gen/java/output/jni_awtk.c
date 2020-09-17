@@ -7633,7 +7633,7 @@ int awtk_TWidget_widget_invalidate_force(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  rect_t* r = (rect_t*)jni_ctx_get_object(&ctx);
+  const rect_t* r = (const rect_t*)jni_ctx_get_object(&ctx);
   ret = (ret_t)widget_invalidate_force(widget, r);
   jni_ctx_return_int(&ctx, (int32_t)(ret));
 
@@ -7967,7 +7967,7 @@ int awtk_TWidget_widget_stroke_border_rect(Runtime *runtime, JClass *clazz) {
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
   canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  rect_t* r = (rect_t*)jni_ctx_get_object(&ctx);
+  const rect_t* r = (const rect_t*)jni_ctx_get_object(&ctx);
   ret = (ret_t)widget_stroke_border_rect(widget, c, r);
   jni_ctx_return_int(&ctx, (int32_t)(ret));
 
@@ -7980,7 +7980,7 @@ int awtk_TWidget_widget_fill_bg_rect(Runtime *runtime, JClass *clazz) {
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
   canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  rect_t* r = (rect_t*)jni_ctx_get_object(&ctx);
+  const rect_t* r = (const rect_t*)jni_ctx_get_object(&ctx);
   image_draw_type_t draw_type = (image_draw_type_t)jni_ctx_get_int(&ctx);
   ret = (ret_t)widget_fill_bg_rect(widget, c, r, draw_type);
   jni_ctx_return_int(&ctx, (int32_t)(ret));
@@ -7994,7 +7994,7 @@ int awtk_TWidget_widget_fill_fg_rect(Runtime *runtime, JClass *clazz) {
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
   canvas_t* c = (canvas_t*)jni_ctx_get_object(&ctx);
-  rect_t* r = (rect_t*)jni_ctx_get_object(&ctx);
+  const rect_t* r = (const rect_t*)jni_ctx_get_object(&ctx);
   image_draw_type_t draw_type = (image_draw_type_t)jni_ctx_get_int(&ctx);
   ret = (ret_t)widget_fill_fg_rect(widget, c, r, draw_type);
   jni_ctx_return_int(&ctx, (int32_t)(ret));

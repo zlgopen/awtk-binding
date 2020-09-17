@@ -1000,7 +1000,7 @@
  }
 
  ret_t TWidget::InvalidateForce(TRect& r)  {
-   return widget_invalidate_force(((widget_t*)(this->nativeObj)), ((rect_t*)(r.nativeObj)));
+   return widget_invalidate_force(((widget_t*)(this->nativeObj)), ((const rect_t*)(r.nativeObj)));
  }
 
  ret_t TWidget::SetPropStr(const char* name, const char* v)  {
@@ -1112,15 +1112,15 @@
  }
 
  ret_t TWidget::StrokeBorderRect(TCanvas& c, TRect& r)  {
-   return widget_stroke_border_rect(((widget_t*)(this->nativeObj)), ((canvas_t*)(c.nativeObj)), ((rect_t*)(r.nativeObj)));
+   return widget_stroke_border_rect(((widget_t*)(this->nativeObj)), ((canvas_t*)(c.nativeObj)), ((const rect_t*)(r.nativeObj)));
  }
 
  ret_t TWidget::FillBgRect(TCanvas& c, TRect& r, image_draw_type_t draw_type)  {
-   return widget_fill_bg_rect(((widget_t*)(this->nativeObj)), ((canvas_t*)(c.nativeObj)), ((rect_t*)(r.nativeObj)), draw_type);
+   return widget_fill_bg_rect(((widget_t*)(this->nativeObj)), ((canvas_t*)(c.nativeObj)), ((const rect_t*)(r.nativeObj)), draw_type);
  }
 
  ret_t TWidget::FillFgRect(TCanvas& c, TRect& r, image_draw_type_t draw_type)  {
-   return widget_fill_fg_rect(((widget_t*)(this->nativeObj)), ((canvas_t*)(c.nativeObj)), ((rect_t*)(r.nativeObj)), draw_type);
+   return widget_fill_fg_rect(((widget_t*)(this->nativeObj)), ((canvas_t*)(c.nativeObj)), ((const rect_t*)(r.nativeObj)), draw_type);
  }
 
  ret_t TWidget::DispatchToTarget(TEvent& e)  {

@@ -5828,7 +5828,7 @@ pyobject_t wrap_widget_off(pyobject_t self, pyobject_t pyargs) {
 pyobject_t wrap_widget_invalidate_force(pyobject_t self, pyobject_t pyargs) {
   ret_t ret = 0;
   widget_t* widget = NULL;
-  rect_t* r = NULL;
+  const rect_t* r = NULL;
 
   if (!PyArg_ParseTuple(pyargs, "O&O&" , &parse_voidp, &widget, &parse_voidp, &r)) {
     PyErr_SetString(PyExc_TypeError, "invalid arguments");
@@ -6210,7 +6210,7 @@ pyobject_t wrap_widget_stroke_border_rect(pyobject_t self, pyobject_t pyargs) {
   ret_t ret = 0;
   widget_t* widget = NULL;
   canvas_t* c = NULL;
-  rect_t* r = NULL;
+  const rect_t* r = NULL;
 
   if (!PyArg_ParseTuple(pyargs, "O&O&O&" , &parse_voidp, &widget, &parse_voidp, &c, &parse_voidp, &r)) {
     PyErr_SetString(PyExc_TypeError, "invalid arguments");
@@ -6225,7 +6225,7 @@ pyobject_t wrap_widget_fill_bg_rect(pyobject_t self, pyobject_t pyargs) {
   ret_t ret = 0;
   widget_t* widget = NULL;
   canvas_t* c = NULL;
-  rect_t* r = NULL;
+  const rect_t* r = NULL;
   image_draw_type_t draw_type = 0;
 
   if (!PyArg_ParseTuple(pyargs, "O&O&O&i" , &parse_voidp, &widget, &parse_voidp, &c, &parse_voidp, &r, &draw_type)) {
@@ -6241,7 +6241,7 @@ pyobject_t wrap_widget_fill_fg_rect(pyobject_t self, pyobject_t pyargs) {
   ret_t ret = 0;
   widget_t* widget = NULL;
   canvas_t* c = NULL;
-  rect_t* r = NULL;
+  const rect_t* r = NULL;
   image_draw_type_t draw_type = 0;
 
   if (!PyArg_ParseTuple(pyargs, "O&O&O&i" , &parse_voidp, &widget, &parse_voidp, &c, &parse_voidp, &r, &draw_type)) {
