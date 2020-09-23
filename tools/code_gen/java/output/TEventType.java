@@ -206,21 +206,21 @@ public enum TEventType {
   MOVE_RESIZE (EVT_MOVE_RESIZE()),
   
   /**
-   * 控件的值即将改变的事件名(event_t)。
+   * 控件的值即将改变的事件名(value_change_event_t)。
    *
    */
  
   VALUE_WILL_CHANGE (EVT_VALUE_WILL_CHANGE()),
   
   /**
-   * 控件的值改变的事件名(event_t)。
+   * 控件的值改变的事件名(value_change_event_t)。
    *
    */
  
   VALUE_CHANGED (EVT_VALUE_CHANGED()),
   
   /**
-   * 控件的值持续改变(如编辑器正在编辑)的事件名(event_t)。
+   * 控件的值持续改变(如编辑器正在编辑)的事件名(value_change_event_t)。
    *
    */
  

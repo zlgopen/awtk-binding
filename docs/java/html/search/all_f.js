@@ -1,7 +1,7 @@
 var searchData=
 [
   ['pages_858',['PAGES',['../enumawtk_1_1_t_widget_type.html#abbbb19d991a8bccc98777154dd7e2fab',1,'awtk::TWidgetType']]],
-  ['paint_859',['paint',['../classawtk_1_1_t_vgcanvas.html#a2ff0453fbfc814b7106f01094bd7e3a4',1,'awtk.TVgcanvas.paint()'],['../enumawtk_1_1_t_event_type.html#ad3fdc31c033a7552692abe6bfb4e290e',1,'awtk.TEventType.PAINT()']]],
+  ['paint_859',['PAINT',['../enumawtk_1_1_t_event_type.html#ad3fdc31c033a7552692abe6bfb4e290e',1,'awtk.TEventType.PAINT()'],['../classawtk_1_1_t_vgcanvas.html#a2ff0453fbfc814b7106f01094bd7e3a4',1,'awtk.TVgcanvas.paint()']]],
   ['paint_5fdone_860',['PAINT_DONE',['../enumawtk_1_1_t_event_type.html#aa17c9f2f739db4e936f2678f1c4998fd',1,'awtk::TEventType']]],
   ['password_861',['PASSWORD',['../enumawtk_1_1_t_input_type.html#adb0ec4b6881af30357548f517071fc6e',1,'awtk::TInputType']]],
   ['password_5fvisible_862',['PASSWORD_VISIBLE',['../enumawtk_1_1_t_widget_prop.html#a4035abde146772b47e86f9761e6fea2d',1,'awtk::TWidgetProp']]],

@@ -36,7 +36,7 @@ var searchData=
   ['getpropstrbypath_68',['GetPropStrByPath',['../class_t_object.html#ab8a5b39300b80d1d44e448490eb69780',1,'TObject']]],
   ['getratio_69',['GetRatio',['../class_t_vgcanvas.html#a9a096df74fa271a79f3a63fba08e17d6',1,'TVgcanvas']]],
   ['getrefcount_70',['GetRefCount',['../class_t_object.html#abf88f8baf905e1ec672b47d2beebb193',1,'TObject']]],
-  ['getsize_71',['GetSize',['../class_t_object.html#a16cc9c4beac75dc37c13955330396200',1,'TObject']]],
+  ['getsize_71',['GetSize',['../class_t_event.html#a77465a19ba6f4958b0fbb0bf6c5b9b39',1,'TEvent::GetSize()'],['../class_t_object.html#a16cc9c4beac75dc37c13955330396200',1,'TObject::GetSize()']]],
   ['getstr_72',['GetStr',['../class_t_style.html#acc313e64294bc3204fe56994e1ed6d3e',1,'TStyle']]],
   ['getstride_73',['GetStride',['../class_t_vgcanvas.html#a0cc0c4ea765b406bf03f13e2d1c7378b',1,'TVgcanvas']]],
   ['gettarget_74',['GetTarget',['../class_t_event.html#a03c3315ddbbb7522ea86fc56f934b753',1,'TEvent']]],

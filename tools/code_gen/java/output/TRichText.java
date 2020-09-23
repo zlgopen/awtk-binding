@@ -96,6 +96,18 @@ public class TRichText extends TWidget {
 
 
   /**
+   * 设置是否允许y方向滑动。
+   * 
+   * @param yslidable 是否允许滑动。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setYslidable(boolean yslidable)  {
+   return TRet.from(rich_text_set_yslidable(this != null ? (this.nativeObj) : 0, yslidable));
+ }
+
+
+  /**
    * 转换为rich_text对象(供脚本语言使用)。
    * 
    * @param widget rich_text对象。
@@ -124,9 +136,20 @@ public class TRichText extends TWidget {
    return rich_text_t_get_prop_margin(this.nativeObj);
  }
 
+
+  /**
+   * 标识控件是否允许上下拖动。
+   *
+   */
+ public boolean getYslidable() {
+   return rich_text_t_get_prop_yslidable(this.nativeObj);
+ }
+
 static private native long rich_text_create(long parent, int x, int y, int w, int h);
 static private native int rich_text_set_text(long widget, String text);
+static private native int rich_text_set_yslidable(long widget, boolean yslidable);
 static private native long rich_text_cast(long widget);
 static private native int rich_text_t_get_prop_line_gap(long nativeObj);
 static private native int rich_text_t_get_prop_margin(long nativeObj);
+static private native boolean rich_text_t_get_prop_yslidable(long nativeObj);
 };

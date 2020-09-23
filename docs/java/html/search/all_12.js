@@ -2,7 +2,7 @@ var searchData=
 [
   ['s_939',['s',['../classawtk_1_1_t_time_now.html#a46660cc972360a2346d8ea4149c45ab3',1,'awtk::TTimeNow']]],
   ['save_940',['save',['../classawtk_1_1_t_app_conf.html#aec4b992d030a548778e2e320f1c70494',1,'awtk.TAppConf.save()'],['../classawtk_1_1_t_vgcanvas.html#ad7ae7c9226aceeac658514a0e27639a1',1,'awtk.TVgcanvas.save()'],['../enumawtk_1_1_t_object_cmd.html#ace528ccf906afdb3a870edf4cf694157',1,'awtk.TObjectCmd.SAVE()']]],
-  ['scale_941',['scale',['../classawtk_1_1_t_vgcanvas.html#af672b35dd63c38d71f95886637c5bed6',1,'awtk.TVgcanvas.scale()'],['../enumawtk_1_1_t_image_draw_type.html#adac9b1db819a07d79f8c86a43340c110',1,'awtk.TImageDrawType.SCALE()']]],
+  ['scale_941',['SCALE',['../enumawtk_1_1_t_image_draw_type.html#adac9b1db819a07d79f8c86a43340c110',1,'awtk.TImageDrawType.SCALE()'],['../classawtk_1_1_t_vgcanvas.html#af672b35dd63c38d71f95886637c5bed6',1,'awtk.TVgcanvas.scale()']]],
   ['scale_5fauto_942',['SCALE_AUTO',['../enumawtk_1_1_t_image_draw_type.html#a4e0907cecac16b8cb2d7422ec75f61df',1,'awtk::TImageDrawType']]],
   ['scale_5fdown_943',['SCALE_DOWN',['../enumawtk_1_1_t_image_draw_type.html#a1e8cececb879bca17c5264fa6736f2ac',1,'awtk::TImageDrawType']]],
   ['scale_5fh_944',['SCALE_H',['../enumawtk_1_1_t_image_draw_type.html#ac84cf7bfe9db5f128cf4f39e8e4eeda8',1,'awtk::TImageDrawType']]],
@@ -205,7 +205,7 @@ var searchData=
   ['setxslidable_1141',['setXslidable',['../classawtk_1_1_t_scroll_view.html#ab27b54344c6aa5f44b52d520c00f9406',1,'awtk::TScrollView']]],
   ['setyoffset_1142',['setYoffset',['../classawtk_1_1_t_line_number.html#a9c9a7a6fb0acbf24030daea38a78c5d2',1,'awtk::TLineNumber']]],
   ['setyoyo_1143',['setYoyo',['../classawtk_1_1_t_hscroll_label.html#a311e0af92521061776f07ef80a67346c',1,'awtk::THscrollLabel']]],
-  ['setyslidable_1144',['setYslidable',['../classawtk_1_1_t_scroll_view.html#a23192b03ed62c1bffdb8a6e49c2632a9',1,'awtk::TScrollView']]],
+  ['setyslidable_1144',['setYslidable',['../classawtk_1_1_t_rich_text.html#ae750ccd5c84cc2007bbbb446d2d16337',1,'awtk.TRichText.setYslidable()'],['../classawtk_1_1_t_scroll_view.html#a23192b03ed62c1bffdb8a6e49c2632a9',1,'awtk.TScrollView.setYslidable()']]],
   ['show_5ftext_1145',['SHOW_TEXT',['../enumawtk_1_1_t_widget_prop.html#a1b963bee8b598c7cf48796e9a5d595e1',1,'awtk::TWidgetProp']]],
   ['showborder_1146',['showBorder',['../classawtk_1_1_t_native_window.html#aee269662ecb3425cca749617a5852a65',1,'awtk::TNativeWindow']]],
   ['shrinkcache_1147',['shrinkCache',['../classawtk_1_1_t_font_manager.html#a7dc90c1a29e261aff4948e39f6e18f58',1,'awtk::TFontManager']]],
