@@ -4398,7 +4398,7 @@
     ],
     "header": "base/style.h",
     "name": "style_id_t",
-    "prefix": "STYLE",
+    "prefix": "STYLE_ID_",
     "annotation": {
       "scriptable": true,
       "string": true
@@ -6436,6 +6436,14 @@
         "name": "WIDGET_PROP_MAX_W"
       },
       {
+        "desc": "根据子控件和文本自动调整大小。",
+        "name": "WIDGET_PROP_AUTO_ADJUST_SIZE"
+      },
+      {
+        "desc": "窗口是否保持单例。",
+        "name": "WIDGET_PROP_SINGLE_INSTANCE"
+      },
+      {
         "desc": "子控件布局参数。",
         "name": "WIDGET_PROP_CHILDREN_LAYOUT"
       },
@@ -6486,6 +6494,10 @@
       {
         "desc": "长度。",
         "name": "WIDGET_PROP_LENGTH"
+      },
+      {
+        "desc": "自动换行。",
+        "name": "WIDGET_PROP_LINE_WRAP"
       },
       {
         "desc": "文本。",
@@ -7320,7 +7332,7 @@
     ],
     "header": "base/widget_consts.h",
     "name": "widget_state_t",
-    "prefix": "WIDGET_",
+    "prefix": "WIDGET_STATE_",
     "annotation": {
       "scriptable": true,
       "string": true
@@ -8143,6 +8155,29 @@
           },
           {
             "type": "bool_t",
+            "name": "auto_adjust_size",
+            "desc": "是否根据子控件和文本自动调整控件自身大小。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置控件是否根据子控件和文本自动调整控件自身大小。",
+        "name": "widget_set_auto_adjust_size",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "bool_t",
             "name": "floating",
             "desc": "是否启用floating布局。"
           }
@@ -8477,11 +8512,6 @@
             "type": "bool_t",
             "name": "visible",
             "desc": "是否可见。"
-          },
-          {
-            "type": "bool_t",
-            "name": "recursive",
-            "desc": "是否递归设置全部子控件。"
           }
         ],
         "annotation": {
@@ -8672,6 +8702,57 @@
         "name": "widget_get_prop_str",
         "return": {
           "type": "const char*",
+          "desc": "返回属性的值。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "void**",
+            "name": "v",
+            "desc": "属性的值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置指针格式的属性。",
+        "name": "widget_set_prop_pointer",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取指针格式的属性。",
+        "name": "widget_get_prop_pointer",
+        "return": {
+          "type": "void*",
           "desc": "返回属性的值。"
         }
       },
@@ -8936,6 +9017,24 @@
         },
         "desc": "检查控件是否是弹出窗口类型。",
         "name": "widget_is_popup",
+        "return": {
+          "type": "bool_t",
+          "desc": "返回FALSE表示不是，否则表示是。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "检查控件是否是overlay窗口类型。",
+        "name": "widget_is_overlay",
         "return": {
           "type": "bool_t",
           "desc": "返回FALSE表示不是，否则表示是。"
@@ -9923,7 +10022,6 @@
           "set_prop": true,
           "get_prop": true,
           "readable": true,
-          "writable": true,
           "persitent": true,
           "design": true,
           "scriptable": true
@@ -9937,7 +10035,6 @@
           "set_prop": true,
           "get_prop": true,
           "readable": true,
-          "writable": true,
           "persitent": true,
           "design": true,
           "scriptable": true
@@ -9951,7 +10048,6 @@
           "set_prop": true,
           "get_prop": true,
           "readable": true,
-          "writable": true,
           "persitent": true,
           "design": true,
           "scriptable": true
@@ -9965,7 +10061,19 @@
           "set_prop": true,
           "get_prop": true,
           "readable": true,
-          "writable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "auto_adjust_size",
+        "desc": "是否根据子控件和文本自动调整控件自身大小。\n\n> 为true时，最好不要使用child_layout，否则可能有冲突。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
           "persitent": true,
           "design": true,
           "scriptable": true
@@ -11689,8 +11797,46 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "填充矩形。",
+        "desc": "绘制矩形。",
         "name": "canvas_fill_rect",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "canvas_t*",
+            "name": "c",
+            "desc": "canvas对象。"
+          },
+          {
+            "type": "xy_t",
+            "name": "x",
+            "desc": "x坐标。"
+          },
+          {
+            "type": "xy_t",
+            "name": "y",
+            "desc": "y坐标。"
+          },
+          {
+            "type": "wh_t",
+            "name": "w",
+            "desc": "宽度。"
+          },
+          {
+            "type": "wh_t",
+            "name": "h",
+            "desc": "高度。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "填充矩形。",
+        "name": "canvas_clear_rect",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -14510,6 +14656,29 @@
             "desc": "控件对象。"
           },
           {
+            "type": "bool_t",
+            "name": "line_wrap",
+            "desc": "是否自动换行。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置是否自动换行。",
+        "name": "label_set_line_wrap",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
             "type": "uint32_t",
             "name": "min_w",
             "desc": "最小宽度。"
@@ -14566,6 +14735,19 @@
         "name": "length",
         "desc": "显示字符的个数(小余0时全部显示)。\n主要用于动态改变显示字符的个数，来实现类似[拨号中...]的动画效果。",
         "type": "int32_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "line_wrap",
+        "desc": "是否自动换行。",
+        "type": "bool_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -21956,6 +22138,52 @@
           {
             "type": "widget_t*",
             "name": "widget",
+            "desc": "widget对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "open_im_when_focused",
+            "desc": "是否在获得焦点时打开输入法。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置编辑器是否在获得焦点时打开输入法。\n\n> * 设置默认焦点时，打开窗口时不弹出软键盘。\n> * 用键盘切换焦点时，编辑器获得焦点时不弹出软键盘。",
+        "name": "mledit_set_open_im_when_focused",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "close_im_when_blured",
+            "desc": "是否是否在失去焦点时关闭输入法。在失去焦点时关闭输入法。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置编辑器是否在失去焦点时关闭输入法。",
+        "name": "mledit_set_close_im_when_blured",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
             "desc": "mledit对象。"
           }
         ],
@@ -22130,6 +22358,32 @@
       {
         "name": "cancelable",
         "desc": "是否支持撤销编辑。如果为TRUE，在失去焦点之前可以撤销所有修改(恢复获得焦点之前的内容)。\n\n> * 1.一般配合keyboard的\"cancel\"按钮使用。\n> * 2.为TRUE时，如果内容有变化，会设置编辑器的状态为changed，所以此时编辑器需要支持changed状态的style。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "open_im_when_focused",
+        "desc": "获得焦点时打开输入法。\n\n> 主要用于没有指针设备的情况，否则每次切换焦点时都打开输入法。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "close_im_when_blured",
+        "desc": "是否在失去焦点时关闭输入法(默认是)。",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,
@@ -25703,7 +25957,33 @@
         }
       }
     ],
-    "events": [],
+    "events": [
+      {
+        "name": "EVT_WINDOW_WILL_OPEN",
+        "desc": "窗口即将打开事件。 如果有窗口动画，在窗口动画开始前触发。如果没有窗口动画，在窗口被加载后的下一次循环中触发。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_WINDOW_OPEN",
+        "desc": "窗口打开事件。 如果有窗口动画，在窗口动画完成时触发。如果没有窗口动画，在窗口被加载后的下一次循环中触发。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_WINDOW_TO_BACKGROUND",
+        "desc": "窗口被切换到后台事件。 打开新窗口时，当前窗口被切换到后台时，对当前窗口触发本事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_WINDOW_TO_FOREGROUND",
+        "desc": "窗口被切换到前台事件。 关闭当前窗口时，前一个窗口被切换到前台时，对前一个窗口触发本事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_WINDOW_CLOSE",
+        "desc": "窗口关闭事件。",
+        "type": "event_t"
+      }
+    ],
     "properties": [
       {
         "name": "theme",
@@ -25839,6 +26119,19 @@
         "name": "move_focus_right_key",
         "desc": "向右移动焦点的键值。\n\n请参考[控件焦点](https://github.com/zlgopen/awtk/blob/master/docs/widget_focus.md)",
         "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "single_instance",
+        "desc": "单例。如果窗口存在，先关闭再打开。",
+        "type": "bool_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -28111,7 +28404,7 @@
         "name": "dialog_modal",
         "return": {
           "type": "dialog_quit_code_t",
-          "desc": "返回退出吗。"
+          "desc": "返回退出码。"
         }
       },
       {

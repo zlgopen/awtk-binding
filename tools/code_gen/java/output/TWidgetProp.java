@@ -136,6 +136,20 @@ public enum TWidgetProp {
   MAX_W (WIDGET_PROP_MAX_W()),
   
   /**
+   * 根据子控件和文本自动调整大小。
+   *
+   */
+ 
+  AUTO_ADJUST_SIZE (WIDGET_PROP_AUTO_ADJUST_SIZE()),
+  
+  /**
+   * 窗口是否保持单例。
+   *
+   */
+ 
+  SINGLE_INSTANCE (WIDGET_PROP_SINGLE_INSTANCE()),
+  
+  /**
    * 子控件布局参数。
    *
    */
@@ -225,6 +239,13 @@ public enum TWidgetProp {
    */
  
   LENGTH (WIDGET_PROP_LENGTH()),
+  
+  /**
+   * 自动换行。
+   *
+   */
+ 
+  LINE_WRAP (WIDGET_PROP_LINE_WRAP()),
   
   /**
    * 文本。
@@ -1033,6 +1054,8 @@ public enum TWidgetProp {
   static private native String WIDGET_PROP_OPACITY();
   static private native String WIDGET_PROP_MIN_W();
   static private native String WIDGET_PROP_MAX_W();
+  static private native String WIDGET_PROP_AUTO_ADJUST_SIZE();
+  static private native String WIDGET_PROP_SINGLE_INSTANCE();
   static private native String WIDGET_PROP_CHILDREN_LAYOUT();
   static private native String WIDGET_PROP_LAYOUT();
   static private native String WIDGET_PROP_SELF_LAYOUT();
@@ -1046,6 +1069,7 @@ public enum TWidgetProp {
   static private native String WIDGET_PROP_POINTER_CURSOR();
   static private native String WIDGET_PROP_VALUE();
   static private native String WIDGET_PROP_LENGTH();
+  static private native String WIDGET_PROP_LINE_WRAP();
   static private native String WIDGET_PROP_TEXT();
   static private native String WIDGET_PROP_TR_TEXT();
   static private native String WIDGET_PROP_STYLE();

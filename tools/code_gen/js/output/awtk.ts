@@ -576,6 +576,8 @@ declare function WIDGET_PROP_BAR_SIZE();
 declare function WIDGET_PROP_OPACITY();
 declare function WIDGET_PROP_MIN_W();
 declare function WIDGET_PROP_MAX_W();
+declare function WIDGET_PROP_AUTO_ADJUST_SIZE();
+declare function WIDGET_PROP_SINGLE_INSTANCE();
 declare function WIDGET_PROP_CHILDREN_LAYOUT();
 declare function WIDGET_PROP_LAYOUT();
 declare function WIDGET_PROP_SELF_LAYOUT();
@@ -589,6 +591,7 @@ declare function WIDGET_PROP_CLOSABLE();
 declare function WIDGET_PROP_POINTER_CURSOR();
 declare function WIDGET_PROP_VALUE();
 declare function WIDGET_PROP_LENGTH();
+declare function WIDGET_PROP_LINE_WRAP();
 declare function WIDGET_PROP_TEXT();
 declare function WIDGET_PROP_TR_TEXT();
 declare function WIDGET_PROP_STYLE();
@@ -825,6 +828,7 @@ declare function widget_stop_animator(widget : any, name : string) : TRet;
 declare function widget_destroy_animator(widget : any, name : string) : TRet;
 declare function widget_set_enable(widget : any, enable : boolean) : TRet;
 declare function widget_set_feedback(widget : any, feedback : boolean) : TRet;
+declare function widget_set_auto_adjust_size(widget : any, auto_adjust_size : boolean) : TRet;
 declare function widget_set_floating(widget : any, floating : boolean) : TRet;
 declare function widget_set_focused(widget : any, focused : boolean) : TRet;
 declare function widget_set_focusable(widget : any, focusable : boolean) : TRet;
@@ -839,7 +843,7 @@ declare function widget_restack(widget : any, index : number) : TRet;
 declare function widget_child(widget : any, name : string) : any;
 declare function widget_lookup(widget : any, name : string, recursive : boolean) : any;
 declare function widget_lookup_by_type(widget : any, type : string, recursive : boolean) : any;
-declare function widget_set_visible(widget : any, visible : boolean, recursive : boolean) : TRet;
+declare function widget_set_visible(widget : any, visible : boolean) : TRet;
 declare function widget_set_visible_only(widget : any, visible : boolean) : TRet;
 declare function widget_set_sensitive(widget : any, sensitive : boolean) : TRet;
 declare function widget_on(widget : any, type : TEventType, on_event : Function, ctx : any) : number;
@@ -847,6 +851,8 @@ declare function widget_off(widget : any, id : number) : TRet;
 declare function widget_invalidate_force(widget : any, r : any) : TRet;
 declare function widget_set_prop_str(widget : any, name : string, v : string) : TRet;
 declare function widget_get_prop_str(widget : any, name : string, defval : string) : string;
+declare function widget_set_prop_pointer(widget : any, name : string, v : any) : TRet;
+declare function widget_get_prop_pointer(widget : any, name : string) : any;
 declare function widget_set_prop_int(widget : any, name : string, v : number) : TRet;
 declare function widget_get_prop_int(widget : any, name : string, defval : number) : number;
 declare function widget_set_prop_bool(widget : any, name : string, v : boolean) : TRet;
@@ -859,6 +865,7 @@ declare function widget_is_system_bar(widget : any) : boolean;
 declare function widget_is_normal_window(widget : any) : boolean;
 declare function widget_is_dialog(widget : any) : boolean;
 declare function widget_is_popup(widget : any) : boolean;
+declare function widget_is_overlay(widget : any) : boolean;
 declare function widget_is_opened_popup(widget : any) : boolean;
 declare function widget_is_keyboard(widget : any) : boolean;
 declare function widget_is_designing_window(widget : any) : boolean;
@@ -903,13 +910,10 @@ declare function widget_t_get_prop_animation(nativeObj : any) : string;
 declare function widget_t_get_prop_enable(nativeObj : any) : boolean;
 declare function widget_t_get_prop_feedback(nativeObj : any) : boolean;
 declare function widget_t_get_prop_visible(nativeObj : any) : boolean;
-declare function widget_t_set_prop_visible(nativeObj : any, v : boolean)
 declare function widget_t_get_prop_sensitive(nativeObj : any) : boolean;
-declare function widget_t_set_prop_sensitive(nativeObj : any, v : boolean)
 declare function widget_t_get_prop_focusable(nativeObj : any) : boolean;
-declare function widget_t_set_prop_focusable(nativeObj : any, v : boolean)
 declare function widget_t_get_prop_with_focus_state(nativeObj : any) : boolean;
-declare function widget_t_set_prop_with_focus_state(nativeObj : any, v : boolean)
+declare function widget_t_get_prop_auto_adjust_size(nativeObj : any) : boolean;
 declare function widget_t_get_prop_floating(nativeObj : any) : boolean;
 declare function widget_t_get_prop_dirty_rect_tolerance(nativeObj : any) : number;
 declare function widget_t_get_prop_parent(nativeObj : any) : any;
@@ -1118,6 +1122,7 @@ declare function canvas_untranslate(c : any, dx : number, dy : number) : TRet;
 declare function canvas_draw_vline(c : any, x : number, y : number, h : number) : TRet;
 declare function canvas_draw_hline(c : any, x : number, y : number, w : number) : TRet;
 declare function canvas_fill_rect(c : any, x : number, y : number, w : number, h : number) : TRet;
+declare function canvas_clear_rect(c : any, x : number, y : number, w : number, h : number) : TRet;
 declare function canvas_stroke_rect(c : any, x : number, y : number, w : number, h : number) : TRet;
 declare function canvas_set_font(c : any, name : string, size : number) : TRet;
 declare function canvas_measure_utf8(c : any, str : string) : number;
@@ -1273,9 +1278,11 @@ declare function pages_set_active_by_name(widget : any, name : string) : TRet;
 declare function pages_t_get_prop_active(nativeObj : any) : number;
 declare function label_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function label_set_length(widget : any, length : number) : TRet;
+declare function label_set_line_wrap(widget : any, line_wrap : boolean) : TRet;
 declare function label_resize_to_content(widget : any, min_w : number, max_w : number, min_h : number, max_h : number) : TRet;
 declare function label_cast(widget : any) : any;
 declare function label_t_get_prop_length(nativeObj : any) : number;
+declare function label_t_get_prop_line_wrap(nativeObj : any) : boolean;
 declare function group_box_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function group_box_cast(widget : any) : any;
 declare function grid_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -1598,6 +1605,8 @@ declare function mledit_set_tr_tips(widget : any, tr_tips : string) : TRet;
 declare function mledit_set_keyboard(widget : any, keyboard : string) : TRet;
 declare function mledit_set_cursor(widget : any, cursor : number) : TRet;
 declare function mledit_set_scroll_line(widget : any, scroll_line : number) : TRet;
+declare function mledit_set_open_im_when_focused(widget : any, open_im_when_focused : boolean) : TRet;
+declare function mledit_set_close_im_when_blured(widget : any, close_im_when_blured : boolean) : TRet;
 declare function mledit_cast(widget : any) : any;
 declare function mledit_t_get_prop_readonly(nativeObj : any) : boolean;
 declare function mledit_t_get_prop_top_margin(nativeObj : any) : number;
@@ -1611,6 +1620,8 @@ declare function mledit_t_get_prop_wrap_word(nativeObj : any) : boolean;
 declare function mledit_t_get_prop_max_lines(nativeObj : any) : number;
 declare function mledit_t_get_prop_scroll_line(nativeObj : any) : number;
 declare function mledit_t_get_prop_cancelable(nativeObj : any) : boolean;
+declare function mledit_t_get_prop_open_im_when_focused(nativeObj : any) : boolean;
+declare function mledit_t_get_prop_close_im_when_blured(nativeObj : any) : boolean;
 declare function line_number_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function line_number_set_top_margin(widget : any, top_margin : number) : TRet;
 declare function line_number_set_bottom_margin(widget : any, bottom_margin : number) : TRet;
@@ -1796,6 +1807,7 @@ declare function window_base_t_get_prop_move_focus_up_key(nativeObj : any) : str
 declare function window_base_t_get_prop_move_focus_down_key(nativeObj : any) : string;
 declare function window_base_t_get_prop_move_focus_left_key(nativeObj : any) : string;
 declare function window_base_t_get_prop_move_focus_right_key(nativeObj : any) : string;
+declare function window_base_t_get_prop_single_instance(nativeObj : any) : boolean;
 declare function style_mutable_set_name(s : any, name : string) : TRet;
 declare function style_mutable_set_int(s : any, state : string, name : string, val : number) : TRet;
 declare function style_mutable_cast(s : any) : any;
@@ -5453,247 +5465,247 @@ export enum TStyleId {
    * 背景颜色。
    *
    */
- _ID_BG_COLOR = STYLE_ID_BG_COLOR(),
+ BG_COLOR = STYLE_ID_BG_COLOR(),
 
   /**
    * 前景颜色。
    *
    */
- _ID_FG_COLOR = STYLE_ID_FG_COLOR(),
+ FG_COLOR = STYLE_ID_FG_COLOR(),
 
   /**
    * 蒙版颜色。
    *
    */
- _ID_MASK_COLOR = STYLE_ID_MASK_COLOR(),
+ MASK_COLOR = STYLE_ID_MASK_COLOR(),
 
   /**
    * 字体名称。
    *
    */
- _ID_FONT_NAME = STYLE_ID_FONT_NAME(),
+ FONT_NAME = STYLE_ID_FONT_NAME(),
 
   /**
    * 字体大小。
    *
    */
- _ID_FONT_SIZE = STYLE_ID_FONT_SIZE(),
+ FONT_SIZE = STYLE_ID_FONT_SIZE(),
 
   /**
    * 字体风格(粗体、斜体等)。
    *
    */
- _ID_FONT_STYLE = STYLE_ID_FONT_STYLE(),
+ FONT_STYLE = STYLE_ID_FONT_STYLE(),
 
   /**
    * 文本颜色。
    *
    */
- _ID_TEXT_COLOR = STYLE_ID_TEXT_COLOR(),
+ TEXT_COLOR = STYLE_ID_TEXT_COLOR(),
 
   /**
    * 高亮文本的字体名称。
    *
    */
- _ID_HIGHLIGHT_FONT_NAME = STYLE_ID_HIGHLIGHT_FONT_NAME(),
+ HIGHLIGHT_FONT_NAME = STYLE_ID_HIGHLIGHT_FONT_NAME(),
 
   /**
    * 高亮文本的字体大小。
    *
    */
- _ID_HIGHLIGHT_FONT_SIZE = STYLE_ID_HIGHLIGHT_FONT_SIZE(),
+ HIGHLIGHT_FONT_SIZE = STYLE_ID_HIGHLIGHT_FONT_SIZE(),
 
   /**
    * 高亮文本的文本颜色。
    *
    */
- _ID_HIGHLIGHT_TEXT_COLOR = STYLE_ID_HIGHLIGHT_TEXT_COLOR(),
+ HIGHLIGHT_TEXT_COLOR = STYLE_ID_HIGHLIGHT_TEXT_COLOR(),
 
   /**
    * 提示文本颜色。
    *
    */
- _ID_TIPS_TEXT_COLOR = STYLE_ID_TIPS_TEXT_COLOR(),
+ TIPS_TEXT_COLOR = STYLE_ID_TIPS_TEXT_COLOR(),
 
   /**
    * 文本水平对齐的方式。
    *
    */
- _ID_TEXT_ALIGN_H = STYLE_ID_TEXT_ALIGN_H(),
+ TEXT_ALIGN_H = STYLE_ID_TEXT_ALIGN_H(),
 
   /**
    * 文本垂直对齐的方式。
    *
    */
- _ID_TEXT_ALIGN_V = STYLE_ID_TEXT_ALIGN_V(),
+ TEXT_ALIGN_V = STYLE_ID_TEXT_ALIGN_V(),
 
   /**
    * 边框颜色。
    *
    */
- _ID_BORDER_COLOR = STYLE_ID_BORDER_COLOR(),
+ BORDER_COLOR = STYLE_ID_BORDER_COLOR(),
 
   /**
    * 边框线宽。
    *
    */
- _ID_BORDER_WIDTH = STYLE_ID_BORDER_WIDTH(),
+ BORDER_WIDTH = STYLE_ID_BORDER_WIDTH(),
 
   /**
    * 边框类型。
    *
    */
- _ID_BORDER = STYLE_ID_BORDER(),
+ BORDER = STYLE_ID_BORDER(),
 
   /**
    * 图片的名称。
    *
    */
- _ID_BG_IMAGE = STYLE_ID_BG_IMAGE(),
+ BG_IMAGE = STYLE_ID_BG_IMAGE(),
 
   /**
    * 图片的显示方式。
    *
    */
- _ID_BG_IMAGE_DRAW_TYPE = STYLE_ID_BG_IMAGE_DRAW_TYPE(),
+ BG_IMAGE_DRAW_TYPE = STYLE_ID_BG_IMAGE_DRAW_TYPE(),
 
   /**
    * 图标的名称。
    *
    */
- _ID_ICON = STYLE_ID_ICON(),
+ ICON = STYLE_ID_ICON(),
 
   /**
    * 图片的名称。
    *
    */
- _ID_FG_IMAGE = STYLE_ID_FG_IMAGE(),
+ FG_IMAGE = STYLE_ID_FG_IMAGE(),
 
   /**
    * 图片的显示方式。
    *
    */
- _ID_FG_IMAGE_DRAW_TYPE = STYLE_ID_FG_IMAGE_DRAW_TYPE(),
+ FG_IMAGE_DRAW_TYPE = STYLE_ID_FG_IMAGE_DRAW_TYPE(),
 
   /**
    * 间距。
    *
    */
- _ID_SPACER = STYLE_ID_SPACER(),
+ SPACER = STYLE_ID_SPACER(),
 
   /**
    * 边距。
    *
    */
- _ID_MARGIN = STYLE_ID_MARGIN(),
+ MARGIN = STYLE_ID_MARGIN(),
 
   /**
    * 左边距。
    *
    */
- _ID_MARGIN_LEFT = STYLE_ID_MARGIN_LEFT(),
+ MARGIN_LEFT = STYLE_ID_MARGIN_LEFT(),
 
   /**
    * 右边距。
    *
    */
- _ID_MARGIN_RIGHT = STYLE_ID_MARGIN_RIGHT(),
+ MARGIN_RIGHT = STYLE_ID_MARGIN_RIGHT(),
 
   /**
    * 顶边距。
    *
    */
- _ID_MARGIN_TOP = STYLE_ID_MARGIN_TOP(),
+ MARGIN_TOP = STYLE_ID_MARGIN_TOP(),
 
   /**
    * 底边距。
    *
    */
- _ID_MARGIN_BOTTOM = STYLE_ID_MARGIN_BOTTOM(),
+ MARGIN_BOTTOM = STYLE_ID_MARGIN_BOTTOM(),
 
   /**
    * 图标的位置。
    *
    */
- _ID_ICON_AT = STYLE_ID_ICON_AT(),
+ ICON_AT = STYLE_ID_ICON_AT(),
 
   /**
    * Active图标的名称。
    *
    */
- _ID_ACTIVE_ICON = STYLE_ID_ACTIVE_ICON(),
+ ACTIVE_ICON = STYLE_ID_ACTIVE_ICON(),
 
   /**
    * X方向的偏移，方便实现按下的效果。
    *
    */
- _ID_X_OFFSET = STYLE_ID_X_OFFSET(),
+ X_OFFSET = STYLE_ID_X_OFFSET(),
 
   /**
    * Y方向的偏移，方便实现按下的效果。
    *
    */
- _ID_Y_OFFSET = STYLE_ID_Y_OFFSET(),
+ Y_OFFSET = STYLE_ID_Y_OFFSET(),
 
   /**
    * 编辑器中选中区域的背景颜色。
    *
    */
- _ID_SELECTED_BG_COLOR = STYLE_ID_SELECTED_BG_COLOR(),
+ SELECTED_BG_COLOR = STYLE_ID_SELECTED_BG_COLOR(),
 
   /**
    * 编辑器中选中区域的前景颜色。
    *
    */
- _ID_SELECTED_FG_COLOR = STYLE_ID_SELECTED_FG_COLOR(),
+ SELECTED_FG_COLOR = STYLE_ID_SELECTED_FG_COLOR(),
 
   /**
    * 编辑器中选中区域的文本颜色。
    *
    */
- _ID_SELECTED_TEXT_COLOR = STYLE_ID_SELECTED_TEXT_COLOR(),
+ SELECTED_TEXT_COLOR = STYLE_ID_SELECTED_TEXT_COLOR(),
 
   /**
    * 圆角半径(仅在WITH_VGCANVAS定义时生效)。
    *
    */
- _ID_ROUND_RADIUS = STYLE_ID_ROUND_RADIUS(),
+ ROUND_RADIUS = STYLE_ID_ROUND_RADIUS(),
 
   /**
    * 左上角圆角半径(仅在WITH_VGCANVAS定义时生效)。
    *
    */
- _ID_ROUND_RADIUS_TOP_LETF = STYLE_ID_ROUND_RADIUS_TOP_LETF(),
+ ROUND_RADIUS_TOP_LETF = STYLE_ID_ROUND_RADIUS_TOP_LETF(),
 
   /**
    * 右上角圆角半径(仅在WITH_VGCANVAS定义时生效)。
    *
    */
- _ID_ROUND_RADIUS_TOP_RIGHT = STYLE_ID_ROUND_RADIUS_TOP_RIGHT(),
+ ROUND_RADIUS_TOP_RIGHT = STYLE_ID_ROUND_RADIUS_TOP_RIGHT(),
 
   /**
    * 左下角圆角半径(仅在WITH_VGCANVAS定义时生效)。
    *
    */
- _ID_ROUND_RADIUS_BOTTOM_LETF = STYLE_ID_ROUND_RADIUS_BOTTOM_LETF(),
+ ROUND_RADIUS_BOTTOM_LETF = STYLE_ID_ROUND_RADIUS_BOTTOM_LETF(),
 
   /**
    * 右下角圆角半径(仅在WITH_VGCANVAS定义时生效)。
    *
    */
- _ID_ROUND_RADIUS_BOTTOM_RIGHT = STYLE_ID_ROUND_RADIUS_BOTTOM_RIGHT(),
+ ROUND_RADIUS_BOTTOM_RIGHT = STYLE_ID_ROUND_RADIUS_BOTTOM_RIGHT(),
 
   /**
    * 子控件布局参数。
    *
    */
- _ID_CHILDREN_LAYOUT = STYLE_ID_CHILDREN_LAYOUT(),
+ CHILDREN_LAYOUT = STYLE_ID_CHILDREN_LAYOUT(),
 
   /**
    * 控件布局参数。
    *
    */
- _ID_SELF_LAYOUT = STYLE_ID_SELF_LAYOUT(),
+ SELF_LAYOUT = STYLE_ID_SELF_LAYOUT(),
 };
 
 
@@ -7043,6 +7055,18 @@ export enum TWidgetProp {
  MAX_W = WIDGET_PROP_MAX_W(),
 
   /**
+   * 根据子控件和文本自动调整大小。
+   *
+   */
+ AUTO_ADJUST_SIZE = WIDGET_PROP_AUTO_ADJUST_SIZE(),
+
+  /**
+   * 窗口是否保持单例。
+   *
+   */
+ SINGLE_INSTANCE = WIDGET_PROP_SINGLE_INSTANCE(),
+
+  /**
    * 子控件布局参数。
    *
    */
@@ -7119,6 +7143,12 @@ export enum TWidgetProp {
    *
    */
  LENGTH = WIDGET_PROP_LENGTH(),
+
+  /**
+   * 自动换行。
+   *
+   */
+ LINE_WRAP = WIDGET_PROP_LINE_WRAP(),
 
   /**
    * 文本。
@@ -8184,139 +8214,139 @@ export enum TWidgetState {
    * 无效状态。
    *
    */
- STATE_NONE = WIDGET_STATE_NONE(),
+ NONE = WIDGET_STATE_NONE(),
 
   /**
    * 正常状态。
    *
    */
- STATE_NORMAL = WIDGET_STATE_NORMAL(),
+ NORMAL = WIDGET_STATE_NORMAL(),
 
   /**
    * 内容被修改的状态。
    *
    */
- STATE_CHANGED = WIDGET_STATE_CHANGED(),
+ CHANGED = WIDGET_STATE_CHANGED(),
 
   /**
    * 指针按下状态。
    *
    */
- STATE_PRESSED = WIDGET_STATE_PRESSED(),
+ PRESSED = WIDGET_STATE_PRESSED(),
 
   /**
    * 指针悬浮状态。
    *
    */
- STATE_OVER = WIDGET_STATE_OVER(),
+ OVER = WIDGET_STATE_OVER(),
 
   /**
    * 禁用状态。
    *
    */
- STATE_DISABLE = WIDGET_STATE_DISABLE(),
+ DISABLE = WIDGET_STATE_DISABLE(),
 
   /**
    * 聚焦状态。
    *
    */
- STATE_FOCUSED = WIDGET_STATE_FOCUSED(),
+ FOCUSED = WIDGET_STATE_FOCUSED(),
 
   /**
    * 勾选状态。
    *
    */
- STATE_CHECKED = WIDGET_STATE_CHECKED(),
+ CHECKED = WIDGET_STATE_CHECKED(),
 
   /**
    * 没勾选状态。
    *
    */
- STATE_UNCHECKED = WIDGET_STATE_UNCHECKED(),
+ UNCHECKED = WIDGET_STATE_UNCHECKED(),
 
   /**
    * 编辑器无内容状态。
    *
    */
- STATE_EMPTY = WIDGET_STATE_EMPTY(),
+ EMPTY = WIDGET_STATE_EMPTY(),
 
   /**
    * 编辑器无内容同时聚焦的状态。
    *
    */
- STATE_EMPTY_FOCUS = WIDGET_STATE_EMPTY_FOCUS(),
+ EMPTY_FOCUS = WIDGET_STATE_EMPTY_FOCUS(),
 
   /**
    * 输入错误状态。
    *
    */
- STATE_ERROR = WIDGET_STATE_ERROR(),
+ ERROR = WIDGET_STATE_ERROR(),
 
   /**
    * 选中状态。
    *
    */
- STATE_SELECTED = WIDGET_STATE_SELECTED(),
+ SELECTED = WIDGET_STATE_SELECTED(),
 
   /**
    * 正常状态(选中项)。
    *
    */
- STATE_NORMAL_OF_CHECKED = WIDGET_STATE_NORMAL_OF_CHECKED(),
+ NORMAL_OF_CHECKED = WIDGET_STATE_NORMAL_OF_CHECKED(),
 
   /**
    * 指针按下状态(选中项)。
    *
    */
- STATE_PRESSED_OF_CHECKED = WIDGET_STATE_PRESSED_OF_CHECKED(),
+ PRESSED_OF_CHECKED = WIDGET_STATE_PRESSED_OF_CHECKED(),
 
   /**
    * 指针悬浮状态(选中项)。
    *
    */
- STATE_OVER_OF_CHECKED = WIDGET_STATE_OVER_OF_CHECKED(),
+ OVER_OF_CHECKED = WIDGET_STATE_OVER_OF_CHECKED(),
 
   /**
    * 禁用状态(选中项)。
    *
    */
- STATE_DISABLE_OF_CHECKED = WIDGET_STATE_DISABLE_OF_CHECKED(),
+ DISABLE_OF_CHECKED = WIDGET_STATE_DISABLE_OF_CHECKED(),
 
   /**
    * 焦点状态(选中项)。
    *
    */
- STATE_FOCUSED_OF_CHECKED = WIDGET_STATE_FOCUSED_OF_CHECKED(),
+ FOCUSED_OF_CHECKED = WIDGET_STATE_FOCUSED_OF_CHECKED(),
 
   /**
    * 正常状态(当前项)。
    *
    */
- STATE_NORMAL_OF_ACTIVE = WIDGET_STATE_NORMAL_OF_ACTIVE(),
+ NORMAL_OF_ACTIVE = WIDGET_STATE_NORMAL_OF_ACTIVE(),
 
   /**
    * 指针按下状态(当前项)。
    *
    */
- STATE_PRESSED_OF_ACTIVE = WIDGET_STATE_PRESSED_OF_ACTIVE(),
+ PRESSED_OF_ACTIVE = WIDGET_STATE_PRESSED_OF_ACTIVE(),
 
   /**
    * 指针悬浮状态(当前项)。
    *
    */
- STATE_OVER_OF_ACTIVE = WIDGET_STATE_OVER_OF_ACTIVE(),
+ OVER_OF_ACTIVE = WIDGET_STATE_OVER_OF_ACTIVE(),
 
   /**
    * 禁用状态(当前项)。
    *
    */
- STATE_DISABLE_OF_ACTIVE = WIDGET_STATE_DISABLE_OF_ACTIVE(),
+ DISABLE_OF_ACTIVE = WIDGET_STATE_DISABLE_OF_ACTIVE(),
 
   /**
    * 焦点状态(当前项)。
    *
    */
- STATE_FOCUSED_OF_ACTIVE = WIDGET_STATE_FOCUSED_OF_ACTIVE(),
+ FOCUSED_OF_ACTIVE = WIDGET_STATE_FOCUSED_OF_ACTIVE(),
 };
 
 
@@ -8831,6 +8861,18 @@ export class TWidget {
 
 
   /**
+   * 设置控件是否根据子控件和文本自动调整控件自身大小。
+   * 
+   * @param auto_adjust_size 是否根据子控件和文本自动调整控件自身大小。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setAutoAdjustSize(auto_adjust_size : boolean) : TRet  {
+    return widget_set_auto_adjust_size(this != null ? (this.nativeObj || this) : null, auto_adjust_size);
+ }
+
+
+  /**
    * 设置控件的floating标志。
    *> floating的控件不受父控件的子控件布局参数的影响。
    * 
@@ -9007,12 +9049,11 @@ export class TWidget {
    * 设置控件的可见性。
    * 
    * @param visible 是否可见。
-   * @param recursive 是否递归设置全部子控件。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
- setVisible(visible : boolean, recursive : boolean) : TRet  {
-    return widget_set_visible(this != null ? (this.nativeObj || this) : null, visible, recursive);
+ setVisible(visible : boolean) : TRet  {
+    return widget_set_visible(this != null ? (this.nativeObj || this) : null, visible);
  }
 
 
@@ -9104,6 +9145,31 @@ export class TWidget {
    */
  getPropStr(name : string, defval : string) : string  {
     return widget_get_prop_str(this != null ? (this.nativeObj || this) : null, name, defval);
+ }
+
+
+  /**
+   * 设置指针格式的属性。
+   * 
+   * @param name 属性的名称。
+   * @param v 属性的值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setPropPointer(name : string, v : any) : TRet  {
+    return widget_set_prop_pointer(this != null ? (this.nativeObj || this) : null, name, v);
+ }
+
+
+  /**
+   * 获取指针格式的属性。
+   * 
+   * @param name 属性的名称。
+   *
+   * @returns 返回属性的值。
+   */
+ getPropPointer(name : string) : any  {
+    return widget_get_prop_pointer(this != null ? (this.nativeObj || this) : null, name);
  }
 
 
@@ -9246,6 +9312,17 @@ export class TWidget {
    */
  isPopup() : boolean  {
     return widget_is_popup(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 检查控件是否是overlay窗口类型。
+   * 
+   *
+   * @returns 返回FALSE表示不是，否则表示是。
+   */
+ isOverlay() : boolean  {
+    return widget_is_overlay(this != null ? (this.nativeObj || this) : null);
  }
 
 
@@ -9778,7 +9855,7 @@ export class TWidget {
  }
 
  set visible(v : boolean) {
-   widget_t_set_prop_visible(this.nativeObj, v);
+   this.setVisible(v);
  }
 
 
@@ -9791,7 +9868,7 @@ export class TWidget {
  }
 
  set sensitive(v : boolean) {
-   widget_t_set_prop_sensitive(this.nativeObj, v);
+   this.setSensitive(v);
  }
 
 
@@ -9804,7 +9881,7 @@ export class TWidget {
  }
 
  set focusable(v : boolean) {
-   widget_t_set_prop_focusable(this.nativeObj, v);
+   this.setFocusable(v);
  }
 
 
@@ -9817,8 +9894,19 @@ export class TWidget {
    return widget_t_get_prop_with_focus_state(this.nativeObj);
  }
 
- set withFocusState(v : boolean) {
-   widget_t_set_prop_with_focus_state(this.nativeObj, v);
+
+  /**
+   * 是否根据子控件和文本自动调整控件自身大小。
+   *
+   *> 为true时，最好不要使用child_layout，否则可能有冲突。
+   *
+   */
+ get autoAdjustSize() : boolean {
+   return widget_t_get_prop_auto_adjust_size(this.nativeObj);
+ }
+
+ set autoAdjustSize(v : boolean) {
+   this.setAutoAdjustSize(v);
  }
 
 
@@ -11471,7 +11559,7 @@ export class TCanvas {
 
 
   /**
-   * 填充矩形。
+   * 绘制矩形。
    * 
    * @param x x坐标。
    * @param y y坐标。
@@ -11482,6 +11570,21 @@ export class TCanvas {
    */
  fillRect(x : number, y : number, w : number, h : number) : TRet  {
     return canvas_fill_rect(this != null ? (this.nativeObj || this) : null, x, y, w, h);
+ }
+
+
+  /**
+   * 填充矩形。
+   * 
+   * @param x x坐标。
+   * @param y y坐标。
+   * @param w 宽度。
+   * @param h 高度。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ clearRect(x : number, y : number, w : number, h : number) : TRet  {
+    return canvas_clear_rect(this != null ? (this.nativeObj || this) : null, x, y, w, h);
  }
 
 
@@ -13634,6 +13737,18 @@ export class TLabel extends TWidget {
 
 
   /**
+   * 设置是否自动换行。
+   * 
+   * @param line_wrap 是否自动换行。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setLineWrap(line_wrap : boolean) : TRet  {
+    return label_set_line_wrap(this != null ? (this.nativeObj || this) : null, line_wrap);
+ }
+
+
+  /**
    * 根据文本内容调节控件大小。
    * 
    * @param min_w 最小宽度。
@@ -13671,6 +13786,19 @@ export class TLabel extends TWidget {
 
  set length(v : number) {
    this.setLength(v);
+ }
+
+
+  /**
+   * 是否自动换行。
+   *
+   */
+ get lineWrap() : boolean {
+   return label_t_get_prop_line_wrap(this.nativeObj);
+ }
+
+ set lineWrap(v : boolean) {
+   this.setLineWrap(v);
  }
 
 };
@@ -19022,6 +19150,33 @@ export class TMledit extends TWidget {
 
 
   /**
+   * 设置编辑器是否在获得焦点时打开输入法。
+   *
+   *> * 设置默认焦点时，打开窗口时不弹出软键盘。
+   *> * 用键盘切换焦点时，编辑器获得焦点时不弹出软键盘。
+   * 
+   * @param open_im_when_focused 是否在获得焦点时打开输入法。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setOpenImWhenFocused(open_im_when_focused : boolean) : TRet  {
+    return mledit_set_open_im_when_focused(this != null ? (this.nativeObj || this) : null, open_im_when_focused);
+ }
+
+
+  /**
+   * 设置编辑器是否在失去焦点时关闭输入法。
+   * 
+   * @param close_im_when_blured 是否是否在失去焦点时关闭输入法。在失去焦点时关闭输入法。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setCloseImWhenBlured(close_im_when_blured : boolean) : TRet  {
+    return mledit_set_close_im_when_blured(this != null ? (this.nativeObj || this) : null, close_im_when_blured);
+ }
+
+
+  /**
    * 转换为mledit对象(供脚本语言使用)。
    * 
    * @param widget mledit对象。
@@ -19173,6 +19328,34 @@ export class TMledit extends TWidget {
 
  set cancelable(v : boolean) {
    this.setCancelable(v);
+ }
+
+
+  /**
+   * 获得焦点时打开输入法。
+   *
+   *> 主要用于没有指针设备的情况，否则每次切换焦点时都打开输入法。
+   *
+   */
+ get openImWhenFocused() : boolean {
+   return mledit_t_get_prop_open_im_when_focused(this.nativeObj);
+ }
+
+ set openImWhenFocused(v : boolean) {
+   this.setOpenImWhenFocused(v);
+ }
+
+
+  /**
+   * 是否在失去焦点时关闭输入法(默认是)。
+   *
+   */
+ get closeImWhenBlured() : boolean {
+   return mledit_t_get_prop_close_im_when_blured(this.nativeObj);
+ }
+
+ set closeImWhenBlured(v : boolean) {
+   this.setCloseImWhenBlured(v);
  }
 
 };
@@ -21896,6 +22079,15 @@ export class TWindowBase extends TWidget {
    return window_base_t_get_prop_move_focus_right_key(this.nativeObj);
  }
 
+
+  /**
+   * 单例。如果窗口存在，先关闭再打开。
+   *
+   */
+ get singleInstance() : boolean {
+   return window_base_t_get_prop_single_instance(this.nativeObj);
+ }
+
 };
 /**
  * 可变的style(可实时修改并生效，主要用于在designer中被编辑的控件，或者一些特殊控件)。
@@ -23872,7 +24064,7 @@ export class TDialog extends TWindowBase {
    *也就是在dialog_modal调用完成后仍然可以访问dialog中控件，直到本次事件结束。
    * 
    *
-   * @returns 返回退出吗。
+   * @returns 返回退出码。
    */
  modal() : TDialogQuitCode  {
     return dialog_modal(this != null ? (this.nativeObj || this) : null);

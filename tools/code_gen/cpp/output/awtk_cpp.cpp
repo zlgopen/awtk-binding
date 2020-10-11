@@ -927,6 +927,10 @@
    return widget_set_feedback(((widget_t*)(this->nativeObj)), feedback);
  }
 
+ ret_t TWidget::SetAutoAdjustSize(bool auto_adjust_size)  {
+   return widget_set_auto_adjust_size(((widget_t*)(this->nativeObj)), auto_adjust_size);
+ }
+
  ret_t TWidget::SetFloating(bool floating)  {
    return widget_set_floating(((widget_t*)(this->nativeObj)), floating);
  }
@@ -983,8 +987,8 @@
    return TWidget((widget_t*)(widget_lookup_by_type(((widget_t*)(this->nativeObj)), type, recursive)));
  }
 
- ret_t TWidget::SetVisible(bool visible, bool recursive)  {
-   return widget_set_visible(((widget_t*)(this->nativeObj)), visible, recursive);
+ ret_t TWidget::SetVisible(bool visible)  {
+   return widget_set_visible(((widget_t*)(this->nativeObj)), visible);
  }
 
  ret_t TWidget::SetVisibleOnly(bool visible)  {
@@ -1013,6 +1017,14 @@
 
  const char* TWidget::GetPropStr(const char* name, const char* defval)  {
     return widget_get_prop_str(((widget_t*)(this->nativeObj)), name, defval);
+ }
+
+ ret_t TWidget::SetPropPointer(const char* name, void** v)  {
+   return widget_set_prop_pointer(((widget_t*)(this->nativeObj)), name, v);
+ }
+
+ void* TWidget::GetPropPointer(const char* name)  {
+    return widget_get_prop_pointer(((widget_t*)(this->nativeObj)), name);
  }
 
  ret_t TWidget::SetPropInt(const char* name, int32_t v)  {
@@ -1061,6 +1073,10 @@
 
  bool TWidget::IsPopup()  {
     return widget_is_popup(((widget_t*)(this->nativeObj)));
+ }
+
+ bool TWidget::IsOverlay()  {
+    return widget_is_overlay(((widget_t*)(this->nativeObj)));
  }
 
  bool TWidget::IsOpenedPopup()  {
@@ -1247,6 +1263,10 @@
    return ((widget_t*)(this->nativeObj))->with_focus_state;
  }
 
+ bool TWidget::GetAutoAdjustSize() const {
+   return ((widget_t*)(this->nativeObj))->auto_adjust_size;
+ }
+
  bool TWidget::GetFloating() const {
    return ((widget_t*)(this->nativeObj))->floating;
  }
@@ -1405,6 +1425,10 @@
 
  ret_t TCanvas::FillRect(xy_t x, xy_t y, wh_t w, wh_t h)  {
    return canvas_fill_rect(((canvas_t*)(this->nativeObj)), x, y, w, h);
+ }
+
+ ret_t TCanvas::ClearRect(xy_t x, xy_t y, wh_t w, wh_t h)  {
+   return canvas_clear_rect(((canvas_t*)(this->nativeObj)), x, y, w, h);
  }
 
  ret_t TCanvas::StrokeRect(xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -1843,12 +1867,20 @@
    return label_set_length(((widget_t*)(this->nativeObj)), length);
  }
 
+ ret_t TLabel::SetLineWrap(bool line_wrap)  {
+   return label_set_line_wrap(((widget_t*)(this->nativeObj)), line_wrap);
+ }
+
  ret_t TLabel::ResizeToContent(uint32_t min_w, uint32_t max_w, uint32_t min_h, uint32_t max_h)  {
    return label_resize_to_content(((widget_t*)(this->nativeObj)), min_w, max_w, min_h, max_h);
  }
 
  int32_t TLabel::GetLength() const {
    return ((label_t*)(this->nativeObj))->length;
+ }
+
+ bool TLabel::GetLineWrap() const {
+   return ((label_t*)(this->nativeObj))->line_wrap;
  }
 
  TWidget TGroupBox::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -2983,6 +3015,14 @@
    return mledit_set_scroll_line(((widget_t*)(this->nativeObj)), scroll_line);
  }
 
+ ret_t TMledit::SetOpenImWhenFocused(bool open_im_when_focused)  {
+   return mledit_set_open_im_when_focused(((widget_t*)(this->nativeObj)), open_im_when_focused);
+ }
+
+ ret_t TMledit::SetCloseImWhenBlured(bool close_im_when_blured)  {
+   return mledit_set_close_im_when_blured(((widget_t*)(this->nativeObj)), close_im_when_blured);
+ }
+
  bool TMledit::GetReadonly() const {
    return ((mledit_t*)(this->nativeObj))->readonly;
  }
@@ -3029,6 +3069,14 @@
 
  bool TMledit::GetCancelable() const {
    return ((mledit_t*)(this->nativeObj))->cancelable;
+ }
+
+ bool TMledit::GetOpenImWhenFocused() const {
+   return ((mledit_t*)(this->nativeObj))->open_im_when_focused;
+ }
+
+ bool TMledit::GetCloseImWhenBlured() const {
+   return ((mledit_t*)(this->nativeObj))->close_im_when_blured;
  }
 
  TWidget TLineNumber::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -3689,6 +3737,10 @@
 
  char* TWindowBase::GetMoveFocusRightKey() const {
    return ((window_base_t*)(this->nativeObj))->move_focus_right_key;
+ }
+
+ bool TWindowBase::GetSingleInstance() const {
+   return ((window_base_t*)(this->nativeObj))->single_instance;
  }
 
  ret_t TStyleMutable::SetName(const char* name)  {

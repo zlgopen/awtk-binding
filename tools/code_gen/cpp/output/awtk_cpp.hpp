@@ -2790,6 +2790,15 @@ public:
   ret_t SetFeedback(bool feedback) ;
 
   /**
+   * 设置控件是否根据子控件和文本自动调整控件自身大小。
+   * 
+   * @param auto_adjust_size 是否根据子控件和文本自动调整控件自身大小。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetAutoAdjustSize(bool auto_adjust_size) ;
+
+  /**
    * 设置控件的floating标志。
    *> floating的控件不受父控件的子控件布局参数的影响。
    * 
@@ -2924,11 +2933,10 @@ public:
    * 设置控件的可见性。
    * 
    * @param visible 是否可见。
-   * @param recursive 是否递归设置全部子控件。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetVisible(bool visible, bool recursive) ;
+  ret_t SetVisible(bool visible) ;
 
   /**
    * 设置控件的可见性(不触发repaint和relayout)。
@@ -2999,6 +3007,25 @@ public:
    * @return 返回属性的值。
    */
   const char* GetPropStr(const char* name, const char* defval) ;
+
+  /**
+   * 设置指针格式的属性。
+   * 
+   * @param name 属性的名称。
+   * @param v 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetPropPointer(const char* name, void** v) ;
+
+  /**
+   * 获取指针格式的属性。
+   * 
+   * @param name 属性的名称。
+   *
+   * @return 返回属性的值。
+   */
+  void* GetPropPointer(const char* name) ;
 
   /**
    * 设置整数格式的属性。
@@ -3105,6 +3132,14 @@ public:
    * @return 返回FALSE表示不是，否则表示是。
    */
   bool IsPopup() ;
+
+  /**
+   * 检查控件是否是overlay窗口类型。
+   * 
+   *
+   * @return 返回FALSE表示不是，否则表示是。
+   */
+  bool IsOverlay() ;
 
   /**
    * 检查控件弹出窗口控件是否已经打开了（而非挂起状态）。
@@ -3488,6 +3523,14 @@ public:
    *
    */
   bool GetWithFocusState() const;
+
+  /**
+   * 是否根据子控件和文本自动调整控件自身大小。
+   *
+   *> 为true时，最好不要使用child_layout，否则可能有冲突。
+   *
+   */
+  bool GetAutoAdjustSize() const;
 
   /**
    * 标识控件是否启用浮动布局，不受父控件的children_layout的控制。
@@ -4008,7 +4051,7 @@ public:
   ret_t DrawHline(xy_t x, xy_t y, wh_t w) ;
 
   /**
-   * 填充矩形。
+   * 绘制矩形。
    * 
    * @param x x坐标。
    * @param y y坐标。
@@ -4018,6 +4061,18 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t FillRect(xy_t x, xy_t y, wh_t w, wh_t h) ;
+
+  /**
+   * 填充矩形。
+   * 
+   * @param x x坐标。
+   * @param y y坐标。
+   * @param w 宽度。
+   * @param h 高度。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t ClearRect(xy_t x, xy_t y, wh_t w, wh_t h) ;
 
   /**
    * 绘制矩形。
@@ -5664,6 +5719,15 @@ public:
   ret_t SetLength(int32_t length) ;
 
   /**
+   * 设置是否自动换行。
+   * 
+   * @param line_wrap 是否自动换行。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetLineWrap(bool line_wrap) ;
+
+  /**
    * 根据文本内容调节控件大小。
    * 
    * @param min_w 最小宽度。
@@ -5681,6 +5745,12 @@ public:
    *
    */
   int32_t GetLength() const;
+
+  /**
+   * 是否自动换行。
+   *
+   */
+  bool GetLineWrap() const;
 };
 
 
@@ -10217,6 +10287,27 @@ public:
   ret_t SetScrollLine(uint32_t scroll_line) ;
 
   /**
+   * 设置编辑器是否在获得焦点时打开输入法。
+   *
+   *> * 设置默认焦点时，打开窗口时不弹出软键盘。
+   *> * 用键盘切换焦点时，编辑器获得焦点时不弹出软键盘。
+   * 
+   * @param open_im_when_focused 是否在获得焦点时打开输入法。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetOpenImWhenFocused(bool open_im_when_focused) ;
+
+  /**
+   * 设置编辑器是否在失去焦点时关闭输入法。
+   * 
+   * @param close_im_when_blured 是否是否在失去焦点时关闭输入法。在失去焦点时关闭输入法。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetCloseImWhenBlured(bool close_im_when_blured) ;
+
+  /**
    * 编辑器是否为只读。
    *
    */
@@ -10290,6 +10381,20 @@ public:
    *
    */
   bool GetCancelable() const;
+
+  /**
+   * 获得焦点时打开输入法。
+   *
+   *> 主要用于没有指针设备的情况，否则每次切换焦点时都打开输入法。
+   *
+   */
+  bool GetOpenImWhenFocused() const;
+
+  /**
+   * 是否在失去焦点时关闭输入法(默认是)。
+   *
+   */
+  bool GetCloseImWhenBlured() const;
 };
 
 
@@ -12501,6 +12606,12 @@ public:
    *
    */
   char* GetMoveFocusRightKey() const;
+
+  /**
+   * 单例。如果窗口存在，先关闭再打开。
+   *
+   */
+  bool GetSingleInstance() const;
 };
 
 
@@ -14404,7 +14515,7 @@ public:
    *也就是在dialog_modal调用完成后仍然可以访问dialog中控件，直到本次事件结束。
    * 
    *
-   * @return 返回退出吗。
+   * @return 返回退出码。
    */
   dialog_quit_code_t Modal() ;
 
