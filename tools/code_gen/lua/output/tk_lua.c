@@ -6475,7 +6475,7 @@ static int wrap_widget_set_prop_pointer(lua_State* L) {
   ret_t ret = 0;
   widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
-  void** v = (void**)lua_touserdata(L, 3);
+  void* v = (void*)lua_touserdata(L, 3);
   ret = (ret_t)widget_set_prop_pointer(widget, name, v);
 
   lua_pushnumber(L,(lua_Number)(ret));

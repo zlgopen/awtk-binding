@@ -3016,7 +3016,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetPropPointer(const char* name, void** v) ;
+  ret_t SetPropPointer(const char* name, void* v) ;
 
   /**
    * 获取指针格式的属性。

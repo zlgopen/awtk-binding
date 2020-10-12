@@ -1019,7 +1019,7 @@
     return widget_get_prop_str(((widget_t*)(this->nativeObj)), name, defval);
  }
 
- ret_t TWidget::SetPropPointer(const char* name, void** v)  {
+ ret_t TWidget::SetPropPointer(const char* name, void* v)  {
    return widget_set_prop_pointer(((widget_t*)(this->nativeObj)), name, v);
  }
 

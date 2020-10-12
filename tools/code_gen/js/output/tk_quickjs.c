@@ -11763,7 +11763,7 @@ jsvalue_t wrap_widget_set_prop_pointer(
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
   const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
-  void** v = (void**)jsvalue_get_pointer(ctx, argv[2], "void**");
+  void* v = (void*)jsvalue_get_pointer(ctx, argv[2], "void*");
   ret = (ret_t)widget_set_prop_pointer(widget, name, v);
   jsvalue_free_str(ctx, name);
 

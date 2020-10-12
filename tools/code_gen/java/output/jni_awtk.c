@@ -7720,7 +7720,7 @@ int awtk_TWidget_widget_set_prop_pointer(Runtime *runtime, JClass *clazz) {
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
   const char* name = (const char*)jni_ctx_get_str(&ctx);
-  void** v = (void**)jni_ctx_get_int64(&ctx);
+  void* v = (void*)jni_ctx_get_int64(&ctx);
   ret = (ret_t)widget_set_prop_pointer(widget, name, v);
   TKMEM_FREE(name);
   jni_ctx_return_int(&ctx, (int32_t)(ret));
