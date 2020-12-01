@@ -248,6 +248,13 @@ public enum TWidgetProp {
   LINE_WRAP (WIDGET_PROP_LINE_WRAP()),
   
   /**
+   * 是否允许单词中换行。
+   *
+   */
+ 
+  WORD_WRAP (WIDGET_PROP_WORD_WRAP()),
+  
+  /**
    * 文本。
    *
    */
@@ -470,6 +477,20 @@ public enum TWidgetProp {
    */
  
   ACTIVE (WIDGET_PROP_ACTIVE()),
+  
+  /**
+   * 当前页。
+   *
+   */
+ 
+  CURR_PAGE (WIDGET_PROP_CURR_PAGE()),
+  
+  /**
+   * 页面最大个数。
+   *
+   */
+ 
+  PAGE_MAX_NUMBER (WIDGET_PROP_PAGE_MAX_NUMBER()),
   
   /**
    * 是否为垂直模式。
@@ -899,6 +920,13 @@ public enum TWidgetProp {
   CLOSE_WHEN_CLICK_OUTSIDE (WIDGET_PROP_CLOSE_WHEN_CLICK_OUTSIDE()),
   
   /**
+   * 超时后关闭窗口。
+   *
+   */
+ 
+  CLOSE_WHEN_TIMEOUT (WIDGET_PROP_CLOSE_WHEN_TIMEOUT()),
+  
+  /**
    * 行间距。
    *
    */
@@ -1070,6 +1098,7 @@ public enum TWidgetProp {
   static private native String WIDGET_PROP_VALUE();
   static private native String WIDGET_PROP_LENGTH();
   static private native String WIDGET_PROP_LINE_WRAP();
+  static private native String WIDGET_PROP_WORD_WRAP();
   static private native String WIDGET_PROP_TEXT();
   static private native String WIDGET_PROP_TR_TEXT();
   static private native String WIDGET_PROP_STYLE();
@@ -1102,6 +1131,8 @@ public enum TWidgetProp {
   static private native String WIDGET_PROP_CANCELABLE();
   static private native String WIDGET_PROP_PASSWORD_VISIBLE();
   static private native String WIDGET_PROP_ACTIVE();
+  static private native String WIDGET_PROP_CURR_PAGE();
+  static private native String WIDGET_PROP_PAGE_MAX_NUMBER();
   static private native String WIDGET_PROP_VERTICAL();
   static private native String WIDGET_PROP_SHOW_TEXT();
   static private native String WIDGET_PROP_XOFFSET();
@@ -1163,6 +1194,7 @@ public enum TWidgetProp {
   static private native String WIDGET_PROP_SELECTED_INDEX();
   static private native String WIDGET_PROP_CLOSE_WHEN_CLICK();
   static private native String WIDGET_PROP_CLOSE_WHEN_CLICK_OUTSIDE();
+  static private native String WIDGET_PROP_CLOSE_WHEN_TIMEOUT();
   static private native String WIDGET_PROP_LINE_GAP();
   static private native String WIDGET_PROP_BG_COLOR();
   static private native String WIDGET_PROP_BORDER_COLOR();

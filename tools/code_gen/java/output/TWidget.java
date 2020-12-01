@@ -1465,6 +1465,7 @@ public class TWidget {
    * 是否根据子控件和文本自动调整控件自身大小。
    *
    *> 为true时，最好不要使用child_layout，否则可能有冲突。
+   *> 注意：只是调整控件的本身的宽高，不会修改控件本身的位置。
    *
    */
  public boolean getAutoAdjustSize() {

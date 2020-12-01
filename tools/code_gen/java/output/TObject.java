@@ -376,6 +376,18 @@ public class TObject extends TEmitter {
 
 
   /**
+   * 检查是否存在指定的属性。
+   * 
+   * @param path 属性的path，各级之间用.分隔。
+   *
+   * @return 返回TRUE表示存在，否则表示不存在。
+   */
+ public  boolean hasPropByPath(String path)  {
+    return object_has_prop_by_path(this != null ? (this.nativeObj) : 0, path);
+ }
+
+
+  /**
    * 获取指定属性的字符串类型的值。
    * 
    * @param path 属性的path。
@@ -439,6 +451,8 @@ public class TObject extends TEmitter {
 
   /**
    * 获取指定属性的浮点数类型的值。
+   *
+   *e
    * 
    * @param path 属性的path。
    * @param defval 缺省值。
@@ -447,6 +461,110 @@ public class TObject extends TEmitter {
    */
  public  double getPropFloatByPath(String path, double defval)  {
     return object_get_prop_float_by_path(this != null ? (this.nativeObj) : 0, path, defval);
+ }
+
+
+  /**
+   * 设置指定属性的值。
+   * 
+   * @param path 属性的path。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setPropByPath(String path, TValue value)  {
+   return TRet.from(object_set_prop_by_path(this != null ? (this.nativeObj) : 0, path, value != null ? (value.nativeObj) : 0));
+ }
+
+
+  /**
+   * 设置指定属性的字符串类型的值。
+   * 
+   * @param path 属性的path。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setPropStrByPath(String path, String value)  {
+   return TRet.from(object_set_prop_str_by_path(this != null ? (this.nativeObj) : 0, path, value));
+ }
+
+
+  /**
+   * 设置指定属性的object类型的值。
+   * 
+   * @param path 属性的path。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setPropObjectByPath(String path, TObject value)  {
+   return TRet.from(object_set_prop_object_by_path(this != null ? (this.nativeObj) : 0, path, value != null ? (value.nativeObj) : 0));
+ }
+
+
+  /**
+   * 设置指定属性的整数类型的值。
+   * 
+   * @param path 属性的path。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setPropIntByPath(String path, int value)  {
+   return TRet.from(object_set_prop_int_by_path(this != null ? (this.nativeObj) : 0, path, value));
+ }
+
+
+  /**
+   * 设置指定属性的bool类型的值。
+   * 
+   * @param path 属性的path。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setPropBoolByPath(String path, boolean value)  {
+   return TRet.from(object_set_prop_bool_by_path(this != null ? (this.nativeObj) : 0, path, value));
+ }
+
+
+  /**
+   * 设置指定属性的浮点数类型的值。
+   * 
+   * @param path 属性的path。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setPropFloatByPath(String path, double value)  {
+   return TRet.from(object_set_prop_float_by_path(this != null ? (this.nativeObj) : 0, path, value));
+ }
+
+
+  /**
+   * 检查是否可以执行指定的命令。
+   * 
+   * @param path 命令的path。
+   * @param args 命令的参数。
+   *
+   * @return 返回TRUE表示可以执行，否则表示不可以执行。
+   */
+ public  boolean canExecByPath(String path, String args)  {
+    return object_can_exec_by_path(this != null ? (this.nativeObj) : 0, path, args);
+ }
+
+
+  /**
+   * 执行指定的命令。
+   * 
+   * @param path 命令的path。
+   * @param args 命令的参数。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet executeByPath(String path, String args)  {
+   return TRet.from(object_exec_by_path(this != null ? (this.nativeObj) : 0, path, args));
  }
 
 
@@ -495,12 +613,21 @@ static private native int object_eval(long obj, String expr, long v);
 static private native boolean object_can_exec(long obj, String name, String args);
 static private native int object_exec(long obj, String name, String args);
 static private native int object_notify_changed(long obj);
+static private native boolean object_has_prop_by_path(long obj, String path);
 static private native String object_get_prop_str_by_path(long obj, String path);
 static private native long object_get_prop_pointer_by_path(long obj, String path);
 static private native long object_get_prop_object_by_path(long obj, String path);
 static private native int object_get_prop_int_by_path(long obj, String path, int defval);
 static private native boolean object_get_prop_bool_by_path(long obj, String path, boolean defval);
 static private native double object_get_prop_float_by_path(long obj, String path, double defval);
+static private native int object_set_prop_by_path(long obj, String path, long value);
+static private native int object_set_prop_str_by_path(long obj, String path, String value);
+static private native int object_set_prop_object_by_path(long obj, String path, long value);
+static private native int object_set_prop_int_by_path(long obj, String path, int value);
+static private native int object_set_prop_bool_by_path(long obj, String path, boolean value);
+static private native int object_set_prop_float_by_path(long obj, String path, double value);
+static private native boolean object_can_exec_by_path(long obj, String path, String args);
+static private native int object_exec_by_path(long obj, String path, String args);
 static private native int object_t_get_prop_ref_count(long nativeObj);
 static private native String object_t_get_prop_name(long nativeObj);
 };

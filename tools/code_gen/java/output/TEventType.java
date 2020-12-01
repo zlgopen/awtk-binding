@@ -568,6 +568,13 @@ public enum TEventType {
   MULTI_GESTURE (EVT_MULTI_GESTURE()),
   
   /**
+   * 页面改变了(event_t)。
+   *
+   */
+ 
+  PAGE_CHANGED (EVT_PAGE_CHANGED()),
+  
+  /**
    * event queue其它请求编号起始值。
    *
    */
@@ -784,6 +791,7 @@ public enum TEventType {
   static private native int EVT_SCROLL();
   static private native int EVT_SCROLL_END();
   static private native int EVT_MULTI_GESTURE();
+  static private native int EVT_PAGE_CHANGED();
   static private native int EVT_REQ_START();
   static private native int EVT_USER_START();
   static private native int EVT_NONE();

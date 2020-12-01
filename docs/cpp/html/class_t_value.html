@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TValue类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -30,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.8.20 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'搜索');
@@ -128,6 +128,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:acbcee6429e8ec0a2346926bef1edac0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03365d89e6a44ab5a69978ea5a0bdaf5"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a03365d89e6a44ab5a69978ea5a0bdaf5">Str</a> ()</td></tr>
 <tr class="separator:a03365d89e6a44ab5a69978ea5a0bdaf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ad123f1960740a14830365970fd2316"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a4ad123f1960740a14830365970fd2316">StrEx</a> (char *buff, uint32_t size)</td></tr>
+<tr class="separator:a4ad123f1960740a14830365970fd2316"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cc6c9f56e29742e5e4400a4dae74739"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a4cc6c9f56e29742e5e4400a4dae74739">IsNull</a> ()</td></tr>
 <tr class="separator:a4cc6c9f56e29742e5e4400a4dae74739"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f0e72a1e474ecd8a4a2e76a87a2b52f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a9f0e72a1e474ecd8a4a2e76a87a2b52f">SetInt</a> (int32_t value)</td></tr>
@@ -655,9 +657,6 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
       </table>
 </div><div class="memdoc">
 <p>设置类型为字符串的值(并拷贝字符串)。</p>
-<blockquote class="doxtable">
-<p>供脚本语言使用。 </p>
-</blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>待设置的值。</td></tr>
@@ -817,6 +816,43 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
+<a id="a4ad123f1960740a14830365970fd2316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ad123f1960740a14830365970fd2316">&#9670;&nbsp;</a></span>StrEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * TValue::StrEx </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取类型为字符串的值。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buff</td><td>用于格式转换的缓冲区。 </td></tr>
+    <tr><td class="paramname">size</td><td>缓冲区大小。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>值。 </dd></dl>
+
+</div>
+</div>
 <a id="a20ef94873870ee699d917bfb65aee583"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a20ef94873870ee699d917bfb65aee583">&#9670;&nbsp;</a></span>Token()</h2>
 
@@ -900,9 +936,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
+制作者&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

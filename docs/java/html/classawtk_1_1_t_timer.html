@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TTimer类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -30,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.8.20 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'搜索');
@@ -82,6 +82,10 @@ $(function() {
 <tr class="separator:aa98fdd8bd7ea95cc0efaf28d68c7807d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e60d742d29ccbe48e3a285ce497822d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_timer.html#a6e60d742d29ccbe48e3a285ce497822d">reset</a> (int timer_id)</td></tr>
 <tr class="separator:a6e60d742d29ccbe48e3a285ce497822d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1349afbce0b3d21cba676da7370992d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_timer.html#ab1349afbce0b3d21cba676da7370992d">suspend</a> (int timer_id)</td></tr>
+<tr class="separator:ab1349afbce0b3d21cba676da7370992d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa25940b2409e7b8c751847d44daa0c31"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_timer.html#aa25940b2409e7b8c751847d44daa0c31">resume</a> (int timer_id)</td></tr>
+<tr class="separator:aa25940b2409e7b8c751847d44daa0c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b2196b6aeac5988564497a3b5a12dcb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_timer.html#a2b2196b6aeac5988564497a3b5a12dcb">modify</a> (int timer_id, int duration)</td></tr>
 <tr class="separator:a2b2196b6aeac5988564497a3b5a12dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -260,15 +264,81 @@ $(function() {
 
 </div>
 </div>
+<a id="aa25940b2409e7b8c751847d44daa0c31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa25940b2409e7b8c751847d44daa0c31">&#9670;&nbsp;</a></span>resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TTimer.resume </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timer_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>唤醒挂起指定的timer，并且重置定时器重新开始计时</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer_id</td><td>timerID。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="ab1349afbce0b3d21cba676da7370992d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1349afbce0b3d21cba676da7370992d">&#9670;&nbsp;</a></span>suspend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TTimer.suspend </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timer_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>挂起指定的timer，一般用于不断循环触发的计时器。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer_id</td><td>timerID。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/TTimer.java</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
+制作者&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

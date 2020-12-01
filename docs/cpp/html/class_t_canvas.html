@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TCanvas类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -30,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.8.20 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'搜索');
@@ -110,6 +110,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:aa124bbf9a4a8a5876c1c2620e64b50a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a470b0fecb53c44d66a879e1c0331de4e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_canvas.html#a470b0fecb53c44d66a879e1c0331de4e">FillRect</a> (xy_t x, xy_t y, wh_t w, wh_t h)</td></tr>
 <tr class="separator:a470b0fecb53c44d66a879e1c0331de4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31c4d09880462e824866f7e62f2463ed"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_canvas.html#a31c4d09880462e824866f7e62f2463ed">ClearRect</a> (xy_t x, xy_t y, wh_t w, wh_t h)</td></tr>
+<tr class="separator:a31c4d09880462e824866f7e62f2463ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa54afb4b3cd60513b1206547b7b02ac0"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_canvas.html#aa54afb4b3cd60513b1206547b7b02ac0">StrokeRect</a> (xy_t x, xy_t y, wh_t w, wh_t h)</td></tr>
 <tr class="separator:aa54afb4b3cd60513b1206547b7b02ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8570ee592258ea0bba13179e34ef5138"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_canvas.html#a8570ee592258ea0bba13179e34ef5138">SetFont</a> (const char *name, font_size_t size)</td></tr>
@@ -126,6 +128,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a39191ff063b921405d4d2bf243b5b1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae991b51e189ef9c16013c2050fa48078"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_canvas.html#ae991b51e189ef9c16013c2050fa48078">DrawImageEx</a> (<a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;img, image_draw_type_t draw_type, <a class="el" href="class_t_rect.html">TRect</a> &amp;dst)</td></tr>
 <tr class="separator:ae991b51e189ef9c16013c2050fa48078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f0dbe8cac199e14dbfed0c2ec79840a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_canvas.html#a2f0dbe8cac199e14dbfed0c2ec79840a">DrawImageEx2</a> (<a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;img, image_draw_type_t draw_type, <a class="el" href="class_t_rect.html">TRect</a> &amp;src, <a class="el" href="class_t_rect.html">TRect</a> &amp;dst)</td></tr>
+<tr class="separator:a2f0dbe8cac199e14dbfed0c2ec79840a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66209c77d4fc2703efa98d0507c30497"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_canvas.html#a66209c77d4fc2703efa98d0507c30497">GetVgcanvas</a> ()</td></tr>
 <tr class="separator:a66209c77d4fc2703efa98d0507c30497"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a319fccdc99e75b5bbafedcecb799689e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_canvas.html#a319fccdc99e75b5bbafedcecb799689e">Reset</a> ()</td></tr>
@@ -159,6 +163,60 @@ canvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>提供基本的绘图功能和状态管理。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
+<a id="a31c4d09880462e824866f7e62f2463ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31c4d09880462e824866f7e62f2463ed">&#9670;&nbsp;</a></span>ClearRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TCanvas::ClearRect </td>
+          <td>(</td>
+          <td class="paramtype">xy_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">xy_t&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wh_t&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wh_t&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>用填充颜色填充指定矩形。</p>
+<blockquote class="doxtable">
+<p>如果lcd的颜色格式带alpha通道，连同alpha的值一起修改。 </p>
+</blockquote>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x坐标。 </td></tr>
+    <tr><td class="paramname">y</td><td>y坐标。 </td></tr>
+    <tr><td class="paramname">w</td><td>宽度。 </td></tr>
+    <tr><td class="paramname">h</td><td>高度。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="aa124bbf9a4a8a5876c1c2620e64b50a2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa124bbf9a4a8a5876c1c2620e64b50a2">&#9670;&nbsp;</a></span>DrawHline()</h2>
 
@@ -335,6 +393,57 @@ canvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
 
 </div>
 </div>
+<a id="a2f0dbe8cac199e14dbfed0c2ec79840a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f0dbe8cac199e14dbfed0c2ec79840a">&#9670;&nbsp;</a></span>DrawImageEx2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TCanvas::DrawImageEx2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;&#160;</td>
+          <td class="paramname"><em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">image_draw_type_t&#160;</td>
+          <td class="paramname"><em>draw_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_t_rect.html">TRect</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_t_rect.html">TRect</a> &amp;&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>绘制图片。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>图片对象。 </td></tr>
+    <tr><td class="paramname">draw_type</td><td>绘制类型。 </td></tr>
+    <tr><td class="paramname">src</td><td>源区域。 </td></tr>
+    <tr><td class="paramname">dst</td><td>目的区域。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="a99c8972eb7b4f26feabebd9cc549bbcf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a99c8972eb7b4f26feabebd9cc549bbcf">&#9670;&nbsp;</a></span>DrawText()</h2>
 
@@ -503,7 +612,7 @@ canvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
         </tr>
       </table>
 </div><div class="memdoc">
-<p>填充矩形。</p>
+<p>绘制矩形。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>x坐标。 </td></tr>
@@ -1083,9 +1192,7 @@ canvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
+制作者&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

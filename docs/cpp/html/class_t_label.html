@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TLabel类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -30,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.8.20 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'搜索');
@@ -89,10 +89,18 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a788d0dc9d990589fd333193fae1defec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95b6681ad924162dd2300b68f262fa87"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_label.html#a95b6681ad924162dd2300b68f262fa87">SetLength</a> (int32_t length)</td></tr>
 <tr class="separator:a95b6681ad924162dd2300b68f262fa87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8e65847154a3fcae10fe142f7412a1c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_label.html#ac8e65847154a3fcae10fe142f7412a1c">SetLineWrap</a> (bool line_wrap)</td></tr>
+<tr class="separator:ac8e65847154a3fcae10fe142f7412a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57d3008871b7761e657d3d5fccf03934"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_label.html#a57d3008871b7761e657d3d5fccf03934">SetWordWrap</a> (bool word_wrap)</td></tr>
+<tr class="separator:a57d3008871b7761e657d3d5fccf03934"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a860e9d860c6db925b9420c395b29a0d6"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_label.html#a860e9d860c6db925b9420c395b29a0d6">ResizeToContent</a> (uint32_t min_w, uint32_t max_w, uint32_t min_h, uint32_t max_h)</td></tr>
 <tr class="separator:a860e9d860c6db925b9420c395b29a0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27b90ab5cbad9e9c3cb0779d6755ff3a"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_label.html#a27b90ab5cbad9e9c3cb0779d6755ff3a">GetLength</a> () const</td></tr>
 <tr class="separator:a27b90ab5cbad9e9c3cb0779d6755ff3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaccf38790ee572b1ea0868275429fc3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_label.html#acaccf38790ee572b1ea0868275429fc3">GetLineWrap</a> () const</td></tr>
+<tr class="separator:acaccf38790ee572b1ea0868275429fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68f49ebe18cdcb0d5af1a8123d22795f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_label.html#a68f49ebe18cdcb0d5af1a8123d22795f">GetWordWrap</a> () const</td></tr>
+<tr class="separator:a68f49ebe18cdcb0d5af1a8123d22795f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -121,7 +129,7 @@ static <a class="el" href="class_t_label.html">TLabel</a>&#160;</td><td class="m
 </div><!-- fragment --><blockquote class="doxtable">
 <p>更多用法请参考：[label.xml]( </p>
 </blockquote>
-<p><a href="https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/label.xml">https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/ui/label.xml</a>)</p>
+<p><a href="https://github.com/zlgopen/awtk/blob/master/design/default/ui/label.xml">https://github.com/zlgopen/awtk/blob/master/design/default/ui/label.xml</a>)</p>
 <p>在c代码中使用函数label_create创建文本控件。如：</p>
 <blockquote class="doxtable">
 <p>创建之后，需要用widget_set_text或widget_set_text_utf8设置文本内容。 </p>
@@ -137,7 +145,7 @@ static <a class="el" href="class_t_label.html">TLabel</a>&#160;</td><td class="m
 </div><!-- fragment --><blockquote class="doxtable">
 <p>更多用法请参考： </p>
 </blockquote>
-<p><a href="https://github.com/zlgopen/awtk/blob/master/demos/assets/default/raw/styles/default.xml#L144">theme default</a> </p>
+<p><a href="https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L144">theme default</a> </p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a708b2c67efc0a96c5c06139568bc21e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a708b2c67efc0a96c5c06139568bc21e8">&#9670;&nbsp;</a></span>Create()</h2>
@@ -223,6 +231,42 @@ static <a class="el" href="class_t_label.html">TLabel</a>&#160;</td><td class="m
 
 </div>
 </div>
+<a id="acaccf38790ee572b1ea0868275429fc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaccf38790ee572b1ea0868275429fc3">&#9670;&nbsp;</a></span>GetLineWrap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TLabel::GetLineWrap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>是否自动换行。 </p>
+
+</div>
+</div>
+<a id="a68f49ebe18cdcb0d5af1a8123d22795f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68f49ebe18cdcb0d5af1a8123d22795f">&#9670;&nbsp;</a></span>GetWordWrap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TLabel::GetWordWrap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>是否允许单词中换行。(需要开启自动换行才有效果) </p>
+
+</div>
+</div>
 <a id="a860e9d860c6db925b9420c395b29a0d6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a860e9d860c6db925b9420c395b29a0d6">&#9670;&nbsp;</a></span>ResizeToContent()</h2>
 
@@ -300,6 +344,58 @@ static <a class="el" href="class_t_label.html">TLabel</a>&#160;</td><td class="m
 
 </div>
 </div>
+<a id="ac8e65847154a3fcae10fe142f7412a1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8e65847154a3fcae10fe142f7412a1c">&#9670;&nbsp;</a></span>SetLineWrap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TLabel::SetLineWrap </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>line_wrap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置是否自动换行。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line_wrap</td><td>是否自动换行。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a57d3008871b7761e657d3d5fccf03934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57d3008871b7761e657d3d5fccf03934">&#9670;&nbsp;</a></span>SetWordWrap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TLabel::SetWordWrap </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>word_wrap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置是否允许单词中换行。(需要开启自动换行才有效果)</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">word_wrap</td><td>是否允许单词中换行。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
 <li>output/awtk_cpp.cpp</li>
@@ -307,9 +403,7 @@ static <a class="el" href="class_t_label.html">TLabel</a>&#160;</td><td class="m
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
+制作者&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

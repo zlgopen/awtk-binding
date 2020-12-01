@@ -74,6 +74,18 @@ public class TDateTime {
 
 
   /**
+   * 加上一个偏移量(s)。
+   * 
+   * @param delta 偏移量(s)。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet addDelta(long delta)  {
+   return TRet.from(date_time_add_delta(this != null ? (this.nativeObj) : 0, delta));
+ }
+
+
+  /**
    * 是否是闰年。
    * 
    * @param year 年份。
@@ -212,6 +224,7 @@ public class TDateTime {
 static private native long date_time_create();
 static private native int date_time_set(long dt);
 static private native int date_time_from_time(long dt, long time);
+static private native int date_time_add_delta(long dt, long delta);
 static private native boolean date_time_is_leap(int year);
 static private native int date_time_get_days(int year, int montn);
 static private native int date_time_get_wday(int year, int montn, int day);

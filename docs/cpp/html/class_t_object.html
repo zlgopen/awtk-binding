@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TObject类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -30,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.8.20 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'搜索');
@@ -78,7 +78,12 @@ $(function() {
  <div class="center">
   <img src="class_t_object.png" usemap="#TObject_map" alt=""/>
   <map id="TObject_map" name="TObject_map">
-<area href="class_t_emitter.html" alt="TEmitter" shape="rect" coords="0,0,57,24"/>
+<area href="class_t_emitter.html" alt="TEmitter" shape="rect" coords="218,0,317,24"/>
+<area href="class_t_idle_info.html" alt="TIdleInfo" shape="rect" coords="0,112,99,136"/>
+<area href="class_t_native_window.html" alt="TNativeWindow" shape="rect" coords="109,112,208,136"/>
+<area href="class_t_object_array.html" alt="TObjectArray" shape="rect" coords="218,112,317,136"/>
+<area href="class_t_object_default.html" alt="TObjectDefault" shape="rect" coords="327,112,426,136"/>
+<area href="class_t_timer_info.html" alt="TTimerInfo" shape="rect" coords="436,112,535,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -144,6 +149,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a7acc0900e37142a9517729b773cb72a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af15d9c5da8a2d488a57f55f67aa67728"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#af15d9c5da8a2d488a57f55f67aa67728">NotifyChanged</a> ()</td></tr>
 <tr class="separator:af15d9c5da8a2d488a57f55f67aa67728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16830e3dbfb8a81f4e150d471c33857b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a16830e3dbfb8a81f4e150d471c33857b">HasPropByPath</a> (const char *path)</td></tr>
+<tr class="separator:a16830e3dbfb8a81f4e150d471c33857b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8a5b39300b80d1d44e448490eb69780"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ab8a5b39300b80d1d44e448490eb69780">GetPropStrByPath</a> (const char *path)</td></tr>
 <tr class="separator:ab8a5b39300b80d1d44e448490eb69780"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6fc799cc003acb28b813aedb21220be"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#af6fc799cc003acb28b813aedb21220be">GetPropPointerByPath</a> (const char *path)</td></tr>
@@ -156,6 +163,22 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a547a9330c84728a6699e46705e22e655"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf739a4ae16e9735e1bf48393827f5f3"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#adf739a4ae16e9735e1bf48393827f5f3">GetPropFloatByPath</a> (const char *path, float_t defval)</td></tr>
 <tr class="separator:adf739a4ae16e9735e1bf48393827f5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a302ae92a78db48c4f2685e64c97028bb"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a302ae92a78db48c4f2685e64c97028bb">SetPropByPath</a> (const char *path, <a class="el" href="class_t_value.html">TValue</a> &amp;value)</td></tr>
+<tr class="separator:a302ae92a78db48c4f2685e64c97028bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47abf468dd636223b332df5c510a1bcc"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a47abf468dd636223b332df5c510a1bcc">SetPropStrByPath</a> (const char *path, const char *value)</td></tr>
+<tr class="separator:a47abf468dd636223b332df5c510a1bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22228e736dca7f6c5dff6e2ffb585f9e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a22228e736dca7f6c5dff6e2ffb585f9e">SetPropObjectByPath</a> (const char *path, <a class="el" href="class_t_object.html">TObject</a> &amp;value)</td></tr>
+<tr class="separator:a22228e736dca7f6c5dff6e2ffb585f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18e223fad30b711b17190f3b91ca01a8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a18e223fad30b711b17190f3b91ca01a8">SetPropIntByPath</a> (const char *path, int32_t value)</td></tr>
+<tr class="separator:a18e223fad30b711b17190f3b91ca01a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c266e215ead183eaf6b47c528d1c498"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a3c266e215ead183eaf6b47c528d1c498">SetPropBoolByPath</a> (const char *path, bool value)</td></tr>
+<tr class="separator:a3c266e215ead183eaf6b47c528d1c498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aada5c0b6cfb6225ec675c93432403421"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#aada5c0b6cfb6225ec675c93432403421">SetPropFloatByPath</a> (const char *path, float_t value)</td></tr>
+<tr class="separator:aada5c0b6cfb6225ec675c93432403421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc51fc6524aae910b9f66221689b8b89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#adc51fc6524aae910b9f66221689b8b89">CanExecByPath</a> (const char *path, const char *args)</td></tr>
+<tr class="separator:adc51fc6524aae910b9f66221689b8b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bbf691f4244a6addc5acea9c58e867d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a1bbf691f4244a6addc5acea9c58e867d">ExecuteByPath</a> (const char *path, const char *args)</td></tr>
+<tr class="separator:a1bbf691f4244a6addc5acea9c58e867d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf88f8baf905e1ec672b47d2beebb193"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#abf88f8baf905e1ec672b47d2beebb193">GetRefCount</a> () const</td></tr>
 <tr class="separator:abf88f8baf905e1ec672b47d2beebb193"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad49dccfbf4ceccd4c61211841a7d74d7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ad49dccfbf4ceccd4c61211841a7d74d7">GetName</a> () const</td></tr>
@@ -249,6 +272,43 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>命令的名称。 </td></tr>
+    <tr><td class="paramname">args</td><td>命令的参数。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回TRUE表示可以执行，否则表示不可以执行。 </dd></dl>
+
+</div>
+</div>
+<a id="adc51fc6524aae910b9f66221689b8b89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc51fc6524aae910b9f66221689b8b89">&#9670;&nbsp;</a></span>CanExecByPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TObject::CanExecByPath </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>检查是否可以执行指定的命令。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>命令的path。 </td></tr>
     <tr><td class="paramname">args</td><td>命令的参数。</td></tr>
   </table>
   </dd>
@@ -386,6 +446,43 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>命令的名称。 </td></tr>
+    <tr><td class="paramname">args</td><td>命令的参数。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a1bbf691f4244a6addc5acea9c58e867d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bbf691f4244a6addc5acea9c58e867d">&#9670;&nbsp;</a></span>ExecuteByPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TObject::ExecuteByPath </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>执行指定的命令。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>命令的path。 </td></tr>
     <tr><td class="paramname">args</td><td>命令的参数。</td></tr>
   </table>
   </dd>
@@ -605,6 +702,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
       </table>
 </div><div class="memdoc">
 <p>获取指定属性的浮点数类型的值。</p>
+<p>e</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>属性的path。 </td></tr>
@@ -928,6 +1026,32 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
+<a id="a16830e3dbfb8a81f4e150d471c33857b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16830e3dbfb8a81f4e150d471c33857b">&#9670;&nbsp;</a></span>HasPropByPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TObject::HasPropByPath </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>检查是否存在指定的属性。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>属性的path，各级之间用.分隔。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回TRUE表示存在，否则表示不存在。 </dd></dl>
+
+</div>
+</div>
 <a id="a2f7b501b352df7415938714f9124e1da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f7b501b352df7415938714f9124e1da">&#9670;&nbsp;</a></span>IsCollection()</h2>
 
@@ -1126,6 +1250,80 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
+<a id="a3c266e215ead183eaf6b47c528d1c498"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c266e215ead183eaf6b47c528d1c498">&#9670;&nbsp;</a></span>SetPropBoolByPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TObject::SetPropBoolByPath </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置指定属性的bool类型的值。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>属性的path。 </td></tr>
+    <tr><td class="paramname">value</td><td>属性的值。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a302ae92a78db48c4f2685e64c97028bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a302ae92a78db48c4f2685e64c97028bb">&#9670;&nbsp;</a></span>SetPropByPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TObject::SetPropByPath </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置指定属性的值。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>属性的path。 </td></tr>
+    <tr><td class="paramname">value</td><td>属性的值。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="ac1e04e7ea45923feadc1d814d5b731ea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac1e04e7ea45923feadc1d814d5b731ea">&#9670;&nbsp;</a></span>SetPropFloat()</h2>
 
@@ -1155,6 +1353,43 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>属性的名称。 </td></tr>
+    <tr><td class="paramname">value</td><td>属性的值。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="aada5c0b6cfb6225ec675c93432403421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aada5c0b6cfb6225ec675c93432403421">&#9670;&nbsp;</a></span>SetPropFloatByPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TObject::SetPropFloatByPath </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置指定属性的浮点数类型的值。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>属性的path。 </td></tr>
     <tr><td class="paramname">value</td><td>属性的值。</td></tr>
   </table>
   </dd>
@@ -1200,6 +1435,43 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
+<a id="a18e223fad30b711b17190f3b91ca01a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18e223fad30b711b17190f3b91ca01a8">&#9670;&nbsp;</a></span>SetPropIntByPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TObject::SetPropIntByPath </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置指定属性的整数类型的值。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>属性的path。 </td></tr>
+    <tr><td class="paramname">value</td><td>属性的值。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="a1d8e5b1a7939b15a8e07ec91ab743d69"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d8e5b1a7939b15a8e07ec91ab743d69">&#9670;&nbsp;</a></span>SetPropObject()</h2>
 
@@ -1229,6 +1501,43 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>属性的名称。 </td></tr>
+    <tr><td class="paramname">value</td><td>属性的值。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a22228e736dca7f6c5dff6e2ffb585f9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22228e736dca7f6c5dff6e2ffb585f9e">&#9670;&nbsp;</a></span>SetPropObjectByPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TObject::SetPropObjectByPath </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_t_object.html">TObject</a> &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置指定属性的object类型的值。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>属性的path。 </td></tr>
     <tr><td class="paramname">value</td><td>属性的值。</td></tr>
   </table>
   </dd>
@@ -1274,6 +1583,43 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
+<a id="a47abf468dd636223b332df5c510a1bcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47abf468dd636223b332df5c510a1bcc">&#9670;&nbsp;</a></span>SetPropStrByPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TObject::SetPropStrByPath </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置指定属性的字符串类型的值。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>属性的path。 </td></tr>
+    <tr><td class="paramname">value</td><td>属性的值。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="ad5ce6eafed86e1e27d8ff795a95619c3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad5ce6eafed86e1e27d8ff795a95619c3">&#9670;&nbsp;</a></span>Unref()</h2>
 
@@ -1300,9 +1646,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
+制作者&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>
