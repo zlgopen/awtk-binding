@@ -1,6 +1,7 @@
 ﻿#ifndef AWTK_CPP_HPP
 #define AWTK_CPP_HPP
 #include "awtk.h"
+#include "tkc/rlog.h"
 #include "conf_io/app_conf.h"
 class TValue;
 class TRect;
@@ -11,6 +12,7 @@ class TWidget;
 class TCanvas;
 class TWindow;
 class TAssetInfo;
+class TVgcanvas;
 class TNativeWindow;
 
 /**

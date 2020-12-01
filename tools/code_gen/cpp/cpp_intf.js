@@ -130,6 +130,7 @@ class CppIntfGenerator extends CppGenerator {
     this.result = '#ifndef AWTK_CPP_HPP\n';
     this.result += '#define AWTK_CPP_HPP\n';
     this.result += '#include "awtk.h"\n';
+    this.result += '#include "tkc/rlog.h"\n';
     this.result += '#include "conf_io/app_conf.h"\n';
 
     this.result += 'class TValue;\n';
@@ -141,6 +142,7 @@ class CppIntfGenerator extends CppGenerator {
     this.result += 'class TCanvas;\n';
     this.result += 'class TWindow;\n';
     this.result += 'class TAssetInfo;\n';
+    this.result += 'class TVgcanvas;\n';
     this.result += 'class TNativeWindow;\n';
 
     json.forEach(iter => {
