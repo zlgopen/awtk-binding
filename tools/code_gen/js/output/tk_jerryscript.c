@@ -4124,6 +4124,26 @@ jsvalue_t get_EVT_TOP_WINDOW_CHANGED(
   return jsvalue_create_int(ctx, EVT_TOP_WINDOW_CHANGED);
 }
 
+jsvalue_t get_EVT_IM_START(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  return jsvalue_create_int(ctx, EVT_IM_START);
+}
+
+jsvalue_t get_EVT_IM_STOP(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  return jsvalue_create_int(ctx, EVT_IM_STOP);
+}
+
 jsvalue_t get_EVT_IM_COMMIT(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -4625,6 +4645,8 @@ ret_t event_type_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"EVT_WINDOW_CLOSE", get_EVT_WINDOW_CLOSE);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_REQUEST_CLOSE_WINDOW", get_EVT_REQUEST_CLOSE_WINDOW);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_TOP_WINDOW_CHANGED", get_EVT_TOP_WINDOW_CHANGED);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_IM_START", get_EVT_IM_START);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_IM_STOP", get_EVT_IM_STOP);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_IM_COMMIT", get_EVT_IM_COMMIT);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_IM_CLEAR", get_EVT_IM_CLEAR);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_IM_CANCEL", get_EVT_IM_CANCEL);
@@ -9329,6 +9351,16 @@ jsvalue_t get_WIDGET_PROP_VALUE(
   return jsvalue_create_string(ctx, WIDGET_PROP_VALUE);
 }
 
+jsvalue_t get_WIDGET_PROP_REVERSE(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  return jsvalue_create_string(ctx, WIDGET_PROP_REVERSE);
+}
+
 jsvalue_t get_WIDGET_PROP_LENGTH(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -10502,6 +10534,7 @@ ret_t widget_prop_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_CLOSABLE", get_WIDGET_PROP_CLOSABLE);
   jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_POINTER_CURSOR", get_WIDGET_PROP_POINTER_CURSOR);
   jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_VALUE", get_WIDGET_PROP_VALUE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_REVERSE", get_WIDGET_PROP_REVERSE);
   jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_LENGTH", get_WIDGET_PROP_LENGTH);
   jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_LINE_WRAP", get_WIDGET_PROP_LINE_WRAP);
   jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_WORD_WRAP", get_WIDGET_PROP_WORD_WRAP);
@@ -23497,6 +23530,25 @@ jsvalue_t wrap_scroll_view_set_yslidable(
   return jret;
 }
 
+jsvalue_t wrap_scroll_view_set_snap_to_page(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  bool_t snap_to_page = (bool_t)jsvalue_get_boolean_value(ctx, argv[1]);
+  ret = (ret_t)scroll_view_set_snap_to_page(widget, snap_to_page);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_scroll_view_set_offset(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -23691,6 +23743,20 @@ jsvalue_t wrap_scroll_view_t_get_prop_yslidable(
   return jret;
 }
 
+jsvalue_t wrap_scroll_view_t_get_prop_snap_to_page(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  scroll_view_t* obj = (scroll_view_t*)jsvalue_get_pointer(ctx, argv[0], "scroll_view_t*");
+
+  jret = jsvalue_create_bool(ctx, obj->snap_to_page);
+  return jret;
+}
+
 ret_t scroll_view_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"scroll_view_create", wrap_scroll_view_create);
   jerryx_handler_register_global((const jerry_char_t*)"scroll_view_cast", wrap_scroll_view_cast);
@@ -23698,6 +23764,7 @@ ret_t scroll_view_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"scroll_view_set_virtual_h", wrap_scroll_view_set_virtual_h);
   jerryx_handler_register_global((const jerry_char_t*)"scroll_view_set_xslidable", wrap_scroll_view_set_xslidable);
   jerryx_handler_register_global((const jerry_char_t*)"scroll_view_set_yslidable", wrap_scroll_view_set_yslidable);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_set_snap_to_page", wrap_scroll_view_set_snap_to_page);
   jerryx_handler_register_global((const jerry_char_t*)"scroll_view_set_offset", wrap_scroll_view_set_offset);
   jerryx_handler_register_global((const jerry_char_t*)"scroll_view_set_speed_scale", wrap_scroll_view_set_speed_scale);
   jerryx_handler_register_global((const jerry_char_t*)"scroll_view_scroll_to", wrap_scroll_view_scroll_to);
@@ -23710,6 +23777,7 @@ ret_t scroll_view_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"scroll_view_t_get_prop_yspeed_scale", wrap_scroll_view_t_get_prop_yspeed_scale);
   jerryx_handler_register_global((const jerry_char_t*)"scroll_view_t_get_prop_xslidable", wrap_scroll_view_t_get_prop_xslidable);
   jerryx_handler_register_global((const jerry_char_t*)"scroll_view_t_get_prop_yslidable", wrap_scroll_view_t_get_prop_yslidable);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_view_t_get_prop_snap_to_page", wrap_scroll_view_t_get_prop_snap_to_page);
 
  return RET_OK;
 }
@@ -28039,6 +28107,25 @@ jsvalue_t wrap_progress_bar_set_show_text(
   return jret;
 }
 
+jsvalue_t wrap_progress_bar_set_reverse(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  bool_t reverse = (bool_t)jsvalue_get_boolean_value(ctx, argv[1]);
+  ret = (ret_t)progress_bar_set_reverse(widget, reverse);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_progress_bar_get_percent(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -28113,6 +28200,20 @@ jsvalue_t wrap_progress_bar_t_get_prop_show_text(
   return jret;
 }
 
+jsvalue_t wrap_progress_bar_t_get_prop_reverse(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  progress_bar_t* obj = (progress_bar_t*)jsvalue_get_pointer(ctx, argv[0], "progress_bar_t*");
+
+  jret = jsvalue_create_bool(ctx, obj->reverse);
+  return jret;
+}
+
 ret_t progress_bar_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_create", wrap_progress_bar_create);
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_cast", wrap_progress_bar_cast);
@@ -28120,11 +28221,13 @@ ret_t progress_bar_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_set_max", wrap_progress_bar_set_max);
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_set_vertical", wrap_progress_bar_set_vertical);
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_set_show_text", wrap_progress_bar_set_show_text);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_bar_set_reverse", wrap_progress_bar_set_reverse);
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_get_percent", wrap_progress_bar_get_percent);
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_t_get_prop_value", wrap_progress_bar_t_get_prop_value);
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_t_get_prop_max", wrap_progress_bar_t_get_prop_max);
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_t_get_prop_vertical", wrap_progress_bar_t_get_prop_vertical);
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_t_get_prop_show_text", wrap_progress_bar_t_get_prop_show_text);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_bar_t_get_prop_reverse", wrap_progress_bar_t_get_prop_reverse);
 
  return RET_OK;
 }

@@ -1837,6 +1837,16 @@ JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1TOP_1WINDOW_1CHANGED(JNIEnv* en
   return (jint)(EVT_TOP_WINDOW_CHANGED);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1IM_1START(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_IM_START);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1IM_1STOP(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_IM_STOP);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1IM_1COMMIT(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (jint)(EVT_IM_COMMIT);
@@ -4061,6 +4071,11 @@ JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1POINTER_1CURSOR(JN
 JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1VALUE(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (*env)->NewStringUTF(env, WIDGET_PROP_VALUE);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1REVERSE(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, WIDGET_PROP_REVERSE);
 }
 
 JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1LENGTH(JNIEnv* env,  jclass ajc) {/*const*/
@@ -9993,6 +10008,14 @@ JNIEXPORT jint JNICALL Java_awtk_TScrollView_scroll_1view_1set_1yslidable(JNIEnv
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TScrollView_scroll_1view_1set_1snap_1to_1page(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean snap_to_page) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)scroll_view_set_snap_to_page(widget, snap_to_page);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TScrollView_scroll_1view_1set_1offset(JNIEnv* env,  jclass ajc, jlong jwidget, jint xoffset, jint yoffset) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
@@ -10071,6 +10094,12 @@ JNIEXPORT jboolean JNICALL Java_awtk_TScrollView_scroll_1view_1t_1get_1prop_1ysl
   scroll_view_t* obj = (scroll_view_t*)jobj;
 
   return (jboolean)(obj->yslidable);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TScrollView_scroll_1view_1t_1get_1prop_1snap_1to_1page(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  scroll_view_t* obj = (scroll_view_t*)jobj;
+
+  return (jboolean)(obj->snap_to_page);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TSlideMenu_slide_1menu_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
@@ -11761,6 +11790,14 @@ JNIEXPORT jint JNICALL Java_awtk_TProgressBar_progress_1bar_1set_1show_1text(JNI
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TProgressBar_progress_1bar_1set_1reverse(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean reverse) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)progress_bar_set_reverse(widget, reverse);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TProgressBar_progress_1bar_1get_1percent(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
   uint32_t ret;
   widget_t* widget = (widget_t*)jwidget;
@@ -11791,6 +11828,12 @@ JNIEXPORT jboolean JNICALL Java_awtk_TProgressBar_progress_1bar_1t_1get_1prop_1s
   progress_bar_t* obj = (progress_bar_t*)jobj;
 
   return (jboolean)(obj->show_text);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TProgressBar_progress_1bar_1t_1get_1prop_1reverse(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  progress_bar_t* obj = (progress_bar_t*)jobj;
+
+  return (jboolean)(obj->reverse);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TRow_row_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/

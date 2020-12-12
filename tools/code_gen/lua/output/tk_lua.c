@@ -3022,6 +3022,14 @@ static void event_type_t_init(lua_State* L) {
   lua_pushinteger(L, EVT_TOP_WINDOW_CHANGED);
   lua_settable(L, -3); 
 
+  lua_pushstring(L, "IM_START");
+  lua_pushinteger(L, EVT_IM_START);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "IM_STOP");
+  lua_pushinteger(L, EVT_IM_STOP);
+  lua_settable(L, -3); 
+
   lua_pushstring(L, "IM_COMMIT");
   lua_pushinteger(L, EVT_IM_COMMIT);
   lua_settable(L, -3); 
@@ -5679,6 +5687,10 @@ static void widget_prop_t_init(lua_State* L) {
 
   lua_pushstring(L, "VALUE");
   lua_pushstring(L, WIDGET_PROP_VALUE);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "REVERSE");
+  lua_pushstring(L, WIDGET_PROP_REVERSE);
   lua_settable(L, -3); 
 
   lua_pushstring(L, "LENGTH");
@@ -14178,6 +14190,17 @@ static int wrap_scroll_view_set_yslidable(lua_State* L) {
   return 1;
 }
 
+static int wrap_scroll_view_set_snap_to_page(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  bool_t snap_to_page = (bool_t)lua_toboolean(L, 2);
+  ret = (ret_t)scroll_view_set_snap_to_page(widget, snap_to_page);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 static int wrap_scroll_view_set_offset(lua_State* L) {
   ret_t ret = 0;
   widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
@@ -14234,6 +14257,7 @@ static const struct luaL_Reg scroll_view_t_member_funcs[] = {
   {"set_virtual_h", wrap_scroll_view_set_virtual_h},
   {"set_xslidable", wrap_scroll_view_set_xslidable},
   {"set_yslidable", wrap_scroll_view_set_yslidable},
+  {"set_snap_to_page", wrap_scroll_view_set_snap_to_page},
   {"set_offset", wrap_scroll_view_set_offset},
   {"set_speed_scale", wrap_scroll_view_set_speed_scale},
   {"scroll_to", wrap_scroll_view_scroll_to},
@@ -14297,6 +14321,11 @@ static int wrap_scroll_view_t_get_prop(lua_State* L) {
   }
   else if(strcmp(name, "yslidable") == 0) {
     lua_pushboolean(L,(lua_Integer)(obj->yslidable));
+
+  return 1;
+  }
+  else if(strcmp(name, "snap_to_page") == 0) {
+    lua_pushboolean(L,(lua_Integer)(obj->snap_to_page));
 
   return 1;
   }
@@ -17777,6 +17806,17 @@ static int wrap_progress_bar_set_show_text(lua_State* L) {
   return 1;
 }
 
+static int wrap_progress_bar_set_reverse(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  bool_t reverse = (bool_t)lua_toboolean(L, 2);
+  ret = (ret_t)progress_bar_set_reverse(widget, reverse);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 static int wrap_progress_bar_get_percent(lua_State* L) {
   uint32_t ret = 0;
   widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
@@ -17793,6 +17833,7 @@ static const struct luaL_Reg progress_bar_t_member_funcs[] = {
   {"set_max", wrap_progress_bar_set_max},
   {"set_vertical", wrap_progress_bar_set_vertical},
   {"set_show_text", wrap_progress_bar_set_show_text},
+  {"set_reverse", wrap_progress_bar_set_reverse},
   {"get_percent", wrap_progress_bar_get_percent},
   {NULL, NULL}
 };
@@ -17833,6 +17874,11 @@ static int wrap_progress_bar_t_get_prop(lua_State* L) {
   }
   else if(strcmp(name, "show_text") == 0) {
     lua_pushboolean(L,(lua_Integer)(obj->show_text));
+
+  return 1;
+  }
+  else if(strcmp(name, "reverse") == 0) {
+    lua_pushboolean(L,(lua_Integer)(obj->reverse));
 
   return 1;
   }

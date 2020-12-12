@@ -2535,6 +2535,14 @@ pyobject_t get_EVT_TOP_WINDOW_CHANGED(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", EVT_TOP_WINDOW_CHANGED);
 }
 
+pyobject_t get_EVT_IM_START(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("i", EVT_IM_START);
+}
+
+pyobject_t get_EVT_IM_STOP(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("i", EVT_IM_STOP);
+}
+
 pyobject_t get_EVT_IM_COMMIT(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", EVT_IM_COMMIT);
 }
@@ -4984,6 +4992,10 @@ pyobject_t get_WIDGET_PROP_POINTER_CURSOR(pyobject_t self, pyobject_t pyargs) {
 
 pyobject_t get_WIDGET_PROP_VALUE(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("s", WIDGET_PROP_VALUE);
+}
+
+pyobject_t get_WIDGET_PROP_REVERSE(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", WIDGET_PROP_REVERSE);
 }
 
 pyobject_t get_WIDGET_PROP_LENGTH(pyobject_t self, pyobject_t pyargs) {
@@ -13199,6 +13211,20 @@ pyobject_t wrap_scroll_view_set_yslidable(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", ret);
 }
 
+pyobject_t wrap_scroll_view_set_snap_to_page(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  widget_t* widget = NULL;
+  bool_t snap_to_page = 0;
+
+  if (!PyArg_ParseTuple(pyargs, "O&b" , &parse_voidp, &widget, &snap_to_page)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)scroll_view_set_snap_to_page(widget, snap_to_page);
+  return Py_BuildValue("i", ret);
+}
+
 pyobject_t wrap_scroll_view_set_offset(pyobject_t self, pyobject_t pyargs) {
   ret_t ret = 0;
   widget_t* widget = NULL;
@@ -13347,6 +13373,17 @@ pyobject_t wrap_scroll_view_t_get_prop_yslidable(pyobject_t self, pyobject_t pya
   }
 
   return Py_BuildValue("b", obj->yslidable);
+}
+
+pyobject_t wrap_scroll_view_t_get_prop_snap_to_page(pyobject_t self, pyobject_t pyargs) {
+  scroll_view_t* obj = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&", &parse_voidp, &obj)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  return Py_BuildValue("b", obj->snap_to_page);
 }
 
 pyobject_t wrap_slide_menu_create(pyobject_t self, pyobject_t pyargs) {
@@ -16324,6 +16361,20 @@ pyobject_t wrap_progress_bar_set_show_text(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", ret);
 }
 
+pyobject_t wrap_progress_bar_set_reverse(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  widget_t* widget = NULL;
+  bool_t reverse = 0;
+
+  if (!PyArg_ParseTuple(pyargs, "O&b" , &parse_voidp, &widget, &reverse)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)progress_bar_set_reverse(widget, reverse);
+  return Py_BuildValue("i", ret);
+}
+
 pyobject_t wrap_progress_bar_get_percent(pyobject_t self, pyobject_t pyargs) {
   uint32_t ret = 0;
   widget_t* widget = NULL;
@@ -16379,6 +16430,17 @@ pyobject_t wrap_progress_bar_t_get_prop_show_text(pyobject_t self, pyobject_t py
   }
 
   return Py_BuildValue("b", obj->show_text);
+}
+
+pyobject_t wrap_progress_bar_t_get_prop_reverse(pyobject_t self, pyobject_t pyargs) {
+  progress_bar_t* obj = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&", &parse_voidp, &obj)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  return Py_BuildValue("b", obj->reverse);
 }
 
 pyobject_t wrap_row_create(pyobject_t self, pyobject_t pyargs) {
@@ -18435,6 +18497,8 @@ static PyMethodDef awtk_methods[] = {
 {"EVT_WINDOW_CLOSE", get_EVT_WINDOW_CLOSE, METH_VARARGS, "EVT_WINDOW_CLOSE"},
 {"EVT_REQUEST_CLOSE_WINDOW", get_EVT_REQUEST_CLOSE_WINDOW, METH_VARARGS, "EVT_REQUEST_CLOSE_WINDOW"},
 {"EVT_TOP_WINDOW_CHANGED", get_EVT_TOP_WINDOW_CHANGED, METH_VARARGS, "EVT_TOP_WINDOW_CHANGED"},
+{"EVT_IM_START", get_EVT_IM_START, METH_VARARGS, "EVT_IM_START"},
+{"EVT_IM_STOP", get_EVT_IM_STOP, METH_VARARGS, "EVT_IM_STOP"},
 {"EVT_IM_COMMIT", get_EVT_IM_COMMIT, METH_VARARGS, "EVT_IM_COMMIT"},
 {"EVT_IM_CLEAR", get_EVT_IM_CLEAR, METH_VARARGS, "EVT_IM_CLEAR"},
 {"EVT_IM_CANCEL", get_EVT_IM_CANCEL, METH_VARARGS, "EVT_IM_CANCEL"},
@@ -18826,6 +18890,7 @@ static PyMethodDef awtk_methods[] = {
 {"WIDGET_PROP_CLOSABLE", get_WIDGET_PROP_CLOSABLE, METH_VARARGS, "WIDGET_PROP_CLOSABLE"},
 {"WIDGET_PROP_POINTER_CURSOR", get_WIDGET_PROP_POINTER_CURSOR, METH_VARARGS, "WIDGET_PROP_POINTER_CURSOR"},
 {"WIDGET_PROP_VALUE", get_WIDGET_PROP_VALUE, METH_VARARGS, "WIDGET_PROP_VALUE"},
+{"WIDGET_PROP_REVERSE", get_WIDGET_PROP_REVERSE, METH_VARARGS, "WIDGET_PROP_REVERSE"},
 {"WIDGET_PROP_LENGTH", get_WIDGET_PROP_LENGTH, METH_VARARGS, "WIDGET_PROP_LENGTH"},
 {"WIDGET_PROP_LINE_WRAP", get_WIDGET_PROP_LINE_WRAP, METH_VARARGS, "WIDGET_PROP_LINE_WRAP"},
 {"WIDGET_PROP_WORD_WRAP", get_WIDGET_PROP_WORD_WRAP, METH_VARARGS, "WIDGET_PROP_WORD_WRAP"},
@@ -19743,6 +19808,7 @@ static PyMethodDef awtk_methods[] = {
 {"scroll_view_set_virtual_h", wrap_scroll_view_set_virtual_h, METH_VARARGS, "scroll_view_set_virtual_h"},
 {"scroll_view_set_xslidable", wrap_scroll_view_set_xslidable, METH_VARARGS, "scroll_view_set_xslidable"},
 {"scroll_view_set_yslidable", wrap_scroll_view_set_yslidable, METH_VARARGS, "scroll_view_set_yslidable"},
+{"scroll_view_set_snap_to_page", wrap_scroll_view_set_snap_to_page, METH_VARARGS, "scroll_view_set_snap_to_page"},
 {"scroll_view_set_offset", wrap_scroll_view_set_offset, METH_VARARGS, "scroll_view_set_offset"},
 {"scroll_view_set_speed_scale", wrap_scroll_view_set_speed_scale, METH_VARARGS, "scroll_view_set_speed_scale"},
 {"scroll_view_scroll_to", wrap_scroll_view_scroll_to, METH_VARARGS, "scroll_view_scroll_to"},
@@ -19755,6 +19821,7 @@ static PyMethodDef awtk_methods[] = {
 {"scroll_view_t_get_prop_yspeed_scale", wrap_scroll_view_t_get_prop_yspeed_scale, METH_VARARGS, "scroll_view_t_get_prop_yspeed_scale"},
 {"scroll_view_t_get_prop_xslidable", wrap_scroll_view_t_get_prop_xslidable, METH_VARARGS, "scroll_view_t_get_prop_xslidable"},
 {"scroll_view_t_get_prop_yslidable", wrap_scroll_view_t_get_prop_yslidable, METH_VARARGS, "scroll_view_t_get_prop_yslidable"},
+{"scroll_view_t_get_prop_snap_to_page", wrap_scroll_view_t_get_prop_snap_to_page, METH_VARARGS, "scroll_view_t_get_prop_snap_to_page"},
 {"slide_menu_create", wrap_slide_menu_create, METH_VARARGS, "slide_menu_create"},
 {"slide_menu_cast", wrap_slide_menu_cast, METH_VARARGS, "slide_menu_cast"},
 {"slide_menu_set_value", wrap_slide_menu_set_value, METH_VARARGS, "slide_menu_set_value"},
@@ -19981,11 +20048,13 @@ static PyMethodDef awtk_methods[] = {
 {"progress_bar_set_max", wrap_progress_bar_set_max, METH_VARARGS, "progress_bar_set_max"},
 {"progress_bar_set_vertical", wrap_progress_bar_set_vertical, METH_VARARGS, "progress_bar_set_vertical"},
 {"progress_bar_set_show_text", wrap_progress_bar_set_show_text, METH_VARARGS, "progress_bar_set_show_text"},
+{"progress_bar_set_reverse", wrap_progress_bar_set_reverse, METH_VARARGS, "progress_bar_set_reverse"},
 {"progress_bar_get_percent", wrap_progress_bar_get_percent, METH_VARARGS, "progress_bar_get_percent"},
 {"progress_bar_t_get_prop_value", wrap_progress_bar_t_get_prop_value, METH_VARARGS, "progress_bar_t_get_prop_value"},
 {"progress_bar_t_get_prop_max", wrap_progress_bar_t_get_prop_max, METH_VARARGS, "progress_bar_t_get_prop_max"},
 {"progress_bar_t_get_prop_vertical", wrap_progress_bar_t_get_prop_vertical, METH_VARARGS, "progress_bar_t_get_prop_vertical"},
 {"progress_bar_t_get_prop_show_text", wrap_progress_bar_t_get_prop_show_text, METH_VARARGS, "progress_bar_t_get_prop_show_text"},
+{"progress_bar_t_get_prop_reverse", wrap_progress_bar_t_get_prop_reverse, METH_VARARGS, "progress_bar_t_get_prop_reverse"},
 {"row_create", wrap_row_create, METH_VARARGS, "row_create"},
 {"row_cast", wrap_row_cast, METH_VARARGS, "row_cast"},
 {"slider_create", wrap_slider_create, METH_VARARGS, "slider_create"},

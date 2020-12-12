@@ -364,6 +364,20 @@ public enum TEventType {
   TOP_WINDOW_CHANGED (EVT_TOP_WINDOW_CHANGED()),
   
   /**
+   * 输入法启动(event_t)。
+   *
+   */
+ 
+  IM_START (EVT_IM_START()),
+  
+  /**
+   * 输入法停止(event_t)。
+   *
+   */
+ 
+  IM_STOP (EVT_IM_STOP()),
+  
+  /**
    * 输入法提交输入的文本事件(im_commit_event_t)。
    *
    */
@@ -762,6 +776,8 @@ public enum TEventType {
   static private native int EVT_WINDOW_CLOSE();
   static private native int EVT_REQUEST_CLOSE_WINDOW();
   static private native int EVT_TOP_WINDOW_CHANGED();
+  static private native int EVT_IM_START();
+  static private native int EVT_IM_STOP();
   static private native int EVT_IM_COMMIT();
   static private native int EVT_IM_CLEAR();
   static private native int EVT_IM_CANCEL();

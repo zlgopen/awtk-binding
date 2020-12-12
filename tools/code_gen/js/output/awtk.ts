@@ -250,6 +250,8 @@ declare function EVT_WINDOW_TO_FOREGROUND();
 declare function EVT_WINDOW_CLOSE();
 declare function EVT_REQUEST_CLOSE_WINDOW();
 declare function EVT_TOP_WINDOW_CHANGED();
+declare function EVT_IM_START();
+declare function EVT_IM_STOP();
 declare function EVT_IM_COMMIT();
 declare function EVT_IM_CLEAR();
 declare function EVT_IM_CANCEL();
@@ -641,6 +643,7 @@ declare function WIDGET_PROP_TYPE();
 declare function WIDGET_PROP_CLOSABLE();
 declare function WIDGET_PROP_POINTER_CURSOR();
 declare function WIDGET_PROP_VALUE();
+declare function WIDGET_PROP_REVERSE();
 declare function WIDGET_PROP_LENGTH();
 declare function WIDGET_PROP_LINE_WRAP();
 declare function WIDGET_PROP_WORD_WRAP();
@@ -1561,6 +1564,7 @@ declare function scroll_view_set_virtual_w(widget : any, w : number) : TRet;
 declare function scroll_view_set_virtual_h(widget : any, h : number) : TRet;
 declare function scroll_view_set_xslidable(widget : any, xslidable : boolean) : TRet;
 declare function scroll_view_set_yslidable(widget : any, yslidable : boolean) : TRet;
+declare function scroll_view_set_snap_to_page(widget : any, snap_to_page : boolean) : TRet;
 declare function scroll_view_set_offset(widget : any, xoffset : number, yoffset : number) : TRet;
 declare function scroll_view_set_speed_scale(widget : any, xspeed_scale : number, yspeed_scale : number) : TRet;
 declare function scroll_view_scroll_to(widget : any, xoffset_end : number, yoffset_end : number, duration : number) : TRet;
@@ -1573,6 +1577,7 @@ declare function scroll_view_t_get_prop_xspeed_scale(nativeObj : any) : number;
 declare function scroll_view_t_get_prop_yspeed_scale(nativeObj : any) : number;
 declare function scroll_view_t_get_prop_xslidable(nativeObj : any) : boolean;
 declare function scroll_view_t_get_prop_yslidable(nativeObj : any) : boolean;
+declare function scroll_view_t_get_prop_snap_to_page(nativeObj : any) : boolean;
 declare function slide_menu_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function slide_menu_cast(widget : any) : any;
 declare function slide_menu_set_value(widget : any, value : any) : TRet;
@@ -1799,11 +1804,13 @@ declare function progress_bar_set_value(widget : any, value : any) : TRet;
 declare function progress_bar_set_max(widget : any, max : number) : TRet;
 declare function progress_bar_set_vertical(widget : any, vertical : boolean) : TRet;
 declare function progress_bar_set_show_text(widget : any, show_text : boolean) : TRet;
+declare function progress_bar_set_reverse(widget : any, reverse : boolean) : TRet;
 declare function progress_bar_get_percent(widget : any) : number;
 declare function progress_bar_t_get_prop_value(nativeObj : any) : number;
 declare function progress_bar_t_get_prop_max(nativeObj : any) : number;
 declare function progress_bar_t_get_prop_vertical(nativeObj : any) : boolean;
 declare function progress_bar_t_get_prop_show_text(nativeObj : any) : boolean;
+declare function progress_bar_t_get_prop_reverse(nativeObj : any) : boolean;
 declare function row_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function row_cast(widget : any) : any;
 declare function slider_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -4600,6 +4607,18 @@ export enum TEventType {
    *
    */
  TOP_WINDOW_CHANGED = EVT_TOP_WINDOW_CHANGED(),
+
+  /**
+   * 输入法启动(event_t)。
+   *
+   */
+ IM_START = EVT_IM_START(),
+
+  /**
+   * 输入法停止(event_t)。
+   *
+   */
+ IM_STOP = EVT_IM_STOP(),
 
   /**
    * 输入法提交输入的文本事件(im_commit_event_t)。
@@ -7824,6 +7843,12 @@ export enum TWidgetProp {
  VALUE = WIDGET_PROP_VALUE(),
 
   /**
+   * 进度条反向显示。
+   *
+   */
+ REVERSE = WIDGET_PROP_REVERSE(),
+
+  /**
    * 长度。
    *
    */
@@ -10658,11 +10683,8 @@ export class TWidget {
 
 };
 /**
- * 应用程序的配置信息。
- *
- *底层实现可以是任何格式，比如INI，XML，JSON和UBJSON。
- *
- *对于树状的文档，key可以是多级的，用.分隔。如network.ip。
+ * #include "conf_io/app_conf.h"
+ *```
  *
  */
 export class TAppConf { 
@@ -17721,6 +17743,18 @@ export class TScrollView extends TWidget {
 
 
   /**
+   * 设置滚动时offset是否按页面对齐。
+   * 
+   * @param snap_to_page 是否按页面对齐。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setSnapToPage(snap_to_page : boolean) : TRet  {
+    return scroll_view_set_snap_to_page(this != null ? (this.nativeObj || this) : null, snap_to_page);
+ }
+
+
+  /**
    * 设置偏移量。
    * 
    * @param xoffset x偏移量。
@@ -17736,8 +17770,8 @@ export class TScrollView extends TWidget {
   /**
    * 设置偏移速度比例。
    * 
-   * @param xspeed_scale x偏移速度比例。。
-   * @param yspeed_scale y偏移速度比例。。
+   * @param xspeed_scale x偏移速度比例。
+   * @param yspeed_scale y偏移速度比例。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -17859,6 +17893,19 @@ export class TScrollView extends TWidget {
 
  set yslidable(v : boolean) {
    this.setYslidable(v);
+ }
+
+
+  /**
+   * 滚动时offset是否按页面对齐。
+   *
+   */
+ get snapToPage() : boolean {
+   return scroll_view_t_get_prop_snap_to_page(this.nativeObj);
+ }
+
+ set snapToPage(v : boolean) {
+   this.setSnapToPage(v);
  }
 
 };
@@ -21739,6 +21786,18 @@ export class TProgressBar extends TWidget {
 
 
   /**
+   * 设置进度条是否反向。
+   * 
+   * @param reverse 是否反向。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setReverse(reverse : boolean) : TRet  {
+    return progress_bar_set_reverse(this != null ? (this.nativeObj || this) : null, reverse);
+ }
+
+
+  /**
    * 获取进度百分比。
    *
    *> 当max为100时，percent和value取整后一致。
@@ -21800,6 +21859,19 @@ export class TProgressBar extends TWidget {
 
  set showText(v : boolean) {
    this.setShowText(v);
+ }
+
+
+  /**
+   * 是否反向显示。如果为TRUE，水平方向从右向左表示增加，垂直方向从上到下表示增加。
+   *
+   */
+ get reverse() : boolean {
+   return progress_bar_t_get_prop_reverse(this.nativeObj);
+ }
+
+ set reverse(v : boolean) {
+   this.setReverse(v);
  }
 
 };

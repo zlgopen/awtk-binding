@@ -4029,6 +4029,14 @@
         "name": "EVT_TOP_WINDOW_CHANGED"
       },
       {
+        "desc": "输入法启动(event_t)。",
+        "name": "EVT_IM_START"
+      },
+      {
+        "desc": "输入法停止(event_t)。",
+        "name": "EVT_IM_STOP"
+      },
+      {
         "desc": "输入法提交输入的文本事件(im_commit_event_t)。",
         "name": "EVT_IM_COMMIT"
       },
@@ -7667,6 +7675,10 @@
       {
         "desc": "值。",
         "name": "WIDGET_PROP_VALUE"
+      },
+      {
+        "desc": "进度条反向显示。",
+        "name": "WIDGET_PROP_REVERSE"
       },
       {
         "desc": "长度。",
@@ -11638,7 +11650,7 @@
     "events": [],
     "properties": [],
     "header": "conf_io/app_conf.h",
-    "desc": "应用程序的配置信息。\n\n底层实现可以是任何格式，比如INI，XML，JSON和UBJSON。\n\n对于树状的文档，key可以是多级的，用.分隔。如network.ip。",
+    "desc": "应用程序的配置信息。\n\n底层实现可以是任何格式，比如INI，XML，JSON和UBJSON。\n\n对于树状的文档，key可以是多级的，用.分隔。如network.ip。\n\nconf-io是可选组件，需要自己包含头文件，否则64位数据类型会被截断成32位的数据。\n\n```c\n#include \"conf_io/app_conf.h\"\n```",
     "name": "app_conf_t",
     "annotation": {
       "fake": true,
@@ -20262,6 +20274,29 @@
             "desc": "控件对象。"
           },
           {
+            "type": "bool_t",
+            "name": "snap_to_page",
+            "desc": "是否按页面对齐。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置滚动时offset是否按页面对齐。",
+        "name": "scroll_view_set_snap_to_page",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
             "type": "int32_t",
             "name": "xoffset",
             "desc": "x偏移量。"
@@ -20292,12 +20327,12 @@
           {
             "type": "float_t",
             "name": "xspeed_scale",
-            "desc": "x偏移速度比例。。"
+            "desc": "x偏移速度比例。"
           },
           {
             "type": "float_t",
             "name": "yspeed_scale",
-            "desc": "y偏移速度比例。。"
+            "desc": "y偏移速度比例。"
           }
         ],
         "annotation": {
@@ -20489,6 +20524,19 @@
       {
         "name": "yslidable",
         "desc": "是否允许y方向滑动。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "snap_to_page",
+        "desc": "滚动时offset是否按页面对齐。",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,
@@ -25819,6 +25867,29 @@
             "type": "widget_t*",
             "name": "widget",
             "desc": "控件对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "reverse",
+            "desc": "是否反向。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置进度条是否反向。",
+        "name": "progress_bar_set_reverse",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
           }
         ],
         "annotation": {
@@ -25887,6 +25958,19 @@
       {
         "name": "show_text",
         "desc": "是否显示文本。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "reverse",
+        "desc": "是否反向显示。如果为TRUE，水平方向从右向左表示增加，垂直方向从上到下表示增加。",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,

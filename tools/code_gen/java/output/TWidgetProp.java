@@ -234,6 +234,13 @@ public enum TWidgetProp {
   VALUE (WIDGET_PROP_VALUE()),
   
   /**
+   * 进度条反向显示。
+   *
+   */
+ 
+  REVERSE (WIDGET_PROP_REVERSE()),
+  
+  /**
    * 长度。
    *
    */
@@ -1096,6 +1103,7 @@ public enum TWidgetProp {
   static private native String WIDGET_PROP_CLOSABLE();
   static private native String WIDGET_PROP_POINTER_CURSOR();
   static private native String WIDGET_PROP_VALUE();
+  static private native String WIDGET_PROP_REVERSE();
   static private native String WIDGET_PROP_LENGTH();
   static private native String WIDGET_PROP_LINE_WRAP();
   static private native String WIDGET_PROP_WORD_WRAP();

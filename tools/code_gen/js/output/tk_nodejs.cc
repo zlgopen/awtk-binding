@@ -3332,6 +3332,22 @@ static void get_EVT_TOP_WINDOW_CHANGED(const Nan::FunctionCallbackInfo<v8::Value
   (void)argc;(void)ctx;
 }
 
+static void get_EVT_IM_START(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)EVT_IM_START);
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
+static void get_EVT_IM_STOP(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)EVT_IM_STOP);
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
 static void get_EVT_IM_COMMIT(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -3743,6 +3759,8 @@ ret_t event_type_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "EVT_WINDOW_CLOSE", get_EVT_WINDOW_CLOSE);
   Nan::Export(ctx, "EVT_REQUEST_CLOSE_WINDOW", get_EVT_REQUEST_CLOSE_WINDOW);
   Nan::Export(ctx, "EVT_TOP_WINDOW_CHANGED", get_EVT_TOP_WINDOW_CHANGED);
+  Nan::Export(ctx, "EVT_IM_START", get_EVT_IM_START);
+  Nan::Export(ctx, "EVT_IM_STOP", get_EVT_IM_STOP);
   Nan::Export(ctx, "EVT_IM_COMMIT", get_EVT_IM_COMMIT);
   Nan::Export(ctx, "EVT_IM_CLEAR", get_EVT_IM_CLEAR);
   Nan::Export(ctx, "EVT_IM_CANCEL", get_EVT_IM_CANCEL);
@@ -7597,6 +7615,14 @@ static void get_WIDGET_PROP_VALUE(const Nan::FunctionCallbackInfo<v8::Value>& ar
   (void)argc;(void)ctx;
 }
 
+static void get_WIDGET_PROP_REVERSE(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  v8::Local<v8::String> jret= Nan::New((const char*)WIDGET_PROP_REVERSE).ToLocalChecked();
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
 static void get_WIDGET_PROP_LENGTH(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -8542,6 +8568,7 @@ ret_t widget_prop_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "WIDGET_PROP_CLOSABLE", get_WIDGET_PROP_CLOSABLE);
   Nan::Export(ctx, "WIDGET_PROP_POINTER_CURSOR", get_WIDGET_PROP_POINTER_CURSOR);
   Nan::Export(ctx, "WIDGET_PROP_VALUE", get_WIDGET_PROP_VALUE);
+  Nan::Export(ctx, "WIDGET_PROP_REVERSE", get_WIDGET_PROP_REVERSE);
   Nan::Export(ctx, "WIDGET_PROP_LENGTH", get_WIDGET_PROP_LENGTH);
   Nan::Export(ctx, "WIDGET_PROP_LINE_WRAP", get_WIDGET_PROP_LINE_WRAP);
   Nan::Export(ctx, "WIDGET_PROP_WORD_WRAP", get_WIDGET_PROP_WORD_WRAP);
@@ -19015,6 +19042,21 @@ static void wrap_scroll_view_set_yslidable(const Nan::FunctionCallbackInfo<v8::V
   (void)argc;(void)ctx;
 }
 
+static void wrap_scroll_view_set_snap_to_page(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  bool_t snap_to_page = (bool_t)jsvalue_get_boolean_value(ctx, argv[1]);
+  ret = (ret_t)scroll_view_set_snap_to_page(widget, snap_to_page);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_scroll_view_set_offset(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -19161,6 +19203,16 @@ static void wrap_scroll_view_t_get_prop_yslidable(const Nan::FunctionCallbackInf
   (void)argc;(void)ctx;
 }
 
+static void wrap_scroll_view_t_get_prop_snap_to_page(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  scroll_view_t* obj = (scroll_view_t*)jsvalue_get_pointer(ctx, argv[0], "scroll_view_t*");
+
+  v8::Local<v8::Boolean> jret= Nan::New((bool)(obj->snap_to_page));
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
 ret_t scroll_view_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "scroll_view_create", wrap_scroll_view_create);
   Nan::Export(ctx, "scroll_view_cast", wrap_scroll_view_cast);
@@ -19168,6 +19220,7 @@ ret_t scroll_view_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "scroll_view_set_virtual_h", wrap_scroll_view_set_virtual_h);
   Nan::Export(ctx, "scroll_view_set_xslidable", wrap_scroll_view_set_xslidable);
   Nan::Export(ctx, "scroll_view_set_yslidable", wrap_scroll_view_set_yslidable);
+  Nan::Export(ctx, "scroll_view_set_snap_to_page", wrap_scroll_view_set_snap_to_page);
   Nan::Export(ctx, "scroll_view_set_offset", wrap_scroll_view_set_offset);
   Nan::Export(ctx, "scroll_view_set_speed_scale", wrap_scroll_view_set_speed_scale);
   Nan::Export(ctx, "scroll_view_scroll_to", wrap_scroll_view_scroll_to);
@@ -19180,6 +19233,7 @@ ret_t scroll_view_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "scroll_view_t_get_prop_yspeed_scale", wrap_scroll_view_t_get_prop_yspeed_scale);
   Nan::Export(ctx, "scroll_view_t_get_prop_xslidable", wrap_scroll_view_t_get_prop_xslidable);
   Nan::Export(ctx, "scroll_view_t_get_prop_yslidable", wrap_scroll_view_t_get_prop_yslidable);
+  Nan::Export(ctx, "scroll_view_t_get_prop_snap_to_page", wrap_scroll_view_t_get_prop_snap_to_page);
 
  return RET_OK;
 }
@@ -22657,6 +22711,21 @@ static void wrap_progress_bar_set_show_text(const Nan::FunctionCallbackInfo<v8::
   (void)argc;(void)ctx;
 }
 
+static void wrap_progress_bar_set_reverse(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  bool_t reverse = (bool_t)jsvalue_get_boolean_value(ctx, argv[1]);
+  ret = (ret_t)progress_bar_set_reverse(widget, reverse);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_progress_bar_get_percent(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -22711,6 +22780,16 @@ static void wrap_progress_bar_t_get_prop_show_text(const Nan::FunctionCallbackIn
   (void)argc;(void)ctx;
 }
 
+static void wrap_progress_bar_t_get_prop_reverse(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  progress_bar_t* obj = (progress_bar_t*)jsvalue_get_pointer(ctx, argv[0], "progress_bar_t*");
+
+  v8::Local<v8::Boolean> jret= Nan::New((bool)(obj->reverse));
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
 ret_t progress_bar_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "progress_bar_create", wrap_progress_bar_create);
   Nan::Export(ctx, "progress_bar_cast", wrap_progress_bar_cast);
@@ -22718,11 +22797,13 @@ ret_t progress_bar_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "progress_bar_set_max", wrap_progress_bar_set_max);
   Nan::Export(ctx, "progress_bar_set_vertical", wrap_progress_bar_set_vertical);
   Nan::Export(ctx, "progress_bar_set_show_text", wrap_progress_bar_set_show_text);
+  Nan::Export(ctx, "progress_bar_set_reverse", wrap_progress_bar_set_reverse);
   Nan::Export(ctx, "progress_bar_get_percent", wrap_progress_bar_get_percent);
   Nan::Export(ctx, "progress_bar_t_get_prop_value", wrap_progress_bar_t_get_prop_value);
   Nan::Export(ctx, "progress_bar_t_get_prop_max", wrap_progress_bar_t_get_prop_max);
   Nan::Export(ctx, "progress_bar_t_get_prop_vertical", wrap_progress_bar_t_get_prop_vertical);
   Nan::Export(ctx, "progress_bar_t_get_prop_show_text", wrap_progress_bar_t_get_prop_show_text);
+  Nan::Export(ctx, "progress_bar_t_get_prop_reverse", wrap_progress_bar_t_get_prop_reverse);
 
  return RET_OK;
 }

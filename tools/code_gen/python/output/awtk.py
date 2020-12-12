@@ -2518,6 +2518,18 @@ class TEventType:
   TOP_WINDOW_CHANGED = EVT_TOP_WINDOW_CHANGED();
 
   #
+  # 输入法启动(event_t)。
+  #
+  #
+  IM_START = EVT_IM_START();
+
+  #
+  # 输入法停止(event_t)。
+  #
+  #
+  IM_STOP = EVT_IM_STOP();
+
+  #
   # 输入法提交输入的文本事件(im_commit_event_t)。
   #
   #
@@ -5638,6 +5650,12 @@ class TWidgetProp:
   VALUE = WIDGET_PROP_VALUE();
 
   #
+  # 进度条反向显示。
+  #
+  #
+  REVERSE = WIDGET_PROP_REVERSE();
+
+  #
   # 长度。
   #
   #
@@ -8358,11 +8376,8 @@ class TWidget(object):
 
 
 #
-# 应用程序的配置信息。
-#
-#底层实现可以是任何格式，比如INI，XML，JSON和UBJSON。
-#
-#对于树状的文档，key可以是多级的，用.分隔。如network.ip。
+# #include "conf_io/app_conf.h"
+#```
 #
 #
 class TAppConf(object):
@@ -15173,6 +15188,17 @@ class TScrollView (TWidget):
 
 
   #
+  # 设置滚动时offset是否按页面对齐。
+  # 
+  # @param snap_to_page 是否按页面对齐。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_snap_to_page(self, snap_to_page): 
+    return scroll_view_set_snap_to_page(awtk_get_native_obj(self), snap_to_page);
+
+
+  #
   # 设置偏移量。
   # 
   # @param xoffset x偏移量。
@@ -15187,8 +15213,8 @@ class TScrollView (TWidget):
   #
   # 设置偏移速度比例。
   # 
-  # @param xspeed_scale x偏移速度比例。。
-  # @param yspeed_scale y偏移速度比例。。
+  # @param xspeed_scale x偏移速度比例。
+  # @param yspeed_scale y偏移速度比例。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
@@ -15308,6 +15334,19 @@ class TScrollView (TWidget):
   @yslidable.setter
   def yslidable(self, v):
    this.set_yslidable(v);
+
+
+  #
+  # 滚动时offset是否按页面对齐。
+  #
+  #
+  @property
+  def snap_to_page(self):
+    return scroll_view_t_get_prop_snap_to_page(self.nativeObj);
+
+  @snap_to_page.setter
+  def snap_to_page(self, v):
+   this.set_snap_to_page(v);
 
 
 #
@@ -19044,6 +19083,17 @@ class TProgressBar (TWidget):
 
 
   #
+  # 设置进度条是否反向。
+  # 
+  # @param reverse 是否反向。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_reverse(self, reverse): 
+    return progress_bar_set_reverse(awtk_get_native_obj(self), reverse);
+
+
+  #
   # 获取进度百分比。
   #
   #> 当max为100时，percent和value取整后一致。
@@ -19105,6 +19155,19 @@ class TProgressBar (TWidget):
   @show_text.setter
   def show_text(self, v):
    this.set_show_text(v);
+
+
+  #
+  # 是否反向显示。如果为TRUE，水平方向从右向左表示增加，垂直方向从上到下表示增加。
+  #
+  #
+  @property
+  def reverse(self):
+    return progress_bar_t_get_prop_reverse(self.nativeObj);
+
+  @reverse.setter
+  def reverse(self, v):
+   this.set_reverse(v);
 
 
 #

@@ -2509,6 +2509,22 @@ int awtk_TEventType_EVT_TOP_WINDOW_CHANGED(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TEventType_EVT_IM_START(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(EVT_IM_START));
+
+  return 0;
+}
+
+int awtk_TEventType_EVT_IM_STOP(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(EVT_IM_STOP));
+
+  return 0;
+}
+
 int awtk_TEventType_EVT_IM_COMMIT(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -6001,6 +6017,14 @@ int awtk_TWidgetProp_WIDGET_PROP_VALUE(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   jni_ctx_return_str(&ctx, (char*)(WIDGET_PROP_VALUE));
+
+  return 0;
+}
+
+int awtk_TWidgetProp_WIDGET_PROP_REVERSE(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_str(&ctx, (char*)(WIDGET_PROP_REVERSE));
 
   return 0;
 }
@@ -14916,6 +14940,18 @@ int awtk_TScrollView_scroll_view_set_yslidable(Runtime *runtime, JClass *clazz) 
   return 0;
 }
 
+int awtk_TScrollView_scroll_view_set_snap_to_page(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  bool_t snap_to_page = (bool_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)scroll_view_set_snap_to_page(widget, snap_to_page);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TScrollView_scroll_view_set_offset(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -15038,6 +15074,15 @@ int awtk_TScrollView_scroll_view_t_get_prop_yslidable(Runtime *runtime, JClass *
 
   scroll_view_t* obj = (scroll_view_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_int(&ctx, (int32_t)(obj->yslidable));
+
+  return 0;
+}
+
+int awtk_TScrollView_scroll_view_t_get_prop_snap_to_page(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  scroll_view_t* obj = (scroll_view_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->snap_to_page));
 
   return 0;
 }
@@ -17590,6 +17635,18 @@ int awtk_TProgressBar_progress_bar_set_show_text(Runtime *runtime, JClass *clazz
   return 0;
 }
 
+int awtk_TProgressBar_progress_bar_set_reverse(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  bool_t reverse = (bool_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)progress_bar_set_reverse(widget, reverse);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TProgressBar_progress_bar_get_percent(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -17633,6 +17690,15 @@ int awtk_TProgressBar_progress_bar_t_get_prop_show_text(Runtime *runtime, JClass
 
   progress_bar_t* obj = (progress_bar_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_int(&ctx, (int32_t)(obj->show_text));
+
+  return 0;
+}
+
+int awtk_TProgressBar_progress_bar_t_get_prop_reverse(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  progress_bar_t* obj = (progress_bar_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->reverse));
 
   return 0;
 }
@@ -19442,6 +19508,8 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TEventType",  "EVT_WINDOW_CLOSE",  "()I",  awtk_TEventType_EVT_WINDOW_CLOSE},
 {"awtk/TEventType",  "EVT_REQUEST_CLOSE_WINDOW",  "()I",  awtk_TEventType_EVT_REQUEST_CLOSE_WINDOW},
 {"awtk/TEventType",  "EVT_TOP_WINDOW_CHANGED",  "()I",  awtk_TEventType_EVT_TOP_WINDOW_CHANGED},
+{"awtk/TEventType",  "EVT_IM_START",  "()I",  awtk_TEventType_EVT_IM_START},
+{"awtk/TEventType",  "EVT_IM_STOP",  "()I",  awtk_TEventType_EVT_IM_STOP},
 {"awtk/TEventType",  "EVT_IM_COMMIT",  "()I",  awtk_TEventType_EVT_IM_COMMIT},
 {"awtk/TEventType",  "EVT_IM_CLEAR",  "()I",  awtk_TEventType_EVT_IM_CLEAR},
 {"awtk/TEventType",  "EVT_IM_CANCEL",  "()I",  awtk_TEventType_EVT_IM_CANCEL},
@@ -19833,6 +19901,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidgetProp",  "WIDGET_PROP_CLOSABLE",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_CLOSABLE},
 {"awtk/TWidgetProp",  "WIDGET_PROP_POINTER_CURSOR",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_POINTER_CURSOR},
 {"awtk/TWidgetProp",  "WIDGET_PROP_VALUE",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_VALUE},
+{"awtk/TWidgetProp",  "WIDGET_PROP_REVERSE",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_REVERSE},
 {"awtk/TWidgetProp",  "WIDGET_PROP_LENGTH",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_LENGTH},
 {"awtk/TWidgetProp",  "WIDGET_PROP_LINE_WRAP",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_LINE_WRAP},
 {"awtk/TWidgetProp",  "WIDGET_PROP_WORD_WRAP",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_WORD_WRAP},
@@ -20750,6 +20819,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TScrollView",  "scroll_view_set_virtual_h",  "(JI)I",  awtk_TScrollView_scroll_view_set_virtual_h},
 {"awtk/TScrollView",  "scroll_view_set_xslidable",  "(JZ)I",  awtk_TScrollView_scroll_view_set_xslidable},
 {"awtk/TScrollView",  "scroll_view_set_yslidable",  "(JZ)I",  awtk_TScrollView_scroll_view_set_yslidable},
+{"awtk/TScrollView",  "scroll_view_set_snap_to_page",  "(JZ)I",  awtk_TScrollView_scroll_view_set_snap_to_page},
 {"awtk/TScrollView",  "scroll_view_set_offset",  "(JII)I",  awtk_TScrollView_scroll_view_set_offset},
 {"awtk/TScrollView",  "scroll_view_set_speed_scale",  "(JFF)I",  awtk_TScrollView_scroll_view_set_speed_scale},
 {"awtk/TScrollView",  "scroll_view_scroll_to",  "(JIII)I",  awtk_TScrollView_scroll_view_scroll_to},
@@ -20762,6 +20832,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TScrollView",  "scroll_view_t_get_prop_yspeed_scale",  "(J)F",  awtk_TScrollView_scroll_view_t_get_prop_yspeed_scale},
 {"awtk/TScrollView",  "scroll_view_t_get_prop_xslidable",  "(J)Z",  awtk_TScrollView_scroll_view_t_get_prop_xslidable},
 {"awtk/TScrollView",  "scroll_view_t_get_prop_yslidable",  "(J)Z",  awtk_TScrollView_scroll_view_t_get_prop_yslidable},
+{"awtk/TScrollView",  "scroll_view_t_get_prop_snap_to_page",  "(J)Z",  awtk_TScrollView_scroll_view_t_get_prop_snap_to_page},
 {"awtk/TSlideMenu",  "slide_menu_create",  "(JIIII)J",  awtk_TSlideMenu_slide_menu_create},
 {"awtk/TSlideMenu",  "slide_menu_cast",  "(J)J",  awtk_TSlideMenu_slide_menu_cast},
 {"awtk/TSlideMenu",  "slide_menu_set_value",  "(JI)I",  awtk_TSlideMenu_slide_menu_set_value},
@@ -20988,11 +21059,13 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TProgressBar",  "progress_bar_set_max",  "(JI)I",  awtk_TProgressBar_progress_bar_set_max},
 {"awtk/TProgressBar",  "progress_bar_set_vertical",  "(JZ)I",  awtk_TProgressBar_progress_bar_set_vertical},
 {"awtk/TProgressBar",  "progress_bar_set_show_text",  "(JZ)I",  awtk_TProgressBar_progress_bar_set_show_text},
+{"awtk/TProgressBar",  "progress_bar_set_reverse",  "(JZ)I",  awtk_TProgressBar_progress_bar_set_reverse},
 {"awtk/TProgressBar",  "progress_bar_get_percent",  "(J)I",  awtk_TProgressBar_progress_bar_get_percent},
 {"awtk/TProgressBar",  "progress_bar_t_get_prop_value",  "(J)F",  awtk_TProgressBar_progress_bar_t_get_prop_value},
 {"awtk/TProgressBar",  "progress_bar_t_get_prop_max",  "(J)F",  awtk_TProgressBar_progress_bar_t_get_prop_max},
 {"awtk/TProgressBar",  "progress_bar_t_get_prop_vertical",  "(J)Z",  awtk_TProgressBar_progress_bar_t_get_prop_vertical},
 {"awtk/TProgressBar",  "progress_bar_t_get_prop_show_text",  "(J)Z",  awtk_TProgressBar_progress_bar_t_get_prop_show_text},
+{"awtk/TProgressBar",  "progress_bar_t_get_prop_reverse",  "(J)Z",  awtk_TProgressBar_progress_bar_t_get_prop_reverse},
 {"awtk/TRow",  "row_create",  "(JIIII)J",  awtk_TRow_row_create},
 {"awtk/TRow",  "row_cast",  "(J)J",  awtk_TRow_row_cast},
 {"awtk/TSlider",  "slider_create",  "(JIIII)J",  awtk_TSlider_slider_create},

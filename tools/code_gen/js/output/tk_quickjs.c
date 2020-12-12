@@ -4092,6 +4092,24 @@ jsvalue_t get_EVT_TOP_WINDOW_CHANGED(
   return jsvalue_create_int(ctx, EVT_TOP_WINDOW_CHANGED);
 }
 
+jsvalue_t get_EVT_IM_START(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, EVT_IM_START);
+}
+
+jsvalue_t get_EVT_IM_STOP(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, EVT_IM_STOP);
+}
+
 jsvalue_t get_EVT_IM_COMMIT(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -4599,6 +4617,10 @@ ret_t event_type_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_EVT_REQUEST_CLOSE_WINDOW, "EVT_REQUEST_CLOSE_WINDOW", 1));
   JS_SetPropertyStr(ctx, global_obj, "EVT_TOP_WINDOW_CHANGED",
                       JS_NewCFunction(ctx, get_EVT_TOP_WINDOW_CHANGED, "EVT_TOP_WINDOW_CHANGED", 1));
+  JS_SetPropertyStr(ctx, global_obj, "EVT_IM_START",
+                      JS_NewCFunction(ctx, get_EVT_IM_START, "EVT_IM_START", 1));
+  JS_SetPropertyStr(ctx, global_obj, "EVT_IM_STOP",
+                      JS_NewCFunction(ctx, get_EVT_IM_STOP, "EVT_IM_STOP", 1));
   JS_SetPropertyStr(ctx, global_obj, "EVT_IM_COMMIT",
                       JS_NewCFunction(ctx, get_EVT_IM_COMMIT, "EVT_IM_COMMIT", 1));
   JS_SetPropertyStr(ctx, global_obj, "EVT_IM_CLEAR",
@@ -9380,6 +9402,15 @@ jsvalue_t get_WIDGET_PROP_VALUE(
   return jsvalue_create_string(ctx, WIDGET_PROP_VALUE);
 }
 
+jsvalue_t get_WIDGET_PROP_REVERSE(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, WIDGET_PROP_REVERSE);
+}
+
 jsvalue_t get_WIDGET_PROP_LENGTH(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -10472,6 +10503,8 @@ ret_t widget_prop_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_WIDGET_PROP_POINTER_CURSOR, "WIDGET_PROP_POINTER_CURSOR", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_VALUE",
                       JS_NewCFunction(ctx, get_WIDGET_PROP_VALUE, "WIDGET_PROP_VALUE", 1));
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_REVERSE",
+                      JS_NewCFunction(ctx, get_WIDGET_PROP_REVERSE, "WIDGET_PROP_REVERSE", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_LENGTH",
                       JS_NewCFunction(ctx, get_WIDGET_PROP_LENGTH, "WIDGET_PROP_LENGTH", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_LINE_WRAP",
@@ -23750,6 +23783,24 @@ jsvalue_t wrap_scroll_view_set_yslidable(
   return jret;
 }
 
+jsvalue_t wrap_scroll_view_set_snap_to_page(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  bool_t snap_to_page = (bool_t)jsvalue_get_boolean_value(ctx, argv[1]);
+  ret = (ret_t)scroll_view_set_snap_to_page(widget, snap_to_page);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_scroll_view_set_offset(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -23932,6 +23983,19 @@ jsvalue_t wrap_scroll_view_t_get_prop_yslidable(
   return jret;
 }
 
+jsvalue_t wrap_scroll_view_t_get_prop_snap_to_page(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  scroll_view_t* obj = (scroll_view_t*)jsvalue_get_pointer(ctx, argv[0], "scroll_view_t*");
+
+  jret = jsvalue_create_bool(ctx, obj->snap_to_page);
+  return jret;
+}
+
 ret_t scroll_view_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
   JS_SetPropertyStr(ctx, global_obj, "scroll_view_create",
@@ -23946,6 +24010,8 @@ ret_t scroll_view_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_scroll_view_set_xslidable, "scroll_view_set_xslidable", 1));
   JS_SetPropertyStr(ctx, global_obj, "scroll_view_set_yslidable",
                       JS_NewCFunction(ctx, wrap_scroll_view_set_yslidable, "scroll_view_set_yslidable", 1));
+  JS_SetPropertyStr(ctx, global_obj, "scroll_view_set_snap_to_page",
+                      JS_NewCFunction(ctx, wrap_scroll_view_set_snap_to_page, "scroll_view_set_snap_to_page", 1));
   JS_SetPropertyStr(ctx, global_obj, "scroll_view_set_offset",
                       JS_NewCFunction(ctx, wrap_scroll_view_set_offset, "scroll_view_set_offset", 1));
   JS_SetPropertyStr(ctx, global_obj, "scroll_view_set_speed_scale",
@@ -23970,6 +24036,8 @@ ret_t scroll_view_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_scroll_view_t_get_prop_xslidable, "scroll_view_t_get_prop_xslidable", 1));
   JS_SetPropertyStr(ctx, global_obj, "scroll_view_t_get_prop_yslidable",
                       JS_NewCFunction(ctx, wrap_scroll_view_t_get_prop_yslidable, "scroll_view_t_get_prop_yslidable", 1));
+  JS_SetPropertyStr(ctx, global_obj, "scroll_view_t_get_prop_snap_to_page",
+                      JS_NewCFunction(ctx, wrap_scroll_view_t_get_prop_snap_to_page, "scroll_view_t_get_prop_snap_to_page", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -28382,6 +28450,24 @@ jsvalue_t wrap_progress_bar_set_show_text(
   return jret;
 }
 
+jsvalue_t wrap_progress_bar_set_reverse(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  bool_t reverse = (bool_t)jsvalue_get_boolean_value(ctx, argv[1]);
+  ret = (ret_t)progress_bar_set_reverse(widget, reverse);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_progress_bar_get_percent(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -28451,6 +28537,19 @@ jsvalue_t wrap_progress_bar_t_get_prop_show_text(
   return jret;
 }
 
+jsvalue_t wrap_progress_bar_t_get_prop_reverse(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  progress_bar_t* obj = (progress_bar_t*)jsvalue_get_pointer(ctx, argv[0], "progress_bar_t*");
+
+  jret = jsvalue_create_bool(ctx, obj->reverse);
+  return jret;
+}
+
 ret_t progress_bar_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
   JS_SetPropertyStr(ctx, global_obj, "progress_bar_create",
@@ -28465,6 +28564,8 @@ ret_t progress_bar_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_progress_bar_set_vertical, "progress_bar_set_vertical", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_bar_set_show_text",
                       JS_NewCFunction(ctx, wrap_progress_bar_set_show_text, "progress_bar_set_show_text", 1));
+  JS_SetPropertyStr(ctx, global_obj, "progress_bar_set_reverse",
+                      JS_NewCFunction(ctx, wrap_progress_bar_set_reverse, "progress_bar_set_reverse", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_bar_get_percent",
                       JS_NewCFunction(ctx, wrap_progress_bar_get_percent, "progress_bar_get_percent", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_bar_t_get_prop_value",
@@ -28475,6 +28576,8 @@ ret_t progress_bar_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_progress_bar_t_get_prop_vertical, "progress_bar_t_get_prop_vertical", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_bar_t_get_prop_show_text",
                       JS_NewCFunction(ctx, wrap_progress_bar_t_get_prop_show_text, "progress_bar_t_get_prop_show_text", 1));
+  JS_SetPropertyStr(ctx, global_obj, "progress_bar_t_get_prop_reverse",
+                      JS_NewCFunction(ctx, wrap_progress_bar_t_get_prop_reverse, "progress_bar_t_get_prop_reverse", 1));
 
  jsvalue_unref(ctx, global_obj);
 

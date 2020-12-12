@@ -2871,6 +2871,10 @@
    return scroll_view_set_yslidable(((widget_t*)(this->nativeObj)), yslidable);
  }
 
+ ret_t TScrollView::SetSnapToPage(bool snap_to_page)  {
+   return scroll_view_set_snap_to_page(((widget_t*)(this->nativeObj)), snap_to_page);
+ }
+
  ret_t TScrollView::SetOffset(int32_t xoffset, int32_t yoffset)  {
    return scroll_view_set_offset(((widget_t*)(this->nativeObj)), xoffset, yoffset);
  }
@@ -2917,6 +2921,10 @@
 
  bool TScrollView::GetYslidable() const {
    return ((scroll_view_t*)(this->nativeObj))->yslidable;
+ }
+
+ bool TScrollView::GetSnapToPage() const {
+   return ((scroll_view_t*)(this->nativeObj))->snap_to_page;
  }
 
  TWidget TSlideMenu::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -3703,6 +3711,10 @@
    return progress_bar_set_show_text(((widget_t*)(this->nativeObj)), show_text);
  }
 
+ ret_t TProgressBar::SetReverse(bool reverse)  {
+   return progress_bar_set_reverse(((widget_t*)(this->nativeObj)), reverse);
+ }
+
  uint32_t TProgressBar::GetPercent()  {
     return progress_bar_get_percent(((widget_t*)(this->nativeObj)));
  }
@@ -3721,6 +3733,10 @@
 
  bool TProgressBar::GetShowText() const {
    return ((progress_bar_t*)(this->nativeObj))->show_text;
+ }
+
+ bool TProgressBar::GetReverse() const {
+   return ((progress_bar_t*)(this->nativeObj))->reverse;
  }
 
  TWidget TRow::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {

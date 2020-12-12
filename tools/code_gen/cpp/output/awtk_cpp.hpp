@@ -4034,11 +4034,8 @@ public:
 
 
 /**
- * 应用程序的配置信息。
- *
- *底层实现可以是任何格式，比如INI，XML，JSON和UBJSON。
- *
- *对于树状的文档，key可以是多级的，用.分隔。如network.ip。
+ * #include "conf_io/app_conf.h"
+ *```
  *
  */
 class TAppConf { 
@@ -8848,6 +8845,15 @@ public:
   ret_t SetYslidable(bool yslidable) ;
 
   /**
+   * 设置滚动时offset是否按页面对齐。
+   * 
+   * @param snap_to_page 是否按页面对齐。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetSnapToPage(bool snap_to_page) ;
+
+  /**
    * 设置偏移量。
    * 
    * @param xoffset x偏移量。
@@ -8860,8 +8866,8 @@ public:
   /**
    * 设置偏移速度比例。
    * 
-   * @param xspeed_scale x偏移速度比例。。
-   * @param yspeed_scale y偏移速度比例。。
+   * @param xspeed_scale x偏移速度比例。
+   * @param yspeed_scale y偏移速度比例。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -8936,6 +8942,12 @@ public:
    *
    */
   bool GetYslidable() const;
+
+  /**
+   * 滚动时offset是否按页面对齐。
+   *
+   */
+  bool GetSnapToPage() const;
 };
 
 
@@ -12250,6 +12262,15 @@ public:
   ret_t SetShowText(bool show_text) ;
 
   /**
+   * 设置进度条是否反向。
+   * 
+   * @param reverse 是否反向。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetReverse(bool reverse) ;
+
+  /**
    * 获取进度百分比。
    *
    *> 当max为100时，percent和value取整后一致。
@@ -12282,6 +12303,12 @@ public:
    *
    */
   bool GetShowText() const;
+
+  /**
+   * 是否反向显示。如果为TRUE，水平方向从右向左表示增加，垂直方向从上到下表示增加。
+   *
+   */
+  bool GetReverse() const;
 };
 
 
