@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TAppConf类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -30,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.8.20 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'搜索');
@@ -106,9 +106,55 @@ $(function() {
 <tr class="separator:a505248383e6db37cd17cc72a75a2708a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>应用程序的配置信息。</p>
-<p>底层实现可以是任何格式，比如INI，XML，JSON和UBJSON。</p>
-<p>对于树状的文档，key可以是多级的，用.分隔。如network.ip。 </p>
+<div class="textblock"><pre class="fragment"> widget_set_style_color(label, "style:normal:bg_color", 0xFF332211);
+```
+
+ @param state_and_name 状态和名字，用英文的冒号分隔。
+ @param value 值。颜色值一般用十六进制表示，每两个数字表示一个颜色通道，从高位到低位，依次是ABGR。
+
+ @return 返回RET_OK表示成功，否则表示失败。
+</pre><p> */ ret_t SetStyleColor(const char* state_and_name, uint32_t value) ;</p>
+<p>/** x坐标(相对于父控件的x坐标)。</p>
+<p>*/ xy_t GetX() const;</p>
+<p>/** y坐标(相对于父控件的y坐标)。</p>
+<p>*/ xy_t GetY() const;</p>
+<p>/** 宽度。</p>
+<p>*/ wh_t GetW() const;</p>
+<p>/** 高度。</p>
+<p>*/ wh_t GetH() const;</p>
+<p>/** 控件名字。</p>
+<p>*/ char* GetName() const;</p>
+<p>/** 鼠标光标图片名称。</p>
+<p>*/ char* GetPointerCursor() const;</p>
+<p>/** 保存用于翻译的字符串。</p>
+<p>*/ char* GetTrText() const;</p>
+<p>/** style的名称。</p>
+<p>*/ char* GetStyle() const;</p>
+<p>/** 动画参数。请参考<a href="https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md">控件动画</a></p>
+<p>*/ char* GetAnimation() const;</p>
+<p>/** 启用/禁用状态。</p>
+<p>*/ bool GetEnable() const;</p>
+<p>/** 是否启用按键音、触屏音和震动等反馈。</p>
+<p>*/ bool GetFeedback() const;</p>
+<p>/** 是否可见。</p>
+<p>*/ bool GetVisible() const;</p>
+<p>/** 是否接受用户事件。</p>
+<p>*/ bool GetSensitive() const;</p>
+<p>/** 是否支持焦点停留。</p>
+<p>*/ bool GetFocusable() const;</p>
+<p>/** 是否支持焦点状态。 *&gt; 如果希望style支持焦点状态，但有不希望焦点停留，可用本属性。</p>
+<p>*/ bool GetWithFocusState() const;</p>
+<p>/** 是否根据子控件和文本自动调整控件自身大小。</p>
+<p>*&gt; 为true时，最好不要使用child_layout，否则可能有冲突。 *&gt; 注意：只是调整控件的本身的宽高，不会修改控件本身的位置。</p>
+<p>*/ bool GetAutoAdjustSize() const;</p>
+<p>/** 标识控件是否启用浮动布局，不受父控件的children_layout的控制。</p>
+<p>*/ bool GetFloating() const;</p>
+<p>/** 脏矩形超出控件本身大小的最大范围(一般不用指定)。</p>
+<p>*&gt; 如果 border 太粗或 offset 太大等原因，导致脏矩形超出控件本身大小太多（大于缺省值）时，才需要指定。</p>
+<p>*/ uint16_t GetDirtyRectTolerance() const;</p>
+<p>/** 父控件</p>
+<p>*/ TWidget GetParent() const; };</p>
+<p>/** #include "conf_io/app_conf.h" ``` </p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="ace206860d1fe86e5b7f1cd2b2cec6f3e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace206860d1fe86e5b7f1cd2b2cec6f3e">&#9670;&nbsp;</a></span>Deinit()</h2>
@@ -716,9 +762,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
+制作者&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

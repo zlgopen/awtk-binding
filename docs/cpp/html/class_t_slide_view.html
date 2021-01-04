@@ -91,6 +91,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:aa44d24db7ac57f65db9c074d898aac72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af14cd62b4ea83f3356436859930c530a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slide_view.html#af14cd62b4ea83f3356436859930c530a">SetActive</a> (uint32_t index)</td></tr>
 <tr class="separator:af14cd62b4ea83f3356436859930c530a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeff63bd31dedd512330e4ca28d56675b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slide_view.html#aeff63bd31dedd512330e4ca28d56675b">SetActiveEx</a> (uint32_t index, bool animate)</td></tr>
+<tr class="separator:aeff63bd31dedd512330e4ca28d56675b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4669a034a42c7f3d9ccafdb931729b8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slide_view.html#ae4669a034a42c7f3d9ccafdb931729b8">SetVertical</a> (bool vertical)</td></tr>
 <tr class="separator:ae4669a034a42c7f3d9ccafdb931729b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afab1fb45a13269d7b77770654d93e658"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slide_view.html#afab1fb45a13269d7b77770654d93e658">SetAnimHint</a> (const char *anim_hint)</td></tr>
@@ -311,10 +313,47 @@ static <a class="el" href="class_t_slide_view.html">TSlideView</a>&#160;</td><td
         </tr>
       </table>
 </div><div class="memdoc">
-<p>设置当前页的序号。</p>
+<p>设置当前页的序号(默认启用动画)。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">index</td><td>当前页的序号。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="aeff63bd31dedd512330e4ca28d56675b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeff63bd31dedd512330e4ca28d56675b">&#9670;&nbsp;</a></span>SetActiveEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TSlideView::SetActiveEx </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>animate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置当前页的序号。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>当前页的序号。 </td></tr>
+    <tr><td class="paramname">animate</td><td>是否启用动画。</td></tr>
   </table>
   </dd>
 </dl>

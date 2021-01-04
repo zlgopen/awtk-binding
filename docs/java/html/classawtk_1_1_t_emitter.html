@@ -81,13 +81,14 @@ $(function() {
  <div class="center">
   <img src="classawtk_1_1_t_emitter.png" usemap="#awtk.TEmitter_map" alt=""/>
   <map id="awtk.TEmitter_map" name="awtk.TEmitter_map">
-<area href="classawtk_1_1_t_file_chooser.html" alt="awtk.TFileChooser" shape="rect" coords="0,56,128,80"/>
-<area href="classawtk_1_1_t_object.html" alt="awtk.TObject" shape="rect" coords="276,56,404,80"/>
-<area href="classawtk_1_1_t_idle_info.html" alt="awtk.TIdleInfo" shape="rect" coords="0,112,128,136"/>
-<area href="classawtk_1_1_t_native_window.html" alt="awtk.TNativeWindow" shape="rect" coords="138,112,266,136"/>
-<area href="classawtk_1_1_t_object_array.html" alt="awtk.TObjectArray" shape="rect" coords="276,112,404,136"/>
-<area href="classawtk_1_1_t_object_default.html" alt="awtk.TObjectDefault" shape="rect" coords="414,112,542,136"/>
-<area href="classawtk_1_1_t_timer_info.html" alt="awtk.TTimerInfo" shape="rect" coords="552,112,680,136"/>
+<area href="classawtk_1_1_t_assets_manager.html" alt="awtk.TAssetsManager" shape="rect" coords="0,56,136,80"/>
+<area href="classawtk_1_1_t_file_chooser.html" alt="awtk.TFileChooser" shape="rect" coords="146,56,282,80"/>
+<area href="classawtk_1_1_t_object.html" alt="awtk.TObject" shape="rect" coords="292,56,428,80"/>
+<area href="classawtk_1_1_t_idle_info.html" alt="awtk.TIdleInfo" shape="rect" coords="0,112,136,136"/>
+<area href="classawtk_1_1_t_native_window.html" alt="awtk.TNativeWindow" shape="rect" coords="146,112,282,136"/>
+<area href="classawtk_1_1_t_object_array.html" alt="awtk.TObjectArray" shape="rect" coords="292,112,428,136"/>
+<area href="classawtk_1_1_t_object_default.html" alt="awtk.TObjectDefault" shape="rect" coords="438,112,574,136"/>
+<area href="classawtk_1_1_t_timer_info.html" alt="awtk.TTimerInfo" shape="rect" coords="584,112,720,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -99,8 +100,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:abe4f9d4a120ad6f3e81cafa2764fa601"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf6b367450ff271497e535debed153d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#abf6b367450ff271497e535debed153d2">dispatchSimpleEvent</a> (<a class="el" href="enumawtk_1_1_t_event_type.html">TEventType</a> type)</td></tr>
 <tr class="separator:abf6b367450ff271497e535debed153d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa171587ffc71117e6f4fa66ad19eb571"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#aa171587ffc71117e6f4fa66ad19eb571">on</a> (<a class="el" href="enumawtk_1_1_t_event_type.html">TEventType</a> type, TOnEvent on_event, long ctx)</td></tr>
-<tr class="separator:aa171587ffc71117e6f4fa66ad19eb571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88c8411f22c298f963dc425bfcc00aab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#a88c8411f22c298f963dc425bfcc00aab">on</a> (<a class="el" href="enumawtk_1_1_t_event_type.html">TEventType</a> etype, TOnEvent handler, long ctx)</td></tr>
+<tr class="separator:a88c8411f22c298f963dc425bfcc00aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4515856b77cd3f885a2fd628e4801ab7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#a4515856b77cd3f885a2fd628e4801ab7">off</a> (int id)</td></tr>
 <tr class="separator:a4515856b77cd3f885a2fd628e4801ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac74c2f4cb04791b650ad9c54b2b13707"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#ac74c2f4cb04791b650ad9c54b2b13707">enable</a> ()</td></tr>
@@ -196,7 +197,7 @@ Public 属性</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>对应的Java对象。 </dd></dl>
 
-<p>被 <a class="el" href="classawtk_1_1_t_timer_info.html#abf4ef80c28924deb3d761f9de5138e3d">awtk.TTimerInfo</a>, <a class="el" href="classawtk_1_1_t_object_default.html#a540eeea212bef35e9e565a08cb75c9b2">awtk.TObjectDefault</a>, <a class="el" href="classawtk_1_1_t_object_array.html#aff10e70b85effef310cceb64edc006f1">awtk.TObjectArray</a>, <a class="el" href="classawtk_1_1_t_object.html#a6b977217383a5f374a04379b4cfc7066">awtk.TObject</a>, <a class="el" href="classawtk_1_1_t_native_window.html#a738923f6f493dd55695092f6f3317947">awtk.TNativeWindow</a>, <a class="el" href="classawtk_1_1_t_idle_info.html#a15abd94e89d5c5ae6bd9728649310044">awtk.TIdleInfo</a> , 以及 <a class="el" href="classawtk_1_1_t_file_chooser.html#a3c1aebee88a59cb0006a2f6f3054f5df">awtk.TFileChooser</a> 重载.</p>
+<p>被 <a class="el" href="classawtk_1_1_t_timer_info.html#abf4ef80c28924deb3d761f9de5138e3d">awtk.TTimerInfo</a>, <a class="el" href="classawtk_1_1_t_object_default.html#a540eeea212bef35e9e565a08cb75c9b2">awtk.TObjectDefault</a>, <a class="el" href="classawtk_1_1_t_object_array.html#aff10e70b85effef310cceb64edc006f1">awtk.TObjectArray</a>, <a class="el" href="classawtk_1_1_t_object.html#a6b977217383a5f374a04379b4cfc7066">awtk.TObject</a>, <a class="el" href="classawtk_1_1_t_native_window.html#a738923f6f493dd55695092f6f3317947">awtk.TNativeWindow</a>, <a class="el" href="classawtk_1_1_t_idle_info.html#a15abd94e89d5c5ae6bd9728649310044">awtk.TIdleInfo</a>, <a class="el" href="classawtk_1_1_t_file_chooser.html#a3c1aebee88a59cb0006a2f6f3054f5df">awtk.TFileChooser</a> , 以及 <a class="el" href="classawtk_1_1_t_assets_manager.html#aed3688ae3ff577b0b518daac005e31eb">awtk.TAssetsManager</a> 重载.</p>
 
 </div>
 </div>
@@ -451,8 +452,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aa171587ffc71117e6f4fa66ad19eb571"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa171587ffc71117e6f4fa66ad19eb571">&#9670;&nbsp;</a></span>on()</h2>
+<a id="a88c8411f22c298f963dc425bfcc00aab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88c8411f22c298f963dc425bfcc00aab">&#9670;&nbsp;</a></span>on()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -464,13 +465,13 @@ Public 属性</h2></td></tr>
           <td class="memname">int awtk.TEmitter.on </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="enumawtk_1_1_t_event_type.html">TEventType</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
+          <td class="paramname"><em>etype</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">TOnEvent&#160;</td>
-          <td class="paramname"><em>on_event</em>, </td>
+          <td class="paramname"><em>handler</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -493,8 +494,8 @@ Public 属性</h2></td></tr>
 <p>注册指定事件的处理函数。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">type</td><td>事件类型。 </td></tr>
-    <tr><td class="paramname">on_event</td><td>事件处理函数。 </td></tr>
+    <tr><td class="paramname">etype</td><td>事件类型。 </td></tr>
+    <tr><td class="paramname">handler</td><td>事件处理函数。 </td></tr>
     <tr><td class="paramname">ctx</td><td>事件处理函数上下文。</td></tr>
   </table>
   </dd>

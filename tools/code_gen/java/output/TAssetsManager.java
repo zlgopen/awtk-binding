@@ -33,13 +33,7 @@ package awtk;
  *```
  *
  */
-public class TAssetsManager { 
-
-/**
- * 原生对象。
- */
- public long nativeObj;
-
+public class TAssetsManager extends TEmitter { 
 
 /**
  * 通过nativeObj构造Java对象。
@@ -49,7 +43,7 @@ public class TAssetsManager {
  * @return 对应的Java对象。
  */
  public TAssetsManager(long nativeObj) {
-   this.nativeObj = nativeObj;
+   super(nativeObj);
  }
 
 

@@ -257,7 +257,7 @@ public class TTextSelector extends TWidget {
 
 
   /**
-   * 可见的选项数量(只能是3或者5，缺省为5)。
+   * 可见的选项数量(只能是1或者3或者5，缺省为5)。
    *
    */
  public int getVisibleNr() {
@@ -286,20 +286,20 @@ public class TTextSelector extends TWidget {
 
 
   /**
-   * 是否本地化(翻译)选项(缺省为FALSE)。
-   *
-   */
- public boolean getLocalizeOptions() {
-   return text_selector_t_get_prop_localize_options(this.nativeObj);
- }
-
-
-  /**
    * y偏移速度比例。
    *
    */
  public double getYspeedScale() {
    return text_selector_t_get_prop_yspeed_scale(this.nativeObj);
+ }
+
+
+  /**
+   * 是否本地化(翻译)选项(缺省为FALSE)。
+   *
+   */
+ public boolean getLocalizeOptions() {
+   return text_selector_t_get_prop_localize_options(this.nativeObj);
  }
 
 
@@ -330,7 +330,7 @@ static private native int text_selector_set_yspeed_scale(long widget, double ysp
 static private native int text_selector_t_get_prop_visible_nr(long nativeObj);
 static private native int text_selector_t_get_prop_selected_index(long nativeObj);
 static private native String text_selector_t_get_prop_options(long nativeObj);
-static private native boolean text_selector_t_get_prop_localize_options(long nativeObj);
 static private native double text_selector_t_get_prop_yspeed_scale(long nativeObj);
+static private native boolean text_selector_t_get_prop_localize_options(long nativeObj);
 static private native boolean text_selector_t_get_prop_loop_options(long nativeObj);
 };

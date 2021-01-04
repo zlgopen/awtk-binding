@@ -78,14 +78,14 @@ public class TEmitter {
   /**
    * 注册指定事件的处理函数。
    * 
-   * @param type 事件类型。
-   * @param on_event 事件处理函数。
+   * @param etype 事件类型。
+   * @param handler 事件处理函数。
    * @param ctx 事件处理函数上下文。
    *
    * @return 返回id，用于emitter_off。
    */
- public  int on(TEventType type, TOnEvent on_event, long ctx)  {
-    return emitter_on(this != null ? (this.nativeObj) : 0, type.value(), on_event, ctx);
+ public  int on(TEventType etype, TOnEvent handler, long ctx)  {
+    return emitter_on(this != null ? (this.nativeObj) : 0, etype.value(), handler, ctx);
  }
 
 
@@ -163,7 +163,7 @@ public class TEmitter {
 static private native long emitter_create();
 static private native int emitter_dispatch(long emitter, long e);
 static private native int emitter_dispatch_simple_event(long emitter, int type);
-static private native int emitter_on(long emitter, int type, TOnEvent on_event, long ctx);
+static private native int emitter_on(long emitter, int etype, TOnEvent handler, long ctx);
 static private native int emitter_off(long emitter, int id);
 static private native int emitter_enable(long emitter);
 static private native int emitter_disable(long emitter);

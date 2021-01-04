@@ -95,6 +95,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ade39c3e057e5685c809b470279b8a645"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b1ec94e5820822194858384bc185b25"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#a0b1ec94e5820822194858384bc185b25">SetYslidable</a> (bool yslidable)</td></tr>
 <tr class="separator:a0b1ec94e5820822194858384bc185b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aa7c4cfac7168572068c9e1f027978a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#a6aa7c4cfac7168572068c9e1f027978a">SetSnapToPage</a> (bool snap_to_page)</td></tr>
+<tr class="separator:a6aa7c4cfac7168572068c9e1f027978a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fcbd408e0b4b84f575cb87bace176ed"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#a7fcbd408e0b4b84f575cb87bace176ed">SetOffset</a> (int32_t xoffset, int32_t yoffset)</td></tr>
 <tr class="separator:a7fcbd408e0b4b84f575cb87bace176ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0896da08be4cbc94a459a87a015b6139"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#a0896da08be4cbc94a459a87a015b6139">SetSpeedScale</a> (float_t xspeed_scale, float_t yspeed_scale)</td></tr>
@@ -119,6 +121,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a16ed6b0089619a04e9806a5951a527af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab83f16c5688b961d9e249302f05354e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#ab83f16c5688b961d9e249302f05354e9">GetYslidable</a> () const</td></tr>
 <tr class="separator:ab83f16c5688b961d9e249302f05354e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e3fe38c751d427f8761a32f8ed3f225"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#a9e3fe38c751d427f8761a32f8ed3f225">GetSnapToPage</a> () const</td></tr>
+<tr class="separator:a9e3fe38c751d427f8761a32f8ed3f225"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -225,6 +229,24 @@ static <a class="el" href="class_t_scroll_view.html">TScrollView</a>&#160;</td><
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>对象。 </dd></dl>
+
+</div>
+</div>
+<a id="a9e3fe38c751d427f8761a32f8ed3f225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e3fe38c751d427f8761a32f8ed3f225">&#9670;&nbsp;</a></span>GetSnapToPage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TScrollView::GetSnapToPage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>滚动时offset是否按页面对齐。 </p>
 
 </div>
 </div>
@@ -497,6 +519,32 @@ static <a class="el" href="class_t_scroll_view.html">TScrollView</a>&#160;</td><
 
 </div>
 </div>
+<a id="a6aa7c4cfac7168572068c9e1f027978a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aa7c4cfac7168572068c9e1f027978a">&#9670;&nbsp;</a></span>SetSnapToPage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TScrollView::SetSnapToPage </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>snap_to_page</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置滚动时offset是否按页面对齐。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">snap_to_page</td><td>是否按页面对齐。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="a0896da08be4cbc94a459a87a015b6139"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0896da08be4cbc94a459a87a015b6139">&#9670;&nbsp;</a></span>SetSpeedScale()</h2>
 
@@ -525,8 +573,8 @@ static <a class="el" href="class_t_scroll_view.html">TScrollView</a>&#160;</td><
 <p>设置偏移速度比例。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">xspeed_scale</td><td>x偏移速度比例。。 </td></tr>
-    <tr><td class="paramname">yspeed_scale</td><td>y偏移速度比例。。</td></tr>
+    <tr><td class="paramname">xspeed_scale</td><td>x偏移速度比例。 </td></tr>
+    <tr><td class="paramname">yspeed_scale</td><td>y偏移速度比例。</td></tr>
   </table>
   </dd>
 </dl>

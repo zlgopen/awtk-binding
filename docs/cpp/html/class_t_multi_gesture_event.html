@@ -90,8 +90,6 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ad6bfd21c06413f2e3bb59c59b79a5740"><td class="memItemLeft" align="right" valign="top"><a id="ad6bfd21c06413f2e3bb59c59b79a5740"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TMultiGestureEvent</b> (const multi_gesture_event_t *nativeObj)</td></tr>
 <tr class="separator:ad6bfd21c06413f2e3bb59c59b79a5740"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5873326c03af4be391589081bb61607"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_multi_gesture_event.html#ab5873326c03af4be391589081bb61607">GetTouchId</a> () const</td></tr>
-<tr class="separator:ab5873326c03af4be391589081bb61607"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43e0d94a41cea67a4591388593db872b"><td class="memItemLeft" align="right" valign="top">xy_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_multi_gesture_event.html#a43e0d94a41cea67a4591388593db872b">GetX</a> () const</td></tr>
 <tr class="separator:a43e0d94a41cea67a4591388593db872b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7de351ff5450bf6ffaa12140587db4e5"><td class="memItemLeft" align="right" valign="top">xy_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_multi_gesture_event.html#a7de351ff5450bf6ffaa12140587db4e5">GetY</a> () const</td></tr>
@@ -100,8 +98,6 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a8a04180ee07d22bcb35c807059974bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72d954abe762b337b4427f77990f5c6d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_multi_gesture_event.html#a72d954abe762b337b4427f77990f5c6d">GetDistance</a> () const</td></tr>
 <tr class="separator:a72d954abe762b337b4427f77990f5c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a949c52f1189cbb5055f103d0f9afa856"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_multi_gesture_event.html#a949c52f1189cbb5055f103d0f9afa856">GetFingers</a> () const</td></tr>
-<tr class="separator:a949c52f1189cbb5055f103d0f9afa856"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_t_event"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_t_event')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_t_event.html">TEvent</a></td></tr>
 <tr class="memitem:a942db33b764993a78d737141ebebb8f0 inherit pub_methods_class_t_event"><td class="memItemLeft" align="right" valign="top"><a id="a942db33b764993a78d737141ebebb8f0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TEvent</b> (event_t *nativeObj)</td></tr>
@@ -172,24 +168,6 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a949c52f1189cbb5055f103d0f9afa856"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a949c52f1189cbb5055f103d0f9afa856">&#9670;&nbsp;</a></span>GetFingers()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t TMultiGestureEvent::GetFingers </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>本事件用到手指数。 </p>
-
-</div>
-</div>
 <a id="a8a04180ee07d22bcb35c807059974bc9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8a04180ee07d22bcb35c807059974bc9">&#9670;&nbsp;</a></span>GetRotation()</h2>
 
@@ -204,25 +182,7 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         </tr>
       </table>
 </div><div class="memdoc">
-<p>旋转角度(幅度)增量。 </p>
-
-</div>
-</div>
-<a id="ab5873326c03af4be391589081bb61607"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5873326c03af4be391589081bb61607">&#9670;&nbsp;</a></span>GetTouchId()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int64_t TMultiGestureEvent::GetTouchId </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>touch device id。 </p>
+<p>旋转角度(幅度)增量。（单位弧度） </p>
 
 </div>
 </div>

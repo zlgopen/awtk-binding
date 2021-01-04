@@ -95,6 +95,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ad06afe0aa7720eba069de885e3d7e209"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adac8df8586b5df4249567be50dd7ddf2"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_bar.html#adac8df8586b5df4249567be50dd7ddf2">SetShowText</a> (bool show_text)</td></tr>
 <tr class="separator:adac8df8586b5df4249567be50dd7ddf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3aa1b073c391fbbfde51ee7d4e680d9"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_bar.html#aa3aa1b073c391fbbfde51ee7d4e680d9">SetReverse</a> (bool reverse)</td></tr>
+<tr class="separator:aa3aa1b073c391fbbfde51ee7d4e680d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3297a02e08f2be9b0a004e39c6f7c7fb"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_bar.html#a3297a02e08f2be9b0a004e39c6f7c7fb">GetPercent</a> ()</td></tr>
 <tr class="separator:a3297a02e08f2be9b0a004e39c6f7c7fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a354949ccb29c1739e2973ea81cd46915"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_bar.html#a354949ccb29c1739e2973ea81cd46915">GetValue</a> () const</td></tr>
@@ -105,6 +107,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a2d9bf4a152ad03520ff2d8b01430c78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad29b506d6160d5319afbce5566f5674d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_bar.html#ad29b506d6160d5319afbce5566f5674d">GetShowText</a> () const</td></tr>
 <tr class="separator:ad29b506d6160d5319afbce5566f5674d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87c9a0008b38ac40bfa9634194fe21ae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_bar.html#a87c9a0008b38ac40bfa9634194fe21ae">GetReverse</a> () const</td></tr>
+<tr class="separator:a87c9a0008b38ac40bfa9634194fe21ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -254,6 +258,24 @@ static <a class="el" href="class_t_progress_bar.html">TProgressBar</a>&#160;</td
 
 </div>
 </div>
+<a id="a87c9a0008b38ac40bfa9634194fe21ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87c9a0008b38ac40bfa9634194fe21ae">&#9670;&nbsp;</a></span>GetReverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TProgressBar::GetReverse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>是否反向显示。如果为TRUE，水平方向从右向左表示增加，垂直方向从上到下表示增加。 </p>
+
+</div>
+</div>
 <a id="ad29b506d6160d5319afbce5566f5674d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad29b506d6160d5319afbce5566f5674d">&#9670;&nbsp;</a></span>GetShowText()</h2>
 
@@ -327,6 +349,32 @@ static <a class="el" href="class_t_progress_bar.html">TProgressBar</a>&#160;</td
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">max</td><td>最大值。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="aa3aa1b073c391fbbfde51ee7d4e680d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3aa1b073c391fbbfde51ee7d4e680d9">&#9670;&nbsp;</a></span>SetReverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TProgressBar::SetReverse </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>reverse</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置进度条是否反向。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reverse</td><td>是否反向。</td></tr>
   </table>
   </dd>
 </dl>

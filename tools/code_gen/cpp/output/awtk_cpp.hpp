@@ -146,13 +146,13 @@ public:
   /**
    * 注册指定事件的处理函数。
    * 
-   * @param type 事件类型。
-   * @param on_event 事件处理函数。
+   * @param etype 事件类型。
+   * @param handler 事件处理函数。
    * @param ctx 事件处理函数上下文。
    *
    * @return 返回id，用于emitter_off。
    */
-  uint32_t On(event_type_t type, event_func_t on_event, void* ctx) ;
+  uint32_t On(event_type_t etype, event_func_t handler, void* ctx) ;
 
   /**
    * 注销指定事件的处理函数。
@@ -1278,98 +1278,6 @@ public:
    * @return 返回全局指针是否按下。
    */
   static  bool IsPointerPressed() ;
-};
-
-
-/**
- * 资源管理器。
- *这里的资源管理器并非Windows下的文件浏览器，而是负责对各种资源，比如字体、主题、图片、界面数据、字符串和其它数据的进行集中管理的组件。引入资源管理器的目的有以下几个：
- *
- ** 让上层不需要了解存储的方式。
- *在没有文件系统时或者内存紧缺时，把资源转成常量数组直接编译到代码中。在有文件系统而且内存充足时，资源放在文件系统中。在有网络时，资源也可以存放在服务器上(暂未实现)。资源管理器为上层提供统一的接口，让上层而不用关心底层的存储方式。
- *
- ** 让上层不需要了解资源的具体格式。
- *比如一个名为earth的图片，没有文件系统或内存紧缺，图片直接用位图数据格式存在ROM中，而有文件系统时，则用PNG格式存放在文件系统中。资源管理器让上层不需要关心图片的格式，访问时指定图片的名称即可(不用指定扩展名)。
- *
- ** 让上层不需要了解屏幕的密度。
- *不同的屏幕密度下需要加载不同的图片，比如MacPro的Retina屏就需要用双倍解析度的图片，否则就出现界面模糊。AWTK以后会支持PC软件和手机软件的开发，所以资源管理器需要为此提供支持，让上层不需关心屏幕的密度。
- *
- ** 对资源进行内存缓存。
- *不同类型的资源使用方式是不一样的，比如字体和主题加载之后会一直使用，UI文件在生成界面之后就暂时不需要了，PNG文件解码之后就只需要保留解码的位图数据即可。资源管理器配合图片管理器等其它组件实现资源的自动缓存。
- *
- *当从文件系统加载资源时，目录结构要求如下：
- *
- *```
- *assets/{theme}/raw/
- *fonts   字体
- *images  图片
- *x1   普通密度屏幕的图片。
- *x2   2倍密度屏幕的图片。
- *x3   3倍密度屏幕的图片。
- *xx   密度无关的图片。
- *strings 需要翻译的字符串。
- *styles  主题数据。
- *ui      UI描述数据。
- *```
- *
- */
-class TAssetsManager { 
-public:
-  //nativeObj is public for internal use only.
-  assets_manager_t* nativeObj;
-
-  TAssetsManager(assets_manager_t* nativeObj) {
-    this->nativeObj = nativeObj;
-  }
-
-  TAssetsManager(const assets_manager_t* nativeObj) {
-    this->nativeObj = (assets_manager_t*)nativeObj;
-  }
-
-  static TAssetsManager Cast(assets_manager_t* nativeObj) {
-    return TAssetsManager(nativeObj);
-  }
-
-  static TAssetsManager Cast(const assets_manager_t* nativeObj) {
-    return TAssetsManager((assets_manager_t*)nativeObj);
-  }
-
-
-  /**
-   * 获取缺省资源管理器。
-   * 
-   *
-   * @return 返回asset manager对象。
-   */
-  static  TAssetsManager Instance() ;
-
-  /**
-   * 设置当前的主题。
-   * 
-   * @param theme 主题名称。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetTheme(const char* theme) ;
-
-  /**
-   * 在资源管理器的缓存中查找指定的资源并引用它，如果缓存中不存在，尝试加载该资源。
-   * 
-   * @param type 资源的类型。
-   * @param name 资源的名称。
-   *
-   * @return 返回资源。
-   */
-  TAssetInfo Ref(asset_type_t type, char* name) ;
-
-  /**
-   * 释放指定的资源。
-   * 
-   * @param info 资源。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t Unref(TAssetInfo& info) ;
 };
 
 
@@ -4744,6 +4652,101 @@ public:
 
 
 /**
+ * 资源管理器。
+ *这里的资源管理器并非Windows下的文件浏览器，而是负责对各种资源，比如字体、主题、图片、界面数据、字符串和其它数据的进行集中管理的组件。引入资源管理器的目的有以下几个：
+ *
+ ** 让上层不需要了解存储的方式。
+ *在没有文件系统时或者内存紧缺时，把资源转成常量数组直接编译到代码中。在有文件系统而且内存充足时，资源放在文件系统中。在有网络时，资源也可以存放在服务器上(暂未实现)。资源管理器为上层提供统一的接口，让上层而不用关心底层的存储方式。
+ *
+ ** 让上层不需要了解资源的具体格式。
+ *比如一个名为earth的图片，没有文件系统或内存紧缺，图片直接用位图数据格式存在ROM中，而有文件系统时，则用PNG格式存放在文件系统中。资源管理器让上层不需要关心图片的格式，访问时指定图片的名称即可(不用指定扩展名)。
+ *
+ ** 让上层不需要了解屏幕的密度。
+ *不同的屏幕密度下需要加载不同的图片，比如MacPro的Retina屏就需要用双倍解析度的图片，否则就出现界面模糊。AWTK以后会支持PC软件和手机软件的开发，所以资源管理器需要为此提供支持，让上层不需关心屏幕的密度。
+ *
+ ** 对资源进行内存缓存。
+ *不同类型的资源使用方式是不一样的，比如字体和主题加载之后会一直使用，UI文件在生成界面之后就暂时不需要了，PNG文件解码之后就只需要保留解码的位图数据即可。资源管理器配合图片管理器等其它组件实现资源的自动缓存。
+ *
+ *当从文件系统加载资源时，目录结构要求如下：
+ *
+ *```
+ *assets/{theme}/raw/
+ *fonts   字体
+ *images  图片
+ *x1   普通密度屏幕的图片。
+ *x2   2倍密度屏幕的图片。
+ *x3   3倍密度屏幕的图片。
+ *xx   密度无关的图片。
+ *strings 需要翻译的字符串。
+ *styles  主题数据。
+ *ui      UI描述数据。
+ *```
+ *
+ */
+class TAssetsManager : public TEmitter { 
+public:
+  TAssetsManager(emitter_t* nativeObj) : TEmitter(nativeObj) {
+  }
+
+  TAssetsManager(const assets_manager_t* nativeObj) : TEmitter((emitter_t*)nativeObj) {
+  }
+
+  static TAssetsManager Cast(emitter_t* nativeObj) {
+    return TAssetsManager(nativeObj);
+  }
+
+  static TAssetsManager Cast(const emitter_t* nativeObj) {
+    return TAssetsManager((emitter_t*)nativeObj);
+  }
+
+  static TAssetsManager Cast(TEmitter& obj) {
+    return TAssetsManager(obj.nativeObj);
+  }
+
+  static TAssetsManager Cast(const TEmitter& obj) {
+    return TAssetsManager(obj.nativeObj);
+  }
+
+
+  /**
+   * 获取缺省资源管理器。
+   * 
+   *
+   * @return 返回asset manager对象。
+   */
+  static  TAssetsManager Instance() ;
+
+  /**
+   * 设置当前的主题。
+   * 
+   * @param theme 主题名称。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetTheme(const char* theme) ;
+
+  /**
+   * 在资源管理器的缓存中查找指定的资源并引用它，如果缓存中不存在，尝试加载该资源。
+   * 
+   * @param type 资源的类型。
+   * @param name 资源的名称。
+   *
+   * @return 返回资源。
+   */
+  TAssetInfo Ref(asset_type_t type, char* name) ;
+
+  /**
+   * 释放指定的资源。
+   * 
+   * @param info 资源。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Unref(TAssetInfo& info) ;
+};
+
+
+/**
  * 滚轮事件。
  *
  */
@@ -5166,12 +5169,6 @@ public:
 
 
   /**
-   * touch device id。
-   *
-   */
-  int64_t GetTouchId() const;
-
-  /**
    * 中心点x坐标。
    *
    */
@@ -5184,7 +5181,7 @@ public:
   xy_t GetY() const;
 
   /**
-   * 旋转角度(幅度)增量。
+   * 旋转角度(幅度)增量。（单位弧度）
    *
    */
   float GetRotation() const;
@@ -5194,12 +5191,49 @@ public:
    *
    */
   float GetDistance() const;
+};
+
+
+/**
+ * 资源事件，由资源管理器触发。
+ *
+ */
+class TAssetsEvent : public TEvent { 
+public:
+  TAssetsEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  }
+
+  TAssetsEvent(const assets_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
+  }
+
+  static TAssetsEvent Cast(event_t* nativeObj) {
+    return TAssetsEvent(nativeObj);
+  }
+
+  static TAssetsEvent Cast(const event_t* nativeObj) {
+    return TAssetsEvent((event_t*)nativeObj);
+  }
+
+  static TAssetsEvent Cast(TEvent& obj) {
+    return TAssetsEvent(obj.nativeObj);
+  }
+
+  static TAssetsEvent Cast(const TEvent& obj) {
+    return TAssetsEvent(obj.nativeObj);
+  }
+
 
   /**
-   * 本事件用到手指数。
+   * 触发事件的资源类型
    *
    */
-  uint32_t GetFingers() const;
+  asset_type_t* GetType() const;
+
+  /**
+   * 触发事件的资源对象
+   *
+   */
+  TAssetInfo GetAssetInfo() const;
 };
 
 
@@ -7002,7 +7036,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetClickAddDelta(float_t delta) ;
+  ret_t SetClickAddDelta(double delta) ;
 
   /**
    * 设置值。
@@ -7011,7 +7045,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetValue(float_t value) ;
+  ret_t SetValue(double value) ;
 
   /**
    * 设置最小值。
@@ -7020,7 +7054,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetMin(float_t min) ;
+  ret_t SetMin(double min) ;
 
   /**
    * 设置最大值。
@@ -7029,7 +7063,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetMax(float_t max) ;
+  ret_t SetMax(double max) ;
 
   /**
    * 图片名称的前缀。
@@ -7047,25 +7081,25 @@ public:
    * 点击时加上一个增量。
    *
    */
-  float_t GetClickAddDelta() const;
+  double GetClickAddDelta() const;
 
   /**
    * 值。
    *
    */
-  float_t GetValue() const;
+  double GetValue() const;
 
   /**
    * 最小值(如果设置了click\_add\_delta，到达最小值后回到最大值)。
    *
    */
-  float_t GetMin() const;
+  double GetMin() const;
 
   /**
    * 最大值(如果设置了click\_add\_delta，到达最大值后回到最小值)。
    *
    */
-  float_t GetMax() const;
+  double GetMax() const;
 };
 
 
@@ -9414,13 +9448,23 @@ public:
   ret_t SetAutoPlay(uint16_t auto_play) ;
 
   /**
-   * 设置当前页的序号。
+   * 设置当前页的序号(默认启用动画)。
    * 
    * @param index 当前页的序号。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t SetActive(uint32_t index) ;
+
+  /**
+   * 设置当前页的序号。
+   * 
+   * @param index 当前页的序号。
+   * @param animate 是否启用动画。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetActiveEx(uint32_t index, bool animate) ;
 
   /**
    * 设置为上下滑动(缺省为左右滑动)。
@@ -9780,7 +9824,7 @@ public:
   ret_t SetYspeedScale(float_t yspeed_scale) ;
 
   /**
-   * 可见的选项数量(只能是3或者5，缺省为5)。
+   * 可见的选项数量(只能是1或者3或者5，缺省为5)。
    *
    */
   uint32_t GetVisibleNr() const;
@@ -9800,16 +9844,16 @@ public:
   char* GetOptions() const;
 
   /**
-   * 是否本地化(翻译)选项(缺省为FALSE)。
-   *
-   */
-  bool GetLocalizeOptions() const;
-
-  /**
    * y偏移速度比例。
    *
    */
   float_t GetYspeedScale() const;
+
+  /**
+   * 是否本地化(翻译)选项(缺省为FALSE)。
+   *
+   */
+  bool GetLocalizeOptions() const;
 
   /**
    * 是否循环选项(缺省为FALSE)。
@@ -14602,12 +14646,29 @@ public:
   ret_t SetClickThrough(bool click_through) ;
 
   /**
+   * 设置是否总是在最上面。
+   * 
+   * @param always_on_top 是否总是在最上面。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetAlwaysOnTop(bool always_on_top) ;
+
+  /**
    * 点击穿透。点击没有子控件的位置，是否穿透到底层窗口。
    *
    *缺省不启用。
    *
    */
   bool GetClickThrough() const;
+
+  /**
+   * 是否总在最上面。
+   *
+   *缺省不启用。
+   *
+   */
+  bool GetAlwaysOnTop() const;
 };
 
 

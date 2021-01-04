@@ -52,6 +52,13 @@ public enum TWidgetProp {
   INPUTING (WIDGET_PROP_INPUTING()),
   
   /**
+   * always on top。
+   *
+   */
+ 
+  ALWAYS_ON_TOP (WIDGET_PROP_ALWAYS_ON_TOP()),
+  
+  /**
    * caret x。
    *
    */
@@ -1077,6 +1084,7 @@ public enum TWidgetProp {
   static private native String WIDGET_PROP_W();
   static private native String WIDGET_PROP_H();
   static private native String WIDGET_PROP_INPUTING();
+  static private native String WIDGET_PROP_ALWAYS_ON_TOP();
   static private native String WIDGET_PROP_CARET_X();
   static private native String WIDGET_PROP_CARET_Y();
   static private native String WIDGET_PROP_DIRTY_RECT_TOLERANCE();

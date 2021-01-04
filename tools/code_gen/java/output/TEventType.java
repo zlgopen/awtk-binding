@@ -589,6 +589,27 @@ public enum TEventType {
   PAGE_CHANGED (EVT_PAGE_CHANGED()),
   
   /**
+   * 资源管理加载某个资源(assets_event_t)。
+   *
+   */
+ 
+  ASSET_MANAGER_LOAD_ASSET (EVT_ASSET_MANAGER_LOAD_ASSET()),
+  
+  /**
+   * 资源管理卸载某个资源(assets_event_t)。
+   *
+   */
+ 
+  ASSET_MANAGER_UNLOAD_ASSET (EVT_ASSET_MANAGER_UNLOAD_ASSET()),
+  
+  /**
+   * 资源管理移除同种资源缓存(assets_event_t)。
+   *
+   */
+ 
+  ASSET_MANAGER_CLEAR_CACHE (EVT_ASSET_MANAGER_CLEAR_CACHE()),
+  
+  /**
    * event queue其它请求编号起始值。
    *
    */
@@ -808,6 +829,9 @@ public enum TEventType {
   static private native int EVT_SCROLL_END();
   static private native int EVT_MULTI_GESTURE();
   static private native int EVT_PAGE_CHANGED();
+  static private native int EVT_ASSET_MANAGER_LOAD_ASSET();
+  static private native int EVT_ASSET_MANAGER_UNLOAD_ASSET();
+  static private native int EVT_ASSET_MANAGER_CLEAR_CACHE();
   static private native int EVT_REQ_START();
   static private native int EVT_USER_START();
   static private native int EVT_NONE();

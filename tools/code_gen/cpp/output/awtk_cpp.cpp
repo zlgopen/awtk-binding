@@ -35,8 +35,8 @@
    return emitter_dispatch_simple_event(((emitter_t*)(this->nativeObj)), type);
  }
 
- uint32_t TEmitter::On(event_type_t type, event_func_t on_event, void* ctx)  {
-    return emitter_on(((emitter_t*)(this->nativeObj)), type, on_event, ctx);
+ uint32_t TEmitter::On(event_type_t etype, event_func_t handler, void* ctx)  {
+    return emitter_on(((emitter_t*)(this->nativeObj)), etype, handler, ctx);
  }
 
  ret_t TEmitter::Off(uint32_t id)  {
@@ -465,22 +465,6 @@
 
  bool TGlobal::IsPointerPressed()  {
     return tk_is_pointer_pressed();
- }
-
- TAssetsManager TAssetsManager::Instance()  {
-   return TAssetsManager((assets_manager_t*)(assets_manager()));
- }
-
- ret_t TAssetsManager::SetTheme(const char* theme)  {
-   return assets_manager_set_theme(((assets_manager_t*)(this->nativeObj)), theme);
- }
-
- TAssetInfo TAssetsManager::Ref(asset_type_t type, char* name)  {
-   return TAssetInfo((asset_info_t*)(assets_manager_ref(((assets_manager_t*)(this->nativeObj)), type, name)));
- }
-
- ret_t TAssetsManager::Unref(TAssetInfo& info)  {
-   return assets_manager_unref(((assets_manager_t*)(this->nativeObj)), ((asset_info_t*)(info.nativeObj)));
  }
 
  wh_t TCanvas::GetWidth()  {
@@ -1679,6 +1663,22 @@
     return time_now_us();
  }
 
+ TAssetsManager TAssetsManager::Instance()  {
+   return TAssetsManager((emitter_t*)(assets_manager()));
+ }
+
+ ret_t TAssetsManager::SetTheme(const char* theme)  {
+   return assets_manager_set_theme(((assets_manager_t*)(this->nativeObj)), theme);
+ }
+
+ TAssetInfo TAssetsManager::Ref(asset_type_t type, char* name)  {
+   return TAssetInfo((asset_info_t*)(assets_manager_ref(((assets_manager_t*)(this->nativeObj)), type, name)));
+ }
+
+ ret_t TAssetsManager::Unref(TAssetInfo& info)  {
+   return assets_manager_unref(((assets_manager_t*)(this->nativeObj)), ((asset_info_t*)(info.nativeObj)));
+ }
+
  int32_t TWheelEvent::GetDy() const {
    return ((wheel_event_t*)(this->nativeObj))->dy;
  }
@@ -1795,10 +1795,6 @@
    return TWidget(((window_event_t*)(this->nativeObj))->window);
  }
 
- int64_t TMultiGestureEvent::GetTouchId() const {
-   return ((multi_gesture_event_t*)(this->nativeObj))->touch_id;
- }
-
  xy_t TMultiGestureEvent::GetX() const {
    return ((multi_gesture_event_t*)(this->nativeObj))->x;
  }
@@ -1815,8 +1811,12 @@
    return ((multi_gesture_event_t*)(this->nativeObj))->distance;
  }
 
- uint32_t TMultiGestureEvent::GetFingers() const {
-   return ((multi_gesture_event_t*)(this->nativeObj))->fingers;
+ asset_type_t* TAssetsEvent::GetType() const {
+   return ((assets_event_t*)(this->nativeObj))->type;
+ }
+
+ TAssetInfo TAssetsEvent::GetAssetInfo() const {
+   return TAssetInfo(((assets_event_t*)(this->nativeObj))->asset_info);
  }
 
  ret_t TImageBase::SetImage(char* name)  {
@@ -2351,19 +2351,19 @@
    return image_value_set_format(((widget_t*)(this->nativeObj)), format);
  }
 
- ret_t TImageValue::SetClickAddDelta(float_t delta)  {
+ ret_t TImageValue::SetClickAddDelta(double delta)  {
    return image_value_set_click_add_delta(((widget_t*)(this->nativeObj)), delta);
  }
 
- ret_t TImageValue::SetValue(float_t value)  {
+ ret_t TImageValue::SetValue(double value)  {
    return image_value_set_value(((widget_t*)(this->nativeObj)), value);
  }
 
- ret_t TImageValue::SetMin(float_t min)  {
+ ret_t TImageValue::SetMin(double min)  {
    return image_value_set_min(((widget_t*)(this->nativeObj)), min);
  }
 
- ret_t TImageValue::SetMax(float_t max)  {
+ ret_t TImageValue::SetMax(double max)  {
    return image_value_set_max(((widget_t*)(this->nativeObj)), max);
  }
 
@@ -2375,19 +2375,19 @@
    return ((image_value_t*)(this->nativeObj))->format;
  }
 
- float_t TImageValue::GetClickAddDelta() const {
+ double TImageValue::GetClickAddDelta() const {
    return ((image_value_t*)(this->nativeObj))->click_add_delta;
  }
 
- float_t TImageValue::GetValue() const {
+ double TImageValue::GetValue() const {
    return ((image_value_t*)(this->nativeObj))->value;
  }
 
- float_t TImageValue::GetMin() const {
+ double TImageValue::GetMin() const {
    return ((image_value_t*)(this->nativeObj))->min;
  }
 
- float_t TImageValue::GetMax() const {
+ double TImageValue::GetMax() const {
    return ((image_value_t*)(this->nativeObj))->max;
  }
 
@@ -3055,6 +3055,10 @@
    return slide_view_set_active(((widget_t*)(this->nativeObj)), index);
  }
 
+ ret_t TSlideView::SetActiveEx(uint32_t index, bool animate)  {
+   return slide_view_set_active_ex(((widget_t*)(this->nativeObj)), index, animate);
+ }
+
  ret_t TSlideView::SetVertical(bool vertical)  {
    return slide_view_set_vertical(((widget_t*)(this->nativeObj)), vertical);
  }
@@ -3171,12 +3175,12 @@
    return ((text_selector_t*)(this->nativeObj))->options;
  }
 
- bool TTextSelector::GetLocalizeOptions() const {
-   return ((text_selector_t*)(this->nativeObj))->localize_options;
- }
-
  float_t TTextSelector::GetYspeedScale() const {
    return ((text_selector_t*)(this->nativeObj))->yspeed_scale;
+ }
+
+ bool TTextSelector::GetLocalizeOptions() const {
+   return ((text_selector_t*)(this->nativeObj))->localize_options;
  }
 
  bool TTextSelector::GetLoopOptions() const {
@@ -4167,8 +4171,16 @@
    return overlay_set_click_through(((widget_t*)(this->nativeObj)), click_through);
  }
 
+ ret_t TOverlay::SetAlwaysOnTop(bool always_on_top)  {
+   return overlay_set_always_on_top(((widget_t*)(this->nativeObj)), always_on_top);
+ }
+
  bool TOverlay::GetClickThrough() const {
    return ((overlay_t*)(this->nativeObj))->click_through;
+ }
+
+ bool TOverlay::GetAlwaysOnTop() const {
+   return ((overlay_t*)(this->nativeObj))->always_on_top;
  }
 
  TWidget TPopup::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {

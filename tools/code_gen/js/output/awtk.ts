@@ -16,7 +16,7 @@ declare function event_t_get_prop_target(nativeObj : any) : any;
 declare function emitter_create() : any;
 declare function emitter_dispatch(emitter : any, e : any) : TRet;
 declare function emitter_dispatch_simple_event(emitter : any, type : TEventType) : TRet;
-declare function emitter_on(emitter : any, type : TEventType, on_event : Function, ctx : any) : number;
+declare function emitter_on(emitter : any, etype : TEventType, handler : Function, ctx : any) : number;
 declare function emitter_off(emitter : any, id : number) : TRet;
 declare function emitter_enable(emitter : any) : TRet;
 declare function emitter_disable(emitter : any) : TRet;
@@ -127,10 +127,6 @@ declare function tk_quit() : TRet;
 declare function tk_get_pointer_x() : number;
 declare function tk_get_pointer_y() : number;
 declare function tk_is_pointer_pressed() : boolean;
-declare function assets_manager() : any;
-declare function assets_manager_set_theme(am : any, theme : string) : TRet;
-declare function assets_manager_ref(am : any, type : TAssetType, name : string) : any;
-declare function assets_manager_unref(am : any, info : any) : TRet;
 declare function BIDI_TYPE_AUTO();
 declare function BIDI_TYPE_LTR();
 declare function BIDI_TYPE_RTL();
@@ -282,6 +278,9 @@ declare function EVT_SCROLL();
 declare function EVT_SCROLL_END();
 declare function EVT_MULTI_GESTURE();
 declare function EVT_PAGE_CHANGED();
+declare function EVT_ASSET_MANAGER_LOAD_ASSET();
+declare function EVT_ASSET_MANAGER_UNLOAD_ASSET();
+declare function EVT_ASSET_MANAGER_CLEAR_CACHE();
 declare function EVT_REQ_START();
 declare function EVT_USER_START();
 declare function EVT_NONE();
@@ -617,6 +616,7 @@ declare function WIDGET_PROP_Y();
 declare function WIDGET_PROP_W();
 declare function WIDGET_PROP_H();
 declare function WIDGET_PROP_INPUTING();
+declare function WIDGET_PROP_ALWAYS_ON_TOP();
 declare function WIDGET_PROP_CARET_X();
 declare function WIDGET_PROP_CARET_Y();
 declare function WIDGET_PROP_DIRTY_RECT_TOLERANCE();
@@ -1003,6 +1003,7 @@ declare function ASSET_TYPE_UI();
 declare function ASSET_TYPE_XML();
 declare function ASSET_TYPE_STRINGS();
 declare function ASSET_TYPE_SCRIPT();
+declare function ASSET_TYPE_FLOW();
 declare function ASSET_TYPE_DATA();
 declare function asset_info_t_get_prop_type(nativeObj : any) : number;
 declare function asset_info_t_get_prop_subtype(nativeObj : any) : number;
@@ -1230,6 +1231,10 @@ declare function VALUE_TYPE_SIZED_STRING();
 declare function VALUE_TYPE_BINARY();
 declare function VALUE_TYPE_UBJSON();
 declare function VALUE_TYPE_TOKEN();
+declare function assets_manager() : any;
+declare function assets_manager_set_theme(am : any, theme : string) : TRet;
+declare function assets_manager_ref(am : any, type : TAssetType, name : string) : any;
+declare function assets_manager_unref(am : any, info : any) : TRet;
 declare function wheel_event_cast(event : any) : any;
 declare function wheel_event_t_get_prop_dy(nativeObj : any) : number;
 declare function wheel_event_t_get_prop_alt(nativeObj : any) : boolean;
@@ -1267,12 +1272,12 @@ declare function paint_event_t_get_prop_c(nativeObj : any) : any;
 declare function window_event_cast(event : any) : any;
 declare function window_event_t_get_prop_window(nativeObj : any) : any;
 declare function multi_gesture_event_cast(event : any) : any;
-declare function multi_gesture_event_t_get_prop_touch_id(nativeObj : any) : number;
 declare function multi_gesture_event_t_get_prop_x(nativeObj : any) : number;
 declare function multi_gesture_event_t_get_prop_y(nativeObj : any) : number;
 declare function multi_gesture_event_t_get_prop_rotation(nativeObj : any) : number;
 declare function multi_gesture_event_t_get_prop_distance(nativeObj : any) : number;
-declare function multi_gesture_event_t_get_prop_fingers(nativeObj : any) : number;
+declare function assets_event_t_get_prop_type(nativeObj : any) : any;
+declare function assets_event_t_get_prop_asset_info(nativeObj : any) : any;
 declare function image_base_set_image(widget : any, name : string) : TRet;
 declare function image_base_set_rotation(widget : any, rotation : number) : TRet;
 declare function image_base_set_scale(widget : any, scale_x : number, scale_y : number) : TRet;
@@ -1613,6 +1618,7 @@ declare function slide_view_create(parent : any, x : number, y : number, w : num
 declare function slide_view_cast(widget : any) : any;
 declare function slide_view_set_auto_play(widget : any, auto_play : number) : TRet;
 declare function slide_view_set_active(widget : any, index : number) : TRet;
+declare function slide_view_set_active_ex(widget : any, index : number, animate : boolean) : TRet;
 declare function slide_view_set_vertical(widget : any, vertical : boolean) : TRet;
 declare function slide_view_set_anim_hint(widget : any, anim_hint : string) : TRet;
 declare function slide_view_set_loop(widget : any, loop : boolean) : TRet;
@@ -1644,8 +1650,8 @@ declare function text_selector_set_yspeed_scale(widget : any, yspeed_scale : num
 declare function text_selector_t_get_prop_visible_nr(nativeObj : any) : number;
 declare function text_selector_t_get_prop_selected_index(nativeObj : any) : number;
 declare function text_selector_t_get_prop_options(nativeObj : any) : string;
-declare function text_selector_t_get_prop_localize_options(nativeObj : any) : boolean;
 declare function text_selector_t_get_prop_yspeed_scale(nativeObj : any) : number;
+declare function text_selector_t_get_prop_localize_options(nativeObj : any) : boolean;
 declare function text_selector_t_get_prop_loop_options(nativeObj : any) : boolean;
 declare function time_clock_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function time_clock_cast(widget : any) : any;
@@ -1934,8 +1940,10 @@ declare function image_cast(widget : any) : any;
 declare function image_t_get_prop_draw_type(nativeObj : any) : TImageDrawType;
 declare function overlay_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function overlay_set_click_through(widget : any, click_through : boolean) : TRet;
+declare function overlay_set_always_on_top(widget : any, always_on_top : boolean) : TRet;
 declare function overlay_cast(widget : any) : any;
 declare function overlay_t_get_prop_click_through(nativeObj : any) : boolean;
+declare function overlay_t_get_prop_always_on_top(nativeObj : any) : boolean;
 declare function popup_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function popup_cast(widget : any) : any;
 declare function popup_set_close_when_click(widget : any, close_when_click : boolean) : TRet;
@@ -2090,14 +2098,14 @@ export class TEmitter {
   /**
    * 注册指定事件的处理函数。
    * 
-   * @param type 事件类型。
-   * @param on_event 事件处理函数。
+   * @param etype 事件类型。
+   * @param handler 事件处理函数。
    * @param ctx 事件处理函数上下文。
    *
    * @returns 返回id，用于emitter_off。
    */
- on(type : TEventType, on_event : Function, ctx : any) : number  {
-    return emitter_on(this != null ? (this.nativeObj || this) : null, type, on_event, ctx);
+ on(etype : TEventType, handler : Function, ctx : any) : number  {
+    return emitter_on(this != null ? (this.nativeObj || this) : null, etype, handler, ctx);
  }
 
 
@@ -3486,93 +3494,6 @@ export class TGlobal {
 
 };
 /**
- * 资源管理器。
- *这里的资源管理器并非Windows下的文件浏览器，而是负责对各种资源，比如字体、主题、图片、界面数据、字符串和其它数据的进行集中管理的组件。引入资源管理器的目的有以下几个：
- *
- ** 让上层不需要了解存储的方式。
- *在没有文件系统时或者内存紧缺时，把资源转成常量数组直接编译到代码中。在有文件系统而且内存充足时，资源放在文件系统中。在有网络时，资源也可以存放在服务器上(暂未实现)。资源管理器为上层提供统一的接口，让上层而不用关心底层的存储方式。
- *
- ** 让上层不需要了解资源的具体格式。
- *比如一个名为earth的图片，没有文件系统或内存紧缺，图片直接用位图数据格式存在ROM中，而有文件系统时，则用PNG格式存放在文件系统中。资源管理器让上层不需要关心图片的格式，访问时指定图片的名称即可(不用指定扩展名)。
- *
- ** 让上层不需要了解屏幕的密度。
- *不同的屏幕密度下需要加载不同的图片，比如MacPro的Retina屏就需要用双倍解析度的图片，否则就出现界面模糊。AWTK以后会支持PC软件和手机软件的开发，所以资源管理器需要为此提供支持，让上层不需关心屏幕的密度。
- *
- ** 对资源进行内存缓存。
- *不同类型的资源使用方式是不一样的，比如字体和主题加载之后会一直使用，UI文件在生成界面之后就暂时不需要了，PNG文件解码之后就只需要保留解码的位图数据即可。资源管理器配合图片管理器等其它组件实现资源的自动缓存。
- *
- *当从文件系统加载资源时，目录结构要求如下：
- *
- *```
- *assets/{theme}/raw/
- *fonts   字体
- *images  图片
- *x1   普通密度屏幕的图片。
- *x2   2倍密度屏幕的图片。
- *x3   3倍密度屏幕的图片。
- *xx   密度无关的图片。
- *strings 需要翻译的字符串。
- *styles  主题数据。
- *ui      UI描述数据。
- *```
- *
- */
-export class TAssetsManager { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   this.nativeObj = nativeObj;
- }
-
-
-  /**
-   * 获取缺省资源管理器。
-   * 
-   *
-   * @returns 返回asset manager对象。
-   */
- static instance() : TAssetsManager  {
-    return new TAssetsManager(assets_manager());
- }
-
-
-  /**
-   * 设置当前的主题。
-   * 
-   * @param theme 主题名称。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setTheme(theme : string) : TRet  {
-    return assets_manager_set_theme(this != null ? (this.nativeObj || this) : null, theme);
- }
-
-
-  /**
-   * 在资源管理器的缓存中查找指定的资源并引用它，如果缓存中不存在，尝试加载该资源。
-   * 
-   * @param type 资源的类型。
-   * @param name 资源的名称。
-   *
-   * @returns 返回资源。
-   */
- ref(type : TAssetType, name : string) : TAssetInfo  {
-    return new TAssetInfo(assets_manager_ref(this != null ? (this.nativeObj || this) : null, type, name));
- }
-
-
-  /**
-   * 释放指定的资源。
-   * 
-   * @param info 资源。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- unref(info : TAssetInfo) : TRet  {
-    return assets_manager_unref(this != null ? (this.nativeObj || this) : null, info != null ? (info.nativeObj || info) : null);
- }
-
-};
-/**
  * bidi 类型常量定义。
  *
  */
@@ -4800,6 +4721,24 @@ export enum TEventType {
    *
    */
  PAGE_CHANGED = EVT_PAGE_CHANGED(),
+
+  /**
+   * 资源管理加载某个资源(assets_event_t)。
+   *
+   */
+ ASSET_MANAGER_LOAD_ASSET = EVT_ASSET_MANAGER_LOAD_ASSET(),
+
+  /**
+   * 资源管理卸载某个资源(assets_event_t)。
+   *
+   */
+ ASSET_MANAGER_UNLOAD_ASSET = EVT_ASSET_MANAGER_UNLOAD_ASSET(),
+
+  /**
+   * 资源管理移除同种资源缓存(assets_event_t)。
+   *
+   */
+ ASSET_MANAGER_CLEAR_CACHE = EVT_ASSET_MANAGER_CLEAR_CACHE(),
 
   /**
    * event queue其它请求编号起始值。
@@ -7685,6 +7624,12 @@ export enum TWidgetProp {
    *
    */
  INPUTING = WIDGET_PROP_INPUTING(),
+
+  /**
+   * always on top。
+   *
+   */
+ ALWAYS_ON_TOP = WIDGET_PROP_ALWAYS_ON_TOP(),
 
   /**
    * caret x。
@@ -10969,6 +10914,12 @@ export enum TAssetType {
  SCRIPT = ASSET_TYPE_SCRIPT(),
 
   /**
+   * 流图资源。
+   *
+   */
+ FLOW = ASSET_TYPE_FLOW(),
+
+  /**
    * 其它数据资源。
    *
    */
@@ -12715,6 +12666,93 @@ export enum TValueType {
 
 
 /**
+ * 资源管理器。
+ *这里的资源管理器并非Windows下的文件浏览器，而是负责对各种资源，比如字体、主题、图片、界面数据、字符串和其它数据的进行集中管理的组件。引入资源管理器的目的有以下几个：
+ *
+ ** 让上层不需要了解存储的方式。
+ *在没有文件系统时或者内存紧缺时，把资源转成常量数组直接编译到代码中。在有文件系统而且内存充足时，资源放在文件系统中。在有网络时，资源也可以存放在服务器上(暂未实现)。资源管理器为上层提供统一的接口，让上层而不用关心底层的存储方式。
+ *
+ ** 让上层不需要了解资源的具体格式。
+ *比如一个名为earth的图片，没有文件系统或内存紧缺，图片直接用位图数据格式存在ROM中，而有文件系统时，则用PNG格式存放在文件系统中。资源管理器让上层不需要关心图片的格式，访问时指定图片的名称即可(不用指定扩展名)。
+ *
+ ** 让上层不需要了解屏幕的密度。
+ *不同的屏幕密度下需要加载不同的图片，比如MacPro的Retina屏就需要用双倍解析度的图片，否则就出现界面模糊。AWTK以后会支持PC软件和手机软件的开发，所以资源管理器需要为此提供支持，让上层不需关心屏幕的密度。
+ *
+ ** 对资源进行内存缓存。
+ *不同类型的资源使用方式是不一样的，比如字体和主题加载之后会一直使用，UI文件在生成界面之后就暂时不需要了，PNG文件解码之后就只需要保留解码的位图数据即可。资源管理器配合图片管理器等其它组件实现资源的自动缓存。
+ *
+ *当从文件系统加载资源时，目录结构要求如下：
+ *
+ *```
+ *assets/{theme}/raw/
+ *fonts   字体
+ *images  图片
+ *x1   普通密度屏幕的图片。
+ *x2   2倍密度屏幕的图片。
+ *x3   3倍密度屏幕的图片。
+ *xx   密度无关的图片。
+ *strings 需要翻译的字符串。
+ *styles  主题数据。
+ *ui      UI描述数据。
+ *```
+ *
+ */
+export class TAssetsManager extends TEmitter { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 获取缺省资源管理器。
+   * 
+   *
+   * @returns 返回asset manager对象。
+   */
+ static instance() : TAssetsManager  {
+    return new TAssetsManager(assets_manager());
+ }
+
+
+  /**
+   * 设置当前的主题。
+   * 
+   * @param theme 主题名称。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setTheme(theme : string) : TRet  {
+    return assets_manager_set_theme(this != null ? (this.nativeObj || this) : null, theme);
+ }
+
+
+  /**
+   * 在资源管理器的缓存中查找指定的资源并引用它，如果缓存中不存在，尝试加载该资源。
+   * 
+   * @param type 资源的类型。
+   * @param name 资源的名称。
+   *
+   * @returns 返回资源。
+   */
+ ref(type : TAssetType, name : string) : TAssetInfo  {
+    return new TAssetInfo(assets_manager_ref(this != null ? (this.nativeObj || this) : null, type, name));
+ }
+
+
+  /**
+   * 释放指定的资源。
+   * 
+   * @param info 资源。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ unref(info : TAssetInfo) : TRet  {
+    return assets_manager_unref(this != null ? (this.nativeObj || this) : null, info != null ? (info.nativeObj || info) : null);
+ }
+
+};
+/**
  * 滚轮事件。
  *
  */
@@ -13162,15 +13200,6 @@ export class TMultiGestureEvent extends TEvent {
 
 
   /**
-   * touch device id。
-   *
-   */
- get touchId() : number {
-   return multi_gesture_event_t_get_prop_touch_id(this.nativeObj);
- }
-
-
-  /**
    * 中心点x坐标。
    *
    */
@@ -13189,7 +13218,7 @@ export class TMultiGestureEvent extends TEvent {
 
 
   /**
-   * 旋转角度(幅度)增量。
+   * 旋转角度(幅度)增量。（单位弧度）
    *
    */
  get rotation() : number {
@@ -13205,13 +13234,33 @@ export class TMultiGestureEvent extends TEvent {
    return multi_gesture_event_t_get_prop_distance(this.nativeObj);
  }
 
+};
+/**
+ * 资源事件，由资源管理器触发。
+ *
+ */
+export class TAssetsEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
 
   /**
-   * 本事件用到手指数。
+   * 触发事件的资源类型
    *
    */
- get fingers() : number {
-   return multi_gesture_event_t_get_prop_fingers(this.nativeObj);
+ get type() : TAssetType {
+   return new TAssetType(assets_event_t_get_prop_type(this.nativeObj));
+ }
+
+
+  /**
+   * 触发事件的资源对象
+   *
+   */
+ get assetInfo() : TAssetInfo {
+   return new TAssetInfo(assets_event_t_get_prop_asset_info(this.nativeObj));
  }
 
 };
@@ -18487,7 +18536,7 @@ export class TSlideView extends TWidget {
 
 
   /**
-   * 设置当前页的序号。
+   * 设置当前页的序号(默认启用动画)。
    * 
    * @param index 当前页的序号。
    *
@@ -18495,6 +18544,19 @@ export class TSlideView extends TWidget {
    */
  setActive(index : number) : TRet  {
     return slide_view_set_active(this != null ? (this.nativeObj || this) : null, index);
+ }
+
+
+  /**
+   * 设置当前页的序号。
+   * 
+   * @param index 当前页的序号。
+   * @param animate 是否启用动画。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setActiveEx(index : number, animate : boolean) : TRet  {
+    return slide_view_set_active_ex(this != null ? (this.nativeObj || this) : null, index, animate);
  }
 
 
@@ -18938,7 +19000,7 @@ export class TTextSelector extends TWidget {
 
 
   /**
-   * 可见的选项数量(只能是3或者5，缺省为5)。
+   * 可见的选项数量(只能是1或者3或者5，缺省为5)。
    *
    */
  get visibleNr() : number {
@@ -18979,19 +19041,6 @@ export class TTextSelector extends TWidget {
 
 
   /**
-   * 是否本地化(翻译)选项(缺省为FALSE)。
-   *
-   */
- get localizeOptions() : boolean {
-   return text_selector_t_get_prop_localize_options(this.nativeObj);
- }
-
- set localizeOptions(v : boolean) {
-   this.setLocalizeOptions(v);
- }
-
-
-  /**
    * y偏移速度比例。
    *
    */
@@ -19001,6 +19050,19 @@ export class TTextSelector extends TWidget {
 
  set yspeedScale(v : number) {
    this.setYspeedScale(v);
+ }
+
+
+  /**
+   * 是否本地化(翻译)选项(缺省为FALSE)。
+   *
+   */
+ get localizeOptions() : boolean {
+   return text_selector_t_get_prop_localize_options(this.nativeObj);
+ }
+
+ set localizeOptions(v : boolean) {
+   this.setLocalizeOptions(v);
  }
 
 
@@ -24344,6 +24406,18 @@ export class TOverlay extends TWindowBase {
 
 
   /**
+   * 设置是否总是在最上面。
+   * 
+   * @param always_on_top 是否总是在最上面。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setAlwaysOnTop(always_on_top : boolean) : TRet  {
+    return overlay_set_always_on_top(this != null ? (this.nativeObj || this) : null, always_on_top);
+ }
+
+
+  /**
    * 转换为overlay对象(供脚本语言使用)。
    * 
    * @param widget overlay对象。
@@ -24367,6 +24441,21 @@ export class TOverlay extends TWindowBase {
 
  set clickThrough(v : boolean) {
    this.setClickThrough(v);
+ }
+
+
+  /**
+   * 是否总在最上面。
+   *
+   *缺省不启用。
+   *
+   */
+ get alwaysOnTop() : boolean {
+   return overlay_t_get_prop_always_on_top(this.nativeObj);
+ }
+
+ set alwaysOnTop(v : boolean) {
+   this.setAlwaysOnTop(v);
  }
 
 };
