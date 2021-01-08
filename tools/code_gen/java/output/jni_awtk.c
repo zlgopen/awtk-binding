@@ -130,17 +130,6 @@ int awtk_TEmitter_emitter_disable(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
-int awtk_TEmitter_emitter_size(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  uint32_t ret = 0;
-  emitter_t* emitter = (emitter_t*)jni_ctx_get_object(&ctx);
-  ret = (uint32_t)emitter_size(emitter);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
 int awtk_TEmitter_emitter_cast(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -9576,6 +9565,78 @@ int awtk_TDateTime_date_time_create(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TDateTime_date_time_set_year(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  date_time_t* dt = (date_time_t*)jni_ctx_get_object(&ctx);
+  uint32_t year = (uint32_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)date_time_set_year(dt, year);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TDateTime_date_time_set_month(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  date_time_t* dt = (date_time_t*)jni_ctx_get_object(&ctx);
+  uint32_t month = (uint32_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)date_time_set_month(dt, month);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TDateTime_date_time_set_day(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  date_time_t* dt = (date_time_t*)jni_ctx_get_object(&ctx);
+  uint32_t day = (uint32_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)date_time_set_day(dt, day);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TDateTime_date_time_set_hour(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  date_time_t* dt = (date_time_t*)jni_ctx_get_object(&ctx);
+  uint32_t hour = (uint32_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)date_time_set_hour(dt, hour);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TDateTime_date_time_set_minute(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  date_time_t* dt = (date_time_t*)jni_ctx_get_object(&ctx);
+  uint32_t minute = (uint32_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)date_time_set_minute(dt, minute);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TDateTime_date_time_set_second(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  date_time_t* dt = (date_time_t*)jni_ctx_get_object(&ctx);
+  uint32_t second = (uint32_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)date_time_set_second(dt, second);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TDateTime_date_time_set(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -9595,6 +9656,17 @@ int awtk_TDateTime_date_time_from_time(Runtime *runtime, JClass *clazz) {
   uint64_t time = (uint64_t)jni_ctx_get_int64(&ctx);
   ret = (ret_t)date_time_from_time(dt, time);
   jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TDateTime_date_time_to_time(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  uint64_t ret = 0;
+  date_time_t* dt = (date_time_t*)jni_ctx_get_object(&ctx);
+  ret = (uint64_t)date_time_to_time(dt);
+  jni_ctx_return_int64(&ctx, (int64_t)(ret));
 
   return 0;
 }
@@ -18768,11 +18840,48 @@ int awtk_TObjectArray_object_array_clear_props(Runtime *runtime, JClass *clazz) 
   return 0;
 }
 
-int awtk_TObjectArray_object_array_t_get_prop_props_size(Runtime *runtime, JClass *clazz) {
+int awtk_TObjectArray_object_array_insert(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  object_t* obj = (object_t*)jni_ctx_get_object(&ctx);
+  uint32_t index = (uint32_t)jni_ctx_get_int(&ctx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&ctx);
+  ret = (ret_t)object_array_insert(obj, index, v);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TObjectArray_object_array_push(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  object_t* obj = (object_t*)jni_ctx_get_object(&ctx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&ctx);
+  ret = (ret_t)object_array_push(obj, v);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TObjectArray_object_array_remove(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  object_t* obj = (object_t*)jni_ctx_get_object(&ctx);
+  uint32_t index = (uint32_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)object_array_remove(obj, index);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TObjectArray_object_array_t_get_prop_size(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   object_array_t* obj = (object_array_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->props_size));
+  jni_ctx_return_int(&ctx, (int32_t)(obj->size));
 
   return 0;
 }
@@ -19357,7 +19466,6 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TEmitter",  "emitter_off",  "(JI)I",  awtk_TEmitter_emitter_off},
 {"awtk/TEmitter",  "emitter_enable",  "(J)I",  awtk_TEmitter_emitter_enable},
 {"awtk/TEmitter",  "emitter_disable",  "(J)I",  awtk_TEmitter_emitter_disable},
-{"awtk/TEmitter",  "emitter_size",  "(J)I",  awtk_TEmitter_emitter_size},
 {"awtk/TEmitter",  "emitter_cast",  "(J)J",  awtk_TEmitter_emitter_cast},
 {"awtk/TRect",  "rect_create",  "(IIII)J",  awtk_TRect_rect_create},
 {"awtk/TRect",  "rect_set",  "(JIIII)J",  awtk_TRect_rect_set},
@@ -20353,8 +20461,15 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TColor",  "color_t_set_prop_color",  "(JI)I",  awtk_TColor_color_t_set_prop_color},
 {"awtk/TColor",  "color_t_get_prop_color",  "(J)I",  awtk_TColor_color_t_get_prop_color},
 {"awtk/TDateTime",  "date_time_create",  "()J",  awtk_TDateTime_date_time_create},
+{"awtk/TDateTime",  "date_time_set_year",  "(JI)I",  awtk_TDateTime_date_time_set_year},
+{"awtk/TDateTime",  "date_time_set_month",  "(JI)I",  awtk_TDateTime_date_time_set_month},
+{"awtk/TDateTime",  "date_time_set_day",  "(JI)I",  awtk_TDateTime_date_time_set_day},
+{"awtk/TDateTime",  "date_time_set_hour",  "(JI)I",  awtk_TDateTime_date_time_set_hour},
+{"awtk/TDateTime",  "date_time_set_minute",  "(JI)I",  awtk_TDateTime_date_time_set_minute},
+{"awtk/TDateTime",  "date_time_set_second",  "(JI)I",  awtk_TDateTime_date_time_set_second},
 {"awtk/TDateTime",  "date_time_set",  "(J)I",  awtk_TDateTime_date_time_set},
 {"awtk/TDateTime",  "date_time_from_time",  "(JJ)I",  awtk_TDateTime_date_time_from_time},
+{"awtk/TDateTime",  "date_time_to_time",  "(J)J",  awtk_TDateTime_date_time_to_time},
 {"awtk/TDateTime",  "date_time_add_delta",  "(JJ)I",  awtk_TDateTime_date_time_add_delta},
 {"awtk/TDateTime",  "date_time_is_leap",  "(I)Z",  awtk_TDateTime_date_time_is_leap},
 {"awtk/TDateTime",  "date_time_get_days",  "(II)I",  awtk_TDateTime_date_time_get_days},
@@ -21233,7 +21348,10 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TIdleInfo",  "idle_info_t_get_prop_id",  "(J)I",  awtk_TIdleInfo_idle_info_t_get_prop_id},
 {"awtk/TObjectArray",  "object_array_create",  "()J",  awtk_TObjectArray_object_array_create},
 {"awtk/TObjectArray",  "object_array_clear_props",  "(J)I",  awtk_TObjectArray_object_array_clear_props},
-{"awtk/TObjectArray",  "object_array_t_get_prop_props_size",  "(J)I",  awtk_TObjectArray_object_array_t_get_prop_props_size},
+{"awtk/TObjectArray",  "object_array_insert",  "(JIJ)I",  awtk_TObjectArray_object_array_insert},
+{"awtk/TObjectArray",  "object_array_push",  "(JJ)I",  awtk_TObjectArray_object_array_push},
+{"awtk/TObjectArray",  "object_array_remove",  "(JI)I",  awtk_TObjectArray_object_array_remove},
+{"awtk/TObjectArray",  "object_array_t_get_prop_size",  "(J)I",  awtk_TObjectArray_object_array_t_get_prop_size},
 {"awtk/TObjectDefault",  "object_default_create",  "()J",  awtk_TObjectDefault_object_default_create},
 {"awtk/TObjectDefault",  "object_default_clear_props",  "(J)I",  awtk_TObjectDefault_object_default_clear_props},
 {"awtk/TObjectDefault",  "object_default_t_get_prop_props_size",  "(J)I",  awtk_TObjectDefault_object_default_t_get_prop_props_size},

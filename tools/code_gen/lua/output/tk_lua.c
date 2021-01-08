@@ -523,16 +523,6 @@ static int wrap_emitter_disable(lua_State* L) {
   return 1;
 }
 
-static int wrap_emitter_size(lua_State* L) {
-  uint32_t ret = 0;
-  emitter_t* emitter = (emitter_t*)tk_checkudata(L, 1, "emitter_t");
-  ret = (uint32_t)emitter_size(emitter);
-
-  lua_pushinteger(L,(lua_Integer)(ret));
-
-  return 1;
-}
-
 static int wrap_emitter_destroy(lua_State* L) {
   ret_t ret = 0;
   emitter_t* emitter = (emitter_t*)tk_checkudata(L, 1, "emitter_t");
@@ -559,7 +549,6 @@ static const struct luaL_Reg emitter_t_member_funcs[] = {
   {"off", wrap_emitter_off},
   {"enable", wrap_emitter_enable},
   {"disable", wrap_emitter_disable},
-  {"size", wrap_emitter_size},
   {"destroy", wrap_emitter_destroy},
   {NULL, NULL}
 };
@@ -8308,6 +8297,72 @@ static int wrap_date_time_create(lua_State* L) {
   return tk_newuserdata(L, (void*)ret, "/date_time_t", "awtk.date_time_t");
 }
 
+static int wrap_date_time_set_year(lua_State* L) {
+  ret_t ret = 0;
+  date_time_t* dt = (date_time_t*)tk_checkudata(L, 1, "date_time_t");
+  uint32_t year = (uint32_t)luaL_checkinteger(L, 2);
+  ret = (ret_t)date_time_set_year(dt, year);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_date_time_set_month(lua_State* L) {
+  ret_t ret = 0;
+  date_time_t* dt = (date_time_t*)tk_checkudata(L, 1, "date_time_t");
+  uint32_t month = (uint32_t)luaL_checkinteger(L, 2);
+  ret = (ret_t)date_time_set_month(dt, month);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_date_time_set_day(lua_State* L) {
+  ret_t ret = 0;
+  date_time_t* dt = (date_time_t*)tk_checkudata(L, 1, "date_time_t");
+  uint32_t day = (uint32_t)luaL_checkinteger(L, 2);
+  ret = (ret_t)date_time_set_day(dt, day);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_date_time_set_hour(lua_State* L) {
+  ret_t ret = 0;
+  date_time_t* dt = (date_time_t*)tk_checkudata(L, 1, "date_time_t");
+  uint32_t hour = (uint32_t)luaL_checkinteger(L, 2);
+  ret = (ret_t)date_time_set_hour(dt, hour);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_date_time_set_minute(lua_State* L) {
+  ret_t ret = 0;
+  date_time_t* dt = (date_time_t*)tk_checkudata(L, 1, "date_time_t");
+  uint32_t minute = (uint32_t)luaL_checkinteger(L, 2);
+  ret = (ret_t)date_time_set_minute(dt, minute);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_date_time_set_second(lua_State* L) {
+  ret_t ret = 0;
+  date_time_t* dt = (date_time_t*)tk_checkudata(L, 1, "date_time_t");
+  uint32_t second = (uint32_t)luaL_checkinteger(L, 2);
+  ret = (ret_t)date_time_set_second(dt, second);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 static int wrap_date_time_set(lua_State* L) {
   ret_t ret = 0;
   date_time_t* dt = (date_time_t*)tk_checkudata(L, 1, "date_time_t");
@@ -8325,6 +8380,16 @@ static int wrap_date_time_from_time(lua_State* L) {
   ret = (ret_t)date_time_from_time(dt, time);
 
   lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_date_time_to_time(lua_State* L) {
+  uint64_t ret = 0;
+  date_time_t* dt = (date_time_t*)tk_checkudata(L, 1, "date_time_t");
+  ret = (uint64_t)date_time_to_time(dt);
+
+  lua_pushinteger(L,(lua_Integer)(ret));
 
   return 1;
 }
@@ -8405,8 +8470,15 @@ static int wrap_date_time_destroy(lua_State* L) {
 
 
 static const struct luaL_Reg date_time_t_member_funcs[] = {
+  {"set_year", wrap_date_time_set_year},
+  {"set_month", wrap_date_time_set_month},
+  {"set_day", wrap_date_time_set_day},
+  {"set_hour", wrap_date_time_set_hour},
+  {"set_minute", wrap_date_time_set_minute},
+  {"set_second", wrap_date_time_set_second},
   {"set", wrap_date_time_set},
   {"from_time", wrap_date_time_from_time},
+  {"to_time", wrap_date_time_to_time},
   {"add_delta", wrap_date_time_add_delta},
   {"destroy", wrap_date_time_destroy},
   {NULL, NULL}
@@ -10324,7 +10396,9 @@ static int wrap_assets_event_t_get_prop(lua_State* L) {
     return 1;
   }
   if(strcmp(name, "type") == 0) {
-    return tk_newuserdata(L, (void*)obj->type, "", "awtk.asset_type_t");
+    lua_pushnumber(L,(lua_Number)(obj->type));
+
+  return 1;
   }
   else if(strcmp(name, "asset_info") == 0) {
     return tk_newuserdata(L, (void*)obj->asset_info, "/asset_info_t", "awtk.asset_info_t");
@@ -19516,10 +19590,47 @@ static int wrap_object_array_clear_props(lua_State* L) {
   return 1;
 }
 
+static int wrap_object_array_insert(lua_State* L) {
+  ret_t ret = 0;
+  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  uint32_t index = (uint32_t)luaL_checkinteger(L, 2);
+  const value_t* v = (const value_t*)tk_checkudata(L, 3, "const value_t");
+  ret = (ret_t)object_array_insert(obj, index, v);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_object_array_push(lua_State* L) {
+  ret_t ret = 0;
+  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  const value_t* v = (const value_t*)tk_checkudata(L, 2, "const value_t");
+  ret = (ret_t)object_array_push(obj, v);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_object_array_remove(lua_State* L) {
+  ret_t ret = 0;
+  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  uint32_t index = (uint32_t)luaL_checkinteger(L, 2);
+  ret = (ret_t)object_array_remove(obj, index);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 
 static const struct luaL_Reg object_array_t_member_funcs[] = {
   {"unref", wrap_object_array_unref},
   {"clear_props", wrap_object_array_clear_props},
+  {"insert", wrap_object_array_insert},
+  {"push", wrap_object_array_push},
+  {"remove", wrap_object_array_remove},
   {NULL, NULL}
 };
 
@@ -19542,8 +19653,8 @@ static int wrap_object_array_t_get_prop(lua_State* L) {
     lua_pushcfunction(L, ret->func);
     return 1;
   }
-  if(strcmp(name, "props_size") == 0) {
-    lua_pushinteger(L,(lua_Integer)(obj->props_size));
+  if(strcmp(name, "size") == 0) {
+    lua_pushinteger(L,(lua_Integer)(obj->size));
 
   return 1;
   }

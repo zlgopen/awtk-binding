@@ -997,7 +997,7 @@ public enum TWidgetProp {
   FOCUSABLE (WIDGET_PROP_FOCUSABLE()),
   
   /**
-   * 是否支持焦点状态(如果希望style支持焦点状态，但有不希望焦点停留，可用本属性)。
+   * 是否支持焦点状态(如果希望style支持焦点状态，但又不希望焦点停留，可用本属性)。
    *
    */
  

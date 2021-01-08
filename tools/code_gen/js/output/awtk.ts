@@ -20,7 +20,6 @@ declare function emitter_on(emitter : any, etype : TEventType, handler : Functio
 declare function emitter_off(emitter : any, id : number) : TRet;
 declare function emitter_enable(emitter : any) : TRet;
 declare function emitter_disable(emitter : any) : TRet;
-declare function emitter_size(emitter : any) : number;
 declare function emitter_destroy(emitter : any) : TRet;
 declare function emitter_cast(emitter : any) : any;
 declare function rect_create(x : number, y : number, w : number, h : number) : any;
@@ -1022,8 +1021,15 @@ declare function color_destroy(c : any) : TRet;
 declare function color_t_get_prop_color(nativeObj : any) : number;
 declare function color_t_set_prop_color(nativeObj : any, v : number)
 declare function date_time_create() : any;
+declare function date_time_set_year(dt : any, year : number) : TRet;
+declare function date_time_set_month(dt : any, month : number) : TRet;
+declare function date_time_set_day(dt : any, day : number) : TRet;
+declare function date_time_set_hour(dt : any, hour : number) : TRet;
+declare function date_time_set_minute(dt : any, minute : number) : TRet;
+declare function date_time_set_second(dt : any, second : number) : TRet;
 declare function date_time_set(dt : any) : TRet;
 declare function date_time_from_time(dt : any, time : number) : TRet;
+declare function date_time_to_time(dt : any) : number;
 declare function date_time_add_delta(dt : any, delta : number) : TRet;
 declare function date_time_is_leap(year : number) : boolean;
 declare function date_time_get_days(year : number, montn : number) : number;
@@ -1276,7 +1282,7 @@ declare function multi_gesture_event_t_get_prop_x(nativeObj : any) : number;
 declare function multi_gesture_event_t_get_prop_y(nativeObj : any) : number;
 declare function multi_gesture_event_t_get_prop_rotation(nativeObj : any) : number;
 declare function multi_gesture_event_t_get_prop_distance(nativeObj : any) : number;
-declare function assets_event_t_get_prop_type(nativeObj : any) : any;
+declare function assets_event_t_get_prop_type(nativeObj : any) : TAssetType;
 declare function assets_event_t_get_prop_asset_info(nativeObj : any) : any;
 declare function image_base_set_image(widget : any, name : string) : TRet;
 declare function image_base_set_rotation(widget : any, rotation : number) : TRet;
@@ -1905,7 +1911,10 @@ declare function idle_info_t_get_prop_id(nativeObj : any) : number;
 declare function object_array_create() : any;
 declare function object_array_unref(obj : any) : TRet;
 declare function object_array_clear_props(obj : any) : TRet;
-declare function object_array_t_get_prop_props_size(nativeObj : any) : number;
+declare function object_array_insert(obj : any, index : number, v : any) : TRet;
+declare function object_array_push(obj : any, v : any) : TRet;
+declare function object_array_remove(obj : any, index : number) : TRet;
+declare function object_array_t_get_prop_size(nativeObj : any) : number;
 declare function object_default_create() : any;
 declare function object_default_unref(obj : any) : TRet;
 declare function object_default_clear_props(obj : any) : TRet;
@@ -2142,17 +2151,6 @@ export class TEmitter {
    */
  disable() : TRet  {
     return emitter_disable(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 获取注册的回调函数个数，主要用于辅助测试。
-   * 
-   *
-   * @returns 回调函数个数。
-   */
- size() : number  {
-    return emitter_size(this != null ? (this.nativeObj || this) : null);
  }
 
 
@@ -8436,7 +8434,7 @@ export enum TWidgetProp {
  FOCUSABLE = WIDGET_PROP_FOCUSABLE(),
 
   /**
-   * 是否支持焦点状态(如果希望style支持焦点状态，但有不希望焦点停留，可用本属性)。
+   * 是否支持焦点状态(如果希望style支持焦点状态，但又不希望焦点停留，可用本属性)。
    *
    */
  WITH_FOCUS_STATE = WIDGET_PROP_WITH_FOCUS_STATE(),
@@ -11151,6 +11149,78 @@ export class TDateTime {
 
 
   /**
+   * 设置年。
+   * 
+   * @param year 年。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setYear(year : number) : TRet  {
+    return date_time_set_year(this != null ? (this.nativeObj || this) : null, year);
+ }
+
+
+  /**
+   * 设置月。
+   * 
+   * @param month 月。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setMonth(month : number) : TRet  {
+    return date_time_set_month(this != null ? (this.nativeObj || this) : null, month);
+ }
+
+
+  /**
+   * 设置日。
+   * 
+   * @param day 日。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setDay(day : number) : TRet  {
+    return date_time_set_day(this != null ? (this.nativeObj || this) : null, day);
+ }
+
+
+  /**
+   * 设置小时。
+   * 
+   * @param hour 小时。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setHour(hour : number) : TRet  {
+    return date_time_set_hour(this != null ? (this.nativeObj || this) : null, hour);
+ }
+
+
+  /**
+   * 设置分钟。
+   * 
+   * @param minute 分钟。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setMinute(minute : number) : TRet  {
+    return date_time_set_minute(this != null ? (this.nativeObj || this) : null, minute);
+ }
+
+
+  /**
+   * 设置秒。
+   * 
+   * @param second 秒。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setSecond(second : number) : TRet  {
+    return date_time_set_second(this != null ? (this.nativeObj || this) : null, second);
+ }
+
+
+  /**
    * 设置当前时间。
    * 
    *
@@ -11170,6 +11240,17 @@ export class TDateTime {
    */
  fromTime(time : number) : TRet  {
     return date_time_from_time(this != null ? (this.nativeObj || this) : null, time);
+ }
+
+
+  /**
+   * 转换成time。
+   * 
+   *
+   * @returns 返回time。
+   */
+ toTime() : number  {
+    return date_time_to_time(this != null ? (this.nativeObj || this) : null);
  }
 
 
@@ -11267,6 +11348,10 @@ export class TDateTime {
    return date_time_t_get_prop_second(this.nativeObj);
  }
 
+ set second(v : number) {
+   this.setSecond(v);
+ }
+
 
   /**
    * 分(0 - 59)。
@@ -11274,6 +11359,10 @@ export class TDateTime {
    */
  get minute() : number {
    return date_time_t_get_prop_minute(this.nativeObj);
+ }
+
+ set minute(v : number) {
+   this.setMinute(v);
  }
 
 
@@ -11285,6 +11374,10 @@ export class TDateTime {
    return date_time_t_get_prop_hour(this.nativeObj);
  }
 
+ set hour(v : number) {
+   this.setHour(v);
+ }
+
 
   /**
    * 日(1-31)。
@@ -11292,6 +11385,10 @@ export class TDateTime {
    */
  get day() : number {
    return date_time_t_get_prop_day(this.nativeObj);
+ }
+
+ set day(v : number) {
+   this.setDay(v);
  }
 
 
@@ -11312,6 +11409,10 @@ export class TDateTime {
    return date_time_t_get_prop_month(this.nativeObj);
  }
 
+ set month(v : number) {
+   this.setMonth(v);
+ }
+
 
   /**
    * 年。
@@ -11319,6 +11420,10 @@ export class TDateTime {
    */
  get year() : number {
    return date_time_t_get_prop_year(this.nativeObj);
+ }
+
+ set year(v : number) {
+   this.setYear(v);
  }
 
 };
@@ -13251,7 +13356,7 @@ export class TAssetsEvent extends TEvent {
    *
    */
  get type() : TAssetType {
-   return new TAssetType(assets_event_t_get_prop_type(this.nativeObj));
+   return assets_event_t_get_prop_type(this.nativeObj);
  }
 
 
@@ -23712,11 +23817,48 @@ export class TObjectArray extends TObject {
 
 
   /**
+   * 在指定位置插入一个元素。
+   * 
+   * @param index 位置。
+   * @param v 值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ insert(index : number, v : TValue) : TRet  {
+    return object_array_insert(this != null ? (this.nativeObj || this) : null, index, v != null ? (v.nativeObj || v) : null);
+ }
+
+
+  /**
+   * 追加一个元素。
+   * 
+   * @param v 值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ push(v : TValue) : TRet  {
+    return object_array_push(this != null ? (this.nativeObj || this) : null, v != null ? (v.nativeObj || v) : null);
+ }
+
+
+  /**
+   * 在指定位置删除一个元素。
+   * 
+   * @param index 位置。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ remove(index : number) : TRet  {
+    return object_array_remove(this != null ? (this.nativeObj || this) : null, index);
+ }
+
+
+  /**
    * 属性个数。
    *
    */
- get propsSize() : number {
-   return object_array_t_get_prop_props_size(this.nativeObj);
+ get size() : number {
+   return object_array_t_get_prop_size(this.nativeObj);
  }
 
 };

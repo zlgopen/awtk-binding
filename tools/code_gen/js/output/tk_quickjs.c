@@ -330,23 +330,6 @@ jsvalue_t wrap_emitter_disable(
   return jret;
 }
 
-jsvalue_t wrap_emitter_size(
-    JSContext *ctx, 
-    jsvalue_const_t this_val,
-    int argc, 
-    jsvalue_const_t *argv
-  ) {
-  jsvalue_t jret = JS_NULL;
-  if(argc >= 1) {
-  uint32_t ret = (uint32_t)0;
-  emitter_t* emitter = (emitter_t*)jsvalue_get_pointer(ctx, argv[0], "emitter_t*");
-  ret = (uint32_t)emitter_size(emitter);
-
-  jret = jsvalue_create_int(ctx, ret);
-  }
-  return jret;
-}
-
 jsvalue_t wrap_emitter_cast(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -380,8 +363,6 @@ ret_t emitter_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_emitter_enable, "emitter_enable", 1));
   JS_SetPropertyStr(ctx, global_obj, "emitter_disable",
                       JS_NewCFunction(ctx, wrap_emitter_disable, "emitter_disable", 1));
-  JS_SetPropertyStr(ctx, global_obj, "emitter_size",
-                      JS_NewCFunction(ctx, wrap_emitter_size, "emitter_size", 1));
   JS_SetPropertyStr(ctx, global_obj, "emitter_cast",
                       JS_NewCFunction(ctx, wrap_emitter_cast, "emitter_cast", 1));
 
@@ -14911,6 +14892,114 @@ jsvalue_t wrap_date_time_create(
   return jret;
 }
 
+jsvalue_t wrap_date_time_set_year(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  date_time_t* dt = (date_time_t*)jsvalue_get_pointer(ctx, argv[0], "date_time_t*");
+  uint32_t year = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)date_time_set_year(dt, year);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_date_time_set_month(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  date_time_t* dt = (date_time_t*)jsvalue_get_pointer(ctx, argv[0], "date_time_t*");
+  uint32_t month = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)date_time_set_month(dt, month);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_date_time_set_day(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  date_time_t* dt = (date_time_t*)jsvalue_get_pointer(ctx, argv[0], "date_time_t*");
+  uint32_t day = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)date_time_set_day(dt, day);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_date_time_set_hour(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  date_time_t* dt = (date_time_t*)jsvalue_get_pointer(ctx, argv[0], "date_time_t*");
+  uint32_t hour = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)date_time_set_hour(dt, hour);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_date_time_set_minute(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  date_time_t* dt = (date_time_t*)jsvalue_get_pointer(ctx, argv[0], "date_time_t*");
+  uint32_t minute = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)date_time_set_minute(dt, minute);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_date_time_set_second(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  date_time_t* dt = (date_time_t*)jsvalue_get_pointer(ctx, argv[0], "date_time_t*");
+  uint32_t second = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)date_time_set_second(dt, second);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_date_time_set(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -14940,6 +15029,23 @@ jsvalue_t wrap_date_time_from_time(
   date_time_t* dt = (date_time_t*)jsvalue_get_pointer(ctx, argv[0], "date_time_t*");
   uint64_t time = (uint64_t)jsvalue_get_int_value(ctx, argv[1]);
   ret = (ret_t)date_time_from_time(dt, time);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_date_time_to_time(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  uint64_t ret = (uint64_t)0;
+  date_time_t* dt = (date_time_t*)jsvalue_get_pointer(ctx, argv[0], "date_time_t*");
+  ret = (uint64_t)date_time_to_time(dt);
 
   jret = jsvalue_create_int(ctx, ret);
   }
@@ -15147,10 +15253,24 @@ ret_t date_time_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
   JS_SetPropertyStr(ctx, global_obj, "date_time_create",
                       JS_NewCFunction(ctx, wrap_date_time_create, "date_time_create", 1));
+  JS_SetPropertyStr(ctx, global_obj, "date_time_set_year",
+                      JS_NewCFunction(ctx, wrap_date_time_set_year, "date_time_set_year", 1));
+  JS_SetPropertyStr(ctx, global_obj, "date_time_set_month",
+                      JS_NewCFunction(ctx, wrap_date_time_set_month, "date_time_set_month", 1));
+  JS_SetPropertyStr(ctx, global_obj, "date_time_set_day",
+                      JS_NewCFunction(ctx, wrap_date_time_set_day, "date_time_set_day", 1));
+  JS_SetPropertyStr(ctx, global_obj, "date_time_set_hour",
+                      JS_NewCFunction(ctx, wrap_date_time_set_hour, "date_time_set_hour", 1));
+  JS_SetPropertyStr(ctx, global_obj, "date_time_set_minute",
+                      JS_NewCFunction(ctx, wrap_date_time_set_minute, "date_time_set_minute", 1));
+  JS_SetPropertyStr(ctx, global_obj, "date_time_set_second",
+                      JS_NewCFunction(ctx, wrap_date_time_set_second, "date_time_set_second", 1));
   JS_SetPropertyStr(ctx, global_obj, "date_time_set",
                       JS_NewCFunction(ctx, wrap_date_time_set, "date_time_set", 1));
   JS_SetPropertyStr(ctx, global_obj, "date_time_from_time",
                       JS_NewCFunction(ctx, wrap_date_time_from_time, "date_time_from_time", 1));
+  JS_SetPropertyStr(ctx, global_obj, "date_time_to_time",
+                      JS_NewCFunction(ctx, wrap_date_time_to_time, "date_time_to_time", 1));
   JS_SetPropertyStr(ctx, global_obj, "date_time_add_delta",
                       JS_NewCFunction(ctx, wrap_date_time_add_delta, "date_time_add_delta", 1));
   JS_SetPropertyStr(ctx, global_obj, "date_time_is_leap",
@@ -18280,7 +18400,7 @@ jsvalue_t wrap_assets_event_t_get_prop_type(
   jsvalue_t jret = JS_NULL;
   assets_event_t* obj = (assets_event_t*)jsvalue_get_pointer(ctx, argv[0], "assets_event_t*");
 
-  jret = jsvalue_create_pointer(ctx, obj->type, "asset_type_t*");
+  jret = jsvalue_create_number(ctx, obj->type);
   return jret;
 }
 
@@ -30444,7 +30564,62 @@ jsvalue_t wrap_object_array_clear_props(
   return jret;
 }
 
-jsvalue_t wrap_object_array_t_get_prop_props_size(
+jsvalue_t wrap_object_array_insert(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 3) {
+  ret_t ret = (ret_t)0;
+  object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
+  uint32_t index = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[2], "const value_t*");
+  ret = (ret_t)object_array_insert(obj, index, v);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_object_array_push(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[1], "const value_t*");
+  ret = (ret_t)object_array_push(obj, v);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_object_array_remove(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
+  uint32_t index = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)object_array_remove(obj, index);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_object_array_t_get_prop_size(
     JSContext *ctx, 
     jsvalue_const_t this_val,
     int argc, 
@@ -30453,7 +30628,7 @@ jsvalue_t wrap_object_array_t_get_prop_props_size(
   jsvalue_t jret = JS_NULL;
   object_array_t* obj = (object_array_t*)jsvalue_get_pointer(ctx, argv[0], "object_array_t*");
 
-  jret = jsvalue_create_int(ctx, obj->props_size);
+  jret = jsvalue_create_int(ctx, obj->size);
   return jret;
 }
 
@@ -30463,8 +30638,14 @@ ret_t object_array_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_object_array_create, "object_array_create", 1));
   JS_SetPropertyStr(ctx, global_obj, "object_array_clear_props",
                       JS_NewCFunction(ctx, wrap_object_array_clear_props, "object_array_clear_props", 1));
-  JS_SetPropertyStr(ctx, global_obj, "object_array_t_get_prop_props_size",
-                      JS_NewCFunction(ctx, wrap_object_array_t_get_prop_props_size, "object_array_t_get_prop_props_size", 1));
+  JS_SetPropertyStr(ctx, global_obj, "object_array_insert",
+                      JS_NewCFunction(ctx, wrap_object_array_insert, "object_array_insert", 1));
+  JS_SetPropertyStr(ctx, global_obj, "object_array_push",
+                      JS_NewCFunction(ctx, wrap_object_array_push, "object_array_push", 1));
+  JS_SetPropertyStr(ctx, global_obj, "object_array_remove",
+                      JS_NewCFunction(ctx, wrap_object_array_remove, "object_array_remove", 1));
+  JS_SetPropertyStr(ctx, global_obj, "object_array_t_get_prop_size",
+                      JS_NewCFunction(ctx, wrap_object_array_t_get_prop_size, "object_array_t_get_prop_size", 1));
 
  jsvalue_unref(ctx, global_obj);
 

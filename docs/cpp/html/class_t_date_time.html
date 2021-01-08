@@ -82,10 +82,24 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a07e587547eda97c2bf7b2385e7520318"><td class="memItemLeft" align="right" valign="top"><a id="a07e587547eda97c2bf7b2385e7520318"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TDateTime</b> (const date_time_t *nativeObj)</td></tr>
 <tr class="separator:a07e587547eda97c2bf7b2385e7520318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d1a18fed893aacce12dc613657254e9"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a2d1a18fed893aacce12dc613657254e9">SetYear</a> (uint32_t year)</td></tr>
+<tr class="separator:a2d1a18fed893aacce12dc613657254e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17ac62bbc6a44660513a58480027534a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a17ac62bbc6a44660513a58480027534a">SetMonth</a> (uint32_t month)</td></tr>
+<tr class="separator:a17ac62bbc6a44660513a58480027534a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a378c8f38d7651ce4176ee58c1eeffab7"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a378c8f38d7651ce4176ee58c1eeffab7">SetDay</a> (uint32_t day)</td></tr>
+<tr class="separator:a378c8f38d7651ce4176ee58c1eeffab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9ea4492913f6a77fbb6f0dd477dc4cc"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#ad9ea4492913f6a77fbb6f0dd477dc4cc">SetHour</a> (uint32_t hour)</td></tr>
+<tr class="separator:ad9ea4492913f6a77fbb6f0dd477dc4cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab54cfb0e73c14b1fe25897f290d36cc1"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#ab54cfb0e73c14b1fe25897f290d36cc1">SetMinute</a> (uint32_t minute)</td></tr>
+<tr class="separator:ab54cfb0e73c14b1fe25897f290d36cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a467cb935262f1aaa0b94258163d4475b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a467cb935262f1aaa0b94258163d4475b">SetSecond</a> (uint32_t second)</td></tr>
+<tr class="separator:a467cb935262f1aaa0b94258163d4475b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef712604bfd25647022f50024026cdcd"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#aef712604bfd25647022f50024026cdcd">Set</a> ()</td></tr>
 <tr class="separator:aef712604bfd25647022f50024026cdcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28627e07d81bc96254bd6c9e2c1c4bd8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a28627e07d81bc96254bd6c9e2c1c4bd8">FromTime</a> (uint64_t time)</td></tr>
 <tr class="separator:a28627e07d81bc96254bd6c9e2c1c4bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b71062f642ff835d1415801d2ea3f0"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#ae9b71062f642ff835d1415801d2ea3f0">ToTime</a> ()</td></tr>
+<tr class="separator:ae9b71062f642ff835d1415801d2ea3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2dd1849c836f72d236ff4a30ac34370"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#ad2dd1849c836f72d236ff4a30ac34370">AddDelta</a> (int64_t delta)</td></tr>
 <tr class="separator:ad2dd1849c836f72d236ff4a30ac34370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63840776299c0f42d3f3a0d8948d2ce4"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a63840776299c0f42d3f3a0d8948d2ce4">Destroy</a> ()</td></tr>
@@ -577,6 +591,181 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 </div><div class="memdoc">
 <p>设置当前时间。</p>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a378c8f38d7651ce4176ee58c1eeffab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a378c8f38d7651ce4176ee58c1eeffab7">&#9670;&nbsp;</a></span>SetDay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TDateTime::SetDay </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>day</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置日。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">day</td><td>日。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="ad9ea4492913f6a77fbb6f0dd477dc4cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9ea4492913f6a77fbb6f0dd477dc4cc">&#9670;&nbsp;</a></span>SetHour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TDateTime::SetHour </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>hour</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置小时。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hour</td><td>小时。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="ab54cfb0e73c14b1fe25897f290d36cc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab54cfb0e73c14b1fe25897f290d36cc1">&#9670;&nbsp;</a></span>SetMinute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TDateTime::SetMinute </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>minute</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置分钟。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">minute</td><td>分钟。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a17ac62bbc6a44660513a58480027534a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17ac62bbc6a44660513a58480027534a">&#9670;&nbsp;</a></span>SetMonth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TDateTime::SetMonth </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>month</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置月。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">month</td><td>月。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a467cb935262f1aaa0b94258163d4475b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a467cb935262f1aaa0b94258163d4475b">&#9670;&nbsp;</a></span>SetSecond()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TDateTime::SetSecond </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>second</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置秒。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">second</td><td>秒。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a2d1a18fed893aacce12dc613657254e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d1a18fed893aacce12dc613657254e9">&#9670;&nbsp;</a></span>SetYear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TDateTime::SetYear </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>year</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置年。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">year</td><td>年。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="ae9b71062f642ff835d1415801d2ea3f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b71062f642ff835d1415801d2ea3f0">&#9670;&nbsp;</a></span>ToTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t TDateTime::ToTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>转换成time。</p>
+<dl class="section return"><dt>返回</dt><dd>返回time。 </dd></dl>
 
 </div>
 </div>

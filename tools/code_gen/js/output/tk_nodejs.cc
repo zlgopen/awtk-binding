@@ -285,20 +285,6 @@ static void wrap_emitter_disable(const Nan::FunctionCallbackInfo<v8::Value>& arg
   (void)argc;(void)ctx;
 }
 
-static void wrap_emitter_size(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
-  JSContext* ctx = NULL; 
-  int32_t argc = (int32_t)(argv.Length()); 
-  if(argc >= 1) {
-  uint32_t ret = (uint32_t)0;
-  emitter_t* emitter = (emitter_t*)jsvalue_get_pointer(ctx, argv[0], "emitter_t*");
-  ret = (uint32_t)emitter_size(emitter);
-
-  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
-  argv.GetReturnValue().Set(jret);
-  }
-  (void)argc;(void)ctx;
-}
-
 static void wrap_emitter_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -321,7 +307,6 @@ ret_t emitter_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "emitter_off", wrap_emitter_off);
   Nan::Export(ctx, "emitter_enable", wrap_emitter_enable);
   Nan::Export(ctx, "emitter_disable", wrap_emitter_disable);
-  Nan::Export(ctx, "emitter_size", wrap_emitter_size);
   Nan::Export(ctx, "emitter_cast", wrap_emitter_cast);
 
  return RET_OK;
@@ -12040,6 +12025,96 @@ static void wrap_date_time_create(const Nan::FunctionCallbackInfo<v8::Value>& ar
   (void)argc;(void)ctx;
 }
 
+static void wrap_date_time_set_year(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  date_time_t* dt = (date_time_t*)jsvalue_get_pointer(ctx, argv[0], "date_time_t*");
+  uint32_t year = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)date_time_set_year(dt, year);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
+static void wrap_date_time_set_month(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  date_time_t* dt = (date_time_t*)jsvalue_get_pointer(ctx, argv[0], "date_time_t*");
+  uint32_t month = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)date_time_set_month(dt, month);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
+static void wrap_date_time_set_day(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  date_time_t* dt = (date_time_t*)jsvalue_get_pointer(ctx, argv[0], "date_time_t*");
+  uint32_t day = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)date_time_set_day(dt, day);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
+static void wrap_date_time_set_hour(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  date_time_t* dt = (date_time_t*)jsvalue_get_pointer(ctx, argv[0], "date_time_t*");
+  uint32_t hour = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)date_time_set_hour(dt, hour);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
+static void wrap_date_time_set_minute(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  date_time_t* dt = (date_time_t*)jsvalue_get_pointer(ctx, argv[0], "date_time_t*");
+  uint32_t minute = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)date_time_set_minute(dt, minute);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
+static void wrap_date_time_set_second(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  date_time_t* dt = (date_time_t*)jsvalue_get_pointer(ctx, argv[0], "date_time_t*");
+  uint32_t second = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)date_time_set_second(dt, second);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_date_time_set(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -12062,6 +12137,20 @@ static void wrap_date_time_from_time(const Nan::FunctionCallbackInfo<v8::Value>&
   date_time_t* dt = (date_time_t*)jsvalue_get_pointer(ctx, argv[0], "date_time_t*");
   uint64_t time = (uint64_t)jsvalue_get_int_value(ctx, argv[1]);
   ret = (ret_t)date_time_from_time(dt, time);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
+static void wrap_date_time_to_time(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 1) {
+  uint64_t ret = (uint64_t)0;
+  date_time_t* dt = (date_time_t*)jsvalue_get_pointer(ctx, argv[0], "date_time_t*");
+  ret = (uint64_t)date_time_to_time(dt);
 
   v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
   argv.GetReturnValue().Set(jret);
@@ -12233,8 +12322,15 @@ static void wrap_date_time_t_get_prop_year(const Nan::FunctionCallbackInfo<v8::V
 
 ret_t date_time_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "date_time_create", wrap_date_time_create);
+  Nan::Export(ctx, "date_time_set_year", wrap_date_time_set_year);
+  Nan::Export(ctx, "date_time_set_month", wrap_date_time_set_month);
+  Nan::Export(ctx, "date_time_set_day", wrap_date_time_set_day);
+  Nan::Export(ctx, "date_time_set_hour", wrap_date_time_set_hour);
+  Nan::Export(ctx, "date_time_set_minute", wrap_date_time_set_minute);
+  Nan::Export(ctx, "date_time_set_second", wrap_date_time_set_second);
   Nan::Export(ctx, "date_time_set", wrap_date_time_set);
   Nan::Export(ctx, "date_time_from_time", wrap_date_time_from_time);
+  Nan::Export(ctx, "date_time_to_time", wrap_date_time_to_time);
   Nan::Export(ctx, "date_time_add_delta", wrap_date_time_add_delta);
   Nan::Export(ctx, "date_time_is_leap", wrap_date_time_is_leap);
   Nan::Export(ctx, "date_time_get_days", wrap_date_time_get_days);
@@ -14701,7 +14797,7 @@ static void wrap_assets_event_t_get_prop_type(const Nan::FunctionCallbackInfo<v8
   int32_t argc = (int32_t)(argv.Length()); 
   assets_event_t* obj = (assets_event_t*)jsvalue_get_pointer(ctx, argv[0], "assets_event_t*");
 
-  v8::Local<v8::Number> jret= Nan::New((double)((int64_t)(obj->type)));
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(obj->type));
   argv.GetReturnValue().Set(jret);
   (void)argc;(void)ctx;
 }
@@ -24273,12 +24369,58 @@ static void wrap_object_array_clear_props(const Nan::FunctionCallbackInfo<v8::Va
   (void)argc;(void)ctx;
 }
 
-static void wrap_object_array_t_get_prop_props_size(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+static void wrap_object_array_insert(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 3) {
+  ret_t ret = (ret_t)0;
+  object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
+  uint32_t index = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[2], "const value_t*");
+  ret = (ret_t)object_array_insert(obj, index, v);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
+static void wrap_object_array_push(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[1], "const value_t*");
+  ret = (ret_t)object_array_push(obj, v);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
+static void wrap_object_array_remove(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
+  uint32_t index = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)object_array_remove(obj, index);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
+static void wrap_object_array_t_get_prop_size(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
   object_array_t* obj = (object_array_t*)jsvalue_get_pointer(ctx, argv[0], "object_array_t*");
 
-  v8::Local<v8::Int32> jret= Nan::New((int32_t)(obj->props_size));
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(obj->size));
   argv.GetReturnValue().Set(jret);
   (void)argc;(void)ctx;
 }
@@ -24286,7 +24428,10 @@ static void wrap_object_array_t_get_prop_props_size(const Nan::FunctionCallbackI
 ret_t object_array_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "object_array_create", wrap_object_array_create);
   Nan::Export(ctx, "object_array_clear_props", wrap_object_array_clear_props);
-  Nan::Export(ctx, "object_array_t_get_prop_props_size", wrap_object_array_t_get_prop_props_size);
+  Nan::Export(ctx, "object_array_insert", wrap_object_array_insert);
+  Nan::Export(ctx, "object_array_push", wrap_object_array_push);
+  Nan::Export(ctx, "object_array_remove", wrap_object_array_remove);
+  Nan::Export(ctx, "object_array_t_get_prop_size", wrap_object_array_t_get_prop_size);
 
  return RET_OK;
 }

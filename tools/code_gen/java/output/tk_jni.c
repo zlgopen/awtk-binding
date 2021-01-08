@@ -207,14 +207,6 @@ JNIEXPORT jint JNICALL Java_awtk_TEmitter_emitter_1disable(JNIEnv* env,  jclass 
   return (jint)(ret);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TEmitter_emitter_1size(JNIEnv* env,  jclass ajc, jlong jemitter) { /*func*/
-  uint32_t ret;
-  emitter_t* emitter = (emitter_t*)jemitter;
-  ret = (uint32_t)emitter_size(emitter);
-
-  return (jint)(ret);
-}
-
 JNIEXPORT jlong JNICALL Java_awtk_TEmitter_emitter_1cast(JNIEnv* env,  jclass ajc, jlong jemitter) { /*func*/
   emitter_t* ret;
   emitter_t* emitter = (emitter_t*)jemitter;
@@ -6450,6 +6442,54 @@ JNIEXPORT jlong JNICALL Java_awtk_TDateTime_date_1time_1create(JNIEnv* env,  jcl
   return (jlong)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TDateTime_date_1time_1set_1year(JNIEnv* env,  jclass ajc, jlong jdt, jint year) { /*func*/
+  ret_t ret;
+  date_time_t* dt = (date_time_t*)jdt;
+  ret = (ret_t)date_time_set_year(dt, year);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TDateTime_date_1time_1set_1month(JNIEnv* env,  jclass ajc, jlong jdt, jint month) { /*func*/
+  ret_t ret;
+  date_time_t* dt = (date_time_t*)jdt;
+  ret = (ret_t)date_time_set_month(dt, month);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TDateTime_date_1time_1set_1day(JNIEnv* env,  jclass ajc, jlong jdt, jint day) { /*func*/
+  ret_t ret;
+  date_time_t* dt = (date_time_t*)jdt;
+  ret = (ret_t)date_time_set_day(dt, day);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TDateTime_date_1time_1set_1hour(JNIEnv* env,  jclass ajc, jlong jdt, jint hour) { /*func*/
+  ret_t ret;
+  date_time_t* dt = (date_time_t*)jdt;
+  ret = (ret_t)date_time_set_hour(dt, hour);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TDateTime_date_1time_1set_1minute(JNIEnv* env,  jclass ajc, jlong jdt, jint minute) { /*func*/
+  ret_t ret;
+  date_time_t* dt = (date_time_t*)jdt;
+  ret = (ret_t)date_time_set_minute(dt, minute);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TDateTime_date_1time_1set_1second(JNIEnv* env,  jclass ajc, jlong jdt, jint second) { /*func*/
+  ret_t ret;
+  date_time_t* dt = (date_time_t*)jdt;
+  ret = (ret_t)date_time_set_second(dt, second);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TDateTime_date_1time_1set(JNIEnv* env,  jclass ajc, jlong jdt) { /*func*/
   ret_t ret;
   date_time_t* dt = (date_time_t*)jdt;
@@ -6464,6 +6504,14 @@ JNIEXPORT jint JNICALL Java_awtk_TDateTime_date_1time_1from_1time(JNIEnv* env,  
   ret = (ret_t)date_time_from_time(dt, time);
 
   return (jint)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TDateTime_date_1time_1to_1time(JNIEnv* env,  jclass ajc, jlong jdt) { /*func*/
+  uint64_t ret;
+  date_time_t* dt = (date_time_t*)jdt;
+  ret = (uint64_t)date_time_to_time(dt);
+
+  return (jlong)(ret);
 }
 
 JNIEXPORT jint JNICALL Java_awtk_TDateTime_date_1time_1add_1delta(JNIEnv* env,  jclass ajc, jlong jdt, jlong delta) { /*func*/
@@ -12552,10 +12600,36 @@ JNIEXPORT jint JNICALL Java_awtk_TObjectArray_object_1array_1clear_1props(JNIEnv
   return (jint)(ret);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TObjectArray_object_1array_1t_1get_1prop_1props_1size(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+JNIEXPORT jint JNICALL Java_awtk_TObjectArray_object_1array_1insert(JNIEnv* env,  jclass ajc, jlong jobj, jint index, jlong jv) { /*func*/
+  ret_t ret;
+  object_t* obj = (object_t*)jobj;
+  const value_t* v = (const value_t*)jv;
+  ret = (ret_t)object_array_insert(obj, index, v);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TObjectArray_object_1array_1push(JNIEnv* env,  jclass ajc, jlong jobj, jlong jv) { /*func*/
+  ret_t ret;
+  object_t* obj = (object_t*)jobj;
+  const value_t* v = (const value_t*)jv;
+  ret = (ret_t)object_array_push(obj, v);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TObjectArray_object_1array_1remove(JNIEnv* env,  jclass ajc, jlong jobj, jint index) { /*func*/
+  ret_t ret;
+  object_t* obj = (object_t*)jobj;
+  ret = (ret_t)object_array_remove(obj, index);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TObjectArray_object_1array_1t_1get_1prop_1size(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
   object_array_t* obj = (object_array_t*)jobj;
 
-  return (jint)(obj->props_size);
+  return (jint)(obj->size);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TObjectDefault_object_1default_1create(JNIEnv* env,  jclass ajc) { /*func*/

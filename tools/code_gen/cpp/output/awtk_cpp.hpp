@@ -182,14 +182,6 @@ public:
   ret_t Disable() ;
 
   /**
-   * 获取注册的回调函数个数，主要用于辅助测试。
-   * 
-   *
-   * @return 回调函数个数。
-   */
-  uint32_t Size() ;
-
-  /**
    * 销毁。
    * 
    *
@@ -4303,6 +4295,60 @@ public:
   static  TDateTime Create() ;
 
   /**
+   * 设置年。
+   * 
+   * @param year 年。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetYear(uint32_t year) ;
+
+  /**
+   * 设置月。
+   * 
+   * @param month 月。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetMonth(uint32_t month) ;
+
+  /**
+   * 设置日。
+   * 
+   * @param day 日。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetDay(uint32_t day) ;
+
+  /**
+   * 设置小时。
+   * 
+   * @param hour 小时。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetHour(uint32_t hour) ;
+
+  /**
+   * 设置分钟。
+   * 
+   * @param minute 分钟。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetMinute(uint32_t minute) ;
+
+  /**
+   * 设置秒。
+   * 
+   * @param second 秒。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetSecond(uint32_t second) ;
+
+  /**
    * 设置当前时间。
    * 
    *
@@ -4318,6 +4364,14 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t FromTime(uint64_t time) ;
+
+  /**
+   * 转换成time。
+   * 
+   *
+   * @return 返回time。
+   */
+  uint64_t ToTime() ;
 
   /**
    * 加上一个偏移量(s)。
@@ -5227,7 +5281,7 @@ public:
    * 触发事件的资源类型
    *
    */
-  asset_type_t* GetType() const;
+  asset_type_t GetType() const;
 
   /**
    * 触发事件的资源对象
@@ -14001,10 +14055,38 @@ public:
   ret_t ClearProps() ;
 
   /**
+   * 在指定位置插入一个元素。
+   * 
+   * @param index 位置。
+   * @param v 值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Insert(uint32_t index, TValue& v) ;
+
+  /**
+   * 追加一个元素。
+   * 
+   * @param v 值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Push(TValue& v) ;
+
+  /**
+   * 在指定位置删除一个元素。
+   * 
+   * @param index 位置。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Remove(uint32_t index) ;
+
+  /**
    * 属性个数。
    *
    */
-  uint32_t GetPropsSize() const;
+  uint32_t GetSize() const;
 };
 
 

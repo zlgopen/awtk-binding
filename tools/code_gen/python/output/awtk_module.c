@@ -271,19 +271,6 @@ pyobject_t wrap_emitter_disable(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", ret);
 }
 
-pyobject_t wrap_emitter_size(pyobject_t self, pyobject_t pyargs) {
-  uint32_t ret = 0;
-  emitter_t* emitter = NULL;
-
-  if (!PyArg_ParseTuple(pyargs, "O&" , &parse_voidp, &emitter)) {
-    PyErr_SetString(PyExc_TypeError, "invalid arguments");
-    return NULL;
-  }
-
-  ret = (uint32_t)emitter_size(emitter);
-  return Py_BuildValue("i", ret);
-}
-
 pyobject_t wrap_emitter_cast(pyobject_t self, pyobject_t pyargs) {
   emitter_t* ret = NULL;
   emitter_t* emitter = NULL;
@@ -7860,6 +7847,90 @@ pyobject_t wrap_date_time_create(pyobject_t self, pyobject_t pyargs) {
   return PyLong_FromVoidPtr((void*)ret);
 }
 
+pyobject_t wrap_date_time_set_year(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  date_time_t* dt = NULL;
+  uint32_t year = 0;
+
+  if (!PyArg_ParseTuple(pyargs, "O&i" , &parse_voidp, &dt, &year)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)date_time_set_year(dt, year);
+  return Py_BuildValue("i", ret);
+}
+
+pyobject_t wrap_date_time_set_month(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  date_time_t* dt = NULL;
+  uint32_t month = 0;
+
+  if (!PyArg_ParseTuple(pyargs, "O&i" , &parse_voidp, &dt, &month)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)date_time_set_month(dt, month);
+  return Py_BuildValue("i", ret);
+}
+
+pyobject_t wrap_date_time_set_day(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  date_time_t* dt = NULL;
+  uint32_t day = 0;
+
+  if (!PyArg_ParseTuple(pyargs, "O&i" , &parse_voidp, &dt, &day)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)date_time_set_day(dt, day);
+  return Py_BuildValue("i", ret);
+}
+
+pyobject_t wrap_date_time_set_hour(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  date_time_t* dt = NULL;
+  uint32_t hour = 0;
+
+  if (!PyArg_ParseTuple(pyargs, "O&i" , &parse_voidp, &dt, &hour)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)date_time_set_hour(dt, hour);
+  return Py_BuildValue("i", ret);
+}
+
+pyobject_t wrap_date_time_set_minute(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  date_time_t* dt = NULL;
+  uint32_t minute = 0;
+
+  if (!PyArg_ParseTuple(pyargs, "O&i" , &parse_voidp, &dt, &minute)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)date_time_set_minute(dt, minute);
+  return Py_BuildValue("i", ret);
+}
+
+pyobject_t wrap_date_time_set_second(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  date_time_t* dt = NULL;
+  uint32_t second = 0;
+
+  if (!PyArg_ParseTuple(pyargs, "O&i" , &parse_voidp, &dt, &second)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)date_time_set_second(dt, second);
+  return Py_BuildValue("i", ret);
+}
+
 pyobject_t wrap_date_time_set(pyobject_t self, pyobject_t pyargs) {
   ret_t ret = 0;
   date_time_t* dt = NULL;
@@ -7884,6 +7955,19 @@ pyobject_t wrap_date_time_from_time(pyobject_t self, pyobject_t pyargs) {
   }
 
   ret = (ret_t)date_time_from_time(dt, time);
+  return Py_BuildValue("i", ret);
+}
+
+pyobject_t wrap_date_time_to_time(pyobject_t self, pyobject_t pyargs) {
+  uint64_t ret = 0;
+  date_time_t* dt = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&" , &parse_voidp, &dt)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (uint64_t)date_time_to_time(dt);
   return Py_BuildValue("i", ret);
 }
 
@@ -17647,7 +17731,50 @@ pyobject_t wrap_object_array_clear_props(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", ret);
 }
 
-pyobject_t wrap_object_array_t_get_prop_props_size(pyobject_t self, pyobject_t pyargs) {
+pyobject_t wrap_object_array_insert(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  object_t* obj = NULL;
+  uint32_t index = 0;
+  const value_t* v = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&iO&" , &parse_voidp, &obj, &index, &parse_voidp, &v)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)object_array_insert(obj, index, v);
+  return Py_BuildValue("i", ret);
+}
+
+pyobject_t wrap_object_array_push(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  object_t* obj = NULL;
+  const value_t* v = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&O&" , &parse_voidp, &obj, &parse_voidp, &v)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)object_array_push(obj, v);
+  return Py_BuildValue("i", ret);
+}
+
+pyobject_t wrap_object_array_remove(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  object_t* obj = NULL;
+  uint32_t index = 0;
+
+  if (!PyArg_ParseTuple(pyargs, "O&i" , &parse_voidp, &obj, &index)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)object_array_remove(obj, index);
+  return Py_BuildValue("i", ret);
+}
+
+pyobject_t wrap_object_array_t_get_prop_size(pyobject_t self, pyobject_t pyargs) {
   object_array_t* obj = NULL;
 
   if (!PyArg_ParseTuple(pyargs, "O&", &parse_voidp, &obj)) {
@@ -17655,7 +17782,7 @@ pyobject_t wrap_object_array_t_get_prop_props_size(pyobject_t self, pyobject_t p
     return NULL;
   }
 
-  return Py_BuildValue("i", obj->props_size);
+  return Py_BuildValue("i", obj->size);
 }
 
 pyobject_t wrap_object_default_create(pyobject_t self, pyobject_t pyargs) {
@@ -18332,7 +18459,6 @@ static PyMethodDef awtk_methods[] = {
 {"emitter_off", wrap_emitter_off, METH_VARARGS, "emitter_off"},
 {"emitter_enable", wrap_emitter_enable, METH_VARARGS, "emitter_enable"},
 {"emitter_disable", wrap_emitter_disable, METH_VARARGS, "emitter_disable"},
-{"emitter_size", wrap_emitter_size, METH_VARARGS, "emitter_size"},
 {"emitter_cast", wrap_emitter_cast, METH_VARARGS, "emitter_cast"},
 {"rect_create", wrap_rect_create, METH_VARARGS, "rect_create"},
 {"rect_set", wrap_rect_set, METH_VARARGS, "rect_set"},
@@ -19328,8 +19454,15 @@ static PyMethodDef awtk_methods[] = {
 {"color_t_set_prop_color", wrap_color_t_set_prop_color, METH_VARARGS, "color_t_set_prop_color"},
 {"color_t_get_prop_color", wrap_color_t_get_prop_color, METH_VARARGS, "color_t_get_prop_color"},
 {"date_time_create", wrap_date_time_create, METH_VARARGS, "date_time_create"},
+{"date_time_set_year", wrap_date_time_set_year, METH_VARARGS, "date_time_set_year"},
+{"date_time_set_month", wrap_date_time_set_month, METH_VARARGS, "date_time_set_month"},
+{"date_time_set_day", wrap_date_time_set_day, METH_VARARGS, "date_time_set_day"},
+{"date_time_set_hour", wrap_date_time_set_hour, METH_VARARGS, "date_time_set_hour"},
+{"date_time_set_minute", wrap_date_time_set_minute, METH_VARARGS, "date_time_set_minute"},
+{"date_time_set_second", wrap_date_time_set_second, METH_VARARGS, "date_time_set_second"},
 {"date_time_set", wrap_date_time_set, METH_VARARGS, "date_time_set"},
 {"date_time_from_time", wrap_date_time_from_time, METH_VARARGS, "date_time_from_time"},
+{"date_time_to_time", wrap_date_time_to_time, METH_VARARGS, "date_time_to_time"},
 {"date_time_add_delta", wrap_date_time_add_delta, METH_VARARGS, "date_time_add_delta"},
 {"date_time_is_leap", wrap_date_time_is_leap, METH_VARARGS, "date_time_is_leap"},
 {"date_time_get_days", wrap_date_time_get_days, METH_VARARGS, "date_time_get_days"},
@@ -20208,7 +20341,10 @@ static PyMethodDef awtk_methods[] = {
 {"idle_info_t_get_prop_id", wrap_idle_info_t_get_prop_id, METH_VARARGS, "idle_info_t_get_prop_id"},
 {"object_array_create", wrap_object_array_create, METH_VARARGS, "object_array_create"},
 {"object_array_clear_props", wrap_object_array_clear_props, METH_VARARGS, "object_array_clear_props"},
-{"object_array_t_get_prop_props_size", wrap_object_array_t_get_prop_props_size, METH_VARARGS, "object_array_t_get_prop_props_size"},
+{"object_array_insert", wrap_object_array_insert, METH_VARARGS, "object_array_insert"},
+{"object_array_push", wrap_object_array_push, METH_VARARGS, "object_array_push"},
+{"object_array_remove", wrap_object_array_remove, METH_VARARGS, "object_array_remove"},
+{"object_array_t_get_prop_size", wrap_object_array_t_get_prop_size, METH_VARARGS, "object_array_t_get_prop_size"},
 {"object_default_create", wrap_object_default_create, METH_VARARGS, "object_default_create"},
 {"object_default_clear_props", wrap_object_default_clear_props, METH_VARARGS, "object_default_clear_props"},
 {"object_default_t_get_prop_props_size", wrap_object_default_t_get_prop_props_size, METH_VARARGS, "object_default_t_get_prop_props_size"},

@@ -184,16 +184,6 @@ class TEmitter(object):
 
 
   #
-  # 获取注册的回调函数个数，主要用于辅助测试。
-  # 
-  #
-  # @return 回调函数个数。
-  #
-  def size(self): 
-    return emitter_size(awtk_get_native_obj(self));
-
-
-  #
   # 销毁。
   # 
   #
@@ -6240,7 +6230,7 @@ class TWidgetProp:
   FOCUSABLE = WIDGET_PROP_FOCUSABLE();
 
   #
-  # 是否支持焦点状态(如果希望style支持焦点状态，但有不希望焦点停留，可用本属性)。
+  # 是否支持焦点状态(如果希望style支持焦点状态，但又不希望焦点停留，可用本属性)。
   #
   #
   WITH_FOCUS_STATE = WIDGET_PROP_WITH_FOCUS_STATE();
@@ -8825,6 +8815,72 @@ class TDateTime(object):
 
 
   #
+  # 设置年。
+  # 
+  # @param year 年。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_year(self, year): 
+    return date_time_set_year(awtk_get_native_obj(self), year);
+
+
+  #
+  # 设置月。
+  # 
+  # @param month 月。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_month(self, month): 
+    return date_time_set_month(awtk_get_native_obj(self), month);
+
+
+  #
+  # 设置日。
+  # 
+  # @param day 日。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_day(self, day): 
+    return date_time_set_day(awtk_get_native_obj(self), day);
+
+
+  #
+  # 设置小时。
+  # 
+  # @param hour 小时。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_hour(self, hour): 
+    return date_time_set_hour(awtk_get_native_obj(self), hour);
+
+
+  #
+  # 设置分钟。
+  # 
+  # @param minute 分钟。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_minute(self, minute): 
+    return date_time_set_minute(awtk_get_native_obj(self), minute);
+
+
+  #
+  # 设置秒。
+  # 
+  # @param second 秒。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_second(self, second): 
+    return date_time_set_second(awtk_get_native_obj(self), second);
+
+
+  #
   # 设置当前时间。
   # 
   #
@@ -8843,6 +8899,16 @@ class TDateTime(object):
   #
   def from_time(self, time): 
     return date_time_from_time(awtk_get_native_obj(self), time);
+
+
+  #
+  # 转换成time。
+  # 
+  #
+  # @return 返回time。
+  #
+  def to_time(self): 
+    return date_time_to_time(awtk_get_native_obj(self));
 
 
   #
@@ -8937,6 +9003,10 @@ class TDateTime(object):
   def second(self):
     return date_time_t_get_prop_second(self.nativeObj);
 
+  @second.setter
+  def second(self, v):
+   this.set_second(v);
+
 
   #
   # 分(0 - 59)。
@@ -8945,6 +9015,10 @@ class TDateTime(object):
   @property
   def minute(self):
     return date_time_t_get_prop_minute(self.nativeObj);
+
+  @minute.setter
+  def minute(self, v):
+   this.set_minute(v);
 
 
   #
@@ -8955,6 +9029,10 @@ class TDateTime(object):
   def hour(self):
     return date_time_t_get_prop_hour(self.nativeObj);
 
+  @hour.setter
+  def hour(self, v):
+   this.set_hour(v);
+
 
   #
   # 日(1-31)。
@@ -8963,6 +9041,10 @@ class TDateTime(object):
   @property
   def day(self):
     return date_time_t_get_prop_day(self.nativeObj);
+
+  @day.setter
+  def day(self, v):
+   this.set_day(v);
 
 
   #
@@ -8982,6 +9064,10 @@ class TDateTime(object):
   def month(self):
     return date_time_t_get_prop_month(self.nativeObj);
 
+  @month.setter
+  def month(self, v):
+   this.set_month(v);
+
 
   #
   # 年。
@@ -8990,6 +9076,10 @@ class TDateTime(object):
   @property
   def year(self):
     return date_time_t_get_prop_year(self.nativeObj);
+
+  @year.setter
+  def year(self, v):
+   this.set_year(v);
 
 
 #
@@ -10874,7 +10964,7 @@ class TAssetsEvent (TEvent):
   #
   @property
   def type(self):
-    return TAssetType(assets_event_t_get_prop_type(self.nativeObj));
+    return assets_event_t_get_prop_type(self.nativeObj);
 
 
   #
@@ -20931,12 +21021,46 @@ class TObjectArray (TObject):
 
 
   #
+  # 在指定位置插入一个元素。
+  # 
+  # @param index 位置。
+  # @param v 值。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def insert(self, index, v): 
+    return object_array_insert(awtk_get_native_obj(self), index, awtk_get_native_obj(v));
+
+
+  #
+  # 追加一个元素。
+  # 
+  # @param v 值。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def push(self, v): 
+    return object_array_push(awtk_get_native_obj(self), awtk_get_native_obj(v));
+
+
+  #
+  # 在指定位置删除一个元素。
+  # 
+  # @param index 位置。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def remove(self, index): 
+    return object_array_remove(awtk_get_native_obj(self), index);
+
+
+  #
   # 属性个数。
   #
   #
   @property
-  def props_size(self):
-    return object_array_t_get_prop_props_size(self.nativeObj);
+  def size(self):
+    return object_array_t_get_prop_size(self.nativeObj);
 
 
 #

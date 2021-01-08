@@ -274,24 +274,6 @@
           }
         ],
         "annotation": {
-          "scriptable": true
-        },
-        "desc": "获取注册的回调函数个数，主要用于辅助测试。",
-        "name": "emitter_size",
-        "return": {
-          "type": "uint32_t",
-          "desc": "回调函数个数。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "emitter_t*",
-            "name": "emitter",
-            "desc": "emitter对象。"
-          }
-        ],
-        "annotation": {
           "deconstructor": true,
           "scriptable": true,
           "gc": true
@@ -8023,7 +8005,7 @@
         "name": "WIDGET_PROP_FOCUSABLE"
       },
       {
-        "desc": "是否支持焦点状态(如果希望style支持焦点状态，但有不希望焦点停留，可用本属性)。",
+        "desc": "是否支持焦点状态(如果希望style支持焦点状态，但又不希望焦点停留，可用本属性)。",
         "name": "WIDGET_PROP_WITH_FOCUS_STATE"
       },
       {
@@ -11943,6 +11925,144 @@
             "type": "date_time_t*",
             "name": "dt",
             "desc": "date_time对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "year",
+            "desc": "年。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置年。",
+        "name": "date_time_set_year",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "date_time_t*",
+            "name": "dt",
+            "desc": "date_time对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "month",
+            "desc": "月。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置月。",
+        "name": "date_time_set_month",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "date_time_t*",
+            "name": "dt",
+            "desc": "date_time对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "day",
+            "desc": "日。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置日。",
+        "name": "date_time_set_day",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "date_time_t*",
+            "name": "dt",
+            "desc": "date_time对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "hour",
+            "desc": "小时。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置小时。",
+        "name": "date_time_set_hour",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "date_time_t*",
+            "name": "dt",
+            "desc": "date_time对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "minute",
+            "desc": "分钟。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置分钟。",
+        "name": "date_time_set_minute",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "date_time_t*",
+            "name": "dt",
+            "desc": "date_time对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "second",
+            "desc": "秒。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置秒。",
+        "name": "date_time_set_second",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "date_time_t*",
+            "name": "dt",
+            "desc": "date_time对象。"
           }
         ],
         "annotation": {
@@ -11976,6 +12096,24 @@
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "date_time_t*",
+            "name": "dt",
+            "desc": "date_time对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "转换成time。",
+        "name": "date_time_to_time",
+        "return": {
+          "type": "uint64_t",
+          "desc": "返回time。"
         }
       },
       {
@@ -13985,7 +14123,7 @@
       {
         "name": "type",
         "desc": "触发事件的资源类型",
-        "type": "asset_type_t*",
+        "type": "asset_type_t",
         "annotation": {
           "readable": true,
           "scriptable": true
@@ -28232,12 +28370,86 @@
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "index",
+            "desc": "位置。"
+          },
+          {
+            "type": "const value_t*",
+            "name": "v",
+            "desc": "值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "在指定位置插入一个元素。",
+        "name": "object_array_insert",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "对象。"
+          },
+          {
+            "type": "const value_t*",
+            "name": "v",
+            "desc": "值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "追加一个元素。",
+        "name": "object_array_push",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "index",
+            "desc": "位置。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "在指定位置删除一个元素。",
+        "name": "object_array_remove",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
       }
     ],
     "events": [],
     "properties": [
       {
-        "name": "props_size",
+        "name": "size",
         "desc": "属性个数。",
         "type": "uint32_t",
         "annotation": {

@@ -51,10 +51,6 @@
    return emitter_disable(((emitter_t*)(this->nativeObj)));
  }
 
- uint32_t TEmitter::Size()  {
-    return emitter_size(((emitter_t*)(this->nativeObj)));
- }
-
  ret_t TEmitter::Destroy()  {
    return emitter_destroy(((emitter_t*)(this->nativeObj)));
  }
@@ -1555,12 +1551,40 @@
    return TDateTime((date_time_t*)(date_time_create()));
  }
 
+ ret_t TDateTime::SetYear(uint32_t year)  {
+   return date_time_set_year(((date_time_t*)(this->nativeObj)), year);
+ }
+
+ ret_t TDateTime::SetMonth(uint32_t month)  {
+   return date_time_set_month(((date_time_t*)(this->nativeObj)), month);
+ }
+
+ ret_t TDateTime::SetDay(uint32_t day)  {
+   return date_time_set_day(((date_time_t*)(this->nativeObj)), day);
+ }
+
+ ret_t TDateTime::SetHour(uint32_t hour)  {
+   return date_time_set_hour(((date_time_t*)(this->nativeObj)), hour);
+ }
+
+ ret_t TDateTime::SetMinute(uint32_t minute)  {
+   return date_time_set_minute(((date_time_t*)(this->nativeObj)), minute);
+ }
+
+ ret_t TDateTime::SetSecond(uint32_t second)  {
+   return date_time_set_second(((date_time_t*)(this->nativeObj)), second);
+ }
+
  ret_t TDateTime::Set()  {
    return date_time_set(((date_time_t*)(this->nativeObj)));
  }
 
  ret_t TDateTime::FromTime(uint64_t time)  {
    return date_time_from_time(((date_time_t*)(this->nativeObj)), time);
+ }
+
+ uint64_t TDateTime::ToTime()  {
+    return date_time_to_time(((date_time_t*)(this->nativeObj)));
  }
 
  ret_t TDateTime::AddDelta(int64_t delta)  {
@@ -1811,7 +1835,7 @@
    return ((multi_gesture_event_t*)(this->nativeObj))->distance;
  }
 
- asset_type_t* TAssetsEvent::GetType() const {
+ asset_type_t TAssetsEvent::GetType() const {
    return ((assets_event_t*)(this->nativeObj))->type;
  }
 
@@ -4047,8 +4071,20 @@
    return object_array_clear_props(((object_t*)(this->nativeObj)));
  }
 
- uint32_t TObjectArray::GetPropsSize() const {
-   return ((object_array_t*)(this->nativeObj))->props_size;
+ ret_t TObjectArray::Insert(uint32_t index, TValue& v)  {
+   return object_array_insert(((object_t*)(this->nativeObj)), index, ((const value_t*)(v.nativeObj)));
+ }
+
+ ret_t TObjectArray::Push(TValue& v)  {
+   return object_array_push(((object_t*)(this->nativeObj)), ((const value_t*)(v.nativeObj)));
+ }
+
+ ret_t TObjectArray::Remove(uint32_t index)  {
+   return object_array_remove(((object_t*)(this->nativeObj)), index);
+ }
+
+ uint32_t TObjectArray::GetSize() const {
+   return ((object_array_t*)(this->nativeObj))->size;
  }
 
  TObject TObjectDefault::Create()  {

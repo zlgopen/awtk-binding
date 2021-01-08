@@ -126,17 +126,6 @@ public class TEmitter {
 
 
   /**
-   * 获取注册的回调函数个数，主要用于辅助测试。
-   * 
-   *
-   * @return 回调函数个数。
-   */
- public  int size()  {
-    return emitter_size(this != null ? (this.nativeObj) : 0);
- }
-
-
-  /**
    * 销毁。
    * 
    *
@@ -167,7 +156,6 @@ static private native int emitter_on(long emitter, int etype, TOnEvent handler, 
 static private native int emitter_off(long emitter, int id);
 static private native int emitter_enable(long emitter);
 static private native int emitter_disable(long emitter);
-static private native int emitter_size(long emitter);
 static private native int emitter_destroy(long emitter);
 static private native long emitter_cast(long emitter);
 };
