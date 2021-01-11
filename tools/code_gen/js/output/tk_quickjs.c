@@ -4299,6 +4299,15 @@ jsvalue_t get_EVT_ASSET_MANAGER_CLEAR_CACHE(
   return jsvalue_create_int(ctx, EVT_ASSET_MANAGER_CLEAR_CACHE);
 }
 
+jsvalue_t get_EVT_TIMER(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, EVT_TIMER);
+}
+
 jsvalue_t get_EVT_REQ_START(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -4606,6 +4615,8 @@ ret_t event_type_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_EVT_ASSET_MANAGER_UNLOAD_ASSET, "EVT_ASSET_MANAGER_UNLOAD_ASSET", 1));
   JS_SetPropertyStr(ctx, global_obj, "EVT_ASSET_MANAGER_CLEAR_CACHE",
                       JS_NewCFunction(ctx, get_EVT_ASSET_MANAGER_CLEAR_CACHE, "EVT_ASSET_MANAGER_CLEAR_CACHE", 1));
+  JS_SetPropertyStr(ctx, global_obj, "EVT_TIMER",
+                      JS_NewCFunction(ctx, get_EVT_TIMER, "EVT_TIMER", 1));
   JS_SetPropertyStr(ctx, global_obj, "EVT_REQ_START",
                       JS_NewCFunction(ctx, get_EVT_REQ_START, "EVT_REQ_START", 1));
   JS_SetPropertyStr(ctx, global_obj, "EVT_USER_START",

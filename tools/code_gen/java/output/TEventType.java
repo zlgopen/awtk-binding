@@ -610,6 +610,13 @@ public enum TEventType {
   ASSET_MANAGER_CLEAR_CACHE (EVT_ASSET_MANAGER_CLEAR_CACHE()),
   
   /**
+   * 定时器(event_t)。
+   *
+   */
+ 
+  TIMER (EVT_TIMER()),
+  
+  /**
    * event queue其它请求编号起始值。
    *
    */
@@ -832,6 +839,7 @@ public enum TEventType {
   static private native int EVT_ASSET_MANAGER_LOAD_ASSET();
   static private native int EVT_ASSET_MANAGER_UNLOAD_ASSET();
   static private native int EVT_ASSET_MANAGER_CLEAR_CACHE();
+  static private native int EVT_TIMER();
   static private native int EVT_REQ_START();
   static private native int EVT_USER_START();
   static private native int EVT_NONE();

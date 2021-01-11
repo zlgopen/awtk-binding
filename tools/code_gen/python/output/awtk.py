@@ -2637,6 +2637,12 @@ class TEventType:
   ASSET_MANAGER_CLEAR_CACHE = EVT_ASSET_MANAGER_CLEAR_CACHE();
 
   #
+  # 定时器(event_t)。
+  #
+  #
+  TIMER = EVT_TIMER();
+
+  #
   # event queue其它请求编号起始值。
   #
   #

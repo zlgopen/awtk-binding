@@ -1968,6 +1968,11 @@ JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1ASSET_1MANAGER_1CLEAR_1CACHE(JN
   return (jint)(EVT_ASSET_MANAGER_CLEAR_CACHE);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1TIMER(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_TIMER);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1REQ_1START(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (jint)(EVT_REQ_START);

@@ -2,7 +2,7 @@ var searchData=
 [
   ['s_964',['s',['../classawtk_1_1_t_time_now.html#a46660cc972360a2346d8ea4149c45ab3',1,'awtk::TTimeNow']]],
   ['save_965',['save',['../classawtk_1_1_t_vgcanvas.html#ad7ae7c9226aceeac658514a0e27639a1',1,'awtk.TVgcanvas.save()'],['../enumawtk_1_1_t_object_cmd.html#ace528ccf906afdb3a870edf4cf694157',1,'awtk.TObjectCmd.SAVE()']]],
-  ['scale_966',['scale',['../classawtk_1_1_t_vgcanvas.html#af672b35dd63c38d71f95886637c5bed6',1,'awtk.TVgcanvas.scale()'],['../enumawtk_1_1_t_image_draw_type.html#adac9b1db819a07d79f8c86a43340c110',1,'awtk.TImageDrawType.SCALE()']]],
+  ['scale_966',['SCALE',['../enumawtk_1_1_t_image_draw_type.html#adac9b1db819a07d79f8c86a43340c110',1,'awtk.TImageDrawType.SCALE()'],['../classawtk_1_1_t_vgcanvas.html#af672b35dd63c38d71f95886637c5bed6',1,'awtk.TVgcanvas.scale()']]],
   ['scale_5fauto_967',['SCALE_AUTO',['../enumawtk_1_1_t_image_draw_type.html#a4e0907cecac16b8cb2d7422ec75f61df',1,'awtk::TImageDrawType']]],
   ['scale_5fdown_968',['SCALE_DOWN',['../enumawtk_1_1_t_image_draw_type.html#a1e8cececb879bca17c5264fa6736f2ac',1,'awtk::TImageDrawType']]],
   ['scale_5fh_969',['SCALE_H',['../enumawtk_1_1_t_image_draw_type.html#ac84cf7bfe9db5f128cf4f39e8e4eeda8',1,'awtk::TImageDrawType']]],
@@ -251,7 +251,7 @@ var searchData=
   ['start_1212',['start',['../classawtk_1_1_t_hscroll_label.html#a1ddda74f18f74dcbc3fabd2e1e60821d',1,'awtk::THscrollLabel']]],
   ['state_5ffor_5fstyle_1213',['STATE_FOR_STYLE',['../enumawtk_1_1_t_widget_prop.html#a6dcf3c22c53586cf00357213c304b702',1,'awtk::TWidgetProp']]],
   ['step_1214',['STEP',['../enumawtk_1_1_t_widget_prop.html#a2c7e8123b501f194976c8f5e6f5da767',1,'awtk::TWidgetProp']]],
-  ['stop_1215',['stop',['../classawtk_1_1_t_hscroll_label.html#a86bcf7e983b1d8e852c09827aa52fe4d',1,'awtk.THscrollLabel.stop()'],['../classawtk_1_1_t_image_animation.html#a654282de4b45d0d5a10e03bd1100f97a',1,'awtk.TImageAnimation.stop()'],['../enumawtk_1_1_t_ret.html#a9b1c4abaf38c0cc2ec5c0c0cbd79cf4e',1,'awtk.TRet.STOP()']]],
+  ['stop_1215',['STOP',['../enumawtk_1_1_t_ret.html#a9b1c4abaf38c0cc2ec5c0c0cbd79cf4e',1,'awtk.TRet.STOP()'],['../classawtk_1_1_t_hscroll_label.html#a86bcf7e983b1d8e852c09827aa52fe4d',1,'awtk.THscrollLabel.stop()'],['../classawtk_1_1_t_image_animation.html#a654282de4b45d0d5a10e03bd1100f97a',1,'awtk.TImageAnimation.stop()']]],
   ['str_1216',['str',['../classawtk_1_1_t_value.html#ad36adbd7e5a6e542265204bebdea4741',1,'awtk::TValue']]],
   ['strex_1217',['strEx',['../classawtk_1_1_t_value.html#aec77344bd38d25e91bd6d432c4ce0006',1,'awtk::TValue']]],
   ['string_1218',['STRING',['../enumawtk_1_1_t_value_type.html#a772d076d15198e5294cb64ee5ca5b5a1',1,'awtk::TValueType']]],

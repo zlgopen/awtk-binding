@@ -2729,6 +2729,14 @@ int awtk_TEventType_EVT_ASSET_MANAGER_CLEAR_CACHE(Runtime *runtime, JClass *claz
   return 0;
 }
 
+int awtk_TEventType_EVT_TIMER(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(EVT_TIMER));
+
+  return 0;
+}
+
 int awtk_TEventType_EVT_REQ_START(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -19721,6 +19729,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TEventType",  "EVT_ASSET_MANAGER_LOAD_ASSET",  "()I",  awtk_TEventType_EVT_ASSET_MANAGER_LOAD_ASSET},
 {"awtk/TEventType",  "EVT_ASSET_MANAGER_UNLOAD_ASSET",  "()I",  awtk_TEventType_EVT_ASSET_MANAGER_UNLOAD_ASSET},
 {"awtk/TEventType",  "EVT_ASSET_MANAGER_CLEAR_CACHE",  "()I",  awtk_TEventType_EVT_ASSET_MANAGER_CLEAR_CACHE},
+{"awtk/TEventType",  "EVT_TIMER",  "()I",  awtk_TEventType_EVT_TIMER},
 {"awtk/TEventType",  "EVT_REQ_START",  "()I",  awtk_TEventType_EVT_REQ_START},
 {"awtk/TEventType",  "EVT_USER_START",  "()I",  awtk_TEventType_EVT_USER_START},
 {"awtk/TEventType",  "EVT_NONE",  "()I",  awtk_TEventType_EVT_NONE},

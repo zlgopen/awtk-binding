@@ -280,6 +280,7 @@ declare function EVT_PAGE_CHANGED();
 declare function EVT_ASSET_MANAGER_LOAD_ASSET();
 declare function EVT_ASSET_MANAGER_UNLOAD_ASSET();
 declare function EVT_ASSET_MANAGER_CLEAR_CACHE();
+declare function EVT_TIMER();
 declare function EVT_REQ_START();
 declare function EVT_USER_START();
 declare function EVT_NONE();
@@ -4737,6 +4738,12 @@ export enum TEventType {
    *
    */
  ASSET_MANAGER_CLEAR_CACHE = EVT_ASSET_MANAGER_CLEAR_CACHE(),
+
+  /**
+   * 定时器(event_t)。
+   *
+   */
+ TIMER = EVT_TIMER(),
 
   /**
    * event queue其它请求编号起始值。

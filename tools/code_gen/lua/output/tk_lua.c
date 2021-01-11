@@ -3060,6 +3060,10 @@ static void event_type_t_init(lua_State* L) {
   lua_pushinteger(L, EVT_ASSET_MANAGER_CLEAR_CACHE);
   lua_settable(L, -3); 
 
+  lua_pushstring(L, "TIMER");
+  lua_pushinteger(L, EVT_TIMER);
+  lua_settable(L, -3); 
+
   lua_pushstring(L, "REQ_START");
   lua_pushinteger(L, EVT_REQ_START);
   lua_settable(L, -3); 
