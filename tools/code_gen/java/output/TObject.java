@@ -211,6 +211,19 @@ public class TObject extends TEmitter {
 
 
   /**
+   * 获取指定属性的浮点数类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @return 返回指定属性的浮点数类型的值。
+   */
+ public  double getPropDouble(String name, double defval)  {
+    return object_get_prop_double(this != null ? (this.nativeObj) : 0, name, defval);
+ }
+
+
+  /**
    * 删除指定属性。
    * 
    * @param name 属性的名称。
@@ -297,6 +310,19 @@ public class TObject extends TEmitter {
    */
  public  TRet setPropFloat(String name, double value)  {
    return TRet.from(object_set_prop_float(this != null ? (this.nativeObj) : 0, name, value));
+ }
+
+
+  /**
+   * 设置指定属性的浮点数类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setPropDouble(String name, double value)  {
+   return TRet.from(object_set_prop_double(this != null ? (this.nativeObj) : 0, name, value));
  }
 
 
@@ -569,6 +595,214 @@ public class TObject extends TEmitter {
 
 
   /**
+   * 获取指定属性的int8类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @return 返回指定属性的int8类型的值。
+   */
+ public  int getPropInt8(String name, int defval)  {
+    return object_get_prop_int8(this != null ? (this.nativeObj) : 0, name, defval);
+ }
+
+
+  /**
+   * 设置指定属性的int8类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setPropInt8(String name, int value)  {
+   return TRet.from(object_set_prop_int8(this != null ? (this.nativeObj) : 0, name, value));
+ }
+
+
+  /**
+   * 获取指定属性的uint8类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @return 返回指定属性的uint8类型的值。
+   */
+ public  int getPropUint8(String name, int defval)  {
+    return object_get_prop_uint8(this != null ? (this.nativeObj) : 0, name, defval);
+ }
+
+
+  /**
+   * 设置指定属性的uint8类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setPropUint8(String name, int value)  {
+   return TRet.from(object_set_prop_uint8(this != null ? (this.nativeObj) : 0, name, value));
+ }
+
+
+  /**
+   * 获取指定属性的int16类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @return 返回指定属性的int16类型的值。
+   */
+ public  int getPropInt16(String name, int defval)  {
+    return object_get_prop_int16(this != null ? (this.nativeObj) : 0, name, defval);
+ }
+
+
+  /**
+   * 设置指定属性的int16类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setPropInt16(String name, int value)  {
+   return TRet.from(object_set_prop_int16(this != null ? (this.nativeObj) : 0, name, value));
+ }
+
+
+  /**
+   * 获取指定属性的uint16类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @return 返回指定属性的uint16类型的值。
+   */
+ public  int getPropUint16(String name, int defval)  {
+    return object_get_prop_uint16(this != null ? (this.nativeObj) : 0, name, defval);
+ }
+
+
+  /**
+   * 设置指定属性的uint16类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setPropUint16(String name, int value)  {
+   return TRet.from(object_set_prop_uint16(this != null ? (this.nativeObj) : 0, name, value));
+ }
+
+
+  /**
+   * 获取指定属性的int32类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @return 返回指定属性的int32类型的值。
+   */
+ public  int getPropInt32(String name, int defval)  {
+    return object_get_prop_int32(this != null ? (this.nativeObj) : 0, name, defval);
+ }
+
+
+  /**
+   * 设置指定属性的int32类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setPropInt32(String name, int value)  {
+   return TRet.from(object_set_prop_int32(this != null ? (this.nativeObj) : 0, name, value));
+ }
+
+
+  /**
+   * 获取指定属性的uint32类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @return 返回指定属性的uint32类型的值。
+   */
+ public  int getPropUint32(String name, int defval)  {
+    return object_get_prop_uint32(this != null ? (this.nativeObj) : 0, name, defval);
+ }
+
+
+  /**
+   * 设置指定属性的uint32类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setPropUint32(String name, int value)  {
+   return TRet.from(object_set_prop_uint32(this != null ? (this.nativeObj) : 0, name, value));
+ }
+
+
+  /**
+   * 获取指定属性的int64类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @return 返回指定属性的int64类型的值。
+   */
+ public  long getPropInt64(String name, long defval)  {
+    return object_get_prop_int64(this != null ? (this.nativeObj) : 0, name, defval);
+ }
+
+
+  /**
+   * 设置指定属性的int64类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setPropInt64(String name, long value)  {
+   return TRet.from(object_set_prop_int64(this != null ? (this.nativeObj) : 0, name, value));
+ }
+
+
+  /**
+   * 获取指定属性的uint64类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @return 返回指定属性的uint64类型的值。
+   */
+ public  long getPropUint64(String name, long defval)  {
+    return object_get_prop_uint64(this != null ? (this.nativeObj) : 0, name, defval);
+ }
+
+
+  /**
+   * 设置指定属性的uint64类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setPropUint64(String name, long value)  {
+   return TRet.from(object_set_prop_uint64(this != null ? (this.nativeObj) : 0, name, value));
+ }
+
+
+  /**
    * 引用计数。
    *
    */
@@ -600,6 +834,7 @@ static private native long object_get_prop_object(long obj, String name);
 static private native int object_get_prop_int(long obj, String name, int defval);
 static private native boolean object_get_prop_bool(long obj, String name, boolean defval);
 static private native double object_get_prop_float(long obj, String name, double defval);
+static private native double object_get_prop_double(long obj, String name, double defval);
 static private native int object_remove_prop(long obj, String name);
 static private native int object_set_prop(long obj, String name, long value);
 static private native int object_set_prop_str(long obj, String name, String value);
@@ -607,6 +842,7 @@ static private native int object_set_prop_object(long obj, String name, long val
 static private native int object_set_prop_int(long obj, String name, int value);
 static private native int object_set_prop_bool(long obj, String name, boolean value);
 static private native int object_set_prop_float(long obj, String name, double value);
+static private native int object_set_prop_double(long obj, String name, double value);
 static private native int object_copy_prop(long obj, long src, String name);
 static private native boolean object_has_prop(long obj, String name);
 static private native int object_eval(long obj, String expr, long v);
@@ -628,6 +864,22 @@ static private native int object_set_prop_bool_by_path(long obj, String path, bo
 static private native int object_set_prop_float_by_path(long obj, String path, double value);
 static private native boolean object_can_exec_by_path(long obj, String path, String args);
 static private native int object_exec_by_path(long obj, String path, String args);
+static private native int object_get_prop_int8(long obj, String name, int defval);
+static private native int object_set_prop_int8(long obj, String name, int value);
+static private native int object_get_prop_uint8(long obj, String name, int defval);
+static private native int object_set_prop_uint8(long obj, String name, int value);
+static private native int object_get_prop_int16(long obj, String name, int defval);
+static private native int object_set_prop_int16(long obj, String name, int value);
+static private native int object_get_prop_uint16(long obj, String name, int defval);
+static private native int object_set_prop_uint16(long obj, String name, int value);
+static private native int object_get_prop_int32(long obj, String name, int defval);
+static private native int object_set_prop_int32(long obj, String name, int value);
+static private native int object_get_prop_uint32(long obj, String name, int defval);
+static private native int object_set_prop_uint32(long obj, String name, int value);
+static private native long object_get_prop_int64(long obj, String name, long defval);
+static private native int object_set_prop_int64(long obj, String name, long value);
+static private native long object_get_prop_uint64(long obj, String name, long defval);
+static private native int object_set_prop_uint64(long obj, String name, long value);
 static private native int object_t_get_prop_ref_count(long nativeObj);
 static private native String object_t_get_prop_name(long nativeObj);
 };

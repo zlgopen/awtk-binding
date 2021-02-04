@@ -148,6 +148,43 @@ public class TScrollView extends TWidget {
 
 
   /**
+   * 设置滚动时是否每次翻一页
+   *备注：当 snap_to_page 为ture 的时候才有效果，主要用于区分一次翻一页还是一次翻多页。
+   * 
+   * @param move_to_page 是否每次翻一页。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setMoveToPage(boolean move_to_page)  {
+   return TRet.from(scroll_view_set_move_to_page(this != null ? (this.nativeObj) : 0, move_to_page));
+ }
+
+
+  /**
+   * 设置是否递归查找全部子控件。
+   * 
+   * @param recursive 是否递归查找全部子控件。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setRecursive(boolean recursive)  {
+   return TRet.from(scroll_view_set_recursive(this != null ? (this.nativeObj) : 0, recursive));
+ }
+
+
+  /**
+   * 设置是否递归查找全部子控件。(不触发repaint和relayout)。
+   * 
+   * @param recursive 是否递归查找全部子控件。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setRecursiveOnly(boolean recursive)  {
+   return TRet.from(scroll_view_set_recursive_only(this != null ? (this.nativeObj) : 0, recursive));
+ }
+
+
+  /**
    * 设置偏移量。
    * 
    * @param xoffset x偏移量。
@@ -281,6 +318,24 @@ public class TScrollView extends TWidget {
    return scroll_view_t_get_prop_snap_to_page(this.nativeObj);
  }
 
+
+  /**
+   * 是否每次翻一页（当 move_to_page 为ture 的时候才有效果，主要用于区分一次翻一页还是一次翻多页）。
+   *
+   */
+ public boolean getMoveToPage() {
+   return scroll_view_t_get_prop_move_to_page(this.nativeObj);
+ }
+
+
+  /**
+   * 是否递归查找全部子控件。
+   *
+   */
+ public boolean getRecursive() {
+   return scroll_view_t_get_prop_recursive(this.nativeObj);
+ }
+
 static private native long scroll_view_create(long parent, int x, int y, int w, int h);
 static private native long scroll_view_cast(long widget);
 static private native int scroll_view_set_virtual_w(long widget, int w);
@@ -288,6 +343,9 @@ static private native int scroll_view_set_virtual_h(long widget, int h);
 static private native int scroll_view_set_xslidable(long widget, boolean xslidable);
 static private native int scroll_view_set_yslidable(long widget, boolean yslidable);
 static private native int scroll_view_set_snap_to_page(long widget, boolean snap_to_page);
+static private native int scroll_view_set_move_to_page(long widget, boolean move_to_page);
+static private native int scroll_view_set_recursive(long widget, boolean recursive);
+static private native int scroll_view_set_recursive_only(long widget, boolean recursive);
 static private native int scroll_view_set_offset(long widget, int xoffset, int yoffset);
 static private native int scroll_view_set_speed_scale(long widget, double xspeed_scale, double yspeed_scale);
 static private native int scroll_view_scroll_to(long widget, int xoffset_end, int yoffset_end, int duration);
@@ -301,4 +359,6 @@ static private native double scroll_view_t_get_prop_yspeed_scale(long nativeObj)
 static private native boolean scroll_view_t_get_prop_xslidable(long nativeObj);
 static private native boolean scroll_view_t_get_prop_yslidable(long nativeObj);
 static private native boolean scroll_view_t_get_prop_snap_to_page(long nativeObj);
+static private native boolean scroll_view_t_get_prop_move_to_page(long nativeObj);
+static private native boolean scroll_view_t_get_prop_recursive(long nativeObj);
 };

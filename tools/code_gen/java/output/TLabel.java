@@ -107,9 +107,9 @@ public class TLabel extends TWidget {
 
 
   /**
-   * 设置是否允许单词中换行。(需要开启自动换行才有效果)
+   * 设置是否允许整个单词换行。(需要开启自动换行才有效果)
    * 
-   * @param word_wrap 是否允许单词中换行。
+   * @param word_wrap 是否允许整个单词换行。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -165,7 +165,7 @@ public class TLabel extends TWidget {
 
 
   /**
-   * 是否允许单词中换行。(需要开启自动换行才有效果)
+   * 是否允许整个单词换行。(需要开启自动换行才有效果)
    *
    */
  public boolean getWordWrap() {

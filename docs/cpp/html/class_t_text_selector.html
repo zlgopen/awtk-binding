@@ -95,6 +95,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ab228214ffa3b067324edf9ba971bcf07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5c420a81e557b60a6a104f99b86678a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#ad5c420a81e557b60a6a104f99b86678a">SetOptions</a> (char *options)</td></tr>
 <tr class="separator:ad5c420a81e557b60a6a104f99b86678a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0490ec4c0825c1a09f5c52ef5ad97090"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a0490ec4c0825c1a09f5c52ef5ad97090">SetRangeOptionsEx</a> (int32_t start, uint32_t nr, int32_t step, const char *format)</td></tr>
+<tr class="separator:a0490ec4c0825c1a09f5c52ef5ad97090"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef058ef2df93318278e6d432b9a6ce85"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#aef058ef2df93318278e6d432b9a6ce85">SetRangeOptions</a> (int32_t start, uint32_t nr, int32_t step)</td></tr>
 <tr class="separator:aef058ef2df93318278e6d432b9a6ce85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd51e64a70e9a11210773922bb5761e6"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#acd51e64a70e9a11210773922bb5761e6">GetValue</a> ()</td></tr>
@@ -573,6 +575,57 @@ static <a class="el" href="class_t_text_selector.html">TTextSelector</a>&#160;</
     <tr><td class="paramname">start</td><td>起始值。 </td></tr>
     <tr><td class="paramname">nr</td><td>个数。 </td></tr>
     <tr><td class="paramname">step</td><td>步长。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a0490ec4c0825c1a09f5c52ef5ad97090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0490ec4c0825c1a09f5c52ef5ad97090">&#9670;&nbsp;</a></span>SetRangeOptionsEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TTextSelector::SetRangeOptionsEx </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>nr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>step</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置一系列的整数选项。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>起始值。 </td></tr>
+    <tr><td class="paramname">nr</td><td>个数。 </td></tr>
+    <tr><td class="paramname">step</td><td>步长。 </td></tr>
+    <tr><td class="paramname">format</td><td>选项的格式化。</td></tr>
   </table>
   </dd>
 </dl>

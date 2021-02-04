@@ -96,6 +96,20 @@ public class TAssetsManager extends TEmitter {
 
 
   /**
+   * 在资源管理器的缓存中查找指定的资源并引用它，如果缓存中不存在，尝试加载该资源。
+   * 
+   * @param type 资源的类型。
+   * @param subtype 资源的子类型。
+   * @param name 资源的名称。
+   *
+   * @return 返回资源。
+   */
+ public  TAssetInfo refEx(TAssetType type, int subtype, String name)  {
+    return new TAssetInfo(assets_manager_ref_ex(this != null ? (this.nativeObj) : 0, type.value(), subtype, name));
+ }
+
+
+  /**
    * 释放指定的资源。
    * 
    * @param info 资源。
@@ -109,5 +123,6 @@ public class TAssetsManager extends TEmitter {
 static private native long assets_manager();
 static private native int assets_manager_set_theme(long am, String theme);
 static private native long assets_manager_ref(long am, int type, String name);
+static private native long assets_manager_ref_ex(long am, int type, int subtype, String name);
 static private native int assets_manager_unref(long am, long info);
 };

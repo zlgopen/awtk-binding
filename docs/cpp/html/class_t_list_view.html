@@ -93,6 +93,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a8aefe762a75dc97429561f01862dcea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0cea8ab7a332d997ff930c400e0ff8d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_list_view.html#ab0cea8ab7a332d997ff930c400e0ff8d">SetAutoHideScrollBar</a> (bool auto_hide_scroll_bar)</td></tr>
 <tr class="separator:ab0cea8ab7a332d997ff930c400e0ff8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa589ce573d50dfd0e546a76af341d47"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_list_view.html#aaa589ce573d50dfd0e546a76af341d47">SetFloatingScrollBar</a> (bool floating_scroll_bar)</td></tr>
+<tr class="separator:aaa589ce573d50dfd0e546a76af341d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76d89b0c447847b9413fdcadb7f150f8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_list_view.html#a76d89b0c447847b9413fdcadb7f150f8">Reinit</a> ()</td></tr>
 <tr class="separator:a76d89b0c447847b9413fdcadb7f150f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad61f7e14732c4748c4536f3cd8b8200f"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_list_view.html#ad61f7e14732c4748c4536f3cd8b8200f">GetItemHeight</a> () const</td></tr>
@@ -101,6 +103,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a2d797a372cce32c7dfdd40aecb029524"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afad912c2620024379dbd3a7f66049dcd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_list_view.html#afad912c2620024379dbd3a7f66049dcd">GetAutoHideScrollBar</a> () const</td></tr>
 <tr class="separator:afad912c2620024379dbd3a7f66049dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb4c8c059c8b4e551cf4633e3aa1cab1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_list_view.html#abb4c8c059c8b4e551cf4633e3aa1cab1">GetFloatingScrollBar</a> () const</td></tr>
+<tr class="separator:abb4c8c059c8b4e551cf4633e3aa1cab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -147,7 +151,9 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
 <p><a href="https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml">https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml</a>)</p>
 <p>在c代码中使用函数list_view_create创建列表视图控件。如：</p>
 <p>用代码构造列表视图是比较繁琐的事情，最好用XML来构造。 如果需要动态修改，可以使用widget_clone来增加列表项，使用widget_remove_child来移出列表项。</p>
-<p>可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。 </p>
+<p>可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。</p>
+<p>备注：list_view 下的 scroll_view 控件不支持遍历所有子控件的效果。</p>
+<p>下面是针对 scroll_bar_d （桌面版）有效果，scroll_bar_m（移动版）没有效果。 如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 TRUE，scroll_view 宽默认为 list_view 的 100% 宽，鼠标在 list_view 上滚动条才显示，不在的就自动隐藏，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽不会变。 如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 FALSE ，scroll_view 宽默认为 list_view 的 100% 宽，滚动条不隐藏，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽不会变。 如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 FALSE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可用，scroll_view 宽不会变。 如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 TRUE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽会合并原来滚动条的宽。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a4caf5f5ba77fd7bc70fda422739b3e4d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4caf5f5ba77fd7bc70fda422739b3e4d">&#9670;&nbsp;</a></span>Create()</h2>
@@ -251,6 +257,24 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
 
 </div>
 </div>
+<a id="abb4c8c059c8b4e551cf4633e3aa1cab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb4c8c059c8b4e551cf4633e3aa1cab1">&#9670;&nbsp;</a></span>GetFloatingScrollBar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TListView::GetFloatingScrollBar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>滚动条是否悬浮在 scroll_view 上面 </p>
+
+</div>
+</div>
 <a id="ad61f7e14732c4748c4536f3cd8b8200f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad61f7e14732c4748c4536f3cd8b8200f">&#9670;&nbsp;</a></span>GetItemHeight()</h2>
 
@@ -333,6 +357,32 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">default_item_height</td><td>列表项的高度。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="aaa589ce573d50dfd0e546a76af341d47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa589ce573d50dfd0e546a76af341d47">&#9670;&nbsp;</a></span>SetFloatingScrollBar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TListView::SetFloatingScrollBar </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>floating_scroll_bar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置滚动条是否悬浮在 scroll_view 上面。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">floating_scroll_bar</td><td>滚动条是否悬浮在 scroll_view 上面。</td></tr>
   </table>
   </dd>
 </dl>

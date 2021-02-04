@@ -45,6 +45,48 @@ public enum TWidgetProp {
   H (WIDGET_PROP_H()),
   
   /**
+   * 窗口设计时宽度。
+   *
+   */
+ 
+  DESIGN_W (WIDGET_PROP_DESIGN_W()),
+  
+  /**
+   * 窗口设计时宽度。
+   *
+   */
+ 
+  DESIGN_H (WIDGET_PROP_DESIGN_H()),
+  
+  /**
+   * 窗口大小与设计时大小不同时，是否自动调整子控件的x坐标。
+   *
+   */
+ 
+  AUTO_SCALE_CHILDREN_X (WIDGET_PROP_AUTO_SCALE_CHILDREN_X()),
+  
+  /**
+   * 窗口大小与设计时大小不同时，是否自动调整子控件的y坐标。
+   *
+   */
+ 
+  AUTO_SCALE_CHILDREN_Y (WIDGET_PROP_AUTO_SCALE_CHILDREN_Y()),
+  
+  /**
+   * 窗口大小与设计时大小不同时，是否自动调整子控件的宽度。
+   *
+   */
+ 
+  AUTO_SCALE_CHILDREN_W (WIDGET_PROP_AUTO_SCALE_CHILDREN_W()),
+  
+  /**
+   * 窗口大小与设计时大小不同时，是否自动调整子控件的高度。
+   *
+   */
+ 
+  AUTO_SCALE_CHILDREN_H (WIDGET_PROP_AUTO_SCALE_CHILDREN_H()),
+  
+  /**
    * inputing。
    *
    */
@@ -1083,6 +1125,12 @@ public enum TWidgetProp {
   static private native String WIDGET_PROP_Y();
   static private native String WIDGET_PROP_W();
   static private native String WIDGET_PROP_H();
+  static private native String WIDGET_PROP_DESIGN_W();
+  static private native String WIDGET_PROP_DESIGN_H();
+  static private native String WIDGET_PROP_AUTO_SCALE_CHILDREN_X();
+  static private native String WIDGET_PROP_AUTO_SCALE_CHILDREN_Y();
+  static private native String WIDGET_PROP_AUTO_SCALE_CHILDREN_W();
+  static private native String WIDGET_PROP_AUTO_SCALE_CHILDREN_H();
   static private native String WIDGET_PROP_INPUTING();
   static private native String WIDGET_PROP_ALWAYS_ON_TOP();
   static private native String WIDGET_PROP_CARET_X();

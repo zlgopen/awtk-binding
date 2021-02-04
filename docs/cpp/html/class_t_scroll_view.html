@@ -97,6 +97,12 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a0b1ec94e5820822194858384bc185b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6aa7c4cfac7168572068c9e1f027978a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#a6aa7c4cfac7168572068c9e1f027978a">SetSnapToPage</a> (bool snap_to_page)</td></tr>
 <tr class="separator:a6aa7c4cfac7168572068c9e1f027978a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1de95364a4bba3b57221415187c5a301"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#a1de95364a4bba3b57221415187c5a301">SetMoveToPage</a> (bool move_to_page)</td></tr>
+<tr class="separator:a1de95364a4bba3b57221415187c5a301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a1e263020100f06c25ad96434a9f5f6"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#a8a1e263020100f06c25ad96434a9f5f6">SetRecursive</a> (bool recursive)</td></tr>
+<tr class="separator:a8a1e263020100f06c25ad96434a9f5f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a970f16771d15bd58fd53aaaacc895dfa"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#a970f16771d15bd58fd53aaaacc895dfa">SetRecursiveOnly</a> (bool recursive)</td></tr>
+<tr class="separator:a970f16771d15bd58fd53aaaacc895dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fcbd408e0b4b84f575cb87bace176ed"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#a7fcbd408e0b4b84f575cb87bace176ed">SetOffset</a> (int32_t xoffset, int32_t yoffset)</td></tr>
 <tr class="separator:a7fcbd408e0b4b84f575cb87bace176ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0896da08be4cbc94a459a87a015b6139"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#a0896da08be4cbc94a459a87a015b6139">SetSpeedScale</a> (float_t xspeed_scale, float_t yspeed_scale)</td></tr>
@@ -123,6 +129,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ab83f16c5688b961d9e249302f05354e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e3fe38c751d427f8761a32f8ed3f225"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#a9e3fe38c751d427f8761a32f8ed3f225">GetSnapToPage</a> () const</td></tr>
 <tr class="separator:a9e3fe38c751d427f8761a32f8ed3f225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa355c6c18da44cbea5f7becc8fbc1b12"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#aa355c6c18da44cbea5f7becc8fbc1b12">GetMoveToPage</a> () const</td></tr>
+<tr class="separator:aa355c6c18da44cbea5f7becc8fbc1b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6578d85212a5fb9e71d67126c7c5dc6c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#a6578d85212a5fb9e71d67126c7c5dc6c">GetRecursive</a> () const</td></tr>
+<tr class="separator:a6578d85212a5fb9e71d67126c7c5dc6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -229,6 +239,42 @@ static <a class="el" href="class_t_scroll_view.html">TScrollView</a>&#160;</td><
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>对象。 </dd></dl>
+
+</div>
+</div>
+<a id="aa355c6c18da44cbea5f7becc8fbc1b12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa355c6c18da44cbea5f7becc8fbc1b12">&#9670;&nbsp;</a></span>GetMoveToPage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TScrollView::GetMoveToPage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>是否每次翻一页（当 move_to_page 为ture 的时候才有效果，主要用于区分一次翻一页还是一次翻多页）。 </p>
+
+</div>
+</div>
+<a id="a6578d85212a5fb9e71d67126c7c5dc6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6578d85212a5fb9e71d67126c7c5dc6c">&#9670;&nbsp;</a></span>GetRecursive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TScrollView::GetRecursive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>是否递归查找全部子控件。 </p>
 
 </div>
 </div>
@@ -482,6 +528,32 @@ static <a class="el" href="class_t_scroll_view.html">TScrollView</a>&#160;</td><
 
 </div>
 </div>
+<a id="a1de95364a4bba3b57221415187c5a301"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1de95364a4bba3b57221415187c5a301">&#9670;&nbsp;</a></span>SetMoveToPage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TScrollView::SetMoveToPage </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>move_to_page</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置滚动时是否每次翻一页 备注：当 snap_to_page 为ture 的时候才有效果，主要用于区分一次翻一页还是一次翻多页。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">move_to_page</td><td>是否每次翻一页。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="a7fcbd408e0b4b84f575cb87bace176ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7fcbd408e0b4b84f575cb87bace176ed">&#9670;&nbsp;</a></span>SetOffset()</h2>
 
@@ -512,6 +584,58 @@ static <a class="el" href="class_t_scroll_view.html">TScrollView</a>&#160;</td><
   <table class="params">
     <tr><td class="paramname">xoffset</td><td>x偏移量。 </td></tr>
     <tr><td class="paramname">yoffset</td><td>y偏移量。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a8a1e263020100f06c25ad96434a9f5f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a1e263020100f06c25ad96434a9f5f6">&#9670;&nbsp;</a></span>SetRecursive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TScrollView::SetRecursive </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>recursive</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置是否递归查找全部子控件。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">recursive</td><td>是否递归查找全部子控件。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a970f16771d15bd58fd53aaaacc895dfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a970f16771d15bd58fd53aaaacc895dfa">&#9670;&nbsp;</a></span>SetRecursiveOnly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TScrollView::SetRecursiveOnly </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>recursive</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置是否递归查找全部子控件。(不触发repaint和relayout)。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">recursive</td><td>是否递归查找全部子控件。</td></tr>
   </table>
   </dd>
 </dl>

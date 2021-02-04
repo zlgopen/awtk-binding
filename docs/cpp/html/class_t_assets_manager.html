@@ -94,6 +94,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:aae7de520e5b0d9aa0f90caee93fae6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c59da9e8b77c665f929cd8846f8606f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_asset_info.html">TAssetInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_assets_manager.html#a0c59da9e8b77c665f929cd8846f8606f">Ref</a> (asset_type_t type, char *name)</td></tr>
 <tr class="separator:a0c59da9e8b77c665f929cd8846f8606f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05493d2d324a6f711029b577798484e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_asset_info.html">TAssetInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_assets_manager.html#a05493d2d324a6f711029b577798484e4">RefEx</a> (asset_type_t type, uint16_t subtype, char *name)</td></tr>
+<tr class="separator:a05493d2d324a6f711029b577798484e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78ecb51fbbb9866ac433f032e1f75ed9"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_assets_manager.html#a78ecb51fbbb9866ac433f032e1f75ed9">Unref</a> (<a class="el" href="class_t_asset_info.html">TAssetInfo</a> &amp;info)</td></tr>
 <tr class="separator:a78ecb51fbbb9866ac433f032e1f75ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_t_emitter"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_t_emitter')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_t_emitter.html">TEmitter</a></td></tr>
@@ -225,6 +227,50 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>资源的类型。 </td></tr>
+    <tr><td class="paramname">name</td><td>资源的名称。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回资源。 </dd></dl>
+
+</div>
+</div>
+<a id="a05493d2d324a6f711029b577798484e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05493d2d324a6f711029b577798484e4">&#9670;&nbsp;</a></span>RefEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_asset_info.html">TAssetInfo</a> TAssetsManager::RefEx </td>
+          <td>(</td>
+          <td class="paramtype">asset_type_t&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>subtype</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>在资源管理器的缓存中查找指定的资源并引用它，如果缓存中不存在，尝试加载该资源。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>资源的类型。 </td></tr>
+    <tr><td class="paramname">subtype</td><td>资源的子类型。 </td></tr>
     <tr><td class="paramname">name</td><td>资源的名称。</td></tr>
   </table>
   </dd>

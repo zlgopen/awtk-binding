@@ -178,6 +178,19 @@ public class TWidget {
 
 
   /**
+   * 查询指定的style是否存在。
+   * 
+   * @param style_name style的名称（如果为 NULL，则默认为 default）。
+   * @param state_name state的名称（如果为 NULL，则默认为 normal）。
+   *
+   * @return 存在返回 TRUE，不存在返回 FALSE。
+   */
+ public  boolean isStyleExist(String style_name, String state_name)  {
+    return widget_is_style_exist(this != null ? (this.nativeObj) : 0, style_name, state_name);
+ }
+
+
+  /**
    * 启用指定的style。
    * 
    * @param style style的名称。
@@ -1158,6 +1171,17 @@ public class TWidget {
 
 
   /**
+   * 获取 widget 对应风格类型
+   * 
+   *
+   * @return 返回 widget 的对应风格类型。
+   */
+ public  String getStyleType()  {
+    return widget_get_style_type(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
    * 让控件根据自己当前状态更新style。
    * 
    *
@@ -1453,7 +1477,7 @@ public class TWidget {
 
   /**
    * 是否支持焦点状态。
-   *> 如果希望style支持焦点状态，但有不希望焦点停留，可用本属性。
+   *> 如果希望style支持焦点状态，但又不希望焦点停留，可用本属性。
    *
    */
  public boolean getWithFocusState() {
@@ -1512,6 +1536,7 @@ static private native int widget_move_resize(long widget, int x, int y, int w, i
 static private native int widget_set_value(long widget, int value);
 static private native int widget_animate_value_to(long widget, int value, int duration);
 static private native int widget_add_value(long widget, int delta);
+static private native boolean widget_is_style_exist(long widget, String style_name, String state_name);
 static private native int widget_use_style(long widget, String style);
 static private native int widget_set_text_utf8(long widget, String text);
 static private native int widget_set_child_text_utf8(long widget, String name, String text);
@@ -1589,6 +1614,7 @@ static private native int widget_fill_bg_rect(long widget, long c, long r, int d
 static private native int widget_fill_fg_rect(long widget, long c, long r, int draw_type);
 static private native int widget_dispatch_to_target(long widget, long e);
 static private native int widget_dispatch_to_key_target(long widget, long e);
+static private native String widget_get_style_type(long widget);
 static private native int widget_update_style(long widget);
 static private native int widget_update_style_recursive(long widget);
 static private native int widget_set_as_key_target(long widget);

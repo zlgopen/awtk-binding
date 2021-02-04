@@ -97,12 +97,22 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ab338f7bae3dfe4da88d4f64b5efedf52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa25880edce1ce52b7be659d6d9842a8"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#afa25880edce1ce52b7be659d6d9842a8">GetInt</a> (const char *name, int32_t defval)</td></tr>
 <tr class="separator:afa25880edce1ce52b7be659d6d9842a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad06c1be0b52ec98104e4fb6b72c800b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#aad06c1be0b52ec98104e4fb6b72c800b">GetUint</a> (const char *name, uint32_t defval)</td></tr>
+<tr class="separator:aad06c1be0b52ec98104e4fb6b72c800b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc313e64294bc3204fe56994e1ed6d3e"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#acc313e64294bc3204fe56994e1ed6d3e">GetStr</a> (const char *name, const char *defval)</td></tr>
 <tr class="separator:acc313e64294bc3204fe56994e1ed6d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0fd6aee96501b4ffefcdb47f877b964"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#ab0fd6aee96501b4ffefcdb47f877b964">Set</a> (const char *state, const char *name, <a class="el" href="class_t_value.html">TValue</a> &amp;value)</td></tr>
 <tr class="separator:ab0fd6aee96501b4ffefcdb47f877b964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91608bb15842a0b56ca6b97db33f5609"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#a91608bb15842a0b56ca6b97db33f5609">SetStyleData</a> (const uint8_t *data, const char *state)</td></tr>
+<tr class="separator:a91608bb15842a0b56ca6b97db33f5609"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a7160b804d2f886c1ae312d600a7b64"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#a2a7160b804d2f886c1ae312d600a7b64">UpdateState</a> (<a class="el" href="class_t_theme.html">TTheme</a> &amp;theme, const char *widget_type, const char *style_name, const char *widget_state)</td></tr>
+<tr class="separator:a2a7160b804d2f886c1ae312d600a7b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaf95b0e4d01e05807192b70a6554100"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#afaf95b0e4d01e05807192b70a6554100">GetStyleState</a> ()</td></tr>
+<tr class="separator:afaf95b0e4d01e05807192b70a6554100"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fc783502f0ad0699d4377c3dfb20aed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#a0fc783502f0ad0699d4377c3dfb20aed">IsMutable</a> ()</td></tr>
 <tr class="separator:a0fc783502f0ad0699d4377c3dfb20aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47575ecb62a2dc186bc44f39c5d29ea5"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#a47575ecb62a2dc186bc44f39c5d29ea5">GetStyleType</a> ()</td></tr>
+<tr class="separator:a47575ecb62a2dc186bc44f39c5d29ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -195,6 +205,81 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>返回字符串格式的值。 </dd></dl>
+
+</div>
+</div>
+<a id="afaf95b0e4d01e05807192b70a6554100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaf95b0e4d01e05807192b70a6554100">&#9670;&nbsp;</a></span>GetStyleState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * TStyle::GetStyleState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取风格对象的风格状态</p>
+<dl class="section return"><dt>返回</dt><dd>返回风格状态。 </dd></dl>
+
+</div>
+</div>
+<a id="a47575ecb62a2dc186bc44f39c5d29ea5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47575ecb62a2dc186bc44f39c5d29ea5">&#9670;&nbsp;</a></span>GetStyleType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * TStyle::GetStyleType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取 style 的风格类型。</p>
+<dl class="section return"><dt>返回</dt><dd>返回风格类型。 </dd></dl>
+
+</div>
+</div>
+<a id="aad06c1be0b52ec98104e4fb6b72c800b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad06c1be0b52ec98104e4fb6b72c800b">&#9670;&nbsp;</a></span>GetUint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t TStyle::GetUint </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>defval</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取指定name的无符号整数格式的值。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>属性名。 </td></tr>
+    <tr><td class="paramname">defval</td><td>缺省值。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回无符号整数格式的值。 </dd></dl>
 
 </div>
 </div>
@@ -299,6 +384,94 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
     <tr><td class="paramname">state</td><td>状态。 </td></tr>
     <tr><td class="paramname">name</td><td>属性名。 </td></tr>
     <tr><td class="paramname">value</td><td>值。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a91608bb15842a0b56ca6b97db33f5609"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91608bb15842a0b56ca6b97db33f5609">&#9670;&nbsp;</a></span>SetStyleData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TStyle::SetStyleData </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>把风格对象数据设置到风格对象中</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>风格对象数据 </td></tr>
+    <tr><td class="paramname">state</td><td>风格状态</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a2a7160b804d2f886c1ae312d600a7b64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a7160b804d2f886c1ae312d600a7b64">&#9670;&nbsp;</a></span>UpdateState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TStyle::UpdateState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_t_theme.html">TTheme</a> &amp;&#160;</td>
+          <td class="paramname"><em>theme</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>widget_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>style_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>widget_state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>更新风格对象的状态以及对应的数据 备注：根据 widget_type 和 style_name 以及 widget_state 在 theme 对象中查找对应的数据并且更新到 style 对象中</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">theme</td><td>theme对象。 </td></tr>
+    <tr><td class="paramname">widget_type</td><td>控件的类型名。 </td></tr>
+    <tr><td class="paramname">style_name</td><td>style的名称。 </td></tr>
+    <tr><td class="paramname">widget_state</td><td>控件的状态。</td></tr>
   </table>
   </dd>
 </dl>

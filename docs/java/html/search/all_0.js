@@ -108,5 +108,9 @@ var searchData=
   ['auto_5fadjust_5fsize_105',['AUTO_ADJUST_SIZE',['../enumawtk_1_1_t_widget_prop.html#ac2d82105f4bce242ead25ee0f2aea04f',1,'awtk::TWidgetProp']]],
   ['auto_5ffix_106',['AUTO_FIX',['../enumawtk_1_1_t_widget_prop.html#aac72da6cf5a15dac5113502dd68040dd',1,'awtk::TWidgetProp']]],
   ['auto_5fhide_5fscroll_5fbar_107',['AUTO_HIDE_SCROLL_BAR',['../enumawtk_1_1_t_widget_prop.html#a9ac98fbf519d49ea7d2a51910522efcd',1,'awtk::TWidgetProp']]],
-  ['auto_5fplay_108',['AUTO_PLAY',['../enumawtk_1_1_t_widget_prop.html#aa56b7fc52515e990005750512cdf6115',1,'awtk::TWidgetProp']]]
+  ['auto_5fplay_108',['AUTO_PLAY',['../enumawtk_1_1_t_widget_prop.html#aa56b7fc52515e990005750512cdf6115',1,'awtk::TWidgetProp']]],
+  ['auto_5fscale_5fchildren_5fh_109',['AUTO_SCALE_CHILDREN_H',['../enumawtk_1_1_t_widget_prop.html#a005667274fb9fa20cdb6a90a850efdba',1,'awtk::TWidgetProp']]],
+  ['auto_5fscale_5fchildren_5fw_110',['AUTO_SCALE_CHILDREN_W',['../enumawtk_1_1_t_widget_prop.html#a31750eb4ddaa838cedf5fdacc3ee0e05',1,'awtk::TWidgetProp']]],
+  ['auto_5fscale_5fchildren_5fx_111',['AUTO_SCALE_CHILDREN_X',['../enumawtk_1_1_t_widget_prop.html#ae4824e3f0b47727bfac5efcdf410d7aa',1,'awtk::TWidgetProp']]],
+  ['auto_5fscale_5fchildren_5fy_112',['AUTO_SCALE_CHILDREN_Y',['../enumawtk_1_1_t_widget_prop.html#a971994b4c5d36c1c589ad888b86272fb',1,'awtk::TWidgetProp']]]
 ];

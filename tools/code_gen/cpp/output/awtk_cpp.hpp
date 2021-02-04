@@ -610,6 +610,16 @@ public:
   float_t GetPropFloat(const char* name, float_t defval) ;
 
   /**
+   * 获取指定属性的浮点数类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @return 返回指定属性的浮点数类型的值。
+   */
+  double GetPropDouble(const char* name, double defval) ;
+
+  /**
    * 删除指定属性。
    * 
    * @param name 属性的名称。
@@ -677,6 +687,16 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t SetPropFloat(const char* name, float_t value) ;
+
+  /**
+   * 设置指定属性的浮点数类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetPropDouble(const char* name, double value) ;
 
   /**
    * 拷贝指定的属性。
@@ -882,6 +902,166 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t ExecuteByPath(const char* path, const char* args) ;
+
+  /**
+   * 获取指定属性的int8类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @return 返回指定属性的int8类型的值。
+   */
+  int8_t GetPropInt8(const char* name, int8_t defval) ;
+
+  /**
+   * 设置指定属性的int8类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetPropInt8(const char* name, int8_t value) ;
+
+  /**
+   * 获取指定属性的uint8类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @return 返回指定属性的uint8类型的值。
+   */
+  uint8_t GetPropUint8(const char* name, uint8_t defval) ;
+
+  /**
+   * 设置指定属性的uint8类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetPropUint8(const char* name, uint8_t value) ;
+
+  /**
+   * 获取指定属性的int16类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @return 返回指定属性的int16类型的值。
+   */
+  int16_t GetPropInt16(const char* name, int16_t defval) ;
+
+  /**
+   * 设置指定属性的int16类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetPropInt16(const char* name, int16_t value) ;
+
+  /**
+   * 获取指定属性的uint16类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @return 返回指定属性的uint16类型的值。
+   */
+  uint16_t GetPropUint16(const char* name, uint16_t defval) ;
+
+  /**
+   * 设置指定属性的uint16类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetPropUint16(const char* name, uint16_t value) ;
+
+  /**
+   * 获取指定属性的int32类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @return 返回指定属性的int32类型的值。
+   */
+  int32_t GetPropInt32(const char* name, int32_t defval) ;
+
+  /**
+   * 设置指定属性的int32类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetPropInt32(const char* name, int32_t value) ;
+
+  /**
+   * 获取指定属性的uint32类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @return 返回指定属性的uint32类型的值。
+   */
+  uint32_t GetPropUint32(const char* name, uint32_t defval) ;
+
+  /**
+   * 设置指定属性的uint32类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetPropUint32(const char* name, uint32_t value) ;
+
+  /**
+   * 获取指定属性的int64类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @return 返回指定属性的int64类型的值。
+   */
+  int64_t GetPropInt64(const char* name, int64_t defval) ;
+
+  /**
+   * 设置指定属性的int64类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetPropInt64(const char* name, int64_t value) ;
+
+  /**
+   * 获取指定属性的uint64类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @return 返回指定属性的uint64类型的值。
+   */
+  uint64_t GetPropUint64(const char* name, uint64_t defval) ;
+
+  /**
+   * 设置指定属性的uint64类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetPropUint64(const char* name, uint64_t value) ;
 
   /**
    * 引用计数。
@@ -2068,6 +2248,16 @@ public:
   int32_t GetInt(const char* name, int32_t defval) ;
 
   /**
+   * 获取指定name的无符号整数格式的值。
+   * 
+   * @param name 属性名。
+   * @param defval 缺省值。
+   *
+   * @return 返回无符号整数格式的值。
+   */
+  uint32_t GetUint(const char* name, uint32_t defval) ;
+
+  /**
    * 获取指定name的字符串格式的值。
    * 
    * @param name 属性名。
@@ -2089,12 +2279,51 @@ public:
   ret_t Set(const char* state, const char* name, TValue& value) ;
 
   /**
+   * 把风格对象数据设置到风格对象中
+   * 
+   * @param data 风格对象数据
+   * @param state 风格状态
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetStyleData(const uint8_t* data, const char* state) ;
+
+  /**
+   * 更新风格对象的状态以及对应的数据
+   *备注：根据 widget_type 和 style_name 以及 widget_state 在 theme 对象中查找对应的数据并且更新到 style 对象中
+   * 
+   * @param theme theme对象。
+   * @param widget_type 控件的类型名。
+   * @param style_name style的名称。
+   * @param widget_state 控件的状态。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t UpdateState(TTheme& theme, const char* widget_type, const char* style_name, const char* widget_state) ;
+
+  /**
+   * 获取风格对象的风格状态
+   * 
+   *
+   * @return 返回风格状态。
+   */
+  const char* GetStyleState() ;
+
+  /**
    * 检查style是否是mutable的。
    * 
    *
    * @return 返回TRUE表示是，否则表示不是。
    */
   bool IsMutable() ;
+
+  /**
+   * 获取 style 的风格类型。
+   * 
+   *
+   * @return 返回风格类型。
+   */
+  const char* GetStyleType() ;
 };
 
 
@@ -2943,6 +3172,16 @@ public:
   ret_t AddValue(int32_t delta) ;
 
   /**
+   * 查询指定的style是否存在。
+   * 
+   * @param style_name style的名称（如果为 NULL，则默认为 default）。
+   * @param state_name state的名称（如果为 NULL，则默认为 normal）。
+   *
+   * @return 存在返回 TRUE，不存在返回 FALSE。
+   */
+  bool IsStyleExist(const char* style_name, const char* state_name) ;
+
+  /**
    * 启用指定的style。
    * 
    * @param style style的名称。
@@ -3683,6 +3922,14 @@ public:
   ret_t DispatchToKeyTarget(TEvent& e) ;
 
   /**
+   * 获取 widget 对应风格类型
+   * 
+   *
+   * @return 返回 widget 的对应风格类型。
+   */
+  const char* GetStyleType() ;
+
+  /**
    * 让控件根据自己当前状态更新style。
    * 
    *
@@ -3897,7 +4144,7 @@ public:
 
   /**
    * 是否支持焦点状态。
-   *> 如果希望style支持焦点状态，但有不希望焦点停留，可用本属性。
+   *> 如果希望style支持焦点状态，但又不希望焦点停留，可用本属性。
    *
    */
   bool GetWithFocusState() const;
@@ -4790,6 +5037,17 @@ public:
   TAssetInfo Ref(asset_type_t type, char* name) ;
 
   /**
+   * 在资源管理器的缓存中查找指定的资源并引用它，如果缓存中不存在，尝试加载该资源。
+   * 
+   * @param type 资源的类型。
+   * @param subtype 资源的子类型。
+   * @param name 资源的名称。
+   *
+   * @return 返回资源。
+   */
+  TAssetInfo RefEx(asset_type_t type, uint16_t subtype, char* name) ;
+
+  /**
    * 释放指定的资源。
    * 
    * @param info 资源。
@@ -5513,12 +5771,11 @@ public:
    *
    *> 除了测试程序外不需要直接调用，widget会通过style\_factory\_create创建。
    * 
-   * @param widget 控件
    * @param default_style 缺省的style。
    *
    * @return style对象。
    */
-  static  TStyle Create(TWidget& widget, TStyle& default_style) ;
+  static  TStyle Create(TStyle& default_style) ;
 
   /**
    * 名称。
@@ -5571,6 +5828,42 @@ public:
    *
    */
   char* GetTheme() const;
+
+  /**
+   * 设计时宽度。
+   *
+   */
+  uint16_t GetDesignW() const;
+
+  /**
+   * 设计时高度。
+   *
+   */
+  uint16_t GetDesignH() const;
+
+  /**
+   * 窗口大小与设计时大小不同时，是否自动调整子控件的x坐标。
+   *
+   */
+  bool GetAutoScaleChildrenX() const;
+
+  /**
+   * 窗口大小与设计时大小不同时，是否自动调整子控件的y坐标。
+   *
+   */
+  bool GetAutoScaleChildrenY() const;
+
+  /**
+   * 窗口大小与设计时大小不同时，是否自动调整子控件的宽度。
+   *
+   */
+  bool GetAutoScaleChildrenW() const;
+
+  /**
+   * 窗口大小与设计时大小不同时，是否自动调整子控件的高度。
+   *
+   */
+  bool GetAutoScaleChildrenH() const;
 
   /**
    * 禁用窗口动画。
@@ -7634,36 +7927,6 @@ public:
   ret_t SetCloseImWhenBlured(bool close_im_when_blured) ;
 
   /**
-   * 编辑器是否为只读。
-   *
-   */
-  bool GetReadonly() const;
-
-  /**
-   * 上边距。
-   *
-   */
-  uint8_t GetTopMargin() const;
-
-  /**
-   * 下边距。
-   *
-   */
-  uint8_t GetBottomMargin() const;
-
-  /**
-   * 左边距。
-   *
-   */
-  uint8_t GetLeftMargin() const;
-
-  /**
-   * 右边距。
-   *
-   */
-  uint8_t GetRightMargin() const;
-
-  /**
    * 输入提示。
    *
    */
@@ -7682,22 +7945,28 @@ public:
   char* GetKeyboard() const;
 
   /**
-   * 是否自动折行。
-   *
-   */
-  bool GetWrapWord() const;
-
-  /**
    * 最大行数。
    *
    */
   uint32_t GetMaxLines() const;
 
   /**
+   * 是否自动折行。
+   *
+   */
+  bool GetWrapWord() const;
+
+  /**
    * 鼠标一次滚动行数。
    *
    */
   uint32_t GetScrollLine() const;
+
+  /**
+   * 编辑器是否为只读。
+   *
+   */
+  bool GetReadonly() const;
 
   /**
    * 是否支持撤销编辑。如果为TRUE，在失去焦点之前可以撤销所有修改(恢复获得焦点之前的内容)。
@@ -8084,12 +8353,6 @@ public:
    *
    */
   uint32_t GetLineGap() const;
-
-  /**
-   * 边距。
-   *
-   */
-  uint32_t GetMargin() const;
 
   /**
    * 标识控件是否允许上下拖动。
@@ -8540,6 +8803,14 @@ public:
  *
  *可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。
  *
+ *备注：list_view 下的 scroll_view 控件不支持遍历所有子控件的效果。
+ *
+ *下面是针对 scroll_bar_d （桌面版）有效果，scroll_bar_m（移动版）没有效果。
+ *如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 TRUE，scroll_view 宽默认为 list_view 的 100% 宽，鼠标在 list_view 上滚动条才显示，不在的就自动隐藏，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽不会变。
+ *如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 FALSE ，scroll_view 宽默认为 list_view 的 100% 宽，滚动条不隐藏，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽不会变。
+ *如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 FALSE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可用，scroll_view 宽不会变。
+ *如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 TRUE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽会合并原来滚动条的宽。
+ *
  */
 class TListView : public TWidget { 
 public:
@@ -8607,6 +8878,15 @@ public:
   ret_t SetAutoHideScrollBar(bool auto_hide_scroll_bar) ;
 
   /**
+   * 设置滚动条是否悬浮在 scroll_view 上面。
+   * 
+   * @param floating_scroll_bar 滚动条是否悬浮在 scroll_view 上面。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetFloatingScrollBar(bool floating_scroll_bar) ;
+
+  /**
    * list_view重新初始化。
    * 
    *
@@ -8631,6 +8911,12 @@ public:
    *
    */
   bool GetAutoHideScrollBar() const;
+
+  /**
+   * 滚动条是否悬浮在 scroll_view 上面
+   *
+   */
+  bool GetFloatingScrollBar() const;
 };
 
 
@@ -8942,6 +9228,34 @@ public:
   ret_t SetSnapToPage(bool snap_to_page) ;
 
   /**
+   * 设置滚动时是否每次翻一页
+   *备注：当 snap_to_page 为ture 的时候才有效果，主要用于区分一次翻一页还是一次翻多页。
+   * 
+   * @param move_to_page 是否每次翻一页。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetMoveToPage(bool move_to_page) ;
+
+  /**
+   * 设置是否递归查找全部子控件。
+   * 
+   * @param recursive 是否递归查找全部子控件。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetRecursive(bool recursive) ;
+
+  /**
+   * 设置是否递归查找全部子控件。(不触发repaint和relayout)。
+   * 
+   * @param recursive 是否递归查找全部子控件。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetRecursiveOnly(bool recursive) ;
+
+  /**
    * 设置偏移量。
    * 
    * @param xoffset x偏移量。
@@ -9036,6 +9350,18 @@ public:
    *
    */
   bool GetSnapToPage() const;
+
+  /**
+   * 是否每次翻一页（当 move_to_page 为ture 的时候才有效果，主要用于区分一次翻一页还是一次翻多页）。
+   *
+   */
+  bool GetMoveToPage() const;
+
+  /**
+   * 是否递归查找全部子控件。
+   *
+   */
+  bool GetRecursive() const;
 };
 
 
@@ -9793,6 +10119,18 @@ public:
    * @param start 起始值。
    * @param nr 个数。
    * @param step 步长。
+   * @param format 选项的格式化。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetRangeOptionsEx(int32_t start, uint32_t nr, int32_t step, const char* format) ;
+
+  /**
+   * 设置一系列的整数选项。
+   * 
+   * @param start 起始值。
+   * @param nr 个数。
+   * @param step 步长。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -10378,7 +10716,7 @@ public:
   ret_t GetResult() const;
 
   /**
-   * 执行结果(适用于CAN_EXEC)。
+   * 标识命令是否可以执行(适用于CAN_EXEC)。
    *
    */
   bool GetCanExec() const;
@@ -11677,6 +12015,60 @@ public:
   ret_t SetCursor(uint32_t cursor) ;
 
   /**
+   * 输入提示。
+   *
+   */
+  char* GetTips() const;
+
+  /**
+   * 保存用于翻译的提示信息。
+   *
+   */
+  char* GetTrTips() const;
+
+  /**
+   * 软键盘上action按钮的文本。内置取值有：
+   *
+   ** next 将焦点切换到下一个控件。
+   ** done 完成，关闭软键盘。
+   *
+   *也可以使用其它文本，比如send表示发送。这个需要自己实现相应的功能，处理EVT\_IM\_ACTION事件即可。
+   *
+   */
+  char* GetActionText() const;
+
+  /**
+   * 自定义软键盘名称。AWTK优先查找keyboard属性设置的键盘文件名（该键盘的XML文件需要在default\raw\ui目录下存在），如果keyboard为空就找input_type设置的键盘类型
+   *
+   */
+  char* GetKeyboard() const;
+
+  /**
+   * 最小值或最小长度。
+   *
+   */
+  double GetMin() const;
+
+  /**
+   * 最大值或最大长度。
+   *
+   */
+  double GetMax() const;
+
+  /**
+   * 步长。
+   *作为数值型编辑器时，一次增加和减少时的数值。
+   *
+   */
+  double GetStep() const;
+
+  /**
+   * 输入类型。
+   *
+   */
+  input_type_t GetInputType() const;
+
+  /**
    * 编辑器是否为只读。
    *
    */
@@ -11715,84 +12107,6 @@ public:
    *
    */
   bool GetCloseImWhenBlured() const;
-
-  /**
-   * 上边距。
-   *
-   */
-  uint8_t GetTopMargin() const;
-
-  /**
-   * 下边距。
-   *
-   */
-  uint8_t GetBottomMargin() const;
-
-  /**
-   * 左边距。
-   *
-   */
-  uint8_t GetLeftMargin() const;
-
-  /**
-   * 右边距。
-   *
-   */
-  uint8_t GetRightMargin() const;
-
-  /**
-   * 输入提示。
-   *
-   */
-  char* GetTips() const;
-
-  /**
-   * 保存用于翻译的提示信息。
-   *
-   */
-  char* GetTrTips() const;
-
-  /**
-   * 软键盘上action按钮的文本。内置取值有：
-   *
-   ** next 将焦点切换到下一个控件。
-   ** done 完成，关闭软键盘。
-   *
-   *也可以使用其它文本，比如send表示发送。这个需要自己实现相应的功能，处理EVT\_IM\_ACTION事件即可。
-   *
-   */
-  char* GetActionText() const;
-
-  /**
-   * 自定义软键盘名称。AWTK优先查找keyboard属性设置的键盘文件名（该键盘的XML文件需要在default\raw\ui目录下存在），如果keyboard为空就找input_type设置的键盘类型
-   *
-   */
-  char* GetKeyboard() const;
-
-  /**
-   * 输入类型。
-   *
-   */
-  input_type_t GetInputType() const;
-
-  /**
-   * 最小值或最小长度。
-   *
-   */
-  double GetMin() const;
-
-  /**
-   * 最大值或最大长度。
-   *
-   */
-  double GetMax() const;
-
-  /**
-   * 步长。
-   *作为数值型编辑器时，一次增加和减少时的数值。
-   *
-   */
-  double GetStep() const;
 
   /**
    * 是否支持撤销编辑。如果为TRUE，在失去焦点之前可以撤销所有修改(恢复获得焦点之前的内容)。
@@ -12118,9 +12432,9 @@ public:
   ret_t SetLineWrap(bool line_wrap) ;
 
   /**
-   * 设置是否允许单词中换行。(需要开启自动换行才有效果)
+   * 设置是否允许整个单词换行。(需要开启自动换行才有效果)
    * 
-   * @param word_wrap 是否允许单词中换行。
+   * @param word_wrap 是否允许整个单词换行。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -12152,7 +12466,7 @@ public:
   bool GetLineWrap() const;
 
   /**
-   * 是否允许单词中换行。(需要开启自动换行才有效果)
+   * 是否允许整个单词换行。(需要开启自动换行才有效果)
    *
    */
   bool GetWordWrap() const;
@@ -13535,13 +13849,25 @@ public:
   /**
    * 设置为全屏窗口。
    *
-   *>这里全屏是指与LCD相同大小，而非让SDL窗口全屏。
+   *>如果app_type是SIMULATOR，全屏是指与LCD相同大小，而非让SDL窗口全屏。
    * 
    * @param fullscreen 是否全屏。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t SetFullscreen(bool fullscreen) ;
+
+  /**
+   * 当设计分辨率和实际分辨率不一致时，自动调整子控件的位置和大小。
+   *
+   *> 当子控件有self_layout参数或者子控件的父控件有children_layout参数时，不会自动调整。
+   * 
+   * @param design_w 设计时宽度。
+   * @param design_h 设计时高度。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetAutoScaleChildren(uint32_t design_w, uint32_t design_h) ;
 
   /**
    * 从资源文件中加载并创建window_base对象。本函数在ui_loader/ui_builder_default里实现。

@@ -1038,6 +1038,34 @@
             "type": "const char*",
             "name": "name",
             "desc": "属性的名称。"
+          },
+          {
+            "type": "double",
+            "name": "defval",
+            "desc": "缺省值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取指定属性的浮点数类型的值。",
+        "name": "object_get_prop_double",
+        "return": {
+          "type": "double",
+          "desc": "返回指定属性的浮点数类型的值。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "object对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
           }
         ],
         "annotation": {
@@ -1213,6 +1241,34 @@
         },
         "desc": "设置指定属性的浮点数类型的值。",
         "name": "object_set_prop_float",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "object对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "double",
+            "name": "value",
+            "desc": "属性的值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置指定属性的浮点数类型的值。",
+        "name": "object_set_prop_double",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1768,6 +1824,454 @@
         "desc": "执行指定的命令。",
         "name": "object_exec_by_path",
         "alias": "execute_by_path",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "object对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "int8_t",
+            "name": "defval",
+            "desc": "缺省值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取指定属性的int8类型的值。",
+        "name": "object_get_prop_int8",
+        "return": {
+          "type": "int8_t",
+          "desc": "返回指定属性的int8类型的值。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "object对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "int8_t",
+            "name": "value",
+            "desc": "属性的值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置指定属性的int8类型的值。",
+        "name": "object_set_prop_int8",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "object对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "uint8_t",
+            "name": "defval",
+            "desc": "缺省值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取指定属性的uint8类型的值。",
+        "name": "object_get_prop_uint8",
+        "return": {
+          "type": "uint8_t",
+          "desc": "返回指定属性的uint8类型的值。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "object对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "uint8_t",
+            "name": "value",
+            "desc": "属性的值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置指定属性的uint8类型的值。",
+        "name": "object_set_prop_uint8",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "object对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "int16_t",
+            "name": "defval",
+            "desc": "缺省值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取指定属性的int16类型的值。",
+        "name": "object_get_prop_int16",
+        "return": {
+          "type": "int16_t",
+          "desc": "返回指定属性的int16类型的值。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "object对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "int16_t",
+            "name": "value",
+            "desc": "属性的值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置指定属性的int16类型的值。",
+        "name": "object_set_prop_int16",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "object对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "uint16_t",
+            "name": "defval",
+            "desc": "缺省值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取指定属性的uint16类型的值。",
+        "name": "object_get_prop_uint16",
+        "return": {
+          "type": "uint16_t",
+          "desc": "返回指定属性的uint16类型的值。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "object对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "uint16_t",
+            "name": "value",
+            "desc": "属性的值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置指定属性的uint16类型的值。",
+        "name": "object_set_prop_uint16",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "object对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "int32_t",
+            "name": "defval",
+            "desc": "缺省值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取指定属性的int32类型的值。",
+        "name": "object_get_prop_int32",
+        "return": {
+          "type": "int32_t",
+          "desc": "返回指定属性的int32类型的值。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "object对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "int32_t",
+            "name": "value",
+            "desc": "属性的值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置指定属性的int32类型的值。",
+        "name": "object_set_prop_int32",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "object对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "defval",
+            "desc": "缺省值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取指定属性的uint32类型的值。",
+        "name": "object_get_prop_uint32",
+        "return": {
+          "type": "uint32_t",
+          "desc": "返回指定属性的uint32类型的值。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "object对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "value",
+            "desc": "属性的值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置指定属性的uint32类型的值。",
+        "name": "object_set_prop_uint32",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "object对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "int64_t",
+            "name": "defval",
+            "desc": "缺省值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取指定属性的int64类型的值。",
+        "name": "object_get_prop_int64",
+        "return": {
+          "type": "int64_t",
+          "desc": "返回指定属性的int64类型的值。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "object对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "int64_t",
+            "name": "value",
+            "desc": "属性的值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置指定属性的int64类型的值。",
+        "name": "object_set_prop_int64",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "object对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "uint64_t",
+            "name": "defval",
+            "desc": "缺省值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取指定属性的uint64类型的值。",
+        "name": "object_get_prop_uint64",
+        "return": {
+          "type": "uint64_t",
+          "desc": "返回指定属性的uint64类型的值。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "object对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "uint64_t",
+            "name": "value",
+            "desc": "属性的值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置指定属性的uint64类型的值。",
+        "name": "object_set_prop_uint64",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -5533,6 +6037,34 @@
             "desc": "属性名。"
           },
           {
+            "type": "uint32_t",
+            "name": "defval",
+            "desc": "缺省值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取指定name的无符号整数格式的值。",
+        "name": "style_get_uint",
+        "return": {
+          "type": "uint32_t",
+          "desc": "返回无符号整数格式的值。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "style_t*",
+            "name": "s",
+            "desc": "style对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性名。"
+          },
+          {
             "type": "const char*",
             "name": "defval",
             "desc": "缺省值。"
@@ -5587,6 +6119,90 @@
             "type": "style_t*",
             "name": "s",
             "desc": "style对象。"
+          },
+          {
+            "type": "const uint8_t*",
+            "name": "data",
+            "desc": "风格对象数据"
+          },
+          {
+            "type": "const char*",
+            "name": "state",
+            "desc": "风格状态"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "把风格对象数据设置到风格对象中",
+        "name": "style_set_style_data",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "style_t*",
+            "name": "s",
+            "desc": "style对象。"
+          },
+          {
+            "type": "theme_t*",
+            "name": "theme",
+            "desc": "theme对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "widget_type",
+            "desc": "控件的类型名。"
+          },
+          {
+            "type": "const char*",
+            "name": "style_name",
+            "desc": "style的名称。"
+          },
+          {
+            "type": "const char*",
+            "name": "widget_state",
+            "desc": "控件的状态。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "更新风格对象的状态以及对应的数据\n备注：根据 widget_type 和 style_name 以及 widget_state 在 theme 对象中查找对应的数据并且更新到 style 对象中",
+        "name": "style_update_state",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "style_t*",
+            "name": "s",
+            "desc": "style对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取风格对象的风格状态",
+        "name": "style_get_style_state",
+        "return": {
+          "type": "const char*",
+          "desc": "返回风格状态。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "style_t*",
+            "name": "s",
+            "desc": "style对象。"
           }
         ],
         "annotation": {
@@ -5597,6 +6213,24 @@
         "return": {
           "type": "bool_t",
           "desc": "返回TRUE表示是，否则表示不是。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "style_t*",
+            "name": "s",
+            "desc": "style对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取 style 的风格类型。",
+        "name": "style_get_style_type",
+        "return": {
+          "type": "const char*",
+          "desc": "返回风格类型。"
         }
       }
     ],
@@ -7403,6 +8037,10 @@
       {
         "desc": "方头。",
         "name": "VGCANVAS_LINE_CAP_SQUARE"
+      },
+      {
+        "desc": "平头。",
+        "name": "VGCANVAS_LINE_CAP_BUTT"
       }
     ],
     "header": "base/vgcanvas.h",
@@ -7463,6 +8101,30 @@
       {
         "desc": "高度。",
         "name": "WIDGET_PROP_H"
+      },
+      {
+        "desc": "窗口设计时宽度。",
+        "name": "WIDGET_PROP_DESIGN_W"
+      },
+      {
+        "desc": "窗口设计时宽度。",
+        "name": "WIDGET_PROP_DESIGN_H"
+      },
+      {
+        "desc": "窗口大小与设计时大小不同时，是否自动调整子控件的x坐标。",
+        "name": "WIDGET_PROP_AUTO_SCALE_CHILDREN_X"
+      },
+      {
+        "desc": "窗口大小与设计时大小不同时，是否自动调整子控件的y坐标。",
+        "name": "WIDGET_PROP_AUTO_SCALE_CHILDREN_Y"
+      },
+      {
+        "desc": "窗口大小与设计时大小不同时，是否自动调整子控件的宽度。",
+        "name": "WIDGET_PROP_AUTO_SCALE_CHILDREN_W"
+      },
+      {
+        "desc": "窗口大小与设计时大小不同时，是否自动调整子控件的高度。",
+        "name": "WIDGET_PROP_AUTO_SCALE_CHILDREN_H"
       },
       {
         "desc": "inputing。",
@@ -8767,6 +9429,34 @@
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "style_name",
+            "desc": "style的名称（如果为 NULL，则默认为 default）。"
+          },
+          {
+            "type": "const char*",
+            "name": "state_name",
+            "desc": "state的名称（如果为 NULL，则默认为 normal）。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "查询指定的style是否存在。",
+        "name": "widget_is_style_exist",
+        "return": {
+          "type": "bool_t",
+          "desc": "存在返回 TRUE，不存在返回 FALSE。"
         }
       },
       {
@@ -10569,6 +11259,24 @@
         "annotation": {
           "scriptable": true
         },
+        "desc": "获取 widget 对应风格类型",
+        "name": "widget_get_style_type",
+        "return": {
+          "type": "const char*",
+          "desc": "返回 widget 的对应风格类型。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
         "desc": "让控件根据自己当前状态更新style。",
         "name": "widget_update_style",
         "return": {
@@ -11160,7 +11868,7 @@
       },
       {
         "name": "with_focus_state",
-        "desc": "是否支持焦点状态。\n> 如果希望style支持焦点状态，但有不希望焦点停留，可用本属性。",
+        "desc": "是否支持焦点状态。\n> 如果希望style支持焦点状态，但又不希望焦点停留，可用本属性。",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,
@@ -13516,6 +14224,39 @@
             "desc": "asset manager对象。"
           },
           {
+            "type": "asset_type_t",
+            "name": "type",
+            "desc": "资源的类型。"
+          },
+          {
+            "type": "uint16_t",
+            "name": "subtype",
+            "desc": "资源的子类型。"
+          },
+          {
+            "type": "char*",
+            "name": "name",
+            "desc": "资源的名称。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "在资源管理器的缓存中查找指定的资源并引用它，如果缓存中不存在，尝试加载该资源。",
+        "name": "assets_manager_ref_ex",
+        "return": {
+          "type": "asset_info_t*",
+          "desc": "返回资源。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "assets_manager_t*",
+            "name": "am",
+            "desc": "asset manager对象。"
+          },
+          {
             "type": "asset_info_t*",
             "name": "info",
             "desc": "资源。"
@@ -14553,11 +15294,6 @@
       {
         "params": [
           {
-            "type": "widget_t*",
-            "name": "widget",
-            "desc": "控件"
-          },
-          {
             "type": "style_t*",
             "name": "default_style",
             "desc": "缺省的style。"
@@ -14651,6 +15387,84 @@
         "name": "theme",
         "desc": "主题资源的名称。\n每个窗口都可以有独立的主题文件，如果没指定，则使用系统缺省的主题文件。\n主题是一个XML文件，放在assets/raw/styles目录下。\n请参考[主题](https://github.com/zlgopen/awtk/blob/master/docs/theme.md)",
         "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "design_w",
+        "desc": "设计时宽度。",
+        "type": "uint16_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "design_h",
+        "desc": "设计时高度。",
+        "type": "uint16_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "auto_scale_children_x",
+        "desc": "窗口大小与设计时大小不同时，是否自动调整子控件的x坐标。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "auto_scale_children_y",
+        "desc": "窗口大小与设计时大小不同时，是否自动调整子控件的y坐标。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "auto_scale_children_w",
+        "desc": "窗口大小与设计时大小不同时，是否自动调整子控件的宽度。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "auto_scale_children_h",
+        "desc": "窗口大小与设计时大小不同时，是否自动调整子控件的高度。",
+        "type": "bool_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -18283,71 +19097,6 @@
     ],
     "properties": [
       {
-        "name": "readonly",
-        "desc": "编辑器是否为只读。",
-        "type": "bool_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "top_margin",
-        "desc": "上边距。",
-        "type": "uint8_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "bottom_margin",
-        "desc": "下边距。",
-        "type": "uint8_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "left_margin",
-        "desc": "左边距。",
-        "type": "uint8_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "right_margin",
-        "desc": "右边距。",
-        "type": "uint8_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
         "name": "tips",
         "desc": "输入提示。",
         "type": "char*",
@@ -18387,19 +19136,6 @@
         }
       },
       {
-        "name": "wrap_word",
-        "desc": "是否自动折行。",
-        "type": "bool_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
         "name": "max_lines",
         "desc": "最大行数。",
         "type": "uint32_t",
@@ -18413,9 +19149,35 @@
         }
       },
       {
+        "name": "wrap_word",
+        "desc": "是否自动折行。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
         "name": "scroll_line",
         "desc": "鼠标一次滚动行数。",
         "type": "uint32_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "readonly",
+        "desc": "编辑器是否为只读。",
+        "type": "bool_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -19039,19 +19801,6 @@
       {
         "name": "line_gap",
         "desc": "行间距。",
-        "type": "uint32_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "margin",
-        "desc": "边距。",
         "type": "uint32_t",
         "annotation": {
           "set_prop": true,
@@ -19833,6 +20582,29 @@
           {
             "type": "widget_t*",
             "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "floating_scroll_bar",
+            "desc": "滚动条是否悬浮在 scroll_view 上面。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置滚动条是否悬浮在 scroll_view 上面。",
+        "name": "list_view_set_floating_scroll_bar",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
             "desc": "list_view对象。"
           }
         ],
@@ -19906,10 +20678,23 @@
           "design": true,
           "scriptable": true
         }
+      },
+      {
+        "name": "floating_scroll_bar",
+        "desc": "滚动条是否悬浮在 scroll_view 上面",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
       }
     ],
     "header": "scroll_view/list_view.h",
-    "desc": "列表视图控件。\n\n列表视图控件是一个可以垂直滚动的列表控件。\n\n如果不需要滚动，可以用view控件配置适当的layout参数作为列表控件。\n\n列表视图中的列表项可以固定高度，也可以使用不同高度。请参考[变高列表项](\nhttps://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_vh.xml)\n\n列表视图控件的中可以有滚动条，也可以没有滚动条。\n可以使用移动设备风格的滚动条，也可以使用桌面风格的滚动条。\n\nlist\\_view\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于list\\_view\\_t控件。\n\n在xml中使用\"list\\_view\"标签创建列表视图控件。如：\n\n```xml\n<list_view x=\"0\"  y=\"30\" w=\"100%\" h=\"-80\" item_height=\"60\">\n<scroll_view name=\"view\" x=\"0\"  y=\"0\" w=\"100%\" h=\"100%\">\n<list_item style=\"odd\" children_layout=\"default(rows=1,cols=0)\">\n<image draw_type=\"icon\" w=\"30\" image=\"earth\"/>\n<label w=\"-30\" text=\"1.Hello AWTK !\">\n<switch x=\"r:10\" y=\"m\" w=\"60\" h=\"20\"/>\n</label>\n</list_item>\n...\n</scroll_view>\n</list_view>\n```\n\n> 注意：列表项不是作为列表视图控件的直接子控件，而是作为滚动视图的子控件。\n\n\n> 更多用法请参考：[list\\_view\\_m.xml](\nhttps://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)\n\n在c代码中使用函数list\\_view\\_create创建列表视图控件。如：\n\n```c\nwidget_t* list_view = list_view_create(win, 0, 0, 0, 0);\n```\n\n用代码构造列表视图是比较繁琐的事情，最好用XML来构造。\n如果需要动态修改，可以使用widget\\_clone来增加列表项，使用widget\\_remove\\_child来移出列表项。\n\n可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。",
+    "desc": "列表视图控件。\n\n列表视图控件是一个可以垂直滚动的列表控件。\n\n如果不需要滚动，可以用view控件配置适当的layout参数作为列表控件。\n\n列表视图中的列表项可以固定高度，也可以使用不同高度。请参考[变高列表项](\nhttps://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_vh.xml)\n\n列表视图控件的中可以有滚动条，也可以没有滚动条。\n可以使用移动设备风格的滚动条，也可以使用桌面风格的滚动条。\n\nlist\\_view\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于list\\_view\\_t控件。\n\n在xml中使用\"list\\_view\"标签创建列表视图控件。如：\n\n```xml\n<list_view x=\"0\"  y=\"30\" w=\"100%\" h=\"-80\" item_height=\"60\">\n<scroll_view name=\"view\" x=\"0\"  y=\"0\" w=\"100%\" h=\"100%\">\n<list_item style=\"odd\" children_layout=\"default(rows=1,cols=0)\">\n<image draw_type=\"icon\" w=\"30\" image=\"earth\"/>\n<label w=\"-30\" text=\"1.Hello AWTK !\">\n<switch x=\"r:10\" y=\"m\" w=\"60\" h=\"20\"/>\n</label>\n</list_item>\n...\n</scroll_view>\n</list_view>\n```\n\n> 注意：列表项不是作为列表视图控件的直接子控件，而是作为滚动视图的子控件。\n\n\n> 更多用法请参考：[list\\_view\\_m.xml](\nhttps://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)\n\n在c代码中使用函数list\\_view\\_create创建列表视图控件。如：\n\n```c\nwidget_t* list_view = list_view_create(win, 0, 0, 0, 0);\n```\n\n用代码构造列表视图是比较繁琐的事情，最好用XML来构造。\n如果需要动态修改，可以使用widget\\_clone来增加列表项，使用widget\\_remove\\_child来移出列表项。\n\n可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。\n\n备注：list_view 下的 scroll_view 控件不支持遍历所有子控件的效果。\n\n下面是针对 scroll_bar_d （桌面版）有效果，scroll_bar_m（移动版）没有效果。\n如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 TRUE，scroll_view 宽默认为 list_view 的 100% 宽，鼠标在 list_view 上滚动条才显示，不在的就自动隐藏，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽不会变。\n如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 FALSE ，scroll_view 宽默认为 list_view 的 100% 宽，滚动条不隐藏，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽不会变。\n如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 FALSE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可用，scroll_view 宽不会变。\n如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 TRUE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽会合并原来滚动条的宽。",
     "name": "list_view_t",
     "parent": "widget_t",
     "annotation": {
@@ -20475,6 +21260,75 @@
             "desc": "控件对象。"
           },
           {
+            "type": "bool_t",
+            "name": "move_to_page",
+            "desc": "是否每次翻一页。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置滚动时是否每次翻一页\n备注：当 snap_to_page 为ture 的时候才有效果，主要用于区分一次翻一页还是一次翻多页。",
+        "name": "scroll_view_set_move_to_page",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "recursive",
+            "desc": "是否递归查找全部子控件。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置是否递归查找全部子控件。",
+        "name": "scroll_view_set_recursive",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "recursive",
+            "desc": "是否递归查找全部子控件。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置是否递归查找全部子控件。(不触发repaint和relayout)。",
+        "name": "scroll_view_set_recursive_only",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
             "type": "int32_t",
             "name": "xoffset",
             "desc": "x偏移量。"
@@ -20715,6 +21569,32 @@
       {
         "name": "snap_to_page",
         "desc": "滚动时offset是否按页面对齐。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "move_to_page",
+        "desc": "是否每次翻一页（当 move_to_page 为ture 的时候才有效果，主要用于区分一次翻一页还是一次翻多页）。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "recursive",
+        "desc": "是否递归查找全部子控件。",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,
@@ -22015,6 +22895,44 @@
             "type": "int32_t",
             "name": "step",
             "desc": "步长。"
+          },
+          {
+            "type": "const char*",
+            "name": "format",
+            "desc": "选项的格式化。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置一系列的整数选项。",
+        "name": "text_selector_set_range_options_ex",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "text_selector对象。"
+          },
+          {
+            "type": "int32_t",
+            "name": "start",
+            "desc": "起始值。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "nr",
+            "desc": "个数。"
+          },
+          {
+            "type": "int32_t",
+            "name": "step",
+            "desc": "步长。"
           }
         ],
         "annotation": {
@@ -23103,7 +24021,7 @@
       },
       {
         "name": "can_exec",
-        "desc": "执行结果(适用于CAN_EXEC)。",
+        "desc": "标识命令是否可以执行(适用于CAN_EXEC)。",
         "type": "bool_t",
         "annotation": {
           "readable": true,
@@ -25063,6 +25981,110 @@
     ],
     "properties": [
       {
+        "name": "tips",
+        "desc": "输入提示。",
+        "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "tr_tips",
+        "desc": "保存用于翻译的提示信息。",
+        "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "action_text",
+        "desc": "软键盘上action按钮的文本。内置取值有：\n\n* next 将焦点切换到下一个控件。\n* done 完成，关闭软键盘。\n\n也可以使用其它文本，比如send表示发送。这个需要自己实现相应的功能，处理EVT\\_IM\\_ACTION事件即可。",
+        "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "keyboard",
+        "desc": "自定义软键盘名称。AWTK优先查找keyboard属性设置的键盘文件名（该键盘的XML文件需要在default\\raw\\ui目录下存在），如果keyboard为空就找input_type设置的键盘类型",
+        "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "min",
+        "desc": "最小值或最小长度。",
+        "type": "double",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "max",
+        "desc": "最大值或最大长度。",
+        "type": "double",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "step",
+        "desc": "步长。\n作为数值型编辑器时，一次增加和减少时的数值。",
+        "type": "double",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "input_type",
+        "desc": "输入类型。",
+        "type": "input_type_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
         "name": "readonly",
         "desc": "编辑器是否为只读。",
         "type": "bool_t",
@@ -25131,162 +26153,6 @@
         "name": "close_im_when_blured",
         "desc": "是否在失去焦点时关闭输入法(默认是)。",
         "type": "bool_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "top_margin",
-        "desc": "上边距。",
-        "type": "uint8_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "bottom_margin",
-        "desc": "下边距。",
-        "type": "uint8_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "left_margin",
-        "desc": "左边距。",
-        "type": "uint8_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "right_margin",
-        "desc": "右边距。",
-        "type": "uint8_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "tips",
-        "desc": "输入提示。",
-        "type": "char*",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "tr_tips",
-        "desc": "保存用于翻译的提示信息。",
-        "type": "char*",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "action_text",
-        "desc": "软键盘上action按钮的文本。内置取值有：\n\n* next 将焦点切换到下一个控件。\n* done 完成，关闭软键盘。\n\n也可以使用其它文本，比如send表示发送。这个需要自己实现相应的功能，处理EVT\\_IM\\_ACTION事件即可。",
-        "type": "char*",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "keyboard",
-        "desc": "自定义软键盘名称。AWTK优先查找keyboard属性设置的键盘文件名（该键盘的XML文件需要在default\\raw\\ui目录下存在），如果keyboard为空就找input_type设置的键盘类型",
-        "type": "char*",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "input_type",
-        "desc": "输入类型。",
-        "type": "input_type_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "min",
-        "desc": "最小值或最小长度。",
-        "type": "double",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "max",
-        "desc": "最大值或最大长度。",
-        "type": "double",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "step",
-        "desc": "步长。\n作为数值型编辑器时，一次增加和减少时的数值。",
-        "type": "double",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -25644,13 +26510,13 @@
           {
             "type": "bool_t",
             "name": "word_wrap",
-            "desc": "是否允许单词中换行。"
+            "desc": "是否允许整个单词换行。"
           }
         ],
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置是否允许单词中换行。(需要开启自动换行才有效果)",
+        "desc": "设置是否允许整个单词换行。(需要开启自动换行才有效果)",
         "name": "label_set_word_wrap",
         "return": {
           "type": "ret_t",
@@ -25745,7 +26611,7 @@
       },
       {
         "name": "word_wrap",
-        "desc": "是否允许单词中换行。(需要开启自动换行才有效果)",
+        "desc": "是否允许整个单词换行。(需要开启自动换行才有效果)",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,
@@ -27863,11 +28729,38 @@
           }
         ],
         "annotation": {
-          "deconstructor": true,
           "scriptable": true
         },
-        "desc": "设置为全屏窗口。\n\n>这里全屏是指与LCD相同大小，而非让SDL窗口全屏。",
+        "desc": "设置为全屏窗口。\n\n>如果app_type是SIMULATOR，全屏是指与LCD相同大小，而非让SDL窗口全屏。",
         "name": "window_set_fullscreen",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "window对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "design_w",
+            "desc": "设计时宽度。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "design_h",
+            "desc": "设计时高度。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "当设计分辨率和实际分辨率不一致时，自动调整子控件的位置和大小。\n\n> 当子控件有self_layout参数或者子控件的父控件有children_layout参数时，不会自动调整。",
+        "name": "window_set_auto_scale_children",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"

@@ -142,6 +142,21 @@ public class TTextSelector extends TWidget {
    * @param start 起始值。
    * @param nr 个数。
    * @param step 步长。
+   * @param format 选项的格式化。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setRangeOptionsEx(int start, int nr, int step, String format)  {
+   return TRet.from(text_selector_set_range_options_ex(this != null ? (this.nativeObj) : 0, start, nr, step, format));
+ }
+
+
+  /**
+   * 设置一系列的整数选项。
+   * 
+   * @param start 起始值。
+   * @param nr 个数。
+   * @param step 步长。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -317,6 +332,7 @@ static private native int text_selector_reset_options(long widget);
 static private native int text_selector_count_options(long widget);
 static private native int text_selector_append_option(long widget, int value, String text);
 static private native int text_selector_set_options(long widget, String options);
+static private native int text_selector_set_range_options_ex(long widget, int start, int nr, int step, String format);
 static private native int text_selector_set_range_options(long widget, int start, int nr, int step);
 static private native int text_selector_get_value(long widget);
 static private native int text_selector_set_value(long widget, int value);

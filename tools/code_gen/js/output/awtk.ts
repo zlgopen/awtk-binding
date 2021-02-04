@@ -56,6 +56,7 @@ declare function object_get_prop_object(obj : any, name : string) : any;
 declare function object_get_prop_int(obj : any, name : string, defval : number) : number;
 declare function object_get_prop_bool(obj : any, name : string, defval : boolean) : boolean;
 declare function object_get_prop_float(obj : any, name : string, defval : number) : number;
+declare function object_get_prop_double(obj : any, name : string, defval : number) : number;
 declare function object_remove_prop(obj : any, name : string) : TRet;
 declare function object_set_prop(obj : any, name : string, value : any) : TRet;
 declare function object_set_prop_str(obj : any, name : string, value : string) : TRet;
@@ -63,6 +64,7 @@ declare function object_set_prop_object(obj : any, name : string, value : any) :
 declare function object_set_prop_int(obj : any, name : string, value : any) : TRet;
 declare function object_set_prop_bool(obj : any, name : string, value : any) : TRet;
 declare function object_set_prop_float(obj : any, name : string, value : any) : TRet;
+declare function object_set_prop_double(obj : any, name : string, value : any) : TRet;
 declare function object_copy_prop(obj : any, src : any, name : string) : TRet;
 declare function object_has_prop(obj : any, name : string) : boolean;
 declare function object_eval(obj : any, expr : string, v : any) : TRet;
@@ -84,6 +86,22 @@ declare function object_set_prop_bool_by_path(obj : any, path : string, value : 
 declare function object_set_prop_float_by_path(obj : any, path : string, value : any) : TRet;
 declare function object_can_exec_by_path(obj : any, path : string, args : string) : boolean;
 declare function object_exec_by_path(obj : any, path : string, args : string) : TRet;
+declare function object_get_prop_int8(obj : any, name : string, defval : number) : number;
+declare function object_set_prop_int8(obj : any, name : string, value : any) : TRet;
+declare function object_get_prop_uint8(obj : any, name : string, defval : number) : number;
+declare function object_set_prop_uint8(obj : any, name : string, value : any) : TRet;
+declare function object_get_prop_int16(obj : any, name : string, defval : number) : number;
+declare function object_set_prop_int16(obj : any, name : string, value : any) : TRet;
+declare function object_get_prop_uint16(obj : any, name : string, defval : number) : number;
+declare function object_set_prop_uint16(obj : any, name : string, value : any) : TRet;
+declare function object_get_prop_int32(obj : any, name : string, defval : number) : number;
+declare function object_set_prop_int32(obj : any, name : string, value : any) : TRet;
+declare function object_get_prop_uint32(obj : any, name : string, defval : number) : number;
+declare function object_set_prop_uint32(obj : any, name : string, value : any) : TRet;
+declare function object_get_prop_int64(obj : any, name : string, defval : number) : number;
+declare function object_set_prop_int64(obj : any, name : string, value : any) : TRet;
+declare function object_get_prop_uint64(obj : any, name : string, defval : number) : number;
+declare function object_set_prop_uint64(obj : any, name : string, value : any) : TRet;
 declare function object_t_get_prop_ref_count(nativeObj : any) : number;
 declare function object_t_get_prop_name(nativeObj : any) : string;
 declare function value_set_bool(v : any, value : any) : any;
@@ -510,9 +528,14 @@ declare function STYLE_ID_SELF_LAYOUT();
 declare function style_notify_widget_state_changed(s : any, widget : any) : TRet;
 declare function style_is_valid(s : any) : boolean;
 declare function style_get_int(s : any, name : string, defval : number) : number;
+declare function style_get_uint(s : any, name : string, defval : number) : number;
 declare function style_get_str(s : any, name : string, defval : string) : string;
 declare function style_set(s : any, state : string, name : string, value : any) : TRet;
+declare function style_set_style_data(s : any, data : number, state : string) : TRet;
+declare function style_update_state(s : any, theme : any, widget_type : string, style_name : string, widget_state : string) : TRet;
+declare function style_get_style_state(s : any) : string;
 declare function style_is_mutable(s : any) : boolean;
+declare function style_get_style_type(s : any) : string;
 declare function theme() : any;
 declare function timer_add(on_timer : Function, ctx : any, duration : number) : number;
 declare function timer_remove(timer_id : number) : TRet;
@@ -607,6 +630,7 @@ declare function vgcanvas_t_get_prop_text_align(nativeObj : any) : string;
 declare function vgcanvas_t_get_prop_text_baseline(nativeObj : any) : string;
 declare function VGCANVAS_LINE_CAP_ROUND();
 declare function VGCANVAS_LINE_CAP_SQUARE();
+declare function VGCANVAS_LINE_CAP_BUTT();
 declare function VGCANVAS_LINE_JOIN_ROUND();
 declare function VGCANVAS_LINE_JOIN_BEVEL();
 declare function VGCANVAS_LINE_JOIN_MITTER();
@@ -615,6 +639,12 @@ declare function WIDGET_PROP_X();
 declare function WIDGET_PROP_Y();
 declare function WIDGET_PROP_W();
 declare function WIDGET_PROP_H();
+declare function WIDGET_PROP_DESIGN_W();
+declare function WIDGET_PROP_DESIGN_H();
+declare function WIDGET_PROP_AUTO_SCALE_CHILDREN_X();
+declare function WIDGET_PROP_AUTO_SCALE_CHILDREN_Y();
+declare function WIDGET_PROP_AUTO_SCALE_CHILDREN_W();
+declare function WIDGET_PROP_AUTO_SCALE_CHILDREN_H();
 declare function WIDGET_PROP_INPUTING();
 declare function WIDGET_PROP_ALWAYS_ON_TOP();
 declare function WIDGET_PROP_CARET_X();
@@ -866,6 +896,7 @@ declare function widget_move_resize(widget : any, x : number, y : number, w : nu
 declare function widget_set_value(widget : any, value : any) : TRet;
 declare function widget_animate_value_to(widget : any, value : any, duration : number) : TRet;
 declare function widget_add_value(widget : any, delta : number) : TRet;
+declare function widget_is_style_exist(widget : any, style_name : string, state_name : string) : boolean;
 declare function widget_use_style(widget : any, style : string) : TRet;
 declare function widget_set_text_utf8(widget : any, text : string) : TRet;
 declare function widget_set_child_text_utf8(widget : any, name : string, text : string) : TRet;
@@ -943,6 +974,7 @@ declare function widget_fill_bg_rect(widget : any, c : any, r : any, draw_type :
 declare function widget_fill_fg_rect(widget : any, c : any, r : any, draw_type : TImageDrawType) : TRet;
 declare function widget_dispatch_to_target(widget : any, e : any) : TRet;
 declare function widget_dispatch_to_key_target(widget : any, e : any) : TRet;
+declare function widget_get_style_type(widget : any) : string;
 declare function widget_update_style(widget : any) : TRet;
 declare function widget_update_style_recursive(widget : any) : TRet;
 declare function widget_set_as_key_target(widget : any) : TRet;
@@ -1241,6 +1273,7 @@ declare function VALUE_TYPE_TOKEN();
 declare function assets_manager() : any;
 declare function assets_manager_set_theme(am : any, theme : string) : TRet;
 declare function assets_manager_ref(am : any, type : TAssetType, name : string) : any;
+declare function assets_manager_ref_ex(am : any, type : TAssetType, subtype : number, name : string) : any;
 declare function assets_manager_unref(am : any, info : any) : TRet;
 declare function wheel_event_cast(event : any) : any;
 declare function wheel_event_t_get_prop_dy(nativeObj : any) : number;
@@ -1305,10 +1338,16 @@ declare function image_base_t_get_prop_selected(nativeObj : any) : boolean;
 declare function style_mutable_set_name(s : any, name : string) : TRet;
 declare function style_mutable_set_int(s : any, state : string, name : string, val : number) : TRet;
 declare function style_mutable_cast(s : any) : any;
-declare function style_mutable_create(widget : any, default_style : any) : any;
+declare function style_mutable_create(default_style : any) : any;
 declare function style_mutable_t_get_prop_name(nativeObj : any) : string;
 declare function window_base_cast(widget : any) : any;
 declare function window_base_t_get_prop_theme(nativeObj : any) : string;
+declare function window_base_t_get_prop_design_w(nativeObj : any) : number;
+declare function window_base_t_get_prop_design_h(nativeObj : any) : number;
+declare function window_base_t_get_prop_auto_scale_children_x(nativeObj : any) : boolean;
+declare function window_base_t_get_prop_auto_scale_children_y(nativeObj : any) : boolean;
+declare function window_base_t_get_prop_auto_scale_children_w(nativeObj : any) : boolean;
+declare function window_base_t_get_prop_auto_scale_children_h(nativeObj : any) : boolean;
 declare function window_base_t_get_prop_disable_anim(nativeObj : any) : boolean;
 declare function window_base_t_get_prop_closable(nativeObj : any) : TWindowClosable;
 declare function window_base_t_get_prop_open_anim_hint(nativeObj : any) : string;
@@ -1476,17 +1515,13 @@ declare function mledit_set_scroll_line(widget : any, scroll_line : number) : TR
 declare function mledit_set_open_im_when_focused(widget : any, open_im_when_focused : boolean) : TRet;
 declare function mledit_set_close_im_when_blured(widget : any, close_im_when_blured : boolean) : TRet;
 declare function mledit_cast(widget : any) : any;
-declare function mledit_t_get_prop_readonly(nativeObj : any) : boolean;
-declare function mledit_t_get_prop_top_margin(nativeObj : any) : number;
-declare function mledit_t_get_prop_bottom_margin(nativeObj : any) : number;
-declare function mledit_t_get_prop_left_margin(nativeObj : any) : number;
-declare function mledit_t_get_prop_right_margin(nativeObj : any) : number;
 declare function mledit_t_get_prop_tips(nativeObj : any) : string;
 declare function mledit_t_get_prop_tr_tips(nativeObj : any) : string;
 declare function mledit_t_get_prop_keyboard(nativeObj : any) : string;
-declare function mledit_t_get_prop_wrap_word(nativeObj : any) : boolean;
 declare function mledit_t_get_prop_max_lines(nativeObj : any) : number;
+declare function mledit_t_get_prop_wrap_word(nativeObj : any) : boolean;
 declare function mledit_t_get_prop_scroll_line(nativeObj : any) : number;
+declare function mledit_t_get_prop_readonly(nativeObj : any) : boolean;
 declare function mledit_t_get_prop_cancelable(nativeObj : any) : boolean;
 declare function mledit_t_get_prop_open_im_when_focused(nativeObj : any) : boolean;
 declare function mledit_t_get_prop_close_im_when_blured(nativeObj : any) : boolean;
@@ -1515,7 +1550,6 @@ declare function rich_text_set_text(widget : any, text : string) : TRet;
 declare function rich_text_set_yslidable(widget : any, yslidable : boolean) : TRet;
 declare function rich_text_cast(widget : any) : any;
 declare function rich_text_t_get_prop_line_gap(nativeObj : any) : number;
-declare function rich_text_t_get_prop_margin(nativeObj : any) : number;
 declare function rich_text_t_get_prop_yslidable(nativeObj : any) : boolean;
 declare function hscroll_label_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function hscroll_label_set_lull(widget : any, lull : number) : TRet;
@@ -1550,11 +1584,13 @@ declare function list_view_create(parent : any, x : number, y : number, w : numb
 declare function list_view_set_item_height(widget : any, item_height : number) : TRet;
 declare function list_view_set_default_item_height(widget : any, default_item_height : number) : TRet;
 declare function list_view_set_auto_hide_scroll_bar(widget : any, auto_hide_scroll_bar : boolean) : TRet;
+declare function list_view_set_floating_scroll_bar(widget : any, floating_scroll_bar : boolean) : TRet;
 declare function list_view_cast(widget : any) : any;
 declare function list_view_reinit(widget : any) : TRet;
 declare function list_view_t_get_prop_item_height(nativeObj : any) : number;
 declare function list_view_t_get_prop_default_item_height(nativeObj : any) : number;
 declare function list_view_t_get_prop_auto_hide_scroll_bar(nativeObj : any) : boolean;
+declare function list_view_t_get_prop_floating_scroll_bar(nativeObj : any) : boolean;
 declare function scroll_bar_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function scroll_bar_cast(widget : any) : any;
 declare function scroll_bar_create_mobile(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -1577,6 +1613,9 @@ declare function scroll_view_set_virtual_h(widget : any, h : number) : TRet;
 declare function scroll_view_set_xslidable(widget : any, xslidable : boolean) : TRet;
 declare function scroll_view_set_yslidable(widget : any, yslidable : boolean) : TRet;
 declare function scroll_view_set_snap_to_page(widget : any, snap_to_page : boolean) : TRet;
+declare function scroll_view_set_move_to_page(widget : any, move_to_page : boolean) : TRet;
+declare function scroll_view_set_recursive(widget : any, recursive : boolean) : TRet;
+declare function scroll_view_set_recursive_only(widget : any, recursive : boolean) : TRet;
 declare function scroll_view_set_offset(widget : any, xoffset : number, yoffset : number) : TRet;
 declare function scroll_view_set_speed_scale(widget : any, xspeed_scale : number, yspeed_scale : number) : TRet;
 declare function scroll_view_scroll_to(widget : any, xoffset_end : number, yoffset_end : number, duration : number) : TRet;
@@ -1590,6 +1629,8 @@ declare function scroll_view_t_get_prop_yspeed_scale(nativeObj : any) : number;
 declare function scroll_view_t_get_prop_xslidable(nativeObj : any) : boolean;
 declare function scroll_view_t_get_prop_yslidable(nativeObj : any) : boolean;
 declare function scroll_view_t_get_prop_snap_to_page(nativeObj : any) : boolean;
+declare function scroll_view_t_get_prop_move_to_page(nativeObj : any) : boolean;
+declare function scroll_view_t_get_prop_recursive(nativeObj : any) : boolean;
 declare function slide_menu_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function slide_menu_cast(widget : any) : any;
 declare function slide_menu_set_value(widget : any, value : any) : TRet;
@@ -1644,6 +1685,7 @@ declare function text_selector_reset_options(widget : any) : TRet;
 declare function text_selector_count_options(widget : any) : number;
 declare function text_selector_append_option(widget : any, value : any, text : string) : TRet;
 declare function text_selector_set_options(widget : any, options : string) : TRet;
+declare function text_selector_set_range_options_ex(widget : any, start : number, nr : number, step : number, format : string) : TRet;
 declare function text_selector_set_range_options(widget : any, start : number, nr : number, step : number) : TRet;
 declare function text_selector_get_value(widget : any) : number;
 declare function text_selector_set_value(widget : any, value : any) : TRet;
@@ -1772,24 +1814,20 @@ declare function edit_set_keyboard(widget : any, keyboard : string) : TRet;
 declare function edit_set_password_visible(widget : any, password_visible : boolean) : TRet;
 declare function edit_set_focus(widget : any, focus : boolean) : TRet;
 declare function edit_set_cursor(widget : any, cursor : number) : TRet;
+declare function edit_t_get_prop_tips(nativeObj : any) : string;
+declare function edit_t_get_prop_tr_tips(nativeObj : any) : string;
+declare function edit_t_get_prop_action_text(nativeObj : any) : string;
+declare function edit_t_get_prop_keyboard(nativeObj : any) : string;
+declare function edit_t_get_prop_min(nativeObj : any) : number;
+declare function edit_t_get_prop_max(nativeObj : any) : number;
+declare function edit_t_get_prop_step(nativeObj : any) : number;
+declare function edit_t_get_prop_input_type(nativeObj : any) : TInputType;
 declare function edit_t_get_prop_readonly(nativeObj : any) : boolean;
 declare function edit_t_get_prop_password_visible(nativeObj : any) : boolean;
 declare function edit_t_get_prop_auto_fix(nativeObj : any) : boolean;
 declare function edit_t_get_prop_select_none_when_focused(nativeObj : any) : boolean;
 declare function edit_t_get_prop_open_im_when_focused(nativeObj : any) : boolean;
 declare function edit_t_get_prop_close_im_when_blured(nativeObj : any) : boolean;
-declare function edit_t_get_prop_top_margin(nativeObj : any) : number;
-declare function edit_t_get_prop_bottom_margin(nativeObj : any) : number;
-declare function edit_t_get_prop_left_margin(nativeObj : any) : number;
-declare function edit_t_get_prop_right_margin(nativeObj : any) : number;
-declare function edit_t_get_prop_tips(nativeObj : any) : string;
-declare function edit_t_get_prop_tr_tips(nativeObj : any) : string;
-declare function edit_t_get_prop_action_text(nativeObj : any) : string;
-declare function edit_t_get_prop_keyboard(nativeObj : any) : string;
-declare function edit_t_get_prop_input_type(nativeObj : any) : TInputType;
-declare function edit_t_get_prop_min(nativeObj : any) : number;
-declare function edit_t_get_prop_max(nativeObj : any) : number;
-declare function edit_t_get_prop_step(nativeObj : any) : number;
 declare function edit_t_get_prop_cancelable(nativeObj : any) : boolean;
 declare function grid_item_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function grid_item_cast(widget : any) : any;
@@ -1893,6 +1931,7 @@ declare function native_window_set_cursor(win : any, name : string, img : any) :
 declare function window_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function window_create_default() : any;
 declare function window_set_fullscreen(widget : any, fullscreen : boolean) : TRet;
+declare function window_set_auto_scale_children(widget : any, design_w : number, design_h : number) : TRet;
 declare function window_open(name : string) : any;
 declare function window_open_and_close(name : string, to_close : any) : any;
 declare function window_close(widget : any) : TRet;
@@ -2626,6 +2665,19 @@ export class TObject extends TEmitter {
 
 
   /**
+   * 获取指定属性的浮点数类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @returns 返回指定属性的浮点数类型的值。
+   */
+ getPropDouble(name : string, defval : number) : number  {
+    return object_get_prop_double(this != null ? (this.nativeObj || this) : null, name, defval);
+ }
+
+
+  /**
    * 删除指定属性。
    * 
    * @param name 属性的名称。
@@ -2712,6 +2764,19 @@ export class TObject extends TEmitter {
    */
  setPropFloat(name : string, value : any) : TRet  {
     return object_set_prop_float(this != null ? (this.nativeObj || this) : null, name, value);
+ }
+
+
+  /**
+   * 设置指定属性的浮点数类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setPropDouble(name : string, value : any) : TRet  {
+    return object_set_prop_double(this != null ? (this.nativeObj || this) : null, name, value);
  }
 
 
@@ -2980,6 +3045,214 @@ export class TObject extends TEmitter {
    */
  executeByPath(path : string, args : string) : TRet  {
     return object_exec_by_path(this != null ? (this.nativeObj || this) : null, path, args);
+ }
+
+
+  /**
+   * 获取指定属性的int8类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @returns 返回指定属性的int8类型的值。
+   */
+ getPropInt8(name : string, defval : number) : number  {
+    return object_get_prop_int8(this != null ? (this.nativeObj || this) : null, name, defval);
+ }
+
+
+  /**
+   * 设置指定属性的int8类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setPropInt8(name : string, value : any) : TRet  {
+    return object_set_prop_int8(this != null ? (this.nativeObj || this) : null, name, value);
+ }
+
+
+  /**
+   * 获取指定属性的uint8类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @returns 返回指定属性的uint8类型的值。
+   */
+ getPropUint8(name : string, defval : number) : number  {
+    return object_get_prop_uint8(this != null ? (this.nativeObj || this) : null, name, defval);
+ }
+
+
+  /**
+   * 设置指定属性的uint8类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setPropUint8(name : string, value : any) : TRet  {
+    return object_set_prop_uint8(this != null ? (this.nativeObj || this) : null, name, value);
+ }
+
+
+  /**
+   * 获取指定属性的int16类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @returns 返回指定属性的int16类型的值。
+   */
+ getPropInt16(name : string, defval : number) : number  {
+    return object_get_prop_int16(this != null ? (this.nativeObj || this) : null, name, defval);
+ }
+
+
+  /**
+   * 设置指定属性的int16类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setPropInt16(name : string, value : any) : TRet  {
+    return object_set_prop_int16(this != null ? (this.nativeObj || this) : null, name, value);
+ }
+
+
+  /**
+   * 获取指定属性的uint16类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @returns 返回指定属性的uint16类型的值。
+   */
+ getPropUint16(name : string, defval : number) : number  {
+    return object_get_prop_uint16(this != null ? (this.nativeObj || this) : null, name, defval);
+ }
+
+
+  /**
+   * 设置指定属性的uint16类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setPropUint16(name : string, value : any) : TRet  {
+    return object_set_prop_uint16(this != null ? (this.nativeObj || this) : null, name, value);
+ }
+
+
+  /**
+   * 获取指定属性的int32类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @returns 返回指定属性的int32类型的值。
+   */
+ getPropInt32(name : string, defval : number) : number  {
+    return object_get_prop_int32(this != null ? (this.nativeObj || this) : null, name, defval);
+ }
+
+
+  /**
+   * 设置指定属性的int32类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setPropInt32(name : string, value : any) : TRet  {
+    return object_set_prop_int32(this != null ? (this.nativeObj || this) : null, name, value);
+ }
+
+
+  /**
+   * 获取指定属性的uint32类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @returns 返回指定属性的uint32类型的值。
+   */
+ getPropUint32(name : string, defval : number) : number  {
+    return object_get_prop_uint32(this != null ? (this.nativeObj || this) : null, name, defval);
+ }
+
+
+  /**
+   * 设置指定属性的uint32类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setPropUint32(name : string, value : any) : TRet  {
+    return object_set_prop_uint32(this != null ? (this.nativeObj || this) : null, name, value);
+ }
+
+
+  /**
+   * 获取指定属性的int64类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @returns 返回指定属性的int64类型的值。
+   */
+ getPropInt64(name : string, defval : number) : number  {
+    return object_get_prop_int64(this != null ? (this.nativeObj || this) : null, name, defval);
+ }
+
+
+  /**
+   * 设置指定属性的int64类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setPropInt64(name : string, value : any) : TRet  {
+    return object_set_prop_int64(this != null ? (this.nativeObj || this) : null, name, value);
+ }
+
+
+  /**
+   * 获取指定属性的uint64类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @returns 返回指定属性的uint64类型的值。
+   */
+ getPropUint64(name : string, defval : number) : number  {
+    return object_get_prop_uint64(this != null ? (this.nativeObj || this) : null, name, defval);
+ }
+
+
+  /**
+   * 设置指定属性的uint64类型的值。
+   * 
+   * @param name 属性的名称。
+   * @param value 属性的值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setPropUint64(name : string, value : any) : TRet  {
+    return object_set_prop_uint64(this != null ? (this.nativeObj || this) : null, name, value);
  }
 
 
@@ -6386,6 +6659,19 @@ export class TStyle {
 
 
   /**
+   * 获取指定name的无符号整数格式的值。
+   * 
+   * @param name 属性名。
+   * @param defval 缺省值。
+   *
+   * @returns 返回无符号整数格式的值。
+   */
+ getUint(name : string, defval : number) : number  {
+    return style_get_uint(this != null ? (this.nativeObj || this) : null, name, defval);
+ }
+
+
+  /**
    * 获取指定name的字符串格式的值。
    * 
    * @param name 属性名。
@@ -6413,6 +6699,46 @@ export class TStyle {
 
 
   /**
+   * 把风格对象数据设置到风格对象中
+   * 
+   * @param data 风格对象数据
+   * @param state 风格状态
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setStyleData(data : number, state : string) : TRet  {
+    return style_set_style_data(this != null ? (this.nativeObj || this) : null, data, state);
+ }
+
+
+  /**
+   * 更新风格对象的状态以及对应的数据
+   *备注：根据 widget_type 和 style_name 以及 widget_state 在 theme 对象中查找对应的数据并且更新到 style 对象中
+   * 
+   * @param theme theme对象。
+   * @param widget_type 控件的类型名。
+   * @param style_name style的名称。
+   * @param widget_state 控件的状态。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ updateState(theme : TTheme, widget_type : string, style_name : string, widget_state : string) : TRet  {
+    return style_update_state(this != null ? (this.nativeObj || this) : null, theme != null ? (theme.nativeObj || theme) : null, widget_type, style_name, widget_state);
+ }
+
+
+  /**
+   * 获取风格对象的风格状态
+   * 
+   *
+   * @returns 返回风格状态。
+   */
+ getStyleState() : string  {
+    return style_get_style_state(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
    * 检查style是否是mutable的。
    * 
    *
@@ -6420,6 +6746,17 @@ export class TStyle {
    */
  isMutable() : boolean  {
     return style_is_mutable(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 获取 style 的风格类型。
+   * 
+   *
+   * @returns 返回风格类型。
+   */
+ getStyleType() : string  {
+    return style_get_style_type(this != null ? (this.nativeObj || this) : null);
  }
 
 };
@@ -7559,6 +7896,12 @@ export enum TVgcanvasLineCap {
    *
    */
  SQUARE = VGCANVAS_LINE_CAP_SQUARE(),
+
+  /**
+   * 平头。
+   *
+   */
+ BUTT = VGCANVAS_LINE_CAP_BUTT(),
 };
 
 
@@ -7623,6 +7966,42 @@ export enum TWidgetProp {
    *
    */
  H = WIDGET_PROP_H(),
+
+  /**
+   * 窗口设计时宽度。
+   *
+   */
+ DESIGN_W = WIDGET_PROP_DESIGN_W(),
+
+  /**
+   * 窗口设计时宽度。
+   *
+   */
+ DESIGN_H = WIDGET_PROP_DESIGN_H(),
+
+  /**
+   * 窗口大小与设计时大小不同时，是否自动调整子控件的x坐标。
+   *
+   */
+ AUTO_SCALE_CHILDREN_X = WIDGET_PROP_AUTO_SCALE_CHILDREN_X(),
+
+  /**
+   * 窗口大小与设计时大小不同时，是否自动调整子控件的y坐标。
+   *
+   */
+ AUTO_SCALE_CHILDREN_Y = WIDGET_PROP_AUTO_SCALE_CHILDREN_Y(),
+
+  /**
+   * 窗口大小与设计时大小不同时，是否自动调整子控件的宽度。
+   *
+   */
+ AUTO_SCALE_CHILDREN_W = WIDGET_PROP_AUTO_SCALE_CHILDREN_W(),
+
+  /**
+   * 窗口大小与设计时大小不同时，是否自动调整子控件的高度。
+   *
+   */
+ AUTO_SCALE_CHILDREN_H = WIDGET_PROP_AUTO_SCALE_CHILDREN_H(),
 
   /**
    * inputing。
@@ -9260,6 +9639,19 @@ export class TWidget {
 
 
   /**
+   * 查询指定的style是否存在。
+   * 
+   * @param style_name style的名称（如果为 NULL，则默认为 default）。
+   * @param state_name state的名称（如果为 NULL，则默认为 normal）。
+   *
+   * @returns 存在返回 TRUE，不存在返回 FALSE。
+   */
+ isStyleExist(style_name : string, state_name : string) : boolean  {
+    return widget_is_style_exist(this != null ? (this.nativeObj || this) : null, style_name, state_name);
+ }
+
+
+  /**
    * 启用指定的style。
    * 
    * @param style style的名称。
@@ -10240,6 +10632,17 @@ export class TWidget {
 
 
   /**
+   * 获取 widget 对应风格类型
+   * 
+   *
+   * @returns 返回 widget 的对应风格类型。
+   */
+ getStyleType() : string  {
+    return widget_get_style_type(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
    * 让控件根据自己当前状态更新style。
    * 
    *
@@ -10571,7 +10974,7 @@ export class TWidget {
 
   /**
    * 是否支持焦点状态。
-   *> 如果希望style支持焦点状态，但有不希望焦点停留，可用本属性。
+   *> 如果希望style支持焦点状态，但又不希望焦点停留，可用本属性。
    *
    */
  get withFocusState() : boolean {
@@ -12853,6 +13256,20 @@ export class TAssetsManager extends TEmitter {
 
 
   /**
+   * 在资源管理器的缓存中查找指定的资源并引用它，如果缓存中不存在，尝试加载该资源。
+   * 
+   * @param type 资源的类型。
+   * @param subtype 资源的子类型。
+   * @param name 资源的名称。
+   *
+   * @returns 返回资源。
+   */
+ refEx(type : TAssetType, subtype : number, name : string) : TAssetInfo  {
+    return new TAssetInfo(assets_manager_ref_ex(this != null ? (this.nativeObj || this) : null, type, subtype, name));
+ }
+
+
+  /**
    * 释放指定的资源。
    * 
    * @param info 资源。
@@ -13658,13 +14075,12 @@ export class TStyleMutable extends TStyle {
    *
    *> 除了测试程序外不需要直接调用，widget会通过style\_factory\_create创建。
    * 
-   * @param widget 控件
    * @param default_style 缺省的style。
    *
    * @returns style对象。
    */
- static create(widget : TWidget, default_style : TStyle) : TStyleMutable  {
-    return new TStyleMutable(style_mutable_create(widget != null ? (widget.nativeObj || widget) : null, default_style != null ? (default_style.nativeObj || default_style) : null));
+ static create(default_style : TStyle) : TStyleMutable  {
+    return new TStyleMutable(style_mutable_create(default_style != null ? (default_style.nativeObj || default_style) : null));
  }
 
 
@@ -13719,6 +14135,60 @@ export class TWindowBase extends TWidget {
    */
  get theme() : string {
    return window_base_t_get_prop_theme(this.nativeObj);
+ }
+
+
+  /**
+   * 设计时宽度。
+   *
+   */
+ get designW() : number {
+   return window_base_t_get_prop_design_w(this.nativeObj);
+ }
+
+
+  /**
+   * 设计时高度。
+   *
+   */
+ get designH() : number {
+   return window_base_t_get_prop_design_h(this.nativeObj);
+ }
+
+
+  /**
+   * 窗口大小与设计时大小不同时，是否自动调整子控件的x坐标。
+   *
+   */
+ get autoScaleChildrenX() : boolean {
+   return window_base_t_get_prop_auto_scale_children_x(this.nativeObj);
+ }
+
+
+  /**
+   * 窗口大小与设计时大小不同时，是否自动调整子控件的y坐标。
+   *
+   */
+ get autoScaleChildrenY() : boolean {
+   return window_base_t_get_prop_auto_scale_children_y(this.nativeObj);
+ }
+
+
+  /**
+   * 窗口大小与设计时大小不同时，是否自动调整子控件的宽度。
+   *
+   */
+ get autoScaleChildrenW() : boolean {
+   return window_base_t_get_prop_auto_scale_children_w(this.nativeObj);
+ }
+
+
+  /**
+   * 窗口大小与设计时大小不同时，是否自动调整子控件的高度。
+   *
+   */
+ get autoScaleChildrenH() : boolean {
+   return window_base_t_get_prop_auto_scale_children_h(this.nativeObj);
  }
 
 
@@ -16272,55 +16742,6 @@ export class TMledit extends TWidget {
 
 
   /**
-   * 编辑器是否为只读。
-   *
-   */
- get readonly() : boolean {
-   return mledit_t_get_prop_readonly(this.nativeObj);
- }
-
- set readonly(v : boolean) {
-   this.setReadonly(v);
- }
-
-
-  /**
-   * 上边距。
-   *
-   */
- get topMargin() : number {
-   return mledit_t_get_prop_top_margin(this.nativeObj);
- }
-
-
-  /**
-   * 下边距。
-   *
-   */
- get bottomMargin() : number {
-   return mledit_t_get_prop_bottom_margin(this.nativeObj);
- }
-
-
-  /**
-   * 左边距。
-   *
-   */
- get leftMargin() : number {
-   return mledit_t_get_prop_left_margin(this.nativeObj);
- }
-
-
-  /**
-   * 右边距。
-   *
-   */
- get rightMargin() : number {
-   return mledit_t_get_prop_right_margin(this.nativeObj);
- }
-
-
-  /**
    * 输入提示。
    *
    */
@@ -16360,19 +16781,6 @@ export class TMledit extends TWidget {
 
 
   /**
-   * 是否自动折行。
-   *
-   */
- get wrapWord() : boolean {
-   return mledit_t_get_prop_wrap_word(this.nativeObj);
- }
-
- set wrapWord(v : boolean) {
-   this.setWrapWord(v);
- }
-
-
-  /**
    * 最大行数。
    *
    */
@@ -16386,6 +16794,19 @@ export class TMledit extends TWidget {
 
 
   /**
+   * 是否自动折行。
+   *
+   */
+ get wrapWord() : boolean {
+   return mledit_t_get_prop_wrap_word(this.nativeObj);
+ }
+
+ set wrapWord(v : boolean) {
+   this.setWrapWord(v);
+ }
+
+
+  /**
    * 鼠标一次滚动行数。
    *
    */
@@ -16395,6 +16816,19 @@ export class TMledit extends TWidget {
 
  set scrollLine(v : number) {
    this.setScrollLine(v);
+ }
+
+
+  /**
+   * 编辑器是否为只读。
+   *
+   */
+ get readonly() : boolean {
+   return mledit_t_get_prop_readonly(this.nativeObj);
+ }
+
+ set readonly(v : boolean) {
+   this.setReadonly(v);
  }
 
 
@@ -16876,15 +17310,6 @@ export class TRichText extends TWidget {
    */
  get lineGap() : number {
    return rich_text_t_get_prop_line_gap(this.nativeObj);
- }
-
-
-  /**
-   * 边距。
-   *
-   */
- get margin() : number {
-   return rich_text_t_get_prop_margin(this.nativeObj);
  }
 
 
@@ -17436,6 +17861,14 @@ export class TListViewH extends TWidget {
  *
  *可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。
  *
+ *备注：list_view 下的 scroll_view 控件不支持遍历所有子控件的效果。
+ *
+ *下面是针对 scroll_bar_d （桌面版）有效果，scroll_bar_m（移动版）没有效果。
+ *如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 TRUE，scroll_view 宽默认为 list_view 的 100% 宽，鼠标在 list_view 上滚动条才显示，不在的就自动隐藏，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽不会变。
+ *如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 FALSE ，scroll_view 宽默认为 list_view 的 100% 宽，滚动条不隐藏，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽不会变。
+ *如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 FALSE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可用，scroll_view 宽不会变。
+ *如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 TRUE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽会合并原来滚动条的宽。
+ *
  */
 export class TListView extends TWidget { 
  public nativeObj : any;
@@ -17493,6 +17926,18 @@ export class TListView extends TWidget {
    */
  setAutoHideScrollBar(auto_hide_scroll_bar : boolean) : TRet  {
     return list_view_set_auto_hide_scroll_bar(this != null ? (this.nativeObj || this) : null, auto_hide_scroll_bar);
+ }
+
+
+  /**
+   * 设置滚动条是否悬浮在 scroll_view 上面。
+   * 
+   * @param floating_scroll_bar 滚动条是否悬浮在 scroll_view 上面。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setFloatingScrollBar(floating_scroll_bar : boolean) : TRet  {
+    return list_view_set_floating_scroll_bar(this != null ? (this.nativeObj || this) : null, floating_scroll_bar);
  }
 
 
@@ -17555,6 +18000,19 @@ export class TListView extends TWidget {
 
  set autoHideScrollBar(v : boolean) {
    this.setAutoHideScrollBar(v);
+ }
+
+
+  /**
+   * 滚动条是否悬浮在 scroll_view 上面
+   *
+   */
+ get floatingScrollBar() : boolean {
+   return list_view_t_get_prop_floating_scroll_bar(this.nativeObj);
+ }
+
+ set floatingScrollBar(v : boolean) {
+   this.setFloatingScrollBar(v);
  }
 
 };
@@ -17916,6 +18374,43 @@ export class TScrollView extends TWidget {
 
 
   /**
+   * 设置滚动时是否每次翻一页
+   *备注：当 snap_to_page 为ture 的时候才有效果，主要用于区分一次翻一页还是一次翻多页。
+   * 
+   * @param move_to_page 是否每次翻一页。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setMoveToPage(move_to_page : boolean) : TRet  {
+    return scroll_view_set_move_to_page(this != null ? (this.nativeObj || this) : null, move_to_page);
+ }
+
+
+  /**
+   * 设置是否递归查找全部子控件。
+   * 
+   * @param recursive 是否递归查找全部子控件。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setRecursive(recursive : boolean) : TRet  {
+    return scroll_view_set_recursive(this != null ? (this.nativeObj || this) : null, recursive);
+ }
+
+
+  /**
+   * 设置是否递归查找全部子控件。(不触发repaint和relayout)。
+   * 
+   * @param recursive 是否递归查找全部子控件。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setRecursiveOnly(recursive : boolean) : TRet  {
+    return scroll_view_set_recursive_only(this != null ? (this.nativeObj || this) : null, recursive);
+ }
+
+
+  /**
    * 设置偏移量。
    * 
    * @param xoffset x偏移量。
@@ -18067,6 +18562,32 @@ export class TScrollView extends TWidget {
 
  set snapToPage(v : boolean) {
    this.setSnapToPage(v);
+ }
+
+
+  /**
+   * 是否每次翻一页（当 move_to_page 为ture 的时候才有效果，主要用于区分一次翻一页还是一次翻多页）。
+   *
+   */
+ get moveToPage() : boolean {
+   return scroll_view_t_get_prop_move_to_page(this.nativeObj);
+ }
+
+ set moveToPage(v : boolean) {
+   this.setMoveToPage(v);
+ }
+
+
+  /**
+   * 是否递归查找全部子控件。
+   *
+   */
+ get recursive() : boolean {
+   return scroll_view_t_get_prop_recursive(this.nativeObj);
+ }
+
+ set recursive(v : boolean) {
+   this.setRecursive(v);
  }
 
 };
@@ -18997,6 +19518,21 @@ export class TTextSelector extends TWidget {
    * @param start 起始值。
    * @param nr 个数。
    * @param step 步长。
+   * @param format 选项的格式化。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setRangeOptionsEx(start : number, nr : number, step : number, format : string) : TRet  {
+    return text_selector_set_range_options_ex(this != null ? (this.nativeObj || this) : null, start, nr, step, format);
+ }
+
+
+  /**
+   * 设置一系列的整数选项。
+   * 
+   * @param start 起始值。
+   * @param nr 个数。
+   * @param step 步长。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -19743,7 +20279,7 @@ export class TCmdExecEvent extends TEvent {
 
 
   /**
-   * 执行结果(适用于CAN_EXEC)。
+   * 标识命令是否可以执行(适用于CAN_EXEC)。
    *
    */
  get canExec() : boolean {
@@ -21144,6 +21680,104 @@ export class TEdit extends TWidget {
 
 
   /**
+   * 输入提示。
+   *
+   */
+ get tips() : string {
+   return edit_t_get_prop_tips(this.nativeObj);
+ }
+
+ set tips(v : string) {
+   this.setTips(v);
+ }
+
+
+  /**
+   * 保存用于翻译的提示信息。
+   *
+   */
+ get trTips() : string {
+   return edit_t_get_prop_tr_tips(this.nativeObj);
+ }
+
+ set trTips(v : string) {
+   this.setTrTips(v);
+ }
+
+
+  /**
+   * 软键盘上action按钮的文本。内置取值有：
+   *
+   ** next 将焦点切换到下一个控件。
+   ** done 完成，关闭软键盘。
+   *
+   *也可以使用其它文本，比如send表示发送。这个需要自己实现相应的功能，处理EVT\_IM\_ACTION事件即可。
+   *
+   */
+ get actionText() : string {
+   return edit_t_get_prop_action_text(this.nativeObj);
+ }
+
+ set actionText(v : string) {
+   this.setActionText(v);
+ }
+
+
+  /**
+   * 自定义软键盘名称。AWTK优先查找keyboard属性设置的键盘文件名（该键盘的XML文件需要在default\raw\ui目录下存在），如果keyboard为空就找input_type设置的键盘类型
+   *
+   */
+ get keyboard() : string {
+   return edit_t_get_prop_keyboard(this.nativeObj);
+ }
+
+ set keyboard(v : string) {
+   this.setKeyboard(v);
+ }
+
+
+  /**
+   * 最小值或最小长度。
+   *
+   */
+ get min() : number {
+   return edit_t_get_prop_min(this.nativeObj);
+ }
+
+
+  /**
+   * 最大值或最大长度。
+   *
+   */
+ get max() : number {
+   return edit_t_get_prop_max(this.nativeObj);
+ }
+
+
+  /**
+   * 步长。
+   *作为数值型编辑器时，一次增加和减少时的数值。
+   *
+   */
+ get step() : number {
+   return edit_t_get_prop_step(this.nativeObj);
+ }
+
+
+  /**
+   * 输入类型。
+   *
+   */
+ get inputType() : TInputType {
+   return edit_t_get_prop_input_type(this.nativeObj);
+ }
+
+ set inputType(v : TInputType) {
+   this.setInputType(v);
+ }
+
+
+  /**
    * 编辑器是否为只读。
    *
    */
@@ -21222,140 +21856,6 @@ export class TEdit extends TWidget {
 
  set closeImWhenBlured(v : boolean) {
    this.setCloseImWhenBlured(v);
- }
-
-
-  /**
-   * 上边距。
-   *
-   */
- get topMargin() : number {
-   return edit_t_get_prop_top_margin(this.nativeObj);
- }
-
-
-  /**
-   * 下边距。
-   *
-   */
- get bottomMargin() : number {
-   return edit_t_get_prop_bottom_margin(this.nativeObj);
- }
-
-
-  /**
-   * 左边距。
-   *
-   */
- get leftMargin() : number {
-   return edit_t_get_prop_left_margin(this.nativeObj);
- }
-
-
-  /**
-   * 右边距。
-   *
-   */
- get rightMargin() : number {
-   return edit_t_get_prop_right_margin(this.nativeObj);
- }
-
-
-  /**
-   * 输入提示。
-   *
-   */
- get tips() : string {
-   return edit_t_get_prop_tips(this.nativeObj);
- }
-
- set tips(v : string) {
-   this.setTips(v);
- }
-
-
-  /**
-   * 保存用于翻译的提示信息。
-   *
-   */
- get trTips() : string {
-   return edit_t_get_prop_tr_tips(this.nativeObj);
- }
-
- set trTips(v : string) {
-   this.setTrTips(v);
- }
-
-
-  /**
-   * 软键盘上action按钮的文本。内置取值有：
-   *
-   ** next 将焦点切换到下一个控件。
-   ** done 完成，关闭软键盘。
-   *
-   *也可以使用其它文本，比如send表示发送。这个需要自己实现相应的功能，处理EVT\_IM\_ACTION事件即可。
-   *
-   */
- get actionText() : string {
-   return edit_t_get_prop_action_text(this.nativeObj);
- }
-
- set actionText(v : string) {
-   this.setActionText(v);
- }
-
-
-  /**
-   * 自定义软键盘名称。AWTK优先查找keyboard属性设置的键盘文件名（该键盘的XML文件需要在default\raw\ui目录下存在），如果keyboard为空就找input_type设置的键盘类型
-   *
-   */
- get keyboard() : string {
-   return edit_t_get_prop_keyboard(this.nativeObj);
- }
-
- set keyboard(v : string) {
-   this.setKeyboard(v);
- }
-
-
-  /**
-   * 输入类型。
-   *
-   */
- get inputType() : TInputType {
-   return edit_t_get_prop_input_type(this.nativeObj);
- }
-
- set inputType(v : TInputType) {
-   this.setInputType(v);
- }
-
-
-  /**
-   * 最小值或最小长度。
-   *
-   */
- get min() : number {
-   return edit_t_get_prop_min(this.nativeObj);
- }
-
-
-  /**
-   * 最大值或最大长度。
-   *
-   */
- get max() : number {
-   return edit_t_get_prop_max(this.nativeObj);
- }
-
-
-  /**
-   * 步长。
-   *作为数值型编辑器时，一次增加和减少时的数值。
-   *
-   */
- get step() : number {
-   return edit_t_get_prop_step(this.nativeObj);
  }
 
 
@@ -21664,9 +22164,9 @@ export class TLabel extends TWidget {
 
 
   /**
-   * 设置是否允许单词中换行。(需要开启自动换行才有效果)
+   * 设置是否允许整个单词换行。(需要开启自动换行才有效果)
    * 
-   * @param word_wrap 是否允许单词中换行。
+   * @param word_wrap 是否允许整个单词换行。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -21730,7 +22230,7 @@ export class TLabel extends TWidget {
 
 
   /**
-   * 是否允许单词中换行。(需要开启自动换行才有效果)
+   * 是否允许整个单词换行。(需要开启自动换行才有效果)
    *
    */
  get wordWrap() : boolean {
@@ -23315,7 +23815,7 @@ export class TWindow extends TWindowBase {
   /**
    * 设置为全屏窗口。
    *
-   *>这里全屏是指与LCD相同大小，而非让SDL窗口全屏。
+   *>如果app_type是SIMULATOR，全屏是指与LCD相同大小，而非让SDL窗口全屏。
    * 
    * @param fullscreen 是否全屏。
    *
@@ -23323,6 +23823,21 @@ export class TWindow extends TWindowBase {
    */
  setFullscreen(fullscreen : boolean) : TRet  {
     return window_set_fullscreen(this != null ? (this.nativeObj || this) : null, fullscreen);
+ }
+
+
+  /**
+   * 当设计分辨率和实际分辨率不一致时，自动调整子控件的位置和大小。
+   *
+   *> 当子控件有self_layout参数或者子控件的父控件有children_layout参数时，不会自动调整。
+   * 
+   * @param design_w 设计时宽度。
+   * @param design_h 设计时高度。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setAutoScaleChildren(design_w : number, design_h : number) : TRet  {
+    return window_set_auto_scale_children(this != null ? (this.nativeObj || this) : null, design_w, design_h);
  }
 
 
