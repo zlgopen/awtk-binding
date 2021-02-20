@@ -6014,6 +6014,14 @@ JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1overlay(JNIEnv* env,  j
   return (jboolean)(ret);
 }
 
+JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1opened_1dialog(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  bool_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (bool_t)widget_is_opened_dialog(widget);
+
+  return (jboolean)(ret);
+}
+
 JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1opened_1popup(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
   bool_t ret;
   widget_t* widget = (widget_t*)jwidget;

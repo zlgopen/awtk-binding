@@ -13660,6 +13660,23 @@ jsvalue_t wrap_widget_is_overlay(
   return jret;
 }
 
+jsvalue_t wrap_widget_is_opened_dialog(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  bool_t ret = (bool_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  ret = (bool_t)widget_is_opened_dialog(widget);
+
+  jret = jsvalue_create_bool(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_widget_is_opened_popup(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -14629,6 +14646,8 @@ ret_t widget_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_widget_is_popup, "widget_is_popup", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_is_overlay",
                       JS_NewCFunction(ctx, wrap_widget_is_overlay, "widget_is_overlay", 1));
+  JS_SetPropertyStr(ctx, global_obj, "widget_is_opened_dialog",
+                      JS_NewCFunction(ctx, wrap_widget_is_opened_dialog, "widget_is_opened_dialog", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_is_opened_popup",
                       JS_NewCFunction(ctx, wrap_widget_is_opened_popup, "widget_is_opened_popup", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_is_keyboard",

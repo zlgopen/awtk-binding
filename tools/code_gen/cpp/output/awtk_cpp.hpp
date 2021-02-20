@@ -4,6 +4,7 @@
 #include "tkc/rlog.h"
 #include "conf_io/app_conf.h"
 class TValue;
+class TTheme;
 class TRect;
 class TObject;
 class TEmitter;
@@ -3757,6 +3758,14 @@ public:
    * @return 返回FALSE表示不是，否则表示是。
    */
   bool IsOverlay() ;
+
+  /**
+   * 检查控件弹出对话框控件是否已经打开了（而非挂起状态）。
+   * 
+   *
+   * @return 返回FALSE表示不是，否则表示是。
+   */
+  bool IsOpenedDialog() ;
 
   /**
    * 检查控件弹出窗口控件是否已经打开了（而非挂起状态）。

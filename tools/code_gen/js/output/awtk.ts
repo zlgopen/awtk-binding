@@ -955,6 +955,7 @@ declare function widget_is_normal_window(widget : any) : boolean;
 declare function widget_is_dialog(widget : any) : boolean;
 declare function widget_is_popup(widget : any) : boolean;
 declare function widget_is_overlay(widget : any) : boolean;
+declare function widget_is_opened_dialog(widget : any) : boolean;
 declare function widget_is_opened_popup(widget : any) : boolean;
 declare function widget_is_keyboard(widget : any) : boolean;
 declare function widget_is_designing_window(widget : any) : boolean;
@@ -10399,6 +10400,17 @@ export class TWidget {
    */
  isOverlay() : boolean  {
     return widget_is_overlay(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 检查控件弹出对话框控件是否已经打开了（而非挂起状态）。
+   * 
+   *
+   * @returns 返回FALSE表示不是，否则表示是。
+   */
+ isOpenedDialog() : boolean  {
+    return widget_is_opened_dialog(this != null ? (this.nativeObj || this) : null);
  }
 
 

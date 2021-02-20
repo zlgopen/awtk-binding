@@ -942,6 +942,17 @@ public class TWidget {
 
 
   /**
+   * 检查控件弹出对话框控件是否已经打开了（而非挂起状态）。
+   * 
+   *
+   * @return 返回FALSE表示不是，否则表示是。
+   */
+ public  boolean isOpenedDialog()  {
+    return widget_is_opened_dialog(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
    * 检查控件弹出窗口控件是否已经打开了（而非挂起状态）。
    * 
    *
@@ -1595,6 +1606,7 @@ static private native boolean widget_is_normal_window(long widget);
 static private native boolean widget_is_dialog(long widget);
 static private native boolean widget_is_popup(long widget);
 static private native boolean widget_is_overlay(long widget);
+static private native boolean widget_is_opened_dialog(long widget);
 static private native boolean widget_is_opened_popup(long widget);
 static private native boolean widget_is_keyboard(long widget);
 static private native boolean widget_is_designing_window(long widget);

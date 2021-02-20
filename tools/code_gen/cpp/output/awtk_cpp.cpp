@@ -1327,6 +1327,10 @@
     return widget_is_overlay(((widget_t*)(this->nativeObj)));
  }
 
+ bool TWidget::IsOpenedDialog()  {
+    return widget_is_opened_dialog(((widget_t*)(this->nativeObj)));
+ }
+
  bool TWidget::IsOpenedPopup()  {
     return widget_is_opened_popup(((widget_t*)(this->nativeObj)));
  }

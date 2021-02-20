@@ -8945,6 +8945,17 @@ int awtk_TWidget_widget_is_overlay(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TWidget_widget_is_opened_dialog(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  bool_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  ret = (bool_t)widget_is_opened_dialog(widget);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TWidget_widget_is_opened_popup(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -20897,6 +20908,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidget",  "widget_is_dialog",  "(J)Z",  awtk_TWidget_widget_is_dialog},
 {"awtk/TWidget",  "widget_is_popup",  "(J)Z",  awtk_TWidget_widget_is_popup},
 {"awtk/TWidget",  "widget_is_overlay",  "(J)Z",  awtk_TWidget_widget_is_overlay},
+{"awtk/TWidget",  "widget_is_opened_dialog",  "(J)Z",  awtk_TWidget_widget_is_opened_dialog},
 {"awtk/TWidget",  "widget_is_opened_popup",  "(J)Z",  awtk_TWidget_widget_is_opened_popup},
 {"awtk/TWidget",  "widget_is_keyboard",  "(J)Z",  awtk_TWidget_widget_is_keyboard},
 {"awtk/TWidget",  "widget_is_designing_window",  "(J)Z",  awtk_TWidget_widget_is_designing_window},

@@ -11109,6 +11109,20 @@ static void wrap_widget_is_overlay(const Nan::FunctionCallbackInfo<v8::Value>& a
   (void)argc;(void)ctx;
 }
 
+static void wrap_widget_is_opened_dialog(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 1) {
+  bool_t ret = (bool_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  ret = (bool_t)widget_is_opened_dialog(widget);
+
+  v8::Local<v8::Boolean> jret= Nan::New((bool)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_widget_is_opened_popup(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -11870,6 +11884,7 @@ ret_t widget_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "widget_is_dialog", wrap_widget_is_dialog);
   Nan::Export(ctx, "widget_is_popup", wrap_widget_is_popup);
   Nan::Export(ctx, "widget_is_overlay", wrap_widget_is_overlay);
+  Nan::Export(ctx, "widget_is_opened_dialog", wrap_widget_is_opened_dialog);
   Nan::Export(ctx, "widget_is_opened_popup", wrap_widget_is_opened_popup);
   Nan::Export(ctx, "widget_is_keyboard", wrap_widget_is_keyboard);
   Nan::Export(ctx, "widget_is_designing_window", wrap_widget_is_designing_window);

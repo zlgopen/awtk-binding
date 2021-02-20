@@ -134,6 +134,7 @@ class CppIntfGenerator extends CppGenerator {
     this.result += '#include "conf_io/app_conf.h"\n';
 
     this.result += 'class TValue;\n';
+    this.result += 'class TTheme;\n';
     this.result += 'class TRect;\n';
     this.result += 'class TObject;\n';
     this.result += 'class TEmitter;\n';

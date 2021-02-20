@@ -7140,6 +7140,19 @@ pyobject_t wrap_widget_is_overlay(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("b", ret);
 }
 
+pyobject_t wrap_widget_is_opened_dialog(pyobject_t self, pyobject_t pyargs) {
+  bool_t ret = 0;
+  widget_t* widget = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&" , &parse_voidp, &widget)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (bool_t)widget_is_opened_dialog(widget);
+  return Py_BuildValue("b", ret);
+}
+
 pyobject_t wrap_widget_is_opened_popup(pyobject_t self, pyobject_t pyargs) {
   bool_t ret = 0;
   widget_t* widget = NULL;
@@ -19895,6 +19908,7 @@ static PyMethodDef awtk_methods[] = {
 {"widget_is_dialog", wrap_widget_is_dialog, METH_VARARGS, "widget_is_dialog"},
 {"widget_is_popup", wrap_widget_is_popup, METH_VARARGS, "widget_is_popup"},
 {"widget_is_overlay", wrap_widget_is_overlay, METH_VARARGS, "widget_is_overlay"},
+{"widget_is_opened_dialog", wrap_widget_is_opened_dialog, METH_VARARGS, "widget_is_opened_dialog"},
 {"widget_is_opened_popup", wrap_widget_is_opened_popup, METH_VARARGS, "widget_is_opened_popup"},
 {"widget_is_keyboard", wrap_widget_is_keyboard, METH_VARARGS, "widget_is_keyboard"},
 {"widget_is_designing_window", wrap_widget_is_designing_window, METH_VARARGS, "widget_is_designing_window"},

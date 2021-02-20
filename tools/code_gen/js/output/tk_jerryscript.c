@@ -13631,6 +13631,24 @@ jsvalue_t wrap_widget_is_overlay(
   return jret;
 }
 
+jsvalue_t wrap_widget_is_opened_dialog(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  bool_t ret = (bool_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  ret = (bool_t)widget_is_opened_dialog(widget);
+
+  jret = jsvalue_create_bool(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_widget_is_opened_popup(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -14580,6 +14598,7 @@ ret_t widget_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"widget_is_dialog", wrap_widget_is_dialog);
   jerryx_handler_register_global((const jerry_char_t*)"widget_is_popup", wrap_widget_is_popup);
   jerryx_handler_register_global((const jerry_char_t*)"widget_is_overlay", wrap_widget_is_overlay);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_is_opened_dialog", wrap_widget_is_opened_dialog);
   jerryx_handler_register_global((const jerry_char_t*)"widget_is_opened_popup", wrap_widget_is_opened_popup);
   jerryx_handler_register_global((const jerry_char_t*)"widget_is_keyboard", wrap_widget_is_keyboard);
   jerryx_handler_register_global((const jerry_char_t*)"widget_is_designing_window", wrap_widget_is_designing_window);

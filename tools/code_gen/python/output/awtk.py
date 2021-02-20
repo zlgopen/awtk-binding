@@ -8052,6 +8052,16 @@ class TWidget(object):
 
 
   #
+  # 检查控件弹出对话框控件是否已经打开了（而非挂起状态）。
+  # 
+  #
+  # @return 返回FALSE表示不是，否则表示是。
+  #
+  def is_opened_dialog(self): 
+    return widget_is_opened_dialog(awtk_get_native_obj(self));
+
+
+  #
   # 检查控件弹出窗口控件是否已经打开了（而非挂起状态）。
   # 
   #
