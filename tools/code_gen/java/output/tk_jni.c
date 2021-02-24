@@ -2276,6 +2276,13 @@ JNIEXPORT jint JNICALL Java_awtk_TIdle_idle_1remove(JNIEnv* env,  jclass ajc, ji
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TIdle_idle_1remove_1all_1by_1ctx(JNIEnv* env,  jclass ajc, jlong ctx) { /*func*/
+  ret_t ret;
+  ret = (ret_t)idle_remove_all_by_ctx(ctx);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jlong JNICALL Java_awtk_TImageManager_image_1manager(JNIEnv* env,  jclass ajc) { /*func*/
   image_manager_t* ret;
   ret = (image_manager_t*)image_manager();
@@ -3474,6 +3481,13 @@ JNIEXPORT jlong JNICALL Java_awtk_TTheme_theme(JNIEnv* env,  jclass ajc) { /*fun
 JNIEXPORT jint JNICALL Java_awtk_TTimer_timer_1remove(JNIEnv* env,  jclass ajc, jint timer_id) { /*func*/
   ret_t ret;
   ret = (ret_t)timer_remove(timer_id);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TTimer_timer_1remove_1all_1by_1ctx(JNIEnv* env,  jclass ajc, jlong ctx) { /*func*/
+  ret_t ret;
+  ret = (ret_t)timer_remove_all_by_ctx(ctx);
 
   return (jint)(ret);
 }

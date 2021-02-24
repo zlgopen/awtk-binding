@@ -5176,12 +5176,31 @@ jsvalue_t wrap_idle_remove(
   return jret;
 }
 
+jsvalue_t wrap_idle_remove_all_by_ctx(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  ret_t ret = (ret_t)0;
+  void* ctx =  NULL;
+  ret = (ret_t)idle_remove_all_by_ctx(ctx);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 ret_t idle_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
   JS_SetPropertyStr(ctx, global_obj, "idle_add",
                       JS_NewCFunction(ctx, wrap_idle_add, "idle_add", 1));
   JS_SetPropertyStr(ctx, global_obj, "idle_remove",
                       JS_NewCFunction(ctx, wrap_idle_remove, "idle_remove", 1));
+  JS_SetPropertyStr(ctx, global_obj, "idle_remove_all_by_ctx",
+                      JS_NewCFunction(ctx, wrap_idle_remove_all_by_ctx, "idle_remove_all_by_ctx", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -7899,6 +7918,23 @@ jsvalue_t wrap_timer_remove(
   return jret;
 }
 
+jsvalue_t wrap_timer_remove_all_by_ctx(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  ret_t ret = (ret_t)0;
+  void* ctx =  NULL;
+  ret = (ret_t)timer_remove_all_by_ctx(ctx);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_timer_reset(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -7974,6 +8010,8 @@ ret_t timer_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_timer_add, "timer_add", 1));
   JS_SetPropertyStr(ctx, global_obj, "timer_remove",
                       JS_NewCFunction(ctx, wrap_timer_remove, "timer_remove", 1));
+  JS_SetPropertyStr(ctx, global_obj, "timer_remove_all_by_ctx",
+                      JS_NewCFunction(ctx, wrap_timer_remove_all_by_ctx, "timer_remove_all_by_ctx", 1));
   JS_SetPropertyStr(ctx, global_obj, "timer_reset",
                       JS_NewCFunction(ctx, wrap_timer_reset, "timer_reset", 1));
   JS_SetPropertyStr(ctx, global_obj, "timer_suspend",

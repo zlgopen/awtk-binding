@@ -5153,9 +5153,28 @@ jsvalue_t wrap_idle_remove(
   return jret;
 }
 
+jsvalue_t wrap_idle_remove_all_by_ctx(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  ret_t ret = (ret_t)0;
+  void* ctx =  NULL;
+  ret = (ret_t)idle_remove_all_by_ctx(ctx);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 ret_t idle_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"idle_add", wrap_idle_add);
   jerryx_handler_register_global((const jerry_char_t*)"idle_remove", wrap_idle_remove);
+  jerryx_handler_register_global((const jerry_char_t*)"idle_remove_all_by_ctx", wrap_idle_remove_all_by_ctx);
 
  return RET_OK;
 }
@@ -7848,6 +7867,24 @@ jsvalue_t wrap_timer_remove(
   return jret;
 }
 
+jsvalue_t wrap_timer_remove_all_by_ctx(
+    const jerry_value_t func_obj_val, 
+    const jerry_value_t this_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  ret_t ret = (ret_t)0;
+  void* ctx =  NULL;
+  ret = (ret_t)timer_remove_all_by_ctx(ctx);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_timer_reset(
     const jerry_value_t func_obj_val, 
     const jerry_value_t this_p, 
@@ -7924,6 +7961,7 @@ jsvalue_t wrap_timer_modify(
 ret_t timer_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"timer_add", wrap_timer_add);
   jerryx_handler_register_global((const jerry_char_t*)"timer_remove", wrap_timer_remove);
+  jerryx_handler_register_global((const jerry_char_t*)"timer_remove_all_by_ctx", wrap_timer_remove_all_by_ctx);
   jerryx_handler_register_global((const jerry_char_t*)"timer_reset", wrap_timer_reset);
   jerryx_handler_register_global((const jerry_char_t*)"timer_suspend", wrap_timer_suspend);
   jerryx_handler_register_global((const jerry_char_t*)"timer_resume", wrap_timer_resume);

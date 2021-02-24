@@ -80,6 +80,8 @@ $(function() {
 <tr class="separator:a61d4d292d7ae2cca6e169a3e08dc4ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa98fdd8bd7ea95cc0efaf28d68c7807d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_timer.html#aa98fdd8bd7ea95cc0efaf28d68c7807d">remove</a> (int timer_id)</td></tr>
 <tr class="separator:aa98fdd8bd7ea95cc0efaf28d68c7807d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b2e97a86b452b78565e01aaf1eba33b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_timer.html#a7b2e97a86b452b78565e01aaf1eba33b">removeAllByCtx</a> (long ctx)</td></tr>
+<tr class="separator:a7b2e97a86b452b78565e01aaf1eba33b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e60d742d29ccbe48e3a285ce497822d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_timer.html#a6e60d742d29ccbe48e3a285ce497822d">reset</a> (int timer_id)</td></tr>
 <tr class="separator:a6e60d742d29ccbe48e3a285ce497822d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1349afbce0b3d21cba676da7370992d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_timer.html#ab1349afbce0b3d21cba676da7370992d">suspend</a> (int timer_id)</td></tr>
@@ -223,6 +225,40 @@ $(function() {
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">timer_id</td><td>timerID。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a7b2e97a86b452b78565e01aaf1eba33b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b2e97a86b452b78565e01aaf1eba33b">&#9670;&nbsp;</a></span>removeAllByCtx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TTimer.removeAllByCtx </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>根据上下文删除所有对应的timer。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>timer回调函数的上下文。</td></tr>
   </table>
   </dd>
 </dl>

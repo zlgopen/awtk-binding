@@ -78,6 +78,8 @@ $(function() {
 <tr class="separator:a7570bd60aa957b566bd93726697c9162"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40e7fb637864da595ef891ebebf4c9f8"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_timer.html#a40e7fb637864da595ef891ebebf4c9f8">Remove</a> (uint32_t timer_id)</td></tr>
 <tr class="separator:a40e7fb637864da595ef891ebebf4c9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7c287bf5d44fdbcb2869f447f7401af"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_timer.html#ad7c287bf5d44fdbcb2869f447f7401af">RemoveAllByCtx</a> (void *ctx)</td></tr>
+<tr class="separator:ad7c287bf5d44fdbcb2869f447f7401af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc9845f46017626f309008a839cbfdae"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_timer.html#afc9845f46017626f309008a839cbfdae">Reset</a> (uint32_t timer_id)</td></tr>
 <tr class="separator:afc9845f46017626f309008a839cbfdae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0ba05cb473205282845daa40bfb6b8c"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_timer.html#ae0ba05cb473205282845daa40bfb6b8c">Suspend</a> (uint32_t timer_id)</td></tr>
@@ -221,6 +223,40 @@ $(function() {
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">timer_id</td><td>timerID。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="ad7c287bf5d44fdbcb2869f447f7401af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7c287bf5d44fdbcb2869f447f7401af">&#9670;&nbsp;</a></span>RemoveAllByCtx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TTimer::RemoveAllByCtx </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>根据上下文删除所有对应的timer。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>timer回调函数的上下文。</td></tr>
   </table>
   </dd>
 </dl>

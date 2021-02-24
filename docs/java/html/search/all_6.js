@@ -198,7 +198,7 @@ var searchData=
   ['getrctrl_521',['getRctrl',['../classawtk_1_1_t_key_event.html#abc115e7105ad458d8a48c3eb50c23d59',1,'awtk::TKeyEvent']]],
   ['getreadonly_522',['getReadonly',['../classawtk_1_1_t_edit.html#a91b3675075a6b85b87ed51d9c5076e66',1,'awtk.TEdit.getReadonly()'],['../classawtk_1_1_t_mledit.html#a157ddef5498318de16eeb8d2bd585168',1,'awtk.TMledit.getReadonly()']]],
   ['getrecursive_523',['getRecursive',['../classawtk_1_1_t_scroll_view.html#a53e8c4a21421d332247a5c3b4e093a1f',1,'awtk::TScrollView']]],
-  ['getrefcount_524',['getRefCount',['../classawtk_1_1_t_object.html#adc23c7895bb580b17887fdc0794ba823',1,'awtk.TObject.getRefCount()'],['../classawtk_1_1_t_asset_info.html#a1a43c0c83b7ffcfc497f51b82a4b6aeb',1,'awtk.TAssetInfo.getRefcount()']]],
+  ['getrefcount_524',['getRefcount',['../classawtk_1_1_t_asset_info.html#a1a43c0c83b7ffcfc497f51b82a4b6aeb',1,'awtk.TAssetInfo.getRefcount()'],['../classawtk_1_1_t_object.html#adc23c7895bb580b17887fdc0794ba823',1,'awtk.TObject.getRefCount()']]],
   ['getrepeat_525',['getRepeat',['../classawtk_1_1_t_button.html#af0c47eccea136ab447293f70a3644b33',1,'awtk::TButton']]],
   ['getresult_526',['getResult',['../classawtk_1_1_t_cmd_exec_event.html#ae700750a9e8ed5a7aa65d1e892fd60c0',1,'awtk.TCmdExecEvent.getResult()'],['../classawtk_1_1_t_done_event.html#a6119b36a5a18c69096fe96410beed4b3',1,'awtk.TDoneEvent.getResult()']]],
   ['getreverse_527',['getReverse',['../classawtk_1_1_t_progress_bar.html#abfa39a07d97e516b0f33142a6c4b3553',1,'awtk::TProgressBar']]],

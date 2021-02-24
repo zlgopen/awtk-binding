@@ -4185,9 +4185,24 @@ static void wrap_idle_remove(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   (void)argc;(void)ctx;
 }
 
+static void wrap_idle_remove_all_by_ctx(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 1) {
+  ret_t ret = (ret_t)0;
+  void* ctx =  NULL;
+  ret = (ret_t)idle_remove_all_by_ctx(ctx);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 ret_t idle_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "idle_add", wrap_idle_add);
   Nan::Export(ctx, "idle_remove", wrap_idle_remove);
+  Nan::Export(ctx, "idle_remove_all_by_ctx", wrap_idle_remove_all_by_ctx);
 
  return RET_OK;
 }
@@ -6400,6 +6415,20 @@ static void wrap_timer_remove(const Nan::FunctionCallbackInfo<v8::Value>& argv) 
   (void)argc;(void)ctx;
 }
 
+static void wrap_timer_remove_all_by_ctx(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 1) {
+  ret_t ret = (ret_t)0;
+  void* ctx =  NULL;
+  ret = (ret_t)timer_remove_all_by_ctx(ctx);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_timer_reset(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -6460,6 +6489,7 @@ static void wrap_timer_modify(const Nan::FunctionCallbackInfo<v8::Value>& argv) 
 ret_t timer_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "timer_add", wrap_timer_add);
   Nan::Export(ctx, "timer_remove", wrap_timer_remove);
+  Nan::Export(ctx, "timer_remove_all_by_ctx", wrap_timer_remove_all_by_ctx);
   Nan::Export(ctx, "timer_reset", wrap_timer_reset);
   Nan::Export(ctx, "timer_suspend", wrap_timer_suspend);
   Nan::Export(ctx, "timer_resume", wrap_timer_resume);

@@ -4778,6 +4778,25 @@
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "void*",
+            "name": "ctx",
+            "desc": "idle回调函数的上下文"
+          }
+        ],
+        "annotation": {
+          "scriptable": true,
+          "static": true
+        },
+        "desc": "根据上下文删除所有对应的idle。",
+        "name": "idle_remove_all_by_ctx",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
       }
     ],
     "events": [],
@@ -6318,6 +6337,25 @@
         },
         "desc": "删除指定的timer。",
         "name": "timer_remove",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "void*",
+            "name": "ctx",
+            "desc": "timer回调函数的上下文。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true,
+          "static": true
+        },
+        "desc": "根据上下文删除所有对应的timer。",
+        "name": "timer_remove_all_by_ctx",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"

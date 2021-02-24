@@ -687,6 +687,10 @@
    return idle_remove(idle_id);
  }
 
+ ret_t TIdle::RemoveAllByCtx(void* ctx)  {
+   return idle_remove_all_by_ctx(ctx);
+ }
+
  TImageManager TImageManager::Instance()  {
    return TImageManager((image_manager_t*)(image_manager()));
  }
@@ -805,6 +809,10 @@
 
  ret_t TTimer::Remove(uint32_t timer_id)  {
    return timer_remove(timer_id);
+ }
+
+ ret_t TTimer::RemoveAllByCtx(void* ctx)  {
+   return timer_remove_all_by_ctx(ctx);
  }
 
  ret_t TTimer::Reset(uint32_t timer_id)  {

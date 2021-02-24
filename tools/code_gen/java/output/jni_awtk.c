@@ -3181,6 +3181,17 @@ int awtk_TIdle_idle_remove(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TIdle_idle_remove_all_by_ctx(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  void* ctx = (void*)jni_ctx_get_int64(&ctx);
+  ret = (ret_t)idle_remove_all_by_ctx(ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TImageManager_image_manager(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -5032,6 +5043,17 @@ int awtk_TTimer_timer_remove(Runtime *runtime, JClass *clazz) {
   ret_t ret = 0;
   uint32_t timer_id = (uint32_t)jni_ctx_get_int(&ctx);
   ret = (ret_t)timer_remove(timer_id);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TTimer_timer_remove_all_by_ctx(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  void* ctx = (void*)jni_ctx_get_int64(&ctx);
+  ret = (ret_t)timer_remove_all_by_ctx(ctx);
   jni_ctx_return_int(&ctx, (int32_t)(ret));
 
   return 0;
@@ -20275,6 +20297,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TGlyphFormat",  "GLYPH_FMT_RGBA",  "()I",  awtk_TGlyphFormat_GLYPH_FMT_RGBA},
 {"awtk/TIdle",  "idle_add",  "(Lawtk/TOnIdle;J)I",  awtk_TIdle_idle_add},
 {"awtk/TIdle",  "idle_remove",  "(I)I",  awtk_TIdle_idle_remove},
+{"awtk/TIdle",  "idle_remove_all_by_ctx",  "(J)I",  awtk_TIdle_idle_remove_all_by_ctx},
 {"awtk/TImageManager",  "image_manager",  "()J",  awtk_TImageManager_image_manager},
 {"awtk/TImageManager",  "image_manager_get_bitmap",  "(JLjava/lang/String;J)I",  awtk_TImageManager_image_manager_get_bitmap},
 {"awtk/TImageManager",  "image_manager_preload",  "(JLjava/lang/String;)I",  awtk_TImageManager_image_manager_preload},
@@ -20492,6 +20515,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TTheme",  "theme",  "()J",  awtk_TTheme_theme},
 {"awtk/TTimer",  "timer_add",  "(Lawtk/TOnTimer;JI)I",  awtk_TTimer_timer_add},
 {"awtk/TTimer",  "timer_remove",  "(I)I",  awtk_TTimer_timer_remove},
+{"awtk/TTimer",  "timer_remove_all_by_ctx",  "(J)I",  awtk_TTimer_timer_remove_all_by_ctx},
 {"awtk/TTimer",  "timer_reset",  "(I)I",  awtk_TTimer_timer_reset},
 {"awtk/TTimer",  "timer_suspend",  "(I)I",  awtk_TTimer_timer_suspend},
 {"awtk/TTimer",  "timer_resume",  "(I)I",  awtk_TTimer_timer_resume},

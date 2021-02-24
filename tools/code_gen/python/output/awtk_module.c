@@ -3008,6 +3008,19 @@ pyobject_t wrap_idle_remove(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", ret);
 }
 
+pyobject_t wrap_idle_remove_all_by_ctx(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  void* ctx = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&" , &parse_voidp, &ctx)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)idle_remove_all_by_ctx(ctx);
+  return Py_BuildValue("i", ret);
+}
+
 pyobject_t wrap_image_manager(pyobject_t self, pyobject_t pyargs) {
   image_manager_t* ret = NULL;
 
@@ -4153,6 +4166,19 @@ pyobject_t wrap_timer_remove(pyobject_t self, pyobject_t pyargs) {
   }
 
   ret = (ret_t)timer_remove(timer_id);
+  return Py_BuildValue("i", ret);
+}
+
+pyobject_t wrap_timer_remove_all_by_ctx(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  void* ctx = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&" , &parse_voidp, &ctx)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)timer_remove_all_by_ctx(ctx);
   return Py_BuildValue("i", ret);
 }
 
@@ -19275,6 +19301,7 @@ static PyMethodDef awtk_methods[] = {
 {"GLYPH_FMT_RGBA", get_GLYPH_FMT_RGBA, METH_VARARGS, "GLYPH_FMT_RGBA"},
 {"idle_add", wrap_idle_add, METH_VARARGS, "idle_add"},
 {"idle_remove", wrap_idle_remove, METH_VARARGS, "idle_remove"},
+{"idle_remove_all_by_ctx", wrap_idle_remove_all_by_ctx, METH_VARARGS, "idle_remove_all_by_ctx"},
 {"image_manager", wrap_image_manager, METH_VARARGS, "image_manager"},
 {"image_manager_get_bitmap", wrap_image_manager_get_bitmap, METH_VARARGS, "image_manager_get_bitmap"},
 {"image_manager_preload", wrap_image_manager_preload, METH_VARARGS, "image_manager_preload"},
@@ -19492,6 +19519,7 @@ static PyMethodDef awtk_methods[] = {
 {"theme", wrap_theme, METH_VARARGS, "theme"},
 {"timer_add", wrap_timer_add, METH_VARARGS, "timer_add"},
 {"timer_remove", wrap_timer_remove, METH_VARARGS, "timer_remove"},
+{"timer_remove_all_by_ctx", wrap_timer_remove_all_by_ctx, METH_VARARGS, "timer_remove_all_by_ctx"},
 {"timer_reset", wrap_timer_reset, METH_VARARGS, "timer_reset"},
 {"timer_suspend", wrap_timer_suspend, METH_VARARGS, "timer_suspend"},
 {"timer_resume", wrap_timer_resume, METH_VARARGS, "timer_resume"},

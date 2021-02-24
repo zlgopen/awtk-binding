@@ -53,7 +53,7 @@ var searchData=
   ['committext_198',['commitText',['../classawtk_1_1_t_input_method.html#a86c97d3b8557e45a5166ba141894a32e',1,'awtk::TInputMethod']]],
   ['compact_199',['COMPACT',['../enumawtk_1_1_t_widget_prop.html#a49c97359c35a7fda3d97223157809550',1,'awtk::TWidgetProp']]],
   ['compare_200',['compare',['../classawtk_1_1_t_object.html#ad0b41aa66511fcf8b19006e484034506',1,'awtk::TObject']]],
-  ['confirm_201',['confirm',['../classawtk_1_1_t_dialog.html#a054118d06f48982829bf86b93cc0cfab',1,'awtk.TDialog.confirm()'],['../enumawtk_1_1_t_window_closable.html#a9a6d8e789c8af697178fc9316cc0fe6b',1,'awtk.TWindowClosable.CONFIRM()']]],
+  ['confirm_201',['CONFIRM',['../enumawtk_1_1_t_window_closable.html#a9a6d8e789c8af697178fc9316cc0fe6b',1,'awtk.TWindowClosable.CONFIRM()'],['../classawtk_1_1_t_dialog.html#a054118d06f48982829bf86b93cc0cfab',1,'awtk.TDialog.confirm()']]],
   ['context_5fmenu_202',['CONTEXT_MENU',['../enumawtk_1_1_t_event_type.html#a995a0031ab5a724916bad46c0dc8f75d',1,'awtk::TEventType']]],
   ['continue_203',['CONTINUE',['../enumawtk_1_1_t_ret.html#a3aa0a77a32ea7f87c3ca4e2b0c8c89af',1,'awtk::TRet']]],
   ['copyprop_204',['copyProp',['../classawtk_1_1_t_object.html#a018aeba3eefe2f97c5b83287524b5eb4',1,'awtk::TObject']]],

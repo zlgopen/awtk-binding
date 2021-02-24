@@ -3475,10 +3475,21 @@ static int wrap_idle_remove(lua_State* L) {
   return 1;
 }
 
+static int wrap_idle_remove_all_by_ctx(lua_State* L) {
+  ret_t ret = 0;
+  void* ctx =  NULL;
+  ret = (ret_t)idle_remove_all_by_ctx(ctx);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 static void idle_t_init(lua_State* L) {
   static const struct luaL_Reg static_funcs[] = {
     {"add", wrap_idle_add},
     {"remove", wrap_idle_remove},
+    {"remove_all_by_ctx", wrap_idle_remove_all_by_ctx},
     {NULL, NULL}
   };
 
@@ -4837,6 +4848,16 @@ static int wrap_timer_remove(lua_State* L) {
   return 1;
 }
 
+static int wrap_timer_remove_all_by_ctx(lua_State* L) {
+  ret_t ret = 0;
+  void* ctx =  NULL;
+  ret = (ret_t)timer_remove_all_by_ctx(ctx);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 static int wrap_timer_reset(lua_State* L) {
   ret_t ret = 0;
   uint32_t timer_id = (uint32_t)luaL_checkinteger(L, 1);
@@ -4882,6 +4903,7 @@ static void timer_t_init(lua_State* L) {
   static const struct luaL_Reg static_funcs[] = {
     {"add", wrap_timer_add},
     {"remove", wrap_timer_remove},
+    {"remove_all_by_ctx", wrap_timer_remove_all_by_ctx},
     {"reset", wrap_timer_reset},
     {"suspend", wrap_timer_suspend},
     {"resume", wrap_timer_resume},

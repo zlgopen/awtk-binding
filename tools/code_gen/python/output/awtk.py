@@ -3053,6 +3053,18 @@ class TIdle(object):
     return idle_remove(idle_id);
 
 
+  #
+  # 根据上下文删除所有对应的idle。
+  # 
+  # @param ctx idle回调函数的上下文
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  @classmethod
+  def remove_all_by_ctx(cls, ctx): 
+    return idle_remove_all_by_ctx(ctx);
+
+
 #
 # 图片管理器。负责加载，解码和缓存图片。
 #
@@ -4611,6 +4623,18 @@ class TTimer(object):
   @classmethod
   def remove(cls, timer_id): 
     return timer_remove(timer_id);
+
+
+  #
+  # 根据上下文删除所有对应的timer。
+  # 
+  # @param ctx timer回调函数的上下文。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  @classmethod
+  def remove_all_by_ctx(cls, ctx): 
+    return timer_remove_all_by_ctx(ctx);
 
 
   #

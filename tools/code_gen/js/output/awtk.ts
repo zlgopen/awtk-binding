@@ -322,6 +322,7 @@ declare function GLYPH_FMT_MONO();
 declare function GLYPH_FMT_RGBA();
 declare function idle_add(on_idle : Function, ctx : any) : number;
 declare function idle_remove(idle_id : number) : TRet;
+declare function idle_remove_all_by_ctx(ctx : any) : TRet;
 declare function image_manager() : any;
 declare function image_manager_get_bitmap(imm : any, name : string, image : any) : TRet;
 declare function image_manager_preload(imm : any, name : string) : TRet;
@@ -539,6 +540,7 @@ declare function style_get_style_type(s : any) : string;
 declare function theme() : any;
 declare function timer_add(on_timer : Function, ctx : any, duration : number) : number;
 declare function timer_remove(timer_id : number) : TRet;
+declare function timer_remove_all_by_ctx(ctx : any) : TRet;
 declare function timer_reset(timer_id : number) : TRet;
 declare function timer_suspend(timer_id : number) : TRet;
 declare function timer_resume(timer_id : number) : TRet;
@@ -5222,6 +5224,18 @@ export class TIdle {
     return idle_remove(idle_id);
  }
 
+
+  /**
+   * 根据上下文删除所有对应的idle。
+   * 
+   * @param ctx idle回调函数的上下文
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ static removeAllByCtx(ctx : any) : TRet  {
+    return idle_remove_all_by_ctx(ctx);
+ }
+
 };
 /**
  * 图片管理器。负责加载，解码和缓存图片。
@@ -6820,6 +6834,18 @@ export class TTimer {
    */
  static remove(timer_id : number) : TRet  {
     return timer_remove(timer_id);
+ }
+
+
+  /**
+   * 根据上下文删除所有对应的timer。
+   * 
+   * @param ctx timer回调函数的上下文。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ static removeAllByCtx(ctx : any) : TRet  {
+    return timer_remove_all_by_ctx(ctx);
  }
 
 
