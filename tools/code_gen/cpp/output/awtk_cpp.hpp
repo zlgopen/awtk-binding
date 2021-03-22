@@ -4980,56 +4980,59 @@ public:
 
 
 /**
- * 仪表指针控件。
+ * 图片动画控件，指定一个图片前缀，依次显示指定序列的图片，从而形成动画效果。
  *
- *仪表指针就是一张旋转的图片，图片可以是普通图片也可以是SVG图片。
+ *图片序列可以用sequence指定，也可以用start\_index和end\_index指定一个范围。
  *
- *在嵌入式平台上，对于旋转的图片，SVG图片的效率比位图高数倍，所以推荐使用SVG图片。
+ *image\_animation\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于image\_animation\_t控件。
  *
- *guage\_pointer\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于guage\_pointer\_t控件。
- *
- *在xml中使用"guage\_pointer"标签创建仪表指针控件。如：
+ *在xml中使用"image\_animation"标签创建图片动画控件。如：
  *
  *```xml
- *<guage_pointer x="c" y="50" w="24" h="140" value="-128" image="guage_pointer" />
+ *<image_animation image="ani" start_index="1" end_index="9" auto_play="true" interval="50"
+ *delay="100"/>
  *```
  *
  *> 更多用法请参考：
- *[guage.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/guage.xml)
+ *[image_animation.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/image_animation.xml)
  *
- *在c代码中使用函数guage\_pointer\_create创建仪表指针控件。如：
+ *在c代码中使用函数image\_animation\_create创建图片动画控件。如：
  *
  *
- *> 创建之后，需要用guage\_pointer\_set\_image设置仪表指针图片。
+ *> 完整示例请参考：
+ *[image_animation
+ *demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/image_animation.c)
+ *
+ *可用通过style来设置控件的显示风格，如背景颜色和边框等等，不过一般情况并不需要。
  *
  */
-class TGuagePointer : public TWidget { 
+class TImageAnimation : public TWidget { 
 public:
-  TGuagePointer(widget_t* nativeObj) : TWidget(nativeObj) {
+  TImageAnimation(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
-  TGuagePointer(const guage_pointer_t* nativeObj) : TWidget((widget_t*)nativeObj) {
+  TImageAnimation(const image_animation_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
-  static TGuagePointer Cast(widget_t* nativeObj) {
-    return TGuagePointer(nativeObj);
+  static TImageAnimation Cast(widget_t* nativeObj) {
+    return TImageAnimation(nativeObj);
   }
 
-  static TGuagePointer Cast(const widget_t* nativeObj) {
-    return TGuagePointer((widget_t*)nativeObj);
+  static TImageAnimation Cast(const widget_t* nativeObj) {
+    return TImageAnimation((widget_t*)nativeObj);
   }
 
-  static TGuagePointer Cast(TWidget& obj) {
-    return TGuagePointer(obj.nativeObj);
+  static TImageAnimation Cast(TWidget& obj) {
+    return TImageAnimation(obj.nativeObj);
   }
 
-  static TGuagePointer Cast(const TWidget& obj) {
-    return TGuagePointer(obj.nativeObj);
+  static TImageAnimation Cast(const TWidget& obj) {
+    return TImageAnimation(obj.nativeObj);
   }
 
 
   /**
-   * 创建guage_pointer对象
+   * 创建image_animation对象
    * 
    * @param parent 父控件
    * @param x x坐标
@@ -5042,58 +5045,197 @@ public:
   static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
 
   /**
-   * 设置指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。
+   * 设置是否循环播放。
    * 
-   * @param angle 指针角度。
+   * @param loop 是否循环播放。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetAngle(int32_t angle) ;
+  ret_t SetLoop(bool loop) ;
 
   /**
-   * 设置指针的图片。
+   * 设置图片前缀。
    * 
-   * @param image 指针的图片。
+   * @param image 图片前缀。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t SetImage(const char* image) ;
 
   /**
-   * 设置指针的旋转锚点。
+   * 设置播放间隔时间。
    * 
-   * @param anchor_x 指针的锚点坐标x。(后面加上px为像素点，不加px为相对百分比坐标)
-   * @param anchor_y 指针的锚点坐标y。(后面加上px为像素点，不加px为相对百分比坐标)
+   * @param interval 间隔时间(毫秒)。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetAnchor(const char* anchor_x, const char* anchor_y) ;
+  ret_t SetInterval(uint32_t interval) ;
 
   /**
-   * 指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。
+   * 设置延迟播放时间(仅适用于自动播放)。
+   * 
+   * @param delay 延迟播放时间(毫秒)。
    *
+   * @return 返回RET_OK表示成功，否则表示失败。
    */
-  int32_t GetAngle() const;
+  ret_t SetDelay(uint32_t delay) ;
 
   /**
-   * 指针图片。
+   * 设置是否自动播放。
+   * 
+   * @param auto_play 是否自动播放。
    *
-   *图片须垂直向上，图片的中心点为旋转方向。
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetAutoPlay(bool auto_play) ;
+
+  /**
+   * 设置播放序列。比如image为"fire"，sequence为"12223", 将依次播放"fire1", "fire2", "fire2", "fire2",
+   *"fire3"。
+   * 
+   * @param sequence 播放序列。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetSequence(const char* sequence) ;
+
+  /**
+   * 设置播放序列。比如image为"fire"，start_index为0, end_index为99, 将依次播放"fire0", ...,
+   *"fire99"。
+   *
+   *若指定的图片不存在，则重复上一张图片。
+   * 
+   * @param start_index 图片起始序数。
+   * @param end_index 图片结束序数。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetRangeSequence(uint32_t start_index, uint32_t end_index) ;
+
+  /**
+   * 播放。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Play() ;
+
+  /**
+   * 停止(并重置index为-1)。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Stop() ;
+
+  /**
+   * 暂停。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Pause() ;
+
+  /**
+   * 手动切换到下一张图片。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Next() ;
+
+  /**
+   * 设置生成图片名的格式。
+   *
+   *XXX:生成图片名时，第一个参数是图片名前缀，第二个是序数，只能在此前提下设置格式。
+   *
+   *```
+   *const char* format = image_animation->format ? image_animation->format : "%s%d";
+   *tk_snprintf(name, TK_NAME_LEN, format, image_animation->image, image_animation->index);
+   *```
+   * 
+   * @param format 格式。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetFormat(const char* format) ;
+
+  /**
+   * 设置绘制完成后unload图片，以释放内存空间。
+   * 
+   * @param unload_after_paint 是否绘制完成后unload图片。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetUnloadAfterPaint(bool unload_after_paint) ;
+
+  /**
+   * 判断是否在播放。
+   * 
+   *
+   * @return 返回TRUE表示是，否则表示否。
+   */
+  bool IsPlaying() ;
+
+  /**
+   * 图片名称的前缀。
    *
    */
   char* GetImage() const;
 
   /**
-   * 图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
+   * 播放的序列，字符可选值为数字和英文大小写字母，字符可以重复。如：0123456789或者123123abcd。
    *
    */
-  char* GetAnchorX() const;
+  char* GetSequence() const;
 
   /**
-   * 图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
+   * 图片起始序数。
    *
    */
-  char* GetAnchorY() const;
+  uint32_t GetStartIndex() const;
+
+  /**
+   * 图片结束序数。
+   *
+   */
+  uint32_t GetEndIndex() const;
+
+  /**
+   * 是否循环播放。
+   *
+   */
+  bool GetLoop() const;
+
+  /**
+   * 是否自动播放。
+   *
+   */
+  bool GetAutoPlay() const;
+
+  /**
+   * 绘制完成后unload图片，以释放内存空间。
+   *
+   */
+  bool GetUnloadAfterPaint() const;
+
+  /**
+   * 索引到图片名转换时的格式，缺省为"%s%d"。
+   *
+   */
+  char* GetFormat() const;
+
+  /**
+   * 每张图片播放的时间(毫秒)。
+   *
+   */
+  uint32_t GetInterval() const;
+
+  /**
+   * 自动播放时延迟播放的时间(毫秒)。
+   *
+   */
+  uint32_t GetDelay() const;
 };
 
 
@@ -7973,6 +8115,121 @@ public:
 
 
 /**
+ * 勾选按钮控件(单选/多选)。
+ *
+ *check\_button\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于check\_button\_t控件。
+ *
+ *在xml中使用"check_button"标签创建多选按钮控件。如：
+ *
+ *```xml
+ *<check_button name="c1" text="Book"/>
+ *```
+ *
+ *在xml中使用"radio_button"标签创建单选按钮控件。如：
+ *
+ *```xml
+ *<radio_button name="r1" text="Book"/>
+ *```
+ *
+ *> 更多用法请参考：
+ *[button.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/basic.xml)
+ *
+ *在c代码中使用函数check\_button\_create创建多选按钮控件。如：
+ *
+ *
+ *在c代码中使用函数check\_button\_create\_radio创建单选按钮控件。如：
+ *
+ *
+ *> 完整示例请参考：
+ *[button demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/check_button.c)
+ *
+ *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
+ *
+ *```xml
+ *<style name="default" icon_at="left">
+ *<normal  icon="unchecked" />
+ *<pressed icon="unchecked" />
+ *<over    icon="unchecked" text_color="green"/>
+ *<normal_of_checked icon="checked" text_color="blue"/>
+ *<pressed_of_checked icon="checked" text_color="blue"/>
+ *<over_of_checked icon="checked" text_color="green"/>
+ *</style>
+ *```
+ *
+ *> 更多用法请参考：
+ *[theme
+ *default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L227)
+ *
+ */
+class TCheckButton : public TWidget { 
+public:
+  TCheckButton(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TCheckButton(const check_button_t* nativeObj) : TWidget((widget_t*)nativeObj) {
+  }
+
+  static TCheckButton Cast(widget_t* nativeObj) {
+    return TCheckButton(nativeObj);
+  }
+
+  static TCheckButton Cast(const widget_t* nativeObj) {
+    return TCheckButton((widget_t*)nativeObj);
+  }
+
+  static TCheckButton Cast(TWidget& obj) {
+    return TCheckButton(obj.nativeObj);
+  }
+
+  static TCheckButton Cast(const TWidget& obj) {
+    return TCheckButton(obj.nativeObj);
+  }
+
+
+  /**
+   * 创建多选按钮对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @return widget对象。
+   */
+  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
+
+  /**
+   * 创建单选按钮对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @return widget对象。
+   */
+  static  TWidget CreateRadio(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
+
+  /**
+   * 设置控件的值。
+   * 
+   * @param value 值(勾选为TRUE，非勾选为FALSE)。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetValue(bool value) ;
+
+  /**
+   * 值(勾选为TRUE，非勾选为FALSE)。
+   *
+   */
+  bool GetValue() const;
+};
+
+
+/**
  * 文本选择器控件，通常用于选择日期和时间等。
  *
  *> XXX: 目前需要先设置options和visible_nr，再设置其它参数(在XML中也需要按此顺序)。
@@ -8315,79 +8572,74 @@ public:
 
 
 /**
- * 勾选按钮控件(单选/多选)。
+ * 按钮控件。
  *
- *check\_button\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于check\_button\_t控件。
+ *点击按钮之后会触发EVT\_CLICK事件，注册EVT\_CLICK事件以执行特定操作。
  *
- *在xml中使用"check_button"标签创建多选按钮控件。如：
+ *按钮控件也可以作为容器使用，使用图片和文本作为其子控件，可以实现很多有趣的效果。
  *
- *```xml
- *<check_button name="c1" text="Book"/>
- *```
+ *button\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于button\_t控件。
  *
- *在xml中使用"radio_button"标签创建单选按钮控件。如：
+ *在xml中使用"button"标签创建按钮控件。如：
  *
  *```xml
- *<radio_button name="r1" text="Book"/>
+ *<button x="c" y="m" w="80" h="30" text="OK"/>
  *```
  *
  *> 更多用法请参考：
- *[button.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/basic.xml)
+ *[button.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/button.xml)
  *
- *在c代码中使用函数check\_button\_create创建多选按钮控件。如：
+ *在c代码中使用函数button\_create创建按钮控件。如：
  *
  *
- *在c代码中使用函数check\_button\_create\_radio创建单选按钮控件。如：
- *
+ *> 创建之后，需要用widget\_set\_text或widget\_set\_text\_utf8设置文本内容。
  *
  *> 完整示例请参考：
- *[button demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/check_button.c)
+ *[button demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/button.c)
  *
  *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
  *
  *```xml
- *<style name="default" icon_at="left">
- *<normal  icon="unchecked" />
- *<pressed icon="unchecked" />
- *<over    icon="unchecked" text_color="green"/>
- *<normal_of_checked icon="checked" text_color="blue"/>
- *<pressed_of_checked icon="checked" text_color="blue"/>
- *<over_of_checked icon="checked" text_color="green"/>
+ *<style name="default" border_color="#a0a0a0"  text_color="black">
+ *<normal     bg_color="#f0f0f0" />
+ *<pressed    bg_color="#c0c0c0" x_offset="1" y_offset="1"/>
+ *<over       bg_color="#e0e0e0" />
+ *<disable    bg_color="gray" text_color="#d0d0d0" />
  *</style>
  *```
  *
  *> 更多用法请参考：
  *[theme
- *default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L227)
+ *default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L31)
  *
  */
-class TCheckButton : public TWidget { 
+class TButton : public TWidget { 
 public:
-  TCheckButton(widget_t* nativeObj) : TWidget(nativeObj) {
+  TButton(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
-  TCheckButton(const check_button_t* nativeObj) : TWidget((widget_t*)nativeObj) {
+  TButton(const button_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
-  static TCheckButton Cast(widget_t* nativeObj) {
-    return TCheckButton(nativeObj);
+  static TButton Cast(widget_t* nativeObj) {
+    return TButton(nativeObj);
   }
 
-  static TCheckButton Cast(const widget_t* nativeObj) {
-    return TCheckButton((widget_t*)nativeObj);
+  static TButton Cast(const widget_t* nativeObj) {
+    return TButton((widget_t*)nativeObj);
   }
 
-  static TCheckButton Cast(TWidget& obj) {
-    return TCheckButton(obj.nativeObj);
+  static TButton Cast(TWidget& obj) {
+    return TButton(obj.nativeObj);
   }
 
-  static TCheckButton Cast(const TWidget& obj) {
-    return TCheckButton(obj.nativeObj);
+  static TButton Cast(const TWidget& obj) {
+    return TButton(obj.nativeObj);
   }
 
 
   /**
-   * 创建多选按钮对象
+   * 创建button对象
    * 
    * @param parent 父控件
    * @param x x坐标
@@ -8395,12 +8647,118 @@ public:
    * @param w 宽度
    * @param h 高度
    *
-   * @return widget对象。
+   * @return 对象。
    */
   static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
 
   /**
-   * 创建单选按钮对象
+   * 设置触发EVT\_CLICK事件的时间间隔。为0则不重复触发EVT\_CLICK事件。
+   * 
+   * @param repeat 触发EVT_CLICK事件的时间间隔(毫秒)。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetRepeat(int32_t repeat) ;
+
+  /**
+   * 设置触发长按事件的时间。
+   * 
+   * @param long_press_time 触发长按事件的时间(毫秒)。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetLongPressTime(uint32_t long_press_time) ;
+
+  /**
+   * 设置是否启用长按事件。
+   * 
+   * @param enable_long_press 是否启用长按事件。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetEnableLongPress(bool enable_long_press) ;
+
+  /**
+   * 重复触发EVT\_CLICK事件的时间间隔。
+   *
+   *为0则不重复触发EVT\_CLICK事件。
+   *
+   */
+  int32_t GetRepeat() const;
+
+  /**
+   * 是否启用长按事件，为true时才触发长按事件。
+   *
+   *触发长按事件后不再触发点击事件。
+   *缺省不启用。
+   *
+   */
+  bool GetEnableLongPress() const;
+
+  /**
+   * 触发长按事件的时间(ms)
+   *
+   */
+  uint32_t GetLongPressTime() const;
+};
+
+
+/**
+ * Button Group控件。一个简单的容器控件，用于容纳一组按钮控件。
+ *
+ *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
+ *子控件的布局可用layout\_children属性指定。
+ *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
+ *
+ *button\_group\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于button\_group\_t控件。
+ *
+ *在xml中使用"button\_group"标签创建button\_group。如：
+ *
+ *```xml
+ *<button_group x="0" y="m" w="100%" h="40" children_layout="default(c=4,r=1,s=5,m=5)">
+ *<button name="open:basic" text="Basic"/>
+ *<button name="open:button" text="Buttons"/>
+ *<button name="open:edit" text="Edits"/>
+ *<button name="open:keyboard" text="KeyBoard"/>
+ *</button_group>
+ *```
+ *
+ *可用通过style来设置控件的显示风格，如背景颜色等。如：
+ *
+ *```xml
+ *<style name="default" border_color="#a0a0a0">
+ *<normal     bg_color="#f0f0f0" />
+ *</style>
+ *```
+ *
+ */
+class TButtonGroup : public TWidget { 
+public:
+  TButtonGroup(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TButtonGroup(const button_group_t* nativeObj) : TWidget((widget_t*)nativeObj) {
+  }
+
+  static TButtonGroup Cast(widget_t* nativeObj) {
+    return TButtonGroup(nativeObj);
+  }
+
+  static TButtonGroup Cast(const widget_t* nativeObj) {
+    return TButtonGroup((widget_t*)nativeObj);
+  }
+
+  static TButtonGroup Cast(TWidget& obj) {
+    return TButtonGroup(obj.nativeObj);
+  }
+
+  static TButtonGroup Cast(const TWidget& obj) {
+    return TButtonGroup(obj.nativeObj);
+  }
+
+
+  /**
+   * 创建button_group对象
    * 
    * @param parent 父控件
    * @param x x坐标
@@ -8408,24 +8766,80 @@ public:
    * @param w 宽度
    * @param h 高度
    *
-   * @return widget对象。
+   * @return 对象。
    */
-  static  TWidget CreateRadio(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
+  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
+};
+
+
+/**
+ * app_bar控件。
+ *
+ *一个简单的容器控件，一般在窗口的顶部，用于显示本窗口的状态和信息。
+ *
+ *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
+ *子控件的布局可用layout\_children属性指定。
+ *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
+ *
+ *app\_bar\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于app\_bar\_t控件。
+ *
+ *在xml中使用"app\_bar"标签创建app\_bar。如：
+ *
+ *```xml
+ *<app_bar x="0" y="0" w="100%" h="30"
+ *<label x="0" y="0" w="100%" h="100%" text="Basic Controls" />
+ *</app_bar>
+ *```
+ *
+ *在c代码中使用函数app\_bar\_create创建app\_bar。如：
+ *
+ *
+ *可用通过style来设置控件的显示风格，如背景颜色等。如：
+ *
+ *```xml
+ *<style name="default" border_color="#a0a0a0">
+ *<normal     bg_color="#f0f0f0" />
+ *</style>
+ *```
+ *
+ */
+class TAppBar : public TWidget { 
+public:
+  TAppBar(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TAppBar(const app_bar_t* nativeObj) : TWidget((widget_t*)nativeObj) {
+  }
+
+  static TAppBar Cast(widget_t* nativeObj) {
+    return TAppBar(nativeObj);
+  }
+
+  static TAppBar Cast(const widget_t* nativeObj) {
+    return TAppBar((widget_t*)nativeObj);
+  }
+
+  static TAppBar Cast(TWidget& obj) {
+    return TAppBar(obj.nativeObj);
+  }
+
+  static TAppBar Cast(const TWidget& obj) {
+    return TAppBar(obj.nativeObj);
+  }
+
 
   /**
-   * 设置控件的值。
+   * 创建app_bar对象
    * 
-   * @param value 值(勾选为TRUE，非勾选为FALSE)。
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
    *
-   * @return 返回RET_OK表示成功，否则表示失败。
+   * @return 对象。
    */
-  ret_t SetValue(bool value) ;
-
-  /**
-   * 值(勾选为TRUE，非勾选为FALSE)。
-   *
-   */
-  bool GetValue() const;
+  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
 };
 
 
@@ -8603,138 +9017,6 @@ public:
    *
    */
   char* GetAnimHint() const;
-};
-
-
-/**
- * 按钮控件。
- *
- *点击按钮之后会触发EVT\_CLICK事件，注册EVT\_CLICK事件以执行特定操作。
- *
- *按钮控件也可以作为容器使用，使用图片和文本作为其子控件，可以实现很多有趣的效果。
- *
- *button\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于button\_t控件。
- *
- *在xml中使用"button"标签创建按钮控件。如：
- *
- *```xml
- *<button x="c" y="m" w="80" h="30" text="OK"/>
- *```
- *
- *> 更多用法请参考：
- *[button.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/button.xml)
- *
- *在c代码中使用函数button\_create创建按钮控件。如：
- *
- *
- *> 创建之后，需要用widget\_set\_text或widget\_set\_text\_utf8设置文本内容。
- *
- *> 完整示例请参考：
- *[button demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/button.c)
- *
- *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
- *
- *```xml
- *<style name="default" border_color="#a0a0a0"  text_color="black">
- *<normal     bg_color="#f0f0f0" />
- *<pressed    bg_color="#c0c0c0" x_offset="1" y_offset="1"/>
- *<over       bg_color="#e0e0e0" />
- *<disable    bg_color="gray" text_color="#d0d0d0" />
- *</style>
- *```
- *
- *> 更多用法请参考：
- *[theme
- *default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L31)
- *
- */
-class TButton : public TWidget { 
-public:
-  TButton(widget_t* nativeObj) : TWidget(nativeObj) {
-  }
-
-  TButton(const button_t* nativeObj) : TWidget((widget_t*)nativeObj) {
-  }
-
-  static TButton Cast(widget_t* nativeObj) {
-    return TButton(nativeObj);
-  }
-
-  static TButton Cast(const widget_t* nativeObj) {
-    return TButton((widget_t*)nativeObj);
-  }
-
-  static TButton Cast(TWidget& obj) {
-    return TButton(obj.nativeObj);
-  }
-
-  static TButton Cast(const TWidget& obj) {
-    return TButton(obj.nativeObj);
-  }
-
-
-  /**
-   * 创建button对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @return 对象。
-   */
-  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
-
-  /**
-   * 设置触发EVT\_CLICK事件的时间间隔。为0则不重复触发EVT\_CLICK事件。
-   * 
-   * @param repeat 触发EVT_CLICK事件的时间间隔(毫秒)。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetRepeat(int32_t repeat) ;
-
-  /**
-   * 设置触发长按事件的时间。
-   * 
-   * @param long_press_time 触发长按事件的时间(毫秒)。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetLongPressTime(uint32_t long_press_time) ;
-
-  /**
-   * 设置是否启用长按事件。
-   * 
-   * @param enable_long_press 是否启用长按事件。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetEnableLongPress(bool enable_long_press) ;
-
-  /**
-   * 重复触发EVT\_CLICK事件的时间间隔。
-   *
-   *为0则不重复触发EVT\_CLICK事件。
-   *
-   */
-  int32_t GetRepeat() const;
-
-  /**
-   * 是否启用长按事件，为true时才触发长按事件。
-   *
-   *触发长按事件后不再触发点击事件。
-   *缺省不启用。
-   *
-   */
-  bool GetEnableLongPress() const;
-
-  /**
-   * 触发长按事件的时间(ms)
-   *
-   */
-  uint32_t GetLongPressTime() const;
 };
 
 
@@ -9106,146 +9388,6 @@ public:
    *
    */
   float_t GetMinScale() const;
-};
-
-
-/**
- * Button Group控件。一个简单的容器控件，用于容纳一组按钮控件。
- *
- *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
- *子控件的布局可用layout\_children属性指定。
- *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
- *
- *button\_group\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于button\_group\_t控件。
- *
- *在xml中使用"button\_group"标签创建button\_group。如：
- *
- *```xml
- *<button_group x="0" y="m" w="100%" h="40" children_layout="default(c=4,r=1,s=5,m=5)">
- *<button name="open:basic" text="Basic"/>
- *<button name="open:button" text="Buttons"/>
- *<button name="open:edit" text="Edits"/>
- *<button name="open:keyboard" text="KeyBoard"/>
- *</button_group>
- *```
- *
- *可用通过style来设置控件的显示风格，如背景颜色等。如：
- *
- *```xml
- *<style name="default" border_color="#a0a0a0">
- *<normal     bg_color="#f0f0f0" />
- *</style>
- *```
- *
- */
-class TButtonGroup : public TWidget { 
-public:
-  TButtonGroup(widget_t* nativeObj) : TWidget(nativeObj) {
-  }
-
-  TButtonGroup(const button_group_t* nativeObj) : TWidget((widget_t*)nativeObj) {
-  }
-
-  static TButtonGroup Cast(widget_t* nativeObj) {
-    return TButtonGroup(nativeObj);
-  }
-
-  static TButtonGroup Cast(const widget_t* nativeObj) {
-    return TButtonGroup((widget_t*)nativeObj);
-  }
-
-  static TButtonGroup Cast(TWidget& obj) {
-    return TButtonGroup(obj.nativeObj);
-  }
-
-  static TButtonGroup Cast(const TWidget& obj) {
-    return TButtonGroup(obj.nativeObj);
-  }
-
-
-  /**
-   * 创建button_group对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @return 对象。
-   */
-  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
-};
-
-
-/**
- * app_bar控件。
- *
- *一个简单的容器控件，一般在窗口的顶部，用于显示本窗口的状态和信息。
- *
- *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
- *子控件的布局可用layout\_children属性指定。
- *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
- *
- *app\_bar\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于app\_bar\_t控件。
- *
- *在xml中使用"app\_bar"标签创建app\_bar。如：
- *
- *```xml
- *<app_bar x="0" y="0" w="100%" h="30"
- *<label x="0" y="0" w="100%" h="100%" text="Basic Controls" />
- *</app_bar>
- *```
- *
- *在c代码中使用函数app\_bar\_create创建app\_bar。如：
- *
- *
- *可用通过style来设置控件的显示风格，如背景颜色等。如：
- *
- *```xml
- *<style name="default" border_color="#a0a0a0">
- *<normal     bg_color="#f0f0f0" />
- *</style>
- *```
- *
- */
-class TAppBar : public TWidget { 
-public:
-  TAppBar(widget_t* nativeObj) : TWidget(nativeObj) {
-  }
-
-  TAppBar(const app_bar_t* nativeObj) : TWidget((widget_t*)nativeObj) {
-  }
-
-  static TAppBar Cast(widget_t* nativeObj) {
-    return TAppBar(nativeObj);
-  }
-
-  static TAppBar Cast(const widget_t* nativeObj) {
-    return TAppBar((widget_t*)nativeObj);
-  }
-
-  static TAppBar Cast(TWidget& obj) {
-    return TAppBar(obj.nativeObj);
-  }
-
-  static TAppBar Cast(const TWidget& obj) {
-    return TAppBar(obj.nativeObj);
-  }
-
-
-  /**
-   * 创建app_bar对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @return 对象。
-   */
-  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
 };
 
 
@@ -10043,6 +10185,129 @@ public:
 
 
 /**
+ * 滚轮事件。
+ *
+ */
+class TWheelEvent : public TEvent { 
+public:
+  TWheelEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  }
+
+  TWheelEvent(const wheel_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
+  }
+
+  static TWheelEvent Cast(event_t* nativeObj) {
+    return TWheelEvent(nativeObj);
+  }
+
+  static TWheelEvent Cast(const event_t* nativeObj) {
+    return TWheelEvent((event_t*)nativeObj);
+  }
+
+  static TWheelEvent Cast(TEvent& obj) {
+    return TWheelEvent(obj.nativeObj);
+  }
+
+  static TWheelEvent Cast(const TEvent& obj) {
+    return TWheelEvent(obj.nativeObj);
+  }
+
+
+  /**
+   * 滚轮的y值。
+   *
+   */
+  int32_t GetDy() const;
+
+  /**
+   * alt键是否按下。
+   *
+   */
+  bool GetAlt() const;
+
+  /**
+   * ctrl键是否按下。
+   *
+   */
+  bool GetCtrl() const;
+
+  /**
+   * shift键是否按下。
+   *
+   */
+  bool GetShift() const;
+};
+
+
+/**
+ * 滚轮事件。
+ *
+ */
+class TOrientationEvent : public TEvent { 
+public:
+  TOrientationEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  }
+
+  TOrientationEvent(const orientation_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
+  }
+
+  static TOrientationEvent Cast(event_t* nativeObj) {
+    return TOrientationEvent(nativeObj);
+  }
+
+  static TOrientationEvent Cast(const event_t* nativeObj) {
+    return TOrientationEvent((event_t*)nativeObj);
+  }
+
+  static TOrientationEvent Cast(TEvent& obj) {
+    return TOrientationEvent(obj.nativeObj);
+  }
+
+  static TOrientationEvent Cast(const TEvent& obj) {
+    return TOrientationEvent(obj.nativeObj);
+  }
+
+
+  /**
+   * 屏幕方向。
+   *
+   */
+  int32_t GetOrientation() const;
+};
+
+
+/**
+ * 值变化事件。
+ *
+ */
+class TValueChangeEvent : public TEvent { 
+public:
+  TValueChangeEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  }
+
+  TValueChangeEvent(const value_change_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
+  }
+
+  static TValueChangeEvent Cast(event_t* nativeObj) {
+    return TValueChangeEvent(nativeObj);
+  }
+
+  static TValueChangeEvent Cast(const event_t* nativeObj) {
+    return TValueChangeEvent((event_t*)nativeObj);
+  }
+
+  static TValueChangeEvent Cast(TEvent& obj) {
+    return TValueChangeEvent(obj.nativeObj);
+  }
+
+  static TValueChangeEvent Cast(const TEvent& obj) {
+    return TValueChangeEvent(obj.nativeObj);
+  }
+
+};
+
+
+/**
  * 可水平滚动的文本控件，方便实现长文本滚动。
  *
  *
@@ -10428,6 +10693,91 @@ public:
 
 
 /**
+ * 指针事件。
+ *
+ */
+class TPointerEvent : public TEvent { 
+public:
+  TPointerEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  }
+
+  TPointerEvent(const pointer_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
+  }
+
+  static TPointerEvent Cast(event_t* nativeObj) {
+    return TPointerEvent(nativeObj);
+  }
+
+  static TPointerEvent Cast(const event_t* nativeObj) {
+    return TPointerEvent((event_t*)nativeObj);
+  }
+
+  static TPointerEvent Cast(TEvent& obj) {
+    return TPointerEvent(obj.nativeObj);
+  }
+
+  static TPointerEvent Cast(const TEvent& obj) {
+    return TPointerEvent(obj.nativeObj);
+  }
+
+
+  /**
+   * x坐标。
+   *
+   */
+  xy_t GetX() const;
+
+  /**
+   * y坐标。
+   *
+   */
+  xy_t GetY() const;
+
+  /**
+   * button。
+   *
+   */
+  uint8_t GetButton() const;
+
+  /**
+   * 指针是否按下。
+   *
+   */
+  bool GetPressed() const;
+
+  /**
+   * alt键是否按下。
+   *
+   */
+  bool GetAlt() const;
+
+  /**
+   * ctrl键是否按下。
+   *
+   */
+  bool GetCtrl() const;
+
+  /**
+   * cmd键是否按下。
+   *
+   */
+  bool GetCmd() const;
+
+  /**
+   * menu键是否按下。
+   *
+   */
+  bool GetMenu() const;
+
+  /**
+   * shift键是否按下。
+   *
+   */
+  bool GetShift() const;
+};
+
+
+/**
  * 进度圆环控件。
  *
  *progress\_circle\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于progress\_circle\_t控件。
@@ -10622,39 +10972,39 @@ public:
 
 
 /**
- * 滚轮事件。
+ * 按键事件。
  *
  */
-class TWheelEvent : public TEvent { 
+class TKeyEvent : public TEvent { 
 public:
-  TWheelEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  TKeyEvent(event_t* nativeObj) : TEvent(nativeObj) {
   }
 
-  TWheelEvent(const wheel_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
+  TKeyEvent(const key_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
   }
 
-  static TWheelEvent Cast(event_t* nativeObj) {
-    return TWheelEvent(nativeObj);
+  static TKeyEvent Cast(event_t* nativeObj) {
+    return TKeyEvent(nativeObj);
   }
 
-  static TWheelEvent Cast(const event_t* nativeObj) {
-    return TWheelEvent((event_t*)nativeObj);
+  static TKeyEvent Cast(const event_t* nativeObj) {
+    return TKeyEvent((event_t*)nativeObj);
   }
 
-  static TWheelEvent Cast(TEvent& obj) {
-    return TWheelEvent(obj.nativeObj);
+  static TKeyEvent Cast(TEvent& obj) {
+    return TKeyEvent(obj.nativeObj);
   }
 
-  static TWheelEvent Cast(const TEvent& obj) {
-    return TWheelEvent(obj.nativeObj);
+  static TKeyEvent Cast(const TEvent& obj) {
+    return TKeyEvent(obj.nativeObj);
   }
 
 
   /**
-   * 滚轮的y值。
+   * 键值。
    *
    */
-  int32_t GetDy() const;
+  uint32_t GetKey() const;
 
   /**
    * alt键是否按下。
@@ -10663,154 +11013,57 @@ public:
   bool GetAlt() const;
 
   /**
-   * ctrl键是否按下。
+   * left alt键是否按下。
+   *
+   */
+  bool GetLalt() const;
+
+  /**
+   * right alt键是否按下。
+   *
+   */
+  bool GetRalt() const;
+
+  /**
+   * right alt键是否按下。
+   *ctrl键是否按下。
    *
    */
   bool GetCtrl() const;
+
+  /**
+   * left ctrl键是否按下。
+   *
+   */
+  bool GetLctrl() const;
+
+  /**
+   * right ctrl键是否按下。
+   *
+   */
+  bool GetRctrl() const;
 
   /**
    * shift键是否按下。
    *
    */
   bool GetShift() const;
-};
-
-
-/**
- * 滚轮事件。
- *
- */
-class TOrientationEvent : public TEvent { 
-public:
-  TOrientationEvent(event_t* nativeObj) : TEvent(nativeObj) {
-  }
-
-  TOrientationEvent(const orientation_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
-  }
-
-  static TOrientationEvent Cast(event_t* nativeObj) {
-    return TOrientationEvent(nativeObj);
-  }
-
-  static TOrientationEvent Cast(const event_t* nativeObj) {
-    return TOrientationEvent((event_t*)nativeObj);
-  }
-
-  static TOrientationEvent Cast(TEvent& obj) {
-    return TOrientationEvent(obj.nativeObj);
-  }
-
-  static TOrientationEvent Cast(const TEvent& obj) {
-    return TOrientationEvent(obj.nativeObj);
-  }
-
 
   /**
-   * 屏幕方向。
+   * left shift键是否按下。
    *
    */
-  int32_t GetOrientation() const;
-};
-
-
-/**
- * 值变化事件。
- *
- */
-class TValueChangeEvent : public TEvent { 
-public:
-  TValueChangeEvent(event_t* nativeObj) : TEvent(nativeObj) {
-  }
-
-  TValueChangeEvent(const value_change_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
-  }
-
-  static TValueChangeEvent Cast(event_t* nativeObj) {
-    return TValueChangeEvent(nativeObj);
-  }
-
-  static TValueChangeEvent Cast(const event_t* nativeObj) {
-    return TValueChangeEvent((event_t*)nativeObj);
-  }
-
-  static TValueChangeEvent Cast(TEvent& obj) {
-    return TValueChangeEvent(obj.nativeObj);
-  }
-
-  static TValueChangeEvent Cast(const TEvent& obj) {
-    return TValueChangeEvent(obj.nativeObj);
-  }
-
-};
-
-
-/**
- * 指针事件。
- *
- */
-class TPointerEvent : public TEvent { 
-public:
-  TPointerEvent(event_t* nativeObj) : TEvent(nativeObj) {
-  }
-
-  TPointerEvent(const pointer_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
-  }
-
-  static TPointerEvent Cast(event_t* nativeObj) {
-    return TPointerEvent(nativeObj);
-  }
-
-  static TPointerEvent Cast(const event_t* nativeObj) {
-    return TPointerEvent((event_t*)nativeObj);
-  }
-
-  static TPointerEvent Cast(TEvent& obj) {
-    return TPointerEvent(obj.nativeObj);
-  }
-
-  static TPointerEvent Cast(const TEvent& obj) {
-    return TPointerEvent(obj.nativeObj);
-  }
-
+  bool GetLshift() const;
 
   /**
-   * x坐标。
+   * right shift键是否按下。
    *
    */
-  xy_t GetX() const;
+  bool GetRshift() const;
 
   /**
-   * y坐标。
-   *
-   */
-  xy_t GetY() const;
-
-  /**
-   * button。
-   *
-   */
-  uint8_t GetButton() const;
-
-  /**
-   * 指针是否按下。
-   *
-   */
-  bool GetPressed() const;
-
-  /**
-   * alt键是否按下。
-   *
-   */
-  bool GetAlt() const;
-
-  /**
-   * ctrl键是否按下。
-   *
-   */
-  bool GetCtrl() const;
-
-  /**
-   * cmd键是否按下。
+   * left shift键是否按下。
+   *cmd/win键是否按下。
    *
    */
   bool GetCmd() const;
@@ -10822,10 +11075,10 @@ public:
   bool GetMenu() const;
 
   /**
-   * shift键是否按下。
+   * capslock键是否按下。
    *
    */
-  bool GetShift() const;
+  bool GetCapslock() const;
 };
 
 
@@ -11174,117 +11427,6 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t SetYoffset(int32_t yoffset) ;
-};
-
-
-/**
- * 按键事件。
- *
- */
-class TKeyEvent : public TEvent { 
-public:
-  TKeyEvent(event_t* nativeObj) : TEvent(nativeObj) {
-  }
-
-  TKeyEvent(const key_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
-  }
-
-  static TKeyEvent Cast(event_t* nativeObj) {
-    return TKeyEvent(nativeObj);
-  }
-
-  static TKeyEvent Cast(const event_t* nativeObj) {
-    return TKeyEvent((event_t*)nativeObj);
-  }
-
-  static TKeyEvent Cast(TEvent& obj) {
-    return TKeyEvent(obj.nativeObj);
-  }
-
-  static TKeyEvent Cast(const TEvent& obj) {
-    return TKeyEvent(obj.nativeObj);
-  }
-
-
-  /**
-   * 键值。
-   *
-   */
-  uint32_t GetKey() const;
-
-  /**
-   * alt键是否按下。
-   *
-   */
-  bool GetAlt() const;
-
-  /**
-   * left alt键是否按下。
-   *
-   */
-  bool GetLalt() const;
-
-  /**
-   * right alt键是否按下。
-   *
-   */
-  bool GetRalt() const;
-
-  /**
-   * right alt键是否按下。
-   *ctrl键是否按下。
-   *
-   */
-  bool GetCtrl() const;
-
-  /**
-   * left ctrl键是否按下。
-   *
-   */
-  bool GetLctrl() const;
-
-  /**
-   * right ctrl键是否按下。
-   *
-   */
-  bool GetRctrl() const;
-
-  /**
-   * shift键是否按下。
-   *
-   */
-  bool GetShift() const;
-
-  /**
-   * left shift键是否按下。
-   *
-   */
-  bool GetLshift() const;
-
-  /**
-   * right shift键是否按下。
-   *
-   */
-  bool GetRshift() const;
-
-  /**
-   * left shift键是否按下。
-   *cmd/win键是否按下。
-   *
-   */
-  bool GetCmd() const;
-
-  /**
-   * menu键是否按下。
-   *
-   */
-  bool GetMenu() const;
-
-  /**
-   * capslock键是否按下。
-   *
-   */
-  bool GetCapslock() const;
 };
 
 
@@ -11685,262 +11827,39 @@ public:
 
 
 /**
- * 图片动画控件，指定一个图片前缀，依次显示指定序列的图片，从而形成动画效果。
- *
- *图片序列可以用sequence指定，也可以用start\_index和end\_index指定一个范围。
- *
- *image\_animation\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于image\_animation\_t控件。
- *
- *在xml中使用"image\_animation"标签创建图片动画控件。如：
- *
- *```xml
- *<image_animation image="ani" start_index="1" end_index="9" auto_play="true" interval="50"
- *delay="100"/>
- *```
- *
- *> 更多用法请参考：
- *[image_animation.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/image_animation.xml)
- *
- *在c代码中使用函数image\_animation\_create创建图片动画控件。如：
- *
- *
- *> 完整示例请参考：
- *[image_animation
- *demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/image_animation.c)
- *
- *可用通过style来设置控件的显示风格，如背景颜色和边框等等，不过一般情况并不需要。
+ * 窗口事件，由窗口管理器触发。
  *
  */
-class TImageAnimation : public TWidget { 
+class TWindowEvent : public TEvent { 
 public:
-  TImageAnimation(widget_t* nativeObj) : TWidget(nativeObj) {
+  TWindowEvent(event_t* nativeObj) : TEvent(nativeObj) {
   }
 
-  TImageAnimation(const image_animation_t* nativeObj) : TWidget((widget_t*)nativeObj) {
+  TWindowEvent(const window_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
   }
 
-  static TImageAnimation Cast(widget_t* nativeObj) {
-    return TImageAnimation(nativeObj);
+  static TWindowEvent Cast(event_t* nativeObj) {
+    return TWindowEvent(nativeObj);
   }
 
-  static TImageAnimation Cast(const widget_t* nativeObj) {
-    return TImageAnimation((widget_t*)nativeObj);
+  static TWindowEvent Cast(const event_t* nativeObj) {
+    return TWindowEvent((event_t*)nativeObj);
   }
 
-  static TImageAnimation Cast(TWidget& obj) {
-    return TImageAnimation(obj.nativeObj);
+  static TWindowEvent Cast(TEvent& obj) {
+    return TWindowEvent(obj.nativeObj);
   }
 
-  static TImageAnimation Cast(const TWidget& obj) {
-    return TImageAnimation(obj.nativeObj);
+  static TWindowEvent Cast(const TEvent& obj) {
+    return TWindowEvent(obj.nativeObj);
   }
 
 
   /**
-   * 创建image_animation对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @return 对象。
-   */
-  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
-
-  /**
-   * 设置是否循环播放。
-   * 
-   * @param loop 是否循环播放。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetLoop(bool loop) ;
-
-  /**
-   * 设置图片前缀。
-   * 
-   * @param image 图片前缀。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetImage(const char* image) ;
-
-  /**
-   * 设置播放间隔时间。
-   * 
-   * @param interval 间隔时间(毫秒)。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetInterval(uint32_t interval) ;
-
-  /**
-   * 设置延迟播放时间(仅适用于自动播放)。
-   * 
-   * @param delay 延迟播放时间(毫秒)。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetDelay(uint32_t delay) ;
-
-  /**
-   * 设置是否自动播放。
-   * 
-   * @param auto_play 是否自动播放。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetAutoPlay(bool auto_play) ;
-
-  /**
-   * 设置播放序列。比如image为"fire"，sequence为"12223", 将依次播放"fire1", "fire2", "fire2", "fire2",
-   *"fire3"。
-   * 
-   * @param sequence 播放序列。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetSequence(const char* sequence) ;
-
-  /**
-   * 设置播放序列。比如image为"fire"，start_index为0, end_index为99, 将依次播放"fire0", ...,
-   *"fire99"。
-   *
-   *若指定的图片不存在，则重复上一张图片。
-   * 
-   * @param start_index 图片起始序数。
-   * @param end_index 图片结束序数。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetRangeSequence(uint32_t start_index, uint32_t end_index) ;
-
-  /**
-   * 播放。
-   * 
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t Play() ;
-
-  /**
-   * 停止(并重置index为-1)。
-   * 
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t Stop() ;
-
-  /**
-   * 暂停。
-   * 
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t Pause() ;
-
-  /**
-   * 手动切换到下一张图片。
-   * 
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t Next() ;
-
-  /**
-   * 设置生成图片名的格式。
-   *
-   *XXX:生成图片名时，第一个参数是图片名前缀，第二个是序数，只能在此前提下设置格式。
-   *
-   *```
-   *const char* format = image_animation->format ? image_animation->format : "%s%d";
-   *tk_snprintf(name, TK_NAME_LEN, format, image_animation->image, image_animation->index);
-   *```
-   * 
-   * @param format 格式。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetFormat(const char* format) ;
-
-  /**
-   * 设置绘制完成后unload图片，以释放内存空间。
-   * 
-   * @param unload_after_paint 是否绘制完成后unload图片。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetUnloadAfterPaint(bool unload_after_paint) ;
-
-  /**
-   * 判断是否在播放。
-   * 
-   *
-   * @return 返回TRUE表示是，否则表示否。
-   */
-  bool IsPlaying() ;
-
-  /**
-   * 图片名称的前缀。
+   * canvas。
    *
    */
-  char* GetImage() const;
-
-  /**
-   * 播放的序列，字符可选值为数字和英文大小写字母，字符可以重复。如：0123456789或者123123abcd。
-   *
-   */
-  char* GetSequence() const;
-
-  /**
-   * 图片起始序数。
-   *
-   */
-  uint32_t GetStartIndex() const;
-
-  /**
-   * 图片结束序数。
-   *
-   */
-  uint32_t GetEndIndex() const;
-
-  /**
-   * 是否循环播放。
-   *
-   */
-  bool GetLoop() const;
-
-  /**
-   * 是否自动播放。
-   *
-   */
-  bool GetAutoPlay() const;
-
-  /**
-   * 绘制完成后unload图片，以释放内存空间。
-   *
-   */
-  bool GetUnloadAfterPaint() const;
-
-  /**
-   * 索引到图片名转换时的格式，缺省为"%s%d"。
-   *
-   */
-  char* GetFormat() const;
-
-  /**
-   * 每张图片播放的时间(毫秒)。
-   *
-   */
-  uint32_t GetInterval() const;
-
-  /**
-   * 自动播放时延迟播放的时间(毫秒)。
-   *
-   */
-  uint32_t GetDelay() const;
+  TWidget GetWindow() const;
 };
 
 
@@ -12052,39 +11971,120 @@ public:
 
 
 /**
- * 窗口事件，由窗口管理器触发。
+ * 仪表指针控件。
+ *
+ *仪表指针就是一张旋转的图片，图片可以是普通图片也可以是SVG图片。
+ *
+ *在嵌入式平台上，对于旋转的图片，SVG图片的效率比位图高数倍，所以推荐使用SVG图片。
+ *
+ *guage\_pointer\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于guage\_pointer\_t控件。
+ *
+ *在xml中使用"guage\_pointer"标签创建仪表指针控件。如：
+ *
+ *```xml
+ *<guage_pointer x="c" y="50" w="24" h="140" value="-128" image="guage_pointer" />
+ *```
+ *
+ *> 更多用法请参考：
+ *[guage.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/guage.xml)
+ *
+ *在c代码中使用函数guage\_pointer\_create创建仪表指针控件。如：
+ *
+ *
+ *> 创建之后，需要用guage\_pointer\_set\_image设置仪表指针图片。
  *
  */
-class TWindowEvent : public TEvent { 
+class TGuagePointer : public TWidget { 
 public:
-  TWindowEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  TGuagePointer(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
-  TWindowEvent(const window_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
+  TGuagePointer(const guage_pointer_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
-  static TWindowEvent Cast(event_t* nativeObj) {
-    return TWindowEvent(nativeObj);
+  static TGuagePointer Cast(widget_t* nativeObj) {
+    return TGuagePointer(nativeObj);
   }
 
-  static TWindowEvent Cast(const event_t* nativeObj) {
-    return TWindowEvent((event_t*)nativeObj);
+  static TGuagePointer Cast(const widget_t* nativeObj) {
+    return TGuagePointer((widget_t*)nativeObj);
   }
 
-  static TWindowEvent Cast(TEvent& obj) {
-    return TWindowEvent(obj.nativeObj);
+  static TGuagePointer Cast(TWidget& obj) {
+    return TGuagePointer(obj.nativeObj);
   }
 
-  static TWindowEvent Cast(const TEvent& obj) {
-    return TWindowEvent(obj.nativeObj);
+  static TGuagePointer Cast(const TWidget& obj) {
+    return TGuagePointer(obj.nativeObj);
   }
 
 
   /**
-   * canvas。
+   * 创建guage_pointer对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @return 对象。
+   */
+  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
+
+  /**
+   * 设置指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。
+   * 
+   * @param angle 指针角度。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetAngle(int32_t angle) ;
+
+  /**
+   * 设置指针的图片。
+   * 
+   * @param image 指针的图片。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetImage(const char* image) ;
+
+  /**
+   * 设置指针的旋转锚点。
+   * 
+   * @param anchor_x 指针的锚点坐标x。(后面加上px为像素点，不加px为相对百分比坐标)
+   * @param anchor_y 指针的锚点坐标y。(后面加上px为像素点，不加px为相对百分比坐标)
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetAnchor(const char* anchor_x, const char* anchor_y) ;
+
+  /**
+   * 指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。
    *
    */
-  TWidget GetWindow() const;
+  int32_t GetAngle() const;
+
+  /**
+   * 指针图片。
+   *
+   *图片须垂直向上，图片的中心点为旋转方向。
+   *
+   */
+  char* GetImage() const;
+
+  /**
+   * 图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
+   *
+   */
+  char* GetAnchorX() const;
+
+  /**
+   * 图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
+   *
+   */
+  char* GetAnchorY() const;
 };
 
 
@@ -12866,404 +12866,6 @@ public:
    * @return 对象。
    */
   static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
-};
-
-
-/**
- * 表格视图。
- *
- *table\_view\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于table\_view\_t控件。
- *
- *在xml中使用"table\_view"标签创建table\_view。
- *
- *table\_view中一般放table\_header、table\_client和滚动条控件。
- *
- *table\_header和滚动条为可选，table\_client为必选。
- *
- *如：
- *
- *```xml
- *<!-- ui -->
- *<table_view x="10" y="10" w="200" h="200">
- *<table_header x="0" y="0" w="-12" h="30" name="table_header" children_layout="default(r=1,c=0,s=5,m=5)">
- *<label w="30%" text="Name"/>
- *<label w="40%" text="Value"/>
- *<label w="30%" text="Action"/>
- *</table_header>
- *
- *<table_client name="table_client" x="0"  y="30" w="-12" h="-30" row_height="40" rows="1">
- *<table_row children_layout="default(r=1,c=0,s=5,m=5)">
- *<label name="name"  w="30%" h="100%" text="name"/>
- *<edit name="value" w="40%" h="100%"/>
- *<button name="remove" w="30%" h="100%" text="Remove"/>
- *</table_row>
- *</table_client>
- *<scroll_bar_d name="scroll_bar" x="r" y="0" w="12" h="100%" value="0"/>
- *</table_view>
- *```
- *
- *可用通过style来设置控件的显示风格，如背景颜色等。如：
- *
- *```xml
- *<!-- style -->
- *<table_header>
- *<style name="default">
- *<normal bg_color="#e0e0e0"/>
- *</style>
- *</table_header>
- *<table_client>
- *<style name="default">
- *<normal/>
- *</style>
- *</table_client>
- *<table_row>
- *<style name="default" border_color="#d8d8d8" border="bottom">
- *<normal bg_color="#fcfcfc"/>
- *</style>
- *</table_row>
- *<table_view>
- *<style name="default" border_color="#c2c2c2">
- *<normal bg_color="#f4f4f4"/>
- *</style>
- *</table_view>
- *```
- *
- */
-class TTableView : public TWidget { 
-public:
-  TTableView(widget_t* nativeObj) : TWidget(nativeObj) {
-  }
-
-  TTableView(const table_view_t* nativeObj) : TWidget((widget_t*)nativeObj) {
-  }
-
-  static TTableView Cast(widget_t* nativeObj) {
-    return TTableView(nativeObj);
-  }
-
-  static TTableView Cast(const widget_t* nativeObj) {
-    return TTableView((widget_t*)nativeObj);
-  }
-
-  static TTableView Cast(TWidget& obj) {
-    return TTableView(obj.nativeObj);
-  }
-
-  static TTableView Cast(const TWidget& obj) {
-    return TTableView(obj.nativeObj);
-  }
-
-
-  /**
-   * 创建table_view对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @return table_view对象。
-   */
-  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
-};
-
-
-/**
- * table\_row。表示表格的一行。
- *
- *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
- *子控件的布局可用layout\_children属性指定。
- *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
- *
- *table\_row\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于table\_row\_t控件。
- *
- *在xml中使用"table\_row"标签创建table\_row。
- *
- *table\_row一般放在table\_client对象中，创建一个对象即可，table\_client以此为模版，根据需要创建table\_row对象。
- *
- *如：
- *
- *```xml
- *<!-- ui -->
- *<table_row x="0" y="0" w="200" h="30"/>
- *```
- *
- *可用通过style来设置控件的显示风格，如背景颜色等。如：
- *
- *```xml
- *<!-- style -->
- *<table_row>
- *<style name="default" border_color="#d8d8d8" border="bottom">
- *<normal bg_color="#fcfcfc"/>
- *</style>
- *</table_row>
- *```
- *
- */
-class TTableRow : public TWidget { 
-public:
-  TTableRow(widget_t* nativeObj) : TWidget(nativeObj) {
-  }
-
-  TTableRow(const table_row_t* nativeObj) : TWidget((widget_t*)nativeObj) {
-  }
-
-  static TTableRow Cast(widget_t* nativeObj) {
-    return TTableRow(nativeObj);
-  }
-
-  static TTableRow Cast(const widget_t* nativeObj) {
-    return TTableRow((widget_t*)nativeObj);
-  }
-
-  static TTableRow Cast(TWidget& obj) {
-    return TTableRow(obj.nativeObj);
-  }
-
-  static TTableRow Cast(const TWidget& obj) {
-    return TTableRow(obj.nativeObj);
-  }
-
-
-  /**
-   * 创建table_row对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @return table_row对象。
-   */
-  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
-
-  /**
-   * 设置 行的编号。
-   * 
-   * @param index 行的编号。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetIndex(uint32_t index) ;
-
-  /**
-   * 行的编号。
-   *
-   */
-  uint32_t GetIndex() const;
-};
-
-
-/**
- * table\_header。一个简单的容器控件，用来放置表头中的子控件。
- *
- *它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
- *子控件的布局可用layout\_children属性指定。
- *请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
- *
- *table\_header\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于table\_header\_t控件。
- *
- *在xml中使用"table\_header"标签创建table\_header。如：
- *
- *```xml
- *<!-- ui -->
- *<table_header x="0" y="0" w="200" h="30"/>
- *```
- *
- *可用通过style来设置控件的显示风格，如背景颜色等。如：
- *
- *```xml
- *<!-- style -->
- *<table_header>
- *<style name="default">
- *<normal bg_color="#e0e0e0"/>
- *</style>
- *</table_header>
- *```
- *
- */
-class TTableHeader : public TWidget { 
-public:
-  TTableHeader(widget_t* nativeObj) : TWidget(nativeObj) {
-  }
-
-  TTableHeader(const table_header_t* nativeObj) : TWidget((widget_t*)nativeObj) {
-  }
-
-  static TTableHeader Cast(widget_t* nativeObj) {
-    return TTableHeader(nativeObj);
-  }
-
-  static TTableHeader Cast(const widget_t* nativeObj) {
-    return TTableHeader((widget_t*)nativeObj);
-  }
-
-  static TTableHeader Cast(TWidget& obj) {
-    return TTableHeader(obj.nativeObj);
-  }
-
-  static TTableHeader Cast(const TWidget& obj) {
-    return TTableHeader(obj.nativeObj);
-  }
-
-
-  /**
-   * 创建table_header对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @return table_header对象。
-   */
-  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
-};
-
-
-/**
- * table\_client。表示表格的数据区。
- *
- *table\_client\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于table\_client\_t控件。
- *
- *在xml中使用"table\_client"标签创建table\_client。
- *
- *一般放在table\_client对象中放一个table\_row即可，table\_client以此为模版，根据需要创建table\_row对象。
- *
- *如：
- *
- *```xml
- *<!-- ui -->
- *<table_client x="0" y="0" w="200" h="200"/>
- *```
- *
- *可用通过style来设置控件的显示风格，如背景颜色等。如：
- *
- *```xml
- *<!-- style -->
- *<table_client>
- *<style name="default">
- *<normal />
- *</style>
- *</table_client>
- *```
- *
- */
-class TTableClient : public TWidget { 
-public:
-  TTableClient(widget_t* nativeObj) : TWidget(nativeObj) {
-  }
-
-  TTableClient(const table_client_t* nativeObj) : TWidget((widget_t*)nativeObj) {
-  }
-
-  static TTableClient Cast(widget_t* nativeObj) {
-    return TTableClient(nativeObj);
-  }
-
-  static TTableClient Cast(const widget_t* nativeObj) {
-    return TTableClient((widget_t*)nativeObj);
-  }
-
-  static TTableClient Cast(TWidget& obj) {
-    return TTableClient(obj.nativeObj);
-  }
-
-  static TTableClient Cast(const TWidget& obj) {
-    return TTableClient(obj.nativeObj);
-  }
-
-
-  /**
-   * 创建table_client对象
-   * 
-   * @param parent 父控件
-   * @param x x坐标
-   * @param y y坐标
-   * @param w 宽度
-   * @param h 高度
-   *
-   * @return table_client对象。
-   */
-  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
-
-  /**
-   * 设置 行高。
-   * 
-   * @param row_height 行高。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetRowHeight(uint32_t row_height) ;
-
-  /**
-   * 设置 最大行数。
-   * 
-   * @param rows 最大行数。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetRows(uint32_t rows) ;
-
-  /**
-   * 设置 偏移量。
-   * 
-   * @param yoffset 偏移量。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetYoffset(int32_t yoffset) ;
-
-  /**
-   * 设置 是否允许y方向滑动。
-   * 
-   * @param yslidable 是否允许y方向滑动。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetYslidable(bool yslidable) ;
-
-  /**
-   * 设置 y偏移速度比例。
-   * 
-   * @param yspeed_scale y偏移速度比例。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetYspeedScale(float_t yspeed_scale) ;
-
-  /**
-   * 行高。
-   *
-   */
-  uint32_t GetRowHeight() const;
-
-  /**
-   * 最大行数。
-   *
-   */
-  uint32_t GetRows() const;
-
-  /**
-   * 偏移量。
-   *
-   */
-  int32_t GetYoffset() const;
-
-  /**
-   * 是否允许y方向滑动。
-   *
-   */
-  bool GetYslidable() const;
-
-  /**
-   * y偏移速度比例。
-   *
-   */
-  float_t GetYspeedScale() const;
 };
 
 
@@ -14687,100 +14289,6 @@ public:
 
 
 /**
- * 单个idle的信息。
- *
- */
-class TIdleInfo : public TObject { 
-public:
-  TIdleInfo(emitter_t* nativeObj) : TObject(nativeObj) {
-  }
-
-  TIdleInfo(const idle_info_t* nativeObj) : TObject((emitter_t*)nativeObj) {
-  }
-
-  static TIdleInfo Cast(emitter_t* nativeObj) {
-    return TIdleInfo(nativeObj);
-  }
-
-  static TIdleInfo Cast(const emitter_t* nativeObj) {
-    return TIdleInfo((emitter_t*)nativeObj);
-  }
-
-  static TIdleInfo Cast(TEmitter& obj) {
-    return TIdleInfo(obj.nativeObj);
-  }
-
-  static TIdleInfo Cast(const TEmitter& obj) {
-    return TIdleInfo(obj.nativeObj);
-  }
-
-
-  /**
-   * idle回调函数上下文。
-   *
-   */
-  void* GetCtx() const;
-
-  /**
-   * idle的ID
-   *
-   *> 为TK\_INVALID\_ID时表示无效idle。
-   *
-   */
-  uint32_t GetId() const;
-};
-
-
-/**
- * 电阻屏校准窗口。
- *
- *calibration\_win\_t是[window\_base\_t](window_base_t.md)的子类控件，
- *window\_base\_t的函数均适用于calibration\_win\_t控件。
- *
- *在xml中使用"calibration\_win"标签创建电阻屏校准窗口。如：
- *
- *```xml
- *<calibration_win name="cali" w="100%" h="100%" text="Please click the center of cross">
- *</calibration_win>
- *```
- *
- *> 更多用法请参考：
- *[window.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/calibration_win.xml)
- *
- *在c代码中使用函数calibration\_win\_create创建窗口。如：
- *
- *
- *通过calibration\_win\_set\_on\_done注册回调函数，用于保存校准数据。
- *
- */
-class TCalibrationWin : public TWindowBase { 
-public:
-  TCalibrationWin(widget_t* nativeObj) : TWindowBase(nativeObj) {
-  }
-
-  TCalibrationWin(const calibration_win_t* nativeObj) : TWindowBase((widget_t*)nativeObj) {
-  }
-
-  static TCalibrationWin Cast(widget_t* nativeObj) {
-    return TCalibrationWin(nativeObj);
-  }
-
-  static TCalibrationWin Cast(const widget_t* nativeObj) {
-    return TCalibrationWin((widget_t*)nativeObj);
-  }
-
-  static TCalibrationWin Cast(TWidget& obj) {
-    return TCalibrationWin(obj.nativeObj);
-  }
-
-  static TCalibrationWin Cast(const TWidget& obj) {
-    return TCalibrationWin(obj.nativeObj);
-  }
-
-};
-
-
-/**
  * SVG图片控件。
  *
  *svg\_image\_t是[image\_base\_t](image_base_t.md)的子类控件，image\_base\_t的函数均适用于svg\_image\_t控件。
@@ -14864,6 +14372,100 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t SetImage(char* name) ;
+};
+
+
+/**
+ * 电阻屏校准窗口。
+ *
+ *calibration\_win\_t是[window\_base\_t](window_base_t.md)的子类控件，
+ *window\_base\_t的函数均适用于calibration\_win\_t控件。
+ *
+ *在xml中使用"calibration\_win"标签创建电阻屏校准窗口。如：
+ *
+ *```xml
+ *<calibration_win name="cali" w="100%" h="100%" text="Please click the center of cross">
+ *</calibration_win>
+ *```
+ *
+ *> 更多用法请参考：
+ *[window.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/calibration_win.xml)
+ *
+ *在c代码中使用函数calibration\_win\_create创建窗口。如：
+ *
+ *
+ *通过calibration\_win\_set\_on\_done注册回调函数，用于保存校准数据。
+ *
+ */
+class TCalibrationWin : public TWindowBase { 
+public:
+  TCalibrationWin(widget_t* nativeObj) : TWindowBase(nativeObj) {
+  }
+
+  TCalibrationWin(const calibration_win_t* nativeObj) : TWindowBase((widget_t*)nativeObj) {
+  }
+
+  static TCalibrationWin Cast(widget_t* nativeObj) {
+    return TCalibrationWin(nativeObj);
+  }
+
+  static TCalibrationWin Cast(const widget_t* nativeObj) {
+    return TCalibrationWin((widget_t*)nativeObj);
+  }
+
+  static TCalibrationWin Cast(TWidget& obj) {
+    return TCalibrationWin(obj.nativeObj);
+  }
+
+  static TCalibrationWin Cast(const TWidget& obj) {
+    return TCalibrationWin(obj.nativeObj);
+  }
+
+};
+
+
+/**
+ * 单个idle的信息。
+ *
+ */
+class TIdleInfo : public TObject { 
+public:
+  TIdleInfo(emitter_t* nativeObj) : TObject(nativeObj) {
+  }
+
+  TIdleInfo(const idle_info_t* nativeObj) : TObject((emitter_t*)nativeObj) {
+  }
+
+  static TIdleInfo Cast(emitter_t* nativeObj) {
+    return TIdleInfo(nativeObj);
+  }
+
+  static TIdleInfo Cast(const emitter_t* nativeObj) {
+    return TIdleInfo((emitter_t*)nativeObj);
+  }
+
+  static TIdleInfo Cast(TEmitter& obj) {
+    return TIdleInfo(obj.nativeObj);
+  }
+
+  static TIdleInfo Cast(const TEmitter& obj) {
+    return TIdleInfo(obj.nativeObj);
+  }
+
+
+  /**
+   * idle回调函数上下文。
+   *
+   */
+  void* GetCtx() const;
+
+  /**
+   * idle的ID
+   *
+   *> 为TK\_INVALID\_ID时表示无效idle。
+   *
+   */
+  uint32_t GetId() const;
 };
 
 

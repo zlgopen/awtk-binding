@@ -10792,36 +10792,39 @@ class TAssetType:
   DATA = ASSET_TYPE_DATA();
 
 #
-# 仪表指针控件。
+# 图片动画控件，指定一个图片前缀，依次显示指定序列的图片，从而形成动画效果。
 #
-#仪表指针就是一张旋转的图片，图片可以是普通图片也可以是SVG图片。
+#图片序列可以用sequence指定，也可以用start\_index和end\_index指定一个范围。
 #
-#在嵌入式平台上，对于旋转的图片，SVG图片的效率比位图高数倍，所以推荐使用SVG图片。
+#image\_animation\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于image\_animation\_t控件。
 #
-#guage\_pointer\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于guage\_pointer\_t控件。
-#
-#在xml中使用"guage\_pointer"标签创建仪表指针控件。如：
+#在xml中使用"image\_animation"标签创建图片动画控件。如：
 #
 #```xml
-#<guage_pointer x="c" y="50" w="24" h="140" value="-128" image="guage_pointer" />
+#<image_animation image="ani" start_index="1" end_index="9" auto_play="true" interval="50"
+#delay="100"/>
 #```
 #
 #> 更多用法请参考：
-#[guage.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/guage.xml)
+#[image_animation.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/image_animation.xml)
 #
-#在c代码中使用函数guage\_pointer\_create创建仪表指针控件。如：
-#
-#
-#> 创建之后，需要用guage\_pointer\_set\_image设置仪表指针图片。
+#在c代码中使用函数image\_animation\_create创建图片动画控件。如：
 #
 #
-class TGuagePointer (TWidget):
+#> 完整示例请参考：
+#[image_animation
+#demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/image_animation.c)
+#
+#可用通过style来设置控件的显示风格，如背景颜色和边框等等，不过一般情况并不需要。
+#
+#
+class TImageAnimation (TWidget):
   def __init__(self, nativeObj):
-    super(TGuagePointer, self).__init__(nativeObj)
+    super(TImageAnimation, self).__init__(nativeObj)
 
 
   #
-  # 创建guage_pointer对象
+  # 创建image_animation对象
   # 
   # @param parent 父控件
   # @param x x坐标
@@ -10833,77 +10836,189 @@ class TGuagePointer (TWidget):
   #
   @classmethod
   def create(cls, parent, x, y, w, h): 
-    return  TGuagePointer(guage_pointer_create(awtk_get_native_obj(parent), x, y, w, h));
+    return  TImageAnimation(image_animation_create(awtk_get_native_obj(parent), x, y, w, h));
 
 
   #
-  # 转换为guage_pointer对象(供脚本语言使用)。
+  # 设置是否循环播放。
   # 
-  # @param widget guage_pointer对象。
-  #
-  # @return guage_pointer对象。
-  #
-  @classmethod
-  def cast(cls, widget): 
-    return  TGuagePointer(guage_pointer_cast(awtk_get_native_obj(widget)));
-
-
-  #
-  # 设置指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。
-  # 
-  # @param angle 指针角度。
+  # @param loop 是否循环播放。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
-  def set_angle(self, angle): 
-    return guage_pointer_set_angle(awtk_get_native_obj(self), angle);
+  def set_loop(self, loop): 
+    return image_animation_set_loop(awtk_get_native_obj(self), loop);
 
 
   #
-  # 设置指针的图片。
+  # 设置图片前缀。
   # 
-  # @param image 指针的图片。
+  # @param image 图片前缀。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
   def set_image(self, image): 
-    return guage_pointer_set_image(awtk_get_native_obj(self), image);
+    return image_animation_set_image(awtk_get_native_obj(self), image);
 
 
   #
-  # 设置指针的旋转锚点。
+  # 设置播放间隔时间。
   # 
-  # @param anchor_x 指针的锚点坐标x。(后面加上px为像素点，不加px为相对百分比坐标)
-  # @param anchor_y 指针的锚点坐标y。(后面加上px为像素点，不加px为相对百分比坐标)
+  # @param interval 间隔时间(毫秒)。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
-  def set_anchor(self, anchor_x, anchor_y): 
-    return guage_pointer_set_anchor(awtk_get_native_obj(self), anchor_x, anchor_y);
+  def set_interval(self, interval): 
+    return image_animation_set_interval(awtk_get_native_obj(self), interval);
 
 
   #
-  # 指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。
+  # 设置延迟播放时间(仅适用于自动播放)。
+  # 
+  # @param delay 延迟播放时间(毫秒)。
   #
+  # @return 返回RET_OK表示成功，否则表示失败。
   #
-  @property
-  def angle(self):
-    return guage_pointer_t_get_prop_angle(self.nativeObj);
-
-  @angle.setter
-  def angle(self, v):
-   this.set_angle(v);
+  def set_delay(self, delay): 
+    return image_animation_set_delay(awtk_get_native_obj(self), delay);
 
 
   #
-  # 指针图片。
+  # 设置是否自动播放。
+  # 
+  # @param auto_play 是否自动播放。
   #
-  #图片须垂直向上，图片的中心点为旋转方向。
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_auto_play(self, auto_play): 
+    return image_animation_set_auto_play(awtk_get_native_obj(self), auto_play);
+
+
+  #
+  # 设置播放序列。比如image为"fire"，sequence为"12223", 将依次播放"fire1", "fire2", "fire2", "fire2",
+  #"fire3"。
+  # 
+  # @param sequence 播放序列。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_sequence(self, sequence): 
+    return image_animation_set_sequence(awtk_get_native_obj(self), sequence);
+
+
+  #
+  # 设置播放序列。比如image为"fire"，start_index为0, end_index为99, 将依次播放"fire0", ...,
+  #"fire99"。
+  #
+  #若指定的图片不存在，则重复上一张图片。
+  # 
+  # @param start_index 图片起始序数。
+  # @param end_index 图片结束序数。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_range_sequence(self, start_index, end_index): 
+    return image_animation_set_range_sequence(awtk_get_native_obj(self), start_index, end_index);
+
+
+  #
+  # 播放。
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def play(self): 
+    return image_animation_play(awtk_get_native_obj(self));
+
+
+  #
+  # 停止(并重置index为-1)。
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def stop(self): 
+    return image_animation_stop(awtk_get_native_obj(self));
+
+
+  #
+  # 暂停。
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def pause(self): 
+    return image_animation_pause(awtk_get_native_obj(self));
+
+
+  #
+  # 手动切换到下一张图片。
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def next(self): 
+    return image_animation_next(awtk_get_native_obj(self));
+
+
+  #
+  # 设置生成图片名的格式。
+  #
+  #XXX:生成图片名时，第一个参数是图片名前缀，第二个是序数，只能在此前提下设置格式。
+  #
+  #```
+  #const char* format = image_animation->format ? image_animation->format : "%s%d";
+  #tk_snprintf(name, TK_NAME_LEN, format, image_animation->image, image_animation->index);
+  #```
+  # 
+  # @param format 格式。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_format(self, format): 
+    return image_animation_set_format(awtk_get_native_obj(self), format);
+
+
+  #
+  # 设置绘制完成后unload图片，以释放内存空间。
+  # 
+  # @param unload_after_paint 是否绘制完成后unload图片。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_unload_after_paint(self, unload_after_paint): 
+    return image_animation_set_unload_after_paint(awtk_get_native_obj(self), unload_after_paint);
+
+
+  #
+  # 转换为image_animation对象(供脚本语言使用)。
+  # 
+  # @param widget image_animation对象。
+  #
+  # @return image_animation对象。
+  #
+  @classmethod
+  def cast(cls, widget): 
+    return  TImageAnimation(image_animation_cast(awtk_get_native_obj(widget)));
+
+
+  #
+  # 判断是否在播放。
+  # 
+  #
+  # @return 返回TRUE表示是，否则表示否。
+  #
+  def is_playing(self): 
+    return image_animation_is_playing(awtk_get_native_obj(self));
+
+
+  #
+  # 图片名称的前缀。
   #
   #
   @property
   def image(self):
-    return guage_pointer_t_get_prop_image(self.nativeObj);
+    return image_animation_t_get_prop_image(self.nativeObj);
 
   @image.setter
   def image(self, v):
@@ -10911,21 +11026,112 @@ class TGuagePointer (TWidget):
 
 
   #
-  # 图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
+  # 播放的序列，字符可选值为数字和英文大小写字母，字符可以重复。如：0123456789或者123123abcd。
   #
   #
   @property
-  def anchor_x(self):
-    return guage_pointer_t_get_prop_anchor_x(self.nativeObj);
+  def sequence(self):
+    return image_animation_t_get_prop_sequence(self.nativeObj);
+
+  @sequence.setter
+  def sequence(self, v):
+   this.set_sequence(v);
 
 
   #
-  # 图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
+  # 图片起始序数。
   #
   #
   @property
-  def anchor_y(self):
-    return guage_pointer_t_get_prop_anchor_y(self.nativeObj);
+  def start_index(self):
+    return image_animation_t_get_prop_start_index(self.nativeObj);
+
+
+  #
+  # 图片结束序数。
+  #
+  #
+  @property
+  def end_index(self):
+    return image_animation_t_get_prop_end_index(self.nativeObj);
+
+
+  #
+  # 是否循环播放。
+  #
+  #
+  @property
+  def loop(self):
+    return image_animation_t_get_prop_loop(self.nativeObj);
+
+  @loop.setter
+  def loop(self, v):
+   this.set_loop(v);
+
+
+  #
+  # 是否自动播放。
+  #
+  #
+  @property
+  def auto_play(self):
+    return image_animation_t_get_prop_auto_play(self.nativeObj);
+
+  @auto_play.setter
+  def auto_play(self, v):
+   this.set_auto_play(v);
+
+
+  #
+  # 绘制完成后unload图片，以释放内存空间。
+  #
+  #
+  @property
+  def unload_after_paint(self):
+    return image_animation_t_get_prop_unload_after_paint(self.nativeObj);
+
+  @unload_after_paint.setter
+  def unload_after_paint(self, v):
+   this.set_unload_after_paint(v);
+
+
+  #
+  # 索引到图片名转换时的格式，缺省为"%s%d"。
+  #
+  #
+  @property
+  def format(self):
+    return image_animation_t_get_prop_format(self.nativeObj);
+
+  @format.setter
+  def format(self, v):
+   this.set_format(v);
+
+
+  #
+  # 每张图片播放的时间(毫秒)。
+  #
+  #
+  @property
+  def interval(self):
+    return image_animation_t_get_prop_interval(self.nativeObj);
+
+  @interval.setter
+  def interval(self, v):
+   this.set_interval(v);
+
+
+  #
+  # 自动播放时延迟播放的时间(毫秒)。
+  #
+  #
+  @property
+  def delay(self):
+    return image_animation_t_get_prop_delay(self.nativeObj);
+
+  @delay.setter
+  def delay(self, v):
+   this.set_delay(v);
 
 
 #
@@ -14125,6 +14331,126 @@ class TTimeClock (TWidget):
 
 
 #
+# 勾选按钮控件(单选/多选)。
+#
+#check\_button\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于check\_button\_t控件。
+#
+#在xml中使用"check_button"标签创建多选按钮控件。如：
+#
+#```xml
+#<check_button name="c1" text="Book"/>
+#```
+#
+#在xml中使用"radio_button"标签创建单选按钮控件。如：
+#
+#```xml
+#<radio_button name="r1" text="Book"/>
+#```
+#
+#> 更多用法请参考：
+#[button.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/basic.xml)
+#
+#在c代码中使用函数check\_button\_create创建多选按钮控件。如：
+#
+#
+#在c代码中使用函数check\_button\_create\_radio创建单选按钮控件。如：
+#
+#
+#> 完整示例请参考：
+#[button demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/check_button.c)
+#
+#可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
+#
+#```xml
+#<style name="default" icon_at="left">
+#<normal  icon="unchecked" />
+#<pressed icon="unchecked" />
+#<over    icon="unchecked" text_color="green"/>
+#<normal_of_checked icon="checked" text_color="blue"/>
+#<pressed_of_checked icon="checked" text_color="blue"/>
+#<over_of_checked icon="checked" text_color="green"/>
+#</style>
+#```
+#
+#> 更多用法请参考：
+#[theme
+#default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L227)
+#
+#
+class TCheckButton (TWidget):
+  def __init__(self, nativeObj):
+    super(TCheckButton, self).__init__(nativeObj)
+
+
+  #
+  # 创建多选按钮对象
+  # 
+  # @param parent 父控件
+  # @param x x坐标
+  # @param y y坐标
+  # @param w 宽度
+  # @param h 高度
+  #
+  # @return widget对象。
+  #
+  @classmethod
+  def create(cls, parent, x, y, w, h): 
+    return  TCheckButton(check_button_create(awtk_get_native_obj(parent), x, y, w, h));
+
+
+  #
+  # 创建单选按钮对象
+  # 
+  # @param parent 父控件
+  # @param x x坐标
+  # @param y y坐标
+  # @param w 宽度
+  # @param h 高度
+  #
+  # @return widget对象。
+  #
+  @classmethod
+  def create_radio(cls, parent, x, y, w, h): 
+    return  TCheckButton(check_button_create_radio(awtk_get_native_obj(parent), x, y, w, h));
+
+
+  #
+  # 设置控件的值。
+  # 
+  # @param value 值(勾选为TRUE，非勾选为FALSE)。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_value(self, value): 
+    return check_button_set_value(awtk_get_native_obj(self), value);
+
+
+  #
+  # 转换check_button对象(供脚本语言使用)。
+  # 
+  # @param widget check_button对象。
+  #
+  # @return check_button对象。
+  #
+  @classmethod
+  def cast(cls, widget): 
+    return  TCheckButton(check_button_cast(awtk_get_native_obj(widget)));
+
+
+  #
+  # 值(勾选为TRUE，非勾选为FALSE)。
+  #
+  #
+  @property
+  def value(self):
+    return check_button_t_get_prop_value(self.nativeObj);
+
+  @value.setter
+  def value(self, v):
+   this.set_value(v);
+
+
+#
 # 文本选择器控件，通常用于选择日期和时间等。
 #
 #> XXX: 目前需要先设置options和visible_nr，再设置其它参数(在XML中也需要按此顺序)。
@@ -14537,59 +14863,54 @@ class TSwitch (TWidget):
 
 
 #
-# 勾选按钮控件(单选/多选)。
+# 按钮控件。
 #
-#check\_button\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于check\_button\_t控件。
+#点击按钮之后会触发EVT\_CLICK事件，注册EVT\_CLICK事件以执行特定操作。
 #
-#在xml中使用"check_button"标签创建多选按钮控件。如：
+#按钮控件也可以作为容器使用，使用图片和文本作为其子控件，可以实现很多有趣的效果。
 #
-#```xml
-#<check_button name="c1" text="Book"/>
-#```
+#button\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于button\_t控件。
 #
-#在xml中使用"radio_button"标签创建单选按钮控件。如：
+#在xml中使用"button"标签创建按钮控件。如：
 #
 #```xml
-#<radio_button name="r1" text="Book"/>
+#<button x="c" y="m" w="80" h="30" text="OK"/>
 #```
 #
 #> 更多用法请参考：
-#[button.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/basic.xml)
+#[button.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/button.xml)
 #
-#在c代码中使用函数check\_button\_create创建多选按钮控件。如：
+#在c代码中使用函数button\_create创建按钮控件。如：
 #
 #
-#在c代码中使用函数check\_button\_create\_radio创建单选按钮控件。如：
-#
+#> 创建之后，需要用widget\_set\_text或widget\_set\_text\_utf8设置文本内容。
 #
 #> 完整示例请参考：
-#[button demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/check_button.c)
+#[button demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/button.c)
 #
 #可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
 #
 #```xml
-#<style name="default" icon_at="left">
-#<normal  icon="unchecked" />
-#<pressed icon="unchecked" />
-#<over    icon="unchecked" text_color="green"/>
-#<normal_of_checked icon="checked" text_color="blue"/>
-#<pressed_of_checked icon="checked" text_color="blue"/>
-#<over_of_checked icon="checked" text_color="green"/>
+#<style name="default" border_color="#a0a0a0"  text_color="black">
+#<normal     bg_color="#f0f0f0" />
+#<pressed    bg_color="#c0c0c0" x_offset="1" y_offset="1"/>
+#<over       bg_color="#e0e0e0" />
+#<disable    bg_color="gray" text_color="#d0d0d0" />
 #</style>
 #```
 #
 #> 更多用法请参考：
 #[theme
-#default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L227)
+#default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L31)
 #
 #
-class TCheckButton (TWidget):
+class TButton (TWidget):
   def __init__(self, nativeObj):
-    super(TCheckButton, self).__init__(nativeObj)
+    super(TButton, self).__init__(nativeObj)
 
 
   #
-  # 创建多选按钮对象
+  # 创建button对象
   # 
   # @param parent 父控件
   # @param x x坐标
@@ -14597,15 +14918,138 @@ class TCheckButton (TWidget):
   # @param w 宽度
   # @param h 高度
   #
-  # @return widget对象。
+  # @return 对象。
   #
   @classmethod
   def create(cls, parent, x, y, w, h): 
-    return  TCheckButton(check_button_create(awtk_get_native_obj(parent), x, y, w, h));
+    return  TButton(button_create(awtk_get_native_obj(parent), x, y, w, h));
 
 
   #
-  # 创建单选按钮对象
+  # 转换为button对象(供脚本语言使用)。
+  # 
+  # @param widget button对象。
+  #
+  # @return button对象。
+  #
+  @classmethod
+  def cast(cls, widget): 
+    return  TButton(button_cast(awtk_get_native_obj(widget)));
+
+
+  #
+  # 设置触发EVT\_CLICK事件的时间间隔。为0则不重复触发EVT\_CLICK事件。
+  # 
+  # @param repeat 触发EVT_CLICK事件的时间间隔(毫秒)。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_repeat(self, repeat): 
+    return button_set_repeat(awtk_get_native_obj(self), repeat);
+
+
+  #
+  # 设置触发长按事件的时间。
+  # 
+  # @param long_press_time 触发长按事件的时间(毫秒)。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_long_press_time(self, long_press_time): 
+    return button_set_long_press_time(awtk_get_native_obj(self), long_press_time);
+
+
+  #
+  # 设置是否启用长按事件。
+  # 
+  # @param enable_long_press 是否启用长按事件。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_enable_long_press(self, enable_long_press): 
+    return button_set_enable_long_press(awtk_get_native_obj(self), enable_long_press);
+
+
+  #
+  # 重复触发EVT\_CLICK事件的时间间隔。
+  #
+  #为0则不重复触发EVT\_CLICK事件。
+  #
+  #
+  @property
+  def repeat(self):
+    return button_t_get_prop_repeat(self.nativeObj);
+
+  @repeat.setter
+  def repeat(self, v):
+   this.set_repeat(v);
+
+
+  #
+  # 是否启用长按事件，为true时才触发长按事件。
+  #
+  #触发长按事件后不再触发点击事件。
+  #缺省不启用。
+  #
+  #
+  @property
+  def enable_long_press(self):
+    return button_t_get_prop_enable_long_press(self.nativeObj);
+
+  @enable_long_press.setter
+  def enable_long_press(self, v):
+   this.set_enable_long_press(v);
+
+
+  #
+  # 触发长按事件的时间(ms)
+  #
+  #
+  @property
+  def long_press_time(self):
+    return button_t_get_prop_long_press_time(self.nativeObj);
+
+  @long_press_time.setter
+  def long_press_time(self, v):
+   this.set_long_press_time(v);
+
+
+#
+# Button Group控件。一个简单的容器控件，用于容纳一组按钮控件。
+#
+#它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
+#子控件的布局可用layout\_children属性指定。
+#请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
+#
+#button\_group\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于button\_group\_t控件。
+#
+#在xml中使用"button\_group"标签创建button\_group。如：
+#
+#```xml
+#<button_group x="0" y="m" w="100%" h="40" children_layout="default(c=4,r=1,s=5,m=5)">
+#<button name="open:basic" text="Basic"/>
+#<button name="open:button" text="Buttons"/>
+#<button name="open:edit" text="Edits"/>
+#<button name="open:keyboard" text="KeyBoard"/>
+#</button_group>
+#```
+#
+#可用通过style来设置控件的显示风格，如背景颜色等。如：
+#
+#```xml
+#<style name="default" border_color="#a0a0a0">
+#<normal     bg_color="#f0f0f0" />
+#</style>
+#```
+#
+#
+class TButtonGroup (TWidget):
+  def __init__(self, nativeObj):
+    super(TButtonGroup, self).__init__(nativeObj)
+
+
+  #
+  # 创建button_group对象
   # 
   # @param parent 父控件
   # @param x x坐标
@@ -14613,47 +15057,87 @@ class TCheckButton (TWidget):
   # @param w 宽度
   # @param h 高度
   #
-  # @return widget对象。
+  # @return 对象。
   #
   @classmethod
-  def create_radio(cls, parent, x, y, w, h): 
-    return  TCheckButton(check_button_create_radio(awtk_get_native_obj(parent), x, y, w, h));
+  def create(cls, parent, x, y, w, h): 
+    return  TButtonGroup(button_group_create(awtk_get_native_obj(parent), x, y, w, h));
 
 
   #
-  # 设置控件的值。
+  # 转换为button_group对象(供脚本语言使用)。
   # 
-  # @param value 值(勾选为TRUE，非勾选为FALSE)。
+  # @param widget button_group对象。
   #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_value(self, value): 
-    return check_button_set_value(awtk_get_native_obj(self), value);
-
-
-  #
-  # 转换check_button对象(供脚本语言使用)。
-  # 
-  # @param widget check_button对象。
-  #
-  # @return check_button对象。
+  # @return button_group对象。
   #
   @classmethod
   def cast(cls, widget): 
-    return  TCheckButton(check_button_cast(awtk_get_native_obj(widget)));
+    return  TButtonGroup(button_group_cast(awtk_get_native_obj(widget)));
+
+
+#
+# app_bar控件。
+#
+#一个简单的容器控件，一般在窗口的顶部，用于显示本窗口的状态和信息。
+#
+#它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
+#子控件的布局可用layout\_children属性指定。
+#请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
+#
+#app\_bar\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于app\_bar\_t控件。
+#
+#在xml中使用"app\_bar"标签创建app\_bar。如：
+#
+#```xml
+#<app_bar x="0" y="0" w="100%" h="30"
+#<label x="0" y="0" w="100%" h="100%" text="Basic Controls" />
+#</app_bar>
+#```
+#
+#在c代码中使用函数app\_bar\_create创建app\_bar。如：
+#
+#
+#可用通过style来设置控件的显示风格，如背景颜色等。如：
+#
+#```xml
+#<style name="default" border_color="#a0a0a0">
+#<normal     bg_color="#f0f0f0" />
+#</style>
+#```
+#
+#
+class TAppBar (TWidget):
+  def __init__(self, nativeObj):
+    super(TAppBar, self).__init__(nativeObj)
 
 
   #
-  # 值(勾选为TRUE，非勾选为FALSE)。
+  # 创建app_bar对象
+  # 
+  # @param parent 父控件
+  # @param x x坐标
+  # @param y y坐标
+  # @param w 宽度
+  # @param h 高度
   #
+  # @return 对象。
   #
-  @property
-  def value(self):
-    return check_button_t_get_prop_value(self.nativeObj);
+  @classmethod
+  def create(cls, parent, x, y, w, h): 
+    return  TAppBar(app_bar_create(awtk_get_native_obj(parent), x, y, w, h));
 
-  @value.setter
-  def value(self, v):
-   this.set_value(v);
+
+  #
+  # 转换为app_bar对象(供脚本语言使用)。
+  # 
+  # @param widget app_bar对象。
+  #
+  # @return app_bar对象。
+  #
+  @classmethod
+  def cast(cls, widget): 
+    return  TAppBar(app_bar_cast(awtk_get_native_obj(widget)));
 
 
 #
@@ -14864,158 +15348,6 @@ class TSlideView (TWidget):
   @anim_hint.setter
   def anim_hint(self, v):
    this.set_anim_hint(v);
-
-
-#
-# 按钮控件。
-#
-#点击按钮之后会触发EVT\_CLICK事件，注册EVT\_CLICK事件以执行特定操作。
-#
-#按钮控件也可以作为容器使用，使用图片和文本作为其子控件，可以实现很多有趣的效果。
-#
-#button\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于button\_t控件。
-#
-#在xml中使用"button"标签创建按钮控件。如：
-#
-#```xml
-#<button x="c" y="m" w="80" h="30" text="OK"/>
-#```
-#
-#> 更多用法请参考：
-#[button.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/button.xml)
-#
-#在c代码中使用函数button\_create创建按钮控件。如：
-#
-#
-#> 创建之后，需要用widget\_set\_text或widget\_set\_text\_utf8设置文本内容。
-#
-#> 完整示例请参考：
-#[button demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/button.c)
-#
-#可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
-#
-#```xml
-#<style name="default" border_color="#a0a0a0"  text_color="black">
-#<normal     bg_color="#f0f0f0" />
-#<pressed    bg_color="#c0c0c0" x_offset="1" y_offset="1"/>
-#<over       bg_color="#e0e0e0" />
-#<disable    bg_color="gray" text_color="#d0d0d0" />
-#</style>
-#```
-#
-#> 更多用法请参考：
-#[theme
-#default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L31)
-#
-#
-class TButton (TWidget):
-  def __init__(self, nativeObj):
-    super(TButton, self).__init__(nativeObj)
-
-
-  #
-  # 创建button对象
-  # 
-  # @param parent 父控件
-  # @param x x坐标
-  # @param y y坐标
-  # @param w 宽度
-  # @param h 高度
-  #
-  # @return 对象。
-  #
-  @classmethod
-  def create(cls, parent, x, y, w, h): 
-    return  TButton(button_create(awtk_get_native_obj(parent), x, y, w, h));
-
-
-  #
-  # 转换为button对象(供脚本语言使用)。
-  # 
-  # @param widget button对象。
-  #
-  # @return button对象。
-  #
-  @classmethod
-  def cast(cls, widget): 
-    return  TButton(button_cast(awtk_get_native_obj(widget)));
-
-
-  #
-  # 设置触发EVT\_CLICK事件的时间间隔。为0则不重复触发EVT\_CLICK事件。
-  # 
-  # @param repeat 触发EVT_CLICK事件的时间间隔(毫秒)。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_repeat(self, repeat): 
-    return button_set_repeat(awtk_get_native_obj(self), repeat);
-
-
-  #
-  # 设置触发长按事件的时间。
-  # 
-  # @param long_press_time 触发长按事件的时间(毫秒)。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_long_press_time(self, long_press_time): 
-    return button_set_long_press_time(awtk_get_native_obj(self), long_press_time);
-
-
-  #
-  # 设置是否启用长按事件。
-  # 
-  # @param enable_long_press 是否启用长按事件。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_enable_long_press(self, enable_long_press): 
-    return button_set_enable_long_press(awtk_get_native_obj(self), enable_long_press);
-
-
-  #
-  # 重复触发EVT\_CLICK事件的时间间隔。
-  #
-  #为0则不重复触发EVT\_CLICK事件。
-  #
-  #
-  @property
-  def repeat(self):
-    return button_t_get_prop_repeat(self.nativeObj);
-
-  @repeat.setter
-  def repeat(self, v):
-   this.set_repeat(v);
-
-
-  #
-  # 是否启用长按事件，为true时才触发长按事件。
-  #
-  #触发长按事件后不再触发点击事件。
-  #缺省不启用。
-  #
-  #
-  @property
-  def enable_long_press(self):
-    return button_t_get_prop_enable_long_press(self.nativeObj);
-
-  @enable_long_press.setter
-  def enable_long_press(self, v):
-   this.set_enable_long_press(v);
-
-
-  #
-  # 触发长按事件的时间(ms)
-  #
-  #
-  @property
-  def long_press_time(self):
-    return button_t_get_prop_long_press_time(self.nativeObj);
-
-  @long_press_time.setter
-  def long_press_time(self, v):
-   this.set_long_press_time(v);
 
 
 #
@@ -15486,132 +15818,6 @@ class TSlideMenu (TWidget):
   @min_scale.setter
   def min_scale(self, v):
    this.set_min_scale(v);
-
-
-#
-# Button Group控件。一个简单的容器控件，用于容纳一组按钮控件。
-#
-#它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
-#子控件的布局可用layout\_children属性指定。
-#请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
-#
-#button\_group\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于button\_group\_t控件。
-#
-#在xml中使用"button\_group"标签创建button\_group。如：
-#
-#```xml
-#<button_group x="0" y="m" w="100%" h="40" children_layout="default(c=4,r=1,s=5,m=5)">
-#<button name="open:basic" text="Basic"/>
-#<button name="open:button" text="Buttons"/>
-#<button name="open:edit" text="Edits"/>
-#<button name="open:keyboard" text="KeyBoard"/>
-#</button_group>
-#```
-#
-#可用通过style来设置控件的显示风格，如背景颜色等。如：
-#
-#```xml
-#<style name="default" border_color="#a0a0a0">
-#<normal     bg_color="#f0f0f0" />
-#</style>
-#```
-#
-#
-class TButtonGroup (TWidget):
-  def __init__(self, nativeObj):
-    super(TButtonGroup, self).__init__(nativeObj)
-
-
-  #
-  # 创建button_group对象
-  # 
-  # @param parent 父控件
-  # @param x x坐标
-  # @param y y坐标
-  # @param w 宽度
-  # @param h 高度
-  #
-  # @return 对象。
-  #
-  @classmethod
-  def create(cls, parent, x, y, w, h): 
-    return  TButtonGroup(button_group_create(awtk_get_native_obj(parent), x, y, w, h));
-
-
-  #
-  # 转换为button_group对象(供脚本语言使用)。
-  # 
-  # @param widget button_group对象。
-  #
-  # @return button_group对象。
-  #
-  @classmethod
-  def cast(cls, widget): 
-    return  TButtonGroup(button_group_cast(awtk_get_native_obj(widget)));
-
-
-#
-# app_bar控件。
-#
-#一个简单的容器控件，一般在窗口的顶部，用于显示本窗口的状态和信息。
-#
-#它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
-#子控件的布局可用layout\_children属性指定。
-#请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
-#
-#app\_bar\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于app\_bar\_t控件。
-#
-#在xml中使用"app\_bar"标签创建app\_bar。如：
-#
-#```xml
-#<app_bar x="0" y="0" w="100%" h="30"
-#<label x="0" y="0" w="100%" h="100%" text="Basic Controls" />
-#</app_bar>
-#```
-#
-#在c代码中使用函数app\_bar\_create创建app\_bar。如：
-#
-#
-#可用通过style来设置控件的显示风格，如背景颜色等。如：
-#
-#```xml
-#<style name="default" border_color="#a0a0a0">
-#<normal     bg_color="#f0f0f0" />
-#</style>
-#```
-#
-#
-class TAppBar (TWidget):
-  def __init__(self, nativeObj):
-    super(TAppBar, self).__init__(nativeObj)
-
-
-  #
-  # 创建app_bar对象
-  # 
-  # @param parent 父控件
-  # @param x x坐标
-  # @param y y坐标
-  # @param w 宽度
-  # @param h 高度
-  #
-  # @return 对象。
-  #
-  @classmethod
-  def create(cls, parent, x, y, w, h): 
-    return  TAppBar(app_bar_create(awtk_get_native_obj(parent), x, y, w, h));
-
-
-  #
-  # 转换为app_bar对象(供脚本语言使用)。
-  # 
-  # @param widget app_bar对象。
-  #
-  # @return app_bar对象。
-  #
-  @classmethod
-  def cast(cls, widget): 
-    return  TAppBar(app_bar_cast(awtk_get_native_obj(widget)));
 
 
 #
@@ -16550,6 +16756,114 @@ class TListItem (TWidget):
 
 
 #
+# 滚轮事件。
+#
+#
+class TWheelEvent (TEvent):
+  def __init__(self, nativeObj):
+    super(TWheelEvent, self).__init__(nativeObj)
+
+
+  #
+  # 把event对象转wheel_event_t对象，主要给脚本语言使用。
+  # 
+  # @param event event对象。
+  #
+  # @return event对象。
+  #
+  @classmethod
+  def cast(cls, event): 
+    return  TWheelEvent(wheel_event_cast(awtk_get_native_obj(event)));
+
+
+  #
+  # 滚轮的y值。
+  #
+  #
+  @property
+  def dy(self):
+    return wheel_event_t_get_prop_dy(self.nativeObj);
+
+
+  #
+  # alt键是否按下。
+  #
+  #
+  @property
+  def alt(self):
+    return wheel_event_t_get_prop_alt(self.nativeObj);
+
+
+  #
+  # ctrl键是否按下。
+  #
+  #
+  @property
+  def ctrl(self):
+    return wheel_event_t_get_prop_ctrl(self.nativeObj);
+
+
+  #
+  # shift键是否按下。
+  #
+  #
+  @property
+  def shift(self):
+    return wheel_event_t_get_prop_shift(self.nativeObj);
+
+
+#
+# 滚轮事件。
+#
+#
+class TOrientationEvent (TEvent):
+  def __init__(self, nativeObj):
+    super(TOrientationEvent, self).__init__(nativeObj)
+
+
+  #
+  # 把event对象转orientation_event_t对象，主要给脚本语言使用。
+  # 
+  # @param event event对象。
+  #
+  # @return event对象。
+  #
+  @classmethod
+  def cast(cls, event): 
+    return  TOrientationEvent(orientation_event_cast(awtk_get_native_obj(event)));
+
+
+  #
+  # 屏幕方向。
+  #
+  #
+  @property
+  def orientation(self):
+    return orientation_event_t_get_prop_orientation(self.nativeObj);
+
+
+#
+# 值变化事件。
+#
+#
+class TValueChangeEvent (TEvent):
+  def __init__(self, nativeObj):
+    super(TValueChangeEvent, self).__init__(nativeObj)
+
+
+  #
+  # 把event对象转value_change_event_t对象，主要给脚本语言使用。
+  # 
+  # @param event event对象。
+  #
+  # @return event对象。
+  #
+  @classmethod
+  def cast(cls, event): 
+    return  TValueChangeEvent(value_change_event_cast(awtk_get_native_obj(event)));
+
+
+#
 # 可水平滚动的文本控件，方便实现长文本滚动。
 #
 #
@@ -17007,6 +17321,108 @@ class TRichTextView (TWidget):
 
 
 #
+# 指针事件。
+#
+#
+class TPointerEvent (TEvent):
+  def __init__(self, nativeObj):
+    super(TPointerEvent, self).__init__(nativeObj)
+
+
+  #
+  # 把event对象转pointer_event_t对象，主要给脚本语言使用。
+  # 
+  # @param event event对象。
+  #
+  # @return event对象。
+  #
+  @classmethod
+  def cast(cls, event): 
+    return  TPointerEvent(pointer_event_cast(awtk_get_native_obj(event)));
+
+
+  #
+  # x坐标。
+  #
+  #
+  @property
+  def x(self):
+    return pointer_event_t_get_prop_x(self.nativeObj);
+
+
+  #
+  # y坐标。
+  #
+  #
+  @property
+  def y(self):
+    return pointer_event_t_get_prop_y(self.nativeObj);
+
+
+  #
+  # button。
+  #
+  #
+  @property
+  def button(self):
+    return pointer_event_t_get_prop_button(self.nativeObj);
+
+
+  #
+  # 指针是否按下。
+  #
+  #
+  @property
+  def pressed(self):
+    return pointer_event_t_get_prop_pressed(self.nativeObj);
+
+
+  #
+  # alt键是否按下。
+  #
+  #
+  @property
+  def alt(self):
+    return pointer_event_t_get_prop_alt(self.nativeObj);
+
+
+  #
+  # ctrl键是否按下。
+  #
+  #
+  @property
+  def ctrl(self):
+    return pointer_event_t_get_prop_ctrl(self.nativeObj);
+
+
+  #
+  # cmd键是否按下。
+  #
+  #
+  @property
+  def cmd(self):
+    return pointer_event_t_get_prop_cmd(self.nativeObj);
+
+
+  #
+  # menu键是否按下。
+  #
+  #
+  @property
+  def menu(self):
+    return pointer_event_t_get_prop_menu(self.nativeObj);
+
+
+  #
+  # shift键是否按下。
+  #
+  #
+  @property
+  def shift(self):
+    return pointer_event_t_get_prop_shift(self.nativeObj);
+
+
+#
 # 进度圆环控件。
 #
 #progress\_circle\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于progress\_circle\_t控件。
@@ -17266,16 +17682,16 @@ class TProgressCircle (TWidget):
 
 
 #
-# 滚轮事件。
+# 按键事件。
 #
 #
-class TWheelEvent (TEvent):
+class TKeyEvent (TEvent):
   def __init__(self, nativeObj):
-    super(TWheelEvent, self).__init__(nativeObj)
+    super(TKeyEvent, self).__init__(nativeObj)
 
 
   #
-  # 把event对象转wheel_event_t对象，主要给脚本语言使用。
+  # 把event对象转key_event_t对象，主要给脚本语言使用。
   # 
   # @param event event对象。
   #
@@ -17283,16 +17699,16 @@ class TWheelEvent (TEvent):
   #
   @classmethod
   def cast(cls, event): 
-    return  TWheelEvent(wheel_event_cast(awtk_get_native_obj(event)));
+    return  TKeyEvent(key_event_cast(awtk_get_native_obj(event)));
 
 
   #
-  # 滚轮的y值。
+  # 键值。
   #
   #
   @property
-  def dy(self):
-    return wheel_event_t_get_prop_dy(self.nativeObj);
+  def key(self):
+    return key_event_t_get_prop_key(self.nativeObj);
 
 
   #
@@ -17301,16 +17717,53 @@ class TWheelEvent (TEvent):
   #
   @property
   def alt(self):
-    return wheel_event_t_get_prop_alt(self.nativeObj);
+    return key_event_t_get_prop_alt(self.nativeObj);
 
 
   #
-  # ctrl键是否按下。
+  # left alt键是否按下。
+  #
+  #
+  @property
+  def lalt(self):
+    return key_event_t_get_prop_lalt(self.nativeObj);
+
+
+  #
+  # right alt键是否按下。
+  #
+  #
+  @property
+  def ralt(self):
+    return key_event_t_get_prop_ralt(self.nativeObj);
+
+
+  #
+  # right alt键是否按下。
+  #ctrl键是否按下。
   #
   #
   @property
   def ctrl(self):
-    return wheel_event_t_get_prop_ctrl(self.nativeObj);
+    return key_event_t_get_prop_ctrl(self.nativeObj);
+
+
+  #
+  # left ctrl键是否按下。
+  #
+  #
+  @property
+  def lctrl(self):
+    return key_event_t_get_prop_lctrl(self.nativeObj);
+
+
+  #
+  # right ctrl键是否按下。
+  #
+  #
+  @property
+  def rctrl(self):
+    return key_event_t_get_prop_rctrl(self.nativeObj);
 
 
   #
@@ -17319,142 +17772,35 @@ class TWheelEvent (TEvent):
   #
   @property
   def shift(self):
-    return wheel_event_t_get_prop_shift(self.nativeObj);
-
-
-#
-# 滚轮事件。
-#
-#
-class TOrientationEvent (TEvent):
-  def __init__(self, nativeObj):
-    super(TOrientationEvent, self).__init__(nativeObj)
+    return key_event_t_get_prop_shift(self.nativeObj);
 
 
   #
-  # 把event对象转orientation_event_t对象，主要给脚本语言使用。
-  # 
-  # @param event event对象。
-  #
-  # @return event对象。
-  #
-  @classmethod
-  def cast(cls, event): 
-    return  TOrientationEvent(orientation_event_cast(awtk_get_native_obj(event)));
-
-
-  #
-  # 屏幕方向。
+  # left shift键是否按下。
   #
   #
   @property
-  def orientation(self):
-    return orientation_event_t_get_prop_orientation(self.nativeObj);
-
-
-#
-# 值变化事件。
-#
-#
-class TValueChangeEvent (TEvent):
-  def __init__(self, nativeObj):
-    super(TValueChangeEvent, self).__init__(nativeObj)
+  def lshift(self):
+    return key_event_t_get_prop_lshift(self.nativeObj);
 
 
   #
-  # 把event对象转value_change_event_t对象，主要给脚本语言使用。
-  # 
-  # @param event event对象。
-  #
-  # @return event对象。
-  #
-  @classmethod
-  def cast(cls, event): 
-    return  TValueChangeEvent(value_change_event_cast(awtk_get_native_obj(event)));
-
-
-#
-# 指针事件。
-#
-#
-class TPointerEvent (TEvent):
-  def __init__(self, nativeObj):
-    super(TPointerEvent, self).__init__(nativeObj)
-
-
-  #
-  # 把event对象转pointer_event_t对象，主要给脚本语言使用。
-  # 
-  # @param event event对象。
-  #
-  # @return event对象。
-  #
-  @classmethod
-  def cast(cls, event): 
-    return  TPointerEvent(pointer_event_cast(awtk_get_native_obj(event)));
-
-
-  #
-  # x坐标。
+  # right shift键是否按下。
   #
   #
   @property
-  def x(self):
-    return pointer_event_t_get_prop_x(self.nativeObj);
+  def rshift(self):
+    return key_event_t_get_prop_rshift(self.nativeObj);
 
 
   #
-  # y坐标。
-  #
-  #
-  @property
-  def y(self):
-    return pointer_event_t_get_prop_y(self.nativeObj);
-
-
-  #
-  # button。
-  #
-  #
-  @property
-  def button(self):
-    return pointer_event_t_get_prop_button(self.nativeObj);
-
-
-  #
-  # 指针是否按下。
-  #
-  #
-  @property
-  def pressed(self):
-    return pointer_event_t_get_prop_pressed(self.nativeObj);
-
-
-  #
-  # alt键是否按下。
-  #
-  #
-  @property
-  def alt(self):
-    return pointer_event_t_get_prop_alt(self.nativeObj);
-
-
-  #
-  # ctrl键是否按下。
-  #
-  #
-  @property
-  def ctrl(self):
-    return pointer_event_t_get_prop_ctrl(self.nativeObj);
-
-
-  #
-  # cmd键是否按下。
+  # left shift键是否按下。
+  #cmd/win键是否按下。
   #
   #
   @property
   def cmd(self):
-    return pointer_event_t_get_prop_cmd(self.nativeObj);
+    return key_event_t_get_prop_cmd(self.nativeObj);
 
 
   #
@@ -17463,16 +17809,16 @@ class TPointerEvent (TEvent):
   #
   @property
   def menu(self):
-    return pointer_event_t_get_prop_menu(self.nativeObj);
+    return key_event_t_get_prop_menu(self.nativeObj);
 
 
   #
-  # shift键是否按下。
+  # capslock键是否按下。
   #
   #
   @property
-  def shift(self):
-    return pointer_event_t_get_prop_shift(self.nativeObj);
+  def capslock(self):
+    return key_event_t_get_prop_capslock(self.nativeObj);
 
 
 #
@@ -17909,146 +18255,6 @@ class TLineNumber (TWidget):
   @classmethod
   def cast(cls, widget): 
     return  TLineNumber(line_number_cast(awtk_get_native_obj(widget)));
-
-
-#
-# 按键事件。
-#
-#
-class TKeyEvent (TEvent):
-  def __init__(self, nativeObj):
-    super(TKeyEvent, self).__init__(nativeObj)
-
-
-  #
-  # 把event对象转key_event_t对象，主要给脚本语言使用。
-  # 
-  # @param event event对象。
-  #
-  # @return event对象。
-  #
-  @classmethod
-  def cast(cls, event): 
-    return  TKeyEvent(key_event_cast(awtk_get_native_obj(event)));
-
-
-  #
-  # 键值。
-  #
-  #
-  @property
-  def key(self):
-    return key_event_t_get_prop_key(self.nativeObj);
-
-
-  #
-  # alt键是否按下。
-  #
-  #
-  @property
-  def alt(self):
-    return key_event_t_get_prop_alt(self.nativeObj);
-
-
-  #
-  # left alt键是否按下。
-  #
-  #
-  @property
-  def lalt(self):
-    return key_event_t_get_prop_lalt(self.nativeObj);
-
-
-  #
-  # right alt键是否按下。
-  #
-  #
-  @property
-  def ralt(self):
-    return key_event_t_get_prop_ralt(self.nativeObj);
-
-
-  #
-  # right alt键是否按下。
-  #ctrl键是否按下。
-  #
-  #
-  @property
-  def ctrl(self):
-    return key_event_t_get_prop_ctrl(self.nativeObj);
-
-
-  #
-  # left ctrl键是否按下。
-  #
-  #
-  @property
-  def lctrl(self):
-    return key_event_t_get_prop_lctrl(self.nativeObj);
-
-
-  #
-  # right ctrl键是否按下。
-  #
-  #
-  @property
-  def rctrl(self):
-    return key_event_t_get_prop_rctrl(self.nativeObj);
-
-
-  #
-  # shift键是否按下。
-  #
-  #
-  @property
-  def shift(self):
-    return key_event_t_get_prop_shift(self.nativeObj);
-
-
-  #
-  # left shift键是否按下。
-  #
-  #
-  @property
-  def lshift(self):
-    return key_event_t_get_prop_lshift(self.nativeObj);
-
-
-  #
-  # right shift键是否按下。
-  #
-  #
-  @property
-  def rshift(self):
-    return key_event_t_get_prop_rshift(self.nativeObj);
-
-
-  #
-  # left shift键是否按下。
-  #cmd/win键是否按下。
-  #
-  #
-  @property
-  def cmd(self):
-    return key_event_t_get_prop_cmd(self.nativeObj);
-
-
-  #
-  # menu键是否按下。
-  #
-  #
-  @property
-  def menu(self):
-    return key_event_t_get_prop_menu(self.nativeObj);
-
-
-  #
-  # capslock键是否按下。
-  #
-  #
-  @property
-  def capslock(self):
-    return key_event_t_get_prop_capslock(self.nativeObj);
 
 
 #
@@ -18516,346 +18722,33 @@ class TImageValue (TWidget):
 
 
 #
-# 图片动画控件，指定一个图片前缀，依次显示指定序列的图片，从而形成动画效果。
-#
-#图片序列可以用sequence指定，也可以用start\_index和end\_index指定一个范围。
-#
-#image\_animation\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于image\_animation\_t控件。
-#
-#在xml中使用"image\_animation"标签创建图片动画控件。如：
-#
-#```xml
-#<image_animation image="ani" start_index="1" end_index="9" auto_play="true" interval="50"
-#delay="100"/>
-#```
-#
-#> 更多用法请参考：
-#[image_animation.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/image_animation.xml)
-#
-#在c代码中使用函数image\_animation\_create创建图片动画控件。如：
+# 窗口事件，由窗口管理器触发。
 #
 #
-#> 完整示例请参考：
-#[image_animation
-#demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/image_animation.c)
-#
-#可用通过style来设置控件的显示风格，如背景颜色和边框等等，不过一般情况并不需要。
-#
-#
-class TImageAnimation (TWidget):
+class TWindowEvent (TEvent):
   def __init__(self, nativeObj):
-    super(TImageAnimation, self).__init__(nativeObj)
+    super(TWindowEvent, self).__init__(nativeObj)
 
 
   #
-  # 创建image_animation对象
+  # 把event对象转window_event_t对象。主要给脚本语言使用。
   # 
-  # @param parent 父控件
-  # @param x x坐标
-  # @param y y坐标
-  # @param w 宽度
-  # @param h 高度
+  # @param event event对象。
   #
   # @return 对象。
   #
   @classmethod
-  def create(cls, parent, x, y, w, h): 
-    return  TImageAnimation(image_animation_create(awtk_get_native_obj(parent), x, y, w, h));
+  def cast(cls, event): 
+    return  TWindowEvent(window_event_cast(awtk_get_native_obj(event)));
 
 
   #
-  # 设置是否循环播放。
-  # 
-  # @param loop 是否循环播放。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_loop(self, loop): 
-    return image_animation_set_loop(awtk_get_native_obj(self), loop);
-
-
-  #
-  # 设置图片前缀。
-  # 
-  # @param image 图片前缀。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_image(self, image): 
-    return image_animation_set_image(awtk_get_native_obj(self), image);
-
-
-  #
-  # 设置播放间隔时间。
-  # 
-  # @param interval 间隔时间(毫秒)。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_interval(self, interval): 
-    return image_animation_set_interval(awtk_get_native_obj(self), interval);
-
-
-  #
-  # 设置延迟播放时间(仅适用于自动播放)。
-  # 
-  # @param delay 延迟播放时间(毫秒)。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_delay(self, delay): 
-    return image_animation_set_delay(awtk_get_native_obj(self), delay);
-
-
-  #
-  # 设置是否自动播放。
-  # 
-  # @param auto_play 是否自动播放。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_auto_play(self, auto_play): 
-    return image_animation_set_auto_play(awtk_get_native_obj(self), auto_play);
-
-
-  #
-  # 设置播放序列。比如image为"fire"，sequence为"12223", 将依次播放"fire1", "fire2", "fire2", "fire2",
-  #"fire3"。
-  # 
-  # @param sequence 播放序列。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_sequence(self, sequence): 
-    return image_animation_set_sequence(awtk_get_native_obj(self), sequence);
-
-
-  #
-  # 设置播放序列。比如image为"fire"，start_index为0, end_index为99, 将依次播放"fire0", ...,
-  #"fire99"。
-  #
-  #若指定的图片不存在，则重复上一张图片。
-  # 
-  # @param start_index 图片起始序数。
-  # @param end_index 图片结束序数。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_range_sequence(self, start_index, end_index): 
-    return image_animation_set_range_sequence(awtk_get_native_obj(self), start_index, end_index);
-
-
-  #
-  # 播放。
-  # 
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def play(self): 
-    return image_animation_play(awtk_get_native_obj(self));
-
-
-  #
-  # 停止(并重置index为-1)。
-  # 
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def stop(self): 
-    return image_animation_stop(awtk_get_native_obj(self));
-
-
-  #
-  # 暂停。
-  # 
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def pause(self): 
-    return image_animation_pause(awtk_get_native_obj(self));
-
-
-  #
-  # 手动切换到下一张图片。
-  # 
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def next(self): 
-    return image_animation_next(awtk_get_native_obj(self));
-
-
-  #
-  # 设置生成图片名的格式。
-  #
-  #XXX:生成图片名时，第一个参数是图片名前缀，第二个是序数，只能在此前提下设置格式。
-  #
-  #```
-  #const char* format = image_animation->format ? image_animation->format : "%s%d";
-  #tk_snprintf(name, TK_NAME_LEN, format, image_animation->image, image_animation->index);
-  #```
-  # 
-  # @param format 格式。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_format(self, format): 
-    return image_animation_set_format(awtk_get_native_obj(self), format);
-
-
-  #
-  # 设置绘制完成后unload图片，以释放内存空间。
-  # 
-  # @param unload_after_paint 是否绘制完成后unload图片。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_unload_after_paint(self, unload_after_paint): 
-    return image_animation_set_unload_after_paint(awtk_get_native_obj(self), unload_after_paint);
-
-
-  #
-  # 转换为image_animation对象(供脚本语言使用)。
-  # 
-  # @param widget image_animation对象。
-  #
-  # @return image_animation对象。
-  #
-  @classmethod
-  def cast(cls, widget): 
-    return  TImageAnimation(image_animation_cast(awtk_get_native_obj(widget)));
-
-
-  #
-  # 判断是否在播放。
-  # 
-  #
-  # @return 返回TRUE表示是，否则表示否。
-  #
-  def is_playing(self): 
-    return image_animation_is_playing(awtk_get_native_obj(self));
-
-
-  #
-  # 图片名称的前缀。
+  # canvas。
   #
   #
   @property
-  def image(self):
-    return image_animation_t_get_prop_image(self.nativeObj);
-
-  @image.setter
-  def image(self, v):
-   this.set_image(v);
-
-
-  #
-  # 播放的序列，字符可选值为数字和英文大小写字母，字符可以重复。如：0123456789或者123123abcd。
-  #
-  #
-  @property
-  def sequence(self):
-    return image_animation_t_get_prop_sequence(self.nativeObj);
-
-  @sequence.setter
-  def sequence(self, v):
-   this.set_sequence(v);
-
-
-  #
-  # 图片起始序数。
-  #
-  #
-  @property
-  def start_index(self):
-    return image_animation_t_get_prop_start_index(self.nativeObj);
-
-
-  #
-  # 图片结束序数。
-  #
-  #
-  @property
-  def end_index(self):
-    return image_animation_t_get_prop_end_index(self.nativeObj);
-
-
-  #
-  # 是否循环播放。
-  #
-  #
-  @property
-  def loop(self):
-    return image_animation_t_get_prop_loop(self.nativeObj);
-
-  @loop.setter
-  def loop(self, v):
-   this.set_loop(v);
-
-
-  #
-  # 是否自动播放。
-  #
-  #
-  @property
-  def auto_play(self):
-    return image_animation_t_get_prop_auto_play(self.nativeObj);
-
-  @auto_play.setter
-  def auto_play(self, v):
-   this.set_auto_play(v);
-
-
-  #
-  # 绘制完成后unload图片，以释放内存空间。
-  #
-  #
-  @property
-  def unload_after_paint(self):
-    return image_animation_t_get_prop_unload_after_paint(self.nativeObj);
-
-  @unload_after_paint.setter
-  def unload_after_paint(self, v):
-   this.set_unload_after_paint(v);
-
-
-  #
-  # 索引到图片名转换时的格式，缺省为"%s%d"。
-  #
-  #
-  @property
-  def format(self):
-    return image_animation_t_get_prop_format(self.nativeObj);
-
-  @format.setter
-  def format(self, v):
-   this.set_format(v);
-
-
-  #
-  # 每张图片播放的时间(毫秒)。
-  #
-  #
-  @property
-  def interval(self):
-    return image_animation_t_get_prop_interval(self.nativeObj);
-
-  @interval.setter
-  def interval(self, v):
-   this.set_interval(v);
-
-
-  #
-  # 自动播放时延迟播放的时间(毫秒)。
-  #
-  #
-  @property
-  def delay(self):
-    return image_animation_t_get_prop_delay(self.nativeObj);
-
-  @delay.setter
-  def delay(self, v):
-   this.set_delay(v);
+  def window(self):
+    return TWidget(window_event_t_get_prop_window(self.nativeObj));
 
 
 #
@@ -18977,33 +18870,140 @@ class TGuage (TWidget):
 
 
 #
-# 窗口事件，由窗口管理器触发。
+# 仪表指针控件。
+#
+#仪表指针就是一张旋转的图片，图片可以是普通图片也可以是SVG图片。
+#
+#在嵌入式平台上，对于旋转的图片，SVG图片的效率比位图高数倍，所以推荐使用SVG图片。
+#
+#guage\_pointer\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于guage\_pointer\_t控件。
+#
+#在xml中使用"guage\_pointer"标签创建仪表指针控件。如：
+#
+#```xml
+#<guage_pointer x="c" y="50" w="24" h="140" value="-128" image="guage_pointer" />
+#```
+#
+#> 更多用法请参考：
+#[guage.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/guage.xml)
+#
+#在c代码中使用函数guage\_pointer\_create创建仪表指针控件。如：
 #
 #
-class TWindowEvent (TEvent):
+#> 创建之后，需要用guage\_pointer\_set\_image设置仪表指针图片。
+#
+#
+class TGuagePointer (TWidget):
   def __init__(self, nativeObj):
-    super(TWindowEvent, self).__init__(nativeObj)
+    super(TGuagePointer, self).__init__(nativeObj)
 
 
   #
-  # 把event对象转window_event_t对象。主要给脚本语言使用。
+  # 创建guage_pointer对象
   # 
-  # @param event event对象。
+  # @param parent 父控件
+  # @param x x坐标
+  # @param y y坐标
+  # @param w 宽度
+  # @param h 高度
   #
   # @return 对象。
   #
   @classmethod
-  def cast(cls, event): 
-    return  TWindowEvent(window_event_cast(awtk_get_native_obj(event)));
+  def create(cls, parent, x, y, w, h): 
+    return  TGuagePointer(guage_pointer_create(awtk_get_native_obj(parent), x, y, w, h));
 
 
   #
-  # canvas。
+  # 转换为guage_pointer对象(供脚本语言使用)。
+  # 
+  # @param widget guage_pointer对象。
+  #
+  # @return guage_pointer对象。
+  #
+  @classmethod
+  def cast(cls, widget): 
+    return  TGuagePointer(guage_pointer_cast(awtk_get_native_obj(widget)));
+
+
+  #
+  # 设置指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。
+  # 
+  # @param angle 指针角度。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_angle(self, angle): 
+    return guage_pointer_set_angle(awtk_get_native_obj(self), angle);
+
+
+  #
+  # 设置指针的图片。
+  # 
+  # @param image 指针的图片。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_image(self, image): 
+    return guage_pointer_set_image(awtk_get_native_obj(self), image);
+
+
+  #
+  # 设置指针的旋转锚点。
+  # 
+  # @param anchor_x 指针的锚点坐标x。(后面加上px为像素点，不加px为相对百分比坐标)
+  # @param anchor_y 指针的锚点坐标y。(后面加上px为像素点，不加px为相对百分比坐标)
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_anchor(self, anchor_x, anchor_y): 
+    return guage_pointer_set_anchor(awtk_get_native_obj(self), anchor_x, anchor_y);
+
+
+  #
+  # 指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。
   #
   #
   @property
-  def window(self):
-    return TWidget(window_event_t_get_prop_window(self.nativeObj));
+  def angle(self):
+    return guage_pointer_t_get_prop_angle(self.nativeObj);
+
+  @angle.setter
+  def angle(self, v):
+   this.set_angle(v);
+
+
+  #
+  # 指针图片。
+  #
+  #图片须垂直向上，图片的中心点为旋转方向。
+  #
+  #
+  @property
+  def image(self):
+    return guage_pointer_t_get_prop_image(self.nativeObj);
+
+  @image.setter
+  def image(self, v):
+   this.set_image(v);
+
+
+  #
+  # 图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
+  #
+  #
+  @property
+  def anchor_x(self):
+    return guage_pointer_t_get_prop_anchor_x(self.nativeObj);
+
+
+  #
+  # 图片旋转锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
+  #
+  #
+  @property
+  def anchor_y(self):
+    return guage_pointer_t_get_prop_anchor_y(self.nativeObj);
 
 
 #
@@ -19872,430 +19872,6 @@ class TCanvasWidget (TWidget):
   @classmethod
   def cast(cls, widget): 
     return  TCanvasWidget(canvas_widget_cast(awtk_get_native_obj(widget)));
-
-
-#
-# 表格视图。
-#
-#table\_view\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于table\_view\_t控件。
-#
-#在xml中使用"table\_view"标签创建table\_view。
-#
-#table\_view中一般放table\_header、table\_client和滚动条控件。
-#
-#table\_header和滚动条为可选，table\_client为必选。
-#
-#如：
-#
-#```xml
-#<!-- ui -->
-#<table_view x="10" y="10" w="200" h="200">
-#<table_header x="0" y="0" w="-12" h="30" name="table_header" children_layout="default(r=1,c=0,s=5,m=5)">
-#<label w="30%" text="Name"/>
-#<label w="40%" text="Value"/>
-#<label w="30%" text="Action"/>
-#</table_header>
-#
-#<table_client name="table_client" x="0"  y="30" w="-12" h="-30" row_height="40" rows="1">
-#<table_row children_layout="default(r=1,c=0,s=5,m=5)">
-#<label name="name"  w="30%" h="100%" text="name"/>
-#<edit name="value" w="40%" h="100%"/>
-#<button name="remove" w="30%" h="100%" text="Remove"/>
-#</table_row>
-#</table_client>
-#<scroll_bar_d name="scroll_bar" x="r" y="0" w="12" h="100%" value="0"/>
-#</table_view>
-#```
-#
-#可用通过style来设置控件的显示风格，如背景颜色等。如：
-#
-#```xml
-#<!-- style -->
-#<table_header>
-#<style name="default">
-#<normal bg_color="#e0e0e0"/>
-#</style>
-#</table_header>
-#<table_client>
-#<style name="default">
-#<normal/>
-#</style>
-#</table_client>
-#<table_row>
-#<style name="default" border_color="#d8d8d8" border="bottom">
-#<normal bg_color="#fcfcfc"/>
-#</style>
-#</table_row>
-#<table_view>
-#<style name="default" border_color="#c2c2c2">
-#<normal bg_color="#f4f4f4"/>
-#</style>
-#</table_view>
-#```
-#
-#
-class TTableView (TWidget):
-  def __init__(self, nativeObj):
-    super(TTableView, self).__init__(nativeObj)
-
-
-  #
-  # 创建table_view对象
-  # 
-  # @param parent 父控件
-  # @param x x坐标
-  # @param y y坐标
-  # @param w 宽度
-  # @param h 高度
-  #
-  # @return table_view对象。
-  #
-  @classmethod
-  def create(cls, parent, x, y, w, h): 
-    return  TTableView(table_view_create(awtk_get_native_obj(parent), x, y, w, h));
-
-
-  #
-  # 转换为table_view对象(供脚本语言使用)。
-  # 
-  # @param widget table_view对象。
-  #
-  # @return table_view对象。
-  #
-  @classmethod
-  def cast(cls, widget): 
-    return  TTableView(table_view_cast(awtk_get_native_obj(widget)));
-
-
-#
-# table\_row。表示表格的一行。
-#
-#它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
-#子控件的布局可用layout\_children属性指定。
-#请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
-#
-#table\_row\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于table\_row\_t控件。
-#
-#在xml中使用"table\_row"标签创建table\_row。
-#
-#table\_row一般放在table\_client对象中，创建一个对象即可，table\_client以此为模版，根据需要创建table\_row对象。
-#
-#如：
-#
-#```xml
-#<!-- ui -->
-#<table_row x="0" y="0" w="200" h="30"/>
-#```
-#
-#可用通过style来设置控件的显示风格，如背景颜色等。如：
-#
-#```xml
-#<!-- style -->
-#<table_row>
-#<style name="default" border_color="#d8d8d8" border="bottom">
-#<normal bg_color="#fcfcfc"/>
-#</style>
-#</table_row>
-#```
-#
-#
-class TTableRow (TWidget):
-  def __init__(self, nativeObj):
-    super(TTableRow, self).__init__(nativeObj)
-
-
-  #
-  # 创建table_row对象
-  # 
-  # @param parent 父控件
-  # @param x x坐标
-  # @param y y坐标
-  # @param w 宽度
-  # @param h 高度
-  #
-  # @return table_row对象。
-  #
-  @classmethod
-  def create(cls, parent, x, y, w, h): 
-    return  TTableRow(table_row_create(awtk_get_native_obj(parent), x, y, w, h));
-
-
-  #
-  # 转换为table_row对象(供脚本语言使用)。
-  # 
-  # @param widget table_row对象。
-  #
-  # @return table_row对象。
-  #
-  @classmethod
-  def cast(cls, widget): 
-    return  TTableRow(table_row_cast(awtk_get_native_obj(widget)));
-
-
-  #
-  # 设置 行的编号。
-  # 
-  # @param index 行的编号。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_index(self, index): 
-    return table_row_set_index(awtk_get_native_obj(self), index);
-
-
-  #
-  # 行的编号。
-  #
-  #
-  @property
-  def index(self):
-    return table_row_t_get_prop_index(self.nativeObj);
-
-  @index.setter
-  def index(self, v):
-   this.set_index(v);
-
-
-#
-# table\_header。一个简单的容器控件，用来放置表头中的子控件。
-#
-#它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。
-#子控件的布局可用layout\_children属性指定。
-#请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。
-#
-#table\_header\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于table\_header\_t控件。
-#
-#在xml中使用"table\_header"标签创建table\_header。如：
-#
-#```xml
-#<!-- ui -->
-#<table_header x="0" y="0" w="200" h="30"/>
-#```
-#
-#可用通过style来设置控件的显示风格，如背景颜色等。如：
-#
-#```xml
-#<!-- style -->
-#<table_header>
-#<style name="default">
-#<normal bg_color="#e0e0e0"/>
-#</style>
-#</table_header>
-#```
-#
-#
-class TTableHeader (TWidget):
-  def __init__(self, nativeObj):
-    super(TTableHeader, self).__init__(nativeObj)
-
-
-  #
-  # 创建table_header对象
-  # 
-  # @param parent 父控件
-  # @param x x坐标
-  # @param y y坐标
-  # @param w 宽度
-  # @param h 高度
-  #
-  # @return table_header对象。
-  #
-  @classmethod
-  def create(cls, parent, x, y, w, h): 
-    return  TTableHeader(table_header_create(awtk_get_native_obj(parent), x, y, w, h));
-
-
-  #
-  # 转换为table_header对象(供脚本语言使用)。
-  # 
-  # @param widget table_header对象。
-  #
-  # @return table_header对象。
-  #
-  @classmethod
-  def cast(cls, widget): 
-    return  TTableHeader(table_header_cast(awtk_get_native_obj(widget)));
-
-
-#
-# table\_client。表示表格的数据区。
-#
-#table\_client\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于table\_client\_t控件。
-#
-#在xml中使用"table\_client"标签创建table\_client。
-#
-#一般放在table\_client对象中放一个table\_row即可，table\_client以此为模版，根据需要创建table\_row对象。
-#
-#如：
-#
-#```xml
-#<!-- ui -->
-#<table_client x="0" y="0" w="200" h="200"/>
-#```
-#
-#可用通过style来设置控件的显示风格，如背景颜色等。如：
-#
-#```xml
-#<!-- style -->
-#<table_client>
-#<style name="default">
-#<normal />
-#</style>
-#</table_client>
-#```
-#
-#
-class TTableClient (TWidget):
-  def __init__(self, nativeObj):
-    super(TTableClient, self).__init__(nativeObj)
-
-
-  #
-  # 创建table_client对象
-  # 
-  # @param parent 父控件
-  # @param x x坐标
-  # @param y y坐标
-  # @param w 宽度
-  # @param h 高度
-  #
-  # @return table_client对象。
-  #
-  @classmethod
-  def create(cls, parent, x, y, w, h): 
-    return  TTableClient(table_client_create(awtk_get_native_obj(parent), x, y, w, h));
-
-
-  #
-  # 转换为table_client对象(供脚本语言使用)。
-  # 
-  # @param widget table_client对象。
-  #
-  # @return table_client对象。
-  #
-  @classmethod
-  def cast(cls, widget): 
-    return  TTableClient(table_client_cast(awtk_get_native_obj(widget)));
-
-
-  #
-  # 设置 行高。
-  # 
-  # @param row_height 行高。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_row_height(self, row_height): 
-    return table_client_set_row_height(awtk_get_native_obj(self), row_height);
-
-
-  #
-  # 设置 最大行数。
-  # 
-  # @param rows 最大行数。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_rows(self, rows): 
-    return table_client_set_rows(awtk_get_native_obj(self), rows);
-
-
-  #
-  # 设置 偏移量。
-  # 
-  # @param yoffset 偏移量。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_yoffset(self, yoffset): 
-    return table_client_set_yoffset(awtk_get_native_obj(self), yoffset);
-
-
-  #
-  # 设置 是否允许y方向滑动。
-  # 
-  # @param yslidable 是否允许y方向滑动。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_yslidable(self, yslidable): 
-    return table_client_set_yslidable(awtk_get_native_obj(self), yslidable);
-
-
-  #
-  # 设置 y偏移速度比例。
-  # 
-  # @param yspeed_scale y偏移速度比例。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_yspeed_scale(self, yspeed_scale): 
-    return table_client_set_yspeed_scale(awtk_get_native_obj(self), yspeed_scale);
-
-
-  #
-  # 行高。
-  #
-  #
-  @property
-  def row_height(self):
-    return table_client_t_get_prop_row_height(self.nativeObj);
-
-  @row_height.setter
-  def row_height(self, v):
-   this.set_row_height(v);
-
-
-  #
-  # 最大行数。
-  #
-  #
-  @property
-  def rows(self):
-    return table_client_t_get_prop_rows(self.nativeObj);
-
-  @rows.setter
-  def rows(self, v):
-   this.set_rows(v);
-
-
-  #
-  # 偏移量。
-  #
-  #
-  @property
-  def yoffset(self):
-    return table_client_t_get_prop_yoffset(self.nativeObj);
-
-  @yoffset.setter
-  def yoffset(self, v):
-   this.set_yoffset(v);
-
-
-  #
-  # 是否允许y方向滑动。
-  #
-  #
-  @property
-  def yslidable(self):
-    return table_client_t_get_prop_yslidable(self.nativeObj);
-
-  @yslidable.setter
-  def yslidable(self, v):
-   this.set_yslidable(v);
-
-
-  #
-  # y偏移速度比例。
-  #
-  #
-  @property
-  def yspeed_scale(self):
-    return table_client_t_get_prop_yspeed_scale(self.nativeObj);
-
-  @yspeed_scale.setter
-  def yspeed_scale(self, v):
-   this.set_yspeed_scale(v);
 
 
 #
@@ -21817,86 +21393,6 @@ class TDialog (TWindowBase):
 
 
 #
-# 单个idle的信息。
-#
-#
-class TIdleInfo (TObject):
-  def __init__(self, nativeObj):
-    super(TIdleInfo, self).__init__(nativeObj)
-
-
-  #
-  # 转换为idle_info对象(供脚本语言使用)。
-  # 
-  # @param idle idle_info对象。
-  #
-  # @return idle_info对象。
-  #
-  @classmethod
-  def cast(cls, idle): 
-    return  TIdleInfo(idle_info_cast(awtk_get_native_obj(idle)));
-
-
-  #
-  # idle回调函数上下文。
-  #
-  #
-  @property
-  def ctx(self):
-    return idle_info_t_get_prop_ctx(self.nativeObj);
-
-
-  #
-  # idle的ID
-  #
-  #> 为TK\_INVALID\_ID时表示无效idle。
-  #
-  #
-  @property
-  def id(self):
-    return idle_info_t_get_prop_id(self.nativeObj);
-
-
-#
-# 电阻屏校准窗口。
-#
-#calibration\_win\_t是[window\_base\_t](window_base_t.md)的子类控件，
-#window\_base\_t的函数均适用于calibration\_win\_t控件。
-#
-#在xml中使用"calibration\_win"标签创建电阻屏校准窗口。如：
-#
-#```xml
-#<calibration_win name="cali" w="100%" h="100%" text="Please click the center of cross">
-#</calibration_win>
-#```
-#
-#> 更多用法请参考：
-#[window.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/calibration_win.xml)
-#
-#在c代码中使用函数calibration\_win\_create创建窗口。如：
-#
-#
-#通过calibration\_win\_set\_on\_done注册回调函数，用于保存校准数据。
-#
-#
-class TCalibrationWin (TWindowBase):
-  def __init__(self, nativeObj):
-    super(TCalibrationWin, self).__init__(nativeObj)
-
-
-  #
-  # 转换为calibration_win对象(供脚本语言使用)。
-  # 
-  # @param widget calibration_win对象。
-  #
-  # @return calibration_win对象。
-  #
-  @classmethod
-  def cast(cls, widget): 
-    return  TCalibrationWin(calibration_win_cast(awtk_get_native_obj(widget)));
-
-
-#
 # SVG图片控件。
 #
 #svg\_image\_t是[image\_base\_t](image_base_t.md)的子类控件，image\_base\_t的函数均适用于svg\_image\_t控件。
@@ -21976,6 +21472,86 @@ class TSvgImage (TImageBase):
   @classmethod
   def cast(cls, widget): 
     return  TSvgImage(svg_image_cast(awtk_get_native_obj(widget)));
+
+
+#
+# 电阻屏校准窗口。
+#
+#calibration\_win\_t是[window\_base\_t](window_base_t.md)的子类控件，
+#window\_base\_t的函数均适用于calibration\_win\_t控件。
+#
+#在xml中使用"calibration\_win"标签创建电阻屏校准窗口。如：
+#
+#```xml
+#<calibration_win name="cali" w="100%" h="100%" text="Please click the center of cross">
+#</calibration_win>
+#```
+#
+#> 更多用法请参考：
+#[window.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/calibration_win.xml)
+#
+#在c代码中使用函数calibration\_win\_create创建窗口。如：
+#
+#
+#通过calibration\_win\_set\_on\_done注册回调函数，用于保存校准数据。
+#
+#
+class TCalibrationWin (TWindowBase):
+  def __init__(self, nativeObj):
+    super(TCalibrationWin, self).__init__(nativeObj)
+
+
+  #
+  # 转换为calibration_win对象(供脚本语言使用)。
+  # 
+  # @param widget calibration_win对象。
+  #
+  # @return calibration_win对象。
+  #
+  @classmethod
+  def cast(cls, widget): 
+    return  TCalibrationWin(calibration_win_cast(awtk_get_native_obj(widget)));
+
+
+#
+# 单个idle的信息。
+#
+#
+class TIdleInfo (TObject):
+  def __init__(self, nativeObj):
+    super(TIdleInfo, self).__init__(nativeObj)
+
+
+  #
+  # 转换为idle_info对象(供脚本语言使用)。
+  # 
+  # @param idle idle_info对象。
+  #
+  # @return idle_info对象。
+  #
+  @classmethod
+  def cast(cls, idle): 
+    return  TIdleInfo(idle_info_cast(awtk_get_native_obj(idle)));
+
+
+  #
+  # idle回调函数上下文。
+  #
+  #
+  @property
+  def ctx(self):
+    return idle_info_t_get_prop_ctx(self.nativeObj);
+
+
+  #
+  # idle的ID
+  #
+  #> 为TK\_INVALID\_ID时表示无效idle。
+  #
+  #
+  @property
+  def id(self):
+    return idle_info_t_get_prop_id(self.nativeObj);
 
 
 #
