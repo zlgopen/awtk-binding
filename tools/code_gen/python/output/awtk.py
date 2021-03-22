@@ -3205,6 +3205,12 @@ class TInputType:
   #
   CUSTOM_PASSWORD = INPUT_CUSTOM_PASSWORD();
 
+  #
+  # 纯英文文本。字符串属性值：ascii
+  #
+  #
+  ASCII = INPUT_ASCII();
+
 #
 # 输入法接口。
 #
@@ -4117,6 +4123,12 @@ class TKeyCode:
   #
   #
   KEY_CANCEL = TK_KEY_CANCEL();
+
+  #
+  # TK_KEY_WHEEL
+  #
+  #
+  KEY_WHEEL = TK_KEY_WHEEL();
 
 #
 # 本地化信息。提供字符串翻译数据管理，当前语言改变的事件通知等等。
@@ -14409,6 +14421,17 @@ class TProgressCircle (TWidget):
 
 
   #
+  # 设置格式。
+  # 
+  # @param format 格式。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_format(self, format): 
+    return progress_circle_set_format(awtk_get_native_obj(self), format);
+
+
+  #
   # 设置环线的厚度。
   # 
   # @param line_width 环线的厚度。
@@ -14428,17 +14451,6 @@ class TProgressCircle (TWidget):
   #
   def set_start_angle(self, start_angle): 
     return progress_circle_set_start_angle(awtk_get_native_obj(self), start_angle);
-
-
-  #
-  # 设置单位。
-  # 
-  # @param unit 单位。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def set_unit(self, unit): 
-    return progress_circle_set_unit(awtk_get_native_obj(self), unit);
 
 
   #
@@ -14501,6 +14513,19 @@ class TProgressCircle (TWidget):
 
 
   #
+  # 数值到字符串转换时的格式，缺省为"%d"。
+  #
+  #
+  @property
+  def format(self):
+    return progress_circle_t_get_prop_format(self.nativeObj);
+
+  @format.setter
+  def format(self, v):
+   this.set_format(v);
+
+
+  #
   # 起始角度(单位为度，缺省-90)。
   #
   #
@@ -14524,19 +14549,6 @@ class TProgressCircle (TWidget):
   @line_width.setter
   def line_width(self, v):
    this.set_line_width(v);
-
-
-  #
-  # 单元(缺省无)。
-  #
-  #
-  @property
-  def unit(self):
-    return progress_circle_t_get_prop_unit(self.nativeObj);
-
-  @unit.setter
-  def unit(self, v):
-   this.set_unit(v);
 
 
   #
@@ -19672,6 +19684,17 @@ class TProgressBar (TWidget):
 
 
   #
+  # 设置格式。
+  # 
+  # @param format 格式。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_format(self, format): 
+    return progress_bar_set_format(awtk_get_native_obj(self), format);
+
+
+  #
   # 设置进度条的方向。
   # 
   # @param vertical 是否为垂直方向。
@@ -19740,6 +19763,19 @@ class TProgressBar (TWidget):
   @max.setter
   def max(self, v):
    this.set_max(v);
+
+
+  #
+  # 数值到字符串转换时的格式，缺省为"%d"。
+  #
+  #
+  @property
+  def format(self):
+    return progress_bar_t_get_prop_format(self.nativeObj);
+
+  @format.setter
+  def format(self, v):
+   this.set_format(v);
 
 
   #

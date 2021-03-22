@@ -2723,16 +2723,16 @@
    return progress_circle_set_max(((widget_t*)(this->nativeObj)), max);
  }
 
+ ret_t TProgressCircle::SetFormat(const char* format)  {
+   return progress_circle_set_format(((widget_t*)(this->nativeObj)), format);
+ }
+
  ret_t TProgressCircle::SetLineWidth(uint32_t line_width)  {
    return progress_circle_set_line_width(((widget_t*)(this->nativeObj)), line_width);
  }
 
  ret_t TProgressCircle::SetStartAngle(int32_t start_angle)  {
    return progress_circle_set_start_angle(((widget_t*)(this->nativeObj)), start_angle);
- }
-
- ret_t TProgressCircle::SetUnit(const char* unit)  {
-   return progress_circle_set_unit(((widget_t*)(this->nativeObj)), unit);
  }
 
  ret_t TProgressCircle::SetLineCap(const char* line_cap)  {
@@ -2751,8 +2751,12 @@
    return ((progress_circle_t*)(this->nativeObj))->value;
  }
 
- uint32_t TProgressCircle::GetMax() const {
+ float_t TProgressCircle::GetMax() const {
    return ((progress_circle_t*)(this->nativeObj))->max;
+ }
+
+ char* TProgressCircle::GetFormat() const {
+   return ((progress_circle_t*)(this->nativeObj))->format;
  }
 
  int32_t TProgressCircle::GetStartAngle() const {
@@ -2761,10 +2765,6 @@
 
  uint32_t TProgressCircle::GetLineWidth() const {
    return ((progress_circle_t*)(this->nativeObj))->line_width;
- }
-
- char* TProgressCircle::GetUnit() const {
-   return ((progress_circle_t*)(this->nativeObj))->unit;
  }
 
  char* TProgressCircle::GetLineCap() const {
@@ -3867,6 +3867,10 @@
    return progress_bar_set_max(((widget_t*)(this->nativeObj)), max);
  }
 
+ ret_t TProgressBar::SetFormat(const char* format)  {
+   return progress_bar_set_format(((widget_t*)(this->nativeObj)), format);
+ }
+
  ret_t TProgressBar::SetVertical(bool vertical)  {
    return progress_bar_set_vertical(((widget_t*)(this->nativeObj)), vertical);
  }
@@ -3889,6 +3893,10 @@
 
  float_t TProgressBar::GetMax() const {
    return ((progress_bar_t*)(this->nativeObj))->max;
+ }
+
+ char* TProgressBar::GetFormat() const {
+   return ((progress_bar_t*)(this->nativeObj))->format;
  }
 
  bool TProgressBar::GetVertical() const {

@@ -2386,6 +2386,11 @@ JNIEXPORT jint JNICALL Java_awtk_TInputType_INPUT_1CUSTOM_1PASSWORD(JNIEnv* env,
   return (jint)(INPUT_CUSTOM_PASSWORD);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TInputType_INPUT_1ASCII(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(INPUT_ASCII);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TInputMethod_input_1method_1commit_1text(JNIEnv* env,  jclass ajc, jlong jim, jstring jtext) { /*func*/
   ret_t ret;
   input_method_t* im = (input_method_t*)jim;
@@ -3116,6 +3121,11 @@ JNIEXPORT jint JNICALL Java_awtk_TKeyCode_TK_1KEY_1BACK(JNIEnv* env,  jclass ajc
 JNIEXPORT jint JNICALL Java_awtk_TKeyCode_TK_1KEY_1CANCEL(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (jint)(TK_KEY_CANCEL);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TKeyCode_TK_1KEY_1WHEEL(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(TK_KEY_WHEEL);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TLocaleInfo_locale_1info(JNIEnv* env,  jclass ajc) { /*func*/
@@ -9811,6 +9821,16 @@ JNIEXPORT jint JNICALL Java_awtk_TProgressCircle_progress_1circle_1set_1max(JNIE
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TProgressCircle_progress_1circle_1set_1format(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jformat) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  const char* format = (char*)(*env)->GetStringUTFChars(env, jformat, 0);
+  ret = (ret_t)progress_circle_set_format(widget, format);
+  (*env)->ReleaseStringUTFChars(env, jformat, format);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TProgressCircle_progress_1circle_1set_1line_1width(JNIEnv* env,  jclass ajc, jlong jwidget, jint line_width) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
@@ -9823,16 +9843,6 @@ JNIEXPORT jint JNICALL Java_awtk_TProgressCircle_progress_1circle_1set_1start_1a
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
   ret = (ret_t)progress_circle_set_start_angle(widget, start_angle);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TProgressCircle_progress_1circle_1set_1unit(JNIEnv* env,  jclass ajc, jlong jwidget, jstring junit) { /*func*/
-  ret_t ret;
-  widget_t* widget = (widget_t*)jwidget;
-  const char* unit = (char*)(*env)->GetStringUTFChars(env, junit, 0);
-  ret = (ret_t)progress_circle_set_unit(widget, unit);
-  (*env)->ReleaseStringUTFChars(env, junit, unit);
 
   return (jint)(ret);
 }
@@ -9869,10 +9879,16 @@ JNIEXPORT jdouble JNICALL Java_awtk_TProgressCircle_progress_1circle_1t_1get_1pr
   return (jdouble)(obj->value);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TProgressCircle_progress_1circle_1t_1get_1prop_1max(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+JNIEXPORT jdouble JNICALL Java_awtk_TProgressCircle_progress_1circle_1t_1get_1prop_1max(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
   progress_circle_t* obj = (progress_circle_t*)jobj;
 
-  return (jint)(obj->max);
+  return (jdouble)(obj->max);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TProgressCircle_progress_1circle_1t_1get_1prop_1format(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  progress_circle_t* obj = (progress_circle_t*)jobj;
+
+  return (*env)->NewStringUTF(env, obj->format);
 }
 
 JNIEXPORT jint JNICALL Java_awtk_TProgressCircle_progress_1circle_1t_1get_1prop_1start_1angle(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
@@ -9885,12 +9901,6 @@ JNIEXPORT jint JNICALL Java_awtk_TProgressCircle_progress_1circle_1t_1get_1prop_
   progress_circle_t* obj = (progress_circle_t*)jobj;
 
   return (jint)(obj->line_width);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TProgressCircle_progress_1circle_1t_1get_1prop_1unit(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  progress_circle_t* obj = (progress_circle_t*)jobj;
-
-  return (*env)->NewStringUTF(env, obj->unit);
 }
 
 JNIEXPORT jstring JNICALL Java_awtk_TProgressCircle_progress_1circle_1t_1get_1prop_1line_1cap(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
@@ -12219,6 +12229,16 @@ JNIEXPORT jint JNICALL Java_awtk_TProgressBar_progress_1bar_1set_1max(JNIEnv* en
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TProgressBar_progress_1bar_1set_1format(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jformat) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  const char* format = (char*)(*env)->GetStringUTFChars(env, jformat, 0);
+  ret = (ret_t)progress_bar_set_format(widget, format);
+  (*env)->ReleaseStringUTFChars(env, jformat, format);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TProgressBar_progress_1bar_1set_1vertical(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean vertical) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
@@ -12261,6 +12281,12 @@ JNIEXPORT jdouble JNICALL Java_awtk_TProgressBar_progress_1bar_1t_1get_1prop_1ma
   progress_bar_t* obj = (progress_bar_t*)jobj;
 
   return (jdouble)(obj->max);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TProgressBar_progress_1bar_1t_1get_1prop_1format(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  progress_bar_t* obj = (progress_bar_t*)jobj;
+
+  return (*env)->NewStringUTF(env, obj->format);
 }
 
 JNIEXPORT jboolean JNICALL Java_awtk_TProgressBar_progress_1bar_1t_1get_1prop_1vertical(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/

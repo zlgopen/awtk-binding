@@ -3122,6 +3122,10 @@ pyobject_t get_INPUT_CUSTOM_PASSWORD(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", INPUT_CUSTOM_PASSWORD);
 }
 
+pyobject_t get_INPUT_ASCII(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("i", INPUT_ASCII);
+}
+
 pyobject_t wrap_input_method_commit_text(pyobject_t self, pyobject_t pyargs) {
   ret_t ret = 0;
   input_method_t* im = NULL;
@@ -3764,6 +3768,10 @@ pyobject_t get_TK_KEY_BACK(pyobject_t self, pyobject_t pyargs) {
 
 pyobject_t get_TK_KEY_CANCEL(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", TK_KEY_CANCEL);
+}
+
+pyobject_t get_TK_KEY_WHEEL(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("i", TK_KEY_WHEEL);
 }
 
 pyobject_t wrap_locale_info(pyobject_t self, pyobject_t pyargs) {
@@ -12713,6 +12721,20 @@ pyobject_t wrap_progress_circle_set_max(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", ret);
 }
 
+pyobject_t wrap_progress_circle_set_format(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  widget_t* widget = NULL;
+  const char* format = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&s" , &parse_voidp, &widget, &format)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)progress_circle_set_format(widget, format);
+  return Py_BuildValue("i", ret);
+}
+
 pyobject_t wrap_progress_circle_set_line_width(pyobject_t self, pyobject_t pyargs) {
   ret_t ret = 0;
   widget_t* widget = NULL;
@@ -12738,20 +12760,6 @@ pyobject_t wrap_progress_circle_set_start_angle(pyobject_t self, pyobject_t pyar
   }
 
   ret = (ret_t)progress_circle_set_start_angle(widget, start_angle);
-  return Py_BuildValue("i", ret);
-}
-
-pyobject_t wrap_progress_circle_set_unit(pyobject_t self, pyobject_t pyargs) {
-  ret_t ret = 0;
-  widget_t* widget = NULL;
-  const char* unit = NULL;
-
-  if (!PyArg_ParseTuple(pyargs, "O&s" , &parse_voidp, &widget, &unit)) {
-    PyErr_SetString(PyExc_TypeError, "invalid arguments");
-    return NULL;
-  }
-
-  ret = (ret_t)progress_circle_set_unit(widget, unit);
   return Py_BuildValue("i", ret);
 }
 
@@ -12816,7 +12824,18 @@ pyobject_t wrap_progress_circle_t_get_prop_max(pyobject_t self, pyobject_t pyarg
     return NULL;
   }
 
-  return Py_BuildValue("i", obj->max);
+  return Py_BuildValue("f", obj->max);
+}
+
+pyobject_t wrap_progress_circle_t_get_prop_format(pyobject_t self, pyobject_t pyargs) {
+  progress_circle_t* obj = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&", &parse_voidp, &obj)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  return Py_BuildValue("s", obj->format);
 }
 
 pyobject_t wrap_progress_circle_t_get_prop_start_angle(pyobject_t self, pyobject_t pyargs) {
@@ -12839,17 +12858,6 @@ pyobject_t wrap_progress_circle_t_get_prop_line_width(pyobject_t self, pyobject_
   }
 
   return Py_BuildValue("i", obj->line_width);
-}
-
-pyobject_t wrap_progress_circle_t_get_prop_unit(pyobject_t self, pyobject_t pyargs) {
-  progress_circle_t* obj = NULL;
-
-  if (!PyArg_ParseTuple(pyargs, "O&", &parse_voidp, &obj)) {
-    PyErr_SetString(PyExc_TypeError, "invalid arguments");
-    return NULL;
-  }
-
-  return Py_BuildValue("s", obj->unit);
 }
 
 pyobject_t wrap_progress_circle_t_get_prop_line_cap(pyobject_t self, pyobject_t pyargs) {
@@ -16982,6 +16990,20 @@ pyobject_t wrap_progress_bar_set_max(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", ret);
 }
 
+pyobject_t wrap_progress_bar_set_format(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  widget_t* widget = NULL;
+  const char* format = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&s" , &parse_voidp, &widget, &format)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)progress_bar_set_format(widget, format);
+  return Py_BuildValue("i", ret);
+}
+
 pyobject_t wrap_progress_bar_set_vertical(pyobject_t self, pyobject_t pyargs) {
   ret_t ret = 0;
   widget_t* widget = NULL;
@@ -17057,6 +17079,17 @@ pyobject_t wrap_progress_bar_t_get_prop_max(pyobject_t self, pyobject_t pyargs) 
   }
 
   return Py_BuildValue("f", obj->max);
+}
+
+pyobject_t wrap_progress_bar_t_get_prop_format(pyobject_t self, pyobject_t pyargs) {
+  progress_bar_t* obj = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&", &parse_voidp, &obj)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  return Py_BuildValue("s", obj->format);
 }
 
 pyobject_t wrap_progress_bar_t_get_prop_vertical(pyobject_t self, pyobject_t pyargs) {
@@ -19320,6 +19353,7 @@ static PyMethodDef awtk_methods[] = {
 {"INPUT_TIME_FULL", get_INPUT_TIME_FULL, METH_VARARGS, "INPUT_TIME_FULL"},
 {"INPUT_CUSTOM", get_INPUT_CUSTOM, METH_VARARGS, "INPUT_CUSTOM"},
 {"INPUT_CUSTOM_PASSWORD", get_INPUT_CUSTOM_PASSWORD, METH_VARARGS, "INPUT_CUSTOM_PASSWORD"},
+{"INPUT_ASCII", get_INPUT_ASCII, METH_VARARGS, "INPUT_ASCII"},
 {"input_method_commit_text", wrap_input_method_commit_text, METH_VARARGS, "input_method_commit_text"},
 {"input_method_set_lang", wrap_input_method_set_lang, METH_VARARGS, "input_method_set_lang"},
 {"input_method_get_lang", wrap_input_method_get_lang, METH_VARARGS, "input_method_get_lang"},
@@ -19460,6 +19494,7 @@ static PyMethodDef awtk_methods[] = {
 {"TK_KEY_COMMAND", get_TK_KEY_COMMAND, METH_VARARGS, "TK_KEY_COMMAND"},
 {"TK_KEY_BACK", get_TK_KEY_BACK, METH_VARARGS, "TK_KEY_BACK"},
 {"TK_KEY_CANCEL", get_TK_KEY_CANCEL, METH_VARARGS, "TK_KEY_CANCEL"},
+{"TK_KEY_WHEEL", get_TK_KEY_WHEEL, METH_VARARGS, "TK_KEY_WHEEL"},
 {"locale_info", wrap_locale_info, METH_VARARGS, "locale_info"},
 {"locale_info_tr", wrap_locale_info_tr, METH_VARARGS, "locale_info_tr"},
 {"locale_info_change", wrap_locale_info_change, METH_VARARGS, "locale_info_change"},
@@ -20508,17 +20543,17 @@ static PyMethodDef awtk_methods[] = {
 {"progress_circle_cast", wrap_progress_circle_cast, METH_VARARGS, "progress_circle_cast"},
 {"progress_circle_set_value", wrap_progress_circle_set_value, METH_VARARGS, "progress_circle_set_value"},
 {"progress_circle_set_max", wrap_progress_circle_set_max, METH_VARARGS, "progress_circle_set_max"},
+{"progress_circle_set_format", wrap_progress_circle_set_format, METH_VARARGS, "progress_circle_set_format"},
 {"progress_circle_set_line_width", wrap_progress_circle_set_line_width, METH_VARARGS, "progress_circle_set_line_width"},
 {"progress_circle_set_start_angle", wrap_progress_circle_set_start_angle, METH_VARARGS, "progress_circle_set_start_angle"},
-{"progress_circle_set_unit", wrap_progress_circle_set_unit, METH_VARARGS, "progress_circle_set_unit"},
 {"progress_circle_set_line_cap", wrap_progress_circle_set_line_cap, METH_VARARGS, "progress_circle_set_line_cap"},
 {"progress_circle_set_show_text", wrap_progress_circle_set_show_text, METH_VARARGS, "progress_circle_set_show_text"},
 {"progress_circle_set_counter_clock_wise", wrap_progress_circle_set_counter_clock_wise, METH_VARARGS, "progress_circle_set_counter_clock_wise"},
 {"progress_circle_t_get_prop_value", wrap_progress_circle_t_get_prop_value, METH_VARARGS, "progress_circle_t_get_prop_value"},
 {"progress_circle_t_get_prop_max", wrap_progress_circle_t_get_prop_max, METH_VARARGS, "progress_circle_t_get_prop_max"},
+{"progress_circle_t_get_prop_format", wrap_progress_circle_t_get_prop_format, METH_VARARGS, "progress_circle_t_get_prop_format"},
 {"progress_circle_t_get_prop_start_angle", wrap_progress_circle_t_get_prop_start_angle, METH_VARARGS, "progress_circle_t_get_prop_start_angle"},
 {"progress_circle_t_get_prop_line_width", wrap_progress_circle_t_get_prop_line_width, METH_VARARGS, "progress_circle_t_get_prop_line_width"},
-{"progress_circle_t_get_prop_unit", wrap_progress_circle_t_get_prop_unit, METH_VARARGS, "progress_circle_t_get_prop_unit"},
 {"progress_circle_t_get_prop_line_cap", wrap_progress_circle_t_get_prop_line_cap, METH_VARARGS, "progress_circle_t_get_prop_line_cap"},
 {"progress_circle_t_get_prop_counter_clock_wise", wrap_progress_circle_t_get_prop_counter_clock_wise, METH_VARARGS, "progress_circle_t_get_prop_counter_clock_wise"},
 {"progress_circle_t_get_prop_show_text", wrap_progress_circle_t_get_prop_show_text, METH_VARARGS, "progress_circle_t_get_prop_show_text"},
@@ -20832,12 +20867,14 @@ static PyMethodDef awtk_methods[] = {
 {"progress_bar_cast", wrap_progress_bar_cast, METH_VARARGS, "progress_bar_cast"},
 {"progress_bar_set_value", wrap_progress_bar_set_value, METH_VARARGS, "progress_bar_set_value"},
 {"progress_bar_set_max", wrap_progress_bar_set_max, METH_VARARGS, "progress_bar_set_max"},
+{"progress_bar_set_format", wrap_progress_bar_set_format, METH_VARARGS, "progress_bar_set_format"},
 {"progress_bar_set_vertical", wrap_progress_bar_set_vertical, METH_VARARGS, "progress_bar_set_vertical"},
 {"progress_bar_set_show_text", wrap_progress_bar_set_show_text, METH_VARARGS, "progress_bar_set_show_text"},
 {"progress_bar_set_reverse", wrap_progress_bar_set_reverse, METH_VARARGS, "progress_bar_set_reverse"},
 {"progress_bar_get_percent", wrap_progress_bar_get_percent, METH_VARARGS, "progress_bar_get_percent"},
 {"progress_bar_t_get_prop_value", wrap_progress_bar_t_get_prop_value, METH_VARARGS, "progress_bar_t_get_prop_value"},
 {"progress_bar_t_get_prop_max", wrap_progress_bar_t_get_prop_max, METH_VARARGS, "progress_bar_t_get_prop_max"},
+{"progress_bar_t_get_prop_format", wrap_progress_bar_t_get_prop_format, METH_VARARGS, "progress_bar_t_get_prop_format"},
 {"progress_bar_t_get_prop_vertical", wrap_progress_bar_t_get_prop_vertical, METH_VARARGS, "progress_bar_t_get_prop_vertical"},
 {"progress_bar_t_get_prop_show_text", wrap_progress_bar_t_get_prop_show_text, METH_VARARGS, "progress_bar_t_get_prop_show_text"},
 {"progress_bar_t_get_prop_reverse", wrap_progress_bar_t_get_prop_reverse, METH_VARARGS, "progress_bar_t_get_prop_reverse"},

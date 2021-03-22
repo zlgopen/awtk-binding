@@ -341,6 +341,7 @@ declare function INPUT_TIME();
 declare function INPUT_TIME_FULL();
 declare function INPUT_CUSTOM();
 declare function INPUT_CUSTOM_PASSWORD();
+declare function INPUT_ASCII();
 declare function input_method_commit_text(im : any, text : string) : TRet;
 declare function input_method_set_lang(im : any, lang : string) : TRet;
 declare function input_method_get_lang(im : any) : string;
@@ -481,6 +482,7 @@ declare function TK_KEY_MENU();
 declare function TK_KEY_COMMAND();
 declare function TK_KEY_BACK();
 declare function TK_KEY_CANCEL();
+declare function TK_KEY_WHEEL();
 declare function locale_info() : any;
 declare function locale_info_tr(locale_info : any, text : string) : string;
 declare function locale_info_change(locale_info : any, language : string, country : string) : TRet;
@@ -1532,17 +1534,17 @@ declare function progress_circle_create(parent : any, x : number, y : number, w 
 declare function progress_circle_cast(widget : any) : any;
 declare function progress_circle_set_value(widget : any, value : any) : TRet;
 declare function progress_circle_set_max(widget : any, max : number) : TRet;
+declare function progress_circle_set_format(widget : any, format : string) : TRet;
 declare function progress_circle_set_line_width(widget : any, line_width : number) : TRet;
 declare function progress_circle_set_start_angle(widget : any, start_angle : number) : TRet;
-declare function progress_circle_set_unit(widget : any, unit : string) : TRet;
 declare function progress_circle_set_line_cap(widget : any, line_cap : string) : TRet;
 declare function progress_circle_set_show_text(widget : any, show_text : boolean) : TRet;
 declare function progress_circle_set_counter_clock_wise(widget : any, counter_clock_wise : boolean) : TRet;
 declare function progress_circle_t_get_prop_value(nativeObj : any) : number;
 declare function progress_circle_t_get_prop_max(nativeObj : any) : number;
+declare function progress_circle_t_get_prop_format(nativeObj : any) : string;
 declare function progress_circle_t_get_prop_start_angle(nativeObj : any) : number;
 declare function progress_circle_t_get_prop_line_width(nativeObj : any) : number;
-declare function progress_circle_t_get_prop_unit(nativeObj : any) : string;
 declare function progress_circle_t_get_prop_line_cap(nativeObj : any) : string;
 declare function progress_circle_t_get_prop_counter_clock_wise(nativeObj : any) : boolean;
 declare function progress_circle_t_get_prop_show_text(nativeObj : any) : boolean;
@@ -1856,12 +1858,14 @@ declare function progress_bar_create(parent : any, x : number, y : number, w : n
 declare function progress_bar_cast(widget : any) : any;
 declare function progress_bar_set_value(widget : any, value : any) : TRet;
 declare function progress_bar_set_max(widget : any, max : number) : TRet;
+declare function progress_bar_set_format(widget : any, format : string) : TRet;
 declare function progress_bar_set_vertical(widget : any, vertical : boolean) : TRet;
 declare function progress_bar_set_show_text(widget : any, show_text : boolean) : TRet;
 declare function progress_bar_set_reverse(widget : any, reverse : boolean) : TRet;
 declare function progress_bar_get_percent(widget : any) : number;
 declare function progress_bar_t_get_prop_value(nativeObj : any) : number;
 declare function progress_bar_t_get_prop_max(nativeObj : any) : number;
+declare function progress_bar_t_get_prop_format(nativeObj : any) : string;
 declare function progress_bar_t_get_prop_vertical(nativeObj : any) : boolean;
 declare function progress_bar_t_get_prop_show_text(nativeObj : any) : boolean;
 declare function progress_bar_t_get_prop_reverse(nativeObj : any) : boolean;
@@ -5380,6 +5384,12 @@ export enum TInputType {
    *
    */
  CUSTOM_PASSWORD = INPUT_CUSTOM_PASSWORD(),
+
+  /**
+   * 纯英文文本。字符串属性值：ascii
+   *
+   */
+ ASCII = INPUT_ASCII(),
 };
 
 
@@ -6305,6 +6315,12 @@ export enum TKeyCode {
    *
    */
  KEY_CANCEL = TK_KEY_CANCEL(),
+
+  /**
+   * TK_KEY_WHEEL
+   *
+   */
+ KEY_WHEEL = TK_KEY_WHEEL(),
 };
 
 
@@ -17008,6 +17024,18 @@ export class TProgressCircle extends TWidget {
 
 
   /**
+   * 设置格式。
+   * 
+   * @param format 格式。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setFormat(format : string) : TRet  {
+    return progress_circle_set_format(this != null ? (this.nativeObj || this) : null, format);
+ }
+
+
+  /**
    * 设置环线的厚度。
    * 
    * @param line_width 环线的厚度。
@@ -17028,18 +17056,6 @@ export class TProgressCircle extends TWidget {
    */
  setStartAngle(start_angle : number) : TRet  {
     return progress_circle_set_start_angle(this != null ? (this.nativeObj || this) : null, start_angle);
- }
-
-
-  /**
-   * 设置单位。
-   * 
-   * @param unit 单位。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setUnit(unit : string) : TRet  {
-    return progress_circle_set_unit(this != null ? (this.nativeObj || this) : null, unit);
  }
 
 
@@ -17106,6 +17122,19 @@ export class TProgressCircle extends TWidget {
 
 
   /**
+   * 数值到字符串转换时的格式，缺省为"%d"。
+   *
+   */
+ get format() : string {
+   return progress_circle_t_get_prop_format(this.nativeObj);
+ }
+
+ set format(v : string) {
+   this.setFormat(v);
+ }
+
+
+  /**
    * 起始角度(单位为度，缺省-90)。
    *
    */
@@ -17128,19 +17157,6 @@ export class TProgressCircle extends TWidget {
 
  set lineWidth(v : number) {
    this.setLineWidth(v);
- }
-
-
-  /**
-   * 单元(缺省无)。
-   *
-   */
- get unit() : string {
-   return progress_circle_t_get_prop_unit(this.nativeObj);
- }
-
- set unit(v : string) {
-   this.setUnit(v);
  }
 
 
@@ -22474,6 +22490,18 @@ export class TProgressBar extends TWidget {
 
 
   /**
+   * 设置格式。
+   * 
+   * @param format 格式。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setFormat(format : string) : TRet  {
+    return progress_bar_set_format(this != null ? (this.nativeObj || this) : null, format);
+ }
+
+
+  /**
    * 设置进度条的方向。
    * 
    * @param vertical 是否为垂直方向。
@@ -22545,6 +22573,19 @@ export class TProgressBar extends TWidget {
 
  set max(v : number) {
    this.setMax(v);
+ }
+
+
+  /**
+   * 数值到字符串转换时的格式，缺省为"%d"。
+   *
+   */
+ get format() : string {
+   return progress_bar_t_get_prop_format(this.nativeObj);
+ }
+
+ set format(v : string) {
+   this.setFormat(v);
  }
 
 

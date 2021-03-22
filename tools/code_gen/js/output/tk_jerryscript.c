@@ -155,8 +155,7 @@ static jerry_object_native_info_t s_object_default_unref_info = {
   (jerry_object_native_free_callback_t)object_default_unref
 };
 jsvalue_t wrap_event_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -173,8 +172,7 @@ jsvalue_t wrap_event_cast(
 }
 
 jsvalue_t wrap_event_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -191,8 +189,7 @@ jsvalue_t wrap_event_create(
 }
 
 jsvalue_t wrap_event_t_get_prop_type(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -205,8 +202,7 @@ jsvalue_t wrap_event_t_get_prop_type(
 }
 
 jsvalue_t wrap_event_t_get_prop_size(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -219,8 +215,7 @@ jsvalue_t wrap_event_t_get_prop_size(
 }
 
 jsvalue_t wrap_event_t_get_prop_time(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -233,8 +228,7 @@ jsvalue_t wrap_event_t_get_prop_time(
 }
 
 jsvalue_t wrap_event_t_get_prop_target(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -258,8 +252,7 @@ ret_t event_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_emitter_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -275,8 +268,7 @@ jsvalue_t wrap_emitter_create(
 }
 
 jsvalue_t wrap_emitter_dispatch(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -294,8 +286,7 @@ jsvalue_t wrap_emitter_dispatch(
 }
 
 jsvalue_t wrap_emitter_dispatch_simple_event(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -313,8 +304,7 @@ jsvalue_t wrap_emitter_dispatch_simple_event(
 }
 
 jsvalue_t wrap_emitter_off(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -332,8 +322,7 @@ jsvalue_t wrap_emitter_off(
 }
 
 jsvalue_t wrap_emitter_enable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -350,8 +339,7 @@ jsvalue_t wrap_emitter_enable(
 }
 
 jsvalue_t wrap_emitter_disable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -368,8 +356,7 @@ jsvalue_t wrap_emitter_disable(
 }
 
 jsvalue_t wrap_emitter_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -409,8 +396,7 @@ ret_t pointf_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_rect_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -430,8 +416,7 @@ jsvalue_t wrap_rect_create(
 }
 
 jsvalue_t wrap_rect_set(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -452,8 +437,7 @@ jsvalue_t wrap_rect_set(
 }
 
 jsvalue_t wrap_rect_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -470,8 +454,7 @@ jsvalue_t wrap_rect_cast(
 }
 
 jsvalue_t wrap_rect_t_get_prop_x(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -484,8 +467,7 @@ jsvalue_t wrap_rect_t_get_prop_x(
 }
 
 jsvalue_t wrap_rect_t_get_prop_y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -498,8 +480,7 @@ jsvalue_t wrap_rect_t_get_prop_y(
 }
 
 jsvalue_t wrap_rect_t_get_prop_w(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -512,8 +493,7 @@ jsvalue_t wrap_rect_t_get_prop_w(
 }
 
 jsvalue_t wrap_rect_t_get_prop_h(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -538,8 +518,7 @@ ret_t rect_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_bitmap_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -555,8 +534,7 @@ jsvalue_t wrap_bitmap_create(
 }
 
 jsvalue_t wrap_bitmap_create_ex(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -576,8 +554,7 @@ jsvalue_t wrap_bitmap_create_ex(
 }
 
 jsvalue_t wrap_bitmap_get_bpp(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -594,8 +571,7 @@ jsvalue_t wrap_bitmap_get_bpp(
 }
 
 jsvalue_t wrap_bitmap_get_bpp_of_format(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -612,8 +588,7 @@ jsvalue_t wrap_bitmap_get_bpp_of_format(
 }
 
 jsvalue_t wrap_bitmap_t_get_prop_w(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -626,8 +601,7 @@ jsvalue_t wrap_bitmap_t_get_prop_w(
 }
 
 jsvalue_t wrap_bitmap_t_get_prop_h(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -640,8 +614,7 @@ jsvalue_t wrap_bitmap_t_get_prop_h(
 }
 
 jsvalue_t wrap_bitmap_t_get_prop_line_length(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -654,8 +627,7 @@ jsvalue_t wrap_bitmap_t_get_prop_line_length(
 }
 
 jsvalue_t wrap_bitmap_t_get_prop_flags(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -668,8 +640,7 @@ jsvalue_t wrap_bitmap_t_get_prop_flags(
 }
 
 jsvalue_t wrap_bitmap_t_get_prop_format(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -682,8 +653,7 @@ jsvalue_t wrap_bitmap_t_get_prop_format(
 }
 
 jsvalue_t wrap_bitmap_t_get_prop_name(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -711,8 +681,7 @@ ret_t bitmap_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_object_ref(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -729,8 +698,7 @@ jsvalue_t wrap_object_ref(
 }
 
 jsvalue_t wrap_object_get_type(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -747,8 +715,7 @@ jsvalue_t wrap_object_get_type(
 }
 
 jsvalue_t wrap_object_get_desc(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -765,8 +732,7 @@ jsvalue_t wrap_object_get_desc(
 }
 
 jsvalue_t wrap_object_get_size(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -783,8 +749,7 @@ jsvalue_t wrap_object_get_size(
 }
 
 jsvalue_t wrap_object_is_collection(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -801,8 +766,7 @@ jsvalue_t wrap_object_is_collection(
 }
 
 jsvalue_t wrap_object_set_name(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -821,8 +785,7 @@ jsvalue_t wrap_object_set_name(
 }
 
 jsvalue_t wrap_object_compare(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -840,8 +803,7 @@ jsvalue_t wrap_object_compare(
 }
 
 jsvalue_t wrap_object_get_prop(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -861,8 +823,7 @@ jsvalue_t wrap_object_get_prop(
 }
 
 jsvalue_t wrap_object_get_prop_str(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -881,8 +842,7 @@ jsvalue_t wrap_object_get_prop_str(
 }
 
 jsvalue_t wrap_object_get_prop_pointer(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -901,8 +861,7 @@ jsvalue_t wrap_object_get_prop_pointer(
 }
 
 jsvalue_t wrap_object_get_prop_object(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -921,8 +880,7 @@ jsvalue_t wrap_object_get_prop_object(
 }
 
 jsvalue_t wrap_object_get_prop_int(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -942,8 +900,7 @@ jsvalue_t wrap_object_get_prop_int(
 }
 
 jsvalue_t wrap_object_get_prop_bool(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -963,8 +920,7 @@ jsvalue_t wrap_object_get_prop_bool(
 }
 
 jsvalue_t wrap_object_get_prop_float(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -984,8 +940,7 @@ jsvalue_t wrap_object_get_prop_float(
 }
 
 jsvalue_t wrap_object_get_prop_double(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1005,8 +960,7 @@ jsvalue_t wrap_object_get_prop_double(
 }
 
 jsvalue_t wrap_object_remove_prop(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1025,8 +979,7 @@ jsvalue_t wrap_object_remove_prop(
 }
 
 jsvalue_t wrap_object_set_prop(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1046,8 +999,7 @@ jsvalue_t wrap_object_set_prop(
 }
 
 jsvalue_t wrap_object_set_prop_str(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1068,8 +1020,7 @@ jsvalue_t wrap_object_set_prop_str(
 }
 
 jsvalue_t wrap_object_set_prop_object(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1089,8 +1040,7 @@ jsvalue_t wrap_object_set_prop_object(
 }
 
 jsvalue_t wrap_object_set_prop_int(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1110,8 +1060,7 @@ jsvalue_t wrap_object_set_prop_int(
 }
 
 jsvalue_t wrap_object_set_prop_bool(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1131,8 +1080,7 @@ jsvalue_t wrap_object_set_prop_bool(
 }
 
 jsvalue_t wrap_object_set_prop_float(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1152,8 +1100,7 @@ jsvalue_t wrap_object_set_prop_float(
 }
 
 jsvalue_t wrap_object_set_prop_double(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1173,8 +1120,7 @@ jsvalue_t wrap_object_set_prop_double(
 }
 
 jsvalue_t wrap_object_copy_prop(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1194,8 +1140,7 @@ jsvalue_t wrap_object_copy_prop(
 }
 
 jsvalue_t wrap_object_has_prop(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1214,8 +1159,7 @@ jsvalue_t wrap_object_has_prop(
 }
 
 jsvalue_t wrap_object_eval(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1235,8 +1179,7 @@ jsvalue_t wrap_object_eval(
 }
 
 jsvalue_t wrap_object_can_exec(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1257,8 +1200,7 @@ jsvalue_t wrap_object_can_exec(
 }
 
 jsvalue_t wrap_object_exec(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1279,8 +1221,7 @@ jsvalue_t wrap_object_exec(
 }
 
 jsvalue_t wrap_object_notify_changed(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1297,8 +1238,7 @@ jsvalue_t wrap_object_notify_changed(
 }
 
 jsvalue_t wrap_object_has_prop_by_path(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1317,8 +1257,7 @@ jsvalue_t wrap_object_has_prop_by_path(
 }
 
 jsvalue_t wrap_object_get_prop_str_by_path(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1337,8 +1276,7 @@ jsvalue_t wrap_object_get_prop_str_by_path(
 }
 
 jsvalue_t wrap_object_get_prop_pointer_by_path(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1357,8 +1295,7 @@ jsvalue_t wrap_object_get_prop_pointer_by_path(
 }
 
 jsvalue_t wrap_object_get_prop_object_by_path(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1377,8 +1314,7 @@ jsvalue_t wrap_object_get_prop_object_by_path(
 }
 
 jsvalue_t wrap_object_get_prop_int_by_path(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1398,8 +1334,7 @@ jsvalue_t wrap_object_get_prop_int_by_path(
 }
 
 jsvalue_t wrap_object_get_prop_bool_by_path(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1419,8 +1354,7 @@ jsvalue_t wrap_object_get_prop_bool_by_path(
 }
 
 jsvalue_t wrap_object_get_prop_float_by_path(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1440,8 +1374,7 @@ jsvalue_t wrap_object_get_prop_float_by_path(
 }
 
 jsvalue_t wrap_object_set_prop_by_path(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1461,8 +1394,7 @@ jsvalue_t wrap_object_set_prop_by_path(
 }
 
 jsvalue_t wrap_object_set_prop_str_by_path(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1483,8 +1415,7 @@ jsvalue_t wrap_object_set_prop_str_by_path(
 }
 
 jsvalue_t wrap_object_set_prop_object_by_path(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1504,8 +1435,7 @@ jsvalue_t wrap_object_set_prop_object_by_path(
 }
 
 jsvalue_t wrap_object_set_prop_int_by_path(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1525,8 +1455,7 @@ jsvalue_t wrap_object_set_prop_int_by_path(
 }
 
 jsvalue_t wrap_object_set_prop_bool_by_path(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1546,8 +1475,7 @@ jsvalue_t wrap_object_set_prop_bool_by_path(
 }
 
 jsvalue_t wrap_object_set_prop_float_by_path(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1567,8 +1495,7 @@ jsvalue_t wrap_object_set_prop_float_by_path(
 }
 
 jsvalue_t wrap_object_can_exec_by_path(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1589,8 +1516,7 @@ jsvalue_t wrap_object_can_exec_by_path(
 }
 
 jsvalue_t wrap_object_exec_by_path(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1611,8 +1537,7 @@ jsvalue_t wrap_object_exec_by_path(
 }
 
 jsvalue_t wrap_object_get_prop_int8(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1632,8 +1557,7 @@ jsvalue_t wrap_object_get_prop_int8(
 }
 
 jsvalue_t wrap_object_set_prop_int8(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1653,8 +1577,7 @@ jsvalue_t wrap_object_set_prop_int8(
 }
 
 jsvalue_t wrap_object_get_prop_uint8(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1674,8 +1597,7 @@ jsvalue_t wrap_object_get_prop_uint8(
 }
 
 jsvalue_t wrap_object_set_prop_uint8(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1695,8 +1617,7 @@ jsvalue_t wrap_object_set_prop_uint8(
 }
 
 jsvalue_t wrap_object_get_prop_int16(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1716,8 +1637,7 @@ jsvalue_t wrap_object_get_prop_int16(
 }
 
 jsvalue_t wrap_object_set_prop_int16(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1737,8 +1657,7 @@ jsvalue_t wrap_object_set_prop_int16(
 }
 
 jsvalue_t wrap_object_get_prop_uint16(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1758,8 +1677,7 @@ jsvalue_t wrap_object_get_prop_uint16(
 }
 
 jsvalue_t wrap_object_set_prop_uint16(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1779,8 +1697,7 @@ jsvalue_t wrap_object_set_prop_uint16(
 }
 
 jsvalue_t wrap_object_get_prop_int32(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1800,8 +1717,7 @@ jsvalue_t wrap_object_get_prop_int32(
 }
 
 jsvalue_t wrap_object_set_prop_int32(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1821,8 +1737,7 @@ jsvalue_t wrap_object_set_prop_int32(
 }
 
 jsvalue_t wrap_object_get_prop_uint32(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1842,8 +1757,7 @@ jsvalue_t wrap_object_get_prop_uint32(
 }
 
 jsvalue_t wrap_object_set_prop_uint32(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1863,8 +1777,7 @@ jsvalue_t wrap_object_set_prop_uint32(
 }
 
 jsvalue_t wrap_object_get_prop_int64(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1884,8 +1797,7 @@ jsvalue_t wrap_object_get_prop_int64(
 }
 
 jsvalue_t wrap_object_set_prop_int64(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1905,8 +1817,7 @@ jsvalue_t wrap_object_set_prop_int64(
 }
 
 jsvalue_t wrap_object_get_prop_uint64(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1926,8 +1837,7 @@ jsvalue_t wrap_object_get_prop_uint64(
 }
 
 jsvalue_t wrap_object_set_prop_uint64(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1947,8 +1857,7 @@ jsvalue_t wrap_object_set_prop_uint64(
 }
 
 jsvalue_t wrap_object_t_get_prop_ref_count(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -1961,8 +1870,7 @@ jsvalue_t wrap_object_t_get_prop_ref_count(
 }
 
 jsvalue_t wrap_object_t_get_prop_name(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2042,8 +1950,7 @@ ret_t object_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_value_set_bool(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2061,8 +1968,7 @@ jsvalue_t wrap_value_set_bool(
 }
 
 jsvalue_t wrap_value_bool(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2079,8 +1985,7 @@ jsvalue_t wrap_value_bool(
 }
 
 jsvalue_t wrap_value_set_int8(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2098,8 +2003,7 @@ jsvalue_t wrap_value_set_int8(
 }
 
 jsvalue_t wrap_value_int8(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2116,8 +2020,7 @@ jsvalue_t wrap_value_int8(
 }
 
 jsvalue_t wrap_value_set_uint8(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2135,8 +2038,7 @@ jsvalue_t wrap_value_set_uint8(
 }
 
 jsvalue_t wrap_value_uint8(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2153,8 +2055,7 @@ jsvalue_t wrap_value_uint8(
 }
 
 jsvalue_t wrap_value_set_int16(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2172,8 +2073,7 @@ jsvalue_t wrap_value_set_int16(
 }
 
 jsvalue_t wrap_value_int16(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2190,8 +2090,7 @@ jsvalue_t wrap_value_int16(
 }
 
 jsvalue_t wrap_value_set_uint16(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2209,8 +2108,7 @@ jsvalue_t wrap_value_set_uint16(
 }
 
 jsvalue_t wrap_value_uint16(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2227,8 +2125,7 @@ jsvalue_t wrap_value_uint16(
 }
 
 jsvalue_t wrap_value_set_int32(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2246,8 +2143,7 @@ jsvalue_t wrap_value_set_int32(
 }
 
 jsvalue_t wrap_value_int32(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2264,8 +2160,7 @@ jsvalue_t wrap_value_int32(
 }
 
 jsvalue_t wrap_value_set_uint32(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2283,8 +2178,7 @@ jsvalue_t wrap_value_set_uint32(
 }
 
 jsvalue_t wrap_value_set_int64(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2302,8 +2196,7 @@ jsvalue_t wrap_value_set_int64(
 }
 
 jsvalue_t wrap_value_int64(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2320,8 +2213,7 @@ jsvalue_t wrap_value_int64(
 }
 
 jsvalue_t wrap_value_set_uint64(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2339,8 +2231,7 @@ jsvalue_t wrap_value_set_uint64(
 }
 
 jsvalue_t wrap_value_uint64(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2357,8 +2248,7 @@ jsvalue_t wrap_value_uint64(
 }
 
 jsvalue_t wrap_value_set_float(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2376,8 +2266,7 @@ jsvalue_t wrap_value_set_float(
 }
 
 jsvalue_t wrap_value_float32(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2394,8 +2283,7 @@ jsvalue_t wrap_value_float32(
 }
 
 jsvalue_t wrap_value_set_double(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2413,8 +2301,7 @@ jsvalue_t wrap_value_set_double(
 }
 
 jsvalue_t wrap_value_double(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2431,8 +2318,7 @@ jsvalue_t wrap_value_double(
 }
 
 jsvalue_t wrap_value_dup_str(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2451,8 +2337,7 @@ jsvalue_t wrap_value_dup_str(
 }
 
 jsvalue_t wrap_value_str(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2469,8 +2354,7 @@ jsvalue_t wrap_value_str(
 }
 
 jsvalue_t wrap_value_str_ex(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2490,8 +2374,7 @@ jsvalue_t wrap_value_str_ex(
 }
 
 jsvalue_t wrap_value_is_null(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2508,8 +2391,7 @@ jsvalue_t wrap_value_is_null(
 }
 
 jsvalue_t wrap_value_set_int(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2527,8 +2409,7 @@ jsvalue_t wrap_value_set_int(
 }
 
 jsvalue_t wrap_value_set_object(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2546,8 +2427,7 @@ jsvalue_t wrap_value_set_object(
 }
 
 jsvalue_t wrap_value_object(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2564,8 +2444,7 @@ jsvalue_t wrap_value_object(
 }
 
 jsvalue_t wrap_value_set_token(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2583,8 +2462,7 @@ jsvalue_t wrap_value_set_token(
 }
 
 jsvalue_t wrap_value_token(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2601,8 +2479,7 @@ jsvalue_t wrap_value_token(
 }
 
 jsvalue_t wrap_value_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2618,8 +2495,7 @@ jsvalue_t wrap_value_create(
 }
 
 jsvalue_t wrap_value_reset(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2636,8 +2512,7 @@ jsvalue_t wrap_value_reset(
 }
 
 jsvalue_t wrap_value_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2692,8 +2567,7 @@ ret_t value_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_tk_init(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2716,8 +2590,7 @@ jsvalue_t wrap_tk_init(
 }
 
 jsvalue_t wrap_tk_run(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2733,8 +2606,7 @@ jsvalue_t wrap_tk_run(
 }
 
 jsvalue_t wrap_tk_quit(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2750,8 +2622,7 @@ jsvalue_t wrap_tk_quit(
 }
 
 jsvalue_t wrap_tk_get_pointer_x(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2767,8 +2638,7 @@ jsvalue_t wrap_tk_get_pointer_x(
 }
 
 jsvalue_t wrap_tk_get_pointer_y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2784,8 +2654,7 @@ jsvalue_t wrap_tk_get_pointer_y(
 }
 
 jsvalue_t wrap_tk_is_pointer_pressed(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2812,8 +2681,7 @@ ret_t global_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_BIDI_TYPE_AUTO(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2822,8 +2690,7 @@ jsvalue_t get_BIDI_TYPE_AUTO(
 }
 
 jsvalue_t get_BIDI_TYPE_LTR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2832,8 +2699,7 @@ jsvalue_t get_BIDI_TYPE_LTR(
 }
 
 jsvalue_t get_BIDI_TYPE_RTL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2842,8 +2708,7 @@ jsvalue_t get_BIDI_TYPE_RTL(
 }
 
 jsvalue_t get_BIDI_TYPE_LRO(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2852,8 +2717,7 @@ jsvalue_t get_BIDI_TYPE_LRO(
 }
 
 jsvalue_t get_BIDI_TYPE_RLO(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2862,8 +2726,7 @@ jsvalue_t get_BIDI_TYPE_RLO(
 }
 
 jsvalue_t get_BIDI_TYPE_WLTR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2872,8 +2735,7 @@ jsvalue_t get_BIDI_TYPE_WLTR(
 }
 
 jsvalue_t get_BIDI_TYPE_WRTL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2894,8 +2756,7 @@ ret_t bidi_type_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_IMAGE_DRAW_DEFAULT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2904,8 +2765,7 @@ jsvalue_t get_IMAGE_DRAW_DEFAULT(
 }
 
 jsvalue_t get_IMAGE_DRAW_CENTER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2914,8 +2774,7 @@ jsvalue_t get_IMAGE_DRAW_CENTER(
 }
 
 jsvalue_t get_IMAGE_DRAW_ICON(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2924,8 +2783,7 @@ jsvalue_t get_IMAGE_DRAW_ICON(
 }
 
 jsvalue_t get_IMAGE_DRAW_SCALE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2934,8 +2792,7 @@ jsvalue_t get_IMAGE_DRAW_SCALE(
 }
 
 jsvalue_t get_IMAGE_DRAW_SCALE_AUTO(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2944,8 +2801,7 @@ jsvalue_t get_IMAGE_DRAW_SCALE_AUTO(
 }
 
 jsvalue_t get_IMAGE_DRAW_SCALE_DOWN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2954,8 +2810,7 @@ jsvalue_t get_IMAGE_DRAW_SCALE_DOWN(
 }
 
 jsvalue_t get_IMAGE_DRAW_SCALE_W(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2964,8 +2819,7 @@ jsvalue_t get_IMAGE_DRAW_SCALE_W(
 }
 
 jsvalue_t get_IMAGE_DRAW_SCALE_H(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2974,8 +2828,7 @@ jsvalue_t get_IMAGE_DRAW_SCALE_H(
 }
 
 jsvalue_t get_IMAGE_DRAW_REPEAT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2984,8 +2837,7 @@ jsvalue_t get_IMAGE_DRAW_REPEAT(
 }
 
 jsvalue_t get_IMAGE_DRAW_REPEAT_X(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -2994,8 +2846,7 @@ jsvalue_t get_IMAGE_DRAW_REPEAT_X(
 }
 
 jsvalue_t get_IMAGE_DRAW_REPEAT_Y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3004,8 +2855,7 @@ jsvalue_t get_IMAGE_DRAW_REPEAT_Y(
 }
 
 jsvalue_t get_IMAGE_DRAW_REPEAT_Y_INVERSE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3014,8 +2864,7 @@ jsvalue_t get_IMAGE_DRAW_REPEAT_Y_INVERSE(
 }
 
 jsvalue_t get_IMAGE_DRAW_PATCH9(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3024,8 +2873,7 @@ jsvalue_t get_IMAGE_DRAW_PATCH9(
 }
 
 jsvalue_t get_IMAGE_DRAW_PATCH3_X(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3034,8 +2882,7 @@ jsvalue_t get_IMAGE_DRAW_PATCH3_X(
 }
 
 jsvalue_t get_IMAGE_DRAW_PATCH3_Y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3044,8 +2891,7 @@ jsvalue_t get_IMAGE_DRAW_PATCH3_Y(
 }
 
 jsvalue_t get_IMAGE_DRAW_PATCH3_X_SCALE_Y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3054,8 +2900,7 @@ jsvalue_t get_IMAGE_DRAW_PATCH3_X_SCALE_Y(
 }
 
 jsvalue_t get_IMAGE_DRAW_PATCH3_Y_SCALE_X(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3064,8 +2909,7 @@ jsvalue_t get_IMAGE_DRAW_PATCH3_Y_SCALE_X(
 }
 
 jsvalue_t get_IMAGE_DRAW_REPEAT9(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3074,8 +2918,7 @@ jsvalue_t get_IMAGE_DRAW_REPEAT9(
 }
 
 jsvalue_t get_IMAGE_DRAW_REPEAT3_X(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3084,8 +2927,7 @@ jsvalue_t get_IMAGE_DRAW_REPEAT3_X(
 }
 
 jsvalue_t get_IMAGE_DRAW_REPEAT3_Y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3124,8 +2966,7 @@ ret_t canvas_offline_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_canvas_get_width(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3142,8 +2983,7 @@ jsvalue_t wrap_canvas_get_width(
 }
 
 jsvalue_t wrap_canvas_get_height(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3160,8 +3000,7 @@ jsvalue_t wrap_canvas_get_height(
 }
 
 jsvalue_t wrap_canvas_get_clip_rect(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3179,8 +3018,7 @@ jsvalue_t wrap_canvas_get_clip_rect(
 }
 
 jsvalue_t wrap_canvas_set_clip_rect(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3198,8 +3036,7 @@ jsvalue_t wrap_canvas_set_clip_rect(
 }
 
 jsvalue_t wrap_canvas_set_clip_rect_ex(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3218,8 +3055,7 @@ jsvalue_t wrap_canvas_set_clip_rect_ex(
 }
 
 jsvalue_t wrap_canvas_set_fill_color_str(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3238,8 +3074,7 @@ jsvalue_t wrap_canvas_set_fill_color_str(
 }
 
 jsvalue_t wrap_canvas_set_text_color_str(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3258,8 +3093,7 @@ jsvalue_t wrap_canvas_set_text_color_str(
 }
 
 jsvalue_t wrap_canvas_set_stroke_color_str(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3278,8 +3112,7 @@ jsvalue_t wrap_canvas_set_stroke_color_str(
 }
 
 jsvalue_t wrap_canvas_set_global_alpha(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3297,8 +3130,7 @@ jsvalue_t wrap_canvas_set_global_alpha(
 }
 
 jsvalue_t wrap_canvas_translate(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3317,8 +3149,7 @@ jsvalue_t wrap_canvas_translate(
 }
 
 jsvalue_t wrap_canvas_untranslate(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3337,8 +3168,7 @@ jsvalue_t wrap_canvas_untranslate(
 }
 
 jsvalue_t wrap_canvas_draw_vline(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3358,8 +3188,7 @@ jsvalue_t wrap_canvas_draw_vline(
 }
 
 jsvalue_t wrap_canvas_draw_hline(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3379,8 +3208,7 @@ jsvalue_t wrap_canvas_draw_hline(
 }
 
 jsvalue_t wrap_canvas_fill_rect(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3401,8 +3229,7 @@ jsvalue_t wrap_canvas_fill_rect(
 }
 
 jsvalue_t wrap_canvas_clear_rect(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3423,8 +3250,7 @@ jsvalue_t wrap_canvas_clear_rect(
 }
 
 jsvalue_t wrap_canvas_stroke_rect(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3445,8 +3271,7 @@ jsvalue_t wrap_canvas_stroke_rect(
 }
 
 jsvalue_t wrap_canvas_set_font(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3466,8 +3291,7 @@ jsvalue_t wrap_canvas_set_font(
 }
 
 jsvalue_t wrap_canvas_measure_utf8(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3486,8 +3310,7 @@ jsvalue_t wrap_canvas_measure_utf8(
 }
 
 jsvalue_t wrap_canvas_draw_utf8(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3508,8 +3331,7 @@ jsvalue_t wrap_canvas_draw_utf8(
 }
 
 jsvalue_t wrap_canvas_draw_utf8_in_rect(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3529,8 +3351,7 @@ jsvalue_t wrap_canvas_draw_utf8_in_rect(
 }
 
 jsvalue_t wrap_canvas_draw_icon(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3550,8 +3371,7 @@ jsvalue_t wrap_canvas_draw_icon(
 }
 
 jsvalue_t wrap_canvas_draw_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3571,8 +3391,7 @@ jsvalue_t wrap_canvas_draw_image(
 }
 
 jsvalue_t wrap_canvas_draw_image_ex(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3592,8 +3411,7 @@ jsvalue_t wrap_canvas_draw_image_ex(
 }
 
 jsvalue_t wrap_canvas_draw_image_ex2(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3614,8 +3432,7 @@ jsvalue_t wrap_canvas_draw_image_ex2(
 }
 
 jsvalue_t wrap_canvas_get_vgcanvas(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3632,8 +3449,7 @@ jsvalue_t wrap_canvas_get_vgcanvas(
 }
 
 jsvalue_t wrap_canvas_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3650,8 +3466,7 @@ jsvalue_t wrap_canvas_cast(
 }
 
 jsvalue_t wrap_canvas_reset(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3668,8 +3483,7 @@ jsvalue_t wrap_canvas_reset(
 }
 
 jsvalue_t wrap_canvas_t_get_prop_ox(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3682,8 +3496,7 @@ jsvalue_t wrap_canvas_t_get_prop_ox(
 }
 
 jsvalue_t wrap_canvas_t_get_prop_oy(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3696,8 +3509,7 @@ jsvalue_t wrap_canvas_t_get_prop_oy(
 }
 
 jsvalue_t wrap_canvas_t_get_prop_font_name(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3710,8 +3522,7 @@ jsvalue_t wrap_canvas_t_get_prop_font_name(
 }
 
 jsvalue_t wrap_canvas_t_get_prop_font_size(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3724,8 +3535,7 @@ jsvalue_t wrap_canvas_t_get_prop_font_size(
 }
 
 jsvalue_t wrap_canvas_t_get_prop_global_alpha(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3775,8 +3585,7 @@ ret_t canvas_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_CLIP_BOARD_DATA_TYPE_NONE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3785,8 +3594,7 @@ jsvalue_t get_CLIP_BOARD_DATA_TYPE_NONE(
 }
 
 jsvalue_t get_CLIP_BOARD_DATA_TYPE_TEXT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3802,8 +3610,7 @@ ret_t clip_board_data_type_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_clip_board_set_text(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3821,8 +3628,7 @@ jsvalue_t wrap_clip_board_set_text(
 }
 
 jsvalue_t wrap_clip_board_get_text(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3845,8 +3651,7 @@ ret_t clip_board_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_DIALOG_QUIT_NONE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3855,8 +3660,7 @@ jsvalue_t get_DIALOG_QUIT_NONE(
 }
 
 jsvalue_t get_DIALOG_QUIT_OK(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3865,8 +3669,7 @@ jsvalue_t get_DIALOG_QUIT_OK(
 }
 
 jsvalue_t get_DIALOG_QUIT_YES(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3875,8 +3678,7 @@ jsvalue_t get_DIALOG_QUIT_YES(
 }
 
 jsvalue_t get_DIALOG_QUIT_CANCEL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3885,8 +3687,7 @@ jsvalue_t get_DIALOG_QUIT_CANCEL(
 }
 
 jsvalue_t get_DIALOG_QUIT_NO(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3895,8 +3696,7 @@ jsvalue_t get_DIALOG_QUIT_NO(
 }
 
 jsvalue_t get_DIALOG_QUIT_OTHER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3916,8 +3716,7 @@ ret_t dialog_quit_code_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_EVT_POINTER_DOWN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3926,8 +3725,7 @@ jsvalue_t get_EVT_POINTER_DOWN(
 }
 
 jsvalue_t get_EVT_POINTER_DOWN_BEFORE_CHILDREN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3936,8 +3734,7 @@ jsvalue_t get_EVT_POINTER_DOWN_BEFORE_CHILDREN(
 }
 
 jsvalue_t get_EVT_POINTER_MOVE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3946,8 +3743,7 @@ jsvalue_t get_EVT_POINTER_MOVE(
 }
 
 jsvalue_t get_EVT_POINTER_MOVE_BEFORE_CHILDREN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3956,8 +3752,7 @@ jsvalue_t get_EVT_POINTER_MOVE_BEFORE_CHILDREN(
 }
 
 jsvalue_t get_EVT_POINTER_UP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3966,8 +3761,7 @@ jsvalue_t get_EVT_POINTER_UP(
 }
 
 jsvalue_t get_EVT_POINTER_UP_BEFORE_CHILDREN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3976,8 +3770,7 @@ jsvalue_t get_EVT_POINTER_UP_BEFORE_CHILDREN(
 }
 
 jsvalue_t get_EVT_WHEEL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3986,8 +3779,7 @@ jsvalue_t get_EVT_WHEEL(
 }
 
 jsvalue_t get_EVT_WHEEL_BEFORE_CHILDREN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -3996,8 +3788,7 @@ jsvalue_t get_EVT_WHEEL_BEFORE_CHILDREN(
 }
 
 jsvalue_t get_EVT_POINTER_DOWN_ABORT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4006,8 +3797,7 @@ jsvalue_t get_EVT_POINTER_DOWN_ABORT(
 }
 
 jsvalue_t get_EVT_CONTEXT_MENU(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4016,8 +3806,7 @@ jsvalue_t get_EVT_CONTEXT_MENU(
 }
 
 jsvalue_t get_EVT_POINTER_ENTER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4026,8 +3815,7 @@ jsvalue_t get_EVT_POINTER_ENTER(
 }
 
 jsvalue_t get_EVT_POINTER_LEAVE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4036,8 +3824,7 @@ jsvalue_t get_EVT_POINTER_LEAVE(
 }
 
 jsvalue_t get_EVT_LONG_PRESS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4046,8 +3833,7 @@ jsvalue_t get_EVT_LONG_PRESS(
 }
 
 jsvalue_t get_EVT_CLICK(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4056,8 +3842,7 @@ jsvalue_t get_EVT_CLICK(
 }
 
 jsvalue_t get_EVT_FOCUS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4066,8 +3851,7 @@ jsvalue_t get_EVT_FOCUS(
 }
 
 jsvalue_t get_EVT_BLUR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4076,8 +3860,7 @@ jsvalue_t get_EVT_BLUR(
 }
 
 jsvalue_t get_EVT_KEY_DOWN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4086,8 +3869,7 @@ jsvalue_t get_EVT_KEY_DOWN(
 }
 
 jsvalue_t get_EVT_KEY_LONG_PRESS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4096,8 +3878,7 @@ jsvalue_t get_EVT_KEY_LONG_PRESS(
 }
 
 jsvalue_t get_EVT_KEY_DOWN_BEFORE_CHILDREN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4106,8 +3887,7 @@ jsvalue_t get_EVT_KEY_DOWN_BEFORE_CHILDREN(
 }
 
 jsvalue_t get_EVT_KEY_REPEAT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4116,8 +3896,7 @@ jsvalue_t get_EVT_KEY_REPEAT(
 }
 
 jsvalue_t get_EVT_KEY_UP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4126,8 +3905,7 @@ jsvalue_t get_EVT_KEY_UP(
 }
 
 jsvalue_t get_EVT_KEY_UP_BEFORE_CHILDREN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4136,8 +3914,7 @@ jsvalue_t get_EVT_KEY_UP_BEFORE_CHILDREN(
 }
 
 jsvalue_t get_EVT_WILL_MOVE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4146,8 +3923,7 @@ jsvalue_t get_EVT_WILL_MOVE(
 }
 
 jsvalue_t get_EVT_MOVE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4156,8 +3932,7 @@ jsvalue_t get_EVT_MOVE(
 }
 
 jsvalue_t get_EVT_WILL_RESIZE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4166,8 +3941,7 @@ jsvalue_t get_EVT_WILL_RESIZE(
 }
 
 jsvalue_t get_EVT_RESIZE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4176,8 +3950,7 @@ jsvalue_t get_EVT_RESIZE(
 }
 
 jsvalue_t get_EVT_WILL_MOVE_RESIZE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4186,8 +3959,7 @@ jsvalue_t get_EVT_WILL_MOVE_RESIZE(
 }
 
 jsvalue_t get_EVT_MOVE_RESIZE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4196,8 +3968,7 @@ jsvalue_t get_EVT_MOVE_RESIZE(
 }
 
 jsvalue_t get_EVT_VALUE_WILL_CHANGE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4206,8 +3977,7 @@ jsvalue_t get_EVT_VALUE_WILL_CHANGE(
 }
 
 jsvalue_t get_EVT_VALUE_CHANGED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4216,8 +3986,7 @@ jsvalue_t get_EVT_VALUE_CHANGED(
 }
 
 jsvalue_t get_EVT_VALUE_CHANGING(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4226,8 +3995,7 @@ jsvalue_t get_EVT_VALUE_CHANGING(
 }
 
 jsvalue_t get_EVT_PAINT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4236,8 +4004,7 @@ jsvalue_t get_EVT_PAINT(
 }
 
 jsvalue_t get_EVT_BEFORE_PAINT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4246,8 +4013,7 @@ jsvalue_t get_EVT_BEFORE_PAINT(
 }
 
 jsvalue_t get_EVT_AFTER_PAINT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4256,8 +4022,7 @@ jsvalue_t get_EVT_AFTER_PAINT(
 }
 
 jsvalue_t get_EVT_PAINT_DONE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4266,8 +4031,7 @@ jsvalue_t get_EVT_PAINT_DONE(
 }
 
 jsvalue_t get_EVT_LOCALE_CHANGED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4276,8 +4040,7 @@ jsvalue_t get_EVT_LOCALE_CHANGED(
 }
 
 jsvalue_t get_EVT_ANIM_START(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4286,8 +4049,7 @@ jsvalue_t get_EVT_ANIM_START(
 }
 
 jsvalue_t get_EVT_ANIM_STOP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4296,8 +4058,7 @@ jsvalue_t get_EVT_ANIM_STOP(
 }
 
 jsvalue_t get_EVT_ANIM_PAUSE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4306,8 +4067,7 @@ jsvalue_t get_EVT_ANIM_PAUSE(
 }
 
 jsvalue_t get_EVT_ANIM_ONCE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4316,8 +4076,7 @@ jsvalue_t get_EVT_ANIM_ONCE(
 }
 
 jsvalue_t get_EVT_ANIM_END(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4326,8 +4085,7 @@ jsvalue_t get_EVT_ANIM_END(
 }
 
 jsvalue_t get_EVT_WINDOW_LOAD(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4336,8 +4094,7 @@ jsvalue_t get_EVT_WINDOW_LOAD(
 }
 
 jsvalue_t get_EVT_WIDGET_LOAD(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4346,8 +4103,7 @@ jsvalue_t get_EVT_WIDGET_LOAD(
 }
 
 jsvalue_t get_EVT_WINDOW_WILL_OPEN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4356,8 +4112,7 @@ jsvalue_t get_EVT_WINDOW_WILL_OPEN(
 }
 
 jsvalue_t get_EVT_WINDOW_OPEN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4366,8 +4121,7 @@ jsvalue_t get_EVT_WINDOW_OPEN(
 }
 
 jsvalue_t get_EVT_WINDOW_TO_BACKGROUND(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4376,8 +4130,7 @@ jsvalue_t get_EVT_WINDOW_TO_BACKGROUND(
 }
 
 jsvalue_t get_EVT_WINDOW_TO_FOREGROUND(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4386,8 +4139,7 @@ jsvalue_t get_EVT_WINDOW_TO_FOREGROUND(
 }
 
 jsvalue_t get_EVT_WINDOW_CLOSE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4396,8 +4148,7 @@ jsvalue_t get_EVT_WINDOW_CLOSE(
 }
 
 jsvalue_t get_EVT_REQUEST_CLOSE_WINDOW(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4406,8 +4157,7 @@ jsvalue_t get_EVT_REQUEST_CLOSE_WINDOW(
 }
 
 jsvalue_t get_EVT_TOP_WINDOW_CHANGED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4416,8 +4166,7 @@ jsvalue_t get_EVT_TOP_WINDOW_CHANGED(
 }
 
 jsvalue_t get_EVT_IM_START(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4426,8 +4175,7 @@ jsvalue_t get_EVT_IM_START(
 }
 
 jsvalue_t get_EVT_IM_STOP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4436,8 +4184,7 @@ jsvalue_t get_EVT_IM_STOP(
 }
 
 jsvalue_t get_EVT_IM_COMMIT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4446,8 +4193,7 @@ jsvalue_t get_EVT_IM_COMMIT(
 }
 
 jsvalue_t get_EVT_IM_CLEAR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4456,8 +4202,7 @@ jsvalue_t get_EVT_IM_CLEAR(
 }
 
 jsvalue_t get_EVT_IM_CANCEL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4466,8 +4211,7 @@ jsvalue_t get_EVT_IM_CANCEL(
 }
 
 jsvalue_t get_EVT_IM_PREEDIT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4476,8 +4220,7 @@ jsvalue_t get_EVT_IM_PREEDIT(
 }
 
 jsvalue_t get_EVT_IM_PREEDIT_CONFIRM(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4486,8 +4229,7 @@ jsvalue_t get_EVT_IM_PREEDIT_CONFIRM(
 }
 
 jsvalue_t get_EVT_IM_PREEDIT_ABORT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4496,8 +4238,7 @@ jsvalue_t get_EVT_IM_PREEDIT_ABORT(
 }
 
 jsvalue_t get_EVT_IM_SHOW_CANDIDATES(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4506,8 +4247,7 @@ jsvalue_t get_EVT_IM_SHOW_CANDIDATES(
 }
 
 jsvalue_t get_EVT_IM_SHOW_PRE_CANDIDATES(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4516,8 +4256,7 @@ jsvalue_t get_EVT_IM_SHOW_PRE_CANDIDATES(
 }
 
 jsvalue_t get_EVT_IM_LANG_CHANGED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4526,8 +4265,7 @@ jsvalue_t get_EVT_IM_LANG_CHANGED(
 }
 
 jsvalue_t get_EVT_IM_ACTION(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4536,8 +4274,7 @@ jsvalue_t get_EVT_IM_ACTION(
 }
 
 jsvalue_t get_EVT_IM_ACTION_INFO(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4546,8 +4283,7 @@ jsvalue_t get_EVT_IM_ACTION_INFO(
 }
 
 jsvalue_t get_EVT_DRAG_START(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4556,8 +4292,7 @@ jsvalue_t get_EVT_DRAG_START(
 }
 
 jsvalue_t get_EVT_DRAG(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4566,8 +4301,7 @@ jsvalue_t get_EVT_DRAG(
 }
 
 jsvalue_t get_EVT_DRAG_END(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4576,8 +4310,7 @@ jsvalue_t get_EVT_DRAG_END(
 }
 
 jsvalue_t get_EVT_RESET(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4586,8 +4319,7 @@ jsvalue_t get_EVT_RESET(
 }
 
 jsvalue_t get_EVT_SCREEN_SAVER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4596,8 +4328,7 @@ jsvalue_t get_EVT_SCREEN_SAVER(
 }
 
 jsvalue_t get_EVT_LOW_MEMORY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4606,8 +4337,7 @@ jsvalue_t get_EVT_LOW_MEMORY(
 }
 
 jsvalue_t get_EVT_OUT_OF_MEMORY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4616,8 +4346,7 @@ jsvalue_t get_EVT_OUT_OF_MEMORY(
 }
 
 jsvalue_t get_EVT_ORIENTATION_WILL_CHANGED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4626,8 +4355,7 @@ jsvalue_t get_EVT_ORIENTATION_WILL_CHANGED(
 }
 
 jsvalue_t get_EVT_ORIENTATION_CHANGED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4636,8 +4364,7 @@ jsvalue_t get_EVT_ORIENTATION_CHANGED(
 }
 
 jsvalue_t get_EVT_WIDGET_CREATED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4646,8 +4373,7 @@ jsvalue_t get_EVT_WIDGET_CREATED(
 }
 
 jsvalue_t get_EVT_REQUEST_QUIT_APP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4656,8 +4382,7 @@ jsvalue_t get_EVT_REQUEST_QUIT_APP(
 }
 
 jsvalue_t get_EVT_THEME_CHANGED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4666,8 +4391,7 @@ jsvalue_t get_EVT_THEME_CHANGED(
 }
 
 jsvalue_t get_EVT_WIDGET_ADD_CHILD(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4676,8 +4400,7 @@ jsvalue_t get_EVT_WIDGET_ADD_CHILD(
 }
 
 jsvalue_t get_EVT_WIDGET_REMOVE_CHILD(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4686,8 +4409,7 @@ jsvalue_t get_EVT_WIDGET_REMOVE_CHILD(
 }
 
 jsvalue_t get_EVT_SCROLL_START(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4696,8 +4418,7 @@ jsvalue_t get_EVT_SCROLL_START(
 }
 
 jsvalue_t get_EVT_SCROLL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4706,8 +4427,7 @@ jsvalue_t get_EVT_SCROLL(
 }
 
 jsvalue_t get_EVT_SCROLL_END(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4716,8 +4436,7 @@ jsvalue_t get_EVT_SCROLL_END(
 }
 
 jsvalue_t get_EVT_MULTI_GESTURE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4726,8 +4445,7 @@ jsvalue_t get_EVT_MULTI_GESTURE(
 }
 
 jsvalue_t get_EVT_PAGE_CHANGED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4736,8 +4454,7 @@ jsvalue_t get_EVT_PAGE_CHANGED(
 }
 
 jsvalue_t get_EVT_ASSET_MANAGER_LOAD_ASSET(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4746,8 +4463,7 @@ jsvalue_t get_EVT_ASSET_MANAGER_LOAD_ASSET(
 }
 
 jsvalue_t get_EVT_ASSET_MANAGER_UNLOAD_ASSET(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4756,8 +4472,7 @@ jsvalue_t get_EVT_ASSET_MANAGER_UNLOAD_ASSET(
 }
 
 jsvalue_t get_EVT_ASSET_MANAGER_CLEAR_CACHE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4766,8 +4481,7 @@ jsvalue_t get_EVT_ASSET_MANAGER_CLEAR_CACHE(
 }
 
 jsvalue_t get_EVT_TIMER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4776,8 +4490,7 @@ jsvalue_t get_EVT_TIMER(
 }
 
 jsvalue_t get_EVT_REQ_START(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4786,8 +4499,7 @@ jsvalue_t get_EVT_REQ_START(
 }
 
 jsvalue_t get_EVT_USER_START(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4796,8 +4508,7 @@ jsvalue_t get_EVT_USER_START(
 }
 
 jsvalue_t get_EVT_NONE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4806,8 +4517,7 @@ jsvalue_t get_EVT_NONE(
 }
 
 jsvalue_t get_EVT_PROP_WILL_CHANGE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4816,8 +4526,7 @@ jsvalue_t get_EVT_PROP_WILL_CHANGE(
 }
 
 jsvalue_t get_EVT_PROP_CHANGED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4826,8 +4535,7 @@ jsvalue_t get_EVT_PROP_CHANGED(
 }
 
 jsvalue_t get_EVT_CMD_WILL_EXEC(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4836,8 +4544,7 @@ jsvalue_t get_EVT_CMD_WILL_EXEC(
 }
 
 jsvalue_t get_EVT_CMD_EXECED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4846,8 +4553,7 @@ jsvalue_t get_EVT_CMD_EXECED(
 }
 
 jsvalue_t get_EVT_CMD_CAN_EXEC(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4856,8 +4562,7 @@ jsvalue_t get_EVT_CMD_CAN_EXEC(
 }
 
 jsvalue_t get_EVT_ITEMS_WILL_CHANGE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4866,8 +4571,7 @@ jsvalue_t get_EVT_ITEMS_WILL_CHANGE(
 }
 
 jsvalue_t get_EVT_ITEMS_CHANGED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4876,8 +4580,7 @@ jsvalue_t get_EVT_ITEMS_CHANGED(
 }
 
 jsvalue_t get_EVT_PROPS_CHANGED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4886,8 +4589,7 @@ jsvalue_t get_EVT_PROPS_CHANGED(
 }
 
 jsvalue_t get_EVT_PROGRESS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4896,8 +4598,7 @@ jsvalue_t get_EVT_PROGRESS(
 }
 
 jsvalue_t get_EVT_DONE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4906,8 +4607,7 @@ jsvalue_t get_EVT_DONE(
 }
 
 jsvalue_t get_EVT_ERROR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -4916,8 +4616,7 @@ jsvalue_t get_EVT_ERROR(
 }
 
 jsvalue_t get_EVT_DESTROY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5032,8 +4731,7 @@ ret_t event_type_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_font_manager_unload_font(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5053,8 +4751,7 @@ jsvalue_t wrap_font_manager_unload_font(
 }
 
 jsvalue_t wrap_font_manager_shrink_cache(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5072,8 +4769,7 @@ jsvalue_t wrap_font_manager_shrink_cache(
 }
 
 jsvalue_t wrap_font_manager_unload_all(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5098,8 +4794,7 @@ ret_t font_manager_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_GLYPH_FMT_ALPHA(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5108,8 +4803,7 @@ jsvalue_t get_GLYPH_FMT_ALPHA(
 }
 
 jsvalue_t get_GLYPH_FMT_MONO(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5118,8 +4812,7 @@ jsvalue_t get_GLYPH_FMT_MONO(
 }
 
 jsvalue_t get_GLYPH_FMT_RGBA(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5136,8 +4829,7 @@ ret_t glyph_format_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_idle_remove(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5154,8 +4846,7 @@ jsvalue_t wrap_idle_remove(
 }
 
 jsvalue_t wrap_idle_remove_all_by_ctx(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5180,8 +4871,7 @@ ret_t idle_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_image_manager(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5197,8 +4887,7 @@ jsvalue_t wrap_image_manager(
 }
 
 jsvalue_t wrap_image_manager_get_bitmap(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5218,8 +4907,7 @@ jsvalue_t wrap_image_manager_get_bitmap(
 }
 
 jsvalue_t wrap_image_manager_preload(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5246,8 +4934,7 @@ ret_t image_manager_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_INPUT_TEXT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5256,8 +4943,7 @@ jsvalue_t get_INPUT_TEXT(
 }
 
 jsvalue_t get_INPUT_INT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5266,8 +4952,7 @@ jsvalue_t get_INPUT_INT(
 }
 
 jsvalue_t get_INPUT_UINT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5276,8 +4961,7 @@ jsvalue_t get_INPUT_UINT(
 }
 
 jsvalue_t get_INPUT_HEX(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5286,8 +4970,7 @@ jsvalue_t get_INPUT_HEX(
 }
 
 jsvalue_t get_INPUT_FLOAT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5296,8 +4979,7 @@ jsvalue_t get_INPUT_FLOAT(
 }
 
 jsvalue_t get_INPUT_UFLOAT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5306,8 +4988,7 @@ jsvalue_t get_INPUT_UFLOAT(
 }
 
 jsvalue_t get_INPUT_EMAIL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5316,8 +4997,7 @@ jsvalue_t get_INPUT_EMAIL(
 }
 
 jsvalue_t get_INPUT_PASSWORD(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5326,8 +5006,7 @@ jsvalue_t get_INPUT_PASSWORD(
 }
 
 jsvalue_t get_INPUT_PHONE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5336,8 +5015,7 @@ jsvalue_t get_INPUT_PHONE(
 }
 
 jsvalue_t get_INPUT_IPV4(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5346,8 +5024,7 @@ jsvalue_t get_INPUT_IPV4(
 }
 
 jsvalue_t get_INPUT_DATE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5356,8 +5033,7 @@ jsvalue_t get_INPUT_DATE(
 }
 
 jsvalue_t get_INPUT_TIME(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5366,8 +5042,7 @@ jsvalue_t get_INPUT_TIME(
 }
 
 jsvalue_t get_INPUT_TIME_FULL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5376,8 +5051,7 @@ jsvalue_t get_INPUT_TIME_FULL(
 }
 
 jsvalue_t get_INPUT_CUSTOM(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5386,13 +5060,21 @@ jsvalue_t get_INPUT_CUSTOM(
 }
 
 jsvalue_t get_INPUT_CUSTOM_PASSWORD(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
   void* ctx = NULL;
   return jsvalue_create_int(ctx, INPUT_CUSTOM_PASSWORD);
+}
+
+jsvalue_t get_INPUT_ASCII(
+    const jerry_call_info_t *call_info_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  return jsvalue_create_int(ctx, INPUT_ASCII);
 }
 
 ret_t input_type_t_init(JSContext *ctx) {
@@ -5411,13 +5093,13 @@ ret_t input_type_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"INPUT_TIME_FULL", get_INPUT_TIME_FULL);
   jerryx_handler_register_global((const jerry_char_t*)"INPUT_CUSTOM", get_INPUT_CUSTOM);
   jerryx_handler_register_global((const jerry_char_t*)"INPUT_CUSTOM_PASSWORD", get_INPUT_CUSTOM_PASSWORD);
+  jerryx_handler_register_global((const jerry_char_t*)"INPUT_ASCII", get_INPUT_ASCII);
 
  return RET_OK;
 }
 
 jsvalue_t wrap_input_method_commit_text(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5436,8 +5118,7 @@ jsvalue_t wrap_input_method_commit_text(
 }
 
 jsvalue_t wrap_input_method_set_lang(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5456,8 +5137,7 @@ jsvalue_t wrap_input_method_set_lang(
 }
 
 jsvalue_t wrap_input_method_get_lang(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5474,8 +5154,7 @@ jsvalue_t wrap_input_method_get_lang(
 }
 
 jsvalue_t wrap_input_method_dispatch_key(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5493,8 +5172,7 @@ jsvalue_t wrap_input_method_dispatch_key(
 }
 
 jsvalue_t wrap_input_method_dispatch_keys(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5513,8 +5191,7 @@ jsvalue_t wrap_input_method_dispatch_keys(
 }
 
 jsvalue_t wrap_input_method_dispatch_preedit(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5531,8 +5208,7 @@ jsvalue_t wrap_input_method_dispatch_preedit(
 }
 
 jsvalue_t wrap_input_method_dispatch_preedit_confirm(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5549,8 +5225,7 @@ jsvalue_t wrap_input_method_dispatch_preedit_confirm(
 }
 
 jsvalue_t wrap_input_method_dispatch_preedit_abort(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5567,8 +5242,7 @@ jsvalue_t wrap_input_method_dispatch_preedit_abort(
 }
 
 jsvalue_t wrap_input_method(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5598,8 +5272,7 @@ ret_t input_method_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_TK_KEY_RETURN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5608,8 +5281,7 @@ jsvalue_t get_TK_KEY_RETURN(
 }
 
 jsvalue_t get_TK_KEY_ESCAPE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5618,8 +5290,7 @@ jsvalue_t get_TK_KEY_ESCAPE(
 }
 
 jsvalue_t get_TK_KEY_BACKSPACE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5628,8 +5299,7 @@ jsvalue_t get_TK_KEY_BACKSPACE(
 }
 
 jsvalue_t get_TK_KEY_TAB(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5638,8 +5308,7 @@ jsvalue_t get_TK_KEY_TAB(
 }
 
 jsvalue_t get_TK_KEY_SPACE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5648,8 +5317,7 @@ jsvalue_t get_TK_KEY_SPACE(
 }
 
 jsvalue_t get_TK_KEY_EXCLAIM(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5658,8 +5326,7 @@ jsvalue_t get_TK_KEY_EXCLAIM(
 }
 
 jsvalue_t get_TK_KEY_QUOTEDBL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5668,8 +5335,7 @@ jsvalue_t get_TK_KEY_QUOTEDBL(
 }
 
 jsvalue_t get_TK_KEY_HASH(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5678,8 +5344,7 @@ jsvalue_t get_TK_KEY_HASH(
 }
 
 jsvalue_t get_TK_KEY_PERCENT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5688,8 +5353,7 @@ jsvalue_t get_TK_KEY_PERCENT(
 }
 
 jsvalue_t get_TK_KEY_DOLLAR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5698,8 +5362,7 @@ jsvalue_t get_TK_KEY_DOLLAR(
 }
 
 jsvalue_t get_TK_KEY_AMPERSAND(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5708,8 +5371,7 @@ jsvalue_t get_TK_KEY_AMPERSAND(
 }
 
 jsvalue_t get_TK_KEY_QUOTE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5718,8 +5380,7 @@ jsvalue_t get_TK_KEY_QUOTE(
 }
 
 jsvalue_t get_TK_KEY_LEFTPAREN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5728,8 +5389,7 @@ jsvalue_t get_TK_KEY_LEFTPAREN(
 }
 
 jsvalue_t get_TK_KEY_RIGHTPAREN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5738,8 +5398,7 @@ jsvalue_t get_TK_KEY_RIGHTPAREN(
 }
 
 jsvalue_t get_TK_KEY_ASTERISK(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5748,8 +5407,7 @@ jsvalue_t get_TK_KEY_ASTERISK(
 }
 
 jsvalue_t get_TK_KEY_PLUS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5758,8 +5416,7 @@ jsvalue_t get_TK_KEY_PLUS(
 }
 
 jsvalue_t get_TK_KEY_COMMA(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5768,8 +5425,7 @@ jsvalue_t get_TK_KEY_COMMA(
 }
 
 jsvalue_t get_TK_KEY_MINUS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5778,8 +5434,7 @@ jsvalue_t get_TK_KEY_MINUS(
 }
 
 jsvalue_t get_TK_KEY_PERIOD(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5788,8 +5443,7 @@ jsvalue_t get_TK_KEY_PERIOD(
 }
 
 jsvalue_t get_TK_KEY_SLASH(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5798,8 +5452,7 @@ jsvalue_t get_TK_KEY_SLASH(
 }
 
 jsvalue_t get_TK_KEY_0(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5808,8 +5461,7 @@ jsvalue_t get_TK_KEY_0(
 }
 
 jsvalue_t get_TK_KEY_1(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5818,8 +5470,7 @@ jsvalue_t get_TK_KEY_1(
 }
 
 jsvalue_t get_TK_KEY_2(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5828,8 +5479,7 @@ jsvalue_t get_TK_KEY_2(
 }
 
 jsvalue_t get_TK_KEY_3(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5838,8 +5488,7 @@ jsvalue_t get_TK_KEY_3(
 }
 
 jsvalue_t get_TK_KEY_4(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5848,8 +5497,7 @@ jsvalue_t get_TK_KEY_4(
 }
 
 jsvalue_t get_TK_KEY_5(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5858,8 +5506,7 @@ jsvalue_t get_TK_KEY_5(
 }
 
 jsvalue_t get_TK_KEY_6(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5868,8 +5515,7 @@ jsvalue_t get_TK_KEY_6(
 }
 
 jsvalue_t get_TK_KEY_7(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5878,8 +5524,7 @@ jsvalue_t get_TK_KEY_7(
 }
 
 jsvalue_t get_TK_KEY_8(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5888,8 +5533,7 @@ jsvalue_t get_TK_KEY_8(
 }
 
 jsvalue_t get_TK_KEY_9(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5898,8 +5542,7 @@ jsvalue_t get_TK_KEY_9(
 }
 
 jsvalue_t get_TK_KEY_COLON(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5908,8 +5551,7 @@ jsvalue_t get_TK_KEY_COLON(
 }
 
 jsvalue_t get_TK_KEY_SEMICOLON(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5918,8 +5560,7 @@ jsvalue_t get_TK_KEY_SEMICOLON(
 }
 
 jsvalue_t get_TK_KEY_LESS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5928,8 +5569,7 @@ jsvalue_t get_TK_KEY_LESS(
 }
 
 jsvalue_t get_TK_KEY_EQUAL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5938,8 +5578,7 @@ jsvalue_t get_TK_KEY_EQUAL(
 }
 
 jsvalue_t get_TK_KEY_GREATER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5948,8 +5587,7 @@ jsvalue_t get_TK_KEY_GREATER(
 }
 
 jsvalue_t get_TK_KEY_QUESTION(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5958,8 +5596,7 @@ jsvalue_t get_TK_KEY_QUESTION(
 }
 
 jsvalue_t get_TK_KEY_AT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5968,8 +5605,7 @@ jsvalue_t get_TK_KEY_AT(
 }
 
 jsvalue_t get_TK_KEY_LEFTBRACKET(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5978,8 +5614,7 @@ jsvalue_t get_TK_KEY_LEFTBRACKET(
 }
 
 jsvalue_t get_TK_KEY_BACKSLASH(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5988,8 +5623,7 @@ jsvalue_t get_TK_KEY_BACKSLASH(
 }
 
 jsvalue_t get_TK_KEY_RIGHTBRACKET(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -5998,8 +5632,7 @@ jsvalue_t get_TK_KEY_RIGHTBRACKET(
 }
 
 jsvalue_t get_TK_KEY_CARET(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6008,8 +5641,7 @@ jsvalue_t get_TK_KEY_CARET(
 }
 
 jsvalue_t get_TK_KEY_UNDERSCORE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6018,8 +5650,7 @@ jsvalue_t get_TK_KEY_UNDERSCORE(
 }
 
 jsvalue_t get_TK_KEY_BACKQUOTE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6028,8 +5659,7 @@ jsvalue_t get_TK_KEY_BACKQUOTE(
 }
 
 jsvalue_t get_TK_KEY_a(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6038,8 +5668,7 @@ jsvalue_t get_TK_KEY_a(
 }
 
 jsvalue_t get_TK_KEY_b(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6048,8 +5677,7 @@ jsvalue_t get_TK_KEY_b(
 }
 
 jsvalue_t get_TK_KEY_c(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6058,8 +5686,7 @@ jsvalue_t get_TK_KEY_c(
 }
 
 jsvalue_t get_TK_KEY_d(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6068,8 +5695,7 @@ jsvalue_t get_TK_KEY_d(
 }
 
 jsvalue_t get_TK_KEY_e(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6078,8 +5704,7 @@ jsvalue_t get_TK_KEY_e(
 }
 
 jsvalue_t get_TK_KEY_f(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6088,8 +5713,7 @@ jsvalue_t get_TK_KEY_f(
 }
 
 jsvalue_t get_TK_KEY_g(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6098,8 +5722,7 @@ jsvalue_t get_TK_KEY_g(
 }
 
 jsvalue_t get_TK_KEY_h(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6108,8 +5731,7 @@ jsvalue_t get_TK_KEY_h(
 }
 
 jsvalue_t get_TK_KEY_i(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6118,8 +5740,7 @@ jsvalue_t get_TK_KEY_i(
 }
 
 jsvalue_t get_TK_KEY_j(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6128,8 +5749,7 @@ jsvalue_t get_TK_KEY_j(
 }
 
 jsvalue_t get_TK_KEY_k(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6138,8 +5758,7 @@ jsvalue_t get_TK_KEY_k(
 }
 
 jsvalue_t get_TK_KEY_l(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6148,8 +5767,7 @@ jsvalue_t get_TK_KEY_l(
 }
 
 jsvalue_t get_TK_KEY_m(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6158,8 +5776,7 @@ jsvalue_t get_TK_KEY_m(
 }
 
 jsvalue_t get_TK_KEY_n(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6168,8 +5785,7 @@ jsvalue_t get_TK_KEY_n(
 }
 
 jsvalue_t get_TK_KEY_o(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6178,8 +5794,7 @@ jsvalue_t get_TK_KEY_o(
 }
 
 jsvalue_t get_TK_KEY_p(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6188,8 +5803,7 @@ jsvalue_t get_TK_KEY_p(
 }
 
 jsvalue_t get_TK_KEY_q(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6198,8 +5812,7 @@ jsvalue_t get_TK_KEY_q(
 }
 
 jsvalue_t get_TK_KEY_r(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6208,8 +5821,7 @@ jsvalue_t get_TK_KEY_r(
 }
 
 jsvalue_t get_TK_KEY_s(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6218,8 +5830,7 @@ jsvalue_t get_TK_KEY_s(
 }
 
 jsvalue_t get_TK_KEY_t(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6228,8 +5839,7 @@ jsvalue_t get_TK_KEY_t(
 }
 
 jsvalue_t get_TK_KEY_u(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6238,8 +5848,7 @@ jsvalue_t get_TK_KEY_u(
 }
 
 jsvalue_t get_TK_KEY_v(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6248,8 +5857,7 @@ jsvalue_t get_TK_KEY_v(
 }
 
 jsvalue_t get_TK_KEY_w(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6258,8 +5866,7 @@ jsvalue_t get_TK_KEY_w(
 }
 
 jsvalue_t get_TK_KEY_x(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6268,8 +5875,7 @@ jsvalue_t get_TK_KEY_x(
 }
 
 jsvalue_t get_TK_KEY_y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6278,8 +5884,7 @@ jsvalue_t get_TK_KEY_y(
 }
 
 jsvalue_t get_TK_KEY_z(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6288,8 +5893,7 @@ jsvalue_t get_TK_KEY_z(
 }
 
 jsvalue_t get_TK_KEY_A(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6298,8 +5902,7 @@ jsvalue_t get_TK_KEY_A(
 }
 
 jsvalue_t get_TK_KEY_B(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6308,8 +5911,7 @@ jsvalue_t get_TK_KEY_B(
 }
 
 jsvalue_t get_TK_KEY_C(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6318,8 +5920,7 @@ jsvalue_t get_TK_KEY_C(
 }
 
 jsvalue_t get_TK_KEY_D(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6328,8 +5929,7 @@ jsvalue_t get_TK_KEY_D(
 }
 
 jsvalue_t get_TK_KEY_E(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6338,8 +5938,7 @@ jsvalue_t get_TK_KEY_E(
 }
 
 jsvalue_t get_TK_KEY_F(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6348,8 +5947,7 @@ jsvalue_t get_TK_KEY_F(
 }
 
 jsvalue_t get_TK_KEY_G(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6358,8 +5956,7 @@ jsvalue_t get_TK_KEY_G(
 }
 
 jsvalue_t get_TK_KEY_H(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6368,8 +5965,7 @@ jsvalue_t get_TK_KEY_H(
 }
 
 jsvalue_t get_TK_KEY_I(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6378,8 +5974,7 @@ jsvalue_t get_TK_KEY_I(
 }
 
 jsvalue_t get_TK_KEY_J(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6388,8 +5983,7 @@ jsvalue_t get_TK_KEY_J(
 }
 
 jsvalue_t get_TK_KEY_K(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6398,8 +5992,7 @@ jsvalue_t get_TK_KEY_K(
 }
 
 jsvalue_t get_TK_KEY_L(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6408,8 +6001,7 @@ jsvalue_t get_TK_KEY_L(
 }
 
 jsvalue_t get_TK_KEY_M(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6418,8 +6010,7 @@ jsvalue_t get_TK_KEY_M(
 }
 
 jsvalue_t get_TK_KEY_N(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6428,8 +6019,7 @@ jsvalue_t get_TK_KEY_N(
 }
 
 jsvalue_t get_TK_KEY_O(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6438,8 +6028,7 @@ jsvalue_t get_TK_KEY_O(
 }
 
 jsvalue_t get_TK_KEY_P(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6448,8 +6037,7 @@ jsvalue_t get_TK_KEY_P(
 }
 
 jsvalue_t get_TK_KEY_Q(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6458,8 +6046,7 @@ jsvalue_t get_TK_KEY_Q(
 }
 
 jsvalue_t get_TK_KEY_R(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6468,8 +6055,7 @@ jsvalue_t get_TK_KEY_R(
 }
 
 jsvalue_t get_TK_KEY_S(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6478,8 +6064,7 @@ jsvalue_t get_TK_KEY_S(
 }
 
 jsvalue_t get_TK_KEY_T(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6488,8 +6073,7 @@ jsvalue_t get_TK_KEY_T(
 }
 
 jsvalue_t get_TK_KEY_U(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6498,8 +6082,7 @@ jsvalue_t get_TK_KEY_U(
 }
 
 jsvalue_t get_TK_KEY_V(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6508,8 +6091,7 @@ jsvalue_t get_TK_KEY_V(
 }
 
 jsvalue_t get_TK_KEY_W(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6518,8 +6100,7 @@ jsvalue_t get_TK_KEY_W(
 }
 
 jsvalue_t get_TK_KEY_X(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6528,8 +6109,7 @@ jsvalue_t get_TK_KEY_X(
 }
 
 jsvalue_t get_TK_KEY_Y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6538,8 +6118,7 @@ jsvalue_t get_TK_KEY_Y(
 }
 
 jsvalue_t get_TK_KEY_Z(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6548,8 +6127,7 @@ jsvalue_t get_TK_KEY_Z(
 }
 
 jsvalue_t get_TK_KEY_DOT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6558,8 +6136,7 @@ jsvalue_t get_TK_KEY_DOT(
 }
 
 jsvalue_t get_TK_KEY_DELETE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6568,8 +6145,7 @@ jsvalue_t get_TK_KEY_DELETE(
 }
 
 jsvalue_t get_TK_KEY_LEFTBRACE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6578,8 +6154,7 @@ jsvalue_t get_TK_KEY_LEFTBRACE(
 }
 
 jsvalue_t get_TK_KEY_RIGHTBRACE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6588,8 +6163,7 @@ jsvalue_t get_TK_KEY_RIGHTBRACE(
 }
 
 jsvalue_t get_TK_KEY_LSHIFT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6598,8 +6172,7 @@ jsvalue_t get_TK_KEY_LSHIFT(
 }
 
 jsvalue_t get_TK_KEY_RSHIFT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6608,8 +6181,7 @@ jsvalue_t get_TK_KEY_RSHIFT(
 }
 
 jsvalue_t get_TK_KEY_LCTRL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6618,8 +6190,7 @@ jsvalue_t get_TK_KEY_LCTRL(
 }
 
 jsvalue_t get_TK_KEY_RCTRL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6628,8 +6199,7 @@ jsvalue_t get_TK_KEY_RCTRL(
 }
 
 jsvalue_t get_TK_KEY_LALT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6638,8 +6208,7 @@ jsvalue_t get_TK_KEY_LALT(
 }
 
 jsvalue_t get_TK_KEY_RALT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6648,8 +6217,7 @@ jsvalue_t get_TK_KEY_RALT(
 }
 
 jsvalue_t get_TK_KEY_CAPSLOCK(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6658,8 +6226,7 @@ jsvalue_t get_TK_KEY_CAPSLOCK(
 }
 
 jsvalue_t get_TK_KEY_HOME(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6668,8 +6235,7 @@ jsvalue_t get_TK_KEY_HOME(
 }
 
 jsvalue_t get_TK_KEY_END(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6678,8 +6244,7 @@ jsvalue_t get_TK_KEY_END(
 }
 
 jsvalue_t get_TK_KEY_INSERT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6688,8 +6253,7 @@ jsvalue_t get_TK_KEY_INSERT(
 }
 
 jsvalue_t get_TK_KEY_UP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6698,8 +6262,7 @@ jsvalue_t get_TK_KEY_UP(
 }
 
 jsvalue_t get_TK_KEY_DOWN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6708,8 +6271,7 @@ jsvalue_t get_TK_KEY_DOWN(
 }
 
 jsvalue_t get_TK_KEY_LEFT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6718,8 +6280,7 @@ jsvalue_t get_TK_KEY_LEFT(
 }
 
 jsvalue_t get_TK_KEY_RIGHT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6728,8 +6289,7 @@ jsvalue_t get_TK_KEY_RIGHT(
 }
 
 jsvalue_t get_TK_KEY_PAGEUP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6738,8 +6298,7 @@ jsvalue_t get_TK_KEY_PAGEUP(
 }
 
 jsvalue_t get_TK_KEY_PAGEDOWN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6748,8 +6307,7 @@ jsvalue_t get_TK_KEY_PAGEDOWN(
 }
 
 jsvalue_t get_TK_KEY_F1(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6758,8 +6316,7 @@ jsvalue_t get_TK_KEY_F1(
 }
 
 jsvalue_t get_TK_KEY_F2(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6768,8 +6325,7 @@ jsvalue_t get_TK_KEY_F2(
 }
 
 jsvalue_t get_TK_KEY_F3(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6778,8 +6334,7 @@ jsvalue_t get_TK_KEY_F3(
 }
 
 jsvalue_t get_TK_KEY_F4(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6788,8 +6343,7 @@ jsvalue_t get_TK_KEY_F4(
 }
 
 jsvalue_t get_TK_KEY_F5(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6798,8 +6352,7 @@ jsvalue_t get_TK_KEY_F5(
 }
 
 jsvalue_t get_TK_KEY_F6(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6808,8 +6361,7 @@ jsvalue_t get_TK_KEY_F6(
 }
 
 jsvalue_t get_TK_KEY_F7(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6818,8 +6370,7 @@ jsvalue_t get_TK_KEY_F7(
 }
 
 jsvalue_t get_TK_KEY_F8(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6828,8 +6379,7 @@ jsvalue_t get_TK_KEY_F8(
 }
 
 jsvalue_t get_TK_KEY_F9(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6838,8 +6388,7 @@ jsvalue_t get_TK_KEY_F9(
 }
 
 jsvalue_t get_TK_KEY_F10(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6848,8 +6397,7 @@ jsvalue_t get_TK_KEY_F10(
 }
 
 jsvalue_t get_TK_KEY_F11(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6858,8 +6406,7 @@ jsvalue_t get_TK_KEY_F11(
 }
 
 jsvalue_t get_TK_KEY_F12(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6868,8 +6415,7 @@ jsvalue_t get_TK_KEY_F12(
 }
 
 jsvalue_t get_TK_KEY_MENU(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6878,8 +6424,7 @@ jsvalue_t get_TK_KEY_MENU(
 }
 
 jsvalue_t get_TK_KEY_COMMAND(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6888,8 +6433,7 @@ jsvalue_t get_TK_KEY_COMMAND(
 }
 
 jsvalue_t get_TK_KEY_BACK(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -6898,13 +6442,21 @@ jsvalue_t get_TK_KEY_BACK(
 }
 
 jsvalue_t get_TK_KEY_CANCEL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
   void* ctx = NULL;
   return jsvalue_create_int(ctx, TK_KEY_CANCEL);
+}
+
+jsvalue_t get_TK_KEY_WHEEL(
+    const jerry_call_info_t *call_info_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  return jsvalue_create_int(ctx, TK_KEY_WHEEL);
 }
 
 ret_t key_code_t_init(JSContext *ctx) {
@@ -7039,13 +6591,13 @@ ret_t key_code_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_COMMAND", get_TK_KEY_COMMAND);
   jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_BACK", get_TK_KEY_BACK);
   jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_CANCEL", get_TK_KEY_CANCEL);
+  jerryx_handler_register_global((const jerry_char_t*)"TK_KEY_WHEEL", get_TK_KEY_WHEEL);
 
  return RET_OK;
 }
 
 jsvalue_t wrap_locale_info(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7061,8 +6613,7 @@ jsvalue_t wrap_locale_info(
 }
 
 jsvalue_t wrap_locale_info_tr(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7081,8 +6632,7 @@ jsvalue_t wrap_locale_info_tr(
 }
 
 jsvalue_t wrap_locale_info_change(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7103,8 +6653,7 @@ jsvalue_t wrap_locale_info_change(
 }
 
 jsvalue_t wrap_locale_info_off(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7131,8 +6680,7 @@ ret_t locale_info_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_STYLE_ID_BG_COLOR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7141,8 +6689,7 @@ jsvalue_t get_STYLE_ID_BG_COLOR(
 }
 
 jsvalue_t get_STYLE_ID_FG_COLOR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7151,8 +6698,7 @@ jsvalue_t get_STYLE_ID_FG_COLOR(
 }
 
 jsvalue_t get_STYLE_ID_MASK_COLOR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7161,8 +6707,7 @@ jsvalue_t get_STYLE_ID_MASK_COLOR(
 }
 
 jsvalue_t get_STYLE_ID_FONT_NAME(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7171,8 +6716,7 @@ jsvalue_t get_STYLE_ID_FONT_NAME(
 }
 
 jsvalue_t get_STYLE_ID_FONT_SIZE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7181,8 +6725,7 @@ jsvalue_t get_STYLE_ID_FONT_SIZE(
 }
 
 jsvalue_t get_STYLE_ID_FONT_STYLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7191,8 +6734,7 @@ jsvalue_t get_STYLE_ID_FONT_STYLE(
 }
 
 jsvalue_t get_STYLE_ID_TEXT_COLOR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7201,8 +6743,7 @@ jsvalue_t get_STYLE_ID_TEXT_COLOR(
 }
 
 jsvalue_t get_STYLE_ID_HIGHLIGHT_FONT_NAME(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7211,8 +6752,7 @@ jsvalue_t get_STYLE_ID_HIGHLIGHT_FONT_NAME(
 }
 
 jsvalue_t get_STYLE_ID_HIGHLIGHT_FONT_SIZE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7221,8 +6761,7 @@ jsvalue_t get_STYLE_ID_HIGHLIGHT_FONT_SIZE(
 }
 
 jsvalue_t get_STYLE_ID_HIGHLIGHT_TEXT_COLOR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7231,8 +6770,7 @@ jsvalue_t get_STYLE_ID_HIGHLIGHT_TEXT_COLOR(
 }
 
 jsvalue_t get_STYLE_ID_TIPS_TEXT_COLOR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7241,8 +6779,7 @@ jsvalue_t get_STYLE_ID_TIPS_TEXT_COLOR(
 }
 
 jsvalue_t get_STYLE_ID_TEXT_ALIGN_H(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7251,8 +6788,7 @@ jsvalue_t get_STYLE_ID_TEXT_ALIGN_H(
 }
 
 jsvalue_t get_STYLE_ID_TEXT_ALIGN_V(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7261,8 +6797,7 @@ jsvalue_t get_STYLE_ID_TEXT_ALIGN_V(
 }
 
 jsvalue_t get_STYLE_ID_BORDER_COLOR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7271,8 +6806,7 @@ jsvalue_t get_STYLE_ID_BORDER_COLOR(
 }
 
 jsvalue_t get_STYLE_ID_BORDER_WIDTH(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7281,8 +6815,7 @@ jsvalue_t get_STYLE_ID_BORDER_WIDTH(
 }
 
 jsvalue_t get_STYLE_ID_BORDER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7291,8 +6824,7 @@ jsvalue_t get_STYLE_ID_BORDER(
 }
 
 jsvalue_t get_STYLE_ID_BG_IMAGE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7301,8 +6833,7 @@ jsvalue_t get_STYLE_ID_BG_IMAGE(
 }
 
 jsvalue_t get_STYLE_ID_BG_IMAGE_DRAW_TYPE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7311,8 +6842,7 @@ jsvalue_t get_STYLE_ID_BG_IMAGE_DRAW_TYPE(
 }
 
 jsvalue_t get_STYLE_ID_ICON(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7321,8 +6851,7 @@ jsvalue_t get_STYLE_ID_ICON(
 }
 
 jsvalue_t get_STYLE_ID_FG_IMAGE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7331,8 +6860,7 @@ jsvalue_t get_STYLE_ID_FG_IMAGE(
 }
 
 jsvalue_t get_STYLE_ID_FG_IMAGE_DRAW_TYPE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7341,8 +6869,7 @@ jsvalue_t get_STYLE_ID_FG_IMAGE_DRAW_TYPE(
 }
 
 jsvalue_t get_STYLE_ID_SPACER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7351,8 +6878,7 @@ jsvalue_t get_STYLE_ID_SPACER(
 }
 
 jsvalue_t get_STYLE_ID_MARGIN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7361,8 +6887,7 @@ jsvalue_t get_STYLE_ID_MARGIN(
 }
 
 jsvalue_t get_STYLE_ID_MARGIN_LEFT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7371,8 +6896,7 @@ jsvalue_t get_STYLE_ID_MARGIN_LEFT(
 }
 
 jsvalue_t get_STYLE_ID_MARGIN_RIGHT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7381,8 +6905,7 @@ jsvalue_t get_STYLE_ID_MARGIN_RIGHT(
 }
 
 jsvalue_t get_STYLE_ID_MARGIN_TOP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7391,8 +6914,7 @@ jsvalue_t get_STYLE_ID_MARGIN_TOP(
 }
 
 jsvalue_t get_STYLE_ID_MARGIN_BOTTOM(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7401,8 +6923,7 @@ jsvalue_t get_STYLE_ID_MARGIN_BOTTOM(
 }
 
 jsvalue_t get_STYLE_ID_ICON_AT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7411,8 +6932,7 @@ jsvalue_t get_STYLE_ID_ICON_AT(
 }
 
 jsvalue_t get_STYLE_ID_ACTIVE_ICON(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7421,8 +6941,7 @@ jsvalue_t get_STYLE_ID_ACTIVE_ICON(
 }
 
 jsvalue_t get_STYLE_ID_X_OFFSET(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7431,8 +6950,7 @@ jsvalue_t get_STYLE_ID_X_OFFSET(
 }
 
 jsvalue_t get_STYLE_ID_Y_OFFSET(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7441,8 +6959,7 @@ jsvalue_t get_STYLE_ID_Y_OFFSET(
 }
 
 jsvalue_t get_STYLE_ID_SELECTED_BG_COLOR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7451,8 +6968,7 @@ jsvalue_t get_STYLE_ID_SELECTED_BG_COLOR(
 }
 
 jsvalue_t get_STYLE_ID_SELECTED_FG_COLOR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7461,8 +6977,7 @@ jsvalue_t get_STYLE_ID_SELECTED_FG_COLOR(
 }
 
 jsvalue_t get_STYLE_ID_SELECTED_TEXT_COLOR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7471,8 +6986,7 @@ jsvalue_t get_STYLE_ID_SELECTED_TEXT_COLOR(
 }
 
 jsvalue_t get_STYLE_ID_ROUND_RADIUS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7481,8 +6995,7 @@ jsvalue_t get_STYLE_ID_ROUND_RADIUS(
 }
 
 jsvalue_t get_STYLE_ID_ROUND_RADIUS_TOP_LETF(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7491,8 +7004,7 @@ jsvalue_t get_STYLE_ID_ROUND_RADIUS_TOP_LETF(
 }
 
 jsvalue_t get_STYLE_ID_ROUND_RADIUS_TOP_RIGHT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7501,8 +7013,7 @@ jsvalue_t get_STYLE_ID_ROUND_RADIUS_TOP_RIGHT(
 }
 
 jsvalue_t get_STYLE_ID_ROUND_RADIUS_BOTTOM_LETF(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7511,8 +7022,7 @@ jsvalue_t get_STYLE_ID_ROUND_RADIUS_BOTTOM_LETF(
 }
 
 jsvalue_t get_STYLE_ID_ROUND_RADIUS_BOTTOM_RIGHT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7521,8 +7031,7 @@ jsvalue_t get_STYLE_ID_ROUND_RADIUS_BOTTOM_RIGHT(
 }
 
 jsvalue_t get_STYLE_ID_CHILDREN_LAYOUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7531,8 +7040,7 @@ jsvalue_t get_STYLE_ID_CHILDREN_LAYOUT(
 }
 
 jsvalue_t get_STYLE_ID_SELF_LAYOUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7587,8 +7095,7 @@ ret_t style_id_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_style_notify_widget_state_changed(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7606,8 +7113,7 @@ jsvalue_t wrap_style_notify_widget_state_changed(
 }
 
 jsvalue_t wrap_style_is_valid(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7624,8 +7130,7 @@ jsvalue_t wrap_style_is_valid(
 }
 
 jsvalue_t wrap_style_get_int(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7645,8 +7150,7 @@ jsvalue_t wrap_style_get_int(
 }
 
 jsvalue_t wrap_style_get_uint(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7666,8 +7170,7 @@ jsvalue_t wrap_style_get_uint(
 }
 
 jsvalue_t wrap_style_get_str(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7688,8 +7191,7 @@ jsvalue_t wrap_style_get_str(
 }
 
 jsvalue_t wrap_style_set(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7711,8 +7213,7 @@ jsvalue_t wrap_style_set(
 }
 
 jsvalue_t wrap_style_set_style_data(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7732,8 +7233,7 @@ jsvalue_t wrap_style_set_style_data(
 }
 
 jsvalue_t wrap_style_update_state(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7757,8 +7257,7 @@ jsvalue_t wrap_style_update_state(
 }
 
 jsvalue_t wrap_style_get_style_state(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7775,8 +7274,7 @@ jsvalue_t wrap_style_get_style_state(
 }
 
 jsvalue_t wrap_style_is_mutable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7793,8 +7291,7 @@ jsvalue_t wrap_style_is_mutable(
 }
 
 jsvalue_t wrap_style_get_style_type(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7827,8 +7324,7 @@ ret_t style_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_theme(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7850,8 +7346,7 @@ ret_t theme_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_timer_remove(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7868,8 +7363,7 @@ jsvalue_t wrap_timer_remove(
 }
 
 jsvalue_t wrap_timer_remove_all_by_ctx(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7886,8 +7380,7 @@ jsvalue_t wrap_timer_remove_all_by_ctx(
 }
 
 jsvalue_t wrap_timer_reset(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7904,8 +7397,7 @@ jsvalue_t wrap_timer_reset(
 }
 
 jsvalue_t wrap_timer_suspend(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7922,8 +7414,7 @@ jsvalue_t wrap_timer_suspend(
 }
 
 jsvalue_t wrap_timer_resume(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7940,8 +7431,7 @@ jsvalue_t wrap_timer_resume(
 }
 
 jsvalue_t wrap_timer_modify(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7971,8 +7461,7 @@ ret_t timer_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_ALIGN_V_NONE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7981,8 +7470,7 @@ jsvalue_t get_ALIGN_V_NONE(
 }
 
 jsvalue_t get_ALIGN_V_MIDDLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -7991,8 +7479,7 @@ jsvalue_t get_ALIGN_V_MIDDLE(
 }
 
 jsvalue_t get_ALIGN_V_TOP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8001,8 +7488,7 @@ jsvalue_t get_ALIGN_V_TOP(
 }
 
 jsvalue_t get_ALIGN_V_BOTTOM(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8020,8 +7506,7 @@ ret_t align_v_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_ALIGN_H_NONE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8030,8 +7515,7 @@ jsvalue_t get_ALIGN_H_NONE(
 }
 
 jsvalue_t get_ALIGN_H_CENTER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8040,8 +7524,7 @@ jsvalue_t get_ALIGN_H_CENTER(
 }
 
 jsvalue_t get_ALIGN_H_LEFT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8050,8 +7533,7 @@ jsvalue_t get_ALIGN_H_LEFT(
 }
 
 jsvalue_t get_ALIGN_H_RIGHT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8069,8 +7551,7 @@ ret_t align_h_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_APP_MOBILE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8079,8 +7560,7 @@ jsvalue_t get_APP_MOBILE(
 }
 
 jsvalue_t get_APP_SIMULATOR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8089,8 +7569,7 @@ jsvalue_t get_APP_SIMULATOR(
 }
 
 jsvalue_t get_APP_DESKTOP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8107,8 +7586,7 @@ ret_t app_type_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_BITMAP_FMT_NONE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8117,8 +7595,7 @@ jsvalue_t get_BITMAP_FMT_NONE(
 }
 
 jsvalue_t get_BITMAP_FMT_RGBA8888(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8127,8 +7604,7 @@ jsvalue_t get_BITMAP_FMT_RGBA8888(
 }
 
 jsvalue_t get_BITMAP_FMT_ABGR8888(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8137,8 +7613,7 @@ jsvalue_t get_BITMAP_FMT_ABGR8888(
 }
 
 jsvalue_t get_BITMAP_FMT_BGRA8888(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8147,8 +7622,7 @@ jsvalue_t get_BITMAP_FMT_BGRA8888(
 }
 
 jsvalue_t get_BITMAP_FMT_ARGB8888(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8157,8 +7631,7 @@ jsvalue_t get_BITMAP_FMT_ARGB8888(
 }
 
 jsvalue_t get_BITMAP_FMT_RGB565(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8167,8 +7640,7 @@ jsvalue_t get_BITMAP_FMT_RGB565(
 }
 
 jsvalue_t get_BITMAP_FMT_BGR565(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8177,8 +7649,7 @@ jsvalue_t get_BITMAP_FMT_BGR565(
 }
 
 jsvalue_t get_BITMAP_FMT_RGB888(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8187,8 +7658,7 @@ jsvalue_t get_BITMAP_FMT_RGB888(
 }
 
 jsvalue_t get_BITMAP_FMT_BGR888(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8197,8 +7667,7 @@ jsvalue_t get_BITMAP_FMT_BGR888(
 }
 
 jsvalue_t get_BITMAP_FMT_GRAY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8207,8 +7676,7 @@ jsvalue_t get_BITMAP_FMT_GRAY(
 }
 
 jsvalue_t get_BITMAP_FMT_MONO(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8233,8 +7701,7 @@ ret_t bitmap_format_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_BITMAP_FLAG_NONE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8243,8 +7710,7 @@ jsvalue_t get_BITMAP_FLAG_NONE(
 }
 
 jsvalue_t get_BITMAP_FLAG_OPAQUE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8253,8 +7719,7 @@ jsvalue_t get_BITMAP_FLAG_OPAQUE(
 }
 
 jsvalue_t get_BITMAP_FLAG_IMMUTABLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8263,8 +7728,7 @@ jsvalue_t get_BITMAP_FLAG_IMMUTABLE(
 }
 
 jsvalue_t get_BITMAP_FLAG_TEXTURE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8273,8 +7737,7 @@ jsvalue_t get_BITMAP_FLAG_TEXTURE(
 }
 
 jsvalue_t get_BITMAP_FLAG_CHANGED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8283,8 +7746,7 @@ jsvalue_t get_BITMAP_FLAG_CHANGED(
 }
 
 jsvalue_t get_BITMAP_FLAG_PREMULTI_ALPHA(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8304,8 +7766,7 @@ ret_t bitmap_flag_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_vgcanvas_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8322,8 +7783,7 @@ jsvalue_t wrap_vgcanvas_cast(
 }
 
 jsvalue_t wrap_vgcanvas_flush(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8340,8 +7800,7 @@ jsvalue_t wrap_vgcanvas_flush(
 }
 
 jsvalue_t wrap_vgcanvas_begin_path(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8358,8 +7817,7 @@ jsvalue_t wrap_vgcanvas_begin_path(
 }
 
 jsvalue_t wrap_vgcanvas_move_to(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8378,8 +7836,7 @@ jsvalue_t wrap_vgcanvas_move_to(
 }
 
 jsvalue_t wrap_vgcanvas_line_to(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8398,8 +7855,7 @@ jsvalue_t wrap_vgcanvas_line_to(
 }
 
 jsvalue_t wrap_vgcanvas_quad_to(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8420,8 +7876,7 @@ jsvalue_t wrap_vgcanvas_quad_to(
 }
 
 jsvalue_t wrap_vgcanvas_bezier_to(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8444,8 +7899,7 @@ jsvalue_t wrap_vgcanvas_bezier_to(
 }
 
 jsvalue_t wrap_vgcanvas_arc_to(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8467,8 +7921,7 @@ jsvalue_t wrap_vgcanvas_arc_to(
 }
 
 jsvalue_t wrap_vgcanvas_arc(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8491,8 +7944,7 @@ jsvalue_t wrap_vgcanvas_arc(
 }
 
 jsvalue_t wrap_vgcanvas_is_point_in_path(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8511,8 +7963,7 @@ jsvalue_t wrap_vgcanvas_is_point_in_path(
 }
 
 jsvalue_t wrap_vgcanvas_rect(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8533,8 +7984,7 @@ jsvalue_t wrap_vgcanvas_rect(
 }
 
 jsvalue_t wrap_vgcanvas_rounded_rect(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8556,8 +8006,7 @@ jsvalue_t wrap_vgcanvas_rounded_rect(
 }
 
 jsvalue_t wrap_vgcanvas_ellipse(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8578,8 +8027,7 @@ jsvalue_t wrap_vgcanvas_ellipse(
 }
 
 jsvalue_t wrap_vgcanvas_close_path(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8596,8 +8044,7 @@ jsvalue_t wrap_vgcanvas_close_path(
 }
 
 jsvalue_t wrap_vgcanvas_path_winding(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8615,8 +8062,7 @@ jsvalue_t wrap_vgcanvas_path_winding(
 }
 
 jsvalue_t wrap_vgcanvas_rotate(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8634,8 +8080,7 @@ jsvalue_t wrap_vgcanvas_rotate(
 }
 
 jsvalue_t wrap_vgcanvas_scale(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8654,8 +8099,7 @@ jsvalue_t wrap_vgcanvas_scale(
 }
 
 jsvalue_t wrap_vgcanvas_translate(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8674,8 +8118,7 @@ jsvalue_t wrap_vgcanvas_translate(
 }
 
 jsvalue_t wrap_vgcanvas_transform(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8698,8 +8141,7 @@ jsvalue_t wrap_vgcanvas_transform(
 }
 
 jsvalue_t wrap_vgcanvas_set_transform(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8722,8 +8164,7 @@ jsvalue_t wrap_vgcanvas_set_transform(
 }
 
 jsvalue_t wrap_vgcanvas_clip_rect(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8744,8 +8185,7 @@ jsvalue_t wrap_vgcanvas_clip_rect(
 }
 
 jsvalue_t wrap_vgcanvas_intersect_clip_rect(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8766,8 +8206,7 @@ jsvalue_t wrap_vgcanvas_intersect_clip_rect(
 }
 
 jsvalue_t wrap_vgcanvas_fill(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8784,8 +8223,7 @@ jsvalue_t wrap_vgcanvas_fill(
 }
 
 jsvalue_t wrap_vgcanvas_stroke(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8802,8 +8240,7 @@ jsvalue_t wrap_vgcanvas_stroke(
 }
 
 jsvalue_t wrap_vgcanvas_paint(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8822,8 +8259,7 @@ jsvalue_t wrap_vgcanvas_paint(
 }
 
 jsvalue_t wrap_vgcanvas_set_font(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8842,8 +8278,7 @@ jsvalue_t wrap_vgcanvas_set_font(
 }
 
 jsvalue_t wrap_vgcanvas_set_font_size(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8861,8 +8296,7 @@ jsvalue_t wrap_vgcanvas_set_font_size(
 }
 
 jsvalue_t wrap_vgcanvas_set_text_align(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8881,8 +8315,7 @@ jsvalue_t wrap_vgcanvas_set_text_align(
 }
 
 jsvalue_t wrap_vgcanvas_set_text_baseline(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8901,8 +8334,7 @@ jsvalue_t wrap_vgcanvas_set_text_baseline(
 }
 
 jsvalue_t wrap_vgcanvas_fill_text(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8924,8 +8356,7 @@ jsvalue_t wrap_vgcanvas_fill_text(
 }
 
 jsvalue_t wrap_vgcanvas_measure_text(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8944,8 +8375,7 @@ jsvalue_t wrap_vgcanvas_measure_text(
 }
 
 jsvalue_t wrap_vgcanvas_draw_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8971,8 +8401,7 @@ jsvalue_t wrap_vgcanvas_draw_image(
 }
 
 jsvalue_t wrap_vgcanvas_draw_icon(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -8998,8 +8427,7 @@ jsvalue_t wrap_vgcanvas_draw_icon(
 }
 
 jsvalue_t wrap_vgcanvas_set_antialias(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9017,8 +8445,7 @@ jsvalue_t wrap_vgcanvas_set_antialias(
 }
 
 jsvalue_t wrap_vgcanvas_set_global_alpha(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9036,8 +8463,7 @@ jsvalue_t wrap_vgcanvas_set_global_alpha(
 }
 
 jsvalue_t wrap_vgcanvas_set_line_width(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9055,8 +8481,7 @@ jsvalue_t wrap_vgcanvas_set_line_width(
 }
 
 jsvalue_t wrap_vgcanvas_set_fill_color_str(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9075,8 +8500,7 @@ jsvalue_t wrap_vgcanvas_set_fill_color_str(
 }
 
 jsvalue_t wrap_vgcanvas_set_stroke_color_str(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9095,8 +8519,7 @@ jsvalue_t wrap_vgcanvas_set_stroke_color_str(
 }
 
 jsvalue_t wrap_vgcanvas_set_line_cap(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9115,8 +8538,7 @@ jsvalue_t wrap_vgcanvas_set_line_cap(
 }
 
 jsvalue_t wrap_vgcanvas_set_line_join(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9135,8 +8557,7 @@ jsvalue_t wrap_vgcanvas_set_line_join(
 }
 
 jsvalue_t wrap_vgcanvas_set_miter_limit(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9154,8 +8575,7 @@ jsvalue_t wrap_vgcanvas_set_miter_limit(
 }
 
 jsvalue_t wrap_vgcanvas_save(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9172,8 +8592,7 @@ jsvalue_t wrap_vgcanvas_save(
 }
 
 jsvalue_t wrap_vgcanvas_restore(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9190,8 +8609,7 @@ jsvalue_t wrap_vgcanvas_restore(
 }
 
 jsvalue_t wrap_vgcanvas_t_get_prop_w(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9204,8 +8622,7 @@ jsvalue_t wrap_vgcanvas_t_get_prop_w(
 }
 
 jsvalue_t wrap_vgcanvas_t_get_prop_h(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9218,8 +8635,7 @@ jsvalue_t wrap_vgcanvas_t_get_prop_h(
 }
 
 jsvalue_t wrap_vgcanvas_t_get_prop_stride(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9232,8 +8648,7 @@ jsvalue_t wrap_vgcanvas_t_get_prop_stride(
 }
 
 jsvalue_t wrap_vgcanvas_t_get_prop_ratio(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9246,8 +8661,7 @@ jsvalue_t wrap_vgcanvas_t_get_prop_ratio(
 }
 
 jsvalue_t wrap_vgcanvas_t_get_prop_anti_alias(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9260,8 +8674,7 @@ jsvalue_t wrap_vgcanvas_t_get_prop_anti_alias(
 }
 
 jsvalue_t wrap_vgcanvas_t_get_prop_line_width(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9274,8 +8687,7 @@ jsvalue_t wrap_vgcanvas_t_get_prop_line_width(
 }
 
 jsvalue_t wrap_vgcanvas_t_get_prop_global_alpha(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9288,8 +8700,7 @@ jsvalue_t wrap_vgcanvas_t_get_prop_global_alpha(
 }
 
 jsvalue_t wrap_vgcanvas_t_get_prop_miter_limit(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9302,8 +8713,7 @@ jsvalue_t wrap_vgcanvas_t_get_prop_miter_limit(
 }
 
 jsvalue_t wrap_vgcanvas_t_get_prop_line_cap(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9316,8 +8726,7 @@ jsvalue_t wrap_vgcanvas_t_get_prop_line_cap(
 }
 
 jsvalue_t wrap_vgcanvas_t_get_prop_line_join(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9330,8 +8739,7 @@ jsvalue_t wrap_vgcanvas_t_get_prop_line_join(
 }
 
 jsvalue_t wrap_vgcanvas_t_get_prop_font(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9344,8 +8752,7 @@ jsvalue_t wrap_vgcanvas_t_get_prop_font(
 }
 
 jsvalue_t wrap_vgcanvas_t_get_prop_font_size(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9358,8 +8765,7 @@ jsvalue_t wrap_vgcanvas_t_get_prop_font_size(
 }
 
 jsvalue_t wrap_vgcanvas_t_get_prop_text_align(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9372,8 +8778,7 @@ jsvalue_t wrap_vgcanvas_t_get_prop_text_align(
 }
 
 jsvalue_t wrap_vgcanvas_t_get_prop_text_baseline(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9448,8 +8853,7 @@ ret_t vgcanvas_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_VGCANVAS_LINE_CAP_ROUND(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9458,8 +8862,7 @@ jsvalue_t get_VGCANVAS_LINE_CAP_ROUND(
 }
 
 jsvalue_t get_VGCANVAS_LINE_CAP_SQUARE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9468,8 +8871,7 @@ jsvalue_t get_VGCANVAS_LINE_CAP_SQUARE(
 }
 
 jsvalue_t get_VGCANVAS_LINE_CAP_BUTT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9486,8 +8888,7 @@ ret_t vgcanvas_line_cap_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_VGCANVAS_LINE_JOIN_ROUND(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9496,8 +8897,7 @@ jsvalue_t get_VGCANVAS_LINE_JOIN_ROUND(
 }
 
 jsvalue_t get_VGCANVAS_LINE_JOIN_BEVEL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9506,8 +8906,7 @@ jsvalue_t get_VGCANVAS_LINE_JOIN_BEVEL(
 }
 
 jsvalue_t get_VGCANVAS_LINE_JOIN_MITTER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9524,8 +8923,7 @@ ret_t vgcanvas_line_join_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_WIDGET_PROP_EXEC(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9534,8 +8932,7 @@ jsvalue_t get_WIDGET_PROP_EXEC(
 }
 
 jsvalue_t get_WIDGET_PROP_X(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9544,8 +8941,7 @@ jsvalue_t get_WIDGET_PROP_X(
 }
 
 jsvalue_t get_WIDGET_PROP_Y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9554,8 +8950,7 @@ jsvalue_t get_WIDGET_PROP_Y(
 }
 
 jsvalue_t get_WIDGET_PROP_W(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9564,8 +8959,7 @@ jsvalue_t get_WIDGET_PROP_W(
 }
 
 jsvalue_t get_WIDGET_PROP_H(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9574,8 +8968,7 @@ jsvalue_t get_WIDGET_PROP_H(
 }
 
 jsvalue_t get_WIDGET_PROP_DESIGN_W(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9584,8 +8977,7 @@ jsvalue_t get_WIDGET_PROP_DESIGN_W(
 }
 
 jsvalue_t get_WIDGET_PROP_DESIGN_H(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9594,8 +8986,7 @@ jsvalue_t get_WIDGET_PROP_DESIGN_H(
 }
 
 jsvalue_t get_WIDGET_PROP_AUTO_SCALE_CHILDREN_X(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9604,8 +8995,7 @@ jsvalue_t get_WIDGET_PROP_AUTO_SCALE_CHILDREN_X(
 }
 
 jsvalue_t get_WIDGET_PROP_AUTO_SCALE_CHILDREN_Y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9614,8 +9004,7 @@ jsvalue_t get_WIDGET_PROP_AUTO_SCALE_CHILDREN_Y(
 }
 
 jsvalue_t get_WIDGET_PROP_AUTO_SCALE_CHILDREN_W(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9624,8 +9013,7 @@ jsvalue_t get_WIDGET_PROP_AUTO_SCALE_CHILDREN_W(
 }
 
 jsvalue_t get_WIDGET_PROP_AUTO_SCALE_CHILDREN_H(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9634,8 +9022,7 @@ jsvalue_t get_WIDGET_PROP_AUTO_SCALE_CHILDREN_H(
 }
 
 jsvalue_t get_WIDGET_PROP_INPUTING(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9644,8 +9031,7 @@ jsvalue_t get_WIDGET_PROP_INPUTING(
 }
 
 jsvalue_t get_WIDGET_PROP_ALWAYS_ON_TOP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9654,8 +9040,7 @@ jsvalue_t get_WIDGET_PROP_ALWAYS_ON_TOP(
 }
 
 jsvalue_t get_WIDGET_PROP_CARET_X(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9664,8 +9049,7 @@ jsvalue_t get_WIDGET_PROP_CARET_X(
 }
 
 jsvalue_t get_WIDGET_PROP_CARET_Y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9674,8 +9058,7 @@ jsvalue_t get_WIDGET_PROP_CARET_Y(
 }
 
 jsvalue_t get_WIDGET_PROP_DIRTY_RECT_TOLERANCE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9684,8 +9067,7 @@ jsvalue_t get_WIDGET_PROP_DIRTY_RECT_TOLERANCE(
 }
 
 jsvalue_t get_WIDGET_PROP_BIDI(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9694,8 +9076,7 @@ jsvalue_t get_WIDGET_PROP_BIDI(
 }
 
 jsvalue_t get_WIDGET_PROP_CANVAS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9704,8 +9085,7 @@ jsvalue_t get_WIDGET_PROP_CANVAS(
 }
 
 jsvalue_t get_WIDGET_PROP_LOCALIZE_OPTIONS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9714,8 +9094,7 @@ jsvalue_t get_WIDGET_PROP_LOCALIZE_OPTIONS(
 }
 
 jsvalue_t get_WIDGET_PROP_NATIVE_WINDOW(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9724,8 +9103,7 @@ jsvalue_t get_WIDGET_PROP_NATIVE_WINDOW(
 }
 
 jsvalue_t get_WIDGET_PROP_HIGHLIGHT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9734,8 +9112,7 @@ jsvalue_t get_WIDGET_PROP_HIGHLIGHT(
 }
 
 jsvalue_t get_WIDGET_PROP_BAR_SIZE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9744,8 +9121,7 @@ jsvalue_t get_WIDGET_PROP_BAR_SIZE(
 }
 
 jsvalue_t get_WIDGET_PROP_OPACITY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9754,8 +9130,7 @@ jsvalue_t get_WIDGET_PROP_OPACITY(
 }
 
 jsvalue_t get_WIDGET_PROP_MIN_W(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9764,8 +9139,7 @@ jsvalue_t get_WIDGET_PROP_MIN_W(
 }
 
 jsvalue_t get_WIDGET_PROP_MAX_W(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9774,8 +9148,7 @@ jsvalue_t get_WIDGET_PROP_MAX_W(
 }
 
 jsvalue_t get_WIDGET_PROP_AUTO_ADJUST_SIZE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9784,8 +9157,7 @@ jsvalue_t get_WIDGET_PROP_AUTO_ADJUST_SIZE(
 }
 
 jsvalue_t get_WIDGET_PROP_SINGLE_INSTANCE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9794,8 +9166,7 @@ jsvalue_t get_WIDGET_PROP_SINGLE_INSTANCE(
 }
 
 jsvalue_t get_WIDGET_PROP_CHILDREN_LAYOUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9804,8 +9175,7 @@ jsvalue_t get_WIDGET_PROP_CHILDREN_LAYOUT(
 }
 
 jsvalue_t get_WIDGET_PROP_LAYOUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9814,8 +9184,7 @@ jsvalue_t get_WIDGET_PROP_LAYOUT(
 }
 
 jsvalue_t get_WIDGET_PROP_SELF_LAYOUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9824,8 +9193,7 @@ jsvalue_t get_WIDGET_PROP_SELF_LAYOUT(
 }
 
 jsvalue_t get_WIDGET_PROP_LAYOUT_W(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9834,8 +9202,7 @@ jsvalue_t get_WIDGET_PROP_LAYOUT_W(
 }
 
 jsvalue_t get_WIDGET_PROP_LAYOUT_H(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9844,8 +9211,7 @@ jsvalue_t get_WIDGET_PROP_LAYOUT_H(
 }
 
 jsvalue_t get_WIDGET_PROP_VIRTUAL_W(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9854,8 +9220,7 @@ jsvalue_t get_WIDGET_PROP_VIRTUAL_W(
 }
 
 jsvalue_t get_WIDGET_PROP_VIRTUAL_H(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9864,8 +9229,7 @@ jsvalue_t get_WIDGET_PROP_VIRTUAL_H(
 }
 
 jsvalue_t get_WIDGET_PROP_NAME(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9874,8 +9238,7 @@ jsvalue_t get_WIDGET_PROP_NAME(
 }
 
 jsvalue_t get_WIDGET_PROP_TYPE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9884,8 +9247,7 @@ jsvalue_t get_WIDGET_PROP_TYPE(
 }
 
 jsvalue_t get_WIDGET_PROP_CLOSABLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9894,8 +9256,7 @@ jsvalue_t get_WIDGET_PROP_CLOSABLE(
 }
 
 jsvalue_t get_WIDGET_PROP_POINTER_CURSOR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9904,8 +9265,7 @@ jsvalue_t get_WIDGET_PROP_POINTER_CURSOR(
 }
 
 jsvalue_t get_WIDGET_PROP_VALUE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9914,8 +9274,7 @@ jsvalue_t get_WIDGET_PROP_VALUE(
 }
 
 jsvalue_t get_WIDGET_PROP_REVERSE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9924,8 +9283,7 @@ jsvalue_t get_WIDGET_PROP_REVERSE(
 }
 
 jsvalue_t get_WIDGET_PROP_LENGTH(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9934,8 +9292,7 @@ jsvalue_t get_WIDGET_PROP_LENGTH(
 }
 
 jsvalue_t get_WIDGET_PROP_LINE_WRAP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9944,8 +9301,7 @@ jsvalue_t get_WIDGET_PROP_LINE_WRAP(
 }
 
 jsvalue_t get_WIDGET_PROP_WORD_WRAP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9954,8 +9310,7 @@ jsvalue_t get_WIDGET_PROP_WORD_WRAP(
 }
 
 jsvalue_t get_WIDGET_PROP_TEXT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9964,8 +9319,7 @@ jsvalue_t get_WIDGET_PROP_TEXT(
 }
 
 jsvalue_t get_WIDGET_PROP_TR_TEXT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9974,8 +9328,7 @@ jsvalue_t get_WIDGET_PROP_TR_TEXT(
 }
 
 jsvalue_t get_WIDGET_PROP_STYLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9984,8 +9337,7 @@ jsvalue_t get_WIDGET_PROP_STYLE(
 }
 
 jsvalue_t get_WIDGET_PROP_ENABLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -9994,8 +9346,7 @@ jsvalue_t get_WIDGET_PROP_ENABLE(
 }
 
 jsvalue_t get_WIDGET_PROP_FEEDBACK(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10004,8 +9355,7 @@ jsvalue_t get_WIDGET_PROP_FEEDBACK(
 }
 
 jsvalue_t get_WIDGET_PROP_FLOATING(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10014,8 +9364,7 @@ jsvalue_t get_WIDGET_PROP_FLOATING(
 }
 
 jsvalue_t get_WIDGET_PROP_MARGIN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10024,8 +9373,7 @@ jsvalue_t get_WIDGET_PROP_MARGIN(
 }
 
 jsvalue_t get_WIDGET_PROP_SPACING(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10034,8 +9382,7 @@ jsvalue_t get_WIDGET_PROP_SPACING(
 }
 
 jsvalue_t get_WIDGET_PROP_LEFT_MARGIN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10044,8 +9391,7 @@ jsvalue_t get_WIDGET_PROP_LEFT_MARGIN(
 }
 
 jsvalue_t get_WIDGET_PROP_RIGHT_MARGIN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10054,8 +9400,7 @@ jsvalue_t get_WIDGET_PROP_RIGHT_MARGIN(
 }
 
 jsvalue_t get_WIDGET_PROP_TOP_MARGIN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10064,8 +9409,7 @@ jsvalue_t get_WIDGET_PROP_TOP_MARGIN(
 }
 
 jsvalue_t get_WIDGET_PROP_BOTTOM_MARGIN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10074,8 +9418,7 @@ jsvalue_t get_WIDGET_PROP_BOTTOM_MARGIN(
 }
 
 jsvalue_t get_WIDGET_PROP_STEP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10084,8 +9427,7 @@ jsvalue_t get_WIDGET_PROP_STEP(
 }
 
 jsvalue_t get_WIDGET_PROP_VISIBLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10094,8 +9436,7 @@ jsvalue_t get_WIDGET_PROP_VISIBLE(
 }
 
 jsvalue_t get_WIDGET_PROP_SENSITIVE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10104,8 +9445,7 @@ jsvalue_t get_WIDGET_PROP_SENSITIVE(
 }
 
 jsvalue_t get_WIDGET_PROP_ANIMATION(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10114,8 +9454,7 @@ jsvalue_t get_WIDGET_PROP_ANIMATION(
 }
 
 jsvalue_t get_WIDGET_PROP_ANIM_HINT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10124,8 +9463,7 @@ jsvalue_t get_WIDGET_PROP_ANIM_HINT(
 }
 
 jsvalue_t get_WIDGET_PROP_FULLSCREEN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10134,8 +9472,7 @@ jsvalue_t get_WIDGET_PROP_FULLSCREEN(
 }
 
 jsvalue_t get_WIDGET_PROP_DISABLE_ANIM(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10144,8 +9481,7 @@ jsvalue_t get_WIDGET_PROP_DISABLE_ANIM(
 }
 
 jsvalue_t get_WIDGET_PROP_OPEN_ANIM_HINT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10154,8 +9490,7 @@ jsvalue_t get_WIDGET_PROP_OPEN_ANIM_HINT(
 }
 
 jsvalue_t get_WIDGET_PROP_CLOSE_ANIM_HINT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10164,8 +9499,7 @@ jsvalue_t get_WIDGET_PROP_CLOSE_ANIM_HINT(
 }
 
 jsvalue_t get_WIDGET_PROP_MIN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10174,8 +9508,7 @@ jsvalue_t get_WIDGET_PROP_MIN(
 }
 
 jsvalue_t get_WIDGET_PROP_ACTION_TEXT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10184,8 +9517,7 @@ jsvalue_t get_WIDGET_PROP_ACTION_TEXT(
 }
 
 jsvalue_t get_WIDGET_PROP_TIPS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10194,8 +9526,7 @@ jsvalue_t get_WIDGET_PROP_TIPS(
 }
 
 jsvalue_t get_WIDGET_PROP_TR_TIPS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10204,8 +9535,7 @@ jsvalue_t get_WIDGET_PROP_TR_TIPS(
 }
 
 jsvalue_t get_WIDGET_PROP_INPUT_TYPE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10214,8 +9544,7 @@ jsvalue_t get_WIDGET_PROP_INPUT_TYPE(
 }
 
 jsvalue_t get_WIDGET_PROP_KEYBOARD(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10224,8 +9553,7 @@ jsvalue_t get_WIDGET_PROP_KEYBOARD(
 }
 
 jsvalue_t get_WIDGET_PROP_DEFAULT_FOCUSED_CHILD(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10234,8 +9562,7 @@ jsvalue_t get_WIDGET_PROP_DEFAULT_FOCUSED_CHILD(
 }
 
 jsvalue_t get_WIDGET_PROP_READONLY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10244,8 +9571,7 @@ jsvalue_t get_WIDGET_PROP_READONLY(
 }
 
 jsvalue_t get_WIDGET_PROP_CANCELABLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10254,8 +9580,7 @@ jsvalue_t get_WIDGET_PROP_CANCELABLE(
 }
 
 jsvalue_t get_WIDGET_PROP_PASSWORD_VISIBLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10264,8 +9589,7 @@ jsvalue_t get_WIDGET_PROP_PASSWORD_VISIBLE(
 }
 
 jsvalue_t get_WIDGET_PROP_ACTIVE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10274,8 +9598,7 @@ jsvalue_t get_WIDGET_PROP_ACTIVE(
 }
 
 jsvalue_t get_WIDGET_PROP_CURR_PAGE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10284,8 +9607,7 @@ jsvalue_t get_WIDGET_PROP_CURR_PAGE(
 }
 
 jsvalue_t get_WIDGET_PROP_PAGE_MAX_NUMBER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10294,8 +9616,7 @@ jsvalue_t get_WIDGET_PROP_PAGE_MAX_NUMBER(
 }
 
 jsvalue_t get_WIDGET_PROP_VERTICAL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10304,8 +9625,7 @@ jsvalue_t get_WIDGET_PROP_VERTICAL(
 }
 
 jsvalue_t get_WIDGET_PROP_SHOW_TEXT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10314,8 +9634,7 @@ jsvalue_t get_WIDGET_PROP_SHOW_TEXT(
 }
 
 jsvalue_t get_WIDGET_PROP_XOFFSET(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10324,8 +9643,7 @@ jsvalue_t get_WIDGET_PROP_XOFFSET(
 }
 
 jsvalue_t get_WIDGET_PROP_YOFFSET(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10334,8 +9652,7 @@ jsvalue_t get_WIDGET_PROP_YOFFSET(
 }
 
 jsvalue_t get_WIDGET_PROP_ALIGN_V(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10344,8 +9661,7 @@ jsvalue_t get_WIDGET_PROP_ALIGN_V(
 }
 
 jsvalue_t get_WIDGET_PROP_ALIGN_H(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10354,8 +9670,7 @@ jsvalue_t get_WIDGET_PROP_ALIGN_H(
 }
 
 jsvalue_t get_WIDGET_PROP_AUTO_PLAY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10364,8 +9679,7 @@ jsvalue_t get_WIDGET_PROP_AUTO_PLAY(
 }
 
 jsvalue_t get_WIDGET_PROP_LOOP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10374,8 +9688,7 @@ jsvalue_t get_WIDGET_PROP_LOOP(
 }
 
 jsvalue_t get_WIDGET_PROP_AUTO_FIX(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10384,8 +9697,7 @@ jsvalue_t get_WIDGET_PROP_AUTO_FIX(
 }
 
 jsvalue_t get_WIDGET_PROP_SELECT_NONE_WHEN_FOCUSED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10394,8 +9706,7 @@ jsvalue_t get_WIDGET_PROP_SELECT_NONE_WHEN_FOCUSED(
 }
 
 jsvalue_t get_WIDGET_PROP_OPEN_IM_WHEN_FOCUSED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10404,8 +9715,7 @@ jsvalue_t get_WIDGET_PROP_OPEN_IM_WHEN_FOCUSED(
 }
 
 jsvalue_t get_WIDGET_PROP_CLOSE_IM_WHEN_BLURED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10414,8 +9724,7 @@ jsvalue_t get_WIDGET_PROP_CLOSE_IM_WHEN_BLURED(
 }
 
 jsvalue_t get_WIDGET_PROP_X_MIN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10424,8 +9733,7 @@ jsvalue_t get_WIDGET_PROP_X_MIN(
 }
 
 jsvalue_t get_WIDGET_PROP_X_MAX(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10434,8 +9742,7 @@ jsvalue_t get_WIDGET_PROP_X_MAX(
 }
 
 jsvalue_t get_WIDGET_PROP_Y_MIN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10444,8 +9751,7 @@ jsvalue_t get_WIDGET_PROP_Y_MIN(
 }
 
 jsvalue_t get_WIDGET_PROP_Y_MAX(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10454,8 +9760,7 @@ jsvalue_t get_WIDGET_PROP_Y_MAX(
 }
 
 jsvalue_t get_WIDGET_PROP_MAX(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10464,8 +9769,7 @@ jsvalue_t get_WIDGET_PROP_MAX(
 }
 
 jsvalue_t get_WIDGET_PROP_GRAB_KEYS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10474,8 +9778,7 @@ jsvalue_t get_WIDGET_PROP_GRAB_KEYS(
 }
 
 jsvalue_t get_WIDGET_PROP_ROW(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10484,8 +9787,7 @@ jsvalue_t get_WIDGET_PROP_ROW(
 }
 
 jsvalue_t get_WIDGET_PROP_STATE_FOR_STYLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10494,8 +9796,7 @@ jsvalue_t get_WIDGET_PROP_STATE_FOR_STYLE(
 }
 
 jsvalue_t get_WIDGET_PROP_THEME(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10504,8 +9805,7 @@ jsvalue_t get_WIDGET_PROP_THEME(
 }
 
 jsvalue_t get_WIDGET_PROP_STAGE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10514,8 +9814,7 @@ jsvalue_t get_WIDGET_PROP_STAGE(
 }
 
 jsvalue_t get_WIDGET_PROP_IMAGE_MANAGER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10524,8 +9823,7 @@ jsvalue_t get_WIDGET_PROP_IMAGE_MANAGER(
 }
 
 jsvalue_t get_WIDGET_PROP_ASSETS_MANAGER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10534,8 +9832,7 @@ jsvalue_t get_WIDGET_PROP_ASSETS_MANAGER(
 }
 
 jsvalue_t get_WIDGET_PROP_LOCALE_INFO(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10544,8 +9841,7 @@ jsvalue_t get_WIDGET_PROP_LOCALE_INFO(
 }
 
 jsvalue_t get_WIDGET_PROP_FONT_MANAGER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10554,8 +9850,7 @@ jsvalue_t get_WIDGET_PROP_FONT_MANAGER(
 }
 
 jsvalue_t get_WIDGET_PROP_THEME_OBJ(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10564,8 +9859,7 @@ jsvalue_t get_WIDGET_PROP_THEME_OBJ(
 }
 
 jsvalue_t get_WIDGET_PROP_DEFAULT_THEME_OBJ(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10574,8 +9868,7 @@ jsvalue_t get_WIDGET_PROP_DEFAULT_THEME_OBJ(
 }
 
 jsvalue_t get_WIDGET_PROP_ITEM_WIDTH(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10584,8 +9877,7 @@ jsvalue_t get_WIDGET_PROP_ITEM_WIDTH(
 }
 
 jsvalue_t get_WIDGET_PROP_ITEM_HEIGHT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10594,8 +9886,7 @@ jsvalue_t get_WIDGET_PROP_ITEM_HEIGHT(
 }
 
 jsvalue_t get_WIDGET_PROP_DEFAULT_ITEM_HEIGHT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10604,8 +9895,7 @@ jsvalue_t get_WIDGET_PROP_DEFAULT_ITEM_HEIGHT(
 }
 
 jsvalue_t get_WIDGET_PROP_XSLIDABLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10614,8 +9904,7 @@ jsvalue_t get_WIDGET_PROP_XSLIDABLE(
 }
 
 jsvalue_t get_WIDGET_PROP_YSLIDABLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10624,8 +9913,7 @@ jsvalue_t get_WIDGET_PROP_YSLIDABLE(
 }
 
 jsvalue_t get_WIDGET_PROP_REPEAT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10634,8 +9922,7 @@ jsvalue_t get_WIDGET_PROP_REPEAT(
 }
 
 jsvalue_t get_WIDGET_PROP_LONG_PRESS_TIME(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10644,8 +9931,7 @@ jsvalue_t get_WIDGET_PROP_LONG_PRESS_TIME(
 }
 
 jsvalue_t get_WIDGET_PROP_ENABLE_LONG_PRESS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10654,8 +9940,7 @@ jsvalue_t get_WIDGET_PROP_ENABLE_LONG_PRESS(
 }
 
 jsvalue_t get_WIDGET_PROP_CLICK_THROUGH(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10664,8 +9949,7 @@ jsvalue_t get_WIDGET_PROP_CLICK_THROUGH(
 }
 
 jsvalue_t get_WIDGET_PROP_ANIMATABLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10674,8 +9958,7 @@ jsvalue_t get_WIDGET_PROP_ANIMATABLE(
 }
 
 jsvalue_t get_WIDGET_PROP_AUTO_HIDE_SCROLL_BAR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10684,8 +9967,7 @@ jsvalue_t get_WIDGET_PROP_AUTO_HIDE_SCROLL_BAR(
 }
 
 jsvalue_t get_WIDGET_PROP_IMAGE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10694,8 +9976,7 @@ jsvalue_t get_WIDGET_PROP_IMAGE(
 }
 
 jsvalue_t get_WIDGET_PROP_FORMAT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10704,8 +9985,7 @@ jsvalue_t get_WIDGET_PROP_FORMAT(
 }
 
 jsvalue_t get_WIDGET_PROP_DRAW_TYPE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10714,8 +9994,7 @@ jsvalue_t get_WIDGET_PROP_DRAW_TYPE(
 }
 
 jsvalue_t get_WIDGET_PROP_SELECTABLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10724,8 +10003,7 @@ jsvalue_t get_WIDGET_PROP_SELECTABLE(
 }
 
 jsvalue_t get_WIDGET_PROP_CLICKABLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10734,8 +10012,7 @@ jsvalue_t get_WIDGET_PROP_CLICKABLE(
 }
 
 jsvalue_t get_WIDGET_PROP_SCALE_X(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10744,8 +10021,7 @@ jsvalue_t get_WIDGET_PROP_SCALE_X(
 }
 
 jsvalue_t get_WIDGET_PROP_SCALE_Y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10754,8 +10030,7 @@ jsvalue_t get_WIDGET_PROP_SCALE_Y(
 }
 
 jsvalue_t get_WIDGET_PROP_ANCHOR_X(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10764,8 +10039,7 @@ jsvalue_t get_WIDGET_PROP_ANCHOR_X(
 }
 
 jsvalue_t get_WIDGET_PROP_ANCHOR_Y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10774,8 +10048,7 @@ jsvalue_t get_WIDGET_PROP_ANCHOR_Y(
 }
 
 jsvalue_t get_WIDGET_PROP_ROTATION(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10784,8 +10057,7 @@ jsvalue_t get_WIDGET_PROP_ROTATION(
 }
 
 jsvalue_t get_WIDGET_PROP_COMPACT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10794,8 +10066,7 @@ jsvalue_t get_WIDGET_PROP_COMPACT(
 }
 
 jsvalue_t get_WIDGET_PROP_SCROLLABLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10804,8 +10075,7 @@ jsvalue_t get_WIDGET_PROP_SCROLLABLE(
 }
 
 jsvalue_t get_WIDGET_PROP_ICON(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10814,8 +10084,7 @@ jsvalue_t get_WIDGET_PROP_ICON(
 }
 
 jsvalue_t get_WIDGET_PROP_OPTIONS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10824,8 +10093,7 @@ jsvalue_t get_WIDGET_PROP_OPTIONS(
 }
 
 jsvalue_t get_WIDGET_PROP_SELECTED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10834,8 +10102,7 @@ jsvalue_t get_WIDGET_PROP_SELECTED(
 }
 
 jsvalue_t get_WIDGET_PROP_CHECKED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10844,8 +10111,7 @@ jsvalue_t get_WIDGET_PROP_CHECKED(
 }
 
 jsvalue_t get_WIDGET_PROP_ACTIVE_ICON(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10854,8 +10120,7 @@ jsvalue_t get_WIDGET_PROP_ACTIVE_ICON(
 }
 
 jsvalue_t get_WIDGET_PROP_LOAD_UI(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10864,8 +10129,7 @@ jsvalue_t get_WIDGET_PROP_LOAD_UI(
 }
 
 jsvalue_t get_WIDGET_PROP_OPEN_WINDOW(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10874,8 +10138,7 @@ jsvalue_t get_WIDGET_PROP_OPEN_WINDOW(
 }
 
 jsvalue_t get_WIDGET_PROP_SELECTED_INDEX(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10884,8 +10147,7 @@ jsvalue_t get_WIDGET_PROP_SELECTED_INDEX(
 }
 
 jsvalue_t get_WIDGET_PROP_CLOSE_WHEN_CLICK(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10894,8 +10156,7 @@ jsvalue_t get_WIDGET_PROP_CLOSE_WHEN_CLICK(
 }
 
 jsvalue_t get_WIDGET_PROP_CLOSE_WHEN_CLICK_OUTSIDE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10904,8 +10165,7 @@ jsvalue_t get_WIDGET_PROP_CLOSE_WHEN_CLICK_OUTSIDE(
 }
 
 jsvalue_t get_WIDGET_PROP_CLOSE_WHEN_TIMEOUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10914,8 +10174,7 @@ jsvalue_t get_WIDGET_PROP_CLOSE_WHEN_TIMEOUT(
 }
 
 jsvalue_t get_WIDGET_PROP_LINE_GAP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10924,8 +10183,7 @@ jsvalue_t get_WIDGET_PROP_LINE_GAP(
 }
 
 jsvalue_t get_WIDGET_PROP_BG_COLOR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10934,8 +10192,7 @@ jsvalue_t get_WIDGET_PROP_BG_COLOR(
 }
 
 jsvalue_t get_WIDGET_PROP_BORDER_COLOR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10944,8 +10201,7 @@ jsvalue_t get_WIDGET_PROP_BORDER_COLOR(
 }
 
 jsvalue_t get_WIDGET_PROP_DELAY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10954,8 +10210,7 @@ jsvalue_t get_WIDGET_PROP_DELAY(
 }
 
 jsvalue_t get_WIDGET_PROP_IS_KEYBOARD(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10964,8 +10219,7 @@ jsvalue_t get_WIDGET_PROP_IS_KEYBOARD(
 }
 
 jsvalue_t get_WIDGET_PROP_FOCUSED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10974,8 +10228,7 @@ jsvalue_t get_WIDGET_PROP_FOCUSED(
 }
 
 jsvalue_t get_WIDGET_PROP_FOCUS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10984,8 +10237,7 @@ jsvalue_t get_WIDGET_PROP_FOCUS(
 }
 
 jsvalue_t get_WIDGET_PROP_FOCUSABLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -10994,8 +10246,7 @@ jsvalue_t get_WIDGET_PROP_FOCUSABLE(
 }
 
 jsvalue_t get_WIDGET_PROP_WITH_FOCUS_STATE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11004,8 +10255,7 @@ jsvalue_t get_WIDGET_PROP_WITH_FOCUS_STATE(
 }
 
 jsvalue_t get_WIDGET_PROP_MOVE_FOCUS_PREV_KEY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11014,8 +10264,7 @@ jsvalue_t get_WIDGET_PROP_MOVE_FOCUS_PREV_KEY(
 }
 
 jsvalue_t get_WIDGET_PROP_MOVE_FOCUS_NEXT_KEY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11024,8 +10273,7 @@ jsvalue_t get_WIDGET_PROP_MOVE_FOCUS_NEXT_KEY(
 }
 
 jsvalue_t get_WIDGET_PROP_MOVE_FOCUS_UP_KEY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11034,8 +10282,7 @@ jsvalue_t get_WIDGET_PROP_MOVE_FOCUS_UP_KEY(
 }
 
 jsvalue_t get_WIDGET_PROP_MOVE_FOCUS_DOWN_KEY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11044,8 +10291,7 @@ jsvalue_t get_WIDGET_PROP_MOVE_FOCUS_DOWN_KEY(
 }
 
 jsvalue_t get_WIDGET_PROP_MOVE_FOCUS_LEFT_KEY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11054,8 +10300,7 @@ jsvalue_t get_WIDGET_PROP_MOVE_FOCUS_LEFT_KEY(
 }
 
 jsvalue_t get_WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11223,8 +10468,7 @@ ret_t widget_prop_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_WIDGET_TYPE_NONE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11233,8 +10477,7 @@ jsvalue_t get_WIDGET_TYPE_NONE(
 }
 
 jsvalue_t get_WIDGET_TYPE_WINDOW_MANAGER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11243,8 +10486,7 @@ jsvalue_t get_WIDGET_TYPE_WINDOW_MANAGER(
 }
 
 jsvalue_t get_WIDGET_TYPE_NORMAL_WINDOW(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11253,8 +10495,7 @@ jsvalue_t get_WIDGET_TYPE_NORMAL_WINDOW(
 }
 
 jsvalue_t get_WIDGET_TYPE_OVERLAY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11263,8 +10504,7 @@ jsvalue_t get_WIDGET_TYPE_OVERLAY(
 }
 
 jsvalue_t get_WIDGET_TYPE_TOOL_BAR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11273,8 +10513,7 @@ jsvalue_t get_WIDGET_TYPE_TOOL_BAR(
 }
 
 jsvalue_t get_WIDGET_TYPE_DIALOG(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11283,8 +10522,7 @@ jsvalue_t get_WIDGET_TYPE_DIALOG(
 }
 
 jsvalue_t get_WIDGET_TYPE_POPUP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11293,8 +10531,7 @@ jsvalue_t get_WIDGET_TYPE_POPUP(
 }
 
 jsvalue_t get_WIDGET_TYPE_SYSTEM_BAR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11303,8 +10540,7 @@ jsvalue_t get_WIDGET_TYPE_SYSTEM_BAR(
 }
 
 jsvalue_t get_WIDGET_TYPE_SYSTEM_BAR_BOTTOM(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11313,8 +10549,7 @@ jsvalue_t get_WIDGET_TYPE_SYSTEM_BAR_BOTTOM(
 }
 
 jsvalue_t get_WIDGET_TYPE_SPRITE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11323,8 +10558,7 @@ jsvalue_t get_WIDGET_TYPE_SPRITE(
 }
 
 jsvalue_t get_WIDGET_TYPE_KEYBOARD(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11333,8 +10567,7 @@ jsvalue_t get_WIDGET_TYPE_KEYBOARD(
 }
 
 jsvalue_t get_WIDGET_TYPE_DND(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11343,8 +10576,7 @@ jsvalue_t get_WIDGET_TYPE_DND(
 }
 
 jsvalue_t get_WIDGET_TYPE_LABEL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11353,8 +10585,7 @@ jsvalue_t get_WIDGET_TYPE_LABEL(
 }
 
 jsvalue_t get_WIDGET_TYPE_BUTTON(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11363,8 +10594,7 @@ jsvalue_t get_WIDGET_TYPE_BUTTON(
 }
 
 jsvalue_t get_WIDGET_TYPE_IMAGE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11373,8 +10603,7 @@ jsvalue_t get_WIDGET_TYPE_IMAGE(
 }
 
 jsvalue_t get_WIDGET_TYPE_EDIT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11383,8 +10612,7 @@ jsvalue_t get_WIDGET_TYPE_EDIT(
 }
 
 jsvalue_t get_WIDGET_TYPE_PROGRESS_BAR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11393,8 +10621,7 @@ jsvalue_t get_WIDGET_TYPE_PROGRESS_BAR(
 }
 
 jsvalue_t get_WIDGET_TYPE_GROUP_BOX(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11403,8 +10630,7 @@ jsvalue_t get_WIDGET_TYPE_GROUP_BOX(
 }
 
 jsvalue_t get_WIDGET_TYPE_CHECK_BUTTON(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11413,8 +10639,7 @@ jsvalue_t get_WIDGET_TYPE_CHECK_BUTTON(
 }
 
 jsvalue_t get_WIDGET_TYPE_RADIO_BUTTON(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11423,8 +10648,7 @@ jsvalue_t get_WIDGET_TYPE_RADIO_BUTTON(
 }
 
 jsvalue_t get_WIDGET_TYPE_DIALOG_TITLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11433,8 +10657,7 @@ jsvalue_t get_WIDGET_TYPE_DIALOG_TITLE(
 }
 
 jsvalue_t get_WIDGET_TYPE_DIALOG_CLIENT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11443,8 +10666,7 @@ jsvalue_t get_WIDGET_TYPE_DIALOG_CLIENT(
 }
 
 jsvalue_t get_WIDGET_TYPE_SLIDER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11453,8 +10675,7 @@ jsvalue_t get_WIDGET_TYPE_SLIDER(
 }
 
 jsvalue_t get_WIDGET_TYPE_VIEW(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11463,8 +10684,7 @@ jsvalue_t get_WIDGET_TYPE_VIEW(
 }
 
 jsvalue_t get_WIDGET_TYPE_COMBO_BOX(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11473,8 +10693,7 @@ jsvalue_t get_WIDGET_TYPE_COMBO_BOX(
 }
 
 jsvalue_t get_WIDGET_TYPE_COMBO_BOX_ITEM(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11483,8 +10702,7 @@ jsvalue_t get_WIDGET_TYPE_COMBO_BOX_ITEM(
 }
 
 jsvalue_t get_WIDGET_TYPE_SLIDE_VIEW(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11493,8 +10711,7 @@ jsvalue_t get_WIDGET_TYPE_SLIDE_VIEW(
 }
 
 jsvalue_t get_WIDGET_TYPE_SLIDE_INDICATOR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11503,8 +10720,7 @@ jsvalue_t get_WIDGET_TYPE_SLIDE_INDICATOR(
 }
 
 jsvalue_t get_WIDGET_TYPE_SLIDE_INDICATOR_ARC(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11513,8 +10729,7 @@ jsvalue_t get_WIDGET_TYPE_SLIDE_INDICATOR_ARC(
 }
 
 jsvalue_t get_WIDGET_TYPE_PAGES(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11523,8 +10738,7 @@ jsvalue_t get_WIDGET_TYPE_PAGES(
 }
 
 jsvalue_t get_WIDGET_TYPE_TAB_BUTTON(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11533,8 +10747,7 @@ jsvalue_t get_WIDGET_TYPE_TAB_BUTTON(
 }
 
 jsvalue_t get_WIDGET_TYPE_TAB_CONTROL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11543,8 +10756,7 @@ jsvalue_t get_WIDGET_TYPE_TAB_CONTROL(
 }
 
 jsvalue_t get_WIDGET_TYPE_TAB_BUTTON_GROUP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11553,8 +10765,7 @@ jsvalue_t get_WIDGET_TYPE_TAB_BUTTON_GROUP(
 }
 
 jsvalue_t get_WIDGET_TYPE_BUTTON_GROUP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11563,8 +10774,7 @@ jsvalue_t get_WIDGET_TYPE_BUTTON_GROUP(
 }
 
 jsvalue_t get_WIDGET_TYPE_CANDIDATES(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11573,8 +10783,7 @@ jsvalue_t get_WIDGET_TYPE_CANDIDATES(
 }
 
 jsvalue_t get_WIDGET_TYPE_SPIN_BOX(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11583,8 +10792,7 @@ jsvalue_t get_WIDGET_TYPE_SPIN_BOX(
 }
 
 jsvalue_t get_WIDGET_TYPE_DRAGGER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11593,8 +10801,7 @@ jsvalue_t get_WIDGET_TYPE_DRAGGER(
 }
 
 jsvalue_t get_WIDGET_TYPE_SCROLL_BAR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11603,8 +10810,7 @@ jsvalue_t get_WIDGET_TYPE_SCROLL_BAR(
 }
 
 jsvalue_t get_WIDGET_TYPE_SCROLL_BAR_DESKTOP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11613,8 +10819,7 @@ jsvalue_t get_WIDGET_TYPE_SCROLL_BAR_DESKTOP(
 }
 
 jsvalue_t get_WIDGET_TYPE_SCROLL_BAR_MOBILE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11623,8 +10828,7 @@ jsvalue_t get_WIDGET_TYPE_SCROLL_BAR_MOBILE(
 }
 
 jsvalue_t get_WIDGET_TYPE_SCROLL_VIEW(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11633,8 +10837,7 @@ jsvalue_t get_WIDGET_TYPE_SCROLL_VIEW(
 }
 
 jsvalue_t get_WIDGET_TYPE_LIST_VIEW(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11643,8 +10846,7 @@ jsvalue_t get_WIDGET_TYPE_LIST_VIEW(
 }
 
 jsvalue_t get_WIDGET_TYPE_LIST_VIEW_H(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11653,8 +10855,7 @@ jsvalue_t get_WIDGET_TYPE_LIST_VIEW_H(
 }
 
 jsvalue_t get_WIDGET_TYPE_LIST_ITEM(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11663,8 +10864,7 @@ jsvalue_t get_WIDGET_TYPE_LIST_ITEM(
 }
 
 jsvalue_t get_WIDGET_TYPE_COLOR_PICKER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11673,8 +10873,7 @@ jsvalue_t get_WIDGET_TYPE_COLOR_PICKER(
 }
 
 jsvalue_t get_WIDGET_TYPE_COLOR_COMPONENT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11683,8 +10882,7 @@ jsvalue_t get_WIDGET_TYPE_COLOR_COMPONENT(
 }
 
 jsvalue_t get_WIDGET_TYPE_COLOR_TILE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11693,8 +10891,7 @@ jsvalue_t get_WIDGET_TYPE_COLOR_TILE(
 }
 
 jsvalue_t get_WIDGET_TYPE_CLIP_VIEW(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11703,8 +10900,7 @@ jsvalue_t get_WIDGET_TYPE_CLIP_VIEW(
 }
 
 jsvalue_t get_WIDGET_TYPE_RICH_TEXT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11713,8 +10909,7 @@ jsvalue_t get_WIDGET_TYPE_RICH_TEXT(
 }
 
 jsvalue_t get_WIDGET_TYPE_APP_BAR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11723,8 +10918,7 @@ jsvalue_t get_WIDGET_TYPE_APP_BAR(
 }
 
 jsvalue_t get_WIDGET_TYPE_GRID(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11733,8 +10927,7 @@ jsvalue_t get_WIDGET_TYPE_GRID(
 }
 
 jsvalue_t get_WIDGET_TYPE_GRID_ITEM(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11743,8 +10936,7 @@ jsvalue_t get_WIDGET_TYPE_GRID_ITEM(
 }
 
 jsvalue_t get_WIDGET_TYPE_ROW(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11753,8 +10945,7 @@ jsvalue_t get_WIDGET_TYPE_ROW(
 }
 
 jsvalue_t get_WIDGET_TYPE_COLUMN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11763,8 +10954,7 @@ jsvalue_t get_WIDGET_TYPE_COLUMN(
 }
 
 jsvalue_t get_WIDGET_TYPE_CALIBRATION_WIN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11833,8 +11023,7 @@ ret_t widget_type_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_WINDOW_STAGE_NONE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11843,8 +11032,7 @@ jsvalue_t get_WINDOW_STAGE_NONE(
 }
 
 jsvalue_t get_WINDOW_STAGE_CREATED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11853,8 +11041,7 @@ jsvalue_t get_WINDOW_STAGE_CREATED(
 }
 
 jsvalue_t get_WINDOW_STAGE_OPENED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11863,8 +11050,7 @@ jsvalue_t get_WINDOW_STAGE_OPENED(
 }
 
 jsvalue_t get_WINDOW_STAGE_CLOSED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11873,8 +11059,7 @@ jsvalue_t get_WINDOW_STAGE_CLOSED(
 }
 
 jsvalue_t get_WINDOW_STAGE_SUSPEND(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11893,8 +11078,7 @@ ret_t window_stage_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_WINDOW_CLOSABLE_YES(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11903,8 +11087,7 @@ jsvalue_t get_WINDOW_CLOSABLE_YES(
 }
 
 jsvalue_t get_WINDOW_CLOSABLE_NO(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11913,8 +11096,7 @@ jsvalue_t get_WINDOW_CLOSABLE_NO(
 }
 
 jsvalue_t get_WINDOW_CLOSABLE_CONFIRM(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11931,8 +11113,7 @@ ret_t window_closable_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_WIDGET_STATE_NONE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11941,8 +11122,7 @@ jsvalue_t get_WIDGET_STATE_NONE(
 }
 
 jsvalue_t get_WIDGET_STATE_NORMAL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11951,8 +11131,7 @@ jsvalue_t get_WIDGET_STATE_NORMAL(
 }
 
 jsvalue_t get_WIDGET_STATE_CHANGED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11961,8 +11140,7 @@ jsvalue_t get_WIDGET_STATE_CHANGED(
 }
 
 jsvalue_t get_WIDGET_STATE_PRESSED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11971,8 +11149,7 @@ jsvalue_t get_WIDGET_STATE_PRESSED(
 }
 
 jsvalue_t get_WIDGET_STATE_OVER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11981,8 +11158,7 @@ jsvalue_t get_WIDGET_STATE_OVER(
 }
 
 jsvalue_t get_WIDGET_STATE_DISABLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -11991,8 +11167,7 @@ jsvalue_t get_WIDGET_STATE_DISABLE(
 }
 
 jsvalue_t get_WIDGET_STATE_FOCUSED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12001,8 +11176,7 @@ jsvalue_t get_WIDGET_STATE_FOCUSED(
 }
 
 jsvalue_t get_WIDGET_STATE_CHECKED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12011,8 +11185,7 @@ jsvalue_t get_WIDGET_STATE_CHECKED(
 }
 
 jsvalue_t get_WIDGET_STATE_UNCHECKED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12021,8 +11194,7 @@ jsvalue_t get_WIDGET_STATE_UNCHECKED(
 }
 
 jsvalue_t get_WIDGET_STATE_EMPTY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12031,8 +11203,7 @@ jsvalue_t get_WIDGET_STATE_EMPTY(
 }
 
 jsvalue_t get_WIDGET_STATE_EMPTY_FOCUS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12041,8 +11212,7 @@ jsvalue_t get_WIDGET_STATE_EMPTY_FOCUS(
 }
 
 jsvalue_t get_WIDGET_STATE_ERROR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12051,8 +11221,7 @@ jsvalue_t get_WIDGET_STATE_ERROR(
 }
 
 jsvalue_t get_WIDGET_STATE_SELECTED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12061,8 +11230,7 @@ jsvalue_t get_WIDGET_STATE_SELECTED(
 }
 
 jsvalue_t get_WIDGET_STATE_NORMAL_OF_CHECKED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12071,8 +11239,7 @@ jsvalue_t get_WIDGET_STATE_NORMAL_OF_CHECKED(
 }
 
 jsvalue_t get_WIDGET_STATE_PRESSED_OF_CHECKED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12081,8 +11248,7 @@ jsvalue_t get_WIDGET_STATE_PRESSED_OF_CHECKED(
 }
 
 jsvalue_t get_WIDGET_STATE_OVER_OF_CHECKED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12091,8 +11257,7 @@ jsvalue_t get_WIDGET_STATE_OVER_OF_CHECKED(
 }
 
 jsvalue_t get_WIDGET_STATE_DISABLE_OF_CHECKED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12101,8 +11266,7 @@ jsvalue_t get_WIDGET_STATE_DISABLE_OF_CHECKED(
 }
 
 jsvalue_t get_WIDGET_STATE_FOCUSED_OF_CHECKED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12111,8 +11275,7 @@ jsvalue_t get_WIDGET_STATE_FOCUSED_OF_CHECKED(
 }
 
 jsvalue_t get_WIDGET_STATE_NORMAL_OF_ACTIVE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12121,8 +11284,7 @@ jsvalue_t get_WIDGET_STATE_NORMAL_OF_ACTIVE(
 }
 
 jsvalue_t get_WIDGET_STATE_PRESSED_OF_ACTIVE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12131,8 +11293,7 @@ jsvalue_t get_WIDGET_STATE_PRESSED_OF_ACTIVE(
 }
 
 jsvalue_t get_WIDGET_STATE_OVER_OF_ACTIVE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12141,8 +11302,7 @@ jsvalue_t get_WIDGET_STATE_OVER_OF_ACTIVE(
 }
 
 jsvalue_t get_WIDGET_STATE_DISABLE_OF_ACTIVE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12151,8 +11311,7 @@ jsvalue_t get_WIDGET_STATE_DISABLE_OF_ACTIVE(
 }
 
 jsvalue_t get_WIDGET_STATE_FOCUSED_OF_ACTIVE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12189,8 +11348,7 @@ ret_t widget_state_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_WIDGET_CURSOR_DEFAULT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12199,8 +11357,7 @@ jsvalue_t get_WIDGET_CURSOR_DEFAULT(
 }
 
 jsvalue_t get_WIDGET_CURSOR_EDIT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12209,8 +11366,7 @@ jsvalue_t get_WIDGET_CURSOR_EDIT(
 }
 
 jsvalue_t get_WIDGET_CURSOR_HAND(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12219,8 +11375,7 @@ jsvalue_t get_WIDGET_CURSOR_HAND(
 }
 
 jsvalue_t get_WIDGET_CURSOR_WAIT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12229,8 +11384,7 @@ jsvalue_t get_WIDGET_CURSOR_WAIT(
 }
 
 jsvalue_t get_WIDGET_CURSOR_CROSS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12239,8 +11393,7 @@ jsvalue_t get_WIDGET_CURSOR_CROSS(
 }
 
 jsvalue_t get_WIDGET_CURSOR_NO(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12249,8 +11402,7 @@ jsvalue_t get_WIDGET_CURSOR_NO(
 }
 
 jsvalue_t get_WIDGET_CURSOR_SIZENWSE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12259,8 +11411,7 @@ jsvalue_t get_WIDGET_CURSOR_SIZENWSE(
 }
 
 jsvalue_t get_WIDGET_CURSOR_SIZENESW(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12269,8 +11420,7 @@ jsvalue_t get_WIDGET_CURSOR_SIZENESW(
 }
 
 jsvalue_t get_WIDGET_CURSOR_SIZEWE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12279,8 +11429,7 @@ jsvalue_t get_WIDGET_CURSOR_SIZEWE(
 }
 
 jsvalue_t get_WIDGET_CURSOR_SIZENS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12289,8 +11438,7 @@ jsvalue_t get_WIDGET_CURSOR_SIZENS(
 }
 
 jsvalue_t get_WIDGET_CURSOR_SIZEALL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12315,8 +11463,7 @@ ret_t widget_cursor_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_widget_count_children(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12333,8 +11480,7 @@ jsvalue_t wrap_widget_count_children(
 }
 
 jsvalue_t wrap_widget_get_child(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12352,8 +11498,7 @@ jsvalue_t wrap_widget_get_child(
 }
 
 jsvalue_t wrap_widget_get_native_window(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12370,8 +11515,7 @@ jsvalue_t wrap_widget_get_native_window(
 }
 
 jsvalue_t wrap_widget_index_of(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12388,8 +11532,7 @@ jsvalue_t wrap_widget_index_of(
 }
 
 jsvalue_t wrap_widget_close_window(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12406,8 +11549,7 @@ jsvalue_t wrap_widget_close_window(
 }
 
 jsvalue_t wrap_widget_move(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12426,8 +11568,7 @@ jsvalue_t wrap_widget_move(
 }
 
 jsvalue_t wrap_widget_resize(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12446,8 +11587,7 @@ jsvalue_t wrap_widget_resize(
 }
 
 jsvalue_t wrap_widget_move_resize(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12468,8 +11608,7 @@ jsvalue_t wrap_widget_move_resize(
 }
 
 jsvalue_t wrap_widget_set_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12487,8 +11626,7 @@ jsvalue_t wrap_widget_set_value(
 }
 
 jsvalue_t wrap_widget_animate_value_to(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12507,8 +11645,7 @@ jsvalue_t wrap_widget_animate_value_to(
 }
 
 jsvalue_t wrap_widget_add_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12526,8 +11663,7 @@ jsvalue_t wrap_widget_add_value(
 }
 
 jsvalue_t wrap_widget_is_style_exist(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12548,8 +11684,7 @@ jsvalue_t wrap_widget_is_style_exist(
 }
 
 jsvalue_t wrap_widget_use_style(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12568,8 +11703,7 @@ jsvalue_t wrap_widget_use_style(
 }
 
 jsvalue_t wrap_widget_set_text_utf8(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12588,8 +11722,7 @@ jsvalue_t wrap_widget_set_text_utf8(
 }
 
 jsvalue_t wrap_widget_set_child_text_utf8(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12610,8 +11743,7 @@ jsvalue_t wrap_widget_set_child_text_utf8(
 }
 
 jsvalue_t wrap_widget_set_child_text_with_double(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12633,8 +11765,7 @@ jsvalue_t wrap_widget_set_child_text_with_double(
 }
 
 jsvalue_t wrap_widget_set_child_text_with_int(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12656,8 +11787,7 @@ jsvalue_t wrap_widget_set_child_text_with_int(
 }
 
 jsvalue_t wrap_widget_set_tr_text(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12676,8 +11806,7 @@ jsvalue_t wrap_widget_set_tr_text(
 }
 
 jsvalue_t wrap_widget_get_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12694,8 +11823,7 @@ jsvalue_t wrap_widget_get_value(
 }
 
 jsvalue_t wrap_widget_get_text(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12712,8 +11840,7 @@ jsvalue_t wrap_widget_get_text(
 }
 
 jsvalue_t wrap_widget_set_name(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12732,8 +11859,7 @@ jsvalue_t wrap_widget_set_name(
 }
 
 jsvalue_t wrap_widget_set_theme(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12752,8 +11878,7 @@ jsvalue_t wrap_widget_set_theme(
 }
 
 jsvalue_t wrap_widget_set_pointer_cursor(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12772,8 +11897,7 @@ jsvalue_t wrap_widget_set_pointer_cursor(
 }
 
 jsvalue_t wrap_widget_set_animation(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12792,8 +11916,7 @@ jsvalue_t wrap_widget_set_animation(
 }
 
 jsvalue_t wrap_widget_create_animator(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12812,8 +11935,7 @@ jsvalue_t wrap_widget_create_animator(
 }
 
 jsvalue_t wrap_widget_start_animator(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12832,8 +11954,7 @@ jsvalue_t wrap_widget_start_animator(
 }
 
 jsvalue_t wrap_widget_set_animator_time_scale(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12853,8 +11974,7 @@ jsvalue_t wrap_widget_set_animator_time_scale(
 }
 
 jsvalue_t wrap_widget_pause_animator(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12873,8 +11993,7 @@ jsvalue_t wrap_widget_pause_animator(
 }
 
 jsvalue_t wrap_widget_stop_animator(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12893,8 +12012,7 @@ jsvalue_t wrap_widget_stop_animator(
 }
 
 jsvalue_t wrap_widget_destroy_animator(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12913,8 +12031,7 @@ jsvalue_t wrap_widget_destroy_animator(
 }
 
 jsvalue_t wrap_widget_set_enable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12932,8 +12049,7 @@ jsvalue_t wrap_widget_set_enable(
 }
 
 jsvalue_t wrap_widget_set_feedback(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12951,8 +12067,7 @@ jsvalue_t wrap_widget_set_feedback(
 }
 
 jsvalue_t wrap_widget_set_auto_adjust_size(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12970,8 +12085,7 @@ jsvalue_t wrap_widget_set_auto_adjust_size(
 }
 
 jsvalue_t wrap_widget_set_floating(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -12989,8 +12103,7 @@ jsvalue_t wrap_widget_set_floating(
 }
 
 jsvalue_t wrap_widget_set_focused(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13008,8 +12121,7 @@ jsvalue_t wrap_widget_set_focused(
 }
 
 jsvalue_t wrap_widget_set_focusable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13027,8 +12139,7 @@ jsvalue_t wrap_widget_set_focusable(
 }
 
 jsvalue_t wrap_widget_set_state(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13047,8 +12158,7 @@ jsvalue_t wrap_widget_set_state(
 }
 
 jsvalue_t wrap_widget_set_opacity(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13066,8 +12176,7 @@ jsvalue_t wrap_widget_set_opacity(
 }
 
 jsvalue_t wrap_widget_set_dirty_rect_tolerance(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13085,8 +12194,7 @@ jsvalue_t wrap_widget_set_dirty_rect_tolerance(
 }
 
 jsvalue_t wrap_widget_destroy_children(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13103,8 +12211,7 @@ jsvalue_t wrap_widget_destroy_children(
 }
 
 jsvalue_t wrap_widget_add_child(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13122,8 +12229,7 @@ jsvalue_t wrap_widget_add_child(
 }
 
 jsvalue_t wrap_widget_remove_child(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13141,8 +12247,7 @@ jsvalue_t wrap_widget_remove_child(
 }
 
 jsvalue_t wrap_widget_insert_child(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13161,8 +12266,7 @@ jsvalue_t wrap_widget_insert_child(
 }
 
 jsvalue_t wrap_widget_restack(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13180,8 +12284,7 @@ jsvalue_t wrap_widget_restack(
 }
 
 jsvalue_t wrap_widget_child(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13200,8 +12303,7 @@ jsvalue_t wrap_widget_child(
 }
 
 jsvalue_t wrap_widget_lookup(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13221,8 +12323,7 @@ jsvalue_t wrap_widget_lookup(
 }
 
 jsvalue_t wrap_widget_lookup_by_type(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13242,8 +12343,7 @@ jsvalue_t wrap_widget_lookup_by_type(
 }
 
 jsvalue_t wrap_widget_set_visible(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13261,8 +12361,7 @@ jsvalue_t wrap_widget_set_visible(
 }
 
 jsvalue_t wrap_widget_set_visible_only(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13280,8 +12379,7 @@ jsvalue_t wrap_widget_set_visible_only(
 }
 
 jsvalue_t wrap_widget_set_sensitive(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13299,8 +12397,7 @@ jsvalue_t wrap_widget_set_sensitive(
 }
 
 jsvalue_t wrap_widget_off(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13318,8 +12415,7 @@ jsvalue_t wrap_widget_off(
 }
 
 jsvalue_t wrap_widget_invalidate_force(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13337,8 +12433,7 @@ jsvalue_t wrap_widget_invalidate_force(
 }
 
 jsvalue_t wrap_widget_set_prop_str(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13359,8 +12454,7 @@ jsvalue_t wrap_widget_set_prop_str(
 }
 
 jsvalue_t wrap_widget_get_prop_str(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13381,8 +12475,7 @@ jsvalue_t wrap_widget_get_prop_str(
 }
 
 jsvalue_t wrap_widget_set_prop_pointer(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13402,8 +12495,7 @@ jsvalue_t wrap_widget_set_prop_pointer(
 }
 
 jsvalue_t wrap_widget_get_prop_pointer(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13422,8 +12514,7 @@ jsvalue_t wrap_widget_get_prop_pointer(
 }
 
 jsvalue_t wrap_widget_set_prop_int(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13443,8 +12534,7 @@ jsvalue_t wrap_widget_set_prop_int(
 }
 
 jsvalue_t wrap_widget_get_prop_int(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13464,8 +12554,7 @@ jsvalue_t wrap_widget_get_prop_int(
 }
 
 jsvalue_t wrap_widget_set_prop_bool(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13485,8 +12574,7 @@ jsvalue_t wrap_widget_set_prop_bool(
 }
 
 jsvalue_t wrap_widget_get_prop_bool(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13506,8 +12594,7 @@ jsvalue_t wrap_widget_get_prop_bool(
 }
 
 jsvalue_t wrap_widget_is_window_opened(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13524,8 +12611,7 @@ jsvalue_t wrap_widget_is_window_opened(
 }
 
 jsvalue_t wrap_widget_is_parent_of(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13543,8 +12629,7 @@ jsvalue_t wrap_widget_is_parent_of(
 }
 
 jsvalue_t wrap_widget_is_direct_parent_of(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13562,8 +12647,7 @@ jsvalue_t wrap_widget_is_direct_parent_of(
 }
 
 jsvalue_t wrap_widget_is_window(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13580,8 +12664,7 @@ jsvalue_t wrap_widget_is_window(
 }
 
 jsvalue_t wrap_widget_is_system_bar(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13598,8 +12681,7 @@ jsvalue_t wrap_widget_is_system_bar(
 }
 
 jsvalue_t wrap_widget_is_normal_window(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13616,8 +12698,7 @@ jsvalue_t wrap_widget_is_normal_window(
 }
 
 jsvalue_t wrap_widget_is_dialog(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13634,8 +12715,7 @@ jsvalue_t wrap_widget_is_dialog(
 }
 
 jsvalue_t wrap_widget_is_popup(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13652,8 +12732,7 @@ jsvalue_t wrap_widget_is_popup(
 }
 
 jsvalue_t wrap_widget_is_overlay(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13670,8 +12749,7 @@ jsvalue_t wrap_widget_is_overlay(
 }
 
 jsvalue_t wrap_widget_is_opened_dialog(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13688,8 +12766,7 @@ jsvalue_t wrap_widget_is_opened_dialog(
 }
 
 jsvalue_t wrap_widget_is_opened_popup(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13706,8 +12783,7 @@ jsvalue_t wrap_widget_is_opened_popup(
 }
 
 jsvalue_t wrap_widget_is_keyboard(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13724,8 +12800,7 @@ jsvalue_t wrap_widget_is_keyboard(
 }
 
 jsvalue_t wrap_widget_is_designing_window(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13742,8 +12817,7 @@ jsvalue_t wrap_widget_is_designing_window(
 }
 
 jsvalue_t wrap_widget_is_window_manager(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13760,8 +12834,7 @@ jsvalue_t wrap_widget_is_window_manager(
 }
 
 jsvalue_t wrap_widget_get_window(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13778,8 +12851,7 @@ jsvalue_t wrap_widget_get_window(
 }
 
 jsvalue_t wrap_widget_get_window_manager(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13796,8 +12868,7 @@ jsvalue_t wrap_widget_get_window_manager(
 }
 
 jsvalue_t wrap_widget_get_type(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13814,8 +12885,7 @@ jsvalue_t wrap_widget_get_type(
 }
 
 jsvalue_t wrap_widget_clone(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13833,8 +12903,7 @@ jsvalue_t wrap_widget_clone(
 }
 
 jsvalue_t wrap_widget_equal(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13852,8 +12921,7 @@ jsvalue_t wrap_widget_equal(
 }
 
 jsvalue_t wrap_widget_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13870,8 +12938,7 @@ jsvalue_t wrap_widget_cast(
 }
 
 jsvalue_t wrap_widget_destroy(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13888,8 +12955,7 @@ jsvalue_t wrap_widget_destroy(
 }
 
 jsvalue_t wrap_widget_destroy_async(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13906,8 +12972,7 @@ jsvalue_t wrap_widget_destroy_async(
 }
 
 jsvalue_t wrap_widget_unref(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13924,8 +12989,7 @@ jsvalue_t wrap_widget_unref(
 }
 
 jsvalue_t wrap_widget_stroke_border_rect(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13944,8 +13008,7 @@ jsvalue_t wrap_widget_stroke_border_rect(
 }
 
 jsvalue_t wrap_widget_fill_bg_rect(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13965,8 +13028,7 @@ jsvalue_t wrap_widget_fill_bg_rect(
 }
 
 jsvalue_t wrap_widget_fill_fg_rect(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -13986,8 +13048,7 @@ jsvalue_t wrap_widget_fill_fg_rect(
 }
 
 jsvalue_t wrap_widget_dispatch_to_target(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14005,8 +13066,7 @@ jsvalue_t wrap_widget_dispatch_to_target(
 }
 
 jsvalue_t wrap_widget_dispatch_to_key_target(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14024,8 +13084,7 @@ jsvalue_t wrap_widget_dispatch_to_key_target(
 }
 
 jsvalue_t wrap_widget_get_style_type(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14042,8 +13101,7 @@ jsvalue_t wrap_widget_get_style_type(
 }
 
 jsvalue_t wrap_widget_update_style(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14060,8 +13118,7 @@ jsvalue_t wrap_widget_update_style(
 }
 
 jsvalue_t wrap_widget_update_style_recursive(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14078,8 +13135,7 @@ jsvalue_t wrap_widget_update_style_recursive(
 }
 
 jsvalue_t wrap_widget_set_as_key_target(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14096,8 +13152,7 @@ jsvalue_t wrap_widget_set_as_key_target(
 }
 
 jsvalue_t wrap_widget_focus_next(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14114,8 +13169,7 @@ jsvalue_t wrap_widget_focus_next(
 }
 
 jsvalue_t wrap_widget_focus_prev(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14132,8 +13186,7 @@ jsvalue_t wrap_widget_focus_prev(
 }
 
 jsvalue_t wrap_widget_get_state_for_style(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14152,8 +13205,7 @@ jsvalue_t wrap_widget_get_state_for_style(
 }
 
 jsvalue_t wrap_widget_layout(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14170,8 +13222,7 @@ jsvalue_t wrap_widget_layout(
 }
 
 jsvalue_t wrap_widget_set_self_layout(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14190,8 +13241,7 @@ jsvalue_t wrap_widget_set_self_layout(
 }
 
 jsvalue_t wrap_widget_set_children_layout(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14210,8 +13260,7 @@ jsvalue_t wrap_widget_set_children_layout(
 }
 
 jsvalue_t wrap_widget_set_self_layout_params(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14236,8 +13285,7 @@ jsvalue_t wrap_widget_set_self_layout_params(
 }
 
 jsvalue_t wrap_widget_set_style_int(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14257,8 +13305,7 @@ jsvalue_t wrap_widget_set_style_int(
 }
 
 jsvalue_t wrap_widget_set_style_str(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14279,8 +13326,7 @@ jsvalue_t wrap_widget_set_style_str(
 }
 
 jsvalue_t wrap_widget_set_style_color(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14300,8 +13346,7 @@ jsvalue_t wrap_widget_set_style_color(
 }
 
 jsvalue_t wrap_widget_t_get_prop_x(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14314,8 +13359,7 @@ jsvalue_t wrap_widget_t_get_prop_x(
 }
 
 jsvalue_t wrap_widget_t_get_prop_y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14328,8 +13372,7 @@ jsvalue_t wrap_widget_t_get_prop_y(
 }
 
 jsvalue_t wrap_widget_t_get_prop_w(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14342,8 +13385,7 @@ jsvalue_t wrap_widget_t_get_prop_w(
 }
 
 jsvalue_t wrap_widget_t_get_prop_h(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14356,8 +13398,7 @@ jsvalue_t wrap_widget_t_get_prop_h(
 }
 
 jsvalue_t wrap_widget_t_get_prop_name(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14370,8 +13411,7 @@ jsvalue_t wrap_widget_t_get_prop_name(
 }
 
 jsvalue_t wrap_widget_t_get_prop_pointer_cursor(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14384,8 +13424,7 @@ jsvalue_t wrap_widget_t_get_prop_pointer_cursor(
 }
 
 jsvalue_t wrap_widget_t_get_prop_tr_text(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14398,8 +13437,7 @@ jsvalue_t wrap_widget_t_get_prop_tr_text(
 }
 
 jsvalue_t wrap_widget_t_get_prop_style(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14412,8 +13450,7 @@ jsvalue_t wrap_widget_t_get_prop_style(
 }
 
 jsvalue_t wrap_widget_t_get_prop_animation(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14426,8 +13463,7 @@ jsvalue_t wrap_widget_t_get_prop_animation(
 }
 
 jsvalue_t wrap_widget_t_get_prop_enable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14440,8 +13476,7 @@ jsvalue_t wrap_widget_t_get_prop_enable(
 }
 
 jsvalue_t wrap_widget_t_get_prop_feedback(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14454,8 +13489,7 @@ jsvalue_t wrap_widget_t_get_prop_feedback(
 }
 
 jsvalue_t wrap_widget_t_get_prop_visible(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14468,8 +13502,7 @@ jsvalue_t wrap_widget_t_get_prop_visible(
 }
 
 jsvalue_t wrap_widget_t_get_prop_sensitive(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14482,8 +13515,7 @@ jsvalue_t wrap_widget_t_get_prop_sensitive(
 }
 
 jsvalue_t wrap_widget_t_get_prop_focusable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14496,8 +13528,7 @@ jsvalue_t wrap_widget_t_get_prop_focusable(
 }
 
 jsvalue_t wrap_widget_t_get_prop_with_focus_state(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14510,8 +13541,7 @@ jsvalue_t wrap_widget_t_get_prop_with_focus_state(
 }
 
 jsvalue_t wrap_widget_t_get_prop_auto_adjust_size(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14524,8 +13554,7 @@ jsvalue_t wrap_widget_t_get_prop_auto_adjust_size(
 }
 
 jsvalue_t wrap_widget_t_get_prop_floating(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14538,8 +13567,7 @@ jsvalue_t wrap_widget_t_get_prop_floating(
 }
 
 jsvalue_t wrap_widget_t_get_prop_dirty_rect_tolerance(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14552,8 +13580,7 @@ jsvalue_t wrap_widget_t_get_prop_dirty_rect_tolerance(
 }
 
 jsvalue_t wrap_widget_t_get_prop_parent(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14694,8 +13721,7 @@ ret_t widget_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_app_conf_save(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14711,8 +13737,7 @@ jsvalue_t wrap_app_conf_save(
 }
 
 jsvalue_t wrap_app_conf_reload(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14728,8 +13753,7 @@ jsvalue_t wrap_app_conf_reload(
 }
 
 jsvalue_t wrap_app_conf_deinit(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14745,8 +13769,7 @@ jsvalue_t wrap_app_conf_deinit(
 }
 
 jsvalue_t wrap_app_conf_exist(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14764,8 +13787,7 @@ jsvalue_t wrap_app_conf_exist(
 }
 
 jsvalue_t wrap_app_conf_set_int(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14784,8 +13806,7 @@ jsvalue_t wrap_app_conf_set_int(
 }
 
 jsvalue_t wrap_app_conf_set_int64(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14804,8 +13825,7 @@ jsvalue_t wrap_app_conf_set_int64(
 }
 
 jsvalue_t wrap_app_conf_set_bool(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14824,8 +13844,7 @@ jsvalue_t wrap_app_conf_set_bool(
 }
 
 jsvalue_t wrap_app_conf_set_double(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14844,8 +13863,7 @@ jsvalue_t wrap_app_conf_set_double(
 }
 
 jsvalue_t wrap_app_conf_set_str(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14865,8 +13883,7 @@ jsvalue_t wrap_app_conf_set_str(
 }
 
 jsvalue_t wrap_app_conf_get_int(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14885,8 +13902,7 @@ jsvalue_t wrap_app_conf_get_int(
 }
 
 jsvalue_t wrap_app_conf_get_int64(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14905,8 +13921,7 @@ jsvalue_t wrap_app_conf_get_int64(
 }
 
 jsvalue_t wrap_app_conf_get_bool(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14925,8 +13940,7 @@ jsvalue_t wrap_app_conf_get_bool(
 }
 
 jsvalue_t wrap_app_conf_get_double(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14945,8 +13959,7 @@ jsvalue_t wrap_app_conf_get_double(
 }
 
 jsvalue_t wrap_app_conf_get_str(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -14966,8 +13979,7 @@ jsvalue_t wrap_app_conf_get_str(
 }
 
 jsvalue_t wrap_app_conf_remove(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15005,8 +14017,7 @@ ret_t app_conf_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_INDICATOR_DEFAULT_PAINT_AUTO(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15015,8 +14026,7 @@ jsvalue_t get_INDICATOR_DEFAULT_PAINT_AUTO(
 }
 
 jsvalue_t get_INDICATOR_DEFAULT_PAINT_FILL_DOT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15025,8 +14035,7 @@ jsvalue_t get_INDICATOR_DEFAULT_PAINT_FILL_DOT(
 }
 
 jsvalue_t get_INDICATOR_DEFAULT_PAINT_STROKE_DOT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15035,8 +14044,7 @@ jsvalue_t get_INDICATOR_DEFAULT_PAINT_STROKE_DOT(
 }
 
 jsvalue_t get_INDICATOR_DEFAULT_PAINT_FILL_RECT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15045,8 +14053,7 @@ jsvalue_t get_INDICATOR_DEFAULT_PAINT_FILL_RECT(
 }
 
 jsvalue_t get_INDICATOR_DEFAULT_PAINT_STROKE_RECT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15065,8 +14072,7 @@ ret_t indicator_default_paint_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_ASSET_TYPE_NONE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15075,8 +14081,7 @@ jsvalue_t get_ASSET_TYPE_NONE(
 }
 
 jsvalue_t get_ASSET_TYPE_FONT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15085,8 +14090,7 @@ jsvalue_t get_ASSET_TYPE_FONT(
 }
 
 jsvalue_t get_ASSET_TYPE_IMAGE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15095,8 +14099,7 @@ jsvalue_t get_ASSET_TYPE_IMAGE(
 }
 
 jsvalue_t get_ASSET_TYPE_STYLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15105,8 +14108,7 @@ jsvalue_t get_ASSET_TYPE_STYLE(
 }
 
 jsvalue_t get_ASSET_TYPE_UI(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15115,8 +14117,7 @@ jsvalue_t get_ASSET_TYPE_UI(
 }
 
 jsvalue_t get_ASSET_TYPE_XML(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15125,8 +14126,7 @@ jsvalue_t get_ASSET_TYPE_XML(
 }
 
 jsvalue_t get_ASSET_TYPE_STRINGS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15135,8 +14135,7 @@ jsvalue_t get_ASSET_TYPE_STRINGS(
 }
 
 jsvalue_t get_ASSET_TYPE_SCRIPT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15145,8 +14144,7 @@ jsvalue_t get_ASSET_TYPE_SCRIPT(
 }
 
 jsvalue_t get_ASSET_TYPE_FLOW(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15155,8 +14153,7 @@ jsvalue_t get_ASSET_TYPE_FLOW(
 }
 
 jsvalue_t get_ASSET_TYPE_DATA(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15180,8 +14177,7 @@ ret_t asset_type_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_asset_info_t_get_prop_type(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15194,8 +14190,7 @@ jsvalue_t wrap_asset_info_t_get_prop_type(
 }
 
 jsvalue_t wrap_asset_info_t_get_prop_subtype(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15208,8 +14203,7 @@ jsvalue_t wrap_asset_info_t_get_prop_subtype(
 }
 
 jsvalue_t wrap_asset_info_t_get_prop_is_in_rom(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15222,8 +14216,7 @@ jsvalue_t wrap_asset_info_t_get_prop_is_in_rom(
 }
 
 jsvalue_t wrap_asset_info_t_get_prop_size(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15236,8 +14229,7 @@ jsvalue_t wrap_asset_info_t_get_prop_size(
 }
 
 jsvalue_t wrap_asset_info_t_get_prop_refcount(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15250,8 +14242,7 @@ jsvalue_t wrap_asset_info_t_get_prop_refcount(
 }
 
 jsvalue_t wrap_asset_info_t_get_prop_name(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15275,8 +14266,7 @@ ret_t asset_info_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_color_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15296,8 +14286,7 @@ jsvalue_t wrap_color_create(
 }
 
 jsvalue_t wrap_color_from_str(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15316,8 +14305,7 @@ jsvalue_t wrap_color_from_str(
 }
 
 jsvalue_t wrap_color_r(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15334,8 +14322,7 @@ jsvalue_t wrap_color_r(
 }
 
 jsvalue_t wrap_color_g(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15352,8 +14339,7 @@ jsvalue_t wrap_color_g(
 }
 
 jsvalue_t wrap_color_b(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15370,8 +14356,7 @@ jsvalue_t wrap_color_b(
 }
 
 jsvalue_t wrap_color_a(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15388,8 +14373,7 @@ jsvalue_t wrap_color_a(
 }
 
 jsvalue_t wrap_color_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15406,8 +14390,7 @@ jsvalue_t wrap_color_cast(
 }
 
 jsvalue_t wrap_color_t_set_prop_color(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15422,8 +14405,7 @@ jsvalue_t wrap_color_t_set_prop_color(
 };
 
 jsvalue_t wrap_color_t_get_prop_color(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15450,8 +14432,7 @@ ret_t color_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_date_time_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15467,8 +14448,7 @@ jsvalue_t wrap_date_time_create(
 }
 
 jsvalue_t wrap_date_time_set_year(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15486,8 +14466,7 @@ jsvalue_t wrap_date_time_set_year(
 }
 
 jsvalue_t wrap_date_time_set_month(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15505,8 +14484,7 @@ jsvalue_t wrap_date_time_set_month(
 }
 
 jsvalue_t wrap_date_time_set_day(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15524,8 +14502,7 @@ jsvalue_t wrap_date_time_set_day(
 }
 
 jsvalue_t wrap_date_time_set_hour(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15543,8 +14520,7 @@ jsvalue_t wrap_date_time_set_hour(
 }
 
 jsvalue_t wrap_date_time_set_minute(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15562,8 +14538,7 @@ jsvalue_t wrap_date_time_set_minute(
 }
 
 jsvalue_t wrap_date_time_set_second(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15581,8 +14556,7 @@ jsvalue_t wrap_date_time_set_second(
 }
 
 jsvalue_t wrap_date_time_set(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15599,8 +14573,7 @@ jsvalue_t wrap_date_time_set(
 }
 
 jsvalue_t wrap_date_time_from_time(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15618,8 +14591,7 @@ jsvalue_t wrap_date_time_from_time(
 }
 
 jsvalue_t wrap_date_time_to_time(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15636,8 +14608,7 @@ jsvalue_t wrap_date_time_to_time(
 }
 
 jsvalue_t wrap_date_time_add_delta(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15655,8 +14626,7 @@ jsvalue_t wrap_date_time_add_delta(
 }
 
 jsvalue_t wrap_date_time_is_leap(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15673,8 +14643,7 @@ jsvalue_t wrap_date_time_is_leap(
 }
 
 jsvalue_t wrap_date_time_get_days(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15692,8 +14661,7 @@ jsvalue_t wrap_date_time_get_days(
 }
 
 jsvalue_t wrap_date_time_get_wday(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15712,8 +14680,7 @@ jsvalue_t wrap_date_time_get_wday(
 }
 
 jsvalue_t wrap_date_time_get_month_name(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15730,8 +14697,7 @@ jsvalue_t wrap_date_time_get_month_name(
 }
 
 jsvalue_t wrap_date_time_get_wday_name(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15748,8 +14714,7 @@ jsvalue_t wrap_date_time_get_wday_name(
 }
 
 jsvalue_t wrap_date_time_t_get_prop_second(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15762,8 +14727,7 @@ jsvalue_t wrap_date_time_t_get_prop_second(
 }
 
 jsvalue_t wrap_date_time_t_get_prop_minute(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15776,8 +14740,7 @@ jsvalue_t wrap_date_time_t_get_prop_minute(
 }
 
 jsvalue_t wrap_date_time_t_get_prop_hour(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15790,8 +14753,7 @@ jsvalue_t wrap_date_time_t_get_prop_hour(
 }
 
 jsvalue_t wrap_date_time_t_get_prop_day(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15804,8 +14766,7 @@ jsvalue_t wrap_date_time_t_get_prop_day(
 }
 
 jsvalue_t wrap_date_time_t_get_prop_wday(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15818,8 +14779,7 @@ jsvalue_t wrap_date_time_t_get_prop_wday(
 }
 
 jsvalue_t wrap_date_time_t_get_prop_month(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15832,8 +14792,7 @@ jsvalue_t wrap_date_time_t_get_prop_month(
 }
 
 jsvalue_t wrap_date_time_t_get_prop_year(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15874,8 +14833,7 @@ ret_t date_time_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_EASING_LINEAR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15884,8 +14842,7 @@ jsvalue_t get_EASING_LINEAR(
 }
 
 jsvalue_t get_EASING_QUADRATIC_IN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15894,8 +14851,7 @@ jsvalue_t get_EASING_QUADRATIC_IN(
 }
 
 jsvalue_t get_EASING_QUADRATIC_OUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15904,8 +14860,7 @@ jsvalue_t get_EASING_QUADRATIC_OUT(
 }
 
 jsvalue_t get_EASING_QUADRATIC_INOUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15914,8 +14869,7 @@ jsvalue_t get_EASING_QUADRATIC_INOUT(
 }
 
 jsvalue_t get_EASING_CUBIC_IN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15924,8 +14878,7 @@ jsvalue_t get_EASING_CUBIC_IN(
 }
 
 jsvalue_t get_EASING_CUBIC_OUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15934,8 +14887,7 @@ jsvalue_t get_EASING_CUBIC_OUT(
 }
 
 jsvalue_t get_EASING_SIN_IN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15944,8 +14896,7 @@ jsvalue_t get_EASING_SIN_IN(
 }
 
 jsvalue_t get_EASING_SIN_OUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15954,8 +14905,7 @@ jsvalue_t get_EASING_SIN_OUT(
 }
 
 jsvalue_t get_EASING_SIN_INOUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15964,8 +14914,7 @@ jsvalue_t get_EASING_SIN_INOUT(
 }
 
 jsvalue_t get_EASING_POW_IN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15974,8 +14923,7 @@ jsvalue_t get_EASING_POW_IN(
 }
 
 jsvalue_t get_EASING_POW_OUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15984,8 +14932,7 @@ jsvalue_t get_EASING_POW_OUT(
 }
 
 jsvalue_t get_EASING_POW_INOUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -15994,8 +14941,7 @@ jsvalue_t get_EASING_POW_INOUT(
 }
 
 jsvalue_t get_EASING_CIRCULAR_IN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16004,8 +14950,7 @@ jsvalue_t get_EASING_CIRCULAR_IN(
 }
 
 jsvalue_t get_EASING_CIRCULAR_OUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16014,8 +14959,7 @@ jsvalue_t get_EASING_CIRCULAR_OUT(
 }
 
 jsvalue_t get_EASING_CIRCULAR_INOUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16024,8 +14968,7 @@ jsvalue_t get_EASING_CIRCULAR_INOUT(
 }
 
 jsvalue_t get_EASING_ELASTIC_IN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16034,8 +14977,7 @@ jsvalue_t get_EASING_ELASTIC_IN(
 }
 
 jsvalue_t get_EASING_ELASTIC_OUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16044,8 +14986,7 @@ jsvalue_t get_EASING_ELASTIC_OUT(
 }
 
 jsvalue_t get_EASING_ELASTIC_INOUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16054,8 +14995,7 @@ jsvalue_t get_EASING_ELASTIC_INOUT(
 }
 
 jsvalue_t get_EASING_BACK_IN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16064,8 +15004,7 @@ jsvalue_t get_EASING_BACK_IN(
 }
 
 jsvalue_t get_EASING_BACK_OUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16074,8 +15013,7 @@ jsvalue_t get_EASING_BACK_OUT(
 }
 
 jsvalue_t get_EASING_BACK_INOUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16084,8 +15022,7 @@ jsvalue_t get_EASING_BACK_INOUT(
 }
 
 jsvalue_t get_EASING_BOUNCE_IN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16094,8 +15031,7 @@ jsvalue_t get_EASING_BOUNCE_IN(
 }
 
 jsvalue_t get_EASING_BOUNCE_OUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16104,8 +15040,7 @@ jsvalue_t get_EASING_BOUNCE_OUT(
 }
 
 jsvalue_t get_EASING_BOUNCE_INOUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16148,8 +15083,7 @@ ret_t idle_manager_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_ENVOY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16158,8 +15092,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_ENVOY(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_FRACTALS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16168,8 +15101,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_FRACTALS(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_FUTURESPLASH(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16178,8 +15110,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_FUTURESPLASH(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_HTA(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16188,8 +15119,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_HTA(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_JSON(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16198,8 +15128,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_JSON(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_UBJSON(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16208,8 +15137,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_UBJSON(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_MAC_BINHEX40(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16218,8 +15146,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_MAC_BINHEX40(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_MSWORD(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16228,8 +15155,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_MSWORD(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_OCTET_STREAM(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16238,8 +15164,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_OCTET_STREAM(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_ODA(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16248,8 +15173,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_ODA(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_OLESCRIPT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16258,8 +15182,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_OLESCRIPT(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_PDF(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16268,8 +15191,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_PDF(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_PICS_RULES(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16278,8 +15200,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_PICS_RULES(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_PKCS10(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16288,8 +15209,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_PKCS10(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_PKIX_CRL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16298,8 +15218,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_PKIX_CRL(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_POSTSCRIPT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16308,8 +15227,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_POSTSCRIPT(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_RTF(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16318,8 +15236,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_RTF(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_VND_MS_EXCEL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16328,8 +15245,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_VND_MS_EXCEL(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_VND_MS_OUTLOOK(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16338,8 +15254,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_VND_MS_OUTLOOK(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_VND_MS_PKICERTSTORE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16348,8 +15263,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_VND_MS_PKICERTSTORE(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_VND_MS_PKISECCAT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16358,8 +15272,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_VND_MS_PKISECCAT(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_VND_MS_PKISTL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16368,8 +15281,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_VND_MS_PKISTL(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_VND_MS_POWERPOINT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16378,8 +15290,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_VND_MS_POWERPOINT(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_VND_MS_PROJECT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16388,8 +15299,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_VND_MS_PROJECT(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_VND_MS_WORKS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16398,8 +15308,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_VND_MS_WORKS(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_WINHLP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16408,8 +15317,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_WINHLP(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_BCPIO(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16418,8 +15326,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_BCPIO(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_CDF(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16428,8 +15335,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_CDF(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_COMPRESS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16438,8 +15344,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_COMPRESS(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_COMPRESSED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16448,8 +15353,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_COMPRESSED(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_CPIO(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16458,8 +15362,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_CPIO(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_CSH(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16468,8 +15371,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_CSH(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_DIRECTOR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16478,8 +15380,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_DIRECTOR(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_DVI(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16488,8 +15389,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_DVI(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_GTAR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16498,8 +15398,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_GTAR(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_GZIP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16508,8 +15407,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_GZIP(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_HDF(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16518,8 +15416,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_HDF(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_IPHONE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16528,8 +15425,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_IPHONE(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_JAVASCRIPT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16538,8 +15434,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_JAVASCRIPT(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_LATEX(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16548,8 +15443,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_LATEX(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_MSACCESS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16558,8 +15452,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_MSACCESS(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_MSCARDFILE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16568,8 +15461,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_MSCARDFILE(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_MSCLIP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16578,8 +15470,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_MSCLIP(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_MSDOWNLOAD(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16588,8 +15479,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_MSDOWNLOAD(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_MSMEDIAVIEW(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16598,8 +15488,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_MSMEDIAVIEW(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_MSMETAFILE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16608,8 +15497,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_MSMETAFILE(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_MSMONEY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16618,8 +15506,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_MSMONEY(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_MSPUBLISHER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16628,8 +15515,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_MSPUBLISHER(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_MSSCHEDULE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16638,8 +15524,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_MSSCHEDULE(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_MSTERMINAL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16648,8 +15533,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_MSTERMINAL(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_MSWRITE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16658,8 +15542,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_MSWRITE(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_NETCDF(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16668,8 +15551,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_NETCDF(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_PERFMON(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16678,8 +15560,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_PERFMON(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_PKCS12(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16688,8 +15569,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_PKCS12(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_SH(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16698,8 +15578,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_SH(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_SHAR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16708,8 +15587,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_SHAR(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_SHOCKWAVE_FLASH(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16718,8 +15596,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_SHOCKWAVE_FLASH(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_STUFFIT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16728,8 +15605,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_STUFFIT(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_SV4CPIO(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16738,8 +15614,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_SV4CPIO(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_SV4CRC(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16748,8 +15623,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_SV4CRC(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_TAR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16758,8 +15632,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_TAR(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_TCL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16768,8 +15641,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_TCL(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_TEX(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16778,8 +15650,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_TEX(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_TEXINFO(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16788,8 +15659,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_TEXINFO(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_TROFF(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16798,8 +15668,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_TROFF(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_X_USTAR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16808,8 +15677,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_X_USTAR(
 }
 
 jsvalue_t get_MIME_TYPE_APPLICATION_ZIP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16818,8 +15686,7 @@ jsvalue_t get_MIME_TYPE_APPLICATION_ZIP(
 }
 
 jsvalue_t get_MIME_TYPE_AUDIO_BASIC(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16828,8 +15695,7 @@ jsvalue_t get_MIME_TYPE_AUDIO_BASIC(
 }
 
 jsvalue_t get_MIME_TYPE_AUDIO_MID(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16838,8 +15704,7 @@ jsvalue_t get_MIME_TYPE_AUDIO_MID(
 }
 
 jsvalue_t get_MIME_TYPE_AUDIO_MPEG(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16848,8 +15713,7 @@ jsvalue_t get_MIME_TYPE_AUDIO_MPEG(
 }
 
 jsvalue_t get_MIME_TYPE_AUDIO_X_AIFF(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16858,8 +15722,7 @@ jsvalue_t get_MIME_TYPE_AUDIO_X_AIFF(
 }
 
 jsvalue_t get_MIME_TYPE_AUDIO_X_MPEGURL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16868,8 +15731,7 @@ jsvalue_t get_MIME_TYPE_AUDIO_X_MPEGURL(
 }
 
 jsvalue_t get_MIME_TYPE_AUDIO_X_WAV(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16878,8 +15740,7 @@ jsvalue_t get_MIME_TYPE_AUDIO_X_WAV(
 }
 
 jsvalue_t get_MIME_TYPE_IMAGE_BMP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16888,8 +15749,7 @@ jsvalue_t get_MIME_TYPE_IMAGE_BMP(
 }
 
 jsvalue_t get_MIME_TYPE_IMAGE_CIS_COD(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16898,8 +15758,7 @@ jsvalue_t get_MIME_TYPE_IMAGE_CIS_COD(
 }
 
 jsvalue_t get_MIME_TYPE_IMAGE_GIF(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16908,8 +15767,7 @@ jsvalue_t get_MIME_TYPE_IMAGE_GIF(
 }
 
 jsvalue_t get_MIME_TYPE_IMAGE_IEF(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16918,8 +15776,7 @@ jsvalue_t get_MIME_TYPE_IMAGE_IEF(
 }
 
 jsvalue_t get_MIME_TYPE_IMAGE_JPEG(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16928,8 +15785,7 @@ jsvalue_t get_MIME_TYPE_IMAGE_JPEG(
 }
 
 jsvalue_t get_MIME_TYPE_IMAGE_PIPEG(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16938,8 +15794,7 @@ jsvalue_t get_MIME_TYPE_IMAGE_PIPEG(
 }
 
 jsvalue_t get_MIME_TYPE_IMAGE_SVG_XML(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16948,8 +15803,7 @@ jsvalue_t get_MIME_TYPE_IMAGE_SVG_XML(
 }
 
 jsvalue_t get_MIME_TYPE_IMAGE_TIFF(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16958,8 +15812,7 @@ jsvalue_t get_MIME_TYPE_IMAGE_TIFF(
 }
 
 jsvalue_t get_MIME_TYPE_IMAGE_X_CMX(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16968,8 +15821,7 @@ jsvalue_t get_MIME_TYPE_IMAGE_X_CMX(
 }
 
 jsvalue_t get_MIME_TYPE_IMAGE_X_ICON(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16978,8 +15830,7 @@ jsvalue_t get_MIME_TYPE_IMAGE_X_ICON(
 }
 
 jsvalue_t get_MIME_TYPE_IMAGE_X_RGB(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16988,8 +15839,7 @@ jsvalue_t get_MIME_TYPE_IMAGE_X_RGB(
 }
 
 jsvalue_t get_MIME_TYPE_IMAGE_X_XBITMAP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -16998,8 +15848,7 @@ jsvalue_t get_MIME_TYPE_IMAGE_X_XBITMAP(
 }
 
 jsvalue_t get_MIME_TYPE_IMAGE_X_XPIXMAP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17008,8 +15857,7 @@ jsvalue_t get_MIME_TYPE_IMAGE_X_XPIXMAP(
 }
 
 jsvalue_t get_MIME_TYPE_IMAGE_X_XWINDOWDUMP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17018,8 +15866,7 @@ jsvalue_t get_MIME_TYPE_IMAGE_X_XWINDOWDUMP(
 }
 
 jsvalue_t get_MIME_TYPE_MESSAGE_RFC822(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17028,8 +15875,7 @@ jsvalue_t get_MIME_TYPE_MESSAGE_RFC822(
 }
 
 jsvalue_t get_MIME_TYPE_TEXT_CSS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17038,8 +15884,7 @@ jsvalue_t get_MIME_TYPE_TEXT_CSS(
 }
 
 jsvalue_t get_MIME_TYPE_TEXT_H323(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17048,8 +15893,7 @@ jsvalue_t get_MIME_TYPE_TEXT_H323(
 }
 
 jsvalue_t get_MIME_TYPE_TEXT_HTML(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17058,8 +15902,7 @@ jsvalue_t get_MIME_TYPE_TEXT_HTML(
 }
 
 jsvalue_t get_MIME_TYPE_TEXT_IULS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17068,8 +15911,7 @@ jsvalue_t get_MIME_TYPE_TEXT_IULS(
 }
 
 jsvalue_t get_MIME_TYPE_TEXT_PLAIN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17078,8 +15920,7 @@ jsvalue_t get_MIME_TYPE_TEXT_PLAIN(
 }
 
 jsvalue_t get_MIME_TYPE_TEXT_RICHTEXT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17088,8 +15929,7 @@ jsvalue_t get_MIME_TYPE_TEXT_RICHTEXT(
 }
 
 jsvalue_t get_MIME_TYPE_TEXT_SCRIPTLET(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17098,8 +15938,7 @@ jsvalue_t get_MIME_TYPE_TEXT_SCRIPTLET(
 }
 
 jsvalue_t get_MIME_TYPE_TEXT_WEBVIEWHTML(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17108,8 +15947,7 @@ jsvalue_t get_MIME_TYPE_TEXT_WEBVIEWHTML(
 }
 
 jsvalue_t get_MIME_TYPE_TEXT_X_COMPONENT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17118,8 +15956,7 @@ jsvalue_t get_MIME_TYPE_TEXT_X_COMPONENT(
 }
 
 jsvalue_t get_MIME_TYPE_TEXT_X_SETEXT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17128,8 +15965,7 @@ jsvalue_t get_MIME_TYPE_TEXT_X_SETEXT(
 }
 
 jsvalue_t get_MIME_TYPE_TEXT_X_VCARD(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17138,8 +15974,7 @@ jsvalue_t get_MIME_TYPE_TEXT_X_VCARD(
 }
 
 jsvalue_t get_MIME_TYPE_VIDEO_MPEG(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17148,8 +15983,7 @@ jsvalue_t get_MIME_TYPE_VIDEO_MPEG(
 }
 
 jsvalue_t get_MIME_TYPE_VIDEO_QUICKTIME(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17158,8 +15992,7 @@ jsvalue_t get_MIME_TYPE_VIDEO_QUICKTIME(
 }
 
 jsvalue_t get_MIME_TYPE_VIDEO_X_MSVIDEO(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17275,8 +16108,7 @@ ret_t MIME_TYPE_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_named_value_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17292,8 +16124,7 @@ jsvalue_t wrap_named_value_create(
 }
 
 jsvalue_t wrap_named_value_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17310,8 +16141,7 @@ jsvalue_t wrap_named_value_cast(
 }
 
 jsvalue_t wrap_named_value_set_name(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17330,8 +16160,7 @@ jsvalue_t wrap_named_value_set_name(
 }
 
 jsvalue_t wrap_named_value_set_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17349,8 +16178,7 @@ jsvalue_t wrap_named_value_set_value(
 }
 
 jsvalue_t wrap_named_value_get_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17367,8 +16195,7 @@ jsvalue_t wrap_named_value_get_value(
 }
 
 jsvalue_t wrap_named_value_t_get_prop_name(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17392,8 +16219,7 @@ ret_t named_value_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_OBJECT_CMD_SAVE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17402,8 +16228,7 @@ jsvalue_t get_OBJECT_CMD_SAVE(
 }
 
 jsvalue_t get_OBJECT_CMD_RELOAD(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17412,8 +16237,7 @@ jsvalue_t get_OBJECT_CMD_RELOAD(
 }
 
 jsvalue_t get_OBJECT_CMD_MOVE_UP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17422,8 +16246,7 @@ jsvalue_t get_OBJECT_CMD_MOVE_UP(
 }
 
 jsvalue_t get_OBJECT_CMD_MOVE_DOWN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17432,8 +16255,7 @@ jsvalue_t get_OBJECT_CMD_MOVE_DOWN(
 }
 
 jsvalue_t get_OBJECT_CMD_REMOVE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17442,8 +16264,7 @@ jsvalue_t get_OBJECT_CMD_REMOVE(
 }
 
 jsvalue_t get_OBJECT_CMD_REMOVE_CHECKED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17452,8 +16273,7 @@ jsvalue_t get_OBJECT_CMD_REMOVE_CHECKED(
 }
 
 jsvalue_t get_OBJECT_CMD_CLEAR(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17462,8 +16282,7 @@ jsvalue_t get_OBJECT_CMD_CLEAR(
 }
 
 jsvalue_t get_OBJECT_CMD_ADD(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17472,8 +16291,7 @@ jsvalue_t get_OBJECT_CMD_ADD(
 }
 
 jsvalue_t get_OBJECT_CMD_DETAIL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17482,8 +16300,7 @@ jsvalue_t get_OBJECT_CMD_DETAIL(
 }
 
 jsvalue_t get_OBJECT_CMD_EDIT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17507,8 +16324,7 @@ ret_t object_cmd_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_OBJECT_PROP_SIZE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17517,8 +16333,7 @@ jsvalue_t get_OBJECT_PROP_SIZE(
 }
 
 jsvalue_t get_OBJECT_PROP_CHECKED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17534,8 +16349,7 @@ ret_t object_prop_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_rlog_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17555,8 +16369,7 @@ jsvalue_t wrap_rlog_create(
 }
 
 jsvalue_t wrap_rlog_write(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17582,8 +16395,7 @@ ret_t rlog_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_time_now_s(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17599,8 +16411,7 @@ jsvalue_t wrap_time_now_s(
 }
 
 jsvalue_t wrap_time_now_ms(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17616,8 +16427,7 @@ jsvalue_t wrap_time_now_ms(
 }
 
 jsvalue_t wrap_time_now_us(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17646,8 +16456,7 @@ ret_t timer_manager_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_RET_OK(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17656,8 +16465,7 @@ jsvalue_t get_RET_OK(
 }
 
 jsvalue_t get_RET_OOM(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17666,8 +16474,7 @@ jsvalue_t get_RET_OOM(
 }
 
 jsvalue_t get_RET_FAIL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17676,8 +16483,7 @@ jsvalue_t get_RET_FAIL(
 }
 
 jsvalue_t get_RET_NOT_IMPL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17686,8 +16492,7 @@ jsvalue_t get_RET_NOT_IMPL(
 }
 
 jsvalue_t get_RET_QUIT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17696,8 +16501,7 @@ jsvalue_t get_RET_QUIT(
 }
 
 jsvalue_t get_RET_FOUND(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17706,8 +16510,7 @@ jsvalue_t get_RET_FOUND(
 }
 
 jsvalue_t get_RET_BUSY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17716,8 +16519,7 @@ jsvalue_t get_RET_BUSY(
 }
 
 jsvalue_t get_RET_REMOVE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17726,8 +16528,7 @@ jsvalue_t get_RET_REMOVE(
 }
 
 jsvalue_t get_RET_REPEAT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17736,8 +16537,7 @@ jsvalue_t get_RET_REPEAT(
 }
 
 jsvalue_t get_RET_NOT_FOUND(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17746,8 +16546,7 @@ jsvalue_t get_RET_NOT_FOUND(
 }
 
 jsvalue_t get_RET_DONE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17756,8 +16555,7 @@ jsvalue_t get_RET_DONE(
 }
 
 jsvalue_t get_RET_STOP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17766,8 +16564,7 @@ jsvalue_t get_RET_STOP(
 }
 
 jsvalue_t get_RET_SKIP(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17776,8 +16573,7 @@ jsvalue_t get_RET_SKIP(
 }
 
 jsvalue_t get_RET_CONTINUE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17786,8 +16582,7 @@ jsvalue_t get_RET_CONTINUE(
 }
 
 jsvalue_t get_RET_OBJECT_CHANGED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17796,8 +16591,7 @@ jsvalue_t get_RET_OBJECT_CHANGED(
 }
 
 jsvalue_t get_RET_ITEMS_CHANGED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17806,8 +16600,7 @@ jsvalue_t get_RET_ITEMS_CHANGED(
 }
 
 jsvalue_t get_RET_BAD_PARAMS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17816,8 +16609,7 @@ jsvalue_t get_RET_BAD_PARAMS(
 }
 
 jsvalue_t get_RET_TIMEOUT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17826,8 +16618,7 @@ jsvalue_t get_RET_TIMEOUT(
 }
 
 jsvalue_t get_RET_CRC(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17836,8 +16627,7 @@ jsvalue_t get_RET_CRC(
 }
 
 jsvalue_t get_RET_IO(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17846,8 +16636,7 @@ jsvalue_t get_RET_IO(
 }
 
 jsvalue_t get_RET_EOS(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17856,8 +16645,7 @@ jsvalue_t get_RET_EOS(
 }
 
 jsvalue_t get_RET_NOT_MODIFIED(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17893,8 +16681,7 @@ ret_t ret_t_init(JSContext *ctx) {
 }
 
 jsvalue_t get_VALUE_TYPE_INVALID(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17903,8 +16690,7 @@ jsvalue_t get_VALUE_TYPE_INVALID(
 }
 
 jsvalue_t get_VALUE_TYPE_BOOL(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17913,8 +16699,7 @@ jsvalue_t get_VALUE_TYPE_BOOL(
 }
 
 jsvalue_t get_VALUE_TYPE_INT8(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17923,8 +16708,7 @@ jsvalue_t get_VALUE_TYPE_INT8(
 }
 
 jsvalue_t get_VALUE_TYPE_UINT8(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17933,8 +16717,7 @@ jsvalue_t get_VALUE_TYPE_UINT8(
 }
 
 jsvalue_t get_VALUE_TYPE_INT16(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17943,8 +16726,7 @@ jsvalue_t get_VALUE_TYPE_INT16(
 }
 
 jsvalue_t get_VALUE_TYPE_UINT16(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17953,8 +16735,7 @@ jsvalue_t get_VALUE_TYPE_UINT16(
 }
 
 jsvalue_t get_VALUE_TYPE_INT32(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17963,8 +16744,7 @@ jsvalue_t get_VALUE_TYPE_INT32(
 }
 
 jsvalue_t get_VALUE_TYPE_UINT32(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17973,8 +16753,7 @@ jsvalue_t get_VALUE_TYPE_UINT32(
 }
 
 jsvalue_t get_VALUE_TYPE_INT64(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17983,8 +16762,7 @@ jsvalue_t get_VALUE_TYPE_INT64(
 }
 
 jsvalue_t get_VALUE_TYPE_UINT64(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -17993,8 +16771,7 @@ jsvalue_t get_VALUE_TYPE_UINT64(
 }
 
 jsvalue_t get_VALUE_TYPE_POINTER(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18003,8 +16780,7 @@ jsvalue_t get_VALUE_TYPE_POINTER(
 }
 
 jsvalue_t get_VALUE_TYPE_FLOAT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18013,8 +16789,7 @@ jsvalue_t get_VALUE_TYPE_FLOAT(
 }
 
 jsvalue_t get_VALUE_TYPE_FLOAT32(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18023,8 +16798,7 @@ jsvalue_t get_VALUE_TYPE_FLOAT32(
 }
 
 jsvalue_t get_VALUE_TYPE_DOUBLE(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18033,8 +16807,7 @@ jsvalue_t get_VALUE_TYPE_DOUBLE(
 }
 
 jsvalue_t get_VALUE_TYPE_STRING(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18043,8 +16816,7 @@ jsvalue_t get_VALUE_TYPE_STRING(
 }
 
 jsvalue_t get_VALUE_TYPE_WSTRING(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18053,8 +16825,7 @@ jsvalue_t get_VALUE_TYPE_WSTRING(
 }
 
 jsvalue_t get_VALUE_TYPE_OBJECT(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18063,8 +16834,7 @@ jsvalue_t get_VALUE_TYPE_OBJECT(
 }
 
 jsvalue_t get_VALUE_TYPE_SIZED_STRING(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18073,8 +16843,7 @@ jsvalue_t get_VALUE_TYPE_SIZED_STRING(
 }
 
 jsvalue_t get_VALUE_TYPE_BINARY(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18083,8 +16852,7 @@ jsvalue_t get_VALUE_TYPE_BINARY(
 }
 
 jsvalue_t get_VALUE_TYPE_UBJSON(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18093,8 +16861,7 @@ jsvalue_t get_VALUE_TYPE_UBJSON(
 }
 
 jsvalue_t get_VALUE_TYPE_TOKEN(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18129,8 +16896,7 @@ ret_t value_type_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_assets_manager(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18146,8 +16912,7 @@ jsvalue_t wrap_assets_manager(
 }
 
 jsvalue_t wrap_assets_manager_set_theme(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18166,8 +16931,7 @@ jsvalue_t wrap_assets_manager_set_theme(
 }
 
 jsvalue_t wrap_assets_manager_ref(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18187,8 +16951,7 @@ jsvalue_t wrap_assets_manager_ref(
 }
 
 jsvalue_t wrap_assets_manager_ref_ex(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18209,8 +16972,7 @@ jsvalue_t wrap_assets_manager_ref_ex(
 }
 
 jsvalue_t wrap_assets_manager_unref(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18238,8 +17000,7 @@ ret_t assets_manager_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_wheel_event_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18256,8 +17017,7 @@ jsvalue_t wrap_wheel_event_cast(
 }
 
 jsvalue_t wrap_wheel_event_t_get_prop_dy(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18270,8 +17030,7 @@ jsvalue_t wrap_wheel_event_t_get_prop_dy(
 }
 
 jsvalue_t wrap_wheel_event_t_get_prop_alt(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18284,8 +17043,7 @@ jsvalue_t wrap_wheel_event_t_get_prop_alt(
 }
 
 jsvalue_t wrap_wheel_event_t_get_prop_ctrl(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18298,8 +17056,7 @@ jsvalue_t wrap_wheel_event_t_get_prop_ctrl(
 }
 
 jsvalue_t wrap_wheel_event_t_get_prop_shift(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18322,8 +17079,7 @@ ret_t wheel_event_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_orientation_event_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18340,8 +17096,7 @@ jsvalue_t wrap_orientation_event_cast(
 }
 
 jsvalue_t wrap_orientation_event_t_get_prop_orientation(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18361,8 +17116,7 @@ ret_t orientation_event_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_value_change_event_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18385,8 +17139,7 @@ ret_t value_change_event_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_pointer_event_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18403,8 +17156,7 @@ jsvalue_t wrap_pointer_event_cast(
 }
 
 jsvalue_t wrap_pointer_event_t_get_prop_x(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18417,8 +17169,7 @@ jsvalue_t wrap_pointer_event_t_get_prop_x(
 }
 
 jsvalue_t wrap_pointer_event_t_get_prop_y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18431,8 +17182,7 @@ jsvalue_t wrap_pointer_event_t_get_prop_y(
 }
 
 jsvalue_t wrap_pointer_event_t_get_prop_button(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18445,8 +17195,7 @@ jsvalue_t wrap_pointer_event_t_get_prop_button(
 }
 
 jsvalue_t wrap_pointer_event_t_get_prop_pressed(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18459,8 +17208,7 @@ jsvalue_t wrap_pointer_event_t_get_prop_pressed(
 }
 
 jsvalue_t wrap_pointer_event_t_get_prop_alt(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18473,8 +17221,7 @@ jsvalue_t wrap_pointer_event_t_get_prop_alt(
 }
 
 jsvalue_t wrap_pointer_event_t_get_prop_ctrl(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18487,8 +17234,7 @@ jsvalue_t wrap_pointer_event_t_get_prop_ctrl(
 }
 
 jsvalue_t wrap_pointer_event_t_get_prop_cmd(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18501,8 +17247,7 @@ jsvalue_t wrap_pointer_event_t_get_prop_cmd(
 }
 
 jsvalue_t wrap_pointer_event_t_get_prop_menu(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18515,8 +17260,7 @@ jsvalue_t wrap_pointer_event_t_get_prop_menu(
 }
 
 jsvalue_t wrap_pointer_event_t_get_prop_shift(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18544,8 +17288,7 @@ ret_t pointer_event_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_key_event_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18562,8 +17305,7 @@ jsvalue_t wrap_key_event_cast(
 }
 
 jsvalue_t wrap_key_event_t_get_prop_key(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18576,8 +17318,7 @@ jsvalue_t wrap_key_event_t_get_prop_key(
 }
 
 jsvalue_t wrap_key_event_t_get_prop_alt(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18590,8 +17331,7 @@ jsvalue_t wrap_key_event_t_get_prop_alt(
 }
 
 jsvalue_t wrap_key_event_t_get_prop_lalt(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18604,8 +17344,7 @@ jsvalue_t wrap_key_event_t_get_prop_lalt(
 }
 
 jsvalue_t wrap_key_event_t_get_prop_ralt(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18618,8 +17357,7 @@ jsvalue_t wrap_key_event_t_get_prop_ralt(
 }
 
 jsvalue_t wrap_key_event_t_get_prop_ctrl(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18632,8 +17370,7 @@ jsvalue_t wrap_key_event_t_get_prop_ctrl(
 }
 
 jsvalue_t wrap_key_event_t_get_prop_lctrl(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18646,8 +17383,7 @@ jsvalue_t wrap_key_event_t_get_prop_lctrl(
 }
 
 jsvalue_t wrap_key_event_t_get_prop_rctrl(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18660,8 +17396,7 @@ jsvalue_t wrap_key_event_t_get_prop_rctrl(
 }
 
 jsvalue_t wrap_key_event_t_get_prop_shift(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18674,8 +17409,7 @@ jsvalue_t wrap_key_event_t_get_prop_shift(
 }
 
 jsvalue_t wrap_key_event_t_get_prop_lshift(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18688,8 +17422,7 @@ jsvalue_t wrap_key_event_t_get_prop_lshift(
 }
 
 jsvalue_t wrap_key_event_t_get_prop_rshift(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18702,8 +17435,7 @@ jsvalue_t wrap_key_event_t_get_prop_rshift(
 }
 
 jsvalue_t wrap_key_event_t_get_prop_cmd(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18716,8 +17448,7 @@ jsvalue_t wrap_key_event_t_get_prop_cmd(
 }
 
 jsvalue_t wrap_key_event_t_get_prop_menu(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18730,8 +17461,7 @@ jsvalue_t wrap_key_event_t_get_prop_menu(
 }
 
 jsvalue_t wrap_key_event_t_get_prop_capslock(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18763,8 +17493,7 @@ ret_t key_event_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_paint_event_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18781,8 +17510,7 @@ jsvalue_t wrap_paint_event_cast(
 }
 
 jsvalue_t wrap_paint_event_t_get_prop_c(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18802,8 +17530,7 @@ ret_t paint_event_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_window_event_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18820,8 +17547,7 @@ jsvalue_t wrap_window_event_cast(
 }
 
 jsvalue_t wrap_window_event_t_get_prop_window(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18841,8 +17567,7 @@ ret_t window_event_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_multi_gesture_event_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18859,8 +17584,7 @@ jsvalue_t wrap_multi_gesture_event_cast(
 }
 
 jsvalue_t wrap_multi_gesture_event_t_get_prop_x(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18873,8 +17597,7 @@ jsvalue_t wrap_multi_gesture_event_t_get_prop_x(
 }
 
 jsvalue_t wrap_multi_gesture_event_t_get_prop_y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18887,8 +17610,7 @@ jsvalue_t wrap_multi_gesture_event_t_get_prop_y(
 }
 
 jsvalue_t wrap_multi_gesture_event_t_get_prop_rotation(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18901,8 +17623,7 @@ jsvalue_t wrap_multi_gesture_event_t_get_prop_rotation(
 }
 
 jsvalue_t wrap_multi_gesture_event_t_get_prop_distance(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18925,8 +17646,7 @@ ret_t multi_gesture_event_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_assets_event_t_get_prop_type(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18939,8 +17659,7 @@ jsvalue_t wrap_assets_event_t_get_prop_type(
 }
 
 jsvalue_t wrap_assets_event_t_get_prop_asset_info(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18960,8 +17679,7 @@ ret_t assets_event_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_image_base_set_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18980,8 +17698,7 @@ jsvalue_t wrap_image_base_set_image(
 }
 
 jsvalue_t wrap_image_base_set_rotation(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -18999,8 +17716,7 @@ jsvalue_t wrap_image_base_set_rotation(
 }
 
 jsvalue_t wrap_image_base_set_scale(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19019,8 +17735,7 @@ jsvalue_t wrap_image_base_set_scale(
 }
 
 jsvalue_t wrap_image_base_set_anchor(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19039,8 +17754,7 @@ jsvalue_t wrap_image_base_set_anchor(
 }
 
 jsvalue_t wrap_image_base_set_selected(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19058,8 +17772,7 @@ jsvalue_t wrap_image_base_set_selected(
 }
 
 jsvalue_t wrap_image_base_set_selectable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19077,8 +17790,7 @@ jsvalue_t wrap_image_base_set_selectable(
 }
 
 jsvalue_t wrap_image_base_set_clickable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19096,8 +17808,7 @@ jsvalue_t wrap_image_base_set_clickable(
 }
 
 jsvalue_t wrap_image_base_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19114,8 +17825,7 @@ jsvalue_t wrap_image_base_cast(
 }
 
 jsvalue_t wrap_image_base_t_get_prop_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19128,8 +17838,7 @@ jsvalue_t wrap_image_base_t_get_prop_image(
 }
 
 jsvalue_t wrap_image_base_t_get_prop_anchor_x(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19142,8 +17851,7 @@ jsvalue_t wrap_image_base_t_get_prop_anchor_x(
 }
 
 jsvalue_t wrap_image_base_t_get_prop_anchor_y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19156,8 +17864,7 @@ jsvalue_t wrap_image_base_t_get_prop_anchor_y(
 }
 
 jsvalue_t wrap_image_base_t_get_prop_scale_x(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19170,8 +17877,7 @@ jsvalue_t wrap_image_base_t_get_prop_scale_x(
 }
 
 jsvalue_t wrap_image_base_t_get_prop_scale_y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19184,8 +17890,7 @@ jsvalue_t wrap_image_base_t_get_prop_scale_y(
 }
 
 jsvalue_t wrap_image_base_t_get_prop_rotation(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19198,8 +17903,7 @@ jsvalue_t wrap_image_base_t_get_prop_rotation(
 }
 
 jsvalue_t wrap_image_base_t_get_prop_clickable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19212,8 +17916,7 @@ jsvalue_t wrap_image_base_t_get_prop_clickable(
 }
 
 jsvalue_t wrap_image_base_t_get_prop_selectable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19226,8 +17929,7 @@ jsvalue_t wrap_image_base_t_get_prop_selectable(
 }
 
 jsvalue_t wrap_image_base_t_get_prop_selected(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19262,8 +17964,7 @@ ret_t image_base_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_style_mutable_set_name(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19282,8 +17983,7 @@ jsvalue_t wrap_style_mutable_set_name(
 }
 
 jsvalue_t wrap_style_mutable_set_int(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19305,8 +18005,7 @@ jsvalue_t wrap_style_mutable_set_int(
 }
 
 jsvalue_t wrap_style_mutable_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19323,8 +18022,7 @@ jsvalue_t wrap_style_mutable_cast(
 }
 
 jsvalue_t wrap_style_mutable_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19341,8 +18039,7 @@ jsvalue_t wrap_style_mutable_create(
 }
 
 jsvalue_t wrap_style_mutable_t_get_prop_name(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19365,8 +18062,7 @@ ret_t style_mutable_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_window_base_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19383,8 +18079,7 @@ jsvalue_t wrap_window_base_cast(
 }
 
 jsvalue_t wrap_window_base_t_get_prop_theme(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19397,8 +18092,7 @@ jsvalue_t wrap_window_base_t_get_prop_theme(
 }
 
 jsvalue_t wrap_window_base_t_get_prop_design_w(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19411,8 +18105,7 @@ jsvalue_t wrap_window_base_t_get_prop_design_w(
 }
 
 jsvalue_t wrap_window_base_t_get_prop_design_h(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19425,8 +18118,7 @@ jsvalue_t wrap_window_base_t_get_prop_design_h(
 }
 
 jsvalue_t wrap_window_base_t_get_prop_auto_scale_children_x(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19439,8 +18131,7 @@ jsvalue_t wrap_window_base_t_get_prop_auto_scale_children_x(
 }
 
 jsvalue_t wrap_window_base_t_get_prop_auto_scale_children_y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19453,8 +18144,7 @@ jsvalue_t wrap_window_base_t_get_prop_auto_scale_children_y(
 }
 
 jsvalue_t wrap_window_base_t_get_prop_auto_scale_children_w(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19467,8 +18157,7 @@ jsvalue_t wrap_window_base_t_get_prop_auto_scale_children_w(
 }
 
 jsvalue_t wrap_window_base_t_get_prop_auto_scale_children_h(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19481,8 +18170,7 @@ jsvalue_t wrap_window_base_t_get_prop_auto_scale_children_h(
 }
 
 jsvalue_t wrap_window_base_t_get_prop_disable_anim(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19495,8 +18183,7 @@ jsvalue_t wrap_window_base_t_get_prop_disable_anim(
 }
 
 jsvalue_t wrap_window_base_t_get_prop_closable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19509,8 +18196,7 @@ jsvalue_t wrap_window_base_t_get_prop_closable(
 }
 
 jsvalue_t wrap_window_base_t_get_prop_open_anim_hint(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19523,8 +18209,7 @@ jsvalue_t wrap_window_base_t_get_prop_open_anim_hint(
 }
 
 jsvalue_t wrap_window_base_t_get_prop_close_anim_hint(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19537,8 +18222,7 @@ jsvalue_t wrap_window_base_t_get_prop_close_anim_hint(
 }
 
 jsvalue_t wrap_window_base_t_get_prop_move_focus_prev_key(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19551,8 +18235,7 @@ jsvalue_t wrap_window_base_t_get_prop_move_focus_prev_key(
 }
 
 jsvalue_t wrap_window_base_t_get_prop_move_focus_next_key(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19565,8 +18248,7 @@ jsvalue_t wrap_window_base_t_get_prop_move_focus_next_key(
 }
 
 jsvalue_t wrap_window_base_t_get_prop_move_focus_up_key(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19579,8 +18261,7 @@ jsvalue_t wrap_window_base_t_get_prop_move_focus_up_key(
 }
 
 jsvalue_t wrap_window_base_t_get_prop_move_focus_down_key(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19593,8 +18274,7 @@ jsvalue_t wrap_window_base_t_get_prop_move_focus_down_key(
 }
 
 jsvalue_t wrap_window_base_t_get_prop_move_focus_left_key(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19607,8 +18287,7 @@ jsvalue_t wrap_window_base_t_get_prop_move_focus_left_key(
 }
 
 jsvalue_t wrap_window_base_t_get_prop_move_focus_right_key(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19621,8 +18300,7 @@ jsvalue_t wrap_window_base_t_get_prop_move_focus_right_key(
 }
 
 jsvalue_t wrap_window_base_t_get_prop_single_instance(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19659,8 +18337,7 @@ ret_t window_base_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_window_manager(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19676,8 +18353,7 @@ jsvalue_t wrap_window_manager(
 }
 
 jsvalue_t wrap_window_manager_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19694,8 +18370,7 @@ jsvalue_t wrap_window_manager_cast(
 }
 
 jsvalue_t wrap_window_manager_get_top_main_window(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19712,8 +18387,7 @@ jsvalue_t wrap_window_manager_get_top_main_window(
 }
 
 jsvalue_t wrap_window_manager_get_top_window(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19730,8 +18404,7 @@ jsvalue_t wrap_window_manager_get_top_window(
 }
 
 jsvalue_t wrap_window_manager_get_prev_window(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19748,8 +18421,7 @@ jsvalue_t wrap_window_manager_get_prev_window(
 }
 
 jsvalue_t wrap_window_manager_get_pointer_x(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19766,8 +18438,7 @@ jsvalue_t wrap_window_manager_get_pointer_x(
 }
 
 jsvalue_t wrap_window_manager_get_pointer_y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19784,8 +18455,7 @@ jsvalue_t wrap_window_manager_get_pointer_y(
 }
 
 jsvalue_t wrap_window_manager_get_pointer_pressed(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19802,8 +18472,7 @@ jsvalue_t wrap_window_manager_get_pointer_pressed(
 }
 
 jsvalue_t wrap_window_manager_is_animating(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19820,8 +18489,7 @@ jsvalue_t wrap_window_manager_is_animating(
 }
 
 jsvalue_t wrap_window_manager_set_show_fps(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19839,8 +18507,7 @@ jsvalue_t wrap_window_manager_set_show_fps(
 }
 
 jsvalue_t wrap_window_manager_set_screen_saver_time(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19858,8 +18525,7 @@ jsvalue_t wrap_window_manager_set_screen_saver_time(
 }
 
 jsvalue_t wrap_window_manager_set_cursor(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19878,8 +18544,7 @@ jsvalue_t wrap_window_manager_set_cursor(
 }
 
 jsvalue_t wrap_window_manager_back(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19896,8 +18561,7 @@ jsvalue_t wrap_window_manager_back(
 }
 
 jsvalue_t wrap_window_manager_back_to_home(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19914,8 +18578,7 @@ jsvalue_t wrap_window_manager_back_to_home(
 }
 
 jsvalue_t wrap_window_manager_back_to(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19934,8 +18597,7 @@ jsvalue_t wrap_window_manager_back_to(
 }
 
 jsvalue_t wrap_window_manager_resize(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19954,8 +18616,7 @@ jsvalue_t wrap_window_manager_resize(
 }
 
 jsvalue_t wrap_window_manager_close_all(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -19994,8 +18655,7 @@ ret_t window_manager_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_canvas_widget_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20016,8 +18676,7 @@ jsvalue_t wrap_canvas_widget_create(
 }
 
 jsvalue_t wrap_canvas_widget_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20041,8 +18700,7 @@ ret_t canvas_widget_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_color_component_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20065,8 +18723,7 @@ ret_t color_component_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_color_picker_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20087,8 +18744,7 @@ jsvalue_t wrap_color_picker_create(
 }
 
 jsvalue_t wrap_color_picker_set_color(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20107,8 +18763,7 @@ jsvalue_t wrap_color_picker_set_color(
 }
 
 jsvalue_t wrap_color_picker_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20125,8 +18780,7 @@ jsvalue_t wrap_color_picker_cast(
 }
 
 jsvalue_t wrap_color_picker_t_get_prop_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20148,8 +18802,7 @@ ret_t color_picker_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_draggable_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20170,8 +18823,7 @@ jsvalue_t wrap_draggable_create(
 }
 
 jsvalue_t wrap_draggable_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20188,8 +18840,7 @@ jsvalue_t wrap_draggable_cast(
 }
 
 jsvalue_t wrap_draggable_set_top(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20207,8 +18858,7 @@ jsvalue_t wrap_draggable_set_top(
 }
 
 jsvalue_t wrap_draggable_set_bottom(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20226,8 +18876,7 @@ jsvalue_t wrap_draggable_set_bottom(
 }
 
 jsvalue_t wrap_draggable_set_left(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20245,8 +18894,7 @@ jsvalue_t wrap_draggable_set_left(
 }
 
 jsvalue_t wrap_draggable_set_right(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20264,8 +18912,7 @@ jsvalue_t wrap_draggable_set_right(
 }
 
 jsvalue_t wrap_draggable_set_vertical_only(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20283,8 +18930,7 @@ jsvalue_t wrap_draggable_set_vertical_only(
 }
 
 jsvalue_t wrap_draggable_set_horizontal_only(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20302,8 +18948,7 @@ jsvalue_t wrap_draggable_set_horizontal_only(
 }
 
 jsvalue_t wrap_draggable_set_drag_window(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20321,8 +18966,7 @@ jsvalue_t wrap_draggable_set_drag_window(
 }
 
 jsvalue_t wrap_draggable_t_get_prop_top(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20335,8 +18979,7 @@ jsvalue_t wrap_draggable_t_get_prop_top(
 }
 
 jsvalue_t wrap_draggable_t_get_prop_bottom(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20349,8 +18992,7 @@ jsvalue_t wrap_draggable_t_get_prop_bottom(
 }
 
 jsvalue_t wrap_draggable_t_get_prop_left(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20363,8 +19005,7 @@ jsvalue_t wrap_draggable_t_get_prop_left(
 }
 
 jsvalue_t wrap_draggable_t_get_prop_right(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20377,8 +19018,7 @@ jsvalue_t wrap_draggable_t_get_prop_right(
 }
 
 jsvalue_t wrap_draggable_t_get_prop_vertical_only(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20391,8 +19031,7 @@ jsvalue_t wrap_draggable_t_get_prop_vertical_only(
 }
 
 jsvalue_t wrap_draggable_t_get_prop_horizontal_only(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20405,8 +19044,7 @@ jsvalue_t wrap_draggable_t_get_prop_horizontal_only(
 }
 
 jsvalue_t wrap_draggable_t_get_prop_drag_window(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20440,8 +19078,7 @@ ret_t draggable_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_file_browser_view_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20462,8 +19099,7 @@ jsvalue_t wrap_file_browser_view_create(
 }
 
 jsvalue_t wrap_file_browser_view_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20480,8 +19116,7 @@ jsvalue_t wrap_file_browser_view_cast(
 }
 
 jsvalue_t wrap_file_browser_view_set_init_dir(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20500,8 +19135,7 @@ jsvalue_t wrap_file_browser_view_set_init_dir(
 }
 
 jsvalue_t wrap_file_browser_view_set_filter(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20520,8 +19154,7 @@ jsvalue_t wrap_file_browser_view_set_filter(
 }
 
 jsvalue_t wrap_file_browser_view_reload(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20538,8 +19171,7 @@ jsvalue_t wrap_file_browser_view_reload(
 }
 
 jsvalue_t wrap_file_browser_view_set_ignore_hidden_files(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20557,8 +19189,7 @@ jsvalue_t wrap_file_browser_view_set_ignore_hidden_files(
 }
 
 jsvalue_t wrap_file_browser_view_set_sort_ascending(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20576,8 +19207,7 @@ jsvalue_t wrap_file_browser_view_set_sort_ascending(
 }
 
 jsvalue_t wrap_file_browser_view_set_show_check_button(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20595,8 +19225,7 @@ jsvalue_t wrap_file_browser_view_set_show_check_button(
 }
 
 jsvalue_t wrap_file_browser_view_set_sort_by(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20615,8 +19244,7 @@ jsvalue_t wrap_file_browser_view_set_sort_by(
 }
 
 jsvalue_t wrap_file_browser_view_get_cwd(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20633,8 +19261,7 @@ jsvalue_t wrap_file_browser_view_get_cwd(
 }
 
 jsvalue_t wrap_file_browser_view_create_dir(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20653,8 +19280,7 @@ jsvalue_t wrap_file_browser_view_create_dir(
 }
 
 jsvalue_t wrap_file_browser_view_create_file(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20676,8 +19302,7 @@ jsvalue_t wrap_file_browser_view_create_file(
 }
 
 jsvalue_t wrap_file_browser_view_t_get_prop_init_dir(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20690,8 +19315,7 @@ jsvalue_t wrap_file_browser_view_t_get_prop_init_dir(
 }
 
 jsvalue_t wrap_file_browser_view_t_get_prop_filter(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20704,8 +19328,7 @@ jsvalue_t wrap_file_browser_view_t_get_prop_filter(
 }
 
 jsvalue_t wrap_file_browser_view_t_get_prop_ignore_hidden_files(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20718,8 +19341,7 @@ jsvalue_t wrap_file_browser_view_t_get_prop_ignore_hidden_files(
 }
 
 jsvalue_t wrap_file_browser_view_t_get_prop_sort_ascending(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20732,8 +19354,7 @@ jsvalue_t wrap_file_browser_view_t_get_prop_sort_ascending(
 }
 
 jsvalue_t wrap_file_browser_view_t_get_prop_show_check_button(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20746,8 +19367,7 @@ jsvalue_t wrap_file_browser_view_t_get_prop_show_check_button(
 }
 
 jsvalue_t wrap_file_browser_view_t_get_prop_sort_by(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20783,8 +19403,7 @@ ret_t file_browser_view_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_file_chooser_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20800,8 +19419,7 @@ jsvalue_t wrap_file_chooser_create(
 }
 
 jsvalue_t wrap_file_chooser_set_init_dir(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20820,8 +19438,7 @@ jsvalue_t wrap_file_chooser_set_init_dir(
 }
 
 jsvalue_t wrap_file_chooser_set_filter(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20840,8 +19457,7 @@ jsvalue_t wrap_file_chooser_set_filter(
 }
 
 jsvalue_t wrap_file_chooser_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20858,8 +19474,7 @@ jsvalue_t wrap_file_chooser_cast(
 }
 
 jsvalue_t wrap_file_chooser_choose_file_for_save(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20876,8 +19491,7 @@ jsvalue_t wrap_file_chooser_choose_file_for_save(
 }
 
 jsvalue_t wrap_file_chooser_choose_file_for_open(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20894,8 +19508,7 @@ jsvalue_t wrap_file_chooser_choose_file_for_open(
 }
 
 jsvalue_t wrap_file_chooser_choose_folder(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20912,8 +19525,7 @@ jsvalue_t wrap_file_chooser_choose_folder(
 }
 
 jsvalue_t wrap_file_chooser_get_dir(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20930,8 +19542,7 @@ jsvalue_t wrap_file_chooser_get_dir(
 }
 
 jsvalue_t wrap_file_chooser_get_filename(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20948,8 +19559,7 @@ jsvalue_t wrap_file_chooser_get_filename(
 }
 
 jsvalue_t wrap_file_chooser_is_aborted(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -20981,8 +19591,7 @@ ret_t file_chooser_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_guage_pointer_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21003,8 +19612,7 @@ jsvalue_t wrap_guage_pointer_create(
 }
 
 jsvalue_t wrap_guage_pointer_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21021,8 +19629,7 @@ jsvalue_t wrap_guage_pointer_cast(
 }
 
 jsvalue_t wrap_guage_pointer_set_angle(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21040,8 +19647,7 @@ jsvalue_t wrap_guage_pointer_set_angle(
 }
 
 jsvalue_t wrap_guage_pointer_set_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21060,8 +19666,7 @@ jsvalue_t wrap_guage_pointer_set_image(
 }
 
 jsvalue_t wrap_guage_pointer_set_anchor(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21082,8 +19687,7 @@ jsvalue_t wrap_guage_pointer_set_anchor(
 }
 
 jsvalue_t wrap_guage_pointer_t_get_prop_angle(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21096,8 +19700,7 @@ jsvalue_t wrap_guage_pointer_t_get_prop_angle(
 }
 
 jsvalue_t wrap_guage_pointer_t_get_prop_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21110,8 +19713,7 @@ jsvalue_t wrap_guage_pointer_t_get_prop_image(
 }
 
 jsvalue_t wrap_guage_pointer_t_get_prop_anchor_x(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21124,8 +19726,7 @@ jsvalue_t wrap_guage_pointer_t_get_prop_anchor_x(
 }
 
 jsvalue_t wrap_guage_pointer_t_get_prop_anchor_y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21152,8 +19753,7 @@ ret_t guage_pointer_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_guage_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21174,8 +19774,7 @@ jsvalue_t wrap_guage_create(
 }
 
 jsvalue_t wrap_guage_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21192,8 +19791,7 @@ jsvalue_t wrap_guage_cast(
 }
 
 jsvalue_t wrap_guage_set_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21212,8 +19810,7 @@ jsvalue_t wrap_guage_set_image(
 }
 
 jsvalue_t wrap_guage_set_draw_type(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21231,8 +19828,7 @@ jsvalue_t wrap_guage_set_draw_type(
 }
 
 jsvalue_t wrap_guage_t_get_prop_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21245,8 +19841,7 @@ jsvalue_t wrap_guage_t_get_prop_image(
 }
 
 jsvalue_t wrap_guage_t_get_prop_draw_type(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21270,8 +19865,7 @@ ret_t guage_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_image_animation_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21292,8 +19886,7 @@ jsvalue_t wrap_image_animation_create(
 }
 
 jsvalue_t wrap_image_animation_set_loop(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21311,8 +19904,7 @@ jsvalue_t wrap_image_animation_set_loop(
 }
 
 jsvalue_t wrap_image_animation_set_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21331,8 +19923,7 @@ jsvalue_t wrap_image_animation_set_image(
 }
 
 jsvalue_t wrap_image_animation_set_interval(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21350,8 +19941,7 @@ jsvalue_t wrap_image_animation_set_interval(
 }
 
 jsvalue_t wrap_image_animation_set_delay(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21369,8 +19959,7 @@ jsvalue_t wrap_image_animation_set_delay(
 }
 
 jsvalue_t wrap_image_animation_set_auto_play(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21388,8 +19977,7 @@ jsvalue_t wrap_image_animation_set_auto_play(
 }
 
 jsvalue_t wrap_image_animation_set_sequence(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21408,8 +19996,7 @@ jsvalue_t wrap_image_animation_set_sequence(
 }
 
 jsvalue_t wrap_image_animation_set_range_sequence(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21428,8 +20015,7 @@ jsvalue_t wrap_image_animation_set_range_sequence(
 }
 
 jsvalue_t wrap_image_animation_play(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21446,8 +20032,7 @@ jsvalue_t wrap_image_animation_play(
 }
 
 jsvalue_t wrap_image_animation_stop(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21464,8 +20049,7 @@ jsvalue_t wrap_image_animation_stop(
 }
 
 jsvalue_t wrap_image_animation_pause(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21482,8 +20066,7 @@ jsvalue_t wrap_image_animation_pause(
 }
 
 jsvalue_t wrap_image_animation_next(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21500,8 +20083,7 @@ jsvalue_t wrap_image_animation_next(
 }
 
 jsvalue_t wrap_image_animation_set_format(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21520,8 +20102,7 @@ jsvalue_t wrap_image_animation_set_format(
 }
 
 jsvalue_t wrap_image_animation_set_unload_after_paint(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21539,8 +20120,7 @@ jsvalue_t wrap_image_animation_set_unload_after_paint(
 }
 
 jsvalue_t wrap_image_animation_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21557,8 +20137,7 @@ jsvalue_t wrap_image_animation_cast(
 }
 
 jsvalue_t wrap_image_animation_is_playing(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21575,8 +20154,7 @@ jsvalue_t wrap_image_animation_is_playing(
 }
 
 jsvalue_t wrap_image_animation_t_get_prop_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21589,8 +20167,7 @@ jsvalue_t wrap_image_animation_t_get_prop_image(
 }
 
 jsvalue_t wrap_image_animation_t_get_prop_sequence(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21603,8 +20180,7 @@ jsvalue_t wrap_image_animation_t_get_prop_sequence(
 }
 
 jsvalue_t wrap_image_animation_t_get_prop_start_index(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21617,8 +20193,7 @@ jsvalue_t wrap_image_animation_t_get_prop_start_index(
 }
 
 jsvalue_t wrap_image_animation_t_get_prop_end_index(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21631,8 +20206,7 @@ jsvalue_t wrap_image_animation_t_get_prop_end_index(
 }
 
 jsvalue_t wrap_image_animation_t_get_prop_loop(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21645,8 +20219,7 @@ jsvalue_t wrap_image_animation_t_get_prop_loop(
 }
 
 jsvalue_t wrap_image_animation_t_get_prop_auto_play(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21659,8 +20232,7 @@ jsvalue_t wrap_image_animation_t_get_prop_auto_play(
 }
 
 jsvalue_t wrap_image_animation_t_get_prop_unload_after_paint(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21673,8 +20245,7 @@ jsvalue_t wrap_image_animation_t_get_prop_unload_after_paint(
 }
 
 jsvalue_t wrap_image_animation_t_get_prop_format(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21687,8 +20258,7 @@ jsvalue_t wrap_image_animation_t_get_prop_format(
 }
 
 jsvalue_t wrap_image_animation_t_get_prop_interval(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21701,8 +20271,7 @@ jsvalue_t wrap_image_animation_t_get_prop_interval(
 }
 
 jsvalue_t wrap_image_animation_t_get_prop_delay(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21746,8 +20315,7 @@ ret_t image_animation_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_image_value_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21768,8 +20336,7 @@ jsvalue_t wrap_image_value_create(
 }
 
 jsvalue_t wrap_image_value_set_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21788,8 +20355,7 @@ jsvalue_t wrap_image_value_set_image(
 }
 
 jsvalue_t wrap_image_value_set_format(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21808,8 +20374,7 @@ jsvalue_t wrap_image_value_set_format(
 }
 
 jsvalue_t wrap_image_value_set_click_add_delta(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21827,8 +20392,7 @@ jsvalue_t wrap_image_value_set_click_add_delta(
 }
 
 jsvalue_t wrap_image_value_set_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21846,8 +20410,7 @@ jsvalue_t wrap_image_value_set_value(
 }
 
 jsvalue_t wrap_image_value_set_min(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21865,8 +20428,7 @@ jsvalue_t wrap_image_value_set_min(
 }
 
 jsvalue_t wrap_image_value_set_max(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21884,8 +20446,7 @@ jsvalue_t wrap_image_value_set_max(
 }
 
 jsvalue_t wrap_image_value_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21902,8 +20463,7 @@ jsvalue_t wrap_image_value_cast(
 }
 
 jsvalue_t wrap_image_value_t_get_prop_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21916,8 +20476,7 @@ jsvalue_t wrap_image_value_t_get_prop_image(
 }
 
 jsvalue_t wrap_image_value_t_get_prop_format(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21930,8 +20489,7 @@ jsvalue_t wrap_image_value_t_get_prop_format(
 }
 
 jsvalue_t wrap_image_value_t_get_prop_click_add_delta(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21944,8 +20502,7 @@ jsvalue_t wrap_image_value_t_get_prop_click_add_delta(
 }
 
 jsvalue_t wrap_image_value_t_get_prop_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21958,8 +20515,7 @@ jsvalue_t wrap_image_value_t_get_prop_value(
 }
 
 jsvalue_t wrap_image_value_t_get_prop_min(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -21972,8 +20528,7 @@ jsvalue_t wrap_image_value_t_get_prop_min(
 }
 
 jsvalue_t wrap_image_value_t_get_prop_max(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22005,8 +20560,7 @@ ret_t image_value_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_candidates_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22023,8 +20577,7 @@ jsvalue_t wrap_candidates_cast(
 }
 
 jsvalue_t wrap_candidates_set_pre(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22042,8 +20595,7 @@ jsvalue_t wrap_candidates_set_pre(
 }
 
 jsvalue_t wrap_candidates_set_select_by_num(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22061,8 +20613,7 @@ jsvalue_t wrap_candidates_set_select_by_num(
 }
 
 jsvalue_t wrap_candidates_set_auto_hide(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22080,8 +20631,7 @@ jsvalue_t wrap_candidates_set_auto_hide(
 }
 
 jsvalue_t wrap_candidates_set_button_style(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22100,8 +20650,7 @@ jsvalue_t wrap_candidates_set_button_style(
 }
 
 jsvalue_t wrap_candidates_t_get_prop_pre(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22114,8 +20663,7 @@ jsvalue_t wrap_candidates_t_get_prop_pre(
 }
 
 jsvalue_t wrap_candidates_t_get_prop_select_by_num(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22128,8 +20676,7 @@ jsvalue_t wrap_candidates_t_get_prop_select_by_num(
 }
 
 jsvalue_t wrap_candidates_t_get_prop_auto_hide(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22142,8 +20689,7 @@ jsvalue_t wrap_candidates_t_get_prop_auto_hide(
 }
 
 jsvalue_t wrap_candidates_t_get_prop_button_style(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22170,8 +20716,7 @@ ret_t candidates_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_lang_indicator_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22192,8 +20737,7 @@ jsvalue_t wrap_lang_indicator_create(
 }
 
 jsvalue_t wrap_lang_indicator_set_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22212,8 +20756,7 @@ jsvalue_t wrap_lang_indicator_set_image(
 }
 
 jsvalue_t wrap_lang_indicator_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22230,8 +20773,7 @@ jsvalue_t wrap_lang_indicator_cast(
 }
 
 jsvalue_t wrap_lang_indicator_t_get_prop_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22253,8 +20795,7 @@ ret_t lang_indicator_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_line_number_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22275,8 +20816,7 @@ jsvalue_t wrap_line_number_create(
 }
 
 jsvalue_t wrap_line_number_set_top_margin(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22294,8 +20834,7 @@ jsvalue_t wrap_line_number_set_top_margin(
 }
 
 jsvalue_t wrap_line_number_set_bottom_margin(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22313,8 +20852,7 @@ jsvalue_t wrap_line_number_set_bottom_margin(
 }
 
 jsvalue_t wrap_line_number_set_line_height(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22332,8 +20870,7 @@ jsvalue_t wrap_line_number_set_line_height(
 }
 
 jsvalue_t wrap_line_number_set_yoffset(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22351,8 +20888,7 @@ jsvalue_t wrap_line_number_set_yoffset(
 }
 
 jsvalue_t wrap_line_number_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22380,8 +20916,7 @@ ret_t line_number_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_mledit_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22402,8 +20937,7 @@ jsvalue_t wrap_mledit_create(
 }
 
 jsvalue_t wrap_mledit_set_readonly(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22421,8 +20955,7 @@ jsvalue_t wrap_mledit_set_readonly(
 }
 
 jsvalue_t wrap_mledit_set_cancelable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22440,8 +20973,7 @@ jsvalue_t wrap_mledit_set_cancelable(
 }
 
 jsvalue_t wrap_mledit_set_focus(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22459,8 +20991,7 @@ jsvalue_t wrap_mledit_set_focus(
 }
 
 jsvalue_t wrap_mledit_set_wrap_word(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22478,8 +21009,7 @@ jsvalue_t wrap_mledit_set_wrap_word(
 }
 
 jsvalue_t wrap_mledit_set_max_lines(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22497,8 +21027,7 @@ jsvalue_t wrap_mledit_set_max_lines(
 }
 
 jsvalue_t wrap_mledit_set_tips(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22517,8 +21046,7 @@ jsvalue_t wrap_mledit_set_tips(
 }
 
 jsvalue_t wrap_mledit_set_tr_tips(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22537,8 +21065,7 @@ jsvalue_t wrap_mledit_set_tr_tips(
 }
 
 jsvalue_t wrap_mledit_set_keyboard(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22557,8 +21084,7 @@ jsvalue_t wrap_mledit_set_keyboard(
 }
 
 jsvalue_t wrap_mledit_set_cursor(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22576,8 +21102,7 @@ jsvalue_t wrap_mledit_set_cursor(
 }
 
 jsvalue_t wrap_mledit_set_scroll_line(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22595,8 +21120,7 @@ jsvalue_t wrap_mledit_set_scroll_line(
 }
 
 jsvalue_t wrap_mledit_set_open_im_when_focused(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22614,8 +21138,7 @@ jsvalue_t wrap_mledit_set_open_im_when_focused(
 }
 
 jsvalue_t wrap_mledit_set_close_im_when_blured(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22633,8 +21156,7 @@ jsvalue_t wrap_mledit_set_close_im_when_blured(
 }
 
 jsvalue_t wrap_mledit_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22651,8 +21173,7 @@ jsvalue_t wrap_mledit_cast(
 }
 
 jsvalue_t wrap_mledit_t_get_prop_tips(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22665,8 +21186,7 @@ jsvalue_t wrap_mledit_t_get_prop_tips(
 }
 
 jsvalue_t wrap_mledit_t_get_prop_tr_tips(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22679,8 +21199,7 @@ jsvalue_t wrap_mledit_t_get_prop_tr_tips(
 }
 
 jsvalue_t wrap_mledit_t_get_prop_keyboard(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22693,8 +21212,7 @@ jsvalue_t wrap_mledit_t_get_prop_keyboard(
 }
 
 jsvalue_t wrap_mledit_t_get_prop_max_lines(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22707,8 +21225,7 @@ jsvalue_t wrap_mledit_t_get_prop_max_lines(
 }
 
 jsvalue_t wrap_mledit_t_get_prop_wrap_word(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22721,8 +21238,7 @@ jsvalue_t wrap_mledit_t_get_prop_wrap_word(
 }
 
 jsvalue_t wrap_mledit_t_get_prop_scroll_line(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22735,8 +21251,7 @@ jsvalue_t wrap_mledit_t_get_prop_scroll_line(
 }
 
 jsvalue_t wrap_mledit_t_get_prop_readonly(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22749,8 +21264,7 @@ jsvalue_t wrap_mledit_t_get_prop_readonly(
 }
 
 jsvalue_t wrap_mledit_t_get_prop_cancelable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22763,8 +21277,7 @@ jsvalue_t wrap_mledit_t_get_prop_cancelable(
 }
 
 jsvalue_t wrap_mledit_t_get_prop_open_im_when_focused(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22777,8 +21290,7 @@ jsvalue_t wrap_mledit_t_get_prop_open_im_when_focused(
 }
 
 jsvalue_t wrap_mledit_t_get_prop_close_im_when_blured(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22820,8 +21332,7 @@ ret_t mledit_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_progress_circle_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22842,8 +21353,7 @@ jsvalue_t wrap_progress_circle_create(
 }
 
 jsvalue_t wrap_progress_circle_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22860,8 +21370,7 @@ jsvalue_t wrap_progress_circle_cast(
 }
 
 jsvalue_t wrap_progress_circle_set_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22879,8 +21388,7 @@ jsvalue_t wrap_progress_circle_set_value(
 }
 
 jsvalue_t wrap_progress_circle_set_max(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22897,9 +21405,27 @@ jsvalue_t wrap_progress_circle_set_max(
   return jret;
 }
 
+jsvalue_t wrap_progress_circle_set_format(
+    const jerry_call_info_t *call_info_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  const char* format = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  ret = (ret_t)progress_circle_set_format(widget, format);
+  TKMEM_FREE(format);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_progress_circle_set_line_width(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22917,8 +21443,7 @@ jsvalue_t wrap_progress_circle_set_line_width(
 }
 
 jsvalue_t wrap_progress_circle_set_start_angle(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22935,29 +21460,8 @@ jsvalue_t wrap_progress_circle_set_start_angle(
   return jret;
 }
 
-jsvalue_t wrap_progress_circle_set_unit(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
-    const jerry_value_t argv[], 
-    const jerry_length_t argc 
-  )  {
-  void* ctx = NULL;
-  jsvalue_t jret = JS_NULL;
-  if(argc >= 2) {
-  ret_t ret = (ret_t)0;
-  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  const char* unit = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
-  ret = (ret_t)progress_circle_set_unit(widget, unit);
-  TKMEM_FREE(unit);
-
-  jret = jsvalue_create_int(ctx, ret);
-  }
-  return jret;
-}
-
 jsvalue_t wrap_progress_circle_set_line_cap(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22976,8 +21480,7 @@ jsvalue_t wrap_progress_circle_set_line_cap(
 }
 
 jsvalue_t wrap_progress_circle_set_show_text(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -22995,8 +21498,7 @@ jsvalue_t wrap_progress_circle_set_show_text(
 }
 
 jsvalue_t wrap_progress_circle_set_counter_clock_wise(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23014,8 +21516,7 @@ jsvalue_t wrap_progress_circle_set_counter_clock_wise(
 }
 
 jsvalue_t wrap_progress_circle_t_get_prop_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23028,8 +21529,7 @@ jsvalue_t wrap_progress_circle_t_get_prop_value(
 }
 
 jsvalue_t wrap_progress_circle_t_get_prop_max(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23037,13 +21537,25 @@ jsvalue_t wrap_progress_circle_t_get_prop_max(
   jsvalue_t jret = JS_NULL;
   progress_circle_t* obj = (progress_circle_t*)jsvalue_get_pointer(ctx, argv[0], "progress_circle_t*");
 
-  jret = jsvalue_create_int(ctx, obj->max);
+  jret = jsvalue_create_number(ctx, obj->max);
+  return jret;
+}
+
+jsvalue_t wrap_progress_circle_t_get_prop_format(
+    const jerry_call_info_t *call_info_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  progress_circle_t* obj = (progress_circle_t*)jsvalue_get_pointer(ctx, argv[0], "progress_circle_t*");
+
+  jret = jsvalue_create_string(ctx, obj->format);
   return jret;
 }
 
 jsvalue_t wrap_progress_circle_t_get_prop_start_angle(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23056,8 +21568,7 @@ jsvalue_t wrap_progress_circle_t_get_prop_start_angle(
 }
 
 jsvalue_t wrap_progress_circle_t_get_prop_line_width(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23069,23 +21580,8 @@ jsvalue_t wrap_progress_circle_t_get_prop_line_width(
   return jret;
 }
 
-jsvalue_t wrap_progress_circle_t_get_prop_unit(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
-    const jerry_value_t argv[], 
-    const jerry_length_t argc 
-  )  {
-  void* ctx = NULL;
-  jsvalue_t jret = JS_NULL;
-  progress_circle_t* obj = (progress_circle_t*)jsvalue_get_pointer(ctx, argv[0], "progress_circle_t*");
-
-  jret = jsvalue_create_string(ctx, obj->unit);
-  return jret;
-}
-
 jsvalue_t wrap_progress_circle_t_get_prop_line_cap(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23098,8 +21594,7 @@ jsvalue_t wrap_progress_circle_t_get_prop_line_cap(
 }
 
 jsvalue_t wrap_progress_circle_t_get_prop_counter_clock_wise(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23112,8 +21607,7 @@ jsvalue_t wrap_progress_circle_t_get_prop_counter_clock_wise(
 }
 
 jsvalue_t wrap_progress_circle_t_get_prop_show_text(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23130,17 +21624,17 @@ ret_t progress_circle_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"progress_circle_cast", wrap_progress_circle_cast);
   jerryx_handler_register_global((const jerry_char_t*)"progress_circle_set_value", wrap_progress_circle_set_value);
   jerryx_handler_register_global((const jerry_char_t*)"progress_circle_set_max", wrap_progress_circle_set_max);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_set_format", wrap_progress_circle_set_format);
   jerryx_handler_register_global((const jerry_char_t*)"progress_circle_set_line_width", wrap_progress_circle_set_line_width);
   jerryx_handler_register_global((const jerry_char_t*)"progress_circle_set_start_angle", wrap_progress_circle_set_start_angle);
-  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_set_unit", wrap_progress_circle_set_unit);
   jerryx_handler_register_global((const jerry_char_t*)"progress_circle_set_line_cap", wrap_progress_circle_set_line_cap);
   jerryx_handler_register_global((const jerry_char_t*)"progress_circle_set_show_text", wrap_progress_circle_set_show_text);
   jerryx_handler_register_global((const jerry_char_t*)"progress_circle_set_counter_clock_wise", wrap_progress_circle_set_counter_clock_wise);
   jerryx_handler_register_global((const jerry_char_t*)"progress_circle_t_get_prop_value", wrap_progress_circle_t_get_prop_value);
   jerryx_handler_register_global((const jerry_char_t*)"progress_circle_t_get_prop_max", wrap_progress_circle_t_get_prop_max);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_t_get_prop_format", wrap_progress_circle_t_get_prop_format);
   jerryx_handler_register_global((const jerry_char_t*)"progress_circle_t_get_prop_start_angle", wrap_progress_circle_t_get_prop_start_angle);
   jerryx_handler_register_global((const jerry_char_t*)"progress_circle_t_get_prop_line_width", wrap_progress_circle_t_get_prop_line_width);
-  jerryx_handler_register_global((const jerry_char_t*)"progress_circle_t_get_prop_unit", wrap_progress_circle_t_get_prop_unit);
   jerryx_handler_register_global((const jerry_char_t*)"progress_circle_t_get_prop_line_cap", wrap_progress_circle_t_get_prop_line_cap);
   jerryx_handler_register_global((const jerry_char_t*)"progress_circle_t_get_prop_counter_clock_wise", wrap_progress_circle_t_get_prop_counter_clock_wise);
   jerryx_handler_register_global((const jerry_char_t*)"progress_circle_t_get_prop_show_text", wrap_progress_circle_t_get_prop_show_text);
@@ -23149,8 +21643,7 @@ ret_t progress_circle_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_rich_text_view_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23171,8 +21664,7 @@ jsvalue_t wrap_rich_text_view_create(
 }
 
 jsvalue_t wrap_rich_text_view_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23196,8 +21688,7 @@ ret_t rich_text_view_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_rich_text_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23218,8 +21709,7 @@ jsvalue_t wrap_rich_text_create(
 }
 
 jsvalue_t wrap_rich_text_set_text(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23238,8 +21728,7 @@ jsvalue_t wrap_rich_text_set_text(
 }
 
 jsvalue_t wrap_rich_text_set_yslidable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23257,8 +21746,7 @@ jsvalue_t wrap_rich_text_set_yslidable(
 }
 
 jsvalue_t wrap_rich_text_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23275,8 +21763,7 @@ jsvalue_t wrap_rich_text_cast(
 }
 
 jsvalue_t wrap_rich_text_t_get_prop_line_gap(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23289,8 +21776,7 @@ jsvalue_t wrap_rich_text_t_get_prop_line_gap(
 }
 
 jsvalue_t wrap_rich_text_t_get_prop_yslidable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23314,8 +21800,7 @@ ret_t rich_text_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_hscroll_label_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23336,8 +21821,7 @@ jsvalue_t wrap_hscroll_label_create(
 }
 
 jsvalue_t wrap_hscroll_label_set_lull(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23355,8 +21839,7 @@ jsvalue_t wrap_hscroll_label_set_lull(
 }
 
 jsvalue_t wrap_hscroll_label_set_duration(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23374,8 +21857,7 @@ jsvalue_t wrap_hscroll_label_set_duration(
 }
 
 jsvalue_t wrap_hscroll_label_set_only_focus(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23393,8 +21875,7 @@ jsvalue_t wrap_hscroll_label_set_only_focus(
 }
 
 jsvalue_t wrap_hscroll_label_set_only_parent_focus(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23412,8 +21893,7 @@ jsvalue_t wrap_hscroll_label_set_only_parent_focus(
 }
 
 jsvalue_t wrap_hscroll_label_set_loop(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23431,8 +21911,7 @@ jsvalue_t wrap_hscroll_label_set_loop(
 }
 
 jsvalue_t wrap_hscroll_label_set_yoyo(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23450,8 +21929,7 @@ jsvalue_t wrap_hscroll_label_set_yoyo(
 }
 
 jsvalue_t wrap_hscroll_label_set_ellipses(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23469,8 +21947,7 @@ jsvalue_t wrap_hscroll_label_set_ellipses(
 }
 
 jsvalue_t wrap_hscroll_label_set_xoffset(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23488,8 +21965,7 @@ jsvalue_t wrap_hscroll_label_set_xoffset(
 }
 
 jsvalue_t wrap_hscroll_label_start(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23506,8 +21982,7 @@ jsvalue_t wrap_hscroll_label_start(
 }
 
 jsvalue_t wrap_hscroll_label_stop(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23524,8 +21999,7 @@ jsvalue_t wrap_hscroll_label_stop(
 }
 
 jsvalue_t wrap_hscroll_label_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23542,8 +22016,7 @@ jsvalue_t wrap_hscroll_label_cast(
 }
 
 jsvalue_t wrap_hscroll_label_t_get_prop_only_focus(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23556,8 +22029,7 @@ jsvalue_t wrap_hscroll_label_t_get_prop_only_focus(
 }
 
 jsvalue_t wrap_hscroll_label_t_get_prop_only_parent_focus(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23570,8 +22042,7 @@ jsvalue_t wrap_hscroll_label_t_get_prop_only_parent_focus(
 }
 
 jsvalue_t wrap_hscroll_label_t_get_prop_loop(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23584,8 +22055,7 @@ jsvalue_t wrap_hscroll_label_t_get_prop_loop(
 }
 
 jsvalue_t wrap_hscroll_label_t_get_prop_yoyo(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23598,8 +22068,7 @@ jsvalue_t wrap_hscroll_label_t_get_prop_yoyo(
 }
 
 jsvalue_t wrap_hscroll_label_t_get_prop_ellipses(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23612,8 +22081,7 @@ jsvalue_t wrap_hscroll_label_t_get_prop_ellipses(
 }
 
 jsvalue_t wrap_hscroll_label_t_get_prop_lull(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23626,8 +22094,7 @@ jsvalue_t wrap_hscroll_label_t_get_prop_lull(
 }
 
 jsvalue_t wrap_hscroll_label_t_get_prop_duration(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23640,8 +22107,7 @@ jsvalue_t wrap_hscroll_label_t_get_prop_duration(
 }
 
 jsvalue_t wrap_hscroll_label_t_get_prop_xoffset(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23654,8 +22120,7 @@ jsvalue_t wrap_hscroll_label_t_get_prop_xoffset(
 }
 
 jsvalue_t wrap_hscroll_label_t_get_prop_text_w(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23694,8 +22159,7 @@ ret_t hscroll_label_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_list_item_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23716,8 +22180,7 @@ jsvalue_t wrap_list_item_create(
 }
 
 jsvalue_t wrap_list_item_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23741,8 +22204,7 @@ ret_t list_item_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_list_view_h_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23763,8 +22225,7 @@ jsvalue_t wrap_list_view_h_create(
 }
 
 jsvalue_t wrap_list_view_h_set_item_width(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23782,8 +22243,7 @@ jsvalue_t wrap_list_view_h_set_item_width(
 }
 
 jsvalue_t wrap_list_view_h_set_spacing(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23801,8 +22261,7 @@ jsvalue_t wrap_list_view_h_set_spacing(
 }
 
 jsvalue_t wrap_list_view_h_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23819,8 +22278,7 @@ jsvalue_t wrap_list_view_h_cast(
 }
 
 jsvalue_t wrap_list_view_h_t_get_prop_item_width(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23833,8 +22291,7 @@ jsvalue_t wrap_list_view_h_t_get_prop_item_width(
 }
 
 jsvalue_t wrap_list_view_h_t_get_prop_spacing(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23858,8 +22315,7 @@ ret_t list_view_h_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_list_view_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23880,8 +22336,7 @@ jsvalue_t wrap_list_view_create(
 }
 
 jsvalue_t wrap_list_view_set_item_height(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23899,8 +22354,7 @@ jsvalue_t wrap_list_view_set_item_height(
 }
 
 jsvalue_t wrap_list_view_set_default_item_height(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23918,8 +22372,7 @@ jsvalue_t wrap_list_view_set_default_item_height(
 }
 
 jsvalue_t wrap_list_view_set_auto_hide_scroll_bar(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23937,8 +22390,7 @@ jsvalue_t wrap_list_view_set_auto_hide_scroll_bar(
 }
 
 jsvalue_t wrap_list_view_set_floating_scroll_bar(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23956,8 +22408,7 @@ jsvalue_t wrap_list_view_set_floating_scroll_bar(
 }
 
 jsvalue_t wrap_list_view_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23974,8 +22425,7 @@ jsvalue_t wrap_list_view_cast(
 }
 
 jsvalue_t wrap_list_view_reinit(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -23992,8 +22442,7 @@ jsvalue_t wrap_list_view_reinit(
 }
 
 jsvalue_t wrap_list_view_t_get_prop_item_height(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24006,8 +22455,7 @@ jsvalue_t wrap_list_view_t_get_prop_item_height(
 }
 
 jsvalue_t wrap_list_view_t_get_prop_default_item_height(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24020,8 +22468,7 @@ jsvalue_t wrap_list_view_t_get_prop_default_item_height(
 }
 
 jsvalue_t wrap_list_view_t_get_prop_auto_hide_scroll_bar(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24034,8 +22481,7 @@ jsvalue_t wrap_list_view_t_get_prop_auto_hide_scroll_bar(
 }
 
 jsvalue_t wrap_list_view_t_get_prop_floating_scroll_bar(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24064,8 +22510,7 @@ ret_t list_view_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_scroll_bar_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24086,8 +22531,7 @@ jsvalue_t wrap_scroll_bar_create(
 }
 
 jsvalue_t wrap_scroll_bar_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24104,8 +22548,7 @@ jsvalue_t wrap_scroll_bar_cast(
 }
 
 jsvalue_t wrap_scroll_bar_create_mobile(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24126,8 +22569,7 @@ jsvalue_t wrap_scroll_bar_create_mobile(
 }
 
 jsvalue_t wrap_scroll_bar_create_desktop(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24148,8 +22590,7 @@ jsvalue_t wrap_scroll_bar_create_desktop(
 }
 
 jsvalue_t wrap_scroll_bar_set_params(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24168,8 +22609,7 @@ jsvalue_t wrap_scroll_bar_set_params(
 }
 
 jsvalue_t wrap_scroll_bar_scroll_to(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24188,8 +22628,7 @@ jsvalue_t wrap_scroll_bar_scroll_to(
 }
 
 jsvalue_t wrap_scroll_bar_set_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24207,8 +22646,7 @@ jsvalue_t wrap_scroll_bar_set_value(
 }
 
 jsvalue_t wrap_scroll_bar_add_delta(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24226,8 +22664,7 @@ jsvalue_t wrap_scroll_bar_add_delta(
 }
 
 jsvalue_t wrap_scroll_bar_scroll_delta(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24245,8 +22682,7 @@ jsvalue_t wrap_scroll_bar_scroll_delta(
 }
 
 jsvalue_t wrap_scroll_bar_set_value_only(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24264,8 +22700,7 @@ jsvalue_t wrap_scroll_bar_set_value_only(
 }
 
 jsvalue_t wrap_scroll_bar_is_mobile(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24282,8 +22717,7 @@ jsvalue_t wrap_scroll_bar_is_mobile(
 }
 
 jsvalue_t wrap_scroll_bar_t_get_prop_virtual_size(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24296,8 +22730,7 @@ jsvalue_t wrap_scroll_bar_t_get_prop_virtual_size(
 }
 
 jsvalue_t wrap_scroll_bar_t_get_prop_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24310,8 +22743,7 @@ jsvalue_t wrap_scroll_bar_t_get_prop_value(
 }
 
 jsvalue_t wrap_scroll_bar_t_get_prop_row(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24324,8 +22756,7 @@ jsvalue_t wrap_scroll_bar_t_get_prop_row(
 }
 
 jsvalue_t wrap_scroll_bar_t_get_prop_animatable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24358,8 +22789,7 @@ ret_t scroll_bar_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_scroll_view_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24380,8 +22810,7 @@ jsvalue_t wrap_scroll_view_create(
 }
 
 jsvalue_t wrap_scroll_view_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24398,8 +22827,7 @@ jsvalue_t wrap_scroll_view_cast(
 }
 
 jsvalue_t wrap_scroll_view_set_virtual_w(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24417,8 +22845,7 @@ jsvalue_t wrap_scroll_view_set_virtual_w(
 }
 
 jsvalue_t wrap_scroll_view_set_virtual_h(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24436,8 +22863,7 @@ jsvalue_t wrap_scroll_view_set_virtual_h(
 }
 
 jsvalue_t wrap_scroll_view_set_xslidable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24455,8 +22881,7 @@ jsvalue_t wrap_scroll_view_set_xslidable(
 }
 
 jsvalue_t wrap_scroll_view_set_yslidable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24474,8 +22899,7 @@ jsvalue_t wrap_scroll_view_set_yslidable(
 }
 
 jsvalue_t wrap_scroll_view_set_snap_to_page(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24493,8 +22917,7 @@ jsvalue_t wrap_scroll_view_set_snap_to_page(
 }
 
 jsvalue_t wrap_scroll_view_set_move_to_page(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24512,8 +22935,7 @@ jsvalue_t wrap_scroll_view_set_move_to_page(
 }
 
 jsvalue_t wrap_scroll_view_set_recursive(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24531,8 +22953,7 @@ jsvalue_t wrap_scroll_view_set_recursive(
 }
 
 jsvalue_t wrap_scroll_view_set_recursive_only(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24550,8 +22971,7 @@ jsvalue_t wrap_scroll_view_set_recursive_only(
 }
 
 jsvalue_t wrap_scroll_view_set_offset(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24570,8 +22990,7 @@ jsvalue_t wrap_scroll_view_set_offset(
 }
 
 jsvalue_t wrap_scroll_view_set_speed_scale(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24590,8 +23009,7 @@ jsvalue_t wrap_scroll_view_set_speed_scale(
 }
 
 jsvalue_t wrap_scroll_view_scroll_to(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24611,8 +23029,7 @@ jsvalue_t wrap_scroll_view_scroll_to(
 }
 
 jsvalue_t wrap_scroll_view_scroll_delta_to(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24632,8 +23049,7 @@ jsvalue_t wrap_scroll_view_scroll_delta_to(
 }
 
 jsvalue_t wrap_scroll_view_t_get_prop_virtual_w(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24646,8 +23062,7 @@ jsvalue_t wrap_scroll_view_t_get_prop_virtual_w(
 }
 
 jsvalue_t wrap_scroll_view_t_get_prop_virtual_h(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24660,8 +23075,7 @@ jsvalue_t wrap_scroll_view_t_get_prop_virtual_h(
 }
 
 jsvalue_t wrap_scroll_view_t_get_prop_xoffset(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24674,8 +23088,7 @@ jsvalue_t wrap_scroll_view_t_get_prop_xoffset(
 }
 
 jsvalue_t wrap_scroll_view_t_get_prop_yoffset(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24688,8 +23101,7 @@ jsvalue_t wrap_scroll_view_t_get_prop_yoffset(
 }
 
 jsvalue_t wrap_scroll_view_t_get_prop_xspeed_scale(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24702,8 +23114,7 @@ jsvalue_t wrap_scroll_view_t_get_prop_xspeed_scale(
 }
 
 jsvalue_t wrap_scroll_view_t_get_prop_yspeed_scale(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24716,8 +23127,7 @@ jsvalue_t wrap_scroll_view_t_get_prop_yspeed_scale(
 }
 
 jsvalue_t wrap_scroll_view_t_get_prop_xslidable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24730,8 +23140,7 @@ jsvalue_t wrap_scroll_view_t_get_prop_xslidable(
 }
 
 jsvalue_t wrap_scroll_view_t_get_prop_yslidable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24744,8 +23153,7 @@ jsvalue_t wrap_scroll_view_t_get_prop_yslidable(
 }
 
 jsvalue_t wrap_scroll_view_t_get_prop_snap_to_page(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24758,8 +23166,7 @@ jsvalue_t wrap_scroll_view_t_get_prop_snap_to_page(
 }
 
 jsvalue_t wrap_scroll_view_t_get_prop_move_to_page(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24772,8 +23179,7 @@ jsvalue_t wrap_scroll_view_t_get_prop_move_to_page(
 }
 
 jsvalue_t wrap_scroll_view_t_get_prop_recursive(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24816,8 +23222,7 @@ ret_t scroll_view_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_slide_menu_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24838,8 +23243,7 @@ jsvalue_t wrap_slide_menu_create(
 }
 
 jsvalue_t wrap_slide_menu_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24856,8 +23260,7 @@ jsvalue_t wrap_slide_menu_cast(
 }
 
 jsvalue_t wrap_slide_menu_set_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24875,8 +23278,7 @@ jsvalue_t wrap_slide_menu_set_value(
 }
 
 jsvalue_t wrap_slide_menu_set_align_v(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24894,8 +23296,7 @@ jsvalue_t wrap_slide_menu_set_align_v(
 }
 
 jsvalue_t wrap_slide_menu_set_min_scale(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24913,8 +23314,7 @@ jsvalue_t wrap_slide_menu_set_min_scale(
 }
 
 jsvalue_t wrap_slide_menu_t_get_prop_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24927,8 +23327,7 @@ jsvalue_t wrap_slide_menu_t_get_prop_value(
 }
 
 jsvalue_t wrap_slide_menu_t_get_prop_align_v(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24941,8 +23340,7 @@ jsvalue_t wrap_slide_menu_t_get_prop_align_v(
 }
 
 jsvalue_t wrap_slide_menu_t_get_prop_min_scale(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24968,8 +23366,7 @@ ret_t slide_menu_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_slide_indicator_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -24990,8 +23387,7 @@ jsvalue_t wrap_slide_indicator_create(
 }
 
 jsvalue_t wrap_slide_indicator_create_linear(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25012,8 +23408,7 @@ jsvalue_t wrap_slide_indicator_create_linear(
 }
 
 jsvalue_t wrap_slide_indicator_create_arc(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25034,8 +23429,7 @@ jsvalue_t wrap_slide_indicator_create_arc(
 }
 
 jsvalue_t wrap_slide_indicator_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25052,8 +23446,7 @@ jsvalue_t wrap_slide_indicator_cast(
 }
 
 jsvalue_t wrap_slide_indicator_set_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25071,8 +23464,7 @@ jsvalue_t wrap_slide_indicator_set_value(
 }
 
 jsvalue_t wrap_slide_indicator_set_max(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25090,8 +23482,7 @@ jsvalue_t wrap_slide_indicator_set_max(
 }
 
 jsvalue_t wrap_slide_indicator_set_default_paint(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25109,8 +23500,7 @@ jsvalue_t wrap_slide_indicator_set_default_paint(
 }
 
 jsvalue_t wrap_slide_indicator_set_auto_hide(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25128,8 +23518,7 @@ jsvalue_t wrap_slide_indicator_set_auto_hide(
 }
 
 jsvalue_t wrap_slide_indicator_set_margin(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25147,8 +23536,7 @@ jsvalue_t wrap_slide_indicator_set_margin(
 }
 
 jsvalue_t wrap_slide_indicator_set_spacing(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25166,8 +23554,7 @@ jsvalue_t wrap_slide_indicator_set_spacing(
 }
 
 jsvalue_t wrap_slide_indicator_set_size(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25185,8 +23572,7 @@ jsvalue_t wrap_slide_indicator_set_size(
 }
 
 jsvalue_t wrap_slide_indicator_set_anchor(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25207,8 +23593,7 @@ jsvalue_t wrap_slide_indicator_set_anchor(
 }
 
 jsvalue_t wrap_slide_indicator_set_indicated_target(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25227,8 +23612,7 @@ jsvalue_t wrap_slide_indicator_set_indicated_target(
 }
 
 jsvalue_t wrap_slide_indicator_t_get_prop_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25241,8 +23625,7 @@ jsvalue_t wrap_slide_indicator_t_get_prop_value(
 }
 
 jsvalue_t wrap_slide_indicator_t_get_prop_max(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25255,8 +23638,7 @@ jsvalue_t wrap_slide_indicator_t_get_prop_max(
 }
 
 jsvalue_t wrap_slide_indicator_t_get_prop_default_paint(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25269,8 +23651,7 @@ jsvalue_t wrap_slide_indicator_t_get_prop_default_paint(
 }
 
 jsvalue_t wrap_slide_indicator_t_get_prop_auto_hide(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25283,8 +23664,7 @@ jsvalue_t wrap_slide_indicator_t_get_prop_auto_hide(
 }
 
 jsvalue_t wrap_slide_indicator_t_get_prop_margin(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25297,8 +23677,7 @@ jsvalue_t wrap_slide_indicator_t_get_prop_margin(
 }
 
 jsvalue_t wrap_slide_indicator_t_get_prop_spacing(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25311,8 +23690,7 @@ jsvalue_t wrap_slide_indicator_t_get_prop_spacing(
 }
 
 jsvalue_t wrap_slide_indicator_t_get_prop_size(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25325,8 +23703,7 @@ jsvalue_t wrap_slide_indicator_t_get_prop_size(
 }
 
 jsvalue_t wrap_slide_indicator_t_get_prop_anchor_x(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25339,8 +23716,7 @@ jsvalue_t wrap_slide_indicator_t_get_prop_anchor_x(
 }
 
 jsvalue_t wrap_slide_indicator_t_get_prop_anchor_y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25353,8 +23729,7 @@ jsvalue_t wrap_slide_indicator_t_get_prop_anchor_y(
 }
 
 jsvalue_t wrap_slide_indicator_t_get_prop_indicated_target(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25395,8 +23770,7 @@ ret_t slide_indicator_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_slide_view_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25417,8 +23791,7 @@ jsvalue_t wrap_slide_view_create(
 }
 
 jsvalue_t wrap_slide_view_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25435,8 +23808,7 @@ jsvalue_t wrap_slide_view_cast(
 }
 
 jsvalue_t wrap_slide_view_set_auto_play(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25454,8 +23826,7 @@ jsvalue_t wrap_slide_view_set_auto_play(
 }
 
 jsvalue_t wrap_slide_view_set_active(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25473,8 +23844,7 @@ jsvalue_t wrap_slide_view_set_active(
 }
 
 jsvalue_t wrap_slide_view_set_active_ex(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25493,8 +23863,7 @@ jsvalue_t wrap_slide_view_set_active_ex(
 }
 
 jsvalue_t wrap_slide_view_set_vertical(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25512,8 +23881,7 @@ jsvalue_t wrap_slide_view_set_vertical(
 }
 
 jsvalue_t wrap_slide_view_set_anim_hint(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25532,8 +23900,7 @@ jsvalue_t wrap_slide_view_set_anim_hint(
 }
 
 jsvalue_t wrap_slide_view_set_loop(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25551,8 +23918,7 @@ jsvalue_t wrap_slide_view_set_loop(
 }
 
 jsvalue_t wrap_slide_view_t_get_prop_vertical(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25565,8 +23931,7 @@ jsvalue_t wrap_slide_view_t_get_prop_vertical(
 }
 
 jsvalue_t wrap_slide_view_t_get_prop_auto_play(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25579,8 +23944,7 @@ jsvalue_t wrap_slide_view_t_get_prop_auto_play(
 }
 
 jsvalue_t wrap_slide_view_t_get_prop_loop(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25593,8 +23957,7 @@ jsvalue_t wrap_slide_view_t_get_prop_loop(
 }
 
 jsvalue_t wrap_slide_view_t_get_prop_anim_hint(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25624,8 +23987,7 @@ ret_t slide_view_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_switch_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25646,8 +24008,7 @@ jsvalue_t wrap_switch_create(
 }
 
 jsvalue_t wrap_switch_set_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25665,8 +24026,7 @@ jsvalue_t wrap_switch_set_value(
 }
 
 jsvalue_t wrap_switch_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25683,8 +24043,7 @@ jsvalue_t wrap_switch_cast(
 }
 
 jsvalue_t wrap_switch_t_get_prop_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25697,8 +24056,7 @@ jsvalue_t wrap_switch_t_get_prop_value(
 }
 
 jsvalue_t wrap_switch_t_get_prop_max_xoffset_ratio(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25721,8 +24079,7 @@ ret_t switch_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_text_selector_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25743,8 +24100,7 @@ jsvalue_t wrap_text_selector_create(
 }
 
 jsvalue_t wrap_text_selector_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25761,8 +24117,7 @@ jsvalue_t wrap_text_selector_cast(
 }
 
 jsvalue_t wrap_text_selector_reset_options(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25779,8 +24134,7 @@ jsvalue_t wrap_text_selector_reset_options(
 }
 
 jsvalue_t wrap_text_selector_count_options(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25797,8 +24151,7 @@ jsvalue_t wrap_text_selector_count_options(
 }
 
 jsvalue_t wrap_text_selector_append_option(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25818,8 +24171,7 @@ jsvalue_t wrap_text_selector_append_option(
 }
 
 jsvalue_t wrap_text_selector_set_options(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25838,8 +24190,7 @@ jsvalue_t wrap_text_selector_set_options(
 }
 
 jsvalue_t wrap_text_selector_set_range_options_ex(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25861,8 +24212,7 @@ jsvalue_t wrap_text_selector_set_range_options_ex(
 }
 
 jsvalue_t wrap_text_selector_set_range_options(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25882,8 +24232,7 @@ jsvalue_t wrap_text_selector_set_range_options(
 }
 
 jsvalue_t wrap_text_selector_get_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25900,8 +24249,7 @@ jsvalue_t wrap_text_selector_get_value(
 }
 
 jsvalue_t wrap_text_selector_set_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25919,8 +24267,7 @@ jsvalue_t wrap_text_selector_set_value(
 }
 
 jsvalue_t wrap_text_selector_get_text(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25937,8 +24284,7 @@ jsvalue_t wrap_text_selector_get_text(
 }
 
 jsvalue_t wrap_text_selector_set_text(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25957,8 +24303,7 @@ jsvalue_t wrap_text_selector_set_text(
 }
 
 jsvalue_t wrap_text_selector_set_selected_index(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25976,8 +24321,7 @@ jsvalue_t wrap_text_selector_set_selected_index(
 }
 
 jsvalue_t wrap_text_selector_set_visible_nr(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -25995,8 +24339,7 @@ jsvalue_t wrap_text_selector_set_visible_nr(
 }
 
 jsvalue_t wrap_text_selector_set_localize_options(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26014,8 +24357,7 @@ jsvalue_t wrap_text_selector_set_localize_options(
 }
 
 jsvalue_t wrap_text_selector_set_loop_options(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26033,8 +24375,7 @@ jsvalue_t wrap_text_selector_set_loop_options(
 }
 
 jsvalue_t wrap_text_selector_set_yspeed_scale(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26052,8 +24393,7 @@ jsvalue_t wrap_text_selector_set_yspeed_scale(
 }
 
 jsvalue_t wrap_text_selector_t_get_prop_visible_nr(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26066,8 +24406,7 @@ jsvalue_t wrap_text_selector_t_get_prop_visible_nr(
 }
 
 jsvalue_t wrap_text_selector_t_get_prop_selected_index(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26080,8 +24419,7 @@ jsvalue_t wrap_text_selector_t_get_prop_selected_index(
 }
 
 jsvalue_t wrap_text_selector_t_get_prop_options(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26094,8 +24432,7 @@ jsvalue_t wrap_text_selector_t_get_prop_options(
 }
 
 jsvalue_t wrap_text_selector_t_get_prop_yspeed_scale(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26108,8 +24445,7 @@ jsvalue_t wrap_text_selector_t_get_prop_yspeed_scale(
 }
 
 jsvalue_t wrap_text_selector_t_get_prop_localize_options(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26122,8 +24458,7 @@ jsvalue_t wrap_text_selector_t_get_prop_localize_options(
 }
 
 jsvalue_t wrap_text_selector_t_get_prop_loop_options(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26164,8 +24499,7 @@ ret_t text_selector_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_time_clock_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26186,8 +24520,7 @@ jsvalue_t wrap_time_clock_create(
 }
 
 jsvalue_t wrap_time_clock_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26204,8 +24537,7 @@ jsvalue_t wrap_time_clock_cast(
 }
 
 jsvalue_t wrap_time_clock_set_hour(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26223,8 +24555,7 @@ jsvalue_t wrap_time_clock_set_hour(
 }
 
 jsvalue_t wrap_time_clock_set_minute(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26242,8 +24573,7 @@ jsvalue_t wrap_time_clock_set_minute(
 }
 
 jsvalue_t wrap_time_clock_set_second(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26261,8 +24591,7 @@ jsvalue_t wrap_time_clock_set_second(
 }
 
 jsvalue_t wrap_time_clock_set_hour_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26281,8 +24610,7 @@ jsvalue_t wrap_time_clock_set_hour_image(
 }
 
 jsvalue_t wrap_time_clock_set_minute_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26301,8 +24629,7 @@ jsvalue_t wrap_time_clock_set_minute_image(
 }
 
 jsvalue_t wrap_time_clock_set_second_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26321,8 +24648,7 @@ jsvalue_t wrap_time_clock_set_second_image(
 }
 
 jsvalue_t wrap_time_clock_set_bg_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26341,8 +24667,7 @@ jsvalue_t wrap_time_clock_set_bg_image(
 }
 
 jsvalue_t wrap_time_clock_set_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26361,8 +24686,7 @@ jsvalue_t wrap_time_clock_set_image(
 }
 
 jsvalue_t wrap_time_clock_set_hour_anchor(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26383,8 +24707,7 @@ jsvalue_t wrap_time_clock_set_hour_anchor(
 }
 
 jsvalue_t wrap_time_clock_set_minute_anchor(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26405,8 +24728,7 @@ jsvalue_t wrap_time_clock_set_minute_anchor(
 }
 
 jsvalue_t wrap_time_clock_set_second_anchor(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26427,8 +24749,7 @@ jsvalue_t wrap_time_clock_set_second_anchor(
 }
 
 jsvalue_t wrap_time_clock_t_get_prop_hour(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26441,8 +24762,7 @@ jsvalue_t wrap_time_clock_t_get_prop_hour(
 }
 
 jsvalue_t wrap_time_clock_t_get_prop_minute(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26455,8 +24775,7 @@ jsvalue_t wrap_time_clock_t_get_prop_minute(
 }
 
 jsvalue_t wrap_time_clock_t_get_prop_second(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26469,8 +24788,7 @@ jsvalue_t wrap_time_clock_t_get_prop_second(
 }
 
 jsvalue_t wrap_time_clock_t_get_prop_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26483,8 +24801,7 @@ jsvalue_t wrap_time_clock_t_get_prop_image(
 }
 
 jsvalue_t wrap_time_clock_t_get_prop_bg_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26497,8 +24814,7 @@ jsvalue_t wrap_time_clock_t_get_prop_bg_image(
 }
 
 jsvalue_t wrap_time_clock_t_get_prop_hour_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26511,8 +24827,7 @@ jsvalue_t wrap_time_clock_t_get_prop_hour_image(
 }
 
 jsvalue_t wrap_time_clock_t_get_prop_minute_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26525,8 +24840,7 @@ jsvalue_t wrap_time_clock_t_get_prop_minute_image(
 }
 
 jsvalue_t wrap_time_clock_t_get_prop_second_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26539,8 +24853,7 @@ jsvalue_t wrap_time_clock_t_get_prop_second_image(
 }
 
 jsvalue_t wrap_time_clock_t_get_prop_hour_anchor_x(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26553,8 +24866,7 @@ jsvalue_t wrap_time_clock_t_get_prop_hour_anchor_x(
 }
 
 jsvalue_t wrap_time_clock_t_get_prop_hour_anchor_y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26567,8 +24879,7 @@ jsvalue_t wrap_time_clock_t_get_prop_hour_anchor_y(
 }
 
 jsvalue_t wrap_time_clock_t_get_prop_minute_anchor_x(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26581,8 +24892,7 @@ jsvalue_t wrap_time_clock_t_get_prop_minute_anchor_x(
 }
 
 jsvalue_t wrap_time_clock_t_get_prop_minute_anchor_y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26595,8 +24905,7 @@ jsvalue_t wrap_time_clock_t_get_prop_minute_anchor_y(
 }
 
 jsvalue_t wrap_time_clock_t_get_prop_second_anchor_x(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26609,8 +24918,7 @@ jsvalue_t wrap_time_clock_t_get_prop_second_anchor_x(
 }
 
 jsvalue_t wrap_time_clock_t_get_prop_second_anchor_y(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26655,8 +24963,7 @@ ret_t time_clock_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_prop_change_event_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26673,8 +24980,7 @@ jsvalue_t wrap_prop_change_event_cast(
 }
 
 jsvalue_t wrap_prop_change_event_t_get_prop_name(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26687,8 +24993,7 @@ jsvalue_t wrap_prop_change_event_t_get_prop_name(
 }
 
 jsvalue_t wrap_prop_change_event_t_get_prop_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26709,8 +25014,7 @@ ret_t prop_change_event_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_progress_event_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26727,8 +25031,7 @@ jsvalue_t wrap_progress_event_cast(
 }
 
 jsvalue_t wrap_progress_event_t_get_prop_percent(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26748,8 +25051,7 @@ ret_t progress_event_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_done_event_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26766,8 +25068,7 @@ jsvalue_t wrap_done_event_cast(
 }
 
 jsvalue_t wrap_done_event_t_get_prop_result(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26787,8 +25088,7 @@ ret_t done_event_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_error_event_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26805,8 +25105,7 @@ jsvalue_t wrap_error_event_cast(
 }
 
 jsvalue_t wrap_error_event_t_get_prop_code(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26819,8 +25118,7 @@ jsvalue_t wrap_error_event_t_get_prop_code(
 }
 
 jsvalue_t wrap_error_event_t_get_prop_message(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26841,8 +25139,7 @@ ret_t error_event_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_cmd_exec_event_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26859,8 +25156,7 @@ jsvalue_t wrap_cmd_exec_event_cast(
 }
 
 jsvalue_t wrap_cmd_exec_event_t_get_prop_name(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26873,8 +25169,7 @@ jsvalue_t wrap_cmd_exec_event_t_get_prop_name(
 }
 
 jsvalue_t wrap_cmd_exec_event_t_get_prop_args(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26887,8 +25182,7 @@ jsvalue_t wrap_cmd_exec_event_t_get_prop_args(
 }
 
 jsvalue_t wrap_cmd_exec_event_t_get_prop_result(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26901,8 +25195,7 @@ jsvalue_t wrap_cmd_exec_event_t_get_prop_result(
 }
 
 jsvalue_t wrap_cmd_exec_event_t_get_prop_can_exec(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26925,8 +25218,7 @@ ret_t cmd_exec_event_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_app_bar_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26947,8 +25239,7 @@ jsvalue_t wrap_app_bar_create(
 }
 
 jsvalue_t wrap_app_bar_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26972,8 +25263,7 @@ ret_t app_bar_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_button_group_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -26994,8 +25284,7 @@ jsvalue_t wrap_button_group_create(
 }
 
 jsvalue_t wrap_button_group_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27019,8 +25308,7 @@ ret_t button_group_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_button_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27041,8 +25329,7 @@ jsvalue_t wrap_button_create(
 }
 
 jsvalue_t wrap_button_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27059,8 +25346,7 @@ jsvalue_t wrap_button_cast(
 }
 
 jsvalue_t wrap_button_set_repeat(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27078,8 +25364,7 @@ jsvalue_t wrap_button_set_repeat(
 }
 
 jsvalue_t wrap_button_set_long_press_time(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27097,8 +25382,7 @@ jsvalue_t wrap_button_set_long_press_time(
 }
 
 jsvalue_t wrap_button_set_enable_long_press(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27116,8 +25400,7 @@ jsvalue_t wrap_button_set_enable_long_press(
 }
 
 jsvalue_t wrap_button_t_get_prop_repeat(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27130,8 +25413,7 @@ jsvalue_t wrap_button_t_get_prop_repeat(
 }
 
 jsvalue_t wrap_button_t_get_prop_enable_long_press(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27144,8 +25426,7 @@ jsvalue_t wrap_button_t_get_prop_enable_long_press(
 }
 
 jsvalue_t wrap_button_t_get_prop_long_press_time(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27171,8 +25452,7 @@ ret_t button_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_check_button_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27193,8 +25473,7 @@ jsvalue_t wrap_check_button_create(
 }
 
 jsvalue_t wrap_check_button_create_radio(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27215,8 +25494,7 @@ jsvalue_t wrap_check_button_create_radio(
 }
 
 jsvalue_t wrap_check_button_set_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27234,8 +25512,7 @@ jsvalue_t wrap_check_button_set_value(
 }
 
 jsvalue_t wrap_check_button_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27252,8 +25529,7 @@ jsvalue_t wrap_check_button_cast(
 }
 
 jsvalue_t wrap_check_button_t_get_prop_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27276,8 +25552,7 @@ ret_t check_button_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_clip_view_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27298,8 +25573,7 @@ jsvalue_t wrap_clip_view_create(
 }
 
 jsvalue_t wrap_clip_view_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27323,8 +25597,7 @@ ret_t clip_view_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_color_tile_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27345,8 +25618,7 @@ jsvalue_t wrap_color_tile_create(
 }
 
 jsvalue_t wrap_color_tile_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27363,8 +25635,7 @@ jsvalue_t wrap_color_tile_cast(
 }
 
 jsvalue_t wrap_color_tile_set_bg_color(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27383,8 +25654,7 @@ jsvalue_t wrap_color_tile_set_bg_color(
 }
 
 jsvalue_t wrap_color_tile_t_get_prop_bg_color(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27397,8 +25667,7 @@ jsvalue_t wrap_color_tile_t_get_prop_bg_color(
 }
 
 jsvalue_t wrap_color_tile_t_get_prop_border_color(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27421,8 +25690,7 @@ ret_t color_tile_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_column_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27443,8 +25711,7 @@ jsvalue_t wrap_column_create(
 }
 
 jsvalue_t wrap_column_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27468,8 +25735,7 @@ ret_t column_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_combo_box_item_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27490,8 +25756,7 @@ jsvalue_t wrap_combo_box_item_create(
 }
 
 jsvalue_t wrap_combo_box_item_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27508,8 +25773,7 @@ jsvalue_t wrap_combo_box_item_cast(
 }
 
 jsvalue_t wrap_combo_box_item_set_checked(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27527,8 +25791,7 @@ jsvalue_t wrap_combo_box_item_set_checked(
 }
 
 jsvalue_t wrap_combo_box_item_set_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27546,8 +25809,7 @@ jsvalue_t wrap_combo_box_item_set_value(
 }
 
 jsvalue_t wrap_combo_box_item_t_get_prop_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27560,8 +25822,7 @@ jsvalue_t wrap_combo_box_item_t_get_prop_value(
 }
 
 jsvalue_t wrap_combo_box_item_t_get_prop_checked(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27585,8 +25846,7 @@ ret_t combo_box_item_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_dialog_client_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27607,8 +25867,7 @@ jsvalue_t wrap_dialog_client_create(
 }
 
 jsvalue_t wrap_dialog_client_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27632,8 +25891,7 @@ ret_t dialog_client_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_dialog_title_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27654,8 +25912,7 @@ jsvalue_t wrap_dialog_title_create(
 }
 
 jsvalue_t wrap_dialog_title_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27679,8 +25936,7 @@ ret_t dialog_title_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_digit_clock_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27701,8 +25957,7 @@ jsvalue_t wrap_digit_clock_create(
 }
 
 jsvalue_t wrap_digit_clock_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27719,8 +25974,7 @@ jsvalue_t wrap_digit_clock_cast(
 }
 
 jsvalue_t wrap_digit_clock_set_format(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27739,8 +25993,7 @@ jsvalue_t wrap_digit_clock_set_format(
 }
 
 jsvalue_t wrap_digit_clock_t_get_prop_format(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27762,8 +26015,7 @@ ret_t digit_clock_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_dragger_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27784,8 +26036,7 @@ jsvalue_t wrap_dragger_create(
 }
 
 jsvalue_t wrap_dragger_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27802,8 +26053,7 @@ jsvalue_t wrap_dragger_cast(
 }
 
 jsvalue_t wrap_dragger_set_range(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27824,8 +26074,7 @@ jsvalue_t wrap_dragger_set_range(
 }
 
 jsvalue_t wrap_dragger_t_get_prop_x_min(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27838,8 +26087,7 @@ jsvalue_t wrap_dragger_t_get_prop_x_min(
 }
 
 jsvalue_t wrap_dragger_t_get_prop_y_min(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27852,8 +26100,7 @@ jsvalue_t wrap_dragger_t_get_prop_y_min(
 }
 
 jsvalue_t wrap_dragger_t_get_prop_x_max(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27866,8 +26113,7 @@ jsvalue_t wrap_dragger_t_get_prop_x_max(
 }
 
 jsvalue_t wrap_dragger_t_get_prop_y_max(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27892,8 +26138,7 @@ ret_t dragger_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_edit_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27914,8 +26159,7 @@ jsvalue_t wrap_edit_create(
 }
 
 jsvalue_t wrap_edit_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27932,8 +26176,7 @@ jsvalue_t wrap_edit_cast(
 }
 
 jsvalue_t wrap_edit_get_int(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27950,8 +26193,7 @@ jsvalue_t wrap_edit_get_int(
 }
 
 jsvalue_t wrap_edit_get_double(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27968,8 +26210,7 @@ jsvalue_t wrap_edit_get_double(
 }
 
 jsvalue_t wrap_edit_set_int(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -27987,8 +26228,7 @@ jsvalue_t wrap_edit_set_int(
 }
 
 jsvalue_t wrap_edit_set_double(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28006,8 +26246,7 @@ jsvalue_t wrap_edit_set_double(
 }
 
 jsvalue_t wrap_edit_set_text_limit(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28026,8 +26265,7 @@ jsvalue_t wrap_edit_set_text_limit(
 }
 
 jsvalue_t wrap_edit_set_int_limit(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28047,8 +26285,7 @@ jsvalue_t wrap_edit_set_int_limit(
 }
 
 jsvalue_t wrap_edit_set_float_limit(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28068,8 +26305,7 @@ jsvalue_t wrap_edit_set_float_limit(
 }
 
 jsvalue_t wrap_edit_set_readonly(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28087,8 +26323,7 @@ jsvalue_t wrap_edit_set_readonly(
 }
 
 jsvalue_t wrap_edit_set_cancelable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28106,8 +26341,7 @@ jsvalue_t wrap_edit_set_cancelable(
 }
 
 jsvalue_t wrap_edit_set_auto_fix(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28125,8 +26359,7 @@ jsvalue_t wrap_edit_set_auto_fix(
 }
 
 jsvalue_t wrap_edit_set_select_none_when_focused(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28144,8 +26377,7 @@ jsvalue_t wrap_edit_set_select_none_when_focused(
 }
 
 jsvalue_t wrap_edit_set_open_im_when_focused(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28163,8 +26395,7 @@ jsvalue_t wrap_edit_set_open_im_when_focused(
 }
 
 jsvalue_t wrap_edit_set_close_im_when_blured(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28182,8 +26413,7 @@ jsvalue_t wrap_edit_set_close_im_when_blured(
 }
 
 jsvalue_t wrap_edit_set_input_type(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28201,8 +26431,7 @@ jsvalue_t wrap_edit_set_input_type(
 }
 
 jsvalue_t wrap_edit_set_action_text(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28221,8 +26450,7 @@ jsvalue_t wrap_edit_set_action_text(
 }
 
 jsvalue_t wrap_edit_set_tips(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28241,8 +26469,7 @@ jsvalue_t wrap_edit_set_tips(
 }
 
 jsvalue_t wrap_edit_set_tr_tips(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28261,8 +26488,7 @@ jsvalue_t wrap_edit_set_tr_tips(
 }
 
 jsvalue_t wrap_edit_set_keyboard(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28281,8 +26507,7 @@ jsvalue_t wrap_edit_set_keyboard(
 }
 
 jsvalue_t wrap_edit_set_password_visible(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28300,8 +26525,7 @@ jsvalue_t wrap_edit_set_password_visible(
 }
 
 jsvalue_t wrap_edit_set_focus(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28319,8 +26543,7 @@ jsvalue_t wrap_edit_set_focus(
 }
 
 jsvalue_t wrap_edit_set_cursor(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28338,8 +26561,7 @@ jsvalue_t wrap_edit_set_cursor(
 }
 
 jsvalue_t wrap_edit_t_get_prop_tips(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28352,8 +26574,7 @@ jsvalue_t wrap_edit_t_get_prop_tips(
 }
 
 jsvalue_t wrap_edit_t_get_prop_tr_tips(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28366,8 +26587,7 @@ jsvalue_t wrap_edit_t_get_prop_tr_tips(
 }
 
 jsvalue_t wrap_edit_t_get_prop_action_text(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28380,8 +26600,7 @@ jsvalue_t wrap_edit_t_get_prop_action_text(
 }
 
 jsvalue_t wrap_edit_t_get_prop_keyboard(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28394,8 +26613,7 @@ jsvalue_t wrap_edit_t_get_prop_keyboard(
 }
 
 jsvalue_t wrap_edit_t_get_prop_min(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28408,8 +26626,7 @@ jsvalue_t wrap_edit_t_get_prop_min(
 }
 
 jsvalue_t wrap_edit_t_get_prop_max(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28422,8 +26639,7 @@ jsvalue_t wrap_edit_t_get_prop_max(
 }
 
 jsvalue_t wrap_edit_t_get_prop_step(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28436,8 +26652,7 @@ jsvalue_t wrap_edit_t_get_prop_step(
 }
 
 jsvalue_t wrap_edit_t_get_prop_input_type(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28450,8 +26665,7 @@ jsvalue_t wrap_edit_t_get_prop_input_type(
 }
 
 jsvalue_t wrap_edit_t_get_prop_readonly(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28464,8 +26678,7 @@ jsvalue_t wrap_edit_t_get_prop_readonly(
 }
 
 jsvalue_t wrap_edit_t_get_prop_password_visible(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28478,8 +26691,7 @@ jsvalue_t wrap_edit_t_get_prop_password_visible(
 }
 
 jsvalue_t wrap_edit_t_get_prop_auto_fix(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28492,8 +26704,7 @@ jsvalue_t wrap_edit_t_get_prop_auto_fix(
 }
 
 jsvalue_t wrap_edit_t_get_prop_select_none_when_focused(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28506,8 +26717,7 @@ jsvalue_t wrap_edit_t_get_prop_select_none_when_focused(
 }
 
 jsvalue_t wrap_edit_t_get_prop_open_im_when_focused(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28520,8 +26730,7 @@ jsvalue_t wrap_edit_t_get_prop_open_im_when_focused(
 }
 
 jsvalue_t wrap_edit_t_get_prop_close_im_when_blured(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28534,8 +26743,7 @@ jsvalue_t wrap_edit_t_get_prop_close_im_when_blured(
 }
 
 jsvalue_t wrap_edit_t_get_prop_cancelable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28591,8 +26799,7 @@ ret_t edit_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_grid_item_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28613,8 +26820,7 @@ jsvalue_t wrap_grid_item_create(
 }
 
 jsvalue_t wrap_grid_item_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28638,8 +26844,7 @@ ret_t grid_item_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_grid_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28660,8 +26865,7 @@ jsvalue_t wrap_grid_create(
 }
 
 jsvalue_t wrap_grid_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28685,8 +26889,7 @@ ret_t grid_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_group_box_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28707,8 +26910,7 @@ jsvalue_t wrap_group_box_create(
 }
 
 jsvalue_t wrap_group_box_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28732,8 +26934,7 @@ ret_t group_box_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_label_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28754,8 +26955,7 @@ jsvalue_t wrap_label_create(
 }
 
 jsvalue_t wrap_label_set_length(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28773,8 +26973,7 @@ jsvalue_t wrap_label_set_length(
 }
 
 jsvalue_t wrap_label_set_line_wrap(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28792,8 +26991,7 @@ jsvalue_t wrap_label_set_line_wrap(
 }
 
 jsvalue_t wrap_label_set_word_wrap(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28811,8 +27009,7 @@ jsvalue_t wrap_label_set_word_wrap(
 }
 
 jsvalue_t wrap_label_resize_to_content(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28833,8 +27030,7 @@ jsvalue_t wrap_label_resize_to_content(
 }
 
 jsvalue_t wrap_label_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28851,8 +27047,7 @@ jsvalue_t wrap_label_cast(
 }
 
 jsvalue_t wrap_label_t_get_prop_length(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28865,8 +27060,7 @@ jsvalue_t wrap_label_t_get_prop_length(
 }
 
 jsvalue_t wrap_label_t_get_prop_line_wrap(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28879,8 +27073,7 @@ jsvalue_t wrap_label_t_get_prop_line_wrap(
 }
 
 jsvalue_t wrap_label_t_get_prop_word_wrap(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28907,8 +27100,7 @@ ret_t label_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_pages_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28929,8 +27121,7 @@ jsvalue_t wrap_pages_create(
 }
 
 jsvalue_t wrap_pages_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28947,8 +27138,7 @@ jsvalue_t wrap_pages_cast(
 }
 
 jsvalue_t wrap_pages_set_active(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28966,8 +27156,7 @@ jsvalue_t wrap_pages_set_active(
 }
 
 jsvalue_t wrap_pages_set_active_by_name(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -28986,8 +27175,7 @@ jsvalue_t wrap_pages_set_active_by_name(
 }
 
 jsvalue_t wrap_pages_t_get_prop_active(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29010,8 +27198,7 @@ ret_t pages_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_progress_bar_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29032,8 +27219,7 @@ jsvalue_t wrap_progress_bar_create(
 }
 
 jsvalue_t wrap_progress_bar_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29050,8 +27236,7 @@ jsvalue_t wrap_progress_bar_cast(
 }
 
 jsvalue_t wrap_progress_bar_set_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29069,8 +27254,7 @@ jsvalue_t wrap_progress_bar_set_value(
 }
 
 jsvalue_t wrap_progress_bar_set_max(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29087,9 +27271,27 @@ jsvalue_t wrap_progress_bar_set_max(
   return jret;
 }
 
+jsvalue_t wrap_progress_bar_set_format(
+    const jerry_call_info_t *call_info_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  const char* format = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  ret = (ret_t)progress_bar_set_format(widget, format);
+  TKMEM_FREE(format);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_progress_bar_set_vertical(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29107,8 +27309,7 @@ jsvalue_t wrap_progress_bar_set_vertical(
 }
 
 jsvalue_t wrap_progress_bar_set_show_text(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29126,8 +27327,7 @@ jsvalue_t wrap_progress_bar_set_show_text(
 }
 
 jsvalue_t wrap_progress_bar_set_reverse(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29145,8 +27345,7 @@ jsvalue_t wrap_progress_bar_set_reverse(
 }
 
 jsvalue_t wrap_progress_bar_get_percent(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29163,8 +27362,7 @@ jsvalue_t wrap_progress_bar_get_percent(
 }
 
 jsvalue_t wrap_progress_bar_t_get_prop_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29177,8 +27375,7 @@ jsvalue_t wrap_progress_bar_t_get_prop_value(
 }
 
 jsvalue_t wrap_progress_bar_t_get_prop_max(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29190,9 +27387,21 @@ jsvalue_t wrap_progress_bar_t_get_prop_max(
   return jret;
 }
 
+jsvalue_t wrap_progress_bar_t_get_prop_format(
+    const jerry_call_info_t *call_info_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  progress_bar_t* obj = (progress_bar_t*)jsvalue_get_pointer(ctx, argv[0], "progress_bar_t*");
+
+  jret = jsvalue_create_string(ctx, obj->format);
+  return jret;
+}
+
 jsvalue_t wrap_progress_bar_t_get_prop_vertical(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29205,8 +27414,7 @@ jsvalue_t wrap_progress_bar_t_get_prop_vertical(
 }
 
 jsvalue_t wrap_progress_bar_t_get_prop_show_text(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29219,8 +27427,7 @@ jsvalue_t wrap_progress_bar_t_get_prop_show_text(
 }
 
 jsvalue_t wrap_progress_bar_t_get_prop_reverse(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29237,12 +27444,14 @@ ret_t progress_bar_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_cast", wrap_progress_bar_cast);
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_set_value", wrap_progress_bar_set_value);
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_set_max", wrap_progress_bar_set_max);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_bar_set_format", wrap_progress_bar_set_format);
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_set_vertical", wrap_progress_bar_set_vertical);
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_set_show_text", wrap_progress_bar_set_show_text);
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_set_reverse", wrap_progress_bar_set_reverse);
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_get_percent", wrap_progress_bar_get_percent);
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_t_get_prop_value", wrap_progress_bar_t_get_prop_value);
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_t_get_prop_max", wrap_progress_bar_t_get_prop_max);
+  jerryx_handler_register_global((const jerry_char_t*)"progress_bar_t_get_prop_format", wrap_progress_bar_t_get_prop_format);
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_t_get_prop_vertical", wrap_progress_bar_t_get_prop_vertical);
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_t_get_prop_show_text", wrap_progress_bar_t_get_prop_show_text);
   jerryx_handler_register_global((const jerry_char_t*)"progress_bar_t_get_prop_reverse", wrap_progress_bar_t_get_prop_reverse);
@@ -29251,8 +27460,7 @@ ret_t progress_bar_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_row_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29273,8 +27481,7 @@ jsvalue_t wrap_row_create(
 }
 
 jsvalue_t wrap_row_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29298,8 +27505,7 @@ ret_t row_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_slider_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29320,8 +27526,7 @@ jsvalue_t wrap_slider_create(
 }
 
 jsvalue_t wrap_slider_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29338,8 +27543,7 @@ jsvalue_t wrap_slider_cast(
 }
 
 jsvalue_t wrap_slider_set_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29357,8 +27561,7 @@ jsvalue_t wrap_slider_set_value(
 }
 
 jsvalue_t wrap_slider_set_min(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29376,8 +27579,7 @@ jsvalue_t wrap_slider_set_min(
 }
 
 jsvalue_t wrap_slider_set_max(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29395,8 +27597,7 @@ jsvalue_t wrap_slider_set_max(
 }
 
 jsvalue_t wrap_slider_set_step(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29414,8 +27615,7 @@ jsvalue_t wrap_slider_set_step(
 }
 
 jsvalue_t wrap_slider_set_bar_size(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29433,8 +27633,7 @@ jsvalue_t wrap_slider_set_bar_size(
 }
 
 jsvalue_t wrap_slider_set_vertical(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29452,8 +27651,7 @@ jsvalue_t wrap_slider_set_vertical(
 }
 
 jsvalue_t wrap_slider_t_get_prop_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29466,8 +27664,7 @@ jsvalue_t wrap_slider_t_get_prop_value(
 }
 
 jsvalue_t wrap_slider_t_get_prop_min(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29480,8 +27677,7 @@ jsvalue_t wrap_slider_t_get_prop_min(
 }
 
 jsvalue_t wrap_slider_t_get_prop_max(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29494,8 +27690,7 @@ jsvalue_t wrap_slider_t_get_prop_max(
 }
 
 jsvalue_t wrap_slider_t_get_prop_step(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29508,8 +27703,7 @@ jsvalue_t wrap_slider_t_get_prop_step(
 }
 
 jsvalue_t wrap_slider_t_get_prop_vertical(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29522,8 +27716,7 @@ jsvalue_t wrap_slider_t_get_prop_vertical(
 }
 
 jsvalue_t wrap_slider_t_get_prop_bar_size(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29536,8 +27729,7 @@ jsvalue_t wrap_slider_t_get_prop_bar_size(
 }
 
 jsvalue_t wrap_slider_t_get_prop_dragger_size(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29550,8 +27742,7 @@ jsvalue_t wrap_slider_t_get_prop_dragger_size(
 }
 
 jsvalue_t wrap_slider_t_get_prop_dragger_adapt_to_icon(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29564,8 +27755,7 @@ jsvalue_t wrap_slider_t_get_prop_dragger_adapt_to_icon(
 }
 
 jsvalue_t wrap_slider_t_get_prop_slide_with_bar(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29600,8 +27790,7 @@ ret_t slider_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_tab_button_group_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29622,8 +27811,7 @@ jsvalue_t wrap_tab_button_group_create(
 }
 
 jsvalue_t wrap_tab_button_group_set_compact(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29641,8 +27829,7 @@ jsvalue_t wrap_tab_button_group_set_compact(
 }
 
 jsvalue_t wrap_tab_button_group_set_scrollable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29660,8 +27847,7 @@ jsvalue_t wrap_tab_button_group_set_scrollable(
 }
 
 jsvalue_t wrap_tab_button_group_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29678,8 +27864,7 @@ jsvalue_t wrap_tab_button_group_cast(
 }
 
 jsvalue_t wrap_tab_button_group_t_get_prop_compact(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29692,8 +27877,7 @@ jsvalue_t wrap_tab_button_group_t_get_prop_compact(
 }
 
 jsvalue_t wrap_tab_button_group_t_get_prop_scrollable(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29717,8 +27901,7 @@ ret_t tab_button_group_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_tab_button_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29739,8 +27922,7 @@ jsvalue_t wrap_tab_button_create(
 }
 
 jsvalue_t wrap_tab_button_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29757,8 +27939,7 @@ jsvalue_t wrap_tab_button_cast(
 }
 
 jsvalue_t wrap_tab_button_set_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29776,8 +27957,7 @@ jsvalue_t wrap_tab_button_set_value(
 }
 
 jsvalue_t wrap_tab_button_set_icon(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29796,8 +27976,7 @@ jsvalue_t wrap_tab_button_set_icon(
 }
 
 jsvalue_t wrap_tab_button_set_active_icon(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29816,8 +27995,7 @@ jsvalue_t wrap_tab_button_set_active_icon(
 }
 
 jsvalue_t wrap_tab_button_set_load_ui(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29836,8 +28014,7 @@ jsvalue_t wrap_tab_button_set_load_ui(
 }
 
 jsvalue_t wrap_tab_button_t_get_prop_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29850,8 +28027,7 @@ jsvalue_t wrap_tab_button_t_get_prop_value(
 }
 
 jsvalue_t wrap_tab_button_t_get_prop_load_ui(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29864,8 +28040,7 @@ jsvalue_t wrap_tab_button_t_get_prop_load_ui(
 }
 
 jsvalue_t wrap_tab_button_t_get_prop_active_icon(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29878,8 +28053,7 @@ jsvalue_t wrap_tab_button_t_get_prop_active_icon(
 }
 
 jsvalue_t wrap_tab_button_t_get_prop_icon(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29907,8 +28081,7 @@ ret_t tab_button_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_tab_control_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29929,8 +28102,7 @@ jsvalue_t wrap_tab_control_create(
 }
 
 jsvalue_t wrap_tab_control_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29954,8 +28126,7 @@ ret_t tab_control_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_view_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29976,8 +28147,7 @@ jsvalue_t wrap_view_create(
 }
 
 jsvalue_t wrap_view_set_default_focused_child(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -29996,8 +28166,7 @@ jsvalue_t wrap_view_set_default_focused_child(
 }
 
 jsvalue_t wrap_view_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30014,8 +28183,7 @@ jsvalue_t wrap_view_cast(
 }
 
 jsvalue_t wrap_view_t_get_prop_default_focused_child(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30037,8 +28205,7 @@ ret_t view_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_dialog_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30059,8 +28226,7 @@ jsvalue_t wrap_dialog_create(
 }
 
 jsvalue_t wrap_dialog_create_simple(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30081,8 +28247,7 @@ jsvalue_t wrap_dialog_create_simple(
 }
 
 jsvalue_t wrap_dialog_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30099,8 +28264,7 @@ jsvalue_t wrap_dialog_cast(
 }
 
 jsvalue_t wrap_dialog_get_title(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30117,8 +28281,7 @@ jsvalue_t wrap_dialog_get_title(
 }
 
 jsvalue_t wrap_dialog_get_client(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30135,8 +28298,7 @@ jsvalue_t wrap_dialog_get_client(
 }
 
 jsvalue_t wrap_dialog_open(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30154,8 +28316,7 @@ jsvalue_t wrap_dialog_open(
 }
 
 jsvalue_t wrap_dialog_set_title(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30174,8 +28335,7 @@ jsvalue_t wrap_dialog_set_title(
 }
 
 jsvalue_t wrap_dialog_modal(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30192,8 +28352,7 @@ jsvalue_t wrap_dialog_modal(
 }
 
 jsvalue_t wrap_dialog_quit(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30211,8 +28370,7 @@ jsvalue_t wrap_dialog_quit(
 }
 
 jsvalue_t wrap_dialog_is_quited(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30229,8 +28387,7 @@ jsvalue_t wrap_dialog_is_quited(
 }
 
 jsvalue_t wrap_dialog_is_modal(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30247,8 +28404,7 @@ jsvalue_t wrap_dialog_is_modal(
 }
 
 jsvalue_t wrap_dialog_toast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30267,8 +28423,7 @@ jsvalue_t wrap_dialog_toast(
 }
 
 jsvalue_t wrap_dialog_info(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30288,8 +28443,7 @@ jsvalue_t wrap_dialog_info(
 }
 
 jsvalue_t wrap_dialog_warn(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30309,8 +28463,7 @@ jsvalue_t wrap_dialog_warn(
 }
 
 jsvalue_t wrap_dialog_confirm(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30330,8 +28483,7 @@ jsvalue_t wrap_dialog_confirm(
 }
 
 jsvalue_t wrap_dialog_t_get_prop_highlight(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30365,8 +28517,7 @@ ret_t dialog_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_native_window_move(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30386,8 +28537,7 @@ jsvalue_t wrap_native_window_move(
 }
 
 jsvalue_t wrap_native_window_resize(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30407,8 +28557,7 @@ jsvalue_t wrap_native_window_resize(
 }
 
 jsvalue_t wrap_native_window_minimize(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30425,8 +28574,7 @@ jsvalue_t wrap_native_window_minimize(
 }
 
 jsvalue_t wrap_native_window_maximize(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30443,8 +28591,7 @@ jsvalue_t wrap_native_window_maximize(
 }
 
 jsvalue_t wrap_native_window_restore(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30461,8 +28608,7 @@ jsvalue_t wrap_native_window_restore(
 }
 
 jsvalue_t wrap_native_window_center(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30479,8 +28625,7 @@ jsvalue_t wrap_native_window_center(
 }
 
 jsvalue_t wrap_native_window_show_border(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30498,8 +28643,7 @@ jsvalue_t wrap_native_window_show_border(
 }
 
 jsvalue_t wrap_native_window_set_fullscreen(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30517,8 +28661,7 @@ jsvalue_t wrap_native_window_set_fullscreen(
 }
 
 jsvalue_t wrap_native_window_set_cursor(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30552,8 +28695,7 @@ ret_t native_window_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_window_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30574,8 +28716,7 @@ jsvalue_t wrap_window_create(
 }
 
 jsvalue_t wrap_window_create_default(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30591,8 +28732,7 @@ jsvalue_t wrap_window_create_default(
 }
 
 jsvalue_t wrap_window_set_fullscreen(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30610,8 +28750,7 @@ jsvalue_t wrap_window_set_fullscreen(
 }
 
 jsvalue_t wrap_window_set_auto_scale_children(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30630,8 +28769,7 @@ jsvalue_t wrap_window_set_auto_scale_children(
 }
 
 jsvalue_t wrap_window_open(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30649,8 +28787,7 @@ jsvalue_t wrap_window_open(
 }
 
 jsvalue_t wrap_window_open_and_close(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30669,8 +28806,7 @@ jsvalue_t wrap_window_open_and_close(
 }
 
 jsvalue_t wrap_window_close(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30687,8 +28823,7 @@ jsvalue_t wrap_window_close(
 }
 
 jsvalue_t wrap_window_close_force(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30705,8 +28840,7 @@ jsvalue_t wrap_window_close_force(
 }
 
 jsvalue_t wrap_window_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30723,8 +28857,7 @@ jsvalue_t wrap_window_cast(
 }
 
 jsvalue_t wrap_window_t_get_prop_fullscreen(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30752,8 +28885,7 @@ ret_t window_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_gif_image_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30774,8 +28906,7 @@ jsvalue_t wrap_gif_image_create(
 }
 
 jsvalue_t wrap_gif_image_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30799,8 +28930,7 @@ ret_t gif_image_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_keyboard_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30821,8 +28951,7 @@ jsvalue_t wrap_keyboard_create(
 }
 
 jsvalue_t wrap_keyboard_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30851,8 +28980,7 @@ ret_t mutable_image_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_svg_image_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30873,8 +29001,7 @@ jsvalue_t wrap_svg_image_create(
 }
 
 jsvalue_t wrap_svg_image_set_image(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30893,8 +29020,7 @@ jsvalue_t wrap_svg_image_set_image(
 }
 
 jsvalue_t wrap_svg_image_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30919,8 +29045,7 @@ ret_t svg_image_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_idle_info_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30937,8 +29062,7 @@ jsvalue_t wrap_idle_info_cast(
 }
 
 jsvalue_t wrap_idle_info_t_get_prop_ctx(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30951,8 +29075,7 @@ jsvalue_t wrap_idle_info_t_get_prop_ctx(
 }
 
 jsvalue_t wrap_idle_info_t_get_prop_id(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30973,8 +29096,7 @@ ret_t idle_info_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_object_array_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -30990,8 +29112,7 @@ jsvalue_t wrap_object_array_create(
 }
 
 jsvalue_t wrap_object_array_clear_props(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31008,8 +29129,7 @@ jsvalue_t wrap_object_array_clear_props(
 }
 
 jsvalue_t wrap_object_array_insert(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31028,8 +29148,7 @@ jsvalue_t wrap_object_array_insert(
 }
 
 jsvalue_t wrap_object_array_push(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31047,8 +29166,7 @@ jsvalue_t wrap_object_array_push(
 }
 
 jsvalue_t wrap_object_array_remove(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31066,8 +29184,7 @@ jsvalue_t wrap_object_array_remove(
 }
 
 jsvalue_t wrap_object_array_t_get_prop_size(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31091,8 +29208,7 @@ ret_t object_array_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_object_default_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31108,8 +29224,7 @@ jsvalue_t wrap_object_default_create(
 }
 
 jsvalue_t wrap_object_default_clear_props(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31126,8 +29241,7 @@ jsvalue_t wrap_object_default_clear_props(
 }
 
 jsvalue_t wrap_object_default_t_get_prop_props_size(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31148,8 +29262,7 @@ ret_t object_default_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_timer_info_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31166,8 +29279,7 @@ jsvalue_t wrap_timer_info_cast(
 }
 
 jsvalue_t wrap_timer_info_t_get_prop_ctx(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31180,8 +29292,7 @@ jsvalue_t wrap_timer_info_t_get_prop_ctx(
 }
 
 jsvalue_t wrap_timer_info_t_get_prop_id(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31194,8 +29305,7 @@ jsvalue_t wrap_timer_info_t_get_prop_id(
 }
 
 jsvalue_t wrap_timer_info_t_get_prop_now(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31217,8 +29327,7 @@ ret_t timer_info_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_calibration_win_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31241,8 +29350,7 @@ ret_t calibration_win_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_combo_box_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31263,8 +29371,7 @@ jsvalue_t wrap_combo_box_create(
 }
 
 jsvalue_t wrap_combo_box_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31281,8 +29388,7 @@ jsvalue_t wrap_combo_box_cast(
 }
 
 jsvalue_t wrap_combo_box_set_open_window(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31301,8 +29407,7 @@ jsvalue_t wrap_combo_box_set_open_window(
 }
 
 jsvalue_t wrap_combo_box_reset_options(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31319,8 +29424,7 @@ jsvalue_t wrap_combo_box_reset_options(
 }
 
 jsvalue_t wrap_combo_box_count_options(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31337,8 +29441,7 @@ jsvalue_t wrap_combo_box_count_options(
 }
 
 jsvalue_t wrap_combo_box_set_selected_index(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31356,8 +29459,7 @@ jsvalue_t wrap_combo_box_set_selected_index(
 }
 
 jsvalue_t wrap_combo_box_set_localize_options(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31375,8 +29477,7 @@ jsvalue_t wrap_combo_box_set_localize_options(
 }
 
 jsvalue_t wrap_combo_box_set_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31394,8 +29495,7 @@ jsvalue_t wrap_combo_box_set_value(
 }
 
 jsvalue_t wrap_combo_box_set_item_height(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31413,8 +29513,7 @@ jsvalue_t wrap_combo_box_set_item_height(
 }
 
 jsvalue_t wrap_combo_box_append_option(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31434,8 +29533,7 @@ jsvalue_t wrap_combo_box_append_option(
 }
 
 jsvalue_t wrap_combo_box_set_options(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31454,8 +29552,7 @@ jsvalue_t wrap_combo_box_set_options(
 }
 
 jsvalue_t wrap_combo_box_get_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31472,8 +29569,7 @@ jsvalue_t wrap_combo_box_get_value(
 }
 
 jsvalue_t wrap_combo_box_get_text(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31490,8 +29586,7 @@ jsvalue_t wrap_combo_box_get_text(
 }
 
 jsvalue_t wrap_combo_box_t_get_prop_open_window(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31504,8 +29599,7 @@ jsvalue_t wrap_combo_box_t_get_prop_open_window(
 }
 
 jsvalue_t wrap_combo_box_t_get_prop_selected_index(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31518,8 +29612,7 @@ jsvalue_t wrap_combo_box_t_get_prop_selected_index(
 }
 
 jsvalue_t wrap_combo_box_t_get_prop_value(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31532,8 +29625,7 @@ jsvalue_t wrap_combo_box_t_get_prop_value(
 }
 
 jsvalue_t wrap_combo_box_t_get_prop_localize_options(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31546,8 +29638,7 @@ jsvalue_t wrap_combo_box_t_get_prop_localize_options(
 }
 
 jsvalue_t wrap_combo_box_t_get_prop_options(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31560,8 +29651,7 @@ jsvalue_t wrap_combo_box_t_get_prop_options(
 }
 
 jsvalue_t wrap_combo_box_t_get_prop_item_height(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31598,8 +29688,7 @@ ret_t combo_box_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_image_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31620,8 +29709,7 @@ jsvalue_t wrap_image_create(
 }
 
 jsvalue_t wrap_image_set_draw_type(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31639,8 +29727,7 @@ jsvalue_t wrap_image_set_draw_type(
 }
 
 jsvalue_t wrap_image_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31657,8 +29744,7 @@ jsvalue_t wrap_image_cast(
 }
 
 jsvalue_t wrap_image_t_get_prop_draw_type(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31680,8 +29766,7 @@ ret_t image_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_overlay_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31702,8 +29787,7 @@ jsvalue_t wrap_overlay_create(
 }
 
 jsvalue_t wrap_overlay_set_click_through(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31721,8 +29805,7 @@ jsvalue_t wrap_overlay_set_click_through(
 }
 
 jsvalue_t wrap_overlay_set_always_on_top(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31740,8 +29823,7 @@ jsvalue_t wrap_overlay_set_always_on_top(
 }
 
 jsvalue_t wrap_overlay_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31758,8 +29840,7 @@ jsvalue_t wrap_overlay_cast(
 }
 
 jsvalue_t wrap_overlay_t_get_prop_click_through(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31772,8 +29853,7 @@ jsvalue_t wrap_overlay_t_get_prop_click_through(
 }
 
 jsvalue_t wrap_overlay_t_get_prop_always_on_top(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31797,8 +29877,7 @@ ret_t overlay_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_popup_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31819,8 +29898,7 @@ jsvalue_t wrap_popup_create(
 }
 
 jsvalue_t wrap_popup_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31837,8 +29915,7 @@ jsvalue_t wrap_popup_cast(
 }
 
 jsvalue_t wrap_popup_set_close_when_click(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31856,8 +29933,7 @@ jsvalue_t wrap_popup_set_close_when_click(
 }
 
 jsvalue_t wrap_popup_set_close_when_click_outside(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31875,8 +29951,7 @@ jsvalue_t wrap_popup_set_close_when_click_outside(
 }
 
 jsvalue_t wrap_popup_set_close_when_timeout(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31894,8 +29969,7 @@ jsvalue_t wrap_popup_set_close_when_timeout(
 }
 
 jsvalue_t wrap_popup_t_get_prop_close_when_click(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31908,8 +29982,7 @@ jsvalue_t wrap_popup_t_get_prop_close_when_click(
 }
 
 jsvalue_t wrap_popup_t_get_prop_close_when_click_outside(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31922,8 +29995,7 @@ jsvalue_t wrap_popup_t_get_prop_close_when_click_outside(
 }
 
 jsvalue_t wrap_popup_t_get_prop_close_when_timeout(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31949,8 +30021,7 @@ ret_t popup_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_spin_box_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31971,8 +30042,7 @@ jsvalue_t wrap_spin_box_create(
 }
 
 jsvalue_t wrap_spin_box_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -31996,8 +30066,7 @@ ret_t spin_box_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_system_bar_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -32018,8 +30087,7 @@ jsvalue_t wrap_system_bar_create(
 }
 
 jsvalue_t wrap_system_bar_cast(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {
@@ -32043,8 +30111,7 @@ ret_t system_bar_t_init(JSContext *ctx) {
 }
 
 jsvalue_t wrap_combo_box_ex_create(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )  {

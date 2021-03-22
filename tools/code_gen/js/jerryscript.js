@@ -19,8 +19,7 @@ class JerryscriptGenerator extends JsBindingGenerator {
 
   genFuncArgs() {
     return `(
-    const jerry_value_t func_obj_val, 
-    const jerry_value_t this_p, 
+    const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
     const jerry_length_t argc 
   )`;

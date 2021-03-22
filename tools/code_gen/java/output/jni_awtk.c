@@ -3349,6 +3349,14 @@ int awtk_TInputType_INPUT_CUSTOM_PASSWORD(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TInputType_INPUT_ASCII(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(INPUT_ASCII));
+
+  return 0;
+}
+
 int awtk_TInputMethod_input_method_commit_text(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -4498,6 +4506,14 @@ int awtk_TKeyCode_TK_KEY_CANCEL(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   jni_ctx_return_int(&ctx, (int32_t)(TK_KEY_CANCEL));
+
+  return 0;
+}
+
+int awtk_TKeyCode_TK_KEY_WHEEL(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&ctx, (int32_t)(TK_KEY_WHEEL));
 
   return 0;
 }
@@ -14607,6 +14623,19 @@ int awtk_TProgressCircle_progress_circle_set_max(Runtime *runtime, JClass *clazz
   return 0;
 }
 
+int awtk_TProgressCircle_progress_circle_set_format(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  const char* format = (const char*)jni_ctx_get_str(&ctx);
+  ret = (ret_t)progress_circle_set_format(widget, format);
+  TKMEM_FREE(format);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TProgressCircle_progress_circle_set_line_width(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -14626,19 +14655,6 @@ int awtk_TProgressCircle_progress_circle_set_start_angle(Runtime *runtime, JClas
   widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
   int32_t start_angle = (int32_t)jni_ctx_get_int(&ctx);
   ret = (ret_t)progress_circle_set_start_angle(widget, start_angle);
-  jni_ctx_return_int(&ctx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TProgressCircle_progress_circle_set_unit(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  ret_t ret = 0;
-  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  const char* unit = (const char*)jni_ctx_get_str(&ctx);
-  ret = (ret_t)progress_circle_set_unit(widget, unit);
-  TKMEM_FREE(unit);
   jni_ctx_return_int(&ctx, (int32_t)(ret));
 
   return 0;
@@ -14694,7 +14710,16 @@ int awtk_TProgressCircle_progress_circle_t_get_prop_max(Runtime *runtime, JClass
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   progress_circle_t* obj = (progress_circle_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_int(&ctx, (int32_t)(obj->max));
+  jni_ctx_return_float(&ctx, (float)(obj->max));
+
+  return 0;
+}
+
+int awtk_TProgressCircle_progress_circle_t_get_prop_format(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  progress_circle_t* obj = (progress_circle_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_str(&ctx, (char*)(obj->format));
 
   return 0;
 }
@@ -14713,15 +14738,6 @@ int awtk_TProgressCircle_progress_circle_t_get_prop_line_width(Runtime *runtime,
 
   progress_circle_t* obj = (progress_circle_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_int(&ctx, (int32_t)(obj->line_width));
-
-  return 0;
-}
-
-int awtk_TProgressCircle_progress_circle_t_get_prop_unit(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
-
-  progress_circle_t* obj = (progress_circle_t*)jni_ctx_get_object(&ctx);
-  jni_ctx_return_str(&ctx, (char*)(obj->unit));
 
   return 0;
 }
@@ -18257,6 +18273,19 @@ int awtk_TProgressBar_progress_bar_set_max(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TProgressBar_progress_bar_set_format(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  const char* format = (const char*)jni_ctx_get_str(&ctx);
+  ret = (ret_t)progress_bar_set_format(widget, format);
+  TKMEM_FREE(format);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TProgressBar_progress_bar_set_vertical(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -18318,6 +18347,15 @@ int awtk_TProgressBar_progress_bar_t_get_prop_max(Runtime *runtime, JClass *claz
 
   progress_bar_t* obj = (progress_bar_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_float(&ctx, (float)(obj->max));
+
+  return 0;
+}
+
+int awtk_TProgressBar_progress_bar_t_get_prop_format(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  progress_bar_t* obj = (progress_bar_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_str(&ctx, (char*)(obj->format));
 
   return 0;
 }
@@ -20316,6 +20354,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TInputType",  "INPUT_TIME_FULL",  "()I",  awtk_TInputType_INPUT_TIME_FULL},
 {"awtk/TInputType",  "INPUT_CUSTOM",  "()I",  awtk_TInputType_INPUT_CUSTOM},
 {"awtk/TInputType",  "INPUT_CUSTOM_PASSWORD",  "()I",  awtk_TInputType_INPUT_CUSTOM_PASSWORD},
+{"awtk/TInputType",  "INPUT_ASCII",  "()I",  awtk_TInputType_INPUT_ASCII},
 {"awtk/TInputMethod",  "input_method_commit_text",  "(JLjava/lang/String;)I",  awtk_TInputMethod_input_method_commit_text},
 {"awtk/TInputMethod",  "input_method_set_lang",  "(JLjava/lang/String;)I",  awtk_TInputMethod_input_method_set_lang},
 {"awtk/TInputMethod",  "input_method_get_lang",  "(J)Ljava/lang/String;",  awtk_TInputMethod_input_method_get_lang},
@@ -20456,6 +20495,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TKeyCode",  "TK_KEY_COMMAND",  "()I",  awtk_TKeyCode_TK_KEY_COMMAND},
 {"awtk/TKeyCode",  "TK_KEY_BACK",  "()I",  awtk_TKeyCode_TK_KEY_BACK},
 {"awtk/TKeyCode",  "TK_KEY_CANCEL",  "()I",  awtk_TKeyCode_TK_KEY_CANCEL},
+{"awtk/TKeyCode",  "TK_KEY_WHEEL",  "()I",  awtk_TKeyCode_TK_KEY_WHEEL},
 {"awtk/TLocaleInfo",  "locale_info",  "()J",  awtk_TLocaleInfo_locale_info},
 {"awtk/TLocaleInfo",  "locale_info_tr",  "(JLjava/lang/String;)Ljava/lang/String;",  awtk_TLocaleInfo_locale_info_tr},
 {"awtk/TLocaleInfo",  "locale_info_change",  "(JLjava/lang/String;Ljava/lang/String;)I",  awtk_TLocaleInfo_locale_info_change},
@@ -21504,17 +21544,17 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TProgressCircle",  "progress_circle_cast",  "(J)J",  awtk_TProgressCircle_progress_circle_cast},
 {"awtk/TProgressCircle",  "progress_circle_set_value",  "(JF)I",  awtk_TProgressCircle_progress_circle_set_value},
 {"awtk/TProgressCircle",  "progress_circle_set_max",  "(JI)I",  awtk_TProgressCircle_progress_circle_set_max},
+{"awtk/TProgressCircle",  "progress_circle_set_format",  "(JLjava/lang/String;)I",  awtk_TProgressCircle_progress_circle_set_format},
 {"awtk/TProgressCircle",  "progress_circle_set_line_width",  "(JI)I",  awtk_TProgressCircle_progress_circle_set_line_width},
 {"awtk/TProgressCircle",  "progress_circle_set_start_angle",  "(JI)I",  awtk_TProgressCircle_progress_circle_set_start_angle},
-{"awtk/TProgressCircle",  "progress_circle_set_unit",  "(JLjava/lang/String;)I",  awtk_TProgressCircle_progress_circle_set_unit},
 {"awtk/TProgressCircle",  "progress_circle_set_line_cap",  "(JLjava/lang/String;)I",  awtk_TProgressCircle_progress_circle_set_line_cap},
 {"awtk/TProgressCircle",  "progress_circle_set_show_text",  "(JZ)I",  awtk_TProgressCircle_progress_circle_set_show_text},
 {"awtk/TProgressCircle",  "progress_circle_set_counter_clock_wise",  "(JZ)I",  awtk_TProgressCircle_progress_circle_set_counter_clock_wise},
 {"awtk/TProgressCircle",  "progress_circle_t_get_prop_value",  "(J)F",  awtk_TProgressCircle_progress_circle_t_get_prop_value},
-{"awtk/TProgressCircle",  "progress_circle_t_get_prop_max",  "(J)I",  awtk_TProgressCircle_progress_circle_t_get_prop_max},
+{"awtk/TProgressCircle",  "progress_circle_t_get_prop_max",  "(J)F",  awtk_TProgressCircle_progress_circle_t_get_prop_max},
+{"awtk/TProgressCircle",  "progress_circle_t_get_prop_format",  "(J)Ljava/lang/String;",  awtk_TProgressCircle_progress_circle_t_get_prop_format},
 {"awtk/TProgressCircle",  "progress_circle_t_get_prop_start_angle",  "(J)I",  awtk_TProgressCircle_progress_circle_t_get_prop_start_angle},
 {"awtk/TProgressCircle",  "progress_circle_t_get_prop_line_width",  "(J)I",  awtk_TProgressCircle_progress_circle_t_get_prop_line_width},
-{"awtk/TProgressCircle",  "progress_circle_t_get_prop_unit",  "(J)Ljava/lang/String;",  awtk_TProgressCircle_progress_circle_t_get_prop_unit},
 {"awtk/TProgressCircle",  "progress_circle_t_get_prop_line_cap",  "(J)Ljava/lang/String;",  awtk_TProgressCircle_progress_circle_t_get_prop_line_cap},
 {"awtk/TProgressCircle",  "progress_circle_t_get_prop_counter_clock_wise",  "(J)Z",  awtk_TProgressCircle_progress_circle_t_get_prop_counter_clock_wise},
 {"awtk/TProgressCircle",  "progress_circle_t_get_prop_show_text",  "(J)Z",  awtk_TProgressCircle_progress_circle_t_get_prop_show_text},
@@ -21828,12 +21868,14 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TProgressBar",  "progress_bar_cast",  "(J)J",  awtk_TProgressBar_progress_bar_cast},
 {"awtk/TProgressBar",  "progress_bar_set_value",  "(JF)I",  awtk_TProgressBar_progress_bar_set_value},
 {"awtk/TProgressBar",  "progress_bar_set_max",  "(JI)I",  awtk_TProgressBar_progress_bar_set_max},
+{"awtk/TProgressBar",  "progress_bar_set_format",  "(JLjava/lang/String;)I",  awtk_TProgressBar_progress_bar_set_format},
 {"awtk/TProgressBar",  "progress_bar_set_vertical",  "(JZ)I",  awtk_TProgressBar_progress_bar_set_vertical},
 {"awtk/TProgressBar",  "progress_bar_set_show_text",  "(JZ)I",  awtk_TProgressBar_progress_bar_set_show_text},
 {"awtk/TProgressBar",  "progress_bar_set_reverse",  "(JZ)I",  awtk_TProgressBar_progress_bar_set_reverse},
 {"awtk/TProgressBar",  "progress_bar_get_percent",  "(J)I",  awtk_TProgressBar_progress_bar_get_percent},
 {"awtk/TProgressBar",  "progress_bar_t_get_prop_value",  "(J)F",  awtk_TProgressBar_progress_bar_t_get_prop_value},
 {"awtk/TProgressBar",  "progress_bar_t_get_prop_max",  "(J)F",  awtk_TProgressBar_progress_bar_t_get_prop_max},
+{"awtk/TProgressBar",  "progress_bar_t_get_prop_format",  "(J)Ljava/lang/String;",  awtk_TProgressBar_progress_bar_t_get_prop_format},
 {"awtk/TProgressBar",  "progress_bar_t_get_prop_vertical",  "(J)Z",  awtk_TProgressBar_progress_bar_t_get_prop_vertical},
 {"awtk/TProgressBar",  "progress_bar_t_get_prop_show_text",  "(J)Z",  awtk_TProgressBar_progress_bar_t_get_prop_show_text},
 {"awtk/TProgressBar",  "progress_bar_t_get_prop_reverse",  "(J)Z",  awtk_TProgressBar_progress_bar_t_get_prop_reverse},

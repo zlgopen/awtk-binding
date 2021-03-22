@@ -91,6 +91,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a25c0b19a5f04e75a6151067dec9051ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcf4236ec9256f3f8db619bc356f9f7f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_bar.html#afcf4236ec9256f3f8db619bc356f9f7f">SetMax</a> (uint32_t max)</td></tr>
 <tr class="separator:afcf4236ec9256f3f8db619bc356f9f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9468c99122498c86e7e5d1614e54d7b2"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_bar.html#a9468c99122498c86e7e5d1614e54d7b2">SetFormat</a> (const char *format)</td></tr>
+<tr class="separator:a9468c99122498c86e7e5d1614e54d7b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad06afe0aa7720eba069de885e3d7e209"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_bar.html#ad06afe0aa7720eba069de885e3d7e209">SetVertical</a> (bool vertical)</td></tr>
 <tr class="separator:ad06afe0aa7720eba069de885e3d7e209"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adac8df8586b5df4249567be50dd7ddf2"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_bar.html#adac8df8586b5df4249567be50dd7ddf2">SetShowText</a> (bool show_text)</td></tr>
@@ -103,6 +105,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a354949ccb29c1739e2973ea81cd46915"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e310dc858ef19064e0dbf0f5e3e9bc6"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_bar.html#a8e310dc858ef19064e0dbf0f5e3e9bc6">GetMax</a> () const</td></tr>
 <tr class="separator:a8e310dc858ef19064e0dbf0f5e3e9bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c474c3e2f732e9481c2d4747c442397"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_bar.html#a1c474c3e2f732e9481c2d4747c442397">GetFormat</a> () const</td></tr>
+<tr class="separator:a1c474c3e2f732e9481c2d4747c442397"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d9bf4a152ad03520ff2d8b01430c78d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_bar.html#a2d9bf4a152ad03520ff2d8b01430c78d">GetVertical</a> () const</td></tr>
 <tr class="separator:a2d9bf4a152ad03520ff2d8b01430c78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad29b506d6160d5319afbce5566f5674d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_progress_bar.html#ad29b506d6160d5319afbce5566f5674d">GetShowText</a> () const</td></tr>
@@ -218,6 +222,24 @@ static <a class="el" href="class_t_progress_bar.html">TProgressBar</a>&#160;</td
 
 </div>
 </div>
+<a id="a1c474c3e2f732e9481c2d4747c442397"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c474c3e2f732e9481c2d4747c442397">&#9670;&nbsp;</a></span>GetFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * TProgressBar::GetFormat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>数值到字符串转换时的格式，缺省为"%d"。 </p>
+
+</div>
+</div>
 <a id="a8e310dc858ef19064e0dbf0f5e3e9bc6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8e310dc858ef19064e0dbf0f5e3e9bc6">&#9670;&nbsp;</a></span>GetMax()</h2>
 
@@ -327,6 +349,32 @@ static <a class="el" href="class_t_progress_bar.html">TProgressBar</a>&#160;</td
       </table>
 </div><div class="memdoc">
 <p>进度条的是否为垂直方向。 </p>
+
+</div>
+</div>
+<a id="a9468c99122498c86e7e5d1614e54d7b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9468c99122498c86e7e5d1614e54d7b2">&#9670;&nbsp;</a></span>SetFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TProgressBar::SetFormat </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置格式。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>格式。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>

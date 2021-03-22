@@ -4952,6 +4952,10 @@
       {
         "desc": "使用自定义的密码软键盘。字符串属性值：custom_password",
         "name": "INPUT_CUSTOM_PASSWORD"
+      },
+      {
+        "desc": "纯英文文本。字符串属性值：ascii",
+        "name": "INPUT_ASCII"
       }
     ],
     "header": "base/input_method.h",
@@ -5681,6 +5685,10 @@
       {
         "desc": "TK_KEY_CANCEL",
         "name": "TK_KEY_CANCEL"
+      },
+      {
+        "desc": "TK_KEY_WHEEL",
+        "name": "TK_KEY_WHEEL"
       }
     ],
     "header": "base/keys.h",
@@ -19406,6 +19414,29 @@
           {
             "type": "widget_t*",
             "name": "widget",
+            "desc": "progress_circle对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "format",
+            "desc": "格式。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置格式。",
+        "name": "progress_circle_set_format",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
             "desc": "控件对象。"
           },
           {
@@ -19442,29 +19473,6 @@
         },
         "desc": "设置起始角度。",
         "name": "progress_circle_set_start_angle",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "widget_t*",
-            "name": "widget",
-            "desc": "控件对象。"
-          },
-          {
-            "type": "const char*",
-            "name": "unit",
-            "desc": "单位。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "设置单位。",
-        "name": "progress_circle_set_unit",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -19569,7 +19577,20 @@
       {
         "name": "max",
         "desc": "最大值(缺省为100)。",
-        "type": "uint32_t",
+        "type": "float_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "format",
+        "desc": "数值到字符串转换时的格式，缺省为\"%d\"。",
+        "type": "char*",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -19596,19 +19617,6 @@
         "name": "line_width",
         "desc": "环线的厚度(缺省为8)。",
         "type": "uint32_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "unit",
-        "desc": "单元(缺省无)。",
-        "type": "char*",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -26948,6 +26956,29 @@
           {
             "type": "widget_t*",
             "name": "widget",
+            "desc": "progress_bar对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "format",
+            "desc": "格式。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置格式。",
+        "name": "progress_bar_set_format",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
             "desc": "控件对象。"
           },
           {
@@ -27061,6 +27092,19 @@
         "name": "max",
         "desc": "最大值(缺省为100)。",
         "type": "float_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "format",
+        "desc": "数值到字符串转换时的格式，缺省为\"%d\"。",
+        "type": "char*",
         "annotation": {
           "set_prop": true,
           "get_prop": true,

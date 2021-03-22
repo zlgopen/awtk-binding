@@ -5411,6 +5411,15 @@ jsvalue_t get_INPUT_CUSTOM_PASSWORD(
   return jsvalue_create_int(ctx, INPUT_CUSTOM_PASSWORD);
 }
 
+jsvalue_t get_INPUT_ASCII(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, INPUT_ASCII);
+}
+
 ret_t input_type_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
   JS_SetPropertyStr(ctx, global_obj, "INPUT_TEXT",
@@ -5443,6 +5452,8 @@ ret_t input_type_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_INPUT_CUSTOM, "INPUT_CUSTOM", 1));
   JS_SetPropertyStr(ctx, global_obj, "INPUT_CUSTOM_PASSWORD",
                       JS_NewCFunction(ctx, get_INPUT_CUSTOM_PASSWORD, "INPUT_CUSTOM_PASSWORD", 1));
+  JS_SetPropertyStr(ctx, global_obj, "INPUT_ASCII",
+                      JS_NewCFunction(ctx, get_INPUT_ASCII, "INPUT_ASCII", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -6813,6 +6824,15 @@ jsvalue_t get_TK_KEY_CANCEL(
   return jsvalue_create_int(ctx, TK_KEY_CANCEL);
 }
 
+jsvalue_t get_TK_KEY_WHEEL(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, TK_KEY_WHEEL);
+}
+
 ret_t key_code_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
   JS_SetPropertyStr(ctx, global_obj, "TK_KEY_RETURN",
@@ -7077,6 +7097,8 @@ ret_t key_code_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_TK_KEY_BACK, "TK_KEY_BACK", 1));
   JS_SetPropertyStr(ctx, global_obj, "TK_KEY_CANCEL",
                       JS_NewCFunction(ctx, get_TK_KEY_CANCEL, "TK_KEY_CANCEL", 1));
+  JS_SetPropertyStr(ctx, global_obj, "TK_KEY_WHEEL",
+                      JS_NewCFunction(ctx, get_TK_KEY_WHEEL, "TK_KEY_WHEEL", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -23131,6 +23153,25 @@ jsvalue_t wrap_progress_circle_set_max(
   return jret;
 }
 
+jsvalue_t wrap_progress_circle_set_format(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  const char* format = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  ret = (ret_t)progress_circle_set_format(widget, format);
+  jsvalue_free_str(ctx, format);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_progress_circle_set_line_width(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -23161,25 +23202,6 @@ jsvalue_t wrap_progress_circle_set_start_angle(
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
   int32_t start_angle = (int32_t)jsvalue_get_int_value(ctx, argv[1]);
   ret = (ret_t)progress_circle_set_start_angle(widget, start_angle);
-
-  jret = jsvalue_create_int(ctx, ret);
-  }
-  return jret;
-}
-
-jsvalue_t wrap_progress_circle_set_unit(
-    JSContext *ctx, 
-    jsvalue_const_t this_val,
-    int argc, 
-    jsvalue_const_t *argv
-  ) {
-  jsvalue_t jret = JS_NULL;
-  if(argc >= 2) {
-  ret_t ret = (ret_t)0;
-  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  const char* unit = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
-  ret = (ret_t)progress_circle_set_unit(widget, unit);
-  jsvalue_free_str(ctx, unit);
 
   jret = jsvalue_create_int(ctx, ret);
   }
@@ -23263,7 +23285,20 @@ jsvalue_t wrap_progress_circle_t_get_prop_max(
   jsvalue_t jret = JS_NULL;
   progress_circle_t* obj = (progress_circle_t*)jsvalue_get_pointer(ctx, argv[0], "progress_circle_t*");
 
-  jret = jsvalue_create_int(ctx, obj->max);
+  jret = jsvalue_create_number(ctx, obj->max);
+  return jret;
+}
+
+jsvalue_t wrap_progress_circle_t_get_prop_format(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  progress_circle_t* obj = (progress_circle_t*)jsvalue_get_pointer(ctx, argv[0], "progress_circle_t*");
+
+  jret = jsvalue_create_string(ctx, obj->format);
   return jret;
 }
 
@@ -23290,19 +23325,6 @@ jsvalue_t wrap_progress_circle_t_get_prop_line_width(
   progress_circle_t* obj = (progress_circle_t*)jsvalue_get_pointer(ctx, argv[0], "progress_circle_t*");
 
   jret = jsvalue_create_int(ctx, obj->line_width);
-  return jret;
-}
-
-jsvalue_t wrap_progress_circle_t_get_prop_unit(
-    JSContext *ctx, 
-    jsvalue_const_t this_val,
-    int argc, 
-    jsvalue_const_t *argv
-  ) {
-  jsvalue_t jret = JS_NULL;
-  progress_circle_t* obj = (progress_circle_t*)jsvalue_get_pointer(ctx, argv[0], "progress_circle_t*");
-
-  jret = jsvalue_create_string(ctx, obj->unit);
   return jret;
 }
 
@@ -23355,12 +23377,12 @@ ret_t progress_circle_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_progress_circle_set_value, "progress_circle_set_value", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_circle_set_max",
                       JS_NewCFunction(ctx, wrap_progress_circle_set_max, "progress_circle_set_max", 1));
+  JS_SetPropertyStr(ctx, global_obj, "progress_circle_set_format",
+                      JS_NewCFunction(ctx, wrap_progress_circle_set_format, "progress_circle_set_format", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_circle_set_line_width",
                       JS_NewCFunction(ctx, wrap_progress_circle_set_line_width, "progress_circle_set_line_width", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_circle_set_start_angle",
                       JS_NewCFunction(ctx, wrap_progress_circle_set_start_angle, "progress_circle_set_start_angle", 1));
-  JS_SetPropertyStr(ctx, global_obj, "progress_circle_set_unit",
-                      JS_NewCFunction(ctx, wrap_progress_circle_set_unit, "progress_circle_set_unit", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_circle_set_line_cap",
                       JS_NewCFunction(ctx, wrap_progress_circle_set_line_cap, "progress_circle_set_line_cap", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_circle_set_show_text",
@@ -23371,12 +23393,12 @@ ret_t progress_circle_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_progress_circle_t_get_prop_value, "progress_circle_t_get_prop_value", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_circle_t_get_prop_max",
                       JS_NewCFunction(ctx, wrap_progress_circle_t_get_prop_max, "progress_circle_t_get_prop_max", 1));
+  JS_SetPropertyStr(ctx, global_obj, "progress_circle_t_get_prop_format",
+                      JS_NewCFunction(ctx, wrap_progress_circle_t_get_prop_format, "progress_circle_t_get_prop_format", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_circle_t_get_prop_start_angle",
                       JS_NewCFunction(ctx, wrap_progress_circle_t_get_prop_start_angle, "progress_circle_t_get_prop_start_angle", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_circle_t_get_prop_line_width",
                       JS_NewCFunction(ctx, wrap_progress_circle_t_get_prop_line_width, "progress_circle_t_get_prop_line_width", 1));
-  JS_SetPropertyStr(ctx, global_obj, "progress_circle_t_get_prop_unit",
-                      JS_NewCFunction(ctx, wrap_progress_circle_t_get_prop_unit, "progress_circle_t_get_prop_unit", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_circle_t_get_prop_line_cap",
                       JS_NewCFunction(ctx, wrap_progress_circle_t_get_prop_line_cap, "progress_circle_t_get_prop_line_cap", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_circle_t_get_prop_counter_clock_wise",
@@ -29435,6 +29457,25 @@ jsvalue_t wrap_progress_bar_set_max(
   return jret;
 }
 
+jsvalue_t wrap_progress_bar_set_format(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  const char* format = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  ret = (ret_t)progress_bar_set_format(widget, format);
+  jsvalue_free_str(ctx, format);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_progress_bar_set_vertical(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -29532,6 +29573,19 @@ jsvalue_t wrap_progress_bar_t_get_prop_max(
   return jret;
 }
 
+jsvalue_t wrap_progress_bar_t_get_prop_format(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  progress_bar_t* obj = (progress_bar_t*)jsvalue_get_pointer(ctx, argv[0], "progress_bar_t*");
+
+  jret = jsvalue_create_string(ctx, obj->format);
+  return jret;
+}
+
 jsvalue_t wrap_progress_bar_t_get_prop_vertical(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -29581,6 +29635,8 @@ ret_t progress_bar_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_progress_bar_set_value, "progress_bar_set_value", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_bar_set_max",
                       JS_NewCFunction(ctx, wrap_progress_bar_set_max, "progress_bar_set_max", 1));
+  JS_SetPropertyStr(ctx, global_obj, "progress_bar_set_format",
+                      JS_NewCFunction(ctx, wrap_progress_bar_set_format, "progress_bar_set_format", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_bar_set_vertical",
                       JS_NewCFunction(ctx, wrap_progress_bar_set_vertical, "progress_bar_set_vertical", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_bar_set_show_text",
@@ -29593,6 +29649,8 @@ ret_t progress_bar_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_progress_bar_t_get_prop_value, "progress_bar_t_get_prop_value", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_bar_t_get_prop_max",
                       JS_NewCFunction(ctx, wrap_progress_bar_t_get_prop_max, "progress_bar_t_get_prop_max", 1));
+  JS_SetPropertyStr(ctx, global_obj, "progress_bar_t_get_prop_format",
+                      JS_NewCFunction(ctx, wrap_progress_bar_t_get_prop_format, "progress_bar_t_get_prop_format", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_bar_t_get_prop_vertical",
                       JS_NewCFunction(ctx, wrap_progress_bar_t_get_prop_vertical, "progress_bar_t_get_prop_vertical", 1));
   JS_SetPropertyStr(ctx, global_obj, "progress_bar_t_get_prop_show_text",

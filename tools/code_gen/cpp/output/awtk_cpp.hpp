@@ -8111,6 +8111,15 @@ public:
   ret_t SetMax(uint32_t max) ;
 
   /**
+   * 设置格式。
+   * 
+   * @param format 格式。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetFormat(const char* format) ;
+
+  /**
    * 设置环线的厚度。
    * 
    * @param line_width 环线的厚度。
@@ -8127,15 +8136,6 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t SetStartAngle(int32_t start_angle) ;
-
-  /**
-   * 设置单位。
-   * 
-   * @param unit 单位。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t SetUnit(const char* unit) ;
 
   /**
    * 设置线帽类型。
@@ -8174,7 +8174,13 @@ public:
    * 最大值(缺省为100)。
    *
    */
-  uint32_t GetMax() const;
+  float_t GetMax() const;
+
+  /**
+   * 数值到字符串转换时的格式，缺省为"%d"。
+   *
+   */
+  char* GetFormat() const;
 
   /**
    * 起始角度(单位为度，缺省-90)。
@@ -8187,12 +8193,6 @@ public:
    *
    */
   uint32_t GetLineWidth() const;
-
-  /**
-   * 单元(缺省无)。
-   *
-   */
-  char* GetUnit() const;
 
   /**
    * 线帽类型(round:圆头，square:方头)。
@@ -12683,6 +12683,15 @@ public:
   ret_t SetMax(uint32_t max) ;
 
   /**
+   * 设置格式。
+   * 
+   * @param format 格式。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetFormat(const char* format) ;
+
+  /**
    * 设置进度条的方向。
    * 
    * @param vertical 是否为垂直方向。
@@ -12730,6 +12739,12 @@ public:
    *
    */
   float_t GetMax() const;
+
+  /**
+   * 数值到字符串转换时的格式，缺省为"%d"。
+   *
+   */
+  char* GetFormat() const;
 
   /**
    * 进度条的是否为垂直方向。
