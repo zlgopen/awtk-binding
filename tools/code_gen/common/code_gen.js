@@ -162,10 +162,17 @@ class CodeGen {
   }
 
   hasSetterFor(cls, name) {
-    let clsName = cls.name.replace(/_t$/, '');
-    let settter = clsName + '_set_' + name;
+    const clsName = cls.name.replace(/_t$/, '');
+    const settter = clsName + '_set_' + name;
 
     return cls.methods.find(iter => (iter.name === settter));
+  }
+  
+  hasGetterFor(cls, name) {
+    const clsName = cls.name.replace(/_t$/, '');
+    const gettter = clsName + '_get_' + name;
+    const has = cls.methods.find(iter => (iter.name === gettter));
+    return has;
   }
   
   getBaseClassInfo(cls) {
