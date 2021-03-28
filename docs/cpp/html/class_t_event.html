@@ -79,20 +79,19 @@ $(function() {
  <div class="center">
   <img src="class_t_event.png" usemap="#TEvent_map" alt=""/>
   <map id="TEvent_map" name="TEvent_map">
-<area href="class_t_assets_event.html" alt="TAssetsEvent" shape="rect" coords="138,56,266,80"/>
-<area href="class_t_cmd_exec_event.html" alt="TCmdExecEvent" shape="rect" coords="138,112,266,136"/>
-<area href="class_t_done_event.html" alt="TDoneEvent" shape="rect" coords="138,168,266,192"/>
-<area href="class_t_error_event.html" alt="TErrorEvent" shape="rect" coords="138,224,266,248"/>
-<area href="class_t_key_event.html" alt="TKeyEvent" shape="rect" coords="138,280,266,304"/>
-<area href="class_t_multi_gesture_event.html" alt="TMultiGestureEvent" shape="rect" coords="138,336,266,360"/>
-<area href="class_t_orientation_event.html" alt="TOrientationEvent" shape="rect" coords="138,392,266,416"/>
-<area href="class_t_paint_event.html" alt="TPaintEvent" shape="rect" coords="138,448,266,472"/>
-<area href="class_t_pointer_event.html" alt="TPointerEvent" shape="rect" coords="138,504,266,528"/>
-<area href="class_t_progress_event.html" alt="TProgressEvent" shape="rect" coords="138,560,266,584"/>
-<area href="class_t_prop_change_event.html" alt="TPropChangeEvent" shape="rect" coords="138,616,266,640"/>
-<area href="class_t_value_change_event.html" alt="TValueChangeEvent" shape="rect" coords="138,672,266,696"/>
-<area href="class_t_wheel_event.html" alt="TWheelEvent" shape="rect" coords="138,728,266,752"/>
-<area href="class_t_window_event.html" alt="TWindowEvent" shape="rect" coords="138,784,266,808"/>
+<area href="class_t_cmd_exec_event.html" alt="TCmdExecEvent" shape="rect" coords="138,56,266,80"/>
+<area href="class_t_done_event.html" alt="TDoneEvent" shape="rect" coords="138,112,266,136"/>
+<area href="class_t_error_event.html" alt="TErrorEvent" shape="rect" coords="138,168,266,192"/>
+<area href="class_t_key_event.html" alt="TKeyEvent" shape="rect" coords="138,224,266,248"/>
+<area href="class_t_multi_gesture_event.html" alt="TMultiGestureEvent" shape="rect" coords="138,280,266,304"/>
+<area href="class_t_orientation_event.html" alt="TOrientationEvent" shape="rect" coords="138,336,266,360"/>
+<area href="class_t_paint_event.html" alt="TPaintEvent" shape="rect" coords="138,392,266,416"/>
+<area href="class_t_pointer_event.html" alt="TPointerEvent" shape="rect" coords="138,448,266,472"/>
+<area href="class_t_progress_event.html" alt="TProgressEvent" shape="rect" coords="138,504,266,528"/>
+<area href="class_t_prop_change_event.html" alt="TPropChangeEvent" shape="rect" coords="138,560,266,584"/>
+<area href="class_t_value_change_event.html" alt="TValueChangeEvent" shape="rect" coords="138,616,266,640"/>
+<area href="class_t_wheel_event.html" alt="TWheelEvent" shape="rect" coords="138,672,266,696"/>
+<area href="class_t_window_event.html" alt="TWindowEvent" shape="rect" coords="138,728,266,752"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -104,6 +103,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ac0dd231eec7d9bdbe520ee4a016977b6"><td class="memItemLeft" align="right" valign="top"><a id="ac0dd231eec7d9bdbe520ee4a016977b6"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TEvent</b> (const event_t *nativeObj)</td></tr>
 <tr class="separator:ac0dd231eec7d9bdbe520ee4a016977b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaef10fc328b4032ce47b043e656b1c17"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_event.html#aaef10fc328b4032ce47b043e656b1c17">GetType</a> ()</td></tr>
+<tr class="separator:aaef10fc328b4032ce47b043e656b1c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afff04d515d40e86c9fecd6b3b0368cec"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_event.html#afff04d515d40e86c9fecd6b3b0368cec">Destroy</a> ()</td></tr>
 <tr class="separator:afff04d515d40e86c9fecd6b3b0368cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7501c5161e93cccdf1fd6411d87a7187"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_event.html#a7501c5161e93cccdf1fd6411d87a7187">GetType</a> () const</td></tr>
@@ -244,8 +245,27 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
+<a id="aaef10fc328b4032ce47b043e656b1c17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaef10fc328b4032ce47b043e656b1c17">&#9670;&nbsp;</a></span>GetType() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TEvent::GetType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取event类型。</p>
+<dl class="section return"><dt>返回</dt><dd>返回event类型。 </dd></dl>
+
+</div>
+</div>
 <a id="a7501c5161e93cccdf1fd6411d87a7187"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7501c5161e93cccdf1fd6411d87a7187">&#9670;&nbsp;</a></span>GetType()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7501c5161e93cccdf1fd6411d87a7187">&#9670;&nbsp;</a></span>GetType() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

@@ -33,3 +33,6 @@ node python.js
 node default.js
 cd -
 
+#go
+cd tools/code_gen/go && rm output/* && node go.js
+cd -

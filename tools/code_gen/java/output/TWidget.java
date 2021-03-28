@@ -283,6 +283,94 @@ public class TWidget {
 
 
   /**
+   * 获取控件enable属性值。
+   * 
+   *
+   * @return 返回enable。
+   */
+ public  boolean getEnable()  {
+    return widget_get_enable(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
+   * 获取控件floating属性值。
+   * 
+   *
+   * @return 返回floating。
+   */
+ public  boolean getFloating()  {
+    return widget_get_floating(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
+   * 获取控件auto_adjust_size属性值。
+   * 
+   *
+   * @return 返回auto_adjust_size。
+   */
+ public  boolean getAutoAdjustSize()  {
+    return widget_get_auto_adjust_size(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
+   * 获取控件with_focus_state属性值。
+   * 
+   *
+   * @return 返回with_focus_state。
+   */
+ public  boolean getWithFocusState()  {
+    return widget_get_with_focus_state(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
+   * 获取控件focusable属性值。
+   * 
+   *
+   * @return 返回focusable。
+   */
+ public  boolean getFocusable()  {
+    return widget_get_focusable(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
+   * 获取控件sensitive属性值。
+   * 
+   *
+   * @return 返回sensitive。
+   */
+ public  boolean getSensitive()  {
+    return widget_get_sensitive(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
+   * 获取控件visible属性值。
+   * 
+   *
+   * @return 返回visible。
+   */
+ public  boolean getVisible()  {
+    return widget_get_visible(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
+   * 获取控件feedback属性值。
+   * 
+   *
+   * @return 返回feedback。
+   */
+ public  boolean getFeedback()  {
+    return widget_get_feedback(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
    * str_t str;
    *str_init(&str, 0);
    *str_from_wstr(&str, widget_get_text(target));
@@ -1555,6 +1643,14 @@ static private native int widget_set_child_text_with_double(long widget, String 
 static private native int widget_set_child_text_with_int(long widget, String name, String format, int value);
 static private native int widget_set_tr_text(long widget, String text);
 static private native int widget_get_value(long widget);
+static private native boolean widget_get_enable(long widget);
+static private native boolean widget_get_floating(long widget);
+static private native boolean widget_get_auto_adjust_size(long widget);
+static private native boolean widget_get_with_focus_state(long widget);
+static private native boolean widget_get_focusable(long widget);
+static private native boolean widget_get_sensitive(long widget);
+static private native boolean widget_get_visible(long widget);
+static private native boolean widget_get_feedback(long widget);
 static private native long widget_get_text(long widget);
 static private native int widget_set_name(long widget, String name);
 static private native int widget_set_theme(long widget, String name);

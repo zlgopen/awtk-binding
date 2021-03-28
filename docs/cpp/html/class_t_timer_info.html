@@ -93,6 +93,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a0c8a942166d1d024bc90d68c611ee8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e8ca2fe1ae277cd596e2e2cb05cecba"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_timer_info.html#a4e8ca2fe1ae277cd596e2e2cb05cecba">GetCtx</a> () const</td></tr>
 <tr class="separator:a4e8ca2fe1ae277cd596e2e2cb05cecba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91ca8b061c841c427df37cdca1935f46"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_timer_info.html#a91ca8b061c841c427df37cdca1935f46">GetExtraCtx</a> () const</td></tr>
+<tr class="separator:a91ca8b061c841c427df37cdca1935f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a178fe70268eaa091fe8ad11172d201ae"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_timer_info.html#a178fe70268eaa091fe8ad11172d201ae">GetId</a> () const</td></tr>
 <tr class="separator:a178fe70268eaa091fe8ad11172d201ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9aef7d5aaf31266c17d3158bb4eb0474"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_timer_info.html#a9aef7d5aaf31266c17d3158bb4eb0474">GetNow</a> () const</td></tr>
@@ -237,8 +239,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a1164e76c026d546bcd229514e1896be7 inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f3943b7219c16dd7d171aaa66fad97e inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a0f3943b7219c16dd7d171aaa66fad97e">Dispatch</a> (<a class="el" href="class_t_event.html">TEvent</a> &amp;e)</td></tr>
 <tr class="separator:a0f3943b7219c16dd7d171aaa66fad97e inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e7f7275f8121abe718e1d8d5fa3627a inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a6e7f7275f8121abe718e1d8d5fa3627a">DispatchSimpleEvent</a> (event_type_t type)</td></tr>
-<tr class="separator:a6e7f7275f8121abe718e1d8d5fa3627a inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa371beccbd4d2792db21f4da22049673 inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#aa371beccbd4d2792db21f4da22049673">DispatchSimpleEvent</a> (uint32_t type)</td></tr>
+<tr class="separator:aa371beccbd4d2792db21f4da22049673 inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f882461790e6a6b9a6f313c79f46492 inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a7f882461790e6a6b9a6f313c79f46492">On</a> (event_type_t etype, event_func_t handler, void *ctx)</td></tr>
 <tr class="separator:a7f882461790e6a6b9a6f313c79f46492 inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9cfdac85eba8396ffb90a2beea66d3f inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#ad9cfdac85eba8396ffb90a2beea66d3f">Off</a> (uint32_t id)</td></tr>
@@ -307,6 +309,24 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
       <table class="memname">
         <tr>
           <td class="memname">void * TTimerInfo::GetCtx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>定时器回调函数的上下文 </p>
+
+</div>
+</div>
+<a id="a91ca8b061c841c427df37cdca1935f46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91ca8b061c841c427df37cdca1935f46">&#9670;&nbsp;</a></span>GetExtraCtx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * TTimerInfo::GetExtraCtx </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

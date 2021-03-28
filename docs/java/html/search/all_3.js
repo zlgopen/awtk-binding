@@ -26,7 +26,7 @@ var searchData=
   ['dispatchpreedit_259',['dispatchPreedit',['../classawtk_1_1_t_input_method.html#a8bca6daa0405620b2f159f4e4cc6e6c1',1,'awtk::TInputMethod']]],
   ['dispatchpreeditabort_260',['dispatchPreeditAbort',['../classawtk_1_1_t_input_method.html#a63672b6b209179888a25a52cfa930367',1,'awtk::TInputMethod']]],
   ['dispatchpreeditconfirm_261',['dispatchPreeditConfirm',['../classawtk_1_1_t_input_method.html#ad61f73614814f5104aabb5ba81c942a5',1,'awtk::TInputMethod']]],
-  ['dispatchsimpleevent_262',['dispatchSimpleEvent',['../classawtk_1_1_t_emitter.html#abf6b367450ff271497e535debed153d2',1,'awtk::TEmitter']]],
+  ['dispatchsimpleevent_262',['dispatchSimpleEvent',['../classawtk_1_1_t_emitter.html#a2d384e935cde6cc973b35162325d56fa',1,'awtk::TEmitter']]],
   ['dnd_263',['DND',['../enumawtk_1_1_t_widget_type.html#a37e1439a14c98e75e1d02fdebe861003',1,'awtk::TWidgetType']]],
   ['done_264',['DONE',['../enumawtk_1_1_t_event_type.html#a787cbec48f4b7ee248fe253e938165b0',1,'awtk.TEventType.DONE()'],['../enumawtk_1_1_t_ret.html#aa80e2d94d9d19726e9ab1f33244d6476',1,'awtk.TRet.DONE()']]],
   ['double_265',['DOUBLE',['../enumawtk_1_1_t_value_type.html#aadf61a5d7ca766f641593f375af00411',1,'awtk::TValueType']]],

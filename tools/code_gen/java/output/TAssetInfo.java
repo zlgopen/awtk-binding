@@ -38,6 +38,28 @@ public class TAssetInfo {
 
 
   /**
+   * 获取类型。
+   * 
+   *
+   * @return 返回类型。
+   */
+ public  int getType()  {
+    return asset_info_get_type(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
+   * 获取名称。
+   * 
+   *
+   * @return 返回名称。
+   */
+ public  String getName()  {
+    return asset_info_get_name(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
    * 类型。
    *
    */
@@ -91,6 +113,8 @@ public class TAssetInfo {
    return asset_info_t_get_prop_name(this.nativeObj);
  }
 
+static private native int asset_info_get_type(long info);
+static private native String asset_info_get_name(long info);
 static private native int asset_info_t_get_prop_type(long nativeObj);
 static private native int asset_info_t_get_prop_subtype(long nativeObj);
 static private native int asset_info_t_get_prop_is_in_rom(long nativeObj);

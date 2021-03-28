@@ -9,7 +9,7 @@ var searchData=
   ['dispatchpreedit_49',['DispatchPreedit',['../class_t_input_method.html#a4064965bbb3574c9f95dced6d0e7a787',1,'TInputMethod']]],
   ['dispatchpreeditabort_50',['DispatchPreeditAbort',['../class_t_input_method.html#a77c1de1ddc3bcd95a3ff5b4ef88d981f',1,'TInputMethod']]],
   ['dispatchpreeditconfirm_51',['DispatchPreeditConfirm',['../class_t_input_method.html#a4f6514e00d37e9ccef96f4ce4182df2a',1,'TInputMethod']]],
-  ['dispatchsimpleevent_52',['DispatchSimpleEvent',['../class_t_emitter.html#a6e7f7275f8121abe718e1d8d5fa3627a',1,'TEmitter']]],
+  ['dispatchsimpleevent_52',['DispatchSimpleEvent',['../class_t_emitter.html#aa371beccbd4d2792db21f4da22049673',1,'TEmitter']]],
   ['drawhline_53',['DrawHline',['../class_t_canvas.html#aa124bbf9a4a8a5876c1c2620e64b50a2',1,'TCanvas']]],
   ['drawicon_54',['DrawIcon',['../class_t_canvas.html#a5bd5102b11bb5bc3a1e96f8a61229894',1,'TCanvas::DrawIcon()'],['../class_t_vgcanvas.html#a5cdf27f516c7a3d42ec4e3b75f487d07',1,'TVgcanvas::DrawIcon()']]],
   ['drawimage_55',['DrawImage',['../class_t_canvas.html#a39191ff063b921405d4d2bf243b5b1e1',1,'TCanvas::DrawImage()'],['../class_t_vgcanvas.html#afeecd9b59291fbced10e03dc83348c49',1,'TVgcanvas::DrawImage()']]],
