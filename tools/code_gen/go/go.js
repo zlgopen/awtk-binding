@@ -316,11 +316,13 @@ class GoGenerator extends TargetGen {
     const isString = this.isEnumString(cls);
     const clsName = this.toClassName(cls.name);
     const type = isString ? 'string' : 'int';
+    const gotype = isString ? 'string' : clsName;
+
     let result = `type ${clsName} ${type}\n`
 
     result += `const (\n`
     cls.consts.forEach((iter, index) => {
-      result += `  ${iter.name} ${clsName} = C.${iter.name}\n`
+      result += `  ${iter.name} ${gotype} = C.${iter.name}\n`
     });
     result += `)\n`
 
