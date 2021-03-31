@@ -320,7 +320,7 @@ class GoGenerator extends TargetGen {
 
     result += `const (\n`
     cls.consts.forEach((iter, index) => {
-      result += `  ${iter.name} = C.${iter.name}\n`
+      result += `  ${iter.name} ${clsName} = C.${iter.name}\n`
     });
     result += `)\n`
 
