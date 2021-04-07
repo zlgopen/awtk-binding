@@ -63,8 +63,8 @@ class MiniJVMGenerator extends BindingGen {
     return {
       type:type,
       jvmDesc:"I",
-      getArg:"jni_ctx_get_int(&ctx)",
-      returnResult: "jni_ctx_return_int(&ctx, (int32_t)(ret))"
+      getArg:"jni_ctx_get_int(&actx)",
+      returnResult: "jni_ctx_return_int(&actx, (int32_t)(ret))"
     };
   }
   
@@ -72,8 +72,8 @@ class MiniJVMGenerator extends BindingGen {
     return {
       type:type,
       jvmDesc:"Z",
-      getArg:"jni_ctx_get_int(&ctx)",
-      returnResult: "jni_ctx_return_int(&ctx, (int32_t)(ret))"
+      getArg:"jni_ctx_get_int(&actx)",
+      returnResult: "jni_ctx_return_int(&actx, (int32_t)(ret))"
     };
   }
   
@@ -81,8 +81,8 @@ class MiniJVMGenerator extends BindingGen {
     return {
       type:type,
       jvmDesc:"J",
-      getArg:"jni_ctx_get_int64(&ctx)",
-      returnResult: "jni_ctx_return_int64(&ctx, (int64_t)(ret))"
+      getArg:"jni_ctx_get_int64(&actx)",
+      returnResult: "jni_ctx_return_int64(&actx, (int64_t)(ret))"
     };
   }
   
@@ -90,8 +90,8 @@ class MiniJVMGenerator extends BindingGen {
     return {
       type:type,
       jvmDesc:"F",
-      getArg:"jni_ctx_get_float(&ctx)",
-      returnResult: "jni_ctx_return_float(&ctx, (float)(ret))"
+      getArg:"jni_ctx_get_float(&actx)",
+      returnResult: "jni_ctx_return_float(&actx, (float)(ret))"
     };
   }
   
@@ -99,8 +99,8 @@ class MiniJVMGenerator extends BindingGen {
     return {
       type:type,
       jvmDesc:"F",
-      getArg:"jni_ctx_get_double(&ctx)",
-      returnResult: "jni_ctx_return_double(&ctx, (double)(ret))"
+      getArg:"jni_ctx_get_double(&actx)",
+      returnResult: "jni_ctx_return_double(&actx, (double)(ret))"
     };
   }
   
@@ -108,8 +108,8 @@ class MiniJVMGenerator extends BindingGen {
     return {
       type:type,
       jvmDesc:"Ljava/lang/String;",
-      getArg:"jni_ctx_get_str(&ctx)",
-      returnResult: "jni_ctx_return_str(&ctx, (char*)(ret))"
+      getArg:"jni_ctx_get_str(&actx)",
+      returnResult: "jni_ctx_return_str(&actx, (char*)(ret))"
     };
   }
   
@@ -117,8 +117,8 @@ class MiniJVMGenerator extends BindingGen {
     return {
       type:type,
       jvmDesc:"Ljava/lang/String;",
-      getArg:"jni_ctx_get_str(&ctx)",
-      returnResult: "jni_ctx_return_wstr(&ctx, (wchar_t*)(ret))"
+      getArg:"jni_ctx_get_str(&actx)",
+      returnResult: "jni_ctx_return_wstr(&actx, (wchar_t*)(ret))"
     };
   }
 
@@ -126,8 +126,8 @@ class MiniJVMGenerator extends BindingGen {
     return {
       type:type,
       jvmDesc:"J",
-      getArg:"jni_ctx_get_object(&ctx)",
-      returnResult: "jni_ctx_return_object(&ctx, (void*)(ret))"
+      getArg:"jni_ctx_get_object(&actx)",
+      returnResult: "jni_ctx_return_object(&actx, (void*)(ret))"
     };
   }
   
@@ -148,8 +148,8 @@ class MiniJVMGenerator extends BindingGen {
     return {
       type:type,
       jvmDesc:`Lawtk/${intf};`,
-      getArg:"jni_ctx_get_object(&ctx)",
-      returnResult: "jni_ctx_return_object(&ctx, (void*)(ret))"
+      getArg:"jni_ctx_get_object(&actx)",
+      returnResult: "jni_ctx_return_object(&actx, (void*)(ret))"
     };
   }
 
@@ -191,7 +191,7 @@ class MiniJVMGenerator extends BindingGen {
   }
 
   genJniCtxInit() {
-     return `  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);\n\n`;
+     return `  jni_ctx_t actx = jni_ctx_init(runtime, clazz);\n\n`;
   }
 
   genParamDecl(index, type, name) {
@@ -334,8 +334,9 @@ __refer ptr_AwtkFuncTable() {
   return &s_metho_awtk_table[0];
 }
 
-void JNI_OnLoad(JniEnv *env) {
-  env->native_reg_lib(ptr_AwtkFuncTable(), count_AwtkFuncTable());
+void JNI_OnLoad(MiniJVM *jvm) {
+  JniEnv *env = jvm->env;
+  env->native_reg_lib(jvm, ptr_AwtkFuncTable(), count_AwtkFuncTable());
 }
 `;
   }
