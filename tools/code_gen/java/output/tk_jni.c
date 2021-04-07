@@ -9359,6 +9359,22 @@ JNIEXPORT jint JNICALL Java_awtk_TImageAnimation_image_1animation_1set_1unload_1
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TImageAnimation_image_1animation_1set_1reverse(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean reverse) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)image_animation_set_reverse(widget, reverse);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TImageAnimation_image_1animation_1set_1show_1when_1done(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean show_when_done) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)image_animation_set_show_when_done(widget, show_when_done);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jlong JNICALL Java_awtk_TImageAnimation_image_1animation_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
   widget_t* ret;
   widget_t* widget = (widget_t*)jwidget;
@@ -9399,6 +9415,12 @@ JNIEXPORT jint JNICALL Java_awtk_TImageAnimation_image_1animation_1t_1get_1prop_
   return (jint)(obj->end_index);
 }
 
+JNIEXPORT jboolean JNICALL Java_awtk_TImageAnimation_image_1animation_1t_1get_1prop_1reverse(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  image_animation_t* obj = (image_animation_t*)jobj;
+
+  return (jboolean)(obj->reverse);
+}
+
 JNIEXPORT jboolean JNICALL Java_awtk_TImageAnimation_image_1animation_1t_1get_1prop_1loop(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
   image_animation_t* obj = (image_animation_t*)jobj;
 
@@ -9433,6 +9455,12 @@ JNIEXPORT jint JNICALL Java_awtk_TImageAnimation_image_1animation_1t_1get_1prop_
   image_animation_t* obj = (image_animation_t*)jobj;
 
   return (jint)(obj->delay);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TImageAnimation_image_1animation_1t_1get_1prop_1show_1when_1done(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  image_animation_t* obj = (image_animation_t*)jobj;
+
+  return (jboolean)(obj->show_when_done);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TImageValue_image_1value_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/

@@ -11801,6 +11801,31 @@
         "type": "event_t"
       },
       {
+        "name": "EVT_THEME_CHANGED",
+        "desc": "主题变化事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_FOCUS",
+        "desc": "控件得到焦点时触发。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_BLUR",
+        "desc": "控件失去焦点时触发。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_WIDGET_ADD_CHILD",
+        "desc": "控件加载新的子控件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_WIDGET_REMOVE_CHILD",
+        "desc": "控件移除子控件。",
+        "type": "event_t"
+      },
+      {
         "name": "EVT_PROP_WILL_CHANGE",
         "desc": "控件属性改变前触发(通过set_prop设置属性，才会触发)。",
         "type": "prop_change_event_t"
@@ -11809,6 +11834,11 @@
         "name": "EVT_PROP_CHANGED",
         "desc": "控件属性改变后触发(通过set_prop设置属性，才会触发)。",
         "type": "prop_change_event_t"
+      },
+      {
+        "name": "EVT_PAINT",
+        "desc": "控件绘制时触发。",
+        "type": "paint_event_t"
       },
       {
         "name": "EVT_BEFORE_PAINT",
@@ -11821,14 +11851,14 @@
         "type": "paint_event_t"
       },
       {
-        "name": "EVT_FOCUS",
-        "desc": "控件得到焦点时触发。",
-        "type": "event_t"
+        "name": "EVT_PAINT_DONE",
+        "desc": "控件绘制完成时(canvas状态已经恢复)触发。",
+        "type": "paint_event_t"
       },
       {
-        "name": "EVT_BLUR",
-        "desc": "控件失去焦点时触发。",
-        "type": "event_t"
+        "name": "EVT_WHEEL_BEFORE_CHILDREN",
+        "desc": "鼠标滚轮事件，在子控件处理之前触发。",
+        "type": "wheel_event_t"
       },
       {
         "name": "EVT_WHEEL",
@@ -11846,13 +11876,28 @@
         "type": "pointer_event_t"
       },
       {
+        "name": "EVT_KEY_DOWN_BEFORE_CHILDREN",
+        "desc": "键按下事件，在子控件处理之前触发。",
+        "type": "key_event_t"
+      },
+      {
         "name": "EVT_KEY_DOWN",
         "desc": "键按下事件。",
-        "type": "pointer_event_t"
+        "type": "key_event_t"
+      },
+      {
+        "name": "EVT_KEY_UP_BEFORE_CHILDREN",
+        "desc": "键释放事件，在子控件处理之前触发。",
+        "type": "key_event_t"
       },
       {
         "name": "EVT_KEY_UP",
         "desc": "键释放事件。",
+        "type": "key_event_t"
+      },
+      {
+        "name": "EVT_POINTER_DOWN_BEFORE_CHILDREN",
+        "desc": "指针设备按下事件，在子控件处理之前触发。",
         "type": "pointer_event_t"
       },
       {
@@ -11871,8 +11916,18 @@
         "type": "pointer_event_t"
       },
       {
+        "name": "EVT_POINTER_MOVE_BEFORE_CHILDREN",
+        "desc": "指针设备移动事件，在子控件处理之前触发。",
+        "type": "pointer_event_t"
+      },
+      {
         "name": "EVT_POINTER_UP",
         "desc": "指针设备释放事件。",
+        "type": "pointer_event_t"
+      },
+      {
+        "name": "EVT_POINTER_UP_BEFORE_CHILDREN",
+        "desc": "指针设备释放事件，在子控件处理之前触发。",
         "type": "pointer_event_t"
       },
       {
@@ -15307,7 +15362,13 @@
         }
       }
     ],
-    "events": [],
+    "events": [
+      {
+        "name": "EVT_CLICK",
+        "desc": "点击事件。",
+        "type": "pointer_event_t"
+      }
+    ],
     "properties": [
       {
         "name": "image",
@@ -15599,6 +15660,21 @@
       {
         "name": "EVT_WINDOW_CLOSE",
         "desc": "窗口关闭事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_WINDOW_LOAD",
+        "desc": "窗口加载完成事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_REQUEST_CLOSE_WINDOW",
+        "desc": "请求关闭窗口的事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_LOCALE_CHANGED",
+        "desc": "locale改变的事件。",
         "type": "event_t"
       }
     ],
@@ -16186,14 +16262,31 @@
         }
       }
     ],
-    "events": [],
+    "events": [
+      {
+        "name": "EVT_TOP_WINDOW_CHANGED",
+        "desc": "顶层窗口改变的事件。",
+        "type": "window_event_t"
+      },
+      {
+        "name": "EVT_SCREEN_SAVER",
+        "desc": "在指定的时间内(WITH_SCREEN_SAVER_TIME)，没有用户输入事件，由窗口管理器触发。",
+        "type": "window_event_t"
+      },
+      {
+        "name": "EVT_ORIENTATION_CHANGED",
+        "desc": "屏幕旋转事件。",
+        "type": "event_t"
+      }
+    ],
     "properties": [],
     "header": "base/window_manager.h",
     "desc": "窗口管理器。",
     "name": "window_manager_t",
     "parent": "widget_t",
     "annotation": {
-      "scriptable": true
+      "scriptable": true,
+      "widget": true
     },
     "level": 2
   },
@@ -16295,7 +16388,13 @@
         }
       }
     ],
-    "events": [],
+    "events": [
+      {
+        "name": "EVT_VALUE_CHANGING",
+        "desc": "颜色正在改变事件。",
+        "type": "event_t"
+      }
+    ],
     "properties": [],
     "header": "color_picker/color_component.h",
     "desc": "颜色选择器的颜色分量。\n控件的名称有严格规定：\nCOLOR_PICKER_CHILD_SV: 水平为Value/Brightness(递增)，垂直为Saturation(递减)。\nCOLOR_PICKER_CHILD_H: 水平为同色，垂直为Hue(递减)。",
@@ -17051,7 +17150,13 @@
         }
       }
     ],
-    "events": [],
+    "events": [
+      {
+        "name": "EVT_VALUE_CHANGED",
+        "desc": "值(当前显示目录)改变事件。",
+        "type": "event_t"
+      }
+    ],
     "properties": [
       {
         "name": "init_dir",
@@ -17480,7 +17585,18 @@
         }
       }
     ],
-    "events": [],
+    "events": [
+      {
+        "name": "EVT_VALUE_WILL_CHANGE",
+        "desc": "值(角度)即将改变事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_VALUE_CHANGED",
+        "desc": "值(角度)改变事件。",
+        "type": "event_t"
+      }
+    ],
     "properties": [
       {
         "name": "angle",
@@ -18026,6 +18142,52 @@
             "type": "widget_t*",
             "name": "widget",
             "desc": "image_animation对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "reverse",
+            "desc": "是否倒序播放。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置是否倒序播放。",
+        "name": "image_animation_set_reverse",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "image_animation对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "show_when_done",
+            "desc": "是否继续显示最后一帧。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置结束播放后是否保持显示最后一帧。",
+        "name": "image_animation_set_show_when_done",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "image_animation对象。"
           }
         ],
         "annotation": {
@@ -18058,7 +18220,18 @@
         }
       }
     ],
-    "events": [],
+    "events": [
+      {
+        "name": "EVT_ANIM_ONCE",
+        "desc": "使能循环播放时，控件动画完成一次事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_ANIM_END",
+        "desc": "控件动画完成事件。",
+        "type": "event_t"
+      }
+    ],
     "properties": [
       {
         "name": "image",
@@ -18103,6 +18276,19 @@
         "name": "end_index",
         "desc": "图片结束序数。",
         "type": "uint32_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "reverse",
+        "desc": "是否倒序播放。",
+        "type": "bool_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -18181,6 +18367,19 @@
         "name": "delay",
         "desc": "自动播放时延迟播放的时间(毫秒)。",
         "type": "uint32_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "show_when_done",
+        "desc": "结束后是否继续显示最后一帧。",
+        "type": "bool_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -20525,7 +20724,13 @@
         }
       }
     ],
-    "events": [],
+    "events": [
+      {
+        "name": "EVT_CLICK",
+        "desc": "点击事件。",
+        "type": "pointer_event_t"
+      }
+    ],
     "properties": [],
     "header": "scroll_view/list_item.h",
     "desc": "列表项控件。\n\n列表项控件是一个简单的容器控件，一般作为列表视图中滚动视图的子控件。\n\nlist\\_item\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于list\\_item\\_t控件。\n\n在xml中使用\"list\\_item\"标签创建列表项控件。如：\n\n```xml\n<list_view x=\"0\"  y=\"30\" w=\"100%\" h=\"-80\" item_height=\"60\">\n<scroll_view name=\"view\" x=\"0\"  y=\"0\" w=\"100%\" h=\"100%\">\n<list_item style=\"odd\" children_layout=\"default(rows=1,cols=0)\">\n<image draw_type=\"icon\" w=\"30\" image=\"earth\"/>\n<label w=\"-30\" text=\"1.Hello AWTK !\">\n<switch x=\"r:10\" y=\"m\" w=\"60\" h=\"20\"/>\n</label>\n</list_item>\n...\n</scroll_view>\n</list_view>\n```\n\n> 更多用法请参考：[list\\_view\\_m.xml](\nhttps://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)\n\n在c代码中使用函数list\\_item\\_create创建列表项控件。如：\n\n```c\nwidget_t* list_item = list_item_create(scroll_view, 0, 0, 0, 0);\n```\n\n> 列表项控件大小一般由列表控制，不需指定xywh参数。\n\n可以用style来实现可点击或不可点击的效果。如：\n\n```xml\n<style name=\"odd_clickable\" border_color=\"#a0a0a0\"  border=\"bottom\" text_color=\"black\">\n<normal     bg_color=\"#f5f5f5\" />\n<pressed    bg_color=\"#c0c0c0\" />\n<over       bg_color=\"#f5f5f5\" />\n</style>\n```\n\n> 更多用法请参考：[theme default](\nhttps://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L372)",
@@ -21230,7 +21435,18 @@
         }
       }
     ],
-    "events": [],
+    "events": [
+      {
+        "name": "EVT_VALUE_WILL_CHANGE",
+        "desc": "值(滚动值)即将改变事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_VALUE_CHANGED",
+        "desc": "值(滚动值)改变事件。",
+        "type": "event_t"
+      }
+    ],
     "properties": [
       {
         "name": "virtual_size",
@@ -21678,6 +21894,11 @@
       {
         "name": "EVT_SCROLL",
         "desc": "滚动事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_PAGE_CHANGED",
+        "desc": "页面改变事件。",
         "type": "event_t"
       }
     ],
@@ -22384,7 +22605,23 @@
         }
       }
     ],
-    "events": [],
+    "events": [
+      {
+        "name": "EVT_VALUE_WILL_CHANGE",
+        "desc": "值(当前页的序号)即将改变事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_VALUE_CHANGED",
+        "desc": "值(当前页的序号)改变事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_PAGE_CHANGED",
+        "desc": "页面改变事件。",
+        "type": "event_t"
+      }
+    ],
     "properties": [
       {
         "name": "value",
@@ -22742,6 +22979,11 @@
       {
         "name": "EVT_VALUE_CHANGED",
         "desc": "值(当前页)改变事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_PAGE_CHANGED",
+        "desc": "页面改变事件。",
         "type": "event_t"
       }
     ],
@@ -24737,6 +24979,11 @@
         "name": "EVT_VALUE_CHANGED",
         "desc": "值(勾选状态)改变事件。",
         "type": "event_t"
+      },
+      {
+        "name": "EVT_CLICK",
+        "desc": "点击事件。",
+        "type": "pointer_event_t"
       }
     ],
     "properties": [
@@ -24961,7 +25208,18 @@
         }
       }
     ],
-    "events": [],
+    "events": [
+      {
+        "name": "EVT_VALUE_WILL_CHANGE",
+        "desc": "值(颜色)即将改变事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_VALUE_CHANGED",
+        "desc": "值(颜色)改变事件。",
+        "type": "event_t"
+      }
+    ],
     "properties": [
       {
         "name": "bg_color",
@@ -25185,6 +25443,11 @@
       }
     ],
     "events": [
+      {
+        "name": "EVT_CLICK",
+        "desc": "点击事件。",
+        "type": "pointer_event_t"
+      },
       {
         "name": "EVT_VALUE_WILL_CHANGE",
         "desc": "值(勾选状态)即将改变事件。",
@@ -25597,7 +25860,23 @@
         }
       }
     ],
-    "events": [],
+    "events": [
+      {
+        "name": "EVT_DRAG_START",
+        "desc": "开始拖动事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_DRAG",
+        "desc": "拖动事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_DRAG_END",
+        "desc": "结束拖动事件。",
+        "type": "event_t"
+      }
+    ],
     "properties": [
       {
         "name": "x_min",
@@ -28091,6 +28370,11 @@
         "name": "EVT_VALUE_CHANGED",
         "desc": "值(激活状态)改变事件。",
         "type": "event_t"
+      },
+      {
+        "name": "EVT_CLICK",
+        "desc": "点击事件。",
+        "type": "pointer_event_t"
       }
     ],
     "properties": [

@@ -17633,6 +17633,36 @@ static void wrap_image_animation_set_unload_after_paint(const Nan::FunctionCallb
   (void)argc;(void)ctx;
 }
 
+static void wrap_image_animation_set_reverse(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  bool_t reverse = (bool_t)jsvalue_get_boolean_value(ctx, argv[1]);
+  ret = (ret_t)image_animation_set_reverse(widget, reverse);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
+static void wrap_image_animation_set_show_when_done(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  bool_t show_when_done = (bool_t)jsvalue_get_boolean_value(ctx, argv[1]);
+  ret = (ret_t)image_animation_set_show_when_done(widget, show_when_done);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_image_animation_cast(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -17705,6 +17735,16 @@ static void wrap_image_animation_t_get_prop_end_index(const Nan::FunctionCallbac
   (void)argc;(void)ctx;
 }
 
+static void wrap_image_animation_t_get_prop_reverse(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  image_animation_t* obj = (image_animation_t*)jsvalue_get_pointer(ctx, argv[0], "image_animation_t*");
+
+  v8::Local<v8::Boolean> jret= Nan::New((bool)(obj->reverse));
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
 static void wrap_image_animation_t_get_prop_loop(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -17767,6 +17807,16 @@ static void wrap_image_animation_t_get_prop_delay(const Nan::FunctionCallbackInf
   (void)argc;(void)ctx;
 }
 
+static void wrap_image_animation_t_get_prop_show_when_done(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  image_animation_t* obj = (image_animation_t*)jsvalue_get_pointer(ctx, argv[0], "image_animation_t*");
+
+  v8::Local<v8::Boolean> jret= Nan::New((bool)(obj->show_when_done));
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
 ret_t image_animation_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "image_animation_create", wrap_image_animation_create);
   Nan::Export(ctx, "image_animation_set_loop", wrap_image_animation_set_loop);
@@ -17782,18 +17832,22 @@ ret_t image_animation_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "image_animation_next", wrap_image_animation_next);
   Nan::Export(ctx, "image_animation_set_format", wrap_image_animation_set_format);
   Nan::Export(ctx, "image_animation_set_unload_after_paint", wrap_image_animation_set_unload_after_paint);
+  Nan::Export(ctx, "image_animation_set_reverse", wrap_image_animation_set_reverse);
+  Nan::Export(ctx, "image_animation_set_show_when_done", wrap_image_animation_set_show_when_done);
   Nan::Export(ctx, "image_animation_cast", wrap_image_animation_cast);
   Nan::Export(ctx, "image_animation_is_playing", wrap_image_animation_is_playing);
   Nan::Export(ctx, "image_animation_t_get_prop_image", wrap_image_animation_t_get_prop_image);
   Nan::Export(ctx, "image_animation_t_get_prop_sequence", wrap_image_animation_t_get_prop_sequence);
   Nan::Export(ctx, "image_animation_t_get_prop_start_index", wrap_image_animation_t_get_prop_start_index);
   Nan::Export(ctx, "image_animation_t_get_prop_end_index", wrap_image_animation_t_get_prop_end_index);
+  Nan::Export(ctx, "image_animation_t_get_prop_reverse", wrap_image_animation_t_get_prop_reverse);
   Nan::Export(ctx, "image_animation_t_get_prop_loop", wrap_image_animation_t_get_prop_loop);
   Nan::Export(ctx, "image_animation_t_get_prop_auto_play", wrap_image_animation_t_get_prop_auto_play);
   Nan::Export(ctx, "image_animation_t_get_prop_unload_after_paint", wrap_image_animation_t_get_prop_unload_after_paint);
   Nan::Export(ctx, "image_animation_t_get_prop_format", wrap_image_animation_t_get_prop_format);
   Nan::Export(ctx, "image_animation_t_get_prop_interval", wrap_image_animation_t_get_prop_interval);
   Nan::Export(ctx, "image_animation_t_get_prop_delay", wrap_image_animation_t_get_prop_delay);
+  Nan::Export(ctx, "image_animation_t_get_prop_show_when_done", wrap_image_animation_t_get_prop_show_when_done);
 
  return RET_OK;
 }

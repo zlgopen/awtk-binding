@@ -21934,6 +21934,42 @@ jsvalue_t wrap_image_animation_set_unload_after_paint(
   return jret;
 }
 
+jsvalue_t wrap_image_animation_set_reverse(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  bool_t reverse = (bool_t)jsvalue_get_boolean_value(ctx, argv[1]);
+  ret = (ret_t)image_animation_set_reverse(widget, reverse);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_image_animation_set_show_when_done(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  bool_t show_when_done = (bool_t)jsvalue_get_boolean_value(ctx, argv[1]);
+  ret = (ret_t)image_animation_set_show_when_done(widget, show_when_done);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_image_animation_cast(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -22020,6 +22056,19 @@ jsvalue_t wrap_image_animation_t_get_prop_end_index(
   return jret;
 }
 
+jsvalue_t wrap_image_animation_t_get_prop_reverse(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  image_animation_t* obj = (image_animation_t*)jsvalue_get_pointer(ctx, argv[0], "image_animation_t*");
+
+  jret = jsvalue_create_bool(ctx, obj->reverse);
+  return jret;
+}
+
 jsvalue_t wrap_image_animation_t_get_prop_loop(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -22098,6 +22147,19 @@ jsvalue_t wrap_image_animation_t_get_prop_delay(
   return jret;
 }
 
+jsvalue_t wrap_image_animation_t_get_prop_show_when_done(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  image_animation_t* obj = (image_animation_t*)jsvalue_get_pointer(ctx, argv[0], "image_animation_t*");
+
+  jret = jsvalue_create_bool(ctx, obj->show_when_done);
+  return jret;
+}
+
 ret_t image_animation_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
   JS_SetPropertyStr(ctx, global_obj, "image_animation_create",
@@ -22128,6 +22190,10 @@ ret_t image_animation_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_image_animation_set_format, "image_animation_set_format", 1));
   JS_SetPropertyStr(ctx, global_obj, "image_animation_set_unload_after_paint",
                       JS_NewCFunction(ctx, wrap_image_animation_set_unload_after_paint, "image_animation_set_unload_after_paint", 1));
+  JS_SetPropertyStr(ctx, global_obj, "image_animation_set_reverse",
+                      JS_NewCFunction(ctx, wrap_image_animation_set_reverse, "image_animation_set_reverse", 1));
+  JS_SetPropertyStr(ctx, global_obj, "image_animation_set_show_when_done",
+                      JS_NewCFunction(ctx, wrap_image_animation_set_show_when_done, "image_animation_set_show_when_done", 1));
   JS_SetPropertyStr(ctx, global_obj, "image_animation_cast",
                       JS_NewCFunction(ctx, wrap_image_animation_cast, "image_animation_cast", 1));
   JS_SetPropertyStr(ctx, global_obj, "image_animation_is_playing",
@@ -22140,6 +22206,8 @@ ret_t image_animation_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_image_animation_t_get_prop_start_index, "image_animation_t_get_prop_start_index", 1));
   JS_SetPropertyStr(ctx, global_obj, "image_animation_t_get_prop_end_index",
                       JS_NewCFunction(ctx, wrap_image_animation_t_get_prop_end_index, "image_animation_t_get_prop_end_index", 1));
+  JS_SetPropertyStr(ctx, global_obj, "image_animation_t_get_prop_reverse",
+                      JS_NewCFunction(ctx, wrap_image_animation_t_get_prop_reverse, "image_animation_t_get_prop_reverse", 1));
   JS_SetPropertyStr(ctx, global_obj, "image_animation_t_get_prop_loop",
                       JS_NewCFunction(ctx, wrap_image_animation_t_get_prop_loop, "image_animation_t_get_prop_loop", 1));
   JS_SetPropertyStr(ctx, global_obj, "image_animation_t_get_prop_auto_play",
@@ -22152,6 +22220,8 @@ ret_t image_animation_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_image_animation_t_get_prop_interval, "image_animation_t_get_prop_interval", 1));
   JS_SetPropertyStr(ctx, global_obj, "image_animation_t_get_prop_delay",
                       JS_NewCFunction(ctx, wrap_image_animation_t_get_prop_delay, "image_animation_t_get_prop_delay", 1));
+  JS_SetPropertyStr(ctx, global_obj, "image_animation_t_get_prop_show_when_done",
+                      JS_NewCFunction(ctx, wrap_image_animation_t_get_prop_show_when_done, "image_animation_t_get_prop_show_when_done", 1));
 
  jsvalue_unref(ctx, global_obj);
 

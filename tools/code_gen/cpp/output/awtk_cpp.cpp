@@ -2495,6 +2495,14 @@
    return image_animation_set_unload_after_paint(((widget_t*)(this->nativeObj)), unload_after_paint);
  }
 
+ ret_t TImageAnimation::SetReverse(bool reverse)  {
+   return image_animation_set_reverse(((widget_t*)(this->nativeObj)), reverse);
+ }
+
+ ret_t TImageAnimation::SetShowWhenDone(bool show_when_done)  {
+   return image_animation_set_show_when_done(((widget_t*)(this->nativeObj)), show_when_done);
+ }
+
  bool TImageAnimation::IsPlaying()  {
     return image_animation_is_playing(((widget_t*)(this->nativeObj)));
  }
@@ -2513,6 +2521,10 @@
 
  uint32_t TImageAnimation::GetEndIndex() const {
    return ((image_animation_t*)(this->nativeObj))->end_index;
+ }
+
+ bool TImageAnimation::GetReverse() const {
+   return ((image_animation_t*)(this->nativeObj))->reverse;
  }
 
  bool TImageAnimation::GetLoop() const {
@@ -2537,6 +2549,10 @@
 
  uint32_t TImageAnimation::GetDelay() const {
    return ((image_animation_t*)(this->nativeObj))->delay;
+ }
+
+ bool TImageAnimation::GetShowWhenDone() const {
+   return ((image_animation_t*)(this->nativeObj))->show_when_done;
  }
 
  TWidget TImageValue::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {

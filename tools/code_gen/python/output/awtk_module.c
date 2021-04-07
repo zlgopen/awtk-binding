@@ -11904,6 +11904,34 @@ pyobject_t wrap_image_animation_set_unload_after_paint(pyobject_t self, pyobject
   return Py_BuildValue("i", ret);
 }
 
+pyobject_t wrap_image_animation_set_reverse(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  widget_t* widget = NULL;
+  bool_t reverse = 0;
+
+  if (!PyArg_ParseTuple(pyargs, "O&b" , &parse_voidp, &widget, &reverse)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)image_animation_set_reverse(widget, reverse);
+  return Py_BuildValue("i", ret);
+}
+
+pyobject_t wrap_image_animation_set_show_when_done(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  widget_t* widget = NULL;
+  bool_t show_when_done = 0;
+
+  if (!PyArg_ParseTuple(pyargs, "O&b" , &parse_voidp, &widget, &show_when_done)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)image_animation_set_show_when_done(widget, show_when_done);
+  return Py_BuildValue("i", ret);
+}
+
 pyobject_t wrap_image_animation_cast(pyobject_t self, pyobject_t pyargs) {
   widget_t* ret = NULL;
   widget_t* widget = NULL;
@@ -11974,6 +12002,17 @@ pyobject_t wrap_image_animation_t_get_prop_end_index(pyobject_t self, pyobject_t
   return Py_BuildValue("i", obj->end_index);
 }
 
+pyobject_t wrap_image_animation_t_get_prop_reverse(pyobject_t self, pyobject_t pyargs) {
+  image_animation_t* obj = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&", &parse_voidp, &obj)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  return Py_BuildValue("b", obj->reverse);
+}
+
 pyobject_t wrap_image_animation_t_get_prop_loop(pyobject_t self, pyobject_t pyargs) {
   image_animation_t* obj = NULL;
 
@@ -12038,6 +12077,17 @@ pyobject_t wrap_image_animation_t_get_prop_delay(pyobject_t self, pyobject_t pya
   }
 
   return Py_BuildValue("i", obj->delay);
+}
+
+pyobject_t wrap_image_animation_t_get_prop_show_when_done(pyobject_t self, pyobject_t pyargs) {
+  image_animation_t* obj = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&", &parse_voidp, &obj)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  return Py_BuildValue("b", obj->show_when_done);
 }
 
 pyobject_t wrap_image_value_create(pyobject_t self, pyobject_t pyargs) {
@@ -20646,18 +20696,22 @@ static PyMethodDef awtk_methods[] = {
 {"image_animation_next", wrap_image_animation_next, METH_VARARGS, "image_animation_next"},
 {"image_animation_set_format", wrap_image_animation_set_format, METH_VARARGS, "image_animation_set_format"},
 {"image_animation_set_unload_after_paint", wrap_image_animation_set_unload_after_paint, METH_VARARGS, "image_animation_set_unload_after_paint"},
+{"image_animation_set_reverse", wrap_image_animation_set_reverse, METH_VARARGS, "image_animation_set_reverse"},
+{"image_animation_set_show_when_done", wrap_image_animation_set_show_when_done, METH_VARARGS, "image_animation_set_show_when_done"},
 {"image_animation_cast", wrap_image_animation_cast, METH_VARARGS, "image_animation_cast"},
 {"image_animation_is_playing", wrap_image_animation_is_playing, METH_VARARGS, "image_animation_is_playing"},
 {"image_animation_t_get_prop_image", wrap_image_animation_t_get_prop_image, METH_VARARGS, "image_animation_t_get_prop_image"},
 {"image_animation_t_get_prop_sequence", wrap_image_animation_t_get_prop_sequence, METH_VARARGS, "image_animation_t_get_prop_sequence"},
 {"image_animation_t_get_prop_start_index", wrap_image_animation_t_get_prop_start_index, METH_VARARGS, "image_animation_t_get_prop_start_index"},
 {"image_animation_t_get_prop_end_index", wrap_image_animation_t_get_prop_end_index, METH_VARARGS, "image_animation_t_get_prop_end_index"},
+{"image_animation_t_get_prop_reverse", wrap_image_animation_t_get_prop_reverse, METH_VARARGS, "image_animation_t_get_prop_reverse"},
 {"image_animation_t_get_prop_loop", wrap_image_animation_t_get_prop_loop, METH_VARARGS, "image_animation_t_get_prop_loop"},
 {"image_animation_t_get_prop_auto_play", wrap_image_animation_t_get_prop_auto_play, METH_VARARGS, "image_animation_t_get_prop_auto_play"},
 {"image_animation_t_get_prop_unload_after_paint", wrap_image_animation_t_get_prop_unload_after_paint, METH_VARARGS, "image_animation_t_get_prop_unload_after_paint"},
 {"image_animation_t_get_prop_format", wrap_image_animation_t_get_prop_format, METH_VARARGS, "image_animation_t_get_prop_format"},
 {"image_animation_t_get_prop_interval", wrap_image_animation_t_get_prop_interval, METH_VARARGS, "image_animation_t_get_prop_interval"},
 {"image_animation_t_get_prop_delay", wrap_image_animation_t_get_prop_delay, METH_VARARGS, "image_animation_t_get_prop_delay"},
+{"image_animation_t_get_prop_show_when_done", wrap_image_animation_t_get_prop_show_when_done, METH_VARARGS, "image_animation_t_get_prop_show_when_done"},
 {"image_value_create", wrap_image_value_create, METH_VARARGS, "image_value_create"},
 {"image_value_set_image", wrap_image_value_set_image, METH_VARARGS, "image_value_set_image"},
 {"image_value_set_format", wrap_image_value_set_format, METH_VARARGS, "image_value_set_format"},

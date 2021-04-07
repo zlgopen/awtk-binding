@@ -12717,6 +12717,28 @@ static int wrap_image_animation_set_unload_after_paint(lua_State* L) {
   return 1;
 }
 
+static int wrap_image_animation_set_reverse(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  bool_t reverse = (bool_t)lua_toboolean(L, 2);
+  ret = (ret_t)image_animation_set_reverse(widget, reverse);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_image_animation_set_show_when_done(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  bool_t show_when_done = (bool_t)lua_toboolean(L, 2);
+  ret = (ret_t)image_animation_set_show_when_done(widget, show_when_done);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 static int wrap_image_animation_cast(lua_State* L) {
   widget_t* ret = NULL;
   widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
@@ -12750,6 +12772,8 @@ static const struct luaL_Reg image_animation_t_member_funcs[] = {
   {"next", wrap_image_animation_next},
   {"set_format", wrap_image_animation_set_format},
   {"set_unload_after_paint", wrap_image_animation_set_unload_after_paint},
+  {"set_reverse", wrap_image_animation_set_reverse},
+  {"set_show_when_done", wrap_image_animation_set_show_when_done},
   {"is_playing", wrap_image_animation_is_playing},
   {NULL, NULL}
 };
@@ -12793,6 +12817,11 @@ static int wrap_image_animation_t_get_prop(lua_State* L) {
 
   return 1;
   }
+  else if(strcmp(name, "reverse") == 0) {
+    lua_pushboolean(L,(lua_Integer)(obj->reverse));
+
+  return 1;
+  }
   else if(strcmp(name, "loop") == 0) {
     lua_pushboolean(L,(lua_Integer)(obj->loop));
 
@@ -12820,6 +12849,11 @@ static int wrap_image_animation_t_get_prop(lua_State* L) {
   }
   else if(strcmp(name, "delay") == 0) {
     lua_pushinteger(L,(lua_Integer)(obj->delay));
+
+  return 1;
+  }
+  else if(strcmp(name, "show_when_done") == 0) {
+    lua_pushboolean(L,(lua_Integer)(obj->show_when_done));
 
   return 1;
   }

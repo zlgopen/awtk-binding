@@ -7289,6 +7289,24 @@ public:
   ret_t SetUnloadAfterPaint(bool unload_after_paint) ;
 
   /**
+   * 设置是否倒序播放。
+   * 
+   * @param reverse 是否倒序播放。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetReverse(bool reverse) ;
+
+  /**
+   * 设置结束播放后是否保持显示最后一帧。
+   * 
+   * @param show_when_done 是否继续显示最后一帧。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetShowWhenDone(bool show_when_done) ;
+
+  /**
    * 判断是否在播放。
    * 
    *
@@ -7319,6 +7337,12 @@ public:
    *
    */
   uint32_t GetEndIndex() const;
+
+  /**
+   * 是否倒序播放。
+   *
+   */
+  bool GetReverse() const;
 
   /**
    * 是否循环播放。
@@ -7355,6 +7379,12 @@ public:
    *
    */
   uint32_t GetDelay() const;
+
+  /**
+   * 结束后是否继续显示最后一帧。
+   *
+   */
+  bool GetShowWhenDone() const;
 };
 
 

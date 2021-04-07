@@ -1470,18 +1470,22 @@ declare function image_animation_pause(widget : any) : TRet;
 declare function image_animation_next(widget : any) : TRet;
 declare function image_animation_set_format(widget : any, format : string) : TRet;
 declare function image_animation_set_unload_after_paint(widget : any, unload_after_paint : boolean) : TRet;
+declare function image_animation_set_reverse(widget : any, reverse : boolean) : TRet;
+declare function image_animation_set_show_when_done(widget : any, show_when_done : boolean) : TRet;
 declare function image_animation_cast(widget : any) : any;
 declare function image_animation_is_playing(widget : any) : boolean;
 declare function image_animation_t_get_prop_image(nativeObj : any) : string;
 declare function image_animation_t_get_prop_sequence(nativeObj : any) : string;
 declare function image_animation_t_get_prop_start_index(nativeObj : any) : number;
 declare function image_animation_t_get_prop_end_index(nativeObj : any) : number;
+declare function image_animation_t_get_prop_reverse(nativeObj : any) : boolean;
 declare function image_animation_t_get_prop_loop(nativeObj : any) : boolean;
 declare function image_animation_t_get_prop_auto_play(nativeObj : any) : boolean;
 declare function image_animation_t_get_prop_unload_after_paint(nativeObj : any) : boolean;
 declare function image_animation_t_get_prop_format(nativeObj : any) : string;
 declare function image_animation_t_get_prop_interval(nativeObj : any) : number;
 declare function image_animation_t_get_prop_delay(nativeObj : any) : number;
+declare function image_animation_t_get_prop_show_when_done(nativeObj : any) : boolean;
 declare function image_value_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function image_value_set_image(widget : any, image : string) : TRet;
 declare function image_value_set_format(widget : any, format : string) : TRet;
@@ -15984,6 +15988,30 @@ export class TImageAnimation extends TWidget {
 
 
   /**
+   * 设置是否倒序播放。
+   * 
+   * @param reverse 是否倒序播放。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setReverse(reverse : boolean) : TRet  {
+    return image_animation_set_reverse(this != null ? (this.nativeObj || this) : null, reverse);
+ }
+
+
+  /**
+   * 设置结束播放后是否保持显示最后一帧。
+   * 
+   * @param show_when_done 是否继续显示最后一帧。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setShowWhenDone(show_when_done : boolean) : TRet  {
+    return image_animation_set_show_when_done(this != null ? (this.nativeObj || this) : null, show_when_done);
+ }
+
+
+  /**
    * 转换为image_animation对象(供脚本语言使用)。
    * 
    * @param widget image_animation对象。
@@ -16047,6 +16075,19 @@ export class TImageAnimation extends TWidget {
    */
  get endIndex() : number {
    return image_animation_t_get_prop_end_index(this.nativeObj);
+ }
+
+
+  /**
+   * 是否倒序播放。
+   *
+   */
+ get reverse() : boolean {
+   return image_animation_t_get_prop_reverse(this.nativeObj);
+ }
+
+ set reverse(v : boolean) {
+   this.setReverse(v);
  }
 
 
@@ -16125,6 +16166,19 @@ export class TImageAnimation extends TWidget {
 
  set delay(v : number) {
    this.setDelay(v);
+ }
+
+
+  /**
+   * 结束后是否继续显示最后一帧。
+   *
+   */
+ get showWhenDone() : boolean {
+   return image_animation_t_get_prop_show_when_done(this.nativeObj);
+ }
+
+ set showWhenDone(v : boolean) {
+   this.setShowWhenDone(v);
  }
 
 };

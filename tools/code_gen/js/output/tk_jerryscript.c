@@ -20281,6 +20281,42 @@ jsvalue_t wrap_image_animation_set_unload_after_paint(
   return jret;
 }
 
+jsvalue_t wrap_image_animation_set_reverse(
+    const jerry_call_info_t *call_info_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  bool_t reverse = (bool_t)jsvalue_get_boolean_value(ctx, argv[1]);
+  ret = (ret_t)image_animation_set_reverse(widget, reverse);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_image_animation_set_show_when_done(
+    const jerry_call_info_t *call_info_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  bool_t show_when_done = (bool_t)jsvalue_get_boolean_value(ctx, argv[1]);
+  ret = (ret_t)image_animation_set_show_when_done(widget, show_when_done);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_image_animation_cast(
     const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
@@ -20367,6 +20403,19 @@ jsvalue_t wrap_image_animation_t_get_prop_end_index(
   return jret;
 }
 
+jsvalue_t wrap_image_animation_t_get_prop_reverse(
+    const jerry_call_info_t *call_info_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  image_animation_t* obj = (image_animation_t*)jsvalue_get_pointer(ctx, argv[0], "image_animation_t*");
+
+  jret = jsvalue_create_bool(ctx, obj->reverse);
+  return jret;
+}
+
 jsvalue_t wrap_image_animation_t_get_prop_loop(
     const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
@@ -20445,6 +20494,19 @@ jsvalue_t wrap_image_animation_t_get_prop_delay(
   return jret;
 }
 
+jsvalue_t wrap_image_animation_t_get_prop_show_when_done(
+    const jerry_call_info_t *call_info_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  image_animation_t* obj = (image_animation_t*)jsvalue_get_pointer(ctx, argv[0], "image_animation_t*");
+
+  jret = jsvalue_create_bool(ctx, obj->show_when_done);
+  return jret;
+}
+
 ret_t image_animation_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"image_animation_create", wrap_image_animation_create);
   jerryx_handler_register_global((const jerry_char_t*)"image_animation_set_loop", wrap_image_animation_set_loop);
@@ -20460,18 +20522,22 @@ ret_t image_animation_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"image_animation_next", wrap_image_animation_next);
   jerryx_handler_register_global((const jerry_char_t*)"image_animation_set_format", wrap_image_animation_set_format);
   jerryx_handler_register_global((const jerry_char_t*)"image_animation_set_unload_after_paint", wrap_image_animation_set_unload_after_paint);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_set_reverse", wrap_image_animation_set_reverse);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_set_show_when_done", wrap_image_animation_set_show_when_done);
   jerryx_handler_register_global((const jerry_char_t*)"image_animation_cast", wrap_image_animation_cast);
   jerryx_handler_register_global((const jerry_char_t*)"image_animation_is_playing", wrap_image_animation_is_playing);
   jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_image", wrap_image_animation_t_get_prop_image);
   jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_sequence", wrap_image_animation_t_get_prop_sequence);
   jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_start_index", wrap_image_animation_t_get_prop_start_index);
   jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_end_index", wrap_image_animation_t_get_prop_end_index);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_reverse", wrap_image_animation_t_get_prop_reverse);
   jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_loop", wrap_image_animation_t_get_prop_loop);
   jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_auto_play", wrap_image_animation_t_get_prop_auto_play);
   jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_unload_after_paint", wrap_image_animation_t_get_prop_unload_after_paint);
   jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_format", wrap_image_animation_t_get_prop_format);
   jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_interval", wrap_image_animation_t_get_prop_interval);
   jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_delay", wrap_image_animation_t_get_prop_delay);
+  jerryx_handler_register_global((const jerry_char_t*)"image_animation_t_get_prop_show_when_done", wrap_image_animation_t_get_prop_show_when_done);
 
  return RET_OK;
 }

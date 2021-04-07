@@ -13401,6 +13401,28 @@ class TImageAnimation (TWidget):
 
 
   #
+  # 设置是否倒序播放。
+  # 
+  # @param reverse 是否倒序播放。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_reverse(self, reverse): 
+    return image_animation_set_reverse(awtk_get_native_obj(self), reverse);
+
+
+  #
+  # 设置结束播放后是否保持显示最后一帧。
+  # 
+  # @param show_when_done 是否继续显示最后一帧。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_show_when_done(self, show_when_done): 
+    return image_animation_set_show_when_done(awtk_get_native_obj(self), show_when_done);
+
+
+  #
   # 转换为image_animation对象(供脚本语言使用)。
   # 
   # @param widget image_animation对象。
@@ -13464,6 +13486,19 @@ class TImageAnimation (TWidget):
   @property
   def end_index(self):
     return image_animation_t_get_prop_end_index(self.nativeObj);
+
+
+  #
+  # 是否倒序播放。
+  #
+  #
+  @property
+  def reverse(self):
+    return image_animation_t_get_prop_reverse(self.nativeObj);
+
+  @reverse.setter
+  def reverse(self, v):
+   this.set_reverse(v);
 
 
   #
@@ -13542,6 +13577,19 @@ class TImageAnimation (TWidget):
   @delay.setter
   def delay(self, v):
    this.set_delay(v);
+
+
+  #
+  # 结束后是否继续显示最后一帧。
+  #
+  #
+  @property
+  def show_when_done(self):
+    return image_animation_t_get_prop_show_when_done(self.nativeObj);
+
+  @show_when_done.setter
+  def show_when_done(self, v):
+   this.set_show_when_done(v);
 
 
 #

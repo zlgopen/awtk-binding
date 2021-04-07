@@ -13926,6 +13926,30 @@ int awtk_TImageAnimation_image_animation_set_unload_after_paint(Runtime *runtime
   return 0;
 }
 
+int awtk_TImageAnimation_image_animation_set_reverse(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  bool_t reverse = (bool_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)image_animation_set_reverse(widget, reverse);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TImageAnimation_image_animation_set_show_when_done(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
+  bool_t show_when_done = (bool_t)jni_ctx_get_int(&ctx);
+  ret = (ret_t)image_animation_set_show_when_done(widget, show_when_done);
+  jni_ctx_return_int(&ctx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TImageAnimation_image_animation_cast(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -13984,6 +14008,15 @@ int awtk_TImageAnimation_image_animation_t_get_prop_end_index(Runtime *runtime, 
   return 0;
 }
 
+int awtk_TImageAnimation_image_animation_t_get_prop_reverse(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  image_animation_t* obj = (image_animation_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->reverse));
+
+  return 0;
+}
+
 int awtk_TImageAnimation_image_animation_t_get_prop_loop(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
@@ -14034,6 +14067,15 @@ int awtk_TImageAnimation_image_animation_t_get_prop_delay(Runtime *runtime, JCla
 
   image_animation_t* obj = (image_animation_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_int(&ctx, (int32_t)(obj->delay));
+
+  return 0;
+}
+
+int awtk_TImageAnimation_image_animation_t_get_prop_show_when_done(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
+
+  image_animation_t* obj = (image_animation_t*)jni_ctx_get_object(&ctx);
+  jni_ctx_return_int(&ctx, (int32_t)(obj->show_when_done));
 
   return 0;
 }
@@ -21620,18 +21662,22 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TImageAnimation",  "image_animation_next",  "(J)I",  awtk_TImageAnimation_image_animation_next},
 {"awtk/TImageAnimation",  "image_animation_set_format",  "(JLjava/lang/String;)I",  awtk_TImageAnimation_image_animation_set_format},
 {"awtk/TImageAnimation",  "image_animation_set_unload_after_paint",  "(JZ)I",  awtk_TImageAnimation_image_animation_set_unload_after_paint},
+{"awtk/TImageAnimation",  "image_animation_set_reverse",  "(JZ)I",  awtk_TImageAnimation_image_animation_set_reverse},
+{"awtk/TImageAnimation",  "image_animation_set_show_when_done",  "(JZ)I",  awtk_TImageAnimation_image_animation_set_show_when_done},
 {"awtk/TImageAnimation",  "image_animation_cast",  "(J)J",  awtk_TImageAnimation_image_animation_cast},
 {"awtk/TImageAnimation",  "image_animation_is_playing",  "(J)Z",  awtk_TImageAnimation_image_animation_is_playing},
 {"awtk/TImageAnimation",  "image_animation_t_get_prop_image",  "(J)Ljava/lang/String;",  awtk_TImageAnimation_image_animation_t_get_prop_image},
 {"awtk/TImageAnimation",  "image_animation_t_get_prop_sequence",  "(J)Ljava/lang/String;",  awtk_TImageAnimation_image_animation_t_get_prop_sequence},
 {"awtk/TImageAnimation",  "image_animation_t_get_prop_start_index",  "(J)I",  awtk_TImageAnimation_image_animation_t_get_prop_start_index},
 {"awtk/TImageAnimation",  "image_animation_t_get_prop_end_index",  "(J)I",  awtk_TImageAnimation_image_animation_t_get_prop_end_index},
+{"awtk/TImageAnimation",  "image_animation_t_get_prop_reverse",  "(J)Z",  awtk_TImageAnimation_image_animation_t_get_prop_reverse},
 {"awtk/TImageAnimation",  "image_animation_t_get_prop_loop",  "(J)Z",  awtk_TImageAnimation_image_animation_t_get_prop_loop},
 {"awtk/TImageAnimation",  "image_animation_t_get_prop_auto_play",  "(J)Z",  awtk_TImageAnimation_image_animation_t_get_prop_auto_play},
 {"awtk/TImageAnimation",  "image_animation_t_get_prop_unload_after_paint",  "(J)Z",  awtk_TImageAnimation_image_animation_t_get_prop_unload_after_paint},
 {"awtk/TImageAnimation",  "image_animation_t_get_prop_format",  "(J)Ljava/lang/String;",  awtk_TImageAnimation_image_animation_t_get_prop_format},
 {"awtk/TImageAnimation",  "image_animation_t_get_prop_interval",  "(J)I",  awtk_TImageAnimation_image_animation_t_get_prop_interval},
 {"awtk/TImageAnimation",  "image_animation_t_get_prop_delay",  "(J)I",  awtk_TImageAnimation_image_animation_t_get_prop_delay},
+{"awtk/TImageAnimation",  "image_animation_t_get_prop_show_when_done",  "(J)Z",  awtk_TImageAnimation_image_animation_t_get_prop_show_when_done},
 {"awtk/TImageValue",  "image_value_create",  "(JIIII)J",  awtk_TImageValue_image_value_create},
 {"awtk/TImageValue",  "image_value_set_image",  "(JLjava/lang/String;)I",  awtk_TImageValue_image_value_set_image},
 {"awtk/TImageValue",  "image_value_set_format",  "(JLjava/lang/String;)I",  awtk_TImageValue_image_value_set_format},
