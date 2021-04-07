@@ -168,7 +168,7 @@ result +=
     const enumInfo = this.getEnumInfo(nativeType);
     const classInfo = this.getClassInfo(nativeType);
 
-    if (name != 'Value') {
+    if (name != 'Value' && !this.hasGetterFor(cls, p.name)) {
       result += this.genPropDoc(p);
       result += ` public ${this.mapType(type)} get${name}() {\n`;
 

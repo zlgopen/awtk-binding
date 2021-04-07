@@ -60,15 +60,6 @@ public class TAssetInfo {
 
 
   /**
-   * 类型。
-   *
-   */
- public int getType() {
-   return asset_info_t_get_prop_type(this.nativeObj);
- }
-
-
-  /**
    * 子类型。
    *
    */
@@ -102,15 +93,6 @@ public class TAssetInfo {
    */
  public int getRefcount() {
    return asset_info_t_get_prop_refcount(this.nativeObj);
- }
-
-
-  /**
-   * 名称。
-   *
-   */
- public String getName() {
-   return asset_info_t_get_prop_name(this.nativeObj);
  }
 
 static private native int asset_info_get_type(long info);

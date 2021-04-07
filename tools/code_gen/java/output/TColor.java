@@ -158,15 +158,6 @@ public class TColor {
    return TRet.from(color_destroy(this != null ? (this.nativeObj) : 0));
  }
 
-
-  /**
-   * 颜色的数值。
-   *
-   */
- public int getColor() {
-   return color_t_get_prop_color(this.nativeObj);
- }
-
 static private native long color_create(int r, int b, int g, int a);
 static private native long color_from_str(long c, String str);
 static private native int color_r(long c);

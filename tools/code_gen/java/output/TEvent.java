@@ -90,15 +90,6 @@ public class TEvent {
 
 
   /**
-   * 类型。
-   *
-   */
- public int getType() {
-   return event_t_get_prop_type(this.nativeObj);
- }
-
-
-  /**
    * 结构体的大小。
    *
    */
