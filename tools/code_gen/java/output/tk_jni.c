@@ -53,8 +53,8 @@
 #include "features/draggable.h"
 #include "file_browser/file_browser_view.h"
 #include "file_browser/file_chooser.h"
-#include "guage/guage_pointer.h"
-#include "guage/guage.h"
+#include "gauge/gauge_pointer.h"
+#include "gauge/gauge.h"
 #include "image_animation/image_animation.h"
 #include "image_value/image_value.h"
 #include "keyboard/candidates.h"
@@ -9125,118 +9125,118 @@ JNIEXPORT jboolean JNICALL Java_awtk_TFileChooser_file_1chooser_1is_1aborted(JNI
   return (jboolean)(ret);
 }
 
-JNIEXPORT jlong JNICALL Java_awtk_TGuagePointer_guage_1pointer_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
+JNIEXPORT jlong JNICALL Java_awtk_TGaugePointer_gauge_1pointer_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
   widget_t* ret;
   widget_t* parent = (widget_t*)jparent;
-  ret = (widget_t*)guage_pointer_create(parent, x, y, w, h);
+  ret = (widget_t*)gauge_pointer_create(parent, x, y, w, h);
 
   return (jlong)(ret);
 }
 
-JNIEXPORT jlong JNICALL Java_awtk_TGuagePointer_guage_1pointer_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+JNIEXPORT jlong JNICALL Java_awtk_TGaugePointer_gauge_1pointer_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
   widget_t* ret;
   widget_t* widget = (widget_t*)jwidget;
-  ret = (widget_t*)guage_pointer_cast(widget);
+  ret = (widget_t*)gauge_pointer_cast(widget);
 
   return (jlong)(ret);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TGuagePointer_guage_1pointer_1set_1angle(JNIEnv* env,  jclass ajc, jlong jwidget, jint angle) { /*func*/
+JNIEXPORT jint JNICALL Java_awtk_TGaugePointer_gauge_1pointer_1set_1angle(JNIEnv* env,  jclass ajc, jlong jwidget, jint angle) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
-  ret = (ret_t)guage_pointer_set_angle(widget, angle);
+  ret = (ret_t)gauge_pointer_set_angle(widget, angle);
 
   return (jint)(ret);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TGuagePointer_guage_1pointer_1set_1image(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jimage) { /*func*/
+JNIEXPORT jint JNICALL Java_awtk_TGaugePointer_gauge_1pointer_1set_1image(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jimage) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
   const char* image = (char*)(*env)->GetStringUTFChars(env, jimage, 0);
-  ret = (ret_t)guage_pointer_set_image(widget, image);
+  ret = (ret_t)gauge_pointer_set_image(widget, image);
   (*env)->ReleaseStringUTFChars(env, jimage, image);
 
   return (jint)(ret);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TGuagePointer_guage_1pointer_1set_1anchor(JNIEnv* env,  jclass ajc, jlong jwidget, jstring janchor_x, jstring janchor_y) { /*func*/
+JNIEXPORT jint JNICALL Java_awtk_TGaugePointer_gauge_1pointer_1set_1anchor(JNIEnv* env,  jclass ajc, jlong jwidget, jstring janchor_x, jstring janchor_y) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
   const char* anchor_x = (char*)(*env)->GetStringUTFChars(env, janchor_x, 0);
   const char* anchor_y = (char*)(*env)->GetStringUTFChars(env, janchor_y, 0);
-  ret = (ret_t)guage_pointer_set_anchor(widget, anchor_x, anchor_y);
+  ret = (ret_t)gauge_pointer_set_anchor(widget, anchor_x, anchor_y);
   (*env)->ReleaseStringUTFChars(env, janchor_x, anchor_x);
   (*env)->ReleaseStringUTFChars(env, janchor_y, anchor_y);
 
   return (jint)(ret);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TGuagePointer_guage_1pointer_1t_1get_1prop_1angle(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  guage_pointer_t* obj = (guage_pointer_t*)jobj;
+JNIEXPORT jint JNICALL Java_awtk_TGaugePointer_gauge_1pointer_1t_1get_1prop_1angle(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  gauge_pointer_t* obj = (gauge_pointer_t*)jobj;
 
   return (jint)(obj->angle);
 }
 
-JNIEXPORT jstring JNICALL Java_awtk_TGuagePointer_guage_1pointer_1t_1get_1prop_1image(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  guage_pointer_t* obj = (guage_pointer_t*)jobj;
+JNIEXPORT jstring JNICALL Java_awtk_TGaugePointer_gauge_1pointer_1t_1get_1prop_1image(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  gauge_pointer_t* obj = (gauge_pointer_t*)jobj;
 
   return (*env)->NewStringUTF(env, obj->image);
 }
 
-JNIEXPORT jstring JNICALL Java_awtk_TGuagePointer_guage_1pointer_1t_1get_1prop_1anchor_1x(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  guage_pointer_t* obj = (guage_pointer_t*)jobj;
+JNIEXPORT jstring JNICALL Java_awtk_TGaugePointer_gauge_1pointer_1t_1get_1prop_1anchor_1x(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  gauge_pointer_t* obj = (gauge_pointer_t*)jobj;
 
   return (*env)->NewStringUTF(env, obj->anchor_x);
 }
 
-JNIEXPORT jstring JNICALL Java_awtk_TGuagePointer_guage_1pointer_1t_1get_1prop_1anchor_1y(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  guage_pointer_t* obj = (guage_pointer_t*)jobj;
+JNIEXPORT jstring JNICALL Java_awtk_TGaugePointer_gauge_1pointer_1t_1get_1prop_1anchor_1y(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  gauge_pointer_t* obj = (gauge_pointer_t*)jobj;
 
   return (*env)->NewStringUTF(env, obj->anchor_y);
 }
 
-JNIEXPORT jlong JNICALL Java_awtk_TGuage_guage_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
+JNIEXPORT jlong JNICALL Java_awtk_TGauge_gauge_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
   widget_t* ret;
   widget_t* parent = (widget_t*)jparent;
-  ret = (widget_t*)guage_create(parent, x, y, w, h);
+  ret = (widget_t*)gauge_create(parent, x, y, w, h);
 
   return (jlong)(ret);
 }
 
-JNIEXPORT jlong JNICALL Java_awtk_TGuage_guage_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+JNIEXPORT jlong JNICALL Java_awtk_TGauge_gauge_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
   widget_t* ret;
   widget_t* widget = (widget_t*)jwidget;
-  ret = (widget_t*)guage_cast(widget);
+  ret = (widget_t*)gauge_cast(widget);
 
   return (jlong)(ret);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TGuage_guage_1set_1image(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jname) { /*func*/
+JNIEXPORT jint JNICALL Java_awtk_TGauge_gauge_1set_1image(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jname) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
   char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
-  ret = (ret_t)guage_set_image(widget, name);
+  ret = (ret_t)gauge_set_image(widget, name);
   (*env)->ReleaseStringUTFChars(env, jname, name);
 
   return (jint)(ret);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TGuage_guage_1set_1draw_1type(JNIEnv* env,  jclass ajc, jlong jwidget, jint draw_type) { /*func*/
+JNIEXPORT jint JNICALL Java_awtk_TGauge_gauge_1set_1draw_1type(JNIEnv* env,  jclass ajc, jlong jwidget, jint draw_type) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
-  ret = (ret_t)guage_set_draw_type(widget, draw_type);
+  ret = (ret_t)gauge_set_draw_type(widget, draw_type);
 
   return (jint)(ret);
 }
 
-JNIEXPORT jstring JNICALL Java_awtk_TGuage_guage_1t_1get_1prop_1image(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  guage_t* obj = (guage_t*)jobj;
+JNIEXPORT jstring JNICALL Java_awtk_TGauge_gauge_1t_1get_1prop_1image(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  gauge_t* obj = (gauge_t*)jobj;
 
   return (*env)->NewStringUTF(env, obj->image);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TGuage_guage_1t_1get_1prop_1draw_1type(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  guage_t* obj = (guage_t*)jobj;
+JNIEXPORT jint JNICALL Java_awtk_TGauge_gauge_1t_1get_1prop_1draw_1type(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  gauge_t* obj = (gauge_t*)jobj;
 
   return (jint)(obj->draw_type);
 }

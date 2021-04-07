@@ -6,28 +6,28 @@ package awtk;
  *
  *表盘控件就是一张图片。
  *
- *guage\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于guage\_t控件。
+ *gauge\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于gauge\_t控件。
  *
- *在xml中使用"guage"标签创建表盘控件。如：
+ *在xml中使用"gauge"标签创建表盘控件。如：
  *
  *```xml
- *<guage x="c" y="10" w="240" h="240" image="guage_bg"
+ *<gauge x="c" y="10" w="240" h="240" image="gauge_bg"
  *```
  *
  *> 更多用法请参考：
- *[guage.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/guage.xml)
+ *[gauge.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/gauge.xml)
  *
- *在c代码中使用函数guage\_create创建表盘控件。如：
+ *在c代码中使用函数gauge\_create创建表盘控件。如：
  *
  *
  *可用通过style来设置控件的显示风格，如背景和边框等。如：
  *
  *```xml
- *<guage>
+ *<gauge>
  *<style name="border">
  *<normal border_color="#000000" bg_color="#e0e0e0" text_color="black"/>
  *</style>
- *</guage>
+ *</gauge>
  *```
  *
  *> 更多用法请参考：
@@ -35,7 +35,7 @@ package awtk;
  *default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml)
  *
  */
-public class TGuage extends TWidget { 
+public class TGauge extends TWidget { 
 
 /**
  * 通过nativeObj构造Java对象。
@@ -44,7 +44,7 @@ public class TGuage extends TWidget {
 
  * @return 对应的Java对象。
  */
- public TGuage(long nativeObj) {
+ public TGauge(long nativeObj) {
    super(nativeObj);
  }
 
@@ -56,13 +56,13 @@ public class TGuage extends TWidget {
 
  * @return 对应的Java对象。
  */
- static public TGuage cast(long nativeObj) {
-   return new TGuage(nativeObj);
+ static public TGauge cast(long nativeObj) {
+   return new TGauge(nativeObj);
  }
 
 
   /**
-   * 创建guage对象
+   * 创建gauge对象
    * 
    * @param parent 父控件
    * @param x x坐标
@@ -73,19 +73,19 @@ public class TGuage extends TWidget {
    * @return 对象。
    */
  public  static TWidget create(TWidget parent, int x, int y, int w, int h)  {
-    return new TGuage(guage_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
+    return new TGauge(gauge_create(parent != null ? (parent.nativeObj) : 0, x, y, w, h));
  }
 
 
   /**
-   * 转换为guage对象(供脚本语言使用)。
+   * 转换为gauge对象(供脚本语言使用)。
    * 
-   * @param widget guage对象。
+   * @param widget gauge对象。
    *
-   * @return guage对象。
+   * @return gauge对象。
    */
- public  static TGuage cast(TWidget widget)  {
-    return new TGuage(guage_cast(widget != null ? (widget.nativeObj) : 0));
+ public  static TGauge cast(TWidget widget)  {
+    return new TGauge(gauge_cast(widget != null ? (widget.nativeObj) : 0));
  }
 
 
@@ -97,7 +97,7 @@ public class TGuage extends TWidget {
    * @return 返回RET_OK表示成功，否则表示失败。
    */
  public  TRet setImage(String name)  {
-   return TRet.from(guage_set_image(this != null ? (this.nativeObj) : 0, name));
+   return TRet.from(gauge_set_image(this != null ? (this.nativeObj) : 0, name));
  }
 
 
@@ -112,7 +112,7 @@ public class TGuage extends TWidget {
    * @return 返回RET_OK表示成功，否则表示失败。
    */
  public  TRet setDrawType(TImageDrawType draw_type)  {
-   return TRet.from(guage_set_draw_type(this != null ? (this.nativeObj) : 0, draw_type.value()));
+   return TRet.from(gauge_set_draw_type(this != null ? (this.nativeObj) : 0, draw_type.value()));
  }
 
 
@@ -121,7 +121,7 @@ public class TGuage extends TWidget {
    *
    */
  public String getImage() {
-   return guage_t_get_prop_image(this.nativeObj);
+   return gauge_t_get_prop_image(this.nativeObj);
  }
 
 
@@ -130,14 +130,14 @@ public class TGuage extends TWidget {
    *
    */
  public TImageDrawType getDrawType() {
-   return TImageDrawType.from(guage_t_get_prop_draw_type(this.nativeObj));
+   return TImageDrawType.from(gauge_t_get_prop_draw_type(this.nativeObj));
 
  }
 
-static private native long guage_create(long parent, int x, int y, int w, int h);
-static private native long guage_cast(long widget);
-static private native int guage_set_image(long widget, String name);
-static private native int guage_set_draw_type(long widget, int draw_type);
-static private native String guage_t_get_prop_image(long nativeObj);
-static private native int guage_t_get_prop_draw_type(long nativeObj);
+static private native long gauge_create(long parent, int x, int y, int w, int h);
+static private native long gauge_cast(long widget);
+static private native int gauge_set_image(long widget, String name);
+static private native int gauge_set_draw_type(long widget, int draw_type);
+static private native String gauge_t_get_prop_image(long nativeObj);
+static private native int gauge_t_get_prop_draw_type(long nativeObj);
 };

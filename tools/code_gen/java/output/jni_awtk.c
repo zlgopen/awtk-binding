@@ -13584,7 +13584,7 @@ int awtk_TFileChooser_file_chooser_is_aborted(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
-int awtk_TGuagePointer_guage_pointer_create(Runtime *runtime, JClass *clazz) {
+int awtk_TGaugePointer_gauge_pointer_create(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   widget_t* ret = NULL;
@@ -13593,56 +13593,56 @@ int awtk_TGuagePointer_guage_pointer_create(Runtime *runtime, JClass *clazz) {
   xy_t y = (xy_t)jni_ctx_get_int(&ctx);
   wh_t w = (wh_t)jni_ctx_get_int(&ctx);
   wh_t h = (wh_t)jni_ctx_get_int(&ctx);
-  ret = (widget_t*)guage_pointer_create(parent, x, y, w, h);
+  ret = (widget_t*)gauge_pointer_create(parent, x, y, w, h);
   jni_ctx_return_object(&ctx, (void*)(ret));
 
   return 0;
 }
 
-int awtk_TGuagePointer_guage_pointer_cast(Runtime *runtime, JClass *clazz) {
+int awtk_TGaugePointer_gauge_pointer_cast(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   widget_t* ret = NULL;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  ret = (widget_t*)guage_pointer_cast(widget);
+  ret = (widget_t*)gauge_pointer_cast(widget);
   jni_ctx_return_object(&ctx, (void*)(ret));
 
   return 0;
 }
 
-int awtk_TGuagePointer_guage_pointer_set_angle(Runtime *runtime, JClass *clazz) {
+int awtk_TGaugePointer_gauge_pointer_set_angle(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
   int32_t angle = (int32_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)guage_pointer_set_angle(widget, angle);
+  ret = (ret_t)gauge_pointer_set_angle(widget, angle);
   jni_ctx_return_int(&ctx, (int32_t)(ret));
 
   return 0;
 }
 
-int awtk_TGuagePointer_guage_pointer_set_image(Runtime *runtime, JClass *clazz) {
+int awtk_TGaugePointer_gauge_pointer_set_image(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
   const char* image = (const char*)jni_ctx_get_str(&ctx);
-  ret = (ret_t)guage_pointer_set_image(widget, image);
+  ret = (ret_t)gauge_pointer_set_image(widget, image);
   TKMEM_FREE(image);
   jni_ctx_return_int(&ctx, (int32_t)(ret));
 
   return 0;
 }
 
-int awtk_TGuagePointer_guage_pointer_set_anchor(Runtime *runtime, JClass *clazz) {
+int awtk_TGaugePointer_gauge_pointer_set_anchor(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
   const char* anchor_x = (const char*)jni_ctx_get_str(&ctx);
   const char* anchor_y = (const char*)jni_ctx_get_str(&ctx);
-  ret = (ret_t)guage_pointer_set_anchor(widget, anchor_x, anchor_y);
+  ret = (ret_t)gauge_pointer_set_anchor(widget, anchor_x, anchor_y);
   TKMEM_FREE(anchor_x);
   TKMEM_FREE(anchor_y);
   jni_ctx_return_int(&ctx, (int32_t)(ret));
@@ -13650,43 +13650,43 @@ int awtk_TGuagePointer_guage_pointer_set_anchor(Runtime *runtime, JClass *clazz)
   return 0;
 }
 
-int awtk_TGuagePointer_guage_pointer_t_get_prop_angle(Runtime *runtime, JClass *clazz) {
+int awtk_TGaugePointer_gauge_pointer_t_get_prop_angle(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  guage_pointer_t* obj = (guage_pointer_t*)jni_ctx_get_object(&ctx);
+  gauge_pointer_t* obj = (gauge_pointer_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_int(&ctx, (int32_t)(obj->angle));
 
   return 0;
 }
 
-int awtk_TGuagePointer_guage_pointer_t_get_prop_image(Runtime *runtime, JClass *clazz) {
+int awtk_TGaugePointer_gauge_pointer_t_get_prop_image(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  guage_pointer_t* obj = (guage_pointer_t*)jni_ctx_get_object(&ctx);
+  gauge_pointer_t* obj = (gauge_pointer_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_str(&ctx, (char*)(obj->image));
 
   return 0;
 }
 
-int awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_x(Runtime *runtime, JClass *clazz) {
+int awtk_TGaugePointer_gauge_pointer_t_get_prop_anchor_x(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  guage_pointer_t* obj = (guage_pointer_t*)jni_ctx_get_object(&ctx);
+  gauge_pointer_t* obj = (gauge_pointer_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_str(&ctx, (char*)(obj->anchor_x));
 
   return 0;
 }
 
-int awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_y(Runtime *runtime, JClass *clazz) {
+int awtk_TGaugePointer_gauge_pointer_t_get_prop_anchor_y(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  guage_pointer_t* obj = (guage_pointer_t*)jni_ctx_get_object(&ctx);
+  gauge_pointer_t* obj = (gauge_pointer_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_str(&ctx, (char*)(obj->anchor_y));
 
   return 0;
 }
 
-int awtk_TGuage_guage_create(Runtime *runtime, JClass *clazz) {
+int awtk_TGauge_gauge_create(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   widget_t* ret = NULL;
@@ -13695,61 +13695,61 @@ int awtk_TGuage_guage_create(Runtime *runtime, JClass *clazz) {
   xy_t y = (xy_t)jni_ctx_get_int(&ctx);
   wh_t w = (wh_t)jni_ctx_get_int(&ctx);
   wh_t h = (wh_t)jni_ctx_get_int(&ctx);
-  ret = (widget_t*)guage_create(parent, x, y, w, h);
+  ret = (widget_t*)gauge_create(parent, x, y, w, h);
   jni_ctx_return_object(&ctx, (void*)(ret));
 
   return 0;
 }
 
-int awtk_TGuage_guage_cast(Runtime *runtime, JClass *clazz) {
+int awtk_TGauge_gauge_cast(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   widget_t* ret = NULL;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
-  ret = (widget_t*)guage_cast(widget);
+  ret = (widget_t*)gauge_cast(widget);
   jni_ctx_return_object(&ctx, (void*)(ret));
 
   return 0;
 }
 
-int awtk_TGuage_guage_set_image(Runtime *runtime, JClass *clazz) {
+int awtk_TGauge_gauge_set_image(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
   char* name = (char*)jni_ctx_get_str(&ctx);
-  ret = (ret_t)guage_set_image(widget, name);
+  ret = (ret_t)gauge_set_image(widget, name);
   TKMEM_FREE(name);
   jni_ctx_return_int(&ctx, (int32_t)(ret));
 
   return 0;
 }
 
-int awtk_TGuage_guage_set_draw_type(Runtime *runtime, JClass *clazz) {
+int awtk_TGauge_gauge_set_draw_type(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&ctx);
   image_draw_type_t draw_type = (image_draw_type_t)jni_ctx_get_int(&ctx);
-  ret = (ret_t)guage_set_draw_type(widget, draw_type);
+  ret = (ret_t)gauge_set_draw_type(widget, draw_type);
   jni_ctx_return_int(&ctx, (int32_t)(ret));
 
   return 0;
 }
 
-int awtk_TGuage_guage_t_get_prop_image(Runtime *runtime, JClass *clazz) {
+int awtk_TGauge_gauge_t_get_prop_image(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  guage_t* obj = (guage_t*)jni_ctx_get_object(&ctx);
+  gauge_t* obj = (gauge_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_str(&ctx, (char*)(obj->image));
 
   return 0;
 }
 
-int awtk_TGuage_guage_t_get_prop_draw_type(Runtime *runtime, JClass *clazz) {
+int awtk_TGauge_gauge_t_get_prop_draw_type(Runtime *runtime, JClass *clazz) {
   jni_ctx_t ctx = jni_ctx_init(runtime, clazz);
 
-  guage_t* obj = (guage_t*)jni_ctx_get_object(&ctx);
+  gauge_t* obj = (gauge_t*)jni_ctx_get_object(&ctx);
   jni_ctx_return_int(&ctx, (int32_t)(obj->draw_type));
 
   return 0;
@@ -21633,21 +21633,21 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TFileChooser",  "file_chooser_get_dir",  "(J)Ljava/lang/String;",  awtk_TFileChooser_file_chooser_get_dir},
 {"awtk/TFileChooser",  "file_chooser_get_filename",  "(J)Ljava/lang/String;",  awtk_TFileChooser_file_chooser_get_filename},
 {"awtk/TFileChooser",  "file_chooser_is_aborted",  "(J)Z",  awtk_TFileChooser_file_chooser_is_aborted},
-{"awtk/TGuagePointer",  "guage_pointer_create",  "(JIIII)J",  awtk_TGuagePointer_guage_pointer_create},
-{"awtk/TGuagePointer",  "guage_pointer_cast",  "(J)J",  awtk_TGuagePointer_guage_pointer_cast},
-{"awtk/TGuagePointer",  "guage_pointer_set_angle",  "(JI)I",  awtk_TGuagePointer_guage_pointer_set_angle},
-{"awtk/TGuagePointer",  "guage_pointer_set_image",  "(JLjava/lang/String;)I",  awtk_TGuagePointer_guage_pointer_set_image},
-{"awtk/TGuagePointer",  "guage_pointer_set_anchor",  "(JLjava/lang/String;Ljava/lang/String;)I",  awtk_TGuagePointer_guage_pointer_set_anchor},
-{"awtk/TGuagePointer",  "guage_pointer_t_get_prop_angle",  "(J)I",  awtk_TGuagePointer_guage_pointer_t_get_prop_angle},
-{"awtk/TGuagePointer",  "guage_pointer_t_get_prop_image",  "(J)Ljava/lang/String;",  awtk_TGuagePointer_guage_pointer_t_get_prop_image},
-{"awtk/TGuagePointer",  "guage_pointer_t_get_prop_anchor_x",  "(J)Ljava/lang/String;",  awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_x},
-{"awtk/TGuagePointer",  "guage_pointer_t_get_prop_anchor_y",  "(J)Ljava/lang/String;",  awtk_TGuagePointer_guage_pointer_t_get_prop_anchor_y},
-{"awtk/TGuage",  "guage_create",  "(JIIII)J",  awtk_TGuage_guage_create},
-{"awtk/TGuage",  "guage_cast",  "(J)J",  awtk_TGuage_guage_cast},
-{"awtk/TGuage",  "guage_set_image",  "(JLjava/lang/String;)I",  awtk_TGuage_guage_set_image},
-{"awtk/TGuage",  "guage_set_draw_type",  "(JI)I",  awtk_TGuage_guage_set_draw_type},
-{"awtk/TGuage",  "guage_t_get_prop_image",  "(J)Ljava/lang/String;",  awtk_TGuage_guage_t_get_prop_image},
-{"awtk/TGuage",  "guage_t_get_prop_draw_type",  "(J)I",  awtk_TGuage_guage_t_get_prop_draw_type},
+{"awtk/TGaugePointer",  "gauge_pointer_create",  "(JIIII)J",  awtk_TGaugePointer_gauge_pointer_create},
+{"awtk/TGaugePointer",  "gauge_pointer_cast",  "(J)J",  awtk_TGaugePointer_gauge_pointer_cast},
+{"awtk/TGaugePointer",  "gauge_pointer_set_angle",  "(JI)I",  awtk_TGaugePointer_gauge_pointer_set_angle},
+{"awtk/TGaugePointer",  "gauge_pointer_set_image",  "(JLjava/lang/String;)I",  awtk_TGaugePointer_gauge_pointer_set_image},
+{"awtk/TGaugePointer",  "gauge_pointer_set_anchor",  "(JLjava/lang/String;Ljava/lang/String;)I",  awtk_TGaugePointer_gauge_pointer_set_anchor},
+{"awtk/TGaugePointer",  "gauge_pointer_t_get_prop_angle",  "(J)I",  awtk_TGaugePointer_gauge_pointer_t_get_prop_angle},
+{"awtk/TGaugePointer",  "gauge_pointer_t_get_prop_image",  "(J)Ljava/lang/String;",  awtk_TGaugePointer_gauge_pointer_t_get_prop_image},
+{"awtk/TGaugePointer",  "gauge_pointer_t_get_prop_anchor_x",  "(J)Ljava/lang/String;",  awtk_TGaugePointer_gauge_pointer_t_get_prop_anchor_x},
+{"awtk/TGaugePointer",  "gauge_pointer_t_get_prop_anchor_y",  "(J)Ljava/lang/String;",  awtk_TGaugePointer_gauge_pointer_t_get_prop_anchor_y},
+{"awtk/TGauge",  "gauge_create",  "(JIIII)J",  awtk_TGauge_gauge_create},
+{"awtk/TGauge",  "gauge_cast",  "(J)J",  awtk_TGauge_gauge_cast},
+{"awtk/TGauge",  "gauge_set_image",  "(JLjava/lang/String;)I",  awtk_TGauge_gauge_set_image},
+{"awtk/TGauge",  "gauge_set_draw_type",  "(JI)I",  awtk_TGauge_gauge_set_draw_type},
+{"awtk/TGauge",  "gauge_t_get_prop_image",  "(J)Ljava/lang/String;",  awtk_TGauge_gauge_t_get_prop_image},
+{"awtk/TGauge",  "gauge_t_get_prop_draw_type",  "(J)I",  awtk_TGauge_gauge_t_get_prop_draw_type},
 {"awtk/TImageAnimation",  "image_animation_create",  "(JIIII)J",  awtk_TImageAnimation_image_animation_create},
 {"awtk/TImageAnimation",  "image_animation_set_loop",  "(JZ)I",  awtk_TImageAnimation_image_animation_set_loop},
 {"awtk/TImageAnimation",  "image_animation_set_image",  "(JLjava/lang/String;)I",  awtk_TImageAnimation_image_animation_set_image},

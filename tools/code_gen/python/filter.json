@@ -17484,8 +17484,8 @@
           "constructor": true,
           "scriptable": true
         },
-        "desc": "创建guage_pointer对象",
-        "name": "guage_pointer_create",
+        "desc": "创建gauge_pointer对象",
+        "name": "gauge_pointer_create",
         "return": {
           "type": "widget_t*",
           "desc": "对象。"
@@ -17496,18 +17496,18 @@
           {
             "type": "widget_t*",
             "name": "widget",
-            "desc": "guage_pointer对象。"
+            "desc": "gauge_pointer对象。"
           }
         ],
         "annotation": {
           "cast": true,
           "scriptable": true
         },
-        "desc": "转换为guage_pointer对象(供脚本语言使用)。",
-        "name": "guage_pointer_cast",
+        "desc": "转换为gauge_pointer对象(供脚本语言使用)。",
+        "name": "gauge_pointer_cast",
         "return": {
           "type": "widget_t*",
-          "desc": "guage_pointer对象。"
+          "desc": "gauge_pointer对象。"
         }
       },
       {
@@ -17527,7 +17527,7 @@
           "scriptable": true
         },
         "desc": "设置指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。",
-        "name": "guage_pointer_set_angle",
+        "name": "gauge_pointer_set_angle",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -17550,7 +17550,7 @@
           "scriptable": true
         },
         "desc": "设置指针的图片。",
-        "name": "guage_pointer_set_image",
+        "name": "gauge_pointer_set_image",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -17578,7 +17578,7 @@
           "scriptable": true
         },
         "desc": "设置指针的旋转锚点。",
-        "name": "guage_pointer_set_anchor",
+        "name": "gauge_pointer_set_anchor",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -17651,9 +17651,9 @@
         }
       }
     ],
-    "header": "guage/guage_pointer.h",
-    "desc": "仪表指针控件。\n\n仪表指针就是一张旋转的图片，图片可以是普通图片也可以是SVG图片。\n\n在嵌入式平台上，对于旋转的图片，SVG图片的效率比位图高数倍，所以推荐使用SVG图片。\n\nguage\\_pointer\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于guage\\_pointer\\_t控件。\n\n在xml中使用\"guage\\_pointer\"标签创建仪表指针控件。如：\n\n```xml\n<guage_pointer x=\"c\" y=\"50\" w=\"24\" h=\"140\" value=\"-128\" image=\"guage_pointer\" />\n```\n\n> 更多用法请参考：\n[guage.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/guage.xml)\n\n在c代码中使用函数guage\\_pointer\\_create创建仪表指针控件。如：\n\n```c\nwidget_t* guage_pointer = guage_pointer_create(guage, 10, 10, 100, 30);\nguage_pointer_set_image(guage_pointer, \"guage_pointer\");\n```\n\n> 创建之后，需要用guage\\_pointer\\_set\\_image设置仪表指针图片。",
-    "name": "guage_pointer_t",
+    "header": "gauge/gauge_pointer.h",
+    "desc": "仪表指针控件。\n\n仪表指针就是一张旋转的图片，图片可以是普通图片也可以是SVG图片。\n\n在嵌入式平台上，对于旋转的图片，SVG图片的效率比位图高数倍，所以推荐使用SVG图片。\n\ngauge\\_pointer\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于gauge\\_pointer\\_t控件。\n\n在xml中使用\"gauge\\_pointer\"标签创建仪表指针控件。如：\n\n```xml\n<gauge_pointer x=\"c\" y=\"50\" w=\"24\" h=\"140\" value=\"-128\" image=\"gauge_pointer\" />\n```\n\n> 更多用法请参考：\n[gauge.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/gauge.xml)\n\n在c代码中使用函数gauge\\_pointer\\_create创建仪表指针控件。如：\n\n```c\nwidget_t* gauge_pointer = gauge_pointer_create(gauge, 10, 10, 100, 30);\ngauge_pointer_set_image(gauge_pointer, \"gauge_pointer\");\n```\n\n> 创建之后，需要用gauge\\_pointer\\_set\\_image设置仪表指针图片。",
+    "name": "gauge_pointer_t",
     "parent": "widget_t",
     "annotation": {
       "scriptable": true,
@@ -17697,8 +17697,8 @@
           "constructor": true,
           "scriptable": true
         },
-        "desc": "创建guage对象",
-        "name": "guage_create",
+        "desc": "创建gauge对象",
+        "name": "gauge_create",
         "return": {
           "type": "widget_t*",
           "desc": "对象。"
@@ -17709,18 +17709,18 @@
           {
             "type": "widget_t*",
             "name": "widget",
-            "desc": "guage对象。"
+            "desc": "gauge对象。"
           }
         ],
         "annotation": {
           "cast": true,
           "scriptable": true
         },
-        "desc": "转换为guage对象(供脚本语言使用)。",
-        "name": "guage_cast",
+        "desc": "转换为gauge对象(供脚本语言使用)。",
+        "name": "gauge_cast",
         "return": {
           "type": "widget_t*",
-          "desc": "guage对象。"
+          "desc": "gauge对象。"
         }
       },
       {
@@ -17740,7 +17740,7 @@
           "scriptable": true
         },
         "desc": "设置背景图片的名称。",
-        "name": "guage_set_image",
+        "name": "gauge_set_image",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -17763,7 +17763,7 @@
           "scriptable": true
         },
         "desc": "设置图片的显示方式。\n\n> 绘制方式的属性值和枚举值:\n[image\\_draw\\_type\\_name\\_value](https://github.com/zlgopen/awtk/blob/master/src/base/enums.c#L98)",
-        "name": "guage_set_draw_type",
+        "name": "gauge_set_draw_type",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -17799,9 +17799,9 @@
         }
       }
     ],
-    "header": "guage/guage.h",
-    "desc": "表盘控件。\n\n表盘控件就是一张图片。\n\nguage\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于guage\\_t控件。\n\n在xml中使用\"guage\"标签创建表盘控件。如：\n\n```xml\n<guage x=\"c\" y=\"10\" w=\"240\" h=\"240\" image=\"guage_bg\" >\n```\n\n> 更多用法请参考：\n[guage.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/guage.xml)\n\n在c代码中使用函数guage\\_create创建表盘控件。如：\n\n```c\nwidget_t* guage = guage_create(win, 10, 10, 200, 200);\nguage_set_image(guage, \"guage_bg\");\n```\n\n可用通过style来设置控件的显示风格，如背景和边框等。如：\n\n```xml\n<guage>\n<style name=\"border\">\n<normal border_color=\"#000000\" bg_color=\"#e0e0e0\" text_color=\"black\"/>\n</style>\n</guage>\n```\n\n> 更多用法请参考：\n[theme\ndefault](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml)",
-    "name": "guage_t",
+    "header": "gauge/gauge.h",
+    "desc": "表盘控件。\n\n表盘控件就是一张图片。\n\ngauge\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于gauge\\_t控件。\n\n在xml中使用\"gauge\"标签创建表盘控件。如：\n\n```xml\n<gauge x=\"c\" y=\"10\" w=\"240\" h=\"240\" image=\"gauge_bg\" >\n```\n\n> 更多用法请参考：\n[gauge.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/gauge.xml)\n\n在c代码中使用函数gauge\\_create创建表盘控件。如：\n\n```c\nwidget_t* gauge = gauge_create(win, 10, 10, 200, 200);\ngauge_set_image(gauge, \"gauge_bg\");\n```\n\n可用通过style来设置控件的显示风格，如背景和边框等。如：\n\n```xml\n<gauge>\n<style name=\"border\">\n<normal border_color=\"#000000\" bg_color=\"#e0e0e0\" text_color=\"black\"/>\n</style>\n</gauge>\n```\n\n> 更多用法请参考：\n[theme\ndefault](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml)",
+    "name": "gauge_t",
     "parent": "widget_t",
     "annotation": {
       "scriptable": true,

@@ -1441,21 +1441,21 @@ declare function file_chooser_choose_folder(chooser : any) : TRet;
 declare function file_chooser_get_dir(chooser : any) : string;
 declare function file_chooser_get_filename(chooser : any) : string;
 declare function file_chooser_is_aborted(chooser : any) : boolean;
-declare function guage_pointer_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function guage_pointer_cast(widget : any) : any;
-declare function guage_pointer_set_angle(widget : any, angle : number) : TRet;
-declare function guage_pointer_set_image(widget : any, image : string) : TRet;
-declare function guage_pointer_set_anchor(widget : any, anchor_x : string, anchor_y : string) : TRet;
-declare function guage_pointer_t_get_prop_angle(nativeObj : any) : number;
-declare function guage_pointer_t_get_prop_image(nativeObj : any) : string;
-declare function guage_pointer_t_get_prop_anchor_x(nativeObj : any) : string;
-declare function guage_pointer_t_get_prop_anchor_y(nativeObj : any) : string;
-declare function guage_create(parent : any, x : number, y : number, w : number, h : number) : any;
-declare function guage_cast(widget : any) : any;
-declare function guage_set_image(widget : any, name : string) : TRet;
-declare function guage_set_draw_type(widget : any, draw_type : TImageDrawType) : TRet;
-declare function guage_t_get_prop_image(nativeObj : any) : string;
-declare function guage_t_get_prop_draw_type(nativeObj : any) : TImageDrawType;
+declare function gauge_pointer_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function gauge_pointer_cast(widget : any) : any;
+declare function gauge_pointer_set_angle(widget : any, angle : number) : TRet;
+declare function gauge_pointer_set_image(widget : any, image : string) : TRet;
+declare function gauge_pointer_set_anchor(widget : any, anchor_x : string, anchor_y : string) : TRet;
+declare function gauge_pointer_t_get_prop_angle(nativeObj : any) : number;
+declare function gauge_pointer_t_get_prop_image(nativeObj : any) : string;
+declare function gauge_pointer_t_get_prop_anchor_x(nativeObj : any) : string;
+declare function gauge_pointer_t_get_prop_anchor_y(nativeObj : any) : string;
+declare function gauge_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function gauge_cast(widget : any) : any;
+declare function gauge_set_image(widget : any, name : string) : TRet;
+declare function gauge_set_draw_type(widget : any, draw_type : TImageDrawType) : TRet;
+declare function gauge_t_get_prop_image(nativeObj : any) : string;
+declare function gauge_t_get_prop_draw_type(nativeObj : any) : TImageDrawType;
 declare function image_animation_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function image_animation_set_loop(widget : any, loop : boolean) : TRet;
 declare function image_animation_set_image(widget : any, image : string) : TRet;
@@ -15516,24 +15516,24 @@ export class TFileChooser extends TEmitter {
  *
  *在嵌入式平台上，对于旋转的图片，SVG图片的效率比位图高数倍，所以推荐使用SVG图片。
  *
- *guage\_pointer\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于guage\_pointer\_t控件。
+ *gauge\_pointer\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于gauge\_pointer\_t控件。
  *
- *在xml中使用"guage\_pointer"标签创建仪表指针控件。如：
+ *在xml中使用"gauge\_pointer"标签创建仪表指针控件。如：
  *
  *```xml
- *<guage_pointer x="c" y="50" w="24" h="140" value="-128" image="guage_pointer" />
+ *<gauge_pointer x="c" y="50" w="24" h="140" value="-128" image="gauge_pointer" />
  *```
  *
  *> 更多用法请参考：
- *[guage.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/guage.xml)
+ *[gauge.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/gauge.xml)
  *
- *在c代码中使用函数guage\_pointer\_create创建仪表指针控件。如：
+ *在c代码中使用函数gauge\_pointer\_create创建仪表指针控件。如：
  *
  *
- *> 创建之后，需要用guage\_pointer\_set\_image设置仪表指针图片。
+ *> 创建之后，需要用gauge\_pointer\_set\_image设置仪表指针图片。
  *
  */
-export class TGuagePointer extends TWidget { 
+export class TGaugePointer extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -15541,7 +15541,7 @@ export class TGuagePointer extends TWidget {
 
 
   /**
-   * 创建guage_pointer对象
+   * 创建gauge_pointer对象
    * 
    * @param parent 父控件
    * @param x x坐标
@@ -15551,20 +15551,20 @@ export class TGuagePointer extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGuagePointer  {
-    return new TGuagePointer(guage_pointer_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGaugePointer  {
+    return new TGaugePointer(gauge_pointer_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
 
   /**
-   * 转换为guage_pointer对象(供脚本语言使用)。
+   * 转换为gauge_pointer对象(供脚本语言使用)。
    * 
-   * @param widget guage_pointer对象。
+   * @param widget gauge_pointer对象。
    *
-   * @returns guage_pointer对象。
+   * @returns gauge_pointer对象。
    */
- static cast(widget : TWidget) : TGuagePointer  {
-    return new TGuagePointer(guage_pointer_cast(widget != null ? (widget.nativeObj || widget) : null));
+ static cast(widget : TWidget) : TGaugePointer  {
+    return new TGaugePointer(gauge_pointer_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 
@@ -15576,7 +15576,7 @@ export class TGuagePointer extends TWidget {
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
  setAngle(angle : number) : TRet  {
-    return guage_pointer_set_angle(this != null ? (this.nativeObj || this) : null, angle);
+    return gauge_pointer_set_angle(this != null ? (this.nativeObj || this) : null, angle);
  }
 
 
@@ -15588,7 +15588,7 @@ export class TGuagePointer extends TWidget {
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
  setImage(image : string) : TRet  {
-    return guage_pointer_set_image(this != null ? (this.nativeObj || this) : null, image);
+    return gauge_pointer_set_image(this != null ? (this.nativeObj || this) : null, image);
  }
 
 
@@ -15601,7 +15601,7 @@ export class TGuagePointer extends TWidget {
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
  setAnchor(anchor_x : string, anchor_y : string) : TRet  {
-    return guage_pointer_set_anchor(this != null ? (this.nativeObj || this) : null, anchor_x, anchor_y);
+    return gauge_pointer_set_anchor(this != null ? (this.nativeObj || this) : null, anchor_x, anchor_y);
  }
 
 
@@ -15610,7 +15610,7 @@ export class TGuagePointer extends TWidget {
    *
    */
  get angle() : number {
-   return guage_pointer_t_get_prop_angle(this.nativeObj);
+   return gauge_pointer_t_get_prop_angle(this.nativeObj);
  }
 
  set angle(v : number) {
@@ -15625,7 +15625,7 @@ export class TGuagePointer extends TWidget {
    *
    */
  get image() : string {
-   return guage_pointer_t_get_prop_image(this.nativeObj);
+   return gauge_pointer_t_get_prop_image(this.nativeObj);
  }
 
  set image(v : string) {
@@ -15638,7 +15638,7 @@ export class TGuagePointer extends TWidget {
    *
    */
  get anchorX() : string {
-   return guage_pointer_t_get_prop_anchor_x(this.nativeObj);
+   return gauge_pointer_t_get_prop_anchor_x(this.nativeObj);
  }
 
 
@@ -15647,7 +15647,7 @@ export class TGuagePointer extends TWidget {
    *
    */
  get anchorY() : string {
-   return guage_pointer_t_get_prop_anchor_y(this.nativeObj);
+   return gauge_pointer_t_get_prop_anchor_y(this.nativeObj);
  }
 
 };
@@ -15656,28 +15656,28 @@ export class TGuagePointer extends TWidget {
  *
  *表盘控件就是一张图片。
  *
- *guage\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于guage\_t控件。
+ *gauge\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于gauge\_t控件。
  *
- *在xml中使用"guage"标签创建表盘控件。如：
+ *在xml中使用"gauge"标签创建表盘控件。如：
  *
  *```xml
- *<guage x="c" y="10" w="240" h="240" image="guage_bg"
+ *<gauge x="c" y="10" w="240" h="240" image="gauge_bg"
  *```
  *
  *> 更多用法请参考：
- *[guage.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/guage.xml)
+ *[gauge.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/gauge.xml)
  *
- *在c代码中使用函数guage\_create创建表盘控件。如：
+ *在c代码中使用函数gauge\_create创建表盘控件。如：
  *
  *
  *可用通过style来设置控件的显示风格，如背景和边框等。如：
  *
  *```xml
- *<guage>
+ *<gauge>
  *<style name="border">
  *<normal border_color="#000000" bg_color="#e0e0e0" text_color="black"/>
  *</style>
- *</guage>
+ *</gauge>
  *```
  *
  *> 更多用法请参考：
@@ -15685,7 +15685,7 @@ export class TGuagePointer extends TWidget {
  *default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml)
  *
  */
-export class TGuage extends TWidget { 
+export class TGauge extends TWidget { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -15693,7 +15693,7 @@ export class TGuage extends TWidget {
 
 
   /**
-   * 创建guage对象
+   * 创建gauge对象
    * 
    * @param parent 父控件
    * @param x x坐标
@@ -15703,20 +15703,20 @@ export class TGuage extends TWidget {
    *
    * @returns 对象。
    */
- static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGuage  {
-    return new TGuage(guage_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGauge  {
+    return new TGauge(gauge_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
 
   /**
-   * 转换为guage对象(供脚本语言使用)。
+   * 转换为gauge对象(供脚本语言使用)。
    * 
-   * @param widget guage对象。
+   * @param widget gauge对象。
    *
-   * @returns guage对象。
+   * @returns gauge对象。
    */
- static cast(widget : TWidget) : TGuage  {
-    return new TGuage(guage_cast(widget != null ? (widget.nativeObj || widget) : null));
+ static cast(widget : TWidget) : TGauge  {
+    return new TGauge(gauge_cast(widget != null ? (widget.nativeObj || widget) : null));
  }
 
 
@@ -15728,7 +15728,7 @@ export class TGuage extends TWidget {
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
  setImage(name : string) : TRet  {
-    return guage_set_image(this != null ? (this.nativeObj || this) : null, name);
+    return gauge_set_image(this != null ? (this.nativeObj || this) : null, name);
  }
 
 
@@ -15743,7 +15743,7 @@ export class TGuage extends TWidget {
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
  setDrawType(draw_type : TImageDrawType) : TRet  {
-    return guage_set_draw_type(this != null ? (this.nativeObj || this) : null, draw_type);
+    return gauge_set_draw_type(this != null ? (this.nativeObj || this) : null, draw_type);
  }
 
 
@@ -15752,7 +15752,7 @@ export class TGuage extends TWidget {
    *
    */
  get image() : string {
-   return guage_t_get_prop_image(this.nativeObj);
+   return gauge_t_get_prop_image(this.nativeObj);
  }
 
  set image(v : string) {
@@ -15765,7 +15765,7 @@ export class TGuage extends TWidget {
    *
    */
  get drawType() : TImageDrawType {
-   return guage_t_get_prop_draw_type(this.nativeObj);
+   return gauge_t_get_prop_draw_type(this.nativeObj);
  }
 
  set drawType(v : TImageDrawType) {

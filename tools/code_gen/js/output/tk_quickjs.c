@@ -53,8 +53,8 @@
 #include "features/draggable.h"
 #include "file_browser/file_browser_view.h"
 #include "file_browser/file_chooser.h"
-#include "guage/guage_pointer.h"
-#include "guage/guage.h"
+#include "gauge/gauge_pointer.h"
+#include "gauge/gauge.h"
 #include "image_animation/image_animation.h"
 #include "image_value/image_value.h"
 #include "keyboard/candidates.h"
@@ -21384,7 +21384,7 @@ ret_t file_chooser_t_init(JSContext *ctx) {
  return RET_OK;
 }
 
-jsvalue_t wrap_guage_pointer_create(
+jsvalue_t wrap_gauge_pointer_create(
     JSContext *ctx, 
     jsvalue_const_t this_val,
     int argc, 
@@ -21398,14 +21398,14 @@ jsvalue_t wrap_guage_pointer_create(
   xy_t y = (xy_t)jsvalue_get_int_value(ctx, argv[2]);
   wh_t w = (wh_t)jsvalue_get_int_value(ctx, argv[3]);
   wh_t h = (wh_t)jsvalue_get_int_value(ctx, argv[4]);
-  ret = (widget_t*)guage_pointer_create(parent, x, y, w, h);
+  ret = (widget_t*)gauge_pointer_create(parent, x, y, w, h);
 
-  jret = jsvalue_create_pointer(ctx, ret, "guage_pointer_t*");
+  jret = jsvalue_create_pointer(ctx, ret, "gauge_pointer_t*");
   }
   return jret;
 }
 
-jsvalue_t wrap_guage_pointer_cast(
+jsvalue_t wrap_gauge_pointer_cast(
     JSContext *ctx, 
     jsvalue_const_t this_val,
     int argc, 
@@ -21415,14 +21415,14 @@ jsvalue_t wrap_guage_pointer_cast(
   if(argc >= 1) {
   widget_t* ret = NULL;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  ret = (widget_t*)guage_pointer_cast(widget);
+  ret = (widget_t*)gauge_pointer_cast(widget);
 
-  jret = jsvalue_create_pointer(ctx, ret, "guage_pointer_t*");
+  jret = jsvalue_create_pointer(ctx, ret, "gauge_pointer_t*");
   }
   return jret;
 }
 
-jsvalue_t wrap_guage_pointer_set_angle(
+jsvalue_t wrap_gauge_pointer_set_angle(
     JSContext *ctx, 
     jsvalue_const_t this_val,
     int argc, 
@@ -21433,14 +21433,14 @@ jsvalue_t wrap_guage_pointer_set_angle(
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
   int32_t angle = (int32_t)jsvalue_get_int_value(ctx, argv[1]);
-  ret = (ret_t)guage_pointer_set_angle(widget, angle);
+  ret = (ret_t)gauge_pointer_set_angle(widget, angle);
 
   jret = jsvalue_create_int(ctx, ret);
   }
   return jret;
 }
 
-jsvalue_t wrap_guage_pointer_set_image(
+jsvalue_t wrap_gauge_pointer_set_image(
     JSContext *ctx, 
     jsvalue_const_t this_val,
     int argc, 
@@ -21451,7 +21451,7 @@ jsvalue_t wrap_guage_pointer_set_image(
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
   const char* image = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
-  ret = (ret_t)guage_pointer_set_image(widget, image);
+  ret = (ret_t)gauge_pointer_set_image(widget, image);
   jsvalue_free_str(ctx, image);
 
   jret = jsvalue_create_int(ctx, ret);
@@ -21459,7 +21459,7 @@ jsvalue_t wrap_guage_pointer_set_image(
   return jret;
 }
 
-jsvalue_t wrap_guage_pointer_set_anchor(
+jsvalue_t wrap_gauge_pointer_set_anchor(
     JSContext *ctx, 
     jsvalue_const_t this_val,
     int argc, 
@@ -21471,7 +21471,7 @@ jsvalue_t wrap_guage_pointer_set_anchor(
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
   const char* anchor_x = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   const char* anchor_y = (const char*)jsvalue_get_utf8_string(ctx, argv[2]);
-  ret = (ret_t)guage_pointer_set_anchor(widget, anchor_x, anchor_y);
+  ret = (ret_t)gauge_pointer_set_anchor(widget, anchor_x, anchor_y);
   jsvalue_free_str(ctx, anchor_x);
   jsvalue_free_str(ctx, anchor_y);
 
@@ -21480,85 +21480,85 @@ jsvalue_t wrap_guage_pointer_set_anchor(
   return jret;
 }
 
-jsvalue_t wrap_guage_pointer_t_get_prop_angle(
+jsvalue_t wrap_gauge_pointer_t_get_prop_angle(
     JSContext *ctx, 
     jsvalue_const_t this_val,
     int argc, 
     jsvalue_const_t *argv
   ) {
   jsvalue_t jret = JS_NULL;
-  guage_pointer_t* obj = (guage_pointer_t*)jsvalue_get_pointer(ctx, argv[0], "guage_pointer_t*");
+  gauge_pointer_t* obj = (gauge_pointer_t*)jsvalue_get_pointer(ctx, argv[0], "gauge_pointer_t*");
 
   jret = jsvalue_create_int(ctx, obj->angle);
   return jret;
 }
 
-jsvalue_t wrap_guage_pointer_t_get_prop_image(
+jsvalue_t wrap_gauge_pointer_t_get_prop_image(
     JSContext *ctx, 
     jsvalue_const_t this_val,
     int argc, 
     jsvalue_const_t *argv
   ) {
   jsvalue_t jret = JS_NULL;
-  guage_pointer_t* obj = (guage_pointer_t*)jsvalue_get_pointer(ctx, argv[0], "guage_pointer_t*");
+  gauge_pointer_t* obj = (gauge_pointer_t*)jsvalue_get_pointer(ctx, argv[0], "gauge_pointer_t*");
 
   jret = jsvalue_create_string(ctx, obj->image);
   return jret;
 }
 
-jsvalue_t wrap_guage_pointer_t_get_prop_anchor_x(
+jsvalue_t wrap_gauge_pointer_t_get_prop_anchor_x(
     JSContext *ctx, 
     jsvalue_const_t this_val,
     int argc, 
     jsvalue_const_t *argv
   ) {
   jsvalue_t jret = JS_NULL;
-  guage_pointer_t* obj = (guage_pointer_t*)jsvalue_get_pointer(ctx, argv[0], "guage_pointer_t*");
+  gauge_pointer_t* obj = (gauge_pointer_t*)jsvalue_get_pointer(ctx, argv[0], "gauge_pointer_t*");
 
   jret = jsvalue_create_string(ctx, obj->anchor_x);
   return jret;
 }
 
-jsvalue_t wrap_guage_pointer_t_get_prop_anchor_y(
+jsvalue_t wrap_gauge_pointer_t_get_prop_anchor_y(
     JSContext *ctx, 
     jsvalue_const_t this_val,
     int argc, 
     jsvalue_const_t *argv
   ) {
   jsvalue_t jret = JS_NULL;
-  guage_pointer_t* obj = (guage_pointer_t*)jsvalue_get_pointer(ctx, argv[0], "guage_pointer_t*");
+  gauge_pointer_t* obj = (gauge_pointer_t*)jsvalue_get_pointer(ctx, argv[0], "gauge_pointer_t*");
 
   jret = jsvalue_create_string(ctx, obj->anchor_y);
   return jret;
 }
 
-ret_t guage_pointer_t_init(JSContext *ctx) {
+ret_t gauge_pointer_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
-  JS_SetPropertyStr(ctx, global_obj, "guage_pointer_create",
-                      JS_NewCFunction(ctx, wrap_guage_pointer_create, "guage_pointer_create", 1));
-  JS_SetPropertyStr(ctx, global_obj, "guage_pointer_cast",
-                      JS_NewCFunction(ctx, wrap_guage_pointer_cast, "guage_pointer_cast", 1));
-  JS_SetPropertyStr(ctx, global_obj, "guage_pointer_set_angle",
-                      JS_NewCFunction(ctx, wrap_guage_pointer_set_angle, "guage_pointer_set_angle", 1));
-  JS_SetPropertyStr(ctx, global_obj, "guage_pointer_set_image",
-                      JS_NewCFunction(ctx, wrap_guage_pointer_set_image, "guage_pointer_set_image", 1));
-  JS_SetPropertyStr(ctx, global_obj, "guage_pointer_set_anchor",
-                      JS_NewCFunction(ctx, wrap_guage_pointer_set_anchor, "guage_pointer_set_anchor", 1));
-  JS_SetPropertyStr(ctx, global_obj, "guage_pointer_t_get_prop_angle",
-                      JS_NewCFunction(ctx, wrap_guage_pointer_t_get_prop_angle, "guage_pointer_t_get_prop_angle", 1));
-  JS_SetPropertyStr(ctx, global_obj, "guage_pointer_t_get_prop_image",
-                      JS_NewCFunction(ctx, wrap_guage_pointer_t_get_prop_image, "guage_pointer_t_get_prop_image", 1));
-  JS_SetPropertyStr(ctx, global_obj, "guage_pointer_t_get_prop_anchor_x",
-                      JS_NewCFunction(ctx, wrap_guage_pointer_t_get_prop_anchor_x, "guage_pointer_t_get_prop_anchor_x", 1));
-  JS_SetPropertyStr(ctx, global_obj, "guage_pointer_t_get_prop_anchor_y",
-                      JS_NewCFunction(ctx, wrap_guage_pointer_t_get_prop_anchor_y, "guage_pointer_t_get_prop_anchor_y", 1));
+  JS_SetPropertyStr(ctx, global_obj, "gauge_pointer_create",
+                      JS_NewCFunction(ctx, wrap_gauge_pointer_create, "gauge_pointer_create", 1));
+  JS_SetPropertyStr(ctx, global_obj, "gauge_pointer_cast",
+                      JS_NewCFunction(ctx, wrap_gauge_pointer_cast, "gauge_pointer_cast", 1));
+  JS_SetPropertyStr(ctx, global_obj, "gauge_pointer_set_angle",
+                      JS_NewCFunction(ctx, wrap_gauge_pointer_set_angle, "gauge_pointer_set_angle", 1));
+  JS_SetPropertyStr(ctx, global_obj, "gauge_pointer_set_image",
+                      JS_NewCFunction(ctx, wrap_gauge_pointer_set_image, "gauge_pointer_set_image", 1));
+  JS_SetPropertyStr(ctx, global_obj, "gauge_pointer_set_anchor",
+                      JS_NewCFunction(ctx, wrap_gauge_pointer_set_anchor, "gauge_pointer_set_anchor", 1));
+  JS_SetPropertyStr(ctx, global_obj, "gauge_pointer_t_get_prop_angle",
+                      JS_NewCFunction(ctx, wrap_gauge_pointer_t_get_prop_angle, "gauge_pointer_t_get_prop_angle", 1));
+  JS_SetPropertyStr(ctx, global_obj, "gauge_pointer_t_get_prop_image",
+                      JS_NewCFunction(ctx, wrap_gauge_pointer_t_get_prop_image, "gauge_pointer_t_get_prop_image", 1));
+  JS_SetPropertyStr(ctx, global_obj, "gauge_pointer_t_get_prop_anchor_x",
+                      JS_NewCFunction(ctx, wrap_gauge_pointer_t_get_prop_anchor_x, "gauge_pointer_t_get_prop_anchor_x", 1));
+  JS_SetPropertyStr(ctx, global_obj, "gauge_pointer_t_get_prop_anchor_y",
+                      JS_NewCFunction(ctx, wrap_gauge_pointer_t_get_prop_anchor_y, "gauge_pointer_t_get_prop_anchor_y", 1));
 
  jsvalue_unref(ctx, global_obj);
 
  return RET_OK;
 }
 
-jsvalue_t wrap_guage_create(
+jsvalue_t wrap_gauge_create(
     JSContext *ctx, 
     jsvalue_const_t this_val,
     int argc, 
@@ -21572,14 +21572,14 @@ jsvalue_t wrap_guage_create(
   xy_t y = (xy_t)jsvalue_get_int_value(ctx, argv[2]);
   wh_t w = (wh_t)jsvalue_get_int_value(ctx, argv[3]);
   wh_t h = (wh_t)jsvalue_get_int_value(ctx, argv[4]);
-  ret = (widget_t*)guage_create(parent, x, y, w, h);
+  ret = (widget_t*)gauge_create(parent, x, y, w, h);
 
-  jret = jsvalue_create_pointer(ctx, ret, "guage_t*");
+  jret = jsvalue_create_pointer(ctx, ret, "gauge_t*");
   }
   return jret;
 }
 
-jsvalue_t wrap_guage_cast(
+jsvalue_t wrap_gauge_cast(
     JSContext *ctx, 
     jsvalue_const_t this_val,
     int argc, 
@@ -21589,14 +21589,14 @@ jsvalue_t wrap_guage_cast(
   if(argc >= 1) {
   widget_t* ret = NULL;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  ret = (widget_t*)guage_cast(widget);
+  ret = (widget_t*)gauge_cast(widget);
 
-  jret = jsvalue_create_pointer(ctx, ret, "guage_t*");
+  jret = jsvalue_create_pointer(ctx, ret, "gauge_t*");
   }
   return jret;
 }
 
-jsvalue_t wrap_guage_set_image(
+jsvalue_t wrap_gauge_set_image(
     JSContext *ctx, 
     jsvalue_const_t this_val,
     int argc, 
@@ -21607,7 +21607,7 @@ jsvalue_t wrap_guage_set_image(
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
   char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
-  ret = (ret_t)guage_set_image(widget, name);
+  ret = (ret_t)gauge_set_image(widget, name);
   jsvalue_free_str(ctx, name);
 
   jret = jsvalue_create_int(ctx, ret);
@@ -21615,7 +21615,7 @@ jsvalue_t wrap_guage_set_image(
   return jret;
 }
 
-jsvalue_t wrap_guage_set_draw_type(
+jsvalue_t wrap_gauge_set_draw_type(
     JSContext *ctx, 
     jsvalue_const_t this_val,
     int argc, 
@@ -21626,53 +21626,53 @@ jsvalue_t wrap_guage_set_draw_type(
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
   image_draw_type_t draw_type = (image_draw_type_t)jsvalue_get_int_value(ctx, argv[1]);
-  ret = (ret_t)guage_set_draw_type(widget, draw_type);
+  ret = (ret_t)gauge_set_draw_type(widget, draw_type);
 
   jret = jsvalue_create_int(ctx, ret);
   }
   return jret;
 }
 
-jsvalue_t wrap_guage_t_get_prop_image(
+jsvalue_t wrap_gauge_t_get_prop_image(
     JSContext *ctx, 
     jsvalue_const_t this_val,
     int argc, 
     jsvalue_const_t *argv
   ) {
   jsvalue_t jret = JS_NULL;
-  guage_t* obj = (guage_t*)jsvalue_get_pointer(ctx, argv[0], "guage_t*");
+  gauge_t* obj = (gauge_t*)jsvalue_get_pointer(ctx, argv[0], "gauge_t*");
 
   jret = jsvalue_create_string(ctx, obj->image);
   return jret;
 }
 
-jsvalue_t wrap_guage_t_get_prop_draw_type(
+jsvalue_t wrap_gauge_t_get_prop_draw_type(
     JSContext *ctx, 
     jsvalue_const_t this_val,
     int argc, 
     jsvalue_const_t *argv
   ) {
   jsvalue_t jret = JS_NULL;
-  guage_t* obj = (guage_t*)jsvalue_get_pointer(ctx, argv[0], "guage_t*");
+  gauge_t* obj = (gauge_t*)jsvalue_get_pointer(ctx, argv[0], "gauge_t*");
 
   jret = jsvalue_create_number(ctx, obj->draw_type);
   return jret;
 }
 
-ret_t guage_t_init(JSContext *ctx) {
+ret_t gauge_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
-  JS_SetPropertyStr(ctx, global_obj, "guage_create",
-                      JS_NewCFunction(ctx, wrap_guage_create, "guage_create", 1));
-  JS_SetPropertyStr(ctx, global_obj, "guage_cast",
-                      JS_NewCFunction(ctx, wrap_guage_cast, "guage_cast", 1));
-  JS_SetPropertyStr(ctx, global_obj, "guage_set_image",
-                      JS_NewCFunction(ctx, wrap_guage_set_image, "guage_set_image", 1));
-  JS_SetPropertyStr(ctx, global_obj, "guage_set_draw_type",
-                      JS_NewCFunction(ctx, wrap_guage_set_draw_type, "guage_set_draw_type", 1));
-  JS_SetPropertyStr(ctx, global_obj, "guage_t_get_prop_image",
-                      JS_NewCFunction(ctx, wrap_guage_t_get_prop_image, "guage_t_get_prop_image", 1));
-  JS_SetPropertyStr(ctx, global_obj, "guage_t_get_prop_draw_type",
-                      JS_NewCFunction(ctx, wrap_guage_t_get_prop_draw_type, "guage_t_get_prop_draw_type", 1));
+  JS_SetPropertyStr(ctx, global_obj, "gauge_create",
+                      JS_NewCFunction(ctx, wrap_gauge_create, "gauge_create", 1));
+  JS_SetPropertyStr(ctx, global_obj, "gauge_cast",
+                      JS_NewCFunction(ctx, wrap_gauge_cast, "gauge_cast", 1));
+  JS_SetPropertyStr(ctx, global_obj, "gauge_set_image",
+                      JS_NewCFunction(ctx, wrap_gauge_set_image, "gauge_set_image", 1));
+  JS_SetPropertyStr(ctx, global_obj, "gauge_set_draw_type",
+                      JS_NewCFunction(ctx, wrap_gauge_set_draw_type, "gauge_set_draw_type", 1));
+  JS_SetPropertyStr(ctx, global_obj, "gauge_t_get_prop_image",
+                      JS_NewCFunction(ctx, wrap_gauge_t_get_prop_image, "gauge_t_get_prop_image", 1));
+  JS_SetPropertyStr(ctx, global_obj, "gauge_t_get_prop_draw_type",
+                      JS_NewCFunction(ctx, wrap_gauge_t_get_prop_draw_type, "gauge_t_get_prop_draw_type", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -32945,8 +32945,8 @@ ret_t awtk_js_init(JSContext *ctx) {
   draggable_t_init(ctx);
   file_browser_view_t_init(ctx);
   file_chooser_t_init(ctx);
-  guage_pointer_t_init(ctx);
-  guage_t_init(ctx);
+  gauge_pointer_t_init(ctx);
+  gauge_t_init(ctx);
   image_animation_t_init(ctx);
   image_value_t_init(ctx);
   candidates_t_init(ctx);
