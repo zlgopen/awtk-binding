@@ -95,6 +95,18 @@ public class TLabel extends TWidget {
 
 
   /**
+   * 设置max_w。
+   * 
+   * @param max_w 最大宽度。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setMaxW(int max_w)  {
+   return TRet.from(label_set_max_w(this != null ? (this.nativeObj) : 0, max_w));
+ }
+
+
+  /**
    * 设置是否自动换行。
    * 
    * @param line_wrap 是否自动换行。
@@ -172,8 +184,19 @@ public class TLabel extends TWidget {
    return label_t_get_prop_word_wrap(this.nativeObj);
  }
 
+
+  /**
+   * 当auto_adjust_size为TRUE时，用于控制控件的最大宽度，超出该宽度后才自动换行。
+   *>为0表示忽略该参数。小于0时取父控件宽度加上max_w。
+   *
+   */
+ public int getMaxW() {
+   return label_t_get_prop_max_w(this.nativeObj);
+ }
+
 static private native long label_create(long parent, int x, int y, int w, int h);
 static private native int label_set_length(long widget, int length);
+static private native int label_set_max_w(long widget, int max_w);
 static private native int label_set_line_wrap(long widget, boolean line_wrap);
 static private native int label_set_word_wrap(long widget, boolean word_wrap);
 static private native int label_resize_to_content(long widget, int min_w, int max_w, int min_h, int max_h);
@@ -181,4 +204,5 @@ static private native long label_cast(long widget);
 static private native int label_t_get_prop_length(long nativeObj);
 static private native boolean label_t_get_prop_line_wrap(long nativeObj);
 static private native boolean label_t_get_prop_word_wrap(long nativeObj);
+static private native int label_t_get_prop_max_w(long nativeObj);
 };

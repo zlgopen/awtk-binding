@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TEdit类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -30,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.8.20 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'搜索');
@@ -134,6 +134,12 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:af5911767134a7130de49b877e9fc1964"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc7a8787885c1af4807918b4803d10a0"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#afc7a8787885c1af4807918b4803d10a0">SetCursor</a> (uint32_t cursor)</td></tr>
 <tr class="separator:afc7a8787885c1af4807918b4803d10a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7035916bddd8919c8a0a97782de1ea18"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#a7035916bddd8919c8a0a97782de1ea18">GetCursor</a> ()</td></tr>
+<tr class="separator:a7035916bddd8919c8a0a97782de1ea18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bf23bda2694a7f2529f87f092889b4b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#a9bf23bda2694a7f2529f87f092889b4b">SetSelect</a> (uint32_t start, uint32_t end)</td></tr>
+<tr class="separator:a9bf23bda2694a7f2529f87f092889b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf008c83829a4317556f1a4bfa2d06f7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#acf008c83829a4317556f1a4bfa2d06f7">GetSelectedText</a> ()</td></tr>
+<tr class="separator:acf008c83829a4317556f1a4bfa2d06f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21b711e8d494ca01cb5a3169f536b3ce"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#a21b711e8d494ca01cb5a3169f536b3ce">GetTips</a> () const</td></tr>
 <tr class="separator:a21b711e8d494ca01cb5a3169f536b3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58485d30ef1da24cb25853b3992239da"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#a58485d30ef1da24cb25853b3992239da">GetTrTips</a> () const</td></tr>
@@ -363,6 +369,25 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
 
 </div>
 </div>
+<a id="a7035916bddd8919c8a0a97782de1ea18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7035916bddd8919c8a0a97782de1ea18">&#9670;&nbsp;</a></span>GetCursor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TEdit::GetCursor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取输入框的光标位置。</p>
+<dl class="section return"><dt>返回</dt><dd>返回光标位置。 </dd></dl>
+
+</div>
+</div>
 <a id="a3ea74a1b250df13cb77148976f4dc3dd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ea74a1b250df13cb77148976f4dc3dd">&#9670;&nbsp;</a></span>GetDouble()</h2>
 
@@ -527,6 +552,25 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
       </table>
 </div><div class="memdoc">
 <p>编辑器是否为只读。 </p>
+
+</div>
+</div>
+<a id="acf008c83829a4317556f1a4bfa2d06f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf008c83829a4317556f1a4bfa2d06f7">&#9670;&nbsp;</a></span>GetSelectedText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * TEdit::GetSelectedText </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取选中的文本。 使用完后需调用 TKMEM_FREE() 进行释放文本占有内存。</p>
+<dl class="section return"><dt>返回</dt><dd>返回选中文本。 </dd></dl>
 
 </div>
 </div>
@@ -724,10 +768,10 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
         </tr>
       </table>
 </div><div class="memdoc">
-<p>设置输入框的光标坐标。</p>
+<p>设置输入框的光标位置。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cursor</td><td>是否为焦点。</td></tr>
+    <tr><td class="paramname">cursor</td><td>光标位置。</td></tr>
   </table>
   </dd>
 </dl>
@@ -1037,6 +1081,43 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
 
 </div>
 </div>
+<a id="a9bf23bda2694a7f2529f87f092889b4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bf23bda2694a7f2529f87f092889b4b">&#9670;&nbsp;</a></span>SetSelect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TEdit::SetSelect </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>选择指定范围的文本。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>起始偏移。 </td></tr>
+    <tr><td class="paramname">end</td><td>结束偏移。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="a2804ed044afbfa2e52c5134c6d61aa17"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2804ed044afbfa2e52c5134c6d61aa17">&#9670;&nbsp;</a></span>SetSelectNoneWhenFocused()</h2>
 
@@ -1159,9 +1240,7 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
+制作者&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

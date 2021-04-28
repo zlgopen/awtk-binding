@@ -45,6 +45,13 @@ public enum TWidgetProp {
   H (WIDGET_PROP_H()),
   
   /**
+   * 最大高度。
+   *
+   */
+ 
+  MAX_H (WIDGET_PROP_MAX_H()),
+  
+  /**
    * 窗口设计时宽度。
    *
    */
@@ -1125,6 +1132,7 @@ public enum TWidgetProp {
   static private native String WIDGET_PROP_Y();
   static private native String WIDGET_PROP_W();
   static private native String WIDGET_PROP_H();
+  static private native String WIDGET_PROP_MAX_H();
   static private native String WIDGET_PROP_DESIGN_W();
   static private native String WIDGET_PROP_DESIGN_H();
   static private native String WIDGET_PROP_AUTO_SCALE_CHILDREN_X();

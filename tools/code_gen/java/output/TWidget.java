@@ -940,6 +940,17 @@ public class TWidget {
 
 
   /**
+   * 判断窗口及子控件创建或加载是否完成。
+   * 
+   *
+   * @return 返回创建或加载是否完成。
+   */
+ public  boolean isWindowCreated()  {
+    return widget_is_window_created(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
    * 判断当前控件是否是指定控件的父控件(包括非直系)。
    * 
    * @param child 控件对象。
@@ -1618,6 +1629,7 @@ static private native int widget_get_prop_int(long widget, String name, int defv
 static private native int widget_set_prop_bool(long widget, String name, boolean v);
 static private native boolean widget_get_prop_bool(long widget, String name, boolean defval);
 static private native boolean widget_is_window_opened(long widget);
+static private native boolean widget_is_window_created(long widget);
 static private native boolean widget_is_parent_of(long widget, long child);
 static private native boolean widget_is_direct_parent_of(long widget, long child);
 static private native boolean widget_is_window(long widget);
