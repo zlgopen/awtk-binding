@@ -372,8 +372,8 @@ public class TEdit extends TWidget {
    *
    * @return 返回光标位置。
    */
- public  TRet getCursor()  {
-   return TRet.from(edit_get_cursor(this != null ? (this.nativeObj) : 0));
+ public  int getCursor()  {
+    return edit_get_cursor(this != null ? (this.nativeObj) : 0);
  }
 
 

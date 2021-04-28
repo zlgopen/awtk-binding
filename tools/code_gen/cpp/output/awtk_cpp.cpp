@@ -3827,8 +3827,8 @@
    return edit_set_cursor(((widget_t*)(this->nativeObj)), cursor);
  }
 
- ret_t TEdit::GetCursor()  {
-   return edit_get_cursor(((widget_t*)(this->nativeObj)));
+ uint32_t TEdit::GetCursor()  {
+    return edit_get_cursor(((widget_t*)(this->nativeObj)));
  }
 
  ret_t TEdit::SetSelect(uint32_t start, uint32_t end)  {

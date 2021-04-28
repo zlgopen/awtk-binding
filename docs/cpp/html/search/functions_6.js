@@ -56,7 +56,7 @@ var searchData=
   ['getcounterclockwise_1049',['GetCounterClockWise',['../class_t_progress_circle.html#a7863e6262513ce6391f813511400cac1',1,'TProgressCircle']]],
   ['getctrl_1050',['GetCtrl',['../class_t_wheel_event.html#a6ee6f1f60424c37244baff8956bf91cc',1,'TWheelEvent::GetCtrl()'],['../class_t_pointer_event.html#aef45c0768ae72e026210d847a1a48489',1,'TPointerEvent::GetCtrl()'],['../class_t_key_event.html#abd75271bd3bd9cb5aeddb216d856f279',1,'TKeyEvent::GetCtrl()']]],
   ['getctx_1051',['GetCtx',['../class_t_idle_info.html#a8f99d8f155566b562cf99206f9203f2b',1,'TIdleInfo::GetCtx()'],['../class_t_timer_info.html#a4e8ca2fe1ae277cd596e2e2cb05cecba',1,'TTimerInfo::GetCtx()']]],
-  ['getcursor_1052',['GetCursor',['../class_t_mledit.html#a7742f1dddb77ca84c56e3de077d123c2',1,'TMledit::GetCursor()'],['../class_t_edit.html#a7035916bddd8919c8a0a97782de1ea18',1,'TEdit::GetCursor()']]],
+  ['getcursor_1052',['GetCursor',['../class_t_mledit.html#a7742f1dddb77ca84c56e3de077d123c2',1,'TMledit::GetCursor()'],['../class_t_edit.html#a54d18c2cb216be5ebe591cad448c8483',1,'TEdit::GetCursor()']]],
   ['getcwd_1053',['GetCwd',['../class_t_file_browser_view.html#aa03787dca05899121b10f66777e4b042',1,'TFileBrowserView']]],
   ['getday_1054',['GetDay',['../class_t_date_time.html#a83703cdb4e5cc693f27b125fb63c2ffe',1,'TDateTime']]],
   ['getdays_1055',['GetDays',['../class_t_date_time.html#a7d7806698c105f6ec23bb1d35634089c',1,'TDateTime']]],

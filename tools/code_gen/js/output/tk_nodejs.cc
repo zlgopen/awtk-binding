@@ -23305,9 +23305,9 @@ static void wrap_edit_get_cursor(const Nan::FunctionCallbackInfo<v8::Value>& arg
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 1) {
-  ret_t ret = (ret_t)0;
+  uint32_t ret = (uint32_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  ret = (ret_t)edit_get_cursor(widget);
+  ret = (uint32_t)edit_get_cursor(widget);
 
   v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
   argv.GetReturnValue().Set(jret);

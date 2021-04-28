@@ -55,7 +55,7 @@ var searchData=
   ['getcounterclockwise_379',['getCounterClockWise',['../classawtk_1_1_t_progress_circle.html#a0891dfa96a432dda348472658c038e6a',1,'awtk::TProgressCircle']]],
   ['getctrl_380',['getCtrl',['../classawtk_1_1_t_key_event.html#a05e0a192d943b88f74320325ecb770f8',1,'awtk.TKeyEvent.getCtrl()'],['../classawtk_1_1_t_pointer_event.html#aca6ded312fb1a7936fa1e26fa829433b',1,'awtk.TPointerEvent.getCtrl()'],['../classawtk_1_1_t_wheel_event.html#a8e6e29dbca7a8d9ed00447ad12625272',1,'awtk.TWheelEvent.getCtrl()']]],
   ['getctx_381',['getCtx',['../classawtk_1_1_t_idle_info.html#a6e8263287d1bbbe65b442dcf86ae7d06',1,'awtk.TIdleInfo.getCtx()'],['../classawtk_1_1_t_timer_info.html#acfd2f47e82cc8f6b837e4849b7afb09a',1,'awtk.TTimerInfo.getCtx()']]],
-  ['getcursor_382',['getCursor',['../classawtk_1_1_t_edit.html#aaaec1c372561177e5ed94f3850444e28',1,'awtk.TEdit.getCursor()'],['../classawtk_1_1_t_mledit.html#a69449203038a113eb33064fa4e59eaa5',1,'awtk.TMledit.getCursor()']]],
+  ['getcursor_382',['getCursor',['../classawtk_1_1_t_edit.html#a83853d4b6a98bb7b8f6fa774ccc7a4b0',1,'awtk.TEdit.getCursor()'],['../classawtk_1_1_t_mledit.html#a69449203038a113eb33064fa4e59eaa5',1,'awtk.TMledit.getCursor()']]],
   ['getcwd_383',['getCwd',['../classawtk_1_1_t_file_browser_view.html#a1a1dd280e02a315e095b797b5f750b3a',1,'awtk::TFileBrowserView']]],
   ['getday_384',['getDay',['../classawtk_1_1_t_date_time.html#a7fc4c14caf7149c05d521164e87595af',1,'awtk::TDateTime']]],
   ['getdays_385',['getDays',['../classawtk_1_1_t_date_time.html#a191001b37539424e2d69491dd3439a37',1,'awtk::TDateTime']]],

@@ -1844,7 +1844,7 @@ declare function edit_set_keyboard(widget : any, keyboard : string) : TRet;
 declare function edit_set_password_visible(widget : any, password_visible : boolean) : TRet;
 declare function edit_set_focus(widget : any, focus : boolean) : TRet;
 declare function edit_set_cursor(widget : any, cursor : number) : TRet;
-declare function edit_get_cursor(widget : any) : TRet;
+declare function edit_get_cursor(widget : any) : number;
 declare function edit_set_select(widget : any, start : number, end : number) : TRet;
 declare function edit_get_selected_text(widget : any) : string;
 declare function edit_t_get_prop_tips(nativeObj : any) : string;
@@ -22043,7 +22043,7 @@ export class TEdit extends TWidget {
    *
    * @returns 返回光标位置。
    */
- getCursor() : TRet  {
+ getCursor() : number  {
     return edit_get_cursor(this != null ? (this.nativeObj || this) : null);
  }
 

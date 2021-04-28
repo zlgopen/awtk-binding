@@ -12206,7 +12206,7 @@ public:
    *
    * @return 返回光标位置。
    */
-  ret_t GetCursor() ;
+  uint32_t GetCursor() ;
 
   /**
    * 选择指定范围的文本。

@@ -26687,7 +26687,7 @@
         "desc": "获取输入框的光标位置。",
         "name": "edit_get_cursor",
         "return": {
-          "type": "ret_t",
+          "type": "uint32_t",
           "desc": "返回光标位置。"
         }
       },

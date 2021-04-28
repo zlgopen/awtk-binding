@@ -12148,9 +12148,9 @@ JNIEXPORT jint JNICALL Java_awtk_TEdit_edit_1set_1cursor(JNIEnv* env,  jclass aj
 }
 
 JNIEXPORT jint JNICALL Java_awtk_TEdit_edit_1get_1cursor(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
-  ret_t ret;
+  uint32_t ret;
   widget_t* widget = (widget_t*)jwidget;
-  ret = (ret_t)edit_get_cursor(widget);
+  ret = (uint32_t)edit_get_cursor(widget);
 
   return (jint)(ret);
 }

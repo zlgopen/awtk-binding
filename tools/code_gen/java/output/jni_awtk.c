@@ -18122,9 +18122,9 @@ int awtk_TEdit_edit_set_cursor(Runtime *runtime, JClass *clazz) {
 int awtk_TEdit_edit_get_cursor(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
-  ret_t ret = 0;
+  uint32_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
-  ret = (ret_t)edit_get_cursor(widget);
+  ret = (uint32_t)edit_get_cursor(widget);
   jni_ctx_return_int(&actx, (int32_t)(ret));
 
   return 0;

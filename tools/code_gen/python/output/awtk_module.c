@@ -16797,7 +16797,7 @@ pyobject_t wrap_edit_set_cursor(pyobject_t self, pyobject_t pyargs) {
 }
 
 pyobject_t wrap_edit_get_cursor(pyobject_t self, pyobject_t pyargs) {
-  ret_t ret = 0;
+  uint32_t ret = 0;
   widget_t* widget = NULL;
 
   if (!PyArg_ParseTuple(pyargs, "O&" , &parse_voidp, &widget)) {
@@ -16805,7 +16805,7 @@ pyobject_t wrap_edit_get_cursor(pyobject_t self, pyobject_t pyargs) {
     return NULL;
   }
 
-  ret = (ret_t)edit_get_cursor(widget);
+  ret = (uint32_t)edit_get_cursor(widget);
   return Py_BuildValue("i", ret);
 }
 
