@@ -6898,6 +6898,26 @@ static int wrap_widget_close_window(lua_State* L) {
   return 1;
 }
 
+static int wrap_widget_back(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  ret = (ret_t)widget_back(widget);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_widget_back_to_home(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  ret = (ret_t)widget_back_to_home(widget);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 static int wrap_widget_move(lua_State* L) {
   ret_t ret = 0;
   widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
@@ -8052,6 +8072,8 @@ static const struct luaL_Reg widget_t_member_funcs[] = {
   {"get_native_window", wrap_widget_get_native_window},
   {"index_of", wrap_widget_index_of},
   {"close_window", wrap_widget_close_window},
+  {"back", wrap_widget_back},
+  {"back_to_home", wrap_widget_back_to_home},
   {"move", wrap_widget_move},
   {"resize", wrap_widget_resize},
   {"move_resize", wrap_widget_move_resize},
@@ -13500,6 +13522,17 @@ static int wrap_mledit_set_max_lines(lua_State* L) {
   return 1;
 }
 
+static int wrap_mledit_set_max_chars(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  uint32_t max_chars = (uint32_t)luaL_checkinteger(L, 2);
+  ret = (ret_t)mledit_set_max_chars(widget, max_chars);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 static int wrap_mledit_set_tips(lua_State* L) {
   ret_t ret = 0;
   widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
@@ -13635,6 +13668,7 @@ static const struct luaL_Reg mledit_t_member_funcs[] = {
   {"set_focus", wrap_mledit_set_focus},
   {"set_wrap_word", wrap_mledit_set_wrap_word},
   {"set_max_lines", wrap_mledit_set_max_lines},
+  {"set_max_chars", wrap_mledit_set_max_chars},
   {"set_tips", wrap_mledit_set_tips},
   {"set_tr_tips", wrap_mledit_set_tr_tips},
   {"set_keyboard", wrap_mledit_set_keyboard},
@@ -13685,6 +13719,11 @@ static int wrap_mledit_t_get_prop(lua_State* L) {
   }
   else if(strcmp(name, "max_lines") == 0) {
     lua_pushinteger(L,(lua_Integer)(obj->max_lines));
+
+  return 1;
+  }
+  else if(strcmp(name, "max_chars") == 0) {
+    lua_pushinteger(L,(lua_Integer)(obj->max_chars));
 
   return 1;
   }

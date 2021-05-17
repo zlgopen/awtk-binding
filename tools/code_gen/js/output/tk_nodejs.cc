@@ -10158,6 +10158,34 @@ static void wrap_widget_close_window(const Nan::FunctionCallbackInfo<v8::Value>&
   (void)argc;(void)ctx;
 }
 
+static void wrap_widget_back(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 1) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  ret = (ret_t)widget_back(widget);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
+static void wrap_widget_back_to_home(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 1) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  ret = (ret_t)widget_back_to_home(widget);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_widget_move(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -12008,6 +12036,8 @@ ret_t widget_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "widget_get_native_window", wrap_widget_get_native_window);
   Nan::Export(ctx, "widget_index_of", wrap_widget_index_of);
   Nan::Export(ctx, "widget_close_window", wrap_widget_close_window);
+  Nan::Export(ctx, "widget_back", wrap_widget_back);
+  Nan::Export(ctx, "widget_back_to_home", wrap_widget_back_to_home);
   Nan::Export(ctx, "widget_move", wrap_widget_move);
   Nan::Export(ctx, "widget_resize", wrap_widget_resize);
   Nan::Export(ctx, "widget_move_resize", wrap_widget_move_resize);
@@ -18535,6 +18565,21 @@ static void wrap_mledit_set_max_lines(const Nan::FunctionCallbackInfo<v8::Value>
   (void)argc;(void)ctx;
 }
 
+static void wrap_mledit_set_max_chars(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  uint32_t max_chars = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)mledit_set_max_chars(widget, max_chars);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_mledit_set_tips(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -18764,6 +18809,16 @@ static void wrap_mledit_t_get_prop_max_lines(const Nan::FunctionCallbackInfo<v8:
   (void)argc;(void)ctx;
 }
 
+static void wrap_mledit_t_get_prop_max_chars(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  mledit_t* obj = (mledit_t*)jsvalue_get_pointer(ctx, argv[0], "mledit_t*");
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(obj->max_chars));
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
 static void wrap_mledit_t_get_prop_wrap_word(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -18831,6 +18886,7 @@ ret_t mledit_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "mledit_set_focus", wrap_mledit_set_focus);
   Nan::Export(ctx, "mledit_set_wrap_word", wrap_mledit_set_wrap_word);
   Nan::Export(ctx, "mledit_set_max_lines", wrap_mledit_set_max_lines);
+  Nan::Export(ctx, "mledit_set_max_chars", wrap_mledit_set_max_chars);
   Nan::Export(ctx, "mledit_set_tips", wrap_mledit_set_tips);
   Nan::Export(ctx, "mledit_set_tr_tips", wrap_mledit_set_tr_tips);
   Nan::Export(ctx, "mledit_set_keyboard", wrap_mledit_set_keyboard);
@@ -18847,6 +18903,7 @@ ret_t mledit_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "mledit_t_get_prop_tr_tips", wrap_mledit_t_get_prop_tr_tips);
   Nan::Export(ctx, "mledit_t_get_prop_keyboard", wrap_mledit_t_get_prop_keyboard);
   Nan::Export(ctx, "mledit_t_get_prop_max_lines", wrap_mledit_t_get_prop_max_lines);
+  Nan::Export(ctx, "mledit_t_get_prop_max_chars", wrap_mledit_t_get_prop_max_chars);
   Nan::Export(ctx, "mledit_t_get_prop_wrap_word", wrap_mledit_t_get_prop_wrap_word);
   Nan::Export(ctx, "mledit_t_get_prop_scroll_line", wrap_mledit_t_get_prop_scroll_line);
   Nan::Export(ctx, "mledit_t_get_prop_readonly", wrap_mledit_t_get_prop_readonly);

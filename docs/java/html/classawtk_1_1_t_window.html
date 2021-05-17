@@ -157,7 +157,7 @@ Public 成员函数</h2></td></tr>
 <div class="textblock"><p>窗口。</p>
 <p>缺省的应用程序窗口，占用除system_bar_t之外的整个区域，请不要修改它的位置和大小(除非你清楚后果)。</p>
 <p>window_t是window\_base\_t的子类控件，window_base_t的函数均适用于window_t控件。</p>
-<p>在xml中使用"window"标签创建窗口。无需指定坐标和大小，可以指定主题和动画名称。如：</p>
+<p>在xml中使用"window"标签创建窗口。无需指定坐标和大小，可以指定窗体样式和动画名称。如：</p>
 <div class="fragment"><div class="line">*&lt;<span class="keywordtype">window</span> <span class="keyword">theme</span>=<span class="stringliteral">&quot;basic&quot;</span> <span class="keyword">anim_hint</span>=<span class="stringliteral">&quot;htranslate&quot;</span>&gt;</div>
 <div class="line">*...</div>
 <div class="line">*&lt;/<span class="keywordtype">window</span>&gt;</div>
@@ -460,7 +460,7 @@ Public 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>是否全屏。</p>
-<p>&gt;这里全屏是指与LCD相同大小，而非让SDL窗口全屏。 </p>
+<p>&gt;对于模拟器，全屏是让窗口和LCD具有相同大小，而非让SDL窗口全屏。 </p>
 
 </div>
 </div>

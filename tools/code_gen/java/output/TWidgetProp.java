@@ -696,7 +696,7 @@ public enum TWidgetProp {
   STATE_FOR_STYLE (WIDGET_PROP_STATE_FOR_STYLE()),
   
   /**
-   * 窗口主题名称。
+   * 窗体样式名称。
    *
    */
  
@@ -738,14 +738,14 @@ public enum TWidgetProp {
   FONT_MANAGER (WIDGET_PROP_FONT_MANAGER()),
   
   /**
-   * 窗口的主题对象。
+   * 窗口的窗体样式对象。
    *
    */
  
   THEME_OBJ (WIDGET_PROP_THEME_OBJ()),
   
   /**
-   * 缺省的主题对象。
+   * 缺省的窗体样式对象。
    *
    */
  

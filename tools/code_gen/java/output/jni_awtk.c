@@ -8180,6 +8180,28 @@ int awtk_TWidget_widget_close_window(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TWidget_widget_back(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  ret = (ret_t)widget_back(widget);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TWidget_widget_back_to_home(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  ret = (ret_t)widget_back_to_home(widget);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TWidget_widget_move(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -14589,6 +14611,18 @@ int awtk_TMledit_mledit_set_max_lines(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TMledit_mledit_set_max_chars(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  uint32_t max_chars = (uint32_t)jni_ctx_get_int(&actx);
+  ret = (ret_t)mledit_set_max_chars(widget, max_chars);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TMledit_mledit_set_tips(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -14766,6 +14800,15 @@ int awtk_TMledit_mledit_t_get_prop_max_lines(Runtime *runtime, JClass *clazz) {
 
   mledit_t* obj = (mledit_t*)jni_ctx_get_object(&actx);
   jni_ctx_return_int(&actx, (int32_t)(obj->max_lines));
+
+  return 0;
+}
+
+int awtk_TMledit_mledit_t_get_prop_max_chars(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  mledit_t* obj = (mledit_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_int(&actx, (int32_t)(obj->max_chars));
 
   return 0;
 }
@@ -21256,6 +21299,8 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidget",  "widget_get_native_window",  "(J)J",  awtk_TWidget_widget_get_native_window},
 {"awtk/TWidget",  "widget_index_of",  "(J)I",  awtk_TWidget_widget_index_of},
 {"awtk/TWidget",  "widget_close_window",  "(J)I",  awtk_TWidget_widget_close_window},
+{"awtk/TWidget",  "widget_back",  "(J)I",  awtk_TWidget_widget_back},
+{"awtk/TWidget",  "widget_back_to_home",  "(J)I",  awtk_TWidget_widget_back_to_home},
 {"awtk/TWidget",  "widget_move",  "(JII)I",  awtk_TWidget_widget_move},
 {"awtk/TWidget",  "widget_resize",  "(JII)I",  awtk_TWidget_widget_resize},
 {"awtk/TWidget",  "widget_move_resize",  "(JIIII)I",  awtk_TWidget_widget_move_resize},
@@ -21888,6 +21933,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TMledit",  "mledit_set_focus",  "(JZ)I",  awtk_TMledit_mledit_set_focus},
 {"awtk/TMledit",  "mledit_set_wrap_word",  "(JZ)I",  awtk_TMledit_mledit_set_wrap_word},
 {"awtk/TMledit",  "mledit_set_max_lines",  "(JI)I",  awtk_TMledit_mledit_set_max_lines},
+{"awtk/TMledit",  "mledit_set_max_chars",  "(JI)I",  awtk_TMledit_mledit_set_max_chars},
 {"awtk/TMledit",  "mledit_set_tips",  "(JLjava/lang/String;)I",  awtk_TMledit_mledit_set_tips},
 {"awtk/TMledit",  "mledit_set_tr_tips",  "(JLjava/lang/String;)I",  awtk_TMledit_mledit_set_tr_tips},
 {"awtk/TMledit",  "mledit_set_keyboard",  "(JLjava/lang/String;)I",  awtk_TMledit_mledit_set_keyboard},
@@ -21904,6 +21950,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TMledit",  "mledit_t_get_prop_tr_tips",  "(J)Ljava/lang/String;",  awtk_TMledit_mledit_t_get_prop_tr_tips},
 {"awtk/TMledit",  "mledit_t_get_prop_keyboard",  "(J)Ljava/lang/String;",  awtk_TMledit_mledit_t_get_prop_keyboard},
 {"awtk/TMledit",  "mledit_t_get_prop_max_lines",  "(J)I",  awtk_TMledit_mledit_t_get_prop_max_lines},
+{"awtk/TMledit",  "mledit_t_get_prop_max_chars",  "(J)I",  awtk_TMledit_mledit_t_get_prop_max_chars},
 {"awtk/TMledit",  "mledit_t_get_prop_wrap_word",  "(J)Z",  awtk_TMledit_mledit_t_get_prop_wrap_word},
 {"awtk/TMledit",  "mledit_t_get_prop_scroll_line",  "(J)I",  awtk_TMledit_mledit_t_get_prop_scroll_line},
 {"awtk/TMledit",  "mledit_t_get_prop_readonly",  "(J)Z",  awtk_TMledit_mledit_t_get_prop_readonly},

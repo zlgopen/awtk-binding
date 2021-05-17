@@ -1075,6 +1075,14 @@
    return widget_close_window(((widget_t*)(this->nativeObj)));
  }
 
+ ret_t TWidget::Back()  {
+   return widget_back(((widget_t*)(this->nativeObj)));
+ }
+
+ ret_t TWidget::BackToHome()  {
+   return widget_back_to_home(((widget_t*)(this->nativeObj)));
+ }
+
  ret_t TWidget::Move(xy_t x, xy_t y)  {
    return widget_move(((widget_t*)(this->nativeObj)), x, y);
  }
@@ -2711,6 +2719,10 @@
    return mledit_set_max_lines(((widget_t*)(this->nativeObj)), max_lines);
  }
 
+ ret_t TMledit::SetMaxChars(uint32_t max_chars)  {
+   return mledit_set_max_chars(((widget_t*)(this->nativeObj)), max_chars);
+ }
+
  ret_t TMledit::SetTips(char* tips)  {
    return mledit_set_tips(((widget_t*)(this->nativeObj)), tips);
  }
@@ -2769,6 +2781,10 @@
 
  uint32_t TMledit::GetMaxLines() const {
    return ((mledit_t*)(this->nativeObj))->max_lines;
+ }
+
+ uint32_t TMledit::GetMaxChars() const {
+   return ((mledit_t*)(this->nativeObj))->max_chars;
  }
 
  bool TMledit::GetWrapWord() const {

@@ -177,7 +177,7 @@ static <a class="el" href="class_t_window_base.html">TWindowBase</a>&#160;</td><
 <p>overlay窗口有点类似于非模态的dialog，但是它位置和大小是完全自由的，窗口管理器不会对它做任何限制。</p>
 <p>如果overlay窗口有透明或半透效果，则不支持窗口动画，但可以通过移动窗口位置来实现类似动画的效果。</p>
 <p>overlay_t是window\_base\_t的子类控件，window_base_t的函数均适用于overlay_t控件。</p>
-<p>在xml中使用"overlay"标签创建窗口。需要指定坐标和大小，可以指定主题和动画名称。如：</p>
+<p>在xml中使用"overlay"标签创建窗口。需要指定坐标和大小，可以指定窗体样式和动画名称。如：</p>
 <div class="fragment"><div class="line">*&lt;<span class="keywordtype">overlay</span> <span class="keyword">theme</span>=<span class="stringliteral">&quot;basic&quot;</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;100&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;100&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;200&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;300&quot;</span>&gt;</div>
 <div class="line">*...</div>
 <div class="line">*&lt;/<span class="keywordtype">overlay</span>&gt;</div>

@@ -97,6 +97,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a655a68ebda0dcbc400ff4a34644f95f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedc2209998528361f3d197bdd71c013b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_mledit.html#aedc2209998528361f3d197bdd71c013b">SetMaxLines</a> (uint32_t max_lines)</td></tr>
 <tr class="separator:aedc2209998528361f3d197bdd71c013b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb2c50d9b014fc664b1e3279096777b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_mledit.html#a5cb2c50d9b014fc664b1e3279096777b">SetMaxChars</a> (uint32_t max_chars)</td></tr>
+<tr class="separator:a5cb2c50d9b014fc664b1e3279096777b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e9acc350014dfb315cfe76a47078847"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_mledit.html#a9e9acc350014dfb315cfe76a47078847">SetTips</a> (char *tips)</td></tr>
 <tr class="separator:a9e9acc350014dfb315cfe76a47078847"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a034ad62c38e54fc1af973978663b11e8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_mledit.html#a034ad62c38e54fc1af973978663b11e8">SetTrTips</a> (const char *tr_tips)</td></tr>
@@ -127,6 +129,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:aadc9cb74c428dd7862838c258e935f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fb022c04fadfe1bee72ec1dfaa6378b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_mledit.html#a6fb022c04fadfe1bee72ec1dfaa6378b">GetMaxLines</a> () const</td></tr>
 <tr class="separator:a6fb022c04fadfe1bee72ec1dfaa6378b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0063e0791ff0ef876e5a458caf6b2fc4"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_mledit.html#a0063e0791ff0ef876e5a458caf6b2fc4">GetMaxChars</a> () const</td></tr>
+<tr class="separator:a0063e0791ff0ef876e5a458caf6b2fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad035922a7db0a6742c7d57cf006fe79a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_mledit.html#ad035922a7db0a6742c7d57cf006fe79a">GetWrapWord</a> () const</td></tr>
 <tr class="separator:ad035922a7db0a6742c7d57cf006fe79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2aae4bf91fa14dde34a2bba88c590b15"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_mledit.html#a2aae4bf91fa14dde34a2bba88c590b15">GetScrollLine</a> () const</td></tr>
@@ -315,6 +319,24 @@ static <a class="el" href="class_t_mledit.html">TMledit</a>&#160;</td><td class=
       </table>
 </div><div class="memdoc">
 <p>自定义软键盘名称。 </p>
+
+</div>
+</div>
+<a id="a0063e0791ff0ef876e5a458caf6b2fc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0063e0791ff0ef876e5a458caf6b2fc4">&#9670;&nbsp;</a></span>GetMaxChars()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t TMledit::GetMaxChars </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>最大字符数。 </p>
 
 </div>
 </div>
@@ -615,6 +637,32 @@ static <a class="el" href="class_t_mledit.html">TMledit</a>&#160;</td><td class=
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">keyboard</td><td>键盘名称(相应UI资源必须存在)。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a5cb2c50d9b014fc664b1e3279096777b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cb2c50d9b014fc664b1e3279096777b">&#9670;&nbsp;</a></span>SetMaxChars()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TMledit::SetMaxChars </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>max_chars</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置编辑器的最大字符数（0 为不限制字符数）。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max_chars</td><td>最大字符数。</td></tr>
   </table>
   </dd>
 </dl>

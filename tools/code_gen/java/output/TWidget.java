@@ -97,6 +97,28 @@ public class TWidget {
 
 
   /**
+   * 请求返回到前一个窗口。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet back()  {
+   return TRet.from(widget_back(this != null ? (this.nativeObj) : 0));
+ }
+
+
+  /**
+   * 请求返回到home窗口。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet backToHome()  {
+   return TRet.from(widget_back_to_home(this != null ? (this.nativeObj) : 0));
+ }
+
+
+  /**
    * 移动控件。
    * 
    * @param x x坐标
@@ -1564,6 +1586,8 @@ static private native long widget_get_child(long widget, int index);
 static private native long widget_get_native_window(long widget);
 static private native int widget_index_of(long widget);
 static private native int widget_close_window(long widget);
+static private native int widget_back(long widget);
+static private native int widget_back_to_home(long widget);
 static private native int widget_move(long widget, int x, int y);
 static private native int widget_resize(long widget, int w, int h);
 static private native int widget_move_resize(long widget, int x, int y, int w, int h);

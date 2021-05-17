@@ -12539,6 +12539,40 @@ jsvalue_t wrap_widget_close_window(
   return jret;
 }
 
+jsvalue_t wrap_widget_back(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  ret = (ret_t)widget_back(widget);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_widget_back_to_home(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  ret = (ret_t)widget_back_to_home(widget);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_widget_move(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -14748,6 +14782,10 @@ ret_t widget_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_widget_index_of, "widget_index_of", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_close_window",
                       JS_NewCFunction(ctx, wrap_widget_close_window, "widget_close_window", 1));
+  JS_SetPropertyStr(ctx, global_obj, "widget_back",
+                      JS_NewCFunction(ctx, wrap_widget_back, "widget_back", 1));
+  JS_SetPropertyStr(ctx, global_obj, "widget_back_to_home",
+                      JS_NewCFunction(ctx, wrap_widget_back_to_home, "widget_back_to_home", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_move",
                       JS_NewCFunction(ctx, wrap_widget_move, "widget_move", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_resize",
@@ -23083,6 +23121,24 @@ jsvalue_t wrap_mledit_set_max_lines(
   return jret;
 }
 
+jsvalue_t wrap_mledit_set_max_chars(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  uint32_t max_chars = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)mledit_set_max_chars(widget, max_chars);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_mledit_set_tips(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -23352,6 +23408,19 @@ jsvalue_t wrap_mledit_t_get_prop_max_lines(
   return jret;
 }
 
+jsvalue_t wrap_mledit_t_get_prop_max_chars(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  mledit_t* obj = (mledit_t*)jsvalue_get_pointer(ctx, argv[0], "mledit_t*");
+
+  jret = jsvalue_create_int(ctx, obj->max_chars);
+  return jret;
+}
+
 jsvalue_t wrap_mledit_t_get_prop_wrap_word(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -23444,6 +23513,8 @@ ret_t mledit_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_mledit_set_wrap_word, "mledit_set_wrap_word", 1));
   JS_SetPropertyStr(ctx, global_obj, "mledit_set_max_lines",
                       JS_NewCFunction(ctx, wrap_mledit_set_max_lines, "mledit_set_max_lines", 1));
+  JS_SetPropertyStr(ctx, global_obj, "mledit_set_max_chars",
+                      JS_NewCFunction(ctx, wrap_mledit_set_max_chars, "mledit_set_max_chars", 1));
   JS_SetPropertyStr(ctx, global_obj, "mledit_set_tips",
                       JS_NewCFunction(ctx, wrap_mledit_set_tips, "mledit_set_tips", 1));
   JS_SetPropertyStr(ctx, global_obj, "mledit_set_tr_tips",
@@ -23476,6 +23547,8 @@ ret_t mledit_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_mledit_t_get_prop_keyboard, "mledit_t_get_prop_keyboard", 1));
   JS_SetPropertyStr(ctx, global_obj, "mledit_t_get_prop_max_lines",
                       JS_NewCFunction(ctx, wrap_mledit_t_get_prop_max_lines, "mledit_t_get_prop_max_lines", 1));
+  JS_SetPropertyStr(ctx, global_obj, "mledit_t_get_prop_max_chars",
+                      JS_NewCFunction(ctx, wrap_mledit_t_get_prop_max_chars, "mledit_t_get_prop_max_chars", 1));
   JS_SetPropertyStr(ctx, global_obj, "mledit_t_get_prop_wrap_word",
                       JS_NewCFunction(ctx, wrap_mledit_t_get_prop_wrap_word, "mledit_t_get_prop_wrap_word", 1));
   JS_SetPropertyStr(ctx, global_obj, "mledit_t_get_prop_scroll_line",

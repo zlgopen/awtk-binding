@@ -6271,6 +6271,32 @@ pyobject_t wrap_widget_close_window(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", ret);
 }
 
+pyobject_t wrap_widget_back(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  widget_t* widget = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&" , &parse_voidp, &widget)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)widget_back(widget);
+  return Py_BuildValue("i", ret);
+}
+
+pyobject_t wrap_widget_back_to_home(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  widget_t* widget = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&" , &parse_voidp, &widget)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)widget_back_to_home(widget);
+  return Py_BuildValue("i", ret);
+}
+
 pyobject_t wrap_widget_move(pyobject_t self, pyobject_t pyargs) {
   ret_t ret = 0;
   widget_t* widget = NULL;
@@ -12671,6 +12697,20 @@ pyobject_t wrap_mledit_set_max_lines(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", ret);
 }
 
+pyobject_t wrap_mledit_set_max_chars(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  widget_t* widget = NULL;
+  uint32_t max_chars = 0;
+
+  if (!PyArg_ParseTuple(pyargs, "O&i" , &parse_voidp, &widget, &max_chars)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)mledit_set_max_chars(widget, max_chars);
+  return Py_BuildValue("i", ret);
+}
+
 pyobject_t wrap_mledit_set_tips(pyobject_t self, pyobject_t pyargs) {
   ret_t ret = 0;
   widget_t* widget = NULL;
@@ -12879,6 +12919,17 @@ pyobject_t wrap_mledit_t_get_prop_max_lines(pyobject_t self, pyobject_t pyargs) 
   }
 
   return Py_BuildValue("i", obj->max_lines);
+}
+
+pyobject_t wrap_mledit_t_get_prop_max_chars(pyobject_t self, pyobject_t pyargs) {
+  mledit_t* obj = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&", &parse_voidp, &obj)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  return Py_BuildValue("i", obj->max_chars);
 }
 
 pyobject_t wrap_mledit_t_get_prop_wrap_word(pyobject_t self, pyobject_t pyargs) {
@@ -20306,6 +20357,8 @@ static PyMethodDef awtk_methods[] = {
 {"widget_get_native_window", wrap_widget_get_native_window, METH_VARARGS, "widget_get_native_window"},
 {"widget_index_of", wrap_widget_index_of, METH_VARARGS, "widget_index_of"},
 {"widget_close_window", wrap_widget_close_window, METH_VARARGS, "widget_close_window"},
+{"widget_back", wrap_widget_back, METH_VARARGS, "widget_back"},
+{"widget_back_to_home", wrap_widget_back_to_home, METH_VARARGS, "widget_back_to_home"},
 {"widget_move", wrap_widget_move, METH_VARARGS, "widget_move"},
 {"widget_resize", wrap_widget_resize, METH_VARARGS, "widget_resize"},
 {"widget_move_resize", wrap_widget_move_resize, METH_VARARGS, "widget_move_resize"},
@@ -20938,6 +20991,7 @@ static PyMethodDef awtk_methods[] = {
 {"mledit_set_focus", wrap_mledit_set_focus, METH_VARARGS, "mledit_set_focus"},
 {"mledit_set_wrap_word", wrap_mledit_set_wrap_word, METH_VARARGS, "mledit_set_wrap_word"},
 {"mledit_set_max_lines", wrap_mledit_set_max_lines, METH_VARARGS, "mledit_set_max_lines"},
+{"mledit_set_max_chars", wrap_mledit_set_max_chars, METH_VARARGS, "mledit_set_max_chars"},
 {"mledit_set_tips", wrap_mledit_set_tips, METH_VARARGS, "mledit_set_tips"},
 {"mledit_set_tr_tips", wrap_mledit_set_tr_tips, METH_VARARGS, "mledit_set_tr_tips"},
 {"mledit_set_keyboard", wrap_mledit_set_keyboard, METH_VARARGS, "mledit_set_keyboard"},
@@ -20954,6 +21008,7 @@ static PyMethodDef awtk_methods[] = {
 {"mledit_t_get_prop_tr_tips", wrap_mledit_t_get_prop_tr_tips, METH_VARARGS, "mledit_t_get_prop_tr_tips"},
 {"mledit_t_get_prop_keyboard", wrap_mledit_t_get_prop_keyboard, METH_VARARGS, "mledit_t_get_prop_keyboard"},
 {"mledit_t_get_prop_max_lines", wrap_mledit_t_get_prop_max_lines, METH_VARARGS, "mledit_t_get_prop_max_lines"},
+{"mledit_t_get_prop_max_chars", wrap_mledit_t_get_prop_max_chars, METH_VARARGS, "mledit_t_get_prop_max_chars"},
 {"mledit_t_get_prop_wrap_word", wrap_mledit_t_get_prop_wrap_word, METH_VARARGS, "mledit_t_get_prop_wrap_word"},
 {"mledit_t_get_prop_scroll_line", wrap_mledit_t_get_prop_scroll_line, METH_VARARGS, "mledit_t_get_prop_scroll_line"},
 {"mledit_t_get_prop_readonly", wrap_mledit_t_get_prop_readonly, METH_VARARGS, "mledit_t_get_prop_readonly"},

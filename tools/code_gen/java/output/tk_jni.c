@@ -5452,6 +5452,22 @@ JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1close_1window(JNIEnv* env,  jcl
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1back(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)widget_back(widget);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1back_1to_1home(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)widget_back_to_home(widget);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1move(JNIEnv* env,  jclass ajc, jlong jwidget, jint x, jint y) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
@@ -9805,6 +9821,14 @@ JNIEXPORT jint JNICALL Java_awtk_TMledit_mledit_1set_1max_1lines(JNIEnv* env,  j
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TMledit_mledit_1set_1max_1chars(JNIEnv* env,  jclass ajc, jlong jwidget, jint max_chars) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)mledit_set_max_chars(widget, max_chars);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TMledit_mledit_1set_1tips(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jtips) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
@@ -9929,6 +9953,12 @@ JNIEXPORT jint JNICALL Java_awtk_TMledit_mledit_1t_1get_1prop_1max_1lines(JNIEnv
   mledit_t* obj = (mledit_t*)jobj;
 
   return (jint)(obj->max_lines);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TMledit_mledit_1t_1get_1prop_1max_1chars(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  mledit_t* obj = (mledit_t*)jobj;
+
+  return (jint)(obj->max_chars);
 }
 
 JNIEXPORT jboolean JNICALL Java_awtk_TMledit_mledit_1t_1get_1prop_1wrap_1word(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/

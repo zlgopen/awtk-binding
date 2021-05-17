@@ -127,6 +127,18 @@ public class TMledit extends TWidget {
 
 
   /**
+   * 设置编辑器的最大字符数（0 为不限制字符数）。
+   * 
+   * @param max_chars 最大字符数。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setMaxChars(int max_chars)  {
+   return TRet.from(mledit_set_max_chars(this != null ? (this.nativeObj) : 0, max_chars));
+ }
+
+
+  /**
    * 设置编辑器的输入提示。
    * 
    * @param tips 输入提示。
@@ -310,6 +322,15 @@ public class TMledit extends TWidget {
 
 
   /**
+   * 最大字符数。
+   *
+   */
+ public int getMaxChars() {
+   return mledit_t_get_prop_max_chars(this.nativeObj);
+ }
+
+
+  /**
    * 是否自动折行。
    *
    */
@@ -373,6 +394,7 @@ static private native int mledit_set_cancelable(long widget, boolean cancelable)
 static private native int mledit_set_focus(long widget, boolean focus);
 static private native int mledit_set_wrap_word(long widget, boolean wrap_word);
 static private native int mledit_set_max_lines(long widget, int max_lines);
+static private native int mledit_set_max_chars(long widget, int max_chars);
 static private native int mledit_set_tips(long widget, String tips);
 static private native int mledit_set_tr_tips(long widget, String tr_tips);
 static private native int mledit_set_keyboard(long widget, String keyboard);
@@ -389,6 +411,7 @@ static private native String mledit_t_get_prop_tips(long nativeObj);
 static private native String mledit_t_get_prop_tr_tips(long nativeObj);
 static private native String mledit_t_get_prop_keyboard(long nativeObj);
 static private native int mledit_t_get_prop_max_lines(long nativeObj);
+static private native int mledit_t_get_prop_max_chars(long nativeObj);
 static private native boolean mledit_t_get_prop_wrap_word(long nativeObj);
 static private native int mledit_t_get_prop_scroll_line(long nativeObj);
 static private native boolean mledit_t_get_prop_readonly(long nativeObj);

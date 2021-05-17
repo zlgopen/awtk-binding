@@ -83,7 +83,7 @@ public class TLabel extends TWidget {
 
 
   /**
-   * 设置显示字符的个数(小余0时全部显示)。。
+   * 设置显示字符的个数(小余0时全部显示)。
    * 
    * @param length 最大可显示字符个数。
    *
@@ -168,7 +168,7 @@ public class TLabel extends TWidget {
 
 
   /**
-   * 是否自动换行。
+   * 是否自动换行(默认FALSE)。
    *
    */
  public boolean getLineWrap() {
@@ -177,7 +177,8 @@ public class TLabel extends TWidget {
 
 
   /**
-   * 是否允许整个单词换行。(需要开启自动换行才有效果)
+   * 是否允许整个单词换行(默认FALSE)。
+   *> 需要开启自动换行才有效果
    *
    */
  public boolean getWordWrap() {

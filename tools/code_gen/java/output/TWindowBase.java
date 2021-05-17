@@ -50,10 +50,10 @@ public class TWindowBase extends TWidget {
 
 
   /**
-   * 主题资源的名称。
-   *每个窗口都可以有独立的主题文件，如果没指定，则使用系统缺省的主题文件。
-   *主题是一个XML文件，放在assets/raw/styles目录下。
-   *请参考[主题](https://github.com/zlgopen/awtk/blob/master/docs/theme.md)
+   * 窗体样式资源的名称。
+   *每个窗口都可以有独立的窗体样式文件，如果没指定，则使用系统缺省的窗体样式文件。
+   *窗体样式是一个XML文件，放在assets/raw/styles目录下。
+   *请参考[窗体样式](https://github.com/zlgopen/awtk/blob/master/docs/theme.md)
    *
    */
  public String getTheme() {
