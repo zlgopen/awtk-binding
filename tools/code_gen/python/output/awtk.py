@@ -4446,6 +4446,18 @@ class TStyleId:
   #
   SELF_LAYOUT = STYLE_ID_SELF_LAYOUT();
 
+  #
+  # 是否支持焦点停留。
+  #
+  #
+  FOCUSABLE = STYLE_ID_FOCUSABLE();
+
+  #
+  # 是否启用按键音、触屏音和震动等反馈。
+  #
+  #
+  FEEDBACK = STYLE_ID_FEEDBACK();
+
 #
 # 控件风格。
 #
@@ -5873,6 +5885,12 @@ class TWidgetProp:
   SINGLE_INSTANCE = WIDGET_PROP_SINGLE_INSTANCE();
 
   #
+  # 点击非focusable控件时，是否让当前焦点控件失去焦点。比如点击窗口空白区域，是否让编辑器失去焦点。
+  #
+  #
+  STRONGLY_FOCUS = WIDGET_PROP_STRONGLY_FOCUS();
+
+  #
   # 子控件布局参数。
   #
   #
@@ -7285,6 +7303,16 @@ class TWidget(object):
   #
   def get_child(self, index): 
     return  TWidget(widget_get_child(awtk_get_native_obj(self), index));
+
+
+  #
+  # 获取当前窗口中的焦点控件。
+  # 
+  #
+  # @return 焦点控件。
+  #
+  def get_focused_widget(self): 
+    return  TWidget(widget_get_focused_widget(awtk_get_native_obj(self)));
 
 
   #
@@ -12008,6 +12036,15 @@ class TWindowBase (TWidget):
   @property
   def single_instance(self):
     return window_base_t_get_prop_single_instance(self.nativeObj);
+
+
+  #
+  # 点击非focusable控件时，是否让当前焦点控件失去焦点。比如点击窗口空白区域，是否让编辑器失去焦点。
+  #
+  #
+  @property
+  def strongly_focus(self):
+    return window_base_t_get_prop_strongly_focus(self.nativeObj);
 
 
 #
@@ -21548,6 +21585,36 @@ class TGifImage (TImageBase):
   @classmethod
   def create(cls, parent, x, y, w, h): 
     return  TGifImage(gif_image_create(awtk_get_native_obj(parent), x, y, w, h));
+
+
+  #
+  # 播放。
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def play(self): 
+    return gif_image_play(awtk_get_native_obj(self));
+
+
+  #
+  # 停止(并重置index为-1)。
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def stop(self): 
+    return gif_image_stop(awtk_get_native_obj(self));
+
+
+  #
+  # 暂停。
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def pause(self): 
+    return gif_image_pause(awtk_get_native_obj(self));
 
 
   #

@@ -206,6 +206,13 @@ public enum TWidgetProp {
   SINGLE_INSTANCE (WIDGET_PROP_SINGLE_INSTANCE()),
   
   /**
+   * 点击非focusable控件时，是否让当前焦点控件失去焦点。比如点击窗口空白区域，是否让编辑器失去焦点。
+   *
+   */
+ 
+  STRONGLY_FOCUS (WIDGET_PROP_STRONGLY_FOCUS()),
+  
+  /**
    * 子控件布局参数。
    *
    */
@@ -1155,6 +1162,7 @@ public enum TWidgetProp {
   static private native String WIDGET_PROP_MAX_W();
   static private native String WIDGET_PROP_AUTO_ADJUST_SIZE();
   static private native String WIDGET_PROP_SINGLE_INSTANCE();
+  static private native String WIDGET_PROP_STRONGLY_FOCUS();
   static private native String WIDGET_PROP_CHILDREN_LAYOUT();
   static private native String WIDGET_PROP_LAYOUT();
   static private native String WIDGET_PROP_SELF_LAYOUT();

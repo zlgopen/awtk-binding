@@ -1063,6 +1063,10 @@
    return TWidget((widget_t*)(widget_get_child(((widget_t*)(this->nativeObj)), index)));
  }
 
+ TWidget TWidget::GetFocusedWidget()  {
+   return TWidget((widget_t*)(widget_get_focused_widget(((widget_t*)(this->nativeObj)))));
+ }
+
  TNativeWindow TWidget::GetNativeWindow()  {
    return TNativeWindow((emitter_t*)(widget_get_native_window(((widget_t*)(this->nativeObj)))));
  }
@@ -2159,6 +2163,10 @@
    return ((window_base_t*)(this->nativeObj))->single_instance;
  }
 
+ bool TWindowBase::GetStronglyFocus() const {
+   return ((window_base_t*)(this->nativeObj))->strongly_focus;
+ }
+
  TWidget TWindowManager::GetTopMainWindow()  {
    return TWidget((widget_t*)(window_manager_get_top_main_window(((widget_t*)(this->nativeObj)))));
  }
@@ -2415,7 +2423,7 @@
    return TGaugePointer((widget_t*)(gauge_pointer_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- ret_t TGaugePointer::SetAngle(int32_t angle)  {
+ ret_t TGaugePointer::SetAngle(float_t angle)  {
    return gauge_pointer_set_angle(((widget_t*)(this->nativeObj)), angle);
  }
 
@@ -2427,7 +2435,7 @@
    return gauge_pointer_set_anchor(((widget_t*)(this->nativeObj)), anchor_x, anchor_y);
  }
 
- int32_t TGaugePointer::GetAngle() const {
+ float_t TGaugePointer::GetAngle() const {
    return ((gauge_pointer_t*)(this->nativeObj))->angle;
  }
 
@@ -4313,6 +4321,18 @@
 
  TWidget TGifImage::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TGifImage((widget_t*)(gif_image_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
+ }
+
+ ret_t TGifImage::Play()  {
+   return gif_image_play(((widget_t*)(this->nativeObj)));
+ }
+
+ ret_t TGifImage::Stop()  {
+   return gif_image_stop(((widget_t*)(this->nativeObj)));
+ }
+
+ ret_t TGifImage::Pause()  {
+   return gif_image_pause(((widget_t*)(this->nativeObj)));
  }
 
  TWidget TKeyboard::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {

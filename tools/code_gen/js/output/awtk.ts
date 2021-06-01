@@ -529,6 +529,8 @@ declare function STYLE_ID_ROUND_RADIUS_BOTTOM_LETF();
 declare function STYLE_ID_ROUND_RADIUS_BOTTOM_RIGHT();
 declare function STYLE_ID_CHILDREN_LAYOUT();
 declare function STYLE_ID_SELF_LAYOUT();
+declare function STYLE_ID_FOCUSABLE();
+declare function STYLE_ID_FEEDBACK();
 declare function style_notify_widget_state_changed(s : any, widget : any) : TRet;
 declare function style_is_valid(s : any) : boolean;
 declare function style_get_int(s : any, name : string, defval : number) : number;
@@ -666,6 +668,7 @@ declare function WIDGET_PROP_MIN_W();
 declare function WIDGET_PROP_MAX_W();
 declare function WIDGET_PROP_AUTO_ADJUST_SIZE();
 declare function WIDGET_PROP_SINGLE_INSTANCE();
+declare function WIDGET_PROP_STRONGLY_FOCUS();
 declare function WIDGET_PROP_CHILDREN_LAYOUT();
 declare function WIDGET_PROP_LAYOUT();
 declare function WIDGET_PROP_SELF_LAYOUT();
@@ -893,6 +896,7 @@ declare function WIDGET_CURSOR_SIZENS();
 declare function WIDGET_CURSOR_SIZEALL();
 declare function widget_count_children(widget : any) : number;
 declare function widget_get_child(widget : any, index : number) : any;
+declare function widget_get_focused_widget(widget : any) : any;
 declare function widget_get_native_window(widget : any) : any;
 declare function widget_index_of(widget : any) : number;
 declare function widget_close_window(widget : any) : TRet;
@@ -1378,6 +1382,7 @@ declare function window_base_t_get_prop_move_focus_down_key(nativeObj : any) : s
 declare function window_base_t_get_prop_move_focus_left_key(nativeObj : any) : string;
 declare function window_base_t_get_prop_move_focus_right_key(nativeObj : any) : string;
 declare function window_base_t_get_prop_single_instance(nativeObj : any) : boolean;
+declare function window_base_t_get_prop_strongly_focus(nativeObj : any) : boolean;
 declare function window_manager() : any;
 declare function window_manager_cast(widget : any) : any;
 declare function window_manager_get_top_main_window(widget : any) : any;
@@ -1980,6 +1985,9 @@ declare function window_close_force(widget : any) : TRet;
 declare function window_cast(widget : any) : any;
 declare function window_t_get_prop_fullscreen(nativeObj : any) : boolean;
 declare function gif_image_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function gif_image_play(widget : any) : TRet;
+declare function gif_image_stop(widget : any) : TRet;
+declare function gif_image_pause(widget : any) : TRet;
 declare function gif_image_cast(widget : any) : any;
 declare function keyboard_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function keyboard_cast(widget : any) : any;
@@ -6681,6 +6689,18 @@ export enum TStyleId {
    *
    */
  SELF_LAYOUT = STYLE_ID_SELF_LAYOUT(),
+
+  /**
+   * 是否支持焦点停留。
+   *
+   */
+ FOCUSABLE = STYLE_ID_FOCUSABLE(),
+
+  /**
+   * 是否启用按键音、触屏音和震动等反馈。
+   *
+   */
+ FEEDBACK = STYLE_ID_FEEDBACK(),
 };
 
 
@@ -8183,6 +8203,12 @@ export enum TWidgetProp {
  SINGLE_INSTANCE = WIDGET_PROP_SINGLE_INSTANCE(),
 
   /**
+   * 点击非focusable控件时，是否让当前焦点控件失去焦点。比如点击窗口空白区域，是否让编辑器失去焦点。
+   *
+   */
+ STRONGLY_FOCUS = WIDGET_PROP_STRONGLY_FOCUS(),
+
+  /**
    * 子控件布局参数。
    *
    */
@@ -9610,6 +9636,17 @@ export class TWidget {
    */
  getChild(index : number) : TWidget  {
     return new TWidget(widget_get_child(this != null ? (this.nativeObj || this) : null, index));
+ }
+
+
+  /**
+   * 获取当前窗口中的焦点控件。
+   * 
+   *
+   * @returns 焦点控件。
+   */
+ getFocusedWidget() : TWidget  {
+    return new TWidget(widget_get_focused_widget(this != null ? (this.nativeObj || this) : null));
  }
 
 
@@ -14537,6 +14574,15 @@ export class TWindowBase extends TWidget {
    */
  get singleInstance() : boolean {
    return window_base_t_get_prop_single_instance(this.nativeObj);
+ }
+
+
+  /**
+   * 点击非focusable控件时，是否让当前焦点控件失去焦点。比如点击窗口空白区域，是否让编辑器失去焦点。
+   *
+   */
+ get stronglyFocus() : boolean {
+   return window_base_t_get_prop_strongly_focus(this.nativeObj);
  }
 
 };
@@ -24474,6 +24520,39 @@ export class TGifImage extends TImageBase {
    */
  static create(parent : TWidget, x : number, y : number, w : number, h : number) : TGifImage  {
     return new TGifImage(gif_image_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 播放。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ play() : TRet  {
+    return gif_image_play(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 停止(并重置index为-1)。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ stop() : TRet  {
+    return gif_image_stop(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 暂停。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ pause() : TRet  {
+    return gif_image_pause(this != null ? (this.nativeObj || this) : null);
  }
 
 

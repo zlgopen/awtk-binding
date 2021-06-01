@@ -3378,6 +3378,16 @@ JNIEXPORT jstring JNICALL Java_awtk_TStyleId_STYLE_1ID_1SELF_1LAYOUT(JNIEnv* env
   return (*env)->NewStringUTF(env, STYLE_ID_SELF_LAYOUT);
 }
 
+JNIEXPORT jstring JNICALL Java_awtk_TStyleId_STYLE_1ID_1FOCUSABLE(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, STYLE_ID_FOCUSABLE);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TStyleId_STYLE_1ID_1FEEDBACK(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, STYLE_ID_FEEDBACK);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TStyle_style_1notify_1widget_1state_1changed(JNIEnv* env,  jclass ajc, jlong js, jlong jwidget) { /*func*/
   ret_t ret;
   style_t* s = (style_t*)js;
@@ -4285,6 +4295,11 @@ JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1AUTO_1ADJUST_1SIZE
 JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1SINGLE_1INSTANCE(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (*env)->NewStringUTF(env, WIDGET_PROP_SINGLE_INSTANCE);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1STRONGLY_1FOCUS(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, WIDGET_PROP_STRONGLY_FOCUS);
 }
 
 JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1CHILDREN_1LAYOUT(JNIEnv* env,  jclass ajc) {/*const*/
@@ -5424,6 +5439,14 @@ JNIEXPORT jlong JNICALL Java_awtk_TWidget_widget_1get_1child(JNIEnv* env,  jclas
   widget_t* ret;
   widget_t* widget = (widget_t*)jwidget;
   ret = (widget_t*)widget_get_child(widget, index);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TWidget_widget_1get_1focused_1widget(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  widget_t* ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (widget_t*)widget_get_focused_widget(widget);
 
   return (jlong)(ret);
 }
@@ -8623,6 +8646,12 @@ JNIEXPORT jboolean JNICALL Java_awtk_TWindowBase_window_1base_1t_1get_1prop_1sin
   return (jboolean)(obj->single_instance);
 }
 
+JNIEXPORT jboolean JNICALL Java_awtk_TWindowBase_window_1base_1t_1get_1prop_1strongly_1focus(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  window_base_t* obj = (window_base_t*)jobj;
+
+  return (jboolean)(obj->strongly_focus);
+}
+
 JNIEXPORT jlong JNICALL Java_awtk_TWindowManager_window_1manager(JNIEnv* env,  jclass ajc) { /*func*/
   widget_t* ret;
   ret = (widget_t*)window_manager();
@@ -9201,7 +9230,7 @@ JNIEXPORT jlong JNICALL Java_awtk_TGaugePointer_gauge_1pointer_1cast(JNIEnv* env
   return (jlong)(ret);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TGaugePointer_gauge_1pointer_1set_1angle(JNIEnv* env,  jclass ajc, jlong jwidget, jint angle) { /*func*/
+JNIEXPORT jint JNICALL Java_awtk_TGaugePointer_gauge_1pointer_1set_1angle(JNIEnv* env,  jclass ajc, jlong jwidget, jdouble angle) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
   ret = (ret_t)gauge_pointer_set_angle(widget, angle);
@@ -9231,10 +9260,10 @@ JNIEXPORT jint JNICALL Java_awtk_TGaugePointer_gauge_1pointer_1set_1anchor(JNIEn
   return (jint)(ret);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TGaugePointer_gauge_1pointer_1t_1get_1prop_1angle(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+JNIEXPORT jdouble JNICALL Java_awtk_TGaugePointer_gauge_1pointer_1t_1get_1prop_1angle(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
   gauge_pointer_t* obj = (gauge_pointer_t*)jobj;
 
-  return (jint)(obj->angle);
+  return (jdouble)(obj->angle);
 }
 
 JNIEXPORT jstring JNICALL Java_awtk_TGaugePointer_gauge_1pointer_1t_1get_1prop_1image(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
@@ -13173,6 +13202,30 @@ JNIEXPORT jlong JNICALL Java_awtk_TGifImage_gif_1image_1create(JNIEnv* env,  jcl
   ret = (widget_t*)gif_image_create(parent, x, y, w, h);
 
   return (jlong)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TGifImage_gif_1image_1play(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)gif_image_play(widget);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TGifImage_gif_1image_1stop(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)gif_image_stop(widget);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TGifImage_gif_1image_1pause(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)gif_image_pause(widget);
+
+  return (jint)(ret);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TGifImage_gif_1image_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/

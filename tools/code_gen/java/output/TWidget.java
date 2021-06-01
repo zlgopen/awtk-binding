@@ -64,6 +64,17 @@ public class TWidget {
 
 
   /**
+   * 获取当前窗口中的焦点控件。
+   * 
+   *
+   * @return 焦点控件。
+   */
+ public  TWidget getFocusedWidget()  {
+    return new TWidget(widget_get_focused_widget(this != null ? (this.nativeObj) : 0));
+ }
+
+
+  /**
    * 获取原生窗口对象。
    * 
    *
@@ -1583,6 +1594,7 @@ public class TWidget {
 
 static private native int widget_count_children(long widget);
 static private native long widget_get_child(long widget, int index);
+static private native long widget_get_focused_widget(long widget);
 static private native long widget_get_native_window(long widget);
 static private native int widget_index_of(long widget);
 static private native int widget_close_window(long widget);

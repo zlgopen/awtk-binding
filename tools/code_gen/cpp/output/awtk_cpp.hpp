@@ -3102,6 +3102,14 @@ public:
   TWidget GetChild(int32_t index) ;
 
   /**
+   * 获取当前窗口中的焦点控件。
+   * 
+   *
+   * @return 焦点控件。
+   */
+  TWidget GetFocusedWidget() ;
+
+  /**
    * 获取原生窗口对象。
    * 
    *
@@ -6048,6 +6056,12 @@ public:
    *
    */
   bool GetSingleInstance() const;
+
+  /**
+   * 点击非focusable控件时，是否让当前焦点控件失去焦点。比如点击窗口空白区域，是否让编辑器失去焦点。
+   *
+   */
+  bool GetStronglyFocus() const;
 };
 
 
@@ -6990,7 +7004,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetAngle(int32_t angle) ;
+  ret_t SetAngle(float_t angle) ;
 
   /**
    * 设置指针的图片。
@@ -7015,7 +7029,7 @@ public:
    * 指针角度。12点钟方向为0度，顺时钟方向为正，单位为度。
    *
    */
-  int32_t GetAngle() const;
+  float_t GetAngle() const;
 
   /**
    * 指针图片。
@@ -14269,6 +14283,30 @@ public:
    * @return 对象。
    */
   static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
+
+  /**
+   * 播放。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Play() ;
+
+  /**
+   * 停止(并重置index为-1)。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Stop() ;
+
+  /**
+   * 暂停。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Pause() ;
 };
 
 
