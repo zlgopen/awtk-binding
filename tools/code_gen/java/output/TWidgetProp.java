@@ -829,6 +829,13 @@ public enum TWidgetProp {
   ANIMATABLE (WIDGET_PROP_ANIMATABLE()),
   
   /**
+   * 是否自动隐藏。
+   *
+   */
+ 
+  AUTO_HIDE (WIDGET_PROP_AUTO_HIDE()),
+  
+  /**
    * 是否自动隐藏滚动条。
    *
    */
@@ -1251,6 +1258,7 @@ public enum TWidgetProp {
   static private native String WIDGET_PROP_ENABLE_LONG_PRESS();
   static private native String WIDGET_PROP_CLICK_THROUGH();
   static private native String WIDGET_PROP_ANIMATABLE();
+  static private native String WIDGET_PROP_AUTO_HIDE();
   static private native String WIDGET_PROP_AUTO_HIDE_SCROLL_BAR();
   static private native String WIDGET_PROP_IMAGE();
   static private native String WIDGET_PROP_FORMAT();

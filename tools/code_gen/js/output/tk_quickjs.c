@@ -13,6 +13,7 @@
 #include "base/canvas_offline.h"
 #include "base/canvas.h"
 #include "base/clip_board.h"
+#include "base/date_time_format.h"
 #include "base/dialog.h"
 #include "base/events.h"
 #include "base/font_manager.h"
@@ -31,6 +32,7 @@
 #include "base/widget.h"
 #include "conf_io/app_conf.h"
 #include "slide_view/slide_indicator.h"
+#include "vpage/vpage.h"
 #include "tkc/asset_info.h"
 #include "tkc/color.h"
 #include "tkc/date_time.h"
@@ -145,9 +147,9 @@ jsvalue_t wrap_event_get_type(
   ) {
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
-  int ret = (int)0;
+  uint32_t ret = (uint32_t)0;
   event_t* event = (event_t*)jsvalue_get_pointer(ctx, argv[0], "event_t*");
-  ret = (int)event_get_type(event);
+  ret = (uint32_t)event_get_type(event);
 
   jret = jsvalue_create_int(ctx, ret);
   }
@@ -3869,6 +3871,14 @@ ret_t clip_board_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_clip_board_set_text, "clip_board_set_text", 1));
   JS_SetPropertyStr(ctx, global_obj, "clip_board_get_text",
                       JS_NewCFunction(ctx, wrap_clip_board_get_text, "clip_board_get_text", 1));
+
+ jsvalue_unref(ctx, global_obj);
+
+ return RET_OK;
+}
+
+ret_t data_time_format_init(JSContext *ctx) {
+  jsvalue_t global_obj = JS_GetGlobalObject(ctx);
 
  jsvalue_unref(ctx, global_obj);
 
@@ -10697,6 +10707,15 @@ jsvalue_t get_WIDGET_PROP_ANIMATABLE(
   return jsvalue_create_string(ctx, WIDGET_PROP_ANIMATABLE);
 }
 
+jsvalue_t get_WIDGET_PROP_AUTO_HIDE(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, WIDGET_PROP_AUTO_HIDE);
+}
+
 jsvalue_t get_WIDGET_PROP_AUTO_HIDE_SCROLL_BAR(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -11284,6 +11303,8 @@ ret_t widget_prop_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_WIDGET_PROP_CLICK_THROUGH, "WIDGET_PROP_CLICK_THROUGH", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_ANIMATABLE",
                       JS_NewCFunction(ctx, get_WIDGET_PROP_ANIMATABLE, "WIDGET_PROP_ANIMATABLE", 1));
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_AUTO_HIDE",
+                      JS_NewCFunction(ctx, get_WIDGET_PROP_AUTO_HIDE, "WIDGET_PROP_AUTO_HIDE", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_AUTO_HIDE_SCROLL_BAR",
                       JS_NewCFunction(ctx, get_WIDGET_PROP_AUTO_HIDE_SCROLL_BAR, "WIDGET_PROP_AUTO_HIDE_SCROLL_BAR", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_IMAGE",
@@ -15469,6 +15490,47 @@ ret_t indicator_default_paint_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_INDICATOR_DEFAULT_PAINT_FILL_RECT, "INDICATOR_DEFAULT_PAINT_FILL_RECT", 1));
   JS_SetPropertyStr(ctx, global_obj, "INDICATOR_DEFAULT_PAINT_STROKE_RECT",
                       JS_NewCFunction(ctx, get_INDICATOR_DEFAULT_PAINT_STROKE_RECT, "INDICATOR_DEFAULT_PAINT_STROKE_RECT", 1));
+
+ jsvalue_unref(ctx, global_obj);
+
+ return RET_OK;
+}
+
+jsvalue_t get_EVT_VPAGE_WILL_OPEN(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, EVT_VPAGE_WILL_OPEN);
+}
+
+jsvalue_t get_EVT_VPAGE_OPEN(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, EVT_VPAGE_OPEN);
+}
+
+jsvalue_t get_EVT_VPAGE_CLOSE(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, EVT_VPAGE_CLOSE);
+}
+
+ret_t vpage_event_t_init(JSContext *ctx) {
+  jsvalue_t global_obj = JS_GetGlobalObject(ctx);
+  JS_SetPropertyStr(ctx, global_obj, "EVT_VPAGE_WILL_OPEN",
+                      JS_NewCFunction(ctx, get_EVT_VPAGE_WILL_OPEN, "EVT_VPAGE_WILL_OPEN", 1));
+  JS_SetPropertyStr(ctx, global_obj, "EVT_VPAGE_OPEN",
+                      JS_NewCFunction(ctx, get_EVT_VPAGE_OPEN, "EVT_VPAGE_OPEN", 1));
+  JS_SetPropertyStr(ctx, global_obj, "EVT_VPAGE_CLOSE",
+                      JS_NewCFunction(ctx, get_EVT_VPAGE_CLOSE, "EVT_VPAGE_CLOSE", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -20357,6 +20419,24 @@ jsvalue_t wrap_window_manager_set_show_fps(
   return jret;
 }
 
+jsvalue_t wrap_window_manager_set_ignore_input_events(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  bool_t ignore_input_events = (bool_t)jsvalue_get_boolean_value(ctx, argv[1]);
+  ret = (ret_t)window_manager_set_ignore_input_events(widget, ignore_input_events);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_window_manager_set_screen_saver_time(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -20505,6 +20585,8 @@ ret_t window_manager_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_window_manager_is_animating, "window_manager_is_animating", 1));
   JS_SetPropertyStr(ctx, global_obj, "window_manager_set_show_fps",
                       JS_NewCFunction(ctx, wrap_window_manager_set_show_fps, "window_manager_set_show_fps", 1));
+  JS_SetPropertyStr(ctx, global_obj, "window_manager_set_ignore_input_events",
+                      JS_NewCFunction(ctx, wrap_window_manager_set_ignore_input_events, "window_manager_set_ignore_input_events", 1));
   JS_SetPropertyStr(ctx, global_obj, "window_manager_set_screen_saver_time",
                       JS_NewCFunction(ctx, wrap_window_manager_set_screen_saver_time, "window_manager_set_screen_saver_time", 1));
   JS_SetPropertyStr(ctx, global_obj, "window_manager_set_cursor",
@@ -25089,6 +25171,24 @@ jsvalue_t wrap_scroll_bar_set_value_only(
   return jret;
 }
 
+jsvalue_t wrap_scroll_bar_set_auto_hide(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  bool_t auto_hide = (bool_t)jsvalue_get_boolean_value(ctx, argv[1]);
+  ret = (ret_t)scroll_bar_set_auto_hide(widget, auto_hide);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_scroll_bar_is_mobile(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -25158,6 +25258,19 @@ jsvalue_t wrap_scroll_bar_t_get_prop_animatable(
   return jret;
 }
 
+jsvalue_t wrap_scroll_bar_t_get_prop_auto_hide(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  scroll_bar_t* obj = (scroll_bar_t*)jsvalue_get_pointer(ctx, argv[0], "scroll_bar_t*");
+
+  jret = jsvalue_create_bool(ctx, obj->auto_hide);
+  return jret;
+}
+
 ret_t scroll_bar_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
   JS_SetPropertyStr(ctx, global_obj, "scroll_bar_create",
@@ -25180,6 +25293,8 @@ ret_t scroll_bar_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_scroll_bar_scroll_delta, "scroll_bar_scroll_delta", 1));
   JS_SetPropertyStr(ctx, global_obj, "scroll_bar_set_value_only",
                       JS_NewCFunction(ctx, wrap_scroll_bar_set_value_only, "scroll_bar_set_value_only", 1));
+  JS_SetPropertyStr(ctx, global_obj, "scroll_bar_set_auto_hide",
+                      JS_NewCFunction(ctx, wrap_scroll_bar_set_auto_hide, "scroll_bar_set_auto_hide", 1));
   JS_SetPropertyStr(ctx, global_obj, "scroll_bar_is_mobile",
                       JS_NewCFunction(ctx, wrap_scroll_bar_is_mobile, "scroll_bar_is_mobile", 1));
   JS_SetPropertyStr(ctx, global_obj, "scroll_bar_t_get_prop_virtual_size",
@@ -25190,6 +25305,8 @@ ret_t scroll_bar_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_scroll_bar_t_get_prop_row, "scroll_bar_t_get_prop_row", 1));
   JS_SetPropertyStr(ctx, global_obj, "scroll_bar_t_get_prop_animatable",
                       JS_NewCFunction(ctx, wrap_scroll_bar_t_get_prop_animatable, "scroll_bar_t_get_prop_animatable", 1));
+  JS_SetPropertyStr(ctx, global_obj, "scroll_bar_t_get_prop_auto_hide",
+                      JS_NewCFunction(ctx, wrap_scroll_bar_t_get_prop_auto_hide, "scroll_bar_t_get_prop_auto_hide", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -27508,6 +27625,128 @@ ret_t time_clock_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_time_clock_t_get_prop_second_anchor_x, "time_clock_t_get_prop_second_anchor_x", 1));
   JS_SetPropertyStr(ctx, global_obj, "time_clock_t_get_prop_second_anchor_y",
                       JS_NewCFunction(ctx, wrap_time_clock_t_get_prop_second_anchor_y, "time_clock_t_get_prop_second_anchor_y", 1));
+
+ jsvalue_unref(ctx, global_obj);
+
+ return RET_OK;
+}
+
+jsvalue_t wrap_vpage_create(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 5) {
+  widget_t* ret = NULL;
+  widget_t* parent = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  xy_t x = (xy_t)jsvalue_get_int_value(ctx, argv[1]);
+  xy_t y = (xy_t)jsvalue_get_int_value(ctx, argv[2]);
+  wh_t w = (wh_t)jsvalue_get_int_value(ctx, argv[3]);
+  wh_t h = (wh_t)jsvalue_get_int_value(ctx, argv[4]);
+  ret = (widget_t*)vpage_create(parent, x, y, w, h);
+
+  jret = jsvalue_create_pointer(ctx, ret, "vpage_t*");
+  }
+  return jret;
+}
+
+jsvalue_t wrap_vpage_cast(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  widget_t* ret = NULL;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  ret = (widget_t*)vpage_cast(widget);
+
+  jret = jsvalue_create_pointer(ctx, ret, "vpage_t*");
+  }
+  return jret;
+}
+
+jsvalue_t wrap_vpage_set_ui_asset(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  const char* ui_asset = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  ret = (ret_t)vpage_set_ui_asset(widget, ui_asset);
+  jsvalue_free_str(ctx, ui_asset);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_vpage_set_anim_hint(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  const char* anim_hint = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  ret = (ret_t)vpage_set_anim_hint(widget, anim_hint);
+  jsvalue_free_str(ctx, anim_hint);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_vpage_t_get_prop_ui_asset(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  vpage_t* obj = (vpage_t*)jsvalue_get_pointer(ctx, argv[0], "vpage_t*");
+
+  jret = jsvalue_create_string(ctx, obj->ui_asset);
+  return jret;
+}
+
+jsvalue_t wrap_vpage_t_get_prop_anim_hint(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  vpage_t* obj = (vpage_t*)jsvalue_get_pointer(ctx, argv[0], "vpage_t*");
+
+  jret = jsvalue_create_string(ctx, obj->anim_hint);
+  return jret;
+}
+
+ret_t vpage_t_init(JSContext *ctx) {
+  jsvalue_t global_obj = JS_GetGlobalObject(ctx);
+  JS_SetPropertyStr(ctx, global_obj, "vpage_create",
+                      JS_NewCFunction(ctx, wrap_vpage_create, "vpage_create", 1));
+  JS_SetPropertyStr(ctx, global_obj, "vpage_cast",
+                      JS_NewCFunction(ctx, wrap_vpage_cast, "vpage_cast", 1));
+  JS_SetPropertyStr(ctx, global_obj, "vpage_set_ui_asset",
+                      JS_NewCFunction(ctx, wrap_vpage_set_ui_asset, "vpage_set_ui_asset", 1));
+  JS_SetPropertyStr(ctx, global_obj, "vpage_set_anim_hint",
+                      JS_NewCFunction(ctx, wrap_vpage_set_anim_hint, "vpage_set_anim_hint", 1));
+  JS_SetPropertyStr(ctx, global_obj, "vpage_t_get_prop_ui_asset",
+                      JS_NewCFunction(ctx, wrap_vpage_t_get_prop_ui_asset, "vpage_t_get_prop_ui_asset", 1));
+  JS_SetPropertyStr(ctx, global_obj, "vpage_t_get_prop_anim_hint",
+                      JS_NewCFunction(ctx, wrap_vpage_t_get_prop_anim_hint, "vpage_t_get_prop_anim_hint", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -33348,6 +33587,7 @@ ret_t awtk_js_init(JSContext *ctx) {
   canvas_t_init(ctx);
   clip_board_data_type_t_init(ctx);
   clip_board_t_init(ctx);
+  data_time_format_init(ctx);
   dialog_quit_code_t_init(ctx);
   event_type_t_init(ctx);
   font_manager_t_init(ctx);
@@ -33379,6 +33619,7 @@ ret_t awtk_js_init(JSContext *ctx) {
   widget_t_init(ctx);
   app_conf_t_init(ctx);
   indicator_default_paint_t_init(ctx);
+  vpage_event_t_init(ctx);
   asset_type_t_init(ctx);
   asset_info_t_init(ctx);
   color_t_init(ctx);
@@ -33436,6 +33677,7 @@ ret_t awtk_js_init(JSContext *ctx) {
   switch_t_init(ctx);
   text_selector_t_init(ctx);
   time_clock_t_init(ctx);
+  vpage_t_init(ctx);
   prop_change_event_t_init(ctx);
   progress_event_t_init(ctx);
   done_event_t_init(ctx);

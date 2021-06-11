@@ -5,7 +5,7 @@ var searchData=
   ['action_5ftext_2',['ACTION_TEXT',['../enumawtk_1_1_t_widget_prop.html#a9ca10ebc54e82f44611ddc47d9ffdfeb',1,'awtk::TWidgetProp']]],
   ['active_3',['ACTIVE',['../enumawtk_1_1_t_widget_prop.html#a2d0a6cf48324781362ad572f4a25444d',1,'awtk::TWidgetProp']]],
   ['active_5ficon_4',['ACTIVE_ICON',['../enumawtk_1_1_t_style_id.html#a489762f8d9aede2e43f6986e8da0d873',1,'awtk.TStyleId.ACTIVE_ICON()'],['../enumawtk_1_1_t_widget_prop.html#abc27dba0b0a13e2a9aa800bfb62c7f39',1,'awtk.TWidgetProp.ACTIVE_ICON()']]],
-  ['add_5',['add',['../classawtk_1_1_t_idle.html#a9331d7bdbfadbabe1e1c6e6e67c8e684',1,'awtk.TIdle.add()'],['../classawtk_1_1_t_timer.html#a61d4d292d7ae2cca6e169a3e08dc4ac9',1,'awtk.TTimer.add()'],['../enumawtk_1_1_t_object_cmd.html#a48cf65271f3be3e4fab7bb4c9463984c',1,'awtk.TObjectCmd.ADD()']]],
+  ['add_5',['ADD',['../enumawtk_1_1_t_object_cmd.html#a48cf65271f3be3e4fab7bb4c9463984c',1,'awtk.TObjectCmd.ADD()'],['../classawtk_1_1_t_idle.html#a9331d7bdbfadbabe1e1c6e6e67c8e684',1,'awtk.TIdle.add()'],['../classawtk_1_1_t_timer.html#a61d4d292d7ae2cca6e169a3e08dc4ac9',1,'awtk.TTimer.add()']]],
   ['adddelta_6',['addDelta',['../classawtk_1_1_t_date_time.html#a7edef39990dff833e26eaa552e2027e3',1,'awtk.TDateTime.addDelta()'],['../classawtk_1_1_t_scroll_bar.html#ae17bc443fb6ac2dfad11ae644c84cb0a',1,'awtk.TScrollBar.addDelta()']]],
   ['after_5fpaint_7',['AFTER_PAINT',['../enumawtk_1_1_t_event_type.html#a64ed90bb0c303cdcb8f8d2f2e7f9736d',1,'awtk::TEventType']]],
   ['align_5fh_8',['ALIGN_H',['../enumawtk_1_1_t_widget_prop.html#affb0bb3938af067571bd62dd317a499d',1,'awtk::TWidgetProp']]],
@@ -108,10 +108,11 @@ var searchData=
   ['auto_105',['AUTO',['../enumawtk_1_1_t_bidi_type.html#a2aea09a4748513e74187c7e1dace788d',1,'awtk.TBidiType.AUTO()'],['../enumawtk_1_1_t_indicator_default_paint.html#a59383c5718a7df89e925e3eae1162a1b',1,'awtk.TIndicatorDefaultPaint.AUTO()']]],
   ['auto_5fadjust_5fsize_106',['AUTO_ADJUST_SIZE',['../enumawtk_1_1_t_widget_prop.html#ac2d82105f4bce242ead25ee0f2aea04f',1,'awtk::TWidgetProp']]],
   ['auto_5ffix_107',['AUTO_FIX',['../enumawtk_1_1_t_widget_prop.html#aac72da6cf5a15dac5113502dd68040dd',1,'awtk::TWidgetProp']]],
-  ['auto_5fhide_5fscroll_5fbar_108',['AUTO_HIDE_SCROLL_BAR',['../enumawtk_1_1_t_widget_prop.html#a9ac98fbf519d49ea7d2a51910522efcd',1,'awtk::TWidgetProp']]],
-  ['auto_5fplay_109',['AUTO_PLAY',['../enumawtk_1_1_t_widget_prop.html#aa56b7fc52515e990005750512cdf6115',1,'awtk::TWidgetProp']]],
-  ['auto_5fscale_5fchildren_5fh_110',['AUTO_SCALE_CHILDREN_H',['../enumawtk_1_1_t_widget_prop.html#a005667274fb9fa20cdb6a90a850efdba',1,'awtk::TWidgetProp']]],
-  ['auto_5fscale_5fchildren_5fw_111',['AUTO_SCALE_CHILDREN_W',['../enumawtk_1_1_t_widget_prop.html#a31750eb4ddaa838cedf5fdacc3ee0e05',1,'awtk::TWidgetProp']]],
-  ['auto_5fscale_5fchildren_5fx_112',['AUTO_SCALE_CHILDREN_X',['../enumawtk_1_1_t_widget_prop.html#ae4824e3f0b47727bfac5efcdf410d7aa',1,'awtk::TWidgetProp']]],
-  ['auto_5fscale_5fchildren_5fy_113',['AUTO_SCALE_CHILDREN_Y',['../enumawtk_1_1_t_widget_prop.html#a971994b4c5d36c1c589ad888b86272fb',1,'awtk::TWidgetProp']]]
+  ['auto_5fhide_108',['AUTO_HIDE',['../enumawtk_1_1_t_widget_prop.html#a5f420e173cb78ecce351ad151e2f4b55',1,'awtk::TWidgetProp']]],
+  ['auto_5fhide_5fscroll_5fbar_109',['AUTO_HIDE_SCROLL_BAR',['../enumawtk_1_1_t_widget_prop.html#a9ac98fbf519d49ea7d2a51910522efcd',1,'awtk::TWidgetProp']]],
+  ['auto_5fplay_110',['AUTO_PLAY',['../enumawtk_1_1_t_widget_prop.html#aa56b7fc52515e990005750512cdf6115',1,'awtk::TWidgetProp']]],
+  ['auto_5fscale_5fchildren_5fh_111',['AUTO_SCALE_CHILDREN_H',['../enumawtk_1_1_t_widget_prop.html#a005667274fb9fa20cdb6a90a850efdba',1,'awtk::TWidgetProp']]],
+  ['auto_5fscale_5fchildren_5fw_112',['AUTO_SCALE_CHILDREN_W',['../enumawtk_1_1_t_widget_prop.html#a31750eb4ddaa838cedf5fdacc3ee0e05',1,'awtk::TWidgetProp']]],
+  ['auto_5fscale_5fchildren_5fx_113',['AUTO_SCALE_CHILDREN_X',['../enumawtk_1_1_t_widget_prop.html#ae4824e3f0b47727bfac5efcdf410d7aa',1,'awtk::TWidgetProp']]],
+  ['auto_5fscale_5fchildren_5fy_114',['AUTO_SCALE_CHILDREN_Y',['../enumawtk_1_1_t_widget_prop.html#a971994b4c5d36c1c589ad888b86272fb',1,'awtk::TWidgetProp']]]
 ];

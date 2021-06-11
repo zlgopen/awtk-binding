@@ -103,6 +103,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a07764783ec1eae0e8b8bbd7405d073d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3b76d0ff4a5f030df06e6f56ddc7314"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_manager.html#ad3b76d0ff4a5f030df06e6f56ddc7314">SetShowFps</a> (bool show_fps)</td></tr>
 <tr class="separator:ad3b76d0ff4a5f030df06e6f56ddc7314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0891a089916cd5cb45a68ea7ba092bf6"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_manager.html#a0891a089916cd5cb45a68ea7ba092bf6">SetIgnoreInputEvents</a> (bool ignore_input_events)</td></tr>
+<tr class="separator:a0891a089916cd5cb45a68ea7ba092bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98ad00772acfb1d9c9555b00221b95ee"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_manager.html#a98ad00772acfb1d9c9555b00221b95ee">SetScreenSaverTime</a> (uint32_t screen_saver_time)</td></tr>
 <tr class="separator:a98ad00772acfb1d9c9555b00221b95ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6a2eb6e1057153fe26d645c7ee26f69"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_manager.html#aa6a2eb6e1057153fe26d645c7ee26f69">SetCursor</a> (const char *cursor)</td></tr>
@@ -417,6 +419,32 @@ static <a class="el" href="class_t_window_manager.html">TWindowManager</a>&#160;
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">cursor</td><td>图片名称(从图片管理器中加载)。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a0891a089916cd5cb45a68ea7ba092bf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0891a089916cd5cb45a68ea7ba092bf6">&#9670;&nbsp;</a></span>SetIgnoreInputEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TWindowManager::SetIgnoreInputEvents </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>ignore_input_events</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置是否忽略用户输入事件。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ignore_input_events</td><td>是否忽略用户输入事件。</td></tr>
   </table>
   </dd>
 </dl>

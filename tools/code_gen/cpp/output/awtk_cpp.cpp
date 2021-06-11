@@ -1,5 +1,5 @@
 ﻿#include "awtk_cpp.hpp"
- int TEvent::GetType()  {
+ uint32_t TEvent::GetType()  {
     return event_get_type(((event_t*)(this->nativeObj)));
  }
 
@@ -2199,6 +2199,10 @@
    return window_manager_set_show_fps(((widget_t*)(this->nativeObj)), show_fps);
  }
 
+ ret_t TWindowManager::SetIgnoreInputEvents(bool ignore_input_events)  {
+   return window_manager_set_ignore_input_events(((widget_t*)(this->nativeObj)), ignore_input_events);
+ }
+
  ret_t TWindowManager::SetScreenSaverTime(uint32_t screen_saver_time)  {
    return window_manager_set_screen_saver_time(((widget_t*)(this->nativeObj)), screen_saver_time);
  }
@@ -3091,6 +3095,10 @@
    return scroll_bar_set_value_only(((widget_t*)(this->nativeObj)), value);
  }
 
+ ret_t TScrollBar::SetAutoHide(bool auto_hide)  {
+   return scroll_bar_set_auto_hide(((widget_t*)(this->nativeObj)), auto_hide);
+ }
+
  bool TScrollBar::IsMobile()  {
     return scroll_bar_is_mobile(((widget_t*)(this->nativeObj)));
  }
@@ -3109,6 +3117,10 @@
 
  bool TScrollBar::GetAnimatable() const {
    return ((scroll_bar_t*)(this->nativeObj))->animatable;
+ }
+
+ bool TScrollBar::GetAutoHide() const {
+   return ((scroll_bar_t*)(this->nativeObj))->auto_hide;
  }
 
  TWidget TScrollView::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -3573,6 +3585,26 @@
 
  char* TTimeClock::GetSecondAnchorY() const {
    return ((time_clock_t*)(this->nativeObj))->second_anchor_y;
+ }
+
+ TWidget TVpage::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
+   return TVpage((widget_t*)(vpage_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
+ }
+
+ ret_t TVpage::SetUiAsset(const char* ui_asset)  {
+   return vpage_set_ui_asset(((widget_t*)(this->nativeObj)), ui_asset);
+ }
+
+ ret_t TVpage::SetAnimHint(const char* anim_hint)  {
+   return vpage_set_anim_hint(((widget_t*)(this->nativeObj)), anim_hint);
+ }
+
+ char* TVpage::GetUiAsset() const {
+   return ((vpage_t*)(this->nativeObj))->ui_asset;
+ }
+
+ char* TVpage::GetAnimHint() const {
+   return ((vpage_t*)(this->nativeObj))->anim_hint;
  }
 
  const char* TPropChangeEvent::GetName() const {

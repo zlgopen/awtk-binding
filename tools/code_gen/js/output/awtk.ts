@@ -757,6 +757,7 @@ declare function WIDGET_PROP_LONG_PRESS_TIME();
 declare function WIDGET_PROP_ENABLE_LONG_PRESS();
 declare function WIDGET_PROP_CLICK_THROUGH();
 declare function WIDGET_PROP_ANIMATABLE();
+declare function WIDGET_PROP_AUTO_HIDE();
 declare function WIDGET_PROP_AUTO_HIDE_SCROLL_BAR();
 declare function WIDGET_PROP_IMAGE();
 declare function WIDGET_PROP_FORMAT();
@@ -1049,6 +1050,9 @@ declare function INDICATOR_DEFAULT_PAINT_FILL_DOT();
 declare function INDICATOR_DEFAULT_PAINT_STROKE_DOT();
 declare function INDICATOR_DEFAULT_PAINT_FILL_RECT();
 declare function INDICATOR_DEFAULT_PAINT_STROKE_RECT();
+declare function EVT_VPAGE_WILL_OPEN();
+declare function EVT_VPAGE_OPEN();
+declare function EVT_VPAGE_CLOSE();
 declare function ASSET_TYPE_NONE();
 declare function ASSET_TYPE_FONT();
 declare function ASSET_TYPE_IMAGE();
@@ -1393,6 +1397,7 @@ declare function window_manager_get_pointer_y(widget : any) : number;
 declare function window_manager_get_pointer_pressed(widget : any) : boolean;
 declare function window_manager_is_animating(widget : any) : boolean;
 declare function window_manager_set_show_fps(widget : any, show_fps : boolean) : TRet;
+declare function window_manager_set_ignore_input_events(widget : any, ignore_input_events : boolean) : TRet;
 declare function window_manager_set_screen_saver_time(widget : any, screen_saver_time : number) : TRet;
 declare function window_manager_set_cursor(widget : any, cursor : string) : TRet;
 declare function window_manager_back(widget : any) : TRet;
@@ -1638,11 +1643,13 @@ declare function scroll_bar_set_value(widget : any, value : any) : TRet;
 declare function scroll_bar_add_delta(widget : any, delta : number) : TRet;
 declare function scroll_bar_scroll_delta(widget : any, delta : number) : TRet;
 declare function scroll_bar_set_value_only(widget : any, value : any) : TRet;
+declare function scroll_bar_set_auto_hide(widget : any, auto_hide : boolean) : TRet;
 declare function scroll_bar_is_mobile(widget : any) : boolean;
 declare function scroll_bar_t_get_prop_virtual_size(nativeObj : any) : number;
 declare function scroll_bar_t_get_prop_value(nativeObj : any) : number;
 declare function scroll_bar_t_get_prop_row(nativeObj : any) : number;
 declare function scroll_bar_t_get_prop_animatable(nativeObj : any) : boolean;
+declare function scroll_bar_t_get_prop_auto_hide(nativeObj : any) : boolean;
 declare function scroll_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function scroll_view_cast(widget : any) : any;
 declare function scroll_view_set_virtual_w(widget : any, w : number) : TRet;
@@ -1766,6 +1773,12 @@ declare function time_clock_t_get_prop_minute_anchor_x(nativeObj : any) : string
 declare function time_clock_t_get_prop_minute_anchor_y(nativeObj : any) : string;
 declare function time_clock_t_get_prop_second_anchor_x(nativeObj : any) : string;
 declare function time_clock_t_get_prop_second_anchor_y(nativeObj : any) : string;
+declare function vpage_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function vpage_cast(widget : any) : any;
+declare function vpage_set_ui_asset(widget : any, ui_asset : string) : TRet;
+declare function vpage_set_anim_hint(widget : any, anim_hint : string) : TRet;
+declare function vpage_t_get_prop_ui_asset(nativeObj : any) : string;
+declare function vpage_t_get_prop_anim_hint(nativeObj : any) : string;
 declare function prop_change_event_cast(event : any) : any;
 declare function prop_change_event_t_get_prop_name(nativeObj : any) : string;
 declare function prop_change_event_t_get_prop_value(nativeObj : any) : any;
@@ -4504,6 +4517,40 @@ export class TClipBoard {
    */
  static getText() : string  {
     return clip_board_get_text();
+ }
+
+};
+/**
+ * 格式化日期时间。
+ *
+ *格式规则：
+ ** Y 代表年(完整显示)
+ ** M 代表月(1-12)
+ ** D 代表日(1-31)
+ ** h 代表时(0-23)
+ ** m 代表分(0-59)
+ ** s 代表秒(0-59)
+ ** w 代表星期(0-6)
+ ** W 代表星期的英文缩写(支持翻译)
+ ** YY 代表年(只显示末两位)
+ ** MM 代表月(01-12)
+ ** DD 代表日(01-31)
+ ** hh 代表时(00-23)
+ ** mm 代表分(00-59)
+ ** ss 代表秒(00-59)
+ ** MMM 代表月的英文缩写(支持翻译)
+ *
+ *如 日期时间为：2018/11/12 9:10:20
+ ** "Y/M/D"显示为"2018/11/12"
+ ** "Y-M-D"显示为"2018-11-12"
+ ** "Y-M-D h:m:s"显示为"2018-11-12 9:10:20"
+ ** "Y-M-D hh:mm:ss"显示为"2018-11-12 09:10:20"
+ *
+ */
+export class TDataTimeFormat { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
  }
 
 };
@@ -8737,6 +8784,12 @@ export enum TWidgetProp {
  ANIMATABLE = WIDGET_PROP_ANIMATABLE(),
 
   /**
+   * 是否自动隐藏。
+   *
+   */
+ AUTO_HIDE = WIDGET_PROP_AUTO_HIDE(),
+
+  /**
    * 是否自动隐藏滚动条。
    *
    */
@@ -11522,6 +11575,32 @@ export enum TIndicatorDefaultPaint {
    *
    */
  STROKE_RECT = INDICATOR_DEFAULT_PAINT_STROKE_RECT(),
+};
+
+
+/**
+ * 虚拟页面的事件。
+ *
+ */
+export enum TVpageEvent {
+
+  /**
+   * 页面即将打开(动画前)。
+   *
+   */
+ VPAGE_WILL_OPEN = EVT_VPAGE_WILL_OPEN(),
+
+  /**
+   * 页面打开完成(动画后)。
+   *
+   */
+ VPAGE_OPEN = EVT_VPAGE_OPEN(),
+
+  /**
+   * 页面已经关闭(动画后)。
+   *
+   */
+ VPAGE_CLOSE = EVT_VPAGE_CLOSE(),
 };
 
 
@@ -14706,6 +14785,18 @@ export class TWindowManager extends TWidget {
    */
  setShowFps(show_fps : boolean) : TRet  {
     return window_manager_set_show_fps(this != null ? (this.nativeObj || this) : null, show_fps);
+ }
+
+
+  /**
+   * 设置是否忽略用户输入事件。
+   * 
+   * @param ignore_input_events 是否忽略用户输入事件。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setIgnoreInputEvents(ignore_input_events : boolean) : TRet  {
+    return window_manager_set_ignore_input_events(this != null ? (this.nativeObj || this) : null, ignore_input_events);
  }
 
 
@@ -18629,6 +18720,20 @@ export class TScrollBar extends TWidget {
 
 
   /**
+   * 设置auto_hide属性。
+   *
+   *>仅对mobile风格的滚动条有效
+   * 
+   * @param auto_hide 值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setAutoHide(auto_hide : boolean) : TRet  {
+    return scroll_bar_set_auto_hide(this != null ? (this.nativeObj || this) : null, auto_hide);
+ }
+
+
+  /**
    * 判断是否是mobile风格的滚动条。
    * 
    *
@@ -18676,6 +18781,19 @@ export class TScrollBar extends TWidget {
    */
  get animatable() : boolean {
    return scroll_bar_t_get_prop_animatable(this.nativeObj);
+ }
+
+
+  /**
+   * 是否自动隐藏(仅对mobile风格的滚动条有效)。
+   *
+   */
+ get autoHide() : boolean {
+   return scroll_bar_t_get_prop_auto_hide(this.nativeObj);
+ }
+
+ set autoHide(v : boolean) {
+   this.setAutoHide(v);
  }
 
 };
@@ -20512,6 +20630,122 @@ export class TTimeClock extends TWidget {
    */
  get secondAnchorY() : string {
    return time_clock_t_get_prop_second_anchor_y(this.nativeObj);
+ }
+
+};
+/**
+ * 虚拟页面(根据情况自动加载/卸载页面，并提供入场/出场动画)。
+ *
+ *> 虚拟页面只能作为pages的直接子控件使用。
+ *
+ *如果指定了ui_asset:
+ *
+ ** 当页面切换到后台时自动卸载，并触发EVT\_VPAGE\_CLOSE消息。
+ ** 当页面切换到前台时自动加载，在动画前出发EVT\_VPAGE\_WILL\_OPEN消息，在动画完成时触发 EVT\_VPAGE\_CLOSE消息。
+ *
+ *vpage\_t也可以当作普通view嵌入到pages中，让tab控件在切换时具有动画效果。
+ *
+ *在xml中使用"vpage"标签创建控件。如：
+ *
+ *```xml
+ *<!-- ui -->
+ *<vpage x="c" y="50" w="100" h="100" ui_asset="mypage"/>
+ *```
+ *
+ *可用通过style来设置控件的显示风格，如字体的大小和颜色等等(一般无需指定)。如：
+ *
+ *```xml
+ *<!-- style -->
+ *<vpage>
+ *<style name="default">
+ *<normal />
+ *</style>
+ *</vpage>
+ *```
+ *
+ */
+export class TVpage extends TWidget { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建vpage对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns vpage对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TVpage  {
+    return new TVpage(vpage_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 转换为vpage对象(供脚本语言使用)。
+   * 
+   * @param widget vpage对象。
+   *
+   * @returns vpage对象。
+   */
+ static cast(widget : TWidget) : TVpage  {
+    return new TVpage(vpage_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 设置 UI资源名称。
+   * 
+   * @param ui_asset UI资源名称。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setUiAsset(ui_asset : string) : TRet  {
+    return vpage_set_ui_asset(this != null ? (this.nativeObj || this) : null, ui_asset);
+ }
+
+
+  /**
+   * 设置动画类型(vtranslate: 垂直平移，htranslate: 水平平移)。
+   * 
+   * @param anim_hint 动画类型。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setAnimHint(anim_hint : string) : TRet  {
+    return vpage_set_anim_hint(this != null ? (this.nativeObj || this) : null, anim_hint);
+ }
+
+
+  /**
+   * UI资源名称。
+   *
+   */
+ get uiAsset() : string {
+   return vpage_t_get_prop_ui_asset(this.nativeObj);
+ }
+
+ set uiAsset(v : string) {
+   this.setUiAsset(v);
+ }
+
+
+  /**
+   * 动画类型(目前支持：vtranslate: 垂直平移，htranslate: 水平平移)。
+   *
+   */
+ get animHint() : string {
+   return vpage_t_get_prop_anim_hint(this.nativeObj);
+ }
+
+ set animHint(v : string) {
+   this.setAnimHint(v);
  }
 
 };

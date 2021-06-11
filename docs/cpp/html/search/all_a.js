@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['maximize_393',['Maximize',['../class_t_native_window.html#ac83a897f6245560f913d47dfc1d5aa36',1,'TNativeWindow']]],
-  ['measuretext_394',['MeasureText',['../class_t_canvas.html#a4a3fef1fd0afd0447cea625fa940e2e7',1,'TCanvas::MeasureText()'],['../class_t_vgcanvas.html#aa2cce0bdc6ab4233340be9c0bc377255',1,'TVgcanvas::MeasureText()']]],
-  ['minimize_395',['Minimize',['../class_t_native_window.html#a71c686447e5c2094caf928f350bd7451',1,'TNativeWindow']]],
-  ['modal_396',['Modal',['../class_t_dialog.html#aeadab50e8b82102ad6c349a331631a99',1,'TDialog']]],
-  ['modify_397',['Modify',['../class_t_timer.html#aba98debbef33277e0eb290359b880067',1,'TTimer']]],
-  ['move_398',['Move',['../class_t_native_window.html#a99fca5e61a5af7fbcbad8049131a5aa4',1,'TNativeWindow']]],
-  ['moveto_399',['MoveTo',['../class_t_vgcanvas.html#a04307255f89dbaa71898477d2257c970',1,'TVgcanvas']]],
-  ['ms_400',['Ms',['../class_t_time_now.html#ade647371858420806144f0051a7b95c9',1,'TTimeNow']]]
+  ['maximize_394',['Maximize',['../class_t_native_window.html#ac83a897f6245560f913d47dfc1d5aa36',1,'TNativeWindow']]],
+  ['measuretext_395',['MeasureText',['../class_t_canvas.html#a4a3fef1fd0afd0447cea625fa940e2e7',1,'TCanvas::MeasureText()'],['../class_t_vgcanvas.html#aa2cce0bdc6ab4233340be9c0bc377255',1,'TVgcanvas::MeasureText()']]],
+  ['minimize_396',['Minimize',['../class_t_native_window.html#a71c686447e5c2094caf928f350bd7451',1,'TNativeWindow']]],
+  ['modal_397',['Modal',['../class_t_dialog.html#aeadab50e8b82102ad6c349a331631a99',1,'TDialog']]],
+  ['modify_398',['Modify',['../class_t_timer.html#aba98debbef33277e0eb290359b880067',1,'TTimer']]],
+  ['move_399',['Move',['../class_t_native_window.html#a99fca5e61a5af7fbcbad8049131a5aa4',1,'TNativeWindow']]],
+  ['moveto_400',['MoveTo',['../class_t_vgcanvas.html#a04307255f89dbaa71898477d2257c970',1,'TVgcanvas']]],
+  ['ms_401',['Ms',['../class_t_time_now.html#ade647371858420806144f0051a7b95c9',1,'TTimeNow']]]
 ];

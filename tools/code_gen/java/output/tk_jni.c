@@ -13,6 +13,7 @@
 #include "base/canvas_offline.h"
 #include "base/canvas.h"
 #include "base/clip_board.h"
+#include "base/date_time_format.h"
 #include "base/dialog.h"
 #include "base/events.h"
 #include "base/font_manager.h"
@@ -31,6 +32,7 @@
 #include "base/widget.h"
 #include "conf_io/app_conf.h"
 #include "slide_view/slide_indicator.h"
+#include "vpage/vpage.h"
 #include "tkc/asset_info.h"
 #include "tkc/color.h"
 #include "tkc/date_time.h"
@@ -129,9 +131,9 @@ JNIEXPORT jlong JNICALL Java_awtk_TEvent_event_1cast(JNIEnv* env,  jclass ajc, j
 }
 
 JNIEXPORT jint JNICALL Java_awtk_TEvent_event_1get_1type(JNIEnv* env,  jclass ajc, jlong jevent) { /*func*/
-  int ret;
+  uint32_t ret;
   event_t* event = (event_t*)jevent;
-  ret = (int)event_get_type(event);
+  ret = (uint32_t)event_get_type(event);
 
   return (jint)(ret);
 }
@@ -4742,6 +4744,11 @@ JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1ANIMATABLE(JNIEnv*
   return (*env)->NewStringUTF(env, WIDGET_PROP_ANIMATABLE);
 }
 
+JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1AUTO_1HIDE(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, WIDGET_PROP_AUTO_HIDE);
+}
+
 JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1AUTO_1HIDE_1SCROLL_1BAR(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (*env)->NewStringUTF(env, WIDGET_PROP_AUTO_HIDE_SCROLL_BAR);
@@ -6721,6 +6728,21 @@ JNIEXPORT jint JNICALL Java_awtk_TIndicatorDefaultPaint_INDICATOR_1DEFAULT_1PAIN
 JNIEXPORT jint JNICALL Java_awtk_TIndicatorDefaultPaint_INDICATOR_1DEFAULT_1PAINT_1STROKE_1RECT(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (jint)(INDICATOR_DEFAULT_PAINT_STROKE_RECT);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TVpageEvent_EVT_1VPAGE_1WILL_1OPEN(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_VPAGE_WILL_OPEN);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TVpageEvent_EVT_1VPAGE_1OPEN(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_VPAGE_OPEN);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TVpageEvent_EVT_1VPAGE_1CLOSE(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(EVT_VPAGE_CLOSE);
 }
 
 JNIEXPORT jint JNICALL Java_awtk_TAssetType_ASSET_1TYPE_1NONE(JNIEnv* env,  jclass ajc) {/*const*/
@@ -8731,6 +8753,14 @@ JNIEXPORT jint JNICALL Java_awtk_TWindowManager_window_1manager_1set_1show_1fps(
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TWindowManager_window_1manager_1set_1ignore_1input_1events(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean ignore_input_events) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)window_manager_set_ignore_input_events(widget, ignore_input_events);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TWindowManager_window_1manager_1set_1screen_1saver_1time(JNIEnv* env,  jclass ajc, jlong jwidget, jint screen_saver_time) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
@@ -10590,6 +10620,14 @@ JNIEXPORT jint JNICALL Java_awtk_TScrollBar_scroll_1bar_1set_1value_1only(JNIEnv
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TScrollBar_scroll_1bar_1set_1auto_1hide(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean auto_hide) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)scroll_bar_set_auto_hide(widget, auto_hide);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jboolean JNICALL Java_awtk_TScrollBar_scroll_1bar_1is_1mobile(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
   bool_t ret;
   widget_t* widget = (widget_t*)jwidget;
@@ -10620,6 +10658,12 @@ JNIEXPORT jboolean JNICALL Java_awtk_TScrollBar_scroll_1bar_1t_1get_1prop_1anima
   scroll_bar_t* obj = (scroll_bar_t*)jobj;
 
   return (jboolean)(obj->animatable);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TScrollBar_scroll_1bar_1t_1get_1prop_1auto_1hide(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  scroll_bar_t* obj = (scroll_bar_t*)jobj;
+
+  return (jboolean)(obj->auto_hide);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TScrollView_scroll_1view_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
@@ -11542,6 +11586,54 @@ JNIEXPORT jstring JNICALL Java_awtk_TTimeClock_time_1clock_1t_1get_1prop_1second
   time_clock_t* obj = (time_clock_t*)jobj;
 
   return (*env)->NewStringUTF(env, obj->second_anchor_y);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TVpage_vpage_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
+  widget_t* ret;
+  widget_t* parent = (widget_t*)jparent;
+  ret = (widget_t*)vpage_create(parent, x, y, w, h);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TVpage_vpage_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  widget_t* ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (widget_t*)vpage_cast(widget);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TVpage_vpage_1set_1ui_1asset(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jui_asset) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  const char* ui_asset = (char*)(*env)->GetStringUTFChars(env, jui_asset, 0);
+  ret = (ret_t)vpage_set_ui_asset(widget, ui_asset);
+  (*env)->ReleaseStringUTFChars(env, jui_asset, ui_asset);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TVpage_vpage_1set_1anim_1hint(JNIEnv* env,  jclass ajc, jlong jwidget, jstring janim_hint) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  const char* anim_hint = (char*)(*env)->GetStringUTFChars(env, janim_hint, 0);
+  ret = (ret_t)vpage_set_anim_hint(widget, anim_hint);
+  (*env)->ReleaseStringUTFChars(env, janim_hint, anim_hint);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TVpage_vpage_1t_1get_1prop_1ui_1asset(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  vpage_t* obj = (vpage_t*)jobj;
+
+  return (*env)->NewStringUTF(env, obj->ui_asset);
+}
+
+JNIEXPORT jstring JNICALL Java_awtk_TVpage_vpage_1t_1get_1prop_1anim_1hint(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  vpage_t* obj = (vpage_t*)jobj;
+
+  return (*env)->NewStringUTF(env, obj->anim_hint);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TPropChangeEvent_prop_1change_1event_1cast(JNIEnv* env,  jclass ajc, jlong jevent) { /*func*/

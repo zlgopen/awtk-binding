@@ -18,9 +18,9 @@ int awtk_TEvent_event_cast(Runtime *runtime, JClass *clazz) {
 int awtk_TEvent_event_get_type(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
-  int ret = 0;
+  uint32_t ret = 0;
   event_t* event = (event_t*)jni_ctx_get_object(&actx);
-  ret = (int)event_get_type(event);
+  ret = (uint32_t)event_get_type(event);
   jni_ctx_return_int(&actx, (int32_t)(ret));
 
   return 0;
@@ -7052,6 +7052,14 @@ int awtk_TWidgetProp_WIDGET_PROP_ANIMATABLE(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TWidgetProp_WIDGET_PROP_AUTO_HIDE(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_str(&actx, (char*)(WIDGET_PROP_AUTO_HIDE));
+
+  return 0;
+}
+
 int awtk_TWidgetProp_WIDGET_PROP_AUTO_HIDE_SCROLL_BAR(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -9944,6 +9952,30 @@ int awtk_TIndicatorDefaultPaint_INDICATOR_DEFAULT_PAINT_STROKE_RECT(Runtime *run
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   jni_ctx_return_int(&actx, (int32_t)(INDICATOR_DEFAULT_PAINT_STROKE_RECT));
+
+  return 0;
+}
+
+int awtk_TVpageEvent_EVT_VPAGE_WILL_OPEN(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(EVT_VPAGE_WILL_OPEN));
+
+  return 0;
+}
+
+int awtk_TVpageEvent_EVT_VPAGE_OPEN(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(EVT_VPAGE_OPEN));
+
+  return 0;
+}
+
+int awtk_TVpageEvent_EVT_VPAGE_CLOSE(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(EVT_VPAGE_CLOSE));
 
   return 0;
 }
@@ -13016,6 +13048,18 @@ int awtk_TWindowManager_window_manager_set_show_fps(Runtime *runtime, JClass *cl
   return 0;
 }
 
+int awtk_TWindowManager_window_manager_set_ignore_input_events(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  bool_t ignore_input_events = (bool_t)jni_ctx_get_int(&actx);
+  ret = (ret_t)window_manager_set_ignore_input_events(widget, ignore_input_events);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TWindowManager_window_manager_set_screen_saver_time(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -15772,6 +15816,18 @@ int awtk_TScrollBar_scroll_bar_set_value_only(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TScrollBar_scroll_bar_set_auto_hide(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  bool_t auto_hide = (bool_t)jni_ctx_get_int(&actx);
+  ret = (ret_t)scroll_bar_set_auto_hide(widget, auto_hide);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TScrollBar_scroll_bar_is_mobile(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -15815,6 +15871,15 @@ int awtk_TScrollBar_scroll_bar_t_get_prop_animatable(Runtime *runtime, JClass *c
 
   scroll_bar_t* obj = (scroll_bar_t*)jni_ctx_get_object(&actx);
   jni_ctx_return_int(&actx, (int32_t)(obj->animatable));
+
+  return 0;
+}
+
+int awtk_TScrollBar_scroll_bar_t_get_prop_auto_hide(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  scroll_bar_t* obj = (scroll_bar_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_int(&actx, (int32_t)(obj->auto_hide));
 
   return 0;
 }
@@ -17193,6 +17258,76 @@ int awtk_TTimeClock_time_clock_t_get_prop_second_anchor_y(Runtime *runtime, JCla
 
   time_clock_t* obj = (time_clock_t*)jni_ctx_get_object(&actx);
   jni_ctx_return_str(&actx, (char*)(obj->second_anchor_y));
+
+  return 0;
+}
+
+int awtk_TVpage_vpage_create(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* parent = (widget_t*)jni_ctx_get_object(&actx);
+  xy_t x = (xy_t)jni_ctx_get_int(&actx);
+  xy_t y = (xy_t)jni_ctx_get_int(&actx);
+  wh_t w = (wh_t)jni_ctx_get_int(&actx);
+  wh_t h = (wh_t)jni_ctx_get_int(&actx);
+  ret = (widget_t*)vpage_create(parent, x, y, w, h);
+  jni_ctx_return_object(&actx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TVpage_vpage_cast(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  ret = (widget_t*)vpage_cast(widget);
+  jni_ctx_return_object(&actx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TVpage_vpage_set_ui_asset(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  const char* ui_asset = (const char*)jni_ctx_get_str(&actx);
+  ret = (ret_t)vpage_set_ui_asset(widget, ui_asset);
+  TKMEM_FREE(ui_asset);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TVpage_vpage_set_anim_hint(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  const char* anim_hint = (const char*)jni_ctx_get_str(&actx);
+  ret = (ret_t)vpage_set_anim_hint(widget, anim_hint);
+  TKMEM_FREE(anim_hint);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TVpage_vpage_t_get_prop_ui_asset(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  vpage_t* obj = (vpage_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_str(&actx, (char*)(obj->ui_asset));
+
+  return 0;
+}
+
+int awtk_TVpage_vpage_t_get_prop_anim_hint(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  vpage_t* obj = (vpage_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_str(&actx, (char*)(obj->anim_hint));
 
   return 0;
 }
@@ -21237,6 +21372,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidgetProp",  "WIDGET_PROP_ENABLE_LONG_PRESS",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_ENABLE_LONG_PRESS},
 {"awtk/TWidgetProp",  "WIDGET_PROP_CLICK_THROUGH",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_CLICK_THROUGH},
 {"awtk/TWidgetProp",  "WIDGET_PROP_ANIMATABLE",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_ANIMATABLE},
+{"awtk/TWidgetProp",  "WIDGET_PROP_AUTO_HIDE",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_AUTO_HIDE},
 {"awtk/TWidgetProp",  "WIDGET_PROP_AUTO_HIDE_SCROLL_BAR",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_AUTO_HIDE_SCROLL_BAR},
 {"awtk/TWidgetProp",  "WIDGET_PROP_IMAGE",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_IMAGE},
 {"awtk/TWidgetProp",  "WIDGET_PROP_FORMAT",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_FORMAT},
@@ -21529,6 +21665,9 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TIndicatorDefaultPaint",  "INDICATOR_DEFAULT_PAINT_STROKE_DOT",  "()I",  awtk_TIndicatorDefaultPaint_INDICATOR_DEFAULT_PAINT_STROKE_DOT},
 {"awtk/TIndicatorDefaultPaint",  "INDICATOR_DEFAULT_PAINT_FILL_RECT",  "()I",  awtk_TIndicatorDefaultPaint_INDICATOR_DEFAULT_PAINT_FILL_RECT},
 {"awtk/TIndicatorDefaultPaint",  "INDICATOR_DEFAULT_PAINT_STROKE_RECT",  "()I",  awtk_TIndicatorDefaultPaint_INDICATOR_DEFAULT_PAINT_STROKE_RECT},
+{"awtk/TVpageEvent",  "EVT_VPAGE_WILL_OPEN",  "()I",  awtk_TVpageEvent_EVT_VPAGE_WILL_OPEN},
+{"awtk/TVpageEvent",  "EVT_VPAGE_OPEN",  "()I",  awtk_TVpageEvent_EVT_VPAGE_OPEN},
+{"awtk/TVpageEvent",  "EVT_VPAGE_CLOSE",  "()I",  awtk_TVpageEvent_EVT_VPAGE_CLOSE},
 {"awtk/TAssetType",  "ASSET_TYPE_NONE",  "()I",  awtk_TAssetType_ASSET_TYPE_NONE},
 {"awtk/TAssetType",  "ASSET_TYPE_FONT",  "()I",  awtk_TAssetType_ASSET_TYPE_FONT},
 {"awtk/TAssetType",  "ASSET_TYPE_IMAGE",  "()I",  awtk_TAssetType_ASSET_TYPE_IMAGE},
@@ -21870,6 +22009,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWindowManager",  "window_manager_get_pointer_pressed",  "(J)Z",  awtk_TWindowManager_window_manager_get_pointer_pressed},
 {"awtk/TWindowManager",  "window_manager_is_animating",  "(J)Z",  awtk_TWindowManager_window_manager_is_animating},
 {"awtk/TWindowManager",  "window_manager_set_show_fps",  "(JZ)I",  awtk_TWindowManager_window_manager_set_show_fps},
+{"awtk/TWindowManager",  "window_manager_set_ignore_input_events",  "(JZ)I",  awtk_TWindowManager_window_manager_set_ignore_input_events},
 {"awtk/TWindowManager",  "window_manager_set_screen_saver_time",  "(JI)I",  awtk_TWindowManager_window_manager_set_screen_saver_time},
 {"awtk/TWindowManager",  "window_manager_set_cursor",  "(JLjava/lang/String;)I",  awtk_TWindowManager_window_manager_set_cursor},
 {"awtk/TWindowManager",  "window_manager_back",  "(J)I",  awtk_TWindowManager_window_manager_back},
@@ -22115,11 +22255,13 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TScrollBar",  "scroll_bar_add_delta",  "(JI)I",  awtk_TScrollBar_scroll_bar_add_delta},
 {"awtk/TScrollBar",  "scroll_bar_scroll_delta",  "(JI)I",  awtk_TScrollBar_scroll_bar_scroll_delta},
 {"awtk/TScrollBar",  "scroll_bar_set_value_only",  "(JI)I",  awtk_TScrollBar_scroll_bar_set_value_only},
+{"awtk/TScrollBar",  "scroll_bar_set_auto_hide",  "(JZ)I",  awtk_TScrollBar_scroll_bar_set_auto_hide},
 {"awtk/TScrollBar",  "scroll_bar_is_mobile",  "(J)Z",  awtk_TScrollBar_scroll_bar_is_mobile},
 {"awtk/TScrollBar",  "scroll_bar_t_get_prop_virtual_size",  "(J)I",  awtk_TScrollBar_scroll_bar_t_get_prop_virtual_size},
 {"awtk/TScrollBar",  "scroll_bar_t_get_prop_value",  "(J)I",  awtk_TScrollBar_scroll_bar_t_get_prop_value},
 {"awtk/TScrollBar",  "scroll_bar_t_get_prop_row",  "(J)I",  awtk_TScrollBar_scroll_bar_t_get_prop_row},
 {"awtk/TScrollBar",  "scroll_bar_t_get_prop_animatable",  "(J)Z",  awtk_TScrollBar_scroll_bar_t_get_prop_animatable},
+{"awtk/TScrollBar",  "scroll_bar_t_get_prop_auto_hide",  "(J)Z",  awtk_TScrollBar_scroll_bar_t_get_prop_auto_hide},
 {"awtk/TScrollView",  "scroll_view_create",  "(JIIII)J",  awtk_TScrollView_scroll_view_create},
 {"awtk/TScrollView",  "scroll_view_cast",  "(J)J",  awtk_TScrollView_scroll_view_cast},
 {"awtk/TScrollView",  "scroll_view_set_virtual_w",  "(JI)I",  awtk_TScrollView_scroll_view_set_virtual_w},
@@ -22243,6 +22385,12 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TTimeClock",  "time_clock_t_get_prop_minute_anchor_y",  "(J)Ljava/lang/String;",  awtk_TTimeClock_time_clock_t_get_prop_minute_anchor_y},
 {"awtk/TTimeClock",  "time_clock_t_get_prop_second_anchor_x",  "(J)Ljava/lang/String;",  awtk_TTimeClock_time_clock_t_get_prop_second_anchor_x},
 {"awtk/TTimeClock",  "time_clock_t_get_prop_second_anchor_y",  "(J)Ljava/lang/String;",  awtk_TTimeClock_time_clock_t_get_prop_second_anchor_y},
+{"awtk/TVpage",  "vpage_create",  "(JIIII)J",  awtk_TVpage_vpage_create},
+{"awtk/TVpage",  "vpage_cast",  "(J)J",  awtk_TVpage_vpage_cast},
+{"awtk/TVpage",  "vpage_set_ui_asset",  "(JLjava/lang/String;)I",  awtk_TVpage_vpage_set_ui_asset},
+{"awtk/TVpage",  "vpage_set_anim_hint",  "(JLjava/lang/String;)I",  awtk_TVpage_vpage_set_anim_hint},
+{"awtk/TVpage",  "vpage_t_get_prop_ui_asset",  "(J)Ljava/lang/String;",  awtk_TVpage_vpage_t_get_prop_ui_asset},
+{"awtk/TVpage",  "vpage_t_get_prop_anim_hint",  "(J)Ljava/lang/String;",  awtk_TVpage_vpage_t_get_prop_anim_hint},
 {"awtk/TPropChangeEvent",  "prop_change_event_cast",  "(J)J",  awtk_TPropChangeEvent_prop_change_event_cast},
 {"awtk/TPropChangeEvent",  "prop_change_event_t_get_prop_name",  "(J)Ljava/lang/String;",  awtk_TPropChangeEvent_prop_change_event_t_get_prop_name},
 {"awtk/TPropChangeEvent",  "prop_change_event_t_get_prop_value",  "(J)J",  awtk_TPropChangeEvent_prop_change_event_t_get_prop_value},
