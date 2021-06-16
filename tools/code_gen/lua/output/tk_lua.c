@@ -14,7 +14,6 @@
 #include "base/canvas_offline.h"
 #include "base/canvas.h"
 #include "base/clip_board.h"
-#include "base/date_time_format.h"
 #include "base/dialog.h"
 #include "base/events.h"
 #include "base/font_manager.h"
@@ -146,8 +145,6 @@ static int wrap_canvas_t_get_prop(lua_State* L);
 static int wrap_canvas_t_set_prop(lua_State* L);
 static int wrap_clip_board_t_get_prop(lua_State* L);
 static int wrap_clip_board_t_set_prop(lua_State* L);
-static int wrap_data_time_format_get_prop(lua_State* L);
-static int wrap_data_time_format_set_prop(lua_State* L);
 static int wrap_font_manager_t_get_prop(lua_State* L);
 static int wrap_font_manager_t_set_prop(lua_State* L);
 static int wrap_image_manager_t_get_prop(lua_State* L);
@@ -2931,56 +2928,6 @@ static void clip_board_t_init(lua_State* L) {
   lua_settable(L, -3);
   luaL_openlib(L, NULL, index_funcs, 0);
   luaL_openlib(L, "ClipBoard", static_funcs, 0);
-  lua_settop(L, 0);
-}
-
-static const struct luaL_Reg data_time_format_member_funcs[] = {
-  {NULL, NULL}
-};
-
-static int wrap_data_time_format_set_prop(lua_State* L) {
-  data_time_format* obj = (data_time_format*)tk_checkudata(L, 1, "data_time_format");
-  const char* name = (const char*)luaL_checkstring(L, 2);
-  (void)obj;
-  (void)name;
-  log_debug("%s: not supported %s\n", __FUNCTION__, name);
-  return 0;
-}
-
-static int wrap_data_time_format_get_prop(lua_State* L) {
-  data_time_format* obj = (data_time_format*)tk_checkudata(L, 1, "data_time_format");
-  const char* name = (const char*)luaL_checkstring(L, 2);
-  const luaL_Reg* ret = find_member(data_time_format_member_funcs, name);
-
-  (void)obj;
-  (void)name;
-  if(ret) {
-    lua_pushcfunction(L, ret->func);
-    return 1;
-  }
-  else {
-    log_debug("%s: not supported %s\n", __FUNCTION__, name);
-    return 0;
-  }
-}
-
-static void data_time_format_init(lua_State* L) {
-  static const struct luaL_Reg static_funcs[] = {
-    {NULL, NULL}
-  };
-
-  static const struct luaL_Reg index_funcs[] = {
-    {"__index", wrap_data_time_format_get_prop},
-    {"__newindex", wrap_data_time_format_set_prop},
-    {NULL, NULL}
-  };
-
-  luaL_newmetatable(L, "awtk.data_time_format");
-  lua_pushstring(L, "__index");
-  lua_pushvalue(L, -2);
-  lua_settable(L, -3);
-  luaL_openlib(L, NULL, index_funcs, 0);
-  luaL_openlib(L, "DataTimeFormat", static_funcs, 0);
   lua_settop(L, 0);
 }
 static void dialog_quit_code_t_init(lua_State* L) {
@@ -16147,6 +16094,17 @@ static int wrap_text_selector_set_yspeed_scale(lua_State* L) {
   return 1;
 }
 
+static int wrap_text_selector_set_animating_time(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  uint32_t animating_time = (uint32_t)luaL_checkinteger(L, 2);
+  ret = (ret_t)text_selector_set_animating_time(widget, animating_time);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 
 static const struct luaL_Reg text_selector_t_member_funcs[] = {
   {"reset_options", wrap_text_selector_reset_options},
@@ -16164,6 +16122,7 @@ static const struct luaL_Reg text_selector_t_member_funcs[] = {
   {"set_localize_options", wrap_text_selector_set_localize_options},
   {"set_loop_options", wrap_text_selector_set_loop_options},
   {"set_yspeed_scale", wrap_text_selector_set_yspeed_scale},
+  {"set_animating_time", wrap_text_selector_set_animating_time},
   {NULL, NULL}
 };
 
@@ -16203,6 +16162,11 @@ static int wrap_text_selector_t_get_prop(lua_State* L) {
   }
   else if(strcmp(name, "yspeed_scale") == 0) {
     lua_pushnumber(L,(lua_Number)(obj->yspeed_scale));
+
+  return 1;
+  }
+  else if(strcmp(name, "animating_time") == 0) {
+    lua_pushinteger(L,(lua_Integer)(obj->animating_time));
 
   return 1;
   }
@@ -21731,7 +21695,6 @@ void luaL_openawtk(lua_State* L) {
   canvas_t_init(L);
   clip_board_data_type_t_init(L);
   clip_board_t_init(L);
-  data_time_format_init(L);
   dialog_quit_code_t_init(L);
   event_type_t_init(L);
   font_manager_t_init(L);

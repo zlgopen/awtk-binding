@@ -13,7 +13,6 @@
 #include "base/canvas_offline.h"
 #include "base/canvas.h"
 #include "base/clip_board.h"
-#include "base/date_time_format.h"
 #include "base/dialog.h"
 #include "base/events.h"
 #include "base/font_manager.h"
@@ -11342,6 +11341,14 @@ JNIEXPORT jint JNICALL Java_awtk_TTextSelector_text_1selector_1set_1yspeed_1scal
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TTextSelector_text_1selector_1set_1animating_1time(JNIEnv* env,  jclass ajc, jlong jwidget, jint animating_time) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)text_selector_set_animating_time(widget, animating_time);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TTextSelector_text_1selector_1t_1get_1prop_1visible_1nr(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
   text_selector_t* obj = (text_selector_t*)jobj;
 
@@ -11364,6 +11371,12 @@ JNIEXPORT jdouble JNICALL Java_awtk_TTextSelector_text_1selector_1t_1get_1prop_1
   text_selector_t* obj = (text_selector_t*)jobj;
 
   return (jdouble)(obj->yspeed_scale);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TTextSelector_text_1selector_1t_1get_1prop_1animating_1time(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  text_selector_t* obj = (text_selector_t*)jobj;
+
+  return (jint)(obj->animating_time);
 }
 
 JNIEXPORT jboolean JNICALL Java_awtk_TTextSelector_text_1selector_1t_1get_1prop_1localize_1options(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/

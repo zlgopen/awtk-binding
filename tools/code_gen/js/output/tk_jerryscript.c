@@ -14,7 +14,6 @@
 #include "base/canvas_offline.h"
 #include "base/canvas.h"
 #include "base/clip_board.h"
-#include "base/date_time_format.h"
 #include "base/dialog.h"
 #include "base/events.h"
 #include "base/font_manager.h"
@@ -3666,11 +3665,6 @@ jsvalue_t wrap_clip_board_get_text(
 ret_t clip_board_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"clip_board_set_text", wrap_clip_board_set_text);
   jerryx_handler_register_global((const jerry_char_t*)"clip_board_get_text", wrap_clip_board_get_text);
-
- return RET_OK;
-}
-
-ret_t data_time_format_init(JSContext *ctx) {
 
  return RET_OK;
 }
@@ -25022,6 +25016,24 @@ jsvalue_t wrap_text_selector_set_yspeed_scale(
   return jret;
 }
 
+jsvalue_t wrap_text_selector_set_animating_time(
+    const jerry_call_info_t *call_info_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  uint32_t animating_time = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)text_selector_set_animating_time(widget, animating_time);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_text_selector_t_get_prop_visible_nr(
     const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
@@ -25074,6 +25086,19 @@ jsvalue_t wrap_text_selector_t_get_prop_yspeed_scale(
   return jret;
 }
 
+jsvalue_t wrap_text_selector_t_get_prop_animating_time(
+    const jerry_call_info_t *call_info_p, 
+    const jerry_value_t argv[], 
+    const jerry_length_t argc 
+  )  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  text_selector_t* obj = (text_selector_t*)jsvalue_get_pointer(ctx, argv[0], "text_selector_t*");
+
+  jret = jsvalue_create_int(ctx, obj->animating_time);
+  return jret;
+}
+
 jsvalue_t wrap_text_selector_t_get_prop_localize_options(
     const jerry_call_info_t *call_info_p, 
     const jerry_value_t argv[], 
@@ -25118,10 +25143,12 @@ ret_t text_selector_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"text_selector_set_localize_options", wrap_text_selector_set_localize_options);
   jerryx_handler_register_global((const jerry_char_t*)"text_selector_set_loop_options", wrap_text_selector_set_loop_options);
   jerryx_handler_register_global((const jerry_char_t*)"text_selector_set_yspeed_scale", wrap_text_selector_set_yspeed_scale);
+  jerryx_handler_register_global((const jerry_char_t*)"text_selector_set_animating_time", wrap_text_selector_set_animating_time);
   jerryx_handler_register_global((const jerry_char_t*)"text_selector_t_get_prop_visible_nr", wrap_text_selector_t_get_prop_visible_nr);
   jerryx_handler_register_global((const jerry_char_t*)"text_selector_t_get_prop_selected_index", wrap_text_selector_t_get_prop_selected_index);
   jerryx_handler_register_global((const jerry_char_t*)"text_selector_t_get_prop_options", wrap_text_selector_t_get_prop_options);
   jerryx_handler_register_global((const jerry_char_t*)"text_selector_t_get_prop_yspeed_scale", wrap_text_selector_t_get_prop_yspeed_scale);
+  jerryx_handler_register_global((const jerry_char_t*)"text_selector_t_get_prop_animating_time", wrap_text_selector_t_get_prop_animating_time);
   jerryx_handler_register_global((const jerry_char_t*)"text_selector_t_get_prop_localize_options", wrap_text_selector_t_get_prop_localize_options);
   jerryx_handler_register_global((const jerry_char_t*)"text_selector_t_get_prop_loop_options", wrap_text_selector_t_get_prop_loop_options);
 
@@ -31103,7 +31130,6 @@ ret_t awtk_js_init(JSContext *ctx) {
   canvas_t_init(ctx);
   clip_board_data_type_t_init(ctx);
   clip_board_t_init(ctx);
-  data_time_format_init(ctx);
   dialog_quit_code_t_init(ctx);
   event_type_t_init(ctx);
   font_manager_t_init(ctx);

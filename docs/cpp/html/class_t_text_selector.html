@@ -117,6 +117,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a23cc78c449ba19737bc68dd6bec9fd73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22dfed368902b877aa1d93b6762bf097"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a22dfed368902b877aa1d93b6762bf097">SetYspeedScale</a> (float_t yspeed_scale)</td></tr>
 <tr class="separator:a22dfed368902b877aa1d93b6762bf097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ff3912ae75773e7b2b0213a68391e9b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a8ff3912ae75773e7b2b0213a68391e9b">SetAnimatingTime</a> (uint32_t animating_time)</td></tr>
+<tr class="separator:a8ff3912ae75773e7b2b0213a68391e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a654b0d478368792febd784133b07c176"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a654b0d478368792febd784133b07c176">GetVisibleNr</a> () const</td></tr>
 <tr class="separator:a654b0d478368792febd784133b07c176"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fe7e7c0e699fa1e40b45ef5173fa1d9"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a0fe7e7c0e699fa1e40b45ef5173fa1d9">GetSelectedIndex</a> () const</td></tr>
@@ -125,6 +127,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a626f8c36ab1700135392ce636e463f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6479d5c8e6194319a804f4a2984ecef0"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a6479d5c8e6194319a804f4a2984ecef0">GetYspeedScale</a> () const</td></tr>
 <tr class="separator:a6479d5c8e6194319a804f4a2984ecef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aded6721fbb596b5adf52f6889d018842"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#aded6721fbb596b5adf52f6889d018842">GetAnimatingTime</a> () const</td></tr>
+<tr class="separator:aded6721fbb596b5adf52f6889d018842"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9e0598999adffca72281014721d70d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#aa9e0598999adffca72281014721d70d0">GetLocalizeOptions</a> () const</td></tr>
 <tr class="separator:aa9e0598999adffca72281014721d70d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ff0457591c7187c2716179ee0e61692"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a3ff0457591c7187c2716179ee0e61692">GetLoopOptions</a> () const</td></tr>
@@ -295,6 +299,24 @@ static <a class="el" href="class_t_text_selector.html">TTextSelector</a>&#160;</
 
 </div>
 </div>
+<a id="aded6721fbb596b5adf52f6889d018842"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aded6721fbb596b5adf52f6889d018842">&#9670;&nbsp;</a></span>GetAnimatingTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t TTextSelector::GetAnimatingTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>滚动动画播放时间。(单位毫秒) </p>
+
+</div>
+</div>
 <a id="aa9e0598999adffca72281014721d70d0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa9e0598999adffca72281014721d70d0">&#9670;&nbsp;</a></span>GetLocalizeOptions()</h2>
 
@@ -456,6 +478,32 @@ static <a class="el" href="class_t_text_selector.html">TTextSelector</a>&#160;</
       </table>
 </div><div class="memdoc">
 <p>重置所有选项。</p>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a8ff3912ae75773e7b2b0213a68391e9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ff3912ae75773e7b2b0213a68391e9b">&#9670;&nbsp;</a></span>SetAnimatingTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TTextSelector::SetAnimatingTime </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>animating_time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置滚动动画播放时间。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animating_time</td><td>滚动动画播放时间。(单位毫秒)</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>

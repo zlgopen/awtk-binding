@@ -2298,38 +2298,6 @@ class TClipBoard(object):
 
 
 #
-# 格式化日期时间。
-#
-#格式规则：
-#* Y 代表年(完整显示)
-#* M 代表月(1-12)
-#* D 代表日(1-31)
-#* h 代表时(0-23)
-#* m 代表分(0-59)
-#* s 代表秒(0-59)
-#* w 代表星期(0-6)
-#* W 代表星期的英文缩写(支持翻译)
-#* YY 代表年(只显示末两位)
-#* MM 代表月(01-12)
-#* DD 代表日(01-31)
-#* hh 代表时(00-23)
-#* mm 代表分(00-59)
-#* ss 代表秒(00-59)
-#* MMM 代表月的英文缩写(支持翻译)
-#
-#如 日期时间为：2018/11/12 9:10:20
-#* "Y/M/D"显示为"2018/11/12"
-#* "Y-M-D"显示为"2018-11-12"
-#* "Y-M-D h:m:s"显示为"2018-11-12 9:10:20"
-#* "Y-M-D hh:mm:ss"显示为"2018-11-12 09:10:20"
-#
-#
-class TDataTimeFormat(object):
-  def __init__(self, nativeObj):
-    self.nativeObj = nativeObj;
-
-
-#
 # 对话框退出码。
 #
 #> 一般用作dialog_quit函数的参数。
@@ -8647,7 +8615,7 @@ class TWidget(object):
 
 
   #
-  # widget_set_style_color(label, "style:normal:bg_color", 0xFF332211);
+  # widget_set_style_color(label, "normal:bg_color", 0xFF332211);
   #```
   # 
   # @param state_and_name 状态和名字，用英文的冒号分隔。
@@ -17407,6 +17375,17 @@ class TTextSelector (TWidget):
 
 
   #
+  # 设置滚动动画播放时间。
+  # 
+  # @param animating_time 滚动动画播放时间。(单位毫秒)
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_animating_time(self, animating_time): 
+    return text_selector_set_animating_time(awtk_get_native_obj(self), animating_time);
+
+
+  #
   # 可见的选项数量(只能是1或者3或者5，缺省为5)。
   #
   #
@@ -17458,6 +17437,19 @@ class TTextSelector (TWidget):
   @yspeed_scale.setter
   def yspeed_scale(self, v):
    this.set_yspeed_scale(v);
+
+
+  #
+  # 滚动动画播放时间。(单位毫秒)
+  #
+  #
+  @property
+  def animating_time(self):
+    return text_selector_t_get_prop_animating_time(self.nativeObj);
+
+  @animating_time.setter
+  def animating_time(self, v):
+   this.set_animating_time(v);
 
 
   #

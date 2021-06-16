@@ -1479,7 +1479,7 @@ public class TWidget {
 
 
   /**
-   * widget_set_style_color(label, "style:normal:bg_color", 0xFF332211);
+   * widget_set_style_color(label, "normal:bg_color", 0xFF332211);
    *```
    * 
    * @param state_and_name 状态和名字，用英文的冒号分隔。

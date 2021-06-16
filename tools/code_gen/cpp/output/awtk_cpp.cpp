@@ -3459,6 +3459,10 @@
    return text_selector_set_yspeed_scale(((widget_t*)(this->nativeObj)), yspeed_scale);
  }
 
+ ret_t TTextSelector::SetAnimatingTime(uint32_t animating_time)  {
+   return text_selector_set_animating_time(((widget_t*)(this->nativeObj)), animating_time);
+ }
+
  uint32_t TTextSelector::GetVisibleNr() const {
    return ((text_selector_t*)(this->nativeObj))->visible_nr;
  }
@@ -3473,6 +3477,10 @@
 
  float_t TTextSelector::GetYspeedScale() const {
    return ((text_selector_t*)(this->nativeObj))->yspeed_scale;
+ }
+
+ uint32_t TTextSelector::GetAnimatingTime() const {
+   return ((text_selector_t*)(this->nativeObj))->animating_time;
  }
 
  bool TTextSelector::GetLocalizeOptions() const {

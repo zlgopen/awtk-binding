@@ -13,7 +13,6 @@
 #include "base/canvas_offline.h"
 #include "base/canvas.h"
 #include "base/clip_board.h"
-#include "base/date_time_format.h"
 #include "base/dialog.h"
 #include "base/events.h"
 #include "base/font_manager.h"
@@ -3871,14 +3870,6 @@ ret_t clip_board_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_clip_board_set_text, "clip_board_set_text", 1));
   JS_SetPropertyStr(ctx, global_obj, "clip_board_get_text",
                       JS_NewCFunction(ctx, wrap_clip_board_get_text, "clip_board_get_text", 1));
-
- jsvalue_unref(ctx, global_obj);
-
- return RET_OK;
-}
-
-ret_t data_time_format_init(JSContext *ctx) {
-  jsvalue_t global_obj = JS_GetGlobalObject(ctx);
 
  jsvalue_unref(ctx, global_obj);
 
@@ -27005,6 +26996,24 @@ jsvalue_t wrap_text_selector_set_yspeed_scale(
   return jret;
 }
 
+jsvalue_t wrap_text_selector_set_animating_time(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  uint32_t animating_time = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)text_selector_set_animating_time(widget, animating_time);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_text_selector_t_get_prop_visible_nr(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -27054,6 +27063,19 @@ jsvalue_t wrap_text_selector_t_get_prop_yspeed_scale(
   text_selector_t* obj = (text_selector_t*)jsvalue_get_pointer(ctx, argv[0], "text_selector_t*");
 
   jret = jsvalue_create_number(ctx, obj->yspeed_scale);
+  return jret;
+}
+
+jsvalue_t wrap_text_selector_t_get_prop_animating_time(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  text_selector_t* obj = (text_selector_t*)jsvalue_get_pointer(ctx, argv[0], "text_selector_t*");
+
+  jret = jsvalue_create_int(ctx, obj->animating_time);
   return jret;
 }
 
@@ -27119,6 +27141,8 @@ ret_t text_selector_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_text_selector_set_loop_options, "text_selector_set_loop_options", 1));
   JS_SetPropertyStr(ctx, global_obj, "text_selector_set_yspeed_scale",
                       JS_NewCFunction(ctx, wrap_text_selector_set_yspeed_scale, "text_selector_set_yspeed_scale", 1));
+  JS_SetPropertyStr(ctx, global_obj, "text_selector_set_animating_time",
+                      JS_NewCFunction(ctx, wrap_text_selector_set_animating_time, "text_selector_set_animating_time", 1));
   JS_SetPropertyStr(ctx, global_obj, "text_selector_t_get_prop_visible_nr",
                       JS_NewCFunction(ctx, wrap_text_selector_t_get_prop_visible_nr, "text_selector_t_get_prop_visible_nr", 1));
   JS_SetPropertyStr(ctx, global_obj, "text_selector_t_get_prop_selected_index",
@@ -27127,6 +27151,8 @@ ret_t text_selector_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_text_selector_t_get_prop_options, "text_selector_t_get_prop_options", 1));
   JS_SetPropertyStr(ctx, global_obj, "text_selector_t_get_prop_yspeed_scale",
                       JS_NewCFunction(ctx, wrap_text_selector_t_get_prop_yspeed_scale, "text_selector_t_get_prop_yspeed_scale", 1));
+  JS_SetPropertyStr(ctx, global_obj, "text_selector_t_get_prop_animating_time",
+                      JS_NewCFunction(ctx, wrap_text_selector_t_get_prop_animating_time, "text_selector_t_get_prop_animating_time", 1));
   JS_SetPropertyStr(ctx, global_obj, "text_selector_t_get_prop_localize_options",
                       JS_NewCFunction(ctx, wrap_text_selector_t_get_prop_localize_options, "text_selector_t_get_prop_localize_options", 1));
   JS_SetPropertyStr(ctx, global_obj, "text_selector_t_get_prop_loop_options",
@@ -33587,7 +33613,6 @@ ret_t awtk_js_init(JSContext *ctx) {
   canvas_t_init(ctx);
   clip_board_data_type_t_init(ctx);
   clip_board_t_init(ctx);
-  data_time_format_init(ctx);
   dialog_quit_code_t_init(ctx);
   event_type_t_init(ctx);
   font_manager_t_init(ctx);

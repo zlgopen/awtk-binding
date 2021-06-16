@@ -16910,6 +16910,18 @@ int awtk_TTextSelector_text_selector_set_yspeed_scale(Runtime *runtime, JClass *
   return 0;
 }
 
+int awtk_TTextSelector_text_selector_set_animating_time(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  uint32_t animating_time = (uint32_t)jni_ctx_get_int(&actx);
+  ret = (ret_t)text_selector_set_animating_time(widget, animating_time);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TTextSelector_text_selector_t_get_prop_visible_nr(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -16942,6 +16954,15 @@ int awtk_TTextSelector_text_selector_t_get_prop_yspeed_scale(Runtime *runtime, J
 
   text_selector_t* obj = (text_selector_t*)jni_ctx_get_object(&actx);
   jni_ctx_return_float(&actx, (float)(obj->yspeed_scale));
+
+  return 0;
+}
+
+int awtk_TTextSelector_text_selector_t_get_prop_animating_time(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  text_selector_t* obj = (text_selector_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_int(&actx, (int32_t)(obj->animating_time));
 
   return 0;
 }
@@ -22352,10 +22373,12 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TTextSelector",  "text_selector_set_localize_options",  "(JZ)I",  awtk_TTextSelector_text_selector_set_localize_options},
 {"awtk/TTextSelector",  "text_selector_set_loop_options",  "(JZ)I",  awtk_TTextSelector_text_selector_set_loop_options},
 {"awtk/TTextSelector",  "text_selector_set_yspeed_scale",  "(JF)I",  awtk_TTextSelector_text_selector_set_yspeed_scale},
+{"awtk/TTextSelector",  "text_selector_set_animating_time",  "(JI)I",  awtk_TTextSelector_text_selector_set_animating_time},
 {"awtk/TTextSelector",  "text_selector_t_get_prop_visible_nr",  "(J)I",  awtk_TTextSelector_text_selector_t_get_prop_visible_nr},
 {"awtk/TTextSelector",  "text_selector_t_get_prop_selected_index",  "(J)I",  awtk_TTextSelector_text_selector_t_get_prop_selected_index},
 {"awtk/TTextSelector",  "text_selector_t_get_prop_options",  "(J)Ljava/lang/String;",  awtk_TTextSelector_text_selector_t_get_prop_options},
 {"awtk/TTextSelector",  "text_selector_t_get_prop_yspeed_scale",  "(J)F",  awtk_TTextSelector_text_selector_t_get_prop_yspeed_scale},
+{"awtk/TTextSelector",  "text_selector_t_get_prop_animating_time",  "(J)I",  awtk_TTextSelector_text_selector_t_get_prop_animating_time},
 {"awtk/TTextSelector",  "text_selector_t_get_prop_localize_options",  "(J)Z",  awtk_TTextSelector_text_selector_t_get_prop_localize_options},
 {"awtk/TTextSelector",  "text_selector_t_get_prop_loop_options",  "(J)Z",  awtk_TTextSelector_text_selector_t_get_prop_loop_options},
 {"awtk/TTimeClock",  "time_clock_create",  "(JIIII)J",  awtk_TTimeClock_time_clock_create},

@@ -1740,10 +1740,12 @@ declare function text_selector_set_visible_nr(widget : any, visible_nr : number)
 declare function text_selector_set_localize_options(widget : any, localize_options : boolean) : TRet;
 declare function text_selector_set_loop_options(widget : any, loop_options : boolean) : TRet;
 declare function text_selector_set_yspeed_scale(widget : any, yspeed_scale : number) : TRet;
+declare function text_selector_set_animating_time(widget : any, animating_time : number) : TRet;
 declare function text_selector_t_get_prop_visible_nr(nativeObj : any) : number;
 declare function text_selector_t_get_prop_selected_index(nativeObj : any) : number;
 declare function text_selector_t_get_prop_options(nativeObj : any) : string;
 declare function text_selector_t_get_prop_yspeed_scale(nativeObj : any) : number;
+declare function text_selector_t_get_prop_animating_time(nativeObj : any) : number;
 declare function text_selector_t_get_prop_localize_options(nativeObj : any) : boolean;
 declare function text_selector_t_get_prop_loop_options(nativeObj : any) : boolean;
 declare function time_clock_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -4517,40 +4519,6 @@ export class TClipBoard {
    */
  static getText() : string  {
     return clip_board_get_text();
- }
-
-};
-/**
- * 格式化日期时间。
- *
- *格式规则：
- ** Y 代表年(完整显示)
- ** M 代表月(1-12)
- ** D 代表日(1-31)
- ** h 代表时(0-23)
- ** m 代表分(0-59)
- ** s 代表秒(0-59)
- ** w 代表星期(0-6)
- ** W 代表星期的英文缩写(支持翻译)
- ** YY 代表年(只显示末两位)
- ** MM 代表月(01-12)
- ** DD 代表日(01-31)
- ** hh 代表时(00-23)
- ** mm 代表分(00-59)
- ** ss 代表秒(00-59)
- ** MMM 代表月的英文缩写(支持翻译)
- *
- *如 日期时间为：2018/11/12 9:10:20
- ** "Y/M/D"显示为"2018/11/12"
- ** "Y-M-D"显示为"2018-11-12"
- ** "Y-M-D h:m:s"显示为"2018-11-12 9:10:20"
- ** "Y-M-D hh:mm:ss"显示为"2018-11-12 09:10:20"
- *
- */
-export class TDataTimeFormat { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   this.nativeObj = nativeObj;
  }
 
 };
@@ -11108,7 +11076,7 @@ export class TWidget {
 
 
   /**
-   * widget_set_style_color(label, "style:normal:bg_color", 0xFF332211);
+   * widget_set_style_color(label, "normal:bg_color", 0xFF332211);
    *```
    * 
    * @param state_and_name 状态和名字，用英文的冒号分隔。
@@ -20199,6 +20167,18 @@ export class TTextSelector extends TWidget {
 
 
   /**
+   * 设置滚动动画播放时间。
+   * 
+   * @param animating_time 滚动动画播放时间。(单位毫秒)
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setAnimatingTime(animating_time : number) : TRet  {
+    return text_selector_set_animating_time(this != null ? (this.nativeObj || this) : null, animating_time);
+ }
+
+
+  /**
    * 可见的选项数量(只能是1或者3或者5，缺省为5)。
    *
    */
@@ -20249,6 +20229,19 @@ export class TTextSelector extends TWidget {
 
  set yspeedScale(v : number) {
    this.setYspeedScale(v);
+ }
+
+
+  /**
+   * 滚动动画播放时间。(单位毫秒)
+   *
+   */
+ get animatingTime() : number {
+   return text_selector_t_get_prop_animating_time(this.nativeObj);
+ }
+
+ set animatingTime(v : number) {
+   this.setAnimatingTime(v);
  }
 
 

@@ -4190,19 +4190,6 @@
     "level": 1
   },
   {
-    "type": "class",
-    "methods": [],
-    "events": [],
-    "properties": [],
-    "header": "base/date_time_format.h",
-    "desc": "格式化日期时间。\n\n格式规则：\n* Y 代表年(完整显示)\n* M 代表月(1-12)\n* D 代表日(1-31)\n* h 代表时(0-23)\n* m 代表分(0-59)\n* s 代表秒(0-59)\n* w 代表星期(0-6)\n* W 代表星期的英文缩写(支持翻译)\n* YY 代表年(只显示末两位)\n* MM 代表月(01-12)\n* DD 代表日(01-31)\n* hh 代表时(00-23)\n* mm 代表分(00-59)\n* ss 代表秒(00-59)\n* MMM 代表月的英文缩写(支持翻译)\n\n如 日期时间为：2018/11/12 9:10:20\n* \"Y/M/D\"显示为\"2018/11/12\"\n* \"Y-M-D\"显示为\"2018-11-12\"\n* \"Y-M-D h:m:s\"显示为\"2018-11-12 9:10:20\"\n* \"Y-M-D hh:mm:ss\"显示为\"2018-11-12 09:10:20\"",
-    "name": "data_time_format",
-    "annotation": {
-      "scriptable": true
-    },
-    "level": 1
-  },
-  {
     "type": "enum",
     "desc": "对话框退出码。\n\n> 一般用作dialog_quit函数的参数。",
     "consts": [
@@ -11870,7 +11857,7 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置颜色类型的style。\n\n> * [state 的取值](https://github.com/zlgopen/awtk/blob/master/docs/manual/widget_state_t.md)\n> * [name 的取值](https://github.com/zlgopen/awtk/blob/master/docs/theme.md)\n\n\n在下面这个例子中，R=0x11 G=0x22 B=0x33 A=0xFF\n\n```c\nwidget_set_style_color(label, \"style:normal:bg_color\", 0xFF332211);\n```",
+        "desc": "设置颜色类型的style。\n\n> * [state 的取值](https://github.com/zlgopen/awtk/blob/master/docs/manual/widget_state_t.md)\n> * [name 的取值](https://github.com/zlgopen/awtk/blob/master/docs/theme.md)\n\n\n在下面这个例子中，R=0x11 G=0x22 B=0x33 A=0xFF\n\n```c\nwidget_set_style_color(label, \"normal:bg_color\", 0xFF332211);\n```",
         "name": "widget_set_style_color",
         "return": {
           "type": "ret_t",
@@ -23997,6 +23984,29 @@
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "animating_time",
+            "desc": "滚动动画播放时间。(单位毫秒)"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置滚动动画播放时间。",
+        "name": "text_selector_set_animating_time",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
       }
     ],
     "events": [
@@ -24055,6 +24065,19 @@
         "name": "yspeed_scale",
         "desc": "y偏移速度比例。",
         "type": "float_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "animating_time",
+        "desc": "滚动动画播放时间。(单位毫秒)",
+        "type": "uint32_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
