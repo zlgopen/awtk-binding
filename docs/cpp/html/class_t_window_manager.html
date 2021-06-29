@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TWindowManager类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -30,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.20 -->
+<!-- 制作者 Doxygen 1.8.17 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'搜索');
@@ -103,6 +103,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a07764783ec1eae0e8b8bbd7405d073d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3b76d0ff4a5f030df06e6f56ddc7314"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_manager.html#ad3b76d0ff4a5f030df06e6f56ddc7314">SetShowFps</a> (bool show_fps)</td></tr>
 <tr class="separator:ad3b76d0ff4a5f030df06e6f56ddc7314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af41b05760d6aaf1b5f3ce6a5a40075f2"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_manager.html#af41b05760d6aaf1b5f3ce6a5a40075f2">SetMaxFps</a> (uint32_t max_fps)</td></tr>
+<tr class="separator:af41b05760d6aaf1b5f3ce6a5a40075f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0891a089916cd5cb45a68ea7ba092bf6"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_manager.html#a0891a089916cd5cb45a68ea7ba092bf6">SetIgnoreInputEvents</a> (bool ignore_input_events)</td></tr>
 <tr class="separator:a0891a089916cd5cb45a68ea7ba092bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98ad00772acfb1d9c9555b00221b95ee"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_window_manager.html#a98ad00772acfb1d9c9555b00221b95ee">SetScreenSaverTime</a> (uint32_t screen_saver_time)</td></tr>
@@ -452,6 +454,35 @@ static <a class="el" href="class_t_window_manager.html">TWindowManager</a>&#160;
 
 </div>
 </div>
+<a id="af41b05760d6aaf1b5f3ce6a5a40075f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af41b05760d6aaf1b5f3ce6a5a40075f2">&#9670;&nbsp;</a></span>SetMaxFps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TWindowManager::SetMaxFps </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>max_fps</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>限制最大帧率。</p>
+<blockquote class="doxtable">
+<p>TK_MAX_LOOP_FPS/max_fps最好是整数，比如TK_MAX_LOOP_FPS为120，max_fps可取60/30/20/10等。 </p>
+</blockquote>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max_fps</td><td>最大帧率。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="a98ad00772acfb1d9c9555b00221b95ee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a98ad00772acfb1d9c9555b00221b95ee">&#9670;&nbsp;</a></span>SetScreenSaverTime()</h2>
 
@@ -511,7 +542,9 @@ static <a class="el" href="class_t_window_manager.html">TWindowManager</a>&#160;
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
 </small></address>
 </body>
 </html>

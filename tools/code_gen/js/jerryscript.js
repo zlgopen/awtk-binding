@@ -9,7 +9,7 @@ class JerryscriptGenerator extends JsBindingGenerator {
 
   genFuncDecl(name, prefix) {
     prefix = prefix || 'wrap';
-    let result = `jsvalue_t ${prefix}_${name}` + this.genFuncArgs();
+    let result = `static HANDLER_PROTO(${prefix}_${name})`;
 
     result +='  {\n';
     result +='  void* ctx = NULL;\n';
@@ -17,18 +17,9 @@ class JerryscriptGenerator extends JsBindingGenerator {
     return result;
   }
 
-  genFuncArgs() {
-    return `(
-    const jerry_call_info_t *call_info_p, 
-    const jerry_value_t argv[], 
-    const jerry_length_t argc 
-  )`;
-  }
-
   genTargetIncludes() {
     let result = '';
-    result += '#include "jerryscript.h"\n';
-    result += '#include "jerryscript-ext/handler.h"\n';
+    result += '#include "jerry_script_helper.h"\n';
 
     return result;
   }

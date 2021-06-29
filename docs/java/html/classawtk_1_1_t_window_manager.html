@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TWindowManager类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -30,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.20 -->
+<!-- 制作者 Doxygen 1.8.17 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'搜索');
@@ -101,6 +101,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a4203c24a05cb4dc4dda5ef4aea45565a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a255e08dc5e0a8a7d7dac1b7365f1e6b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_window_manager.html#a255e08dc5e0a8a7d7dac1b7365f1e6b1">setShowFps</a> (boolean show_fps)</td></tr>
 <tr class="separator:a255e08dc5e0a8a7d7dac1b7365f1e6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9b54306ee65472be97906ea5f99453b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_window_manager.html#ad9b54306ee65472be97906ea5f99453b">setMaxFps</a> (int max_fps)</td></tr>
+<tr class="separator:ad9b54306ee65472be97906ea5f99453b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a951717a525f74118960a1713b1e8eede"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_window_manager.html#a951717a525f74118960a1713b1e8eede">setIgnoreInputEvents</a> (boolean ignore_input_events)</td></tr>
 <tr class="separator:a951717a525f74118960a1713b1e8eede"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e020645665b87ab939670d969056468"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_window_manager.html#a8e020645665b87ab939670d969056468">setScreenSaverTime</a> (int screen_saver_time)</td></tr>
@@ -686,6 +688,43 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="ad9b54306ee65472be97906ea5f99453b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9b54306ee65472be97906ea5f99453b">&#9670;&nbsp;</a></span>setMaxFps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TWindowManager.setMaxFps </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_fps</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>限制最大帧率。</p>
+<blockquote class="doxtable">
+<p>TK_MAX_LOOP_FPS/max_fps最好是整数，比如TK_MAX_LOOP_FPS为120，max_fps可取60/30/20/10等。 </p>
+</blockquote>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max_fps</td><td>最大帧率。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="a8e020645665b87ab939670d969056468"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8e020645665b87ab939670d969056468">&#9670;&nbsp;</a></span>setScreenSaverTime()</h2>
 
@@ -760,7 +799,9 @@ Public 成员函数</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
 </small></address>
 </body>
 </html>
