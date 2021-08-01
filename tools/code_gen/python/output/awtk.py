@@ -12,6 +12,14 @@ def awtk_get_native_obj(obj):
     else: 
       return 0
 
+def setup(application_init, name, w, h, type):
+  TGlobal.init(w, h, type, name, "./") 
+
+  assets_init()
+  application_init()
+
+  TGlobal.run()
+
 #
 # 事件基类。
 #
