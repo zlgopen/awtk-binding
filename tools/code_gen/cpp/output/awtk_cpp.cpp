@@ -59,6 +59,22 @@
    return emitter_destroy(((emitter_t*)(this->nativeObj)));
  }
 
+ float TRectf::GetX() const {
+   return ((rectf_t*)(this->nativeObj))->x;
+ }
+
+ float TRectf::GetY() const {
+   return ((rectf_t*)(this->nativeObj))->y;
+ }
+
+ float TRectf::GetW() const {
+   return ((rectf_t*)(this->nativeObj))->w;
+ }
+
+ float TRectf::GetH() const {
+   return ((rectf_t*)(this->nativeObj))->h;
+ }
+
  TRect TRect::Create(xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TRect((rect_t*)(rect_create(x, y, w, h)));
  }
@@ -3371,6 +3387,10 @@
    return slide_view_set_loop(((widget_t*)(this->nativeObj)), loop);
  }
 
+ ret_t TSlideView::RemoveIndex(uint32_t index)  {
+   return slide_view_remove_index(((widget_t*)(this->nativeObj)), index);
+ }
+
  bool TSlideView::GetVertical() const {
    return ((slide_view_t*)(this->nativeObj))->vertical;
  }
@@ -4427,8 +4447,20 @@
    return object_array_push(((object_t*)(this->nativeObj)), ((const value_t*)(v.nativeObj)));
  }
 
+ int32_t TObjectArray::IndexOf(TValue& v)  {
+    return object_array_index_of(((object_t*)(this->nativeObj)), ((const value_t*)(v.nativeObj)));
+ }
+
+ int32_t TObjectArray::LastIndexOf(TValue& v)  {
+    return object_array_last_index_of(((object_t*)(this->nativeObj)), ((const value_t*)(v.nativeObj)));
+ }
+
  ret_t TObjectArray::Remove(uint32_t index)  {
    return object_array_remove(((object_t*)(this->nativeObj)), index);
+ }
+
+ ret_t TObjectArray::GetAndRemove(uint32_t index, TValue& v)  {
+   return object_array_get_and_remove(((object_t*)(this->nativeObj)), index, ((value_t*)(v.nativeObj)));
  }
 
  uint32_t TObjectArray::GetSize() const {

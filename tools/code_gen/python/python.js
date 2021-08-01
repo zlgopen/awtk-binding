@@ -194,12 +194,13 @@ class PythonGenerator extends TargetGen {
 
   genJsonAll(ojson) {
     let result = `
-from awtk_native import *\n
 def awtk_get_native_obj(obj):
     if(isinstance(obj, int)) :
         return obj;
-    else:
+    elif obj:
         return obj.nativeObj;
+    else: 
+      return 0
 `
     let json = this.filterScriptableJson(ojson);
     result += this.genFuncsDecl(json);

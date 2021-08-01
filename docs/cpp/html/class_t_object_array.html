@@ -99,8 +99,14 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a5f156f618a8684ef1e59311574c7aefd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86587ce0e7a41432c1933a5057bde7cc"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#a86587ce0e7a41432c1933a5057bde7cc">Push</a> (<a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
 <tr class="separator:a86587ce0e7a41432c1933a5057bde7cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ee7ea1a0f79b39f06b41d69425a560a"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#a3ee7ea1a0f79b39f06b41d69425a560a">IndexOf</a> (<a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
+<tr class="separator:a3ee7ea1a0f79b39f06b41d69425a560a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e9eddd679276099b507e84a6758e78e"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#a7e9eddd679276099b507e84a6758e78e">LastIndexOf</a> (<a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
+<tr class="separator:a7e9eddd679276099b507e84a6758e78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99fe1a8814076c17a6584c5ca8654064"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#a99fe1a8814076c17a6584c5ca8654064">Remove</a> (uint32_t index)</td></tr>
 <tr class="separator:a99fe1a8814076c17a6584c5ca8654064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6de3b47ca2bde6c05f9170765a99eea3"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#a6de3b47ca2bde6c05f9170765a99eea3">GetAndRemove</a> (uint32_t index, <a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
+<tr class="separator:a6de3b47ca2bde6c05f9170765a99eea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7ae5594d937c32271222965464b910e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#aa7ae5594d937c32271222965464b910e">GetSize</a> () const</td></tr>
 <tr class="separator:aa7ae5594d937c32271222965464b910e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_t_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_t_object')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_t_object.html">TObject</a></td></tr>
@@ -355,6 +361,43 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
+<a id="a6de3b47ca2bde6c05f9170765a99eea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6de3b47ca2bde6c05f9170765a99eea3">&#9670;&nbsp;</a></span>GetAndRemove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TObjectArray::GetAndRemove </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>在指定位置删除一个元素，并返回它。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>位置。 </td></tr>
+    <tr><td class="paramname">v</td><td>用于返回值。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="aa7ae5594d937c32271222965464b910e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa7ae5594d937c32271222965464b910e">&#9670;&nbsp;</a></span>GetSize()</h2>
 
@@ -370,6 +413,32 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
       </table>
 </div><div class="memdoc">
 <p>属性个数。 </p>
+
+</div>
+</div>
+<a id="a3ee7ea1a0f79b39f06b41d69425a560a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ee7ea1a0f79b39f06b41d69425a560a">&#9670;&nbsp;</a></span>IndexOf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t TObjectArray::IndexOf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>查找元素出现的第一个位置。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>值。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果找到返回其位置，否则返回-1。 </dd></dl>
 
 </div>
 </div>
@@ -407,6 +476,32 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a7e9eddd679276099b507e84a6758e78e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e9eddd679276099b507e84a6758e78e">&#9670;&nbsp;</a></span>LastIndexOf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t TObjectArray::LastIndexOf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>查找元素出现的最后一个位置。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>值。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果找到返回其位置，否则返回-1。 </dd></dl>
 
 </div>
 </div>

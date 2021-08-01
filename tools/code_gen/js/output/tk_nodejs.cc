@@ -338,6 +338,55 @@ ret_t pointf_t_init(v8::Local<v8::Object> ctx) {
  return RET_OK;
 }
 
+static void wrap_rectf_t_get_prop_x(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  rectf_t* obj = (rectf_t*)jsvalue_get_pointer(ctx, argv[0], "rectf_t*");
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(obj->x));
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
+static void wrap_rectf_t_get_prop_y(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  rectf_t* obj = (rectf_t*)jsvalue_get_pointer(ctx, argv[0], "rectf_t*");
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(obj->y));
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
+static void wrap_rectf_t_get_prop_w(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  rectf_t* obj = (rectf_t*)jsvalue_get_pointer(ctx, argv[0], "rectf_t*");
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(obj->w));
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
+static void wrap_rectf_t_get_prop_h(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  rectf_t* obj = (rectf_t*)jsvalue_get_pointer(ctx, argv[0], "rectf_t*");
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(obj->h));
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
+ret_t rectf_t_init(v8::Local<v8::Object> ctx) {
+  Nan::Export(ctx, "rectf_t_get_prop_x", wrap_rectf_t_get_prop_x);
+  Nan::Export(ctx, "rectf_t_get_prop_y", wrap_rectf_t_get_prop_y);
+  Nan::Export(ctx, "rectf_t_get_prop_w", wrap_rectf_t_get_prop_w);
+  Nan::Export(ctx, "rectf_t_get_prop_h", wrap_rectf_t_get_prop_h);
+
+ return RET_OK;
+}
+
 static void wrap_rect_create(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -21240,6 +21289,21 @@ static void wrap_slide_view_set_loop(const Nan::FunctionCallbackInfo<v8::Value>&
   (void)argc;(void)ctx;
 }
 
+static void wrap_slide_view_remove_index(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  uint32_t index = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)slide_view_remove_index(widget, index);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_slide_view_t_get_prop_vertical(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -21291,6 +21355,7 @@ ret_t slide_view_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "slide_view_set_vertical", wrap_slide_view_set_vertical);
   Nan::Export(ctx, "slide_view_set_anim_hint", wrap_slide_view_set_anim_hint);
   Nan::Export(ctx, "slide_view_set_loop", wrap_slide_view_set_loop);
+  Nan::Export(ctx, "slide_view_remove_index", wrap_slide_view_remove_index);
   Nan::Export(ctx, "slide_view_t_get_prop_vertical", wrap_slide_view_t_get_prop_vertical);
   Nan::Export(ctx, "slide_view_t_get_prop_auto_play", wrap_slide_view_t_get_prop_auto_play);
   Nan::Export(ctx, "slide_view_t_get_prop_loop", wrap_slide_view_t_get_prop_loop);
@@ -25990,6 +26055,36 @@ static void wrap_object_array_push(const Nan::FunctionCallbackInfo<v8::Value>& a
   (void)argc;(void)ctx;
 }
 
+static void wrap_object_array_index_of(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  int32_t ret = (int32_t)0;
+  object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[1], "const value_t*");
+  ret = (int32_t)object_array_index_of(obj, v);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
+static void wrap_object_array_last_index_of(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  int32_t ret = (int32_t)0;
+  object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[1], "const value_t*");
+  ret = (int32_t)object_array_last_index_of(obj, v);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_object_array_remove(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -25998,6 +26093,22 @@ static void wrap_object_array_remove(const Nan::FunctionCallbackInfo<v8::Value>&
   object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
   uint32_t index = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
   ret = (ret_t)object_array_remove(obj, index);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
+static void wrap_object_array_get_and_remove(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 3) {
+  ret_t ret = (ret_t)0;
+  object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
+  uint32_t index = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[2], "value_t*");
+  ret = (ret_t)object_array_get_and_remove(obj, index, v);
 
   v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
   argv.GetReturnValue().Set(jret);
@@ -26020,7 +26131,10 @@ ret_t object_array_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "object_array_clear_props", wrap_object_array_clear_props);
   Nan::Export(ctx, "object_array_insert", wrap_object_array_insert);
   Nan::Export(ctx, "object_array_push", wrap_object_array_push);
+  Nan::Export(ctx, "object_array_index_of", wrap_object_array_index_of);
+  Nan::Export(ctx, "object_array_last_index_of", wrap_object_array_last_index_of);
   Nan::Export(ctx, "object_array_remove", wrap_object_array_remove);
+  Nan::Export(ctx, "object_array_get_and_remove", wrap_object_array_get_and_remove);
   Nan::Export(ctx, "object_array_t_get_prop_size", wrap_object_array_t_get_prop_size);
 
  return RET_OK;
@@ -26828,6 +26942,7 @@ ret_t awtk_js_init(v8::Local<v8::Object> ctx) {
   emitter_t_init(ctx);
   point_t_init(ctx);
   pointf_t_init(ctx);
+  rectf_t_init(ctx);
   rect_t_init(ctx);
   bitmap_t_init(ctx);
   object_t_init(ctx);

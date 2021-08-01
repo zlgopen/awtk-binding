@@ -407,6 +407,74 @@ ret_t pointf_t_init(JSContext *ctx) {
  return RET_OK;
 }
 
+jsvalue_t wrap_rectf_t_get_prop_x(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  rectf_t* obj = (rectf_t*)jsvalue_get_pointer(ctx, argv[0], "rectf_t*");
+
+  jret = jsvalue_create_number(ctx, obj->x);
+  return jret;
+}
+
+jsvalue_t wrap_rectf_t_get_prop_y(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  rectf_t* obj = (rectf_t*)jsvalue_get_pointer(ctx, argv[0], "rectf_t*");
+
+  jret = jsvalue_create_number(ctx, obj->y);
+  return jret;
+}
+
+jsvalue_t wrap_rectf_t_get_prop_w(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  rectf_t* obj = (rectf_t*)jsvalue_get_pointer(ctx, argv[0], "rectf_t*");
+
+  jret = jsvalue_create_number(ctx, obj->w);
+  return jret;
+}
+
+jsvalue_t wrap_rectf_t_get_prop_h(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  rectf_t* obj = (rectf_t*)jsvalue_get_pointer(ctx, argv[0], "rectf_t*");
+
+  jret = jsvalue_create_number(ctx, obj->h);
+  return jret;
+}
+
+ret_t rectf_t_init(JSContext *ctx) {
+  jsvalue_t global_obj = JS_GetGlobalObject(ctx);
+  JS_SetPropertyStr(ctx, global_obj, "rectf_t_get_prop_x",
+                      JS_NewCFunction(ctx, wrap_rectf_t_get_prop_x, "rectf_t_get_prop_x", 1));
+  JS_SetPropertyStr(ctx, global_obj, "rectf_t_get_prop_y",
+                      JS_NewCFunction(ctx, wrap_rectf_t_get_prop_y, "rectf_t_get_prop_y", 1));
+  JS_SetPropertyStr(ctx, global_obj, "rectf_t_get_prop_w",
+                      JS_NewCFunction(ctx, wrap_rectf_t_get_prop_w, "rectf_t_get_prop_w", 1));
+  JS_SetPropertyStr(ctx, global_obj, "rectf_t_get_prop_h",
+                      JS_NewCFunction(ctx, wrap_rectf_t_get_prop_h, "rectf_t_get_prop_h", 1));
+
+ jsvalue_unref(ctx, global_obj);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_rect_create(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -26537,6 +26605,24 @@ jsvalue_t wrap_slide_view_set_loop(
   return jret;
 }
 
+jsvalue_t wrap_slide_view_remove_index(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  uint32_t index = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)slide_view_remove_index(widget, index);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_slide_view_t_get_prop_vertical(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -26607,6 +26693,8 @@ ret_t slide_view_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_slide_view_set_anim_hint, "slide_view_set_anim_hint", 1));
   JS_SetPropertyStr(ctx, global_obj, "slide_view_set_loop",
                       JS_NewCFunction(ctx, wrap_slide_view_set_loop, "slide_view_set_loop", 1));
+  JS_SetPropertyStr(ctx, global_obj, "slide_view_remove_index",
+                      JS_NewCFunction(ctx, wrap_slide_view_remove_index, "slide_view_remove_index", 1));
   JS_SetPropertyStr(ctx, global_obj, "slide_view_t_get_prop_vertical",
                       JS_NewCFunction(ctx, wrap_slide_view_t_get_prop_vertical, "slide_view_t_get_prop_vertical", 1));
   JS_SetPropertyStr(ctx, global_obj, "slide_view_t_get_prop_auto_play",
@@ -32560,6 +32648,42 @@ jsvalue_t wrap_object_array_push(
   return jret;
 }
 
+jsvalue_t wrap_object_array_index_of(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  int32_t ret = (int32_t)0;
+  object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[1], "const value_t*");
+  ret = (int32_t)object_array_index_of(obj, v);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_object_array_last_index_of(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  int32_t ret = (int32_t)0;
+  object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[1], "const value_t*");
+  ret = (int32_t)object_array_last_index_of(obj, v);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_object_array_remove(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -32572,6 +32696,25 @@ jsvalue_t wrap_object_array_remove(
   object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
   uint32_t index = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
   ret = (ret_t)object_array_remove(obj, index);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_object_array_get_and_remove(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 3) {
+  ret_t ret = (ret_t)0;
+  object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
+  uint32_t index = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[2], "value_t*");
+  ret = (ret_t)object_array_get_and_remove(obj, index, v);
 
   jret = jsvalue_create_int(ctx, ret);
   }
@@ -32601,8 +32744,14 @@ ret_t object_array_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_object_array_insert, "object_array_insert", 1));
   JS_SetPropertyStr(ctx, global_obj, "object_array_push",
                       JS_NewCFunction(ctx, wrap_object_array_push, "object_array_push", 1));
+  JS_SetPropertyStr(ctx, global_obj, "object_array_index_of",
+                      JS_NewCFunction(ctx, wrap_object_array_index_of, "object_array_index_of", 1));
+  JS_SetPropertyStr(ctx, global_obj, "object_array_last_index_of",
+                      JS_NewCFunction(ctx, wrap_object_array_last_index_of, "object_array_last_index_of", 1));
   JS_SetPropertyStr(ctx, global_obj, "object_array_remove",
                       JS_NewCFunction(ctx, wrap_object_array_remove, "object_array_remove", 1));
+  JS_SetPropertyStr(ctx, global_obj, "object_array_get_and_remove",
+                      JS_NewCFunction(ctx, wrap_object_array_get_and_remove, "object_array_get_and_remove", 1));
   JS_SetPropertyStr(ctx, global_obj, "object_array_t_get_prop_size",
                       JS_NewCFunction(ctx, wrap_object_array_t_get_prop_size, "object_array_t_get_prop_size", 1));
 
@@ -33641,6 +33790,7 @@ ret_t awtk_js_init(JSContext *ctx) {
   emitter_t_init(ctx);
   point_t_init(ctx);
   pointf_t_init(ctx);
+  rectf_t_init(ctx);
   rect_t_init(ctx);
   bitmap_t_init(ctx);
   object_t_init(ctx);

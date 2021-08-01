@@ -260,6 +260,58 @@ public:
  * 矩形。包括一个x坐标、y坐标、宽度和高度。
  *
  */
+class TRectf { 
+public:
+  //nativeObj is public for internal use only.
+  rectf_t* nativeObj;
+
+  TRectf(rectf_t* nativeObj) {
+    this->nativeObj = nativeObj;
+  }
+
+  TRectf(const rectf_t* nativeObj) {
+    this->nativeObj = (rectf_t*)nativeObj;
+  }
+
+  static TRectf Cast(rectf_t* nativeObj) {
+    return TRectf(nativeObj);
+  }
+
+  static TRectf Cast(const rectf_t* nativeObj) {
+    return TRectf((rectf_t*)nativeObj);
+  }
+
+
+  /**
+   * x坐标。
+   *
+   */
+  float GetX() const;
+
+  /**
+   * y坐标。
+   *
+   */
+  float GetY() const;
+
+  /**
+   * 宽度。
+   *
+   */
+  float GetW() const;
+
+  /**
+   * 高度。
+   *
+   */
+  float GetH() const;
+};
+
+
+/**
+ * 矩形。包括一个x坐标、y坐标、宽度和高度。
+ *
+ */
 class TRect { 
 public:
   //nativeObj is public for internal use only.
@@ -10146,6 +10198,15 @@ public:
   ret_t SetLoop(bool loop) ;
 
   /**
+   * 删除指定序号页面。
+   * 
+   * @param index 删除页面的序号。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t RemoveIndex(uint32_t index) ;
+
+  /**
    * 是否为上下滑动模式。
    *
    */
@@ -14491,6 +14552,7 @@ public:
  *| INPUT\_HEX      | kb\_hex.xml      |
  *| INPUT\_EMAIL    | kb\_ascii.xml    |
  *| INPUT\_PASSWORD | kb\_ascii.xml    |
+ *| INPUT\_ASCII    | kb\_ascii.xml    |
  *| INPUT\_CUSTOM   | 使用自定义的键盘 |
  *| 其它            | kb\_default.xml  |
  *
@@ -14882,6 +14944,24 @@ public:
   ret_t Push(TValue& v) ;
 
   /**
+   * 查找元素出现的第一个位置。
+   * 
+   * @param v 值。
+   *
+   * @return 如果找到返回其位置，否则返回-1。
+   */
+  int32_t IndexOf(TValue& v) ;
+
+  /**
+   * 查找元素出现的最后一个位置。
+   * 
+   * @param v 值。
+   *
+   * @return 如果找到返回其位置，否则返回-1。
+   */
+  int32_t LastIndexOf(TValue& v) ;
+
+  /**
    * 在指定位置删除一个元素。
    * 
    * @param index 位置。
@@ -14889,6 +14969,16 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t Remove(uint32_t index) ;
+
+  /**
+   * 在指定位置删除一个元素，并返回它。
+   * 
+   * @param index 位置。
+   * @param v 用于返回值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t GetAndRemove(uint32_t index, TValue& v) ;
 
   /**
    * 属性个数。

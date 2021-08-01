@@ -131,6 +131,8 @@ static int wrap_point_t_get_prop(lua_State* L);
 static int wrap_point_t_set_prop(lua_State* L);
 static int wrap_pointf_t_get_prop(lua_State* L);
 static int wrap_pointf_t_set_prop(lua_State* L);
+static int wrap_rectf_t_get_prop(lua_State* L);
+static int wrap_rectf_t_set_prop(lua_State* L);
 static int wrap_rect_t_get_prop(lua_State* L);
 static int wrap_rect_t_set_prop(lua_State* L);
 static int wrap_bitmap_t_get_prop(lua_State* L);
@@ -710,6 +712,76 @@ static void pointf_t_init(lua_State* L) {
   lua_settable(L, -3);
   luaL_openlib(L, NULL, index_funcs, 0);
   luaL_openlib(L, "Pointf", static_funcs, 0);
+  lua_settop(L, 0);
+}
+
+static const struct luaL_Reg rectf_t_member_funcs[] = {
+  {NULL, NULL}
+};
+
+static int wrap_rectf_t_set_prop(lua_State* L) {
+  rectf_t* obj = (rectf_t*)tk_checkudata(L, 1, "rectf_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  (void)obj;
+  (void)name;
+  log_debug("%s: not supported %s\n", __FUNCTION__, name);
+  return 0;
+}
+
+static int wrap_rectf_t_get_prop(lua_State* L) {
+  rectf_t* obj = (rectf_t*)tk_checkudata(L, 1, "rectf_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  const luaL_Reg* ret = find_member(rectf_t_member_funcs, name);
+
+  (void)obj;
+  (void)name;
+  if(ret) {
+    lua_pushcfunction(L, ret->func);
+    return 1;
+  }
+  if(strcmp(name, "x") == 0) {
+    lua_pushnumber(L,(lua_Number)(obj->x));
+
+  return 1;
+  }
+  else if(strcmp(name, "y") == 0) {
+    lua_pushnumber(L,(lua_Number)(obj->y));
+
+  return 1;
+  }
+  else if(strcmp(name, "w") == 0) {
+    lua_pushnumber(L,(lua_Number)(obj->w));
+
+  return 1;
+  }
+  else if(strcmp(name, "h") == 0) {
+    lua_pushnumber(L,(lua_Number)(obj->h));
+
+  return 1;
+  }
+  else {
+    log_debug("%s: not supported %s\n", __FUNCTION__, name);
+    return 0;
+  }
+}
+
+static void rectf_t_init(lua_State* L) {
+  static const struct luaL_Reg static_funcs[] = {
+    {NULL, NULL}
+  };
+
+  static const struct luaL_Reg index_funcs[] = {
+    {"__index", wrap_rectf_t_get_prop},
+    {"__newindex", wrap_rectf_t_set_prop},
+    {NULL, NULL}
+  };
+
+  luaL_newmetatable(L, "awtk.rectf_t");
+  lua_pushstring(L, "__index");
+  lua_pushvalue(L, -2);
+  lua_settable(L, -3);
+  luaL_openlib(L, NULL, index_funcs, 0);
+  luaL_openlib(L, "Rectf", static_funcs, 0);
   lua_settop(L, 0);
 }
 static int wrap_rect_create(lua_State* L) {
@@ -15762,6 +15834,17 @@ static int wrap_slide_view_set_loop(lua_State* L) {
   return 1;
 }
 
+static int wrap_slide_view_remove_index(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  uint32_t index = (uint32_t)luaL_checkinteger(L, 2);
+  ret = (ret_t)slide_view_remove_index(widget, index);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 
 static const struct luaL_Reg slide_view_t_member_funcs[] = {
   {"set_auto_play", wrap_slide_view_set_auto_play},
@@ -15770,6 +15853,7 @@ static const struct luaL_Reg slide_view_t_member_funcs[] = {
   {"set_vertical", wrap_slide_view_set_vertical},
   {"set_anim_hint", wrap_slide_view_set_anim_hint},
   {"set_loop", wrap_slide_view_set_loop},
+  {"remove_index", wrap_slide_view_remove_index},
   {NULL, NULL}
 };
 
@@ -20675,11 +20759,45 @@ static int wrap_object_array_push(lua_State* L) {
   return 1;
 }
 
+static int wrap_object_array_index_of(lua_State* L) {
+  int32_t ret = 0;
+  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  const value_t* v = (const value_t*)tk_checkudata(L, 2, "const value_t");
+  ret = (int32_t)object_array_index_of(obj, v);
+
+  lua_pushinteger(L,(lua_Integer)(ret));
+
+  return 1;
+}
+
+static int wrap_object_array_last_index_of(lua_State* L) {
+  int32_t ret = 0;
+  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  const value_t* v = (const value_t*)tk_checkudata(L, 2, "const value_t");
+  ret = (int32_t)object_array_last_index_of(obj, v);
+
+  lua_pushinteger(L,(lua_Integer)(ret));
+
+  return 1;
+}
+
 static int wrap_object_array_remove(lua_State* L) {
   ret_t ret = 0;
   object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
   uint32_t index = (uint32_t)luaL_checkinteger(L, 2);
   ret = (ret_t)object_array_remove(obj, index);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_object_array_get_and_remove(lua_State* L) {
+  ret_t ret = 0;
+  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  uint32_t index = (uint32_t)luaL_checkinteger(L, 2);
+  value_t* v = (value_t*)tk_checkudata(L, 3, "value_t");
+  ret = (ret_t)object_array_get_and_remove(obj, index, v);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
@@ -20692,7 +20810,10 @@ static const struct luaL_Reg object_array_t_member_funcs[] = {
   {"clear_props", wrap_object_array_clear_props},
   {"insert", wrap_object_array_insert},
   {"push", wrap_object_array_push},
+  {"index_of", wrap_object_array_index_of},
+  {"last_index_of", wrap_object_array_last_index_of},
   {"remove", wrap_object_array_remove},
+  {"get_and_remove", wrap_object_array_get_and_remove},
   {NULL, NULL}
 };
 
@@ -21707,6 +21828,7 @@ void luaL_openawtk(lua_State* L) {
   emitter_t_init(L);
   point_t_init(L);
   pointf_t_init(L);
+  rectf_t_init(L);
   rect_t_init(L);
   bitmap_t_init(L);
   object_t_init(L);

@@ -23,6 +23,10 @@ declare function emitter_enable(emitter : any) : TRet;
 declare function emitter_disable(emitter : any) : TRet;
 declare function emitter_destroy(emitter : any) : TRet;
 declare function emitter_cast(emitter : any) : any;
+declare function rectf_t_get_prop_x(nativeObj : any) : number;
+declare function rectf_t_get_prop_y(nativeObj : any) : number;
+declare function rectf_t_get_prop_w(nativeObj : any) : number;
+declare function rectf_t_get_prop_h(nativeObj : any) : number;
 declare function rect_create(x : number, y : number, w : number, h : number) : any;
 declare function rect_set(rect : any, x : number, y : number, w : number, h : number) : any;
 declare function rect_cast(rect : any) : any;
@@ -1716,6 +1720,7 @@ declare function slide_view_set_active_ex(widget : any, index : number, animate 
 declare function slide_view_set_vertical(widget : any, vertical : boolean) : TRet;
 declare function slide_view_set_anim_hint(widget : any, anim_hint : string) : TRet;
 declare function slide_view_set_loop(widget : any, loop : boolean) : TRet;
+declare function slide_view_remove_index(widget : any, index : number) : TRet;
 declare function slide_view_t_get_prop_vertical(nativeObj : any) : boolean;
 declare function slide_view_t_get_prop_auto_play(nativeObj : any) : number;
 declare function slide_view_t_get_prop_loop(nativeObj : any) : boolean;
@@ -2020,7 +2025,10 @@ declare function object_array_unref(obj : any) : TRet;
 declare function object_array_clear_props(obj : any) : TRet;
 declare function object_array_insert(obj : any, index : number, v : any) : TRet;
 declare function object_array_push(obj : any, v : any) : TRet;
+declare function object_array_index_of(obj : any, v : any) : number;
+declare function object_array_last_index_of(obj : any, v : any) : number;
 declare function object_array_remove(obj : any, index : number) : TRet;
+declare function object_array_get_and_remove(obj : any, index : number, v : any) : TRet;
 declare function object_array_t_get_prop_size(nativeObj : any) : number;
 declare function object_default_create() : any;
 declare function object_default_unref(obj : any) : TRet;
@@ -2317,6 +2325,53 @@ export class TPointf {
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
+ }
+
+};
+/**
+ * 矩形。包括一个x坐标、y坐标、宽度和高度。
+ *
+ */
+export class TRectf { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
+
+
+  /**
+   * x坐标。
+   *
+   */
+ get x() : number {
+   return rectf_t_get_prop_x(this.nativeObj);
+ }
+
+
+  /**
+   * y坐标。
+   *
+   */
+ get y() : number {
+   return rectf_t_get_prop_y(this.nativeObj);
+ }
+
+
+  /**
+   * 宽度。
+   *
+   */
+ get w() : number {
+   return rectf_t_get_prop_w(this.nativeObj);
+ }
+
+
+  /**
+   * 高度。
+   *
+   */
+ get h() : number {
+   return rectf_t_get_prop_h(this.nativeObj);
  }
 
 };
@@ -19788,6 +19843,18 @@ export class TSlideView extends TWidget {
 
 
   /**
+   * 删除指定序号页面。
+   * 
+   * @param index 删除页面的序号。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ removeIndex(index : number) : TRet  {
+    return slide_view_remove_index(this != null ? (this.nativeObj || this) : null, index);
+ }
+
+
+  /**
    * 是否为上下滑动模式。
    *
    */
@@ -24842,6 +24909,7 @@ export class TGifImage extends TImageBase {
  *| INPUT\_HEX      | kb\_hex.xml      |
  *| INPUT\_EMAIL    | kb\_ascii.xml    |
  *| INPUT\_PASSWORD | kb\_ascii.xml    |
+ *| INPUT\_ASCII    | kb\_ascii.xml    |
  *| INPUT\_CUSTOM   | 使用自定义的键盘 |
  *| 其它            | kb\_default.xml  |
  *
@@ -25204,6 +25272,30 @@ export class TObjectArray extends TObject {
 
 
   /**
+   * 查找元素出现的第一个位置。
+   * 
+   * @param v 值。
+   *
+   * @returns 如果找到返回其位置，否则返回-1。
+   */
+ indexOf(v : TValue) : number  {
+    return object_array_index_of(this != null ? (this.nativeObj || this) : null, v != null ? (v.nativeObj || v) : null);
+ }
+
+
+  /**
+   * 查找元素出现的最后一个位置。
+   * 
+   * @param v 值。
+   *
+   * @returns 如果找到返回其位置，否则返回-1。
+   */
+ lastIndexOf(v : TValue) : number  {
+    return object_array_last_index_of(this != null ? (this.nativeObj || this) : null, v != null ? (v.nativeObj || v) : null);
+ }
+
+
+  /**
    * 在指定位置删除一个元素。
    * 
    * @param index 位置。
@@ -25212,6 +25304,19 @@ export class TObjectArray extends TObject {
    */
  remove(index : number) : TRet  {
     return object_array_remove(this != null ? (this.nativeObj || this) : null, index);
+ }
+
+
+  /**
+   * 在指定位置删除一个元素，并返回它。
+   * 
+   * @param index 位置。
+   * @param v 用于返回值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ getAndRemove(index : number, v : TValue) : TRet  {
+    return object_array_get_and_remove(this != null ? (this.nativeObj || this) : null, index, v != null ? (v.nativeObj || v) : null);
  }
 
 

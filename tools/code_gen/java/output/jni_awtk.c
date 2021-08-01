@@ -152,6 +152,42 @@ int awtk_TEmitter_emitter_cast(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TRectf_rectf_t_get_prop_x(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  rectf_t* obj = (rectf_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_float(&actx, (float)(obj->x));
+
+  return 0;
+}
+
+int awtk_TRectf_rectf_t_get_prop_y(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  rectf_t* obj = (rectf_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_float(&actx, (float)(obj->y));
+
+  return 0;
+}
+
+int awtk_TRectf_rectf_t_get_prop_w(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  rectf_t* obj = (rectf_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_float(&actx, (float)(obj->w));
+
+  return 0;
+}
+
+int awtk_TRectf_rectf_t_get_prop_h(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  rectf_t* obj = (rectf_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_float(&actx, (float)(obj->h));
+
+  return 0;
+}
+
 int awtk_TRect_rect_create(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -16629,6 +16665,18 @@ int awtk_TSlideView_slide_view_set_loop(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TSlideView_slide_view_remove_index(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  uint32_t index = (uint32_t)jni_ctx_get_int(&actx);
+  ret = (ret_t)slide_view_remove_index(widget, index);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TSlideView_slide_view_t_get_prop_vertical(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -20074,6 +20122,30 @@ int awtk_TObjectArray_object_array_push(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TObjectArray_object_array_index_of(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  int32_t ret = 0;
+  object_t* obj = (object_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
+  ret = (int32_t)object_array_index_of(obj, v);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TObjectArray_object_array_last_index_of(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  int32_t ret = 0;
+  object_t* obj = (object_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
+  ret = (int32_t)object_array_last_index_of(obj, v);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TObjectArray_object_array_remove(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -20081,6 +20153,19 @@ int awtk_TObjectArray_object_array_remove(Runtime *runtime, JClass *clazz) {
   object_t* obj = (object_t*)jni_ctx_get_object(&actx);
   uint32_t index = (uint32_t)jni_ctx_get_int(&actx);
   ret = (ret_t)object_array_remove(obj, index);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TObjectArray_object_array_get_and_remove(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  object_t* obj = (object_t*)jni_ctx_get_object(&actx);
+  uint32_t index = (uint32_t)jni_ctx_get_int(&actx);
+  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  ret = (ret_t)object_array_get_and_remove(obj, index, v);
   jni_ctx_return_int(&actx, (int32_t)(ret));
 
   return 0;
@@ -20686,6 +20771,10 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TEmitter",  "emitter_enable",  "(J)I",  awtk_TEmitter_emitter_enable},
 {"awtk/TEmitter",  "emitter_disable",  "(J)I",  awtk_TEmitter_emitter_disable},
 {"awtk/TEmitter",  "emitter_cast",  "(J)J",  awtk_TEmitter_emitter_cast},
+{"awtk/TRectf",  "rectf_t_get_prop_x",  "(J)F",  awtk_TRectf_rectf_t_get_prop_x},
+{"awtk/TRectf",  "rectf_t_get_prop_y",  "(J)F",  awtk_TRectf_rectf_t_get_prop_y},
+{"awtk/TRectf",  "rectf_t_get_prop_w",  "(J)F",  awtk_TRectf_rectf_t_get_prop_w},
+{"awtk/TRectf",  "rectf_t_get_prop_h",  "(J)F",  awtk_TRectf_rectf_t_get_prop_h},
 {"awtk/TRect",  "rect_create",  "(IIII)J",  awtk_TRect_rect_create},
 {"awtk/TRect",  "rect_set",  "(JIIII)J",  awtk_TRect_rect_set},
 {"awtk/TRect",  "rect_cast",  "(J)J",  awtk_TRect_rect_cast},
@@ -22372,6 +22461,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TSlideView",  "slide_view_set_vertical",  "(JZ)I",  awtk_TSlideView_slide_view_set_vertical},
 {"awtk/TSlideView",  "slide_view_set_anim_hint",  "(JLjava/lang/String;)I",  awtk_TSlideView_slide_view_set_anim_hint},
 {"awtk/TSlideView",  "slide_view_set_loop",  "(JZ)I",  awtk_TSlideView_slide_view_set_loop},
+{"awtk/TSlideView",  "slide_view_remove_index",  "(JI)I",  awtk_TSlideView_slide_view_remove_index},
 {"awtk/TSlideView",  "slide_view_t_get_prop_vertical",  "(J)Z",  awtk_TSlideView_slide_view_t_get_prop_vertical},
 {"awtk/TSlideView",  "slide_view_t_get_prop_auto_play",  "(J)I",  awtk_TSlideView_slide_view_t_get_prop_auto_play},
 {"awtk/TSlideView",  "slide_view_t_get_prop_loop",  "(J)Z",  awtk_TSlideView_slide_view_t_get_prop_loop},
@@ -22675,7 +22765,10 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TObjectArray",  "object_array_clear_props",  "(J)I",  awtk_TObjectArray_object_array_clear_props},
 {"awtk/TObjectArray",  "object_array_insert",  "(JIJ)I",  awtk_TObjectArray_object_array_insert},
 {"awtk/TObjectArray",  "object_array_push",  "(JJ)I",  awtk_TObjectArray_object_array_push},
+{"awtk/TObjectArray",  "object_array_index_of",  "(JJ)I",  awtk_TObjectArray_object_array_index_of},
+{"awtk/TObjectArray",  "object_array_last_index_of",  "(JJ)I",  awtk_TObjectArray_object_array_last_index_of},
 {"awtk/TObjectArray",  "object_array_remove",  "(JI)I",  awtk_TObjectArray_object_array_remove},
+{"awtk/TObjectArray",  "object_array_get_and_remove",  "(JIJ)I",  awtk_TObjectArray_object_array_get_and_remove},
 {"awtk/TObjectArray",  "object_array_t_get_prop_size",  "(J)I",  awtk_TObjectArray_object_array_t_get_prop_size},
 {"awtk/TObjectDefault",  "object_default_create",  "()J",  awtk_TObjectDefault_object_default_create},
 {"awtk/TObjectDefault",  "object_default_clear_props",  "(J)I",  awtk_TObjectDefault_object_default_clear_props},
