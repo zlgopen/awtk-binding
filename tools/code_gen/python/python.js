@@ -206,6 +206,14 @@ def awtk_get_native_obj(obj):
         return obj.nativeObj;
     else: 
       return 0
+
+def setup(application_init, name, w, h, type):
+  TGlobal.init(w, h, type, name, "./") 
+
+  assets_init()
+  application_init()
+
+  TGlobal.run()
 `
     let json = this.filterScriptableJson(ojson);
     result += this.genFuncsDecl(json);
