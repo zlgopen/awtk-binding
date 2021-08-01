@@ -1,4 +1,9 @@
 ﻿
+from awtk_native import *;
+
+def assets_init():
+  return tk_assets_init();
+
 def awtk_get_native_obj(obj):
     if(isinstance(obj, int)) :
         return obj;

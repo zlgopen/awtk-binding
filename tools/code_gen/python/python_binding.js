@@ -5,6 +5,7 @@ class PythonBindingGenerator extends BindingGen {
   constructor() {
     super();
     this.regEntries = '';
+    this.addRegEntry('tk_assets_init', 'wrap');
   }
 
   genGetParams(m) {
