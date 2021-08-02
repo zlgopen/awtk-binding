@@ -118,7 +118,7 @@ class PythonGenerator extends TargetGen {
 
     result += `  @${name}.setter\n`
     result += `  def ${name}(self, ${this.mapTypeVar(p.type, 'v')}):\n`;
-    result += `   this.${setter}(v);\n`;
+    result += `   self.${setter}(v);\n`;
     result += '\n';
 
     return result;
