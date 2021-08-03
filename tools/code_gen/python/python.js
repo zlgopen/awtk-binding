@@ -63,7 +63,7 @@ class PythonGenerator extends TargetGen {
       const parentClassName = this.toClassName(cls.parent);
       result += `    super(${clsName}, self).__init__(nativeObj)\n`;
     } else {
-      result += '    self.nativeObj = nativeObj;\n';
+      result += '    self.nativeObj = nativeObj\n';
     }
     result += '\n';
 
@@ -82,7 +82,7 @@ class PythonGenerator extends TargetGen {
     const name = c.name;
     const shortName = name.replace(cls.prefix, "");
 
-    return `  ${shortName} = ${name}();\n`
+    return `  ${shortName} = ${name}()\n`
   }
 
   genParamsDecl(m) {
@@ -156,7 +156,7 @@ class PythonGenerator extends TargetGen {
 
     result += `  @${name}.setter\n`
     result += `  def ${name}(self, ${this.mapTypeVar(p.type, 'v')}):\n`;
-    result += `    ${funcName}(self.nativeObj, v);\n`;
+    result += `    ${funcName}(self.nativeObj, v)\n`;
     result += '\n';
 
     return result;
@@ -173,9 +173,9 @@ class PythonGenerator extends TargetGen {
     result += `  @property\n`
     result += `  def ${name}(self):\n`;
     if (retType && this.typeIsPointer(type)) {
-      result += `    return ${retType}(${funcName}(self.nativeObj));\n`;
+      result += `    return ${retType}(${funcName}(self.nativeObj))\n`;
     } else {
-      result += `    return ${funcName}(self.nativeObj);\n`;
+      result += `    return ${funcName}(self.nativeObj)\n`;
     }
     result += '\n';
 
@@ -196,7 +196,7 @@ class PythonGenerator extends TargetGen {
         const name = iter.name;
         const shortName = name.replace(cls.prefix, "");
         result += this.genEnumItemDoc(iter);
-        result += `  ${shortName} = ${name}();\n`
+        result += `  ${shortName} = ${name}()\n`
       });
     }
 
@@ -222,13 +222,13 @@ class PythonGenerator extends TargetGen {
 from awtk_native import *;
 
 def assets_init():
-  return tk_assets_init();
+  return tk_assets_init()
 
 def awtk_get_native_obj(obj):
-    if(isinstance(obj, int)) :
-        return obj;
+    if(isinstance(obj, int)):
+        return obj
     elif obj:
-        return obj.nativeObj;
+        return obj.nativeObj
     else: 
       return 0
 
