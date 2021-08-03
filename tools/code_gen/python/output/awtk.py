@@ -14,7 +14,7 @@ def awtk_get_native_obj(obj):
 
 def setup(application_init, name, w, h, type):
   TGlobal.init(w, h, type, name, "./") 
-
+  TExtWidgets.init()
   assets_init()
   application_init()
 
