@@ -4,75 +4,6 @@
 
 #include "custom.c"
 
-int awtk_TEvent_event_cast(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
-
-  event_t* ret = NULL;
-  event_t* event = (event_t*)jni_ctx_get_object(&actx);
-  ret = (event_t*)event_cast(event);
-  jni_ctx_return_object(&actx, (void*)(ret));
-
-  return 0;
-}
-
-int awtk_TEvent_event_get_type(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
-
-  uint32_t ret = 0;
-  event_t* event = (event_t*)jni_ctx_get_object(&actx);
-  ret = (uint32_t)event_get_type(event);
-  jni_ctx_return_int(&actx, (int32_t)(ret));
-
-  return 0;
-}
-
-int awtk_TEvent_event_create(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
-
-  event_t* ret = NULL;
-  uint32_t type = (uint32_t)jni_ctx_get_int(&actx);
-  ret = (event_t*)event_create(type);
-  jni_ctx_return_object(&actx, (void*)(ret));
-
-  return 0;
-}
-
-int awtk_TEvent_event_t_get_prop_type(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
-
-  event_t* obj = (event_t*)jni_ctx_get_object(&actx);
-  jni_ctx_return_int(&actx, (int32_t)(obj->type));
-
-  return 0;
-}
-
-int awtk_TEvent_event_t_get_prop_size(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
-
-  event_t* obj = (event_t*)jni_ctx_get_object(&actx);
-  jni_ctx_return_int(&actx, (int32_t)(obj->size));
-
-  return 0;
-}
-
-int awtk_TEvent_event_t_get_prop_time(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
-
-  event_t* obj = (event_t*)jni_ctx_get_object(&actx);
-  jni_ctx_return_int64(&actx, (int64_t)(obj->time));
-
-  return 0;
-}
-
-int awtk_TEvent_event_t_get_prop_target(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
-
-  event_t* obj = (event_t*)jni_ctx_get_object(&actx);
-  jni_ctx_return_int64(&actx, (int64_t)(obj->target));
-
-  return 0;
-}
-
 int awtk_TEmitter_emitter_create(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -3152,6 +3083,87 @@ int awtk_TEventType_EVT_DESTROY(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   jni_ctx_return_int(&actx, (int32_t)(EVT_DESTROY));
+
+  return 0;
+}
+
+int awtk_TEvent_event_from_name(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  int32_t ret = 0;
+  const char* name = (const char*)jni_ctx_get_str(&actx);
+  ret = (int32_t)event_from_name(name);
+  TKMEM_FREE(name);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TEvent_event_cast(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  event_t* ret = NULL;
+  event_t* event = (event_t*)jni_ctx_get_object(&actx);
+  ret = (event_t*)event_cast(event);
+  jni_ctx_return_object(&actx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TEvent_event_get_type(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  uint32_t ret = 0;
+  event_t* event = (event_t*)jni_ctx_get_object(&actx);
+  ret = (uint32_t)event_get_type(event);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TEvent_event_create(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  event_t* ret = NULL;
+  uint32_t type = (uint32_t)jni_ctx_get_int(&actx);
+  ret = (event_t*)event_create(type);
+  jni_ctx_return_object(&actx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TEvent_event_t_get_prop_type(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  event_t* obj = (event_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_int(&actx, (int32_t)(obj->type));
+
+  return 0;
+}
+
+int awtk_TEvent_event_t_get_prop_size(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  event_t* obj = (event_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_int(&actx, (int32_t)(obj->size));
+
+  return 0;
+}
+
+int awtk_TEvent_event_t_get_prop_time(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  event_t* obj = (event_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_int64(&actx, (int64_t)(obj->time));
+
+  return 0;
+}
+
+int awtk_TEvent_event_t_get_prop_target(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  event_t* obj = (event_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_int64(&actx, (int64_t)(obj->target));
 
   return 0;
 }
@@ -20756,13 +20768,6 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/AWTK",  "init",  "(III)I",  awtk_AWTK_init},
 {"awtk/AWTK",  "run",  "()I",  awtk_AWTK_run},
 
-{"awtk/TEvent",  "event_cast",  "(J)J",  awtk_TEvent_event_cast},
-{"awtk/TEvent",  "event_get_type",  "(J)I",  awtk_TEvent_event_get_type},
-{"awtk/TEvent",  "event_create",  "(I)J",  awtk_TEvent_event_create},
-{"awtk/TEvent",  "event_t_get_prop_type",  "(J)I",  awtk_TEvent_event_t_get_prop_type},
-{"awtk/TEvent",  "event_t_get_prop_size",  "(J)I",  awtk_TEvent_event_t_get_prop_size},
-{"awtk/TEvent",  "event_t_get_prop_time",  "(J)J",  awtk_TEvent_event_t_get_prop_time},
-{"awtk/TEvent",  "event_t_get_prop_target",  "(J)J",  awtk_TEvent_event_t_get_prop_target},
 {"awtk/TEmitter",  "emitter_create",  "()J",  awtk_TEmitter_emitter_create},
 {"awtk/TEmitter",  "emitter_dispatch",  "(JJ)I",  awtk_TEmitter_emitter_dispatch},
 {"awtk/TEmitter",  "emitter_dispatch_simple_event",  "(JI)I",  awtk_TEmitter_emitter_dispatch_simple_event},
@@ -21063,6 +21068,14 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TEventType",  "EVT_DONE",  "()I",  awtk_TEventType_EVT_DONE},
 {"awtk/TEventType",  "EVT_ERROR",  "()I",  awtk_TEventType_EVT_ERROR},
 {"awtk/TEventType",  "EVT_DESTROY",  "()I",  awtk_TEventType_EVT_DESTROY},
+{"awtk/TEvent",  "event_from_name",  "(Ljava/lang/String;)I",  awtk_TEvent_event_from_name},
+{"awtk/TEvent",  "event_cast",  "(J)J",  awtk_TEvent_event_cast},
+{"awtk/TEvent",  "event_get_type",  "(J)I",  awtk_TEvent_event_get_type},
+{"awtk/TEvent",  "event_create",  "(I)J",  awtk_TEvent_event_create},
+{"awtk/TEvent",  "event_t_get_prop_type",  "(J)I",  awtk_TEvent_event_t_get_prop_type},
+{"awtk/TEvent",  "event_t_get_prop_size",  "(J)I",  awtk_TEvent_event_t_get_prop_size},
+{"awtk/TEvent",  "event_t_get_prop_time",  "(J)J",  awtk_TEvent_event_t_get_prop_time},
+{"awtk/TEvent",  "event_t_get_prop_target",  "(J)J",  awtk_TEvent_event_t_get_prop_target},
 {"awtk/TFontManager",  "font_manager_unload_font",  "(JLjava/lang/String;I)I",  awtk_TFontManager_font_manager_unload_font},
 {"awtk/TFontManager",  "font_manager_shrink_cache",  "(JI)I",  awtk_TFontManager_font_manager_shrink_cache},
 {"awtk/TFontManager",  "font_manager_unload_all",  "(J)I",  awtk_TFontManager_font_manager_unload_all},

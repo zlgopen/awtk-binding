@@ -44,6 +44,20 @@ class PythonGenerator extends TargetGen {
     let result = '';
     let clsName = this.toClassName(this.getClassName(cls));
 
+    result += `
+  def __new__(cls, native_obj=0):
+      if native_obj == 0:
+          return None
+      else:
+          if super().__new__ == object.__new__:
+              instance = super().__new__(cls)
+          else:
+              instance = super().__new__(cls, native_obj)
+          instance.nativeObj = native_obj
+          return instance
+    `;
+    result += '\n';
+
     result += '  def __init__(self, nativeObj):\n';
     if (cls.parent) {
       const parentClassName = this.toClassName(cls.parent);
@@ -52,6 +66,14 @@ class PythonGenerator extends TargetGen {
       result += '    self.nativeObj = nativeObj;\n';
     }
     result += '\n';
+
+    result += `
+  def __eq__(self, other: 'TWidget'):
+      if other is None:
+          return self.nativeObj == 0
+      return self.nativeObj == other.nativeObj
+    `;
+
 
     return result;
   }
@@ -104,7 +126,7 @@ class PythonGenerator extends TargetGen {
       result += `  @classmethod\n`;
     }
     result += `  def ${this.genFuncDecl(cls, m, name)}: \n`;
-    result += this.genCallMethod(cls, m);
+    result += '  ' + this.genCallMethod(cls, m).replace(';', '');
     result += '\n';
 
     return result;
@@ -114,11 +136,14 @@ class PythonGenerator extends TargetGen {
     let result = '';
     const name = this.toFuncName(cls.name, p.name);
     const setter = this.toFuncName(cls.name, "set_" + p.name);
-    const funcName = this.getSetPropertyFuncName(cls, p);
+//    const funcName = this.getSetPropertyFuncName(cls, p);
+
+    let prefix = cls.name.replace(/_t$/, '');
+    const funcName = `${prefix}_set_${p.name}`
 
     result += `  @${name}.setter\n`
     result += `  def ${name}(self, ${this.mapTypeVar(p.type, 'v')}):\n`;
-    result += `    self.${setter}(v);\n`;
+    result += `    ${funcName}(self.nativeObj, v)\n`;
     result += '\n';
 
     return result;

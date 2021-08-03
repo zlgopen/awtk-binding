@@ -116,6 +116,8 @@ Public 成员函数</h2></td></tr>
 静态 Public 成员函数</h2></td></tr>
 <tr class="memitem:ab2ab11fa6f541612f29e4746fa5bf9f6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_event.html">TEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#ab2ab11fa6f541612f29e4746fa5bf9f6">cast</a> (long <a class="el" href="classawtk_1_1_t_event.html#aede2b8f4ca1f04e2ac01814f947c4304">nativeObj</a>)</td></tr>
 <tr class="separator:ab2ab11fa6f541612f29e4746fa5bf9f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf92f325c5d73dc6c56d6bd15227a21d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#acf92f325c5d73dc6c56d6bd15227a21d">fromName</a> (String name)</td></tr>
+<tr class="separator:acf92f325c5d73dc6c56d6bd15227a21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a067587ea5a1a4108468531562ee3ccd9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_event.html">TEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#a067587ea5a1a4108468531562ee3ccd9">cast</a> (<a class="el" href="classawtk_1_1_t_event.html">TEvent</a> event)</td></tr>
 <tr class="separator:a067587ea5a1a4108468531562ee3ccd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe7494adb31ef8d50da371e4558c948f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_event.html">TEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#abe7494adb31ef8d50da371e4558c948f">create</a> (int type)</td></tr>
@@ -299,6 +301,40 @@ Public 属性</h2></td></tr>
 <p>销毁事件对象。</p>
 <p>主要给脚本语言使用。</p>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="acf92f325c5d73dc6c56d6bd15227a21d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf92f325c5d73dc6c56d6bd15227a21d">&#9670;&nbsp;</a></span>fromName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int awtk.TEvent.fromName </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>将事件名转换成事件的值。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>事件名。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回事件的值。 </dd></dl>
 
 </div>
 </div>

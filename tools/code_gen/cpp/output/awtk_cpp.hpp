@@ -17,87 +17,6 @@ class TVgcanvas;
 class TNativeWindow;
 
 /**
- * 事件基类。
- *
- */
-class TEvent { 
-public:
-  //nativeObj is public for internal use only.
-  event_t* nativeObj;
-
-  TEvent(event_t* nativeObj) {
-    this->nativeObj = nativeObj;
-  }
-
-  TEvent(const event_t* nativeObj) {
-    this->nativeObj = (event_t*)nativeObj;
-  }
-
-  static TEvent Cast(event_t* nativeObj) {
-    return TEvent(nativeObj);
-  }
-
-  static TEvent Cast(const event_t* nativeObj) {
-    return TEvent((event_t*)nativeObj);
-  }
-
-
-  /**
-   * 获取event类型。
-   * 
-   *
-   * @return 返回event类型。
-   */
-  uint32_t GetType() ;
-
-  /**
-   * 创建event对象。
-   *
-   *主要给脚本语言使用。
-   * 
-   * @param type 事件类型。
-   *
-   * @return 返回事件对象。
-   */
-  static  TEvent Create(uint32_t type) ;
-
-  /**
-   * 销毁事件对象。
-   *
-   *主要给脚本语言使用。
-   * 
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t Destroy() ;
-
-  /**
-   * 类型。
-   *
-   */
-  int32_t GetType() const;
-
-  /**
-   * 结构体的大小。
-   *
-   */
-  int32_t GetSize() const;
-
-  /**
-   * 事件发生的时间。
-   *
-   */
-  uint64_t GetTime() const;
-
-  /**
-   * 事件发生的目标对象。
-   *
-   */
-  void* GetTarget() const;
-};
-
-
-/**
  * 事件分发器, 用于实现观察者模式。
  *
  */
@@ -1915,6 +1834,96 @@ public:
    * @return 返回文本数据。
    */
   static  const char* GetText() ;
+};
+
+
+/**
+ * 事件基类。
+ *
+ */
+class TEvent { 
+public:
+  //nativeObj is public for internal use only.
+  event_t* nativeObj;
+
+  TEvent(event_t* nativeObj) {
+    this->nativeObj = nativeObj;
+  }
+
+  TEvent(const event_t* nativeObj) {
+    this->nativeObj = (event_t*)nativeObj;
+  }
+
+  static TEvent Cast(event_t* nativeObj) {
+    return TEvent(nativeObj);
+  }
+
+  static TEvent Cast(const event_t* nativeObj) {
+    return TEvent((event_t*)nativeObj);
+  }
+
+
+  /**
+   * 将事件名转换成事件的值。
+   * 
+   * @param name 事件名。
+   *
+   * @return 返回事件的值。
+   */
+  static  int32_t FromName(const char* name) ;
+
+  /**
+   * 获取event类型。
+   * 
+   *
+   * @return 返回event类型。
+   */
+  uint32_t GetType() ;
+
+  /**
+   * 创建event对象。
+   *
+   *主要给脚本语言使用。
+   * 
+   * @param type 事件类型。
+   *
+   * @return 返回事件对象。
+   */
+  static  TEvent Create(uint32_t type) ;
+
+  /**
+   * 销毁事件对象。
+   *
+   *主要给脚本语言使用。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Destroy() ;
+
+  /**
+   * 类型。
+   *
+   */
+  int32_t GetType() const;
+
+  /**
+   * 结构体的大小。
+   *
+   */
+  int32_t GetSize() const;
+
+  /**
+   * 事件发生的时间。
+   *
+   */
+  uint64_t GetTime() const;
+
+  /**
+   * 事件发生的目标对象。
+   *
+   */
+  void* GetTarget() const;
 };
 
 
@@ -14622,6 +14631,13 @@ public:
  *...
  *</view>
  *</pages>
+ *```
+ *
+ ** 键盘跟随。
+ *默认情况下，键盘从底部弹出。如果需要让键盘在编辑器附近弹出，可以指定floating属性为true。如：
+ *
+ *```xml
+ *<keyboard theme="keyboard" w="200" h="200" floating="true">
  *```
  *
  *> 更多用法请参考：

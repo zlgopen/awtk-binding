@@ -2,7 +2,6 @@
 #include <jni.h>
 #include "tkc/utf8.h"
 #include "tkc/mem.h"
-#include "tkc/event.h"
 #include "tkc/emitter.h"
 #include "tkc/rect.h"
 #include "base/bitmap.h"
@@ -76,6 +75,7 @@
 #include "switch/switch.h"
 #include "text_selector/text_selector.h"
 #include "time_clock/time_clock.h"
+#include "tkc/event.h"
 #include "widgets/app_bar.h"
 #include "widgets/button_group.h"
 #include "widgets/button.h"
@@ -120,53 +120,6 @@
 #include "widgets/system_bar.h"
 #include "combo_box_ex/combo_box_ex.h"
 #include "custom.c"
-
-JNIEXPORT jlong JNICALL Java_awtk_TEvent_event_1cast(JNIEnv* env,  jclass ajc, jlong jevent) { /*func*/
-  event_t* ret;
-  event_t* event = (event_t*)jevent;
-  ret = (event_t*)event_cast(event);
-
-  return (jlong)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TEvent_event_1get_1type(JNIEnv* env,  jclass ajc, jlong jevent) { /*func*/
-  uint32_t ret;
-  event_t* event = (event_t*)jevent;
-  ret = (uint32_t)event_get_type(event);
-
-  return (jint)(ret);
-}
-
-JNIEXPORT jlong JNICALL Java_awtk_TEvent_event_1create(JNIEnv* env,  jclass ajc, jint type) { /*func*/
-  event_t* ret;
-  ret = (event_t*)event_create(type);
-
-  return (jlong)(ret);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TEvent_event_1t_1get_1prop_1type(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  event_t* obj = (event_t*)jobj;
-
-  return (jint)(obj->type);
-}
-
-JNIEXPORT jint JNICALL Java_awtk_TEvent_event_1t_1get_1prop_1size(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  event_t* obj = (event_t*)jobj;
-
-  return (jint)(obj->size);
-}
-
-JNIEXPORT jlong JNICALL Java_awtk_TEvent_event_1t_1get_1prop_1time(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  event_t* obj = (event_t*)jobj;
-
-  return (jlong)(obj->time);
-}
-
-JNIEXPORT jlong JNICALL Java_awtk_TEvent_event_1t_1get_1prop_1target(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  event_t* obj = (event_t*)jobj;
-
-  return (jlong)(obj->target);
-}
 
 JNIEXPORT jlong JNICALL Java_awtk_TEmitter_emitter_1create(JNIEnv* env,  jclass ajc) { /*func*/
   emitter_t* ret;
@@ -2259,6 +2212,62 @@ JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1ERROR(JNIEnv* env,  jclass ajc)
 JNIEXPORT jint JNICALL Java_awtk_TEventType_EVT_1DESTROY(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (jint)(EVT_DESTROY);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TEvent_event_1from_1name(JNIEnv* env,  jclass ajc, jstring jname) { /*func*/
+  int32_t ret;
+  const char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
+  ret = (int32_t)event_from_name(name);
+  (*env)->ReleaseStringUTFChars(env, jname, name);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TEvent_event_1cast(JNIEnv* env,  jclass ajc, jlong jevent) { /*func*/
+  event_t* ret;
+  event_t* event = (event_t*)jevent;
+  ret = (event_t*)event_cast(event);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TEvent_event_1get_1type(JNIEnv* env,  jclass ajc, jlong jevent) { /*func*/
+  uint32_t ret;
+  event_t* event = (event_t*)jevent;
+  ret = (uint32_t)event_get_type(event);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TEvent_event_1create(JNIEnv* env,  jclass ajc, jint type) { /*func*/
+  event_t* ret;
+  ret = (event_t*)event_create(type);
+
+  return (jlong)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TEvent_event_1t_1get_1prop_1type(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  event_t* obj = (event_t*)jobj;
+
+  return (jint)(obj->type);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TEvent_event_1t_1get_1prop_1size(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  event_t* obj = (event_t*)jobj;
+
+  return (jint)(obj->size);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TEvent_event_1t_1get_1prop_1time(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  event_t* obj = (event_t*)jobj;
+
+  return (jlong)(obj->time);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TEvent_event_1t_1get_1prop_1target(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  event_t* obj = (event_t*)jobj;
+
+  return (jlong)(obj->target);
 }
 
 JNIEXPORT jint JNICALL Java_awtk_TFontManager_font_1manager_1unload_1font(JNIEnv* env,  jclass ajc, jlong jfm, jstring jname, jint size) { /*func*/

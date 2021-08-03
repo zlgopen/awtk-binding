@@ -28,7 +28,12 @@ class DefaultGenerator extends PythonBindingGenerator {
   }
 
   genGlobalInfo(json) {
-    return '';
+    return `int __parse_voidp(PyObject* o, void** address)
+{
+    *address = PyLong_AsVoidPtr(o);
+    return 1;
+}
+\n`;
   }
 
   mapType(type, name) {
@@ -41,7 +46,7 @@ class DefaultGenerator extends PythonBindingGenerator {
     if (clsInfo) {
       ret.type = type;
       ret.signature = 'O&';
-      ret.parse = `, &parse_voidp, &${name}`
+      ret.parse = `, &__parse_voidp, &${name}`
       ret.isVoidP = true;
     } else if (enumInfo) {
       if (this.isEnumString(enumInfo)) {
@@ -76,7 +81,7 @@ class DefaultGenerator extends PythonBindingGenerator {
       } else if (type.indexOf('*') >= 0) {
         ret.type = type;
         ret.signature = 'O&';
-        ret.parse = `, &parse_voidp, &${name}`
+        ret.parse = `, &__parse_voidp, &${name}`
         ret.isVoidP = true;
       } else {
         ret.signature = 'i';
@@ -142,7 +147,7 @@ class DefaultGenerator extends PythonBindingGenerator {
 
   genParseObj() {
     return `
-  if (!PyArg_ParseTuple(pyargs, "O&", &parse_voidp, &obj)) {
+  if (!PyArg_ParseTuple(pyargs, "O&", &__parse_voidp, &obj)) {
     PyErr_SetString(PyExc_TypeError, "invalid arguments");
     return NULL;
   }

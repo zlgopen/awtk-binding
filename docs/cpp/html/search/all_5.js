@@ -6,6 +6,7 @@ var searchData=
   ['float32_71',['Float32',['../class_t_value.html#a7bb1a3fa57deb2158b407be2c95e8a63',1,'TValue']]],
   ['float64_72',['Float64',['../class_t_value.html#a0e6a08a868d8966fcb984c30b52465a1',1,'TValue']]],
   ['flush_73',['Flush',['../class_t_vgcanvas.html#a4cef1db770b88a58da3eae2dd9f8d3d3',1,'TVgcanvas']]],
-  ['fromstr_74',['FromStr',['../class_t_color.html#ad3a8c4dbabe791570d46009fa7200cac',1,'TColor']]],
-  ['fromtime_75',['FromTime',['../class_t_date_time.html#a28627e07d81bc96254bd6c9e2c1c4bd8',1,'TDateTime']]]
+  ['fromname_74',['FromName',['../class_t_event.html#a95a746a2230504d7c86376fff0196ac3',1,'TEvent']]],
+  ['fromstr_75',['FromStr',['../class_t_color.html#ad3a8c4dbabe791570d46009fa7200cac',1,'TColor']]],
+  ['fromtime_76',['FromTime',['../class_t_date_time.html#a28627e07d81bc96254bd6c9e2c1c4bd8',1,'TDateTime']]]
 ];

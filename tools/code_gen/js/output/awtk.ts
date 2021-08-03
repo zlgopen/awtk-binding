@@ -6,14 +6,6 @@ if(this['console'] === undefined) {
       print(str);
   }
 }
-declare function event_cast(event : any) : any;
-declare function event_get_type(event : any) : number;
-declare function event_create(type : number) : any;
-declare function event_destroy(event : any) : TRet;
-declare function event_t_get_prop_type(nativeObj : any) : number;
-declare function event_t_get_prop_size(nativeObj : any) : number;
-declare function event_t_get_prop_time(nativeObj : any) : number;
-declare function event_t_get_prop_target(nativeObj : any) : any;
 declare function emitter_create() : any;
 declare function emitter_dispatch(emitter : any, e : any) : TRet;
 declare function emitter_dispatch_simple_event(emitter : any, type : number) : TRet;
@@ -319,6 +311,15 @@ declare function EVT_PROGRESS();
 declare function EVT_DONE();
 declare function EVT_ERROR();
 declare function EVT_DESTROY();
+declare function event_from_name(name : string) : number;
+declare function event_cast(event : any) : any;
+declare function event_get_type(event : any) : number;
+declare function event_create(type : number) : any;
+declare function event_destroy(event : any) : TRet;
+declare function event_t_get_prop_type(nativeObj : any) : number;
+declare function event_t_get_prop_size(nativeObj : any) : number;
+declare function event_t_get_prop_time(nativeObj : any) : number;
+declare function event_t_get_prop_target(nativeObj : any) : any;
 declare function font_manager_unload_font(fm : any, name : string, size : number) : TRet;
 declare function font_manager_shrink_cache(fm : any, cache_size : number) : TRet;
 declare function font_manager_unload_all(fm : any) : TRet;
@@ -2083,105 +2084,6 @@ declare function system_bar_create(parent : any, x : number, y : number, w : num
 declare function system_bar_cast(widget : any) : any;
 declare function combo_box_ex_create(parent : any, x : number, y : number, w : number, h : number) : any;
 
-/**
- * 事件基类。
- *
- */
-export class TEvent { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   this.nativeObj = nativeObj;
- }
-
-
-  /**
-   * 转换为event对象。
-   *
-   *> 供脚本语言使用
-   * 
-   * @param event event对象。
-   *
-   * @returns event对象。
-   */
- static cast(event : TEvent) : TEvent  {
-    return new TEvent(event_cast(event != null ? (event.nativeObj || event) : null));
- }
-
-
-  /**
-   * 获取event类型。
-   * 
-   *
-   * @returns 返回event类型。
-   */
- getType() : number  {
-    return event_get_type(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 创建event对象。
-   *
-   *主要给脚本语言使用。
-   * 
-   * @param type 事件类型。
-   *
-   * @returns 返回事件对象。
-   */
- static create(type : number) : TEvent  {
-    return new TEvent(event_create(type));
- }
-
-
-  /**
-   * 销毁事件对象。
-   *
-   *主要给脚本语言使用。
-   * 
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- destroy() : TRet  {
-    return event_destroy(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 类型。
-   *
-   */
- get type() : number {
-   return event_t_get_prop_type(this.nativeObj);
- }
-
-
-  /**
-   * 结构体的大小。
-   *
-   */
- get size() : number {
-   return event_t_get_prop_size(this.nativeObj);
- }
-
-
-  /**
-   * 事件发生的时间。
-   *
-   */
- get time() : number {
-   return event_t_get_prop_time(this.nativeObj);
- }
-
-
-  /**
-   * 事件发生的目标对象。
-   *
-   */
- get target() : any {
-   return event_t_get_prop_target(this.nativeObj);
- }
-
-};
 /**
  * 事件分发器, 用于实现观察者模式。
  *
@@ -5244,6 +5146,117 @@ export enum TEventType {
 };
 
 
+/**
+ * 事件基类。
+ *
+ */
+export class TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
+
+
+  /**
+   * 将事件名转换成事件的值。
+   * 
+   * @param name 事件名。
+   *
+   * @returns 返回事件的值。
+   */
+ static fromName(name : string) : number  {
+    return event_from_name(name);
+ }
+
+
+  /**
+   * 转换为event对象。
+   *
+   *> 供脚本语言使用
+   * 
+   * @param event event对象。
+   *
+   * @returns event对象。
+   */
+ static cast(event : TEvent) : TEvent  {
+    return new TEvent(event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+
+  /**
+   * 获取event类型。
+   * 
+   *
+   * @returns 返回event类型。
+   */
+ getType() : number  {
+    return event_get_type(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 创建event对象。
+   *
+   *主要给脚本语言使用。
+   * 
+   * @param type 事件类型。
+   *
+   * @returns 返回事件对象。
+   */
+ static create(type : number) : TEvent  {
+    return new TEvent(event_create(type));
+ }
+
+
+  /**
+   * 销毁事件对象。
+   *
+   *主要给脚本语言使用。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ destroy() : TRet  {
+    return event_destroy(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 类型。
+   *
+   */
+ get type() : number {
+   return event_t_get_prop_type(this.nativeObj);
+ }
+
+
+  /**
+   * 结构体的大小。
+   *
+   */
+ get size() : number {
+   return event_t_get_prop_size(this.nativeObj);
+ }
+
+
+  /**
+   * 事件发生的时间。
+   *
+   */
+ get time() : number {
+   return event_t_get_prop_time(this.nativeObj);
+ }
+
+
+  /**
+   * 事件发生的目标对象。
+   *
+   */
+ get target() : any {
+   return event_t_get_prop_target(this.nativeObj);
+ }
+
+};
 /**
  * 字体管理器，负责字体的加载和缓存管理。
  *(如果使用nanovg，字体由nanovg内部管理)
@@ -24979,6 +24992,13 @@ export class TGifImage extends TImageBase {
  *...
  *</view>
  *</pages>
+ *```
+ *
+ ** 键盘跟随。
+ *默认情况下，键盘从底部弹出。如果需要让键盘在编辑器附近弹出，可以指定floating属性为true。如：
+ *
+ *```xml
+ *<keyboard theme="keyboard" w="200" h="200" floating="true">
  *```
  *
  *> 更多用法请参考：

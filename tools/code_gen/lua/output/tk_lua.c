@@ -3,7 +3,6 @@
 #include "lua/lualib.h"
 #include "lua/lauxlib.h"
 #include "tkc/utf8.h"
-#include "tkc/event.h"
 #include "tkc/emitter.h"
 #include "tkc/rect.h"
 #include "base/bitmap.h"
@@ -77,6 +76,7 @@
 #include "switch/switch.h"
 #include "text_selector/text_selector.h"
 #include "time_clock/time_clock.h"
+#include "tkc/event.h"
 #include "widgets/app_bar.h"
 #include "widgets/button_group.h"
 #include "widgets/button.h"
@@ -123,8 +123,6 @@
 
 #include "custom.c"
 
-static int wrap_event_t_get_prop(lua_State* L);
-static int wrap_event_t_set_prop(lua_State* L);
 static int wrap_emitter_t_get_prop(lua_State* L);
 static int wrap_emitter_t_set_prop(lua_State* L);
 static int wrap_point_t_get_prop(lua_State* L);
@@ -147,6 +145,8 @@ static int wrap_canvas_t_get_prop(lua_State* L);
 static int wrap_canvas_t_set_prop(lua_State* L);
 static int wrap_clip_board_t_get_prop(lua_State* L);
 static int wrap_clip_board_t_set_prop(lua_State* L);
+static int wrap_event_t_get_prop(lua_State* L);
+static int wrap_event_t_set_prop(lua_State* L);
 static int wrap_font_manager_t_get_prop(lua_State* L);
 static int wrap_font_manager_t_set_prop(lua_State* L);
 static int wrap_image_manager_t_get_prop(lua_State* L);
@@ -369,114 +369,6 @@ static void globals_init(lua_State* L) {
   lua_setglobal(L, "to_wstr");
 }
 
-static int wrap_event_cast(lua_State* L) {
-  event_t* ret = NULL;
-  event_t* event = (event_t*)tk_checkudata(L, 1, "event_t");
-  ret = (event_t*)event_cast(event);
-
-  return tk_newuserdata(L, (void*)ret, "/event_t", "awtk.event_t");
-}
-
-static int wrap_event_get_type(lua_State* L) {
-  uint32_t ret = 0;
-  event_t* event = (event_t*)tk_checkudata(L, 1, "event_t");
-  ret = (uint32_t)event_get_type(event);
-
-  lua_pushinteger(L,(lua_Integer)(ret));
-
-  return 1;
-}
-
-static int wrap_event_create(lua_State* L) {
-  event_t* ret = NULL;
-  uint32_t type = (uint32_t)luaL_checkinteger(L, 1);
-  ret = (event_t*)event_create(type);
-
-  return tk_newuserdata(L, (void*)ret, "/event_t", "awtk.event_t");
-}
-
-static int wrap_event_destroy(lua_State* L) {
-  ret_t ret = 0;
-  event_t* event = (event_t*)tk_checkudata(L, 1, "event_t");
-  ret = (ret_t)event_destroy(event);
-
-  lua_pushnumber(L,(lua_Number)(ret));
-
-  return 1;
-}
-
-
-static const struct luaL_Reg event_t_member_funcs[] = {
-  {"get_type", wrap_event_get_type},
-  {"destroy", wrap_event_destroy},
-  {NULL, NULL}
-};
-
-static int wrap_event_t_set_prop(lua_State* L) {
-  event_t* obj = (event_t*)tk_checkudata(L, 1, "event_t");
-  const char* name = (const char*)luaL_checkstring(L, 2);
-  (void)obj;
-  (void)name;
-  log_debug("%s: not supported %s\n", __FUNCTION__, name);
-  return 0;
-}
-
-static int wrap_event_t_get_prop(lua_State* L) {
-  event_t* obj = (event_t*)tk_checkudata(L, 1, "event_t");
-  const char* name = (const char*)luaL_checkstring(L, 2);
-  const luaL_Reg* ret = find_member(event_t_member_funcs, name);
-
-  (void)obj;
-  (void)name;
-  if(ret) {
-    lua_pushcfunction(L, ret->func);
-    return 1;
-  }
-  if(strcmp(name, "type") == 0) {
-    lua_pushinteger(L,(lua_Integer)(obj->type));
-
-  return 1;
-  }
-  else if(strcmp(name, "size") == 0) {
-    lua_pushinteger(L,(lua_Integer)(obj->size));
-
-  return 1;
-  }
-  else if(strcmp(name, "time") == 0) {
-    lua_pushinteger(L,(lua_Integer)(obj->time));
-
-  return 1;
-  }
-  else if(strcmp(name, "target") == 0) {
-    return tk_newuserdata(L, (void*)obj->target, "", "awtk.void");
-  }
-  else {
-    log_debug("%s: not supported %s\n", __FUNCTION__, name);
-    return 0;
-  }
-}
-
-static void event_t_init(lua_State* L) {
-  static const struct luaL_Reg static_funcs[] = {
-    {"cast", wrap_event_cast},
-    {"create", wrap_event_create},
-    {NULL, NULL}
-  };
-
-  static const struct luaL_Reg index_funcs[] = {
-    {"__index", wrap_event_t_get_prop},
-    {"__newindex", wrap_event_t_set_prop},
-    {NULL, NULL}
-  };
-
-  luaL_newmetatable(L, "awtk.event_t");
-  lua_pushstring(L, "__index");
-  lua_pushvalue(L, -2);
-  lua_settable(L, -3);
-  luaL_openlib(L, NULL, index_funcs, 0);
-  luaL_openlib(L, "Event", static_funcs, 0);
-  lua_settop(L, 0);
-}
 static int wrap_emitter_create(lua_State* L) {
   emitter_t* ret = NULL;
   ret = (emitter_t*)emitter_create();
@@ -3444,6 +3336,125 @@ static void event_type_t_init(lua_State* L) {
 
 }
 
+static int wrap_event_from_name(lua_State* L) {
+  int32_t ret = 0;
+  const char* name = (const char*)luaL_checkstring(L, 1);
+  ret = (int32_t)event_from_name(name);
+
+  lua_pushinteger(L,(lua_Integer)(ret));
+
+  return 1;
+}
+
+static int wrap_event_cast(lua_State* L) {
+  event_t* ret = NULL;
+  event_t* event = (event_t*)tk_checkudata(L, 1, "event_t");
+  ret = (event_t*)event_cast(event);
+
+  return tk_newuserdata(L, (void*)ret, "/event_t", "awtk.event_t");
+}
+
+static int wrap_event_get_type(lua_State* L) {
+  uint32_t ret = 0;
+  event_t* event = (event_t*)tk_checkudata(L, 1, "event_t");
+  ret = (uint32_t)event_get_type(event);
+
+  lua_pushinteger(L,(lua_Integer)(ret));
+
+  return 1;
+}
+
+static int wrap_event_create(lua_State* L) {
+  event_t* ret = NULL;
+  uint32_t type = (uint32_t)luaL_checkinteger(L, 1);
+  ret = (event_t*)event_create(type);
+
+  return tk_newuserdata(L, (void*)ret, "/event_t", "awtk.event_t");
+}
+
+static int wrap_event_destroy(lua_State* L) {
+  ret_t ret = 0;
+  event_t* event = (event_t*)tk_checkudata(L, 1, "event_t");
+  ret = (ret_t)event_destroy(event);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+
+static const struct luaL_Reg event_t_member_funcs[] = {
+  {"get_type", wrap_event_get_type},
+  {"destroy", wrap_event_destroy},
+  {NULL, NULL}
+};
+
+static int wrap_event_t_set_prop(lua_State* L) {
+  event_t* obj = (event_t*)tk_checkudata(L, 1, "event_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  (void)obj;
+  (void)name;
+  log_debug("%s: not supported %s\n", __FUNCTION__, name);
+  return 0;
+}
+
+static int wrap_event_t_get_prop(lua_State* L) {
+  event_t* obj = (event_t*)tk_checkudata(L, 1, "event_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  const luaL_Reg* ret = find_member(event_t_member_funcs, name);
+
+  (void)obj;
+  (void)name;
+  if(ret) {
+    lua_pushcfunction(L, ret->func);
+    return 1;
+  }
+  if(strcmp(name, "type") == 0) {
+    lua_pushinteger(L,(lua_Integer)(obj->type));
+
+  return 1;
+  }
+  else if(strcmp(name, "size") == 0) {
+    lua_pushinteger(L,(lua_Integer)(obj->size));
+
+  return 1;
+  }
+  else if(strcmp(name, "time") == 0) {
+    lua_pushinteger(L,(lua_Integer)(obj->time));
+
+  return 1;
+  }
+  else if(strcmp(name, "target") == 0) {
+    return tk_newuserdata(L, (void*)obj->target, "", "awtk.void");
+  }
+  else {
+    log_debug("%s: not supported %s\n", __FUNCTION__, name);
+    return 0;
+  }
+}
+
+static void event_t_init(lua_State* L) {
+  static const struct luaL_Reg static_funcs[] = {
+    {"from_name", wrap_event_from_name},
+    {"cast", wrap_event_cast},
+    {"create", wrap_event_create},
+    {NULL, NULL}
+  };
+
+  static const struct luaL_Reg index_funcs[] = {
+    {"__index", wrap_event_t_get_prop},
+    {"__newindex", wrap_event_t_set_prop},
+    {NULL, NULL}
+  };
+
+  luaL_newmetatable(L, "awtk.event_t");
+  lua_pushstring(L, "__index");
+  lua_pushvalue(L, -2);
+  lua_settable(L, -3);
+  luaL_openlib(L, NULL, index_funcs, 0);
+  luaL_openlib(L, "Event", static_funcs, 0);
+  lua_settop(L, 0);
+}
 static int wrap_font_manager_unload_font(lua_State* L) {
   ret_t ret = 0;
   font_manager_t* fm = (font_manager_t*)tk_checkudata(L, 1, "font_manager_t");
@@ -21824,7 +21835,6 @@ static void combo_box_ex_t_init(lua_State* L) {
 
 void luaL_openawtk(lua_State* L) {
   globals_init(L);
-  event_t_init(L);
   emitter_t_init(L);
   point_t_init(L);
   pointf_t_init(L);
@@ -21842,6 +21852,7 @@ void luaL_openawtk(lua_State* L) {
   clip_board_t_init(L);
   dialog_quit_code_t_init(L);
   event_type_t_init(L);
+  event_t_init(L);
   font_manager_t_init(L);
   glyph_format_t_init(L);
   idle_t_init(L);

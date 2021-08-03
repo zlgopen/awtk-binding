@@ -15,7 +15,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TAssetInfo = exports.TAssetType = exports.TVpageEvent = exports.TIndicatorDefaultPaint = exports.TAppConf = exports.TWidget = exports.TWidgetCursor = exports.TWidgetState = exports.TWindowClosable = exports.TWindowStage = exports.TWidgetType = exports.TWidgetProp = exports.TVgcanvasLineJoin = exports.TVgcanvasLineCap = exports.TVgcanvas = exports.TBitmapFlag = exports.TBitmapFormat = exports.TAppType = exports.TAlignH = exports.TAlignV = exports.TTimer = exports.TTheme = exports.TStyle = exports.TStyleId = exports.TLocaleInfo = exports.TKeyCode = exports.TInputMethod = exports.TInputType = exports.TImageManager = exports.TIdle = exports.TGlyphFormat = exports.TFontManager = exports.TEventType = exports.TDialogQuitCode = exports.TClipBoard = exports.TClipBoardDataType = exports.TCanvas = exports.TCanvasOffline = exports.TImageDrawType = exports.TBidiType = exports.TGlobal = exports.TValue = exports.TObject = exports.TBitmap = exports.TRect = exports.TRectf = exports.TPointf = exports.TPoint = exports.TEmitter = exports.TEvent = void 0;
+exports.TAssetInfo = exports.TAssetType = exports.TVpageEvent = exports.TIndicatorDefaultPaint = exports.TAppConf = exports.TWidget = exports.TWidgetCursor = exports.TWidgetState = exports.TWindowClosable = exports.TWindowStage = exports.TWidgetType = exports.TWidgetProp = exports.TVgcanvasLineJoin = exports.TVgcanvasLineCap = exports.TVgcanvas = exports.TBitmapFlag = exports.TBitmapFormat = exports.TAppType = exports.TAlignH = exports.TAlignV = exports.TTimer = exports.TTheme = exports.TStyle = exports.TStyleId = exports.TLocaleInfo = exports.TKeyCode = exports.TInputMethod = exports.TInputType = exports.TImageManager = exports.TIdle = exports.TGlyphFormat = exports.TFontManager = exports.TEvent = exports.TEventType = exports.TDialogQuitCode = exports.TClipBoard = exports.TClipBoardDataType = exports.TCanvas = exports.TCanvasOffline = exports.TImageDrawType = exports.TBidiType = exports.TGlobal = exports.TValue = exports.TObject = exports.TBitmap = exports.TRect = exports.TRectf = exports.TPointf = exports.TPoint = exports.TEmitter = void 0;
 exports.TSlideMenu = exports.TScrollView = exports.TScrollBar = exports.TListView = exports.TListViewH = exports.TListItem = exports.THscrollLabel = exports.TRichText = exports.TRichTextView = exports.TProgressCircle = exports.TMledit = exports.TLineNumber = exports.TLangIndicator = exports.TCandidates = exports.TImageValue = exports.TImageAnimation = exports.TGauge = exports.TGaugePointer = exports.TFileChooser = exports.TFileBrowserView = exports.TDraggable = exports.TColorPicker = exports.TColorComponent = exports.TCanvasWidget = exports.TWindowManager = exports.TWindowBase = exports.TStyleMutable = exports.TImageBase = exports.TMultiGestureEvent = exports.TWindowEvent = exports.TPaintEvent = exports.TKeyEvent = exports.TPointerEvent = exports.TValueChangeEvent = exports.TOrientationEvent = exports.TWheelEvent = exports.TAssetsManager = exports.TValueType = exports.TRet = exports.TTimerManager = exports.TTimeNow = exports.TRlog = exports.TObjectProp = exports.TObjectCmd = exports.TNamedValue = exports.TMIME_TYPE = exports.TIdleManager = exports.TEasingType = exports.TDateTime = exports.TColor = void 0;
 exports.TImage = exports.TComboBox = exports.TCalibrationWin = exports.TTimerInfo = exports.TObjectDefault = exports.TObjectArray = exports.TIdleInfo = exports.TSvgImage = exports.TMutableImage = exports.TKeyboard = exports.TGifImage = exports.TWindow = exports.TNativeWindow = exports.TDialog = exports.TView = exports.TTabControl = exports.TTabButton = exports.TTabButtonGroup = exports.TSlider = exports.TRow = exports.TProgressBar = exports.TPages = exports.TLabel = exports.TGroupBox = exports.TGrid = exports.TGridItem = exports.TEdit = exports.TDragger = exports.TDigitClock = exports.TDialogTitle = exports.TDialogClient = exports.TComboBoxItem = exports.TColumn = exports.TColorTile = exports.TClipView = exports.TCheckButton = exports.TButton = exports.TButtonGroup = exports.TAppBar = exports.TCmdExecEvent = exports.TErrorEvent = exports.TDoneEvent = exports.TProgressEvent = exports.TPropChangeEvent = exports.TVpage = exports.TTimeClock = exports.TTextSelector = exports.TSwitch = exports.TSlideView = exports.TSlideIndicator = void 0;
 exports.TComboBoxEx = exports.TSystemBar = exports.TSpinBox = exports.TPopup = exports.TOverlay = void 0;
@@ -25,106 +25,6 @@ if (this['console'] === undefined) {
         print(str);
     };
 }
-/**
- * 事件基类。
- *
- */
-var TEvent = /** @class */ (function () {
-    function TEvent(nativeObj) {
-        this.nativeObj = nativeObj;
-    }
-    /**
-     * 转换为event对象。
-     *
-     *> 供脚本语言使用
-     *
-     * @param event event对象。
-     *
-     * @returns event对象。
-     */
-    TEvent.cast = function (event) {
-        return new TEvent(event_cast(event != null ? (event.nativeObj || event) : null));
-    };
-    /**
-     * 获取event类型。
-     *
-     *
-     * @returns 返回event类型。
-     */
-    TEvent.prototype.getType = function () {
-        return event_get_type(this != null ? (this.nativeObj || this) : null);
-    };
-    /**
-     * 创建event对象。
-     *
-     *主要给脚本语言使用。
-     *
-     * @param type 事件类型。
-     *
-     * @returns 返回事件对象。
-     */
-    TEvent.create = function (type) {
-        return new TEvent(event_create(type));
-    };
-    /**
-     * 销毁事件对象。
-     *
-     *主要给脚本语言使用。
-     *
-     *
-     * @returns 返回RET_OK表示成功，否则表示失败。
-     */
-    TEvent.prototype.destroy = function () {
-        return event_destroy(this != null ? (this.nativeObj || this) : null);
-    };
-    Object.defineProperty(TEvent.prototype, "type", {
-        /**
-         * 类型。
-         *
-         */
-        get: function () {
-            return event_t_get_prop_type(this.nativeObj);
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(TEvent.prototype, "size", {
-        /**
-         * 结构体的大小。
-         *
-         */
-        get: function () {
-            return event_t_get_prop_size(this.nativeObj);
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(TEvent.prototype, "time", {
-        /**
-         * 事件发生的时间。
-         *
-         */
-        get: function () {
-            return event_t_get_prop_time(this.nativeObj);
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(TEvent.prototype, "target", {
-        /**
-         * 事件发生的目标对象。
-         *
-         */
-        get: function () {
-            return event_t_get_prop_target(this.nativeObj);
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return TEvent;
-}());
-exports.TEvent = TEvent;
-;
 /**
  * 事件分发器, 用于实现观察者模式。
  *
@@ -2811,6 +2711,116 @@ var TEventType;
      */
     TEventType[TEventType["DESTROY"] = EVT_DESTROY()] = "DESTROY";
 })(TEventType = exports.TEventType || (exports.TEventType = {}));
+;
+/**
+ * 事件基类。
+ *
+ */
+var TEvent = /** @class */ (function () {
+    function TEvent(nativeObj) {
+        this.nativeObj = nativeObj;
+    }
+    /**
+     * 将事件名转换成事件的值。
+     *
+     * @param name 事件名。
+     *
+     * @returns 返回事件的值。
+     */
+    TEvent.fromName = function (name) {
+        return event_from_name(name);
+    };
+    /**
+     * 转换为event对象。
+     *
+     *> 供脚本语言使用
+     *
+     * @param event event对象。
+     *
+     * @returns event对象。
+     */
+    TEvent.cast = function (event) {
+        return new TEvent(event_cast(event != null ? (event.nativeObj || event) : null));
+    };
+    /**
+     * 获取event类型。
+     *
+     *
+     * @returns 返回event类型。
+     */
+    TEvent.prototype.getType = function () {
+        return event_get_type(this != null ? (this.nativeObj || this) : null);
+    };
+    /**
+     * 创建event对象。
+     *
+     *主要给脚本语言使用。
+     *
+     * @param type 事件类型。
+     *
+     * @returns 返回事件对象。
+     */
+    TEvent.create = function (type) {
+        return new TEvent(event_create(type));
+    };
+    /**
+     * 销毁事件对象。
+     *
+     *主要给脚本语言使用。
+     *
+     *
+     * @returns 返回RET_OK表示成功，否则表示失败。
+     */
+    TEvent.prototype.destroy = function () {
+        return event_destroy(this != null ? (this.nativeObj || this) : null);
+    };
+    Object.defineProperty(TEvent.prototype, "type", {
+        /**
+         * 类型。
+         *
+         */
+        get: function () {
+            return event_t_get_prop_type(this.nativeObj);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(TEvent.prototype, "size", {
+        /**
+         * 结构体的大小。
+         *
+         */
+        get: function () {
+            return event_t_get_prop_size(this.nativeObj);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(TEvent.prototype, "time", {
+        /**
+         * 事件发生的时间。
+         *
+         */
+        get: function () {
+            return event_t_get_prop_time(this.nativeObj);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(TEvent.prototype, "target", {
+        /**
+         * 事件发生的目标对象。
+         *
+         */
+        get: function () {
+            return event_t_get_prop_target(this.nativeObj);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return TEvent;
+}());
+exports.TEvent = TEvent;
 ;
 /**
  * 字体管理器，负责字体的加载和缓存管理。
@@ -21101,6 +21111,13 @@ exports.TGifImage = TGifImage;
  *...
  *</view>
  *</pages>
+ *```
+ *
+ ** 键盘跟随。
+ *默认情况下，键盘从底部弹出。如果需要让键盘在编辑器附近弹出，可以指定floating属性为true。如：
+ *
+ *```xml
+ *<keyboard theme="keyboard" w="200" h="200" floating="true">
  *```
  *
  *> 更多用法请参考：

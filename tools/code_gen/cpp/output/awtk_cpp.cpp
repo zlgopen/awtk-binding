@@ -1,32 +1,4 @@
 ﻿#include "awtk_cpp.hpp"
- uint32_t TEvent::GetType()  {
-    return event_get_type(((event_t*)(this->nativeObj)));
- }
-
- TEvent TEvent::Create(uint32_t type)  {
-   return TEvent((event_t*)(event_create(type)));
- }
-
- ret_t TEvent::Destroy()  {
-   return event_destroy(((event_t*)(this->nativeObj)));
- }
-
- int32_t TEvent::GetType() const {
-   return ((event_t*)(this->nativeObj))->type;
- }
-
- int32_t TEvent::GetSize() const {
-   return ((event_t*)(this->nativeObj))->size;
- }
-
- uint64_t TEvent::GetTime() const {
-   return ((event_t*)(this->nativeObj))->time;
- }
-
- void* TEvent::GetTarget() const {
-   return ((event_t*)(this->nativeObj))->target;
- }
-
  TEmitter TEmitter::Create()  {
    return TEmitter((emitter_t*)(emitter_create()));
  }
@@ -685,6 +657,38 @@
 
  const char* TClipBoard::GetText()  {
     return clip_board_get_text();
+ }
+
+ int32_t TEvent::FromName(const char* name)  {
+    return event_from_name(name);
+ }
+
+ uint32_t TEvent::GetType()  {
+    return event_get_type(((event_t*)(this->nativeObj)));
+ }
+
+ TEvent TEvent::Create(uint32_t type)  {
+   return TEvent((event_t*)(event_create(type)));
+ }
+
+ ret_t TEvent::Destroy()  {
+   return event_destroy(((event_t*)(this->nativeObj)));
+ }
+
+ int32_t TEvent::GetType() const {
+   return ((event_t*)(this->nativeObj))->type;
+ }
+
+ int32_t TEvent::GetSize() const {
+   return ((event_t*)(this->nativeObj))->size;
+ }
+
+ uint64_t TEvent::GetTime() const {
+   return ((event_t*)(this->nativeObj))->time;
+ }
+
+ void* TEvent::GetTarget() const {
+   return ((event_t*)(this->nativeObj))->target;
  }
 
  ret_t TFontManager::UnloadFont(char* name, font_size_t size)  {
