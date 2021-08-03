@@ -29,6 +29,7 @@
 #include "base/widget_consts.h"
 #include "base/widget.h"
 #include "conf_io/app_conf.h"
+#include "ext_widgets/ext_widgets.h"
 #include "slide_view/slide_indicator.h"
 #include "vpage/vpage.h"
 #include "tkc/asset_info.h"
@@ -12550,6 +12551,25 @@ ret_t app_conf_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "app_conf_get_double", wrap_app_conf_get_double);
   Nan::Export(ctx, "app_conf_get_str", wrap_app_conf_get_str);
   Nan::Export(ctx, "app_conf_remove", wrap_app_conf_remove);
+
+ return RET_OK;
+}
+
+static void wrap_tk_ext_widgets_init(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 0) {
+  ret_t ret = (ret_t)0;
+  ret = (ret_t)tk_ext_widgets_init();
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
+ret_t ext_widgets_t_init(v8::Local<v8::Object> ctx) {
+  Nan::Export(ctx, "tk_ext_widgets_init", wrap_tk_ext_widgets_init);
 
  return RET_OK;
 }
@@ -27000,6 +27020,7 @@ ret_t awtk_js_init(v8::Local<v8::Object> ctx) {
   widget_cursor_t_init(ctx);
   widget_t_init(ctx);
   app_conf_t_init(ctx);
+  ext_widgets_t_init(ctx);
   indicator_default_paint_t_init(ctx);
   vpage_event_t_init(ctx);
   asset_type_t_init(ctx);

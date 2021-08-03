@@ -12703,6 +12703,34 @@
     "level": 1
   },
   {
+    "type": "class",
+    "methods": [
+      {
+        "params": [],
+        "annotation": {
+          "static": true,
+          "scriptable": true
+        },
+        "desc": "初始化AWTK扩展控件。",
+        "name": "tk_ext_widgets_init",
+        "alias": "ext_widgets_init",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [],
+    "header": "ext_widgets/ext_widgets.h",
+    "desc": "扩展控件。",
+    "name": "ext_widgets_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "level": 1
+  },
+  {
     "type": "enum",
     "desc": "指示器默认绘制的类型。",
     "consts": [

@@ -30,6 +30,7 @@
 #include "base/widget_consts.h"
 #include "base/widget.h"
 #include "conf_io/app_conf.h"
+#include "ext_widgets/ext_widgets.h"
 #include "slide_view/slide_indicator.h"
 #include "vpage/vpage.h"
 #include "tkc/asset_info.h"
@@ -163,6 +164,8 @@ static int wrap_vgcanvas_t_get_prop(lua_State* L);
 static int wrap_vgcanvas_t_set_prop(lua_State* L);
 static int wrap_widget_t_get_prop(lua_State* L);
 static int wrap_widget_t_set_prop(lua_State* L);
+static int wrap_ext_widgets_t_get_prop(lua_State* L);
+static int wrap_ext_widgets_t_set_prop(lua_State* L);
 static int wrap_asset_info_t_get_prop(lua_State* L);
 static int wrap_asset_info_t_set_prop(lua_State* L);
 static int wrap_color_t_get_prop(lua_State* L);
@@ -8627,6 +8630,66 @@ static void app_conf_t_init(lua_State* L) {
   };
 
   luaL_openlib(L, "AppConf", static_funcs, 0);
+  lua_settop(L, 0);
+}
+static int wrap_tk_ext_widgets_init(lua_State* L) {
+  ret_t ret = 0;
+  ret = (ret_t)tk_ext_widgets_init();
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+
+static const struct luaL_Reg ext_widgets_t_member_funcs[] = {
+  {NULL, NULL}
+};
+
+static int wrap_ext_widgets_t_set_prop(lua_State* L) {
+  ext_widgets_t* obj = (ext_widgets_t*)tk_checkudata(L, 1, "ext_widgets_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  (void)obj;
+  (void)name;
+  log_debug("%s: not supported %s\n", __FUNCTION__, name);
+  return 0;
+}
+
+static int wrap_ext_widgets_t_get_prop(lua_State* L) {
+  ext_widgets_t* obj = (ext_widgets_t*)tk_checkudata(L, 1, "ext_widgets_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  const luaL_Reg* ret = find_member(ext_widgets_t_member_funcs, name);
+
+  (void)obj;
+  (void)name;
+  if(ret) {
+    lua_pushcfunction(L, ret->func);
+    return 1;
+  }
+  else {
+    log_debug("%s: not supported %s\n", __FUNCTION__, name);
+    return 0;
+  }
+}
+
+static void ext_widgets_t_init(lua_State* L) {
+  static const struct luaL_Reg static_funcs[] = {
+    {"init", wrap_tk_ext_widgets_init},
+    {NULL, NULL}
+  };
+
+  static const struct luaL_Reg index_funcs[] = {
+    {"__index", wrap_ext_widgets_t_get_prop},
+    {"__newindex", wrap_ext_widgets_t_set_prop},
+    {NULL, NULL}
+  };
+
+  luaL_newmetatable(L, "awtk.ext_widgets_t");
+  lua_pushstring(L, "__index");
+  lua_pushvalue(L, -2);
+  lua_settable(L, -3);
+  luaL_openlib(L, NULL, index_funcs, 0);
+  luaL_openlib(L, "ExtWidgets", static_funcs, 0);
   lua_settop(L, 0);
 }
 static void indicator_default_paint_t_init(lua_State* L) {
@@ -21881,6 +21944,7 @@ void luaL_openawtk(lua_State* L) {
   widget_cursor_t_init(L);
   widget_t_init(L);
   app_conf_t_init(L);
+  ext_widgets_t_init(L);
   indicator_default_paint_t_init(L);
   vpage_event_t_init(L);
   asset_type_t_init(L);

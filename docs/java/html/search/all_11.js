@@ -286,7 +286,7 @@ var searchData=
   ['strokerect_1292',['strokeRect',['../classawtk_1_1_t_canvas.html#a8d69197b88b37cb9105c190cb797f047',1,'awtk::TCanvas']]],
   ['strongly_5ffocus_1293',['STRONGLY_FOCUS',['../enumawtk_1_1_t_widget_prop.html#a63aa50c583d4847c3011d511652ae1f2',1,'awtk::TWidgetProp']]],
   ['style_1294',['STYLE',['../enumawtk_1_1_t_asset_type.html#a02f075d0e484563ff534b8f74feffdfc',1,'awtk.TAssetType.STYLE()'],['../enumawtk_1_1_t_widget_prop.html#a94f092aec9d222ab5bd98d1dbb137a56',1,'awtk.TWidgetProp.STYLE()']]],
-  ['suspend_1295',['suspend',['../classawtk_1_1_t_timer.html#ab1349afbce0b3d21cba676da7370992d',1,'awtk.TTimer.suspend()'],['../enumawtk_1_1_t_window_stage.html#a9ed381f79b12c3cc484f2331fe4eb768',1,'awtk.TWindowStage.SUSPEND()']]],
+  ['suspend_1295',['SUSPEND',['../enumawtk_1_1_t_window_stage.html#a9ed381f79b12c3cc484f2331fe4eb768',1,'awtk.TWindowStage.SUSPEND()'],['../classawtk_1_1_t_timer.html#ab1349afbce0b3d21cba676da7370992d',1,'awtk.TTimer.suspend()']]],
   ['system_5fbar_1296',['SYSTEM_BAR',['../enumawtk_1_1_t_widget_type.html#a01a3e1f331504cb34f8bb54e2aff2f8e',1,'awtk::TWidgetType']]],
   ['system_5fbar_5fbottom_1297',['SYSTEM_BAR_BOTTOM',['../enumawtk_1_1_t_widget_type.html#a9a3353e9f5b7df43ae3bf566c295fb51',1,'awtk::TWidgetType']]]
 ];

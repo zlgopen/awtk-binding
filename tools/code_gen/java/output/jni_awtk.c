@@ -9975,6 +9975,16 @@ int awtk_TAppConf_app_conf_remove(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TExtWidgets_tk_ext_widgets_init(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  ret = (ret_t)tk_ext_widgets_init();
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TIndicatorDefaultPaint_INDICATOR_DEFAULT_PAINT_AUTO(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -21807,6 +21817,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TAppConf",  "app_conf_get_double",  "(Ljava/lang/String;F)F",  awtk_TAppConf_app_conf_get_double},
 {"awtk/TAppConf",  "app_conf_get_str",  "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",  awtk_TAppConf_app_conf_get_str},
 {"awtk/TAppConf",  "app_conf_remove",  "(Ljava/lang/String;)I",  awtk_TAppConf_app_conf_remove},
+{"awtk/TExtWidgets",  "tk_ext_widgets_init",  "()I",  awtk_TExtWidgets_tk_ext_widgets_init},
 {"awtk/TIndicatorDefaultPaint",  "INDICATOR_DEFAULT_PAINT_AUTO",  "()I",  awtk_TIndicatorDefaultPaint_INDICATOR_DEFAULT_PAINT_AUTO},
 {"awtk/TIndicatorDefaultPaint",  "INDICATOR_DEFAULT_PAINT_FILL_DOT",  "()I",  awtk_TIndicatorDefaultPaint_INDICATOR_DEFAULT_PAINT_FILL_DOT},
 {"awtk/TIndicatorDefaultPaint",  "INDICATOR_DEFAULT_PAINT_STROKE_DOT",  "()I",  awtk_TIndicatorDefaultPaint_INDICATOR_DEFAULT_PAINT_STROKE_DOT},

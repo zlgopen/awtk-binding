@@ -2,7 +2,7 @@ var searchData=
 [
   ['indexof_375',['IndexOf',['../class_t_object_array.html#a3ee7ea1a0f79b39f06b41d69425a560a',1,'TObjectArray']]],
   ['info_376',['Info',['../class_t_dialog.html#a04d48e2b28a75298711aa4bbedaa5d73',1,'TDialog']]],
-  ['init_377',['Init',['../class_t_global.html#afcd2b5b875d64ea3ff108b64308a1f0f',1,'TGlobal']]],
+  ['init_377',['Init',['../class_t_global.html#afcd2b5b875d64ea3ff108b64308a1f0f',1,'TGlobal::Init()'],['../class_t_ext_widgets.html#a89bb286ce2825e7d51eec02648918c18',1,'TExtWidgets::Init()']]],
   ['insert_378',['Insert',['../class_t_object_array.html#a5f156f618a8684ef1e59311574c7aefd',1,'TObjectArray']]],
   ['instance_379',['Instance',['../class_t_image_manager.html#a9ddc91d9d708857451a21707d6194cb6',1,'TImageManager::Instance()'],['../class_t_input_method.html#ae652b2cad41da7d9f73b44c7bd99ec9a',1,'TInputMethod::Instance()'],['../class_t_locale_info.html#a3561d15bdd20aa49a4094b5142f8693c',1,'TLocaleInfo::Instance()'],['../class_t_theme.html#a650e238d988b3d909613e29fa97e3d9d',1,'TTheme::Instance()'],['../class_t_assets_manager.html#a3afa04def32df8ed6311c910f08d3bd8',1,'TAssetsManager::Instance()']]],
   ['int16_380',['Int16',['../class_t_value.html#ab971188c184ad614996fd1aadb9c3e26',1,'TValue']]],

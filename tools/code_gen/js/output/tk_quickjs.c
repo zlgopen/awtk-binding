@@ -29,6 +29,7 @@
 #include "base/widget_consts.h"
 #include "base/widget.h"
 #include "conf_io/app_conf.h"
+#include "ext_widgets/ext_widgets.h"
 #include "slide_view/slide_indicator.h"
 #include "vpage/vpage.h"
 #include "tkc/asset_info.h"
@@ -15525,6 +15526,32 @@ ret_t app_conf_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_app_conf_get_str, "app_conf_get_str", 1));
   JS_SetPropertyStr(ctx, global_obj, "app_conf_remove",
                       JS_NewCFunction(ctx, wrap_app_conf_remove, "app_conf_remove", 1));
+
+ jsvalue_unref(ctx, global_obj);
+
+ return RET_OK;
+}
+
+jsvalue_t wrap_tk_ext_widgets_init(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 0) {
+  ret_t ret = (ret_t)0;
+  ret = (ret_t)tk_ext_widgets_init();
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+ret_t ext_widgets_t_init(JSContext *ctx) {
+  jsvalue_t global_obj = JS_GetGlobalObject(ctx);
+  JS_SetPropertyStr(ctx, global_obj, "tk_ext_widgets_init",
+                      JS_NewCFunction(ctx, wrap_tk_ext_widgets_init, "tk_ext_widgets_init", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -33852,6 +33879,7 @@ ret_t awtk_js_init(JSContext *ctx) {
   widget_cursor_t_init(ctx);
   widget_t_init(ctx);
   app_conf_t_init(ctx);
+  ext_widgets_t_init(ctx);
   indicator_default_paint_t_init(ctx);
   vpage_event_t_init(ctx);
   asset_type_t_init(ctx);

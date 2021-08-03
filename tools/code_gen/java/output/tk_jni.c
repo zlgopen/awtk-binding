@@ -29,6 +29,7 @@
 #include "base/widget_consts.h"
 #include "base/widget.h"
 #include "conf_io/app_conf.h"
+#include "ext_widgets/ext_widgets.h"
 #include "slide_view/slide_indicator.h"
 #include "vpage/vpage.h"
 #include "tkc/asset_info.h"
@@ -6741,6 +6742,13 @@ JNIEXPORT jint JNICALL Java_awtk_TAppConf_app_1conf_1remove(JNIEnv* env,  jclass
   const char* key = (char*)(*env)->GetStringUTFChars(env, jkey, 0);
   ret = (ret_t)app_conf_remove(key);
   (*env)->ReleaseStringUTFChars(env, jkey, key);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TExtWidgets_tk_1ext_1widgets_1init(JNIEnv* env,  jclass ajc) { /*func*/
+  ret_t ret;
+  ret = (ret_t)tk_ext_widgets_init();
 
   return (jint)(ret);
 }

@@ -1051,6 +1051,7 @@ declare function app_conf_get_bool(key : string, defval : boolean) : boolean;
 declare function app_conf_get_double(key : string, defval : number) : number;
 declare function app_conf_get_str(key : string, defval : string) : string;
 declare function app_conf_remove(key : string) : TRet;
+declare function tk_ext_widgets_init() : TRet;
 declare function INDICATOR_DEFAULT_PAINT_AUTO();
 declare function INDICATOR_DEFAULT_PAINT_FILL_DOT();
 declare function INDICATOR_DEFAULT_PAINT_STROKE_DOT();
@@ -11587,6 +11588,28 @@ export class TAppConf {
    */
  static remove(key : string) : TRet  {
     return app_conf_remove(key);
+ }
+
+};
+/**
+ * 扩展控件。
+ *
+ */
+export class TExtWidgets { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
+
+
+  /**
+   * 初始化AWTK扩展控件。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ static init() : TRet  {
+    return tk_ext_widgets_init();
  }
 
 };

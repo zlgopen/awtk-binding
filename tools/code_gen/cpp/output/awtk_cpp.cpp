@@ -1675,6 +1675,10 @@
    return app_conf_remove(key);
  }
 
+ ret_t TExtWidgets::Init()  {
+   return tk_ext_widgets_init();
+ }
+
  uint16_t TAssetInfo::GetType()  {
     return asset_info_get_type(((asset_info_t*)(this->nativeObj)));
  }

@@ -9468,6 +9468,43 @@ class TAppConf(object):
 
 
 #
+# 扩展控件。
+#
+#
+class TExtWidgets(object):
+
+  def __new__(cls, native_obj=0):
+      if native_obj == 0:
+          return None
+      else:
+          if super().__new__ == object.__new__:
+              instance = super().__new__(cls)
+          else:
+              instance = super().__new__(cls, native_obj)
+          instance.nativeObj = native_obj
+          return instance
+    
+  def __init__(self, nativeObj):
+    self.nativeObj = nativeObj
+
+
+  def __eq__(self, other: 'TWidget'):
+      if other is None:
+          return self.nativeObj == 0
+      return self.nativeObj == other.nativeObj
+    
+  #
+  # 初始化AWTK扩展控件。
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  @classmethod
+  def init(cls): 
+      return tk_ext_widgets_init()
+
+
+#
 # 指示器默认绘制的类型。
 #
 #

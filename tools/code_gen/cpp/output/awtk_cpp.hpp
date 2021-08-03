@@ -4524,6 +4524,42 @@ public:
 
 
 /**
+ * 扩展控件。
+ *
+ */
+class TExtWidgets { 
+public:
+  //nativeObj is public for internal use only.
+  ext_widgets_t* nativeObj;
+
+  TExtWidgets(ext_widgets_t* nativeObj) {
+    this->nativeObj = nativeObj;
+  }
+
+  TExtWidgets(const ext_widgets_t* nativeObj) {
+    this->nativeObj = (ext_widgets_t*)nativeObj;
+  }
+
+  static TExtWidgets Cast(ext_widgets_t* nativeObj) {
+    return TExtWidgets(nativeObj);
+  }
+
+  static TExtWidgets Cast(const ext_widgets_t* nativeObj) {
+    return TExtWidgets((ext_widgets_t*)nativeObj);
+  }
+
+
+  /**
+   * 初始化AWTK扩展控件。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  static  ret_t Init() ;
+};
+
+
+/**
  * 单个资源的描述信息。
  *
  */
