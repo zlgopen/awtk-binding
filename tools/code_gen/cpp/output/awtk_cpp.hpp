@@ -15425,6 +15425,15 @@ public:
   ret_t AppendOption(int32_t value, const char* text) ;
 
   /**
+   * 删除选项。
+   * 
+   * @param value 值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t RemoveOption(int32_t value) ;
+
+  /**
    * 设置选项。
    * 
    * @param options 选项。

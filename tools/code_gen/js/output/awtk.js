@@ -19,12 +19,6 @@ exports.TAssetType = exports.TVpageEvent = exports.TIndicatorDefaultPaint = expo
 exports.TScrollView = exports.TScrollBar = exports.TListView = exports.TListViewH = exports.TListItem = exports.THscrollLabel = exports.TRichText = exports.TRichTextView = exports.TProgressCircle = exports.TMledit = exports.TLineNumber = exports.TLangIndicator = exports.TCandidates = exports.TImageValue = exports.TImageAnimation = exports.TGauge = exports.TGaugePointer = exports.TFileChooser = exports.TFileBrowserView = exports.TDraggable = exports.TColorPicker = exports.TColorComponent = exports.TCanvasWidget = exports.TWindowManager = exports.TWindowBase = exports.TStyleMutable = exports.TImageBase = exports.TMultiGestureEvent = exports.TWindowEvent = exports.TPaintEvent = exports.TKeyEvent = exports.TPointerEvent = exports.TValueChangeEvent = exports.TOrientationEvent = exports.TWheelEvent = exports.TAssetsManager = exports.TValueType = exports.TRet = exports.TTimerManager = exports.TTimeNow = exports.TRlog = exports.TObjectProp = exports.TObjectCmd = exports.TNamedValue = exports.TMIME_TYPE = exports.TIdleManager = exports.TEasingType = exports.TDateTime = exports.TColor = exports.TAssetInfo = void 0;
 exports.TComboBox = exports.TCalibrationWin = exports.TTimerInfo = exports.TObjectDefault = exports.TObjectArray = exports.TIdleInfo = exports.TSvgImage = exports.TMutableImage = exports.TKeyboard = exports.TGifImage = exports.TWindow = exports.TNativeWindow = exports.TDialog = exports.TView = exports.TTabControl = exports.TTabButton = exports.TTabButtonGroup = exports.TSlider = exports.TRow = exports.TProgressBar = exports.TPages = exports.TLabel = exports.TGroupBox = exports.TGrid = exports.TGridItem = exports.TEdit = exports.TDragger = exports.TDigitClock = exports.TDialogTitle = exports.TDialogClient = exports.TComboBoxItem = exports.TColumn = exports.TColorTile = exports.TClipView = exports.TCheckButton = exports.TButton = exports.TButtonGroup = exports.TAppBar = exports.TCmdExecEvent = exports.TErrorEvent = exports.TDoneEvent = exports.TProgressEvent = exports.TPropChangeEvent = exports.TVpage = exports.TTimeClock = exports.TTextSelector = exports.TSwitch = exports.TSlideView = exports.TSlideIndicator = exports.TSlideMenu = void 0;
 exports.TComboBoxEx = exports.TSystemBar = exports.TSpinBox = exports.TPopup = exports.TOverlay = exports.TImage = void 0;
-if (this['console'] === undefined) {
-    this.console = {};
-    this.console.log = function (str) {
-        print(str);
-    };
-}
 /**
  * 事件分发器, 用于实现观察者模式。
  *
@@ -21853,6 +21847,16 @@ var TComboBox = /** @class */ (function (_super) {
      */
     TComboBox.prototype.appendOption = function (value, text) {
         return combo_box_append_option(this != null ? (this.nativeObj || this) : null, value, text);
+    };
+    /**
+     * 删除选项。
+     *
+     * @param value 值。
+     *
+     * @returns 返回RET_OK表示成功，否则表示失败。
+     */
+    TComboBox.prototype.removeOption = function (value) {
+        return combo_box_remove_option(this != null ? (this.nativeObj || this) : null, value);
     };
     /**
      * 设置选项。

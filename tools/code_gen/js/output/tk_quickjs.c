@@ -33164,6 +33164,24 @@ jsvalue_t wrap_combo_box_append_option(
   return jret;
 }
 
+jsvalue_t wrap_combo_box_remove_option(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  int32_t value = (int32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)combo_box_remove_option(widget, value);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_combo_box_set_options(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -33317,6 +33335,8 @@ ret_t combo_box_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_combo_box_set_item_height, "combo_box_set_item_height", 1));
   JS_SetPropertyStr(ctx, global_obj, "combo_box_append_option",
                       JS_NewCFunction(ctx, wrap_combo_box_append_option, "combo_box_append_option", 1));
+  JS_SetPropertyStr(ctx, global_obj, "combo_box_remove_option",
+                      JS_NewCFunction(ctx, wrap_combo_box_remove_option, "combo_box_remove_option", 1));
   JS_SetPropertyStr(ctx, global_obj, "combo_box_set_options",
                       JS_NewCFunction(ctx, wrap_combo_box_set_options, "combo_box_set_options", 1));
   JS_SetPropertyStr(ctx, global_obj, "combo_box_get_value",

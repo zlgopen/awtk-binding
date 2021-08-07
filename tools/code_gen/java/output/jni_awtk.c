@@ -20413,6 +20413,18 @@ int awtk_TComboBox_combo_box_append_option(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TComboBox_combo_box_remove_option(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  int32_t value = (int32_t)jni_ctx_get_int(&actx);
+  ret = (ret_t)combo_box_remove_option(widget, value);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TComboBox_combo_box_set_options(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -22813,6 +22825,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TComboBox",  "combo_box_set_value",  "(JI)I",  awtk_TComboBox_combo_box_set_value},
 {"awtk/TComboBox",  "combo_box_set_item_height",  "(JI)I",  awtk_TComboBox_combo_box_set_item_height},
 {"awtk/TComboBox",  "combo_box_append_option",  "(JILjava/lang/String;)I",  awtk_TComboBox_combo_box_append_option},
+{"awtk/TComboBox",  "combo_box_remove_option",  "(JI)I",  awtk_TComboBox_combo_box_remove_option},
 {"awtk/TComboBox",  "combo_box_set_options",  "(JLjava/lang/String;)I",  awtk_TComboBox_combo_box_set_options},
 {"awtk/TComboBox",  "combo_box_get_value",  "(J)I",  awtk_TComboBox_combo_box_get_value},
 {"awtk/TComboBox",  "combo_box_get_text",  "(J)Ljava/lang/String;",  awtk_TComboBox_combo_box_get_text},

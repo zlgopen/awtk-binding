@@ -3,6 +3,8 @@
         "types": [],
         "target": "es5",
         "lib": ["es5"],
+        "noImplicitAny": true,
+        "declaration": true,
         "sourceMap": true
     },
     "files": [

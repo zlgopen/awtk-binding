@@ -4543,6 +4543,10 @@
    return combo_box_append_option(((widget_t*)(this->nativeObj)), value, text);
  }
 
+ ret_t TComboBox::RemoveOption(int32_t value)  {
+   return combo_box_remove_option(((widget_t*)(this->nativeObj)), value);
+ }
+
  ret_t TComboBox::SetOptions(const char* options)  {
    return combo_box_set_options(((widget_t*)(this->nativeObj)), options);
  }

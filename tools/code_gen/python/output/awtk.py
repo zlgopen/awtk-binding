@@ -24702,6 +24702,17 @@ class TComboBox (TEdit):
 
 
   #
+  # 删除选项。
+  # 
+  # @param value 值。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def remove_option(self, value): 
+      return combo_box_remove_option(awtk_get_native_obj(self), value)
+
+
+  #
   # 设置选项。
   # 
   # @param options 选项。

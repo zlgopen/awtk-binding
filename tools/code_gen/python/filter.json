@@ -31351,6 +31351,29 @@
             "desc": "combo_box对象。"
           },
           {
+            "type": "int32_t",
+            "name": "value",
+            "desc": "值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "删除选项。",
+        "name": "combo_box_remove_option",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "combo_box对象。"
+          },
+          {
             "type": "const char*",
             "name": "options",
             "desc": "选项。"

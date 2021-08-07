@@ -26458,6 +26458,21 @@ static void wrap_combo_box_append_option(const Nan::FunctionCallbackInfo<v8::Val
   (void)argc;(void)ctx;
 }
 
+static void wrap_combo_box_remove_option(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  int32_t value = (int32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)combo_box_remove_option(widget, value);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_combo_box_set_options(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -26579,6 +26594,7 @@ ret_t combo_box_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "combo_box_set_value", wrap_combo_box_set_value);
   Nan::Export(ctx, "combo_box_set_item_height", wrap_combo_box_set_item_height);
   Nan::Export(ctx, "combo_box_append_option", wrap_combo_box_append_option);
+  Nan::Export(ctx, "combo_box_remove_option", wrap_combo_box_remove_option);
   Nan::Export(ctx, "combo_box_set_options", wrap_combo_box_set_options);
   Nan::Export(ctx, "combo_box_get_value", wrap_combo_box_get_value);
   Nan::Export(ctx, "combo_box_get_text", wrap_combo_box_get_text);

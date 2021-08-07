@@ -16,7 +16,7 @@ var searchData=
   ['dialog_5fclient_251',['DIALOG_CLIENT',['../enumawtk_1_1_t_widget_type.html#ab66193ea01c47d48f96fd194ecf1a7d2',1,'awtk::TWidgetType']]],
   ['dialog_5ftitle_252',['DIALOG_TITLE',['../enumawtk_1_1_t_widget_type.html#af806a7e1f284b6d6264fab147cc75c0e',1,'awtk::TWidgetType']]],
   ['dirty_5frect_5ftolerance_253',['DIRTY_RECT_TOLERANCE',['../enumawtk_1_1_t_widget_prop.html#ab5df2becd43f367ea6439e223db32dd7',1,'awtk::TWidgetProp']]],
-  ['disable_254',['DISABLE',['../enumawtk_1_1_t_widget_state.html#acd5d2fefb56e86697cdfbe4f641a9146',1,'awtk.TWidgetState.DISABLE()'],['../classawtk_1_1_t_emitter.html#a943c4ba9c3a7feb93e02a6fa8f0ed834',1,'awtk.TEmitter.disable()']]],
+  ['disable_254',['disable',['../classawtk_1_1_t_emitter.html#a943c4ba9c3a7feb93e02a6fa8f0ed834',1,'awtk.TEmitter.disable()'],['../enumawtk_1_1_t_widget_state.html#acd5d2fefb56e86697cdfbe4f641a9146',1,'awtk.TWidgetState.DISABLE()']]],
   ['disable_5fanim_255',['DISABLE_ANIM',['../enumawtk_1_1_t_widget_prop.html#aaad8b1eb3119df1939ef7ea530af0cb8',1,'awtk::TWidgetProp']]],
   ['disable_5fof_5factive_256',['DISABLE_OF_ACTIVE',['../enumawtk_1_1_t_widget_state.html#adec44f0e13a5f255187891b2b1e029c1',1,'awtk::TWidgetState']]],
   ['disable_5fof_5fchecked_257',['DISABLE_OF_CHECKED',['../enumawtk_1_1_t_widget_state.html#a114dfcc7ef734ae49a7f6e859115a8b3',1,'awtk::TWidgetState']]],

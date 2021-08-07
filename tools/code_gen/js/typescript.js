@@ -151,11 +151,11 @@ class TypescriptGenerator extends TargetGen {
   genSetPropNativeDecl(cls, p) {
     const propType = this.mapTypeVar(p.type, 'v', true);
     const funcName = this.getSetPropertyFuncName(cls, p);
-    return `declare function ${funcName}(nativeObj : any, ${propType})\n`;
+    return `declare function ${funcName}(nativeObj : any, ${propType}): TRet\n`;
   }
 
   genConstNativeDecl(cls, c) {
-    return `declare function ${c.name}();\n`
+    return `declare function ${c.name}():any;\n`
   }
 
   genEnum(cls) {
@@ -189,13 +189,7 @@ class TypescriptGenerator extends TargetGen {
 
   genJsonAll(ojson) {
     let result = `
-declare function print(str);
-if(this['console'] === undefined) {
-  this.console = {}
-  this.console.log = function(str) {
-      print(str);
-  }
-}
+declare function print(str:any):any;
 `;
     let json = this.filterScriptableJson(ojson);
 

@@ -22605,6 +22605,20 @@ static HANDLER_PROTO(wrap_combo_box_append_option)  {
   return jret;
 }
 
+static HANDLER_PROTO(wrap_combo_box_remove_option)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  int32_t value = (int32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)combo_box_remove_option(widget, value);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 static HANDLER_PROTO(wrap_combo_box_set_options)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
@@ -22711,6 +22725,7 @@ ret_t combo_box_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"combo_box_set_value", wrap_combo_box_set_value);
   jerryx_handler_register_global((const jerry_char_t*)"combo_box_set_item_height", wrap_combo_box_set_item_height);
   jerryx_handler_register_global((const jerry_char_t*)"combo_box_append_option", wrap_combo_box_append_option);
+  jerryx_handler_register_global((const jerry_char_t*)"combo_box_remove_option", wrap_combo_box_remove_option);
   jerryx_handler_register_global((const jerry_char_t*)"combo_box_set_options", wrap_combo_box_set_options);
   jerryx_handler_register_global((const jerry_char_t*)"combo_box_get_value", wrap_combo_box_get_value);
   jerryx_handler_register_global((const jerry_char_t*)"combo_box_get_text", wrap_combo_box_get_text);

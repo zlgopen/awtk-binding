@@ -13693,6 +13693,14 @@ JNIEXPORT jint JNICALL Java_awtk_TComboBox_combo_1box_1append_1option(JNIEnv* en
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TComboBox_combo_1box_1remove_1option(JNIEnv* env,  jclass ajc, jlong jwidget, jint value) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)combo_box_remove_option(widget, value);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TComboBox_combo_1box_1set_1options(JNIEnv* env,  jclass ajc, jlong jwidget, jstring joptions) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
