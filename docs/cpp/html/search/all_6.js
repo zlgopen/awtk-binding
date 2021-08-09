@@ -205,7 +205,7 @@ var searchData=
   ['getrctrl_279',['GetRctrl',['../class_t_key_event.html#a4537c940f513a3addffbf873421ab396',1,'TKeyEvent']]],
   ['getreadonly_280',['GetReadonly',['../class_t_mledit.html#adf456713648c2252e7d3e761b0381a25',1,'TMledit::GetReadonly()'],['../class_t_edit.html#a80da6d8e8194c93aed9d992c4ebce06c',1,'TEdit::GetReadonly()']]],
   ['getrecursive_281',['GetRecursive',['../class_t_scroll_view.html#a6578d85212a5fb9e71d67126c7c5dc6c',1,'TScrollView']]],
-  ['getrefcount_282',['GetRefcount',['../class_t_asset_info.html#a9bf45655657ebd313a841355b8feed66',1,'TAssetInfo::GetRefcount()'],['../class_t_object.html#abf88f8baf905e1ec672b47d2beebb193',1,'TObject::GetRefCount()']]],
+  ['getrefcount_282',['GetRefCount',['../class_t_object.html#abf88f8baf905e1ec672b47d2beebb193',1,'TObject::GetRefCount()'],['../class_t_asset_info.html#a9bf45655657ebd313a841355b8feed66',1,'TAssetInfo::GetRefcount()']]],
   ['getrepeat_283',['GetRepeat',['../class_t_button.html#a3a4efb5a466aadfd008b592149ef788a',1,'TButton']]],
   ['getresult_284',['GetResult',['../class_t_done_event.html#a04b68f27cf50cebcce8b548f5df240d8',1,'TDoneEvent::GetResult()'],['../class_t_cmd_exec_event.html#aa6625b1dfdcff7b38d858252da842424',1,'TCmdExecEvent::GetResult()']]],
   ['getreverse_285',['GetReverse',['../class_t_image_animation.html#afb69e450da3031171043f1ad85d8363d',1,'TImageAnimation::GetReverse()'],['../class_t_progress_bar.html#a87c9a0008b38ac40bfa9634194fe21ae',1,'TProgressBar::GetReverse()']]],

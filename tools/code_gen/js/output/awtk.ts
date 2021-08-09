@@ -11591,11 +11591,6 @@ export class TAppConf {
  *
  */
 export class TExtWidgets { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   this.nativeObj = nativeObj;
- }
-
 
   /**
    * 初始化AWTK扩展控件。

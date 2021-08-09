@@ -29,6 +29,10 @@ public:
     this->nativeObj = nativeObj;
   }
 
+  TEmitter() {
+    this->nativeObj = (emitter_t*)NULL;
+  }
+
   TEmitter(const emitter_t* nativeObj) {
     this->nativeObj = (emitter_t*)nativeObj;
   }
@@ -132,6 +136,10 @@ public:
     this->nativeObj = nativeObj;
   }
 
+  TPoint() {
+    this->nativeObj = (point_t*)NULL;
+  }
+
   TPoint(const point_t* nativeObj) {
     this->nativeObj = (point_t*)nativeObj;
   }
@@ -160,6 +168,10 @@ public:
     this->nativeObj = nativeObj;
   }
 
+  TPointf() {
+    this->nativeObj = (pointf_t*)NULL;
+  }
+
   TPointf(const pointf_t* nativeObj) {
     this->nativeObj = (pointf_t*)nativeObj;
   }
@@ -186,6 +198,10 @@ public:
 
   TRectf(rectf_t* nativeObj) {
     this->nativeObj = nativeObj;
+  }
+
+  TRectf() {
+    this->nativeObj = (rectf_t*)NULL;
   }
 
   TRectf(const rectf_t* nativeObj) {
@@ -238,6 +254,10 @@ public:
 
   TRect(rect_t* nativeObj) {
     this->nativeObj = nativeObj;
+  }
+
+  TRect() {
+    this->nativeObj = (rect_t*)NULL;
   }
 
   TRect(const rect_t* nativeObj) {
@@ -328,6 +348,10 @@ public:
 
   TBitmap(bitmap_t* nativeObj) {
     this->nativeObj = nativeObj;
+  }
+
+  TBitmap() {
+    this->nativeObj = (bitmap_t*)NULL;
   }
 
   TBitmap(const bitmap_t* nativeObj) {
@@ -433,6 +457,10 @@ public:
 class TObject : public TEmitter { 
 public:
   TObject(emitter_t* nativeObj) : TEmitter(nativeObj) {
+  }
+
+  TObject() {
+    this->nativeObj = (emitter_t*)NULL;
   }
 
   TObject(const object_t* nativeObj) : TEmitter((emitter_t*)nativeObj) {
@@ -1075,6 +1103,10 @@ public:
     this->nativeObj = nativeObj;
   }
 
+  TValue() {
+    this->nativeObj = (value_t*)NULL;
+  }
+
   TValue(const value_t* nativeObj) {
     this->nativeObj = (value_t*)nativeObj;
   }
@@ -1446,6 +1478,10 @@ public:
     this->nativeObj = nativeObj;
   }
 
+  TCanvasOffline() {
+    this->nativeObj = (canvas_offline_t*)NULL;
+  }
+
   TCanvasOffline(const canvas_offline_t* nativeObj) {
     this->nativeObj = (canvas_offline_t*)nativeObj;
   }
@@ -1472,6 +1508,10 @@ public:
 
   TCanvas(canvas_t* nativeObj) {
     this->nativeObj = nativeObj;
+  }
+
+  TCanvas() {
+    this->nativeObj = (canvas_t*)NULL;
   }
 
   TCanvas(const canvas_t* nativeObj) {
@@ -1805,6 +1845,10 @@ public:
     this->nativeObj = nativeObj;
   }
 
+  TClipBoard() {
+    this->nativeObj = (clip_board_t*)NULL;
+  }
+
   TClipBoard(const clip_board_t* nativeObj) {
     this->nativeObj = (clip_board_t*)nativeObj;
   }
@@ -1848,6 +1892,10 @@ public:
 
   TEvent(event_t* nativeObj) {
     this->nativeObj = nativeObj;
+  }
+
+  TEvent() {
+    this->nativeObj = (event_t*)NULL;
   }
 
   TEvent(const event_t* nativeObj) {
@@ -1939,6 +1987,10 @@ public:
 
   TFontManager(font_manager_t* nativeObj) {
     this->nativeObj = nativeObj;
+  }
+
+  TFontManager() {
+    this->nativeObj = (font_manager_t*)NULL;
   }
 
   TFontManager(const font_manager_t* nativeObj) {
@@ -2040,6 +2092,10 @@ public:
     this->nativeObj = nativeObj;
   }
 
+  TImageManager() {
+    this->nativeObj = (image_manager_t*)NULL;
+  }
+
   TImageManager(const image_manager_t* nativeObj) {
     this->nativeObj = (image_manager_t*)nativeObj;
   }
@@ -2106,6 +2162,10 @@ public:
 
   TInputMethod(input_method_t* nativeObj) {
     this->nativeObj = nativeObj;
+  }
+
+  TInputMethod() {
+    this->nativeObj = (input_method_t*)NULL;
   }
 
   TInputMethod(const input_method_t* nativeObj) {
@@ -2217,6 +2277,10 @@ public:
     this->nativeObj = nativeObj;
   }
 
+  TLocaleInfo() {
+    this->nativeObj = (locale_info_t*)NULL;
+  }
+
   TLocaleInfo(const locale_info_t* nativeObj) {
     this->nativeObj = (locale_info_t*)nativeObj;
   }
@@ -2284,6 +2348,10 @@ public:
 
   TStyle(style_t* nativeObj) {
     this->nativeObj = nativeObj;
+  }
+
+  TStyle() {
+    this->nativeObj = (style_t*)NULL;
   }
 
   TStyle(const style_t* nativeObj) {
@@ -2409,6 +2477,10 @@ public:
 
   TTheme(theme_t* nativeObj) {
     this->nativeObj = nativeObj;
+  }
+
+  TTheme() {
+    this->nativeObj = (theme_t*)NULL;
   }
 
   TTheme(const theme_t* nativeObj) {
@@ -2545,6 +2617,10 @@ public:
 
   TVgcanvas(vgcanvas_t* nativeObj) {
     this->nativeObj = nativeObj;
+  }
+
+  TVgcanvas() {
+    this->nativeObj = (vgcanvas_t*)NULL;
   }
 
   TVgcanvas(const vgcanvas_t* nativeObj) {
@@ -3139,6 +3215,10 @@ public:
 
   TWidget(widget_t* nativeObj) {
     this->nativeObj = nativeObj;
+  }
+
+  TWidget() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TWidget(const widget_t* nativeObj) {
@@ -4529,25 +4609,6 @@ public:
  */
 class TExtWidgets { 
 public:
-  //nativeObj is public for internal use only.
-  ext_widgets_t* nativeObj;
-
-  TExtWidgets(ext_widgets_t* nativeObj) {
-    this->nativeObj = nativeObj;
-  }
-
-  TExtWidgets(const ext_widgets_t* nativeObj) {
-    this->nativeObj = (ext_widgets_t*)nativeObj;
-  }
-
-  static TExtWidgets Cast(ext_widgets_t* nativeObj) {
-    return TExtWidgets(nativeObj);
-  }
-
-  static TExtWidgets Cast(const ext_widgets_t* nativeObj) {
-    return TExtWidgets((ext_widgets_t*)nativeObj);
-  }
-
 
   /**
    * 初始化AWTK扩展控件。
@@ -4570,6 +4631,10 @@ public:
 
   TAssetInfo(asset_info_t* nativeObj) {
     this->nativeObj = nativeObj;
+  }
+
+  TAssetInfo() {
+    this->nativeObj = (asset_info_t*)NULL;
   }
 
   TAssetInfo(const asset_info_t* nativeObj) {
@@ -4651,6 +4716,10 @@ public:
 
   TColor(color_t* nativeObj) {
     this->nativeObj = nativeObj;
+  }
+
+  TColor() {
+    this->nativeObj = (color_t*)NULL;
   }
 
   TColor(const color_t* nativeObj) {
@@ -4771,6 +4840,10 @@ public:
 
   TDateTime(date_time_t* nativeObj) {
     this->nativeObj = nativeObj;
+  }
+
+  TDateTime() {
+    this->nativeObj = (date_time_t*)NULL;
   }
 
   TDateTime(const date_time_t* nativeObj) {
@@ -4995,6 +5068,10 @@ public:
     this->nativeObj = nativeObj;
   }
 
+  TIdleManager() {
+    this->nativeObj = (idle_manager_t*)NULL;
+  }
+
   TIdleManager(const idle_manager_t* nativeObj) {
     this->nativeObj = (idle_manager_t*)nativeObj;
   }
@@ -5021,6 +5098,10 @@ public:
 
   TNamedValue(named_value_t* nativeObj) {
     this->nativeObj = nativeObj;
+  }
+
+  TNamedValue() {
+    this->nativeObj = (named_value_t*)NULL;
   }
 
   TNamedValue(const named_value_t* nativeObj) {
@@ -5102,6 +5183,10 @@ public:
 
   TRlog(rlog_t* nativeObj) {
     this->nativeObj = nativeObj;
+  }
+
+  TRlog() {
+    this->nativeObj = (rlog_t*)NULL;
   }
 
   TRlog(const rlog_t* nativeObj) {
@@ -5190,6 +5275,10 @@ public:
     this->nativeObj = nativeObj;
   }
 
+  TTimerManager() {
+    this->nativeObj = (timer_manager_t*)NULL;
+  }
+
   TTimerManager(const timer_manager_t* nativeObj) {
     this->nativeObj = (timer_manager_t*)nativeObj;
   }
@@ -5240,6 +5329,10 @@ public:
 class TAssetsManager : public TEmitter { 
 public:
   TAssetsManager(emitter_t* nativeObj) : TEmitter(nativeObj) {
+  }
+
+  TAssetsManager() {
+    this->nativeObj = (emitter_t*)NULL;
   }
 
   TAssetsManager(const assets_manager_t* nativeObj) : TEmitter((emitter_t*)nativeObj) {
@@ -5320,6 +5413,10 @@ public:
   TWheelEvent(event_t* nativeObj) : TEvent(nativeObj) {
   }
 
+  TWheelEvent() {
+    this->nativeObj = (event_t*)NULL;
+  }
+
   TWheelEvent(const wheel_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
   }
 
@@ -5375,6 +5472,10 @@ public:
   TOrientationEvent(event_t* nativeObj) : TEvent(nativeObj) {
   }
 
+  TOrientationEvent() {
+    this->nativeObj = (event_t*)NULL;
+  }
+
   TOrientationEvent(const orientation_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
   }
 
@@ -5412,6 +5513,10 @@ public:
   TValueChangeEvent(event_t* nativeObj) : TEvent(nativeObj) {
   }
 
+  TValueChangeEvent() {
+    this->nativeObj = (event_t*)NULL;
+  }
+
   TValueChangeEvent(const value_change_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
   }
 
@@ -5441,6 +5546,10 @@ public:
 class TPointerEvent : public TEvent { 
 public:
   TPointerEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  }
+
+  TPointerEvent() {
+    this->nativeObj = (event_t*)NULL;
   }
 
   TPointerEvent(const pointer_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
@@ -5526,6 +5635,10 @@ public:
 class TKeyEvent : public TEvent { 
 public:
   TKeyEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  }
+
+  TKeyEvent() {
+    this->nativeObj = (event_t*)NULL;
   }
 
   TKeyEvent(const key_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
@@ -5639,6 +5752,10 @@ public:
   TPaintEvent(event_t* nativeObj) : TEvent(nativeObj) {
   }
 
+  TPaintEvent() {
+    this->nativeObj = (event_t*)NULL;
+  }
+
   TPaintEvent(const paint_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
   }
 
@@ -5676,6 +5793,10 @@ public:
   TWindowEvent(event_t* nativeObj) : TEvent(nativeObj) {
   }
 
+  TWindowEvent() {
+    this->nativeObj = (event_t*)NULL;
+  }
+
   TWindowEvent(const window_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
   }
 
@@ -5711,6 +5832,10 @@ public:
 class TMultiGestureEvent : public TEvent { 
 public:
   TMultiGestureEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  }
+
+  TMultiGestureEvent() {
+    this->nativeObj = (event_t*)NULL;
   }
 
   TMultiGestureEvent(const multi_gesture_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
@@ -5780,6 +5905,10 @@ public:
 class TImageBase : public TWidget { 
 public:
   TImageBase(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TImageBase() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TImageBase(const image_base_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -5936,6 +6065,10 @@ public:
   TStyleMutable(style_t* nativeObj) : TStyle(nativeObj) {
   }
 
+  TStyleMutable() {
+    this->nativeObj = (style_t*)NULL;
+  }
+
   TStyleMutable(const style_mutable_t* nativeObj) : TStyle((style_t*)nativeObj) {
   }
 
@@ -6008,6 +6141,10 @@ public:
 class TWindowBase : public TWidget { 
 public:
   TWindowBase(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TWindowBase() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TWindowBase(const window_base_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -6178,6 +6315,10 @@ public:
 class TWindowManager : public TWidget { 
 public:
   TWindowManager(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TWindowManager() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TWindowManager(const window_manager_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -6394,6 +6535,10 @@ public:
   TCanvasWidget(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TCanvasWidget() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TCanvasWidget(const canvas_widget_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -6439,6 +6584,10 @@ public:
 class TColorComponent : public TWidget { 
 public:
   TColorComponent(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TColorComponent() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TColorComponent(const color_component_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -6498,6 +6647,10 @@ public:
 class TColorPicker : public TWidget { 
 public:
   TColorPicker(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TColorPicker() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TColorPicker(const color_picker_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -6583,6 +6736,10 @@ public:
 class TDraggable : public TWidget { 
 public:
   TDraggable(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TDraggable() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TDraggable(const draggable_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -6767,6 +6924,10 @@ public:
 class TFileBrowserView : public TWidget { 
 public:
   TFileBrowserView(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TFileBrowserView() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TFileBrowserView(const file_browser_view_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -6955,6 +7116,10 @@ public:
   TFileChooser(emitter_t* nativeObj) : TEmitter(nativeObj) {
   }
 
+  TFileChooser() {
+    this->nativeObj = (emitter_t*)NULL;
+  }
+
   TFileChooser(const file_chooser_t* nativeObj) : TEmitter((emitter_t*)nativeObj) {
   }
 
@@ -7090,6 +7255,10 @@ public:
   TGaugePointer(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TGaugePointer() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TGaugePointer(const gauge_pointer_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -7218,6 +7387,10 @@ public:
   TGauge(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TGauge() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TGauge(const gauge_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -7316,6 +7489,10 @@ public:
 class TImageAnimation : public TWidget { 
 public:
   TImageAnimation(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TImageAnimation() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TImageAnimation(const image_animation_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -7615,6 +7792,10 @@ public:
   TImageValue(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TImageValue() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TImageValue(const image_value_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -7770,6 +7951,10 @@ public:
   TCandidates(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TCandidates() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TCandidates(const candidates_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -7885,6 +8070,10 @@ public:
   TLangIndicator(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TLangIndicator() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TLangIndicator(const lang_indicator_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -7971,6 +8160,10 @@ public:
 class TLineNumber : public TWidget { 
 public:
   TLineNumber(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TLineNumber() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TLineNumber(const line_number_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -8070,6 +8263,10 @@ public:
 class TMledit : public TWidget { 
 public:
   TMledit(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TMledit() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TMledit(const mledit_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -8373,6 +8570,10 @@ public:
   TProgressCircle(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TProgressCircle() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TProgressCircle(const progress_circle_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -8558,6 +8759,10 @@ public:
   TRichTextView(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TRichTextView() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TRichTextView(const rich_text_view_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -8636,6 +8841,10 @@ public:
 class TRichText : public TWidget { 
 public:
   TRichText(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TRichText() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TRichText(const rich_text_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -8734,6 +8943,10 @@ public:
 class THscrollLabel : public TWidget { 
 public:
   THscrollLabel(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  THscrollLabel() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   THscrollLabel(const hscroll_label_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -8963,6 +9176,10 @@ public:
   TListItem(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TListItem() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TListItem(const list_item_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -9032,6 +9249,10 @@ public:
 class TListViewH : public TWidget { 
 public:
   TListViewH(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TListViewH() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TListViewH(const list_view_h_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -9156,6 +9377,10 @@ public:
 class TListView : public TWidget { 
 public:
   TListView(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TListView() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TListView(const list_view_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -9300,6 +9525,10 @@ public:
 class TScrollBar : public TWidget { 
 public:
   TScrollBar(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TScrollBar() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TScrollBar(const scroll_bar_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -9505,6 +9734,10 @@ public:
 class TScrollView : public TWidget { 
 public:
   TScrollView(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TScrollView() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TScrollView(const scroll_view_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -9774,6 +10007,10 @@ public:
   TSlideMenu(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TSlideMenu() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TSlideMenu(const slide_menu_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -9889,6 +10126,10 @@ public:
 class TSlideIndicator : public TWidget { 
 public:
   TSlideIndicator(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TSlideIndicator() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TSlideIndicator(const slide_indicator_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -10143,6 +10384,10 @@ public:
   TSlideView(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TSlideView() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TSlideView(const slide_view_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -10317,6 +10562,10 @@ public:
   TSwitch(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TSwitch() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TSwitch(const switch_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -10410,6 +10659,10 @@ public:
 class TTextSelector : public TWidget { 
 public:
   TTextSelector(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TTextSelector() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TTextSelector(const text_selector_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -10664,6 +10917,10 @@ public:
 class TTimeClock : public TWidget { 
 public:
   TTimeClock(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TTimeClock() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TTimeClock(const time_clock_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -10926,6 +11183,10 @@ public:
   TVpage(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TVpage() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TVpage(const vpage_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -11000,6 +11261,10 @@ public:
   TPropChangeEvent(event_t* nativeObj) : TEvent(nativeObj) {
   }
 
+  TPropChangeEvent() {
+    this->nativeObj = (event_t*)NULL;
+  }
+
   TPropChangeEvent(const prop_change_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
   }
 
@@ -11043,6 +11308,10 @@ public:
   TProgressEvent(event_t* nativeObj) : TEvent(nativeObj) {
   }
 
+  TProgressEvent() {
+    this->nativeObj = (event_t*)NULL;
+  }
+
   TProgressEvent(const progress_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
   }
 
@@ -11080,6 +11349,10 @@ public:
   TDoneEvent(event_t* nativeObj) : TEvent(nativeObj) {
   }
 
+  TDoneEvent() {
+    this->nativeObj = (event_t*)NULL;
+  }
+
   TDoneEvent(const done_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
   }
 
@@ -11115,6 +11388,10 @@ public:
 class TErrorEvent : public TEvent { 
 public:
   TErrorEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  }
+
+  TErrorEvent() {
+    this->nativeObj = (event_t*)NULL;
   }
 
   TErrorEvent(const error_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
@@ -11158,6 +11435,10 @@ public:
 class TCmdExecEvent : public TEvent { 
 public:
   TCmdExecEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  }
+
+  TCmdExecEvent() {
+    this->nativeObj = (event_t*)NULL;
   }
 
   TCmdExecEvent(const cmd_exec_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
@@ -11242,6 +11523,10 @@ public:
   TAppBar(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TAppBar() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TAppBar(const app_bar_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -11309,6 +11594,10 @@ public:
 class TButtonGroup : public TWidget { 
 public:
   TButtonGroup(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TButtonGroup() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TButtonGroup(const button_group_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -11391,6 +11680,10 @@ public:
 class TButton : public TWidget { 
 public:
   TButton(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TButton() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TButton(const button_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -11530,6 +11823,10 @@ public:
   TCheckButton(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TCheckButton() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TCheckButton(const check_button_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -11626,6 +11923,10 @@ public:
   TClipView(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TClipView() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TClipView(const clip_view_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -11687,6 +11988,10 @@ public:
 class TColorTile : public TWidget { 
 public:
   TColorTile(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TColorTile() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TColorTile(const color_tile_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -11795,6 +12100,10 @@ public:
   TColumn(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TColumn() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TColumn(const column_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -11839,6 +12148,10 @@ public:
 class TComboBoxItem : public TWidget { 
 public:
   TComboBoxItem(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TComboBoxItem() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TComboBoxItem(const combo_box_item_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -11936,6 +12249,10 @@ public:
   TDialogClient(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TDialogClient() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TDialogClient(const dialog_client_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -11999,6 +12316,10 @@ public:
 class TDialogTitle : public TWidget { 
 public:
   TDialogTitle(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TDialogTitle() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TDialogTitle(const dialog_title_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -12071,6 +12392,10 @@ public:
 class TDigitClock : public TWidget { 
 public:
   TDigitClock(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TDigitClock() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TDigitClock(const digit_clock_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -12154,6 +12479,10 @@ public:
 class TDragger : public TWidget { 
 public:
   TDragger(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TDragger() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TDragger(const dragger_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -12283,6 +12612,10 @@ public:
 class TEdit : public TWidget { 
 public:
   TEdit(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TEdit() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TEdit(const edit_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -12688,6 +13021,10 @@ public:
   TGridItem(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TGridItem() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TGridItem(const grid_item_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -12755,6 +13092,10 @@ public:
 class TGrid : public TWidget { 
 public:
   TGrid(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TGrid() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TGrid(const grid_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -12825,6 +13166,10 @@ public:
 class TGroupBox : public TWidget { 
 public:
   TGroupBox(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TGroupBox() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TGroupBox(const group_box_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -12904,6 +13249,10 @@ public:
 class TLabel : public TWidget { 
 public:
   TLabel(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TLabel() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TLabel(const label_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -13047,6 +13396,10 @@ public:
   TPages(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TPages() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TPages(const pages_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -13145,6 +13498,10 @@ public:
 class TProgressBar : public TWidget { 
 public:
   TProgressBar(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TProgressBar() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TProgressBar(const progress_bar_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -13316,6 +13673,10 @@ public:
   TRow(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TRow() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TRow(const row_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -13391,6 +13752,10 @@ public:
 class TSlider : public TWidget { 
 public:
   TSlider(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TSlider() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TSlider(const slider_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -13573,6 +13938,10 @@ public:
   TTabButtonGroup(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TTabButtonGroup() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TTabButtonGroup(const tab_button_group_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -13706,6 +14075,10 @@ public:
   TTabButton(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TTabButton() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TTabButton(const tab_button_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -13835,6 +14208,10 @@ public:
   TTabControl(widget_t* nativeObj) : TWidget(nativeObj) {
   }
 
+  TTabControl() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TTabControl(const tab_control_t* nativeObj) : TWidget((widget_t*)nativeObj) {
   }
 
@@ -13898,6 +14275,10 @@ public:
 class TView : public TWidget { 
 public:
   TView(widget_t* nativeObj) : TWidget(nativeObj) {
+  }
+
+  TView() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TView(const view_t* nativeObj) : TWidget((widget_t*)nativeObj) {
@@ -14028,6 +14409,10 @@ public:
 class TDialog : public TWindowBase { 
 public:
   TDialog(widget_t* nativeObj) : TWindowBase(nativeObj) {
+  }
+
+  TDialog() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TDialog(const dialog_t* nativeObj) : TWindowBase((widget_t*)nativeObj) {
@@ -14216,6 +14601,10 @@ public:
   TNativeWindow(emitter_t* nativeObj) : TObject(nativeObj) {
   }
 
+  TNativeWindow() {
+    this->nativeObj = (emitter_t*)NULL;
+  }
+
   TNativeWindow(const native_window_t* nativeObj) : TObject((emitter_t*)nativeObj) {
   }
 
@@ -14361,6 +14750,10 @@ public:
 class TWindow : public TWindowBase { 
 public:
   TWindow(widget_t* nativeObj) : TWindowBase(nativeObj) {
+  }
+
+  TWindow() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TWindow(const window_t* nativeObj) : TWindowBase((widget_t*)nativeObj) {
@@ -14517,6 +14910,10 @@ public:
 class TGifImage : public TImageBase { 
 public:
   TGifImage(widget_t* nativeObj) : TImageBase(nativeObj) {
+  }
+
+  TGifImage() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TGifImage(const gif_image_t* nativeObj) : TImageBase((widget_t*)nativeObj) {
@@ -14685,6 +15082,10 @@ public:
   TKeyboard(widget_t* nativeObj) : TWindowBase(nativeObj) {
   }
 
+  TKeyboard() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TKeyboard(const keyboard_t* nativeObj) : TWindowBase((widget_t*)nativeObj) {
   }
 
@@ -14758,6 +15159,10 @@ public:
   TMutableImage(widget_t* nativeObj) : TImageBase(nativeObj) {
   }
 
+  TMutableImage() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TMutableImage(const mutable_image_t* nativeObj) : TImageBase((widget_t*)nativeObj) {
   }
 
@@ -14821,6 +15226,10 @@ public:
   TSvgImage(widget_t* nativeObj) : TImageBase(nativeObj) {
   }
 
+  TSvgImage() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TSvgImage(const svg_image_t* nativeObj) : TImageBase((widget_t*)nativeObj) {
   }
 
@@ -14874,6 +15283,10 @@ public:
 class TIdleInfo : public TObject { 
 public:
   TIdleInfo(emitter_t* nativeObj) : TObject(nativeObj) {
+  }
+
+  TIdleInfo() {
+    this->nativeObj = (emitter_t*)NULL;
   }
 
   TIdleInfo(const idle_info_t* nativeObj) : TObject((emitter_t*)nativeObj) {
@@ -14930,6 +15343,10 @@ public:
 class TObjectArray : public TObject { 
 public:
   TObjectArray(emitter_t* nativeObj) : TObject(nativeObj) {
+  }
+
+  TObjectArray() {
+    this->nativeObj = (emitter_t*)NULL;
   }
 
   TObjectArray(const object_array_t* nativeObj) : TObject((emitter_t*)nativeObj) {
@@ -15051,6 +15468,10 @@ public:
   TObjectDefault(emitter_t* nativeObj) : TObject(nativeObj) {
   }
 
+  TObjectDefault() {
+    this->nativeObj = (emitter_t*)NULL;
+  }
+
   TObjectDefault(const object_default_t* nativeObj) : TObject((emitter_t*)nativeObj) {
   }
 
@@ -15110,6 +15531,10 @@ public:
 class TTimerInfo : public TObject { 
 public:
   TTimerInfo(emitter_t* nativeObj) : TObject(nativeObj) {
+  }
+
+  TTimerInfo() {
+    this->nativeObj = (emitter_t*)NULL;
   }
 
   TTimerInfo(const timer_info_t* nativeObj) : TObject((emitter_t*)nativeObj) {
@@ -15185,6 +15610,10 @@ public:
 class TCalibrationWin : public TWindowBase { 
 public:
   TCalibrationWin(widget_t* nativeObj) : TWindowBase(nativeObj) {
+  }
+
+  TCalibrationWin() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TCalibrationWin(const calibration_win_t* nativeObj) : TWindowBase((widget_t*)nativeObj) {
@@ -15318,6 +15747,10 @@ public:
 class TComboBox : public TEdit { 
 public:
   TComboBox(widget_t* nativeObj) : TEdit(nativeObj) {
+  }
+
+  TComboBox() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TComboBox(const combo_box_t* nativeObj) : TEdit((widget_t*)nativeObj) {
@@ -15557,6 +15990,10 @@ public:
   TImage(widget_t* nativeObj) : TImageBase(nativeObj) {
   }
 
+  TImage() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TImage(const image_t* nativeObj) : TImageBase((widget_t*)nativeObj) {
   }
 
@@ -15648,6 +16085,10 @@ public:
 class TOverlay : public TWindowBase { 
 public:
   TOverlay(widget_t* nativeObj) : TWindowBase(nativeObj) {
+  }
+
+  TOverlay() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TOverlay(const overlay_t* nativeObj) : TWindowBase((widget_t*)nativeObj) {
@@ -15767,6 +16208,10 @@ public:
 class TPopup : public TWindowBase { 
 public:
   TPopup(widget_t* nativeObj) : TWindowBase(nativeObj) {
+  }
+
+  TPopup() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TPopup(const popup_t* nativeObj) : TWindowBase((widget_t*)nativeObj) {
@@ -15901,6 +16346,10 @@ public:
   TSpinBox(widget_t* nativeObj) : TEdit(nativeObj) {
   }
 
+  TSpinBox() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TSpinBox(const spin_box_t* nativeObj) : TEdit((widget_t*)nativeObj) {
   }
 
@@ -15990,6 +16439,10 @@ public:
   TSystemBar(widget_t* nativeObj) : TWindowBase(nativeObj) {
   }
 
+  TSystemBar() {
+    this->nativeObj = (widget_t*)NULL;
+  }
+
   TSystemBar(const system_bar_t* nativeObj) : TWindowBase((widget_t*)nativeObj) {
   }
 
@@ -16032,6 +16485,10 @@ public:
 class TComboBoxEx : public TComboBox { 
 public:
   TComboBoxEx(widget_t* nativeObj) : TComboBox(nativeObj) {
+  }
+
+  TComboBoxEx() {
+    this->nativeObj = (widget_t*)NULL;
   }
 
   TComboBoxEx(const combo_box_ex_t* nativeObj) : TComboBox((widget_t*)nativeObj) {

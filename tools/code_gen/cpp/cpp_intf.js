@@ -52,6 +52,10 @@ class CppIntfGenerator extends CppGenerator {
       result += '    this->nativeObj = nativeObj;\n';
     }
     result += '  }\n\n';
+    
+    result += `  ${name}() {\n`;
+    result += `    this->nativeObj = (${nativeObjType})NULL;\n`;
+    result += '  }\n\n';
 
     if (cls.parent) {
       const parentName = this.toClassName(cls.parent);

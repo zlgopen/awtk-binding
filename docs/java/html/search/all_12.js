@@ -65,7 +65,7 @@ var searchData=
   ['text_5fx_5fsetext_1361',['TEXT_X_SETEXT',['../enumawtk_1_1_t_m_i_m_e___t_y_p_e.html#ac51870e0b46ed2d7c1e7149e87e903ab',1,'awtk::TMIME_TYPE']]],
   ['text_5fx_5fvcard_1362',['TEXT_X_VCARD',['../enumawtk_1_1_t_m_i_m_e___t_y_p_e.html#a54f68980c2437f2d4c5605d865277800',1,'awtk::TMIME_TYPE']]],
   ['texture_1363',['TEXTURE',['../enumawtk_1_1_t_bitmap_flag.html#a63af90b25026fd5b3bb79859e8e17eb3',1,'awtk::TBitmapFlag']]],
-  ['textwidgets_1364',['TExtWidgets',['../classawtk_1_1_t_ext_widgets.html',1,'awtk.TExtWidgets'],['../classawtk_1_1_t_ext_widgets.html#ac2e579431ae06cc92c9f685471d4579a',1,'awtk.TExtWidgets.TExtWidgets()']]],
+  ['textwidgets_1364',['TExtWidgets',['../classawtk_1_1_t_ext_widgets.html',1,'awtk']]],
   ['tfilebrowserview_1365',['TFileBrowserView',['../classawtk_1_1_t_file_browser_view.html',1,'awtk.TFileBrowserView'],['../classawtk_1_1_t_file_browser_view.html#a88b052fbb7e25ce83340e1635f4b3c23',1,'awtk.TFileBrowserView.TFileBrowserView()']]],
   ['tfilechooser_1366',['TFileChooser',['../classawtk_1_1_t_file_chooser.html',1,'awtk.TFileChooser'],['../classawtk_1_1_t_file_chooser.html#a07a57bfb180d879184332014a31b2d94',1,'awtk.TFileChooser.TFileChooser()']]],
   ['tfontmanager_1367',['TFontManager',['../classawtk_1_1_t_font_manager.html',1,'awtk.TFontManager'],['../classawtk_1_1_t_font_manager.html#a4031ae1cfd0cf6d91404e547404ed7f1',1,'awtk.TFontManager.TFontManager()']]],
