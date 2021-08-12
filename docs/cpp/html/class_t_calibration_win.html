@@ -150,6 +150,8 @@ static <a class="el" href="class_t_calibration_win.html">TCalibrationWin</a>&#16
 <tr class="memitem:ae5efc3a3f631d747905bc4129fc2bbdd"><td class="memItemLeft" align="right" valign="top"><a id="ae5efc3a3f631d747905bc4129fc2bbdd"></a>
 static <a class="el" href="class_t_calibration_win.html">TCalibrationWin</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const TWidget &amp;obj)</td></tr>
 <tr class="separator:ae5efc3a3f631d747905bc4129fc2bbdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb6ea8068a983e1afcedb7975fe1acda"><td class="memItemLeft" align="right" valign="top">static TWidget&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_calibration_win.html#aeb6ea8068a983e1afcedb7975fe1acda">Create</a> (TWidget &amp;parent, xy_t x, xy_t y, wh_t w, wh_t h)</td></tr>
+<tr class="separator:aeb6ea8068a983e1afcedb7975fe1acda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_class_t_window_base"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_t_window_base')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="class_t_window_base.html">TWindowBase</a></td></tr>
 <tr class="memitem:a3fb2635fa070697e58c5ded7fc379f9a inherit pub_static_methods_class_t_window_base"><td class="memItemLeft" align="right" valign="top"><a id="a3fb2635fa070697e58c5ded7fc379f9a"></a>
 static <a class="el" href="class_t_window_base.html">TWindowBase</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (widget_t *nativeObj)</td></tr>
@@ -176,8 +178,76 @@ static <a class="el" href="class_t_window_base.html">TWindowBase</a>&#160;</td><
 <p><a href="https://github.com/zlgopen/awtk/blob/master/design/default/ui/calibration_win.xml">window.xml</a></p>
 <p>在c代码中使用函数calibration_win_create创建窗口。如：</p>
 <p>通过calibration_win_set_on_done注册回调函数，用于保存校准数据。 </p>
-</div><hr/>该类的文档由以下文件生成:<ul>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="aeb6ea8068a983e1afcedb7975fe1acda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb6ea8068a983e1afcedb7975fe1acda">&#9670;&nbsp;</a></span>Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TWidget TCalibrationWin::Create </td>
+          <td>(</td>
+          <td class="paramtype">TWidget &amp;&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">xy_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">xy_t&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wh_t&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wh_t&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>创建calibration_win对象</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>父控件 </td></tr>
+    <tr><td class="paramname">x</td><td>x坐标 </td></tr>
+    <tr><td class="paramname">y</td><td>y坐标 </td></tr>
+    <tr><td class="paramname">w</td><td>宽度 </td></tr>
+    <tr><td class="paramname">h</td><td>高度</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>对象。 </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
+<li>output/awtk_cpp.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

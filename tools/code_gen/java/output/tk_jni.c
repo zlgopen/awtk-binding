@@ -8893,6 +8893,14 @@ JNIEXPORT jlong JNICALL Java_awtk_TCanvasWidget_canvas_1widget_1cast(JNIEnv* env
   return (jlong)(ret);
 }
 
+JNIEXPORT jlong JNICALL Java_awtk_TColorComponent_color_1component_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
+  widget_t* ret;
+  widget_t* parent = (widget_t*)jparent;
+  ret = (widget_t*)color_component_create(parent, x, y, w, h);
+
+  return (jlong)(ret);
+}
+
 JNIEXPORT jlong JNICALL Java_awtk_TColorComponent_color_1component_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
   widget_t* ret;
   widget_t* widget = (widget_t*)jwidget;
@@ -9740,6 +9748,14 @@ JNIEXPORT jdouble JNICALL Java_awtk_TImageValue_image_1value_1t_1get_1prop_1max(
   image_value_t* obj = (image_value_t*)jobj;
 
   return (jdouble)(obj->max);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TCandidates_candidates_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
+  widget_t* ret;
+  widget_t* parent = (widget_t*)jparent;
+  ret = (widget_t*)candidates_create(parent, x, y, w, h);
+
+  return (jlong)(ret);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TCandidates_candidates_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
@@ -11414,6 +11430,14 @@ JNIEXPORT jint JNICALL Java_awtk_TTextSelector_text_1selector_1set_1animating_1t
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TTextSelector_text_1selector_1set_1enable_1value_1animator(JNIEnv* env,  jclass ajc, jlong jwidget, jboolean enable_value_animator) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)text_selector_set_enable_value_animator(widget, enable_value_animator);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TTextSelector_text_1selector_1t_1get_1prop_1visible_1nr(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
   text_selector_t* obj = (text_selector_t*)jobj;
 
@@ -11454,6 +11478,12 @@ JNIEXPORT jboolean JNICALL Java_awtk_TTextSelector_text_1selector_1t_1get_1prop_
   text_selector_t* obj = (text_selector_t*)jobj;
 
   return (jboolean)(obj->loop_options);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TTextSelector_text_1selector_1t_1get_1prop_1enable_1value_1animator(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  text_selector_t* obj = (text_selector_t*)jobj;
+
+  return (jboolean)(obj->enable_value_animator);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TTimeClock_time_1clock_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
@@ -13422,6 +13452,14 @@ JNIEXPORT jlong JNICALL Java_awtk_TKeyboard_keyboard_1cast(JNIEnv* env,  jclass 
   return (jlong)(ret);
 }
 
+JNIEXPORT jlong JNICALL Java_awtk_TMutableImage_mutable_1image_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
+  widget_t* ret;
+  widget_t* parent = (widget_t*)jparent;
+  ret = (widget_t*)mutable_image_create(parent, x, y, w, h);
+
+  return (jlong)(ret);
+}
+
 JNIEXPORT jlong JNICALL Java_awtk_TSvgImage_svg_1image_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
   widget_t* ret;
   widget_t* parent = (widget_t*)jparent;
@@ -13599,6 +13637,14 @@ JNIEXPORT jlong JNICALL Java_awtk_TTimerInfo_timer_1info_1t_1get_1prop_1now(JNIE
   timer_info_t* obj = (timer_info_t*)jobj;
 
   return (jlong)(obj->now);
+}
+
+JNIEXPORT jlong JNICALL Java_awtk_TCalibrationWin_calibration_1win_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/
+  widget_t* ret;
+  widget_t* parent = (widget_t*)jparent;
+  ret = (widget_t*)calibration_win_create(parent, x, y, w, h);
+
+  return (jlong)(ret);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TCalibrationWin_calibration_1win_1cast(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/

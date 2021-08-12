@@ -6609,6 +6609,19 @@ public:
     return TColorComponent(obj.nativeObj);
   }
 
+
+  /**
+   * 创建color_component对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @return 对象。
+   */
+  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
 };
 
 
@@ -7974,6 +7987,19 @@ public:
     return TCandidates(obj.nativeObj);
   }
 
+
+  /**
+   * 创建candidates对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @return 对象。
+   */
+  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
 
   /**
    * 设置是否为预候选字列表。
@@ -10845,6 +10871,15 @@ public:
   ret_t SetAnimatingTime(uint32_t animating_time) ;
 
   /**
+   * 设置是否修改值时启用动画。
+   * 
+   * @param enable_value_animator 是否修改值时启用动画
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetEnableValueAnimator(bool enable_value_animator) ;
+
+  /**
    * 可见的选项数量(只能是1或者3或者5，缺省为5)。
    *
    */
@@ -10887,6 +10922,12 @@ public:
    *
    */
   bool GetLoopOptions() const;
+
+  /**
+   * 是否修改值时启用动画。
+   *
+   */
+  bool GetEnableValueAnimator() const;
 };
 
 
@@ -15182,6 +15223,19 @@ public:
     return TMutableImage(obj.nativeObj);
   }
 
+
+  /**
+   * 创建mutable_image对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @return 对象。
+   */
+  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
 };
 
 
@@ -15635,6 +15689,19 @@ public:
     return TCalibrationWin(obj.nativeObj);
   }
 
+
+  /**
+   * 创建calibration_win对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @return 对象。
+   */
+  static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
 };
 
 

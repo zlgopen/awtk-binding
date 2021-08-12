@@ -13,7 +13,7 @@ class ReactGenerator extends TargetGen {
   }
 
   isWidget(obj) {
-    return obj.annotation && obj.annotation.widget;
+    return obj.annotation && obj.annotation.widget && obj.annotation.design;
   }
 
   genComponentIndex(classes) {
@@ -76,7 +76,32 @@ ${exportDecls}
 };
 `
   }
+  genWidgetFactory(classes) {
+    let createDecls = '';
+    classes.forEach(iter => {
+      let tagName = this.upperCamelName(iter.name);
+      let typeName = tagName.toUpperCase();
+      createDecls += `    ["${typeName}", awtk.T${tagName}.create as any],\n`
+    });
 
+    return ` 
+import * as awtk from "awtk-nodejs";
+
+let widgetFactory = new Map([
+${createDecls}
+]);
+
+  export function getCreateWidget(type: string) {
+    let create = widgetFactory.get(type);
+    if(create) {
+        return create;
+    } else {
+        console.log('not found create for ' + type);
+        return awtk.TView.create;
+    }
+}
+`
+}
   genComponents(classes, pathPrefix) {
     let constDecls = '';
     let exportDecls = '';
@@ -145,10 +170,12 @@ export { createElement };
       }
     });
 
-    fs.writeFileSync('ouput/src/index.ts', this.genSrcIndex(classes));
-    fs.writeFileSync('ouput/src/components/index.ts', this.genComponentIndex(classes));
-    fs.writeFileSync('ouput/src/utils/createElement.ts', this.genCreateInstance(classes));
-    this.genComponents(classes, 'ouput/src/components/');
+    fs.writeFileSync('output/src/index.ts', this.genSrcIndex(classes));
+    fs.writeFileSync('output/src/components/index.ts', this.genComponentIndex(classes));
+    fs.writeFileSync('output/src/utils/createElement.ts', this.genCreateInstance(classes));
+    fs.writeFileSync('output/src/backends/WidgetFactory.ts', this.genWidgetFactory(classes));
+
+    this.genComponents(classes, 'output/src/components/');
   }
 
   static gen() {

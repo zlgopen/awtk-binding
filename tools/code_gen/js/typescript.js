@@ -189,7 +189,9 @@ class TypescriptGenerator extends TargetGen {
 
   genJsonAll(ojson) {
     let result = `
-declare function print(str:any):any;
+export declare function print(str:any):any;
+export declare function init(w:number, h:number,name: string):any;
+
 `;
     let json = this.filterScriptableJson(ojson);
 

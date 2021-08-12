@@ -13251,6 +13251,21 @@ int awtk_TCanvasWidget_canvas_widget_cast(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TColorComponent_color_component_create(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* parent = (widget_t*)jni_ctx_get_object(&actx);
+  xy_t x = (xy_t)jni_ctx_get_int(&actx);
+  xy_t y = (xy_t)jni_ctx_get_int(&actx);
+  wh_t w = (wh_t)jni_ctx_get_int(&actx);
+  wh_t h = (wh_t)jni_ctx_get_int(&actx);
+  ret = (widget_t*)color_component_create(parent, x, y, w, h);
+  jni_ctx_return_object(&actx, (void*)(ret));
+
+  return 0;
+}
+
 int awtk_TColorComponent_color_component_cast(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -14483,6 +14498,21 @@ int awtk_TImageValue_image_value_t_get_prop_max(Runtime *runtime, JClass *clazz)
 
   image_value_t* obj = (image_value_t*)jni_ctx_get_object(&actx);
   jni_ctx_return_float(&actx, (float)(obj->max));
+
+  return 0;
+}
+
+int awtk_TCandidates_candidates_create(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* parent = (widget_t*)jni_ctx_get_object(&actx);
+  xy_t x = (xy_t)jni_ctx_get_int(&actx);
+  xy_t y = (xy_t)jni_ctx_get_int(&actx);
+  wh_t w = (wh_t)jni_ctx_get_int(&actx);
+  wh_t h = (wh_t)jni_ctx_get_int(&actx);
+  ret = (widget_t*)candidates_create(parent, x, y, w, h);
+  jni_ctx_return_object(&actx, (void*)(ret));
 
   return 0;
 }
@@ -17015,6 +17045,18 @@ int awtk_TTextSelector_text_selector_set_animating_time(Runtime *runtime, JClass
   return 0;
 }
 
+int awtk_TTextSelector_text_selector_set_enable_value_animator(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  bool_t enable_value_animator = (bool_t)jni_ctx_get_int(&actx);
+  ret = (ret_t)text_selector_set_enable_value_animator(widget, enable_value_animator);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TTextSelector_text_selector_t_get_prop_visible_nr(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -17074,6 +17116,15 @@ int awtk_TTextSelector_text_selector_t_get_prop_loop_options(Runtime *runtime, J
 
   text_selector_t* obj = (text_selector_t*)jni_ctx_get_object(&actx);
   jni_ctx_return_int(&actx, (int32_t)(obj->loop_options));
+
+  return 0;
+}
+
+int awtk_TTextSelector_text_selector_t_get_prop_enable_value_animator(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  text_selector_t* obj = (text_selector_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_int(&actx, (int32_t)(obj->enable_value_animator));
 
   return 0;
 }
@@ -20021,6 +20072,21 @@ int awtk_TKeyboard_keyboard_cast(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TMutableImage_mutable_image_create(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* parent = (widget_t*)jni_ctx_get_object(&actx);
+  xy_t x = (xy_t)jni_ctx_get_int(&actx);
+  xy_t y = (xy_t)jni_ctx_get_int(&actx);
+  wh_t w = (wh_t)jni_ctx_get_int(&actx);
+  wh_t h = (wh_t)jni_ctx_get_int(&actx);
+  ret = (widget_t*)mutable_image_create(parent, x, y, w, h);
+  jni_ctx_return_object(&actx, (void*)(ret));
+
+  return 0;
+}
+
 int awtk_TSvgImage_svg_image_create(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -20275,6 +20341,21 @@ int awtk_TTimerInfo_timer_info_t_get_prop_now(Runtime *runtime, JClass *clazz) {
 
   timer_info_t* obj = (timer_info_t*)jni_ctx_get_object(&actx);
   jni_ctx_return_int64(&actx, (int64_t)(obj->now));
+
+  return 0;
+}
+
+int awtk_TCalibrationWin_calibration_win_create(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* parent = (widget_t*)jni_ctx_get_object(&actx);
+  xy_t x = (xy_t)jni_ctx_get_int(&actx);
+  xy_t y = (xy_t)jni_ctx_get_int(&actx);
+  wh_t w = (wh_t)jni_ctx_get_int(&actx);
+  wh_t h = (wh_t)jni_ctx_get_int(&actx);
+  ret = (widget_t*)calibration_win_create(parent, x, y, w, h);
+  jni_ctx_return_object(&actx, (void*)(ret));
 
   return 0;
 }
@@ -22190,6 +22271,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWindowManager",  "window_manager_close_all",  "(J)I",  awtk_TWindowManager_window_manager_close_all},
 {"awtk/TCanvasWidget",  "canvas_widget_create",  "(JIIII)J",  awtk_TCanvasWidget_canvas_widget_create},
 {"awtk/TCanvasWidget",  "canvas_widget_cast",  "(J)J",  awtk_TCanvasWidget_canvas_widget_cast},
+{"awtk/TColorComponent",  "color_component_create",  "(JIIII)J",  awtk_TColorComponent_color_component_create},
 {"awtk/TColorComponent",  "color_component_cast",  "(J)J",  awtk_TColorComponent_color_component_cast},
 {"awtk/TColorPicker",  "color_picker_create",  "(JIIII)J",  awtk_TColorPicker_color_picker_create},
 {"awtk/TColorPicker",  "color_picker_set_color",  "(JLjava/lang/String;)I",  awtk_TColorPicker_color_picker_set_color},
@@ -22301,6 +22383,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TImageValue",  "image_value_t_get_prop_value",  "(J)F",  awtk_TImageValue_image_value_t_get_prop_value},
 {"awtk/TImageValue",  "image_value_t_get_prop_min",  "(J)F",  awtk_TImageValue_image_value_t_get_prop_min},
 {"awtk/TImageValue",  "image_value_t_get_prop_max",  "(J)F",  awtk_TImageValue_image_value_t_get_prop_max},
+{"awtk/TCandidates",  "candidates_create",  "(JIIII)J",  awtk_TCandidates_candidates_create},
 {"awtk/TCandidates",  "candidates_cast",  "(J)J",  awtk_TCandidates_candidates_cast},
 {"awtk/TCandidates",  "candidates_set_pre",  "(JZ)I",  awtk_TCandidates_candidates_set_pre},
 {"awtk/TCandidates",  "candidates_set_select_by_num",  "(JZ)I",  awtk_TCandidates_candidates_set_select_by_num},
@@ -22525,6 +22608,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TTextSelector",  "text_selector_set_loop_options",  "(JZ)I",  awtk_TTextSelector_text_selector_set_loop_options},
 {"awtk/TTextSelector",  "text_selector_set_yspeed_scale",  "(JF)I",  awtk_TTextSelector_text_selector_set_yspeed_scale},
 {"awtk/TTextSelector",  "text_selector_set_animating_time",  "(JI)I",  awtk_TTextSelector_text_selector_set_animating_time},
+{"awtk/TTextSelector",  "text_selector_set_enable_value_animator",  "(JZ)I",  awtk_TTextSelector_text_selector_set_enable_value_animator},
 {"awtk/TTextSelector",  "text_selector_t_get_prop_visible_nr",  "(J)I",  awtk_TTextSelector_text_selector_t_get_prop_visible_nr},
 {"awtk/TTextSelector",  "text_selector_t_get_prop_selected_index",  "(J)I",  awtk_TTextSelector_text_selector_t_get_prop_selected_index},
 {"awtk/TTextSelector",  "text_selector_t_get_prop_options",  "(J)Ljava/lang/String;",  awtk_TTextSelector_text_selector_t_get_prop_options},
@@ -22532,6 +22616,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TTextSelector",  "text_selector_t_get_prop_animating_time",  "(J)I",  awtk_TTextSelector_text_selector_t_get_prop_animating_time},
 {"awtk/TTextSelector",  "text_selector_t_get_prop_localize_options",  "(J)Z",  awtk_TTextSelector_text_selector_t_get_prop_localize_options},
 {"awtk/TTextSelector",  "text_selector_t_get_prop_loop_options",  "(J)Z",  awtk_TTextSelector_text_selector_t_get_prop_loop_options},
+{"awtk/TTextSelector",  "text_selector_t_get_prop_enable_value_animator",  "(J)Z",  awtk_TTextSelector_text_selector_t_get_prop_enable_value_animator},
 {"awtk/TTimeClock",  "time_clock_create",  "(JIIII)J",  awtk_TTimeClock_time_clock_create},
 {"awtk/TTimeClock",  "time_clock_cast",  "(J)J",  awtk_TTimeClock_time_clock_cast},
 {"awtk/TTimeClock",  "time_clock_set_hour",  "(JI)I",  awtk_TTimeClock_time_clock_set_hour},
@@ -22790,6 +22875,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TGifImage",  "gif_image_cast",  "(J)J",  awtk_TGifImage_gif_image_cast},
 {"awtk/TKeyboard",  "keyboard_create",  "(JIIII)J",  awtk_TKeyboard_keyboard_create},
 {"awtk/TKeyboard",  "keyboard_cast",  "(J)J",  awtk_TKeyboard_keyboard_cast},
+{"awtk/TMutableImage",  "mutable_image_create",  "(JIIII)J",  awtk_TMutableImage_mutable_image_create},
 {"awtk/TSvgImage",  "svg_image_create",  "(JIIII)J",  awtk_TSvgImage_svg_image_create},
 {"awtk/TSvgImage",  "svg_image_set_image",  "(JLjava/lang/String;)I",  awtk_TSvgImage_svg_image_set_image},
 {"awtk/TSvgImage",  "svg_image_cast",  "(J)J",  awtk_TSvgImage_svg_image_cast},
@@ -22814,6 +22900,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TTimerInfo",  "timer_info_t_get_prop_extra_ctx",  "(J)J",  awtk_TTimerInfo_timer_info_t_get_prop_extra_ctx},
 {"awtk/TTimerInfo",  "timer_info_t_get_prop_id",  "(J)I",  awtk_TTimerInfo_timer_info_t_get_prop_id},
 {"awtk/TTimerInfo",  "timer_info_t_get_prop_now",  "(J)J",  awtk_TTimerInfo_timer_info_t_get_prop_now},
+{"awtk/TCalibrationWin",  "calibration_win_create",  "(JIIII)J",  awtk_TCalibrationWin_calibration_win_create},
 {"awtk/TCalibrationWin",  "calibration_win_cast",  "(J)J",  awtk_TCalibrationWin_calibration_win_cast},
 {"awtk/TComboBox",  "combo_box_create",  "(JIIII)J",  awtk_TComboBox_combo_box_create},
 {"awtk/TComboBox",  "combo_box_cast",  "(J)J",  awtk_TComboBox_combo_box_cast},

@@ -1,5 +1,7 @@
 ﻿
 declare function print(str:any):any;
+export declare function init(w:number, h:number,name: string):any;
+
 declare function emitter_create() : any;
 declare function emitter_dispatch(emitter : any, e : any) : TRet;
 declare function emitter_dispatch_simple_event(emitter : any, type : number) : TRet;
@@ -1409,6 +1411,7 @@ declare function window_manager_resize(widget : any, w : number, h : number) : T
 declare function window_manager_close_all(widget : any) : TRet;
 declare function canvas_widget_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function canvas_widget_cast(widget : any) : any;
+declare function color_component_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function color_component_cast(widget : any) : any;
 declare function color_picker_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function color_picker_set_color(widget : any, color : string) : TRet;
@@ -1520,6 +1523,7 @@ declare function image_value_t_get_prop_click_add_delta(nativeObj : any) : numbe
 declare function image_value_t_get_prop_value(nativeObj : any) : number;
 declare function image_value_t_get_prop_min(nativeObj : any) : number;
 declare function image_value_t_get_prop_max(nativeObj : any) : number;
+declare function candidates_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function candidates_cast(widget : any) : any;
 declare function candidates_set_pre(widget : any, pre : boolean) : TRet;
 declare function candidates_set_select_by_num(widget : any, select_by_num : boolean) : TRet;
@@ -1744,6 +1748,7 @@ declare function text_selector_set_localize_options(widget : any, localize_optio
 declare function text_selector_set_loop_options(widget : any, loop_options : boolean) : TRet;
 declare function text_selector_set_yspeed_scale(widget : any, yspeed_scale : number) : TRet;
 declare function text_selector_set_animating_time(widget : any, animating_time : number) : TRet;
+declare function text_selector_set_enable_value_animator(widget : any, enable_value_animator : boolean) : TRet;
 declare function text_selector_t_get_prop_visible_nr(nativeObj : any) : number;
 declare function text_selector_t_get_prop_selected_index(nativeObj : any) : number;
 declare function text_selector_t_get_prop_options(nativeObj : any) : string;
@@ -1751,6 +1756,7 @@ declare function text_selector_t_get_prop_yspeed_scale(nativeObj : any) : number
 declare function text_selector_t_get_prop_animating_time(nativeObj : any) : number;
 declare function text_selector_t_get_prop_localize_options(nativeObj : any) : boolean;
 declare function text_selector_t_get_prop_loop_options(nativeObj : any) : boolean;
+declare function text_selector_t_get_prop_enable_value_animator(nativeObj : any) : boolean;
 declare function time_clock_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function time_clock_cast(widget : any) : any;
 declare function time_clock_set_hour(widget : any, hour : number) : TRet;
@@ -2009,6 +2015,7 @@ declare function gif_image_pause(widget : any) : TRet;
 declare function gif_image_cast(widget : any) : any;
 declare function keyboard_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function keyboard_cast(widget : any) : any;
+declare function mutable_image_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function svg_image_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function svg_image_set_image(widget : any, name : string) : TRet;
 declare function svg_image_cast(widget : any) : any;
@@ -2035,6 +2042,7 @@ declare function timer_info_t_get_prop_ctx(nativeObj : any) : any;
 declare function timer_info_t_get_prop_extra_ctx(nativeObj : any) : any;
 declare function timer_info_t_get_prop_id(nativeObj : any) : number;
 declare function timer_info_t_get_prop_now(nativeObj : any) : number;
+declare function calibration_win_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function calibration_win_cast(widget : any) : any;
 declare function combo_box_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function combo_box_cast(widget : any) : any;
@@ -15050,6 +15058,22 @@ export class TColorComponent extends TWidget {
 
 
   /**
+   * 创建color_component对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TColorComponent  {
+    return new TColorComponent(color_component_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
    * 转换为color_component对象(供脚本语言使用)。
    * 
    * @param widget color_component对象。
@@ -16745,6 +16769,22 @@ export class TCandidates extends TWidget {
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
+ }
+
+
+  /**
+   * 创建candidates对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TCandidates  {
+    return new TCandidates(candidates_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
 
@@ -20300,6 +20340,18 @@ export class TTextSelector extends TWidget {
 
 
   /**
+   * 设置是否修改值时启用动画。
+   * 
+   * @param enable_value_animator 是否修改值时启用动画
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setEnableValueAnimator(enable_value_animator : boolean) : TRet  {
+    return text_selector_set_enable_value_animator(this != null ? (this.nativeObj || this) : null, enable_value_animator);
+ }
+
+
+  /**
    * 可见的选项数量(只能是1或者3或者5，缺省为5)。
    *
    */
@@ -20389,6 +20441,19 @@ export class TTextSelector extends TWidget {
 
  set loopOptions(v : boolean) {
    this.setLoopOptions(v);
+ }
+
+
+  /**
+   * 是否修改值时启用动画。
+   *
+   */
+ get enableValueAnimator() : boolean {
+   return text_selector_t_get_prop_enable_value_animator(this.nativeObj);
+ }
+
+ set enableValueAnimator(v : boolean) {
+   this.setEnableValueAnimator(v);
  }
 
 };
@@ -25092,6 +25157,22 @@ export class TMutableImage extends TImageBase {
    super(nativeObj);
  }
 
+
+  /**
+   * 创建mutable_image对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TMutableImage  {
+    return new TMutableImage(mutable_image_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
 };
 /**
  * SVG图片控件。
@@ -25504,6 +25585,22 @@ export class TCalibrationWin extends TWindowBase {
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
+ }
+
+
+  /**
+   * 创建calibration_win对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TCalibrationWin  {
+    return new TCalibrationWin(calibration_win_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
  }
 
 

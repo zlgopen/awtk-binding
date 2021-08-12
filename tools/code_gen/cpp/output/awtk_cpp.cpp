@@ -2267,6 +2267,10 @@
    return TCanvasWidget((widget_t*)(canvas_widget_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
+ TWidget TColorComponent::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
+   return TColorComponent((widget_t*)(color_component_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
+ }
+
  TWidget TColorPicker::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TColorPicker((widget_t*)(color_picker_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
@@ -2673,6 +2677,10 @@
 
  double TImageValue::GetMax() const {
    return ((image_value_t*)(this->nativeObj))->max;
+ }
+
+ TWidget TCandidates::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
+   return TCandidates((widget_t*)(candidates_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
  ret_t TCandidates::SetPre(bool pre)  {
@@ -3499,6 +3507,10 @@
    return text_selector_set_animating_time(((widget_t*)(this->nativeObj)), animating_time);
  }
 
+ ret_t TTextSelector::SetEnableValueAnimator(bool enable_value_animator)  {
+   return text_selector_set_enable_value_animator(((widget_t*)(this->nativeObj)), enable_value_animator);
+ }
+
  uint32_t TTextSelector::GetVisibleNr() const {
    return ((text_selector_t*)(this->nativeObj))->visible_nr;
  }
@@ -3525,6 +3537,10 @@
 
  bool TTextSelector::GetLoopOptions() const {
    return ((text_selector_t*)(this->nativeObj))->loop_options;
+ }
+
+ bool TTextSelector::GetEnableValueAnimator() const {
+   return ((text_selector_t*)(this->nativeObj))->enable_value_animator;
  }
 
  TWidget TTimeClock::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -4415,6 +4431,10 @@
    return TKeyboard((widget_t*)(keyboard_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
+ TWidget TMutableImage::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
+   return TMutableImage((widget_t*)(mutable_image_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
+ }
+
  TWidget TSvgImage::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TSvgImage((widget_t*)(svg_image_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
@@ -4505,6 +4525,10 @@
 
  uint64_t TTimerInfo::GetNow() const {
    return ((timer_info_t*)(this->nativeObj))->now;
+ }
+
+ TWidget TCalibrationWin::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
+   return TCalibrationWin((widget_t*)(calibration_win_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
  TWidget TComboBox::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {

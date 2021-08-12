@@ -119,6 +119,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a22dfed368902b877aa1d93b6762bf097"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ff3912ae75773e7b2b0213a68391e9b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a8ff3912ae75773e7b2b0213a68391e9b">SetAnimatingTime</a> (uint32_t animating_time)</td></tr>
 <tr class="separator:a8ff3912ae75773e7b2b0213a68391e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a9db78e2e02e6db701f33c96c25298f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a1a9db78e2e02e6db701f33c96c25298f">SetEnableValueAnimator</a> (bool enable_value_animator)</td></tr>
+<tr class="separator:a1a9db78e2e02e6db701f33c96c25298f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a654b0d478368792febd784133b07c176"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a654b0d478368792febd784133b07c176">GetVisibleNr</a> () const</td></tr>
 <tr class="separator:a654b0d478368792febd784133b07c176"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fe7e7c0e699fa1e40b45ef5173fa1d9"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a0fe7e7c0e699fa1e40b45ef5173fa1d9">GetSelectedIndex</a> () const</td></tr>
@@ -133,6 +135,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:aa9e0598999adffca72281014721d70d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ff0457591c7187c2716179ee0e61692"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a3ff0457591c7187c2716179ee0e61692">GetLoopOptions</a> () const</td></tr>
 <tr class="separator:a3ff0457591c7187c2716179ee0e61692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad2636edeba4642a62b6ee6d7c08a7f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#aad2636edeba4642a62b6ee6d7c08a7f9">GetEnableValueAnimator</a> () const</td></tr>
+<tr class="separator:aad2636edeba4642a62b6ee6d7c08a7f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -314,6 +318,24 @@ static <a class="el" href="class_t_text_selector.html">TTextSelector</a>&#160;</
       </table>
 </div><div class="memdoc">
 <p>滚动动画播放时间。(单位毫秒) </p>
+
+</div>
+</div>
+<a id="aad2636edeba4642a62b6ee6d7c08a7f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad2636edeba4642a62b6ee6d7c08a7f9">&#9670;&nbsp;</a></span>GetEnableValueAnimator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TTextSelector::GetEnableValueAnimator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>是否修改值时启用动画。 </p>
 
 </div>
 </div>
@@ -501,6 +523,32 @@ static <a class="el" href="class_t_text_selector.html">TTextSelector</a>&#160;</
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">animating_time</td><td>滚动动画播放时间。(单位毫秒)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a1a9db78e2e02e6db701f33c96c25298f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a9db78e2e02e6db701f33c96c25298f">&#9670;&nbsp;</a></span>SetEnableValueAnimator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TTextSelector::SetEnableValueAnimator </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable_value_animator</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置是否修改值时启用动画。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable_value_animator</td><td>是否修改值时启用动画</td></tr>
   </table>
   </dd>
 </dl>
