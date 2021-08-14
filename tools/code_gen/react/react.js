@@ -53,6 +53,8 @@ ${exportDecls}
 
     return `
 import AppRegistry from "./render";
+import {app, RootView} from "./Router"
+
 import {
   Text,
 } from "./react-components";
@@ -66,6 +68,8 @@ const VirtualText = "VIRTUALTEXT";
 ${constDecls}
 
 export {
+  app,
+  RootView,
   App,
   Text,
   StyleSheet,
