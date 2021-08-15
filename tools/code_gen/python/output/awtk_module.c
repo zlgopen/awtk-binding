@@ -6378,6 +6378,19 @@ pyobject_t wrap_widget_close_window(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", ret);
 }
 
+pyobject_t wrap_widget_close_window_force(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  widget_t* widget = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&" , &__parse_voidp, &widget)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)widget_close_window_force(widget);
+  return Py_BuildValue("i", ret);
+}
+
 pyobject_t wrap_widget_back(pyobject_t self, pyobject_t pyargs) {
   ret_t ret = 0;
   widget_t* widget = NULL;
@@ -20872,6 +20885,7 @@ static PyMethodDef awtk_methods[] = {
 {"widget_get_native_window", wrap_widget_get_native_window, METH_VARARGS, "widget_get_native_window"},
 {"widget_index_of", wrap_widget_index_of, METH_VARARGS, "widget_index_of"},
 {"widget_close_window", wrap_widget_close_window, METH_VARARGS, "widget_close_window"},
+{"widget_close_window_force", wrap_widget_close_window_force, METH_VARARGS, "widget_close_window_force"},
 {"widget_back", wrap_widget_back, METH_VARARGS, "widget_back"},
 {"widget_back_to_home", wrap_widget_back_to_home, METH_VARARGS, "widget_back_to_home"},
 {"widget_move", wrap_widget_move, METH_VARARGS, "widget_move"},

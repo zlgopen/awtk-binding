@@ -8153,6 +8153,19 @@ static HANDLER_PROTO(wrap_widget_close_window)  {
   return jret;
 }
 
+static HANDLER_PROTO(wrap_widget_close_window_force)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  ret = (ret_t)widget_close_window_force(widget);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 static HANDLER_PROTO(wrap_widget_back)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
@@ -9883,6 +9896,7 @@ ret_t widget_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"widget_get_native_window", wrap_widget_get_native_window);
   jerryx_handler_register_global((const jerry_char_t*)"widget_index_of", wrap_widget_index_of);
   jerryx_handler_register_global((const jerry_char_t*)"widget_close_window", wrap_widget_close_window);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_close_window_force", wrap_widget_close_window_force);
   jerryx_handler_register_global((const jerry_char_t*)"widget_back", wrap_widget_back);
   jerryx_handler_register_global((const jerry_char_t*)"widget_back_to_home", wrap_widget_back_to_home);
   jerryx_handler_register_global((const jerry_char_t*)"widget_move", wrap_widget_move);

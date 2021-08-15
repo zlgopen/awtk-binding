@@ -1,5 +1,5 @@
 ﻿
-declare function print(str:any):any;
+export declare function print(str:any):any;
 export declare function init(w:number, h:number,name: string):any;
 
 declare function emitter_create() : any;
@@ -903,6 +903,7 @@ declare function widget_get_focused_widget(widget : any) : any;
 declare function widget_get_native_window(widget : any) : any;
 declare function widget_index_of(widget : any) : number;
 declare function widget_close_window(widget : any) : TRet;
+declare function widget_close_window_force(widget : any) : TRet;
 declare function widget_back(widget : any) : TRet;
 declare function widget_back_to_home(widget : any) : TRet;
 declare function widget_move(widget : any, x : number, y : number) : TRet;
@@ -9787,6 +9788,17 @@ export class TWidget {
    */
  closeWindow() : TRet  {
     return widget_close_window(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 关闭控件所在的窗口。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ closeWindowForce() : TRet  {
+    return widget_close_window_force(this != null ? (this.nativeObj || this) : null);
  }
 
 

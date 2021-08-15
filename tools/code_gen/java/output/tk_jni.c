@@ -5523,6 +5523,14 @@ JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1close_1window(JNIEnv* env,  jcl
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1close_1window_1force(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)widget_close_window_force(widget);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1back(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;

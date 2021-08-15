@@ -7020,6 +7020,16 @@ static int wrap_widget_close_window(lua_State* L) {
   return 1;
 }
 
+static int wrap_widget_close_window_force(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  ret = (ret_t)widget_close_window_force(widget);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 static int wrap_widget_back(lua_State* L) {
   ret_t ret = 0;
   widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
@@ -8195,6 +8205,7 @@ static const struct luaL_Reg widget_t_member_funcs[] = {
   {"get_native_window", wrap_widget_get_native_window},
   {"index_of", wrap_widget_index_of},
   {"close_window", wrap_widget_close_window},
+  {"close_window_force", wrap_widget_close_window_force},
   {"back", wrap_widget_back},
   {"back_to_home", wrap_widget_back_to_home},
   {"move", wrap_widget_move},

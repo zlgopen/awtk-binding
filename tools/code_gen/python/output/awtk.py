@@ -7777,6 +7777,16 @@ class TWidget(object):
 
 
   #
+  # 关闭控件所在的窗口。
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def close_window_force(self): 
+      return widget_close_window_force(awtk_get_native_obj(self))
+
+
+  #
   # 请求返回到前一个窗口。
   # 
   #

@@ -12709,6 +12709,23 @@ jsvalue_t wrap_widget_close_window(
   return jret;
 }
 
+jsvalue_t wrap_widget_close_window_force(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  ret = (ret_t)widget_close_window_force(widget);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_widget_back(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -14954,6 +14971,8 @@ ret_t widget_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_widget_index_of, "widget_index_of", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_close_window",
                       JS_NewCFunction(ctx, wrap_widget_close_window, "widget_close_window", 1));
+  JS_SetPropertyStr(ctx, global_obj, "widget_close_window_force",
+                      JS_NewCFunction(ctx, wrap_widget_close_window_force, "widget_close_window_force", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_back",
                       JS_NewCFunction(ctx, wrap_widget_back, "widget_back", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_back_to_home",

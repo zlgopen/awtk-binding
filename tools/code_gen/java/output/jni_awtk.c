@@ -8282,6 +8282,17 @@ int awtk_TWidget_widget_close_window(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TWidget_widget_close_window_force(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  ret = (ret_t)widget_close_window_force(widget);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TWidget_widget_back(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -21766,6 +21777,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidget",  "widget_get_native_window",  "(J)J",  awtk_TWidget_widget_get_native_window},
 {"awtk/TWidget",  "widget_index_of",  "(J)I",  awtk_TWidget_widget_index_of},
 {"awtk/TWidget",  "widget_close_window",  "(J)I",  awtk_TWidget_widget_close_window},
+{"awtk/TWidget",  "widget_close_window_force",  "(J)I",  awtk_TWidget_widget_close_window_force},
 {"awtk/TWidget",  "widget_back",  "(J)I",  awtk_TWidget_widget_back},
 {"awtk/TWidget",  "widget_back_to_home",  "(J)I",  awtk_TWidget_widget_back_to_home},
 {"awtk/TWidget",  "widget_move",  "(JII)I",  awtk_TWidget_widget_move},

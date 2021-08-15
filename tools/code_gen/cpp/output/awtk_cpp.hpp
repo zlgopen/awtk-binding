@@ -3284,6 +3284,14 @@ public:
   ret_t CloseWindow() ;
 
   /**
+   * 关闭控件所在的窗口。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t CloseWindowForce() ;
+
+  /**
    * 请求返回到前一个窗口。
    * 
    *

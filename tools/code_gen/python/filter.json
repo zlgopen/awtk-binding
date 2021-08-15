@@ -9437,6 +9437,25 @@
           }
         ],
         "annotation": {
+          "deconstructor": true,
+          "scriptable": true
+        },
+        "desc": "关闭控件所在的窗口。",
+        "name": "widget_close_window_force",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          }
+        ],
+        "annotation": {
           "scriptable": true
         },
         "desc": "请求返回到前一个窗口。",

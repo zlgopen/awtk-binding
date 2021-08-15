@@ -1103,6 +1103,10 @@
    return widget_close_window(((widget_t*)(this->nativeObj)));
  }
 
+ ret_t TWidget::CloseWindowForce()  {
+   return widget_close_window_force(((widget_t*)(this->nativeObj)));
+ }
+
  ret_t TWidget::Back()  {
    return widget_back(((widget_t*)(this->nativeObj)));
  }
