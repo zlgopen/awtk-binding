@@ -88,6 +88,7 @@ ${exportDecls}
 import * as awtk from "awtk-nodejs";
 
 let widgetFactory = new Map([
+  ["RADIOBUTTON", awtk.TCheckButton.createRadio as any],
 ${createDecls}
 ]);
 
@@ -170,12 +171,15 @@ export { createElement };
       }
     });
 
+    classes.push({name:'radio_button_t'});
+
+    this.genComponents(classes, 'output/src/components/');
     fs.writeFileSync('output/src/index.ts', this.genSrcIndex(classes));
     fs.writeFileSync('output/src/components/index.ts', this.genComponentIndex(classes));
     fs.writeFileSync('output/src/utils/createElement.ts', this.genCreateInstance(classes));
-    fs.writeFileSync('output/src/backends/WidgetFactory.ts', this.genWidgetFactory(classes));
 
-    this.genComponents(classes, 'output/src/components/');
+    classes.pop();//remove radio
+    fs.writeFileSync('output/src/backends/WidgetFactory.ts', this.genWidgetFactory(classes));
   }
 
   static gen() {
