@@ -58,9 +58,6 @@ import {app, RootView} from "./Router"
 import {
   Text,
 } from "./react-components";
-import { StyleSheet } from "./misc";
-
-require("./utils/requireImpl");
 
 const App = "APP";
 const RootText = "ROOTTEXT";
@@ -72,7 +69,6 @@ export {
   RootView,
   App,
   Text,
-  StyleSheet,
   RootText,
   AppRegistry,
   VirtualText,
