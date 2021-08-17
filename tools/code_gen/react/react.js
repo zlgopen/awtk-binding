@@ -27,13 +27,11 @@ class ReactGenerator extends TargetGen {
     });
 
     return `
-import App from "./App";
 import Root from "./Root";
 import RootText from "./RootText";
 ${importDecls}
 
 export {
-  App,
   Root,
   RootText,
 ${exportDecls}
@@ -53,20 +51,18 @@ ${exportDecls}
 
     return `
 import AppRegistry from "./render";
-import {app, RootView} from "./Router"
+import {app, App} from "./App"
 
 import {
   Text,
 } from "./react-components";
 
-const App = "APP";
 const RootText = "ROOTTEXT";
 const VirtualText = "VIRTUALTEXT";
 ${constDecls}
 
 export {
   app,
-  RootView,
   App,
   Text,
   RootText,
@@ -141,7 +137,6 @@ export default (p: any) => {
     return `
 import {
   Root,
-  App,
   RootText,
 ${importDecls}      
 } from "../components/";
@@ -149,13 +144,19 @@ ${importDecls}
     // Creates an element with an element type, props and a root instance
 function createElement(type: string, props: any): any {
   const COMPONENTS = { 
-    APP: () => App(props),
     ROOT: () => Root(props),
     ROOTTEXT: () => RootText(props),
 ${createDecls}
-    default: undefined
+    default: View(props)
   };  
-  return (COMPONENTS as any)[type]() || COMPONENTS.default;
+
+  let func = (COMPONENTS as any)[type];
+  if(!func) {
+    console.log(\`\${type} is not supported!!!!!!!!!!!!!!!\`);
+    func = COMPONENTS.default;
+  }
+
+  return func();
 }
     
 export { createElement };
