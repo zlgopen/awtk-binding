@@ -128,9 +128,11 @@ export default (p: any) => {
     let importDecls = '';
     let createDecls = '';
     classes.forEach(iter => {
+      let className = iter.name.replace(/_t$/, '');
       let tagName = this.upperCamelName(iter.name);
       let typeName = tagName.toUpperCase();
       createDecls += `    ${typeName}: () => ${tagName}(props),\n`
+      createDecls += `    ${className}: () => ${tagName}(props),\n`
       importDecls += `  ${tagName},\n`
     });
 
