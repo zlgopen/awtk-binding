@@ -6719,6 +6719,11 @@ static HANDLER_PROTO(get_WIDGET_PROP_VALUE)  {
   return jsvalue_create_string(ctx, WIDGET_PROP_VALUE);
 }
 
+static HANDLER_PROTO(get_WIDGET_PROP_RADIO)  {
+  void* ctx = NULL;
+  return jsvalue_create_string(ctx, WIDGET_PROP_RADIO);
+}
+
 static HANDLER_PROTO(get_WIDGET_PROP_REVERSE)  {
   void* ctx = NULL;
   return jsvalue_create_string(ctx, WIDGET_PROP_REVERSE);
@@ -7341,6 +7346,7 @@ ret_t widget_prop_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_CLOSABLE", get_WIDGET_PROP_CLOSABLE);
   jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_POINTER_CURSOR", get_WIDGET_PROP_POINTER_CURSOR);
   jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_VALUE", get_WIDGET_PROP_VALUE);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_RADIO", get_WIDGET_PROP_RADIO);
   jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_REVERSE", get_WIDGET_PROP_REVERSE);
   jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_LENGTH", get_WIDGET_PROP_LENGTH);
   jerryx_handler_register_global((const jerry_char_t*)"WIDGET_PROP_LINE_WRAP", get_WIDGET_PROP_LINE_WRAP);

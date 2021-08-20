@@ -6503,6 +6503,14 @@ int awtk_TWidgetProp_WIDGET_PROP_VALUE(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TWidgetProp_WIDGET_PROP_RADIO(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_str(&actx, (char*)(WIDGET_PROP_RADIO));
+
+  return 0;
+}
+
 int awtk_TWidgetProp_WIDGET_PROP_REVERSE(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -21557,6 +21565,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidgetProp",  "WIDGET_PROP_CLOSABLE",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_CLOSABLE},
 {"awtk/TWidgetProp",  "WIDGET_PROP_POINTER_CURSOR",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_POINTER_CURSOR},
 {"awtk/TWidgetProp",  "WIDGET_PROP_VALUE",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_VALUE},
+{"awtk/TWidgetProp",  "WIDGET_PROP_RADIO",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_RADIO},
 {"awtk/TWidgetProp",  "WIDGET_PROP_REVERSE",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_REVERSE},
 {"awtk/TWidgetProp",  "WIDGET_PROP_LENGTH",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_LENGTH},
 {"awtk/TWidgetProp",  "WIDGET_PROP_LINE_WRAP",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_LINE_WRAP},

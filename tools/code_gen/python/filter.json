@@ -8378,6 +8378,10 @@
         "name": "WIDGET_PROP_VALUE"
       },
       {
+        "desc": "CheckButton是否单选。",
+        "name": "WIDGET_PROP_RADIO"
+      },
+      {
         "desc": "进度条反向显示。",
         "name": "WIDGET_PROP_REVERSE"
       },

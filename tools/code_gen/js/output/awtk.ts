@@ -683,6 +683,7 @@ declare function WIDGET_PROP_TYPE():any;
 declare function WIDGET_PROP_CLOSABLE():any;
 declare function WIDGET_PROP_POINTER_CURSOR():any;
 declare function WIDGET_PROP_VALUE():any;
+declare function WIDGET_PROP_RADIO():any;
 declare function WIDGET_PROP_REVERSE():any;
 declare function WIDGET_PROP_LENGTH():any;
 declare function WIDGET_PROP_LINE_WRAP():any;
@@ -8381,6 +8382,12 @@ export enum TWidgetProp {
    *
    */
  VALUE = WIDGET_PROP_VALUE(),
+
+  /**
+   * CheckButton是否单选。
+   *
+   */
+ RADIO = WIDGET_PROP_RADIO(),
 
   /**
    * 进度条反向显示。

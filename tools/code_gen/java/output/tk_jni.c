@@ -4405,6 +4405,11 @@ JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1VALUE(JNIEnv* env,
   return (*env)->NewStringUTF(env, WIDGET_PROP_VALUE);
 }
 
+JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1RADIO(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (*env)->NewStringUTF(env, WIDGET_PROP_RADIO);
+}
+
 JNIEXPORT jstring JNICALL Java_awtk_TWidgetProp_WIDGET_1PROP_1REVERSE(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (*env)->NewStringUTF(env, WIDGET_PROP_REVERSE);

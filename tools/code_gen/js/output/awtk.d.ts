@@ -4662,6 +4662,11 @@ export declare enum TWidgetProp {
      */
     VALUE,
     /**
+     * CheckButton是否单选。
+     *
+     */
+    RADIO,
+    /**
      * 进度条反向显示。
      *
      */

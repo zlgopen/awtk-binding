@@ -21,7 +21,7 @@ var searchData=
   ['modal_859',['modal',['../classawtk_1_1_t_dialog.html#ac55fd4ece3cfc03be8e14abc57b86248',1,'awtk::TDialog']]],
   ['modify_860',['modify',['../classawtk_1_1_t_timer.html#a2b2196b6aeac5988564497a3b5a12dcb',1,'awtk::TTimer']]],
   ['mono_861',['MONO',['../enumawtk_1_1_t_bitmap_format.html#a658c2102804174bc2796589664d210a3',1,'awtk.TBitmapFormat.MONO()'],['../enumawtk_1_1_t_glyph_format.html#a2c6a7bc0f6957b755171acb0750204a4',1,'awtk.TGlyphFormat.MONO()']]],
-  ['move_862',['MOVE',['../enumawtk_1_1_t_event_type.html#a010ca9dabcca2d157e57f740c6fc99a1',1,'awtk.TEventType.MOVE()'],['../classawtk_1_1_t_native_window.html#a3260a579345ba8cea1ce6b02d83a53e2',1,'awtk.TNativeWindow.move()']]],
+  ['move_862',['move',['../classawtk_1_1_t_native_window.html#a3260a579345ba8cea1ce6b02d83a53e2',1,'awtk.TNativeWindow.move()'],['../enumawtk_1_1_t_event_type.html#a010ca9dabcca2d157e57f740c6fc99a1',1,'awtk.TEventType.MOVE()']]],
   ['move_5fdown_863',['MOVE_DOWN',['../enumawtk_1_1_t_object_cmd.html#af622cec2727bcbe858f4a5fb13a90c36',1,'awtk::TObjectCmd']]],
   ['move_5ffocus_5fdown_5fkey_864',['MOVE_FOCUS_DOWN_KEY',['../enumawtk_1_1_t_widget_prop.html#ae2b6273152acb90f68eb60095a53f9aa',1,'awtk::TWidgetProp']]],
   ['move_5ffocus_5fleft_5fkey_865',['MOVE_FOCUS_LEFT_KEY',['../enumawtk_1_1_t_widget_prop.html#ae93afbd587fb0378c5d401f680bec4ae',1,'awtk::TWidgetProp']]],
