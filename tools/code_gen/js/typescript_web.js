@@ -1,6 +1,10 @@
 const fs = require('fs')
 const TypescriptBaseGenerator = require('./typescript_base.js')
 
+function toConstGet(name) {
+  return `get_${name}`
+}
+
 class TypescriptGenerator extends TypescriptBaseGenerator {
   constructor() {
     super()
@@ -44,7 +48,7 @@ class TypescriptGenerator extends TypescriptBaseGenerator {
     const name = c.name;
     const returnType = this.isEnumString(cls) ? "char*" : "int";
 
-    let result = `const ${name} = Module.cwrap("${name}", \n`;
+    let result = `const ${name} = Module.cwrap("${toConstGet(name)}", \n`;
     result += `    "${this.mapType(returnType)}", []);\n`;
 
     return result;  
