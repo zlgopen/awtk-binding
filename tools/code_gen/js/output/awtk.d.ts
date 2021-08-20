@@ -1,5 +1,5 @@
 export declare function print(str: any): any;
-export declare function init(w: number, h: number, name: string): any;
+export declare function init(w: number, h: number, name: string, isDesktop: boolean): any;
 /**
  * 事件分发器, 用于实现观察者模式。
  *

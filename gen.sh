@@ -2,7 +2,7 @@
 
 #js
 cd tools/code_gen/js/
-for f in quickjs.js  typescript.js jerryscript.js nodejs.js
+for f in quickjs.js  typescript.js jerryscript.js nodejs.js typescript_web.js
 do
   node $f
 done

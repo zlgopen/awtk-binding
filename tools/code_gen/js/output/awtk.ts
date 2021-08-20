@@ -1,6 +1,6 @@
 ﻿
 export declare function print(str:any):any;
-export declare function init(w:number, h:number,name: string):any;
+export declare function init(w:number, h:number,name: string, isDesktop:boolean):any;
 
 declare function emitter_create() : any;
 declare function emitter_dispatch(emitter : any, e : any) : TRet;
