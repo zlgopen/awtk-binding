@@ -159,7 +159,7 @@ class TypescriptBaseGenerator extends TargetGen {
   genFuncsDeclBegin() {
     return '';
   }
-  
+
   genFuncsDeclEnd() {
     return '';
   }

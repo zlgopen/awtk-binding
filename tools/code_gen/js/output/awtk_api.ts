@@ -21,23 +21,23 @@ export function init(w:number, h:number, title:string, isDesktop:boolean) {
   console.log('init(for compatible)')
 }
 const emitter_create = Module.cwrap("emitter_create", 
-    "TEmitter", []);
+    "number", []);
 const emitter_dispatch = Module.cwrap("emitter_dispatch", 
-    "TRet", ["TEmitter","TEvent"]);
+    "number", ["number","number"]);
 const emitter_dispatch_simple_event = Module.cwrap("emitter_dispatch_simple_event", 
-    "TRet", ["TEmitter","number"]);
+    "number", ["number","number"]);
 const emitter_on = Module.cwrap("emitter_on", 
-    "number", ["TEmitter","TEventType","Function","any"]);
+    "number", ["number","number","number","number"]);
 const emitter_off = Module.cwrap("emitter_off", 
-    "TRet", ["TEmitter","number"]);
+    "number", ["number","number"]);
 const emitter_enable = Module.cwrap("emitter_enable", 
-    "TRet", ["TEmitter"]);
+    "number", ["number"]);
 const emitter_disable = Module.cwrap("emitter_disable", 
-    "TRet", ["TEmitter"]);
+    "number", ["number"]);
 const emitter_destroy = Module.cwrap("emitter_destroy", 
-    "TRet", ["TEmitter"]);
+    "number", ["number"]);
 const emitter_cast = Module.cwrap("emitter_cast", 
-    "TEmitter", ["TEmitter"]);
+    "number", ["number"]);
 const rectf_t_get_prop_x = Module.cwrap("rectf_t_get_prop_x", 
     "number", ["number"]);
 const rectf_t_get_prop_y = Module.cwrap("rectf_t_get_prop_y", 
@@ -47,13 +47,13 @@ const rectf_t_get_prop_w = Module.cwrap("rectf_t_get_prop_w",
 const rectf_t_get_prop_h = Module.cwrap("rectf_t_get_prop_h", 
     "number", ["number"]);
 const rect_create = Module.cwrap("rect_create", 
-    "TRect", ["number","number","number","number"]);
+    "number", ["number","number","number","number"]);
 const rect_set = Module.cwrap("rect_set", 
-    "TRect", ["TRect","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const rect_cast = Module.cwrap("rect_cast", 
-    "TRect", ["TRect"]);
+    "number", ["number"]);
 const rect_destroy = Module.cwrap("rect_destroy", 
-    "TRet", ["TRect"]);
+    "number", ["number"]);
 const rect_t_get_prop_x = Module.cwrap("rect_t_get_prop_x", 
     "number", ["number"]);
 const rect_t_get_prop_y = Module.cwrap("rect_t_get_prop_y", 
@@ -63,15 +63,15 @@ const rect_t_get_prop_w = Module.cwrap("rect_t_get_prop_w",
 const rect_t_get_prop_h = Module.cwrap("rect_t_get_prop_h", 
     "number", ["number"]);
 const bitmap_create = Module.cwrap("bitmap_create", 
-    "TBitmap", []);
+    "number", []);
 const bitmap_create_ex = Module.cwrap("bitmap_create_ex", 
-    "TBitmap", ["number","number","number","TBitmapFormat"]);
+    "number", ["number","number","number","number"]);
 const bitmap_get_bpp = Module.cwrap("bitmap_get_bpp", 
-    "number", ["TBitmap"]);
+    "number", ["number"]);
 const bitmap_destroy_with_self = Module.cwrap("bitmap_destroy_with_self", 
-    "TRet", ["TBitmap"]);
+    "number", ["number"]);
 const bitmap_get_bpp_of_format = Module.cwrap("bitmap_get_bpp_of_format", 
-    "number", ["TBitmapFormat"]);
+    "number", ["number"]);
 const bitmap_t_get_prop_w = Module.cwrap("bitmap_t_get_prop_w", 
     "number", ["number"]);
 const bitmap_t_get_prop_h = Module.cwrap("bitmap_t_get_prop_h", 
@@ -85,211 +85,211 @@ const bitmap_t_get_prop_format = Module.cwrap("bitmap_t_get_prop_format",
 const bitmap_t_get_prop_name = Module.cwrap("bitmap_t_get_prop_name", 
     "string", ["number"]);
 const object_unref = Module.cwrap("object_unref", 
-    "TRet", ["TObject"]);
+    "number", ["number"]);
 const object_ref = Module.cwrap("object_ref", 
-    "TObject", ["TObject"]);
+    "number", ["number"]);
 const object_get_type = Module.cwrap("object_get_type", 
-    "string", ["TObject"]);
+    "string", ["number"]);
 const object_get_desc = Module.cwrap("object_get_desc", 
-    "string", ["TObject"]);
+    "string", ["number"]);
 const object_get_size = Module.cwrap("object_get_size", 
-    "number", ["TObject"]);
+    "number", ["number"]);
 const object_is_collection = Module.cwrap("object_is_collection", 
-    "boolean", ["TObject"]);
+    "number", ["number"]);
 const object_set_name = Module.cwrap("object_set_name", 
-    "TRet", ["TObject","string"]);
+    "number", ["number","string"]);
 const object_compare = Module.cwrap("object_compare", 
-    "number", ["TObject","TObject"]);
+    "number", ["number","number"]);
 const object_get_prop = Module.cwrap("object_get_prop", 
-    "TRet", ["TObject","string","TValue"]);
+    "number", ["number","string","number"]);
 const object_get_prop_str = Module.cwrap("object_get_prop_str", 
-    "string", ["TObject","string"]);
+    "string", ["number","string"]);
 const object_get_prop_pointer = Module.cwrap("object_get_prop_pointer", 
-    "any", ["TObject","string"]);
+    "number", ["number","string"]);
 const object_get_prop_object = Module.cwrap("object_get_prop_object", 
-    "TObject", ["TObject","string"]);
+    "number", ["number","string"]);
 const object_get_prop_int = Module.cwrap("object_get_prop_int", 
-    "number", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_get_prop_bool = Module.cwrap("object_get_prop_bool", 
-    "boolean", ["TObject","string","boolean"]);
+    "number", ["number","string","number"]);
 const object_get_prop_float = Module.cwrap("object_get_prop_float", 
-    "number", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_get_prop_double = Module.cwrap("object_get_prop_double", 
-    "number", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_remove_prop = Module.cwrap("object_remove_prop", 
-    "TRet", ["TObject","string"]);
+    "number", ["number","string"]);
 const object_set_prop = Module.cwrap("object_set_prop", 
-    "TRet", ["TObject","string","TValue"]);
+    "number", ["number","string","number"]);
 const object_set_prop_str = Module.cwrap("object_set_prop_str", 
-    "TRet", ["TObject","string","string"]);
+    "number", ["number","string","string"]);
 const object_set_prop_object = Module.cwrap("object_set_prop_object", 
-    "TRet", ["TObject","string","TObject"]);
+    "number", ["number","string","number"]);
 const object_set_prop_int = Module.cwrap("object_set_prop_int", 
-    "TRet", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_set_prop_bool = Module.cwrap("object_set_prop_bool", 
-    "TRet", ["TObject","string","boolean"]);
+    "number", ["number","string","number"]);
 const object_set_prop_float = Module.cwrap("object_set_prop_float", 
-    "TRet", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_set_prop_double = Module.cwrap("object_set_prop_double", 
-    "TRet", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_copy_prop = Module.cwrap("object_copy_prop", 
-    "TRet", ["TObject","TObject","string"]);
+    "number", ["number","number","string"]);
 const object_has_prop = Module.cwrap("object_has_prop", 
-    "boolean", ["TObject","string"]);
+    "number", ["number","string"]);
 const object_eval = Module.cwrap("object_eval", 
-    "TRet", ["TObject","string","TValue"]);
+    "number", ["number","string","number"]);
 const object_can_exec = Module.cwrap("object_can_exec", 
-    "boolean", ["TObject","string","string"]);
+    "number", ["number","string","string"]);
 const object_exec = Module.cwrap("object_exec", 
-    "TRet", ["TObject","string","string"]);
+    "number", ["number","string","string"]);
 const object_notify_changed = Module.cwrap("object_notify_changed", 
-    "TRet", ["TObject"]);
+    "number", ["number"]);
 const object_has_prop_by_path = Module.cwrap("object_has_prop_by_path", 
-    "boolean", ["TObject","string"]);
+    "number", ["number","string"]);
 const object_get_prop_str_by_path = Module.cwrap("object_get_prop_str_by_path", 
-    "string", ["TObject","string"]);
+    "string", ["number","string"]);
 const object_get_prop_pointer_by_path = Module.cwrap("object_get_prop_pointer_by_path", 
-    "any", ["TObject","string"]);
+    "number", ["number","string"]);
 const object_get_prop_object_by_path = Module.cwrap("object_get_prop_object_by_path", 
-    "TObject", ["TObject","string"]);
+    "number", ["number","string"]);
 const object_get_prop_int_by_path = Module.cwrap("object_get_prop_int_by_path", 
-    "number", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_get_prop_bool_by_path = Module.cwrap("object_get_prop_bool_by_path", 
-    "boolean", ["TObject","string","boolean"]);
+    "number", ["number","string","number"]);
 const object_get_prop_float_by_path = Module.cwrap("object_get_prop_float_by_path", 
-    "number", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_set_prop_by_path = Module.cwrap("object_set_prop_by_path", 
-    "TRet", ["TObject","string","TValue"]);
+    "number", ["number","string","number"]);
 const object_set_prop_str_by_path = Module.cwrap("object_set_prop_str_by_path", 
-    "TRet", ["TObject","string","string"]);
+    "number", ["number","string","string"]);
 const object_set_prop_object_by_path = Module.cwrap("object_set_prop_object_by_path", 
-    "TRet", ["TObject","string","TObject"]);
+    "number", ["number","string","number"]);
 const object_set_prop_int_by_path = Module.cwrap("object_set_prop_int_by_path", 
-    "TRet", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_set_prop_bool_by_path = Module.cwrap("object_set_prop_bool_by_path", 
-    "TRet", ["TObject","string","boolean"]);
+    "number", ["number","string","number"]);
 const object_set_prop_float_by_path = Module.cwrap("object_set_prop_float_by_path", 
-    "TRet", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_can_exec_by_path = Module.cwrap("object_can_exec_by_path", 
-    "boolean", ["TObject","string","string"]);
+    "number", ["number","string","string"]);
 const object_exec_by_path = Module.cwrap("object_exec_by_path", 
-    "TRet", ["TObject","string","string"]);
+    "number", ["number","string","string"]);
 const object_get_prop_int8 = Module.cwrap("object_get_prop_int8", 
-    "number", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_set_prop_int8 = Module.cwrap("object_set_prop_int8", 
-    "TRet", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_get_prop_uint8 = Module.cwrap("object_get_prop_uint8", 
-    "number", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_set_prop_uint8 = Module.cwrap("object_set_prop_uint8", 
-    "TRet", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_get_prop_int16 = Module.cwrap("object_get_prop_int16", 
-    "number", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_set_prop_int16 = Module.cwrap("object_set_prop_int16", 
-    "TRet", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_get_prop_uint16 = Module.cwrap("object_get_prop_uint16", 
-    "number", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_set_prop_uint16 = Module.cwrap("object_set_prop_uint16", 
-    "TRet", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_get_prop_int32 = Module.cwrap("object_get_prop_int32", 
-    "number", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_set_prop_int32 = Module.cwrap("object_set_prop_int32", 
-    "TRet", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_get_prop_uint32 = Module.cwrap("object_get_prop_uint32", 
-    "number", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_set_prop_uint32 = Module.cwrap("object_set_prop_uint32", 
-    "TRet", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_get_prop_int64 = Module.cwrap("object_get_prop_int64", 
-    "number", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_set_prop_int64 = Module.cwrap("object_set_prop_int64", 
-    "TRet", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_get_prop_uint64 = Module.cwrap("object_get_prop_uint64", 
-    "number", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_set_prop_uint64 = Module.cwrap("object_set_prop_uint64", 
-    "TRet", ["TObject","string","number"]);
+    "number", ["number","string","number"]);
 const object_t_get_prop_ref_count = Module.cwrap("object_t_get_prop_ref_count", 
     "number", ["number"]);
 const object_t_get_prop_name = Module.cwrap("object_t_get_prop_name", 
     "string", ["number"]);
 const value_set_bool = Module.cwrap("value_set_bool", 
-    "TValue", ["TValue","boolean"]);
+    "number", ["number","number"]);
 const value_bool = Module.cwrap("value_bool", 
-    "boolean", ["TValue"]);
+    "number", ["number"]);
 const value_set_int8 = Module.cwrap("value_set_int8", 
-    "TValue", ["TValue","number"]);
+    "number", ["number","number"]);
 const value_int8 = Module.cwrap("value_int8", 
-    "number", ["TValue"]);
+    "number", ["number"]);
 const value_set_uint8 = Module.cwrap("value_set_uint8", 
-    "TValue", ["TValue","number"]);
+    "number", ["number","number"]);
 const value_uint8 = Module.cwrap("value_uint8", 
-    "number", ["TValue"]);
+    "number", ["number"]);
 const value_set_int16 = Module.cwrap("value_set_int16", 
-    "TValue", ["TValue","number"]);
+    "number", ["number","number"]);
 const value_int16 = Module.cwrap("value_int16", 
-    "number", ["TValue"]);
+    "number", ["number"]);
 const value_set_uint16 = Module.cwrap("value_set_uint16", 
-    "TValue", ["TValue","number"]);
+    "number", ["number","number"]);
 const value_uint16 = Module.cwrap("value_uint16", 
-    "number", ["TValue"]);
+    "number", ["number"]);
 const value_set_int32 = Module.cwrap("value_set_int32", 
-    "TValue", ["TValue","number"]);
+    "number", ["number","number"]);
 const value_int32 = Module.cwrap("value_int32", 
-    "number", ["TValue"]);
+    "number", ["number"]);
 const value_set_uint32 = Module.cwrap("value_set_uint32", 
-    "TValue", ["TValue","number"]);
+    "number", ["number","number"]);
 const value_set_int64 = Module.cwrap("value_set_int64", 
-    "TValue", ["TValue","number"]);
+    "number", ["number","number"]);
 const value_int64 = Module.cwrap("value_int64", 
-    "number", ["TValue"]);
+    "number", ["number"]);
 const value_set_uint64 = Module.cwrap("value_set_uint64", 
-    "TValue", ["TValue","number"]);
+    "number", ["number","number"]);
 const value_uint64 = Module.cwrap("value_uint64", 
-    "number", ["TValue"]);
+    "number", ["number"]);
 const value_set_float = Module.cwrap("value_set_float", 
-    "TValue", ["TValue","number"]);
+    "number", ["number","number"]);
 const value_float32 = Module.cwrap("value_float32", 
-    "number", ["TValue"]);
+    "number", ["number"]);
 const value_set_double = Module.cwrap("value_set_double", 
-    "TValue", ["TValue","number"]);
+    "number", ["number","number"]);
 const value_double = Module.cwrap("value_double", 
-    "number", ["TValue"]);
+    "number", ["number"]);
 const value_dup_str = Module.cwrap("value_dup_str", 
-    "TValue", ["TValue","string"]);
+    "number", ["number","string"]);
 const value_str = Module.cwrap("value_str", 
-    "string", ["TValue"]);
+    "string", ["number"]);
 const value_str_ex = Module.cwrap("value_str_ex", 
-    "string", ["TValue","string","number"]);
+    "string", ["number","string","number"]);
 const value_is_null = Module.cwrap("value_is_null", 
-    "boolean", ["TValue"]);
+    "number", ["number"]);
 const value_set_int = Module.cwrap("value_set_int", 
-    "TValue", ["TValue","number"]);
+    "number", ["number","number"]);
 const value_set_object = Module.cwrap("value_set_object", 
-    "TValue", ["TValue","TObject"]);
+    "number", ["number","number"]);
 const value_object = Module.cwrap("value_object", 
-    "TObject", ["TValue"]);
+    "number", ["number"]);
 const value_set_token = Module.cwrap("value_set_token", 
-    "TValue", ["TValue","number"]);
+    "number", ["number","number"]);
 const value_token = Module.cwrap("value_token", 
-    "number", ["TValue"]);
+    "number", ["number"]);
 const value_create = Module.cwrap("value_create", 
-    "TValue", []);
+    "number", []);
 const value_destroy = Module.cwrap("value_destroy", 
-    "TRet", ["TValue"]);
+    "number", ["number"]);
 const value_reset = Module.cwrap("value_reset", 
-    "TRet", ["TValue"]);
+    "number", ["number"]);
 const value_cast = Module.cwrap("value_cast", 
-    "TValue", ["TValue"]);
+    "number", ["number"]);
 const tk_init = Module.cwrap("tk_init", 
-    "TRet", ["number","number","TAppType","string","string"]);
+    "number", ["number","number","number","string","string"]);
 const tk_run = Module.cwrap("tk_run", 
-    "TRet", []);
+    "number", []);
 const tk_quit = Module.cwrap("tk_quit", 
-    "TRet", []);
+    "number", []);
 const tk_get_pointer_x = Module.cwrap("tk_get_pointer_x", 
     "number", []);
 const tk_get_pointer_y = Module.cwrap("tk_get_pointer_y", 
     "number", []);
 const tk_is_pointer_pressed = Module.cwrap("tk_is_pointer_pressed", 
-    "boolean", []);
+    "number", []);
 const BIDI_TYPE_AUTO = Module.cwrap("get_BIDI_TYPE_AUTO", 
     "number", []);
 const BIDI_TYPE_LTR = Module.cwrap("get_BIDI_TYPE_LTR", 
@@ -345,59 +345,59 @@ const IMAGE_DRAW_REPEAT3_X = Module.cwrap("get_IMAGE_DRAW_REPEAT3_X",
 const IMAGE_DRAW_REPEAT3_Y = Module.cwrap("get_IMAGE_DRAW_REPEAT3_Y", 
     "number", []);
 const canvas_get_width = Module.cwrap("canvas_get_width", 
-    "number", ["TCanvas"]);
+    "number", ["number"]);
 const canvas_get_height = Module.cwrap("canvas_get_height", 
-    "number", ["TCanvas"]);
+    "number", ["number"]);
 const canvas_get_clip_rect = Module.cwrap("canvas_get_clip_rect", 
-    "TRet", ["TCanvas","TRect"]);
+    "number", ["number","number"]);
 const canvas_set_clip_rect = Module.cwrap("canvas_set_clip_rect", 
-    "TRet", ["TCanvas","TRect"]);
+    "number", ["number","number"]);
 const canvas_set_clip_rect_ex = Module.cwrap("canvas_set_clip_rect_ex", 
-    "TRet", ["TCanvas","TRect","boolean"]);
+    "number", ["number","number","number"]);
 const canvas_set_fill_color_str = Module.cwrap("canvas_set_fill_color_str", 
-    "TRet", ["TCanvas","string"]);
+    "number", ["number","string"]);
 const canvas_set_text_color_str = Module.cwrap("canvas_set_text_color_str", 
-    "TRet", ["TCanvas","string"]);
+    "number", ["number","string"]);
 const canvas_set_stroke_color_str = Module.cwrap("canvas_set_stroke_color_str", 
-    "TRet", ["TCanvas","string"]);
+    "number", ["number","string"]);
 const canvas_set_global_alpha = Module.cwrap("canvas_set_global_alpha", 
-    "TRet", ["TCanvas","number"]);
+    "number", ["number","number"]);
 const canvas_translate = Module.cwrap("canvas_translate", 
-    "TRet", ["TCanvas","number","number"]);
+    "number", ["number","number","number"]);
 const canvas_untranslate = Module.cwrap("canvas_untranslate", 
-    "TRet", ["TCanvas","number","number"]);
+    "number", ["number","number","number"]);
 const canvas_draw_vline = Module.cwrap("canvas_draw_vline", 
-    "TRet", ["TCanvas","number","number","number"]);
+    "number", ["number","number","number","number"]);
 const canvas_draw_hline = Module.cwrap("canvas_draw_hline", 
-    "TRet", ["TCanvas","number","number","number"]);
+    "number", ["number","number","number","number"]);
 const canvas_fill_rect = Module.cwrap("canvas_fill_rect", 
-    "TRet", ["TCanvas","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const canvas_clear_rect = Module.cwrap("canvas_clear_rect", 
-    "TRet", ["TCanvas","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const canvas_stroke_rect = Module.cwrap("canvas_stroke_rect", 
-    "TRet", ["TCanvas","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const canvas_set_font = Module.cwrap("canvas_set_font", 
-    "TRet", ["TCanvas","string","number"]);
+    "number", ["number","string","number"]);
 const canvas_measure_utf8 = Module.cwrap("canvas_measure_utf8", 
-    "number", ["TCanvas","string"]);
+    "number", ["number","string"]);
 const canvas_draw_utf8 = Module.cwrap("canvas_draw_utf8", 
-    "TRet", ["TCanvas","string","number","number"]);
+    "number", ["number","string","number","number"]);
 const canvas_draw_utf8_in_rect = Module.cwrap("canvas_draw_utf8_in_rect", 
-    "TRet", ["TCanvas","string","TRect"]);
+    "number", ["number","string","number"]);
 const canvas_draw_icon = Module.cwrap("canvas_draw_icon", 
-    "TRet", ["TCanvas","TBitmap","number","number"]);
+    "number", ["number","number","number","number"]);
 const canvas_draw_image = Module.cwrap("canvas_draw_image", 
-    "TRet", ["TCanvas","TBitmap","TRect","TRect"]);
+    "number", ["number","number","number","number"]);
 const canvas_draw_image_ex = Module.cwrap("canvas_draw_image_ex", 
-    "TRet", ["TCanvas","TBitmap","TImageDrawType","TRect"]);
+    "number", ["number","number","number","number"]);
 const canvas_draw_image_ex2 = Module.cwrap("canvas_draw_image_ex2", 
-    "TRet", ["TCanvas","TBitmap","TImageDrawType","TRect","TRect"]);
+    "number", ["number","number","number","number","number"]);
 const canvas_get_vgcanvas = Module.cwrap("canvas_get_vgcanvas", 
-    "TVgcanvas", ["TCanvas"]);
+    "number", ["number"]);
 const canvas_cast = Module.cwrap("canvas_cast", 
-    "TCanvas", ["TCanvas"]);
+    "number", ["number"]);
 const canvas_reset = Module.cwrap("canvas_reset", 
-    "TRet", ["TCanvas"]);
+    "number", ["number"]);
 const canvas_t_get_prop_ox = Module.cwrap("canvas_t_get_prop_ox", 
     "number", ["number"]);
 const canvas_t_get_prop_oy = Module.cwrap("canvas_t_get_prop_oy", 
@@ -413,7 +413,7 @@ const CLIP_BOARD_DATA_TYPE_NONE = Module.cwrap("get_CLIP_BOARD_DATA_TYPE_NONE",
 const CLIP_BOARD_DATA_TYPE_TEXT = Module.cwrap("get_CLIP_BOARD_DATA_TYPE_TEXT", 
     "number", []);
 const clip_board_set_text = Module.cwrap("clip_board_set_text", 
-    "TRet", ["string"]);
+    "number", ["string"]);
 const clip_board_get_text = Module.cwrap("clip_board_get_text", 
     "string", []);
 const DIALOG_QUIT_NONE = Module.cwrap("get_DIALOG_QUIT_NONE", 
@@ -633,13 +633,13 @@ const EVT_DESTROY = Module.cwrap("get_EVT_DESTROY",
 const event_from_name = Module.cwrap("event_from_name", 
     "number", ["string"]);
 const event_cast = Module.cwrap("event_cast", 
-    "TEvent", ["TEvent"]);
+    "number", ["number"]);
 const event_get_type = Module.cwrap("event_get_type", 
-    "number", ["TEvent"]);
+    "number", ["number"]);
 const event_create = Module.cwrap("event_create", 
-    "TEvent", ["number"]);
+    "number", ["number"]);
 const event_destroy = Module.cwrap("event_destroy", 
-    "TRet", ["TEvent"]);
+    "number", ["number"]);
 const event_t_get_prop_type = Module.cwrap("event_t_get_prop_type", 
     "number", ["number"]);
 const event_t_get_prop_size = Module.cwrap("event_t_get_prop_size", 
@@ -647,13 +647,13 @@ const event_t_get_prop_size = Module.cwrap("event_t_get_prop_size",
 const event_t_get_prop_time = Module.cwrap("event_t_get_prop_time", 
     "number", ["number"]);
 const event_t_get_prop_target = Module.cwrap("event_t_get_prop_target", 
-    "any", ["number"]);
+    "number", ["number"]);
 const font_manager_unload_font = Module.cwrap("font_manager_unload_font", 
-    "TRet", ["TFontManager","string","number"]);
+    "number", ["number","string","number"]);
 const font_manager_shrink_cache = Module.cwrap("font_manager_shrink_cache", 
-    "TRet", ["TFontManager","number"]);
+    "number", ["number","number"]);
 const font_manager_unload_all = Module.cwrap("font_manager_unload_all", 
-    "TRet", ["TFontManager"]);
+    "number", ["number"]);
 const GLYPH_FMT_ALPHA = Module.cwrap("get_GLYPH_FMT_ALPHA", 
     "number", []);
 const GLYPH_FMT_MONO = Module.cwrap("get_GLYPH_FMT_MONO", 
@@ -661,17 +661,17 @@ const GLYPH_FMT_MONO = Module.cwrap("get_GLYPH_FMT_MONO",
 const GLYPH_FMT_RGBA = Module.cwrap("get_GLYPH_FMT_RGBA", 
     "number", []);
 const idle_add = Module.cwrap("idle_add", 
-    "number", ["Function","any"]);
+    "number", ["number","number"]);
 const idle_remove = Module.cwrap("idle_remove", 
-    "TRet", ["number"]);
+    "number", ["number"]);
 const idle_remove_all_by_ctx = Module.cwrap("idle_remove_all_by_ctx", 
-    "TRet", ["any"]);
+    "number", ["number"]);
 const image_manager = Module.cwrap("image_manager", 
-    "TImageManager", []);
+    "number", []);
 const image_manager_get_bitmap = Module.cwrap("image_manager_get_bitmap", 
-    "TRet", ["TImageManager","string","TBitmap"]);
+    "number", ["number","string","number"]);
 const image_manager_preload = Module.cwrap("image_manager_preload", 
-    "TRet", ["TImageManager","string"]);
+    "number", ["number","string"]);
 const INPUT_TEXT = Module.cwrap("get_INPUT_TEXT", 
     "number", []);
 const INPUT_INT = Module.cwrap("get_INPUT_INT", 
@@ -705,23 +705,23 @@ const INPUT_CUSTOM_PASSWORD = Module.cwrap("get_INPUT_CUSTOM_PASSWORD",
 const INPUT_ASCII = Module.cwrap("get_INPUT_ASCII", 
     "number", []);
 const input_method_commit_text = Module.cwrap("input_method_commit_text", 
-    "TRet", ["TInputMethod","string"]);
+    "number", ["number","string"]);
 const input_method_set_lang = Module.cwrap("input_method_set_lang", 
-    "TRet", ["TInputMethod","string"]);
+    "number", ["number","string"]);
 const input_method_get_lang = Module.cwrap("input_method_get_lang", 
-    "string", ["TInputMethod"]);
+    "string", ["number"]);
 const input_method_dispatch_key = Module.cwrap("input_method_dispatch_key", 
-    "TRet", ["TInputMethod","number"]);
+    "number", ["number","number"]);
 const input_method_dispatch_keys = Module.cwrap("input_method_dispatch_keys", 
-    "TRet", ["TInputMethod","string"]);
+    "number", ["number","string"]);
 const input_method_dispatch_preedit = Module.cwrap("input_method_dispatch_preedit", 
-    "TRet", ["TInputMethod"]);
+    "number", ["number"]);
 const input_method_dispatch_preedit_confirm = Module.cwrap("input_method_dispatch_preedit_confirm", 
-    "TRet", ["TInputMethod"]);
+    "number", ["number"]);
 const input_method_dispatch_preedit_abort = Module.cwrap("input_method_dispatch_preedit_abort", 
-    "TRet", ["TInputMethod"]);
+    "number", ["number"]);
 const input_method = Module.cwrap("input_method", 
-    "TInputMethod", []);
+    "number", []);
 const TK_KEY_RETURN = Module.cwrap("get_TK_KEY_RETURN", 
     "number", []);
 const TK_KEY_ESCAPE = Module.cwrap("get_TK_KEY_ESCAPE", 
@@ -987,13 +987,13 @@ const TK_KEY_CANCEL = Module.cwrap("get_TK_KEY_CANCEL",
 const TK_KEY_WHEEL = Module.cwrap("get_TK_KEY_WHEEL", 
     "number", []);
 const locale_info = Module.cwrap("locale_info", 
-    "TLocaleInfo", []);
+    "number", []);
 const locale_info_tr = Module.cwrap("locale_info_tr", 
-    "string", ["TLocaleInfo","string"]);
+    "string", ["number","string"]);
 const locale_info_change = Module.cwrap("locale_info_change", 
-    "TRet", ["TLocaleInfo","string","string"]);
+    "number", ["number","string","string"]);
 const locale_info_off = Module.cwrap("locale_info_off", 
-    "TRet", ["TLocaleInfo","number"]);
+    "number", ["number","number"]);
 const STYLE_ID_BG_COLOR = Module.cwrap("get_STYLE_ID_BG_COLOR", 
     "string", []);
 const STYLE_ID_FG_COLOR = Module.cwrap("get_STYLE_ID_FG_COLOR", 
@@ -1081,41 +1081,41 @@ const STYLE_ID_FOCUSABLE = Module.cwrap("get_STYLE_ID_FOCUSABLE",
 const STYLE_ID_FEEDBACK = Module.cwrap("get_STYLE_ID_FEEDBACK", 
     "string", []);
 const style_notify_widget_state_changed = Module.cwrap("style_notify_widget_state_changed", 
-    "TRet", ["TStyle","TWidget"]);
+    "number", ["number","number"]);
 const style_is_valid = Module.cwrap("style_is_valid", 
-    "boolean", ["TStyle"]);
+    "number", ["number"]);
 const style_get_int = Module.cwrap("style_get_int", 
-    "number", ["TStyle","string","number"]);
+    "number", ["number","string","number"]);
 const style_get_uint = Module.cwrap("style_get_uint", 
-    "number", ["TStyle","string","number"]);
+    "number", ["number","string","number"]);
 const style_get_str = Module.cwrap("style_get_str", 
-    "string", ["TStyle","string","string"]);
+    "string", ["number","string","string"]);
 const style_set = Module.cwrap("style_set", 
-    "TRet", ["TStyle","string","string","TValue"]);
+    "number", ["number","string","string","number"]);
 const style_update_state = Module.cwrap("style_update_state", 
-    "TRet", ["TStyle","TTheme","string","string","string"]);
+    "number", ["number","number","string","string","string"]);
 const style_get_style_state = Module.cwrap("style_get_style_state", 
-    "string", ["TStyle"]);
+    "string", ["number"]);
 const style_is_mutable = Module.cwrap("style_is_mutable", 
-    "boolean", ["TStyle"]);
+    "number", ["number"]);
 const style_get_style_type = Module.cwrap("style_get_style_type", 
-    "string", ["TStyle"]);
+    "string", ["number"]);
 const theme = Module.cwrap("theme", 
-    "TTheme", []);
+    "number", []);
 const timer_add = Module.cwrap("timer_add", 
-    "number", ["Function","any","number"]);
+    "number", ["number","number","number"]);
 const timer_remove = Module.cwrap("timer_remove", 
-    "TRet", ["number"]);
+    "number", ["number"]);
 const timer_remove_all_by_ctx = Module.cwrap("timer_remove_all_by_ctx", 
-    "TRet", ["any"]);
+    "number", ["number"]);
 const timer_reset = Module.cwrap("timer_reset", 
-    "TRet", ["number"]);
+    "number", ["number"]);
 const timer_suspend = Module.cwrap("timer_suspend", 
-    "TRet", ["number"]);
+    "number", ["number"]);
 const timer_resume = Module.cwrap("timer_resume", 
-    "TRet", ["number"]);
+    "number", ["number"]);
 const timer_modify = Module.cwrap("timer_modify", 
-    "TRet", ["number","number"]);
+    "number", ["number","number"]);
 const ALIGN_V_NONE = Module.cwrap("get_ALIGN_V_NONE", 
     "number", []);
 const ALIGN_V_MIDDLE = Module.cwrap("get_ALIGN_V_MIDDLE", 
@@ -1173,93 +1173,93 @@ const BITMAP_FLAG_CHANGED = Module.cwrap("get_BITMAP_FLAG_CHANGED",
 const BITMAP_FLAG_PREMULTI_ALPHA = Module.cwrap("get_BITMAP_FLAG_PREMULTI_ALPHA", 
     "number", []);
 const vgcanvas_cast = Module.cwrap("vgcanvas_cast", 
-    "TVgcanvas", ["TVgcanvas"]);
+    "number", ["number"]);
 const vgcanvas_flush = Module.cwrap("vgcanvas_flush", 
-    "TRet", ["TVgcanvas"]);
+    "number", ["number"]);
 const vgcanvas_begin_path = Module.cwrap("vgcanvas_begin_path", 
-    "TRet", ["TVgcanvas"]);
+    "number", ["number"]);
 const vgcanvas_move_to = Module.cwrap("vgcanvas_move_to", 
-    "TRet", ["TVgcanvas","number","number"]);
+    "number", ["number","number","number"]);
 const vgcanvas_line_to = Module.cwrap("vgcanvas_line_to", 
-    "TRet", ["TVgcanvas","number","number"]);
+    "number", ["number","number","number"]);
 const vgcanvas_quad_to = Module.cwrap("vgcanvas_quad_to", 
-    "TRet", ["TVgcanvas","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const vgcanvas_bezier_to = Module.cwrap("vgcanvas_bezier_to", 
-    "TRet", ["TVgcanvas","number","number","number","number","number","number"]);
+    "number", ["number","number","number","number","number","number","number"]);
 const vgcanvas_arc_to = Module.cwrap("vgcanvas_arc_to", 
-    "TRet", ["TVgcanvas","number","number","number","number","number"]);
+    "number", ["number","number","number","number","number","number"]);
 const vgcanvas_arc = Module.cwrap("vgcanvas_arc", 
-    "TRet", ["TVgcanvas","number","number","number","number","number","boolean"]);
+    "number", ["number","number","number","number","number","number","number"]);
 const vgcanvas_is_point_in_path = Module.cwrap("vgcanvas_is_point_in_path", 
-    "boolean", ["TVgcanvas","number","number"]);
+    "number", ["number","number","number"]);
 const vgcanvas_rect = Module.cwrap("vgcanvas_rect", 
-    "TRet", ["TVgcanvas","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const vgcanvas_rounded_rect = Module.cwrap("vgcanvas_rounded_rect", 
-    "TRet", ["TVgcanvas","number","number","number","number","number"]);
+    "number", ["number","number","number","number","number","number"]);
 const vgcanvas_ellipse = Module.cwrap("vgcanvas_ellipse", 
-    "TRet", ["TVgcanvas","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const vgcanvas_close_path = Module.cwrap("vgcanvas_close_path", 
-    "TRet", ["TVgcanvas"]);
+    "number", ["number"]);
 const vgcanvas_path_winding = Module.cwrap("vgcanvas_path_winding", 
-    "TRet", ["TVgcanvas","boolean"]);
+    "number", ["number","number"]);
 const vgcanvas_rotate = Module.cwrap("vgcanvas_rotate", 
-    "TRet", ["TVgcanvas","number"]);
+    "number", ["number","number"]);
 const vgcanvas_scale = Module.cwrap("vgcanvas_scale", 
-    "TRet", ["TVgcanvas","number","number"]);
+    "number", ["number","number","number"]);
 const vgcanvas_translate = Module.cwrap("vgcanvas_translate", 
-    "TRet", ["TVgcanvas","number","number"]);
+    "number", ["number","number","number"]);
 const vgcanvas_transform = Module.cwrap("vgcanvas_transform", 
-    "TRet", ["TVgcanvas","number","number","number","number","number","number"]);
+    "number", ["number","number","number","number","number","number","number"]);
 const vgcanvas_set_transform = Module.cwrap("vgcanvas_set_transform", 
-    "TRet", ["TVgcanvas","number","number","number","number","number","number"]);
+    "number", ["number","number","number","number","number","number","number"]);
 const vgcanvas_clip_path = Module.cwrap("vgcanvas_clip_path", 
-    "TRet", ["TVgcanvas"]);
+    "number", ["number"]);
 const vgcanvas_clip_rect = Module.cwrap("vgcanvas_clip_rect", 
-    "TRet", ["TVgcanvas","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const vgcanvas_intersect_clip_rect = Module.cwrap("vgcanvas_intersect_clip_rect", 
-    "TRet", ["TVgcanvas","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const vgcanvas_fill = Module.cwrap("vgcanvas_fill", 
-    "TRet", ["TVgcanvas"]);
+    "number", ["number"]);
 const vgcanvas_stroke = Module.cwrap("vgcanvas_stroke", 
-    "TRet", ["TVgcanvas"]);
+    "number", ["number"]);
 const vgcanvas_paint = Module.cwrap("vgcanvas_paint", 
-    "TRet", ["TVgcanvas","boolean","TBitmap"]);
+    "number", ["number","number","number"]);
 const vgcanvas_set_font = Module.cwrap("vgcanvas_set_font", 
-    "TRet", ["TVgcanvas","string"]);
+    "number", ["number","string"]);
 const vgcanvas_set_font_size = Module.cwrap("vgcanvas_set_font_size", 
-    "TRet", ["TVgcanvas","number"]);
+    "number", ["number","number"]);
 const vgcanvas_set_text_align = Module.cwrap("vgcanvas_set_text_align", 
-    "TRet", ["TVgcanvas","string"]);
+    "number", ["number","string"]);
 const vgcanvas_set_text_baseline = Module.cwrap("vgcanvas_set_text_baseline", 
-    "TRet", ["TVgcanvas","string"]);
+    "number", ["number","string"]);
 const vgcanvas_fill_text = Module.cwrap("vgcanvas_fill_text", 
-    "TRet", ["TVgcanvas","string","number","number","number"]);
+    "number", ["number","string","number","number","number"]);
 const vgcanvas_measure_text = Module.cwrap("vgcanvas_measure_text", 
-    "number", ["TVgcanvas","string"]);
+    "number", ["number","string"]);
 const vgcanvas_draw_image = Module.cwrap("vgcanvas_draw_image", 
-    "TRet", ["TVgcanvas","TBitmap","number","number","number","number","number","number","number","number"]);
+    "number", ["number","number","number","number","number","number","number","number","number","number"]);
 const vgcanvas_draw_icon = Module.cwrap("vgcanvas_draw_icon", 
-    "TRet", ["TVgcanvas","TBitmap","number","number","number","number","number","number","number","number"]);
+    "number", ["number","number","number","number","number","number","number","number","number","number"]);
 const vgcanvas_set_antialias = Module.cwrap("vgcanvas_set_antialias", 
-    "TRet", ["TVgcanvas","boolean"]);
+    "number", ["number","number"]);
 const vgcanvas_set_global_alpha = Module.cwrap("vgcanvas_set_global_alpha", 
-    "TRet", ["TVgcanvas","number"]);
+    "number", ["number","number"]);
 const vgcanvas_set_line_width = Module.cwrap("vgcanvas_set_line_width", 
-    "TRet", ["TVgcanvas","number"]);
+    "number", ["number","number"]);
 const vgcanvas_set_fill_color_str = Module.cwrap("vgcanvas_set_fill_color_str", 
-    "TRet", ["TVgcanvas","string"]);
+    "number", ["number","string"]);
 const vgcanvas_set_stroke_color_str = Module.cwrap("vgcanvas_set_stroke_color_str", 
-    "TRet", ["TVgcanvas","string"]);
+    "number", ["number","string"]);
 const vgcanvas_set_line_cap = Module.cwrap("vgcanvas_set_line_cap", 
-    "TRet", ["TVgcanvas","string"]);
+    "number", ["number","string"]);
 const vgcanvas_set_line_join = Module.cwrap("vgcanvas_set_line_join", 
-    "TRet", ["TVgcanvas","string"]);
+    "number", ["number","string"]);
 const vgcanvas_set_miter_limit = Module.cwrap("vgcanvas_set_miter_limit", 
-    "TRet", ["TVgcanvas","number"]);
+    "number", ["number","number"]);
 const vgcanvas_save = Module.cwrap("vgcanvas_save", 
-    "TRet", ["TVgcanvas"]);
+    "number", ["number"]);
 const vgcanvas_restore = Module.cwrap("vgcanvas_restore", 
-    "TRet", ["TVgcanvas"]);
+    "number", ["number"]);
 const vgcanvas_t_get_prop_w = Module.cwrap("vgcanvas_t_get_prop_w", 
     "number", ["number"]);
 const vgcanvas_t_get_prop_h = Module.cwrap("vgcanvas_t_get_prop_h", 
@@ -1269,7 +1269,7 @@ const vgcanvas_t_get_prop_stride = Module.cwrap("vgcanvas_t_get_prop_stride",
 const vgcanvas_t_get_prop_ratio = Module.cwrap("vgcanvas_t_get_prop_ratio", 
     "number", ["number"]);
 const vgcanvas_t_get_prop_anti_alias = Module.cwrap("vgcanvas_t_get_prop_anti_alias", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const vgcanvas_t_get_prop_line_width = Module.cwrap("vgcanvas_t_get_prop_line_width", 
     "number", ["number"]);
 const vgcanvas_t_get_prop_global_alpha = Module.cwrap("vgcanvas_t_get_prop_global_alpha", 
@@ -1813,239 +1813,239 @@ const WIDGET_CURSOR_SIZENS = Module.cwrap("get_WIDGET_CURSOR_SIZENS",
 const WIDGET_CURSOR_SIZEALL = Module.cwrap("get_WIDGET_CURSOR_SIZEALL", 
     "string", []);
 const widget_count_children = Module.cwrap("widget_count_children", 
-    "number", ["TWidget"]);
+    "number", ["number"]);
 const widget_get_child = Module.cwrap("widget_get_child", 
-    "TWidget", ["TWidget","number"]);
+    "number", ["number","number"]);
 const widget_get_focused_widget = Module.cwrap("widget_get_focused_widget", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const widget_get_native_window = Module.cwrap("widget_get_native_window", 
-    "TNativeWindow", ["TWidget"]);
+    "number", ["number"]);
 const widget_index_of = Module.cwrap("widget_index_of", 
-    "number", ["TWidget"]);
+    "number", ["number"]);
 const widget_close_window = Module.cwrap("widget_close_window", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const widget_close_window_force = Module.cwrap("widget_close_window_force", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const widget_back = Module.cwrap("widget_back", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const widget_back_to_home = Module.cwrap("widget_back_to_home", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const widget_move = Module.cwrap("widget_move", 
-    "TRet", ["TWidget","number","number"]);
+    "number", ["number","number","number"]);
 const widget_resize = Module.cwrap("widget_resize", 
-    "TRet", ["TWidget","number","number"]);
+    "number", ["number","number","number"]);
 const widget_move_resize = Module.cwrap("widget_move_resize", 
-    "TRet", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const widget_set_value = Module.cwrap("widget_set_value", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const widget_animate_value_to = Module.cwrap("widget_animate_value_to", 
-    "TRet", ["TWidget","number","number"]);
+    "number", ["number","number","number"]);
 const widget_add_value = Module.cwrap("widget_add_value", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const widget_is_style_exist = Module.cwrap("widget_is_style_exist", 
-    "boolean", ["TWidget","string","string"]);
+    "number", ["number","string","string"]);
 const widget_use_style = Module.cwrap("widget_use_style", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const widget_set_text_utf8 = Module.cwrap("widget_set_text_utf8", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const widget_set_child_text_utf8 = Module.cwrap("widget_set_child_text_utf8", 
-    "TRet", ["TWidget","string","string"]);
+    "number", ["number","string","string"]);
 const widget_set_child_text_with_double = Module.cwrap("widget_set_child_text_with_double", 
-    "TRet", ["TWidget","string","string","number"]);
+    "number", ["number","string","string","number"]);
 const widget_set_child_text_with_int = Module.cwrap("widget_set_child_text_with_int", 
-    "TRet", ["TWidget","string","string","number"]);
+    "number", ["number","string","string","number"]);
 const widget_set_tr_text = Module.cwrap("widget_set_tr_text", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const widget_get_value = Module.cwrap("widget_get_value", 
-    "number", ["TWidget"]);
+    "number", ["number"]);
 const widget_get_enable = Module.cwrap("widget_get_enable", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_get_floating = Module.cwrap("widget_get_floating", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_get_auto_adjust_size = Module.cwrap("widget_get_auto_adjust_size", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_get_with_focus_state = Module.cwrap("widget_get_with_focus_state", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_get_focusable = Module.cwrap("widget_get_focusable", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_get_sensitive = Module.cwrap("widget_get_sensitive", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_get_visible = Module.cwrap("widget_get_visible", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_get_feedback = Module.cwrap("widget_get_feedback", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_get_text = Module.cwrap("widget_get_text", 
-    "any", ["TWidget"]);
+    "number", ["number"]);
 const widget_set_name = Module.cwrap("widget_set_name", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const widget_set_theme = Module.cwrap("widget_set_theme", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const widget_set_pointer_cursor = Module.cwrap("widget_set_pointer_cursor", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const widget_set_animation = Module.cwrap("widget_set_animation", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const widget_create_animator = Module.cwrap("widget_create_animator", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const widget_start_animator = Module.cwrap("widget_start_animator", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const widget_set_animator_time_scale = Module.cwrap("widget_set_animator_time_scale", 
-    "TRet", ["TWidget","string","number"]);
+    "number", ["number","string","number"]);
 const widget_pause_animator = Module.cwrap("widget_pause_animator", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const widget_stop_animator = Module.cwrap("widget_stop_animator", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const widget_destroy_animator = Module.cwrap("widget_destroy_animator", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const widget_set_enable = Module.cwrap("widget_set_enable", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const widget_set_feedback = Module.cwrap("widget_set_feedback", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const widget_set_auto_adjust_size = Module.cwrap("widget_set_auto_adjust_size", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const widget_set_floating = Module.cwrap("widget_set_floating", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const widget_set_focused = Module.cwrap("widget_set_focused", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const widget_set_focusable = Module.cwrap("widget_set_focusable", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const widget_set_state = Module.cwrap("widget_set_state", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const widget_set_opacity = Module.cwrap("widget_set_opacity", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const widget_set_dirty_rect_tolerance = Module.cwrap("widget_set_dirty_rect_tolerance", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const widget_destroy_children = Module.cwrap("widget_destroy_children", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const widget_add_child = Module.cwrap("widget_add_child", 
-    "TRet", ["TWidget","TWidget"]);
+    "number", ["number","number"]);
 const widget_remove_child = Module.cwrap("widget_remove_child", 
-    "TRet", ["TWidget","TWidget"]);
+    "number", ["number","number"]);
 const widget_insert_child = Module.cwrap("widget_insert_child", 
-    "TRet", ["TWidget","number","TWidget"]);
+    "number", ["number","number","number"]);
 const widget_restack = Module.cwrap("widget_restack", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const widget_child = Module.cwrap("widget_child", 
-    "TWidget", ["TWidget","string"]);
+    "number", ["number","string"]);
 const widget_lookup = Module.cwrap("widget_lookup", 
-    "TWidget", ["TWidget","string","boolean"]);
+    "number", ["number","string","number"]);
 const widget_lookup_by_type = Module.cwrap("widget_lookup_by_type", 
-    "TWidget", ["TWidget","string","boolean"]);
+    "number", ["number","string","number"]);
 const widget_set_visible = Module.cwrap("widget_set_visible", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const widget_set_visible_only = Module.cwrap("widget_set_visible_only", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const widget_set_sensitive = Module.cwrap("widget_set_sensitive", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const widget_on = Module.cwrap("widget_on", 
-    "number", ["TWidget","TEventType","Function","any"]);
+    "number", ["number","number","number","number"]);
 const widget_off = Module.cwrap("widget_off", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const widget_invalidate_force = Module.cwrap("widget_invalidate_force", 
-    "TRet", ["TWidget","TRect"]);
+    "number", ["number","number"]);
 const widget_set_prop_str = Module.cwrap("widget_set_prop_str", 
-    "TRet", ["TWidget","string","string"]);
+    "number", ["number","string","string"]);
 const widget_get_prop_str = Module.cwrap("widget_get_prop_str", 
-    "string", ["TWidget","string","string"]);
+    "string", ["number","string","string"]);
 const widget_set_prop_pointer = Module.cwrap("widget_set_prop_pointer", 
-    "TRet", ["TWidget","string","any"]);
+    "number", ["number","string","number"]);
 const widget_get_prop_pointer = Module.cwrap("widget_get_prop_pointer", 
-    "any", ["TWidget","string"]);
+    "number", ["number","string"]);
 const widget_set_prop_int = Module.cwrap("widget_set_prop_int", 
-    "TRet", ["TWidget","string","number"]);
+    "number", ["number","string","number"]);
 const widget_get_prop_int = Module.cwrap("widget_get_prop_int", 
-    "number", ["TWidget","string","number"]);
+    "number", ["number","string","number"]);
 const widget_set_prop_bool = Module.cwrap("widget_set_prop_bool", 
-    "TRet", ["TWidget","string","boolean"]);
+    "number", ["number","string","number"]);
 const widget_get_prop_bool = Module.cwrap("widget_get_prop_bool", 
-    "boolean", ["TWidget","string","boolean"]);
+    "number", ["number","string","number"]);
 const widget_is_window_opened = Module.cwrap("widget_is_window_opened", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_is_window_created = Module.cwrap("widget_is_window_created", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_is_parent_of = Module.cwrap("widget_is_parent_of", 
-    "boolean", ["TWidget","TWidget"]);
+    "number", ["number","number"]);
 const widget_is_direct_parent_of = Module.cwrap("widget_is_direct_parent_of", 
-    "boolean", ["TWidget","TWidget"]);
+    "number", ["number","number"]);
 const widget_is_window = Module.cwrap("widget_is_window", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_is_system_bar = Module.cwrap("widget_is_system_bar", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_is_normal_window = Module.cwrap("widget_is_normal_window", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_is_dialog = Module.cwrap("widget_is_dialog", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_is_popup = Module.cwrap("widget_is_popup", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_is_overlay = Module.cwrap("widget_is_overlay", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_is_opened_dialog = Module.cwrap("widget_is_opened_dialog", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_is_opened_popup = Module.cwrap("widget_is_opened_popup", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_is_keyboard = Module.cwrap("widget_is_keyboard", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_is_designing_window = Module.cwrap("widget_is_designing_window", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_is_window_manager = Module.cwrap("widget_is_window_manager", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const widget_foreach = Module.cwrap("widget_foreach", 
-    "TRet", ["TWidget","Function","any"]);
+    "number", ["number","number","number"]);
 const widget_get_window = Module.cwrap("widget_get_window", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const widget_get_window_manager = Module.cwrap("widget_get_window_manager", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const widget_get_type = Module.cwrap("widget_get_type", 
-    "string", ["TWidget"]);
+    "string", ["number"]);
 const widget_clone = Module.cwrap("widget_clone", 
-    "TWidget", ["TWidget","TWidget"]);
+    "number", ["number","number"]);
 const widget_equal = Module.cwrap("widget_equal", 
-    "boolean", ["TWidget","TWidget"]);
+    "number", ["number","number"]);
 const widget_cast = Module.cwrap("widget_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const widget_destroy = Module.cwrap("widget_destroy", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const widget_destroy_async = Module.cwrap("widget_destroy_async", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const widget_unref = Module.cwrap("widget_unref", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const widget_stroke_border_rect = Module.cwrap("widget_stroke_border_rect", 
-    "TRet", ["TWidget","TCanvas","TRect"]);
+    "number", ["number","number","number"]);
 const widget_fill_bg_rect = Module.cwrap("widget_fill_bg_rect", 
-    "TRet", ["TWidget","TCanvas","TRect","TImageDrawType"]);
+    "number", ["number","number","number","number"]);
 const widget_fill_fg_rect = Module.cwrap("widget_fill_fg_rect", 
-    "TRet", ["TWidget","TCanvas","TRect","TImageDrawType"]);
+    "number", ["number","number","number","number"]);
 const widget_dispatch_to_target = Module.cwrap("widget_dispatch_to_target", 
-    "TRet", ["TWidget","TEvent"]);
+    "number", ["number","number"]);
 const widget_dispatch_to_key_target = Module.cwrap("widget_dispatch_to_key_target", 
-    "TRet", ["TWidget","TEvent"]);
+    "number", ["number","number"]);
 const widget_get_style_type = Module.cwrap("widget_get_style_type", 
-    "string", ["TWidget"]);
+    "string", ["number"]);
 const widget_update_style = Module.cwrap("widget_update_style", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const widget_update_style_recursive = Module.cwrap("widget_update_style_recursive", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const widget_set_as_key_target = Module.cwrap("widget_set_as_key_target", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const widget_focus_next = Module.cwrap("widget_focus_next", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const widget_focus_prev = Module.cwrap("widget_focus_prev", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const widget_get_state_for_style = Module.cwrap("widget_get_state_for_style", 
-    "string", ["TWidget","boolean","boolean"]);
+    "string", ["number","number","number"]);
 const widget_layout = Module.cwrap("widget_layout", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const widget_set_self_layout = Module.cwrap("widget_set_self_layout", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const widget_set_children_layout = Module.cwrap("widget_set_children_layout", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const widget_set_self_layout_params = Module.cwrap("widget_set_self_layout_params", 
-    "TRet", ["TWidget","string","string","string","string"]);
+    "number", ["number","string","string","string","string"]);
 const widget_set_style_int = Module.cwrap("widget_set_style_int", 
-    "TRet", ["TWidget","string","number"]);
+    "number", ["number","string","number"]);
 const widget_set_style_str = Module.cwrap("widget_set_style_str", 
-    "TRet", ["TWidget","string","string"]);
+    "number", ["number","string","string"]);
 const widget_set_style_color = Module.cwrap("widget_set_style_color", 
-    "TRet", ["TWidget","string","number"]);
+    "number", ["number","string","number"]);
 const widget_t_get_prop_x = Module.cwrap("widget_t_get_prop_x", 
     "number", ["number"]);
 const widget_t_get_prop_y = Module.cwrap("widget_t_get_prop_y", 
@@ -2065,57 +2065,57 @@ const widget_t_get_prop_style = Module.cwrap("widget_t_get_prop_style",
 const widget_t_get_prop_animation = Module.cwrap("widget_t_get_prop_animation", 
     "string", ["number"]);
 const widget_t_get_prop_enable = Module.cwrap("widget_t_get_prop_enable", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const widget_t_get_prop_feedback = Module.cwrap("widget_t_get_prop_feedback", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const widget_t_get_prop_visible = Module.cwrap("widget_t_get_prop_visible", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const widget_t_get_prop_sensitive = Module.cwrap("widget_t_get_prop_sensitive", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const widget_t_get_prop_focusable = Module.cwrap("widget_t_get_prop_focusable", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const widget_t_get_prop_with_focus_state = Module.cwrap("widget_t_get_prop_with_focus_state", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const widget_t_get_prop_auto_adjust_size = Module.cwrap("widget_t_get_prop_auto_adjust_size", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const widget_t_get_prop_floating = Module.cwrap("widget_t_get_prop_floating", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const widget_t_get_prop_dirty_rect_tolerance = Module.cwrap("widget_t_get_prop_dirty_rect_tolerance", 
     "number", ["number"]);
 const widget_t_get_prop_parent = Module.cwrap("widget_t_get_prop_parent", 
-    "TWidget", ["number"]);
+    "number", ["number"]);
 const app_conf_save = Module.cwrap("app_conf_save", 
-    "TRet", []);
+    "number", []);
 const app_conf_reload = Module.cwrap("app_conf_reload", 
-    "TRet", []);
+    "number", []);
 const app_conf_deinit = Module.cwrap("app_conf_deinit", 
-    "TRet", []);
+    "number", []);
 const app_conf_exist = Module.cwrap("app_conf_exist", 
-    "boolean", ["string"]);
+    "number", ["string"]);
 const app_conf_set_int = Module.cwrap("app_conf_set_int", 
-    "TRet", ["string","number"]);
+    "number", ["string","number"]);
 const app_conf_set_int64 = Module.cwrap("app_conf_set_int64", 
-    "TRet", ["string","number"]);
+    "number", ["string","number"]);
 const app_conf_set_bool = Module.cwrap("app_conf_set_bool", 
-    "TRet", ["string","boolean"]);
+    "number", ["string","number"]);
 const app_conf_set_double = Module.cwrap("app_conf_set_double", 
-    "TRet", ["string","number"]);
+    "number", ["string","number"]);
 const app_conf_set_str = Module.cwrap("app_conf_set_str", 
-    "TRet", ["string","string"]);
+    "number", ["string","string"]);
 const app_conf_get_int = Module.cwrap("app_conf_get_int", 
     "number", ["string","number"]);
 const app_conf_get_int64 = Module.cwrap("app_conf_get_int64", 
     "number", ["string","number"]);
 const app_conf_get_bool = Module.cwrap("app_conf_get_bool", 
-    "boolean", ["string","boolean"]);
+    "number", ["string","number"]);
 const app_conf_get_double = Module.cwrap("app_conf_get_double", 
     "number", ["string","number"]);
 const app_conf_get_str = Module.cwrap("app_conf_get_str", 
     "string", ["string","string"]);
 const app_conf_remove = Module.cwrap("app_conf_remove", 
-    "TRet", ["string"]);
+    "number", ["string"]);
 const tk_ext_widgets_init = Module.cwrap("tk_ext_widgets_init", 
-    "TRet", []);
+    "number", []);
 const INDICATOR_DEFAULT_PAINT_AUTO = Module.cwrap("get_INDICATOR_DEFAULT_PAINT_AUTO", 
     "number", []);
 const INDICATOR_DEFAULT_PAINT_FILL_DOT = Module.cwrap("get_INDICATOR_DEFAULT_PAINT_FILL_DOT", 
@@ -2153,9 +2153,9 @@ const ASSET_TYPE_FLOW = Module.cwrap("get_ASSET_TYPE_FLOW",
 const ASSET_TYPE_DATA = Module.cwrap("get_ASSET_TYPE_DATA", 
     "number", []);
 const asset_info_get_type = Module.cwrap("asset_info_get_type", 
-    "number", ["TAssetInfo"]);
+    "number", ["number"]);
 const asset_info_get_name = Module.cwrap("asset_info_get_name", 
-    "string", ["TAssetInfo"]);
+    "string", ["number"]);
 const asset_info_t_get_prop_type = Module.cwrap("asset_info_t_get_prop_type", 
     "number", ["number"]);
 const asset_info_t_get_prop_subtype = Module.cwrap("asset_info_t_get_prop_subtype", 
@@ -2169,51 +2169,51 @@ const asset_info_t_get_prop_refcount = Module.cwrap("asset_info_t_get_prop_refco
 const asset_info_t_get_prop_name = Module.cwrap("asset_info_t_get_prop_name", 
     "string", ["number"]);
 const color_create = Module.cwrap("color_create", 
-    "TColor", ["number","number","number","number"]);
+    "number", ["number","number","number","number"]);
 const color_from_str = Module.cwrap("color_from_str", 
-    "TColor", ["TColor","string"]);
+    "number", ["number","string"]);
 const color_r = Module.cwrap("color_r", 
-    "number", ["TColor"]);
+    "number", ["number"]);
 const color_g = Module.cwrap("color_g", 
-    "number", ["TColor"]);
+    "number", ["number"]);
 const color_b = Module.cwrap("color_b", 
-    "number", ["TColor"]);
+    "number", ["number"]);
 const color_a = Module.cwrap("color_a", 
-    "number", ["TColor"]);
+    "number", ["number"]);
 const color_get_color = Module.cwrap("color_get_color", 
-    "number", ["TColor"]);
+    "number", ["number"]);
 const color_cast = Module.cwrap("color_cast", 
-    "TColor", ["TColor"]);
+    "number", ["number"]);
 const color_destroy = Module.cwrap("color_destroy", 
-    "TRet", ["TColor"]);
+    "number", ["number"]);
 const color_t_get_prop_color = Module.cwrap("color_t_get_prop_color", 
     "number", ["number"]);
 const color_t_set_prop_color = Module.cwrap("color_t_set_prop_color", 
     "number", ["number", "number"]);
 const date_time_create = Module.cwrap("date_time_create", 
-    "TDateTime", []);
+    "number", []);
 const date_time_set_year = Module.cwrap("date_time_set_year", 
-    "TRet", ["TDateTime","number"]);
+    "number", ["number","number"]);
 const date_time_set_month = Module.cwrap("date_time_set_month", 
-    "TRet", ["TDateTime","number"]);
+    "number", ["number","number"]);
 const date_time_set_day = Module.cwrap("date_time_set_day", 
-    "TRet", ["TDateTime","number"]);
+    "number", ["number","number"]);
 const date_time_set_hour = Module.cwrap("date_time_set_hour", 
-    "TRet", ["TDateTime","number"]);
+    "number", ["number","number"]);
 const date_time_set_minute = Module.cwrap("date_time_set_minute", 
-    "TRet", ["TDateTime","number"]);
+    "number", ["number","number"]);
 const date_time_set_second = Module.cwrap("date_time_set_second", 
-    "TRet", ["TDateTime","number"]);
+    "number", ["number","number"]);
 const date_time_set = Module.cwrap("date_time_set", 
-    "TRet", ["TDateTime"]);
+    "number", ["number"]);
 const date_time_from_time = Module.cwrap("date_time_from_time", 
-    "TRet", ["TDateTime","number"]);
+    "number", ["number","number"]);
 const date_time_to_time = Module.cwrap("date_time_to_time", 
-    "number", ["TDateTime"]);
+    "number", ["number"]);
 const date_time_add_delta = Module.cwrap("date_time_add_delta", 
-    "TRet", ["TDateTime","number"]);
+    "number", ["number","number"]);
 const date_time_is_leap = Module.cwrap("date_time_is_leap", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const date_time_get_days = Module.cwrap("date_time_get_days", 
     "number", ["number","number"]);
 const date_time_get_wday = Module.cwrap("date_time_get_wday", 
@@ -2223,7 +2223,7 @@ const date_time_get_month_name = Module.cwrap("date_time_get_month_name",
 const date_time_get_wday_name = Module.cwrap("date_time_get_wday_name", 
     "string", ["number"]);
 const date_time_destroy = Module.cwrap("date_time_destroy", 
-    "TRet", ["TDateTime"]);
+    "number", ["number"]);
 const date_time_t_get_prop_second = Module.cwrap("date_time_t_get_prop_second", 
     "number", ["number"]);
 const date_time_t_get_prop_minute = Module.cwrap("date_time_t_get_prop_minute", 
@@ -2491,17 +2491,17 @@ const MIME_TYPE_VIDEO_QUICKTIME = Module.cwrap("get_MIME_TYPE_VIDEO_QUICKTIME",
 const MIME_TYPE_VIDEO_X_MSVIDEO = Module.cwrap("get_MIME_TYPE_VIDEO_X_MSVIDEO", 
     "string", []);
 const named_value_create = Module.cwrap("named_value_create", 
-    "TNamedValue", []);
+    "number", []);
 const named_value_cast = Module.cwrap("named_value_cast", 
-    "TNamedValue", ["TNamedValue"]);
+    "number", ["number"]);
 const named_value_set_name = Module.cwrap("named_value_set_name", 
-    "TRet", ["TNamedValue","string"]);
+    "number", ["number","string"]);
 const named_value_set_value = Module.cwrap("named_value_set_value", 
-    "TRet", ["TNamedValue","TValue"]);
+    "number", ["number","number"]);
 const named_value_get_value = Module.cwrap("named_value_get_value", 
-    "TValue", ["TNamedValue"]);
+    "number", ["number"]);
 const named_value_destroy = Module.cwrap("named_value_destroy", 
-    "TRet", ["TNamedValue"]);
+    "number", ["number"]);
 const named_value_t_get_prop_name = Module.cwrap("named_value_t_get_prop_name", 
     "string", ["number"]);
 const OBJECT_CMD_SAVE = Module.cwrap("get_OBJECT_CMD_SAVE", 
@@ -2529,9 +2529,9 @@ const OBJECT_PROP_SIZE = Module.cwrap("get_OBJECT_PROP_SIZE",
 const OBJECT_PROP_CHECKED = Module.cwrap("get_OBJECT_PROP_CHECKED", 
     "string", []);
 const rlog_create = Module.cwrap("rlog_create", 
-    "TRlog", ["string","number","number"]);
+    "number", ["string","number","number"]);
 const rlog_write = Module.cwrap("rlog_write", 
-    "TRet", ["TRlog","string"]);
+    "number", ["number","string"]);
 const time_now_s = Module.cwrap("time_now_s", 
     "number", []);
 const time_now_ms = Module.cwrap("time_now_ms", 
@@ -2625,33 +2625,33 @@ const VALUE_TYPE_UBJSON = Module.cwrap("get_VALUE_TYPE_UBJSON",
 const VALUE_TYPE_TOKEN = Module.cwrap("get_VALUE_TYPE_TOKEN", 
     "number", []);
 const assets_manager = Module.cwrap("assets_manager", 
-    "TAssetsManager", []);
+    "number", []);
 const assets_manager_set_theme = Module.cwrap("assets_manager_set_theme", 
-    "TRet", ["TAssetsManager","string"]);
+    "number", ["number","string"]);
 const assets_manager_ref = Module.cwrap("assets_manager_ref", 
-    "TAssetInfo", ["TAssetsManager","TAssetType","string"]);
+    "number", ["number","number","string"]);
 const assets_manager_ref_ex = Module.cwrap("assets_manager_ref_ex", 
-    "TAssetInfo", ["TAssetsManager","TAssetType","number","string"]);
+    "number", ["number","number","number","string"]);
 const assets_manager_unref = Module.cwrap("assets_manager_unref", 
-    "TRet", ["TAssetsManager","TAssetInfo"]);
+    "number", ["number","number"]);
 const wheel_event_cast = Module.cwrap("wheel_event_cast", 
-    "TWheelEvent", ["TEvent"]);
+    "number", ["number"]);
 const wheel_event_t_get_prop_dy = Module.cwrap("wheel_event_t_get_prop_dy", 
     "number", ["number"]);
 const wheel_event_t_get_prop_alt = Module.cwrap("wheel_event_t_get_prop_alt", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const wheel_event_t_get_prop_ctrl = Module.cwrap("wheel_event_t_get_prop_ctrl", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const wheel_event_t_get_prop_shift = Module.cwrap("wheel_event_t_get_prop_shift", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const orientation_event_cast = Module.cwrap("orientation_event_cast", 
-    "TOrientationEvent", ["TEvent"]);
+    "number", ["number"]);
 const orientation_event_t_get_prop_orientation = Module.cwrap("orientation_event_t_get_prop_orientation", 
     "number", ["number"]);
 const value_change_event_cast = Module.cwrap("value_change_event_cast", 
-    "TValueChangeEvent", ["TEvent"]);
+    "number", ["number"]);
 const pointer_event_cast = Module.cwrap("pointer_event_cast", 
-    "TPointerEvent", ["TEvent"]);
+    "number", ["number"]);
 const pointer_event_t_get_prop_x = Module.cwrap("pointer_event_t_get_prop_x", 
     "number", ["number"]);
 const pointer_event_t_get_prop_y = Module.cwrap("pointer_event_t_get_prop_y", 
@@ -2659,55 +2659,55 @@ const pointer_event_t_get_prop_y = Module.cwrap("pointer_event_t_get_prop_y",
 const pointer_event_t_get_prop_button = Module.cwrap("pointer_event_t_get_prop_button", 
     "number", ["number"]);
 const pointer_event_t_get_prop_pressed = Module.cwrap("pointer_event_t_get_prop_pressed", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const pointer_event_t_get_prop_alt = Module.cwrap("pointer_event_t_get_prop_alt", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const pointer_event_t_get_prop_ctrl = Module.cwrap("pointer_event_t_get_prop_ctrl", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const pointer_event_t_get_prop_cmd = Module.cwrap("pointer_event_t_get_prop_cmd", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const pointer_event_t_get_prop_menu = Module.cwrap("pointer_event_t_get_prop_menu", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const pointer_event_t_get_prop_shift = Module.cwrap("pointer_event_t_get_prop_shift", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const key_event_cast = Module.cwrap("key_event_cast", 
-    "TKeyEvent", ["TEvent"]);
+    "number", ["number"]);
 const key_event_t_get_prop_key = Module.cwrap("key_event_t_get_prop_key", 
     "number", ["number"]);
 const key_event_t_get_prop_alt = Module.cwrap("key_event_t_get_prop_alt", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const key_event_t_get_prop_lalt = Module.cwrap("key_event_t_get_prop_lalt", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const key_event_t_get_prop_ralt = Module.cwrap("key_event_t_get_prop_ralt", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const key_event_t_get_prop_ctrl = Module.cwrap("key_event_t_get_prop_ctrl", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const key_event_t_get_prop_lctrl = Module.cwrap("key_event_t_get_prop_lctrl", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const key_event_t_get_prop_rctrl = Module.cwrap("key_event_t_get_prop_rctrl", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const key_event_t_get_prop_shift = Module.cwrap("key_event_t_get_prop_shift", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const key_event_t_get_prop_lshift = Module.cwrap("key_event_t_get_prop_lshift", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const key_event_t_get_prop_rshift = Module.cwrap("key_event_t_get_prop_rshift", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const key_event_t_get_prop_cmd = Module.cwrap("key_event_t_get_prop_cmd", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const key_event_t_get_prop_menu = Module.cwrap("key_event_t_get_prop_menu", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const key_event_t_get_prop_capslock = Module.cwrap("key_event_t_get_prop_capslock", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const paint_event_cast = Module.cwrap("paint_event_cast", 
-    "TPaintEvent", ["TEvent"]);
+    "number", ["number"]);
 const paint_event_t_get_prop_c = Module.cwrap("paint_event_t_get_prop_c", 
-    "TCanvas", ["number"]);
+    "number", ["number"]);
 const window_event_cast = Module.cwrap("window_event_cast", 
-    "TWindowEvent", ["TEvent"]);
+    "number", ["number"]);
 const window_event_t_get_prop_window = Module.cwrap("window_event_t_get_prop_window", 
-    "TWidget", ["number"]);
+    "number", ["number"]);
 const multi_gesture_event_cast = Module.cwrap("multi_gesture_event_cast", 
-    "TMultiGestureEvent", ["TEvent"]);
+    "number", ["number"]);
 const multi_gesture_event_t_get_prop_x = Module.cwrap("multi_gesture_event_t_get_prop_x", 
     "number", ["number"]);
 const multi_gesture_event_t_get_prop_y = Module.cwrap("multi_gesture_event_t_get_prop_y", 
@@ -2717,21 +2717,21 @@ const multi_gesture_event_t_get_prop_rotation = Module.cwrap("multi_gesture_even
 const multi_gesture_event_t_get_prop_distance = Module.cwrap("multi_gesture_event_t_get_prop_distance", 
     "number", ["number"]);
 const image_base_set_image = Module.cwrap("image_base_set_image", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const image_base_set_rotation = Module.cwrap("image_base_set_rotation", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const image_base_set_scale = Module.cwrap("image_base_set_scale", 
-    "TRet", ["TWidget","number","number"]);
+    "number", ["number","number","number"]);
 const image_base_set_anchor = Module.cwrap("image_base_set_anchor", 
-    "TRet", ["TWidget","number","number"]);
+    "number", ["number","number","number"]);
 const image_base_set_selected = Module.cwrap("image_base_set_selected", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const image_base_set_selectable = Module.cwrap("image_base_set_selectable", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const image_base_set_clickable = Module.cwrap("image_base_set_clickable", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const image_base_cast = Module.cwrap("image_base_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const image_base_t_get_prop_image = Module.cwrap("image_base_t_get_prop_image", 
     "string", ["number"]);
 const image_base_t_get_prop_anchor_x = Module.cwrap("image_base_t_get_prop_anchor_x", 
@@ -2745,23 +2745,23 @@ const image_base_t_get_prop_scale_y = Module.cwrap("image_base_t_get_prop_scale_
 const image_base_t_get_prop_rotation = Module.cwrap("image_base_t_get_prop_rotation", 
     "number", ["number"]);
 const image_base_t_get_prop_clickable = Module.cwrap("image_base_t_get_prop_clickable", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const image_base_t_get_prop_selectable = Module.cwrap("image_base_t_get_prop_selectable", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const image_base_t_get_prop_selected = Module.cwrap("image_base_t_get_prop_selected", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const style_mutable_set_name = Module.cwrap("style_mutable_set_name", 
-    "TRet", ["TStyle","string"]);
+    "number", ["number","string"]);
 const style_mutable_set_int = Module.cwrap("style_mutable_set_int", 
-    "TRet", ["TStyle","string","string","number"]);
+    "number", ["number","string","string","number"]);
 const style_mutable_cast = Module.cwrap("style_mutable_cast", 
-    "TStyle", ["TStyle"]);
+    "number", ["number"]);
 const style_mutable_create = Module.cwrap("style_mutable_create", 
-    "TStyle", ["TStyle"]);
+    "number", ["number"]);
 const style_mutable_t_get_prop_name = Module.cwrap("style_mutable_t_get_prop_name", 
     "string", ["number"]);
 const window_base_cast = Module.cwrap("window_base_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const window_base_t_get_prop_theme = Module.cwrap("window_base_t_get_prop_theme", 
     "string", ["number"]);
 const window_base_t_get_prop_design_w = Module.cwrap("window_base_t_get_prop_design_w", 
@@ -2769,17 +2769,17 @@ const window_base_t_get_prop_design_w = Module.cwrap("window_base_t_get_prop_des
 const window_base_t_get_prop_design_h = Module.cwrap("window_base_t_get_prop_design_h", 
     "number", ["number"]);
 const window_base_t_get_prop_auto_scale_children_x = Module.cwrap("window_base_t_get_prop_auto_scale_children_x", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const window_base_t_get_prop_auto_scale_children_y = Module.cwrap("window_base_t_get_prop_auto_scale_children_y", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const window_base_t_get_prop_auto_scale_children_w = Module.cwrap("window_base_t_get_prop_auto_scale_children_w", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const window_base_t_get_prop_auto_scale_children_h = Module.cwrap("window_base_t_get_prop_auto_scale_children_h", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const window_base_t_get_prop_disable_anim = Module.cwrap("window_base_t_get_prop_disable_anim", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const window_base_t_get_prop_closable = Module.cwrap("window_base_t_get_prop_closable", 
-    "TWindowClosable", ["number"]);
+    "number", ["number"]);
 const window_base_t_get_prop_open_anim_hint = Module.cwrap("window_base_t_get_prop_open_anim_hint", 
     "string", ["number"]);
 const window_base_t_get_prop_close_anim_hint = Module.cwrap("window_base_t_get_prop_close_anim_hint", 
@@ -2797,81 +2797,81 @@ const window_base_t_get_prop_move_focus_left_key = Module.cwrap("window_base_t_g
 const window_base_t_get_prop_move_focus_right_key = Module.cwrap("window_base_t_get_prop_move_focus_right_key", 
     "string", ["number"]);
 const window_base_t_get_prop_single_instance = Module.cwrap("window_base_t_get_prop_single_instance", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const window_base_t_get_prop_strongly_focus = Module.cwrap("window_base_t_get_prop_strongly_focus", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const window_manager = Module.cwrap("window_manager", 
-    "TWidget", []);
+    "number", []);
 const window_manager_cast = Module.cwrap("window_manager_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const window_manager_get_top_main_window = Module.cwrap("window_manager_get_top_main_window", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const window_manager_get_top_window = Module.cwrap("window_manager_get_top_window", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const window_manager_get_prev_window = Module.cwrap("window_manager_get_prev_window", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const window_manager_get_pointer_x = Module.cwrap("window_manager_get_pointer_x", 
-    "number", ["TWidget"]);
+    "number", ["number"]);
 const window_manager_get_pointer_y = Module.cwrap("window_manager_get_pointer_y", 
-    "number", ["TWidget"]);
+    "number", ["number"]);
 const window_manager_get_pointer_pressed = Module.cwrap("window_manager_get_pointer_pressed", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const window_manager_is_animating = Module.cwrap("window_manager_is_animating", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const window_manager_set_show_fps = Module.cwrap("window_manager_set_show_fps", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const window_manager_set_max_fps = Module.cwrap("window_manager_set_max_fps", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const window_manager_set_ignore_input_events = Module.cwrap("window_manager_set_ignore_input_events", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const window_manager_set_screen_saver_time = Module.cwrap("window_manager_set_screen_saver_time", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const window_manager_set_cursor = Module.cwrap("window_manager_set_cursor", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const window_manager_back = Module.cwrap("window_manager_back", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const window_manager_back_to_home = Module.cwrap("window_manager_back_to_home", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const window_manager_back_to = Module.cwrap("window_manager_back_to", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const window_manager_resize = Module.cwrap("window_manager_resize", 
-    "TRet", ["TWidget","number","number"]);
+    "number", ["number","number","number"]);
 const window_manager_close_all = Module.cwrap("window_manager_close_all", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const canvas_widget_create = Module.cwrap("canvas_widget_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const canvas_widget_cast = Module.cwrap("canvas_widget_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const color_component_create = Module.cwrap("color_component_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const color_component_cast = Module.cwrap("color_component_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const color_picker_create = Module.cwrap("color_picker_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const color_picker_set_color = Module.cwrap("color_picker_set_color", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const color_picker_cast = Module.cwrap("color_picker_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const color_picker_t_get_prop_value = Module.cwrap("color_picker_t_get_prop_value", 
     "string", ["number"]);
 const draggable_create = Module.cwrap("draggable_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const draggable_cast = Module.cwrap("draggable_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const draggable_set_top = Module.cwrap("draggable_set_top", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const draggable_set_bottom = Module.cwrap("draggable_set_bottom", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const draggable_set_left = Module.cwrap("draggable_set_left", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const draggable_set_right = Module.cwrap("draggable_set_right", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const draggable_set_vertical_only = Module.cwrap("draggable_set_vertical_only", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const draggable_set_horizontal_only = Module.cwrap("draggable_set_horizontal_only", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const draggable_set_drag_window = Module.cwrap("draggable_set_drag_window", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const draggable_t_get_prop_top = Module.cwrap("draggable_t_get_prop_top", 
     "number", ["number"]);
 const draggable_t_get_prop_bottom = Module.cwrap("draggable_t_get_prop_bottom", 
@@ -2881,37 +2881,37 @@ const draggable_t_get_prop_left = Module.cwrap("draggable_t_get_prop_left",
 const draggable_t_get_prop_right = Module.cwrap("draggable_t_get_prop_right", 
     "number", ["number"]);
 const draggable_t_get_prop_vertical_only = Module.cwrap("draggable_t_get_prop_vertical_only", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const draggable_t_get_prop_horizontal_only = Module.cwrap("draggable_t_get_prop_horizontal_only", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const draggable_t_get_prop_drag_window = Module.cwrap("draggable_t_get_prop_drag_window", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const file_browser_view_create = Module.cwrap("file_browser_view_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const file_browser_view_cast = Module.cwrap("file_browser_view_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const file_browser_view_set_init_dir = Module.cwrap("file_browser_view_set_init_dir", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const file_browser_view_set_top_dir = Module.cwrap("file_browser_view_set_top_dir", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const file_browser_view_set_filter = Module.cwrap("file_browser_view_set_filter", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const file_browser_view_reload = Module.cwrap("file_browser_view_reload", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const file_browser_view_set_ignore_hidden_files = Module.cwrap("file_browser_view_set_ignore_hidden_files", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const file_browser_view_set_sort_ascending = Module.cwrap("file_browser_view_set_sort_ascending", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const file_browser_view_set_show_check_button = Module.cwrap("file_browser_view_set_show_check_button", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const file_browser_view_set_sort_by = Module.cwrap("file_browser_view_set_sort_by", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const file_browser_view_get_cwd = Module.cwrap("file_browser_view_get_cwd", 
-    "string", ["TWidget"]);
+    "string", ["number"]);
 const file_browser_view_create_dir = Module.cwrap("file_browser_view_create_dir", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const file_browser_view_create_file = Module.cwrap("file_browser_view_create_file", 
-    "TRet", ["TWidget","string","string","number"]);
+    "number", ["number","string","string","number"]);
 const file_browser_view_t_get_prop_init_dir = Module.cwrap("file_browser_view_t_get_prop_init_dir", 
     "string", ["number"]);
 const file_browser_view_t_get_prop_top_dir = Module.cwrap("file_browser_view_t_get_prop_top_dir", 
@@ -2919,45 +2919,45 @@ const file_browser_view_t_get_prop_top_dir = Module.cwrap("file_browser_view_t_g
 const file_browser_view_t_get_prop_filter = Module.cwrap("file_browser_view_t_get_prop_filter", 
     "string", ["number"]);
 const file_browser_view_t_get_prop_ignore_hidden_files = Module.cwrap("file_browser_view_t_get_prop_ignore_hidden_files", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const file_browser_view_t_get_prop_sort_ascending = Module.cwrap("file_browser_view_t_get_prop_sort_ascending", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const file_browser_view_t_get_prop_show_check_button = Module.cwrap("file_browser_view_t_get_prop_show_check_button", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const file_browser_view_t_get_prop_sort_by = Module.cwrap("file_browser_view_t_get_prop_sort_by", 
     "string", ["number"]);
 const file_chooser_create = Module.cwrap("file_chooser_create", 
-    "TFileChooser", []);
+    "number", []);
 const file_chooser_set_init_dir = Module.cwrap("file_chooser_set_init_dir", 
-    "TRet", ["TFileChooser","string"]);
+    "number", ["number","string"]);
 const file_chooser_set_top_dir = Module.cwrap("file_chooser_set_top_dir", 
-    "TRet", ["TFileChooser","string"]);
+    "number", ["number","string"]);
 const file_chooser_set_filter = Module.cwrap("file_chooser_set_filter", 
-    "TRet", ["TFileChooser","string"]);
+    "number", ["number","string"]);
 const file_chooser_cast = Module.cwrap("file_chooser_cast", 
-    "TFileChooser", ["TFileChooser"]);
+    "number", ["number"]);
 const file_chooser_choose_file_for_save = Module.cwrap("file_chooser_choose_file_for_save", 
-    "TRet", ["TFileChooser"]);
+    "number", ["number"]);
 const file_chooser_choose_file_for_open = Module.cwrap("file_chooser_choose_file_for_open", 
-    "TRet", ["TFileChooser"]);
+    "number", ["number"]);
 const file_chooser_choose_folder = Module.cwrap("file_chooser_choose_folder", 
-    "TRet", ["TFileChooser"]);
+    "number", ["number"]);
 const file_chooser_get_dir = Module.cwrap("file_chooser_get_dir", 
-    "string", ["TFileChooser"]);
+    "string", ["number"]);
 const file_chooser_get_filename = Module.cwrap("file_chooser_get_filename", 
-    "string", ["TFileChooser"]);
+    "string", ["number"]);
 const file_chooser_is_aborted = Module.cwrap("file_chooser_is_aborted", 
-    "boolean", ["TFileChooser"]);
+    "number", ["number"]);
 const gauge_pointer_create = Module.cwrap("gauge_pointer_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const gauge_pointer_cast = Module.cwrap("gauge_pointer_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const gauge_pointer_set_angle = Module.cwrap("gauge_pointer_set_angle", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const gauge_pointer_set_image = Module.cwrap("gauge_pointer_set_image", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const gauge_pointer_set_anchor = Module.cwrap("gauge_pointer_set_anchor", 
-    "TRet", ["TWidget","string","string"]);
+    "number", ["number","string","string"]);
 const gauge_pointer_t_get_prop_angle = Module.cwrap("gauge_pointer_t_get_prop_angle", 
     "number", ["number"]);
 const gauge_pointer_t_get_prop_image = Module.cwrap("gauge_pointer_t_get_prop_image", 
@@ -2967,53 +2967,53 @@ const gauge_pointer_t_get_prop_anchor_x = Module.cwrap("gauge_pointer_t_get_prop
 const gauge_pointer_t_get_prop_anchor_y = Module.cwrap("gauge_pointer_t_get_prop_anchor_y", 
     "string", ["number"]);
 const gauge_create = Module.cwrap("gauge_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const gauge_cast = Module.cwrap("gauge_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const gauge_set_image = Module.cwrap("gauge_set_image", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const gauge_set_draw_type = Module.cwrap("gauge_set_draw_type", 
-    "TRet", ["TWidget","TImageDrawType"]);
+    "number", ["number","number"]);
 const gauge_t_get_prop_image = Module.cwrap("gauge_t_get_prop_image", 
     "string", ["number"]);
 const gauge_t_get_prop_draw_type = Module.cwrap("gauge_t_get_prop_draw_type", 
-    "TImageDrawType", ["number"]);
+    "number", ["number"]);
 const image_animation_create = Module.cwrap("image_animation_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const image_animation_set_loop = Module.cwrap("image_animation_set_loop", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const image_animation_set_image = Module.cwrap("image_animation_set_image", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const image_animation_set_interval = Module.cwrap("image_animation_set_interval", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const image_animation_set_delay = Module.cwrap("image_animation_set_delay", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const image_animation_set_auto_play = Module.cwrap("image_animation_set_auto_play", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const image_animation_set_sequence = Module.cwrap("image_animation_set_sequence", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const image_animation_set_range_sequence = Module.cwrap("image_animation_set_range_sequence", 
-    "TRet", ["TWidget","number","number"]);
+    "number", ["number","number","number"]);
 const image_animation_play = Module.cwrap("image_animation_play", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const image_animation_stop = Module.cwrap("image_animation_stop", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const image_animation_pause = Module.cwrap("image_animation_pause", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const image_animation_next = Module.cwrap("image_animation_next", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const image_animation_set_format = Module.cwrap("image_animation_set_format", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const image_animation_set_unload_after_paint = Module.cwrap("image_animation_set_unload_after_paint", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const image_animation_set_reverse = Module.cwrap("image_animation_set_reverse", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const image_animation_set_show_when_done = Module.cwrap("image_animation_set_show_when_done", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const image_animation_cast = Module.cwrap("image_animation_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const image_animation_is_playing = Module.cwrap("image_animation_is_playing", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const image_animation_t_get_prop_image = Module.cwrap("image_animation_t_get_prop_image", 
     "string", ["number"]);
 const image_animation_t_get_prop_sequence = Module.cwrap("image_animation_t_get_prop_sequence", 
@@ -3023,13 +3023,13 @@ const image_animation_t_get_prop_start_index = Module.cwrap("image_animation_t_g
 const image_animation_t_get_prop_end_index = Module.cwrap("image_animation_t_get_prop_end_index", 
     "number", ["number"]);
 const image_animation_t_get_prop_reverse = Module.cwrap("image_animation_t_get_prop_reverse", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const image_animation_t_get_prop_loop = Module.cwrap("image_animation_t_get_prop_loop", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const image_animation_t_get_prop_auto_play = Module.cwrap("image_animation_t_get_prop_auto_play", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const image_animation_t_get_prop_unload_after_paint = Module.cwrap("image_animation_t_get_prop_unload_after_paint", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const image_animation_t_get_prop_format = Module.cwrap("image_animation_t_get_prop_format", 
     "string", ["number"]);
 const image_animation_t_get_prop_interval = Module.cwrap("image_animation_t_get_prop_interval", 
@@ -3037,23 +3037,23 @@ const image_animation_t_get_prop_interval = Module.cwrap("image_animation_t_get_
 const image_animation_t_get_prop_delay = Module.cwrap("image_animation_t_get_prop_delay", 
     "number", ["number"]);
 const image_animation_t_get_prop_show_when_done = Module.cwrap("image_animation_t_get_prop_show_when_done", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const image_value_create = Module.cwrap("image_value_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const image_value_set_image = Module.cwrap("image_value_set_image", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const image_value_set_format = Module.cwrap("image_value_set_format", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const image_value_set_click_add_delta = Module.cwrap("image_value_set_click_add_delta", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const image_value_set_value = Module.cwrap("image_value_set_value", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const image_value_set_min = Module.cwrap("image_value_set_min", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const image_value_set_max = Module.cwrap("image_value_set_max", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const image_value_cast = Module.cwrap("image_value_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const image_value_t_get_prop_image = Module.cwrap("image_value_t_get_prop_image", 
     "string", ["number"]);
 const image_value_t_get_prop_format = Module.cwrap("image_value_t_get_prop_format", 
@@ -3067,83 +3067,83 @@ const image_value_t_get_prop_min = Module.cwrap("image_value_t_get_prop_min",
 const image_value_t_get_prop_max = Module.cwrap("image_value_t_get_prop_max", 
     "number", ["number"]);
 const candidates_create = Module.cwrap("candidates_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const candidates_cast = Module.cwrap("candidates_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const candidates_set_pre = Module.cwrap("candidates_set_pre", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const candidates_set_select_by_num = Module.cwrap("candidates_set_select_by_num", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const candidates_set_auto_hide = Module.cwrap("candidates_set_auto_hide", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const candidates_set_button_style = Module.cwrap("candidates_set_button_style", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const candidates_t_get_prop_pre = Module.cwrap("candidates_t_get_prop_pre", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const candidates_t_get_prop_select_by_num = Module.cwrap("candidates_t_get_prop_select_by_num", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const candidates_t_get_prop_auto_hide = Module.cwrap("candidates_t_get_prop_auto_hide", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const candidates_t_get_prop_button_style = Module.cwrap("candidates_t_get_prop_button_style", 
     "string", ["number"]);
 const lang_indicator_create = Module.cwrap("lang_indicator_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const lang_indicator_set_image = Module.cwrap("lang_indicator_set_image", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const lang_indicator_cast = Module.cwrap("lang_indicator_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const lang_indicator_t_get_prop_image = Module.cwrap("lang_indicator_t_get_prop_image", 
     "string", ["number"]);
 const line_number_create = Module.cwrap("line_number_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const line_number_set_top_margin = Module.cwrap("line_number_set_top_margin", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const line_number_set_bottom_margin = Module.cwrap("line_number_set_bottom_margin", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const line_number_set_line_height = Module.cwrap("line_number_set_line_height", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const line_number_set_yoffset = Module.cwrap("line_number_set_yoffset", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const line_number_cast = Module.cwrap("line_number_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const mledit_create = Module.cwrap("mledit_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const mledit_set_readonly = Module.cwrap("mledit_set_readonly", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const mledit_set_cancelable = Module.cwrap("mledit_set_cancelable", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const mledit_set_focus = Module.cwrap("mledit_set_focus", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const mledit_set_wrap_word = Module.cwrap("mledit_set_wrap_word", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const mledit_set_max_lines = Module.cwrap("mledit_set_max_lines", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const mledit_set_max_chars = Module.cwrap("mledit_set_max_chars", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const mledit_set_tips = Module.cwrap("mledit_set_tips", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const mledit_set_tr_tips = Module.cwrap("mledit_set_tr_tips", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const mledit_set_keyboard = Module.cwrap("mledit_set_keyboard", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const mledit_set_cursor = Module.cwrap("mledit_set_cursor", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const mledit_get_cursor = Module.cwrap("mledit_get_cursor", 
-    "number", ["TWidget"]);
+    "number", ["number"]);
 const mledit_set_scroll_line = Module.cwrap("mledit_set_scroll_line", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const mledit_scroll_to_offset = Module.cwrap("mledit_scroll_to_offset", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const mledit_set_open_im_when_focused = Module.cwrap("mledit_set_open_im_when_focused", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const mledit_set_close_im_when_blured = Module.cwrap("mledit_set_close_im_when_blured", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const mledit_set_select = Module.cwrap("mledit_set_select", 
-    "TRet", ["TWidget","number","number"]);
+    "number", ["number","number","number"]);
 const mledit_get_selected_text = Module.cwrap("mledit_get_selected_text", 
-    "string", ["TWidget"]);
+    "string", ["number"]);
 const mledit_cast = Module.cwrap("mledit_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const mledit_t_get_prop_tips = Module.cwrap("mledit_t_get_prop_tips", 
     "string", ["number"]);
 const mledit_t_get_prop_tr_tips = Module.cwrap("mledit_t_get_prop_tr_tips", 
@@ -3155,37 +3155,37 @@ const mledit_t_get_prop_max_lines = Module.cwrap("mledit_t_get_prop_max_lines",
 const mledit_t_get_prop_max_chars = Module.cwrap("mledit_t_get_prop_max_chars", 
     "number", ["number"]);
 const mledit_t_get_prop_wrap_word = Module.cwrap("mledit_t_get_prop_wrap_word", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const mledit_t_get_prop_scroll_line = Module.cwrap("mledit_t_get_prop_scroll_line", 
     "number", ["number"]);
 const mledit_t_get_prop_readonly = Module.cwrap("mledit_t_get_prop_readonly", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const mledit_t_get_prop_cancelable = Module.cwrap("mledit_t_get_prop_cancelable", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const mledit_t_get_prop_open_im_when_focused = Module.cwrap("mledit_t_get_prop_open_im_when_focused", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const mledit_t_get_prop_close_im_when_blured = Module.cwrap("mledit_t_get_prop_close_im_when_blured", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const progress_circle_create = Module.cwrap("progress_circle_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const progress_circle_cast = Module.cwrap("progress_circle_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const progress_circle_set_value = Module.cwrap("progress_circle_set_value", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const progress_circle_set_max = Module.cwrap("progress_circle_set_max", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const progress_circle_set_format = Module.cwrap("progress_circle_set_format", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const progress_circle_set_line_width = Module.cwrap("progress_circle_set_line_width", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const progress_circle_set_start_angle = Module.cwrap("progress_circle_set_start_angle", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const progress_circle_set_line_cap = Module.cwrap("progress_circle_set_line_cap", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const progress_circle_set_show_text = Module.cwrap("progress_circle_set_show_text", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const progress_circle_set_counter_clock_wise = Module.cwrap("progress_circle_set_counter_clock_wise", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const progress_circle_t_get_prop_value = Module.cwrap("progress_circle_t_get_prop_value", 
     "number", ["number"]);
 const progress_circle_t_get_prop_max = Module.cwrap("progress_circle_t_get_prop_max", 
@@ -3199,59 +3199,59 @@ const progress_circle_t_get_prop_line_width = Module.cwrap("progress_circle_t_ge
 const progress_circle_t_get_prop_line_cap = Module.cwrap("progress_circle_t_get_prop_line_cap", 
     "string", ["number"]);
 const progress_circle_t_get_prop_counter_clock_wise = Module.cwrap("progress_circle_t_get_prop_counter_clock_wise", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const progress_circle_t_get_prop_show_text = Module.cwrap("progress_circle_t_get_prop_show_text", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const rich_text_view_create = Module.cwrap("rich_text_view_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const rich_text_view_cast = Module.cwrap("rich_text_view_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const rich_text_create = Module.cwrap("rich_text_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const rich_text_set_text = Module.cwrap("rich_text_set_text", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const rich_text_set_yslidable = Module.cwrap("rich_text_set_yslidable", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const rich_text_cast = Module.cwrap("rich_text_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const rich_text_t_get_prop_line_gap = Module.cwrap("rich_text_t_get_prop_line_gap", 
     "number", ["number"]);
 const rich_text_t_get_prop_yslidable = Module.cwrap("rich_text_t_get_prop_yslidable", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const hscroll_label_create = Module.cwrap("hscroll_label_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const hscroll_label_set_lull = Module.cwrap("hscroll_label_set_lull", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const hscroll_label_set_duration = Module.cwrap("hscroll_label_set_duration", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const hscroll_label_set_only_focus = Module.cwrap("hscroll_label_set_only_focus", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const hscroll_label_set_only_parent_focus = Module.cwrap("hscroll_label_set_only_parent_focus", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const hscroll_label_set_loop = Module.cwrap("hscroll_label_set_loop", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const hscroll_label_set_yoyo = Module.cwrap("hscroll_label_set_yoyo", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const hscroll_label_set_ellipses = Module.cwrap("hscroll_label_set_ellipses", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const hscroll_label_set_xoffset = Module.cwrap("hscroll_label_set_xoffset", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const hscroll_label_start = Module.cwrap("hscroll_label_start", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const hscroll_label_stop = Module.cwrap("hscroll_label_stop", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const hscroll_label_cast = Module.cwrap("hscroll_label_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const hscroll_label_t_get_prop_only_focus = Module.cwrap("hscroll_label_t_get_prop_only_focus", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const hscroll_label_t_get_prop_only_parent_focus = Module.cwrap("hscroll_label_t_get_prop_only_parent_focus", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const hscroll_label_t_get_prop_loop = Module.cwrap("hscroll_label_t_get_prop_loop", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const hscroll_label_t_get_prop_yoyo = Module.cwrap("hscroll_label_t_get_prop_yoyo", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const hscroll_label_t_get_prop_ellipses = Module.cwrap("hscroll_label_t_get_prop_ellipses", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const hscroll_label_t_get_prop_lull = Module.cwrap("hscroll_label_t_get_prop_lull", 
     "number", ["number"]);
 const hscroll_label_t_get_prop_duration = Module.cwrap("hscroll_label_t_get_prop_duration", 
@@ -3261,67 +3261,67 @@ const hscroll_label_t_get_prop_xoffset = Module.cwrap("hscroll_label_t_get_prop_
 const hscroll_label_t_get_prop_text_w = Module.cwrap("hscroll_label_t_get_prop_text_w", 
     "number", ["number"]);
 const list_item_create = Module.cwrap("list_item_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const list_item_cast = Module.cwrap("list_item_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const list_view_h_create = Module.cwrap("list_view_h_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const list_view_h_set_item_width = Module.cwrap("list_view_h_set_item_width", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const list_view_h_set_spacing = Module.cwrap("list_view_h_set_spacing", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const list_view_h_cast = Module.cwrap("list_view_h_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const list_view_h_t_get_prop_item_width = Module.cwrap("list_view_h_t_get_prop_item_width", 
     "number", ["number"]);
 const list_view_h_t_get_prop_spacing = Module.cwrap("list_view_h_t_get_prop_spacing", 
     "number", ["number"]);
 const list_view_create = Module.cwrap("list_view_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const list_view_set_item_height = Module.cwrap("list_view_set_item_height", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const list_view_set_default_item_height = Module.cwrap("list_view_set_default_item_height", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const list_view_set_auto_hide_scroll_bar = Module.cwrap("list_view_set_auto_hide_scroll_bar", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const list_view_set_floating_scroll_bar = Module.cwrap("list_view_set_floating_scroll_bar", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const list_view_cast = Module.cwrap("list_view_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const list_view_reinit = Module.cwrap("list_view_reinit", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const list_view_t_get_prop_item_height = Module.cwrap("list_view_t_get_prop_item_height", 
     "number", ["number"]);
 const list_view_t_get_prop_default_item_height = Module.cwrap("list_view_t_get_prop_default_item_height", 
     "number", ["number"]);
 const list_view_t_get_prop_auto_hide_scroll_bar = Module.cwrap("list_view_t_get_prop_auto_hide_scroll_bar", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const list_view_t_get_prop_floating_scroll_bar = Module.cwrap("list_view_t_get_prop_floating_scroll_bar", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const scroll_bar_create = Module.cwrap("scroll_bar_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const scroll_bar_cast = Module.cwrap("scroll_bar_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const scroll_bar_create_mobile = Module.cwrap("scroll_bar_create_mobile", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const scroll_bar_create_desktop = Module.cwrap("scroll_bar_create_desktop", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const scroll_bar_set_params = Module.cwrap("scroll_bar_set_params", 
-    "TRet", ["TWidget","number","number"]);
+    "number", ["number","number","number"]);
 const scroll_bar_scroll_to = Module.cwrap("scroll_bar_scroll_to", 
-    "TRet", ["TWidget","number","number"]);
+    "number", ["number","number","number"]);
 const scroll_bar_set_value = Module.cwrap("scroll_bar_set_value", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const scroll_bar_add_delta = Module.cwrap("scroll_bar_add_delta", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const scroll_bar_scroll_delta = Module.cwrap("scroll_bar_scroll_delta", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const scroll_bar_set_value_only = Module.cwrap("scroll_bar_set_value_only", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const scroll_bar_set_auto_hide = Module.cwrap("scroll_bar_set_auto_hide", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const scroll_bar_is_mobile = Module.cwrap("scroll_bar_is_mobile", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const scroll_bar_t_get_prop_virtual_size = Module.cwrap("scroll_bar_t_get_prop_virtual_size", 
     "number", ["number"]);
 const scroll_bar_t_get_prop_value = Module.cwrap("scroll_bar_t_get_prop_value", 
@@ -3329,37 +3329,37 @@ const scroll_bar_t_get_prop_value = Module.cwrap("scroll_bar_t_get_prop_value",
 const scroll_bar_t_get_prop_row = Module.cwrap("scroll_bar_t_get_prop_row", 
     "number", ["number"]);
 const scroll_bar_t_get_prop_animatable = Module.cwrap("scroll_bar_t_get_prop_animatable", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const scroll_bar_t_get_prop_auto_hide = Module.cwrap("scroll_bar_t_get_prop_auto_hide", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const scroll_view_create = Module.cwrap("scroll_view_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const scroll_view_cast = Module.cwrap("scroll_view_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const scroll_view_set_virtual_w = Module.cwrap("scroll_view_set_virtual_w", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const scroll_view_set_virtual_h = Module.cwrap("scroll_view_set_virtual_h", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const scroll_view_set_xslidable = Module.cwrap("scroll_view_set_xslidable", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const scroll_view_set_yslidable = Module.cwrap("scroll_view_set_yslidable", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const scroll_view_set_snap_to_page = Module.cwrap("scroll_view_set_snap_to_page", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const scroll_view_set_move_to_page = Module.cwrap("scroll_view_set_move_to_page", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const scroll_view_set_recursive = Module.cwrap("scroll_view_set_recursive", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const scroll_view_set_recursive_only = Module.cwrap("scroll_view_set_recursive_only", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const scroll_view_set_offset = Module.cwrap("scroll_view_set_offset", 
-    "TRet", ["TWidget","number","number"]);
+    "number", ["number","number","number"]);
 const scroll_view_set_speed_scale = Module.cwrap("scroll_view_set_speed_scale", 
-    "TRet", ["TWidget","number","number"]);
+    "number", ["number","number","number"]);
 const scroll_view_scroll_to = Module.cwrap("scroll_view_scroll_to", 
-    "TRet", ["TWidget","number","number","number"]);
+    "number", ["number","number","number","number"]);
 const scroll_view_scroll_delta_to = Module.cwrap("scroll_view_scroll_delta_to", 
-    "TRet", ["TWidget","number","number","number"]);
+    "number", ["number","number","number","number"]);
 const scroll_view_t_get_prop_virtual_w = Module.cwrap("scroll_view_t_get_prop_virtual_w", 
     "number", ["number"]);
 const scroll_view_t_get_prop_virtual_h = Module.cwrap("scroll_view_t_get_prop_virtual_h", 
@@ -3373,63 +3373,63 @@ const scroll_view_t_get_prop_xspeed_scale = Module.cwrap("scroll_view_t_get_prop
 const scroll_view_t_get_prop_yspeed_scale = Module.cwrap("scroll_view_t_get_prop_yspeed_scale", 
     "number", ["number"]);
 const scroll_view_t_get_prop_xslidable = Module.cwrap("scroll_view_t_get_prop_xslidable", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const scroll_view_t_get_prop_yslidable = Module.cwrap("scroll_view_t_get_prop_yslidable", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const scroll_view_t_get_prop_snap_to_page = Module.cwrap("scroll_view_t_get_prop_snap_to_page", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const scroll_view_t_get_prop_move_to_page = Module.cwrap("scroll_view_t_get_prop_move_to_page", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const scroll_view_t_get_prop_recursive = Module.cwrap("scroll_view_t_get_prop_recursive", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const slide_menu_create = Module.cwrap("slide_menu_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const slide_menu_cast = Module.cwrap("slide_menu_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const slide_menu_set_value = Module.cwrap("slide_menu_set_value", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const slide_menu_set_align_v = Module.cwrap("slide_menu_set_align_v", 
-    "TRet", ["TWidget","TAlignV"]);
+    "number", ["number","number"]);
 const slide_menu_set_min_scale = Module.cwrap("slide_menu_set_min_scale", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const slide_menu_t_get_prop_value = Module.cwrap("slide_menu_t_get_prop_value", 
     "number", ["number"]);
 const slide_menu_t_get_prop_align_v = Module.cwrap("slide_menu_t_get_prop_align_v", 
-    "TAlignV", ["number"]);
+    "number", ["number"]);
 const slide_menu_t_get_prop_min_scale = Module.cwrap("slide_menu_t_get_prop_min_scale", 
     "number", ["number"]);
 const slide_indicator_create = Module.cwrap("slide_indicator_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const slide_indicator_create_linear = Module.cwrap("slide_indicator_create_linear", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const slide_indicator_create_arc = Module.cwrap("slide_indicator_create_arc", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const slide_indicator_cast = Module.cwrap("slide_indicator_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const slide_indicator_set_value = Module.cwrap("slide_indicator_set_value", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const slide_indicator_set_max = Module.cwrap("slide_indicator_set_max", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const slide_indicator_set_default_paint = Module.cwrap("slide_indicator_set_default_paint", 
-    "TRet", ["TWidget","TIndicatorDefaultPaint"]);
+    "number", ["number","number"]);
 const slide_indicator_set_auto_hide = Module.cwrap("slide_indicator_set_auto_hide", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const slide_indicator_set_margin = Module.cwrap("slide_indicator_set_margin", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const slide_indicator_set_spacing = Module.cwrap("slide_indicator_set_spacing", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const slide_indicator_set_size = Module.cwrap("slide_indicator_set_size", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const slide_indicator_set_anchor = Module.cwrap("slide_indicator_set_anchor", 
-    "TRet", ["TWidget","string","string"]);
+    "number", ["number","string","string"]);
 const slide_indicator_set_indicated_target = Module.cwrap("slide_indicator_set_indicated_target", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const slide_indicator_t_get_prop_value = Module.cwrap("slide_indicator_t_get_prop_value", 
     "number", ["number"]);
 const slide_indicator_t_get_prop_max = Module.cwrap("slide_indicator_t_get_prop_max", 
     "number", ["number"]);
 const slide_indicator_t_get_prop_default_paint = Module.cwrap("slide_indicator_t_get_prop_default_paint", 
-    "TIndicatorDefaultPaint", ["number"]);
+    "number", ["number"]);
 const slide_indicator_t_get_prop_auto_hide = Module.cwrap("slide_indicator_t_get_prop_auto_hide", 
     "number", ["number"]);
 const slide_indicator_t_get_prop_margin = Module.cwrap("slide_indicator_t_get_prop_margin", 
@@ -3445,79 +3445,79 @@ const slide_indicator_t_get_prop_anchor_y = Module.cwrap("slide_indicator_t_get_
 const slide_indicator_t_get_prop_indicated_target = Module.cwrap("slide_indicator_t_get_prop_indicated_target", 
     "string", ["number"]);
 const slide_view_create = Module.cwrap("slide_view_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const slide_view_cast = Module.cwrap("slide_view_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const slide_view_set_auto_play = Module.cwrap("slide_view_set_auto_play", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const slide_view_set_active = Module.cwrap("slide_view_set_active", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const slide_view_set_active_ex = Module.cwrap("slide_view_set_active_ex", 
-    "TRet", ["TWidget","number","boolean"]);
+    "number", ["number","number","number"]);
 const slide_view_set_vertical = Module.cwrap("slide_view_set_vertical", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const slide_view_set_anim_hint = Module.cwrap("slide_view_set_anim_hint", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const slide_view_set_loop = Module.cwrap("slide_view_set_loop", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const slide_view_remove_index = Module.cwrap("slide_view_remove_index", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const slide_view_t_get_prop_vertical = Module.cwrap("slide_view_t_get_prop_vertical", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const slide_view_t_get_prop_auto_play = Module.cwrap("slide_view_t_get_prop_auto_play", 
     "number", ["number"]);
 const slide_view_t_get_prop_loop = Module.cwrap("slide_view_t_get_prop_loop", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const slide_view_t_get_prop_anim_hint = Module.cwrap("slide_view_t_get_prop_anim_hint", 
     "string", ["number"]);
 const switch_create = Module.cwrap("switch_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const switch_set_value = Module.cwrap("switch_set_value", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const switch_cast = Module.cwrap("switch_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const switch_t_get_prop_value = Module.cwrap("switch_t_get_prop_value", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const switch_t_get_prop_max_xoffset_ratio = Module.cwrap("switch_t_get_prop_max_xoffset_ratio", 
     "number", ["number"]);
 const text_selector_create = Module.cwrap("text_selector_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const text_selector_cast = Module.cwrap("text_selector_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const text_selector_reset_options = Module.cwrap("text_selector_reset_options", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const text_selector_count_options = Module.cwrap("text_selector_count_options", 
-    "number", ["TWidget"]);
+    "number", ["number"]);
 const text_selector_append_option = Module.cwrap("text_selector_append_option", 
-    "TRet", ["TWidget","number","string"]);
+    "number", ["number","number","string"]);
 const text_selector_set_options = Module.cwrap("text_selector_set_options", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const text_selector_set_range_options_ex = Module.cwrap("text_selector_set_range_options_ex", 
-    "TRet", ["TWidget","number","number","number","string"]);
+    "number", ["number","number","number","number","string"]);
 const text_selector_set_range_options = Module.cwrap("text_selector_set_range_options", 
-    "TRet", ["TWidget","number","number","number"]);
+    "number", ["number","number","number","number"]);
 const text_selector_get_value = Module.cwrap("text_selector_get_value", 
-    "number", ["TWidget"]);
+    "number", ["number"]);
 const text_selector_set_value = Module.cwrap("text_selector_set_value", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const text_selector_get_text = Module.cwrap("text_selector_get_text", 
-    "string", ["TWidget"]);
+    "string", ["number"]);
 const text_selector_set_text = Module.cwrap("text_selector_set_text", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const text_selector_set_selected_index = Module.cwrap("text_selector_set_selected_index", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const text_selector_set_visible_nr = Module.cwrap("text_selector_set_visible_nr", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const text_selector_set_localize_options = Module.cwrap("text_selector_set_localize_options", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const text_selector_set_loop_options = Module.cwrap("text_selector_set_loop_options", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const text_selector_set_yspeed_scale = Module.cwrap("text_selector_set_yspeed_scale", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const text_selector_set_animating_time = Module.cwrap("text_selector_set_animating_time", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const text_selector_set_enable_value_animator = Module.cwrap("text_selector_set_enable_value_animator", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const text_selector_t_get_prop_visible_nr = Module.cwrap("text_selector_t_get_prop_visible_nr", 
     "number", ["number"]);
 const text_selector_t_get_prop_selected_index = Module.cwrap("text_selector_t_get_prop_selected_index", 
@@ -3529,37 +3529,37 @@ const text_selector_t_get_prop_yspeed_scale = Module.cwrap("text_selector_t_get_
 const text_selector_t_get_prop_animating_time = Module.cwrap("text_selector_t_get_prop_animating_time", 
     "number", ["number"]);
 const text_selector_t_get_prop_localize_options = Module.cwrap("text_selector_t_get_prop_localize_options", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const text_selector_t_get_prop_loop_options = Module.cwrap("text_selector_t_get_prop_loop_options", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const text_selector_t_get_prop_enable_value_animator = Module.cwrap("text_selector_t_get_prop_enable_value_animator", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const time_clock_create = Module.cwrap("time_clock_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const time_clock_cast = Module.cwrap("time_clock_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const time_clock_set_hour = Module.cwrap("time_clock_set_hour", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const time_clock_set_minute = Module.cwrap("time_clock_set_minute", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const time_clock_set_second = Module.cwrap("time_clock_set_second", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const time_clock_set_hour_image = Module.cwrap("time_clock_set_hour_image", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const time_clock_set_minute_image = Module.cwrap("time_clock_set_minute_image", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const time_clock_set_second_image = Module.cwrap("time_clock_set_second_image", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const time_clock_set_bg_image = Module.cwrap("time_clock_set_bg_image", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const time_clock_set_image = Module.cwrap("time_clock_set_image", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const time_clock_set_hour_anchor = Module.cwrap("time_clock_set_hour_anchor", 
-    "TRet", ["TWidget","string","string"]);
+    "number", ["number","string","string"]);
 const time_clock_set_minute_anchor = Module.cwrap("time_clock_set_minute_anchor", 
-    "TRet", ["TWidget","string","string"]);
+    "number", ["number","string","string"]);
 const time_clock_set_second_anchor = Module.cwrap("time_clock_set_second_anchor", 
-    "TRet", ["TWidget","string","string"]);
+    "number", ["number","string","string"]);
 const time_clock_t_get_prop_hour = Module.cwrap("time_clock_t_get_prop_hour", 
     "number", ["number"]);
 const time_clock_t_get_prop_minute = Module.cwrap("time_clock_t_get_prop_minute", 
@@ -3589,137 +3589,137 @@ const time_clock_t_get_prop_second_anchor_x = Module.cwrap("time_clock_t_get_pro
 const time_clock_t_get_prop_second_anchor_y = Module.cwrap("time_clock_t_get_prop_second_anchor_y", 
     "string", ["number"]);
 const vpage_create = Module.cwrap("vpage_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const vpage_cast = Module.cwrap("vpage_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const vpage_set_ui_asset = Module.cwrap("vpage_set_ui_asset", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const vpage_set_anim_hint = Module.cwrap("vpage_set_anim_hint", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const vpage_t_get_prop_ui_asset = Module.cwrap("vpage_t_get_prop_ui_asset", 
     "string", ["number"]);
 const vpage_t_get_prop_anim_hint = Module.cwrap("vpage_t_get_prop_anim_hint", 
     "string", ["number"]);
 const prop_change_event_cast = Module.cwrap("prop_change_event_cast", 
-    "TPropChangeEvent", ["TEvent"]);
+    "number", ["number"]);
 const prop_change_event_t_get_prop_name = Module.cwrap("prop_change_event_t_get_prop_name", 
     "string", ["number"]);
 const prop_change_event_t_get_prop_value = Module.cwrap("prop_change_event_t_get_prop_value", 
-    "TValue", ["number"]);
+    "number", ["number"]);
 const progress_event_cast = Module.cwrap("progress_event_cast", 
-    "TProgressEvent", ["TEvent"]);
+    "number", ["number"]);
 const progress_event_t_get_prop_percent = Module.cwrap("progress_event_t_get_prop_percent", 
     "number", ["number"]);
 const done_event_cast = Module.cwrap("done_event_cast", 
-    "TDoneEvent", ["TEvent"]);
+    "number", ["number"]);
 const done_event_t_get_prop_result = Module.cwrap("done_event_t_get_prop_result", 
-    "TRet", ["number"]);
+    "number", ["number"]);
 const error_event_cast = Module.cwrap("error_event_cast", 
-    "TErrorEvent", ["TEvent"]);
+    "number", ["number"]);
 const error_event_t_get_prop_code = Module.cwrap("error_event_t_get_prop_code", 
     "number", ["number"]);
 const error_event_t_get_prop_message = Module.cwrap("error_event_t_get_prop_message", 
     "string", ["number"]);
 const cmd_exec_event_cast = Module.cwrap("cmd_exec_event_cast", 
-    "TCmdExecEvent", ["TEvent"]);
+    "number", ["number"]);
 const cmd_exec_event_t_get_prop_name = Module.cwrap("cmd_exec_event_t_get_prop_name", 
     "string", ["number"]);
 const cmd_exec_event_t_get_prop_args = Module.cwrap("cmd_exec_event_t_get_prop_args", 
     "string", ["number"]);
 const cmd_exec_event_t_get_prop_result = Module.cwrap("cmd_exec_event_t_get_prop_result", 
-    "TRet", ["number"]);
+    "number", ["number"]);
 const cmd_exec_event_t_get_prop_can_exec = Module.cwrap("cmd_exec_event_t_get_prop_can_exec", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const app_bar_create = Module.cwrap("app_bar_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const app_bar_cast = Module.cwrap("app_bar_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const button_group_create = Module.cwrap("button_group_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const button_group_cast = Module.cwrap("button_group_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const button_create = Module.cwrap("button_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const button_cast = Module.cwrap("button_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const button_set_repeat = Module.cwrap("button_set_repeat", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const button_set_long_press_time = Module.cwrap("button_set_long_press_time", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const button_set_enable_long_press = Module.cwrap("button_set_enable_long_press", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const button_t_get_prop_repeat = Module.cwrap("button_t_get_prop_repeat", 
     "number", ["number"]);
 const button_t_get_prop_enable_long_press = Module.cwrap("button_t_get_prop_enable_long_press", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const button_t_get_prop_long_press_time = Module.cwrap("button_t_get_prop_long_press_time", 
     "number", ["number"]);
 const check_button_create = Module.cwrap("check_button_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const check_button_create_radio = Module.cwrap("check_button_create_radio", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const check_button_set_value = Module.cwrap("check_button_set_value", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const check_button_cast = Module.cwrap("check_button_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const check_button_t_get_prop_value = Module.cwrap("check_button_t_get_prop_value", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const clip_view_create = Module.cwrap("clip_view_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const clip_view_cast = Module.cwrap("clip_view_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const color_tile_create = Module.cwrap("color_tile_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const color_tile_cast = Module.cwrap("color_tile_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const color_tile_set_bg_color = Module.cwrap("color_tile_set_bg_color", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const color_tile_get_bg_color = Module.cwrap("color_tile_get_bg_color", 
-    "string", ["TWidget"]);
+    "string", ["number"]);
 const color_tile_get_border_color = Module.cwrap("color_tile_get_border_color", 
-    "string", ["TWidget"]);
+    "string", ["number"]);
 const color_tile_t_get_prop_bg_color = Module.cwrap("color_tile_t_get_prop_bg_color", 
     "string", ["number"]);
 const color_tile_t_get_prop_border_color = Module.cwrap("color_tile_t_get_prop_border_color", 
     "string", ["number"]);
 const column_create = Module.cwrap("column_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const column_cast = Module.cwrap("column_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const combo_box_item_create = Module.cwrap("combo_box_item_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const combo_box_item_cast = Module.cwrap("combo_box_item_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const combo_box_item_set_checked = Module.cwrap("combo_box_item_set_checked", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const combo_box_item_set_value = Module.cwrap("combo_box_item_set_value", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const combo_box_item_t_get_prop_value = Module.cwrap("combo_box_item_t_get_prop_value", 
     "number", ["number"]);
 const combo_box_item_t_get_prop_checked = Module.cwrap("combo_box_item_t_get_prop_checked", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const dialog_client_create = Module.cwrap("dialog_client_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const dialog_client_cast = Module.cwrap("dialog_client_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const dialog_title_create = Module.cwrap("dialog_title_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const dialog_title_cast = Module.cwrap("dialog_title_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const digit_clock_create = Module.cwrap("digit_clock_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const digit_clock_cast = Module.cwrap("digit_clock_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const digit_clock_set_format = Module.cwrap("digit_clock_set_format", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const digit_clock_t_get_prop_format = Module.cwrap("digit_clock_t_get_prop_format", 
     "string", ["number"]);
 const dragger_create = Module.cwrap("dragger_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const dragger_cast = Module.cwrap("dragger_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const dragger_set_range = Module.cwrap("dragger_set_range", 
-    "TRet", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const dragger_t_get_prop_x_min = Module.cwrap("dragger_t_get_prop_x_min", 
     "number", ["number"]);
 const dragger_t_get_prop_y_min = Module.cwrap("dragger_t_get_prop_y_min", 
@@ -3729,57 +3729,57 @@ const dragger_t_get_prop_x_max = Module.cwrap("dragger_t_get_prop_x_max",
 const dragger_t_get_prop_y_max = Module.cwrap("dragger_t_get_prop_y_max", 
     "number", ["number"]);
 const edit_create = Module.cwrap("edit_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const edit_cast = Module.cwrap("edit_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const edit_get_int = Module.cwrap("edit_get_int", 
-    "number", ["TWidget"]);
+    "number", ["number"]);
 const edit_get_double = Module.cwrap("edit_get_double", 
-    "number", ["TWidget"]);
+    "number", ["number"]);
 const edit_set_int = Module.cwrap("edit_set_int", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const edit_set_double = Module.cwrap("edit_set_double", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const edit_set_text_limit = Module.cwrap("edit_set_text_limit", 
-    "TRet", ["TWidget","number","number"]);
+    "number", ["number","number","number"]);
 const edit_set_int_limit = Module.cwrap("edit_set_int_limit", 
-    "TRet", ["TWidget","number","number","number"]);
+    "number", ["number","number","number","number"]);
 const edit_set_float_limit = Module.cwrap("edit_set_float_limit", 
-    "TRet", ["TWidget","number","number","number"]);
+    "number", ["number","number","number","number"]);
 const edit_set_readonly = Module.cwrap("edit_set_readonly", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const edit_set_cancelable = Module.cwrap("edit_set_cancelable", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const edit_set_auto_fix = Module.cwrap("edit_set_auto_fix", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const edit_set_select_none_when_focused = Module.cwrap("edit_set_select_none_when_focused", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const edit_set_open_im_when_focused = Module.cwrap("edit_set_open_im_when_focused", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const edit_set_close_im_when_blured = Module.cwrap("edit_set_close_im_when_blured", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const edit_set_input_type = Module.cwrap("edit_set_input_type", 
-    "TRet", ["TWidget","TInputType"]);
+    "number", ["number","number"]);
 const edit_set_action_text = Module.cwrap("edit_set_action_text", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const edit_set_tips = Module.cwrap("edit_set_tips", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const edit_set_tr_tips = Module.cwrap("edit_set_tr_tips", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const edit_set_keyboard = Module.cwrap("edit_set_keyboard", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const edit_set_password_visible = Module.cwrap("edit_set_password_visible", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const edit_set_focus = Module.cwrap("edit_set_focus", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const edit_set_cursor = Module.cwrap("edit_set_cursor", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const edit_get_cursor = Module.cwrap("edit_get_cursor", 
-    "number", ["TWidget"]);
+    "number", ["number"]);
 const edit_set_select = Module.cwrap("edit_set_select", 
-    "TRet", ["TWidget","number","number"]);
+    "number", ["number","number","number"]);
 const edit_get_selected_text = Module.cwrap("edit_get_selected_text", 
-    "string", ["TWidget"]);
+    "string", ["number"]);
 const edit_t_get_prop_tips = Module.cwrap("edit_t_get_prop_tips", 
     "string", ["number"]);
 const edit_t_get_prop_tr_tips = Module.cwrap("edit_t_get_prop_tr_tips", 
@@ -3795,83 +3795,83 @@ const edit_t_get_prop_max = Module.cwrap("edit_t_get_prop_max",
 const edit_t_get_prop_step = Module.cwrap("edit_t_get_prop_step", 
     "number", ["number"]);
 const edit_t_get_prop_input_type = Module.cwrap("edit_t_get_prop_input_type", 
-    "TInputType", ["number"]);
+    "number", ["number"]);
 const edit_t_get_prop_readonly = Module.cwrap("edit_t_get_prop_readonly", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const edit_t_get_prop_password_visible = Module.cwrap("edit_t_get_prop_password_visible", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const edit_t_get_prop_auto_fix = Module.cwrap("edit_t_get_prop_auto_fix", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const edit_t_get_prop_select_none_when_focused = Module.cwrap("edit_t_get_prop_select_none_when_focused", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const edit_t_get_prop_open_im_when_focused = Module.cwrap("edit_t_get_prop_open_im_when_focused", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const edit_t_get_prop_close_im_when_blured = Module.cwrap("edit_t_get_prop_close_im_when_blured", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const edit_t_get_prop_cancelable = Module.cwrap("edit_t_get_prop_cancelable", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const grid_item_create = Module.cwrap("grid_item_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const grid_item_cast = Module.cwrap("grid_item_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const grid_create = Module.cwrap("grid_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const grid_cast = Module.cwrap("grid_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const group_box_create = Module.cwrap("group_box_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const group_box_cast = Module.cwrap("group_box_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const label_create = Module.cwrap("label_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const label_set_length = Module.cwrap("label_set_length", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const label_set_max_w = Module.cwrap("label_set_max_w", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const label_set_line_wrap = Module.cwrap("label_set_line_wrap", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const label_set_word_wrap = Module.cwrap("label_set_word_wrap", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const label_resize_to_content = Module.cwrap("label_resize_to_content", 
-    "TRet", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const label_cast = Module.cwrap("label_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const label_t_get_prop_length = Module.cwrap("label_t_get_prop_length", 
     "number", ["number"]);
 const label_t_get_prop_line_wrap = Module.cwrap("label_t_get_prop_line_wrap", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const label_t_get_prop_word_wrap = Module.cwrap("label_t_get_prop_word_wrap", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const label_t_get_prop_max_w = Module.cwrap("label_t_get_prop_max_w", 
     "number", ["number"]);
 const pages_create = Module.cwrap("pages_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const pages_cast = Module.cwrap("pages_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const pages_set_active = Module.cwrap("pages_set_active", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const pages_set_active_by_name = Module.cwrap("pages_set_active_by_name", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const pages_t_get_prop_active = Module.cwrap("pages_t_get_prop_active", 
     "number", ["number"]);
 const progress_bar_create = Module.cwrap("progress_bar_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const progress_bar_cast = Module.cwrap("progress_bar_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const progress_bar_set_value = Module.cwrap("progress_bar_set_value", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const progress_bar_set_max = Module.cwrap("progress_bar_set_max", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const progress_bar_set_format = Module.cwrap("progress_bar_set_format", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const progress_bar_set_vertical = Module.cwrap("progress_bar_set_vertical", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const progress_bar_set_show_text = Module.cwrap("progress_bar_set_show_text", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const progress_bar_set_reverse = Module.cwrap("progress_bar_set_reverse", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const progress_bar_get_percent = Module.cwrap("progress_bar_get_percent", 
-    "number", ["TWidget"]);
+    "number", ["number"]);
 const progress_bar_t_get_prop_value = Module.cwrap("progress_bar_t_get_prop_value", 
     "number", ["number"]);
 const progress_bar_t_get_prop_max = Module.cwrap("progress_bar_t_get_prop_max", 
@@ -3879,31 +3879,31 @@ const progress_bar_t_get_prop_max = Module.cwrap("progress_bar_t_get_prop_max",
 const progress_bar_t_get_prop_format = Module.cwrap("progress_bar_t_get_prop_format", 
     "string", ["number"]);
 const progress_bar_t_get_prop_vertical = Module.cwrap("progress_bar_t_get_prop_vertical", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const progress_bar_t_get_prop_show_text = Module.cwrap("progress_bar_t_get_prop_show_text", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const progress_bar_t_get_prop_reverse = Module.cwrap("progress_bar_t_get_prop_reverse", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const row_create = Module.cwrap("row_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const row_cast = Module.cwrap("row_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const slider_create = Module.cwrap("slider_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const slider_cast = Module.cwrap("slider_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const slider_set_value = Module.cwrap("slider_set_value", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const slider_set_min = Module.cwrap("slider_set_min", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const slider_set_max = Module.cwrap("slider_set_max", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const slider_set_step = Module.cwrap("slider_set_step", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const slider_set_bar_size = Module.cwrap("slider_set_bar_size", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const slider_set_vertical = Module.cwrap("slider_set_vertical", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const slider_t_get_prop_value = Module.cwrap("slider_t_get_prop_value", 
     "number", ["number"]);
 const slider_t_get_prop_min = Module.cwrap("slider_t_get_prop_min", 
@@ -3913,41 +3913,41 @@ const slider_t_get_prop_max = Module.cwrap("slider_t_get_prop_max",
 const slider_t_get_prop_step = Module.cwrap("slider_t_get_prop_step", 
     "number", ["number"]);
 const slider_t_get_prop_vertical = Module.cwrap("slider_t_get_prop_vertical", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const slider_t_get_prop_bar_size = Module.cwrap("slider_t_get_prop_bar_size", 
     "number", ["number"]);
 const slider_t_get_prop_dragger_size = Module.cwrap("slider_t_get_prop_dragger_size", 
     "number", ["number"]);
 const slider_t_get_prop_dragger_adapt_to_icon = Module.cwrap("slider_t_get_prop_dragger_adapt_to_icon", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const slider_t_get_prop_slide_with_bar = Module.cwrap("slider_t_get_prop_slide_with_bar", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const tab_button_group_create = Module.cwrap("tab_button_group_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const tab_button_group_set_compact = Module.cwrap("tab_button_group_set_compact", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const tab_button_group_set_scrollable = Module.cwrap("tab_button_group_set_scrollable", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const tab_button_group_cast = Module.cwrap("tab_button_group_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const tab_button_group_t_get_prop_compact = Module.cwrap("tab_button_group_t_get_prop_compact", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const tab_button_group_t_get_prop_scrollable = Module.cwrap("tab_button_group_t_get_prop_scrollable", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const tab_button_create = Module.cwrap("tab_button_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const tab_button_cast = Module.cwrap("tab_button_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const tab_button_set_value = Module.cwrap("tab_button_set_value", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const tab_button_set_icon = Module.cwrap("tab_button_set_icon", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const tab_button_set_active_icon = Module.cwrap("tab_button_set_active_icon", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const tab_button_set_load_ui = Module.cwrap("tab_button_set_load_ui", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const tab_button_t_get_prop_value = Module.cwrap("tab_button_t_get_prop_value", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const tab_button_t_get_prop_load_ui = Module.cwrap("tab_button_t_get_prop_load_ui", 
     "string", ["number"]);
 const tab_button_t_get_prop_active_icon = Module.cwrap("tab_button_t_get_prop_active_icon", 
@@ -3955,187 +3955,187 @@ const tab_button_t_get_prop_active_icon = Module.cwrap("tab_button_t_get_prop_ac
 const tab_button_t_get_prop_icon = Module.cwrap("tab_button_t_get_prop_icon", 
     "string", ["number"]);
 const tab_control_create = Module.cwrap("tab_control_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const tab_control_cast = Module.cwrap("tab_control_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const view_create = Module.cwrap("view_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const view_set_default_focused_child = Module.cwrap("view_set_default_focused_child", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const view_cast = Module.cwrap("view_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const view_t_get_prop_default_focused_child = Module.cwrap("view_t_get_prop_default_focused_child", 
     "string", ["number"]);
 const dialog_create = Module.cwrap("dialog_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const dialog_create_simple = Module.cwrap("dialog_create_simple", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const dialog_cast = Module.cwrap("dialog_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const dialog_get_title = Module.cwrap("dialog_get_title", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const dialog_get_client = Module.cwrap("dialog_get_client", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const dialog_open = Module.cwrap("dialog_open", 
-    "TWidget", ["string"]);
+    "number", ["string"]);
 const dialog_set_title = Module.cwrap("dialog_set_title", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const dialog_modal = Module.cwrap("dialog_modal", 
-    "TDialogQuitCode", ["TWidget"]);
+    "number", ["number"]);
 const dialog_quit = Module.cwrap("dialog_quit", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const dialog_is_quited = Module.cwrap("dialog_is_quited", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const dialog_is_modal = Module.cwrap("dialog_is_modal", 
-    "boolean", ["TWidget"]);
+    "number", ["number"]);
 const dialog_toast = Module.cwrap("dialog_toast", 
-    "TRet", ["string","number"]);
+    "number", ["string","number"]);
 const dialog_info = Module.cwrap("dialog_info", 
-    "TRet", ["string","string"]);
+    "number", ["string","string"]);
 const dialog_warn = Module.cwrap("dialog_warn", 
-    "TRet", ["string","string"]);
+    "number", ["string","string"]);
 const dialog_confirm = Module.cwrap("dialog_confirm", 
-    "TRet", ["string","string"]);
+    "number", ["string","string"]);
 const dialog_t_get_prop_highlight = Module.cwrap("dialog_t_get_prop_highlight", 
     "string", ["number"]);
 const native_window_move = Module.cwrap("native_window_move", 
-    "TRet", ["TNativeWindow","number","number","boolean"]);
+    "number", ["number","number","number","number"]);
 const native_window_resize = Module.cwrap("native_window_resize", 
-    "TRet", ["TNativeWindow","number","number","boolean"]);
+    "number", ["number","number","number","number"]);
 const native_window_minimize = Module.cwrap("native_window_minimize", 
-    "TRet", ["TNativeWindow"]);
+    "number", ["number"]);
 const native_window_maximize = Module.cwrap("native_window_maximize", 
-    "TRet", ["TNativeWindow"]);
+    "number", ["number"]);
 const native_window_restore = Module.cwrap("native_window_restore", 
-    "TRet", ["TNativeWindow"]);
+    "number", ["number"]);
 const native_window_center = Module.cwrap("native_window_center", 
-    "TRet", ["TNativeWindow"]);
+    "number", ["number"]);
 const native_window_show_border = Module.cwrap("native_window_show_border", 
-    "TRet", ["TNativeWindow","boolean"]);
+    "number", ["number","number"]);
 const native_window_set_fullscreen = Module.cwrap("native_window_set_fullscreen", 
-    "TRet", ["TNativeWindow","boolean"]);
+    "number", ["number","number"]);
 const native_window_set_cursor = Module.cwrap("native_window_set_cursor", 
-    "TRet", ["TNativeWindow","string","TBitmap"]);
+    "number", ["number","string","number"]);
 const window_create = Module.cwrap("window_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const window_create_default = Module.cwrap("window_create_default", 
-    "TWidget", []);
+    "number", []);
 const window_set_fullscreen = Module.cwrap("window_set_fullscreen", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const window_set_auto_scale_children = Module.cwrap("window_set_auto_scale_children", 
-    "TRet", ["TWidget","number","number"]);
+    "number", ["number","number","number"]);
 const window_open = Module.cwrap("window_open", 
-    "TWidget", ["string"]);
+    "number", ["string"]);
 const window_open_and_close = Module.cwrap("window_open_and_close", 
-    "TWidget", ["string","TWidget"]);
+    "number", ["string","number"]);
 const window_close = Module.cwrap("window_close", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const window_close_force = Module.cwrap("window_close_force", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const window_cast = Module.cwrap("window_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const window_t_get_prop_fullscreen = Module.cwrap("window_t_get_prop_fullscreen", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const gif_image_create = Module.cwrap("gif_image_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const gif_image_play = Module.cwrap("gif_image_play", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const gif_image_stop = Module.cwrap("gif_image_stop", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const gif_image_pause = Module.cwrap("gif_image_pause", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const gif_image_cast = Module.cwrap("gif_image_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const keyboard_create = Module.cwrap("keyboard_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const keyboard_cast = Module.cwrap("keyboard_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const mutable_image_create = Module.cwrap("mutable_image_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const svg_image_create = Module.cwrap("svg_image_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const svg_image_set_image = Module.cwrap("svg_image_set_image", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const svg_image_cast = Module.cwrap("svg_image_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const idle_info_cast = Module.cwrap("idle_info_cast", 
-    "TIdleInfo", ["TIdleInfo"]);
+    "number", ["number"]);
 const idle_info_t_get_prop_ctx = Module.cwrap("idle_info_t_get_prop_ctx", 
-    "any", ["number"]);
+    "number", ["number"]);
 const idle_info_t_get_prop_extra_ctx = Module.cwrap("idle_info_t_get_prop_extra_ctx", 
-    "any", ["number"]);
+    "number", ["number"]);
 const idle_info_t_get_prop_id = Module.cwrap("idle_info_t_get_prop_id", 
     "number", ["number"]);
 const object_array_create = Module.cwrap("object_array_create", 
-    "TObject", []);
+    "number", []);
 const object_array_unref = Module.cwrap("object_array_unref", 
-    "TRet", ["TObject"]);
+    "number", ["number"]);
 const object_array_clear_props = Module.cwrap("object_array_clear_props", 
-    "TRet", ["TObject"]);
+    "number", ["number"]);
 const object_array_insert = Module.cwrap("object_array_insert", 
-    "TRet", ["TObject","number","TValue"]);
+    "number", ["number","number","number"]);
 const object_array_push = Module.cwrap("object_array_push", 
-    "TRet", ["TObject","TValue"]);
+    "number", ["number","number"]);
 const object_array_index_of = Module.cwrap("object_array_index_of", 
-    "number", ["TObject","TValue"]);
+    "number", ["number","number"]);
 const object_array_last_index_of = Module.cwrap("object_array_last_index_of", 
-    "number", ["TObject","TValue"]);
+    "number", ["number","number"]);
 const object_array_remove = Module.cwrap("object_array_remove", 
-    "TRet", ["TObject","number"]);
+    "number", ["number","number"]);
 const object_array_get_and_remove = Module.cwrap("object_array_get_and_remove", 
-    "TRet", ["TObject","number","TValue"]);
+    "number", ["number","number","number"]);
 const object_array_t_get_prop_size = Module.cwrap("object_array_t_get_prop_size", 
     "number", ["number"]);
 const object_default_create = Module.cwrap("object_default_create", 
-    "TObject", []);
+    "number", []);
 const object_default_unref = Module.cwrap("object_default_unref", 
-    "TRet", ["TObject"]);
+    "number", ["number"]);
 const object_default_clear_props = Module.cwrap("object_default_clear_props", 
-    "TRet", ["TObject"]);
+    "number", ["number"]);
 const object_default_t_get_prop_props_size = Module.cwrap("object_default_t_get_prop_props_size", 
     "number", ["number"]);
 const timer_info_cast = Module.cwrap("timer_info_cast", 
-    "TTimerInfo", ["TTimerInfo"]);
+    "number", ["number"]);
 const timer_info_t_get_prop_ctx = Module.cwrap("timer_info_t_get_prop_ctx", 
-    "any", ["number"]);
+    "number", ["number"]);
 const timer_info_t_get_prop_extra_ctx = Module.cwrap("timer_info_t_get_prop_extra_ctx", 
-    "any", ["number"]);
+    "number", ["number"]);
 const timer_info_t_get_prop_id = Module.cwrap("timer_info_t_get_prop_id", 
     "number", ["number"]);
 const timer_info_t_get_prop_now = Module.cwrap("timer_info_t_get_prop_now", 
     "number", ["number"]);
 const calibration_win_create = Module.cwrap("calibration_win_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const calibration_win_cast = Module.cwrap("calibration_win_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const combo_box_create = Module.cwrap("combo_box_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const combo_box_cast = Module.cwrap("combo_box_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const combo_box_set_open_window = Module.cwrap("combo_box_set_open_window", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const combo_box_reset_options = Module.cwrap("combo_box_reset_options", 
-    "TRet", ["TWidget"]);
+    "number", ["number"]);
 const combo_box_count_options = Module.cwrap("combo_box_count_options", 
-    "number", ["TWidget"]);
+    "number", ["number"]);
 const combo_box_set_selected_index = Module.cwrap("combo_box_set_selected_index", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const combo_box_set_localize_options = Module.cwrap("combo_box_set_localize_options", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const combo_box_set_value = Module.cwrap("combo_box_set_value", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const combo_box_set_item_height = Module.cwrap("combo_box_set_item_height", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const combo_box_append_option = Module.cwrap("combo_box_append_option", 
-    "TRet", ["TWidget","number","string"]);
+    "number", ["number","number","string"]);
 const combo_box_remove_option = Module.cwrap("combo_box_remove_option", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const combo_box_set_options = Module.cwrap("combo_box_set_options", 
-    "TRet", ["TWidget","string"]);
+    "number", ["number","string"]);
 const combo_box_get_value = Module.cwrap("combo_box_get_value", 
-    "number", ["TWidget"]);
+    "number", ["number"]);
 const combo_box_get_text = Module.cwrap("combo_box_get_text", 
-    "string", ["TWidget"]);
+    "string", ["number"]);
 const combo_box_t_get_prop_open_window = Module.cwrap("combo_box_t_get_prop_open_window", 
     "string", ["number"]);
 const combo_box_t_get_prop_selected_index = Module.cwrap("combo_box_t_get_prop_selected_index", 
@@ -4143,57 +4143,57 @@ const combo_box_t_get_prop_selected_index = Module.cwrap("combo_box_t_get_prop_s
 const combo_box_t_get_prop_value = Module.cwrap("combo_box_t_get_prop_value", 
     "number", ["number"]);
 const combo_box_t_get_prop_localize_options = Module.cwrap("combo_box_t_get_prop_localize_options", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const combo_box_t_get_prop_options = Module.cwrap("combo_box_t_get_prop_options", 
     "string", ["number"]);
 const combo_box_t_get_prop_item_height = Module.cwrap("combo_box_t_get_prop_item_height", 
     "number", ["number"]);
 const image_create = Module.cwrap("image_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const image_set_draw_type = Module.cwrap("image_set_draw_type", 
-    "TRet", ["TWidget","TImageDrawType"]);
+    "number", ["number","number"]);
 const image_cast = Module.cwrap("image_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const image_t_get_prop_draw_type = Module.cwrap("image_t_get_prop_draw_type", 
-    "TImageDrawType", ["number"]);
+    "number", ["number"]);
 const overlay_create = Module.cwrap("overlay_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const overlay_set_click_through = Module.cwrap("overlay_set_click_through", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const overlay_set_always_on_top = Module.cwrap("overlay_set_always_on_top", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const overlay_cast = Module.cwrap("overlay_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const overlay_t_get_prop_click_through = Module.cwrap("overlay_t_get_prop_click_through", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const overlay_t_get_prop_always_on_top = Module.cwrap("overlay_t_get_prop_always_on_top", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const popup_create = Module.cwrap("popup_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const popup_cast = Module.cwrap("popup_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const popup_set_close_when_click = Module.cwrap("popup_set_close_when_click", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const popup_set_close_when_click_outside = Module.cwrap("popup_set_close_when_click_outside", 
-    "TRet", ["TWidget","boolean"]);
+    "number", ["number","number"]);
 const popup_set_close_when_timeout = Module.cwrap("popup_set_close_when_timeout", 
-    "TRet", ["TWidget","number"]);
+    "number", ["number","number"]);
 const popup_t_get_prop_close_when_click = Module.cwrap("popup_t_get_prop_close_when_click", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const popup_t_get_prop_close_when_click_outside = Module.cwrap("popup_t_get_prop_close_when_click_outside", 
-    "boolean", ["number"]);
+    "number", ["number"]);
 const popup_t_get_prop_close_when_timeout = Module.cwrap("popup_t_get_prop_close_when_timeout", 
     "number", ["number"]);
 const spin_box_create = Module.cwrap("spin_box_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const spin_box_cast = Module.cwrap("spin_box_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const system_bar_create = Module.cwrap("system_bar_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 const system_bar_cast = Module.cwrap("system_bar_cast", 
-    "TWidget", ["TWidget"]);
+    "number", ["number"]);
 const combo_box_ex_create = Module.cwrap("combo_box_ex_create", 
-    "TWidget", ["TWidget","number","number","number","number"]);
+    "number", ["number","number","number","number","number"]);
 
 /**
  * 事件分发器, 用于实现观察者模式。
@@ -4254,7 +4254,7 @@ export class TEmitter {
    * @returns 返回id，用于emitter_off。
    */
  on(etype : TEventType, handler : Function, ctx : any) : number  {
-    return emitter_on(this != null ? (this.nativeObj || this) : null, etype, handler, ctx);
+    return emitter_on(this != null ? (this.nativeObj || this) : null, etype, TBrowser.addFunction(wrap_on_event(handler), "iii"), ctx);
  }
 
 
@@ -7464,7 +7464,7 @@ export class TIdle {
    * @returns 返回idle的ID，0表示失败。
    */
  static add(on_idle : Function, ctx : any) : number  {
-    return idle_add(on_idle, ctx);
+    return idle_add(TBrowser.addFunction(on_idle, "ii"), ctx);
  }
 
 
@@ -9087,7 +9087,7 @@ export class TTimer {
    * @returns 返回timer的ID，TK_INVALID_ID表示失败。
    */
  static add(on_timer : Function, ctx : any, duration : number) : number  {
-    return timer_add(on_timer, ctx, duration);
+    return timer_add(TBrowser.addFunction(on_timer, "ii"), ctx, duration);
  }
 
 
@@ -12637,7 +12637,7 @@ export class TWidget {
    * @returns 返回id，用于widget_off。
    */
  on(type : TEventType, on_event : Function, ctx : any) : number  {
-    return widget_on(this != null ? (this.nativeObj || this) : null, type, on_event, ctx);
+    return widget_on(this != null ? (this.nativeObj || this) : null, type, TBrowser.addFunction(wrap_on_event(on_event), "iii"), ctx);
  }
 
 
@@ -12945,7 +12945,7 @@ export class TWidget {
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
  foreach(visit : Function, ctx : any) : TRet  {
-    return widget_foreach(this != null ? (this.nativeObj || this) : null, visit, ctx);
+    return widget_foreach(this != null ? (this.nativeObj || this) : null, TBrowser.addFunction(wrap_on_visit(visit), "iii"), ctx);
  }
 
 

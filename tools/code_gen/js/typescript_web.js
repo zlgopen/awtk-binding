@@ -9,14 +9,22 @@ class TypescriptGenerator extends TypescriptBaseGenerator {
   constructor() {
     super()
   }
-  
+
+  ctypeToJsType(returnType) {
+    if (returnType && returnType.indexOf("char*") >= 0) {
+      return "string";
+    } else {
+      return "number";
+    }
+  }
+
   genFuncNativeDecl(cls, m) {
     const name = m.name;
     const returnType = m.return.type;
     let result = `const ${name} = Module.cwrap("${name}", \n`;
-    result += `    "${this.mapType(returnType)}", `;
+    result += `    "${this.ctypeToJsType(returnType)}", `;
     let args = m.params.map((iter, index) => {
-       return this.mapType(iter.type);
+      return this.ctypeToJsType(iter.type);
     });
     result += JSON.stringify(args, null, "");
     result += `);\n`;
@@ -29,7 +37,7 @@ class TypescriptGenerator extends TypescriptBaseGenerator {
     const name = this.getGetPropertyFuncName(cls, p);
 
     let result = `const ${name} = Module.cwrap("${name}", \n`;
-    result += `    "${this.mapType(returnType)}", ["number"]);\n`;
+    result += `    "${this.ctypeToJsType(returnType)}", ["number"]);\n`;
 
     return result;
   }
@@ -39,7 +47,7 @@ class TypescriptGenerator extends TypescriptBaseGenerator {
     const name = this.getSetPropertyFuncName(cls, p);
 
     let result = `const ${name} = Module.cwrap("${name}", \n`;
-    result += `    "number", ["number", "${this.mapType(returnType)}"]);\n`;
+    result += `    "number", ["number", "${this.ctypeToJsType(returnType)}"]);\n`;
 
     return result;
   }
@@ -49,9 +57,9 @@ class TypescriptGenerator extends TypescriptBaseGenerator {
     const returnType = this.isEnumString(cls) ? "char*" : "int";
 
     let result = `const ${name} = Module.cwrap("${toConstGet(name)}", \n`;
-    result += `    "${this.mapType(returnType)}", []);\n`;
+    result += `    "${this.ctypeToJsType(returnType)}", []);\n`;
 
-    return result;  
+    return result;
   }
 
   genFuncsDeclBegin() {
@@ -79,7 +87,19 @@ export function init(w:number, h:number, title:string, isDesktop:boolean) {
 }
 `;
   }
-  
+  genCallParam(param) {
+    const name = param.name;
+    if (param.type === 'event_func_t') {
+      return `TBrowser.addFunction(wrap_on_event(${name}), "iii")`;
+    } else if (param.type === 'tk_visit_t') {
+      return `TBrowser.addFunction(wrap_on_visit(${name}), "iii")`;
+    } else if (param.type.indexOf('func_t') > 0) {
+      return `TBrowser.addFunction(${name}, "ii")`;
+    } else {
+      return name;
+    }
+  }
+
   genFuncsDeclEnd() {
     return '';
   }
