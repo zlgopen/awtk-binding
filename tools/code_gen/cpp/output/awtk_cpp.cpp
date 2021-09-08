@@ -1931,6 +1931,10 @@
    return ((orientation_event_t*)(this->nativeObj))->orientation;
  }
 
+ int32_t TOrientationEvent::GetOldOrientation() const {
+   return ((orientation_event_t*)(this->nativeObj))->old_orientation;
+ }
+
  xy_t TPointerEvent::GetX() const {
    return ((pointer_event_t*)(this->nativeObj))->x;
  }
@@ -4351,6 +4355,10 @@
    return native_window_resize(((native_window_t*)(this->nativeObj)), w, h, force);
  }
 
+ ret_t TNativeWindow::SetOrientation(lcd_orientation_t old_orientation, lcd_orientation_t new_orientation)  {
+   return native_window_set_orientation(((native_window_t*)(this->nativeObj)), old_orientation, new_orientation);
+ }
+
  ret_t TNativeWindow::Minimize()  {
    return native_window_minimize(((native_window_t*)(this->nativeObj)));
  }
@@ -4509,10 +4517,6 @@
 
  ret_t TObjectDefault::ClearProps()  {
    return object_default_clear_props(((object_t*)(this->nativeObj)));
- }
-
- uint32_t TObjectDefault::GetPropsSize() const {
-   return ((object_default_t*)(this->nativeObj))->props_size;
  }
 
  void* TTimerInfo::GetCtx() const {

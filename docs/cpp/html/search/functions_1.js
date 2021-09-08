@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['b_951',['B',['../class_t_color.html#a1543abd97237855d94fba67723abcedd',1,'TColor']]],
-  ['back_952',['Back',['../class_t_window_manager.html#ae013f2b90938d77d6a460c4047852833',1,'TWindowManager']]],
-  ['backto_953',['BackTo',['../class_t_window_manager.html#ab2d5850e2185126bfa8aeeda6416202e',1,'TWindowManager']]],
-  ['backtohome_954',['BackToHome',['../class_t_window_manager.html#a48a85cdeddc62cc919e3f8c5cb28cfe1',1,'TWindowManager']]],
-  ['beginpath_955',['BeginPath',['../class_t_vgcanvas.html#a819ec931c06d394df2720118034d3382',1,'TVgcanvas']]],
-  ['bezierto_956',['BezierTo',['../class_t_vgcanvas.html#a051655be838ec0ab08aeb9d991049ad3',1,'TVgcanvas']]],
-  ['bool_957',['Bool',['../class_t_value.html#ac8e0ac0dafe17c443e831c62a80895f1',1,'TValue']]]
+  ['b_952',['B',['../class_t_color.html#a1543abd97237855d94fba67723abcedd',1,'TColor']]],
+  ['back_953',['Back',['../class_t_window_manager.html#ae013f2b90938d77d6a460c4047852833',1,'TWindowManager']]],
+  ['backto_954',['BackTo',['../class_t_window_manager.html#ab2d5850e2185126bfa8aeeda6416202e',1,'TWindowManager']]],
+  ['backtohome_955',['BackToHome',['../class_t_window_manager.html#a48a85cdeddc62cc919e3f8c5cb28cfe1',1,'TWindowManager']]],
+  ['beginpath_956',['BeginPath',['../class_t_vgcanvas.html#a819ec931c06d394df2720118034d3382',1,'TVgcanvas']]],
+  ['bezierto_957',['BezierTo',['../class_t_vgcanvas.html#a051655be838ec0ab08aeb9d991049ad3',1,'TVgcanvas']]],
+  ['bool_958',['Bool',['../class_t_value.html#ac8e0ac0dafe17c443e831c62a80895f1',1,'TValue']]]
 ];

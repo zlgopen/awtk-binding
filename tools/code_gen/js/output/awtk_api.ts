@@ -2648,6 +2648,8 @@ const orientation_event_cast = Module.cwrap("orientation_event_cast",
     "number", ["number"]);
 const orientation_event_t_get_prop_orientation = Module.cwrap("orientation_event_t_get_prop_orientation", 
     "number", ["number"]);
+const orientation_event_t_get_prop_old_orientation = Module.cwrap("orientation_event_t_get_prop_old_orientation", 
+    "number", ["number"]);
 const value_change_event_cast = Module.cwrap("value_change_event_cast", 
     "number", ["number"]);
 const pointer_event_cast = Module.cwrap("pointer_event_cast", 
@@ -4002,6 +4004,8 @@ const native_window_move = Module.cwrap("native_window_move",
     "number", ["number","number","number","number"]);
 const native_window_resize = Module.cwrap("native_window_resize", 
     "number", ["number","number","number","number"]);
+const native_window_set_orientation = Module.cwrap("native_window_set_orientation", 
+    "number", ["number","number","number"]);
 const native_window_minimize = Module.cwrap("native_window_minimize", 
     "number", ["number"]);
 const native_window_maximize = Module.cwrap("native_window_maximize", 
@@ -4091,8 +4095,6 @@ const object_default_create = Module.cwrap("object_default_create",
 const object_default_unref = Module.cwrap("object_default_unref", 
     "number", ["number"]);
 const object_default_clear_props = Module.cwrap("object_default_clear_props", 
-    "number", ["number"]);
-const object_default_t_get_prop_props_size = Module.cwrap("object_default_t_get_prop_props_size", 
     "number", ["number"]);
 const timer_info_cast = Module.cwrap("timer_info_cast", 
     "number", ["number"]);
@@ -15938,6 +15940,15 @@ export class TOrientationEvent extends TEvent {
    return orientation_event_t_get_prop_orientation(this.nativeObj);
  }
 
+
+  /**
+   * 旧的屏幕方向。
+   *
+   */
+ get oldOrientation() : number {
+   return orientation_event_t_get_prop_old_orientation(this.nativeObj);
+ }
+
 };
 /**
  * 值变化事件。
@@ -24752,7 +24763,7 @@ export class TEdit extends TWidget {
 
 
   /**
-   * 自定义软键盘名称。AWTK优先查找keyboard属性设置的键盘文件名（该键盘的XML文件需要在default\raw\ui目录下存在），如果keyboard为空就找input_type设置的键盘类型
+   * 自定义软键盘名称。AWTK优先查找keyboard属性设置的键盘文件名（该键盘的XML文件需要在default\raw\ui目录下存在），如果没有指定keyboard，就找input_type设置的键盘类型。如果指定为空字符串，则表示不需要软键盘。
    *
    */
  get keyboard() : string {
@@ -26740,6 +26751,19 @@ export class TNativeWindow extends TObject {
 
 
   /**
+   * 调整窗口旋转。
+   * 
+   * @param old_orientation 旧的旋转角度。
+   * @param new_orientation 新的旋转角度。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setOrientation(old_orientation : any, new_orientation : any) : TRet  {
+    return native_window_set_orientation(this != null ? (this.nativeObj || this) : null, old_orientation, new_orientation);
+ }
+
+
+  /**
    * 最小化窗口。
    * 
    *
@@ -27610,15 +27634,6 @@ export class TObjectDefault extends TObject {
    */
  clearProps() : TRet  {
     return object_default_clear_props(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 属性个数。
-   *
-   */
- get propsSize() : number {
-   return object_default_t_get_prop_props_size(this.nativeObj);
  }
 
 };

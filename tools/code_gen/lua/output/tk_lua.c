@@ -10607,6 +10607,11 @@ static int wrap_orientation_event_t_get_prop(lua_State* L) {
 
   return 1;
   }
+  else if(strcmp(name, "old_orientation") == 0) {
+    lua_pushinteger(L,(lua_Integer)(obj->old_orientation));
+
+  return 1;
+  }
   else {
     return wrap_event_t_get_prop(L);
   }
@@ -20146,6 +20151,18 @@ static int wrap_native_window_resize(lua_State* L) {
   return 1;
 }
 
+static int wrap_native_window_set_orientation(lua_State* L) {
+  ret_t ret = 0;
+  native_window_t* win = (native_window_t*)tk_checkudata(L, 1, "native_window_t");
+  lcd_orientation_t old_orientation = (lcd_orientation_t)luaL_checkinteger(L, 2);
+  lcd_orientation_t new_orientation = (lcd_orientation_t)luaL_checkinteger(L, 3);
+  ret = (ret_t)native_window_set_orientation(win, old_orientation, new_orientation);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 static int wrap_native_window_minimize(lua_State* L) {
   ret_t ret = 0;
   native_window_t* win = (native_window_t*)tk_checkudata(L, 1, "native_window_t");
@@ -20224,6 +20241,7 @@ static int wrap_native_window_set_cursor(lua_State* L) {
 static const struct luaL_Reg native_window_t_member_funcs[] = {
   {"move", wrap_native_window_move},
   {"resize", wrap_native_window_resize},
+  {"set_orientation", wrap_native_window_set_orientation},
   {"minimize", wrap_native_window_minimize},
   {"maximize", wrap_native_window_maximize},
   {"restore", wrap_native_window_restore},
@@ -21019,11 +21037,6 @@ static int wrap_object_default_t_get_prop(lua_State* L) {
   if(ret) {
     lua_pushcfunction(L, ret->func);
     return 1;
-  }
-  if(strcmp(name, "props_size") == 0) {
-    lua_pushinteger(L,(lua_Integer)(obj->props_size));
-
-  return 1;
   }
   else {
     return wrap_object_t_get_prop(L);

@@ -5509,6 +5509,12 @@ public:
    *
    */
   int32_t GetOrientation() const;
+
+  /**
+   * 旧的屏幕方向。
+   *
+   */
+  int32_t GetOldOrientation() const;
 };
 
 
@@ -12946,7 +12952,7 @@ public:
   char* GetActionText() const;
 
   /**
-   * 自定义软键盘名称。AWTK优先查找keyboard属性设置的键盘文件名（该键盘的XML文件需要在default\raw\ui目录下存在），如果keyboard为空就找input_type设置的键盘类型
+   * 自定义软键盘名称。AWTK优先查找keyboard属性设置的键盘文件名（该键盘的XML文件需要在default\raw\ui目录下存在），如果没有指定keyboard，就找input_type设置的键盘类型。如果指定为空字符串，则表示不需要软键盘。
    *
    */
   char* GetKeyboard() const;
@@ -14697,6 +14703,16 @@ public:
   ret_t Resize(wh_t w, wh_t h, bool force) ;
 
   /**
+   * 调整窗口旋转。
+   * 
+   * @param old_orientation 旧的旋转角度。
+   * @param new_orientation 新的旋转角度。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetOrientation(lcd_orientation_t old_orientation, lcd_orientation_t new_orientation) ;
+
+  /**
    * 最小化窗口。
    * 
    *
@@ -15577,12 +15593,6 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t ClearProps() ;
-
-  /**
-   * 属性个数。
-   *
-   */
-  uint32_t GetPropsSize() const;
 };
 
 

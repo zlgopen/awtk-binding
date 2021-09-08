@@ -95,6 +95,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a99fca5e61a5af7fbcbad8049131a5aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd2c6a2fa44ce13298bd0ef088f334a5"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_native_window.html#abd2c6a2fa44ce13298bd0ef088f334a5">Resize</a> (wh_t w, wh_t h, bool force)</td></tr>
 <tr class="separator:abd2c6a2fa44ce13298bd0ef088f334a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaa1a9e494e8e2fe6a059812e5314321"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_native_window.html#acaa1a9e494e8e2fe6a059812e5314321">SetOrientation</a> (lcd_orientation_t old_orientation, lcd_orientation_t new_orientation)</td></tr>
+<tr class="separator:acaa1a9e494e8e2fe6a059812e5314321"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71c686447e5c2094caf928f350bd7451"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_native_window.html#a71c686447e5c2094caf928f350bd7451">Minimize</a> ()</td></tr>
 <tr class="separator:a71c686447e5c2094caf928f350bd7451"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac83a897f6245560f913d47dfc1d5aa36"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_native_window.html#ac83a897f6245560f913d47dfc1d5aa36">Maximize</a> ()</td></tr>
@@ -531,6 +533,43 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">fullscreen</td><td>是否全屏。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="acaa1a9e494e8e2fe6a059812e5314321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa1a9e494e8e2fe6a059812e5314321">&#9670;&nbsp;</a></span>SetOrientation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TNativeWindow::SetOrientation </td>
+          <td>(</td>
+          <td class="paramtype">lcd_orientation_t&#160;</td>
+          <td class="paramname"><em>old_orientation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">lcd_orientation_t&#160;</td>
+          <td class="paramname"><em>new_orientation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>调整窗口旋转。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">old_orientation</td><td>旧的旋转角度。 </td></tr>
+    <tr><td class="paramname">new_orientation</td><td>新的旋转角度。</td></tr>
   </table>
   </dd>
 </dl>

@@ -1316,6 +1316,7 @@ declare function wheel_event_t_get_prop_ctrl(nativeObj : any) : boolean;
 declare function wheel_event_t_get_prop_shift(nativeObj : any) : boolean;
 declare function orientation_event_cast(event : any) : any;
 declare function orientation_event_t_get_prop_orientation(nativeObj : any) : number;
+declare function orientation_event_t_get_prop_old_orientation(nativeObj : any) : number;
 declare function value_change_event_cast(event : any) : any;
 declare function pointer_event_cast(event : any) : any;
 declare function pointer_event_t_get_prop_x(nativeObj : any) : number;
@@ -1993,6 +1994,7 @@ declare function dialog_confirm(title : string, text : string) : TRet;
 declare function dialog_t_get_prop_highlight(nativeObj : any) : string;
 declare function native_window_move(win : any, x : number, y : number, force : boolean) : TRet;
 declare function native_window_resize(win : any, w : number, h : number, force : boolean) : TRet;
+declare function native_window_set_orientation(win : any, old_orientation : any, new_orientation : any) : TRet;
 declare function native_window_minimize(win : any) : TRet;
 declare function native_window_maximize(win : any) : TRet;
 declare function native_window_restore(win : any) : TRet;
@@ -2038,7 +2040,6 @@ declare function object_array_t_get_prop_size(nativeObj : any) : number;
 declare function object_default_create() : any;
 declare function object_default_unref(obj : any) : TRet;
 declare function object_default_clear_props(obj : any) : TRet;
-declare function object_default_t_get_prop_props_size(nativeObj : any) : number;
 declare function timer_info_cast(timer : any) : any;
 declare function timer_info_t_get_prop_ctx(nativeObj : any) : any;
 declare function timer_info_t_get_prop_extra_ctx(nativeObj : any) : any;
@@ -13833,6 +13834,15 @@ export class TOrientationEvent extends TEvent {
    return orientation_event_t_get_prop_orientation(this.nativeObj);
  }
 
+
+  /**
+   * 旧的屏幕方向。
+   *
+   */
+ get oldOrientation() : number {
+   return orientation_event_t_get_prop_old_orientation(this.nativeObj);
+ }
+
 };
 /**
  * 值变化事件。
@@ -22647,7 +22657,7 @@ export class TEdit extends TWidget {
 
 
   /**
-   * 自定义软键盘名称。AWTK优先查找keyboard属性设置的键盘文件名（该键盘的XML文件需要在default\raw\ui目录下存在），如果keyboard为空就找input_type设置的键盘类型
+   * 自定义软键盘名称。AWTK优先查找keyboard属性设置的键盘文件名（该键盘的XML文件需要在default\raw\ui目录下存在），如果没有指定keyboard，就找input_type设置的键盘类型。如果指定为空字符串，则表示不需要软键盘。
    *
    */
  get keyboard() : string {
@@ -24635,6 +24645,19 @@ export class TNativeWindow extends TObject {
 
 
   /**
+   * 调整窗口旋转。
+   * 
+   * @param old_orientation 旧的旋转角度。
+   * @param new_orientation 新的旋转角度。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setOrientation(old_orientation : any, new_orientation : any) : TRet  {
+    return native_window_set_orientation(this != null ? (this.nativeObj || this) : null, old_orientation, new_orientation);
+ }
+
+
+  /**
    * 最小化窗口。
    * 
    *
@@ -25505,15 +25528,6 @@ export class TObjectDefault extends TObject {
    */
  clearProps() : TRet  {
     return object_default_clear_props(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 属性个数。
-   *
-   */
- get propsSize() : number {
-   return object_default_t_get_prop_props_size(this.nativeObj);
  }
 
 };
