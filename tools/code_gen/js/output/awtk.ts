@@ -1304,6 +1304,7 @@ declare function VALUE_TYPE_SIZED_STRING():any;
 declare function VALUE_TYPE_BINARY():any;
 declare function VALUE_TYPE_UBJSON():any;
 declare function VALUE_TYPE_TOKEN():any;
+declare function VALUE_TYPE_GRADIENT():any;
 declare function assets_manager() : any;
 declare function assets_manager_set_theme(am : any, theme : string) : TRet;
 declare function assets_manager_ref(am : any, type : TAssetType, name : string) : any;
@@ -1551,6 +1552,7 @@ declare function mledit_set_readonly(widget : any, readonly : boolean) : TRet;
 declare function mledit_set_cancelable(widget : any, cancelable : boolean) : TRet;
 declare function mledit_set_focus(widget : any, focus : boolean) : TRet;
 declare function mledit_set_wrap_word(widget : any, wrap_word : boolean) : TRet;
+declare function mledit_set_overwrite(widget : any, overwrite : boolean) : TRet;
 declare function mledit_set_max_lines(widget : any, max_lines : number) : TRet;
 declare function mledit_set_max_chars(widget : any, max_chars : number) : TRet;
 declare function mledit_set_tips(widget : any, tips : string) : TRet;
@@ -1564,14 +1566,16 @@ declare function mledit_set_open_im_when_focused(widget : any, open_im_when_focu
 declare function mledit_set_close_im_when_blured(widget : any, close_im_when_blured : boolean) : TRet;
 declare function mledit_set_select(widget : any, start : number, end : number) : TRet;
 declare function mledit_get_selected_text(widget : any) : string;
+declare function mledit_insert_text(widget : any, offset : number, text : string) : TRet;
 declare function mledit_cast(widget : any) : any;
 declare function mledit_t_get_prop_tips(nativeObj : any) : string;
 declare function mledit_t_get_prop_tr_tips(nativeObj : any) : string;
 declare function mledit_t_get_prop_keyboard(nativeObj : any) : string;
 declare function mledit_t_get_prop_max_lines(nativeObj : any) : number;
 declare function mledit_t_get_prop_max_chars(nativeObj : any) : number;
-declare function mledit_t_get_prop_wrap_word(nativeObj : any) : boolean;
 declare function mledit_t_get_prop_scroll_line(nativeObj : any) : number;
+declare function mledit_t_get_prop_overwrite(nativeObj : any) : boolean;
+declare function mledit_t_get_prop_wrap_word(nativeObj : any) : boolean;
 declare function mledit_t_get_prop_readonly(nativeObj : any) : boolean;
 declare function mledit_t_get_prop_cancelable(nativeObj : any) : boolean;
 declare function mledit_t_get_prop_open_im_when_focused(nativeObj : any) : boolean;
@@ -2038,6 +2042,7 @@ declare function object_array_remove(obj : any, index : number) : TRet;
 declare function object_array_get_and_remove(obj : any, index : number, v : any) : TRet;
 declare function object_array_t_get_prop_size(nativeObj : any) : number;
 declare function object_default_create() : any;
+declare function object_default_create_ex(enable_path : boolean) : any;
 declare function object_default_unref(obj : any) : TRet;
 declare function object_default_clear_props(obj : any) : TRet;
 declare function timer_info_cast(timer : any) : any;
@@ -13640,6 +13645,12 @@ export enum TValueType {
    *
    */
  TOKEN = VALUE_TYPE_TOKEN(),
+
+  /**
+   * 渐变颜色。
+   *
+   */
+ GRADIENT = VALUE_TYPE_GRADIENT(),
 };
 
 
@@ -17228,6 +17239,18 @@ export class TMledit extends TWidget {
 
 
   /**
+   * 设置编辑器是否启用覆盖行（在行数达到最大行数时，可继续新增行，但最早的行将会消失）。
+   * 
+   * @param overwrite 是否启用覆盖行。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setOverwrite(overwrite : boolean) : TRet  {
+    return mledit_set_overwrite(this != null ? (this.nativeObj || this) : null, overwrite);
+ }
+
+
+  /**
    * 设置编辑器的最大行数。
    * 
    * @param max_lines 最大行数。
@@ -17387,6 +17410,19 @@ export class TMledit extends TWidget {
 
 
   /**
+   * 插入一段文本。
+   * 
+   * @param offset 插入的偏移位置。
+   * @param text 待插入的文本。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ insertText(offset : number, text : string) : TRet  {
+    return mledit_insert_text(this != null ? (this.nativeObj || this) : null, offset, text);
+ }
+
+
+  /**
    * 转换为mledit对象(供脚本语言使用)。
    * 
    * @param widget mledit对象。
@@ -17464,19 +17500,6 @@ export class TMledit extends TWidget {
 
 
   /**
-   * 是否自动折行。
-   *
-   */
- get wrapWord() : boolean {
-   return mledit_t_get_prop_wrap_word(this.nativeObj);
- }
-
- set wrapWord(v : boolean) {
-   this.setWrapWord(v);
- }
-
-
-  /**
    * 鼠标一次滚动行数。
    *
    */
@@ -17486,6 +17509,32 @@ export class TMledit extends TWidget {
 
  set scrollLine(v : number) {
    this.setScrollLine(v);
+ }
+
+
+  /**
+   * 是否启用覆盖行。
+   *
+   */
+ get overwrite() : boolean {
+   return mledit_t_get_prop_overwrite(this.nativeObj);
+ }
+
+ set overwrite(v : boolean) {
+   this.setOverwrite(v);
+ }
+
+
+  /**
+   * 是否自动折行。
+   *
+   */
+ get wrapWord() : boolean {
+   return mledit_t_get_prop_wrap_word(this.nativeObj);
+ }
+
+ set wrapWord(v : boolean) {
+   this.setWrapWord(v);
  }
 
 
@@ -18002,13 +18051,8 @@ export class TRichText extends TWidget {
  *
  *hscroll\_label\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于hscroll\_label\_t控件。
  *
- *在xml中使用"hscroll\_label"标签创建行号控件，一般配合mledit使用。如：
- *
- *```xml
- *```
- *
- *> 更多用法请参考：[mledit.xml](
- *https://github.com/zlgopen/awtk/blob/master/design/default/ui/mledit.xml)
+ *> 更多用法请参考：[hscroll_label.xml](
+ *https://github.com/zlgopen/awtk/blob/master/design/default/ui/hscroll_label.xml)
  *
  *可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：
  *
@@ -25506,6 +25550,18 @@ export class TObjectDefault extends TObject {
    */
  static create() : TObjectDefault  {
     return new TObjectDefault(object_default_create());
+ }
+
+
+  /**
+   * 创建对象。
+   * 
+   * @param enable_path 是否支持按路径访问属性。
+   *
+   * @returns 返回object对象。
+   */
+ static createEx(enable_path : boolean) : TObjectDefault  {
+    return new TObjectDefault(object_default_create_ex(enable_path));
  }
 
 

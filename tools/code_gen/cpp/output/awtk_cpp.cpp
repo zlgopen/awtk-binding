@@ -2775,6 +2775,10 @@
    return mledit_set_wrap_word(((widget_t*)(this->nativeObj)), wrap_word);
  }
 
+ ret_t TMledit::SetOverwrite(bool overwrite)  {
+   return mledit_set_overwrite(((widget_t*)(this->nativeObj)), overwrite);
+ }
+
  ret_t TMledit::SetMaxLines(uint32_t max_lines)  {
    return mledit_set_max_lines(((widget_t*)(this->nativeObj)), max_lines);
  }
@@ -2827,6 +2831,10 @@
     return mledit_get_selected_text(((widget_t*)(this->nativeObj)));
  }
 
+ ret_t TMledit::InsertText(uint32_t offset, const char* text)  {
+   return mledit_insert_text(((widget_t*)(this->nativeObj)), offset, text);
+ }
+
  char* TMledit::GetTips() const {
    return ((mledit_t*)(this->nativeObj))->tips;
  }
@@ -2847,12 +2855,16 @@
    return ((mledit_t*)(this->nativeObj))->max_chars;
  }
 
- bool TMledit::GetWrapWord() const {
-   return ((mledit_t*)(this->nativeObj))->wrap_word;
- }
-
  uint32_t TMledit::GetScrollLine() const {
    return ((mledit_t*)(this->nativeObj))->scroll_line;
+ }
+
+ bool TMledit::GetOverwrite() const {
+   return ((mledit_t*)(this->nativeObj))->overwrite;
+ }
+
+ bool TMledit::GetWrapWord() const {
+   return ((mledit_t*)(this->nativeObj))->wrap_word;
  }
 
  bool TMledit::GetReadonly() const {
@@ -4509,6 +4521,10 @@
 
  TObject TObjectDefault::Create()  {
    return TObjectDefault((emitter_t*)(object_default_create()));
+ }
+
+ TObject TObjectDefault::CreateEx(bool enable_path)  {
+   return TObjectDefault((emitter_t*)(object_default_create_ex(enable_path)));
  }
 
  ret_t TObjectDefault::Unref()  {

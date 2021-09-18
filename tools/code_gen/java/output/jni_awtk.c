@@ -12156,6 +12156,14 @@ int awtk_TValueType_VALUE_TYPE_TOKEN(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TValueType_VALUE_TYPE_GRADIENT(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(VALUE_TYPE_GRADIENT));
+
+  return 0;
+}
+
 int awtk_TAssetsManager_assets_manager(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -14826,6 +14834,18 @@ int awtk_TMledit_mledit_set_wrap_word(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TMledit_mledit_set_overwrite(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  bool_t overwrite = (bool_t)jni_ctx_get_int(&actx);
+  ret = (ret_t)mledit_set_overwrite(widget, overwrite);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TMledit_mledit_set_max_lines(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -14984,6 +15004,20 @@ int awtk_TMledit_mledit_get_selected_text(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TMledit_mledit_insert_text(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  uint32_t offset = (uint32_t)jni_ctx_get_int(&actx);
+  const char* text = (const char*)jni_ctx_get_str(&actx);
+  ret = (ret_t)mledit_insert_text(widget, offset, text);
+  TKMEM_FREE(text);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TMledit_mledit_cast(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -15040,20 +15074,29 @@ int awtk_TMledit_mledit_t_get_prop_max_chars(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
-int awtk_TMledit_mledit_t_get_prop_wrap_word(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
-
-  mledit_t* obj = (mledit_t*)jni_ctx_get_object(&actx);
-  jni_ctx_return_int(&actx, (int32_t)(obj->wrap_word));
-
-  return 0;
-}
-
 int awtk_TMledit_mledit_t_get_prop_scroll_line(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   mledit_t* obj = (mledit_t*)jni_ctx_get_object(&actx);
   jni_ctx_return_int(&actx, (int32_t)(obj->scroll_line));
+
+  return 0;
+}
+
+int awtk_TMledit_mledit_t_get_prop_overwrite(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  mledit_t* obj = (mledit_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_int(&actx, (int32_t)(obj->overwrite));
+
+  return 0;
+}
+
+int awtk_TMledit_mledit_t_get_prop_wrap_word(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  mledit_t* obj = (mledit_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_int(&actx, (int32_t)(obj->wrap_word));
 
   return 0;
 }
@@ -20319,6 +20362,17 @@ int awtk_TObjectDefault_object_default_create(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TObjectDefault_object_default_create_ex(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  object_t* ret = NULL;
+  bool_t enable_path = (bool_t)jni_ctx_get_int(&actx);
+  ret = (object_t*)object_default_create_ex(enable_path);
+  jni_ctx_return_object(&actx, (void*)(ret));
+
+  return 0;
+}
+
 int awtk_TObjectDefault_object_default_clear_props(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -22196,6 +22250,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TValueType",  "VALUE_TYPE_BINARY",  "()I",  awtk_TValueType_VALUE_TYPE_BINARY},
 {"awtk/TValueType",  "VALUE_TYPE_UBJSON",  "()I",  awtk_TValueType_VALUE_TYPE_UBJSON},
 {"awtk/TValueType",  "VALUE_TYPE_TOKEN",  "()I",  awtk_TValueType_VALUE_TYPE_TOKEN},
+{"awtk/TValueType",  "VALUE_TYPE_GRADIENT",  "()I",  awtk_TValueType_VALUE_TYPE_GRADIENT},
 {"awtk/TAssetsManager",  "assets_manager",  "()J",  awtk_TAssetsManager_assets_manager},
 {"awtk/TAssetsManager",  "assets_manager_set_theme",  "(JLjava/lang/String;)I",  awtk_TAssetsManager_assets_manager_set_theme},
 {"awtk/TAssetsManager",  "assets_manager_ref",  "(JILjava/lang/String;)J",  awtk_TAssetsManager_assets_manager_ref},
@@ -22443,6 +22498,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TMledit",  "mledit_set_cancelable",  "(JZ)I",  awtk_TMledit_mledit_set_cancelable},
 {"awtk/TMledit",  "mledit_set_focus",  "(JZ)I",  awtk_TMledit_mledit_set_focus},
 {"awtk/TMledit",  "mledit_set_wrap_word",  "(JZ)I",  awtk_TMledit_mledit_set_wrap_word},
+{"awtk/TMledit",  "mledit_set_overwrite",  "(JZ)I",  awtk_TMledit_mledit_set_overwrite},
 {"awtk/TMledit",  "mledit_set_max_lines",  "(JI)I",  awtk_TMledit_mledit_set_max_lines},
 {"awtk/TMledit",  "mledit_set_max_chars",  "(JI)I",  awtk_TMledit_mledit_set_max_chars},
 {"awtk/TMledit",  "mledit_set_tips",  "(JLjava/lang/String;)I",  awtk_TMledit_mledit_set_tips},
@@ -22456,14 +22512,16 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TMledit",  "mledit_set_close_im_when_blured",  "(JZ)I",  awtk_TMledit_mledit_set_close_im_when_blured},
 {"awtk/TMledit",  "mledit_set_select",  "(JII)I",  awtk_TMledit_mledit_set_select},
 {"awtk/TMledit",  "mledit_get_selected_text",  "(J)Ljava/lang/String;",  awtk_TMledit_mledit_get_selected_text},
+{"awtk/TMledit",  "mledit_insert_text",  "(JILjava/lang/String;)I",  awtk_TMledit_mledit_insert_text},
 {"awtk/TMledit",  "mledit_cast",  "(J)J",  awtk_TMledit_mledit_cast},
 {"awtk/TMledit",  "mledit_t_get_prop_tips",  "(J)Ljava/lang/String;",  awtk_TMledit_mledit_t_get_prop_tips},
 {"awtk/TMledit",  "mledit_t_get_prop_tr_tips",  "(J)Ljava/lang/String;",  awtk_TMledit_mledit_t_get_prop_tr_tips},
 {"awtk/TMledit",  "mledit_t_get_prop_keyboard",  "(J)Ljava/lang/String;",  awtk_TMledit_mledit_t_get_prop_keyboard},
 {"awtk/TMledit",  "mledit_t_get_prop_max_lines",  "(J)I",  awtk_TMledit_mledit_t_get_prop_max_lines},
 {"awtk/TMledit",  "mledit_t_get_prop_max_chars",  "(J)I",  awtk_TMledit_mledit_t_get_prop_max_chars},
-{"awtk/TMledit",  "mledit_t_get_prop_wrap_word",  "(J)Z",  awtk_TMledit_mledit_t_get_prop_wrap_word},
 {"awtk/TMledit",  "mledit_t_get_prop_scroll_line",  "(J)I",  awtk_TMledit_mledit_t_get_prop_scroll_line},
+{"awtk/TMledit",  "mledit_t_get_prop_overwrite",  "(J)Z",  awtk_TMledit_mledit_t_get_prop_overwrite},
+{"awtk/TMledit",  "mledit_t_get_prop_wrap_word",  "(J)Z",  awtk_TMledit_mledit_t_get_prop_wrap_word},
 {"awtk/TMledit",  "mledit_t_get_prop_readonly",  "(J)Z",  awtk_TMledit_mledit_t_get_prop_readonly},
 {"awtk/TMledit",  "mledit_t_get_prop_cancelable",  "(J)Z",  awtk_TMledit_mledit_t_get_prop_cancelable},
 {"awtk/TMledit",  "mledit_t_get_prop_open_im_when_focused",  "(J)Z",  awtk_TMledit_mledit_t_get_prop_open_im_when_focused},
@@ -22929,6 +22987,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TObjectArray",  "object_array_get_and_remove",  "(JIJ)I",  awtk_TObjectArray_object_array_get_and_remove},
 {"awtk/TObjectArray",  "object_array_t_get_prop_size",  "(J)I",  awtk_TObjectArray_object_array_t_get_prop_size},
 {"awtk/TObjectDefault",  "object_default_create",  "()J",  awtk_TObjectDefault_object_default_create},
+{"awtk/TObjectDefault",  "object_default_create_ex",  "(Z)J",  awtk_TObjectDefault_object_default_create_ex},
 {"awtk/TObjectDefault",  "object_default_clear_props",  "(J)I",  awtk_TObjectDefault_object_default_clear_props},
 {"awtk/TTimerInfo",  "timer_info_cast",  "(J)J",  awtk_TTimerInfo_timer_info_cast},
 {"awtk/TTimerInfo",  "timer_info_t_get_prop_ctx",  "(J)J",  awtk_TTimerInfo_timer_info_t_get_prop_ctx},

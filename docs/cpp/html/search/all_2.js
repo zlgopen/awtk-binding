@@ -25,7 +25,7 @@ var searchData=
   ['createdefault_35',['CreateDefault',['../class_t_window.html#addd0434544323d6bd4ee8b19a238ec4b',1,'TWindow']]],
   ['createdesktop_36',['CreateDesktop',['../class_t_scroll_bar.html#ab573a1d2052e6302f136c86f576ec3b3',1,'TScrollBar']]],
   ['createdir_37',['CreateDir',['../class_t_file_browser_view.html#a45768c7bf22e185896ec874102364c84',1,'TFileBrowserView']]],
-  ['createex_38',['CreateEx',['../class_t_bitmap.html#a6c609fbeba442c5c03ca9577b2ffc67b',1,'TBitmap']]],
+  ['createex_38',['CreateEx',['../class_t_bitmap.html#a6c609fbeba442c5c03ca9577b2ffc67b',1,'TBitmap::CreateEx()'],['../class_t_object_default.html#a571ab13a6a6287ec29c018c19b685845',1,'TObjectDefault::CreateEx()']]],
   ['createfile_39',['CreateFile',['../class_t_file_browser_view.html#ab02f1afd2a0cf3badba9cbc80bd5d2c4',1,'TFileBrowserView']]],
   ['createlinear_40',['CreateLinear',['../class_t_slide_indicator.html#ae278bea76aa346f68ae147d108d96c9c',1,'TSlideIndicator']]],
   ['createmobile_41',['CreateMobile',['../class_t_scroll_bar.html#ac22783ca211b9804ac220270c4215887',1,'TScrollBar']]],

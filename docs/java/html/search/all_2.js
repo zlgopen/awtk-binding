@@ -66,7 +66,7 @@ var searchData=
   ['createdefault_213',['createDefault',['../classawtk_1_1_t_window.html#a8579f0e0cb4641376104ec16a89d0452',1,'awtk::TWindow']]],
   ['createdesktop_214',['createDesktop',['../classawtk_1_1_t_scroll_bar.html#a717286fdb8f8e51a52389cae0c567cf0',1,'awtk::TScrollBar']]],
   ['createdir_215',['createDir',['../classawtk_1_1_t_file_browser_view.html#ae5474b3d8577cf9c63a51903661fb61f',1,'awtk::TFileBrowserView']]],
-  ['createex_216',['createEx',['../classawtk_1_1_t_bitmap.html#ab70781d406d75233a546ec45a7fcf46f',1,'awtk::TBitmap']]],
+  ['createex_216',['createEx',['../classawtk_1_1_t_bitmap.html#ab70781d406d75233a546ec45a7fcf46f',1,'awtk.TBitmap.createEx()'],['../classawtk_1_1_t_object_default.html#a8a8f332e65244fa9a4f2d7c9ab44eee9',1,'awtk.TObjectDefault.createEx()']]],
   ['createfile_217',['createFile',['../classawtk_1_1_t_file_browser_view.html#a26184d4dd2dcb6791ea76a913862be9f',1,'awtk::TFileBrowserView']]],
   ['createlinear_218',['createLinear',['../classawtk_1_1_t_slide_indicator.html#ab0891ef835ac2b1a2630f6f6af7a899d',1,'awtk::TSlideIndicator']]],
   ['createmobile_219',['createMobile',['../classawtk_1_1_t_scroll_bar.html#a4bd0b1b4d006205a40520139ca0374bd',1,'awtk::TScrollBar']]],
