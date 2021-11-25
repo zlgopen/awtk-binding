@@ -4041,16 +4041,16 @@ pyobject_t get_STYLE_ID_ROUND_RADIUS(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("s", STYLE_ID_ROUND_RADIUS);
 }
 
-pyobject_t get_STYLE_ID_ROUND_RADIUS_TOP_LETF(pyobject_t self, pyobject_t pyargs) {
-  return Py_BuildValue("s", STYLE_ID_ROUND_RADIUS_TOP_LETF);
+pyobject_t get_STYLE_ID_ROUND_RADIUS_TOP_LEFT(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", STYLE_ID_ROUND_RADIUS_TOP_LEFT);
 }
 
 pyobject_t get_STYLE_ID_ROUND_RADIUS_TOP_RIGHT(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("s", STYLE_ID_ROUND_RADIUS_TOP_RIGHT);
 }
 
-pyobject_t get_STYLE_ID_ROUND_RADIUS_BOTTOM_LETF(pyobject_t self, pyobject_t pyargs) {
-  return Py_BuildValue("s", STYLE_ID_ROUND_RADIUS_BOTTOM_LETF);
+pyobject_t get_STYLE_ID_ROUND_RADIUS_BOTTOM_LEFT(pyobject_t self, pyobject_t pyargs) {
+  return Py_BuildValue("s", STYLE_ID_ROUND_RADIUS_BOTTOM_LEFT);
 }
 
 pyobject_t get_STYLE_ID_ROUND_RADIUS_BOTTOM_RIGHT(pyobject_t self, pyobject_t pyargs) {
@@ -4768,7 +4768,7 @@ pyobject_t wrap_vgcanvas_clip_rect(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", ret);
 }
 
-pyobject_t wrap_vgcanvas_is_rectf_int_clip_rect(pyobject_t self, pyobject_t pyargs) {
+pyobject_t wrap_vgcanvas_is_rectf_in_clip_rect(pyobject_t self, pyobject_t pyargs) {
   bool_t ret = 0;
   vgcanvas_t* vg = NULL;
   float_t left = 0;
@@ -4781,7 +4781,7 @@ pyobject_t wrap_vgcanvas_is_rectf_int_clip_rect(pyobject_t self, pyobject_t pyar
     return NULL;
   }
 
-  ret = (bool_t)vgcanvas_is_rectf_int_clip_rect(vg, left, top, right, bottom);
+  ret = (bool_t)vgcanvas_is_rectf_in_clip_rect(vg, left, top, right, bottom);
   return Py_BuildValue("b", ret);
 }
 
@@ -20869,9 +20869,9 @@ static PyMethodDef awtk_methods[] = {
 {"STYLE_ID_SELECTED_FG_COLOR", get_STYLE_ID_SELECTED_FG_COLOR, METH_VARARGS, "STYLE_ID_SELECTED_FG_COLOR"},
 {"STYLE_ID_SELECTED_TEXT_COLOR", get_STYLE_ID_SELECTED_TEXT_COLOR, METH_VARARGS, "STYLE_ID_SELECTED_TEXT_COLOR"},
 {"STYLE_ID_ROUND_RADIUS", get_STYLE_ID_ROUND_RADIUS, METH_VARARGS, "STYLE_ID_ROUND_RADIUS"},
-{"STYLE_ID_ROUND_RADIUS_TOP_LETF", get_STYLE_ID_ROUND_RADIUS_TOP_LETF, METH_VARARGS, "STYLE_ID_ROUND_RADIUS_TOP_LETF"},
+{"STYLE_ID_ROUND_RADIUS_TOP_LEFT", get_STYLE_ID_ROUND_RADIUS_TOP_LEFT, METH_VARARGS, "STYLE_ID_ROUND_RADIUS_TOP_LEFT"},
 {"STYLE_ID_ROUND_RADIUS_TOP_RIGHT", get_STYLE_ID_ROUND_RADIUS_TOP_RIGHT, METH_VARARGS, "STYLE_ID_ROUND_RADIUS_TOP_RIGHT"},
-{"STYLE_ID_ROUND_RADIUS_BOTTOM_LETF", get_STYLE_ID_ROUND_RADIUS_BOTTOM_LETF, METH_VARARGS, "STYLE_ID_ROUND_RADIUS_BOTTOM_LETF"},
+{"STYLE_ID_ROUND_RADIUS_BOTTOM_LEFT", get_STYLE_ID_ROUND_RADIUS_BOTTOM_LEFT, METH_VARARGS, "STYLE_ID_ROUND_RADIUS_BOTTOM_LEFT"},
 {"STYLE_ID_ROUND_RADIUS_BOTTOM_RIGHT", get_STYLE_ID_ROUND_RADIUS_BOTTOM_RIGHT, METH_VARARGS, "STYLE_ID_ROUND_RADIUS_BOTTOM_RIGHT"},
 {"STYLE_ID_CHILDREN_LAYOUT", get_STYLE_ID_CHILDREN_LAYOUT, METH_VARARGS, "STYLE_ID_CHILDREN_LAYOUT"},
 {"STYLE_ID_SELF_LAYOUT", get_STYLE_ID_SELF_LAYOUT, METH_VARARGS, "STYLE_ID_SELF_LAYOUT"},
@@ -20945,7 +20945,7 @@ static PyMethodDef awtk_methods[] = {
 {"vgcanvas_set_transform", wrap_vgcanvas_set_transform, METH_VARARGS, "vgcanvas_set_transform"},
 {"vgcanvas_clip_path", wrap_vgcanvas_clip_path, METH_VARARGS, "vgcanvas_clip_path"},
 {"vgcanvas_clip_rect", wrap_vgcanvas_clip_rect, METH_VARARGS, "vgcanvas_clip_rect"},
-{"vgcanvas_is_rectf_int_clip_rect", wrap_vgcanvas_is_rectf_int_clip_rect, METH_VARARGS, "vgcanvas_is_rectf_int_clip_rect"},
+{"vgcanvas_is_rectf_in_clip_rect", wrap_vgcanvas_is_rectf_in_clip_rect, METH_VARARGS, "vgcanvas_is_rectf_in_clip_rect"},
 {"vgcanvas_intersect_clip_rect", wrap_vgcanvas_intersect_clip_rect, METH_VARARGS, "vgcanvas_intersect_clip_rect"},
 {"vgcanvas_fill", wrap_vgcanvas_fill, METH_VARARGS, "vgcanvas_fill"},
 {"vgcanvas_stroke", wrap_vgcanvas_stroke, METH_VARARGS, "vgcanvas_stroke"},

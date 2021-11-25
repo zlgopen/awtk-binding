@@ -62,7 +62,7 @@ var searchData=
   ['ispointerpressed_705',['isPointerPressed',['../classawtk_1_1_t_global.html#ab758dba2d8f973cc2d9f9b5d1ccfd070',1,'awtk::TGlobal']]],
   ['ispointinpath_706',['isPointInPath',['../classawtk_1_1_t_vgcanvas.html#aadab02126c911876901d5aabdedf14a4',1,'awtk::TVgcanvas']]],
   ['isquited_707',['isQuited',['../classawtk_1_1_t_dialog.html#a3bbe15f7435fec3a6dc747bef123070d',1,'awtk::TDialog']]],
-  ['isrectfintcliprect_708',['isRectfIntClipRect',['../classawtk_1_1_t_vgcanvas.html#a869f007e28b8c982eee563b76fad19c3',1,'awtk::TVgcanvas']]],
+  ['isrectfincliprect_708',['isRectfInClipRect',['../classawtk_1_1_t_vgcanvas.html#a6b4f5f8e5cfdff61e6ddc754b79a1066',1,'awtk::TVgcanvas']]],
   ['isvalid_709',['isValid',['../classawtk_1_1_t_style.html#a3aecd4172c3cdd847fe302360115ef6e',1,'awtk::TStyle']]],
   ['item_5fheight_710',['ITEM_HEIGHT',['../enumawtk_1_1_t_widget_prop.html#ad3119d719bb07c6052988df3b630ef27',1,'awtk::TWidgetProp']]],
   ['item_5fwidth_711',['ITEM_WIDTH',['../enumawtk_1_1_t_widget_prop.html#a63a0f485f409191c54b0695e1a73bd3b',1,'awtk::TWidgetProp']]],

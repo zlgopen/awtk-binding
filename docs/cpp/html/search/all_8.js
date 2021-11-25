@@ -23,6 +23,6 @@ var searchData=
   ['ispointerpressed_402',['IsPointerPressed',['../class_t_global.html#a801a449d0d5caa0ca5554c39d43f394f',1,'TGlobal']]],
   ['ispointinpath_403',['IsPointInPath',['../class_t_vgcanvas.html#af8db0583e1905a0c72b13b0870a58d38',1,'TVgcanvas']]],
   ['isquited_404',['IsQuited',['../class_t_dialog.html#adab2f069e08a84392e14225972cbb53c',1,'TDialog']]],
-  ['isrectfintcliprect_405',['IsRectfIntClipRect',['../class_t_vgcanvas.html#a45eba3f21e3458df388ebb3f5a8597ba',1,'TVgcanvas']]],
+  ['isrectfincliprect_405',['IsRectfInClipRect',['../class_t_vgcanvas.html#ae0e97e81a0cf8e3a542ec93df1663e26',1,'TVgcanvas']]],
   ['isvalid_406',['IsValid',['../class_t_style.html#ab338f7bae3dfe4da88d4f64b5efedf52',1,'TStyle']]]
 ];

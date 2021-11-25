@@ -525,9 +525,9 @@ declare function STYLE_ID_SELECTED_BG_COLOR():any;
 declare function STYLE_ID_SELECTED_FG_COLOR():any;
 declare function STYLE_ID_SELECTED_TEXT_COLOR():any;
 declare function STYLE_ID_ROUND_RADIUS():any;
-declare function STYLE_ID_ROUND_RADIUS_TOP_LETF():any;
+declare function STYLE_ID_ROUND_RADIUS_TOP_LEFT():any;
 declare function STYLE_ID_ROUND_RADIUS_TOP_RIGHT():any;
-declare function STYLE_ID_ROUND_RADIUS_BOTTOM_LETF():any;
+declare function STYLE_ID_ROUND_RADIUS_BOTTOM_LEFT():any;
 declare function STYLE_ID_ROUND_RADIUS_BOTTOM_RIGHT():any;
 declare function STYLE_ID_CHILDREN_LAYOUT():any;
 declare function STYLE_ID_SELF_LAYOUT():any;
@@ -601,7 +601,7 @@ declare function vgcanvas_transform(vg : any, a : number, b : number, c : number
 declare function vgcanvas_set_transform(vg : any, a : number, b : number, c : number, d : number, e : number, f : number) : TRet;
 declare function vgcanvas_clip_path(vg : any) : TRet;
 declare function vgcanvas_clip_rect(vg : any, x : number, y : number, w : number, h : number) : TRet;
-declare function vgcanvas_is_rectf_int_clip_rect(vg : any, left : number, top : number, right : number, bottom : number) : boolean;
+declare function vgcanvas_is_rectf_in_clip_rect(vg : any, left : number, top : number, right : number, bottom : number) : boolean;
 declare function vgcanvas_intersect_clip_rect(vg : any, x : number, y : number, w : number, h : number) : TRet;
 declare function vgcanvas_fill(vg : any) : TRet;
 declare function vgcanvas_stroke(vg : any) : TRet;
@@ -6778,7 +6778,7 @@ export enum TStyleId {
    * 左上角圆角半径(仅在WITH_VGCANVAS定义时生效)。
    *
    */
- ROUND_RADIUS_TOP_LETF = STYLE_ID_ROUND_RADIUS_TOP_LETF(),
+ ROUND_RADIUS_TOP_LEFT = STYLE_ID_ROUND_RADIUS_TOP_LEFT(),
 
   /**
    * 右上角圆角半径(仅在WITH_VGCANVAS定义时生效)。
@@ -6790,7 +6790,7 @@ export enum TStyleId {
    * 左下角圆角半径(仅在WITH_VGCANVAS定义时生效)。
    *
    */
- ROUND_RADIUS_BOTTOM_LETF = STYLE_ID_ROUND_RADIUS_BOTTOM_LETF(),
+ ROUND_RADIUS_BOTTOM_LEFT = STYLE_ID_ROUND_RADIUS_BOTTOM_LEFT(),
 
   /**
    * 右下角圆角半径(仅在WITH_VGCANVAS定义时生效)。
@@ -7646,8 +7646,8 @@ export class TVgcanvas {
    *
    * @returns 返回 TURE 则在区域中，返回 FALSE 则不在区域中。
    */
- isRectfIntClipRect(left : number, top : number, right : number, bottom : number) : boolean  {
-    return vgcanvas_is_rectf_int_clip_rect(this != null ? (this.nativeObj || this) : null, left, top, right, bottom);
+ isRectfInClipRect(left : number, top : number, right : number, bottom : number) : boolean  {
+    return vgcanvas_is_rectf_in_clip_rect(this != null ? (this.nativeObj || this) : null, left, top, right, bottom);
  }
 
 

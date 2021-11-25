@@ -4911,10 +4911,10 @@ int awtk_TStyleId_STYLE_ID_ROUND_RADIUS(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
-int awtk_TStyleId_STYLE_ID_ROUND_RADIUS_TOP_LETF(Runtime *runtime, JClass *clazz) {
+int awtk_TStyleId_STYLE_ID_ROUND_RADIUS_TOP_LEFT(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
-  jni_ctx_return_str(&actx, (char*)(STYLE_ID_ROUND_RADIUS_TOP_LETF));
+  jni_ctx_return_str(&actx, (char*)(STYLE_ID_ROUND_RADIUS_TOP_LEFT));
 
   return 0;
 }
@@ -4927,10 +4927,10 @@ int awtk_TStyleId_STYLE_ID_ROUND_RADIUS_TOP_RIGHT(Runtime *runtime, JClass *claz
   return 0;
 }
 
-int awtk_TStyleId_STYLE_ID_ROUND_RADIUS_BOTTOM_LETF(Runtime *runtime, JClass *clazz) {
+int awtk_TStyleId_STYLE_ID_ROUND_RADIUS_BOTTOM_LEFT(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
-  jni_ctx_return_str(&actx, (char*)(STYLE_ID_ROUND_RADIUS_BOTTOM_LETF));
+  jni_ctx_return_str(&actx, (char*)(STYLE_ID_ROUND_RADIUS_BOTTOM_LEFT));
 
   return 0;
 }
@@ -5713,7 +5713,7 @@ int awtk_TVgcanvas_vgcanvas_clip_rect(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
-int awtk_TVgcanvas_vgcanvas_is_rectf_int_clip_rect(Runtime *runtime, JClass *clazz) {
+int awtk_TVgcanvas_vgcanvas_is_rectf_in_clip_rect(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   bool_t ret = 0;
@@ -5722,7 +5722,7 @@ int awtk_TVgcanvas_vgcanvas_is_rectf_int_clip_rect(Runtime *runtime, JClass *cla
   float_t top = (float_t)jni_ctx_get_float(&actx);
   float_t right = (float_t)jni_ctx_get_float(&actx);
   float_t bottom = (float_t)jni_ctx_get_float(&actx);
-  ret = (bool_t)vgcanvas_is_rectf_int_clip_rect(vg, left, top, right, bottom);
+  ret = (bool_t)vgcanvas_is_rectf_in_clip_rect(vg, left, top, right, bottom);
   jni_ctx_return_int(&actx, (int32_t)(ret));
 
   return 0;
@@ -21735,9 +21735,9 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TStyleId",  "STYLE_ID_SELECTED_FG_COLOR",  "()Ljava/lang/String;",  awtk_TStyleId_STYLE_ID_SELECTED_FG_COLOR},
 {"awtk/TStyleId",  "STYLE_ID_SELECTED_TEXT_COLOR",  "()Ljava/lang/String;",  awtk_TStyleId_STYLE_ID_SELECTED_TEXT_COLOR},
 {"awtk/TStyleId",  "STYLE_ID_ROUND_RADIUS",  "()Ljava/lang/String;",  awtk_TStyleId_STYLE_ID_ROUND_RADIUS},
-{"awtk/TStyleId",  "STYLE_ID_ROUND_RADIUS_TOP_LETF",  "()Ljava/lang/String;",  awtk_TStyleId_STYLE_ID_ROUND_RADIUS_TOP_LETF},
+{"awtk/TStyleId",  "STYLE_ID_ROUND_RADIUS_TOP_LEFT",  "()Ljava/lang/String;",  awtk_TStyleId_STYLE_ID_ROUND_RADIUS_TOP_LEFT},
 {"awtk/TStyleId",  "STYLE_ID_ROUND_RADIUS_TOP_RIGHT",  "()Ljava/lang/String;",  awtk_TStyleId_STYLE_ID_ROUND_RADIUS_TOP_RIGHT},
-{"awtk/TStyleId",  "STYLE_ID_ROUND_RADIUS_BOTTOM_LETF",  "()Ljava/lang/String;",  awtk_TStyleId_STYLE_ID_ROUND_RADIUS_BOTTOM_LETF},
+{"awtk/TStyleId",  "STYLE_ID_ROUND_RADIUS_BOTTOM_LEFT",  "()Ljava/lang/String;",  awtk_TStyleId_STYLE_ID_ROUND_RADIUS_BOTTOM_LEFT},
 {"awtk/TStyleId",  "STYLE_ID_ROUND_RADIUS_BOTTOM_RIGHT",  "()Ljava/lang/String;",  awtk_TStyleId_STYLE_ID_ROUND_RADIUS_BOTTOM_RIGHT},
 {"awtk/TStyleId",  "STYLE_ID_CHILDREN_LAYOUT",  "()Ljava/lang/String;",  awtk_TStyleId_STYLE_ID_CHILDREN_LAYOUT},
 {"awtk/TStyleId",  "STYLE_ID_SELF_LAYOUT",  "()Ljava/lang/String;",  awtk_TStyleId_STYLE_ID_SELF_LAYOUT},
@@ -21811,7 +21811,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TVgcanvas",  "vgcanvas_set_transform",  "(JFFFFFF)I",  awtk_TVgcanvas_vgcanvas_set_transform},
 {"awtk/TVgcanvas",  "vgcanvas_clip_path",  "(J)I",  awtk_TVgcanvas_vgcanvas_clip_path},
 {"awtk/TVgcanvas",  "vgcanvas_clip_rect",  "(JFFFF)I",  awtk_TVgcanvas_vgcanvas_clip_rect},
-{"awtk/TVgcanvas",  "vgcanvas_is_rectf_int_clip_rect",  "(JFFFF)Z",  awtk_TVgcanvas_vgcanvas_is_rectf_int_clip_rect},
+{"awtk/TVgcanvas",  "vgcanvas_is_rectf_in_clip_rect",  "(JFFFF)Z",  awtk_TVgcanvas_vgcanvas_is_rectf_in_clip_rect},
 {"awtk/TVgcanvas",  "vgcanvas_intersect_clip_rect",  "(JFFFF)I",  awtk_TVgcanvas_vgcanvas_intersect_clip_rect},
 {"awtk/TVgcanvas",  "vgcanvas_fill",  "(J)I",  awtk_TVgcanvas_vgcanvas_fill},
 {"awtk/TVgcanvas",  "vgcanvas_stroke",  "(J)I",  awtk_TVgcanvas_vgcanvas_stroke},

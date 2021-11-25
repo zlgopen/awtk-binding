@@ -2872,7 +2872,7 @@ public:
    *
    * @return 返回 TURE 则在区域中，返回 FALSE 则不在区域中。
    */
-  bool IsRectfIntClipRect(float_t left, float_t top, float_t right, float_t bottom) ;
+  bool IsRectfInClipRect(float_t left, float_t top, float_t right, float_t bottom) ;
 
   /**
    * 设置一个与前一个裁剪区做交集的矩形裁剪区。

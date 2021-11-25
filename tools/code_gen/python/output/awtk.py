@@ -4761,7 +4761,7 @@ class TStyleId:
   # 左上角圆角半径(仅在WITH_VGCANVAS定义时生效)。
   #
   #
-  ROUND_RADIUS_TOP_LETF = STYLE_ID_ROUND_RADIUS_TOP_LETF()
+  ROUND_RADIUS_TOP_LEFT = STYLE_ID_ROUND_RADIUS_TOP_LEFT()
 
   #
   # 右上角圆角半径(仅在WITH_VGCANVAS定义时生效)。
@@ -4773,7 +4773,7 @@ class TStyleId:
   # 左下角圆角半径(仅在WITH_VGCANVAS定义时生效)。
   #
   #
-  ROUND_RADIUS_BOTTOM_LETF = STYLE_ID_ROUND_RADIUS_BOTTOM_LETF()
+  ROUND_RADIUS_BOTTOM_LEFT = STYLE_ID_ROUND_RADIUS_BOTTOM_LEFT()
 
   #
   # 右下角圆角半径(仅在WITH_VGCANVAS定义时生效)。
@@ -5631,8 +5631,8 @@ class TVgcanvas(object):
   #
   # @return 返回 TURE 则在区域中，返回 FALSE 则不在区域中。
   #
-  def is_rectf_int_clip_rect(self, left, top, right, bottom): 
-      return vgcanvas_is_rectf_int_clip_rect(awtk_get_native_obj(self), left, top, right, bottom)
+  def is_rectf_in_clip_rect(self, left, top, right, bottom): 
+      return vgcanvas_is_rectf_in_clip_rect(awtk_get_native_obj(self), left, top, right, bottom)
 
 
   #

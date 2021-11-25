@@ -1066,11 +1066,11 @@ const STYLE_ID_SELECTED_TEXT_COLOR = Module.cwrap("get_STYLE_ID_SELECTED_TEXT_CO
     "string", []);
 const STYLE_ID_ROUND_RADIUS = Module.cwrap("get_STYLE_ID_ROUND_RADIUS", 
     "string", []);
-const STYLE_ID_ROUND_RADIUS_TOP_LETF = Module.cwrap("get_STYLE_ID_ROUND_RADIUS_TOP_LETF", 
+const STYLE_ID_ROUND_RADIUS_TOP_LEFT = Module.cwrap("get_STYLE_ID_ROUND_RADIUS_TOP_LEFT", 
     "string", []);
 const STYLE_ID_ROUND_RADIUS_TOP_RIGHT = Module.cwrap("get_STYLE_ID_ROUND_RADIUS_TOP_RIGHT", 
     "string", []);
-const STYLE_ID_ROUND_RADIUS_BOTTOM_LETF = Module.cwrap("get_STYLE_ID_ROUND_RADIUS_BOTTOM_LETF", 
+const STYLE_ID_ROUND_RADIUS_BOTTOM_LEFT = Module.cwrap("get_STYLE_ID_ROUND_RADIUS_BOTTOM_LEFT", 
     "string", []);
 const STYLE_ID_ROUND_RADIUS_BOTTOM_RIGHT = Module.cwrap("get_STYLE_ID_ROUND_RADIUS_BOTTOM_RIGHT", 
     "string", []);
@@ -1218,7 +1218,7 @@ const vgcanvas_clip_path = Module.cwrap("vgcanvas_clip_path",
     "number", ["number"]);
 const vgcanvas_clip_rect = Module.cwrap("vgcanvas_clip_rect", 
     "number", ["number","number","number","number","number"]);
-const vgcanvas_is_rectf_int_clip_rect = Module.cwrap("vgcanvas_is_rectf_int_clip_rect", 
+const vgcanvas_is_rectf_in_clip_rect = Module.cwrap("vgcanvas_is_rectf_in_clip_rect", 
     "number", ["number","number","number","number","number"]);
 const vgcanvas_intersect_clip_rect = Module.cwrap("vgcanvas_intersect_clip_rect", 
     "number", ["number","number","number","number","number"]);
@@ -8912,7 +8912,7 @@ export enum TStyleId {
    * 左上角圆角半径(仅在WITH_VGCANVAS定义时生效)。
    *
    */
- ROUND_RADIUS_TOP_LETF = STYLE_ID_ROUND_RADIUS_TOP_LETF(),
+ ROUND_RADIUS_TOP_LEFT = STYLE_ID_ROUND_RADIUS_TOP_LEFT(),
 
   /**
    * 右上角圆角半径(仅在WITH_VGCANVAS定义时生效)。
@@ -8924,7 +8924,7 @@ export enum TStyleId {
    * 左下角圆角半径(仅在WITH_VGCANVAS定义时生效)。
    *
    */
- ROUND_RADIUS_BOTTOM_LETF = STYLE_ID_ROUND_RADIUS_BOTTOM_LETF(),
+ ROUND_RADIUS_BOTTOM_LEFT = STYLE_ID_ROUND_RADIUS_BOTTOM_LEFT(),
 
   /**
    * 右下角圆角半径(仅在WITH_VGCANVAS定义时生效)。
@@ -9780,8 +9780,8 @@ export class TVgcanvas {
    *
    * @returns 返回 TURE 则在区域中，返回 FALSE 则不在区域中。
    */
- isRectfIntClipRect(left : number, top : number, right : number, bottom : number) : boolean  {
-    return vgcanvas_is_rectf_int_clip_rect(this != null ? (this.nativeObj || this) : null, left, top, right, bottom);
+ isRectfInClipRect(left : number, top : number, right : number, bottom : number) : boolean  {
+    return vgcanvas_is_rectf_in_clip_rect(this != null ? (this.nativeObj || this) : null, left, top, right, bottom);
  }
 
 
