@@ -2332,20 +2332,6 @@ static HANDLER_PROTO(wrap_canvas_get_height)  {
   return jret;
 }
 
-static HANDLER_PROTO(wrap_canvas_get_clip_rect)  {
-  void* ctx = NULL;
-  jsvalue_t jret = JS_NULL;
-  if(argc >= 2) {
-  ret_t ret = (ret_t)0;
-  canvas_t* c = (canvas_t*)jsvalue_get_pointer(ctx, argv[0], "canvas_t*");
-  rect_t* r = (rect_t*)jsvalue_get_pointer(ctx, argv[1], "rect_t*");
-  ret = (ret_t)canvas_get_clip_rect(c, r);
-
-  jret = jsvalue_create_int(ctx, ret);
-  }
-  return jret;
-}
-
 static HANDLER_PROTO(wrap_canvas_set_clip_rect)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
@@ -2763,7 +2749,6 @@ static HANDLER_PROTO(wrap_canvas_t_get_prop_global_alpha)  {
 ret_t canvas_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"canvas_get_width", wrap_canvas_get_width);
   jerryx_handler_register_global((const jerry_char_t*)"canvas_get_height", wrap_canvas_get_height);
-  jerryx_handler_register_global((const jerry_char_t*)"canvas_get_clip_rect", wrap_canvas_get_clip_rect);
   jerryx_handler_register_global((const jerry_char_t*)"canvas_set_clip_rect", wrap_canvas_set_clip_rect);
   jerryx_handler_register_global((const jerry_char_t*)"canvas_set_clip_rect_ex", wrap_canvas_set_clip_rect_ex);
   jerryx_handler_register_global((const jerry_char_t*)"canvas_set_fill_color_str", wrap_canvas_set_fill_color_str);
@@ -3258,6 +3243,11 @@ static HANDLER_PROTO(get_EVT_REQUEST_QUIT_APP)  {
   return jsvalue_create_int(ctx, EVT_REQUEST_QUIT_APP);
 }
 
+static HANDLER_PROTO(get_EVT_THEME_WILL_CHANGE)  {
+  void* ctx = NULL;
+  return jsvalue_create_int(ctx, EVT_THEME_WILL_CHANGE);
+}
+
 static HANDLER_PROTO(get_EVT_THEME_CHANGED)  {
   void* ctx = NULL;
   return jsvalue_create_int(ctx, EVT_THEME_CHANGED);
@@ -3296,6 +3286,11 @@ static HANDLER_PROTO(get_EVT_MULTI_GESTURE)  {
 static HANDLER_PROTO(get_EVT_PAGE_CHANGED)  {
   void* ctx = NULL;
   return jsvalue_create_int(ctx, EVT_PAGE_CHANGED);
+}
+
+static HANDLER_PROTO(get_EVT_PAGE_CHANGING)  {
+  void* ctx = NULL;
+  return jsvalue_create_int(ctx, EVT_PAGE_CHANGING);
 }
 
 static HANDLER_PROTO(get_EVT_ASSET_MANAGER_LOAD_ASSET)  {
@@ -3468,6 +3463,7 @@ ret_t event_type_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"EVT_ORIENTATION_CHANGED", get_EVT_ORIENTATION_CHANGED);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_WIDGET_CREATED", get_EVT_WIDGET_CREATED);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_REQUEST_QUIT_APP", get_EVT_REQUEST_QUIT_APP);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_THEME_WILL_CHANGE", get_EVT_THEME_WILL_CHANGE);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_THEME_CHANGED", get_EVT_THEME_CHANGED);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_WIDGET_ADD_CHILD", get_EVT_WIDGET_ADD_CHILD);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_WIDGET_REMOVE_CHILD", get_EVT_WIDGET_REMOVE_CHILD);
@@ -3476,6 +3472,7 @@ ret_t event_type_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"EVT_SCROLL_END", get_EVT_SCROLL_END);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_MULTI_GESTURE", get_EVT_MULTI_GESTURE);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_PAGE_CHANGED", get_EVT_PAGE_CHANGED);
+  jerryx_handler_register_global((const jerry_char_t*)"EVT_PAGE_CHANGING", get_EVT_PAGE_CHANGING);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_ASSET_MANAGER_LOAD_ASSET", get_EVT_ASSET_MANAGER_LOAD_ASSET);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_ASSET_MANAGER_UNLOAD_ASSET", get_EVT_ASSET_MANAGER_UNLOAD_ASSET);
   jerryx_handler_register_global((const jerry_char_t*)"EVT_ASSET_MANAGER_CLEAR_CACHE", get_EVT_ASSET_MANAGER_CLEAR_CACHE);
@@ -5943,6 +5940,36 @@ static HANDLER_PROTO(wrap_vgcanvas_clip_rect)  {
   return jret;
 }
 
+static HANDLER_PROTO(wrap_vgcanvas_get_clip_rect)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  const rectf_t* ret = NULL;
+  vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
+  ret = (const rectf_t*)vgcanvas_get_clip_rect(vg);
+
+  jret = jsvalue_create_pointer(ctx, ret, "const rectf_t*");
+  }
+  return jret;
+}
+
+static HANDLER_PROTO(wrap_vgcanvas_is_rectf_int_clip_rect)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 5) {
+  bool_t ret = (bool_t)0;
+  vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
+  float_t left = (float_t)jsvalue_get_number_value(ctx, argv[1]);
+  float_t top = (float_t)jsvalue_get_number_value(ctx, argv[2]);
+  float_t right = (float_t)jsvalue_get_number_value(ctx, argv[3]);
+  float_t bottom = (float_t)jsvalue_get_number_value(ctx, argv[4]);
+  ret = (bool_t)vgcanvas_is_rectf_int_clip_rect(vg, left, top, right, bottom);
+
+  jret = jsvalue_create_bool(ctx, ret);
+  }
+  return jret;
+}
+
 static HANDLER_PROTO(wrap_vgcanvas_intersect_clip_rect)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
@@ -6109,6 +6136,30 @@ static HANDLER_PROTO(wrap_vgcanvas_draw_image)  {
   float_t dw = (float_t)jsvalue_get_number_value(ctx, argv[8]);
   float_t dh = (float_t)jsvalue_get_number_value(ctx, argv[9]);
   ret = (ret_t)vgcanvas_draw_image(vg, img, sx, sy, sw, sh, dx, dy, dw, dh);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+static HANDLER_PROTO(wrap_vgcanvas_draw_image_repeat)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 12) {
+  ret_t ret = (ret_t)0;
+  vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
+  bitmap_t* img = (bitmap_t*)jsvalue_get_pointer(ctx, argv[1], "bitmap_t*");
+  float_t sx = (float_t)jsvalue_get_number_value(ctx, argv[2]);
+  float_t sy = (float_t)jsvalue_get_number_value(ctx, argv[3]);
+  float_t sw = (float_t)jsvalue_get_number_value(ctx, argv[4]);
+  float_t sh = (float_t)jsvalue_get_number_value(ctx, argv[5]);
+  float_t dx = (float_t)jsvalue_get_number_value(ctx, argv[6]);
+  float_t dy = (float_t)jsvalue_get_number_value(ctx, argv[7]);
+  float_t dw = (float_t)jsvalue_get_number_value(ctx, argv[8]);
+  float_t dh = (float_t)jsvalue_get_number_value(ctx, argv[9]);
+  float_t dst_w = (float_t)jsvalue_get_number_value(ctx, argv[10]);
+  float_t dst_h = (float_t)jsvalue_get_number_value(ctx, argv[11]);
+  ret = (ret_t)vgcanvas_draw_image_repeat(vg, img, sx, sy, sw, sh, dx, dy, dw, dh, dst_w, dst_h);
 
   jret = jsvalue_create_int(ctx, ret);
   }
@@ -6428,6 +6479,8 @@ ret_t vgcanvas_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_set_transform", wrap_vgcanvas_set_transform);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_clip_path", wrap_vgcanvas_clip_path);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_clip_rect", wrap_vgcanvas_clip_rect);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_get_clip_rect", wrap_vgcanvas_get_clip_rect);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_is_rectf_int_clip_rect", wrap_vgcanvas_is_rectf_int_clip_rect);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_intersect_clip_rect", wrap_vgcanvas_intersect_clip_rect);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_fill", wrap_vgcanvas_fill);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_stroke", wrap_vgcanvas_stroke);
@@ -6439,6 +6492,7 @@ ret_t vgcanvas_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_fill_text", wrap_vgcanvas_fill_text);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_measure_text", wrap_vgcanvas_measure_text);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_draw_image", wrap_vgcanvas_draw_image);
+  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_draw_image_repeat", wrap_vgcanvas_draw_image_repeat);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_draw_icon", wrap_vgcanvas_draw_icon);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_set_antialias", wrap_vgcanvas_set_antialias);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_set_global_alpha", wrap_vgcanvas_set_global_alpha);
@@ -7876,6 +7930,11 @@ static HANDLER_PROTO(get_WIDGET_STATE_NORMAL)  {
   return jsvalue_create_string(ctx, WIDGET_STATE_NORMAL);
 }
 
+static HANDLER_PROTO(get_WIDGET_STATE_ACTIVATED)  {
+  void* ctx = NULL;
+  return jsvalue_create_string(ctx, WIDGET_STATE_ACTIVATED);
+}
+
 static HANDLER_PROTO(get_WIDGET_STATE_CHANGED)  {
   void* ctx = NULL;
   return jsvalue_create_string(ctx, WIDGET_STATE_CHANGED);
@@ -7984,6 +8043,7 @@ static HANDLER_PROTO(get_WIDGET_STATE_FOCUSED_OF_ACTIVE)  {
 ret_t widget_state_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_NONE", get_WIDGET_STATE_NONE);
   jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_NORMAL", get_WIDGET_STATE_NORMAL);
+  jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_ACTIVATED", get_WIDGET_STATE_ACTIVATED);
   jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_CHANGED", get_WIDGET_STATE_CHANGED);
   jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_PRESSED", get_WIDGET_STATE_PRESSED);
   jerryx_handler_register_global((const jerry_char_t*)"WIDGET_STATE_OVER", get_WIDGET_STATE_OVER);
@@ -8245,29 +8305,27 @@ static HANDLER_PROTO(wrap_widget_move_resize)  {
   return jret;
 }
 
+static HANDLER_PROTO(wrap_widget_get_value)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  float_t ret = (float_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  ret = (float_t)widget_get_value(widget);
+
+  jret = jsvalue_create_number(ctx, ret);
+  }
+  return jret;
+}
+
 static HANDLER_PROTO(wrap_widget_set_value)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  int32_t value = (int32_t)jsvalue_get_int_value(ctx, argv[1]);
+  float_t value = (float_t)jsvalue_get_number_value(ctx, argv[1]);
   ret = (ret_t)widget_set_value(widget, value);
-
-  jret = jsvalue_create_int(ctx, ret);
-  }
-  return jret;
-}
-
-static HANDLER_PROTO(wrap_widget_animate_value_to)  {
-  void* ctx = NULL;
-  jsvalue_t jret = JS_NULL;
-  if(argc >= 3) {
-  ret_t ret = (ret_t)0;
-  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  int32_t value = (int32_t)jsvalue_get_int_value(ctx, argv[1]);
-  uint32_t duration = (uint32_t)jsvalue_get_int_value(ctx, argv[2]);
-  ret = (ret_t)widget_animate_value_to(widget, value, duration);
 
   jret = jsvalue_create_int(ctx, ret);
   }
@@ -8280,8 +8338,64 @@ static HANDLER_PROTO(wrap_widget_add_value)  {
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  int32_t delta = (int32_t)jsvalue_get_int_value(ctx, argv[1]);
+  float_t delta = (float_t)jsvalue_get_number_value(ctx, argv[1]);
   ret = (ret_t)widget_add_value(widget, delta);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+static HANDLER_PROTO(wrap_widget_get_value_int)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  int32_t ret = (int32_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  ret = (int32_t)widget_get_value_int(widget);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+static HANDLER_PROTO(wrap_widget_set_value_int)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  int32_t value = (int32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)widget_set_value_int(widget, value);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+static HANDLER_PROTO(wrap_widget_add_value_int)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  int32_t delta = (int32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)widget_add_value_int(widget, delta);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+static HANDLER_PROTO(wrap_widget_animate_value_to)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 3) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  float_t value = (float_t)jsvalue_get_number_value(ctx, argv[1]);
+  uint32_t duration = (uint32_t)jsvalue_get_int_value(ctx, argv[2]);
+  ret = (ret_t)widget_animate_value_to(widget, value, duration);
 
   jret = jsvalue_create_int(ctx, ret);
   }
@@ -8397,19 +8511,6 @@ static HANDLER_PROTO(wrap_widget_set_tr_text)  {
   const char* text = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)widget_set_tr_text(widget, text);
   TKMEM_FREE(text);
-
-  jret = jsvalue_create_int(ctx, ret);
-  }
-  return jret;
-}
-
-static HANDLER_PROTO(wrap_widget_get_value)  {
-  void* ctx = NULL;
-  jsvalue_t jret = JS_NULL;
-  if(argc >= 1) {
-  int32_t ret = (int32_t)0;
-  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  ret = (int32_t)widget_get_value(widget);
 
   jret = jsvalue_create_int(ctx, ret);
   }
@@ -9059,6 +9160,38 @@ static HANDLER_PROTO(wrap_widget_get_prop_pointer)  {
   TKMEM_FREE(name);
 
   jret = jsvalue_create_pointer(ctx, ret, "void*");
+  }
+  return jret;
+}
+
+static HANDLER_PROTO(wrap_widget_set_prop_float)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 3) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  float_t v = (float_t)jsvalue_get_number_value(ctx, argv[2]);
+  ret = (ret_t)widget_set_prop_float(widget, name, v);
+  TKMEM_FREE(name);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+static HANDLER_PROTO(wrap_widget_get_prop_float)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 3) {
+  float_t ret = (float_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  float_t defval = (float_t)jsvalue_get_number_value(ctx, argv[2]);
+  ret = (float_t)widget_get_prop_float(widget, name, defval);
+  TKMEM_FREE(name);
+
+  jret = jsvalue_create_number(ctx, ret);
   }
   return jret;
 }
@@ -9908,9 +10041,13 @@ ret_t widget_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"widget_move", wrap_widget_move);
   jerryx_handler_register_global((const jerry_char_t*)"widget_resize", wrap_widget_resize);
   jerryx_handler_register_global((const jerry_char_t*)"widget_move_resize", wrap_widget_move_resize);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_get_value", wrap_widget_get_value);
   jerryx_handler_register_global((const jerry_char_t*)"widget_set_value", wrap_widget_set_value);
-  jerryx_handler_register_global((const jerry_char_t*)"widget_animate_value_to", wrap_widget_animate_value_to);
   jerryx_handler_register_global((const jerry_char_t*)"widget_add_value", wrap_widget_add_value);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_get_value_int", wrap_widget_get_value_int);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_value_int", wrap_widget_set_value_int);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_add_value_int", wrap_widget_add_value_int);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_animate_value_to", wrap_widget_animate_value_to);
   jerryx_handler_register_global((const jerry_char_t*)"widget_is_style_exist", wrap_widget_is_style_exist);
   jerryx_handler_register_global((const jerry_char_t*)"widget_use_style", wrap_widget_use_style);
   jerryx_handler_register_global((const jerry_char_t*)"widget_set_text_utf8", wrap_widget_set_text_utf8);
@@ -9918,7 +10055,6 @@ ret_t widget_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"widget_set_child_text_with_double", wrap_widget_set_child_text_with_double);
   jerryx_handler_register_global((const jerry_char_t*)"widget_set_child_text_with_int", wrap_widget_set_child_text_with_int);
   jerryx_handler_register_global((const jerry_char_t*)"widget_set_tr_text", wrap_widget_set_tr_text);
-  jerryx_handler_register_global((const jerry_char_t*)"widget_get_value", wrap_widget_get_value);
   jerryx_handler_register_global((const jerry_char_t*)"widget_get_enable", wrap_widget_get_enable);
   jerryx_handler_register_global((const jerry_char_t*)"widget_get_floating", wrap_widget_get_floating);
   jerryx_handler_register_global((const jerry_char_t*)"widget_get_auto_adjust_size", wrap_widget_get_auto_adjust_size);
@@ -9965,6 +10101,8 @@ ret_t widget_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"widget_get_prop_str", wrap_widget_get_prop_str);
   jerryx_handler_register_global((const jerry_char_t*)"widget_set_prop_pointer", wrap_widget_set_prop_pointer);
   jerryx_handler_register_global((const jerry_char_t*)"widget_get_prop_pointer", wrap_widget_get_prop_pointer);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_prop_float", wrap_widget_set_prop_float);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_get_prop_float", wrap_widget_get_prop_float);
   jerryx_handler_register_global((const jerry_char_t*)"widget_set_prop_int", wrap_widget_set_prop_int);
   jerryx_handler_register_global((const jerry_char_t*)"widget_get_prop_int", wrap_widget_get_prop_int);
   jerryx_handler_register_global((const jerry_char_t*)"widget_set_prop_bool", wrap_widget_set_prop_bool);
@@ -12461,6 +12599,25 @@ ret_t value_change_event_t_init(JSContext *ctx) {
  return RET_OK;
 }
 
+static HANDLER_PROTO(wrap_offset_change_event_cast)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  offset_change_event_t* ret = NULL;
+  event_t* event = (event_t*)jsvalue_get_pointer(ctx, argv[0], "event_t*");
+  ret = (offset_change_event_t*)offset_change_event_cast(event);
+
+  jret = jsvalue_create_pointer(ctx, ret, "offset_change_event_t*");
+  }
+  return jret;
+}
+
+ret_t offset_change_event_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"offset_change_event_cast", wrap_offset_change_event_cast);
+
+ return RET_OK;
+}
+
 static HANDLER_PROTO(wrap_pointer_event_cast)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
@@ -12832,6 +12989,35 @@ ret_t multi_gesture_event_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"multi_gesture_event_t_get_prop_y", wrap_multi_gesture_event_t_get_prop_y);
   jerryx_handler_register_global((const jerry_char_t*)"multi_gesture_event_t_get_prop_rotation", wrap_multi_gesture_event_t_get_prop_rotation);
   jerryx_handler_register_global((const jerry_char_t*)"multi_gesture_event_t_get_prop_distance", wrap_multi_gesture_event_t_get_prop_distance);
+
+ return RET_OK;
+}
+
+static HANDLER_PROTO(wrap_theme_change_event_cast)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  theme_change_event_t* ret = NULL;
+  event_t* event = (event_t*)jsvalue_get_pointer(ctx, argv[0], "event_t*");
+  ret = (theme_change_event_t*)theme_change_event_cast(event);
+
+  jret = jsvalue_create_pointer(ctx, ret, "theme_change_event_t*");
+  }
+  return jret;
+}
+
+static HANDLER_PROTO(wrap_theme_change_event_t_get_prop_name)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  theme_change_event_t* obj = (theme_change_event_t*)jsvalue_get_pointer(ctx, argv[0], "theme_change_event_t*");
+
+  jret = jsvalue_create_string(ctx, obj->name);
+  return jret;
+}
+
+ret_t theme_change_event_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"theme_change_event_cast", wrap_theme_change_event_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"theme_change_event_t_get_prop_name", wrap_theme_change_event_t_get_prop_name);
 
  return RET_OK;
 }
@@ -13885,6 +14071,20 @@ static HANDLER_PROTO(wrap_draggable_set_drag_window)  {
   return jret;
 }
 
+static HANDLER_PROTO(wrap_draggable_set_drag_parent)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  uint32_t drag_parent = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)draggable_set_drag_parent(widget, drag_parent);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 static HANDLER_PROTO(wrap_draggable_t_get_prop_top)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
@@ -13948,6 +14148,15 @@ static HANDLER_PROTO(wrap_draggable_t_get_prop_drag_window)  {
   return jret;
 }
 
+static HANDLER_PROTO(wrap_draggable_t_get_prop_drag_parent)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  draggable_t* obj = (draggable_t*)jsvalue_get_pointer(ctx, argv[0], "draggable_t*");
+
+  jret = jsvalue_create_int(ctx, obj->drag_parent);
+  return jret;
+}
+
 ret_t draggable_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"draggable_create", wrap_draggable_create);
   jerryx_handler_register_global((const jerry_char_t*)"draggable_cast", wrap_draggable_cast);
@@ -13958,6 +14167,7 @@ ret_t draggable_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"draggable_set_vertical_only", wrap_draggable_set_vertical_only);
   jerryx_handler_register_global((const jerry_char_t*)"draggable_set_horizontal_only", wrap_draggable_set_horizontal_only);
   jerryx_handler_register_global((const jerry_char_t*)"draggable_set_drag_window", wrap_draggable_set_drag_window);
+  jerryx_handler_register_global((const jerry_char_t*)"draggable_set_drag_parent", wrap_draggable_set_drag_parent);
   jerryx_handler_register_global((const jerry_char_t*)"draggable_t_get_prop_top", wrap_draggable_t_get_prop_top);
   jerryx_handler_register_global((const jerry_char_t*)"draggable_t_get_prop_bottom", wrap_draggable_t_get_prop_bottom);
   jerryx_handler_register_global((const jerry_char_t*)"draggable_t_get_prop_left", wrap_draggable_t_get_prop_left);
@@ -13965,6 +14175,7 @@ ret_t draggable_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"draggable_t_get_prop_vertical_only", wrap_draggable_t_get_prop_vertical_only);
   jerryx_handler_register_global((const jerry_char_t*)"draggable_t_get_prop_horizontal_only", wrap_draggable_t_get_prop_horizontal_only);
   jerryx_handler_register_global((const jerry_char_t*)"draggable_t_get_prop_drag_window", wrap_draggable_t_get_prop_drag_window);
+  jerryx_handler_register_global((const jerry_char_t*)"draggable_t_get_prop_drag_parent", wrap_draggable_t_get_prop_drag_parent);
 
  return RET_OK;
 }
@@ -16364,6 +16575,20 @@ static HANDLER_PROTO(wrap_hscroll_label_set_duration)  {
   return jret;
 }
 
+static HANDLER_PROTO(wrap_hscroll_label_set_speed)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  float_t speed = (float_t)jsvalue_get_number_value(ctx, argv[1]);
+  ret = (ret_t)hscroll_label_set_speed(widget, speed);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 static HANDLER_PROTO(wrap_hscroll_label_set_only_focus)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
@@ -16550,6 +16775,15 @@ static HANDLER_PROTO(wrap_hscroll_label_t_get_prop_duration)  {
   return jret;
 }
 
+static HANDLER_PROTO(wrap_hscroll_label_t_get_prop_speed)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  hscroll_label_t* obj = (hscroll_label_t*)jsvalue_get_pointer(ctx, argv[0], "hscroll_label_t*");
+
+  jret = jsvalue_create_number(ctx, obj->speed);
+  return jret;
+}
+
 static HANDLER_PROTO(wrap_hscroll_label_t_get_prop_xoffset)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
@@ -16572,6 +16806,7 @@ ret_t hscroll_label_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_create", wrap_hscroll_label_create);
   jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_set_lull", wrap_hscroll_label_set_lull);
   jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_set_duration", wrap_hscroll_label_set_duration);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_set_speed", wrap_hscroll_label_set_speed);
   jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_set_only_focus", wrap_hscroll_label_set_only_focus);
   jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_set_only_parent_focus", wrap_hscroll_label_set_only_parent_focus);
   jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_set_loop", wrap_hscroll_label_set_loop);
@@ -16588,6 +16823,7 @@ ret_t hscroll_label_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_t_get_prop_ellipses", wrap_hscroll_label_t_get_prop_ellipses);
   jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_t_get_prop_lull", wrap_hscroll_label_t_get_prop_lull);
   jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_t_get_prop_duration", wrap_hscroll_label_t_get_prop_duration);
+  jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_t_get_prop_speed", wrap_hscroll_label_t_get_prop_speed);
   jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_t_get_prop_xoffset", wrap_hscroll_label_t_get_prop_xoffset);
   jerryx_handler_register_global((const jerry_char_t*)"hscroll_label_t_get_prop_text_w", wrap_hscroll_label_t_get_prop_text_w);
 
@@ -17046,6 +17282,20 @@ static HANDLER_PROTO(wrap_scroll_bar_is_mobile)  {
   return jret;
 }
 
+static HANDLER_PROTO(wrap_scroll_bar_set_animator_time)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  uint32_t animator_time = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)scroll_bar_set_animator_time(widget, animator_time);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 static HANDLER_PROTO(wrap_scroll_bar_t_get_prop_virtual_size)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
@@ -17070,6 +17320,15 @@ static HANDLER_PROTO(wrap_scroll_bar_t_get_prop_row)  {
   scroll_bar_t* obj = (scroll_bar_t*)jsvalue_get_pointer(ctx, argv[0], "scroll_bar_t*");
 
   jret = jsvalue_create_int(ctx, obj->row);
+  return jret;
+}
+
+static HANDLER_PROTO(wrap_scroll_bar_t_get_prop_animator_time)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  scroll_bar_t* obj = (scroll_bar_t*)jsvalue_get_pointer(ctx, argv[0], "scroll_bar_t*");
+
+  jret = jsvalue_create_int(ctx, obj->animator_time);
   return jret;
 }
 
@@ -17104,9 +17363,11 @@ ret_t scroll_bar_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_set_value_only", wrap_scroll_bar_set_value_only);
   jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_set_auto_hide", wrap_scroll_bar_set_auto_hide);
   jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_is_mobile", wrap_scroll_bar_is_mobile);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_set_animator_time", wrap_scroll_bar_set_animator_time);
   jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_t_get_prop_virtual_size", wrap_scroll_bar_t_get_prop_virtual_size);
   jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_t_get_prop_value", wrap_scroll_bar_t_get_prop_value);
   jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_t_get_prop_row", wrap_scroll_bar_t_get_prop_row);
+  jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_t_get_prop_animator_time", wrap_scroll_bar_t_get_prop_animator_time);
   jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_t_get_prop_animatable", wrap_scroll_bar_t_get_prop_animatable);
   jerryx_handler_register_global((const jerry_char_t*)"scroll_bar_t_get_prop_auto_hide", wrap_scroll_bar_t_get_prop_auto_hide);
 
@@ -17752,6 +18013,20 @@ static HANDLER_PROTO(wrap_slide_indicator_set_indicated_target)  {
   return jret;
 }
 
+static HANDLER_PROTO(wrap_slide_indicator_set_transition)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  bool_t transition = (bool_t)jsvalue_get_boolean_value(ctx, argv[1]);
+  ret = (ret_t)slide_indicator_set_transition(widget, transition);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 static HANDLER_PROTO(wrap_slide_indicator_t_get_prop_value)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
@@ -17842,6 +18117,15 @@ static HANDLER_PROTO(wrap_slide_indicator_t_get_prop_indicated_target)  {
   return jret;
 }
 
+static HANDLER_PROTO(wrap_slide_indicator_t_get_prop_transition)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  slide_indicator_t* obj = (slide_indicator_t*)jsvalue_get_pointer(ctx, argv[0], "slide_indicator_t*");
+
+  jret = jsvalue_create_bool(ctx, obj->transition);
+  return jret;
+}
+
 ret_t slide_indicator_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_create", wrap_slide_indicator_create);
   jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_create_linear", wrap_slide_indicator_create_linear);
@@ -17856,6 +18140,7 @@ ret_t slide_indicator_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_set_size", wrap_slide_indicator_set_size);
   jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_set_anchor", wrap_slide_indicator_set_anchor);
   jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_set_indicated_target", wrap_slide_indicator_set_indicated_target);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_set_transition", wrap_slide_indicator_set_transition);
   jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_t_get_prop_value", wrap_slide_indicator_t_get_prop_value);
   jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_t_get_prop_max", wrap_slide_indicator_t_get_prop_max);
   jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_t_get_prop_default_paint", wrap_slide_indicator_t_get_prop_default_paint);
@@ -17866,6 +18151,7 @@ ret_t slide_indicator_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_t_get_prop_anchor_x", wrap_slide_indicator_t_get_prop_anchor_x);
   jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_t_get_prop_anchor_y", wrap_slide_indicator_t_get_prop_anchor_y);
   jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_t_get_prop_indicated_target", wrap_slide_indicator_t_get_prop_indicated_target);
+  jerryx_handler_register_global((const jerry_char_t*)"slide_indicator_t_get_prop_transition", wrap_slide_indicator_t_get_prop_transition);
 
  return RET_OK;
 }
@@ -21975,6 +22261,21 @@ static HANDLER_PROTO(wrap_native_window_set_cursor)  {
   return jret;
 }
 
+static HANDLER_PROTO(wrap_native_window_set_title)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  native_window_t* win = (native_window_t*)jsvalue_get_pointer(ctx, argv[0], "native_window_t*");
+  const char* app_name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  ret = (ret_t)native_window_set_title(win, app_name);
+  TKMEM_FREE(app_name);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 ret_t native_window_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"native_window_move", wrap_native_window_move);
   jerryx_handler_register_global((const jerry_char_t*)"native_window_resize", wrap_native_window_resize);
@@ -21986,6 +22287,7 @@ ret_t native_window_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"native_window_show_border", wrap_native_window_show_border);
   jerryx_handler_register_global((const jerry_char_t*)"native_window_set_fullscreen", wrap_native_window_set_fullscreen);
   jerryx_handler_register_global((const jerry_char_t*)"native_window_set_cursor", wrap_native_window_set_cursor);
+  jerryx_handler_register_global((const jerry_char_t*)"native_window_set_title", wrap_native_window_set_title);
 
  return RET_OK;
 }
@@ -22196,6 +22498,20 @@ static HANDLER_PROTO(wrap_gif_image_pause)  {
   return jret;
 }
 
+static HANDLER_PROTO(wrap_gif_image_set_loop)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  uint32_t loop = (uint32_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)gif_image_set_loop(widget, loop);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 static HANDLER_PROTO(wrap_gif_image_cast)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
@@ -22209,12 +22525,23 @@ static HANDLER_PROTO(wrap_gif_image_cast)  {
   return jret;
 }
 
+static HANDLER_PROTO(wrap_gif_image_t_get_prop_loop)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  gif_image_t* obj = (gif_image_t*)jsvalue_get_pointer(ctx, argv[0], "gif_image_t*");
+
+  jret = jsvalue_create_int(ctx, obj->loop);
+  return jret;
+}
+
 ret_t gif_image_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"gif_image_create", wrap_gif_image_create);
   jerryx_handler_register_global((const jerry_char_t*)"gif_image_play", wrap_gif_image_play);
   jerryx_handler_register_global((const jerry_char_t*)"gif_image_stop", wrap_gif_image_stop);
   jerryx_handler_register_global((const jerry_char_t*)"gif_image_pause", wrap_gif_image_pause);
+  jerryx_handler_register_global((const jerry_char_t*)"gif_image_set_loop", wrap_gif_image_set_loop);
   jerryx_handler_register_global((const jerry_char_t*)"gif_image_cast", wrap_gif_image_cast);
+  jerryx_handler_register_global((const jerry_char_t*)"gif_image_t_get_prop_loop", wrap_gif_image_t_get_prop_loop);
 
  return RET_OK;
 }
@@ -23361,11 +23688,13 @@ ret_t awtk_js_init(JSContext *ctx) {
   wheel_event_t_init(ctx);
   orientation_event_t_init(ctx);
   value_change_event_t_init(ctx);
+  offset_change_event_t_init(ctx);
   pointer_event_t_init(ctx);
   key_event_t_init(ctx);
   paint_event_t_init(ctx);
   window_event_t_init(ctx);
   multi_gesture_event_t_init(ctx);
+  theme_change_event_t_init(ctx);
   image_base_t_init(ctx);
   style_mutable_t_init(ctx);
   window_base_t_init(ctx);

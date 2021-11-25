@@ -105,6 +105,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a9968edb4e9fb09e04eb4ee8b86106ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7052c782b490bb88d321416461562389"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slide_indicator.html#a7052c782b490bb88d321416461562389">SetIndicatedTarget</a> (const char *target_name)</td></tr>
 <tr class="separator:a7052c782b490bb88d321416461562389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adac8007996f1e32b72a3559604dc9563"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slide_indicator.html#adac8007996f1e32b72a3559604dc9563">SetTransition</a> (bool transition)</td></tr>
+<tr class="separator:adac8007996f1e32b72a3559604dc9563"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90a90a5a7ddfb63372ad9ddae4bf11e2"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slide_indicator.html#a90a90a5a7ddfb63372ad9ddae4bf11e2">GetValue</a> () const</td></tr>
 <tr class="separator:a90a90a5a7ddfb63372ad9ddae4bf11e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a976b52a78acf4cb7f844bdf1234effd9"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slide_indicator.html#a976b52a78acf4cb7f844bdf1234effd9">GetMax</a> () const</td></tr>
@@ -125,6 +127,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a1f4ad88cd4f16ff8924c64c02d998b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f16a2151e502e3a3d93cdce2f0255a0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slide_indicator.html#a6f16a2151e502e3a3d93cdce2f0255a0">GetIndicatedTarget</a> () const</td></tr>
 <tr class="separator:a6f16a2151e502e3a3d93cdce2f0255a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad173b99585e01a80aeba353aee0d5e25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slide_indicator.html#ad173b99585e01a80aeba353aee0d5e25">GetTransition</a> () const</td></tr>
+<tr class="separator:ad173b99585e01a80aeba353aee0d5e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -531,6 +535,24 @@ static <a class="el" href="class_t_slide_indicator.html">TSlideIndicator</a>&#16
 
 </div>
 </div>
+<a id="ad173b99585e01a80aeba353aee0d5e25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad173b99585e01a80aeba353aee0d5e25">&#9670;&nbsp;</a></span>GetTransition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TSlideIndicator::GetTransition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>是否启用过渡效果。 </p>
+
+</div>
+</div>
 <a id="a90a90a5a7ddfb63372ad9ddae4bf11e2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a90a90a5a7ddfb63372ad9ddae4bf11e2">&#9670;&nbsp;</a></span>GetValue()</h2>
 
@@ -761,6 +783,32 @@ static <a class="el" href="class_t_slide_indicator.html">TSlideIndicator</a>&#16
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">spacing</td><td>指示器的间距。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="adac8007996f1e32b72a3559604dc9563"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adac8007996f1e32b72a3559604dc9563">&#9670;&nbsp;</a></span>SetTransition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TSlideIndicator::SetTransition </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>transition</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置是否启用过渡效果。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transition</td><td>是否启用过渡效果</td></tr>
   </table>
   </dd>
 </dl>

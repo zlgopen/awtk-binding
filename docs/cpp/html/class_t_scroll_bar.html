@@ -103,12 +103,16 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:aad5cf13c0c9ed79caf58aa072daeeee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a1653f58568b388494412bd11c6cfc3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_bar.html#a1a1653f58568b388494412bd11c6cfc3">IsMobile</a> ()</td></tr>
 <tr class="separator:a1a1653f58568b388494412bd11c6cfc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41d82384d1fd184b9e4cf35b901c036b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_bar.html#a41d82384d1fd184b9e4cf35b901c036b">SetAnimatorTime</a> (uint32_t animator_time)</td></tr>
+<tr class="separator:a41d82384d1fd184b9e4cf35b901c036b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab96947296739d842a372d8541c406132"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_bar.html#ab96947296739d842a372d8541c406132">GetVirtualSize</a> () const</td></tr>
 <tr class="separator:ab96947296739d842a372d8541c406132"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e42850d84226f4d5d29454d3d73b96c"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_bar.html#a5e42850d84226f4d5d29454d3d73b96c">GetValue</a> () const</td></tr>
 <tr class="separator:a5e42850d84226f4d5d29454d3d73b96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab8cc5a1421cb1b6dcb80ce89bba2e2f"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_bar.html#aab8cc5a1421cb1b6dcb80ce89bba2e2f">GetRow</a> () const</td></tr>
 <tr class="separator:aab8cc5a1421cb1b6dcb80ce89bba2e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba2ac8ed45af4af945c1e886fe1b09a8"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_bar.html#aba2ac8ed45af4af945c1e886fe1b09a8">GetAnimatorTime</a> () const</td></tr>
+<tr class="separator:aba2ac8ed45af4af945c1e886fe1b09a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae007a7f3334b813b2d0e7593e599ddec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_bar.html#ae007a7f3334b813b2d0e7593e599ddec">GetAnimatable</a> () const</td></tr>
 <tr class="separator:ae007a7f3334b813b2d0e7593e599ddec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7064e59b4bf56c65e4368c95da89543a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_bar.html#a7064e59b4bf56c65e4368c95da89543a">GetAutoHide</a> () const</td></tr>
@@ -408,6 +412,24 @@ static <a class="el" href="class_t_scroll_bar.html">TScrollBar</a>&#160;</td><td
 
 </div>
 </div>
+<a id="aba2ac8ed45af4af945c1e886fe1b09a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba2ac8ed45af4af945c1e886fe1b09a8">&#9670;&nbsp;</a></span>GetAnimatorTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t TScrollBar::GetAnimatorTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>翻页滚动动画时间。 </p>
+
+</div>
+</div>
 <a id="a7064e59b4bf56c65e4368c95da89543a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7064e59b4bf56c65e4368c95da89543a">&#9670;&nbsp;</a></span>GetAutoHide()</h2>
 
@@ -555,6 +577,32 @@ static <a class="el" href="class_t_scroll_bar.html">TScrollBar</a>&#160;</td><td
   <table class="params">
     <tr><td class="paramname">value</td><td>值。 </td></tr>
     <tr><td class="paramname">duration</td><td>动画持续时间。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a41d82384d1fd184b9e4cf35b901c036b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41d82384d1fd184b9e4cf35b901c036b">&#9670;&nbsp;</a></span>SetAnimatorTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TScrollBar::SetAnimatorTime </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>animator_time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置翻页滚动动画时间。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animator_time</td><td>时间。</td></tr>
   </table>
   </dd>
 </dl>

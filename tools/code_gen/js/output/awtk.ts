@@ -166,7 +166,6 @@ declare function IMAGE_DRAW_REPEAT3_X():any;
 declare function IMAGE_DRAW_REPEAT3_Y():any;
 declare function canvas_get_width(c : any) : number;
 declare function canvas_get_height(c : any) : number;
-declare function canvas_get_clip_rect(c : any, r : any) : TRet;
 declare function canvas_set_clip_rect(c : any, r : any) : TRet;
 declare function canvas_set_clip_rect_ex(c : any, r : any, translate : boolean) : TRet;
 declare function canvas_set_fill_color_str(c : any, color : string) : TRet;
@@ -280,6 +279,7 @@ declare function EVT_ORIENTATION_WILL_CHANGED():any;
 declare function EVT_ORIENTATION_CHANGED():any;
 declare function EVT_WIDGET_CREATED():any;
 declare function EVT_REQUEST_QUIT_APP():any;
+declare function EVT_THEME_WILL_CHANGE():any;
 declare function EVT_THEME_CHANGED():any;
 declare function EVT_WIDGET_ADD_CHILD():any;
 declare function EVT_WIDGET_REMOVE_CHILD():any;
@@ -288,6 +288,7 @@ declare function EVT_SCROLL():any;
 declare function EVT_SCROLL_END():any;
 declare function EVT_MULTI_GESTURE():any;
 declare function EVT_PAGE_CHANGED():any;
+declare function EVT_PAGE_CHANGING():any;
 declare function EVT_ASSET_MANAGER_LOAD_ASSET():any;
 declare function EVT_ASSET_MANAGER_UNLOAD_ASSET():any;
 declare function EVT_ASSET_MANAGER_CLEAR_CACHE():any;
@@ -600,6 +601,8 @@ declare function vgcanvas_transform(vg : any, a : number, b : number, c : number
 declare function vgcanvas_set_transform(vg : any, a : number, b : number, c : number, d : number, e : number, f : number) : TRet;
 declare function vgcanvas_clip_path(vg : any) : TRet;
 declare function vgcanvas_clip_rect(vg : any, x : number, y : number, w : number, h : number) : TRet;
+declare function vgcanvas_get_clip_rect(vg : any) : any;
+declare function vgcanvas_is_rectf_int_clip_rect(vg : any, left : number, top : number, right : number, bottom : number) : boolean;
 declare function vgcanvas_intersect_clip_rect(vg : any, x : number, y : number, w : number, h : number) : TRet;
 declare function vgcanvas_fill(vg : any) : TRet;
 declare function vgcanvas_stroke(vg : any) : TRet;
@@ -611,6 +614,7 @@ declare function vgcanvas_set_text_baseline(vg : any, value : string) : TRet;
 declare function vgcanvas_fill_text(vg : any, text : string, x : number, y : number, max_width : number) : TRet;
 declare function vgcanvas_measure_text(vg : any, text : string) : number;
 declare function vgcanvas_draw_image(vg : any, img : any, sx : number, sy : number, sw : number, sh : number, dx : number, dy : number, dw : number, dh : number) : TRet;
+declare function vgcanvas_draw_image_repeat(vg : any, img : any, sx : number, sy : number, sw : number, sh : number, dx : number, dy : number, dw : number, dh : number, dst_w : number, dst_h : number) : TRet;
 declare function vgcanvas_draw_icon(vg : any, img : any, sx : number, sy : number, sw : number, sh : number, dx : number, dy : number, dw : number, dh : number) : TRet;
 declare function vgcanvas_set_antialias(vg : any, value : any) : TRet;
 declare function vgcanvas_set_global_alpha(vg : any, alpha : number) : TRet;
@@ -866,6 +870,7 @@ declare function WINDOW_CLOSABLE_NO():any;
 declare function WINDOW_CLOSABLE_CONFIRM():any;
 declare function WIDGET_STATE_NONE():any;
 declare function WIDGET_STATE_NORMAL():any;
+declare function WIDGET_STATE_ACTIVATED():any;
 declare function WIDGET_STATE_CHANGED():any;
 declare function WIDGET_STATE_PRESSED():any;
 declare function WIDGET_STATE_OVER():any;
@@ -910,9 +915,13 @@ declare function widget_back_to_home(widget : any) : TRet;
 declare function widget_move(widget : any, x : number, y : number) : TRet;
 declare function widget_resize(widget : any, w : number, h : number) : TRet;
 declare function widget_move_resize(widget : any, x : number, y : number, w : number, h : number) : TRet;
+declare function widget_get_value(widget : any) : number;
 declare function widget_set_value(widget : any, value : any) : TRet;
-declare function widget_animate_value_to(widget : any, value : any, duration : number) : TRet;
 declare function widget_add_value(widget : any, delta : number) : TRet;
+declare function widget_get_value_int(widget : any) : number;
+declare function widget_set_value_int(widget : any, value : any) : TRet;
+declare function widget_add_value_int(widget : any, delta : number) : TRet;
+declare function widget_animate_value_to(widget : any, value : any, duration : number) : TRet;
 declare function widget_is_style_exist(widget : any, style_name : string, state_name : string) : boolean;
 declare function widget_use_style(widget : any, style : string) : TRet;
 declare function widget_set_text_utf8(widget : any, text : string) : TRet;
@@ -920,7 +929,6 @@ declare function widget_set_child_text_utf8(widget : any, name : string, text : 
 declare function widget_set_child_text_with_double(widget : any, name : string, format : string, value : any) : TRet;
 declare function widget_set_child_text_with_int(widget : any, name : string, format : string, value : any) : TRet;
 declare function widget_set_tr_text(widget : any, text : string) : TRet;
-declare function widget_get_value(widget : any) : number;
 declare function widget_get_enable(widget : any) : boolean;
 declare function widget_get_floating(widget : any) : boolean;
 declare function widget_get_auto_adjust_size(widget : any) : boolean;
@@ -967,6 +975,8 @@ declare function widget_set_prop_str(widget : any, name : string, v : string) : 
 declare function widget_get_prop_str(widget : any, name : string, defval : string) : string;
 declare function widget_set_prop_pointer(widget : any, name : string, v : any) : TRet;
 declare function widget_get_prop_pointer(widget : any, name : string) : any;
+declare function widget_set_prop_float(widget : any, name : string, v : number) : TRet;
+declare function widget_get_prop_float(widget : any, name : string, defval : number) : number;
 declare function widget_set_prop_int(widget : any, name : string, v : number) : TRet;
 declare function widget_get_prop_int(widget : any, name : string, defval : number) : number;
 declare function widget_set_prop_bool(widget : any, name : string, v : boolean) : TRet;
@@ -1319,6 +1329,7 @@ declare function orientation_event_cast(event : any) : any;
 declare function orientation_event_t_get_prop_orientation(nativeObj : any) : number;
 declare function orientation_event_t_get_prop_old_orientation(nativeObj : any) : number;
 declare function value_change_event_cast(event : any) : any;
+declare function offset_change_event_cast(event : any) : any;
 declare function pointer_event_cast(event : any) : any;
 declare function pointer_event_t_get_prop_x(nativeObj : any) : number;
 declare function pointer_event_t_get_prop_y(nativeObj : any) : number;
@@ -1352,6 +1363,8 @@ declare function multi_gesture_event_t_get_prop_x(nativeObj : any) : number;
 declare function multi_gesture_event_t_get_prop_y(nativeObj : any) : number;
 declare function multi_gesture_event_t_get_prop_rotation(nativeObj : any) : number;
 declare function multi_gesture_event_t_get_prop_distance(nativeObj : any) : number;
+declare function theme_change_event_cast(event : any) : any;
+declare function theme_change_event_t_get_prop_name(nativeObj : any) : string;
 declare function image_base_set_image(widget : any, name : string) : TRet;
 declare function image_base_set_rotation(widget : any, rotation : number) : TRet;
 declare function image_base_set_scale(widget : any, scale_x : number, scale_y : number) : TRet;
@@ -1430,6 +1443,7 @@ declare function draggable_set_right(widget : any, right : number) : TRet;
 declare function draggable_set_vertical_only(widget : any, vertical_only : boolean) : TRet;
 declare function draggable_set_horizontal_only(widget : any, horizontal_only : boolean) : TRet;
 declare function draggable_set_drag_window(widget : any, drag_window : boolean) : TRet;
+declare function draggable_set_drag_parent(widget : any, drag_parent : number) : TRet;
 declare function draggable_t_get_prop_top(nativeObj : any) : number;
 declare function draggable_t_get_prop_bottom(nativeObj : any) : number;
 declare function draggable_t_get_prop_left(nativeObj : any) : number;
@@ -1437,6 +1451,7 @@ declare function draggable_t_get_prop_right(nativeObj : any) : number;
 declare function draggable_t_get_prop_vertical_only(nativeObj : any) : boolean;
 declare function draggable_t_get_prop_horizontal_only(nativeObj : any) : boolean;
 declare function draggable_t_get_prop_drag_window(nativeObj : any) : boolean;
+declare function draggable_t_get_prop_drag_parent(nativeObj : any) : number;
 declare function file_browser_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function file_browser_view_cast(widget : any) : any;
 declare function file_browser_view_set_init_dir(widget : any, init_dir : string) : TRet;
@@ -1609,6 +1624,7 @@ declare function rich_text_t_get_prop_yslidable(nativeObj : any) : boolean;
 declare function hscroll_label_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function hscroll_label_set_lull(widget : any, lull : number) : TRet;
 declare function hscroll_label_set_duration(widget : any, duration : number) : TRet;
+declare function hscroll_label_set_speed(widget : any, speed : number) : TRet;
 declare function hscroll_label_set_only_focus(widget : any, only_focus : boolean) : TRet;
 declare function hscroll_label_set_only_parent_focus(widget : any, only_parent_focus : boolean) : TRet;
 declare function hscroll_label_set_loop(widget : any, loop : boolean) : TRet;
@@ -1625,6 +1641,7 @@ declare function hscroll_label_t_get_prop_yoyo(nativeObj : any) : boolean;
 declare function hscroll_label_t_get_prop_ellipses(nativeObj : any) : boolean;
 declare function hscroll_label_t_get_prop_lull(nativeObj : any) : number;
 declare function hscroll_label_t_get_prop_duration(nativeObj : any) : number;
+declare function hscroll_label_t_get_prop_speed(nativeObj : any) : number;
 declare function hscroll_label_t_get_prop_xoffset(nativeObj : any) : number;
 declare function hscroll_label_t_get_prop_text_w(nativeObj : any) : number;
 declare function list_item_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -1658,9 +1675,11 @@ declare function scroll_bar_scroll_delta(widget : any, delta : number) : TRet;
 declare function scroll_bar_set_value_only(widget : any, value : any) : TRet;
 declare function scroll_bar_set_auto_hide(widget : any, auto_hide : boolean) : TRet;
 declare function scroll_bar_is_mobile(widget : any) : boolean;
+declare function scroll_bar_set_animator_time(widget : any, animator_time : number) : TRet;
 declare function scroll_bar_t_get_prop_virtual_size(nativeObj : any) : number;
 declare function scroll_bar_t_get_prop_value(nativeObj : any) : number;
 declare function scroll_bar_t_get_prop_row(nativeObj : any) : number;
+declare function scroll_bar_t_get_prop_animator_time(nativeObj : any) : number;
 declare function scroll_bar_t_get_prop_animatable(nativeObj : any) : boolean;
 declare function scroll_bar_t_get_prop_auto_hide(nativeObj : any) : boolean;
 declare function scroll_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -1709,6 +1728,7 @@ declare function slide_indicator_set_spacing(widget : any, spacing : number) : T
 declare function slide_indicator_set_size(widget : any, size : number) : TRet;
 declare function slide_indicator_set_anchor(widget : any, anchor_x : string, anchor_y : string) : TRet;
 declare function slide_indicator_set_indicated_target(widget : any, target_name : string) : TRet;
+declare function slide_indicator_set_transition(widget : any, transition : boolean) : TRet;
 declare function slide_indicator_t_get_prop_value(nativeObj : any) : number;
 declare function slide_indicator_t_get_prop_max(nativeObj : any) : number;
 declare function slide_indicator_t_get_prop_default_paint(nativeObj : any) : TIndicatorDefaultPaint;
@@ -1719,6 +1739,7 @@ declare function slide_indicator_t_get_prop_size(nativeObj : any) : number;
 declare function slide_indicator_t_get_prop_anchor_x(nativeObj : any) : number;
 declare function slide_indicator_t_get_prop_anchor_y(nativeObj : any) : number;
 declare function slide_indicator_t_get_prop_indicated_target(nativeObj : any) : string;
+declare function slide_indicator_t_get_prop_transition(nativeObj : any) : boolean;
 declare function slide_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function slide_view_cast(widget : any) : any;
 declare function slide_view_set_auto_play(widget : any, auto_play : number) : TRet;
@@ -2006,6 +2027,7 @@ declare function native_window_center(win : any) : TRet;
 declare function native_window_show_border(win : any, show : boolean) : TRet;
 declare function native_window_set_fullscreen(win : any, fullscreen : boolean) : TRet;
 declare function native_window_set_cursor(win : any, name : string, img : any) : TRet;
+declare function native_window_set_title(win : any, app_name : string) : TRet;
 declare function window_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function window_create_default() : any;
 declare function window_set_fullscreen(widget : any, fullscreen : boolean) : TRet;
@@ -2020,7 +2042,9 @@ declare function gif_image_create(parent : any, x : number, y : number, w : numb
 declare function gif_image_play(widget : any) : TRet;
 declare function gif_image_stop(widget : any) : TRet;
 declare function gif_image_pause(widget : any) : TRet;
+declare function gif_image_set_loop(widget : any, loop : number) : TRet;
 declare function gif_image_cast(widget : any) : any;
+declare function gif_image_t_get_prop_loop(nativeObj : any) : number;
 declare function keyboard_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function keyboard_cast(widget : any) : any;
 declare function mutable_image_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -4050,18 +4074,6 @@ export class TCanvas {
 
 
   /**
-   * 获取裁剪区。
-   * 
-   * @param r rect对象。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- getClipRect(r : TRect) : TRet  {
-    return canvas_get_clip_rect(this != null ? (this.nativeObj || this) : null, r != null ? (r.nativeObj || r) : null);
- }
-
-
-  /**
    * 设置裁剪区。
    * 
    * @param r rect对象。
@@ -4995,6 +5007,12 @@ export enum TEventType {
  REQUEST_QUIT_APP = EVT_REQUEST_QUIT_APP(),
 
   /**
+   * 即将改变主题(event_t)。
+   *
+   */
+ THEME_WILL_CHANGE = EVT_THEME_WILL_CHANGE(),
+
+  /**
    * 主题变化(event_t)。
    *
    */
@@ -5041,6 +5059,12 @@ export enum TEventType {
    *
    */
  PAGE_CHANGED = EVT_PAGE_CHANGED(),
+
+  /**
+   * 页面正在改变(offset_change_event_t)。
+   *
+   */
+ PAGE_CHANGING = EVT_PAGE_CHANGING(),
 
   /**
    * 资源管理加载某个资源(assets_event_t)。
@@ -7614,6 +7638,32 @@ export class TVgcanvas {
 
 
   /**
+   * 获取矩形裁剪。
+   * 
+   *
+   * @returns 返回裁剪区。
+   */
+ getClipRect() : TRectf  {
+    return vgcanvas_get_clip_rect(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 矩形区域是否在矩形裁剪中。
+   * 
+   * @param left 矩形区域左边。
+   * @param top 矩形区域上边。
+   * @param right 矩形区域右边。
+   * @param bottom 矩形区域下边。
+   *
+   * @returns 返回 TURE 则在区域中，返回 FALSE 则不在区域中。
+   */
+ isRectfIntClipRect(left : number, top : number, right : number, bottom : number) : boolean  {
+    return vgcanvas_is_rectf_int_clip_rect(this != null ? (this.nativeObj || this) : null, left, top, right, bottom);
+ }
+
+
+  /**
    * 设置一个与前一个裁剪区做交集的矩形裁剪区。
    *如果下面这种情况，则不能直接调用 rect_intersect 函数来做矩形交集和 vgcanvas_clip_rect 函数设置裁剪区，而采用本函数做交集。
    *由于缩放和旋转以及平移会导致 vg 的坐标系和上一个裁剪区的坐标系不同，
@@ -7769,6 +7819,32 @@ export class TVgcanvas {
    */
  drawImage(img : TBitmap, sx : number, sy : number, sw : number, sh : number, dx : number, dy : number, dw : number, dh : number) : TRet  {
     return vgcanvas_draw_image(this != null ? (this.nativeObj || this) : null, img != null ? (img.nativeObj || img) : null, sx, sy, sw, sh, dx, dy, dw, dh);
+ }
+
+
+  /**
+   * 绘制图片。
+   *
+   *备注：
+   *当绘制区域大于原图区域时，多余的绘制区域会重复绘制原图区域的东西。（绘制图区按照绘制图片的宽高来绘制的）
+   *当绘制图片的宽高和原图的不同，在重复绘制的同时加入缩放。
+   * 
+   * @param img 图片。
+   * @param sx 原图区域的 x
+   * @param sy 原图区域的 y
+   * @param sw 原图区域的 w
+   * @param sh 原图区域的 h
+   * @param dx 绘制区域的 x
+   * @param dy 绘制区域的 y
+   * @param dw 绘制区域的 w
+   * @param dh 绘制区域的 h
+   * @param dst_w 绘制图片的宽
+   * @param dst_h 绘制图片的高
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ drawImageRepeat(img : TBitmap, sx : number, sy : number, sw : number, sh : number, dx : number, dy : number, dw : number, dh : number, dst_w : number, dst_h : number) : TRet  {
+    return vgcanvas_draw_image_repeat(this != null ? (this.nativeObj || this) : null, img != null ? (img.nativeObj || img) : null, sx, sy, sw, sh, dx, dy, dw, dh, dst_w, dst_h);
  }
 
 
@@ -9522,6 +9598,12 @@ export enum TWidgetState {
  NORMAL = WIDGET_STATE_NORMAL(),
 
   /**
+   * 3/5keys模式时，进入激活状态(此时方向键用于修改值)。
+   *
+   */
+ ACTIVATED = WIDGET_STATE_ACTIVATED(),
+
+  /**
    * 内容被修改的状态。
    *
    */
@@ -9879,6 +9961,17 @@ export class TWidget {
 
 
   /**
+   * 获取控件的值。只是对widget\_get\_prop的包装，值的意义由子类控件决定。
+   * 
+   *
+   * @returns 返回值。
+   */
+ getValue() : number  {
+    return widget_get_value(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
    * 设置控件的值。
    *只是对widget\_set\_prop的包装，值的意义由子类控件决定。
    * 
@@ -9888,6 +9981,56 @@ export class TWidget {
    */
  setValue(value : any) : TRet  {
     return widget_set_value(this != null ? (this.nativeObj || this) : null, value);
+ }
+
+
+  /**
+   * 增加控件的值。
+   *只是对widget\_set\_prop的包装，值的意义由子类控件决定。
+   * 
+   * @param delta 增量。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ addValue(delta : number) : TRet  {
+    return widget_add_value(this != null ? (this.nativeObj || this) : null, delta);
+ }
+
+
+  /**
+   * 获取控件的值。只是对widget\_get\_prop的包装，值的意义由子类控件决定。
+   * 
+   *
+   * @returns 返回值。
+   */
+ getValueInt() : number  {
+    return widget_get_value_int(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 设置控件的值。
+   *只是对widget\_set\_prop的包装，值的意义由子类控件决定。
+   * 
+   * @param value 值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setValueInt(value : any) : TRet  {
+    return widget_set_value_int(this != null ? (this.nativeObj || this) : null, value);
+ }
+
+
+  /**
+   * 增加控件的值。
+   *只是对widget\_set\_prop的包装，值的意义由子类控件决定。
+   * 
+   * @param delta 增量。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ addValueInt(delta : number) : TRet  {
+    return widget_add_value_int(this != null ? (this.nativeObj || this) : null, delta);
  }
 
 
@@ -9902,19 +10045,6 @@ export class TWidget {
    */
  animateValueTo(value : any, duration : number) : TRet  {
     return widget_animate_value_to(this != null ? (this.nativeObj || this) : null, value, duration);
- }
-
-
-  /**
-   * 增加控件的值。
-   *只是对widget\_set\_prop的包装，值的意义由子类控件决定。
-   * 
-   * @param delta 增量。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- addValue(delta : number) : TRet  {
-    return widget_add_value(this != null ? (this.nativeObj || this) : null, delta);
  }
 
 
@@ -10009,17 +10139,6 @@ export class TWidget {
    */
  setTrText(text : string) : TRet  {
     return widget_set_tr_text(this != null ? (this.nativeObj || this) : null, text);
- }
-
-
-  /**
-   * 获取控件的值。只是对widget\_get\_prop的包装，值的意义由子类控件决定。
-   * 
-   *
-   * @returns 返回值。
-   */
- getValue() : number  {
-    return widget_get_value(this != null ? (this.nativeObj || this) : null);
  }
 
 
@@ -10141,8 +10260,6 @@ export class TWidget {
 
   /**
    * 设置theme的名称，用于动态切换主题。名称与当前主题名称相同，则重新加载全部资源。
-   *
-   *> 目前只支持带有文件系统的平台。
    * 
    * @param name 主题的名称。
    *
@@ -10614,6 +10731,32 @@ export class TWidget {
    */
  getPropPointer(name : string) : any  {
     return widget_get_prop_pointer(this != null ? (this.nativeObj || this) : null, name);
+ }
+
+
+  /**
+   * 设置浮点数格式的属性。
+   * 
+   * @param name 属性的名称。
+   * @param v 属性的值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setPropFloat(name : string, v : number) : TRet  {
+    return widget_set_prop_float(this != null ? (this.nativeObj || this) : null, name, v);
+ }
+
+
+  /**
+   * 获取浮点数格式的属性。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @returns 返回属性的值。
+   */
+ getPropFloat(name : string, defval : number) : number  {
+    return widget_get_prop_float(this != null ? (this.nativeObj || this) : null, name, defval);
  }
 
 
@@ -13879,6 +14022,29 @@ export class TValueChangeEvent extends TEvent {
 
 };
 /**
+ * 值变化事件。
+ *
+ */
+export class TOffsetChangeEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转offset_change_event_t对象，主要给脚本语言使用。
+   * 
+   * @param event event对象。
+   *
+   * @returns event对象。
+   */
+ static cast(event : TEvent) : TOffsetChangeEvent  {
+    return new TOffsetChangeEvent(offset_change_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+};
+/**
  * 指针事件。
  *
  */
@@ -14244,6 +14410,38 @@ export class TMultiGestureEvent extends TEvent {
    */
  get distance() : number {
    return multi_gesture_event_t_get_prop_distance(this.nativeObj);
+ }
+
+};
+/**
+ * 主题变化事件。
+ *
+ */
+export class TThemeChangeEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转theme_change_event_t对象，主要给脚本语言使用。
+   * 
+   * @param event event对象。
+   *
+   * @returns 返回event对象。
+   */
+ static cast(event : TEvent) : TThemeChangeEvent  {
+    return new TThemeChangeEvent(theme_change_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+
+  /**
+   * 主题名称。
+   *
+   */
+ get name() : string {
+   return theme_change_event_t_get_prop_name(this.nativeObj);
  }
 
 };
@@ -15364,6 +15562,19 @@ export class TDraggable extends TWidget {
 
 
   /**
+   * 设置drag_parent。
+   *拖动窗口而不是父控件。比如放在对话框的titlebar上，拖动titlebar其实是希望拖动对话框。
+   * 
+   * @param drag_parent 0表示直系父控件，1表示父控件的父控件，依次类推。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setDragParent(drag_parent : number) : TRet  {
+    return draggable_set_drag_parent(this != null ? (this.nativeObj || this) : null, drag_parent);
+ }
+
+
+  /**
    * 拖动范围的顶部限制。缺省为父控件的顶部。
    *
    */
@@ -15451,6 +15662,19 @@ export class TDraggable extends TWidget {
 
  set dragWindow(v : boolean) {
    this.setDragWindow(v);
+ }
+
+
+  /**
+   * 拖动父控件。0表示直系父控件，1表示父控件的父控件，依次类推。
+   *
+   */
+ get dragParent() : number {
+   return draggable_t_get_prop_drag_parent(this.nativeObj);
+ }
+
+ set dragParent(v : number) {
+   this.setDragParent(v);
  }
 
 };
@@ -18116,6 +18340,18 @@ export class THscrollLabel extends TWidget {
 
 
   /**
+   * 设置speed（设置后 duration 不生效）。
+   * 
+   * @param speed 滚动速度(px/ms)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setSpeed(speed : number) : TRet  {
+    return hscroll_label_set_speed(this != null ? (this.nativeObj || this) : null, speed);
+ }
+
+
+  /**
    * 设置only_focus。
    * 
    * @param only_focus 是否只有处于focus时才滚动。
@@ -18309,6 +18545,19 @@ export class THscrollLabel extends TWidget {
 
  set duration(v : number) {
    this.setDuration(v);
+ }
+
+
+  /**
+   * 滚动速度(px/ms)（设置后 duration 不生效）。
+   *
+   */
+ get speed() : number {
+   return hscroll_label_t_get_prop_speed(this.nativeObj);
+ }
+
+ set speed(v : number) {
+   this.setSpeed(v);
  }
 
 
@@ -18935,6 +19184,18 @@ export class TScrollBar extends TWidget {
 
 
   /**
+   * 设置翻页滚动动画时间。
+   * 
+   * @param animator_time 时间。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setAnimatorTime(animator_time : number) : TRet  {
+    return scroll_bar_set_animator_time(this != null ? (this.nativeObj || this) : null, animator_time);
+ }
+
+
+  /**
    * 虚拟宽度或高度。
    *
    */
@@ -18962,6 +19223,19 @@ export class TScrollBar extends TWidget {
    */
  get row() : number {
    return scroll_bar_t_get_prop_row(this.nativeObj);
+ }
+
+
+  /**
+   * 翻页滚动动画时间。
+   *
+   */
+ get animatorTime() : number {
+   return scroll_bar_t_get_prop_animator_time(this.nativeObj);
+ }
+
+ set animatorTime(v : number) {
+   this.setAnimatorTime(v);
  }
 
 
@@ -19697,6 +19971,18 @@ export class TSlideIndicator extends TWidget {
 
 
   /**
+   * 设置是否启用过渡效果。
+   * 
+   * @param transition 是否启用过渡效果
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setTransition(transition : boolean) : TRet  {
+    return slide_indicator_set_transition(this != null ? (this.nativeObj || this) : null, transition);
+ }
+
+
+  /**
    * 值(缺省为0)。
    *
    */
@@ -19815,6 +20101,19 @@ export class TSlideIndicator extends TWidget {
 
  set indicatedTarget(v : string) {
    this.setIndicatedTarget(v);
+ }
+
+
+  /**
+   * 是否启用过渡效果。
+   *
+   */
+ get transition() : boolean {
+   return slide_indicator_t_get_prop_transition(this.nativeObj);
+ }
+
+ set transition(v : boolean) {
+   this.setTransition(v);
  }
 
 };
@@ -24781,6 +25080,18 @@ export class TNativeWindow extends TObject {
     return native_window_set_cursor(this != null ? (this.nativeObj || this) : null, name, img != null ? (img.nativeObj || img) : null);
  }
 
+
+  /**
+   * 设置程序窗口的名称。
+   * 
+   * @param app_name 程序窗口的名称。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setTitle(app_name : string) : TRet  {
+    return native_window_set_title(this != null ? (this.nativeObj || this) : null, app_name);
+ }
+
 };
 /**
  * 窗口。
@@ -25056,6 +25367,18 @@ export class TGifImage extends TImageBase {
 
 
   /**
+   * 设置循环播放次数。
+   * 
+   * @param loop 循环播放次数。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setLoop(loop : number) : TRet  {
+    return gif_image_set_loop(this != null ? (this.nativeObj || this) : null, loop);
+ }
+
+
+  /**
    * 转换为gif_image对象(供脚本语言使用)。
    * 
    * @param widget gif_image对象。
@@ -25064,6 +25387,19 @@ export class TGifImage extends TImageBase {
    */
  static cast(widget : TWidget) : TGifImage  {
     return new TGifImage(gif_image_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 循环播放的次数。
+   *
+   */
+ get loop() : number {
+   return gif_image_t_get_prop_loop(this.nativeObj);
+ }
+
+ set loop(v : number) {
+   this.setLoop(v);
  }
 
 };

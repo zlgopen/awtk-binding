@@ -15,7 +15,8 @@ var searchData=
   ['drawimage_56',['DrawImage',['../class_t_canvas.html#a39191ff063b921405d4d2bf243b5b1e1',1,'TCanvas::DrawImage()'],['../class_t_vgcanvas.html#afeecd9b59291fbced10e03dc83348c49',1,'TVgcanvas::DrawImage()']]],
   ['drawimageex_57',['DrawImageEx',['../class_t_canvas.html#ae991b51e189ef9c16013c2050fa48078',1,'TCanvas']]],
   ['drawimageex2_58',['DrawImageEx2',['../class_t_canvas.html#a2f0dbe8cac199e14dbfed0c2ec79840a',1,'TCanvas']]],
-  ['drawtext_59',['DrawText',['../class_t_canvas.html#a99c8972eb7b4f26feabebd9cc549bbcf',1,'TCanvas']]],
-  ['drawtextinrect_60',['DrawTextInRect',['../class_t_canvas.html#a6d62c5abfbb87ca8ce4b0563497dbceb',1,'TCanvas']]],
-  ['drawvline_61',['DrawVline',['../class_t_canvas.html#aa5fae36d2679bf87b0fd671a598e5d91',1,'TCanvas']]]
+  ['drawimagerepeat_59',['DrawImageRepeat',['../class_t_vgcanvas.html#a0a626925e5174c21b5e9492acf74eacc',1,'TVgcanvas']]],
+  ['drawtext_60',['DrawText',['../class_t_canvas.html#a99c8972eb7b4f26feabebd9cc549bbcf',1,'TCanvas']]],
+  ['drawtextinrect_61',['DrawTextInRect',['../class_t_canvas.html#a6d62c5abfbb87ca8ce4b0563497dbceb',1,'TCanvas']]],
+  ['drawvline_62',['DrawVline',['../class_t_canvas.html#aa5fae36d2679bf87b0fd671a598e5d91',1,'TCanvas']]]
 ];

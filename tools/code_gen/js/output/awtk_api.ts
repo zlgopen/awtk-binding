@@ -348,8 +348,6 @@ const canvas_get_width = Module.cwrap("canvas_get_width",
     "number", ["number"]);
 const canvas_get_height = Module.cwrap("canvas_get_height", 
     "number", ["number"]);
-const canvas_get_clip_rect = Module.cwrap("canvas_get_clip_rect", 
-    "number", ["number","number"]);
 const canvas_set_clip_rect = Module.cwrap("canvas_set_clip_rect", 
     "number", ["number","number"]);
 const canvas_set_clip_rect_ex = Module.cwrap("canvas_set_clip_rect_ex", 
@@ -576,6 +574,8 @@ const EVT_WIDGET_CREATED = Module.cwrap("get_EVT_WIDGET_CREATED",
     "number", []);
 const EVT_REQUEST_QUIT_APP = Module.cwrap("get_EVT_REQUEST_QUIT_APP", 
     "number", []);
+const EVT_THEME_WILL_CHANGE = Module.cwrap("get_EVT_THEME_WILL_CHANGE", 
+    "number", []);
 const EVT_THEME_CHANGED = Module.cwrap("get_EVT_THEME_CHANGED", 
     "number", []);
 const EVT_WIDGET_ADD_CHILD = Module.cwrap("get_EVT_WIDGET_ADD_CHILD", 
@@ -591,6 +591,8 @@ const EVT_SCROLL_END = Module.cwrap("get_EVT_SCROLL_END",
 const EVT_MULTI_GESTURE = Module.cwrap("get_EVT_MULTI_GESTURE", 
     "number", []);
 const EVT_PAGE_CHANGED = Module.cwrap("get_EVT_PAGE_CHANGED", 
+    "number", []);
+const EVT_PAGE_CHANGING = Module.cwrap("get_EVT_PAGE_CHANGING", 
     "number", []);
 const EVT_ASSET_MANAGER_LOAD_ASSET = Module.cwrap("get_EVT_ASSET_MANAGER_LOAD_ASSET", 
     "number", []);
@@ -1216,6 +1218,10 @@ const vgcanvas_clip_path = Module.cwrap("vgcanvas_clip_path",
     "number", ["number"]);
 const vgcanvas_clip_rect = Module.cwrap("vgcanvas_clip_rect", 
     "number", ["number","number","number","number","number"]);
+const vgcanvas_get_clip_rect = Module.cwrap("vgcanvas_get_clip_rect", 
+    "number", ["number"]);
+const vgcanvas_is_rectf_int_clip_rect = Module.cwrap("vgcanvas_is_rectf_int_clip_rect", 
+    "number", ["number","number","number","number","number"]);
 const vgcanvas_intersect_clip_rect = Module.cwrap("vgcanvas_intersect_clip_rect", 
     "number", ["number","number","number","number","number"]);
 const vgcanvas_fill = Module.cwrap("vgcanvas_fill", 
@@ -1238,6 +1244,8 @@ const vgcanvas_measure_text = Module.cwrap("vgcanvas_measure_text",
     "number", ["number","string"]);
 const vgcanvas_draw_image = Module.cwrap("vgcanvas_draw_image", 
     "number", ["number","number","number","number","number","number","number","number","number","number"]);
+const vgcanvas_draw_image_repeat = Module.cwrap("vgcanvas_draw_image_repeat", 
+    "number", ["number","number","number","number","number","number","number","number","number","number","number","number"]);
 const vgcanvas_draw_icon = Module.cwrap("vgcanvas_draw_icon", 
     "number", ["number","number","number","number","number","number","number","number","number","number"]);
 const vgcanvas_set_antialias = Module.cwrap("vgcanvas_set_antialias", 
@@ -1748,6 +1756,8 @@ const WIDGET_STATE_NONE = Module.cwrap("get_WIDGET_STATE_NONE",
     "string", []);
 const WIDGET_STATE_NORMAL = Module.cwrap("get_WIDGET_STATE_NORMAL", 
     "string", []);
+const WIDGET_STATE_ACTIVATED = Module.cwrap("get_WIDGET_STATE_ACTIVATED", 
+    "string", []);
 const WIDGET_STATE_CHANGED = Module.cwrap("get_WIDGET_STATE_CHANGED", 
     "string", []);
 const WIDGET_STATE_PRESSED = Module.cwrap("get_WIDGET_STATE_PRESSED", 
@@ -1836,12 +1846,20 @@ const widget_resize = Module.cwrap("widget_resize",
     "number", ["number","number","number"]);
 const widget_move_resize = Module.cwrap("widget_move_resize", 
     "number", ["number","number","number","number","number"]);
+const widget_get_value = Module.cwrap("widget_get_value", 
+    "number", ["number"]);
 const widget_set_value = Module.cwrap("widget_set_value", 
+    "number", ["number","number"]);
+const widget_add_value = Module.cwrap("widget_add_value", 
+    "number", ["number","number"]);
+const widget_get_value_int = Module.cwrap("widget_get_value_int", 
+    "number", ["number"]);
+const widget_set_value_int = Module.cwrap("widget_set_value_int", 
+    "number", ["number","number"]);
+const widget_add_value_int = Module.cwrap("widget_add_value_int", 
     "number", ["number","number"]);
 const widget_animate_value_to = Module.cwrap("widget_animate_value_to", 
     "number", ["number","number","number"]);
-const widget_add_value = Module.cwrap("widget_add_value", 
-    "number", ["number","number"]);
 const widget_is_style_exist = Module.cwrap("widget_is_style_exist", 
     "number", ["number","string","string"]);
 const widget_use_style = Module.cwrap("widget_use_style", 
@@ -1856,8 +1874,6 @@ const widget_set_child_text_with_int = Module.cwrap("widget_set_child_text_with_
     "number", ["number","string","string","number"]);
 const widget_set_tr_text = Module.cwrap("widget_set_tr_text", 
     "number", ["number","string"]);
-const widget_get_value = Module.cwrap("widget_get_value", 
-    "number", ["number"]);
 const widget_get_enable = Module.cwrap("widget_get_enable", 
     "number", ["number"]);
 const widget_get_floating = Module.cwrap("widget_get_floating", 
@@ -1950,6 +1966,10 @@ const widget_set_prop_pointer = Module.cwrap("widget_set_prop_pointer",
     "number", ["number","string","number"]);
 const widget_get_prop_pointer = Module.cwrap("widget_get_prop_pointer", 
     "number", ["number","string"]);
+const widget_set_prop_float = Module.cwrap("widget_set_prop_float", 
+    "number", ["number","string","number"]);
+const widget_get_prop_float = Module.cwrap("widget_get_prop_float", 
+    "number", ["number","string","number"]);
 const widget_set_prop_int = Module.cwrap("widget_set_prop_int", 
     "number", ["number","string","number"]);
 const widget_get_prop_int = Module.cwrap("widget_get_prop_int", 
@@ -2654,6 +2674,8 @@ const orientation_event_t_get_prop_old_orientation = Module.cwrap("orientation_e
     "number", ["number"]);
 const value_change_event_cast = Module.cwrap("value_change_event_cast", 
     "number", ["number"]);
+const offset_change_event_cast = Module.cwrap("offset_change_event_cast", 
+    "number", ["number"]);
 const pointer_event_cast = Module.cwrap("pointer_event_cast", 
     "number", ["number"]);
 const pointer_event_t_get_prop_x = Module.cwrap("pointer_event_t_get_prop_x", 
@@ -2720,6 +2742,10 @@ const multi_gesture_event_t_get_prop_rotation = Module.cwrap("multi_gesture_even
     "number", ["number"]);
 const multi_gesture_event_t_get_prop_distance = Module.cwrap("multi_gesture_event_t_get_prop_distance", 
     "number", ["number"]);
+const theme_change_event_cast = Module.cwrap("theme_change_event_cast", 
+    "number", ["number"]);
+const theme_change_event_t_get_prop_name = Module.cwrap("theme_change_event_t_get_prop_name", 
+    "string", ["number"]);
 const image_base_set_image = Module.cwrap("image_base_set_image", 
     "number", ["number","string"]);
 const image_base_set_rotation = Module.cwrap("image_base_set_rotation", 
@@ -2876,6 +2902,8 @@ const draggable_set_horizontal_only = Module.cwrap("draggable_set_horizontal_onl
     "number", ["number","number"]);
 const draggable_set_drag_window = Module.cwrap("draggable_set_drag_window", 
     "number", ["number","number"]);
+const draggable_set_drag_parent = Module.cwrap("draggable_set_drag_parent", 
+    "number", ["number","number"]);
 const draggable_t_get_prop_top = Module.cwrap("draggable_t_get_prop_top", 
     "number", ["number"]);
 const draggable_t_get_prop_bottom = Module.cwrap("draggable_t_get_prop_bottom", 
@@ -2889,6 +2917,8 @@ const draggable_t_get_prop_vertical_only = Module.cwrap("draggable_t_get_prop_ve
 const draggable_t_get_prop_horizontal_only = Module.cwrap("draggable_t_get_prop_horizontal_only", 
     "number", ["number"]);
 const draggable_t_get_prop_drag_window = Module.cwrap("draggable_t_get_prop_drag_window", 
+    "number", ["number"]);
+const draggable_t_get_prop_drag_parent = Module.cwrap("draggable_t_get_prop_drag_parent", 
     "number", ["number"]);
 const file_browser_view_create = Module.cwrap("file_browser_view_create", 
     "number", ["number","number","number","number","number"]);
@@ -3234,6 +3264,8 @@ const hscroll_label_set_lull = Module.cwrap("hscroll_label_set_lull",
     "number", ["number","number"]);
 const hscroll_label_set_duration = Module.cwrap("hscroll_label_set_duration", 
     "number", ["number","number"]);
+const hscroll_label_set_speed = Module.cwrap("hscroll_label_set_speed", 
+    "number", ["number","number"]);
 const hscroll_label_set_only_focus = Module.cwrap("hscroll_label_set_only_focus", 
     "number", ["number","number"]);
 const hscroll_label_set_only_parent_focus = Module.cwrap("hscroll_label_set_only_parent_focus", 
@@ -3265,6 +3297,8 @@ const hscroll_label_t_get_prop_ellipses = Module.cwrap("hscroll_label_t_get_prop
 const hscroll_label_t_get_prop_lull = Module.cwrap("hscroll_label_t_get_prop_lull", 
     "number", ["number"]);
 const hscroll_label_t_get_prop_duration = Module.cwrap("hscroll_label_t_get_prop_duration", 
+    "number", ["number"]);
+const hscroll_label_t_get_prop_speed = Module.cwrap("hscroll_label_t_get_prop_speed", 
     "number", ["number"]);
 const hscroll_label_t_get_prop_xoffset = Module.cwrap("hscroll_label_t_get_prop_xoffset", 
     "number", ["number"]);
@@ -3332,11 +3366,15 @@ const scroll_bar_set_auto_hide = Module.cwrap("scroll_bar_set_auto_hide",
     "number", ["number","number"]);
 const scroll_bar_is_mobile = Module.cwrap("scroll_bar_is_mobile", 
     "number", ["number"]);
+const scroll_bar_set_animator_time = Module.cwrap("scroll_bar_set_animator_time", 
+    "number", ["number","number"]);
 const scroll_bar_t_get_prop_virtual_size = Module.cwrap("scroll_bar_t_get_prop_virtual_size", 
     "number", ["number"]);
 const scroll_bar_t_get_prop_value = Module.cwrap("scroll_bar_t_get_prop_value", 
     "number", ["number"]);
 const scroll_bar_t_get_prop_row = Module.cwrap("scroll_bar_t_get_prop_row", 
+    "number", ["number"]);
+const scroll_bar_t_get_prop_animator_time = Module.cwrap("scroll_bar_t_get_prop_animator_time", 
     "number", ["number"]);
 const scroll_bar_t_get_prop_animatable = Module.cwrap("scroll_bar_t_get_prop_animatable", 
     "number", ["number"]);
@@ -3434,6 +3472,8 @@ const slide_indicator_set_anchor = Module.cwrap("slide_indicator_set_anchor",
     "number", ["number","string","string"]);
 const slide_indicator_set_indicated_target = Module.cwrap("slide_indicator_set_indicated_target", 
     "number", ["number","string"]);
+const slide_indicator_set_transition = Module.cwrap("slide_indicator_set_transition", 
+    "number", ["number","number"]);
 const slide_indicator_t_get_prop_value = Module.cwrap("slide_indicator_t_get_prop_value", 
     "number", ["number"]);
 const slide_indicator_t_get_prop_max = Module.cwrap("slide_indicator_t_get_prop_max", 
@@ -3454,6 +3494,8 @@ const slide_indicator_t_get_prop_anchor_y = Module.cwrap("slide_indicator_t_get_
     "number", ["number"]);
 const slide_indicator_t_get_prop_indicated_target = Module.cwrap("slide_indicator_t_get_prop_indicated_target", 
     "string", ["number"]);
+const slide_indicator_t_get_prop_transition = Module.cwrap("slide_indicator_t_get_prop_transition", 
+    "number", ["number"]);
 const slide_view_create = Module.cwrap("slide_view_create", 
     "number", ["number","number","number","number","number"]);
 const slide_view_cast = Module.cwrap("slide_view_cast", 
@@ -4028,6 +4070,8 @@ const native_window_set_fullscreen = Module.cwrap("native_window_set_fullscreen"
     "number", ["number","number"]);
 const native_window_set_cursor = Module.cwrap("native_window_set_cursor", 
     "number", ["number","string","number"]);
+const native_window_set_title = Module.cwrap("native_window_set_title", 
+    "number", ["number","string"]);
 const window_create = Module.cwrap("window_create", 
     "number", ["number","number","number","number","number"]);
 const window_create_default = Module.cwrap("window_create_default", 
@@ -4056,7 +4100,11 @@ const gif_image_stop = Module.cwrap("gif_image_stop",
     "number", ["number"]);
 const gif_image_pause = Module.cwrap("gif_image_pause", 
     "number", ["number"]);
+const gif_image_set_loop = Module.cwrap("gif_image_set_loop", 
+    "number", ["number","number"]);
 const gif_image_cast = Module.cwrap("gif_image_cast", 
+    "number", ["number"]);
+const gif_image_t_get_prop_loop = Module.cwrap("gif_image_t_get_prop_loop", 
     "number", ["number"]);
 const keyboard_create = Module.cwrap("keyboard_create", 
     "number", ["number","number","number","number","number"]);
@@ -6161,18 +6209,6 @@ export class TCanvas {
 
 
   /**
-   * 获取裁剪区。
-   * 
-   * @param r rect对象。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- getClipRect(r : TRect) : TRet  {
-    return canvas_get_clip_rect(this != null ? (this.nativeObj || this) : null, r != null ? (r.nativeObj || r) : null);
- }
-
-
-  /**
    * 设置裁剪区。
    * 
    * @param r rect对象。
@@ -7106,6 +7142,12 @@ export enum TEventType {
  REQUEST_QUIT_APP = EVT_REQUEST_QUIT_APP(),
 
   /**
+   * 即将改变主题(event_t)。
+   *
+   */
+ THEME_WILL_CHANGE = EVT_THEME_WILL_CHANGE(),
+
+  /**
    * 主题变化(event_t)。
    *
    */
@@ -7152,6 +7194,12 @@ export enum TEventType {
    *
    */
  PAGE_CHANGED = EVT_PAGE_CHANGED(),
+
+  /**
+   * 页面正在改变(offset_change_event_t)。
+   *
+   */
+ PAGE_CHANGING = EVT_PAGE_CHANGING(),
 
   /**
    * 资源管理加载某个资源(assets_event_t)。
@@ -9725,6 +9773,32 @@ export class TVgcanvas {
 
 
   /**
+   * 获取矩形裁剪。
+   * 
+   *
+   * @returns 返回裁剪区。
+   */
+ getClipRect() : TRectf  {
+    return vgcanvas_get_clip_rect(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 矩形区域是否在矩形裁剪中。
+   * 
+   * @param left 矩形区域左边。
+   * @param top 矩形区域上边。
+   * @param right 矩形区域右边。
+   * @param bottom 矩形区域下边。
+   *
+   * @returns 返回 TURE 则在区域中，返回 FALSE 则不在区域中。
+   */
+ isRectfIntClipRect(left : number, top : number, right : number, bottom : number) : boolean  {
+    return vgcanvas_is_rectf_int_clip_rect(this != null ? (this.nativeObj || this) : null, left, top, right, bottom);
+ }
+
+
+  /**
    * 设置一个与前一个裁剪区做交集的矩形裁剪区。
    *如果下面这种情况，则不能直接调用 rect_intersect 函数来做矩形交集和 vgcanvas_clip_rect 函数设置裁剪区，而采用本函数做交集。
    *由于缩放和旋转以及平移会导致 vg 的坐标系和上一个裁剪区的坐标系不同，
@@ -9880,6 +9954,32 @@ export class TVgcanvas {
    */
  drawImage(img : TBitmap, sx : number, sy : number, sw : number, sh : number, dx : number, dy : number, dw : number, dh : number) : TRet  {
     return vgcanvas_draw_image(this != null ? (this.nativeObj || this) : null, img != null ? (img.nativeObj || img) : null, sx, sy, sw, sh, dx, dy, dw, dh);
+ }
+
+
+  /**
+   * 绘制图片。
+   *
+   *备注：
+   *当绘制区域大于原图区域时，多余的绘制区域会重复绘制原图区域的东西。（绘制图区按照绘制图片的宽高来绘制的）
+   *当绘制图片的宽高和原图的不同，在重复绘制的同时加入缩放。
+   * 
+   * @param img 图片。
+   * @param sx 原图区域的 x
+   * @param sy 原图区域的 y
+   * @param sw 原图区域的 w
+   * @param sh 原图区域的 h
+   * @param dx 绘制区域的 x
+   * @param dy 绘制区域的 y
+   * @param dw 绘制区域的 w
+   * @param dh 绘制区域的 h
+   * @param dst_w 绘制图片的宽
+   * @param dst_h 绘制图片的高
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ drawImageRepeat(img : TBitmap, sx : number, sy : number, sw : number, sh : number, dx : number, dy : number, dw : number, dh : number, dst_w : number, dst_h : number) : TRet  {
+    return vgcanvas_draw_image_repeat(this != null ? (this.nativeObj || this) : null, img != null ? (img.nativeObj || img) : null, sx, sy, sw, sh, dx, dy, dw, dh, dst_w, dst_h);
  }
 
 
@@ -11633,6 +11733,12 @@ export enum TWidgetState {
  NORMAL = WIDGET_STATE_NORMAL(),
 
   /**
+   * 3/5keys模式时，进入激活状态(此时方向键用于修改值)。
+   *
+   */
+ ACTIVATED = WIDGET_STATE_ACTIVATED(),
+
+  /**
    * 内容被修改的状态。
    *
    */
@@ -11990,6 +12096,17 @@ export class TWidget {
 
 
   /**
+   * 获取控件的值。只是对widget\_get\_prop的包装，值的意义由子类控件决定。
+   * 
+   *
+   * @returns 返回值。
+   */
+ getValue() : number  {
+    return widget_get_value(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
    * 设置控件的值。
    *只是对widget\_set\_prop的包装，值的意义由子类控件决定。
    * 
@@ -11999,6 +12116,56 @@ export class TWidget {
    */
  setValue(value : any) : TRet  {
     return widget_set_value(this != null ? (this.nativeObj || this) : null, value);
+ }
+
+
+  /**
+   * 增加控件的值。
+   *只是对widget\_set\_prop的包装，值的意义由子类控件决定。
+   * 
+   * @param delta 增量。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ addValue(delta : number) : TRet  {
+    return widget_add_value(this != null ? (this.nativeObj || this) : null, delta);
+ }
+
+
+  /**
+   * 获取控件的值。只是对widget\_get\_prop的包装，值的意义由子类控件决定。
+   * 
+   *
+   * @returns 返回值。
+   */
+ getValueInt() : number  {
+    return widget_get_value_int(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 设置控件的值。
+   *只是对widget\_set\_prop的包装，值的意义由子类控件决定。
+   * 
+   * @param value 值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setValueInt(value : any) : TRet  {
+    return widget_set_value_int(this != null ? (this.nativeObj || this) : null, value);
+ }
+
+
+  /**
+   * 增加控件的值。
+   *只是对widget\_set\_prop的包装，值的意义由子类控件决定。
+   * 
+   * @param delta 增量。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ addValueInt(delta : number) : TRet  {
+    return widget_add_value_int(this != null ? (this.nativeObj || this) : null, delta);
  }
 
 
@@ -12013,19 +12180,6 @@ export class TWidget {
    */
  animateValueTo(value : any, duration : number) : TRet  {
     return widget_animate_value_to(this != null ? (this.nativeObj || this) : null, value, duration);
- }
-
-
-  /**
-   * 增加控件的值。
-   *只是对widget\_set\_prop的包装，值的意义由子类控件决定。
-   * 
-   * @param delta 增量。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- addValue(delta : number) : TRet  {
-    return widget_add_value(this != null ? (this.nativeObj || this) : null, delta);
  }
 
 
@@ -12120,17 +12274,6 @@ export class TWidget {
    */
  setTrText(text : string) : TRet  {
     return widget_set_tr_text(this != null ? (this.nativeObj || this) : null, text);
- }
-
-
-  /**
-   * 获取控件的值。只是对widget\_get\_prop的包装，值的意义由子类控件决定。
-   * 
-   *
-   * @returns 返回值。
-   */
- getValue() : number  {
-    return widget_get_value(this != null ? (this.nativeObj || this) : null);
  }
 
 
@@ -12252,8 +12395,6 @@ export class TWidget {
 
   /**
    * 设置theme的名称，用于动态切换主题。名称与当前主题名称相同，则重新加载全部资源。
-   *
-   *> 目前只支持带有文件系统的平台。
    * 
    * @param name 主题的名称。
    *
@@ -12725,6 +12866,32 @@ export class TWidget {
    */
  getPropPointer(name : string) : any  {
     return widget_get_prop_pointer(this != null ? (this.nativeObj || this) : null, name);
+ }
+
+
+  /**
+   * 设置浮点数格式的属性。
+   * 
+   * @param name 属性的名称。
+   * @param v 属性的值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setPropFloat(name : string, v : number) : TRet  {
+    return widget_set_prop_float(this != null ? (this.nativeObj || this) : null, name, v);
+ }
+
+
+  /**
+   * 获取浮点数格式的属性。
+   * 
+   * @param name 属性的名称。
+   * @param defval 缺省值。
+   *
+   * @returns 返回属性的值。
+   */
+ getPropFloat(name : string, defval : number) : number  {
+    return widget_get_prop_float(this != null ? (this.nativeObj || this) : null, name, defval);
  }
 
 
@@ -15990,6 +16157,29 @@ export class TValueChangeEvent extends TEvent {
 
 };
 /**
+ * 值变化事件。
+ *
+ */
+export class TOffsetChangeEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转offset_change_event_t对象，主要给脚本语言使用。
+   * 
+   * @param event event对象。
+   *
+   * @returns event对象。
+   */
+ static cast(event : TEvent) : TOffsetChangeEvent  {
+    return new TOffsetChangeEvent(offset_change_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+};
+/**
  * 指针事件。
  *
  */
@@ -16355,6 +16545,38 @@ export class TMultiGestureEvent extends TEvent {
    */
  get distance() : number {
    return multi_gesture_event_t_get_prop_distance(this.nativeObj);
+ }
+
+};
+/**
+ * 主题变化事件。
+ *
+ */
+export class TThemeChangeEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转theme_change_event_t对象，主要给脚本语言使用。
+   * 
+   * @param event event对象。
+   *
+   * @returns 返回event对象。
+   */
+ static cast(event : TEvent) : TThemeChangeEvent  {
+    return new TThemeChangeEvent(theme_change_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+
+  /**
+   * 主题名称。
+   *
+   */
+ get name() : string {
+   return theme_change_event_t_get_prop_name(this.nativeObj);
  }
 
 };
@@ -17475,6 +17697,19 @@ export class TDraggable extends TWidget {
 
 
   /**
+   * 设置drag_parent。
+   *拖动窗口而不是父控件。比如放在对话框的titlebar上，拖动titlebar其实是希望拖动对话框。
+   * 
+   * @param drag_parent 0表示直系父控件，1表示父控件的父控件，依次类推。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setDragParent(drag_parent : number) : TRet  {
+    return draggable_set_drag_parent(this != null ? (this.nativeObj || this) : null, drag_parent);
+ }
+
+
+  /**
    * 拖动范围的顶部限制。缺省为父控件的顶部。
    *
    */
@@ -17562,6 +17797,19 @@ export class TDraggable extends TWidget {
 
  set dragWindow(v : boolean) {
    this.setDragWindow(v);
+ }
+
+
+  /**
+   * 拖动父控件。0表示直系父控件，1表示父控件的父控件，依次类推。
+   *
+   */
+ get dragParent() : number {
+   return draggable_t_get_prop_drag_parent(this.nativeObj);
+ }
+
+ set dragParent(v : number) {
+   this.setDragParent(v);
  }
 
 };
@@ -20227,6 +20475,18 @@ export class THscrollLabel extends TWidget {
 
 
   /**
+   * 设置speed（设置后 duration 不生效）。
+   * 
+   * @param speed 滚动速度(px/ms)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setSpeed(speed : number) : TRet  {
+    return hscroll_label_set_speed(this != null ? (this.nativeObj || this) : null, speed);
+ }
+
+
+  /**
    * 设置only_focus。
    * 
    * @param only_focus 是否只有处于focus时才滚动。
@@ -20420,6 +20680,19 @@ export class THscrollLabel extends TWidget {
 
  set duration(v : number) {
    this.setDuration(v);
+ }
+
+
+  /**
+   * 滚动速度(px/ms)（设置后 duration 不生效）。
+   *
+   */
+ get speed() : number {
+   return hscroll_label_t_get_prop_speed(this.nativeObj);
+ }
+
+ set speed(v : number) {
+   this.setSpeed(v);
  }
 
 
@@ -21046,6 +21319,18 @@ export class TScrollBar extends TWidget {
 
 
   /**
+   * 设置翻页滚动动画时间。
+   * 
+   * @param animator_time 时间。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setAnimatorTime(animator_time : number) : TRet  {
+    return scroll_bar_set_animator_time(this != null ? (this.nativeObj || this) : null, animator_time);
+ }
+
+
+  /**
    * 虚拟宽度或高度。
    *
    */
@@ -21073,6 +21358,19 @@ export class TScrollBar extends TWidget {
    */
  get row() : number {
    return scroll_bar_t_get_prop_row(this.nativeObj);
+ }
+
+
+  /**
+   * 翻页滚动动画时间。
+   *
+   */
+ get animatorTime() : number {
+   return scroll_bar_t_get_prop_animator_time(this.nativeObj);
+ }
+
+ set animatorTime(v : number) {
+   this.setAnimatorTime(v);
  }
 
 
@@ -21808,6 +22106,18 @@ export class TSlideIndicator extends TWidget {
 
 
   /**
+   * 设置是否启用过渡效果。
+   * 
+   * @param transition 是否启用过渡效果
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setTransition(transition : boolean) : TRet  {
+    return slide_indicator_set_transition(this != null ? (this.nativeObj || this) : null, transition);
+ }
+
+
+  /**
    * 值(缺省为0)。
    *
    */
@@ -21926,6 +22236,19 @@ export class TSlideIndicator extends TWidget {
 
  set indicatedTarget(v : string) {
    this.setIndicatedTarget(v);
+ }
+
+
+  /**
+   * 是否启用过渡效果。
+   *
+   */
+ get transition() : boolean {
+   return slide_indicator_t_get_prop_transition(this.nativeObj);
+ }
+
+ set transition(v : boolean) {
+   this.setTransition(v);
  }
 
 };
@@ -26892,6 +27215,18 @@ export class TNativeWindow extends TObject {
     return native_window_set_cursor(this != null ? (this.nativeObj || this) : null, name, img != null ? (img.nativeObj || img) : null);
  }
 
+
+  /**
+   * 设置程序窗口的名称。
+   * 
+   * @param app_name 程序窗口的名称。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setTitle(app_name : string) : TRet  {
+    return native_window_set_title(this != null ? (this.nativeObj || this) : null, app_name);
+ }
+
 };
 /**
  * 窗口。
@@ -27167,6 +27502,18 @@ export class TGifImage extends TImageBase {
 
 
   /**
+   * 设置循环播放次数。
+   * 
+   * @param loop 循环播放次数。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setLoop(loop : number) : TRet  {
+    return gif_image_set_loop(this != null ? (this.nativeObj || this) : null, loop);
+ }
+
+
+  /**
    * 转换为gif_image对象(供脚本语言使用)。
    * 
    * @param widget gif_image对象。
@@ -27175,6 +27522,19 @@ export class TGifImage extends TImageBase {
    */
  static cast(widget : TWidget) : TGifImage  {
     return new TGifImage(gif_image_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 循环播放的次数。
+   *
+   */
+ get loop() : number {
+   return gif_image_t_get_prop_loop(this.nativeObj);
+ }
+
+ set loop(v : number) {
+   this.setLoop(v);
  }
 
 };

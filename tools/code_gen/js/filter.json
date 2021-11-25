@@ -3283,29 +3283,6 @@
             "desc": "canvas对象。"
           },
           {
-            "type": "rect_t*",
-            "name": "r",
-            "desc": "rect对象。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "获取裁剪区。",
-        "name": "canvas_get_clip_rect",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "canvas_t*",
-            "name": "c",
-            "desc": "canvas对象。"
-          },
-          {
             "type": "const rect_t*",
             "name": "r",
             "desc": "rect对象。"
@@ -4449,6 +4426,10 @@
         "name": "EVT_REQUEST_QUIT_APP"
       },
       {
+        "desc": "即将改变主题(event_t)。",
+        "name": "EVT_THEME_WILL_CHANGE"
+      },
+      {
         "desc": "主题变化(event_t)。",
         "name": "EVT_THEME_CHANGED"
       },
@@ -4479,6 +4460,10 @@
       {
         "desc": "页面改变了(event_t)。",
         "name": "EVT_PAGE_CHANGED"
+      },
+      {
+        "desc": "页面正在改变(offset_change_event_t)。",
+        "name": "EVT_PAGE_CHANGING"
       },
       {
         "desc": "资源管理加载某个资源(assets_event_t)。",
@@ -7422,6 +7407,62 @@
             "type": "vgcanvas_t*",
             "name": "vg",
             "desc": "vgcanvas对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取矩形裁剪。",
+        "name": "vgcanvas_get_clip_rect",
+        "return": {
+          "type": "const rectf_t*",
+          "desc": "返回裁剪区。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "vgcanvas_t*",
+            "name": "vg",
+            "desc": "vgcanvas对象。"
+          },
+          {
+            "type": "float_t",
+            "name": "left",
+            "desc": "矩形区域左边。"
+          },
+          {
+            "type": "float_t",
+            "name": "top",
+            "desc": "矩形区域上边。"
+          },
+          {
+            "type": "float_t",
+            "name": "right",
+            "desc": "矩形区域右边。"
+          },
+          {
+            "type": "float_t",
+            "name": "bottom",
+            "desc": "矩形区域下边。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "矩形区域是否在矩形裁剪中。",
+        "name": "vgcanvas_is_rectf_int_clip_rect",
+        "return": {
+          "type": "bool_t",
+          "desc": "返回 TURE 则在区域中，返回 FALSE 则不在区域中。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "vgcanvas_t*",
+            "name": "vg",
+            "desc": "vgcanvas对象。"
           },
           {
             "type": "float_t",
@@ -7729,6 +7770,79 @@
         },
         "desc": "绘制图片。",
         "name": "vgcanvas_draw_image",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "vgcanvas_t*",
+            "name": "vg",
+            "desc": "vgcanvas对象。"
+          },
+          {
+            "type": "bitmap_t*",
+            "name": "img",
+            "desc": "图片。"
+          },
+          {
+            "type": "float_t",
+            "name": "sx",
+            "desc": "原图区域的 x"
+          },
+          {
+            "type": "float_t",
+            "name": "sy",
+            "desc": "原图区域的 y"
+          },
+          {
+            "type": "float_t",
+            "name": "sw",
+            "desc": "原图区域的 w"
+          },
+          {
+            "type": "float_t",
+            "name": "sh",
+            "desc": "原图区域的 h"
+          },
+          {
+            "type": "float_t",
+            "name": "dx",
+            "desc": "绘制区域的 x"
+          },
+          {
+            "type": "float_t",
+            "name": "dy",
+            "desc": "绘制区域的 y"
+          },
+          {
+            "type": "float_t",
+            "name": "dw",
+            "desc": "绘制区域的 w"
+          },
+          {
+            "type": "float_t",
+            "name": "dh",
+            "desc": "绘制区域的 h"
+          },
+          {
+            "type": "float_t",
+            "name": "dst_w",
+            "desc": "绘制图片的宽"
+          },
+          {
+            "type": "float_t",
+            "name": "dst_h",
+            "desc": "绘制图片的高"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "绘制图片。\n\n备注：\n当绘制区域大于原图区域时，多余的绘制区域会重复绘制原图区域的东西。（绘制图区按照绘制图片的宽高来绘制的）\n当绘制图片的宽高和原图的不同，在重复绘制的同时加入缩放。",
+        "name": "vgcanvas_draw_image_repeat",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -9164,6 +9278,10 @@
         "name": "WIDGET_STATE_NORMAL"
       },
       {
+        "desc": "3/5keys模式时，进入激活状态(此时方向键用于修改值)。",
+        "name": "WIDGET_STATE_ACTIVATED"
+      },
+      {
         "desc": "内容被修改的状态。",
         "name": "WIDGET_STATE_CHANGED"
       },
@@ -9587,9 +9705,27 @@
             "type": "widget_t*",
             "name": "widget",
             "desc": "控件对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取控件的值。只是对widget\\_get\\_prop的包装，值的意义由子类控件决定。",
+        "name": "widget_get_value",
+        "return": {
+          "type": "float_t",
+          "desc": "返回值。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
           },
           {
-            "type": "int32_t",
+            "type": "float_t",
             "name": "value",
             "desc": "值。"
           }
@@ -9612,21 +9748,57 @@
             "desc": "控件对象。"
           },
           {
-            "type": "int32_t",
-            "name": "value",
-            "desc": "值。"
-          },
-          {
-            "type": "uint32_t",
-            "name": "duration",
-            "desc": "动画持续时间(毫秒)。"
+            "type": "float_t",
+            "name": "delta",
+            "desc": "增量。"
           }
         ],
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置控件的值(以动画形式变化到指定的值)。\n只是对widget\\_set\\_prop的包装，值的意义由子类控件决定。",
-        "name": "widget_animate_value_to",
+        "desc": "增加控件的值。\n只是对widget\\_set\\_prop的包装，值的意义由子类控件决定。",
+        "name": "widget_add_value",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取控件的值。只是对widget\\_get\\_prop的包装，值的意义由子类控件决定。",
+        "name": "widget_get_value_int",
+        "return": {
+          "type": "int32_t",
+          "desc": "返回值。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "int32_t",
+            "name": "value",
+            "desc": "值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置控件的值。\n只是对widget\\_set\\_prop的包装，值的意义由子类控件决定。",
+        "name": "widget_set_value_int",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -9649,7 +9821,35 @@
           "scriptable": true
         },
         "desc": "增加控件的值。\n只是对widget\\_set\\_prop的包装，值的意义由子类控件决定。",
-        "name": "widget_add_value",
+        "name": "widget_add_value_int",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "float_t",
+            "name": "value",
+            "desc": "值。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "duration",
+            "desc": "动画持续时间(毫秒)。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置控件的值(以动画形式变化到指定的值)。\n只是对widget\\_set\\_prop的包装，值的意义由子类控件决定。",
+        "name": "widget_animate_value_to",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -9859,24 +10059,6 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "获取控件的值。只是对widget\\_get\\_prop的包装，值的意义由子类控件决定。",
-        "name": "widget_get_value",
-        "return": {
-          "type": "int32_t",
-          "desc": "返回值。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "widget_t*",
-            "name": "widget",
-            "desc": "控件对象。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
         "desc": "获取控件enable属性值。",
         "name": "widget_get_enable",
         "return": {
@@ -10067,7 +10249,7 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置theme的名称，用于动态切换主题。名称与当前主题名称相同，则重新加载全部资源。\n\n> 目前只支持带有文件系统的平台。",
+        "desc": "设置theme的名称，用于动态切换主题。名称与当前主题名称相同，则重新加载全部资源。",
         "name": "widget_set_theme",
         "return": {
           "type": "ret_t",
@@ -10916,6 +11098,62 @@
         "name": "widget_get_prop_pointer",
         "return": {
           "type": "void*",
+          "desc": "返回属性的值。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "float_t",
+            "name": "v",
+            "desc": "属性的值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置浮点数格式的属性。",
+        "name": "widget_set_prop_float",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "float_t",
+            "name": "defval",
+            "desc": "缺省值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取浮点数格式的属性。",
+        "name": "widget_get_prop_float",
+        "return": {
+          "type": "float_t",
           "desc": "返回属性的值。"
         }
       },
@@ -15029,6 +15267,40 @@
           "cast": true,
           "scriptable": true
         },
+        "desc": "把event对象转offset_change_event_t对象，主要给脚本语言使用。",
+        "name": "offset_change_event_cast",
+        "return": {
+          "type": "offset_change_event_t*",
+          "desc": "event对象。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [],
+    "header": "base/events.h",
+    "desc": "值变化事件。",
+    "name": "offset_change_event_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "parent": "event_t",
+    "level": 2
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
+            "type": "event_t*",
+            "name": "event",
+            "desc": "event对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
         "desc": "把event对象转pointer_event_t对象，主要给脚本语言使用。",
         "name": "pointer_event_cast",
         "return": {
@@ -15435,6 +15707,50 @@
     "header": "base/events.h",
     "desc": "多点触摸手势事件。",
     "name": "multi_gesture_event_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "parent": "event_t",
+    "level": 2
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
+            "type": "event_t*",
+            "name": "event",
+            "desc": "event对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
+        "desc": "把event对象转theme_change_event_t对象，主要给脚本语言使用。",
+        "name": "theme_change_event_cast",
+        "return": {
+          "type": "theme_change_event_t*",
+          "desc": "返回event对象。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [
+      {
+        "name": "name",
+        "desc": "主题名称。",
+        "type": "const char*",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      }
+    ],
+    "header": "base/events.h",
+    "desc": "主题变化事件。",
+    "name": "theme_change_event_t",
     "annotation": {
       "scriptable": true
     },
@@ -17122,6 +17438,29 @@
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "drag_parent",
+            "desc": "0表示直系父控件，1表示父控件的父控件，依次类推。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置drag_parent。\n拖动窗口而不是父控件。比如放在对话框的titlebar上，拖动titlebar其实是希望拖动对话框。",
+        "name": "draggable_set_drag_parent",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
       }
     ],
     "events": [],
@@ -17208,6 +17547,19 @@
         "name": "drag_window",
         "desc": "拖动窗口而不是父控件。比如放在对话框的titlebar上，拖动titlebar其实是希望拖动对话框。",
         "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "drag_parent",
+        "desc": "拖动父控件。0表示直系父控件，1表示父控件的父控件，依次类推。",
+        "type": "uint32_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -21007,6 +21359,29 @@
             "desc": "控件对象。"
           },
           {
+            "type": "float_t",
+            "name": "speed",
+            "desc": "滚动速度(px/ms)。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置speed（设置后 duration 不生效）。",
+        "name": "hscroll_label_set_speed",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
             "type": "bool_t",
             "name": "only_focus",
             "desc": "是否只有处于focus时才滚动。"
@@ -21277,6 +21652,17 @@
         "name": "duration",
         "desc": "完整的滚动一次需要的时间(ms)，缺省5000ms。",
         "type": "int32_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "speed",
+        "desc": "滚动速度(px/ms)（设置后 duration 不生效）。",
+        "type": "float_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -22112,6 +22498,29 @@
           "type": "bool_t",
           "desc": "返回TRUE表示是mobile风格的，否则表示不是mobile风格的。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "scroll_bar控件。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "animator_time",
+            "desc": "时间。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置翻页滚动动画时间。",
+        "name": "scroll_bar_set_animator_time",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
       }
     ],
     "events": [
@@ -22157,6 +22566,19 @@
         "name": "row",
         "desc": "行的高度。",
         "type": "int32_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "animator_time",
+        "desc": "翻页滚动动画时间。",
+        "type": "uint32_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -22591,6 +23013,11 @@
       {
         "name": "EVT_PAGE_CHANGED",
         "desc": "页面改变事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_PAGE_CHANGING",
+        "desc": "页面正在改变。",
         "type": "event_t"
       }
     ],
@@ -23295,6 +23722,29 @@
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "slide_indicator对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "transition",
+            "desc": "是否启用过渡效果"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置是否启用过渡效果。",
+        "name": "slide_indicator_set_transition",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
       }
     ],
     "events": [
@@ -23311,6 +23761,11 @@
       {
         "name": "EVT_PAGE_CHANGED",
         "desc": "页面改变事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_PAGE_CHANGING",
+        "desc": "页面正在改变。",
         "type": "event_t"
       }
     ],
@@ -23436,6 +23891,19 @@
         "name": "indicated_target",
         "desc": "指示器指示的目标控件的名称。",
         "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "transition",
+        "desc": "是否启用过渡效果。",
+        "type": "bool_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -23699,6 +24167,11 @@
       {
         "name": "EVT_PAGE_CHANGED",
         "desc": "页面改变事件。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_PAGE_CHANGING",
+        "desc": "页面正在改变。",
         "type": "event_t"
       }
     ],
@@ -30307,6 +30780,29 @@
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "native_window_t*",
+            "name": "win",
+            "desc": "win对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "app_name",
+            "desc": "程序窗口的名称。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置程序窗口的名称。",
+        "name": "native_window_set_title",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
       }
     ],
     "events": [],
@@ -30656,6 +31152,29 @@
           {
             "type": "widget_t*",
             "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "loop",
+            "desc": "循环播放次数。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置循环播放次数。",
+        "name": "gif_image_set_loop",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
             "desc": "gif_image对象。"
           }
         ],
@@ -30672,7 +31191,21 @@
       }
     ],
     "events": [],
-    "properties": [],
+    "properties": [
+      {
+        "name": "loop",
+        "desc": "循环播放的次数。",
+        "type": "uint32_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      }
+    ],
     "header": "gif_image/gif_image.h",
     "desc": "GIF图片控件。\n\n> 注意：GIF图片的尺寸大于控件大小时会自动缩小图片，但一般的嵌入式系统的硬件加速都不支持图片缩放，\n所以缩放图片会导致性能明显下降。如果性能不满意时，请确认一下GIF图片的尺寸是否小余控件大小。\n\ngif\\_image\\_t是[image\\_base\\_t](image_base_t.md)的子类控件，image\\_base\\_t的函数均适用于gif\\_image\\_t控件。\n\n在xml中使用\"gif\"标签创建GIF图片控件。如：\n\n```xml\n<gif image=\"bee\"/>\n```\n\n>更多用法请参考：\n[gif\nimage](https://github.com/zlgopen/awtk/blob/master/design/default/ui/gif_image.xml)\n\n在c代码中使用函数gif\\_image\\_create创建GIF图片控件。如：\n\n```c\nwidget_t* image = gif_image_create(win, 10, 10, 200, 200);\nimage_set_image(image, \"bee\");\n```\n\n> 创建之后:\n>\n> 需要用widget\\_set\\_image设置图片名称。\n\n> 完整示例请参考：[gif image demo](\nhttps://github.com/zlgopen/awtk-c-demos/blob/master/demos/gif_image.c)\n\n可用通过style来设置控件的显示风格，如背景和边框等。如：\n\n```xml\n<gif>\n<style name=\"border\">\n<normal border_color=\"#000000\" bg_color=\"#e0e0e0\" text_color=\"black\"/>\n</style>\n</gif>\n```\n\n> 更多用法请参考：[theme default](\nhttps://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml)",
     "name": "gif_image_t",

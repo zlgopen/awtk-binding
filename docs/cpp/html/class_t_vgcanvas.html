@@ -124,6 +124,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:aaaff4d506749c7a205af49f8010c5e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac99bd1226ef6915519163e363432b5d8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#ac99bd1226ef6915519163e363432b5d8">ClipRect</a> (float_t x, float_t y, float_t w, float_t h)</td></tr>
 <tr class="separator:ac99bd1226ef6915519163e363432b5d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af12b9d4e58e9ce7b822fe1f50d339649"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_rectf.html">TRectf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#af12b9d4e58e9ce7b822fe1f50d339649">GetClipRect</a> ()</td></tr>
+<tr class="separator:af12b9d4e58e9ce7b822fe1f50d339649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45eba3f21e3458df388ebb3f5a8597ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a45eba3f21e3458df388ebb3f5a8597ba">IsRectfIntClipRect</a> (float_t left, float_t top, float_t right, float_t bottom)</td></tr>
+<tr class="separator:a45eba3f21e3458df388ebb3f5a8597ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae65059743e0039d06efddfd077a84b73"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#ae65059743e0039d06efddfd077a84b73">IntersectClipRect</a> (float_t x, float_t y, float_t w, float_t h)</td></tr>
 <tr class="separator:ae65059743e0039d06efddfd077a84b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14f818062de7fa7926b2e7d5ce8e189d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a14f818062de7fa7926b2e7d5ce8e189d">Fill</a> ()</td></tr>
@@ -146,6 +150,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:aa2cce0bdc6ab4233340be9c0bc377255"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afeecd9b59291fbced10e03dc83348c49"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#afeecd9b59291fbced10e03dc83348c49">DrawImage</a> (<a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;img, float_t sx, float_t sy, float_t sw, float_t sh, float_t dx, float_t dy, float_t dw, float_t dh)</td></tr>
 <tr class="separator:afeecd9b59291fbced10e03dc83348c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a626925e5174c21b5e9492acf74eacc"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a0a626925e5174c21b5e9492acf74eacc">DrawImageRepeat</a> (<a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;img, float_t sx, float_t sy, float_t sw, float_t sh, float_t dx, float_t dy, float_t dw, float_t dh, float_t dst_w, float_t dst_h)</td></tr>
+<tr class="separator:a0a626925e5174c21b5e9492acf74eacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cdf27f516c7a3d42ec4e3b75f487d07"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a5cdf27f516c7a3d42ec4e3b75f487d07">DrawIcon</a> (<a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;img, float_t sx, float_t sy, float_t sw, float_t sh, float_t dx, float_t dy, float_t dw, float_t dh)</td></tr>
 <tr class="separator:a5cdf27f516c7a3d42ec4e3b75f487d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04ee2510e3ce41575ea38dc120ae88ff"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a04ee2510e3ce41575ea38dc120ae88ff">SetAntialias</a> (bool value)</td></tr>
@@ -693,6 +699,107 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
+<a id="a0a626925e5174c21b5e9492acf74eacc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a626925e5174c21b5e9492acf74eacc">&#9670;&nbsp;</a></span>DrawImageRepeat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TVgcanvas::DrawImageRepeat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;&#160;</td>
+          <td class="paramname"><em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>sx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>sy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>sw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>sh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>dy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>dw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>dh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>dst_w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>dst_h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>绘制图片。</p>
+<p>备注： 当绘制区域大于原图区域时，多余的绘制区域会重复绘制原图区域的东西。（绘制图区按照绘制图片的宽高来绘制的） 当绘制图片的宽高和原图的不同，在重复绘制的同时加入缩放。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>图片。 </td></tr>
+    <tr><td class="paramname">sx</td><td>原图区域的 x </td></tr>
+    <tr><td class="paramname">sy</td><td>原图区域的 y </td></tr>
+    <tr><td class="paramname">sw</td><td>原图区域的 w </td></tr>
+    <tr><td class="paramname">sh</td><td>原图区域的 h </td></tr>
+    <tr><td class="paramname">dx</td><td>绘制区域的 x </td></tr>
+    <tr><td class="paramname">dy</td><td>绘制区域的 y </td></tr>
+    <tr><td class="paramname">dw</td><td>绘制区域的 w </td></tr>
+    <tr><td class="paramname">dh</td><td>绘制区域的 h </td></tr>
+    <tr><td class="paramname">dst_w</td><td>绘制图片的宽 </td></tr>
+    <tr><td class="paramname">dst_h</td><td>绘制图片的高</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="a481191e63898c7baef8552bc662e49dc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a481191e63898c7baef8552bc662e49dc">&#9670;&nbsp;</a></span>Ellipse()</h2>
 
@@ -848,6 +955,25 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
       </table>
 </div><div class="memdoc">
 <p>是否启用反走样功能。 </p>
+
+</div>
+</div>
+<a id="af12b9d4e58e9ce7b822fe1f50d339649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af12b9d4e58e9ce7b822fe1f50d339649">&#9670;&nbsp;</a></span>GetClipRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_rectf.html">TRectf</a> TVgcanvas::GetClipRect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取矩形裁剪。</p>
+<dl class="section return"><dt>返回</dt><dd>返回裁剪区。 </dd></dl>
 
 </div>
 </div>
@@ -1179,6 +1305,57 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>返回TRUE表示在，否则表示不在。 </dd></dl>
+
+</div>
+</div>
+<a id="a45eba3f21e3458df388ebb3f5a8597ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45eba3f21e3458df388ebb3f5a8597ba">&#9670;&nbsp;</a></span>IsRectfIntClipRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TVgcanvas::IsRectfIntClipRect </td>
+          <td>(</td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>top</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>bottom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>矩形区域是否在矩形裁剪中。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left</td><td>矩形区域左边。 </td></tr>
+    <tr><td class="paramname">top</td><td>矩形区域上边。 </td></tr>
+    <tr><td class="paramname">right</td><td>矩形区域右边。 </td></tr>
+    <tr><td class="paramname">bottom</td><td>矩形区域下边。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回 TURE 则在区域中，返回 FALSE 则不在区域中。 </dd></dl>
 
 </div>
 </div>

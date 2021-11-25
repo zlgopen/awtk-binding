@@ -101,6 +101,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a9e2919804a3499fc60ac2c1481afbb2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab305e1cf8174ca91d36d25d4ab9840e1"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_draggable.html#ab305e1cf8174ca91d36d25d4ab9840e1">SetDragWindow</a> (bool drag_window)</td></tr>
 <tr class="separator:ab305e1cf8174ca91d36d25d4ab9840e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1489a2c188e646f0c1f77ee5f774dd98"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_draggable.html#a1489a2c188e646f0c1f77ee5f774dd98">SetDragParent</a> (uint32_t drag_parent)</td></tr>
+<tr class="separator:a1489a2c188e646f0c1f77ee5f774dd98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3687c79a0617ac922f873da75edf2900"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_draggable.html#a3687c79a0617ac922f873da75edf2900">GetTop</a> () const</td></tr>
 <tr class="separator:a3687c79a0617ac922f873da75edf2900"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bcc06371aa889e9e4a409feacc6f65c"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_draggable.html#a0bcc06371aa889e9e4a409feacc6f65c">GetBottom</a> () const</td></tr>
@@ -115,6 +117,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a77cac43dad697d7498672128f2e5cf7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9d9a0fb1ee8b25c07497c5363371687"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_draggable.html#ad9d9a0fb1ee8b25c07497c5363371687">GetDragWindow</a> () const</td></tr>
 <tr class="separator:ad9d9a0fb1ee8b25c07497c5363371687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70a20e193000e02c43cb74cc78ae929e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_draggable.html#a70a20e193000e02c43cb74cc78ae929e">GetDragParent</a> () const</td></tr>
+<tr class="separator:a70a20e193000e02c43cb74cc78ae929e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -234,6 +238,24 @@ static <a class="el" href="class_t_draggable.html">TDraggable</a>&#160;</td><td 
       </table>
 </div><div class="memdoc">
 <p>拖动范围的底部限制。缺省为父控件的底部。 </p>
+
+</div>
+</div>
+<a id="a70a20e193000e02c43cb74cc78ae929e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70a20e193000e02c43cb74cc78ae929e">&#9670;&nbsp;</a></span>GetDragParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t TDraggable::GetDragParent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>拖动父控件。0表示直系父控件，1表示父控件的父控件，依次类推。 </p>
 
 </div>
 </div>
@@ -364,6 +386,32 @@ static <a class="el" href="class_t_draggable.html">TDraggable</a>&#160;</td><td 
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">bottom</td><td>拖动范围的底部限制。缺省为父控件的底部。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a1489a2c188e646f0c1f77ee5f774dd98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1489a2c188e646f0c1f77ee5f774dd98">&#9670;&nbsp;</a></span>SetDragParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TDraggable::SetDragParent </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>drag_parent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置drag_parent。 拖动窗口而不是父控件。比如放在对话框的titlebar上，拖动titlebar其实是希望拖动对话框。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">drag_parent</td><td>0表示直系父控件，1表示父控件的父控件，依次类推。</td></tr>
   </table>
   </dd>
 </dl>

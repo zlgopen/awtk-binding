@@ -91,6 +91,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ac29f5357476d93ebe59751e260ff690e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9561b455542c20d0b96f574ad22276e6"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_hscroll_label.html#a9561b455542c20d0b96f574ad22276e6">SetDuration</a> (int32_t duration)</td></tr>
 <tr class="separator:a9561b455542c20d0b96f574ad22276e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af10a44ad68d6171a30cb7233add9963a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_hscroll_label.html#af10a44ad68d6171a30cb7233add9963a">SetSpeed</a> (float_t speed)</td></tr>
+<tr class="separator:af10a44ad68d6171a30cb7233add9963a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a205fee2a33f07951bfd19e6ecbd22f3d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_hscroll_label.html#a205fee2a33f07951bfd19e6ecbd22f3d">SetOnlyFocus</a> (bool only_focus)</td></tr>
 <tr class="separator:a205fee2a33f07951bfd19e6ecbd22f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8eb9aecb9e92669f0deed78f861700c6"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_hscroll_label.html#a8eb9aecb9e92669f0deed78f861700c6">SetOnlyParentFocus</a> (bool only_parent_focus)</td></tr>
@@ -121,6 +123,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:acebad6bd91cf8cd1f6ae5f710b9cd0f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb270b99bb125291a810b88a4fe5f1cc"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_hscroll_label.html#aeb270b99bb125291a810b88a4fe5f1cc">GetDuration</a> () const</td></tr>
 <tr class="separator:aeb270b99bb125291a810b88a4fe5f1cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c84d0aa07f1bc747e4c4cc9c8258ea5"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_hscroll_label.html#a4c84d0aa07f1bc747e4c4cc9c8258ea5">GetSpeed</a> () const</td></tr>
+<tr class="separator:a4c84d0aa07f1bc747e4c4cc9c8258ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cae9e3d4b65ee9a8489d0fd06771c9b"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_hscroll_label.html#a6cae9e3d4b65ee9a8489d0fd06771c9b">GetXoffset</a> () const</td></tr>
 <tr class="separator:a6cae9e3d4b65ee9a8489d0fd06771c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa37e022ce6bf60f48c0c11245d032fc7"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_hscroll_label.html#aa37e022ce6bf60f48c0c11245d032fc7">GetTextW</a> () const</td></tr>
@@ -334,6 +338,24 @@ static <a class="el" href="class_t_hscroll_label.html">THscrollLabel</a>&#160;</
 
 </div>
 </div>
+<a id="a4c84d0aa07f1bc747e4c4cc9c8258ea5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c84d0aa07f1bc747e4c4cc9c8258ea5">&#9670;&nbsp;</a></span>GetSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float_t THscrollLabel::GetSpeed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>滚动速度(px/ms)（设置后 duration 不生效）。 </p>
+
+</div>
+</div>
 <a id="aa37e022ce6bf60f48c0c11245d032fc7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa37e022ce6bf60f48c0c11245d032fc7">&#9670;&nbsp;</a></span>GetTextW()</h2>
 
@@ -537,6 +559,32 @@ static <a class="el" href="class_t_hscroll_label.html">THscrollLabel</a>&#160;</
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">only_parent_focus</td><td>是否只有处于focus时才滚动。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="af10a44ad68d6171a30cb7233add9963a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af10a44ad68d6171a30cb7233add9963a">&#9670;&nbsp;</a></span>SetSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t THscrollLabel::SetSpeed </td>
+          <td>(</td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>speed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置speed（设置后 duration 不生效）。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">speed</td><td>滚动速度(px/ms)。</td></tr>
   </table>
   </dd>
 </dl>

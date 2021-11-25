@@ -535,10 +535,6 @@
     return canvas_get_height(((canvas_t*)(this->nativeObj)));
  }
 
- ret_t TCanvas::GetClipRect(TRect& r)  {
-   return canvas_get_clip_rect(((canvas_t*)(this->nativeObj)), ((rect_t*)(r.nativeObj)));
- }
-
  ret_t TCanvas::SetClipRect(TRect& r)  {
    return canvas_set_clip_rect(((canvas_t*)(this->nativeObj)), ((const rect_t*)(r.nativeObj)));
  }
@@ -935,6 +931,14 @@
    return vgcanvas_clip_rect(((vgcanvas_t*)(this->nativeObj)), x, y, w, h);
  }
 
+ TRectf TVgcanvas::GetClipRect()  {
+    return vgcanvas_get_clip_rect(((vgcanvas_t*)(this->nativeObj)));
+ }
+
+ bool TVgcanvas::IsRectfIntClipRect(float_t left, float_t top, float_t right, float_t bottom)  {
+    return vgcanvas_is_rectf_int_clip_rect(((vgcanvas_t*)(this->nativeObj)), left, top, right, bottom);
+ }
+
  ret_t TVgcanvas::IntersectClipRect(float_t x, float_t y, float_t w, float_t h)  {
    return vgcanvas_intersect_clip_rect(((vgcanvas_t*)(this->nativeObj)), x, y, w, h);
  }
@@ -977,6 +981,10 @@
 
  ret_t TVgcanvas::DrawImage(TBitmap& img, float_t sx, float_t sy, float_t sw, float_t sh, float_t dx, float_t dy, float_t dw, float_t dh)  {
    return vgcanvas_draw_image(((vgcanvas_t*)(this->nativeObj)), ((bitmap_t*)(img.nativeObj)), sx, sy, sw, sh, dx, dy, dw, dh);
+ }
+
+ ret_t TVgcanvas::DrawImageRepeat(TBitmap& img, float_t sx, float_t sy, float_t sw, float_t sh, float_t dx, float_t dy, float_t dw, float_t dh, float_t dst_w, float_t dst_h)  {
+   return vgcanvas_draw_image_repeat(((vgcanvas_t*)(this->nativeObj)), ((bitmap_t*)(img.nativeObj)), sx, sy, sw, sh, dx, dy, dw, dh, dst_w, dst_h);
  }
 
  ret_t TVgcanvas::DrawIcon(TBitmap& img, float_t sx, float_t sy, float_t sw, float_t sh, float_t dx, float_t dy, float_t dw, float_t dh)  {
@@ -1127,16 +1135,32 @@
    return widget_move_resize(((widget_t*)(this->nativeObj)), x, y, w, h);
  }
 
- ret_t TWidget::SetValue(int32_t value)  {
+ float_t TWidget::GetValue()  {
+    return widget_get_value(((widget_t*)(this->nativeObj)));
+ }
+
+ ret_t TWidget::SetValue(float_t value)  {
    return widget_set_value(((widget_t*)(this->nativeObj)), value);
  }
 
- ret_t TWidget::AnimateValueTo(int32_t value, uint32_t duration)  {
-   return widget_animate_value_to(((widget_t*)(this->nativeObj)), value, duration);
+ ret_t TWidget::AddValue(float_t delta)  {
+   return widget_add_value(((widget_t*)(this->nativeObj)), delta);
  }
 
- ret_t TWidget::AddValue(int32_t delta)  {
-   return widget_add_value(((widget_t*)(this->nativeObj)), delta);
+ int32_t TWidget::GetValueInt()  {
+    return widget_get_value_int(((widget_t*)(this->nativeObj)));
+ }
+
+ ret_t TWidget::SetValueInt(int32_t value)  {
+   return widget_set_value_int(((widget_t*)(this->nativeObj)), value);
+ }
+
+ ret_t TWidget::AddValueInt(int32_t delta)  {
+   return widget_add_value_int(((widget_t*)(this->nativeObj)), delta);
+ }
+
+ ret_t TWidget::AnimateValueTo(float_t value, uint32_t duration)  {
+   return widget_animate_value_to(((widget_t*)(this->nativeObj)), value, duration);
  }
 
  bool TWidget::IsStyleExist(const char* style_name, const char* state_name)  {
@@ -1165,10 +1189,6 @@
 
  ret_t TWidget::SetTrText(const char* text)  {
    return widget_set_tr_text(((widget_t*)(this->nativeObj)), text);
- }
-
- int32_t TWidget::GetValue()  {
-    return widget_get_value(((widget_t*)(this->nativeObj)));
  }
 
  bool TWidget::GetEnable()  {
@@ -1353,6 +1373,14 @@
 
  void* TWidget::GetPropPointer(const char* name)  {
     return widget_get_prop_pointer(((widget_t*)(this->nativeObj)), name);
+ }
+
+ ret_t TWidget::SetPropFloat(const char* name, float_t v)  {
+   return widget_set_prop_float(((widget_t*)(this->nativeObj)), name, v);
+ }
+
+ float_t TWidget::GetPropFloat(const char* name, float_t defval)  {
+    return widget_get_prop_float(((widget_t*)(this->nativeObj)), name, defval);
  }
 
  ret_t TWidget::SetPropInt(const char* name, int32_t v)  {
@@ -2047,6 +2075,10 @@
    return ((multi_gesture_event_t*)(this->nativeObj))->distance;
  }
 
+ const char* TThemeChangeEvent::GetName() const {
+   return ((theme_change_event_t*)(this->nativeObj))->name;
+ }
+
  ret_t TImageBase::SetImage(char* name)  {
    return image_base_set_image(((widget_t*)(this->nativeObj)), name);
  }
@@ -2323,6 +2355,10 @@
    return draggable_set_drag_window(((widget_t*)(this->nativeObj)), drag_window);
  }
 
+ ret_t TDraggable::SetDragParent(uint32_t drag_parent)  {
+   return draggable_set_drag_parent(((widget_t*)(this->nativeObj)), drag_parent);
+ }
+
  int32_t TDraggable::GetTop() const {
    return ((draggable_t*)(this->nativeObj))->top;
  }
@@ -2349,6 +2385,10 @@
 
  bool TDraggable::GetDragWindow() const {
    return ((draggable_t*)(this->nativeObj))->drag_window;
+ }
+
+ uint32_t TDraggable::GetDragParent() const {
+   return ((draggable_t*)(this->nativeObj))->drag_parent;
  }
 
  TWidget TFileBrowserView::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -2987,6 +3027,10 @@
    return hscroll_label_set_duration(((widget_t*)(this->nativeObj)), duration);
  }
 
+ ret_t THscrollLabel::SetSpeed(float_t speed)  {
+   return hscroll_label_set_speed(((widget_t*)(this->nativeObj)), speed);
+ }
+
  ret_t THscrollLabel::SetOnlyFocus(bool only_focus)  {
    return hscroll_label_set_only_focus(((widget_t*)(this->nativeObj)), only_focus);
  }
@@ -3045,6 +3089,10 @@
 
  int32_t THscrollLabel::GetDuration() const {
    return ((hscroll_label_t*)(this->nativeObj))->duration;
+ }
+
+ float_t THscrollLabel::GetSpeed() const {
+   return ((hscroll_label_t*)(this->nativeObj))->speed;
  }
 
  int32_t THscrollLabel::GetXoffset() const {
@@ -3163,6 +3211,10 @@
     return scroll_bar_is_mobile(((widget_t*)(this->nativeObj)));
  }
 
+ ret_t TScrollBar::SetAnimatorTime(uint32_t animator_time)  {
+   return scroll_bar_set_animator_time(((widget_t*)(this->nativeObj)), animator_time);
+ }
+
  int32_t TScrollBar::GetVirtualSize() const {
    return ((scroll_bar_t*)(this->nativeObj))->virtual_size;
  }
@@ -3173,6 +3225,10 @@
 
  int32_t TScrollBar::GetRow() const {
    return ((scroll_bar_t*)(this->nativeObj))->row;
+ }
+
+ uint32_t TScrollBar::GetAnimatorTime() const {
+   return ((scroll_bar_t*)(this->nativeObj))->animator_time;
  }
 
  bool TScrollBar::GetAnimatable() const {
@@ -3355,6 +3411,10 @@
    return slide_indicator_set_indicated_target(((widget_t*)(this->nativeObj)), target_name);
  }
 
+ ret_t TSlideIndicator::SetTransition(bool transition)  {
+   return slide_indicator_set_transition(((widget_t*)(this->nativeObj)), transition);
+ }
+
  uint32_t TSlideIndicator::GetValue() const {
    return ((slide_indicator_t*)(this->nativeObj))->value;
  }
@@ -3393,6 +3453,10 @@
 
  char* TSlideIndicator::GetIndicatedTarget() const {
    return ((slide_indicator_t*)(this->nativeObj))->indicated_target;
+ }
+
+ bool TSlideIndicator::GetTransition() const {
+   return ((slide_indicator_t*)(this->nativeObj))->transition;
  }
 
  TWidget TSlideView::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -4399,6 +4463,10 @@
    return native_window_set_cursor(((native_window_t*)(this->nativeObj)), name, ((bitmap_t*)(img.nativeObj)));
  }
 
+ ret_t TNativeWindow::SetTitle(const char* app_name)  {
+   return native_window_set_title(((native_window_t*)(this->nativeObj)), app_name);
+ }
+
  TWidget TWindow::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TWindow((widget_t*)(window_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
@@ -4449,6 +4517,14 @@
 
  ret_t TGifImage::Pause()  {
    return gif_image_pause(((widget_t*)(this->nativeObj)));
+ }
+
+ ret_t TGifImage::SetLoop(uint32_t loop)  {
+   return gif_image_set_loop(((widget_t*)(this->nativeObj)), loop);
+ }
+
+ uint32_t TGifImage::GetLoop() const {
+   return ((gif_image_t*)(this->nativeObj))->loop;
  }
 
  TWidget TKeyboard::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {

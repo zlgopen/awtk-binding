@@ -99,6 +99,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:aec854b4d9a4c3c5767d69c69596b14b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecea926d17c92cfcd04ced16a1becc08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_draggable.html#aecea926d17c92cfcd04ced16a1becc08">setDragWindow</a> (boolean drag_window)</td></tr>
 <tr class="separator:aecea926d17c92cfcd04ced16a1becc08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a57f07d0c86c443d514773ab925066b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_draggable.html#a0a57f07d0c86c443d514773ab925066b">setDragParent</a> (int drag_parent)</td></tr>
+<tr class="separator:a0a57f07d0c86c443d514773ab925066b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe31e8d87e3f1855e61839ea0f44786c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_draggable.html#abe31e8d87e3f1855e61839ea0f44786c">getTop</a> ()</td></tr>
 <tr class="separator:abe31e8d87e3f1855e61839ea0f44786c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0289065904abc5f34dd5bb09235e561e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_draggable.html#a0289065904abc5f34dd5bb09235e561e">getBottom</a> ()</td></tr>
@@ -113,6 +115,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a75b58b2b649996336736657756e4135e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a153d8ba8586d02e864ec28caad3d1871"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_draggable.html#a153d8ba8586d02e864ec28caad3d1871">getDragWindow</a> ()</td></tr>
 <tr class="separator:a153d8ba8586d02e864ec28caad3d1871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac33f125d51c4cc3e11ae82d553857746"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_draggable.html#ac33f125d51c4cc3e11ae82d553857746">getDragParent</a> ()</td></tr>
+<tr class="separator:ac33f125d51c4cc3e11ae82d553857746"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -338,6 +342,32 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="ac33f125d51c4cc3e11ae82d553857746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac33f125d51c4cc3e11ae82d553857746">&#9670;&nbsp;</a></span>getDragParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int awtk.TDraggable.getDragParent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>拖动父控件。0表示直系父控件，1表示父控件的父控件，依次类推。 </p>
+
+</div>
+</div>
 <a id="a153d8ba8586d02e864ec28caad3d1871"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a153d8ba8586d02e864ec28caad3d1871">&#9670;&nbsp;</a></span>getDragWindow()</h2>
 
@@ -521,6 +551,40 @@ Public 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">bottom</td><td>拖动范围的底部限制。缺省为父控件的底部。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a0a57f07d0c86c443d514773ab925066b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a57f07d0c86c443d514773ab925066b">&#9670;&nbsp;</a></span>setDragParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TDraggable.setDragParent </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>drag_parent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置drag_parent。 拖动窗口而不是父控件。比如放在对话框的titlebar上，拖动titlebar其实是希望拖动对话框。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">drag_parent</td><td>0表示直系父控件，1表示父控件的父控件，依次类推。</td></tr>
   </table>
   </dd>
 </dl>
