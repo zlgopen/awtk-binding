@@ -20587,7 +20587,7 @@ export class TTextSelector extends TWidget {
    *
    * @returns 返回值。
    */
- getValue() : number  {
+ getValueInt() : number  {
     return text_selector_get_value(this != null ? (this.nativeObj || this) : null);
  }
 
@@ -26295,7 +26295,7 @@ export class TComboBox extends TEdit {
    *
    * @returns 返回值。
    */
- getValue() : number  {
+ getValueInt() : number  {
     return combo_box_get_value(this != null ? (this.nativeObj || this) : null);
  }
 

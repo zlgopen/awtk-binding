@@ -18943,7 +18943,7 @@ class TTextSelector (TWidget):
   #
   # @return 返回值。
   #
-  def get_value(self): 
+  def get_value_int(self): 
       return text_selector_get_value(awtk_get_native_obj(self))
 
 
@@ -25193,7 +25193,7 @@ class TComboBox (TEdit):
   #
   # @return 返回值。
   #
-  def get_value(self): 
+  def get_value_int(self): 
       return combo_box_get_value(awtk_get_native_obj(self))
 
 

@@ -24595,6 +24595,7 @@
         },
         "desc": "获取text_selector的值。",
         "name": "text_selector_get_value",
+        "alias": "text_selector_get_value_int",
         "return": {
           "type": "int32_t",
           "desc": "返回值。"
@@ -32249,6 +32250,7 @@
         },
         "desc": "获取combo_box的值。",
         "name": "combo_box_get_value",
+        "alias": "combo_box_get_value_int",
         "return": {
           "type": "int32_t",
           "desc": "返回值。"

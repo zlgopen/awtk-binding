@@ -3547,7 +3547,7 @@
    return text_selector_set_range_options(((widget_t*)(this->nativeObj)), start, nr, step);
  }
 
- int32_t TTextSelector::GetValue()  {
+ int32_t TTextSelector::GetValueInt()  {
     return text_selector_get_value(((widget_t*)(this->nativeObj)));
  }
 
@@ -4671,7 +4671,7 @@
    return combo_box_set_options(((widget_t*)(this->nativeObj)), options);
  }
 
- int32_t TComboBox::GetValue()  {
+ int32_t TComboBox::GetValueInt()  {
     return combo_box_get_value(((widget_t*)(this->nativeObj)));
  }
 
