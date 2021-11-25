@@ -601,7 +601,6 @@ declare function vgcanvas_transform(vg : any, a : number, b : number, c : number
 declare function vgcanvas_set_transform(vg : any, a : number, b : number, c : number, d : number, e : number, f : number) : TRet;
 declare function vgcanvas_clip_path(vg : any) : TRet;
 declare function vgcanvas_clip_rect(vg : any, x : number, y : number, w : number, h : number) : TRet;
-declare function vgcanvas_get_clip_rect(vg : any) : any;
 declare function vgcanvas_is_rectf_int_clip_rect(vg : any, left : number, top : number, right : number, bottom : number) : boolean;
 declare function vgcanvas_intersect_clip_rect(vg : any, x : number, y : number, w : number, h : number) : TRet;
 declare function vgcanvas_fill(vg : any) : TRet;
@@ -7634,17 +7633,6 @@ export class TVgcanvas {
    */
  clipRect(x : number, y : number, w : number, h : number) : TRet  {
     return vgcanvas_clip_rect(this != null ? (this.nativeObj || this) : null, x, y, w, h);
- }
-
-
-  /**
-   * 获取矩形裁剪。
-   * 
-   *
-   * @returns 返回裁剪区。
-   */
- getClipRect() : TRectf  {
-    return vgcanvas_get_clip_rect(this != null ? (this.nativeObj || this) : null);
  }
 
 

@@ -4768,19 +4768,6 @@ pyobject_t wrap_vgcanvas_clip_rect(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", ret);
 }
 
-pyobject_t wrap_vgcanvas_get_clip_rect(pyobject_t self, pyobject_t pyargs) {
-  const rectf_t* ret = NULL;
-  vgcanvas_t* vg = NULL;
-
-  if (!PyArg_ParseTuple(pyargs, "O&" , &__parse_voidp, &vg)) {
-    PyErr_SetString(PyExc_TypeError, "invalid arguments");
-    return NULL;
-  }
-
-  ret = (const rectf_t*)vgcanvas_get_clip_rect(vg);
-  return PyLong_FromVoidPtr((void*)ret);
-}
-
 pyobject_t wrap_vgcanvas_is_rectf_int_clip_rect(pyobject_t self, pyobject_t pyargs) {
   bool_t ret = 0;
   vgcanvas_t* vg = NULL;
@@ -20958,7 +20945,6 @@ static PyMethodDef awtk_methods[] = {
 {"vgcanvas_set_transform", wrap_vgcanvas_set_transform, METH_VARARGS, "vgcanvas_set_transform"},
 {"vgcanvas_clip_path", wrap_vgcanvas_clip_path, METH_VARARGS, "vgcanvas_clip_path"},
 {"vgcanvas_clip_rect", wrap_vgcanvas_clip_rect, METH_VARARGS, "vgcanvas_clip_rect"},
-{"vgcanvas_get_clip_rect", wrap_vgcanvas_get_clip_rect, METH_VARARGS, "vgcanvas_get_clip_rect"},
 {"vgcanvas_is_rectf_int_clip_rect", wrap_vgcanvas_is_rectf_int_clip_rect, METH_VARARGS, "vgcanvas_is_rectf_int_clip_rect"},
 {"vgcanvas_intersect_clip_rect", wrap_vgcanvas_intersect_clip_rect, METH_VARARGS, "vgcanvas_intersect_clip_rect"},
 {"vgcanvas_fill", wrap_vgcanvas_fill, METH_VARARGS, "vgcanvas_fill"},

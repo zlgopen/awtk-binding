@@ -7247,20 +7247,6 @@ static void wrap_vgcanvas_clip_rect(const Nan::FunctionCallbackInfo<v8::Value>& 
   (void)argc;(void)ctx;
 }
 
-static void wrap_vgcanvas_get_clip_rect(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
-  JSContext* ctx = NULL; 
-  int32_t argc = (int32_t)(argv.Length()); 
-  if(argc >= 1) {
-  const rectf_t* ret = NULL;
-  vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
-  ret = (const rectf_t*)vgcanvas_get_clip_rect(vg);
-
-  v8::Local<v8::Number> jret= Nan::New((double)((int64_t)(ret)));
-  argv.GetReturnValue().Set(jret);
-  }
-  (void)argc;(void)ctx;
-}
-
 static void wrap_vgcanvas_is_rectf_int_clip_rect(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -7835,7 +7821,6 @@ ret_t vgcanvas_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "vgcanvas_set_transform", wrap_vgcanvas_set_transform);
   Nan::Export(ctx, "vgcanvas_clip_path", wrap_vgcanvas_clip_path);
   Nan::Export(ctx, "vgcanvas_clip_rect", wrap_vgcanvas_clip_rect);
-  Nan::Export(ctx, "vgcanvas_get_clip_rect", wrap_vgcanvas_get_clip_rect);
   Nan::Export(ctx, "vgcanvas_is_rectf_int_clip_rect", wrap_vgcanvas_is_rectf_int_clip_rect);
   Nan::Export(ctx, "vgcanvas_intersect_clip_rect", wrap_vgcanvas_intersect_clip_rect);
   Nan::Export(ctx, "vgcanvas_fill", wrap_vgcanvas_fill);

@@ -367,17 +367,6 @@ public class TVgcanvas {
 
 
   /**
-   * 获取矩形裁剪。
-   * 
-   *
-   * @return 返回裁剪区。
-   */
- public  TRectf getClipRect()  {
-    return vgcanvas_get_clip_rect(this != null ? (this.nativeObj) : 0);
- }
-
-
-  /**
    * 矩形区域是否在矩形裁剪中。
    * 
    * @param left 矩形区域左边。
@@ -875,7 +864,6 @@ static private native int vgcanvas_transform(long vg, double a, double b, double
 static private native int vgcanvas_set_transform(long vg, double a, double b, double c, double d, double e, double f);
 static private native int vgcanvas_clip_path(long vg);
 static private native int vgcanvas_clip_rect(long vg, double x, double y, double w, double h);
-static private native long vgcanvas_get_clip_rect(long vg);
 static private native boolean vgcanvas_is_rectf_int_clip_rect(long vg, double left, double top, double right, double bottom);
 static private native int vgcanvas_intersect_clip_rect(long vg, double x, double y, double w, double h);
 static private native int vgcanvas_fill(long vg);

@@ -3890,14 +3890,6 @@ JNIEXPORT jint JNICALL Java_awtk_TVgcanvas_vgcanvas_1clip_1rect(JNIEnv* env,  jc
   return (jint)(ret);
 }
 
-JNIEXPORT jlong JNICALL Java_awtk_TVgcanvas_vgcanvas_1get_1clip_1rect(JNIEnv* env,  jclass ajc, jlong jvg) { /*func*/
-  const rectf_t* ret;
-  vgcanvas_t* vg = (vgcanvas_t*)jvg;
-  ret = (const rectf_t*)vgcanvas_get_clip_rect(vg);
-
-  return (jlong)(ret);
-}
-
 JNIEXPORT jboolean JNICALL Java_awtk_TVgcanvas_vgcanvas_1is_1rectf_1int_1clip_1rect(JNIEnv* env,  jclass ajc, jlong jvg, jdouble left, jdouble top, jdouble right, jdouble bottom) { /*func*/
   bool_t ret;
   vgcanvas_t* vg = (vgcanvas_t*)jvg;

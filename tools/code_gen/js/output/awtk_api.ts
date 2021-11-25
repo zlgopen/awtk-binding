@@ -1218,8 +1218,6 @@ const vgcanvas_clip_path = Module.cwrap("vgcanvas_clip_path",
     "number", ["number"]);
 const vgcanvas_clip_rect = Module.cwrap("vgcanvas_clip_rect", 
     "number", ["number","number","number","number","number"]);
-const vgcanvas_get_clip_rect = Module.cwrap("vgcanvas_get_clip_rect", 
-    "number", ["number"]);
 const vgcanvas_is_rectf_int_clip_rect = Module.cwrap("vgcanvas_is_rectf_int_clip_rect", 
     "number", ["number","number","number","number","number"]);
 const vgcanvas_intersect_clip_rect = Module.cwrap("vgcanvas_intersect_clip_rect", 
@@ -9769,17 +9767,6 @@ export class TVgcanvas {
    */
  clipRect(x : number, y : number, w : number, h : number) : TRet  {
     return vgcanvas_clip_rect(this != null ? (this.nativeObj || this) : null, x, y, w, h);
- }
-
-
-  /**
-   * 获取矩形裁剪。
-   * 
-   *
-   * @returns 返回裁剪区。
-   */
- getClipRect() : TRectf  {
-    return vgcanvas_get_clip_rect(this != null ? (this.nativeObj || this) : null);
  }
 
 

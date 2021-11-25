@@ -4828,15 +4828,6 @@ var TVgcanvas = /** @class */ (function () {
         return vgcanvas_clip_rect(this != null ? (this.nativeObj || this) : null, x, y, w, h);
     };
     /**
-     * 获取矩形裁剪。
-     *
-     *
-     * @returns 返回裁剪区。
-     */
-    TVgcanvas.prototype.getClipRect = function () {
-        return vgcanvas_get_clip_rect(this != null ? (this.nativeObj || this) : null);
-    };
-    /**
      * 矩形区域是否在矩形裁剪中。
      *
      * @param left 矩形区域左边。

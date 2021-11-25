@@ -931,10 +931,6 @@
    return vgcanvas_clip_rect(((vgcanvas_t*)(this->nativeObj)), x, y, w, h);
  }
 
- TRectf TVgcanvas::GetClipRect()  {
-    return vgcanvas_get_clip_rect(((vgcanvas_t*)(this->nativeObj)));
- }
-
  bool TVgcanvas::IsRectfIntClipRect(float_t left, float_t top, float_t right, float_t bottom)  {
     return vgcanvas_is_rectf_int_clip_rect(((vgcanvas_t*)(this->nativeObj)), left, top, right, bottom);
  }

@@ -5622,16 +5622,6 @@ class TVgcanvas(object):
 
 
   #
-  # 获取矩形裁剪。
-  # 
-  #
-  # @return 返回裁剪区。
-  #
-  def get_clip_rect(self): 
-      return vgcanvas_get_clip_rect(awtk_get_native_obj(self))
-
-
-  #
   # 矩形区域是否在矩形裁剪中。
   # 
   # @param left 矩形区域左边。

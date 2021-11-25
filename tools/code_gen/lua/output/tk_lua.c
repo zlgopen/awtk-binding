@@ -5440,14 +5440,6 @@ static int wrap_vgcanvas_clip_rect(lua_State* L) {
   return 1;
 }
 
-static int wrap_vgcanvas_get_clip_rect(lua_State* L) {
-  const rectf_t* ret = NULL;
-  vgcanvas_t* vg = (vgcanvas_t*)tk_checkudata(L, 1, "vgcanvas_t");
-  ret = (const rectf_t*)vgcanvas_get_clip_rect(vg);
-
-  return tk_newuserdata(L, (void*)ret, "", "awtk.const rectf_t");
-}
-
 static int wrap_vgcanvas_is_rectf_int_clip_rect(lua_State* L) {
   bool_t ret = 0;
   vgcanvas_t* vg = (vgcanvas_t*)tk_checkudata(L, 1, "vgcanvas_t");
@@ -5767,7 +5759,6 @@ static const struct luaL_Reg vgcanvas_t_member_funcs[] = {
   {"set_transform", wrap_vgcanvas_set_transform},
   {"clip_path", wrap_vgcanvas_clip_path},
   {"clip_rect", wrap_vgcanvas_clip_rect},
-  {"get_clip_rect", wrap_vgcanvas_get_clip_rect},
   {"is_rectf_int_clip_rect", wrap_vgcanvas_is_rectf_int_clip_rect},
   {"intersect_clip_rect", wrap_vgcanvas_intersect_clip_rect},
   {"fill", wrap_vgcanvas_fill},

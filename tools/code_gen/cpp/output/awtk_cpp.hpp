@@ -2863,14 +2863,6 @@ public:
   ret_t ClipRect(float_t x, float_t y, float_t w, float_t h) ;
 
   /**
-   * 获取矩形裁剪。
-   * 
-   *
-   * @return 返回裁剪区。
-   */
-  TRectf GetClipRect() ;
-
-  /**
    * 矩形区域是否在矩形裁剪中。
    * 
    * @param left 矩形区域左边。

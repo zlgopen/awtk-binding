@@ -7407,24 +7407,6 @@
             "type": "vgcanvas_t*",
             "name": "vg",
             "desc": "vgcanvas对象。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "获取矩形裁剪。",
-        "name": "vgcanvas_get_clip_rect",
-        "return": {
-          "type": "const rectf_t*",
-          "desc": "返回裁剪区。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "vgcanvas_t*",
-            "name": "vg",
-            "desc": "vgcanvas对象。"
           },
           {
             "type": "float_t",

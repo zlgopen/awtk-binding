@@ -8943,23 +8943,6 @@ jsvalue_t wrap_vgcanvas_clip_rect(
   return jret;
 }
 
-jsvalue_t wrap_vgcanvas_get_clip_rect(
-    JSContext *ctx, 
-    jsvalue_const_t this_val,
-    int argc, 
-    jsvalue_const_t *argv
-  ) {
-  jsvalue_t jret = JS_NULL;
-  if(argc >= 1) {
-  const rectf_t* ret = NULL;
-  vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
-  ret = (const rectf_t*)vgcanvas_get_clip_rect(vg);
-
-  jret = jsvalue_create_pointer(ctx, ret, "const rectf_t*");
-  }
-  return jret;
-}
-
 jsvalue_t wrap_vgcanvas_is_rectf_int_clip_rect(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -9661,8 +9644,6 @@ ret_t vgcanvas_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_vgcanvas_clip_path, "vgcanvas_clip_path", 1));
   JS_SetPropertyStr(ctx, global_obj, "vgcanvas_clip_rect",
                       JS_NewCFunction(ctx, wrap_vgcanvas_clip_rect, "vgcanvas_clip_rect", 1));
-  JS_SetPropertyStr(ctx, global_obj, "vgcanvas_get_clip_rect",
-                      JS_NewCFunction(ctx, wrap_vgcanvas_get_clip_rect, "vgcanvas_get_clip_rect", 1));
   JS_SetPropertyStr(ctx, global_obj, "vgcanvas_is_rectf_int_clip_rect",
                       JS_NewCFunction(ctx, wrap_vgcanvas_is_rectf_int_clip_rect, "vgcanvas_is_rectf_int_clip_rect", 1));
   JS_SetPropertyStr(ctx, global_obj, "vgcanvas_intersect_clip_rect",

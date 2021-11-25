@@ -5940,19 +5940,6 @@ static HANDLER_PROTO(wrap_vgcanvas_clip_rect)  {
   return jret;
 }
 
-static HANDLER_PROTO(wrap_vgcanvas_get_clip_rect)  {
-  void* ctx = NULL;
-  jsvalue_t jret = JS_NULL;
-  if(argc >= 1) {
-  const rectf_t* ret = NULL;
-  vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
-  ret = (const rectf_t*)vgcanvas_get_clip_rect(vg);
-
-  jret = jsvalue_create_pointer(ctx, ret, "const rectf_t*");
-  }
-  return jret;
-}
-
 static HANDLER_PROTO(wrap_vgcanvas_is_rectf_int_clip_rect)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
@@ -6479,7 +6466,6 @@ ret_t vgcanvas_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_set_transform", wrap_vgcanvas_set_transform);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_clip_path", wrap_vgcanvas_clip_path);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_clip_rect", wrap_vgcanvas_clip_rect);
-  jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_get_clip_rect", wrap_vgcanvas_get_clip_rect);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_is_rectf_int_clip_rect", wrap_vgcanvas_is_rectf_int_clip_rect);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_intersect_clip_rect", wrap_vgcanvas_intersect_clip_rect);
   jerryx_handler_register_global((const jerry_char_t*)"vgcanvas_fill", wrap_vgcanvas_fill);

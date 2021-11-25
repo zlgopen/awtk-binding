@@ -4110,13 +4110,6 @@ export declare class TVgcanvas {
      */
     clipRect(x: number, y: number, w: number, h: number): TRet;
     /**
-     * 获取矩形裁剪。
-     *
-     *
-     * @returns 返回裁剪区。
-     */
-    getClipRect(): TRectf;
-    /**
      * 矩形区域是否在矩形裁剪中。
      *
      * @param left 矩形区域左边。

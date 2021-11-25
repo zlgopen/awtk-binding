@@ -5713,17 +5713,6 @@ int awtk_TVgcanvas_vgcanvas_clip_rect(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
-int awtk_TVgcanvas_vgcanvas_get_clip_rect(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
-
-  const rectf_t* ret = NULL;
-  vgcanvas_t* vg = (vgcanvas_t*)jni_ctx_get_object(&actx);
-  ret = (const rectf_t*)vgcanvas_get_clip_rect(vg);
-  jni_ctx_return_object(&actx, (void*)(ret));
-
-  return 0;
-}
-
 int awtk_TVgcanvas_vgcanvas_is_rectf_int_clip_rect(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -21822,7 +21811,6 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TVgcanvas",  "vgcanvas_set_transform",  "(JFFFFFF)I",  awtk_TVgcanvas_vgcanvas_set_transform},
 {"awtk/TVgcanvas",  "vgcanvas_clip_path",  "(J)I",  awtk_TVgcanvas_vgcanvas_clip_path},
 {"awtk/TVgcanvas",  "vgcanvas_clip_rect",  "(JFFFF)I",  awtk_TVgcanvas_vgcanvas_clip_rect},
-{"awtk/TVgcanvas",  "vgcanvas_get_clip_rect",  "(J)J",  awtk_TVgcanvas_vgcanvas_get_clip_rect},
 {"awtk/TVgcanvas",  "vgcanvas_is_rectf_int_clip_rect",  "(JFFFF)Z",  awtk_TVgcanvas_vgcanvas_is_rectf_int_clip_rect},
 {"awtk/TVgcanvas",  "vgcanvas_intersect_clip_rect",  "(JFFFF)I",  awtk_TVgcanvas_vgcanvas_intersect_clip_rect},
 {"awtk/TVgcanvas",  "vgcanvas_fill",  "(J)I",  awtk_TVgcanvas_vgcanvas_fill},
