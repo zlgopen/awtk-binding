@@ -229,6 +229,37 @@ class CodeGen {
   getParentClassName(cls) {
     return this.getClassName(this.getClassInfo(cls.parent));
   }
+  
+  fixName4Compatable(obj) {
+    if(obj) {
+      if(obj.name) {
+        obj.name = obj.name.replace(/tk_object/, 'object');
+      }
+      if(obj.type) {
+        obj.type = obj.type.replace(/tk_object/, 'object');
+      }
+    }
+    return obj;
+  }
+  
+  fixAllNames4Compatable(json) {
+    json.forEach(iter => {
+      this.fixName4Compatable(iter);
+
+      if (iter.methods && iter.methods.length) {
+        iter.methods = iter.methods.map(m=> {
+          this.fixName4Compatable(m);
+          m.params.map(this.fixName4Compatable);
+          this.fixName4Compatable(m['return'])
+          return m;
+        });
+      }
+
+      if (iter.properties && iter.properties.length) {
+        iter.properties = iter.properties.map(this.fixName4Compatable);
+      }
+    })
+  }
 
   filterScriptableJson(ojson) {
     let json = ojson.filter(this.isScriptable);
@@ -242,6 +273,8 @@ class CodeGen {
         iter.properties = iter.properties.filter(this.isScriptable);
       }
     })
+
+    this.fixAllNames4Compatable(json);
 
     fs.writeFileSync('filter.json', JSON.stringify(json, null, '  '));
     this.json = json;
