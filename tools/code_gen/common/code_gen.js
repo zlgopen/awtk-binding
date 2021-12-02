@@ -235,6 +235,9 @@ class CodeGen {
       if(obj.name) {
         obj.name = obj.name.replace(/tk_object/, 'object');
       }
+      if(obj.name) {
+        obj.name = obj.name.replace(/TK_OBJECT/, 'OBJECT');
+      }
       if(obj.type) {
         obj.type = obj.type.replace(/tk_object/, 'object');
       }
@@ -260,6 +263,9 @@ class CodeGen {
 
       if (iter.properties && iter.properties.length) {
         iter.properties = iter.properties.map(this.fixName4Compatable);
+      }
+      if (iter.consts && iter.consts.length) {
+        iter.consts = iter.consts.map(this.fixName4Compatable);
       }
     })
   }
