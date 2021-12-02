@@ -238,6 +238,9 @@ class CodeGen {
       if(obj.type) {
         obj.type = obj.type.replace(/tk_object/, 'object');
       }
+      if(obj.parent) {
+        obj.parent = obj.parent.replace(/tk_object/, 'object');
+      }
     }
     return obj;
   }
@@ -249,7 +252,7 @@ class CodeGen {
       if (iter.methods && iter.methods.length) {
         iter.methods = iter.methods.map(m=> {
           this.fixName4Compatable(m);
-          m.params.map(this.fixName4Compatable);
+          m.params = m.params.map(this.fixName4Compatable);
           this.fixName4Compatable(m['return'])
           return m;
         });
