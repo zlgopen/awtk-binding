@@ -238,6 +238,9 @@ class CodeGen {
       if(obj.name) {
         obj.name = obj.name.replace(/TK_OBJECT/, 'OBJECT');
       }
+      if(obj.prefix) {
+        obj.prefix = obj.prefix.replace(/TK_OBJECT/, 'OBJECT');
+      }
       if(obj.type) {
         obj.type = obj.type.replace(/tk_object/, 'object');
       }
