@@ -166,6 +166,7 @@ declare function IMAGE_DRAW_REPEAT3_X():any;
 declare function IMAGE_DRAW_REPEAT3_Y():any;
 declare function canvas_get_width(c : any) : number;
 declare function canvas_get_height(c : any) : number;
+declare function canvas_get_clip_rect(c : any, r : any) : TRet;
 declare function canvas_set_clip_rect(c : any, r : any) : TRet;
 declare function canvas_set_clip_rect_ex(c : any, r : any, translate : boolean) : TRet;
 declare function canvas_set_fill_color_str(c : any, color : string) : TRet;
@@ -4069,6 +4070,18 @@ export class TCanvas {
    */
  getHeight() : number  {
     return canvas_get_height(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 获取裁剪区。
+   * 
+   * @param r rect对象。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ getClipRect(r : TRect) : TRet  {
+    return canvas_get_clip_rect(this != null ? (this.nativeObj || this) : null, r != null ? (r.nativeObj || r) : null);
  }
 
 
@@ -13748,7 +13761,7 @@ export enum TValueType {
  WSTRING = VALUE_TYPE_WSTRING(),
 
   /**
-   * object_t*类型。
+   * tk_object_t*类型。
    *
    */
  OBJECT = VALUE_TYPE_OBJECT(),
@@ -23619,7 +23632,7 @@ export class TPages extends TWidget {
 
 
   /**
-   * 当前活跃的page。
+   * 当前活跃的page。(需要用到 MVVM 数据绑定请设置 value 属性)
    *
    */
  get active() : number {

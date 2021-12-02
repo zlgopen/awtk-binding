@@ -535,6 +535,10 @@
     return canvas_get_height(((canvas_t*)(this->nativeObj)));
  }
 
+ ret_t TCanvas::GetClipRect(TRect& r)  {
+   return canvas_get_clip_rect(((canvas_t*)(this->nativeObj)), ((rect_t*)(r.nativeObj)));
+ }
+
  ret_t TCanvas::SetClipRect(TRect& r)  {
    return canvas_set_clip_rect(((canvas_t*)(this->nativeObj)), ((const rect_t*)(r.nativeObj)));
  }

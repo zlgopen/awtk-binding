@@ -1544,6 +1544,15 @@ public:
   wh_t GetHeight() ;
 
   /**
+   * 获取裁剪区。
+   * 
+   * @param r rect对象。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t GetClipRect(TRect& r) ;
+
+  /**
    * 设置裁剪区。
    * 
    * @param r rect对象。
@@ -13736,7 +13745,7 @@ public:
   ret_t SetActiveByName(char* name) ;
 
   /**
-   * 当前活跃的page。
+   * 当前活跃的page。(需要用到 MVVM 数据绑定请设置 value 属性)
    *
    */
   uint32_t GetActive() const;

@@ -136,8 +136,8 @@ static int wrap_rect_t_get_prop(lua_State* L);
 static int wrap_rect_t_set_prop(lua_State* L);
 static int wrap_bitmap_t_get_prop(lua_State* L);
 static int wrap_bitmap_t_set_prop(lua_State* L);
-static int wrap_object_t_get_prop(lua_State* L);
-static int wrap_object_t_set_prop(lua_State* L);
+static int wrap_tk_object_t_get_prop(lua_State* L);
+static int wrap_tk_object_t_set_prop(lua_State* L);
 static int wrap_value_t_get_prop(lua_State* L);
 static int wrap_value_t_set_prop(lua_State* L);
 static int wrap_canvas_offline_t_get_prop(lua_State* L);
@@ -929,697 +929,697 @@ static void bitmap_t_init(lua_State* L) {
   luaL_openlib(L, "Bitmap", static_funcs, 0);
   lua_settop(L, 0);
 }
-static int wrap_object_unref(lua_State* L) {
+static int wrap_tk_object_unref(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
-  ret = (ret_t)object_unref(obj);
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
+  ret = (ret_t)tk_object_unref(obj);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_ref(lua_State* L) {
-  object_t* ret = NULL;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
-  ret = (object_t*)object_ref(obj);
+static int wrap_tk_object_ref(lua_State* L) {
+  tk_object_t* ret = NULL;
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
+  ret = (tk_object_t*)tk_object_ref(obj);
 
-  return tk_newuserdata(L, (void*)ret, "/object_t/emitter_t", "awtk.object_t");
+  return tk_newuserdata(L, (void*)ret, "/tk_object_t/emitter_t", "awtk.tk_object_t");
 }
 
-static int wrap_object_get_type(lua_State* L) {
+static int wrap_tk_object_get_type(lua_State* L) {
   const char* ret = NULL;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
-  ret = (const char*)object_get_type(obj);
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
+  ret = (const char*)tk_object_get_type(obj);
 
   lua_pushstring(L,(char*)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_desc(lua_State* L) {
+static int wrap_tk_object_get_desc(lua_State* L) {
   const char* ret = NULL;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
-  ret = (const char*)object_get_desc(obj);
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
+  ret = (const char*)tk_object_get_desc(obj);
 
   lua_pushstring(L,(char*)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_size(lua_State* L) {
+static int wrap_tk_object_get_size(lua_State* L) {
   uint32_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
-  ret = (uint32_t)object_get_size(obj);
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
+  ret = (uint32_t)tk_object_get_size(obj);
 
   lua_pushinteger(L,(lua_Integer)(ret));
 
   return 1;
 }
 
-static int wrap_object_is_collection(lua_State* L) {
+static int wrap_tk_object_is_collection(lua_State* L) {
   bool_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
-  ret = (bool_t)object_is_collection(obj);
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
+  ret = (bool_t)tk_object_is_collection(obj);
 
   lua_pushboolean(L,(lua_Integer)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_name(lua_State* L) {
+static int wrap_tk_object_set_name(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
-  ret = (ret_t)object_set_name(obj, name);
+  ret = (ret_t)tk_object_set_name(obj, name);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_compare(lua_State* L) {
+static int wrap_tk_object_compare(lua_State* L) {
   int ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
-  object_t* other = (object_t*)tk_checkudata(L, 2, "object_t");
-  ret = (int)object_compare(obj, other);
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
+  tk_object_t* other = (tk_object_t*)tk_checkudata(L, 2, "tk_object_t");
+  ret = (int)tk_object_compare(obj, other);
 
   lua_pushinteger(L,(lua_Integer)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_prop(lua_State* L) {
+static int wrap_tk_object_get_prop(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   value_t* v = (value_t*)tk_checkudata(L, 3, "value_t");
-  ret = (ret_t)object_get_prop(obj, name, v);
+  ret = (ret_t)tk_object_get_prop(obj, name, v);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_prop_str(lua_State* L) {
+static int wrap_tk_object_get_prop_str(lua_State* L) {
   const char* ret = NULL;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
-  ret = (const char*)object_get_prop_str(obj, name);
+  ret = (const char*)tk_object_get_prop_str(obj, name);
 
   lua_pushstring(L,(char*)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_prop_pointer(lua_State* L) {
+static int wrap_tk_object_get_prop_pointer(lua_State* L) {
   void* ret = NULL;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
-  ret = (void*)object_get_prop_pointer(obj, name);
+  ret = (void*)tk_object_get_prop_pointer(obj, name);
 
   return tk_newuserdata(L, (void*)ret, "", "awtk.void");
 }
 
-static int wrap_object_get_prop_object(lua_State* L) {
-  object_t* ret = NULL;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+static int wrap_tk_object_get_prop_object(lua_State* L) {
+  tk_object_t* ret = NULL;
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
-  ret = (object_t*)object_get_prop_object(obj, name);
+  ret = (tk_object_t*)tk_object_get_prop_object(obj, name);
 
-  return tk_newuserdata(L, (void*)ret, "/object_t/emitter_t", "awtk.object_t");
+  return tk_newuserdata(L, (void*)ret, "/tk_object_t/emitter_t", "awtk.tk_object_t");
 }
 
-static int wrap_object_get_prop_int(lua_State* L) {
+static int wrap_tk_object_get_prop_int(lua_State* L) {
   int32_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   int32_t defval = (int32_t)luaL_checkinteger(L, 3);
-  ret = (int32_t)object_get_prop_int(obj, name, defval);
+  ret = (int32_t)tk_object_get_prop_int(obj, name, defval);
 
   lua_pushinteger(L,(lua_Integer)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_prop_bool(lua_State* L) {
+static int wrap_tk_object_get_prop_bool(lua_State* L) {
   bool_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   bool_t defval = (bool_t)lua_toboolean(L, 3);
-  ret = (bool_t)object_get_prop_bool(obj, name, defval);
+  ret = (bool_t)tk_object_get_prop_bool(obj, name, defval);
 
   lua_pushboolean(L,(lua_Integer)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_prop_float(lua_State* L) {
+static int wrap_tk_object_get_prop_float(lua_State* L) {
   float_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   float_t defval = (float_t)luaL_checknumber(L, 3);
-  ret = (float_t)object_get_prop_float(obj, name, defval);
+  ret = (float_t)tk_object_get_prop_float(obj, name, defval);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_prop_double(lua_State* L) {
+static int wrap_tk_object_get_prop_double(lua_State* L) {
   double ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   double defval = (double)luaL_checknumber(L, 3);
-  ret = (double)object_get_prop_double(obj, name, defval);
+  ret = (double)tk_object_get_prop_double(obj, name, defval);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_remove_prop(lua_State* L) {
+static int wrap_tk_object_remove_prop(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
-  ret = (ret_t)object_remove_prop(obj, name);
+  ret = (ret_t)tk_object_remove_prop(obj, name);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop(lua_State* L) {
+static int wrap_tk_object_set_prop(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   value_t* value = (value_t*)tk_checkudata(L, 3, "value_t");
-  ret = (ret_t)object_set_prop(obj, name, value);
+  ret = (ret_t)tk_object_set_prop(obj, name, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_str(lua_State* L) {
+static int wrap_tk_object_set_prop_str(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   const char* value = (const char*)luaL_checkstring(L, 3);
-  ret = (ret_t)object_set_prop_str(obj, name, value);
+  ret = (ret_t)tk_object_set_prop_str(obj, name, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_object(lua_State* L) {
+static int wrap_tk_object_set_prop_object(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
-  object_t* value = (object_t*)tk_checkudata(L, 3, "object_t");
-  ret = (ret_t)object_set_prop_object(obj, name, value);
+  tk_object_t* value = (tk_object_t*)tk_checkudata(L, 3, "tk_object_t");
+  ret = (ret_t)tk_object_set_prop_object(obj, name, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_int(lua_State* L) {
+static int wrap_tk_object_set_prop_int(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   int32_t value = (int32_t)luaL_checkinteger(L, 3);
-  ret = (ret_t)object_set_prop_int(obj, name, value);
+  ret = (ret_t)tk_object_set_prop_int(obj, name, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_bool(lua_State* L) {
+static int wrap_tk_object_set_prop_bool(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   bool_t value = (bool_t)lua_toboolean(L, 3);
-  ret = (ret_t)object_set_prop_bool(obj, name, value);
+  ret = (ret_t)tk_object_set_prop_bool(obj, name, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_float(lua_State* L) {
+static int wrap_tk_object_set_prop_float(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   float_t value = (float_t)luaL_checknumber(L, 3);
-  ret = (ret_t)object_set_prop_float(obj, name, value);
+  ret = (ret_t)tk_object_set_prop_float(obj, name, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_double(lua_State* L) {
+static int wrap_tk_object_set_prop_double(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   double value = (double)luaL_checknumber(L, 3);
-  ret = (ret_t)object_set_prop_double(obj, name, value);
+  ret = (ret_t)tk_object_set_prop_double(obj, name, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_copy_prop(lua_State* L) {
+static int wrap_tk_object_copy_prop(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
-  object_t* src = (object_t*)tk_checkudata(L, 2, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
+  tk_object_t* src = (tk_object_t*)tk_checkudata(L, 2, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 3);
-  ret = (ret_t)object_copy_prop(obj, src, name);
+  ret = (ret_t)tk_object_copy_prop(obj, src, name);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_has_prop(lua_State* L) {
+static int wrap_tk_object_has_prop(lua_State* L) {
   bool_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
-  ret = (bool_t)object_has_prop(obj, name);
+  ret = (bool_t)tk_object_has_prop(obj, name);
 
   lua_pushboolean(L,(lua_Integer)(ret));
 
   return 1;
 }
 
-static int wrap_object_eval(lua_State* L) {
+static int wrap_tk_object_eval(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* expr = (const char*)luaL_checkstring(L, 2);
   value_t* v = (value_t*)tk_checkudata(L, 3, "value_t");
-  ret = (ret_t)object_eval(obj, expr, v);
+  ret = (ret_t)tk_object_eval(obj, expr, v);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_can_exec(lua_State* L) {
+static int wrap_tk_object_can_exec(lua_State* L) {
   bool_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   const char* args = (const char*)luaL_checkstring(L, 3);
-  ret = (bool_t)object_can_exec(obj, name, args);
+  ret = (bool_t)tk_object_can_exec(obj, name, args);
 
   lua_pushboolean(L,(lua_Integer)(ret));
 
   return 1;
 }
 
-static int wrap_object_exec(lua_State* L) {
+static int wrap_tk_object_exec(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   const char* args = (const char*)luaL_checkstring(L, 3);
-  ret = (ret_t)object_exec(obj, name, args);
+  ret = (ret_t)tk_object_exec(obj, name, args);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_notify_changed(lua_State* L) {
+static int wrap_tk_object_notify_changed(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
-  ret = (ret_t)object_notify_changed(obj);
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
+  ret = (ret_t)tk_object_notify_changed(obj);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_has_prop_by_path(lua_State* L) {
+static int wrap_tk_object_has_prop_by_path(lua_State* L) {
   bool_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* path = (const char*)luaL_checkstring(L, 2);
-  ret = (bool_t)object_has_prop_by_path(obj, path);
+  ret = (bool_t)tk_object_has_prop_by_path(obj, path);
 
   lua_pushboolean(L,(lua_Integer)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_prop_str_by_path(lua_State* L) {
+static int wrap_tk_object_get_prop_str_by_path(lua_State* L) {
   const char* ret = NULL;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* path = (const char*)luaL_checkstring(L, 2);
-  ret = (const char*)object_get_prop_str_by_path(obj, path);
+  ret = (const char*)tk_object_get_prop_str_by_path(obj, path);
 
   lua_pushstring(L,(char*)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_prop_pointer_by_path(lua_State* L) {
+static int wrap_tk_object_get_prop_pointer_by_path(lua_State* L) {
   void* ret = NULL;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* path = (const char*)luaL_checkstring(L, 2);
-  ret = (void*)object_get_prop_pointer_by_path(obj, path);
+  ret = (void*)tk_object_get_prop_pointer_by_path(obj, path);
 
   return tk_newuserdata(L, (void*)ret, "", "awtk.void");
 }
 
-static int wrap_object_get_prop_object_by_path(lua_State* L) {
-  object_t* ret = NULL;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+static int wrap_tk_object_get_prop_object_by_path(lua_State* L) {
+  tk_object_t* ret = NULL;
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* path = (const char*)luaL_checkstring(L, 2);
-  ret = (object_t*)object_get_prop_object_by_path(obj, path);
+  ret = (tk_object_t*)tk_object_get_prop_object_by_path(obj, path);
 
-  return tk_newuserdata(L, (void*)ret, "/object_t/emitter_t", "awtk.object_t");
+  return tk_newuserdata(L, (void*)ret, "/tk_object_t/emitter_t", "awtk.tk_object_t");
 }
 
-static int wrap_object_get_prop_int_by_path(lua_State* L) {
+static int wrap_tk_object_get_prop_int_by_path(lua_State* L) {
   int32_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* path = (const char*)luaL_checkstring(L, 2);
   int32_t defval = (int32_t)luaL_checkinteger(L, 3);
-  ret = (int32_t)object_get_prop_int_by_path(obj, path, defval);
+  ret = (int32_t)tk_object_get_prop_int_by_path(obj, path, defval);
 
   lua_pushinteger(L,(lua_Integer)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_prop_bool_by_path(lua_State* L) {
+static int wrap_tk_object_get_prop_bool_by_path(lua_State* L) {
   bool_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* path = (const char*)luaL_checkstring(L, 2);
   bool_t defval = (bool_t)lua_toboolean(L, 3);
-  ret = (bool_t)object_get_prop_bool_by_path(obj, path, defval);
+  ret = (bool_t)tk_object_get_prop_bool_by_path(obj, path, defval);
 
   lua_pushboolean(L,(lua_Integer)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_prop_float_by_path(lua_State* L) {
+static int wrap_tk_object_get_prop_float_by_path(lua_State* L) {
   float_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* path = (const char*)luaL_checkstring(L, 2);
   float_t defval = (float_t)luaL_checknumber(L, 3);
-  ret = (float_t)object_get_prop_float_by_path(obj, path, defval);
+  ret = (float_t)tk_object_get_prop_float_by_path(obj, path, defval);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_by_path(lua_State* L) {
+static int wrap_tk_object_set_prop_by_path(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* path = (const char*)luaL_checkstring(L, 2);
   value_t* value = (value_t*)tk_checkudata(L, 3, "value_t");
-  ret = (ret_t)object_set_prop_by_path(obj, path, value);
+  ret = (ret_t)tk_object_set_prop_by_path(obj, path, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_str_by_path(lua_State* L) {
+static int wrap_tk_object_set_prop_str_by_path(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* path = (const char*)luaL_checkstring(L, 2);
   const char* value = (const char*)luaL_checkstring(L, 3);
-  ret = (ret_t)object_set_prop_str_by_path(obj, path, value);
+  ret = (ret_t)tk_object_set_prop_str_by_path(obj, path, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_object_by_path(lua_State* L) {
+static int wrap_tk_object_set_prop_object_by_path(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* path = (const char*)luaL_checkstring(L, 2);
-  object_t* value = (object_t*)tk_checkudata(L, 3, "object_t");
-  ret = (ret_t)object_set_prop_object_by_path(obj, path, value);
+  tk_object_t* value = (tk_object_t*)tk_checkudata(L, 3, "tk_object_t");
+  ret = (ret_t)tk_object_set_prop_object_by_path(obj, path, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_int_by_path(lua_State* L) {
+static int wrap_tk_object_set_prop_int_by_path(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* path = (const char*)luaL_checkstring(L, 2);
   int32_t value = (int32_t)luaL_checkinteger(L, 3);
-  ret = (ret_t)object_set_prop_int_by_path(obj, path, value);
+  ret = (ret_t)tk_object_set_prop_int_by_path(obj, path, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_bool_by_path(lua_State* L) {
+static int wrap_tk_object_set_prop_bool_by_path(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* path = (const char*)luaL_checkstring(L, 2);
   bool_t value = (bool_t)lua_toboolean(L, 3);
-  ret = (ret_t)object_set_prop_bool_by_path(obj, path, value);
+  ret = (ret_t)tk_object_set_prop_bool_by_path(obj, path, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_float_by_path(lua_State* L) {
+static int wrap_tk_object_set_prop_float_by_path(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* path = (const char*)luaL_checkstring(L, 2);
   float_t value = (float_t)luaL_checknumber(L, 3);
-  ret = (ret_t)object_set_prop_float_by_path(obj, path, value);
+  ret = (ret_t)tk_object_set_prop_float_by_path(obj, path, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_can_exec_by_path(lua_State* L) {
+static int wrap_tk_object_can_exec_by_path(lua_State* L) {
   bool_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* path = (const char*)luaL_checkstring(L, 2);
   const char* args = (const char*)luaL_checkstring(L, 3);
-  ret = (bool_t)object_can_exec_by_path(obj, path, args);
+  ret = (bool_t)tk_object_can_exec_by_path(obj, path, args);
 
   lua_pushboolean(L,(lua_Integer)(ret));
 
   return 1;
 }
 
-static int wrap_object_exec_by_path(lua_State* L) {
+static int wrap_tk_object_exec_by_path(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* path = (const char*)luaL_checkstring(L, 2);
   const char* args = (const char*)luaL_checkstring(L, 3);
-  ret = (ret_t)object_exec_by_path(obj, path, args);
+  ret = (ret_t)tk_object_exec_by_path(obj, path, args);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_prop_int8(lua_State* L) {
+static int wrap_tk_object_get_prop_int8(lua_State* L) {
   int8_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   int8_t defval = (int8_t)luaL_checkinteger(L, 3);
-  ret = (int8_t)object_get_prop_int8(obj, name, defval);
+  ret = (int8_t)tk_object_get_prop_int8(obj, name, defval);
 
   lua_pushinteger(L,(lua_Integer)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_int8(lua_State* L) {
+static int wrap_tk_object_set_prop_int8(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   int8_t value = (int8_t)luaL_checkinteger(L, 3);
-  ret = (ret_t)object_set_prop_int8(obj, name, value);
+  ret = (ret_t)tk_object_set_prop_int8(obj, name, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_prop_uint8(lua_State* L) {
+static int wrap_tk_object_get_prop_uint8(lua_State* L) {
   uint8_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   uint8_t defval = (uint8_t)luaL_checkinteger(L, 3);
-  ret = (uint8_t)object_get_prop_uint8(obj, name, defval);
+  ret = (uint8_t)tk_object_get_prop_uint8(obj, name, defval);
 
   lua_pushinteger(L,(lua_Integer)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_uint8(lua_State* L) {
+static int wrap_tk_object_set_prop_uint8(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   uint8_t value = (uint8_t)luaL_checkinteger(L, 3);
-  ret = (ret_t)object_set_prop_uint8(obj, name, value);
+  ret = (ret_t)tk_object_set_prop_uint8(obj, name, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_prop_int16(lua_State* L) {
+static int wrap_tk_object_get_prop_int16(lua_State* L) {
   int16_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   int16_t defval = (int16_t)luaL_checkinteger(L, 3);
-  ret = (int16_t)object_get_prop_int16(obj, name, defval);
+  ret = (int16_t)tk_object_get_prop_int16(obj, name, defval);
 
   lua_pushinteger(L,(lua_Integer)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_int16(lua_State* L) {
+static int wrap_tk_object_set_prop_int16(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   int16_t value = (int16_t)luaL_checkinteger(L, 3);
-  ret = (ret_t)object_set_prop_int16(obj, name, value);
+  ret = (ret_t)tk_object_set_prop_int16(obj, name, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_prop_uint16(lua_State* L) {
+static int wrap_tk_object_get_prop_uint16(lua_State* L) {
   uint16_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   uint16_t defval = (uint16_t)luaL_checkinteger(L, 3);
-  ret = (uint16_t)object_get_prop_uint16(obj, name, defval);
+  ret = (uint16_t)tk_object_get_prop_uint16(obj, name, defval);
 
   lua_pushinteger(L,(lua_Integer)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_uint16(lua_State* L) {
+static int wrap_tk_object_set_prop_uint16(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   uint16_t value = (uint16_t)luaL_checkinteger(L, 3);
-  ret = (ret_t)object_set_prop_uint16(obj, name, value);
+  ret = (ret_t)tk_object_set_prop_uint16(obj, name, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_prop_int32(lua_State* L) {
+static int wrap_tk_object_get_prop_int32(lua_State* L) {
   int32_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   int32_t defval = (int32_t)luaL_checkinteger(L, 3);
-  ret = (int32_t)object_get_prop_int32(obj, name, defval);
+  ret = (int32_t)tk_object_get_prop_int32(obj, name, defval);
 
   lua_pushinteger(L,(lua_Integer)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_int32(lua_State* L) {
+static int wrap_tk_object_set_prop_int32(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   int32_t value = (int32_t)luaL_checkinteger(L, 3);
-  ret = (ret_t)object_set_prop_int32(obj, name, value);
+  ret = (ret_t)tk_object_set_prop_int32(obj, name, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_prop_uint32(lua_State* L) {
+static int wrap_tk_object_get_prop_uint32(lua_State* L) {
   uint32_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   uint32_t defval = (uint32_t)luaL_checkinteger(L, 3);
-  ret = (uint32_t)object_get_prop_uint32(obj, name, defval);
+  ret = (uint32_t)tk_object_get_prop_uint32(obj, name, defval);
 
   lua_pushinteger(L,(lua_Integer)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_uint32(lua_State* L) {
+static int wrap_tk_object_set_prop_uint32(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   uint32_t value = (uint32_t)luaL_checkinteger(L, 3);
-  ret = (ret_t)object_set_prop_uint32(obj, name, value);
+  ret = (ret_t)tk_object_set_prop_uint32(obj, name, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_prop_int64(lua_State* L) {
+static int wrap_tk_object_get_prop_int64(lua_State* L) {
   int64_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   int64_t defval = (int64_t)luaL_checkinteger(L, 3);
-  ret = (int64_t)object_get_prop_int64(obj, name, defval);
+  ret = (int64_t)tk_object_get_prop_int64(obj, name, defval);
 
   lua_pushinteger(L,(lua_Integer)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_int64(lua_State* L) {
+static int wrap_tk_object_set_prop_int64(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   int64_t value = (int64_t)luaL_checkinteger(L, 3);
-  ret = (ret_t)object_set_prop_int64(obj, name, value);
+  ret = (ret_t)tk_object_set_prop_int64(obj, name, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
   return 1;
 }
 
-static int wrap_object_get_prop_uint64(lua_State* L) {
+static int wrap_tk_object_get_prop_uint64(lua_State* L) {
   uint64_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   uint64_t defval = (uint64_t)luaL_checkinteger(L, 3);
-  ret = (uint64_t)object_get_prop_uint64(obj, name, defval);
+  ret = (uint64_t)tk_object_get_prop_uint64(obj, name, defval);
 
   lua_pushinteger(L,(lua_Integer)(ret));
 
   return 1;
 }
 
-static int wrap_object_set_prop_uint64(lua_State* L) {
+static int wrap_tk_object_set_prop_uint64(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   uint64_t value = (uint64_t)luaL_checkinteger(L, 3);
-  ret = (ret_t)object_set_prop_uint64(obj, name, value);
+  ret = (ret_t)tk_object_set_prop_uint64(obj, name, value);
 
   lua_pushnumber(L,(lua_Number)(ret));
 
@@ -1627,82 +1627,82 @@ static int wrap_object_set_prop_uint64(lua_State* L) {
 }
 
 
-static const struct luaL_Reg object_t_member_funcs[] = {
-  {"unref", wrap_object_unref},
-  {"get_type", wrap_object_get_type},
-  {"get_desc", wrap_object_get_desc},
-  {"get_size", wrap_object_get_size},
-  {"is_collection", wrap_object_is_collection},
-  {"set_name", wrap_object_set_name},
-  {"compare", wrap_object_compare},
-  {"get_prop", wrap_object_get_prop},
-  {"get_prop_str", wrap_object_get_prop_str},
-  {"get_prop_pointer", wrap_object_get_prop_pointer},
-  {"get_prop_object", wrap_object_get_prop_object},
-  {"get_prop_int", wrap_object_get_prop_int},
-  {"get_prop_bool", wrap_object_get_prop_bool},
-  {"get_prop_float", wrap_object_get_prop_float},
-  {"get_prop_double", wrap_object_get_prop_double},
-  {"remove_prop", wrap_object_remove_prop},
-  {"set_prop", wrap_object_set_prop},
-  {"set_prop_str", wrap_object_set_prop_str},
-  {"set_prop_object", wrap_object_set_prop_object},
-  {"set_prop_int", wrap_object_set_prop_int},
-  {"set_prop_bool", wrap_object_set_prop_bool},
-  {"set_prop_float", wrap_object_set_prop_float},
-  {"set_prop_double", wrap_object_set_prop_double},
-  {"copy_prop", wrap_object_copy_prop},
-  {"has_prop", wrap_object_has_prop},
-  {"eval", wrap_object_eval},
-  {"can_exec", wrap_object_can_exec},
-  {"execute", wrap_object_exec},
-  {"notify_changed", wrap_object_notify_changed},
-  {"has_prop_by_path", wrap_object_has_prop_by_path},
-  {"get_prop_str_by_path", wrap_object_get_prop_str_by_path},
-  {"get_prop_pointer_by_path", wrap_object_get_prop_pointer_by_path},
-  {"get_prop_object_by_path", wrap_object_get_prop_object_by_path},
-  {"get_prop_int_by_path", wrap_object_get_prop_int_by_path},
-  {"get_prop_bool_by_path", wrap_object_get_prop_bool_by_path},
-  {"get_prop_float_by_path", wrap_object_get_prop_float_by_path},
-  {"set_prop_by_path", wrap_object_set_prop_by_path},
-  {"set_prop_str_by_path", wrap_object_set_prop_str_by_path},
-  {"set_prop_object_by_path", wrap_object_set_prop_object_by_path},
-  {"set_prop_int_by_path", wrap_object_set_prop_int_by_path},
-  {"set_prop_bool_by_path", wrap_object_set_prop_bool_by_path},
-  {"set_prop_float_by_path", wrap_object_set_prop_float_by_path},
-  {"can_exec_by_path", wrap_object_can_exec_by_path},
-  {"execute_by_path", wrap_object_exec_by_path},
-  {"get_prop_int8", wrap_object_get_prop_int8},
-  {"set_prop_int8", wrap_object_set_prop_int8},
-  {"get_prop_uint8", wrap_object_get_prop_uint8},
-  {"set_prop_uint8", wrap_object_set_prop_uint8},
-  {"get_prop_int16", wrap_object_get_prop_int16},
-  {"set_prop_int16", wrap_object_set_prop_int16},
-  {"get_prop_uint16", wrap_object_get_prop_uint16},
-  {"set_prop_uint16", wrap_object_set_prop_uint16},
-  {"get_prop_int32", wrap_object_get_prop_int32},
-  {"set_prop_int32", wrap_object_set_prop_int32},
-  {"get_prop_uint32", wrap_object_get_prop_uint32},
-  {"set_prop_uint32", wrap_object_set_prop_uint32},
-  {"get_prop_int64", wrap_object_get_prop_int64},
-  {"set_prop_int64", wrap_object_set_prop_int64},
-  {"get_prop_uint64", wrap_object_get_prop_uint64},
-  {"set_prop_uint64", wrap_object_set_prop_uint64},
+static const struct luaL_Reg tk_object_t_member_funcs[] = {
+  {"unref", wrap_tk_object_unref},
+  {"get_type", wrap_tk_object_get_type},
+  {"get_desc", wrap_tk_object_get_desc},
+  {"get_size", wrap_tk_object_get_size},
+  {"is_collection", wrap_tk_object_is_collection},
+  {"set_name", wrap_tk_object_set_name},
+  {"compare", wrap_tk_object_compare},
+  {"get_prop", wrap_tk_object_get_prop},
+  {"get_prop_str", wrap_tk_object_get_prop_str},
+  {"get_prop_pointer", wrap_tk_object_get_prop_pointer},
+  {"get_prop_object", wrap_tk_object_get_prop_object},
+  {"get_prop_int", wrap_tk_object_get_prop_int},
+  {"get_prop_bool", wrap_tk_object_get_prop_bool},
+  {"get_prop_float", wrap_tk_object_get_prop_float},
+  {"get_prop_double", wrap_tk_object_get_prop_double},
+  {"remove_prop", wrap_tk_object_remove_prop},
+  {"set_prop", wrap_tk_object_set_prop},
+  {"set_prop_str", wrap_tk_object_set_prop_str},
+  {"set_prop_object", wrap_tk_object_set_prop_object},
+  {"set_prop_int", wrap_tk_object_set_prop_int},
+  {"set_prop_bool", wrap_tk_object_set_prop_bool},
+  {"set_prop_float", wrap_tk_object_set_prop_float},
+  {"set_prop_double", wrap_tk_object_set_prop_double},
+  {"copy_prop", wrap_tk_object_copy_prop},
+  {"has_prop", wrap_tk_object_has_prop},
+  {"eval", wrap_tk_object_eval},
+  {"can_exec", wrap_tk_object_can_exec},
+  {"execute", wrap_tk_object_exec},
+  {"notify_changed", wrap_tk_object_notify_changed},
+  {"has_prop_by_path", wrap_tk_object_has_prop_by_path},
+  {"get_prop_str_by_path", wrap_tk_object_get_prop_str_by_path},
+  {"get_prop_pointer_by_path", wrap_tk_object_get_prop_pointer_by_path},
+  {"get_prop_object_by_path", wrap_tk_object_get_prop_object_by_path},
+  {"get_prop_int_by_path", wrap_tk_object_get_prop_int_by_path},
+  {"get_prop_bool_by_path", wrap_tk_object_get_prop_bool_by_path},
+  {"get_prop_float_by_path", wrap_tk_object_get_prop_float_by_path},
+  {"set_prop_by_path", wrap_tk_object_set_prop_by_path},
+  {"set_prop_str_by_path", wrap_tk_object_set_prop_str_by_path},
+  {"set_prop_object_by_path", wrap_tk_object_set_prop_object_by_path},
+  {"set_prop_int_by_path", wrap_tk_object_set_prop_int_by_path},
+  {"set_prop_bool_by_path", wrap_tk_object_set_prop_bool_by_path},
+  {"set_prop_float_by_path", wrap_tk_object_set_prop_float_by_path},
+  {"can_exec_by_path", wrap_tk_object_can_exec_by_path},
+  {"execute_by_path", wrap_tk_object_exec_by_path},
+  {"get_prop_int8", wrap_tk_object_get_prop_int8},
+  {"set_prop_int8", wrap_tk_object_set_prop_int8},
+  {"get_prop_uint8", wrap_tk_object_get_prop_uint8},
+  {"set_prop_uint8", wrap_tk_object_set_prop_uint8},
+  {"get_prop_int16", wrap_tk_object_get_prop_int16},
+  {"set_prop_int16", wrap_tk_object_set_prop_int16},
+  {"get_prop_uint16", wrap_tk_object_get_prop_uint16},
+  {"set_prop_uint16", wrap_tk_object_set_prop_uint16},
+  {"get_prop_int32", wrap_tk_object_get_prop_int32},
+  {"set_prop_int32", wrap_tk_object_set_prop_int32},
+  {"get_prop_uint32", wrap_tk_object_get_prop_uint32},
+  {"set_prop_uint32", wrap_tk_object_set_prop_uint32},
+  {"get_prop_int64", wrap_tk_object_get_prop_int64},
+  {"set_prop_int64", wrap_tk_object_set_prop_int64},
+  {"get_prop_uint64", wrap_tk_object_get_prop_uint64},
+  {"set_prop_uint64", wrap_tk_object_set_prop_uint64},
   {NULL, NULL}
 };
 
-static int wrap_object_t_set_prop(lua_State* L) {
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+static int wrap_tk_object_t_set_prop(lua_State* L) {
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
   (void)obj;
   (void)name;
     return wrap_emitter_t_set_prop(L);
 }
 
-static int wrap_object_t_get_prop(lua_State* L) {
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+static int wrap_tk_object_t_get_prop(lua_State* L) {
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const char* name = (const char*)luaL_checkstring(L, 2);
-  const luaL_Reg* ret = find_member(object_t_member_funcs, name);
+  const luaL_Reg* ret = find_member(tk_object_t_member_funcs, name);
 
   (void)obj;
   (void)name;
@@ -1725,24 +1725,24 @@ static int wrap_object_t_get_prop(lua_State* L) {
   }
 }
 
-static void object_t_init(lua_State* L) {
+static void tk_object_t_init(lua_State* L) {
   static const struct luaL_Reg static_funcs[] = {
-    {"ref", wrap_object_ref},
+    {"ref", wrap_tk_object_ref},
     {NULL, NULL}
   };
 
   static const struct luaL_Reg index_funcs[] = {
-    {"__index", wrap_object_t_get_prop},
-    {"__newindex", wrap_object_t_set_prop},
+    {"__index", wrap_tk_object_t_get_prop},
+    {"__newindex", wrap_tk_object_t_set_prop},
     {NULL, NULL}
   };
 
-  luaL_newmetatable(L, "awtk.object_t");
+  luaL_newmetatable(L, "awtk.tk_object_t");
   lua_pushstring(L, "__index");
   lua_pushvalue(L, -2);
   lua_settable(L, -3);
   luaL_openlib(L, NULL, index_funcs, 0);
-  luaL_openlib(L, "Object", static_funcs, 0);
+  luaL_openlib(L, "TkObject", static_funcs, 0);
   lua_settop(L, 0);
 }
 static int wrap_value_set_bool(lua_State* L) {
@@ -1997,18 +1997,18 @@ static int wrap_value_set_int(lua_State* L) {
 static int wrap_value_set_object(lua_State* L) {
   value_t* ret = NULL;
   value_t* v = (value_t*)tk_checkudata(L, 1, "value_t");
-  object_t* value = (object_t*)tk_checkudata(L, 2, "object_t");
+  tk_object_t* value = (tk_object_t*)tk_checkudata(L, 2, "tk_object_t");
   ret = (value_t*)value_set_object(v, value);
 
   return tk_newuserdata(L, (void*)ret, "/value_t", "awtk.value_t");
 }
 
 static int wrap_value_object(lua_State* L) {
-  object_t* ret = NULL;
+  tk_object_t* ret = NULL;
   value_t* v = (value_t*)tk_checkudata(L, 1, "value_t");
-  ret = (object_t*)value_object(v);
+  ret = (tk_object_t*)value_object(v);
 
-  return tk_newuserdata(L, (void*)ret, "/object_t/emitter_t", "awtk.object_t");
+  return tk_newuserdata(L, (void*)ret, "/tk_object_t/emitter_t", "awtk.tk_object_t");
 }
 
 static int wrap_value_set_token(lua_State* L) {
@@ -2414,6 +2414,17 @@ static int wrap_canvas_get_height(lua_State* L) {
   return 1;
 }
 
+static int wrap_canvas_get_clip_rect(lua_State* L) {
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)tk_checkudata(L, 1, "canvas_t");
+  rect_t* r = (rect_t*)tk_checkudata(L, 2, "rect_t");
+  ret = (ret_t)canvas_get_clip_rect(c, r);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 static int wrap_canvas_set_clip_rect(lua_State* L) {
   ret_t ret = 0;
   canvas_t* c = (canvas_t*)tk_checkudata(L, 1, "canvas_t");
@@ -2704,6 +2715,7 @@ static int wrap_canvas_reset(lua_State* L) {
 static const struct luaL_Reg canvas_t_member_funcs[] = {
   {"get_width", wrap_canvas_get_width},
   {"get_height", wrap_canvas_get_height},
+  {"get_clip_rect", wrap_canvas_get_clip_rect},
   {"set_clip_rect", wrap_canvas_set_clip_rect},
   {"set_clip_rect_ex", wrap_canvas_set_clip_rect_ex},
   {"set_fill_color", wrap_canvas_set_fill_color_str},
@@ -7042,7 +7054,7 @@ static int wrap_widget_get_native_window(lua_State* L) {
   widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
   ret = (native_window_t*)widget_get_native_window(widget);
 
-  return tk_newuserdata(L, (void*)ret, "/native_window_t/object_t/emitter_t", "awtk.native_window_t");
+  return tk_newuserdata(L, (void*)ret, "/native_window_t/tk_object_t/emitter_t", "awtk.native_window_t");
 }
 
 static int wrap_widget_index_of(lua_State* L) {
@@ -10089,43 +10101,43 @@ static void object_cmd_t_init(lua_State* L) {
   lua_getglobal(L, "ObjectCmd");
 
   lua_pushstring(L, "SAVE");
-  lua_pushstring(L, OBJECT_CMD_SAVE);
+  lua_pushstring(L, TK_OBJECT_CMD_SAVE);
   lua_settable(L, -3); 
 
   lua_pushstring(L, "RELOAD");
-  lua_pushstring(L, OBJECT_CMD_RELOAD);
+  lua_pushstring(L, TK_OBJECT_CMD_RELOAD);
   lua_settable(L, -3); 
 
   lua_pushstring(L, "MOVE_UP");
-  lua_pushstring(L, OBJECT_CMD_MOVE_UP);
+  lua_pushstring(L, TK_OBJECT_CMD_MOVE_UP);
   lua_settable(L, -3); 
 
   lua_pushstring(L, "MOVE_DOWN");
-  lua_pushstring(L, OBJECT_CMD_MOVE_DOWN);
+  lua_pushstring(L, TK_OBJECT_CMD_MOVE_DOWN);
   lua_settable(L, -3); 
 
   lua_pushstring(L, "REMOVE");
-  lua_pushstring(L, OBJECT_CMD_REMOVE);
+  lua_pushstring(L, TK_OBJECT_CMD_REMOVE);
   lua_settable(L, -3); 
 
   lua_pushstring(L, "REMOVE_CHECKED");
-  lua_pushstring(L, OBJECT_CMD_REMOVE_CHECKED);
+  lua_pushstring(L, TK_OBJECT_CMD_REMOVE_CHECKED);
   lua_settable(L, -3); 
 
   lua_pushstring(L, "CLEAR");
-  lua_pushstring(L, OBJECT_CMD_CLEAR);
+  lua_pushstring(L, TK_OBJECT_CMD_CLEAR);
   lua_settable(L, -3); 
 
   lua_pushstring(L, "ADD");
-  lua_pushstring(L, OBJECT_CMD_ADD);
+  lua_pushstring(L, TK_OBJECT_CMD_ADD);
   lua_settable(L, -3); 
 
   lua_pushstring(L, "DETAIL");
-  lua_pushstring(L, OBJECT_CMD_DETAIL);
+  lua_pushstring(L, TK_OBJECT_CMD_DETAIL);
   lua_settable(L, -3); 
 
   lua_pushstring(L, "EDIT");
-  lua_pushstring(L, OBJECT_CMD_EDIT);
+  lua_pushstring(L, TK_OBJECT_CMD_EDIT);
   lua_settable(L, -3); 
 
 }
@@ -10135,12 +10147,12 @@ static void object_prop_t_init(lua_State* L) {
   lua_setglobal(L, "ObjectProp");
   lua_getglobal(L, "ObjectProp");
 
-  lua_pushstring(L, "SIZE");
-  lua_pushstring(L, OBJECT_PROP_SIZE);
+  lua_pushstring(L, "TK_SIZE");
+  lua_pushstring(L, TK_OBJECT_PROP_SIZE);
   lua_settable(L, -3); 
 
-  lua_pushstring(L, "CHECKED");
-  lua_pushstring(L, OBJECT_PROP_CHECKED);
+  lua_pushstring(L, "TK_CHECKED");
+  lua_pushstring(L, TK_OBJECT_PROP_CHECKED);
   lua_settable(L, -3); 
 
 }
@@ -20592,7 +20604,7 @@ static int wrap_native_window_t_set_prop(lua_State* L) {
   const char* name = (const char*)luaL_checkstring(L, 2);
   (void)obj;
   (void)name;
-    return wrap_object_t_set_prop(L);
+    return wrap_tk_object_t_set_prop(L);
 }
 
 static int wrap_native_window_t_get_prop(lua_State* L) {
@@ -20607,7 +20619,7 @@ static int wrap_native_window_t_get_prop(lua_State* L) {
     return 1;
   }
   else {
-    return wrap_object_t_get_prop(L);
+    return wrap_tk_object_t_get_prop(L);
   }
 }
 
@@ -21117,7 +21129,7 @@ static int wrap_idle_info_cast(lua_State* L) {
   idle_info_t* idle = (idle_info_t*)tk_checkudata(L, 1, "idle_info_t");
   ret = (idle_info_t*)idle_info_cast(idle);
 
-  return tk_newuserdata(L, (void*)ret, "/idle_info_t/object_t/emitter_t", "awtk.idle_info_t");
+  return tk_newuserdata(L, (void*)ret, "/idle_info_t/tk_object_t/emitter_t", "awtk.idle_info_t");
 }
 
 
@@ -21130,7 +21142,7 @@ static int wrap_idle_info_t_set_prop(lua_State* L) {
   const char* name = (const char*)luaL_checkstring(L, 2);
   (void)obj;
   (void)name;
-    return wrap_object_t_set_prop(L);
+    return wrap_tk_object_t_set_prop(L);
 }
 
 static int wrap_idle_info_t_get_prop(lua_State* L) {
@@ -21156,7 +21168,7 @@ static int wrap_idle_info_t_get_prop(lua_State* L) {
   return 1;
   }
   else {
-    return wrap_object_t_get_prop(L);
+    return wrap_tk_object_t_get_prop(L);
   }
 }
 
@@ -21181,15 +21193,15 @@ static void idle_info_t_init(lua_State* L) {
   lua_settop(L, 0);
 }
 static int wrap_object_array_create(lua_State* L) {
-  object_t* ret = NULL;
-  ret = (object_t*)object_array_create();
+  tk_object_t* ret = NULL;
+  ret = (tk_object_t*)object_array_create();
 
-  return tk_newuserdata(L, (void*)ret, "/object_array_t/object_t/emitter_t", "awtk.object_array_t");
+  return tk_newuserdata(L, (void*)ret, "/object_array_t/tk_object_t/emitter_t", "awtk.object_array_t");
 }
 
 static int wrap_object_array_unref(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   ret = (ret_t)object_array_unref(obj);
 
   lua_pushnumber(L,(lua_Number)(ret));
@@ -21199,7 +21211,7 @@ static int wrap_object_array_unref(lua_State* L) {
 
 static int wrap_object_array_clear_props(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   ret = (ret_t)object_array_clear_props(obj);
 
   lua_pushnumber(L,(lua_Number)(ret));
@@ -21209,7 +21221,7 @@ static int wrap_object_array_clear_props(lua_State* L) {
 
 static int wrap_object_array_insert(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   uint32_t index = (uint32_t)luaL_checkinteger(L, 2);
   const value_t* v = (const value_t*)tk_checkudata(L, 3, "const value_t");
   ret = (ret_t)object_array_insert(obj, index, v);
@@ -21221,7 +21233,7 @@ static int wrap_object_array_insert(lua_State* L) {
 
 static int wrap_object_array_push(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const value_t* v = (const value_t*)tk_checkudata(L, 2, "const value_t");
   ret = (ret_t)object_array_push(obj, v);
 
@@ -21232,7 +21244,7 @@ static int wrap_object_array_push(lua_State* L) {
 
 static int wrap_object_array_index_of(lua_State* L) {
   int32_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const value_t* v = (const value_t*)tk_checkudata(L, 2, "const value_t");
   ret = (int32_t)object_array_index_of(obj, v);
 
@@ -21243,7 +21255,7 @@ static int wrap_object_array_index_of(lua_State* L) {
 
 static int wrap_object_array_last_index_of(lua_State* L) {
   int32_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   const value_t* v = (const value_t*)tk_checkudata(L, 2, "const value_t");
   ret = (int32_t)object_array_last_index_of(obj, v);
 
@@ -21254,7 +21266,7 @@ static int wrap_object_array_last_index_of(lua_State* L) {
 
 static int wrap_object_array_remove(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   uint32_t index = (uint32_t)luaL_checkinteger(L, 2);
   ret = (ret_t)object_array_remove(obj, index);
 
@@ -21265,7 +21277,7 @@ static int wrap_object_array_remove(lua_State* L) {
 
 static int wrap_object_array_get_and_remove(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   uint32_t index = (uint32_t)luaL_checkinteger(L, 2);
   value_t* v = (value_t*)tk_checkudata(L, 3, "value_t");
   ret = (ret_t)object_array_get_and_remove(obj, index, v);
@@ -21293,7 +21305,7 @@ static int wrap_object_array_t_set_prop(lua_State* L) {
   const char* name = (const char*)luaL_checkstring(L, 2);
   (void)obj;
   (void)name;
-    return wrap_object_t_set_prop(L);
+    return wrap_tk_object_t_set_prop(L);
 }
 
 static int wrap_object_array_t_get_prop(lua_State* L) {
@@ -21313,7 +21325,7 @@ static int wrap_object_array_t_get_prop(lua_State* L) {
   return 1;
   }
   else {
-    return wrap_object_t_get_prop(L);
+    return wrap_tk_object_t_get_prop(L);
   }
 }
 
@@ -21338,23 +21350,23 @@ static void object_array_t_init(lua_State* L) {
   lua_settop(L, 0);
 }
 static int wrap_object_default_create(lua_State* L) {
-  object_t* ret = NULL;
-  ret = (object_t*)object_default_create();
+  tk_object_t* ret = NULL;
+  ret = (tk_object_t*)object_default_create();
 
-  return tk_newuserdata(L, (void*)ret, "/object_default_t/object_t/emitter_t", "awtk.object_default_t");
+  return tk_newuserdata(L, (void*)ret, "/object_default_t/tk_object_t/emitter_t", "awtk.object_default_t");
 }
 
 static int wrap_object_default_create_ex(lua_State* L) {
-  object_t* ret = NULL;
+  tk_object_t* ret = NULL;
   bool_t enable_path = (bool_t)lua_toboolean(L, 1);
-  ret = (object_t*)object_default_create_ex(enable_path);
+  ret = (tk_object_t*)object_default_create_ex(enable_path);
 
-  return tk_newuserdata(L, (void*)ret, "/object_default_t/object_t/emitter_t", "awtk.object_default_t");
+  return tk_newuserdata(L, (void*)ret, "/object_default_t/tk_object_t/emitter_t", "awtk.object_default_t");
 }
 
 static int wrap_object_default_unref(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   ret = (ret_t)object_default_unref(obj);
 
   lua_pushnumber(L,(lua_Number)(ret));
@@ -21364,7 +21376,7 @@ static int wrap_object_default_unref(lua_State* L) {
 
 static int wrap_object_default_clear_props(lua_State* L) {
   ret_t ret = 0;
-  object_t* obj = (object_t*)tk_checkudata(L, 1, "object_t");
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
   ret = (ret_t)object_default_clear_props(obj);
 
   lua_pushnumber(L,(lua_Number)(ret));
@@ -21384,7 +21396,7 @@ static int wrap_object_default_t_set_prop(lua_State* L) {
   const char* name = (const char*)luaL_checkstring(L, 2);
   (void)obj;
   (void)name;
-    return wrap_object_t_set_prop(L);
+    return wrap_tk_object_t_set_prop(L);
 }
 
 static int wrap_object_default_t_get_prop(lua_State* L) {
@@ -21399,7 +21411,7 @@ static int wrap_object_default_t_get_prop(lua_State* L) {
     return 1;
   }
   else {
-    return wrap_object_t_get_prop(L);
+    return wrap_tk_object_t_get_prop(L);
   }
 }
 
@@ -21429,7 +21441,7 @@ static int wrap_timer_info_cast(lua_State* L) {
   timer_info_t* timer = (timer_info_t*)tk_checkudata(L, 1, "timer_info_t");
   ret = (timer_info_t*)timer_info_cast(timer);
 
-  return tk_newuserdata(L, (void*)ret, "/timer_info_t/object_t/emitter_t", "awtk.timer_info_t");
+  return tk_newuserdata(L, (void*)ret, "/timer_info_t/tk_object_t/emitter_t", "awtk.timer_info_t");
 }
 
 
@@ -21442,7 +21454,7 @@ static int wrap_timer_info_t_set_prop(lua_State* L) {
   const char* name = (const char*)luaL_checkstring(L, 2);
   (void)obj;
   (void)name;
-    return wrap_object_t_set_prop(L);
+    return wrap_tk_object_t_set_prop(L);
 }
 
 static int wrap_timer_info_t_get_prop(lua_State* L) {
@@ -21473,7 +21485,7 @@ static int wrap_timer_info_t_get_prop(lua_State* L) {
   return 1;
   }
   else {
-    return wrap_object_t_get_prop(L);
+    return wrap_tk_object_t_get_prop(L);
   }
 }
 
@@ -22330,7 +22342,7 @@ void luaL_openawtk(lua_State* L) {
   rectf_t_init(L);
   rect_t_init(L);
   bitmap_t_init(L);
-  object_t_init(L);
+  tk_object_t_init(L);
   value_t_init(L);
   global_t_init(L);
   bidi_type_t_init(L);

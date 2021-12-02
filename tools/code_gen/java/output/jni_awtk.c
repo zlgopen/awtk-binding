@@ -1815,6 +1815,18 @@ int awtk_TCanvas_canvas_get_height(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TCanvas_canvas_get_clip_rect(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&actx);
+  rect_t* r = (rect_t*)jni_ctx_get_object(&actx);
+  ret = (ret_t)canvas_get_clip_rect(c, r);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TCanvas_canvas_set_clip_rect(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -21377,6 +21389,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TImageDrawType",  "IMAGE_DRAW_REPEAT3_Y",  "()I",  awtk_TImageDrawType_IMAGE_DRAW_REPEAT3_Y},
 {"awtk/TCanvas",  "canvas_get_width",  "(J)I",  awtk_TCanvas_canvas_get_width},
 {"awtk/TCanvas",  "canvas_get_height",  "(J)I",  awtk_TCanvas_canvas_get_height},
+{"awtk/TCanvas",  "canvas_get_clip_rect",  "(JJ)I",  awtk_TCanvas_canvas_get_clip_rect},
 {"awtk/TCanvas",  "canvas_set_clip_rect",  "(JJ)I",  awtk_TCanvas_canvas_set_clip_rect},
 {"awtk/TCanvas",  "canvas_set_clip_rect_ex",  "(JJZ)I",  awtk_TCanvas_canvas_set_clip_rect_ex},
 {"awtk/TCanvas",  "canvas_set_fill_color_str",  "(JLjava/lang/String;)I",  awtk_TCanvas_canvas_set_fill_color_str},

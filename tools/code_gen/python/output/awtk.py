@@ -2019,6 +2019,17 @@ class TCanvas(object):
 
 
   #
+  # 获取裁剪区。
+  # 
+  # @param r rect对象。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def get_clip_rect(self, r): 
+      return canvas_get_clip_rect(awtk_get_native_obj(self), awtk_get_native_obj(r))
+
+
+  #
   # 设置裁剪区。
   # 
   # @param r rect对象。
@@ -11651,7 +11662,7 @@ class TValueType:
   WSTRING = VALUE_TYPE_WSTRING()
 
   #
-  # object_t*类型。
+  # tk_object_t*类型。
   #
   #
   OBJECT = VALUE_TYPE_OBJECT()
@@ -22284,7 +22295,7 @@ class TPages (TWidget):
 
 
   #
-  # 当前活跃的page。
+  # 当前活跃的page。(需要用到 MVVM 数据绑定请设置 value 属性)
   #
   #
   @property

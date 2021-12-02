@@ -2527,6 +2527,21 @@ static void wrap_canvas_get_height(const Nan::FunctionCallbackInfo<v8::Value>& a
   (void)argc;(void)ctx;
 }
 
+static void wrap_canvas_get_clip_rect(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 2) {
+  ret_t ret = (ret_t)0;
+  canvas_t* c = (canvas_t*)jsvalue_get_pointer(ctx, argv[0], "canvas_t*");
+  rect_t* r = (rect_t*)jsvalue_get_pointer(ctx, argv[1], "rect_t*");
+  ret = (ret_t)canvas_get_clip_rect(c, r);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_canvas_set_clip_rect(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -2975,6 +2990,7 @@ static void wrap_canvas_t_get_prop_global_alpha(const Nan::FunctionCallbackInfo<
 ret_t canvas_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "canvas_get_width", wrap_canvas_get_width);
   Nan::Export(ctx, "canvas_get_height", wrap_canvas_get_height);
+  Nan::Export(ctx, "canvas_get_clip_rect", wrap_canvas_get_clip_rect);
   Nan::Export(ctx, "canvas_set_clip_rect", wrap_canvas_set_clip_rect);
   Nan::Export(ctx, "canvas_set_clip_rect_ex", wrap_canvas_set_clip_rect_ex);
   Nan::Export(ctx, "canvas_set_fill_color_str", wrap_canvas_set_fill_color_str);

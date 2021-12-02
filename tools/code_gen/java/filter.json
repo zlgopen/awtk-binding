@@ -3283,6 +3283,29 @@
             "desc": "canvas对象。"
           },
           {
+            "type": "rect_t*",
+            "name": "r",
+            "desc": "rect对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取裁剪区。",
+        "name": "canvas_get_clip_rect",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "canvas_t*",
+            "name": "c",
+            "desc": "canvas对象。"
+          },
+          {
             "type": "const rect_t*",
             "name": "r",
             "desc": "rect对象。"
@@ -14908,7 +14931,7 @@
         "name": "VALUE_TYPE_WSTRING"
       },
       {
-        "desc": "object_t*类型。",
+        "desc": "tk_object_t*类型。",
         "name": "VALUE_TYPE_OBJECT"
       },
       {
@@ -27988,6 +28011,11 @@
         "name": "EVT_VALUE_CHANGED",
         "desc": "文本改变事件。",
         "type": "value_change_event_t"
+      },
+      {
+        "name": "EVT_IM_ACTION",
+        "desc": "软键盘Action点击事件。",
+        "type": "event_t"
       }
     ],
     "properties": [
@@ -28804,7 +28832,7 @@
     "properties": [
       {
         "name": "active",
-        "desc": "当前活跃的page。",
+        "desc": "当前活跃的page。(需要用到 MVVM 数据绑定请设置 value 属性)",
         "type": "uint32_t",
         "annotation": {
           "set_prop": true,

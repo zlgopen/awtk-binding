@@ -348,6 +348,8 @@ const canvas_get_width = Module.cwrap("canvas_get_width",
     "number", ["number"]);
 const canvas_get_height = Module.cwrap("canvas_get_height", 
     "number", ["number"]);
+const canvas_get_clip_rect = Module.cwrap("canvas_get_clip_rect", 
+    "number", ["number","number"]);
 const canvas_set_clip_rect = Module.cwrap("canvas_set_clip_rect", 
     "number", ["number","number"]);
 const canvas_set_clip_rect_ex = Module.cwrap("canvas_set_clip_rect_ex", 
@@ -6203,6 +6205,18 @@ export class TCanvas {
    */
  getHeight() : number  {
     return canvas_get_height(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 获取裁剪区。
+   * 
+   * @param r rect对象。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ getClipRect(r : TRect) : TRet  {
+    return canvas_get_clip_rect(this != null ? (this.nativeObj || this) : null, r != null ? (r.nativeObj || r) : null);
  }
 
 
@@ -15882,7 +15896,7 @@ export enum TValueType {
  WSTRING = VALUE_TYPE_WSTRING(),
 
   /**
-   * object_t*类型。
+   * tk_object_t*类型。
    *
    */
  OBJECT = VALUE_TYPE_OBJECT(),
@@ -25753,7 +25767,7 @@ export class TPages extends TWidget {
 
 
   /**
-   * 当前活跃的page。
+   * 当前活跃的page。(需要用到 MVVM 数据绑定请设置 value 属性)
    *
    */
  get active() : number {

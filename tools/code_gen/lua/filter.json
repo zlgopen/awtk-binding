@@ -631,7 +631,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           }
@@ -642,7 +642,7 @@
           "gc": true
         },
         "desc": "引用计数减1。引用计数为0时，销毁对象。",
-        "name": "object_unref",
+        "name": "tk_object_unref",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -651,7 +651,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           }
@@ -662,16 +662,16 @@
           "gc": true
         },
         "desc": "引用计数加1。",
-        "name": "object_ref",
+        "name": "tk_object_ref",
         "return": {
-          "type": "object_t*",
+          "type": "tk_object_t*",
           "desc": "返回object对象。"
         }
       },
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           }
@@ -680,7 +680,7 @@
           "scriptable": true
         },
         "desc": "获取对象的类型名称。",
-        "name": "object_get_type",
+        "name": "tk_object_get_type",
         "return": {
           "type": "const char*",
           "desc": "返回对象的类型名称。"
@@ -689,7 +689,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           }
@@ -698,7 +698,7 @@
           "scriptable": true
         },
         "desc": "获取对象的描述信息。",
-        "name": "object_get_desc",
+        "name": "tk_object_get_desc",
         "return": {
           "type": "const char*",
           "desc": "返回对象的描述信息。"
@@ -707,7 +707,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           }
@@ -716,7 +716,7 @@
           "scriptable": true
         },
         "desc": "获取对象占用内存的大小。",
-        "name": "object_get_size",
+        "name": "tk_object_get_size",
         "return": {
           "type": "uint32_t",
           "desc": "返回对象占用内存的大小。"
@@ -725,7 +725,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           }
@@ -734,7 +734,7 @@
           "scriptable": true
         },
         "desc": "判断对象是否是集合。",
-        "name": "object_is_collection",
+        "name": "tk_object_is_collection",
         "return": {
           "type": "bool_t",
           "desc": "返回TRUE表示是集合，否则不是。"
@@ -743,7 +743,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -757,7 +757,7 @@
           "scriptable": true
         },
         "desc": "设置对象的名称。",
-        "name": "object_set_name",
+        "name": "tk_object_set_name",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -766,12 +766,12 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "other",
             "desc": "比较的object对象。"
           }
@@ -780,7 +780,7 @@
           "scriptable": true
         },
         "desc": "比较两个对象。",
-        "name": "object_compare",
+        "name": "tk_object_compare",
         "return": {
           "type": "int",
           "desc": "返回比较结果。"
@@ -789,7 +789,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -808,7 +808,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的值。",
-        "name": "object_get_prop",
+        "name": "tk_object_get_prop",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -817,7 +817,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -831,7 +831,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的字符串类型的值。",
-        "name": "object_get_prop_str",
+        "name": "tk_object_get_prop_str",
         "return": {
           "type": "const char*",
           "desc": "返回指定属性的字符串类型的值。"
@@ -840,7 +840,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -854,7 +854,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的指针类型的值。",
-        "name": "object_get_prop_pointer",
+        "name": "tk_object_get_prop_pointer",
         "return": {
           "type": "void*",
           "desc": "返回指定属性的指针类型的值。"
@@ -863,7 +863,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -877,16 +877,16 @@
           "scriptable": true
         },
         "desc": "获取指定属性的object类型的值。",
-        "name": "object_get_prop_object",
+        "name": "tk_object_get_prop_object",
         "return": {
-          "type": "object_t*",
+          "type": "tk_object_t*",
           "desc": "返回指定属性的object类型的值。"
         }
       },
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -905,7 +905,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的整数类型的值。",
-        "name": "object_get_prop_int",
+        "name": "tk_object_get_prop_int",
         "return": {
           "type": "int32_t",
           "desc": "返回指定属性的整数类型的值。"
@@ -914,7 +914,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -933,7 +933,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的bool类型的值。",
-        "name": "object_get_prop_bool",
+        "name": "tk_object_get_prop_bool",
         "return": {
           "type": "bool_t",
           "desc": "返回指定属性的bool类型的值。"
@@ -942,7 +942,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -961,7 +961,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的浮点数类型的值。",
-        "name": "object_get_prop_float",
+        "name": "tk_object_get_prop_float",
         "return": {
           "type": "float_t",
           "desc": "返回指定属性的浮点数类型的值。"
@@ -970,7 +970,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -989,7 +989,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的浮点数类型的值。",
-        "name": "object_get_prop_double",
+        "name": "tk_object_get_prop_double",
         "return": {
           "type": "double",
           "desc": "返回指定属性的浮点数类型的值。"
@@ -998,7 +998,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1012,7 +1012,7 @@
           "scriptable": true
         },
         "desc": "删除指定属性。",
-        "name": "object_remove_prop",
+        "name": "tk_object_remove_prop",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1021,7 +1021,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1040,7 +1040,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的值。",
-        "name": "object_set_prop",
+        "name": "tk_object_set_prop",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1049,7 +1049,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1068,7 +1068,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的字符串类型的值。",
-        "name": "object_set_prop_str",
+        "name": "tk_object_set_prop_str",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1077,7 +1077,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1087,7 +1087,7 @@
             "desc": "属性的名称。"
           },
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "value",
             "desc": "属性的值。"
           }
@@ -1096,7 +1096,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的object类型的值。",
-        "name": "object_set_prop_object",
+        "name": "tk_object_set_prop_object",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1105,7 +1105,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1124,7 +1124,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的整数类型的值。",
-        "name": "object_set_prop_int",
+        "name": "tk_object_set_prop_int",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1133,7 +1133,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1152,7 +1152,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的bool类型的值。",
-        "name": "object_set_prop_bool",
+        "name": "tk_object_set_prop_bool",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1161,7 +1161,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1180,7 +1180,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的浮点数类型的值。",
-        "name": "object_set_prop_float",
+        "name": "tk_object_set_prop_float",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1189,7 +1189,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1208,7 +1208,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的浮点数类型的值。",
-        "name": "object_set_prop_double",
+        "name": "tk_object_set_prop_double",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1217,12 +1217,12 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "目标对象。"
           },
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "src",
             "desc": "源对象。"
           },
@@ -1236,7 +1236,7 @@
           "scriptable": true
         },
         "desc": "拷贝指定的属性。",
-        "name": "object_copy_prop",
+        "name": "tk_object_copy_prop",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1245,7 +1245,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1259,7 +1259,7 @@
           "scriptable": true
         },
         "desc": "检查是否存在指定的属性。",
-        "name": "object_has_prop",
+        "name": "tk_object_has_prop",
         "return": {
           "type": "bool_t",
           "desc": "返回TRUE表示存在，否则表示不存在。"
@@ -1268,7 +1268,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1287,7 +1287,7 @@
           "scriptable": true
         },
         "desc": "计算一个表达式，表达式中引用的变量从prop中获取。",
-        "name": "object_eval",
+        "name": "tk_object_eval",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1296,7 +1296,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1315,7 +1315,7 @@
           "scriptable": true
         },
         "desc": "检查是否可以执行指定的命令。",
-        "name": "object_can_exec",
+        "name": "tk_object_can_exec",
         "return": {
           "type": "bool_t",
           "desc": "返回TRUE表示可以执行，否则表示不可以执行。"
@@ -1324,7 +1324,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1343,7 +1343,7 @@
           "scriptable": true
         },
         "desc": "执行指定的命令。",
-        "name": "object_exec",
+        "name": "tk_object_exec",
         "alias": "execute",
         "return": {
           "type": "ret_t",
@@ -1353,7 +1353,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           }
@@ -1362,7 +1362,7 @@
           "scriptable": true
         },
         "desc": "触发EVT_PROPS_CHANGED事件。",
-        "name": "object_notify_changed",
+        "name": "tk_object_notify_changed",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1371,7 +1371,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1385,7 +1385,7 @@
           "scriptable": true
         },
         "desc": "检查是否存在指定的属性。",
-        "name": "object_has_prop_by_path",
+        "name": "tk_object_has_prop_by_path",
         "return": {
           "type": "bool_t",
           "desc": "返回TRUE表示存在，否则表示不存在。"
@@ -1394,7 +1394,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1408,7 +1408,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的字符串类型的值。",
-        "name": "object_get_prop_str_by_path",
+        "name": "tk_object_get_prop_str_by_path",
         "return": {
           "type": "const char*",
           "desc": "返回指定属性的字符串类型的值。"
@@ -1417,7 +1417,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1431,7 +1431,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的指针类型的值。",
-        "name": "object_get_prop_pointer_by_path",
+        "name": "tk_object_get_prop_pointer_by_path",
         "return": {
           "type": "void*",
           "desc": "返回指定属性的指针类型的值。"
@@ -1440,7 +1440,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1454,16 +1454,16 @@
           "scriptable": true
         },
         "desc": "获取指定属性的object类型的值。",
-        "name": "object_get_prop_object_by_path",
+        "name": "tk_object_get_prop_object_by_path",
         "return": {
-          "type": "object_t*",
+          "type": "tk_object_t*",
           "desc": "返回指定属性的object类型的值。"
         }
       },
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1482,7 +1482,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的整数类型的值。",
-        "name": "object_get_prop_int_by_path",
+        "name": "tk_object_get_prop_int_by_path",
         "return": {
           "type": "int32_t",
           "desc": "返回指定属性的整数类型的值。"
@@ -1491,7 +1491,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1510,7 +1510,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的bool类型的值。",
-        "name": "object_get_prop_bool_by_path",
+        "name": "tk_object_get_prop_bool_by_path",
         "return": {
           "type": "bool_t",
           "desc": "返回指定属性的bool类型的值。"
@@ -1519,7 +1519,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1538,7 +1538,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的浮点数类型的值。\n\ne",
-        "name": "object_get_prop_float_by_path",
+        "name": "tk_object_get_prop_float_by_path",
         "return": {
           "type": "float_t",
           "desc": "返回指定属性的浮点数类型的值。"
@@ -1547,7 +1547,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1566,7 +1566,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的值。",
-        "name": "object_set_prop_by_path",
+        "name": "tk_object_set_prop_by_path",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1575,7 +1575,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1594,7 +1594,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的字符串类型的值。",
-        "name": "object_set_prop_str_by_path",
+        "name": "tk_object_set_prop_str_by_path",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1603,7 +1603,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1613,7 +1613,7 @@
             "desc": "属性的path。"
           },
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "value",
             "desc": "属性的值。"
           }
@@ -1622,7 +1622,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的object类型的值。",
-        "name": "object_set_prop_object_by_path",
+        "name": "tk_object_set_prop_object_by_path",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1631,7 +1631,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1650,7 +1650,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的整数类型的值。",
-        "name": "object_set_prop_int_by_path",
+        "name": "tk_object_set_prop_int_by_path",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1659,7 +1659,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1678,7 +1678,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的bool类型的值。",
-        "name": "object_set_prop_bool_by_path",
+        "name": "tk_object_set_prop_bool_by_path",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1687,7 +1687,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1706,7 +1706,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的浮点数类型的值。",
-        "name": "object_set_prop_float_by_path",
+        "name": "tk_object_set_prop_float_by_path",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1715,7 +1715,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1734,7 +1734,7 @@
           "scriptable": true
         },
         "desc": "检查是否可以执行指定的命令。",
-        "name": "object_can_exec_by_path",
+        "name": "tk_object_can_exec_by_path",
         "return": {
           "type": "bool_t",
           "desc": "返回TRUE表示可以执行，否则表示不可以执行。"
@@ -1743,7 +1743,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1762,7 +1762,7 @@
           "scriptable": true
         },
         "desc": "执行指定的命令。",
-        "name": "object_exec_by_path",
+        "name": "tk_object_exec_by_path",
         "alias": "execute_by_path",
         "return": {
           "type": "ret_t",
@@ -1772,7 +1772,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1791,7 +1791,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的int8类型的值。",
-        "name": "object_get_prop_int8",
+        "name": "tk_object_get_prop_int8",
         "return": {
           "type": "int8_t",
           "desc": "返回指定属性的int8类型的值。"
@@ -1800,7 +1800,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1819,7 +1819,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的int8类型的值。",
-        "name": "object_set_prop_int8",
+        "name": "tk_object_set_prop_int8",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1828,7 +1828,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1847,7 +1847,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的uint8类型的值。",
-        "name": "object_get_prop_uint8",
+        "name": "tk_object_get_prop_uint8",
         "return": {
           "type": "uint8_t",
           "desc": "返回指定属性的uint8类型的值。"
@@ -1856,7 +1856,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1875,7 +1875,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的uint8类型的值。",
-        "name": "object_set_prop_uint8",
+        "name": "tk_object_set_prop_uint8",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1884,7 +1884,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1903,7 +1903,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的int16类型的值。",
-        "name": "object_get_prop_int16",
+        "name": "tk_object_get_prop_int16",
         "return": {
           "type": "int16_t",
           "desc": "返回指定属性的int16类型的值。"
@@ -1912,7 +1912,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1931,7 +1931,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的int16类型的值。",
-        "name": "object_set_prop_int16",
+        "name": "tk_object_set_prop_int16",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1940,7 +1940,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1959,7 +1959,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的uint16类型的值。",
-        "name": "object_get_prop_uint16",
+        "name": "tk_object_get_prop_uint16",
         "return": {
           "type": "uint16_t",
           "desc": "返回指定属性的uint16类型的值。"
@@ -1968,7 +1968,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -1987,7 +1987,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的uint16类型的值。",
-        "name": "object_set_prop_uint16",
+        "name": "tk_object_set_prop_uint16",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -1996,7 +1996,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -2015,7 +2015,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的int32类型的值。",
-        "name": "object_get_prop_int32",
+        "name": "tk_object_get_prop_int32",
         "return": {
           "type": "int32_t",
           "desc": "返回指定属性的int32类型的值。"
@@ -2024,7 +2024,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -2043,7 +2043,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的int32类型的值。",
-        "name": "object_set_prop_int32",
+        "name": "tk_object_set_prop_int32",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -2052,7 +2052,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -2071,7 +2071,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的uint32类型的值。",
-        "name": "object_get_prop_uint32",
+        "name": "tk_object_get_prop_uint32",
         "return": {
           "type": "uint32_t",
           "desc": "返回指定属性的uint32类型的值。"
@@ -2080,7 +2080,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -2099,7 +2099,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的uint32类型的值。",
-        "name": "object_set_prop_uint32",
+        "name": "tk_object_set_prop_uint32",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -2108,7 +2108,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -2127,7 +2127,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的int64类型的值。",
-        "name": "object_get_prop_int64",
+        "name": "tk_object_get_prop_int64",
         "return": {
           "type": "int64_t",
           "desc": "返回指定属性的int64类型的值。"
@@ -2136,7 +2136,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -2155,7 +2155,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的int64类型的值。",
-        "name": "object_set_prop_int64",
+        "name": "tk_object_set_prop_int64",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -2164,7 +2164,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -2183,7 +2183,7 @@
           "scriptable": true
         },
         "desc": "获取指定属性的uint64类型的值。",
-        "name": "object_get_prop_uint64",
+        "name": "tk_object_get_prop_uint64",
         "return": {
           "type": "uint64_t",
           "desc": "返回指定属性的uint64类型的值。"
@@ -2192,7 +2192,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "object对象。"
           },
@@ -2211,7 +2211,7 @@
           "scriptable": true
         },
         "desc": "设置指定属性的uint64类型的值。",
-        "name": "object_set_prop_uint64",
+        "name": "tk_object_set_prop_uint64",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -2241,7 +2241,7 @@
     ],
     "header": "tkc/object.h",
     "desc": "对象接口。",
-    "name": "object_t",
+    "name": "tk_object_t",
     "order": -9,
     "parent": "emitter_t",
     "annotation": {
@@ -2806,7 +2806,7 @@
             "desc": "value对象。"
           },
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "value",
             "desc": "待设置的值。"
           }
@@ -2835,7 +2835,7 @@
         "desc": "转换为object的值。",
         "name": "value_object",
         "return": {
-          "type": "object_t*",
+          "type": "tk_object_t*",
           "desc": "值。"
         }
       },
@@ -3273,6 +3273,29 @@
         "return": {
           "type": "wh_t",
           "desc": "返回画布的高度。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "canvas_t*",
+            "name": "c",
+            "desc": "canvas对象。"
+          },
+          {
+            "type": "rect_t*",
+            "name": "r",
+            "desc": "rect对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取裁剪区。",
+        "name": "canvas_get_clip_rect",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
         }
       },
       {
@@ -14535,48 +14558,48 @@
     "consts": [
       {
         "desc": "保存命令",
-        "name": "OBJECT_CMD_SAVE"
+        "name": "TK_OBJECT_CMD_SAVE"
       },
       {
         "desc": "重新加载命令",
-        "name": "OBJECT_CMD_RELOAD"
+        "name": "TK_OBJECT_CMD_RELOAD"
       },
       {
         "desc": "和前一个属性交换位置\n>参数为属性的名称或路径。",
-        "name": "OBJECT_CMD_MOVE_UP"
+        "name": "TK_OBJECT_CMD_MOVE_UP"
       },
       {
         "desc": "和后一个属性交换位置\n>参数为属性的名称或路径。",
-        "name": "OBJECT_CMD_MOVE_DOWN"
+        "name": "TK_OBJECT_CMD_MOVE_DOWN"
       },
       {
         "desc": "删除属性。\n>参数为属性的名称或路径。",
-        "name": "OBJECT_CMD_REMOVE"
+        "name": "TK_OBJECT_CMD_REMOVE"
       },
       {
         "desc": "删除勾选的属性。\n>参数为属性的名称或路径。",
-        "name": "OBJECT_CMD_REMOVE_CHECKED"
+        "name": "TK_OBJECT_CMD_REMOVE_CHECKED"
       },
       {
         "desc": "清除全部属性。\n>参数为属性的名称或路径。",
-        "name": "OBJECT_CMD_CLEAR"
+        "name": "TK_OBJECT_CMD_CLEAR"
       },
       {
         "desc": "增加子项。\n>参数为属性的名称或路径。",
-        "name": "OBJECT_CMD_ADD"
+        "name": "TK_OBJECT_CMD_ADD"
       },
       {
         "desc": "显示对象详细信息。\n>参数为属性的名称或路径。",
-        "name": "OBJECT_CMD_DETAIL"
+        "name": "TK_OBJECT_CMD_DETAIL"
       },
       {
         "desc": "编辑子项。\n>参数为属性的名称或路径。",
-        "name": "OBJECT_CMD_EDIT"
+        "name": "TK_OBJECT_CMD_EDIT"
       }
     ],
     "header": "tkc/object.h",
     "name": "object_cmd_t",
-    "prefix": "OBJECT_CMD_",
+    "prefix": "TK_OBJECT_CMD_",
     "annotation": {
       "scriptable": true,
       "string": true
@@ -14589,11 +14612,11 @@
     "consts": [
       {
         "desc": "属性的个数。",
-        "name": "OBJECT_PROP_SIZE"
+        "name": "TK_OBJECT_PROP_SIZE"
       },
       {
         "desc": "属性是否勾选。",
-        "name": "OBJECT_PROP_CHECKED"
+        "name": "TK_OBJECT_PROP_CHECKED"
       }
     ],
     "header": "tkc/object.h",
@@ -14908,7 +14931,7 @@
         "name": "VALUE_TYPE_WSTRING"
       },
       {
-        "desc": "object_t*类型。",
+        "desc": "tk_object_t*类型。",
         "name": "VALUE_TYPE_OBJECT"
       },
       {
@@ -27988,6 +28011,11 @@
         "name": "EVT_VALUE_CHANGED",
         "desc": "文本改变事件。",
         "type": "value_change_event_t"
+      },
+      {
+        "name": "EVT_IM_ACTION",
+        "desc": "软键盘Action点击事件。",
+        "type": "event_t"
       }
     ],
     "properties": [
@@ -28804,7 +28832,7 @@
     "properties": [
       {
         "name": "active",
-        "desc": "当前活跃的page。",
+        "desc": "当前活跃的page。(需要用到 MVVM 数据绑定请设置 value 属性)",
         "type": "uint32_t",
         "annotation": {
           "set_prop": true,
@@ -30793,7 +30821,7 @@
     "header": "base/native_window.h",
     "desc": "原生窗口。",
     "name": "native_window_t",
-    "parent": "object_t",
+    "parent": "tk_object_t",
     "annotation": {
       "scriptable": true
     },
@@ -31486,7 +31514,7 @@
     "header": "tkc/idle_info.h",
     "desc": "单个idle的信息。",
     "name": "idle_info_t",
-    "parent": "object_t",
+    "parent": "tk_object_t",
     "annotation": {
       "scriptable": true
     },
@@ -31505,14 +31533,14 @@
         "desc": "创建对象。",
         "name": "object_array_create",
         "return": {
-          "type": "object_t*",
+          "type": "tk_object_t*",
           "desc": "返回object对象。"
         }
       },
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "对象。"
           }
@@ -31532,7 +31560,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "对象。"
           }
@@ -31550,7 +31578,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "对象。"
           },
@@ -31578,7 +31606,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "对象。"
           },
@@ -31601,7 +31629,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "对象。"
           },
@@ -31624,7 +31652,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "对象。"
           },
@@ -31647,7 +31675,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "对象。"
           },
@@ -31670,7 +31698,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "对象。"
           },
@@ -31711,7 +31739,7 @@
     "header": "tkc/object_array.h",
     "desc": "简单的动态数组，内部存放value对象。\n\n访问时属性名称为：\n\n* \"size\"/\"length\" 用于获取数组的长度。\n* index 用于访问属性，-1可以用来追加新元素。",
     "name": "object_array_t",
-    "parent": "object_t",
+    "parent": "tk_object_t",
     "annotation": {
       "scriptable": true
     },
@@ -31730,7 +31758,7 @@
         "desc": "创建对象。",
         "name": "object_default_create",
         "return": {
-          "type": "object_t*",
+          "type": "tk_object_t*",
           "desc": "返回object对象。"
         }
       },
@@ -31750,14 +31778,14 @@
         "desc": "创建对象。",
         "name": "object_default_create_ex",
         "return": {
-          "type": "object_t*",
+          "type": "tk_object_t*",
           "desc": "返回object对象。"
         }
       },
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "对象。"
           }
@@ -31777,7 +31805,7 @@
       {
         "params": [
           {
-            "type": "object_t*",
+            "type": "tk_object_t*",
             "name": "obj",
             "desc": "对象。"
           }
@@ -31798,7 +31826,7 @@
     "header": "tkc/object_default.h",
     "desc": "对象接口的缺省实现。\n\n内部使用有序数组保存所有属性，可以快速查找指定名称的属性。",
     "name": "object_default_t",
-    "parent": "object_t",
+    "parent": "tk_object_t",
     "annotation": {
       "scriptable": true
     },
@@ -31869,7 +31897,7 @@
     "header": "tkc/timer_info.h",
     "desc": "单个定时器的信息。",
     "name": "timer_info_t",
-    "parent": "object_t",
+    "parent": "tk_object_t",
     "annotation": {
       "scriptable": true
     },

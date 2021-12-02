@@ -2031,6 +2031,20 @@ pyobject_t wrap_canvas_get_height(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", ret);
 }
 
+pyobject_t wrap_canvas_get_clip_rect(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  canvas_t* c = NULL;
+  rect_t* r = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&O&" , &__parse_voidp, &c, &__parse_voidp, &r)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)canvas_get_clip_rect(c, r);
+  return Py_BuildValue("i", ret);
+}
+
 pyobject_t wrap_canvas_set_clip_rect(pyobject_t self, pyobject_t pyargs) {
   ret_t ret = 0;
   canvas_t* c = NULL;
@@ -20511,6 +20525,7 @@ static PyMethodDef awtk_methods[] = {
 {"IMAGE_DRAW_REPEAT3_Y", get_IMAGE_DRAW_REPEAT3_Y, METH_VARARGS, "IMAGE_DRAW_REPEAT3_Y"},
 {"canvas_get_width", wrap_canvas_get_width, METH_VARARGS, "canvas_get_width"},
 {"canvas_get_height", wrap_canvas_get_height, METH_VARARGS, "canvas_get_height"},
+{"canvas_get_clip_rect", wrap_canvas_get_clip_rect, METH_VARARGS, "canvas_get_clip_rect"},
 {"canvas_set_clip_rect", wrap_canvas_set_clip_rect, METH_VARARGS, "canvas_set_clip_rect"},
 {"canvas_set_clip_rect_ex", wrap_canvas_set_clip_rect_ex, METH_VARARGS, "canvas_set_clip_rect_ex"},
 {"canvas_set_fill_color_str", wrap_canvas_set_fill_color_str, METH_VARARGS, "canvas_set_fill_color_str"},
