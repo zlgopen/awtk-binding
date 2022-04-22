@@ -1510,6 +1510,39 @@ int awtk_TValue_value_cast(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TValue_value_id(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  const char* ret = NULL;
+  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  ret = (const char*)value_id(v);
+  jni_ctx_return_str(&actx, (char*)(ret));
+
+  return 0;
+}
+
+int awtk_TValue_value_func(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  void* ret = NULL;
+  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  ret = (void*)value_func(v);
+  jni_ctx_return_int64(&actx, (int64_t)(ret));
+
+  return 0;
+}
+
+int awtk_TValue_value_func_def(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  void* ret = NULL;
+  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  ret = (void*)value_func_def(v);
+  jni_ctx_return_int64(&actx, (int64_t)(ret));
+
+  return 0;
+}
+
 int awtk_TGlobal_tk_init(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -2011,6 +2044,17 @@ int awtk_TCanvas_canvas_set_font(Runtime *runtime, JClass *clazz) {
   font_size_t size = (font_size_t)jni_ctx_get_int(&actx);
   ret = (ret_t)canvas_set_font(c, name, size);
   TKMEM_FREE(name);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TCanvas_canvas_reset_font(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  canvas_t* c = (canvas_t*)jni_ctx_get_object(&actx);
+  ret = (ret_t)canvas_reset_font(c);
   jni_ctx_return_int(&actx, (int32_t)(ret));
 
   return 0;
@@ -3241,6 +3285,22 @@ int awtk_TGlyphFormat_GLYPH_FMT_RGBA(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   jni_ctx_return_int(&actx, (int32_t)(GLYPH_FMT_RGBA));
+
+  return 0;
+}
+
+int awtk_TGlyphFormat_GLYPH_FMT_ALPHA2(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(GLYPH_FMT_ALPHA2));
+
+  return 0;
+}
+
+int awtk_TGlyphFormat_GLYPH_FMT_ALPHA4(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(GLYPH_FMT_ALPHA4));
 
   return 0;
 }
@@ -5421,6 +5481,22 @@ int awtk_TBitmapFlag_BITMAP_FLAG_PREMULTI_ALPHA(Runtime *runtime, JClass *clazz)
   return 0;
 }
 
+int awtk_TBitmapFlag_BITMAP_FLAG_LCD_ORIENTATION(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(BITMAP_FLAG_LCD_ORIENTATION));
+
+  return 0;
+}
+
+int awtk_TBitmapFlag_BITMAP_FLAG_GPU_FBO_TEXTURE(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(BITMAP_FLAG_GPU_FBO_TEXTURE));
+
+  return 0;
+}
+
 int awtk_TVgcanvas_vgcanvas_cast(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -6512,6 +6588,14 @@ int awtk_TWidgetProp_WIDGET_PROP_VIRTUAL_H(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   jni_ctx_return_str(&actx, (char*)(WIDGET_PROP_VIRTUAL_H));
+
+  return 0;
+}
+
+int awtk_TWidgetProp_WIDGET_PROP_LOADING(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_str(&actx, (char*)(WIDGET_PROP_LOADING));
 
   return 0;
 }
@@ -8100,6 +8184,14 @@ int awtk_TWidgetState_WIDGET_STATE_EMPTY_FOCUS(Runtime *runtime, JClass *clazz) 
   return 0;
 }
 
+int awtk_TWidgetState_WIDGET_STATE_EMPTY_OVER(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_str(&actx, (char*)(WIDGET_STATE_EMPTY_OVER));
+
+  return 0;
+}
+
 int awtk_TWidgetState_WIDGET_STATE_ERROR(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -8307,6 +8399,32 @@ int awtk_TWidget_widget_get_child(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TWidget_widget_find_parent_by_name(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  const char* name = (const char*)jni_ctx_get_str(&actx);
+  ret = (widget_t*)widget_find_parent_by_name(widget, name);
+  TKMEM_FREE(name);
+  jni_ctx_return_object(&actx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TWidget_widget_find_parent_by_type(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  widget_t* ret = NULL;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  const char* type = (const char*)jni_ctx_get_str(&actx);
+  ret = (widget_t*)widget_find_parent_by_type(widget, type);
+  TKMEM_FREE(type);
+  jni_ctx_return_object(&actx, (void*)(ret));
+
+  return 0;
+}
+
 int awtk_TWidget_widget_get_focused_widget(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -8392,6 +8510,17 @@ int awtk_TWidget_widget_move(Runtime *runtime, JClass *clazz) {
   xy_t x = (xy_t)jni_ctx_get_int(&actx);
   xy_t y = (xy_t)jni_ctx_get_int(&actx);
   ret = (ret_t)widget_move(widget, x, y);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TWidget_widget_move_to_center(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  ret = (ret_t)widget_move_to_center(widget);
   jni_ctx_return_int(&actx, (int32_t)(ret));
 
   return 0;
@@ -12288,6 +12417,30 @@ int awtk_TValueType_VALUE_TYPE_GRADIENT(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TValueType_VALUE_TYPE_ID(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(VALUE_TYPE_ID));
+
+  return 0;
+}
+
+int awtk_TValueType_VALUE_TYPE_FUNC(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(VALUE_TYPE_FUNC));
+
+  return 0;
+}
+
+int awtk_TValueType_VALUE_TYPE_FUNC_DEF(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(VALUE_TYPE_FUNC_DEF));
+
+  return 0;
+}
+
 int awtk_TAssetsManager_assets_manager(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -13626,6 +13779,18 @@ int awtk_TDraggable_draggable_set_drag_window(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TDraggable_draggable_set_drag_native_window(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  bool_t drag_native_window = (bool_t)jni_ctx_get_int(&actx);
+  ret = (ret_t)draggable_set_drag_native_window(widget, drag_native_window);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TDraggable_draggable_set_drag_parent(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -13697,6 +13862,15 @@ int awtk_TDraggable_draggable_t_get_prop_drag_window(Runtime *runtime, JClass *c
 
   draggable_t* obj = (draggable_t*)jni_ctx_get_object(&actx);
   jni_ctx_return_int(&actx, (int32_t)(obj->drag_window));
+
+  return 0;
+}
+
+int awtk_TDraggable_draggable_t_get_prop_drag_native_window(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  draggable_t* obj = (draggable_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_int(&actx, (int32_t)(obj->drag_native_window));
 
   return 0;
 }
@@ -14943,6 +15117,53 @@ int awtk_TLineNumber_line_number_cast(Runtime *runtime, JClass *clazz) {
   widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
   ret = (widget_t*)line_number_cast(widget);
   jni_ctx_return_object(&actx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TLineNumber_line_number_add_highlight_line(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  int32_t line = (int32_t)jni_ctx_get_int(&actx);
+  ret = (ret_t)line_number_add_highlight_line(widget, line);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TLineNumber_line_number_set_active_line(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  int32_t line = (int32_t)jni_ctx_get_int(&actx);
+  ret = (ret_t)line_number_set_active_line(widget, line);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TLineNumber_line_number_clear_highlight(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  ret = (ret_t)line_number_clear_highlight(widget);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TLineNumber_line_number_is_highlight_line(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  bool_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  int32_t line = (int32_t)jni_ctx_get_int(&actx);
+  ret = (bool_t)line_number_is_highlight_line(widget, line);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
 
   return 0;
 }
@@ -16895,7 +17116,7 @@ int awtk_TSlideIndicator_slide_indicator_t_get_prop_anchor_x(Runtime *runtime, J
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   slide_indicator_t* obj = (slide_indicator_t*)jni_ctx_get_object(&actx);
-  jni_ctx_return_float(&actx, (float)(obj->anchor_x));
+  jni_ctx_return_str(&actx, (char*)(obj->anchor_x));
 
   return 0;
 }
@@ -16904,7 +17125,7 @@ int awtk_TSlideIndicator_slide_indicator_t_get_prop_anchor_y(Runtime *runtime, J
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   slide_indicator_t* obj = (slide_indicator_t*)jni_ctx_get_object(&actx);
-  jni_ctx_return_float(&actx, (float)(obj->anchor_y));
+  jni_ctx_return_str(&actx, (char*)(obj->anchor_y));
 
   return 0;
 }
@@ -18603,6 +18824,20 @@ int awtk_TEdit_edit_set_double(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TEdit_edit_set_double_ex(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  const char* format = (const char*)jni_ctx_get_str(&actx);
+  double value = (double)jni_ctx_get_float(&actx);
+  ret = (ret_t)edit_set_double_ex(widget, format, value);
+  TKMEM_FREE(format);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TEdit_edit_set_text_limit(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -19501,6 +19736,19 @@ int awtk_TSlider_slider_set_max(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TSlider_slider_set_line_cap(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  const char* line_cap = (const char*)jni_ctx_get_str(&actx);
+  ret = (ret_t)slider_set_line_cap(widget, line_cap);
+  TKMEM_FREE(line_cap);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TSlider_slider_set_step(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -19614,6 +19862,15 @@ int awtk_TSlider_slider_t_get_prop_slide_with_bar(Runtime *runtime, JClass *claz
 
   slider_t* obj = (slider_t*)jni_ctx_get_object(&actx);
   jni_ctx_return_int(&actx, (int32_t)(obj->slide_with_bar));
+
+  return 0;
+}
+
+int awtk_TSlider_slider_t_get_prop_line_cap(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  slider_t* obj = (slider_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_str(&actx, (char*)(obj->line_cap));
 
   return 0;
 }
@@ -20889,6 +21146,19 @@ int awtk_TComboBox_combo_box_get_value(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TComboBox_combo_box_has_option_text(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  bool_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  const char* text = (const char*)jni_ctx_get_str(&actx);
+  ret = (bool_t)combo_box_has_option_text(widget, text);
+  TKMEM_FREE(text);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TComboBox_combo_box_get_text(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -21354,6 +21624,9 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TValue",  "value_create",  "()J",  awtk_TValue_value_create},
 {"awtk/TValue",  "value_reset",  "(J)I",  awtk_TValue_value_reset},
 {"awtk/TValue",  "value_cast",  "(J)J",  awtk_TValue_value_cast},
+{"awtk/TValue",  "value_id",  "(J)Ljava/lang/String;",  awtk_TValue_value_id},
+{"awtk/TValue",  "value_func",  "(J)J",  awtk_TValue_value_func},
+{"awtk/TValue",  "value_func_def",  "(J)J",  awtk_TValue_value_func_def},
 {"awtk/TGlobal",  "tk_init",  "(IIILjava/lang/String;Ljava/lang/String;)I",  awtk_TGlobal_tk_init},
 {"awtk/TGlobal",  "tk_run",  "()I",  awtk_TGlobal_tk_run},
 {"awtk/TGlobal",  "tk_quit",  "()I",  awtk_TGlobal_tk_quit},
@@ -21404,6 +21677,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TCanvas",  "canvas_clear_rect",  "(JIIII)I",  awtk_TCanvas_canvas_clear_rect},
 {"awtk/TCanvas",  "canvas_stroke_rect",  "(JIIII)I",  awtk_TCanvas_canvas_stroke_rect},
 {"awtk/TCanvas",  "canvas_set_font",  "(JLjava/lang/String;I)I",  awtk_TCanvas_canvas_set_font},
+{"awtk/TCanvas",  "canvas_reset_font",  "(J)I",  awtk_TCanvas_canvas_reset_font},
 {"awtk/TCanvas",  "canvas_measure_utf8",  "(JLjava/lang/String;)F",  awtk_TCanvas_canvas_measure_utf8},
 {"awtk/TCanvas",  "canvas_draw_utf8",  "(JLjava/lang/String;II)I",  awtk_TCanvas_canvas_draw_utf8},
 {"awtk/TCanvas",  "canvas_draw_utf8_in_rect",  "(JLjava/lang/String;J)I",  awtk_TCanvas_canvas_draw_utf8_in_rect},
@@ -21546,6 +21820,8 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TGlyphFormat",  "GLYPH_FMT_ALPHA",  "()I",  awtk_TGlyphFormat_GLYPH_FMT_ALPHA},
 {"awtk/TGlyphFormat",  "GLYPH_FMT_MONO",  "()I",  awtk_TGlyphFormat_GLYPH_FMT_MONO},
 {"awtk/TGlyphFormat",  "GLYPH_FMT_RGBA",  "()I",  awtk_TGlyphFormat_GLYPH_FMT_RGBA},
+{"awtk/TGlyphFormat",  "GLYPH_FMT_ALPHA2",  "()I",  awtk_TGlyphFormat_GLYPH_FMT_ALPHA2},
+{"awtk/TGlyphFormat",  "GLYPH_FMT_ALPHA4",  "()I",  awtk_TGlyphFormat_GLYPH_FMT_ALPHA4},
 {"awtk/TIdle",  "idle_add",  "(Lawtk/TOnIdle;J)I",  awtk_TIdle_idle_add},
 {"awtk/TIdle",  "idle_remove",  "(I)I",  awtk_TIdle_idle_remove},
 {"awtk/TIdle",  "idle_remove_all_by_ctx",  "(J)I",  awtk_TIdle_idle_remove_all_by_ctx},
@@ -21802,6 +22078,8 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TBitmapFlag",  "BITMAP_FLAG_TEXTURE",  "()I",  awtk_TBitmapFlag_BITMAP_FLAG_TEXTURE},
 {"awtk/TBitmapFlag",  "BITMAP_FLAG_CHANGED",  "()I",  awtk_TBitmapFlag_BITMAP_FLAG_CHANGED},
 {"awtk/TBitmapFlag",  "BITMAP_FLAG_PREMULTI_ALPHA",  "()I",  awtk_TBitmapFlag_BITMAP_FLAG_PREMULTI_ALPHA},
+{"awtk/TBitmapFlag",  "BITMAP_FLAG_LCD_ORIENTATION",  "()I",  awtk_TBitmapFlag_BITMAP_FLAG_LCD_ORIENTATION},
+{"awtk/TBitmapFlag",  "BITMAP_FLAG_GPU_FBO_TEXTURE",  "()I",  awtk_TBitmapFlag_BITMAP_FLAG_GPU_FBO_TEXTURE},
 {"awtk/TVgcanvas",  "vgcanvas_cast",  "(J)J",  awtk_TVgcanvas_vgcanvas_cast},
 {"awtk/TVgcanvas",  "vgcanvas_flush",  "(J)I",  awtk_TVgcanvas_vgcanvas_flush},
 {"awtk/TVgcanvas",  "vgcanvas_begin_path",  "(J)I",  awtk_TVgcanvas_vgcanvas_begin_path},
@@ -21904,6 +22182,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidgetProp",  "WIDGET_PROP_LAYOUT_H",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_LAYOUT_H},
 {"awtk/TWidgetProp",  "WIDGET_PROP_VIRTUAL_W",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_VIRTUAL_W},
 {"awtk/TWidgetProp",  "WIDGET_PROP_VIRTUAL_H",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_VIRTUAL_H},
+{"awtk/TWidgetProp",  "WIDGET_PROP_LOADING",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_LOADING},
 {"awtk/TWidgetProp",  "WIDGET_PROP_NAME",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_NAME},
 {"awtk/TWidgetProp",  "WIDGET_PROP_TYPE",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_TYPE},
 {"awtk/TWidgetProp",  "WIDGET_PROP_CLOSABLE",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_CLOSABLE},
@@ -22102,6 +22381,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidgetState",  "WIDGET_STATE_UNCHECKED",  "()Ljava/lang/String;",  awtk_TWidgetState_WIDGET_STATE_UNCHECKED},
 {"awtk/TWidgetState",  "WIDGET_STATE_EMPTY",  "()Ljava/lang/String;",  awtk_TWidgetState_WIDGET_STATE_EMPTY},
 {"awtk/TWidgetState",  "WIDGET_STATE_EMPTY_FOCUS",  "()Ljava/lang/String;",  awtk_TWidgetState_WIDGET_STATE_EMPTY_FOCUS},
+{"awtk/TWidgetState",  "WIDGET_STATE_EMPTY_OVER",  "()Ljava/lang/String;",  awtk_TWidgetState_WIDGET_STATE_EMPTY_OVER},
 {"awtk/TWidgetState",  "WIDGET_STATE_ERROR",  "()Ljava/lang/String;",  awtk_TWidgetState_WIDGET_STATE_ERROR},
 {"awtk/TWidgetState",  "WIDGET_STATE_SELECTED",  "()Ljava/lang/String;",  awtk_TWidgetState_WIDGET_STATE_SELECTED},
 {"awtk/TWidgetState",  "WIDGET_STATE_NORMAL_OF_CHECKED",  "()Ljava/lang/String;",  awtk_TWidgetState_WIDGET_STATE_NORMAL_OF_CHECKED},
@@ -22127,6 +22407,8 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidgetCursor",  "WIDGET_CURSOR_SIZEALL",  "()Ljava/lang/String;",  awtk_TWidgetCursor_WIDGET_CURSOR_SIZEALL},
 {"awtk/TWidget",  "widget_count_children",  "(J)I",  awtk_TWidget_widget_count_children},
 {"awtk/TWidget",  "widget_get_child",  "(JI)J",  awtk_TWidget_widget_get_child},
+{"awtk/TWidget",  "widget_find_parent_by_name",  "(JLjava/lang/String;)J",  awtk_TWidget_widget_find_parent_by_name},
+{"awtk/TWidget",  "widget_find_parent_by_type",  "(JLjava/lang/String;)J",  awtk_TWidget_widget_find_parent_by_type},
 {"awtk/TWidget",  "widget_get_focused_widget",  "(J)J",  awtk_TWidget_widget_get_focused_widget},
 {"awtk/TWidget",  "widget_get_native_window",  "(J)J",  awtk_TWidget_widget_get_native_window},
 {"awtk/TWidget",  "widget_index_of",  "(J)I",  awtk_TWidget_widget_index_of},
@@ -22135,6 +22417,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidget",  "widget_back",  "(J)I",  awtk_TWidget_widget_back},
 {"awtk/TWidget",  "widget_back_to_home",  "(J)I",  awtk_TWidget_widget_back_to_home},
 {"awtk/TWidget",  "widget_move",  "(JII)I",  awtk_TWidget_widget_move},
+{"awtk/TWidget",  "widget_move_to_center",  "(J)I",  awtk_TWidget_widget_move_to_center},
 {"awtk/TWidget",  "widget_resize",  "(JII)I",  awtk_TWidget_widget_resize},
 {"awtk/TWidget",  "widget_move_resize",  "(JIIII)I",  awtk_TWidget_widget_move_resize},
 {"awtk/TWidget",  "widget_get_value",  "(J)F",  awtk_TWidget_widget_get_value},
@@ -22534,6 +22817,9 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TValueType",  "VALUE_TYPE_UBJSON",  "()I",  awtk_TValueType_VALUE_TYPE_UBJSON},
 {"awtk/TValueType",  "VALUE_TYPE_TOKEN",  "()I",  awtk_TValueType_VALUE_TYPE_TOKEN},
 {"awtk/TValueType",  "VALUE_TYPE_GRADIENT",  "()I",  awtk_TValueType_VALUE_TYPE_GRADIENT},
+{"awtk/TValueType",  "VALUE_TYPE_ID",  "()I",  awtk_TValueType_VALUE_TYPE_ID},
+{"awtk/TValueType",  "VALUE_TYPE_FUNC",  "()I",  awtk_TValueType_VALUE_TYPE_FUNC},
+{"awtk/TValueType",  "VALUE_TYPE_FUNC_DEF",  "()I",  awtk_TValueType_VALUE_TYPE_FUNC_DEF},
 {"awtk/TAssetsManager",  "assets_manager",  "()J",  awtk_TAssetsManager_assets_manager},
 {"awtk/TAssetsManager",  "assets_manager_set_theme",  "(JLjava/lang/String;)I",  awtk_TAssetsManager_assets_manager_set_theme},
 {"awtk/TAssetsManager",  "assets_manager_ref",  "(JILjava/lang/String;)J",  awtk_TAssetsManager_assets_manager_ref},
@@ -22662,6 +22948,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TDraggable",  "draggable_set_vertical_only",  "(JZ)I",  awtk_TDraggable_draggable_set_vertical_only},
 {"awtk/TDraggable",  "draggable_set_horizontal_only",  "(JZ)I",  awtk_TDraggable_draggable_set_horizontal_only},
 {"awtk/TDraggable",  "draggable_set_drag_window",  "(JZ)I",  awtk_TDraggable_draggable_set_drag_window},
+{"awtk/TDraggable",  "draggable_set_drag_native_window",  "(JZ)I",  awtk_TDraggable_draggable_set_drag_native_window},
 {"awtk/TDraggable",  "draggable_set_drag_parent",  "(JI)I",  awtk_TDraggable_draggable_set_drag_parent},
 {"awtk/TDraggable",  "draggable_t_get_prop_top",  "(J)I",  awtk_TDraggable_draggable_t_get_prop_top},
 {"awtk/TDraggable",  "draggable_t_get_prop_bottom",  "(J)I",  awtk_TDraggable_draggable_t_get_prop_bottom},
@@ -22670,6 +22957,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TDraggable",  "draggable_t_get_prop_vertical_only",  "(J)Z",  awtk_TDraggable_draggable_t_get_prop_vertical_only},
 {"awtk/TDraggable",  "draggable_t_get_prop_horizontal_only",  "(J)Z",  awtk_TDraggable_draggable_t_get_prop_horizontal_only},
 {"awtk/TDraggable",  "draggable_t_get_prop_drag_window",  "(J)Z",  awtk_TDraggable_draggable_t_get_prop_drag_window},
+{"awtk/TDraggable",  "draggable_t_get_prop_drag_native_window",  "(J)Z",  awtk_TDraggable_draggable_t_get_prop_drag_native_window},
 {"awtk/TDraggable",  "draggable_t_get_prop_drag_parent",  "(J)I",  awtk_TDraggable_draggable_t_get_prop_drag_parent},
 {"awtk/TFileBrowserView",  "file_browser_view_create",  "(JIIII)J",  awtk_TFileBrowserView_file_browser_view_create},
 {"awtk/TFileBrowserView",  "file_browser_view_cast",  "(J)J",  awtk_TFileBrowserView_file_browser_view_cast},
@@ -22781,6 +23069,10 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TLineNumber",  "line_number_set_line_height",  "(JI)I",  awtk_TLineNumber_line_number_set_line_height},
 {"awtk/TLineNumber",  "line_number_set_yoffset",  "(JI)I",  awtk_TLineNumber_line_number_set_yoffset},
 {"awtk/TLineNumber",  "line_number_cast",  "(J)J",  awtk_TLineNumber_line_number_cast},
+{"awtk/TLineNumber",  "line_number_add_highlight_line",  "(JI)I",  awtk_TLineNumber_line_number_add_highlight_line},
+{"awtk/TLineNumber",  "line_number_set_active_line",  "(JI)I",  awtk_TLineNumber_line_number_set_active_line},
+{"awtk/TLineNumber",  "line_number_clear_highlight",  "(J)I",  awtk_TLineNumber_line_number_clear_highlight},
+{"awtk/TLineNumber",  "line_number_is_highlight_line",  "(JI)Z",  awtk_TLineNumber_line_number_is_highlight_line},
 {"awtk/TMledit",  "mledit_create",  "(JIIII)J",  awtk_TMledit_mledit_create},
 {"awtk/TMledit",  "mledit_set_readonly",  "(JZ)I",  awtk_TMledit_mledit_set_readonly},
 {"awtk/TMledit",  "mledit_set_cancelable",  "(JZ)I",  awtk_TMledit_mledit_set_cancelable},
@@ -22955,8 +23247,8 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TSlideIndicator",  "slide_indicator_t_get_prop_margin",  "(J)I",  awtk_TSlideIndicator_slide_indicator_t_get_prop_margin},
 {"awtk/TSlideIndicator",  "slide_indicator_t_get_prop_spacing",  "(J)F",  awtk_TSlideIndicator_slide_indicator_t_get_prop_spacing},
 {"awtk/TSlideIndicator",  "slide_indicator_t_get_prop_size",  "(J)I",  awtk_TSlideIndicator_slide_indicator_t_get_prop_size},
-{"awtk/TSlideIndicator",  "slide_indicator_t_get_prop_anchor_x",  "(J)F",  awtk_TSlideIndicator_slide_indicator_t_get_prop_anchor_x},
-{"awtk/TSlideIndicator",  "slide_indicator_t_get_prop_anchor_y",  "(J)F",  awtk_TSlideIndicator_slide_indicator_t_get_prop_anchor_y},
+{"awtk/TSlideIndicator",  "slide_indicator_t_get_prop_anchor_x",  "(J)Ljava/lang/String;",  awtk_TSlideIndicator_slide_indicator_t_get_prop_anchor_x},
+{"awtk/TSlideIndicator",  "slide_indicator_t_get_prop_anchor_y",  "(J)Ljava/lang/String;",  awtk_TSlideIndicator_slide_indicator_t_get_prop_anchor_y},
 {"awtk/TSlideIndicator",  "slide_indicator_t_get_prop_indicated_target",  "(J)Ljava/lang/String;",  awtk_TSlideIndicator_slide_indicator_t_get_prop_indicated_target},
 {"awtk/TSlideIndicator",  "slide_indicator_t_get_prop_transition",  "(J)Z",  awtk_TSlideIndicator_slide_indicator_t_get_prop_transition},
 {"awtk/TSlideView",  "slide_view_create",  "(JIIII)J",  awtk_TSlideView_slide_view_create},
@@ -23107,6 +23399,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TEdit",  "edit_get_double",  "(J)F",  awtk_TEdit_edit_get_double},
 {"awtk/TEdit",  "edit_set_int",  "(JI)I",  awtk_TEdit_edit_set_int},
 {"awtk/TEdit",  "edit_set_double",  "(JF)I",  awtk_TEdit_edit_set_double},
+{"awtk/TEdit",  "edit_set_double_ex",  "(JLjava/lang/String;F)I",  awtk_TEdit_edit_set_double_ex},
 {"awtk/TEdit",  "edit_set_text_limit",  "(JII)I",  awtk_TEdit_edit_set_text_limit},
 {"awtk/TEdit",  "edit_set_int_limit",  "(JIII)I",  awtk_TEdit_edit_set_int_limit},
 {"awtk/TEdit",  "edit_set_float_limit",  "(JFFF)I",  awtk_TEdit_edit_set_float_limit},
@@ -23186,6 +23479,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TSlider",  "slider_set_value",  "(JF)I",  awtk_TSlider_slider_set_value},
 {"awtk/TSlider",  "slider_set_min",  "(JF)I",  awtk_TSlider_slider_set_min},
 {"awtk/TSlider",  "slider_set_max",  "(JF)I",  awtk_TSlider_slider_set_max},
+{"awtk/TSlider",  "slider_set_line_cap",  "(JLjava/lang/String;)I",  awtk_TSlider_slider_set_line_cap},
 {"awtk/TSlider",  "slider_set_step",  "(JF)I",  awtk_TSlider_slider_set_step},
 {"awtk/TSlider",  "slider_set_bar_size",  "(JI)I",  awtk_TSlider_slider_set_bar_size},
 {"awtk/TSlider",  "slider_set_vertical",  "(JZ)I",  awtk_TSlider_slider_set_vertical},
@@ -23198,6 +23492,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TSlider",  "slider_t_get_prop_dragger_size",  "(J)I",  awtk_TSlider_slider_t_get_prop_dragger_size},
 {"awtk/TSlider",  "slider_t_get_prop_dragger_adapt_to_icon",  "(J)Z",  awtk_TSlider_slider_t_get_prop_dragger_adapt_to_icon},
 {"awtk/TSlider",  "slider_t_get_prop_slide_with_bar",  "(J)Z",  awtk_TSlider_slider_t_get_prop_slide_with_bar},
+{"awtk/TSlider",  "slider_t_get_prop_line_cap",  "(J)Ljava/lang/String;",  awtk_TSlider_slider_t_get_prop_line_cap},
 {"awtk/TTabButtonGroup",  "tab_button_group_create",  "(JIIII)J",  awtk_TTabButtonGroup_tab_button_group_create},
 {"awtk/TTabButtonGroup",  "tab_button_group_set_compact",  "(JZ)I",  awtk_TTabButtonGroup_tab_button_group_set_compact},
 {"awtk/TTabButtonGroup",  "tab_button_group_set_scrollable",  "(JZ)I",  awtk_TTabButtonGroup_tab_button_group_set_scrollable},
@@ -23306,6 +23601,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TComboBox",  "combo_box_remove_option",  "(JI)I",  awtk_TComboBox_combo_box_remove_option},
 {"awtk/TComboBox",  "combo_box_set_options",  "(JLjava/lang/String;)I",  awtk_TComboBox_combo_box_set_options},
 {"awtk/TComboBox",  "combo_box_get_value",  "(J)I",  awtk_TComboBox_combo_box_get_value},
+{"awtk/TComboBox",  "combo_box_has_option_text",  "(JLjava/lang/String;)Z",  awtk_TComboBox_combo_box_has_option_text},
 {"awtk/TComboBox",  "combo_box_get_text",  "(J)Ljava/lang/String;",  awtk_TComboBox_combo_box_get_text},
 {"awtk/TComboBox",  "combo_box_t_get_prop_open_window",  "(J)Ljava/lang/String;",  awtk_TComboBox_combo_box_t_get_prop_open_window},
 {"awtk/TComboBox",  "combo_box_t_get_prop_selected_index",  "(J)I",  awtk_TComboBox_combo_box_t_get_prop_selected_index},

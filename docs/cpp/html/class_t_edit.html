@@ -100,6 +100,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a928635cb9975867d431bfd034ad8319b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6236322f2c2e9210c273354bb48c0c70"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#a6236322f2c2e9210c273354bb48c0c70">SetDouble</a> (double value)</td></tr>
 <tr class="separator:a6236322f2c2e9210c273354bb48c0c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb36f874c08ab3e0ccc631b3137257d1"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#adb36f874c08ab3e0ccc631b3137257d1">SetDoubleEx</a> (const char *format, double value)</td></tr>
+<tr class="separator:adb36f874c08ab3e0ccc631b3137257d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbf7d2344674af49be26151ff7cef041"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#acbf7d2344674af49be26151ff7cef041">SetTextLimit</a> (uint32_t min, uint32_t max)</td></tr>
 <tr class="separator:acbf7d2344674af49be26151ff7cef041"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f943d75a18a5a6b577da6111e0e4b24"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#a7f943d75a18a5a6b577da6111e0e4b24">SetIntLimit</a> (int32_t min, int32_t max, uint32_t step)</td></tr>
@@ -797,6 +799,43 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
 <p>设置double类型的值。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
+    <tr><td class="paramname">value</td><td>值。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="adb36f874c08ab3e0ccc631b3137257d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb36f874c08ab3e0ccc631b3137257d1">&#9670;&nbsp;</a></span>SetDoubleEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TEdit::SetDoubleEx </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置double类型的值。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>格式(缺省为"%2.2lf")。 </td></tr>
     <tr><td class="paramname">value</td><td>值。</td></tr>
   </table>
   </dd>

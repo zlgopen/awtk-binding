@@ -131,6 +131,9 @@ declare function value_create() : any;
 declare function value_destroy(v : any) : TRet;
 declare function value_reset(v : any) : TRet;
 declare function value_cast(value : any) : any;
+declare function value_id(v : any) : string;
+declare function value_func(v : any) : any;
+declare function value_func_def(v : any) : any;
 declare function tk_init(w : number, h : number, app_type : TAppType, app_name : string, app_root : string) : TRet;
 declare function tk_run() : TRet;
 declare function tk_quit() : TRet;
@@ -181,6 +184,7 @@ declare function canvas_fill_rect(c : any, x : number, y : number, w : number, h
 declare function canvas_clear_rect(c : any, x : number, y : number, w : number, h : number) : TRet;
 declare function canvas_stroke_rect(c : any, x : number, y : number, w : number, h : number) : TRet;
 declare function canvas_set_font(c : any, name : string, size : number) : TRet;
+declare function canvas_reset_font(c : any) : TRet;
 declare function canvas_measure_utf8(c : any, str : string) : number;
 declare function canvas_draw_utf8(c : any, str : string, x : number, y : number) : TRet;
 declare function canvas_draw_utf8_in_rect(c : any, str : string, r : any) : TRet;
@@ -324,6 +328,8 @@ declare function font_manager_unload_all(fm : any) : TRet;
 declare function GLYPH_FMT_ALPHA():any;
 declare function GLYPH_FMT_MONO():any;
 declare function GLYPH_FMT_RGBA():any;
+declare function GLYPH_FMT_ALPHA2():any;
+declare function GLYPH_FMT_ALPHA4():any;
 declare function idle_add(on_idle : Function, ctx : any) : number;
 declare function idle_remove(idle_id : number) : TRet;
 declare function idle_remove_all_by_ctx(ctx : any) : TRet;
@@ -580,6 +586,8 @@ declare function BITMAP_FLAG_IMMUTABLE():any;
 declare function BITMAP_FLAG_TEXTURE():any;
 declare function BITMAP_FLAG_CHANGED():any;
 declare function BITMAP_FLAG_PREMULTI_ALPHA():any;
+declare function BITMAP_FLAG_LCD_ORIENTATION():any;
+declare function BITMAP_FLAG_GPU_FBO_TEXTURE():any;
 declare function vgcanvas_cast(vg : any) : any;
 declare function vgcanvas_flush(vg : any) : TRet;
 declare function vgcanvas_begin_path(vg : any) : TRet;
@@ -682,6 +690,7 @@ declare function WIDGET_PROP_LAYOUT_W():any;
 declare function WIDGET_PROP_LAYOUT_H():any;
 declare function WIDGET_PROP_VIRTUAL_W():any;
 declare function WIDGET_PROP_VIRTUAL_H():any;
+declare function WIDGET_PROP_LOADING():any;
 declare function WIDGET_PROP_NAME():any;
 declare function WIDGET_PROP_TYPE():any;
 declare function WIDGET_PROP_CLOSABLE():any;
@@ -880,6 +889,7 @@ declare function WIDGET_STATE_CHECKED():any;
 declare function WIDGET_STATE_UNCHECKED():any;
 declare function WIDGET_STATE_EMPTY():any;
 declare function WIDGET_STATE_EMPTY_FOCUS():any;
+declare function WIDGET_STATE_EMPTY_OVER():any;
 declare function WIDGET_STATE_ERROR():any;
 declare function WIDGET_STATE_SELECTED():any;
 declare function WIDGET_STATE_NORMAL_OF_CHECKED():any;
@@ -905,6 +915,8 @@ declare function WIDGET_CURSOR_SIZENS():any;
 declare function WIDGET_CURSOR_SIZEALL():any;
 declare function widget_count_children(widget : any) : number;
 declare function widget_get_child(widget : any, index : number) : any;
+declare function widget_find_parent_by_name(widget : any, name : string) : any;
+declare function widget_find_parent_by_type(widget : any, type : string) : any;
 declare function widget_get_focused_widget(widget : any) : any;
 declare function widget_get_native_window(widget : any) : any;
 declare function widget_index_of(widget : any) : number;
@@ -913,6 +925,7 @@ declare function widget_close_window_force(widget : any) : TRet;
 declare function widget_back(widget : any) : TRet;
 declare function widget_back_to_home(widget : any) : TRet;
 declare function widget_move(widget : any, x : number, y : number) : TRet;
+declare function widget_move_to_center(widget : any) : TRet;
 declare function widget_resize(widget : any, w : number, h : number) : TRet;
 declare function widget_move_resize(widget : any, x : number, y : number, w : number, h : number) : TRet;
 declare function widget_get_value(widget : any) : number;
@@ -1315,6 +1328,9 @@ declare function VALUE_TYPE_BINARY():any;
 declare function VALUE_TYPE_UBJSON():any;
 declare function VALUE_TYPE_TOKEN():any;
 declare function VALUE_TYPE_GRADIENT():any;
+declare function VALUE_TYPE_ID():any;
+declare function VALUE_TYPE_FUNC():any;
+declare function VALUE_TYPE_FUNC_DEF():any;
 declare function assets_manager() : any;
 declare function assets_manager_set_theme(am : any, theme : string) : TRet;
 declare function assets_manager_ref(am : any, type : TAssetType, name : string) : any;
@@ -1443,6 +1459,7 @@ declare function draggable_set_right(widget : any, right : number) : TRet;
 declare function draggable_set_vertical_only(widget : any, vertical_only : boolean) : TRet;
 declare function draggable_set_horizontal_only(widget : any, horizontal_only : boolean) : TRet;
 declare function draggable_set_drag_window(widget : any, drag_window : boolean) : TRet;
+declare function draggable_set_drag_native_window(widget : any, drag_native_window : boolean) : TRet;
 declare function draggable_set_drag_parent(widget : any, drag_parent : number) : TRet;
 declare function draggable_t_get_prop_top(nativeObj : any) : number;
 declare function draggable_t_get_prop_bottom(nativeObj : any) : number;
@@ -1451,6 +1468,7 @@ declare function draggable_t_get_prop_right(nativeObj : any) : number;
 declare function draggable_t_get_prop_vertical_only(nativeObj : any) : boolean;
 declare function draggable_t_get_prop_horizontal_only(nativeObj : any) : boolean;
 declare function draggable_t_get_prop_drag_window(nativeObj : any) : boolean;
+declare function draggable_t_get_prop_drag_native_window(nativeObj : any) : boolean;
 declare function draggable_t_get_prop_drag_parent(nativeObj : any) : number;
 declare function file_browser_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function file_browser_view_cast(widget : any) : any;
@@ -1562,6 +1580,10 @@ declare function line_number_set_bottom_margin(widget : any, bottom_margin : num
 declare function line_number_set_line_height(widget : any, line_height : number) : TRet;
 declare function line_number_set_yoffset(widget : any, yoffset : number) : TRet;
 declare function line_number_cast(widget : any) : any;
+declare function line_number_add_highlight_line(widget : any, line : number) : TRet;
+declare function line_number_set_active_line(widget : any, line : number) : TRet;
+declare function line_number_clear_highlight(widget : any) : TRet;
+declare function line_number_is_highlight_line(widget : any, line : number) : boolean;
 declare function mledit_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function mledit_set_readonly(widget : any, readonly : boolean) : TRet;
 declare function mledit_set_cancelable(widget : any, cancelable : boolean) : TRet;
@@ -1736,8 +1758,8 @@ declare function slide_indicator_t_get_prop_auto_hide(nativeObj : any) : number;
 declare function slide_indicator_t_get_prop_margin(nativeObj : any) : number;
 declare function slide_indicator_t_get_prop_spacing(nativeObj : any) : number;
 declare function slide_indicator_t_get_prop_size(nativeObj : any) : number;
-declare function slide_indicator_t_get_prop_anchor_x(nativeObj : any) : number;
-declare function slide_indicator_t_get_prop_anchor_y(nativeObj : any) : number;
+declare function slide_indicator_t_get_prop_anchor_x(nativeObj : any) : string;
+declare function slide_indicator_t_get_prop_anchor_y(nativeObj : any) : string;
 declare function slide_indicator_t_get_prop_indicated_target(nativeObj : any) : string;
 declare function slide_indicator_t_get_prop_transition(nativeObj : any) : boolean;
 declare function slide_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -1888,6 +1910,7 @@ declare function edit_get_int(widget : any) : number;
 declare function edit_get_double(widget : any) : number;
 declare function edit_set_int(widget : any, value : any) : TRet;
 declare function edit_set_double(widget : any, value : any) : TRet;
+declare function edit_set_double_ex(widget : any, format : string, value : any) : TRet;
 declare function edit_set_text_limit(widget : any, min : number, max : number) : TRet;
 declare function edit_set_int_limit(widget : any, min : number, max : number, step : number) : TRet;
 declare function edit_set_float_limit(widget : any, min : number, max : number, step : number) : TRet;
@@ -1967,6 +1990,7 @@ declare function slider_cast(widget : any) : any;
 declare function slider_set_value(widget : any, value : any) : TRet;
 declare function slider_set_min(widget : any, min : number) : TRet;
 declare function slider_set_max(widget : any, max : number) : TRet;
+declare function slider_set_line_cap(widget : any, line_cap : string) : TRet;
 declare function slider_set_step(widget : any, step : number) : TRet;
 declare function slider_set_bar_size(widget : any, bar_size : number) : TRet;
 declare function slider_set_vertical(widget : any, vertical : boolean) : TRet;
@@ -1979,6 +2003,7 @@ declare function slider_t_get_prop_bar_size(nativeObj : any) : number;
 declare function slider_t_get_prop_dragger_size(nativeObj : any) : number;
 declare function slider_t_get_prop_dragger_adapt_to_icon(nativeObj : any) : boolean;
 declare function slider_t_get_prop_slide_with_bar(nativeObj : any) : boolean;
+declare function slider_t_get_prop_line_cap(nativeObj : any) : string;
 declare function tab_button_group_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function tab_button_group_set_compact(widget : any, compact : boolean) : TRet;
 declare function tab_button_group_set_scrollable(widget : any, scrollable : boolean) : TRet;
@@ -2089,6 +2114,7 @@ declare function combo_box_append_option(widget : any, value : any, text : strin
 declare function combo_box_remove_option(widget : any, value : any) : TRet;
 declare function combo_box_set_options(widget : any, options : string) : TRet;
 declare function combo_box_get_value(widget : any) : number;
+declare function combo_box_has_option_text(widget : any, text : string) : boolean;
 declare function combo_box_get_text(widget : any) : string;
 declare function combo_box_t_get_prop_open_window(nativeObj : any) : string;
 declare function combo_box_t_get_prop_selected_index(nativeObj : any) : number;
@@ -3759,6 +3785,39 @@ export class TValue {
     return new TValue(value_cast(value != null ? (value.nativeObj || value) : null));
  }
 
+
+  /**
+   * 获取类型为ID的值。
+   * 
+   *
+   * @returns 值。
+   */
+ id() : string  {
+    return value_id(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 获取类型为func的值。
+   * 
+   *
+   * @returns 值。
+   */
+ func() : any  {
+    return value_func(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 获取类型为func_def的值。
+   * 
+   *
+   * @returns 值。
+   */
+ funcDef() : any  {
+    return value_func_def(this != null ? (this.nativeObj || this) : null);
+ }
+
 };
 /**
  * TK全局对象。
@@ -4275,6 +4334,17 @@ export class TCanvas {
    */
  setFont(name : string, size : number) : TRet  {
     return canvas_set_font(this != null ? (this.nativeObj || this) : null, name, size);
+ }
+
+
+  /**
+   * 释放canvas中字体相关的资源。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ resetFont() : TRet  {
+    return canvas_reset_font(this != null ? (this.nativeObj || this) : null);
  }
 
 
@@ -4976,7 +5046,7 @@ export enum TEventType {
  RESET = EVT_RESET(),
 
   /**
-   * 在指定的时间内(WITH_SCREEN_SAVER_TIME)，没有用户输入事件，由窗口管理器触发。
+   * 在指定的时间内，没有用户输入事件，由窗口管理器触发。
    *
    */
  SCREEN_SAVER = EVT_SCREEN_SAVER(),
@@ -5376,6 +5446,18 @@ export enum TGlyphFormat {
    *
    */
  RGBA = GLYPH_FMT_RGBA(),
+
+  /**
+   * 每个像素占用2bit。
+   *
+   */
+ ALPHA2 = GLYPH_FMT_ALPHA2(),
+
+  /**
+   * 每个像素占用4bit。
+   *
+   */
+ ALPHA4 = GLYPH_FMT_ALPHA4(),
 };
 
 
@@ -7306,6 +7388,18 @@ export enum TBitmapFlag {
    *
    */
  PREMULTI_ALPHA = BITMAP_FLAG_PREMULTI_ALPHA(),
+
+  /**
+   * 位图数据已经处理了 lcd 旋转，同时说明 bitmap 的宽高和真实数据的宽高可能不一致
+   *
+   */
+ LCD_ORIENTATION = BITMAP_FLAG_LCD_ORIENTATION(),
+
+  /**
+   * 该位图为 GPU 的 fbo 数据。
+   *
+   */
+ GPU_FBO_TEXTURE = BITMAP_FLAG_GPU_FBO_TEXTURE(),
 };
 
 
@@ -8435,6 +8529,12 @@ export enum TWidgetProp {
    *
    */
  VIRTUAL_H = WIDGET_PROP_VIRTUAL_H(),
+
+  /**
+   * 控件正在加载。
+   *
+   */
+ LOADING = WIDGET_PROP_LOADING(),
 
   /**
    * 名称。
@@ -9659,6 +9759,12 @@ export enum TWidgetState {
  EMPTY_FOCUS = WIDGET_STATE_EMPTY_FOCUS(),
 
   /**
+   * 编辑器无内容同时指针悬浮的状态。
+   *
+   */
+ EMPTY_OVER = WIDGET_STATE_EMPTY_OVER(),
+
+  /**
    * 输入错误状态。
    *
    */
@@ -9844,6 +9950,30 @@ export class TWidget {
 
 
   /**
+   * 通过名称查找父控件。
+   * 
+   * @param name 名称。
+   *
+   * @returns 父控件。
+   */
+ findParentByName(name : string) : TWidget  {
+    return new TWidget(widget_find_parent_by_name(this != null ? (this.nativeObj || this) : null, name));
+ }
+
+
+  /**
+   * 通过类型查找父控件。
+   * 
+   * @param type 类型。
+   *
+   * @returns 父控件。
+   */
+ findParentByType(type : string) : TWidget  {
+    return new TWidget(widget_find_parent_by_type(this != null ? (this.nativeObj || this) : null, type));
+ }
+
+
+  /**
    * 获取当前窗口中的焦点控件。
    * 
    *
@@ -9930,6 +10060,17 @@ export class TWidget {
    */
  move(x : number, y : number) : TRet  {
     return widget_move(this != null ? (this.nativeObj || this) : null, x, y);
+ }
+
+
+  /**
+   * 移动控件到父控件中间。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ moveToCenter() : TRet  {
+    return widget_move_to_center(this != null ? (this.nativeObj || this) : null);
  }
 
 
@@ -13795,6 +13936,24 @@ export enum TValueType {
    *
    */
  GRADIENT = VALUE_TYPE_GRADIENT(),
+
+  /**
+   * id。
+   *
+   */
+ ID = VALUE_TYPE_ID(),
+
+  /**
+   * func。
+   *
+   */
+ FUNC = VALUE_TYPE_FUNC(),
+
+  /**
+   * func definition。
+   *
+   */
+ FUNC_DEF = VALUE_TYPE_FUNC_DEF(),
 };
 
 
@@ -15553,12 +15712,24 @@ export class TDraggable extends TWidget {
    * 设置drag_window。
    *拖动窗口而不是父控件。比如放在对话框的titlebar上，拖动titlebar其实是希望拖动对话框。
    * 
-   * @param drag_window drag_window
+   * @param drag_window 是否拖动窗口。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
  setDragWindow(drag_window : boolean) : TRet  {
     return draggable_set_drag_window(this != null ? (this.nativeObj || this) : null, drag_window);
+ }
+
+
+  /**
+   * 设置drag_native_window。
+   * 
+   * @param drag_native_window 是否拖动原生窗口。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setDragNativeWindow(drag_native_window : boolean) : TRet  {
+    return draggable_set_drag_native_window(this != null ? (this.nativeObj || this) : null, drag_native_window);
  }
 
 
@@ -15663,6 +15834,19 @@ export class TDraggable extends TWidget {
 
  set dragWindow(v : boolean) {
    this.setDragWindow(v);
+ }
+
+
+  /**
+   * 拖动原生窗口。
+   *
+   */
+ get dragNativeWindow() : boolean {
+   return draggable_t_get_prop_drag_native_window(this.nativeObj);
+ }
+
+ set dragNativeWindow(v : boolean) {
+   this.setDragNativeWindow(v);
  }
 
 
@@ -17366,6 +17550,53 @@ export class TLineNumber extends TWidget {
    */
  static cast(widget : TWidget) : TLineNumber  {
     return new TLineNumber(line_number_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 增加高亮行。
+   * 
+   * @param line 行号。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ addHighlightLine(line : number) : TRet  {
+    return line_number_add_highlight_line(this != null ? (this.nativeObj || this) : null, line);
+ }
+
+
+  /**
+   * 设置active行。
+   * 
+   * @param line 行号。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setActiveLine(line : number) : TRet  {
+    return line_number_set_active_line(this != null ? (this.nativeObj || this) : null, line);
+ }
+
+
+  /**
+   * 清除高亮行。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ clearHighlight() : TRet  {
+    return line_number_clear_highlight(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 判断指定行是否是高亮行。
+   * 
+   * @param line 行号。
+   *
+   * @returns 返回TRUE表示是，否则不是。
+   */
+ isHighlightLine(line : number) : boolean  {
+    return line_number_is_highlight_line(this != null ? (this.nativeObj || this) : null, line);
  }
 
 };
@@ -20075,19 +20306,19 @@ export class TSlideIndicator extends TWidget {
 
 
   /**
-   * 锚点x坐标。
+   * 锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
    *
    */
- get anchorX() : number {
+ get anchorX() : string {
    return slide_indicator_t_get_prop_anchor_x(this.nativeObj);
  }
 
 
   /**
-   * 锚点y坐标。
+   * 锚点y坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
    *
    */
- get anchorY() : number {
+ get anchorY() : string {
    return slide_indicator_t_get_prop_anchor_y(this.nativeObj);
  }
 
@@ -22709,6 +22940,19 @@ export class TEdit extends TWidget {
 
 
   /**
+   * 设置double类型的值。
+   * 
+   * @param format 格式(缺省为"%2.2lf")。
+   * @param value 值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setDoubleEx(format : string, value : any) : TRet  {
+    return edit_set_double_ex(this != null ? (this.nativeObj || this) : null, format, value);
+ }
+
+
+  /**
    * 设置为文本输入及其长度限制，不允许输入超过max个字符，少于min个字符时进入error状态。
    * 
    * @param min 最小长度。
@@ -24051,6 +24295,18 @@ export class TSlider extends TWidget {
 
 
   /**
+   * 设置前景色的线帽形状。（默认为跟随风格的圆角设置，但是在没有设置圆角的时候无法使用 "round" 来设置圆角）
+   * 
+   * @param line_cap 前景色的线帽形状，取值为：butt|round
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setLineCap(line_cap : string) : TRet  {
+    return slider_set_line_cap(this != null ? (this.nativeObj || this) : null, line_cap);
+ }
+
+
+  /**
    * 设置滑块的拖动的最小单位。
    * 
    * @param step 拖动的最小单位。
@@ -24188,6 +24444,19 @@ export class TSlider extends TWidget {
    */
  get slideWithBar() : boolean {
    return slider_t_get_prop_slide_with_bar(this.nativeObj);
+ }
+
+
+  /**
+   * 前景色的线帽形状。（取值：butt|round，默认为跟随风格的圆角设置, 但是在没有设置圆角的时候无法使用 "round" 来设置圆角）
+   *
+   */
+ get lineCap() : string {
+   return slider_t_get_prop_line_cap(this.nativeObj);
+ }
+
+ set lineCap(v : string) {
+   this.setLineCap(v);
  }
 
 };
@@ -26310,6 +26579,18 @@ export class TComboBox extends TEdit {
    */
  getValueInt() : number  {
     return combo_box_get_value(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 检查选项中是否存在指定的文本。
+   * 
+   * @param text option text
+   *
+   * @returns 返回TRUE表示存在，否则表示不存在。
+   */
+ hasOptionText(text : string) : boolean  {
+    return combo_box_has_option_text(this != null ? (this.nativeObj || this) : null, text);
  }
 
 

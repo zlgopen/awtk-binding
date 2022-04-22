@@ -2951,6 +2951,60 @@
           "type": "value_t*",
           "desc": "对象。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "value_t*",
+            "name": "v",
+            "desc": "value对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取类型为ID的值。",
+        "name": "value_id",
+        "return": {
+          "type": "const char*",
+          "desc": "值。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "value_t*",
+            "name": "v",
+            "desc": "value对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取类型为func的值。",
+        "name": "value_func",
+        "return": {
+          "type": "void*",
+          "desc": "值。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "value_t*",
+            "name": "v",
+            "desc": "value对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取类型为func_def的值。",
+        "name": "value_func_def",
+        "return": {
+          "type": "void*",
+          "desc": "值。"
+        }
       }
     ],
     "events": [],
@@ -3714,6 +3768,24 @@
             "type": "canvas_t*",
             "name": "c",
             "desc": "canvas对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "释放canvas中字体相关的资源。",
+        "name": "canvas_reset_font",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "canvas_t*",
+            "name": "c",
+            "desc": "canvas对象。"
           },
           {
             "type": "const char*",
@@ -4421,7 +4493,7 @@
         "name": "EVT_RESET"
       },
       {
-        "desc": "在指定的时间内(WITH_SCREEN_SAVER_TIME)，没有用户输入事件，由窗口管理器触发。",
+        "desc": "在指定的时间内，没有用户输入事件，由窗口管理器触发。",
         "name": "EVT_SCREEN_SAVER"
       },
       {
@@ -4818,6 +4890,14 @@
       {
         "desc": "每个像素占用4个字节。",
         "name": "GLYPH_FMT_RGBA"
+      },
+      {
+        "desc": "每个像素占用2bit。",
+        "name": "GLYPH_FMT_ALPHA2"
+      },
+      {
+        "desc": "每个像素占用4bit。",
+        "name": "GLYPH_FMT_ALPHA4"
       }
     ],
     "header": "base/font.h",
@@ -6704,6 +6784,14 @@
       {
         "desc": "预乘alpha。",
         "name": "BITMAP_FLAG_PREMULTI_ALPHA"
+      },
+      {
+        "desc": "位图数据已经处理了 lcd 旋转，同时说明 bitmap 的宽高和真实数据的宽高可能不一致",
+        "name": "BITMAP_FLAG_LCD_ORIENTATION"
+      },
+      {
+        "desc": "该位图为 GPU 的 fbo 数据。",
+        "name": "BITMAP_FLAG_GPU_FBO_TEXTURE"
       }
     ],
     "header": "base/types_def.h",
@@ -8477,6 +8565,10 @@
         "name": "WIDGET_PROP_VIRTUAL_H"
       },
       {
+        "desc": "控件正在加载。",
+        "name": "WIDGET_PROP_LOADING"
+      },
+      {
         "desc": "名称。",
         "name": "WIDGET_PROP_NAME"
       },
@@ -9323,6 +9415,10 @@
         "name": "WIDGET_STATE_EMPTY_FOCUS"
       },
       {
+        "desc": "编辑器无内容同时指针悬浮的状态。",
+        "name": "WIDGET_STATE_EMPTY_OVER"
+      },
+      {
         "desc": "输入错误状态。",
         "name": "WIDGET_STATE_ERROR"
       },
@@ -9488,6 +9584,52 @@
             "type": "widget_t*",
             "name": "widget",
             "desc": "控件对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "名称。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "通过名称查找父控件。",
+        "name": "widget_find_parent_by_name",
+        "return": {
+          "type": "widget_t*",
+          "desc": "父控件。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "type",
+            "desc": "类型。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "通过类型查找父控件。",
+        "name": "widget_find_parent_by_type",
+        "return": {
+          "type": "widget_t*",
+          "desc": "父控件。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
           }
         ],
         "annotation": {
@@ -9633,6 +9775,24 @@
         },
         "desc": "移动控件。",
         "name": "widget_move",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "移动控件到父控件中间。",
+        "name": "widget_move_to_center",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -14953,6 +15113,18 @@
       {
         "desc": "渐变颜色。",
         "name": "VALUE_TYPE_GRADIENT"
+      },
+      {
+        "desc": "id。",
+        "name": "VALUE_TYPE_ID"
+      },
+      {
+        "desc": "func。",
+        "name": "VALUE_TYPE_FUNC"
+      },
+      {
+        "desc": "func definition。",
+        "name": "VALUE_TYPE_FUNC_DEF"
       }
     ],
     "header": "tkc/value.h",
@@ -16923,7 +17095,7 @@
       },
       {
         "name": "EVT_SCREEN_SAVER",
-        "desc": "在指定的时间内(WITH_SCREEN_SAVER_TIME)，没有用户输入事件，由窗口管理器触发。",
+        "desc": "在指定的时间内，没有用户输入事件，由窗口管理器触发。",
         "type": "window_event_t"
       },
       {
@@ -17431,7 +17603,7 @@
           {
             "type": "bool_t",
             "name": "drag_window",
-            "desc": "drag_window"
+            "desc": "是否拖动窗口。"
           }
         ],
         "annotation": {
@@ -17439,6 +17611,29 @@
         },
         "desc": "设置drag_window。\n拖动窗口而不是父控件。比如放在对话框的titlebar上，拖动titlebar其实是希望拖动对话框。",
         "name": "draggable_set_drag_window",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "drag_native_window",
+            "desc": "是否拖动原生窗口。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置drag_native_window。",
+        "name": "draggable_set_drag_native_window",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -17551,6 +17746,19 @@
       {
         "name": "drag_window",
         "desc": "拖动窗口而不是父控件。比如放在对话框的titlebar上，拖动titlebar其实是希望拖动对话框。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "drag_native_window",
+        "desc": "拖动原生窗口。",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,
@@ -19974,6 +20182,93 @@
         "return": {
           "type": "widget_t*",
           "desc": "line_number对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "int32_t",
+            "name": "line",
+            "desc": "行号。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "增加高亮行。",
+        "name": "line_number_add_highlight_line",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "int32_t",
+            "name": "line",
+            "desc": "行号。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置active行。",
+        "name": "line_number_set_active_line",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "清除高亮行。",
+        "name": "line_number_clear_highlight",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "int32_t",
+            "name": "line",
+            "desc": "行号。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "判断指定行是否是高亮行。",
+        "name": "line_number_is_highlight_line",
+        "return": {
+          "type": "bool_t",
+          "desc": "返回TRUE表示是，否则不是。"
         }
       }
     ],
@@ -23868,8 +24163,8 @@
       },
       {
         "name": "anchor_x",
-        "desc": "锚点x坐标。",
-        "type": "float_t",
+        "desc": "锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)",
+        "type": "char*",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -23881,8 +24176,8 @@
       },
       {
         "name": "anchor_y",
-        "desc": "锚点y坐标。",
-        "type": "float_t",
+        "desc": "锚点y坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)",
+        "type": "char*",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -27528,6 +27823,34 @@
             "desc": "widget对象。"
           },
           {
+            "type": "const char*",
+            "name": "format",
+            "desc": "格式(缺省为\"%2.2lf\")。"
+          },
+          {
+            "type": "double",
+            "name": "value",
+            "desc": "值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置double类型的值。",
+        "name": "edit_set_double_ex",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          },
+          {
             "type": "uint32_t",
             "name": "min",
             "desc": "最小长度。"
@@ -29389,6 +29712,29 @@
             "desc": "控件对象。"
           },
           {
+            "type": "const char*",
+            "name": "line_cap",
+            "desc": "前景色的线帽形状，取值为：butt|round"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置前景色的线帽形状。（默认为跟随风格的圆角设置，但是在没有设置圆角的时候无法使用 \"round\" 来设置圆角）",
+        "name": "slider_set_line_cap",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
             "type": "double",
             "name": "step",
             "desc": "拖动的最小单位。"
@@ -29577,6 +29923,19 @@
         "name": "slide_with_bar",
         "desc": "是否允许在轴上滑动来改变滑块位置，缺省为FALSE。",
         "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "line_cap",
+        "desc": "前景色的线帽形状。（取值：butt|round，默认为跟随风格的圆角设置, 但是在没有设置圆角的时候无法使用 \"round\" 来设置圆角）",
+        "type": "char*",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -32282,6 +32641,29 @@
         "return": {
           "type": "int32_t",
           "desc": "返回值。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "combo_box对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "text",
+            "desc": "option text"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "检查选项中是否存在指定的文本。",
+        "name": "combo_box_has_option_text",
+        "return": {
+          "type": "bool_t",
+          "desc": "返回TRUE表示存在，否则表示不存在。"
         }
       },
       {

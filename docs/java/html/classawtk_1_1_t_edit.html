@@ -98,6 +98,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a3d013a8959740ceb95fd63d6a0a86617"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d041d5fe1965b061af9b1e470843ed8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a4d041d5fe1965b061af9b1e470843ed8">setDouble</a> (double value)</td></tr>
 <tr class="separator:a4d041d5fe1965b061af9b1e470843ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a8296e193f4219d86d401780c494aac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a9a8296e193f4219d86d401780c494aac">setDoubleEx</a> (String format, double value)</td></tr>
+<tr class="separator:a9a8296e193f4219d86d401780c494aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c4cd79700697bae39487a0a83936fca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a8c4cd79700697bae39487a0a83936fca">setTextLimit</a> (int min, int max)</td></tr>
 <tr class="separator:a8c4cd79700697bae39487a0a83936fca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab60ea183eb4fbd10b65bc3979e9f397d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#ab60ea183eb4fbd10b65bc3979e9f397d">setIntLimit</a> (int min, int max, int step)</td></tr>
@@ -1096,6 +1098,51 @@ Public 成员函数</h2></td></tr>
 <p>设置double类型的值。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
+    <tr><td class="paramname">value</td><td>值。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a9a8296e193f4219d86d401780c494aac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a8296e193f4219d86d401780c494aac">&#9670;&nbsp;</a></span>setDoubleEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setDoubleEx </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置double类型的值。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>格式(缺省为"%2.2lf")。 </td></tr>
     <tr><td class="paramname">value</td><td>值。</td></tr>
   </table>
   </dd>

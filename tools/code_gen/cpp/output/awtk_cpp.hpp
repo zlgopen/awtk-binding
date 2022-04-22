@@ -1400,6 +1400,30 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t Reset() ;
+
+  /**
+   * 获取类型为ID的值。
+   * 
+   *
+   * @return 值。
+   */
+  const char* Id() ;
+
+  /**
+   * 获取类型为func的值。
+   * 
+   *
+   * @return 值。
+   */
+  void* Func() ;
+
+  /**
+   * 获取类型为func_def的值。
+   * 
+   *
+   * @return 值。
+   */
+  void* FuncDef() ;
 };
 
 
@@ -1702,6 +1726,14 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t SetFont(const char* name, font_size_t size) ;
+
+  /**
+   * 释放canvas中字体相关的资源。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t ResetFont() ;
 
   /**
    * 计算文本所占的宽度。
@@ -3287,6 +3319,24 @@ public:
   TWidget GetChild(int32_t index) ;
 
   /**
+   * 通过名称查找父控件。
+   * 
+   * @param name 名称。
+   *
+   * @return 父控件。
+   */
+  TWidget FindParentByName(const char* name) ;
+
+  /**
+   * 通过类型查找父控件。
+   * 
+   * @param type 类型。
+   *
+   * @return 父控件。
+   */
+  TWidget FindParentByType(const char* type) ;
+
+  /**
    * 获取当前窗口中的焦点控件。
    * 
    *
@@ -3351,6 +3401,14 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t Move(xy_t x, xy_t y) ;
+
+  /**
+   * 移动控件到父控件中间。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t MoveToCenter() ;
 
   /**
    * 调整控件的大小。
@@ -7017,11 +7075,20 @@ public:
    * 设置drag_window。
    *拖动窗口而不是父控件。比如放在对话框的titlebar上，拖动titlebar其实是希望拖动对话框。
    * 
-   * @param drag_window drag_window
+   * @param drag_window 是否拖动窗口。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t SetDragWindow(bool drag_window) ;
+
+  /**
+   * 设置drag_native_window。
+   * 
+   * @param drag_native_window 是否拖动原生窗口。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetDragNativeWindow(bool drag_native_window) ;
 
   /**
    * 设置drag_parent。
@@ -7074,6 +7141,12 @@ public:
    *
    */
   bool GetDragWindow() const;
+
+  /**
+   * 拖动原生窗口。
+   *
+   */
+  bool GetDragNativeWindow() const;
 
   /**
    * 拖动父控件。0表示直系父控件，1表示父控件的父控件，依次类推。
@@ -8447,6 +8520,41 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t SetYoffset(int32_t yoffset) ;
+
+  /**
+   * 增加高亮行。
+   * 
+   * @param line 行号。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t AddHighlightLine(int32_t line) ;
+
+  /**
+   * 设置active行。
+   * 
+   * @param line 行号。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetActiveLine(int32_t line) ;
+
+  /**
+   * 清除高亮行。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t ClearHighlight() ;
+
+  /**
+   * 判断指定行是否是高亮行。
+   * 
+   * @param line 行号。
+   *
+   * @return 返回TRUE表示是，否则不是。
+   */
+  bool IsHighlightLine(int32_t line) ;
 };
 
 
@@ -10588,16 +10696,16 @@ public:
   uint32_t GetSize() const;
 
   /**
-   * 锚点x坐标。
+   * 锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
    *
    */
-  float_t GetAnchorX() const;
+  char* GetAnchorX() const;
 
   /**
-   * 锚点y坐标。
+   * 锚点y坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
    *
    */
-  float_t GetAnchorY() const;
+  char* GetAnchorY() const;
 
   /**
    * 指示器指示的目标控件的名称。
@@ -12979,6 +13087,16 @@ public:
   ret_t SetDouble(double value) ;
 
   /**
+   * 设置double类型的值。
+   * 
+   * @param format 格式(缺省为"%2.2lf")。
+   * @param value 值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetDoubleEx(const char* format, double value) ;
+
+  /**
    * 设置为文本输入及其长度限制，不允许输入超过max个字符，少于min个字符时进入error状态。
    * 
    * @param min 最小长度。
@@ -14112,6 +14230,15 @@ public:
   ret_t SetMax(double max) ;
 
   /**
+   * 设置前景色的线帽形状。（默认为跟随风格的圆角设置，但是在没有设置圆角的时候无法使用 "round" 来设置圆角）
+   * 
+   * @param line_cap 前景色的线帽形状，取值为：butt|round
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetLineCap(const char* line_cap) ;
+
+  /**
    * 设置滑块的拖动的最小单位。
    * 
    * @param step 拖动的最小单位。
@@ -14191,6 +14318,12 @@ public:
    *
    */
   bool GetSlideWithBar() const;
+
+  /**
+   * 前景色的线帽形状。（取值：butt|round，默认为跟随风格的圆角设置, 但是在没有设置圆角的时候无法使用 "round" 来设置圆角）
+   *
+   */
+  char* GetLineCap() const;
 };
 
 
@@ -16238,6 +16371,15 @@ public:
    * @return 返回值。
    */
   int32_t GetValueInt() ;
+
+  /**
+   * 检查选项中是否存在指定的文本。
+   * 
+   * @param text option text
+   *
+   * @return 返回TRUE表示存在，否则表示不存在。
+   */
+  bool HasOptionText(const char* text) ;
 
   /**
    * 获取combo_box的文本。

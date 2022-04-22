@@ -113,6 +113,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ab6e733d982bf2f0267da6671427f580e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8412bb958ea6145d5dbe3dbc3dec3db2"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#a8412bb958ea6145d5dbe3dbc3dec3db2">GetValueInt</a> ()</td></tr>
 <tr class="separator:a8412bb958ea6145d5dbe3dbc3dec3db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab60748113066984de4b2d0f0c9776130"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#ab60748113066984de4b2d0f0c9776130">HasOptionText</a> (const char *text)</td></tr>
+<tr class="separator:ab60748113066984de4b2d0f0c9776130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35132945ed744824e474ae06bf6adf98"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#a35132945ed744824e474ae06bf6adf98">GetTextValue</a> ()</td></tr>
 <tr class="separator:a35132945ed744824e474ae06bf6adf98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff202978e9c9b804f3f2d79ae9908525"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#aff202978e9c9b804f3f2d79ae9908525">GetOpenWindow</a> () const</td></tr>
@@ -142,6 +144,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a928635cb9975867d431bfd034ad8319b inherit pub_methods_class_t_edit"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6236322f2c2e9210c273354bb48c0c70 inherit pub_methods_class_t_edit"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#a6236322f2c2e9210c273354bb48c0c70">SetDouble</a> (double value)</td></tr>
 <tr class="separator:a6236322f2c2e9210c273354bb48c0c70 inherit pub_methods_class_t_edit"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb36f874c08ab3e0ccc631b3137257d1 inherit pub_methods_class_t_edit"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#adb36f874c08ab3e0ccc631b3137257d1">SetDoubleEx</a> (const char *format, double value)</td></tr>
+<tr class="separator:adb36f874c08ab3e0ccc631b3137257d1 inherit pub_methods_class_t_edit"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbf7d2344674af49be26151ff7cef041 inherit pub_methods_class_t_edit"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#acbf7d2344674af49be26151ff7cef041">SetTextLimit</a> (uint32_t min, uint32_t max)</td></tr>
 <tr class="separator:acbf7d2344674af49be26151ff7cef041 inherit pub_methods_class_t_edit"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f943d75a18a5a6b577da6111e0e4b24 inherit pub_methods_class_t_edit"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_edit.html#a7f943d75a18a5a6b577da6111e0e4b24">SetIntLimit</a> (int32_t min, int32_t max, uint32_t step)</td></tr>
@@ -580,6 +584,32 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
 </div><div class="memdoc">
 <p>获取combo_box的值。</p>
 <dl class="section return"><dt>返回</dt><dd>返回值。 </dd></dl>
+
+</div>
+</div>
+<a id="ab60748113066984de4b2d0f0c9776130"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab60748113066984de4b2d0f0c9776130">&#9670;&nbsp;</a></span>HasOptionText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TComboBox::HasOptionText </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>检查选项中是否存在指定的文本。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>option text</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回TRUE表示存在，否则表示不存在。 </dd></dl>
 
 </div>
 </div>

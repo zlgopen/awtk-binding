@@ -91,6 +91,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ac355dd529c0321f08db96d00a1ea7fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad44dba3d44a887202ff929c5fb6182e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_slider.html#ad44dba3d44a887202ff929c5fb6182e6">setMax</a> (double max)</td></tr>
 <tr class="separator:ad44dba3d44a887202ff929c5fb6182e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cd2789d6aa9b53bc336423af4fb40b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_slider.html#a9cd2789d6aa9b53bc336423af4fb40b3">setLineCap</a> (String line_cap)</td></tr>
+<tr class="separator:a9cd2789d6aa9b53bc336423af4fb40b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b785ea36c7755f8faecbd39f3254308"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_slider.html#a5b785ea36c7755f8faecbd39f3254308">setStep</a> (double step)</td></tr>
 <tr class="separator:a5b785ea36c7755f8faecbd39f3254308"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacca015aafc01f00cac5b3f12f132770"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_slider.html#aacca015aafc01f00cac5b3f12f132770">setBarSize</a> (int bar_size)</td></tr>
@@ -113,6 +115,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ae6e5cb2d71107c56c34a39df07b4b94f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b2f5863f928b8f732f5e283bebaa4e1"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_slider.html#a8b2f5863f928b8f732f5e283bebaa4e1">getSlideWithBar</a> ()</td></tr>
 <tr class="separator:a8b2f5863f928b8f732f5e283bebaa4e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb5aa07625b9b5d85c14942b699622f"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_slider.html#a0bb5aa07625b9b5d85c14942b699622f">getLineCap</a> ()</td></tr>
+<tr class="separator:a0bb5aa07625b9b5d85c14942b699622f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -397,6 +401,32 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="a0bb5aa07625b9b5d85c14942b699622f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bb5aa07625b9b5d85c14942b699622f">&#9670;&nbsp;</a></span>getLineCap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String awtk.TSlider.getLineCap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>前景色的线帽形状。（取值：butt|round，默认为跟随风格的圆角设置, 但是在没有设置圆角的时候无法使用 "round" 来设置圆角） </p>
+
+</div>
+</div>
 <a id="ab0181763a328da621a91f91d36cd8a28"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab0181763a328da621a91f91d36cd8a28">&#9670;&nbsp;</a></span>getMax()</h2>
 
@@ -554,6 +584,40 @@ Public 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">bar_size</td><td>bar的宽度或高度。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a9cd2789d6aa9b53bc336423af4fb40b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cd2789d6aa9b53bc336423af4fb40b3">&#9670;&nbsp;</a></span>setLineCap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TSlider.setLineCap </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>line_cap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置前景色的线帽形状。（默认为跟随风格的圆角设置，但是在没有设置圆角的时候无法使用 "round" 来设置圆角）</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line_cap</td><td>前景色的线帽形状，取值为：butt|round</td></tr>
   </table>
   </dd>
 </dl>

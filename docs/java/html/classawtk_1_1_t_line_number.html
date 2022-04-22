@@ -93,6 +93,14 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a65a9059a1657cdc99c8994ae4d0a63e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c9a7a6fb0acbf24030daea38a78c5d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_line_number.html#a9c9a7a6fb0acbf24030daea38a78c5d2">setYoffset</a> (int yoffset)</td></tr>
 <tr class="separator:a9c9a7a6fb0acbf24030daea38a78c5d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8081bbf3dc32ae9ac7472368b884be0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_line_number.html#a8081bbf3dc32ae9ac7472368b884be0a">addHighlightLine</a> (int line)</td></tr>
+<tr class="separator:a8081bbf3dc32ae9ac7472368b884be0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc9b532471f9342d3287045870655867"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_line_number.html#acc9b532471f9342d3287045870655867">setActiveLine</a> (int line)</td></tr>
+<tr class="separator:acc9b532471f9342d3287045870655867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5179cc1e3e23265ab863bbc68c3cdb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_line_number.html#ae5179cc1e3e23265ab863bbc68c3cdb3">clearHighlight</a> ()</td></tr>
+<tr class="separator:ae5179cc1e3e23265ab863bbc68c3cdb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2df6e860a6c54d3a6d0a615e60b3fa5a"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_line_number.html#a2df6e860a6c54d3a6d0a615e60b3fa5a">isHighlightLine</a> (int line)</td></tr>
+<tr class="separator:a2df6e860a6c54d3a6d0a615e60b3fa5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -162,6 +170,40 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
+<a id="a8081bbf3dc32ae9ac7472368b884be0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8081bbf3dc32ae9ac7472368b884be0a">&#9670;&nbsp;</a></span>addHighlightLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TLineNumber.addHighlightLine </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>增加高亮行。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>行号。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="a6baff19d80d0209d874e201b37bd6667"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6baff19d80d0209d874e201b37bd6667">&#9670;&nbsp;</a></span>cast() <span class="overload">[1/2]</span></h2>
 
@@ -230,6 +272,33 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="ae5179cc1e3e23265ab863bbc68c3cdb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5179cc1e3e23265ab863bbc68c3cdb3">&#9670;&nbsp;</a></span>clearHighlight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TLineNumber.clearHighlight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>清除高亮行。</p>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="a44685a2d7a9c6bb07a880364c726c4a2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a44685a2d7a9c6bb07a880364c726c4a2">&#9670;&nbsp;</a></span>create()</h2>
 
@@ -293,6 +362,74 @@ Public 成员函数</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>对象。 </dd></dl>
+
+</div>
+</div>
+<a id="a2df6e860a6c54d3a6d0a615e60b3fa5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2df6e860a6c54d3a6d0a615e60b3fa5a">&#9670;&nbsp;</a></span>isHighlightLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean awtk.TLineNumber.isHighlightLine </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>判断指定行是否是高亮行。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>行号。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回TRUE表示是，否则不是。 </dd></dl>
+
+</div>
+</div>
+<a id="acc9b532471f9342d3287045870655867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc9b532471f9342d3287045870655867">&#9670;&nbsp;</a></span>setActiveLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TLineNumber.setActiveLine </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置active行。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>行号。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>

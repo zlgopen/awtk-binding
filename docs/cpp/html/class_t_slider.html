@@ -93,6 +93,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a515af10d59397591c1e4c688ca8f1605"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c05fe3c061299cd80b3da0d0ea385e4"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slider.html#a3c05fe3c061299cd80b3da0d0ea385e4">SetMax</a> (double max)</td></tr>
 <tr class="separator:a3c05fe3c061299cd80b3da0d0ea385e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa98ba65e08bee4119f343a678f4e3173"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slider.html#aa98ba65e08bee4119f343a678f4e3173">SetLineCap</a> (const char *line_cap)</td></tr>
+<tr class="separator:aa98ba65e08bee4119f343a678f4e3173"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a877fb53415611bd430b66dcfcd30815f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slider.html#a877fb53415611bd430b66dcfcd30815f">SetStep</a> (double step)</td></tr>
 <tr class="separator:a877fb53415611bd430b66dcfcd30815f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae75e2469104afd7365bbcac4ff9f0818"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slider.html#ae75e2469104afd7365bbcac4ff9f0818">SetBarSize</a> (uint32_t bar_size)</td></tr>
@@ -117,6 +119,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:af58c5d6b1b6646466ef621a6854c9afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a446125bd9e006b0f946dadd7c581ef33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slider.html#a446125bd9e006b0f946dadd7c581ef33">GetSlideWithBar</a> () const</td></tr>
 <tr class="separator:a446125bd9e006b0f946dadd7c581ef33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fc7835b8634755f12ad4281073514f7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slider.html#a5fc7835b8634755f12ad4281073514f7">GetLineCap</a> () const</td></tr>
+<tr class="separator:a5fc7835b8634755f12ad4281073514f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -282,6 +286,24 @@ static <a class="el" href="class_t_slider.html">TSlider</a>&#160;</td><td class=
 
 </div>
 </div>
+<a id="a5fc7835b8634755f12ad4281073514f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fc7835b8634755f12ad4281073514f7">&#9670;&nbsp;</a></span>GetLineCap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * TSlider::GetLineCap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>前景色的线帽形状。（取值：butt|round，默认为跟随风格的圆角设置, 但是在没有设置圆角的时候无法使用 "round" 来设置圆角） </p>
+
+</div>
+</div>
 <a id="aa18fb4e11808d283a69467273b50a644"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa18fb4e11808d283a69467273b50a644">&#9670;&nbsp;</a></span>GetMax()</h2>
 
@@ -409,6 +431,32 @@ static <a class="el" href="class_t_slider.html">TSlider</a>&#160;</td><td class=
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">bar_size</td><td>bar的宽度或高度。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="aa98ba65e08bee4119f343a678f4e3173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa98ba65e08bee4119f343a678f4e3173">&#9670;&nbsp;</a></span>SetLineCap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TSlider::SetLineCap </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>line_cap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置前景色的线帽形状。（默认为跟随风格的圆角设置，但是在没有设置圆角的时候无法使用 "round" 来设置圆角）</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line_cap</td><td>前景色的线帽形状，取值为：butt|round</td></tr>
   </table>
   </dd>
 </dl>

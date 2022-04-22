@@ -95,6 +95,14 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a8bc62d6d6952d2ab1f4ecec7993333f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a002ef137ac21811362feaeb1e52b7244"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_line_number.html#a002ef137ac21811362feaeb1e52b7244">SetYoffset</a> (int32_t yoffset)</td></tr>
 <tr class="separator:a002ef137ac21811362feaeb1e52b7244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1608ce79e84dfd690ecb2cc2b72cd8ea"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_line_number.html#a1608ce79e84dfd690ecb2cc2b72cd8ea">AddHighlightLine</a> (int32_t line)</td></tr>
+<tr class="separator:a1608ce79e84dfd690ecb2cc2b72cd8ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a611c244555ebd84d631cec8565cffe06"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_line_number.html#a611c244555ebd84d631cec8565cffe06">SetActiveLine</a> (int32_t line)</td></tr>
+<tr class="separator:a611c244555ebd84d631cec8565cffe06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2318fc82c6337168b5c498c88e559f0"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_line_number.html#ac2318fc82c6337168b5c498c88e559f0">ClearHighlight</a> ()</td></tr>
+<tr class="separator:ac2318fc82c6337168b5c498c88e559f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dae5ed5094638d8455189f811432574"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_line_number.html#a7dae5ed5094638d8455189f811432574">IsHighlightLine</a> (int32_t line)</td></tr>
+<tr class="separator:a7dae5ed5094638d8455189f811432574"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -137,6 +145,51 @@ static <a class="el" href="class_t_line_number.html">TLineNumber</a>&#160;</td><
 </blockquote>
 <p><a href="https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L556">theme default</a> </p>
 </div><h2 class="groupheader">成员函数说明</h2>
+<a id="a1608ce79e84dfd690ecb2cc2b72cd8ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1608ce79e84dfd690ecb2cc2b72cd8ea">&#9670;&nbsp;</a></span>AddHighlightLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TLineNumber::AddHighlightLine </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>增加高亮行。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>行号。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="ac2318fc82c6337168b5c498c88e559f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2318fc82c6337168b5c498c88e559f0">&#9670;&nbsp;</a></span>ClearHighlight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TLineNumber::ClearHighlight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>清除高亮行。</p>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="a9be80520e6e4e997a08dc1e5a3a8218f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9be80520e6e4e997a08dc1e5a3a8218f">&#9670;&nbsp;</a></span>Create()</h2>
 
@@ -200,6 +253,58 @@ static <a class="el" href="class_t_line_number.html">TLineNumber</a>&#160;</td><
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>对象。 </dd></dl>
+
+</div>
+</div>
+<a id="a7dae5ed5094638d8455189f811432574"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dae5ed5094638d8455189f811432574">&#9670;&nbsp;</a></span>IsHighlightLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TLineNumber::IsHighlightLine </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>判断指定行是否是高亮行。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>行号。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回TRUE表示是，否则不是。 </dd></dl>
+
+</div>
+</div>
+<a id="a611c244555ebd84d631cec8565cffe06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a611c244555ebd84d631cec8565cffe06">&#9670;&nbsp;</a></span>SetActiveLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TLineNumber::SetActiveLine </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置active行。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>行号。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>

@@ -278,6 +278,12 @@ const value_reset = Module.cwrap("value_reset",
     "number", ["number"]);
 const value_cast = Module.cwrap("value_cast", 
     "number", ["number"]);
+const value_id = Module.cwrap("value_id", 
+    "string", ["number"]);
+const value_func = Module.cwrap("value_func", 
+    "number", ["number"]);
+const value_func_def = Module.cwrap("value_func_def", 
+    "number", ["number"]);
 const tk_init = Module.cwrap("tk_init", 
     "number", ["number","number","number","string","string"]);
 const tk_run = Module.cwrap("tk_run", 
@@ -378,6 +384,8 @@ const canvas_stroke_rect = Module.cwrap("canvas_stroke_rect",
     "number", ["number","number","number","number","number"]);
 const canvas_set_font = Module.cwrap("canvas_set_font", 
     "number", ["number","string","number"]);
+const canvas_reset_font = Module.cwrap("canvas_reset_font", 
+    "number", ["number"]);
 const canvas_measure_utf8 = Module.cwrap("canvas_measure_utf8", 
     "number", ["number","string"]);
 const canvas_draw_utf8 = Module.cwrap("canvas_draw_utf8", 
@@ -663,6 +671,10 @@ const GLYPH_FMT_ALPHA = Module.cwrap("get_GLYPH_FMT_ALPHA",
 const GLYPH_FMT_MONO = Module.cwrap("get_GLYPH_FMT_MONO", 
     "number", []);
 const GLYPH_FMT_RGBA = Module.cwrap("get_GLYPH_FMT_RGBA", 
+    "number", []);
+const GLYPH_FMT_ALPHA2 = Module.cwrap("get_GLYPH_FMT_ALPHA2", 
+    "number", []);
+const GLYPH_FMT_ALPHA4 = Module.cwrap("get_GLYPH_FMT_ALPHA4", 
     "number", []);
 const idle_add = Module.cwrap("idle_add", 
     "number", ["number","number"]);
@@ -1176,6 +1188,10 @@ const BITMAP_FLAG_CHANGED = Module.cwrap("get_BITMAP_FLAG_CHANGED",
     "number", []);
 const BITMAP_FLAG_PREMULTI_ALPHA = Module.cwrap("get_BITMAP_FLAG_PREMULTI_ALPHA", 
     "number", []);
+const BITMAP_FLAG_LCD_ORIENTATION = Module.cwrap("get_BITMAP_FLAG_LCD_ORIENTATION", 
+    "number", []);
+const BITMAP_FLAG_GPU_FBO_TEXTURE = Module.cwrap("get_BITMAP_FLAG_GPU_FBO_TEXTURE", 
+    "number", []);
 const vgcanvas_cast = Module.cwrap("vgcanvas_cast", 
     "number", ["number"]);
 const vgcanvas_flush = Module.cwrap("vgcanvas_flush", 
@@ -1379,6 +1395,8 @@ const WIDGET_PROP_LAYOUT_H = Module.cwrap("get_WIDGET_PROP_LAYOUT_H",
 const WIDGET_PROP_VIRTUAL_W = Module.cwrap("get_WIDGET_PROP_VIRTUAL_W", 
     "string", []);
 const WIDGET_PROP_VIRTUAL_H = Module.cwrap("get_WIDGET_PROP_VIRTUAL_H", 
+    "string", []);
+const WIDGET_PROP_LOADING = Module.cwrap("get_WIDGET_PROP_LOADING", 
     "string", []);
 const WIDGET_PROP_NAME = Module.cwrap("get_WIDGET_PROP_NAME", 
     "string", []);
@@ -1776,6 +1794,8 @@ const WIDGET_STATE_EMPTY = Module.cwrap("get_WIDGET_STATE_EMPTY",
     "string", []);
 const WIDGET_STATE_EMPTY_FOCUS = Module.cwrap("get_WIDGET_STATE_EMPTY_FOCUS", 
     "string", []);
+const WIDGET_STATE_EMPTY_OVER = Module.cwrap("get_WIDGET_STATE_EMPTY_OVER", 
+    "string", []);
 const WIDGET_STATE_ERROR = Module.cwrap("get_WIDGET_STATE_ERROR", 
     "string", []);
 const WIDGET_STATE_SELECTED = Module.cwrap("get_WIDGET_STATE_SELECTED", 
@@ -1826,6 +1846,10 @@ const widget_count_children = Module.cwrap("widget_count_children",
     "number", ["number"]);
 const widget_get_child = Module.cwrap("widget_get_child", 
     "number", ["number","number"]);
+const widget_find_parent_by_name = Module.cwrap("widget_find_parent_by_name", 
+    "number", ["number","string"]);
+const widget_find_parent_by_type = Module.cwrap("widget_find_parent_by_type", 
+    "number", ["number","string"]);
 const widget_get_focused_widget = Module.cwrap("widget_get_focused_widget", 
     "number", ["number"]);
 const widget_get_native_window = Module.cwrap("widget_get_native_window", 
@@ -1842,6 +1866,8 @@ const widget_back_to_home = Module.cwrap("widget_back_to_home",
     "number", ["number"]);
 const widget_move = Module.cwrap("widget_move", 
     "number", ["number","number","number"]);
+const widget_move_to_center = Module.cwrap("widget_move_to_center", 
+    "number", ["number"]);
 const widget_resize = Module.cwrap("widget_resize", 
     "number", ["number","number","number"]);
 const widget_move_resize = Module.cwrap("widget_move_resize", 
@@ -2646,6 +2672,12 @@ const VALUE_TYPE_TOKEN = Module.cwrap("get_VALUE_TYPE_TOKEN",
     "number", []);
 const VALUE_TYPE_GRADIENT = Module.cwrap("get_VALUE_TYPE_GRADIENT", 
     "number", []);
+const VALUE_TYPE_ID = Module.cwrap("get_VALUE_TYPE_ID", 
+    "number", []);
+const VALUE_TYPE_FUNC = Module.cwrap("get_VALUE_TYPE_FUNC", 
+    "number", []);
+const VALUE_TYPE_FUNC_DEF = Module.cwrap("get_VALUE_TYPE_FUNC_DEF", 
+    "number", []);
 const assets_manager = Module.cwrap("assets_manager", 
     "number", []);
 const assets_manager_set_theme = Module.cwrap("assets_manager_set_theme", 
@@ -2902,6 +2934,8 @@ const draggable_set_horizontal_only = Module.cwrap("draggable_set_horizontal_onl
     "number", ["number","number"]);
 const draggable_set_drag_window = Module.cwrap("draggable_set_drag_window", 
     "number", ["number","number"]);
+const draggable_set_drag_native_window = Module.cwrap("draggable_set_drag_native_window", 
+    "number", ["number","number"]);
 const draggable_set_drag_parent = Module.cwrap("draggable_set_drag_parent", 
     "number", ["number","number"]);
 const draggable_t_get_prop_top = Module.cwrap("draggable_t_get_prop_top", 
@@ -2917,6 +2951,8 @@ const draggable_t_get_prop_vertical_only = Module.cwrap("draggable_t_get_prop_ve
 const draggable_t_get_prop_horizontal_only = Module.cwrap("draggable_t_get_prop_horizontal_only", 
     "number", ["number"]);
 const draggable_t_get_prop_drag_window = Module.cwrap("draggable_t_get_prop_drag_window", 
+    "number", ["number"]);
+const draggable_t_get_prop_drag_native_window = Module.cwrap("draggable_t_get_prop_drag_native_window", 
     "number", ["number"]);
 const draggable_t_get_prop_drag_parent = Module.cwrap("draggable_t_get_prop_drag_parent", 
     "number", ["number"]);
@@ -3140,6 +3176,14 @@ const line_number_set_yoffset = Module.cwrap("line_number_set_yoffset",
     "number", ["number","number"]);
 const line_number_cast = Module.cwrap("line_number_cast", 
     "number", ["number"]);
+const line_number_add_highlight_line = Module.cwrap("line_number_add_highlight_line", 
+    "number", ["number","number"]);
+const line_number_set_active_line = Module.cwrap("line_number_set_active_line", 
+    "number", ["number","number"]);
+const line_number_clear_highlight = Module.cwrap("line_number_clear_highlight", 
+    "number", ["number"]);
+const line_number_is_highlight_line = Module.cwrap("line_number_is_highlight_line", 
+    "number", ["number","number"]);
 const mledit_create = Module.cwrap("mledit_create", 
     "number", ["number","number","number","number","number"]);
 const mledit_set_readonly = Module.cwrap("mledit_set_readonly", 
@@ -3489,9 +3533,9 @@ const slide_indicator_t_get_prop_spacing = Module.cwrap("slide_indicator_t_get_p
 const slide_indicator_t_get_prop_size = Module.cwrap("slide_indicator_t_get_prop_size", 
     "number", ["number"]);
 const slide_indicator_t_get_prop_anchor_x = Module.cwrap("slide_indicator_t_get_prop_anchor_x", 
-    "number", ["number"]);
+    "string", ["number"]);
 const slide_indicator_t_get_prop_anchor_y = Module.cwrap("slide_indicator_t_get_prop_anchor_y", 
-    "number", ["number"]);
+    "string", ["number"]);
 const slide_indicator_t_get_prop_indicated_target = Module.cwrap("slide_indicator_t_get_prop_indicated_target", 
     "string", ["number"]);
 const slide_indicator_t_get_prop_transition = Module.cwrap("slide_indicator_t_get_prop_transition", 
@@ -3792,6 +3836,8 @@ const edit_set_int = Module.cwrap("edit_set_int",
     "number", ["number","number"]);
 const edit_set_double = Module.cwrap("edit_set_double", 
     "number", ["number","number"]);
+const edit_set_double_ex = Module.cwrap("edit_set_double_ex", 
+    "number", ["number","string","number"]);
 const edit_set_text_limit = Module.cwrap("edit_set_text_limit", 
     "number", ["number","number","number"]);
 const edit_set_int_limit = Module.cwrap("edit_set_int_limit", 
@@ -3950,6 +3996,8 @@ const slider_set_min = Module.cwrap("slider_set_min",
     "number", ["number","number"]);
 const slider_set_max = Module.cwrap("slider_set_max", 
     "number", ["number","number"]);
+const slider_set_line_cap = Module.cwrap("slider_set_line_cap", 
+    "number", ["number","string"]);
 const slider_set_step = Module.cwrap("slider_set_step", 
     "number", ["number","number"]);
 const slider_set_bar_size = Module.cwrap("slider_set_bar_size", 
@@ -3974,6 +4022,8 @@ const slider_t_get_prop_dragger_adapt_to_icon = Module.cwrap("slider_t_get_prop_
     "number", ["number"]);
 const slider_t_get_prop_slide_with_bar = Module.cwrap("slider_t_get_prop_slide_with_bar", 
     "number", ["number"]);
+const slider_t_get_prop_line_cap = Module.cwrap("slider_t_get_prop_line_cap", 
+    "string", ["number"]);
 const tab_button_group_create = Module.cwrap("tab_button_group_create", 
     "number", ["number","number","number","number","number"]);
 const tab_button_group_set_compact = Module.cwrap("tab_button_group_set_compact", 
@@ -4194,6 +4244,8 @@ const combo_box_set_options = Module.cwrap("combo_box_set_options",
     "number", ["number","string"]);
 const combo_box_get_value = Module.cwrap("combo_box_get_value", 
     "number", ["number"]);
+const combo_box_has_option_text = Module.cwrap("combo_box_has_option_text", 
+    "number", ["number","string"]);
 const combo_box_get_text = Module.cwrap("combo_box_get_text", 
     "string", ["number"]);
 const combo_box_t_get_prop_open_window = Module.cwrap("combo_box_t_get_prop_open_window", 
@@ -5894,6 +5946,39 @@ export class TValue {
     return new TValue(value_cast(value != null ? (value.nativeObj || value) : null));
  }
 
+
+  /**
+   * 获取类型为ID的值。
+   * 
+   *
+   * @returns 值。
+   */
+ id() : string  {
+    return value_id(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 获取类型为func的值。
+   * 
+   *
+   * @returns 值。
+   */
+ func() : any  {
+    return value_func(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 获取类型为func_def的值。
+   * 
+   *
+   * @returns 值。
+   */
+ funcDef() : any  {
+    return value_func_def(this != null ? (this.nativeObj || this) : null);
+ }
+
 };
 /**
  * TK全局对象。
@@ -6410,6 +6495,17 @@ export class TCanvas {
    */
  setFont(name : string, size : number) : TRet  {
     return canvas_set_font(this != null ? (this.nativeObj || this) : null, name, size);
+ }
+
+
+  /**
+   * 释放canvas中字体相关的资源。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ resetFont() : TRet  {
+    return canvas_reset_font(this != null ? (this.nativeObj || this) : null);
  }
 
 
@@ -7111,7 +7207,7 @@ export enum TEventType {
  RESET = EVT_RESET(),
 
   /**
-   * 在指定的时间内(WITH_SCREEN_SAVER_TIME)，没有用户输入事件，由窗口管理器触发。
+   * 在指定的时间内，没有用户输入事件，由窗口管理器触发。
    *
    */
  SCREEN_SAVER = EVT_SCREEN_SAVER(),
@@ -7511,6 +7607,18 @@ export enum TGlyphFormat {
    *
    */
  RGBA = GLYPH_FMT_RGBA(),
+
+  /**
+   * 每个像素占用2bit。
+   *
+   */
+ ALPHA2 = GLYPH_FMT_ALPHA2(),
+
+  /**
+   * 每个像素占用4bit。
+   *
+   */
+ ALPHA4 = GLYPH_FMT_ALPHA4(),
 };
 
 
@@ -9441,6 +9549,18 @@ export enum TBitmapFlag {
    *
    */
  PREMULTI_ALPHA = BITMAP_FLAG_PREMULTI_ALPHA(),
+
+  /**
+   * 位图数据已经处理了 lcd 旋转，同时说明 bitmap 的宽高和真实数据的宽高可能不一致
+   *
+   */
+ LCD_ORIENTATION = BITMAP_FLAG_LCD_ORIENTATION(),
+
+  /**
+   * 该位图为 GPU 的 fbo 数据。
+   *
+   */
+ GPU_FBO_TEXTURE = BITMAP_FLAG_GPU_FBO_TEXTURE(),
 };
 
 
@@ -10570,6 +10690,12 @@ export enum TWidgetProp {
    *
    */
  VIRTUAL_H = WIDGET_PROP_VIRTUAL_H(),
+
+  /**
+   * 控件正在加载。
+   *
+   */
+ LOADING = WIDGET_PROP_LOADING(),
 
   /**
    * 名称。
@@ -11794,6 +11920,12 @@ export enum TWidgetState {
  EMPTY_FOCUS = WIDGET_STATE_EMPTY_FOCUS(),
 
   /**
+   * 编辑器无内容同时指针悬浮的状态。
+   *
+   */
+ EMPTY_OVER = WIDGET_STATE_EMPTY_OVER(),
+
+  /**
    * 输入错误状态。
    *
    */
@@ -11979,6 +12111,30 @@ export class TWidget {
 
 
   /**
+   * 通过名称查找父控件。
+   * 
+   * @param name 名称。
+   *
+   * @returns 父控件。
+   */
+ findParentByName(name : string) : TWidget  {
+    return new TWidget(widget_find_parent_by_name(this != null ? (this.nativeObj || this) : null, name));
+ }
+
+
+  /**
+   * 通过类型查找父控件。
+   * 
+   * @param type 类型。
+   *
+   * @returns 父控件。
+   */
+ findParentByType(type : string) : TWidget  {
+    return new TWidget(widget_find_parent_by_type(this != null ? (this.nativeObj || this) : null, type));
+ }
+
+
+  /**
    * 获取当前窗口中的焦点控件。
    * 
    *
@@ -12065,6 +12221,17 @@ export class TWidget {
    */
  move(x : number, y : number) : TRet  {
     return widget_move(this != null ? (this.nativeObj || this) : null, x, y);
+ }
+
+
+  /**
+   * 移动控件到父控件中间。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ moveToCenter() : TRet  {
+    return widget_move_to_center(this != null ? (this.nativeObj || this) : null);
  }
 
 
@@ -15930,6 +16097,24 @@ export enum TValueType {
    *
    */
  GRADIENT = VALUE_TYPE_GRADIENT(),
+
+  /**
+   * id。
+   *
+   */
+ ID = VALUE_TYPE_ID(),
+
+  /**
+   * func。
+   *
+   */
+ FUNC = VALUE_TYPE_FUNC(),
+
+  /**
+   * func definition。
+   *
+   */
+ FUNC_DEF = VALUE_TYPE_FUNC_DEF(),
 };
 
 
@@ -17688,12 +17873,24 @@ export class TDraggable extends TWidget {
    * 设置drag_window。
    *拖动窗口而不是父控件。比如放在对话框的titlebar上，拖动titlebar其实是希望拖动对话框。
    * 
-   * @param drag_window drag_window
+   * @param drag_window 是否拖动窗口。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
  setDragWindow(drag_window : boolean) : TRet  {
     return draggable_set_drag_window(this != null ? (this.nativeObj || this) : null, drag_window);
+ }
+
+
+  /**
+   * 设置drag_native_window。
+   * 
+   * @param drag_native_window 是否拖动原生窗口。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setDragNativeWindow(drag_native_window : boolean) : TRet  {
+    return draggable_set_drag_native_window(this != null ? (this.nativeObj || this) : null, drag_native_window);
  }
 
 
@@ -17798,6 +17995,19 @@ export class TDraggable extends TWidget {
 
  set dragWindow(v : boolean) {
    this.setDragWindow(v);
+ }
+
+
+  /**
+   * 拖动原生窗口。
+   *
+   */
+ get dragNativeWindow() : boolean {
+   return draggable_t_get_prop_drag_native_window(this.nativeObj);
+ }
+
+ set dragNativeWindow(v : boolean) {
+   this.setDragNativeWindow(v);
  }
 
 
@@ -19501,6 +19711,53 @@ export class TLineNumber extends TWidget {
    */
  static cast(widget : TWidget) : TLineNumber  {
     return new TLineNumber(line_number_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 增加高亮行。
+   * 
+   * @param line 行号。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ addHighlightLine(line : number) : TRet  {
+    return line_number_add_highlight_line(this != null ? (this.nativeObj || this) : null, line);
+ }
+
+
+  /**
+   * 设置active行。
+   * 
+   * @param line 行号。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setActiveLine(line : number) : TRet  {
+    return line_number_set_active_line(this != null ? (this.nativeObj || this) : null, line);
+ }
+
+
+  /**
+   * 清除高亮行。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ clearHighlight() : TRet  {
+    return line_number_clear_highlight(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 判断指定行是否是高亮行。
+   * 
+   * @param line 行号。
+   *
+   * @returns 返回TRUE表示是，否则不是。
+   */
+ isHighlightLine(line : number) : boolean  {
+    return line_number_is_highlight_line(this != null ? (this.nativeObj || this) : null, line);
  }
 
 };
@@ -22210,19 +22467,19 @@ export class TSlideIndicator extends TWidget {
 
 
   /**
-   * 锚点x坐标。
+   * 锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
    *
    */
- get anchorX() : number {
+ get anchorX() : string {
    return slide_indicator_t_get_prop_anchor_x(this.nativeObj);
  }
 
 
   /**
-   * 锚点y坐标。
+   * 锚点y坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
    *
    */
- get anchorY() : number {
+ get anchorY() : string {
    return slide_indicator_t_get_prop_anchor_y(this.nativeObj);
  }
 
@@ -24844,6 +25101,19 @@ export class TEdit extends TWidget {
 
 
   /**
+   * 设置double类型的值。
+   * 
+   * @param format 格式(缺省为"%2.2lf")。
+   * @param value 值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setDoubleEx(format : string, value : any) : TRet  {
+    return edit_set_double_ex(this != null ? (this.nativeObj || this) : null, format, value);
+ }
+
+
+  /**
    * 设置为文本输入及其长度限制，不允许输入超过max个字符，少于min个字符时进入error状态。
    * 
    * @param min 最小长度。
@@ -26186,6 +26456,18 @@ export class TSlider extends TWidget {
 
 
   /**
+   * 设置前景色的线帽形状。（默认为跟随风格的圆角设置，但是在没有设置圆角的时候无法使用 "round" 来设置圆角）
+   * 
+   * @param line_cap 前景色的线帽形状，取值为：butt|round
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setLineCap(line_cap : string) : TRet  {
+    return slider_set_line_cap(this != null ? (this.nativeObj || this) : null, line_cap);
+ }
+
+
+  /**
    * 设置滑块的拖动的最小单位。
    * 
    * @param step 拖动的最小单位。
@@ -26323,6 +26605,19 @@ export class TSlider extends TWidget {
    */
  get slideWithBar() : boolean {
    return slider_t_get_prop_slide_with_bar(this.nativeObj);
+ }
+
+
+  /**
+   * 前景色的线帽形状。（取值：butt|round，默认为跟随风格的圆角设置, 但是在没有设置圆角的时候无法使用 "round" 来设置圆角）
+   *
+   */
+ get lineCap() : string {
+   return slider_t_get_prop_line_cap(this.nativeObj);
+ }
+
+ set lineCap(v : string) {
+   this.setLineCap(v);
  }
 
 };
@@ -28445,6 +28740,18 @@ export class TComboBox extends TEdit {
    */
  getValueInt() : number  {
     return combo_box_get_value(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 检查选项中是否存在指定的文本。
+   * 
+   * @param text option text
+   *
+   * @returns 返回TRUE表示存在，否则表示不存在。
+   */
+ hasOptionText(text : string) : boolean  {
+    return combo_box_has_option_text(this != null ? (this.nativeObj || this) : null, text);
  }
 
 
