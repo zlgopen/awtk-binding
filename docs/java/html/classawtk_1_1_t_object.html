@@ -141,6 +141,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ac9e46e441b9c1300f7dba50295d7b829"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a018aeba3eefe2f97c5b83287524b5eb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a018aeba3eefe2f97c5b83287524b5eb4">copyProp</a> (<a class="el" href="classawtk_1_1_t_object.html">TObject</a> src, String name)</td></tr>
 <tr class="separator:a018aeba3eefe2f97c5b83287524b5eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6b23e38c494f0efcbffb75b6811ec93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#af6b23e38c494f0efcbffb75b6811ec93">copyProps</a> (<a class="el" href="classawtk_1_1_t_object.html">TObject</a> src, boolean overwrite)</td></tr>
+<tr class="separator:af6b23e38c494f0efcbffb75b6811ec93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd296ebc1efda1d0aea7a1a705ac6454"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#acd296ebc1efda1d0aea7a1a705ac6454">hasProp</a> (String name)</td></tr>
 <tr class="separator:acd296ebc1efda1d0aea7a1a705ac6454"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f8f65ee50225e5420aa14a1d6282021"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a6f8f65ee50225e5420aa14a1d6282021">eval</a> (String expr, <a class="el" href="classawtk_1_1_t_value.html">TValue</a> v)</td></tr>
@@ -491,6 +493,51 @@ Public 成员函数</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">src</td><td>源对象。 </td></tr>
     <tr><td class="paramname">name</td><td>属性的名称。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="af6b23e38c494f0efcbffb75b6811ec93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6b23e38c494f0efcbffb75b6811ec93">&#9670;&nbsp;</a></span>copyProps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.copyProps </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_object.html">TObject</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>overwrite</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>拷贝全部的属性。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>源对象。 </td></tr>
+    <tr><td class="paramname">overwrite</td><td>如果属性存在是否覆盖。</td></tr>
   </table>
   </dd>
 </dl>

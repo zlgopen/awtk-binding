@@ -610,6 +610,19 @@ int awtk_TObject_object_copy_prop(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TObject_object_copy_props(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  object_t* obj = (object_t*)jni_ctx_get_object(&actx);
+  object_t* src = (object_t*)jni_ctx_get_object(&actx);
+  bool_t overwrite = (bool_t)jni_ctx_get_int(&actx);
+  ret = (ret_t)object_copy_props(obj, src, overwrite);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TObject_object_has_prop(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -19821,15 +19834,6 @@ int awtk_TSlider_slider_t_get_prop_step(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
-int awtk_TSlider_slider_t_get_prop_vertical(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
-
-  slider_t* obj = (slider_t*)jni_ctx_get_object(&actx);
-  jni_ctx_return_int(&actx, (int32_t)(obj->vertical));
-
-  return 0;
-}
-
 int awtk_TSlider_slider_t_get_prop_bar_size(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -19848,6 +19852,24 @@ int awtk_TSlider_slider_t_get_prop_dragger_size(Runtime *runtime, JClass *clazz)
   return 0;
 }
 
+int awtk_TSlider_slider_t_get_prop_line_cap(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  slider_t* obj = (slider_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_str(&actx, (char*)(obj->line_cap));
+
+  return 0;
+}
+
+int awtk_TSlider_slider_t_get_prop_vertical(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  slider_t* obj = (slider_t*)jni_ctx_get_object(&actx);
+  jni_ctx_return_int(&actx, (int32_t)(obj->vertical));
+
+  return 0;
+}
+
 int awtk_TSlider_slider_t_get_prop_dragger_adapt_to_icon(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -19862,15 +19884,6 @@ int awtk_TSlider_slider_t_get_prop_slide_with_bar(Runtime *runtime, JClass *claz
 
   slider_t* obj = (slider_t*)jni_ctx_get_object(&actx);
   jni_ctx_return_int(&actx, (int32_t)(obj->slide_with_bar));
-
-  return 0;
-}
-
-int awtk_TSlider_slider_t_get_prop_line_cap(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
-
-  slider_t* obj = (slider_t*)jni_ctx_get_object(&actx);
-  jni_ctx_return_str(&actx, (char*)(obj->line_cap));
 
   return 0;
 }
@@ -21553,6 +21566,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TObject",  "object_set_prop_float",  "(JLjava/lang/String;F)I",  awtk_TObject_object_set_prop_float},
 {"awtk/TObject",  "object_set_prop_double",  "(JLjava/lang/String;F)I",  awtk_TObject_object_set_prop_double},
 {"awtk/TObject",  "object_copy_prop",  "(JJLjava/lang/String;)I",  awtk_TObject_object_copy_prop},
+{"awtk/TObject",  "object_copy_props",  "(JJZ)I",  awtk_TObject_object_copy_props},
 {"awtk/TObject",  "object_has_prop",  "(JLjava/lang/String;)Z",  awtk_TObject_object_has_prop},
 {"awtk/TObject",  "object_eval",  "(JLjava/lang/String;J)I",  awtk_TObject_object_eval},
 {"awtk/TObject",  "object_can_exec",  "(JLjava/lang/String;Ljava/lang/String;)Z",  awtk_TObject_object_can_exec},
@@ -23487,12 +23501,12 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TSlider",  "slider_t_get_prop_min",  "(J)F",  awtk_TSlider_slider_t_get_prop_min},
 {"awtk/TSlider",  "slider_t_get_prop_max",  "(J)F",  awtk_TSlider_slider_t_get_prop_max},
 {"awtk/TSlider",  "slider_t_get_prop_step",  "(J)F",  awtk_TSlider_slider_t_get_prop_step},
-{"awtk/TSlider",  "slider_t_get_prop_vertical",  "(J)Z",  awtk_TSlider_slider_t_get_prop_vertical},
 {"awtk/TSlider",  "slider_t_get_prop_bar_size",  "(J)I",  awtk_TSlider_slider_t_get_prop_bar_size},
 {"awtk/TSlider",  "slider_t_get_prop_dragger_size",  "(J)I",  awtk_TSlider_slider_t_get_prop_dragger_size},
+{"awtk/TSlider",  "slider_t_get_prop_line_cap",  "(J)Ljava/lang/String;",  awtk_TSlider_slider_t_get_prop_line_cap},
+{"awtk/TSlider",  "slider_t_get_prop_vertical",  "(J)Z",  awtk_TSlider_slider_t_get_prop_vertical},
 {"awtk/TSlider",  "slider_t_get_prop_dragger_adapt_to_icon",  "(J)Z",  awtk_TSlider_slider_t_get_prop_dragger_adapt_to_icon},
 {"awtk/TSlider",  "slider_t_get_prop_slide_with_bar",  "(J)Z",  awtk_TSlider_slider_t_get_prop_slide_with_bar},
-{"awtk/TSlider",  "slider_t_get_prop_line_cap",  "(J)Ljava/lang/String;",  awtk_TSlider_slider_t_get_prop_line_cap},
 {"awtk/TTabButtonGroup",  "tab_button_group_create",  "(JIIII)J",  awtk_TTabButtonGroup_tab_button_group_create},
 {"awtk/TTabButtonGroup",  "tab_button_group_set_compact",  "(JZ)I",  awtk_TTabButtonGroup_tab_button_group_set_compact},
 {"awtk/TTabButtonGroup",  "tab_button_group_set_scrollable",  "(JZ)I",  awtk_TTabButtonGroup_tab_button_group_set_scrollable},

@@ -717,6 +717,16 @@ public:
   ret_t CopyProp(TObject& src, const char* name) ;
 
   /**
+   * 拷贝全部的属性。
+   * 
+   * @param src 源对象。
+   * @param overwrite 如果属性存在是否覆盖。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t CopyProps(TObject& src, bool overwrite) ;
+
+  /**
    * 检查是否存在指定的属性。
    * 
    * @param name 属性的名称。
@@ -2499,8 +2509,6 @@ public:
 /**
  * 窗体样式。
  *
- *负责管理缺省的窗体样式数据，方便实现style\_const。
- *
  */
 class TTheme { 
 public:
@@ -2722,7 +2730,7 @@ public:
    * @param cp1x 控制点1x坐标。
    * @param cp1y 控制点1y坐标。
    * @param cp2x 控制点2x坐标。
-   * @param cp2y 控制点3y坐标。
+   * @param cp2y 控制点2y坐标。
    * @param x x坐标。
    * @param y y坐标。
    *
@@ -3277,6 +3285,18 @@ public:
  */
 class TWidget { 
 public:
+
+  /**
+   * 设置控件的文本。
+   * 只是对widget_set_prop的包装，文本的意义由子类控件决定。
+   * 
+   * @param text 文本。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */    
+  ret_t SetTextW(const wchar_t* text) {
+    return widget_set_text(((widget_t*)(this->nativeObj)), text);
+  }
   //nativeObj is public for internal use only.
   widget_t* nativeObj;
 
@@ -14290,22 +14310,28 @@ public:
   double GetStep() const;
 
   /**
-   * 滑块的是否为垂直方向。
-   *
-   */
-  bool GetVertical() const;
-
-  /**
    * 轴的宽度或高度（单位：像素），为0表示为控件的宽度或高度的一半，缺省为0。
    *
    */
   uint32_t GetBarSize() const;
 
   /**
-   * 滑块的宽度或高度（单位：像素），缺省为10。
+   * 滑块的宽度或高度（单位：像素），缺省为 bar_size * 1.5。
    *
    */
   uint32_t GetDraggerSize() const;
+
+  /**
+   * 前景色的线帽形状。（取值：butt|round，默认为跟随风格的圆角设置, 但是在没有设置圆角的时候无法使用 "round" 来设置圆角）
+   *
+   */
+  char* GetLineCap() const;
+
+  /**
+   * 滑块的是否为垂直方向。
+   *
+   */
+  bool GetVertical() const;
 
   /**
    * 滑块的宽度或高度是否与icon适应，缺省为true。
@@ -14318,12 +14344,6 @@ public:
    *
    */
   bool GetSlideWithBar() const;
-
-  /**
-   * 前景色的线帽形状。（取值：butt|round，默认为跟随风格的圆角设置, 但是在没有设置圆角的时候无法使用 "round" 来设置圆角）
-   *
-   */
-  char* GetLineCap() const;
 };
 
 

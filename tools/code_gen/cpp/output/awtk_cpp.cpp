@@ -219,6 +219,10 @@
    return object_copy_prop(((object_t*)(this->nativeObj)), ((object_t*)(src.nativeObj)), name);
  }
 
+ ret_t TObject::CopyProps(TObject& src, bool overwrite)  {
+   return object_copy_props(((object_t*)(this->nativeObj)), ((object_t*)(src.nativeObj)), overwrite);
+ }
+
  bool TObject::HasProp(const char* name)  {
     return object_has_prop(((object_t*)(this->nativeObj)), name);
  }
@@ -4331,10 +4335,6 @@
    return ((slider_t*)(this->nativeObj))->step;
  }
 
- bool TSlider::GetVertical() const {
-   return ((slider_t*)(this->nativeObj))->vertical;
- }
-
  uint32_t TSlider::GetBarSize() const {
    return ((slider_t*)(this->nativeObj))->bar_size;
  }
@@ -4343,16 +4343,20 @@
    return ((slider_t*)(this->nativeObj))->dragger_size;
  }
 
+ char* TSlider::GetLineCap() const {
+   return ((slider_t*)(this->nativeObj))->line_cap;
+ }
+
+ bool TSlider::GetVertical() const {
+   return ((slider_t*)(this->nativeObj))->vertical;
+ }
+
  bool TSlider::GetDraggerAdaptToIcon() const {
    return ((slider_t*)(this->nativeObj))->dragger_adapt_to_icon;
  }
 
  bool TSlider::GetSlideWithBar() const {
    return ((slider_t*)(this->nativeObj))->slide_with_bar;
- }
-
- char* TSlider::GetLineCap() const {
-   return ((slider_t*)(this->nativeObj))->line_cap;
  }
 
  TWidget TTabButtonGroup::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {

@@ -923,6 +923,22 @@ static void wrap_object_copy_prop(const Nan::FunctionCallbackInfo<v8::Value>& ar
   (void)argc;(void)ctx;
 }
 
+static void wrap_object_copy_props(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 3) {
+  ret_t ret = (ret_t)0;
+  object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
+  object_t* src = (object_t*)jsvalue_get_pointer(ctx, argv[1], "object_t*");
+  bool_t overwrite = (bool_t)jsvalue_get_boolean_value(ctx, argv[2]);
+  ret = (ret_t)object_copy_props(obj, src, overwrite);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_object_has_prop(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -1581,6 +1597,7 @@ ret_t object_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "object_set_prop_float", wrap_object_set_prop_float);
   Nan::Export(ctx, "object_set_prop_double", wrap_object_set_prop_double);
   Nan::Export(ctx, "object_copy_prop", wrap_object_copy_prop);
+  Nan::Export(ctx, "object_copy_props", wrap_object_copy_props);
   Nan::Export(ctx, "object_has_prop", wrap_object_has_prop);
   Nan::Export(ctx, "object_eval", wrap_object_eval);
   Nan::Export(ctx, "object_can_exec", wrap_object_can_exec);
@@ -25580,16 +25597,6 @@ static void wrap_slider_t_get_prop_step(const Nan::FunctionCallbackInfo<v8::Valu
   (void)argc;(void)ctx;
 }
 
-static void wrap_slider_t_get_prop_vertical(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
-  JSContext* ctx = NULL; 
-  int32_t argc = (int32_t)(argv.Length()); 
-  slider_t* obj = (slider_t*)jsvalue_get_pointer(ctx, argv[0], "slider_t*");
-
-  v8::Local<v8::Boolean> jret= Nan::New((bool)(obj->vertical));
-  argv.GetReturnValue().Set(jret);
-  (void)argc;(void)ctx;
-}
-
 static void wrap_slider_t_get_prop_bar_size(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -25606,6 +25613,28 @@ static void wrap_slider_t_get_prop_dragger_size(const Nan::FunctionCallbackInfo<
   slider_t* obj = (slider_t*)jsvalue_get_pointer(ctx, argv[0], "slider_t*");
 
   v8::Local<v8::Int32> jret= Nan::New((int32_t)(obj->dragger_size));
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
+static void wrap_slider_t_get_prop_line_cap(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  slider_t* obj = (slider_t*)jsvalue_get_pointer(ctx, argv[0], "slider_t*");
+
+  const char* str_temp = obj->line_cap;
+  str_temp = (str_temp != NULL) ? str_temp : "";
+  v8::Local<v8::String> jret= Nan::New((const char*)(str_temp)).ToLocalChecked();
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
+static void wrap_slider_t_get_prop_vertical(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  slider_t* obj = (slider_t*)jsvalue_get_pointer(ctx, argv[0], "slider_t*");
+
+  v8::Local<v8::Boolean> jret= Nan::New((bool)(obj->vertical));
   argv.GetReturnValue().Set(jret);
   (void)argc;(void)ctx;
 }
@@ -25630,18 +25659,6 @@ static void wrap_slider_t_get_prop_slide_with_bar(const Nan::FunctionCallbackInf
   (void)argc;(void)ctx;
 }
 
-static void wrap_slider_t_get_prop_line_cap(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
-  JSContext* ctx = NULL; 
-  int32_t argc = (int32_t)(argv.Length()); 
-  slider_t* obj = (slider_t*)jsvalue_get_pointer(ctx, argv[0], "slider_t*");
-
-  const char* str_temp = obj->line_cap;
-  str_temp = (str_temp != NULL) ? str_temp : "";
-  v8::Local<v8::String> jret= Nan::New((const char*)(str_temp)).ToLocalChecked();
-  argv.GetReturnValue().Set(jret);
-  (void)argc;(void)ctx;
-}
-
 ret_t slider_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "slider_create", wrap_slider_create);
   Nan::Export(ctx, "slider_cast", wrap_slider_cast);
@@ -25656,12 +25673,12 @@ ret_t slider_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "slider_t_get_prop_min", wrap_slider_t_get_prop_min);
   Nan::Export(ctx, "slider_t_get_prop_max", wrap_slider_t_get_prop_max);
   Nan::Export(ctx, "slider_t_get_prop_step", wrap_slider_t_get_prop_step);
-  Nan::Export(ctx, "slider_t_get_prop_vertical", wrap_slider_t_get_prop_vertical);
   Nan::Export(ctx, "slider_t_get_prop_bar_size", wrap_slider_t_get_prop_bar_size);
   Nan::Export(ctx, "slider_t_get_prop_dragger_size", wrap_slider_t_get_prop_dragger_size);
+  Nan::Export(ctx, "slider_t_get_prop_line_cap", wrap_slider_t_get_prop_line_cap);
+  Nan::Export(ctx, "slider_t_get_prop_vertical", wrap_slider_t_get_prop_vertical);
   Nan::Export(ctx, "slider_t_get_prop_dragger_adapt_to_icon", wrap_slider_t_get_prop_dragger_adapt_to_icon);
   Nan::Export(ctx, "slider_t_get_prop_slide_with_bar", wrap_slider_t_get_prop_slide_with_bar);
-  Nan::Export(ctx, "slider_t_get_prop_line_cap", wrap_slider_t_get_prop_line_cap);
 
  return RET_OK;
 }

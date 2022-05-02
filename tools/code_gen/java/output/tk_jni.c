@@ -549,6 +549,15 @@ JNIEXPORT jint JNICALL Java_awtk_TObject_object_1copy_1prop(JNIEnv* env,  jclass
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TObject_object_1copy_1props(JNIEnv* env,  jclass ajc, jlong jobj, jlong jsrc, jboolean overwrite) { /*func*/
+  ret_t ret;
+  object_t* obj = (object_t*)jobj;
+  object_t* src = (object_t*)jsrc;
+  ret = (ret_t)object_copy_props(obj, src, overwrite);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jboolean JNICALL Java_awtk_TObject_object_1has_1prop(JNIEnv* env,  jclass ajc, jlong jobj, jstring jname) { /*func*/
   bool_t ret;
   object_t* obj = (object_t*)jobj;
@@ -13275,12 +13284,6 @@ JNIEXPORT jdouble JNICALL Java_awtk_TSlider_slider_1t_1get_1prop_1step(JNIEnv* e
   return (jdouble)(obj->step);
 }
 
-JNIEXPORT jboolean JNICALL Java_awtk_TSlider_slider_1t_1get_1prop_1vertical(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  slider_t* obj = (slider_t*)jobj;
-
-  return (jboolean)(obj->vertical);
-}
-
 JNIEXPORT jint JNICALL Java_awtk_TSlider_slider_1t_1get_1prop_1bar_1size(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
   slider_t* obj = (slider_t*)jobj;
 
@@ -13293,6 +13296,18 @@ JNIEXPORT jint JNICALL Java_awtk_TSlider_slider_1t_1get_1prop_1dragger_1size(JNI
   return (jint)(obj->dragger_size);
 }
 
+JNIEXPORT jstring JNICALL Java_awtk_TSlider_slider_1t_1get_1prop_1line_1cap(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  slider_t* obj = (slider_t*)jobj;
+
+  return (*env)->NewStringUTF(env, obj->line_cap);
+}
+
+JNIEXPORT jboolean JNICALL Java_awtk_TSlider_slider_1t_1get_1prop_1vertical(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
+  slider_t* obj = (slider_t*)jobj;
+
+  return (jboolean)(obj->vertical);
+}
+
 JNIEXPORT jboolean JNICALL Java_awtk_TSlider_slider_1t_1get_1prop_1dragger_1adapt_1to_1icon(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
   slider_t* obj = (slider_t*)jobj;
 
@@ -13303,12 +13318,6 @@ JNIEXPORT jboolean JNICALL Java_awtk_TSlider_slider_1t_1get_1prop_1slide_1with_1
   slider_t* obj = (slider_t*)jobj;
 
   return (jboolean)(obj->slide_with_bar);
-}
-
-JNIEXPORT jstring JNICALL Java_awtk_TSlider_slider_1t_1get_1prop_1line_1cap(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  slider_t* obj = (slider_t*)jobj;
-
-  return (*env)->NewStringUTF(env, obj->line_cap);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TTabButtonGroup_tab_1button_1group_1create(JNIEnv* env,  jclass ajc, jlong jparent, jint x, jint y, jint w, jint h) { /*func*/

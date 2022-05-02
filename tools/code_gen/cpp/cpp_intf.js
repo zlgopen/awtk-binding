@@ -27,7 +27,23 @@ class CppIntfGenerator extends CppGenerator {
   }
 
   genClassPre(cls) {
-    return 'public:\n'
+    let result = 'public:\n'
+    if(cls.name == 'widget_t') {
+      result += `
+  /**
+   * 设置控件的文本。
+   * 只是对widget\_set\_prop的包装，文本的意义由子类控件决定。
+   * 
+   * @param text 文本。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */    
+  ret_t SetTextW(const wchar_t* text) {
+    return widget_set_text(((widget_t*)(this->nativeObj)), text);
+  }
+`
+    }
+    return result;
   }
 
   genClassEnd(cls) {

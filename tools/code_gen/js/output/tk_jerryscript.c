@@ -896,6 +896,21 @@ static HANDLER_PROTO(wrap_object_copy_prop)  {
   return jret;
 }
 
+static HANDLER_PROTO(wrap_object_copy_props)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 3) {
+  ret_t ret = (ret_t)0;
+  object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
+  object_t* src = (object_t*)jsvalue_get_pointer(ctx, argv[1], "object_t*");
+  bool_t overwrite = (bool_t)jsvalue_get_boolean_value(ctx, argv[2]);
+  ret = (ret_t)object_copy_props(obj, src, overwrite);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 static HANDLER_PROTO(wrap_object_has_prop)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
@@ -1512,6 +1527,7 @@ ret_t object_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"object_set_prop_float", wrap_object_set_prop_float);
   jerryx_handler_register_global((const jerry_char_t*)"object_set_prop_double", wrap_object_set_prop_double);
   jerryx_handler_register_global((const jerry_char_t*)"object_copy_prop", wrap_object_copy_prop);
+  jerryx_handler_register_global((const jerry_char_t*)"object_copy_props", wrap_object_copy_props);
   jerryx_handler_register_global((const jerry_char_t*)"object_has_prop", wrap_object_has_prop);
   jerryx_handler_register_global((const jerry_char_t*)"object_eval", wrap_object_eval);
   jerryx_handler_register_global((const jerry_char_t*)"object_can_exec", wrap_object_can_exec);
@@ -21749,15 +21765,6 @@ static HANDLER_PROTO(wrap_slider_t_get_prop_step)  {
   return jret;
 }
 
-static HANDLER_PROTO(wrap_slider_t_get_prop_vertical)  {
-  void* ctx = NULL;
-  jsvalue_t jret = JS_NULL;
-  slider_t* obj = (slider_t*)jsvalue_get_pointer(ctx, argv[0], "slider_t*");
-
-  jret = jsvalue_create_bool(ctx, obj->vertical);
-  return jret;
-}
-
 static HANDLER_PROTO(wrap_slider_t_get_prop_bar_size)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
@@ -21773,6 +21780,24 @@ static HANDLER_PROTO(wrap_slider_t_get_prop_dragger_size)  {
   slider_t* obj = (slider_t*)jsvalue_get_pointer(ctx, argv[0], "slider_t*");
 
   jret = jsvalue_create_int(ctx, obj->dragger_size);
+  return jret;
+}
+
+static HANDLER_PROTO(wrap_slider_t_get_prop_line_cap)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  slider_t* obj = (slider_t*)jsvalue_get_pointer(ctx, argv[0], "slider_t*");
+
+  jret = jsvalue_create_string(ctx, obj->line_cap);
+  return jret;
+}
+
+static HANDLER_PROTO(wrap_slider_t_get_prop_vertical)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  slider_t* obj = (slider_t*)jsvalue_get_pointer(ctx, argv[0], "slider_t*");
+
+  jret = jsvalue_create_bool(ctx, obj->vertical);
   return jret;
 }
 
@@ -21794,15 +21819,6 @@ static HANDLER_PROTO(wrap_slider_t_get_prop_slide_with_bar)  {
   return jret;
 }
 
-static HANDLER_PROTO(wrap_slider_t_get_prop_line_cap)  {
-  void* ctx = NULL;
-  jsvalue_t jret = JS_NULL;
-  slider_t* obj = (slider_t*)jsvalue_get_pointer(ctx, argv[0], "slider_t*");
-
-  jret = jsvalue_create_string(ctx, obj->line_cap);
-  return jret;
-}
-
 ret_t slider_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"slider_create", wrap_slider_create);
   jerryx_handler_register_global((const jerry_char_t*)"slider_cast", wrap_slider_cast);
@@ -21817,12 +21833,12 @@ ret_t slider_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_min", wrap_slider_t_get_prop_min);
   jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_max", wrap_slider_t_get_prop_max);
   jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_step", wrap_slider_t_get_prop_step);
-  jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_vertical", wrap_slider_t_get_prop_vertical);
   jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_bar_size", wrap_slider_t_get_prop_bar_size);
   jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_dragger_size", wrap_slider_t_get_prop_dragger_size);
+  jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_line_cap", wrap_slider_t_get_prop_line_cap);
+  jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_vertical", wrap_slider_t_get_prop_vertical);
   jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_dragger_adapt_to_icon", wrap_slider_t_get_prop_dragger_adapt_to_icon);
   jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_slide_with_bar", wrap_slider_t_get_prop_slide_with_bar);
-  jerryx_handler_register_global((const jerry_char_t*)"slider_t_get_prop_line_cap", wrap_slider_t_get_prop_line_cap);
 
  return RET_OK;
 }

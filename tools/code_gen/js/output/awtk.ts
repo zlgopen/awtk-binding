@@ -59,6 +59,7 @@ declare function object_set_prop_bool(obj : any, name : string, value : any) : T
 declare function object_set_prop_float(obj : any, name : string, value : any) : TRet;
 declare function object_set_prop_double(obj : any, name : string, value : any) : TRet;
 declare function object_copy_prop(obj : any, src : any, name : string) : TRet;
+declare function object_copy_props(obj : any, src : any, overwrite : boolean) : TRet;
 declare function object_has_prop(obj : any, name : string) : boolean;
 declare function object_eval(obj : any, expr : string, v : any) : TRet;
 declare function object_can_exec(obj : any, name : string, args : string) : boolean;
@@ -1998,12 +1999,12 @@ declare function slider_t_get_prop_value(nativeObj : any) : number;
 declare function slider_t_get_prop_min(nativeObj : any) : number;
 declare function slider_t_get_prop_max(nativeObj : any) : number;
 declare function slider_t_get_prop_step(nativeObj : any) : number;
-declare function slider_t_get_prop_vertical(nativeObj : any) : boolean;
 declare function slider_t_get_prop_bar_size(nativeObj : any) : number;
 declare function slider_t_get_prop_dragger_size(nativeObj : any) : number;
+declare function slider_t_get_prop_line_cap(nativeObj : any) : string;
+declare function slider_t_get_prop_vertical(nativeObj : any) : boolean;
 declare function slider_t_get_prop_dragger_adapt_to_icon(nativeObj : any) : boolean;
 declare function slider_t_get_prop_slide_with_bar(nativeObj : any) : boolean;
-declare function slider_t_get_prop_line_cap(nativeObj : any) : string;
 declare function tab_button_group_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function tab_button_group_set_compact(widget : any, compact : boolean) : TRet;
 declare function tab_button_group_set_scrollable(widget : any, scrollable : boolean) : TRet;
@@ -2888,6 +2889,19 @@ export class TObject extends TEmitter {
    */
  copyProp(src : TObject, name : string) : TRet  {
     return object_copy_prop(this != null ? (this.nativeObj || this) : null, src != null ? (src.nativeObj || src) : null, name);
+ }
+
+
+  /**
+   * 拷贝全部的属性。
+   * 
+   * @param src 源对象。
+   * @param overwrite 如果属性存在是否覆盖。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ copyProps(src : TObject, overwrite : boolean) : TRet  {
+    return object_copy_props(this != null ? (this.nativeObj || this) : null, src != null ? (src.nativeObj || src) : null, overwrite);
  }
 
 
@@ -7063,8 +7077,6 @@ export class TStyle {
 /**
  * 窗体样式。
  *
- *负责管理缺省的窗体样式数据，方便实现style\_const。
- *
  */
 export class TTheme { 
  public nativeObj : any;
@@ -7514,7 +7526,7 @@ export class TVgcanvas {
    * @param cp1x 控制点1x坐标。
    * @param cp1y 控制点1y坐标。
    * @param cp2x 控制点2x坐标。
-   * @param cp2y 控制点3y坐标。
+   * @param cp2y 控制点2y坐标。
    * @param x x坐标。
    * @param y y坐标。
    *
@@ -24395,19 +24407,6 @@ export class TSlider extends TWidget {
 
 
   /**
-   * 滑块的是否为垂直方向。
-   *
-   */
- get vertical() : boolean {
-   return slider_t_get_prop_vertical(this.nativeObj);
- }
-
- set vertical(v : boolean) {
-   this.setVertical(v);
- }
-
-
-  /**
    * 轴的宽度或高度（单位：像素），为0表示为控件的宽度或高度的一半，缺省为0。
    *
    */
@@ -24421,11 +24420,37 @@ export class TSlider extends TWidget {
 
 
   /**
-   * 滑块的宽度或高度（单位：像素），缺省为10。
+   * 滑块的宽度或高度（单位：像素），缺省为 bar_size * 1.5。
    *
    */
  get draggerSize() : number {
    return slider_t_get_prop_dragger_size(this.nativeObj);
+ }
+
+
+  /**
+   * 前景色的线帽形状。（取值：butt|round，默认为跟随风格的圆角设置, 但是在没有设置圆角的时候无法使用 "round" 来设置圆角）
+   *
+   */
+ get lineCap() : string {
+   return slider_t_get_prop_line_cap(this.nativeObj);
+ }
+
+ set lineCap(v : string) {
+   this.setLineCap(v);
+ }
+
+
+  /**
+   * 滑块的是否为垂直方向。
+   *
+   */
+ get vertical() : boolean {
+   return slider_t_get_prop_vertical(this.nativeObj);
+ }
+
+ set vertical(v : boolean) {
+   this.setVertical(v);
  }
 
 
@@ -24444,19 +24469,6 @@ export class TSlider extends TWidget {
    */
  get slideWithBar() : boolean {
    return slider_t_get_prop_slide_with_bar(this.nativeObj);
- }
-
-
-  /**
-   * 前景色的线帽形状。（取值：butt|round，默认为跟随风格的圆角设置, 但是在没有设置圆角的时候无法使用 "round" 来设置圆角）
-   *
-   */
- get lineCap() : string {
-   return slider_t_get_prop_line_cap(this.nativeObj);
- }
-
- set lineCap(v : string) {
-   this.setLineCap(v);
  }
 
 };

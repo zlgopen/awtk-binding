@@ -1247,6 +1247,34 @@
           {
             "type": "tk_object_t*",
             "name": "obj",
+            "desc": "目标对象。"
+          },
+          {
+            "type": "tk_object_t*",
+            "name": "src",
+            "desc": "源对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "overwrite",
+            "desc": "如果属性存在是否覆盖。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "拷贝全部的属性。",
+        "name": "tk_object_copy_props",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "tk_object_t*",
+            "name": "obj",
             "desc": "object对象。"
           },
           {
@@ -6447,7 +6475,7 @@
     "events": [],
     "properties": [],
     "header": "base/theme.h",
-    "desc": "窗体样式。\n\n负责管理缺省的窗体样式数据，方便实现style\\_const。",
+    "desc": "窗体样式。",
     "name": "theme_t",
     "annotation": {
       "scriptable": true
@@ -6979,7 +7007,7 @@
           {
             "type": "float_t",
             "name": "cp2y",
-            "desc": "控制点3y坐标。"
+            "desc": "控制点2y坐标。"
           },
           {
             "type": "float_t",
@@ -29868,19 +29896,6 @@
         }
       },
       {
-        "name": "vertical",
-        "desc": "滑块的是否为垂直方向。",
-        "type": "bool_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
         "name": "bar_size",
         "desc": "轴的宽度或高度（单位：像素），为0表示为控件的宽度或高度的一半，缺省为0。",
         "type": "uint32_t",
@@ -29895,8 +29910,34 @@
       },
       {
         "name": "dragger_size",
-        "desc": "滑块的宽度或高度（单位：像素），缺省为10。",
+        "desc": "滑块的宽度或高度（单位：像素），缺省为 bar_size * 1.5。",
         "type": "uint32_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "line_cap",
+        "desc": "前景色的线帽形状。（取值：butt|round，默认为跟随风格的圆角设置, 但是在没有设置圆角的时候无法使用 \"round\" 来设置圆角）",
+        "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "vertical",
+        "desc": "滑块的是否为垂直方向。",
+        "type": "bool_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -29923,19 +29964,6 @@
         "name": "slide_with_bar",
         "desc": "是否允许在轴上滑动来改变滑块位置，缺省为FALSE。",
         "type": "bool_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "line_cap",
-        "desc": "前景色的线帽形状。（取值：butt|round，默认为跟随风格的圆角设置, 但是在没有设置圆角的时候无法使用 \"round\" 来设置圆角）",
-        "type": "char*",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
