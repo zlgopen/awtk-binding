@@ -85,6 +85,18 @@ $(function() {
 Public 成员函数</h2></td></tr>
 <tr class="memitem:ab3408292e5a04a2fa09043bc23ae0ede"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_grid.html#ab3408292e5a04a2fa09043bc23ae0ede">TGrid</a> (long nativeObj)</td></tr>
 <tr class="separator:ab3408292e5a04a2fa09043bc23ae0ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3183600e35012d455d0d7f9c18fb704e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_grid.html#a3183600e35012d455d0d7f9c18fb704e">setRows</a> (int rows)</td></tr>
+<tr class="separator:a3183600e35012d455d0d7f9c18fb704e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b7bb1902f694b8095cb421936cedfd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_grid.html#ae3b7bb1902f694b8095cb421936cedfd">setColumnsDefinition</a> (String columns_definition)</td></tr>
+<tr class="separator:ae3b7bb1902f694b8095cb421936cedfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac952d2a8589974cf22b179f12f4c8c21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_grid.html#ac952d2a8589974cf22b179f12f4c8c21">setShowGrid</a> (boolean show_grid)</td></tr>
+<tr class="separator:ac952d2a8589974cf22b179f12f4c8c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f235eddfd8b5afe689755e5697e3776"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_grid.html#a1f235eddfd8b5afe689755e5697e3776">getRows</a> ()</td></tr>
+<tr class="separator:a1f235eddfd8b5afe689755e5697e3776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a569dc6e8969463b803d6570d35e60ef6"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_grid.html#a569dc6e8969463b803d6570d35e60ef6">getColumnsDefinition</a> ()</td></tr>
+<tr class="separator:a569dc6e8969463b803d6570d35e60ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab58a1f84cef9ef3ccee1dce8293e1481"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_grid.html#ab58a1f84cef9ef3ccee1dce8293e1481">getShowGrid</a> ()</td></tr>
+<tr class="separator:ab58a1f84cef9ef3ccee1dce8293e1481"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -96,20 +108,16 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a665aac4c78621e502cd2f6deced138c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>grid控件。一个简单的容器控件，用于网格排列一组控件。</p>
-<p>它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。 子控件的布局可用layout_children属性指定。 请参考<a href="https://github.com/zlgopen/awtk/blob/master/docs/layout.md">布局参数</a>。</p>
-<p>grid_t是widget\_t的子类控件，widget_t的函数均适用于grid_t控件。</p>
-<p>在xml中使用"grid"标签创建grid。如：</p>
-<div class="fragment"><div class="line">*&lt;<span class="keywordtype">grid</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">children_layout</span>=<span class="stringliteral">&quot;default(c=2,r=2,m=5,s=5)&quot;</span>&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">button</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;open:basic&quot;</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;Basic&quot;</span>/&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">button</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;open:button&quot;</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;Buttons&quot;</span>/&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">button</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;open:edit&quot;</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;Edits&quot;</span>/&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">button</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;open:keyboard&quot;</span> <span class="keyword">text</span>=<span class="stringliteral">&quot;KeyBoard&quot;</span>/&gt;</div>
-<div class="line">*&lt;/<span class="keywordtype">grid</span>&gt;</div>
-</div><!-- fragment --><p>可用通过style来设置控件的显示风格，如背景颜色等。如：</p>
-<div class="fragment"><div class="line">*&lt;<span class="keywordtype">style</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;default&quot;</span> <span class="keyword">border_color</span>=<span class="stringliteral">&quot;#a0a0a0&quot;</span>&gt;</div>
-<div class="line">*&lt;<span class="keywordtype">normal</span>     <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#f0f0f0&quot;</span> /&gt;</div>
+<div class="textblock"><p>网格。 在xml中使用"grid"标签创建控件。如：</p>
+<div class="fragment"><div class="line">*<span class="comment">&lt;!-- ui --&gt;</span></div>
+<div class="line">*&lt;<span class="keywordtype">grid</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;c&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;50&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;100&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;100&quot;</span>/&gt;</div>
+</div><!-- fragment --><p>可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：</p>
+<div class="fragment"><div class="line">*<span class="comment">&lt;!-- style --&gt;</span></div>
+<div class="line">*&lt;<span class="keywordtype">grid</span>&gt;</div>
+<div class="line">*&lt;<span class="keywordtype">style</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;default&quot;</span> <span class="keyword">grid_color</span>=<span class="stringliteral">&quot;gray&quot;</span> <span class="keyword">border_color</span>=<span class="stringliteral">&quot;black&quot;</span> <span class="keyword">odd_bg_color</span>=<span class="stringliteral">&quot;#f5f5f5&quot;</span> <span class="keyword">even_bg_color</span>=<span class="stringliteral">&quot;#eeeeee&quot;</span>&gt;</div>
+<div class="line">*&lt;<span class="keywordtype">normal</span> /&gt;</div>
 <div class="line">*&lt;/<span class="keywordtype">style</span>&gt;</div>
+<div class="line">*&lt;/<span class="keywordtype">grid</span>&gt;</div>
 </div><!-- fragment --> </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="ab3408292e5a04a2fa09043bc23ae0ede"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab3408292e5a04a2fa09043bc23ae0ede">&#9670;&nbsp;</a></span>TGrid()</h2>
@@ -276,7 +284,189 @@ Public 成员函数</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>对象。 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>grid对象。 </dd></dl>
+
+</div>
+</div>
+<a id="a569dc6e8969463b803d6570d35e60ef6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a569dc6e8969463b803d6570d35e60ef6">&#9670;&nbsp;</a></span>getColumnsDefinition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String awtk.TGrid.getColumnsDefinition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>各列的参数。 各列的参数之间用英文的分号(;)分隔，每列参数的格式为：</p>
+<p>col(w=?,left_margin=?,right_margin=?,top_maorgin=?,bottom_margin=?)</p>
+<p>w 为列的宽度(必须存在)。取值在(0-1]区间时，视为grid控件宽度的比例，否则为像素宽度。 (如果为负数，将计算结果加上控件的宽度) left_margin(可选，可缩写为l) 该列左边的边距。 right_margin(可选，可缩写为r) 该列右边的边距。 top_margin(可选，可缩写为t) 该列顶部的边距。 bottom_margin(可选，可缩写为b) 该列底部的边距。 margin(可选，可缩写为m) 同时指定上面4个边距。 fill_available(可选，可缩写为f) 填充剩余宽度(只有一列可以指定)。 </p>
+
+</div>
+</div>
+<a id="a1f235eddfd8b5afe689755e5697e3776"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f235eddfd8b5afe689755e5697e3776">&#9670;&nbsp;</a></span>getRows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int awtk.TGrid.getRows </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>行数。 </p>
+
+</div>
+</div>
+<a id="ab58a1f84cef9ef3ccee1dce8293e1481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab58a1f84cef9ef3ccee1dce8293e1481">&#9670;&nbsp;</a></span>getShowGrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean awtk.TGrid.getShowGrid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>是否显示网格。 </p>
+
+</div>
+</div>
+<a id="ae3b7bb1902f694b8095cb421936cedfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3b7bb1902f694b8095cb421936cedfd">&#9670;&nbsp;</a></span>setColumnsDefinition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TGrid.setColumnsDefinition </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>columns_definition</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置 各列的参数。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">columns_definition</td><td>各列的参数。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a3183600e35012d455d0d7f9c18fb704e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3183600e35012d455d0d7f9c18fb704e">&#9670;&nbsp;</a></span>setRows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TGrid.setRows </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rows</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置 行数。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rows</td><td>行数。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="ac952d2a8589974cf22b179f12f4c8c21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac952d2a8589974cf22b179f12f4c8c21">&#9670;&nbsp;</a></span>setShowGrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TGrid.setShowGrid </td>
+          <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>show_grid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置 是否显示网格。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">show_grid</td><td>是否显示网格。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>

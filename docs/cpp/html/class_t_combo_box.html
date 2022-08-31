@@ -93,6 +93,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a2e36fc3e62aac4494e3c2586b9bf16cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91ac95c3a7bdd1daa48f079a404340e5"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#a91ac95c3a7bdd1daa48f079a404340e5">SetOpenWindow</a> (const char *open_window)</td></tr>
 <tr class="separator:a91ac95c3a7bdd1daa48f079a404340e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1f1c17a51afe25ad4e761c6ea75a6de"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#af1f1c17a51afe25ad4e761c6ea75a6de">SetThemeOfPopup</a> (const char *theme_of_popup)</td></tr>
+<tr class="separator:af1f1c17a51afe25ad4e761c6ea75a6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29786cff3f4704b5273beda838fd5ec5"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#a29786cff3f4704b5273beda838fd5ec5">ResetOptions</a> ()</td></tr>
 <tr class="separator:a29786cff3f4704b5273beda838fd5ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b89e7c3d2905fd4536202dca5f0b83d"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#a1b89e7c3d2905fd4536202dca5f0b83d">CountOptions</a> ()</td></tr>
@@ -119,6 +121,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a35132945ed744824e474ae06bf6adf98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff202978e9c9b804f3f2d79ae9908525"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#aff202978e9c9b804f3f2d79ae9908525">GetOpenWindow</a> () const</td></tr>
 <tr class="separator:aff202978e9c9b804f3f2d79ae9908525"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2c263c1368a370cd26550b8079204af"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#ab2c263c1368a370cd26550b8079204af">GetThemeOfPopup</a> () const</td></tr>
+<tr class="separator:ab2c263c1368a370cd26550b8079204af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f36a2b914ab3371f3320e40cf193950"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#a7f36a2b914ab3371f3320e40cf193950">GetSelectedIndex</a> () const</td></tr>
 <tr class="separator:a7f36a2b914ab3371f3320e40cf193950"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bba5e2fa5e255b3d7c966720775d363"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#a1bba5e2fa5e255b3d7c966720775d363">GetValue</a> () const</td></tr>
@@ -314,6 +318,19 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
 <div class="line">*&lt;<span class="keywordtype">normal</span> <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#808080&quot;</span>/&gt;</div>
 <div class="line">*&lt;/<span class="keywordtype">style</span>&gt;</div>
 <div class="line">*&lt;/<span class="keywordtype">popup</span>&gt;</div>
+</div><!-- fragment --><p>3.combobox的下拉框中的列表项的样式，可以设置combo_box_item的style来改变。</p>
+<div class="fragment"><div class="line">*&lt;<span class="keywordtype">combo_box_item</span>&gt;</div>
+<div class="line">*&lt;<span class="keywordtype">style</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;default&quot;</span> <span class="keyword">icon_at</span>=<span class="stringliteral">&quot;left&quot;</span> <span class="keyword">text_color</span>=<span class="stringliteral">&quot;black&quot;</span> <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#f0f0f0&quot;</span>&gt;</div>
+<div class="line">*&lt;<span class="keywordtype">normal</span>  <span class="keyword">icon</span>=<span class="stringliteral">&quot;empty&quot;</span>/&gt;</div>
+<div class="line">*&lt;<span class="keywordtype">focused</span> <span class="keyword">icon</span>=<span class="stringliteral">&quot;empty&quot;</span> <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#1296db&quot;</span> <span class="keyword">text_color</span>=<span class="stringliteral">&quot;gold&quot;</span> /&gt;</div>
+<div class="line">*&lt;<span class="keywordtype">pressed</span> <span class="keyword">icon</span>=<span class="stringliteral">&quot;empty&quot;</span> <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#1296db&quot;</span> <span class="keyword">text_color</span>=<span class="stringliteral">&quot;white&quot;</span> /&gt;</div>
+<div class="line">*&lt;<span class="keywordtype">over</span>    <span class="keyword">icon</span>=<span class="stringliteral">&quot;empty&quot;</span> <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#1296db&quot;</span> <span class="keyword">text_color</span>=<span class="stringliteral">&quot;white&quot;</span> /&gt;</div>
+<div class="line">*&lt;<span class="keywordtype">normal_of_checked</span>  <span class="keyword">icon</span>=<span class="stringliteral">&quot;check&quot;</span>/&gt;</div>
+<div class="line">*&lt;<span class="keywordtype">focused_of_checked</span>  <span class="keyword">icon</span>=<span class="stringliteral">&quot;check&quot;</span> <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#1296db&quot;</span> <span class="keyword">text_color</span>=<span class="stringliteral">&quot;gold&quot;</span>/&gt;</div>
+<div class="line">*&lt;<span class="keywordtype">pressed_of_checked</span> <span class="keyword">icon</span>=<span class="stringliteral">&quot;check&quot;</span> <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#1296db&quot;</span> <span class="keyword">text_color</span>=<span class="stringliteral">&quot;white&quot;</span> /&gt;</div>
+<div class="line">*&lt;<span class="keywordtype">over_of_checked</span>    <span class="keyword">icon</span>=<span class="stringliteral">&quot;check&quot;</span> <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#1296db&quot;</span> <span class="keyword">text_color</span>=<span class="stringliteral">&quot;white&quot;</span> /&gt;</div>
+<div class="line">*&lt;/<span class="keywordtype">style</span>&gt;</div>
+<div class="line">*&lt;/<span class="keywordtype">combo_box_item</span>&gt;</div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>更多用法请参考：[theme </p>
 </blockquote>
@@ -509,7 +526,12 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
         </tr>
       </table>
 </div><div class="memdoc">
-<p>设置可选项(冒号分隔值和文本，分号分隔选项，如:1:red;2:green;3:blue)。 </p>
+<p>设置可选项(冒号分隔值和文本，分号分隔选项，如:1:red;2:green;3:blue)。 </p><blockquote class="doxtable">
+<p>如果数据本身中有英文冒号(:)和英文分号(;)，请用16进制转义。</p><ul>
+<li>英文冒号(:)写为\x3a</li>
+<li>英文冒号(;)写为\x3b </li>
+</ul>
+</blockquote>
 
 </div>
 </div>
@@ -547,6 +569,24 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
 </div><div class="memdoc">
 <p>获取combo_box的文本。</p>
 <dl class="section return"><dt>返回</dt><dd>返回文本。 </dd></dl>
+
+</div>
+</div>
+<a id="ab2c263c1368a370cd26550b8079204af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2c263c1368a370cd26550b8079204af">&#9670;&nbsp;</a></span>GetThemeOfPopup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * TComboBox::GetThemeOfPopup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>弹出窗口的主题(对应的style文件必须存在)，方便为不同combo box的弹出窗口指定不同的样式。 </p>
 
 </div>
 </div>
@@ -781,6 +821,32 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">index</td><td>选项的索引。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="af1f1c17a51afe25ad4e761c6ea75a6de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1f1c17a51afe25ad4e761c6ea75a6de">&#9670;&nbsp;</a></span>SetThemeOfPopup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TComboBox::SetThemeOfPopup </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>theme_of_popup</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置弹出窗口的主题。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">theme_of_popup</td><td>弹出的窗口主题。</td></tr>
   </table>
   </dd>
 </dl>

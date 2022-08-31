@@ -152,6 +152,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a2f9f5c0a3563c664b2a0bea2181485e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c75b19a9eeabe7d1c3a631b8a13e19a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a0c75b19a9eeabe7d1c3a631b8a13e19a">FuncDef</a> ()</td></tr>
 <tr class="separator:a0c75b19a9eeabe7d1c3a631b8a13e19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab608e3d41c83ff12c4a35d94373a94ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_bitmap.html">TBitmap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#ab608e3d41c83ff12c4a35d94373a94ee">Bitmap</a> ()</td></tr>
+<tr class="separator:ab608e3d41c83ff12c4a35d94373a94ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -177,6 +179,25 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 <p>在脚本语言中，需要动态创建对象。 </p>
 </blockquote>
 </div><h2 class="groupheader">成员函数说明</h2>
+<a id="ab608e3d41c83ff12c4a35d94373a94ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab608e3d41c83ff12c4a35d94373a94ee">&#9670;&nbsp;</a></span>Bitmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_bitmap.html">TBitmap</a> TValue::Bitmap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取类型为位图对象。</p>
+<dl class="section return"><dt>返回</dt><dd>位图对象。 </dd></dl>
+
+</div>
+</div>
 <a id="ac8e0ac0dafe17c443e831c62a80895f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac8e0ac0dafe17c443e831c62a80895f1">&#9670;&nbsp;</a></span>Bool()</h2>
 
@@ -907,7 +928,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 <p>获取类型为字符串的值。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">buff</td><td>用于格式转换的缓冲区。 </td></tr>
+    <tr><td class="paramname">buff</td><td>用于格式转换的缓冲区（如果 v 对象为 string 类型的话，不会把字符串数据拷贝到 buff 中）。 </td></tr>
     <tr><td class="paramname">size</td><td>缓冲区大小。</td></tr>
   </table>
   </dd>

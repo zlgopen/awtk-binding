@@ -90,6 +90,12 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:af33ee4ebdb652f37b27a042a5a43ff36"><td class="memItemLeft" align="right" valign="top"><a id="af33ee4ebdb652f37b27a042a5a43ff36"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TSpinBox</b> (const spin_box_t *nativeObj)</td></tr>
 <tr class="separator:af33ee4ebdb652f37b27a042a5a43ff36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab42cdbde65ea75df9ebb3081cfc0c147"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_spin_box.html#ab42cdbde65ea75df9ebb3081cfc0c147">SetEasyTouchMode</a> (bool easy_touch_mode)</td></tr>
+<tr class="separator:ab42cdbde65ea75df9ebb3081cfc0c147"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab93fe331e69ff1e2753d1031ad44e47e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_spin_box.html#ab93fe331e69ff1e2753d1031ad44e47e">SpinSetRepeat</a> (int32_t repeat)</td></tr>
+<tr class="separator:ab93fe331e69ff1e2753d1031ad44e47e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27ecbb6c1cc664c5d6527052f1b15e6a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_spin_box.html#a27ecbb6c1cc664c5d6527052f1b15e6a">GetEasyTouchMode</a> () const</td></tr>
+<tr class="separator:a27ecbb6c1cc664c5d6527052f1b15e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_t_edit"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_t_edit')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_t_edit.html">TEdit</a></td></tr>
 <tr class="memitem:a83bcec0ab6b236b5e1c23140341a51c4 inherit pub_methods_class_t_edit"><td class="memItemLeft" align="right" valign="top"><a id="a83bcec0ab6b236b5e1c23140341a51c4"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TEdit</b> (widget_t *nativeObj)</td></tr>
@@ -309,6 +315,81 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>对象。 </dd></dl>
+
+</div>
+</div>
+<a id="a27ecbb6c1cc664c5d6527052f1b15e6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27ecbb6c1cc664c5d6527052f1b15e6a">&#9670;&nbsp;</a></span>GetEasyTouchMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TSpinBox::GetEasyTouchMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>是否启用易点击模式(在电容屏设备上建议启用)。 </p><blockquote class="doxtable">
+<p>在该模式下：</p><ul>
+<li>1.当高度大于font size的3倍时，inc按钮在顶部(style名为spinbox_top)，dec按钮在底部(style名为spinbox_bottom)。</li>
+<li>2.当高度正常时，dec按钮在左边(style名为spinbox_left)，inc按钮在右边(style名为spinbox_right)。 不在该模式下： inc按钮在右上角(style名为spinbox_up)，dec按钮在右下角(style名为spinbox_down)。 </li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+<a id="ab42cdbde65ea75df9ebb3081cfc0c147"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab42cdbde65ea75df9ebb3081cfc0c147">&#9670;&nbsp;</a></span>SetEasyTouchMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TSpinBox::SetEasyTouchMode </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>easy_touch_mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置是否启用易点击模式。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">easy_touch_mode</td><td>易点击模式。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="ab93fe331e69ff1e2753d1031ad44e47e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab93fe331e69ff1e2753d1031ad44e47e">&#9670;&nbsp;</a></span>SpinSetRepeat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TSpinBox::SpinSetRepeat </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>repeat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置连击的时间间隔。 备注：时间间隔越低，速度越快。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">repeat</td><td>连击的时间间隔。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>

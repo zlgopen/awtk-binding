@@ -114,6 +114,14 @@ $(function() {
 
  @return 返回RET_OK表示成功，否则表示失败。
 </pre><p> */ ret_t SetStyleColor(const char* state_and_name, uint32_t value) ;</p>
+<p>/** 加入一个子控件默认实现(供子类调用)。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td>子控件对象。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 */ ret_t AddChildDefault(TWidget&amp; child) ;</dd></dl>
 <p>/** x坐标(相对于父控件的x坐标)。</p>
 <p>*/ xy_t GetX() const;</p>
 <p>/** y坐标(相对于父控件的y坐标)。</p>
@@ -145,10 +153,12 @@ $(function() {
 <p>/** 是否支持焦点状态。 *&gt; 如果希望style支持焦点状态，但又不希望焦点停留，可用本属性。</p>
 <p>*/ bool GetWithFocusState() const;</p>
 <p>/** 是否根据子控件和文本自动调整控件自身大小。</p>
-<p>*&gt; 为true时，最好不要使用child_layout，否则可能有冲突。 *&gt; 注意：只是调整控件的本身的宽高，不会修改控件本身的位置。</p>
+<p>*&gt; 为true时，最好不要使用 layout 的相关东西，否则可能有冲突。 *&gt; 注意：只是调整控件的本身的宽高，不会修改控件本身的位置。</p>
 <p>*/ bool GetAutoAdjustSize() const;</p>
 <p>/** 标识控件是否启用浮动布局，不受父控件的children_layout的控制。</p>
 <p>*/ bool GetFloating() const;</p>
+<p>/** 不透明度(0-255)，0完全透明，255完全不透明。</p>
+<p>*/ uint8_t GetOpacity() const;</p>
 <p>/** 脏矩形超出控件本身大小的最大范围(一般不用指定)。</p>
 <p>*&gt; 如果 border 太粗或 offset 太大等原因，导致脏矩形超出控件本身大小太多（大于缺省值）时，才需要指定。</p>
 <p>*/ uint16_t GetDirtyRectTolerance() const;</p>

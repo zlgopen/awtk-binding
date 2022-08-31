@@ -105,6 +105,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a7e9eddd679276099b507e84a6758e78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99fe1a8814076c17a6584c5ca8654064"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#a99fe1a8814076c17a6584c5ca8654064">Remove</a> (uint32_t index)</td></tr>
 <tr class="separator:a99fe1a8814076c17a6584c5ca8654064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bb1e7907c2cc4374c52a225cca432e3"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#a5bb1e7907c2cc4374c52a225cca432e3">RemoveValue</a> (<a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
+<tr class="separator:a5bb1e7907c2cc4374c52a225cca432e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6de3b47ca2bde6c05f9170765a99eea3"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#a6de3b47ca2bde6c05f9170765a99eea3">GetAndRemove</a> (uint32_t index, <a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
 <tr class="separator:a6de3b47ca2bde6c05f9170765a99eea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7ae5594d937c32271222965464b910e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#aa7ae5594d937c32271222965464b910e">GetSize</a> () const</td></tr>
@@ -552,6 +554,32 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">index</td><td>位置。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a5bb1e7907c2cc4374c52a225cca432e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bb1e7907c2cc4374c52a225cca432e3">&#9670;&nbsp;</a></span>RemoveValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TObjectArray::RemoveValue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>删除指定的值。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>值。</td></tr>
   </table>
   </dd>
 </dl>

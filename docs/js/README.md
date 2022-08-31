@@ -1,6 +1,4 @@
-[AWTK](README.md) › [Globals](globals.md)
-
-# AWTK
+AWTK / [Exports](modules.md)
 
 ### 简单示例
 

@@ -74,6 +74,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a4e4197ccbdacbb3a1fa3fe5be629d1a9"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#a4e4197ccbdacbb3a1fa3fe5be629d1a9">PreInit</a> ()</td></tr>
+<tr class="separator:a4e4197ccbdacbb3a1fa3fe5be629d1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcd2b5b875d64ea3ff108b64308a1f0f"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#afcd2b5b875d64ea3ff108b64308a1f0f">Init</a> (wh_t w, wh_t h, app_type_t app_type, const char *app_name, const char *app_root)</td></tr>
 <tr class="separator:afcd2b5b875d64ea3ff108b64308a1f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae63c53a967e921aceced48b52e60fd23"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#ae63c53a967e921aceced48b52e60fd23">Run</a> ()</td></tr>
@@ -234,6 +236,35 @@ $(function() {
 </div><div class="memdoc">
 <p>获取全局指针是否按下。</p>
 <dl class="section return"><dt>返回</dt><dd>返回全局指针是否按下。 </dd></dl>
+
+</div>
+</div>
+<a id="a4e4197ccbdacbb3a1fa3fe5be629d1a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e4197ccbdacbb3a1fa3fe5be629d1a9">&#9670;&nbsp;</a></span>PreInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TGlobal::PreInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>初始化基本功能。 </p><blockquote class="doxtable">
+<p>在tk_init之前，应用程序可能需要加载配置文件， 为了保证这些功能正常工作，可以先调用tk_pre_init来初始化平台、内存和data reader等等。 </p>
+</blockquote>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>

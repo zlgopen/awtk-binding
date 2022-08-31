@@ -136,6 +136,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a66209c77d4fc2703efa98d0507c30497"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a319fccdc99e75b5bbafedcecb799689e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_canvas.html#a319fccdc99e75b5bbafedcecb799689e">Reset</a> ()</td></tr>
 <tr class="separator:a319fccdc99e75b5bbafedcecb799689e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa51ab973f73358cd77491f6ea73d11f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_canvas.html#afa51ab973f73358cd77491f6ea73d11f">ResetCache</a> ()</td></tr>
+<tr class="separator:afa51ab973f73358cd77491f6ea73d11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a310f49108a9dd00ff3ee4fadf28784d4"><td class="memItemLeft" align="right" valign="top">xy_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_canvas.html#a310f49108a9dd00ff3ee4fadf28784d4">GetOx</a> () const</td></tr>
 <tr class="separator:a310f49108a9dd00ff3ee4fadf28784d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7606c5f012f3d917d691ab91f7302b98"><td class="memItemLeft" align="right" valign="top">xy_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_canvas.html#a7606c5f012f3d917d691ab91f7302b98">GetOy</a> () const</td></tr>
@@ -845,6 +847,27 @@ canvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
       </table>
 </div><div class="memdoc">
 <p>释放相关资源。</p>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="afa51ab973f73358cd77491f6ea73d11f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa51ab973f73358cd77491f6ea73d11f">&#9670;&nbsp;</a></span>ResetCache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TCanvas::ResetCache </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>清除canvas中缓存。 </p><blockquote class="doxtable">
+<p>备注：主要用于窗口动画的离线画布绘制完成后重置在线画布，使下一帧中lcd对象的数据保持一致。 </p>
+</blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>

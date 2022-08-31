@@ -99,6 +99,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:afab1fb45a13269d7b77770654d93e658"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a283133e56403993d5aa2ca8990eb48be"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slide_view.html#a283133e56403993d5aa2ca8990eb48be">SetLoop</a> (bool loop)</td></tr>
 <tr class="separator:a283133e56403993d5aa2ca8990eb48be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a569aff7638485a152a1f0278f1bb5a58"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slide_view.html#a569aff7638485a152a1f0278f1bb5a58">SetDragThreshold</a> (uint32_t drag_threshold)</td></tr>
+<tr class="separator:a569aff7638485a152a1f0278f1bb5a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbe4d3e010ed12bde4113f635d5c1059"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slide_view.html#acbe4d3e010ed12bde4113f635d5c1059">SetAnimatingTime</a> (uint32_t animating_time)</td></tr>
+<tr class="separator:acbe4d3e010ed12bde4113f635d5c1059"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a764c6cb0143ae2ab5c0447b1a91fc15f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slide_view.html#a764c6cb0143ae2ab5c0447b1a91fc15f">RemoveIndex</a> (uint32_t index)</td></tr>
 <tr class="separator:a764c6cb0143ae2ab5c0447b1a91fc15f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15fe86196171eb7038d05cdacdcde8a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slide_view.html#a15fe86196171eb7038d05cdacdcde8a9">GetVertical</a> () const</td></tr>
@@ -109,6 +113,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:af7911b38463f37a4e320b897ea438931"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab852f04bc198c95a81716b6e44dde9d2"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slide_view.html#ab852f04bc198c95a81716b6e44dde9d2">GetAnimHint</a> () const</td></tr>
 <tr class="separator:ab852f04bc198c95a81716b6e44dde9d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5967bda2a1c877dbd5d37d72a83602fc"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slide_view.html#a5967bda2a1c877dbd5d37d72a83602fc">GetDragThreshold</a> () const</td></tr>
+<tr class="separator:a5967bda2a1c877dbd5d37d72a83602fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d19b5c84f4b6a36df601ef93dad2605"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_slide_view.html#a6d19b5c84f4b6a36df601ef93dad2605">GetAnimatingTime</a> () const</td></tr>
+<tr class="separator:a6d19b5c84f4b6a36df601ef93dad2605"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -227,6 +235,24 @@ static <a class="el" href="class_t_slide_view.html">TSlideView</a>&#160;</td><td
 
 </div>
 </div>
+<a id="a6d19b5c84f4b6a36df601ef93dad2605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d19b5c84f4b6a36df601ef93dad2605">&#9670;&nbsp;</a></span>GetAnimatingTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t TSlideView::GetAnimatingTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>动画时间（单位：毫秒）。 </p>
+
+</div>
+</div>
 <a id="ab852f04bc198c95a81716b6e44dde9d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab852f04bc198c95a81716b6e44dde9d2">&#9670;&nbsp;</a></span>GetAnimHint()</h2>
 
@@ -260,6 +286,24 @@ static <a class="el" href="class_t_slide_view.html">TSlideView</a>&#160;</td><td
       </table>
 </div><div class="memdoc">
 <p>自动播放。0表示禁止自动播放，非0表示自动播放时每一页播放的时间。 </p>
+
+</div>
+</div>
+<a id="a5967bda2a1c877dbd5d37d72a83602fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5967bda2a1c877dbd5d37d72a83602fc">&#9670;&nbsp;</a></span>GetDragThreshold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t TSlideView::GetDragThreshold </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>拖动临界值。 </p>
 
 </div>
 </div>
@@ -389,6 +433,32 @@ static <a class="el" href="class_t_slide_view.html">TSlideView</a>&#160;</td><td
 
 </div>
 </div>
+<a id="acbe4d3e010ed12bde4113f635d5c1059"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbe4d3e010ed12bde4113f635d5c1059">&#9670;&nbsp;</a></span>SetAnimatingTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TSlideView::SetAnimatingTime </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>animating_time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置动画时间。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animating_time</td><td>动画时间。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="afab1fb45a13269d7b77770654d93e658"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afab1fb45a13269d7b77770654d93e658">&#9670;&nbsp;</a></span>SetAnimHint()</h2>
 
@@ -440,6 +510,32 @@ static <a class="el" href="class_t_slide_view.html">TSlideView</a>&#160;</td><td
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">auto_play</td><td>0表示禁止自动播放，非0表示自动播放时每一页播放的时间。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a569aff7638485a152a1f0278f1bb5a58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a569aff7638485a152a1f0278f1bb5a58">&#9670;&nbsp;</a></span>SetDragThreshold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TSlideView::SetDragThreshold </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>drag_threshold</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置拖拽临界值。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">drag_threshold</td><td>拖动临界值。</td></tr>
   </table>
   </dd>
 </dl>
