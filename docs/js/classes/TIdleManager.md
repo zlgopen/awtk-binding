@@ -28,7 +28,7 @@ idle_manager_t管理器。
 
 #### Defined in
 
-[awtk.ts:13088](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L13088)
+[awtk.ts:13085](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L13085)
 
 ## Properties
 
@@ -38,4 +38,4 @@ idle_manager_t管理器。
 
 #### Defined in
 
-[awtk.ts:13087](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L13087)
+[awtk.ts:13084](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L13084)

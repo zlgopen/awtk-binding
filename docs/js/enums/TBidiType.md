@@ -26,7 +26,7 @@ bidi 类型常量定义。
 
 #### Defined in
 
-[awtk.ts:4029](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L4029)
+[awtk.ts:4026](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L4026)
 
 ___
 
@@ -38,7 +38,7 @@ Left-To-Right letter Override。
 
 #### Defined in
 
-[awtk.ts:4047](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L4047)
+[awtk.ts:4044](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L4044)
 
 ___
 
@@ -50,7 +50,7 @@ Left-To-Right letter。
 
 #### Defined in
 
-[awtk.ts:4035](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L4035)
+[awtk.ts:4032](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L4032)
 
 ___
 
@@ -62,7 +62,7 @@ Right-To-Left letter Override。
 
 #### Defined in
 
-[awtk.ts:4053](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L4053)
+[awtk.ts:4050](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L4050)
 
 ___
 
@@ -74,7 +74,7 @@ Right-To-Left letter。
 
 #### Defined in
 
-[awtk.ts:4041](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L4041)
+[awtk.ts:4038](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L4038)
 
 ___
 
@@ -86,7 +86,7 @@ Weak Left To Right paragraph。
 
 #### Defined in
 
-[awtk.ts:4059](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L4059)
+[awtk.ts:4056](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L4056)
 
 ___
 
@@ -98,4 +98,4 @@ Weak Right To Left paragraph。
 
 #### Defined in
 
-[awtk.ts:4065](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L4065)
+[awtk.ts:4062](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L4062)

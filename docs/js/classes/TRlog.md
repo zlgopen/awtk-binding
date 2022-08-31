@@ -38,7 +38,7 @@ rlog提供一个循环记录日志的功能，让日志文件始终不会超出�
 
 #### Defined in
 
-[awtk.ts:13913](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L13913)
+[awtk.ts:13910](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L13910)
 
 ## Properties
 
@@ -48,7 +48,7 @@ rlog提供一个循环记录日志的功能，让日志文件始终不会超出�
 
 #### Defined in
 
-[awtk.ts:13912](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L13912)
+[awtk.ts:13909](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L13909)
 
 ## Methods
 
@@ -72,7 +72,7 @@ rlog提供一个循环记录日志的功能，让日志文件始终不会超出�
 
 #### Defined in
 
-[awtk.ts:13942](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L13942)
+[awtk.ts:13939](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L13939)
 
 ___
 
@@ -105,4 +105,4 @@ rlog_destroy(log);
 
 #### Defined in
 
-[awtk.ts:13930](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L13930)
+[awtk.ts:13927](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L13927)

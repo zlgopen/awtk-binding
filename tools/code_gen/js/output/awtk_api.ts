@@ -3582,12 +3582,6 @@ const serial_widget_t_get_prop_stopbits = Module.cwrap("serial_widget_t_get_prop
     "number", ["number"]);
 const serial_widget_t_get_prop_flowcontrol = Module.cwrap("serial_widget_t_get_prop_flowcontrol", 
     "number", ["number"]);
-const serial_widget_t_get_prop_istream = Module.cwrap("serial_widget_t_get_prop_istream", 
-    "number", ["number"]);
-const serial_widget_t_get_prop_ostream = Module.cwrap("serial_widget_t_get_prop_ostream", 
-    "number", ["number"]);
-const serial_widget_t_get_prop_iostream = Module.cwrap("serial_widget_t_get_prop_iostream", 
-    "number", ["number"]);
 const serial_widget_t_get_prop_check_interval = Module.cwrap("serial_widget_t_get_prop_check_interval", 
     "number", ["number"]);
 const slide_menu_create = Module.cwrap("slide_menu_create", 
@@ -22717,33 +22711,6 @@ export class TSerialWidget extends TWidget {
 
  set flowcontrol(v : number) {
    this.setFlowcontrol(v);
- }
-
-
-  /**
-   * 输入流。
-   *
-   */
- get istream() : any {
-   return serial_widget_t_get_prop_istream(this.nativeObj);
- }
-
-
-  /**
-   * 输出流。
-   *
-   */
- get ostream() : any {
-   return serial_widget_t_get_prop_ostream(this.nativeObj);
- }
-
-
-  /**
-   * 输入/出流。
-   *
-   */
- get iostream() : any {
-   return serial_widget_t_get_prop_iostream(this.nativeObj);
  }
 
 

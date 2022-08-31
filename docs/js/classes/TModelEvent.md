@@ -56,7 +56,7 @@ model变化事件。
 
 #### Defined in
 
-[awtk.ts:14422](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L14422)
+[awtk.ts:14419](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L14419)
 
 ## Properties
 
@@ -70,7 +70,7 @@ model变化事件。
 
 #### Defined in
 
-[awtk.ts:14421](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L14421)
+[awtk.ts:14418](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L14418)
 
 ## Accessors
 
@@ -86,7 +86,7 @@ model变化事件。
 
 #### Defined in
 
-[awtk.ts:14452](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L14452)
+[awtk.ts:14449](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L14449)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:14461](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L14461)
+[awtk.ts:14458](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L14458)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:14443](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L14443)
+[awtk.ts:14440](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L14440)
 
 ___
 
@@ -138,7 +138,7 @@ TEvent.size
 
 #### Defined in
 
-[awtk.ts:5511](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L5511)
+[awtk.ts:5508](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L5508)
 
 ___
 
@@ -158,7 +158,7 @@ TEvent.target
 
 #### Defined in
 
-[awtk.ts:5529](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L5529)
+[awtk.ts:5526](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L5526)
 
 ___
 
@@ -178,7 +178,7 @@ TEvent.time
 
 #### Defined in
 
-[awtk.ts:5520](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L5520)
+[awtk.ts:5517](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L5517)
 
 ___
 
@@ -198,7 +198,7 @@ TEvent.type
 
 #### Defined in
 
-[awtk.ts:5502](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L5502)
+[awtk.ts:5499](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L5499)
 
 ## Methods
 
@@ -222,7 +222,7 @@ TEvent.type
 
 #### Defined in
 
-[awtk.ts:5493](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L5493)
+[awtk.ts:5490](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L5490)
 
 ___
 
@@ -244,7 +244,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:5466](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L5466)
+[awtk.ts:5463](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L5463)
 
 ___
 
@@ -272,7 +272,7 @@ event对象。
 
 #### Defined in
 
-[awtk.ts:14434](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L14434)
+[awtk.ts:14431](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L14431)
 
 ___
 
@@ -302,7 +302,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:5480](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L5480)
+[awtk.ts:5477](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L5477)
 
 ___
 
@@ -330,4 +330,4 @@ ___
 
 #### Defined in
 
-[awtk.ts:5441](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L5441)
+[awtk.ts:5438](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L5438)

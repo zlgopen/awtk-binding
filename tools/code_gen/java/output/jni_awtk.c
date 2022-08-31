@@ -17296,33 +17296,6 @@ int awtk_TSerialWidget_serial_widget_t_get_prop_flowcontrol(Runtime *runtime, JC
   return 0;
 }
 
-int awtk_TSerialWidget_serial_widget_t_get_prop_istream(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
-
-  serial_widget_t* obj = (serial_widget_t*)jni_ctx_get_object(&actx);
-  jni_ctx_return_int64(&actx, (int64_t)(obj->istream));
-
-  return 0;
-}
-
-int awtk_TSerialWidget_serial_widget_t_get_prop_ostream(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
-
-  serial_widget_t* obj = (serial_widget_t*)jni_ctx_get_object(&actx);
-  jni_ctx_return_int64(&actx, (int64_t)(obj->ostream));
-
-  return 0;
-}
-
-int awtk_TSerialWidget_serial_widget_t_get_prop_iostream(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
-
-  serial_widget_t* obj = (serial_widget_t*)jni_ctx_get_object(&actx);
-  jni_ctx_return_int64(&actx, (int64_t)(obj->iostream));
-
-  return 0;
-}
-
 int awtk_TSerialWidget_serial_widget_t_get_prop_check_interval(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -24112,9 +24085,6 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TSerialWidget",  "serial_widget_t_get_prop_parity",  "(J)I",  awtk_TSerialWidget_serial_widget_t_get_prop_parity},
 {"awtk/TSerialWidget",  "serial_widget_t_get_prop_stopbits",  "(J)I",  awtk_TSerialWidget_serial_widget_t_get_prop_stopbits},
 {"awtk/TSerialWidget",  "serial_widget_t_get_prop_flowcontrol",  "(J)I",  awtk_TSerialWidget_serial_widget_t_get_prop_flowcontrol},
-{"awtk/TSerialWidget",  "serial_widget_t_get_prop_istream",  "(J)J",  awtk_TSerialWidget_serial_widget_t_get_prop_istream},
-{"awtk/TSerialWidget",  "serial_widget_t_get_prop_ostream",  "(J)J",  awtk_TSerialWidget_serial_widget_t_get_prop_ostream},
-{"awtk/TSerialWidget",  "serial_widget_t_get_prop_iostream",  "(J)J",  awtk_TSerialWidget_serial_widget_t_get_prop_iostream},
 {"awtk/TSerialWidget",  "serial_widget_t_get_prop_check_interval",  "(J)I",  awtk_TSerialWidget_serial_widget_t_get_prop_check_interval},
 {"awtk/TSlideMenu",  "slide_menu_create",  "(JIIII)J",  awtk_TSlideMenu_slide_menu_create},
 {"awtk/TSlideMenu",  "slide_menu_cast",  "(J)J",  awtk_TSlideMenu_slide_menu_cast},

@@ -199,7 +199,7 @@
 
 #### Defined in
 
-[awtk.ts:3](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L3)
+[awtk.ts:3](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L3)
 
 ___
 
@@ -219,4 +219,4 @@ ___
 
 #### Defined in
 
-[awtk.ts:2](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L2)
+[awtk.ts:2](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L2)

@@ -18676,33 +18676,6 @@ class TSerialWidget (TWidget):
 
 
   #
-  # 输入流。
-  #
-  #
-  @property
-  def istream(self):
-    return serial_widget_t_get_prop_istream(self.nativeObj)
-
-
-  #
-  # 输出流。
-  #
-  #
-  @property
-  def ostream(self):
-    return serial_widget_t_get_prop_ostream(self.nativeObj)
-
-
-  #
-  # 输入/出流。
-  #
-  #
-  @property
-  def iostream(self):
-    return serial_widget_t_get_prop_iostream(self.nativeObj)
-
-
-  #
   # 轮询时间（单位：ms）。
   #> 仅在不支持用select等待串口数据的嵌入式设备上有效。
   #

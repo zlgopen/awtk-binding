@@ -3495,18 +3495,6 @@
    return ((serial_widget_t*)(this->nativeObj))->flowcontrol;
  }
 
- tk_istream_t* TSerialWidget::GetIstream() const {
-   return ((serial_widget_t*)(this->nativeObj))->istream;
- }
-
- tk_ostream_t* TSerialWidget::GetOstream() const {
-   return ((serial_widget_t*)(this->nativeObj))->ostream;
- }
-
- tk_iostream_t* TSerialWidget::GetIostream() const {
-   return ((serial_widget_t*)(this->nativeObj))->iostream;
- }
-
  uint32_t TSerialWidget::GetCheckInterval() const {
    return ((serial_widget_t*)(this->nativeObj))->check_interval;
  }

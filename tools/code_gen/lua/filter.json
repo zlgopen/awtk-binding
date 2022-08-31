@@ -24164,45 +24164,6 @@
         }
       },
       {
-        "name": "istream",
-        "desc": "输入流。",
-        "type": "tk_istream_t*",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "ostream",
-        "desc": "输出流。",
-        "type": "tk_ostream_t*",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "iostream",
-        "desc": "输入/出流。",
-        "type": "tk_iostream_t*",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
         "name": "check_interval",
         "desc": "轮询时间（单位：ms）。\n> 仅在不支持用select等待串口数据的嵌入式设备上有效。",
         "type": "uint32_t",

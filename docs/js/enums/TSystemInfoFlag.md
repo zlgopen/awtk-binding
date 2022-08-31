@@ -21,7 +21,7 @@ SystemInfo常量定义。
 
 #### Defined in
 
-[awtk.ts:7259](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L7259)
+[awtk.ts:7256](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L7256)
 
 ___
 
@@ -33,4 +33,4 @@ ___
 
 #### Defined in
 
-[awtk.ts:7253](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L7253)
+[awtk.ts:7250](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L7250)

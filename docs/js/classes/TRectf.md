@@ -35,7 +35,7 @@
 
 #### Defined in
 
-[awtk.ts:2384](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L2384)
+[awtk.ts:2381](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L2381)
 
 ## Properties
 
@@ -45,7 +45,7 @@
 
 #### Defined in
 
-[awtk.ts:2383](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L2383)
+[awtk.ts:2380](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L2380)
 
 ## Accessors
 
@@ -61,7 +61,7 @@
 
 #### Defined in
 
-[awtk.ts:2420](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L2420)
+[awtk.ts:2417](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L2417)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:2411](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L2411)
+[awtk.ts:2408](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L2408)
 
 ___
 
@@ -93,7 +93,7 @@ x坐标。
 
 #### Defined in
 
-[awtk.ts:2393](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L2393)
+[awtk.ts:2390](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L2390)
 
 ___
 
@@ -109,4 +109,4 @@ y坐标。
 
 #### Defined in
 
-[awtk.ts:2402](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L2402)
+[awtk.ts:2399](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L2399)

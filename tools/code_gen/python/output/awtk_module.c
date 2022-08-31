@@ -15611,39 +15611,6 @@ pyobject_t wrap_serial_widget_t_get_prop_flowcontrol(pyobject_t self, pyobject_t
   return Py_BuildValue("i", obj->flowcontrol);
 }
 
-pyobject_t wrap_serial_widget_t_get_prop_istream(pyobject_t self, pyobject_t pyargs) {
-  serial_widget_t* obj = NULL;
-
-  if (!PyArg_ParseTuple(pyargs, "O&", &__parse_voidp, &obj)) {
-    PyErr_SetString(PyExc_TypeError, "invalid arguments");
-    return NULL;
-  }
-
-  return PyLong_FromVoidPtr((void*)obj->istream);
-}
-
-pyobject_t wrap_serial_widget_t_get_prop_ostream(pyobject_t self, pyobject_t pyargs) {
-  serial_widget_t* obj = NULL;
-
-  if (!PyArg_ParseTuple(pyargs, "O&", &__parse_voidp, &obj)) {
-    PyErr_SetString(PyExc_TypeError, "invalid arguments");
-    return NULL;
-  }
-
-  return PyLong_FromVoidPtr((void*)obj->ostream);
-}
-
-pyobject_t wrap_serial_widget_t_get_prop_iostream(pyobject_t self, pyobject_t pyargs) {
-  serial_widget_t* obj = NULL;
-
-  if (!PyArg_ParseTuple(pyargs, "O&", &__parse_voidp, &obj)) {
-    PyErr_SetString(PyExc_TypeError, "invalid arguments");
-    return NULL;
-  }
-
-  return PyLong_FromVoidPtr((void*)obj->iostream);
-}
-
 pyobject_t wrap_serial_widget_t_get_prop_check_interval(pyobject_t self, pyobject_t pyargs) {
   serial_widget_t* obj = NULL;
 
@@ -23255,9 +23222,6 @@ static PyMethodDef awtk_methods[] = {
 {"serial_widget_t_get_prop_parity", wrap_serial_widget_t_get_prop_parity, METH_VARARGS, "serial_widget_t_get_prop_parity"},
 {"serial_widget_t_get_prop_stopbits", wrap_serial_widget_t_get_prop_stopbits, METH_VARARGS, "serial_widget_t_get_prop_stopbits"},
 {"serial_widget_t_get_prop_flowcontrol", wrap_serial_widget_t_get_prop_flowcontrol, METH_VARARGS, "serial_widget_t_get_prop_flowcontrol"},
-{"serial_widget_t_get_prop_istream", wrap_serial_widget_t_get_prop_istream, METH_VARARGS, "serial_widget_t_get_prop_istream"},
-{"serial_widget_t_get_prop_ostream", wrap_serial_widget_t_get_prop_ostream, METH_VARARGS, "serial_widget_t_get_prop_ostream"},
-{"serial_widget_t_get_prop_iostream", wrap_serial_widget_t_get_prop_iostream, METH_VARARGS, "serial_widget_t_get_prop_iostream"},
 {"serial_widget_t_get_prop_check_interval", wrap_serial_widget_t_get_prop_check_interval, METH_VARARGS, "serial_widget_t_get_prop_check_interval"},
 {"slide_menu_create", wrap_slide_menu_create, METH_VARARGS, "slide_menu_create"},
 {"slide_menu_cast", wrap_slide_menu_cast, METH_VARARGS, "slide_menu_cast"},

@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[awtk.ts:12389](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L12389)
+[awtk.ts:12386](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12386)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:12383](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L12383)
+[awtk.ts:12380](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12380)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:12341](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L12341)
+[awtk.ts:12338](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12338)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:12347](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L12347)
+[awtk.ts:12344](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12344)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:12335](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L12335)
+[awtk.ts:12332](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12332)
 
 ___
 
@@ -89,7 +89,7 @@ JS等脚本资源。
 
 #### Defined in
 
-[awtk.ts:12377](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L12377)
+[awtk.ts:12374](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12374)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:12371](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L12371)
+[awtk.ts:12368](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12368)
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:12353](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L12353)
+[awtk.ts:12350](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12350)
 
 ___
 
@@ -125,7 +125,7 @@ UI数据资源。
 
 #### Defined in
 
-[awtk.ts:12359](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L12359)
+[awtk.ts:12356](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12356)
 
 ___
 
@@ -137,4 +137,4 @@ XML数据资源。
 
 #### Defined in
 
-[awtk.ts:12365](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L12365)
+[awtk.ts:12362](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12362)

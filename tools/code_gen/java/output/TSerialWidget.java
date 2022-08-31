@@ -216,33 +216,6 @@ public class TSerialWidget extends TWidget {
 
 
   /**
-   * 输入流。
-   *
-   */
- public long getIstream() {
-   return serial_widget_t_get_prop_istream(this.nativeObj);
- }
-
-
-  /**
-   * 输出流。
-   *
-   */
- public long getOstream() {
-   return serial_widget_t_get_prop_ostream(this.nativeObj);
- }
-
-
-  /**
-   * 输入/出流。
-   *
-   */
- public long getIostream() {
-   return serial_widget_t_get_prop_iostream(this.nativeObj);
- }
-
-
-  /**
    * 轮询时间（单位：ms）。
    *> 仅在不支持用select等待串口数据的嵌入式设备上有效。
    *
@@ -266,8 +239,5 @@ static private native int serial_widget_t_get_prop_bytesize(long nativeObj);
 static private native int serial_widget_t_get_prop_parity(long nativeObj);
 static private native int serial_widget_t_get_prop_stopbits(long nativeObj);
 static private native int serial_widget_t_get_prop_flowcontrol(long nativeObj);
-static private native long serial_widget_t_get_prop_istream(long nativeObj);
-static private native long serial_widget_t_get_prop_ostream(long nativeObj);
-static private native long serial_widget_t_get_prop_iostream(long nativeObj);
 static private native int serial_widget_t_get_prop_check_interval(long nativeObj);
 };

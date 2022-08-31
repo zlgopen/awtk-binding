@@ -16384,15 +16384,6 @@ static int wrap_serial_widget_t_get_prop(lua_State* L) {
 
   return 1;
   }
-  else if(strcmp(name, "istream") == 0) {
-    return tk_newuserdata(L, (void*)obj->istream, "", "awtk.tk_istream_t");
-  }
-  else if(strcmp(name, "ostream") == 0) {
-    return tk_newuserdata(L, (void*)obj->ostream, "", "awtk.tk_ostream_t");
-  }
-  else if(strcmp(name, "iostream") == 0) {
-    return tk_newuserdata(L, (void*)obj->iostream, "", "awtk.tk_iostream_t");
-  }
   else if(strcmp(name, "check_interval") == 0) {
     lua_pushinteger(L,(lua_Integer)(obj->check_interval));
 

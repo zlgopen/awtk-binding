@@ -10650,24 +10650,6 @@ public:
   uint32_t GetFlowcontrol() const;
 
   /**
-   * 输入流。
-   *
-   */
-  tk_istream_t* GetIstream() const;
-
-  /**
-   * 输出流。
-   *
-   */
-  tk_ostream_t* GetOstream() const;
-
-  /**
-   * 输入/出流。
-   *
-   */
-  tk_iostream_t* GetIostream() const;
-
-  /**
    * 轮询时间（单位：ms）。
    *> 仅在不支持用select等待串口数据的嵌入式设备上有效。
    *

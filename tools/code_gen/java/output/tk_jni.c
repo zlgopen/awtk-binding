@@ -11601,24 +11601,6 @@ JNIEXPORT jint JNICALL Java_awtk_TSerialWidget_serial_1widget_1t_1get_1prop_1flo
   return (jint)(obj->flowcontrol);
 }
 
-JNIEXPORT jlong JNICALL Java_awtk_TSerialWidget_serial_1widget_1t_1get_1prop_1istream(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  serial_widget_t* obj = (serial_widget_t*)jobj;
-
-  return (jlong)(obj->istream);
-}
-
-JNIEXPORT jlong JNICALL Java_awtk_TSerialWidget_serial_1widget_1t_1get_1prop_1ostream(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  serial_widget_t* obj = (serial_widget_t*)jobj;
-
-  return (jlong)(obj->ostream);
-}
-
-JNIEXPORT jlong JNICALL Java_awtk_TSerialWidget_serial_1widget_1t_1get_1prop_1iostream(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  serial_widget_t* obj = (serial_widget_t*)jobj;
-
-  return (jlong)(obj->iostream);
-}
-
 JNIEXPORT jint JNICALL Java_awtk_TSerialWidget_serial_1widget_1t_1get_1prop_1check_1interval(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
   serial_widget_t* obj = (serial_widget_t*)jobj;
 

@@ -1783,9 +1783,6 @@ declare function serial_widget_t_get_prop_bytesize(nativeObj : any) : number;
 declare function serial_widget_t_get_prop_parity(nativeObj : any) : number;
 declare function serial_widget_t_get_prop_stopbits(nativeObj : any) : number;
 declare function serial_widget_t_get_prop_flowcontrol(nativeObj : any) : number;
-declare function serial_widget_t_get_prop_istream(nativeObj : any) : any;
-declare function serial_widget_t_get_prop_ostream(nativeObj : any) : any;
-declare function serial_widget_t_get_prop_iostream(nativeObj : any) : any;
 declare function serial_widget_t_get_prop_check_interval(nativeObj : any) : number;
 declare function slide_menu_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function slide_menu_cast(widget : any) : any;
@@ -20473,33 +20470,6 @@ export class TSerialWidget extends TWidget {
 
  set flowcontrol(v : number) {
    this.setFlowcontrol(v);
- }
-
-
-  /**
-   * 输入流。
-   *
-   */
- get istream() : any {
-   return serial_widget_t_get_prop_istream(this.nativeObj);
- }
-
-
-  /**
-   * 输出流。
-   *
-   */
- get ostream() : any {
-   return serial_widget_t_get_prop_ostream(this.nativeObj);
- }
-
-
-  /**
-   * 输入/出流。
-   *
-   */
- get iostream() : any {
-   return serial_widget_t_get_prop_iostream(this.nativeObj);
  }
 
 

@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[awtk.ts:4694](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L4694)
+[awtk.ts:4691](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L4691)
 
 ## Properties
 
@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[awtk.ts:4693](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L4693)
+[awtk.ts:4690](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L4690)
 
 ## Methods
 
@@ -61,7 +61,7 @@
 
 #### Defined in
 
-[awtk.ts:4717](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L4717)
+[awtk.ts:4714](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L4714)
 
 ___
 
@@ -85,4 +85,4 @@ ___
 
 #### Defined in
 
-[awtk.ts:4706](https://github.com/zlgopen/awtk-binding/blob/25012c6/tools/code_gen/js/output/awtk.ts#L4706)
+[awtk.ts:4703](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L4703)
