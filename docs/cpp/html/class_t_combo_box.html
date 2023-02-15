@@ -101,6 +101,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a1b89e7c3d2905fd4536202dca5f0b83d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af51fbcbe90462444e7a5ef9925946edc"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#af51fbcbe90462444e7a5ef9925946edc">SetSelectedIndex</a> (uint32_t index)</td></tr>
 <tr class="separator:af51fbcbe90462444e7a5ef9925946edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab75b4e80180a100bd4578df429b83932"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#ab75b4e80180a100bd4578df429b83932">SetSelectedIndexByText</a> (const char *text)</td></tr>
+<tr class="separator:ab75b4e80180a100bd4578df429b83932"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24b9f2ab3ca04762bcd40898cef73260"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#a24b9f2ab3ca04762bcd40898cef73260">SetLocalizeOptions</a> (bool localize_options)</td></tr>
 <tr class="separator:a24b9f2ab3ca04762bcd40898cef73260"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0597efb9e21eeb0d956af9c49da9da85"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#a0597efb9e21eeb0d956af9c49da9da85">SetValue</a> (int32_t value)</td></tr>
@@ -119,6 +121,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ab60748113066984de4b2d0f0c9776130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35132945ed744824e474ae06bf6adf98"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#a35132945ed744824e474ae06bf6adf98">GetTextValue</a> ()</td></tr>
 <tr class="separator:a35132945ed744824e474ae06bf6adf98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec27c7cf85834b600cf18099480c3f13"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#aec27c7cf85834b600cf18099480c3f13">GetTextOfSelected</a> ()</td></tr>
+<tr class="separator:aec27c7cf85834b600cf18099480c3f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff202978e9c9b804f3f2d79ae9908525"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#aff202978e9c9b804f3f2d79ae9908525">GetOpenWindow</a> () const</td></tr>
 <tr class="separator:aff202978e9c9b804f3f2d79ae9908525"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2c263c1368a370cd26550b8079204af"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#ab2c263c1368a370cd26550b8079204af">GetThemeOfPopup</a> () const</td></tr>
@@ -553,6 +557,25 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
 
 </div>
 </div>
+<a id="aec27c7cf85834b600cf18099480c3f13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec27c7cf85834b600cf18099480c3f13">&#9670;&nbsp;</a></span>GetTextOfSelected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * TComboBox::GetTextOfSelected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取combo_box当前选中项目的文本(原生非翻译的文本)。</p>
+<dl class="section return"><dt>返回</dt><dd>返回文本。 </dd></dl>
+
+</div>
+</div>
 <a id="a35132945ed744824e474ae06bf6adf98"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a35132945ed744824e474ae06bf6adf98">&#9670;&nbsp;</a></span>GetTextValue()</h2>
 
@@ -567,7 +590,7 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
         </tr>
       </table>
 </div><div class="memdoc">
-<p>获取combo_box的文本。</p>
+<p>获取combo_box的文本(可能是翻译后的文本)。</p>
 <dl class="section return"><dt>返回</dt><dd>返回文本。 </dd></dl>
 
 </div>
@@ -821,6 +844,32 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">index</td><td>选项的索引。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="ab75b4e80180a100bd4578df429b83932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab75b4e80180a100bd4578df429b83932">&#9670;&nbsp;</a></span>SetSelectedIndexByText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TComboBox::SetSelectedIndexByText </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>根据文本设置当前选中的选项。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>原生(非翻译的文本)。</td></tr>
   </table>
   </dd>
 </dl>

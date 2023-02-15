@@ -654,6 +654,13 @@ public enum TWidgetProp {
   LOOP (WIDGET_PROP_LOOP()),
   
   /**
+   * 是否正在运行(播放)。
+   *
+   */
+ 
+  RUNNING (WIDGET_PROP_RUNNING()),
+  
+  /**
    * 是否启用自动更正功能。
    *
    */
@@ -848,6 +855,13 @@ public enum TWidgetProp {
    */
  
   ENABLE_LONG_PRESS (WIDGET_PROP_ENABLE_LONG_PRESS()),
+  
+  /**
+   * 是否启用预览。
+   *
+   */
+ 
+  ENABLE_PREVIEW (WIDGET_PROP_ENABLE_PREVIEW()),
   
   /**
    * 是否启用点击穿透。
@@ -1324,6 +1338,7 @@ public enum TWidgetProp {
   static private native String WIDGET_PROP_ALIGN_H();
   static private native String WIDGET_PROP_AUTO_PLAY();
   static private native String WIDGET_PROP_LOOP();
+  static private native String WIDGET_PROP_RUNNING();
   static private native String WIDGET_PROP_AUTO_FIX();
   static private native String WIDGET_PROP_SELECT_NONE_WHEN_FOCUSED();
   static private native String WIDGET_PROP_OPEN_IM_WHEN_FOCUSED();
@@ -1352,6 +1367,7 @@ public enum TWidgetProp {
   static private native String WIDGET_PROP_REPEAT();
   static private native String WIDGET_PROP_LONG_PRESS_TIME();
   static private native String WIDGET_PROP_ENABLE_LONG_PRESS();
+  static private native String WIDGET_PROP_ENABLE_PREVIEW();
   static private native String WIDGET_PROP_CLICK_THROUGH();
   static private native String WIDGET_PROP_ANIMATABLE();
   static private native String WIDGET_PROP_AUTO_HIDE();

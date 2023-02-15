@@ -306,6 +306,7 @@ declare function EVT_TIMER():any;
 declare function EVT_DATA():any;
 declare function EVT_CONNECT():any;
 declare function EVT_MODEL_CHANGE():any;
+declare function EVT_SYSTEM():any;
 declare function EVT_REQ_START():any;
 declare function EVT_USER_START():any;
 declare function EVT_NONE():any;
@@ -330,9 +331,6 @@ declare function event_t_get_prop_type(nativeObj : any) : number;
 declare function event_t_get_prop_size(nativeObj : any) : number;
 declare function event_t_get_prop_time(nativeObj : any) : number;
 declare function event_t_get_prop_target(nativeObj : any) : any;
-declare function font_manager_unload_font(fm : any, name : string, size : number) : TRet;
-declare function font_manager_shrink_cache(fm : any, cache_size : number) : TRet;
-declare function font_manager_unload_all(fm : any) : TRet;
 declare function GLYPH_FMT_ALPHA():any;
 declare function GLYPH_FMT_MONO():any;
 declare function GLYPH_FMT_RGBA():any;
@@ -500,6 +498,23 @@ declare function TK_KEY_MENU():any;
 declare function TK_KEY_COMMAND():any;
 declare function TK_KEY_BACK():any;
 declare function TK_KEY_CANCEL():any;
+declare function TK_KEY_KP_DIVIDE():any;
+declare function TK_KEY_KP_MULTIPLY():any;
+declare function TK_KEY_KP_MINUS():any;
+declare function TK_KEY_KP_PLUS():any;
+declare function TK_KEY_KP_ENTER():any;
+declare function TK_KEY_KP_1():any;
+declare function TK_KEY_KP_2():any;
+declare function TK_KEY_KP_3():any;
+declare function TK_KEY_KP_4():any;
+declare function TK_KEY_KP_5():any;
+declare function TK_KEY_KP_6():any;
+declare function TK_KEY_KP_7():any;
+declare function TK_KEY_KP_8():any;
+declare function TK_KEY_KP_9():any;
+declare function TK_KEY_KP_0():any;
+declare function TK_KEY_KP_PERIOD():any;
+declare function TK_KEY_NUMLOCKCLEAR():any;
 declare function TK_KEY_WHEEL():any;
 declare function locale_info() : any;
 declare function locale_info_tr(locale_info : any, text : string) : string;
@@ -760,6 +775,7 @@ declare function WIDGET_PROP_ALIGN_V():any;
 declare function WIDGET_PROP_ALIGN_H():any;
 declare function WIDGET_PROP_AUTO_PLAY():any;
 declare function WIDGET_PROP_LOOP():any;
+declare function WIDGET_PROP_RUNNING():any;
 declare function WIDGET_PROP_AUTO_FIX():any;
 declare function WIDGET_PROP_SELECT_NONE_WHEN_FOCUSED():any;
 declare function WIDGET_PROP_OPEN_IM_WHEN_FOCUSED():any;
@@ -788,6 +804,7 @@ declare function WIDGET_PROP_YSLIDABLE():any;
 declare function WIDGET_PROP_REPEAT():any;
 declare function WIDGET_PROP_LONG_PRESS_TIME():any;
 declare function WIDGET_PROP_ENABLE_LONG_PRESS():any;
+declare function WIDGET_PROP_ENABLE_PREVIEW():any;
 declare function WIDGET_PROP_CLICK_THROUGH():any;
 declare function WIDGET_PROP_ANIMATABLE():any;
 declare function WIDGET_PROP_AUTO_HIDE():any;
@@ -955,6 +972,7 @@ declare function widget_move(widget : any, x : number, y : number) : TRet;
 declare function widget_move_to_center(widget : any) : TRet;
 declare function widget_resize(widget : any, w : number, h : number) : TRet;
 declare function widget_move_resize(widget : any, x : number, y : number, w : number, h : number) : TRet;
+declare function widget_move_resize_ex(widget : any, x : number, y : number, w : number, h : number, update_layout : boolean) : TRet;
 declare function widget_get_value(widget : any) : number;
 declare function widget_set_value(widget : any, value : any) : TRet;
 declare function widget_add_value(widget : any, delta : number) : TRet;
@@ -1125,12 +1143,13 @@ declare function ASSET_TYPE_FLOW():any;
 declare function ASSET_TYPE_DATA():any;
 declare function asset_info_get_type(info : any) : number;
 declare function asset_info_get_name(info : any) : string;
+declare function asset_info_is_in_rom(info : any) : boolean;
+declare function asset_info_set_is_in_rom(info : any, is_in_rom : boolean) : boolean;
 declare function asset_info_t_get_prop_type(nativeObj : any) : number;
 declare function asset_info_t_get_prop_subtype(nativeObj : any) : number;
-declare function asset_info_t_get_prop_is_in_rom(nativeObj : any) : number;
+declare function asset_info_t_get_prop_flags(nativeObj : any) : number;
 declare function asset_info_t_get_prop_size(nativeObj : any) : number;
 declare function asset_info_t_get_prop_refcount(nativeObj : any) : number;
-declare function asset_info_t_get_prop_name(nativeObj : any) : string;
 declare function color_create(r : number, b : number, g : number, a : number) : any;
 declare function color_from_str(c : any, str : string) : any;
 declare function color_r(c : any) : number;
@@ -1408,6 +1427,7 @@ declare function key_event_t_get_prop_rshift(nativeObj : any) : boolean;
 declare function key_event_t_get_prop_cmd(nativeObj : any) : boolean;
 declare function key_event_t_get_prop_menu(nativeObj : any) : boolean;
 declare function key_event_t_get_prop_capslock(nativeObj : any) : boolean;
+declare function key_event_t_get_prop_numlock(nativeObj : any) : boolean;
 declare function paint_event_cast(event : any) : any;
 declare function paint_event_t_get_prop_c(nativeObj : any) : any;
 declare function window_event_cast(event : any) : any;
@@ -1419,6 +1439,11 @@ declare function multi_gesture_event_t_get_prop_rotation(nativeObj : any) : numb
 declare function multi_gesture_event_t_get_prop_distance(nativeObj : any) : number;
 declare function theme_change_event_cast(event : any) : any;
 declare function theme_change_event_t_get_prop_name(nativeObj : any) : string;
+declare function system_event_cast(event : any) : any;
+declare function system_event_t_get_prop_sdl_event(nativeObj : any) : any;
+declare function font_manager_unload_font(fm : any, name : string, size : number) : TRet;
+declare function font_manager_shrink_cache(fm : any, cache_size : number) : TRet;
+declare function font_manager_unload_all(fm : any) : TRet;
 declare function image_base_set_image(widget : any, name : string) : TRet;
 declare function image_base_set_rotation(widget : any, rotation : number) : TRet;
 declare function image_base_set_scale(widget : any, scale_x : number, scale_y : number) : TRet;
@@ -1519,6 +1544,8 @@ declare function file_browser_view_set_ignore_hidden_files(widget : any, ignore_
 declare function file_browser_view_set_sort_ascending(widget : any, sort_ascending : boolean) : TRet;
 declare function file_browser_view_set_show_check_button(widget : any, show_check_button : boolean) : TRet;
 declare function file_browser_view_set_sort_by(widget : any, sort_by : string) : TRet;
+declare function file_browser_view_set_odd_item_style(widget : any, odd_item_style : string) : TRet;
+declare function file_browser_view_set_even_item_style(widget : any, even_item_style : string) : TRet;
 declare function file_browser_view_get_cwd(widget : any) : string;
 declare function file_browser_view_create_dir(widget : any, name : string) : TRet;
 declare function file_browser_view_create_file(widget : any, name : string, data : string, size : number) : TRet;
@@ -1529,6 +1556,8 @@ declare function file_browser_view_t_get_prop_ignore_hidden_files(nativeObj : an
 declare function file_browser_view_t_get_prop_sort_ascending(nativeObj : any) : boolean;
 declare function file_browser_view_t_get_prop_show_check_button(nativeObj : any) : boolean;
 declare function file_browser_view_t_get_prop_sort_by(nativeObj : any) : string;
+declare function file_browser_view_t_get_prop_odd_item_style(nativeObj : any) : string;
+declare function file_browser_view_t_get_prop_even_item_style(nativeObj : any) : string;
 declare function file_chooser_create() : any;
 declare function file_chooser_set_init_dir(chooser : any, init_dir : string) : TRet;
 declare function file_chooser_set_top_dir(chooser : any, top_dir : string) : TRet;
@@ -1609,6 +1638,7 @@ declare function candidates_t_get_prop_pre(nativeObj : any) : boolean;
 declare function candidates_t_get_prop_select_by_num(nativeObj : any) : boolean;
 declare function candidates_t_get_prop_auto_hide(nativeObj : any) : boolean;
 declare function candidates_t_get_prop_button_style(nativeObj : any) : string;
+declare function candidates_t_get_prop_enable_preview(nativeObj : any) : boolean;
 declare function lang_indicator_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function lang_indicator_set_image(widget : any, image : string) : TRet;
 declare function lang_indicator_cast(widget : any) : any;
@@ -1691,6 +1721,7 @@ declare function hscroll_label_set_only_parent_focus(widget : any, only_parent_f
 declare function hscroll_label_set_loop(widget : any, loop : boolean) : TRet;
 declare function hscroll_label_set_yoyo(widget : any, yoyo : boolean) : TRet;
 declare function hscroll_label_set_ellipses(widget : any, ellipses : boolean) : TRet;
+declare function hscroll_label_set_stop_at_begin(widget : any, stop_at_begin : boolean) : TRet;
 declare function hscroll_label_set_xoffset(widget : any, xoffset : number) : TRet;
 declare function hscroll_label_start(widget : any) : TRet;
 declare function hscroll_label_stop(widget : any) : TRet;
@@ -1705,6 +1736,7 @@ declare function hscroll_label_t_get_prop_duration(nativeObj : any) : number;
 declare function hscroll_label_t_get_prop_speed(nativeObj : any) : number;
 declare function hscroll_label_t_get_prop_xoffset(nativeObj : any) : number;
 declare function hscroll_label_t_get_prop_text_w(nativeObj : any) : number;
+declare function hscroll_label_t_get_prop_stop_at_begin(nativeObj : any) : boolean;
 declare function list_item_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function list_item_cast(widget : any) : any;
 declare function list_view_h_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -1737,6 +1769,7 @@ declare function scroll_bar_set_value_only(widget : any, value : any) : TRet;
 declare function scroll_bar_set_auto_hide(widget : any, auto_hide : boolean) : TRet;
 declare function scroll_bar_is_mobile(widget : any) : boolean;
 declare function scroll_bar_set_animator_time(widget : any, animator_time : number) : TRet;
+declare function scroll_bar_hide_by_opacity_animation(widget : any, duration : number, delay : number) : TRet;
 declare function scroll_bar_t_get_prop_virtual_size(nativeObj : any) : number;
 declare function scroll_bar_t_get_prop_value(nativeObj : any) : number;
 declare function scroll_bar_t_get_prop_row(nativeObj : any) : number;
@@ -1755,6 +1788,7 @@ declare function scroll_view_set_recursive(widget : any, recursive : boolean) : 
 declare function scroll_view_set_recursive_only(widget : any, recursive : boolean) : TRet;
 declare function scroll_view_set_offset(widget : any, xoffset : number, yoffset : number) : TRet;
 declare function scroll_view_set_speed_scale(widget : any, xspeed_scale : number, yspeed_scale : number) : TRet;
+declare function scroll_view_set_slide_limit_ratio(widget : any, slide_limit_ratio : number) : TRet;
 declare function scroll_view_scroll_to(widget : any, xoffset_end : number, yoffset_end : number, duration : number) : TRet;
 declare function scroll_view_scroll_delta_to(widget : any, xoffset_delta : number, yoffset_delta : number, duration : number) : TRet;
 declare function scroll_view_t_get_prop_virtual_w(nativeObj : any) : number;
@@ -1768,6 +1802,7 @@ declare function scroll_view_t_get_prop_yslidable(nativeObj : any) : boolean;
 declare function scroll_view_t_get_prop_snap_to_page(nativeObj : any) : boolean;
 declare function scroll_view_t_get_prop_move_to_page(nativeObj : any) : boolean;
 declare function scroll_view_t_get_prop_recursive(nativeObj : any) : boolean;
+declare function scroll_view_t_get_prop_slide_limit_ratio(nativeObj : any) : number;
 declare function serial_widget_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function serial_widget_cast(widget : any) : any;
 declare function serial_widget_set_baudrate(widget : any, baudrate : number) : TRet;
@@ -1789,9 +1824,17 @@ declare function slide_menu_cast(widget : any) : any;
 declare function slide_menu_set_value(widget : any, value : any) : TRet;
 declare function slide_menu_set_align_v(widget : any, align_v : TAlignV) : TRet;
 declare function slide_menu_set_min_scale(widget : any, min_scale : number) : TRet;
+declare function slide_menu_set_spacer(widget : any, spacer : number) : TRet;
+declare function slide_menu_set_menu_w(widget : any, menu_w : string) : TRet;
+declare function slide_menu_set_clip(widget : any, clip : boolean) : TRet;
+declare function slide_menu_scroll_to_prev(widget : any) : TRet;
+declare function slide_menu_scroll_to_next(widget : any) : TRet;
 declare function slide_menu_t_get_prop_value(nativeObj : any) : number;
 declare function slide_menu_t_get_prop_align_v(nativeObj : any) : TAlignV;
 declare function slide_menu_t_get_prop_min_scale(nativeObj : any) : number;
+declare function slide_menu_t_get_prop_spacer(nativeObj : any) : number;
+declare function slide_menu_t_get_prop_menu_w(nativeObj : any) : string;
+declare function slide_menu_t_get_prop_clip(nativeObj : any) : boolean;
 declare function slide_indicator_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function slide_indicator_create_linear(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function slide_indicator_create_arc(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -1858,6 +1901,8 @@ declare function text_selector_set_loop_options(widget : any, loop_options : boo
 declare function text_selector_set_yspeed_scale(widget : any, yspeed_scale : number) : TRet;
 declare function text_selector_set_animating_time(widget : any, animating_time : number) : TRet;
 declare function text_selector_set_enable_value_animator(widget : any, enable_value_animator : boolean) : TRet;
+declare function text_selector_set_mask_easing(widget : any, mask_easing : TEasingType) : TRet;
+declare function text_selector_set_mask_area_scale(widget : any, mask_area_scale : number) : TRet;
 declare function text_selector_t_get_prop_visible_nr(nativeObj : any) : number;
 declare function text_selector_t_get_prop_selected_index(nativeObj : any) : number;
 declare function text_selector_t_get_prop_options(nativeObj : any) : string;
@@ -1866,6 +1911,8 @@ declare function text_selector_t_get_prop_animating_time(nativeObj : any) : numb
 declare function text_selector_t_get_prop_localize_options(nativeObj : any) : boolean;
 declare function text_selector_t_get_prop_loop_options(nativeObj : any) : boolean;
 declare function text_selector_t_get_prop_enable_value_animator(nativeObj : any) : boolean;
+declare function text_selector_t_get_prop_mask_easing(nativeObj : any) : TEasingType;
+declare function text_selector_t_get_prop_mask_area_scale(nativeObj : any) : number;
 declare function time_clock_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function time_clock_cast(widget : any) : any;
 declare function time_clock_set_hour(widget : any, hour : number) : TRet;
@@ -1927,8 +1974,10 @@ declare function button_cast(widget : any) : any;
 declare function button_set_repeat(widget : any, repeat : number) : TRet;
 declare function button_set_long_press_time(widget : any, long_press_time : number) : TRet;
 declare function button_set_enable_long_press(widget : any, enable_long_press : boolean) : TRet;
+declare function button_set_enable_preview(widget : any, enable_preview : boolean) : TRet;
 declare function button_t_get_prop_repeat(nativeObj : any) : number;
 declare function button_t_get_prop_enable_long_press(nativeObj : any) : boolean;
+declare function button_t_get_prop_enable_preview(nativeObj : any) : boolean;
 declare function button_t_get_prop_long_press_time(nativeObj : any) : number;
 declare function button_t_get_prop_pressed(nativeObj : any) : boolean;
 declare function check_button_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -2037,8 +2086,10 @@ declare function label_t_get_prop_max_w(nativeObj : any) : number;
 declare function pages_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function pages_cast(widget : any) : any;
 declare function pages_set_active(widget : any, index : number) : TRet;
+declare function pages_set_auto_focused(widget : any, auto_focused : boolean) : TRet;
 declare function pages_set_active_by_name(widget : any, name : string) : TRet;
 declare function pages_t_get_prop_active(nativeObj : any) : number;
+declare function pages_t_get_prop_auto_focused(nativeObj : any) : boolean;
 declare function progress_bar_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function progress_bar_cast(widget : any) : any;
 declare function progress_bar_set_value(widget : any, value : any) : TRet;
@@ -2182,6 +2233,7 @@ declare function combo_box_set_theme_of_popup(widget : any, theme_of_popup : str
 declare function combo_box_reset_options(widget : any) : TRet;
 declare function combo_box_count_options(widget : any) : number;
 declare function combo_box_set_selected_index(widget : any, index : number) : TRet;
+declare function combo_box_set_selected_index_by_text(widget : any, text : string) : TRet;
 declare function combo_box_set_localize_options(widget : any, localize_options : boolean) : TRet;
 declare function combo_box_set_value(widget : any, value : any) : TRet;
 declare function combo_box_set_item_height(widget : any, item_height : number) : TRet;
@@ -2191,6 +2243,7 @@ declare function combo_box_set_options(widget : any, options : string) : TRet;
 declare function combo_box_get_value(widget : any) : number;
 declare function combo_box_has_option_text(widget : any, text : string) : boolean;
 declare function combo_box_get_text(widget : any) : string;
+declare function combo_box_get_text_of_selected(widget : any) : string;
 declare function combo_box_t_get_prop_open_window(nativeObj : any) : string;
 declare function combo_box_t_get_prop_theme_of_popup(nativeObj : any) : string;
 declare function combo_box_t_get_prop_selected_index(nativeObj : any) : number;
@@ -2220,8 +2273,10 @@ declare function popup_t_get_prop_close_when_timeout(nativeObj : any) : number;
 declare function spin_box_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function spin_box_cast(widget : any) : any;
 declare function spin_box_set_easy_touch_mode(widget : any, easy_touch_mode : boolean) : TRet;
+declare function spin_box_set_button_position(widget : any, button_position : string) : TRet;
 declare function spin_set_repeat(widget : any, repeat : number) : TRet;
 declare function spin_box_t_get_prop_easy_touch_mode(nativeObj : any) : boolean;
+declare function spin_box_t_get_prop_button_position(nativeObj : any) : string;
 declare function system_bar_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function system_bar_cast(widget : any) : any;
 declare function combo_box_ex_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -5326,6 +5381,12 @@ export enum TEventType {
  MODEL_CHANGE = EVT_MODEL_CHANGE(),
 
   /**
+   * SDL系统事件(system_event_t)。
+   *
+   */
+ SYSTEM = EVT_SYSTEM(),
+
+  /**
    * event queue其它请求编号起始值。
    *
    */
@@ -5525,54 +5586,6 @@ export class TEvent {
    */
  get target() : any {
    return event_t_get_prop_target(this.nativeObj);
- }
-
-};
-/**
- * 字体管理器，负责字体的加载和缓存管理。
- *(如果使用nanovg，字体由nanovg内部管理)
- *
- */
-export class TFontManager { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   this.nativeObj = nativeObj;
- }
-
-
-  /**
-   * 卸载指定的字体。
-   * 
-   * @param name 字体名，为NULL时使用缺省字体。
-   * @param size 字体的大小(矢量字体指定为0即可)。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- unloadFont(name : string, size : number) : TRet  {
-    return font_manager_unload_font(this != null ? (this.nativeObj || this) : null, name, size);
- }
-
-
-  /**
-   * 清除最久没有被使用的缓冲字模。
-   * 
-   * @param cache_size 每种字体保留缓存字模的个数。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- shrinkCache(cache_size : number) : TRet  {
-    return font_manager_shrink_cache(this != null ? (this.nativeObj || this) : null, cache_size);
- }
-
-
-  /**
-   * 卸载全部字体。
-   * 
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- unloadAll() : TRet  {
-    return font_manager_unload_all(this != null ? (this.nativeObj || this) : null);
  }
 
 };
@@ -6738,6 +6751,108 @@ export enum TKeyCode {
    *
    */
  KEY_CANCEL = TK_KEY_CANCEL(),
+
+  /**
+   * TK_KEY_KP_DIVIDE
+   *
+   */
+ KEY_KP_DIVIDE = TK_KEY_KP_DIVIDE(),
+
+  /**
+   * TK_KEY_KP_MULTIPLY
+   *
+   */
+ KEY_KP_MULTIPLY = TK_KEY_KP_MULTIPLY(),
+
+  /**
+   * TK_KEY_KP_MINUS
+   *
+   */
+ KEY_KP_MINUS = TK_KEY_KP_MINUS(),
+
+  /**
+   * TK_KEY_KP_PLUS
+   *
+   */
+ KEY_KP_PLUS = TK_KEY_KP_PLUS(),
+
+  /**
+   * TK_KEY_KP_ENTER
+   *
+   */
+ KEY_KP_ENTER = TK_KEY_KP_ENTER(),
+
+  /**
+   * TK_KEY_KP_1
+   *
+   */
+ KEY_KP_1 = TK_KEY_KP_1(),
+
+  /**
+   * TK_KEY_KP_2
+   *
+   */
+ KEY_KP_2 = TK_KEY_KP_2(),
+
+  /**
+   * TK_KEY_KP_3
+   *
+   */
+ KEY_KP_3 = TK_KEY_KP_3(),
+
+  /**
+   * TK_KEY_KP_4
+   *
+   */
+ KEY_KP_4 = TK_KEY_KP_4(),
+
+  /**
+   * TK_KEY_KP_5
+   *
+   */
+ KEY_KP_5 = TK_KEY_KP_5(),
+
+  /**
+   * TK_KEY_KP_6
+   *
+   */
+ KEY_KP_6 = TK_KEY_KP_6(),
+
+  /**
+   * TK_KEY_KP_7
+   *
+   */
+ KEY_KP_7 = TK_KEY_KP_7(),
+
+  /**
+   * TK_KEY_KP_8
+   *
+   */
+ KEY_KP_8 = TK_KEY_KP_8(),
+
+  /**
+   * TK_KEY_KP_9
+   *
+   */
+ KEY_KP_9 = TK_KEY_KP_9(),
+
+  /**
+   * TK_KEY_KP_0
+   *
+   */
+ KEY_KP_0 = TK_KEY_KP_0(),
+
+  /**
+   * TK_KEY_KP_PERIOD
+   *
+   */
+ KEY_KP_PERIOD = TK_KEY_KP_PERIOD(),
+
+  /**
+   * TK_KEY_NUMLOCKCLEAR
+   *
+   */
+ KEY_NUMLOCKCLEAR = TK_KEY_NUMLOCKCLEAR(),
 
   /**
    * TK_KEY_WHEEL
@@ -9062,6 +9177,12 @@ export enum TWidgetProp {
  LOOP = WIDGET_PROP_LOOP(),
 
   /**
+   * 是否正在运行(播放)。
+   *
+   */
+ RUNNING = WIDGET_PROP_RUNNING(),
+
+  /**
    * 是否启用自动更正功能。
    *
    */
@@ -9228,6 +9349,12 @@ export enum TWidgetProp {
    *
    */
  ENABLE_LONG_PRESS = WIDGET_PROP_ENABLE_LONG_PRESS(),
+
+  /**
+   * 是否启用预览。
+   *
+   */
+ ENABLE_PREVIEW = WIDGET_PROP_ENABLE_PREVIEW(),
 
   /**
    * 是否启用点击穿透。
@@ -10372,6 +10499,22 @@ export class TWidget {
    */
  moveResize(x : number, y : number, w : number, h : number) : TRet  {
     return widget_move_resize(this != null ? (this.nativeObj || this) : null, x, y, w, h);
+ }
+
+
+  /**
+   * 移动控件并调整控件的大小。
+   * 
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   * @param update_layout 是否更新布局
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ moveResizeEx(x : number, y : number, w : number, h : number, update_layout : boolean) : TRet  {
+    return widget_move_resize_ex(this != null ? (this.nativeObj || this) : null, x, y, w, h, update_layout);
  }
 
 
@@ -12421,6 +12564,29 @@ export class TAssetInfo {
 
 
   /**
+   * 资源是否在ROM中。
+   * 
+   *
+   * @returns 返回 TRUE 为在 ROM 中，返回 FALSE 则不在。
+   */
+ isInRom() : boolean  {
+    return asset_info_is_in_rom(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 设置资源是否在ROM中的标记位。
+   * 
+   * @param is_in_rom 资源是否在ROM中。
+   *
+   * @returns 返回 TRUE 为在 ROM 中，返回 FALSE 则不在。
+   */
+ setIsInRom(is_in_rom : boolean) : boolean  {
+    return asset_info_set_is_in_rom(this != null ? (this.nativeObj || this) : null, is_in_rom);
+ }
+
+
+  /**
    * 类型。
    *
    */
@@ -12439,11 +12605,11 @@ export class TAssetInfo {
 
 
   /**
-   * 资源是否在ROM中。
+   * 资源标志。
    *
    */
- get isInRom() : number {
-   return asset_info_t_get_prop_is_in_rom(this.nativeObj);
+ get flags() : number {
+   return asset_info_t_get_prop_flags(this.nativeObj);
  }
 
 
@@ -12463,15 +12629,6 @@ export class TAssetInfo {
    */
  get refcount() : number {
    return asset_info_t_get_prop_refcount(this.nativeObj);
- }
-
-
-  /**
-   * 名称。
-   *
-   */
- get name() : string {
-   return asset_info_t_get_prop_name(this.nativeObj);
  }
 
 };
@@ -14854,6 +15011,15 @@ export class TKeyEvent extends TEvent {
    return key_event_t_get_prop_capslock(this.nativeObj);
  }
 
+
+  /**
+   * numlock键是否按下。
+   *
+   */
+ get numlock() : boolean {
+   return key_event_t_get_prop_numlock(this.nativeObj);
+ }
+
 };
 /**
  * 绘制事件。
@@ -15007,6 +15173,86 @@ export class TThemeChangeEvent extends TEvent {
    */
  get name() : string {
    return theme_change_event_t_get_prop_name(this.nativeObj);
+ }
+
+};
+/**
+ * 系统事件。
+ *
+ */
+export class TSystemEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转system_event_t对象。主要给脚本语言使用。
+   * 
+   * @param event event对象。
+   *
+   * @returns event 对象。
+   */
+ static cast(event : TEvent) : TSystemEvent  {
+    return new TSystemEvent(system_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+
+  /**
+   * SDL_Event。
+   *
+   */
+ get sdlEvent() : any {
+   return system_event_t_get_prop_sdl_event(this.nativeObj);
+ }
+
+};
+/**
+ * 字体管理器，负责字体的加载和缓存管理。
+ *(如果使用nanovg，字体由nanovg内部管理)
+ *
+ */
+export class TFontManager extends TEmitter { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 卸载指定的字体。
+   * 
+   * @param name 字体名，为NULL时使用缺省字体。
+   * @param size 字体的大小(矢量字体指定为0即可)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ unloadFont(name : string, size : number) : TRet  {
+    return font_manager_unload_font(this != null ? (this.nativeObj || this) : null, name, size);
+ }
+
+
+  /**
+   * 清除最久没有被使用的缓冲字模。
+   * 
+   * @param cache_size 每种字体保留缓存字模的个数。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ shrinkCache(cache_size : number) : TRet  {
+    return font_manager_shrink_cache(this != null ? (this.nativeObj || this) : null, cache_size);
+ }
+
+
+  /**
+   * 卸载全部字体。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ unloadAll() : TRet  {
+    return font_manager_unload_all(this != null ? (this.nativeObj || this) : null);
  }
 
 };
@@ -16449,6 +16695,30 @@ export class TFileBrowserView extends TWidget {
 
 
   /**
+   * 设置 奇数项样式。
+   * 
+   * @param odd_item_style 奇数项样式。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setOddItemStyle(odd_item_style : string) : TRet  {
+    return file_browser_view_set_odd_item_style(this != null ? (this.nativeObj || this) : null, odd_item_style);
+ }
+
+
+  /**
+   * 设置 偶数项样式。
+   * 
+   * @param even_item_style 奇数项样式。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setEvenItemStyle(even_item_style : string) : TRet  {
+    return file_browser_view_set_even_item_style(this != null ? (this.nativeObj || this) : null, even_item_style);
+ }
+
+
+  /**
    * 获取当前路径。
    * 
    *
@@ -16573,6 +16843,32 @@ export class TFileBrowserView extends TWidget {
 
  set sortBy(v : string) {
    this.setSortBy(v);
+ }
+
+
+  /**
+   * 奇数项样式。
+   *
+   */
+ get oddItemStyle() : string {
+   return file_browser_view_t_get_prop_odd_item_style(this.nativeObj);
+ }
+
+ set oddItemStyle(v : string) {
+   this.setOddItemStyle(v);
+ }
+
+
+  /**
+   * 偶数项样式。
+   *
+   */
+ get evenItemStyle() : string {
+   return file_browser_view_t_get_prop_even_item_style(this.nativeObj);
+ }
+
+ set evenItemStyle(v : string) {
+   this.setEvenItemStyle(v);
  }
 
 };
@@ -17769,6 +18065,15 @@ export class TCandidates extends TWidget {
    this.setButtonStyle(v);
  }
 
+
+  /**
+   * 是否启用候选字预览。
+   *
+   */
+ get enablePreview() : boolean {
+   return candidates_t_get_prop_enable_preview(this.nativeObj);
+ }
+
 };
 /**
  * 输入法语言指示器。
@@ -18698,7 +19003,7 @@ export class TProgressCircle extends TWidget {
 
 
   /**
-   * 线帽类型(round:圆头，square:方头)。
+   * 线帽类型(round:圆头，square:方头，butt:平头)。
    *
    */
  get lineCap() : string {
@@ -19060,6 +19365,18 @@ export class THscrollLabel extends TWidget {
 
 
   /**
+   * 设置stop_at_begin。
+   * 
+   * @param stop_at_begin 是否在滚动完毕后停在文本结尾。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setStopAtBegin(stop_at_begin : boolean) : TRet  {
+    return hscroll_label_set_stop_at_begin(this != null ? (this.nativeObj || this) : null, stop_at_begin);
+ }
+
+
+  /**
    * 设置x偏移(一般无需用户调用)。。
    * 
    * @param xoffset x偏移。
@@ -19228,6 +19545,20 @@ export class THscrollLabel extends TWidget {
    */
  get textW() : number {
    return hscroll_label_t_get_prop_text_w(this.nativeObj);
+ }
+
+
+  /**
+   * 滚动完毕后停在文本开头(缺省FALSE)。
+   *> 注：loop为FALSE时才可用。
+   *
+   */
+ get stopAtBegin() : boolean {
+   return hscroll_label_t_get_prop_stop_at_begin(this.nativeObj);
+ }
+
+ set stopAtBegin(v : boolean) {
+   this.setStopAtBegin(v);
  }
 
 };
@@ -19844,6 +20175,19 @@ export class TScrollBar extends TWidget {
 
 
   /**
+   * 通过动画隐藏滚动条。
+   * 
+   * @param duration 动画持续时间。
+   * @param delay 动画执行时间。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ hideByOpacityAnimation(duration : number, delay : number) : TRet  {
+    return scroll_bar_hide_by_opacity_animation(this != null ? (this.nativeObj || this) : null, duration, delay);
+ }
+
+
+  /**
    * 虚拟宽度或高度。
    *
    */
@@ -20100,6 +20444,18 @@ export class TScrollView extends TWidget {
 
 
   /**
+   * 设置滑动到极限时可继续滑动区域的占比。
+   * 
+   * @param slide_limit_ratio 滑动到极限时可继续滑动区域的占比。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setSlideLimitRatio(slide_limit_ratio : number) : TRet  {
+    return scroll_view_set_slide_limit_ratio(this != null ? (this.nativeObj || this) : null, slide_limit_ratio);
+ }
+
+
+  /**
    * 滚动到指定的偏移量。
    * 
    * @param xoffset_end x偏移量。
@@ -20251,6 +20607,19 @@ export class TScrollView extends TWidget {
 
  set recursive(v : boolean) {
    this.setRecursive(v);
+ }
+
+
+  /**
+   * 滑动到极限时可继续滑动区域的占比。
+   *
+   */
+ get slideLimitRatio() : number {
+   return scroll_view_t_get_prop_slide_limit_ratio(this.nativeObj);
+ }
+
+ set slideLimitRatio(v : number) {
+   this.setSlideLimitRatio(v);
  }
 
 };
@@ -20605,6 +20974,64 @@ export class TSlideMenu extends TWidget {
 
 
   /**
+   * 设置菜单项之间的间距。
+   * 
+   * @param spacer 菜单项之间的间距。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setSpacer(spacer : number) : TRet  {
+    return slide_menu_set_spacer(this != null ? (this.nativeObj || this) : null, spacer);
+ }
+
+
+  /**
+   * 设置菜单项的宽度。
+   * 
+   * @param menu_w 菜单项的宽度。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)(空字符串则使用控件高度)
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setMenuW(menu_w : string) : TRet  {
+    return slide_menu_set_menu_w(this != null ? (this.nativeObj || this) : null, menu_w);
+ }
+
+
+  /**
+   * 设置是否动态裁剪菜单项。
+   * 
+   * @param clip 是否动态裁剪菜单项。(关闭后，如果显示偶数项，左边会多一项)
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setClip(clip : boolean) : TRet  {
+    return slide_menu_set_clip(this != null ? (this.nativeObj || this) : null, clip);
+ }
+
+
+  /**
+   * 切换至上一项。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ scrollToPrev() : TRet  {
+    return slide_menu_scroll_to_prev(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 切换至下一项。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ scrollToNext() : TRet  {
+    return slide_menu_scroll_to_next(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
    * 值。代表当前选中项的索引。
    *
    */
@@ -20640,6 +21067,45 @@ export class TSlideMenu extends TWidget {
 
  set minScale(v : number) {
    this.setMinScale(v);
+ }
+
+
+  /**
+   * 菜单项之间的间距。
+   *
+   */
+ get spacer() : number {
+   return slide_menu_t_get_prop_spacer(this.nativeObj);
+ }
+
+ set spacer(v : number) {
+   this.setSpacer(v);
+ }
+
+
+  /**
+   * 菜单项的宽度(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)(空字符串则使用控件高度)。
+   *
+   */
+ get menuW() : string {
+   return slide_menu_t_get_prop_menu_w(this.nativeObj);
+ }
+
+ set menuW(v : string) {
+   this.setMenuW(v);
+ }
+
+
+  /**
+   * 是否动态裁剪菜单项(默认裁剪，不裁剪时，如果显示偶数项，左边会多一项)。
+   *
+   */
+ get clip() : boolean {
+   return slide_menu_t_get_prop_clip(this.nativeObj);
+ }
+
+ set clip(v : boolean) {
+   this.setClip(v);
  }
 
 };
@@ -21655,6 +22121,30 @@ export class TTextSelector extends TWidget {
 
 
   /**
+   * 设置绘制蒙版的变化趋势。
+   * 
+   * @param mask_easing 绘制蒙版的变化趋势。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setMaskEasing(mask_easing : TEasingType) : TRet  {
+    return text_selector_set_mask_easing(this != null ? (this.nativeObj || this) : null, mask_easing);
+ }
+
+
+  /**
+   * 设置绘制蒙版的区域占比（范围0~1）。
+   * 
+   * @param mask_area_scale 绘制蒙版的区域占比（范围0~1）。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setMaskAreaScale(mask_area_scale : number) : TRet  {
+    return text_selector_set_mask_area_scale(this != null ? (this.nativeObj || this) : null, mask_area_scale);
+ }
+
+
+  /**
    * 可见的选项数量(只能是1或者3或者5，缺省为5)。
    *
    */
@@ -21761,6 +22251,32 @@ export class TTextSelector extends TWidget {
 
  set enableValueAnimator(v : boolean) {
    this.setEnableValueAnimator(v);
+ }
+
+
+  /**
+   * 绘制蒙版的变化趋势。
+   *
+   */
+ get maskEasing() : TEasingType {
+   return text_selector_t_get_prop_mask_easing(this.nativeObj);
+ }
+
+ set maskEasing(v : TEasingType) {
+   this.setMaskEasing(v);
+ }
+
+
+  /**
+   * 绘制蒙版的区域占比（范围0~1）。
+   *
+   */
+ get maskAreaScale() : number {
+   return text_selector_t_get_prop_mask_area_scale(this.nativeObj);
+ }
+
+ set maskAreaScale(v : number) {
+   this.setMaskAreaScale(v);
  }
 
 };
@@ -22767,6 +23283,18 @@ export class TButton extends TWidget {
 
 
   /**
+   * 设置是否启用预览。
+   * 
+   * @param enable_preview 是否启用预览。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setEnablePreview(enable_preview : boolean) : TRet  {
+    return button_set_enable_preview(this != null ? (this.nativeObj || this) : null, enable_preview);
+ }
+
+
+  /**
    * 重复触发EVT\_CLICK事件的时间间隔。
    *
    *为0则不重复触发EVT\_CLICK事件。
@@ -22794,6 +23322,19 @@ export class TButton extends TWidget {
 
  set enableLongPress(v : boolean) {
    this.setEnableLongPress(v);
+ }
+
+
+  /**
+   * 是否启用预览(主要用于软键盘)。
+   *
+   */
+ get enablePreview() : boolean {
+   return button_t_get_prop_enable_preview(this.nativeObj);
+ }
+
+ set enablePreview(v : boolean) {
+   this.setEnablePreview(v);
  }
 
 
@@ -24759,6 +25300,18 @@ export class TPages extends TWidget {
 
 
   /**
+   * 设置切换界面时是否自动聚焦。
+   * 
+   * @param auto_focused 切换界面时是否自动聚焦。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setAutoFocused(auto_focused : boolean) : TRet  {
+    return pages_set_auto_focused(this != null ? (this.nativeObj || this) : null, auto_focused);
+ }
+
+
+  /**
    * 通过页面的名字设置当前的Page。
    * 
    * @param name 当前Page的名字。
@@ -24780,6 +25333,19 @@ export class TPages extends TWidget {
 
  set active(v : number) {
    this.setActive(v);
+ }
+
+
+  /**
+   * 选择切换界面时是否自动聚焦上一次保存的焦点。（默认为TRUE）
+   *
+   */
+ get autoFocused() : boolean {
+   return pages_t_get_prop_auto_focused(this.nativeObj);
+ }
+
+ set autoFocused(v : boolean) {
+   this.setAutoFocused(v);
  }
 
 };
@@ -25997,9 +26563,10 @@ export class TDialog extends TWindowBase {
    * 模态显示对话框。
    *dialog_modal返回后，dialog对象将在下一个idle函数中回收。
    *也就是在dialog_modal调用完成后仍然可以访问dialog中控件，直到本次事件结束。
+   *调用该函数会使线程进入阻塞状态，需要调用dialog_quit来解除阻塞。
    * 
    *
-   * @returns 返回退出码。
+   * @returns 返回退出码，值为dialog_quit函数中传入的参数。
    */
  modal() : TDialogQuitCode  {
     return dialog_modal(this != null ? (this.nativeObj || this) : null);
@@ -27517,6 +28084,18 @@ export class TComboBox extends TEdit {
 
 
   /**
+   * 根据文本设置当前选中的选项。
+   * 
+   * @param text 原生(非翻译的文本)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setSelectedIndexByText(text : string) : TRet  {
+    return combo_box_set_selected_index_by_text(this != null ? (this.nativeObj || this) : null, text);
+ }
+
+
+  /**
    * 设置是否本地化(翻译)选项。
    * 
    * @param localize_options 是否本地化(翻译)选项。
@@ -27613,13 +28192,24 @@ export class TComboBox extends TEdit {
 
 
   /**
-   * 获取combo_box的文本。
+   * 获取combo_box的文本(可能是翻译后的文本)。
    * 
    *
    * @returns 返回文本。
    */
  getTextValue() : string  {
     return combo_box_get_text(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 获取combo_box当前选中项目的文本(原生非翻译的文本)。
+   * 
+   *
+   * @returns 返回文本。
+   */
+ getTextOfSelected() : string  {
+    return combo_box_get_text_of_selected(this != null ? (this.nativeObj || this) : null);
  }
 
 
@@ -28226,6 +28816,18 @@ export class TSpinBox extends TEdit {
 
 
   /**
+   * 设置按钮位置样式。
+   * 
+   * @param button_position 按钮位置样式。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setButtonPosition(button_position : string) : TRet  {
+    return spin_box_set_button_position(this != null ? (this.nativeObj || this) : null, button_position);
+ }
+
+
+  /**
    * 设置连击的时间间隔。
    *备注：时间间隔越低，速度越快。
    * 
@@ -28253,6 +28855,23 @@ export class TSpinBox extends TEdit {
 
  set easyTouchMode(v : boolean) {
    this.setEasyTouchMode(v);
+ }
+
+
+  /**
+   * 按钮位置样式选择，优先级高于easy_touch_mode，各模式对应样式如下,默认为none。
+   *none：按照easy_touch_mode选择样式
+   *default：inc按钮在右上角，dec按钮在右下角。
+   *left_right：dec按钮在左边，inc按钮在右边。
+   *top_bottom：inc按钮在顶部，dec按钮在底部。
+   *
+   */
+ get buttonPosition() : string {
+   return spin_box_t_get_prop_button_position(this.nativeObj);
+ }
+
+ set buttonPosition(v : string) {
+   this.setButtonPosition(v);
  }
 
 };
@@ -28341,7 +28960,10 @@ export class TSystemBar extends TWindowBase {
 
 };
 /**
- * 可滚动的combo_box控件。
+ * 扩展combo_box控件。支持以下功能：
+ ** 支持滚动。项目比较多时显示滚动条。
+ ** 自动调整弹出窗口的宽度。根据最长文本自动调整弹出窗口的宽度。
+ ** 支持分组显示。如果item的文本以"seperator."开头，视为一个分组开始，其后的文本为分组的标题。比如: "seperator.basic"，会创建一个basic为标题的分组。
  *
  */
 export class TComboBoxEx extends TComboBox { 

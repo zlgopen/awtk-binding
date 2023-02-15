@@ -121,6 +121,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a8ff3912ae75773e7b2b0213a68391e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a9db78e2e02e6db701f33c96c25298f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a1a9db78e2e02e6db701f33c96c25298f">SetEnableValueAnimator</a> (bool enable_value_animator)</td></tr>
 <tr class="separator:a1a9db78e2e02e6db701f33c96c25298f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7efafac50111e23bc0a8820fc8f33cb0"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a7efafac50111e23bc0a8820fc8f33cb0">SetMaskEasing</a> (easing_type_t mask_easing)</td></tr>
+<tr class="separator:a7efafac50111e23bc0a8820fc8f33cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a904ad0208c1cba4b9cb4fdc9a66aab2e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a904ad0208c1cba4b9cb4fdc9a66aab2e">SetMaskAreaScale</a> (float_t mask_area_scale)</td></tr>
+<tr class="separator:a904ad0208c1cba4b9cb4fdc9a66aab2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a654b0d478368792febd784133b07c176"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a654b0d478368792febd784133b07c176">GetVisibleNr</a> () const</td></tr>
 <tr class="separator:a654b0d478368792febd784133b07c176"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fe7e7c0e699fa1e40b45ef5173fa1d9"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a0fe7e7c0e699fa1e40b45ef5173fa1d9">GetSelectedIndex</a> () const</td></tr>
@@ -137,6 +141,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a3ff0457591c7187c2716179ee0e61692"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad2636edeba4642a62b6ee6d7c08a7f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#aad2636edeba4642a62b6ee6d7c08a7f9">GetEnableValueAnimator</a> () const</td></tr>
 <tr class="separator:aad2636edeba4642a62b6ee6d7c08a7f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cb515df442020de255713465b893bee"><td class="memItemLeft" align="right" valign="top">easing_type_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a6cb515df442020de255713465b893bee">GetMaskEasing</a> () const</td></tr>
+<tr class="separator:a6cb515df442020de255713465b893bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af94c919aa03b91e920d91d8c71897940"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#af94c919aa03b91e920d91d8c71897940">GetMaskAreaScale</a> () const</td></tr>
+<tr class="separator:af94c919aa03b91e920d91d8c71897940"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -375,6 +383,42 @@ static <a class="el" href="class_t_text_selector.html">TTextSelector</a>&#160;</
 
 </div>
 </div>
+<a id="af94c919aa03b91e920d91d8c71897940"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af94c919aa03b91e920d91d8c71897940">&#9670;&nbsp;</a></span>GetMaskAreaScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float_t TTextSelector::GetMaskAreaScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>绘制蒙版的区域占比（范围0~1）。 </p>
+
+</div>
+</div>
+<a id="a6cb515df442020de255713465b893bee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cb515df442020de255713465b893bee">&#9670;&nbsp;</a></span>GetMaskEasing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">easing_type_t TTextSelector::GetMaskEasing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>绘制蒙版的变化趋势。 </p>
+
+</div>
+</div>
 <a id="a626f8c36ab1700135392ce636e463f08"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a626f8c36ab1700135392ce636e463f08">&#9670;&nbsp;</a></span>GetOptions()</h2>
 
@@ -607,6 +651,58 @@ static <a class="el" href="class_t_text_selector.html">TTextSelector</a>&#160;</
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">loop_options</td><td>是否循环选项。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a904ad0208c1cba4b9cb4fdc9a66aab2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a904ad0208c1cba4b9cb4fdc9a66aab2e">&#9670;&nbsp;</a></span>SetMaskAreaScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TTextSelector::SetMaskAreaScale </td>
+          <td>(</td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>mask_area_scale</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置绘制蒙版的区域占比（范围0~1）。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mask_area_scale</td><td>绘制蒙版的区域占比（范围0~1）。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a7efafac50111e23bc0a8820fc8f33cb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7efafac50111e23bc0a8820fc8f33cb0">&#9670;&nbsp;</a></span>SetMaskEasing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TTextSelector::SetMaskEasing </td>
+          <td>(</td>
+          <td class="paramtype">easing_type_t&#160;</td>
+          <td class="paramname"><em>mask_easing</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置绘制蒙版的变化趋势。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mask_easing</td><td>绘制蒙版的变化趋势。</td></tr>
   </table>
   </dd>
 </dl>

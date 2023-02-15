@@ -105,6 +105,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a1a1653f58568b388494412bd11c6cfc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41d82384d1fd184b9e4cf35b901c036b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_bar.html#a41d82384d1fd184b9e4cf35b901c036b">SetAnimatorTime</a> (uint32_t animator_time)</td></tr>
 <tr class="separator:a41d82384d1fd184b9e4cf35b901c036b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9099efab1a042abfc22fa4a3273013ee"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_bar.html#a9099efab1a042abfc22fa4a3273013ee">HideByOpacityAnimation</a> (int32_t duration, int32_t delay)</td></tr>
+<tr class="separator:a9099efab1a042abfc22fa4a3273013ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab96947296739d842a372d8541c406132"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_bar.html#ab96947296739d842a372d8541c406132">GetVirtualSize</a> () const</td></tr>
 <tr class="separator:ab96947296739d842a372d8541c406132"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e42850d84226f4d5d29454d3d73b96c"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_bar.html#a5e42850d84226f4d5d29454d3d73b96c">GetValue</a> () const</td></tr>
@@ -499,6 +501,43 @@ static <a class="el" href="class_t_scroll_bar.html">TScrollBar</a>&#160;</td><td
       </table>
 </div><div class="memdoc">
 <p>虚拟宽度或高度。 </p>
+
+</div>
+</div>
+<a id="a9099efab1a042abfc22fa4a3273013ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9099efab1a042abfc22fa4a3273013ee">&#9670;&nbsp;</a></span>HideByOpacityAnimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TScrollBar::HideByOpacityAnimation </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>duration</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>delay</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>通过动画隐藏滚动条。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">duration</td><td>动画持续时间。 </td></tr>
+    <tr><td class="paramname">delay</td><td>动画执行时间。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>

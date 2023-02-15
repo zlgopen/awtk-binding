@@ -4671,6 +4671,10 @@
         "name": "EVT_MODEL_CHANGE"
       },
       {
+        "desc": "SDL系统事件(system_event_t)。",
+        "name": "EVT_SYSTEM"
+      },
+      {
         "desc": "event queue其它请求编号起始值。",
         "name": "EVT_REQ_START"
       },
@@ -4881,89 +4885,6 @@
     "header": "base/events.h",
     "desc": "事件基类。",
     "name": "event_t",
-    "annotation": {
-      "scriptable": true
-    },
-    "level": 1
-  },
-  {
-    "type": "class",
-    "methods": [
-      {
-        "params": [
-          {
-            "type": "font_manager_t*",
-            "name": "fm",
-            "desc": "字体管理器对象。"
-          },
-          {
-            "type": "char*",
-            "name": "name",
-            "desc": "字体名，为NULL时使用缺省字体。"
-          },
-          {
-            "type": "font_size_t",
-            "name": "size",
-            "desc": "字体的大小(矢量字体指定为0即可)。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "卸载指定的字体。",
-        "name": "font_manager_unload_font",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "font_manager_t*",
-            "name": "fm",
-            "desc": "字体管理器对象。"
-          },
-          {
-            "type": "uint32_t",
-            "name": "cache_size",
-            "desc": "每种字体保留缓存字模的个数。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "清除最久没有被使用的缓冲字模。",
-        "name": "font_manager_shrink_cache",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "font_manager_t*",
-            "name": "fm",
-            "desc": "字体管理器对象。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "卸载全部字体。",
-        "name": "font_manager_unload_all",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      }
-    ],
-    "events": [],
-    "properties": [],
-    "header": "base/font_manager.h",
-    "desc": "字体管理器，负责字体的加载和缓存管理。\n(如果使用nanovg，字体由nanovg内部管理)",
-    "name": "font_manager_t",
     "annotation": {
       "scriptable": true
     },
@@ -5954,6 +5875,74 @@
       {
         "desc": "TK_KEY_CANCEL",
         "name": "TK_KEY_CANCEL"
+      },
+      {
+        "desc": "TK_KEY_KP_DIVIDE",
+        "name": "TK_KEY_KP_DIVIDE"
+      },
+      {
+        "desc": "TK_KEY_KP_MULTIPLY",
+        "name": "TK_KEY_KP_MULTIPLY"
+      },
+      {
+        "desc": "TK_KEY_KP_MINUS",
+        "name": "TK_KEY_KP_MINUS"
+      },
+      {
+        "desc": "TK_KEY_KP_PLUS",
+        "name": "TK_KEY_KP_PLUS"
+      },
+      {
+        "desc": "TK_KEY_KP_ENTER",
+        "name": "TK_KEY_KP_ENTER"
+      },
+      {
+        "desc": "TK_KEY_KP_1",
+        "name": "TK_KEY_KP_1"
+      },
+      {
+        "desc": "TK_KEY_KP_2",
+        "name": "TK_KEY_KP_2"
+      },
+      {
+        "desc": "TK_KEY_KP_3",
+        "name": "TK_KEY_KP_3"
+      },
+      {
+        "desc": "TK_KEY_KP_4",
+        "name": "TK_KEY_KP_4"
+      },
+      {
+        "desc": "TK_KEY_KP_5",
+        "name": "TK_KEY_KP_5"
+      },
+      {
+        "desc": "TK_KEY_KP_6",
+        "name": "TK_KEY_KP_6"
+      },
+      {
+        "desc": "TK_KEY_KP_7",
+        "name": "TK_KEY_KP_7"
+      },
+      {
+        "desc": "TK_KEY_KP_8",
+        "name": "TK_KEY_KP_8"
+      },
+      {
+        "desc": "TK_KEY_KP_9",
+        "name": "TK_KEY_KP_9"
+      },
+      {
+        "desc": "TK_KEY_KP_0",
+        "name": "TK_KEY_KP_0"
+      },
+      {
+        "desc": "TK_KEY_KP_PERIOD",
+        "name": "TK_KEY_KP_PERIOD"
+      },
+      {
+        "desc": "TK_KEY_NUMLOCKCLEAR",
+        "name": "TK_KEY_NUMLOCKCLEAR"
       },
       {
         "desc": "TK_KEY_WHEEL",
@@ -8920,6 +8909,10 @@
         "name": "WIDGET_PROP_LOOP"
       },
       {
+        "desc": "是否正在运行(播放)。",
+        "name": "WIDGET_PROP_RUNNING"
+      },
+      {
         "desc": "是否启用自动更正功能。",
         "name": "WIDGET_PROP_AUTO_FIX"
       },
@@ -9030,6 +9023,10 @@
       {
         "desc": "是否启用长按。",
         "name": "WIDGET_PROP_ENABLE_LONG_PRESS"
+      },
+      {
+        "desc": "是否启用预览。",
+        "name": "WIDGET_PROP_ENABLE_PREVIEW"
       },
       {
         "desc": "是否启用点击穿透。",
@@ -10042,6 +10039,49 @@
         },
         "desc": "移动控件并调整控件的大小。",
         "name": "widget_move_resize",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "xy_t",
+            "name": "x",
+            "desc": "x坐标"
+          },
+          {
+            "type": "xy_t",
+            "name": "y",
+            "desc": "y坐标"
+          },
+          {
+            "type": "wh_t",
+            "name": "w",
+            "desc": "宽度"
+          },
+          {
+            "type": "wh_t",
+            "name": "h",
+            "desc": "高度"
+          },
+          {
+            "type": "bool_t",
+            "name": "update_layout",
+            "desc": "是否更新布局"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "移动控件并调整控件的大小。",
+        "name": "widget_move_resize_ex",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -12711,6 +12751,16 @@
         "type": "event_t"
       },
       {
+        "name": "EVT_WIDGET_WILL_RESTACK_CHILD",
+        "desc": "控件即将调整子控件位置序数。\n在该的回调函数中返回RET_STOP停止调整动作。",
+        "type": "event_t"
+      },
+      {
+        "name": "EVT_WIDGET_RESTACK_CHILD",
+        "desc": "控件调整子控件位置序数。",
+        "type": "event_t"
+      },
+      {
         "name": "EVT_PROP_WILL_CHANGE",
         "desc": "控件属性改变前触发(通过set_prop设置属性，才会触发)。",
         "type": "prop_change_event_t"
@@ -13586,7 +13636,7 @@
       {
         "params": [
           {
-            "type": "asset_info_t*",
+            "type": "const asset_info_t*",
             "name": "info",
             "desc": "asset_info对象。"
           }
@@ -13599,6 +13649,47 @@
         "return": {
           "type": "const char*",
           "desc": "返回名称。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "const asset_info_t*",
+            "name": "info",
+            "desc": "asset_info对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "资源是否在ROM中。",
+        "name": "asset_info_is_in_rom",
+        "return": {
+          "type": "bool_t",
+          "desc": "返回 TRUE 为在 ROM 中，返回 FALSE 则不在。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "asset_info_t*",
+            "name": "info",
+            "desc": "asset_info对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "is_in_rom",
+            "desc": "资源是否在ROM中。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置资源是否在ROM中的标记位。",
+        "name": "asset_info_set_is_in_rom",
+        "return": {
+          "type": "bool_t",
+          "desc": "返回 TRUE 为在 ROM 中，返回 FALSE 则不在。"
         }
       }
     ],
@@ -13623,8 +13714,8 @@
         }
       },
       {
-        "name": "is_in_rom",
-        "desc": "资源是否在ROM中。",
+        "name": "flags",
+        "desc": "资源标志。",
         "type": "uint8_t",
         "annotation": {
           "readable": true,
@@ -13644,15 +13735,6 @@
         "name": "refcount",
         "desc": "引用计数。\nis\\_in\\_rom == FALSE时才有效。",
         "type": "uint32_t",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      },
-      {
-        "name": "name",
-        "desc": "名称。",
-        "type": "char*",
         "annotation": {
           "readable": true,
           "scriptable": true
@@ -16084,6 +16166,15 @@
           "readable": true,
           "scriptable": true
         }
+      },
+      {
+        "name": "numlock",
+        "desc": "numlock键是否按下。",
+        "type": "bool_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
       }
     ],
     "header": "base/events.h",
@@ -16296,6 +16387,134 @@
       "scriptable": true
     },
     "parent": "event_t",
+    "level": 2
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
+            "type": "event_t*",
+            "name": "event",
+            "desc": "event对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
+        "desc": "把event对象转system_event_t对象。主要给脚本语言使用。",
+        "name": "system_event_cast",
+        "return": {
+          "type": "system_event_t*",
+          "desc": "event 对象。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [
+      {
+        "name": "sdl_event",
+        "desc": "SDL_Event。",
+        "type": "void*",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      }
+    ],
+    "header": "base/events.h",
+    "desc": "系统事件。",
+    "name": "system_event_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "parent": "event_t",
+    "level": 2
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
+            "type": "font_manager_t*",
+            "name": "fm",
+            "desc": "字体管理器对象。"
+          },
+          {
+            "type": "char*",
+            "name": "name",
+            "desc": "字体名，为NULL时使用缺省字体。"
+          },
+          {
+            "type": "font_size_t",
+            "name": "size",
+            "desc": "字体的大小(矢量字体指定为0即可)。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "卸载指定的字体。",
+        "name": "font_manager_unload_font",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "font_manager_t*",
+            "name": "fm",
+            "desc": "字体管理器对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "cache_size",
+            "desc": "每种字体保留缓存字模的个数。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "清除最久没有被使用的缓冲字模。",
+        "name": "font_manager_shrink_cache",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "font_manager_t*",
+            "name": "fm",
+            "desc": "字体管理器对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "卸载全部字体。",
+        "name": "font_manager_unload_all",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [],
+    "header": "base/font_manager.h",
+    "desc": "字体管理器，负责字体的加载和缓存管理。\n(如果使用nanovg，字体由nanovg内部管理)",
+    "name": "font_manager_t",
+    "parent": "emitter_t",
+    "annotation": {
+      "scriptable": true
+    },
     "level": 2
   },
   {
@@ -17479,6 +17698,11 @@
         "name": "EVT_ORIENTATION_CHANGED",
         "desc": "屏幕旋转事件。",
         "type": "event_t"
+      },
+      {
+        "name": "EVT_SYSTEM",
+        "desc": "SDL系统事件。",
+        "type": "system_event_t"
       }
     ],
     "properties": [],
@@ -18417,6 +18641,52 @@
             "type": "widget_t*",
             "name": "widget",
             "desc": "widget对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "odd_item_style",
+            "desc": "奇数项样式。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置 奇数项样式。",
+        "name": "file_browser_view_set_odd_item_style",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "even_item_style",
+            "desc": "奇数项样式。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置 偶数项样式。",
+        "name": "file_browser_view_set_even_item_style",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
           }
         ],
         "annotation": {
@@ -18575,6 +18845,32 @@
       {
         "name": "sort_by",
         "desc": "排序方式。可选值(name, size, mtime, type)。",
+        "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "odd_item_style",
+        "desc": "奇数项样式。",
+        "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "even_item_style",
+        "desc": "偶数项样式。",
         "type": "char*",
         "annotation": {
           "set_prop": true,
@@ -20283,6 +20579,19 @@
           "design": true,
           "scriptable": true
         }
+      },
+      {
+        "name": "enable_preview",
+        "desc": "是否启用候选字预览。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
       }
     ],
     "header": "keyboard/candidates.h",
@@ -21668,7 +21977,7 @@
       },
       {
         "name": "line_cap",
-        "desc": "线帽类型(round:圆头，square:方头)。",
+        "desc": "线帽类型(round:圆头，square:方头，butt:平头)。",
         "type": "char*",
         "annotation": {
           "set_prop": true,
@@ -22174,6 +22483,29 @@
             "desc": "控件对象。"
           },
           {
+            "type": "bool_t",
+            "name": "stop_at_begin",
+            "desc": "是否在滚动完毕后停在文本结尾。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置stop_at_begin。",
+        "name": "hscroll_label_set_stop_at_begin",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
             "type": "int32_t",
             "name": "xoffset",
             "desc": "x偏移。"
@@ -22366,6 +22698,19 @@
           "set_prop": true,
           "get_prop": true,
           "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "stop_at_begin",
+        "desc": "滚动完毕后停在文本开头(缺省FALSE)。\n> 注：loop为FALSE时才可用。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
           "scriptable": true
         }
       }
@@ -23198,6 +23543,34 @@
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "scroll_bar控件。"
+          },
+          {
+            "type": "int32_t",
+            "name": "duration",
+            "desc": "动画持续时间。"
+          },
+          {
+            "type": "int32_t",
+            "name": "delay",
+            "desc": "动画执行时间。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "通过动画隐藏滚动条。",
+        "name": "scroll_bar_hide_by_opacity_animation",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
       }
     ],
     "events": [
@@ -23612,6 +23985,29 @@
             "desc": "控件对象。"
           },
           {
+            "type": "float_t",
+            "name": "slide_limit_ratio",
+            "desc": "滑动到极限时可继续滑动区域的占比。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置滑动到极限时可继续滑动区域的占比。",
+        "name": "scroll_view_set_slide_limit_ratio",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
             "type": "int32_t",
             "name": "xoffset_end",
             "desc": "x偏移量。"
@@ -23833,6 +24229,19 @@
         "name": "recursive",
         "desc": "是否递归查找全部子控件。",
         "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "slide_limit_ratio",
+        "desc": "滑动到极限时可继续滑动区域的占比。",
+        "type": "float_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -24317,6 +24726,111 @@
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "slide_menu对象。"
+          },
+          {
+            "type": "int32_t",
+            "name": "spacer",
+            "desc": "菜单项之间的间距。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置菜单项之间的间距。",
+        "name": "slide_menu_set_spacer",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "slide_menu对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "menu_w",
+            "desc": "菜单项的宽度。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)(空字符串则使用控件高度)"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置菜单项的宽度。",
+        "name": "slide_menu_set_menu_w",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "slide_menu对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "clip",
+            "desc": "是否动态裁剪菜单项。(关闭后，如果显示偶数项，左边会多一项)"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置是否动态裁剪菜单项。",
+        "name": "slide_menu_set_clip",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "slide_menu对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "切换至上一项。",
+        "name": "slide_menu_scroll_to_prev",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "slide_menu对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "切换至下一项。",
+        "name": "slide_menu_scroll_to_next",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
       }
     ],
     "events": [
@@ -24362,6 +24876,45 @@
         "name": "min_scale",
         "desc": "最小缩放比例。",
         "type": "float_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "spacer",
+        "desc": "菜单项之间的间距。",
+        "type": "int32_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "menu_w",
+        "desc": "菜单项的宽度(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)(空字符串则使用控件高度)。",
+        "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "clip",
+        "desc": "是否动态裁剪菜单项(默认裁剪，不裁剪时，如果显示偶数项，左边会多一项)。",
+        "type": "bool_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -25927,6 +26480,52 @@
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "easing_type_t",
+            "name": "mask_easing",
+            "desc": "绘制蒙版的变化趋势。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置绘制蒙版的变化趋势。",
+        "name": "text_selector_set_mask_easing",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "float_t",
+            "name": "mask_area_scale",
+            "desc": "绘制蒙版的区域占比（范围0~1）。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置绘制蒙版的区域占比（范围0~1）。",
+        "name": "text_selector_set_mask_area_scale",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
       }
     ],
     "events": [
@@ -26037,6 +26636,32 @@
         "name": "enable_value_animator",
         "desc": "是否修改值时启用动画。",
         "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "mask_easing",
+        "desc": "绘制蒙版的变化趋势。",
+        "type": "easing_type_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "mask_area_scale",
+        "desc": "绘制蒙版的区域占比（范围0~1）。",
+        "type": "float_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -27410,6 +28035,29 @@
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "enable_preview",
+            "desc": "是否启用预览。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置是否启用预览。",
+        "name": "button_set_enable_preview",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
       }
     ],
     "events": [
@@ -27441,6 +28089,19 @@
       {
         "name": "enable_long_press",
         "desc": "是否启用长按事件，为true时才触发长按事件。\n\n触发长按事件后不再触发点击事件。\n缺省不启用。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "enable_preview",
+        "desc": "是否启用预览(主要用于软键盘)。",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,
@@ -30194,6 +30855,29 @@
             "desc": "控件对象。"
           },
           {
+            "type": "bool_t",
+            "name": "auto_focused",
+            "desc": "切换界面时是否自动聚焦。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置切换界面时是否自动聚焦。",
+        "name": "pages_set_auto_focused",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
             "type": "char*",
             "name": "name",
             "desc": "当前Page的名字。"
@@ -30227,6 +30911,19 @@
         "name": "active",
         "desc": "当前活跃的page。(需要用到 MVVM 数据绑定请设置 value 属性)",
         "type": "uint32_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "auto_focused",
+        "desc": "选择切换界面时是否自动聚焦上一次保存的焦点。（默认为TRUE）",
+        "type": "bool_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -31787,11 +32484,11 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "模态显示对话框。\ndialog_modal返回后，dialog对象将在下一个idle函数中回收。\n也就是在dialog_modal调用完成后仍然可以访问dialog中控件，直到本次事件结束。",
+        "desc": "模态显示对话框。\ndialog_modal返回后，dialog对象将在下一个idle函数中回收。\n也就是在dialog_modal调用完成后仍然可以访问dialog中控件，直到本次事件结束。\n调用该函数会使线程进入阻塞状态，需要调用dialog_quit来解除阻塞。",
         "name": "dialog_modal",
         "return": {
           "type": "dialog_quit_code_t",
-          "desc": "返回退出码。"
+          "desc": "返回退出码，值为dialog_quit函数中传入的参数。"
         }
       },
       {
@@ -33680,6 +34377,29 @@
             "desc": "combo_box对象。"
           },
           {
+            "type": "const char*",
+            "name": "text",
+            "desc": "原生(非翻译的文本)。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "根据文本设置当前选中的选项。",
+        "name": "combo_box_set_selected_index_by_text",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "combo_box对象。"
+          },
+          {
             "type": "bool_t",
             "name": "localize_options",
             "desc": "是否本地化(翻译)选项。"
@@ -33868,9 +34588,27 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "获取combo_box的文本。",
+        "desc": "获取combo_box的文本(可能是翻译后的文本)。",
         "name": "combo_box_get_text",
         "alias": "combo_box_get_text_value",
+        "return": {
+          "type": "const char*",
+          "desc": "返回文本。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "combo_box对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取combo_box当前选中项目的文本(原生非翻译的文本)。",
+        "name": "combo_box_get_text_of_selected",
         "return": {
           "type": "const char*",
           "desc": "返回文本。"
@@ -34570,6 +35308,29 @@
             "desc": "widget对象。"
           },
           {
+            "type": "const char*",
+            "name": "button_position",
+            "desc": "按钮位置样式。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置按钮位置样式。",
+        "name": "spin_box_set_button_position",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          },
+          {
             "type": "int32_t",
             "name": "repeat",
             "desc": "连击的时间间隔。"
@@ -34592,6 +35353,19 @@
         "name": "easy_touch_mode",
         "desc": "是否启用易点击模式(在电容屏设备上建议启用)。\n> 在该模式下：\n> * 1.当高度大于font size的3倍时，inc按钮在顶部(style名为spinbox_top)，dec按钮在底部(style名为spinbox_bottom)。\n> * 2.当高度正常时，dec按钮在左边(style名为spinbox_left)，inc按钮在右边(style名为spinbox_right)。\n> 不在该模式下：\n> inc按钮在右上角(style名为spinbox_up)，dec按钮在右下角(style名为spinbox_down)。",
         "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "button_position",
+        "desc": "按钮位置样式选择，优先级高于easy_touch_mode，各模式对应样式如下,默认为none。\nnone：按照easy_touch_mode选择样式\ndefault：inc按钮在右上角，dec按钮在右下角。\nleft_right：dec按钮在左边，inc按钮在右边。\ntop_bottom：inc按钮在顶部，dec按钮在底部。",
+        "type": "char*",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -34735,7 +35509,7 @@
     "events": [],
     "properties": [],
     "header": "combo_box_ex/combo_box_ex.h",
-    "desc": "可滚动的combo_box控件。",
+    "desc": "扩展combo_box控件。支持以下功能：\n* 支持滚动。项目比较多时显示滚动条。\n* 自动调整弹出窗口的宽度。根据最长文本自动调整弹出窗口的宽度。\n* 支持分组显示。如果item的文本以\"seperator.\"开头，视为一个分组开始，其后的文本为分组的标题。比如: \"seperator.basic\"，会创建一个basic为标题的分组。",
     "name": "combo_box_ex_t",
     "parent": "combo_box_t",
     "annotation": {

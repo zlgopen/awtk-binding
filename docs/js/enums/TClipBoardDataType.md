@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[awtk.ts:4675](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L4675)
+[awtk.ts:4730](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L4730)
 
 ___
 
@@ -33,4 +33,4 @@ UTF8文本。
 
 #### Defined in
 
-[awtk.ts:4681](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L4681)
+[awtk.ts:4736](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L4736)

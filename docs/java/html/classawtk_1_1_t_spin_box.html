@@ -90,10 +90,14 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ad192bb71fc821d75fd4440470ede1e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46c8ea3824690cceb5ec6aa7f0e07e38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_spin_box.html#a46c8ea3824690cceb5ec6aa7f0e07e38">setEasyTouchMode</a> (boolean easy_touch_mode)</td></tr>
 <tr class="separator:a46c8ea3824690cceb5ec6aa7f0e07e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abda0c11ffd7bab095ae88c33a2325329"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_spin_box.html#abda0c11ffd7bab095ae88c33a2325329">setButtonPosition</a> (String button_position)</td></tr>
+<tr class="separator:abda0c11ffd7bab095ae88c33a2325329"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03e3178174719bdf5d0cc86c9b64cf7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_spin_box.html#a03e3178174719bdf5d0cc86c9b64cf7f">spinSetRepeat</a> (int repeat)</td></tr>
 <tr class="separator:a03e3178174719bdf5d0cc86c9b64cf7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a433d12a7dec7ae576b5b58ddc289886c"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_spin_box.html#a433d12a7dec7ae576b5b58ddc289886c">getEasyTouchMode</a> ()</td></tr>
 <tr class="separator:a433d12a7dec7ae576b5b58ddc289886c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a298b2a8acfaf709bb34b26af916d47ec"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_spin_box.html#a298b2a8acfaf709bb34b26af916d47ec">getButtonPosition</a> ()</td></tr>
+<tr class="separator:a298b2a8acfaf709bb34b26af916d47ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classawtk_1_1_t_edit"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classawtk_1_1_t_edit')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classawtk_1_1_t_edit.html">awtk.TEdit</a></td></tr>
 <tr class="memitem:a1304a8eb0e5b1d50fffda3168f3baf58 inherit pub_methods_classawtk_1_1_t_edit"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a1304a8eb0e5b1d50fffda3168f3baf58">TEdit</a> (long nativeObj)</td></tr>
 <tr class="separator:a1304a8eb0e5b1d50fffda3168f3baf58 inherit pub_methods_classawtk_1_1_t_edit"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -398,6 +402,32 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="a298b2a8acfaf709bb34b26af916d47ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a298b2a8acfaf709bb34b26af916d47ec">&#9670;&nbsp;</a></span>getButtonPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String awtk.TSpinBox.getButtonPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>按钮位置样式选择，优先级高于easy_touch_mode，各模式对应样式如下,默认为none。 none：按照easy_touch_mode选择样式 default：inc按钮在右上角，dec按钮在右下角。 left_right：dec按钮在左边，inc按钮在右边。 top_bottom：inc按钮在顶部，dec按钮在底部。 </p>
+
+</div>
+</div>
 <a id="a433d12a7dec7ae576b5b58ddc289886c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a433d12a7dec7ae576b5b58ddc289886c">&#9670;&nbsp;</a></span>getEasyTouchMode()</h2>
 
@@ -426,6 +456,40 @@ Public 成员函数</h2></td></tr>
 <li>2.当高度正常时，dec按钮在左边(style名为spinbox_left)，inc按钮在右边(style名为spinbox_right)。 不在该模式下： inc按钮在右上角(style名为spinbox_up)，dec按钮在右下角(style名为spinbox_down)。 </li>
 </ul>
 </blockquote>
+
+</div>
+</div>
+<a id="abda0c11ffd7bab095ae88c33a2325329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abda0c11ffd7bab095ae88c33a2325329">&#9670;&nbsp;</a></span>setButtonPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TSpinBox.setButtonPosition </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>button_position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置按钮位置样式。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button_position</td><td>按钮位置样式。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>

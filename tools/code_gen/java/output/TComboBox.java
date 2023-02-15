@@ -236,6 +236,18 @@ public class TComboBox extends TEdit {
 
 
   /**
+   * 根据文本设置当前选中的选项。
+   * 
+   * @param text 原生(非翻译的文本)。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setSelectedIndexByText(String text)  {
+   return TRet.from(combo_box_set_selected_index_by_text(this != null ? (this.nativeObj) : 0, text));
+ }
+
+
+  /**
    * 设置是否本地化(翻译)选项。
    * 
    * @param localize_options 是否本地化(翻译)选项。
@@ -332,13 +344,24 @@ public class TComboBox extends TEdit {
 
 
   /**
-   * 获取combo_box的文本。
+   * 获取combo_box的文本(可能是翻译后的文本)。
    * 
    *
    * @return 返回文本。
    */
  public  String getTextValue()  {
     return combo_box_get_text(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
+   * 获取combo_box当前选中项目的文本(原生非翻译的文本)。
+   * 
+   *
+   * @return 返回文本。
+   */
+ public  String getTextOfSelected()  {
+    return combo_box_get_text_of_selected(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -405,6 +428,7 @@ static private native int combo_box_set_theme_of_popup(long widget, String theme
 static private native int combo_box_reset_options(long widget);
 static private native int combo_box_count_options(long widget);
 static private native int combo_box_set_selected_index(long widget, int index);
+static private native int combo_box_set_selected_index_by_text(long widget, String text);
 static private native int combo_box_set_localize_options(long widget, boolean localize_options);
 static private native int combo_box_set_value(long widget, int value);
 static private native int combo_box_set_item_height(long widget, int item_height);
@@ -414,6 +438,7 @@ static private native int combo_box_set_options(long widget, String options);
 static private native int combo_box_get_value(long widget);
 static private native boolean combo_box_has_option_text(long widget, String text);
 static private native String combo_box_get_text(long widget);
+static private native String combo_box_get_text_of_selected(long widget);
 static private native String combo_box_t_get_prop_open_window(long nativeObj);
 static private native String combo_box_t_get_prop_theme_of_popup(long nativeObj);
 static private native int combo_box_t_get_prop_selected_index(long nativeObj);

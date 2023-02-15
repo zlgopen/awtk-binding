@@ -51,7 +51,7 @@ idle可以看作是duration为0的定时器。
 
 #### Defined in
 
-[awtk.ts:5638](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L5638)
+[awtk.ts:5651](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L5651)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:5650](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L5650)
+[awtk.ts:5663](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L5663)
 
 ___
 
@@ -99,4 +99,4 @@ ___
 
 #### Defined in
 
-[awtk.ts:5662](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L5662)
+[awtk.ts:5675](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L5675)

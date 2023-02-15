@@ -102,6 +102,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:abdfec36707d283c566717958b286f575 inherit pub_methods_classawtk_1_1_t_combo_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae48741968abb8a29be7e99c7061be902 inherit pub_methods_classawtk_1_1_t_combo_box"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_combo_box.html#ae48741968abb8a29be7e99c7061be902">setSelectedIndex</a> (int index)</td></tr>
 <tr class="separator:ae48741968abb8a29be7e99c7061be902 inherit pub_methods_classawtk_1_1_t_combo_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74ab4d71a731fd962a8429008352b3fb inherit pub_methods_classawtk_1_1_t_combo_box"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_combo_box.html#a74ab4d71a731fd962a8429008352b3fb">setSelectedIndexByText</a> (String text)</td></tr>
+<tr class="separator:a74ab4d71a731fd962a8429008352b3fb inherit pub_methods_classawtk_1_1_t_combo_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fb47f2bea2fe89f1291db2cc7f0062f inherit pub_methods_classawtk_1_1_t_combo_box"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_combo_box.html#a1fb47f2bea2fe89f1291db2cc7f0062f">setLocalizeOptions</a> (boolean localize_options)</td></tr>
 <tr class="separator:a1fb47f2bea2fe89f1291db2cc7f0062f inherit pub_methods_classawtk_1_1_t_combo_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5172d41049eddcaf4c1905947623ba82 inherit pub_methods_classawtk_1_1_t_combo_box"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_combo_box.html#a5172d41049eddcaf4c1905947623ba82">setValue</a> (int value)</td></tr>
@@ -120,6 +122,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a8426b92f74938edfd90b3991b5480153 inherit pub_methods_classawtk_1_1_t_combo_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a664f9a3fd7d244d1baaac823df721c40 inherit pub_methods_classawtk_1_1_t_combo_box"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_combo_box.html#a664f9a3fd7d244d1baaac823df721c40">getTextValue</a> ()</td></tr>
 <tr class="separator:a664f9a3fd7d244d1baaac823df721c40 inherit pub_methods_classawtk_1_1_t_combo_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5003368ded5a9fc48468ac3d734e39c inherit pub_methods_classawtk_1_1_t_combo_box"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_combo_box.html#ab5003368ded5a9fc48468ac3d734e39c">getTextOfSelected</a> ()</td></tr>
+<tr class="separator:ab5003368ded5a9fc48468ac3d734e39c inherit pub_methods_classawtk_1_1_t_combo_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a456dfc6118b8a5274c25d02b07ce018c inherit pub_methods_classawtk_1_1_t_combo_box"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_combo_box.html#a456dfc6118b8a5274c25d02b07ce018c">getOpenWindow</a> ()</td></tr>
 <tr class="separator:a456dfc6118b8a5274c25d02b07ce018c inherit pub_methods_classawtk_1_1_t_combo_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a753c0fc07acb0366dc773e1a460e6610 inherit pub_methods_classawtk_1_1_t_combo_box"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_combo_box.html#a753c0fc07acb0366dc773e1a460e6610">getThemeOfPopup</a> ()</td></tr>
@@ -227,7 +231,7 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ad8a146cb04fc5d1d55867af98531d383 inherit pub_static_methods_classawtk_1_1_t_combo_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>可滚动的combo_box控件。 </p>
+<div class="textblock"><p>扩展combo_box控件。支持以下功能： 支持滚动。项目比较多时显示滚动条。 自动调整弹出窗口的宽度。根据最长文本自动调整弹出窗口的宽度。 支持分组显示。如果item的文本以"seperator."开头，视为一个分组开始，其后的文本为分组的标题。比如: "seperator.basic"，会创建一个basic为标题的分组。 </p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="ab37c48175a34208e7ae229ef5a3377c3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab37c48175a34208e7ae229ef5a3377c3">&#9670;&nbsp;</a></span>TComboBoxEx()</h2>

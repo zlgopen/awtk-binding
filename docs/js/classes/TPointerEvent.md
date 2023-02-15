@@ -62,7 +62,7 @@
 
 #### Defined in
 
-[awtk.ts:14615](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L14615)
+[awtk.ts:14772](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L14772)
 
 ## Properties
 
@@ -76,7 +76,7 @@
 
 #### Defined in
 
-[awtk.ts:14614](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L14614)
+[awtk.ts:14771](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L14771)
 
 ## Accessors
 
@@ -92,7 +92,7 @@ alt键是否按下。
 
 #### Defined in
 
-[awtk.ts:14675](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L14675)
+[awtk.ts:14832](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L14832)
 
 ___
 
@@ -111,7 +111,7 @@ PC ：左键为 1，中键为 2，右键为 3
 
 #### Defined in
 
-[awtk.ts:14657](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L14657)
+[awtk.ts:14814](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L14814)
 
 ___
 
@@ -127,7 +127,7 @@ cmd键是否按下。
 
 #### Defined in
 
-[awtk.ts:14693](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L14693)
+[awtk.ts:14850](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L14850)
 
 ___
 
@@ -143,7 +143,7 @@ ctrl键是否按下。
 
 #### Defined in
 
-[awtk.ts:14684](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L14684)
+[awtk.ts:14841](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L14841)
 
 ___
 
@@ -159,7 +159,7 @@ menu键是否按下。
 
 #### Defined in
 
-[awtk.ts:14702](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L14702)
+[awtk.ts:14859](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L14859)
 
 ___
 
@@ -175,7 +175,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:14666](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L14666)
+[awtk.ts:14823](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L14823)
 
 ___
 
@@ -191,7 +191,7 @@ shift键是否按下。
 
 #### Defined in
 
-[awtk.ts:14711](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L14711)
+[awtk.ts:14868](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L14868)
 
 ___
 
@@ -211,7 +211,7 @@ TEvent.size
 
 #### Defined in
 
-[awtk.ts:5508](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L5508)
+[awtk.ts:5569](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L5569)
 
 ___
 
@@ -231,7 +231,7 @@ TEvent.target
 
 #### Defined in
 
-[awtk.ts:5526](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L5526)
+[awtk.ts:5587](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L5587)
 
 ___
 
@@ -251,7 +251,7 @@ TEvent.time
 
 #### Defined in
 
-[awtk.ts:5517](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L5517)
+[awtk.ts:5578](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L5578)
 
 ___
 
@@ -271,7 +271,7 @@ TEvent.type
 
 #### Defined in
 
-[awtk.ts:5499](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L5499)
+[awtk.ts:5560](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L5560)
 
 ___
 
@@ -287,7 +287,7 @@ x坐标。
 
 #### Defined in
 
-[awtk.ts:14636](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L14636)
+[awtk.ts:14793](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L14793)
 
 ___
 
@@ -303,7 +303,7 @@ y坐标。
 
 #### Defined in
 
-[awtk.ts:14645](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L14645)
+[awtk.ts:14802](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L14802)
 
 ## Methods
 
@@ -327,7 +327,7 @@ y坐标。
 
 #### Defined in
 
-[awtk.ts:5490](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L5490)
+[awtk.ts:5551](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L5551)
 
 ___
 
@@ -349,7 +349,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:5463](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L5463)
+[awtk.ts:5524](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L5524)
 
 ___
 
@@ -377,7 +377,7 @@ event对象。
 
 #### Defined in
 
-[awtk.ts:14627](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L14627)
+[awtk.ts:14784](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L14784)
 
 ___
 
@@ -407,7 +407,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:5477](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L5477)
+[awtk.ts:5538](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L5538)
 
 ___
 
@@ -435,4 +435,4 @@ ___
 
 #### Defined in
 
-[awtk.ts:5438](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L5438)
+[awtk.ts:5499](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L5499)

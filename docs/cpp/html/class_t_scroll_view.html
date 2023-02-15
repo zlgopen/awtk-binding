@@ -107,6 +107,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a7fcbd408e0b4b84f575cb87bace176ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0896da08be4cbc94a459a87a015b6139"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#a0896da08be4cbc94a459a87a015b6139">SetSpeedScale</a> (float_t xspeed_scale, float_t yspeed_scale)</td></tr>
 <tr class="separator:a0896da08be4cbc94a459a87a015b6139"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ba1ab916f2c912587457cf3b090b067"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#a5ba1ab916f2c912587457cf3b090b067">SetSlideLimitRatio</a> (float_t slide_limit_ratio)</td></tr>
+<tr class="separator:a5ba1ab916f2c912587457cf3b090b067"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b6aaf84e688f14d720b347e0394aa3e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#a0b6aaf84e688f14d720b347e0394aa3e">ScrollTo</a> (int32_t xoffset_end, int32_t yoffset_end, int32_t duration)</td></tr>
 <tr class="separator:a0b6aaf84e688f14d720b347e0394aa3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac76ab9fc4c30206892437492f6444c6d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#ac76ab9fc4c30206892437492f6444c6d">ScrollDeltaTo</a> (int32_t xoffset_delta, int32_t yoffset_delta, int32_t duration)</td></tr>
@@ -133,6 +135,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:aa355c6c18da44cbea5f7becc8fbc1b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6578d85212a5fb9e71d67126c7c5dc6c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#a6578d85212a5fb9e71d67126c7c5dc6c">GetRecursive</a> () const</td></tr>
 <tr class="separator:a6578d85212a5fb9e71d67126c7c5dc6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00e7c10bf6af7f939943c809c5d7d3f5"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_scroll_view.html#a00e7c10bf6af7f939943c809c5d7d3f5">GetSlideLimitRatio</a> () const</td></tr>
+<tr class="separator:a00e7c10bf6af7f939943c809c5d7d3f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -275,6 +279,24 @@ static <a class="el" href="class_t_scroll_view.html">TScrollView</a>&#160;</td><
       </table>
 </div><div class="memdoc">
 <p>是否递归查找全部子控件。 </p>
+
+</div>
+</div>
+<a id="a00e7c10bf6af7f939943c809c5d7d3f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00e7c10bf6af7f939943c809c5d7d3f5">&#9670;&nbsp;</a></span>GetSlideLimitRatio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float_t TScrollView::GetSlideLimitRatio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>滑动到极限时可继续滑动区域的占比。 </p>
 
 </div>
 </div>
@@ -636,6 +658,32 @@ static <a class="el" href="class_t_scroll_view.html">TScrollView</a>&#160;</td><
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">recursive</td><td>是否递归查找全部子控件。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a5ba1ab916f2c912587457cf3b090b067"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ba1ab916f2c912587457cf3b090b067">&#9670;&nbsp;</a></span>SetSlideLimitRatio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TScrollView::SetSlideLimitRatio </td>
+          <td>(</td>
+          <td class="paramtype">float_t&#160;</td>
+          <td class="paramname"><em>slide_limit_ratio</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置滑动到极限时可继续滑动区域的占比。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">slide_limit_ratio</td><td>滑动到极限时可继续滑动区域的占比。</td></tr>
   </table>
   </dd>
 </dl>

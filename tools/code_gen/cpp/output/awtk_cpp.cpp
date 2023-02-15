@@ -723,18 +723,6 @@
    return ((event_t*)(this->nativeObj))->target;
  }
 
- ret_t TFontManager::UnloadFont(char* name, font_size_t size)  {
-   return font_manager_unload_font(((font_manager_t*)(this->nativeObj)), name, size);
- }
-
- ret_t TFontManager::ShrinkCache(uint32_t cache_size)  {
-   return font_manager_shrink_cache(((font_manager_t*)(this->nativeObj)), cache_size);
- }
-
- ret_t TFontManager::UnloadAll()  {
-   return font_manager_unload_all(((font_manager_t*)(this->nativeObj)));
- }
-
  uint32_t TIdle::Add(idle_func_t on_idle, void* ctx)  {
     return idle_add(on_idle, ctx);
  }
@@ -1177,6 +1165,10 @@
 
  ret_t TWidget::MoveResize(xy_t x, xy_t y, wh_t w, wh_t h)  {
    return widget_move_resize(((widget_t*)(this->nativeObj)), x, y, w, h);
+ }
+
+ ret_t TWidget::MoveResizeEx(xy_t x, xy_t y, wh_t w, wh_t h, bool update_layout)  {
+   return widget_move_resize_ex(((widget_t*)(this->nativeObj)), x, y, w, h, update_layout);
  }
 
  float_t TWidget::GetValue()  {
@@ -1780,7 +1772,15 @@
  }
 
  const char* TAssetInfo::GetName()  {
-    return asset_info_get_name(((asset_info_t*)(this->nativeObj)));
+    return asset_info_get_name(((const asset_info_t*)(this->nativeObj)));
+ }
+
+ bool TAssetInfo::IsInRom()  {
+    return asset_info_is_in_rom(((const asset_info_t*)(this->nativeObj)));
+ }
+
+ bool TAssetInfo::SetIsInRom(bool is_in_rom)  {
+    return asset_info_set_is_in_rom(((asset_info_t*)(this->nativeObj)), is_in_rom);
  }
 
  uint16_t TAssetInfo::GetType() const {
@@ -1791,8 +1791,8 @@
    return ((asset_info_t*)(this->nativeObj))->subtype;
  }
 
- uint8_t TAssetInfo::GetIsInRom() const {
-   return ((asset_info_t*)(this->nativeObj))->is_in_rom;
+ uint8_t TAssetInfo::GetFlags() const {
+   return ((asset_info_t*)(this->nativeObj))->flags;
  }
 
  uint32_t TAssetInfo::GetSize() const {
@@ -1801,10 +1801,6 @@
 
  uint32_t TAssetInfo::GetRefcount() const {
    return ((asset_info_t*)(this->nativeObj))->refcount;
- }
-
- char* TAssetInfo::GetName() const {
-   return ((asset_info_t*)(this->nativeObj))->name;
  }
 
  TColor TColor::Create(uint8_t r, uint8_t b, uint8_t g, uint8_t a)  {
@@ -2127,6 +2123,10 @@
    return ((key_event_t*)(this->nativeObj))->capslock;
  }
 
+ bool TKeyEvent::GetNumlock() const {
+   return ((key_event_t*)(this->nativeObj))->numlock;
+ }
+
  TCanvas TPaintEvent::GetC() const {
    return TCanvas(((paint_event_t*)(this->nativeObj))->c);
  }
@@ -2153,6 +2153,22 @@
 
  const char* TThemeChangeEvent::GetName() const {
    return ((theme_change_event_t*)(this->nativeObj))->name;
+ }
+
+ void* TSystemEvent::GetSdlEvent() const {
+   return ((system_event_t*)(this->nativeObj))->sdl_event;
+ }
+
+ ret_t TFontManager::UnloadFont(char* name, font_size_t size)  {
+   return font_manager_unload_font(((font_manager_t*)(this->nativeObj)), name, size);
+ }
+
+ ret_t TFontManager::ShrinkCache(uint32_t cache_size)  {
+   return font_manager_shrink_cache(((font_manager_t*)(this->nativeObj)), cache_size);
+ }
+
+ ret_t TFontManager::UnloadAll()  {
+   return font_manager_unload_all(((font_manager_t*)(this->nativeObj)));
  }
 
  ret_t TImageBase::SetImage(char* name)  {
@@ -2515,6 +2531,14 @@
    return file_browser_view_set_sort_by(((widget_t*)(this->nativeObj)), sort_by);
  }
 
+ ret_t TFileBrowserView::SetOddItemStyle(const char* odd_item_style)  {
+   return file_browser_view_set_odd_item_style(((widget_t*)(this->nativeObj)), odd_item_style);
+ }
+
+ ret_t TFileBrowserView::SetEvenItemStyle(const char* even_item_style)  {
+   return file_browser_view_set_even_item_style(((widget_t*)(this->nativeObj)), even_item_style);
+ }
+
  const char* TFileBrowserView::GetCwd()  {
     return file_browser_view_get_cwd(((widget_t*)(this->nativeObj)));
  }
@@ -2553,6 +2577,14 @@
 
  char* TFileBrowserView::GetSortBy() const {
    return ((file_browser_view_t*)(this->nativeObj))->sort_by;
+ }
+
+ char* TFileBrowserView::GetOddItemStyle() const {
+   return ((file_browser_view_t*)(this->nativeObj))->odd_item_style;
+ }
+
+ char* TFileBrowserView::GetEvenItemStyle() const {
+   return ((file_browser_view_t*)(this->nativeObj))->even_item_style;
  }
 
  TFileChooser TFileChooser::Create()  {
@@ -2849,6 +2881,10 @@
 
  char* TCandidates::GetButtonStyle() const {
    return ((candidates_t*)(this->nativeObj))->button_style;
+ }
+
+ bool TCandidates::GetEnablePreview() const {
+   return ((candidates_t*)(this->nativeObj))->enable_preview;
  }
 
  TWidget TLangIndicator::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -3155,6 +3191,10 @@
    return hscroll_label_set_ellipses(((widget_t*)(this->nativeObj)), ellipses);
  }
 
+ ret_t THscrollLabel::SetStopAtBegin(bool stop_at_begin)  {
+   return hscroll_label_set_stop_at_begin(((widget_t*)(this->nativeObj)), stop_at_begin);
+ }
+
  ret_t THscrollLabel::SetXoffset(int32_t xoffset)  {
    return hscroll_label_set_xoffset(((widget_t*)(this->nativeObj)), xoffset);
  }
@@ -3205,6 +3245,10 @@
 
  int32_t THscrollLabel::GetTextW() const {
    return ((hscroll_label_t*)(this->nativeObj))->text_w;
+ }
+
+ bool THscrollLabel::GetStopAtBegin() const {
+   return ((hscroll_label_t*)(this->nativeObj))->stop_at_begin;
  }
 
  TWidget TListItem::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -3319,6 +3363,10 @@
    return scroll_bar_set_animator_time(((widget_t*)(this->nativeObj)), animator_time);
  }
 
+ ret_t TScrollBar::HideByOpacityAnimation(int32_t duration, int32_t delay)  {
+   return scroll_bar_hide_by_opacity_animation(((widget_t*)(this->nativeObj)), duration, delay);
+ }
+
  int32_t TScrollBar::GetVirtualSize() const {
    return ((scroll_bar_t*)(this->nativeObj))->virtual_size;
  }
@@ -3387,6 +3435,10 @@
    return scroll_view_set_speed_scale(((widget_t*)(this->nativeObj)), xspeed_scale, yspeed_scale);
  }
 
+ ret_t TScrollView::SetSlideLimitRatio(float_t slide_limit_ratio)  {
+   return scroll_view_set_slide_limit_ratio(((widget_t*)(this->nativeObj)), slide_limit_ratio);
+ }
+
  ret_t TScrollView::ScrollTo(int32_t xoffset_end, int32_t yoffset_end, int32_t duration)  {
    return scroll_view_scroll_to(((widget_t*)(this->nativeObj)), xoffset_end, yoffset_end, duration);
  }
@@ -3437,6 +3489,10 @@
 
  bool TScrollView::GetRecursive() const {
    return ((scroll_view_t*)(this->nativeObj))->recursive;
+ }
+
+ float_t TScrollView::GetSlideLimitRatio() const {
+   return ((scroll_view_t*)(this->nativeObj))->slide_limit_ratio;
  }
 
  TWidget TSerialWidget::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -3515,6 +3571,26 @@
    return slide_menu_set_min_scale(((widget_t*)(this->nativeObj)), min_scale);
  }
 
+ ret_t TSlideMenu::SetSpacer(int32_t spacer)  {
+   return slide_menu_set_spacer(((widget_t*)(this->nativeObj)), spacer);
+ }
+
+ ret_t TSlideMenu::SetMenuW(const char* menu_w)  {
+   return slide_menu_set_menu_w(((widget_t*)(this->nativeObj)), menu_w);
+ }
+
+ ret_t TSlideMenu::SetClip(bool clip)  {
+   return slide_menu_set_clip(((widget_t*)(this->nativeObj)), clip);
+ }
+
+ ret_t TSlideMenu::ScrollToPrev()  {
+   return slide_menu_scroll_to_prev(((widget_t*)(this->nativeObj)));
+ }
+
+ ret_t TSlideMenu::ScrollToNext()  {
+   return slide_menu_scroll_to_next(((widget_t*)(this->nativeObj)));
+ }
+
  int32_t TSlideMenu::GetValue() const {
    return ((slide_menu_t*)(this->nativeObj))->value;
  }
@@ -3525,6 +3601,18 @@
 
  float_t TSlideMenu::GetMinScale() const {
    return ((slide_menu_t*)(this->nativeObj))->min_scale;
+ }
+
+ int32_t TSlideMenu::GetSpacer() const {
+   return ((slide_menu_t*)(this->nativeObj))->spacer;
+ }
+
+ char* TSlideMenu::GetMenuW() const {
+   return ((slide_menu_t*)(this->nativeObj))->menu_w;
+ }
+
+ bool TSlideMenu::GetClip() const {
+   return ((slide_menu_t*)(this->nativeObj))->clip;
  }
 
  TWidget TSlideIndicator::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -3775,6 +3863,14 @@
    return text_selector_set_enable_value_animator(((widget_t*)(this->nativeObj)), enable_value_animator);
  }
 
+ ret_t TTextSelector::SetMaskEasing(easing_type_t mask_easing)  {
+   return text_selector_set_mask_easing(((widget_t*)(this->nativeObj)), mask_easing);
+ }
+
+ ret_t TTextSelector::SetMaskAreaScale(float_t mask_area_scale)  {
+   return text_selector_set_mask_area_scale(((widget_t*)(this->nativeObj)), mask_area_scale);
+ }
+
  uint32_t TTextSelector::GetVisibleNr() const {
    return ((text_selector_t*)(this->nativeObj))->visible_nr;
  }
@@ -3805,6 +3901,14 @@
 
  bool TTextSelector::GetEnableValueAnimator() const {
    return ((text_selector_t*)(this->nativeObj))->enable_value_animator;
+ }
+
+ easing_type_t TTextSelector::GetMaskEasing() const {
+   return ((text_selector_t*)(this->nativeObj))->mask_easing;
+ }
+
+ float_t TTextSelector::GetMaskAreaScale() const {
+   return ((text_selector_t*)(this->nativeObj))->mask_area_scale;
  }
 
  TWidget TTimeClock::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -4007,12 +4111,20 @@
    return button_set_enable_long_press(((widget_t*)(this->nativeObj)), enable_long_press);
  }
 
+ ret_t TButton::SetEnablePreview(bool enable_preview)  {
+   return button_set_enable_preview(((widget_t*)(this->nativeObj)), enable_preview);
+ }
+
  int32_t TButton::GetRepeat() const {
    return ((button_t*)(this->nativeObj))->repeat;
  }
 
  bool TButton::GetEnableLongPress() const {
    return ((button_t*)(this->nativeObj))->enable_long_press;
+ }
+
+ bool TButton::GetEnablePreview() const {
+   return ((button_t*)(this->nativeObj))->enable_preview;
  }
 
  uint32_t TButton::GetLongPressTime() const {
@@ -4387,12 +4499,20 @@
    return pages_set_active(((widget_t*)(this->nativeObj)), index);
  }
 
+ ret_t TPages::SetAutoFocused(bool auto_focused)  {
+   return pages_set_auto_focused(((widget_t*)(this->nativeObj)), auto_focused);
+ }
+
  ret_t TPages::SetActiveByName(char* name)  {
    return pages_set_active_by_name(((widget_t*)(this->nativeObj)), name);
  }
 
  uint32_t TPages::GetActive() const {
    return ((pages_t*)(this->nativeObj))->active;
+ }
+
+ bool TPages::GetAutoFocused() const {
+   return ((pages_t*)(this->nativeObj))->auto_focused;
  }
 
  TWidget TProgressBar::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -4899,6 +5019,10 @@
    return combo_box_set_selected_index(((widget_t*)(this->nativeObj)), index);
  }
 
+ ret_t TComboBox::SetSelectedIndexByText(const char* text)  {
+   return combo_box_set_selected_index_by_text(((widget_t*)(this->nativeObj)), text);
+ }
+
  ret_t TComboBox::SetLocalizeOptions(bool localize_options)  {
    return combo_box_set_localize_options(((widget_t*)(this->nativeObj)), localize_options);
  }
@@ -4933,6 +5057,10 @@
 
  const char* TComboBox::GetTextValue()  {
     return combo_box_get_text(((widget_t*)(this->nativeObj)));
+ }
+
+ const char* TComboBox::GetTextOfSelected()  {
+    return combo_box_get_text_of_selected(((widget_t*)(this->nativeObj)));
  }
 
  char* TComboBox::GetOpenWindow() const {
@@ -5035,12 +5163,20 @@
    return spin_box_set_easy_touch_mode(((widget_t*)(this->nativeObj)), easy_touch_mode);
  }
 
+ ret_t TSpinBox::SetButtonPosition(const char* button_position)  {
+   return spin_box_set_button_position(((widget_t*)(this->nativeObj)), button_position);
+ }
+
  ret_t TSpinBox::SpinSetRepeat(int32_t repeat)  {
    return spin_set_repeat(((widget_t*)(this->nativeObj)), repeat);
  }
 
  bool TSpinBox::GetEasyTouchMode() const {
    return ((spin_box_t*)(this->nativeObj))->easy_touch_mode;
+ }
+
+ char* TSpinBox::GetButtonPosition() const {
+   return ((spin_box_t*)(this->nativeObj))->button_position;
  }
 
  TWidget TSystemBar::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {

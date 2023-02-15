@@ -108,6 +108,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a1b89e7c3d2905fd4536202dca5f0b83d inherit pub_methods_class_t_combo_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af51fbcbe90462444e7a5ef9925946edc inherit pub_methods_class_t_combo_box"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#af51fbcbe90462444e7a5ef9925946edc">SetSelectedIndex</a> (uint32_t index)</td></tr>
 <tr class="separator:af51fbcbe90462444e7a5ef9925946edc inherit pub_methods_class_t_combo_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab75b4e80180a100bd4578df429b83932 inherit pub_methods_class_t_combo_box"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#ab75b4e80180a100bd4578df429b83932">SetSelectedIndexByText</a> (const char *text)</td></tr>
+<tr class="separator:ab75b4e80180a100bd4578df429b83932 inherit pub_methods_class_t_combo_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24b9f2ab3ca04762bcd40898cef73260 inherit pub_methods_class_t_combo_box"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#a24b9f2ab3ca04762bcd40898cef73260">SetLocalizeOptions</a> (bool localize_options)</td></tr>
 <tr class="separator:a24b9f2ab3ca04762bcd40898cef73260 inherit pub_methods_class_t_combo_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0597efb9e21eeb0d956af9c49da9da85 inherit pub_methods_class_t_combo_box"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#a0597efb9e21eeb0d956af9c49da9da85">SetValue</a> (int32_t value)</td></tr>
@@ -126,6 +128,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ab60748113066984de4b2d0f0c9776130 inherit pub_methods_class_t_combo_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35132945ed744824e474ae06bf6adf98 inherit pub_methods_class_t_combo_box"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#a35132945ed744824e474ae06bf6adf98">GetTextValue</a> ()</td></tr>
 <tr class="separator:a35132945ed744824e474ae06bf6adf98 inherit pub_methods_class_t_combo_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec27c7cf85834b600cf18099480c3f13 inherit pub_methods_class_t_combo_box"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#aec27c7cf85834b600cf18099480c3f13">GetTextOfSelected</a> ()</td></tr>
+<tr class="separator:aec27c7cf85834b600cf18099480c3f13 inherit pub_methods_class_t_combo_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff202978e9c9b804f3f2d79ae9908525 inherit pub_methods_class_t_combo_box"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#aff202978e9c9b804f3f2d79ae9908525">GetOpenWindow</a> () const</td></tr>
 <tr class="separator:aff202978e9c9b804f3f2d79ae9908525 inherit pub_methods_class_t_combo_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2c263c1368a370cd26550b8079204af inherit pub_methods_class_t_combo_box"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_combo_box.html#ab2c263c1368a370cd26550b8079204af">GetThemeOfPopup</a> () const</td></tr>
@@ -276,7 +280,7 @@ static <a class="el" href="class_t_edit.html">TEdit</a>&#160;</td><td class="mem
 <tr class="separator:a26b20f85d8539f92dfaf0732e5cc8b14 inherit pub_static_methods_class_t_edit"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>可滚动的combo_box控件。 </p>
+<div class="textblock"><p>扩展combo_box控件。支持以下功能： 支持滚动。项目比较多时显示滚动条。 自动调整弹出窗口的宽度。根据最长文本自动调整弹出窗口的宽度。 支持分组显示。如果item的文本以"seperator."开头，视为一个分组开始，其后的文本为分组的标题。比如: "seperator.basic"，会创建一个basic为标题的分组。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="ada0718164e106c5a553688e225b51669"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ada0718164e106c5a553688e225b51669">&#9670;&nbsp;</a></span>Create()</h2>

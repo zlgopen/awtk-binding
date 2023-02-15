@@ -103,6 +103,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a8054ed2e854367edb9d3cfc6109b2648"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac13671cd9403125ad548d10daf05cc27"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_hscroll_label.html#ac13671cd9403125ad548d10daf05cc27">SetEllipses</a> (bool ellipses)</td></tr>
 <tr class="separator:ac13671cd9403125ad548d10daf05cc27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad777d94d796524f7909cf9d94ce5c483"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_hscroll_label.html#ad777d94d796524f7909cf9d94ce5c483">SetStopAtBegin</a> (bool stop_at_begin)</td></tr>
+<tr class="separator:ad777d94d796524f7909cf9d94ce5c483"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace7dca403bf68bc3350ca59cf3af35fc"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_hscroll_label.html#ace7dca403bf68bc3350ca59cf3af35fc">SetXoffset</a> (int32_t xoffset)</td></tr>
 <tr class="separator:ace7dca403bf68bc3350ca59cf3af35fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc3e558029cdec584a1a829e18439c3b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_hscroll_label.html#afc3e558029cdec584a1a829e18439c3b">Start</a> ()</td></tr>
@@ -129,6 +131,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a6cae9e3d4b65ee9a8489d0fd06771c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa37e022ce6bf60f48c0c11245d032fc7"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_hscroll_label.html#aa37e022ce6bf60f48c0c11245d032fc7">GetTextW</a> () const</td></tr>
 <tr class="separator:aa37e022ce6bf60f48c0c11245d032fc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04829d2d34b6f6e4a06a0d4057b3ac6e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_hscroll_label.html#a04829d2d34b6f6e4a06a0d4057b3ac6e">GetStopAtBegin</a> () const</td></tr>
+<tr class="separator:a04829d2d34b6f6e4a06a0d4057b3ac6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -353,6 +357,26 @@ static <a class="el" href="class_t_hscroll_label.html">THscrollLabel</a>&#160;</
       </table>
 </div><div class="memdoc">
 <p>滚动速度(px/ms)（设置后 duration 不生效）。 </p>
+
+</div>
+</div>
+<a id="a04829d2d34b6f6e4a06a0d4057b3ac6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04829d2d34b6f6e4a06a0d4057b3ac6e">&#9670;&nbsp;</a></span>GetStopAtBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool THscrollLabel::GetStopAtBegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>滚动完毕后停在文本开头(缺省FALSE)。 </p><blockquote class="doxtable">
+<p>注：loop为FALSE时才可用。 </p>
+</blockquote>
 
 </div>
 </div>
@@ -585,6 +609,32 @@ static <a class="el" href="class_t_hscroll_label.html">THscrollLabel</a>&#160;</
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">speed</td><td>滚动速度(px/ms)。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="ad777d94d796524f7909cf9d94ce5c483"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad777d94d796524f7909cf9d94ce5c483">&#9670;&nbsp;</a></span>SetStopAtBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t THscrollLabel::SetStopAtBegin </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>stop_at_begin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置stop_at_begin。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stop_at_begin</td><td>是否在滚动完毕后停在文本结尾。</td></tr>
   </table>
   </dd>
 </dl>

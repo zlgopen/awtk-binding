@@ -12,11 +12,12 @@ var searchData=
   ['empty_5fover_307',['EMPTY_OVER',['../enumawtk_1_1_t_widget_state.html#af87ce109284db7b9061ba88e4f120e6a',1,'awtk::TWidgetState']]],
   ['enable_308',['ENABLE',['../enumawtk_1_1_t_widget_prop.html#a01cd8c47fb2137b29d9ce448a94135d3',1,'awtk.TWidgetProp.ENABLE()'],['../classawtk_1_1_t_emitter.html#ac74c2f4cb04791b650ad9c54b2b13707',1,'awtk.TEmitter.enable()']]],
   ['enable_5flong_5fpress_309',['ENABLE_LONG_PRESS',['../enumawtk_1_1_t_widget_prop.html#a2b41b1e9d7627abb03d411aa6c7b2045',1,'awtk::TWidgetProp']]],
-  ['eos_310',['EOS',['../enumawtk_1_1_t_ret.html#ae871894a013cafd5a3579d5777f3d713',1,'awtk::TRet']]],
-  ['error_311',['ERROR',['../enumawtk_1_1_t_event_type.html#a347c42e6f5f44799f7a01835a5b6cd75',1,'awtk.TEventType.ERROR()'],['../enumawtk_1_1_t_widget_state.html#abab71056adc8489c58983defd2995cb5',1,'awtk.TWidgetState.ERROR()']]],
-  ['eval_312',['eval',['../classawtk_1_1_t_object.html#a6f8f65ee50225e5420aa14a1d6282021',1,'awtk::TObject']]],
-  ['even_5fbg_5fcolor_313',['EVEN_BG_COLOR',['../enumawtk_1_1_t_style_id.html#a89a499aef84f94869adececcd0b77b97',1,'awtk::TStyleId']]],
-  ['exec_314',['EXEC',['../enumawtk_1_1_t_widget_prop.html#a06fa13345601c200ef784b4e30077093',1,'awtk::TWidgetProp']]],
-  ['execute_315',['execute',['../classawtk_1_1_t_object.html#aa7cf12830497d90811f120c2509d8822',1,'awtk::TObject']]],
-  ['executebypath_316',['executeByPath',['../classawtk_1_1_t_object.html#a39295d72071bc1d180560e25fe642797',1,'awtk::TObject']]]
+  ['enable_5fpreview_310',['ENABLE_PREVIEW',['../enumawtk_1_1_t_widget_prop.html#a897cc8379e327c847bd240ab3b98b645',1,'awtk::TWidgetProp']]],
+  ['eos_311',['EOS',['../enumawtk_1_1_t_ret.html#ae871894a013cafd5a3579d5777f3d713',1,'awtk::TRet']]],
+  ['error_312',['ERROR',['../enumawtk_1_1_t_event_type.html#a347c42e6f5f44799f7a01835a5b6cd75',1,'awtk.TEventType.ERROR()'],['../enumawtk_1_1_t_widget_state.html#abab71056adc8489c58983defd2995cb5',1,'awtk.TWidgetState.ERROR()']]],
+  ['eval_313',['eval',['../classawtk_1_1_t_object.html#a6f8f65ee50225e5420aa14a1d6282021',1,'awtk::TObject']]],
+  ['even_5fbg_5fcolor_314',['EVEN_BG_COLOR',['../enumawtk_1_1_t_style_id.html#a89a499aef84f94869adececcd0b77b97',1,'awtk::TStyleId']]],
+  ['exec_315',['EXEC',['../enumawtk_1_1_t_widget_prop.html#a06fa13345601c200ef784b4e30077093',1,'awtk::TWidgetProp']]],
+  ['execute_316',['execute',['../classawtk_1_1_t_object.html#aa7cf12830497d90811f120c2509d8822',1,'awtk::TObject']]],
+  ['executebypath_317',['executeByPath',['../classawtk_1_1_t_object.html#a39295d72071bc1d180560e25fe642797',1,'awtk::TObject']]]
 ];

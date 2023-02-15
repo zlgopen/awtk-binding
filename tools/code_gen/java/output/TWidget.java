@@ -217,6 +217,22 @@ public class TWidget {
 
 
   /**
+   * 移动控件并调整控件的大小。
+   * 
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   * @param update_layout 是否更新布局
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet moveResizeEx(int x, int y, int w, int h, boolean update_layout)  {
+   return TRet.from(widget_move_resize_ex(this != null ? (this.nativeObj) : 0, x, y, w, h, update_layout));
+ }
+
+
+  /**
    * 获取控件的值。只是对widget\_get\_prop的包装，值的意义由子类控件决定。
    * 
    *
@@ -1771,6 +1787,7 @@ static private native int widget_move(long widget, int x, int y);
 static private native int widget_move_to_center(long widget);
 static private native int widget_resize(long widget, int w, int h);
 static private native int widget_move_resize(long widget, int x, int y, int w, int h);
+static private native int widget_move_resize_ex(long widget, int x, int y, int w, int h, boolean update_layout);
 static private native double widget_get_value(long widget);
 static private native int widget_set_value(long widget, double value);
 static private native int widget_add_value(long widget, double delta);

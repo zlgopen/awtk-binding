@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[awtk.ts:7579](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L7579)
+[awtk.ts:7694](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L7694)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:7597](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L7597)
+[awtk.ts:7712](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L7712)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:7567](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L7567)
+[awtk.ts:7682](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L7682)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:7591](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L7591)
+[awtk.ts:7706](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L7706)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:7555](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L7555)
+[awtk.ts:7670](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L7670)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:7561](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L7561)
+[awtk.ts:7676](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L7676)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:7585](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L7585)
+[awtk.ts:7700](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L7700)
 
 ___
 
@@ -111,4 +111,4 @@ OpenGL Texture, bitmap的id是有效的texture id。
 
 #### Defined in
 
-[awtk.ts:7573](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L7573)
+[awtk.ts:7688](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L7688)

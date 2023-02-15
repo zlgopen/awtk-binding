@@ -3145,6 +3145,12 @@ class TEventType:
   MODEL_CHANGE = EVT_MODEL_CHANGE()
 
   #
+  # SDL系统事件(system_event_t)。
+  #
+  #
+  SYSTEM = EVT_SYSTEM()
+
+  #
   # event queue其它请求编号起始值。
   #
   #
@@ -3356,66 +3362,6 @@ class TEvent(object):
   @property
   def target(self):
     return event_t_get_prop_target(self.nativeObj)
-
-
-#
-# 字体管理器，负责字体的加载和缓存管理。
-#(如果使用nanovg，字体由nanovg内部管理)
-#
-#
-class TFontManager(object):
-
-  def __new__(cls, native_obj=0):
-      if native_obj == 0:
-          return None
-      else:
-          if super().__new__ == object.__new__:
-              instance = super().__new__(cls)
-          else:
-              instance = super().__new__(cls, native_obj)
-          instance.nativeObj = native_obj
-          return instance
-    
-  def __init__(self, nativeObj):
-    self.nativeObj = nativeObj
-
-
-  def __eq__(self, other: 'TWidget'):
-      if other is None:
-          return self.nativeObj == 0
-      return self.nativeObj == other.nativeObj
-    
-  #
-  # 卸载指定的字体。
-  # 
-  # @param name 字体名，为NULL时使用缺省字体。
-  # @param size 字体的大小(矢量字体指定为0即可)。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def unload_font(self, name, size): 
-      return font_manager_unload_font(awtk_get_native_obj(self), name, size)
-
-
-  #
-  # 清除最久没有被使用的缓冲字模。
-  # 
-  # @param cache_size 每种字体保留缓存字模的个数。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def shrink_cache(self, cache_size): 
-      return font_manager_shrink_cache(awtk_get_native_obj(self), cache_size)
-
-
-  #
-  # 卸载全部字体。
-  # 
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def unload_all(self): 
-      return font_manager_unload_all(awtk_get_native_obj(self))
 
 
 #
@@ -4596,6 +4542,108 @@ class TKeyCode:
   #
   #
   KEY_CANCEL = TK_KEY_CANCEL()
+
+  #
+  # TK_KEY_KP_DIVIDE
+  #
+  #
+  KEY_KP_DIVIDE = TK_KEY_KP_DIVIDE()
+
+  #
+  # TK_KEY_KP_MULTIPLY
+  #
+  #
+  KEY_KP_MULTIPLY = TK_KEY_KP_MULTIPLY()
+
+  #
+  # TK_KEY_KP_MINUS
+  #
+  #
+  KEY_KP_MINUS = TK_KEY_KP_MINUS()
+
+  #
+  # TK_KEY_KP_PLUS
+  #
+  #
+  KEY_KP_PLUS = TK_KEY_KP_PLUS()
+
+  #
+  # TK_KEY_KP_ENTER
+  #
+  #
+  KEY_KP_ENTER = TK_KEY_KP_ENTER()
+
+  #
+  # TK_KEY_KP_1
+  #
+  #
+  KEY_KP_1 = TK_KEY_KP_1()
+
+  #
+  # TK_KEY_KP_2
+  #
+  #
+  KEY_KP_2 = TK_KEY_KP_2()
+
+  #
+  # TK_KEY_KP_3
+  #
+  #
+  KEY_KP_3 = TK_KEY_KP_3()
+
+  #
+  # TK_KEY_KP_4
+  #
+  #
+  KEY_KP_4 = TK_KEY_KP_4()
+
+  #
+  # TK_KEY_KP_5
+  #
+  #
+  KEY_KP_5 = TK_KEY_KP_5()
+
+  #
+  # TK_KEY_KP_6
+  #
+  #
+  KEY_KP_6 = TK_KEY_KP_6()
+
+  #
+  # TK_KEY_KP_7
+  #
+  #
+  KEY_KP_7 = TK_KEY_KP_7()
+
+  #
+  # TK_KEY_KP_8
+  #
+  #
+  KEY_KP_8 = TK_KEY_KP_8()
+
+  #
+  # TK_KEY_KP_9
+  #
+  #
+  KEY_KP_9 = TK_KEY_KP_9()
+
+  #
+  # TK_KEY_KP_0
+  #
+  #
+  KEY_KP_0 = TK_KEY_KP_0()
+
+  #
+  # TK_KEY_KP_PERIOD
+  #
+  #
+  KEY_KP_PERIOD = TK_KEY_KP_PERIOD()
+
+  #
+  # TK_KEY_NUMLOCKCLEAR
+  #
+  #
+  KEY_NUMLOCKCLEAR = TK_KEY_NUMLOCKCLEAR()
 
   #
   # TK_KEY_WHEEL
@@ -6902,6 +6950,12 @@ class TWidgetProp:
   LOOP = WIDGET_PROP_LOOP()
 
   #
+  # 是否正在运行(播放)。
+  #
+  #
+  RUNNING = WIDGET_PROP_RUNNING()
+
+  #
   # 是否启用自动更正功能。
   #
   #
@@ -7068,6 +7122,12 @@ class TWidgetProp:
   #
   #
   ENABLE_LONG_PRESS = WIDGET_PROP_ENABLE_LONG_PRESS()
+
+  #
+  # 是否启用预览。
+  #
+  #
+  ENABLE_PREVIEW = WIDGET_PROP_ENABLE_PREVIEW()
 
   #
   # 是否启用点击穿透。
@@ -8201,6 +8261,21 @@ class TWidget(object):
   #
   def move_resize(self, x, y, w, h): 
       return widget_move_resize(awtk_get_native_obj(self), x, y, w, h)
+
+
+  #
+  # 移动控件并调整控件的大小。
+  # 
+  # @param x x坐标
+  # @param y y坐标
+  # @param w 宽度
+  # @param h 高度
+  # @param update_layout 是否更新布局
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def move_resize_ex(self, x, y, w, h, update_layout): 
+      return widget_move_resize_ex(awtk_get_native_obj(self), x, y, w, h, update_layout)
 
 
   #
@@ -10143,6 +10218,27 @@ class TAssetInfo(object):
 
 
   #
+  # 资源是否在ROM中。
+  # 
+  #
+  # @return 返回 TRUE 为在 ROM 中，返回 FALSE 则不在。
+  #
+  def is_in_rom(self): 
+      return asset_info_is_in_rom(awtk_get_native_obj(self))
+
+
+  #
+  # 设置资源是否在ROM中的标记位。
+  # 
+  # @param is_in_rom 资源是否在ROM中。
+  #
+  # @return 返回 TRUE 为在 ROM 中，返回 FALSE 则不在。
+  #
+  def set_is_in_rom(self, is_in_rom): 
+      return asset_info_set_is_in_rom(awtk_get_native_obj(self), is_in_rom)
+
+
+  #
   # 类型。
   #
   #
@@ -10161,12 +10257,12 @@ class TAssetInfo(object):
 
 
   #
-  # 资源是否在ROM中。
+  # 资源标志。
   #
   #
   @property
-  def is_in_rom(self):
-    return asset_info_t_get_prop_is_in_rom(self.nativeObj)
+  def flags(self):
+    return asset_info_t_get_prop_flags(self.nativeObj)
 
 
   #
@@ -10186,15 +10282,6 @@ class TAssetInfo(object):
   @property
   def refcount(self):
     return asset_info_t_get_prop_refcount(self.nativeObj)
-
-
-  #
-  # 名称。
-  #
-  #
-  @property
-  def name(self):
-    return asset_info_t_get_prop_name(self.nativeObj)
 
 
 #
@@ -12748,6 +12835,15 @@ class TKeyEvent (TEvent):
     return key_event_t_get_prop_capslock(self.nativeObj)
 
 
+  #
+  # numlock键是否按下。
+  #
+  #
+  @property
+  def numlock(self):
+    return key_event_t_get_prop_numlock(self.nativeObj)
+
+
 #
 # 绘制事件。
 #
@@ -12961,6 +13057,113 @@ class TThemeChangeEvent (TEvent):
   @property
   def name(self):
     return theme_change_event_t_get_prop_name(self.nativeObj)
+
+
+#
+# 系统事件。
+#
+#
+class TSystemEvent (TEvent):
+
+  def __new__(cls, native_obj=0):
+      if native_obj == 0:
+          return None
+      else:
+          if super().__new__ == object.__new__:
+              instance = super().__new__(cls)
+          else:
+              instance = super().__new__(cls, native_obj)
+          instance.nativeObj = native_obj
+          return instance
+    
+  def __init__(self, nativeObj):
+    super(TSystemEvent, self).__init__(nativeObj)
+
+
+  def __eq__(self, other: 'TWidget'):
+      if other is None:
+          return self.nativeObj == 0
+      return self.nativeObj == other.nativeObj
+    
+  #
+  # 把event对象转system_event_t对象。主要给脚本语言使用。
+  # 
+  # @param event event对象。
+  #
+  # @return event 对象。
+  #
+  @classmethod
+  def cast(cls, event): 
+      return  TSystemEvent(system_event_cast(awtk_get_native_obj(event)))
+
+
+  #
+  # SDL_Event。
+  #
+  #
+  @property
+  def sdl_event(self):
+    return system_event_t_get_prop_sdl_event(self.nativeObj)
+
+
+#
+# 字体管理器，负责字体的加载和缓存管理。
+#(如果使用nanovg，字体由nanovg内部管理)
+#
+#
+class TFontManager (TEmitter):
+
+  def __new__(cls, native_obj=0):
+      if native_obj == 0:
+          return None
+      else:
+          if super().__new__ == object.__new__:
+              instance = super().__new__(cls)
+          else:
+              instance = super().__new__(cls, native_obj)
+          instance.nativeObj = native_obj
+          return instance
+    
+  def __init__(self, nativeObj):
+    super(TFontManager, self).__init__(nativeObj)
+
+
+  def __eq__(self, other: 'TWidget'):
+      if other is None:
+          return self.nativeObj == 0
+      return self.nativeObj == other.nativeObj
+    
+  #
+  # 卸载指定的字体。
+  # 
+  # @param name 字体名，为NULL时使用缺省字体。
+  # @param size 字体的大小(矢量字体指定为0即可)。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def unload_font(self, name, size): 
+      return font_manager_unload_font(awtk_get_native_obj(self), name, size)
+
+
+  #
+  # 清除最久没有被使用的缓冲字模。
+  # 
+  # @param cache_size 每种字体保留缓存字模的个数。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def shrink_cache(self, cache_size): 
+      return font_manager_shrink_cache(awtk_get_native_obj(self), cache_size)
+
+
+  #
+  # 卸载全部字体。
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def unload_all(self): 
+      return font_manager_unload_all(awtk_get_native_obj(self))
 
 
 #
@@ -14493,6 +14696,28 @@ class TFileBrowserView (TWidget):
 
 
   #
+  # 设置 奇数项样式。
+  # 
+  # @param odd_item_style 奇数项样式。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_odd_item_style(self, odd_item_style): 
+      return file_browser_view_set_odd_item_style(awtk_get_native_obj(self), odd_item_style)
+
+
+  #
+  # 设置 偶数项样式。
+  # 
+  # @param even_item_style 奇数项样式。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_even_item_style(self, even_item_style): 
+      return file_browser_view_set_even_item_style(awtk_get_native_obj(self), even_item_style)
+
+
+  #
   # 获取当前路径。
   # 
   #
@@ -14615,6 +14840,32 @@ class TFileBrowserView (TWidget):
   @sort_by.setter
   def sort_by(self, v):
     file_browser_view_set_sort_by(self.nativeObj, v)
+
+
+  #
+  # 奇数项样式。
+  #
+  #
+  @property
+  def odd_item_style(self):
+    return file_browser_view_t_get_prop_odd_item_style(self.nativeObj)
+
+  @odd_item_style.setter
+  def odd_item_style(self, v):
+    file_browser_view_set_odd_item_style(self.nativeObj, v)
+
+
+  #
+  # 偶数项样式。
+  #
+  #
+  @property
+  def even_item_style(self):
+    return file_browser_view_t_get_prop_even_item_style(self.nativeObj)
+
+  @even_item_style.setter
+  def even_item_style(self, v):
+    file_browser_view_set_even_item_style(self.nativeObj, v)
 
 
 #
@@ -15861,6 +16112,15 @@ class TCandidates (TWidget):
     candidates_set_button_style(self.nativeObj, v)
 
 
+  #
+  # 是否启用候选字预览。
+  #
+  #
+  @property
+  def enable_preview(self):
+    return candidates_t_get_prop_enable_preview(self.nativeObj)
+
+
 #
 # 输入法语言指示器。
 #
@@ -16813,7 +17073,7 @@ class TProgressCircle (TWidget):
 
 
   #
-  # 线帽类型(round:圆头，square:方头)。
+  # 线帽类型(round:圆头，square:方头，butt:平头)。
   #
   #
   @property
@@ -17210,6 +17470,17 @@ class THscrollLabel (TWidget):
 
 
   #
+  # 设置stop_at_begin。
+  # 
+  # @param stop_at_begin 是否在滚动完毕后停在文本结尾。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_stop_at_begin(self, stop_at_begin): 
+      return hscroll_label_set_stop_at_begin(awtk_get_native_obj(self), stop_at_begin)
+
+
+  #
   # 设置x偏移(一般无需用户调用)。。
   # 
   # @param xoffset x偏移。
@@ -17376,6 +17647,20 @@ class THscrollLabel (TWidget):
   @property
   def text_w(self):
     return hscroll_label_t_get_prop_text_w(self.nativeObj)
+
+
+  #
+  # 滚动完毕后停在文本开头(缺省FALSE)。
+  #> 注：loop为FALSE时才可用。
+  #
+  #
+  @property
+  def stop_at_begin(self):
+    return hscroll_label_t_get_prop_stop_at_begin(self.nativeObj)
+
+  @stop_at_begin.setter
+  def stop_at_begin(self, v):
+    hscroll_label_set_stop_at_begin(self.nativeObj, v)
 
 
 #
@@ -18035,6 +18320,18 @@ class TScrollBar (TWidget):
 
 
   #
+  # 通过动画隐藏滚动条。
+  # 
+  # @param duration 动画持续时间。
+  # @param delay 动画执行时间。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def hide_by_opacity_animation(self, duration, delay): 
+      return scroll_bar_hide_by_opacity_animation(awtk_get_native_obj(self), duration, delay)
+
+
+  #
   # 虚拟宽度或高度。
   #
   #
@@ -18296,6 +18593,17 @@ class TScrollView (TWidget):
 
 
   #
+  # 设置滑动到极限时可继续滑动区域的占比。
+  # 
+  # @param slide_limit_ratio 滑动到极限时可继续滑动区域的占比。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_slide_limit_ratio(self, slide_limit_ratio): 
+      return scroll_view_set_slide_limit_ratio(awtk_get_native_obj(self), slide_limit_ratio)
+
+
+  #
   # 滚动到指定的偏移量。
   # 
   # @param xoffset_end x偏移量。
@@ -18446,6 +18754,19 @@ class TScrollView (TWidget):
   @recursive.setter
   def recursive(self, v):
     scroll_view_set_recursive(self.nativeObj, v)
+
+
+  #
+  # 滑动到极限时可继续滑动区域的占比。
+  #
+  #
+  @property
+  def slide_limit_ratio(self):
+    return scroll_view_t_get_prop_slide_limit_ratio(self.nativeObj)
+
+  @slide_limit_ratio.setter
+  def slide_limit_ratio(self, v):
+    scroll_view_set_slide_limit_ratio(self.nativeObj, v)
 
 
 #
@@ -18819,6 +19140,59 @@ class TSlideMenu (TWidget):
 
 
   #
+  # 设置菜单项之间的间距。
+  # 
+  # @param spacer 菜单项之间的间距。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_spacer(self, spacer): 
+      return slide_menu_set_spacer(awtk_get_native_obj(self), spacer)
+
+
+  #
+  # 设置菜单项的宽度。
+  # 
+  # @param menu_w 菜单项的宽度。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)(空字符串则使用控件高度)
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_menu_w(self, menu_w): 
+      return slide_menu_set_menu_w(awtk_get_native_obj(self), menu_w)
+
+
+  #
+  # 设置是否动态裁剪菜单项。
+  # 
+  # @param clip 是否动态裁剪菜单项。(关闭后，如果显示偶数项，左边会多一项)
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_clip(self, clip): 
+      return slide_menu_set_clip(awtk_get_native_obj(self), clip)
+
+
+  #
+  # 切换至上一项。
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def scroll_to_prev(self): 
+      return slide_menu_scroll_to_prev(awtk_get_native_obj(self))
+
+
+  #
+  # 切换至下一项。
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def scroll_to_next(self): 
+      return slide_menu_scroll_to_next(awtk_get_native_obj(self))
+
+
+  #
   # 值。代表当前选中项的索引。
   #
   #
@@ -18855,6 +19229,45 @@ class TSlideMenu (TWidget):
   @min_scale.setter
   def min_scale(self, v):
     slide_menu_set_min_scale(self.nativeObj, v)
+
+
+  #
+  # 菜单项之间的间距。
+  #
+  #
+  @property
+  def spacer(self):
+    return slide_menu_t_get_prop_spacer(self.nativeObj)
+
+  @spacer.setter
+  def spacer(self, v):
+    slide_menu_set_spacer(self.nativeObj, v)
+
+
+  #
+  # 菜单项的宽度(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)(空字符串则使用控件高度)。
+  #
+  #
+  @property
+  def menu_w(self):
+    return slide_menu_t_get_prop_menu_w(self.nativeObj)
+
+  @menu_w.setter
+  def menu_w(self, v):
+    slide_menu_set_menu_w(self.nativeObj, v)
+
+
+  #
+  # 是否动态裁剪菜单项(默认裁剪，不裁剪时，如果显示偶数项，左边会多一项)。
+  #
+  #
+  @property
+  def clip(self):
+    return slide_menu_t_get_prop_clip(self.nativeObj)
+
+  @clip.setter
+  def clip(self, v):
+    slide_menu_set_clip(self.nativeObj, v)
 
 
 #
@@ -19892,6 +20305,28 @@ class TTextSelector (TWidget):
 
 
   #
+  # 设置绘制蒙版的变化趋势。
+  # 
+  # @param mask_easing 绘制蒙版的变化趋势。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_mask_easing(self, mask_easing): 
+      return text_selector_set_mask_easing(awtk_get_native_obj(self), mask_easing)
+
+
+  #
+  # 设置绘制蒙版的区域占比（范围0~1）。
+  # 
+  # @param mask_area_scale 绘制蒙版的区域占比（范围0~1）。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_mask_area_scale(self, mask_area_scale): 
+      return text_selector_set_mask_area_scale(awtk_get_native_obj(self), mask_area_scale)
+
+
+  #
   # 可见的选项数量(只能是1或者3或者5，缺省为5)。
   #
   #
@@ -19999,6 +20434,32 @@ class TTextSelector (TWidget):
   @enable_value_animator.setter
   def enable_value_animator(self, v):
     text_selector_set_enable_value_animator(self.nativeObj, v)
+
+
+  #
+  # 绘制蒙版的变化趋势。
+  #
+  #
+  @property
+  def mask_easing(self):
+    return text_selector_t_get_prop_mask_easing(self.nativeObj)
+
+  @mask_easing.setter
+  def mask_easing(self, v):
+    text_selector_set_mask_easing(self.nativeObj, v)
+
+
+  #
+  # 绘制蒙版的区域占比（范围0~1）。
+  #
+  #
+  @property
+  def mask_area_scale(self):
+    return text_selector_t_get_prop_mask_area_scale(self.nativeObj)
+
+  @mask_area_scale.setter
+  def mask_area_scale(self, v):
+    text_selector_set_mask_area_scale(self.nativeObj, v)
 
 
 #
@@ -21152,6 +21613,17 @@ class TButton (TWidget):
 
 
   #
+  # 设置是否启用预览。
+  # 
+  # @param enable_preview 是否启用预览。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_enable_preview(self, enable_preview): 
+      return button_set_enable_preview(awtk_get_native_obj(self), enable_preview)
+
+
+  #
   # 重复触发EVT\_CLICK事件的时间间隔。
   #
   #为0则不重复触发EVT\_CLICK事件。
@@ -21180,6 +21652,19 @@ class TButton (TWidget):
   @enable_long_press.setter
   def enable_long_press(self, v):
     button_set_enable_long_press(self.nativeObj, v)
+
+
+  #
+  # 是否启用预览(主要用于软键盘)。
+  #
+  #
+  @property
+  def enable_preview(self):
+    return button_t_get_prop_enable_preview(self.nativeObj)
+
+  @enable_preview.setter
+  def enable_preview(self, v):
+    button_set_enable_preview(self.nativeObj, v)
 
 
   #
@@ -23327,6 +23812,17 @@ class TPages (TWidget):
 
 
   #
+  # 设置切换界面时是否自动聚焦。
+  # 
+  # @param auto_focused 切换界面时是否自动聚焦。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_auto_focused(self, auto_focused): 
+      return pages_set_auto_focused(awtk_get_native_obj(self), auto_focused)
+
+
+  #
   # 通过页面的名字设置当前的Page。
   # 
   # @param name 当前Page的名字。
@@ -23348,6 +23844,19 @@ class TPages (TWidget):
   @active.setter
   def active(self, v):
     pages_set_active(self.nativeObj, v)
+
+
+  #
+  # 选择切换界面时是否自动聚焦上一次保存的焦点。（默认为TRUE）
+  #
+  #
+  @property
+  def auto_focused(self):
+    return pages_t_get_prop_auto_focused(self.nativeObj)
+
+  @auto_focused.setter
+  def auto_focused(self, v):
+    pages_set_auto_focused(self.nativeObj, v)
 
 
 #
@@ -24660,9 +25169,10 @@ class TDialog (TWindowBase):
   # 模态显示对话框。
   #dialog_modal返回后，dialog对象将在下一个idle函数中回收。
   #也就是在dialog_modal调用完成后仍然可以访问dialog中控件，直到本次事件结束。
+  #调用该函数会使线程进入阻塞状态，需要调用dialog_quit来解除阻塞。
   # 
   #
-  # @return 返回退出码。
+  # @return 返回退出码，值为dialog_quit函数中传入的参数。
   #
   def modal(self): 
       return dialog_modal(awtk_get_native_obj(self))
@@ -26335,6 +26845,17 @@ class TComboBox (TEdit):
 
 
   #
+  # 根据文本设置当前选中的选项。
+  # 
+  # @param text 原生(非翻译的文本)。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_selected_index_by_text(self, text): 
+      return combo_box_set_selected_index_by_text(awtk_get_native_obj(self), text)
+
+
+  #
   # 设置是否本地化(翻译)选项。
   # 
   # @param localize_options 是否本地化(翻译)选项。
@@ -26423,13 +26944,23 @@ class TComboBox (TEdit):
 
 
   #
-  # 获取combo_box的文本。
+  # 获取combo_box的文本(可能是翻译后的文本)。
   # 
   #
   # @return 返回文本。
   #
   def get_text_value(self): 
       return combo_box_get_text(awtk_get_native_obj(self))
+
+
+  #
+  # 获取combo_box当前选中项目的文本(原生非翻译的文本)。
+  # 
+  #
+  # @return 返回文本。
+  #
+  def get_text_of_selected(self): 
+      return combo_box_get_text_of_selected(awtk_get_native_obj(self))
 
 
   #
@@ -27088,6 +27619,17 @@ class TSpinBox (TEdit):
 
 
   #
+  # 设置按钮位置样式。
+  # 
+  # @param button_position 按钮位置样式。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_button_position(self, button_position): 
+      return spin_box_set_button_position(awtk_get_native_obj(self), button_position)
+
+
+  #
   # 设置连击的时间间隔。
   #备注：时间间隔越低，速度越快。
   # 
@@ -27115,6 +27657,23 @@ class TSpinBox (TEdit):
   @easy_touch_mode.setter
   def easy_touch_mode(self, v):
     spin_box_set_easy_touch_mode(self.nativeObj, v)
+
+
+  #
+  # 按钮位置样式选择，优先级高于easy_touch_mode，各模式对应样式如下,默认为none。
+  #none：按照easy_touch_mode选择样式
+  #default：inc按钮在右上角，dec按钮在右下角。
+  #left_right：dec按钮在左边，inc按钮在右边。
+  #top_bottom：inc按钮在顶部，dec按钮在底部。
+  #
+  #
+  @property
+  def button_position(self):
+    return spin_box_t_get_prop_button_position(self.nativeObj)
+
+  @button_position.setter
+  def button_position(self, v):
+    spin_box_set_button_position(self.nativeObj, v)
 
 
 #
@@ -27217,7 +27776,10 @@ class TSystemBar (TWindowBase):
 
 
 #
-# 可滚动的combo_box控件。
+# 扩展combo_box控件。支持以下功能：
+#* 支持滚动。项目比较多时显示滚动条。
+#* 自动调整弹出窗口的宽度。根据最长文本自动调整弹出窗口的宽度。
+#* 支持分组显示。如果item的文本以"seperator."开头，视为一个分组开始，其后的文本为分组的标题。比如: "seperator.basic"，会创建一个basic为标题的分组。
 #
 #
 class TComboBoxEx (TComboBox):

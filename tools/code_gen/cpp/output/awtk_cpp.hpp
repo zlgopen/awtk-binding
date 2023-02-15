@@ -2045,66 +2045,6 @@ public:
 
 
 /**
- * 字体管理器，负责字体的加载和缓存管理。
- *(如果使用nanovg，字体由nanovg内部管理)
- *
- */
-class TFontManager { 
-public:
-  //nativeObj is public for internal use only.
-  font_manager_t* nativeObj;
-
-  TFontManager(font_manager_t* nativeObj) {
-    this->nativeObj = nativeObj;
-  }
-
-  TFontManager() {
-    this->nativeObj = (font_manager_t*)NULL;
-  }
-
-  TFontManager(const font_manager_t* nativeObj) {
-    this->nativeObj = (font_manager_t*)nativeObj;
-  }
-
-  static TFontManager Cast(font_manager_t* nativeObj) {
-    return TFontManager(nativeObj);
-  }
-
-  static TFontManager Cast(const font_manager_t* nativeObj) {
-    return TFontManager((font_manager_t*)nativeObj);
-  }
-
-
-  /**
-   * 卸载指定的字体。
-   * 
-   * @param name 字体名，为NULL时使用缺省字体。
-   * @param size 字体的大小(矢量字体指定为0即可)。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t UnloadFont(char* name, font_size_t size) ;
-
-  /**
-   * 清除最久没有被使用的缓冲字模。
-   * 
-   * @param cache_size 每种字体保留缓存字模的个数。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t ShrinkCache(uint32_t cache_size) ;
-
-  /**
-   * 卸载全部字体。
-   * 
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t UnloadAll() ;
-};
-
-
-/**
  * idle可以看作是duration为0的定时器。
  *
  *> idle可以用来实现一些异步处理。
@@ -3478,6 +3418,19 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t MoveResize(xy_t x, xy_t y, wh_t w, wh_t h) ;
+
+  /**
+   * 移动控件并调整控件的大小。
+   * 
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   * @param update_layout 是否更新布局
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t MoveResizeEx(xy_t x, xy_t y, wh_t w, wh_t h, bool update_layout) ;
 
   /**
    * 获取控件的值。只是对widget\_get\_prop的包装，值的意义由子类控件决定。
@@ -4903,6 +4856,23 @@ public:
   const char* GetName() ;
 
   /**
+   * 资源是否在ROM中。
+   * 
+   *
+   * @return 返回 TRUE 为在 ROM 中，返回 FALSE 则不在。
+   */
+  bool IsInRom() ;
+
+  /**
+   * 设置资源是否在ROM中的标记位。
+   * 
+   * @param is_in_rom 资源是否在ROM中。
+   *
+   * @return 返回 TRUE 为在 ROM 中，返回 FALSE 则不在。
+   */
+  bool SetIsInRom(bool is_in_rom) ;
+
+  /**
    * 类型。
    *
    */
@@ -4915,10 +4885,10 @@ public:
   uint8_t GetSubtype() const;
 
   /**
-   * 资源是否在ROM中。
+   * 资源标志。
    *
    */
-  uint8_t GetIsInRom() const;
+  uint8_t GetFlags() const;
 
   /**
    * 大小。
@@ -4932,12 +4902,6 @@ public:
    *
    */
   uint32_t GetRefcount() const;
-
-  /**
-   * 名称。
-   *
-   */
-  char* GetName() const;
 };
 
 
@@ -6079,6 +6043,12 @@ public:
    *
    */
   bool GetCapslock() const;
+
+  /**
+   * numlock键是否按下。
+   *
+   */
+  bool GetNumlock() const;
 };
 
 
@@ -6261,6 +6231,110 @@ public:
    *
    */
   const char* GetName() const;
+};
+
+
+/**
+ * 系统事件。
+ *
+ */
+class TSystemEvent : public TEvent { 
+public:
+  TSystemEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  }
+
+  TSystemEvent() {
+    this->nativeObj = (event_t*)NULL;
+  }
+
+  TSystemEvent(const system_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
+  }
+
+  static TSystemEvent Cast(event_t* nativeObj) {
+    return TSystemEvent(nativeObj);
+  }
+
+  static TSystemEvent Cast(const event_t* nativeObj) {
+    return TSystemEvent((event_t*)nativeObj);
+  }
+
+  static TSystemEvent Cast(TEvent& obj) {
+    return TSystemEvent(obj.nativeObj);
+  }
+
+  static TSystemEvent Cast(const TEvent& obj) {
+    return TSystemEvent(obj.nativeObj);
+  }
+
+
+  /**
+   * SDL_Event。
+   *
+   */
+  void* GetSdlEvent() const;
+};
+
+
+/**
+ * 字体管理器，负责字体的加载和缓存管理。
+ *(如果使用nanovg，字体由nanovg内部管理)
+ *
+ */
+class TFontManager : public TEmitter { 
+public:
+  TFontManager(emitter_t* nativeObj) : TEmitter(nativeObj) {
+  }
+
+  TFontManager() {
+    this->nativeObj = (emitter_t*)NULL;
+  }
+
+  TFontManager(const font_manager_t* nativeObj) : TEmitter((emitter_t*)nativeObj) {
+  }
+
+  static TFontManager Cast(emitter_t* nativeObj) {
+    return TFontManager(nativeObj);
+  }
+
+  static TFontManager Cast(const emitter_t* nativeObj) {
+    return TFontManager((emitter_t*)nativeObj);
+  }
+
+  static TFontManager Cast(TEmitter& obj) {
+    return TFontManager(obj.nativeObj);
+  }
+
+  static TFontManager Cast(const TEmitter& obj) {
+    return TFontManager(obj.nativeObj);
+  }
+
+
+  /**
+   * 卸载指定的字体。
+   * 
+   * @param name 字体名，为NULL时使用缺省字体。
+   * @param size 字体的大小(矢量字体指定为0即可)。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t UnloadFont(char* name, font_size_t size) ;
+
+  /**
+   * 清除最久没有被使用的缓冲字模。
+   * 
+   * @param cache_size 每种字体保留缓存字模的个数。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t ShrinkCache(uint32_t cache_size) ;
+
+  /**
+   * 卸载全部字体。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t UnloadAll() ;
 };
 
 
@@ -7468,6 +7542,24 @@ public:
   ret_t SetSortBy(const char* sort_by) ;
 
   /**
+   * 设置 奇数项样式。
+   * 
+   * @param odd_item_style 奇数项样式。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetOddItemStyle(const char* odd_item_style) ;
+
+  /**
+   * 设置 偶数项样式。
+   * 
+   * @param even_item_style 奇数项样式。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetEvenItemStyle(const char* even_item_style) ;
+
+  /**
    * 获取当前路径。
    * 
    *
@@ -7536,6 +7628,18 @@ public:
    *
    */
   char* GetSortBy() const;
+
+  /**
+   * 奇数项样式。
+   *
+   */
+  char* GetOddItemStyle() const;
+
+  /**
+   * 偶数项样式。
+   *
+   */
+  char* GetEvenItemStyle() const;
 };
 
 
@@ -8484,6 +8588,12 @@ public:
    *
    */
   char* GetButtonStyle() const;
+
+  /**
+   * 是否启用候选字预览。
+   *
+   */
+  bool GetEnablePreview() const;
 };
 
 
@@ -9215,7 +9325,7 @@ public:
   uint32_t GetLineWidth() const;
 
   /**
-   * 线帽类型(round:圆头，square:方头)。
+   * 线帽类型(round:圆头，square:方头，butt:平头)。
    *
    */
   char* GetLineCap() const;
@@ -9555,6 +9665,15 @@ public:
   ret_t SetEllipses(bool ellipses) ;
 
   /**
+   * 设置stop_at_begin。
+   * 
+   * @param stop_at_begin 是否在滚动完毕后停在文本结尾。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetStopAtBegin(bool stop_at_begin) ;
+
+  /**
    * 设置x偏移(一般无需用户调用)。。
    * 
    * @param xoffset x偏移。
@@ -9638,6 +9757,13 @@ public:
    *
    */
   int32_t GetTextW() const;
+
+  /**
+   * 滚动完毕后停在文本开头(缺省FALSE)。
+   *> 注：loop为FALSE时才可用。
+   *
+   */
+  bool GetStopAtBegin() const;
 };
 
 
@@ -10192,6 +10318,16 @@ public:
   ret_t SetAnimatorTime(uint32_t animator_time) ;
 
   /**
+   * 通过动画隐藏滚动条。
+   * 
+   * @param duration 动画持续时间。
+   * @param delay 动画执行时间。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t HideByOpacityAnimation(int32_t duration, int32_t delay) ;
+
+  /**
    * 虚拟宽度或高度。
    *
    */
@@ -10397,6 +10533,15 @@ public:
   ret_t SetSpeedScale(float_t xspeed_scale, float_t yspeed_scale) ;
 
   /**
+   * 设置滑动到极限时可继续滑动区域的占比。
+   * 
+   * @param slide_limit_ratio 滑动到极限时可继续滑动区域的占比。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetSlideLimitRatio(float_t slide_limit_ratio) ;
+
+  /**
    * 滚动到指定的偏移量。
    * 
    * @param xoffset_end x偏移量。
@@ -10483,6 +10628,12 @@ public:
    *
    */
   bool GetRecursive() const;
+
+  /**
+   * 滑动到极限时可继续滑动区域的占比。
+   *
+   */
+  float_t GetSlideLimitRatio() const;
 };
 
 
@@ -10774,6 +10925,49 @@ public:
   ret_t SetMinScale(float_t min_scale) ;
 
   /**
+   * 设置菜单项之间的间距。
+   * 
+   * @param spacer 菜单项之间的间距。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetSpacer(int32_t spacer) ;
+
+  /**
+   * 设置菜单项的宽度。
+   * 
+   * @param menu_w 菜单项的宽度。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)(空字符串则使用控件高度)
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetMenuW(const char* menu_w) ;
+
+  /**
+   * 设置是否动态裁剪菜单项。
+   * 
+   * @param clip 是否动态裁剪菜单项。(关闭后，如果显示偶数项，左边会多一项)
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetClip(bool clip) ;
+
+  /**
+   * 切换至上一项。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t ScrollToPrev() ;
+
+  /**
+   * 切换至下一项。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t ScrollToNext() ;
+
+  /**
    * 值。代表当前选中项的索引。
    *
    */
@@ -10790,6 +10984,24 @@ public:
    *
    */
   float_t GetMinScale() const;
+
+  /**
+   * 菜单项之间的间距。
+   *
+   */
+  int32_t GetSpacer() const;
+
+  /**
+   * 菜单项的宽度(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)(空字符串则使用控件高度)。
+   *
+   */
+  char* GetMenuW() const;
+
+  /**
+   * 是否动态裁剪菜单项(默认裁剪，不裁剪时，如果显示偶数项，左边会多一项)。
+   *
+   */
+  bool GetClip() const;
 };
 
 
@@ -11601,6 +11813,24 @@ public:
   ret_t SetEnableValueAnimator(bool enable_value_animator) ;
 
   /**
+   * 设置绘制蒙版的变化趋势。
+   * 
+   * @param mask_easing 绘制蒙版的变化趋势。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetMaskEasing(easing_type_t mask_easing) ;
+
+  /**
+   * 设置绘制蒙版的区域占比（范围0~1）。
+   * 
+   * @param mask_area_scale 绘制蒙版的区域占比（范围0~1）。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetMaskAreaScale(float_t mask_area_scale) ;
+
+  /**
    * 可见的选项数量(只能是1或者3或者5，缺省为5)。
    *
    */
@@ -11653,6 +11883,18 @@ public:
    *
    */
   bool GetEnableValueAnimator() const;
+
+  /**
+   * 绘制蒙版的变化趋势。
+   *
+   */
+  easing_type_t GetMaskEasing() const;
+
+  /**
+   * 绘制蒙版的区域占比（范围0~1）。
+   *
+   */
+  float_t GetMaskAreaScale() const;
 };
 
 
@@ -12595,6 +12837,15 @@ public:
   ret_t SetEnableLongPress(bool enable_long_press) ;
 
   /**
+   * 设置是否启用预览。
+   * 
+   * @param enable_preview 是否启用预览。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetEnablePreview(bool enable_preview) ;
+
+  /**
    * 重复触发EVT\_CLICK事件的时间间隔。
    *
    *为0则不重复触发EVT\_CLICK事件。
@@ -12610,6 +12861,12 @@ public:
    *
    */
   bool GetEnableLongPress() const;
+
+  /**
+   * 是否启用预览(主要用于软键盘)。
+   *
+   */
+  bool GetEnablePreview() const;
 
   /**
    * 触发长按事件的时间(ms)
@@ -14374,6 +14631,15 @@ public:
   ret_t SetActive(uint32_t index) ;
 
   /**
+   * 设置切换界面时是否自动聚焦。
+   * 
+   * @param auto_focused 切换界面时是否自动聚焦。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetAutoFocused(bool auto_focused) ;
+
+  /**
    * 通过页面的名字设置当前的Page。
    * 
    * @param name 当前Page的名字。
@@ -14387,6 +14653,12 @@ public:
    *
    */
   uint32_t GetActive() const;
+
+  /**
+   * 选择切换界面时是否自动聚焦上一次保存的焦点。（默认为TRUE）
+   *
+   */
+  bool GetAutoFocused() const;
 };
 
 
@@ -15447,9 +15719,10 @@ public:
    * 模态显示对话框。
    *dialog_modal返回后，dialog对象将在下一个idle函数中回收。
    *也就是在dialog_modal调用完成后仍然可以访问dialog中控件，直到本次事件结束。
+   *调用该函数会使线程进入阻塞状态，需要调用dialog_quit来解除阻塞。
    * 
    *
-   * @return 返回退出码。
+   * @return 返回退出码，值为dialog_quit函数中传入的参数。
    */
   dialog_quit_code_t Modal() ;
 
@@ -16956,6 +17229,15 @@ public:
   ret_t SetSelectedIndex(uint32_t index) ;
 
   /**
+   * 根据文本设置当前选中的选项。
+   * 
+   * @param text 原生(非翻译的文本)。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetSelectedIndexByText(const char* text) ;
+
+  /**
    * 设置是否本地化(翻译)选项。
    * 
    * @param localize_options 是否本地化(翻译)选项。
@@ -17028,12 +17310,20 @@ public:
   bool HasOptionText(const char* text) ;
 
   /**
-   * 获取combo_box的文本。
+   * 获取combo_box的文本(可能是翻译后的文本)。
    * 
    *
    * @return 返回文本。
    */
   const char* GetTextValue() ;
+
+  /**
+   * 获取combo_box当前选中项目的文本(原生非翻译的文本)。
+   * 
+   *
+   * @return 返回文本。
+   */
+  const char* GetTextOfSelected() ;
 
   /**
    * 为点击按钮时，要打开窗口的名称。
@@ -17559,6 +17849,15 @@ public:
   ret_t SetEasyTouchMode(bool easy_touch_mode) ;
 
   /**
+   * 设置按钮位置样式。
+   * 
+   * @param button_position 按钮位置样式。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetButtonPosition(const char* button_position) ;
+
+  /**
    * 设置连击的时间间隔。
    *备注：时间间隔越低，速度越快。
    * 
@@ -17578,6 +17877,16 @@ public:
    *
    */
   bool GetEasyTouchMode() const;
+
+  /**
+   * 按钮位置样式选择，优先级高于easy_touch_mode，各模式对应样式如下,默认为none。
+   *none：按照easy_touch_mode选择样式
+   *default：inc按钮在右上角，dec按钮在右下角。
+   *left_right：dec按钮在左边，inc按钮在右边。
+   *top_bottom：inc按钮在顶部，dec按钮在底部。
+   *
+   */
+  char* GetButtonPosition() const;
 };
 
 
@@ -17675,7 +17984,10 @@ public:
 
 
 /**
- * 可滚动的combo_box控件。
+ * 扩展combo_box控件。支持以下功能：
+ ** 支持滚动。项目比较多时显示滚动条。
+ ** 自动调整弹出窗口的宽度。根据最长文本自动调整弹出窗口的宽度。
+ ** 支持分组显示。如果item的文本以"seperator."开头，视为一个分组开始，其后的文本为分组的标题。比如: "seperator.basic"，会创建一个basic为标题的分组。
  *
  */
 class TComboBoxEx : public TComboBox { 

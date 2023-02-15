@@ -16,8 +16,7 @@
 
 ### Accessors
 
-- [isInRom](TAssetInfo.md#isinrom)
-- [name](TAssetInfo.md#name)
+- [flags](TAssetInfo.md#flags)
 - [refcount](TAssetInfo.md#refcount)
 - [size](TAssetInfo.md#size)
 - [subtype](TAssetInfo.md#subtype)
@@ -27,6 +26,8 @@
 
 - [getName](TAssetInfo.md#getname)
 - [getType](TAssetInfo.md#gettype)
+- [isInRom](TAssetInfo.md#isinrom)
+- [setIsInRom](TAssetInfo.md#setisinrom)
 
 ## Constructors
 
@@ -42,7 +43,7 @@
 
 #### Defined in
 
-[awtk.ts:12396](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12396)
+[awtk.ts:12539](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L12539)
 
 ## Properties
 
@@ -52,15 +53,15 @@
 
 #### Defined in
 
-[awtk.ts:12395](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12395)
+[awtk.ts:12538](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L12538)
 
 ## Accessors
 
-### isInRom
+### flags
 
-• `get` **isInRom**(): `number`
+• `get` **flags**(): `number`
 
-资源是否在ROM中。
+资源标志。
 
 #### Returns
 
@@ -68,23 +69,7 @@
 
 #### Defined in
 
-[awtk.ts:12445](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12445)
-
-___
-
-### name
-
-• `get` **name**(): `string`
-
-名称。
-
-#### Returns
-
-`string`
-
-#### Defined in
-
-[awtk.ts:12473](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12473)
+[awtk.ts:12611](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L12611)
 
 ___
 
@@ -101,7 +86,7 @@ is\_in\_rom == FALSE时才有效。
 
 #### Defined in
 
-[awtk.ts:12464](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12464)
+[awtk.ts:12630](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L12630)
 
 ___
 
@@ -117,7 +102,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:12454](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12454)
+[awtk.ts:12620](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L12620)
 
 ___
 
@@ -133,7 +118,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:12436](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12436)
+[awtk.ts:12602](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L12602)
 
 ___
 
@@ -149,7 +134,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:12427](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12427)
+[awtk.ts:12593](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L12593)
 
 ## Methods
 
@@ -167,7 +152,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:12418](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12418)
+[awtk.ts:12561](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L12561)
 
 ___
 
@@ -185,4 +170,46 @@ ___
 
 #### Defined in
 
-[awtk.ts:12407](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L12407)
+[awtk.ts:12550](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L12550)
+
+___
+
+### isInRom
+
+▸ **isInRom**(): `boolean`
+
+资源是否在ROM中。
+
+#### Returns
+
+`boolean`
+
+返回 TRUE 为在 ROM 中，返回 FALSE 则不在。
+
+#### Defined in
+
+[awtk.ts:12572](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L12572)
+
+___
+
+### setIsInRom
+
+▸ **setIsInRom**(`is_in_rom`): `boolean`
+
+设置资源是否在ROM中的标记位。
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `is_in_rom` | `boolean` | 资源是否在ROM中。 |
+
+#### Returns
+
+`boolean`
+
+返回 TRUE 为在 ROM 中，返回 FALSE 则不在。
+
+#### Defined in
+
+[awtk.ts:12584](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L12584)

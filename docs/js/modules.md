@@ -149,6 +149,7 @@
 - [TSvgImage](classes/TSvgImage.md)
 - [TSwitch](classes/TSwitch.md)
 - [TSystemBar](classes/TSystemBar.md)
+- [TSystemEvent](classes/TSystemEvent.md)
 - [TTabButton](classes/TTabButton.md)
 - [TTabButtonGroup](classes/TTabButtonGroup.md)
 - [TTabControl](classes/TTabControl.md)
@@ -199,7 +200,7 @@
 
 #### Defined in
 
-[awtk.ts:3](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L3)
+[awtk.ts:3](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L3)
 
 ___
 
@@ -219,4 +220,4 @@ ___
 
 #### Defined in
 
-[awtk.ts:2](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L2)
+[awtk.ts:2](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L2)

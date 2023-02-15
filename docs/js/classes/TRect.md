@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[awtk.ts:2428](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L2428)
+[awtk.ts:2483](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L2483)
 
 ## Properties
 
@@ -52,7 +52,7 @@
 
 #### Defined in
 
-[awtk.ts:2427](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L2427)
+[awtk.ts:2482](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L2482)
 
 ## Accessors
 
@@ -68,7 +68,7 @@
 
 #### Defined in
 
-[awtk.ts:2525](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L2525)
+[awtk.ts:2580](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L2580)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:2516](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L2516)
+[awtk.ts:2571](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L2571)
 
 ___
 
@@ -100,7 +100,7 @@ x坐标。
 
 #### Defined in
 
-[awtk.ts:2498](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L2498)
+[awtk.ts:2553](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L2553)
 
 ___
 
@@ -116,7 +116,7 @@ y坐标。
 
 #### Defined in
 
-[awtk.ts:2507](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L2507)
+[awtk.ts:2562](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L2562)
 
 ## Methods
 
@@ -136,7 +136,7 @@ y坐标。
 
 #### Defined in
 
-[awtk.ts:2489](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L2489)
+[awtk.ts:2544](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L2544)
 
 ___
 
@@ -165,7 +165,7 @@ rect对象。
 
 #### Defined in
 
-[awtk.ts:2462](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L2462)
+[awtk.ts:2517](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L2517)
 
 ___
 
@@ -191,7 +191,7 @@ rect对象。
 
 #### Defined in
 
-[awtk.ts:2476](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L2476)
+[awtk.ts:2531](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L2531)
 
 ___
 
@@ -220,4 +220,4 @@ rect对象。
 
 #### Defined in
 
-[awtk.ts:2445](https://github.com/zlgopen/awtk-binding/blob/527f1f8/tools/code_gen/js/output/awtk.ts#L2445)
+[awtk.ts:2500](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L2500)

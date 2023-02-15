@@ -659,6 +659,13 @@ public enum TEventType {
   MODEL_CHANGE (EVT_MODEL_CHANGE()),
   
   /**
+   * SDL系统事件(system_event_t)。
+   *
+   */
+ 
+  SYSTEM (EVT_SYSTEM()),
+  
+  /**
    * event queue其它请求编号起始值。
    *
    */
@@ -888,6 +895,7 @@ public enum TEventType {
   static private native int EVT_DATA();
   static private native int EVT_CONNECT();
   static private native int EVT_MODEL_CHANGE();
+  static private native int EVT_SYSTEM();
   static private native int EVT_REQ_START();
   static private native int EVT_USER_START();
   static private native int EVT_NONE();

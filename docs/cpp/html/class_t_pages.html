@@ -89,10 +89,14 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a39bebdc1218c32edf38177e738397416"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1df4f95aff60d9a1f9aa44ee90e2624"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_pages.html#ae1df4f95aff60d9a1f9aa44ee90e2624">SetActive</a> (uint32_t index)</td></tr>
 <tr class="separator:ae1df4f95aff60d9a1f9aa44ee90e2624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a313670e3ea0c1c1916f7e38da95b1512"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_pages.html#a313670e3ea0c1c1916f7e38da95b1512">SetAutoFocused</a> (bool auto_focused)</td></tr>
+<tr class="separator:a313670e3ea0c1c1916f7e38da95b1512"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d2837871e9774fdbd2b539332522957"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_pages.html#a5d2837871e9774fdbd2b539332522957">SetActiveByName</a> (char *name)</td></tr>
 <tr class="separator:a5d2837871e9774fdbd2b539332522957"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21a766db15a698d7022c3b206fd24fbd"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_pages.html#a21a766db15a698d7022c3b206fd24fbd">GetActive</a> () const</td></tr>
 <tr class="separator:a21a766db15a698d7022c3b206fd24fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa685e76d12dfbb5af2d9cf55d1dd78a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_pages.html#aa685e76d12dfbb5af2d9cf55d1dd78a2">GetAutoFocused</a> () const</td></tr>
+<tr class="separator:aa685e76d12dfbb5af2d9cf55d1dd78a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -213,6 +217,24 @@ static <a class="el" href="class_t_pages.html">TPages</a>&#160;</td><td class="m
 
 </div>
 </div>
+<a id="aa685e76d12dfbb5af2d9cf55d1dd78a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa685e76d12dfbb5af2d9cf55d1dd78a2">&#9670;&nbsp;</a></span>GetAutoFocused()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TPages::GetAutoFocused </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>选择切换界面时是否自动聚焦上一次保存的焦点。（默认为TRUE） </p>
+
+</div>
+</div>
 <a id="ae1df4f95aff60d9a1f9aa44ee90e2624"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1df4f95aff60d9a1f9aa44ee90e2624">&#9670;&nbsp;</a></span>SetActive()</h2>
 
@@ -258,6 +280,32 @@ static <a class="el" href="class_t_pages.html">TPages</a>&#160;</td><td class="m
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>当前Page的名字。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a313670e3ea0c1c1916f7e38da95b1512"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a313670e3ea0c1c1916f7e38da95b1512">&#9670;&nbsp;</a></span>SetAutoFocused()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TPages::SetAutoFocused </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>auto_focused</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置切换界面时是否自动聚焦。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">auto_focused</td><td>切换界面时是否自动聚焦。</td></tr>
   </table>
   </dd>
 </dl>
