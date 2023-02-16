@@ -109,7 +109,7 @@ var searchData=
   ['setint8_1661',['SetInt8',['../class_t_value.html#a005be16ac1a01d31d2f7770815d0df08',1,'TValue']]],
   ['setinterval_1662',['SetInterval',['../class_t_image_animation.html#a744b0f9604ec97d31f2eac213fa836f0',1,'TImageAnimation']]],
   ['setintlimit_1663',['SetIntLimit',['../class_t_edit.html#a7f943d75a18a5a6b577da6111e0e4b24',1,'TEdit']]],
-  ['setisinrom_1664',['SetIsInRom',['../class_t_asset_info.html#afc238bd7350ea314aa3835443ddce12f',1,'TAssetInfo']]],
+  ['setisinrom_1664',['SetIsInRom',['../class_t_asset_info.html#a2428753392d5b24999f60b7f95ea994c',1,'TAssetInfo']]],
   ['setitemheight_1665',['SetItemHeight',['../class_t_list_view.html#adf1dbc60fcfea1d99317098f223e044f',1,'TListView::SetItemHeight()'],['../class_t_combo_box.html#a85e40c0c76a3d39519b8d8bf77caf61b',1,'TComboBox::SetItemHeight()']]],
   ['setitemwidth_1666',['SetItemWidth',['../class_t_list_view_h.html#a5e21526f9cb63f695f06479da6e866f3',1,'TListViewH']]],
   ['setkeyboard_1667',['SetKeyboard',['../class_t_mledit.html#a35aca53d0591e2dc5c3bffd18bbfd66b',1,'TMledit::SetKeyboard()'],['../class_t_edit.html#a44949062caf59c8c4d9479964b87ecc2',1,'TEdit::SetKeyboard()']]],

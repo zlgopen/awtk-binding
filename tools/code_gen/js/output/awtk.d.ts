@@ -1132,7 +1132,7 @@ export declare class TValue {
      *
      * @returns 位图对象。
      */
-    bitmap(): TBitmap;
+    bitmap(): any;
 }
 /**
  * TK全局对象。
@@ -7615,9 +7615,9 @@ export declare class TAssetInfo {
      *
      * @param is_in_rom 资源是否在ROM中。
      *
-     * @returns 返回 TRUE 为在 ROM 中，返回 FALSE 则不在。
+     * @returns 返回RET_OK表示成功，否则表示失败。
      */
-    setIsInRom(is_in_rom: boolean): boolean;
+    setIsInRom(is_in_rom: boolean): TRet;
     /**
      * 类型。
      *

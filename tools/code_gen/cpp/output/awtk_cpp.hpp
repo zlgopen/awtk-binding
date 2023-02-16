@@ -1179,7 +1179,7 @@ public:
    *
    * @return 值。
    */
-  int8_t Uint8() ;
+  uint8_t Uint8() ;
 
   /**
    * 设置类型为int16的值。
@@ -1441,7 +1441,7 @@ public:
    *
    * @return 位图对象。
    */
-  TBitmap Bitmap() ;
+  void* Bitmap() ;
 };
 
 
@@ -4868,9 +4868,9 @@ public:
    * 
    * @param is_in_rom 资源是否在ROM中。
    *
-   * @return 返回 TRUE 为在 ROM 中，返回 FALSE 则不在。
+   * @return 返回RET_OK表示成功，否则表示失败。
    */
-  bool SetIsInRom(bool is_in_rom) ;
+  ret_t SetIsInRom(bool is_in_rom) ;
 
   /**
    * 类型。

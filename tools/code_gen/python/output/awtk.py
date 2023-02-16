@@ -1730,7 +1730,7 @@ class TValue(object):
   # @return 位图对象。
   #
   def bitmap(self): 
-      return  TBitmap(value_bitmap(awtk_get_native_obj(self)))
+      return value_bitmap(awtk_get_native_obj(self))
 
 
 #
@@ -10232,7 +10232,7 @@ class TAssetInfo(object):
   # 
   # @param is_in_rom 资源是否在ROM中。
   #
-  # @return 返回 TRUE 为在 ROM 中，返回 FALSE 则不在。
+  # @return 返回RET_OK表示成功，否则表示失败。
   #
   def set_is_in_rom(self, is_in_rom): 
       return asset_info_set_is_in_rom(awtk_get_native_obj(self), is_in_rom)
@@ -12258,7 +12258,7 @@ class TAssetsManager (TEmitter):
   # @return 返回资源。
   #
   def ref(self, type, name): 
-      return  TAssetInfo(assets_manager_ref(awtk_get_native_obj(self), type, name))
+      return assets_manager_ref(awtk_get_native_obj(self), type, name)
 
 
   #
@@ -12271,7 +12271,7 @@ class TAssetsManager (TEmitter):
   # @return 返回资源。
   #
   def ref_ex(self, type, subtype, name): 
-      return  TAssetInfo(assets_manager_ref_ex(awtk_get_native_obj(self), type, subtype, name))
+      return assets_manager_ref_ex(awtk_get_native_obj(self), type, subtype, name)
 
 
   #

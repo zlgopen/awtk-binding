@@ -42,7 +42,7 @@ TK全局对象。
 
 #### Defined in
 
-[awtk.ts:4044](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L4044)
+[awtk.ts:4044](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L4044)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:4055](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L4055)
+[awtk.ts:4055](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L4055)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:4011](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L4011)
+[awtk.ts:4011](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L4011)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:4066](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L4066)
+[awtk.ts:4066](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L4066)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:3995](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L3995)
+[awtk.ts:3995](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L3995)
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:4033](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L4033)
+[awtk.ts:4033](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L4033)
 
 ___
 
@@ -162,4 +162,4 @@ ___
 
 #### Defined in
 
-[awtk.ts:4022](https://github.com/zlgopen/awtk-binding/blob/c57d9273/tools/code_gen/js/output/awtk.ts#L4022)
+[awtk.ts:4022](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L4022)

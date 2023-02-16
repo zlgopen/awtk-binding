@@ -2399,7 +2399,7 @@
         "desc": "获取类型为uint8的值。",
         "name": "value_uint8",
         "return": {
-          "type": "int8_t",
+          "type": "uint8_t",
           "desc": "值。"
         }
       },
@@ -3048,7 +3048,7 @@
         "desc": "获取类型为位图对象。",
         "name": "value_bitmap",
         "return": {
-          "type": "bitmap_t*",
+          "type": "void*",
           "desc": "位图对象。"
         }
       }
@@ -13688,8 +13688,8 @@
         "desc": "设置资源是否在ROM中的标记位。",
         "name": "asset_info_set_is_in_rom",
         "return": {
-          "type": "bool_t",
-          "desc": "返回 TRUE 为在 ROM 中，返回 FALSE 则不在。"
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
         }
       }
     ],
@@ -15583,7 +15583,7 @@
         "desc": "在资源管理器的缓存中查找指定的资源并引用它，如果缓存中不存在，尝试加载该资源。",
         "name": "assets_manager_ref",
         "return": {
-          "type": "asset_info_t*",
+          "type": "const asset_info_t*",
           "desc": "返回资源。"
         }
       },
@@ -15616,7 +15616,7 @@
         "desc": "在资源管理器的缓存中查找指定的资源并引用它，如果缓存中不存在，尝试加载该资源。",
         "name": "assets_manager_ref_ex",
         "return": {
-          "type": "asset_info_t*",
+          "type": "const asset_info_t*",
           "desc": "返回资源。"
         }
       },

@@ -1646,9 +1646,9 @@ static HANDLER_PROTO(wrap_value_uint8)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
-  int8_t ret = (int8_t)0;
+  uint8_t ret = (uint8_t)0;
   value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
-  ret = (int8_t)value_uint8(v);
+  ret = (uint8_t)value_uint8(v);
 
   jret = jsvalue_create_int(ctx, ret);
   }
@@ -2064,11 +2064,11 @@ static HANDLER_PROTO(wrap_value_bitmap)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
-  bitmap_t* ret = NULL;
+  void* ret = NULL;
   value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
-  ret = (bitmap_t*)value_bitmap(v);
+  ret = (void*)value_bitmap(v);
 
-  jret = jsvalue_create_pointer(ctx, ret, "bitmap_t*");
+  jret = jsvalue_create_pointer(ctx, ret, "void*");
   }
   return jret;
 }
@@ -11097,12 +11097,12 @@ static HANDLER_PROTO(wrap_asset_info_set_is_in_rom)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
   if(argc >= 2) {
-  bool_t ret = (bool_t)0;
+  ret_t ret = (ret_t)0;
   asset_info_t* info = (asset_info_t*)jsvalue_get_pointer(ctx, argv[0], "asset_info_t*");
   bool_t is_in_rom = (bool_t)jsvalue_get_boolean_value(ctx, argv[1]);
-  ret = (bool_t)asset_info_set_is_in_rom(info, is_in_rom);
+  ret = (ret_t)asset_info_set_is_in_rom(info, is_in_rom);
 
-  jret = jsvalue_create_bool(ctx, ret);
+  jret = jsvalue_create_int(ctx, ret);
   }
   return jret;
 }
@@ -12981,14 +12981,14 @@ static HANDLER_PROTO(wrap_assets_manager_ref)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
   if(argc >= 3) {
-  asset_info_t* ret = NULL;
+  const asset_info_t* ret = NULL;
   assets_manager_t* am = (assets_manager_t*)jsvalue_get_pointer(ctx, argv[0], "assets_manager_t*");
   asset_type_t type = (asset_type_t)jsvalue_get_int_value(ctx, argv[1]);
   char* name = (char*)jsvalue_get_utf8_string(ctx, argv[2]);
-  ret = (asset_info_t*)assets_manager_ref(am, type, name);
+  ret = (const asset_info_t*)assets_manager_ref(am, type, name);
   TKMEM_FREE(name);
 
-  jret = jsvalue_create_pointer(ctx, ret, "asset_info_t*");
+  jret = jsvalue_create_pointer(ctx, ret, "const asset_info_t*");
   }
   return jret;
 }
@@ -12997,15 +12997,15 @@ static HANDLER_PROTO(wrap_assets_manager_ref_ex)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
   if(argc >= 4) {
-  asset_info_t* ret = NULL;
+  const asset_info_t* ret = NULL;
   assets_manager_t* am = (assets_manager_t*)jsvalue_get_pointer(ctx, argv[0], "assets_manager_t*");
   asset_type_t type = (asset_type_t)jsvalue_get_int_value(ctx, argv[1]);
   uint16_t subtype = (uint16_t)jsvalue_get_int_value(ctx, argv[2]);
   char* name = (char*)jsvalue_get_utf8_string(ctx, argv[3]);
-  ret = (asset_info_t*)assets_manager_ref_ex(am, type, subtype, name);
+  ret = (const asset_info_t*)assets_manager_ref_ex(am, type, subtype, name);
   TKMEM_FREE(name);
 
-  jret = jsvalue_create_pointer(ctx, ret, "asset_info_t*");
+  jret = jsvalue_create_pointer(ctx, ret, "const asset_info_t*");
   }
   return jret;
 }

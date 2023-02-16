@@ -1203,9 +1203,9 @@ int awtk_TValue_value_set_uint8(Runtime *runtime, JClass *clazz) {
 int awtk_TValue_value_uint8(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
-  int8_t ret = 0;
+  uint8_t ret = 0;
   value_t* v = (value_t*)jni_ctx_get_object(&actx);
-  ret = (int8_t)value_uint8(v);
+  ret = (uint8_t)value_uint8(v);
   jni_ctx_return_int(&actx, (int32_t)(ret));
 
   return 0;
@@ -1559,10 +1559,10 @@ int awtk_TValue_value_func_def(Runtime *runtime, JClass *clazz) {
 int awtk_TValue_value_bitmap(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
-  bitmap_t* ret = NULL;
+  void* ret = NULL;
   value_t* v = (value_t*)jni_ctx_get_object(&actx);
-  ret = (bitmap_t*)value_bitmap(v);
-  jni_ctx_return_object(&actx, (void*)(ret));
+  ret = (void*)value_bitmap(v);
+  jni_ctx_return_int64(&actx, (int64_t)(ret));
 
   return 0;
 }
@@ -10864,10 +10864,10 @@ int awtk_TAssetInfo_asset_info_is_in_rom(Runtime *runtime, JClass *clazz) {
 int awtk_TAssetInfo_asset_info_set_is_in_rom(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
-  bool_t ret = 0;
+  ret_t ret = 0;
   asset_info_t* info = (asset_info_t*)jni_ctx_get_object(&actx);
   bool_t is_in_rom = (bool_t)jni_ctx_get_int(&actx);
-  ret = (bool_t)asset_info_set_is_in_rom(info, is_in_rom);
+  ret = (ret_t)asset_info_set_is_in_rom(info, is_in_rom);
   jni_ctx_return_int(&actx, (int32_t)(ret));
 
   return 0;
@@ -12924,11 +12924,11 @@ int awtk_TAssetsManager_assets_manager_set_theme(Runtime *runtime, JClass *clazz
 int awtk_TAssetsManager_assets_manager_ref(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
-  asset_info_t* ret = NULL;
+  const asset_info_t* ret = NULL;
   assets_manager_t* am = (assets_manager_t*)jni_ctx_get_object(&actx);
   asset_type_t type = (asset_type_t)jni_ctx_get_int(&actx);
   char* name = (char*)jni_ctx_get_str(&actx);
-  ret = (asset_info_t*)assets_manager_ref(am, type, name);
+  ret = (const asset_info_t*)assets_manager_ref(am, type, name);
   TKMEM_FREE(name);
   jni_ctx_return_object(&actx, (void*)(ret));
 
@@ -12938,12 +12938,12 @@ int awtk_TAssetsManager_assets_manager_ref(Runtime *runtime, JClass *clazz) {
 int awtk_TAssetsManager_assets_manager_ref_ex(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
-  asset_info_t* ret = NULL;
+  const asset_info_t* ret = NULL;
   assets_manager_t* am = (assets_manager_t*)jni_ctx_get_object(&actx);
   asset_type_t type = (asset_type_t)jni_ctx_get_int(&actx);
   uint16_t subtype = (uint16_t)jni_ctx_get_int(&actx);
   char* name = (char*)jni_ctx_get_str(&actx);
-  ret = (asset_info_t*)assets_manager_ref_ex(am, type, subtype, name);
+  ret = (const asset_info_t*)assets_manager_ref_ex(am, type, subtype, name);
   TKMEM_FREE(name);
   jni_ctx_return_object(&actx, (void*)(ret));
 
@@ -23992,7 +23992,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TAssetInfo",  "asset_info_get_type",  "(J)I",  awtk_TAssetInfo_asset_info_get_type},
 {"awtk/TAssetInfo",  "asset_info_get_name",  "(J)Ljava/lang/String;",  awtk_TAssetInfo_asset_info_get_name},
 {"awtk/TAssetInfo",  "asset_info_is_in_rom",  "(J)Z",  awtk_TAssetInfo_asset_info_is_in_rom},
-{"awtk/TAssetInfo",  "asset_info_set_is_in_rom",  "(JZ)Z",  awtk_TAssetInfo_asset_info_set_is_in_rom},
+{"awtk/TAssetInfo",  "asset_info_set_is_in_rom",  "(JZ)I",  awtk_TAssetInfo_asset_info_set_is_in_rom},
 {"awtk/TAssetInfo",  "asset_info_t_get_prop_type",  "(J)I",  awtk_TAssetInfo_asset_info_t_get_prop_type},
 {"awtk/TAssetInfo",  "asset_info_t_get_prop_subtype",  "(J)I",  awtk_TAssetInfo_asset_info_t_get_prop_subtype},
 {"awtk/TAssetInfo",  "asset_info_t_get_prop_flags",  "(J)I",  awtk_TAssetInfo_asset_info_t_get_prop_flags},

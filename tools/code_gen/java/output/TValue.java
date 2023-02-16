@@ -475,8 +475,8 @@ public class TValue {
    *
    * @return 位图对象。
    */
- public  TBitmap bitmap()  {
-    return new TBitmap(value_bitmap(this != null ? (this.nativeObj) : 0));
+ public  long bitmap()  {
+    return value_bitmap(this != null ? (this.nativeObj) : 0);
  }
 
 static private native long value_set_bool(long v, boolean value);

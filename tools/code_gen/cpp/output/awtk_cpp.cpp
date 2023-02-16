@@ -395,7 +395,7 @@
    return TValue((value_t*)(value_set_uint8(((value_t*)(this->nativeObj)), value)));
  }
 
- int8_t TValue::Uint8()  {
+ uint8_t TValue::Uint8()  {
     return value_uint8(((value_t*)(this->nativeObj)));
  }
 
@@ -519,8 +519,8 @@
     return value_func_def(((value_t*)(this->nativeObj)));
  }
 
- TBitmap TValue::Bitmap()  {
-   return TBitmap((bitmap_t*)(value_bitmap(((value_t*)(this->nativeObj)))));
+ void* TValue::Bitmap()  {
+    return value_bitmap(((value_t*)(this->nativeObj)));
  }
 
  ret_t TGlobal::PreInit()  {
@@ -1779,8 +1779,8 @@
     return asset_info_is_in_rom(((const asset_info_t*)(this->nativeObj)));
  }
 
- bool TAssetInfo::SetIsInRom(bool is_in_rom)  {
-    return asset_info_set_is_in_rom(((asset_info_t*)(this->nativeObj)), is_in_rom);
+ ret_t TAssetInfo::SetIsInRom(bool is_in_rom)  {
+   return asset_info_set_is_in_rom(((asset_info_t*)(this->nativeObj)), is_in_rom);
  }
 
  uint16_t TAssetInfo::GetType() const {
@@ -1988,11 +1988,11 @@
  }
 
  TAssetInfo TAssetsManager::Ref(asset_type_t type, char* name)  {
-   return TAssetInfo((asset_info_t*)(assets_manager_ref(((assets_manager_t*)(this->nativeObj)), type, name)));
+    return assets_manager_ref(((assets_manager_t*)(this->nativeObj)), type, name);
  }
 
  TAssetInfo TAssetsManager::RefEx(asset_type_t type, uint16_t subtype, char* name)  {
-   return TAssetInfo((asset_info_t*)(assets_manager_ref_ex(((assets_manager_t*)(this->nativeObj)), type, subtype, name)));
+    return assets_manager_ref_ex(((assets_manager_t*)(this->nativeObj)), type, subtype, name);
  }
 
  ret_t TAssetsManager::Unref(TAssetInfo& info)  {

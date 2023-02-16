@@ -88,8 +88,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a53157e6c868a842c42a9fdf5d37dab5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add85468ea6382850781a700f399fe86a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_asset_info.html#add85468ea6382850781a700f399fe86a">IsInRom</a> ()</td></tr>
 <tr class="separator:add85468ea6382850781a700f399fe86a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc238bd7350ea314aa3835443ddce12f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_asset_info.html#afc238bd7350ea314aa3835443ddce12f">SetIsInRom</a> (bool is_in_rom)</td></tr>
-<tr class="separator:afc238bd7350ea314aa3835443ddce12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2428753392d5b24999f60b7f95ea994c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_asset_info.html#a2428753392d5b24999f60b7f95ea994c">SetIsInRom</a> (bool is_in_rom)</td></tr>
+<tr class="separator:a2428753392d5b24999f60b7f95ea994c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c4db6c9943b9efd683cc723af6c32b6"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_asset_info.html#a7c4db6c9943b9efd683cc723af6c32b6">GetType</a> () const</td></tr>
 <tr class="separator:a7c4db6c9943b9efd683cc723af6c32b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accedaab423a9ae4adb98728d78ddfbb9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_asset_info.html#accedaab423a9ae4adb98728d78ddfbb9">GetSubtype</a> () const</td></tr>
@@ -266,14 +266,14 @@ asset_info_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</
 
 </div>
 </div>
-<a id="afc238bd7350ea314aa3835443ddce12f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc238bd7350ea314aa3835443ddce12f">&#9670;&nbsp;</a></span>SetIsInRom()</h2>
+<a id="a2428753392d5b24999f60b7f95ea994c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2428753392d5b24999f60b7f95ea994c">&#9670;&nbsp;</a></span>SetIsInRom()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool TAssetInfo::SetIsInRom </td>
+          <td class="memname">ret_t TAssetInfo::SetIsInRom </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>is_in_rom</em></td><td>)</td>
@@ -288,7 +288,7 @@ asset_info_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>返回 TRUE 为在 ROM 中，返回 FALSE 则不在。 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>

@@ -1463,7 +1463,7 @@ pyobject_t wrap_value_set_uint8(pyobject_t self, pyobject_t pyargs) {
 }
 
 pyobject_t wrap_value_uint8(pyobject_t self, pyobject_t pyargs) {
-  int8_t ret = 0;
+  uint8_t ret = 0;
   value_t* v = NULL;
 
   if (!PyArg_ParseTuple(pyargs, "O&" , &__parse_voidp, &v)) {
@@ -1471,7 +1471,7 @@ pyobject_t wrap_value_uint8(pyobject_t self, pyobject_t pyargs) {
     return NULL;
   }
 
-  ret = (int8_t)value_uint8(v);
+  ret = (uint8_t)value_uint8(v);
   return Py_BuildValue("i", ret);
 }
 
@@ -1879,7 +1879,7 @@ pyobject_t wrap_value_func_def(pyobject_t self, pyobject_t pyargs) {
 }
 
 pyobject_t wrap_value_bitmap(pyobject_t self, pyobject_t pyargs) {
-  bitmap_t* ret = NULL;
+  void* ret = NULL;
   value_t* v = NULL;
 
   if (!PyArg_ParseTuple(pyargs, "O&" , &__parse_voidp, &v)) {
@@ -1887,7 +1887,7 @@ pyobject_t wrap_value_bitmap(pyobject_t self, pyobject_t pyargs) {
     return NULL;
   }
 
-  ret = (bitmap_t*)value_bitmap(v);
+  ret = (void*)value_bitmap(v);
   return PyLong_FromVoidPtr((void*)ret);
 }
 
@@ -8950,7 +8950,7 @@ pyobject_t wrap_asset_info_is_in_rom(pyobject_t self, pyobject_t pyargs) {
 }
 
 pyobject_t wrap_asset_info_set_is_in_rom(pyobject_t self, pyobject_t pyargs) {
-  bool_t ret = 0;
+  ret_t ret = 0;
   asset_info_t* info = NULL;
   bool_t is_in_rom = 0;
 
@@ -8959,8 +8959,8 @@ pyobject_t wrap_asset_info_set_is_in_rom(pyobject_t self, pyobject_t pyargs) {
     return NULL;
   }
 
-  ret = (bool_t)asset_info_set_is_in_rom(info, is_in_rom);
-  return Py_BuildValue("b", ret);
+  ret = (ret_t)asset_info_set_is_in_rom(info, is_in_rom);
+  return Py_BuildValue("i", ret);
 }
 
 pyobject_t wrap_asset_info_t_get_prop_type(pyobject_t self, pyobject_t pyargs) {
@@ -10362,7 +10362,7 @@ pyobject_t wrap_assets_manager_set_theme(pyobject_t self, pyobject_t pyargs) {
 }
 
 pyobject_t wrap_assets_manager_ref(pyobject_t self, pyobject_t pyargs) {
-  asset_info_t* ret = NULL;
+  const asset_info_t* ret = NULL;
   assets_manager_t* am = NULL;
   asset_type_t type = 0;
   char* name = NULL;
@@ -10372,12 +10372,12 @@ pyobject_t wrap_assets_manager_ref(pyobject_t self, pyobject_t pyargs) {
     return NULL;
   }
 
-  ret = (asset_info_t*)assets_manager_ref(am, type, name);
+  ret = (const asset_info_t*)assets_manager_ref(am, type, name);
   return PyLong_FromVoidPtr((void*)ret);
 }
 
 pyobject_t wrap_assets_manager_ref_ex(pyobject_t self, pyobject_t pyargs) {
-  asset_info_t* ret = NULL;
+  const asset_info_t* ret = NULL;
   assets_manager_t* am = NULL;
   asset_type_t type = 0;
   uint16_t subtype = 0;
@@ -10388,7 +10388,7 @@ pyobject_t wrap_assets_manager_ref_ex(pyobject_t self, pyobject_t pyargs) {
     return NULL;
   }
 
-  ret = (asset_info_t*)assets_manager_ref_ex(am, type, subtype, name);
+  ret = (const asset_info_t*)assets_manager_ref_ex(am, type, subtype, name);
   return PyLong_FromVoidPtr((void*)ret);
 }
 

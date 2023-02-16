@@ -6269,8 +6269,8 @@ export class TValue {
    *
    * @returns 位图对象。
    */
- bitmap() : TBitmap  {
-    return new TBitmap(value_bitmap(this != null ? (this.nativeObj || this) : null));
+ bitmap() : any  {
+    return value_bitmap(this != null ? (this.nativeObj || this) : null);
  }
 
 };
@@ -14875,9 +14875,9 @@ export class TAssetInfo {
    * 
    * @param is_in_rom 资源是否在ROM中。
    *
-   * @returns 返回 TRUE 为在 ROM 中，返回 FALSE 则不在。
+   * @returns 返回RET_OK表示成功，否则表示失败。
    */
- setIsInRom(is_in_rom : boolean) : boolean  {
+ setIsInRom(is_in_rom : boolean) : TRet  {
     return asset_info_set_is_in_rom(this != null ? (this.nativeObj || this) : null, is_in_rom);
  }
 
@@ -16833,7 +16833,7 @@ export class TAssetsManager extends TEmitter {
    * @returns 返回资源。
    */
  ref(type : TAssetType, name : string) : TAssetInfo  {
-    return new TAssetInfo(assets_manager_ref(this != null ? (this.nativeObj || this) : null, type, name));
+    return assets_manager_ref(this != null ? (this.nativeObj || this) : null, type, name);
  }
 
 
@@ -16847,7 +16847,7 @@ export class TAssetsManager extends TEmitter {
    * @returns 返回资源。
    */
  refEx(type : TAssetType, subtype : number, name : string) : TAssetInfo  {
-    return new TAssetInfo(assets_manager_ref_ex(this != null ? (this.nativeObj || this) : null, type, subtype, name));
+    return assets_manager_ref_ex(this != null ? (this.nativeObj || this) : null, type, subtype, name);
  }
 
 

@@ -986,9 +986,9 @@ JNIEXPORT jlong JNICALL Java_awtk_TValue_value_1set_1uint8(JNIEnv* env,  jclass 
 }
 
 JNIEXPORT jint JNICALL Java_awtk_TValue_value_1uint8(JNIEnv* env,  jclass ajc, jlong jv) { /*func*/
-  int8_t ret;
+  uint8_t ret;
   value_t* v = (value_t*)jv;
-  ret = (int8_t)value_uint8(v);
+  ret = (uint8_t)value_uint8(v);
 
   return (jint)(ret);
 }
@@ -1238,9 +1238,9 @@ JNIEXPORT jlong JNICALL Java_awtk_TValue_value_1func_1def(JNIEnv* env,  jclass a
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TValue_value_1bitmap(JNIEnv* env,  jclass ajc, jlong jv) { /*func*/
-  bitmap_t* ret;
+  void* ret;
   value_t* v = (value_t*)jv;
-  ret = (bitmap_t*)value_bitmap(v);
+  ret = (void*)value_bitmap(v);
 
   return (jlong)(ret);
 }
@@ -7322,12 +7322,12 @@ JNIEXPORT jboolean JNICALL Java_awtk_TAssetInfo_asset_1info_1is_1in_1rom(JNIEnv*
   return (jboolean)(ret);
 }
 
-JNIEXPORT jboolean JNICALL Java_awtk_TAssetInfo_asset_1info_1set_1is_1in_1rom(JNIEnv* env,  jclass ajc, jlong jinfo, jboolean is_in_rom) { /*func*/
-  bool_t ret;
+JNIEXPORT jint JNICALL Java_awtk_TAssetInfo_asset_1info_1set_1is_1in_1rom(JNIEnv* env,  jclass ajc, jlong jinfo, jboolean is_in_rom) { /*func*/
+  ret_t ret;
   asset_info_t* info = (asset_info_t*)jinfo;
-  ret = (bool_t)asset_info_set_is_in_rom(info, is_in_rom);
+  ret = (ret_t)asset_info_set_is_in_rom(info, is_in_rom);
 
-  return (jboolean)(ret);
+  return (jint)(ret);
 }
 
 JNIEXPORT jint JNICALL Java_awtk_TAssetInfo_asset_1info_1t_1get_1prop_1type(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
@@ -8641,20 +8641,20 @@ JNIEXPORT jint JNICALL Java_awtk_TAssetsManager_assets_1manager_1set_1theme(JNIE
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TAssetsManager_assets_1manager_1ref(JNIEnv* env,  jclass ajc, jlong jam, jint type, jstring jname) { /*func*/
-  asset_info_t* ret;
+  const asset_info_t* ret;
   assets_manager_t* am = (assets_manager_t*)jam;
   char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
-  ret = (asset_info_t*)assets_manager_ref(am, type, name);
+  ret = (const asset_info_t*)assets_manager_ref(am, type, name);
   (*env)->ReleaseStringUTFChars(env, jname, name);
 
   return (jlong)(ret);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TAssetsManager_assets_1manager_1ref_1ex(JNIEnv* env,  jclass ajc, jlong jam, jint type, jint subtype, jstring jname) { /*func*/
-  asset_info_t* ret;
+  const asset_info_t* ret;
   assets_manager_t* am = (assets_manager_t*)jam;
   char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
-  ret = (asset_info_t*)assets_manager_ref_ex(am, type, subtype, name);
+  ret = (const asset_info_t*)assets_manager_ref_ex(am, type, subtype, name);
   (*env)->ReleaseStringUTFChars(env, jname, name);
 
   return (jlong)(ret);

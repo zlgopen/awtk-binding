@@ -75,10 +75,10 @@ public class TAssetInfo {
    * 
    * @param is_in_rom 资源是否在ROM中。
    *
-   * @return 返回 TRUE 为在 ROM 中，返回 FALSE 则不在。
+   * @return 返回RET_OK表示成功，否则表示失败。
    */
- public  boolean setIsInRom(boolean is_in_rom)  {
-    return asset_info_set_is_in_rom(this != null ? (this.nativeObj) : 0, is_in_rom);
+ public  TRet setIsInRom(boolean is_in_rom)  {
+   return TRet.from(asset_info_set_is_in_rom(this != null ? (this.nativeObj) : 0, is_in_rom));
  }
 
 
@@ -121,7 +121,7 @@ public class TAssetInfo {
 static private native int asset_info_get_type(long info);
 static private native String asset_info_get_name(long info);
 static private native boolean asset_info_is_in_rom(long info);
-static private native boolean asset_info_set_is_in_rom(long info, boolean is_in_rom);
+static private native int asset_info_set_is_in_rom(long info, boolean is_in_rom);
 static private native int asset_info_t_get_prop_type(long nativeObj);
 static private native int asset_info_t_get_prop_subtype(long nativeObj);
 static private native int asset_info_t_get_prop_flags(long nativeObj);
