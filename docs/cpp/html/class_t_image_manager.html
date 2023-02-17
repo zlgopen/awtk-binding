@@ -82,10 +82,10 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ab9f0f54345c96e1e98260e8dcaf7b4ab"><td class="memItemLeft" align="right" valign="top"><a id="ab9f0f54345c96e1e98260e8dcaf7b4ab"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TImageManager</b> (const image_manager_t *nativeObj)</td></tr>
 <tr class="separator:ab9f0f54345c96e1e98260e8dcaf7b4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac38f2ec3ba21d25b56f7868671bbc911"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_image_manager.html#ac38f2ec3ba21d25b56f7868671bbc911">GetBitmap</a> (char *name, <a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;image)</td></tr>
-<tr class="separator:ac38f2ec3ba21d25b56f7868671bbc911"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a783aa993646ae8d5589fb384e8fa0860"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_image_manager.html#a783aa993646ae8d5589fb384e8fa0860">Preload</a> (char *name)</td></tr>
-<tr class="separator:a783aa993646ae8d5589fb384e8fa0860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa45eabdcdc781fa11e923925d8ba490e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_image_manager.html#aa45eabdcdc781fa11e923925d8ba490e">GetBitmap</a> (const char *name, <a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;image)</td></tr>
+<tr class="separator:aa45eabdcdc781fa11e923925d8ba490e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e4182ed094f49a5878fdd9d5b6c94f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_image_manager.html#ab2e4182ed094f49a5878fdd9d5b6c94f">Preload</a> (const char *name)</td></tr>
+<tr class="separator:ab2e4182ed094f49a5878fdd9d5b6c94f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -107,8 +107,8 @@ image_manager_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeOb
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>图片管理器。负责加载，解码和缓存图片。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="ac38f2ec3ba21d25b56f7868671bbc911"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac38f2ec3ba21d25b56f7868671bbc911">&#9670;&nbsp;</a></span>GetBitmap()</h2>
+<a id="aa45eabdcdc781fa11e923925d8ba490e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa45eabdcdc781fa11e923925d8ba490e">&#9670;&nbsp;</a></span>GetBitmap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -116,7 +116,7 @@ image_manager_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeOb
         <tr>
           <td class="memname">ret_t TImageManager::GetBitmap </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -171,8 +171,8 @@ image_manager_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeOb
 
 </div>
 </div>
-<a id="a783aa993646ae8d5589fb384e8fa0860"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a783aa993646ae8d5589fb384e8fa0860">&#9670;&nbsp;</a></span>Preload()</h2>
+<a id="ab2e4182ed094f49a5878fdd9d5b6c94f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e4182ed094f49a5878fdd9d5b6c94f">&#9670;&nbsp;</a></span>Preload()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -180,7 +180,7 @@ image_manager_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeOb
         <tr>
           <td class="memname">ret_t TImageManager::Preload </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
           <td></td>
         </tr>

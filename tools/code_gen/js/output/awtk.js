@@ -1516,6 +1516,15 @@ var TValue = /** @class */ (function () {
     TValue.prototype.bitmap = function () {
         return value_bitmap(this != null ? (this.nativeObj || this) : null);
     };
+    /**
+     * 获取类型为矩形区域数据。
+     *
+     *
+     * @returns 返回矩形区域数据。
+     */
+    TValue.prototype.rect = function () {
+        return new TRect(value_rect(this != null ? (this.nativeObj || this) : null));
+    };
     return TValue;
 }());
 exports.TValue = TValue;
@@ -6437,6 +6446,11 @@ var TWidgetProp;
      *
      */
     TWidgetProp[TWidgetProp["ANIMATE_ANIMATING_TIME"] = WIDGET_PROP_ANIMATE_ANIMATING_TIME()] = "ANIMATE_ANIMATING_TIME";
+    /**
+     * 控件脏矩形区域。
+     *
+     */
+    TWidgetProp[TWidgetProp["DIRTY_RECT"] = WIDGET_PROP_DIRTY_RECT()] = "DIRTY_RECT";
 })(TWidgetProp = exports.TWidgetProp || (exports.TWidgetProp = {}));
 ;
 /**
@@ -10634,6 +10648,11 @@ var TValueType;
      *
      */
     TValueType[TValueType["BITMAP"] = VALUE_TYPE_BITMAP()] = "BITMAP";
+    /**
+     * 矩形类型。
+     *
+     */
+    TValueType[TValueType["RECT"] = VALUE_TYPE_RECT()] = "RECT";
 })(TValueType = exports.TValueType || (exports.TValueType = {}));
 ;
 /**

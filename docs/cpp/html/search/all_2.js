@@ -3,7 +3,7 @@ var searchData=
   ['canexec_15',['CanExec',['../class_t_object.html#a3fa8faa56cc36cc03f2fcdc25207b40a',1,'TObject']]],
   ['canexecbypath_16',['CanExecByPath',['../class_t_object.html#adc51fc6524aae910b9f66221689b8b89',1,'TObject']]],
   ['center_17',['Center',['../class_t_native_window.html#a01954cfa40348855d930fc38380fd1b1',1,'TNativeWindow']]],
-  ['change_18',['Change',['../class_t_locale_info.html#aa7cb50baa4d4bc538bb068f7bd5ef6a5',1,'TLocaleInfo']]],
+  ['change_18',['Change',['../class_t_locale_info.html#afaeb2b7e45217308b920c71c30ca1a0f',1,'TLocaleInfo']]],
   ['choosefileforopen_19',['ChooseFileForOpen',['../class_t_file_chooser.html#aafc606b0b78e8e7b531abb0ffee35f16',1,'TFileChooser']]],
   ['choosefileforsave_20',['ChooseFileForSave',['../class_t_file_chooser.html#a52518346d1cfb468ead5649613e515a8',1,'TFileChooser']]],
   ['choosefolder_21',['ChooseFolder',['../class_t_file_chooser.html#ace6f1a964e2bf1d1ce724603fda1994f',1,'TFileChooser']]],

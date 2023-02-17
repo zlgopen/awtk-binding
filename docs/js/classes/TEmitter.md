@@ -52,7 +52,7 @@
 
 #### Defined in
 
-[awtk.ts:2290](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L2290)
+[awtk.ts:2293](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2293)
 
 ## Properties
 
@@ -62,7 +62,7 @@
 
 #### Defined in
 
-[awtk.ts:2289](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L2289)
+[awtk.ts:2292](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2292)
 
 ## Methods
 
@@ -80,7 +80,7 @@
 
 #### Defined in
 
-[awtk.ts:2389](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L2389)
+[awtk.ts:2392](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2392)
 
 ___
 
@@ -100,7 +100,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:2378](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L2378)
+[awtk.ts:2381](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2381)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:2314](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L2314)
+[awtk.ts:2317](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2317)
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:2328](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L2328)
+[awtk.ts:2331](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2331)
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:2365](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L2365)
+[awtk.ts:2368](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2368)
 
 ___
 
@@ -191,7 +191,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:2354](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L2354)
+[awtk.ts:2357](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2357)
 
 ___
 
@@ -205,7 +205,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `etype` | [`TEventType`](../enums/TEventType.md) | 事件类型。 |
+| `etype` | `number` | 事件类型。 |
 | `handler` | `Function` | 事件处理函数。 |
 | `ctx` | `any` | 事件处理函数上下文。 |
 
@@ -217,7 +217,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:2342](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L2342)
+[awtk.ts:2345](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2345)
 
 ___
 
@@ -243,7 +243,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:2403](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L2403)
+[awtk.ts:2406](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2406)
 
 ___
 
@@ -261,4 +261,4 @@ ___
 
 #### Defined in
 
-[awtk.ts:2301](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L2301)
+[awtk.ts:2304](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2304)

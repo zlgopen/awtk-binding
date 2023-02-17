@@ -11,7 +11,7 @@
    return emitter_dispatch_simple_event(((emitter_t*)(this->nativeObj)), type);
  }
 
- uint32_t TEmitter::On(event_type_t etype, event_func_t handler, void* ctx)  {
+ uint32_t TEmitter::On(uint32_t etype, event_func_t handler, void* ctx)  {
     return emitter_on(((emitter_t*)(this->nativeObj)), etype, handler, ctx);
  }
 
@@ -188,7 +188,7 @@
  }
 
  ret_t TObject::SetProp(const char* name, TValue& value)  {
-   return object_set_prop(((object_t*)(this->nativeObj)), name, ((value_t*)(value.nativeObj)));
+   return object_set_prop(((object_t*)(this->nativeObj)), name, ((const value_t*)(value.nativeObj)));
  }
 
  ret_t TObject::SetPropStr(const char* name, const char* value)  {
@@ -272,7 +272,7 @@
  }
 
  ret_t TObject::SetPropByPath(const char* path, TValue& value)  {
-   return object_set_prop_by_path(((object_t*)(this->nativeObj)), path, ((value_t*)(value.nativeObj)));
+   return object_set_prop_by_path(((object_t*)(this->nativeObj)), path, ((const value_t*)(value.nativeObj)));
  }
 
  ret_t TObject::SetPropStrByPath(const char* path, const char* value)  {
@@ -380,7 +380,7 @@
  }
 
  bool TValue::Bool()  {
-    return value_bool(((value_t*)(this->nativeObj)));
+    return value_bool(((const value_t*)(this->nativeObj)));
  }
 
  TValue TValue::SetInt8(int8_t value)  {
@@ -388,7 +388,7 @@
  }
 
  int8_t TValue::Int8()  {
-    return value_int8(((value_t*)(this->nativeObj)));
+    return value_int8(((const value_t*)(this->nativeObj)));
  }
 
  TValue TValue::SetUint8(uint8_t value)  {
@@ -396,7 +396,7 @@
  }
 
  uint8_t TValue::Uint8()  {
-    return value_uint8(((value_t*)(this->nativeObj)));
+    return value_uint8(((const value_t*)(this->nativeObj)));
  }
 
  TValue TValue::SetInt16(int16_t value)  {
@@ -404,7 +404,7 @@
  }
 
  int16_t TValue::Int16()  {
-    return value_int16(((value_t*)(this->nativeObj)));
+    return value_int16(((const value_t*)(this->nativeObj)));
  }
 
  TValue TValue::SetUint16(uint16_t value)  {
@@ -412,7 +412,7 @@
  }
 
  uint16_t TValue::Uint16()  {
-    return value_uint16(((value_t*)(this->nativeObj)));
+    return value_uint16(((const value_t*)(this->nativeObj)));
  }
 
  TValue TValue::SetInt32(int32_t value)  {
@@ -420,7 +420,7 @@
  }
 
  int32_t TValue::Int32()  {
-    return value_int32(((value_t*)(this->nativeObj)));
+    return value_int32(((const value_t*)(this->nativeObj)));
  }
 
  TValue TValue::SetUint32(uint32_t value)  {
@@ -432,7 +432,7 @@
  }
 
  int64_t TValue::Int64()  {
-    return value_int64(((value_t*)(this->nativeObj)));
+    return value_int64(((const value_t*)(this->nativeObj)));
  }
 
  TValue TValue::SetUint64(uint64_t value)  {
@@ -440,7 +440,7 @@
  }
 
  uint64_t TValue::Uint64()  {
-    return value_uint64(((value_t*)(this->nativeObj)));
+    return value_uint64(((const value_t*)(this->nativeObj)));
  }
 
  TValue TValue::SetFloat(float_t value)  {
@@ -448,7 +448,7 @@
  }
 
  float TValue::Float32()  {
-    return value_float32(((value_t*)(this->nativeObj)));
+    return value_float32(((const value_t*)(this->nativeObj)));
  }
 
  TValue TValue::SetFloat64(double value)  {
@@ -456,7 +456,7 @@
  }
 
  double TValue::Float64()  {
-    return value_double(((value_t*)(this->nativeObj)));
+    return value_double(((const value_t*)(this->nativeObj)));
  }
 
  TValue TValue::SetStr(const char* value)  {
@@ -464,11 +464,11 @@
  }
 
  const char* TValue::Str()  {
-    return value_str(((value_t*)(this->nativeObj)));
+    return value_str(((const value_t*)(this->nativeObj)));
  }
 
  const char* TValue::StrEx(char* buff, uint32_t size)  {
-    return value_str_ex(((value_t*)(this->nativeObj)), buff, size);
+    return value_str_ex(((const value_t*)(this->nativeObj)), buff, size);
  }
 
  bool TValue::IsNull()  {
@@ -484,7 +484,7 @@
  }
 
  TObject TValue::Object()  {
-   return TObject((emitter_t*)(value_object(((value_t*)(this->nativeObj)))));
+   return TObject((emitter_t*)(value_object(((const value_t*)(this->nativeObj)))));
  }
 
  TValue TValue::SetToken(uint32_t value)  {
@@ -492,7 +492,7 @@
  }
 
  uint32_t TValue::Token()  {
-    return value_token(((value_t*)(this->nativeObj)));
+    return value_token(((const value_t*)(this->nativeObj)));
  }
 
  TValue TValue::Create()  {
@@ -508,19 +508,23 @@
  }
 
  const char* TValue::Id()  {
-    return value_id(((value_t*)(this->nativeObj)));
+    return value_id(((const value_t*)(this->nativeObj)));
  }
 
  void* TValue::Func()  {
-    return value_func(((value_t*)(this->nativeObj)));
+    return value_func(((const value_t*)(this->nativeObj)));
  }
 
  void* TValue::FuncDef()  {
-    return value_func_def(((value_t*)(this->nativeObj)));
+    return value_func_def(((const value_t*)(this->nativeObj)));
  }
 
  void* TValue::Bitmap()  {
-    return value_bitmap(((value_t*)(this->nativeObj)));
+    return value_bitmap(((const value_t*)(this->nativeObj)));
+ }
+
+ TRect TValue::Rect()  {
+   return TRect((rect_t*)(value_rect(((value_t*)(this->nativeObj)))));
  }
 
  ret_t TGlobal::PreInit()  {
@@ -739,11 +743,11 @@
    return TImageManager((image_manager_t*)(image_manager()));
  }
 
- ret_t TImageManager::GetBitmap(char* name, TBitmap& image)  {
+ ret_t TImageManager::GetBitmap(const char* name, TBitmap& image)  {
    return image_manager_get_bitmap(((image_manager_t*)(this->nativeObj)), name, ((bitmap_t*)(image.nativeObj)));
  }
 
- ret_t TImageManager::Preload(char* name)  {
+ ret_t TImageManager::Preload(const char* name)  {
    return image_manager_preload(((image_manager_t*)(this->nativeObj)), name);
  }
 
@@ -791,7 +795,7 @@
     return locale_info_tr(((locale_info_t*)(this->nativeObj)), text);
  }
 
- ret_t TLocaleInfo::Change(char* language, char* country)  {
+ ret_t TLocaleInfo::Change(const char* language, const char* country)  {
    return locale_info_change(((locale_info_t*)(this->nativeObj)), language, country);
  }
 
@@ -975,7 +979,7 @@
    return vgcanvas_paint(((vgcanvas_t*)(this->nativeObj)), stroke, ((bitmap_t*)(img.nativeObj)));
  }
 
- ret_t TVgcanvas::SetFont(char* font)  {
+ ret_t TVgcanvas::SetFont(const char* font)  {
    return vgcanvas_set_font(((vgcanvas_t*)(this->nativeObj)), font);
  }
 
@@ -983,19 +987,19 @@
    return vgcanvas_set_font_size(((vgcanvas_t*)(this->nativeObj)), font);
  }
 
- ret_t TVgcanvas::SetTextAlign(char* value)  {
+ ret_t TVgcanvas::SetTextAlign(const char* value)  {
    return vgcanvas_set_text_align(((vgcanvas_t*)(this->nativeObj)), value);
  }
 
- ret_t TVgcanvas::SetTextBaseline(char* value)  {
+ ret_t TVgcanvas::SetTextBaseline(const char* value)  {
    return vgcanvas_set_text_baseline(((vgcanvas_t*)(this->nativeObj)), value);
  }
 
- ret_t TVgcanvas::FillText(char* text, float_t x, float_t y, float_t max_width)  {
+ ret_t TVgcanvas::FillText(const char* text, float_t x, float_t y, float_t max_width)  {
    return vgcanvas_fill_text(((vgcanvas_t*)(this->nativeObj)), text, x, y, max_width);
  }
 
- float_t TVgcanvas::MeasureText(char* text)  {
+ float_t TVgcanvas::MeasureText(const char* text)  {
     return vgcanvas_measure_text(((vgcanvas_t*)(this->nativeObj)), text);
  }
 
@@ -1031,11 +1035,11 @@
    return vgcanvas_set_stroke_color_str(((vgcanvas_t*)(this->nativeObj)), color);
  }
 
- ret_t TVgcanvas::SetLineCap(char* value)  {
+ ret_t TVgcanvas::SetLineCap(const char* value)  {
    return vgcanvas_set_line_cap(((vgcanvas_t*)(this->nativeObj)), value);
  }
 
- ret_t TVgcanvas::SetLineJoin(char* value)  {
+ ret_t TVgcanvas::SetLineJoin(const char* value)  {
    return vgcanvas_set_line_join(((vgcanvas_t*)(this->nativeObj)), value);
  }
 
@@ -1391,7 +1395,7 @@
    return widget_set_sensitive(((widget_t*)(this->nativeObj)), sensitive);
  }
 
- uint32_t TWidget::On(event_type_t type, event_func_t on_event, void* ctx)  {
+ uint32_t TWidget::On(uint32_t type, event_func_t on_event, void* ctx)  {
     return widget_on(((widget_t*)(this->nativeObj)), type, on_event, ctx);
  }
 
@@ -1987,16 +1991,16 @@
    return assets_manager_set_theme(((assets_manager_t*)(this->nativeObj)), theme);
  }
 
- TAssetInfo TAssetsManager::Ref(asset_type_t type, char* name)  {
+ TAssetInfo TAssetsManager::Ref(asset_type_t type, const char* name)  {
     return assets_manager_ref(((assets_manager_t*)(this->nativeObj)), type, name);
  }
 
- TAssetInfo TAssetsManager::RefEx(asset_type_t type, uint16_t subtype, char* name)  {
+ TAssetInfo TAssetsManager::RefEx(asset_type_t type, uint16_t subtype, const char* name)  {
     return assets_manager_ref_ex(((assets_manager_t*)(this->nativeObj)), type, subtype, name);
  }
 
  ret_t TAssetsManager::Unref(TAssetInfo& info)  {
-   return assets_manager_unref(((assets_manager_t*)(this->nativeObj)), ((asset_info_t*)(info.nativeObj)));
+   return assets_manager_unref(((assets_manager_t*)(this->nativeObj)), ((const asset_info_t*)(info.nativeObj)));
  }
 
  const char* TModelEvent::GetName() const {
@@ -2159,7 +2163,7 @@
    return ((system_event_t*)(this->nativeObj))->sdl_event;
  }
 
- ret_t TFontManager::UnloadFont(char* name, font_size_t size)  {
+ ret_t TFontManager::UnloadFont(const char* name, font_size_t size)  {
    return font_manager_unload_font(((font_manager_t*)(this->nativeObj)), name, size);
  }
 
@@ -2171,7 +2175,7 @@
    return font_manager_unload_all(((font_manager_t*)(this->nativeObj)));
  }
 
- ret_t TImageBase::SetImage(char* name)  {
+ ret_t TImageBase::SetImage(const char* name)  {
    return image_base_set_image(((widget_t*)(this->nativeObj)), name);
  }
 
@@ -2663,7 +2667,7 @@
    return TGauge((widget_t*)(gauge_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- ret_t TGauge::SetImage(char* name)  {
+ ret_t TGauge::SetImage(const char* name)  {
    return gauge_set_image(((widget_t*)(this->nativeObj)), name);
  }
 
@@ -2967,7 +2971,7 @@
    return mledit_set_max_chars(((widget_t*)(this->nativeObj)), max_chars);
  }
 
- ret_t TMledit::SetTips(char* tips)  {
+ ret_t TMledit::SetTips(const char* tips)  {
    return mledit_set_tips(((widget_t*)(this->nativeObj)), tips);
  }
 
@@ -2975,7 +2979,7 @@
    return mledit_set_tr_tips(((widget_t*)(this->nativeObj)), tr_tips);
  }
 
- ret_t TMledit::SetKeyboard(char* keyboard)  {
+ ret_t TMledit::SetKeyboard(const char* keyboard)  {
    return mledit_set_keyboard(((widget_t*)(this->nativeObj)), keyboard);
  }
 
@@ -3139,7 +3143,7 @@
    return TRichText((widget_t*)(rich_text_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- ret_t TRichText::SetText(char* text)  {
+ ret_t TRichText::SetText(const char* text)  {
    return rich_text_set_text(((widget_t*)(this->nativeObj)), text);
  }
 
@@ -3803,11 +3807,11 @@
     return text_selector_count_options(((widget_t*)(this->nativeObj)));
  }
 
- ret_t TTextSelector::AppendOption(int32_t value, char* text)  {
+ ret_t TTextSelector::AppendOption(int32_t value, const char* text)  {
    return text_selector_append_option(((widget_t*)(this->nativeObj)), value, text);
  }
 
- ret_t TTextSelector::SetOptions(char* options)  {
+ ret_t TTextSelector::SetOptions(const char* options)  {
    return text_selector_set_options(((widget_t*)(this->nativeObj)), options);
  }
 
@@ -4315,11 +4319,11 @@
    return edit_set_input_type(((widget_t*)(this->nativeObj)), type);
  }
 
- ret_t TEdit::SetActionText(char* action_text)  {
+ ret_t TEdit::SetActionText(const char* action_text)  {
    return edit_set_action_text(((widget_t*)(this->nativeObj)), action_text);
  }
 
- ret_t TEdit::SetTips(char* tips)  {
+ ret_t TEdit::SetTips(const char* tips)  {
    return edit_set_tips(((widget_t*)(this->nativeObj)), tips);
  }
 
@@ -4327,7 +4331,7 @@
    return edit_set_tr_tips(((widget_t*)(this->nativeObj)), tr_tips);
  }
 
- ret_t TEdit::SetKeyboard(char* keyboard)  {
+ ret_t TEdit::SetKeyboard(const char* keyboard)  {
    return edit_set_keyboard(((widget_t*)(this->nativeObj)), keyboard);
  }
 
@@ -4503,7 +4507,7 @@
    return pages_set_auto_focused(((widget_t*)(this->nativeObj)), auto_focused);
  }
 
- ret_t TPages::SetActiveByName(char* name)  {
+ ret_t TPages::SetActiveByName(const char* name)  {
    return pages_set_active_by_name(((widget_t*)(this->nativeObj)), name);
  }
 
@@ -4675,15 +4679,15 @@
    return tab_button_set_value(((widget_t*)(this->nativeObj)), value);
  }
 
- ret_t TTabButton::SetIcon(char* name)  {
+ ret_t TTabButton::SetIcon(const char* name)  {
    return tab_button_set_icon(((widget_t*)(this->nativeObj)), name);
  }
 
- ret_t TTabButton::SetActiveIcon(char* name)  {
+ ret_t TTabButton::SetActiveIcon(const char* name)  {
    return tab_button_set_active_icon(((widget_t*)(this->nativeObj)), name);
  }
 
- ret_t TTabButton::SetLoadUi(char* name)  {
+ ret_t TTabButton::SetLoadUi(const char* name)  {
    return tab_button_set_load_ui(((widget_t*)(this->nativeObj)), name);
  }
 
@@ -4739,7 +4743,7 @@
    return TDialog((widget_t*)(dialog_open(name)));
  }
 
- ret_t TDialog::SetTitle(char* title)  {
+ ret_t TDialog::SetTitle(const char* title)  {
    return dialog_set_title(((widget_t*)(this->nativeObj)), title);
  }
 
@@ -4899,7 +4903,7 @@
    return TSvgImage((widget_t*)(svg_image_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
- ret_t TSvgImage::SetImage(char* name)  {
+ ret_t TSvgImage::SetImage(const char* name)  {
    return svg_image_set_image(((widget_t*)(this->nativeObj)), name);
  }
 

@@ -479,6 +479,17 @@ public class TValue {
     return value_bitmap(this != null ? (this.nativeObj) : 0);
  }
 
+
+  /**
+   * 获取类型为矩形区域数据。
+   * 
+   *
+   * @return 返回矩形区域数据。
+   */
+ public  TRect rect()  {
+    return new TRect(value_rect(this != null ? (this.nativeObj) : 0));
+ }
+
 static private native long value_set_bool(long v, boolean value);
 static private native boolean value_bool(long v);
 static private native long value_set_int8(long v, int value);
@@ -517,4 +528,5 @@ static private native String value_id(long v);
 static private native long value_func(long v);
 static private native long value_func_def(long v);
 static private native long value_bitmap(long v);
+static private native long value_rect(long v);
 };

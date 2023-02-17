@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[awtk.ts:12641](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L12641)
+[awtk.ts:12661](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12661)
 
 ## Properties
 
@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[awtk.ts:12640](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L12640)
+[awtk.ts:12660](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12660)
 
 ## Accessors
 
@@ -70,7 +70,7 @@
 
 #### Defined in
 
-[awtk.ts:12772](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L12772)
+[awtk.ts:12792](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12792)
 
 • `set` **color**(`v`): `void`
 
@@ -86,7 +86,7 @@
 
 #### Defined in
 
-[awtk.ts:12776](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L12776)
+[awtk.ts:12796](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12796)
 
 ## Methods
 
@@ -106,7 +106,7 @@
 
 #### Defined in
 
-[awtk.ts:12724](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L12724)
+[awtk.ts:12744](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12744)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:12711](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L12711)
+[awtk.ts:12731](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12731)
 
 ___
 
@@ -145,7 +145,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:12763](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L12763)
+[awtk.ts:12783](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12783)
 
 ___
 
@@ -171,7 +171,7 @@ color对象。
 
 #### Defined in
 
-[awtk.ts:12672](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L12672)
+[awtk.ts:12692](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12692)
 
 ___
 
@@ -191,7 +191,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:12698](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L12698)
+[awtk.ts:12718](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12718)
 
 ___
 
@@ -211,7 +211,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:12737](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L12737)
+[awtk.ts:12757](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12757)
 
 ___
 
@@ -231,7 +231,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:12685](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L12685)
+[awtk.ts:12705](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12705)
 
 ___
 
@@ -257,7 +257,7 @@ color对象。
 
 #### Defined in
 
-[awtk.ts:12751](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L12751)
+[awtk.ts:12771](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12771)
 
 ___
 
@@ -286,4 +286,4 @@ color对象。
 
 #### Defined in
 
-[awtk.ts:12658](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L12658)
+[awtk.ts:12678](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12678)

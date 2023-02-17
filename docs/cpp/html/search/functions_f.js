@@ -1,9 +1,9 @@
 var searchData=
 [
   ['r_1532',['R',['../class_t_color.html#ad8104e48b26a70e7805af11bedb69d9d',1,'TColor']]],
-  ['rect_1533',['Rect',['../class_t_vgcanvas.html#a07feea57b3ba5566c341f1ff06d90f92',1,'TVgcanvas']]],
-  ['ref_1534',['Ref',['../class_t_object.html#aaf537435d8cfe6994777b886e25cc2ba',1,'TObject::Ref()'],['../class_t_assets_manager.html#a0c59da9e8b77c665f929cd8846f8606f',1,'TAssetsManager::Ref()']]],
-  ['refex_1535',['RefEx',['../class_t_assets_manager.html#a05493d2d324a6f711029b577798484e4',1,'TAssetsManager']]],
+  ['rect_1533',['Rect',['../class_t_value.html#af0699c0296d3a2429482a0d2cb2d46b1',1,'TValue::Rect()'],['../class_t_vgcanvas.html#a07feea57b3ba5566c341f1ff06d90f92',1,'TVgcanvas::Rect()']]],
+  ['ref_1534',['Ref',['../class_t_object.html#aaf537435d8cfe6994777b886e25cc2ba',1,'TObject::Ref()'],['../class_t_assets_manager.html#a6aa3aca6ded46e2d47c051a52b6a4a8f',1,'TAssetsManager::Ref()']]],
+  ['refex_1535',['RefEx',['../class_t_assets_manager.html#a079e78560f79ce4319f6181912b9ac95',1,'TAssetsManager']]],
   ['reinit_1536',['Reinit',['../class_t_list_view.html#a76d89b0c447847b9413fdcadb7f150f8',1,'TListView']]],
   ['reload_1537',['Reload',['../class_t_app_conf.html#ab4ab1ef740b0682c1174b7954559f741',1,'TAppConf::Reload()'],['../class_t_file_browser_view.html#ad9a9e5614856ecd4b5ff9e88aabf8177',1,'TFileBrowserView::Reload()']]],
   ['remove_1538',['Remove',['../class_t_idle.html#a6f52dfbf87c943693578ec2d6497483d',1,'TIdle::Remove()'],['../class_t_timer.html#a40e7fb637864da595ef891ebebf4c9f8',1,'TTimer::Remove()'],['../class_t_app_conf.html#a505248383e6db37cd17cc72a75a2708a',1,'TAppConf::Remove()'],['../class_t_object_array.html#a99fe1a8814076c17a6584c5ca8654064',1,'TObjectArray::Remove()']]],

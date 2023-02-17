@@ -288,6 +288,8 @@ const value_func_def = Module.cwrap("value_func_def",
     "number", ["number"]);
 const value_bitmap = Module.cwrap("value_bitmap", 
     "number", ["number"]);
+const value_rect = Module.cwrap("value_rect", 
+    "number", ["number"]);
 const tk_pre_init = Module.cwrap("tk_pre_init", 
     "number", []);
 const tk_init = Module.cwrap("tk_init", 
@@ -1726,6 +1728,8 @@ const WIDGET_PROP_ANIMATE_PREFIX = Module.cwrap("get_WIDGET_PROP_ANIMATE_PREFIX"
     "string", []);
 const WIDGET_PROP_ANIMATE_ANIMATING_TIME = Module.cwrap("get_WIDGET_PROP_ANIMATE_ANIMATING_TIME", 
     "string", []);
+const WIDGET_PROP_DIRTY_RECT = Module.cwrap("get_WIDGET_PROP_DIRTY_RECT", 
+    "string", []);
 const WIDGET_TYPE_NONE = Module.cwrap("get_WIDGET_TYPE_NONE", 
     "string", []);
 const WIDGET_TYPE_WINDOW_MANAGER = Module.cwrap("get_WIDGET_TYPE_WINDOW_MANAGER", 
@@ -2783,6 +2787,8 @@ const VALUE_TYPE_FUNC_DEF = Module.cwrap("get_VALUE_TYPE_FUNC_DEF",
 const VALUE_TYPE_POINTER_REF = Module.cwrap("get_VALUE_TYPE_POINTER_REF", 
     "number", []);
 const VALUE_TYPE_BITMAP = Module.cwrap("get_VALUE_TYPE_BITMAP", 
+    "number", []);
+const VALUE_TYPE_RECT = Module.cwrap("get_VALUE_TYPE_RECT", 
     "number", []);
 const assets_manager = Module.cwrap("assets_manager", 
     "number", []);
@@ -4635,7 +4641,7 @@ export class TEmitter {
    *
    * @returns 返回id，用于emitter_off。
    */
- on(etype : TEventType, handler : Function, ctx : any) : number  {
+ on(etype : number, handler : Function, ctx : any) : number  {
     return emitter_on(this != null ? (this.nativeObj || this) : null, etype, TBrowser.addFunction(wrap_on_event(handler), "iii"), ctx);
  }
 
@@ -6271,6 +6277,17 @@ export class TValue {
    */
  bitmap() : any  {
     return value_bitmap(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 获取类型为矩形区域数据。
+   * 
+   *
+   * @returns 返回矩形区域数据。
+   */
+ rect() : TRect  {
+    return new TRect(value_rect(this != null ? (this.nativeObj || this) : null));
  }
 
 };
@@ -11951,6 +11968,12 @@ export enum TWidgetProp {
    *
    */
  ANIMATE_ANIMATING_TIME = WIDGET_PROP_ANIMATE_ANIMATING_TIME(),
+
+  /**
+   * 控件脏矩形区域。
+   *
+   */
+ DIRTY_RECT = WIDGET_PROP_DIRTY_RECT(),
 };
 
 
@@ -13531,7 +13554,7 @@ export class TWidget {
    *
    * @returns 返回id，用于widget_off。
    */
- on(type : TEventType, on_event : Function, ctx : any) : number  {
+ on(type : number, on_event : Function, ctx : any) : number  {
     return widget_on(this != null ? (this.nativeObj || this) : null, type, TBrowser.addFunction(wrap_on_event(on_event), "iii"), ctx);
  }
 
@@ -16759,6 +16782,12 @@ export enum TValueType {
    *
    */
  BITMAP = VALUE_TYPE_BITMAP(),
+
+  /**
+   * 矩形类型。
+   *
+   */
+ RECT = VALUE_TYPE_RECT(),
 };
 
 

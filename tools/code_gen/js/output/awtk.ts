@@ -5,7 +5,7 @@ export declare function init(w:number, h:number,name: string, isDesktop:boolean)
 declare function emitter_create() : any;
 declare function emitter_dispatch(emitter : any, e : any) : TRet;
 declare function emitter_dispatch_simple_event(emitter : any, type : number) : TRet;
-declare function emitter_on(emitter : any, etype : TEventType, handler : Function, ctx : any) : number;
+declare function emitter_on(emitter : any, etype : number, handler : Function, ctx : any) : number;
 declare function emitter_off(emitter : any, id : number) : TRet;
 declare function emitter_enable(emitter : any) : TRet;
 declare function emitter_disable(emitter : any) : TRet;
@@ -136,6 +136,7 @@ declare function value_id(v : any) : string;
 declare function value_func(v : any) : any;
 declare function value_func_def(v : any) : any;
 declare function value_bitmap(v : any) : any;
+declare function value_rect(v : any) : any;
 declare function tk_pre_init() : TRet;
 declare function tk_init(w : number, h : number, app_type : TAppType, app_name : string, app_root : string) : TRet;
 declare function tk_run() : TRet;
@@ -855,6 +856,7 @@ declare function WIDGET_PROP_DRAG_THRESHOLD():any;
 declare function WIDGET_PROP_ANIMATING_TIME():any;
 declare function WIDGET_PROP_ANIMATE_PREFIX():any;
 declare function WIDGET_PROP_ANIMATE_ANIMATING_TIME():any;
+declare function WIDGET_PROP_DIRTY_RECT():any;
 declare function WIDGET_TYPE_NONE():any;
 declare function WIDGET_TYPE_WINDOW_MANAGER():any;
 declare function WIDGET_TYPE_NORMAL_WINDOW():any;
@@ -1028,7 +1030,7 @@ declare function widget_lookup_by_type(widget : any, type : string, recursive : 
 declare function widget_set_visible(widget : any, visible : boolean) : TRet;
 declare function widget_set_visible_only(widget : any, visible : boolean) : TRet;
 declare function widget_set_sensitive(widget : any, sensitive : boolean) : TRet;
-declare function widget_on(widget : any, type : TEventType, on_event : Function, ctx : any) : number;
+declare function widget_on(widget : any, type : number, on_event : Function, ctx : any) : number;
 declare function widget_off(widget : any, id : number) : TRet;
 declare function widget_invalidate_force(widget : any, r : any) : TRet;
 declare function widget_set_props(widget : any, params : string) : TRet;
@@ -1384,6 +1386,7 @@ declare function VALUE_TYPE_FUNC():any;
 declare function VALUE_TYPE_FUNC_DEF():any;
 declare function VALUE_TYPE_POINTER_REF():any;
 declare function VALUE_TYPE_BITMAP():any;
+declare function VALUE_TYPE_RECT():any;
 declare function assets_manager() : any;
 declare function assets_manager_set_theme(am : any, theme : string) : TRet;
 declare function assets_manager_ref(am : any, type : TAssetType, name : string) : any;
@@ -2339,7 +2342,7 @@ export class TEmitter {
    *
    * @returns 返回id，用于emitter_off。
    */
- on(etype : TEventType, handler : Function, ctx : any) : number  {
+ on(etype : number, handler : Function, ctx : any) : number  {
     return emitter_on(this != null ? (this.nativeObj || this) : null, etype, handler, ctx);
  }
 
@@ -3975,6 +3978,17 @@ export class TValue {
    */
  bitmap() : any  {
     return value_bitmap(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 获取类型为矩形区域数据。
+   * 
+   *
+   * @returns 返回矩形区域数据。
+   */
+ rect() : TRect  {
+    return new TRect(value_rect(this != null ? (this.nativeObj || this) : null));
  }
 
 };
@@ -9655,6 +9669,12 @@ export enum TWidgetProp {
    *
    */
  ANIMATE_ANIMATING_TIME = WIDGET_PROP_ANIMATE_ANIMATING_TIME(),
+
+  /**
+   * 控件脏矩形区域。
+   *
+   */
+ DIRTY_RECT = WIDGET_PROP_DIRTY_RECT(),
 };
 
 
@@ -11235,7 +11255,7 @@ export class TWidget {
    *
    * @returns 返回id，用于widget_off。
    */
- on(type : TEventType, on_event : Function, ctx : any) : number  {
+ on(type : number, on_event : Function, ctx : any) : number  {
     return widget_on(this != null ? (this.nativeObj || this) : null, type, on_event, ctx);
  }
 
@@ -14463,6 +14483,12 @@ export enum TValueType {
    *
    */
  BITMAP = VALUE_TYPE_BITMAP(),
+
+  /**
+   * 矩形类型。
+   *
+   */
+ RECT = VALUE_TYPE_RECT(),
 };
 
 

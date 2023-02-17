@@ -503,7 +503,7 @@ int awtk_TObject_object_set_prop(Runtime *runtime, JClass *clazz) {
   ret_t ret = 0;
   object_t* obj = (object_t*)jni_ctx_get_object(&actx);
   const char* name = (const char*)jni_ctx_get_str(&actx);
-  value_t* value = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* value = (const value_t*)jni_ctx_get_object(&actx);
   ret = (ret_t)object_set_prop(obj, name, value);
   TKMEM_FREE(name);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -791,7 +791,7 @@ int awtk_TObject_object_set_prop_by_path(Runtime *runtime, JClass *clazz) {
   ret_t ret = 0;
   object_t* obj = (object_t*)jni_ctx_get_object(&actx);
   const char* path = (const char*)jni_ctx_get_str(&actx);
-  value_t* value = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* value = (const value_t*)jni_ctx_get_object(&actx);
   ret = (ret_t)object_set_prop_by_path(obj, path, value);
   TKMEM_FREE(path);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -1158,7 +1158,7 @@ int awtk_TValue_value_bool(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   bool_t ret = 0;
-  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
   ret = (bool_t)value_bool(v);
   jni_ctx_return_int(&actx, (int32_t)(ret));
 
@@ -1181,7 +1181,7 @@ int awtk_TValue_value_int8(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   int8_t ret = 0;
-  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
   ret = (int8_t)value_int8(v);
   jni_ctx_return_int(&actx, (int32_t)(ret));
 
@@ -1204,7 +1204,7 @@ int awtk_TValue_value_uint8(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   uint8_t ret = 0;
-  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
   ret = (uint8_t)value_uint8(v);
   jni_ctx_return_int(&actx, (int32_t)(ret));
 
@@ -1227,7 +1227,7 @@ int awtk_TValue_value_int16(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   int16_t ret = 0;
-  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
   ret = (int16_t)value_int16(v);
   jni_ctx_return_int(&actx, (int32_t)(ret));
 
@@ -1250,7 +1250,7 @@ int awtk_TValue_value_uint16(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   uint16_t ret = 0;
-  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
   ret = (uint16_t)value_uint16(v);
   jni_ctx_return_int(&actx, (int32_t)(ret));
 
@@ -1273,7 +1273,7 @@ int awtk_TValue_value_int32(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   int32_t ret = 0;
-  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
   ret = (int32_t)value_int32(v);
   jni_ctx_return_int(&actx, (int32_t)(ret));
 
@@ -1308,7 +1308,7 @@ int awtk_TValue_value_int64(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   int64_t ret = 0;
-  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
   ret = (int64_t)value_int64(v);
   jni_ctx_return_int64(&actx, (int64_t)(ret));
 
@@ -1331,7 +1331,7 @@ int awtk_TValue_value_uint64(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   uint64_t ret = 0;
-  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
   ret = (uint64_t)value_uint64(v);
   jni_ctx_return_int64(&actx, (int64_t)(ret));
 
@@ -1354,7 +1354,7 @@ int awtk_TValue_value_float32(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   float ret = 0;
-  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
   ret = (float)value_float32(v);
   jni_ctx_return_float(&actx, (float)(ret));
 
@@ -1377,7 +1377,7 @@ int awtk_TValue_value_double(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   double ret = 0;
-  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
   ret = (double)value_double(v);
   jni_ctx_return_float(&actx, (float)(ret));
 
@@ -1401,7 +1401,7 @@ int awtk_TValue_value_str(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   const char* ret = NULL;
-  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
   ret = (const char*)value_str(v);
   jni_ctx_return_str(&actx, (char*)(ret));
 
@@ -1412,7 +1412,7 @@ int awtk_TValue_value_str_ex(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   const char* ret = NULL;
-  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
   char* buff = (char*)jni_ctx_get_str(&actx);
   uint32_t size = (uint32_t)jni_ctx_get_int(&actx);
   ret = (const char*)value_str_ex(v, buff, size);
@@ -1461,7 +1461,7 @@ int awtk_TValue_value_object(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   object_t* ret = NULL;
-  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
   ret = (object_t*)value_object(v);
   jni_ctx_return_object(&actx, (void*)(ret));
 
@@ -1484,7 +1484,7 @@ int awtk_TValue_value_token(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   uint32_t ret = 0;
-  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
   ret = (uint32_t)value_token(v);
   jni_ctx_return_int(&actx, (int32_t)(ret));
 
@@ -1527,7 +1527,7 @@ int awtk_TValue_value_id(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   const char* ret = NULL;
-  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
   ret = (const char*)value_id(v);
   jni_ctx_return_str(&actx, (char*)(ret));
 
@@ -1538,7 +1538,7 @@ int awtk_TValue_value_func(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   void* ret = NULL;
-  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
   ret = (void*)value_func(v);
   jni_ctx_return_int64(&actx, (int64_t)(ret));
 
@@ -1549,7 +1549,7 @@ int awtk_TValue_value_func_def(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   void* ret = NULL;
-  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
   ret = (void*)value_func_def(v);
   jni_ctx_return_int64(&actx, (int64_t)(ret));
 
@@ -1560,9 +1560,20 @@ int awtk_TValue_value_bitmap(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   void* ret = NULL;
-  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
   ret = (void*)value_bitmap(v);
   jni_ctx_return_int64(&actx, (int64_t)(ret));
+
+  return 0;
+}
+
+int awtk_TValue_value_rect(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  rect_t* ret = NULL;
+  value_t* v = (value_t*)jni_ctx_get_object(&actx);
+  ret = (rect_t*)value_rect(v);
+  jni_ctx_return_object(&actx, (void*)(ret));
 
   return 0;
 }
@@ -3390,7 +3401,7 @@ int awtk_TImageManager_image_manager_get_bitmap(Runtime *runtime, JClass *clazz)
 
   ret_t ret = 0;
   image_manager_t* imm = (image_manager_t*)jni_ctx_get_object(&actx);
-  char* name = (char*)jni_ctx_get_str(&actx);
+  const char* name = (const char*)jni_ctx_get_str(&actx);
   bitmap_t* image = (bitmap_t*)jni_ctx_get_object(&actx);
   ret = (ret_t)image_manager_get_bitmap(imm, name, image);
   TKMEM_FREE(name);
@@ -3404,7 +3415,7 @@ int awtk_TImageManager_image_manager_preload(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   image_manager_t* imm = (image_manager_t*)jni_ctx_get_object(&actx);
-  char* name = (char*)jni_ctx_get_str(&actx);
+  const char* name = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)image_manager_preload(imm, name);
   TKMEM_FREE(name);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -4865,8 +4876,8 @@ int awtk_TLocaleInfo_locale_info_change(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   locale_info_t* locale_info = (locale_info_t*)jni_ctx_get_object(&actx);
-  char* language = (char*)jni_ctx_get_str(&actx);
-  char* country = (char*)jni_ctx_get_str(&actx);
+  const char* language = (const char*)jni_ctx_get_str(&actx);
+  const char* country = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)locale_info_change(locale_info, language, country);
   TKMEM_FREE(language);
   TKMEM_FREE(country);
@@ -6103,7 +6114,7 @@ int awtk_TVgcanvas_vgcanvas_set_font(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   vgcanvas_t* vg = (vgcanvas_t*)jni_ctx_get_object(&actx);
-  char* font = (char*)jni_ctx_get_str(&actx);
+  const char* font = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)vgcanvas_set_font(vg, font);
   TKMEM_FREE(font);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -6128,7 +6139,7 @@ int awtk_TVgcanvas_vgcanvas_set_text_align(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   vgcanvas_t* vg = (vgcanvas_t*)jni_ctx_get_object(&actx);
-  char* value = (char*)jni_ctx_get_str(&actx);
+  const char* value = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)vgcanvas_set_text_align(vg, value);
   TKMEM_FREE(value);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -6141,7 +6152,7 @@ int awtk_TVgcanvas_vgcanvas_set_text_baseline(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   vgcanvas_t* vg = (vgcanvas_t*)jni_ctx_get_object(&actx);
-  char* value = (char*)jni_ctx_get_str(&actx);
+  const char* value = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)vgcanvas_set_text_baseline(vg, value);
   TKMEM_FREE(value);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -6154,7 +6165,7 @@ int awtk_TVgcanvas_vgcanvas_fill_text(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   vgcanvas_t* vg = (vgcanvas_t*)jni_ctx_get_object(&actx);
-  char* text = (char*)jni_ctx_get_str(&actx);
+  const char* text = (const char*)jni_ctx_get_str(&actx);
   float_t x = (float_t)jni_ctx_get_float(&actx);
   float_t y = (float_t)jni_ctx_get_float(&actx);
   float_t max_width = (float_t)jni_ctx_get_float(&actx);
@@ -6170,7 +6181,7 @@ int awtk_TVgcanvas_vgcanvas_measure_text(Runtime *runtime, JClass *clazz) {
 
   float_t ret = 0;
   vgcanvas_t* vg = (vgcanvas_t*)jni_ctx_get_object(&actx);
-  char* text = (char*)jni_ctx_get_str(&actx);
+  const char* text = (const char*)jni_ctx_get_str(&actx);
   ret = (float_t)vgcanvas_measure_text(vg, text);
   TKMEM_FREE(text);
   jni_ctx_return_float(&actx, (float)(ret));
@@ -6307,7 +6318,7 @@ int awtk_TVgcanvas_vgcanvas_set_line_cap(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   vgcanvas_t* vg = (vgcanvas_t*)jni_ctx_get_object(&actx);
-  char* value = (char*)jni_ctx_get_str(&actx);
+  const char* value = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)vgcanvas_set_line_cap(vg, value);
   TKMEM_FREE(value);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -6320,7 +6331,7 @@ int awtk_TVgcanvas_vgcanvas_set_line_join(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   vgcanvas_t* vg = (vgcanvas_t*)jni_ctx_get_object(&actx);
-  char* value = (char*)jni_ctx_get_str(&actx);
+  const char* value = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)vgcanvas_set_line_join(vg, value);
   TKMEM_FREE(value);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -7908,6 +7919,14 @@ int awtk_TWidgetProp_WIDGET_PROP_ANIMATE_ANIMATING_TIME(Runtime *runtime, JClass
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   jni_ctx_return_str(&actx, (char*)(WIDGET_PROP_ANIMATE_ANIMATING_TIME));
+
+  return 0;
+}
+
+int awtk_TWidgetProp_WIDGET_PROP_DIRTY_RECT(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_str(&actx, (char*)(WIDGET_PROP_DIRTY_RECT));
 
   return 0;
 }
@@ -12898,6 +12917,14 @@ int awtk_TValueType_VALUE_TYPE_BITMAP(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TValueType_VALUE_TYPE_RECT(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(VALUE_TYPE_RECT));
+
+  return 0;
+}
+
 int awtk_TAssetsManager_assets_manager(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -12927,7 +12954,7 @@ int awtk_TAssetsManager_assets_manager_ref(Runtime *runtime, JClass *clazz) {
   const asset_info_t* ret = NULL;
   assets_manager_t* am = (assets_manager_t*)jni_ctx_get_object(&actx);
   asset_type_t type = (asset_type_t)jni_ctx_get_int(&actx);
-  char* name = (char*)jni_ctx_get_str(&actx);
+  const char* name = (const char*)jni_ctx_get_str(&actx);
   ret = (const asset_info_t*)assets_manager_ref(am, type, name);
   TKMEM_FREE(name);
   jni_ctx_return_object(&actx, (void*)(ret));
@@ -12942,7 +12969,7 @@ int awtk_TAssetsManager_assets_manager_ref_ex(Runtime *runtime, JClass *clazz) {
   assets_manager_t* am = (assets_manager_t*)jni_ctx_get_object(&actx);
   asset_type_t type = (asset_type_t)jni_ctx_get_int(&actx);
   uint16_t subtype = (uint16_t)jni_ctx_get_int(&actx);
-  char* name = (char*)jni_ctx_get_str(&actx);
+  const char* name = (const char*)jni_ctx_get_str(&actx);
   ret = (const asset_info_t*)assets_manager_ref_ex(am, type, subtype, name);
   TKMEM_FREE(name);
   jni_ctx_return_object(&actx, (void*)(ret));
@@ -12955,7 +12982,7 @@ int awtk_TAssetsManager_assets_manager_unref(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   assets_manager_t* am = (assets_manager_t*)jni_ctx_get_object(&actx);
-  asset_info_t* info = (asset_info_t*)jni_ctx_get_object(&actx);
+  const asset_info_t* info = (const asset_info_t*)jni_ctx_get_object(&actx);
   ret = (ret_t)assets_manager_unref(am, info);
   jni_ctx_return_int(&actx, (int32_t)(ret));
 
@@ -13459,7 +13486,7 @@ int awtk_TFontManager_font_manager_unload_font(Runtime *runtime, JClass *clazz) 
 
   ret_t ret = 0;
   font_manager_t* fm = (font_manager_t*)jni_ctx_get_object(&actx);
-  char* name = (char*)jni_ctx_get_str(&actx);
+  const char* name = (const char*)jni_ctx_get_str(&actx);
   font_size_t size = (font_size_t)jni_ctx_get_int(&actx);
   ret = (ret_t)font_manager_unload_font(fm, name, size);
   TKMEM_FREE(name);
@@ -13496,7 +13523,7 @@ int awtk_TImageBase_image_base_set_image(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
-  char* name = (char*)jni_ctx_get_str(&actx);
+  const char* name = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)image_base_set_image(widget, name);
   TKMEM_FREE(name);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -14985,7 +15012,7 @@ int awtk_TGauge_gauge_set_image(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
-  char* name = (char*)jni_ctx_get_str(&actx);
+  const char* name = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)gauge_set_image(widget, name);
   TKMEM_FREE(name);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -15895,7 +15922,7 @@ int awtk_TMledit_mledit_set_tips(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
-  char* tips = (char*)jni_ctx_get_str(&actx);
+  const char* tips = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)mledit_set_tips(widget, tips);
   TKMEM_FREE(tips);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -15921,7 +15948,7 @@ int awtk_TMledit_mledit_set_keyboard(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
-  char* keyboard = (char*)jni_ctx_get_str(&actx);
+  const char* keyboard = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)mledit_set_keyboard(widget, keyboard);
   TKMEM_FREE(keyboard);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -16399,7 +16426,7 @@ int awtk_TRichText_rich_text_set_text(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
-  char* text = (char*)jni_ctx_get_str(&actx);
+  const char* text = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)rich_text_set_text(widget, text);
   TKMEM_FREE(text);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -18386,7 +18413,7 @@ int awtk_TTextSelector_text_selector_append_option(Runtime *runtime, JClass *cla
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
   int32_t value = (int32_t)jni_ctx_get_int(&actx);
-  char* text = (char*)jni_ctx_get_str(&actx);
+  const char* text = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)text_selector_append_option(widget, value, text);
   TKMEM_FREE(text);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -18399,7 +18426,7 @@ int awtk_TTextSelector_text_selector_set_options(Runtime *runtime, JClass *clazz
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
-  char* options = (char*)jni_ctx_get_str(&actx);
+  const char* options = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)text_selector_set_options(widget, options);
   TKMEM_FREE(options);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -20085,7 +20112,7 @@ int awtk_TEdit_edit_set_action_text(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
-  char* action_text = (char*)jni_ctx_get_str(&actx);
+  const char* action_text = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)edit_set_action_text(widget, action_text);
   TKMEM_FREE(action_text);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -20098,7 +20125,7 @@ int awtk_TEdit_edit_set_tips(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
-  char* tips = (char*)jni_ctx_get_str(&actx);
+  const char* tips = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)edit_set_tips(widget, tips);
   TKMEM_FREE(tips);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -20124,7 +20151,7 @@ int awtk_TEdit_edit_set_keyboard(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
-  char* keyboard = (char*)jni_ctx_get_str(&actx);
+  const char* keyboard = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)edit_set_keyboard(widget, keyboard);
   TKMEM_FREE(keyboard);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -20660,7 +20687,7 @@ int awtk_TPages_pages_set_active_by_name(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
-  char* name = (char*)jni_ctx_get_str(&actx);
+  const char* name = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)pages_set_active_by_name(widget, name);
   TKMEM_FREE(name);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -21188,7 +21215,7 @@ int awtk_TTabButton_tab_button_set_icon(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
-  char* name = (char*)jni_ctx_get_str(&actx);
+  const char* name = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)tab_button_set_icon(widget, name);
   TKMEM_FREE(name);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -21201,7 +21228,7 @@ int awtk_TTabButton_tab_button_set_active_icon(Runtime *runtime, JClass *clazz) 
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
-  char* name = (char*)jni_ctx_get_str(&actx);
+  const char* name = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)tab_button_set_active_icon(widget, name);
   TKMEM_FREE(name);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -21214,7 +21241,7 @@ int awtk_TTabButton_tab_button_set_load_ui(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
-  char* name = (char*)jni_ctx_get_str(&actx);
+  const char* name = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)tab_button_set_load_ui(widget, name);
   TKMEM_FREE(name);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -21412,7 +21439,7 @@ int awtk_TDialog_dialog_set_title(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
-  char* title = (char*)jni_ctx_get_str(&actx);
+  const char* title = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)dialog_set_title(widget, title);
   TKMEM_FREE(title);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -21949,7 +21976,7 @@ int awtk_TSvgImage_svg_image_set_image(Runtime *runtime, JClass *clazz) {
 
   ret_t ret = 0;
   widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
-  char* name = (char*)jni_ctx_get_str(&actx);
+  const char* name = (const char*)jni_ctx_get_str(&actx);
   ret = (ret_t)svg_image_set_image(widget, name);
   TKMEM_FREE(name);
   jni_ctx_return_int(&actx, (int32_t)(ret));
@@ -22985,6 +23012,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TValue",  "value_func",  "(J)J",  awtk_TValue_value_func},
 {"awtk/TValue",  "value_func_def",  "(J)J",  awtk_TValue_value_func_def},
 {"awtk/TValue",  "value_bitmap",  "(J)J",  awtk_TValue_value_bitmap},
+{"awtk/TValue",  "value_rect",  "(J)J",  awtk_TValue_value_rect},
 {"awtk/TGlobal",  "tk_pre_init",  "()I",  awtk_TGlobal_tk_pre_init},
 {"awtk/TGlobal",  "tk_init",  "(IIILjava/lang/String;Ljava/lang/String;)I",  awtk_TGlobal_tk_init},
 {"awtk/TGlobal",  "tk_run",  "()I",  awtk_TGlobal_tk_run},
@@ -23703,6 +23731,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidgetProp",  "WIDGET_PROP_ANIMATING_TIME",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_ANIMATING_TIME},
 {"awtk/TWidgetProp",  "WIDGET_PROP_ANIMATE_PREFIX",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_ANIMATE_PREFIX},
 {"awtk/TWidgetProp",  "WIDGET_PROP_ANIMATE_ANIMATING_TIME",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_ANIMATE_ANIMATING_TIME},
+{"awtk/TWidgetProp",  "WIDGET_PROP_DIRTY_RECT",  "()Ljava/lang/String;",  awtk_TWidgetProp_WIDGET_PROP_DIRTY_RECT},
 {"awtk/TWidgetType",  "WIDGET_TYPE_NONE",  "()Ljava/lang/String;",  awtk_TWidgetType_WIDGET_TYPE_NONE},
 {"awtk/TWidgetType",  "WIDGET_TYPE_WINDOW_MANAGER",  "()Ljava/lang/String;",  awtk_TWidgetType_WIDGET_TYPE_WINDOW_MANAGER},
 {"awtk/TWidgetType",  "WIDGET_TYPE_NORMAL_WINDOW",  "()Ljava/lang/String;",  awtk_TWidgetType_WIDGET_TYPE_NORMAL_WINDOW},
@@ -24229,6 +24258,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TValueType",  "VALUE_TYPE_FUNC_DEF",  "()I",  awtk_TValueType_VALUE_TYPE_FUNC_DEF},
 {"awtk/TValueType",  "VALUE_TYPE_POINTER_REF",  "()I",  awtk_TValueType_VALUE_TYPE_POINTER_REF},
 {"awtk/TValueType",  "VALUE_TYPE_BITMAP",  "()I",  awtk_TValueType_VALUE_TYPE_BITMAP},
+{"awtk/TValueType",  "VALUE_TYPE_RECT",  "()I",  awtk_TValueType_VALUE_TYPE_RECT},
 {"awtk/TAssetsManager",  "assets_manager",  "()J",  awtk_TAssetsManager_assets_manager},
 {"awtk/TAssetsManager",  "assets_manager_set_theme",  "(JLjava/lang/String;)I",  awtk_TAssetsManager_assets_manager_set_theme},
 {"awtk/TAssetsManager",  "assets_manager_ref",  "(JILjava/lang/String;)J",  awtk_TAssetsManager_assets_manager_ref},

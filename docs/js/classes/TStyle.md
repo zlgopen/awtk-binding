@@ -51,7 +51,7 @@ widget从style对象中，获取诸如字体、颜色和图片相关的参数，
 
 #### Defined in
 
-[awtk.ts:7225](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L7225)
+[awtk.ts:7239](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7239)
 
 ## Properties
 
@@ -61,7 +61,7 @@ widget从style对象中，获取诸如字体、颜色和图片相关的参数，
 
 #### Defined in
 
-[awtk.ts:7224](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L7224)
+[awtk.ts:7238](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7238)
 
 ## Methods
 
@@ -86,7 +86,7 @@ widget从style对象中，获取诸如字体、颜色和图片相关的参数，
 
 #### Defined in
 
-[awtk.ts:7261](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L7261)
+[awtk.ts:7275](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7275)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:7287](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L7287)
+[awtk.ts:7301](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7301)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:7328](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L7328)
+[awtk.ts:7342](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7342)
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:7350](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L7350)
+[awtk.ts:7364](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7364)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:7274](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L7274)
+[awtk.ts:7288](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7288)
 
 ___
 
@@ -190,7 +190,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:7339](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L7339)
+[awtk.ts:7353](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7353)
 
 ___
 
@@ -208,7 +208,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:7248](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L7248)
+[awtk.ts:7262](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7262)
 
 ___
 
@@ -232,7 +232,7 @@ widget状态改变时，通知style更新数据。
 
 #### Defined in
 
-[awtk.ts:7237](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L7237)
+[awtk.ts:7251](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7251)
 
 ___
 
@@ -258,7 +258,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:7301](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L7301)
+[awtk.ts:7315](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7315)
 
 ___
 
@@ -286,4 +286,4 @@ ___
 
 #### Defined in
 
-[awtk.ts:7317](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L7317)
+[awtk.ts:7331](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7331)

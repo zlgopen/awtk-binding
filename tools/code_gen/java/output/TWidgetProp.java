@@ -1211,7 +1211,14 @@ public enum TWidgetProp {
    *
    */
  
-  ANIMATE_ANIMATING_TIME (WIDGET_PROP_ANIMATE_ANIMATING_TIME());
+  ANIMATE_ANIMATING_TIME (WIDGET_PROP_ANIMATE_ANIMATING_TIME()),
+  
+  /**
+   * 控件脏矩形区域。
+   *
+   */
+ 
+  DIRTY_RECT (WIDGET_PROP_DIRTY_RECT());
  
  
   private TWidgetProp(String value) {
@@ -1418,5 +1425,6 @@ public enum TWidgetProp {
   static private native String WIDGET_PROP_ANIMATING_TIME();
   static private native String WIDGET_PROP_ANIMATE_PREFIX();
   static private native String WIDGET_PROP_ANIMATE_ANIMATING_TIME();
+  static private native String WIDGET_PROP_DIRTY_RECT();
 
 }

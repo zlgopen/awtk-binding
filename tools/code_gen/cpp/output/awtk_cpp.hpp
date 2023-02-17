@@ -84,7 +84,7 @@ public:
    *
    * @return 返回id，用于emitter_off。
    */
-  uint32_t On(event_type_t etype, event_func_t handler, void* ctx) ;
+  uint32_t On(uint32_t etype, event_func_t handler, void* ctx) ;
 
   /**
    * 注销指定事件的处理函数。
@@ -1442,6 +1442,14 @@ public:
    * @return 位图对象。
    */
   void* Bitmap() ;
+
+  /**
+   * 获取类型为矩形区域数据。
+   * 
+   *
+   * @return 返回矩形区域数据。
+   */
+  TRect Rect() ;
 };
 
 
@@ -2135,7 +2143,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t GetBitmap(char* name, TBitmap& image) ;
+  ret_t GetBitmap(const char* name, TBitmap& image) ;
 
   /**
    * 预加载指定的图片。
@@ -2144,7 +2152,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t Preload(char* name) ;
+  ret_t Preload(const char* name) ;
 };
 
 
@@ -2328,7 +2336,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t Change(char* language, char* country) ;
+  ret_t Change(const char* language, const char* country) ;
 
   /**
    * 注销指定事件的处理函数。
@@ -2949,7 +2957,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetFont(char* font) ;
+  ret_t SetFont(const char* font) ;
 
   /**
    * 设置字体的大小。
@@ -2967,7 +2975,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetTextAlign(char* value) ;
+  ret_t SetTextAlign(const char* value) ;
 
   /**
    * 设置文本垂直对齐的方式。
@@ -2976,7 +2984,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetTextBaseline(char* value) ;
+  ret_t SetTextBaseline(const char* value) ;
 
   /**
    * 绘制文本。
@@ -2988,7 +2996,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t FillText(char* text, float_t x, float_t y, float_t max_width) ;
+  ret_t FillText(const char* text, float_t x, float_t y, float_t max_width) ;
 
   /**
    * 测量文本的宽度。
@@ -2997,7 +3005,7 @@ public:
    *
    * @return 返回text的宽度。
    */
-  float_t MeasureText(char* text) ;
+  float_t MeasureText(const char* text) ;
 
   /**
    * 绘制图片。
@@ -3110,7 +3118,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetLineCap(char* value) ;
+  ret_t SetLineCap(const char* value) ;
 
   /**
    * 设置line join。
@@ -3119,7 +3127,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetLineJoin(char* value) ;
+  ret_t SetLineJoin(const char* value) ;
 
   /**
    * 设置miter limit。
@@ -3984,7 +3992,7 @@ public:
    *
    * @return 返回id，用于widget_off。
    */
-  uint32_t On(event_type_t type, event_func_t on_event, void* ctx) ;
+  uint32_t On(uint32_t type, event_func_t on_event, void* ctx) ;
 
   /**
    * 注销指定事件的处理函数。
@@ -5586,7 +5594,7 @@ public:
    *
    * @return 返回资源。
    */
-  TAssetInfo Ref(asset_type_t type, char* name) ;
+  TAssetInfo Ref(asset_type_t type, const char* name) ;
 
   /**
    * 在资源管理器的缓存中查找指定的资源并引用它，如果缓存中不存在，尝试加载该资源。
@@ -5597,7 +5605,7 @@ public:
    *
    * @return 返回资源。
    */
-  TAssetInfo RefEx(asset_type_t type, uint16_t subtype, char* name) ;
+  TAssetInfo RefEx(asset_type_t type, uint16_t subtype, const char* name) ;
 
   /**
    * 释放指定的资源。
@@ -6317,7 +6325,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t UnloadFont(char* name, font_size_t size) ;
+  ret_t UnloadFont(const char* name, font_size_t size) ;
 
   /**
    * 清除最久没有被使用的缓冲字模。
@@ -6394,7 +6402,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetImage(char* name) ;
+  ret_t SetImage(const char* name) ;
 
   /**
    * 设置控件的旋转角度(仅在WITH_VGCANVAS定义时生效)。
@@ -7967,7 +7975,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetImage(char* name) ;
+  ret_t SetImage(const char* name) ;
 
   /**
    * 设置图片的显示方式。
@@ -8962,7 +8970,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetTips(char* tips) ;
+  ret_t SetTips(const char* tips) ;
 
   /**
    * 获取翻译之后的文本，然后调用mledit_set_tips。
@@ -8980,7 +8988,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetKeyboard(char* keyboard) ;
+  ret_t SetKeyboard(const char* keyboard) ;
 
   /**
    * 设置编辑器光标位置。
@@ -9502,7 +9510,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetText(char* text) ;
+  ret_t SetText(const char* text) ;
 
   /**
    * 设置是否允许y方向滑动。
@@ -11681,7 +11689,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t AppendOption(int32_t value, char* text) ;
+  ret_t AppendOption(int32_t value, const char* text) ;
 
   /**
    * 设置选项。
@@ -11690,7 +11698,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetOptions(char* options) ;
+  ret_t SetOptions(const char* options) ;
 
   /**
    * 设置一系列的整数选项。
@@ -13929,7 +13937,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetActionText(char* action_text) ;
+  ret_t SetActionText(const char* action_text) ;
 
   /**
    * 设置编辑器的输入提示。
@@ -13938,7 +13946,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetTips(char* tips) ;
+  ret_t SetTips(const char* tips) ;
 
   /**
    * 获取翻译之后的文本，然后调用edit_set_tips。
@@ -13956,7 +13964,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetKeyboard(char* keyboard) ;
+  ret_t SetKeyboard(const char* keyboard) ;
 
   /**
    * 当编辑器输入类型为密码时，设置密码是否可见。
@@ -14646,7 +14654,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetActiveByName(char* name) ;
+  ret_t SetActiveByName(const char* name) ;
 
   /**
    * 当前活跃的page。(需要用到 MVVM 数据绑定请设置 value 属性)
@@ -15346,7 +15354,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetIcon(char* name) ;
+  ret_t SetIcon(const char* name) ;
 
   /**
    * 设置控件的active图标。
@@ -15355,7 +15363,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetActiveIcon(char* name) ;
+  ret_t SetActiveIcon(const char* name) ;
 
   /**
    * 设置控件动态加载显示UI。
@@ -15364,7 +15372,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetLoadUi(char* name) ;
+  ret_t SetLoadUi(const char* name) ;
 
   /**
    * 值。
@@ -15713,7 +15721,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetTitle(char* title) ;
+  ret_t SetTitle(const char* title) ;
 
   /**
    * 模态显示对话框。
@@ -16630,7 +16638,7 @@ public:
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetImage(char* name) ;
+  ret_t SetImage(const char* name) ;
 };
 
 

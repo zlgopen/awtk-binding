@@ -21,7 +21,7 @@ var searchData=
   ['bgra8888_141',['BGRA8888',['../enumawtk_1_1_t_bitmap_format.html#a71bf97cbc7d04740dd91ab43626d2bf2',1,'awtk::TBitmapFormat']]],
   ['bidi_142',['BIDI',['../enumawtk_1_1_t_widget_prop.html#a3be287702f6065c84e234bc147ff28d8',1,'awtk::TWidgetProp']]],
   ['binary_143',['BINARY',['../enumawtk_1_1_t_value_type.html#a675c35e04be81ff857339116865a2543',1,'awtk::TValueType']]],
-  ['bitmap_144',['BITMAP',['../enumawtk_1_1_t_value_type.html#a168109306d9737357b43df3b1298f89c',1,'awtk.TValueType.BITMAP()'],['../classawtk_1_1_t_value.html#a691b1412a6df86a9545a69c9c7361766',1,'awtk.TValue.bitmap()']]],
+  ['bitmap_144',['bitmap',['../classawtk_1_1_t_value.html#a691b1412a6df86a9545a69c9c7361766',1,'awtk.TValue.bitmap()'],['../enumawtk_1_1_t_value_type.html#a168109306d9737357b43df3b1298f89c',1,'awtk.TValueType.BITMAP()']]],
   ['blur_145',['BLUR',['../enumawtk_1_1_t_event_type.html#aa969ef0a3a6d550082a232df7bb3ad8a',1,'awtk::TEventType']]],
   ['bool_146',['bool',['../classawtk_1_1_t_value.html#a69c27042578084fd3a027e13929ddd5d',1,'awtk.TValue.bool()'],['../enumawtk_1_1_t_value_type.html#af0082f3864103bed04795616a93ec2dd',1,'awtk.TValueType.BOOL()']]],
   ['border_147',['BORDER',['../enumawtk_1_1_t_style_id.html#a93c2308b7bd60e0fbffffb88788cf304',1,'awtk::TStyleId']]],

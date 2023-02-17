@@ -91,10 +91,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a057ed0caeeca7dfce136e5780f9f2e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6080cb8daed0285d0541e3a18a46a114"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a6080cb8daed0285d0541e3a18a46a114">CountOptions</a> ()</td></tr>
 <tr class="separator:a6080cb8daed0285d0541e3a18a46a114"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab228214ffa3b067324edf9ba971bcf07"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#ab228214ffa3b067324edf9ba971bcf07">AppendOption</a> (int32_t value, char *text)</td></tr>
-<tr class="separator:ab228214ffa3b067324edf9ba971bcf07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5c420a81e557b60a6a104f99b86678a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#ad5c420a81e557b60a6a104f99b86678a">SetOptions</a> (char *options)</td></tr>
-<tr class="separator:ad5c420a81e557b60a6a104f99b86678a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3acea66ef67e86a2dd922b9501ba9382"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a3acea66ef67e86a2dd922b9501ba9382">AppendOption</a> (int32_t value, const char *text)</td></tr>
+<tr class="separator:a3acea66ef67e86a2dd922b9501ba9382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a672ec7846fc403121ab60dd48e46641e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a672ec7846fc403121ab60dd48e46641e">SetOptions</a> (const char *options)</td></tr>
+<tr class="separator:a672ec7846fc403121ab60dd48e46641e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0490ec4c0825c1a09f5c52ef5ad97090"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#a0490ec4c0825c1a09f5c52ef5ad97090">SetRangeOptionsEx</a> (int32_t start, uint32_t nr, int32_t step, const char *format)</td></tr>
 <tr class="separator:a0490ec4c0825c1a09f5c52ef5ad97090"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef058ef2df93318278e6d432b9a6ce85"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_text_selector.html#aef058ef2df93318278e6d432b9a6ce85">SetRangeOptions</a> (int32_t start, uint32_t nr, int32_t step)</td></tr>
@@ -189,8 +189,8 @@ static <a class="el" href="class_t_text_selector.html">TTextSelector</a>&#160;</
 </blockquote>
 <p><a href="https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L443">https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L443</a>) </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="ab228214ffa3b067324edf9ba971bcf07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab228214ffa3b067324edf9ba971bcf07">&#9670;&nbsp;</a></span>AppendOption()</h2>
+<a id="a3acea66ef67e86a2dd922b9501ba9382"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3acea66ef67e86a2dd922b9501ba9382">&#9670;&nbsp;</a></span>AppendOption()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,7 +204,7 @@ static <a class="el" href="class_t_text_selector.html">TTextSelector</a>&#160;</
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>text</em>&#160;</td>
         </tr>
         <tr>
@@ -710,8 +710,8 @@ static <a class="el" href="class_t_text_selector.html">TTextSelector</a>&#160;</
 
 </div>
 </div>
-<a id="ad5c420a81e557b60a6a104f99b86678a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5c420a81e557b60a6a104f99b86678a">&#9670;&nbsp;</a></span>SetOptions()</h2>
+<a id="a672ec7846fc403121ab60dd48e46641e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a672ec7846fc403121ab60dd48e46641e">&#9670;&nbsp;</a></span>SetOptions()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -719,7 +719,7 @@ static <a class="el" href="class_t_text_selector.html">TTextSelector</a>&#160;</
         <tr>
           <td class="memname">ret_t TTextSelector::SetOptions </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>options</em></td><td>)</td>
           <td></td>
         </tr>

@@ -76,7 +76,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:9977](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9977)
+[awtk.ts:9997](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9997)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9749](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9749)
+[awtk.ts:9769](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9769)
 
 ___
 
@@ -100,7 +100,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9881](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9881)
+[awtk.ts:9901](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9901)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:10007](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L10007)
+[awtk.ts:10027](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10027)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9887](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9887)
+[awtk.ts:9907](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9907)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9785](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9785)
+[awtk.ts:9805](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9805)
 
 ___
 
@@ -148,7 +148,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9965](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9965)
+[awtk.ts:9985](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9985)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9953](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9953)
+[awtk.ts:9973](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9973)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9947](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9947)
+[awtk.ts:9967](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9967)
 
 ___
 
@@ -184,7 +184,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9959](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9959)
+[awtk.ts:9979](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9979)
 
 ___
 
@@ -196,7 +196,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:10001](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L10001)
+[awtk.ts:10021](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10021)
 
 ___
 
@@ -208,7 +208,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9827](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9827)
+[awtk.ts:9847](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9847)
 
 ___
 
@@ -220,7 +220,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9833](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9833)
+[awtk.ts:9853](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9853)
 
 ___
 
@@ -232,7 +232,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9701](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9701)
+[awtk.ts:9721](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9721)
 
 ___
 
@@ -244,7 +244,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9803](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9803)
+[awtk.ts:9823](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9823)
 
 ___
 
@@ -256,7 +256,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9797](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9797)
+[awtk.ts:9817](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9817)
 
 ___
 
@@ -268,7 +268,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9737](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9737)
+[awtk.ts:9757](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9757)
 
 ___
 
@@ -280,7 +280,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9899](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9899)
+[awtk.ts:9919](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9919)
 
 ___
 
@@ -292,7 +292,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9767](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9767)
+[awtk.ts:9787](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9787)
 
 ___
 
@@ -304,7 +304,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9983](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9983)
+[awtk.ts:10003](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10003)
 
 ___
 
@@ -316,7 +316,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9989](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9989)
+[awtk.ts:10009](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10009)
 
 ___
 
@@ -328,7 +328,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9779](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9779)
+[awtk.ts:9799](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9799)
 
 ___
 
@@ -340,7 +340,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9761](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9761)
+[awtk.ts:9781](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9781)
 
 ___
 
@@ -352,7 +352,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9755](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9755)
+[awtk.ts:9775](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9775)
 
 ___
 
@@ -364,7 +364,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9731](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9731)
+[awtk.ts:9751](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9751)
 
 ___
 
@@ -376,7 +376,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9743](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9743)
+[awtk.ts:9763](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9763)
 
 ___
 
@@ -388,7 +388,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9941](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9941)
+[awtk.ts:9961](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9961)
 
 ___
 
@@ -400,7 +400,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9929](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9929)
+[awtk.ts:9949](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9949)
 
 ___
 
@@ -412,7 +412,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9935](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9935)
+[awtk.ts:9955](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9955)
 
 ___
 
@@ -424,7 +424,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9671](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9671)
+[awtk.ts:9691](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9691)
 
 ___
 
@@ -436,7 +436,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9683](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9683)
+[awtk.ts:9703](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9703)
 
 ___
 
@@ -448,7 +448,7 @@ overlay窗口。
 
 #### Defined in
 
-[awtk.ts:9689](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9689)
+[awtk.ts:9709](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9709)
 
 ___
 
@@ -460,7 +460,7 @@ page控件。
 
 #### Defined in
 
-[awtk.ts:9821](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9821)
+[awtk.ts:9841](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9841)
 
 ___
 
@@ -472,7 +472,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9857](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9857)
+[awtk.ts:9877](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9877)
 
 ___
 
@@ -484,7 +484,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9707](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9707)
+[awtk.ts:9727](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9727)
 
 ___
 
@@ -496,7 +496,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9773](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9773)
+[awtk.ts:9793](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9793)
 
 ___
 
@@ -508,7 +508,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9791](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9791)
+[awtk.ts:9811](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9811)
 
 ___
 
@@ -520,7 +520,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9971](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9971)
+[awtk.ts:9991](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9991)
 
 ___
 
@@ -532,7 +532,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9995](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9995)
+[awtk.ts:10015](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10015)
 
 ___
 
@@ -544,7 +544,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9905](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9905)
+[awtk.ts:9925](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9925)
 
 ___
 
@@ -556,7 +556,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9911](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9911)
+[awtk.ts:9931](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9931)
 
 ___
 
@@ -568,7 +568,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9917](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9917)
+[awtk.ts:9937](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9937)
 
 ___
 
@@ -580,7 +580,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9923](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9923)
+[awtk.ts:9943](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9943)
 
 ___
 
@@ -592,7 +592,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9809](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9809)
+[awtk.ts:9829](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9829)
 
 ___
 
@@ -604,7 +604,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9845](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9845)
+[awtk.ts:9865](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9865)
 
 ___
 
@@ -616,7 +616,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9851](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9851)
+[awtk.ts:9871](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9871)
 
 ___
 
@@ -628,7 +628,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9839](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9839)
+[awtk.ts:9859](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9859)
 
 ___
 
@@ -640,7 +640,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9893](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9893)
+[awtk.ts:9913](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9913)
 
 ___
 
@@ -652,7 +652,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9725](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9725)
+[awtk.ts:9745](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9745)
 
 ___
 
@@ -664,7 +664,7 @@ system bar window
 
 #### Defined in
 
-[awtk.ts:9713](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9713)
+[awtk.ts:9733](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9733)
 
 ___
 
@@ -676,7 +676,7 @@ system bar window ato bottom
 
 #### Defined in
 
-[awtk.ts:9719](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9719)
+[awtk.ts:9739](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9739)
 
 ___
 
@@ -688,7 +688,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9863](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9863)
+[awtk.ts:9883](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9883)
 
 ___
 
@@ -700,7 +700,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9875](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9875)
+[awtk.ts:9895](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9895)
 
 ___
 
@@ -712,7 +712,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9869](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9869)
+[awtk.ts:9889](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9889)
 
 ___
 
@@ -724,7 +724,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9695](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9695)
+[awtk.ts:9715](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9715)
 
 ___
 
@@ -736,7 +736,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:9815](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9815)
+[awtk.ts:9835](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9835)
 
 ___
 
@@ -748,4 +748,4 @@ ___
 
 #### Defined in
 
-[awtk.ts:9677](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L9677)
+[awtk.ts:9697](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L9697)

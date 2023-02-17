@@ -70,7 +70,7 @@
             "desc": "emitter对象。"
           },
           {
-            "type": "event_type_t",
+            "type": "uint32_t",
             "name": "etype",
             "desc": "事件类型。"
           },
@@ -1031,7 +1031,7 @@
             "desc": "属性的名称。"
           },
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "value",
             "desc": "属性的值。"
           }
@@ -1585,7 +1585,7 @@
             "desc": "属性的path。"
           },
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "value",
             "desc": "属性的值。"
           }
@@ -2306,7 +2306,7 @@
       {
         "params": [
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "v",
             "desc": "value对象。"
           }
@@ -2347,7 +2347,7 @@
       {
         "params": [
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "v",
             "desc": "value对象。"
           }
@@ -2388,7 +2388,7 @@
       {
         "params": [
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "v",
             "desc": "value对象。"
           }
@@ -2429,7 +2429,7 @@
       {
         "params": [
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "v",
             "desc": "value对象。"
           }
@@ -2470,7 +2470,7 @@
       {
         "params": [
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "v",
             "desc": "value对象。"
           }
@@ -2511,7 +2511,7 @@
       {
         "params": [
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "v",
             "desc": "value对象。"
           }
@@ -2575,7 +2575,7 @@
       {
         "params": [
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "v",
             "desc": "value对象。"
           }
@@ -2616,7 +2616,7 @@
       {
         "params": [
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "v",
             "desc": "value对象。"
           }
@@ -2657,7 +2657,7 @@
       {
         "params": [
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "v",
             "desc": "value对象。"
           }
@@ -2699,7 +2699,7 @@
       {
         "params": [
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "v",
             "desc": "value对象。"
           }
@@ -2742,7 +2742,7 @@
       {
         "params": [
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "v",
             "desc": "value对象。"
           }
@@ -2760,7 +2760,7 @@
       {
         "params": [
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "v",
             "desc": "value对象。"
           },
@@ -2852,7 +2852,7 @@
       {
         "params": [
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "v",
             "desc": "value对象。"
           }
@@ -2893,7 +2893,7 @@
       {
         "params": [
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "v",
             "desc": "value对象。"
           }
@@ -2983,7 +2983,7 @@
       {
         "params": [
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "v",
             "desc": "value对象。"
           }
@@ -3001,7 +3001,7 @@
       {
         "params": [
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "v",
             "desc": "value对象。"
           }
@@ -3019,7 +3019,7 @@
       {
         "params": [
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "v",
             "desc": "value对象。"
           }
@@ -3037,7 +3037,7 @@
       {
         "params": [
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "v",
             "desc": "value对象。"
           }
@@ -3050,6 +3050,24 @@
         "return": {
           "type": "void*",
           "desc": "位图对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "value_t*",
+            "name": "v",
+            "desc": "value对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取类型为矩形区域数据。",
+        "name": "value_rect",
+        "return": {
+          "type": "rect_t*",
+          "desc": "返回矩形区域数据。"
         }
       }
     ],
@@ -5025,7 +5043,7 @@
             "desc": "图片管理器对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "name",
             "desc": "图片名称。"
           },
@@ -5053,7 +5071,7 @@
             "desc": "图片管理器对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "name",
             "desc": "图片名称。"
           }
@@ -6005,12 +6023,12 @@
             "desc": "locale_info对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "language",
             "desc": "语言。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "country",
             "desc": "国家或地区。"
           }
@@ -7780,7 +7798,7 @@
             "desc": "vgcanvas对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "font",
             "desc": "字体名称。"
           }
@@ -7826,7 +7844,7 @@
             "desc": "vgcanvas对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "value",
             "desc": "取值：left|center|right，必须为常量字符串。"
           }
@@ -7849,7 +7867,7 @@
             "desc": "vgcanvas对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "value",
             "desc": "取值：top|middle|bottom，必须为常量字符串。"
           }
@@ -7872,7 +7890,7 @@
             "desc": "vgcanvas对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "text",
             "desc": "text"
           },
@@ -7910,7 +7928,7 @@
             "desc": "vgcanvas对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "text",
             "desc": "text"
           }
@@ -8249,7 +8267,7 @@
             "desc": "vgcanvas对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "value",
             "desc": "取值：butt|round|square，必须为常量字符串。"
           }
@@ -8272,7 +8290,7 @@
             "desc": "vgcanvas对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "value",
             "desc": "取值：bevel|round|miter，必须为常量字符串。"
           }
@@ -9227,6 +9245,10 @@
       {
         "desc": "改变控件属性时附带动画的播放时间。",
         "name": "WIDGET_PROP_ANIMATE_ANIMATING_TIME"
+      },
+      {
+        "desc": "控件脏矩形区域。",
+        "name": "WIDGET_PROP_DIRTY_RECT"
       }
     ],
     "header": "base/widget_consts.h",
@@ -11358,7 +11380,7 @@
             "desc": "控件对象。"
           },
           {
-            "type": "event_type_t",
+            "type": "uint32_t",
             "name": "type",
             "desc": "事件类型。"
           },
@@ -15509,6 +15531,10 @@
       {
         "desc": "位图类型。",
         "name": "VALUE_TYPE_BITMAP"
+      },
+      {
+        "desc": "矩形类型。",
+        "name": "VALUE_TYPE_RECT"
       }
     ],
     "header": "tkc/value.h",
@@ -15572,7 +15598,7 @@
             "desc": "资源的类型。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "name",
             "desc": "资源的名称。"
           }
@@ -15605,7 +15631,7 @@
             "desc": "资源的子类型。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "name",
             "desc": "资源的名称。"
           }
@@ -15628,7 +15654,7 @@
             "desc": "asset manager对象。"
           },
           {
-            "type": "asset_info_t*",
+            "type": "const asset_info_t*",
             "name": "info",
             "desc": "资源。"
           }
@@ -16444,7 +16470,7 @@
             "desc": "字体管理器对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "name",
             "desc": "字体名，为NULL时使用缺省字体。"
           },
@@ -16528,7 +16554,7 @@
             "desc": "image对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "name",
             "desc": "图片名称，该图片必须存在于资源管理器。"
           }
@@ -19399,7 +19425,7 @@
             "desc": "image对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "name",
             "desc": "图片名称，该图片必须存在于资源管理器。"
           }
@@ -21182,7 +21208,7 @@
             "desc": "widget对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "tips",
             "desc": "输入提示。"
           }
@@ -21228,7 +21254,7 @@
             "desc": "widget对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "keyboard",
             "desc": "键盘名称(相应UI资源必须存在)。"
           }
@@ -22151,7 +22177,7 @@
             "desc": "控件对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "text",
             "desc": "文本。"
           }
@@ -26127,7 +26153,7 @@
             "desc": "值。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "text",
             "desc": "文本。"
           }
@@ -26150,7 +26176,7 @@
             "desc": "text_selector对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "options",
             "desc": "选项。"
           }
@@ -29728,7 +29754,7 @@
             "desc": "widget对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "action_text",
             "desc": "软键盘上action按钮的文本。"
           }
@@ -29751,7 +29777,7 @@
             "desc": "widget对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "tips",
             "desc": "输入提示。"
           }
@@ -29797,7 +29823,7 @@
             "desc": "widget对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "keyboard",
             "desc": "键盘名称(相应UI资源必须存在)。"
           }
@@ -30878,7 +30904,7 @@
             "desc": "控件对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "name",
             "desc": "当前Page的名字。"
           }
@@ -31964,7 +31990,7 @@
             "desc": "tab_button对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "name",
             "desc": "当前项的图标。"
           }
@@ -31987,7 +32013,7 @@
             "desc": "tab_button对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "name",
             "desc": "当前项的图标。"
           }
@@ -32010,7 +32036,7 @@
             "desc": "tab_button对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "name",
             "desc": "动态加载UI的资源名称。"
           }
@@ -32458,7 +32484,7 @@
             "desc": "dialog对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "title",
             "desc": "标题。"
           }
@@ -33611,7 +33637,7 @@
             "desc": "image对象。"
           },
           {
-            "type": "char*",
+            "type": "const char*",
             "name": "name",
             "desc": "图片名称，该图片必须存在于资源管理器。"
           }

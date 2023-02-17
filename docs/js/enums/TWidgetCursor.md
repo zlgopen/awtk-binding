@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[awtk.ts:10275](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L10275)
+[awtk.ts:10295](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10295)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:10251](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L10251)
+[awtk.ts:10271](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10271)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:10257](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L10257)
+[awtk.ts:10277](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10277)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[awtk.ts:10263](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L10263)
+[awtk.ts:10283](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10283)
 
 ___
 
@@ -78,7 +78,7 @@ Slashed circle or crossbones。
 
 #### Defined in
 
-[awtk.ts:10281](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L10281)
+[awtk.ts:10301](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10301)
 
 ___
 
@@ -90,7 +90,7 @@ Four pointed arrow pointing north, south, east, and west。
 
 #### Defined in
 
-[awtk.ts:10311](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L10311)
+[awtk.ts:10331](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10331)
 
 ___
 
@@ -102,7 +102,7 @@ Double arrow pointing northeast and southwest。
 
 #### Defined in
 
-[awtk.ts:10293](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L10293)
+[awtk.ts:10313](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10313)
 
 ___
 
@@ -114,7 +114,7 @@ Double arrow pointing north and south。
 
 #### Defined in
 
-[awtk.ts:10305](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L10305)
+[awtk.ts:10325](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10325)
 
 ___
 
@@ -126,7 +126,7 @@ Double arrow pointing northwest and southeast。
 
 #### Defined in
 
-[awtk.ts:10287](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L10287)
+[awtk.ts:10307](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10307)
 
 ___
 
@@ -138,7 +138,7 @@ Double arrow pointing west and east。
 
 #### Defined in
 
-[awtk.ts:10299](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L10299)
+[awtk.ts:10319](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10319)
 
 ___
 
@@ -150,4 +150,4 @@ ___
 
 #### Defined in
 
-[awtk.ts:10269](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L10269)
+[awtk.ts:10289](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10289)

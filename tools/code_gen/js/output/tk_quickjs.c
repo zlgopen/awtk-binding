@@ -972,7 +972,7 @@ jsvalue_t wrap_object_set_prop(
   ret_t ret = (ret_t)0;
   object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
   const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
-  value_t* value = (value_t*)jsvalue_get_pointer(ctx, argv[2], "value_t*");
+  const value_t* value = (const value_t*)jsvalue_get_pointer(ctx, argv[2], "const value_t*");
   ret = (ret_t)object_set_prop(obj, name, value);
   jsvalue_free_str(ctx, name);
 
@@ -1386,7 +1386,7 @@ jsvalue_t wrap_object_set_prop_by_path(
   ret_t ret = (ret_t)0;
   object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
   const char* path = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
-  value_t* value = (value_t*)jsvalue_get_pointer(ctx, argv[2], "value_t*");
+  const value_t* value = (const value_t*)jsvalue_get_pointer(ctx, argv[2], "const value_t*");
   ret = (ret_t)object_set_prop_by_path(obj, path, value);
   jsvalue_free_str(ctx, path);
 
@@ -2045,7 +2045,7 @@ jsvalue_t wrap_value_bool(
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
   bool_t ret = (bool_t)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (bool_t)value_bool(v);
 
   jret = jsvalue_create_bool(ctx, ret);
@@ -2080,7 +2080,7 @@ jsvalue_t wrap_value_int8(
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
   int8_t ret = (int8_t)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (int8_t)value_int8(v);
 
   jret = jsvalue_create_int(ctx, ret);
@@ -2115,7 +2115,7 @@ jsvalue_t wrap_value_uint8(
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
   uint8_t ret = (uint8_t)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (uint8_t)value_uint8(v);
 
   jret = jsvalue_create_int(ctx, ret);
@@ -2150,7 +2150,7 @@ jsvalue_t wrap_value_int16(
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
   int16_t ret = (int16_t)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (int16_t)value_int16(v);
 
   jret = jsvalue_create_int(ctx, ret);
@@ -2185,7 +2185,7 @@ jsvalue_t wrap_value_uint16(
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
   uint16_t ret = (uint16_t)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (uint16_t)value_uint16(v);
 
   jret = jsvalue_create_int(ctx, ret);
@@ -2220,7 +2220,7 @@ jsvalue_t wrap_value_int32(
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
   int32_t ret = (int32_t)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (int32_t)value_int32(v);
 
   jret = jsvalue_create_int(ctx, ret);
@@ -2273,7 +2273,7 @@ jsvalue_t wrap_value_int64(
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
   int64_t ret = (int64_t)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (int64_t)value_int64(v);
 
   jret = jsvalue_create_int(ctx, ret);
@@ -2308,7 +2308,7 @@ jsvalue_t wrap_value_uint64(
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
   uint64_t ret = (uint64_t)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (uint64_t)value_uint64(v);
 
   jret = jsvalue_create_int(ctx, ret);
@@ -2343,7 +2343,7 @@ jsvalue_t wrap_value_float32(
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
   float ret = (float)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (float)value_float32(v);
 
   jret = jsvalue_create_number(ctx, ret);
@@ -2378,7 +2378,7 @@ jsvalue_t wrap_value_double(
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
   double ret = (double)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (double)value_double(v);
 
   jret = jsvalue_create_number(ctx, ret);
@@ -2414,7 +2414,7 @@ jsvalue_t wrap_value_str(
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
   const char* ret = NULL;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (const char*)value_str(v);
 
   jret = jsvalue_create_string(ctx, ret);
@@ -2431,7 +2431,7 @@ jsvalue_t wrap_value_str_ex(
   jsvalue_t jret = JS_NULL;
   if(argc >= 3) {
   const char* ret = NULL;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   char* buff = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
   uint32_t size = (uint32_t)jsvalue_get_int_value(ctx, argv[2]);
   ret = (const char*)value_str_ex(v, buff, size);
@@ -2504,7 +2504,7 @@ jsvalue_t wrap_value_object(
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
   object_t* ret = NULL;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (object_t*)value_object(v);
 
   jret = jsvalue_create_pointer(ctx, ret, "object_t*");
@@ -2539,7 +2539,7 @@ jsvalue_t wrap_value_token(
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
   uint32_t ret = (uint32_t)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (uint32_t)value_token(v);
 
   jret = jsvalue_create_int(ctx, ret);
@@ -2606,7 +2606,7 @@ jsvalue_t wrap_value_id(
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
   const char* ret = NULL;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (const char*)value_id(v);
 
   jret = jsvalue_create_string(ctx, ret);
@@ -2623,7 +2623,7 @@ jsvalue_t wrap_value_func(
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
   void* ret = NULL;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (void*)value_func(v);
 
   jret = jsvalue_create_pointer(ctx, ret, "void*");
@@ -2640,7 +2640,7 @@ jsvalue_t wrap_value_func_def(
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
   void* ret = NULL;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (void*)value_func_def(v);
 
   jret = jsvalue_create_pointer(ctx, ret, "void*");
@@ -2657,10 +2657,27 @@ jsvalue_t wrap_value_bitmap(
   jsvalue_t jret = JS_NULL;
   if(argc >= 1) {
   void* ret = NULL;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (void*)value_bitmap(v);
 
   jret = jsvalue_create_pointer(ctx, ret, "void*");
+  }
+  return jret;
+}
+
+jsvalue_t wrap_value_rect(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  rect_t* ret = NULL;
+  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  ret = (rect_t*)value_rect(v);
+
+  jret = jsvalue_create_pointer(ctx, ret, "rect_t*");
   }
   return jret;
 }
@@ -2741,6 +2758,8 @@ ret_t value_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_value_func_def, "value_func_def", 1));
   JS_SetPropertyStr(ctx, global_obj, "value_bitmap",
                       JS_NewCFunction(ctx, wrap_value_bitmap, "value_bitmap", 1));
+  JS_SetPropertyStr(ctx, global_obj, "value_rect",
+                      JS_NewCFunction(ctx, wrap_value_rect, "value_rect", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -5529,7 +5548,7 @@ jsvalue_t wrap_image_manager_get_bitmap(
   if(argc >= 3) {
   ret_t ret = (ret_t)0;
   image_manager_t* imm = (image_manager_t*)jsvalue_get_pointer(ctx, argv[0], "image_manager_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   bitmap_t* image = (bitmap_t*)jsvalue_get_pointer(ctx, argv[2], "bitmap_t*");
   ret = (ret_t)image_manager_get_bitmap(imm, name, image);
   jsvalue_free_str(ctx, name);
@@ -5549,7 +5568,7 @@ jsvalue_t wrap_image_manager_preload(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   image_manager_t* imm = (image_manager_t*)jsvalue_get_pointer(ctx, argv[0], "image_manager_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)image_manager_preload(imm, name);
   jsvalue_free_str(ctx, name);
 
@@ -7633,8 +7652,8 @@ jsvalue_t wrap_locale_info_change(
   if(argc >= 3) {
   ret_t ret = (ret_t)0;
   locale_info_t* locale_info = (locale_info_t*)jsvalue_get_pointer(ctx, argv[0], "locale_info_t*");
-  char* language = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
-  char* country = (char*)jsvalue_get_utf8_string(ctx, argv[2]);
+  const char* language = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* country = (const char*)jsvalue_get_utf8_string(ctx, argv[2]);
   ret = (ret_t)locale_info_change(locale_info, language, country);
   jsvalue_free_str(ctx, language);
   jsvalue_free_str(ctx, country);
@@ -9516,7 +9535,7 @@ jsvalue_t wrap_vgcanvas_set_font(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
-  char* font = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* font = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)vgcanvas_set_font(vg, font);
   jsvalue_free_str(ctx, font);
 
@@ -9553,7 +9572,7 @@ jsvalue_t wrap_vgcanvas_set_text_align(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
-  char* value = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* value = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)vgcanvas_set_text_align(vg, value);
   jsvalue_free_str(ctx, value);
 
@@ -9572,7 +9591,7 @@ jsvalue_t wrap_vgcanvas_set_text_baseline(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
-  char* value = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* value = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)vgcanvas_set_text_baseline(vg, value);
   jsvalue_free_str(ctx, value);
 
@@ -9591,7 +9610,7 @@ jsvalue_t wrap_vgcanvas_fill_text(
   if(argc >= 5) {
   ret_t ret = (ret_t)0;
   vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
-  char* text = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* text = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   float_t x = (float_t)jsvalue_get_number_value(ctx, argv[2]);
   float_t y = (float_t)jsvalue_get_number_value(ctx, argv[3]);
   float_t max_width = (float_t)jsvalue_get_number_value(ctx, argv[4]);
@@ -9613,7 +9632,7 @@ jsvalue_t wrap_vgcanvas_measure_text(
   if(argc >= 2) {
   float_t ret = (float_t)0;
   vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
-  char* text = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* text = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (float_t)vgcanvas_measure_text(vg, text);
   jsvalue_free_str(ctx, text);
 
@@ -9804,7 +9823,7 @@ jsvalue_t wrap_vgcanvas_set_line_cap(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
-  char* value = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* value = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)vgcanvas_set_line_cap(vg, value);
   jsvalue_free_str(ctx, value);
 
@@ -9823,7 +9842,7 @@ jsvalue_t wrap_vgcanvas_set_line_join(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
-  char* value = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* value = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)vgcanvas_set_line_join(vg, value);
   jsvalue_free_str(ctx, value);
 
@@ -11824,6 +11843,15 @@ jsvalue_t get_WIDGET_PROP_ANIMATE_ANIMATING_TIME(
   return jsvalue_create_string(ctx, WIDGET_PROP_ANIMATE_ANIMATING_TIME);
 }
 
+jsvalue_t get_WIDGET_PROP_DIRTY_RECT(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_string(ctx, WIDGET_PROP_DIRTY_RECT);
+}
+
 ret_t widget_prop_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_EXEC",
@@ -12170,6 +12198,8 @@ ret_t widget_prop_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_WIDGET_PROP_ANIMATE_PREFIX, "WIDGET_PROP_ANIMATE_PREFIX", 1));
   JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_ANIMATE_ANIMATING_TIME",
                       JS_NewCFunction(ctx, get_WIDGET_PROP_ANIMATE_ANIMATING_TIME, "WIDGET_PROP_ANIMATE_ANIMATING_TIME", 1));
+  JS_SetPropertyStr(ctx, global_obj, "WIDGET_PROP_DIRTY_RECT",
+                      JS_NewCFunction(ctx, get_WIDGET_PROP_DIRTY_RECT, "WIDGET_PROP_DIRTY_RECT", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -19892,6 +19922,15 @@ jsvalue_t get_VALUE_TYPE_BITMAP(
   return jsvalue_create_int(ctx, VALUE_TYPE_BITMAP);
 }
 
+jsvalue_t get_VALUE_TYPE_RECT(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, VALUE_TYPE_RECT);
+}
+
 ret_t value_type_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
   JS_SetPropertyStr(ctx, global_obj, "VALUE_TYPE_INVALID",
@@ -19948,6 +19987,8 @@ ret_t value_type_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, get_VALUE_TYPE_POINTER_REF, "VALUE_TYPE_POINTER_REF", 1));
   JS_SetPropertyStr(ctx, global_obj, "VALUE_TYPE_BITMAP",
                       JS_NewCFunction(ctx, get_VALUE_TYPE_BITMAP, "VALUE_TYPE_BITMAP", 1));
+  JS_SetPropertyStr(ctx, global_obj, "VALUE_TYPE_RECT",
+                      JS_NewCFunction(ctx, get_VALUE_TYPE_RECT, "VALUE_TYPE_RECT", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -20000,7 +20041,7 @@ jsvalue_t wrap_assets_manager_ref(
   const asset_info_t* ret = NULL;
   assets_manager_t* am = (assets_manager_t*)jsvalue_get_pointer(ctx, argv[0], "assets_manager_t*");
   asset_type_t type = (asset_type_t)jsvalue_get_int_value(ctx, argv[1]);
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[2]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[2]);
   ret = (const asset_info_t*)assets_manager_ref(am, type, name);
   jsvalue_free_str(ctx, name);
 
@@ -20021,7 +20062,7 @@ jsvalue_t wrap_assets_manager_ref_ex(
   assets_manager_t* am = (assets_manager_t*)jsvalue_get_pointer(ctx, argv[0], "assets_manager_t*");
   asset_type_t type = (asset_type_t)jsvalue_get_int_value(ctx, argv[1]);
   uint16_t subtype = (uint16_t)jsvalue_get_int_value(ctx, argv[2]);
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[3]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[3]);
   ret = (const asset_info_t*)assets_manager_ref_ex(am, type, subtype, name);
   jsvalue_free_str(ctx, name);
 
@@ -20040,7 +20081,7 @@ jsvalue_t wrap_assets_manager_unref(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   assets_manager_t* am = (assets_manager_t*)jsvalue_get_pointer(ctx, argv[0], "assets_manager_t*");
-  asset_info_t* info = (asset_info_t*)jsvalue_get_pointer(ctx, argv[1], "asset_info_t*");
+  const asset_info_t* info = (const asset_info_t*)jsvalue_get_pointer(ctx, argv[1], "const asset_info_t*");
   ret = (ret_t)assets_manager_unref(am, info);
 
   jret = jsvalue_create_int(ctx, ret);
@@ -21000,7 +21041,7 @@ jsvalue_t wrap_font_manager_unload_font(
   if(argc >= 3) {
   ret_t ret = (ret_t)0;
   font_manager_t* fm = (font_manager_t*)jsvalue_get_pointer(ctx, argv[0], "font_manager_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   font_size_t size = (font_size_t)jsvalue_get_int_value(ctx, argv[2]);
   ret = (ret_t)font_manager_unload_font(fm, name, size);
   jsvalue_free_str(ctx, name);
@@ -21069,7 +21110,7 @@ jsvalue_t wrap_image_base_set_image(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)image_base_set_image(widget, name);
   jsvalue_free_str(ctx, name);
 
@@ -23624,7 +23665,7 @@ jsvalue_t wrap_gauge_set_image(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)gauge_set_image(widget, name);
   jsvalue_free_str(ctx, name);
 
@@ -25166,7 +25207,7 @@ jsvalue_t wrap_mledit_set_tips(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* tips = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* tips = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)mledit_set_tips(widget, tips);
   jsvalue_free_str(ctx, tips);
 
@@ -25204,7 +25245,7 @@ jsvalue_t wrap_mledit_set_keyboard(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* keyboard = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* keyboard = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)mledit_set_keyboard(widget, keyboard);
   jsvalue_free_str(ctx, keyboard);
 
@@ -26036,7 +26077,7 @@ jsvalue_t wrap_rich_text_set_text(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* text = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* text = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)rich_text_set_text(widget, text);
   jsvalue_free_str(ctx, text);
 
@@ -29407,7 +29448,7 @@ jsvalue_t wrap_text_selector_append_option(
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
   int32_t value = (int32_t)jsvalue_get_int_value(ctx, argv[1]);
-  char* text = (char*)jsvalue_get_utf8_string(ctx, argv[2]);
+  const char* text = (const char*)jsvalue_get_utf8_string(ctx, argv[2]);
   ret = (ret_t)text_selector_append_option(widget, value, text);
   jsvalue_free_str(ctx, text);
 
@@ -29426,7 +29467,7 @@ jsvalue_t wrap_text_selector_set_options(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* options = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* options = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)text_selector_set_options(widget, options);
   jsvalue_free_str(ctx, options);
 
@@ -32336,7 +32377,7 @@ jsvalue_t wrap_edit_set_action_text(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* action_text = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* action_text = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)edit_set_action_text(widget, action_text);
   jsvalue_free_str(ctx, action_text);
 
@@ -32355,7 +32396,7 @@ jsvalue_t wrap_edit_set_tips(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* tips = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* tips = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)edit_set_tips(widget, tips);
   jsvalue_free_str(ctx, tips);
 
@@ -32393,7 +32434,7 @@ jsvalue_t wrap_edit_set_keyboard(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* keyboard = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* keyboard = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)edit_set_keyboard(widget, keyboard);
   jsvalue_free_str(ctx, keyboard);
 
@@ -33349,7 +33390,7 @@ jsvalue_t wrap_pages_set_active_by_name(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)pages_set_active_by_name(widget, name);
   jsvalue_free_str(ctx, name);
 
@@ -34263,7 +34304,7 @@ jsvalue_t wrap_tab_button_set_icon(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)tab_button_set_icon(widget, name);
   jsvalue_free_str(ctx, name);
 
@@ -34282,7 +34323,7 @@ jsvalue_t wrap_tab_button_set_active_icon(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)tab_button_set_active_icon(widget, name);
   jsvalue_free_str(ctx, name);
 
@@ -34301,7 +34342,7 @@ jsvalue_t wrap_tab_button_set_load_ui(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)tab_button_set_load_ui(widget, name);
   jsvalue_free_str(ctx, name);
 
@@ -34647,7 +34688,7 @@ jsvalue_t wrap_dialog_set_title(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* title = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* title = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)dialog_set_title(widget, title);
   jsvalue_free_str(ctx, title);
 
@@ -35596,7 +35637,7 @@ jsvalue_t wrap_svg_image_set_image(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)svg_image_set_image(widget, name);
   jsvalue_free_str(ctx, name);
 

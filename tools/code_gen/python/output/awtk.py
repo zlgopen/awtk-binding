@@ -1733,6 +1733,16 @@ class TValue(object):
       return value_bitmap(awtk_get_native_obj(self))
 
 
+  #
+  # 获取类型为矩形区域数据。
+  # 
+  #
+  # @return 返回矩形区域数据。
+  #
+  def rect(self): 
+      return  TRect(value_rect(awtk_get_native_obj(self)))
+
+
 #
 # TK全局对象。
 #
@@ -7429,6 +7439,12 @@ class TWidgetProp:
   #
   ANIMATE_ANIMATING_TIME = WIDGET_PROP_ANIMATE_ANIMATING_TIME()
 
+  #
+  # 控件脏矩形区域。
+  #
+  #
+  DIRTY_RECT = WIDGET_PROP_DIRTY_RECT()
+
 #
 # 控件的类型。
 #
@@ -12172,6 +12188,12 @@ class TValueType:
   #
   #
   BITMAP = VALUE_TYPE_BITMAP()
+
+  #
+  # 矩形类型。
+  #
+  #
+  RECT = VALUE_TYPE_RECT()
 
 #
 # 资源管理器。

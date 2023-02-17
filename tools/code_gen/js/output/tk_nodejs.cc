@@ -797,7 +797,7 @@ static void wrap_object_set_prop(const Nan::FunctionCallbackInfo<v8::Value>& arg
   ret_t ret = (ret_t)0;
   object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
   const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
-  value_t* value = (value_t*)jsvalue_get_pointer(ctx, argv[2], "value_t*");
+  const value_t* value = (const value_t*)jsvalue_get_pointer(ctx, argv[2], "const value_t*");
   ret = (ret_t)object_set_prop(obj, name, value);
   jsvalue_free_str(ctx, name);
 
@@ -1150,7 +1150,7 @@ static void wrap_object_set_prop_by_path(const Nan::FunctionCallbackInfo<v8::Val
   ret_t ret = (ret_t)0;
   object_t* obj = (object_t*)jsvalue_get_pointer(ctx, argv[0], "object_t*");
   const char* path = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
-  value_t* value = (value_t*)jsvalue_get_pointer(ctx, argv[2], "value_t*");
+  const value_t* value = (const value_t*)jsvalue_get_pointer(ctx, argv[2], "const value_t*");
   ret = (ret_t)object_set_prop_by_path(obj, path, value);
   jsvalue_free_str(ctx, path);
 
@@ -1664,7 +1664,7 @@ static void wrap_value_bool(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 1) {
   bool_t ret = (bool_t)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (bool_t)value_bool(v);
 
   v8::Local<v8::Boolean> jret= Nan::New((bool)(ret));
@@ -1693,7 +1693,7 @@ static void wrap_value_int8(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 1) {
   int8_t ret = (int8_t)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (int8_t)value_int8(v);
 
   v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
@@ -1722,7 +1722,7 @@ static void wrap_value_uint8(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 1) {
   uint8_t ret = (uint8_t)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (uint8_t)value_uint8(v);
 
   v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
@@ -1751,7 +1751,7 @@ static void wrap_value_int16(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 1) {
   int16_t ret = (int16_t)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (int16_t)value_int16(v);
 
   v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
@@ -1780,7 +1780,7 @@ static void wrap_value_uint16(const Nan::FunctionCallbackInfo<v8::Value>& argv) 
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 1) {
   uint16_t ret = (uint16_t)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (uint16_t)value_uint16(v);
 
   v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
@@ -1809,7 +1809,7 @@ static void wrap_value_int32(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 1) {
   int32_t ret = (int32_t)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (int32_t)value_int32(v);
 
   v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
@@ -1853,7 +1853,7 @@ static void wrap_value_int64(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 1) {
   int64_t ret = (int64_t)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (int64_t)value_int64(v);
 
   v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
@@ -1882,7 +1882,7 @@ static void wrap_value_uint64(const Nan::FunctionCallbackInfo<v8::Value>& argv) 
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 1) {
   uint64_t ret = (uint64_t)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (uint64_t)value_uint64(v);
 
   v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
@@ -1911,7 +1911,7 @@ static void wrap_value_float32(const Nan::FunctionCallbackInfo<v8::Value>& argv)
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 1) {
   float ret = (float)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (float)value_float32(v);
 
   v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
@@ -1940,7 +1940,7 @@ static void wrap_value_double(const Nan::FunctionCallbackInfo<v8::Value>& argv) 
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 1) {
   double ret = (double)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (double)value_double(v);
 
   v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
@@ -1970,7 +1970,7 @@ static void wrap_value_str(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 1) {
   const char* ret = NULL;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (const char*)value_str(v);
 
   const char* str_temp = ret;
@@ -1986,7 +1986,7 @@ static void wrap_value_str_ex(const Nan::FunctionCallbackInfo<v8::Value>& argv) 
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 3) {
   const char* ret = NULL;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   char* buff = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
   uint32_t size = (uint32_t)jsvalue_get_int_value(ctx, argv[2]);
   ret = (const char*)value_str_ex(v, buff, size);
@@ -2049,7 +2049,7 @@ static void wrap_value_object(const Nan::FunctionCallbackInfo<v8::Value>& argv) 
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 1) {
   object_t* ret = NULL;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (object_t*)value_object(v);
 
   v8::Local<v8::Number> jret= Nan::New((double)((int64_t)(ret)));
@@ -2078,7 +2078,7 @@ static void wrap_value_token(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 1) {
   uint32_t ret = (uint32_t)0;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (uint32_t)value_token(v);
 
   v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
@@ -2133,7 +2133,7 @@ static void wrap_value_id(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 1) {
   const char* ret = NULL;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (const char*)value_id(v);
 
   const char* str_temp = ret;
@@ -2149,7 +2149,7 @@ static void wrap_value_func(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 1) {
   void* ret = NULL;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (void*)value_func(v);
 
   v8::Local<v8::Number> jret= Nan::New((double)((int64_t)(ret)));
@@ -2163,7 +2163,7 @@ static void wrap_value_func_def(const Nan::FunctionCallbackInfo<v8::Value>& argv
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 1) {
   void* ret = NULL;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (void*)value_func_def(v);
 
   v8::Local<v8::Number> jret= Nan::New((double)((int64_t)(ret)));
@@ -2177,8 +2177,22 @@ static void wrap_value_bitmap(const Nan::FunctionCallbackInfo<v8::Value>& argv) 
   int32_t argc = (int32_t)(argv.Length()); 
   if(argc >= 1) {
   void* ret = NULL;
-  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
   ret = (void*)value_bitmap(v);
+
+  v8::Local<v8::Number> jret= Nan::New((double)((int64_t)(ret)));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
+static void wrap_value_rect(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 1) {
+  rect_t* ret = NULL;
+  value_t* v = (value_t*)jsvalue_get_pointer(ctx, argv[0], "value_t*");
+  ret = (rect_t*)value_rect(v);
 
   v8::Local<v8::Number> jret= Nan::New((double)((int64_t)(ret)));
   argv.GetReturnValue().Set(jret);
@@ -2224,6 +2238,7 @@ ret_t value_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "value_func", wrap_value_func);
   Nan::Export(ctx, "value_func_def", wrap_value_func_def);
   Nan::Export(ctx, "value_bitmap", wrap_value_bitmap);
+  Nan::Export(ctx, "value_rect", wrap_value_rect);
 
  return RET_OK;
 }
@@ -4462,7 +4477,7 @@ static void wrap_image_manager_get_bitmap(const Nan::FunctionCallbackInfo<v8::Va
   if(argc >= 3) {
   ret_t ret = (ret_t)0;
   image_manager_t* imm = (image_manager_t*)jsvalue_get_pointer(ctx, argv[0], "image_manager_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   bitmap_t* image = (bitmap_t*)jsvalue_get_pointer(ctx, argv[2], "bitmap_t*");
   ret = (ret_t)image_manager_get_bitmap(imm, name, image);
   jsvalue_free_str(ctx, name);
@@ -4479,7 +4494,7 @@ static void wrap_image_manager_preload(const Nan::FunctionCallbackInfo<v8::Value
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   image_manager_t* imm = (image_manager_t*)jsvalue_get_pointer(ctx, argv[0], "image_manager_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)image_manager_preload(imm, name);
   jsvalue_free_str(ctx, name);
 
@@ -6177,8 +6192,8 @@ static void wrap_locale_info_change(const Nan::FunctionCallbackInfo<v8::Value>& 
   if(argc >= 3) {
   ret_t ret = (ret_t)0;
   locale_info_t* locale_info = (locale_info_t*)jsvalue_get_pointer(ctx, argv[0], "locale_info_t*");
-  char* language = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
-  char* country = (char*)jsvalue_get_utf8_string(ctx, argv[2]);
+  const char* language = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* country = (const char*)jsvalue_get_utf8_string(ctx, argv[2]);
   ret = (ret_t)locale_info_change(locale_info, language, country);
   jsvalue_free_str(ctx, language);
   jsvalue_free_str(ctx, country);
@@ -7715,7 +7730,7 @@ static void wrap_vgcanvas_set_font(const Nan::FunctionCallbackInfo<v8::Value>& a
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
-  char* font = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* font = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)vgcanvas_set_font(vg, font);
   jsvalue_free_str(ctx, font);
 
@@ -7746,7 +7761,7 @@ static void wrap_vgcanvas_set_text_align(const Nan::FunctionCallbackInfo<v8::Val
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
-  char* value = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* value = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)vgcanvas_set_text_align(vg, value);
   jsvalue_free_str(ctx, value);
 
@@ -7762,7 +7777,7 @@ static void wrap_vgcanvas_set_text_baseline(const Nan::FunctionCallbackInfo<v8::
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
-  char* value = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* value = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)vgcanvas_set_text_baseline(vg, value);
   jsvalue_free_str(ctx, value);
 
@@ -7778,7 +7793,7 @@ static void wrap_vgcanvas_fill_text(const Nan::FunctionCallbackInfo<v8::Value>& 
   if(argc >= 5) {
   ret_t ret = (ret_t)0;
   vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
-  char* text = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* text = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   float_t x = (float_t)jsvalue_get_number_value(ctx, argv[2]);
   float_t y = (float_t)jsvalue_get_number_value(ctx, argv[3]);
   float_t max_width = (float_t)jsvalue_get_number_value(ctx, argv[4]);
@@ -7797,7 +7812,7 @@ static void wrap_vgcanvas_measure_text(const Nan::FunctionCallbackInfo<v8::Value
   if(argc >= 2) {
   float_t ret = (float_t)0;
   vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
-  char* text = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* text = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (float_t)vgcanvas_measure_text(vg, text);
   jsvalue_free_str(ctx, text);
 
@@ -7961,7 +7976,7 @@ static void wrap_vgcanvas_set_line_cap(const Nan::FunctionCallbackInfo<v8::Value
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
-  char* value = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* value = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)vgcanvas_set_line_cap(vg, value);
   jsvalue_free_str(ctx, value);
 
@@ -7977,7 +7992,7 @@ static void wrap_vgcanvas_set_line_join(const Nan::FunctionCallbackInfo<v8::Valu
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
-  char* value = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* value = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)vgcanvas_set_line_join(vg, value);
   jsvalue_free_str(ctx, value);
 
@@ -9685,6 +9700,14 @@ static void get_WIDGET_PROP_ANIMATE_ANIMATING_TIME(const Nan::FunctionCallbackIn
   (void)argc;(void)ctx;
 }
 
+static void get_WIDGET_PROP_DIRTY_RECT(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  v8::Local<v8::String> jret= Nan::New((const char*)WIDGET_PROP_DIRTY_RECT).ToLocalChecked();
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
 ret_t widget_prop_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "WIDGET_PROP_EXEC", get_WIDGET_PROP_EXEC);
   Nan::Export(ctx, "WIDGET_PROP_X", get_WIDGET_PROP_X);
@@ -9858,6 +9881,7 @@ ret_t widget_prop_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "WIDGET_PROP_ANIMATING_TIME", get_WIDGET_PROP_ANIMATING_TIME);
   Nan::Export(ctx, "WIDGET_PROP_ANIMATE_PREFIX", get_WIDGET_PROP_ANIMATE_PREFIX);
   Nan::Export(ctx, "WIDGET_PROP_ANIMATE_ANIMATING_TIME", get_WIDGET_PROP_ANIMATE_ANIMATING_TIME);
+  Nan::Export(ctx, "WIDGET_PROP_DIRTY_RECT", get_WIDGET_PROP_DIRTY_RECT);
 
  return RET_OK;
 }
@@ -16083,6 +16107,14 @@ static void get_VALUE_TYPE_BITMAP(const Nan::FunctionCallbackInfo<v8::Value>& ar
   (void)argc;(void)ctx;
 }
 
+static void get_VALUE_TYPE_RECT(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)VALUE_TYPE_RECT);
+  argv.GetReturnValue().Set(jret);
+  (void)argc;(void)ctx;
+}
+
 ret_t value_type_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "VALUE_TYPE_INVALID", get_VALUE_TYPE_INVALID);
   Nan::Export(ctx, "VALUE_TYPE_BOOL", get_VALUE_TYPE_BOOL);
@@ -16111,6 +16143,7 @@ ret_t value_type_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "VALUE_TYPE_FUNC_DEF", get_VALUE_TYPE_FUNC_DEF);
   Nan::Export(ctx, "VALUE_TYPE_POINTER_REF", get_VALUE_TYPE_POINTER_REF);
   Nan::Export(ctx, "VALUE_TYPE_BITMAP", get_VALUE_TYPE_BITMAP);
+  Nan::Export(ctx, "VALUE_TYPE_RECT", get_VALUE_TYPE_RECT);
 
  return RET_OK;
 }
@@ -16151,7 +16184,7 @@ static void wrap_assets_manager_ref(const Nan::FunctionCallbackInfo<v8::Value>& 
   const asset_info_t* ret = NULL;
   assets_manager_t* am = (assets_manager_t*)jsvalue_get_pointer(ctx, argv[0], "assets_manager_t*");
   asset_type_t type = (asset_type_t)jsvalue_get_int_value(ctx, argv[1]);
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[2]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[2]);
   ret = (const asset_info_t*)assets_manager_ref(am, type, name);
   jsvalue_free_str(ctx, name);
 
@@ -16169,7 +16202,7 @@ static void wrap_assets_manager_ref_ex(const Nan::FunctionCallbackInfo<v8::Value
   assets_manager_t* am = (assets_manager_t*)jsvalue_get_pointer(ctx, argv[0], "assets_manager_t*");
   asset_type_t type = (asset_type_t)jsvalue_get_int_value(ctx, argv[1]);
   uint16_t subtype = (uint16_t)jsvalue_get_int_value(ctx, argv[2]);
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[3]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[3]);
   ret = (const asset_info_t*)assets_manager_ref_ex(am, type, subtype, name);
   jsvalue_free_str(ctx, name);
 
@@ -16185,7 +16218,7 @@ static void wrap_assets_manager_unref(const Nan::FunctionCallbackInfo<v8::Value>
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   assets_manager_t* am = (assets_manager_t*)jsvalue_get_pointer(ctx, argv[0], "assets_manager_t*");
-  asset_info_t* info = (asset_info_t*)jsvalue_get_pointer(ctx, argv[1], "asset_info_t*");
+  const asset_info_t* info = (const asset_info_t*)jsvalue_get_pointer(ctx, argv[1], "const asset_info_t*");
   ret = (ret_t)assets_manager_unref(am, info);
 
   v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
@@ -16896,7 +16929,7 @@ static void wrap_font_manager_unload_font(const Nan::FunctionCallbackInfo<v8::Va
   if(argc >= 3) {
   ret_t ret = (ret_t)0;
   font_manager_t* fm = (font_manager_t*)jsvalue_get_pointer(ctx, argv[0], "font_manager_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   font_size_t size = (font_size_t)jsvalue_get_int_value(ctx, argv[2]);
   ret = (ret_t)font_manager_unload_font(fm, name, size);
   jsvalue_free_str(ctx, name);
@@ -16950,7 +16983,7 @@ static void wrap_image_base_set_image(const Nan::FunctionCallbackInfo<v8::Value>
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)image_base_set_image(widget, name);
   jsvalue_free_str(ctx, name);
 
@@ -18980,7 +19013,7 @@ static void wrap_gauge_set_image(const Nan::FunctionCallbackInfo<v8::Value>& arg
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)gauge_set_image(widget, name);
   jsvalue_free_str(ctx, name);
 
@@ -20202,7 +20235,7 @@ static void wrap_mledit_set_tips(const Nan::FunctionCallbackInfo<v8::Value>& arg
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* tips = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* tips = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)mledit_set_tips(widget, tips);
   jsvalue_free_str(ctx, tips);
 
@@ -20234,7 +20267,7 @@ static void wrap_mledit_set_keyboard(const Nan::FunctionCallbackInfo<v8::Value>&
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* keyboard = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* keyboard = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)mledit_set_keyboard(widget, keyboard);
   jsvalue_free_str(ctx, keyboard);
 
@@ -20884,7 +20917,7 @@ static void wrap_rich_text_set_text(const Nan::FunctionCallbackInfo<v8::Value>& 
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* text = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* text = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)rich_text_set_text(widget, text);
   jsvalue_free_str(ctx, text);
 
@@ -23518,7 +23551,7 @@ static void wrap_text_selector_append_option(const Nan::FunctionCallbackInfo<v8:
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
   int32_t value = (int32_t)jsvalue_get_int_value(ctx, argv[1]);
-  char* text = (char*)jsvalue_get_utf8_string(ctx, argv[2]);
+  const char* text = (const char*)jsvalue_get_utf8_string(ctx, argv[2]);
   ret = (ret_t)text_selector_append_option(widget, value, text);
   jsvalue_free_str(ctx, text);
 
@@ -23534,7 +23567,7 @@ static void wrap_text_selector_set_options(const Nan::FunctionCallbackInfo<v8::V
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* options = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* options = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)text_selector_set_options(widget, options);
   jsvalue_free_str(ctx, options);
 
@@ -25849,7 +25882,7 @@ static void wrap_edit_set_action_text(const Nan::FunctionCallbackInfo<v8::Value>
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* action_text = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* action_text = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)edit_set_action_text(widget, action_text);
   jsvalue_free_str(ctx, action_text);
 
@@ -25865,7 +25898,7 @@ static void wrap_edit_set_tips(const Nan::FunctionCallbackInfo<v8::Value>& argv)
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* tips = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* tips = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)edit_set_tips(widget, tips);
   jsvalue_free_str(ctx, tips);
 
@@ -25897,7 +25930,7 @@ static void wrap_edit_set_keyboard(const Nan::FunctionCallbackInfo<v8::Value>& a
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* keyboard = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* keyboard = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)edit_set_keyboard(widget, keyboard);
   jsvalue_free_str(ctx, keyboard);
 
@@ -26638,7 +26671,7 @@ static void wrap_pages_set_active_by_name(const Nan::FunctionCallbackInfo<v8::Va
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)pages_set_active_by_name(widget, name);
   jsvalue_free_str(ctx, name);
 
@@ -27348,7 +27381,7 @@ static void wrap_tab_button_set_icon(const Nan::FunctionCallbackInfo<v8::Value>&
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)tab_button_set_icon(widget, name);
   jsvalue_free_str(ctx, name);
 
@@ -27364,7 +27397,7 @@ static void wrap_tab_button_set_active_icon(const Nan::FunctionCallbackInfo<v8::
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)tab_button_set_active_icon(widget, name);
   jsvalue_free_str(ctx, name);
 
@@ -27380,7 +27413,7 @@ static void wrap_tab_button_set_load_ui(const Nan::FunctionCallbackInfo<v8::Valu
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)tab_button_set_load_ui(widget, name);
   jsvalue_free_str(ctx, name);
 
@@ -27658,7 +27691,7 @@ static void wrap_dialog_set_title(const Nan::FunctionCallbackInfo<v8::Value>& ar
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* title = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* title = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)dialog_set_title(widget, title);
   jsvalue_free_str(ctx, title);
 
@@ -28407,7 +28440,7 @@ static void wrap_svg_image_set_image(const Nan::FunctionCallbackInfo<v8::Value>&
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
-  char* name = (char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
   ret = (ret_t)svg_image_set_image(widget, name);
   jsvalue_free_str(ctx, name);
 

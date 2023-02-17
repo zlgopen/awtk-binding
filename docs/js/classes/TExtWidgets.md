@@ -36,4 +36,4 @@
 
 #### Defined in
 
-[awtk.ts:12396](https://github.com/zlgopen/awtk-binding/blob/145cdd58/tools/code_gen/js/output/awtk.ts#L12396)
+[awtk.ts:12416](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12416)
