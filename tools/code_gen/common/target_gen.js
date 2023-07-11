@@ -31,6 +31,12 @@ class TargetGen extends CodeGen {
 
   genReturnObject(cls, m, arg) {
     let clsName = this.toClassName(this.getClassName(cls));
+    const is_ref = m.name && (m.name.endsWith('_ref') || m.name.endsWith('_ref_ex'));
+    if(is_ref) {
+      const returnType = this.typeToNativeName(m.return.type);
+      clsName = this.toClassName(returnType);
+    }
+    console.log(clsName);
     return `    return ${this.newOperator} ${clsName}(${arg});\n`;
   }
   

@@ -4792,7 +4792,7 @@ class TLocaleInfos(object):
   #
   @classmethod
   def ref(cls, name): 
-      return  TLocaleInfos(locale_infos_ref(name))
+      return  TLocaleInfo(locale_infos_ref(name))
 
 
   #
@@ -12477,7 +12477,7 @@ class TAssetsManager (TEmitter):
   # @return 返回资源。
   #
   def ref(self, type, name): 
-      return assets_manager_ref(awtk_get_native_obj(self), type, name)
+      return  TAssetInfo(assets_manager_ref(awtk_get_native_obj(self), type, name))
 
 
   #
@@ -12490,7 +12490,7 @@ class TAssetsManager (TEmitter):
   # @return 返回资源。
   #
   def ref_ex(self, type, subtype, name): 
-      return assets_manager_ref_ex(awtk_get_native_obj(self), type, subtype, name)
+      return  TAssetInfo(assets_manager_ref_ex(awtk_get_native_obj(self), type, subtype, name))
 
 
   #

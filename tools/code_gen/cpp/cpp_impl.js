@@ -15,12 +15,19 @@ class CppImplGenerator extends CppGenerator {
   }
 
   genReturnObject(cls, m, arg) {
+    let nativeType = this.getNativeObjType(cls) + '*';
     let clsName = this.toClassName(this.getClassName(cls));
+    const is_ref = m.name && (m.name.endsWith('_ref') || m.name.endsWith('_ref_ex'));
+
+    if(is_ref) {
+      const returnType = this.typeToNativeName(m.return.type);
+      clsName = this.toClassName(returnType);
+      nativeType = returnType + '*';
+    }   
 
     if (this.isCast(m)) {
       return `   return ${clsName}(${arg});\n`;
     } else {
-      let nativeType = this.getNativeObjType(cls) + '*';
       return `   return ${clsName}((${nativeType})(${arg}));\n`;
     }
   }

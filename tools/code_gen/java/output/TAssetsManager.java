@@ -91,7 +91,7 @@ public class TAssetsManager extends TEmitter {
    * @return 返回资源。
    */
  public  TAssetInfo ref(TAssetType type, String name)  {
-    return assets_manager_ref(this != null ? (this.nativeObj) : 0, type.value(), name);
+    return new TAssetInfo(assets_manager_ref(this != null ? (this.nativeObj) : 0, type.value(), name));
  }
 
 
@@ -105,7 +105,7 @@ public class TAssetsManager extends TEmitter {
    * @return 返回资源。
    */
  public  TAssetInfo refEx(TAssetType type, int subtype, String name)  {
-    return assets_manager_ref_ex(this != null ? (this.nativeObj) : 0, type.value(), subtype, name);
+    return new TAssetInfo(assets_manager_ref_ex(this != null ? (this.nativeObj) : 0, type.value(), subtype, name));
  }
 
 

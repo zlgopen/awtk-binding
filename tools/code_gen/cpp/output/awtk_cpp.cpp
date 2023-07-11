@@ -124,7 +124,7 @@
  }
 
  TObject TObject::Ref(TObject& obj)  {
-   return TObject((emitter_t*)(object_ref(((object_t*)(obj.nativeObj)))));
+   return TObject((object_t*)(object_ref(((object_t*)(obj.nativeObj)))));
  }
 
  const char* TObject::GetType()  {
@@ -804,7 +804,7 @@
  }
 
  TLocaleInfo TLocaleInfos::Ref(const char* name)  {
-   return TLocaleInfos((locale_infos_t*)(locale_infos_ref(name)));
+   return TLocaleInfo((locale_info_t*)(locale_infos_ref(name)));
  }
 
  ret_t TLocaleInfos::Unref(TLocaleInfo& locale_info)  {
@@ -2036,11 +2036,11 @@
  }
 
  TAssetInfo TAssetsManager::Ref(asset_type_t type, const char* name)  {
-    return assets_manager_ref(((assets_manager_t*)(this->nativeObj)), type, name);
+   return TAssetInfo((asset_info_t*)(assets_manager_ref(((assets_manager_t*)(this->nativeObj)), type, name)));
  }
 
  TAssetInfo TAssetsManager::RefEx(asset_type_t type, uint16_t subtype, const char* name)  {
-    return assets_manager_ref_ex(((assets_manager_t*)(this->nativeObj)), type, subtype, name);
+   return TAssetInfo((asset_info_t*)(assets_manager_ref_ex(((assets_manager_t*)(this->nativeObj)), type, subtype, name)));
  }
 
  ret_t TAssetsManager::Unref(TAssetInfo& info)  {

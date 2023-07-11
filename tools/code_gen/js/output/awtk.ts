@@ -7009,7 +7009,7 @@ export class TLocaleInfos {
    * @returns 返回locale_info对象。
    */
  static ref(name : string) : TLocaleInfos  {
-    return new TLocaleInfos(locale_infos_ref(name));
+    return new TLocaleInfo(locale_infos_ref(name));
  }
 
 
@@ -14779,7 +14779,7 @@ export class TAssetsManager extends TEmitter {
    * @returns 返回资源。
    */
  ref(type : TAssetType, name : string) : TAssetInfo  {
-    return assets_manager_ref(this != null ? (this.nativeObj || this) : null, type, name);
+    return new TAssetInfo(assets_manager_ref(this != null ? (this.nativeObj || this) : null, type, name));
  }
 
 
@@ -14793,7 +14793,7 @@ export class TAssetsManager extends TEmitter {
    * @returns 返回资源。
    */
  refEx(type : TAssetType, subtype : number, name : string) : TAssetInfo  {
-    return assets_manager_ref_ex(this != null ? (this.nativeObj || this) : null, type, subtype, name);
+    return new TAssetInfo(assets_manager_ref_ex(this != null ? (this.nativeObj || this) : null, type, subtype, name));
  }
 
 

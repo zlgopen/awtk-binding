@@ -46,7 +46,7 @@ public class TLocaleInfos {
    * @return 返回locale_info对象。
    */
  public  static TLocaleInfo ref(String name)  {
-    return new TLocaleInfos(locale_infos_ref(name));
+    return new TLocaleInfo(locale_infos_ref(name));
  }
 
 
