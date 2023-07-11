@@ -8,11 +8,11 @@ func TOrientationEventCast(event TEvent) TOrientationEvent {
   return retObj
 }
 
-func (this TOrientationEvent) GetOrientation() int32 {
-  return (int32)((*C.orientation_event_t)(unsafe.Pointer(this.handle)).orientation);
+func (this TOrientationEvent) GetOrientation() int64 {
+  return (int64)((*C.orientation_event_t)(unsafe.Pointer(this.handle)).orientation);
 }
 
-func (this TOrientationEvent) GetOldOrientation() int32 {
-  return (int32)((*C.orientation_event_t)(unsafe.Pointer(this.handle)).old_orientation);
+func (this TOrientationEvent) GetOldOrientation() int64 {
+  return (int64)((*C.orientation_event_t)(unsafe.Pointer(this.handle)).old_orientation);
 }
 

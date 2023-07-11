@@ -3055,7 +3055,7 @@
       {
         "params": [
           {
-            "type": "value_t*",
+            "type": "const value_t*",
             "name": "v",
             "desc": "value对象。"
           }
@@ -3297,6 +3297,10 @@
       {
         "desc": "高度缩放显示。将图片缩放至目标矩形的高度，宽度按此比例进行缩放，超出不部分不显示。",
         "name": "IMAGE_DRAW_SCALE_H"
+      },
+      {
+        "desc": "填充整个区域。将图片缩放至目标矩形的高度或宽度，包装填满整个目标区域，超出不部分不显示。",
+        "name": "IMAGE_DRAW_FILL"
       },
       {
         "desc": "平铺显示。",
@@ -4188,7 +4192,7 @@
       {
         "name": "font_size",
         "desc": "当前字体大小。",
-        "type": "uint16_t",
+        "type": "font_size_t",
         "annotation": {
           "readable": true,
           "scriptable": true
@@ -4693,6 +4697,18 @@
         "name": "EVT_SYSTEM"
       },
       {
+        "desc": "SDL文件拖入事件(drop_file_event_t)。",
+        "name": "EVT_DROP_FILE"
+      },
+      {
+        "desc": "locale_infos加载某个本地化信息(event_t)。",
+        "name": "EVT_LOCALE_INFOS_LOAD_INFO"
+      },
+      {
+        "desc": "locale_infos卸载某个本地化信息(event_t)。",
+        "name": "EVT_LOCALE_INFOS_UNLOAD_INFO"
+      },
+      {
         "desc": "event queue其它请求编号起始值。",
         "name": "EVT_REQ_START"
       },
@@ -4866,7 +4882,7 @@
       {
         "name": "type",
         "desc": "类型。",
-        "type": "int32_t",
+        "type": "uint32_t",
         "annotation": {
           "readable": true,
           "scriptable": true
@@ -4875,7 +4891,7 @@
       {
         "name": "size",
         "desc": "结构体的大小。",
-        "type": "int32_t",
+        "type": "uint32_t",
         "annotation": {
           "readable": true,
           "scriptable": true
@@ -5273,7 +5289,7 @@
           },
           {
             "type": "const char*",
-            "name": "key",
+            "name": "keys",
             "desc": "键值。"
           }
         ],
@@ -6078,6 +6094,155 @@
     "level": 1
   },
   {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "小应用程序(applet)的名称。"
+          }
+        ],
+        "annotation": {
+          "constructor": true,
+          "scriptable": true,
+          "static": true
+        },
+        "desc": "获取指定小应用程序(applet)的locale_info。",
+        "name": "locale_infos_ref",
+        "return": {
+          "type": "locale_info_t*",
+          "desc": "返回locale_info对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "locale_info_t*",
+            "name": "locale_info",
+            "desc": "locale_info对象。"
+          }
+        ],
+        "annotation": {
+          "deconstructor": true,
+          "scriptable": true,
+          "static": true
+        },
+        "desc": "释放指定小应用程序(applet)的locale_info。",
+        "name": "locale_infos_unref",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "const char*",
+            "name": "language",
+            "desc": "语言。"
+          },
+          {
+            "type": "const char*",
+            "name": "country",
+            "desc": "国家或地区。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true,
+          "static": true
+        },
+        "desc": "设置全部locale_info的当前国家和语言。",
+        "name": "locale_infos_change",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "event_type_t",
+            "name": "type",
+            "desc": "事件类型，目前有EVT_LOCALE_INFOS_LOAD_INFO、EVT_LOCALE_INFOS_UNLOAD_INFO。"
+          },
+          {
+            "type": "event_func_t",
+            "name": "on_event",
+            "desc": "事件处理函数。"
+          },
+          {
+            "type": "void*",
+            "name": "ctx",
+            "desc": "事件处理函数上下文。"
+          }
+        ],
+        "annotation": {
+          "scriptable": "custom",
+          "static": true
+        },
+        "desc": "注册指定事件的处理函数。",
+        "name": "locale_infos_on",
+        "return": {
+          "type": "uint32_t",
+          "desc": "返回id，用于locale_infos_off。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "uint32_t",
+            "name": "id",
+            "desc": "locale_infos_on返回的ID。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true,
+          "static": true
+        },
+        "desc": "注销指定事件的处理函数。",
+        "name": "locale_infos_off",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [],
+        "annotation": {
+          "scriptable": true,
+          "static": true
+        },
+        "desc": "重新加载全部字符串资源。",
+        "name": "locale_infos_reload_all",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [
+      {
+        "name": "unused",
+        "desc": "for go binding.",
+        "type": "int",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      }
+    ],
+    "header": "base/locale_info.h",
+    "desc": "在某些情况下，需要多个资源管理器。比如在手表系统里，每个应用或表盘，可能放在独立的资源包中，\n此时优先加载应用自己的资源，如果没有就加载系统的资源。",
+    "name": "locale_infos_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "level": 1
+  },
+  {
     "type": "enum",
     "desc": "style常量定义。",
     "consts": [
@@ -6405,6 +6570,39 @@
         "return": {
           "type": "const char*",
           "desc": "返回字符串格式的值。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "style_t*",
+            "name": "s",
+            "desc": "style对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "state",
+            "desc": "状态。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性名。"
+          },
+          {
+            "type": "value_t*",
+            "name": "value",
+            "desc": "值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取指定状态的指定属性的值。",
+        "name": "style_get",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
         }
       },
       {
@@ -6828,6 +7026,10 @@
       {
         "desc": "桌面应用程序。",
         "name": "APP_DESKTOP"
+      },
+      {
+        "desc": "控制台（没有界面）。",
+        "name": "APP_CONSOLE"
       }
     ],
     "header": "base/types_def.h",
@@ -7429,7 +7631,7 @@
           {
             "type": "float_t",
             "name": "rad",
-            "desc": "角度"
+            "desc": "旋转角度(单位弧度)"
           }
         ],
         "annotation": {
@@ -7822,7 +8024,7 @@
           },
           {
             "type": "float_t",
-            "name": "font",
+            "name": "size",
             "desc": "字体大小。"
           }
         ],
@@ -8244,7 +8446,7 @@
           },
           {
             "type": "const char*",
-            "name": "color",
+            "name": "str",
             "desc": "颜色。"
           }
         ],
@@ -8370,7 +8572,7 @@
       {
         "name": "w",
         "desc": "canvas的宽度",
-        "type": "wh_t",
+        "type": "uint32_t",
         "annotation": {
           "readable": true,
           "scriptable": true
@@ -8379,7 +8581,7 @@
       {
         "name": "h",
         "desc": "canvas的高度",
-        "type": "wh_t",
+        "type": "uint32_t",
         "annotation": {
           "readable": true,
           "scriptable": true
@@ -8478,7 +8680,7 @@
       {
         "name": "text_align",
         "desc": "文本对齐方式。\n\n@see http://www.w3school.com.cn/tags/canvas_textalign.asp",
-        "type": "const char*",
+        "type": "char*",
         "annotation": {
           "readable": true,
           "scriptable": true
@@ -8487,7 +8689,7 @@
       {
         "name": "text_baseline",
         "desc": "文本基线。\n\n@see http://www.w3school.com.cn/tags/canvas_textbaseline.asp",
-        "type": "const char*",
+        "type": "char*",
         "annotation": {
           "readable": true,
           "scriptable": true
@@ -8903,11 +9105,11 @@
         "name": "WIDGET_PROP_SHOW_TEXT"
       },
       {
-        "desc": "X方向的偏移。（如果控件有继承 get_offset 函数指针的话，一定要和 get_offset 返回值保持一致，否则容易出现问题）",
+        "desc": "X方向的偏移。（如果控件有继承 get_offset 函数指针的话，一定要和 get_offset 返回值保持一致，否则容易出现问题）\n详情请看 docs/how_to_use_offset_in_custom_widget.md",
         "name": "WIDGET_PROP_XOFFSET"
       },
       {
-        "desc": "Y方向的偏移。（如果控件有继承 get_offset 函数指针的话，一定要和 get_offset 返回值保持一致，否则容易出现问题）",
+        "desc": "Y方向的偏移。（如果控件有继承 get_offset 函数指针的话，一定要和 get_offset 返回值保持一致，否则容易出现问题）\n详情请看 docs/how_to_use_offset_in_custom_widget.md",
         "name": "WIDGET_PROP_YOFFSET"
       },
       {
@@ -10291,6 +10493,24 @@
         "return": {
           "type": "bool_t",
           "desc": "存在返回 TRUE，不存在返回 FALSE。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "判断widget是否支持高亮。",
+        "name": "widget_is_support_highlighter",
+        "return": {
+          "type": "bool_t",
+          "desc": "支持返回 TRUE，不支持返回 FALSE。"
         }
       },
       {
@@ -11896,6 +12116,24 @@
         "annotation": {
           "scriptable": true
         },
+        "desc": "检查控件是否是全屏窗口。",
+        "name": "widget_is_fullscreen_window",
+        "return": {
+          "type": "bool_t",
+          "desc": "返回FALSE表示不是，否则表示是。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
         "desc": "检查控件是否是对话框类型。",
         "name": "widget_is_dialog",
         "return": {
@@ -11934,6 +12172,24 @@
         },
         "desc": "检查控件是否是overlay窗口类型。",
         "name": "widget_is_overlay",
+        "return": {
+          "type": "bool_t",
+          "desc": "返回FALSE表示不是，否则表示是。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "检查控件是否总在最上层。",
+        "name": "widget_is_always_on_top",
         "return": {
           "type": "bool_t",
           "desc": "返回FALSE表示不是，否则表示是。"
@@ -13783,13 +14039,13 @@
           },
           {
             "type": "uint8_t",
-            "name": "b",
-            "desc": "蓝色通道。"
+            "name": "g",
+            "desc": "绿色通道。"
           },
           {
             "type": "uint8_t",
-            "name": "g",
-            "desc": "绿色通道。"
+            "name": "b",
+            "desc": "蓝色通道。"
           },
           {
             "type": "uint8_t",
@@ -14164,7 +14420,7 @@
             "desc": "date_time对象。"
           },
           {
-            "type": "uint64_t",
+            "type": "int64_t",
             "name": "time",
             "desc": "时间。"
           }
@@ -14172,7 +14428,7 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "从time转换而来。",
+        "desc": "从time转换而来(按GMT转换)。",
         "name": "date_time_from_time",
         "return": {
           "type": "ret_t",
@@ -14190,10 +14446,10 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "转换成time。",
+        "desc": "转换成time(按GMT转换)。",
         "name": "date_time_to_time",
         "return": {
-          "type": "uint64_t",
+          "type": "int64_t",
           "desc": "返回time。"
         }
       },
@@ -14248,7 +14504,7 @@
           },
           {
             "type": "uint32_t",
-            "name": "montn",
+            "name": "month",
             "desc": "月份(1-12)。"
           }
         ],
@@ -14272,7 +14528,7 @@
           },
           {
             "type": "uint32_t",
-            "name": "montn",
+            "name": "month",
             "desc": "月份(1-12)。"
           },
           {
@@ -14296,7 +14552,7 @@
         "params": [
           {
             "type": "uint32_t",
-            "name": "montn",
+            "name": "month",
             "desc": "月份(1-12)。"
           }
         ],
@@ -15410,6 +15666,14 @@
       {
         "desc": "没有改变。",
         "name": "RET_NOT_MODIFIED"
+      },
+      {
+        "desc": "没有权限。",
+        "name": "RET_NO_PERMISSION"
+      },
+      {
+        "desc": "最大值。",
+        "name": "RET_MAX_NR"
       }
     ],
     "header": "tkc/types_def.h",
@@ -15696,7 +15960,7 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转model_event_t对象，主要给脚本语言使用。",
+        "desc": "把event对象转model_event_t对象。",
         "name": "model_event_cast",
         "return": {
           "type": "model_event_t*",
@@ -15758,7 +16022,7 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转wheel_event_t对象，主要给脚本语言使用。",
+        "desc": "把event对象转wheel_event_t对象。",
         "name": "wheel_event_cast",
         "return": {
           "type": "wheel_event_t*",
@@ -15829,7 +16093,7 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转orientation_event_t对象，主要给脚本语言使用。",
+        "desc": "把event对象转orientation_event_t对象。",
         "name": "orientation_event_cast",
         "return": {
           "type": "orientation_event_t*",
@@ -15842,7 +16106,7 @@
       {
         "name": "orientation",
         "desc": "屏幕方向。",
-        "type": "int32_t",
+        "type": "lcd_orientation_t",
         "annotation": {
           "readable": true,
           "scriptable": true
@@ -15851,7 +16115,7 @@
       {
         "name": "old_orientation",
         "desc": "旧的屏幕方向。",
-        "type": "int32_t",
+        "type": "lcd_orientation_t",
         "annotation": {
           "readable": true,
           "scriptable": true
@@ -15882,7 +16146,7 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转value_change_event_t对象，主要给脚本语言使用。",
+        "desc": "把event对象转value_change_event_t对象。",
         "name": "value_change_event_cast",
         "return": {
           "type": "value_change_event_t*",
@@ -15916,7 +16180,7 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转offset_change_event_t对象，主要给脚本语言使用。",
+        "desc": "把event对象转offset_change_event_t对象。",
         "name": "offset_change_event_cast",
         "return": {
           "type": "offset_change_event_t*",
@@ -15950,7 +16214,7 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转pointer_event_t对象，主要给脚本语言使用。",
+        "desc": "把event对象转pointer_event_t对象。",
         "name": "pointer_event_cast",
         "return": {
           "type": "pointer_event_t*",
@@ -15981,7 +16245,7 @@
       {
         "name": "button",
         "desc": "button。\n在不同的平台，该属性会发生变化，\nPC ：左键为 1，中键为 2，右键为 3\n嵌入式：默认为 1",
-        "type": "uint8_t",
+        "type": "xy_t",
         "annotation": {
           "readable": true,
           "scriptable": true
@@ -16066,7 +16330,7 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转key_event_t对象，主要给脚本语言使用。",
+        "desc": "把event对象转key_event_t对象。",
         "name": "key_event_cast",
         "return": {
           "type": "key_event_t*",
@@ -16227,7 +16491,7 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转paint_event_t对象。主要给脚本语言使用。",
+        "desc": "把event对象转paint_event_t对象。",
         "name": "paint_event_cast",
         "return": {
           "type": "paint_event_t*",
@@ -16271,7 +16535,7 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转window_event_t对象。主要给脚本语言使用。",
+        "desc": "把event对象转window_event_t对象。",
         "name": "window_event_cast",
         "return": {
           "type": "window_event_t*",
@@ -16315,7 +16579,7 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转multi_gesture_event_t对象，主要给脚本语言使用。",
+        "desc": "把event对象转multi_gesture_event_t对象。",
         "name": "multi_gesture_event_cast",
         "return": {
           "type": "multi_gesture_event_t*",
@@ -16346,7 +16610,7 @@
       {
         "name": "rotation",
         "desc": "旋转角度(幅度)增量。（单位弧度）",
-        "type": "float",
+        "type": "float_t",
         "annotation": {
           "readable": true,
           "scriptable": true
@@ -16355,7 +16619,7 @@
       {
         "name": "distance",
         "desc": "两点间的距离增量。(-1,0)表示缩小，(0-1)表示增加。",
-        "type": "float",
+        "type": "float_t",
         "annotation": {
           "readable": true,
           "scriptable": true
@@ -16386,7 +16650,7 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转theme_change_event_t对象，主要给脚本语言使用。",
+        "desc": "把event对象转theme_change_event_t对象。",
         "name": "theme_change_event_cast",
         "return": {
           "type": "theme_change_event_t*",
@@ -16430,7 +16694,51 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转system_event_t对象。主要给脚本语言使用。",
+        "desc": "把event对象转drop_file_event_t对象。",
+        "name": "drop_file_event_cast",
+        "return": {
+          "type": "drop_file_event_t*",
+          "desc": "event 对象。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [
+      {
+        "name": "filename",
+        "desc": "文件名。",
+        "type": "const char*",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      }
+    ],
+    "header": "base/events.h",
+    "desc": "文件拖入事件。",
+    "name": "drop_file_event_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "parent": "event_t",
+    "level": 2
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
+            "type": "event_t*",
+            "name": "event",
+            "desc": "event对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
+        "desc": "把event对象转system_event_t对象。",
         "name": "system_event_cast",
         "return": {
           "type": "system_event_t*",
@@ -17999,7 +18307,7 @@
       {
         "name": "value",
         "desc": "颜色。",
-        "type": "const char*",
+        "type": "char*",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -18229,6 +18537,29 @@
           },
           {
             "type": "bool_t",
+            "name": "allow_out_of_screen",
+            "desc": "是否无范围限制拖动。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置是否无范围限制拖动。\n备注：可以让窗口拖动到外面去。",
+        "name": "draggable_set_allow_out_of_screen",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          },
+          {
+            "type": "bool_t",
             "name": "drag_window",
             "desc": "是否拖动窗口。"
           }
@@ -18335,6 +18666,19 @@
         "name": "right",
         "desc": "拖动范围的右边限制。缺省为父控件的右边边。",
         "type": "int32_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "allow_out_of_screen",
+        "desc": "支持超出原生窗口边界拖动。（无法完全移出原生窗口，同时优先受到拖动范围限制的影响）",
+        "type": "bool_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -20192,7 +20536,7 @@
           },
           {
             "type": "double",
-            "name": "delta",
+            "name": "click_add_delta",
             "desc": "增量。"
           }
         ],
@@ -21504,7 +21848,7 @@
       },
       {
         "name": "EVT_VALUE_CHANGED",
-        "desc": "文本改变事件。",
+        "desc": "文本改变事件(编辑完成或设置文本时触发)。",
         "type": "value_change_event_t"
       }
     ],
@@ -23593,6 +23937,34 @@
         },
         "desc": "通过动画隐藏滚动条。",
         "name": "scroll_bar_hide_by_opacity_animation",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "scroll_bar控件。"
+          },
+          {
+            "type": "int32_t",
+            "name": "duration",
+            "desc": "动画持续时间。"
+          },
+          {
+            "type": "int32_t",
+            "name": "delay",
+            "desc": "动画执行时间。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "通过动画显示滚动条。",
+        "name": "scroll_bar_show_by_opacity_animation",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -27532,7 +27904,7 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转prop_change_event_t对象，主要给脚本语言使用。",
+        "desc": "把event对象转prop_change_event_t对象。",
         "name": "prop_change_event_cast",
         "return": {
           "type": "prop_change_event_t*",
@@ -27585,7 +27957,7 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转progress_event_t对象，主要给脚本语言使用。",
+        "desc": "把event对象转progress_event_t对象。",
         "name": "progress_event_cast",
         "return": {
           "type": "progress_event_t*",
@@ -27629,7 +28001,7 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转done_event_t对象，主要给脚本语言使用。",
+        "desc": "把event对象转done_event_t对象。",
         "name": "done_event_cast",
         "return": {
           "type": "done_event_t*",
@@ -27673,7 +28045,7 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转error_event_t对象，主要给脚本语言使用。",
+        "desc": "把event对象转error_event_t对象。",
         "name": "error_event_cast",
         "return": {
           "type": "error_event_t*",
@@ -27726,7 +28098,7 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转cmd_exec_event_t对象，主要给脚本语言使用。",
+        "desc": "把event对象转cmd_exec_event_t对象。",
         "name": "cmd_exec_event_cast",
         "return": {
           "type": "cmd_exec_event_t*",
@@ -28602,7 +28974,7 @@
       {
         "name": "bg_color",
         "desc": "背景颜色。",
-        "type": "const char*",
+        "type": "char*",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -28615,7 +28987,7 @@
       {
         "name": "border_color",
         "desc": "边框颜色。",
-        "type": "const char*",
+        "type": "char*",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -29980,7 +30352,7 @@
       },
       {
         "name": "EVT_VALUE_CHANGED",
-        "desc": "文本改变事件。",
+        "desc": "文本改变事件(编辑完成或设置文本时触发)。",
         "type": "value_change_event_t"
       },
       {
@@ -32678,7 +33050,7 @@
       {
         "name": "highlight",
         "desc": "对话框高亮策略。\n\n> 请参考 [对话框高亮策略](https://github.com/zlgopen/awtk/blob/master/docs/dialog_highlight.md)",
-        "type": "const char*",
+        "type": "char*",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -33285,7 +33657,7 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "停止(并重置index为-1)。",
+        "desc": "停止(并重置index为0)。",
         "name": "gif_image_stop",
         "return": {
           "type": "ret_t",
@@ -33657,6 +34029,52 @@
           {
             "type": "widget_t*",
             "name": "widget",
+            "desc": "image对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "is_cache_mode",
+            "desc": "是否开启缓存模式。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "控件设置是否开启离线缓存渲染模式。\n\n> 在确保svg图片不经常变化大小及状态的情况下，开启离线缓存渲染能够减少解析bsvg的开销，提高效率。",
+        "name": "svg_image_set_cache_mode",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "image对象。"
+          },
+          {
+            "type": "image_draw_type_t",
+            "name": "draw_type",
+            "desc": "绘制模式。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "控件设置svg图片绘制模式。",
+        "name": "svg_image_set_draw_type",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
             "desc": "svg_image对象。"
           }
         ],
@@ -33673,7 +34091,34 @@
       }
     ],
     "events": [],
-    "properties": [],
+    "properties": [
+      {
+        "name": "is_cache_mode",
+        "desc": "离线缓存渲染模式。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "draw_type",
+        "desc": "svg图片的绘制方式(支持旋转缩放, 目前仅支持scale、scale_auto模式)。",
+        "type": "image_draw_type_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      }
+    ],
     "header": "svg_image/svg_image.h",
     "desc": "SVG图片控件。\n\nsvg\\_image\\_t是[image\\_base\\_t](image_base_t.md)的子类控件，image\\_base\\_t的函数均适用于svg\\_image\\_t控件。\n\n在xml中使用\"svg\"标签创建SVG图片控件。如：\n\n```xml\n<svg image=\"girl\"/>\n```\n\n>更多用法请参考：[svg image](\nhttps://github.com/zlgopen/awtk/blob/master/design/default/ui/svg_image.xml)\n\n在c代码中使用函数svg\\_image\\_create创建SVG图片控件。如：\n\n```c\nwidget_t* image = svg_image_create(win, 10, 10, 200, 200);\nimage_set_image(image, \"girl\");\n```\n\n> 创建之后: 需要用widget\\_set\\_image设置图片名称。\n\n> 完整示例请参考：[svg image demo](\nhttps://github.com/zlgopen/awtk-c-demos/blob/master/demos/svg_image.c)\n\n可用通过style来设置控件的显示风格，如背景和边框等。如：\n\n```xml\n<svg>\n<style name=\"default\">\n<normal border_color=\"green\" fg_color=\"red\" />\n</style>\n</svg>\n```\n\n> 更多用法请参考：[theme default](\nhttps://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml)",
     "name": "svg_image_t",
@@ -34525,14 +34970,37 @@
           {
             "type": "int32_t",
             "name": "value",
-            "desc": "值。"
+            "desc": "选项的值。"
           }
         ],
         "annotation": {
           "scriptable": true
         },
-        "desc": "删除选项。",
+        "desc": "删除第一个值为value的选项。",
         "name": "combo_box_remove_option",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "combo_box对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "index",
+            "desc": "选项的序数(0表示第一个)。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "删除指定序数的选项。",
+        "name": "combo_box_remove_option_by_index",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -35001,6 +35469,29 @@
           {
             "type": "widget_t*",
             "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "modeless",
+            "desc": "是否非模态窗口模式。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置是否非模态窗口模式。",
+        "name": "overlay_set_modeless",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
             "desc": "overlay对象。"
           }
         ],
@@ -35034,6 +35525,19 @@
       {
         "name": "always_on_top",
         "desc": "是否总在最上面。\n\n缺省不启用。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "modeless",
+        "desc": "非模态窗口。\n\n缺省不启用。",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,

@@ -28,8 +28,8 @@ func (this TEvent) Destroy() TRet {
   return TRet(C.event_destroy((*C.event_t)(this.handle)));
 }
 
-func (this TEvent) GetSize() int32 {
-  return (int32)((*C.event_t)(unsafe.Pointer(this.handle)).size);
+func (this TEvent) GetSize() uint32 {
+  return (uint32)((*C.event_t)(unsafe.Pointer(this.handle)).size);
 }
 
 func (this TEvent) GetTime() int64 {

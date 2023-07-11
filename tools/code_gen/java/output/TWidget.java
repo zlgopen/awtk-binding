@@ -334,6 +334,17 @@ public class TWidget {
 
 
   /**
+   * 判断widget是否支持高亮。
+   * 
+   *
+   * @return 支持返回 TRUE，不支持返回 FALSE。
+   */
+ public  boolean isSupportHighlighter()  {
+    return widget_is_support_highlighter(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
    * 启用指定的style。
    * 
    * @param style style的名称。
@@ -1200,6 +1211,17 @@ public class TWidget {
 
 
   /**
+   * 检查控件是否是全屏窗口。
+   * 
+   *
+   * @return 返回FALSE表示不是，否则表示是。
+   */
+ public  boolean isFullscreenWindow()  {
+    return widget_is_fullscreen_window(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
    * 检查控件是否是对话框类型。
    * 
    *
@@ -1229,6 +1251,17 @@ public class TWidget {
    */
  public  boolean isOverlay()  {
     return widget_is_overlay(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
+   * 检查控件是否总在最上层。
+   * 
+   *
+   * @return 返回FALSE表示不是，否则表示是。
+   */
+ public  boolean isAlwaysOnTop()  {
+    return widget_is_always_on_top(this != null ? (this.nativeObj) : 0);
  }
 
 
@@ -1796,6 +1829,7 @@ static private native int widget_set_value_int(long widget, int value);
 static private native int widget_add_value_int(long widget, int delta);
 static private native int widget_animate_value_to(long widget, double value, int duration);
 static private native boolean widget_is_style_exist(long widget, String style_name, String state_name);
+static private native boolean widget_is_support_highlighter(long widget);
 static private native int widget_use_style(long widget, String style);
 static private native int widget_set_text_utf8(long widget, String text);
 static private native int widget_set_text_utf8_ex(long widget, String text, boolean check_diff);
@@ -1864,9 +1898,11 @@ static private native boolean widget_is_direct_parent_of(long widget, long child
 static private native boolean widget_is_window(long widget);
 static private native boolean widget_is_system_bar(long widget);
 static private native boolean widget_is_normal_window(long widget);
+static private native boolean widget_is_fullscreen_window(long widget);
 static private native boolean widget_is_dialog(long widget);
 static private native boolean widget_is_popup(long widget);
 static private native boolean widget_is_overlay(long widget);
+static private native boolean widget_is_always_on_top(long widget);
 static private native boolean widget_is_opened_dialog(long widget);
 static private native boolean widget_is_opened_popup(long widget);
 static private native boolean widget_is_keyboard(long widget);

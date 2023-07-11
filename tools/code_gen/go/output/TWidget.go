@@ -116,6 +116,10 @@ func (this TWidget) IsStyleExist(style_name string, state_name string) bool {
   return (bool)(C.widget_is_style_exist((*C.widget_t)(this.handle), astyle_name, astate_name));
 }
 
+func (this TWidget) IsSupportHighlighter() bool {
+  return (bool)(C.widget_is_support_highlighter((*C.widget_t)(this.handle)));
+}
+
 func (this TWidget) UseStyle(style string) TRet {
   astyle := C.CString(style)
   defer C.free(unsafe.Pointer(astyle))
@@ -467,6 +471,10 @@ func (this TWidget) IsNormalWindow() bool {
   return (bool)(C.widget_is_normal_window((*C.widget_t)(this.handle)));
 }
 
+func (this TWidget) IsFullscreenWindow() bool {
+  return (bool)(C.widget_is_fullscreen_window((*C.widget_t)(this.handle)));
+}
+
 func (this TWidget) IsDialog() bool {
   return (bool)(C.widget_is_dialog((*C.widget_t)(this.handle)));
 }
@@ -477,6 +485,10 @@ func (this TWidget) IsPopup() bool {
 
 func (this TWidget) IsOverlay() bool {
   return (bool)(C.widget_is_overlay((*C.widget_t)(this.handle)));
+}
+
+func (this TWidget) IsAlwaysOnTop() bool {
+  return (bool)(C.widget_is_always_on_top((*C.widget_t)(this.handle)));
 }
 
 func (this TWidget) IsOpenedDialog() bool {

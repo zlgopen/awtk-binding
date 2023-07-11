@@ -2,9 +2,9 @@ type TColor struct {
   handle unsafe.Pointer
 }
 
-func TColorCreate(r uint8, b uint8, g uint8, a uint8) TColor {
+func TColorCreate(r uint8, g uint8, b uint8, a uint8) TColor {
   retObj := TColor{}
-  retObj.handle = unsafe.Pointer(C.color_create((C.uint8_t)(r), (C.uint8_t)(b), (C.uint8_t)(g), (C.uint8_t)(a)))
+  retObj.handle = unsafe.Pointer(C.color_create((C.uint8_t)(r), (C.uint8_t)(g), (C.uint8_t)(b), (C.uint8_t)(a)))
   return retObj
 }
 

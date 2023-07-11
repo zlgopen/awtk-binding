@@ -16,8 +16,8 @@ func (this TPointerEvent) GetY() int {
   return (int)((*C.pointer_event_t)(unsafe.Pointer(this.handle)).y);
 }
 
-func (this TPointerEvent) GetButton() uint8 {
-  return (uint8)((*C.pointer_event_t)(unsafe.Pointer(this.handle)).button);
+func (this TPointerEvent) GetButton() int {
+  return (int)((*C.pointer_event_t)(unsafe.Pointer(this.handle)).button);
 }
 
 func (this TPointerEvent) GetPressed() bool {

@@ -30,6 +30,14 @@ func (this TStyle) GetStr(name string, defval string) string {
   return C.GoString(C.style_get_str((*C.style_t)(this.handle), aname, adefval));
 }
 
+func (this TStyle) Get(state string, name string, value TValue) TRet {
+  astate := C.CString(state)
+  defer C.free(unsafe.Pointer(astate))
+  aname := C.CString(name)
+  defer C.free(unsafe.Pointer(aname))
+  return TRet(C.style_get((*C.style_t)(this.handle), astate, aname, (*C.value_t)(value.handle)));
+}
+
 func (this TStyle) Set(state string, name string, value TValue) TRet {
   astate := C.CString(state)
   defer C.free(unsafe.Pointer(astate))

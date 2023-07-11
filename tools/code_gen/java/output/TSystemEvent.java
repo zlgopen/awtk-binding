@@ -32,7 +32,7 @@ public class TSystemEvent extends TEvent {
 
 
   /**
-   * 把event对象转system_event_t对象。主要给脚本语言使用。
+   * 把event对象转system_event_t对象。
    * 
    * @param event event对象。
    *

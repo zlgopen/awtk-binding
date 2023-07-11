@@ -148,8 +148,8 @@ func (this TCanvas) GetFontName() string {
   return C.GoString((*C.canvas_t)(unsafe.Pointer(this.handle)).font_name);
 }
 
-func (this TCanvas) GetFontSize() uint16 {
-  return (uint16)((*C.canvas_t)(unsafe.Pointer(this.handle)).font_size);
+func (this TCanvas) GetFontSize() int {
+  return (int)((*C.canvas_t)(unsafe.Pointer(this.handle)).font_size);
 }
 
 func (this TCanvas) GetGlobalAlpha() uint8 {

@@ -66,6 +66,10 @@ func (this TComboBox) RemoveOption(value int32) TRet {
   return TRet(C.combo_box_remove_option((*C.widget_t)(this.handle), (C.int32_t)(value)));
 }
 
+func (this TComboBox) RemoveOptionByIndex(index uint32) TRet {
+  return TRet(C.combo_box_remove_option_by_index((*C.widget_t)(this.handle), (C.uint32_t)(index)));
+}
+
 func (this TComboBox) SetOptions(options string) TRet {
   aoptions := C.CString(options)
   defer C.free(unsafe.Pointer(aoptions))

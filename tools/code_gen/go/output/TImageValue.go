@@ -20,8 +20,8 @@ func (this TImageValue) SetFormat(format string) TRet {
   return TRet(C.image_value_set_format((*C.widget_t)(this.handle), aformat));
 }
 
-func (this TImageValue) SetClickAddDelta(delta float64) TRet {
-  return TRet(C.image_value_set_click_add_delta((*C.widget_t)(this.handle), (C.double)(delta)));
+func (this TImageValue) SetClickAddDelta(click_add_delta float64) TRet {
+  return TRet(C.image_value_set_click_add_delta((*C.widget_t)(this.handle), (C.double)(click_add_delta)));
 }
 
 func (this TImageValue) SetValue(value float64) TRet {

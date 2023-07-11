@@ -1899,7 +1899,7 @@ public:
    * 当前字体大小。
    *
    */
-  uint16_t GetFontSize() const;
+  font_size_t GetFontSize() const;
 
   /**
    * 当前全局alpha。
@@ -2030,13 +2030,13 @@ public:
    * 类型。
    *
    */
-  int32_t GetType() const;
+  uint32_t GetType() const;
 
   /**
    * 结构体的大小。
    *
    */
-  int32_t GetSize() const;
+  uint32_t GetSize() const;
 
   /**
    * 事件发生的时间点（该时间点并非真实时间）。
@@ -2241,11 +2241,11 @@ public:
   /**
    * 提交按键。
    * 
-   * @param key 键值。
+   * @param keys 键值。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t DispatchKeys(const char* key) ;
+  ret_t DispatchKeys(const char* keys) ;
 
   /**
    * 分发进入预编辑状态的事件。
@@ -2350,6 +2350,101 @@ public:
 
 
 /**
+ * 在某些情况下，需要多个资源管理器。比如在手表系统里，每个应用或表盘，可能放在独立的资源包中，
+ *此时优先加载应用自己的资源，如果没有就加载系统的资源。
+ *
+ */
+class TLocaleInfos { 
+public:
+  //nativeObj is public for internal use only.
+  locale_infos_t* nativeObj;
+
+  TLocaleInfos(locale_infos_t* nativeObj) {
+    this->nativeObj = nativeObj;
+  }
+
+  TLocaleInfos() {
+    this->nativeObj = (locale_infos_t*)NULL;
+  }
+
+  TLocaleInfos(const locale_infos_t* nativeObj) {
+    this->nativeObj = (locale_infos_t*)nativeObj;
+  }
+
+  static TLocaleInfos Cast(locale_infos_t* nativeObj) {
+    return TLocaleInfos(nativeObj);
+  }
+
+  static TLocaleInfos Cast(const locale_infos_t* nativeObj) {
+    return TLocaleInfos((locale_infos_t*)nativeObj);
+  }
+
+
+  /**
+   * 获取指定小应用程序(applet)的locale_info。
+   * 
+   * @param name 小应用程序(applet)的名称。
+   *
+   * @return 返回locale_info对象。
+   */
+  static  TLocaleInfo Ref(const char* name) ;
+
+  /**
+   * 释放指定小应用程序(applet)的locale_info。
+   * 
+   * @param locale_info locale_info对象。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  static  ret_t Unref(TLocaleInfo& locale_info) ;
+
+  /**
+   * 设置全部locale_info的当前国家和语言。
+   * 
+   * @param language 语言。
+   * @param country 国家或地区。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  static  ret_t Change(const char* language, const char* country) ;
+
+  /**
+   * 注册指定事件的处理函数。
+   * 
+   * @param type 事件类型，目前有EVT_LOCALE_INFOS_LOAD_INFO、EVT_LOCALE_INFOS_UNLOAD_INFO。
+   * @param on_event 事件处理函数。
+   * @param ctx 事件处理函数上下文。
+   *
+   * @return 返回id，用于locale_infos_off。
+   */
+  static  uint32_t On(event_type_t type, event_func_t on_event, void* ctx) ;
+
+  /**
+   * 注销指定事件的处理函数。
+   * 
+   * @param id locale_infos_on返回的ID。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  static  ret_t Off(uint32_t id) ;
+
+  /**
+   * 重新加载全部字符串资源。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  static  ret_t ReloadAll() ;
+
+  /**
+   * for go binding.
+   *
+   */
+  int GetUnused() const;
+};
+
+
+/**
  * 控件风格。
  *
  *widget从style对象中，获取诸如字体、颜色和图片相关的参数，根据这些参数来绘制界面。
@@ -2430,6 +2525,17 @@ public:
    * @return 返回字符串格式的值。
    */
   const char* GetStr(const char* name, const char* defval) ;
+
+  /**
+   * 获取指定状态的指定属性的值。
+   * 
+   * @param state 状态。
+   * @param name 属性名。
+   * @param value 值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Get(const char* state, const char* name, TValue& value) ;
 
   /**
    * 设置指定状态的指定属性的值(仅仅对mutable的style有效)。
@@ -2811,7 +2917,7 @@ public:
   /**
    * 旋转。
    * 
-   * @param rad 角度
+   * @param rad 旋转角度(单位弧度)
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -2962,11 +3068,11 @@ public:
   /**
    * 设置字体的大小。
    * 
-   * @param font 字体大小。
+   * @param size 字体大小。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetFontSize(float_t font) ;
+  ret_t SetFontSize(float_t size) ;
 
   /**
    * 设置文本水平对齐的方式。
@@ -3105,11 +3211,11 @@ public:
   /**
    * 设置线条颜色。
    * 
-   * @param color 颜色。
+   * @param str 颜色。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetStrokeColor(const char* color) ;
+  ret_t SetStrokeColor(const char* str) ;
 
   /**
    * 设置line cap。
@@ -3162,13 +3268,13 @@ public:
    * canvas的宽度
    *
    */
-  wh_t GetW() const;
+  uint32_t GetW() const;
 
   /**
    * canvas的高度
    *
    */
-  wh_t GetH() const;
+  uint32_t GetH() const;
 
   /**
    * 一行占的字节
@@ -3239,7 +3345,7 @@ public:
    *@see http://www.w3school.com.cn/tags/canvas_textalign.asp
    *
    */
-  const char* GetTextAlign() const;
+  char* GetTextAlign() const;
 
   /**
    * 文本基线。
@@ -3247,7 +3353,7 @@ public:
    *@see http://www.w3school.com.cn/tags/canvas_textbaseline.asp
    *
    */
-  const char* GetTextBaseline() const;
+  char* GetTextBaseline() const;
 };
 
 
@@ -3516,6 +3622,14 @@ public:
    * @return 存在返回 TRUE，不存在返回 FALSE。
    */
   bool IsStyleExist(const char* style_name, const char* state_name) ;
+
+  /**
+   * 判断widget是否支持高亮。
+   * 
+   *
+   * @return 支持返回 TRUE，不支持返回 FALSE。
+   */
+  bool IsSupportHighlighter() ;
 
   /**
    * 启用指定的style。
@@ -4180,6 +4294,14 @@ public:
   bool IsNormalWindow() ;
 
   /**
+   * 检查控件是否是全屏窗口。
+   * 
+   *
+   * @return 返回FALSE表示不是，否则表示是。
+   */
+  bool IsFullscreenWindow() ;
+
+  /**
    * 检查控件是否是对话框类型。
    * 
    *
@@ -4202,6 +4324,14 @@ public:
    * @return 返回FALSE表示不是，否则表示是。
    */
   bool IsOverlay() ;
+
+  /**
+   * 检查控件是否总在最上层。
+   * 
+   *
+   * @return 返回FALSE表示不是，否则表示是。
+   */
+  bool IsAlwaysOnTop() ;
 
   /**
    * 检查控件弹出对话框控件是否已经打开了（而非挂起状态）。
@@ -4949,13 +5079,13 @@ public:
    *> 主要供脚本语言使用。
    * 
    * @param r 红色通道。
-   * @param b 蓝色通道。
    * @param g 绿色通道。
+   * @param b 蓝色通道。
    * @param a alpha通道。
    *
    * @return color对象。
    */
-  static  TColor Create(uint8_t r, uint8_t b, uint8_t g, uint8_t a) ;
+  static  TColor Create(uint8_t r, uint8_t g, uint8_t b, uint8_t a) ;
 
   /**
    * 创建color对象。
@@ -5138,21 +5268,21 @@ public:
   ret_t Set() ;
 
   /**
-   * 从time转换而来。
+   * 从time转换而来(按GMT转换)。
    * 
    * @param time 时间。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t FromTime(uint64_t time) ;
+  ret_t FromTime(int64_t time) ;
 
   /**
-   * 转换成time。
+   * 转换成time(按GMT转换)。
    * 
    *
    * @return 返回time。
    */
-  uint64_t ToTime() ;
+  int64_t ToTime() ;
 
   /**
    * 加上一个偏移量(s)。
@@ -5176,31 +5306,31 @@ public:
    * 获取指定年份月份的天数。
    * 
    * @param year 年份。
-   * @param montn 月份(1-12)。
+   * @param month 月份(1-12)。
    *
    * @return 返回大于0表示天数，否则表示失败。
    */
-  static  int32_t GetDays(uint32_t year, uint32_t montn) ;
+  static  int32_t GetDays(uint32_t year, uint32_t month) ;
 
   /**
    * 获取指定日期是周几(0-6, Sunday = 0)。。
    * 
    * @param year 年份。
-   * @param montn 月份(1-12)。
+   * @param month 月份(1-12)。
    * @param day 日(1-31)。
    *
    * @return 返回大于等于0表示周几(0-6)，否则表示失败。
    */
-  static  int32_t GetWday(uint32_t year, uint32_t montn, uint32_t day) ;
+  static  int32_t GetWday(uint32_t year, uint32_t month, uint32_t day) ;
 
   /**
    * 获取指定月份的英文名称(简写)。
    * 
-   * @param montn 月份(1-12)。
+   * @param month 月份(1-12)。
    *
    * @return 返回指定月份的英文名称(简写)。
    */
-  static  const char* GetMonthName(uint32_t montn) ;
+  static  const char* GetMonthName(uint32_t month) ;
 
   /**
    * 获取周几的英文名称(简写)。
@@ -5767,13 +5897,13 @@ public:
    * 屏幕方向。
    *
    */
-  int32_t GetOrientation() const;
+  lcd_orientation_t GetOrientation() const;
 
   /**
    * 旧的屏幕方向。
    *
    */
-  int32_t GetOldOrientation() const;
+  lcd_orientation_t GetOldOrientation() const;
 };
 
 
@@ -5899,7 +6029,7 @@ public:
    *嵌入式：默认为 1
    *
    */
-  uint8_t GetButton() const;
+  xy_t GetButton() const;
 
   /**
    * 指针是否按下。
@@ -6191,13 +6321,13 @@ public:
    * 旋转角度(幅度)增量。（单位弧度）
    *
    */
-  float GetRotation() const;
+  float_t GetRotation() const;
 
   /**
    * 两点间的距离增量。(-1,0)表示缩小，(0-1)表示增加。
    *
    */
-  float GetDistance() const;
+  float_t GetDistance() const;
 };
 
 
@@ -6239,6 +6369,47 @@ public:
    *
    */
   const char* GetName() const;
+};
+
+
+/**
+ * 文件拖入事件。
+ *
+ */
+class TDropFileEvent : public TEvent { 
+public:
+  TDropFileEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  }
+
+  TDropFileEvent() {
+    this->nativeObj = (event_t*)NULL;
+  }
+
+  TDropFileEvent(const drop_file_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
+  }
+
+  static TDropFileEvent Cast(event_t* nativeObj) {
+    return TDropFileEvent(nativeObj);
+  }
+
+  static TDropFileEvent Cast(const event_t* nativeObj) {
+    return TDropFileEvent((event_t*)nativeObj);
+  }
+
+  static TDropFileEvent Cast(TEvent& obj) {
+    return TDropFileEvent(obj.nativeObj);
+  }
+
+  static TDropFileEvent Cast(const TEvent& obj) {
+    return TDropFileEvent(obj.nativeObj);
+  }
+
+
+  /**
+   * 文件名。
+   *
+   */
+  const char* GetFilename() const;
 };
 
 
@@ -7182,7 +7353,7 @@ public:
    * 颜色。
    *
    */
-  const char* GetValue() const;
+  char* GetValue() const;
 };
 
 
@@ -7313,6 +7484,16 @@ public:
   ret_t SetHorizontalOnly(bool horizontal_only) ;
 
   /**
+   * 设置是否无范围限制拖动。
+   *备注：可以让窗口拖动到外面去。
+   * 
+   * @param allow_out_of_screen 是否无范围限制拖动。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetAllowOutOfScreen(bool allow_out_of_screen) ;
+
+  /**
    * 设置drag_window。
    *拖动窗口而不是父控件。比如放在对话框的titlebar上，拖动titlebar其实是希望拖动对话框。
    * 
@@ -7364,6 +7545,12 @@ public:
    *
    */
   int32_t GetRight() const;
+
+  /**
+   * 支持超出原生窗口边界拖动。（无法完全移出原生窗口，同时优先受到拖动范围限制的影响）
+   *
+   */
+  bool GetAllowOutOfScreen() const;
 
   /**
    * 只允许垂直拖动。
@@ -8394,11 +8581,11 @@ public:
   /**
    * 设置点击时加上的增量。
    * 
-   * @param delta 增量。
+   * @param click_add_delta 增量。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t SetClickAddDelta(double delta) ;
+  ret_t SetClickAddDelta(double click_add_delta) ;
 
   /**
    * 设置值。
@@ -10334,6 +10521,16 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t HideByOpacityAnimation(int32_t duration, int32_t delay) ;
+
+  /**
+   * 通过动画显示滚动条。
+   * 
+   * @param duration 动画持续时间。
+   * @param delay 动画执行时间。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t ShowByOpacityAnimation(int32_t duration, int32_t delay) ;
 
   /**
    * 虚拟宽度或高度。
@@ -13190,13 +13387,13 @@ public:
    * 背景颜色。
    *
    */
-  const char* GetBgColor() const;
+  char* GetBgColor() const;
 
   /**
    * 边框颜色。
    *
    */
-  const char* GetBorderColor() const;
+  char* GetBorderColor() const;
 };
 
 
@@ -15815,7 +16012,7 @@ public:
    *> 请参考 [对话框高亮策略](https://github.com/zlgopen/awtk/blob/master/docs/dialog_highlight.md)
    *
    */
-  const char* GetHighlight() const;
+  char* GetHighlight() const;
 };
 
 
@@ -16204,7 +16401,7 @@ public:
   ret_t Play() ;
 
   /**
-   * 停止(并重置index为-1)。
+   * 停止(并重置index为0)。
    * 
    *
    * @return 返回RET_OK表示成功，否则表示失败。
@@ -16639,6 +16836,38 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t SetImage(const char* name) ;
+
+  /**
+   * 控件设置是否开启离线缓存渲染模式。
+   *
+   *> 在确保svg图片不经常变化大小及状态的情况下，开启离线缓存渲染能够减少解析bsvg的开销，提高效率。
+   * 
+   * @param is_cache_mode 是否开启缓存模式。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetCacheMode(bool is_cache_mode) ;
+
+  /**
+   * 控件设置svg图片绘制模式。
+   * 
+   * @param draw_type 绘制模式。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetDrawType(image_draw_type_t draw_type) ;
+
+  /**
+   * 离线缓存渲染模式。
+   *
+   */
+  bool GetIsCacheMode() const;
+
+  /**
+   * svg图片的绘制方式(支持旋转缩放, 目前仅支持scale、scale_auto模式)。
+   *
+   */
+  image_draw_type_t GetDrawType() const;
 };
 
 
@@ -17283,13 +17512,22 @@ public:
   ret_t AppendOption(int32_t value, const char* text) ;
 
   /**
-   * 删除选项。
+   * 删除第一个值为value的选项。
    * 
-   * @param value 值。
+   * @param value 选项的值。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t RemoveOption(int32_t value) ;
+
+  /**
+   * 删除指定序数的选项。
+   * 
+   * @param index 选项的序数(0表示第一个)。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t RemoveOptionByIndex(uint32_t index) ;
 
   /**
    * 设置选项。
@@ -17607,6 +17845,15 @@ public:
   ret_t SetAlwaysOnTop(bool always_on_top) ;
 
   /**
+   * 设置是否非模态窗口模式。
+   * 
+   * @param modeless 是否非模态窗口模式。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetModeless(bool modeless) ;
+
+  /**
    * 点击穿透。点击没有子控件的位置，是否穿透到底层窗口。
    *
    *缺省不启用。
@@ -17621,6 +17868,14 @@ public:
    *
    */
   bool GetAlwaysOnTop() const;
+
+  /**
+   * 非模态窗口。
+   *
+   *缺省不启用。
+   *
+   */
+  bool GetModeless() const;
 };
 
 

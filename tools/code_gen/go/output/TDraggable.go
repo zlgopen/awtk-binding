@@ -38,6 +38,10 @@ func (this TDraggable) SetHorizontalOnly(horizontal_only bool) TRet {
   return TRet(C.draggable_set_horizontal_only((*C.widget_t)(this.handle), (C.bool_t)(horizontal_only)));
 }
 
+func (this TDraggable) SetAllowOutOfScreen(allow_out_of_screen bool) TRet {
+  return TRet(C.draggable_set_allow_out_of_screen((*C.widget_t)(this.handle), (C.bool_t)(allow_out_of_screen)));
+}
+
 func (this TDraggable) SetDragWindow(drag_window bool) TRet {
   return TRet(C.draggable_set_drag_window((*C.widget_t)(this.handle), (C.bool_t)(drag_window)));
 }
@@ -64,6 +68,10 @@ func (this TDraggable) GetLeft() int32 {
 
 func (this TDraggable) GetRight() int32 {
   return (int32)((*C.draggable_t)(unsafe.Pointer(this.handle)).right);
+}
+
+func (this TDraggable) GetAllowOutOfScreen() bool {
+  return (bool)((*C.draggable_t)(unsafe.Pointer(this.handle)).allow_out_of_screen);
 }
 
 func (this TDraggable) GetVerticalOnly() bool {

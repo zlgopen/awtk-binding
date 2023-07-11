@@ -22,10 +22,10 @@ func (this TInputMethod) DispatchKey(key uint32) TRet {
   return TRet(C.input_method_dispatch_key((*C.input_method_t)(this.handle), (C.uint32_t)(key)));
 }
 
-func (this TInputMethod) DispatchKeys(key string) TRet {
-  akey := C.CString(key)
-  defer C.free(unsafe.Pointer(akey))
-  return TRet(C.input_method_dispatch_keys((*C.input_method_t)(this.handle), akey));
+func (this TInputMethod) DispatchKeys(keys string) TRet {
+  akeys := C.CString(keys)
+  defer C.free(unsafe.Pointer(akeys))
+  return TRet(C.input_method_dispatch_keys((*C.input_method_t)(this.handle), akeys));
 }
 
 func (this TInputMethod) DispatchPreedit() TRet {

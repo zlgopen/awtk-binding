@@ -297,14 +297,26 @@ public class TComboBox extends TEdit {
 
 
   /**
-   * 删除选项。
+   * 删除第一个值为value的选项。
    * 
-   * @param value 值。
+   * @param value 选项的值。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
  public  TRet removeOption(int value)  {
    return TRet.from(combo_box_remove_option(this != null ? (this.nativeObj) : 0, value));
+ }
+
+
+  /**
+   * 删除指定序数的选项。
+   * 
+   * @param index 选项的序数(0表示第一个)。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet removeOptionByIndex(int index)  {
+   return TRet.from(combo_box_remove_option_by_index(this != null ? (this.nativeObj) : 0, index));
  }
 
 
@@ -434,6 +446,7 @@ static private native int combo_box_set_value(long widget, int value);
 static private native int combo_box_set_item_height(long widget, int item_height);
 static private native int combo_box_append_option(long widget, int value, String text);
 static private native int combo_box_remove_option(long widget, int value);
+static private native int combo_box_remove_option_by_index(long widget, int index);
 static private native int combo_box_set_options(long widget, String options);
 static private native int combo_box_get_value(long widget);
 static private native boolean combo_box_has_option_text(long widget, String text);

@@ -1936,6 +1936,12 @@ class TImageDrawType:
   SCALE_H = IMAGE_DRAW_SCALE_H()
 
   #
+  # 填充整个区域。将图片缩放至目标矩形的高度或宽度，包装填满整个目标区域，超出不部分不显示。
+  #
+  #
+  FILL = IMAGE_DRAW_FILL()
+
+  #
   # 平铺显示。
   #
   #
@@ -3161,6 +3167,24 @@ class TEventType:
   SYSTEM = EVT_SYSTEM()
 
   #
+  # SDL文件拖入事件(drop_file_event_t)。
+  #
+  #
+  DROP_FILE = EVT_DROP_FILE()
+
+  #
+  # locale_infos加载某个本地化信息(event_t)。
+  #
+  #
+  LOCALE_INFOS_LOAD_INFO = EVT_LOCALE_INFOS_LOAD_INFO()
+
+  #
+  # locale_infos卸载某个本地化信息(event_t)。
+  #
+  #
+  LOCALE_INFOS_UNLOAD_INFO = EVT_LOCALE_INFOS_UNLOAD_INFO()
+
+  #
   # event queue其它请求编号起始值。
   #
   #
@@ -3712,12 +3736,12 @@ class TInputMethod(object):
   #
   # 提交按键。
   # 
-  # @param key 键值。
+  # @param keys 键值。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
-  def dispatch_keys(self, key): 
-      return input_method_dispatch_keys(awtk_get_native_obj(self), key)
+  def dispatch_keys(self, keys): 
+      return input_method_dispatch_keys(awtk_get_native_obj(self), keys)
 
 
   #
@@ -4733,6 +4757,116 @@ class TLocaleInfo(object):
 
 
 #
+# 在某些情况下，需要多个资源管理器。比如在手表系统里，每个应用或表盘，可能放在独立的资源包中，
+#此时优先加载应用自己的资源，如果没有就加载系统的资源。
+#
+#
+class TLocaleInfos(object):
+
+  def __new__(cls, native_obj=0):
+      if native_obj == 0:
+          return None
+      else:
+          if super().__new__ == object.__new__:
+              instance = super().__new__(cls)
+          else:
+              instance = super().__new__(cls, native_obj)
+          instance.nativeObj = native_obj
+          return instance
+    
+  def __init__(self, nativeObj):
+    self.nativeObj = nativeObj
+
+
+  def __eq__(self, other: 'TWidget'):
+      if other is None:
+          return self.nativeObj == 0
+      return self.nativeObj == other.nativeObj
+    
+  #
+  # 获取指定小应用程序(applet)的locale_info。
+  # 
+  # @param name 小应用程序(applet)的名称。
+  #
+  # @return 返回locale_info对象。
+  #
+  @classmethod
+  def ref(cls, name): 
+      return  TLocaleInfos(locale_infos_ref(name))
+
+
+  #
+  # 释放指定小应用程序(applet)的locale_info。
+  # 
+  # @param locale_info locale_info对象。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  @classmethod
+  def unref(cls, locale_info): 
+      return locale_infos_unref(awtk_get_native_obj(locale_info))
+
+
+  #
+  # 设置全部locale_info的当前国家和语言。
+  # 
+  # @param language 语言。
+  # @param country 国家或地区。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  @classmethod
+  def change(cls, language, country): 
+      return locale_infos_change(language, country)
+
+
+  #
+  # 注册指定事件的处理函数。
+  # 
+  # @param type 事件类型，目前有EVT_LOCALE_INFOS_LOAD_INFO、EVT_LOCALE_INFOS_UNLOAD_INFO。
+  # @param on_event 事件处理函数。
+  # @param ctx 事件处理函数上下文。
+  #
+  # @return 返回id，用于locale_infos_off。
+  #
+  @classmethod
+  def on(cls, type, on_event, ctx): 
+      return locale_infos_on(type, on_event, ctx)
+
+
+  #
+  # 注销指定事件的处理函数。
+  # 
+  # @param id locale_infos_on返回的ID。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  @classmethod
+  def off(cls, id): 
+      return locale_infos_off(id)
+
+
+  #
+  # 重新加载全部字符串资源。
+  # 
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  @classmethod
+  def reload_all(cls): 
+      return locale_infos_reload_all()
+
+
+  #
+  # for go binding.
+  #
+  #
+  @property
+  def unused(self):
+    return locale_infos_t_get_prop_unused(self.nativeObj)
+
+
+#
 # style常量定义。
 #
 #
@@ -5109,6 +5243,19 @@ class TStyle(object):
 
 
   #
+  # 获取指定状态的指定属性的值。
+  # 
+  # @param state 状态。
+  # @param name 属性名。
+  # @param value 值。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def get(self, state, name, value): 
+      return style_get(awtk_get_native_obj(self), state, name, awtk_get_native_obj(value))
+
+
+  #
   # 设置指定状态的指定属性的值(仅仅对mutable的style有效)。
   # 
   # @param state 状态。
@@ -5403,6 +5550,12 @@ class TAppType:
   #
   #
   DESKTOP = APP_DESKTOP()
+
+  #
+  # 控制台（没有界面）。
+  #
+  #
+  CONSOLE = APP_CONSOLE()
 
 #
 # 位图格式常量定义。
@@ -5775,7 +5928,7 @@ class TVgcanvas(object):
   #
   # 旋转。
   # 
-  # @param rad 角度
+  # @param rad 旋转角度(单位弧度)
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
@@ -5952,12 +6105,12 @@ class TVgcanvas(object):
   #
   # 设置字体的大小。
   # 
-  # @param font 字体大小。
+  # @param size 字体大小。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
-  def set_font_size(self, font): 
-      return vgcanvas_set_font_size(awtk_get_native_obj(self), font)
+  def set_font_size(self, size): 
+      return vgcanvas_set_font_size(awtk_get_native_obj(self), size)
 
 
   #
@@ -6119,12 +6272,12 @@ class TVgcanvas(object):
   #
   # 设置线条颜色。
   # 
-  # @param color 颜色。
+  # @param str 颜色。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
-  def set_stroke_color(self, color): 
-      return vgcanvas_set_stroke_color_str(awtk_get_native_obj(self), color)
+  def set_stroke_color(self, str): 
+      return vgcanvas_set_stroke_color_str(awtk_get_native_obj(self), str)
 
 
   #
@@ -6925,12 +7078,14 @@ class TWidgetProp:
 
   #
   # X方向的偏移。（如果控件有继承 get_offset 函数指针的话，一定要和 get_offset 返回值保持一致，否则容易出现问题）
+  #详情请看 docs/how_to_use_offset_in_custom_widget.md
   #
   #
   XOFFSET = WIDGET_PROP_XOFFSET()
 
   #
   # Y方向的偏移。（如果控件有继承 get_offset 函数指针的话，一定要和 get_offset 返回值保持一致，否则容易出现问题）
+  #详情请看 docs/how_to_use_offset_in_custom_widget.md
   #
   #
   YOFFSET = WIDGET_PROP_YOFFSET()
@@ -8388,6 +8543,16 @@ class TWidget(object):
 
 
   #
+  # 判断widget是否支持高亮。
+  # 
+  #
+  # @return 支持返回 TRUE，不支持返回 FALSE。
+  #
+  def is_support_highlighter(self): 
+      return widget_is_support_highlighter(awtk_get_native_obj(self))
+
+
+  #
   # 启用指定的style。
   # 
   # @param style style的名称。
@@ -9186,6 +9351,16 @@ class TWidget(object):
 
 
   #
+  # 检查控件是否是全屏窗口。
+  # 
+  #
+  # @return 返回FALSE表示不是，否则表示是。
+  #
+  def is_fullscreen_window(self): 
+      return widget_is_fullscreen_window(awtk_get_native_obj(self))
+
+
+  #
   # 检查控件是否是对话框类型。
   # 
   #
@@ -9213,6 +9388,16 @@ class TWidget(object):
   #
   def is_overlay(self): 
       return widget_is_overlay(awtk_get_native_obj(self))
+
+
+  #
+  # 检查控件是否总在最上层。
+  # 
+  #
+  # @return 返回FALSE表示不是，否则表示是。
+  #
+  def is_always_on_top(self): 
+      return widget_is_always_on_top(awtk_get_native_obj(self))
 
 
   #
@@ -10332,15 +10517,15 @@ class TColor(object):
   #> 主要供脚本语言使用。
   # 
   # @param r 红色通道。
-  # @param b 蓝色通道。
   # @param g 绿色通道。
+  # @param b 蓝色通道。
   # @param a alpha通道。
   #
   # @return color对象。
   #
   @classmethod
-  def create(cls, r, b, g, a): 
-      return  TColor(color_create(r, b, g, a))
+  def create(cls, r, g, b, a): 
+      return  TColor(color_create(r, g, b, a))
 
 
   #
@@ -10570,7 +10755,7 @@ class TDateTime(object):
 
 
   #
-  # 从time转换而来。
+  # 从time转换而来(按GMT转换)。
   # 
   # @param time 时间。
   #
@@ -10581,7 +10766,7 @@ class TDateTime(object):
 
 
   #
-  # 转换成time。
+  # 转换成time(按GMT转换)。
   # 
   #
   # @return 返回time。
@@ -10617,39 +10802,39 @@ class TDateTime(object):
   # 获取指定年份月份的天数。
   # 
   # @param year 年份。
-  # @param montn 月份(1-12)。
+  # @param month 月份(1-12)。
   #
   # @return 返回大于0表示天数，否则表示失败。
   #
   @classmethod
-  def get_days(cls, year, montn): 
-      return date_time_get_days(year, montn)
+  def get_days(cls, year, month): 
+      return date_time_get_days(year, month)
 
 
   #
   # 获取指定日期是周几(0-6, Sunday = 0)。。
   # 
   # @param year 年份。
-  # @param montn 月份(1-12)。
+  # @param month 月份(1-12)。
   # @param day 日(1-31)。
   #
   # @return 返回大于等于0表示周几(0-6)，否则表示失败。
   #
   @classmethod
-  def get_wday(cls, year, montn, day): 
-      return date_time_get_wday(year, montn, day)
+  def get_wday(cls, year, month, day): 
+      return date_time_get_wday(year, month, day)
 
 
   #
   # 获取指定月份的英文名称(简写)。
   # 
-  # @param montn 月份(1-12)。
+  # @param month 月份(1-12)。
   #
   # @return 返回指定月份的英文名称(简写)。
   #
   @classmethod
-  def get_month_name(cls, montn): 
-      return date_time_get_month_name(montn)
+  def get_month_name(cls, month): 
+      return date_time_get_month_name(month)
 
 
   #
@@ -12021,6 +12206,18 @@ class TRet:
   #
   NOT_MODIFIED = RET_NOT_MODIFIED()
 
+  #
+  # 没有权限。
+  #
+  #
+  NO_PERMISSION = RET_NO_PERMISSION()
+
+  #
+  # 最大值。
+  #
+  #
+  MAX_NR = RET_MAX_NR()
+
 #
 # 类型常量定义。
 #
@@ -12334,7 +12531,7 @@ class TModelEvent (TEvent):
       return self.nativeObj == other.nativeObj
     
   #
-  # 把event对象转model_event_t对象，主要给脚本语言使用。
+  # 把event对象转model_event_t对象。
   # 
   # @param event event对象。
   #
@@ -12399,7 +12596,7 @@ class TWheelEvent (TEvent):
       return self.nativeObj == other.nativeObj
     
   #
-  # 把event对象转wheel_event_t对象，主要给脚本语言使用。
+  # 把event对象转wheel_event_t对象。
   # 
   # @param event event对象。
   #
@@ -12473,7 +12670,7 @@ class TOrientationEvent (TEvent):
       return self.nativeObj == other.nativeObj
     
   #
-  # 把event对象转orientation_event_t对象，主要给脚本语言使用。
+  # 把event对象转orientation_event_t对象。
   # 
   # @param event event对象。
   #
@@ -12529,7 +12726,7 @@ class TValueChangeEvent (TEvent):
       return self.nativeObj == other.nativeObj
     
   #
-  # 把event对象转value_change_event_t对象，主要给脚本语言使用。
+  # 把event对象转value_change_event_t对象。
   # 
   # @param event event对象。
   #
@@ -12567,7 +12764,7 @@ class TOffsetChangeEvent (TEvent):
       return self.nativeObj == other.nativeObj
     
   #
-  # 把event对象转offset_change_event_t对象，主要给脚本语言使用。
+  # 把event对象转offset_change_event_t对象。
   # 
   # @param event event对象。
   #
@@ -12605,7 +12802,7 @@ class TPointerEvent (TEvent):
       return self.nativeObj == other.nativeObj
     
   #
-  # 把event对象转pointer_event_t对象，主要给脚本语言使用。
+  # 把event对象转pointer_event_t对象。
   # 
   # @param event event对象。
   #
@@ -12727,7 +12924,7 @@ class TKeyEvent (TEvent):
       return self.nativeObj == other.nativeObj
     
   #
-  # 把event对象转key_event_t对象，主要给脚本语言使用。
+  # 把event对象转key_event_t对象。
   # 
   # @param event event对象。
   #
@@ -12893,7 +13090,7 @@ class TPaintEvent (TEvent):
       return self.nativeObj == other.nativeObj
     
   #
-  # 把event对象转paint_event_t对象。主要给脚本语言使用。
+  # 把event对象转paint_event_t对象。
   # 
   # @param event event对象。
   #
@@ -12940,7 +13137,7 @@ class TWindowEvent (TEvent):
       return self.nativeObj == other.nativeObj
     
   #
-  # 把event对象转window_event_t对象。主要给脚本语言使用。
+  # 把event对象转window_event_t对象。
   # 
   # @param event event对象。
   #
@@ -12987,7 +13184,7 @@ class TMultiGestureEvent (TEvent):
       return self.nativeObj == other.nativeObj
     
   #
-  # 把event对象转multi_gesture_event_t对象，主要给脚本语言使用。
+  # 把event对象转multi_gesture_event_t对象。
   # 
   # @param event event对象。
   #
@@ -13061,7 +13258,7 @@ class TThemeChangeEvent (TEvent):
       return self.nativeObj == other.nativeObj
     
   #
-  # 把event对象转theme_change_event_t对象，主要给脚本语言使用。
+  # 把event对象转theme_change_event_t对象。
   # 
   # @param event event对象。
   #
@@ -13079,6 +13276,53 @@ class TThemeChangeEvent (TEvent):
   @property
   def name(self):
     return theme_change_event_t_get_prop_name(self.nativeObj)
+
+
+#
+# 文件拖入事件。
+#
+#
+class TDropFileEvent (TEvent):
+
+  def __new__(cls, native_obj=0):
+      if native_obj == 0:
+          return None
+      else:
+          if super().__new__ == object.__new__:
+              instance = super().__new__(cls)
+          else:
+              instance = super().__new__(cls, native_obj)
+          instance.nativeObj = native_obj
+          return instance
+    
+  def __init__(self, nativeObj):
+    super(TDropFileEvent, self).__init__(nativeObj)
+
+
+  def __eq__(self, other: 'TWidget'):
+      if other is None:
+          return self.nativeObj == 0
+      return self.nativeObj == other.nativeObj
+    
+  #
+  # 把event对象转drop_file_event_t对象。
+  # 
+  # @param event event对象。
+  #
+  # @return event 对象。
+  #
+  @classmethod
+  def cast(cls, event): 
+      return  TDropFileEvent(drop_file_event_cast(awtk_get_native_obj(event)))
+
+
+  #
+  # 文件名。
+  #
+  #
+  @property
+  def filename(self):
+    return drop_file_event_t_get_prop_filename(self.nativeObj)
 
 
 #
@@ -13108,7 +13352,7 @@ class TSystemEvent (TEvent):
       return self.nativeObj == other.nativeObj
     
   #
-  # 把event对象转system_event_t对象。主要给脚本语言使用。
+  # 把event对象转system_event_t对象。
   # 
   # @param event event对象。
   #
@@ -14390,6 +14634,18 @@ class TDraggable (TWidget):
 
 
   #
+  # 设置是否无范围限制拖动。
+  #备注：可以让窗口拖动到外面去。
+  # 
+  # @param allow_out_of_screen 是否无范围限制拖动。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_allow_out_of_screen(self, allow_out_of_screen): 
+      return draggable_set_allow_out_of_screen(awtk_get_native_obj(self), allow_out_of_screen)
+
+
+  #
   # 设置drag_window。
   #拖动窗口而不是父控件。比如放在对话框的titlebar上，拖动titlebar其实是希望拖动对话框。
   # 
@@ -14474,6 +14730,19 @@ class TDraggable (TWidget):
   @right.setter
   def right(self, v):
     draggable_set_right(self.nativeObj, v)
+
+
+  #
+  # 支持超出原生窗口边界拖动。（无法完全移出原生窗口，同时优先受到拖动范围限制的影响）
+  #
+  #
+  @property
+  def allow_out_of_screen(self):
+    return draggable_t_get_prop_allow_out_of_screen(self.nativeObj)
+
+  @allow_out_of_screen.setter
+  def allow_out_of_screen(self, v):
+    draggable_set_allow_out_of_screen(self.nativeObj, v)
 
 
   #
@@ -15827,12 +16096,12 @@ class TImageValue (TWidget):
   #
   # 设置点击时加上的增量。
   # 
-  # @param delta 增量。
+  # @param click_add_delta 增量。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
-  def set_click_add_delta(self, delta): 
-      return image_value_set_click_add_delta(awtk_get_native_obj(self), delta)
+  def set_click_add_delta(self, click_add_delta): 
+      return image_value_set_click_add_delta(awtk_get_native_obj(self), click_add_delta)
 
 
   #
@@ -18351,6 +18620,18 @@ class TScrollBar (TWidget):
   #
   def hide_by_opacity_animation(self, duration, delay): 
       return scroll_bar_hide_by_opacity_animation(awtk_get_native_obj(self), duration, delay)
+
+
+  #
+  # 通过动画显示滚动条。
+  # 
+  # @param duration 动画持续时间。
+  # @param delay 动画执行时间。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def show_by_opacity_animation(self, duration, delay): 
+      return scroll_bar_show_by_opacity_animation(awtk_get_native_obj(self), duration, delay)
 
 
   #
@@ -21096,7 +21377,7 @@ class TPropChangeEvent (TEvent):
       return self.nativeObj == other.nativeObj
     
   #
-  # 把event对象转prop_change_event_t对象，主要给脚本语言使用。
+  # 把event对象转prop_change_event_t对象。
   # 
   # @param event event对象。
   #
@@ -21152,7 +21433,7 @@ class TProgressEvent (TEvent):
       return self.nativeObj == other.nativeObj
     
   #
-  # 把event对象转progress_event_t对象，主要给脚本语言使用。
+  # 把event对象转progress_event_t对象。
   # 
   # @param event event对象。
   #
@@ -21199,7 +21480,7 @@ class TDoneEvent (TEvent):
       return self.nativeObj == other.nativeObj
     
   #
-  # 把event对象转done_event_t对象，主要给脚本语言使用。
+  # 把event对象转done_event_t对象。
   # 
   # @param event event对象。
   #
@@ -21246,7 +21527,7 @@ class TErrorEvent (TEvent):
       return self.nativeObj == other.nativeObj
     
   #
-  # 把event对象转error_event_t对象，主要给脚本语言使用。
+  # 把event对象转error_event_t对象。
   # 
   # @param event event对象。
   #
@@ -21302,7 +21583,7 @@ class TCmdExecEvent (TEvent):
       return self.nativeObj == other.nativeObj
     
   #
-  # 把event对象转cmd_exec_event_t对象，主要给脚本语言使用。
+  # 把event对象转cmd_exec_event_t对象。
   # 
   # @param event event对象。
   #
@@ -25730,7 +26011,7 @@ class TGifImage (TImageBase):
 
 
   #
-  # 停止(并重置index为-1)。
+  # 停止(并重置index为0)。
   # 
   #
   # @return 返回RET_OK表示成功，否则表示失败。
@@ -26194,6 +26475,30 @@ class TSvgImage (TImageBase):
 
 
   #
+  # 控件设置是否开启离线缓存渲染模式。
+  #
+  #> 在确保svg图片不经常变化大小及状态的情况下，开启离线缓存渲染能够减少解析bsvg的开销，提高效率。
+  # 
+  # @param is_cache_mode 是否开启缓存模式。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_cache_mode(self, is_cache_mode): 
+      return svg_image_set_cache_mode(awtk_get_native_obj(self), is_cache_mode)
+
+
+  #
+  # 控件设置svg图片绘制模式。
+  # 
+  # @param draw_type 绘制模式。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_draw_type(self, draw_type): 
+      return svg_image_set_draw_type(awtk_get_native_obj(self), draw_type)
+
+
+  #
   # 转换为svg_image对象(供脚本语言使用)。
   # 
   # @param widget svg_image对象。
@@ -26203,6 +26508,28 @@ class TSvgImage (TImageBase):
   @classmethod
   def cast(cls, widget): 
       return  TSvgImage(svg_image_cast(awtk_get_native_obj(widget)))
+
+
+  #
+  # 离线缓存渲染模式。
+  #
+  #
+  @property
+  def is_cache_mode(self):
+    return svg_image_t_get_prop_is_cache_mode(self.nativeObj)
+
+
+  #
+  # svg图片的绘制方式(支持旋转缩放, 目前仅支持scale、scale_auto模式)。
+  #
+  #
+  @property
+  def draw_type(self):
+    return svg_image_t_get_prop_draw_type(self.nativeObj)
+
+  @draw_type.setter
+  def draw_type(self, v):
+    svg_image_set_draw_type(self.nativeObj, v)
 
 
 #
@@ -26923,14 +27250,25 @@ class TComboBox (TEdit):
 
 
   #
-  # 删除选项。
+  # 删除第一个值为value的选项。
   # 
-  # @param value 值。
+  # @param value 选项的值。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
   def remove_option(self, value): 
       return combo_box_remove_option(awtk_get_native_obj(self), value)
+
+
+  #
+  # 删除指定序数的选项。
+  # 
+  # @param index 选项的序数(0表示第一个)。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def remove_option_by_index(self, index): 
+      return combo_box_remove_option_by_index(awtk_get_native_obj(self), index)
 
 
   #
@@ -27324,6 +27662,17 @@ class TOverlay (TWindowBase):
 
 
   #
+  # 设置是否非模态窗口模式。
+  # 
+  # @param modeless 是否非模态窗口模式。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_modeless(self, modeless): 
+      return overlay_set_modeless(awtk_get_native_obj(self), modeless)
+
+
+  #
   # 转换为overlay对象(供脚本语言使用)。
   # 
   # @param widget overlay对象。
@@ -27363,6 +27712,21 @@ class TOverlay (TWindowBase):
   @always_on_top.setter
   def always_on_top(self, v):
     overlay_set_always_on_top(self.nativeObj, v)
+
+
+  #
+  # 非模态窗口。
+  #
+  #缺省不启用。
+  #
+  #
+  @property
+  def modeless(self):
+    return overlay_t_get_prop_modeless(self.nativeObj)
+
+  @modeless.setter
+  def modeless(self, v):
+    overlay_set_modeless(self.nativeObj, v)
 
 
 #

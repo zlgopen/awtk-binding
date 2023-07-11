@@ -666,6 +666,27 @@ public enum TEventType {
   SYSTEM (EVT_SYSTEM()),
   
   /**
+   * SDL文件拖入事件(drop_file_event_t)。
+   *
+   */
+ 
+  DROP_FILE (EVT_DROP_FILE()),
+  
+  /**
+   * locale_infos加载某个本地化信息(event_t)。
+   *
+   */
+ 
+  LOCALE_INFOS_LOAD_INFO (EVT_LOCALE_INFOS_LOAD_INFO()),
+  
+  /**
+   * locale_infos卸载某个本地化信息(event_t)。
+   *
+   */
+ 
+  LOCALE_INFOS_UNLOAD_INFO (EVT_LOCALE_INFOS_UNLOAD_INFO()),
+  
+  /**
    * event queue其它请求编号起始值。
    *
    */
@@ -896,6 +917,9 @@ public enum TEventType {
   static private native int EVT_CONNECT();
   static private native int EVT_MODEL_CHANGE();
   static private native int EVT_SYSTEM();
+  static private native int EVT_DROP_FILE();
+  static private native int EVT_LOCALE_INFOS_LOAD_INFO();
+  static private native int EVT_LOCALE_INFOS_UNLOAD_INFO();
   static private native int EVT_REQ_START();
   static private native int EVT_USER_START();
   static private native int EVT_NONE();

@@ -66,6 +66,10 @@ func (this TScrollBar) HideByOpacityAnimation(duration int32, delay int32) TRet 
   return TRet(C.scroll_bar_hide_by_opacity_animation((*C.widget_t)(this.handle), (C.int32_t)(duration), (C.int32_t)(delay)));
 }
 
+func (this TScrollBar) ShowByOpacityAnimation(duration int32, delay int32) TRet {
+  return TRet(C.scroll_bar_show_by_opacity_animation((*C.widget_t)(this.handle), (C.int32_t)(duration), (C.int32_t)(delay)));
+}
+
 func (this TScrollBar) GetVirtualSize() int32 {
   return (int32)((*C.scroll_bar_t)(unsafe.Pointer(this.handle)).virtual_size);
 }

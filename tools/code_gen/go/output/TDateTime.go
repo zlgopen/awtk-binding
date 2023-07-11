@@ -37,7 +37,7 @@ func (this TDateTime) Set() TRet {
 }
 
 func (this TDateTime) FromTime(time int64) TRet {
-  return TRet(C.date_time_from_time((*C.date_time_t)(this.handle), (C.uint64_t)(time)));
+  return TRet(C.date_time_from_time((*C.date_time_t)(this.handle), (C.int64_t)(time)));
 }
 
 func (this TDateTime) ToTime() int64 {
@@ -52,16 +52,16 @@ func TDateTimeIsLeap(year uint32) bool {
   return (bool)(C.date_time_is_leap((C.uint32_t)(year)));
 }
 
-func TDateTimeGetDays(year uint32, montn uint32) int32 {
-  return (int32)(C.date_time_get_days((C.uint32_t)(year), (C.uint32_t)(montn)));
+func TDateTimeGetDays(year uint32, month uint32) int32 {
+  return (int32)(C.date_time_get_days((C.uint32_t)(year), (C.uint32_t)(month)));
 }
 
-func TDateTimeGetWday(year uint32, montn uint32, day uint32) int32 {
-  return (int32)(C.date_time_get_wday((C.uint32_t)(year), (C.uint32_t)(montn), (C.uint32_t)(day)));
+func TDateTimeGetWday(year uint32, month uint32, day uint32) int32 {
+  return (int32)(C.date_time_get_wday((C.uint32_t)(year), (C.uint32_t)(month), (C.uint32_t)(day)));
 }
 
-func TDateTimeGetMonthName(montn uint32) string {
-  return C.GoString(C.date_time_get_month_name((C.uint32_t)(montn)));
+func TDateTimeGetMonthName(month uint32) string {
+  return C.GoString(C.date_time_get_month_name((C.uint32_t)(month)));
 }
 
 func TDateTimeGetWdayName(wday uint32) string {

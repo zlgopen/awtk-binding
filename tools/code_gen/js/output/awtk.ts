@@ -159,6 +159,7 @@ declare function IMAGE_DRAW_SCALE_AUTO():any;
 declare function IMAGE_DRAW_SCALE_DOWN():any;
 declare function IMAGE_DRAW_SCALE_W():any;
 declare function IMAGE_DRAW_SCALE_H():any;
+declare function IMAGE_DRAW_FILL():any;
 declare function IMAGE_DRAW_REPEAT():any;
 declare function IMAGE_DRAW_REPEAT_X():any;
 declare function IMAGE_DRAW_REPEAT_Y():any;
@@ -308,6 +309,9 @@ declare function EVT_DATA():any;
 declare function EVT_CONNECT():any;
 declare function EVT_MODEL_CHANGE():any;
 declare function EVT_SYSTEM():any;
+declare function EVT_DROP_FILE():any;
+declare function EVT_LOCALE_INFOS_LOAD_INFO():any;
+declare function EVT_LOCALE_INFOS_UNLOAD_INFO():any;
 declare function EVT_REQ_START():any;
 declare function EVT_USER_START():any;
 declare function EVT_NONE():any;
@@ -363,7 +367,7 @@ declare function input_method_commit_text(im : any, text : string) : TRet;
 declare function input_method_set_lang(im : any, lang : string) : TRet;
 declare function input_method_get_lang(im : any) : string;
 declare function input_method_dispatch_key(im : any, key : number) : TRet;
-declare function input_method_dispatch_keys(im : any, key : string) : TRet;
+declare function input_method_dispatch_keys(im : any, keys : string) : TRet;
 declare function input_method_dispatch_preedit(im : any) : TRet;
 declare function input_method_dispatch_preedit_confirm(im : any) : TRet;
 declare function input_method_dispatch_preedit_abort(im : any) : TRet;
@@ -521,6 +525,13 @@ declare function locale_info() : any;
 declare function locale_info_tr(locale_info : any, text : string) : string;
 declare function locale_info_change(locale_info : any, language : string, country : string) : TRet;
 declare function locale_info_off(locale_info : any, id : number) : TRet;
+declare function locale_infos_ref(name : string) : any;
+declare function locale_infos_unref(locale_info : any) : TRet;
+declare function locale_infos_change(language : string, country : string) : TRet;
+declare function locale_infos_on(type : TEventType, on_event : Function, ctx : any) : number;
+declare function locale_infos_off(id : number) : TRet;
+declare function locale_infos_reload_all() : TRet;
+declare function locale_infos_t_get_prop_unused(nativeObj : any) : number;
 declare function STYLE_ID_BG_COLOR():any;
 declare function STYLE_ID_FG_COLOR():any;
 declare function STYLE_ID_MASK_COLOR():any;
@@ -573,6 +584,7 @@ declare function style_is_valid(s : any) : boolean;
 declare function style_get_int(s : any, name : string, defval : number) : number;
 declare function style_get_uint(s : any, name : string, defval : number) : number;
 declare function style_get_str(s : any, name : string, defval : string) : string;
+declare function style_get(s : any, state : string, name : string, value : any) : TRet;
 declare function style_set(s : any, state : string, name : string, value : any) : TRet;
 declare function style_update_state(s : any, theme : any, widget_type : string, style_name : string, widget_state : string) : TRet;
 declare function style_get_style_state(s : any) : string;
@@ -599,6 +611,7 @@ declare function ALIGN_H_RIGHT():any;
 declare function APP_MOBILE():any;
 declare function APP_SIMULATOR():any;
 declare function APP_DESKTOP():any;
+declare function APP_CONSOLE():any;
 declare function BITMAP_FMT_NONE():any;
 declare function BITMAP_FMT_RGBA8888():any;
 declare function BITMAP_FMT_ABGR8888():any;
@@ -646,7 +659,7 @@ declare function vgcanvas_fill(vg : any) : TRet;
 declare function vgcanvas_stroke(vg : any) : TRet;
 declare function vgcanvas_paint(vg : any, stroke : boolean, img : any) : TRet;
 declare function vgcanvas_set_font(vg : any, font : string) : TRet;
-declare function vgcanvas_set_font_size(vg : any, font : number) : TRet;
+declare function vgcanvas_set_font_size(vg : any, size : number) : TRet;
 declare function vgcanvas_set_text_align(vg : any, value : string) : TRet;
 declare function vgcanvas_set_text_baseline(vg : any, value : string) : TRet;
 declare function vgcanvas_fill_text(vg : any, text : string, x : number, y : number, max_width : number) : TRet;
@@ -658,7 +671,7 @@ declare function vgcanvas_set_antialias(vg : any, value : any) : TRet;
 declare function vgcanvas_set_global_alpha(vg : any, alpha : number) : TRet;
 declare function vgcanvas_set_line_width(vg : any, value : any) : TRet;
 declare function vgcanvas_set_fill_color_str(vg : any, color : string) : TRet;
-declare function vgcanvas_set_stroke_color_str(vg : any, color : string) : TRet;
+declare function vgcanvas_set_stroke_color_str(vg : any, str : string) : TRet;
 declare function vgcanvas_set_line_cap(vg : any, value : string) : TRet;
 declare function vgcanvas_set_line_join(vg : any, value : string) : TRet;
 declare function vgcanvas_set_miter_limit(vg : any, value : any) : TRet;
@@ -983,6 +996,7 @@ declare function widget_set_value_int(widget : any, value : any) : TRet;
 declare function widget_add_value_int(widget : any, delta : number) : TRet;
 declare function widget_animate_value_to(widget : any, value : any, duration : number) : TRet;
 declare function widget_is_style_exist(widget : any, style_name : string, state_name : string) : boolean;
+declare function widget_is_support_highlighter(widget : any) : boolean;
 declare function widget_use_style(widget : any, style : string) : TRet;
 declare function widget_set_text_utf8(widget : any, text : string) : TRet;
 declare function widget_set_text_utf8_ex(widget : any, text : string, check_diff : boolean) : TRet;
@@ -1051,9 +1065,11 @@ declare function widget_is_direct_parent_of(widget : any, child : any) : boolean
 declare function widget_is_window(widget : any) : boolean;
 declare function widget_is_system_bar(widget : any) : boolean;
 declare function widget_is_normal_window(widget : any) : boolean;
+declare function widget_is_fullscreen_window(widget : any) : boolean;
 declare function widget_is_dialog(widget : any) : boolean;
 declare function widget_is_popup(widget : any) : boolean;
 declare function widget_is_overlay(widget : any) : boolean;
+declare function widget_is_always_on_top(widget : any) : boolean;
 declare function widget_is_opened_dialog(widget : any) : boolean;
 declare function widget_is_opened_popup(widget : any) : boolean;
 declare function widget_is_keyboard(widget : any) : boolean;
@@ -1152,7 +1168,7 @@ declare function asset_info_t_get_prop_subtype(nativeObj : any) : number;
 declare function asset_info_t_get_prop_flags(nativeObj : any) : number;
 declare function asset_info_t_get_prop_size(nativeObj : any) : number;
 declare function asset_info_t_get_prop_refcount(nativeObj : any) : number;
-declare function color_create(r : number, b : number, g : number, a : number) : any;
+declare function color_create(r : number, g : number, b : number, a : number) : any;
 declare function color_from_str(c : any, str : string) : any;
 declare function color_r(c : any) : number;
 declare function color_g(c : any) : number;
@@ -1175,9 +1191,9 @@ declare function date_time_from_time(dt : any, time : number) : TRet;
 declare function date_time_to_time(dt : any) : number;
 declare function date_time_add_delta(dt : any, delta : number) : TRet;
 declare function date_time_is_leap(year : number) : boolean;
-declare function date_time_get_days(year : number, montn : number) : number;
-declare function date_time_get_wday(year : number, montn : number, day : number) : number;
-declare function date_time_get_month_name(montn : number) : string;
+declare function date_time_get_days(year : number, month : number) : number;
+declare function date_time_get_wday(year : number, month : number, day : number) : number;
+declare function date_time_get_month_name(month : number) : string;
 declare function date_time_get_wday_name(wday : number) : string;
 declare function date_time_destroy(dt : any) : TRet;
 declare function date_time_t_get_prop_second(nativeObj : any) : number;
@@ -1359,6 +1375,8 @@ declare function RET_CRC():any;
 declare function RET_IO():any;
 declare function RET_EOS():any;
 declare function RET_NOT_MODIFIED():any;
+declare function RET_NO_PERMISSION():any;
+declare function RET_MAX_NR():any;
 declare function VALUE_TYPE_INVALID():any;
 declare function VALUE_TYPE_BOOL():any;
 declare function VALUE_TYPE_INT8():any;
@@ -1402,8 +1420,8 @@ declare function wheel_event_t_get_prop_alt(nativeObj : any) : boolean;
 declare function wheel_event_t_get_prop_ctrl(nativeObj : any) : boolean;
 declare function wheel_event_t_get_prop_shift(nativeObj : any) : boolean;
 declare function orientation_event_cast(event : any) : any;
-declare function orientation_event_t_get_prop_orientation(nativeObj : any) : number;
-declare function orientation_event_t_get_prop_old_orientation(nativeObj : any) : number;
+declare function orientation_event_t_get_prop_orientation(nativeObj : any) : any;
+declare function orientation_event_t_get_prop_old_orientation(nativeObj : any) : any;
 declare function value_change_event_cast(event : any) : any;
 declare function offset_change_event_cast(event : any) : any;
 declare function pointer_event_cast(event : any) : any;
@@ -1442,6 +1460,8 @@ declare function multi_gesture_event_t_get_prop_rotation(nativeObj : any) : numb
 declare function multi_gesture_event_t_get_prop_distance(nativeObj : any) : number;
 declare function theme_change_event_cast(event : any) : any;
 declare function theme_change_event_t_get_prop_name(nativeObj : any) : string;
+declare function drop_file_event_cast(event : any) : any;
+declare function drop_file_event_t_get_prop_filename(nativeObj : any) : string;
 declare function system_event_cast(event : any) : any;
 declare function system_event_t_get_prop_sdl_event(nativeObj : any) : any;
 declare function font_manager_unload_font(fm : any, name : string, size : number) : TRet;
@@ -1525,6 +1545,7 @@ declare function draggable_set_left(widget : any, left : number) : TRet;
 declare function draggable_set_right(widget : any, right : number) : TRet;
 declare function draggable_set_vertical_only(widget : any, vertical_only : boolean) : TRet;
 declare function draggable_set_horizontal_only(widget : any, horizontal_only : boolean) : TRet;
+declare function draggable_set_allow_out_of_screen(widget : any, allow_out_of_screen : boolean) : TRet;
 declare function draggable_set_drag_window(widget : any, drag_window : boolean) : TRet;
 declare function draggable_set_drag_native_window(widget : any, drag_native_window : boolean) : TRet;
 declare function draggable_set_drag_parent(widget : any, drag_parent : number) : TRet;
@@ -1532,6 +1553,7 @@ declare function draggable_t_get_prop_top(nativeObj : any) : number;
 declare function draggable_t_get_prop_bottom(nativeObj : any) : number;
 declare function draggable_t_get_prop_left(nativeObj : any) : number;
 declare function draggable_t_get_prop_right(nativeObj : any) : number;
+declare function draggable_t_get_prop_allow_out_of_screen(nativeObj : any) : boolean;
 declare function draggable_t_get_prop_vertical_only(nativeObj : any) : boolean;
 declare function draggable_t_get_prop_horizontal_only(nativeObj : any) : boolean;
 declare function draggable_t_get_prop_drag_window(nativeObj : any) : boolean;
@@ -1620,7 +1642,7 @@ declare function image_animation_t_get_prop_show_when_done(nativeObj : any) : bo
 declare function image_value_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function image_value_set_image(widget : any, image : string) : TRet;
 declare function image_value_set_format(widget : any, format : string) : TRet;
-declare function image_value_set_click_add_delta(widget : any, delta : number) : TRet;
+declare function image_value_set_click_add_delta(widget : any, click_add_delta : number) : TRet;
 declare function image_value_set_value(widget : any, value : any) : TRet;
 declare function image_value_set_min(widget : any, min : number) : TRet;
 declare function image_value_set_max(widget : any, max : number) : TRet;
@@ -1773,6 +1795,7 @@ declare function scroll_bar_set_auto_hide(widget : any, auto_hide : boolean) : T
 declare function scroll_bar_is_mobile(widget : any) : boolean;
 declare function scroll_bar_set_animator_time(widget : any, animator_time : number) : TRet;
 declare function scroll_bar_hide_by_opacity_animation(widget : any, duration : number, delay : number) : TRet;
+declare function scroll_bar_show_by_opacity_animation(widget : any, duration : number, delay : number) : TRet;
 declare function scroll_bar_t_get_prop_virtual_size(nativeObj : any) : number;
 declare function scroll_bar_t_get_prop_value(nativeObj : any) : number;
 declare function scroll_bar_t_get_prop_row(nativeObj : any) : number;
@@ -2202,7 +2225,11 @@ declare function list_item_seperator_create(parent : any, x : number, y : number
 declare function list_item_seperator_cast(widget : any) : any;
 declare function svg_image_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function svg_image_set_image(widget : any, name : string) : TRet;
+declare function svg_image_set_cache_mode(widget : any, is_cache_mode : boolean) : TRet;
+declare function svg_image_set_draw_type(widget : any, draw_type : TImageDrawType) : TRet;
 declare function svg_image_cast(widget : any) : any;
+declare function svg_image_t_get_prop_is_cache_mode(nativeObj : any) : boolean;
+declare function svg_image_t_get_prop_draw_type(nativeObj : any) : TImageDrawType;
 declare function idle_info_cast(idle : any) : any;
 declare function idle_info_t_get_prop_ctx(nativeObj : any) : any;
 declare function idle_info_t_get_prop_extra_ctx(nativeObj : any) : any;
@@ -2242,6 +2269,7 @@ declare function combo_box_set_value(widget : any, value : any) : TRet;
 declare function combo_box_set_item_height(widget : any, item_height : number) : TRet;
 declare function combo_box_append_option(widget : any, value : any, text : string) : TRet;
 declare function combo_box_remove_option(widget : any, value : any) : TRet;
+declare function combo_box_remove_option_by_index(widget : any, index : number) : TRet;
 declare function combo_box_set_options(widget : any, options : string) : TRet;
 declare function combo_box_get_value(widget : any) : number;
 declare function combo_box_has_option_text(widget : any, text : string) : boolean;
@@ -2262,9 +2290,11 @@ declare function image_t_get_prop_draw_type(nativeObj : any) : TImageDrawType;
 declare function overlay_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function overlay_set_click_through(widget : any, click_through : boolean) : TRet;
 declare function overlay_set_always_on_top(widget : any, always_on_top : boolean) : TRet;
+declare function overlay_set_modeless(widget : any, modeless : boolean) : TRet;
 declare function overlay_cast(widget : any) : any;
 declare function overlay_t_get_prop_click_through(nativeObj : any) : boolean;
 declare function overlay_t_get_prop_always_on_top(nativeObj : any) : boolean;
+declare function overlay_t_get_prop_modeless(nativeObj : any) : boolean;
 declare function popup_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function popup_cast(widget : any) : any;
 declare function popup_set_close_when_click(widget : any, close_when_click : boolean) : TRet;
@@ -4187,6 +4217,12 @@ export enum TImageDrawType {
  SCALE_H = IMAGE_DRAW_SCALE_H(),
 
   /**
+   * 填充整个区域。将图片缩放至目标矩形的高度或宽度，包装填满整个目标区域，超出不部分不显示。
+   *
+   */
+ FILL = IMAGE_DRAW_FILL(),
+
+  /**
    * 平铺显示。
    *
    */
@@ -5401,6 +5437,24 @@ export enum TEventType {
  SYSTEM = EVT_SYSTEM(),
 
   /**
+   * SDL文件拖入事件(drop_file_event_t)。
+   *
+   */
+ DROP_FILE = EVT_DROP_FILE(),
+
+  /**
+   * locale_infos加载某个本地化信息(event_t)。
+   *
+   */
+ LOCALE_INFOS_LOAD_INFO = EVT_LOCALE_INFOS_LOAD_INFO(),
+
+  /**
+   * locale_infos卸载某个本地化信息(event_t)。
+   *
+   */
+ LOCALE_INFOS_UNLOAD_INFO = EVT_LOCALE_INFOS_UNLOAD_INFO(),
+
+  /**
    * event queue其它请求编号起始值。
    *
    */
@@ -5921,12 +5975,12 @@ export class TInputMethod {
   /**
    * 提交按键。
    * 
-   * @param key 键值。
+   * @param keys 键值。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
- dispatchKeys(key : string) : TRet  {
-    return input_method_dispatch_keys(this != null ? (this.nativeObj || this) : null, key);
+ dispatchKeys(keys : string) : TRet  {
+    return input_method_dispatch_keys(this != null ? (this.nativeObj || this) : null, keys);
  }
 
 
@@ -6936,6 +6990,101 @@ export class TLocaleInfo {
 
 };
 /**
+ * 在某些情况下，需要多个资源管理器。比如在手表系统里，每个应用或表盘，可能放在独立的资源包中，
+ *此时优先加载应用自己的资源，如果没有就加载系统的资源。
+ *
+ */
+export class TLocaleInfos { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   this.nativeObj = nativeObj;
+ }
+
+
+  /**
+   * 获取指定小应用程序(applet)的locale_info。
+   * 
+   * @param name 小应用程序(applet)的名称。
+   *
+   * @returns 返回locale_info对象。
+   */
+ static ref(name : string) : TLocaleInfos  {
+    return new TLocaleInfos(locale_infos_ref(name));
+ }
+
+
+  /**
+   * 释放指定小应用程序(applet)的locale_info。
+   * 
+   * @param locale_info locale_info对象。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ static unref(locale_info : TLocaleInfo) : TRet  {
+    return locale_infos_unref(locale_info != null ? (locale_info.nativeObj || locale_info) : null);
+ }
+
+
+  /**
+   * 设置全部locale_info的当前国家和语言。
+   * 
+   * @param language 语言。
+   * @param country 国家或地区。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ static change(language : string, country : string) : TRet  {
+    return locale_infos_change(language, country);
+ }
+
+
+  /**
+   * 注册指定事件的处理函数。
+   * 
+   * @param type 事件类型，目前有EVT_LOCALE_INFOS_LOAD_INFO、EVT_LOCALE_INFOS_UNLOAD_INFO。
+   * @param on_event 事件处理函数。
+   * @param ctx 事件处理函数上下文。
+   *
+   * @returns 返回id，用于locale_infos_off。
+   */
+ static on(type : TEventType, on_event : Function, ctx : any) : number  {
+    return locale_infos_on(type, on_event, ctx);
+ }
+
+
+  /**
+   * 注销指定事件的处理函数。
+   * 
+   * @param id locale_infos_on返回的ID。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ static off(id : number) : TRet  {
+    return locale_infos_off(id);
+ }
+
+
+  /**
+   * 重新加载全部字符串资源。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ static reloadAll() : TRet  {
+    return locale_infos_reload_all();
+ }
+
+
+  /**
+   * for go binding.
+   *
+   */
+ get unused() : number {
+   return locale_infos_t_get_prop_unused(this.nativeObj);
+ }
+
+};
+/**
  * style常量定义。
  *
  */
@@ -7304,6 +7453,20 @@ export class TStyle {
 
 
   /**
+   * 获取指定状态的指定属性的值。
+   * 
+   * @param state 状态。
+   * @param name 属性名。
+   * @param value 值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ get(state : string, name : string, value : TValue) : TRet  {
+    return style_get(this != null ? (this.nativeObj || this) : null, state, name, value != null ? (value.nativeObj || value) : null);
+ }
+
+
+  /**
    * 设置指定状态的指定属性的值(仅仅对mutable的style有效)。
    * 
    * @param state 状态。
@@ -7594,6 +7757,12 @@ export enum TAppType {
    *
    */
  DESKTOP = APP_DESKTOP(),
+
+  /**
+   * 控制台（没有界面）。
+   *
+   */
+ CONSOLE = APP_CONSOLE(),
 };
 
 
@@ -7971,7 +8140,7 @@ export class TVgcanvas {
   /**
    * 旋转。
    * 
-   * @param rad 角度
+   * @param rad 旋转角度(单位弧度)
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -8161,12 +8330,12 @@ export class TVgcanvas {
   /**
    * 设置字体的大小。
    * 
-   * @param font 字体大小。
+   * @param size 字体大小。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
- setFontSize(font : number) : TRet  {
-    return vgcanvas_set_font_size(this != null ? (this.nativeObj || this) : null, font);
+ setFontSize(size : number) : TRet  {
+    return vgcanvas_set_font_size(this != null ? (this.nativeObj || this) : null, size);
  }
 
 
@@ -8340,12 +8509,12 @@ export class TVgcanvas {
   /**
    * 设置线条颜色。
    * 
-   * @param color 颜色。
+   * @param str 颜色。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
- setStrokeColor(color : string) : TRet  {
-    return vgcanvas_set_stroke_color_str(this != null ? (this.nativeObj || this) : null, color);
+ setStrokeColor(str : string) : TRet  {
+    return vgcanvas_set_stroke_color_str(this != null ? (this.nativeObj || this) : null, str);
  }
 
 
@@ -9156,12 +9325,14 @@ export enum TWidgetProp {
 
   /**
    * X方向的偏移。（如果控件有继承 get_offset 函数指针的话，一定要和 get_offset 返回值保持一致，否则容易出现问题）
+   *详情请看 docs/how_to_use_offset_in_custom_widget.md
    *
    */
  XOFFSET = WIDGET_PROP_XOFFSET(),
 
   /**
    * Y方向的偏移。（如果控件有继承 get_offset 函数指针的话，一定要和 get_offset 返回值保持一致，否则容易出现问题）
+   *详情请看 docs/how_to_use_offset_in_custom_widget.md
    *
    */
  YOFFSET = WIDGET_PROP_YOFFSET(),
@@ -10640,6 +10811,17 @@ export class TWidget {
 
 
   /**
+   * 判断widget是否支持高亮。
+   * 
+   *
+   * @returns 支持返回 TRUE，不支持返回 FALSE。
+   */
+ isSupportHighlighter() : boolean  {
+    return widget_is_support_highlighter(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
    * 启用指定的style。
    * 
    * @param style style的名称。
@@ -11506,6 +11688,17 @@ export class TWidget {
 
 
   /**
+   * 检查控件是否是全屏窗口。
+   * 
+   *
+   * @returns 返回FALSE表示不是，否则表示是。
+   */
+ isFullscreenWindow() : boolean  {
+    return widget_is_fullscreen_window(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
    * 检查控件是否是对话框类型。
    * 
    *
@@ -11535,6 +11728,17 @@ export class TWidget {
    */
  isOverlay() : boolean  {
     return widget_is_overlay(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 检查控件是否总在最上层。
+   * 
+   *
+   * @returns 返回FALSE表示不是，否则表示是。
+   */
+ isAlwaysOnTop() : boolean  {
+    return widget_is_always_on_top(this != null ? (this.nativeObj || this) : null);
  }
 
 
@@ -12669,14 +12873,14 @@ export class TColor {
    *> 主要供脚本语言使用。
    * 
    * @param r 红色通道。
-   * @param b 蓝色通道。
    * @param g 绿色通道。
+   * @param b 蓝色通道。
    * @param a alpha通道。
    *
    * @returns color对象。
    */
- static create(r : number, b : number, g : number, a : number) : TColor  {
-    return new TColor(color_create(r, b, g, a));
+ static create(r : number, g : number, b : number, a : number) : TColor  {
+    return new TColor(color_create(r, g, b, a));
  }
 
 
@@ -12906,7 +13110,7 @@ export class TDateTime {
 
 
   /**
-   * 从time转换而来。
+   * 从time转换而来(按GMT转换)。
    * 
    * @param time 时间。
    *
@@ -12918,7 +13122,7 @@ export class TDateTime {
 
 
   /**
-   * 转换成time。
+   * 转换成time(按GMT转换)。
    * 
    *
    * @returns 返回time。
@@ -12956,12 +13160,12 @@ export class TDateTime {
    * 获取指定年份月份的天数。
    * 
    * @param year 年份。
-   * @param montn 月份(1-12)。
+   * @param month 月份(1-12)。
    *
    * @returns 返回大于0表示天数，否则表示失败。
    */
- static getDays(year : number, montn : number) : number  {
-    return date_time_get_days(year, montn);
+ static getDays(year : number, month : number) : number  {
+    return date_time_get_days(year, month);
  }
 
 
@@ -12969,25 +13173,25 @@ export class TDateTime {
    * 获取指定日期是周几(0-6, Sunday = 0)。。
    * 
    * @param year 年份。
-   * @param montn 月份(1-12)。
+   * @param month 月份(1-12)。
    * @param day 日(1-31)。
    *
    * @returns 返回大于等于0表示周几(0-6)，否则表示失败。
    */
- static getWday(year : number, montn : number, day : number) : number  {
-    return date_time_get_wday(year, montn, day);
+ static getWday(year : number, month : number, day : number) : number  {
+    return date_time_get_wday(year, month, day);
  }
 
 
   /**
    * 获取指定月份的英文名称(简写)。
    * 
-   * @param montn 月份(1-12)。
+   * @param month 月份(1-12)。
    *
    * @returns 返回指定月份的英文名称(简写)。
    */
- static getMonthName(montn : number) : string  {
-    return date_time_get_month_name(montn);
+ static getMonthName(month : number) : string  {
+    return date_time_get_month_name(month);
  }
 
 
@@ -14313,6 +14517,18 @@ export enum TRet {
    *
    */
  NOT_MODIFIED = RET_NOT_MODIFIED(),
+
+  /**
+   * 没有权限。
+   *
+   */
+ NO_PERMISSION = RET_NO_PERMISSION(),
+
+  /**
+   * 最大值。
+   *
+   */
+ MAX_NR = RET_MAX_NR(),
 };
 
 
@@ -14605,7 +14821,7 @@ export class TModelEvent extends TEvent {
 
 
   /**
-   * 把event对象转model_event_t对象，主要给脚本语言使用。
+   * 把event对象转model_event_t对象。
    * 
    * @param event event对象。
    *
@@ -14655,7 +14871,7 @@ export class TWheelEvent extends TEvent {
 
 
   /**
-   * 把event对象转wheel_event_t对象，主要给脚本语言使用。
+   * 把event对象转wheel_event_t对象。
    * 
    * @param event event对象。
    *
@@ -14714,7 +14930,7 @@ export class TOrientationEvent extends TEvent {
 
 
   /**
-   * 把event对象转orientation_event_t对象，主要给脚本语言使用。
+   * 把event对象转orientation_event_t对象。
    * 
    * @param event event对象。
    *
@@ -14729,7 +14945,7 @@ export class TOrientationEvent extends TEvent {
    * 屏幕方向。
    *
    */
- get orientation() : number {
+ get orientation() : any {
    return orientation_event_t_get_prop_orientation(this.nativeObj);
  }
 
@@ -14738,7 +14954,7 @@ export class TOrientationEvent extends TEvent {
    * 旧的屏幕方向。
    *
    */
- get oldOrientation() : number {
+ get oldOrientation() : any {
    return orientation_event_t_get_prop_old_orientation(this.nativeObj);
  }
 
@@ -14755,7 +14971,7 @@ export class TValueChangeEvent extends TEvent {
 
 
   /**
-   * 把event对象转value_change_event_t对象，主要给脚本语言使用。
+   * 把event对象转value_change_event_t对象。
    * 
    * @param event event对象。
    *
@@ -14778,7 +14994,7 @@ export class TOffsetChangeEvent extends TEvent {
 
 
   /**
-   * 把event对象转offset_change_event_t对象，主要给脚本语言使用。
+   * 把event对象转offset_change_event_t对象。
    * 
    * @param event event对象。
    *
@@ -14801,7 +15017,7 @@ export class TPointerEvent extends TEvent {
 
 
   /**
-   * 把event对象转pointer_event_t对象，主要给脚本语言使用。
+   * 把event对象转pointer_event_t对象。
    * 
    * @param event event对象。
    *
@@ -14908,7 +15124,7 @@ export class TKeyEvent extends TEvent {
 
 
   /**
-   * 把event对象转key_event_t对象，主要给脚本语言使用。
+   * 把event对象转key_event_t对象。
    * 
    * @param event event对象。
    *
@@ -15059,7 +15275,7 @@ export class TPaintEvent extends TEvent {
 
 
   /**
-   * 把event对象转paint_event_t对象。主要给脚本语言使用。
+   * 把event对象转paint_event_t对象。
    * 
    * @param event event对象。
    *
@@ -15091,7 +15307,7 @@ export class TWindowEvent extends TEvent {
 
 
   /**
-   * 把event对象转window_event_t对象。主要给脚本语言使用。
+   * 把event对象转window_event_t对象。
    * 
    * @param event event对象。
    *
@@ -15123,7 +15339,7 @@ export class TMultiGestureEvent extends TEvent {
 
 
   /**
-   * 把event对象转multi_gesture_event_t对象，主要给脚本语言使用。
+   * 把event对象转multi_gesture_event_t对象。
    * 
    * @param event event对象。
    *
@@ -15182,7 +15398,7 @@ export class TThemeChangeEvent extends TEvent {
 
 
   /**
-   * 把event对象转theme_change_event_t对象，主要给脚本语言使用。
+   * 把event对象转theme_change_event_t对象。
    * 
    * @param event event对象。
    *
@@ -15203,6 +15419,38 @@ export class TThemeChangeEvent extends TEvent {
 
 };
 /**
+ * 文件拖入事件。
+ *
+ */
+export class TDropFileEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转drop_file_event_t对象。
+   * 
+   * @param event event对象。
+   *
+   * @returns event 对象。
+   */
+ static cast(event : TEvent) : TDropFileEvent  {
+    return new TDropFileEvent(drop_file_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+
+  /**
+   * 文件名。
+   *
+   */
+ get filename() : string {
+   return drop_file_event_t_get_prop_filename(this.nativeObj);
+ }
+
+};
+/**
  * 系统事件。
  *
  */
@@ -15214,7 +15462,7 @@ export class TSystemEvent extends TEvent {
 
 
   /**
-   * 把event对象转system_event_t对象。主要给脚本语言使用。
+   * 把event对象转system_event_t对象。
    * 
    * @param event event对象。
    *
@@ -16397,6 +16645,19 @@ export class TDraggable extends TWidget {
 
 
   /**
+   * 设置是否无范围限制拖动。
+   *备注：可以让窗口拖动到外面去。
+   * 
+   * @param allow_out_of_screen 是否无范围限制拖动。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setAllowOutOfScreen(allow_out_of_screen : boolean) : TRet  {
+    return draggable_set_allow_out_of_screen(this != null ? (this.nativeObj || this) : null, allow_out_of_screen);
+ }
+
+
+  /**
    * 设置drag_window。
    *拖动窗口而不是父控件。比如放在对话框的titlebar上，拖动titlebar其实是希望拖动对话框。
    * 
@@ -16483,6 +16744,19 @@ export class TDraggable extends TWidget {
 
  set right(v : number) {
    this.setRight(v);
+ }
+
+
+  /**
+   * 支持超出原生窗口边界拖动。（无法完全移出原生窗口，同时优先受到拖动范围限制的影响）
+   *
+   */
+ get allowOutOfScreen() : boolean {
+   return draggable_t_get_prop_allow_out_of_screen(this.nativeObj);
+ }
+
+ set allowOutOfScreen(v : boolean) {
+   this.setAllowOutOfScreen(v);
  }
 
 
@@ -17792,12 +18066,12 @@ export class TImageValue extends TWidget {
   /**
    * 设置点击时加上的增量。
    * 
-   * @param delta 增量。
+   * @param click_add_delta 增量。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
- setClickAddDelta(delta : number) : TRet  {
-    return image_value_set_click_add_delta(this != null ? (this.nativeObj || this) : null, delta);
+ setClickAddDelta(click_add_delta : number) : TRet  {
+    return image_value_set_click_add_delta(this != null ? (this.nativeObj || this) : null, click_add_delta);
  }
 
 
@@ -20210,6 +20484,19 @@ export class TScrollBar extends TWidget {
    */
  hideByOpacityAnimation(duration : number, delay : number) : TRet  {
     return scroll_bar_hide_by_opacity_animation(this != null ? (this.nativeObj || this) : null, duration, delay);
+ }
+
+
+  /**
+   * 通过动画显示滚动条。
+   * 
+   * @param duration 动画持续时间。
+   * @param delay 动画执行时间。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ showByOpacityAnimation(duration : number, delay : number) : TRet  {
+    return scroll_bar_show_by_opacity_animation(this != null ? (this.nativeObj || this) : null, duration, delay);
  }
 
 
@@ -22872,7 +23159,7 @@ export class TPropChangeEvent extends TEvent {
 
 
   /**
-   * 把event对象转prop_change_event_t对象，主要给脚本语言使用。
+   * 把event对象转prop_change_event_t对象。
    * 
    * @param event event对象。
    *
@@ -22913,7 +23200,7 @@ export class TProgressEvent extends TEvent {
 
 
   /**
-   * 把event对象转progress_event_t对象，主要给脚本语言使用。
+   * 把event对象转progress_event_t对象。
    * 
    * @param event event对象。
    *
@@ -22945,7 +23232,7 @@ export class TDoneEvent extends TEvent {
 
 
   /**
-   * 把event对象转done_event_t对象，主要给脚本语言使用。
+   * 把event对象转done_event_t对象。
    * 
    * @param event event对象。
    *
@@ -22977,7 +23264,7 @@ export class TErrorEvent extends TEvent {
 
 
   /**
-   * 把event对象转error_event_t对象，主要给脚本语言使用。
+   * 把event对象转error_event_t对象。
    * 
    * @param event event对象。
    *
@@ -23018,7 +23305,7 @@ export class TCmdExecEvent extends TEvent {
 
 
   /**
-   * 把event对象转cmd_exec_event_t对象，主要给脚本语言使用。
+   * 把event对象转cmd_exec_event_t对象。
    * 
    * @param event event对象。
    *
@@ -27103,7 +27390,7 @@ export class TGifImage extends TImageBase {
 
 
   /**
-   * 停止(并重置index为-1)。
+   * 停止(并重置index为0)。
    * 
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
@@ -27511,6 +27798,32 @@ export class TSvgImage extends TImageBase {
 
 
   /**
+   * 控件设置是否开启离线缓存渲染模式。
+   *
+   *> 在确保svg图片不经常变化大小及状态的情况下，开启离线缓存渲染能够减少解析bsvg的开销，提高效率。
+   * 
+   * @param is_cache_mode 是否开启缓存模式。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setCacheMode(is_cache_mode : boolean) : TRet  {
+    return svg_image_set_cache_mode(this != null ? (this.nativeObj || this) : null, is_cache_mode);
+ }
+
+
+  /**
+   * 控件设置svg图片绘制模式。
+   * 
+   * @param draw_type 绘制模式。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setDrawType(draw_type : TImageDrawType) : TRet  {
+    return svg_image_set_draw_type(this != null ? (this.nativeObj || this) : null, draw_type);
+ }
+
+
+  /**
    * 转换为svg_image对象(供脚本语言使用)。
    * 
    * @param widget svg_image对象。
@@ -27519,6 +27832,28 @@ export class TSvgImage extends TImageBase {
    */
  static cast(widget : TWidget) : TSvgImage  {
     return new TSvgImage(svg_image_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 离线缓存渲染模式。
+   *
+   */
+ get isCacheMode() : boolean {
+   return svg_image_t_get_prop_is_cache_mode(this.nativeObj);
+ }
+
+
+  /**
+   * svg图片的绘制方式(支持旋转缩放, 目前仅支持scale、scale_auto模式)。
+   *
+   */
+ get drawType() : TImageDrawType {
+   return svg_image_t_get_prop_draw_type(this.nativeObj);
+ }
+
+ set drawType(v : TImageDrawType) {
+   this.setDrawType(v);
  }
 
 };
@@ -28171,14 +28506,26 @@ export class TComboBox extends TEdit {
 
 
   /**
-   * 删除选项。
+   * 删除第一个值为value的选项。
    * 
-   * @param value 值。
+   * @param value 选项的值。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
  removeOption(value : any) : TRet  {
     return combo_box_remove_option(this != null ? (this.nativeObj || this) : null, value);
+ }
+
+
+  /**
+   * 删除指定序数的选项。
+   * 
+   * @param index 选项的序数(0表示第一个)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ removeOptionByIndex(index : number) : TRet  {
+    return combo_box_remove_option_by_index(this != null ? (this.nativeObj || this) : null, index);
  }
 
 
@@ -28551,6 +28898,18 @@ export class TOverlay extends TWindowBase {
 
 
   /**
+   * 设置是否非模态窗口模式。
+   * 
+   * @param modeless 是否非模态窗口模式。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setModeless(modeless : boolean) : TRet  {
+    return overlay_set_modeless(this != null ? (this.nativeObj || this) : null, modeless);
+ }
+
+
+  /**
    * 转换为overlay对象(供脚本语言使用)。
    * 
    * @param widget overlay对象。
@@ -28589,6 +28948,21 @@ export class TOverlay extends TWindowBase {
 
  set alwaysOnTop(v : boolean) {
    this.setAlwaysOnTop(v);
+ }
+
+
+  /**
+   * 非模态窗口。
+   *
+   *缺省不启用。
+   *
+   */
+ get modeless() : boolean {
+   return overlay_t_get_prop_modeless(this.nativeObj);
+ }
+
+ set modeless(v : boolean) {
+   this.setModeless(v);
  }
 
 };

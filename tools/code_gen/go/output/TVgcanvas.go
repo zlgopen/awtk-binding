@@ -118,8 +118,8 @@ func (this TVgcanvas) SetFont(font string) TRet {
   return TRet(C.vgcanvas_set_font((*C.vgcanvas_t)(this.handle), afont));
 }
 
-func (this TVgcanvas) SetFontSize(font float64) TRet {
-  return TRet(C.vgcanvas_set_font_size((*C.vgcanvas_t)(this.handle), (C.float_t)(font)));
+func (this TVgcanvas) SetFontSize(size float64) TRet {
+  return TRet(C.vgcanvas_set_font_size((*C.vgcanvas_t)(this.handle), (C.float_t)(size)));
 }
 
 func (this TVgcanvas) SetTextAlign(value string) TRet {
@@ -176,10 +176,10 @@ func (this TVgcanvas) SetFillColor(color string) TRet {
   return TRet(C.vgcanvas_set_fill_color_str((*C.vgcanvas_t)(this.handle), acolor));
 }
 
-func (this TVgcanvas) SetStrokeColor(color string) TRet {
-  acolor := C.CString(color)
-  defer C.free(unsafe.Pointer(acolor))
-  return TRet(C.vgcanvas_set_stroke_color_str((*C.vgcanvas_t)(this.handle), acolor));
+func (this TVgcanvas) SetStrokeColor(str string) TRet {
+  astr := C.CString(str)
+  defer C.free(unsafe.Pointer(astr))
+  return TRet(C.vgcanvas_set_stroke_color_str((*C.vgcanvas_t)(this.handle), astr));
 }
 
 func (this TVgcanvas) SetLineCap(value string) TRet {
@@ -206,12 +206,12 @@ func (this TVgcanvas) Restore() TRet {
   return TRet(C.vgcanvas_restore((*C.vgcanvas_t)(this.handle)));
 }
 
-func (this TVgcanvas) GetW() int {
-  return (int)((*C.vgcanvas_t)(unsafe.Pointer(this.handle)).w);
+func (this TVgcanvas) GetW() uint32 {
+  return (uint32)((*C.vgcanvas_t)(unsafe.Pointer(this.handle)).w);
 }
 
-func (this TVgcanvas) GetH() int {
-  return (int)((*C.vgcanvas_t)(unsafe.Pointer(this.handle)).h);
+func (this TVgcanvas) GetH() uint32 {
+  return (uint32)((*C.vgcanvas_t)(unsafe.Pointer(this.handle)).h);
 }
 
 func (this TVgcanvas) GetStride() uint32 {
