@@ -5,7 +5,7 @@ var searchData=
   ['disable_50',['Disable',['../class_t_emitter.html#ab009db7ef16ca18fdf8eac10559501c0',1,'TEmitter']]],
   ['dispatch_51',['Dispatch',['../class_t_emitter.html#a0f3943b7219c16dd7d171aaa66fad97e',1,'TEmitter']]],
   ['dispatchkey_52',['DispatchKey',['../class_t_input_method.html#a36159e392001b71358ee35b84ae60691',1,'TInputMethod']]],
-  ['dispatchkeys_53',['DispatchKeys',['../class_t_input_method.html#aeb3b13a56c4a3a82c03e8af89b91ae8c',1,'TInputMethod']]],
+  ['dispatchkeys_53',['DispatchKeys',['../class_t_input_method.html#a18759e51cd32bd93330bff954f70ff98',1,'TInputMethod']]],
   ['dispatchpreedit_54',['DispatchPreedit',['../class_t_input_method.html#a4064965bbb3574c9f95dced6d0e7a787',1,'TInputMethod']]],
   ['dispatchpreeditabort_55',['DispatchPreeditAbort',['../class_t_input_method.html#a77c1de1ddc3bcd95a3ff5b4ef88d981f',1,'TInputMethod']]],
   ['dispatchpreeditconfirm_56',['DispatchPreeditConfirm',['../class_t_input_method.html#a4f6514e00d37e9ccef96f4ce4182df2a',1,'TInputMethod']]],

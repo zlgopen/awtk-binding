@@ -5,9 +5,9 @@ type TLocaleInfos struct {
 func TLocaleInfosRef(name string) TLocaleInfo {
   aname := C.CString(name)
   defer C.free(unsafe.Pointer(aname))
-  retObj := TLocaleInfos{}
+  retObj := TLocaleInfo{}
   retObj.handle = unsafe.Pointer(C.locale_infos_ref(aname))
-  return retObj.TLocaleInfo
+  return retObj
 }
 
 func TLocaleInfosUnref(locale_info TLocaleInfo) TRet {

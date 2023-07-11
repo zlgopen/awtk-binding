@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TDateTime类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -30,10 +30,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.20 -->
+<!-- 制作者 Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -123,12 +123,12 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a591414f54431f6dbacd5cf4638d58224"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaffafe7009c644e039ebf2360d9f7728"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_date_time.html#aaffafe7009c644e039ebf2360d9f7728">isLeap</a> (int year)</td></tr>
 <tr class="separator:aaffafe7009c644e039ebf2360d9f7728"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a191001b37539424e2d69491dd3439a37"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_date_time.html#a191001b37539424e2d69491dd3439a37">getDays</a> (int year, int montn)</td></tr>
-<tr class="separator:a191001b37539424e2d69491dd3439a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeaec13146fa1268cfe3b18b548950ebe"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_date_time.html#aeaec13146fa1268cfe3b18b548950ebe">getWday</a> (int year, int montn, int day)</td></tr>
-<tr class="separator:aeaec13146fa1268cfe3b18b548950ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57ddd96810c8b8d6f15d9c728192ebea"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_date_time.html#a57ddd96810c8b8d6f15d9c728192ebea">getMonthName</a> (int montn)</td></tr>
-<tr class="separator:a57ddd96810c8b8d6f15d9c728192ebea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff8d29e11befe003adedb0014b411742"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_date_time.html#aff8d29e11befe003adedb0014b411742">getDays</a> (int year, int month)</td></tr>
+<tr class="separator:aff8d29e11befe003adedb0014b411742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ae7cd9b6af5fa659830045f422c1f7f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_date_time.html#a2ae7cd9b6af5fa659830045f422c1f7f">getWday</a> (int year, int month, int day)</td></tr>
+<tr class="separator:a2ae7cd9b6af5fa659830045f422c1f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac52c49afa0483761b8a0306454882e27"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_date_time.html#ac52c49afa0483761b8a0306454882e27">getMonthName</a> (int month)</td></tr>
+<tr class="separator:ac52c49afa0483761b8a0306454882e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac094126c09cef7a9ea97c96e85df05c9"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_date_time.html#ac094126c09cef7a9ea97c96e85df05c9">getWdayName</a> (int wday)</td></tr>
 <tr class="separator:ac094126c09cef7a9ea97c96e85df05c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -323,7 +323,7 @@ Public 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>从time转换而来。</p>
+<p>从time转换而来(按GMT转换)。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">time</td><td>时间。</td></tr>
@@ -360,8 +360,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a191001b37539424e2d69491dd3439a37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a191001b37539424e2d69491dd3439a37">&#9670;&nbsp;</a></span>getDays()</h2>
+<a id="aff8d29e11befe003adedb0014b411742"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff8d29e11befe003adedb0014b411742">&#9670;&nbsp;</a></span>getDays()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -379,7 +379,7 @@ Public 属性</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>montn</em>&#160;</td>
+          <td class="paramname"><em>month</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -397,7 +397,7 @@ Public 属性</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">year</td><td>年份。 </td></tr>
-    <tr><td class="paramname">montn</td><td>月份(1-12)。</td></tr>
+    <tr><td class="paramname">month</td><td>月份(1-12)。</td></tr>
   </table>
   </dd>
 </dl>
@@ -483,8 +483,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a57ddd96810c8b8d6f15d9c728192ebea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57ddd96810c8b8d6f15d9c728192ebea">&#9670;&nbsp;</a></span>getMonthName()</h2>
+<a id="ac52c49afa0483761b8a0306454882e27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac52c49afa0483761b8a0306454882e27">&#9670;&nbsp;</a></span>getMonthName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -496,7 +496,7 @@ Public 属性</h2></td></tr>
           <td class="memname">static String awtk.TDateTime.getMonthName </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>montn</em></td><td>)</td>
+          <td class="paramname"><em>month</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -509,7 +509,7 @@ Public 属性</h2></td></tr>
 <p>获取指定月份的英文名称(简写)。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">montn</td><td>月份(1-12)。</td></tr>
+    <tr><td class="paramname">month</td><td>月份(1-12)。</td></tr>
   </table>
   </dd>
 </dl>
@@ -543,8 +543,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aeaec13146fa1268cfe3b18b548950ebe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeaec13146fa1268cfe3b18b548950ebe">&#9670;&nbsp;</a></span>getWday()</h2>
+<a id="a2ae7cd9b6af5fa659830045f422c1f7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ae7cd9b6af5fa659830045f422c1f7f">&#9670;&nbsp;</a></span>getWday()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -562,7 +562,7 @@ Public 属性</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>montn</em>, </td>
+          <td class="paramname"><em>month</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -586,7 +586,7 @@ Public 属性</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">year</td><td>年份。 </td></tr>
-    <tr><td class="paramname">montn</td><td>月份(1-12)。 </td></tr>
+    <tr><td class="paramname">month</td><td>月份(1-12)。 </td></tr>
     <tr><td class="paramname">day</td><td>日(1-31)。</td></tr>
   </table>
   </dd>
@@ -942,7 +942,7 @@ Public 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>转换成time。</p>
+<p>转换成time(按GMT转换)。</p>
 <dl class="section return"><dt>返回</dt><dd>返回time。 </dd></dl>
 
 </div>
@@ -969,7 +969,7 @@ Public 属性</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

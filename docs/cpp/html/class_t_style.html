@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TStyle类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -30,10 +30,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.20 -->
+<!-- 制作者 Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -101,6 +101,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:aad06c1be0b52ec98104e4fb6b72c800b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc313e64294bc3204fe56994e1ed6d3e"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#acc313e64294bc3204fe56994e1ed6d3e">GetStr</a> (const char *name, const char *defval)</td></tr>
 <tr class="separator:acc313e64294bc3204fe56994e1ed6d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab69c0bca08733d43055125322f3b2bc2"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#ab69c0bca08733d43055125322f3b2bc2">Get</a> (const char *state, const char *name, <a class="el" href="class_t_value.html">TValue</a> &amp;value)</td></tr>
+<tr class="separator:ab69c0bca08733d43055125322f3b2bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0fd6aee96501b4ffefcdb47f877b964"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#ab0fd6aee96501b4ffefcdb47f877b964">Set</a> (const char *state, const char *name, <a class="el" href="class_t_value.html">TValue</a> &amp;value)</td></tr>
 <tr class="separator:ab0fd6aee96501b4ffefcdb47f877b964"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a7160b804d2f886c1ae312d600a7b64"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#a2a7160b804d2f886c1ae312d600a7b64">UpdateState</a> (<a class="el" href="class_t_theme.html">TTheme</a> &amp;theme, const char *widget_type, const char *style_name, const char *widget_state)</td></tr>
@@ -132,6 +134,50 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 <p>widget从style对象中，获取诸如字体、颜色和图片相关的参数，根据这些参数来绘制界面。</p>
 <p>属性名称的请参考style\_id </p>
 </div><h2 class="groupheader">成员函数说明</h2>
+<a id="ab69c0bca08733d43055125322f3b2bc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab69c0bca08733d43055125322f3b2bc2">&#9670;&nbsp;</a></span>Get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TStyle::Get </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取指定状态的指定属性的值。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>状态。 </td></tr>
+    <tr><td class="paramname">name</td><td>属性名。 </td></tr>
+    <tr><td class="paramname">value</td><td>值。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="afa25880edce1ce52b7be659d6d9842a8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa25880edce1ce52b7be659d6d9842a8">&#9670;&nbsp;</a></span>GetInt()</h2>
 
@@ -447,7 +493,7 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

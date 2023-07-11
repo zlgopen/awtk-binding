@@ -175,12 +175,16 @@ class GoGenerator extends TargetGen {
 
   genReturnObject(cls, m, arg) {
     const clsName = this.toClassName(this.getClassName(cls));
-    const returnType = m.return.type.replace(/\*/g, "");
+    const returnType = this.typeToNativeName(m.return.type);
     const type = this.toClassName(returnType)
+    const is_ref = m.name && (m.name.endsWith('_ref') || m.name.endsWith('_ref_ex')); 
 
     let result = `  retObj := ${clsName}{}\n`
+    if(is_ref) {
+      result = `  retObj := ${type}{}\n`
+    }
     result += `  retObj.handle = unsafe.Pointer(${arg})\n`
-    if (clsName === type || this.isCast(m)) {
+    if (clsName === type || this.isCast(m) || is_ref) {
       result += `  return retObj\n`
     } else {
       result += `  return retObj.${type}\n`

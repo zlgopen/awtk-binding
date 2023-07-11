@@ -183,12 +183,14 @@ class CodeGen {
     }
   }
 
-  getClassInfo(name) {
+  getClassInfo(aname) {
     const json = this.json;
+    const name = this.typeToNativeName(aname);
 
     for (let i = 0; i < json.length; i++) {
       let iter = json[i];
       if ((iter.type === 'class') && iter.name === name) {
+        console.log('getClassInfo', iter.name, name);
         return iter;
       }
     }
