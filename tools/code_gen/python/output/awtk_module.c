@@ -4172,17 +4172,6 @@ pyobject_t wrap_locale_infos_reload_all(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("i", ret);
 }
 
-pyobject_t wrap_locale_infos_t_get_prop_unused(pyobject_t self, pyobject_t pyargs) {
-  locale_infos_t* obj = NULL;
-
-  if (!PyArg_ParseTuple(pyargs, "O&", &__parse_voidp, &obj)) {
-    PyErr_SetString(PyExc_TypeError, "invalid arguments");
-    return NULL;
-  }
-
-  return Py_BuildValue("i", obj->unused);
-}
-
 pyobject_t get_STYLE_ID_BG_COLOR(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("s", STYLE_ID_BG_COLOR);
 }
@@ -22834,7 +22823,6 @@ static PyMethodDef awtk_methods[] = {
 {"locale_infos_on", wrap_locale_infos_on, METH_VARARGS, "locale_infos_on"},
 {"locale_infos_off", wrap_locale_infos_off, METH_VARARGS, "locale_infos_off"},
 {"locale_infos_reload_all", wrap_locale_infos_reload_all, METH_VARARGS, "locale_infos_reload_all"},
-{"locale_infos_t_get_prop_unused", wrap_locale_infos_t_get_prop_unused, METH_VARARGS, "locale_infos_t_get_prop_unused"},
 {"STYLE_ID_BG_COLOR", get_STYLE_ID_BG_COLOR, METH_VARARGS, "STYLE_ID_BG_COLOR"},
 {"STYLE_ID_FG_COLOR", get_STYLE_ID_FG_COLOR, METH_VARARGS, "STYLE_ID_FG_COLOR"},
 {"STYLE_ID_MASK_COLOR", get_STYLE_ID_MASK_COLOR, METH_VARARGS, "STYLE_ID_MASK_COLOR"},

@@ -3450,12 +3450,6 @@ JNIEXPORT jint JNICALL Java_awtk_TLocaleInfos_locale_1infos_1reload_1all(JNIEnv*
   return (jint)(ret);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TLocaleInfos_locale_1infos_1t_1get_1prop_1unused(JNIEnv* env,  jclass ajc, jlong jobj) {/*get*/
-  locale_infos_t* obj = (locale_infos_t*)jobj;
-
-  return (jint)(obj->unused);
-}
-
 JNIEXPORT jstring JNICALL Java_awtk_TStyleId_STYLE_1ID_1BG_1COLOR(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (*env)->NewStringUTF(env, STYLE_ID_BG_COLOR);

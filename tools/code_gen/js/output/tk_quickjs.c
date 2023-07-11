@@ -7829,19 +7829,6 @@ jsvalue_t wrap_locale_infos_reload_all(
   return jret;
 }
 
-jsvalue_t wrap_locale_infos_t_get_prop_unused(
-    JSContext *ctx, 
-    jsvalue_const_t this_val,
-    int argc, 
-    jsvalue_const_t *argv
-  ) {
-  jsvalue_t jret = JS_NULL;
-  locale_infos_t* obj = (locale_infos_t*)jsvalue_get_pointer(ctx, argv[0], "locale_infos_t*");
-
-  jret = jsvalue_create_int(ctx, obj->unused);
-  return jret;
-}
-
 ret_t locale_infos_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
   JS_SetPropertyStr(ctx, global_obj, "locale_infos_ref",
@@ -7856,8 +7843,6 @@ ret_t locale_infos_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_locale_infos_off, "locale_infos_off", 1));
   JS_SetPropertyStr(ctx, global_obj, "locale_infos_reload_all",
                       JS_NewCFunction(ctx, wrap_locale_infos_reload_all, "locale_infos_reload_all", 1));
-  JS_SetPropertyStr(ctx, global_obj, "locale_infos_t_get_prop_unused",
-                      JS_NewCFunction(ctx, wrap_locale_infos_t_get_prop_unused, "locale_infos_t_get_prop_unused", 1));
 
  jsvalue_unref(ctx, global_obj);
 

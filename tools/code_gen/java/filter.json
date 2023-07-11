@@ -6223,21 +6223,12 @@
       }
     ],
     "events": [],
-    "properties": [
-      {
-        "name": "unused",
-        "desc": "for go binding.",
-        "type": "int",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      }
-    ],
+    "properties": [],
     "header": "base/locale_info.h",
     "desc": "在某些情况下，需要多个资源管理器。比如在手表系统里，每个应用或表盘，可能放在独立的资源包中，\n此时优先加载应用自己的资源，如果没有就加载系统的资源。",
     "name": "locale_infos_t",
     "annotation": {
+      "fake": true,
       "scriptable": true
     },
     "level": 1

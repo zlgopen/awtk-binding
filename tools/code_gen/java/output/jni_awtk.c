@@ -4988,15 +4988,6 @@ int awtk_TLocaleInfos_locale_infos_reload_all(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
-int awtk_TLocaleInfos_locale_infos_t_get_prop_unused(Runtime *runtime, JClass *clazz) {
-  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
-
-  locale_infos_t* obj = (locale_infos_t*)jni_ctx_get_object(&actx);
-  jni_ctx_return_int(&actx, (int32_t)(obj->unused));
-
-  return 0;
-}
-
 int awtk_TStyleId_STYLE_ID_BG_COLOR(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -23707,7 +23698,6 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TLocaleInfos",  "locale_infos_on",  "(ILawtk/TOnEvent;J)I",  awtk_TLocaleInfos_locale_infos_on},
 {"awtk/TLocaleInfos",  "locale_infos_off",  "(I)I",  awtk_TLocaleInfos_locale_infos_off},
 {"awtk/TLocaleInfos",  "locale_infos_reload_all",  "()I",  awtk_TLocaleInfos_locale_infos_reload_all},
-{"awtk/TLocaleInfos",  "locale_infos_t_get_prop_unused",  "(J)I",  awtk_TLocaleInfos_locale_infos_t_get_prop_unused},
 {"awtk/TStyleId",  "STYLE_ID_BG_COLOR",  "()Ljava/lang/String;",  awtk_TStyleId_STYLE_ID_BG_COLOR},
 {"awtk/TStyleId",  "STYLE_ID_FG_COLOR",  "()Ljava/lang/String;",  awtk_TStyleId_STYLE_ID_FG_COLOR},
 {"awtk/TStyleId",  "STYLE_ID_MASK_COLOR",  "()Ljava/lang/String;",  awtk_TStyleId_STYLE_ID_MASK_COLOR},

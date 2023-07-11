@@ -531,7 +531,6 @@ declare function locale_infos_change(language : string, country : string) : TRet
 declare function locale_infos_on(type : TEventType, on_event : Function, ctx : any) : number;
 declare function locale_infos_off(id : number) : TRet;
 declare function locale_infos_reload_all() : TRet;
-declare function locale_infos_t_get_prop_unused(nativeObj : any) : number;
 declare function STYLE_ID_BG_COLOR():any;
 declare function STYLE_ID_FG_COLOR():any;
 declare function STYLE_ID_MASK_COLOR():any;
@@ -6995,11 +6994,6 @@ export class TLocaleInfo {
  *
  */
 export class TLocaleInfos { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   this.nativeObj = nativeObj;
- }
-
 
   /**
    * 获取指定小应用程序(applet)的locale_info。
@@ -7072,15 +7066,6 @@ export class TLocaleInfos {
    */
  static reloadAll() : TRet  {
     return locale_infos_reload_all();
- }
-
-
-  /**
-   * for go binding.
-   *
-   */
- get unused() : number {
-   return locale_infos_t_get_prop_unused(this.nativeObj);
  }
 
 };

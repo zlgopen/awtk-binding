@@ -5190,15 +5190,6 @@ static HANDLER_PROTO(wrap_locale_infos_reload_all)  {
   return jret;
 }
 
-static HANDLER_PROTO(wrap_locale_infos_t_get_prop_unused)  {
-  void* ctx = NULL;
-  jsvalue_t jret = JS_NULL;
-  locale_infos_t* obj = (locale_infos_t*)jsvalue_get_pointer(ctx, argv[0], "locale_infos_t*");
-
-  jret = jsvalue_create_int(ctx, obj->unused);
-  return jret;
-}
-
 ret_t locale_infos_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"locale_infos_ref", wrap_locale_infos_ref);
   jerryx_handler_register_global((const jerry_char_t*)"locale_infos_unref", wrap_locale_infos_unref);
@@ -5206,7 +5197,6 @@ ret_t locale_infos_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"locale_infos_on", wrap_locale_infos_on);
   jerryx_handler_register_global((const jerry_char_t*)"locale_infos_off", wrap_locale_infos_off);
   jerryx_handler_register_global((const jerry_char_t*)"locale_infos_reload_all", wrap_locale_infos_reload_all);
-  jerryx_handler_register_global((const jerry_char_t*)"locale_infos_t_get_prop_unused", wrap_locale_infos_t_get_prop_unused);
 
  return RET_OK;
 }

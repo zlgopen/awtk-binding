@@ -8,36 +8,6 @@ package awtk;
  */
 public class TLocaleInfos { 
 
-/**
- * 原生对象。
- */
- public long nativeObj;
-
-
-/**
- * 通过nativeObj构造Java对象。
- *
- * @param nativeObj 原生对象。
-
- * @return 对应的Java对象。
- */
- public TLocaleInfos(long nativeObj) {
-   this.nativeObj = nativeObj;
- }
-
-
-/**
- * 把nativeObj转换层Java对象。
- *
- * @param nativeObj 原生对象。
-
- * @return 对应的Java对象。
- */
- static public TLocaleInfos cast(long nativeObj) {
-   return new TLocaleInfos(nativeObj);
- }
-
-
   /**
    * 获取指定小应用程序(applet)的locale_info。
    * 
@@ -111,20 +81,10 @@ public class TLocaleInfos {
    return TRet.from(locale_infos_reload_all());
  }
 
-
-  /**
-   * for go binding.
-   *
-   */
- public int getUnused() {
-   return locale_infos_t_get_prop_unused(this.nativeObj);
- }
-
 static private native long locale_infos_ref(String name);
 static private native int locale_infos_unref(long locale_info);
 static private native int locale_infos_change(String language, String country);
 static private native int locale_infos_on(int type, TOnEvent on_event, long ctx);
 static private native int locale_infos_off(int id);
 static private native int locale_infos_reload_all();
-static private native int locale_infos_t_get_prop_unused(long nativeObj);
 };

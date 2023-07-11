@@ -4763,26 +4763,6 @@ class TLocaleInfo(object):
 #
 class TLocaleInfos(object):
 
-  def __new__(cls, native_obj=0):
-      if native_obj == 0:
-          return None
-      else:
-          if super().__new__ == object.__new__:
-              instance = super().__new__(cls)
-          else:
-              instance = super().__new__(cls, native_obj)
-          instance.nativeObj = native_obj
-          return instance
-    
-  def __init__(self, nativeObj):
-    self.nativeObj = nativeObj
-
-
-  def __eq__(self, other: 'TWidget'):
-      if other is None:
-          return self.nativeObj == 0
-      return self.nativeObj == other.nativeObj
-    
   #
   # 获取指定小应用程序(applet)的locale_info。
   # 
@@ -4855,15 +4835,6 @@ class TLocaleInfos(object):
   @classmethod
   def reload_all(cls): 
       return locale_infos_reload_all()
-
-
-  #
-  # for go binding.
-  #
-  #
-  @property
-  def unused(self):
-    return locale_infos_t_get_prop_unused(self.nativeObj)
 
 
 #

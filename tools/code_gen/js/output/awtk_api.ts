@@ -1078,8 +1078,6 @@ const locale_infos_off = Module.cwrap("locale_infos_off",
     "number", ["number"]);
 const locale_infos_reload_all = Module.cwrap("locale_infos_reload_all", 
     "number", []);
-const locale_infos_t_get_prop_unused = Module.cwrap("locale_infos_t_get_prop_unused", 
-    "number", ["number"]);
 const STYLE_ID_BG_COLOR = Module.cwrap("get_STYLE_ID_BG_COLOR", 
     "string", []);
 const STYLE_ID_FG_COLOR = Module.cwrap("get_STYLE_ID_FG_COLOR", 
@@ -9324,11 +9322,6 @@ export class TLocaleInfo {
  *
  */
 export class TLocaleInfos { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   this.nativeObj = nativeObj;
- }
-
 
   /**
    * 获取指定小应用程序(applet)的locale_info。
@@ -9401,15 +9394,6 @@ export class TLocaleInfos {
    */
  static reloadAll() : TRet  {
     return locale_infos_reload_all();
- }
-
-
-  /**
-   * for go binding.
-   *
-   */
- get unused() : number {
-   return locale_infos_t_get_prop_unused(this.nativeObj);
  }
 
 };

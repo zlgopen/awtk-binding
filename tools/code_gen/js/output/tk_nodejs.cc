@@ -6337,16 +6337,6 @@ static void wrap_locale_infos_reload_all(const Nan::FunctionCallbackInfo<v8::Val
   (void)argc;(void)ctx;
 }
 
-static void wrap_locale_infos_t_get_prop_unused(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
-  JSContext* ctx = NULL; 
-  int32_t argc = (int32_t)(argv.Length()); 
-  locale_infos_t* obj = (locale_infos_t*)jsvalue_get_pointer(ctx, argv[0], "locale_infos_t*");
-
-  v8::Local<v8::Int32> jret= Nan::New((int32_t)(obj->unused));
-  argv.GetReturnValue().Set(jret);
-  (void)argc;(void)ctx;
-}
-
 ret_t locale_infos_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "locale_infos_ref", wrap_locale_infos_ref);
   Nan::Export(ctx, "locale_infos_unref", wrap_locale_infos_unref);
@@ -6354,7 +6344,6 @@ ret_t locale_infos_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "locale_infos_on", wrap_locale_infos_on);
   Nan::Export(ctx, "locale_infos_off", wrap_locale_infos_off);
   Nan::Export(ctx, "locale_infos_reload_all", wrap_locale_infos_reload_all);
-  Nan::Export(ctx, "locale_infos_t_get_prop_unused", wrap_locale_infos_t_get_prop_unused);
 
  return RET_OK;
 }

@@ -158,8 +158,6 @@ static int wrap_input_method_t_get_prop(lua_State* L);
 static int wrap_input_method_t_set_prop(lua_State* L);
 static int wrap_locale_info_t_get_prop(lua_State* L);
 static int wrap_locale_info_t_set_prop(lua_State* L);
-static int wrap_locale_infos_t_get_prop(lua_State* L);
-static int wrap_locale_infos_t_set_prop(lua_State* L);
 static int wrap_style_t_get_prop(lua_State* L);
 static int wrap_style_t_set_prop(lua_State* L);
 static int wrap_theme_t_get_prop(lua_State* L);
@@ -4722,42 +4720,6 @@ static int wrap_locale_infos_reload_all(lua_State* L) {
   return 1;
 }
 
-
-static const struct luaL_Reg locale_infos_t_member_funcs[] = {
-  {NULL, NULL}
-};
-
-static int wrap_locale_infos_t_set_prop(lua_State* L) {
-  locale_infos_t* obj = (locale_infos_t*)tk_checkudata(L, 1, "locale_infos_t");
-  const char* name = (const char*)luaL_checkstring(L, 2);
-  (void)obj;
-  (void)name;
-  log_debug("%s: not supported %s\n", __FUNCTION__, name);
-  return 0;
-}
-
-static int wrap_locale_infos_t_get_prop(lua_State* L) {
-  locale_infos_t* obj = (locale_infos_t*)tk_checkudata(L, 1, "locale_infos_t");
-  const char* name = (const char*)luaL_checkstring(L, 2);
-  const luaL_Reg* ret = find_member(locale_infos_t_member_funcs, name);
-
-  (void)obj;
-  (void)name;
-  if(ret) {
-    lua_pushcfunction(L, ret->func);
-    return 1;
-  }
-  if(strcmp(name, "unused") == 0) {
-    lua_pushinteger(L,(lua_Integer)(obj->unused));
-
-  return 1;
-  }
-  else {
-    log_debug("%s: not supported %s\n", __FUNCTION__, name);
-    return 0;
-  }
-}
-
 static void locale_infos_t_init(lua_State* L) {
   static const struct luaL_Reg static_funcs[] = {
     {"ref", wrap_locale_infos_ref},
@@ -4769,17 +4731,6 @@ static void locale_infos_t_init(lua_State* L) {
     {NULL, NULL}
   };
 
-  static const struct luaL_Reg index_funcs[] = {
-    {"__index", wrap_locale_infos_t_get_prop},
-    {"__newindex", wrap_locale_infos_t_set_prop},
-    {NULL, NULL}
-  };
-
-  luaL_newmetatable(L, "awtk.locale_infos_t");
-  lua_pushstring(L, "__index");
-  lua_pushvalue(L, -2);
-  lua_settable(L, -3);
-  luaL_openlib(L, NULL, index_funcs, 0);
   luaL_openlib(L, "LocaleInfos", static_funcs, 0);
   lua_settop(L, 0);
 }

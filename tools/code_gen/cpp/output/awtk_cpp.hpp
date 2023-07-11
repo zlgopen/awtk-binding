@@ -2356,29 +2356,6 @@ public:
  */
 class TLocaleInfos { 
 public:
-  //nativeObj is public for internal use only.
-  locale_infos_t* nativeObj;
-
-  TLocaleInfos(locale_infos_t* nativeObj) {
-    this->nativeObj = nativeObj;
-  }
-
-  TLocaleInfos() {
-    this->nativeObj = (locale_infos_t*)NULL;
-  }
-
-  TLocaleInfos(const locale_infos_t* nativeObj) {
-    this->nativeObj = (locale_infos_t*)nativeObj;
-  }
-
-  static TLocaleInfos Cast(locale_infos_t* nativeObj) {
-    return TLocaleInfos(nativeObj);
-  }
-
-  static TLocaleInfos Cast(const locale_infos_t* nativeObj) {
-    return TLocaleInfos((locale_infos_t*)nativeObj);
-  }
-
 
   /**
    * 获取指定小应用程序(applet)的locale_info。
@@ -2435,12 +2412,6 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   static  ret_t ReloadAll() ;
-
-  /**
-   * for go binding.
-   *
-   */
-  int GetUnused() const;
 };
 
 
