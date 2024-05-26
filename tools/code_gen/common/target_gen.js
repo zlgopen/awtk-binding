@@ -179,7 +179,7 @@ class TargetGen extends CodeGen {
 
   tidyDoc(desc, spaces) {
     let result = this.removeCode(desc, '<!-- c_doc_begin -->', '<!-- c_doc_end -->');
-    result = this.removeCode(result, '```c\n', '```\n');
+    result = this.removeCode(result, '```c', '```');
     result = this.removeCode(result, '```graphviz', '```');
 
     result = result.replace(/\r\n/g, '\n');

@@ -18,6 +18,10 @@ class TypescriptGenerator extends TypescriptBaseGenerator {
     }
   }
 
+  fixAllNames4Compatable(json) {
+    console.log('fixAllNames4Compatable disable');
+  }
+
   genFuncNativeDecl(cls, m) {
     const name = m.name;
     const returnType = m.return.type;
