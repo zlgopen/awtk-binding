@@ -130,6 +130,14 @@ func (this TValue) IsNull() bool {
   return (bool)(C.value_is_null((*C.value_t)(this.handle)));
 }
 
+func (this TValue) Equal(other TValue) bool {
+  return (bool)(C.value_equal((*C.value_t)(this.handle), (*C.value_t)(other.handle)));
+}
+
+func (this TValue) Int() int {
+  return (int)(C.value_int((*C.value_t)(this.handle)));
+}
+
 func (this TValue) SetInt(value int32) TValue {
   retObj := TValue{}
   retObj.handle = unsafe.Pointer(C.value_set_int((*C.value_t)(this.handle), (C.int32_t)(value)))

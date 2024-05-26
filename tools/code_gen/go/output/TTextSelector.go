@@ -98,6 +98,10 @@ func (this TTextSelector) SetMaskAreaScale(mask_area_scale float64) TRet {
   return TRet(C.text_selector_set_mask_area_scale((*C.widget_t)(this.handle), (C.float_t)(mask_area_scale)));
 }
 
+func (this TTextSelector) SetEllipses(ellipses bool) TRet {
+  return TRet(C.text_selector_set_ellipses((*C.widget_t)(this.handle), (C.bool_t)(ellipses)));
+}
+
 func (this TTextSelector) GetVisibleNr() uint32 {
   return (uint32)((*C.text_selector_t)(unsafe.Pointer(this.handle)).visible_nr);
 }
@@ -128,6 +132,10 @@ func (this TTextSelector) GetLoopOptions() bool {
 
 func (this TTextSelector) GetEnableValueAnimator() bool {
   return (bool)((*C.text_selector_t)(unsafe.Pointer(this.handle)).enable_value_animator);
+}
+
+func (this TTextSelector) GetEllipses() bool {
+  return (bool)((*C.text_selector_t)(unsafe.Pointer(this.handle)).ellipses);
 }
 
 func (this TTextSelector) GetMaskEasing() TEasingType {

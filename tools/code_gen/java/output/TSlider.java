@@ -20,6 +20,7 @@ package awtk;
  *在c代码中使用函数slider\_create创建滑块控件。如：
  *
  *
+ *
  *> 完整示例请参考：
  *[slider demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/slider.c)
  *

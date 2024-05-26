@@ -22,3 +22,7 @@ func (this TObjectDefault) ClearProps() TRet {
   return TRet(C.object_default_clear_props((*C.object_t)(this.handle)));
 }
 
+func (this TObjectDefault) SetKeepPropType(keep_prop_type bool) TRet {
+  return TRet(C.object_default_set_keep_prop_type((*C.object_t)(this.handle), (C.bool_t)(keep_prop_type)));
+}
+

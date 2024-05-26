@@ -120,6 +120,10 @@ func (this TWidget) IsSupportHighlighter() bool {
   return (bool)(C.widget_is_support_highlighter((*C.widget_t)(this.handle)));
 }
 
+func (this TWidget) HasHighlighter() bool {
+  return (bool)(C.widget_has_highlighter((*C.widget_t)(this.handle)));
+}
+
 func (this TWidget) UseStyle(style string) TRet {
   astyle := C.CString(style)
   defer C.free(unsafe.Pointer(astyle))
@@ -371,6 +375,18 @@ func (this TWidget) Off(id uint32) TRet {
 
 func (this TWidget) InvalidateForce(r TRect) TRet {
   return TRet(C.widget_invalidate_force((*C.widget_t)(this.handle), (*C.rect_t)(r.handle)));
+}
+
+func (this TWidget) GetProp(name string, v TValue) TRet {
+  aname := C.CString(name)
+  defer C.free(unsafe.Pointer(aname))
+  return TRet(C.widget_get_prop((*C.widget_t)(this.handle), aname, (*C.value_t)(v.handle)));
+}
+
+func (this TWidget) SetProp(name string, v TValue) TRet {
+  aname := C.CString(name)
+  defer C.free(unsafe.Pointer(aname))
+  return TRet(C.widget_set_prop((*C.widget_t)(this.handle), aname, (*C.value_t)(v.handle)));
 }
 
 func (this TWidget) SetProps(params string) TRet {

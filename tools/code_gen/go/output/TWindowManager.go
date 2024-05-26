@@ -52,6 +52,10 @@ func (this TWindowManager) SetShowFps(show_fps bool) TRet {
   return TRet(C.window_manager_set_show_fps((*C.widget_t)(this.handle), (C.bool_t)(show_fps)));
 }
 
+func (this TWindowManager) SetShowFpsPosition(x int, y int) TRet {
+  return TRet(C.window_manager_set_show_fps_position((*C.widget_t)(this.handle), (C.xy_t)(x), (C.xy_t)(y)));
+}
+
 func (this TWindowManager) SetMaxFps(max_fps uint32) TRet {
   return TRet(C.window_manager_set_max_fps((*C.widget_t)(this.handle), (C.uint32_t)(max_fps)));
 }
@@ -86,6 +90,10 @@ func (this TWindowManager) BackTo(target string) TRet {
 
 func (this TWindowManager) Resize(w int, h int) TRet {
   return TRet(C.window_manager_resize((*C.widget_t)(this.handle), (C.wh_t)(w), (C.wh_t)(h)));
+}
+
+func (this TWindowManager) SetFullscreen(fullscreen bool) TRet {
+  return TRet(C.window_manager_set_fullscreen((*C.widget_t)(this.handle), (C.bool_t)(fullscreen)));
 }
 
 func (this TWindowManager) CloseAll() TRet {

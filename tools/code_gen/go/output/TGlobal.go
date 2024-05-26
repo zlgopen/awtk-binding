@@ -18,6 +18,10 @@ func Quit() TRet {
   return TRet(C.tk_quit());
 }
 
+func QuitEx(delay uint32) TRet {
+  return TRet(C.tk_quit_ex((C.uint32_t)(delay)));
+}
+
 func GetPointerX() int32 {
   return (int32)(C.tk_get_pointer_x());
 }

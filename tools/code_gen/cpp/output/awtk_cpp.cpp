@@ -475,6 +475,14 @@
     return value_is_null(((value_t*)(this->nativeObj)));
  }
 
+ bool TValue::Equal(TValue& other)  {
+    return value_equal(((const value_t*)(this->nativeObj)), ((const value_t*)(other.nativeObj)));
+ }
+
+ int TValue::Int()  {
+    return value_int(((const value_t*)(this->nativeObj)));
+ }
+
  TValue TValue::SetInt(int32_t value)  {
    return TValue((value_t*)(value_set_int(((value_t*)(this->nativeObj)), value)));
  }
@@ -541,6 +549,10 @@
 
  ret_t TGlobal::Quit()  {
    return tk_quit();
+ }
+
+ ret_t TGlobal::QuitEx(uint32_t delay)  {
+   return tk_quit_ex(delay);
  }
 
  int32_t TGlobal::GetPointerX()  {
@@ -1239,6 +1251,10 @@
     return widget_is_support_highlighter(((widget_t*)(this->nativeObj)));
  }
 
+ bool TWidget::HasHighlighter()  {
+    return widget_has_highlighter(((widget_t*)(this->nativeObj)));
+ }
+
  ret_t TWidget::UseStyle(const char* style)  {
    return widget_use_style(((widget_t*)(this->nativeObj)), style);
  }
@@ -1437,6 +1453,14 @@
 
  ret_t TWidget::InvalidateForce(TRect& r)  {
    return widget_invalidate_force(((widget_t*)(this->nativeObj)), ((const rect_t*)(r.nativeObj)));
+ }
+
+ ret_t TWidget::GetProp(const char* name, TValue& v)  {
+   return widget_get_prop(((widget_t*)(this->nativeObj)), name, ((value_t*)(v.nativeObj)));
+ }
+
+ ret_t TWidget::SetProp(const char* name, TValue& v)  {
+   return widget_set_prop(((widget_t*)(this->nativeObj)), name, ((const value_t*)(v.nativeObj)));
  }
 
  ret_t TWidget::SetProps(const char* params)  {
@@ -2043,6 +2067,14 @@
    return assets_manager_unref(((assets_manager_t*)(this->nativeObj)), ((const asset_info_t*)(info.nativeObj)));
  }
 
+ TWidget TWidgetAnimatorEvent::GetWidget() const {
+   return TWidget(((widget_animator_event_t*)(this->nativeObj))->widget);
+ }
+
+ void* TWidgetAnimatorEvent::GetAnimator() const {
+   return ((widget_animator_event_t*)(this->nativeObj))->animator;
+ }
+
  const char* TModelEvent::GetName() const {
    return ((model_event_t*)(this->nativeObj))->name;
  }
@@ -2053,6 +2085,14 @@
 
  TObject TModelEvent::GetModel() const {
    return TObject(((model_event_t*)(this->nativeObj))->model);
+ }
+
+ xy_t TWheelEvent::GetX() const {
+   return ((wheel_event_t*)(this->nativeObj))->x;
+ }
+
+ xy_t TWheelEvent::GetY() const {
+   return ((wheel_event_t*)(this->nativeObj))->y;
  }
 
  int32_t TWheelEvent::GetDy() const {
@@ -2205,6 +2245,14 @@
 
  void* TSystemEvent::GetSdlEvent() const {
    return ((system_event_t*)(this->nativeObj))->sdl_event;
+ }
+
+ TWidget TUiLoadEvent::GetRoot() const {
+   return TWidget(((ui_load_event_t*)(this->nativeObj))->root);
+ }
+
+ const char* TUiLoadEvent::GetName() const {
+   return ((ui_load_event_t*)(this->nativeObj))->name;
  }
 
  ret_t TFontManager::UnloadFont(const char* name, font_size_t size)  {
@@ -2411,6 +2459,10 @@
    return window_manager_set_show_fps(((widget_t*)(this->nativeObj)), show_fps);
  }
 
+ ret_t TWindowManager::SetShowFpsPosition(xy_t x, xy_t y)  {
+   return window_manager_set_show_fps_position(((widget_t*)(this->nativeObj)), x, y);
+ }
+
  ret_t TWindowManager::SetMaxFps(uint32_t max_fps)  {
    return window_manager_set_max_fps(((widget_t*)(this->nativeObj)), max_fps);
  }
@@ -2441,6 +2493,10 @@
 
  ret_t TWindowManager::Resize(wh_t w, wh_t h)  {
    return window_manager_resize(((widget_t*)(this->nativeObj)), w, h);
+ }
+
+ ret_t TWindowManager::SetFullscreen(bool fullscreen)  {
+   return window_manager_set_fullscreen(((widget_t*)(this->nativeObj)), fullscreen);
  }
 
  ret_t TWindowManager::CloseAll()  {
@@ -3251,6 +3307,14 @@
    return hscroll_label_set_stop_at_begin(((widget_t*)(this->nativeObj)), stop_at_begin);
  }
 
+ ret_t THscrollLabel::SetDelay(uint32_t delay)  {
+   return hscroll_label_set_delay(((widget_t*)(this->nativeObj)), delay);
+ }
+
+ ret_t THscrollLabel::SetLoopIntervalDistance(int32_t loop_interval_distance)  {
+   return hscroll_label_set_loop_interval_distance(((widget_t*)(this->nativeObj)), loop_interval_distance);
+ }
+
  ret_t THscrollLabel::SetXoffset(int32_t xoffset)  {
    return hscroll_label_set_xoffset(((widget_t*)(this->nativeObj)), xoffset);
  }
@@ -3291,6 +3355,10 @@
    return ((hscroll_label_t*)(this->nativeObj))->duration;
  }
 
+ uint32_t THscrollLabel::GetDelay() const {
+   return ((hscroll_label_t*)(this->nativeObj))->delay;
+ }
+
  float_t THscrollLabel::GetSpeed() const {
    return ((hscroll_label_t*)(this->nativeObj))->speed;
  }
@@ -3305,6 +3373,10 @@
 
  bool THscrollLabel::GetStopAtBegin() const {
    return ((hscroll_label_t*)(this->nativeObj))->stop_at_begin;
+ }
+
+ int32_t THscrollLabel::GetLoopIntervalDistance() const {
+   return ((hscroll_label_t*)(this->nativeObj))->loop_interval_distance;
  }
 
  TWidget TListItem::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -3399,10 +3471,6 @@
    return scroll_bar_add_delta(((widget_t*)(this->nativeObj)), delta);
  }
 
- ret_t TScrollBar::ScrollDelta(int32_t delta)  {
-   return scroll_bar_scroll_delta(((widget_t*)(this->nativeObj)), delta);
- }
-
  ret_t TScrollBar::SetValueOnly(int32_t value)  {
    return scroll_bar_set_value_only(((widget_t*)(this->nativeObj)), value);
  }
@@ -3427,6 +3495,14 @@
    return scroll_bar_show_by_opacity_animation(((widget_t*)(this->nativeObj)), duration, delay);
  }
 
+ ret_t TScrollBar::SetWheelScroll(bool scroll)  {
+   return scroll_bar_set_wheel_scroll(((widget_t*)(this->nativeObj)), scroll);
+ }
+
+ ret_t TScrollBar::SetScrollDelta(uint32_t scroll_delta)  {
+   return scroll_bar_set_scroll_delta(((widget_t*)(this->nativeObj)), scroll_delta);
+ }
+
  int32_t TScrollBar::GetVirtualSize() const {
    return ((scroll_bar_t*)(this->nativeObj))->virtual_size;
  }
@@ -3443,12 +3519,20 @@
    return ((scroll_bar_t*)(this->nativeObj))->animator_time;
  }
 
+ uint32_t TScrollBar::GetScrollDelta() const {
+   return ((scroll_bar_t*)(this->nativeObj))->scroll_delta;
+ }
+
  bool TScrollBar::GetAnimatable() const {
    return ((scroll_bar_t*)(this->nativeObj))->animatable;
  }
 
  bool TScrollBar::GetAutoHide() const {
    return ((scroll_bar_t*)(this->nativeObj))->auto_hide;
+ }
+
+ bool TScrollBar::GetWheelScroll() const {
+   return ((scroll_bar_t*)(this->nativeObj))->wheel_scroll;
  }
 
  TWidget TScrollView::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -3931,6 +4015,10 @@
    return text_selector_set_mask_area_scale(((widget_t*)(this->nativeObj)), mask_area_scale);
  }
 
+ ret_t TTextSelector::SetEllipses(bool ellipses)  {
+   return text_selector_set_ellipses(((widget_t*)(this->nativeObj)), ellipses);
+ }
+
  uint32_t TTextSelector::GetVisibleNr() const {
    return ((text_selector_t*)(this->nativeObj))->visible_nr;
  }
@@ -3961,6 +4049,10 @@
 
  bool TTextSelector::GetEnableValueAnimator() const {
    return ((text_selector_t*)(this->nativeObj))->enable_value_animator;
+ }
+
+ bool TTextSelector::GetEllipses() const {
+   return ((text_selector_t*)(this->nativeObj))->ellipses;
  }
 
  easing_type_t TTextSelector::GetMaskEasing() const {
@@ -4415,6 +4507,10 @@
     return edit_get_selected_text(((widget_t*)(this->nativeObj)));
  }
 
+ ret_t TEdit::SetFocusNextWhenEnter(bool focus_next_when_enter)  {
+   return edit_set_focus_next_when_enter(((widget_t*)(this->nativeObj)), focus_next_when_enter);
+ }
+
  char* TEdit::GetTips() const {
    return ((edit_t*)(this->nativeObj))->tips;
  }
@@ -4425,6 +4521,10 @@
 
  char* TEdit::GetActionText() const {
    return ((edit_t*)(this->nativeObj))->action_text;
+ }
+
+ char* TEdit::GetValidator() const {
+   return ((edit_t*)(this->nativeObj))->validator;
  }
 
  char* TEdit::GetKeyboard() const {
@@ -4475,6 +4575,10 @@
    return ((edit_t*)(this->nativeObj))->cancelable;
  }
 
+ bool TEdit::GetFocusNextWhenEnter() const {
+   return ((edit_t*)(this->nativeObj))->focus_next_when_enter;
+ }
+
  TWidget TGridItem::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TGridItem((widget_t*)(grid_item_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
@@ -4511,6 +4615,14 @@
    return TGroupBox((widget_t*)(group_box_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
 
+ ret_t TGroupBox::SetValue(uint32_t value)  {
+   return group_box_set_value(((widget_t*)(this->nativeObj)), value);
+ }
+
+ uint32_t TGroupBox::GetValue() const {
+   return ((group_box_t*)(this->nativeObj))->value;
+ }
+
  TWidget TLabel::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TLabel((widget_t*)(label_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
@@ -4531,6 +4643,10 @@
    return label_set_word_wrap(((widget_t*)(this->nativeObj)), word_wrap);
  }
 
+ ret_t TLabel::SetEllipses(bool ellipses)  {
+   return label_set_ellipses(((widget_t*)(this->nativeObj)), ellipses);
+ }
+
  ret_t TLabel::ResizeToContent(uint32_t min_w, uint32_t max_w, uint32_t min_h, uint32_t max_h)  {
    return label_resize_to_content(((widget_t*)(this->nativeObj)), min_w, max_w, min_h, max_h);
  }
@@ -4545,6 +4661,10 @@
 
  bool TLabel::GetWordWrap() const {
    return ((label_t*)(this->nativeObj))->word_wrap;
+ }
+
+ bool TLabel::GetEllipses() const {
+   return ((label_t*)(this->nativeObj))->ellipses;
  }
 
  int32_t TLabel::GetMaxW() const {
@@ -5049,6 +5169,10 @@
 
  ret_t TObjectDefault::ClearProps()  {
    return object_default_clear_props(((object_t*)(this->nativeObj)));
+ }
+
+ ret_t TObjectDefault::SetKeepPropType(bool keep_prop_type)  {
+   return object_default_set_keep_prop_type(((object_t*)(this->nativeObj)), keep_prop_type);
  }
 
  void* TTimerInfo::GetCtx() const {

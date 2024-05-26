@@ -123,6 +123,8 @@ declare function value_dup_str(v : any, value : string) : any;
 declare function value_str(v : any) : string;
 declare function value_str_ex(v : any, buff : string, size : number) : string;
 declare function value_is_null(value : any) : boolean;
+declare function value_equal(value : any, other : any) : boolean;
+declare function value_int(v : any) : number;
 declare function value_set_int(v : any, value : any) : any;
 declare function value_set_object(v : any, value : any) : any;
 declare function value_object(v : any) : any;
@@ -141,6 +143,7 @@ declare function tk_pre_init() : TRet;
 declare function tk_init(w : number, h : number, app_type : TAppType, app_name : string, app_root : string) : TRet;
 declare function tk_run() : TRet;
 declare function tk_quit() : TRet;
+declare function tk_quit_ex(delay : number) : TRet;
 declare function tk_get_pointer_x() : number;
 declare function tk_get_pointer_y() : number;
 declare function tk_is_pointer_pressed() : boolean;
@@ -245,9 +248,6 @@ declare function EVT_WILL_RESIZE():any;
 declare function EVT_RESIZE():any;
 declare function EVT_WILL_MOVE_RESIZE():any;
 declare function EVT_MOVE_RESIZE():any;
-declare function EVT_VALUE_WILL_CHANGE():any;
-declare function EVT_VALUE_CHANGED():any;
-declare function EVT_VALUE_CHANGING():any;
 declare function EVT_PAINT():any;
 declare function EVT_BEFORE_PAINT():any;
 declare function EVT_AFTER_PAINT():any;
@@ -293,6 +293,8 @@ declare function EVT_WIDGET_CREATED():any;
 declare function EVT_REQUEST_QUIT_APP():any;
 declare function EVT_THEME_WILL_CHANGE():any;
 declare function EVT_THEME_CHANGED():any;
+declare function EVT_WIDGET_WILL_UPDATE_STYLE():any;
+declare function EVT_WIDGET_UPDATE_STYLE():any;
 declare function EVT_WIDGET_ADD_CHILD():any;
 declare function EVT_WIDGET_REMOVE_CHILD():any;
 declare function EVT_SCROLL_START():any;
@@ -312,6 +314,9 @@ declare function EVT_SYSTEM():any;
 declare function EVT_DROP_FILE():any;
 declare function EVT_LOCALE_INFOS_LOAD_INFO():any;
 declare function EVT_LOCALE_INFOS_UNLOAD_INFO():any;
+declare function EVT_ACTIVATED():any;
+declare function EVT_UNACTIVATED():any;
+declare function EVT_UI_LOAD():any;
 declare function EVT_REQ_START():any;
 declare function EVT_USER_START():any;
 declare function EVT_NONE():any;
@@ -327,6 +332,10 @@ declare function EVT_PROGRESS():any;
 declare function EVT_DONE():any;
 declare function EVT_ERROR():any;
 declare function EVT_DESTROY():any;
+declare function EVT_VALUE_WILL_CHANGE():any;
+declare function EVT_VALUE_CHANGED():any;
+declare function EVT_VALUE_CHANGING():any;
+declare function EVT_LOG_MESSAGE():any;
 declare function event_from_name(name : string) : number;
 declare function event_cast(event : any) : any;
 declare function event_get_type(event : any) : number;
@@ -533,6 +542,7 @@ declare function locale_infos_off(id : number) : TRet;
 declare function locale_infos_reload_all() : TRet;
 declare function STYLE_ID_BG_COLOR():any;
 declare function STYLE_ID_FG_COLOR():any;
+declare function STYLE_ID_DRAGGER_COLOR():any;
 declare function STYLE_ID_MASK_COLOR():any;
 declare function STYLE_ID_FONT_NAME():any;
 declare function STYLE_ID_FONT_SIZE():any;
@@ -745,9 +755,11 @@ declare function WIDGET_PROP_REVERSE():any;
 declare function WIDGET_PROP_LENGTH():any;
 declare function WIDGET_PROP_LINE_WRAP():any;
 declare function WIDGET_PROP_WORD_WRAP():any;
+declare function WIDGET_PROP_ELLIPSES():any;
 declare function WIDGET_PROP_TEXT():any;
 declare function WIDGET_PROP_TR_TEXT():any;
 declare function WIDGET_PROP_STYLE():any;
+declare function WIDGET_PROP_STATE():any;
 declare function WIDGET_PROP_ENABLE():any;
 declare function WIDGET_PROP_FEEDBACK():any;
 declare function WIDGET_PROP_FLOATING():any;
@@ -869,6 +881,10 @@ declare function WIDGET_PROP_ANIMATING_TIME():any;
 declare function WIDGET_PROP_ANIMATE_PREFIX():any;
 declare function WIDGET_PROP_ANIMATE_ANIMATING_TIME():any;
 declare function WIDGET_PROP_DIRTY_RECT():any;
+declare function WIDGET_PROP_SCREEN_SAVER_TIME():any;
+declare function WIDGET_PROP_SHOW_FPS():any;
+declare function WIDGET_PROP_MAX_FPS():any;
+declare function WIDGET_PROP_VALIDATOR():any;
 declare function WIDGET_TYPE_NONE():any;
 declare function WIDGET_TYPE_WINDOW_MANAGER():any;
 declare function WIDGET_TYPE_NORMAL_WINDOW():any;
@@ -996,6 +1012,7 @@ declare function widget_add_value_int(widget : any, delta : number) : TRet;
 declare function widget_animate_value_to(widget : any, value : any, duration : number) : TRet;
 declare function widget_is_style_exist(widget : any, style_name : string, state_name : string) : boolean;
 declare function widget_is_support_highlighter(widget : any) : boolean;
+declare function widget_has_highlighter(widget : any) : boolean;
 declare function widget_use_style(widget : any, style : string) : TRet;
 declare function widget_set_text_utf8(widget : any, text : string) : TRet;
 declare function widget_set_text_utf8_ex(widget : any, text : string, check_diff : boolean) : TRet;
@@ -1046,6 +1063,8 @@ declare function widget_set_sensitive(widget : any, sensitive : boolean) : TRet;
 declare function widget_on(widget : any, type : number, on_event : Function, ctx : any) : number;
 declare function widget_off(widget : any, id : number) : TRet;
 declare function widget_invalidate_force(widget : any, r : any) : TRet;
+declare function widget_get_prop(widget : any, name : string, v : any) : TRet;
+declare function widget_set_prop(widget : any, name : string, v : any) : TRet;
 declare function widget_set_props(widget : any, params : string) : TRet;
 declare function widget_set_prop_str(widget : any, name : string, v : string) : TRet;
 declare function widget_get_prop_str(widget : any, name : string, defval : string) : string;
@@ -1347,6 +1366,7 @@ declare function OBJECT_CMD_DETAIL():any;
 declare function OBJECT_CMD_EDIT():any;
 declare function OBJECT_PROP_SIZE():any;
 declare function OBJECT_PROP_CHECKED():any;
+declare function OBJECT_PROP_SELECTED_INDEX():any;
 declare function rlog_create(filename_pattern : string, max_size : number, buff_size : number) : any;
 declare function rlog_write(log : any, str : string) : TRet;
 declare function time_now_s() : number;
@@ -1375,6 +1395,8 @@ declare function RET_IO():any;
 declare function RET_EOS():any;
 declare function RET_NOT_MODIFIED():any;
 declare function RET_NO_PERMISSION():any;
+declare function RET_INVALID_ADDR():any;
+declare function RET_EXCEED_RANGE():any;
 declare function RET_MAX_NR():any;
 declare function VALUE_TYPE_INVALID():any;
 declare function VALUE_TYPE_BOOL():any;
@@ -1409,11 +1431,16 @@ declare function assets_manager_set_theme(am : any, theme : string) : TRet;
 declare function assets_manager_ref(am : any, type : TAssetType, name : string) : any;
 declare function assets_manager_ref_ex(am : any, type : TAssetType, subtype : number, name : string) : any;
 declare function assets_manager_unref(am : any, info : any) : TRet;
+declare function widget_animator_event_cast(event : any) : any;
+declare function widget_animator_event_t_get_prop_widget(nativeObj : any) : any;
+declare function widget_animator_event_t_get_prop_animator(nativeObj : any) : any;
 declare function model_event_cast(event : any) : any;
 declare function model_event_t_get_prop_name(nativeObj : any) : string;
 declare function model_event_t_get_prop_change_type(nativeObj : any) : string;
 declare function model_event_t_get_prop_model(nativeObj : any) : any;
 declare function wheel_event_cast(event : any) : any;
+declare function wheel_event_t_get_prop_x(nativeObj : any) : number;
+declare function wheel_event_t_get_prop_y(nativeObj : any) : number;
 declare function wheel_event_t_get_prop_dy(nativeObj : any) : number;
 declare function wheel_event_t_get_prop_alt(nativeObj : any) : boolean;
 declare function wheel_event_t_get_prop_ctrl(nativeObj : any) : boolean;
@@ -1421,7 +1448,6 @@ declare function wheel_event_t_get_prop_shift(nativeObj : any) : boolean;
 declare function orientation_event_cast(event : any) : any;
 declare function orientation_event_t_get_prop_orientation(nativeObj : any) : any;
 declare function orientation_event_t_get_prop_old_orientation(nativeObj : any) : any;
-declare function value_change_event_cast(event : any) : any;
 declare function offset_change_event_cast(event : any) : any;
 declare function pointer_event_cast(event : any) : any;
 declare function pointer_event_t_get_prop_x(nativeObj : any) : number;
@@ -1463,6 +1489,9 @@ declare function drop_file_event_cast(event : any) : any;
 declare function drop_file_event_t_get_prop_filename(nativeObj : any) : string;
 declare function system_event_cast(event : any) : any;
 declare function system_event_t_get_prop_sdl_event(nativeObj : any) : any;
+declare function ui_load_event_cast(event : any) : any;
+declare function ui_load_event_t_get_prop_root(nativeObj : any) : any;
+declare function ui_load_event_t_get_prop_name(nativeObj : any) : string;
 declare function font_manager_unload_font(fm : any, name : string, size : number) : TRet;
 declare function font_manager_shrink_cache(fm : any, cache_size : number) : TRet;
 declare function font_manager_unload_all(fm : any) : TRet;
@@ -1519,6 +1548,7 @@ declare function window_manager_get_pointer_y(widget : any) : number;
 declare function window_manager_get_pointer_pressed(widget : any) : boolean;
 declare function window_manager_is_animating(widget : any) : boolean;
 declare function window_manager_set_show_fps(widget : any, show_fps : boolean) : TRet;
+declare function window_manager_set_show_fps_position(widget : any, x : number, y : number) : TRet;
 declare function window_manager_set_max_fps(widget : any, max_fps : number) : TRet;
 declare function window_manager_set_ignore_input_events(widget : any, ignore_input_events : boolean) : TRet;
 declare function window_manager_set_screen_saver_time(widget : any, screen_saver_time : number) : TRet;
@@ -1527,6 +1557,7 @@ declare function window_manager_back(widget : any) : TRet;
 declare function window_manager_back_to_home(widget : any) : TRet;
 declare function window_manager_back_to(widget : any, target : string) : TRet;
 declare function window_manager_resize(widget : any, w : number, h : number) : TRet;
+declare function window_manager_set_fullscreen(widget : any, fullscreen : boolean) : TRet;
 declare function window_manager_close_all(widget : any) : TRet;
 declare function canvas_widget_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function canvas_widget_cast(widget : any) : any;
@@ -1746,6 +1777,8 @@ declare function hscroll_label_set_loop(widget : any, loop : boolean) : TRet;
 declare function hscroll_label_set_yoyo(widget : any, yoyo : boolean) : TRet;
 declare function hscroll_label_set_ellipses(widget : any, ellipses : boolean) : TRet;
 declare function hscroll_label_set_stop_at_begin(widget : any, stop_at_begin : boolean) : TRet;
+declare function hscroll_label_set_delay(widget : any, delay : number) : TRet;
+declare function hscroll_label_set_loop_interval_distance(widget : any, loop_interval_distance : number) : TRet;
 declare function hscroll_label_set_xoffset(widget : any, xoffset : number) : TRet;
 declare function hscroll_label_start(widget : any) : TRet;
 declare function hscroll_label_stop(widget : any) : TRet;
@@ -1757,10 +1790,12 @@ declare function hscroll_label_t_get_prop_yoyo(nativeObj : any) : boolean;
 declare function hscroll_label_t_get_prop_ellipses(nativeObj : any) : boolean;
 declare function hscroll_label_t_get_prop_lull(nativeObj : any) : number;
 declare function hscroll_label_t_get_prop_duration(nativeObj : any) : number;
+declare function hscroll_label_t_get_prop_delay(nativeObj : any) : number;
 declare function hscroll_label_t_get_prop_speed(nativeObj : any) : number;
 declare function hscroll_label_t_get_prop_xoffset(nativeObj : any) : number;
 declare function hscroll_label_t_get_prop_text_w(nativeObj : any) : number;
 declare function hscroll_label_t_get_prop_stop_at_begin(nativeObj : any) : boolean;
+declare function hscroll_label_t_get_prop_loop_interval_distance(nativeObj : any) : number;
 declare function list_item_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function list_item_cast(widget : any) : any;
 declare function list_view_h_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -1788,19 +1823,22 @@ declare function scroll_bar_set_params(widget : any, virtual_size : number, row 
 declare function scroll_bar_scroll_to(widget : any, value : any, duration : number) : TRet;
 declare function scroll_bar_set_value(widget : any, value : any) : TRet;
 declare function scroll_bar_add_delta(widget : any, delta : number) : TRet;
-declare function scroll_bar_scroll_delta(widget : any, delta : number) : TRet;
 declare function scroll_bar_set_value_only(widget : any, value : any) : TRet;
 declare function scroll_bar_set_auto_hide(widget : any, auto_hide : boolean) : TRet;
 declare function scroll_bar_is_mobile(widget : any) : boolean;
 declare function scroll_bar_set_animator_time(widget : any, animator_time : number) : TRet;
 declare function scroll_bar_hide_by_opacity_animation(widget : any, duration : number, delay : number) : TRet;
 declare function scroll_bar_show_by_opacity_animation(widget : any, duration : number, delay : number) : TRet;
+declare function scroll_bar_set_wheel_scroll(widget : any, scroll : boolean) : TRet;
+declare function scroll_bar_set_scroll_delta(widget : any, scroll_delta : number) : TRet;
 declare function scroll_bar_t_get_prop_virtual_size(nativeObj : any) : number;
 declare function scroll_bar_t_get_prop_value(nativeObj : any) : number;
 declare function scroll_bar_t_get_prop_row(nativeObj : any) : number;
 declare function scroll_bar_t_get_prop_animator_time(nativeObj : any) : number;
+declare function scroll_bar_t_get_prop_scroll_delta(nativeObj : any) : number;
 declare function scroll_bar_t_get_prop_animatable(nativeObj : any) : boolean;
 declare function scroll_bar_t_get_prop_auto_hide(nativeObj : any) : boolean;
+declare function scroll_bar_t_get_prop_wheel_scroll(nativeObj : any) : boolean;
 declare function scroll_view_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function scroll_view_cast(widget : any) : any;
 declare function scroll_view_set_virtual_w(widget : any, w : number) : TRet;
@@ -1928,6 +1966,7 @@ declare function text_selector_set_animating_time(widget : any, animating_time :
 declare function text_selector_set_enable_value_animator(widget : any, enable_value_animator : boolean) : TRet;
 declare function text_selector_set_mask_easing(widget : any, mask_easing : TEasingType) : TRet;
 declare function text_selector_set_mask_area_scale(widget : any, mask_area_scale : number) : TRet;
+declare function text_selector_set_ellipses(widget : any, ellipses : boolean) : TRet;
 declare function text_selector_t_get_prop_visible_nr(nativeObj : any) : number;
 declare function text_selector_t_get_prop_selected_index(nativeObj : any) : number;
 declare function text_selector_t_get_prop_options(nativeObj : any) : string;
@@ -1936,6 +1975,7 @@ declare function text_selector_t_get_prop_animating_time(nativeObj : any) : numb
 declare function text_selector_t_get_prop_localize_options(nativeObj : any) : boolean;
 declare function text_selector_t_get_prop_loop_options(nativeObj : any) : boolean;
 declare function text_selector_t_get_prop_enable_value_animator(nativeObj : any) : boolean;
+declare function text_selector_t_get_prop_ellipses(nativeObj : any) : boolean;
 declare function text_selector_t_get_prop_mask_easing(nativeObj : any) : TEasingType;
 declare function text_selector_t_get_prop_mask_area_scale(nativeObj : any) : number;
 declare function time_clock_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -1990,6 +2030,8 @@ declare function cmd_exec_event_t_get_prop_name(nativeObj : any) : string;
 declare function cmd_exec_event_t_get_prop_args(nativeObj : any) : string;
 declare function cmd_exec_event_t_get_prop_result(nativeObj : any) : TRet;
 declare function cmd_exec_event_t_get_prop_can_exec(nativeObj : any) : boolean;
+declare function value_change_event_cast(event : any) : any;
+declare function log_message_event_cast(event : any) : any;
 declare function app_bar_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function app_bar_cast(widget : any) : any;
 declare function button_group_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -2070,9 +2112,11 @@ declare function edit_set_cursor(widget : any, cursor : number) : TRet;
 declare function edit_get_cursor(widget : any) : number;
 declare function edit_set_select(widget : any, start : number, end : number) : TRet;
 declare function edit_get_selected_text(widget : any) : string;
+declare function edit_set_focus_next_when_enter(widget : any, focus_next_when_enter : boolean) : TRet;
 declare function edit_t_get_prop_tips(nativeObj : any) : string;
 declare function edit_t_get_prop_tr_tips(nativeObj : any) : string;
 declare function edit_t_get_prop_action_text(nativeObj : any) : string;
+declare function edit_t_get_prop_validator(nativeObj : any) : string;
 declare function edit_t_get_prop_keyboard(nativeObj : any) : string;
 declare function edit_t_get_prop_min(nativeObj : any) : number;
 declare function edit_t_get_prop_max(nativeObj : any) : number;
@@ -2085,6 +2129,7 @@ declare function edit_t_get_prop_select_none_when_focused(nativeObj : any) : boo
 declare function edit_t_get_prop_open_im_when_focused(nativeObj : any) : boolean;
 declare function edit_t_get_prop_close_im_when_blured(nativeObj : any) : boolean;
 declare function edit_t_get_prop_cancelable(nativeObj : any) : boolean;
+declare function edit_t_get_prop_focus_next_when_enter(nativeObj : any) : boolean;
 declare function grid_item_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function grid_item_cast(widget : any) : any;
 declare function grid_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -2096,17 +2141,21 @@ declare function grid_t_get_prop_rows(nativeObj : any) : number;
 declare function grid_t_get_prop_columns_definition(nativeObj : any) : string;
 declare function grid_t_get_prop_show_grid(nativeObj : any) : boolean;
 declare function group_box_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function group_box_set_value(widget : any, value : any) : TRet;
 declare function group_box_cast(widget : any) : any;
+declare function group_box_t_get_prop_value(nativeObj : any) : number;
 declare function label_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function label_set_length(widget : any, length : number) : TRet;
 declare function label_set_max_w(widget : any, max_w : number) : TRet;
 declare function label_set_line_wrap(widget : any, line_wrap : boolean) : TRet;
 declare function label_set_word_wrap(widget : any, word_wrap : boolean) : TRet;
+declare function label_set_ellipses(widget : any, ellipses : boolean) : TRet;
 declare function label_resize_to_content(widget : any, min_w : number, max_w : number, min_h : number, max_h : number) : TRet;
 declare function label_cast(widget : any) : any;
 declare function label_t_get_prop_length(nativeObj : any) : number;
 declare function label_t_get_prop_line_wrap(nativeObj : any) : boolean;
 declare function label_t_get_prop_word_wrap(nativeObj : any) : boolean;
+declare function label_t_get_prop_ellipses(nativeObj : any) : boolean;
 declare function label_t_get_prop_max_w(nativeObj : any) : number;
 declare function pages_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function pages_cast(widget : any) : any;
@@ -2248,6 +2297,7 @@ declare function object_default_create() : any;
 declare function object_default_create_ex(enable_path : boolean) : any;
 declare function object_default_unref(obj : any) : TRet;
 declare function object_default_clear_props(obj : any) : TRet;
+declare function object_default_set_keep_prop_type(obj : any, keep_prop_type : boolean) : TRet;
 declare function timer_info_cast(timer : any) : any;
 declare function timer_info_t_get_prop_ctx(nativeObj : any) : any;
 declare function timer_info_t_get_prop_extra_ctx(nativeObj : any) : any;
@@ -3562,6 +3612,7 @@ export class TObject extends TEmitter {
  *在C/C++中，一般不需动态创建对象，直接声明并初始化即可。如：
  *
  *
+ *
  *> 在脚本语言中，需要动态创建对象。
  *
  */
@@ -3862,6 +3913,29 @@ export class TValue {
 
 
   /**
+   * 判断两个value是否相同。
+   * 
+   * @param other value对象。
+   *
+   * @returns 为空值返回TRUE，否则返回FALSE。
+   */
+ equal(other : TValue) : boolean  {
+    return value_equal(this != null ? (this.nativeObj || this) : null, other != null ? (other.nativeObj || other) : null);
+ }
+
+
+  /**
+   * 转换为int的值。
+   * 
+   *
+   * @returns 值。
+   */
+ int() : number  {
+    return value_int(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
    * 设置类型为int的值。
    * 
    * @param value 待设置的值。
@@ -4075,6 +4149,18 @@ export class TGlobal {
    */
  static quit() : TRet  {
     return tk_quit();
+ }
+
+
+  /**
+   * 退出TK事件主循环。
+   * 
+   * @param delay 延迟退出的时间(毫秒)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ static quitEx(delay : number) : TRet  {
+    return tk_quit_ex(delay);
  }
 
 
@@ -5047,24 +5133,6 @@ export enum TEventType {
  MOVE_RESIZE = EVT_MOVE_RESIZE(),
 
   /**
-   * 控件的值即将改变的事件名(value_change_event_t)。
-   *
-   */
- VALUE_WILL_CHANGE = EVT_VALUE_WILL_CHANGE(),
-
-  /**
-   * 控件的值改变的事件名(value_change_event_t)。
-   *
-   */
- VALUE_CHANGED = EVT_VALUE_CHANGED(),
-
-  /**
-   * 控件的值持续改变(如编辑器正在编辑)的事件名(value_change_event_t)。
-   *
-   */
- VALUE_CHANGING = EVT_VALUE_CHANGING(),
-
-  /**
    * 绘制的事件名(paint_event_t)。
    *
    */
@@ -5340,6 +5408,18 @@ export enum TEventType {
  THEME_CHANGED = EVT_THEME_CHANGED(),
 
   /**
+   * 控件根据自己当前状态即将更新style(event_t)。
+   *
+   */
+ WIDGET_WILL_UPDATE_STYLE = EVT_WIDGET_WILL_UPDATE_STYLE(),
+
+  /**
+   * 控件根据自己当前状态更新style(event_t)。
+   *
+   */
+ WIDGET_UPDATE_STYLE = EVT_WIDGET_UPDATE_STYLE(),
+
+  /**
    * 控件加载新的子控件(event_t)。
    *
    */
@@ -5376,13 +5456,13 @@ export enum TEventType {
  MULTI_GESTURE = EVT_MULTI_GESTURE(),
 
   /**
-   * 页面改变了(event_t)。
+   * 当前看到的页面改变了(event_t)。
    *
    */
  PAGE_CHANGED = EVT_PAGE_CHANGED(),
 
   /**
-   * 页面正在改变(offset_change_event_t)。
+   * 当前看到的页面正在改变(offset_change_event_t)。
    *
    */
  PAGE_CHANGING = EVT_PAGE_CHANGING(),
@@ -5452,6 +5532,24 @@ export enum TEventType {
    *
    */
  LOCALE_INFOS_UNLOAD_INFO = EVT_LOCALE_INFOS_UNLOAD_INFO(),
+
+  /**
+   * 控件进入激活状态(event_t)。
+   *
+   */
+ ACTIVATED = EVT_ACTIVATED(),
+
+  /**
+   * 控件退出激活状态(event_t)。
+   *
+   */
+ UNACTIVATED = EVT_UNACTIVATED(),
+
+  /**
+   * UI加载完成事件(event_t)。
+   *
+   */
+ UI_LOAD = EVT_UI_LOAD(),
 
   /**
    * event queue其它请求编号起始值。
@@ -5542,6 +5640,30 @@ export enum TEventType {
    *
    */
  DESTROY = EVT_DESTROY(),
+
+  /**
+   * 值即将改变的事件名(value_change_event_t)。
+   *
+   */
+ VALUE_WILL_CHANGE = EVT_VALUE_WILL_CHANGE(),
+
+  /**
+   * 值改变的事件名(value_change_event_t)。
+   *
+   */
+ VALUE_CHANGED = EVT_VALUE_CHANGED(),
+
+  /**
+   * 值持续改变(如编辑器正在编辑)的事件名(value_change_event_t)。
+   *
+   */
+ VALUE_CHANGING = EVT_VALUE_CHANGING(),
+
+  /**
+   * 日志信息。
+   *
+   */
+ LOG_MESSAGE = EVT_LOG_MESSAGE(),
 };
 
 
@@ -5700,6 +5822,7 @@ export enum TGlyphFormat {
  *> idle可以用来实现一些异步处理。
  *
  *示例：
+ *
  *
  *
  *> 在非GUI线程请用idle\_queue。
@@ -7088,6 +7211,12 @@ export enum TStyleId {
  FG_COLOR = STYLE_ID_FG_COLOR(),
 
   /**
+   * dragger颜色。
+   *
+   */
+ DRAGGER_COLOR = STYLE_ID_DRAGGER_COLOR(),
+
+  /**
    * 蒙版颜色。
    *
    */
@@ -7365,6 +7494,7 @@ export enum TStyleId {
  *widget从style对象中，获取诸如字体、颜色和图片相关的参数，根据这些参数来绘制界面。
  *
  *
+ *
  *属性名称的请参考[style\_id](style_id_t.md)
  *
  */
@@ -7563,6 +7693,7 @@ export class TTheme {
  *
  *示例：
  *
+ *
  *> 在非GUI线程请用timer\_queue。
  *
  */
@@ -7573,7 +7704,7 @@ export class TTimer {
    * 
    * @param on_timer timer回调函数。
    * @param ctx timer回调函数的上下文。
-   * @param duration 时间。
+   * @param duration 时间(毫秒)。
    *
    * @returns 返回timer的ID，TK_INVALID_ID表示失败。
    */
@@ -7646,7 +7777,7 @@ export class TTimer {
    * 修改指定的timer的duration，修改之后定时器重新开始计时。
    * 
    * @param timer_id timerID。
-   * @param duration 新的时间。
+   * @param duration 新的时间(毫秒)。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -7899,6 +8030,7 @@ export enum TBitmapFlag {
  *
  *
  *示例：
+ *
  *
  *
  *>请参考：https://www.w3schools.com/tags/ref_canvas.asp
@@ -9087,6 +9219,12 @@ export enum TWidgetProp {
  WORD_WRAP = WIDGET_PROP_WORD_WRAP(),
 
   /**
+   * 是否省略。
+   *
+   */
+ ELLIPSES = WIDGET_PROP_ELLIPSES(),
+
+  /**
    * 文本。
    *
    */
@@ -9103,6 +9241,12 @@ export enum TWidgetProp {
    *
    */
  STYLE = WIDGET_PROP_STYLE(),
+
+  /**
+   * 状态。
+   *
+   */
+ STATE = WIDGET_PROP_STATE(),
 
   /**
    * 是否启用。
@@ -9335,7 +9479,7 @@ export enum TWidgetProp {
  ALIGN_H = WIDGET_PROP_ALIGN_H(),
 
   /**
-   * 是否自动播放或指定播放的时间。
+   * 是否自动播放或指定播放的时间(毫秒)。
    *
    */
  AUTO_PLAY = WIDGET_PROP_AUTO_PLAY(),
@@ -9509,7 +9653,7 @@ export enum TWidgetProp {
  REPEAT = WIDGET_PROP_REPEAT(),
 
   /**
-   * 触发长按事件的时间(ms)。
+   * 触发长按事件的时间(毫秒)。
    *
    */
  LONG_PRESS_TIME = WIDGET_PROP_LONG_PRESS_TIME(),
@@ -9809,7 +9953,7 @@ export enum TWidgetProp {
  DRAG_THRESHOLD = WIDGET_PROP_DRAG_THRESHOLD(),
 
   /**
-   * 动画时间。
+   * 动画时间(毫秒)。
    *
    */
  ANIMATING_TIME = WIDGET_PROP_ANIMATING_TIME(),
@@ -9821,7 +9965,7 @@ export enum TWidgetProp {
  ANIMATE_PREFIX = WIDGET_PROP_ANIMATE_PREFIX(),
 
   /**
-   * 改变控件属性时附带动画的播放时间。
+   * 改变控件属性时附带动画的播放时间(毫秒)。
    *
    */
  ANIMATE_ANIMATING_TIME = WIDGET_PROP_ANIMATE_ANIMATING_TIME(),
@@ -9831,6 +9975,30 @@ export enum TWidgetProp {
    *
    */
  DIRTY_RECT = WIDGET_PROP_DIRTY_RECT(),
+
+  /**
+   * 屏幕保护时间(毫秒)。
+   *
+   */
+ SCREEN_SAVER_TIME = WIDGET_PROP_SCREEN_SAVER_TIME(),
+
+  /**
+   * 是否显示FPS。
+   *
+   */
+ SHOW_FPS = WIDGET_PROP_SHOW_FPS(),
+
+  /**
+   * 最大FPS。
+   *
+   */
+ MAX_FPS = WIDGET_PROP_MAX_FPS(),
+
+  /**
+   * 数据校验脚本。
+   *
+   */
+ VALIDATOR = WIDGET_PROP_VALIDATOR(),
 };
 
 
@@ -10489,10 +10657,42 @@ export enum TWidgetCursor {
 
 
 /**
- * widget_t* button = button_create(win, 10, 10, 128, 30);
- *widget_set_text(button, L"OK");
- *widget_on(button, EVT_CLICK, on_click, NULL);
+ * **widget_t** 是所有控件、窗口和窗口管理器的基类。
+ ***widget_t**也是一个容器，可放其它**widget_t**到它的内部，形成一个树形结构。
+ *
+ *
+ *
+ *通常**widget_t**通过一个矩形区域向用户呈现一些信息，接受用户的输入，并据此做出适当的反应。
+ *它负责控件的生命周期、通用状态、事件分发和Style的管理。
+ *本类提供的接口(函数和属性)除非特别说明，一般都适用于子类控件。
+ *
+ *为了便于解释，这里特别说明一下几个术语：
+ *
+ ** **父控件与子控件**：父控件与子控件指的两个控件的组合关系(这是在运行时决定的)。
+ *比如：在窗口中放一个按钮，此时，我们称按钮是窗口的子控件，窗口是按钮的父控件。
+ *
+ *
+ *
+ ** **子类控件与父类控件**：子类控件与父类控件指的两类控件的继承关系(这是在设计时决定的)。
+ *比如：我们称**button_t**是**widget_t**的子类控件，**widget_t**是**button_t**的父类控件。
+ *
+ *
+ *
+ *widget相关的函数都只能在GUI线程中执行，如果需在非GUI线程中想调用widget相关函数，
+ *请用idle\_queue或timer\_queue进行串行化。
+ *请参考[demo thread](https://github.com/zlgopen/awtk/blob/master/demos/demo_thread_app.c)
+ *
+ ***widget\_t**是抽象类，不要直接创建**widget\_t**的实例。控件支持两种创建方式：
+ *
+ ** 通过XML创建。如：
+ *
+ *```xml
+ *<button x="c" y="m" w="80" h="30" text="OK"/>
  *```
+ *
+ ** 通过代码创建。如：
+ *
+ *
  *
  */
 export class TWidget { 
@@ -10807,6 +11007,17 @@ export class TWidget {
 
 
   /**
+   * 判断widget拥有高亮属性。
+   * 
+   *
+   * @returns 拥有返回 TRUE，没有返回 FALSE。
+   */
+ hasHighlighter() : boolean  {
+    return widget_has_highlighter(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
    * 启用指定的style。
    * 
    * @param style style的名称。
@@ -10988,12 +11199,12 @@ export class TWidget {
 
 
   /**
-   * str_t str;
-   *str_init(&str, 0);
-   *str_from_wstr(&str, widget_get_text(target));
-   *log_debug("%s: %s\n", target->name, str.str);
-   *str_reset(&str);
-   *```
+   * 获取控件的文本。
+   *只是对widget\_get\_prop的包装，文本的意义由子类控件决定。
+   *
+   *如果希望获取UTF8格式的文本，可以参考下面的代码：
+   *
+   *
    * 
    *
    * @returns 返回文本。
@@ -11241,7 +11452,7 @@ export class TWidget {
   /**
    * 设置控件的状态。
    * 
-   * @param state 状态(必须为真正的常量字符串，在widget的整个生命周期有效)。
+   * @param state 状态。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -11411,10 +11622,10 @@ export class TWidget {
 
 
   /**
-   * widget_t* ok = button_create(win, 10, 10, 80, 30);
-   *widget_on(ok, EVT_CLICK, on_click, NULL);
+   * 注册指定事件的处理函数。
+   *使用示例：
    *
-   *```
+   *
    * 
    * @param type 事件类型。
    * @param on_event 事件处理函数。
@@ -11448,6 +11659,32 @@ export class TWidget {
    */
  invalidateForce(r : TRect) : TRet  {
     return widget_invalidate_force(this != null ? (this.nativeObj || this) : null, r != null ? (r.nativeObj || r) : null);
+ }
+
+
+  /**
+   * 获取控件指定属性的值。
+   * 
+   * @param name 属性的名称。
+   * @param v 返回属性的值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ getProp(name : string, v : TValue) : TRet  {
+    return widget_get_prop(this != null ? (this.nativeObj || this) : null, name, v != null ? (v.nativeObj || v) : null);
+ }
+
+
+  /**
+   * 设置控件指定属性的值。
+   * 
+   * @param name 属性的名称。
+   * @param v 属性的值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setProp(name : string, v : TValue) : TRet  {
+    return widget_set_prop(this != null ? (this.nativeObj || this) : null, name, v != null ? (v.nativeObj || v) : null);
  }
 
 
@@ -11750,8 +11987,13 @@ export class TWidget {
 
 
   /**
-   * widget_set_prop_bool(group, WIDGET_PROP_IS_KEYBOARD, TRUE);
-   *```
+   * 判断当前控件是否是keyboard。
+   *
+   *> keyboard收到pointer事件时，不会让当前控件失去焦点。
+   *
+   *在自定义软键盘时，将所有按钮放到一个容器当中，并设置为is_keyboard。
+   *
+   *
    * 
    *
    * @returns 返回FALSE表示不是，否则表示是。
@@ -12063,6 +12305,7 @@ export class TWidget {
 
   /**
    * 设置控件自己的布局参数。
+   *备注：下一帧才会生效数据
    * 
    * @param params 布局参数。
    *
@@ -12075,6 +12318,7 @@ export class TWidget {
 
   /**
    * 设置子控件的布局参数。
+   *备注：下一帧才会生效数据
    * 
    * @param params 布局参数。
    *
@@ -12087,6 +12331,7 @@ export class TWidget {
 
   /**
    * 设置控件自己的布局(缺省布局器)参数(过时，请用widget\_set\_self\_layout)。
+   *备注：下一帧才会生效数据
    * 
    * @param x x参数。
    * @param y y参数。
@@ -12133,8 +12378,15 @@ export class TWidget {
 
 
   /**
-   * widget_set_style_color(label, "normal:bg_color", 0xFF332211);
-   *```
+   * 设置颜色类型的style。
+   *
+   *> * [state 的取值](https://github.com/zlgopen/awtk/blob/master/docs/manual/widget_state_t.md)
+   *> * [name 的取值](https://github.com/zlgopen/awtk/blob/master/docs/theme.md)
+   *
+   *
+   *在下面这个例子中，R=0x11 G=0x22 B=0x33 A=0xFF
+   *
+   *
    * 
    * @param state_and_name 状态和名字，用英文的冒号分隔。
    * @param value 值。颜色值一般用十六进制表示，每两个数字表示一个颜色通道，从高位到低位，依次是ABGR。
@@ -12397,8 +12649,15 @@ export class TWidget {
 
 };
 /**
- * #include "conf_io/app_conf.h"
- *```
+ * 应用程序的配置信息。
+ *
+ *底层实现可以是任何格式，比如INI，XML，JSON和UBJSON。
+ *
+ *对于树状的文档，key可以是多级的，用.分隔。如network.ip。
+ *
+ *conf-io是可选组件，需要自己包含头文件，否则64位数据类型会被截断成32位的数据。
+ *
+ *
  *
  */
 export class TAppConf { 
@@ -14259,6 +14518,12 @@ export enum TObjectProp {
    *
    */
  CHECKED = OBJECT_PROP_CHECKED(),
+
+  /**
+   * 选中的索引。
+   *
+   */
+ SELECTED_INDEX = OBJECT_PROP_SELECTED_INDEX(),
 };
 
 
@@ -14279,10 +14544,9 @@ export class TRlog {
 
 
   /**
-   * rlog_t* log = rlog_create("./logs/%d.log", 1020*1024, 256);
-   *rlog_write(log, "hello\n");
-   *rlog_destroy(log);
-   *```
+   * 创建rlog对象。
+   *
+   *
    * 
    * @param filename_pattern 用来确定文件名的路径和文件名。
    * @param max_size log文件占用最大磁盘空间(字节)。
@@ -14309,7 +14573,7 @@ export class TRlog {
 };
 /**
  * 获取当前时间的函数。
- *这里的当前时间是相对的，在嵌入式系统一般相对于开机时间。
+ *这里的当前时间是相对的，在嵌入式系统一般相对于开机时间(毫秒)。
  *它本身并没有任何意义，一般用来计算时间间隔，如实现定时器和动画等等。
  *
  */
@@ -14508,6 +14772,18 @@ export enum TRet {
    *
    */
  NO_PERMISSION = RET_NO_PERMISSION(),
+
+  /**
+   * 无效地址。
+   *
+   */
+ INVALID_ADDR = RET_INVALID_ADDR(),
+
+  /**
+   * 超出范围。
+   *
+   */
+ EXCEED_RANGE = RET_EXCEED_RANGE(),
 
   /**
    * 最大值。
@@ -14795,6 +15071,47 @@ export class TAssetsManager extends TEmitter {
 
 };
 /**
+ * 控件动画事件。
+ *
+ */
+export class TWidgetAnimatorEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转widget_animator_event_t对象。
+   * 
+   * @param event event对象。
+   *
+   * @returns event对象。
+   */
+ static cast(event : TEvent) : TWidgetAnimatorEvent  {
+    return new TWidgetAnimatorEvent(widget_animator_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+
+  /**
+   * 控件对象。
+   *
+   */
+ get widget() : TWidget {
+   return new TWidget(widget_animator_event_t_get_prop_widget(this.nativeObj));
+ }
+
+
+  /**
+   * 控件动画句柄。
+   *
+   */
+ get animator() : any {
+   return widget_animator_event_t_get_prop_animator(this.nativeObj);
+ }
+
+};
+/**
  * model变化事件。
  *
  */
@@ -14864,6 +15181,24 @@ export class TWheelEvent extends TEvent {
    */
  static cast(event : TEvent) : TWheelEvent  {
     return new TWheelEvent(wheel_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+
+  /**
+   * x坐标。
+   *
+   */
+ get x() : number {
+   return wheel_event_t_get_prop_x(this.nativeObj);
+ }
+
+
+  /**
+   * y坐标。
+   *
+   */
+ get y() : number {
+   return wheel_event_t_get_prop_y(this.nativeObj);
  }
 
 
@@ -14945,30 +15280,7 @@ export class TOrientationEvent extends TEvent {
 
 };
 /**
- * 值变化事件。
- *
- */
-export class TValueChangeEvent extends TEvent { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   super(nativeObj);
- }
-
-
-  /**
-   * 把event对象转value_change_event_t对象。
-   * 
-   * @param event event对象。
-   *
-   * @returns event对象。
-   */
- static cast(event : TEvent) : TValueChangeEvent  {
-    return new TValueChangeEvent(value_change_event_cast(event != null ? (event.nativeObj || event) : null));
- }
-
-};
-/**
- * 值变化事件。
+ * offset变化事件。
  *
  */
 export class TOffsetChangeEvent extends TEvent { 
@@ -15157,8 +15469,7 @@ export class TKeyEvent extends TEvent {
 
 
   /**
-   * right alt键是否按下。
-   *ctrl键是否按下。
+   * ctrl键是否按下。
    *
    */
  get ctrl() : boolean {
@@ -15212,8 +15523,7 @@ export class TKeyEvent extends TEvent {
 
 
   /**
-   * left shift键是否按下。
-   *cmd/win键是否按下。
+   * cmd/win键是否按下。
    *
    */
  get cmd() : boolean {
@@ -15464,6 +15774,47 @@ export class TSystemEvent extends TEvent {
    */
  get sdlEvent() : any {
    return system_event_t_get_prop_sdl_event(this.nativeObj);
+ }
+
+};
+/**
+ * UI加载完成事件。
+ *
+ */
+export class TUiLoadEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转ui_load_event_t对象。
+   * 
+   * @param event event对象。
+   *
+   * @returns event 对象。
+   */
+ static cast(event : TEvent) : TUiLoadEvent  {
+    return new TUiLoadEvent(ui_load_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+
+  /**
+   * UI的根控件对象。
+   *
+   */
+ get root() : TWidget {
+   return new TWidget(ui_load_event_t_get_prop_root(this.nativeObj));
+ }
+
+
+  /**
+   * UI的名称。
+   *
+   */
+ get name() : string {
+   return ui_load_event_t_get_prop_name(this.nativeObj);
  }
 
 };
@@ -16179,6 +16530,19 @@ export class TWindowManager extends TWidget {
 
 
   /**
+   * 设置显示FPS的起始坐标。
+   * 
+   * @param x 左上角x坐标。
+   * @param y 左上角x坐标。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setShowFpsPosition(x : number, y : number) : TRet  {
+    return window_manager_set_show_fps_position(this != null ? (this.nativeObj || this) : null, x, y);
+ }
+
+
+  /**
    * 限制最大帧率。
    *
    *> TK\_MAX\_LOOP\_FPS/max\_fps最好是整数，比如TK\_MAX\_LOOP\_FPS为120，max\_fps可取60/30/20/10等。
@@ -16205,7 +16569,7 @@ export class TWindowManager extends TWidget {
 
 
   /**
-   * 设置屏保时间。
+   * 设置屏保时间(毫秒)。
    * 
    * @param screen_saver_time 屏保时间(单位毫秒), 为0关闭屏保。
    *
@@ -16282,6 +16646,18 @@ export class TWindowManager extends TWidget {
 
 
   /**
+   * 设置原生窗口是否全屏。
+   * 
+   * @param fullscreen 是否全屏
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setFullscreen(fullscreen : boolean) : TRet  {
+    return window_manager_set_fullscreen(this != null ? (this.nativeObj || this) : null, fullscreen);
+ }
+
+
+  /**
    * 关闭全部窗口。
    * 
    *
@@ -16311,11 +16687,14 @@ export class TWindowManager extends TWidget {
  *在c代码中使用函数canvas\_widget\_create创建画布控件。如：
  *
  *
+ *
  *> 创建之后，需要用widget\_on注册EVT\_PAINT事件，并在EVT\_PAINT事件处理函数中绘制。
+ *
  *
  *
  *绘制时，可以通过canvas接口去绘制，也可以通过vgcanvas接口去绘制。
  *先从evt获取canvas对象，再通过canvas\_get\_vgcanvas从canvas中获取vgcanvas对象。
+ *
  *
  *
  *> 完整示例请参考：
@@ -16517,6 +16896,7 @@ export class TColorPicker extends TWidget {
  *[draggable.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/draggable.xml)
  *
  *在c代码中使用函数draggable\_create创建按钮控件。如：
+ *
  *
  *
  *> draggable本身不可见，故无需style。
@@ -17315,6 +17695,7 @@ export class TFileChooser extends TEmitter {
  *在c代码中使用函数gauge\_pointer\_create创建仪表指针控件。如：
  *
  *
+ *
  *> 创建之后，需要用gauge\_pointer\_set\_image设置仪表指针图片。
  *
  */
@@ -17455,6 +17836,7 @@ export class TGaugePointer extends TWidget {
  *在c代码中使用函数gauge\_create创建表盘控件。如：
  *
  *
+ *
  *可用通过style来设置控件的显示风格，如背景和边框等。如：
  *
  *```xml
@@ -17578,6 +17960,7 @@ export class TGauge extends TWidget {
  *在c代码中使用函数image\_animation\_create创建图片动画控件。如：
  *
  *
+ *
  *> 完整示例请参考：
  *[image_animation
  *demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/image_animation.c)
@@ -17633,7 +18016,7 @@ export class TImageAnimation extends TWidget {
 
 
   /**
-   * 设置播放间隔时间。
+   * 设置播放间隔时间(毫秒)。
    * 
    * @param interval 间隔时间(毫秒)。
    *
@@ -17993,6 +18376,7 @@ export class TImageAnimation extends TWidget {
  *[image\_value](https://github.com/zlgopen/awtk/blob/master/design/default/ui/image_value.xml)
  *
  *在c代码中使用函数image\_value\_create创建图片值控件。如：
+ *
  *
  *
  *> 完整示例请参考：
@@ -18623,6 +19007,7 @@ export class TLineNumber extends TWidget {
  *在c代码中使用函数mledit\_create创建多行编辑器控件。如：
  *
  *
+ *
  *> 完整示例请参考：[mledit demo](
  *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/mledit.c)
  *
@@ -19074,6 +19459,7 @@ export class TMledit extends TWidget {
  *在c代码中使用函数progress\_circle\_create创建进度圆环控件。如：
  *
  *
+ *
  *> 完整示例请参考：
  *[progress_circle
  *demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/progress_circle.c)
@@ -19275,7 +19661,7 @@ export class TProgressCircle extends TWidget {
 
 
   /**
-   * 环线的厚度(缺省为8)。
+   * 环线的厚度(缺省为8)，line_width r/2时，使用扇形绘制。
    *
    */
  get lineWidth() : number {
@@ -19403,6 +19789,7 @@ export class TRichTextView extends TWidget {
  *[rich_text.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/rich_text.xml)
  *
  *在c代码中使用函数rich\_text\_create创建图文混排控件。如：
+ *
  *
  *
  *> 完整示例请参考：
@@ -19556,7 +19943,7 @@ export class THscrollLabel extends TWidget {
   /**
    * 设置lull。
    * 
-   * @param lull 间歇时间(ms)。
+   * @param lull 间歇时间(毫秒)。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -19568,7 +19955,7 @@ export class THscrollLabel extends TWidget {
   /**
    * 设置duration。
    * 
-   * @param duration 滚动时间(ms)。
+   * @param duration 滚动时间(毫秒)。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -19658,6 +20045,30 @@ export class THscrollLabel extends TWidget {
    */
  setStopAtBegin(stop_at_begin : boolean) : TRet  {
     return hscroll_label_set_stop_at_begin(this != null ? (this.nativeObj || this) : null, stop_at_begin);
+ }
+
+
+  /**
+   * 设置开始延迟时间。
+   * 
+   * @param delay 开始延迟时间。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setDelay(delay : number) : TRet  {
+    return hscroll_label_set_delay(this != null ? (this.nativeObj || this) : null, delay);
+ }
+
+
+  /**
+   * 设置滚动文本结尾和文本开头间隔距离
+   * 
+   * @param loop_interval_distance 间隔距离。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setLoopIntervalDistance(loop_interval_distance : number) : TRet  {
+    return hscroll_label_set_loop_interval_distance(this != null ? (this.nativeObj || this) : null, loop_interval_distance);
  }
 
 
@@ -19773,7 +20184,7 @@ export class THscrollLabel extends TWidget {
 
 
   /**
-   * 滚动之间的间歇时间(ms)，缺省3000ms。
+   * 滚动之间的间歇时间(毫秒)，缺省3000ms。
    *
    */
  get lull() : number {
@@ -19786,7 +20197,7 @@ export class THscrollLabel extends TWidget {
 
 
   /**
-   * 完整的滚动一次需要的时间(ms)，缺省5000ms。
+   * 滚动一次需要的时间(毫秒)，缺省5000ms。
    *
    */
  get duration() : number {
@@ -19795,6 +20206,19 @@ export class THscrollLabel extends TWidget {
 
  set duration(v : number) {
    this.setDuration(v);
+ }
+
+
+  /**
+   * 延迟多久才开始滚动，缺省0ms。
+   *
+   */
+ get delay() : number {
+   return hscroll_label_t_get_prop_delay(this.nativeObj);
+ }
+
+ set delay(v : number) {
+   this.setDelay(v);
  }
 
 
@@ -19835,7 +20259,7 @@ export class THscrollLabel extends TWidget {
 
   /**
    * 滚动完毕后停在文本开头(缺省FALSE)。
-   *> 注：loop为FALSE时才可用。
+   *> 注：yoyo 为 TRUE 时，该功能失效。
    *
    */
  get stopAtBegin() : boolean {
@@ -19844,6 +20268,19 @@ export class THscrollLabel extends TWidget {
 
  set stopAtBegin(v : boolean) {
    this.setStopAtBegin(v);
+ }
+
+
+  /**
+   * 滚动文本结尾和文本开头间隔距离(缺省值为 -1，小于 0 视为使用控件宽度作为间隔距离)。
+   *
+   */
+ get loopIntervalDistance() : number {
+   return hscroll_label_t_get_prop_loop_interval_distance(this.nativeObj);
+ }
+
+ set loopIntervalDistance(v : number) {
+   this.setLoopIntervalDistance(v);
  }
 
 };
@@ -19874,6 +20311,7 @@ export class THscrollLabel extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)
  *
  *在c代码中使用函数list\_item\_create创建列表项控件。如：
+ *
  *
  *
  *> 列表项控件大小一般由列表控制，不需指定xywh参数。
@@ -19950,6 +20388,7 @@ export class TListItem extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_h.xml)
  *
  *在c代码中使用函数list\_view\_h\_create创建水平列表视图控件。如：
+ *
  *
  *
  *用代码构造列表视图是比较繁琐的事情，最好用XML来构造。
@@ -20081,6 +20520,7 @@ export class TListViewH extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)
  *
  *在c代码中使用函数list\_view\_create创建列表视图控件。如：
+ *
  *
  *
  *用代码构造列表视图是比较繁琐的事情，最好用XML来构造。
@@ -20267,6 +20707,7 @@ export class TListView extends TWidget {
  *在c代码中使用函数scroll\_bar\_create创建列表项控件。如：
  *
  *
+ *
  *```xml
  *<style name="default">
  *<normal bg_color="#c0c0c0" fg_color="#808080"/>
@@ -20365,7 +20806,7 @@ export class TScrollBar extends TWidget {
    * 滚动到指定的值。
    * 
    * @param value 值。
-   * @param duration 动画持续时间。
+   * @param duration 动画持续时间(毫秒)。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -20395,18 +20836,6 @@ export class TScrollBar extends TWidget {
    */
  addDelta(delta : number) : TRet  {
     return scroll_bar_add_delta(this != null ? (this.nativeObj || this) : null, delta);
- }
-
-
-  /**
-   * 在当前的值上增加一个值，并滚动到新的值，并触发EVT_VALUE_CHANGED事件。
-   * 
-   * @param delta 值。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- scrollDelta(delta : number) : TRet  {
-    return scroll_bar_scroll_delta(this != null ? (this.nativeObj || this) : null, delta);
  }
 
 
@@ -20448,9 +20877,9 @@ export class TScrollBar extends TWidget {
 
 
   /**
-   * 设置翻页滚动动画时间。
+   * 设置翻页滚动动画时间(毫秒)。
    * 
-   * @param animator_time 时间。
+   * @param animator_time 时间(毫秒)。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -20462,8 +20891,8 @@ export class TScrollBar extends TWidget {
   /**
    * 通过动画隐藏滚动条。
    * 
-   * @param duration 动画持续时间。
-   * @param delay 动画执行时间。
+   * @param duration 动画持续时间(毫秒)。
+   * @param delay 动画执行时间(毫秒)。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -20475,13 +20904,37 @@ export class TScrollBar extends TWidget {
   /**
    * 通过动画显示滚动条。
    * 
-   * @param duration 动画持续时间。
-   * @param delay 动画执行时间。
+   * @param duration 动画持续时间(毫秒)。
+   * @param delay 动画执行时间(毫秒)。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
  showByOpacityAnimation(duration : number, delay : number) : TRet  {
     return scroll_bar_show_by_opacity_animation(this != null ? (this.nativeObj || this) : null, duration, delay);
+ }
+
+
+  /**
+   * 设置鼠标滚轮是否滚动(仅对desktop风格的滚动条有效)。
+   * 
+   * @param scroll 是否设置该功能。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setWheelScroll(scroll : boolean) : TRet  {
+    return scroll_bar_set_wheel_scroll(this != null ? (this.nativeObj || this) : null, scroll);
+ }
+
+
+  /**
+   * 设置鼠标滚轮幅度(仅对desktop风格的滚动条有效)。
+   * 
+   * @param scroll_delta 滚动幅度。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setScrollDelta(scroll_delta : number) : TRet  {
+    return scroll_bar_set_scroll_delta(this != null ? (this.nativeObj || this) : null, scroll_delta);
  }
 
 
@@ -20517,7 +20970,7 @@ export class TScrollBar extends TWidget {
 
 
   /**
-   * 翻页滚动动画时间。
+   * 翻页滚动动画时间(毫秒)。
    *
    */
  get animatorTime() : number {
@@ -20526,6 +20979,19 @@ export class TScrollBar extends TWidget {
 
  set animatorTime(v : number) {
    this.setAnimatorTime(v);
+ }
+
+
+  /**
+   * 每次鼠标滚动值。（缺省值为0，0 则使用鼠标滚动默认值）
+   *
+   */
+ get scrollDelta() : number {
+   return scroll_bar_t_get_prop_scroll_delta(this.nativeObj);
+ }
+
+ set scrollDelta(v : number) {
+   this.setScrollDelta(v);
  }
 
 
@@ -20548,6 +21014,19 @@ export class TScrollBar extends TWidget {
 
  set autoHide(v : boolean) {
    this.setAutoHide(v);
+ }
+
+
+  /**
+   * 设置鼠标滚轮是否滚动(仅对desktop风格的滚动条有效)（垂直滚动条缺省值为TRUE，水平滚动条缺省值为FALSE）。
+   *
+   */
+ get wheelScroll() : boolean {
+   return scroll_bar_t_get_prop_wheel_scroll(this.nativeObj);
+ }
+
+ set wheelScroll(v : boolean) {
+   this.setWheelScroll(v);
  }
 
 };
@@ -20578,6 +21057,7 @@ export class TScrollBar extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)
  *
  *在c代码中使用函数scroll\_view\_create创建列表视图控件。如：
+ *
  *
  *
  *可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。
@@ -20758,7 +21238,7 @@ export class TScrollView extends TWidget {
    * 
    * @param xoffset_end x偏移量。
    * @param yoffset_end y偏移量。
-   * @param duration 时间。
+   * @param duration 时间(毫秒)。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -20772,7 +21252,7 @@ export class TScrollView extends TWidget {
    * 
    * @param xoffset_delta x偏移量。
    * @param yoffset_delta y偏移量。
-   * @param duration 时间。
+   * @param duration 时间(毫秒)。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -21051,7 +21531,7 @@ export class TSerialWidget extends TWidget {
 
 
   /**
-   * 设置 轮询时间。
+   * 设置 轮询时间(毫秒)。
    * 
    * @param check_interval 轮询时间（单位：ms）。
    *
@@ -21179,10 +21659,13 @@ export class TSerialWidget extends TWidget {
  *在c代码中使用函数slide\_menu\_create创建左右滑动菜单控件。如：
  *
  *
+ *
  *可按下面的方法关注当前项改变的事件：
  *
  *
+ *
  *可按下面的方法关注当前按钮被点击的事件：
+ *
  *
  *
  *> 完整示例请参考：[slide_menu demo](
@@ -21427,6 +21910,7 @@ export class TSlideMenu extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/slide_view.xml)
  *
  *在c代码中使用函数slide\_indicator\_create创建指示器控件。如：
+ *
  *
  *
  *```xml
@@ -21788,6 +22272,7 @@ export class TSlideIndicator extends TWidget {
  *在c代码中使用函数slide\_view\_create创建滑动视图控件。如：
  *
  *
+ *
  *> 完整示例请参考：
  *[slide_view demo](
  *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/slide_view.c)
@@ -21844,7 +22329,7 @@ export class TSlideView extends TWidget {
   /**
    * 设置为自动播放模式。
    * 
-   * @param auto_play 0表示禁止自动播放，非0表示自动播放时每一页播放的时间。
+   * @param auto_play 0表示禁止自动播放，非0表示自动播放时每一页播放的时间(毫秒)。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -21938,9 +22423,9 @@ export class TSlideView extends TWidget {
 
 
   /**
-   * 设置动画时间。
+   * 设置动画时间(毫秒)。
    * 
-   * @param animating_time 动画时间。
+   * @param animating_time 动画时间(毫秒)。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -21975,7 +22460,7 @@ export class TSlideView extends TWidget {
 
 
   /**
-   * 自动播放。0表示禁止自动播放，非0表示自动播放时每一页播放的时间。
+   * 自动播放。0表示禁止自动播放，非0表示自动播放时每一页播放的时间(毫秒)。
    *
    */
  get autoPlay() : number {
@@ -22057,6 +22542,7 @@ export class TSlideView extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/switch.xml)
  *
  *在c代码中使用函数switch\_create创建开关控件。如：
+ *
  *
  *
  *> 完整示例请参考：[switch demo](
@@ -22160,6 +22646,7 @@ export class TSwitch extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/text_selector.xml)
  *
  *在c代码中使用函数text\_selector\_create创建文本选择器控件。如：
+ *
  *
  *
  *> 完整示例请参考：[text\_selector demo](
@@ -22443,6 +22930,18 @@ export class TTextSelector extends TWidget {
 
 
   /**
+   * 是否开启缩写，开启后，当文字长度操作控件长度后，自动变为...
+   * 
+   * @param ellipses 是否开启缩写。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setEllipses(ellipses : boolean) : TRet  {
+    return text_selector_set_ellipses(this != null ? (this.nativeObj || this) : null, ellipses);
+ }
+
+
+  /**
    * 可见的选项数量(只能是1或者3或者5，缺省为5)。
    *
    */
@@ -22553,6 +23052,19 @@ export class TTextSelector extends TWidget {
 
 
   /**
+   * 是否开启缩写，开启后，当文字长度操作控件长度后，自动变为...
+   *
+   */
+ get ellipses() : boolean {
+   return text_selector_t_get_prop_ellipses(this.nativeObj);
+ }
+
+ set ellipses(v : boolean) {
+   this.setEllipses(v);
+ }
+
+
+  /**
    * 绘制蒙版的变化趋势。
    *
    */
@@ -22594,6 +23106,7 @@ export class TTextSelector extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/time_clock.xml)
  *
  *在c代码中使用函数time\_clock\_create创建模拟时钟控件。如：
+ *
  *
  *
  *> 完整示例请参考：[time_clock demo](
@@ -22992,9 +23505,9 @@ export class TTimerWidget extends TWidget {
 
 
   /**
-   * 设置 时长(ms)。
+   * 设置 时长(毫秒)。
    * 
-   * @param duration 时长(ms)。
+   * @param duration 时长(毫秒)。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -23004,7 +23517,7 @@ export class TTimerWidget extends TWidget {
 
 
   /**
-   * 时长(ms)。
+   * 时长(毫秒)。
    *
    */
  get duration() : number {
@@ -23338,6 +23851,52 @@ export class TCmdExecEvent extends TEvent {
 
 };
 /**
+ * 值变化事件。
+ *
+ */
+export class TValueChangeEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转value_change_event_t对象。
+   * 
+   * @param event event对象。
+   *
+   * @returns event对象。
+   */
+ static cast(event : TEvent) : TValueChangeEvent  {
+    return new TValueChangeEvent(value_change_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+};
+/**
+ * 日志事件。
+ *
+ */
+export class TLogMessageEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转log_message_event_t对象。
+   * 
+   * @param event event对象。
+   *
+   * @returns event对象。
+   */
+ static cast(event : TEvent) : TLogMessageEvent  {
+    return new TLogMessageEvent(log_message_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+};
+/**
  * app_bar控件。
  *
  *一个简单的容器控件，一般在窗口的顶部，用于显示本窗口的状态和信息。
@@ -23357,6 +23916,7 @@ export class TCmdExecEvent extends TEvent {
  *```
  *
  *在c代码中使用函数app\_bar\_create创建app\_bar。如：
+ *
  *
  *
  *可用通过style来设置控件的显示风格，如背景颜色等。如：
@@ -23488,6 +24048,7 @@ export class TButtonGroup extends TWidget {
  *在c代码中使用函数button\_create创建按钮控件。如：
  *
  *
+ *
  *> 创建之后，需要用widget\_set\_text或widget\_set\_text\_utf8设置文本内容。
  *
  *> 完整示例请参考：
@@ -23557,7 +24118,7 @@ export class TButton extends TWidget {
 
 
   /**
-   * 设置触发长按事件的时间。
+   * 设置触发长按事件的时间(毫秒)。
    * 
    * @param long_press_time 触发长按事件的时间(毫秒)。
    *
@@ -23637,7 +24198,7 @@ export class TButton extends TWidget {
 
 
   /**
-   * 触发长按事件的时间(ms)
+   * 触发长按事件的时间(毫秒)
    *
    */
  get longPressTime() : number {
@@ -23681,7 +24242,9 @@ export class TButton extends TWidget {
  *在c代码中使用函数check\_button\_create创建多选按钮控件。如：
  *
  *
+ *
  *在c代码中使用函数check\_button\_create\_radio创建单选按钮控件。如：
+ *
  *
  *
  *> 完整示例请参考：
@@ -23881,6 +24444,7 @@ export class TClipView extends TWidget {
  *[color_tile](https://github.com/zlgopen/awtk/blob/master/design/default/ui/color_picker_rgb.xml)
  *
  *在c代码中使用函数color_tile\_create创建色块控件。如：
+ *
  *
  *> 创建之后，用color\_tile\_set\_bg\_color设置背景颜色。
  *
@@ -24268,6 +24832,7 @@ export class TDialogTitle extends TWidget {
  *在c代码中使用函数digit\_clock\_create创建数字时钟控件。如：
  *
  *
+ *
  *> 完整示例请参考：[digit\_clock demo](
  *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/digit_clock.c)
  *
@@ -24337,7 +24902,7 @@ export class TDigitClock extends TWidget {
    ** M 代表月(1-12)
    ** D 代表日(1-31)
    ** h 代表时(0-23)
-   ** H 代表时(0-11)
+   ** H 代表时(1-12)
    ** m 代表分(0-59)
    ** s 代表秒(0-59)
    ** w 代表星期(0-6)
@@ -24347,7 +24912,7 @@ export class TDigitClock extends TWidget {
    ** MM 代表月(01-12)
    ** DD 代表日(01-31)
    ** hh 代表时(00-23)
-   ** HH 代表时(00-11)
+   ** HH 代表时(01-12)
    ** mm 代表分(00-59)
    ** ss 代表秒(00-59)
    ** MMM 代表月的英文缩写(支持翻译)
@@ -24489,6 +25054,7 @@ export class TDragger extends TWidget {
  *[edit.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/edit.xml)
  *
  *在c代码中使用函数edit\_create创建编辑器控件。如：
+ *
  *
  *
  *> 创建之后，可以用widget\_set\_text或widget\_set\_text\_utf8设置文本内容。
@@ -24856,6 +25422,18 @@ export class TEdit extends TWidget {
 
 
   /**
+   * 设置输入回车后是否跳到下一个控件中。
+   * 
+   * @param focus_next_when_enter 是否跳入下一个控件中。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setFocusNextWhenEnter(focus_next_when_enter : boolean) : TRet  {
+    return edit_set_focus_next_when_enter(this != null ? (this.nativeObj || this) : null, focus_next_when_enter);
+ }
+
+
+  /**
    * 输入提示。
    *
    */
@@ -24896,6 +25474,17 @@ export class TEdit extends TWidget {
 
  set actionText(v : string) {
    this.setActionText(v);
+ }
+
+
+  /**
+   * fscript脚本，用输入校验，如：(len(text) 3) && (len(text) < 10)。
+   *
+   *> 用于校验输入的文本是否合法。
+   *
+   */
+ get validator() : string {
+   return edit_t_get_prop_validator(this.nativeObj);
  }
 
 
@@ -25048,6 +25637,19 @@ export class TEdit extends TWidget {
 
  set cancelable(v : boolean) {
    this.setCancelable(v);
+ }
+
+
+  /**
+   * 输入回车后是否跳到下一个控件中。
+   *
+   */
+ get focusNextWhenEnter() : boolean {
+   return edit_t_get_prop_focus_next_when_enter(this.nativeObj);
+ }
+
+ set focusNextWhenEnter(v : boolean) {
+   this.setFocusNextWhenEnter(v);
  }
 
 };
@@ -25321,6 +25923,18 @@ export class TGroupBox extends TWidget {
 
 
   /**
+   * 设置选中的单选按钮的索引。
+   * 
+   * @param value 选中的单选按钮的索引。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setValue(value : any) : TRet  {
+    return group_box_set_value(this != null ? (this.nativeObj || this) : null, value);
+ }
+
+
+  /**
    * 转换为group_box对象(供脚本语言使用)。
    * 
    * @param widget group_box对象。
@@ -25329,6 +25943,19 @@ export class TGroupBox extends TWidget {
    */
  static cast(widget : TWidget) : TGroupBox  {
     return new TGroupBox(group_box_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 选中的单选按钮的索引。
+   *
+   */
+ get value() : number {
+   return group_box_t_get_prop_value(this.nativeObj);
+ }
+
+ set value(v : number) {
+   this.setValue(v);
  }
 
 };
@@ -25351,6 +25978,7 @@ export class TGroupBox extends TWidget {
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/label.xml)
  *
  *在c代码中使用函数label\_create创建文本控件。如：
+ *
  *
  *
  *> 创建之后，需要用widget\_set\_text或widget\_set\_text\_utf8设置文本内容。
@@ -25395,7 +26023,7 @@ export class TLabel extends TWidget {
 
 
   /**
-   * 设置显示字符的个数(小余0时全部显示)。
+   * 设置显示字符的个数(小于0时全部显示)。
    * 
    * @param length 最大可显示字符个数。
    *
@@ -25443,6 +26071,18 @@ export class TLabel extends TWidget {
 
 
   /**
+   * 是否开启缩写，开启后，当文字长度操作控件长度后，自动变为...
+   * 
+   * @param ellipses 是否开启缩写。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setEllipses(ellipses : boolean) : TRet  {
+    return label_set_ellipses(this != null ? (this.nativeObj || this) : null, ellipses);
+ }
+
+
+  /**
    * 根据文本内容调节控件大小。
    * 
    * @param min_w 最小宽度。
@@ -25470,7 +26110,7 @@ export class TLabel extends TWidget {
 
 
   /**
-   * 显示字符的个数(小余0时全部显示)。
+   * 显示字符的个数(小于0时全部显示)。
    *主要用于动态改变显示字符的个数，来实现类似[拨号中...]的动画效果。
    *
    */
@@ -25507,6 +26147,20 @@ export class TLabel extends TWidget {
 
  set wordWrap(v : boolean) {
    this.setWordWrap(v);
+ }
+
+
+  /**
+   * 是否开启缩写，开启后，当文字长度操作控件长度后，自动变为...
+   *> 和换行是冲突的，换行后，该属性不生效
+   *
+   */
+ get ellipses() : boolean {
+   return label_t_get_prop_ellipses(this.nativeObj);
+ }
+
+ set ellipses(v : boolean) {
+   this.setEllipses(v);
  }
 
 
@@ -25665,6 +26319,7 @@ export class TPages extends TWidget {
  *[basic demo](https://github.com/zlgopen/awtk/blob/master/design/default/ui/basic.xml)
  *
  *在c代码中使用函数progress\_bar\_create创建进度条控件。如：
+ *
  *
  *
  *> 完整示例请参考：
@@ -25962,6 +26617,7 @@ export class TRow extends TWidget {
  *[basic](https://github.com/zlgopen/awtk/blob/master/design/default/ui/basic.xml)
  *
  *在c代码中使用函数slider\_create创建滑块控件。如：
+ *
  *
  *
  *> 完整示例请参考：
@@ -26730,10 +27386,13 @@ export class TView extends TWidget {
  *打开非模态对话框时，其用法与普通窗口一样。打开非模态对话框时，还需要调用dialog\_modal。
  *
  *
+ *
  *关闭模态对话框用dialog\_quit
  *
  *
+ *
  *关闭非模态对话框用window\_close。
+ *
  *
  *
  *> 更多用法请参考：
@@ -27144,6 +27803,7 @@ export class TNativeWindow extends TObject {
  *在c代码中使用函数window\_create创建窗口。如：
  *
  *
+ *
  *> 无需指定父控件、坐标和大小，使用0即可。
  *
  *> 完整示例请参考：[window
@@ -27302,7 +27962,7 @@ export class TWindow extends TWindowBase {
  * GIF图片控件。
  *
  *> 注意：GIF图片的尺寸大于控件大小时会自动缩小图片，但一般的嵌入式系统的硬件加速都不支持图片缩放，
- *所以缩放图片会导致性能明显下降。如果性能不满意时，请确认一下GIF图片的尺寸是否小余控件大小。
+ *所以缩放图片会导致性能明显下降。如果性能不满意时，请确认一下GIF图片的尺寸是否小于控件大小。
  *
  *gif\_image\_t是[image\_base\_t](image_base_t.md)的子类控件，image\_base\_t的函数均适用于gif\_image\_t控件。
  *
@@ -27317,6 +27977,7 @@ export class TWindow extends TWindowBase {
  *image](https://github.com/zlgopen/awtk/blob/master/design/default/ui/gif_image.xml)
  *
  *在c代码中使用函数gif\_image\_create创建GIF图片控件。如：
+ *
  *
  *
  *> 创建之后:
@@ -27592,6 +28253,7 @@ export class TKeyboard extends TWindowBase {
  *在c代码中使用函数mutable\_image\_create创建mutable图片控件。如：
  *
  *
+ *
  *> 创建之后:
  *>
  *> 需要用mutable\_image\_set\_create\_image设置创建图片的回调函数。
@@ -27724,6 +28386,7 @@ export class TListItemSeperator extends TCheckButton {
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/svg_image.xml)
  *
  *在c代码中使用函数svg\_image\_create创建SVG图片控件。如：
+ *
  *
  *
  *> 创建之后: 需要用widget\_set\_image设置图片名称。
@@ -28041,7 +28704,11 @@ export class TObjectArray extends TObject {
 /**
  * 对象接口的缺省实现。
  *
- *内部使用有序数组保存所有属性，可以快速查找指定名称的属性。
+ *通用当作 map 数据结构使用，内部用有序数组保存所有属性，因此可以快速查找指定名称的属性。
+ *
+ *示例
+ *
+ *
  *
  */
 export class TObjectDefault extends TObject { 
@@ -28093,6 +28760,18 @@ export class TObjectDefault extends TObject {
    */
  clearProps() : TRet  {
     return object_default_clear_props(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 设置属性值时不改变属性的类型。
+   * 
+   * @param keep_prop_type 不改变属性的类型。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setKeepPropType(keep_prop_type : boolean) : TRet  {
+    return object_default_set_keep_prop_type(this != null ? (this.nativeObj || this) : null, keep_prop_type);
  }
 
 };
@@ -28174,6 +28853,7 @@ export class TTimerInfo extends TObject {
  *[window.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/calibration_win.xml)
  *
  *在c代码中使用函数calibration\_win\_create创建窗口。如：
+ *
  *
  *
  *通过calibration\_win\_set\_on\_done注册回调函数，用于保存校准数据。
@@ -28272,6 +28952,7 @@ export class TCalibrationWin extends TWindowBase {
  *```
  *
  *在c代码中使用函数combo\_box\_create创建下拉列表控件。如：
+ *
  *
  *
  *创建之后：
@@ -28692,6 +29373,7 @@ export class TComboBox extends TEdit {
  *在c代码中使用函数image\_create创建图片控件。如：
  *
  *
+ *
  *> 创建之后:
  *>
  *> 需要用widget\_set\_image设置图片名称。
@@ -28818,6 +29500,7 @@ export class TImage extends TImageBase {
  *更多用法请参考：[overlay.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/)
  *
  *在c代码中使用函数overlay\_create创建窗口。如：
+ *
  *
  *
  *> 完整示例请参考：[overlay
@@ -28978,6 +29661,7 @@ export class TOverlay extends TWindowBase {
  *在c代码中使用函数popup\_create创建弹出窗口。如：
  *
  *
+ *
  *> 创建之后，和使用普通窗口是一样的。
  *
  *> 完整示例请参考：[combo_box.c](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/combo_box.c)
@@ -29056,9 +29740,9 @@ export class TPopup extends TWindowBase {
 
 
   /**
-   * 设置超时关闭时间(ms)。
+   * 设置超时关闭时间(毫秒)。
    * 
-   * @param close_when_timeout 大于0时，为定时器时间(ms)，超时关闭窗口。
+   * @param close_when_timeout 大于0时，为定时器时间(毫秒)，超时关闭窗口。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -29094,7 +29778,7 @@ export class TPopup extends TWindowBase {
 
 
   /**
-   * 超时后自动关闭窗口(ms)。
+   * 超时后自动关闭窗口(毫秒)。
    *
    */
  get closeWhenTimeout() : number {
@@ -29126,6 +29810,7 @@ export class TPopup extends TWindowBase {
  *更多用法请参考：[spin_box.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/spinbox.xml)
  *
  *在c代码中使用函数spin_box\_create创建spinbox控件。如：
+ *
  *
  *
  *> 创建之后:
@@ -29291,6 +29976,7 @@ export class TSpinBox extends TEdit {
  *[system_bar](https://github.com/zlgopen/awtk/blob/master/design/default/ui/system_bar.xml)
  *
  *在c代码中使用函数system\_bar\_create创建system\_bar窗口。如：
+ *
  *
  *
  *> 创建之后，和使用普通窗口是一样的。

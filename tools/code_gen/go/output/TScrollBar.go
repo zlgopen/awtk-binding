@@ -42,10 +42,6 @@ func (this TScrollBar) AddDelta(delta int32) TRet {
   return TRet(C.scroll_bar_add_delta((*C.widget_t)(this.handle), (C.int32_t)(delta)));
 }
 
-func (this TScrollBar) ScrollDelta(delta int32) TRet {
-  return TRet(C.scroll_bar_scroll_delta((*C.widget_t)(this.handle), (C.int32_t)(delta)));
-}
-
 func (this TScrollBar) SetValueOnly(value int32) TRet {
   return TRet(C.scroll_bar_set_value_only((*C.widget_t)(this.handle), (C.int32_t)(value)));
 }
@@ -70,6 +66,14 @@ func (this TScrollBar) ShowByOpacityAnimation(duration int32, delay int32) TRet 
   return TRet(C.scroll_bar_show_by_opacity_animation((*C.widget_t)(this.handle), (C.int32_t)(duration), (C.int32_t)(delay)));
 }
 
+func (this TScrollBar) SetWheelScroll(scroll bool) TRet {
+  return TRet(C.scroll_bar_set_wheel_scroll((*C.widget_t)(this.handle), (C.bool_t)(scroll)));
+}
+
+func (this TScrollBar) SetScrollDelta(scroll_delta uint32) TRet {
+  return TRet(C.scroll_bar_set_scroll_delta((*C.widget_t)(this.handle), (C.uint32_t)(scroll_delta)));
+}
+
 func (this TScrollBar) GetVirtualSize() int32 {
   return (int32)((*C.scroll_bar_t)(unsafe.Pointer(this.handle)).virtual_size);
 }
@@ -82,11 +86,19 @@ func (this TScrollBar) GetAnimatorTime() uint32 {
   return (uint32)((*C.scroll_bar_t)(unsafe.Pointer(this.handle)).animator_time);
 }
 
+func (this TScrollBar) GetScrollDelta() uint32 {
+  return (uint32)((*C.scroll_bar_t)(unsafe.Pointer(this.handle)).scroll_delta);
+}
+
 func (this TScrollBar) GetAnimatable() bool {
   return (bool)((*C.scroll_bar_t)(unsafe.Pointer(this.handle)).animatable);
 }
 
 func (this TScrollBar) GetAutoHide() bool {
   return (bool)((*C.scroll_bar_t)(unsafe.Pointer(this.handle)).auto_hide);
+}
+
+func (this TScrollBar) GetWheelScroll() bool {
+  return (bool)((*C.scroll_bar_t)(unsafe.Pointer(this.handle)).wheel_scroll);
 }
 

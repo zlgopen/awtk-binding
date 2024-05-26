@@ -124,6 +124,10 @@ func (this TEdit) GetSelectedText() string {
   return C.GoString(C.edit_get_selected_text((*C.widget_t)(this.handle)));
 }
 
+func (this TEdit) SetFocusNextWhenEnter(focus_next_when_enter bool) TRet {
+  return TRet(C.edit_set_focus_next_when_enter((*C.widget_t)(this.handle), (C.bool_t)(focus_next_when_enter)));
+}
+
 func (this TEdit) GetTips() string {
   return C.GoString((*C.edit_t)(unsafe.Pointer(this.handle)).tips);
 }
@@ -134,6 +138,10 @@ func (this TEdit) GetTrTips() string {
 
 func (this TEdit) GetActionText() string {
   return C.GoString((*C.edit_t)(unsafe.Pointer(this.handle)).action_text);
+}
+
+func (this TEdit) GetValidator() string {
+  return C.GoString((*C.edit_t)(unsafe.Pointer(this.handle)).validator);
 }
 
 func (this TEdit) GetKeyboard() string {
@@ -182,5 +190,9 @@ func (this TEdit) GetCloseImWhenBlured() bool {
 
 func (this TEdit) GetCancelable() bool {
   return (bool)((*C.edit_t)(unsafe.Pointer(this.handle)).cancelable);
+}
+
+func (this TEdit) GetFocusNextWhenEnter() bool {
+  return (bool)((*C.edit_t)(unsafe.Pointer(this.handle)).focus_next_when_enter);
 }
 

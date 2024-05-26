@@ -2806,6 +2806,47 @@
       {
         "params": [
           {
+            "type": "const value_t*",
+            "name": "value",
+            "desc": "value对象。"
+          },
+          {
+            "type": "const value_t*",
+            "name": "other",
+            "desc": "value对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "判断两个value是否相同。",
+        "name": "value_equal",
+        "return": {
+          "type": "bool_t",
+          "desc": "为空值返回TRUE，否则返回FALSE。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "const value_t*",
+            "name": "v",
+            "desc": "value对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "转换为int的值。",
+        "name": "value_int",
+        "return": {
+          "type": "int",
+          "desc": "值。"
+        }
+      },
+      {
+        "params": [
+          {
             "type": "value_t*",
             "name": "v",
             "desc": "value对象。"
@@ -3162,6 +3203,26 @@
         "desc": "退出TK事件主循环。",
         "name": "tk_quit",
         "alias": "global_quit",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "uint32_t",
+            "name": "delay",
+            "desc": "延迟退出的时间(毫秒)。"
+          }
+        ],
+        "annotation": {
+          "static": true,
+          "scriptable": true
+        },
+        "desc": "退出TK事件主循环。",
+        "name": "tk_quit_ex",
+        "alias": "global_quit_ex",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -4441,18 +4502,6 @@
         "name": "EVT_MOVE_RESIZE"
       },
       {
-        "desc": "控件的值即将改变的事件名(value_change_event_t)。",
-        "name": "EVT_VALUE_WILL_CHANGE"
-      },
-      {
-        "desc": "控件的值改变的事件名(value_change_event_t)。",
-        "name": "EVT_VALUE_CHANGED"
-      },
-      {
-        "desc": "控件的值持续改变(如编辑器正在编辑)的事件名(value_change_event_t)。",
-        "name": "EVT_VALUE_CHANGING"
-      },
-      {
         "desc": "绘制的事件名(paint_event_t)。",
         "name": "EVT_PAINT"
       },
@@ -4633,6 +4682,14 @@
         "name": "EVT_THEME_CHANGED"
       },
       {
+        "desc": "控件根据自己当前状态即将更新style(event_t)。",
+        "name": "EVT_WIDGET_WILL_UPDATE_STYLE"
+      },
+      {
+        "desc": "控件根据自己当前状态更新style(event_t)。",
+        "name": "EVT_WIDGET_UPDATE_STYLE"
+      },
+      {
         "desc": "控件加载新的子控件(event_t)。",
         "name": "EVT_WIDGET_ADD_CHILD"
       },
@@ -4657,11 +4714,11 @@
         "name": "EVT_MULTI_GESTURE"
       },
       {
-        "desc": "页面改变了(event_t)。",
+        "desc": "当前看到的页面改变了(event_t)。",
         "name": "EVT_PAGE_CHANGED"
       },
       {
-        "desc": "页面正在改变(offset_change_event_t)。",
+        "desc": "当前看到的页面正在改变(offset_change_event_t)。",
         "name": "EVT_PAGE_CHANGING"
       },
       {
@@ -4707,6 +4764,18 @@
       {
         "desc": "locale_infos卸载某个本地化信息(event_t)。",
         "name": "EVT_LOCALE_INFOS_UNLOAD_INFO"
+      },
+      {
+        "desc": "控件进入激活状态(event_t)。",
+        "name": "EVT_ACTIVATED"
+      },
+      {
+        "desc": "控件退出激活状态(event_t)。",
+        "name": "EVT_UNACTIVATED"
+      },
+      {
+        "desc": "UI加载完成事件(event_t)。",
+        "name": "EVT_UI_LOAD"
       },
       {
         "desc": "event queue其它请求编号起始值。",
@@ -4767,6 +4836,22 @@
       {
         "desc": "对象销毁事件名(event_t)。",
         "name": "EVT_DESTROY"
+      },
+      {
+        "desc": "值即将改变的事件名(value_change_event_t)。",
+        "name": "EVT_VALUE_WILL_CHANGE"
+      },
+      {
+        "desc": "值改变的事件名(value_change_event_t)。",
+        "name": "EVT_VALUE_CHANGED"
+      },
+      {
+        "desc": "值持续改变(如编辑器正在编辑)的事件名(value_change_event_t)。",
+        "name": "EVT_VALUE_CHANGING"
+      },
+      {
+        "desc": "日志信息。",
+        "name": "EVT_LOG_MESSAGE"
       }
     ],
     "header": "base/events.h",
@@ -6246,6 +6331,10 @@
         "name": "STYLE_ID_FG_COLOR"
       },
       {
+        "desc": "dragger颜色。",
+        "name": "STYLE_ID_DRAGGER_COLOR"
+      },
+      {
         "desc": "蒙版颜色。",
         "name": "STYLE_ID_MASK_COLOR"
       },
@@ -6799,7 +6888,7 @@
           {
             "type": "uint32_t",
             "name": "duration",
-            "desc": "时间。"
+            "desc": "时间(毫秒)。"
           }
         ],
         "annotation": {
@@ -6918,7 +7007,7 @@
           {
             "type": "uint32_t",
             "name": "duration",
-            "desc": "新的时间。"
+            "desc": "新的时间(毫秒)。"
           }
         ],
         "annotation": {
@@ -8948,6 +9037,10 @@
         "name": "WIDGET_PROP_WORD_WRAP"
       },
       {
+        "desc": "是否省略。",
+        "name": "WIDGET_PROP_ELLIPSES"
+      },
+      {
         "desc": "文本。",
         "name": "WIDGET_PROP_TEXT"
       },
@@ -8958,6 +9051,10 @@
       {
         "desc": "style。",
         "name": "WIDGET_PROP_STYLE"
+      },
+      {
+        "desc": "状态。",
+        "name": "WIDGET_PROP_STATE"
       },
       {
         "desc": "是否启用。",
@@ -9112,7 +9209,7 @@
         "name": "WIDGET_PROP_ALIGN_H"
       },
       {
-        "desc": "是否自动播放或指定播放的时间。",
+        "desc": "是否自动播放或指定播放的时间(毫秒)。",
         "name": "WIDGET_PROP_AUTO_PLAY"
       },
       {
@@ -9228,7 +9325,7 @@
         "name": "WIDGET_PROP_REPEAT"
       },
       {
-        "desc": "触发长按事件的时间(ms)。",
+        "desc": "触发长按事件的时间(毫秒)。",
         "name": "WIDGET_PROP_LONG_PRESS_TIME"
       },
       {
@@ -9428,7 +9525,7 @@
         "name": "WIDGET_PROP_DRAG_THRESHOLD"
       },
       {
-        "desc": "动画时间。",
+        "desc": "动画时间(毫秒)。",
         "name": "WIDGET_PROP_ANIMATING_TIME"
       },
       {
@@ -9436,12 +9533,28 @@
         "name": "WIDGET_PROP_ANIMATE_PREFIX"
       },
       {
-        "desc": "改变控件属性时附带动画的播放时间。",
+        "desc": "改变控件属性时附带动画的播放时间(毫秒)。",
         "name": "WIDGET_PROP_ANIMATE_ANIMATING_TIME"
       },
       {
         "desc": "控件脏矩形区域。",
         "name": "WIDGET_PROP_DIRTY_RECT"
+      },
+      {
+        "desc": "屏幕保护时间(毫秒)。",
+        "name": "WIDGET_PROP_SCREEN_SAVER_TIME"
+      },
+      {
+        "desc": "是否显示FPS。",
+        "name": "WIDGET_PROP_SHOW_FPS"
+      },
+      {
+        "desc": "最大FPS。",
+        "name": "WIDGET_PROP_MAX_FPS"
+      },
+      {
+        "desc": "数据校验脚本。",
+        "name": "WIDGET_PROP_VALIDATOR"
       }
     ],
     "header": "base/widget_consts.h",
@@ -10510,6 +10623,24 @@
             "type": "widget_t*",
             "name": "widget",
             "desc": "控件对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "判断widget拥有高亮属性。",
+        "name": "widget_has_highlighter",
+        "return": {
+          "type": "bool_t",
+          "desc": "拥有返回 TRUE，没有返回 FALSE。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
           },
           {
             "type": "const char*",
@@ -11261,7 +11392,7 @@
           {
             "type": "const char*",
             "name": "state",
-            "desc": "状态(必须为真正的常量字符串，在widget的整个生命周期有效)。"
+            "desc": "状态。"
           }
         ],
         "annotation": {
@@ -11657,6 +11788,62 @@
         },
         "desc": "请求强制重绘控件。",
         "name": "widget_invalidate_force",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "value_t*",
+            "name": "v",
+            "desc": "返回属性的值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取控件指定属性的值。",
+        "name": "widget_get_prop",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
+          },
+          {
+            "type": "const value_t*",
+            "name": "v",
+            "desc": "属性的值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置控件指定属性的值。",
+        "name": "widget_set_prop",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -12787,7 +12974,7 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置控件自己的布局参数。",
+        "desc": "设置控件自己的布局参数。\n备注：下一帧才会生效数据",
         "name": "widget_set_self_layout",
         "return": {
           "type": "ret_t",
@@ -12810,7 +12997,7 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置子控件的布局参数。",
+        "desc": "设置子控件的布局参数。\n备注：下一帧才会生效数据",
         "name": "widget_set_children_layout",
         "return": {
           "type": "ret_t",
@@ -12848,7 +13035,7 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置控件自己的布局(缺省布局器)参数(过时，请用widget\\_set\\_self\\_layout)。",
+        "desc": "设置控件自己的布局(缺省布局器)参数(过时，请用widget\\_set\\_self\\_layout)。\n备注：下一帧才会生效数据",
         "name": "widget_set_self_layout_params",
         "return": {
           "type": "ret_t",
@@ -15422,6 +15609,10 @@
       {
         "desc": "属性是否勾选。",
         "name": "TK_OBJECT_PROP_CHECKED"
+      },
+      {
+        "desc": "选中的索引。",
+        "name": "TK_OBJECT_PROP_SELECTED_INDEX"
       }
     ],
     "header": "tkc/object.h",
@@ -15545,7 +15736,7 @@
     "events": [],
     "properties": [],
     "header": "tkc/time_now.h",
-    "desc": "获取当前时间的函数。\n这里的当前时间是相对的，在嵌入式系统一般相对于开机时间。\n它本身并没有任何意义，一般用来计算时间间隔，如实现定时器和动画等等。",
+    "desc": "获取当前时间的函数。\n这里的当前时间是相对的，在嵌入式系统一般相对于开机时间(毫秒)。\n它本身并没有任何意义，一般用来计算时间间隔，如实现定时器和动画等等。",
     "name": "time_now_t",
     "annotation": {
       "scriptable": true,
@@ -15661,6 +15852,14 @@
       {
         "desc": "没有权限。",
         "name": "RET_NO_PERMISSION"
+      },
+      {
+        "desc": "无效地址。",
+        "name": "RET_INVALID_ADDR"
+      },
+      {
+        "desc": "超出范围。",
+        "name": "RET_EXCEED_RANGE"
       },
       {
         "desc": "最大值。",
@@ -15951,6 +16150,59 @@
           "cast": true,
           "scriptable": true
         },
+        "desc": "把event对象转widget_animator_event_t对象。",
+        "name": "widget_animator_event_cast",
+        "return": {
+          "type": "widget_animator_event_t*",
+          "desc": "event对象。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [
+      {
+        "name": "widget",
+        "desc": "控件对象。",
+        "type": "widget_t*",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "animator",
+        "desc": "控件动画句柄。",
+        "type": "void*",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      }
+    ],
+    "header": "base/events.h",
+    "desc": "控件动画事件。",
+    "name": "widget_animator_event_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "parent": "event_t",
+    "level": 2
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
+            "type": "event_t*",
+            "name": "event",
+            "desc": "event对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
         "desc": "把event对象转model_event_t对象。",
         "name": "model_event_cast",
         "return": {
@@ -16023,6 +16275,24 @@
     ],
     "events": [],
     "properties": [
+      {
+        "name": "x",
+        "desc": "x坐标。",
+        "type": "xy_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "y",
+        "desc": "y坐标。",
+        "type": "xy_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
       {
         "name": "dy",
         "desc": "滚轮的y值。",
@@ -16137,40 +16407,6 @@
           "cast": true,
           "scriptable": true
         },
-        "desc": "把event对象转value_change_event_t对象。",
-        "name": "value_change_event_cast",
-        "return": {
-          "type": "value_change_event_t*",
-          "desc": "event对象。"
-        }
-      }
-    ],
-    "events": [],
-    "properties": [],
-    "header": "base/events.h",
-    "desc": "值变化事件。",
-    "name": "value_change_event_t",
-    "annotation": {
-      "scriptable": true
-    },
-    "parent": "event_t",
-    "level": 2
-  },
-  {
-    "type": "class",
-    "methods": [
-      {
-        "params": [
-          {
-            "type": "event_t*",
-            "name": "event",
-            "desc": "event对象。"
-          }
-        ],
-        "annotation": {
-          "cast": true,
-          "scriptable": true
-        },
         "desc": "把event对象转offset_change_event_t对象。",
         "name": "offset_change_event_cast",
         "return": {
@@ -16182,7 +16418,7 @@
     "events": [],
     "properties": [],
     "header": "base/events.h",
-    "desc": "值变化事件。",
+    "desc": "offset变化事件。",
     "name": "offset_change_event_t",
     "annotation": {
       "scriptable": true
@@ -16369,7 +16605,7 @@
       },
       {
         "name": "ctrl",
-        "desc": "right alt键是否按下。\nctrl键是否按下。",
+        "desc": "ctrl键是否按下。",
         "type": "bool_t",
         "annotation": {
           "readable": true,
@@ -16423,7 +16659,7 @@
       },
       {
         "name": "cmd",
-        "desc": "left shift键是否按下。\ncmd/win键是否按下。",
+        "desc": "cmd/win键是否按下。",
         "type": "bool_t",
         "annotation": {
           "readable": true,
@@ -16752,6 +16988,59 @@
     "header": "base/events.h",
     "desc": "系统事件。",
     "name": "system_event_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "parent": "event_t",
+    "level": 2
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
+            "type": "event_t*",
+            "name": "event",
+            "desc": "event对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
+        "desc": "把event对象转ui_load_event_t对象。",
+        "name": "ui_load_event_cast",
+        "return": {
+          "type": "ui_load_event_t*",
+          "desc": "event 对象。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [
+      {
+        "name": "root",
+        "desc": "UI的根控件对象。",
+        "type": "widget_t*",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "name",
+        "desc": "UI的名称。",
+        "type": "const char*",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      }
+    ],
+    "header": "base/events.h",
+    "desc": "UI加载完成事件。",
+    "name": "ui_load_event_t",
     "annotation": {
       "scriptable": true
     },
@@ -17818,6 +18107,34 @@
             "desc": "窗口管理器对象。"
           },
           {
+            "type": "xy_t",
+            "name": "x",
+            "desc": "左上角x坐标。"
+          },
+          {
+            "type": "xy_t",
+            "name": "y",
+            "desc": "左上角x坐标。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置显示FPS的起始坐标。",
+        "name": "window_manager_set_show_fps_position",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "窗口管理器对象。"
+          },
+          {
             "type": "uint32_t",
             "name": "max_fps",
             "desc": "最大帧率。"
@@ -17872,7 +18189,7 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置屏保时间。",
+        "desc": "设置屏保时间(毫秒)。",
         "name": "window_manager_set_screen_saver_time",
         "return": {
           "type": "ret_t",
@@ -17984,6 +18301,29 @@
         },
         "desc": "调整原生窗口的大小。",
         "name": "window_manager_resize",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "窗口管理器对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "fullscreen",
+            "desc": "是否全屏"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置原生窗口是否全屏。",
+        "name": "window_manager_set_fullscreen",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -19943,7 +20283,7 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置播放间隔时间。",
+        "desc": "设置播放间隔时间(毫秒)。",
         "name": "image_animation_set_interval",
         "return": {
           "type": "ret_t",
@@ -22325,7 +22665,7 @@
       },
       {
         "name": "line_width",
-        "desc": "环线的厚度(缺省为8)。",
+        "desc": "环线的厚度(缺省为8)，line_width > r/2时，使用扇形绘制。",
         "type": "uint32_t",
         "annotation": {
           "set_prop": true,
@@ -22662,7 +23002,7 @@
           {
             "type": "int32_t",
             "name": "lull",
-            "desc": "间歇时间(ms)。"
+            "desc": "间歇时间(毫秒)。"
           }
         ],
         "annotation": {
@@ -22685,7 +23025,7 @@
           {
             "type": "int32_t",
             "name": "duration",
-            "desc": "滚动时间(ms)。"
+            "desc": "滚动时间(毫秒)。"
           }
         ],
         "annotation": {
@@ -22867,6 +23207,52 @@
             "desc": "控件对象。"
           },
           {
+            "type": "uint32_t",
+            "name": "delay",
+            "desc": "开始延迟时间。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置开始延迟时间。",
+        "name": "hscroll_label_set_delay",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "int32_t",
+            "name": "loop_interval_distance",
+            "desc": "间隔距离。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置滚动文本结尾和文本开头间隔距离",
+        "name": "hscroll_label_set_loop_interval_distance",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
             "type": "int32_t",
             "name": "xoffset",
             "desc": "x偏移。"
@@ -23007,7 +23393,7 @@
       },
       {
         "name": "lull",
-        "desc": "滚动之间的间歇时间(ms)，缺省3000ms。",
+        "desc": "滚动之间的间歇时间(毫秒)，缺省3000ms。",
         "type": "int32_t",
         "annotation": {
           "set_prop": true,
@@ -23020,8 +23406,19 @@
       },
       {
         "name": "duration",
-        "desc": "完整的滚动一次需要的时间(ms)，缺省5000ms。",
+        "desc": "滚动一次需要的时间(毫秒)，缺省5000ms。",
         "type": "int32_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "delay",
+        "desc": "延迟多久才开始滚动，缺省0ms。",
+        "type": "uint32_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -23064,8 +23461,21 @@
       },
       {
         "name": "stop_at_begin",
-        "desc": "滚动完毕后停在文本开头(缺省FALSE)。\n> 注：loop为FALSE时才可用。",
+        "desc": "滚动完毕后停在文本开头(缺省FALSE)。\n> 注：yoyo 为 TRUE 时，该功能失效。",
         "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "loop_interval_distance",
+        "desc": "滚动文本结尾和文本开头间隔距离(缺省值为 -1，小于 0 视为使用控件宽度作为间隔距离)。",
+        "type": "int32_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -23736,7 +24146,7 @@
           {
             "type": "int32_t",
             "name": "duration",
-            "desc": "动画持续时间。"
+            "desc": "动画持续时间(毫秒)。"
           }
         ],
         "annotation": {
@@ -23790,29 +24200,6 @@
         },
         "desc": "在当前的值上增加一个值，并触发EVT_VALUE_CHANGED事件。",
         "name": "scroll_bar_add_delta",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "widget_t*",
-            "name": "widget",
-            "desc": "scroll_bar控件。"
-          },
-          {
-            "type": "int32_t",
-            "name": "delta",
-            "desc": "值。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "在当前的值上增加一个值，并滚动到新的值，并触发EVT_VALUE_CHANGED事件。",
-        "name": "scroll_bar_scroll_delta",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -23892,13 +24279,13 @@
           {
             "type": "uint32_t",
             "name": "animator_time",
-            "desc": "时间。"
+            "desc": "时间(毫秒)。"
           }
         ],
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置翻页滚动动画时间。",
+        "desc": "设置翻页滚动动画时间(毫秒)。",
         "name": "scroll_bar_set_animator_time",
         "return": {
           "type": "ret_t",
@@ -23915,12 +24302,12 @@
           {
             "type": "int32_t",
             "name": "duration",
-            "desc": "动画持续时间。"
+            "desc": "动画持续时间(毫秒)。"
           },
           {
             "type": "int32_t",
             "name": "delay",
-            "desc": "动画执行时间。"
+            "desc": "动画执行时间(毫秒)。"
           }
         ],
         "annotation": {
@@ -23943,12 +24330,12 @@
           {
             "type": "int32_t",
             "name": "duration",
-            "desc": "动画持续时间。"
+            "desc": "动画持续时间(毫秒)。"
           },
           {
             "type": "int32_t",
             "name": "delay",
-            "desc": "动画执行时间。"
+            "desc": "动画执行时间(毫秒)。"
           }
         ],
         "annotation": {
@@ -23956,6 +24343,52 @@
         },
         "desc": "通过动画显示滚动条。",
         "name": "scroll_bar_show_by_opacity_animation",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "scroll_bar控件。"
+          },
+          {
+            "type": "bool_t",
+            "name": "scroll",
+            "desc": "是否设置该功能。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置鼠标滚轮是否滚动(仅对desktop风格的滚动条有效)。",
+        "name": "scroll_bar_set_wheel_scroll",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "scroll_bar控件。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "scroll_delta",
+            "desc": "滚动幅度。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置鼠标滚轮幅度(仅对desktop风格的滚动条有效)。",
+        "name": "scroll_bar_set_scroll_delta",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -24016,7 +24449,20 @@
       },
       {
         "name": "animator_time",
-        "desc": "翻页滚动动画时间。",
+        "desc": "翻页滚动动画时间(毫秒)。",
+        "type": "uint32_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "scroll_delta",
+        "desc": "每次鼠标滚动值。（缺省值为0，0 则使用鼠标滚动默认值）",
         "type": "uint32_t",
         "annotation": {
           "set_prop": true,
@@ -24043,6 +24489,19 @@
       {
         "name": "auto_hide",
         "desc": "是否自动隐藏(仅对mobile风格的滚动条有效)。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "wheel_scroll",
+        "desc": "设置鼠标滚轮是否滚动(仅对desktop风格的滚动条有效)（垂直滚动条缺省值为TRUE，水平滚动条缺省值为FALSE）。",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,
@@ -24409,7 +24868,7 @@
           {
             "type": "int32_t",
             "name": "duration",
-            "desc": "时间。"
+            "desc": "时间(毫秒)。"
           }
         ],
         "annotation": {
@@ -24442,7 +24901,7 @@
           {
             "type": "int32_t",
             "name": "duration",
-            "desc": "时间。"
+            "desc": "时间(毫秒)。"
           }
         ],
         "annotation": {
@@ -24867,7 +25326,7 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置 轮询时间。",
+        "desc": "设置 轮询时间(毫秒)。",
         "name": "serial_widget_set_check_interval",
         "return": {
           "type": "ret_t",
@@ -25949,7 +26408,7 @@
           {
             "type": "uint16_t",
             "name": "auto_play",
-            "desc": "0表示禁止自动播放，非0表示自动播放时每一页播放的时间。"
+            "desc": "0表示禁止自动播放，非0表示自动播放时每一页播放的时间(毫秒)。"
           }
         ],
         "annotation": {
@@ -26115,13 +26574,13 @@
           {
             "type": "uint32_t",
             "name": "animating_time",
-            "desc": "动画时间。"
+            "desc": "动画时间(毫秒)。"
           }
         ],
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置动画时间。",
+        "desc": "设置动画时间(毫秒)。",
         "name": "slide_view_set_animating_time",
         "return": {
           "type": "ret_t",
@@ -26190,7 +26649,7 @@
       },
       {
         "name": "auto_play",
-        "desc": "自动播放。0表示禁止自动播放，非0表示自动播放时每一页播放的时间。",
+        "desc": "自动播放。0表示禁止自动播放，非0表示自动播放时每一页播放的时间(毫秒)。",
         "type": "uint16_t",
         "annotation": {
           "set_prop": true,
@@ -26915,6 +27374,29 @@
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "ellipses",
+            "desc": "是否开启缩写。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "是否开启缩写，开启后，当文字长度操作控件长度后，自动变为...",
+        "name": "text_selector_set_ellipses",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
       }
     ],
     "events": [
@@ -27024,6 +27506,19 @@
       {
         "name": "enable_value_animator",
         "desc": "是否修改值时启用动画。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "ellipses",
+        "desc": "是否开启缩写，开启后，当文字长度操作控件长度后，自动变为...",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,
@@ -27669,13 +28164,13 @@
           {
             "type": "uint32_t",
             "name": "duration",
-            "desc": "时长(ms)。"
+            "desc": "时长(毫秒)。"
           }
         ],
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置 时长(ms)。",
+        "desc": "设置 时长(毫秒)。",
         "name": "timer_widget_set_duration",
         "return": {
           "type": "ret_t",
@@ -27693,7 +28188,7 @@
     "properties": [
       {
         "name": "duration",
-        "desc": "时长(ms)。",
+        "desc": "时长(毫秒)。",
         "type": "uint32_t",
         "annotation": {
           "set_prop": true,
@@ -28151,6 +28646,74 @@
       {
         "params": [
           {
+            "type": "event_t*",
+            "name": "event",
+            "desc": "event对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
+        "desc": "把event对象转value_change_event_t对象。",
+        "name": "value_change_event_cast",
+        "return": {
+          "type": "value_change_event_t*",
+          "desc": "event对象。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [],
+    "header": "tkc/event.h",
+    "desc": "值变化事件。",
+    "name": "value_change_event_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "parent": "event_t",
+    "level": 2
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
+            "type": "event_t*",
+            "name": "event",
+            "desc": "event对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
+        "desc": "把event对象转log_message_event_t对象。",
+        "name": "log_message_event_cast",
+        "return": {
+          "type": "log_message_event_t*",
+          "desc": "event对象。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [],
+    "header": "tkc/event.h",
+    "desc": "日志事件。",
+    "name": "log_message_event_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "parent": "event_t",
+    "level": 2
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
             "type": "widget_t*",
             "name": "parent",
             "desc": "父控件"
@@ -28395,7 +28958,7 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置触发长按事件的时间。",
+        "desc": "设置触发长按事件的时间(毫秒)。",
         "name": "button_set_long_press_time",
         "return": {
           "type": "ret_t",
@@ -28503,7 +29066,7 @@
       },
       {
         "name": "long_press_time",
-        "desc": "触发长按事件的时间(ms)",
+        "desc": "触发长按事件的时间(毫秒)",
         "type": "uint32_t",
         "annotation": {
           "set_prop": true,
@@ -29478,7 +30041,7 @@
     "properties": [
       {
         "name": "format",
-        "desc": "显示格式。\n\n* Y 代表年(完整显示)\n* M 代表月(1-12)\n* D 代表日(1-31)\n* h 代表时(0-23)\n* H 代表时(0-11)\n* m 代表分(0-59)\n* s 代表秒(0-59)\n* w 代表星期(0-6)\n* W 代表星期的英文缩写(支持翻译)\n* T 代表时段AM/PM(支持翻译)\n* YY 代表年(只显示末两位)\n* MM 代表月(01-12)\n* DD 代表日(01-31)\n* hh 代表时(00-23)\n* HH 代表时(00-11)\n* mm 代表分(00-59)\n* ss 代表秒(00-59)\n* MMM 代表月的英文缩写(支持翻译)\n\n如 日期时间为：2018/11/12 9:10:20\n* \"Y/M/D\"显示为\"2018/11/12\"\n* \"Y-M-D\"显示为\"2018-11-12\"\n* \"Y-M-D h:m:s\"显示为\"2018-11-12 9:10:20\"\n* \"Y-M-D hh:mm:ss\"显示为\"2018-11-12 09:10:20\"",
+        "desc": "显示格式。\n\n* Y 代表年(完整显示)\n* M 代表月(1-12)\n* D 代表日(1-31)\n* h 代表时(0-23)\n* H 代表时(1-12)\n* m 代表分(0-59)\n* s 代表秒(0-59)\n* w 代表星期(0-6)\n* W 代表星期的英文缩写(支持翻译)\n* T 代表时段AM/PM(支持翻译)\n* YY 代表年(只显示末两位)\n* MM 代表月(01-12)\n* DD 代表日(01-31)\n* hh 代表时(00-23)\n* HH 代表时(01-12)\n* mm 代表分(00-59)\n* ss 代表秒(00-59)\n* MMM 代表月的英文缩写(支持翻译)\n\n如 日期时间为：2018/11/12 9:10:20\n* \"Y/M/D\"显示为\"2018/11/12\"\n* \"Y-M-D\"显示为\"2018-11-12\"\n* \"Y-M-D h:m:s\"显示为\"2018-11-12 9:10:20\"\n* \"Y-M-D hh:mm:ss\"显示为\"2018-11-12 09:10:20\"",
         "type": "char*",
         "annotation": {
           "set_prop": true,
@@ -30333,6 +30896,29 @@
           "type": "char*",
           "desc": "返回选中文本。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "focus_next_when_enter",
+            "desc": "是否跳入下一个控件中。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置输入回车后是否跳到下一个控件中。",
+        "name": "edit_set_focus_next_when_enter",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
       }
     ],
     "events": [
@@ -30382,6 +30968,19 @@
       {
         "name": "action_text",
         "desc": "软键盘上action按钮的文本。内置取值有：\n\n* next 将焦点切换到下一个控件。\n* done 完成，关闭软键盘。\n\n也可以使用其它文本，比如send表示发送。这个需要自己实现相应的功能，处理EVT\\_IM\\_ACTION事件即可。",
+        "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "validator",
+        "desc": "fscript脚本，用输入校验，如：(len(text) > 3) && (len(text) < 10)。\n\n> 用于校验输入的文本是否合法。",
         "type": "char*",
         "annotation": {
           "set_prop": true,
@@ -30538,6 +31137,19 @@
       {
         "name": "cancelable",
         "desc": "是否支持撤销编辑。如果为TRUE，在失去焦点之前可以撤销所有修改(恢复获得焦点之前的内容)。\n\n> * 1.一般配合keyboard的\"cancel\"按钮使用。\n> * 2.为TRUE时，如果内容有变化，会设置编辑器的状态为changed，所以此时编辑器需要支持changed状态的style。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "focus_next_when_enter",
+        "desc": "输入回车后是否跳到下一个控件中。",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,
@@ -30867,6 +31479,29 @@
             "type": "widget_t*",
             "name": "widget",
             "desc": "group_box对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "value",
+            "desc": "选中的单选按钮的索引。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置选中的单选按钮的索引。",
+        "name": "group_box_set_value",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "group_box对象。"
           }
         ],
         "annotation": {
@@ -30881,8 +31516,33 @@
         }
       }
     ],
-    "events": [],
-    "properties": [],
+    "events": [
+      {
+        "name": "EVT_VALUE_WILL_CHANGE",
+        "desc": "值(勾选状态)即将改变事件。",
+        "type": "value_change_event_t"
+      },
+      {
+        "name": "EVT_VALUE_CHANGED",
+        "desc": "值(勾选状态)改变事件。",
+        "type": "value_change_event_t"
+      }
+    ],
+    "properties": [
+      {
+        "name": "value",
+        "desc": "选中的单选按钮的索引。",
+        "type": "uint32_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      }
+    ],
     "header": "widgets/group_box.h",
     "desc": "分组控件。\n\n单选按钮在同一个父控件中是互斥的，所以通常将相关的单选按钮放在一个group\\_box中。\n\n它本身不提供布局功能，仅提供具有语义的标签，让xml更具有可读性。\n子控件的布局可用layout\\_children属性指定。\n请参考[布局参数](https://github.com/zlgopen/awtk/blob/master/docs/layout.md)。\n\ngroup\\_box\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于group\\_box\\_t控件。\n\n在xml中使用\"group\\_box\"标签创建group\\_box。如：\n\n```xml\n<group_box x=\"20\" y=\"230\" w=\"50%\" h=\"90\" children_layout=\"default(r=3,c=1,ym=2,s=10)\" >\n<radio_button name=\"r1\" text=\"Book\"/>\n<radio_button name=\"r2\" text=\"Food\"/>\n<radio_button name=\"r3\" text=\"Pencil\" value=\"true\"/>\n</group_box>\n```\n\n可用通过style来设置控件的显示风格，如背景颜色等。如：\n\n```xml\n<style name=\"default\" border_color=\"#a0a0a0\">\n<normal     bg_color=\"#f0f0f0\" />\n</style>\n```",
     "name": "group_box_t",
@@ -30952,7 +31612,7 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置显示字符的个数(小余0时全部显示)。",
+        "desc": "设置显示字符的个数(小于0时全部显示)。",
         "name": "label_set_length",
         "return": {
           "type": "ret_t",
@@ -31036,6 +31696,29 @@
             "desc": "控件对象。"
           },
           {
+            "type": "bool_t",
+            "name": "ellipses",
+            "desc": "是否开启缩写。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "是否开启缩写，开启后，当文字长度操作控件长度后，自动变为...",
+        "name": "label_set_ellipses",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
             "type": "uint32_t",
             "name": "min_w",
             "desc": "最小宽度。"
@@ -31090,7 +31773,7 @@
     "properties": [
       {
         "name": "length",
-        "desc": "显示字符的个数(小余0时全部显示)。\n主要用于动态改变显示字符的个数，来实现类似[拨号中...]的动画效果。",
+        "desc": "显示字符的个数(小于0时全部显示)。\n主要用于动态改变显示字符的个数，来实现类似[拨号中...]的动画效果。",
         "type": "int32_t",
         "annotation": {
           "set_prop": true,
@@ -31117,6 +31800,19 @@
       {
         "name": "word_wrap",
         "desc": "是否允许整个单词换行(默认FALSE)。\n> 需要开启自动换行才有效果",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "ellipses",
+        "desc": "是否开启缩写，开启后，当文字长度操作控件长度后，自动变为...\n> 和换行是冲突的，换行后，该属性不生效",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,
@@ -33733,7 +34429,7 @@
       }
     ],
     "header": "gif_image/gif_image.h",
-    "desc": "GIF图片控件。\n\n> 注意：GIF图片的尺寸大于控件大小时会自动缩小图片，但一般的嵌入式系统的硬件加速都不支持图片缩放，\n所以缩放图片会导致性能明显下降。如果性能不满意时，请确认一下GIF图片的尺寸是否小余控件大小。\n\ngif\\_image\\_t是[image\\_base\\_t](image_base_t.md)的子类控件，image\\_base\\_t的函数均适用于gif\\_image\\_t控件。\n\n在xml中使用\"gif\"标签创建GIF图片控件。如：\n\n```xml\n<gif image=\"bee\"/>\n```\n\n>更多用法请参考：\n[gif\nimage](https://github.com/zlgopen/awtk/blob/master/design/default/ui/gif_image.xml)\n\n在c代码中使用函数gif\\_image\\_create创建GIF图片控件。如：\n\n```c\nwidget_t* image = gif_image_create(win, 10, 10, 200, 200);\nimage_set_image(image, \"bee\");\n```\n\n> 创建之后:\n>\n> 需要用widget\\_set\\_image设置图片名称。\n\n> 完整示例请参考：[gif image demo](\nhttps://github.com/zlgopen/awtk-c-demos/blob/master/demos/gif_image.c)\n\n可用通过style来设置控件的显示风格，如背景和边框等。如：\n\n```xml\n<gif>\n<style name=\"border\">\n<normal border_color=\"#000000\" bg_color=\"#e0e0e0\" text_color=\"black\"/>\n</style>\n</gif>\n```\n\n> 更多用法请参考：[theme default](\nhttps://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml)",
+    "desc": "GIF图片控件。\n\n> 注意：GIF图片的尺寸大于控件大小时会自动缩小图片，但一般的嵌入式系统的硬件加速都不支持图片缩放，\n所以缩放图片会导致性能明显下降。如果性能不满意时，请确认一下GIF图片的尺寸是否小于控件大小。\n\ngif\\_image\\_t是[image\\_base\\_t](image_base_t.md)的子类控件，image\\_base\\_t的函数均适用于gif\\_image\\_t控件。\n\n在xml中使用\"gif\"标签创建GIF图片控件。如：\n\n```xml\n<gif image=\"bee\"/>\n```\n\n>更多用法请参考：\n[gif\nimage](https://github.com/zlgopen/awtk/blob/master/design/default/ui/gif_image.xml)\n\n在c代码中使用函数gif\\_image\\_create创建GIF图片控件。如：\n\n```c\nwidget_t* image = gif_image_create(win, 10, 10, 200, 200);\nimage_set_image(image, \"bee\");\n```\n\n> 创建之后:\n>\n> 需要用widget\\_set\\_image设置图片名称。\n\n> 完整示例请参考：[gif image demo](\nhttps://github.com/zlgopen/awtk-c-demos/blob/master/demos/gif_image.c)\n\n可用通过style来设置控件的显示风格，如背景和边框等。如：\n\n```xml\n<gif>\n<style name=\"border\">\n<normal border_color=\"#000000\" bg_color=\"#e0e0e0\" text_color=\"black\"/>\n</style>\n</gif>\n```\n\n> 更多用法请参考：[theme default](\nhttps://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml)",
     "name": "gif_image_t",
     "parent": "image_base_t",
     "annotation": {
@@ -34505,12 +35201,35 @@
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "tk_object_t*",
+            "name": "obj",
+            "desc": "对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "keep_prop_type",
+            "desc": "不改变属性的类型。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置属性值时不改变属性的类型。",
+        "name": "object_default_set_keep_prop_type",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
       }
     ],
     "events": [],
     "properties": [],
     "header": "tkc/object_default.h",
-    "desc": "对象接口的缺省实现。\n\n内部使用有序数组保存所有属性，可以快速查找指定名称的属性。",
+    "desc": "对象接口的缺省实现。\n\n通用当作 map 数据结构使用，内部用有序数组保存所有属性，因此可以快速查找指定名称的属性。\n\n示例\n\n```c\n// 创建默认对象\ntk_object_t *obj = object_default_create();\n\n// 设置属性\ntk_object_set_prop_str(obj, \"name\", \"awplc\");\ntk_object_set_prop_int(obj, \"age\", 18);\ntk_object_set_prop_double(obj, \"weight\", 60.5);\n\n// 获取属性\nENSURE(tk_str_eq(tk_object_get_prop_str(obj, \"name\"), \"awplc\"));\nENSURE(tk_object_get_prop_int(obj, \"age\", 0) == 18);\nENSURE(tk_object_get_prop_double(obj, \"weight\", 0) == 60.5);\n\n// 遍历属性\ntk_object_foreach_prop(obj, visit_obj, NULL);\n\n// 释放对象\nTK_OBJECT_UNREF(obj);\n```",
     "name": "object_default_t",
     "parent": "tk_object_t",
     "annotation": {
@@ -35669,13 +36388,13 @@
           {
             "type": "uint32_t",
             "name": "close_when_timeout",
-            "desc": "大于0时，为定时器时间(ms)，超时关闭窗口。"
+            "desc": "大于0时，为定时器时间(毫秒)，超时关闭窗口。"
           }
         ],
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置超时关闭时间(ms)。",
+        "desc": "设置超时关闭时间(毫秒)。",
         "name": "popup_set_close_when_timeout",
         "return": {
           "type": "ret_t",
@@ -35713,7 +36432,7 @@
       },
       {
         "name": "close_when_timeout",
-        "desc": "超时后自动关闭窗口(ms)。",
+        "desc": "超时后自动关闭窗口(毫秒)。",
         "type": "uint32_t",
         "annotation": {
           "set_prop": true,

@@ -24,6 +24,10 @@ func (this TLabel) SetWordWrap(word_wrap bool) TRet {
   return TRet(C.label_set_word_wrap((*C.widget_t)(this.handle), (C.bool_t)(word_wrap)));
 }
 
+func (this TLabel) SetEllipses(ellipses bool) TRet {
+  return TRet(C.label_set_ellipses((*C.widget_t)(this.handle), (C.bool_t)(ellipses)));
+}
+
 func (this TLabel) ResizeToContent(min_w uint32, max_w uint32, min_h uint32, max_h uint32) TRet {
   return TRet(C.label_resize_to_content((*C.widget_t)(this.handle), (C.uint32_t)(min_w), (C.uint32_t)(max_w), (C.uint32_t)(min_h), (C.uint32_t)(max_h)));
 }
@@ -44,6 +48,10 @@ func (this TLabel) GetLineWrap() bool {
 
 func (this TLabel) GetWordWrap() bool {
   return (bool)((*C.label_t)(unsafe.Pointer(this.handle)).word_wrap);
+}
+
+func (this TLabel) GetEllipses() bool {
+  return (bool)((*C.label_t)(unsafe.Pointer(this.handle)).ellipses);
 }
 
 func (this TLabel) GetMaxW() int32 {

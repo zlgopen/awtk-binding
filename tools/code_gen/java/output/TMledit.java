@@ -18,6 +18,7 @@ package awtk;
  *在c代码中使用函数mledit\_create创建多行编辑器控件。如：
  *
  *
+ *
  *> 完整示例请参考：[mledit demo](
  *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/mledit.c)
  *

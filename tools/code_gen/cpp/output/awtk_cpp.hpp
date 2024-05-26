@@ -1101,6 +1101,7 @@ public:
  *在C/C++中，一般不需动态创建对象，直接声明并初始化即可。如：
  *
  *
+ *
  *> 在脚本语言中，需要动态创建对象。
  *
  */
@@ -1345,6 +1346,23 @@ public:
   bool IsNull() ;
 
   /**
+   * 判断两个value是否相同。
+   * 
+   * @param other value对象。
+   *
+   * @return 为空值返回TRUE，否则返回FALSE。
+   */
+  bool Equal(TValue& other) ;
+
+  /**
+   * 转换为int的值。
+   * 
+   *
+   * @return 值。
+   */
+  int Int() ;
+
+  /**
    * 设置类型为int的值。
    * 
    * @param value 待设置的值。
@@ -1498,6 +1516,15 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   static  ret_t Quit() ;
+
+  /**
+   * 退出TK事件主循环。
+   * 
+   * @param delay 延迟退出的时间(毫秒)。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  static  ret_t QuitEx(uint32_t delay) ;
 
   /**
    * 获取全局指针的X坐标。
@@ -2060,6 +2087,7 @@ public:
  *示例：
  *
  *
+ *
  *> 在非GUI线程请用idle\_queue。
  *
  */
@@ -2421,6 +2449,7 @@ public:
  *widget从style对象中，获取诸如字体、颜色和图片相关的参数，根据这些参数来绘制界面。
  *
  *
+ *
  *属性名称的请参考[style\_id](style_id_t.md)
  *
  */
@@ -2605,6 +2634,7 @@ public:
  *
  *示例：
  *
+ *
  *> 在非GUI线程请用timer\_queue。
  *
  */
@@ -2616,7 +2646,7 @@ public:
    * 
    * @param on_timer timer回调函数。
    * @param ctx timer回调函数的上下文。
-   * @param duration 时间。
+   * @param duration 时间(毫秒)。
    *
    * @return 返回timer的ID，TK_INVALID_ID表示失败。
    */
@@ -2671,7 +2701,7 @@ public:
    * 修改指定的timer的duration，修改之后定时器重新开始计时。
    * 
    * @param timer_id timerID。
-   * @param duration 新的时间。
+   * @param duration 新的时间(毫秒)。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -2697,6 +2727,7 @@ public:
  *
  *
  *示例：
+ *
  *
  *
  *>请参考：https://www.w3schools.com/tags/ref_canvas.asp
@@ -3329,10 +3360,42 @@ public:
 
 
 /**
- * widget_t* button = button_create(win, 10, 10, 128, 30);
- *widget_set_text(button, L"OK");
- *widget_on(button, EVT_CLICK, on_click, NULL);
+ * **widget_t** 是所有控件、窗口和窗口管理器的基类。
+ ***widget_t**也是一个容器，可放其它**widget_t**到它的内部，形成一个树形结构。
+ *
+ *
+ *
+ *通常**widget_t**通过一个矩形区域向用户呈现一些信息，接受用户的输入，并据此做出适当的反应。
+ *它负责控件的生命周期、通用状态、事件分发和Style的管理。
+ *本类提供的接口(函数和属性)除非特别说明，一般都适用于子类控件。
+ *
+ *为了便于解释，这里特别说明一下几个术语：
+ *
+ ** **父控件与子控件**：父控件与子控件指的两个控件的组合关系(这是在运行时决定的)。
+ *比如：在窗口中放一个按钮，此时，我们称按钮是窗口的子控件，窗口是按钮的父控件。
+ *
+ *
+ *
+ ** **子类控件与父类控件**：子类控件与父类控件指的两类控件的继承关系(这是在设计时决定的)。
+ *比如：我们称**button_t**是**widget_t**的子类控件，**widget_t**是**button_t**的父类控件。
+ *
+ *
+ *
+ *widget相关的函数都只能在GUI线程中执行，如果需在非GUI线程中想调用widget相关函数，
+ *请用idle\_queue或timer\_queue进行串行化。
+ *请参考[demo thread](https://github.com/zlgopen/awtk/blob/master/demos/demo_thread_app.c)
+ *
+ ***widget\_t**是抽象类，不要直接创建**widget\_t**的实例。控件支持两种创建方式：
+ *
+ ** 通过XML创建。如：
+ *
+ *```xml
+ *<button x="c" y="m" w="80" h="30" text="OK"/>
  *```
+ *
+ ** 通过代码创建。如：
+ *
+ *
  *
  */
 class TWidget { 
@@ -3603,6 +3666,14 @@ public:
   bool IsSupportHighlighter() ;
 
   /**
+   * 判断widget拥有高亮属性。
+   * 
+   *
+   * @return 拥有返回 TRUE，没有返回 FALSE。
+   */
+  bool HasHighlighter() ;
+
+  /**
    * 启用指定的style。
    * 
    * @param style style的名称。
@@ -3739,12 +3810,12 @@ public:
   bool GetFeedback() ;
 
   /**
-   * str_t str;
-   *str_init(&str, 0);
-   *str_from_wstr(&str, widget_get_text(target));
-   *log_debug("%s: %s\n", target->name, str.str);
-   *str_reset(&str);
-   *```
+   * 获取控件的文本。
+   *只是对widget\_get\_prop的包装，文本的意义由子类控件决定。
+   *
+   *如果希望获取UTF8格式的文本，可以参考下面的代码：
+   *
+   *
    * 
    *
    * @return 返回文本。
@@ -3938,7 +4009,7 @@ public:
   /**
    * 设置控件的状态。
    * 
-   * @param state 状态(必须为真正的常量字符串，在widget的整个生命周期有效)。
+   * @param state 状态。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -4066,10 +4137,10 @@ public:
   ret_t SetSensitive(bool sensitive) ;
 
   /**
-   * widget_t* ok = button_create(win, 10, 10, 80, 30);
-   *widget_on(ok, EVT_CLICK, on_click, NULL);
+   * 注册指定事件的处理函数。
+   *使用示例：
    *
-   *```
+   *
    * 
    * @param type 事件类型。
    * @param on_event 事件处理函数。
@@ -4096,6 +4167,26 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t InvalidateForce(TRect& r) ;
+
+  /**
+   * 获取控件指定属性的值。
+   * 
+   * @param name 属性的名称。
+   * @param v 返回属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t GetProp(const char* name, TValue& v) ;
+
+  /**
+   * 设置控件指定属性的值。
+   * 
+   * @param name 属性的名称。
+   * @param v 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetProp(const char* name, TValue& v) ;
 
   /**
    * 设置多个参数。
@@ -4321,8 +4412,13 @@ public:
   bool IsOpenedPopup() ;
 
   /**
-   * widget_set_prop_bool(group, WIDGET_PROP_IS_KEYBOARD, TRUE);
-   *```
+   * 判断当前控件是否是keyboard。
+   *
+   *> keyboard收到pointer事件时，不会让当前控件失去焦点。
+   *
+   *在自定义软键盘时，将所有按钮放到一个容器当中，并设置为is_keyboard。
+   *
+   *
    * 
    *
    * @return 返回FALSE表示不是，否则表示是。
@@ -4547,6 +4643,7 @@ public:
 
   /**
    * 设置控件自己的布局参数。
+   *备注：下一帧才会生效数据
    * 
    * @param params 布局参数。
    *
@@ -4556,6 +4653,7 @@ public:
 
   /**
    * 设置子控件的布局参数。
+   *备注：下一帧才会生效数据
    * 
    * @param params 布局参数。
    *
@@ -4565,6 +4663,7 @@ public:
 
   /**
    * 设置控件自己的布局(缺省布局器)参数(过时，请用widget\_set\_self\_layout)。
+   *备注：下一帧才会生效数据
    * 
    * @param x x参数。
    * @param y y参数。
@@ -4602,8 +4701,15 @@ public:
   ret_t SetStyleStr(const char* state_and_name, const char* value) ;
 
   /**
-   * widget_set_style_color(label, "normal:bg_color", 0xFF332211);
-   *```
+   * 设置颜色类型的style。
+   *
+   *> * [state 的取值](https://github.com/zlgopen/awtk/blob/master/docs/manual/widget_state_t.md)
+   *> * [name 的取值](https://github.com/zlgopen/awtk/blob/master/docs/theme.md)
+   *
+   *
+   *在下面这个例子中，R=0x11 G=0x22 B=0x33 A=0xFF
+   *
+   *
    * 
    * @param state_and_name 状态和名字，用英文的冒号分隔。
    * @param value 值。颜色值一般用十六进制表示，每两个数字表示一个颜色通道，从高位到低位，依次是ABGR。
@@ -4750,8 +4856,15 @@ public:
 
 
 /**
- * #include "conf_io/app_conf.h"
- *```
+ * 应用程序的配置信息。
+ *
+ *底层实现可以是任何格式，比如INI，XML，JSON和UBJSON。
+ *
+ *对于树状的文档，key可以是多级的，用.分隔。如network.ip。
+ *
+ *conf-io是可选组件，需要自己包含头文件，否则64位数据类型会被截断成32位的数据。
+ *
+ *
  *
  */
 class TAppConf { 
@@ -5512,10 +5625,9 @@ public:
 
 
   /**
-   * rlog_t* log = rlog_create("./logs/%d.log", 1020*1024, 256);
-   *rlog_write(log, "hello\n");
-   *rlog_destroy(log);
-   *```
+   * 创建rlog对象。
+   *
+   *
    * 
    * @param filename_pattern 用来确定文件名的路径和文件名。
    * @param max_size log文件占用最大磁盘空间(字节)。
@@ -5538,7 +5650,7 @@ public:
 
 /**
  * 获取当前时间的函数。
- *这里的当前时间是相对的，在嵌入式系统一般相对于开机时间。
+ *这里的当前时间是相对的，在嵌入式系统一般相对于开机时间(毫秒)。
  *它本身并没有任何意义，一般用来计算时间间隔，如实现定时器和动画等等。
  *
  */
@@ -5720,6 +5832,53 @@ public:
 
 
 /**
+ * 控件动画事件。
+ *
+ */
+class TWidgetAnimatorEvent : public TEvent { 
+public:
+  TWidgetAnimatorEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  }
+
+  TWidgetAnimatorEvent() {
+    this->nativeObj = (event_t*)NULL;
+  }
+
+  TWidgetAnimatorEvent(const widget_animator_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
+  }
+
+  static TWidgetAnimatorEvent Cast(event_t* nativeObj) {
+    return TWidgetAnimatorEvent(nativeObj);
+  }
+
+  static TWidgetAnimatorEvent Cast(const event_t* nativeObj) {
+    return TWidgetAnimatorEvent((event_t*)nativeObj);
+  }
+
+  static TWidgetAnimatorEvent Cast(TEvent& obj) {
+    return TWidgetAnimatorEvent(obj.nativeObj);
+  }
+
+  static TWidgetAnimatorEvent Cast(const TEvent& obj) {
+    return TWidgetAnimatorEvent(obj.nativeObj);
+  }
+
+
+  /**
+   * 控件对象。
+   *
+   */
+  TWidget GetWidget() const;
+
+  /**
+   * 控件动画句柄。
+   *
+   */
+  void* GetAnimator() const;
+};
+
+
+/**
  * model变化事件。
  *
  */
@@ -5806,6 +5965,18 @@ public:
 
 
   /**
+   * x坐标。
+   *
+   */
+  xy_t GetX() const;
+
+  /**
+   * y坐标。
+   *
+   */
+  xy_t GetY() const;
+
+  /**
    * 滚轮的y值。
    *
    */
@@ -5879,42 +6050,7 @@ public:
 
 
 /**
- * 值变化事件。
- *
- */
-class TValueChangeEvent : public TEvent { 
-public:
-  TValueChangeEvent(event_t* nativeObj) : TEvent(nativeObj) {
-  }
-
-  TValueChangeEvent() {
-    this->nativeObj = (event_t*)NULL;
-  }
-
-  TValueChangeEvent(const value_change_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
-  }
-
-  static TValueChangeEvent Cast(event_t* nativeObj) {
-    return TValueChangeEvent(nativeObj);
-  }
-
-  static TValueChangeEvent Cast(const event_t* nativeObj) {
-    return TValueChangeEvent((event_t*)nativeObj);
-  }
-
-  static TValueChangeEvent Cast(TEvent& obj) {
-    return TValueChangeEvent(obj.nativeObj);
-  }
-
-  static TValueChangeEvent Cast(const TEvent& obj) {
-    return TValueChangeEvent(obj.nativeObj);
-  }
-
-};
-
-
-/**
- * 值变化事件。
+ * offset变化事件。
  *
  */
 class TOffsetChangeEvent : public TEvent { 
@@ -6098,8 +6234,7 @@ public:
   bool GetRalt() const;
 
   /**
-   * right alt键是否按下。
-   *ctrl键是否按下。
+   * ctrl键是否按下。
    *
    */
   bool GetCtrl() const;
@@ -6135,8 +6270,7 @@ public:
   bool GetRshift() const;
 
   /**
-   * left shift键是否按下。
-   *cmd/win键是否按下。
+   * cmd/win键是否按下。
    *
    */
   bool GetCmd() const;
@@ -6422,6 +6556,53 @@ public:
    *
    */
   void* GetSdlEvent() const;
+};
+
+
+/**
+ * UI加载完成事件。
+ *
+ */
+class TUiLoadEvent : public TEvent { 
+public:
+  TUiLoadEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  }
+
+  TUiLoadEvent() {
+    this->nativeObj = (event_t*)NULL;
+  }
+
+  TUiLoadEvent(const ui_load_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
+  }
+
+  static TUiLoadEvent Cast(event_t* nativeObj) {
+    return TUiLoadEvent(nativeObj);
+  }
+
+  static TUiLoadEvent Cast(const event_t* nativeObj) {
+    return TUiLoadEvent((event_t*)nativeObj);
+  }
+
+  static TUiLoadEvent Cast(TEvent& obj) {
+    return TUiLoadEvent(obj.nativeObj);
+  }
+
+  static TUiLoadEvent Cast(const TEvent& obj) {
+    return TUiLoadEvent(obj.nativeObj);
+  }
+
+
+  /**
+   * UI的根控件对象。
+   *
+   */
+  TWidget GetRoot() const;
+
+  /**
+   * UI的名称。
+   *
+   */
+  const char* GetName() const;
 };
 
 
@@ -7019,6 +7200,16 @@ public:
   ret_t SetShowFps(bool show_fps) ;
 
   /**
+   * 设置显示FPS的起始坐标。
+   * 
+   * @param x 左上角x坐标。
+   * @param y 左上角x坐标。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetShowFpsPosition(xy_t x, xy_t y) ;
+
+  /**
    * 限制最大帧率。
    *
    *> TK\_MAX\_LOOP\_FPS/max\_fps最好是整数，比如TK\_MAX\_LOOP\_FPS为120，max\_fps可取60/30/20/10等。
@@ -7039,7 +7230,7 @@ public:
   ret_t SetIgnoreInputEvents(bool ignore_input_events) ;
 
   /**
-   * 设置屏保时间。
+   * 设置屏保时间(毫秒)。
    * 
    * @param screen_saver_time 屏保时间(单位毫秒), 为0关闭屏保。
    *
@@ -7098,6 +7289,15 @@ public:
   ret_t Resize(wh_t w, wh_t h) ;
 
   /**
+   * 设置原生窗口是否全屏。
+   * 
+   * @param fullscreen 是否全屏
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetFullscreen(bool fullscreen) ;
+
+  /**
    * 关闭全部窗口。
    * 
    *
@@ -7126,11 +7326,14 @@ public:
  *在c代码中使用函数canvas\_widget\_create创建画布控件。如：
  *
  *
+ *
  *> 创建之后，需要用widget\_on注册EVT\_PAINT事件，并在EVT\_PAINT事件处理函数中绘制。
+ *
  *
  *
  *绘制时，可以通过canvas接口去绘制，也可以通过vgcanvas接口去绘制。
  *先从evt获取canvas对象，再通过canvas\_get\_vgcanvas从canvas中获取vgcanvas对象。
+ *
  *
  *
  *> 完整示例请参考：
@@ -7353,6 +7556,7 @@ public:
  *[draggable.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/draggable.xml)
  *
  *在c代码中使用函数draggable\_create创建按钮控件。如：
+ *
  *
  *
  *> draggable本身不可见，故无需style。
@@ -7949,6 +8153,7 @@ public:
  *在c代码中使用函数gauge\_pointer\_create创建仪表指针控件。如：
  *
  *
+ *
  *> 创建之后，需要用gauge\_pointer\_set\_image设置仪表指针图片。
  *
  */
@@ -8069,6 +8274,7 @@ public:
  *在c代码中使用函数gauge\_create创建表盘控件。如：
  *
  *
+ *
  *可用通过style来设置控件的显示风格，如背景和边框等。如：
  *
  *```xml
@@ -8181,6 +8387,7 @@ public:
  *在c代码中使用函数image\_animation\_create创建图片动画控件。如：
  *
  *
+ *
  *> 完整示例请参考：
  *[image_animation
  *demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/image_animation.c)
@@ -8249,7 +8456,7 @@ public:
   ret_t SetImage(const char* image) ;
 
   /**
-   * 设置播放间隔时间。
+   * 设置播放间隔时间(毫秒)。
    * 
    * @param interval 间隔时间(毫秒)。
    *
@@ -8481,6 +8688,7 @@ public:
  *[image\_value](https://github.com/zlgopen/awtk/blob/master/design/default/ui/image_value.xml)
  *
  *在c代码中使用函数image\_value\_create创建图片值控件。如：
+ *
  *
  *
  *> 完整示例请参考：
@@ -9010,6 +9218,7 @@ public:
  *在c代码中使用函数mledit\_create创建多行编辑器控件。如：
  *
  *
+ *
  *> 完整示例请参考：[mledit demo](
  *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/mledit.c)
  *
@@ -9329,6 +9538,7 @@ public:
  *在c代码中使用函数progress\_circle\_create创建进度圆环控件。如：
  *
  *
+ *
  *> 完整示例请参考：
  *[progress_circle
  *demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/progress_circle.c)
@@ -9485,7 +9695,7 @@ public:
   int32_t GetStartAngle() const;
 
   /**
-   * 环线的厚度(缺省为8)。
+   * 环线的厚度(缺省为8)，line_width r/2时，使用扇形绘制。
    *
    */
   uint32_t GetLineWidth() const;
@@ -9596,6 +9806,7 @@ public:
  *[rich_text.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/rich_text.xml)
  *
  *在c代码中使用函数rich\_text\_create创建图文混排控件。如：
+ *
  *
  *
  *> 完整示例请参考：
@@ -9761,7 +9972,7 @@ public:
   /**
    * 设置lull。
    * 
-   * @param lull 间歇时间(ms)。
+   * @param lull 间歇时间(毫秒)。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -9770,7 +9981,7 @@ public:
   /**
    * 设置duration。
    * 
-   * @param duration 滚动时间(ms)。
+   * @param duration 滚动时间(毫秒)。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -9840,6 +10051,24 @@ public:
   ret_t SetStopAtBegin(bool stop_at_begin) ;
 
   /**
+   * 设置开始延迟时间。
+   * 
+   * @param delay 开始延迟时间。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetDelay(uint32_t delay) ;
+
+  /**
+   * 设置滚动文本结尾和文本开头间隔距离
+   * 
+   * @param loop_interval_distance 间隔距离。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetLoopIntervalDistance(int32_t loop_interval_distance) ;
+
+  /**
    * 设置x偏移(一般无需用户调用)。。
    * 
    * @param xoffset x偏移。
@@ -9895,16 +10124,22 @@ public:
   bool GetEllipses() const;
 
   /**
-   * 滚动之间的间歇时间(ms)，缺省3000ms。
+   * 滚动之间的间歇时间(毫秒)，缺省3000ms。
    *
    */
   int32_t GetLull() const;
 
   /**
-   * 完整的滚动一次需要的时间(ms)，缺省5000ms。
+   * 滚动一次需要的时间(毫秒)，缺省5000ms。
    *
    */
   int32_t GetDuration() const;
+
+  /**
+   * 延迟多久才开始滚动，缺省0ms。
+   *
+   */
+  uint32_t GetDelay() const;
 
   /**
    * 滚动速度(px/ms)（设置后 duration 不生效）。
@@ -9926,10 +10161,16 @@ public:
 
   /**
    * 滚动完毕后停在文本开头(缺省FALSE)。
-   *> 注：loop为FALSE时才可用。
+   *> 注：yoyo 为 TRUE 时，该功能失效。
    *
    */
   bool GetStopAtBegin() const;
+
+  /**
+   * 滚动文本结尾和文本开头间隔距离(缺省值为 -1，小于 0 视为使用控件宽度作为间隔距离)。
+   *
+   */
+  int32_t GetLoopIntervalDistance() const;
 };
 
 
@@ -9960,6 +10201,7 @@ public:
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)
  *
  *在c代码中使用函数list\_item\_create创建列表项控件。如：
+ *
  *
  *
  *> 列表项控件大小一般由列表控制，不需指定xywh参数。
@@ -10045,6 +10287,7 @@ public:
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_h.xml)
  *
  *在c代码中使用函数list\_view\_h\_create创建水平列表视图控件。如：
+ *
  *
  *
  *用代码构造列表视图是比较繁琐的事情，最好用XML来构造。
@@ -10165,6 +10408,7 @@ public:
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)
  *
  *在c代码中使用函数list\_view\_create创建列表视图控件。如：
+ *
  *
  *
  *用代码构造列表视图是比较繁琐的事情，最好用XML来构造。
@@ -10317,6 +10561,7 @@ public:
  *在c代码中使用函数scroll\_bar\_create创建列表项控件。如：
  *
  *
+ *
  *```xml
  *<style name="default">
  *<normal bg_color="#c0c0c0" fg_color="#808080"/>
@@ -10413,7 +10658,7 @@ public:
    * 滚动到指定的值。
    * 
    * @param value 值。
-   * @param duration 动画持续时间。
+   * @param duration 动画持续时间(毫秒)。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -10436,15 +10681,6 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t AddDelta(int32_t delta) ;
-
-  /**
-   * 在当前的值上增加一个值，并滚动到新的值，并触发EVT_VALUE_CHANGED事件。
-   * 
-   * @param delta 值。
-   *
-   * @return 返回RET_OK表示成功，否则表示失败。
-   */
-  ret_t ScrollDelta(int32_t delta) ;
 
   /**
    * 设置值，但不触发EVT_VALUE_CHANGED事件。
@@ -10475,9 +10711,9 @@ public:
   bool IsMobile() ;
 
   /**
-   * 设置翻页滚动动画时间。
+   * 设置翻页滚动动画时间(毫秒)。
    * 
-   * @param animator_time 时间。
+   * @param animator_time 时间(毫秒)。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -10486,8 +10722,8 @@ public:
   /**
    * 通过动画隐藏滚动条。
    * 
-   * @param duration 动画持续时间。
-   * @param delay 动画执行时间。
+   * @param duration 动画持续时间(毫秒)。
+   * @param delay 动画执行时间(毫秒)。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -10496,12 +10732,30 @@ public:
   /**
    * 通过动画显示滚动条。
    * 
-   * @param duration 动画持续时间。
-   * @param delay 动画执行时间。
+   * @param duration 动画持续时间(毫秒)。
+   * @param delay 动画执行时间(毫秒)。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t ShowByOpacityAnimation(int32_t duration, int32_t delay) ;
+
+  /**
+   * 设置鼠标滚轮是否滚动(仅对desktop风格的滚动条有效)。
+   * 
+   * @param scroll 是否设置该功能。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetWheelScroll(bool scroll) ;
+
+  /**
+   * 设置鼠标滚轮幅度(仅对desktop风格的滚动条有效)。
+   * 
+   * @param scroll_delta 滚动幅度。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetScrollDelta(uint32_t scroll_delta) ;
 
   /**
    * 虚拟宽度或高度。
@@ -10522,10 +10776,16 @@ public:
   int32_t GetRow() const;
 
   /**
-   * 翻页滚动动画时间。
+   * 翻页滚动动画时间(毫秒)。
    *
    */
   uint32_t GetAnimatorTime() const;
+
+  /**
+   * 每次鼠标滚动值。（缺省值为0，0 则使用鼠标滚动默认值）
+   *
+   */
+  uint32_t GetScrollDelta() const;
 
   /**
    * 滚动时是否启用动画。
@@ -10538,6 +10798,12 @@ public:
    *
    */
   bool GetAutoHide() const;
+
+  /**
+   * 设置鼠标滚轮是否滚动(仅对desktop风格的滚动条有效)（垂直滚动条缺省值为TRUE，水平滚动条缺省值为FALSE）。
+   *
+   */
+  bool GetWheelScroll() const;
 };
 
 
@@ -10568,6 +10834,7 @@ public:
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)
  *
  *在c代码中使用函数scroll\_view\_create创建列表视图控件。如：
+ *
  *
  *
  *可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。
@@ -10722,7 +10989,7 @@ public:
    * 
    * @param xoffset_end x偏移量。
    * @param yoffset_end y偏移量。
-   * @param duration 时间。
+   * @param duration 时间(毫秒)。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -10733,7 +11000,7 @@ public:
    * 
    * @param xoffset_delta x偏移量。
    * @param yoffset_delta y偏移量。
-   * @param duration 时间。
+   * @param duration 时间(毫秒)。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -10932,7 +11199,7 @@ public:
   ret_t SetFlowcontrol(uint32_t flowcontrol) ;
 
   /**
-   * 设置 轮询时间。
+   * 设置 轮询时间(毫秒)。
    * 
    * @param check_interval 轮询时间（单位：ms）。
    *
@@ -11010,10 +11277,13 @@ public:
  *在c代码中使用函数slide\_menu\_create创建左右滑动菜单控件。如：
  *
  *
+ *
  *可按下面的方法关注当前项改变的事件：
  *
  *
+ *
  *可按下面的方法关注当前按钮被点击的事件：
+ *
  *
  *
  *> 完整示例请参考：[slide_menu demo](
@@ -11201,6 +11471,7 @@ public:
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/slide_view.xml)
  *
  *在c代码中使用函数slide\_indicator\_create创建指示器控件。如：
+ *
  *
  *
  *```xml
@@ -11466,6 +11737,7 @@ public:
  *在c代码中使用函数slide\_view\_create创建滑动视图控件。如：
  *
  *
+ *
  *> 完整示例请参考：
  *[slide_view demo](
  *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/slide_view.c)
@@ -11529,7 +11801,7 @@ public:
   /**
    * 设置为自动播放模式。
    * 
-   * @param auto_play 0表示禁止自动播放，非0表示自动播放时每一页播放的时间。
+   * @param auto_play 0表示禁止自动播放，非0表示自动播放时每一页播放的时间(毫秒)。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -11602,9 +11874,9 @@ public:
   ret_t SetDragThreshold(uint32_t drag_threshold) ;
 
   /**
-   * 设置动画时间。
+   * 设置动画时间(毫秒)。
    * 
-   * @param animating_time 动画时间。
+   * @param animating_time 动画时间(毫秒)。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -11626,7 +11898,7 @@ public:
   bool GetVertical() const;
 
   /**
-   * 自动播放。0表示禁止自动播放，非0表示自动播放时每一页播放的时间。
+   * 自动播放。0表示禁止自动播放，非0表示自动播放时每一页播放的时间(毫秒)。
    *
    */
   uint16_t GetAutoPlay() const;
@@ -11675,6 +11947,7 @@ public:
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/switch.xml)
  *
  *在c代码中使用函数switch\_create创建开关控件。如：
+ *
  *
  *
  *> 完整示例请参考：[switch demo](
@@ -11774,6 +12047,7 @@ public:
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/text_selector.xml)
  *
  *在c代码中使用函数text\_selector\_create创建文本选择器控件。如：
+ *
  *
  *
  *> 完整示例请参考：[text\_selector demo](
@@ -12007,6 +12281,15 @@ public:
   ret_t SetMaskAreaScale(float_t mask_area_scale) ;
 
   /**
+   * 是否开启缩写，开启后，当文字长度操作控件长度后，自动变为...
+   * 
+   * @param ellipses 是否开启缩写。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetEllipses(bool ellipses) ;
+
+  /**
    * 可见的选项数量(只能是1或者3或者5，缺省为5)。
    *
    */
@@ -12061,6 +12344,12 @@ public:
   bool GetEnableValueAnimator() const;
 
   /**
+   * 是否开启缩写，开启后，当文字长度操作控件长度后，自动变为...
+   *
+   */
+  bool GetEllipses() const;
+
+  /**
    * 绘制蒙版的变化趋势。
    *
    */
@@ -12090,6 +12379,7 @@ public:
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/time_clock.xml)
  *
  *在c代码中使用函数time\_clock\_create创建模拟时钟控件。如：
+ *
  *
  *
  *> 完整示例请参考：[time_clock demo](
@@ -12397,16 +12687,16 @@ public:
   static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
 
   /**
-   * 设置 时长(ms)。
+   * 设置 时长(毫秒)。
    * 
-   * @param duration 时长(ms)。
+   * @param duration 时长(毫秒)。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t SetDuration(uint32_t duration) ;
 
   /**
-   * 时长(ms)。
+   * 时长(毫秒)。
    *
    */
   uint32_t GetDuration() const;
@@ -12754,6 +13044,76 @@ public:
 
 
 /**
+ * 值变化事件。
+ *
+ */
+class TValueChangeEvent : public TEvent { 
+public:
+  TValueChangeEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  }
+
+  TValueChangeEvent() {
+    this->nativeObj = (event_t*)NULL;
+  }
+
+  TValueChangeEvent(const value_change_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
+  }
+
+  static TValueChangeEvent Cast(event_t* nativeObj) {
+    return TValueChangeEvent(nativeObj);
+  }
+
+  static TValueChangeEvent Cast(const event_t* nativeObj) {
+    return TValueChangeEvent((event_t*)nativeObj);
+  }
+
+  static TValueChangeEvent Cast(TEvent& obj) {
+    return TValueChangeEvent(obj.nativeObj);
+  }
+
+  static TValueChangeEvent Cast(const TEvent& obj) {
+    return TValueChangeEvent(obj.nativeObj);
+  }
+
+};
+
+
+/**
+ * 日志事件。
+ *
+ */
+class TLogMessageEvent : public TEvent { 
+public:
+  TLogMessageEvent(event_t* nativeObj) : TEvent(nativeObj) {
+  }
+
+  TLogMessageEvent() {
+    this->nativeObj = (event_t*)NULL;
+  }
+
+  TLogMessageEvent(const log_message_event_t* nativeObj) : TEvent((event_t*)nativeObj) {
+  }
+
+  static TLogMessageEvent Cast(event_t* nativeObj) {
+    return TLogMessageEvent(nativeObj);
+  }
+
+  static TLogMessageEvent Cast(const event_t* nativeObj) {
+    return TLogMessageEvent((event_t*)nativeObj);
+  }
+
+  static TLogMessageEvent Cast(TEvent& obj) {
+    return TLogMessageEvent(obj.nativeObj);
+  }
+
+  static TLogMessageEvent Cast(const TEvent& obj) {
+    return TLogMessageEvent(obj.nativeObj);
+  }
+
+};
+
+
+/**
  * app_bar控件。
  *
  *一个简单的容器控件，一般在窗口的顶部，用于显示本窗口的状态和信息。
@@ -12773,6 +13133,7 @@ public:
  *```
  *
  *在c代码中使用函数app\_bar\_create创建app\_bar。如：
+ *
  *
  *
  *可用通过style来设置控件的显示风格，如背景颜色等。如：
@@ -12922,6 +13283,7 @@ public:
  *在c代码中使用函数button\_create创建按钮控件。如：
  *
  *
+ *
  *> 创建之后，需要用widget\_set\_text或widget\_set\_text\_utf8设置文本内容。
  *
  *> 完整示例请参考：
@@ -12995,7 +13357,7 @@ public:
   ret_t SetRepeat(int32_t repeat) ;
 
   /**
-   * 设置触发长按事件的时间。
+   * 设置触发长按事件的时间(毫秒)。
    * 
    * @param long_press_time 触发长按事件的时间(毫秒)。
    *
@@ -13045,7 +13407,7 @@ public:
   bool GetEnablePreview() const;
 
   /**
-   * 触发长按事件的时间(ms)
+   * 触发长按事件的时间(毫秒)
    *
    */
   uint32_t GetLongPressTime() const;
@@ -13081,7 +13443,9 @@ public:
  *在c代码中使用函数check\_button\_create创建多选按钮控件。如：
  *
  *
+ *
  *在c代码中使用函数check\_button\_create\_radio创建单选按钮控件。如：
+ *
  *
  *
  *> 完整示例请参考：
@@ -13283,6 +13647,7 @@ public:
  *[color_tile](https://github.com/zlgopen/awtk/blob/master/design/default/ui/color_picker_rgb.xml)
  *
  *在c代码中使用函数color_tile\_create创建色块控件。如：
+ *
  *
  *> 创建之后，用color\_tile\_set\_bg\_color设置背景颜色。
  *
@@ -13676,6 +14041,7 @@ public:
  *在c代码中使用函数digit\_clock\_create创建数字时钟控件。如：
  *
  *
+ *
  *> 完整示例请参考：[digit\_clock demo](
  *https://github.com/zlgopen/awtk-c-demos/blob/master/demos/digit_clock.c)
  *
@@ -13749,7 +14115,7 @@ public:
    ** M 代表月(1-12)
    ** D 代表日(1-31)
    ** h 代表时(0-23)
-   ** H 代表时(0-11)
+   ** H 代表时(1-12)
    ** m 代表分(0-59)
    ** s 代表秒(0-59)
    ** w 代表星期(0-6)
@@ -13759,7 +14125,7 @@ public:
    ** MM 代表月(01-12)
    ** DD 代表日(01-31)
    ** hh 代表时(00-23)
-   ** HH 代表时(00-11)
+   ** HH 代表时(01-12)
    ** mm 代表分(00-59)
    ** ss 代表秒(00-59)
    ** MMM 代表月的英文缩写(支持翻译)
@@ -13890,6 +14256,7 @@ public:
  *[edit.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/edit.xml)
  *
  *在c代码中使用函数edit\_create创建编辑器控件。如：
+ *
  *
  *
  *> 创建之后，可以用widget\_set\_text或widget\_set\_text\_utf8设置文本内容。
@@ -14189,6 +14556,15 @@ public:
   char* GetSelectedText() ;
 
   /**
+   * 设置输入回车后是否跳到下一个控件中。
+   * 
+   * @param focus_next_when_enter 是否跳入下一个控件中。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetFocusNextWhenEnter(bool focus_next_when_enter) ;
+
+  /**
    * 输入提示。
    *
    */
@@ -14210,6 +14586,14 @@ public:
    *
    */
   char* GetActionText() const;
+
+  /**
+   * fscript脚本，用输入校验，如：(len(text) 3) && (len(text) < 10)。
+   *
+   *> 用于校验输入的文本是否合法。
+   *
+   */
+  char* GetValidator() const;
 
   /**
    * 自定义软键盘名称。AWTK优先查找keyboard属性设置的键盘文件名（该键盘的XML文件需要在default\raw\ui目录下存在），如果没有指定keyboard，就找input_type设置的键盘类型。如果指定为空字符串，则表示不需要软键盘。
@@ -14290,6 +14674,12 @@ public:
    *
    */
   bool GetCancelable() const;
+
+  /**
+   * 输入回车后是否跳到下一个控件中。
+   *
+   */
+  bool GetFocusNextWhenEnter() const;
 };
 
 
@@ -14568,6 +14958,21 @@ public:
    * @return 对象。
    */
   static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
+
+  /**
+   * 设置选中的单选按钮的索引。
+   * 
+   * @param value 选中的单选按钮的索引。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetValue(uint32_t value) ;
+
+  /**
+   * 选中的单选按钮的索引。
+   *
+   */
+  uint32_t GetValue() const;
 };
 
 
@@ -14590,6 +14995,7 @@ public:
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/label.xml)
  *
  *在c代码中使用函数label\_create创建文本控件。如：
+ *
  *
  *
  *> 创建之后，需要用widget\_set\_text或widget\_set\_text\_utf8设置文本内容。
@@ -14653,7 +15059,7 @@ public:
   static  TWidget Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h) ;
 
   /**
-   * 设置显示字符的个数(小余0时全部显示)。
+   * 设置显示字符的个数(小于0时全部显示)。
    * 
    * @param length 最大可显示字符个数。
    *
@@ -14689,6 +15095,15 @@ public:
   ret_t SetWordWrap(bool word_wrap) ;
 
   /**
+   * 是否开启缩写，开启后，当文字长度操作控件长度后，自动变为...
+   * 
+   * @param ellipses 是否开启缩写。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetEllipses(bool ellipses) ;
+
+  /**
    * 根据文本内容调节控件大小。
    * 
    * @param min_w 最小宽度。
@@ -14701,7 +15116,7 @@ public:
   ret_t ResizeToContent(uint32_t min_w, uint32_t max_w, uint32_t min_h, uint32_t max_h) ;
 
   /**
-   * 显示字符的个数(小余0时全部显示)。
+   * 显示字符的个数(小于0时全部显示)。
    *主要用于动态改变显示字符的个数，来实现类似[拨号中...]的动画效果。
    *
    */
@@ -14719,6 +15134,13 @@ public:
    *
    */
   bool GetWordWrap() const;
+
+  /**
+   * 是否开启缩写，开启后，当文字长度操作控件长度后，自动变为...
+   *> 和换行是冲突的，换行后，该属性不生效
+   *
+   */
+  bool GetEllipses() const;
 
   /**
    * 当auto_adjust_size为TRUE时，用于控制控件的最大宽度，超出该宽度后才自动换行。
@@ -14856,6 +15278,7 @@ public:
  *[basic demo](https://github.com/zlgopen/awtk/blob/master/design/default/ui/basic.xml)
  *
  *在c代码中使用函数progress\_bar\_create创建进度条控件。如：
+ *
  *
  *
  *> 完整示例请参考：
@@ -15108,6 +15531,7 @@ public:
  *[basic](https://github.com/zlgopen/awtk/blob/master/design/default/ui/basic.xml)
  *
  *在c代码中使用函数slider\_create创建滑块控件。如：
+ *
  *
  *
  *> 完整示例请参考：
@@ -15772,10 +16196,13 @@ public:
  *打开非模态对话框时，其用法与普通窗口一样。打开非模态对话框时，还需要调用dialog\_modal。
  *
  *
+ *
  *关闭模态对话框用dialog\_quit
  *
  *
+ *
  *关闭非模态对话框用window\_close。
+ *
  *
  *
  *> 更多用法请参考：
@@ -16144,6 +16571,7 @@ public:
  *在c代码中使用函数window\_create创建窗口。如：
  *
  *
+ *
  *> 无需指定父控件、坐标和大小，使用0即可。
  *
  *> 完整示例请参考：[window
@@ -16283,7 +16711,7 @@ public:
  * GIF图片控件。
  *
  *> 注意：GIF图片的尺寸大于控件大小时会自动缩小图片，但一般的嵌入式系统的硬件加速都不支持图片缩放，
- *所以缩放图片会导致性能明显下降。如果性能不满意时，请确认一下GIF图片的尺寸是否小余控件大小。
+ *所以缩放图片会导致性能明显下降。如果性能不满意时，请确认一下GIF图片的尺寸是否小于控件大小。
  *
  *gif\_image\_t是[image\_base\_t](image_base_t.md)的子类控件，image\_base\_t的函数均适用于gif\_image\_t控件。
  *
@@ -16298,6 +16726,7 @@ public:
  *image](https://github.com/zlgopen/awtk/blob/master/design/default/ui/gif_image.xml)
  *
  *在c代码中使用函数gif\_image\_create创建GIF图片控件。如：
+ *
  *
  *
  *> 创建之后:
@@ -16572,6 +17001,7 @@ public:
  *在c代码中使用函数mutable\_image\_create创建mutable图片控件。如：
  *
  *
+ *
  *> 创建之后:
  *>
  *> 需要用mutable\_image\_set\_create\_image设置创建图片的回调函数。
@@ -16734,6 +17164,7 @@ public:
  *https://github.com/zlgopen/awtk/blob/master/design/default/ui/svg_image.xml)
  *
  *在c代码中使用函数svg\_image\_create创建SVG图片控件。如：
+ *
  *
  *
  *> 创建之后: 需要用widget\_set\_image设置图片名称。
@@ -17035,7 +17466,11 @@ public:
 /**
  * 对象接口的缺省实现。
  *
- *内部使用有序数组保存所有属性，可以快速查找指定名称的属性。
+ *通用当作 map 数据结构使用，内部用有序数组保存所有属性，因此可以快速查找指定名称的属性。
+ *
+ *示例
+ *
+ *
  *
  */
 class TObjectDefault : public TObject { 
@@ -17099,6 +17534,15 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t ClearProps() ;
+
+  /**
+   * 设置属性值时不改变属性的类型。
+   * 
+   * @param keep_prop_type 不改变属性的类型。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetKeepPropType(bool keep_prop_type) ;
 };
 
 
@@ -17180,6 +17624,7 @@ public:
  *[window.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/calibration_win.xml)
  *
  *在c代码中使用函数calibration\_win\_create创建窗口。如：
+ *
  *
  *
  *通过calibration\_win\_set\_on\_done注册回调函数，用于保存校准数据。
@@ -17287,6 +17732,7 @@ public:
  *```
  *
  *在c代码中使用函数combo\_box\_create创建下拉列表控件。如：
+ *
  *
  *
  *创建之后：
@@ -17616,6 +18062,7 @@ public:
  *在c代码中使用函数image\_create创建图片控件。如：
  *
  *
+ *
  *> 创建之后:
  *>
  *> 需要用widget\_set\_image设置图片名称。
@@ -17738,6 +18185,7 @@ public:
  *更多用法请参考：[overlay.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/)
  *
  *在c代码中使用函数overlay\_create创建窗口。如：
+ *
  *
  *
  *> 完整示例请参考：[overlay
@@ -17877,6 +18325,7 @@ public:
  *在c代码中使用函数popup\_create创建弹出窗口。如：
  *
  *
+ *
  *> 创建之后，和使用普通窗口是一样的。
  *
  *> 完整示例请参考：[combo_box.c](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/combo_box.c)
@@ -17956,9 +18405,9 @@ public:
   ret_t SetCloseWhenClickOutside(bool close_when_click_outside) ;
 
   /**
-   * 设置超时关闭时间(ms)。
+   * 设置超时关闭时间(毫秒)。
    * 
-   * @param close_when_timeout 大于0时，为定时器时间(ms)，超时关闭窗口。
+   * @param close_when_timeout 大于0时，为定时器时间(毫秒)，超时关闭窗口。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -17977,7 +18426,7 @@ public:
   bool GetCloseWhenClickOutside() const;
 
   /**
-   * 超时后自动关闭窗口(ms)。
+   * 超时后自动关闭窗口(毫秒)。
    *
    */
   uint32_t GetCloseWhenTimeout() const;
@@ -18004,6 +18453,7 @@ public:
  *更多用法请参考：[spin_box.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/spinbox.xml)
  *
  *在c代码中使用函数spin_box\_create创建spinbox控件。如：
+ *
  *
  *
  *> 创建之后:
@@ -18155,6 +18605,7 @@ public:
  *[system_bar](https://github.com/zlgopen/awtk/blob/master/design/default/ui/system_bar.xml)
  *
  *在c代码中使用函数system\_bar\_create创建system\_bar窗口。如：
+ *
  *
  *
  *> 创建之后，和使用普通窗口是一样的。

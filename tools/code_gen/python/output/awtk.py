@@ -1306,6 +1306,7 @@ class TObject (TEmitter):
 #在C/C++中，一般不需动态创建对象，直接声明并初始化即可。如：
 #
 #
+#
 #> 在脚本语言中，需要动态创建对象。
 #
 #
@@ -1596,6 +1597,27 @@ class TValue(object):
 
 
   #
+  # 判断两个value是否相同。
+  # 
+  # @param other value对象。
+  #
+  # @return 为空值返回TRUE，否则返回FALSE。
+  #
+  def equal(self, other): 
+      return value_equal(awtk_get_native_obj(self), awtk_get_native_obj(other))
+
+
+  #
+  # 转换为int的值。
+  # 
+  #
+  # @return 值。
+  #
+  def int(self): 
+      return value_int(awtk_get_native_obj(self))
+
+
+  #
   # 设置类型为int的值。
   # 
   # @param value 待设置的值。
@@ -1798,6 +1820,18 @@ class TGlobal(object):
   @classmethod
   def quit(cls): 
       return tk_quit()
+
+
+  #
+  # 退出TK事件主循环。
+  # 
+  # @param delay 延迟退出的时间(毫秒)。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  @classmethod
+  def quit_ex(cls, delay): 
+      return tk_quit_ex(delay)
 
 
   #
@@ -2778,24 +2812,6 @@ class TEventType:
   MOVE_RESIZE = EVT_MOVE_RESIZE()
 
   #
-  # 控件的值即将改变的事件名(value_change_event_t)。
-  #
-  #
-  VALUE_WILL_CHANGE = EVT_VALUE_WILL_CHANGE()
-
-  #
-  # 控件的值改变的事件名(value_change_event_t)。
-  #
-  #
-  VALUE_CHANGED = EVT_VALUE_CHANGED()
-
-  #
-  # 控件的值持续改变(如编辑器正在编辑)的事件名(value_change_event_t)。
-  #
-  #
-  VALUE_CHANGING = EVT_VALUE_CHANGING()
-
-  #
   # 绘制的事件名(paint_event_t)。
   #
   #
@@ -3071,6 +3087,18 @@ class TEventType:
   THEME_CHANGED = EVT_THEME_CHANGED()
 
   #
+  # 控件根据自己当前状态即将更新style(event_t)。
+  #
+  #
+  WIDGET_WILL_UPDATE_STYLE = EVT_WIDGET_WILL_UPDATE_STYLE()
+
+  #
+  # 控件根据自己当前状态更新style(event_t)。
+  #
+  #
+  WIDGET_UPDATE_STYLE = EVT_WIDGET_UPDATE_STYLE()
+
+  #
   # 控件加载新的子控件(event_t)。
   #
   #
@@ -3107,13 +3135,13 @@ class TEventType:
   MULTI_GESTURE = EVT_MULTI_GESTURE()
 
   #
-  # 页面改变了(event_t)。
+  # 当前看到的页面改变了(event_t)。
   #
   #
   PAGE_CHANGED = EVT_PAGE_CHANGED()
 
   #
-  # 页面正在改变(offset_change_event_t)。
+  # 当前看到的页面正在改变(offset_change_event_t)。
   #
   #
   PAGE_CHANGING = EVT_PAGE_CHANGING()
@@ -3183,6 +3211,24 @@ class TEventType:
   #
   #
   LOCALE_INFOS_UNLOAD_INFO = EVT_LOCALE_INFOS_UNLOAD_INFO()
+
+  #
+  # 控件进入激活状态(event_t)。
+  #
+  #
+  ACTIVATED = EVT_ACTIVATED()
+
+  #
+  # 控件退出激活状态(event_t)。
+  #
+  #
+  UNACTIVATED = EVT_UNACTIVATED()
+
+  #
+  # UI加载完成事件(event_t)。
+  #
+  #
+  UI_LOAD = EVT_UI_LOAD()
 
   #
   # event queue其它请求编号起始值。
@@ -3273,6 +3319,30 @@ class TEventType:
   #
   #
   DESTROY = EVT_DESTROY()
+
+  #
+  # 值即将改变的事件名(value_change_event_t)。
+  #
+  #
+  VALUE_WILL_CHANGE = EVT_VALUE_WILL_CHANGE()
+
+  #
+  # 值改变的事件名(value_change_event_t)。
+  #
+  #
+  VALUE_CHANGED = EVT_VALUE_CHANGED()
+
+  #
+  # 值持续改变(如编辑器正在编辑)的事件名(value_change_event_t)。
+  #
+  #
+  VALUE_CHANGING = EVT_VALUE_CHANGING()
+
+  #
+  # 日志信息。
+  #
+  #
+  LOG_MESSAGE = EVT_LOG_MESSAGE()
 
 #
 # 事件基类。
@@ -3440,6 +3510,7 @@ class TGlyphFormat:
 #> idle可以用来实现一些异步处理。
 #
 #示例：
+#
 #
 #
 #> 在非GUI线程请用idle\_queue。
@@ -4856,6 +4927,12 @@ class TStyleId:
   FG_COLOR = STYLE_ID_FG_COLOR()
 
   #
+  # dragger颜色。
+  #
+  #
+  DRAGGER_COLOR = STYLE_ID_DRAGGER_COLOR()
+
+  #
   # 蒙版颜色。
   #
   #
@@ -5131,6 +5208,7 @@ class TStyleId:
 #widget从style对象中，获取诸如字体、颜色和图片相关的参数，根据这些参数来绘制界面。
 #
 #
+#
 #属性名称的请参考[style\_id](style_id_t.md)
 #
 #
@@ -5346,6 +5424,7 @@ class TTheme(object):
 #
 #示例：
 #
+#
 #> 在非GUI线程请用timer\_queue。
 #
 #
@@ -5356,7 +5435,7 @@ class TTimer(object):
   # 
   # @param on_timer timer回调函数。
   # @param ctx timer回调函数的上下文。
-  # @param duration 时间。
+  # @param duration 时间(毫秒)。
   #
   # @return 返回timer的ID，TK_INVALID_ID表示失败。
   #
@@ -5429,7 +5508,7 @@ class TTimer(object):
   # 修改指定的timer的duration，修改之后定时器重新开始计时。
   # 
   # @param timer_id timerID。
-  # @param duration 新的时间。
+  # @param duration 新的时间(毫秒)。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
@@ -5672,6 +5751,7 @@ class TBitmapFlag:
 #
 #
 #示例：
+#
 #
 #
 #>请参考：https://www.w3schools.com/tags/ref_canvas.asp
@@ -6826,6 +6906,12 @@ class TWidgetProp:
   WORD_WRAP = WIDGET_PROP_WORD_WRAP()
 
   #
+  # 是否省略。
+  #
+  #
+  ELLIPSES = WIDGET_PROP_ELLIPSES()
+
+  #
   # 文本。
   #
   #
@@ -6842,6 +6928,12 @@ class TWidgetProp:
   #
   #
   STYLE = WIDGET_PROP_STYLE()
+
+  #
+  # 状态。
+  #
+  #
+  STATE = WIDGET_PROP_STATE()
 
   #
   # 是否启用。
@@ -7074,7 +7166,7 @@ class TWidgetProp:
   ALIGN_H = WIDGET_PROP_ALIGN_H()
 
   #
-  # 是否自动播放或指定播放的时间。
+  # 是否自动播放或指定播放的时间(毫秒)。
   #
   #
   AUTO_PLAY = WIDGET_PROP_AUTO_PLAY()
@@ -7248,7 +7340,7 @@ class TWidgetProp:
   REPEAT = WIDGET_PROP_REPEAT()
 
   #
-  # 触发长按事件的时间(ms)。
+  # 触发长按事件的时间(毫秒)。
   #
   #
   LONG_PRESS_TIME = WIDGET_PROP_LONG_PRESS_TIME()
@@ -7548,7 +7640,7 @@ class TWidgetProp:
   DRAG_THRESHOLD = WIDGET_PROP_DRAG_THRESHOLD()
 
   #
-  # 动画时间。
+  # 动画时间(毫秒)。
   #
   #
   ANIMATING_TIME = WIDGET_PROP_ANIMATING_TIME()
@@ -7560,7 +7652,7 @@ class TWidgetProp:
   ANIMATE_PREFIX = WIDGET_PROP_ANIMATE_PREFIX()
 
   #
-  # 改变控件属性时附带动画的播放时间。
+  # 改变控件属性时附带动画的播放时间(毫秒)。
   #
   #
   ANIMATE_ANIMATING_TIME = WIDGET_PROP_ANIMATE_ANIMATING_TIME()
@@ -7570,6 +7662,30 @@ class TWidgetProp:
   #
   #
   DIRTY_RECT = WIDGET_PROP_DIRTY_RECT()
+
+  #
+  # 屏幕保护时间(毫秒)。
+  #
+  #
+  SCREEN_SAVER_TIME = WIDGET_PROP_SCREEN_SAVER_TIME()
+
+  #
+  # 是否显示FPS。
+  #
+  #
+  SHOW_FPS = WIDGET_PROP_SHOW_FPS()
+
+  #
+  # 最大FPS。
+  #
+  #
+  MAX_FPS = WIDGET_PROP_MAX_FPS()
+
+  #
+  # 数据校验脚本。
+  #
+  #
+  VALIDATOR = WIDGET_PROP_VALIDATOR()
 
 #
 # 控件的类型。
@@ -8216,10 +8332,42 @@ class TWidgetCursor:
   CURSOR_SIZEALL = WIDGET_CURSOR_SIZEALL()
 
 #
-# widget_t* button = button_create(win, 10, 10, 128, 30);
-#widget_set_text(button, L"OK");
-#widget_on(button, EVT_CLICK, on_click, NULL);
+# **widget_t** 是所有控件、窗口和窗口管理器的基类。
+#**widget_t**也是一个容器，可放其它**widget_t**到它的内部，形成一个树形结构。
+#
+#
+#
+#通常**widget_t**通过一个矩形区域向用户呈现一些信息，接受用户的输入，并据此做出适当的反应。
+#它负责控件的生命周期、通用状态、事件分发和Style的管理。
+#本类提供的接口(函数和属性)除非特别说明，一般都适用于子类控件。
+#
+#为了便于解释，这里特别说明一下几个术语：
+#
+#* **父控件与子控件**：父控件与子控件指的两个控件的组合关系(这是在运行时决定的)。
+#比如：在窗口中放一个按钮，此时，我们称按钮是窗口的子控件，窗口是按钮的父控件。
+#
+#
+#
+#* **子类控件与父类控件**：子类控件与父类控件指的两类控件的继承关系(这是在设计时决定的)。
+#比如：我们称**button_t**是**widget_t**的子类控件，**widget_t**是**button_t**的父类控件。
+#
+#
+#
+#widget相关的函数都只能在GUI线程中执行，如果需在非GUI线程中想调用widget相关函数，
+#请用idle\_queue或timer\_queue进行串行化。
+#请参考[demo thread](https://github.com/zlgopen/awtk/blob/master/demos/demo_thread_app.c)
+#
+#**widget\_t**是抽象类，不要直接创建**widget\_t**的实例。控件支持两种创建方式：
+#
+#* 通过XML创建。如：
+#
+#```xml
+#<button x="c" y="m" w="80" h="30" text="OK"/>
 #```
+#
+#* 通过代码创建。如：
+#
+#
 #
 #
 class TWidget(object):
@@ -8524,6 +8672,16 @@ class TWidget(object):
 
 
   #
+  # 判断widget拥有高亮属性。
+  # 
+  #
+  # @return 拥有返回 TRUE，没有返回 FALSE。
+  #
+  def has_highlighter(self): 
+      return widget_has_highlighter(awtk_get_native_obj(self))
+
+
+  #
   # 启用指定的style。
   # 
   # @param style style的名称。
@@ -8690,12 +8848,12 @@ class TWidget(object):
 
 
   #
-  # str_t str;
-  #str_init(&str, 0);
-  #str_from_wstr(&str, widget_get_text(target));
-  #log_debug("%s: %s\n", target->name, str.str);
-  #str_reset(&str);
-  #```
+  # 获取控件的文本。
+  #只是对widget\_get\_prop的包装，文本的意义由子类控件决定。
+  #
+  #如果希望获取UTF8格式的文本，可以参考下面的代码：
+  #
+  #
   # 
   #
   # @return 返回文本。
@@ -8925,7 +9083,7 @@ class TWidget(object):
   #
   # 设置控件的状态。
   # 
-  # @param state 状态(必须为真正的常量字符串，在widget的整个生命周期有效)。
+  # @param state 状态。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
@@ -9081,10 +9239,10 @@ class TWidget(object):
 
 
   #
-  # widget_t* ok = button_create(win, 10, 10, 80, 30);
-  #widget_on(ok, EVT_CLICK, on_click, NULL);
+  # 注册指定事件的处理函数。
+  #使用示例：
   #
-  #```
+  #
   # 
   # @param type 事件类型。
   # @param on_event 事件处理函数。
@@ -9116,6 +9274,30 @@ class TWidget(object):
   #
   def invalidate_force(self, r): 
       return widget_invalidate_force(awtk_get_native_obj(self), awtk_get_native_obj(r))
+
+
+  #
+  # 获取控件指定属性的值。
+  # 
+  # @param name 属性的名称。
+  # @param v 返回属性的值。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def get_prop(self, name, v): 
+      return widget_get_prop(awtk_get_native_obj(self), name, awtk_get_native_obj(v))
+
+
+  #
+  # 设置控件指定属性的值。
+  # 
+  # @param name 属性的名称。
+  # @param v 属性的值。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_prop(self, name, v): 
+      return widget_set_prop(awtk_get_native_obj(self), name, awtk_get_native_obj(v))
 
 
   #
@@ -9392,8 +9574,13 @@ class TWidget(object):
 
 
   #
-  # widget_set_prop_bool(group, WIDGET_PROP_IS_KEYBOARD, TRUE);
-  #```
+  # 判断当前控件是否是keyboard。
+  #
+  #> keyboard收到pointer事件时，不会让当前控件失去焦点。
+  #
+  #在自定义软键盘时，将所有按钮放到一个容器当中，并设置为is_keyboard。
+  #
+  #
   # 
   #
   # @return 返回FALSE表示不是，否则表示是。
@@ -9680,6 +9867,7 @@ class TWidget(object):
 
   #
   # 设置控件自己的布局参数。
+  #备注：下一帧才会生效数据
   # 
   # @param params 布局参数。
   #
@@ -9691,6 +9879,7 @@ class TWidget(object):
 
   #
   # 设置子控件的布局参数。
+  #备注：下一帧才会生效数据
   # 
   # @param params 布局参数。
   #
@@ -9702,6 +9891,7 @@ class TWidget(object):
 
   #
   # 设置控件自己的布局(缺省布局器)参数(过时，请用widget\_set\_self\_layout)。
+  #备注：下一帧才会生效数据
   # 
   # @param x x参数。
   # @param y y参数。
@@ -9745,8 +9935,15 @@ class TWidget(object):
 
 
   #
-  # widget_set_style_color(label, "normal:bg_color", 0xFF332211);
-  #```
+  # 设置颜色类型的style。
+  #
+  #> * [state 的取值](https://github.com/zlgopen/awtk/blob/master/docs/manual/widget_state_t.md)
+  #> * [name 的取值](https://github.com/zlgopen/awtk/blob/master/docs/theme.md)
+  #
+  #
+  #在下面这个例子中，R=0x11 G=0x22 B=0x33 A=0xFF
+  #
+  #
   # 
   # @param state_and_name 状态和名字，用英文的冒号分隔。
   # @param value 值。颜色值一般用十六进制表示，每两个数字表示一个颜色通道，从高位到低位，依次是ABGR。
@@ -10007,8 +10204,15 @@ class TWidget(object):
 
 
 #
-# #include "conf_io/app_conf.h"
-#```
+# 应用程序的配置信息。
+#
+#底层实现可以是任何格式，比如INI，XML，JSON和UBJSON。
+#
+#对于树状的文档，key可以是多级的，用.分隔。如network.ip。
+#
+#conf-io是可选组件，需要自己包含头文件，否则64位数据类型会被截断成32位的数据。
+#
+#
 #
 #
 class TAppConf(object):
@@ -11907,6 +12111,12 @@ class TObjectProp:
   #
   CHECKED = OBJECT_PROP_CHECKED()
 
+  #
+  # 选中的索引。
+  #
+  #
+  SELECTED_INDEX = OBJECT_PROP_SELECTED_INDEX()
+
 #
 # 循环记录日志(支持多线程访问)。
 #如果我们把日志写入文件中，随着时间的推移，日志文件会越来越大，最终占满这个磁盘，出现不可预料的错误。
@@ -11939,10 +12149,9 @@ class TRlog(object):
       return self.nativeObj == other.nativeObj
     
   #
-  # rlog_t* log = rlog_create("./logs/%d.log", 1020*1024, 256);
-  #rlog_write(log, "hello\n");
-  #rlog_destroy(log);
-  #```
+  # 创建rlog对象。
+  #
+  #
   # 
   # @param filename_pattern 用来确定文件名的路径和文件名。
   # @param max_size log文件占用最大磁盘空间(字节)。
@@ -11968,7 +12177,7 @@ class TRlog(object):
 
 #
 # 获取当前时间的函数。
-#这里的当前时间是相对的，在嵌入式系统一般相对于开机时间。
+#这里的当前时间是相对的，在嵌入式系统一般相对于开机时间(毫秒)。
 #它本身并没有任何意义，一般用来计算时间间隔，如实现定时器和动画等等。
 #
 #
@@ -12182,6 +12391,18 @@ class TRet:
   #
   #
   NO_PERMISSION = RET_NO_PERMISSION()
+
+  #
+  # 无效地址。
+  #
+  #
+  INVALID_ADDR = RET_INVALID_ADDR()
+
+  #
+  # 超出范围。
+  #
+  #
+  EXCEED_RANGE = RET_EXCEED_RANGE()
 
   #
   # 最大值。
@@ -12476,6 +12697,62 @@ class TAssetsManager (TEmitter):
 
 
 #
+# 控件动画事件。
+#
+#
+class TWidgetAnimatorEvent (TEvent):
+
+  def __new__(cls, native_obj=0):
+      if native_obj == 0:
+          return None
+      else:
+          if super().__new__ == object.__new__:
+              instance = super().__new__(cls)
+          else:
+              instance = super().__new__(cls, native_obj)
+          instance.nativeObj = native_obj
+          return instance
+    
+  def __init__(self, nativeObj):
+    super(TWidgetAnimatorEvent, self).__init__(nativeObj)
+
+
+  def __eq__(self, other: 'TWidget'):
+      if other is None:
+          return self.nativeObj == 0
+      return self.nativeObj == other.nativeObj
+    
+  #
+  # 把event对象转widget_animator_event_t对象。
+  # 
+  # @param event event对象。
+  #
+  # @return event对象。
+  #
+  @classmethod
+  def cast(cls, event): 
+      return  TWidgetAnimatorEvent(widget_animator_event_cast(awtk_get_native_obj(event)))
+
+
+  #
+  # 控件对象。
+  #
+  #
+  @property
+  def widget(self):
+    return TWidget(widget_animator_event_t_get_prop_widget(self.nativeObj))
+
+
+  #
+  # 控件动画句柄。
+  #
+  #
+  @property
+  def animator(self):
+    return widget_animator_event_t_get_prop_animator(self.nativeObj)
+
+
+#
 # model变化事件。
 #
 #
@@ -12579,6 +12856,24 @@ class TWheelEvent (TEvent):
 
 
   #
+  # x坐标。
+  #
+  #
+  @property
+  def x(self):
+    return wheel_event_t_get_prop_x(self.nativeObj)
+
+
+  #
+  # y坐标。
+  #
+  #
+  @property
+  def y(self):
+    return wheel_event_t_get_prop_y(self.nativeObj)
+
+
+  #
   # 滚轮的y值。
   #
   #
@@ -12671,45 +12966,7 @@ class TOrientationEvent (TEvent):
 
 
 #
-# 值变化事件。
-#
-#
-class TValueChangeEvent (TEvent):
-
-  def __new__(cls, native_obj=0):
-      if native_obj == 0:
-          return None
-      else:
-          if super().__new__ == object.__new__:
-              instance = super().__new__(cls)
-          else:
-              instance = super().__new__(cls, native_obj)
-          instance.nativeObj = native_obj
-          return instance
-    
-  def __init__(self, nativeObj):
-    super(TValueChangeEvent, self).__init__(nativeObj)
-
-
-  def __eq__(self, other: 'TWidget'):
-      if other is None:
-          return self.nativeObj == 0
-      return self.nativeObj == other.nativeObj
-    
-  #
-  # 把event对象转value_change_event_t对象。
-  # 
-  # @param event event对象。
-  #
-  # @return event对象。
-  #
-  @classmethod
-  def cast(cls, event): 
-      return  TValueChangeEvent(value_change_event_cast(awtk_get_native_obj(event)))
-
-
-#
-# 值变化事件。
+# offset变化事件。
 #
 #
 class TOffsetChangeEvent (TEvent):
@@ -12943,8 +13200,7 @@ class TKeyEvent (TEvent):
 
 
   #
-  # right alt键是否按下。
-  #ctrl键是否按下。
+  # ctrl键是否按下。
   #
   #
   @property
@@ -12998,8 +13254,7 @@ class TKeyEvent (TEvent):
 
 
   #
-  # left shift键是否按下。
-  #cmd/win键是否按下。
+  # cmd/win键是否按下。
   #
   #
   @property
@@ -13341,6 +13596,62 @@ class TSystemEvent (TEvent):
   @property
   def sdl_event(self):
     return system_event_t_get_prop_sdl_event(self.nativeObj)
+
+
+#
+# UI加载完成事件。
+#
+#
+class TUiLoadEvent (TEvent):
+
+  def __new__(cls, native_obj=0):
+      if native_obj == 0:
+          return None
+      else:
+          if super().__new__ == object.__new__:
+              instance = super().__new__(cls)
+          else:
+              instance = super().__new__(cls, native_obj)
+          instance.nativeObj = native_obj
+          return instance
+    
+  def __init__(self, nativeObj):
+    super(TUiLoadEvent, self).__init__(nativeObj)
+
+
+  def __eq__(self, other: 'TWidget'):
+      if other is None:
+          return self.nativeObj == 0
+      return self.nativeObj == other.nativeObj
+    
+  #
+  # 把event对象转ui_load_event_t对象。
+  # 
+  # @param event event对象。
+  #
+  # @return event 对象。
+  #
+  @classmethod
+  def cast(cls, event): 
+      return  TUiLoadEvent(ui_load_event_cast(awtk_get_native_obj(event)))
+
+
+  #
+  # UI的根控件对象。
+  #
+  #
+  @property
+  def root(self):
+    return TWidget(ui_load_event_t_get_prop_root(self.nativeObj))
+
+
+  #
+  # UI的名称。
+  #
+  #
+  @property
+  def name(self):
+    return ui_load_event_t_get_prop_name(self.nativeObj)
 
 
 #
@@ -14110,6 +14421,18 @@ class TWindowManager (TWidget):
 
 
   #
+  # 设置显示FPS的起始坐标。
+  # 
+  # @param x 左上角x坐标。
+  # @param y 左上角x坐标。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_show_fps_position(self, x, y): 
+      return window_manager_set_show_fps_position(awtk_get_native_obj(self), x, y)
+
+
+  #
   # 限制最大帧率。
   #
   #> TK\_MAX\_LOOP\_FPS/max\_fps最好是整数，比如TK\_MAX\_LOOP\_FPS为120，max\_fps可取60/30/20/10等。
@@ -14134,7 +14457,7 @@ class TWindowManager (TWidget):
 
 
   #
-  # 设置屏保时间。
+  # 设置屏保时间(毫秒)。
   # 
   # @param screen_saver_time 屏保时间(单位毫秒), 为0关闭屏保。
   #
@@ -14205,6 +14528,17 @@ class TWindowManager (TWidget):
 
 
   #
+  # 设置原生窗口是否全屏。
+  # 
+  # @param fullscreen 是否全屏
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_fullscreen(self, fullscreen): 
+      return window_manager_set_fullscreen(awtk_get_native_obj(self), fullscreen)
+
+
+  #
   # 关闭全部窗口。
   # 
   #
@@ -14233,11 +14567,14 @@ class TWindowManager (TWidget):
 #在c代码中使用函数canvas\_widget\_create创建画布控件。如：
 #
 #
+#
 #> 创建之后，需要用widget\_on注册EVT\_PAINT事件，并在EVT\_PAINT事件处理函数中绘制。
+#
 #
 #
 #绘制时，可以通过canvas接口去绘制，也可以通过vgcanvas接口去绘制。
 #先从evt获取canvas对象，再通过canvas\_get\_vgcanvas从canvas中获取vgcanvas对象。
+#
 #
 #
 #> 完整示例请参考：
@@ -14483,6 +14820,7 @@ class TColorPicker (TWidget):
 #[draggable.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/draggable.xml)
 #
 #在c代码中使用函数draggable\_create创建按钮控件。如：
+#
 #
 #
 #> draggable本身不可见，故无需style。
@@ -15294,6 +15632,7 @@ class TFileChooser (TEmitter):
 #在c代码中使用函数gauge\_pointer\_create创建仪表指针控件。如：
 #
 #
+#
 #> 创建之后，需要用gauge\_pointer\_set\_image设置仪表指针图片。
 #
 #
@@ -15446,6 +15785,7 @@ class TGaugePointer (TWidget):
 #在c代码中使用函数gauge\_create创建表盘控件。如：
 #
 #
+#
 #可用通过style来设置控件的显示风格，如背景和边框等。如：
 #
 #```xml
@@ -15582,6 +15922,7 @@ class TGauge (TWidget):
 #在c代码中使用函数image\_animation\_create创建图片动画控件。如：
 #
 #
+#
 #> 完整示例请参考：
 #[image_animation
 #demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/image_animation.c)
@@ -15650,7 +15991,7 @@ class TImageAnimation (TWidget):
 
 
   #
-  # 设置播放间隔时间。
+  # 设置播放间隔时间(毫秒)。
   # 
   # @param interval 间隔时间(毫秒)。
   #
@@ -15996,6 +16337,7 @@ class TImageAnimation (TWidget):
 #[image\_value](https://github.com/zlgopen/awtk/blob/master/design/default/ui/image_value.xml)
 #
 #在c代码中使用函数image\_value\_create创建图片值控件。如：
+#
 #
 #
 #> 完整示例请参考：
@@ -16667,6 +17009,7 @@ class TLineNumber (TWidget):
 #在c代码中使用函数mledit\_create创建多行编辑器控件。如：
 #
 #
+#
 #> 完整示例请参考：[mledit demo](
 #https://github.com/zlgopen/awtk-c-demos/blob/master/demos/mledit.c)
 #
@@ -17114,6 +17457,7 @@ class TMledit (TWidget):
 #在c代码中使用函数progress\_circle\_create创建进度圆环控件。如：
 #
 #
+#
 #> 完整示例请参考：
 #[progress_circle
 #demo](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/progress_circle.c)
@@ -17322,7 +17666,7 @@ class TProgressCircle (TWidget):
 
 
   #
-  # 环线的厚度(缺省为8)。
+  # 环线的厚度(缺省为8)，line_width r/2时，使用扇形绘制。
   #
   #
   @property
@@ -17465,6 +17809,7 @@ class TRichTextView (TWidget):
 #[rich_text.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/rich_text.xml)
 #
 #在c代码中使用函数rich\_text\_create创建图文混排控件。如：
+#
 #
 #
 #> 完整示例请参考：
@@ -17646,7 +17991,7 @@ class THscrollLabel (TWidget):
   #
   # 设置lull。
   # 
-  # @param lull 间歇时间(ms)。
+  # @param lull 间歇时间(毫秒)。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
@@ -17657,7 +18002,7 @@ class THscrollLabel (TWidget):
   #
   # 设置duration。
   # 
-  # @param duration 滚动时间(ms)。
+  # @param duration 滚动时间(毫秒)。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
@@ -17740,6 +18085,28 @@ class THscrollLabel (TWidget):
   #
   def set_stop_at_begin(self, stop_at_begin): 
       return hscroll_label_set_stop_at_begin(awtk_get_native_obj(self), stop_at_begin)
+
+
+  #
+  # 设置开始延迟时间。
+  # 
+  # @param delay 开始延迟时间。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_delay(self, delay): 
+      return hscroll_label_set_delay(awtk_get_native_obj(self), delay)
+
+
+  #
+  # 设置滚动文本结尾和文本开头间隔距离
+  # 
+  # @param loop_interval_distance 间隔距离。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_loop_interval_distance(self, loop_interval_distance): 
+      return hscroll_label_set_loop_interval_distance(awtk_get_native_obj(self), loop_interval_distance)
 
 
   #
@@ -17851,7 +18218,7 @@ class THscrollLabel (TWidget):
 
 
   #
-  # 滚动之间的间歇时间(ms)，缺省3000ms。
+  # 滚动之间的间歇时间(毫秒)，缺省3000ms。
   #
   #
   @property
@@ -17864,7 +18231,7 @@ class THscrollLabel (TWidget):
 
 
   #
-  # 完整的滚动一次需要的时间(ms)，缺省5000ms。
+  # 滚动一次需要的时间(毫秒)，缺省5000ms。
   #
   #
   @property
@@ -17874,6 +18241,19 @@ class THscrollLabel (TWidget):
   @duration.setter
   def duration(self, v):
     hscroll_label_set_duration(self.nativeObj, v)
+
+
+  #
+  # 延迟多久才开始滚动，缺省0ms。
+  #
+  #
+  @property
+  def delay(self):
+    return hscroll_label_t_get_prop_delay(self.nativeObj)
+
+  @delay.setter
+  def delay(self, v):
+    hscroll_label_set_delay(self.nativeObj, v)
 
 
   #
@@ -17913,7 +18293,7 @@ class THscrollLabel (TWidget):
 
   #
   # 滚动完毕后停在文本开头(缺省FALSE)。
-  #> 注：loop为FALSE时才可用。
+  #> 注：yoyo 为 TRUE 时，该功能失效。
   #
   #
   @property
@@ -17923,6 +18303,19 @@ class THscrollLabel (TWidget):
   @stop_at_begin.setter
   def stop_at_begin(self, v):
     hscroll_label_set_stop_at_begin(self.nativeObj, v)
+
+
+  #
+  # 滚动文本结尾和文本开头间隔距离(缺省值为 -1，小于 0 视为使用控件宽度作为间隔距离)。
+  #
+  #
+  @property
+  def loop_interval_distance(self):
+    return hscroll_label_t_get_prop_loop_interval_distance(self.nativeObj)
+
+  @loop_interval_distance.setter
+  def loop_interval_distance(self, v):
+    hscroll_label_set_loop_interval_distance(self.nativeObj, v)
 
 
 #
@@ -17952,6 +18345,7 @@ class THscrollLabel (TWidget):
 #https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)
 #
 #在c代码中使用函数list\_item\_create创建列表项控件。如：
+#
 #
 #
 #> 列表项控件大小一般由列表控制，不需指定xywh参数。
@@ -18043,6 +18437,7 @@ class TListItem (TWidget):
 #https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_h.xml)
 #
 #在c代码中使用函数list\_view\_h\_create创建水平列表视图控件。如：
+#
 #
 #
 #用代码构造列表视图是比较繁琐的事情，最好用XML来构造。
@@ -18187,6 +18582,7 @@ class TListViewH (TWidget):
 #https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)
 #
 #在c代码中使用函数list\_view\_create创建列表视图控件。如：
+#
 #
 #
 #用代码构造列表视图是比较繁琐的事情，最好用XML来构造。
@@ -18383,6 +18779,7 @@ class TListView (TWidget):
 #在c代码中使用函数scroll\_bar\_create创建列表项控件。如：
 #
 #
+#
 #```xml
 #<style name="default">
 #<normal bg_color="#c0c0c0" fg_color="#808080"/>
@@ -18495,7 +18892,7 @@ class TScrollBar (TWidget):
   # 滚动到指定的值。
   # 
   # @param value 值。
-  # @param duration 动画持续时间。
+  # @param duration 动画持续时间(毫秒)。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
@@ -18523,17 +18920,6 @@ class TScrollBar (TWidget):
   #
   def add_delta(self, delta): 
       return scroll_bar_add_delta(awtk_get_native_obj(self), delta)
-
-
-  #
-  # 在当前的值上增加一个值，并滚动到新的值，并触发EVT_VALUE_CHANGED事件。
-  # 
-  # @param delta 值。
-  #
-  # @return 返回RET_OK表示成功，否则表示失败。
-  #
-  def scroll_delta(self, delta): 
-      return scroll_bar_scroll_delta(awtk_get_native_obj(self), delta)
 
 
   #
@@ -18571,9 +18957,9 @@ class TScrollBar (TWidget):
 
 
   #
-  # 设置翻页滚动动画时间。
+  # 设置翻页滚动动画时间(毫秒)。
   # 
-  # @param animator_time 时间。
+  # @param animator_time 时间(毫秒)。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
@@ -18584,8 +18970,8 @@ class TScrollBar (TWidget):
   #
   # 通过动画隐藏滚动条。
   # 
-  # @param duration 动画持续时间。
-  # @param delay 动画执行时间。
+  # @param duration 动画持续时间(毫秒)。
+  # @param delay 动画执行时间(毫秒)。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
@@ -18596,13 +18982,35 @@ class TScrollBar (TWidget):
   #
   # 通过动画显示滚动条。
   # 
-  # @param duration 动画持续时间。
-  # @param delay 动画执行时间。
+  # @param duration 动画持续时间(毫秒)。
+  # @param delay 动画执行时间(毫秒)。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
   def show_by_opacity_animation(self, duration, delay): 
       return scroll_bar_show_by_opacity_animation(awtk_get_native_obj(self), duration, delay)
+
+
+  #
+  # 设置鼠标滚轮是否滚动(仅对desktop风格的滚动条有效)。
+  # 
+  # @param scroll 是否设置该功能。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_wheel_scroll(self, scroll): 
+      return scroll_bar_set_wheel_scroll(awtk_get_native_obj(self), scroll)
+
+
+  #
+  # 设置鼠标滚轮幅度(仅对desktop风格的滚动条有效)。
+  # 
+  # @param scroll_delta 滚动幅度。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_scroll_delta(self, scroll_delta): 
+      return scroll_bar_set_scroll_delta(awtk_get_native_obj(self), scroll_delta)
 
 
   #
@@ -18637,7 +19045,7 @@ class TScrollBar (TWidget):
 
 
   #
-  # 翻页滚动动画时间。
+  # 翻页滚动动画时间(毫秒)。
   #
   #
   @property
@@ -18647,6 +19055,19 @@ class TScrollBar (TWidget):
   @animator_time.setter
   def animator_time(self, v):
     scroll_bar_set_animator_time(self.nativeObj, v)
+
+
+  #
+  # 每次鼠标滚动值。（缺省值为0，0 则使用鼠标滚动默认值）
+  #
+  #
+  @property
+  def scroll_delta(self):
+    return scroll_bar_t_get_prop_scroll_delta(self.nativeObj)
+
+  @scroll_delta.setter
+  def scroll_delta(self, v):
+    scroll_bar_set_scroll_delta(self.nativeObj, v)
 
 
   #
@@ -18669,6 +19090,19 @@ class TScrollBar (TWidget):
   @auto_hide.setter
   def auto_hide(self, v):
     scroll_bar_set_auto_hide(self.nativeObj, v)
+
+
+  #
+  # 设置鼠标滚轮是否滚动(仅对desktop风格的滚动条有效)（垂直滚动条缺省值为TRUE，水平滚动条缺省值为FALSE）。
+  #
+  #
+  @property
+  def wheel_scroll(self):
+    return scroll_bar_t_get_prop_wheel_scroll(self.nativeObj)
+
+  @wheel_scroll.setter
+  def wheel_scroll(self, v):
+    scroll_bar_set_wheel_scroll(self.nativeObj, v)
 
 
 #
@@ -18698,6 +19132,7 @@ class TScrollBar (TWidget):
 #https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)
 #
 #在c代码中使用函数scroll\_view\_create创建列表视图控件。如：
+#
 #
 #
 #可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。
@@ -18882,7 +19317,7 @@ class TScrollView (TWidget):
   # 
   # @param xoffset_end x偏移量。
   # @param yoffset_end y偏移量。
-  # @param duration 时间。
+  # @param duration 时间(毫秒)。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
@@ -18895,7 +19330,7 @@ class TScrollView (TWidget):
   # 
   # @param xoffset_delta x偏移量。
   # @param yoffset_delta y偏移量。
-  # @param duration 时间。
+  # @param duration 时间(毫秒)。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
@@ -19182,7 +19617,7 @@ class TSerialWidget (TWidget):
 
 
   #
-  # 设置 轮询时间。
+  # 设置 轮询时间(毫秒)。
   # 
   # @param check_interval 轮询时间（单位：ms）。
   #
@@ -19309,10 +19744,13 @@ class TSerialWidget (TWidget):
 #在c代码中使用函数slide\_menu\_create创建左右滑动菜单控件。如：
 #
 #
+#
 #可按下面的方法关注当前项改变的事件：
 #
 #
+#
 #可按下面的方法关注当前按钮被点击的事件：
+#
 #
 #
 #> 完整示例请参考：[slide_menu demo](
@@ -19564,6 +20002,7 @@ class TSlideMenu (TWidget):
 #https://github.com/zlgopen/awtk/blob/master/design/default/ui/slide_view.xml)
 #
 #在c代码中使用函数slide\_indicator\_create创建指示器控件。如：
+#
 #
 #
 #```xml
@@ -19930,6 +20369,7 @@ class TSlideIndicator (TWidget):
 #在c代码中使用函数slide\_view\_create创建滑动视图控件。如：
 #
 #
+#
 #> 完整示例请参考：
 #[slide_view demo](
 #https://github.com/zlgopen/awtk-c-demos/blob/master/demos/slide_view.c)
@@ -20001,7 +20441,7 @@ class TSlideView (TWidget):
   #
   # 设置为自动播放模式。
   # 
-  # @param auto_play 0表示禁止自动播放，非0表示自动播放时每一页播放的时间。
+  # @param auto_play 0表示禁止自动播放，非0表示自动播放时每一页播放的时间(毫秒)。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
@@ -20088,9 +20528,9 @@ class TSlideView (TWidget):
 
 
   #
-  # 设置动画时间。
+  # 设置动画时间(毫秒)。
   # 
-  # @param animating_time 动画时间。
+  # @param animating_time 动画时间(毫秒)。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
@@ -20123,7 +20563,7 @@ class TSlideView (TWidget):
 
 
   #
-  # 自动播放。0表示禁止自动播放，非0表示自动播放时每一页播放的时间。
+  # 自动播放。0表示禁止自动播放，非0表示自动播放时每一页播放的时间(毫秒)。
   #
   #
   @property
@@ -20205,6 +20645,7 @@ class TSlideView (TWidget):
 #https://github.com/zlgopen/awtk/blob/master/design/default/ui/switch.xml)
 #
 #在c代码中使用函数switch\_create创建开关控件。如：
+#
 #
 #
 #> 完整示例请参考：[switch demo](
@@ -20322,6 +20763,7 @@ class TSwitch (TWidget):
 #https://github.com/zlgopen/awtk/blob/master/design/default/ui/text_selector.xml)
 #
 #在c代码中使用函数text\_selector\_create创建文本选择器控件。如：
+#
 #
 #
 #> 完整示例请参考：[text\_selector demo](
@@ -20601,6 +21043,17 @@ class TTextSelector (TWidget):
 
 
   #
+  # 是否开启缩写，开启后，当文字长度操作控件长度后，自动变为...
+  # 
+  # @param ellipses 是否开启缩写。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_ellipses(self, ellipses): 
+      return text_selector_set_ellipses(awtk_get_native_obj(self), ellipses)
+
+
+  #
   # 可见的选项数量(只能是1或者3或者5，缺省为5)。
   #
   #
@@ -20711,6 +21164,19 @@ class TTextSelector (TWidget):
 
 
   #
+  # 是否开启缩写，开启后，当文字长度操作控件长度后，自动变为...
+  #
+  #
+  @property
+  def ellipses(self):
+    return text_selector_t_get_prop_ellipses(self.nativeObj)
+
+  @ellipses.setter
+  def ellipses(self, v):
+    text_selector_set_ellipses(self.nativeObj, v)
+
+
+  #
   # 绘制蒙版的变化趋势。
   #
   #
@@ -20752,6 +21218,7 @@ class TTextSelector (TWidget):
 #https://github.com/zlgopen/awtk/blob/master/design/default/ui/time_clock.xml)
 #
 #在c代码中使用函数time\_clock\_create创建模拟时钟控件。如：
+#
 #
 #
 #> 完整示例请参考：[time_clock demo](
@@ -21169,9 +21636,9 @@ class TTimerWidget (TWidget):
 
 
   #
-  # 设置 时长(ms)。
+  # 设置 时长(毫秒)。
   # 
-  # @param duration 时长(ms)。
+  # @param duration 时长(毫秒)。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
@@ -21180,7 +21647,7 @@ class TTimerWidget (TWidget):
 
 
   #
-  # 时长(ms)。
+  # 时长(毫秒)。
   #
   #
   @property
@@ -21602,6 +22069,82 @@ class TCmdExecEvent (TEvent):
 
 
 #
+# 值变化事件。
+#
+#
+class TValueChangeEvent (TEvent):
+
+  def __new__(cls, native_obj=0):
+      if native_obj == 0:
+          return None
+      else:
+          if super().__new__ == object.__new__:
+              instance = super().__new__(cls)
+          else:
+              instance = super().__new__(cls, native_obj)
+          instance.nativeObj = native_obj
+          return instance
+    
+  def __init__(self, nativeObj):
+    super(TValueChangeEvent, self).__init__(nativeObj)
+
+
+  def __eq__(self, other: 'TWidget'):
+      if other is None:
+          return self.nativeObj == 0
+      return self.nativeObj == other.nativeObj
+    
+  #
+  # 把event对象转value_change_event_t对象。
+  # 
+  # @param event event对象。
+  #
+  # @return event对象。
+  #
+  @classmethod
+  def cast(cls, event): 
+      return  TValueChangeEvent(value_change_event_cast(awtk_get_native_obj(event)))
+
+
+#
+# 日志事件。
+#
+#
+class TLogMessageEvent (TEvent):
+
+  def __new__(cls, native_obj=0):
+      if native_obj == 0:
+          return None
+      else:
+          if super().__new__ == object.__new__:
+              instance = super().__new__(cls)
+          else:
+              instance = super().__new__(cls, native_obj)
+          instance.nativeObj = native_obj
+          return instance
+    
+  def __init__(self, nativeObj):
+    super(TLogMessageEvent, self).__init__(nativeObj)
+
+
+  def __eq__(self, other: 'TWidget'):
+      if other is None:
+          return self.nativeObj == 0
+      return self.nativeObj == other.nativeObj
+    
+  #
+  # 把event对象转log_message_event_t对象。
+  # 
+  # @param event event对象。
+  #
+  # @return event对象。
+  #
+  @classmethod
+  def cast(cls, event): 
+      return  TLogMessageEvent(log_message_event_cast(awtk_get_native_obj(event)))
+
+
+#
 # app_bar控件。
 #
 #一个简单的容器控件，一般在窗口的顶部，用于显示本窗口的状态和信息。
@@ -21621,6 +22164,7 @@ class TCmdExecEvent (TEvent):
 #```
 #
 #在c代码中使用函数app\_bar\_create创建app\_bar。如：
+#
 #
 #
 #可用通过style来设置控件的显示风格，如背景颜色等。如：
@@ -21782,6 +22326,7 @@ class TButtonGroup (TWidget):
 #在c代码中使用函数button\_create创建按钮控件。如：
 #
 #
+#
 #> 创建之后，需要用widget\_set\_text或widget\_set\_text\_utf8设置文本内容。
 #
 #> 完整示例请参考：
@@ -21865,7 +22410,7 @@ class TButton (TWidget):
 
 
   #
-  # 设置触发长按事件的时间。
+  # 设置触发长按事件的时间(毫秒)。
   # 
   # @param long_press_time 触发长按事件的时间(毫秒)。
   #
@@ -21942,7 +22487,7 @@ class TButton (TWidget):
 
 
   #
-  # 触发长按事件的时间(ms)
+  # 触发长按事件的时间(毫秒)
   #
   #
   @property
@@ -21986,7 +22531,9 @@ class TButton (TWidget):
 #在c代码中使用函数check\_button\_create创建多选按钮控件。如：
 #
 #
+#
 #在c代码中使用函数check\_button\_create\_radio创建单选按钮控件。如：
+#
 #
 #
 #> 完整示例请参考：
@@ -22215,6 +22762,7 @@ class TClipView (TWidget):
 #[color_tile](https://github.com/zlgopen/awtk/blob/master/design/default/ui/color_picker_rgb.xml)
 #
 #在c代码中使用函数color_tile\_create创建色块控件。如：
+#
 #
 #> 创建之后，用color\_tile\_set\_bg\_color设置背景颜色。
 #
@@ -22672,6 +23220,7 @@ class TDialogTitle (TWidget):
 #在c代码中使用函数digit\_clock\_create创建数字时钟控件。如：
 #
 #
+#
 #> 完整示例请参考：[digit\_clock demo](
 #https://github.com/zlgopen/awtk-c-demos/blob/master/demos/digit_clock.c)
 #
@@ -22755,7 +23304,7 @@ class TDigitClock (TWidget):
   #* M 代表月(1-12)
   #* D 代表日(1-31)
   #* h 代表时(0-23)
-  #* H 代表时(0-11)
+  #* H 代表时(1-12)
   #* m 代表分(0-59)
   #* s 代表秒(0-59)
   #* w 代表星期(0-6)
@@ -22765,7 +23314,7 @@ class TDigitClock (TWidget):
   #* MM 代表月(01-12)
   #* DD 代表日(01-31)
   #* hh 代表时(00-23)
-  #* HH 代表时(00-11)
+  #* HH 代表时(01-12)
   #* mm 代表分(00-59)
   #* ss 代表秒(00-59)
   #* MMM 代表月的英文缩写(支持翻译)
@@ -22921,6 +23470,7 @@ class TDragger (TWidget):
 #[edit.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/edit.xml)
 #
 #在c代码中使用函数edit\_create创建编辑器控件。如：
+#
 #
 #
 #> 创建之后，可以用widget\_set\_text或widget\_set\_text\_utf8设置文本内容。
@@ -23278,6 +23828,17 @@ class TEdit (TWidget):
 
 
   #
+  # 设置输入回车后是否跳到下一个控件中。
+  # 
+  # @param focus_next_when_enter 是否跳入下一个控件中。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_focus_next_when_enter(self, focus_next_when_enter): 
+      return edit_set_focus_next_when_enter(awtk_get_native_obj(self), focus_next_when_enter)
+
+
+  #
   # 输入提示。
   #
   #
@@ -23319,6 +23880,17 @@ class TEdit (TWidget):
   @action_text.setter
   def action_text(self, v):
     edit_set_action_text(self.nativeObj, v)
+
+
+  #
+  # fscript脚本，用输入校验，如：(len(text) 3) && (len(text) < 10)。
+  #
+  #> 用于校验输入的文本是否合法。
+  #
+  #
+  @property
+  def validator(self):
+    return edit_t_get_prop_validator(self.nativeObj)
 
 
   #
@@ -23471,6 +24043,19 @@ class TEdit (TWidget):
   @cancelable.setter
   def cancelable(self, v):
     edit_set_cancelable(self.nativeObj, v)
+
+
+  #
+  # 输入回车后是否跳到下一个控件中。
+  #
+  #
+  @property
+  def focus_next_when_enter(self):
+    return edit_t_get_prop_focus_next_when_enter(self.nativeObj)
+
+  @focus_next_when_enter.setter
+  def focus_next_when_enter(self, v):
+    edit_set_focus_next_when_enter(self.nativeObj, v)
 
 
 #
@@ -23785,6 +24370,17 @@ class TGroupBox (TWidget):
 
 
   #
+  # 设置选中的单选按钮的索引。
+  # 
+  # @param value 选中的单选按钮的索引。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_value(self, value): 
+      return group_box_set_value(awtk_get_native_obj(self), value)
+
+
+  #
   # 转换为group_box对象(供脚本语言使用)。
   # 
   # @param widget group_box对象。
@@ -23794,6 +24390,19 @@ class TGroupBox (TWidget):
   @classmethod
   def cast(cls, widget): 
       return  TGroupBox(group_box_cast(awtk_get_native_obj(widget)))
+
+
+  #
+  # 选中的单选按钮的索引。
+  #
+  #
+  @property
+  def value(self):
+    return group_box_t_get_prop_value(self.nativeObj)
+
+  @value.setter
+  def value(self, v):
+    group_box_set_value(self.nativeObj, v)
 
 
 #
@@ -23815,6 +24424,7 @@ class TGroupBox (TWidget):
 #https://github.com/zlgopen/awtk/blob/master/design/default/ui/label.xml)
 #
 #在c代码中使用函数label\_create创建文本控件。如：
+#
 #
 #
 #> 创建之后，需要用widget\_set\_text或widget\_set\_text\_utf8设置文本内容。
@@ -23874,7 +24484,7 @@ class TLabel (TWidget):
 
 
   #
-  # 设置显示字符的个数(小余0时全部显示)。
+  # 设置显示字符的个数(小于0时全部显示)。
   # 
   # @param length 最大可显示字符个数。
   #
@@ -23918,6 +24528,17 @@ class TLabel (TWidget):
 
 
   #
+  # 是否开启缩写，开启后，当文字长度操作控件长度后，自动变为...
+  # 
+  # @param ellipses 是否开启缩写。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_ellipses(self, ellipses): 
+      return label_set_ellipses(awtk_get_native_obj(self), ellipses)
+
+
+  #
   # 根据文本内容调节控件大小。
   # 
   # @param min_w 最小宽度。
@@ -23944,7 +24565,7 @@ class TLabel (TWidget):
 
 
   #
-  # 显示字符的个数(小余0时全部显示)。
+  # 显示字符的个数(小于0时全部显示)。
   #主要用于动态改变显示字符的个数，来实现类似[拨号中...]的动画效果。
   #
   #
@@ -23982,6 +24603,20 @@ class TLabel (TWidget):
   @word_wrap.setter
   def word_wrap(self, v):
     label_set_word_wrap(self.nativeObj, v)
+
+
+  #
+  # 是否开启缩写，开启后，当文字长度操作控件长度后，自动变为...
+  #> 和换行是冲突的，换行后，该属性不生效
+  #
+  #
+  @property
+  def ellipses(self):
+    return label_t_get_prop_ellipses(self.nativeObj)
+
+  @ellipses.setter
+  def ellipses(self, v):
+    label_set_ellipses(self.nativeObj, v)
 
 
   #
@@ -24151,6 +24786,7 @@ class TPages (TWidget):
 #[basic demo](https://github.com/zlgopen/awtk/blob/master/design/default/ui/basic.xml)
 #
 #在c代码中使用函数progress\_bar\_create创建进度条控件。如：
+#
 #
 #
 #> 完整示例请参考：
@@ -24471,6 +25107,7 @@ class TRow (TWidget):
 #[basic](https://github.com/zlgopen/awtk/blob/master/design/default/ui/basic.xml)
 #
 #在c代码中使用函数slider\_create创建滑块控件。如：
+#
 #
 #
 #> 完整示例请参考：
@@ -25300,10 +25937,13 @@ class TView (TWidget):
 #打开非模态对话框时，其用法与普通窗口一样。打开非模态对话框时，还需要调用dialog\_modal。
 #
 #
+#
 #关闭模态对话框用dialog\_quit
 #
 #
+#
 #关闭非模态对话框用window\_close。
+#
 #
 #
 #> 更多用法请参考：
@@ -25726,6 +26366,7 @@ class TNativeWindow (TObject):
 #在c代码中使用函数window\_create创建窗口。如：
 #
 #
+#
 #> 无需指定父控件、坐标和大小，使用0即可。
 #
 #> 完整示例请参考：[window
@@ -25895,7 +26536,7 @@ class TWindow (TWindowBase):
 # GIF图片控件。
 #
 #> 注意：GIF图片的尺寸大于控件大小时会自动缩小图片，但一般的嵌入式系统的硬件加速都不支持图片缩放，
-#所以缩放图片会导致性能明显下降。如果性能不满意时，请确认一下GIF图片的尺寸是否小余控件大小。
+#所以缩放图片会导致性能明显下降。如果性能不满意时，请确认一下GIF图片的尺寸是否小于控件大小。
 #
 #gif\_image\_t是[image\_base\_t](image_base_t.md)的子类控件，image\_base\_t的函数均适用于gif\_image\_t控件。
 #
@@ -25910,6 +26551,7 @@ class TWindow (TWindowBase):
 #image](https://github.com/zlgopen/awtk/blob/master/design/default/ui/gif_image.xml)
 #
 #在c代码中使用函数gif\_image\_create创建GIF图片控件。如：
+#
 #
 #
 #> 创建之后:
@@ -26211,6 +26853,7 @@ class TKeyboard (TWindowBase):
 #在c代码中使用函数mutable\_image\_create创建mutable图片控件。如：
 #
 #
+#
 #> 创建之后:
 #>
 #> 需要用mutable\_image\_set\_create\_image设置创建图片的回调函数。
@@ -26373,6 +27016,7 @@ class TListItemSeperator (TCheckButton):
 #https://github.com/zlgopen/awtk/blob/master/design/default/ui/svg_image.xml)
 #
 #在c代码中使用函数svg\_image\_create创建SVG图片控件。如：
+#
 #
 #
 #> 创建之后: 需要用widget\_set\_image设置图片名称。
@@ -26723,7 +27367,11 @@ class TObjectArray (TObject):
 #
 # 对象接口的缺省实现。
 #
-#内部使用有序数组保存所有属性，可以快速查找指定名称的属性。
+#通用当作 map 数据结构使用，内部用有序数组保存所有属性，因此可以快速查找指定名称的属性。
+#
+#示例
+#
+#
 #
 #
 class TObjectDefault (TObject):
@@ -26789,6 +27437,17 @@ class TObjectDefault (TObject):
   #
   def clear_props(self): 
       return object_default_clear_props(awtk_get_native_obj(self))
+
+
+  #
+  # 设置属性值时不改变属性的类型。
+  # 
+  # @param keep_prop_type 不改变属性的类型。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_keep_prop_type(self, keep_prop_type): 
+      return object_default_set_keep_prop_type(awtk_get_native_obj(self), keep_prop_type)
 
 
 #
@@ -26884,6 +27543,7 @@ class TTimerInfo (TObject):
 #[window.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/calibration_win.xml)
 #
 #在c代码中使用函数calibration\_win\_create创建窗口。如：
+#
 #
 #
 #通过calibration\_win\_set\_on\_done注册回调函数，用于保存校准数据。
@@ -26997,6 +27657,7 @@ class TCalibrationWin (TWindowBase):
 #```
 #
 #在c代码中使用函数combo\_box\_create创建下拉列表控件。如：
+#
 #
 #
 #创建之后：
@@ -27415,6 +28076,7 @@ class TComboBox (TEdit):
 #在c代码中使用函数image\_create创建图片控件。如：
 #
 #
+#
 #> 创建之后:
 #>
 #> 需要用widget\_set\_image设置图片名称。
@@ -27555,6 +28217,7 @@ class TImage (TImageBase):
 #更多用法请参考：[overlay.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/)
 #
 #在c代码中使用函数overlay\_create创建窗口。如：
+#
 #
 #
 #> 完整示例请参考：[overlay
@@ -27727,6 +28390,7 @@ class TOverlay (TWindowBase):
 #在c代码中使用函数popup\_create创建弹出窗口。如：
 #
 #
+#
 #> 创建之后，和使用普通窗口是一样的。
 #
 #> 完整示例请参考：[combo_box.c](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/combo_box.c)
@@ -27818,9 +28482,9 @@ class TPopup (TWindowBase):
 
 
   #
-  # 设置超时关闭时间(ms)。
+  # 设置超时关闭时间(毫秒)。
   # 
-  # @param close_when_timeout 大于0时，为定时器时间(ms)，超时关闭窗口。
+  # @param close_when_timeout 大于0时，为定时器时间(毫秒)，超时关闭窗口。
   #
   # @return 返回RET_OK表示成功，否则表示失败。
   #
@@ -27855,7 +28519,7 @@ class TPopup (TWindowBase):
 
 
   #
-  # 超时后自动关闭窗口(ms)。
+  # 超时后自动关闭窗口(毫秒)。
   #
   #
   @property
@@ -27887,6 +28551,7 @@ class TPopup (TWindowBase):
 #更多用法请参考：[spin_box.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/spinbox.xml)
 #
 #在c代码中使用函数spin_box\_create创建spinbox控件。如：
+#
 #
 #
 #> 创建之后:
@@ -28064,6 +28729,7 @@ class TSpinBox (TEdit):
 #[system_bar](https://github.com/zlgopen/awtk/blob/master/design/default/ui/system_bar.xml)
 #
 #在c代码中使用函数system\_bar\_create创建system\_bar窗口。如：
+#
 #
 #
 #> 创建之后，和使用普通窗口是一样的。

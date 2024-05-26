@@ -24,7 +24,9 @@ package awtk;
  *在c代码中使用函数check\_button\_create创建多选按钮控件。如：
  *
  *
+ *
  *在c代码中使用函数check\_button\_create\_radio创建单选按钮控件。如：
+ *
  *
  *
  *> 完整示例请参考：

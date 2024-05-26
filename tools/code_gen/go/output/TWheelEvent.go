@@ -8,6 +8,14 @@ func TWheelEventCast(event TEvent) TWheelEvent {
   return retObj
 }
 
+func (this TWheelEvent) GetX() int {
+  return (int)((*C.wheel_event_t)(unsafe.Pointer(this.handle)).x);
+}
+
+func (this TWheelEvent) GetY() int {
+  return (int)((*C.wheel_event_t)(unsafe.Pointer(this.handle)).y);
+}
+
 func (this TWheelEvent) GetDy() int32 {
   return (int32)((*C.wheel_event_t)(unsafe.Pointer(this.handle)).dy);
 }

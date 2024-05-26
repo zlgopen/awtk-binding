@@ -44,6 +44,14 @@ func (this THscrollLabel) SetStopAtBegin(stop_at_begin bool) TRet {
   return TRet(C.hscroll_label_set_stop_at_begin((*C.widget_t)(this.handle), (C.bool_t)(stop_at_begin)));
 }
 
+func (this THscrollLabel) SetDelay(delay uint32) TRet {
+  return TRet(C.hscroll_label_set_delay((*C.widget_t)(this.handle), (C.uint32_t)(delay)));
+}
+
+func (this THscrollLabel) SetLoopIntervalDistance(loop_interval_distance int32) TRet {
+  return TRet(C.hscroll_label_set_loop_interval_distance((*C.widget_t)(this.handle), (C.int32_t)(loop_interval_distance)));
+}
+
 func (this THscrollLabel) SetXoffset(xoffset int32) TRet {
   return TRet(C.hscroll_label_set_xoffset((*C.widget_t)(this.handle), (C.int32_t)(xoffset)));
 }
@@ -90,6 +98,10 @@ func (this THscrollLabel) GetDuration() int32 {
   return (int32)((*C.hscroll_label_t)(unsafe.Pointer(this.handle)).duration);
 }
 
+func (this THscrollLabel) GetDelay() uint32 {
+  return (uint32)((*C.hscroll_label_t)(unsafe.Pointer(this.handle)).delay);
+}
+
 func (this THscrollLabel) GetSpeed() float64 {
   return (float64)((*C.hscroll_label_t)(unsafe.Pointer(this.handle)).speed);
 }
@@ -104,5 +116,9 @@ func (this THscrollLabel) GetTextW() int32 {
 
 func (this THscrollLabel) GetStopAtBegin() bool {
   return (bool)((*C.hscroll_label_t)(unsafe.Pointer(this.handle)).stop_at_begin);
+}
+
+func (this THscrollLabel) GetLoopIntervalDistance() int32 {
+  return (int32)((*C.hscroll_label_t)(unsafe.Pointer(this.handle)).loop_interval_distance);
 }
 
