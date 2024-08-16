@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TWidgetCursor 枚举类型参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-JAVA
    </div>
    <div id="projectbrief">AWTK JAVA API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,9 +70,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,57 +87,57 @@ $(function() {
 <li class="navelem"><b>awtk</b></li><li class="navelem"><a class="el" href="enumawtk_1_1_t_widget_cursor.html">TWidgetCursor</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="enumawtk_1_1_t_widget_cursor-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">awtk.TWidgetCursor 枚举类型参考</div>  </div>
+  <div class="headertitle"><div class="title">awtk.TWidgetCursor 枚举类型参考</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a6f29430d9e76d680afa9e5dffd0874fd"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_widget_cursor.html#a6f29430d9e76d680afa9e5dffd0874fd">value</a> ()</td></tr>
+<tr class="memitem:a6f29430d9e76d680afa9e5dffd0874fd" id="r_a6f29430d9e76d680afa9e5dffd0874fd"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f29430d9e76d680afa9e5dffd0874fd">value</a> ()</td></tr>
 <tr class="separator:a6f29430d9e76d680afa9e5dffd0874fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a4d899e053aca7cf06b461f2d255632f1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_widget_cursor.html">TWidgetCursor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_widget_cursor.html#a4d899e053aca7cf06b461f2d255632f1">from</a> (String value)</td></tr>
+<tr class="memitem:a4d899e053aca7cf06b461f2d255632f1" id="r_a4d899e053aca7cf06b461f2d255632f1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_widget_cursor.html">TWidgetCursor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d899e053aca7cf06b461f2d255632f1">from</a> (String value)</td></tr>
 <tr class="separator:a4d899e053aca7cf06b461f2d255632f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:aa8b3058af4f073bc0967bb0a98be762c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_widget_cursor.html#aa8b3058af4f073bc0967bb0a98be762c">CURSOR_DEFAULT</a> =(WIDGET_CURSOR_DEFAULT())</td></tr>
+<tr class="memitem:aa8b3058af4f073bc0967bb0a98be762c" id="r_aa8b3058af4f073bc0967bb0a98be762c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8b3058af4f073bc0967bb0a98be762c">CURSOR_DEFAULT</a> =(WIDGET_CURSOR_DEFAULT())</td></tr>
 <tr class="separator:aa8b3058af4f073bc0967bb0a98be762c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4c990195c306f052540cd5574113ba3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_widget_cursor.html#ab4c990195c306f052540cd5574113ba3">CURSOR_EDIT</a> =(WIDGET_CURSOR_EDIT())</td></tr>
+<tr class="memitem:ab4c990195c306f052540cd5574113ba3" id="r_ab4c990195c306f052540cd5574113ba3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4c990195c306f052540cd5574113ba3">CURSOR_EDIT</a> =(WIDGET_CURSOR_EDIT())</td></tr>
 <tr class="separator:ab4c990195c306f052540cd5574113ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cb24a3d3a6875619a94855f14061768"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_widget_cursor.html#a9cb24a3d3a6875619a94855f14061768">CURSOR_HAND</a> =(WIDGET_CURSOR_HAND())</td></tr>
+<tr class="memitem:a9cb24a3d3a6875619a94855f14061768" id="r_a9cb24a3d3a6875619a94855f14061768"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cb24a3d3a6875619a94855f14061768">CURSOR_HAND</a> =(WIDGET_CURSOR_HAND())</td></tr>
 <tr class="separator:a9cb24a3d3a6875619a94855f14061768"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a017d375f5e190316da445fcbddf8efff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_widget_cursor.html#a017d375f5e190316da445fcbddf8efff">CURSOR_WAIT</a> =(WIDGET_CURSOR_WAIT())</td></tr>
+<tr class="memitem:a017d375f5e190316da445fcbddf8efff" id="r_a017d375f5e190316da445fcbddf8efff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a017d375f5e190316da445fcbddf8efff">CURSOR_WAIT</a> =(WIDGET_CURSOR_WAIT())</td></tr>
 <tr class="separator:a017d375f5e190316da445fcbddf8efff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95ce284b5d45e9f2fa8c7b5d1cd65afd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_widget_cursor.html#a95ce284b5d45e9f2fa8c7b5d1cd65afd">CURSOR_CROSS</a> =(WIDGET_CURSOR_CROSS())</td></tr>
+<tr class="memitem:a95ce284b5d45e9f2fa8c7b5d1cd65afd" id="r_a95ce284b5d45e9f2fa8c7b5d1cd65afd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95ce284b5d45e9f2fa8c7b5d1cd65afd">CURSOR_CROSS</a> =(WIDGET_CURSOR_CROSS())</td></tr>
 <tr class="separator:a95ce284b5d45e9f2fa8c7b5d1cd65afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b2d8ef92538e86c8a6b0285f8927df6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_widget_cursor.html#a1b2d8ef92538e86c8a6b0285f8927df6">CURSOR_NO</a> =(WIDGET_CURSOR_NO())</td></tr>
+<tr class="memitem:a1b2d8ef92538e86c8a6b0285f8927df6" id="r_a1b2d8ef92538e86c8a6b0285f8927df6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b2d8ef92538e86c8a6b0285f8927df6">CURSOR_NO</a> =(WIDGET_CURSOR_NO())</td></tr>
 <tr class="separator:a1b2d8ef92538e86c8a6b0285f8927df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1888da1f142421aefd8ea9805770f55"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_widget_cursor.html#ab1888da1f142421aefd8ea9805770f55">CURSOR_SIZENWSE</a> =(WIDGET_CURSOR_SIZENWSE())</td></tr>
+<tr class="memitem:ab1888da1f142421aefd8ea9805770f55" id="r_ab1888da1f142421aefd8ea9805770f55"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1888da1f142421aefd8ea9805770f55">CURSOR_SIZENWSE</a> =(WIDGET_CURSOR_SIZENWSE())</td></tr>
 <tr class="separator:ab1888da1f142421aefd8ea9805770f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace5caf6177091bc3c8e27b8b7e508e8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_widget_cursor.html#ace5caf6177091bc3c8e27b8b7e508e8a">CURSOR_SIZENESW</a> =(WIDGET_CURSOR_SIZENESW())</td></tr>
+<tr class="memitem:ace5caf6177091bc3c8e27b8b7e508e8a" id="r_ace5caf6177091bc3c8e27b8b7e508e8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace5caf6177091bc3c8e27b8b7e508e8a">CURSOR_SIZENESW</a> =(WIDGET_CURSOR_SIZENESW())</td></tr>
 <tr class="separator:ace5caf6177091bc3c8e27b8b7e508e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a057a1197dbfe8fcb64f09e6e1584f0f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_widget_cursor.html#a057a1197dbfe8fcb64f09e6e1584f0f0">CURSOR_SIZEWE</a> =(WIDGET_CURSOR_SIZEWE())</td></tr>
+<tr class="memitem:a057a1197dbfe8fcb64f09e6e1584f0f0" id="r_a057a1197dbfe8fcb64f09e6e1584f0f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a057a1197dbfe8fcb64f09e6e1584f0f0">CURSOR_SIZEWE</a> =(WIDGET_CURSOR_SIZEWE())</td></tr>
 <tr class="separator:a057a1197dbfe8fcb64f09e6e1584f0f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af83c264e9b0276b772aaeb6364a90a98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_widget_cursor.html#af83c264e9b0276b772aaeb6364a90a98">CURSOR_SIZENS</a> =(WIDGET_CURSOR_SIZENS())</td></tr>
+<tr class="memitem:af83c264e9b0276b772aaeb6364a90a98" id="r_af83c264e9b0276b772aaeb6364a90a98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af83c264e9b0276b772aaeb6364a90a98">CURSOR_SIZENS</a> =(WIDGET_CURSOR_SIZENS())</td></tr>
 <tr class="separator:af83c264e9b0276b772aaeb6364a90a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fde81f3c4270ed4a7385b9ae87aa822"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_widget_cursor.html#a7fde81f3c4270ed4a7385b9ae87aa822">CURSOR_SIZEALL</a> =(WIDGET_CURSOR_SIZEALL())</td></tr>
+<tr class="memitem:a7fde81f3c4270ed4a7385b9ae87aa822" id="r_a7fde81f3c4270ed4a7385b9ae87aa822"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fde81f3c4270ed4a7385b9ae87aa822">CURSOR_SIZEALL</a> =(WIDGET_CURSOR_SIZEALL())</td></tr>
 <tr class="separator:a7fde81f3c4270ed4a7385b9ae87aa822"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>控件鼠标光标常量定义。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a4d899e053aca7cf06b461f2d255632f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d899e053aca7cf06b461f2d255632f1">&#9670;&nbsp;</a></span>from()</h2>
+<a id="a4d899e053aca7cf06b461f2d255632f1" name="a4d899e053aca7cf06b461f2d255632f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d899e053aca7cf06b461f2d255632f1">&#9670;&#160;</a></span>from()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -126,8 +148,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="enumawtk_1_1_t_widget_cursor.html">TWidgetCursor</a> awtk.TWidgetCursor.from </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -148,8 +169,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a6f29430d9e76d680afa9e5dffd0874fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f29430d9e76d680afa9e5dffd0874fd">&#9670;&nbsp;</a></span>value()</h2>
+<a id="a6f29430d9e76d680afa9e5dffd0874fd" name="a6f29430d9e76d680afa9e5dffd0874fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f29430d9e76d680afa9e5dffd0874fd">&#9670;&#160;</a></span>value()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -160,7 +181,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TWidgetCursor.value </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -176,8 +197,8 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">类成员变量说明</h2>
-<a id="a95ce284b5d45e9f2fa8c7b5d1cd65afd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95ce284b5d45e9f2fa8c7b5d1cd65afd">&#9670;&nbsp;</a></span>CURSOR_CROSS</h2>
+<a id="a95ce284b5d45e9f2fa8c7b5d1cd65afd" name="a95ce284b5d45e9f2fa8c7b5d1cd65afd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95ce284b5d45e9f2fa8c7b5d1cd65afd">&#9670;&#160;</a></span>CURSOR_CROSS</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -191,8 +212,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aa8b3058af4f073bc0967bb0a98be762c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8b3058af4f073bc0967bb0a98be762c">&#9670;&nbsp;</a></span>CURSOR_DEFAULT</h2>
+<a id="aa8b3058af4f073bc0967bb0a98be762c" name="aa8b3058af4f073bc0967bb0a98be762c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8b3058af4f073bc0967bb0a98be762c">&#9670;&#160;</a></span>CURSOR_DEFAULT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -206,8 +227,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ab4c990195c306f052540cd5574113ba3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4c990195c306f052540cd5574113ba3">&#9670;&nbsp;</a></span>CURSOR_EDIT</h2>
+<a id="ab4c990195c306f052540cd5574113ba3" name="ab4c990195c306f052540cd5574113ba3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4c990195c306f052540cd5574113ba3">&#9670;&#160;</a></span>CURSOR_EDIT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -221,8 +242,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a9cb24a3d3a6875619a94855f14061768"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9cb24a3d3a6875619a94855f14061768">&#9670;&nbsp;</a></span>CURSOR_HAND</h2>
+<a id="a9cb24a3d3a6875619a94855f14061768" name="a9cb24a3d3a6875619a94855f14061768"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cb24a3d3a6875619a94855f14061768">&#9670;&#160;</a></span>CURSOR_HAND</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -236,8 +257,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a1b2d8ef92538e86c8a6b0285f8927df6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b2d8ef92538e86c8a6b0285f8927df6">&#9670;&nbsp;</a></span>CURSOR_NO</h2>
+<a id="a1b2d8ef92538e86c8a6b0285f8927df6" name="a1b2d8ef92538e86c8a6b0285f8927df6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b2d8ef92538e86c8a6b0285f8927df6">&#9670;&#160;</a></span>CURSOR_NO</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -251,8 +272,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a7fde81f3c4270ed4a7385b9ae87aa822"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fde81f3c4270ed4a7385b9ae87aa822">&#9670;&nbsp;</a></span>CURSOR_SIZEALL</h2>
+<a id="a7fde81f3c4270ed4a7385b9ae87aa822" name="a7fde81f3c4270ed4a7385b9ae87aa822"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fde81f3c4270ed4a7385b9ae87aa822">&#9670;&#160;</a></span>CURSOR_SIZEALL</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -266,8 +287,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ace5caf6177091bc3c8e27b8b7e508e8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace5caf6177091bc3c8e27b8b7e508e8a">&#9670;&nbsp;</a></span>CURSOR_SIZENESW</h2>
+<a id="ace5caf6177091bc3c8e27b8b7e508e8a" name="ace5caf6177091bc3c8e27b8b7e508e8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace5caf6177091bc3c8e27b8b7e508e8a">&#9670;&#160;</a></span>CURSOR_SIZENESW</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -281,8 +302,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="af83c264e9b0276b772aaeb6364a90a98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af83c264e9b0276b772aaeb6364a90a98">&#9670;&nbsp;</a></span>CURSOR_SIZENS</h2>
+<a id="af83c264e9b0276b772aaeb6364a90a98" name="af83c264e9b0276b772aaeb6364a90a98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af83c264e9b0276b772aaeb6364a90a98">&#9670;&#160;</a></span>CURSOR_SIZENS</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -296,8 +317,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ab1888da1f142421aefd8ea9805770f55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1888da1f142421aefd8ea9805770f55">&#9670;&nbsp;</a></span>CURSOR_SIZENWSE</h2>
+<a id="ab1888da1f142421aefd8ea9805770f55" name="ab1888da1f142421aefd8ea9805770f55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1888da1f142421aefd8ea9805770f55">&#9670;&#160;</a></span>CURSOR_SIZENWSE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -311,8 +332,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a057a1197dbfe8fcb64f09e6e1584f0f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a057a1197dbfe8fcb64f09e6e1584f0f0">&#9670;&nbsp;</a></span>CURSOR_SIZEWE</h2>
+<a id="a057a1197dbfe8fcb64f09e6e1584f0f0" name="a057a1197dbfe8fcb64f09e6e1584f0f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a057a1197dbfe8fcb64f09e6e1584f0f0">&#9670;&#160;</a></span>CURSOR_SIZEWE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -326,8 +347,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a017d375f5e190316da445fcbddf8efff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a017d375f5e190316da445fcbddf8efff">&#9670;&nbsp;</a></span>CURSOR_WAIT</h2>
+<a id="a017d375f5e190316da445fcbddf8efff" name="a017d375f5e190316da445fcbddf8efff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a017d375f5e190316da445fcbddf8efff">&#9670;&#160;</a></span>CURSOR_WAIT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -342,12 +363,13 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <hr/>枚举说明文档从下列文件生成:<ul>
-<li>output/TWidgetCursor.java</li>
+<li>output/<b>TWidgetCursor.java</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

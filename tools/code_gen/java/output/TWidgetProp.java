@@ -360,6 +360,13 @@ public enum TWidgetProp {
   ELLIPSES (WIDGET_PROP_ELLIPSES()),
   
   /**
+   * 可见控件在滚动控件中的可见处理方案。（影响 widget_ensure_visible_in_viewport 函数）
+   *
+   */
+ 
+  VISIBLE_REVEAL_IN_SCROLL (WIDGET_PROP_VISIBLE_REVEAL_IN_SCROLL()),
+  
+  /**
    * 文本。
    *
    */
@@ -1347,6 +1354,7 @@ public enum TWidgetProp {
   static private native String WIDGET_PROP_LINE_WRAP();
   static private native String WIDGET_PROP_WORD_WRAP();
   static private native String WIDGET_PROP_ELLIPSES();
+  static private native String WIDGET_PROP_VISIBLE_REVEAL_IN_SCROLL();
   static private native String WIDGET_PROP_TEXT();
   static private native String WIDGET_PROP_TR_TEXT();
   static private native String WIDGET_PROP_STYLE();

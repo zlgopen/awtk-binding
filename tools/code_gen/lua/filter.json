@@ -2829,24 +2829,6 @@
       {
         "params": [
           {
-            "type": "const value_t*",
-            "name": "v",
-            "desc": "value对象。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "转换为int的值。",
-        "name": "value_int",
-        "return": {
-          "type": "int",
-          "desc": "值。"
-        }
-      },
-      {
-        "params": [
-          {
             "type": "value_t*",
             "name": "v",
             "desc": "value对象。"
@@ -9041,6 +9023,10 @@
         "name": "WIDGET_PROP_ELLIPSES"
       },
       {
+        "desc": "可见控件在滚动控件中的可见处理方案。（影响 widget_ensure_visible_in_viewport 函数）",
+        "name": "WIDGET_PROP_VISIBLE_REVEAL_IN_SCROLL"
+      },
+      {
         "desc": "文本。",
         "name": "WIDGET_PROP_TEXT"
       },
@@ -9973,6 +9959,26 @@
       {
         "desc": "焦点状态(当前项)。",
         "name": "WIDGET_STATE_FOCUSED_OF_ACTIVE"
+      },
+      {
+        "desc": "正常状态(选项不确定)。",
+        "name": "WIDGET_STATE_NORMAL_OF_INDETERMINATE"
+      },
+      {
+        "desc": "指针按下状态(选项不确定)。",
+        "name": "WIDGET_STATE_PRESSED_OF_INDETERMINATE"
+      },
+      {
+        "desc": "指针悬浮状态(选项不确定)。",
+        "name": "WIDGET_STATE_OVER_OF_INDETERMINATE"
+      },
+      {
+        "desc": "禁用状态(选项不确定)。",
+        "name": "WIDGET_STATE_DISABLE_OF_INDETERMINATE"
+      },
+      {
+        "desc": "焦点状态(选项不确定)。",
+        "name": "WIDGET_STATE_FOCUSED_OF_INDETERMINATE"
       }
     ],
     "header": "base/widget_consts.h",
@@ -17997,6 +18003,24 @@
         "annotation": {
           "scriptable": true
         },
+        "desc": "获取前景窗口。",
+        "name": "window_manager_get_foreground_window",
+        "return": {
+          "type": "widget_t*",
+          "desc": "返回窗口对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "窗口管理器对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
         "desc": "获取前一个的窗口。",
         "name": "window_manager_get_prev_window",
         "return": {
@@ -22129,6 +22153,42 @@
             "type": "widget_t*",
             "name": "widget",
             "desc": "widget对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取光标所在视觉行号(一行文本可能分多行显示)。",
+        "name": "mledit_get_current_line_index",
+        "return": {
+          "type": "uint32_t",
+          "desc": "返回光标所在行号。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取光标所在物理行号。",
+        "name": "mledit_get_current_row_index",
+        "return": {
+          "type": "uint32_t",
+          "desc": "返回光标所在行号。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
           },
           {
             "type": "uint32_t",
@@ -23954,7 +24014,7 @@
       }
     ],
     "header": "scroll_view/list_view.h",
-    "desc": "列表视图控件。\n\n列表视图控件是一个可以垂直滚动的列表控件。\n\n如果不需要滚动，可以用view控件配置适当的layout参数作为列表控件。\n\n列表视图中的列表项可以固定高度，也可以使用不同高度。请参考[变高列表项](\nhttps://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_vh.xml)\n\n列表视图控件的中可以有滚动条，也可以没有滚动条。\n可以使用移动设备风格的滚动条，也可以使用桌面风格的滚动条。\n\nlist\\_view\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于list\\_view\\_t控件。\n\n在xml中使用\"list\\_view\"标签创建列表视图控件。如：\n\n```xml\n<list_view x=\"0\"  y=\"30\" w=\"100%\" h=\"-80\" item_height=\"60\">\n<scroll_view name=\"view\" x=\"0\"  y=\"0\" w=\"100%\" h=\"100%\">\n<list_item style=\"odd\" children_layout=\"default(rows=1,cols=0)\">\n<image draw_type=\"icon\" w=\"30\" image=\"earth\"/>\n<label w=\"-30\" text=\"1.Hello AWTK !\">\n<switch x=\"r:10\" y=\"m\" w=\"60\" h=\"20\"/>\n</label>\n</list_item>\n...\n</scroll_view>\n</list_view>\n```\n\n> 注意：列表项不是作为列表视图控件的直接子控件，而是作为滚动视图的子控件。\n\n\n> 更多用法请参考：[list\\_view\\_m.xml](\nhttps://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)\n\n在c代码中使用函数list\\_view\\_create创建列表视图控件。如：\n\n```c\nwidget_t* list_view = list_view_create(win, 0, 0, 0, 0);\n```\n\n用代码构造列表视图是比较繁琐的事情，最好用XML来构造。\n如果需要动态修改，可以使用widget\\_clone来增加列表项，使用widget\\_remove\\_child来移出列表项。\n\n可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。\n\n备注：list_view 下的 scroll_view 控件不支持遍历所有子控件的效果。\n\n下面是针对 scroll_bar_d （桌面版）有效果，scroll_bar_m（移动版）没有效果。\n如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 TRUE，scroll_view 宽默认为 list_view 的 100% 宽，鼠标在 list_view 上滚动条才显示，不在的就自动隐藏，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽不会变。\n如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 FALSE ，scroll_view 宽默认为 list_view 的 100% 宽，滚动条不隐藏，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽不会变。\n如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 FALSE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可用，scroll_view 宽不会变。\n如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 TRUE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽会合并原来滚动条的宽。",
+    "desc": "列表视图控件。\n\n列表视图控件是一个可以垂直滚动的列表控件。\n\n如果不需要滚动，可以用view控件配置适当的layout参数作为列表控件。\n\n列表视图中的列表项可以固定高度，也可以使用不同高度。请参考[变高列表项](\nhttps://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_vh.xml)\n\n列表视图控件的中可以有滚动条，也可以没有滚动条。\n可以使用移动设备风格的滚动条，也可以使用桌面风格的滚动条。\n\nlist\\_view\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于list\\_view\\_t控件。\n\n在xml中使用\"list\\_view\"标签创建列表视图控件。如：\n\n```xml\n<list_view x=\"0\"  y=\"30\" w=\"100%\" h=\"-80\" item_height=\"60\">\n<scroll_view name=\"view\" x=\"0\"  y=\"0\" w=\"100%\" h=\"100%\">\n<list_item style=\"odd\" children_layout=\"default(rows=1,cols=0)\">\n<image draw_type=\"icon\" w=\"30\" image=\"earth\"/>\n<label w=\"-30\" text=\"1.Hello AWTK !\">\n<switch x=\"r:10\" y=\"m\" w=\"60\" h=\"20\"/>\n</label>\n</list_item>\n...\n</scroll_view>\n</list_view>\n```\n\n> 注意：列表项不是作为列表视图控件的直接子控件，而是作为滚动视图的子控件。\n\n\n> 更多用法请参考：[list\\_view\\_m.xml](\nhttps://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)\n\n在c代码中使用函数list\\_view\\_create创建列表视图控件。如：\n\n```c\nwidget_t* list_view = list_view_create(win, 0, 0, 0, 0);\n```\n\n用代码构造列表视图是比较繁琐的事情，最好用XML来构造。\n如果需要动态修改，可以使用widget\\_clone来增加列表项，使用widget\\_remove\\_child来移出列表项。\n\n可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。\n\n备注：list_view 下的 scroll_view 控件不支持遍历所有子控件的效果。\n\n下面是针对 scroll_bar_d （桌面版）有效果，scroll_bar_m（移动版）没有效果。\n如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 TRUE， 如果 scroll_view 的高比虚拟高要小的话，鼠标在 list_view 上滚动条才显示，鼠标移开的就自动隐藏，scroll_view 宽为控件宽度。\n如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 FALSE ，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，如果 scroll_view 的高比虚拟高要小的话，滚动条固定显示（不管鼠标是否悬停），scroll_view 宽为控件宽度。\n如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 FALSE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可用（滚动条固定显示，不管鼠标是否悬停），scroll_view 宽不会变。\n如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 TRUE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽会合并原来滚动条的宽，如果 scroll_view 的高比虚拟高要小的话，滚动条固定显示（不管鼠标是否悬停），scroll_view 宽会变为 list_view 宽度减去滚动条宽度。",
     "name": "list_view_t",
     "parent": "widget_t",
     "annotation": {
@@ -29210,6 +29270,47 @@
             "type": "widget_t*",
             "name": "widget",
             "desc": "check_button对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "indeterminate",
+            "desc": "不确定状态。（该值为TRUE的话，value 值存于不确定状态，该值为FALSE的话，value 值存于确定状态）"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置控件的不确定状态。",
+        "name": "check_button_set_indeterminate",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "check_button对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取控件的是否存于不确定状态。",
+        "name": "check_button_get_indeterminate",
+        "return": {
+          "type": "bool_t",
+          "desc": "返回控件的是否存于不确定状态。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "check_button对象。"
           }
         ],
         "annotation": {
@@ -32647,6 +32748,29 @@
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "drag_threshold",
+            "desc": "拖拽临界值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置拖拽临界值。",
+        "name": "slider_set_drag_threshold",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
       }
     ],
     "events": [
@@ -32796,6 +32920,19 @@
           "design": true,
           "scriptable": true
         }
+      },
+      {
+        "name": "drag_threshold",
+        "desc": "拖动临界值。",
+        "type": "uint32_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
       }
     ],
     "header": "widgets/slider.h",
@@ -32902,6 +33039,29 @@
           {
             "type": "widget_t*",
             "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "drag_child",
+            "desc": "是否拖拽(缺省FALSE)。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置拖拽 tab_button 控件位置。",
+        "name": "tab_button_group_set_drag_child",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
             "desc": "tab_button_group对象。"
           }
         ],
@@ -32935,6 +33095,19 @@
       {
         "name": "scrollable",
         "desc": "是否支持滚动(缺省FALSE)。\n\n> 紧凑型排版子控件时才支持滚动。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "drag_child",
+        "desc": "是否支持拖拽并且修改 tab_button 控件的位置(缺省FALSE)。\n\n> 紧凑型排版子控件时才支持滚动，开启该功能后，就不能拖拽滚动了，只能鼠标滚轮滚动了。",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,
@@ -33095,6 +33268,52 @@
             "desc": "tab_button对象。"
           },
           {
+            "type": "int32_t",
+            "name": "max_w",
+            "desc": "最大宽度。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置控件的最大宽度。",
+        "name": "tab_button_set_max_w",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "tab_button对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "index",
+            "desc": "位置序数(大于等于总个数，则放到最后)。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "调整控件在父控件中的位置序数。",
+        "name": "tab_button_restack",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "tab_button对象。"
+          },
+          {
             "type": "const char*",
             "name": "name",
             "desc": "动态加载UI的资源名称。"
@@ -33172,6 +33391,19 @@
         "name": "icon",
         "desc": "非当前项的图标的名称。",
         "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "max_w",
+        "desc": "最大宽度。（缺省值为-1，小于 0 则最大宽度无效）",
+        "type": "int32_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -35220,6 +35452,29 @@
         },
         "desc": "设置属性值时不改变属性的类型。",
         "name": "object_default_set_keep_prop_type",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "tk_object_t*",
+            "name": "obj",
+            "desc": "对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "name_case_insensitive",
+            "desc": "属性名是否大小写不敏感。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置属性名是否大小写不敏感。",
+        "name": "object_default_set_name_case_insensitive",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"

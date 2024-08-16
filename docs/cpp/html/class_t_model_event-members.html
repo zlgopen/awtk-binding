@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: 成员列表</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,46 +70,54 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
-  <div class="headertitle">
-<div class="title">TModelEvent 成员列表</div>  </div>
+  <div class="headertitle"><div class="title">TModelEvent 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>成员的完整列表，这些成员属于 <a class="el" href="class_t_model_event.html">TModelEvent</a>,包括所有继承而来的类成员</p>
 <table class="directory">
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Cast</b>(event_t *nativeObj) (定义于 <a class="el" href="class_t_model_event.html">TModelEvent</a>)</td><td class="entry"><a class="el" href="class_t_model_event.html">TModelEvent</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Cast</b>(const event_t *nativeObj) (定义于 <a class="el" href="class_t_model_event.html">TModelEvent</a>)</td><td class="entry"><a class="el" href="class_t_model_event.html">TModelEvent</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>Cast</b>(const event_t *nativeObj) (定义于 <a class="el" href="class_t_model_event.html">TModelEvent</a>)</td><td class="entry"><a class="el" href="class_t_model_event.html">TModelEvent</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Cast</b>(TEvent &amp;obj) (定义于 <a class="el" href="class_t_model_event.html">TModelEvent</a>)</td><td class="entry"><a class="el" href="class_t_model_event.html">TModelEvent</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Cast</b>(const TEvent &amp;obj) (定义于 <a class="el" href="class_t_model_event.html">TModelEvent</a>)</td><td class="entry"><a class="el" href="class_t_model_event.html">TModelEvent</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>Cast</b>(const TEvent &amp;obj) (定义于 <a class="el" href="class_t_model_event.html">TModelEvent</a>)</td><td class="entry"><a class="el" href="class_t_model_event.html">TModelEvent</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_event.html#adad60ee8cf3e26266681c6c80d41bd3b">Create</a>(uint32_t type)</td><td class="entry"><a class="el" href="class_t_event.html">TEvent</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_event.html#afff04d515d40e86c9fecd6b3b0368cec">Destroy</a>()</td><td class="entry"><a class="el" href="class_t_event.html">TEvent</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_event.html#afff04d515d40e86c9fecd6b3b0368cec">Destroy</a>()</td><td class="entry"><a class="el" href="class_t_event.html">TEvent</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_event.html#a95a746a2230504d7c86376fff0196ac3">FromName</a>(const char *name)</td><td class="entry"><a class="el" href="class_t_event.html">TEvent</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_model_event.html#ae60c0e64dee4f2c018b49eda73b6541f">GetChangeType</a>() const</td><td class="entry"><a class="el" href="class_t_model_event.html">TModelEvent</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_model_event.html#ae60c0e64dee4f2c018b49eda73b6541f">GetChangeType</a>() const</td><td class="entry"><a class="el" href="class_t_model_event.html">TModelEvent</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_model_event.html#ab4a2e870a81d5d607cba25f45a835f87">GetModel</a>() const</td><td class="entry"><a class="el" href="class_t_model_event.html">TModelEvent</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_model_event.html#a1a3cffc18f0c4088f0b7b07f8b29b851">GetName</a>() const</td><td class="entry"><a class="el" href="class_t_model_event.html">TModelEvent</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_model_event.html#a1a3cffc18f0c4088f0b7b07f8b29b851">GetName</a>() const</td><td class="entry"><a class="el" href="class_t_model_event.html">TModelEvent</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_event.html#a8c9f5a1aea08ac3b9a2a3006c26ac6eb">GetSize</a>() const</td><td class="entry"><a class="el" href="class_t_event.html">TEvent</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_event.html#a03c3315ddbbb7522ea86fc56f934b753">GetTarget</a>() const</td><td class="entry"><a class="el" href="class_t_event.html">TEvent</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_event.html#a03c3315ddbbb7522ea86fc56f934b753">GetTarget</a>() const</td><td class="entry"><a class="el" href="class_t_event.html">TEvent</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_event.html#ae3ab3af3ce97f88ce711b22f56526618">GetTime</a>() const</td><td class="entry"><a class="el" href="class_t_event.html">TEvent</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_event.html#ae32faff8a91012e1df9c7cd2f74a4bd9">GetType</a>()</td><td class="entry"><a class="el" href="class_t_event.html">TEvent</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_event.html#ae32faff8a91012e1df9c7cd2f74a4bd9">GetType</a>()</td><td class="entry"><a class="el" href="class_t_event.html">TEvent</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_event.html#ab0ccfe98f9c2433c788994fcff6ab599">GetType</a>() const</td><td class="entry"><a class="el" href="class_t_event.html">TEvent</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>nativeObj</b> (定义于 <a class="el" href="class_t_event.html">TEvent</a>)</td><td class="entry"><a class="el" href="class_t_event.html">TEvent</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>nativeObj</b> (定义于 <a class="el" href="class_t_event.html">TEvent</a>)</td><td class="entry"><a class="el" href="class_t_event.html">TEvent</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>TEvent</b>(event_t *nativeObj) (定义于 <a class="el" href="class_t_event.html">TEvent</a>)</td><td class="entry"><a class="el" href="class_t_event.html">TEvent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>TEvent</b>() (定义于 <a class="el" href="class_t_event.html">TEvent</a>)</td><td class="entry"><a class="el" href="class_t_event.html">TEvent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>TEvent</b>() (定义于 <a class="el" href="class_t_event.html">TEvent</a>)</td><td class="entry"><a class="el" href="class_t_event.html">TEvent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>TEvent</b>(const event_t *nativeObj) (定义于 <a class="el" href="class_t_event.html">TEvent</a>)</td><td class="entry"><a class="el" href="class_t_event.html">TEvent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>TModelEvent</b>(event_t *nativeObj) (定义于 <a class="el" href="class_t_model_event.html">TModelEvent</a>)</td><td class="entry"><a class="el" href="class_t_model_event.html">TModelEvent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>TModelEvent</b>(event_t *nativeObj) (定义于 <a class="el" href="class_t_model_event.html">TModelEvent</a>)</td><td class="entry"><a class="el" href="class_t_model_event.html">TModelEvent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>TModelEvent</b>() (定义于 <a class="el" href="class_t_model_event.html">TModelEvent</a>)</td><td class="entry"><a class="el" href="class_t_model_event.html">TModelEvent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>TModelEvent</b>(const model_event_t *nativeObj) (定义于 <a class="el" href="class_t_model_event.html">TModelEvent</a>)</td><td class="entry"><a class="el" href="class_t_model_event.html">TModelEvent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>TModelEvent</b>(const model_event_t *nativeObj) (定义于 <a class="el" href="class_t_model_event.html">TModelEvent</a>)</td><td class="entry"><a class="el" href="class_t_model_event.html">TModelEvent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

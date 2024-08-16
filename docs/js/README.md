@@ -1,4 +1,6 @@
-AWTK / [Exports](modules.md)
+**AWTK** • [**Docs**](globals.md)
+
+***
 
 ### 简单示例
 

@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TObject类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-JAVA
    </div>
    <div id="projectbrief">AWTK JAVA API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,9 +70,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,13 +87,13 @@ $(function() {
 <li class="navelem"><b>awtk</b></li><li class="navelem"><a class="el" href="classawtk_1_1_t_object.html">TObject</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="classawtk_1_1_t_object-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">awtk.TObject类 参考</div>  </div>
+  <div class="headertitle"><div class="title">awtk.TObject类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -89,177 +111,177 @@ $(function() {
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a6644ccec73dac47818113a2e1ad78874"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a6644ccec73dac47818113a2e1ad78874">TObject</a> (long <a class="el" href="classawtk_1_1_t_emitter.html#a3dfef6f3db53335a00cb479e90262840">nativeObj</a>)</td></tr>
+<tr class="memitem:a6644ccec73dac47818113a2e1ad78874" id="r_a6644ccec73dac47818113a2e1ad78874"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6644ccec73dac47818113a2e1ad78874">TObject</a> (long <a class="el" href="classawtk_1_1_t_emitter.html#a3dfef6f3db53335a00cb479e90262840">nativeObj</a>)</td></tr>
 <tr class="separator:a6644ccec73dac47818113a2e1ad78874"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e0b9a5f2a4e1d0a1723bbc6d03d2738"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a6e0b9a5f2a4e1d0a1723bbc6d03d2738">unref</a> ()</td></tr>
+<tr class="memitem:a6e0b9a5f2a4e1d0a1723bbc6d03d2738" id="r_a6e0b9a5f2a4e1d0a1723bbc6d03d2738"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e0b9a5f2a4e1d0a1723bbc6d03d2738">unref</a> ()</td></tr>
 <tr class="separator:a6e0b9a5f2a4e1d0a1723bbc6d03d2738"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5e3aec2ad3500dba6ee04b5d9c6c057"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#ae5e3aec2ad3500dba6ee04b5d9c6c057">getType</a> ()</td></tr>
+<tr class="memitem:ae5e3aec2ad3500dba6ee04b5d9c6c057" id="r_ae5e3aec2ad3500dba6ee04b5d9c6c057"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5e3aec2ad3500dba6ee04b5d9c6c057">getType</a> ()</td></tr>
 <tr class="separator:ae5e3aec2ad3500dba6ee04b5d9c6c057"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad40b2c50b463f243610c2a7844d0d44f"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#ad40b2c50b463f243610c2a7844d0d44f">getDesc</a> ()</td></tr>
+<tr class="memitem:ad40b2c50b463f243610c2a7844d0d44f" id="r_ad40b2c50b463f243610c2a7844d0d44f"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad40b2c50b463f243610c2a7844d0d44f">getDesc</a> ()</td></tr>
 <tr class="separator:ad40b2c50b463f243610c2a7844d0d44f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dd26befed6010ce0c19624144488512"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a4dd26befed6010ce0c19624144488512">getSize</a> ()</td></tr>
+<tr class="memitem:a4dd26befed6010ce0c19624144488512" id="r_a4dd26befed6010ce0c19624144488512"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dd26befed6010ce0c19624144488512">getSize</a> ()</td></tr>
 <tr class="separator:a4dd26befed6010ce0c19624144488512"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad20f2fb95684a2fa64f471ba949eb95e"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#ad20f2fb95684a2fa64f471ba949eb95e">isCollection</a> ()</td></tr>
+<tr class="memitem:ad20f2fb95684a2fa64f471ba949eb95e" id="r_ad20f2fb95684a2fa64f471ba949eb95e"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad20f2fb95684a2fa64f471ba949eb95e">isCollection</a> ()</td></tr>
 <tr class="separator:ad20f2fb95684a2fa64f471ba949eb95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cb394693a52238fd1546d56be531ee1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a5cb394693a52238fd1546d56be531ee1">setName</a> (String name)</td></tr>
+<tr class="memitem:a5cb394693a52238fd1546d56be531ee1" id="r_a5cb394693a52238fd1546d56be531ee1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cb394693a52238fd1546d56be531ee1">setName</a> (String name)</td></tr>
 <tr class="separator:a5cb394693a52238fd1546d56be531ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0b41aa66511fcf8b19006e484034506"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#ad0b41aa66511fcf8b19006e484034506">compare</a> (<a class="el" href="classawtk_1_1_t_object.html">TObject</a> other)</td></tr>
+<tr class="memitem:ad0b41aa66511fcf8b19006e484034506" id="r_ad0b41aa66511fcf8b19006e484034506"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0b41aa66511fcf8b19006e484034506">compare</a> (<a class="el" href="classawtk_1_1_t_object.html">TObject</a> other)</td></tr>
 <tr class="separator:ad0b41aa66511fcf8b19006e484034506"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab876f11c305651d60aa4650fa65dabb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#ab876f11c305651d60aa4650fa65dabb9">getProp</a> (String name, <a class="el" href="classawtk_1_1_t_value.html">TValue</a> v)</td></tr>
+<tr class="memitem:ab876f11c305651d60aa4650fa65dabb9" id="r_ab876f11c305651d60aa4650fa65dabb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab876f11c305651d60aa4650fa65dabb9">getProp</a> (String name, <a class="el" href="classawtk_1_1_t_value.html">TValue</a> v)</td></tr>
 <tr class="separator:ab876f11c305651d60aa4650fa65dabb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad882ebaa35bccfc7fab8c8403266ee66"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#ad882ebaa35bccfc7fab8c8403266ee66">getPropStr</a> (String name)</td></tr>
+<tr class="memitem:ad882ebaa35bccfc7fab8c8403266ee66" id="r_ad882ebaa35bccfc7fab8c8403266ee66"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad882ebaa35bccfc7fab8c8403266ee66">getPropStr</a> (String name)</td></tr>
 <tr class="separator:ad882ebaa35bccfc7fab8c8403266ee66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37f51b0cbe863fd20f7623d836aa393c"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a37f51b0cbe863fd20f7623d836aa393c">getPropPointer</a> (String name)</td></tr>
+<tr class="memitem:a37f51b0cbe863fd20f7623d836aa393c" id="r_a37f51b0cbe863fd20f7623d836aa393c"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37f51b0cbe863fd20f7623d836aa393c">getPropPointer</a> (String name)</td></tr>
 <tr class="separator:a37f51b0cbe863fd20f7623d836aa393c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a707e4fccc9baf9c74efc133fb71bd3a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a707e4fccc9baf9c74efc133fb71bd3a4">getPropObject</a> (String name)</td></tr>
+<tr class="memitem:a707e4fccc9baf9c74efc133fb71bd3a4" id="r_a707e4fccc9baf9c74efc133fb71bd3a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a707e4fccc9baf9c74efc133fb71bd3a4">getPropObject</a> (String name)</td></tr>
 <tr class="separator:a707e4fccc9baf9c74efc133fb71bd3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7186047d3ec4fbdf685fcc120b3d17d7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a7186047d3ec4fbdf685fcc120b3d17d7">getPropInt</a> (String name, int defval)</td></tr>
+<tr class="memitem:a7186047d3ec4fbdf685fcc120b3d17d7" id="r_a7186047d3ec4fbdf685fcc120b3d17d7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7186047d3ec4fbdf685fcc120b3d17d7">getPropInt</a> (String name, int defval)</td></tr>
 <tr class="separator:a7186047d3ec4fbdf685fcc120b3d17d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d9682a54b82a7884a07f03994df14bb"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a7d9682a54b82a7884a07f03994df14bb">getPropBool</a> (String name, boolean defval)</td></tr>
+<tr class="memitem:a7d9682a54b82a7884a07f03994df14bb" id="r_a7d9682a54b82a7884a07f03994df14bb"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d9682a54b82a7884a07f03994df14bb">getPropBool</a> (String name, boolean defval)</td></tr>
 <tr class="separator:a7d9682a54b82a7884a07f03994df14bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55f1e963e671a463c6714ad4c6cb2531"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a55f1e963e671a463c6714ad4c6cb2531">getPropFloat</a> (String name, double defval)</td></tr>
+<tr class="memitem:a55f1e963e671a463c6714ad4c6cb2531" id="r_a55f1e963e671a463c6714ad4c6cb2531"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55f1e963e671a463c6714ad4c6cb2531">getPropFloat</a> (String name, double defval)</td></tr>
 <tr class="separator:a55f1e963e671a463c6714ad4c6cb2531"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe77c512ba674e42bd9c9a5836b5d5d5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#abe77c512ba674e42bd9c9a5836b5d5d5">getPropDouble</a> (String name, double defval)</td></tr>
+<tr class="memitem:abe77c512ba674e42bd9c9a5836b5d5d5" id="r_abe77c512ba674e42bd9c9a5836b5d5d5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe77c512ba674e42bd9c9a5836b5d5d5">getPropDouble</a> (String name, double defval)</td></tr>
 <tr class="separator:abe77c512ba674e42bd9c9a5836b5d5d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accb710cc8e5be738420a208d8c1f37b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#accb710cc8e5be738420a208d8c1f37b9">removeProp</a> (String name)</td></tr>
+<tr class="memitem:accb710cc8e5be738420a208d8c1f37b9" id="r_accb710cc8e5be738420a208d8c1f37b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accb710cc8e5be738420a208d8c1f37b9">removeProp</a> (String name)</td></tr>
 <tr class="separator:accb710cc8e5be738420a208d8c1f37b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05b66c051e3fa4223edfc753f556fc98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a05b66c051e3fa4223edfc753f556fc98">setProp</a> (String name, <a class="el" href="classawtk_1_1_t_value.html">TValue</a> value)</td></tr>
+<tr class="memitem:a05b66c051e3fa4223edfc753f556fc98" id="r_a05b66c051e3fa4223edfc753f556fc98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05b66c051e3fa4223edfc753f556fc98">setProp</a> (String name, <a class="el" href="classawtk_1_1_t_value.html">TValue</a> value)</td></tr>
 <tr class="separator:a05b66c051e3fa4223edfc753f556fc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7fdb692187da5cc4d28cc892fe69d0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#ad7fdb692187da5cc4d28cc892fe69d0d">setPropStr</a> (String name, String value)</td></tr>
+<tr class="memitem:ad7fdb692187da5cc4d28cc892fe69d0d" id="r_ad7fdb692187da5cc4d28cc892fe69d0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7fdb692187da5cc4d28cc892fe69d0d">setPropStr</a> (String name, String value)</td></tr>
 <tr class="separator:ad7fdb692187da5cc4d28cc892fe69d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87d5c144596bf3fc99af5099ab47b191"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a87d5c144596bf3fc99af5099ab47b191">setPropObject</a> (String name, <a class="el" href="classawtk_1_1_t_object.html">TObject</a> value)</td></tr>
+<tr class="memitem:a87d5c144596bf3fc99af5099ab47b191" id="r_a87d5c144596bf3fc99af5099ab47b191"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87d5c144596bf3fc99af5099ab47b191">setPropObject</a> (String name, <a class="el" href="classawtk_1_1_t_object.html">TObject</a> value)</td></tr>
 <tr class="separator:a87d5c144596bf3fc99af5099ab47b191"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21e5e872495c4a7a45e4e4f69ddb7cac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a21e5e872495c4a7a45e4e4f69ddb7cac">setPropInt</a> (String name, int value)</td></tr>
+<tr class="memitem:a21e5e872495c4a7a45e4e4f69ddb7cac" id="r_a21e5e872495c4a7a45e4e4f69ddb7cac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21e5e872495c4a7a45e4e4f69ddb7cac">setPropInt</a> (String name, int value)</td></tr>
 <tr class="separator:a21e5e872495c4a7a45e4e4f69ddb7cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24896cb00f8d1485275823d014e8a9d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a24896cb00f8d1485275823d014e8a9d9">setPropBool</a> (String name, boolean value)</td></tr>
+<tr class="memitem:a24896cb00f8d1485275823d014e8a9d9" id="r_a24896cb00f8d1485275823d014e8a9d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24896cb00f8d1485275823d014e8a9d9">setPropBool</a> (String name, boolean value)</td></tr>
 <tr class="separator:a24896cb00f8d1485275823d014e8a9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26b8eb8c49b2a8f24e1c0c825854f585"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a26b8eb8c49b2a8f24e1c0c825854f585">setPropFloat</a> (String name, double value)</td></tr>
+<tr class="memitem:a26b8eb8c49b2a8f24e1c0c825854f585" id="r_a26b8eb8c49b2a8f24e1c0c825854f585"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26b8eb8c49b2a8f24e1c0c825854f585">setPropFloat</a> (String name, double value)</td></tr>
 <tr class="separator:a26b8eb8c49b2a8f24e1c0c825854f585"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9e46e441b9c1300f7dba50295d7b829"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#ac9e46e441b9c1300f7dba50295d7b829">setPropDouble</a> (String name, double value)</td></tr>
+<tr class="memitem:ac9e46e441b9c1300f7dba50295d7b829" id="r_ac9e46e441b9c1300f7dba50295d7b829"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9e46e441b9c1300f7dba50295d7b829">setPropDouble</a> (String name, double value)</td></tr>
 <tr class="separator:ac9e46e441b9c1300f7dba50295d7b829"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a018aeba3eefe2f97c5b83287524b5eb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a018aeba3eefe2f97c5b83287524b5eb4">copyProp</a> (<a class="el" href="classawtk_1_1_t_object.html">TObject</a> src, String name)</td></tr>
+<tr class="memitem:a018aeba3eefe2f97c5b83287524b5eb4" id="r_a018aeba3eefe2f97c5b83287524b5eb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a018aeba3eefe2f97c5b83287524b5eb4">copyProp</a> (<a class="el" href="classawtk_1_1_t_object.html">TObject</a> src, String name)</td></tr>
 <tr class="separator:a018aeba3eefe2f97c5b83287524b5eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6b23e38c494f0efcbffb75b6811ec93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#af6b23e38c494f0efcbffb75b6811ec93">copyProps</a> (<a class="el" href="classawtk_1_1_t_object.html">TObject</a> src, boolean overwrite)</td></tr>
+<tr class="memitem:af6b23e38c494f0efcbffb75b6811ec93" id="r_af6b23e38c494f0efcbffb75b6811ec93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6b23e38c494f0efcbffb75b6811ec93">copyProps</a> (<a class="el" href="classawtk_1_1_t_object.html">TObject</a> src, boolean overwrite)</td></tr>
 <tr class="separator:af6b23e38c494f0efcbffb75b6811ec93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd296ebc1efda1d0aea7a1a705ac6454"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#acd296ebc1efda1d0aea7a1a705ac6454">hasProp</a> (String name)</td></tr>
+<tr class="memitem:acd296ebc1efda1d0aea7a1a705ac6454" id="r_acd296ebc1efda1d0aea7a1a705ac6454"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd296ebc1efda1d0aea7a1a705ac6454">hasProp</a> (String name)</td></tr>
 <tr class="separator:acd296ebc1efda1d0aea7a1a705ac6454"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f8f65ee50225e5420aa14a1d6282021"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a6f8f65ee50225e5420aa14a1d6282021">eval</a> (String expr, <a class="el" href="classawtk_1_1_t_value.html">TValue</a> v)</td></tr>
+<tr class="memitem:a6f8f65ee50225e5420aa14a1d6282021" id="r_a6f8f65ee50225e5420aa14a1d6282021"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f8f65ee50225e5420aa14a1d6282021">eval</a> (String expr, <a class="el" href="classawtk_1_1_t_value.html">TValue</a> v)</td></tr>
 <tr class="separator:a6f8f65ee50225e5420aa14a1d6282021"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8175b46a1cb653e88a9594a8848abb10"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a8175b46a1cb653e88a9594a8848abb10">canExec</a> (String name, String args)</td></tr>
+<tr class="memitem:a8175b46a1cb653e88a9594a8848abb10" id="r_a8175b46a1cb653e88a9594a8848abb10"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8175b46a1cb653e88a9594a8848abb10">canExec</a> (String name, String args)</td></tr>
 <tr class="separator:a8175b46a1cb653e88a9594a8848abb10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7cf12830497d90811f120c2509d8822"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#aa7cf12830497d90811f120c2509d8822">execute</a> (String name, String args)</td></tr>
+<tr class="memitem:aa7cf12830497d90811f120c2509d8822" id="r_aa7cf12830497d90811f120c2509d8822"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7cf12830497d90811f120c2509d8822">execute</a> (String name, String args)</td></tr>
 <tr class="separator:aa7cf12830497d90811f120c2509d8822"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc1fc6d31fa551f0c85f87e07478ce0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#afc1fc6d31fa551f0c85f87e07478ce0f">notifyChanged</a> ()</td></tr>
+<tr class="memitem:afc1fc6d31fa551f0c85f87e07478ce0f" id="r_afc1fc6d31fa551f0c85f87e07478ce0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc1fc6d31fa551f0c85f87e07478ce0f">notifyChanged</a> ()</td></tr>
 <tr class="separator:afc1fc6d31fa551f0c85f87e07478ce0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7fd68115059e5220f48e6a4880678c8"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#af7fd68115059e5220f48e6a4880678c8">hasPropByPath</a> (String path)</td></tr>
+<tr class="memitem:af7fd68115059e5220f48e6a4880678c8" id="r_af7fd68115059e5220f48e6a4880678c8"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7fd68115059e5220f48e6a4880678c8">hasPropByPath</a> (String path)</td></tr>
 <tr class="separator:af7fd68115059e5220f48e6a4880678c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13543148a2e527a83263cf6a3c76a8f6"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a13543148a2e527a83263cf6a3c76a8f6">getPropStrByPath</a> (String path)</td></tr>
+<tr class="memitem:a13543148a2e527a83263cf6a3c76a8f6" id="r_a13543148a2e527a83263cf6a3c76a8f6"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13543148a2e527a83263cf6a3c76a8f6">getPropStrByPath</a> (String path)</td></tr>
 <tr class="separator:a13543148a2e527a83263cf6a3c76a8f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af805870236ff911110253529b52e060d"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#af805870236ff911110253529b52e060d">getPropPointerByPath</a> (String path)</td></tr>
+<tr class="memitem:af805870236ff911110253529b52e060d" id="r_af805870236ff911110253529b52e060d"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af805870236ff911110253529b52e060d">getPropPointerByPath</a> (String path)</td></tr>
 <tr class="separator:af805870236ff911110253529b52e060d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a751717f69f0fc22c1f3a11f3e5c63c70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a751717f69f0fc22c1f3a11f3e5c63c70">getPropObjectByPath</a> (String path)</td></tr>
+<tr class="memitem:a751717f69f0fc22c1f3a11f3e5c63c70" id="r_a751717f69f0fc22c1f3a11f3e5c63c70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a751717f69f0fc22c1f3a11f3e5c63c70">getPropObjectByPath</a> (String path)</td></tr>
 <tr class="separator:a751717f69f0fc22c1f3a11f3e5c63c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf526e6045968e8717769a5d079c40b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#adf526e6045968e8717769a5d079c40b1">getPropIntByPath</a> (String path, int defval)</td></tr>
+<tr class="memitem:adf526e6045968e8717769a5d079c40b1" id="r_adf526e6045968e8717769a5d079c40b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf526e6045968e8717769a5d079c40b1">getPropIntByPath</a> (String path, int defval)</td></tr>
 <tr class="separator:adf526e6045968e8717769a5d079c40b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5df44eb7dade57495b56285237ec36a5"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a5df44eb7dade57495b56285237ec36a5">getPropBoolByPath</a> (String path, boolean defval)</td></tr>
+<tr class="memitem:a5df44eb7dade57495b56285237ec36a5" id="r_a5df44eb7dade57495b56285237ec36a5"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5df44eb7dade57495b56285237ec36a5">getPropBoolByPath</a> (String path, boolean defval)</td></tr>
 <tr class="separator:a5df44eb7dade57495b56285237ec36a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91206bd9bce056ee3aae08f00cd14f5b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a91206bd9bce056ee3aae08f00cd14f5b">getPropFloatByPath</a> (String path, double defval)</td></tr>
+<tr class="memitem:a91206bd9bce056ee3aae08f00cd14f5b" id="r_a91206bd9bce056ee3aae08f00cd14f5b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91206bd9bce056ee3aae08f00cd14f5b">getPropFloatByPath</a> (String path, double defval)</td></tr>
 <tr class="separator:a91206bd9bce056ee3aae08f00cd14f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c0ed159a04225f39e5ddfcaa0a8bcf2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a1c0ed159a04225f39e5ddfcaa0a8bcf2">setPropByPath</a> (String path, <a class="el" href="classawtk_1_1_t_value.html">TValue</a> value)</td></tr>
+<tr class="memitem:a1c0ed159a04225f39e5ddfcaa0a8bcf2" id="r_a1c0ed159a04225f39e5ddfcaa0a8bcf2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c0ed159a04225f39e5ddfcaa0a8bcf2">setPropByPath</a> (String path, <a class="el" href="classawtk_1_1_t_value.html">TValue</a> value)</td></tr>
 <tr class="separator:a1c0ed159a04225f39e5ddfcaa0a8bcf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bf5ae3df9d004d6903846bc5d974f5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a3bf5ae3df9d004d6903846bc5d974f5c">setPropStrByPath</a> (String path, String value)</td></tr>
+<tr class="memitem:a3bf5ae3df9d004d6903846bc5d974f5c" id="r_a3bf5ae3df9d004d6903846bc5d974f5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bf5ae3df9d004d6903846bc5d974f5c">setPropStrByPath</a> (String path, String value)</td></tr>
 <tr class="separator:a3bf5ae3df9d004d6903846bc5d974f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab84e0835228cd76dce4ec49529b8b61a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#ab84e0835228cd76dce4ec49529b8b61a">setPropObjectByPath</a> (String path, <a class="el" href="classawtk_1_1_t_object.html">TObject</a> value)</td></tr>
+<tr class="memitem:ab84e0835228cd76dce4ec49529b8b61a" id="r_ab84e0835228cd76dce4ec49529b8b61a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab84e0835228cd76dce4ec49529b8b61a">setPropObjectByPath</a> (String path, <a class="el" href="classawtk_1_1_t_object.html">TObject</a> value)</td></tr>
 <tr class="separator:ab84e0835228cd76dce4ec49529b8b61a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c2cbe5890241f8a192f797f16d049cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a1c2cbe5890241f8a192f797f16d049cf">setPropIntByPath</a> (String path, int value)</td></tr>
+<tr class="memitem:a1c2cbe5890241f8a192f797f16d049cf" id="r_a1c2cbe5890241f8a192f797f16d049cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c2cbe5890241f8a192f797f16d049cf">setPropIntByPath</a> (String path, int value)</td></tr>
 <tr class="separator:a1c2cbe5890241f8a192f797f16d049cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54857c653e0eb1a7c94b5bb19a84d1ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a54857c653e0eb1a7c94b5bb19a84d1ca">setPropBoolByPath</a> (String path, boolean value)</td></tr>
+<tr class="memitem:a54857c653e0eb1a7c94b5bb19a84d1ca" id="r_a54857c653e0eb1a7c94b5bb19a84d1ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54857c653e0eb1a7c94b5bb19a84d1ca">setPropBoolByPath</a> (String path, boolean value)</td></tr>
 <tr class="separator:a54857c653e0eb1a7c94b5bb19a84d1ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34e9a53157ddd0ff30a31ba529af8c54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a34e9a53157ddd0ff30a31ba529af8c54">setPropFloatByPath</a> (String path, double value)</td></tr>
+<tr class="memitem:a34e9a53157ddd0ff30a31ba529af8c54" id="r_a34e9a53157ddd0ff30a31ba529af8c54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34e9a53157ddd0ff30a31ba529af8c54">setPropFloatByPath</a> (String path, double value)</td></tr>
 <tr class="separator:a34e9a53157ddd0ff30a31ba529af8c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09ad0b1709a2c6858fd4a992b90025e1"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a09ad0b1709a2c6858fd4a992b90025e1">canExecByPath</a> (String path, String args)</td></tr>
+<tr class="memitem:a09ad0b1709a2c6858fd4a992b90025e1" id="r_a09ad0b1709a2c6858fd4a992b90025e1"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09ad0b1709a2c6858fd4a992b90025e1">canExecByPath</a> (String path, String args)</td></tr>
 <tr class="separator:a09ad0b1709a2c6858fd4a992b90025e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39295d72071bc1d180560e25fe642797"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a39295d72071bc1d180560e25fe642797">executeByPath</a> (String path, String args)</td></tr>
+<tr class="memitem:a39295d72071bc1d180560e25fe642797" id="r_a39295d72071bc1d180560e25fe642797"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39295d72071bc1d180560e25fe642797">executeByPath</a> (String path, String args)</td></tr>
 <tr class="separator:a39295d72071bc1d180560e25fe642797"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15f32d1ff534bb4f71bc12c71ed79386"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a15f32d1ff534bb4f71bc12c71ed79386">getPropInt8</a> (String name, int defval)</td></tr>
+<tr class="memitem:a15f32d1ff534bb4f71bc12c71ed79386" id="r_a15f32d1ff534bb4f71bc12c71ed79386"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15f32d1ff534bb4f71bc12c71ed79386">getPropInt8</a> (String name, int defval)</td></tr>
 <tr class="separator:a15f32d1ff534bb4f71bc12c71ed79386"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20618ff3baddb2886ab05b83ddb670bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a20618ff3baddb2886ab05b83ddb670bc">setPropInt8</a> (String name, int value)</td></tr>
+<tr class="memitem:a20618ff3baddb2886ab05b83ddb670bc" id="r_a20618ff3baddb2886ab05b83ddb670bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20618ff3baddb2886ab05b83ddb670bc">setPropInt8</a> (String name, int value)</td></tr>
 <tr class="separator:a20618ff3baddb2886ab05b83ddb670bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d0df69e1f70e0201667eb1a8e996848"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a2d0df69e1f70e0201667eb1a8e996848">getPropUint8</a> (String name, int defval)</td></tr>
+<tr class="memitem:a2d0df69e1f70e0201667eb1a8e996848" id="r_a2d0df69e1f70e0201667eb1a8e996848"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d0df69e1f70e0201667eb1a8e996848">getPropUint8</a> (String name, int defval)</td></tr>
 <tr class="separator:a2d0df69e1f70e0201667eb1a8e996848"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac390b28db0b190f634eca3b13d8dda81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#ac390b28db0b190f634eca3b13d8dda81">setPropUint8</a> (String name, int value)</td></tr>
+<tr class="memitem:ac390b28db0b190f634eca3b13d8dda81" id="r_ac390b28db0b190f634eca3b13d8dda81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac390b28db0b190f634eca3b13d8dda81">setPropUint8</a> (String name, int value)</td></tr>
 <tr class="separator:ac390b28db0b190f634eca3b13d8dda81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76d04100cdddb200c77f31d01309b2c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a76d04100cdddb200c77f31d01309b2c7">getPropInt16</a> (String name, int defval)</td></tr>
+<tr class="memitem:a76d04100cdddb200c77f31d01309b2c7" id="r_a76d04100cdddb200c77f31d01309b2c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76d04100cdddb200c77f31d01309b2c7">getPropInt16</a> (String name, int defval)</td></tr>
 <tr class="separator:a76d04100cdddb200c77f31d01309b2c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5997a25e5a80e97b7584d077e665dfda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a5997a25e5a80e97b7584d077e665dfda">setPropInt16</a> (String name, int value)</td></tr>
+<tr class="memitem:a5997a25e5a80e97b7584d077e665dfda" id="r_a5997a25e5a80e97b7584d077e665dfda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5997a25e5a80e97b7584d077e665dfda">setPropInt16</a> (String name, int value)</td></tr>
 <tr class="separator:a5997a25e5a80e97b7584d077e665dfda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fa882ae14c70fd79ba78fb3d9d31d47"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a7fa882ae14c70fd79ba78fb3d9d31d47">getPropUint16</a> (String name, int defval)</td></tr>
+<tr class="memitem:a7fa882ae14c70fd79ba78fb3d9d31d47" id="r_a7fa882ae14c70fd79ba78fb3d9d31d47"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fa882ae14c70fd79ba78fb3d9d31d47">getPropUint16</a> (String name, int defval)</td></tr>
 <tr class="separator:a7fa882ae14c70fd79ba78fb3d9d31d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab48bd1894d041370f9e1a14bf8c2cbad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#ab48bd1894d041370f9e1a14bf8c2cbad">setPropUint16</a> (String name, int value)</td></tr>
+<tr class="memitem:ab48bd1894d041370f9e1a14bf8c2cbad" id="r_ab48bd1894d041370f9e1a14bf8c2cbad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab48bd1894d041370f9e1a14bf8c2cbad">setPropUint16</a> (String name, int value)</td></tr>
 <tr class="separator:ab48bd1894d041370f9e1a14bf8c2cbad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92e82b3139b9f878ddaf7375a8c3076d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a92e82b3139b9f878ddaf7375a8c3076d">getPropInt32</a> (String name, int defval)</td></tr>
+<tr class="memitem:a92e82b3139b9f878ddaf7375a8c3076d" id="r_a92e82b3139b9f878ddaf7375a8c3076d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92e82b3139b9f878ddaf7375a8c3076d">getPropInt32</a> (String name, int defval)</td></tr>
 <tr class="separator:a92e82b3139b9f878ddaf7375a8c3076d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5c214094c7574eab8f563821ff2cef3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#ad5c214094c7574eab8f563821ff2cef3">setPropInt32</a> (String name, int value)</td></tr>
+<tr class="memitem:ad5c214094c7574eab8f563821ff2cef3" id="r_ad5c214094c7574eab8f563821ff2cef3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5c214094c7574eab8f563821ff2cef3">setPropInt32</a> (String name, int value)</td></tr>
 <tr class="separator:ad5c214094c7574eab8f563821ff2cef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8a11f72c882c22e6b26ec1a1d3397eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#af8a11f72c882c22e6b26ec1a1d3397eb">getPropUint32</a> (String name, int defval)</td></tr>
+<tr class="memitem:af8a11f72c882c22e6b26ec1a1d3397eb" id="r_af8a11f72c882c22e6b26ec1a1d3397eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8a11f72c882c22e6b26ec1a1d3397eb">getPropUint32</a> (String name, int defval)</td></tr>
 <tr class="separator:af8a11f72c882c22e6b26ec1a1d3397eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae52b709fee91e76960ec6b3afed4e4b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#ae52b709fee91e76960ec6b3afed4e4b0">setPropUint32</a> (String name, int value)</td></tr>
+<tr class="memitem:ae52b709fee91e76960ec6b3afed4e4b0" id="r_ae52b709fee91e76960ec6b3afed4e4b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae52b709fee91e76960ec6b3afed4e4b0">setPropUint32</a> (String name, int value)</td></tr>
 <tr class="separator:ae52b709fee91e76960ec6b3afed4e4b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4dd40573537848876a494d1a2752164"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#aa4dd40573537848876a494d1a2752164">getPropInt64</a> (String name, long defval)</td></tr>
+<tr class="memitem:aa4dd40573537848876a494d1a2752164" id="r_aa4dd40573537848876a494d1a2752164"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4dd40573537848876a494d1a2752164">getPropInt64</a> (String name, long defval)</td></tr>
 <tr class="separator:aa4dd40573537848876a494d1a2752164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36cab09059cd84406b37ba84f46baaba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a36cab09059cd84406b37ba84f46baaba">setPropInt64</a> (String name, long value)</td></tr>
+<tr class="memitem:a36cab09059cd84406b37ba84f46baaba" id="r_a36cab09059cd84406b37ba84f46baaba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36cab09059cd84406b37ba84f46baaba">setPropInt64</a> (String name, long value)</td></tr>
 <tr class="separator:a36cab09059cd84406b37ba84f46baaba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12342269f55db44c04fb5054db700d0a"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a12342269f55db44c04fb5054db700d0a">getPropUint64</a> (String name, long defval)</td></tr>
+<tr class="memitem:a12342269f55db44c04fb5054db700d0a" id="r_a12342269f55db44c04fb5054db700d0a"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12342269f55db44c04fb5054db700d0a">getPropUint64</a> (String name, long defval)</td></tr>
 <tr class="separator:a12342269f55db44c04fb5054db700d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc1bb0784e844347d6ba64dbf98ee57c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#abc1bb0784e844347d6ba64dbf98ee57c">setPropUint64</a> (String name, long value)</td></tr>
+<tr class="memitem:abc1bb0784e844347d6ba64dbf98ee57c" id="r_abc1bb0784e844347d6ba64dbf98ee57c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc1bb0784e844347d6ba64dbf98ee57c">setPropUint64</a> (String name, long value)</td></tr>
 <tr class="separator:abc1bb0784e844347d6ba64dbf98ee57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc23c7895bb580b17887fdc0794ba823"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#adc23c7895bb580b17887fdc0794ba823">getRefCount</a> ()</td></tr>
+<tr class="memitem:adc23c7895bb580b17887fdc0794ba823" id="r_adc23c7895bb580b17887fdc0794ba823"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc23c7895bb580b17887fdc0794ba823">getRefCount</a> ()</td></tr>
 <tr class="separator:adc23c7895bb580b17887fdc0794ba823"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ca3dbf7c9d3c1d853d6005d032d8c41"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a6ca3dbf7c9d3c1d853d6005d032d8c41">getName</a> ()</td></tr>
+<tr class="memitem:a6ca3dbf7c9d3c1d853d6005d032d8c41" id="r_a6ca3dbf7c9d3c1d853d6005d032d8c41"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ca3dbf7c9d3c1d853d6005d032d8c41">getName</a> ()</td></tr>
 <tr class="separator:a6ca3dbf7c9d3c1d853d6005d032d8c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classawtk_1_1_t_emitter"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classawtk_1_1_t_emitter')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td></tr>
-<tr class="memitem:ae4e311959d07b2c5acb8a4a8aba394e0 inherit pub_methods_classawtk_1_1_t_emitter"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#ae4e311959d07b2c5acb8a4a8aba394e0">TEmitter</a> (long <a class="el" href="classawtk_1_1_t_emitter.html#a3dfef6f3db53335a00cb479e90262840">nativeObj</a>)</td></tr>
+<tr class="inherit_header pub_methods_classawtk_1_1_t_emitter"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classawtk_1_1_t_emitter')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td></tr>
+<tr class="memitem:ae4e311959d07b2c5acb8a4a8aba394e0 inherit pub_methods_classawtk_1_1_t_emitter" id="r_ae4e311959d07b2c5acb8a4a8aba394e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#ae4e311959d07b2c5acb8a4a8aba394e0">TEmitter</a> (long <a class="el" href="classawtk_1_1_t_emitter.html#a3dfef6f3db53335a00cb479e90262840">nativeObj</a>)</td></tr>
 <tr class="separator:ae4e311959d07b2c5acb8a4a8aba394e0 inherit pub_methods_classawtk_1_1_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe4f9d4a120ad6f3e81cafa2764fa601 inherit pub_methods_classawtk_1_1_t_emitter"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#abe4f9d4a120ad6f3e81cafa2764fa601">dispatch</a> (<a class="el" href="classawtk_1_1_t_event.html">TEvent</a> e)</td></tr>
+<tr class="memitem:abe4f9d4a120ad6f3e81cafa2764fa601 inherit pub_methods_classawtk_1_1_t_emitter" id="r_abe4f9d4a120ad6f3e81cafa2764fa601"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#abe4f9d4a120ad6f3e81cafa2764fa601">dispatch</a> (<a class="el" href="classawtk_1_1_t_event.html">TEvent</a> e)</td></tr>
 <tr class="separator:abe4f9d4a120ad6f3e81cafa2764fa601 inherit pub_methods_classawtk_1_1_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d384e935cde6cc973b35162325d56fa inherit pub_methods_classawtk_1_1_t_emitter"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#a2d384e935cde6cc973b35162325d56fa">dispatchSimpleEvent</a> (int type)</td></tr>
+<tr class="memitem:a2d384e935cde6cc973b35162325d56fa inherit pub_methods_classawtk_1_1_t_emitter" id="r_a2d384e935cde6cc973b35162325d56fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#a2d384e935cde6cc973b35162325d56fa">dispatchSimpleEvent</a> (int type)</td></tr>
 <tr class="separator:a2d384e935cde6cc973b35162325d56fa inherit pub_methods_classawtk_1_1_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23c16a696dd21aaf3ecc8453b6941869 inherit pub_methods_classawtk_1_1_t_emitter"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#a23c16a696dd21aaf3ecc8453b6941869">on</a> (int etype, TOnEvent handler, long ctx)</td></tr>
+<tr class="memitem:a23c16a696dd21aaf3ecc8453b6941869 inherit pub_methods_classawtk_1_1_t_emitter" id="r_a23c16a696dd21aaf3ecc8453b6941869"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#a23c16a696dd21aaf3ecc8453b6941869">on</a> (int etype, TOnEvent handler, long ctx)</td></tr>
 <tr class="separator:a23c16a696dd21aaf3ecc8453b6941869 inherit pub_methods_classawtk_1_1_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4515856b77cd3f885a2fd628e4801ab7 inherit pub_methods_classawtk_1_1_t_emitter"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#a4515856b77cd3f885a2fd628e4801ab7">off</a> (int id)</td></tr>
+<tr class="memitem:a4515856b77cd3f885a2fd628e4801ab7 inherit pub_methods_classawtk_1_1_t_emitter" id="r_a4515856b77cd3f885a2fd628e4801ab7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#a4515856b77cd3f885a2fd628e4801ab7">off</a> (int id)</td></tr>
 <tr class="separator:a4515856b77cd3f885a2fd628e4801ab7 inherit pub_methods_classawtk_1_1_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac74c2f4cb04791b650ad9c54b2b13707 inherit pub_methods_classawtk_1_1_t_emitter"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#ac74c2f4cb04791b650ad9c54b2b13707">enable</a> ()</td></tr>
+<tr class="memitem:ac74c2f4cb04791b650ad9c54b2b13707 inherit pub_methods_classawtk_1_1_t_emitter" id="r_ac74c2f4cb04791b650ad9c54b2b13707"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#ac74c2f4cb04791b650ad9c54b2b13707">enable</a> ()</td></tr>
 <tr class="separator:ac74c2f4cb04791b650ad9c54b2b13707 inherit pub_methods_classawtk_1_1_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a943c4ba9c3a7feb93e02a6fa8f0ed834 inherit pub_methods_classawtk_1_1_t_emitter"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#a943c4ba9c3a7feb93e02a6fa8f0ed834">disable</a> ()</td></tr>
+<tr class="memitem:a943c4ba9c3a7feb93e02a6fa8f0ed834 inherit pub_methods_classawtk_1_1_t_emitter" id="r_a943c4ba9c3a7feb93e02a6fa8f0ed834"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#a943c4ba9c3a7feb93e02a6fa8f0ed834">disable</a> ()</td></tr>
 <tr class="separator:a943c4ba9c3a7feb93e02a6fa8f0ed834 inherit pub_methods_classawtk_1_1_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a363332f4f679bcb99af877bc4f161097 inherit pub_methods_classawtk_1_1_t_emitter"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#a363332f4f679bcb99af877bc4f161097">destroy</a> ()</td></tr>
+<tr class="memitem:a363332f4f679bcb99af877bc4f161097 inherit pub_methods_classawtk_1_1_t_emitter" id="r_a363332f4f679bcb99af877bc4f161097"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#a363332f4f679bcb99af877bc4f161097">destroy</a> ()</td></tr>
 <tr class="separator:a363332f4f679bcb99af877bc4f161097 inherit pub_methods_classawtk_1_1_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a6b977217383a5f374a04379b4cfc7066"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a6b977217383a5f374a04379b4cfc7066">cast</a> (long <a class="el" href="classawtk_1_1_t_emitter.html#a3dfef6f3db53335a00cb479e90262840">nativeObj</a>)</td></tr>
+<tr class="memitem:a6b977217383a5f374a04379b4cfc7066" id="r_a6b977217383a5f374a04379b4cfc7066"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b977217383a5f374a04379b4cfc7066">cast</a> (long <a class="el" href="classawtk_1_1_t_emitter.html#a3dfef6f3db53335a00cb479e90262840">nativeObj</a>)</td></tr>
 <tr class="separator:a6b977217383a5f374a04379b4cfc7066"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a061dbbad49785d66c518927ebbb57f03"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_object.html#a061dbbad49785d66c518927ebbb57f03">ref</a> (<a class="el" href="classawtk_1_1_t_object.html">TObject</a> obj)</td></tr>
+<tr class="memitem:a061dbbad49785d66c518927ebbb57f03" id="r_a061dbbad49785d66c518927ebbb57f03"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a061dbbad49785d66c518927ebbb57f03">ref</a> (<a class="el" href="classawtk_1_1_t_object.html">TObject</a> obj)</td></tr>
 <tr class="separator:a061dbbad49785d66c518927ebbb57f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_classawtk_1_1_t_emitter"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classawtk_1_1_t_emitter')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td></tr>
-<tr class="memitem:a068f5e211a8daecdfa4b784e5591ac35 inherit pub_static_methods_classawtk_1_1_t_emitter"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_emitter.html">TEmitter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#a068f5e211a8daecdfa4b784e5591ac35">create</a> ()</td></tr>
+<tr class="inherit_header pub_static_methods_classawtk_1_1_t_emitter"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classawtk_1_1_t_emitter')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td></tr>
+<tr class="memitem:a068f5e211a8daecdfa4b784e5591ac35 inherit pub_static_methods_classawtk_1_1_t_emitter" id="r_a068f5e211a8daecdfa4b784e5591ac35"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_emitter.html">TEmitter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#a068f5e211a8daecdfa4b784e5591ac35">create</a> ()</td></tr>
 <tr class="separator:a068f5e211a8daecdfa4b784e5591ac35 inherit pub_static_methods_classawtk_1_1_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77409663ac9dc08f2625dd38b6120f44 inherit pub_static_methods_classawtk_1_1_t_emitter"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_emitter.html">TEmitter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#a77409663ac9dc08f2625dd38b6120f44">cast</a> (<a class="el" href="classawtk_1_1_t_emitter.html">TEmitter</a> emitter)</td></tr>
+<tr class="memitem:a77409663ac9dc08f2625dd38b6120f44 inherit pub_static_methods_classawtk_1_1_t_emitter" id="r_a77409663ac9dc08f2625dd38b6120f44"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_emitter.html">TEmitter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#a77409663ac9dc08f2625dd38b6120f44">cast</a> (<a class="el" href="classawtk_1_1_t_emitter.html">TEmitter</a> emitter)</td></tr>
 <tr class="separator:a77409663ac9dc08f2625dd38b6120f44 inherit pub_static_methods_classawtk_1_1_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 额外继承的成员函数</h2></td></tr>
-<tr class="inherit_header pub_attribs_classawtk_1_1_t_emitter"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classawtk_1_1_t_emitter')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td></tr>
-<tr class="memitem:a3dfef6f3db53335a00cb479e90262840 inherit pub_attribs_classawtk_1_1_t_emitter"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#a3dfef6f3db53335a00cb479e90262840">nativeObj</a></td></tr>
+<tr class="inherit_header pub_attribs_classawtk_1_1_t_emitter"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_classawtk_1_1_t_emitter')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td></tr>
+<tr class="memitem:a3dfef6f3db53335a00cb479e90262840 inherit pub_attribs_classawtk_1_1_t_emitter" id="r_a3dfef6f3db53335a00cb479e90262840"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_emitter.html#a3dfef6f3db53335a00cb479e90262840">nativeObj</a></td></tr>
 <tr class="separator:a3dfef6f3db53335a00cb479e90262840 inherit pub_attribs_classawtk_1_1_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>对象接口。 </p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
-<a id="a6644ccec73dac47818113a2e1ad78874"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6644ccec73dac47818113a2e1ad78874">&#9670;&nbsp;</a></span>TObject()</h2>
+<a id="a6644ccec73dac47818113a2e1ad78874" name="a6644ccec73dac47818113a2e1ad78874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6644ccec73dac47818113a2e1ad78874">&#9670;&#160;</a></span>TObject()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,8 +292,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">awtk.TObject.TObject </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>nativeObj</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>nativeObj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -293,8 +314,8 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a id="a8175b46a1cb653e88a9594a8848abb10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8175b46a1cb653e88a9594a8848abb10">&#9670;&nbsp;</a></span>canExec()</h2>
+<a id="a8175b46a1cb653e88a9594a8848abb10" name="a8175b46a1cb653e88a9594a8848abb10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8175b46a1cb653e88a9594a8848abb10">&#9670;&#160;</a></span>canExec()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,19 +326,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TObject.canExec </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -338,8 +352,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a09ad0b1709a2c6858fd4a992b90025e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09ad0b1709a2c6858fd4a992b90025e1">&#9670;&nbsp;</a></span>canExecByPath()</h2>
+<a id="a09ad0b1709a2c6858fd4a992b90025e1" name="a09ad0b1709a2c6858fd4a992b90025e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09ad0b1709a2c6858fd4a992b90025e1">&#9670;&#160;</a></span>canExecByPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -350,19 +364,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TObject.canExecByPath </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -383,8 +390,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a6b977217383a5f374a04379b4cfc7066"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b977217383a5f374a04379b4cfc7066">&#9670;&nbsp;</a></span>cast()</h2>
+<a id="a6b977217383a5f374a04379b4cfc7066" name="a6b977217383a5f374a04379b4cfc7066"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b977217383a5f374a04379b4cfc7066">&#9670;&#160;</a></span>cast()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -395,8 +402,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_object.html">TObject</a> awtk.TObject.cast </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>nativeObj</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>nativeObj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -417,12 +423,12 @@ Public 成员函数</h2></td></tr>
 
 <p>重载 <a class="el" href="classawtk_1_1_t_emitter.html#a22052354ddd6d3e7a5ae7ce0fa3654a6">awtk.TEmitter</a> .</p>
 
-<p>被 <a class="el" href="classawtk_1_1_t_timer_info.html#abf4ef80c28924deb3d761f9de5138e3d">awtk.TTimerInfo</a>, <a class="el" href="classawtk_1_1_t_object_default.html#a540eeea212bef35e9e565a08cb75c9b2">awtk.TObjectDefault</a>, <a class="el" href="classawtk_1_1_t_object_array.html#aff10e70b85effef310cceb64edc006f1">awtk.TObjectArray</a>, <a class="el" href="classawtk_1_1_t_native_window.html#a738923f6f493dd55695092f6f3317947">awtk.TNativeWindow</a> , 以及 <a class="el" href="classawtk_1_1_t_idle_info.html#a15abd94e89d5c5ae6bd9728649310044">awtk.TIdleInfo</a> 重载.</p>
+<p>被 <a class="el" href="classawtk_1_1_t_idle_info.html#a15abd94e89d5c5ae6bd9728649310044">awtk.TIdleInfo</a>, <a class="el" href="classawtk_1_1_t_native_window.html#a738923f6f493dd55695092f6f3317947">awtk.TNativeWindow</a>, <a class="el" href="classawtk_1_1_t_object_array.html#aff10e70b85effef310cceb64edc006f1">awtk.TObjectArray</a>, <a class="el" href="classawtk_1_1_t_object_default.html#a540eeea212bef35e9e565a08cb75c9b2">awtk.TObjectDefault</a> , 以及 <a class="el" href="classawtk_1_1_t_timer_info.html#abf4ef80c28924deb3d761f9de5138e3d">awtk.TTimerInfo</a> 重载.</p>
 
 </div>
 </div>
-<a id="ad0b41aa66511fcf8b19006e484034506"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0b41aa66511fcf8b19006e484034506">&#9670;&nbsp;</a></span>compare()</h2>
+<a id="ad0b41aa66511fcf8b19006e484034506" name="ad0b41aa66511fcf8b19006e484034506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0b41aa66511fcf8b19006e484034506">&#9670;&#160;</a></span>compare()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -433,8 +439,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TObject.compare </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_object.html">TObject</a>&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_object.html">TObject</a></td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -455,8 +460,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a018aeba3eefe2f97c5b83287524b5eb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a018aeba3eefe2f97c5b83287524b5eb4">&#9670;&nbsp;</a></span>copyProp()</h2>
+<a id="a018aeba3eefe2f97c5b83287524b5eb4" name="a018aeba3eefe2f97c5b83287524b5eb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a018aeba3eefe2f97c5b83287524b5eb4">&#9670;&#160;</a></span>copyProp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -467,19 +472,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.copyProp </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_object.html">TObject</a>&#160;</td>
-          <td class="paramname"><em>src</em>, </td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_object.html">TObject</a></td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -500,8 +498,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="af6b23e38c494f0efcbffb75b6811ec93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6b23e38c494f0efcbffb75b6811ec93">&#9670;&nbsp;</a></span>copyProps()</h2>
+<a id="af6b23e38c494f0efcbffb75b6811ec93" name="af6b23e38c494f0efcbffb75b6811ec93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6b23e38c494f0efcbffb75b6811ec93">&#9670;&#160;</a></span>copyProps()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -512,19 +510,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.copyProps </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_object.html">TObject</a>&#160;</td>
-          <td class="paramname"><em>src</em>, </td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_object.html">TObject</a></td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>overwrite</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>overwrite</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -545,8 +536,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a6f8f65ee50225e5420aa14a1d6282021"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f8f65ee50225e5420aa14a1d6282021">&#9670;&nbsp;</a></span>eval()</h2>
+<a id="a6f8f65ee50225e5420aa14a1d6282021" name="a6f8f65ee50225e5420aa14a1d6282021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f8f65ee50225e5420aa14a1d6282021">&#9670;&#160;</a></span>eval()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -557,19 +548,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.eval </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>expr</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>expr</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_value.html">TValue</a></td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -590,8 +574,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="aa7cf12830497d90811f120c2509d8822"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7cf12830497d90811f120c2509d8822">&#9670;&nbsp;</a></span>execute()</h2>
+<a id="aa7cf12830497d90811f120c2509d8822" name="aa7cf12830497d90811f120c2509d8822"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7cf12830497d90811f120c2509d8822">&#9670;&#160;</a></span>execute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -602,19 +586,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.execute </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -635,8 +612,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a39295d72071bc1d180560e25fe642797"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39295d72071bc1d180560e25fe642797">&#9670;&nbsp;</a></span>executeByPath()</h2>
+<a id="a39295d72071bc1d180560e25fe642797" name="a39295d72071bc1d180560e25fe642797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39295d72071bc1d180560e25fe642797">&#9670;&#160;</a></span>executeByPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -647,19 +624,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.executeByPath </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -680,8 +650,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ad40b2c50b463f243610c2a7844d0d44f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad40b2c50b463f243610c2a7844d0d44f">&#9670;&nbsp;</a></span>getDesc()</h2>
+<a id="ad40b2c50b463f243610c2a7844d0d44f" name="ad40b2c50b463f243610c2a7844d0d44f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad40b2c50b463f243610c2a7844d0d44f">&#9670;&#160;</a></span>getDesc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -692,7 +662,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TObject.getDesc </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -707,8 +677,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a6ca3dbf7c9d3c1d853d6005d032d8c41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ca3dbf7c9d3c1d853d6005d032d8c41">&#9670;&nbsp;</a></span>getName()</h2>
+<a id="a6ca3dbf7c9d3c1d853d6005d032d8c41" name="a6ca3dbf7c9d3c1d853d6005d032d8c41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca3dbf7c9d3c1d853d6005d032d8c41">&#9670;&#160;</a></span>getName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -719,7 +689,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TObject.getName </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -733,8 +703,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ab876f11c305651d60aa4650fa65dabb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab876f11c305651d60aa4650fa65dabb9">&#9670;&nbsp;</a></span>getProp()</h2>
+<a id="ab876f11c305651d60aa4650fa65dabb9" name="ab876f11c305651d60aa4650fa65dabb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab876f11c305651d60aa4650fa65dabb9">&#9670;&#160;</a></span>getProp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -745,19 +715,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.getProp </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_value.html">TValue</a></td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -778,8 +741,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a7d9682a54b82a7884a07f03994df14bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d9682a54b82a7884a07f03994df14bb">&#9670;&nbsp;</a></span>getPropBool()</h2>
+<a id="a7d9682a54b82a7884a07f03994df14bb" name="a7d9682a54b82a7884a07f03994df14bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d9682a54b82a7884a07f03994df14bb">&#9670;&#160;</a></span>getPropBool()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -790,19 +753,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TObject.getPropBool </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -823,8 +779,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a5df44eb7dade57495b56285237ec36a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5df44eb7dade57495b56285237ec36a5">&#9670;&nbsp;</a></span>getPropBoolByPath()</h2>
+<a id="a5df44eb7dade57495b56285237ec36a5" name="a5df44eb7dade57495b56285237ec36a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5df44eb7dade57495b56285237ec36a5">&#9670;&#160;</a></span>getPropBoolByPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -835,19 +791,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TObject.getPropBoolByPath </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -868,8 +817,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="abe77c512ba674e42bd9c9a5836b5d5d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe77c512ba674e42bd9c9a5836b5d5d5">&#9670;&nbsp;</a></span>getPropDouble()</h2>
+<a id="abe77c512ba674e42bd9c9a5836b5d5d5" name="abe77c512ba674e42bd9c9a5836b5d5d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe77c512ba674e42bd9c9a5836b5d5d5">&#9670;&#160;</a></span>getPropDouble()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -880,19 +829,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">double awtk.TObject.getPropDouble </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -913,8 +855,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a55f1e963e671a463c6714ad4c6cb2531"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55f1e963e671a463c6714ad4c6cb2531">&#9670;&nbsp;</a></span>getPropFloat()</h2>
+<a id="a55f1e963e671a463c6714ad4c6cb2531" name="a55f1e963e671a463c6714ad4c6cb2531"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55f1e963e671a463c6714ad4c6cb2531">&#9670;&#160;</a></span>getPropFloat()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -925,19 +867,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">double awtk.TObject.getPropFloat </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -958,8 +893,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a91206bd9bce056ee3aae08f00cd14f5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91206bd9bce056ee3aae08f00cd14f5b">&#9670;&nbsp;</a></span>getPropFloatByPath()</h2>
+<a id="a91206bd9bce056ee3aae08f00cd14f5b" name="a91206bd9bce056ee3aae08f00cd14f5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91206bd9bce056ee3aae08f00cd14f5b">&#9670;&#160;</a></span>getPropFloatByPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -970,19 +905,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">double awtk.TObject.getPropFloatByPath </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1004,8 +932,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a7186047d3ec4fbdf685fcc120b3d17d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7186047d3ec4fbdf685fcc120b3d17d7">&#9670;&nbsp;</a></span>getPropInt()</h2>
+<a id="a7186047d3ec4fbdf685fcc120b3d17d7" name="a7186047d3ec4fbdf685fcc120b3d17d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7186047d3ec4fbdf685fcc120b3d17d7">&#9670;&#160;</a></span>getPropInt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1016,19 +944,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TObject.getPropInt </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1049,8 +970,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a76d04100cdddb200c77f31d01309b2c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76d04100cdddb200c77f31d01309b2c7">&#9670;&nbsp;</a></span>getPropInt16()</h2>
+<a id="a76d04100cdddb200c77f31d01309b2c7" name="a76d04100cdddb200c77f31d01309b2c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76d04100cdddb200c77f31d01309b2c7">&#9670;&#160;</a></span>getPropInt16()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1061,19 +982,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TObject.getPropInt16 </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1094,8 +1008,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a92e82b3139b9f878ddaf7375a8c3076d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92e82b3139b9f878ddaf7375a8c3076d">&#9670;&nbsp;</a></span>getPropInt32()</h2>
+<a id="a92e82b3139b9f878ddaf7375a8c3076d" name="a92e82b3139b9f878ddaf7375a8c3076d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92e82b3139b9f878ddaf7375a8c3076d">&#9670;&#160;</a></span>getPropInt32()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1106,19 +1020,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TObject.getPropInt32 </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1139,8 +1046,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="aa4dd40573537848876a494d1a2752164"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4dd40573537848876a494d1a2752164">&#9670;&nbsp;</a></span>getPropInt64()</h2>
+<a id="aa4dd40573537848876a494d1a2752164" name="aa4dd40573537848876a494d1a2752164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4dd40573537848876a494d1a2752164">&#9670;&#160;</a></span>getPropInt64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1151,19 +1058,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">long awtk.TObject.getPropInt64 </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1184,8 +1084,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a15f32d1ff534bb4f71bc12c71ed79386"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15f32d1ff534bb4f71bc12c71ed79386">&#9670;&nbsp;</a></span>getPropInt8()</h2>
+<a id="a15f32d1ff534bb4f71bc12c71ed79386" name="a15f32d1ff534bb4f71bc12c71ed79386"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15f32d1ff534bb4f71bc12c71ed79386">&#9670;&#160;</a></span>getPropInt8()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1196,19 +1096,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TObject.getPropInt8 </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1229,8 +1122,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="adf526e6045968e8717769a5d079c40b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf526e6045968e8717769a5d079c40b1">&#9670;&nbsp;</a></span>getPropIntByPath()</h2>
+<a id="adf526e6045968e8717769a5d079c40b1" name="adf526e6045968e8717769a5d079c40b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf526e6045968e8717769a5d079c40b1">&#9670;&#160;</a></span>getPropIntByPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1241,19 +1134,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TObject.getPropIntByPath </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1274,8 +1160,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a707e4fccc9baf9c74efc133fb71bd3a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a707e4fccc9baf9c74efc133fb71bd3a4">&#9670;&nbsp;</a></span>getPropObject()</h2>
+<a id="a707e4fccc9baf9c74efc133fb71bd3a4" name="a707e4fccc9baf9c74efc133fb71bd3a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a707e4fccc9baf9c74efc133fb71bd3a4">&#9670;&#160;</a></span>getPropObject()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1286,8 +1172,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_object.html">TObject</a> awtk.TObject.getPropObject </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1308,8 +1193,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a751717f69f0fc22c1f3a11f3e5c63c70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a751717f69f0fc22c1f3a11f3e5c63c70">&#9670;&nbsp;</a></span>getPropObjectByPath()</h2>
+<a id="a751717f69f0fc22c1f3a11f3e5c63c70" name="a751717f69f0fc22c1f3a11f3e5c63c70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a751717f69f0fc22c1f3a11f3e5c63c70">&#9670;&#160;</a></span>getPropObjectByPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1320,8 +1205,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_object.html">TObject</a> awtk.TObject.getPropObjectByPath </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1342,8 +1226,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a37f51b0cbe863fd20f7623d836aa393c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37f51b0cbe863fd20f7623d836aa393c">&#9670;&nbsp;</a></span>getPropPointer()</h2>
+<a id="a37f51b0cbe863fd20f7623d836aa393c" name="a37f51b0cbe863fd20f7623d836aa393c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37f51b0cbe863fd20f7623d836aa393c">&#9670;&#160;</a></span>getPropPointer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1354,8 +1238,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">long awtk.TObject.getPropPointer </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1376,8 +1259,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="af805870236ff911110253529b52e060d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af805870236ff911110253529b52e060d">&#9670;&nbsp;</a></span>getPropPointerByPath()</h2>
+<a id="af805870236ff911110253529b52e060d" name="af805870236ff911110253529b52e060d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af805870236ff911110253529b52e060d">&#9670;&#160;</a></span>getPropPointerByPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1388,8 +1271,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">long awtk.TObject.getPropPointerByPath </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1410,8 +1292,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ad882ebaa35bccfc7fab8c8403266ee66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad882ebaa35bccfc7fab8c8403266ee66">&#9670;&nbsp;</a></span>getPropStr()</h2>
+<a id="ad882ebaa35bccfc7fab8c8403266ee66" name="ad882ebaa35bccfc7fab8c8403266ee66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad882ebaa35bccfc7fab8c8403266ee66">&#9670;&#160;</a></span>getPropStr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1422,8 +1304,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TObject.getPropStr </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1444,8 +1325,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a13543148a2e527a83263cf6a3c76a8f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13543148a2e527a83263cf6a3c76a8f6">&#9670;&nbsp;</a></span>getPropStrByPath()</h2>
+<a id="a13543148a2e527a83263cf6a3c76a8f6" name="a13543148a2e527a83263cf6a3c76a8f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13543148a2e527a83263cf6a3c76a8f6">&#9670;&#160;</a></span>getPropStrByPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1456,8 +1337,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TObject.getPropStrByPath </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1478,8 +1358,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a7fa882ae14c70fd79ba78fb3d9d31d47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fa882ae14c70fd79ba78fb3d9d31d47">&#9670;&nbsp;</a></span>getPropUint16()</h2>
+<a id="a7fa882ae14c70fd79ba78fb3d9d31d47" name="a7fa882ae14c70fd79ba78fb3d9d31d47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fa882ae14c70fd79ba78fb3d9d31d47">&#9670;&#160;</a></span>getPropUint16()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1490,19 +1370,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TObject.getPropUint16 </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1523,8 +1396,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="af8a11f72c882c22e6b26ec1a1d3397eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8a11f72c882c22e6b26ec1a1d3397eb">&#9670;&nbsp;</a></span>getPropUint32()</h2>
+<a id="af8a11f72c882c22e6b26ec1a1d3397eb" name="af8a11f72c882c22e6b26ec1a1d3397eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8a11f72c882c22e6b26ec1a1d3397eb">&#9670;&#160;</a></span>getPropUint32()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1535,19 +1408,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TObject.getPropUint32 </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1568,8 +1434,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a12342269f55db44c04fb5054db700d0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12342269f55db44c04fb5054db700d0a">&#9670;&nbsp;</a></span>getPropUint64()</h2>
+<a id="a12342269f55db44c04fb5054db700d0a" name="a12342269f55db44c04fb5054db700d0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12342269f55db44c04fb5054db700d0a">&#9670;&#160;</a></span>getPropUint64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1580,19 +1446,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">long awtk.TObject.getPropUint64 </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1613,8 +1472,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a2d0df69e1f70e0201667eb1a8e996848"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d0df69e1f70e0201667eb1a8e996848">&#9670;&nbsp;</a></span>getPropUint8()</h2>
+<a id="a2d0df69e1f70e0201667eb1a8e996848" name="a2d0df69e1f70e0201667eb1a8e996848"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d0df69e1f70e0201667eb1a8e996848">&#9670;&#160;</a></span>getPropUint8()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1625,19 +1484,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TObject.getPropUint8 </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1658,8 +1510,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="adc23c7895bb580b17887fdc0794ba823"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc23c7895bb580b17887fdc0794ba823">&#9670;&nbsp;</a></span>getRefCount()</h2>
+<a id="adc23c7895bb580b17887fdc0794ba823" name="adc23c7895bb580b17887fdc0794ba823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc23c7895bb580b17887fdc0794ba823">&#9670;&#160;</a></span>getRefCount()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1670,7 +1522,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TObject.getRefCount </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1684,8 +1536,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a4dd26befed6010ce0c19624144488512"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4dd26befed6010ce0c19624144488512">&#9670;&nbsp;</a></span>getSize()</h2>
+<a id="a4dd26befed6010ce0c19624144488512" name="a4dd26befed6010ce0c19624144488512"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dd26befed6010ce0c19624144488512">&#9670;&#160;</a></span>getSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1696,7 +1548,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TObject.getSize </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1713,8 +1565,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ae5e3aec2ad3500dba6ee04b5d9c6c057"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5e3aec2ad3500dba6ee04b5d9c6c057">&#9670;&nbsp;</a></span>getType()</h2>
+<a id="ae5e3aec2ad3500dba6ee04b5d9c6c057" name="ae5e3aec2ad3500dba6ee04b5d9c6c057"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5e3aec2ad3500dba6ee04b5d9c6c057">&#9670;&#160;</a></span>getType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1725,7 +1577,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TObject.getType </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1740,8 +1592,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="acd296ebc1efda1d0aea7a1a705ac6454"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd296ebc1efda1d0aea7a1a705ac6454">&#9670;&nbsp;</a></span>hasProp()</h2>
+<a id="acd296ebc1efda1d0aea7a1a705ac6454" name="acd296ebc1efda1d0aea7a1a705ac6454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd296ebc1efda1d0aea7a1a705ac6454">&#9670;&#160;</a></span>hasProp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1752,8 +1604,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TObject.hasProp </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1774,8 +1625,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="af7fd68115059e5220f48e6a4880678c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7fd68115059e5220f48e6a4880678c8">&#9670;&nbsp;</a></span>hasPropByPath()</h2>
+<a id="af7fd68115059e5220f48e6a4880678c8" name="af7fd68115059e5220f48e6a4880678c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7fd68115059e5220f48e6a4880678c8">&#9670;&#160;</a></span>hasPropByPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1786,8 +1637,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TObject.hasPropByPath </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1808,8 +1658,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ad20f2fb95684a2fa64f471ba949eb95e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad20f2fb95684a2fa64f471ba949eb95e">&#9670;&nbsp;</a></span>isCollection()</h2>
+<a id="ad20f2fb95684a2fa64f471ba949eb95e" name="ad20f2fb95684a2fa64f471ba949eb95e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad20f2fb95684a2fa64f471ba949eb95e">&#9670;&#160;</a></span>isCollection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1820,7 +1670,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TObject.isCollection </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1835,8 +1685,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="afc1fc6d31fa551f0c85f87e07478ce0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc1fc6d31fa551f0c85f87e07478ce0f">&#9670;&nbsp;</a></span>notifyChanged()</h2>
+<a id="afc1fc6d31fa551f0c85f87e07478ce0f" name="afc1fc6d31fa551f0c85f87e07478ce0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc1fc6d31fa551f0c85f87e07478ce0f">&#9670;&#160;</a></span>notifyChanged()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1847,7 +1697,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.notifyChanged </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1862,8 +1712,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a061dbbad49785d66c518927ebbb57f03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a061dbbad49785d66c518927ebbb57f03">&#9670;&nbsp;</a></span>ref()</h2>
+<a id="a061dbbad49785d66c518927ebbb57f03" name="a061dbbad49785d66c518927ebbb57f03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a061dbbad49785d66c518927ebbb57f03">&#9670;&#160;</a></span>ref()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1874,8 +1724,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_object.html">TObject</a> awtk.TObject.ref </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_object.html">TObject</a>&#160;</td>
-          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_object.html">TObject</a></td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1896,8 +1745,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="accb710cc8e5be738420a208d8c1f37b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#accb710cc8e5be738420a208d8c1f37b9">&#9670;&nbsp;</a></span>removeProp()</h2>
+<a id="accb710cc8e5be738420a208d8c1f37b9" name="accb710cc8e5be738420a208d8c1f37b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accb710cc8e5be738420a208d8c1f37b9">&#9670;&#160;</a></span>removeProp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1908,8 +1757,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.removeProp </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1930,8 +1778,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a5cb394693a52238fd1546d56be531ee1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cb394693a52238fd1546d56be531ee1">&#9670;&nbsp;</a></span>setName()</h2>
+<a id="a5cb394693a52238fd1546d56be531ee1" name="a5cb394693a52238fd1546d56be531ee1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cb394693a52238fd1546d56be531ee1">&#9670;&#160;</a></span>setName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1942,8 +1790,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setName </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1964,8 +1811,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a05b66c051e3fa4223edfc753f556fc98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05b66c051e3fa4223edfc753f556fc98">&#9670;&nbsp;</a></span>setProp()</h2>
+<a id="a05b66c051e3fa4223edfc753f556fc98" name="a05b66c051e3fa4223edfc753f556fc98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05b66c051e3fa4223edfc753f556fc98">&#9670;&#160;</a></span>setProp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1976,19 +1823,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setProp </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_value.html">TValue</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2009,8 +1849,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a24896cb00f8d1485275823d014e8a9d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24896cb00f8d1485275823d014e8a9d9">&#9670;&nbsp;</a></span>setPropBool()</h2>
+<a id="a24896cb00f8d1485275823d014e8a9d9" name="a24896cb00f8d1485275823d014e8a9d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24896cb00f8d1485275823d014e8a9d9">&#9670;&#160;</a></span>setPropBool()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2021,19 +1861,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropBool </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2054,8 +1887,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a54857c653e0eb1a7c94b5bb19a84d1ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54857c653e0eb1a7c94b5bb19a84d1ca">&#9670;&nbsp;</a></span>setPropBoolByPath()</h2>
+<a id="a54857c653e0eb1a7c94b5bb19a84d1ca" name="a54857c653e0eb1a7c94b5bb19a84d1ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54857c653e0eb1a7c94b5bb19a84d1ca">&#9670;&#160;</a></span>setPropBoolByPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2066,19 +1899,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropBoolByPath </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2099,8 +1925,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a1c0ed159a04225f39e5ddfcaa0a8bcf2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c0ed159a04225f39e5ddfcaa0a8bcf2">&#9670;&nbsp;</a></span>setPropByPath()</h2>
+<a id="a1c0ed159a04225f39e5ddfcaa0a8bcf2" name="a1c0ed159a04225f39e5ddfcaa0a8bcf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c0ed159a04225f39e5ddfcaa0a8bcf2">&#9670;&#160;</a></span>setPropByPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2111,19 +1937,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropByPath </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_value.html">TValue</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2144,8 +1963,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ac9e46e441b9c1300f7dba50295d7b829"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9e46e441b9c1300f7dba50295d7b829">&#9670;&nbsp;</a></span>setPropDouble()</h2>
+<a id="ac9e46e441b9c1300f7dba50295d7b829" name="ac9e46e441b9c1300f7dba50295d7b829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9e46e441b9c1300f7dba50295d7b829">&#9670;&#160;</a></span>setPropDouble()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2156,19 +1975,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropDouble </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2189,8 +2001,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a26b8eb8c49b2a8f24e1c0c825854f585"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26b8eb8c49b2a8f24e1c0c825854f585">&#9670;&nbsp;</a></span>setPropFloat()</h2>
+<a id="a26b8eb8c49b2a8f24e1c0c825854f585" name="a26b8eb8c49b2a8f24e1c0c825854f585"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26b8eb8c49b2a8f24e1c0c825854f585">&#9670;&#160;</a></span>setPropFloat()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2201,19 +2013,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropFloat </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2234,8 +2039,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a34e9a53157ddd0ff30a31ba529af8c54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34e9a53157ddd0ff30a31ba529af8c54">&#9670;&nbsp;</a></span>setPropFloatByPath()</h2>
+<a id="a34e9a53157ddd0ff30a31ba529af8c54" name="a34e9a53157ddd0ff30a31ba529af8c54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34e9a53157ddd0ff30a31ba529af8c54">&#9670;&#160;</a></span>setPropFloatByPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2246,19 +2051,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropFloatByPath </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2279,8 +2077,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a21e5e872495c4a7a45e4e4f69ddb7cac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21e5e872495c4a7a45e4e4f69ddb7cac">&#9670;&nbsp;</a></span>setPropInt()</h2>
+<a id="a21e5e872495c4a7a45e4e4f69ddb7cac" name="a21e5e872495c4a7a45e4e4f69ddb7cac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21e5e872495c4a7a45e4e4f69ddb7cac">&#9670;&#160;</a></span>setPropInt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2291,19 +2089,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropInt </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2324,8 +2115,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a5997a25e5a80e97b7584d077e665dfda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5997a25e5a80e97b7584d077e665dfda">&#9670;&nbsp;</a></span>setPropInt16()</h2>
+<a id="a5997a25e5a80e97b7584d077e665dfda" name="a5997a25e5a80e97b7584d077e665dfda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5997a25e5a80e97b7584d077e665dfda">&#9670;&#160;</a></span>setPropInt16()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2336,19 +2127,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropInt16 </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2369,8 +2153,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ad5c214094c7574eab8f563821ff2cef3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5c214094c7574eab8f563821ff2cef3">&#9670;&nbsp;</a></span>setPropInt32()</h2>
+<a id="ad5c214094c7574eab8f563821ff2cef3" name="ad5c214094c7574eab8f563821ff2cef3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5c214094c7574eab8f563821ff2cef3">&#9670;&#160;</a></span>setPropInt32()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2381,19 +2165,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropInt32 </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2414,8 +2191,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a36cab09059cd84406b37ba84f46baaba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36cab09059cd84406b37ba84f46baaba">&#9670;&nbsp;</a></span>setPropInt64()</h2>
+<a id="a36cab09059cd84406b37ba84f46baaba" name="a36cab09059cd84406b37ba84f46baaba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36cab09059cd84406b37ba84f46baaba">&#9670;&#160;</a></span>setPropInt64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2426,19 +2203,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropInt64 </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2459,8 +2229,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a20618ff3baddb2886ab05b83ddb670bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20618ff3baddb2886ab05b83ddb670bc">&#9670;&nbsp;</a></span>setPropInt8()</h2>
+<a id="a20618ff3baddb2886ab05b83ddb670bc" name="a20618ff3baddb2886ab05b83ddb670bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20618ff3baddb2886ab05b83ddb670bc">&#9670;&#160;</a></span>setPropInt8()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2471,19 +2241,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropInt8 </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2504,8 +2267,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a1c2cbe5890241f8a192f797f16d049cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c2cbe5890241f8a192f797f16d049cf">&#9670;&nbsp;</a></span>setPropIntByPath()</h2>
+<a id="a1c2cbe5890241f8a192f797f16d049cf" name="a1c2cbe5890241f8a192f797f16d049cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c2cbe5890241f8a192f797f16d049cf">&#9670;&#160;</a></span>setPropIntByPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2516,19 +2279,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropIntByPath </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2549,8 +2305,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a87d5c144596bf3fc99af5099ab47b191"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87d5c144596bf3fc99af5099ab47b191">&#9670;&nbsp;</a></span>setPropObject()</h2>
+<a id="a87d5c144596bf3fc99af5099ab47b191" name="a87d5c144596bf3fc99af5099ab47b191"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87d5c144596bf3fc99af5099ab47b191">&#9670;&#160;</a></span>setPropObject()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2561,19 +2317,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropObject </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_object.html">TObject</a>&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_object.html">TObject</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2594,8 +2343,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ab84e0835228cd76dce4ec49529b8b61a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab84e0835228cd76dce4ec49529b8b61a">&#9670;&nbsp;</a></span>setPropObjectByPath()</h2>
+<a id="ab84e0835228cd76dce4ec49529b8b61a" name="ab84e0835228cd76dce4ec49529b8b61a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab84e0835228cd76dce4ec49529b8b61a">&#9670;&#160;</a></span>setPropObjectByPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2606,19 +2355,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropObjectByPath </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_object.html">TObject</a>&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_object.html">TObject</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2639,8 +2381,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ad7fdb692187da5cc4d28cc892fe69d0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7fdb692187da5cc4d28cc892fe69d0d">&#9670;&nbsp;</a></span>setPropStr()</h2>
+<a id="ad7fdb692187da5cc4d28cc892fe69d0d" name="ad7fdb692187da5cc4d28cc892fe69d0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7fdb692187da5cc4d28cc892fe69d0d">&#9670;&#160;</a></span>setPropStr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2651,19 +2393,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropStr </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2684,8 +2419,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a3bf5ae3df9d004d6903846bc5d974f5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bf5ae3df9d004d6903846bc5d974f5c">&#9670;&nbsp;</a></span>setPropStrByPath()</h2>
+<a id="a3bf5ae3df9d004d6903846bc5d974f5c" name="a3bf5ae3df9d004d6903846bc5d974f5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bf5ae3df9d004d6903846bc5d974f5c">&#9670;&#160;</a></span>setPropStrByPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2696,19 +2431,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropStrByPath </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2729,8 +2457,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ab48bd1894d041370f9e1a14bf8c2cbad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab48bd1894d041370f9e1a14bf8c2cbad">&#9670;&nbsp;</a></span>setPropUint16()</h2>
+<a id="ab48bd1894d041370f9e1a14bf8c2cbad" name="ab48bd1894d041370f9e1a14bf8c2cbad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab48bd1894d041370f9e1a14bf8c2cbad">&#9670;&#160;</a></span>setPropUint16()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2741,19 +2469,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropUint16 </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2774,8 +2495,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ae52b709fee91e76960ec6b3afed4e4b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae52b709fee91e76960ec6b3afed4e4b0">&#9670;&nbsp;</a></span>setPropUint32()</h2>
+<a id="ae52b709fee91e76960ec6b3afed4e4b0" name="ae52b709fee91e76960ec6b3afed4e4b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae52b709fee91e76960ec6b3afed4e4b0">&#9670;&#160;</a></span>setPropUint32()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2786,19 +2507,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropUint32 </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2819,8 +2533,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="abc1bb0784e844347d6ba64dbf98ee57c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc1bb0784e844347d6ba64dbf98ee57c">&#9670;&nbsp;</a></span>setPropUint64()</h2>
+<a id="abc1bb0784e844347d6ba64dbf98ee57c" name="abc1bb0784e844347d6ba64dbf98ee57c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc1bb0784e844347d6ba64dbf98ee57c">&#9670;&#160;</a></span>setPropUint64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2831,19 +2545,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropUint64 </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2864,8 +2571,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ac390b28db0b190f634eca3b13d8dda81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac390b28db0b190f634eca3b13d8dda81">&#9670;&nbsp;</a></span>setPropUint8()</h2>
+<a id="ac390b28db0b190f634eca3b13d8dda81" name="ac390b28db0b190f634eca3b13d8dda81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac390b28db0b190f634eca3b13d8dda81">&#9670;&#160;</a></span>setPropUint8()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2876,19 +2583,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.setPropUint8 </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2909,8 +2609,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a6e0b9a5f2a4e1d0a1723bbc6d03d2738"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e0b9a5f2a4e1d0a1723bbc6d03d2738">&#9670;&nbsp;</a></span>unref()</h2>
+<a id="a6e0b9a5f2a4e1d0a1723bbc6d03d2738" name="a6e0b9a5f2a4e1d0a1723bbc6d03d2738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e0b9a5f2a4e1d0a1723bbc6d03d2738">&#9670;&#160;</a></span>unref()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2921,7 +2621,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.unref </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2934,17 +2634,18 @@ Public 成员函数</h2></td></tr>
 <p>引用计数减1。引用计数为0时，销毁对象。</p>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
-<p>被 <a class="el" href="classawtk_1_1_t_object_default.html#a6bdb8bac002491058e44b3f21ed770cb">awtk.TObjectDefault</a> , 以及 <a class="el" href="classawtk_1_1_t_object_array.html#a815658ad50a0fd3ac27cdc496c7618ea">awtk.TObjectArray</a> 重载.</p>
+<p>被 <a class="el" href="classawtk_1_1_t_object_array.html#a815658ad50a0fd3ac27cdc496c7618ea">awtk.TObjectArray</a> , 以及 <a class="el" href="classawtk_1_1_t_object_default.html#a6bdb8bac002491058e44b3f21ed770cb">awtk.TObjectDefault</a> 重载.</p>
 
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>output/TObject.java</li>
+<li>output/<b>TObject.java</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TLocaleInfos类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-JAVA
    </div>
    <div id="projectbrief">AWTK JAVA API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,9 +70,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,35 +87,35 @@ $(function() {
 <li class="navelem"><b>awtk</b></li><li class="navelem"><a class="el" href="classawtk_1_1_t_locale_infos.html">TLocaleInfos</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="classawtk_1_1_t_locale_infos-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">awtk.TLocaleInfos类 参考</div>  </div>
+  <div class="headertitle"><div class="title">awtk.TLocaleInfos类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:ac9328637f55bad763059bc6e9c401784"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_locale_info.html">TLocaleInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_locale_infos.html#ac9328637f55bad763059bc6e9c401784">ref</a> (String name)</td></tr>
+<tr class="memitem:ac9328637f55bad763059bc6e9c401784" id="r_ac9328637f55bad763059bc6e9c401784"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_locale_info.html">TLocaleInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9328637f55bad763059bc6e9c401784">ref</a> (String name)</td></tr>
 <tr class="separator:ac9328637f55bad763059bc6e9c401784"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08159d95c729689a0253ffe0202a88d1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_locale_infos.html#a08159d95c729689a0253ffe0202a88d1">unref</a> (<a class="el" href="classawtk_1_1_t_locale_info.html">TLocaleInfo</a> locale_info)</td></tr>
+<tr class="memitem:a08159d95c729689a0253ffe0202a88d1" id="r_a08159d95c729689a0253ffe0202a88d1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08159d95c729689a0253ffe0202a88d1">unref</a> (<a class="el" href="classawtk_1_1_t_locale_info.html">TLocaleInfo</a> locale_info)</td></tr>
 <tr class="separator:a08159d95c729689a0253ffe0202a88d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40fe5d538c8e541c236ba6959f3fa866"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_locale_infos.html#a40fe5d538c8e541c236ba6959f3fa866">change</a> (String language, String country)</td></tr>
+<tr class="memitem:a40fe5d538c8e541c236ba6959f3fa866" id="r_a40fe5d538c8e541c236ba6959f3fa866"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40fe5d538c8e541c236ba6959f3fa866">change</a> (String language, String country)</td></tr>
 <tr class="separator:a40fe5d538c8e541c236ba6959f3fa866"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1c04052765df21c3b3082529fe636b5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_locale_infos.html#ae1c04052765df21c3b3082529fe636b5">on</a> (<a class="el" href="enumawtk_1_1_t_event_type.html">TEventType</a> type, TOnEvent on_event, long ctx)</td></tr>
+<tr class="memitem:ae1c04052765df21c3b3082529fe636b5" id="r_ae1c04052765df21c3b3082529fe636b5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1c04052765df21c3b3082529fe636b5">on</a> (<a class="el" href="enumawtk_1_1_t_event_type.html">TEventType</a> type, TOnEvent on_event, long ctx)</td></tr>
 <tr class="separator:ae1c04052765df21c3b3082529fe636b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9569d86688e4087bd640b8c802e688ab"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_locale_infos.html#a9569d86688e4087bd640b8c802e688ab">off</a> (int id)</td></tr>
+<tr class="memitem:a9569d86688e4087bd640b8c802e688ab" id="r_a9569d86688e4087bd640b8c802e688ab"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9569d86688e4087bd640b8c802e688ab">off</a> (int id)</td></tr>
 <tr class="separator:a9569d86688e4087bd640b8c802e688ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19d5613ad979bc67f2716ede5feb13ea"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_locale_infos.html#a19d5613ad979bc67f2716ede5feb13ea">reloadAll</a> ()</td></tr>
+<tr class="memitem:a19d5613ad979bc67f2716ede5feb13ea" id="r_a19d5613ad979bc67f2716ede5feb13ea"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19d5613ad979bc67f2716ede5feb13ea">reloadAll</a> ()</td></tr>
 <tr class="separator:a19d5613ad979bc67f2716ede5feb13ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>在某些情况下，需要多个资源管理器。比如在手表系统里，每个应用或表盘，可能放在独立的资源包中， 此时优先加载应用自己的资源，如果没有就加载系统的资源。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a40fe5d538c8e541c236ba6959f3fa866"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40fe5d538c8e541c236ba6959f3fa866">&#9670;&nbsp;</a></span>change()</h2>
+<a id="a40fe5d538c8e541c236ba6959f3fa866" name="a40fe5d538c8e541c236ba6959f3fa866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40fe5d538c8e541c236ba6959f3fa866">&#9670;&#160;</a></span>change()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -104,19 +126,12 @@ $(function() {
         <tr>
           <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TLocaleInfos.change </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>language</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>language</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>country</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>country</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -137,8 +152,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a9569d86688e4087bd640b8c802e688ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9569d86688e4087bd640b8c802e688ab">&#9670;&nbsp;</a></span>off()</h2>
+<a id="a9569d86688e4087bd640b8c802e688ab" name="a9569d86688e4087bd640b8c802e688ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9569d86688e4087bd640b8c802e688ab">&#9670;&#160;</a></span>off()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -149,8 +164,7 @@ $(function() {
         <tr>
           <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TLocaleInfos.off </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -171,8 +185,8 @@ $(function() {
 
 </div>
 </div>
-<a id="ae1c04052765df21c3b3082529fe636b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1c04052765df21c3b3082529fe636b5">&#9670;&nbsp;</a></span>on()</h2>
+<a id="ae1c04052765df21c3b3082529fe636b5" name="ae1c04052765df21c3b3082529fe636b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1c04052765df21c3b3082529fe636b5">&#9670;&#160;</a></span>on()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -183,25 +197,17 @@ $(function() {
         <tr>
           <td class="memname">static int awtk.TLocaleInfos.on </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="enumawtk_1_1_t_event_type.html">TEventType</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
+          <td class="paramtype"><a class="el" href="enumawtk_1_1_t_event_type.html">TEventType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">TOnEvent&#160;</td>
-          <td class="paramname"><em>on_event</em>, </td>
+          <td class="paramtype">TOnEvent</td>          <td class="paramname"><span class="paramname"><em>on_event</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>ctx</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -223,8 +229,8 @@ $(function() {
 
 </div>
 </div>
-<a id="ac9328637f55bad763059bc6e9c401784"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9328637f55bad763059bc6e9c401784">&#9670;&nbsp;</a></span>ref()</h2>
+<a id="ac9328637f55bad763059bc6e9c401784" name="ac9328637f55bad763059bc6e9c401784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9328637f55bad763059bc6e9c401784">&#9670;&#160;</a></span>ref()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -235,8 +241,7 @@ $(function() {
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_locale_info.html">TLocaleInfo</a> awtk.TLocaleInfos.ref </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -257,8 +262,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a19d5613ad979bc67f2716ede5feb13ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19d5613ad979bc67f2716ede5feb13ea">&#9670;&nbsp;</a></span>reloadAll()</h2>
+<a id="a19d5613ad979bc67f2716ede5feb13ea" name="a19d5613ad979bc67f2716ede5feb13ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19d5613ad979bc67f2716ede5feb13ea">&#9670;&#160;</a></span>reloadAll()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -269,7 +274,7 @@ $(function() {
         <tr>
           <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TLocaleInfos.reloadAll </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -284,8 +289,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a08159d95c729689a0253ffe0202a88d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08159d95c729689a0253ffe0202a88d1">&#9670;&nbsp;</a></span>unref()</h2>
+<a id="a08159d95c729689a0253ffe0202a88d1" name="a08159d95c729689a0253ffe0202a88d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08159d95c729689a0253ffe0202a88d1">&#9670;&#160;</a></span>unref()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -296,8 +301,7 @@ $(function() {
         <tr>
           <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TLocaleInfos.unref </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_locale_info.html">TLocaleInfo</a>&#160;</td>
-          <td class="paramname"><em>locale_info</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_locale_info.html">TLocaleInfo</a></td>          <td class="paramname"><span class="paramname"><em>locale_info</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -319,12 +323,13 @@ $(function() {
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>output/TLocaleInfos.java</li>
+<li>output/<b>TLocaleInfos.java</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

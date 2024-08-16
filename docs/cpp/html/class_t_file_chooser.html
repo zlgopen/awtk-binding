@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TFileChooser类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,19 +70,26 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="class_t_file_chooser-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">TFileChooser类 参考</div>  </div>
+  <div class="headertitle"><div class="title">TFileChooser类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -82,92 +104,92 @@ $(function() {
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:aff14981203d64f7b2210034f101eb5a0"><td class="memItemLeft" align="right" valign="top"><a id="aff14981203d64f7b2210034f101eb5a0"></a>
+<tr class="memitem:aff14981203d64f7b2210034f101eb5a0" id="r_aff14981203d64f7b2210034f101eb5a0"><td class="memItemLeft" align="right" valign="top"><a id="aff14981203d64f7b2210034f101eb5a0" name="aff14981203d64f7b2210034f101eb5a0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TFileChooser</b> (emitter_t *nativeObj)</td></tr>
 <tr class="separator:aff14981203d64f7b2210034f101eb5a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d89fd26d02f6ab54504b1d1b2b4f93c"><td class="memItemLeft" align="right" valign="top"><a id="a1d89fd26d02f6ab54504b1d1b2b4f93c"></a>
+<tr class="memitem:a1d89fd26d02f6ab54504b1d1b2b4f93c" id="r_a1d89fd26d02f6ab54504b1d1b2b4f93c"><td class="memItemLeft" align="right" valign="top"><a id="a1d89fd26d02f6ab54504b1d1b2b4f93c" name="a1d89fd26d02f6ab54504b1d1b2b4f93c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TFileChooser</b> (const file_chooser_t *nativeObj)</td></tr>
 <tr class="separator:a1d89fd26d02f6ab54504b1d1b2b4f93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8203a495ea5b5b359e2f7a422d15942"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_chooser.html#af8203a495ea5b5b359e2f7a422d15942">SetInitDir</a> (const char *init_dir)</td></tr>
+<tr class="memitem:af8203a495ea5b5b359e2f7a422d15942" id="r_af8203a495ea5b5b359e2f7a422d15942"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8203a495ea5b5b359e2f7a422d15942">SetInitDir</a> (const char *init_dir)</td></tr>
 <tr class="separator:af8203a495ea5b5b359e2f7a422d15942"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69de63c73ad3b1c31c44e51a81eeb7bd"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_chooser.html#a69de63c73ad3b1c31c44e51a81eeb7bd">SetTopDir</a> (const char *top_dir)</td></tr>
+<tr class="memitem:a69de63c73ad3b1c31c44e51a81eeb7bd" id="r_a69de63c73ad3b1c31c44e51a81eeb7bd"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69de63c73ad3b1c31c44e51a81eeb7bd">SetTopDir</a> (const char *top_dir)</td></tr>
 <tr class="separator:a69de63c73ad3b1c31c44e51a81eeb7bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a7dd23ea3f18cfe9f637799ee13787a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_chooser.html#a5a7dd23ea3f18cfe9f637799ee13787a">SetFilter</a> (const char *filter)</td></tr>
+<tr class="memitem:a5a7dd23ea3f18cfe9f637799ee13787a" id="r_a5a7dd23ea3f18cfe9f637799ee13787a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a7dd23ea3f18cfe9f637799ee13787a">SetFilter</a> (const char *filter)</td></tr>
 <tr class="separator:a5a7dd23ea3f18cfe9f637799ee13787a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52518346d1cfb468ead5649613e515a8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_chooser.html#a52518346d1cfb468ead5649613e515a8">ChooseFileForSave</a> ()</td></tr>
+<tr class="memitem:a52518346d1cfb468ead5649613e515a8" id="r_a52518346d1cfb468ead5649613e515a8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52518346d1cfb468ead5649613e515a8">ChooseFileForSave</a> ()</td></tr>
 <tr class="separator:a52518346d1cfb468ead5649613e515a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafc606b0b78e8e7b531abb0ffee35f16"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_chooser.html#aafc606b0b78e8e7b531abb0ffee35f16">ChooseFileForOpen</a> ()</td></tr>
+<tr class="memitem:aafc606b0b78e8e7b531abb0ffee35f16" id="r_aafc606b0b78e8e7b531abb0ffee35f16"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafc606b0b78e8e7b531abb0ffee35f16">ChooseFileForOpen</a> ()</td></tr>
 <tr class="separator:aafc606b0b78e8e7b531abb0ffee35f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace6f1a964e2bf1d1ce724603fda1994f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_chooser.html#ace6f1a964e2bf1d1ce724603fda1994f">ChooseFolder</a> ()</td></tr>
+<tr class="memitem:ace6f1a964e2bf1d1ce724603fda1994f" id="r_ace6f1a964e2bf1d1ce724603fda1994f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace6f1a964e2bf1d1ce724603fda1994f">ChooseFolder</a> ()</td></tr>
 <tr class="separator:ace6f1a964e2bf1d1ce724603fda1994f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7f4ba3b6350b61cabda74f3ea1beccd"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_chooser.html#ac7f4ba3b6350b61cabda74f3ea1beccd">GetDir</a> ()</td></tr>
+<tr class="memitem:ac7f4ba3b6350b61cabda74f3ea1beccd" id="r_ac7f4ba3b6350b61cabda74f3ea1beccd"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7f4ba3b6350b61cabda74f3ea1beccd">GetDir</a> ()</td></tr>
 <tr class="separator:ac7f4ba3b6350b61cabda74f3ea1beccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7c98f1db4eaf305730ba12997e268d7"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_chooser.html#ad7c98f1db4eaf305730ba12997e268d7">GetFilename</a> ()</td></tr>
+<tr class="memitem:ad7c98f1db4eaf305730ba12997e268d7" id="r_ad7c98f1db4eaf305730ba12997e268d7"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7c98f1db4eaf305730ba12997e268d7">GetFilename</a> ()</td></tr>
 <tr class="separator:ad7c98f1db4eaf305730ba12997e268d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0348f0a734c53c21586d36ec625e8aae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_chooser.html#a0348f0a734c53c21586d36ec625e8aae">IsAborted</a> ()</td></tr>
+<tr class="memitem:a0348f0a734c53c21586d36ec625e8aae" id="r_a0348f0a734c53c21586d36ec625e8aae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0348f0a734c53c21586d36ec625e8aae">IsAborted</a> ()</td></tr>
 <tr class="separator:a0348f0a734c53c21586d36ec625e8aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_t_emitter"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_t_emitter')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_t_emitter.html">TEmitter</a></td></tr>
-<tr class="memitem:a6ca92e86b5b1096926e6c1027391c8d9 inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top"><a id="a6ca92e86b5b1096926e6c1027391c8d9"></a>
+<tr class="inherit_header pub_methods_class_t_emitter"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_t_emitter')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_t_emitter.html">TEmitter</a></td></tr>
+<tr class="memitem:a6ca92e86b5b1096926e6c1027391c8d9 inherit pub_methods_class_t_emitter" id="r_a6ca92e86b5b1096926e6c1027391c8d9"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>TEmitter</b> (emitter_t *nativeObj)</td></tr>
 <tr class="separator:a6ca92e86b5b1096926e6c1027391c8d9 inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1164e76c026d546bcd229514e1896be7 inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top"><a id="a1164e76c026d546bcd229514e1896be7"></a>
+<tr class="memitem:a1164e76c026d546bcd229514e1896be7 inherit pub_methods_class_t_emitter" id="r_a1164e76c026d546bcd229514e1896be7"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>TEmitter</b> (const emitter_t *nativeObj)</td></tr>
 <tr class="separator:a1164e76c026d546bcd229514e1896be7 inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f3943b7219c16dd7d171aaa66fad97e inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a0f3943b7219c16dd7d171aaa66fad97e">Dispatch</a> (<a class="el" href="class_t_event.html">TEvent</a> &amp;e)</td></tr>
+<tr class="memitem:a0f3943b7219c16dd7d171aaa66fad97e inherit pub_methods_class_t_emitter" id="r_a0f3943b7219c16dd7d171aaa66fad97e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a0f3943b7219c16dd7d171aaa66fad97e">Dispatch</a> (<a class="el" href="class_t_event.html">TEvent</a> &amp;e)</td></tr>
 <tr class="separator:a0f3943b7219c16dd7d171aaa66fad97e inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa371beccbd4d2792db21f4da22049673 inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#aa371beccbd4d2792db21f4da22049673">DispatchSimpleEvent</a> (uint32_t type)</td></tr>
+<tr class="memitem:aa371beccbd4d2792db21f4da22049673 inherit pub_methods_class_t_emitter" id="r_aa371beccbd4d2792db21f4da22049673"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#aa371beccbd4d2792db21f4da22049673">DispatchSimpleEvent</a> (uint32_t type)</td></tr>
 <tr class="separator:aa371beccbd4d2792db21f4da22049673 inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29404a7b2ca8b41b25d6442dfbf6863e inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a29404a7b2ca8b41b25d6442dfbf6863e">On</a> (uint32_t etype, event_func_t handler, void *ctx)</td></tr>
+<tr class="memitem:a29404a7b2ca8b41b25d6442dfbf6863e inherit pub_methods_class_t_emitter" id="r_a29404a7b2ca8b41b25d6442dfbf6863e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a29404a7b2ca8b41b25d6442dfbf6863e">On</a> (uint32_t etype, event_func_t handler, void *ctx)</td></tr>
 <tr class="separator:a29404a7b2ca8b41b25d6442dfbf6863e inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9cfdac85eba8396ffb90a2beea66d3f inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#ad9cfdac85eba8396ffb90a2beea66d3f">Off</a> (uint32_t id)</td></tr>
+<tr class="memitem:ad9cfdac85eba8396ffb90a2beea66d3f inherit pub_methods_class_t_emitter" id="r_ad9cfdac85eba8396ffb90a2beea66d3f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#ad9cfdac85eba8396ffb90a2beea66d3f">Off</a> (uint32_t id)</td></tr>
 <tr class="separator:ad9cfdac85eba8396ffb90a2beea66d3f inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d3788d19cabda5e7be335a8d6b713fb inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a7d3788d19cabda5e7be335a8d6b713fb">Enable</a> ()</td></tr>
+<tr class="memitem:a7d3788d19cabda5e7be335a8d6b713fb inherit pub_methods_class_t_emitter" id="r_a7d3788d19cabda5e7be335a8d6b713fb"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a7d3788d19cabda5e7be335a8d6b713fb">Enable</a> ()</td></tr>
 <tr class="separator:a7d3788d19cabda5e7be335a8d6b713fb inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab009db7ef16ca18fdf8eac10559501c0 inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#ab009db7ef16ca18fdf8eac10559501c0">Disable</a> ()</td></tr>
+<tr class="memitem:ab009db7ef16ca18fdf8eac10559501c0 inherit pub_methods_class_t_emitter" id="r_ab009db7ef16ca18fdf8eac10559501c0"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#ab009db7ef16ca18fdf8eac10559501c0">Disable</a> ()</td></tr>
 <tr class="separator:ab009db7ef16ca18fdf8eac10559501c0 inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a67a712b6749c37f56c95e37fbcee92 inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a0a67a712b6749c37f56c95e37fbcee92">Destroy</a> ()</td></tr>
+<tr class="memitem:a0a67a712b6749c37f56c95e37fbcee92 inherit pub_methods_class_t_emitter" id="r_a0a67a712b6749c37f56c95e37fbcee92"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a0a67a712b6749c37f56c95e37fbcee92">Destroy</a> ()</td></tr>
 <tr class="separator:a0a67a712b6749c37f56c95e37fbcee92 inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:ad62c4d9b4b44230893e6c7e33feac325"><td class="memItemLeft" align="right" valign="top"><a id="ad62c4d9b4b44230893e6c7e33feac325"></a>
+<tr class="memitem:ad62c4d9b4b44230893e6c7e33feac325" id="r_ad62c4d9b4b44230893e6c7e33feac325"><td class="memItemLeft" align="right" valign="top"><a id="ad62c4d9b4b44230893e6c7e33feac325" name="ad62c4d9b4b44230893e6c7e33feac325"></a>
 static <a class="el" href="class_t_file_chooser.html">TFileChooser</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (emitter_t *nativeObj)</td></tr>
 <tr class="separator:ad62c4d9b4b44230893e6c7e33feac325"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fbaf1193e95dd37136cdb4ef84f60ca"><td class="memItemLeft" align="right" valign="top"><a id="a9fbaf1193e95dd37136cdb4ef84f60ca"></a>
+<tr class="memitem:a9fbaf1193e95dd37136cdb4ef84f60ca" id="r_a9fbaf1193e95dd37136cdb4ef84f60ca"><td class="memItemLeft" align="right" valign="top"><a id="a9fbaf1193e95dd37136cdb4ef84f60ca" name="a9fbaf1193e95dd37136cdb4ef84f60ca"></a>
 static <a class="el" href="class_t_file_chooser.html">TFileChooser</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const emitter_t *nativeObj)</td></tr>
 <tr class="separator:a9fbaf1193e95dd37136cdb4ef84f60ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a726021825934a40f44fc32e6f008cb51"><td class="memItemLeft" align="right" valign="top"><a id="a726021825934a40f44fc32e6f008cb51"></a>
+<tr class="memitem:a726021825934a40f44fc32e6f008cb51" id="r_a726021825934a40f44fc32e6f008cb51"><td class="memItemLeft" align="right" valign="top"><a id="a726021825934a40f44fc32e6f008cb51" name="a726021825934a40f44fc32e6f008cb51"></a>
 static <a class="el" href="class_t_file_chooser.html">TFileChooser</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (<a class="el" href="class_t_emitter.html">TEmitter</a> &amp;obj)</td></tr>
 <tr class="separator:a726021825934a40f44fc32e6f008cb51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42ab4fa0a8a97552980dd92d54a970df"><td class="memItemLeft" align="right" valign="top"><a id="a42ab4fa0a8a97552980dd92d54a970df"></a>
+<tr class="memitem:a42ab4fa0a8a97552980dd92d54a970df" id="r_a42ab4fa0a8a97552980dd92d54a970df"><td class="memItemLeft" align="right" valign="top"><a id="a42ab4fa0a8a97552980dd92d54a970df" name="a42ab4fa0a8a97552980dd92d54a970df"></a>
 static <a class="el" href="class_t_file_chooser.html">TFileChooser</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const <a class="el" href="class_t_emitter.html">TEmitter</a> &amp;obj)</td></tr>
 <tr class="separator:a42ab4fa0a8a97552980dd92d54a970df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a105b80bff207186bb870d96d0831f268"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_file_chooser.html">TFileChooser</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_file_chooser.html#a105b80bff207186bb870d96d0831f268">Create</a> ()</td></tr>
+<tr class="memitem:a105b80bff207186bb870d96d0831f268" id="r_a105b80bff207186bb870d96d0831f268"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_file_chooser.html">TFileChooser</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a105b80bff207186bb870d96d0831f268">Create</a> ()</td></tr>
 <tr class="separator:a105b80bff207186bb870d96d0831f268"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_class_t_emitter"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_t_emitter')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="class_t_emitter.html">TEmitter</a></td></tr>
-<tr class="memitem:a519410f20fbc260357c72f17fae29c61 inherit pub_static_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top"><a id="a519410f20fbc260357c72f17fae29c61"></a>
+<tr class="inherit_header pub_static_methods_class_t_emitter"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_t_emitter')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="class_t_emitter.html">TEmitter</a></td></tr>
+<tr class="memitem:a519410f20fbc260357c72f17fae29c61 inherit pub_static_methods_class_t_emitter" id="r_a519410f20fbc260357c72f17fae29c61"><td class="memItemLeft" align="right" valign="top">
 static <a class="el" href="class_t_emitter.html">TEmitter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (emitter_t *nativeObj)</td></tr>
 <tr class="separator:a519410f20fbc260357c72f17fae29c61 inherit pub_static_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ddf47a8480c17fdd0875da2d9a77ed9 inherit pub_static_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top"><a id="a9ddf47a8480c17fdd0875da2d9a77ed9"></a>
+<tr class="memitem:a9ddf47a8480c17fdd0875da2d9a77ed9 inherit pub_static_methods_class_t_emitter" id="r_a9ddf47a8480c17fdd0875da2d9a77ed9"><td class="memItemLeft" align="right" valign="top">
 static <a class="el" href="class_t_emitter.html">TEmitter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const emitter_t *nativeObj)</td></tr>
 <tr class="separator:a9ddf47a8480c17fdd0875da2d9a77ed9 inherit pub_static_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70ef09f38ab28ee7cd4f1fddb2c5e450 inherit pub_static_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_emitter.html">TEmitter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a70ef09f38ab28ee7cd4f1fddb2c5e450">Create</a> ()</td></tr>
+<tr class="memitem:a70ef09f38ab28ee7cd4f1fddb2c5e450 inherit pub_static_methods_class_t_emitter" id="r_a70ef09f38ab28ee7cd4f1fddb2c5e450"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_emitter.html">TEmitter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a70ef09f38ab28ee7cd4f1fddb2c5e450">Create</a> ()</td></tr>
 <tr class="separator:a70ef09f38ab28ee7cd4f1fddb2c5e450 inherit pub_static_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 额外继承的成员函数</h2></td></tr>
-<tr class="inherit_header pub_attribs_class_t_emitter"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_t_emitter')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="class_t_emitter.html">TEmitter</a></td></tr>
-<tr class="memitem:a476ec4fc4b3a97af70c2d5e91df7a0cc inherit pub_attribs_class_t_emitter"><td class="memItemLeft" align="right" valign="top"><a id="a476ec4fc4b3a97af70c2d5e91df7a0cc"></a>
+<tr class="inherit_header pub_attribs_class_t_emitter"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_t_emitter')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="class_t_emitter.html">TEmitter</a></td></tr>
+<tr class="memitem:a476ec4fc4b3a97af70c2d5e91df7a0cc inherit pub_attribs_class_t_emitter" id="r_a476ec4fc4b3a97af70c2d5e91df7a0cc"><td class="memItemLeft" align="right" valign="top">
 emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td></tr>
 <tr class="separator:a476ec4fc4b3a97af70c2d5e91df7a0cc inherit pub_attribs_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>文件/目录选择器 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="aafc606b0b78e8e7b531abb0ffee35f16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafc606b0b78e8e7b531abb0ffee35f16">&#9670;&nbsp;</a></span>ChooseFileForOpen()</h2>
+<a id="aafc606b0b78e8e7b531abb0ffee35f16" name="aafc606b0b78e8e7b531abb0ffee35f16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafc606b0b78e8e7b531abb0ffee35f16">&#9670;&#160;</a></span>ChooseFileForOpen()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,7 +197,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">ret_t TFileChooser::ChooseFileForOpen </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -185,8 +207,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="a52518346d1cfb468ead5649613e515a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52518346d1cfb468ead5649613e515a8">&#9670;&nbsp;</a></span>ChooseFileForSave()</h2>
+<a id="a52518346d1cfb468ead5649613e515a8" name="a52518346d1cfb468ead5649613e515a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52518346d1cfb468ead5649613e515a8">&#9670;&#160;</a></span>ChooseFileForSave()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,7 +216,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">ret_t TFileChooser::ChooseFileForSave </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -204,8 +226,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="ace6f1a964e2bf1d1ce724603fda1994f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace6f1a964e2bf1d1ce724603fda1994f">&#9670;&nbsp;</a></span>ChooseFolder()</h2>
+<a id="ace6f1a964e2bf1d1ce724603fda1994f" name="ace6f1a964e2bf1d1ce724603fda1994f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace6f1a964e2bf1d1ce724603fda1994f">&#9670;&#160;</a></span>ChooseFolder()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,7 +235,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">ret_t TFileChooser::ChooseFolder </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -223,8 +245,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="a105b80bff207186bb870d96d0831f268"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a105b80bff207186bb870d96d0831f268">&#9670;&nbsp;</a></span>Create()</h2>
+<a id="a105b80bff207186bb870d96d0831f268" name="a105b80bff207186bb870d96d0831f268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a105b80bff207186bb870d96d0831f268">&#9670;&#160;</a></span>Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -235,7 +257,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname"><a class="el" href="class_t_file_chooser.html">TFileChooser</a> TFileChooser::Create </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -250,8 +272,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="ac7f4ba3b6350b61cabda74f3ea1beccd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7f4ba3b6350b61cabda74f3ea1beccd">&#9670;&nbsp;</a></span>GetDir()</h2>
+<a id="ac7f4ba3b6350b61cabda74f3ea1beccd" name="ac7f4ba3b6350b61cabda74f3ea1beccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7f4ba3b6350b61cabda74f3ea1beccd">&#9670;&#160;</a></span>GetDir()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -259,7 +281,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">const char * TFileChooser::GetDir </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -269,8 +291,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="ad7c98f1db4eaf305730ba12997e268d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7c98f1db4eaf305730ba12997e268d7">&#9670;&nbsp;</a></span>GetFilename()</h2>
+<a id="ad7c98f1db4eaf305730ba12997e268d7" name="ad7c98f1db4eaf305730ba12997e268d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7c98f1db4eaf305730ba12997e268d7">&#9670;&#160;</a></span>GetFilename()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,7 +300,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">const char * TFileChooser::GetFilename </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -288,8 +310,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="a0348f0a734c53c21586d36ec625e8aae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0348f0a734c53c21586d36ec625e8aae">&#9670;&nbsp;</a></span>IsAborted()</h2>
+<a id="a0348f0a734c53c21586d36ec625e8aae" name="a0348f0a734c53c21586d36ec625e8aae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0348f0a734c53c21586d36ec625e8aae">&#9670;&#160;</a></span>IsAborted()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -297,7 +319,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">bool TFileChooser::IsAborted </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -307,8 +329,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="a5a7dd23ea3f18cfe9f637799ee13787a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a7dd23ea3f18cfe9f637799ee13787a">&#9670;&nbsp;</a></span>SetFilter()</h2>
+<a id="a5a7dd23ea3f18cfe9f637799ee13787a" name="a5a7dd23ea3f18cfe9f637799ee13787a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a7dd23ea3f18cfe9f637799ee13787a">&#9670;&#160;</a></span>SetFilter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -316,14 +338,13 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">ret_t TFileChooser::SetFilter </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>filter</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filter</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>设置过滤规则。 </p><blockquote class="doxtable">
-<p>files_only 表示只列出文件，dir_only 表示只列出目录，其它表示只列出满足扩展名文件集合(如：.jpg.png.gif)。 </p>
+<p>&zwj;files_only 表示只列出文件，dir_only 表示只列出目录，其它表示只列出满足扩展名文件集合(如：.jpg.png.gif)。 </p>
 </blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -335,8 +356,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="af8203a495ea5b5b359e2f7a422d15942"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8203a495ea5b5b359e2f7a422d15942">&#9670;&nbsp;</a></span>SetInitDir()</h2>
+<a id="af8203a495ea5b5b359e2f7a422d15942" name="af8203a495ea5b5b359e2f7a422d15942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8203a495ea5b5b359e2f7a422d15942">&#9670;&#160;</a></span>SetInitDir()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -344,8 +365,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">ret_t TFileChooser::SetInitDir </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>init_dir</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>init_dir</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -361,8 +381,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="a69de63c73ad3b1c31c44e51a81eeb7bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69de63c73ad3b1c31c44e51a81eeb7bd">&#9670;&nbsp;</a></span>SetTopDir()</h2>
+<a id="a69de63c73ad3b1c31c44e51a81eeb7bd" name="a69de63c73ad3b1c31c44e51a81eeb7bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69de63c73ad3b1c31c44e51a81eeb7bd">&#9670;&#160;</a></span>SetTopDir()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -370,8 +390,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">ret_t TFileChooser::SetTopDir </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>top_dir</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>top_dir</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -389,12 +408,13 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
-<li>output/awtk_cpp.cpp</li>
+<li>output/<b>awtk_cpp.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

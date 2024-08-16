@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TTimer类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,52 +70,59 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="class_t_timer-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">TTimer类 参考</div>  </div>
+  <div class="headertitle"><div class="title">TTimer类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a7570bd60aa957b566bd93726697c9162"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_timer.html#a7570bd60aa957b566bd93726697c9162">Add</a> (timer_func_t on_timer, void *ctx, uint32_t duration)</td></tr>
+<tr class="memitem:a7570bd60aa957b566bd93726697c9162" id="r_a7570bd60aa957b566bd93726697c9162"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7570bd60aa957b566bd93726697c9162">Add</a> (timer_func_t on_timer, void *ctx, uint32_t duration)</td></tr>
 <tr class="separator:a7570bd60aa957b566bd93726697c9162"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40e7fb637864da595ef891ebebf4c9f8"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_timer.html#a40e7fb637864da595ef891ebebf4c9f8">Remove</a> (uint32_t timer_id)</td></tr>
+<tr class="memitem:a40e7fb637864da595ef891ebebf4c9f8" id="r_a40e7fb637864da595ef891ebebf4c9f8"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40e7fb637864da595ef891ebebf4c9f8">Remove</a> (uint32_t timer_id)</td></tr>
 <tr class="separator:a40e7fb637864da595ef891ebebf4c9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7c287bf5d44fdbcb2869f447f7401af"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_timer.html#ad7c287bf5d44fdbcb2869f447f7401af">RemoveAllByCtx</a> (void *ctx)</td></tr>
+<tr class="memitem:ad7c287bf5d44fdbcb2869f447f7401af" id="r_ad7c287bf5d44fdbcb2869f447f7401af"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7c287bf5d44fdbcb2869f447f7401af">RemoveAllByCtx</a> (void *ctx)</td></tr>
 <tr class="separator:ad7c287bf5d44fdbcb2869f447f7401af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc9845f46017626f309008a839cbfdae"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_timer.html#afc9845f46017626f309008a839cbfdae">Reset</a> (uint32_t timer_id)</td></tr>
+<tr class="memitem:afc9845f46017626f309008a839cbfdae" id="r_afc9845f46017626f309008a839cbfdae"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc9845f46017626f309008a839cbfdae">Reset</a> (uint32_t timer_id)</td></tr>
 <tr class="separator:afc9845f46017626f309008a839cbfdae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0ba05cb473205282845daa40bfb6b8c"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_timer.html#ae0ba05cb473205282845daa40bfb6b8c">Suspend</a> (uint32_t timer_id)</td></tr>
+<tr class="memitem:ae0ba05cb473205282845daa40bfb6b8c" id="r_ae0ba05cb473205282845daa40bfb6b8c"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0ba05cb473205282845daa40bfb6b8c">Suspend</a> (uint32_t timer_id)</td></tr>
 <tr class="separator:ae0ba05cb473205282845daa40bfb6b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b090661236f137fb3f8fef45969c1ed"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_timer.html#a3b090661236f137fb3f8fef45969c1ed">Resume</a> (uint32_t timer_id)</td></tr>
+<tr class="memitem:a3b090661236f137fb3f8fef45969c1ed" id="r_a3b090661236f137fb3f8fef45969c1ed"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b090661236f137fb3f8fef45969c1ed">Resume</a> (uint32_t timer_id)</td></tr>
 <tr class="separator:a3b090661236f137fb3f8fef45969c1ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba98debbef33277e0eb290359b880067"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_timer.html#aba98debbef33277e0eb290359b880067">Modify</a> (uint32_t timer_id, uint32_t duration)</td></tr>
+<tr class="memitem:aba98debbef33277e0eb290359b880067" id="r_aba98debbef33277e0eb290359b880067"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba98debbef33277e0eb290359b880067">Modify</a> (uint32_t timer_id, uint32_t duration)</td></tr>
 <tr class="separator:aba98debbef33277e0eb290359b880067"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>定时器系统。</p>
 <blockquote class="doxtable">
-<p>本定时器精度较低，最高精度为1000/FPS，如果需要高精度的定时器，请用OS提供的定时器。 </p>
+<p>&zwj;本定时器精度较低，最高精度为1000/FPS，如果需要高精度的定时器，请用OS提供的定时器。 </p>
 </blockquote>
 <p>示例：</p>
 <blockquote class="doxtable">
-<p>在非GUI线程请用timer_queue。 </p>
+<p>&zwj;在非GUI线程请用timer_queue。 </p>
 </blockquote>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a7570bd60aa957b566bd93726697c9162"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7570bd60aa957b566bd93726697c9162">&#9670;&nbsp;</a></span>Add()</h2>
+<a id="a7570bd60aa957b566bd93726697c9162" name="a7570bd60aa957b566bd93726697c9162"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7570bd60aa957b566bd93726697c9162">&#9670;&#160;</a></span>Add()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -111,25 +133,17 @@ $(function() {
         <tr>
           <td class="memname">uint32_t TTimer::Add </td>
           <td>(</td>
-          <td class="paramtype">timer_func_t&#160;</td>
-          <td class="paramname"><em>on_timer</em>, </td>
+          <td class="paramtype">timer_func_t</td>          <td class="paramname"><span class="paramname"><em>on_timer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ctx</em>, </td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>duration</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>duration</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -143,7 +157,7 @@ $(function() {
   <table class="params">
     <tr><td class="paramname">on_timer</td><td>timer回调函数。 </td></tr>
     <tr><td class="paramname">ctx</td><td>timer回调函数的上下文。 </td></tr>
-    <tr><td class="paramname">duration</td><td>时间。</td></tr>
+    <tr><td class="paramname">duration</td><td>时间(毫秒)。</td></tr>
   </table>
   </dd>
 </dl>
@@ -151,8 +165,8 @@ $(function() {
 
 </div>
 </div>
-<a id="aba98debbef33277e0eb290359b880067"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba98debbef33277e0eb290359b880067">&#9670;&nbsp;</a></span>Modify()</h2>
+<a id="aba98debbef33277e0eb290359b880067" name="aba98debbef33277e0eb290359b880067"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba98debbef33277e0eb290359b880067">&#9670;&#160;</a></span>Modify()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,19 +177,12 @@ $(function() {
         <tr>
           <td class="memname">ret_t TTimer::Modify </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>timer_id</em>, </td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>timer_id</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>duration</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>duration</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -188,7 +195,7 @@ $(function() {
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">timer_id</td><td>timerID。 </td></tr>
-    <tr><td class="paramname">duration</td><td>新的时间。</td></tr>
+    <tr><td class="paramname">duration</td><td>新的时间(毫秒)。</td></tr>
   </table>
   </dd>
 </dl>
@@ -196,8 +203,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a40e7fb637864da595ef891ebebf4c9f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40e7fb637864da595ef891ebebf4c9f8">&#9670;&nbsp;</a></span>Remove()</h2>
+<a id="a40e7fb637864da595ef891ebebf4c9f8" name="a40e7fb637864da595ef891ebebf4c9f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40e7fb637864da595ef891ebebf4c9f8">&#9670;&#160;</a></span>Remove()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,8 +215,7 @@ $(function() {
         <tr>
           <td class="memname">ret_t TTimer::Remove </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>timer_id</em></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>timer_id</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -230,8 +236,8 @@ $(function() {
 
 </div>
 </div>
-<a id="ad7c287bf5d44fdbcb2869f447f7401af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7c287bf5d44fdbcb2869f447f7401af">&#9670;&nbsp;</a></span>RemoveAllByCtx()</h2>
+<a id="ad7c287bf5d44fdbcb2869f447f7401af" name="ad7c287bf5d44fdbcb2869f447f7401af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7c287bf5d44fdbcb2869f447f7401af">&#9670;&#160;</a></span>RemoveAllByCtx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -242,8 +248,7 @@ $(function() {
         <tr>
           <td class="memname">ret_t TTimer::RemoveAllByCtx </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -264,8 +269,8 @@ $(function() {
 
 </div>
 </div>
-<a id="afc9845f46017626f309008a839cbfdae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc9845f46017626f309008a839cbfdae">&#9670;&nbsp;</a></span>Reset()</h2>
+<a id="afc9845f46017626f309008a839cbfdae" name="afc9845f46017626f309008a839cbfdae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc9845f46017626f309008a839cbfdae">&#9670;&#160;</a></span>Reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -276,8 +281,7 @@ $(function() {
         <tr>
           <td class="memname">ret_t TTimer::Reset </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>timer_id</em></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>timer_id</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -298,8 +302,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a3b090661236f137fb3f8fef45969c1ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b090661236f137fb3f8fef45969c1ed">&#9670;&nbsp;</a></span>Resume()</h2>
+<a id="a3b090661236f137fb3f8fef45969c1ed" name="a3b090661236f137fb3f8fef45969c1ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b090661236f137fb3f8fef45969c1ed">&#9670;&#160;</a></span>Resume()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -310,8 +314,7 @@ $(function() {
         <tr>
           <td class="memname">ret_t TTimer::Resume </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>timer_id</em></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>timer_id</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -332,8 +335,8 @@ $(function() {
 
 </div>
 </div>
-<a id="ae0ba05cb473205282845daa40bfb6b8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0ba05cb473205282845daa40bfb6b8c">&#9670;&nbsp;</a></span>Suspend()</h2>
+<a id="ae0ba05cb473205282845daa40bfb6b8c" name="ae0ba05cb473205282845daa40bfb6b8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0ba05cb473205282845daa40bfb6b8c">&#9670;&#160;</a></span>Suspend()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -344,8 +347,7 @@ $(function() {
         <tr>
           <td class="memname">ret_t TTimer::Suspend </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>timer_id</em></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>timer_id</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -368,12 +370,13 @@ $(function() {
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
-<li>output/awtk_cpp.cpp</li>
+<li>output/<b>awtk_cpp.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

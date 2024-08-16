@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TStyle类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,20 +70,27 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="class_t_style-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">TStyle类 参考</div>  </div>
+  <div class="headertitle"><div class="title">TStyle类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -83,59 +105,59 @@ $(function() {
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a65e92e6d34e0c4829b96eadb04115a75"><td class="memItemLeft" align="right" valign="top"><a id="a65e92e6d34e0c4829b96eadb04115a75"></a>
+<tr class="memitem:a65e92e6d34e0c4829b96eadb04115a75" id="r_a65e92e6d34e0c4829b96eadb04115a75"><td class="memItemLeft" align="right" valign="top"><a id="a65e92e6d34e0c4829b96eadb04115a75" name="a65e92e6d34e0c4829b96eadb04115a75"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TStyle</b> (style_t *nativeObj)</td></tr>
 <tr class="separator:a65e92e6d34e0c4829b96eadb04115a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa825ac97170508d5d24143482e98ccda"><td class="memItemLeft" align="right" valign="top"><a id="aa825ac97170508d5d24143482e98ccda"></a>
+<tr class="memitem:aa825ac97170508d5d24143482e98ccda" id="r_aa825ac97170508d5d24143482e98ccda"><td class="memItemLeft" align="right" valign="top"><a id="aa825ac97170508d5d24143482e98ccda" name="aa825ac97170508d5d24143482e98ccda"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TStyle</b> (const style_t *nativeObj)</td></tr>
 <tr class="separator:aa825ac97170508d5d24143482e98ccda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a094c4d8760823f71772a9778e033a5"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#a3a094c4d8760823f71772a9778e033a5">NotifyWidgetStateChanged</a> (TWidget &amp;widget)</td></tr>
+<tr class="memitem:a3a094c4d8760823f71772a9778e033a5" id="r_a3a094c4d8760823f71772a9778e033a5"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a094c4d8760823f71772a9778e033a5">NotifyWidgetStateChanged</a> (<a class="el" href="class_t_widget.html">TWidget</a> &amp;widget)</td></tr>
 <tr class="separator:a3a094c4d8760823f71772a9778e033a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab338f7bae3dfe4da88d4f64b5efedf52"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#ab338f7bae3dfe4da88d4f64b5efedf52">IsValid</a> ()</td></tr>
+<tr class="memitem:ab338f7bae3dfe4da88d4f64b5efedf52" id="r_ab338f7bae3dfe4da88d4f64b5efedf52"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab338f7bae3dfe4da88d4f64b5efedf52">IsValid</a> ()</td></tr>
 <tr class="separator:ab338f7bae3dfe4da88d4f64b5efedf52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa25880edce1ce52b7be659d6d9842a8"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#afa25880edce1ce52b7be659d6d9842a8">GetInt</a> (const char *name, int32_t defval)</td></tr>
+<tr class="memitem:afa25880edce1ce52b7be659d6d9842a8" id="r_afa25880edce1ce52b7be659d6d9842a8"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa25880edce1ce52b7be659d6d9842a8">GetInt</a> (const char *name, int32_t defval)</td></tr>
 <tr class="separator:afa25880edce1ce52b7be659d6d9842a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad06c1be0b52ec98104e4fb6b72c800b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#aad06c1be0b52ec98104e4fb6b72c800b">GetUint</a> (const char *name, uint32_t defval)</td></tr>
+<tr class="memitem:aad06c1be0b52ec98104e4fb6b72c800b" id="r_aad06c1be0b52ec98104e4fb6b72c800b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad06c1be0b52ec98104e4fb6b72c800b">GetUint</a> (const char *name, uint32_t defval)</td></tr>
 <tr class="separator:aad06c1be0b52ec98104e4fb6b72c800b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc313e64294bc3204fe56994e1ed6d3e"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#acc313e64294bc3204fe56994e1ed6d3e">GetStr</a> (const char *name, const char *defval)</td></tr>
+<tr class="memitem:acc313e64294bc3204fe56994e1ed6d3e" id="r_acc313e64294bc3204fe56994e1ed6d3e"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc313e64294bc3204fe56994e1ed6d3e">GetStr</a> (const char *name, const char *defval)</td></tr>
 <tr class="separator:acc313e64294bc3204fe56994e1ed6d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab69c0bca08733d43055125322f3b2bc2"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#ab69c0bca08733d43055125322f3b2bc2">Get</a> (const char *state, const char *name, <a class="el" href="class_t_value.html">TValue</a> &amp;value)</td></tr>
+<tr class="memitem:ab69c0bca08733d43055125322f3b2bc2" id="r_ab69c0bca08733d43055125322f3b2bc2"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab69c0bca08733d43055125322f3b2bc2">Get</a> (const char *state, const char *name, <a class="el" href="class_t_value.html">TValue</a> &amp;value)</td></tr>
 <tr class="separator:ab69c0bca08733d43055125322f3b2bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0fd6aee96501b4ffefcdb47f877b964"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#ab0fd6aee96501b4ffefcdb47f877b964">Set</a> (const char *state, const char *name, <a class="el" href="class_t_value.html">TValue</a> &amp;value)</td></tr>
+<tr class="memitem:ab0fd6aee96501b4ffefcdb47f877b964" id="r_ab0fd6aee96501b4ffefcdb47f877b964"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0fd6aee96501b4ffefcdb47f877b964">Set</a> (const char *state, const char *name, <a class="el" href="class_t_value.html">TValue</a> &amp;value)</td></tr>
 <tr class="separator:ab0fd6aee96501b4ffefcdb47f877b964"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a7160b804d2f886c1ae312d600a7b64"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#a2a7160b804d2f886c1ae312d600a7b64">UpdateState</a> (<a class="el" href="class_t_theme.html">TTheme</a> &amp;theme, const char *widget_type, const char *style_name, const char *widget_state)</td></tr>
+<tr class="memitem:a2a7160b804d2f886c1ae312d600a7b64" id="r_a2a7160b804d2f886c1ae312d600a7b64"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a7160b804d2f886c1ae312d600a7b64">UpdateState</a> (<a class="el" href="class_t_theme.html">TTheme</a> &amp;theme, const char *widget_type, const char *style_name, const char *widget_state)</td></tr>
 <tr class="separator:a2a7160b804d2f886c1ae312d600a7b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaf95b0e4d01e05807192b70a6554100"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#afaf95b0e4d01e05807192b70a6554100">GetStyleState</a> ()</td></tr>
+<tr class="memitem:afaf95b0e4d01e05807192b70a6554100" id="r_afaf95b0e4d01e05807192b70a6554100"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afaf95b0e4d01e05807192b70a6554100">GetStyleState</a> ()</td></tr>
 <tr class="separator:afaf95b0e4d01e05807192b70a6554100"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fc783502f0ad0699d4377c3dfb20aed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#a0fc783502f0ad0699d4377c3dfb20aed">IsMutable</a> ()</td></tr>
+<tr class="memitem:a0fc783502f0ad0699d4377c3dfb20aed" id="r_a0fc783502f0ad0699d4377c3dfb20aed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fc783502f0ad0699d4377c3dfb20aed">IsMutable</a> ()</td></tr>
 <tr class="separator:a0fc783502f0ad0699d4377c3dfb20aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47575ecb62a2dc186bc44f39c5d29ea5"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#a47575ecb62a2dc186bc44f39c5d29ea5">GetStyleType</a> ()</td></tr>
+<tr class="memitem:a47575ecb62a2dc186bc44f39c5d29ea5" id="r_a47575ecb62a2dc186bc44f39c5d29ea5"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47575ecb62a2dc186bc44f39c5d29ea5">GetStyleType</a> ()</td></tr>
 <tr class="separator:a47575ecb62a2dc186bc44f39c5d29ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a16ecd7e302a4de1eb535b8b8365b241d"><td class="memItemLeft" align="right" valign="top"><a id="a16ecd7e302a4de1eb535b8b8365b241d"></a>
+<tr class="memitem:a16ecd7e302a4de1eb535b8b8365b241d" id="r_a16ecd7e302a4de1eb535b8b8365b241d"><td class="memItemLeft" align="right" valign="top"><a id="a16ecd7e302a4de1eb535b8b8365b241d" name="a16ecd7e302a4de1eb535b8b8365b241d"></a>
 static <a class="el" href="class_t_style.html">TStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (style_t *nativeObj)</td></tr>
 <tr class="separator:a16ecd7e302a4de1eb535b8b8365b241d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f61e8bf131680f0c91a97780d49e669"><td class="memItemLeft" align="right" valign="top"><a id="a0f61e8bf131680f0c91a97780d49e669"></a>
+<tr class="memitem:a0f61e8bf131680f0c91a97780d49e669" id="r_a0f61e8bf131680f0c91a97780d49e669"><td class="memItemLeft" align="right" valign="top"><a id="a0f61e8bf131680f0c91a97780d49e669" name="a0f61e8bf131680f0c91a97780d49e669"></a>
 static <a class="el" href="class_t_style.html">TStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const style_t *nativeObj)</td></tr>
 <tr class="separator:a0f61e8bf131680f0c91a97780d49e669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:a09c6f48243b069bb90d8509fbfd64a22"><td class="memItemLeft" align="right" valign="top"><a id="a09c6f48243b069bb90d8509fbfd64a22"></a>
+<tr class="memitem:a09c6f48243b069bb90d8509fbfd64a22" id="r_a09c6f48243b069bb90d8509fbfd64a22"><td class="memItemLeft" align="right" valign="top"><a id="a09c6f48243b069bb90d8509fbfd64a22" name="a09c6f48243b069bb90d8509fbfd64a22"></a>
 style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td></tr>
 <tr class="separator:a09c6f48243b069bb90d8509fbfd64a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>控件风格。</p>
 <p>widget从style对象中，获取诸如字体、颜色和图片相关的参数，根据这些参数来绘制界面。</p>
-<p>属性名称的请参考style\_id </p>
+<p>属性名称的请参考style_id </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="ab69c0bca08733d43055125322f3b2bc2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab69c0bca08733d43055125322f3b2bc2">&#9670;&nbsp;</a></span>Get()</h2>
+<a id="ab69c0bca08733d43055125322f3b2bc2" name="ab69c0bca08733d43055125322f3b2bc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab69c0bca08733d43055125322f3b2bc2">&#9670;&#160;</a></span>Get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -143,25 +165,17 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">ret_t TStyle::Get </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>state</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -178,8 +192,8 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="afa25880edce1ce52b7be659d6d9842a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa25880edce1ce52b7be659d6d9842a8">&#9670;&nbsp;</a></span>GetInt()</h2>
+<a id="afa25880edce1ce52b7be659d6d9842a8" name="afa25880edce1ce52b7be659d6d9842a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa25880edce1ce52b7be659d6d9842a8">&#9670;&#160;</a></span>GetInt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -187,19 +201,12 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">int32_t TStyle::GetInt </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int32_t&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int32_t</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -215,8 +222,8 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="acc313e64294bc3204fe56994e1ed6d3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc313e64294bc3204fe56994e1ed6d3e">&#9670;&nbsp;</a></span>GetStr()</h2>
+<a id="acc313e64294bc3204fe56994e1ed6d3e" name="acc313e64294bc3204fe56994e1ed6d3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc313e64294bc3204fe56994e1ed6d3e">&#9670;&#160;</a></span>GetStr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,19 +231,12 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">const char * TStyle::GetStr </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -252,8 +252,8 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="afaf95b0e4d01e05807192b70a6554100"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afaf95b0e4d01e05807192b70a6554100">&#9670;&nbsp;</a></span>GetStyleState()</h2>
+<a id="afaf95b0e4d01e05807192b70a6554100" name="afaf95b0e4d01e05807192b70a6554100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaf95b0e4d01e05807192b70a6554100">&#9670;&#160;</a></span>GetStyleState()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -261,7 +261,7 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">const char * TStyle::GetStyleState </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -271,8 +271,8 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a47575ecb62a2dc186bc44f39c5d29ea5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47575ecb62a2dc186bc44f39c5d29ea5">&#9670;&nbsp;</a></span>GetStyleType()</h2>
+<a id="a47575ecb62a2dc186bc44f39c5d29ea5" name="a47575ecb62a2dc186bc44f39c5d29ea5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47575ecb62a2dc186bc44f39c5d29ea5">&#9670;&#160;</a></span>GetStyleType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -280,7 +280,7 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">const char * TStyle::GetStyleType </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -290,8 +290,8 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="aad06c1be0b52ec98104e4fb6b72c800b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad06c1be0b52ec98104e4fb6b72c800b">&#9670;&nbsp;</a></span>GetUint()</h2>
+<a id="aad06c1be0b52ec98104e4fb6b72c800b" name="aad06c1be0b52ec98104e4fb6b72c800b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad06c1be0b52ec98104e4fb6b72c800b">&#9670;&#160;</a></span>GetUint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -299,19 +299,12 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">uint32_t TStyle::GetUint </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -327,8 +320,8 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a0fc783502f0ad0699d4377c3dfb20aed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0fc783502f0ad0699d4377c3dfb20aed">&#9670;&nbsp;</a></span>IsMutable()</h2>
+<a id="a0fc783502f0ad0699d4377c3dfb20aed" name="a0fc783502f0ad0699d4377c3dfb20aed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fc783502f0ad0699d4377c3dfb20aed">&#9670;&#160;</a></span>IsMutable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -336,7 +329,7 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">bool TStyle::IsMutable </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -346,8 +339,8 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="ab338f7bae3dfe4da88d4f64b5efedf52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab338f7bae3dfe4da88d4f64b5efedf52">&#9670;&nbsp;</a></span>IsValid()</h2>
+<a id="ab338f7bae3dfe4da88d4f64b5efedf52" name="ab338f7bae3dfe4da88d4f64b5efedf52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab338f7bae3dfe4da88d4f64b5efedf52">&#9670;&#160;</a></span>IsValid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -355,7 +348,7 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">bool TStyle::IsValid </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -365,8 +358,8 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a3a094c4d8760823f71772a9778e033a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a094c4d8760823f71772a9778e033a5">&#9670;&nbsp;</a></span>NotifyWidgetStateChanged()</h2>
+<a id="a3a094c4d8760823f71772a9778e033a5" name="a3a094c4d8760823f71772a9778e033a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a094c4d8760823f71772a9778e033a5">&#9670;&#160;</a></span>NotifyWidgetStateChanged()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -374,8 +367,7 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">ret_t TStyle::NotifyWidgetStateChanged </td>
           <td>(</td>
-          <td class="paramtype">TWidget &amp;&#160;</td>
-          <td class="paramname"><em>widget</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_t_widget.html">TWidget</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>widget</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -391,8 +383,8 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="ab0fd6aee96501b4ffefcdb47f877b964"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0fd6aee96501b4ffefcdb47f877b964">&#9670;&nbsp;</a></span>Set()</h2>
+<a id="ab0fd6aee96501b4ffefcdb47f877b964" name="ab0fd6aee96501b4ffefcdb47f877b964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0fd6aee96501b4ffefcdb47f877b964">&#9670;&#160;</a></span>Set()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -400,25 +392,17 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">ret_t TStyle::Set </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>state</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -435,8 +419,8 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a2a7160b804d2f886c1ae312d600a7b64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a7160b804d2f886c1ae312d600a7b64">&#9670;&nbsp;</a></span>UpdateState()</h2>
+<a id="a2a7160b804d2f886c1ae312d600a7b64" name="a2a7160b804d2f886c1ae312d600a7b64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a7160b804d2f886c1ae312d600a7b64">&#9670;&#160;</a></span>UpdateState()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -444,31 +428,22 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">ret_t TStyle::UpdateState </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_t_theme.html">TTheme</a> &amp;&#160;</td>
-          <td class="paramname"><em>theme</em>, </td>
+          <td class="paramtype"><a class="el" href="class_t_theme.html">TTheme</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>theme</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>widget_type</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>widget_type</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>style_name</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>style_name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>widget_state</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>widget_state</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -488,12 +463,13 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
-<li>output/awtk_cpp.cpp</li>
+<li>output/<b>awtk_cpp.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

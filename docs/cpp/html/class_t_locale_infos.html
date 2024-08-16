@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TLocaleInfos类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,43 +70,50 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="class_t_locale_infos-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">TLocaleInfos类 参考</div>  </div>
+  <div class="headertitle"><div class="title">TLocaleInfos类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a7ceba06a09cc5af57b0131b57d889e54"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_locale_info.html">TLocaleInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_locale_infos.html#a7ceba06a09cc5af57b0131b57d889e54">Ref</a> (const char *name)</td></tr>
+<tr class="memitem:a7ceba06a09cc5af57b0131b57d889e54" id="r_a7ceba06a09cc5af57b0131b57d889e54"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_locale_info.html">TLocaleInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ceba06a09cc5af57b0131b57d889e54">Ref</a> (const char *name)</td></tr>
 <tr class="separator:a7ceba06a09cc5af57b0131b57d889e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2e75363dff2234730cc5659fa73354d"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_locale_infos.html#af2e75363dff2234730cc5659fa73354d">Unref</a> (<a class="el" href="class_t_locale_info.html">TLocaleInfo</a> &amp;locale_info)</td></tr>
+<tr class="memitem:af2e75363dff2234730cc5659fa73354d" id="r_af2e75363dff2234730cc5659fa73354d"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2e75363dff2234730cc5659fa73354d">Unref</a> (<a class="el" href="class_t_locale_info.html">TLocaleInfo</a> &amp;locale_info)</td></tr>
 <tr class="separator:af2e75363dff2234730cc5659fa73354d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55822cf341d1334452362212a86df4b0"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_locale_infos.html#a55822cf341d1334452362212a86df4b0">Change</a> (const char *language, const char *country)</td></tr>
+<tr class="memitem:a55822cf341d1334452362212a86df4b0" id="r_a55822cf341d1334452362212a86df4b0"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55822cf341d1334452362212a86df4b0">Change</a> (const char *language, const char *country)</td></tr>
 <tr class="separator:a55822cf341d1334452362212a86df4b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5b2547d2c7a3f5cbb9f726d6f83a231"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_locale_infos.html#aa5b2547d2c7a3f5cbb9f726d6f83a231">On</a> (event_type_t type, event_func_t on_event, void *ctx)</td></tr>
+<tr class="memitem:aa5b2547d2c7a3f5cbb9f726d6f83a231" id="r_aa5b2547d2c7a3f5cbb9f726d6f83a231"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5b2547d2c7a3f5cbb9f726d6f83a231">On</a> (event_type_t type, event_func_t on_event, void *ctx)</td></tr>
 <tr class="separator:aa5b2547d2c7a3f5cbb9f726d6f83a231"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cf3ba34672f7ef6ae2035cb32e625f4"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_locale_infos.html#a2cf3ba34672f7ef6ae2035cb32e625f4">Off</a> (uint32_t id)</td></tr>
+<tr class="memitem:a2cf3ba34672f7ef6ae2035cb32e625f4" id="r_a2cf3ba34672f7ef6ae2035cb32e625f4"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cf3ba34672f7ef6ae2035cb32e625f4">Off</a> (uint32_t id)</td></tr>
 <tr class="separator:a2cf3ba34672f7ef6ae2035cb32e625f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af702cb3e5212b20d9f0a3a93f192b930"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_locale_infos.html#af702cb3e5212b20d9f0a3a93f192b930">ReloadAll</a> ()</td></tr>
+<tr class="memitem:af702cb3e5212b20d9f0a3a93f192b930" id="r_af702cb3e5212b20d9f0a3a93f192b930"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af702cb3e5212b20d9f0a3a93f192b930">ReloadAll</a> ()</td></tr>
 <tr class="separator:af702cb3e5212b20d9f0a3a93f192b930"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>在某些情况下，需要多个资源管理器。比如在手表系统里，每个应用或表盘，可能放在独立的资源包中， 此时优先加载应用自己的资源，如果没有就加载系统的资源。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a55822cf341d1334452362212a86df4b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55822cf341d1334452362212a86df4b0">&#9670;&nbsp;</a></span>Change()</h2>
+<a id="a55822cf341d1334452362212a86df4b0" name="a55822cf341d1334452362212a86df4b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55822cf341d1334452362212a86df4b0">&#9670;&#160;</a></span>Change()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -102,19 +124,12 @@ $(function() {
         <tr>
           <td class="memname">ret_t TLocaleInfos::Change </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>language</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>language</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>country</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>country</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -135,8 +150,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a2cf3ba34672f7ef6ae2035cb32e625f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cf3ba34672f7ef6ae2035cb32e625f4">&#9670;&nbsp;</a></span>Off()</h2>
+<a id="a2cf3ba34672f7ef6ae2035cb32e625f4" name="a2cf3ba34672f7ef6ae2035cb32e625f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf3ba34672f7ef6ae2035cb32e625f4">&#9670;&#160;</a></span>Off()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,8 +162,7 @@ $(function() {
         <tr>
           <td class="memname">ret_t TLocaleInfos::Off </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -169,8 +183,8 @@ $(function() {
 
 </div>
 </div>
-<a id="aa5b2547d2c7a3f5cbb9f726d6f83a231"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5b2547d2c7a3f5cbb9f726d6f83a231">&#9670;&nbsp;</a></span>On()</h2>
+<a id="aa5b2547d2c7a3f5cbb9f726d6f83a231" name="aa5b2547d2c7a3f5cbb9f726d6f83a231"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5b2547d2c7a3f5cbb9f726d6f83a231">&#9670;&#160;</a></span>On()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,25 +195,17 @@ $(function() {
         <tr>
           <td class="memname">uint32_t TLocaleInfos::On </td>
           <td>(</td>
-          <td class="paramtype">event_type_t&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
+          <td class="paramtype">event_type_t</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">event_func_t&#160;</td>
-          <td class="paramname"><em>on_event</em>, </td>
+          <td class="paramtype">event_func_t</td>          <td class="paramname"><span class="paramname"><em>on_event</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ctx</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -221,8 +227,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a7ceba06a09cc5af57b0131b57d889e54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ceba06a09cc5af57b0131b57d889e54">&#9670;&nbsp;</a></span>Ref()</h2>
+<a id="a7ceba06a09cc5af57b0131b57d889e54" name="a7ceba06a09cc5af57b0131b57d889e54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ceba06a09cc5af57b0131b57d889e54">&#9670;&#160;</a></span>Ref()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -233,8 +239,7 @@ $(function() {
         <tr>
           <td class="memname"><a class="el" href="class_t_locale_info.html">TLocaleInfo</a> TLocaleInfos::Ref </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -255,8 +260,8 @@ $(function() {
 
 </div>
 </div>
-<a id="af702cb3e5212b20d9f0a3a93f192b930"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af702cb3e5212b20d9f0a3a93f192b930">&#9670;&nbsp;</a></span>ReloadAll()</h2>
+<a id="af702cb3e5212b20d9f0a3a93f192b930" name="af702cb3e5212b20d9f0a3a93f192b930"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af702cb3e5212b20d9f0a3a93f192b930">&#9670;&#160;</a></span>ReloadAll()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -267,7 +272,7 @@ $(function() {
         <tr>
           <td class="memname">ret_t TLocaleInfos::ReloadAll </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -282,8 +287,8 @@ $(function() {
 
 </div>
 </div>
-<a id="af2e75363dff2234730cc5659fa73354d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2e75363dff2234730cc5659fa73354d">&#9670;&nbsp;</a></span>Unref()</h2>
+<a id="af2e75363dff2234730cc5659fa73354d" name="af2e75363dff2234730cc5659fa73354d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2e75363dff2234730cc5659fa73354d">&#9670;&#160;</a></span>Unref()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -294,8 +299,7 @@ $(function() {
         <tr>
           <td class="memname">ret_t TLocaleInfos::Unref </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_t_locale_info.html">TLocaleInfo</a> &amp;&#160;</td>
-          <td class="paramname"><em>locale_info</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_t_locale_info.html">TLocaleInfo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>locale_info</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -318,12 +322,13 @@ $(function() {
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
-<li>output/awtk_cpp.cpp</li>
+<li>output/<b>awtk_cpp.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

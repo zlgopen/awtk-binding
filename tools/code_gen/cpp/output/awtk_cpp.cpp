@@ -479,10 +479,6 @@
     return value_equal(((const value_t*)(this->nativeObj)), ((const value_t*)(other.nativeObj)));
  }
 
- int TValue::Int()  {
-    return value_int(((const value_t*)(this->nativeObj)));
- }
-
  TValue TValue::SetInt(int32_t value)  {
    return TValue((value_t*)(value_set_int(((value_t*)(this->nativeObj)), value)));
  }
@@ -2435,6 +2431,10 @@
    return TWidget((widget_t*)(window_manager_get_top_window(((widget_t*)(this->nativeObj)))));
  }
 
+ TWidget TWindowManager::GetForegroundWindow()  {
+   return TWidget((widget_t*)(window_manager_get_foreground_window(((widget_t*)(this->nativeObj)))));
+ }
+
  TWidget TWindowManager::GetPrevWindow()  {
    return TWidget((widget_t*)(window_manager_get_prev_window(((widget_t*)(this->nativeObj)))));
  }
@@ -3121,6 +3121,14 @@
 
  char* TMledit::GetSelectedText()  {
     return mledit_get_selected_text(((widget_t*)(this->nativeObj)));
+ }
+
+ uint32_t TMledit::GetCurrentLineIndex()  {
+    return mledit_get_current_line_index(((widget_t*)(this->nativeObj)));
+ }
+
+ uint32_t TMledit::GetCurrentRowIndex()  {
+    return mledit_get_current_row_index(((widget_t*)(this->nativeObj)));
  }
 
  ret_t TMledit::InsertText(uint32_t offset, const char* text)  {
@@ -4299,6 +4307,14 @@
    return check_button_set_value(((widget_t*)(this->nativeObj)), value);
  }
 
+ ret_t TCheckButton::SetIndeterminate(bool indeterminate)  {
+   return check_button_set_indeterminate(((widget_t*)(this->nativeObj)), indeterminate);
+ }
+
+ bool TCheckButton::GetIndeterminate()  {
+    return check_button_get_indeterminate(((widget_t*)(this->nativeObj)));
+ }
+
  TWidget TCheckButton::CreateEx(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h, const char* type, bool radio)  {
    return TCheckButton((widget_t*)(check_button_create_ex(((widget_t*)(parent.nativeObj)), x, y, w, h, type, radio)));
  }
@@ -4787,6 +4803,10 @@
    return slider_set_vertical(((widget_t*)(this->nativeObj)), vertical);
  }
 
+ ret_t TSlider::SetDragThreshold(uint32_t drag_threshold)  {
+   return slider_set_drag_threshold(((widget_t*)(this->nativeObj)), drag_threshold);
+ }
+
  double TSlider::GetValue() const {
    return ((slider_t*)(this->nativeObj))->value;
  }
@@ -4827,6 +4847,10 @@
    return ((slider_t*)(this->nativeObj))->slide_with_bar;
  }
 
+ uint32_t TSlider::GetDragThreshold() const {
+   return ((slider_t*)(this->nativeObj))->drag_threshold;
+ }
+
  TWidget TTabButtonGroup::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TTabButtonGroup((widget_t*)(tab_button_group_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
@@ -4839,12 +4863,20 @@
    return tab_button_group_set_scrollable(((widget_t*)(this->nativeObj)), scrollable);
  }
 
+ ret_t TTabButtonGroup::SetDragChild(bool drag_child)  {
+   return tab_button_group_set_drag_child(((widget_t*)(this->nativeObj)), drag_child);
+ }
+
  bool TTabButtonGroup::GetCompact() const {
    return ((tab_button_group_t*)(this->nativeObj))->compact;
  }
 
  bool TTabButtonGroup::GetScrollable() const {
    return ((tab_button_group_t*)(this->nativeObj))->scrollable;
+ }
+
+ bool TTabButtonGroup::GetDragChild() const {
+   return ((tab_button_group_t*)(this->nativeObj))->drag_child;
  }
 
  TWidget TTabButton::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -4861,6 +4893,14 @@
 
  ret_t TTabButton::SetActiveIcon(const char* name)  {
    return tab_button_set_active_icon(((widget_t*)(this->nativeObj)), name);
+ }
+
+ ret_t TTabButton::SetMaxW(int32_t max_w)  {
+   return tab_button_set_max_w(((widget_t*)(this->nativeObj)), max_w);
+ }
+
+ ret_t TTabButton::Restack(uint32_t index)  {
+   return tab_button_restack(((widget_t*)(this->nativeObj)), index);
  }
 
  ret_t TTabButton::SetLoadUi(const char* name)  {
@@ -4881,6 +4921,10 @@
 
  char* TTabButton::GetIcon() const {
    return ((tab_button_t*)(this->nativeObj))->icon;
+ }
+
+ int32_t TTabButton::GetMaxW() const {
+   return ((tab_button_t*)(this->nativeObj))->max_w;
  }
 
  TWidget TTabControl::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
@@ -5173,6 +5217,10 @@
 
  ret_t TObjectDefault::SetKeepPropType(bool keep_prop_type)  {
    return object_default_set_keep_prop_type(((object_t*)(this->nativeObj)), keep_prop_type);
+ }
+
+ ret_t TObjectDefault::SetNameCaseInsensitive(bool name_case_insensitive)  {
+   return object_default_set_name_case_insensitive(((object_t*)(this->nativeObj)), name_case_insensitive);
  }
 
  void* TTimerInfo::GetCtx() const {

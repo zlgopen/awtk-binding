@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TEvent类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,20 +70,27 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="class_t_event-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">TEvent类 参考</div>  </div>
+  <div class="headertitle"><div class="title">TEvent类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -79,72 +101,75 @@ $(function() {
  <div class="center">
   <img src="class_t_event.png" usemap="#TEvent_map" alt=""/>
   <map id="TEvent_map" name="TEvent_map">
-<area href="class_t_cmd_exec_event.html" alt="TCmdExecEvent" shape="rect" coords="142,56,274,80"/>
-<area href="class_t_done_event.html" alt="TDoneEvent" shape="rect" coords="142,112,274,136"/>
-<area href="class_t_drop_file_event.html" alt="TDropFileEvent" shape="rect" coords="142,168,274,192"/>
-<area href="class_t_error_event.html" alt="TErrorEvent" shape="rect" coords="142,224,274,248"/>
-<area href="class_t_key_event.html" alt="TKeyEvent" shape="rect" coords="142,280,274,304"/>
-<area href="class_t_model_event.html" alt="TModelEvent" shape="rect" coords="142,336,274,360"/>
-<area href="class_t_multi_gesture_event.html" alt="TMultiGestureEvent" shape="rect" coords="142,392,274,416"/>
-<area href="class_t_offset_change_event.html" alt="TOffsetChangeEvent" shape="rect" coords="142,448,274,472"/>
-<area href="class_t_orientation_event.html" alt="TOrientationEvent" shape="rect" coords="142,504,274,528"/>
-<area href="class_t_paint_event.html" alt="TPaintEvent" shape="rect" coords="142,560,274,584"/>
-<area href="class_t_pointer_event.html" alt="TPointerEvent" shape="rect" coords="142,616,274,640"/>
-<area href="class_t_progress_event.html" alt="TProgressEvent" shape="rect" coords="142,672,274,696"/>
-<area href="class_t_prop_change_event.html" alt="TPropChangeEvent" shape="rect" coords="142,728,274,752"/>
-<area href="class_t_system_event.html" alt="TSystemEvent" shape="rect" coords="142,784,274,808"/>
-<area href="class_t_theme_change_event.html" alt="TThemeChangeEvent" shape="rect" coords="142,840,274,864"/>
-<area href="class_t_value_change_event.html" alt="TValueChangeEvent" shape="rect" coords="142,896,274,920"/>
-<area href="class_t_wheel_event.html" alt="TWheelEvent" shape="rect" coords="142,952,274,976"/>
-<area href="class_t_window_event.html" alt="TWindowEvent" shape="rect" coords="142,1008,274,1032"/>
+<area href="class_t_cmd_exec_event.html" alt="TCmdExecEvent" shape="rect" coords="149,56,288,80"/>
+<area href="class_t_done_event.html" alt="TDoneEvent" shape="rect" coords="149,112,288,136"/>
+<area href="class_t_drop_file_event.html" alt="TDropFileEvent" shape="rect" coords="149,168,288,192"/>
+<area href="class_t_error_event.html" alt="TErrorEvent" shape="rect" coords="149,224,288,248"/>
+<area href="class_t_key_event.html" alt="TKeyEvent" shape="rect" coords="149,280,288,304"/>
+<area href="class_t_log_message_event.html" alt="TLogMessageEvent" shape="rect" coords="149,336,288,360"/>
+<area href="class_t_model_event.html" alt="TModelEvent" shape="rect" coords="149,392,288,416"/>
+<area href="class_t_multi_gesture_event.html" alt="TMultiGestureEvent" shape="rect" coords="149,448,288,472"/>
+<area href="class_t_offset_change_event.html" alt="TOffsetChangeEvent" shape="rect" coords="149,504,288,528"/>
+<area href="class_t_orientation_event.html" alt="TOrientationEvent" shape="rect" coords="149,560,288,584"/>
+<area href="class_t_paint_event.html" alt="TPaintEvent" shape="rect" coords="149,616,288,640"/>
+<area href="class_t_pointer_event.html" alt="TPointerEvent" shape="rect" coords="149,672,288,696"/>
+<area href="class_t_progress_event.html" alt="TProgressEvent" shape="rect" coords="149,728,288,752"/>
+<area href="class_t_prop_change_event.html" alt="TPropChangeEvent" shape="rect" coords="149,784,288,808"/>
+<area href="class_t_system_event.html" alt="TSystemEvent" shape="rect" coords="149,840,288,864"/>
+<area href="class_t_theme_change_event.html" alt="TThemeChangeEvent" shape="rect" coords="149,896,288,920"/>
+<area href="class_t_ui_load_event.html" alt="TUiLoadEvent" shape="rect" coords="149,952,288,976"/>
+<area href="class_t_value_change_event.html" alt="TValueChangeEvent" shape="rect" coords="149,1008,288,1032"/>
+<area href="class_t_wheel_event.html" alt="TWheelEvent" shape="rect" coords="149,1064,288,1088"/>
+<area href="class_t_widget_animator_event.html" alt="TWidgetAnimatorEvent" shape="rect" coords="149,1120,288,1144"/>
+<area href="class_t_window_event.html" alt="TWindowEvent" shape="rect" coords="149,1176,288,1200"/>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a942db33b764993a78d737141ebebb8f0"><td class="memItemLeft" align="right" valign="top"><a id="a942db33b764993a78d737141ebebb8f0"></a>
+<tr class="memitem:a942db33b764993a78d737141ebebb8f0" id="r_a942db33b764993a78d737141ebebb8f0"><td class="memItemLeft" align="right" valign="top"><a id="a942db33b764993a78d737141ebebb8f0" name="a942db33b764993a78d737141ebebb8f0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TEvent</b> (event_t *nativeObj)</td></tr>
 <tr class="separator:a942db33b764993a78d737141ebebb8f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0dd231eec7d9bdbe520ee4a016977b6"><td class="memItemLeft" align="right" valign="top"><a id="ac0dd231eec7d9bdbe520ee4a016977b6"></a>
+<tr class="memitem:ac0dd231eec7d9bdbe520ee4a016977b6" id="r_ac0dd231eec7d9bdbe520ee4a016977b6"><td class="memItemLeft" align="right" valign="top"><a id="ac0dd231eec7d9bdbe520ee4a016977b6" name="ac0dd231eec7d9bdbe520ee4a016977b6"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TEvent</b> (const event_t *nativeObj)</td></tr>
 <tr class="separator:ac0dd231eec7d9bdbe520ee4a016977b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae32faff8a91012e1df9c7cd2f74a4bd9"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_event.html#ae32faff8a91012e1df9c7cd2f74a4bd9">GetType</a> ()</td></tr>
+<tr class="memitem:ae32faff8a91012e1df9c7cd2f74a4bd9" id="r_ae32faff8a91012e1df9c7cd2f74a4bd9"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae32faff8a91012e1df9c7cd2f74a4bd9">GetType</a> ()</td></tr>
 <tr class="separator:ae32faff8a91012e1df9c7cd2f74a4bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afff04d515d40e86c9fecd6b3b0368cec"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_event.html#afff04d515d40e86c9fecd6b3b0368cec">Destroy</a> ()</td></tr>
+<tr class="memitem:afff04d515d40e86c9fecd6b3b0368cec" id="r_afff04d515d40e86c9fecd6b3b0368cec"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afff04d515d40e86c9fecd6b3b0368cec">Destroy</a> ()</td></tr>
 <tr class="separator:afff04d515d40e86c9fecd6b3b0368cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0ccfe98f9c2433c788994fcff6ab599"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_event.html#ab0ccfe98f9c2433c788994fcff6ab599">GetType</a> () const</td></tr>
+<tr class="memitem:ab0ccfe98f9c2433c788994fcff6ab599" id="r_ab0ccfe98f9c2433c788994fcff6ab599"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0ccfe98f9c2433c788994fcff6ab599">GetType</a> () const</td></tr>
 <tr class="separator:ab0ccfe98f9c2433c788994fcff6ab599"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c9f5a1aea08ac3b9a2a3006c26ac6eb"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_event.html#a8c9f5a1aea08ac3b9a2a3006c26ac6eb">GetSize</a> () const</td></tr>
+<tr class="memitem:a8c9f5a1aea08ac3b9a2a3006c26ac6eb" id="r_a8c9f5a1aea08ac3b9a2a3006c26ac6eb"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c9f5a1aea08ac3b9a2a3006c26ac6eb">GetSize</a> () const</td></tr>
 <tr class="separator:a8c9f5a1aea08ac3b9a2a3006c26ac6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3ab3af3ce97f88ce711b22f56526618"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_event.html#ae3ab3af3ce97f88ce711b22f56526618">GetTime</a> () const</td></tr>
+<tr class="memitem:ae3ab3af3ce97f88ce711b22f56526618" id="r_ae3ab3af3ce97f88ce711b22f56526618"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3ab3af3ce97f88ce711b22f56526618">GetTime</a> () const</td></tr>
 <tr class="separator:ae3ab3af3ce97f88ce711b22f56526618"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03c3315ddbbb7522ea86fc56f934b753"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_event.html#a03c3315ddbbb7522ea86fc56f934b753">GetTarget</a> () const</td></tr>
+<tr class="memitem:a03c3315ddbbb7522ea86fc56f934b753" id="r_a03c3315ddbbb7522ea86fc56f934b753"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03c3315ddbbb7522ea86fc56f934b753">GetTarget</a> () const</td></tr>
 <tr class="separator:a03c3315ddbbb7522ea86fc56f934b753"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a064c00ed3c16e9bd50a24b444d5c5a23"><td class="memItemLeft" align="right" valign="top"><a id="a064c00ed3c16e9bd50a24b444d5c5a23"></a>
+<tr class="memitem:a064c00ed3c16e9bd50a24b444d5c5a23" id="r_a064c00ed3c16e9bd50a24b444d5c5a23"><td class="memItemLeft" align="right" valign="top"><a id="a064c00ed3c16e9bd50a24b444d5c5a23" name="a064c00ed3c16e9bd50a24b444d5c5a23"></a>
 static <a class="el" href="class_t_event.html">TEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (event_t *nativeObj)</td></tr>
 <tr class="separator:a064c00ed3c16e9bd50a24b444d5c5a23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94363c56edb03d39bad9fb781b0b4bd4"><td class="memItemLeft" align="right" valign="top"><a id="a94363c56edb03d39bad9fb781b0b4bd4"></a>
+<tr class="memitem:a94363c56edb03d39bad9fb781b0b4bd4" id="r_a94363c56edb03d39bad9fb781b0b4bd4"><td class="memItemLeft" align="right" valign="top"><a id="a94363c56edb03d39bad9fb781b0b4bd4" name="a94363c56edb03d39bad9fb781b0b4bd4"></a>
 static <a class="el" href="class_t_event.html">TEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const event_t *nativeObj)</td></tr>
 <tr class="separator:a94363c56edb03d39bad9fb781b0b4bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95a746a2230504d7c86376fff0196ac3"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_event.html#a95a746a2230504d7c86376fff0196ac3">FromName</a> (const char *name)</td></tr>
+<tr class="memitem:a95a746a2230504d7c86376fff0196ac3" id="r_a95a746a2230504d7c86376fff0196ac3"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95a746a2230504d7c86376fff0196ac3">FromName</a> (const char *name)</td></tr>
 <tr class="separator:a95a746a2230504d7c86376fff0196ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adad60ee8cf3e26266681c6c80d41bd3b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_event.html">TEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_event.html#adad60ee8cf3e26266681c6c80d41bd3b">Create</a> (uint32_t type)</td></tr>
+<tr class="memitem:adad60ee8cf3e26266681c6c80d41bd3b" id="r_adad60ee8cf3e26266681c6c80d41bd3b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_event.html">TEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adad60ee8cf3e26266681c6c80d41bd3b">Create</a> (uint32_t type)</td></tr>
 <tr class="separator:adad60ee8cf3e26266681c6c80d41bd3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:a3db858b3c8ac2536e074a238c9483de3"><td class="memItemLeft" align="right" valign="top"><a id="a3db858b3c8ac2536e074a238c9483de3"></a>
+<tr class="memitem:a3db858b3c8ac2536e074a238c9483de3" id="r_a3db858b3c8ac2536e074a238c9483de3"><td class="memItemLeft" align="right" valign="top"><a id="a3db858b3c8ac2536e074a238c9483de3" name="a3db858b3c8ac2536e074a238c9483de3"></a>
 event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td></tr>
 <tr class="separator:a3db858b3c8ac2536e074a238c9483de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>事件基类。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="adad60ee8cf3e26266681c6c80d41bd3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adad60ee8cf3e26266681c6c80d41bd3b">&#9670;&nbsp;</a></span>Create()</h2>
+<a id="adad60ee8cf3e26266681c6c80d41bd3b" name="adad60ee8cf3e26266681c6c80d41bd3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adad60ee8cf3e26266681c6c80d41bd3b">&#9670;&#160;</a></span>Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -155,8 +180,7 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_event.html">TEvent</a> TEvent::Create </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>type</em></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -178,8 +202,8 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="afff04d515d40e86c9fecd6b3b0368cec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afff04d515d40e86c9fecd6b3b0368cec">&#9670;&nbsp;</a></span>Destroy()</h2>
+<a id="afff04d515d40e86c9fecd6b3b0368cec" name="afff04d515d40e86c9fecd6b3b0368cec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afff04d515d40e86c9fecd6b3b0368cec">&#9670;&#160;</a></span>Destroy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -187,7 +211,7 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">ret_t TEvent::Destroy </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -198,8 +222,8 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a95a746a2230504d7c86376fff0196ac3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95a746a2230504d7c86376fff0196ac3">&#9670;&nbsp;</a></span>FromName()</h2>
+<a id="a95a746a2230504d7c86376fff0196ac3" name="a95a746a2230504d7c86376fff0196ac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95a746a2230504d7c86376fff0196ac3">&#9670;&#160;</a></span>FromName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,8 +234,7 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">int32_t TEvent::FromName </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -232,8 +255,8 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a8c9f5a1aea08ac3b9a2a3006c26ac6eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c9f5a1aea08ac3b9a2a3006c26ac6eb">&#9670;&nbsp;</a></span>GetSize()</h2>
+<a id="a8c9f5a1aea08ac3b9a2a3006c26ac6eb" name="a8c9f5a1aea08ac3b9a2a3006c26ac6eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c9f5a1aea08ac3b9a2a3006c26ac6eb">&#9670;&#160;</a></span>GetSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -241,7 +264,7 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">uint32_t TEvent::GetSize </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -250,8 +273,8 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a03c3315ddbbb7522ea86fc56f934b753"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03c3315ddbbb7522ea86fc56f934b753">&#9670;&nbsp;</a></span>GetTarget()</h2>
+<a id="a03c3315ddbbb7522ea86fc56f934b753" name="a03c3315ddbbb7522ea86fc56f934b753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03c3315ddbbb7522ea86fc56f934b753">&#9670;&#160;</a></span>GetTarget()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -259,7 +282,7 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">void * TEvent::GetTarget </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -268,8 +291,8 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="ae3ab3af3ce97f88ce711b22f56526618"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3ab3af3ce97f88ce711b22f56526618">&#9670;&nbsp;</a></span>GetTime()</h2>
+<a id="ae3ab3af3ce97f88ce711b22f56526618" name="ae3ab3af3ce97f88ce711b22f56526618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3ab3af3ce97f88ce711b22f56526618">&#9670;&#160;</a></span>GetTime()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -277,7 +300,7 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">uint64_t TEvent::GetTime </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -286,8 +309,8 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="ae32faff8a91012e1df9c7cd2f74a4bd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae32faff8a91012e1df9c7cd2f74a4bd9">&#9670;&nbsp;</a></span>GetType() <span class="overload">[1/2]</span></h2>
+<a id="ae32faff8a91012e1df9c7cd2f74a4bd9" name="ae32faff8a91012e1df9c7cd2f74a4bd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae32faff8a91012e1df9c7cd2f74a4bd9">&#9670;&#160;</a></span>GetType() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -295,7 +318,7 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">uint32_t TEvent::GetType </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -305,8 +328,8 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="ab0ccfe98f9c2433c788994fcff6ab599"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0ccfe98f9c2433c788994fcff6ab599">&#9670;&nbsp;</a></span>GetType() <span class="overload">[2/2]</span></h2>
+<a id="ab0ccfe98f9c2433c788994fcff6ab599" name="ab0ccfe98f9c2433c788994fcff6ab599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0ccfe98f9c2433c788994fcff6ab599">&#9670;&#160;</a></span>GetType() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -314,7 +337,7 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">uint32_t TEvent::GetType </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -325,12 +348,13 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
-<li>output/awtk_cpp.cpp</li>
+<li>output/<b>awtk_cpp.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

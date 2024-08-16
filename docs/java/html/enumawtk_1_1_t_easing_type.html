@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TEasingType 枚举类型参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-JAVA
    </div>
    <div id="projectbrief">AWTK JAVA API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,9 +70,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,83 +87,83 @@ $(function() {
 <li class="navelem"><b>awtk</b></li><li class="navelem"><a class="el" href="enumawtk_1_1_t_easing_type.html">TEasingType</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="enumawtk_1_1_t_easing_type-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">awtk.TEasingType 枚举类型参考</div>  </div>
+  <div class="headertitle"><div class="title">awtk.TEasingType 枚举类型参考</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a95034eb9e77631f6eb5cb837b0fa5bd1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#a95034eb9e77631f6eb5cb837b0fa5bd1">value</a> ()</td></tr>
+<tr class="memitem:a95034eb9e77631f6eb5cb837b0fa5bd1" id="r_a95034eb9e77631f6eb5cb837b0fa5bd1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95034eb9e77631f6eb5cb837b0fa5bd1">value</a> ()</td></tr>
 <tr class="separator:a95034eb9e77631f6eb5cb837b0fa5bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a40ffef265dade276747ad87da73d53e9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_easing_type.html">TEasingType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#a40ffef265dade276747ad87da73d53e9">from</a> (int value)</td></tr>
+<tr class="memitem:a40ffef265dade276747ad87da73d53e9" id="r_a40ffef265dade276747ad87da73d53e9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_easing_type.html">TEasingType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40ffef265dade276747ad87da73d53e9">from</a> (int value)</td></tr>
 <tr class="separator:a40ffef265dade276747ad87da73d53e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:afaa4091858667cfb331fd6f83ff675b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#afaa4091858667cfb331fd6f83ff675b1">LINEAR</a> =(EASING_LINEAR())</td></tr>
+<tr class="memitem:afaa4091858667cfb331fd6f83ff675b1" id="r_afaa4091858667cfb331fd6f83ff675b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afaa4091858667cfb331fd6f83ff675b1">LINEAR</a> =(EASING_LINEAR())</td></tr>
 <tr class="separator:afaa4091858667cfb331fd6f83ff675b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeae46a0e19b7ffc2dd28cf13351007bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#aeae46a0e19b7ffc2dd28cf13351007bb">QUADRATIC_IN</a> =(EASING_QUADRATIC_IN())</td></tr>
+<tr class="memitem:aeae46a0e19b7ffc2dd28cf13351007bb" id="r_aeae46a0e19b7ffc2dd28cf13351007bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeae46a0e19b7ffc2dd28cf13351007bb">QUADRATIC_IN</a> =(EASING_QUADRATIC_IN())</td></tr>
 <tr class="separator:aeae46a0e19b7ffc2dd28cf13351007bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f4f40185da5fedc62558fbee384e7e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#a5f4f40185da5fedc62558fbee384e7e3">QUADRATIC_OUT</a> =(EASING_QUADRATIC_OUT())</td></tr>
+<tr class="memitem:a5f4f40185da5fedc62558fbee384e7e3" id="r_a5f4f40185da5fedc62558fbee384e7e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f4f40185da5fedc62558fbee384e7e3">QUADRATIC_OUT</a> =(EASING_QUADRATIC_OUT())</td></tr>
 <tr class="separator:a5f4f40185da5fedc62558fbee384e7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fc82d8f1a2edcfce47fcb0588b9287e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#a8fc82d8f1a2edcfce47fcb0588b9287e">QUADRATIC_INOUT</a> =(EASING_QUADRATIC_INOUT())</td></tr>
+<tr class="memitem:a8fc82d8f1a2edcfce47fcb0588b9287e" id="r_a8fc82d8f1a2edcfce47fcb0588b9287e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fc82d8f1a2edcfce47fcb0588b9287e">QUADRATIC_INOUT</a> =(EASING_QUADRATIC_INOUT())</td></tr>
 <tr class="separator:a8fc82d8f1a2edcfce47fcb0588b9287e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4dd3c3010201db6e3aeebb371336044"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#af4dd3c3010201db6e3aeebb371336044">CUBIC_IN</a> =(EASING_CUBIC_IN())</td></tr>
+<tr class="memitem:af4dd3c3010201db6e3aeebb371336044" id="r_af4dd3c3010201db6e3aeebb371336044"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4dd3c3010201db6e3aeebb371336044">CUBIC_IN</a> =(EASING_CUBIC_IN())</td></tr>
 <tr class="separator:af4dd3c3010201db6e3aeebb371336044"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a172af83c99aec20d4c30955e2573ea08"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#a172af83c99aec20d4c30955e2573ea08">CUBIC_OUT</a> =(EASING_CUBIC_OUT())</td></tr>
+<tr class="memitem:a172af83c99aec20d4c30955e2573ea08" id="r_a172af83c99aec20d4c30955e2573ea08"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a172af83c99aec20d4c30955e2573ea08">CUBIC_OUT</a> =(EASING_CUBIC_OUT())</td></tr>
 <tr class="separator:a172af83c99aec20d4c30955e2573ea08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af117bd0247f2e0cf0eb178a2f8813f2f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#af117bd0247f2e0cf0eb178a2f8813f2f">SIN_IN</a> =(EASING_SIN_IN())</td></tr>
+<tr class="memitem:af117bd0247f2e0cf0eb178a2f8813f2f" id="r_af117bd0247f2e0cf0eb178a2f8813f2f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af117bd0247f2e0cf0eb178a2f8813f2f">SIN_IN</a> =(EASING_SIN_IN())</td></tr>
 <tr class="separator:af117bd0247f2e0cf0eb178a2f8813f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cd1e15ad5320bd9847d8f3da3c82893"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#a4cd1e15ad5320bd9847d8f3da3c82893">SIN_OUT</a> =(EASING_SIN_OUT())</td></tr>
+<tr class="memitem:a4cd1e15ad5320bd9847d8f3da3c82893" id="r_a4cd1e15ad5320bd9847d8f3da3c82893"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cd1e15ad5320bd9847d8f3da3c82893">SIN_OUT</a> =(EASING_SIN_OUT())</td></tr>
 <tr class="separator:a4cd1e15ad5320bd9847d8f3da3c82893"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf7a2983cc29907a40fcb1c7be01f581"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#aaf7a2983cc29907a40fcb1c7be01f581">SIN_INOUT</a> =(EASING_SIN_INOUT())</td></tr>
+<tr class="memitem:aaf7a2983cc29907a40fcb1c7be01f581" id="r_aaf7a2983cc29907a40fcb1c7be01f581"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf7a2983cc29907a40fcb1c7be01f581">SIN_INOUT</a> =(EASING_SIN_INOUT())</td></tr>
 <tr class="separator:aaf7a2983cc29907a40fcb1c7be01f581"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ac3adfb6b96a902c9250065591c4cf5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#a4ac3adfb6b96a902c9250065591c4cf5">POW_IN</a> =(EASING_POW_IN())</td></tr>
+<tr class="memitem:a4ac3adfb6b96a902c9250065591c4cf5" id="r_a4ac3adfb6b96a902c9250065591c4cf5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ac3adfb6b96a902c9250065591c4cf5">POW_IN</a> =(EASING_POW_IN())</td></tr>
 <tr class="separator:a4ac3adfb6b96a902c9250065591c4cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5148778a75f4b4bf4ec9ac30fb01bb4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#ac5148778a75f4b4bf4ec9ac30fb01bb4">POW_OUT</a> =(EASING_POW_OUT())</td></tr>
+<tr class="memitem:ac5148778a75f4b4bf4ec9ac30fb01bb4" id="r_ac5148778a75f4b4bf4ec9ac30fb01bb4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5148778a75f4b4bf4ec9ac30fb01bb4">POW_OUT</a> =(EASING_POW_OUT())</td></tr>
 <tr class="separator:ac5148778a75f4b4bf4ec9ac30fb01bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3d04ceb357d56721b1c21e8271297cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#ac3d04ceb357d56721b1c21e8271297cd">POW_INOUT</a> =(EASING_POW_INOUT())</td></tr>
+<tr class="memitem:ac3d04ceb357d56721b1c21e8271297cd" id="r_ac3d04ceb357d56721b1c21e8271297cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3d04ceb357d56721b1c21e8271297cd">POW_INOUT</a> =(EASING_POW_INOUT())</td></tr>
 <tr class="separator:ac3d04ceb357d56721b1c21e8271297cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd69f92ec52b3275469bb256d58ef6d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#afd69f92ec52b3275469bb256d58ef6d5">CIRCULAR_IN</a> =(EASING_CIRCULAR_IN())</td></tr>
+<tr class="memitem:afd69f92ec52b3275469bb256d58ef6d5" id="r_afd69f92ec52b3275469bb256d58ef6d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd69f92ec52b3275469bb256d58ef6d5">CIRCULAR_IN</a> =(EASING_CIRCULAR_IN())</td></tr>
 <tr class="separator:afd69f92ec52b3275469bb256d58ef6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84f37739182106c00c650114a38b5787"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#a84f37739182106c00c650114a38b5787">CIRCULAR_OUT</a> =(EASING_CIRCULAR_OUT())</td></tr>
+<tr class="memitem:a84f37739182106c00c650114a38b5787" id="r_a84f37739182106c00c650114a38b5787"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84f37739182106c00c650114a38b5787">CIRCULAR_OUT</a> =(EASING_CIRCULAR_OUT())</td></tr>
 <tr class="separator:a84f37739182106c00c650114a38b5787"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44f7316faf2d90aeef3ecfa782a15e57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#a44f7316faf2d90aeef3ecfa782a15e57">CIRCULAR_INOUT</a> =(EASING_CIRCULAR_INOUT())</td></tr>
+<tr class="memitem:a44f7316faf2d90aeef3ecfa782a15e57" id="r_a44f7316faf2d90aeef3ecfa782a15e57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44f7316faf2d90aeef3ecfa782a15e57">CIRCULAR_INOUT</a> =(EASING_CIRCULAR_INOUT())</td></tr>
 <tr class="separator:a44f7316faf2d90aeef3ecfa782a15e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abceeb37cdb74dc337bf991fc91759467"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#abceeb37cdb74dc337bf991fc91759467">ELASTIC_IN</a> =(EASING_ELASTIC_IN())</td></tr>
+<tr class="memitem:abceeb37cdb74dc337bf991fc91759467" id="r_abceeb37cdb74dc337bf991fc91759467"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abceeb37cdb74dc337bf991fc91759467">ELASTIC_IN</a> =(EASING_ELASTIC_IN())</td></tr>
 <tr class="separator:abceeb37cdb74dc337bf991fc91759467"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a368f8b5a444b35f279c81e82058eb486"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#a368f8b5a444b35f279c81e82058eb486">ELASTIC_OUT</a> =(EASING_ELASTIC_OUT())</td></tr>
+<tr class="memitem:a368f8b5a444b35f279c81e82058eb486" id="r_a368f8b5a444b35f279c81e82058eb486"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a368f8b5a444b35f279c81e82058eb486">ELASTIC_OUT</a> =(EASING_ELASTIC_OUT())</td></tr>
 <tr class="separator:a368f8b5a444b35f279c81e82058eb486"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89590d4a433c1f58bb3fbd5521dd6f70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#a89590d4a433c1f58bb3fbd5521dd6f70">ELASTIC_INOUT</a> =(EASING_ELASTIC_INOUT())</td></tr>
+<tr class="memitem:a89590d4a433c1f58bb3fbd5521dd6f70" id="r_a89590d4a433c1f58bb3fbd5521dd6f70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89590d4a433c1f58bb3fbd5521dd6f70">ELASTIC_INOUT</a> =(EASING_ELASTIC_INOUT())</td></tr>
 <tr class="separator:a89590d4a433c1f58bb3fbd5521dd6f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41e82e5bf73cf0f087aa6a9eab77ad00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#a41e82e5bf73cf0f087aa6a9eab77ad00">BACK_IN</a> =(EASING_BACK_IN())</td></tr>
+<tr class="memitem:a41e82e5bf73cf0f087aa6a9eab77ad00" id="r_a41e82e5bf73cf0f087aa6a9eab77ad00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41e82e5bf73cf0f087aa6a9eab77ad00">BACK_IN</a> =(EASING_BACK_IN())</td></tr>
 <tr class="separator:a41e82e5bf73cf0f087aa6a9eab77ad00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f62709571adf9ff6dfee75074a09475"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#a3f62709571adf9ff6dfee75074a09475">BACK_OUT</a> =(EASING_BACK_OUT())</td></tr>
+<tr class="memitem:a3f62709571adf9ff6dfee75074a09475" id="r_a3f62709571adf9ff6dfee75074a09475"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f62709571adf9ff6dfee75074a09475">BACK_OUT</a> =(EASING_BACK_OUT())</td></tr>
 <tr class="separator:a3f62709571adf9ff6dfee75074a09475"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a193a68b4c66dd8c97addb12d69f212ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#a193a68b4c66dd8c97addb12d69f212ea">BACK_INOUT</a> =(EASING_BACK_INOUT())</td></tr>
+<tr class="memitem:a193a68b4c66dd8c97addb12d69f212ea" id="r_a193a68b4c66dd8c97addb12d69f212ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a193a68b4c66dd8c97addb12d69f212ea">BACK_INOUT</a> =(EASING_BACK_INOUT())</td></tr>
 <tr class="separator:a193a68b4c66dd8c97addb12d69f212ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa94f10122cbc66a63fa198181990829e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#aa94f10122cbc66a63fa198181990829e">BOUNCE_IN</a> =(EASING_BOUNCE_IN())</td></tr>
+<tr class="memitem:aa94f10122cbc66a63fa198181990829e" id="r_aa94f10122cbc66a63fa198181990829e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa94f10122cbc66a63fa198181990829e">BOUNCE_IN</a> =(EASING_BOUNCE_IN())</td></tr>
 <tr class="separator:aa94f10122cbc66a63fa198181990829e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad74ade1c55d8878e2caaa41c4e8a1a60"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#ad74ade1c55d8878e2caaa41c4e8a1a60">BOUNCE_OUT</a> =(EASING_BOUNCE_OUT())</td></tr>
+<tr class="memitem:ad74ade1c55d8878e2caaa41c4e8a1a60" id="r_ad74ade1c55d8878e2caaa41c4e8a1a60"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad74ade1c55d8878e2caaa41c4e8a1a60">BOUNCE_OUT</a> =(EASING_BOUNCE_OUT())</td></tr>
 <tr class="separator:ad74ade1c55d8878e2caaa41c4e8a1a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbe16da6e7e7f5043d2e399181bc16b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_easing_type.html#acbe16da6e7e7f5043d2e399181bc16b5">BOUNCE_INOUT</a> =(EASING_BOUNCE_INOUT())</td></tr>
+<tr class="memitem:acbe16da6e7e7f5043d2e399181bc16b5" id="r_acbe16da6e7e7f5043d2e399181bc16b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbe16da6e7e7f5043d2e399181bc16b5">BOUNCE_INOUT</a> =(EASING_BOUNCE_INOUT())</td></tr>
 <tr class="separator:acbe16da6e7e7f5043d2e399181bc16b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>缓动作动画常量定义。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a40ffef265dade276747ad87da73d53e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40ffef265dade276747ad87da73d53e9">&#9670;&nbsp;</a></span>from()</h2>
+<a id="a40ffef265dade276747ad87da73d53e9" name="a40ffef265dade276747ad87da73d53e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40ffef265dade276747ad87da73d53e9">&#9670;&#160;</a></span>from()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -152,8 +174,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="enumawtk_1_1_t_easing_type.html">TEasingType</a> awtk.TEasingType.from </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -174,8 +195,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a95034eb9e77631f6eb5cb837b0fa5bd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95034eb9e77631f6eb5cb837b0fa5bd1">&#9670;&nbsp;</a></span>value()</h2>
+<a id="a95034eb9e77631f6eb5cb837b0fa5bd1" name="a95034eb9e77631f6eb5cb837b0fa5bd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95034eb9e77631f6eb5cb837b0fa5bd1">&#9670;&#160;</a></span>value()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -186,7 +207,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TEasingType.value </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -202,8 +223,8 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">类成员变量说明</h2>
-<a id="a41e82e5bf73cf0f087aa6a9eab77ad00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41e82e5bf73cf0f087aa6a9eab77ad00">&#9670;&nbsp;</a></span>BACK_IN</h2>
+<a id="a41e82e5bf73cf0f087aa6a9eab77ad00" name="a41e82e5bf73cf0f087aa6a9eab77ad00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41e82e5bf73cf0f087aa6a9eab77ad00">&#9670;&#160;</a></span>BACK_IN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -217,8 +238,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a193a68b4c66dd8c97addb12d69f212ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a193a68b4c66dd8c97addb12d69f212ea">&#9670;&nbsp;</a></span>BACK_INOUT</h2>
+<a id="a193a68b4c66dd8c97addb12d69f212ea" name="a193a68b4c66dd8c97addb12d69f212ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a193a68b4c66dd8c97addb12d69f212ea">&#9670;&#160;</a></span>BACK_INOUT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -232,8 +253,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a3f62709571adf9ff6dfee75074a09475"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f62709571adf9ff6dfee75074a09475">&#9670;&nbsp;</a></span>BACK_OUT</h2>
+<a id="a3f62709571adf9ff6dfee75074a09475" name="a3f62709571adf9ff6dfee75074a09475"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f62709571adf9ff6dfee75074a09475">&#9670;&#160;</a></span>BACK_OUT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,8 +268,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aa94f10122cbc66a63fa198181990829e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa94f10122cbc66a63fa198181990829e">&#9670;&nbsp;</a></span>BOUNCE_IN</h2>
+<a id="aa94f10122cbc66a63fa198181990829e" name="aa94f10122cbc66a63fa198181990829e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa94f10122cbc66a63fa198181990829e">&#9670;&#160;</a></span>BOUNCE_IN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -262,8 +283,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="acbe16da6e7e7f5043d2e399181bc16b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbe16da6e7e7f5043d2e399181bc16b5">&#9670;&nbsp;</a></span>BOUNCE_INOUT</h2>
+<a id="acbe16da6e7e7f5043d2e399181bc16b5" name="acbe16da6e7e7f5043d2e399181bc16b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbe16da6e7e7f5043d2e399181bc16b5">&#9670;&#160;</a></span>BOUNCE_INOUT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -277,8 +298,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ad74ade1c55d8878e2caaa41c4e8a1a60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad74ade1c55d8878e2caaa41c4e8a1a60">&#9670;&nbsp;</a></span>BOUNCE_OUT</h2>
+<a id="ad74ade1c55d8878e2caaa41c4e8a1a60" name="ad74ade1c55d8878e2caaa41c4e8a1a60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad74ade1c55d8878e2caaa41c4e8a1a60">&#9670;&#160;</a></span>BOUNCE_OUT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,8 +313,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="afd69f92ec52b3275469bb256d58ef6d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd69f92ec52b3275469bb256d58ef6d5">&#9670;&nbsp;</a></span>CIRCULAR_IN</h2>
+<a id="afd69f92ec52b3275469bb256d58ef6d5" name="afd69f92ec52b3275469bb256d58ef6d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd69f92ec52b3275469bb256d58ef6d5">&#9670;&#160;</a></span>CIRCULAR_IN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -307,8 +328,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a44f7316faf2d90aeef3ecfa782a15e57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44f7316faf2d90aeef3ecfa782a15e57">&#9670;&nbsp;</a></span>CIRCULAR_INOUT</h2>
+<a id="a44f7316faf2d90aeef3ecfa782a15e57" name="a44f7316faf2d90aeef3ecfa782a15e57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44f7316faf2d90aeef3ecfa782a15e57">&#9670;&#160;</a></span>CIRCULAR_INOUT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -322,8 +343,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a84f37739182106c00c650114a38b5787"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84f37739182106c00c650114a38b5787">&#9670;&nbsp;</a></span>CIRCULAR_OUT</h2>
+<a id="a84f37739182106c00c650114a38b5787" name="a84f37739182106c00c650114a38b5787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84f37739182106c00c650114a38b5787">&#9670;&#160;</a></span>CIRCULAR_OUT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,8 +358,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="af4dd3c3010201db6e3aeebb371336044"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4dd3c3010201db6e3aeebb371336044">&#9670;&nbsp;</a></span>CUBIC_IN</h2>
+<a id="af4dd3c3010201db6e3aeebb371336044" name="af4dd3c3010201db6e3aeebb371336044"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4dd3c3010201db6e3aeebb371336044">&#9670;&#160;</a></span>CUBIC_IN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -352,8 +373,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a172af83c99aec20d4c30955e2573ea08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a172af83c99aec20d4c30955e2573ea08">&#9670;&nbsp;</a></span>CUBIC_OUT</h2>
+<a id="a172af83c99aec20d4c30955e2573ea08" name="a172af83c99aec20d4c30955e2573ea08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a172af83c99aec20d4c30955e2573ea08">&#9670;&#160;</a></span>CUBIC_OUT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -367,8 +388,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="abceeb37cdb74dc337bf991fc91759467"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abceeb37cdb74dc337bf991fc91759467">&#9670;&nbsp;</a></span>ELASTIC_IN</h2>
+<a id="abceeb37cdb74dc337bf991fc91759467" name="abceeb37cdb74dc337bf991fc91759467"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abceeb37cdb74dc337bf991fc91759467">&#9670;&#160;</a></span>ELASTIC_IN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -382,8 +403,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a89590d4a433c1f58bb3fbd5521dd6f70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89590d4a433c1f58bb3fbd5521dd6f70">&#9670;&nbsp;</a></span>ELASTIC_INOUT</h2>
+<a id="a89590d4a433c1f58bb3fbd5521dd6f70" name="a89590d4a433c1f58bb3fbd5521dd6f70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89590d4a433c1f58bb3fbd5521dd6f70">&#9670;&#160;</a></span>ELASTIC_INOUT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -397,8 +418,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a368f8b5a444b35f279c81e82058eb486"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a368f8b5a444b35f279c81e82058eb486">&#9670;&nbsp;</a></span>ELASTIC_OUT</h2>
+<a id="a368f8b5a444b35f279c81e82058eb486" name="a368f8b5a444b35f279c81e82058eb486"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a368f8b5a444b35f279c81e82058eb486">&#9670;&#160;</a></span>ELASTIC_OUT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -412,8 +433,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="afaa4091858667cfb331fd6f83ff675b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afaa4091858667cfb331fd6f83ff675b1">&#9670;&nbsp;</a></span>LINEAR</h2>
+<a id="afaa4091858667cfb331fd6f83ff675b1" name="afaa4091858667cfb331fd6f83ff675b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaa4091858667cfb331fd6f83ff675b1">&#9670;&#160;</a></span>LINEAR</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -427,8 +448,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a4ac3adfb6b96a902c9250065591c4cf5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ac3adfb6b96a902c9250065591c4cf5">&#9670;&nbsp;</a></span>POW_IN</h2>
+<a id="a4ac3adfb6b96a902c9250065591c4cf5" name="a4ac3adfb6b96a902c9250065591c4cf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ac3adfb6b96a902c9250065591c4cf5">&#9670;&#160;</a></span>POW_IN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -442,8 +463,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ac3d04ceb357d56721b1c21e8271297cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3d04ceb357d56721b1c21e8271297cd">&#9670;&nbsp;</a></span>POW_INOUT</h2>
+<a id="ac3d04ceb357d56721b1c21e8271297cd" name="ac3d04ceb357d56721b1c21e8271297cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3d04ceb357d56721b1c21e8271297cd">&#9670;&#160;</a></span>POW_INOUT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -457,8 +478,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ac5148778a75f4b4bf4ec9ac30fb01bb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5148778a75f4b4bf4ec9ac30fb01bb4">&#9670;&nbsp;</a></span>POW_OUT</h2>
+<a id="ac5148778a75f4b4bf4ec9ac30fb01bb4" name="ac5148778a75f4b4bf4ec9ac30fb01bb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5148778a75f4b4bf4ec9ac30fb01bb4">&#9670;&#160;</a></span>POW_OUT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -472,8 +493,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aeae46a0e19b7ffc2dd28cf13351007bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeae46a0e19b7ffc2dd28cf13351007bb">&#9670;&nbsp;</a></span>QUADRATIC_IN</h2>
+<a id="aeae46a0e19b7ffc2dd28cf13351007bb" name="aeae46a0e19b7ffc2dd28cf13351007bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeae46a0e19b7ffc2dd28cf13351007bb">&#9670;&#160;</a></span>QUADRATIC_IN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -487,8 +508,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a8fc82d8f1a2edcfce47fcb0588b9287e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fc82d8f1a2edcfce47fcb0588b9287e">&#9670;&nbsp;</a></span>QUADRATIC_INOUT</h2>
+<a id="a8fc82d8f1a2edcfce47fcb0588b9287e" name="a8fc82d8f1a2edcfce47fcb0588b9287e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fc82d8f1a2edcfce47fcb0588b9287e">&#9670;&#160;</a></span>QUADRATIC_INOUT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -502,8 +523,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a5f4f40185da5fedc62558fbee384e7e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f4f40185da5fedc62558fbee384e7e3">&#9670;&nbsp;</a></span>QUADRATIC_OUT</h2>
+<a id="a5f4f40185da5fedc62558fbee384e7e3" name="a5f4f40185da5fedc62558fbee384e7e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f4f40185da5fedc62558fbee384e7e3">&#9670;&#160;</a></span>QUADRATIC_OUT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -517,8 +538,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="af117bd0247f2e0cf0eb178a2f8813f2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af117bd0247f2e0cf0eb178a2f8813f2f">&#9670;&nbsp;</a></span>SIN_IN</h2>
+<a id="af117bd0247f2e0cf0eb178a2f8813f2f" name="af117bd0247f2e0cf0eb178a2f8813f2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af117bd0247f2e0cf0eb178a2f8813f2f">&#9670;&#160;</a></span>SIN_IN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -532,8 +553,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aaf7a2983cc29907a40fcb1c7be01f581"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf7a2983cc29907a40fcb1c7be01f581">&#9670;&nbsp;</a></span>SIN_INOUT</h2>
+<a id="aaf7a2983cc29907a40fcb1c7be01f581" name="aaf7a2983cc29907a40fcb1c7be01f581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf7a2983cc29907a40fcb1c7be01f581">&#9670;&#160;</a></span>SIN_INOUT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -547,8 +568,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a4cd1e15ad5320bd9847d8f3da3c82893"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cd1e15ad5320bd9847d8f3da3c82893">&#9670;&nbsp;</a></span>SIN_OUT</h2>
+<a id="a4cd1e15ad5320bd9847d8f3da3c82893" name="a4cd1e15ad5320bd9847d8f3da3c82893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cd1e15ad5320bd9847d8f3da3c82893">&#9670;&#160;</a></span>SIN_OUT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -563,12 +584,13 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <hr/>枚举说明文档从下列文件生成:<ul>
-<li>output/TEasingType.java</li>
+<li>output/<b>TEasingType.java</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

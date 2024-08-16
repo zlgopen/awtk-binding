@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TInputMethod类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,64 +70,71 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="class_t_input_method-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">TInputMethod类 参考</div>  </div>
+  <div class="headertitle"><div class="title">TInputMethod类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a53115d8659e8077dfe8a291a851eb91e"><td class="memItemLeft" align="right" valign="top"><a id="a53115d8659e8077dfe8a291a851eb91e"></a>
+<tr class="memitem:a53115d8659e8077dfe8a291a851eb91e" id="r_a53115d8659e8077dfe8a291a851eb91e"><td class="memItemLeft" align="right" valign="top"><a id="a53115d8659e8077dfe8a291a851eb91e" name="a53115d8659e8077dfe8a291a851eb91e"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TInputMethod</b> (input_method_t *nativeObj)</td></tr>
 <tr class="separator:a53115d8659e8077dfe8a291a851eb91e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac15b07e3065cb798f75d25df6bc6461"><td class="memItemLeft" align="right" valign="top"><a id="aac15b07e3065cb798f75d25df6bc6461"></a>
+<tr class="memitem:aac15b07e3065cb798f75d25df6bc6461" id="r_aac15b07e3065cb798f75d25df6bc6461"><td class="memItemLeft" align="right" valign="top"><a id="aac15b07e3065cb798f75d25df6bc6461" name="aac15b07e3065cb798f75d25df6bc6461"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TInputMethod</b> (const input_method_t *nativeObj)</td></tr>
 <tr class="separator:aac15b07e3065cb798f75d25df6bc6461"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfc3baefddac2f2c5ee69d5dafeb8714"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_input_method.html#adfc3baefddac2f2c5ee69d5dafeb8714">CommitText</a> (const char *text)</td></tr>
+<tr class="memitem:adfc3baefddac2f2c5ee69d5dafeb8714" id="r_adfc3baefddac2f2c5ee69d5dafeb8714"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfc3baefddac2f2c5ee69d5dafeb8714">CommitText</a> (const char *text)</td></tr>
 <tr class="separator:adfc3baefddac2f2c5ee69d5dafeb8714"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a498411665d7fdabb61a4bf70db32a379"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_input_method.html#a498411665d7fdabb61a4bf70db32a379">SetLang</a> (const char *lang)</td></tr>
+<tr class="memitem:a498411665d7fdabb61a4bf70db32a379" id="r_a498411665d7fdabb61a4bf70db32a379"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a498411665d7fdabb61a4bf70db32a379">SetLang</a> (const char *lang)</td></tr>
 <tr class="separator:a498411665d7fdabb61a4bf70db32a379"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad5dc45d2a1541e151b5bbb3b33f6ee6"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_input_method.html#aad5dc45d2a1541e151b5bbb3b33f6ee6">GetLang</a> ()</td></tr>
+<tr class="memitem:aad5dc45d2a1541e151b5bbb3b33f6ee6" id="r_aad5dc45d2a1541e151b5bbb3b33f6ee6"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad5dc45d2a1541e151b5bbb3b33f6ee6">GetLang</a> ()</td></tr>
 <tr class="separator:aad5dc45d2a1541e151b5bbb3b33f6ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36159e392001b71358ee35b84ae60691"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_input_method.html#a36159e392001b71358ee35b84ae60691">DispatchKey</a> (uint32_t key)</td></tr>
+<tr class="memitem:a36159e392001b71358ee35b84ae60691" id="r_a36159e392001b71358ee35b84ae60691"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36159e392001b71358ee35b84ae60691">DispatchKey</a> (uint32_t key)</td></tr>
 <tr class="separator:a36159e392001b71358ee35b84ae60691"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18759e51cd32bd93330bff954f70ff98"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_input_method.html#a18759e51cd32bd93330bff954f70ff98">DispatchKeys</a> (const char *keys)</td></tr>
+<tr class="memitem:a18759e51cd32bd93330bff954f70ff98" id="r_a18759e51cd32bd93330bff954f70ff98"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18759e51cd32bd93330bff954f70ff98">DispatchKeys</a> (const char *keys)</td></tr>
 <tr class="separator:a18759e51cd32bd93330bff954f70ff98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4064965bbb3574c9f95dced6d0e7a787"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_input_method.html#a4064965bbb3574c9f95dced6d0e7a787">DispatchPreedit</a> ()</td></tr>
+<tr class="memitem:a4064965bbb3574c9f95dced6d0e7a787" id="r_a4064965bbb3574c9f95dced6d0e7a787"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4064965bbb3574c9f95dced6d0e7a787">DispatchPreedit</a> ()</td></tr>
 <tr class="separator:a4064965bbb3574c9f95dced6d0e7a787"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f6514e00d37e9ccef96f4ce4182df2a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_input_method.html#a4f6514e00d37e9ccef96f4ce4182df2a">DispatchPreeditConfirm</a> ()</td></tr>
+<tr class="memitem:a4f6514e00d37e9ccef96f4ce4182df2a" id="r_a4f6514e00d37e9ccef96f4ce4182df2a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f6514e00d37e9ccef96f4ce4182df2a">DispatchPreeditConfirm</a> ()</td></tr>
 <tr class="separator:a4f6514e00d37e9ccef96f4ce4182df2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77c1de1ddc3bcd95a3ff5b4ef88d981f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_input_method.html#a77c1de1ddc3bcd95a3ff5b4ef88d981f">DispatchPreeditAbort</a> ()</td></tr>
+<tr class="memitem:a77c1de1ddc3bcd95a3ff5b4ef88d981f" id="r_a77c1de1ddc3bcd95a3ff5b4ef88d981f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77c1de1ddc3bcd95a3ff5b4ef88d981f">DispatchPreeditAbort</a> ()</td></tr>
 <tr class="separator:a77c1de1ddc3bcd95a3ff5b4ef88d981f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a74bab3e08578b1910d0e15a29b8892f4"><td class="memItemLeft" align="right" valign="top"><a id="a74bab3e08578b1910d0e15a29b8892f4"></a>
+<tr class="memitem:a74bab3e08578b1910d0e15a29b8892f4" id="r_a74bab3e08578b1910d0e15a29b8892f4"><td class="memItemLeft" align="right" valign="top"><a id="a74bab3e08578b1910d0e15a29b8892f4" name="a74bab3e08578b1910d0e15a29b8892f4"></a>
 static <a class="el" href="class_t_input_method.html">TInputMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (input_method_t *nativeObj)</td></tr>
 <tr class="separator:a74bab3e08578b1910d0e15a29b8892f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadc8340dcd3d6b9b177a91754744d3ec"><td class="memItemLeft" align="right" valign="top"><a id="aadc8340dcd3d6b9b177a91754744d3ec"></a>
+<tr class="memitem:aadc8340dcd3d6b9b177a91754744d3ec" id="r_aadc8340dcd3d6b9b177a91754744d3ec"><td class="memItemLeft" align="right" valign="top"><a id="aadc8340dcd3d6b9b177a91754744d3ec" name="aadc8340dcd3d6b9b177a91754744d3ec"></a>
 static <a class="el" href="class_t_input_method.html">TInputMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const input_method_t *nativeObj)</td></tr>
 <tr class="separator:aadc8340dcd3d6b9b177a91754744d3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae652b2cad41da7d9f73b44c7bd99ec9a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_input_method.html">TInputMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_input_method.html#ae652b2cad41da7d9f73b44c7bd99ec9a">Instance</a> ()</td></tr>
+<tr class="memitem:ae652b2cad41da7d9f73b44c7bd99ec9a" id="r_ae652b2cad41da7d9f73b44c7bd99ec9a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_input_method.html">TInputMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae652b2cad41da7d9f73b44c7bd99ec9a">Instance</a> ()</td></tr>
 <tr class="separator:ae652b2cad41da7d9f73b44c7bd99ec9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:a6481a77d3e349d11b8f4ecbc9fe50039"><td class="memItemLeft" align="right" valign="top"><a id="a6481a77d3e349d11b8f4ecbc9fe50039"></a>
+<tr class="memitem:a6481a77d3e349d11b8f4ecbc9fe50039" id="r_a6481a77d3e349d11b8f4ecbc9fe50039"><td class="memItemLeft" align="right" valign="top"><a id="a6481a77d3e349d11b8f4ecbc9fe50039" name="a6481a77d3e349d11b8f4ecbc9fe50039"></a>
 input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td></tr>
 <tr class="separator:a6481a77d3e349d11b8f4ecbc9fe50039"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -123,11 +145,11 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
 <p>缺省实现。用于需要输入法的嵌入式平台。</p>
 <p>基于SDL实现的平台原生输入法。用于桌面系统和手机系统。</p>
 <blockquote class="doxtable">
-<p>输入类型请参考：input\_type </p>
+<p>&zwj;输入类型请参考：input_type </p>
 </blockquote>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="adfc3baefddac2f2c5ee69d5dafeb8714"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfc3baefddac2f2c5ee69d5dafeb8714">&#9670;&nbsp;</a></span>CommitText()</h2>
+<a id="adfc3baefddac2f2c5ee69d5dafeb8714" name="adfc3baefddac2f2c5ee69d5dafeb8714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfc3baefddac2f2c5ee69d5dafeb8714">&#9670;&#160;</a></span>CommitText()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,8 +157,7 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
         <tr>
           <td class="memname">ret_t TInputMethod::CommitText </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>text</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>text</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -152,8 +173,8 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
 
 </div>
 </div>
-<a id="a36159e392001b71358ee35b84ae60691"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36159e392001b71358ee35b84ae60691">&#9670;&nbsp;</a></span>DispatchKey()</h2>
+<a id="a36159e392001b71358ee35b84ae60691" name="a36159e392001b71358ee35b84ae60691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36159e392001b71358ee35b84ae60691">&#9670;&#160;</a></span>DispatchKey()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -161,8 +182,7 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
         <tr>
           <td class="memname">ret_t TInputMethod::DispatchKey </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>key</em></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -178,8 +198,8 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
 
 </div>
 </div>
-<a id="a18759e51cd32bd93330bff954f70ff98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18759e51cd32bd93330bff954f70ff98">&#9670;&nbsp;</a></span>DispatchKeys()</h2>
+<a id="a18759e51cd32bd93330bff954f70ff98" name="a18759e51cd32bd93330bff954f70ff98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18759e51cd32bd93330bff954f70ff98">&#9670;&#160;</a></span>DispatchKeys()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -187,8 +207,7 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
         <tr>
           <td class="memname">ret_t TInputMethod::DispatchKeys </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>keys</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>keys</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -204,8 +223,8 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
 
 </div>
 </div>
-<a id="a4064965bbb3574c9f95dced6d0e7a787"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4064965bbb3574c9f95dced6d0e7a787">&#9670;&nbsp;</a></span>DispatchPreedit()</h2>
+<a id="a4064965bbb3574c9f95dced6d0e7a787" name="a4064965bbb3574c9f95dced6d0e7a787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4064965bbb3574c9f95dced6d0e7a787">&#9670;&#160;</a></span>DispatchPreedit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,7 +232,7 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
         <tr>
           <td class="memname">ret_t TInputMethod::DispatchPreedit </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -223,8 +242,8 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
 
 </div>
 </div>
-<a id="a77c1de1ddc3bcd95a3ff5b4ef88d981f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77c1de1ddc3bcd95a3ff5b4ef88d981f">&#9670;&nbsp;</a></span>DispatchPreeditAbort()</h2>
+<a id="a77c1de1ddc3bcd95a3ff5b4ef88d981f" name="a77c1de1ddc3bcd95a3ff5b4ef88d981f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77c1de1ddc3bcd95a3ff5b4ef88d981f">&#9670;&#160;</a></span>DispatchPreeditAbort()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -232,7 +251,7 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
         <tr>
           <td class="memname">ret_t TInputMethod::DispatchPreeditAbort </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -242,8 +261,8 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
 
 </div>
 </div>
-<a id="a4f6514e00d37e9ccef96f4ce4182df2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f6514e00d37e9ccef96f4ce4182df2a">&#9670;&nbsp;</a></span>DispatchPreeditConfirm()</h2>
+<a id="a4f6514e00d37e9ccef96f4ce4182df2a" name="a4f6514e00d37e9ccef96f4ce4182df2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f6514e00d37e9ccef96f4ce4182df2a">&#9670;&#160;</a></span>DispatchPreeditConfirm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -251,7 +270,7 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
         <tr>
           <td class="memname">ret_t TInputMethod::DispatchPreeditConfirm </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -261,8 +280,8 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
 
 </div>
 </div>
-<a id="aad5dc45d2a1541e151b5bbb3b33f6ee6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad5dc45d2a1541e151b5bbb3b33f6ee6">&#9670;&nbsp;</a></span>GetLang()</h2>
+<a id="aad5dc45d2a1541e151b5bbb3b33f6ee6" name="aad5dc45d2a1541e151b5bbb3b33f6ee6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad5dc45d2a1541e151b5bbb3b33f6ee6">&#9670;&#160;</a></span>GetLang()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,7 +289,7 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
         <tr>
           <td class="memname">const char * TInputMethod::GetLang </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -280,8 +299,8 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
 
 </div>
 </div>
-<a id="ae652b2cad41da7d9f73b44c7bd99ec9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae652b2cad41da7d9f73b44c7bd99ec9a">&#9670;&nbsp;</a></span>Instance()</h2>
+<a id="ae652b2cad41da7d9f73b44c7bd99ec9a" name="ae652b2cad41da7d9f73b44c7bd99ec9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae652b2cad41da7d9f73b44c7bd99ec9a">&#9670;&#160;</a></span>Instance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,7 +311,7 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
         <tr>
           <td class="memname"><a class="el" href="class_t_input_method.html">TInputMethod</a> TInputMethod::Instance </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -307,8 +326,8 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
 
 </div>
 </div>
-<a id="a498411665d7fdabb61a4bf70db32a379"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a498411665d7fdabb61a4bf70db32a379">&#9670;&nbsp;</a></span>SetLang()</h2>
+<a id="a498411665d7fdabb61a4bf70db32a379" name="a498411665d7fdabb61a4bf70db32a379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a498411665d7fdabb61a4bf70db32a379">&#9670;&#160;</a></span>SetLang()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -316,15 +335,14 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
         <tr>
           <td class="memname">ret_t TInputMethod::SetLang </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>lang</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>lang</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>设置语言。</p>
 <blockquote class="doxtable">
-<p>有时在同一种语言环境下，也需要输入多种文字，典型的情况是同时输入中文和英文。 比如T9输入法，可以同时支持中文和英文输入，配合软键盘随时切换输入的语言。 数字、小写字母、大写字母和符合也可以视为输入的语言。 主要用于提示输入法引擎选择适当的输入方法。 </p>
+<p>&zwj;有时在同一种语言环境下，也需要输入多种文字，典型的情况是同时输入中文和英文。 比如T9输入法，可以同时支持中文和英文输入，配合软键盘随时切换输入的语言。 数字、小写字母、大写字母和符合也可以视为输入的语言。 主要用于提示输入法引擎选择适当的输入方法。 </p>
 </blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -338,12 +356,13 @@ input_method_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
-<li>output/awtk_cpp.cpp</li>
+<li>output/<b>awtk_cpp.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

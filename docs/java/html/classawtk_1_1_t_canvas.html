@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TCanvas类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-JAVA
    </div>
    <div id="projectbrief">AWTK JAVA API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,9 +70,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,105 +87,105 @@ $(function() {
 <li class="navelem"><b>awtk</b></li><li class="navelem"><a class="el" href="classawtk_1_1_t_canvas.html">TCanvas</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="classawtk_1_1_t_canvas-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">awtk.TCanvas类 参考</div>  </div>
+  <div class="headertitle"><div class="title">awtk.TCanvas类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:ae6ce537f347427f4212c76aa222fb1be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#ae6ce537f347427f4212c76aa222fb1be">TCanvas</a> (long <a class="el" href="classawtk_1_1_t_canvas.html#a6267914126e89f090d471ed0db25fca5">nativeObj</a>)</td></tr>
+<tr class="memitem:ae6ce537f347427f4212c76aa222fb1be" id="r_ae6ce537f347427f4212c76aa222fb1be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6ce537f347427f4212c76aa222fb1be">TCanvas</a> (long <a class="el" href="#a6267914126e89f090d471ed0db25fca5">nativeObj</a>)</td></tr>
 <tr class="separator:ae6ce537f347427f4212c76aa222fb1be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ed04304ed34e3f0d6dc3ac27418c5a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a8ed04304ed34e3f0d6dc3ac27418c5a1">getWidth</a> ()</td></tr>
+<tr class="memitem:a8ed04304ed34e3f0d6dc3ac27418c5a1" id="r_a8ed04304ed34e3f0d6dc3ac27418c5a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ed04304ed34e3f0d6dc3ac27418c5a1">getWidth</a> ()</td></tr>
 <tr class="separator:a8ed04304ed34e3f0d6dc3ac27418c5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1162203f70e446298c4bca1f7a493188"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a1162203f70e446298c4bca1f7a493188">getHeight</a> ()</td></tr>
+<tr class="memitem:a1162203f70e446298c4bca1f7a493188" id="r_a1162203f70e446298c4bca1f7a493188"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1162203f70e446298c4bca1f7a493188">getHeight</a> ()</td></tr>
 <tr class="separator:a1162203f70e446298c4bca1f7a493188"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a146064a8f310ecb24fe5d8b0ba32a775"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a146064a8f310ecb24fe5d8b0ba32a775">getClipRect</a> (<a class="el" href="classawtk_1_1_t_rect.html">TRect</a> r)</td></tr>
+<tr class="memitem:a146064a8f310ecb24fe5d8b0ba32a775" id="r_a146064a8f310ecb24fe5d8b0ba32a775"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a146064a8f310ecb24fe5d8b0ba32a775">getClipRect</a> (<a class="el" href="classawtk_1_1_t_rect.html">TRect</a> r)</td></tr>
 <tr class="separator:a146064a8f310ecb24fe5d8b0ba32a775"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada1e3f1fa576782f2d67b5dacc889e73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#ada1e3f1fa576782f2d67b5dacc889e73">setClipRect</a> (<a class="el" href="classawtk_1_1_t_rect.html">TRect</a> r)</td></tr>
+<tr class="memitem:ada1e3f1fa576782f2d67b5dacc889e73" id="r_ada1e3f1fa576782f2d67b5dacc889e73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada1e3f1fa576782f2d67b5dacc889e73">setClipRect</a> (<a class="el" href="classawtk_1_1_t_rect.html">TRect</a> r)</td></tr>
 <tr class="separator:ada1e3f1fa576782f2d67b5dacc889e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addc101af97ad58048989394ebcdf184c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#addc101af97ad58048989394ebcdf184c">setClipRectEx</a> (<a class="el" href="classawtk_1_1_t_rect.html">TRect</a> r, boolean <a class="el" href="classawtk_1_1_t_canvas.html#a8c0409f1ce8ae0f66bab2da8a568a62e">translate</a>)</td></tr>
+<tr class="memitem:addc101af97ad58048989394ebcdf184c" id="r_addc101af97ad58048989394ebcdf184c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addc101af97ad58048989394ebcdf184c">setClipRectEx</a> (<a class="el" href="classawtk_1_1_t_rect.html">TRect</a> r, boolean <a class="el" href="#a8c0409f1ce8ae0f66bab2da8a568a62e">translate</a>)</td></tr>
 <tr class="separator:addc101af97ad58048989394ebcdf184c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a910e37788ed77f971479b00530f58d24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a910e37788ed77f971479b00530f58d24">setFillColor</a> (String color)</td></tr>
+<tr class="memitem:a910e37788ed77f971479b00530f58d24" id="r_a910e37788ed77f971479b00530f58d24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a910e37788ed77f971479b00530f58d24">setFillColor</a> (String color)</td></tr>
 <tr class="separator:a910e37788ed77f971479b00530f58d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acca25cd08ea016f0e610605f0cbeb1c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#acca25cd08ea016f0e610605f0cbeb1c7">setTextColor</a> (String color)</td></tr>
+<tr class="memitem:acca25cd08ea016f0e610605f0cbeb1c7" id="r_acca25cd08ea016f0e610605f0cbeb1c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acca25cd08ea016f0e610605f0cbeb1c7">setTextColor</a> (String color)</td></tr>
 <tr class="separator:acca25cd08ea016f0e610605f0cbeb1c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59d088efdb998614a083939cd062b8e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a59d088efdb998614a083939cd062b8e1">setStrokeColor</a> (String color)</td></tr>
+<tr class="memitem:a59d088efdb998614a083939cd062b8e1" id="r_a59d088efdb998614a083939cd062b8e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59d088efdb998614a083939cd062b8e1">setStrokeColor</a> (String color)</td></tr>
 <tr class="separator:a59d088efdb998614a083939cd062b8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94d85e88d141044323c7f4871ead2890"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a94d85e88d141044323c7f4871ead2890">setGlobalAlpha</a> (int alpha)</td></tr>
+<tr class="memitem:a94d85e88d141044323c7f4871ead2890" id="r_a94d85e88d141044323c7f4871ead2890"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94d85e88d141044323c7f4871ead2890">setGlobalAlpha</a> (int alpha)</td></tr>
 <tr class="separator:a94d85e88d141044323c7f4871ead2890"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c0409f1ce8ae0f66bab2da8a568a62e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a8c0409f1ce8ae0f66bab2da8a568a62e">translate</a> (int dx, int dy)</td></tr>
+<tr class="memitem:a8c0409f1ce8ae0f66bab2da8a568a62e" id="r_a8c0409f1ce8ae0f66bab2da8a568a62e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c0409f1ce8ae0f66bab2da8a568a62e">translate</a> (int dx, int dy)</td></tr>
 <tr class="separator:a8c0409f1ce8ae0f66bab2da8a568a62e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b506ca7f283a042e55f7512a4645024"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a5b506ca7f283a042e55f7512a4645024">untranslate</a> (int dx, int dy)</td></tr>
+<tr class="memitem:a5b506ca7f283a042e55f7512a4645024" id="r_a5b506ca7f283a042e55f7512a4645024"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b506ca7f283a042e55f7512a4645024">untranslate</a> (int dx, int dy)</td></tr>
 <tr class="separator:a5b506ca7f283a042e55f7512a4645024"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47fa517d8c54a6527c8cafa25b720513"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a47fa517d8c54a6527c8cafa25b720513">drawVline</a> (int x, int y, int h)</td></tr>
+<tr class="memitem:a47fa517d8c54a6527c8cafa25b720513" id="r_a47fa517d8c54a6527c8cafa25b720513"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47fa517d8c54a6527c8cafa25b720513">drawVline</a> (int x, int y, int h)</td></tr>
 <tr class="separator:a47fa517d8c54a6527c8cafa25b720513"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a557863de12baaf7bd2d6ae38b98bc73d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a557863de12baaf7bd2d6ae38b98bc73d">drawHline</a> (int x, int y, int w)</td></tr>
+<tr class="memitem:a557863de12baaf7bd2d6ae38b98bc73d" id="r_a557863de12baaf7bd2d6ae38b98bc73d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a557863de12baaf7bd2d6ae38b98bc73d">drawHline</a> (int x, int y, int w)</td></tr>
 <tr class="separator:a557863de12baaf7bd2d6ae38b98bc73d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1918498050b94e19e1aad757515cd9ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a1918498050b94e19e1aad757515cd9ec">fillRect</a> (int x, int y, int w, int h)</td></tr>
+<tr class="memitem:a1918498050b94e19e1aad757515cd9ec" id="r_a1918498050b94e19e1aad757515cd9ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1918498050b94e19e1aad757515cd9ec">fillRect</a> (int x, int y, int w, int h)</td></tr>
 <tr class="separator:a1918498050b94e19e1aad757515cd9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c6e018c892a5c5a19113edf02591468"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a0c6e018c892a5c5a19113edf02591468">clearRect</a> (int x, int y, int w, int h)</td></tr>
+<tr class="memitem:a0c6e018c892a5c5a19113edf02591468" id="r_a0c6e018c892a5c5a19113edf02591468"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c6e018c892a5c5a19113edf02591468">clearRect</a> (int x, int y, int w, int h)</td></tr>
 <tr class="separator:a0c6e018c892a5c5a19113edf02591468"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d69197b88b37cb9105c190cb797f047"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a8d69197b88b37cb9105c190cb797f047">strokeRect</a> (int x, int y, int w, int h)</td></tr>
+<tr class="memitem:a8d69197b88b37cb9105c190cb797f047" id="r_a8d69197b88b37cb9105c190cb797f047"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d69197b88b37cb9105c190cb797f047">strokeRect</a> (int x, int y, int w, int h)</td></tr>
 <tr class="separator:a8d69197b88b37cb9105c190cb797f047"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a234ef1e285faebad3be190ac0158e82c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a234ef1e285faebad3be190ac0158e82c">setFont</a> (String name, int size)</td></tr>
+<tr class="memitem:a234ef1e285faebad3be190ac0158e82c" id="r_a234ef1e285faebad3be190ac0158e82c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a234ef1e285faebad3be190ac0158e82c">setFont</a> (String name, int size)</td></tr>
 <tr class="separator:a234ef1e285faebad3be190ac0158e82c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfc46a4100b370f2c0a74abcea3c4b17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#abfc46a4100b370f2c0a74abcea3c4b17">resetFont</a> ()</td></tr>
+<tr class="memitem:abfc46a4100b370f2c0a74abcea3c4b17" id="r_abfc46a4100b370f2c0a74abcea3c4b17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfc46a4100b370f2c0a74abcea3c4b17">resetFont</a> ()</td></tr>
 <tr class="separator:abfc46a4100b370f2c0a74abcea3c4b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ef35196e05c486a40b00fe2fc5c8dc0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a8ef35196e05c486a40b00fe2fc5c8dc0">measureText</a> (String str)</td></tr>
+<tr class="memitem:a8ef35196e05c486a40b00fe2fc5c8dc0" id="r_a8ef35196e05c486a40b00fe2fc5c8dc0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ef35196e05c486a40b00fe2fc5c8dc0">measureText</a> (String str)</td></tr>
 <tr class="separator:a8ef35196e05c486a40b00fe2fc5c8dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafbd9198304c60f93a9dc68b9d325260"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#aafbd9198304c60f93a9dc68b9d325260">drawText</a> (String str, int x, int y)</td></tr>
+<tr class="memitem:aafbd9198304c60f93a9dc68b9d325260" id="r_aafbd9198304c60f93a9dc68b9d325260"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafbd9198304c60f93a9dc68b9d325260">drawText</a> (String str, int x, int y)</td></tr>
 <tr class="separator:aafbd9198304c60f93a9dc68b9d325260"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ea2fa6c22974d83b3962858decdae55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a7ea2fa6c22974d83b3962858decdae55">drawTextInRect</a> (String str, <a class="el" href="classawtk_1_1_t_rect.html">TRect</a> r)</td></tr>
+<tr class="memitem:a7ea2fa6c22974d83b3962858decdae55" id="r_a7ea2fa6c22974d83b3962858decdae55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ea2fa6c22974d83b3962858decdae55">drawTextInRect</a> (String str, <a class="el" href="classawtk_1_1_t_rect.html">TRect</a> r)</td></tr>
 <tr class="separator:a7ea2fa6c22974d83b3962858decdae55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c70b28df19fe12b620227d867a002f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a0c70b28df19fe12b620227d867a002f9">drawIcon</a> (<a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img, int cx, int cy)</td></tr>
+<tr class="memitem:a0c70b28df19fe12b620227d867a002f9" id="r_a0c70b28df19fe12b620227d867a002f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c70b28df19fe12b620227d867a002f9">drawIcon</a> (<a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img, int cx, int cy)</td></tr>
 <tr class="separator:a0c70b28df19fe12b620227d867a002f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e8864c61f8cdd4c64463edcb1f7a180"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a0e8864c61f8cdd4c64463edcb1f7a180">drawImage</a> (<a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img, <a class="el" href="classawtk_1_1_t_rect.html">TRect</a> src, <a class="el" href="classawtk_1_1_t_rect.html">TRect</a> dst)</td></tr>
+<tr class="memitem:a0e8864c61f8cdd4c64463edcb1f7a180" id="r_a0e8864c61f8cdd4c64463edcb1f7a180"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e8864c61f8cdd4c64463edcb1f7a180">drawImage</a> (<a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img, <a class="el" href="classawtk_1_1_t_rect.html">TRect</a> src, <a class="el" href="classawtk_1_1_t_rect.html">TRect</a> dst)</td></tr>
 <tr class="separator:a0e8864c61f8cdd4c64463edcb1f7a180"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d370677c6e1de65fbede6a725359d5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a7d370677c6e1de65fbede6a725359d5e">drawImageEx</a> (<a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img, <a class="el" href="enumawtk_1_1_t_image_draw_type.html">TImageDrawType</a> draw_type, <a class="el" href="classawtk_1_1_t_rect.html">TRect</a> dst)</td></tr>
+<tr class="memitem:a7d370677c6e1de65fbede6a725359d5e" id="r_a7d370677c6e1de65fbede6a725359d5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d370677c6e1de65fbede6a725359d5e">drawImageEx</a> (<a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img, <a class="el" href="enumawtk_1_1_t_image_draw_type.html">TImageDrawType</a> draw_type, <a class="el" href="classawtk_1_1_t_rect.html">TRect</a> dst)</td></tr>
 <tr class="separator:a7d370677c6e1de65fbede6a725359d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0173328ea80b08b344d3395df0be5802"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a0173328ea80b08b344d3395df0be5802">drawImageEx2</a> (<a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img, <a class="el" href="enumawtk_1_1_t_image_draw_type.html">TImageDrawType</a> draw_type, <a class="el" href="classawtk_1_1_t_rect.html">TRect</a> src, <a class="el" href="classawtk_1_1_t_rect.html">TRect</a> dst)</td></tr>
+<tr class="memitem:a0173328ea80b08b344d3395df0be5802" id="r_a0173328ea80b08b344d3395df0be5802"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0173328ea80b08b344d3395df0be5802">drawImageEx2</a> (<a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img, <a class="el" href="enumawtk_1_1_t_image_draw_type.html">TImageDrawType</a> draw_type, <a class="el" href="classawtk_1_1_t_rect.html">TRect</a> src, <a class="el" href="classawtk_1_1_t_rect.html">TRect</a> dst)</td></tr>
 <tr class="separator:a0173328ea80b08b344d3395df0be5802"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c2e9c2d947c6be5986557542e3f0cb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_vgcanvas.html">TVgcanvas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a1c2e9c2d947c6be5986557542e3f0cb3">getVgcanvas</a> ()</td></tr>
+<tr class="memitem:a1c2e9c2d947c6be5986557542e3f0cb3" id="r_a1c2e9c2d947c6be5986557542e3f0cb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_vgcanvas.html">TVgcanvas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c2e9c2d947c6be5986557542e3f0cb3">getVgcanvas</a> ()</td></tr>
 <tr class="separator:a1c2e9c2d947c6be5986557542e3f0cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada3d9b9d00bba75d18a10c182ed1e45e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#ada3d9b9d00bba75d18a10c182ed1e45e">reset</a> ()</td></tr>
+<tr class="memitem:ada3d9b9d00bba75d18a10c182ed1e45e" id="r_ada3d9b9d00bba75d18a10c182ed1e45e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada3d9b9d00bba75d18a10c182ed1e45e">reset</a> ()</td></tr>
 <tr class="separator:ada3d9b9d00bba75d18a10c182ed1e45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65ed3eee2ac207e8db9909c87bc910bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a65ed3eee2ac207e8db9909c87bc910bc">resetCache</a> ()</td></tr>
+<tr class="memitem:a65ed3eee2ac207e8db9909c87bc910bc" id="r_a65ed3eee2ac207e8db9909c87bc910bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65ed3eee2ac207e8db9909c87bc910bc">resetCache</a> ()</td></tr>
 <tr class="separator:a65ed3eee2ac207e8db9909c87bc910bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0930014abbae77dbe19be19db0b5d79"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#ae0930014abbae77dbe19be19db0b5d79">getOx</a> ()</td></tr>
+<tr class="memitem:ae0930014abbae77dbe19be19db0b5d79" id="r_ae0930014abbae77dbe19be19db0b5d79"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0930014abbae77dbe19be19db0b5d79">getOx</a> ()</td></tr>
 <tr class="separator:ae0930014abbae77dbe19be19db0b5d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a927d59cee07158c2105ff0f6baa9fc96"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a927d59cee07158c2105ff0f6baa9fc96">getOy</a> ()</td></tr>
+<tr class="memitem:a927d59cee07158c2105ff0f6baa9fc96" id="r_a927d59cee07158c2105ff0f6baa9fc96"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a927d59cee07158c2105ff0f6baa9fc96">getOy</a> ()</td></tr>
 <tr class="separator:a927d59cee07158c2105ff0f6baa9fc96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1b1b45f6ca873ba4e59f642d7755d2a"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#af1b1b45f6ca873ba4e59f642d7755d2a">getFontName</a> ()</td></tr>
+<tr class="memitem:af1b1b45f6ca873ba4e59f642d7755d2a" id="r_af1b1b45f6ca873ba4e59f642d7755d2a"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1b1b45f6ca873ba4e59f642d7755d2a">getFontName</a> ()</td></tr>
 <tr class="separator:af1b1b45f6ca873ba4e59f642d7755d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad320c5c64d628e139c92b3df239762d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#ad320c5c64d628e139c92b3df239762d5">getFontSize</a> ()</td></tr>
+<tr class="memitem:ad320c5c64d628e139c92b3df239762d5" id="r_ad320c5c64d628e139c92b3df239762d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad320c5c64d628e139c92b3df239762d5">getFontSize</a> ()</td></tr>
 <tr class="separator:ad320c5c64d628e139c92b3df239762d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35748380eb8beec4cb91904c427fa2f3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a35748380eb8beec4cb91904c427fa2f3">getGlobalAlpha</a> ()</td></tr>
+<tr class="memitem:a35748380eb8beec4cb91904c427fa2f3" id="r_a35748380eb8beec4cb91904c427fa2f3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35748380eb8beec4cb91904c427fa2f3">getGlobalAlpha</a> ()</td></tr>
 <tr class="separator:a35748380eb8beec4cb91904c427fa2f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a32e49929b25e1a3d85465888239b6977"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_canvas.html">TCanvas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a32e49929b25e1a3d85465888239b6977">cast</a> (long <a class="el" href="classawtk_1_1_t_canvas.html#a6267914126e89f090d471ed0db25fca5">nativeObj</a>)</td></tr>
+<tr class="memitem:a32e49929b25e1a3d85465888239b6977" id="r_a32e49929b25e1a3d85465888239b6977"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_canvas.html">TCanvas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32e49929b25e1a3d85465888239b6977">cast</a> (long <a class="el" href="#a6267914126e89f090d471ed0db25fca5">nativeObj</a>)</td></tr>
 <tr class="separator:a32e49929b25e1a3d85465888239b6977"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4603c8e0fab57b4d4af497859c7ee01b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_canvas.html">TCanvas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a4603c8e0fab57b4d4af497859c7ee01b">cast</a> (<a class="el" href="classawtk_1_1_t_canvas.html">TCanvas</a> c)</td></tr>
+<tr class="memitem:a4603c8e0fab57b4d4af497859c7ee01b" id="r_a4603c8e0fab57b4d4af497859c7ee01b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_canvas.html">TCanvas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4603c8e0fab57b4d4af497859c7ee01b">cast</a> (<a class="el" href="classawtk_1_1_t_canvas.html">TCanvas</a> c)</td></tr>
 <tr class="separator:a4603c8e0fab57b4d4af497859c7ee01b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:a6267914126e89f090d471ed0db25fca5"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_canvas.html#a6267914126e89f090d471ed0db25fca5">nativeObj</a></td></tr>
+<tr class="memitem:a6267914126e89f090d471ed0db25fca5" id="r_a6267914126e89f090d471ed0db25fca5"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6267914126e89f090d471ed0db25fca5">nativeObj</a></td></tr>
 <tr class="separator:a6267914126e89f090d471ed0db25fca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>提供基本的绘图功能和状态管理。 </p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
-<a id="ae6ce537f347427f4212c76aa222fb1be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6ce537f347427f4212c76aa222fb1be">&#9670;&nbsp;</a></span>TCanvas()</h2>
+<a id="ae6ce537f347427f4212c76aa222fb1be" name="ae6ce537f347427f4212c76aa222fb1be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6ce537f347427f4212c76aa222fb1be">&#9670;&#160;</a></span>TCanvas()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -174,8 +196,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">awtk.TCanvas.TCanvas </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>nativeObj</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>nativeObj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -197,8 +218,8 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a id="a32e49929b25e1a3d85465888239b6977"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32e49929b25e1a3d85465888239b6977">&#9670;&nbsp;</a></span>cast() <span class="overload">[1/2]</span></h2>
+<a id="a32e49929b25e1a3d85465888239b6977" name="a32e49929b25e1a3d85465888239b6977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32e49929b25e1a3d85465888239b6977">&#9670;&#160;</a></span>cast() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,8 +230,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_canvas.html">TCanvas</a> awtk.TCanvas.cast </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>nativeObj</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>nativeObj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -231,8 +251,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a4603c8e0fab57b4d4af497859c7ee01b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4603c8e0fab57b4d4af497859c7ee01b">&#9670;&nbsp;</a></span>cast() <span class="overload">[2/2]</span></h2>
+<a id="a4603c8e0fab57b4d4af497859c7ee01b" name="a4603c8e0fab57b4d4af497859c7ee01b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4603c8e0fab57b4d4af497859c7ee01b">&#9670;&#160;</a></span>cast() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,8 +263,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_canvas.html">TCanvas</a> awtk.TCanvas.cast </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_canvas.html">TCanvas</a>&#160;</td>
-          <td class="paramname"><em>c</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_canvas.html">TCanvas</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -265,8 +284,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a0c6e018c892a5c5a19113edf02591468"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c6e018c892a5c5a19113edf02591468">&#9670;&nbsp;</a></span>clearRect()</h2>
+<a id="a0c6e018c892a5c5a19113edf02591468" name="a0c6e018c892a5c5a19113edf02591468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c6e018c892a5c5a19113edf02591468">&#9670;&#160;</a></span>clearRect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -277,31 +296,22 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.clearRect </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>h</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -312,7 +322,7 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>用填充颜色填充指定矩形。</p>
 <blockquote class="doxtable">
-<p>如果lcd的颜色格式带alpha通道，连同alpha的值一起修改。 </p>
+<p>&zwj;如果lcd的颜色格式带alpha通道，连同alpha的值一起修改。 </p>
 </blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -327,8 +337,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a557863de12baaf7bd2d6ae38b98bc73d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a557863de12baaf7bd2d6ae38b98bc73d">&#9670;&nbsp;</a></span>drawHline()</h2>
+<a id="a557863de12baaf7bd2d6ae38b98bc73d" name="a557863de12baaf7bd2d6ae38b98bc73d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a557863de12baaf7bd2d6ae38b98bc73d">&#9670;&#160;</a></span>drawHline()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -339,25 +349,17 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.drawHline </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>w</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>w</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -379,8 +381,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a0c70b28df19fe12b620227d867a002f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c70b28df19fe12b620227d867a002f9">&#9670;&nbsp;</a></span>drawIcon()</h2>
+<a id="a0c70b28df19fe12b620227d867a002f9" name="a0c70b28df19fe12b620227d867a002f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c70b28df19fe12b620227d867a002f9">&#9670;&#160;</a></span>drawIcon()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -391,25 +393,17 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.drawIcon </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a>&#160;</td>
-          <td class="paramname"><em>img</em>, </td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a></td>          <td class="paramname"><span class="paramname"><em>img</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cx</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cy</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cy</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -431,8 +425,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a0e8864c61f8cdd4c64463edcb1f7a180"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e8864c61f8cdd4c64463edcb1f7a180">&#9670;&nbsp;</a></span>drawImage()</h2>
+<a id="a0e8864c61f8cdd4c64463edcb1f7a180" name="a0e8864c61f8cdd4c64463edcb1f7a180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e8864c61f8cdd4c64463edcb1f7a180">&#9670;&#160;</a></span>drawImage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -443,25 +437,17 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.drawImage </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a>&#160;</td>
-          <td class="paramname"><em>img</em>, </td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a></td>          <td class="paramname"><span class="paramname"><em>img</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a>&#160;</td>
-          <td class="paramname"><em>src</em>, </td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a></td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a>&#160;</td>
-          <td class="paramname"><em>dst</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a></td>          <td class="paramname"><span class="paramname"><em>dst</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -483,8 +469,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a7d370677c6e1de65fbede6a725359d5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d370677c6e1de65fbede6a725359d5e">&#9670;&nbsp;</a></span>drawImageEx()</h2>
+<a id="a7d370677c6e1de65fbede6a725359d5e" name="a7d370677c6e1de65fbede6a725359d5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d370677c6e1de65fbede6a725359d5e">&#9670;&#160;</a></span>drawImageEx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -495,25 +481,17 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.drawImageEx </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a>&#160;</td>
-          <td class="paramname"><em>img</em>, </td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a></td>          <td class="paramname"><span class="paramname"><em>img</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="enumawtk_1_1_t_image_draw_type.html">TImageDrawType</a>&#160;</td>
-          <td class="paramname"><em>draw_type</em>, </td>
+          <td class="paramtype"><a class="el" href="enumawtk_1_1_t_image_draw_type.html">TImageDrawType</a></td>          <td class="paramname"><span class="paramname"><em>draw_type</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a>&#160;</td>
-          <td class="paramname"><em>dst</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a></td>          <td class="paramname"><span class="paramname"><em>dst</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -535,8 +513,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a0173328ea80b08b344d3395df0be5802"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0173328ea80b08b344d3395df0be5802">&#9670;&nbsp;</a></span>drawImageEx2()</h2>
+<a id="a0173328ea80b08b344d3395df0be5802" name="a0173328ea80b08b344d3395df0be5802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0173328ea80b08b344d3395df0be5802">&#9670;&#160;</a></span>drawImageEx2()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -547,31 +525,22 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.drawImageEx2 </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a>&#160;</td>
-          <td class="paramname"><em>img</em>, </td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a></td>          <td class="paramname"><span class="paramname"><em>img</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="enumawtk_1_1_t_image_draw_type.html">TImageDrawType</a>&#160;</td>
-          <td class="paramname"><em>draw_type</em>, </td>
+          <td class="paramtype"><a class="el" href="enumawtk_1_1_t_image_draw_type.html">TImageDrawType</a></td>          <td class="paramname"><span class="paramname"><em>draw_type</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a>&#160;</td>
-          <td class="paramname"><em>src</em>, </td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a></td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a>&#160;</td>
-          <td class="paramname"><em>dst</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a></td>          <td class="paramname"><span class="paramname"><em>dst</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -594,8 +563,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aafbd9198304c60f93a9dc68b9d325260"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafbd9198304c60f93a9dc68b9d325260">&#9670;&nbsp;</a></span>drawText()</h2>
+<a id="aafbd9198304c60f93a9dc68b9d325260" name="aafbd9198304c60f93a9dc68b9d325260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafbd9198304c60f93a9dc68b9d325260">&#9670;&#160;</a></span>drawText()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -606,25 +575,17 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.drawText </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -635,7 +596,7 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>绘制文本。</p>
 <blockquote class="doxtable">
-<p>供脚本语言使用。 </p>
+<p>&zwj;供脚本语言使用。 </p>
 </blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -649,8 +610,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a7ea2fa6c22974d83b3962858decdae55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ea2fa6c22974d83b3962858decdae55">&#9670;&nbsp;</a></span>drawTextInRect()</h2>
+<a id="a7ea2fa6c22974d83b3962858decdae55" name="a7ea2fa6c22974d83b3962858decdae55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ea2fa6c22974d83b3962858decdae55">&#9670;&#160;</a></span>drawTextInRect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -661,19 +622,12 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.drawTextInRect </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a>&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a></td>          <td class="paramname"><span class="paramname"><em>r</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -684,7 +638,7 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>绘制文本。</p>
 <blockquote class="doxtable">
-<p>供脚本语言使用。 </p>
+<p>&zwj;供脚本语言使用。 </p>
 </blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -697,8 +651,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a47fa517d8c54a6527c8cafa25b720513"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47fa517d8c54a6527c8cafa25b720513">&#9670;&nbsp;</a></span>drawVline()</h2>
+<a id="a47fa517d8c54a6527c8cafa25b720513" name="a47fa517d8c54a6527c8cafa25b720513"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47fa517d8c54a6527c8cafa25b720513">&#9670;&#160;</a></span>drawVline()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -709,25 +663,17 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.drawVline </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>h</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -749,8 +695,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a1918498050b94e19e1aad757515cd9ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1918498050b94e19e1aad757515cd9ec">&#9670;&nbsp;</a></span>fillRect()</h2>
+<a id="a1918498050b94e19e1aad757515cd9ec" name="a1918498050b94e19e1aad757515cd9ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1918498050b94e19e1aad757515cd9ec">&#9670;&#160;</a></span>fillRect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -761,31 +707,22 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.fillRect </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>h</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -808,8 +745,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a146064a8f310ecb24fe5d8b0ba32a775"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a146064a8f310ecb24fe5d8b0ba32a775">&#9670;&nbsp;</a></span>getClipRect()</h2>
+<a id="a146064a8f310ecb24fe5d8b0ba32a775" name="a146064a8f310ecb24fe5d8b0ba32a775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a146064a8f310ecb24fe5d8b0ba32a775">&#9670;&#160;</a></span>getClipRect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -820,8 +757,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.getClipRect </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a>&#160;</td>
-          <td class="paramname"><em>r</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a></td>          <td class="paramname"><span class="paramname"><em>r</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -842,8 +778,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="af1b1b45f6ca873ba4e59f642d7755d2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1b1b45f6ca873ba4e59f642d7755d2a">&#9670;&nbsp;</a></span>getFontName()</h2>
+<a id="af1b1b45f6ca873ba4e59f642d7755d2a" name="af1b1b45f6ca873ba4e59f642d7755d2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1b1b45f6ca873ba4e59f642d7755d2a">&#9670;&#160;</a></span>getFontName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -854,7 +790,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TCanvas.getFontName </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -868,8 +804,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ad320c5c64d628e139c92b3df239762d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad320c5c64d628e139c92b3df239762d5">&#9670;&nbsp;</a></span>getFontSize()</h2>
+<a id="ad320c5c64d628e139c92b3df239762d5" name="ad320c5c64d628e139c92b3df239762d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad320c5c64d628e139c92b3df239762d5">&#9670;&#160;</a></span>getFontSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -880,7 +816,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TCanvas.getFontSize </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -894,8 +830,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a35748380eb8beec4cb91904c427fa2f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35748380eb8beec4cb91904c427fa2f3">&#9670;&nbsp;</a></span>getGlobalAlpha()</h2>
+<a id="a35748380eb8beec4cb91904c427fa2f3" name="a35748380eb8beec4cb91904c427fa2f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35748380eb8beec4cb91904c427fa2f3">&#9670;&#160;</a></span>getGlobalAlpha()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -906,7 +842,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TCanvas.getGlobalAlpha </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -920,8 +856,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a1162203f70e446298c4bca1f7a493188"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1162203f70e446298c4bca1f7a493188">&#9670;&nbsp;</a></span>getHeight()</h2>
+<a id="a1162203f70e446298c4bca1f7a493188" name="a1162203f70e446298c4bca1f7a493188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1162203f70e446298c4bca1f7a493188">&#9670;&#160;</a></span>getHeight()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -932,7 +868,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TCanvas.getHeight </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -947,8 +883,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ae0930014abbae77dbe19be19db0b5d79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0930014abbae77dbe19be19db0b5d79">&#9670;&nbsp;</a></span>getOx()</h2>
+<a id="ae0930014abbae77dbe19be19db0b5d79" name="ae0930014abbae77dbe19be19db0b5d79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0930014abbae77dbe19be19db0b5d79">&#9670;&#160;</a></span>getOx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -959,7 +895,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TCanvas.getOx </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -973,8 +909,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a927d59cee07158c2105ff0f6baa9fc96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a927d59cee07158c2105ff0f6baa9fc96">&#9670;&nbsp;</a></span>getOy()</h2>
+<a id="a927d59cee07158c2105ff0f6baa9fc96" name="a927d59cee07158c2105ff0f6baa9fc96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a927d59cee07158c2105ff0f6baa9fc96">&#9670;&#160;</a></span>getOy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -985,7 +921,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TCanvas.getOy </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -999,8 +935,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a1c2e9c2d947c6be5986557542e3f0cb3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c2e9c2d947c6be5986557542e3f0cb3">&#9670;&nbsp;</a></span>getVgcanvas()</h2>
+<a id="a1c2e9c2d947c6be5986557542e3f0cb3" name="a1c2e9c2d947c6be5986557542e3f0cb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c2e9c2d947c6be5986557542e3f0cb3">&#9670;&#160;</a></span>getVgcanvas()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1011,7 +947,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_vgcanvas.html">TVgcanvas</a> awtk.TCanvas.getVgcanvas </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1026,8 +962,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a8ed04304ed34e3f0d6dc3ac27418c5a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ed04304ed34e3f0d6dc3ac27418c5a1">&#9670;&nbsp;</a></span>getWidth()</h2>
+<a id="a8ed04304ed34e3f0d6dc3ac27418c5a1" name="a8ed04304ed34e3f0d6dc3ac27418c5a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ed04304ed34e3f0d6dc3ac27418c5a1">&#9670;&#160;</a></span>getWidth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1038,7 +974,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TCanvas.getWidth </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1053,8 +989,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a8ef35196e05c486a40b00fe2fc5c8dc0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ef35196e05c486a40b00fe2fc5c8dc0">&#9670;&nbsp;</a></span>measureText()</h2>
+<a id="a8ef35196e05c486a40b00fe2fc5c8dc0" name="a8ef35196e05c486a40b00fe2fc5c8dc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ef35196e05c486a40b00fe2fc5c8dc0">&#9670;&#160;</a></span>measureText()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1065,8 +1001,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">double awtk.TCanvas.measureText </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1078,7 +1013,7 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>计算文本所占的宽度。</p>
 <blockquote class="doxtable">
-<p>供脚本语言使用。 </p>
+<p>&zwj;供脚本语言使用。 </p>
 </blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -1090,8 +1025,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ada3d9b9d00bba75d18a10c182ed1e45e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada3d9b9d00bba75d18a10c182ed1e45e">&#9670;&nbsp;</a></span>reset()</h2>
+<a id="ada3d9b9d00bba75d18a10c182ed1e45e" name="ada3d9b9d00bba75d18a10c182ed1e45e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada3d9b9d00bba75d18a10c182ed1e45e">&#9670;&#160;</a></span>reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1102,7 +1037,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.reset </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1117,8 +1052,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a65ed3eee2ac207e8db9909c87bc910bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65ed3eee2ac207e8db9909c87bc910bc">&#9670;&nbsp;</a></span>resetCache()</h2>
+<a id="a65ed3eee2ac207e8db9909c87bc910bc" name="a65ed3eee2ac207e8db9909c87bc910bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65ed3eee2ac207e8db9909c87bc910bc">&#9670;&#160;</a></span>resetCache()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1129,7 +1064,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.resetCache </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1140,14 +1075,14 @@ Public 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>清除canvas中缓存。 </p><blockquote class="doxtable">
-<p>备注：主要用于窗口动画的离线画布绘制完成后重置在线画布，使下一帧中lcd对象的数据保持一致。 </p>
+<p>&zwj;备注：主要用于窗口动画的离线画布绘制完成后重置在线画布，使下一帧中lcd对象的数据保持一致。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>
-<a id="abfc46a4100b370f2c0a74abcea3c4b17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfc46a4100b370f2c0a74abcea3c4b17">&#9670;&nbsp;</a></span>resetFont()</h2>
+<a id="abfc46a4100b370f2c0a74abcea3c4b17" name="abfc46a4100b370f2c0a74abcea3c4b17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfc46a4100b370f2c0a74abcea3c4b17">&#9670;&#160;</a></span>resetFont()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1158,7 +1093,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.resetFont </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1173,8 +1108,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ada1e3f1fa576782f2d67b5dacc889e73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada1e3f1fa576782f2d67b5dacc889e73">&#9670;&nbsp;</a></span>setClipRect()</h2>
+<a id="ada1e3f1fa576782f2d67b5dacc889e73" name="ada1e3f1fa576782f2d67b5dacc889e73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada1e3f1fa576782f2d67b5dacc889e73">&#9670;&#160;</a></span>setClipRect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1185,8 +1120,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.setClipRect </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a>&#160;</td>
-          <td class="paramname"><em>r</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a></td>          <td class="paramname"><span class="paramname"><em>r</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1207,8 +1141,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="addc101af97ad58048989394ebcdf184c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addc101af97ad58048989394ebcdf184c">&#9670;&nbsp;</a></span>setClipRectEx()</h2>
+<a id="addc101af97ad58048989394ebcdf184c" name="addc101af97ad58048989394ebcdf184c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addc101af97ad58048989394ebcdf184c">&#9670;&#160;</a></span>setClipRectEx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1219,19 +1153,12 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.setClipRectEx </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a>&#160;</td>
-          <td class="paramname"><em>r</em>, </td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a></td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>translate</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>translate</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1252,8 +1179,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a910e37788ed77f971479b00530f58d24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a910e37788ed77f971479b00530f58d24">&#9670;&nbsp;</a></span>setFillColor()</h2>
+<a id="a910e37788ed77f971479b00530f58d24" name="a910e37788ed77f971479b00530f58d24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a910e37788ed77f971479b00530f58d24">&#9670;&#160;</a></span>setFillColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1264,8 +1191,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.setFillColor </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>color</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1277,7 +1203,7 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>设置填充颜色。</p>
 <blockquote class="doxtable">
-<p>供脚本语言使用。 </p>
+<p>&zwj;供脚本语言使用。 </p>
 </blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -1289,8 +1215,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a234ef1e285faebad3be190ac0158e82c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a234ef1e285faebad3be190ac0158e82c">&#9670;&nbsp;</a></span>setFont()</h2>
+<a id="a234ef1e285faebad3be190ac0158e82c" name="a234ef1e285faebad3be190ac0158e82c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a234ef1e285faebad3be190ac0158e82c">&#9670;&#160;</a></span>setFont()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1301,19 +1227,12 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.setFont </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1334,8 +1253,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a94d85e88d141044323c7f4871ead2890"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94d85e88d141044323c7f4871ead2890">&#9670;&nbsp;</a></span>setGlobalAlpha()</h2>
+<a id="a94d85e88d141044323c7f4871ead2890" name="a94d85e88d141044323c7f4871ead2890"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94d85e88d141044323c7f4871ead2890">&#9670;&#160;</a></span>setGlobalAlpha()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1346,8 +1265,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.setGlobalAlpha </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>alpha</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>alpha</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1368,8 +1286,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a59d088efdb998614a083939cd062b8e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59d088efdb998614a083939cd062b8e1">&#9670;&nbsp;</a></span>setStrokeColor()</h2>
+<a id="a59d088efdb998614a083939cd062b8e1" name="a59d088efdb998614a083939cd062b8e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59d088efdb998614a083939cd062b8e1">&#9670;&#160;</a></span>setStrokeColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1380,8 +1298,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.setStrokeColor </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>color</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1393,7 +1310,7 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>设置线条颜色。</p>
 <blockquote class="doxtable">
-<p>供脚本语言使用。 </p>
+<p>&zwj;供脚本语言使用。 </p>
 </blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -1405,8 +1322,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="acca25cd08ea016f0e610605f0cbeb1c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acca25cd08ea016f0e610605f0cbeb1c7">&#9670;&nbsp;</a></span>setTextColor()</h2>
+<a id="acca25cd08ea016f0e610605f0cbeb1c7" name="acca25cd08ea016f0e610605f0cbeb1c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acca25cd08ea016f0e610605f0cbeb1c7">&#9670;&#160;</a></span>setTextColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1417,8 +1334,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.setTextColor </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>color</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1430,7 +1346,7 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>设置文本颜色。</p>
 <blockquote class="doxtable">
-<p>供脚本语言使用。 </p>
+<p>&zwj;供脚本语言使用。 </p>
 </blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -1442,8 +1358,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a8d69197b88b37cb9105c190cb797f047"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d69197b88b37cb9105c190cb797f047">&#9670;&nbsp;</a></span>strokeRect()</h2>
+<a id="a8d69197b88b37cb9105c190cb797f047" name="a8d69197b88b37cb9105c190cb797f047"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d69197b88b37cb9105c190cb797f047">&#9670;&#160;</a></span>strokeRect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1454,31 +1370,22 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.strokeRect </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>h</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1501,8 +1408,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a8c0409f1ce8ae0f66bab2da8a568a62e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c0409f1ce8ae0f66bab2da8a568a62e">&#9670;&nbsp;</a></span>translate()</h2>
+<a id="a8c0409f1ce8ae0f66bab2da8a568a62e" name="a8c0409f1ce8ae0f66bab2da8a568a62e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c0409f1ce8ae0f66bab2da8a568a62e">&#9670;&#160;</a></span>translate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1513,19 +1420,12 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.translate </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>dx</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>dy</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dy</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1546,8 +1446,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a5b506ca7f283a042e55f7512a4645024"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b506ca7f283a042e55f7512a4645024">&#9670;&nbsp;</a></span>untranslate()</h2>
+<a id="a5b506ca7f283a042e55f7512a4645024" name="a5b506ca7f283a042e55f7512a4645024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b506ca7f283a042e55f7512a4645024">&#9670;&#160;</a></span>untranslate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1558,19 +1458,12 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TCanvas.untranslate </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>dx</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>dy</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dy</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1592,8 +1485,8 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">类成员变量说明</h2>
-<a id="a6267914126e89f090d471ed0db25fca5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6267914126e89f090d471ed0db25fca5">&#9670;&nbsp;</a></span>nativeObj</h2>
+<a id="a6267914126e89f090d471ed0db25fca5" name="a6267914126e89f090d471ed0db25fca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6267914126e89f090d471ed0db25fca5">&#9670;&#160;</a></span>nativeObj</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1608,12 +1501,13 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>output/TCanvas.java</li>
+<li>output/<b>TCanvas.java</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

@@ -16,6 +16,10 @@ func (this TTabButtonGroup) SetScrollable(scrollable bool) TRet {
   return TRet(C.tab_button_group_set_scrollable((*C.widget_t)(this.handle), (C.bool_t)(scrollable)));
 }
 
+func (this TTabButtonGroup) SetDragChild(drag_child bool) TRet {
+  return TRet(C.tab_button_group_set_drag_child((*C.widget_t)(this.handle), (C.bool_t)(drag_child)));
+}
+
 func TTabButtonGroupCast(widget TWidget) TTabButtonGroup {
   retObj := TTabButtonGroup{}
   retObj.handle = unsafe.Pointer(C.tab_button_group_cast((*C.widget_t)(widget.handle)))
@@ -28,5 +32,9 @@ func (this TTabButtonGroup) GetCompact() bool {
 
 func (this TTabButtonGroup) GetScrollable() bool {
   return (bool)((*C.tab_button_group_t)(unsafe.Pointer(this.handle)).scrollable);
+}
+
+func (this TTabButtonGroup) GetDragChild() bool {
+  return (bool)((*C.tab_button_group_t)(unsafe.Pointer(this.handle)).drag_child);
 }
 

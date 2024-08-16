@@ -26,6 +26,12 @@ func (this TWindowManager) GetTopWindow() TWidget {
   return retObj
 }
 
+func (this TWindowManager) GetForegroundWindow() TWidget {
+  retObj := TWidget{}
+  retObj.handle = unsafe.Pointer(C.window_manager_get_foreground_window((*C.widget_t)(this.handle)))
+  return retObj
+}
+
 func (this TWindowManager) GetPrevWindow() TWidget {
   retObj := TWidget{}
   retObj.handle = unsafe.Pointer(C.window_manager_get_prev_window((*C.widget_t)(this.handle)))

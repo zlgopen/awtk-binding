@@ -1,39 +1,37 @@
-[AWTK](../README.md) / [Exports](../modules.md) / TExtWidgets
+[**AWTK**](../README.md) • **Docs**
+
+***
+
+[AWTK](../globals.md) / TExtWidgets
 
 # Class: TExtWidgets
 
 扩展控件。
 
-## Table of contents
-
-### Constructors
-
-- [constructor](TExtWidgets.md#constructor)
-
-### Methods
-
-- [init](TExtWidgets.md#init)
-
 ## Constructors
 
-### constructor
+### new TExtWidgets()
 
-• **new TExtWidgets**()
+> **new TExtWidgets**(): [`TExtWidgets`](TExtWidgets.md)
+
+#### Returns
+
+[`TExtWidgets`](TExtWidgets.md)
 
 ## Methods
 
-### init
+### init()
 
-▸ `Static` **init**(): [`TRet`](../enums/TRet.md)
+> `static` **init**(): [`TRet`](../enumerations/TRet.md)
 
 初始化AWTK扩展控件。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:12416](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12416)
+[awtk.ts:12907](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12907)

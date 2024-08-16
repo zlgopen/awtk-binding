@@ -1,90 +1,46 @@
-[AWTK](../README.md) / [Exports](../modules.md) / TCanvas
+[**AWTK**](../README.md) • **Docs**
+
+***
+
+[AWTK](../globals.md) / TCanvas
 
 # Class: TCanvas
 
 提供基本的绘图功能和状态管理。
 
-## Table of contents
-
-### Constructors
-
-- [constructor](TCanvas.md#constructor)
-
-### Properties
-
-- [nativeObj](TCanvas.md#nativeobj)
-
-### Accessors
-
-- [fontName](TCanvas.md#fontname)
-- [fontSize](TCanvas.md#fontsize)
-- [globalAlpha](TCanvas.md#globalalpha)
-- [ox](TCanvas.md#ox)
-- [oy](TCanvas.md#oy)
-
-### Methods
-
-- [clearRect](TCanvas.md#clearrect)
-- [drawHline](TCanvas.md#drawhline)
-- [drawIcon](TCanvas.md#drawicon)
-- [drawImage](TCanvas.md#drawimage)
-- [drawImageEx](TCanvas.md#drawimageex)
-- [drawImageEx2](TCanvas.md#drawimageex2)
-- [drawText](TCanvas.md#drawtext)
-- [drawTextInRect](TCanvas.md#drawtextinrect)
-- [drawVline](TCanvas.md#drawvline)
-- [fillRect](TCanvas.md#fillrect)
-- [getClipRect](TCanvas.md#getcliprect)
-- [getHeight](TCanvas.md#getheight)
-- [getVgcanvas](TCanvas.md#getvgcanvas)
-- [getWidth](TCanvas.md#getwidth)
-- [measureText](TCanvas.md#measuretext)
-- [reset](TCanvas.md#reset)
-- [resetCache](TCanvas.md#resetcache)
-- [resetFont](TCanvas.md#resetfont)
-- [setClipRect](TCanvas.md#setcliprect)
-- [setClipRectEx](TCanvas.md#setcliprectex)
-- [setFillColor](TCanvas.md#setfillcolor)
-- [setFont](TCanvas.md#setfont)
-- [setGlobalAlpha](TCanvas.md#setglobalalpha)
-- [setStrokeColor](TCanvas.md#setstrokecolor)
-- [setTextColor](TCanvas.md#settextcolor)
-- [strokeRect](TCanvas.md#strokerect)
-- [translate](TCanvas.md#translate)
-- [untranslate](TCanvas.md#untranslate)
-- [cast](TCanvas.md#cast)
-
 ## Constructors
 
-### constructor
+### new TCanvas()
 
-• **new TCanvas**(`nativeObj`)
+> **new TCanvas**(`nativeObj`): [`TCanvas`](TCanvas.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `nativeObj` | `any` |
+• **nativeObj**: `any`
+
+#### Returns
+
+[`TCanvas`](TCanvas.md)
 
 #### Defined in
 
-[awtk.ts:4294](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4294)
+[awtk.ts:4422](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4422)
 
 ## Properties
 
 ### nativeObj
 
-• **nativeObj**: `any`
+> **nativeObj**: `any`
 
 #### Defined in
 
-[awtk.ts:4293](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4293)
+[awtk.ts:4421](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4421)
 
 ## Accessors
 
 ### fontName
 
-• `get` **fontName**(): `string`
+> `get` **fontName**(): `string`
 
 当前字体名称。
 
@@ -94,13 +50,13 @@
 
 #### Defined in
 
-[awtk.ts:4707](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4707)
+[awtk.ts:4835](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4835)
 
-___
+***
 
 ### fontSize
 
-• `get` **fontSize**(): `number`
+> `get` **fontSize**(): `number`
 
 当前字体大小。
 
@@ -110,15 +66,21 @@ ___
 
 #### Defined in
 
-[awtk.ts:4716](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4716)
+[awtk.ts:4844](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4844)
 
-___
+***
 
 ### globalAlpha
 
-• `get` **globalAlpha**(): `number`
+> `get` **globalAlpha**(): `number`
 
 当前全局alpha。
+
+> `set` **globalAlpha**(`v`): `void`
+
+#### Parameters
+
+• **v**: `number`
 
 #### Returns
 
@@ -126,29 +88,13 @@ ___
 
 #### Defined in
 
-[awtk.ts:4725](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4725)
+[awtk.ts:4853](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4853)
 
-• `set` **globalAlpha**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `number` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[awtk.ts:4729](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4729)
-
-___
+***
 
 ### ox
 
-• `get` **ox**(): `number`
+> `get` **ox**(): `number`
 
 x坐标偏移。
 
@@ -158,13 +104,13 @@ x坐标偏移。
 
 #### Defined in
 
-[awtk.ts:4689](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4689)
+[awtk.ts:4817](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4817)
 
-___
+***
 
 ### oy
 
-• `get` **oy**(): `number`
+> `get` **oy**(): `number`
 
 y坐标偏移。
 
@@ -174,13 +120,13 @@ y坐标偏移。
 
 #### Defined in
 
-[awtk.ts:4698](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4698)
+[awtk.ts:4826](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4826)
 
 ## Methods
 
-### clearRect
+### clearRect()
 
-▸ **clearRect**(`x`, `y`, `w`, `h`): [`TRet`](../enums/TRet.md)
+> **clearRect**(`x`, `y`, `w`, `h`): [`TRet`](../enumerations/TRet.md)
 
 用填充颜色填充指定矩形。
 
@@ -188,159 +134,201 @@ y坐标偏移。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `number` | x坐标。 |
-| `y` | `number` | y坐标。 |
-| `w` | `number` | 宽度。 |
-| `h` | `number` | 高度。 |
+• **x**: `number`
+
+x坐标。
+
+• **y**: `number`
+
+y坐标。
+
+• **w**: `number`
+
+宽度。
+
+• **h**: `number`
+
+高度。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4493](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4493)
+[awtk.ts:4621](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4621)
 
-___
+***
 
-### drawHline
+### drawHline()
 
-▸ **drawHline**(`x`, `y`, `w`): [`TRet`](../enums/TRet.md)
+> **drawHline**(`x`, `y`, `w`): [`TRet`](../enumerations/TRet.md)
 
 画水平线。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `number` | x坐标。 |
-| `y` | `number` | y坐标。 |
-| `w` | `number` | 宽度。 |
+• **x**: `number`
+
+x坐标。
+
+• **y**: `number`
+
+y坐标。
+
+• **w**: `number`
+
+宽度。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4461](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4461)
+[awtk.ts:4589](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4589)
 
-___
+***
 
-### drawIcon
+### drawIcon()
 
-▸ **drawIcon**(`img`, `cx`, `cy`): [`TRet`](../enums/TRet.md)
+> **drawIcon**(`img`, `cx`, `cy`): [`TRet`](../enumerations/TRet.md)
 
 绘制图标。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `img` | [`TBitmap`](TBitmap.md) | 图片对象。 |
-| `cx` | `number` | 中心点x坐标。 |
-| `cy` | `number` | 中心点y坐标。 |
+• **img**: [`TBitmap`](TBitmap.md)
+
+图片对象。
+
+• **cx**: `number`
+
+中心点x坐标。
+
+• **cy**: `number`
+
+中心点y坐标。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4591](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4591)
+[awtk.ts:4719](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4719)
 
-___
+***
 
-### drawImage
+### drawImage()
 
-▸ **drawImage**(`img`, `src`, `dst`): [`TRet`](../enums/TRet.md)
+> **drawImage**(`img`, `src`, `dst`): [`TRet`](../enumerations/TRet.md)
 
 绘制图片。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `img` | [`TBitmap`](TBitmap.md) | 图片对象。 |
-| `src` | [`TRect`](TRect.md) | 源区域。 |
-| `dst` | [`TRect`](TRect.md) | 目的区域。 |
+• **img**: [`TBitmap`](TBitmap.md)
+
+图片对象。
+
+• **src**: [`TRect`](TRect.md)
+
+源区域。
+
+• **dst**: [`TRect`](TRect.md)
+
+目的区域。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4605](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4605)
+[awtk.ts:4733](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4733)
 
-___
+***
 
-### drawImageEx
+### drawImageEx()
 
-▸ **drawImageEx**(`img`, `draw_type`, `dst`): [`TRet`](../enums/TRet.md)
+> **drawImageEx**(`img`, `draw_type`, `dst`): [`TRet`](../enumerations/TRet.md)
 
 绘制图片。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `img` | [`TBitmap`](TBitmap.md) | 图片对象。 |
-| `draw_type` | [`TImageDrawType`](../enums/TImageDrawType.md) | 绘制类型。 |
-| `dst` | [`TRect`](TRect.md) | 目的区域。 |
+• **img**: [`TBitmap`](TBitmap.md)
+
+图片对象。
+
+• **draw\_type**: [`TImageDrawType`](../enumerations/TImageDrawType.md)
+
+绘制类型。
+
+• **dst**: [`TRect`](TRect.md)
+
+目的区域。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4619](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4619)
+[awtk.ts:4747](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4747)
 
-___
+***
 
-### drawImageEx2
+### drawImageEx2()
 
-▸ **drawImageEx2**(`img`, `draw_type`, `src`, `dst`): [`TRet`](../enums/TRet.md)
+> **drawImageEx2**(`img`, `draw_type`, `src`, `dst`): [`TRet`](../enumerations/TRet.md)
 
 绘制图片。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `img` | [`TBitmap`](TBitmap.md) | 图片对象。 |
-| `draw_type` | [`TImageDrawType`](../enums/TImageDrawType.md) | 绘制类型。 |
-| `src` | [`TRect`](TRect.md) | 源区域。 |
-| `dst` | [`TRect`](TRect.md) | 目的区域。 |
+• **img**: [`TBitmap`](TBitmap.md)
+
+图片对象。
+
+• **draw\_type**: [`TImageDrawType`](../enumerations/TImageDrawType.md)
+
+绘制类型。
+
+• **src**: [`TRect`](TRect.md)
+
+源区域。
+
+• **dst**: [`TRect`](TRect.md)
+
+目的区域。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4634](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4634)
+[awtk.ts:4762](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4762)
 
-___
+***
 
-### drawText
+### drawText()
 
-▸ **drawText**(`str`, `x`, `y`): [`TRet`](../enums/TRet.md)
+> **drawText**(`str`, `x`, `y`): [`TRet`](../enumerations/TRet.md)
 
 绘制文本。
 
@@ -348,27 +336,33 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `str` | `string` | 字符串。 |
-| `x` | `number` | x坐标。 |
-| `y` | `number` | y坐标。 |
+• **str**: `string`
+
+字符串。
+
+• **x**: `number`
+
+x坐标。
+
+• **y**: `number`
+
+y坐标。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4562](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4562)
+[awtk.ts:4690](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4690)
 
-___
+***
 
-### drawTextInRect
+### drawTextInRect()
 
-▸ **drawTextInRect**(`str`, `r`): [`TRet`](../enums/TRet.md)
+> **drawTextInRect**(`str`, `r`): [`TRet`](../enumerations/TRet.md)
 
 绘制文本。
 
@@ -376,103 +370,121 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `str` | `string` | 字符串。 |
-| `r` | [`TRect`](TRect.md) | 矩形区域。 |
+• **str**: `string`
+
+字符串。
+
+• **r**: [`TRect`](TRect.md)
+
+矩形区域。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4577](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4577)
+[awtk.ts:4705](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4705)
 
-___
+***
 
-### drawVline
+### drawVline()
 
-▸ **drawVline**(`x`, `y`, `h`): [`TRet`](../enums/TRet.md)
+> **drawVline**(`x`, `y`, `h`): [`TRet`](../enumerations/TRet.md)
 
 画垂直线。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `number` | x坐标。 |
-| `y` | `number` | y坐标。 |
-| `h` | `number` | 高度。 |
+• **x**: `number`
+
+x坐标。
+
+• **y**: `number`
+
+y坐标。
+
+• **h**: `number`
+
+高度。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4447](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4447)
+[awtk.ts:4575](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4575)
 
-___
+***
 
-### fillRect
+### fillRect()
 
-▸ **fillRect**(`x`, `y`, `w`, `h`): [`TRet`](../enums/TRet.md)
+> **fillRect**(`x`, `y`, `w`, `h`): [`TRet`](../enumerations/TRet.md)
 
 绘制矩形。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `number` | x坐标。 |
-| `y` | `number` | y坐标。 |
-| `w` | `number` | 宽度。 |
-| `h` | `number` | 高度。 |
+• **x**: `number`
+
+x坐标。
+
+• **y**: `number`
+
+y坐标。
+
+• **w**: `number`
+
+宽度。
+
+• **h**: `number`
+
+高度。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4476](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4476)
+[awtk.ts:4604](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4604)
 
-___
+***
 
-### getClipRect
+### getClipRect()
 
-▸ **getClipRect**(`r`): [`TRet`](../enums/TRet.md)
+> **getClipRect**(`r`): [`TRet`](../enumerations/TRet.md)
 
 获取裁剪区。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `r` | [`TRect`](TRect.md) | rect对象。 |
+• **r**: [`TRect`](TRect.md)
+
+rect对象。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4328](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4328)
+[awtk.ts:4456](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4456)
 
-___
+***
 
-### getHeight
+### getHeight()
 
-▸ **getHeight**(): `number`
+> **getHeight**(): `number`
 
 获取画布的高度。
 
@@ -484,13 +496,13 @@ ___
 
 #### Defined in
 
-[awtk.ts:4316](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4316)
+[awtk.ts:4444](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4444)
 
-___
+***
 
-### getVgcanvas
+### getVgcanvas()
 
-▸ **getVgcanvas**(): [`TVgcanvas`](TVgcanvas.md)
+> **getVgcanvas**(): [`TVgcanvas`](TVgcanvas.md)
 
 获取vgcanvas对象。
 
@@ -502,13 +514,13 @@ ___
 
 #### Defined in
 
-[awtk.ts:4645](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4645)
+[awtk.ts:4773](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4773)
 
-___
+***
 
-### getWidth
+### getWidth()
 
-▸ **getWidth**(): `number`
+> **getWidth**(): `number`
 
 获取画布的宽度。
 
@@ -520,13 +532,13 @@ ___
 
 #### Defined in
 
-[awtk.ts:4305](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4305)
+[awtk.ts:4433](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4433)
 
-___
+***
 
-### measureText
+### measureText()
 
-▸ **measureText**(`str`): `number`
+> **measureText**(`str`): `number`
 
 计算文本所占的宽度。
 
@@ -534,9 +546,9 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `str` | `string` | 字符串。 |
+• **str**: `string`
+
+字符串。
 
 #### Returns
 
@@ -546,117 +558,120 @@ ___
 
 #### Defined in
 
-[awtk.ts:4546](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4546)
+[awtk.ts:4674](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4674)
 
-___
+***
 
-### reset
+### reset()
 
-▸ **reset**(): [`TRet`](../enums/TRet.md)
+> **reset**(): [`TRet`](../enumerations/TRet.md)
 
 释放相关资源。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4668](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4668)
+[awtk.ts:4796](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4796)
 
-___
+***
 
-### resetCache
+### resetCache()
 
-▸ **resetCache**(): [`TRet`](../enums/TRet.md)
+> **resetCache**(): [`TRet`](../enumerations/TRet.md)
 
 清除canvas中缓存。
 > 备注：主要用于窗口动画的离线画布绘制完成后重置在线画布，使下一帧中lcd对象的数据保持一致。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4680](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4680)
+[awtk.ts:4808](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4808)
 
-___
+***
 
-### resetFont
+### resetFont()
 
-▸ **resetFont**(): [`TRet`](../enums/TRet.md)
+> **resetFont**(): [`TRet`](../enumerations/TRet.md)
 
 释放canvas中字体相关的资源。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4532](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4532)
+[awtk.ts:4660](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4660)
 
-___
+***
 
-### setClipRect
+### setClipRect()
 
-▸ **setClipRect**(`r`): [`TRet`](../enums/TRet.md)
+> **setClipRect**(`r`): [`TRet`](../enumerations/TRet.md)
 
 设置裁剪区。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `r` | [`TRect`](TRect.md) | rect对象。 |
+• **r**: [`TRect`](TRect.md)
+
+rect对象。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4340](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4340)
+[awtk.ts:4468](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4468)
 
-___
+***
 
-### setClipRectEx
+### setClipRectEx()
 
-▸ **setClipRectEx**(`r`, `translate`): [`TRet`](../enums/TRet.md)
+> **setClipRectEx**(`r`, `translate`): [`TRet`](../enumerations/TRet.md)
 
 设置裁剪区。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `r` | [`TRect`](TRect.md) | rect对象。 |
-| `translate` | `boolean` | 是否将裁剪区的位置加上canvas当前的偏移。 |
+• **r**: [`TRect`](TRect.md)
+
+rect对象。
+
+• **translate**: `boolean`
+
+是否将裁剪区的位置加上canvas当前的偏移。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4353](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4353)
+[awtk.ts:4481](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4481)
 
-___
+***
 
-### setFillColor
+### setFillColor()
 
-▸ **setFillColor**(`color`): [`TRet`](../enums/TRet.md)
+> **setFillColor**(`color`): [`TRet`](../enumerations/TRet.md)
 
 设置填充颜色。
 
@@ -664,74 +679,77 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `color` | `string` | 颜色。 |
+• **color**: `string`
+
+颜色。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4367](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4367)
+[awtk.ts:4495](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4495)
 
-___
+***
 
-### setFont
+### setFont()
 
-▸ **setFont**(`name`, `size`): [`TRet`](../enums/TRet.md)
+> **setFont**(`name`, `size`): [`TRet`](../enumerations/TRet.md)
 
 设置字体。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 字体名称。 |
-| `size` | `number` | 字体大小。 |
+• **name**: `string`
+
+字体名称。
+
+• **size**: `number`
+
+字体大小。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4521](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4521)
+[awtk.ts:4649](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4649)
 
-___
+***
 
-### setGlobalAlpha
+### setGlobalAlpha()
 
-▸ **setGlobalAlpha**(`alpha`): [`TRet`](../enums/TRet.md)
+> **setGlobalAlpha**(`alpha`): [`TRet`](../enumerations/TRet.md)
 
 设置全局alpha值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `alpha` | `number` | alpha值。 |
+• **alpha**: `number`
+
+alpha值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4407](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4407)
+[awtk.ts:4535](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4535)
 
-___
+***
 
-### setStrokeColor
+### setStrokeColor()
 
-▸ **setStrokeColor**(`color`): [`TRet`](../enums/TRet.md)
+> **setStrokeColor**(`color`): [`TRet`](../enumerations/TRet.md)
 
 设置线条颜色。
 
@@ -739,25 +757,25 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `color` | `string` | 颜色。 |
+• **color**: `string`
+
+颜色。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4395](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4395)
+[awtk.ts:4523](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4523)
 
-___
+***
 
-### setTextColor
+### setTextColor()
 
-▸ **setTextColor**(`color`): [`TRet`](../enums/TRet.md)
+> **setTextColor**(`color`): [`TRet`](../enumerations/TRet.md)
 
 设置文本颜色。
 
@@ -765,110 +783,125 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `color` | `string` | 颜色。 |
+• **color**: `string`
+
+颜色。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4381](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4381)
+[awtk.ts:4509](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4509)
 
-___
+***
 
-### strokeRect
+### strokeRect()
 
-▸ **strokeRect**(`x`, `y`, `w`, `h`): [`TRet`](../enums/TRet.md)
+> **strokeRect**(`x`, `y`, `w`, `h`): [`TRet`](../enumerations/TRet.md)
 
 绘制矩形。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `number` | x坐标。 |
-| `y` | `number` | y坐标。 |
-| `w` | `number` | 宽度。 |
-| `h` | `number` | 高度。 |
+• **x**: `number`
+
+x坐标。
+
+• **y**: `number`
+
+y坐标。
+
+• **w**: `number`
+
+宽度。
+
+• **h**: `number`
+
+高度。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4508](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4508)
+[awtk.ts:4636](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4636)
 
-___
+***
 
-### translate
+### translate()
 
-▸ **translate**(`dx`, `dy`): [`TRet`](../enums/TRet.md)
+> **translate**(`dx`, `dy`): [`TRet`](../enumerations/TRet.md)
 
 平移原点坐标。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dx` | `number` | x偏移。 |
-| `dy` | `number` | y偏移。 |
+• **dx**: `number`
+
+x偏移。
+
+• **dy**: `number`
+
+y偏移。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4420](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4420)
+[awtk.ts:4548](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4548)
 
-___
+***
 
-### untranslate
+### untranslate()
 
-▸ **untranslate**(`dx`, `dy`): [`TRet`](../enums/TRet.md)
+> **untranslate**(`dx`, `dy`): [`TRet`](../enumerations/TRet.md)
 
 反向平移原点坐标。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dx` | `number` | x偏移。 |
-| `dy` | `number` | y偏移。 |
+• **dx**: `number`
+
+x偏移。
+
+• **dy**: `number`
+
+y偏移。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:4433](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4433)
+[awtk.ts:4561](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4561)
 
-___
+***
 
-### cast
+### cast()
 
-▸ `Static` **cast**(`c`): [`TCanvas`](TCanvas.md)
+> `static` **cast**(`c`): [`TCanvas`](TCanvas.md)
 
 转换为canvas对象(供脚本语言使用)。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `c` | [`TCanvas`](TCanvas.md) | canvas对象。 |
+• **c**: [`TCanvas`](TCanvas.md)
+
+canvas对象。
 
 #### Returns
 
@@ -878,4 +911,4 @@ canvas对象。
 
 #### Defined in
 
-[awtk.ts:4657](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4657)
+[awtk.ts:4785](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4785)

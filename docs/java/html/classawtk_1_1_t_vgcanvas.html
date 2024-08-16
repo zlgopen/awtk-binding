@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TVgcanvas类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-JAVA
    </div>
    <div id="projectbrief">AWTK JAVA API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,9 +70,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,150 +87,150 @@ $(function() {
 <li class="navelem"><b>awtk</b></li><li class="navelem"><a class="el" href="classawtk_1_1_t_vgcanvas.html">TVgcanvas</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="classawtk_1_1_t_vgcanvas-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">awtk.TVgcanvas类 参考</div>  </div>
+  <div class="headertitle"><div class="title">awtk.TVgcanvas类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a9a508a38b3e70257f8bec8dd9f5e7b8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a9a508a38b3e70257f8bec8dd9f5e7b8a">TVgcanvas</a> (long <a class="el" href="classawtk_1_1_t_vgcanvas.html#a84abfe8803237c2197bff6cd9a62c31d">nativeObj</a>)</td></tr>
+<tr class="memitem:a9a508a38b3e70257f8bec8dd9f5e7b8a" id="r_a9a508a38b3e70257f8bec8dd9f5e7b8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a508a38b3e70257f8bec8dd9f5e7b8a">TVgcanvas</a> (long <a class="el" href="#a84abfe8803237c2197bff6cd9a62c31d">nativeObj</a>)</td></tr>
 <tr class="separator:a9a508a38b3e70257f8bec8dd9f5e7b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37ccc348abe6468686b7a2d3a24dc683"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a37ccc348abe6468686b7a2d3a24dc683">flush</a> ()</td></tr>
+<tr class="memitem:a37ccc348abe6468686b7a2d3a24dc683" id="r_a37ccc348abe6468686b7a2d3a24dc683"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37ccc348abe6468686b7a2d3a24dc683">flush</a> ()</td></tr>
 <tr class="separator:a37ccc348abe6468686b7a2d3a24dc683"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72bb87a2d3a8653a13c31db965db8457"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a72bb87a2d3a8653a13c31db965db8457">beginPath</a> ()</td></tr>
+<tr class="memitem:a72bb87a2d3a8653a13c31db965db8457" id="r_a72bb87a2d3a8653a13c31db965db8457"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72bb87a2d3a8653a13c31db965db8457">beginPath</a> ()</td></tr>
 <tr class="separator:a72bb87a2d3a8653a13c31db965db8457"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7e3562cfb3a47165926caa1eed3b514"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#ae7e3562cfb3a47165926caa1eed3b514">moveTo</a> (double x, double y)</td></tr>
+<tr class="memitem:ae7e3562cfb3a47165926caa1eed3b514" id="r_ae7e3562cfb3a47165926caa1eed3b514"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7e3562cfb3a47165926caa1eed3b514">moveTo</a> (double x, double y)</td></tr>
 <tr class="separator:ae7e3562cfb3a47165926caa1eed3b514"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abefda5e7123f5c333949745bd59e805c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#abefda5e7123f5c333949745bd59e805c">lineTo</a> (double x, double y)</td></tr>
+<tr class="memitem:abefda5e7123f5c333949745bd59e805c" id="r_abefda5e7123f5c333949745bd59e805c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abefda5e7123f5c333949745bd59e805c">lineTo</a> (double x, double y)</td></tr>
 <tr class="separator:abefda5e7123f5c333949745bd59e805c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb91bb09810416e97cd917170837d888"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#acb91bb09810416e97cd917170837d888">quadTo</a> (double cpx, double cpy, double x, double y)</td></tr>
+<tr class="memitem:acb91bb09810416e97cd917170837d888" id="r_acb91bb09810416e97cd917170837d888"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb91bb09810416e97cd917170837d888">quadTo</a> (double cpx, double cpy, double x, double y)</td></tr>
 <tr class="separator:acb91bb09810416e97cd917170837d888"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20bd0dbb36b5a592f8eb34c0be4a66f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a20bd0dbb36b5a592f8eb34c0be4a66f2">bezierTo</a> (double cp1x, double cp1y, double cp2x, double cp2y, double x, double y)</td></tr>
+<tr class="memitem:a20bd0dbb36b5a592f8eb34c0be4a66f2" id="r_a20bd0dbb36b5a592f8eb34c0be4a66f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20bd0dbb36b5a592f8eb34c0be4a66f2">bezierTo</a> (double cp1x, double cp1y, double cp2x, double cp2y, double x, double y)</td></tr>
 <tr class="separator:a20bd0dbb36b5a592f8eb34c0be4a66f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2571f923a22f2828c905852ed7e9823"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#af2571f923a22f2828c905852ed7e9823">arcTo</a> (double x1, double y1, double x2, double y2, double r)</td></tr>
+<tr class="memitem:af2571f923a22f2828c905852ed7e9823" id="r_af2571f923a22f2828c905852ed7e9823"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2571f923a22f2828c905852ed7e9823">arcTo</a> (double x1, double y1, double x2, double y2, double r)</td></tr>
 <tr class="separator:af2571f923a22f2828c905852ed7e9823"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adae5f4c6378c3cbe0317120cdfde2d92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#adae5f4c6378c3cbe0317120cdfde2d92">arc</a> (double x, double y, double r, double start_angle, double end_angle, boolean ccw)</td></tr>
+<tr class="memitem:adae5f4c6378c3cbe0317120cdfde2d92" id="r_adae5f4c6378c3cbe0317120cdfde2d92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adae5f4c6378c3cbe0317120cdfde2d92">arc</a> (double x, double y, double r, double start_angle, double end_angle, boolean ccw)</td></tr>
 <tr class="separator:adae5f4c6378c3cbe0317120cdfde2d92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadab02126c911876901d5aabdedf14a4"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#aadab02126c911876901d5aabdedf14a4">isPointInPath</a> (double x, double y)</td></tr>
+<tr class="memitem:aadab02126c911876901d5aabdedf14a4" id="r_aadab02126c911876901d5aabdedf14a4"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadab02126c911876901d5aabdedf14a4">isPointInPath</a> (double x, double y)</td></tr>
 <tr class="separator:aadab02126c911876901d5aabdedf14a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a482195f71ccdf98dc68adce23c448488"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a482195f71ccdf98dc68adce23c448488">rect</a> (double x, double y, double w, double h)</td></tr>
+<tr class="memitem:a482195f71ccdf98dc68adce23c448488" id="r_a482195f71ccdf98dc68adce23c448488"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a482195f71ccdf98dc68adce23c448488">rect</a> (double x, double y, double w, double h)</td></tr>
 <tr class="separator:a482195f71ccdf98dc68adce23c448488"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad766643bb11adb7029683d844ef35a12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#ad766643bb11adb7029683d844ef35a12">roundedRect</a> (double x, double y, double w, double h, double r)</td></tr>
+<tr class="memitem:ad766643bb11adb7029683d844ef35a12" id="r_ad766643bb11adb7029683d844ef35a12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad766643bb11adb7029683d844ef35a12">roundedRect</a> (double x, double y, double w, double h, double r)</td></tr>
 <tr class="separator:ad766643bb11adb7029683d844ef35a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad662def0479b7353be5baf195fcd36ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#ad662def0479b7353be5baf195fcd36ee">ellipse</a> (double x, double y, double rx, double ry)</td></tr>
+<tr class="memitem:ad662def0479b7353be5baf195fcd36ee" id="r_ad662def0479b7353be5baf195fcd36ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad662def0479b7353be5baf195fcd36ee">ellipse</a> (double x, double y, double rx, double ry)</td></tr>
 <tr class="separator:ad662def0479b7353be5baf195fcd36ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab27efe08d5eeb009bacb20d5867c279d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#ab27efe08d5eeb009bacb20d5867c279d">closePath</a> ()</td></tr>
+<tr class="memitem:ab27efe08d5eeb009bacb20d5867c279d" id="r_ab27efe08d5eeb009bacb20d5867c279d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab27efe08d5eeb009bacb20d5867c279d">closePath</a> ()</td></tr>
 <tr class="separator:ab27efe08d5eeb009bacb20d5867c279d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40fcddcfd024cecbecf99bc79037b490"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a40fcddcfd024cecbecf99bc79037b490">pathWinding</a> (boolean dir)</td></tr>
+<tr class="memitem:a40fcddcfd024cecbecf99bc79037b490" id="r_a40fcddcfd024cecbecf99bc79037b490"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40fcddcfd024cecbecf99bc79037b490">pathWinding</a> (boolean dir)</td></tr>
 <tr class="separator:a40fcddcfd024cecbecf99bc79037b490"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa15bb2842f4728c2f8e2ff59566d29f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#aa15bb2842f4728c2f8e2ff59566d29f4">rotate</a> (double rad)</td></tr>
+<tr class="memitem:aa15bb2842f4728c2f8e2ff59566d29f4" id="r_aa15bb2842f4728c2f8e2ff59566d29f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa15bb2842f4728c2f8e2ff59566d29f4">rotate</a> (double rad)</td></tr>
 <tr class="separator:aa15bb2842f4728c2f8e2ff59566d29f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af672b35dd63c38d71f95886637c5bed6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#af672b35dd63c38d71f95886637c5bed6">scale</a> (double x, double y)</td></tr>
+<tr class="memitem:af672b35dd63c38d71f95886637c5bed6" id="r_af672b35dd63c38d71f95886637c5bed6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af672b35dd63c38d71f95886637c5bed6">scale</a> (double x, double y)</td></tr>
 <tr class="separator:af672b35dd63c38d71f95886637c5bed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78835f8f8af6e88212b4f92f4f8373b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a78835f8f8af6e88212b4f92f4f8373b1">translate</a> (double x, double y)</td></tr>
+<tr class="memitem:a78835f8f8af6e88212b4f92f4f8373b1" id="r_a78835f8f8af6e88212b4f92f4f8373b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78835f8f8af6e88212b4f92f4f8373b1">translate</a> (double x, double y)</td></tr>
 <tr class="separator:a78835f8f8af6e88212b4f92f4f8373b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af846e091b78abf584a366cfa1b19c302"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#af846e091b78abf584a366cfa1b19c302">transform</a> (double a, double b, double c, double d, double e, double f)</td></tr>
+<tr class="memitem:af846e091b78abf584a366cfa1b19c302" id="r_af846e091b78abf584a366cfa1b19c302"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af846e091b78abf584a366cfa1b19c302">transform</a> (double a, double b, double c, double d, double e, double f)</td></tr>
 <tr class="separator:af846e091b78abf584a366cfa1b19c302"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba2bd44d8d6ab6b225971730b0ef4ba6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#aba2bd44d8d6ab6b225971730b0ef4ba6">setTransform</a> (double a, double b, double c, double d, double e, double f)</td></tr>
+<tr class="memitem:aba2bd44d8d6ab6b225971730b0ef4ba6" id="r_aba2bd44d8d6ab6b225971730b0ef4ba6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba2bd44d8d6ab6b225971730b0ef4ba6">setTransform</a> (double a, double b, double c, double d, double e, double f)</td></tr>
 <tr class="separator:aba2bd44d8d6ab6b225971730b0ef4ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a001d7d46a0f273c1946018a074968c83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a001d7d46a0f273c1946018a074968c83">clipPath</a> ()</td></tr>
+<tr class="memitem:a001d7d46a0f273c1946018a074968c83" id="r_a001d7d46a0f273c1946018a074968c83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a001d7d46a0f273c1946018a074968c83">clipPath</a> ()</td></tr>
 <tr class="separator:a001d7d46a0f273c1946018a074968c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27ae8e6c9977fa896b24650be06299f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a27ae8e6c9977fa896b24650be06299f9">clipRect</a> (double x, double y, double w, double h)</td></tr>
+<tr class="memitem:a27ae8e6c9977fa896b24650be06299f9" id="r_a27ae8e6c9977fa896b24650be06299f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27ae8e6c9977fa896b24650be06299f9">clipRect</a> (double x, double y, double w, double h)</td></tr>
 <tr class="separator:a27ae8e6c9977fa896b24650be06299f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b4f5f8e5cfdff61e6ddc754b79a1066"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a6b4f5f8e5cfdff61e6ddc754b79a1066">isRectfInClipRect</a> (double left, double top, double right, double bottom)</td></tr>
+<tr class="memitem:a6b4f5f8e5cfdff61e6ddc754b79a1066" id="r_a6b4f5f8e5cfdff61e6ddc754b79a1066"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b4f5f8e5cfdff61e6ddc754b79a1066">isRectfInClipRect</a> (double left, double top, double right, double bottom)</td></tr>
 <tr class="separator:a6b4f5f8e5cfdff61e6ddc754b79a1066"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1007694efed054b3272c66dee48cab80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a1007694efed054b3272c66dee48cab80">intersectClipRect</a> (double x, double y, double w, double h)</td></tr>
+<tr class="memitem:a1007694efed054b3272c66dee48cab80" id="r_a1007694efed054b3272c66dee48cab80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1007694efed054b3272c66dee48cab80">intersectClipRect</a> (double x, double y, double w, double h)</td></tr>
 <tr class="separator:a1007694efed054b3272c66dee48cab80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a775eb79a2ce539e9852ef0c4f78c28e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a775eb79a2ce539e9852ef0c4f78c28e5">fill</a> ()</td></tr>
+<tr class="memitem:a775eb79a2ce539e9852ef0c4f78c28e5" id="r_a775eb79a2ce539e9852ef0c4f78c28e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a775eb79a2ce539e9852ef0c4f78c28e5">fill</a> ()</td></tr>
 <tr class="separator:a775eb79a2ce539e9852ef0c4f78c28e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50259d1ff6dddb4c4ebc3e03c5d3bb13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a50259d1ff6dddb4c4ebc3e03c5d3bb13">stroke</a> ()</td></tr>
+<tr class="memitem:a50259d1ff6dddb4c4ebc3e03c5d3bb13" id="r_a50259d1ff6dddb4c4ebc3e03c5d3bb13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50259d1ff6dddb4c4ebc3e03c5d3bb13">stroke</a> ()</td></tr>
 <tr class="separator:a50259d1ff6dddb4c4ebc3e03c5d3bb13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ff0453fbfc814b7106f01094bd7e3a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a2ff0453fbfc814b7106f01094bd7e3a4">paint</a> (boolean <a class="el" href="classawtk_1_1_t_vgcanvas.html#a50259d1ff6dddb4c4ebc3e03c5d3bb13">stroke</a>, <a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img)</td></tr>
+<tr class="memitem:a2ff0453fbfc814b7106f01094bd7e3a4" id="r_a2ff0453fbfc814b7106f01094bd7e3a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ff0453fbfc814b7106f01094bd7e3a4">paint</a> (boolean <a class="el" href="#a50259d1ff6dddb4c4ebc3e03c5d3bb13">stroke</a>, <a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img)</td></tr>
 <tr class="separator:a2ff0453fbfc814b7106f01094bd7e3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87d9d83221f594e1768175ae547fbd31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a87d9d83221f594e1768175ae547fbd31">setFont</a> (String font)</td></tr>
+<tr class="memitem:a87d9d83221f594e1768175ae547fbd31" id="r_a87d9d83221f594e1768175ae547fbd31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87d9d83221f594e1768175ae547fbd31">setFont</a> (String font)</td></tr>
 <tr class="separator:a87d9d83221f594e1768175ae547fbd31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a835e84dc3358b3369e7d7293ec7124a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a835e84dc3358b3369e7d7293ec7124a0">setFontSize</a> (double size)</td></tr>
+<tr class="memitem:a835e84dc3358b3369e7d7293ec7124a0" id="r_a835e84dc3358b3369e7d7293ec7124a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a835e84dc3358b3369e7d7293ec7124a0">setFontSize</a> (double size)</td></tr>
 <tr class="separator:a835e84dc3358b3369e7d7293ec7124a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ba563e227e61919622bea93e31c9e1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a8ba563e227e61919622bea93e31c9e1b">setTextAlign</a> (String value)</td></tr>
+<tr class="memitem:a8ba563e227e61919622bea93e31c9e1b" id="r_a8ba563e227e61919622bea93e31c9e1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ba563e227e61919622bea93e31c9e1b">setTextAlign</a> (String value)</td></tr>
 <tr class="separator:a8ba563e227e61919622bea93e31c9e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84c85c2889ec7d5b5183e0d48fbdda58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a84c85c2889ec7d5b5183e0d48fbdda58">setTextBaseline</a> (String value)</td></tr>
+<tr class="memitem:a84c85c2889ec7d5b5183e0d48fbdda58" id="r_a84c85c2889ec7d5b5183e0d48fbdda58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84c85c2889ec7d5b5183e0d48fbdda58">setTextBaseline</a> (String value)</td></tr>
 <tr class="separator:a84c85c2889ec7d5b5183e0d48fbdda58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af690bddaae368bf6db636231d4f90244"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#af690bddaae368bf6db636231d4f90244">fillText</a> (String text, double x, double y, double max_width)</td></tr>
+<tr class="memitem:af690bddaae368bf6db636231d4f90244" id="r_af690bddaae368bf6db636231d4f90244"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af690bddaae368bf6db636231d4f90244">fillText</a> (String text, double x, double y, double max_width)</td></tr>
 <tr class="separator:af690bddaae368bf6db636231d4f90244"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac9a70b2d4e742624a411d4e27ebfb79"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#aac9a70b2d4e742624a411d4e27ebfb79">measureText</a> (String text)</td></tr>
+<tr class="memitem:aac9a70b2d4e742624a411d4e27ebfb79" id="r_aac9a70b2d4e742624a411d4e27ebfb79"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac9a70b2d4e742624a411d4e27ebfb79">measureText</a> (String text)</td></tr>
 <tr class="separator:aac9a70b2d4e742624a411d4e27ebfb79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a301d0529193ed5c3f3ba740b8d1d72ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a301d0529193ed5c3f3ba740b8d1d72ea">drawImage</a> (<a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh)</td></tr>
+<tr class="memitem:a301d0529193ed5c3f3ba740b8d1d72ea" id="r_a301d0529193ed5c3f3ba740b8d1d72ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a301d0529193ed5c3f3ba740b8d1d72ea">drawImage</a> (<a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh)</td></tr>
 <tr class="separator:a301d0529193ed5c3f3ba740b8d1d72ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4456aed8bb9266d7cff49a43da8d420e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a4456aed8bb9266d7cff49a43da8d420e">drawImageRepeat</a> (<a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh, double dst_w, double dst_h)</td></tr>
+<tr class="memitem:a4456aed8bb9266d7cff49a43da8d420e" id="r_a4456aed8bb9266d7cff49a43da8d420e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4456aed8bb9266d7cff49a43da8d420e">drawImageRepeat</a> (<a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh, double dst_w, double dst_h)</td></tr>
 <tr class="separator:a4456aed8bb9266d7cff49a43da8d420e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b1e8cf0eba36c23bd8d529e1574e5a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a9b1e8cf0eba36c23bd8d529e1574e5a0">drawIcon</a> (<a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh)</td></tr>
+<tr class="memitem:a9b1e8cf0eba36c23bd8d529e1574e5a0" id="r_a9b1e8cf0eba36c23bd8d529e1574e5a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b1e8cf0eba36c23bd8d529e1574e5a0">drawIcon</a> (<a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh)</td></tr>
 <tr class="separator:a9b1e8cf0eba36c23bd8d529e1574e5a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a471b198ac6c76561f57b29f663bf63a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a471b198ac6c76561f57b29f663bf63a5">setAntialias</a> (boolean value)</td></tr>
+<tr class="memitem:a471b198ac6c76561f57b29f663bf63a5" id="r_a471b198ac6c76561f57b29f663bf63a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a471b198ac6c76561f57b29f663bf63a5">setAntialias</a> (boolean value)</td></tr>
 <tr class="separator:a471b198ac6c76561f57b29f663bf63a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff84ce72a6fab71dc56b688cb1021d55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#aff84ce72a6fab71dc56b688cb1021d55">setGlobalAlpha</a> (double alpha)</td></tr>
+<tr class="memitem:aff84ce72a6fab71dc56b688cb1021d55" id="r_aff84ce72a6fab71dc56b688cb1021d55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff84ce72a6fab71dc56b688cb1021d55">setGlobalAlpha</a> (double alpha)</td></tr>
 <tr class="separator:aff84ce72a6fab71dc56b688cb1021d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac90d0de69f0270f9808892031238229"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#aac90d0de69f0270f9808892031238229">setLineWidth</a> (double value)</td></tr>
+<tr class="memitem:aac90d0de69f0270f9808892031238229" id="r_aac90d0de69f0270f9808892031238229"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac90d0de69f0270f9808892031238229">setLineWidth</a> (double value)</td></tr>
 <tr class="separator:aac90d0de69f0270f9808892031238229"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d04737d0734caa33846673c1f410f92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a5d04737d0734caa33846673c1f410f92">setFillColor</a> (String color)</td></tr>
+<tr class="memitem:a5d04737d0734caa33846673c1f410f92" id="r_a5d04737d0734caa33846673c1f410f92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d04737d0734caa33846673c1f410f92">setFillColor</a> (String color)</td></tr>
 <tr class="separator:a5d04737d0734caa33846673c1f410f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cea7413604fbff2895603773fca07a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a2cea7413604fbff2895603773fca07a3">setStrokeColor</a> (String str)</td></tr>
+<tr class="memitem:a2cea7413604fbff2895603773fca07a3" id="r_a2cea7413604fbff2895603773fca07a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cea7413604fbff2895603773fca07a3">setStrokeColor</a> (String str)</td></tr>
 <tr class="separator:a2cea7413604fbff2895603773fca07a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a932f9004a7f7a46f26848d4c585153ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a932f9004a7f7a46f26848d4c585153ac">setLineCap</a> (String value)</td></tr>
+<tr class="memitem:a932f9004a7f7a46f26848d4c585153ac" id="r_a932f9004a7f7a46f26848d4c585153ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a932f9004a7f7a46f26848d4c585153ac">setLineCap</a> (String value)</td></tr>
 <tr class="separator:a932f9004a7f7a46f26848d4c585153ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f14b2153721e9f5efca87a640c5ba83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a9f14b2153721e9f5efca87a640c5ba83">setLineJoin</a> (String value)</td></tr>
+<tr class="memitem:a9f14b2153721e9f5efca87a640c5ba83" id="r_a9f14b2153721e9f5efca87a640c5ba83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f14b2153721e9f5efca87a640c5ba83">setLineJoin</a> (String value)</td></tr>
 <tr class="separator:a9f14b2153721e9f5efca87a640c5ba83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad40687fadd32ee01a222ce021841a54d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#ad40687fadd32ee01a222ce021841a54d">setMiterLimit</a> (double value)</td></tr>
+<tr class="memitem:ad40687fadd32ee01a222ce021841a54d" id="r_ad40687fadd32ee01a222ce021841a54d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad40687fadd32ee01a222ce021841a54d">setMiterLimit</a> (double value)</td></tr>
 <tr class="separator:ad40687fadd32ee01a222ce021841a54d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7ae7c9226aceeac658514a0e27639a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#ad7ae7c9226aceeac658514a0e27639a1">save</a> ()</td></tr>
+<tr class="memitem:ad7ae7c9226aceeac658514a0e27639a1" id="r_ad7ae7c9226aceeac658514a0e27639a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7ae7c9226aceeac658514a0e27639a1">save</a> ()</td></tr>
 <tr class="separator:ad7ae7c9226aceeac658514a0e27639a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8b938c13491eeab6c2642c39b5bbe04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#ad8b938c13491eeab6c2642c39b5bbe04">restore</a> ()</td></tr>
+<tr class="memitem:ad8b938c13491eeab6c2642c39b5bbe04" id="r_ad8b938c13491eeab6c2642c39b5bbe04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8b938c13491eeab6c2642c39b5bbe04">restore</a> ()</td></tr>
 <tr class="separator:ad8b938c13491eeab6c2642c39b5bbe04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50edcb991a430aabab69d4a5eea8fb82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a50edcb991a430aabab69d4a5eea8fb82">getW</a> ()</td></tr>
+<tr class="memitem:a50edcb991a430aabab69d4a5eea8fb82" id="r_a50edcb991a430aabab69d4a5eea8fb82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50edcb991a430aabab69d4a5eea8fb82">getW</a> ()</td></tr>
 <tr class="separator:a50edcb991a430aabab69d4a5eea8fb82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82b19145cb2a689d16b331e2680c30cd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a82b19145cb2a689d16b331e2680c30cd">getH</a> ()</td></tr>
+<tr class="memitem:a82b19145cb2a689d16b331e2680c30cd" id="r_a82b19145cb2a689d16b331e2680c30cd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82b19145cb2a689d16b331e2680c30cd">getH</a> ()</td></tr>
 <tr class="separator:a82b19145cb2a689d16b331e2680c30cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a36968d14794f44b23a1e8fc52782d0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a2a36968d14794f44b23a1e8fc52782d0">getStride</a> ()</td></tr>
+<tr class="memitem:a2a36968d14794f44b23a1e8fc52782d0" id="r_a2a36968d14794f44b23a1e8fc52782d0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a36968d14794f44b23a1e8fc52782d0">getStride</a> ()</td></tr>
 <tr class="separator:a2a36968d14794f44b23a1e8fc52782d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87a4a0ffb205f301881031e961adf442"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a87a4a0ffb205f301881031e961adf442">getRatio</a> ()</td></tr>
+<tr class="memitem:a87a4a0ffb205f301881031e961adf442" id="r_a87a4a0ffb205f301881031e961adf442"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87a4a0ffb205f301881031e961adf442">getRatio</a> ()</td></tr>
 <tr class="separator:a87a4a0ffb205f301881031e961adf442"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e38c782fd57438528d70ac39ef70354"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a7e38c782fd57438528d70ac39ef70354">getAntiAlias</a> ()</td></tr>
+<tr class="memitem:a7e38c782fd57438528d70ac39ef70354" id="r_a7e38c782fd57438528d70ac39ef70354"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e38c782fd57438528d70ac39ef70354">getAntiAlias</a> ()</td></tr>
 <tr class="separator:a7e38c782fd57438528d70ac39ef70354"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1855822ebfbedd86ed9bf34683d834a6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a1855822ebfbedd86ed9bf34683d834a6">getLineWidth</a> ()</td></tr>
+<tr class="memitem:a1855822ebfbedd86ed9bf34683d834a6" id="r_a1855822ebfbedd86ed9bf34683d834a6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1855822ebfbedd86ed9bf34683d834a6">getLineWidth</a> ()</td></tr>
 <tr class="separator:a1855822ebfbedd86ed9bf34683d834a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e010baeea568ccb957597419acb8580"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a7e010baeea568ccb957597419acb8580">getGlobalAlpha</a> ()</td></tr>
+<tr class="memitem:a7e010baeea568ccb957597419acb8580" id="r_a7e010baeea568ccb957597419acb8580"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e010baeea568ccb957597419acb8580">getGlobalAlpha</a> ()</td></tr>
 <tr class="separator:a7e010baeea568ccb957597419acb8580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56581cd899bb55bb02e8f58b2d93f79b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a56581cd899bb55bb02e8f58b2d93f79b">getMiterLimit</a> ()</td></tr>
+<tr class="memitem:a56581cd899bb55bb02e8f58b2d93f79b" id="r_a56581cd899bb55bb02e8f58b2d93f79b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56581cd899bb55bb02e8f58b2d93f79b">getMiterLimit</a> ()</td></tr>
 <tr class="separator:a56581cd899bb55bb02e8f58b2d93f79b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d74e12aea7aea67a6234ec9922f2336"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a9d74e12aea7aea67a6234ec9922f2336">getLineCap</a> ()</td></tr>
+<tr class="memitem:a9d74e12aea7aea67a6234ec9922f2336" id="r_a9d74e12aea7aea67a6234ec9922f2336"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d74e12aea7aea67a6234ec9922f2336">getLineCap</a> ()</td></tr>
 <tr class="separator:a9d74e12aea7aea67a6234ec9922f2336"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accc6ea9c5b5ea0f009ea6e702760af15"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#accc6ea9c5b5ea0f009ea6e702760af15">getLineJoin</a> ()</td></tr>
+<tr class="memitem:accc6ea9c5b5ea0f009ea6e702760af15" id="r_accc6ea9c5b5ea0f009ea6e702760af15"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accc6ea9c5b5ea0f009ea6e702760af15">getLineJoin</a> ()</td></tr>
 <tr class="separator:accc6ea9c5b5ea0f009ea6e702760af15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a441b90a72ef0912dd859ab6cd954565f"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a441b90a72ef0912dd859ab6cd954565f">getFont</a> ()</td></tr>
+<tr class="memitem:a441b90a72ef0912dd859ab6cd954565f" id="r_a441b90a72ef0912dd859ab6cd954565f"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a441b90a72ef0912dd859ab6cd954565f">getFont</a> ()</td></tr>
 <tr class="separator:a441b90a72ef0912dd859ab6cd954565f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3a05163113df31a393f4679df87dbcc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#ac3a05163113df31a393f4679df87dbcc">getFontSize</a> ()</td></tr>
+<tr class="memitem:ac3a05163113df31a393f4679df87dbcc" id="r_ac3a05163113df31a393f4679df87dbcc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3a05163113df31a393f4679df87dbcc">getFontSize</a> ()</td></tr>
 <tr class="separator:ac3a05163113df31a393f4679df87dbcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbf36bc728c57f0378d139d9c3bf11b7"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#adbf36bc728c57f0378d139d9c3bf11b7">getTextAlign</a> ()</td></tr>
+<tr class="memitem:adbf36bc728c57f0378d139d9c3bf11b7" id="r_adbf36bc728c57f0378d139d9c3bf11b7"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbf36bc728c57f0378d139d9c3bf11b7">getTextAlign</a> ()</td></tr>
 <tr class="separator:adbf36bc728c57f0378d139d9c3bf11b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f1f177e56f36f1498ba709db0cb49ba"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a6f1f177e56f36f1498ba709db0cb49ba">getTextBaseline</a> ()</td></tr>
+<tr class="memitem:a6f1f177e56f36f1498ba709db0cb49ba" id="r_a6f1f177e56f36f1498ba709db0cb49ba"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f1f177e56f36f1498ba709db0cb49ba">getTextBaseline</a> ()</td></tr>
 <tr class="separator:a6f1f177e56f36f1498ba709db0cb49ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:aba6b7166938b3910f1094be57bba261a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_vgcanvas.html">TVgcanvas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#aba6b7166938b3910f1094be57bba261a">cast</a> (long <a class="el" href="classawtk_1_1_t_vgcanvas.html#a84abfe8803237c2197bff6cd9a62c31d">nativeObj</a>)</td></tr>
+<tr class="memitem:aba6b7166938b3910f1094be57bba261a" id="r_aba6b7166938b3910f1094be57bba261a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_vgcanvas.html">TVgcanvas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba6b7166938b3910f1094be57bba261a">cast</a> (long <a class="el" href="#a84abfe8803237c2197bff6cd9a62c31d">nativeObj</a>)</td></tr>
 <tr class="separator:aba6b7166938b3910f1094be57bba261a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecda8db2c2c35a26a44c8f5435894a0a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_vgcanvas.html">TVgcanvas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#aecda8db2c2c35a26a44c8f5435894a0a">cast</a> (<a class="el" href="classawtk_1_1_t_vgcanvas.html">TVgcanvas</a> vg)</td></tr>
+<tr class="memitem:aecda8db2c2c35a26a44c8f5435894a0a" id="r_aecda8db2c2c35a26a44c8f5435894a0a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_vgcanvas.html">TVgcanvas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecda8db2c2c35a26a44c8f5435894a0a">cast</a> (<a class="el" href="classawtk_1_1_t_vgcanvas.html">TVgcanvas</a> vg)</td></tr>
 <tr class="separator:aecda8db2c2c35a26a44c8f5435894a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:a84abfe8803237c2197bff6cd9a62c31d"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_vgcanvas.html#a84abfe8803237c2197bff6cd9a62c31d">nativeObj</a></td></tr>
+<tr class="memitem:a84abfe8803237c2197bff6cd9a62c31d" id="r_a84abfe8803237c2197bff6cd9a62c31d"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84abfe8803237c2197bff6cd9a62c31d">nativeObj</a></td></tr>
 <tr class="separator:a84abfe8803237c2197bff6cd9a62c31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
@@ -222,8 +244,8 @@ Public 属性</h2></td></tr>
 <p>示例：</p>
 <p>&gt;请参考：https://www.w3schools.com/tags/ref_canvas.asp </p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
-<a id="a9a508a38b3e70257f8bec8dd9f5e7b8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a508a38b3e70257f8bec8dd9f5e7b8a">&#9670;&nbsp;</a></span>TVgcanvas()</h2>
+<a id="a9a508a38b3e70257f8bec8dd9f5e7b8a" name="a9a508a38b3e70257f8bec8dd9f5e7b8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a508a38b3e70257f8bec8dd9f5e7b8a">&#9670;&#160;</a></span>TVgcanvas()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,8 +256,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">awtk.TVgcanvas.TVgcanvas </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>nativeObj</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>nativeObj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -257,8 +278,8 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a id="adae5f4c6378c3cbe0317120cdfde2d92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adae5f4c6378c3cbe0317120cdfde2d92">&#9670;&nbsp;</a></span>arc()</h2>
+<a id="adae5f4c6378c3cbe0317120cdfde2d92" name="adae5f4c6378c3cbe0317120cdfde2d92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adae5f4c6378c3cbe0317120cdfde2d92">&#9670;&#160;</a></span>arc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -269,43 +290,32 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.arc </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>r</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>start_angle</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>start_angle</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>end_angle</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>end_angle</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>ccw</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>ccw</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -330,8 +340,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="af2571f923a22f2828c905852ed7e9823"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2571f923a22f2828c905852ed7e9823">&#9670;&nbsp;</a></span>arcTo()</h2>
+<a id="af2571f923a22f2828c905852ed7e9823" name="af2571f923a22f2828c905852ed7e9823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2571f923a22f2828c905852ed7e9823">&#9670;&#160;</a></span>arcTo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -342,37 +352,27 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.arcTo </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x1</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y1</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y1</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x2</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x2</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y2</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y2</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>r</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -396,8 +396,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a72bb87a2d3a8653a13c31db965db8457"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72bb87a2d3a8653a13c31db965db8457">&#9670;&nbsp;</a></span>beginPath()</h2>
+<a id="a72bb87a2d3a8653a13c31db965db8457" name="a72bb87a2d3a8653a13c31db965db8457"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72bb87a2d3a8653a13c31db965db8457">&#9670;&#160;</a></span>beginPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -408,7 +408,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.beginPath </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -423,8 +423,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a20bd0dbb36b5a592f8eb34c0be4a66f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20bd0dbb36b5a592f8eb34c0be4a66f2">&#9670;&nbsp;</a></span>bezierTo()</h2>
+<a id="a20bd0dbb36b5a592f8eb34c0be4a66f2" name="a20bd0dbb36b5a592f8eb34c0be4a66f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20bd0dbb36b5a592f8eb34c0be4a66f2">&#9670;&#160;</a></span>bezierTo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -435,43 +435,32 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.bezierTo </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>cp1x</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>cp1x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>cp1y</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>cp1y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>cp2x</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>cp2x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>cp2y</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>cp2y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -496,8 +485,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aba6b7166938b3910f1094be57bba261a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba6b7166938b3910f1094be57bba261a">&#9670;&nbsp;</a></span>cast() <span class="overload">[1/2]</span></h2>
+<a id="aba6b7166938b3910f1094be57bba261a" name="aba6b7166938b3910f1094be57bba261a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba6b7166938b3910f1094be57bba261a">&#9670;&#160;</a></span>cast() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -508,8 +497,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_vgcanvas.html">TVgcanvas</a> awtk.TVgcanvas.cast </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>nativeObj</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>nativeObj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -530,8 +518,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aecda8db2c2c35a26a44c8f5435894a0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecda8db2c2c35a26a44c8f5435894a0a">&#9670;&nbsp;</a></span>cast() <span class="overload">[2/2]</span></h2>
+<a id="aecda8db2c2c35a26a44c8f5435894a0a" name="aecda8db2c2c35a26a44c8f5435894a0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecda8db2c2c35a26a44c8f5435894a0a">&#9670;&#160;</a></span>cast() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -542,8 +530,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_vgcanvas.html">TVgcanvas</a> awtk.TVgcanvas.cast </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_vgcanvas.html">TVgcanvas</a>&#160;</td>
-          <td class="paramname"><em>vg</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_vgcanvas.html">TVgcanvas</a></td>          <td class="paramname"><span class="paramname"><em>vg</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -564,8 +551,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a001d7d46a0f273c1946018a074968c83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a001d7d46a0f273c1946018a074968c83">&#9670;&nbsp;</a></span>clipPath()</h2>
+<a id="a001d7d46a0f273c1946018a074968c83" name="a001d7d46a0f273c1946018a074968c83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a001d7d46a0f273c1946018a074968c83">&#9670;&#160;</a></span>clipPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -576,7 +563,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.clipPath </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -591,8 +578,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a27ae8e6c9977fa896b24650be06299f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27ae8e6c9977fa896b24650be06299f9">&#9670;&nbsp;</a></span>clipRect()</h2>
+<a id="a27ae8e6c9977fa896b24650be06299f9" name="a27ae8e6c9977fa896b24650be06299f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27ae8e6c9977fa896b24650be06299f9">&#9670;&#160;</a></span>clipRect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -603,31 +590,22 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.clipRect </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>h</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -650,8 +628,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ab27efe08d5eeb009bacb20d5867c279d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab27efe08d5eeb009bacb20d5867c279d">&#9670;&nbsp;</a></span>closePath()</h2>
+<a id="ab27efe08d5eeb009bacb20d5867c279d" name="ab27efe08d5eeb009bacb20d5867c279d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab27efe08d5eeb009bacb20d5867c279d">&#9670;&#160;</a></span>closePath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -662,7 +640,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.closePath </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -678,8 +656,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a9b1e8cf0eba36c23bd8d529e1574e5a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b1e8cf0eba36c23bd8d529e1574e5a0">&#9670;&nbsp;</a></span>drawIcon()</h2>
+<a id="a9b1e8cf0eba36c23bd8d529e1574e5a0" name="a9b1e8cf0eba36c23bd8d529e1574e5a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b1e8cf0eba36c23bd8d529e1574e5a0">&#9670;&#160;</a></span>drawIcon()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -690,61 +668,47 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.drawIcon </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a>&#160;</td>
-          <td class="paramname"><em>img</em>, </td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a></td>          <td class="paramname"><span class="paramname"><em>img</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>sx</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>sx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>sy</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>sy</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>sw</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>sw</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>sh</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>sh</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dx</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dy</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dy</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dw</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dw</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dh</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dh</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -773,8 +737,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a301d0529193ed5c3f3ba740b8d1d72ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a301d0529193ed5c3f3ba740b8d1d72ea">&#9670;&nbsp;</a></span>drawImage()</h2>
+<a id="a301d0529193ed5c3f3ba740b8d1d72ea" name="a301d0529193ed5c3f3ba740b8d1d72ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a301d0529193ed5c3f3ba740b8d1d72ea">&#9670;&#160;</a></span>drawImage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -785,61 +749,47 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.drawImage </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a>&#160;</td>
-          <td class="paramname"><em>img</em>, </td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a></td>          <td class="paramname"><span class="paramname"><em>img</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>sx</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>sx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>sy</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>sy</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>sw</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>sw</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>sh</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>sh</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dx</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dy</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dy</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dw</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dw</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dh</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dh</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -867,8 +817,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a4456aed8bb9266d7cff49a43da8d420e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4456aed8bb9266d7cff49a43da8d420e">&#9670;&nbsp;</a></span>drawImageRepeat()</h2>
+<a id="a4456aed8bb9266d7cff49a43da8d420e" name="a4456aed8bb9266d7cff49a43da8d420e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4456aed8bb9266d7cff49a43da8d420e">&#9670;&#160;</a></span>drawImageRepeat()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -879,73 +829,57 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.drawImageRepeat </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a>&#160;</td>
-          <td class="paramname"><em>img</em>, </td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a></td>          <td class="paramname"><span class="paramname"><em>img</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>sx</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>sx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>sy</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>sy</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>sw</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>sw</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>sh</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>sh</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dx</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dy</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dy</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dw</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dw</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dh</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dh</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dst_w</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dst_w</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dst_h</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dst_h</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -976,8 +910,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ad662def0479b7353be5baf195fcd36ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad662def0479b7353be5baf195fcd36ee">&#9670;&nbsp;</a></span>ellipse()</h2>
+<a id="ad662def0479b7353be5baf195fcd36ee" name="ad662def0479b7353be5baf195fcd36ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad662def0479b7353be5baf195fcd36ee">&#9670;&#160;</a></span>ellipse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -988,31 +922,22 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.ellipse </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>rx</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>rx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>ry</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>ry</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1035,8 +960,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a775eb79a2ce539e9852ef0c4f78c28e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a775eb79a2ce539e9852ef0c4f78c28e5">&#9670;&nbsp;</a></span>fill()</h2>
+<a id="a775eb79a2ce539e9852ef0c4f78c28e5" name="a775eb79a2ce539e9852ef0c4f78c28e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a775eb79a2ce539e9852ef0c4f78c28e5">&#9670;&#160;</a></span>fill()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1047,7 +972,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.fill </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1062,8 +987,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="af690bddaae368bf6db636231d4f90244"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af690bddaae368bf6db636231d4f90244">&#9670;&nbsp;</a></span>fillText()</h2>
+<a id="af690bddaae368bf6db636231d4f90244" name="af690bddaae368bf6db636231d4f90244"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af690bddaae368bf6db636231d4f90244">&#9670;&#160;</a></span>fillText()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1074,31 +999,22 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.fillText </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>text</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>max_width</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>max_width</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1121,8 +1037,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a37ccc348abe6468686b7a2d3a24dc683"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37ccc348abe6468686b7a2d3a24dc683">&#9670;&nbsp;</a></span>flush()</h2>
+<a id="a37ccc348abe6468686b7a2d3a24dc683" name="a37ccc348abe6468686b7a2d3a24dc683"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37ccc348abe6468686b7a2d3a24dc683">&#9670;&#160;</a></span>flush()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1133,7 +1049,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.flush </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1148,8 +1064,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a7e38c782fd57438528d70ac39ef70354"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e38c782fd57438528d70ac39ef70354">&#9670;&nbsp;</a></span>getAntiAlias()</h2>
+<a id="a7e38c782fd57438528d70ac39ef70354" name="a7e38c782fd57438528d70ac39ef70354"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e38c782fd57438528d70ac39ef70354">&#9670;&#160;</a></span>getAntiAlias()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1160,7 +1076,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TVgcanvas.getAntiAlias </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1174,8 +1090,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a441b90a72ef0912dd859ab6cd954565f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a441b90a72ef0912dd859ab6cd954565f">&#9670;&nbsp;</a></span>getFont()</h2>
+<a id="a441b90a72ef0912dd859ab6cd954565f" name="a441b90a72ef0912dd859ab6cd954565f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a441b90a72ef0912dd859ab6cd954565f">&#9670;&#160;</a></span>getFont()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1186,7 +1102,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TVgcanvas.getFont </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1200,8 +1116,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ac3a05163113df31a393f4679df87dbcc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3a05163113df31a393f4679df87dbcc">&#9670;&nbsp;</a></span>getFontSize()</h2>
+<a id="ac3a05163113df31a393f4679df87dbcc" name="ac3a05163113df31a393f4679df87dbcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3a05163113df31a393f4679df87dbcc">&#9670;&#160;</a></span>getFontSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1212,7 +1128,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">double awtk.TVgcanvas.getFontSize </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1226,8 +1142,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a7e010baeea568ccb957597419acb8580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e010baeea568ccb957597419acb8580">&#9670;&nbsp;</a></span>getGlobalAlpha()</h2>
+<a id="a7e010baeea568ccb957597419acb8580" name="a7e010baeea568ccb957597419acb8580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e010baeea568ccb957597419acb8580">&#9670;&#160;</a></span>getGlobalAlpha()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1238,7 +1154,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">double awtk.TVgcanvas.getGlobalAlpha </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1252,8 +1168,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a82b19145cb2a689d16b331e2680c30cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82b19145cb2a689d16b331e2680c30cd">&#9670;&nbsp;</a></span>getH()</h2>
+<a id="a82b19145cb2a689d16b331e2680c30cd" name="a82b19145cb2a689d16b331e2680c30cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82b19145cb2a689d16b331e2680c30cd">&#9670;&#160;</a></span>getH()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1264,7 +1180,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TVgcanvas.getH </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1278,8 +1194,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a9d74e12aea7aea67a6234ec9922f2336"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d74e12aea7aea67a6234ec9922f2336">&#9670;&nbsp;</a></span>getLineCap()</h2>
+<a id="a9d74e12aea7aea67a6234ec9922f2336" name="a9d74e12aea7aea67a6234ec9922f2336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d74e12aea7aea67a6234ec9922f2336">&#9670;&#160;</a></span>getLineCap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1290,7 +1206,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TVgcanvas.getLineCap </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1304,8 +1220,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="accc6ea9c5b5ea0f009ea6e702760af15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#accc6ea9c5b5ea0f009ea6e702760af15">&#9670;&nbsp;</a></span>getLineJoin()</h2>
+<a id="accc6ea9c5b5ea0f009ea6e702760af15" name="accc6ea9c5b5ea0f009ea6e702760af15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accc6ea9c5b5ea0f009ea6e702760af15">&#9670;&#160;</a></span>getLineJoin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1316,7 +1232,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TVgcanvas.getLineJoin </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1330,8 +1246,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a1855822ebfbedd86ed9bf34683d834a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1855822ebfbedd86ed9bf34683d834a6">&#9670;&nbsp;</a></span>getLineWidth()</h2>
+<a id="a1855822ebfbedd86ed9bf34683d834a6" name="a1855822ebfbedd86ed9bf34683d834a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1855822ebfbedd86ed9bf34683d834a6">&#9670;&#160;</a></span>getLineWidth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1342,7 +1258,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">double awtk.TVgcanvas.getLineWidth </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1356,8 +1272,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a56581cd899bb55bb02e8f58b2d93f79b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56581cd899bb55bb02e8f58b2d93f79b">&#9670;&nbsp;</a></span>getMiterLimit()</h2>
+<a id="a56581cd899bb55bb02e8f58b2d93f79b" name="a56581cd899bb55bb02e8f58b2d93f79b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56581cd899bb55bb02e8f58b2d93f79b">&#9670;&#160;</a></span>getMiterLimit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1368,7 +1284,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">double awtk.TVgcanvas.getMiterLimit </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1382,8 +1298,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a87a4a0ffb205f301881031e961adf442"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87a4a0ffb205f301881031e961adf442">&#9670;&nbsp;</a></span>getRatio()</h2>
+<a id="a87a4a0ffb205f301881031e961adf442" name="a87a4a0ffb205f301881031e961adf442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87a4a0ffb205f301881031e961adf442">&#9670;&#160;</a></span>getRatio()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1394,7 +1310,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">double awtk.TVgcanvas.getRatio </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1408,8 +1324,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a2a36968d14794f44b23a1e8fc52782d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a36968d14794f44b23a1e8fc52782d0">&#9670;&nbsp;</a></span>getStride()</h2>
+<a id="a2a36968d14794f44b23a1e8fc52782d0" name="a2a36968d14794f44b23a1e8fc52782d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a36968d14794f44b23a1e8fc52782d0">&#9670;&#160;</a></span>getStride()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1420,7 +1336,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TVgcanvas.getStride </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1434,8 +1350,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="adbf36bc728c57f0378d139d9c3bf11b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbf36bc728c57f0378d139d9c3bf11b7">&#9670;&nbsp;</a></span>getTextAlign()</h2>
+<a id="adbf36bc728c57f0378d139d9c3bf11b7" name="adbf36bc728c57f0378d139d9c3bf11b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbf36bc728c57f0378d139d9c3bf11b7">&#9670;&#160;</a></span>getTextAlign()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1446,7 +1362,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TVgcanvas.getTextAlign </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1461,8 +1377,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a6f1f177e56f36f1498ba709db0cb49ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f1f177e56f36f1498ba709db0cb49ba">&#9670;&nbsp;</a></span>getTextBaseline()</h2>
+<a id="a6f1f177e56f36f1498ba709db0cb49ba" name="a6f1f177e56f36f1498ba709db0cb49ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f1f177e56f36f1498ba709db0cb49ba">&#9670;&#160;</a></span>getTextBaseline()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1473,7 +1389,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TVgcanvas.getTextBaseline </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1488,8 +1404,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a50edcb991a430aabab69d4a5eea8fb82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50edcb991a430aabab69d4a5eea8fb82">&#9670;&nbsp;</a></span>getW()</h2>
+<a id="a50edcb991a430aabab69d4a5eea8fb82" name="a50edcb991a430aabab69d4a5eea8fb82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50edcb991a430aabab69d4a5eea8fb82">&#9670;&#160;</a></span>getW()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1500,7 +1416,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TVgcanvas.getW </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1514,8 +1430,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a1007694efed054b3272c66dee48cab80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1007694efed054b3272c66dee48cab80">&#9670;&nbsp;</a></span>intersectClipRect()</h2>
+<a id="a1007694efed054b3272c66dee48cab80" name="a1007694efed054b3272c66dee48cab80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1007694efed054b3272c66dee48cab80">&#9670;&#160;</a></span>intersectClipRect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1526,31 +1442,22 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.intersectClipRect </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>h</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1580,8 +1487,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aadab02126c911876901d5aabdedf14a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aadab02126c911876901d5aabdedf14a4">&#9670;&nbsp;</a></span>isPointInPath()</h2>
+<a id="aadab02126c911876901d5aabdedf14a4" name="aadab02126c911876901d5aabdedf14a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadab02126c911876901d5aabdedf14a4">&#9670;&#160;</a></span>isPointInPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1592,19 +1499,12 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TVgcanvas.isPointInPath </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1625,8 +1525,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a6b4f5f8e5cfdff61e6ddc754b79a1066"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b4f5f8e5cfdff61e6ddc754b79a1066">&#9670;&nbsp;</a></span>isRectfInClipRect()</h2>
+<a id="a6b4f5f8e5cfdff61e6ddc754b79a1066" name="a6b4f5f8e5cfdff61e6ddc754b79a1066"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b4f5f8e5cfdff61e6ddc754b79a1066">&#9670;&#160;</a></span>isRectfInClipRect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1637,31 +1537,22 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TVgcanvas.isRectfInClipRect </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>left</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>top</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>top</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>right</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>right</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>bottom</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>bottom</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1684,8 +1575,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="abefda5e7123f5c333949745bd59e805c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abefda5e7123f5c333949745bd59e805c">&#9670;&nbsp;</a></span>lineTo()</h2>
+<a id="abefda5e7123f5c333949745bd59e805c" name="abefda5e7123f5c333949745bd59e805c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abefda5e7123f5c333949745bd59e805c">&#9670;&#160;</a></span>lineTo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1696,19 +1587,12 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.lineTo </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1729,8 +1613,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aac9a70b2d4e742624a411d4e27ebfb79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac9a70b2d4e742624a411d4e27ebfb79">&#9670;&nbsp;</a></span>measureText()</h2>
+<a id="aac9a70b2d4e742624a411d4e27ebfb79" name="aac9a70b2d4e742624a411d4e27ebfb79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac9a70b2d4e742624a411d4e27ebfb79">&#9670;&#160;</a></span>measureText()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1741,8 +1625,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">double awtk.TVgcanvas.measureText </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>text</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>text</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1763,8 +1646,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ae7e3562cfb3a47165926caa1eed3b514"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7e3562cfb3a47165926caa1eed3b514">&#9670;&nbsp;</a></span>moveTo()</h2>
+<a id="ae7e3562cfb3a47165926caa1eed3b514" name="ae7e3562cfb3a47165926caa1eed3b514"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7e3562cfb3a47165926caa1eed3b514">&#9670;&#160;</a></span>moveTo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1775,19 +1658,12 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.moveTo </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1808,8 +1684,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a2ff0453fbfc814b7106f01094bd7e3a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ff0453fbfc814b7106f01094bd7e3a4">&#9670;&nbsp;</a></span>paint()</h2>
+<a id="a2ff0453fbfc814b7106f01094bd7e3a4" name="a2ff0453fbfc814b7106f01094bd7e3a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ff0453fbfc814b7106f01094bd7e3a4">&#9670;&#160;</a></span>paint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1820,19 +1696,12 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.paint </td>
           <td>(</td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>stroke</em>, </td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>stroke</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a>&#160;</td>
-          <td class="paramname"><em>img</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a></td>          <td class="paramname"><span class="paramname"><em>img</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1853,8 +1722,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a40fcddcfd024cecbecf99bc79037b490"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40fcddcfd024cecbecf99bc79037b490">&#9670;&nbsp;</a></span>pathWinding()</h2>
+<a id="a40fcddcfd024cecbecf99bc79037b490" name="a40fcddcfd024cecbecf99bc79037b490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40fcddcfd024cecbecf99bc79037b490">&#9670;&#160;</a></span>pathWinding()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1865,8 +1734,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.pathWinding </td>
           <td>(</td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>dir</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1888,8 +1756,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="acb91bb09810416e97cd917170837d888"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb91bb09810416e97cd917170837d888">&#9670;&nbsp;</a></span>quadTo()</h2>
+<a id="acb91bb09810416e97cd917170837d888" name="acb91bb09810416e97cd917170837d888"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb91bb09810416e97cd917170837d888">&#9670;&#160;</a></span>quadTo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1900,31 +1768,22 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.quadTo </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>cpx</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>cpx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>cpy</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>cpy</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1947,8 +1806,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a482195f71ccdf98dc68adce23c448488"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a482195f71ccdf98dc68adce23c448488">&#9670;&nbsp;</a></span>rect()</h2>
+<a id="a482195f71ccdf98dc68adce23c448488" name="a482195f71ccdf98dc68adce23c448488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a482195f71ccdf98dc68adce23c448488">&#9670;&#160;</a></span>rect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1959,31 +1818,22 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.rect </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>h</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2006,8 +1856,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ad8b938c13491eeab6c2642c39b5bbe04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8b938c13491eeab6c2642c39b5bbe04">&#9670;&nbsp;</a></span>restore()</h2>
+<a id="ad8b938c13491eeab6c2642c39b5bbe04" name="ad8b938c13491eeab6c2642c39b5bbe04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8b938c13491eeab6c2642c39b5bbe04">&#9670;&#160;</a></span>restore()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2018,7 +1868,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.restore </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2030,14 +1880,14 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>恢复上次save的状态。</p>
 <blockquote class="doxtable">
-<p>save/restore必须配套使用，否则可能导致状态混乱。 </p>
+<p>&zwj;save/restore必须配套使用，否则可能导致状态混乱。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>
-<a id="aa15bb2842f4728c2f8e2ff59566d29f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa15bb2842f4728c2f8e2ff59566d29f4">&#9670;&nbsp;</a></span>rotate()</h2>
+<a id="aa15bb2842f4728c2f8e2ff59566d29f4" name="aa15bb2842f4728c2f8e2ff59566d29f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa15bb2842f4728c2f8e2ff59566d29f4">&#9670;&#160;</a></span>rotate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2048,8 +1898,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.rotate </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>rad</em></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>rad</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2070,8 +1919,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ad766643bb11adb7029683d844ef35a12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad766643bb11adb7029683d844ef35a12">&#9670;&nbsp;</a></span>roundedRect()</h2>
+<a id="ad766643bb11adb7029683d844ef35a12" name="ad766643bb11adb7029683d844ef35a12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad766643bb11adb7029683d844ef35a12">&#9670;&#160;</a></span>roundedRect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2082,37 +1931,27 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.roundedRect </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>h</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>r</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2136,8 +1975,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ad7ae7c9226aceeac658514a0e27639a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7ae7c9226aceeac658514a0e27639a1">&#9670;&nbsp;</a></span>save()</h2>
+<a id="ad7ae7c9226aceeac658514a0e27639a1" name="ad7ae7c9226aceeac658514a0e27639a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7ae7c9226aceeac658514a0e27639a1">&#9670;&#160;</a></span>save()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2148,7 +1987,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.save </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2160,14 +1999,14 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>保存当前的状态。如颜色和矩阵等信息。</p>
 <blockquote class="doxtable">
-<p>save/restore必须配套使用，否则可能导致状态混乱。 </p>
+<p>&zwj;save/restore必须配套使用，否则可能导致状态混乱。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>
-<a id="af672b35dd63c38d71f95886637c5bed6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af672b35dd63c38d71f95886637c5bed6">&#9670;&nbsp;</a></span>scale()</h2>
+<a id="af672b35dd63c38d71f95886637c5bed6" name="af672b35dd63c38d71f95886637c5bed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af672b35dd63c38d71f95886637c5bed6">&#9670;&#160;</a></span>scale()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2178,19 +2017,12 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.scale </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2211,8 +2043,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a471b198ac6c76561f57b29f663bf63a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a471b198ac6c76561f57b29f663bf63a5">&#9670;&nbsp;</a></span>setAntialias()</h2>
+<a id="a471b198ac6c76561f57b29f663bf63a5" name="a471b198ac6c76561f57b29f663bf63a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a471b198ac6c76561f57b29f663bf63a5">&#9670;&#160;</a></span>setAntialias()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2223,8 +2055,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.setAntialias </td>
           <td>(</td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2245,8 +2076,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a5d04737d0734caa33846673c1f410f92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d04737d0734caa33846673c1f410f92">&#9670;&nbsp;</a></span>setFillColor()</h2>
+<a id="a5d04737d0734caa33846673c1f410f92" name="a5d04737d0734caa33846673c1f410f92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d04737d0734caa33846673c1f410f92">&#9670;&#160;</a></span>setFillColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2257,8 +2088,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.setFillColor </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>color</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2279,8 +2109,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a87d9d83221f594e1768175ae547fbd31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87d9d83221f594e1768175ae547fbd31">&#9670;&nbsp;</a></span>setFont()</h2>
+<a id="a87d9d83221f594e1768175ae547fbd31" name="a87d9d83221f594e1768175ae547fbd31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87d9d83221f594e1768175ae547fbd31">&#9670;&#160;</a></span>setFont()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2291,8 +2121,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.setFont </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>font</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>font</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2313,8 +2142,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a835e84dc3358b3369e7d7293ec7124a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a835e84dc3358b3369e7d7293ec7124a0">&#9670;&nbsp;</a></span>setFontSize()</h2>
+<a id="a835e84dc3358b3369e7d7293ec7124a0" name="a835e84dc3358b3369e7d7293ec7124a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a835e84dc3358b3369e7d7293ec7124a0">&#9670;&#160;</a></span>setFontSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2325,8 +2154,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.setFontSize </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2347,8 +2175,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aff84ce72a6fab71dc56b688cb1021d55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff84ce72a6fab71dc56b688cb1021d55">&#9670;&nbsp;</a></span>setGlobalAlpha()</h2>
+<a id="aff84ce72a6fab71dc56b688cb1021d55" name="aff84ce72a6fab71dc56b688cb1021d55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff84ce72a6fab71dc56b688cb1021d55">&#9670;&#160;</a></span>setGlobalAlpha()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2359,8 +2187,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.setGlobalAlpha </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>alpha</em></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>alpha</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2381,8 +2208,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a932f9004a7f7a46f26848d4c585153ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a932f9004a7f7a46f26848d4c585153ac">&#9670;&nbsp;</a></span>setLineCap()</h2>
+<a id="a932f9004a7f7a46f26848d4c585153ac" name="a932f9004a7f7a46f26848d4c585153ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a932f9004a7f7a46f26848d4c585153ac">&#9670;&#160;</a></span>setLineCap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2393,8 +2220,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.setLineCap </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2415,8 +2241,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a9f14b2153721e9f5efca87a640c5ba83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f14b2153721e9f5efca87a640c5ba83">&#9670;&nbsp;</a></span>setLineJoin()</h2>
+<a id="a9f14b2153721e9f5efca87a640c5ba83" name="a9f14b2153721e9f5efca87a640c5ba83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f14b2153721e9f5efca87a640c5ba83">&#9670;&#160;</a></span>setLineJoin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2427,8 +2253,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.setLineJoin </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2449,8 +2274,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aac90d0de69f0270f9808892031238229"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac90d0de69f0270f9808892031238229">&#9670;&nbsp;</a></span>setLineWidth()</h2>
+<a id="aac90d0de69f0270f9808892031238229" name="aac90d0de69f0270f9808892031238229"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac90d0de69f0270f9808892031238229">&#9670;&#160;</a></span>setLineWidth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2461,8 +2286,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.setLineWidth </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2483,8 +2307,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ad40687fadd32ee01a222ce021841a54d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad40687fadd32ee01a222ce021841a54d">&#9670;&nbsp;</a></span>setMiterLimit()</h2>
+<a id="ad40687fadd32ee01a222ce021841a54d" name="ad40687fadd32ee01a222ce021841a54d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad40687fadd32ee01a222ce021841a54d">&#9670;&#160;</a></span>setMiterLimit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2495,8 +2319,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.setMiterLimit </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2517,8 +2340,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a2cea7413604fbff2895603773fca07a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cea7413604fbff2895603773fca07a3">&#9670;&nbsp;</a></span>setStrokeColor()</h2>
+<a id="a2cea7413604fbff2895603773fca07a3" name="a2cea7413604fbff2895603773fca07a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cea7413604fbff2895603773fca07a3">&#9670;&#160;</a></span>setStrokeColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2529,8 +2352,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.setStrokeColor </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2551,8 +2373,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a8ba563e227e61919622bea93e31c9e1b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ba563e227e61919622bea93e31c9e1b">&#9670;&nbsp;</a></span>setTextAlign()</h2>
+<a id="a8ba563e227e61919622bea93e31c9e1b" name="a8ba563e227e61919622bea93e31c9e1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ba563e227e61919622bea93e31c9e1b">&#9670;&#160;</a></span>setTextAlign()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2563,8 +2385,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.setTextAlign </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2585,8 +2406,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a84c85c2889ec7d5b5183e0d48fbdda58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84c85c2889ec7d5b5183e0d48fbdda58">&#9670;&nbsp;</a></span>setTextBaseline()</h2>
+<a id="a84c85c2889ec7d5b5183e0d48fbdda58" name="a84c85c2889ec7d5b5183e0d48fbdda58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84c85c2889ec7d5b5183e0d48fbdda58">&#9670;&#160;</a></span>setTextBaseline()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2597,8 +2418,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.setTextBaseline </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2619,8 +2439,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aba2bd44d8d6ab6b225971730b0ef4ba6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba2bd44d8d6ab6b225971730b0ef4ba6">&#9670;&nbsp;</a></span>setTransform()</h2>
+<a id="aba2bd44d8d6ab6b225971730b0ef4ba6" name="aba2bd44d8d6ab6b225971730b0ef4ba6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba2bd44d8d6ab6b225971730b0ef4ba6">&#9670;&#160;</a></span>setTransform()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2631,43 +2451,32 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.setTransform </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>c</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>d</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>e</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>e</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>f</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>f</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2692,8 +2501,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a50259d1ff6dddb4c4ebc3e03c5d3bb13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50259d1ff6dddb4c4ebc3e03c5d3bb13">&#9670;&nbsp;</a></span>stroke()</h2>
+<a id="a50259d1ff6dddb4c4ebc3e03c5d3bb13" name="a50259d1ff6dddb4c4ebc3e03c5d3bb13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50259d1ff6dddb4c4ebc3e03c5d3bb13">&#9670;&#160;</a></span>stroke()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2704,7 +2513,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.stroke </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2719,8 +2528,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="af846e091b78abf584a366cfa1b19c302"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af846e091b78abf584a366cfa1b19c302">&#9670;&nbsp;</a></span>transform()</h2>
+<a id="af846e091b78abf584a366cfa1b19c302" name="af846e091b78abf584a366cfa1b19c302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af846e091b78abf584a366cfa1b19c302">&#9670;&#160;</a></span>transform()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2731,43 +2540,32 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.transform </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>c</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>d</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>e</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>e</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>f</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>f</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2792,8 +2590,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a78835f8f8af6e88212b4f92f4f8373b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78835f8f8af6e88212b4f92f4f8373b1">&#9670;&nbsp;</a></span>translate()</h2>
+<a id="a78835f8f8af6e88212b4f92f4f8373b1" name="a78835f8f8af6e88212b4f92f4f8373b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78835f8f8af6e88212b4f92f4f8373b1">&#9670;&#160;</a></span>translate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2804,19 +2602,12 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.translate </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2838,8 +2629,8 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">类成员变量说明</h2>
-<a id="a84abfe8803237c2197bff6cd9a62c31d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84abfe8803237c2197bff6cd9a62c31d">&#9670;&nbsp;</a></span>nativeObj</h2>
+<a id="a84abfe8803237c2197bff6cd9a62c31d" name="a84abfe8803237c2197bff6cd9a62c31d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84abfe8803237c2197bff6cd9a62c31d">&#9670;&#160;</a></span>nativeObj</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2854,12 +2645,13 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>output/TVgcanvas.java</li>
+<li>output/<b>TVgcanvas.java</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

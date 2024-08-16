@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TPoint类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,46 +70,53 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="class_t_point-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">TPoint类 参考</div>  </div>
+  <div class="headertitle"><div class="title">TPoint类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:aae21827b3ec3279de0fb6e6d32a74efe"><td class="memItemLeft" align="right" valign="top"><a id="aae21827b3ec3279de0fb6e6d32a74efe"></a>
+<tr class="memitem:aae21827b3ec3279de0fb6e6d32a74efe" id="r_aae21827b3ec3279de0fb6e6d32a74efe"><td class="memItemLeft" align="right" valign="top"><a id="aae21827b3ec3279de0fb6e6d32a74efe" name="aae21827b3ec3279de0fb6e6d32a74efe"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TPoint</b> (point_t *nativeObj)</td></tr>
 <tr class="separator:aae21827b3ec3279de0fb6e6d32a74efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20091ee71be3fddb3aefcbcde762a04d"><td class="memItemLeft" align="right" valign="top"><a id="a20091ee71be3fddb3aefcbcde762a04d"></a>
+<tr class="memitem:a20091ee71be3fddb3aefcbcde762a04d" id="r_a20091ee71be3fddb3aefcbcde762a04d"><td class="memItemLeft" align="right" valign="top"><a id="a20091ee71be3fddb3aefcbcde762a04d" name="a20091ee71be3fddb3aefcbcde762a04d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TPoint</b> (const point_t *nativeObj)</td></tr>
 <tr class="separator:a20091ee71be3fddb3aefcbcde762a04d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:acf3f9a7abe98d562fcf7afc206a12968"><td class="memItemLeft" align="right" valign="top"><a id="acf3f9a7abe98d562fcf7afc206a12968"></a>
+<tr class="memitem:acf3f9a7abe98d562fcf7afc206a12968" id="r_acf3f9a7abe98d562fcf7afc206a12968"><td class="memItemLeft" align="right" valign="top"><a id="acf3f9a7abe98d562fcf7afc206a12968" name="acf3f9a7abe98d562fcf7afc206a12968"></a>
 static <a class="el" href="class_t_point.html">TPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (point_t *nativeObj)</td></tr>
 <tr class="separator:acf3f9a7abe98d562fcf7afc206a12968"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af47129aec2c4c17e3afbc85812187578"><td class="memItemLeft" align="right" valign="top"><a id="af47129aec2c4c17e3afbc85812187578"></a>
+<tr class="memitem:af47129aec2c4c17e3afbc85812187578" id="r_af47129aec2c4c17e3afbc85812187578"><td class="memItemLeft" align="right" valign="top"><a id="af47129aec2c4c17e3afbc85812187578" name="af47129aec2c4c17e3afbc85812187578"></a>
 static <a class="el" href="class_t_point.html">TPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const point_t *nativeObj)</td></tr>
 <tr class="separator:af47129aec2c4c17e3afbc85812187578"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:ad4b74b5c18f42fc665e260bd23013134"><td class="memItemLeft" align="right" valign="top"><a id="ad4b74b5c18f42fc665e260bd23013134"></a>
+<tr class="memitem:ad4b74b5c18f42fc665e260bd23013134" id="r_ad4b74b5c18f42fc665e260bd23013134"><td class="memItemLeft" align="right" valign="top"><a id="ad4b74b5c18f42fc665e260bd23013134" name="ad4b74b5c18f42fc665e260bd23013134"></a>
 point_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td></tr>
 <tr class="separator:ad4b74b5c18f42fc665e260bd23013134"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -106,7 +128,8 @@ point_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

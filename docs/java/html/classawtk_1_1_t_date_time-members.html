@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: 成员列表</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-JAVA
    </div>
    <div id="projectbrief">AWTK JAVA API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,9 +70,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,44 +87,45 @@ $(function() {
 <li class="navelem"><b>awtk</b></li><li class="navelem"><a class="el" href="classawtk_1_1_t_date_time.html">TDateTime</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
-  <div class="headertitle">
-<div class="title">awtk.TDateTime 成员列表</div>  </div>
+  <div class="headertitle"><div class="title">awtk.TDateTime 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>成员的完整列表，这些成员属于 <a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a>,包括所有继承而来的类成员</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a7edef39990dff833e26eaa552e2027e3">addDelta</a>(long delta)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a8cd031c35edc0ad587c5a11302394f42">cast</a>(long nativeObj)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a8cd031c35edc0ad587c5a11302394f42">cast</a>(long nativeObj)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a591414f54431f6dbacd5cf4638d58224">create</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#ad54b78c4bdf772a71d3ff897be81089e">destroy</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#ad54b78c4bdf772a71d3ff897be81089e">destroy</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#ace798ba8699c84701bca15f173f0cad9">fromTime</a>(long time)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a7fc4c14caf7149c05d521164e87595af">getDay</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a7fc4c14caf7149c05d521164e87595af">getDay</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#aff8d29e11befe003adedb0014b411742">getDays</a>(int year, int month)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a2bd9a0e52a2bccbebfafc214c55758e3">getHour</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a2bd9a0e52a2bccbebfafc214c55758e3">getHour</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#acecc573ec7c18ce2a14cf44e8cc064fd">getMinute</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a53908f91deb3d3647c499f7c622842df">getMonth</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a53908f91deb3d3647c499f7c622842df">getMonth</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#ac52c49afa0483761b8a0306454882e27">getMonthName</a>(int month)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#ad8f959ab33f1cf67774143fe538031e7">getSecond</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#ad8f959ab33f1cf67774143fe538031e7">getSecond</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a2ae7cd9b6af5fa659830045f422c1f7f">getWday</a>(int year, int month, int day)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#ac094126c09cef7a9ea97c96e85df05c9">getWdayName</a>(int wday)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#ac094126c09cef7a9ea97c96e85df05c9">getWdayName</a>(int wday)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#af4851c571ff7dae7fe0e33d94285175e">getYear</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#aaffafe7009c644e039ebf2360d9f7728">isLeap</a>(int year)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#aaffafe7009c644e039ebf2360d9f7728">isLeap</a>(int year)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#af15f83e49c8e8588dadb7729847c78c0">nativeObj</a></td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a4195be3459d68b19c9b5c5322113f330">set</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a4195be3459d68b19c9b5c5322113f330">set</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#ad2a68f70ae5564d390cc5bbdfec6bfc1">setDay</a>(int day)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a900914e7eb2cbe152c3caadea1f8f9f8">setHour</a>(int hour)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a900914e7eb2cbe152c3caadea1f8f9f8">setHour</a>(int hour)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a674bb215238a6eed5ecbbe8cf15b3116">setMinute</a>(int minute)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#ab7e3128d260143e3b9e9be07ae727d72">setMonth</a>(int month)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#ab7e3128d260143e3b9e9be07ae727d72">setMonth</a>(int month)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#aa5984c1c868ebcf3e6ee442ea68debbf">setSecond</a>(int second)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a931d4d8b819db31158a5edfd6e9d7bee">setYear</a>(int year)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a931d4d8b819db31158a5edfd6e9d7bee">setYear</a>(int year)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#afba08c89a6a0bc5250018944316ff928">TDateTime</a>(long nativeObj)</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a07cb539ef4a0c434a420b1dc48a300c2">toTime</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html#a07cb539ef4a0c434a420b1dc48a300c2">toTime</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_date_time.html">awtk.TDateTime</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

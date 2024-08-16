@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TInputType 枚举类型参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-JAVA
    </div>
    <div id="projectbrief">AWTK JAVA API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,9 +70,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,67 +87,67 @@ $(function() {
 <li class="navelem"><b>awtk</b></li><li class="navelem"><a class="el" href="enumawtk_1_1_t_input_type.html">TInputType</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="enumawtk_1_1_t_input_type-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">awtk.TInputType 枚举类型参考</div>  </div>
+  <div class="headertitle"><div class="title">awtk.TInputType 枚举类型参考</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a0f5dae45c8919db02943d74302ac5e71"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_input_type.html#a0f5dae45c8919db02943d74302ac5e71">value</a> ()</td></tr>
+<tr class="memitem:a0f5dae45c8919db02943d74302ac5e71" id="r_a0f5dae45c8919db02943d74302ac5e71"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f5dae45c8919db02943d74302ac5e71">value</a> ()</td></tr>
 <tr class="separator:a0f5dae45c8919db02943d74302ac5e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:ae0955b21433a6cec4be03819a80d7b14"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_input_type.html">TInputType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_input_type.html#ae0955b21433a6cec4be03819a80d7b14">from</a> (int value)</td></tr>
+<tr class="memitem:ae0955b21433a6cec4be03819a80d7b14" id="r_ae0955b21433a6cec4be03819a80d7b14"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_input_type.html">TInputType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0955b21433a6cec4be03819a80d7b14">from</a> (int value)</td></tr>
 <tr class="separator:ae0955b21433a6cec4be03819a80d7b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:a2f4104058477074041b05cde94ca81f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_input_type.html#a2f4104058477074041b05cde94ca81f0">TEXT</a> =(INPUT_TEXT())</td></tr>
+<tr class="memitem:a2f4104058477074041b05cde94ca81f0" id="r_a2f4104058477074041b05cde94ca81f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f4104058477074041b05cde94ca81f0">TEXT</a> =(INPUT_TEXT())</td></tr>
 <tr class="separator:a2f4104058477074041b05cde94ca81f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6be371ad5f0601b569b44b8c655c2c65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_input_type.html#a6be371ad5f0601b569b44b8c655c2c65">INT</a> =(INPUT_INT())</td></tr>
+<tr class="memitem:a6be371ad5f0601b569b44b8c655c2c65" id="r_a6be371ad5f0601b569b44b8c655c2c65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6be371ad5f0601b569b44b8c655c2c65">INT</a> =(INPUT_INT())</td></tr>
 <tr class="separator:a6be371ad5f0601b569b44b8c655c2c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13916efbeb545e8c67e8cbe8a900b9d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_input_type.html#a13916efbeb545e8c67e8cbe8a900b9d3">UINT</a> =(INPUT_UINT())</td></tr>
+<tr class="memitem:a13916efbeb545e8c67e8cbe8a900b9d3" id="r_a13916efbeb545e8c67e8cbe8a900b9d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13916efbeb545e8c67e8cbe8a900b9d3">UINT</a> =(INPUT_UINT())</td></tr>
 <tr class="separator:a13916efbeb545e8c67e8cbe8a900b9d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae61f6dc7df8a9cb5f8ebb83ff963e60a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_input_type.html#ae61f6dc7df8a9cb5f8ebb83ff963e60a">HEX</a> =(INPUT_HEX())</td></tr>
+<tr class="memitem:ae61f6dc7df8a9cb5f8ebb83ff963e60a" id="r_ae61f6dc7df8a9cb5f8ebb83ff963e60a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae61f6dc7df8a9cb5f8ebb83ff963e60a">HEX</a> =(INPUT_HEX())</td></tr>
 <tr class="separator:ae61f6dc7df8a9cb5f8ebb83ff963e60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22288f46258a5242dc3530abcb78961e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_input_type.html#a22288f46258a5242dc3530abcb78961e">FLOAT</a> =(INPUT_FLOAT())</td></tr>
+<tr class="memitem:a22288f46258a5242dc3530abcb78961e" id="r_a22288f46258a5242dc3530abcb78961e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22288f46258a5242dc3530abcb78961e">FLOAT</a> =(INPUT_FLOAT())</td></tr>
 <tr class="separator:a22288f46258a5242dc3530abcb78961e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef418ed4d90f3c59407f6f4ccd19ea3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_input_type.html#aef418ed4d90f3c59407f6f4ccd19ea3f">UFLOAT</a> =(INPUT_UFLOAT())</td></tr>
+<tr class="memitem:aef418ed4d90f3c59407f6f4ccd19ea3f" id="r_aef418ed4d90f3c59407f6f4ccd19ea3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef418ed4d90f3c59407f6f4ccd19ea3f">UFLOAT</a> =(INPUT_UFLOAT())</td></tr>
 <tr class="separator:aef418ed4d90f3c59407f6f4ccd19ea3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a778b8bcb5e1d8807fcb5fb6c59da34c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_input_type.html#a778b8bcb5e1d8807fcb5fb6c59da34c5">EMAIL</a> =(INPUT_EMAIL())</td></tr>
+<tr class="memitem:a778b8bcb5e1d8807fcb5fb6c59da34c5" id="r_a778b8bcb5e1d8807fcb5fb6c59da34c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a778b8bcb5e1d8807fcb5fb6c59da34c5">EMAIL</a> =(INPUT_EMAIL())</td></tr>
 <tr class="separator:a778b8bcb5e1d8807fcb5fb6c59da34c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb0ec4b6881af30357548f517071fc6e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_input_type.html#adb0ec4b6881af30357548f517071fc6e">PASSWORD</a> =(INPUT_PASSWORD())</td></tr>
+<tr class="memitem:adb0ec4b6881af30357548f517071fc6e" id="r_adb0ec4b6881af30357548f517071fc6e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb0ec4b6881af30357548f517071fc6e">PASSWORD</a> =(INPUT_PASSWORD())</td></tr>
 <tr class="separator:adb0ec4b6881af30357548f517071fc6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa84026deee2e16470f0514cc78d7388d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_input_type.html#aa84026deee2e16470f0514cc78d7388d">PHONE</a> =(INPUT_PHONE())</td></tr>
+<tr class="memitem:aa84026deee2e16470f0514cc78d7388d" id="r_aa84026deee2e16470f0514cc78d7388d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa84026deee2e16470f0514cc78d7388d">PHONE</a> =(INPUT_PHONE())</td></tr>
 <tr class="separator:aa84026deee2e16470f0514cc78d7388d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c6d758aab64bf323b4c26201dc50402"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_input_type.html#a9c6d758aab64bf323b4c26201dc50402">IPV4</a> =(INPUT_IPV4())</td></tr>
+<tr class="memitem:a9c6d758aab64bf323b4c26201dc50402" id="r_a9c6d758aab64bf323b4c26201dc50402"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c6d758aab64bf323b4c26201dc50402">IPV4</a> =(INPUT_IPV4())</td></tr>
 <tr class="separator:a9c6d758aab64bf323b4c26201dc50402"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a629b90946788af6b4724339ca5530a42"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_input_type.html#a629b90946788af6b4724339ca5530a42">DATE</a> =(INPUT_DATE())</td></tr>
+<tr class="memitem:a629b90946788af6b4724339ca5530a42" id="r_a629b90946788af6b4724339ca5530a42"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a629b90946788af6b4724339ca5530a42">DATE</a> =(INPUT_DATE())</td></tr>
 <tr class="separator:a629b90946788af6b4724339ca5530a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a671b526d34f68670e31d109464436aae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_input_type.html#a671b526d34f68670e31d109464436aae">TIME</a> =(INPUT_TIME())</td></tr>
+<tr class="memitem:a671b526d34f68670e31d109464436aae" id="r_a671b526d34f68670e31d109464436aae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a671b526d34f68670e31d109464436aae">TIME</a> =(INPUT_TIME())</td></tr>
 <tr class="separator:a671b526d34f68670e31d109464436aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a294159bc5355ba87f6665473b17ee9ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_input_type.html#a294159bc5355ba87f6665473b17ee9ae">TIME_FULL</a> =(INPUT_TIME_FULL())</td></tr>
+<tr class="memitem:a294159bc5355ba87f6665473b17ee9ae" id="r_a294159bc5355ba87f6665473b17ee9ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a294159bc5355ba87f6665473b17ee9ae">TIME_FULL</a> =(INPUT_TIME_FULL())</td></tr>
 <tr class="separator:a294159bc5355ba87f6665473b17ee9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4056328b0f540383334823123180dde"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_input_type.html#ab4056328b0f540383334823123180dde">CUSTOM</a> =(INPUT_CUSTOM())</td></tr>
+<tr class="memitem:ab4056328b0f540383334823123180dde" id="r_ab4056328b0f540383334823123180dde"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4056328b0f540383334823123180dde">CUSTOM</a> =(INPUT_CUSTOM())</td></tr>
 <tr class="separator:ab4056328b0f540383334823123180dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adba7738659a59c16c20baf44aab7baae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_input_type.html#adba7738659a59c16c20baf44aab7baae">CUSTOM_PASSWORD</a> =(INPUT_CUSTOM_PASSWORD())</td></tr>
+<tr class="memitem:adba7738659a59c16c20baf44aab7baae" id="r_adba7738659a59c16c20baf44aab7baae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adba7738659a59c16c20baf44aab7baae">CUSTOM_PASSWORD</a> =(INPUT_CUSTOM_PASSWORD())</td></tr>
 <tr class="separator:adba7738659a59c16c20baf44aab7baae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30a172de5393389c8de911314ec4c602"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumawtk_1_1_t_input_type.html#a30a172de5393389c8de911314ec4c602">ASCII</a> =(INPUT_ASCII())</td></tr>
+<tr class="memitem:a30a172de5393389c8de911314ec4c602" id="r_a30a172de5393389c8de911314ec4c602"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30a172de5393389c8de911314ec4c602">ASCII</a> =(INPUT_ASCII())</td></tr>
 <tr class="separator:a30a172de5393389c8de911314ec4c602"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>输入类型常量定义。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="ae0955b21433a6cec4be03819a80d7b14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0955b21433a6cec4be03819a80d7b14">&#9670;&nbsp;</a></span>from()</h2>
+<a id="ae0955b21433a6cec4be03819a80d7b14" name="ae0955b21433a6cec4be03819a80d7b14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0955b21433a6cec4be03819a80d7b14">&#9670;&#160;</a></span>from()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -136,8 +158,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="enumawtk_1_1_t_input_type.html">TInputType</a> awtk.TInputType.from </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -158,8 +179,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a0f5dae45c8919db02943d74302ac5e71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f5dae45c8919db02943d74302ac5e71">&#9670;&nbsp;</a></span>value()</h2>
+<a id="a0f5dae45c8919db02943d74302ac5e71" name="a0f5dae45c8919db02943d74302ac5e71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f5dae45c8919db02943d74302ac5e71">&#9670;&#160;</a></span>value()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -170,7 +191,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TInputType.value </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -186,8 +207,8 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">类成员变量说明</h2>
-<a id="a30a172de5393389c8de911314ec4c602"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30a172de5393389c8de911314ec4c602">&#9670;&nbsp;</a></span>ASCII</h2>
+<a id="a30a172de5393389c8de911314ec4c602" name="a30a172de5393389c8de911314ec4c602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30a172de5393389c8de911314ec4c602">&#9670;&#160;</a></span>ASCII</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,8 +222,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ab4056328b0f540383334823123180dde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4056328b0f540383334823123180dde">&#9670;&nbsp;</a></span>CUSTOM</h2>
+<a id="ab4056328b0f540383334823123180dde" name="ab4056328b0f540383334823123180dde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4056328b0f540383334823123180dde">&#9670;&#160;</a></span>CUSTOM</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,8 +237,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="adba7738659a59c16c20baf44aab7baae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adba7738659a59c16c20baf44aab7baae">&#9670;&nbsp;</a></span>CUSTOM_PASSWORD</h2>
+<a id="adba7738659a59c16c20baf44aab7baae" name="adba7738659a59c16c20baf44aab7baae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adba7738659a59c16c20baf44aab7baae">&#9670;&#160;</a></span>CUSTOM_PASSWORD</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -231,8 +252,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a629b90946788af6b4724339ca5530a42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a629b90946788af6b4724339ca5530a42">&#9670;&nbsp;</a></span>DATE</h2>
+<a id="a629b90946788af6b4724339ca5530a42" name="a629b90946788af6b4724339ca5530a42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a629b90946788af6b4724339ca5530a42">&#9670;&#160;</a></span>DATE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -246,8 +267,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a778b8bcb5e1d8807fcb5fb6c59da34c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a778b8bcb5e1d8807fcb5fb6c59da34c5">&#9670;&nbsp;</a></span>EMAIL</h2>
+<a id="a778b8bcb5e1d8807fcb5fb6c59da34c5" name="a778b8bcb5e1d8807fcb5fb6c59da34c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a778b8bcb5e1d8807fcb5fb6c59da34c5">&#9670;&#160;</a></span>EMAIL</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -261,8 +282,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a22288f46258a5242dc3530abcb78961e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22288f46258a5242dc3530abcb78961e">&#9670;&nbsp;</a></span>FLOAT</h2>
+<a id="a22288f46258a5242dc3530abcb78961e" name="a22288f46258a5242dc3530abcb78961e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22288f46258a5242dc3530abcb78961e">&#9670;&#160;</a></span>FLOAT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -276,8 +297,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ae61f6dc7df8a9cb5f8ebb83ff963e60a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae61f6dc7df8a9cb5f8ebb83ff963e60a">&#9670;&nbsp;</a></span>HEX</h2>
+<a id="ae61f6dc7df8a9cb5f8ebb83ff963e60a" name="ae61f6dc7df8a9cb5f8ebb83ff963e60a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae61f6dc7df8a9cb5f8ebb83ff963e60a">&#9670;&#160;</a></span>HEX</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -291,8 +312,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a6be371ad5f0601b569b44b8c655c2c65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6be371ad5f0601b569b44b8c655c2c65">&#9670;&nbsp;</a></span>INT</h2>
+<a id="a6be371ad5f0601b569b44b8c655c2c65" name="a6be371ad5f0601b569b44b8c655c2c65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6be371ad5f0601b569b44b8c655c2c65">&#9670;&#160;</a></span>INT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -306,8 +327,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a9c6d758aab64bf323b4c26201dc50402"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c6d758aab64bf323b4c26201dc50402">&#9670;&nbsp;</a></span>IPV4</h2>
+<a id="a9c6d758aab64bf323b4c26201dc50402" name="a9c6d758aab64bf323b4c26201dc50402"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c6d758aab64bf323b4c26201dc50402">&#9670;&#160;</a></span>IPV4</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -321,8 +342,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="adb0ec4b6881af30357548f517071fc6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb0ec4b6881af30357548f517071fc6e">&#9670;&nbsp;</a></span>PASSWORD</h2>
+<a id="adb0ec4b6881af30357548f517071fc6e" name="adb0ec4b6881af30357548f517071fc6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb0ec4b6881af30357548f517071fc6e">&#9670;&#160;</a></span>PASSWORD</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -336,8 +357,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aa84026deee2e16470f0514cc78d7388d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa84026deee2e16470f0514cc78d7388d">&#9670;&nbsp;</a></span>PHONE</h2>
+<a id="aa84026deee2e16470f0514cc78d7388d" name="aa84026deee2e16470f0514cc78d7388d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa84026deee2e16470f0514cc78d7388d">&#9670;&#160;</a></span>PHONE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -351,8 +372,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a2f4104058477074041b05cde94ca81f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f4104058477074041b05cde94ca81f0">&#9670;&nbsp;</a></span>TEXT</h2>
+<a id="a2f4104058477074041b05cde94ca81f0" name="a2f4104058477074041b05cde94ca81f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f4104058477074041b05cde94ca81f0">&#9670;&#160;</a></span>TEXT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -366,8 +387,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a671b526d34f68670e31d109464436aae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a671b526d34f68670e31d109464436aae">&#9670;&nbsp;</a></span>TIME</h2>
+<a id="a671b526d34f68670e31d109464436aae" name="a671b526d34f68670e31d109464436aae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a671b526d34f68670e31d109464436aae">&#9670;&#160;</a></span>TIME</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -381,8 +402,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a294159bc5355ba87f6665473b17ee9ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a294159bc5355ba87f6665473b17ee9ae">&#9670;&nbsp;</a></span>TIME_FULL</h2>
+<a id="a294159bc5355ba87f6665473b17ee9ae" name="a294159bc5355ba87f6665473b17ee9ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a294159bc5355ba87f6665473b17ee9ae">&#9670;&#160;</a></span>TIME_FULL</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -396,8 +417,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aef418ed4d90f3c59407f6f4ccd19ea3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef418ed4d90f3c59407f6f4ccd19ea3f">&#9670;&nbsp;</a></span>UFLOAT</h2>
+<a id="aef418ed4d90f3c59407f6f4ccd19ea3f" name="aef418ed4d90f3c59407f6f4ccd19ea3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef418ed4d90f3c59407f6f4ccd19ea3f">&#9670;&#160;</a></span>UFLOAT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -411,8 +432,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a13916efbeb545e8c67e8cbe8a900b9d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13916efbeb545e8c67e8cbe8a900b9d3">&#9670;&nbsp;</a></span>UINT</h2>
+<a id="a13916efbeb545e8c67e8cbe8a900b9d3" name="a13916efbeb545e8c67e8cbe8a900b9d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13916efbeb545e8c67e8cbe8a900b9d3">&#9670;&#160;</a></span>UINT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -427,12 +448,13 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <hr/>枚举说明文档从下列文件生成:<ul>
-<li>output/TInputType.java</li>
+<li>output/<b>TInputType.java</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

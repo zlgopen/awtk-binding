@@ -1,57 +1,46 @@
-[AWTK](../README.md) / [Exports](../modules.md) / TRectf
+[**AWTK**](../README.md) • **Docs**
+
+***
+
+[AWTK](../globals.md) / TRectf
 
 # Class: TRectf
 
 矩形。包括一个x坐标、y坐标、宽度和高度。
 
-## Table of contents
-
-### Constructors
-
-- [constructor](TRectf.md#constructor)
-
-### Properties
-
-- [nativeObj](TRectf.md#nativeobj)
-
-### Accessors
-
-- [h](TRectf.md#h)
-- [w](TRectf.md#w)
-- [x](TRectf.md#x)
-- [y](TRectf.md#y)
-
 ## Constructors
 
-### constructor
+### new TRectf()
 
-• **new TRectf**(`nativeObj`)
+> **new TRectf**(`nativeObj`): [`TRectf`](TRectf.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `nativeObj` | `any` |
+• **nativeObj**: `any`
+
+#### Returns
+
+[`TRectf`](TRectf.md)
 
 #### Defined in
 
-[awtk.ts:2439](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2439)
+[awtk.ts:2536](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2536)
 
 ## Properties
 
 ### nativeObj
 
-• **nativeObj**: `any`
+> **nativeObj**: `any`
 
 #### Defined in
 
-[awtk.ts:2438](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2438)
+[awtk.ts:2535](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2535)
 
 ## Accessors
 
 ### h
 
-• `get` **h**(): `number`
+> `get` **h**(): `number`
 
 高度。
 
@@ -61,13 +50,13 @@
 
 #### Defined in
 
-[awtk.ts:2475](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2475)
+[awtk.ts:2572](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2572)
 
-___
+***
 
 ### w
 
-• `get` **w**(): `number`
+> `get` **w**(): `number`
 
 宽度。
 
@@ -77,13 +66,13 @@ ___
 
 #### Defined in
 
-[awtk.ts:2466](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2466)
+[awtk.ts:2563](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2563)
 
-___
+***
 
 ### x
 
-• `get` **x**(): `number`
+> `get` **x**(): `number`
 
 x坐标。
 
@@ -93,13 +82,13 @@ x坐标。
 
 #### Defined in
 
-[awtk.ts:2448](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2448)
+[awtk.ts:2545](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2545)
 
-___
+***
 
 ### y
 
-• `get` **y**(): `number`
+> `get` **y**(): `number`
 
 y坐标。
 
@@ -109,4 +98,4 @@ y坐标。
 
 #### Defined in
 
-[awtk.ts:2457](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2457)
+[awtk.ts:2554](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2554)

@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: 成员列表</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,89 +70,97 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
-  <div class="headertitle">
-<div class="title">TVgcanvas 成员列表</div>  </div>
+  <div class="headertitle"><div class="title">TVgcanvas 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>成员的完整列表，这些成员属于 <a class="el" href="class_t_vgcanvas.html">TVgcanvas</a>,包括所有继承而来的类成员</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a526c1eb6abb162b159fca0582d9b0c40">Arc</a>(float_t x, float_t y, float_t r, float_t start_angle, float_t end_angle, bool ccw)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#afe69c74ebac3fccc57cbfafbf7ddf9b8">ArcTo</a>(float_t x1, float_t y1, float_t x2, float_t y2, float_t r)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#afe69c74ebac3fccc57cbfafbf7ddf9b8">ArcTo</a>(float_t x1, float_t y1, float_t x2, float_t y2, float_t r)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a819ec931c06d394df2720118034d3382">BeginPath</a>()</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a051655be838ec0ab08aeb9d991049ad3">BezierTo</a>(float_t cp1x, float_t cp1y, float_t cp2x, float_t cp2y, float_t x, float_t y)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a051655be838ec0ab08aeb9d991049ad3">BezierTo</a>(float_t cp1x, float_t cp1y, float_t cp2x, float_t cp2y, float_t x, float_t y)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Cast</b>(vgcanvas_t *nativeObj) (定义于 <a class="el" href="class_t_vgcanvas.html">TVgcanvas</a>)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Cast</b>(const vgcanvas_t *nativeObj) (定义于 <a class="el" href="class_t_vgcanvas.html">TVgcanvas</a>)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>Cast</b>(const vgcanvas_t *nativeObj) (定义于 <a class="el" href="class_t_vgcanvas.html">TVgcanvas</a>)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#aaaff4d506749c7a205af49f8010c5e02">ClipPath</a>()</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#ac99bd1226ef6915519163e363432b5d8">ClipRect</a>(float_t x, float_t y, float_t w, float_t h)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#ac99bd1226ef6915519163e363432b5d8">ClipRect</a>(float_t x, float_t y, float_t w, float_t h)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a093edb0bc723b63f6cec458bcbd7aa5c">ClosePath</a>()</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a5cdf27f516c7a3d42ec4e3b75f487d07">DrawIcon</a>(TBitmap &amp;img, float_t sx, float_t sy, float_t sw, float_t sh, float_t dx, float_t dy, float_t dw, float_t dh)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a5cdf27f516c7a3d42ec4e3b75f487d07">DrawIcon</a>(TBitmap &amp;img, float_t sx, float_t sy, float_t sw, float_t sh, float_t dx, float_t dy, float_t dw, float_t dh)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#afeecd9b59291fbced10e03dc83348c49">DrawImage</a>(TBitmap &amp;img, float_t sx, float_t sy, float_t sw, float_t sh, float_t dx, float_t dy, float_t dw, float_t dh)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a0a626925e5174c21b5e9492acf74eacc">DrawImageRepeat</a>(TBitmap &amp;img, float_t sx, float_t sy, float_t sw, float_t sh, float_t dx, float_t dy, float_t dw, float_t dh, float_t dst_w, float_t dst_h)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a0a626925e5174c21b5e9492acf74eacc">DrawImageRepeat</a>(TBitmap &amp;img, float_t sx, float_t sy, float_t sw, float_t sh, float_t dx, float_t dy, float_t dw, float_t dh, float_t dst_w, float_t dst_h)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a481191e63898c7baef8552bc662e49dc">Ellipse</a>(float_t x, float_t y, float_t rx, float_t ry)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a14f818062de7fa7926b2e7d5ce8e189d">Fill</a>()</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a14f818062de7fa7926b2e7d5ce8e189d">Fill</a>()</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#ad52e8fb00145fe90783ef4c279540aa5">FillText</a>(const char *text, float_t x, float_t y, float_t max_width)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a4cef1db770b88a58da3eae2dd9f8d3d3">Flush</a>()</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a4cef1db770b88a58da3eae2dd9f8d3d3">Flush</a>()</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a156b11c494e93e836b48c0629f7229d2">GetAntiAlias</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a3651360ace843556822e241601da270e">GetFont</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a3651360ace843556822e241601da270e">GetFont</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#ab1135c99ae31ced3c27017e318725bdf">GetFontSize</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a3b1ebab17b8201ee76ca149f98db21c6">GetGlobalAlpha</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a3b1ebab17b8201ee76ca149f98db21c6">GetGlobalAlpha</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a54282e8ecc519bf2d2ae79a474943997">GetH</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#af6edf3c948fd31b221a71db1a6d1586d">GetLineCap</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#af6edf3c948fd31b221a71db1a6d1586d">GetLineCap</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#ab24485b67f43dc3874f9a18195cdf244">GetLineJoin</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#ac37e1b6d825bb5e67511fbccdf242394">GetLineWidth</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#ac37e1b6d825bb5e67511fbccdf242394">GetLineWidth</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#ae95c4e0fe292c9e612ec85372f4afaa0">GetMiterLimit</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a9a096df74fa271a79f3a63fba08e17d6">GetRatio</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a9a096df74fa271a79f3a63fba08e17d6">GetRatio</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a0cc0c4ea765b406bf03f13e2d1c7378b">GetStride</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a4dc152da64163be4115110a65afb0eef">GetTextAlign</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a4dc152da64163be4115110a65afb0eef">GetTextAlign</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#ae992f9687fa432f35b485abd51d543f3">GetTextBaseline</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a5e3416658aff4d96d156c42846d7a152">GetW</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a5e3416658aff4d96d156c42846d7a152">GetW</a>() const</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#ae65059743e0039d06efddfd077a84b73">IntersectClipRect</a>(float_t x, float_t y, float_t w, float_t h)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#af8db0583e1905a0c72b13b0870a58d38">IsPointInPath</a>(float_t x, float_t y)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#af8db0583e1905a0c72b13b0870a58d38">IsPointInPath</a>(float_t x, float_t y)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#ae0e97e81a0cf8e3a542ec93df1663e26">IsRectfInClipRect</a>(float_t left, float_t top, float_t right, float_t bottom)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a154dd9254aa7b4c1e694e4bd6dab2dc3">LineTo</a>(float_t x, float_t y)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a154dd9254aa7b4c1e694e4bd6dab2dc3">LineTo</a>(float_t x, float_t y)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a9c0d31eb69398b195d4143e03a1fa6d5">MeasureText</a>(const char *text)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a04307255f89dbaa71898477d2257c970">MoveTo</a>(float_t x, float_t y)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a04307255f89dbaa71898477d2257c970">MoveTo</a>(float_t x, float_t y)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>nativeObj</b> (定义于 <a class="el" href="class_t_vgcanvas.html">TVgcanvas</a>)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a7f2dd9b173b9da2f15719a8694863e9f">Paint</a>(bool stroke, TBitmap &amp;img)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a7f2dd9b173b9da2f15719a8694863e9f">Paint</a>(bool stroke, TBitmap &amp;img)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#af61cd3dd4d904843c1d0c9e979c1b47c">PathWinding</a>(bool dir)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a4088321865d88a1f24902f4ae337d693">QuadTo</a>(float_t cpx, float_t cpy, float_t x, float_t y)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a4088321865d88a1f24902f4ae337d693">QuadTo</a>(float_t cpx, float_t cpy, float_t x, float_t y)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a07feea57b3ba5566c341f1ff06d90f92">Rect</a>(float_t x, float_t y, float_t w, float_t h)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#ae12a84c37394b11f68b76e585cb22ef8">Restore</a>()</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#ae12a84c37394b11f68b76e585cb22ef8">Restore</a>()</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a4692739271712eaec24aeabf3d43c566">Rotate</a>(float_t rad)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a069e7639457908edfd9e37e804e83ac2">RoundedRect</a>(float_t x, float_t y, float_t w, float_t h, float_t r)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a069e7639457908edfd9e37e804e83ac2">RoundedRect</a>(float_t x, float_t y, float_t w, float_t h, float_t r)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a074352d2dbc7bc0e24470f0bd2d57790">Save</a>()</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a8803bf0876568ea4abe87fd7cc68944f">Scale</a>(float_t x, float_t y)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a8803bf0876568ea4abe87fd7cc68944f">Scale</a>(float_t x, float_t y)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a04ee2510e3ce41575ea38dc120ae88ff">SetAntialias</a>(bool value)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#ac1ae81672a3b230cb19c30f869735fa7">SetFillColor</a>(const char *color)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#ac1ae81672a3b230cb19c30f869735fa7">SetFillColor</a>(const char *color)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#af6c0e5d77bba67fb1a4efea9d33c6a62">SetFont</a>(const char *font)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a634f4ea1ccab2c702a134054d3d56f42">SetFontSize</a>(float_t size)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a634f4ea1ccab2c702a134054d3d56f42">SetFontSize</a>(float_t size)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a113b766d6cb99eaddd791ca095930a16">SetGlobalAlpha</a>(float_t alpha)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a9043ed910653bb801719dae642bdbf03">SetLineCap</a>(const char *value)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a9043ed910653bb801719dae642bdbf03">SetLineCap</a>(const char *value)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#abf0f4083b74ea9f71a5f514ec912ff67">SetLineJoin</a>(const char *value)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a1373d9f061e4c78e9a042c4b674b322b">SetLineWidth</a>(float_t value)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a1373d9f061e4c78e9a042c4b674b322b">SetLineWidth</a>(float_t value)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#ab47443dde40a320efbb538c4d83ccfce">SetMiterLimit</a>(float_t value)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a695215d68840f5d8d4d30edfa6006e1b">SetStrokeColor</a>(const char *str)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a695215d68840f5d8d4d30edfa6006e1b">SetStrokeColor</a>(const char *str)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#ad16bdbbca115556988f0d442d8d6b460">SetTextAlign</a>(const char *value)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a7d60da8b841152856c5b352361c1540a">SetTextBaseline</a>(const char *value)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a7d60da8b841152856c5b352361c1540a">SetTextBaseline</a>(const char *value)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a4361859d7b511a8bfcfcdeac7b3ee169">SetTransform</a>(float_t a, float_t b, float_t c, float_t d, float_t e, float_t f)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a280cbf1d9b4ef38763216f0ea9ea0c0a">Stroke</a>()</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a280cbf1d9b4ef38763216f0ea9ea0c0a">Stroke</a>()</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a7d89dbb4ee1d187ae5353c3d233a9d49">Transform</a>(float_t a, float_t b, float_t c, float_t d, float_t e, float_t f)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_t_vgcanvas.html#a6a7f7a772b7bb7fac8a8ba2b4e54b797">Translate</a>(float_t x, float_t y)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_t_vgcanvas.html#a6a7f7a772b7bb7fac8a8ba2b4e54b797">Translate</a>(float_t x, float_t y)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>TVgcanvas</b>(vgcanvas_t *nativeObj) (定义于 <a class="el" href="class_t_vgcanvas.html">TVgcanvas</a>)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>TVgcanvas</b>() (定义于 <a class="el" href="class_t_vgcanvas.html">TVgcanvas</a>)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>TVgcanvas</b>() (定义于 <a class="el" href="class_t_vgcanvas.html">TVgcanvas</a>)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>TVgcanvas</b>(const vgcanvas_t *nativeObj) (定义于 <a class="el" href="class_t_vgcanvas.html">TVgcanvas</a>)</td><td class="entry"><a class="el" href="class_t_vgcanvas.html">TVgcanvas</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

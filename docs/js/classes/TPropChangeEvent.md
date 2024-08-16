@@ -1,81 +1,58 @@
-[AWTK](../README.md) / [Exports](../modules.md) / TPropChangeEvent
+[**AWTK**](../README.md) • **Docs**
+
+***
+
+[AWTK](../globals.md) / TPropChangeEvent
 
 # Class: TPropChangeEvent
 
 对象属性变化事件。
 
-## Hierarchy
+## Extends
 
 - [`TEvent`](TEvent.md)
 
-  ↳ **`TPropChangeEvent`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](TPropChangeEvent.md#constructor)
-
-### Properties
-
-- [nativeObj](TPropChangeEvent.md#nativeobj)
-
-### Accessors
-
-- [name](TPropChangeEvent.md#name)
-- [size](TPropChangeEvent.md#size)
-- [target](TPropChangeEvent.md#target)
-- [time](TPropChangeEvent.md#time)
-- [type](TPropChangeEvent.md#type)
-- [value](TPropChangeEvent.md#value)
-
-### Methods
-
-- [destroy](TPropChangeEvent.md#destroy)
-- [getType](TPropChangeEvent.md#gettype)
-- [cast](TPropChangeEvent.md#cast)
-- [create](TPropChangeEvent.md#create)
-- [fromName](TPropChangeEvent.md#fromname)
-
 ## Constructors
 
-### constructor
+### new TPropChangeEvent()
 
-• **new TPropChangeEvent**(`nativeObj`)
+> **new TPropChangeEvent**(`nativeObj`): [`TPropChangeEvent`](TPropChangeEvent.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `nativeObj` | `any` |
+• **nativeObj**: `any`
+
+#### Returns
+
+[`TPropChangeEvent`](TPropChangeEvent.md)
 
 #### Overrides
 
-[TEvent](TEvent.md).[constructor](TEvent.md#constructor)
+[`TEvent`](TEvent.md).[`constructor`](TEvent.md#constructors)
 
 #### Defined in
 
-[awtk.ts:22869](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L22869)
+[awtk.ts:23730](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L23730)
 
 ## Properties
 
 ### nativeObj
 
-• **nativeObj**: `any`
+> **nativeObj**: `any`
 
 #### Overrides
 
-[TEvent](TEvent.md).[nativeObj](TEvent.md#nativeobj)
+[`TEvent`](TEvent.md).[`nativeObj`](TEvent.md#nativeobj)
 
 #### Defined in
 
-[awtk.ts:22868](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L22868)
+[awtk.ts:23729](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L23729)
 
 ## Accessors
 
 ### name
 
-• `get` **name**(): `string`
+> `get` **name**(): `string`
 
 属性的名称。
 
@@ -85,13 +62,13 @@
 
 #### Defined in
 
-[awtk.ts:22890](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L22890)
+[awtk.ts:23751](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L23751)
 
-___
+***
 
 ### size
 
-• `get` **size**(): `number`
+> `get` **size**(): `number`
 
 结构体的大小。
 
@@ -101,17 +78,17 @@ ___
 
 #### Inherited from
 
-TEvent.size
+[`TEvent`](TEvent.md).[`size`](TEvent.md#size)
 
 #### Defined in
 
-[awtk.ts:5583](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5583)
+[awtk.ts:5765](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5765)
 
-___
+***
 
 ### target
 
-• `get` **target**(): `any`
+> `get` **target**(): `any`
 
 事件发生的目标对象。
 
@@ -121,17 +98,17 @@ ___
 
 #### Inherited from
 
-TEvent.target
+[`TEvent`](TEvent.md).[`target`](TEvent.md#target)
 
 #### Defined in
 
-[awtk.ts:5601](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5601)
+[awtk.ts:5783](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5783)
 
-___
+***
 
 ### time
 
-• `get` **time**(): `number`
+> `get` **time**(): `number`
 
 事件发生的时间点（该时间点并非真实时间）。
 
@@ -141,17 +118,17 @@ ___
 
 #### Inherited from
 
-TEvent.time
+[`TEvent`](TEvent.md).[`time`](TEvent.md#time)
 
 #### Defined in
 
-[awtk.ts:5592](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5592)
+[awtk.ts:5774](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5774)
 
-___
+***
 
 ### type
 
-• `get` **type**(): `number`
+> `get` **type**(): `number`
 
 类型。
 
@@ -161,17 +138,17 @@ ___
 
 #### Inherited from
 
-TEvent.type
+[`TEvent`](TEvent.md).[`type`](TEvent.md#type)
 
 #### Defined in
 
-[awtk.ts:5574](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5574)
+[awtk.ts:5756](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5756)
 
-___
+***
 
 ### value
 
-• `get` **value**(): [`TValue`](TValue.md)
+> `get` **value**(): [`TValue`](TValue.md)
 
 属性的值。
 
@@ -181,13 +158,13 @@ ___
 
 #### Defined in
 
-[awtk.ts:22899](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L22899)
+[awtk.ts:23760](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L23760)
 
 ## Methods
 
-### destroy
+### destroy()
 
-▸ **destroy**(): [`TRet`](../enums/TRet.md)
+> **destroy**(): [`TRet`](../enumerations/TRet.md)
 
 销毁事件对象。
 
@@ -195,23 +172,23 @@ ___
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TEvent](TEvent.md).[destroy](TEvent.md#destroy)
+[`TEvent`](TEvent.md).[`destroy`](TEvent.md#destroy)
 
 #### Defined in
 
-[awtk.ts:5565](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5565)
+[awtk.ts:5747](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5747)
 
-___
+***
 
-### getType
+### getType()
 
-▸ **getType**(): `number`
+> **getType**(): `number`
 
 获取event类型。
 
@@ -223,25 +200,25 @@ ___
 
 #### Inherited from
 
-[TEvent](TEvent.md).[getType](TEvent.md#gettype)
+[`TEvent`](TEvent.md).[`getType`](TEvent.md#gettype)
 
 #### Defined in
 
-[awtk.ts:5538](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5538)
+[awtk.ts:5720](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5720)
 
-___
+***
 
-### cast
+### cast()
 
-▸ `Static` **cast**(`event`): [`TPropChangeEvent`](TPropChangeEvent.md)
+> `static` **cast**(`event`): [`TPropChangeEvent`](TPropChangeEvent.md)
 
-把event对象转prop_change_event_t对象，主要给脚本语言使用。
+把event对象转prop_change_event_t对象。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `event` | [`TEvent`](TEvent.md) | event对象。 |
+• **event**: [`TEvent`](TEvent.md)
+
+event对象。
 
 #### Returns
 
@@ -251,17 +228,17 @@ ___
 
 #### Overrides
 
-[TEvent](TEvent.md).[cast](TEvent.md#cast)
+[`TEvent`](TEvent.md).[`cast`](TEvent.md#cast)
 
 #### Defined in
 
-[awtk.ts:22881](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L22881)
+[awtk.ts:23742](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L23742)
 
-___
+***
 
-### create
+### create()
 
-▸ `Static` **create**(`type`): [`TEvent`](TEvent.md)
+> `static` **create**(`type`): [`TEvent`](TEvent.md)
 
 创建event对象。
 
@@ -269,9 +246,9 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `number` | 事件类型。 |
+• **type**: `number`
+
+事件类型。
 
 #### Returns
 
@@ -281,25 +258,25 @@ ___
 
 #### Inherited from
 
-[TEvent](TEvent.md).[create](TEvent.md#create)
+[`TEvent`](TEvent.md).[`create`](TEvent.md#create)
 
 #### Defined in
 
-[awtk.ts:5552](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5552)
+[awtk.ts:5734](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5734)
 
-___
+***
 
-### fromName
+### fromName()
 
-▸ `Static` **fromName**(`name`): `number`
+> `static` **fromName**(`name`): `number`
 
 将事件名转换成事件的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 事件名。 |
+• **name**: `string`
+
+事件名。
 
 #### Returns
 
@@ -309,8 +286,8 @@ ___
 
 #### Inherited from
 
-[TEvent](TEvent.md).[fromName](TEvent.md#fromname)
+[`TEvent`](TEvent.md).[`fromName`](TEvent.md#fromname)
 
 #### Defined in
 
-[awtk.ts:5513](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5513)
+[awtk.ts:5695](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5695)

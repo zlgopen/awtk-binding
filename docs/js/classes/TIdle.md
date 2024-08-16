@@ -1,4 +1,8 @@
-[AWTK](../README.md) / [Exports](../modules.md) / TIdle
+[**AWTK**](../README.md) • **Docs**
+
+***
+
+[AWTK](../globals.md) / TIdle
 
 # Class: TIdle
 
@@ -10,38 +14,33 @@ idle可以看作是duration为0的定时器。
 
 > 在非GUI线程请用idle\_queue。
 
-## Table of contents
-
-### Constructors
-
-- [constructor](TIdle.md#constructor)
-
-### Methods
-
-- [add](TIdle.md#add)
-- [remove](TIdle.md#remove)
-- [removeAllByCtx](TIdle.md#removeallbyctx)
-
 ## Constructors
 
-### constructor
+### new TIdle()
 
-• **new TIdle**()
+> **new TIdle**(): [`TIdle`](TIdle.md)
+
+#### Returns
+
+[`TIdle`](TIdle.md)
 
 ## Methods
 
-### add
+### add()
 
-▸ `Static` **add**(`on_idle`, `ctx`): `number`
+> `static` **add**(`on_idle`, `ctx`): `number`
 
 增加一个idle。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `on_idle` | `Function` | idle回调函数，回调函数返回RET_REPEAT，则下次继续执行，否则自动移出。 |
-| `ctx` | `any` | idle回调函数的上下文。 |
+• **on\_idle**: `Function`
+
+idle回调函数，回调函数返回RET_REPEAT，则下次继续执行，否则自动移出。
+
+• **ctx**: `any`
+
+idle回调函数的上下文。
 
 #### Returns
 
@@ -51,52 +50,52 @@ idle可以看作是duration为0的定时器。
 
 #### Defined in
 
-[awtk.ts:5665](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5665)
+[awtk.ts:5848](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5848)
 
-___
+***
 
-### remove
+### remove()
 
-▸ `Static` **remove**(`idle_id`): [`TRet`](../enums/TRet.md)
+> `static` **remove**(`idle_id`): [`TRet`](../enumerations/TRet.md)
 
 删除指定的idle。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `idle_id` | `number` | idleID。 |
+• **idle\_id**: `number`
+
+idleID。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:5677](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5677)
+[awtk.ts:5860](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5860)
 
-___
+***
 
-### removeAllByCtx
+### removeAllByCtx()
 
-▸ `Static` **removeAllByCtx**(`ctx`): [`TRet`](../enums/TRet.md)
+> `static` **removeAllByCtx**(`ctx`): [`TRet`](../enumerations/TRet.md)
 
 根据上下文删除所有对应的idle。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `ctx` | `any` | idle回调函数的上下文 |
+• **ctx**: `any`
+
+idle回调函数的上下文
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:5689](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5689)
+[awtk.ts:5872](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5872)

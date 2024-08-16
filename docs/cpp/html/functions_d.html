@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: 类成员</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,23 +34,35 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,86 +72,52 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="contents">
 <div class="textblock">这里列出了所有文档化的类成员，并附带类所属的文件:</div>
 
-<h3><a id="index_d"></a>- d -</h3><ul>
-<li>Deinit()
-: <a class="el" href="class_t_app_conf.html#ace206860d1fe86e5b7f1cd2b2cec6f3e">TAppConf</a>
-</li>
-<li>Destroy()
-: <a class="el" href="class_t_bitmap.html#a7b1f901f4eb9650446e6a4ad8736f7b4">TBitmap</a>
-, <a class="el" href="class_t_color.html#a6c78a9c3d7a14b19af0485054eaa1f58">TColor</a>
-, <a class="el" href="class_t_date_time.html#a63840776299c0f42d3f3a0d8948d2ce4">TDateTime</a>
-, <a class="el" href="class_t_emitter.html#a0a67a712b6749c37f56c95e37fbcee92">TEmitter</a>
-, <a class="el" href="class_t_event.html#afff04d515d40e86c9fecd6b3b0368cec">TEvent</a>
-, <a class="el" href="class_t_named_value.html#a498972f05e46e896ea81920bd73dc2ac">TNamedValue</a>
-, <a class="el" href="class_t_rect.html#a4d8fece5673f095d16ce6148c69b817c">TRect</a>
-, <a class="el" href="class_t_value.html#a739692654dd9c682bee44c70f6609cc3">TValue</a>
-</li>
-<li>Disable()
-: <a class="el" href="class_t_emitter.html#ab009db7ef16ca18fdf8eac10559501c0">TEmitter</a>
-</li>
-<li>Dispatch()
-: <a class="el" href="class_t_emitter.html#a0f3943b7219c16dd7d171aaa66fad97e">TEmitter</a>
-</li>
-<li>DispatchKey()
-: <a class="el" href="class_t_input_method.html#a36159e392001b71358ee35b84ae60691">TInputMethod</a>
-</li>
-<li>DispatchKeys()
-: <a class="el" href="class_t_input_method.html#a18759e51cd32bd93330bff954f70ff98">TInputMethod</a>
-</li>
-<li>DispatchPreedit()
-: <a class="el" href="class_t_input_method.html#a4064965bbb3574c9f95dced6d0e7a787">TInputMethod</a>
-</li>
-<li>DispatchPreeditAbort()
-: <a class="el" href="class_t_input_method.html#a77c1de1ddc3bcd95a3ff5b4ef88d981f">TInputMethod</a>
-</li>
-<li>DispatchPreeditConfirm()
-: <a class="el" href="class_t_input_method.html#a4f6514e00d37e9ccef96f4ce4182df2a">TInputMethod</a>
-</li>
-<li>DispatchSimpleEvent()
-: <a class="el" href="class_t_emitter.html#aa371beccbd4d2792db21f4da22049673">TEmitter</a>
-</li>
-<li>DrawHline()
-: <a class="el" href="class_t_canvas.html#aa124bbf9a4a8a5876c1c2620e64b50a2">TCanvas</a>
-</li>
-<li>DrawIcon()
-: <a class="el" href="class_t_canvas.html#a5bd5102b11bb5bc3a1e96f8a61229894">TCanvas</a>
-, <a class="el" href="class_t_vgcanvas.html#a5cdf27f516c7a3d42ec4e3b75f487d07">TVgcanvas</a>
-</li>
-<li>DrawImage()
-: <a class="el" href="class_t_canvas.html#a39191ff063b921405d4d2bf243b5b1e1">TCanvas</a>
-, <a class="el" href="class_t_vgcanvas.html#afeecd9b59291fbced10e03dc83348c49">TVgcanvas</a>
-</li>
-<li>DrawImageEx()
-: <a class="el" href="class_t_canvas.html#ae991b51e189ef9c16013c2050fa48078">TCanvas</a>
-</li>
-<li>DrawImageEx2()
-: <a class="el" href="class_t_canvas.html#a2f0dbe8cac199e14dbfed0c2ec79840a">TCanvas</a>
-</li>
-<li>DrawImageRepeat()
-: <a class="el" href="class_t_vgcanvas.html#a0a626925e5174c21b5e9492acf74eacc">TVgcanvas</a>
-</li>
-<li>DrawText()
-: <a class="el" href="class_t_canvas.html#a99c8972eb7b4f26feabebd9cc549bbcf">TCanvas</a>
-</li>
-<li>DrawTextInRect()
-: <a class="el" href="class_t_canvas.html#a6d62c5abfbb87ca8ce4b0563497dbceb">TCanvas</a>
-</li>
-<li>DrawVline()
-: <a class="el" href="class_t_canvas.html#aa5fae36d2679bf87b0fd671a598e5d91">TCanvas</a>
-</li>
+<h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
+<li>Deinit()&#160;:&#160;<a class="el" href="class_t_app_conf.html#ace206860d1fe86e5b7f1cd2b2cec6f3e">TAppConf</a></li>
+<li>Destroy()&#160;:&#160;<a class="el" href="class_t_bitmap.html#a7b1f901f4eb9650446e6a4ad8736f7b4">TBitmap</a>, <a class="el" href="class_t_color.html#a6c78a9c3d7a14b19af0485054eaa1f58">TColor</a>, <a class="el" href="class_t_date_time.html#a63840776299c0f42d3f3a0d8948d2ce4">TDateTime</a>, <a class="el" href="class_t_emitter.html#a0a67a712b6749c37f56c95e37fbcee92">TEmitter</a>, <a class="el" href="class_t_event.html#afff04d515d40e86c9fecd6b3b0368cec">TEvent</a>, <a class="el" href="class_t_named_value.html#a498972f05e46e896ea81920bd73dc2ac">TNamedValue</a>, <a class="el" href="class_t_rect.html#a4d8fece5673f095d16ce6148c69b817c">TRect</a>, <a class="el" href="class_t_value.html#a739692654dd9c682bee44c70f6609cc3">TValue</a>, <a class="el" href="class_t_widget.html#a434b1e53a9653693629025e1c14fae87">TWidget</a></li>
+<li>DestroyAnimator()&#160;:&#160;<a class="el" href="class_t_widget.html#ab27ce24da57187fe6eaf3dc85fe31f5e">TWidget</a></li>
+<li>DestroyAsync()&#160;:&#160;<a class="el" href="class_t_widget.html#af012ca370e68d89f1001cdccc70321ba">TWidget</a></li>
+<li>DestroyChildren()&#160;:&#160;<a class="el" href="class_t_widget.html#a7c3a7911af36e191962bbf709fc2cd50">TWidget</a></li>
+<li>Disable()&#160;:&#160;<a class="el" href="class_t_emitter.html#ab009db7ef16ca18fdf8eac10559501c0">TEmitter</a></li>
+<li>Dispatch()&#160;:&#160;<a class="el" href="class_t_emitter.html#a0f3943b7219c16dd7d171aaa66fad97e">TEmitter</a></li>
+<li>DispatchKey()&#160;:&#160;<a class="el" href="class_t_input_method.html#a36159e392001b71358ee35b84ae60691">TInputMethod</a></li>
+<li>DispatchKeys()&#160;:&#160;<a class="el" href="class_t_input_method.html#a18759e51cd32bd93330bff954f70ff98">TInputMethod</a></li>
+<li>DispatchPreedit()&#160;:&#160;<a class="el" href="class_t_input_method.html#a4064965bbb3574c9f95dced6d0e7a787">TInputMethod</a></li>
+<li>DispatchPreeditAbort()&#160;:&#160;<a class="el" href="class_t_input_method.html#a77c1de1ddc3bcd95a3ff5b4ef88d981f">TInputMethod</a></li>
+<li>DispatchPreeditConfirm()&#160;:&#160;<a class="el" href="class_t_input_method.html#a4f6514e00d37e9ccef96f4ce4182df2a">TInputMethod</a></li>
+<li>DispatchSimpleEvent()&#160;:&#160;<a class="el" href="class_t_emitter.html#aa371beccbd4d2792db21f4da22049673">TEmitter</a></li>
+<li>DispatchToKeyTarget()&#160;:&#160;<a class="el" href="class_t_widget.html#a8a17cec83bd800f57abdc69893b7508a">TWidget</a></li>
+<li>DispatchToTarget()&#160;:&#160;<a class="el" href="class_t_widget.html#a6e5c6477fc2b725e0f18bbf9b5aabb29">TWidget</a></li>
+<li>DrawHline()&#160;:&#160;<a class="el" href="class_t_canvas.html#aa124bbf9a4a8a5876c1c2620e64b50a2">TCanvas</a></li>
+<li>DrawIcon()&#160;:&#160;<a class="el" href="class_t_canvas.html#a5bd5102b11bb5bc3a1e96f8a61229894">TCanvas</a>, <a class="el" href="class_t_vgcanvas.html#a5cdf27f516c7a3d42ec4e3b75f487d07">TVgcanvas</a></li>
+<li>DrawImage()&#160;:&#160;<a class="el" href="class_t_canvas.html#a39191ff063b921405d4d2bf243b5b1e1">TCanvas</a>, <a class="el" href="class_t_vgcanvas.html#afeecd9b59291fbced10e03dc83348c49">TVgcanvas</a></li>
+<li>DrawImageEx()&#160;:&#160;<a class="el" href="class_t_canvas.html#ae991b51e189ef9c16013c2050fa48078">TCanvas</a></li>
+<li>DrawImageEx2()&#160;:&#160;<a class="el" href="class_t_canvas.html#a2f0dbe8cac199e14dbfed0c2ec79840a">TCanvas</a></li>
+<li>DrawImageRepeat()&#160;:&#160;<a class="el" href="class_t_vgcanvas.html#a0a626925e5174c21b5e9492acf74eacc">TVgcanvas</a></li>
+<li>DrawText()&#160;:&#160;<a class="el" href="class_t_canvas.html#a99c8972eb7b4f26feabebd9cc549bbcf">TCanvas</a></li>
+<li>DrawTextInRect()&#160;:&#160;<a class="el" href="class_t_canvas.html#a6d62c5abfbb87ca8ce4b0563497dbceb">TCanvas</a></li>
+<li>DrawVline()&#160;:&#160;<a class="el" href="class_t_canvas.html#aa5fae36d2679bf87b0fd671a598e5d91">TCanvas</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

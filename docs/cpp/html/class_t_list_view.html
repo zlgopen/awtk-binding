@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TListView类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,19 +70,26 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="class_t_list_view-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">TListView类 参考</div>  </div>
+  <div class="headertitle"><div class="title">TListView类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -76,52 +98,388 @@ $(function() {
 类 TListView 继承关系图:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_t_list_view.png" alt=""/>
- </div></div>
+  <img src="class_t_list_view.png" usemap="#TListView_map" alt=""/>
+  <map id="TListView_map" name="TListView_map">
+<area href="class_t_widget.html" alt="TWidget" shape="rect" coords="0,0,66,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a982414111db4eda0b7f57b55655c22b7"><td class="memItemLeft" align="right" valign="top"><a id="a982414111db4eda0b7f57b55655c22b7"></a>
+<tr class="memitem:a982414111db4eda0b7f57b55655c22b7" id="r_a982414111db4eda0b7f57b55655c22b7"><td class="memItemLeft" align="right" valign="top"><a id="a982414111db4eda0b7f57b55655c22b7" name="a982414111db4eda0b7f57b55655c22b7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TListView</b> (widget_t *nativeObj)</td></tr>
 <tr class="separator:a982414111db4eda0b7f57b55655c22b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0101a4e978e9c4cad97d8e768a4398d7"><td class="memItemLeft" align="right" valign="top"><a id="a0101a4e978e9c4cad97d8e768a4398d7"></a>
+<tr class="memitem:a0101a4e978e9c4cad97d8e768a4398d7" id="r_a0101a4e978e9c4cad97d8e768a4398d7"><td class="memItemLeft" align="right" valign="top"><a id="a0101a4e978e9c4cad97d8e768a4398d7" name="a0101a4e978e9c4cad97d8e768a4398d7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TListView</b> (const list_view_t *nativeObj)</td></tr>
 <tr class="separator:a0101a4e978e9c4cad97d8e768a4398d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf1dbc60fcfea1d99317098f223e044f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_list_view.html#adf1dbc60fcfea1d99317098f223e044f">SetItemHeight</a> (int32_t item_height)</td></tr>
+<tr class="memitem:adf1dbc60fcfea1d99317098f223e044f" id="r_adf1dbc60fcfea1d99317098f223e044f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf1dbc60fcfea1d99317098f223e044f">SetItemHeight</a> (int32_t item_height)</td></tr>
 <tr class="separator:adf1dbc60fcfea1d99317098f223e044f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8aefe762a75dc97429561f01862dcea1"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_list_view.html#a8aefe762a75dc97429561f01862dcea1">SetDefaultItemHeight</a> (int32_t default_item_height)</td></tr>
+<tr class="memitem:a8aefe762a75dc97429561f01862dcea1" id="r_a8aefe762a75dc97429561f01862dcea1"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8aefe762a75dc97429561f01862dcea1">SetDefaultItemHeight</a> (int32_t default_item_height)</td></tr>
 <tr class="separator:a8aefe762a75dc97429561f01862dcea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0cea8ab7a332d997ff930c400e0ff8d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_list_view.html#ab0cea8ab7a332d997ff930c400e0ff8d">SetAutoHideScrollBar</a> (bool auto_hide_scroll_bar)</td></tr>
+<tr class="memitem:ab0cea8ab7a332d997ff930c400e0ff8d" id="r_ab0cea8ab7a332d997ff930c400e0ff8d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0cea8ab7a332d997ff930c400e0ff8d">SetAutoHideScrollBar</a> (bool auto_hide_scroll_bar)</td></tr>
 <tr class="separator:ab0cea8ab7a332d997ff930c400e0ff8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa589ce573d50dfd0e546a76af341d47"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_list_view.html#aaa589ce573d50dfd0e546a76af341d47">SetFloatingScrollBar</a> (bool floating_scroll_bar)</td></tr>
+<tr class="memitem:aaa589ce573d50dfd0e546a76af341d47" id="r_aaa589ce573d50dfd0e546a76af341d47"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa589ce573d50dfd0e546a76af341d47">SetFloatingScrollBar</a> (bool floating_scroll_bar)</td></tr>
 <tr class="separator:aaa589ce573d50dfd0e546a76af341d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76d89b0c447847b9413fdcadb7f150f8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_list_view.html#a76d89b0c447847b9413fdcadb7f150f8">Reinit</a> ()</td></tr>
+<tr class="memitem:a76d89b0c447847b9413fdcadb7f150f8" id="r_a76d89b0c447847b9413fdcadb7f150f8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76d89b0c447847b9413fdcadb7f150f8">Reinit</a> ()</td></tr>
 <tr class="separator:a76d89b0c447847b9413fdcadb7f150f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad61f7e14732c4748c4536f3cd8b8200f"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_list_view.html#ad61f7e14732c4748c4536f3cd8b8200f">GetItemHeight</a> () const</td></tr>
+<tr class="memitem:ad61f7e14732c4748c4536f3cd8b8200f" id="r_ad61f7e14732c4748c4536f3cd8b8200f"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad61f7e14732c4748c4536f3cd8b8200f">GetItemHeight</a> () const</td></tr>
 <tr class="separator:ad61f7e14732c4748c4536f3cd8b8200f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d797a372cce32c7dfdd40aecb029524"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_list_view.html#a2d797a372cce32c7dfdd40aecb029524">GetDefaultItemHeight</a> () const</td></tr>
+<tr class="memitem:a2d797a372cce32c7dfdd40aecb029524" id="r_a2d797a372cce32c7dfdd40aecb029524"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d797a372cce32c7dfdd40aecb029524">GetDefaultItemHeight</a> () const</td></tr>
 <tr class="separator:a2d797a372cce32c7dfdd40aecb029524"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afad912c2620024379dbd3a7f66049dcd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_list_view.html#afad912c2620024379dbd3a7f66049dcd">GetAutoHideScrollBar</a> () const</td></tr>
+<tr class="memitem:afad912c2620024379dbd3a7f66049dcd" id="r_afad912c2620024379dbd3a7f66049dcd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afad912c2620024379dbd3a7f66049dcd">GetAutoHideScrollBar</a> () const</td></tr>
 <tr class="separator:afad912c2620024379dbd3a7f66049dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb4c8c059c8b4e551cf4633e3aa1cab1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_list_view.html#abb4c8c059c8b4e551cf4633e3aa1cab1">GetFloatingScrollBar</a> () const</td></tr>
+<tr class="memitem:abb4c8c059c8b4e551cf4633e3aa1cab1" id="r_abb4c8c059c8b4e551cf4633e3aa1cab1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb4c8c059c8b4e551cf4633e3aa1cab1">GetFloatingScrollBar</a> () const</td></tr>
 <tr class="separator:abb4c8c059c8b4e551cf4633e3aa1cab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_t_widget"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_t_widget')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_t_widget.html">TWidget</a></td></tr>
+<tr class="memitem:af23714eb7e2edc75682da261210b3fbd inherit pub_methods_class_t_widget" id="r_af23714eb7e2edc75682da261210b3fbd"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#af23714eb7e2edc75682da261210b3fbd">SetTextW</a> (const wchar_t *text)</td></tr>
+<tr class="separator:af23714eb7e2edc75682da261210b3fbd inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54bed420ee715631c17259514facd211 inherit pub_methods_class_t_widget" id="r_a54bed420ee715631c17259514facd211"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>TWidget</b> (widget_t *nativeObj)</td></tr>
+<tr class="separator:a54bed420ee715631c17259514facd211 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3796edb748ca8f0bdf9b074fcac22d2b inherit pub_methods_class_t_widget" id="r_a3796edb748ca8f0bdf9b074fcac22d2b"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>TWidget</b> (const widget_t *nativeObj)</td></tr>
+<tr class="separator:a3796edb748ca8f0bdf9b074fcac22d2b inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54ae9ae242cb0b7daf066321749a779d inherit pub_methods_class_t_widget" id="r_a54ae9ae242cb0b7daf066321749a779d"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a54ae9ae242cb0b7daf066321749a779d">CountChildren</a> ()</td></tr>
+<tr class="separator:a54ae9ae242cb0b7daf066321749a779d inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17ae1b1e126fa846c2d8883237a90ebc inherit pub_methods_class_t_widget" id="r_a17ae1b1e126fa846c2d8883237a90ebc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a17ae1b1e126fa846c2d8883237a90ebc">GetChild</a> (int32_t index)</td></tr>
+<tr class="separator:a17ae1b1e126fa846c2d8883237a90ebc inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac65db68777733933f61fd63de2c2d3be inherit pub_methods_class_t_widget" id="r_ac65db68777733933f61fd63de2c2d3be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ac65db68777733933f61fd63de2c2d3be">FindParentByName</a> (const char *name)</td></tr>
+<tr class="separator:ac65db68777733933f61fd63de2c2d3be inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae99ae1afabf7b3879b0cfd616614782 inherit pub_methods_class_t_widget" id="r_aae99ae1afabf7b3879b0cfd616614782"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#aae99ae1afabf7b3879b0cfd616614782">FindParentByType</a> (const char *type)</td></tr>
+<tr class="separator:aae99ae1afabf7b3879b0cfd616614782 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab468c76bcbc46239dac4c3f123a38618 inherit pub_methods_class_t_widget" id="r_ab468c76bcbc46239dac4c3f123a38618"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ab468c76bcbc46239dac4c3f123a38618">GetFocusedWidget</a> ()</td></tr>
+<tr class="separator:ab468c76bcbc46239dac4c3f123a38618 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a477d0f224b8dd64099f1cedc2694514c inherit pub_methods_class_t_widget" id="r_a477d0f224b8dd64099f1cedc2694514c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_native_window.html">TNativeWindow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a477d0f224b8dd64099f1cedc2694514c">GetNativeWindow</a> ()</td></tr>
+<tr class="separator:a477d0f224b8dd64099f1cedc2694514c inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1e6124abdf634602544fdda90694e1f inherit pub_methods_class_t_widget" id="r_ab1e6124abdf634602544fdda90694e1f"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ab1e6124abdf634602544fdda90694e1f">IndexOf</a> ()</td></tr>
+<tr class="separator:ab1e6124abdf634602544fdda90694e1f inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a035af692306753c1971710b4b3b99de8 inherit pub_methods_class_t_widget" id="r_a035af692306753c1971710b4b3b99de8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a035af692306753c1971710b4b3b99de8">CloseWindow</a> ()</td></tr>
+<tr class="separator:a035af692306753c1971710b4b3b99de8 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab21b75d2ab60efbaf114e1a712d7e073 inherit pub_methods_class_t_widget" id="r_ab21b75d2ab60efbaf114e1a712d7e073"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ab21b75d2ab60efbaf114e1a712d7e073">CloseWindowForce</a> ()</td></tr>
+<tr class="separator:ab21b75d2ab60efbaf114e1a712d7e073 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7ff76aaf8063c0c580ef04bcc184fe9 inherit pub_methods_class_t_widget" id="r_ae7ff76aaf8063c0c580ef04bcc184fe9"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ae7ff76aaf8063c0c580ef04bcc184fe9">Back</a> ()</td></tr>
+<tr class="separator:ae7ff76aaf8063c0c580ef04bcc184fe9 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41ce2510258ab3815df46e4e625d993a inherit pub_methods_class_t_widget" id="r_a41ce2510258ab3815df46e4e625d993a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a41ce2510258ab3815df46e4e625d993a">BackToHome</a> ()</td></tr>
+<tr class="separator:a41ce2510258ab3815df46e4e625d993a inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d78338aa40822112f5530a105384b42 inherit pub_methods_class_t_widget" id="r_a1d78338aa40822112f5530a105384b42"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a1d78338aa40822112f5530a105384b42">Move</a> (xy_t x, xy_t y)</td></tr>
+<tr class="separator:a1d78338aa40822112f5530a105384b42 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedd1765cc3481ad17a2e11ba2c54383b inherit pub_methods_class_t_widget" id="r_aedd1765cc3481ad17a2e11ba2c54383b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#aedd1765cc3481ad17a2e11ba2c54383b">MoveToCenter</a> ()</td></tr>
+<tr class="separator:aedd1765cc3481ad17a2e11ba2c54383b inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe62ecbaf2425b36ab26cbe6f9729942 inherit pub_methods_class_t_widget" id="r_afe62ecbaf2425b36ab26cbe6f9729942"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#afe62ecbaf2425b36ab26cbe6f9729942">Resize</a> (wh_t w, wh_t h)</td></tr>
+<tr class="separator:afe62ecbaf2425b36ab26cbe6f9729942 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a905f78730ac9276f3017e8f2ceb6e61f inherit pub_methods_class_t_widget" id="r_a905f78730ac9276f3017e8f2ceb6e61f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a905f78730ac9276f3017e8f2ceb6e61f">MoveResize</a> (xy_t x, xy_t y, wh_t w, wh_t h)</td></tr>
+<tr class="separator:a905f78730ac9276f3017e8f2ceb6e61f inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d2b216c39b6b4f378bbd0b065b8721f inherit pub_methods_class_t_widget" id="r_a0d2b216c39b6b4f378bbd0b065b8721f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a0d2b216c39b6b4f378bbd0b065b8721f">MoveResizeEx</a> (xy_t x, xy_t y, wh_t w, wh_t h, bool update_layout)</td></tr>
+<tr class="separator:a0d2b216c39b6b4f378bbd0b065b8721f inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b8f4e17550b12e3b06a481fe0242347 inherit pub_methods_class_t_widget" id="r_a8b8f4e17550b12e3b06a481fe0242347"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a8b8f4e17550b12e3b06a481fe0242347">GetValue</a> ()</td></tr>
+<tr class="separator:a8b8f4e17550b12e3b06a481fe0242347 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fb64bb83b8801b055050c815be44a5f inherit pub_methods_class_t_widget" id="r_a4fb64bb83b8801b055050c815be44a5f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a4fb64bb83b8801b055050c815be44a5f">SetValue</a> (float_t value)</td></tr>
+<tr class="separator:a4fb64bb83b8801b055050c815be44a5f inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5d866d717d1a3d632a6001afe4ebba2 inherit pub_methods_class_t_widget" id="r_ae5d866d717d1a3d632a6001afe4ebba2"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ae5d866d717d1a3d632a6001afe4ebba2">AddValue</a> (float_t delta)</td></tr>
+<tr class="separator:ae5d866d717d1a3d632a6001afe4ebba2 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ee7ecc74ea082388af2fa90c11bfdbe inherit pub_methods_class_t_widget" id="r_a3ee7ecc74ea082388af2fa90c11bfdbe"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a3ee7ecc74ea082388af2fa90c11bfdbe">GetValueInt</a> ()</td></tr>
+<tr class="separator:a3ee7ecc74ea082388af2fa90c11bfdbe inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a452dd4e783c69f662ecae51834835d70 inherit pub_methods_class_t_widget" id="r_a452dd4e783c69f662ecae51834835d70"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a452dd4e783c69f662ecae51834835d70">SetValueInt</a> (int32_t value)</td></tr>
+<tr class="separator:a452dd4e783c69f662ecae51834835d70 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a896c0ae5903a50197b74d8cd59f07479 inherit pub_methods_class_t_widget" id="r_a896c0ae5903a50197b74d8cd59f07479"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a896c0ae5903a50197b74d8cd59f07479">AddValueInt</a> (int32_t delta)</td></tr>
+<tr class="separator:a896c0ae5903a50197b74d8cd59f07479 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07fe74634b763ea924cae366d67516dd inherit pub_methods_class_t_widget" id="r_a07fe74634b763ea924cae366d67516dd"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a07fe74634b763ea924cae366d67516dd">AnimateValueTo</a> (float_t value, uint32_t duration)</td></tr>
+<tr class="separator:a07fe74634b763ea924cae366d67516dd inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5ee3ed70c0d3372fa8e6ae509daaada inherit pub_methods_class_t_widget" id="r_ad5ee3ed70c0d3372fa8e6ae509daaada"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ad5ee3ed70c0d3372fa8e6ae509daaada">IsStyleExist</a> (const char *style_name, const char *state_name)</td></tr>
+<tr class="separator:ad5ee3ed70c0d3372fa8e6ae509daaada inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1659d972c34d0591a8daacbf8926e9c6 inherit pub_methods_class_t_widget" id="r_a1659d972c34d0591a8daacbf8926e9c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a1659d972c34d0591a8daacbf8926e9c6">IsSupportHighlighter</a> ()</td></tr>
+<tr class="separator:a1659d972c34d0591a8daacbf8926e9c6 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa68c318fca7e78de339c4976cdb7975e inherit pub_methods_class_t_widget" id="r_aa68c318fca7e78de339c4976cdb7975e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#aa68c318fca7e78de339c4976cdb7975e">HasHighlighter</a> ()</td></tr>
+<tr class="separator:aa68c318fca7e78de339c4976cdb7975e inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21e95f72fbaf1b54e4f38797a51ea4a4 inherit pub_methods_class_t_widget" id="r_a21e95f72fbaf1b54e4f38797a51ea4a4"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a21e95f72fbaf1b54e4f38797a51ea4a4">UseStyle</a> (const char *style)</td></tr>
+<tr class="separator:a21e95f72fbaf1b54e4f38797a51ea4a4 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5c7a947eca388f24639bba5c2a5d234 inherit pub_methods_class_t_widget" id="r_ae5c7a947eca388f24639bba5c2a5d234"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ae5c7a947eca388f24639bba5c2a5d234">SetText</a> (const char *text)</td></tr>
+<tr class="separator:ae5c7a947eca388f24639bba5c2a5d234 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbca20cb9423ca1eac9ea5a11149a268 inherit pub_methods_class_t_widget" id="r_afbca20cb9423ca1eac9ea5a11149a268"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#afbca20cb9423ca1eac9ea5a11149a268">SetTextEx</a> (const char *text, bool check_diff)</td></tr>
+<tr class="separator:afbca20cb9423ca1eac9ea5a11149a268 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1799a1ec41892b5a83016bacec38866c inherit pub_methods_class_t_widget" id="r_a1799a1ec41892b5a83016bacec38866c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a1799a1ec41892b5a83016bacec38866c">SetChildText</a> (const char *name, const char *text)</td></tr>
+<tr class="separator:a1799a1ec41892b5a83016bacec38866c inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f941b76a3f359d642d55296666d4ebb inherit pub_methods_class_t_widget" id="r_a4f941b76a3f359d642d55296666d4ebb"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a4f941b76a3f359d642d55296666d4ebb">SetChildTextWithDouble</a> (const char *name, const char *format, double value)</td></tr>
+<tr class="separator:a4f941b76a3f359d642d55296666d4ebb inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb62ccfd9cf0226fd03ac1c997d2f2b inherit pub_methods_class_t_widget" id="r_afeb62ccfd9cf0226fd03ac1c997d2f2b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#afeb62ccfd9cf0226fd03ac1c997d2f2b">SetChildTextWithInt</a> (const char *name, const char *format, int value)</td></tr>
+<tr class="separator:afeb62ccfd9cf0226fd03ac1c997d2f2b inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cc12deffb1233a8fd7855aff0c4001e inherit pub_methods_class_t_widget" id="r_a4cc12deffb1233a8fd7855aff0c4001e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a4cc12deffb1233a8fd7855aff0c4001e">SetTrText</a> (const char *text)</td></tr>
+<tr class="separator:a4cc12deffb1233a8fd7855aff0c4001e inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a462390c1e05030d4cb5b53bafce205a2 inherit pub_methods_class_t_widget" id="r_a462390c1e05030d4cb5b53bafce205a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a462390c1e05030d4cb5b53bafce205a2">GetEnable</a> ()</td></tr>
+<tr class="separator:a462390c1e05030d4cb5b53bafce205a2 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c110c6f05a9ae3060ad25cb962df811 inherit pub_methods_class_t_widget" id="r_a6c110c6f05a9ae3060ad25cb962df811"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a6c110c6f05a9ae3060ad25cb962df811">GetFloating</a> ()</td></tr>
+<tr class="separator:a6c110c6f05a9ae3060ad25cb962df811 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94cbcc20121c78065e3141e830de4c2f inherit pub_methods_class_t_widget" id="r_a94cbcc20121c78065e3141e830de4c2f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a94cbcc20121c78065e3141e830de4c2f">GetAutoAdjustSize</a> ()</td></tr>
+<tr class="separator:a94cbcc20121c78065e3141e830de4c2f inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6e19edf09e8d5e3ae9463271d675d8b inherit pub_methods_class_t_widget" id="r_ac6e19edf09e8d5e3ae9463271d675d8b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ac6e19edf09e8d5e3ae9463271d675d8b">GetWithFocusState</a> ()</td></tr>
+<tr class="separator:ac6e19edf09e8d5e3ae9463271d675d8b inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75396b7c49b03e4040e68f49ec316b21 inherit pub_methods_class_t_widget" id="r_a75396b7c49b03e4040e68f49ec316b21"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a75396b7c49b03e4040e68f49ec316b21">GetFocusable</a> ()</td></tr>
+<tr class="separator:a75396b7c49b03e4040e68f49ec316b21 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ac47aec1d4c01a97b0b3b364e12a5e inherit pub_methods_class_t_widget" id="r_a50ac47aec1d4c01a97b0b3b364e12a5e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a50ac47aec1d4c01a97b0b3b364e12a5e">GetSensitive</a> ()</td></tr>
+<tr class="separator:a50ac47aec1d4c01a97b0b3b364e12a5e inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabbaa78fc5ed630d6d23729d1281d777 inherit pub_methods_class_t_widget" id="r_aabbaa78fc5ed630d6d23729d1281d777"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#aabbaa78fc5ed630d6d23729d1281d777">GetVisible</a> ()</td></tr>
+<tr class="separator:aabbaa78fc5ed630d6d23729d1281d777 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fd25ffd67a868aad525b932290e52ce inherit pub_methods_class_t_widget" id="r_a4fd25ffd67a868aad525b932290e52ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a4fd25ffd67a868aad525b932290e52ce">GetFeedback</a> ()</td></tr>
+<tr class="separator:a4fd25ffd67a868aad525b932290e52ce inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebf73b67e28b623f3090cbd09acf98c3 inherit pub_methods_class_t_widget" id="r_aebf73b67e28b623f3090cbd09acf98c3"><td class="memItemLeft" align="right" valign="top">const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#aebf73b67e28b623f3090cbd09acf98c3">GetText</a> ()</td></tr>
+<tr class="separator:aebf73b67e28b623f3090cbd09acf98c3 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad37b3f14cad57075565fae5e4324ce1e inherit pub_methods_class_t_widget" id="r_ad37b3f14cad57075565fae5e4324ce1e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ad37b3f14cad57075565fae5e4324ce1e">SetName</a> (const char *name)</td></tr>
+<tr class="separator:ad37b3f14cad57075565fae5e4324ce1e inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a042225422d6683b4aa4b40f9f2ff2313 inherit pub_methods_class_t_widget" id="r_a042225422d6683b4aa4b40f9f2ff2313"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a042225422d6683b4aa4b40f9f2ff2313">SetTheme</a> (const char *name)</td></tr>
+<tr class="separator:a042225422d6683b4aa4b40f9f2ff2313 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45f5ed750c059a4918741b960a7f16db inherit pub_methods_class_t_widget" id="r_a45f5ed750c059a4918741b960a7f16db"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a45f5ed750c059a4918741b960a7f16db">GetThemeName</a> ()</td></tr>
+<tr class="separator:a45f5ed750c059a4918741b960a7f16db inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05ae8ee4730812ab2bea645133fc4ea1 inherit pub_methods_class_t_widget" id="r_a05ae8ee4730812ab2bea645133fc4ea1"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a05ae8ee4730812ab2bea645133fc4ea1">SetPointerCursor</a> (const char *cursor)</td></tr>
+<tr class="separator:a05ae8ee4730812ab2bea645133fc4ea1 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6217f0be9c1576da0811550c8e927916 inherit pub_methods_class_t_widget" id="r_a6217f0be9c1576da0811550c8e927916"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a6217f0be9c1576da0811550c8e927916">SetAnimation</a> (const char *animation)</td></tr>
+<tr class="separator:a6217f0be9c1576da0811550c8e927916 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db70e1d0453d61d0e7a7f7a012d5d37 inherit pub_methods_class_t_widget" id="r_a7db70e1d0453d61d0e7a7f7a012d5d37"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a7db70e1d0453d61d0e7a7f7a012d5d37">CreateAnimator</a> (const char *animation)</td></tr>
+<tr class="separator:a7db70e1d0453d61d0e7a7f7a012d5d37 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac114e0011fefb1e938a1f0e38af6477d inherit pub_methods_class_t_widget" id="r_ac114e0011fefb1e938a1f0e38af6477d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ac114e0011fefb1e938a1f0e38af6477d">StartAnimator</a> (const char *name)</td></tr>
+<tr class="separator:ac114e0011fefb1e938a1f0e38af6477d inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09ba6e485d1012d1d64d50d23a3f4088 inherit pub_methods_class_t_widget" id="r_a09ba6e485d1012d1d64d50d23a3f4088"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a09ba6e485d1012d1d64d50d23a3f4088">SetAnimatorTimeScale</a> (const char *name, float_t time_scale)</td></tr>
+<tr class="separator:a09ba6e485d1012d1d64d50d23a3f4088 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f2a30468d181aee7e82834847aeec2 inherit pub_methods_class_t_widget" id="r_ac0f2a30468d181aee7e82834847aeec2"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ac0f2a30468d181aee7e82834847aeec2">PauseAnimator</a> (const char *name)</td></tr>
+<tr class="separator:ac0f2a30468d181aee7e82834847aeec2 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a778fca431a4868ff54307704e67eaf inherit pub_methods_class_t_widget" id="r_a1a778fca431a4868ff54307704e67eaf"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a1a778fca431a4868ff54307704e67eaf">StopAnimator</a> (const char *name)</td></tr>
+<tr class="separator:a1a778fca431a4868ff54307704e67eaf inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27ce24da57187fe6eaf3dc85fe31f5e inherit pub_methods_class_t_widget" id="r_ab27ce24da57187fe6eaf3dc85fe31f5e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ab27ce24da57187fe6eaf3dc85fe31f5e">DestroyAnimator</a> (const char *name)</td></tr>
+<tr class="separator:ab27ce24da57187fe6eaf3dc85fe31f5e inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98da25c5c35623be6e9a95e1b2f97e0d inherit pub_methods_class_t_widget" id="r_a98da25c5c35623be6e9a95e1b2f97e0d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a98da25c5c35623be6e9a95e1b2f97e0d">SetEnable</a> (bool enable)</td></tr>
+<tr class="separator:a98da25c5c35623be6e9a95e1b2f97e0d inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80c876ddee4ec093ece9c99e59c39e0b inherit pub_methods_class_t_widget" id="r_a80c876ddee4ec093ece9c99e59c39e0b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a80c876ddee4ec093ece9c99e59c39e0b">SetFeedback</a> (bool feedback)</td></tr>
+<tr class="separator:a80c876ddee4ec093ece9c99e59c39e0b inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca4cbcff45bd608b7adddcabecfa786c inherit pub_methods_class_t_widget" id="r_aca4cbcff45bd608b7adddcabecfa786c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#aca4cbcff45bd608b7adddcabecfa786c">SetAutoAdjustSize</a> (bool auto_adjust_size)</td></tr>
+<tr class="separator:aca4cbcff45bd608b7adddcabecfa786c inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6df8bce12da1f9c7845840e6ce0cf31 inherit pub_methods_class_t_widget" id="r_ac6df8bce12da1f9c7845840e6ce0cf31"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ac6df8bce12da1f9c7845840e6ce0cf31">SetFloating</a> (bool floating)</td></tr>
+<tr class="separator:ac6df8bce12da1f9c7845840e6ce0cf31 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2666b1df5032eeb142a496a11d9899a1 inherit pub_methods_class_t_widget" id="r_a2666b1df5032eeb142a496a11d9899a1"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a2666b1df5032eeb142a496a11d9899a1">SetFocused</a> (bool focused)</td></tr>
+<tr class="separator:a2666b1df5032eeb142a496a11d9899a1 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee19407a091d83e9e9bef820a7ee266c inherit pub_methods_class_t_widget" id="r_aee19407a091d83e9e9bef820a7ee266c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#aee19407a091d83e9e9bef820a7ee266c">SetFocusable</a> (bool focusable)</td></tr>
+<tr class="separator:aee19407a091d83e9e9bef820a7ee266c inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4a8ad9296516ed4b5bdb09567f895c9 inherit pub_methods_class_t_widget" id="r_aa4a8ad9296516ed4b5bdb09567f895c9"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#aa4a8ad9296516ed4b5bdb09567f895c9">SetState</a> (const char *state)</td></tr>
+<tr class="separator:aa4a8ad9296516ed4b5bdb09567f895c9 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c21fc6297eec6af8459f44028bff5d8 inherit pub_methods_class_t_widget" id="r_a8c21fc6297eec6af8459f44028bff5d8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a8c21fc6297eec6af8459f44028bff5d8">SetOpacity</a> (uint8_t opacity)</td></tr>
+<tr class="separator:a8c21fc6297eec6af8459f44028bff5d8 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af44edcf963cd1d290c73a3be544b6e0b inherit pub_methods_class_t_widget" id="r_af44edcf963cd1d290c73a3be544b6e0b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#af44edcf963cd1d290c73a3be544b6e0b">SetDirtyRectTolerance</a> (uint16_t dirty_rect_tolerance)</td></tr>
+<tr class="separator:af44edcf963cd1d290c73a3be544b6e0b inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c3a7911af36e191962bbf709fc2cd50 inherit pub_methods_class_t_widget" id="r_a7c3a7911af36e191962bbf709fc2cd50"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a7c3a7911af36e191962bbf709fc2cd50">DestroyChildren</a> ()</td></tr>
+<tr class="separator:a7c3a7911af36e191962bbf709fc2cd50 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af405b80d5ebb2f60a9dec28052afe51e inherit pub_methods_class_t_widget" id="r_af405b80d5ebb2f60a9dec28052afe51e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#af405b80d5ebb2f60a9dec28052afe51e">AddChild</a> (<a class="el" href="class_t_widget.html">TWidget</a> &amp;child)</td></tr>
+<tr class="separator:af405b80d5ebb2f60a9dec28052afe51e inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c88827f956f12feb122a02154c96a9c inherit pub_methods_class_t_widget" id="r_a7c88827f956f12feb122a02154c96a9c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a7c88827f956f12feb122a02154c96a9c">RemoveChild</a> (<a class="el" href="class_t_widget.html">TWidget</a> &amp;child)</td></tr>
+<tr class="separator:a7c88827f956f12feb122a02154c96a9c inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23f3a58a6702e4d3f469e7e31cedc33c inherit pub_methods_class_t_widget" id="r_a23f3a58a6702e4d3f469e7e31cedc33c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a23f3a58a6702e4d3f469e7e31cedc33c">InsertChild</a> (uint32_t index, <a class="el" href="class_t_widget.html">TWidget</a> &amp;child)</td></tr>
+<tr class="separator:a23f3a58a6702e4d3f469e7e31cedc33c inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ea69aee49ecbfad15a889b2bd4d3815 inherit pub_methods_class_t_widget" id="r_a1ea69aee49ecbfad15a889b2bd4d3815"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a1ea69aee49ecbfad15a889b2bd4d3815">Restack</a> (uint32_t index)</td></tr>
+<tr class="separator:a1ea69aee49ecbfad15a889b2bd4d3815 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab6fef2ba5eb9081e1d47e0d0e63f881 inherit pub_methods_class_t_widget" id="r_aab6fef2ba5eb9081e1d47e0d0e63f881"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#aab6fef2ba5eb9081e1d47e0d0e63f881">Child</a> (const char *name)</td></tr>
+<tr class="separator:aab6fef2ba5eb9081e1d47e0d0e63f881 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c12ad3287fb83085fb6b96313cb72b4 inherit pub_methods_class_t_widget" id="r_a1c12ad3287fb83085fb6b96313cb72b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a1c12ad3287fb83085fb6b96313cb72b4">Lookup</a> (const char *name, bool recursive)</td></tr>
+<tr class="separator:a1c12ad3287fb83085fb6b96313cb72b4 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb0794fe8aa095e99ebbfd2e57169ca inherit pub_methods_class_t_widget" id="r_afcb0794fe8aa095e99ebbfd2e57169ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#afcb0794fe8aa095e99ebbfd2e57169ca">LookupByType</a> (const char *type, bool recursive)</td></tr>
+<tr class="separator:afcb0794fe8aa095e99ebbfd2e57169ca inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b0e2039ccf904ad9e9f8c9bdad5773a inherit pub_methods_class_t_widget" id="r_a5b0e2039ccf904ad9e9f8c9bdad5773a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a5b0e2039ccf904ad9e9f8c9bdad5773a">SetVisible</a> (bool visible)</td></tr>
+<tr class="separator:a5b0e2039ccf904ad9e9f8c9bdad5773a inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6209633635409a5709202c7a099308d inherit pub_methods_class_t_widget" id="r_aa6209633635409a5709202c7a099308d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#aa6209633635409a5709202c7a099308d">SetVisibleOnly</a> (bool visible)</td></tr>
+<tr class="separator:aa6209633635409a5709202c7a099308d inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4991a6dfa6f5ca8d113fc55b31f35a67 inherit pub_methods_class_t_widget" id="r_a4991a6dfa6f5ca8d113fc55b31f35a67"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a4991a6dfa6f5ca8d113fc55b31f35a67">SetSensitive</a> (bool sensitive)</td></tr>
+<tr class="separator:a4991a6dfa6f5ca8d113fc55b31f35a67 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad892041ab622a3df3aa6709312264aa6 inherit pub_methods_class_t_widget" id="r_ad892041ab622a3df3aa6709312264aa6"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ad892041ab622a3df3aa6709312264aa6">On</a> (uint32_t type, event_func_t on_event, void *ctx)</td></tr>
+<tr class="separator:ad892041ab622a3df3aa6709312264aa6 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a266022fe94cc1e1b870357527da92156 inherit pub_methods_class_t_widget" id="r_a266022fe94cc1e1b870357527da92156"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a266022fe94cc1e1b870357527da92156">Off</a> (uint32_t id)</td></tr>
+<tr class="separator:a266022fe94cc1e1b870357527da92156 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add508b25bc5a1c183c13cc55802a2250 inherit pub_methods_class_t_widget" id="r_add508b25bc5a1c183c13cc55802a2250"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#add508b25bc5a1c183c13cc55802a2250">InvalidateForce</a> (<a class="el" href="class_t_rect.html">TRect</a> &amp;r)</td></tr>
+<tr class="separator:add508b25bc5a1c183c13cc55802a2250 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3c83d510d88acc8de483966316b2547 inherit pub_methods_class_t_widget" id="r_ac3c83d510d88acc8de483966316b2547"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ac3c83d510d88acc8de483966316b2547">GetProp</a> (const char *name, <a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
+<tr class="separator:ac3c83d510d88acc8de483966316b2547 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47e5be1ac1a45ddc7b95c491339b1b46 inherit pub_methods_class_t_widget" id="r_a47e5be1ac1a45ddc7b95c491339b1b46"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a47e5be1ac1a45ddc7b95c491339b1b46">SetProp</a> (const char *name, <a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
+<tr class="separator:a47e5be1ac1a45ddc7b95c491339b1b46 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d4a37939b8d15349f3c2a163e7df9d inherit pub_methods_class_t_widget" id="r_a02d4a37939b8d15349f3c2a163e7df9d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a02d4a37939b8d15349f3c2a163e7df9d">SetProps</a> (const char *params)</td></tr>
+<tr class="separator:a02d4a37939b8d15349f3c2a163e7df9d inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a771127fd9cbcbd02e645bb23d7885b95 inherit pub_methods_class_t_widget" id="r_a771127fd9cbcbd02e645bb23d7885b95"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a771127fd9cbcbd02e645bb23d7885b95">SetPropStr</a> (const char *name, const char *v)</td></tr>
+<tr class="separator:a771127fd9cbcbd02e645bb23d7885b95 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4573cc0284fa48def8aea2965414249 inherit pub_methods_class_t_widget" id="r_ae4573cc0284fa48def8aea2965414249"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ae4573cc0284fa48def8aea2965414249">GetPropStr</a> (const char *name, const char *defval)</td></tr>
+<tr class="separator:ae4573cc0284fa48def8aea2965414249 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa203e8b6c842c6c9aad2f799d9c3bba2 inherit pub_methods_class_t_widget" id="r_aa203e8b6c842c6c9aad2f799d9c3bba2"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#aa203e8b6c842c6c9aad2f799d9c3bba2">SetPropPointer</a> (const char *name, void *v)</td></tr>
+<tr class="separator:aa203e8b6c842c6c9aad2f799d9c3bba2 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8384fce88c9cd2dca37ea5ca035203b8 inherit pub_methods_class_t_widget" id="r_a8384fce88c9cd2dca37ea5ca035203b8"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a8384fce88c9cd2dca37ea5ca035203b8">GetPropPointer</a> (const char *name)</td></tr>
+<tr class="separator:a8384fce88c9cd2dca37ea5ca035203b8 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbc63a7223d76460c19ff2c751a88be5 inherit pub_methods_class_t_widget" id="r_afbc63a7223d76460c19ff2c751a88be5"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#afbc63a7223d76460c19ff2c751a88be5">SetPropFloat</a> (const char *name, float_t v)</td></tr>
+<tr class="separator:afbc63a7223d76460c19ff2c751a88be5 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7abf96925f9b38bdc499cd024dbd1d06 inherit pub_methods_class_t_widget" id="r_a7abf96925f9b38bdc499cd024dbd1d06"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a7abf96925f9b38bdc499cd024dbd1d06">GetPropFloat</a> (const char *name, float_t defval)</td></tr>
+<tr class="separator:a7abf96925f9b38bdc499cd024dbd1d06 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87a6076ad1f0269d6c3fcf6eea07733d inherit pub_methods_class_t_widget" id="r_a87a6076ad1f0269d6c3fcf6eea07733d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a87a6076ad1f0269d6c3fcf6eea07733d">SetPropInt</a> (const char *name, int32_t v)</td></tr>
+<tr class="separator:a87a6076ad1f0269d6c3fcf6eea07733d inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a786e71e30c6d11b58487ea1389e5edcc inherit pub_methods_class_t_widget" id="r_a786e71e30c6d11b58487ea1389e5edcc"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a786e71e30c6d11b58487ea1389e5edcc">GetPropInt</a> (const char *name, int32_t defval)</td></tr>
+<tr class="separator:a786e71e30c6d11b58487ea1389e5edcc inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac85193ad0733be1e2a85f9cba26249ca inherit pub_methods_class_t_widget" id="r_ac85193ad0733be1e2a85f9cba26249ca"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ac85193ad0733be1e2a85f9cba26249ca">SetPropBool</a> (const char *name, bool v)</td></tr>
+<tr class="separator:ac85193ad0733be1e2a85f9cba26249ca inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdd749dd68cf3a3a2165364cfba2e9f1 inherit pub_methods_class_t_widget" id="r_acdd749dd68cf3a3a2165364cfba2e9f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#acdd749dd68cf3a3a2165364cfba2e9f1">GetPropBool</a> (const char *name, bool defval)</td></tr>
+<tr class="separator:acdd749dd68cf3a3a2165364cfba2e9f1 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3110ff12cc60e86b0ddfdf97c50364a inherit pub_methods_class_t_widget" id="r_aa3110ff12cc60e86b0ddfdf97c50364a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#aa3110ff12cc60e86b0ddfdf97c50364a">IsWindowOpened</a> ()</td></tr>
+<tr class="separator:aa3110ff12cc60e86b0ddfdf97c50364a inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fd97d5886818e8fac09d8bc1e3697f6 inherit pub_methods_class_t_widget" id="r_a2fd97d5886818e8fac09d8bc1e3697f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a2fd97d5886818e8fac09d8bc1e3697f6">IsWindowCreated</a> ()</td></tr>
+<tr class="separator:a2fd97d5886818e8fac09d8bc1e3697f6 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b95ca7cb0b041b1989fe0d45a9652e8 inherit pub_methods_class_t_widget" id="r_a2b95ca7cb0b041b1989fe0d45a9652e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a2b95ca7cb0b041b1989fe0d45a9652e8">IsParentOf</a> (<a class="el" href="class_t_widget.html">TWidget</a> &amp;child)</td></tr>
+<tr class="separator:a2b95ca7cb0b041b1989fe0d45a9652e8 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a947ddd141441985beece96d27969d2d0 inherit pub_methods_class_t_widget" id="r_a947ddd141441985beece96d27969d2d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a947ddd141441985beece96d27969d2d0">IsDirectParentOf</a> (<a class="el" href="class_t_widget.html">TWidget</a> &amp;child)</td></tr>
+<tr class="separator:a947ddd141441985beece96d27969d2d0 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf835ec6b0f44cfb396e1d04180fc776 inherit pub_methods_class_t_widget" id="r_abf835ec6b0f44cfb396e1d04180fc776"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#abf835ec6b0f44cfb396e1d04180fc776">IsWindow</a> ()</td></tr>
+<tr class="separator:abf835ec6b0f44cfb396e1d04180fc776 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb241facdd92ed8a27c4c70c50253137 inherit pub_methods_class_t_widget" id="r_afb241facdd92ed8a27c4c70c50253137"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#afb241facdd92ed8a27c4c70c50253137">IsSystemBar</a> ()</td></tr>
+<tr class="separator:afb241facdd92ed8a27c4c70c50253137 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31fabf7d50b062751e4815cb01f971a3 inherit pub_methods_class_t_widget" id="r_a31fabf7d50b062751e4815cb01f971a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a31fabf7d50b062751e4815cb01f971a3">IsNormalWindow</a> ()</td></tr>
+<tr class="separator:a31fabf7d50b062751e4815cb01f971a3 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeca85f45bc65d781c61677b084963cb inherit pub_methods_class_t_widget" id="r_abeca85f45bc65d781c61677b084963cb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#abeca85f45bc65d781c61677b084963cb">IsFullscreenWindow</a> ()</td></tr>
+<tr class="separator:abeca85f45bc65d781c61677b084963cb inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afee26a5700aeb3bd74cbab84fafbe99a inherit pub_methods_class_t_widget" id="r_afee26a5700aeb3bd74cbab84fafbe99a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#afee26a5700aeb3bd74cbab84fafbe99a">IsDialog</a> ()</td></tr>
+<tr class="separator:afee26a5700aeb3bd74cbab84fafbe99a inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26615ccaa95de124a80198f945c5b450 inherit pub_methods_class_t_widget" id="r_a26615ccaa95de124a80198f945c5b450"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a26615ccaa95de124a80198f945c5b450">IsPopup</a> ()</td></tr>
+<tr class="separator:a26615ccaa95de124a80198f945c5b450 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41363c7601b8b7954d8522cb7504b79b inherit pub_methods_class_t_widget" id="r_a41363c7601b8b7954d8522cb7504b79b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a41363c7601b8b7954d8522cb7504b79b">IsOverlay</a> ()</td></tr>
+<tr class="separator:a41363c7601b8b7954d8522cb7504b79b inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e6013d75f8024b40e526156770d0151 inherit pub_methods_class_t_widget" id="r_a9e6013d75f8024b40e526156770d0151"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a9e6013d75f8024b40e526156770d0151">IsAlwaysOnTop</a> ()</td></tr>
+<tr class="separator:a9e6013d75f8024b40e526156770d0151 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbe975b3f3e9e6b961a7bbf601dea7a7 inherit pub_methods_class_t_widget" id="r_abbe975b3f3e9e6b961a7bbf601dea7a7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#abbe975b3f3e9e6b961a7bbf601dea7a7">IsOpenedDialog</a> ()</td></tr>
+<tr class="separator:abbe975b3f3e9e6b961a7bbf601dea7a7 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfbb1645a665e7fa9980001fda4c6f60 inherit pub_methods_class_t_widget" id="r_acfbb1645a665e7fa9980001fda4c6f60"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#acfbb1645a665e7fa9980001fda4c6f60">IsOpenedPopup</a> ()</td></tr>
+<tr class="separator:acfbb1645a665e7fa9980001fda4c6f60 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4d88a4ac2830b7f8ea8478ebe3e0f4a inherit pub_methods_class_t_widget" id="r_ab4d88a4ac2830b7f8ea8478ebe3e0f4a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ab4d88a4ac2830b7f8ea8478ebe3e0f4a">IsKeyboard</a> ()</td></tr>
+<tr class="separator:ab4d88a4ac2830b7f8ea8478ebe3e0f4a inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7fa1c157fbccacabf161ca889599485 inherit pub_methods_class_t_widget" id="r_af7fa1c157fbccacabf161ca889599485"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#af7fa1c157fbccacabf161ca889599485">IsDesigningWindow</a> ()</td></tr>
+<tr class="separator:af7fa1c157fbccacabf161ca889599485 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a852ef98bacf69ed61d6a346bf952f001 inherit pub_methods_class_t_widget" id="r_a852ef98bacf69ed61d6a346bf952f001"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a852ef98bacf69ed61d6a346bf952f001">IsWindowManager</a> ()</td></tr>
+<tr class="separator:a852ef98bacf69ed61d6a346bf952f001 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad58eb9c24b629e4f5c863cd6c33627f4 inherit pub_methods_class_t_widget" id="r_ad58eb9c24b629e4f5c863cd6c33627f4"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ad58eb9c24b629e4f5c863cd6c33627f4">Foreach</a> (tk_visit_t visit, void *ctx)</td></tr>
+<tr class="separator:ad58eb9c24b629e4f5c863cd6c33627f4 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2239ba36138a775179856eaa1df154f inherit pub_methods_class_t_widget" id="r_ad2239ba36138a775179856eaa1df154f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ad2239ba36138a775179856eaa1df154f">GetWindow</a> ()</td></tr>
+<tr class="separator:ad2239ba36138a775179856eaa1df154f inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9cf537f548371f2f0733c492c08b710 inherit pub_methods_class_t_widget" id="r_ac9cf537f548371f2f0733c492c08b710"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ac9cf537f548371f2f0733c492c08b710">GetWindowManager</a> ()</td></tr>
+<tr class="separator:ac9cf537f548371f2f0733c492c08b710 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a651245c92c342cc0a32bfc4c0d7af898 inherit pub_methods_class_t_widget" id="r_a651245c92c342cc0a32bfc4c0d7af898"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a651245c92c342cc0a32bfc4c0d7af898">GetType</a> ()</td></tr>
+<tr class="separator:a651245c92c342cc0a32bfc4c0d7af898 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8921fd3d93022a9e1af3b754c7b84c38 inherit pub_methods_class_t_widget" id="r_a8921fd3d93022a9e1af3b754c7b84c38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a8921fd3d93022a9e1af3b754c7b84c38">Clone</a> (<a class="el" href="class_t_widget.html">TWidget</a> &amp;parent)</td></tr>
+<tr class="separator:a8921fd3d93022a9e1af3b754c7b84c38 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad160545d2b86701c7f64bd34f6e29d7f inherit pub_methods_class_t_widget" id="r_ad160545d2b86701c7f64bd34f6e29d7f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ad160545d2b86701c7f64bd34f6e29d7f">Equal</a> (<a class="el" href="class_t_widget.html">TWidget</a> &amp;other)</td></tr>
+<tr class="separator:ad160545d2b86701c7f64bd34f6e29d7f inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a434b1e53a9653693629025e1c14fae87 inherit pub_methods_class_t_widget" id="r_a434b1e53a9653693629025e1c14fae87"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a434b1e53a9653693629025e1c14fae87">Destroy</a> ()</td></tr>
+<tr class="separator:a434b1e53a9653693629025e1c14fae87 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af012ca370e68d89f1001cdccc70321ba inherit pub_methods_class_t_widget" id="r_af012ca370e68d89f1001cdccc70321ba"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#af012ca370e68d89f1001cdccc70321ba">DestroyAsync</a> ()</td></tr>
+<tr class="separator:af012ca370e68d89f1001cdccc70321ba inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6764e43fb68675cccb37a714ee8e8c03 inherit pub_methods_class_t_widget" id="r_a6764e43fb68675cccb37a714ee8e8c03"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a6764e43fb68675cccb37a714ee8e8c03">Unref</a> ()</td></tr>
+<tr class="separator:a6764e43fb68675cccb37a714ee8e8c03 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a461be0faf1ded5ba218ad89893a593de inherit pub_methods_class_t_widget" id="r_a461be0faf1ded5ba218ad89893a593de"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a461be0faf1ded5ba218ad89893a593de">StrokeBorderRect</a> (<a class="el" href="class_t_canvas.html">TCanvas</a> &amp;c, <a class="el" href="class_t_rect.html">TRect</a> &amp;r)</td></tr>
+<tr class="separator:a461be0faf1ded5ba218ad89893a593de inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a544985b07a01a98c7f3e11b388453d29 inherit pub_methods_class_t_widget" id="r_a544985b07a01a98c7f3e11b388453d29"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a544985b07a01a98c7f3e11b388453d29">FillBgRect</a> (<a class="el" href="class_t_canvas.html">TCanvas</a> &amp;c, <a class="el" href="class_t_rect.html">TRect</a> &amp;r, image_draw_type_t draw_type)</td></tr>
+<tr class="separator:a544985b07a01a98c7f3e11b388453d29 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa493dd135566a8e7051b0bcdadef9b9 inherit pub_methods_class_t_widget" id="r_afa493dd135566a8e7051b0bcdadef9b9"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#afa493dd135566a8e7051b0bcdadef9b9">FillFgRect</a> (<a class="el" href="class_t_canvas.html">TCanvas</a> &amp;c, <a class="el" href="class_t_rect.html">TRect</a> &amp;r, image_draw_type_t draw_type)</td></tr>
+<tr class="separator:afa493dd135566a8e7051b0bcdadef9b9 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e5c6477fc2b725e0f18bbf9b5aabb29 inherit pub_methods_class_t_widget" id="r_a6e5c6477fc2b725e0f18bbf9b5aabb29"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a6e5c6477fc2b725e0f18bbf9b5aabb29">DispatchToTarget</a> (<a class="el" href="class_t_event.html">TEvent</a> &amp;e)</td></tr>
+<tr class="separator:a6e5c6477fc2b725e0f18bbf9b5aabb29 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a17cec83bd800f57abdc69893b7508a inherit pub_methods_class_t_widget" id="r_a8a17cec83bd800f57abdc69893b7508a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a8a17cec83bd800f57abdc69893b7508a">DispatchToKeyTarget</a> (<a class="el" href="class_t_event.html">TEvent</a> &amp;e)</td></tr>
+<tr class="separator:a8a17cec83bd800f57abdc69893b7508a inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92f0a7934ad33b8cc401a84b5cb16fd0 inherit pub_methods_class_t_widget" id="r_a92f0a7934ad33b8cc401a84b5cb16fd0"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a92f0a7934ad33b8cc401a84b5cb16fd0">GetStyleType</a> ()</td></tr>
+<tr class="separator:a92f0a7934ad33b8cc401a84b5cb16fd0 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae873a1bb14b88913591e43ed27c6dd4c inherit pub_methods_class_t_widget" id="r_ae873a1bb14b88913591e43ed27c6dd4c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ae873a1bb14b88913591e43ed27c6dd4c">UpdateStyle</a> ()</td></tr>
+<tr class="separator:ae873a1bb14b88913591e43ed27c6dd4c inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd7562acc93c75052c0efd9a452c24e1 inherit pub_methods_class_t_widget" id="r_afd7562acc93c75052c0efd9a452c24e1"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#afd7562acc93c75052c0efd9a452c24e1">UpdateStyleRecursive</a> ()</td></tr>
+<tr class="separator:afd7562acc93c75052c0efd9a452c24e1 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f07cbbafbdcb3ec7e302cecd9a04c9 inherit pub_methods_class_t_widget" id="r_af3f07cbbafbdcb3ec7e302cecd9a04c9"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#af3f07cbbafbdcb3ec7e302cecd9a04c9">SetAsKeyTarget</a> ()</td></tr>
+<tr class="separator:af3f07cbbafbdcb3ec7e302cecd9a04c9 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75f481d1ab9be2450a0c94d58407a085 inherit pub_methods_class_t_widget" id="r_a75f481d1ab9be2450a0c94d58407a085"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a75f481d1ab9be2450a0c94d58407a085">FocusNext</a> ()</td></tr>
+<tr class="separator:a75f481d1ab9be2450a0c94d58407a085 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7363917c8e5bbb6f00a10b0987e0e661 inherit pub_methods_class_t_widget" id="r_a7363917c8e5bbb6f00a10b0987e0e661"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a7363917c8e5bbb6f00a10b0987e0e661">FocusPrev</a> ()</td></tr>
+<tr class="separator:a7363917c8e5bbb6f00a10b0987e0e661 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78dd0c594a414c5ab27cabbb379b79a2 inherit pub_methods_class_t_widget" id="r_a78dd0c594a414c5ab27cabbb379b79a2"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a78dd0c594a414c5ab27cabbb379b79a2">GetStateForStyle</a> (bool active, bool checked)</td></tr>
+<tr class="separator:a78dd0c594a414c5ab27cabbb379b79a2 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdb9b81afd693ebeb249249edaf7a804 inherit pub_methods_class_t_widget" id="r_acdb9b81afd693ebeb249249edaf7a804"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#acdb9b81afd693ebeb249249edaf7a804">Layout</a> ()</td></tr>
+<tr class="separator:acdb9b81afd693ebeb249249edaf7a804 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af452ecfafc0dc03d595657fc9b2cec14 inherit pub_methods_class_t_widget" id="r_af452ecfafc0dc03d595657fc9b2cec14"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#af452ecfafc0dc03d595657fc9b2cec14">SetSelfLayout</a> (const char *params)</td></tr>
+<tr class="separator:af452ecfafc0dc03d595657fc9b2cec14 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf209075b5a2115cb9b45c531ec446d1 inherit pub_methods_class_t_widget" id="r_adf209075b5a2115cb9b45c531ec446d1"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#adf209075b5a2115cb9b45c531ec446d1">SetChildrenLayout</a> (const char *params)</td></tr>
+<tr class="separator:adf209075b5a2115cb9b45c531ec446d1 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad013e72c8f4335c676c24510025fb3bd inherit pub_methods_class_t_widget" id="r_ad013e72c8f4335c676c24510025fb3bd"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ad013e72c8f4335c676c24510025fb3bd">SetSelfLayoutParams</a> (const char *x, const char *y, const char *w, const char *h)</td></tr>
+<tr class="separator:ad013e72c8f4335c676c24510025fb3bd inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ce58afac179ea8cf5da7f435776684b inherit pub_methods_class_t_widget" id="r_a8ce58afac179ea8cf5da7f435776684b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a8ce58afac179ea8cf5da7f435776684b">SetStyleInt</a> (const char *state_and_name, int32_t value)</td></tr>
+<tr class="separator:a8ce58afac179ea8cf5da7f435776684b inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61d942d300fee11f9dbb95ea57d9d098 inherit pub_methods_class_t_widget" id="r_a61d942d300fee11f9dbb95ea57d9d098"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a61d942d300fee11f9dbb95ea57d9d098">SetStyleStr</a> (const char *state_and_name, const char *value)</td></tr>
+<tr class="separator:a61d942d300fee11f9dbb95ea57d9d098 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85d4b7e81de81913f664e14cf49103b5 inherit pub_methods_class_t_widget" id="r_a85d4b7e81de81913f664e14cf49103b5"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a85d4b7e81de81913f664e14cf49103b5">SetStyleColor</a> (const char *state_and_name, uint32_t value)</td></tr>
+<tr class="separator:a85d4b7e81de81913f664e14cf49103b5 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f29fa4dfa0bef1226c38caa2ceeb86d inherit pub_methods_class_t_widget" id="r_a2f29fa4dfa0bef1226c38caa2ceeb86d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a2f29fa4dfa0bef1226c38caa2ceeb86d">AddChildDefault</a> (<a class="el" href="class_t_widget.html">TWidget</a> &amp;child)</td></tr>
+<tr class="separator:a2f29fa4dfa0bef1226c38caa2ceeb86d inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0a40da73a7c2d50f7a6625172a3ab94 inherit pub_methods_class_t_widget" id="r_ad0a40da73a7c2d50f7a6625172a3ab94"><td class="memItemLeft" align="right" valign="top">xy_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ad0a40da73a7c2d50f7a6625172a3ab94">GetX</a> () const</td></tr>
+<tr class="separator:ad0a40da73a7c2d50f7a6625172a3ab94 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b6fb904cd6ef8f9adb546f54bd99ee3 inherit pub_methods_class_t_widget" id="r_a0b6fb904cd6ef8f9adb546f54bd99ee3"><td class="memItemLeft" align="right" valign="top">xy_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a0b6fb904cd6ef8f9adb546f54bd99ee3">GetY</a> () const</td></tr>
+<tr class="separator:a0b6fb904cd6ef8f9adb546f54bd99ee3 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac58ec771a25bbfa6efef6af0618dde74 inherit pub_methods_class_t_widget" id="r_ac58ec771a25bbfa6efef6af0618dde74"><td class="memItemLeft" align="right" valign="top">wh_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ac58ec771a25bbfa6efef6af0618dde74">GetW</a> () const</td></tr>
+<tr class="separator:ac58ec771a25bbfa6efef6af0618dde74 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2ac5c8d2ac72aa4944f037cb9871b96 inherit pub_methods_class_t_widget" id="r_ad2ac5c8d2ac72aa4944f037cb9871b96"><td class="memItemLeft" align="right" valign="top">wh_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ad2ac5c8d2ac72aa4944f037cb9871b96">GetH</a> () const</td></tr>
+<tr class="separator:ad2ac5c8d2ac72aa4944f037cb9871b96 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a077f298de6a91c1a911a34147a944db6 inherit pub_methods_class_t_widget" id="r_a077f298de6a91c1a911a34147a944db6"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a077f298de6a91c1a911a34147a944db6">GetName</a> () const</td></tr>
+<tr class="separator:a077f298de6a91c1a911a34147a944db6 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfd41608f376d5414065cb1d8bce3c86 inherit pub_methods_class_t_widget" id="r_abfd41608f376d5414065cb1d8bce3c86"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#abfd41608f376d5414065cb1d8bce3c86">GetPointerCursor</a> () const</td></tr>
+<tr class="separator:abfd41608f376d5414065cb1d8bce3c86 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59613ca899cd4c517f570eee5b27fa1f inherit pub_methods_class_t_widget" id="r_a59613ca899cd4c517f570eee5b27fa1f"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a59613ca899cd4c517f570eee5b27fa1f">GetTrText</a> () const</td></tr>
+<tr class="separator:a59613ca899cd4c517f570eee5b27fa1f inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ccbba6b4c28f49a4485ac4bfffff8e0 inherit pub_methods_class_t_widget" id="r_a0ccbba6b4c28f49a4485ac4bfffff8e0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a0ccbba6b4c28f49a4485ac4bfffff8e0">GetStyle</a> () const</td></tr>
+<tr class="separator:a0ccbba6b4c28f49a4485ac4bfffff8e0 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1468d5e0b1476c337c386ef10a74b43f inherit pub_methods_class_t_widget" id="r_a1468d5e0b1476c337c386ef10a74b43f"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a1468d5e0b1476c337c386ef10a74b43f">GetAnimation</a> () const</td></tr>
+<tr class="separator:a1468d5e0b1476c337c386ef10a74b43f inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43c328a98ba9042f476b346c2abb7664 inherit pub_methods_class_t_widget" id="r_a43c328a98ba9042f476b346c2abb7664"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a43c328a98ba9042f476b346c2abb7664">GetEnable</a> () const</td></tr>
+<tr class="separator:a43c328a98ba9042f476b346c2abb7664 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23445968547d378bdeb61a80da836384 inherit pub_methods_class_t_widget" id="r_a23445968547d378bdeb61a80da836384"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a23445968547d378bdeb61a80da836384">GetFeedback</a> () const</td></tr>
+<tr class="separator:a23445968547d378bdeb61a80da836384 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed6da6fdc65fb56bfabacbe631caac94 inherit pub_methods_class_t_widget" id="r_aed6da6fdc65fb56bfabacbe631caac94"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#aed6da6fdc65fb56bfabacbe631caac94">GetVisible</a> () const</td></tr>
+<tr class="separator:aed6da6fdc65fb56bfabacbe631caac94 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1806c1995a3f77e26e56e3d7f1d5a646 inherit pub_methods_class_t_widget" id="r_a1806c1995a3f77e26e56e3d7f1d5a646"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a1806c1995a3f77e26e56e3d7f1d5a646">GetSensitive</a> () const</td></tr>
+<tr class="separator:a1806c1995a3f77e26e56e3d7f1d5a646 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31e9e3d0e178ccda582e1ffe65d27710 inherit pub_methods_class_t_widget" id="r_a31e9e3d0e178ccda582e1ffe65d27710"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a31e9e3d0e178ccda582e1ffe65d27710">GetFocusable</a> () const</td></tr>
+<tr class="separator:a31e9e3d0e178ccda582e1ffe65d27710 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0016597e14af2eefa82b01afd14f6a4f inherit pub_methods_class_t_widget" id="r_a0016597e14af2eefa82b01afd14f6a4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a0016597e14af2eefa82b01afd14f6a4f">GetWithFocusState</a> () const</td></tr>
+<tr class="separator:a0016597e14af2eefa82b01afd14f6a4f inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab78cab8eb0708f63b59825830a74e9fb inherit pub_methods_class_t_widget" id="r_ab78cab8eb0708f63b59825830a74e9fb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#ab78cab8eb0708f63b59825830a74e9fb">GetAutoAdjustSize</a> () const</td></tr>
+<tr class="separator:ab78cab8eb0708f63b59825830a74e9fb inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0854fd32561c2cfd83c07ce4104add1e inherit pub_methods_class_t_widget" id="r_a0854fd32561c2cfd83c07ce4104add1e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a0854fd32561c2cfd83c07ce4104add1e">GetFloating</a> () const</td></tr>
+<tr class="separator:a0854fd32561c2cfd83c07ce4104add1e inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eb0f97bb9102f9ce7baf8b31fbe0b28 inherit pub_methods_class_t_widget" id="r_a0eb0f97bb9102f9ce7baf8b31fbe0b28"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a0eb0f97bb9102f9ce7baf8b31fbe0b28">GetOpacity</a> () const</td></tr>
+<tr class="separator:a0eb0f97bb9102f9ce7baf8b31fbe0b28 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23da57ae81ddcfdf3a32ea2426e99549 inherit pub_methods_class_t_widget" id="r_a23da57ae81ddcfdf3a32ea2426e99549"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a23da57ae81ddcfdf3a32ea2426e99549">GetDirtyRectTolerance</a> () const</td></tr>
+<tr class="separator:a23da57ae81ddcfdf3a32ea2426e99549 inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49c72fc62801b8c749421cedf8e6198c inherit pub_methods_class_t_widget" id="r_a49c72fc62801b8c749421cedf8e6198c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#a49c72fc62801b8c749421cedf8e6198c">GetParent</a> () const</td></tr>
+<tr class="separator:a49c72fc62801b8c749421cedf8e6198c inherit pub_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:ab52b9d5571139ca33f7631c294434695"><td class="memItemLeft" align="right" valign="top"><a id="ab52b9d5571139ca33f7631c294434695"></a>
+<tr class="memitem:ab52b9d5571139ca33f7631c294434695" id="r_ab52b9d5571139ca33f7631c294434695"><td class="memItemLeft" align="right" valign="top"><a id="ab52b9d5571139ca33f7631c294434695" name="ab52b9d5571139ca33f7631c294434695"></a>
 static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (widget_t *nativeObj)</td></tr>
 <tr class="separator:ab52b9d5571139ca33f7631c294434695"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1ab04f22e07af89f23faaa3aaae07c3"><td class="memItemLeft" align="right" valign="top"><a id="ad1ab04f22e07af89f23faaa3aaae07c3"></a>
+<tr class="memitem:ad1ab04f22e07af89f23faaa3aaae07c3" id="r_ad1ab04f22e07af89f23faaa3aaae07c3"><td class="memItemLeft" align="right" valign="top"><a id="ad1ab04f22e07af89f23faaa3aaae07c3" name="ad1ab04f22e07af89f23faaa3aaae07c3"></a>
 static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const widget_t *nativeObj)</td></tr>
 <tr class="separator:ad1ab04f22e07af89f23faaa3aaae07c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18e3bccf0d56caedf32accbcad2b940c"><td class="memItemLeft" align="right" valign="top"><a id="a18e3bccf0d56caedf32accbcad2b940c"></a>
-static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (TWidget &amp;obj)</td></tr>
+<tr class="memitem:a18e3bccf0d56caedf32accbcad2b940c" id="r_a18e3bccf0d56caedf32accbcad2b940c"><td class="memItemLeft" align="right" valign="top"><a id="a18e3bccf0d56caedf32accbcad2b940c" name="a18e3bccf0d56caedf32accbcad2b940c"></a>
+static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (<a class="el" href="class_t_widget.html">TWidget</a> &amp;obj)</td></tr>
 <tr class="separator:a18e3bccf0d56caedf32accbcad2b940c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a557e18b0b9358c6e8457c101a6606cf8"><td class="memItemLeft" align="right" valign="top"><a id="a557e18b0b9358c6e8457c101a6606cf8"></a>
-static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const TWidget &amp;obj)</td></tr>
+<tr class="memitem:a557e18b0b9358c6e8457c101a6606cf8" id="r_a557e18b0b9358c6e8457c101a6606cf8"><td class="memItemLeft" align="right" valign="top"><a id="a557e18b0b9358c6e8457c101a6606cf8" name="a557e18b0b9358c6e8457c101a6606cf8"></a>
+static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const <a class="el" href="class_t_widget.html">TWidget</a> &amp;obj)</td></tr>
 <tr class="separator:a557e18b0b9358c6e8457c101a6606cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4caf5f5ba77fd7bc70fda422739b3e4d"><td class="memItemLeft" align="right" valign="top">static TWidget&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_list_view.html#a4caf5f5ba77fd7bc70fda422739b3e4d">Create</a> (TWidget &amp;parent, xy_t x, xy_t y, wh_t w, wh_t h)</td></tr>
+<tr class="memitem:a4caf5f5ba77fd7bc70fda422739b3e4d" id="r_a4caf5f5ba77fd7bc70fda422739b3e4d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4caf5f5ba77fd7bc70fda422739b3e4d">Create</a> (<a class="el" href="class_t_widget.html">TWidget</a> &amp;parent, xy_t x, xy_t y, wh_t w, wh_t h)</td></tr>
 <tr class="separator:a4caf5f5ba77fd7bc70fda422739b3e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_t_widget"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_t_widget')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="class_t_widget.html">TWidget</a></td></tr>
+<tr class="memitem:a0b23c062dc73b2512adfc79234f98eeb inherit pub_static_methods_class_t_widget" id="r_a0b23c062dc73b2512adfc79234f98eeb"><td class="memItemLeft" align="right" valign="top">
+static <a class="el" href="class_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (widget_t *nativeObj)</td></tr>
+<tr class="separator:a0b23c062dc73b2512adfc79234f98eeb inherit pub_static_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5cb599bc66b25d5699a75f4d21227c9 inherit pub_static_methods_class_t_widget" id="r_ae5cb599bc66b25d5699a75f4d21227c9"><td class="memItemLeft" align="right" valign="top">
+static <a class="el" href="class_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const widget_t *nativeObj)</td></tr>
+<tr class="separator:ae5cb599bc66b25d5699a75f4d21227c9 inherit pub_static_methods_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_attribs_class_t_widget"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_t_widget')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="class_t_widget.html">TWidget</a></td></tr>
+<tr class="memitem:a82232b89f8362dd623a99fe2f232d12d inherit pub_attribs_class_t_widget" id="r_a82232b89f8362dd623a99fe2f232d12d"><td class="memItemLeft" align="right" valign="top">
+widget_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td></tr>
+<tr class="separator:a82232b89f8362dd623a99fe2f232d12d inherit pub_attribs_class_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>列表视图控件。</p>
@@ -129,7 +487,7 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
 <p>如果不需要滚动，可以用view控件配置适当的layout参数作为列表控件。</p>
 <p>列表视图中的列表项可以固定高度，也可以使用不同高度。请参考<a href="https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_vh.xml">变高列表项</a></p>
 <p>列表视图控件的中可以有滚动条，也可以没有滚动条。 可以使用移动设备风格的滚动条，也可以使用桌面风格的滚动条。</p>
-<p>list_view_t是widget\_t的子类控件，widget_t的函数均适用于list_view_t控件。</p>
+<p>list_view_t是widget_t的子类控件，widget_t的函数均适用于list_view_t控件。</p>
 <p>在xml中使用"list\_view"标签创建列表视图控件。如：</p>
 <div class="fragment"><div class="line">*&lt;<span class="keywordtype">list_view</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;0&quot;</span>  <span class="keyword">y</span>=<span class="stringliteral">&quot;30&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;-80&quot;</span> <span class="keyword">item_height</span>=<span class="stringliteral">&quot;60&quot;</span>&gt;</div>
 <div class="line">*&lt;<span class="keywordtype">scroll_view</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;view&quot;</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;0&quot;</span>  <span class="keyword">y</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;100%&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;100%&quot;</span>&gt;</div>
@@ -143,19 +501,22 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
 <div class="line">*&lt;/<span class="keywordtype">scroll_view</span>&gt;</div>
 <div class="line">*&lt;/<span class="keywordtype">list_view</span>&gt;</div>
 </div><!-- fragment --><blockquote class="doxtable">
-<p>注意：列表项不是作为列表视图控件的直接子控件，而是作为滚动视图的子控件。 </p>
+<p>&zwj;注意：列表项不是作为列表视图控件的直接子控件，而是作为滚动视图的子控件。 </p>
 </blockquote>
+<p><br  />
+</p>
 <blockquote class="doxtable">
-<p>更多用法请参考：<a href="&lt;/blockquote&gt; https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml">list_view_m.xml</a></p>
-<p>在c代码中使用函数list_view_create创建列表视图控件。如：</p>
+<p>&zwj;更多用法请参考：<a href="https://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml">list_view_m.xml</a> </p>
+</blockquote>
+<p><br  />
+ 在c代码中使用函数list_view_create创建列表视图控件。如：</p>
 <p>用代码构造列表视图是比较繁琐的事情，最好用XML来构造。 如果需要动态修改，可以使用widget_clone来增加列表项，使用widget_remove_child来移出列表项。</p>
 <p>可用通过style来设置控件的显示风格，如背景颜色和边框颜色等(一般情况不需要)。</p>
 <p>备注：list_view 下的 scroll_view 控件不支持遍历所有子控件的效果。</p>
-<p>下面是针对 scroll_bar_d （桌面版）有效果，scroll_bar_m（移动版）没有效果。 如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 TRUE，scroll_view 宽默认为 list_view 的 100% 宽，鼠标在 list_view 上滚动条才显示，不在的就自动隐藏，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽不会变。 如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 FALSE ，scroll_view 宽默认为 list_view 的 100% 宽，滚动条不隐藏，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽不会变。 如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 FALSE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可用，scroll_view 宽不会变。 如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 TRUE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽会合并原来滚动条的宽。 </p>
-</blockquote>
+<p>下面是针对 scroll_bar_d （桌面版）有效果，scroll_bar_m（移动版）没有效果。 如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 TRUE， 如果 scroll_view 的高比虚拟高要小的话，鼠标在 list_view 上滚动条才显示，鼠标移开的就自动隐藏，scroll_view 宽为控件宽度。 如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 FALSE ，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，如果 scroll_view 的高比虚拟高要小的话，滚动条固定显示（不管鼠标是否悬停），scroll_view 宽为控件宽度。 如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 FALSE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可用（滚动条固定显示，不管鼠标是否悬停），scroll_view 宽不会变。 如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 TRUE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽会合并原来滚动条的宽，如果 scroll_view 的高比虚拟高要小的话，滚动条固定显示（不管鼠标是否悬停），scroll_view 宽会变为 list_view 宽度减去滚动条宽度。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a4caf5f5ba77fd7bc70fda422739b3e4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4caf5f5ba77fd7bc70fda422739b3e4d">&#9670;&nbsp;</a></span>Create()</h2>
+<a id="a4caf5f5ba77fd7bc70fda422739b3e4d" name="a4caf5f5ba77fd7bc70fda422739b3e4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4caf5f5ba77fd7bc70fda422739b3e4d">&#9670;&#160;</a></span>Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -164,39 +525,29 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">TWidget TListView::Create </td>
+          <td class="memname"><a class="el" href="class_t_widget.html">TWidget</a> TListView::Create </td>
           <td>(</td>
-          <td class="paramtype">TWidget &amp;&#160;</td>
-          <td class="paramname"><em>parent</em>, </td>
+          <td class="paramtype"><a class="el" href="class_t_widget.html">TWidget</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>parent</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">xy_t&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">xy_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">xy_t&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">xy_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">wh_t&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
+          <td class="paramtype">wh_t</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">wh_t&#160;</td>
-          <td class="paramname"><em>h</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">wh_t</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -220,8 +571,8 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
 
 </div>
 </div>
-<a id="afad912c2620024379dbd3a7f66049dcd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afad912c2620024379dbd3a7f66049dcd">&#9670;&nbsp;</a></span>GetAutoHideScrollBar()</h2>
+<a id="afad912c2620024379dbd3a7f66049dcd" name="afad912c2620024379dbd3a7f66049dcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afad912c2620024379dbd3a7f66049dcd">&#9670;&#160;</a></span>GetAutoHideScrollBar()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -229,7 +580,7 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
         <tr>
           <td class="memname">bool TListView::GetAutoHideScrollBar </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -238,8 +589,8 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
 
 </div>
 </div>
-<a id="a2d797a372cce32c7dfdd40aecb029524"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d797a372cce32c7dfdd40aecb029524">&#9670;&nbsp;</a></span>GetDefaultItemHeight()</h2>
+<a id="a2d797a372cce32c7dfdd40aecb029524" name="a2d797a372cce32c7dfdd40aecb029524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d797a372cce32c7dfdd40aecb029524">&#9670;&#160;</a></span>GetDefaultItemHeight()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +598,7 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
         <tr>
           <td class="memname">int32_t TListView::GetDefaultItemHeight </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -256,8 +607,8 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
 
 </div>
 </div>
-<a id="abb4c8c059c8b4e551cf4633e3aa1cab1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb4c8c059c8b4e551cf4633e3aa1cab1">&#9670;&nbsp;</a></span>GetFloatingScrollBar()</h2>
+<a id="abb4c8c059c8b4e551cf4633e3aa1cab1" name="abb4c8c059c8b4e551cf4633e3aa1cab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb4c8c059c8b4e551cf4633e3aa1cab1">&#9670;&#160;</a></span>GetFloatingScrollBar()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -265,7 +616,7 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
         <tr>
           <td class="memname">bool TListView::GetFloatingScrollBar </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -274,8 +625,8 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
 
 </div>
 </div>
-<a id="ad61f7e14732c4748c4536f3cd8b8200f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad61f7e14732c4748c4536f3cd8b8200f">&#9670;&nbsp;</a></span>GetItemHeight()</h2>
+<a id="ad61f7e14732c4748c4536f3cd8b8200f" name="ad61f7e14732c4748c4536f3cd8b8200f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad61f7e14732c4748c4536f3cd8b8200f">&#9670;&#160;</a></span>GetItemHeight()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -283,7 +634,7 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
         <tr>
           <td class="memname">int32_t TListView::GetItemHeight </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -292,8 +643,8 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
 
 </div>
 </div>
-<a id="a76d89b0c447847b9413fdcadb7f150f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76d89b0c447847b9413fdcadb7f150f8">&#9670;&nbsp;</a></span>Reinit()</h2>
+<a id="a76d89b0c447847b9413fdcadb7f150f8" name="a76d89b0c447847b9413fdcadb7f150f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76d89b0c447847b9413fdcadb7f150f8">&#9670;&#160;</a></span>Reinit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -301,7 +652,7 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
         <tr>
           <td class="memname">ret_t TListView::Reinit </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -311,8 +662,8 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
 
 </div>
 </div>
-<a id="ab0cea8ab7a332d997ff930c400e0ff8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0cea8ab7a332d997ff930c400e0ff8d">&#9670;&nbsp;</a></span>SetAutoHideScrollBar()</h2>
+<a id="ab0cea8ab7a332d997ff930c400e0ff8d" name="ab0cea8ab7a332d997ff930c400e0ff8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0cea8ab7a332d997ff930c400e0ff8d">&#9670;&#160;</a></span>SetAutoHideScrollBar()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -320,8 +671,7 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
         <tr>
           <td class="memname">ret_t TListView::SetAutoHideScrollBar </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>auto_hide_scroll_bar</em></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>auto_hide_scroll_bar</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -337,8 +687,8 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
 
 </div>
 </div>
-<a id="a8aefe762a75dc97429561f01862dcea1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8aefe762a75dc97429561f01862dcea1">&#9670;&nbsp;</a></span>SetDefaultItemHeight()</h2>
+<a id="a8aefe762a75dc97429561f01862dcea1" name="a8aefe762a75dc97429561f01862dcea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aefe762a75dc97429561f01862dcea1">&#9670;&#160;</a></span>SetDefaultItemHeight()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -346,8 +696,7 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
         <tr>
           <td class="memname">ret_t TListView::SetDefaultItemHeight </td>
           <td>(</td>
-          <td class="paramtype">int32_t&#160;</td>
-          <td class="paramname"><em>default_item_height</em></td><td>)</td>
+          <td class="paramtype">int32_t</td>          <td class="paramname"><span class="paramname"><em>default_item_height</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -363,8 +712,8 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
 
 </div>
 </div>
-<a id="aaa589ce573d50dfd0e546a76af341d47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa589ce573d50dfd0e546a76af341d47">&#9670;&nbsp;</a></span>SetFloatingScrollBar()</h2>
+<a id="aaa589ce573d50dfd0e546a76af341d47" name="aaa589ce573d50dfd0e546a76af341d47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa589ce573d50dfd0e546a76af341d47">&#9670;&#160;</a></span>SetFloatingScrollBar()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -372,8 +721,7 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
         <tr>
           <td class="memname">ret_t TListView::SetFloatingScrollBar </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>floating_scroll_bar</em></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>floating_scroll_bar</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -389,8 +737,8 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
 
 </div>
 </div>
-<a id="adf1dbc60fcfea1d99317098f223e044f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf1dbc60fcfea1d99317098f223e044f">&#9670;&nbsp;</a></span>SetItemHeight()</h2>
+<a id="adf1dbc60fcfea1d99317098f223e044f" name="adf1dbc60fcfea1d99317098f223e044f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf1dbc60fcfea1d99317098f223e044f">&#9670;&#160;</a></span>SetItemHeight()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -398,8 +746,7 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
         <tr>
           <td class="memname">ret_t TListView::SetItemHeight </td>
           <td>(</td>
-          <td class="paramtype">int32_t&#160;</td>
-          <td class="paramname"><em>item_height</em></td><td>)</td>
+          <td class="paramtype">int32_t</td>          <td class="paramname"><span class="paramname"><em>item_height</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -417,12 +764,13 @@ static <a class="el" href="class_t_list_view.html">TListView</a>&#160;</td><td c
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
-<li>output/awtk_cpp.cpp</li>
+<li>output/<b>awtk_cpp.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

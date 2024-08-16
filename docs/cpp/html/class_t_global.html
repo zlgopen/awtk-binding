@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TGlobal类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,45 +70,54 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="class_t_global-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">TGlobal类 参考</div>  </div>
+  <div class="headertitle"><div class="title">TGlobal类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a4e4197ccbdacbb3a1fa3fe5be629d1a9"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#a4e4197ccbdacbb3a1fa3fe5be629d1a9">PreInit</a> ()</td></tr>
+<tr class="memitem:a4e4197ccbdacbb3a1fa3fe5be629d1a9" id="r_a4e4197ccbdacbb3a1fa3fe5be629d1a9"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e4197ccbdacbb3a1fa3fe5be629d1a9">PreInit</a> ()</td></tr>
 <tr class="separator:a4e4197ccbdacbb3a1fa3fe5be629d1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcd2b5b875d64ea3ff108b64308a1f0f"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#afcd2b5b875d64ea3ff108b64308a1f0f">Init</a> (wh_t w, wh_t h, app_type_t app_type, const char *app_name, const char *app_root)</td></tr>
+<tr class="memitem:afcd2b5b875d64ea3ff108b64308a1f0f" id="r_afcd2b5b875d64ea3ff108b64308a1f0f"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcd2b5b875d64ea3ff108b64308a1f0f">Init</a> (wh_t w, wh_t h, app_type_t app_type, const char *app_name, const char *app_root)</td></tr>
 <tr class="separator:afcd2b5b875d64ea3ff108b64308a1f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae63c53a967e921aceced48b52e60fd23"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#ae63c53a967e921aceced48b52e60fd23">Run</a> ()</td></tr>
+<tr class="memitem:ae63c53a967e921aceced48b52e60fd23" id="r_ae63c53a967e921aceced48b52e60fd23"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae63c53a967e921aceced48b52e60fd23">Run</a> ()</td></tr>
 <tr class="separator:ae63c53a967e921aceced48b52e60fd23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dbb7a28c76f571b5ab84ae747b5bc33"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#a9dbb7a28c76f571b5ab84ae747b5bc33">Quit</a> ()</td></tr>
+<tr class="memitem:a9dbb7a28c76f571b5ab84ae747b5bc33" id="r_a9dbb7a28c76f571b5ab84ae747b5bc33"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9dbb7a28c76f571b5ab84ae747b5bc33">Quit</a> ()</td></tr>
 <tr class="separator:a9dbb7a28c76f571b5ab84ae747b5bc33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1502909469ee9ac4d51dd7497e76284e"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#a1502909469ee9ac4d51dd7497e76284e">GetPointerX</a> ()</td></tr>
+<tr class="memitem:a30ca9d161bbff5e8f933db41678985c4" id="r_a30ca9d161bbff5e8f933db41678985c4"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30ca9d161bbff5e8f933db41678985c4">QuitEx</a> (uint32_t delay)</td></tr>
+<tr class="separator:a30ca9d161bbff5e8f933db41678985c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1502909469ee9ac4d51dd7497e76284e" id="r_a1502909469ee9ac4d51dd7497e76284e"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1502909469ee9ac4d51dd7497e76284e">GetPointerX</a> ()</td></tr>
 <tr class="separator:a1502909469ee9ac4d51dd7497e76284e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae6216070a89e2e4858515365fc3bcba"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#aae6216070a89e2e4858515365fc3bcba">GetPointerY</a> ()</td></tr>
+<tr class="memitem:aae6216070a89e2e4858515365fc3bcba" id="r_aae6216070a89e2e4858515365fc3bcba"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae6216070a89e2e4858515365fc3bcba">GetPointerY</a> ()</td></tr>
 <tr class="separator:aae6216070a89e2e4858515365fc3bcba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a801a449d0d5caa0ca5554c39d43f394f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_global.html#a801a449d0d5caa0ca5554c39d43f394f">IsPointerPressed</a> ()</td></tr>
+<tr class="memitem:a801a449d0d5caa0ca5554c39d43f394f" id="r_a801a449d0d5caa0ca5554c39d43f394f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a801a449d0d5caa0ca5554c39d43f394f">IsPointerPressed</a> ()</td></tr>
 <tr class="separator:a801a449d0d5caa0ca5554c39d43f394f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>TK全局对象。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a1502909469ee9ac4d51dd7497e76284e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1502909469ee9ac4d51dd7497e76284e">&#9670;&nbsp;</a></span>GetPointerX()</h2>
+<a id="a1502909469ee9ac4d51dd7497e76284e" name="a1502909469ee9ac4d51dd7497e76284e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1502909469ee9ac4d51dd7497e76284e">&#9670;&#160;</a></span>GetPointerX()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -104,7 +128,7 @@ $(function() {
         <tr>
           <td class="memname">int32_t TGlobal::GetPointerX </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -119,8 +143,8 @@ $(function() {
 
 </div>
 </div>
-<a id="aae6216070a89e2e4858515365fc3bcba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae6216070a89e2e4858515365fc3bcba">&#9670;&nbsp;</a></span>GetPointerY()</h2>
+<a id="aae6216070a89e2e4858515365fc3bcba" name="aae6216070a89e2e4858515365fc3bcba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae6216070a89e2e4858515365fc3bcba">&#9670;&#160;</a></span>GetPointerY()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -131,7 +155,7 @@ $(function() {
         <tr>
           <td class="memname">int32_t TGlobal::GetPointerY </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -146,8 +170,8 @@ $(function() {
 
 </div>
 </div>
-<a id="afcd2b5b875d64ea3ff108b64308a1f0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcd2b5b875d64ea3ff108b64308a1f0f">&#9670;&nbsp;</a></span>Init()</h2>
+<a id="afcd2b5b875d64ea3ff108b64308a1f0f" name="afcd2b5b875d64ea3ff108b64308a1f0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcd2b5b875d64ea3ff108b64308a1f0f">&#9670;&#160;</a></span>Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -158,37 +182,27 @@ $(function() {
         <tr>
           <td class="memname">ret_t TGlobal::Init </td>
           <td>(</td>
-          <td class="paramtype">wh_t&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
+          <td class="paramtype">wh_t</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">wh_t&#160;</td>
-          <td class="paramname"><em>h</em>, </td>
+          <td class="paramtype">wh_t</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">app_type_t&#160;</td>
-          <td class="paramname"><em>app_type</em>, </td>
+          <td class="paramtype">app_type_t</td>          <td class="paramname"><span class="paramname"><em>app_type</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>app_name</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>app_name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>app_root</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>app_root</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -212,8 +226,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a801a449d0d5caa0ca5554c39d43f394f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a801a449d0d5caa0ca5554c39d43f394f">&#9670;&nbsp;</a></span>IsPointerPressed()</h2>
+<a id="a801a449d0d5caa0ca5554c39d43f394f" name="a801a449d0d5caa0ca5554c39d43f394f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a801a449d0d5caa0ca5554c39d43f394f">&#9670;&#160;</a></span>IsPointerPressed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,7 +238,7 @@ $(function() {
         <tr>
           <td class="memname">bool TGlobal::IsPointerPressed </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -239,8 +253,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a4e4197ccbdacbb3a1fa3fe5be629d1a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e4197ccbdacbb3a1fa3fe5be629d1a9">&#9670;&nbsp;</a></span>PreInit()</h2>
+<a id="a4e4197ccbdacbb3a1fa3fe5be629d1a9" name="a4e4197ccbdacbb3a1fa3fe5be629d1a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e4197ccbdacbb3a1fa3fe5be629d1a9">&#9670;&#160;</a></span>PreInit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -251,7 +265,7 @@ $(function() {
         <tr>
           <td class="memname">ret_t TGlobal::PreInit </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -262,14 +276,14 @@ $(function() {
 </table>
 </div><div class="memdoc">
 <p>初始化基本功能。 </p><blockquote class="doxtable">
-<p>在tk_init之前，应用程序可能需要加载配置文件， 为了保证这些功能正常工作，可以先调用tk_pre_init来初始化平台、内存和data reader等等。 </p>
+<p>&zwj;在tk_init之前，应用程序可能需要加载配置文件， 为了保证这些功能正常工作，可以先调用tk_pre_init来初始化平台、内存和data reader等等。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>
-<a id="a9dbb7a28c76f571b5ab84ae747b5bc33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9dbb7a28c76f571b5ab84ae747b5bc33">&#9670;&nbsp;</a></span>Quit()</h2>
+<a id="a9dbb7a28c76f571b5ab84ae747b5bc33" name="a9dbb7a28c76f571b5ab84ae747b5bc33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dbb7a28c76f571b5ab84ae747b5bc33">&#9670;&#160;</a></span>Quit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -280,7 +294,7 @@ $(function() {
         <tr>
           <td class="memname">ret_t TGlobal::Quit </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -295,8 +309,41 @@ $(function() {
 
 </div>
 </div>
-<a id="ae63c53a967e921aceced48b52e60fd23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae63c53a967e921aceced48b52e60fd23">&#9670;&nbsp;</a></span>Run()</h2>
+<a id="a30ca9d161bbff5e8f933db41678985c4" name="a30ca9d161bbff5e8f933db41678985c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30ca9d161bbff5e8f933db41678985c4">&#9670;&#160;</a></span>QuitEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TGlobal::QuitEx </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>delay</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>退出TK事件主循环。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delay</td><td>延迟退出的时间(毫秒)。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="ae63c53a967e921aceced48b52e60fd23" name="ae63c53a967e921aceced48b52e60fd23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae63c53a967e921aceced48b52e60fd23">&#9670;&#160;</a></span>Run()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -307,7 +354,7 @@ $(function() {
         <tr>
           <td class="memname">ret_t TGlobal::Run </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -324,12 +371,13 @@ $(function() {
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
-<li>output/awtk_cpp.cpp</li>
+<li>output/<b>awtk_cpp.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

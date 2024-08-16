@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: 类继承关系</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,23 +34,35 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,84 +72,93 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle">
-<div class="title">类继承关系</div>  </div>
+  <div class="headertitle"><div class="title">类继承关系</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock">此继承关系列表按字典顺序粗略的排序: </div><div class="directory">
-<div class="levels">[详情级别 <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span><span onclick="javascript:toggleLevel(3);">3</span><span onclick="javascript:toggleLevel(4);">4</span>]</div><table class="directory">
+<div class="levels">[详情级别 <span onclick="javascript:dynsection.toggleLevel(1);">1</span><span onclick="javascript:dynsection.toggleLevel(2);">2</span><span onclick="javascript:dynsection.toggleLevel(3);">3</span><span onclick="javascript:dynsection.toggleLevel(4);">4</span>]</div><table class="directory">
 <tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_app_conf.html" target="_self">TAppConf</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_asset_info.html" target="_self">TAssetInfo</a></td><td class="desc"></td></tr>
+<tr id="row_1_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_asset_info.html" target="_self">TAssetInfo</a></td><td class="desc"></td></tr>
 <tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_bitmap.html" target="_self">TBitmap</a></td><td class="desc"></td></tr>
-<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_canvas.html" target="_self">TCanvas</a></td><td class="desc"></td></tr>
+<tr id="row_3_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_canvas.html" target="_self">TCanvas</a></td><td class="desc"></td></tr>
 <tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_canvas_offline.html" target="_self">TCanvasOffline</a></td><td class="desc"></td></tr>
-<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_clip_board.html" target="_self">TClipBoard</a></td><td class="desc"></td></tr>
+<tr id="row_5_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_clip_board.html" target="_self">TClipBoard</a></td><td class="desc"></td></tr>
 <tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_color.html" target="_self">TColor</a></td><td class="desc"></td></tr>
-<tr id="row_7_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_date_time.html" target="_self">TDateTime</a></td><td class="desc"></td></tr>
-<tr id="row_8_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_8_" class="arrow" onclick="toggleFolder('8_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_emitter.html" target="_self">TEmitter</a></td><td class="desc"></td></tr>
-<tr id="row_8_0_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_assets_manager.html" target="_self">TAssetsManager</a></td><td class="desc"></td></tr>
-<tr id="row_8_1_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_file_chooser.html" target="_self">TFileChooser</a></td><td class="desc"></td></tr>
-<tr id="row_8_2_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_font_manager.html" target="_self">TFontManager</a></td><td class="desc"></td></tr>
-<tr id="row_8_3_" style="display:none;"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_8_3_" class="arrow" onclick="toggleFolder('8_3_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_object.html" target="_self">TObject</a></td><td class="desc"></td></tr>
-<tr id="row_8_3_0_" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_idle_info.html" target="_self">TIdleInfo</a></td><td class="desc"></td></tr>
-<tr id="row_8_3_1_" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_native_window.html" target="_self">TNativeWindow</a></td><td class="desc"></td></tr>
-<tr id="row_8_3_2_" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_object_array.html" target="_self">TObjectArray</a></td><td class="desc"></td></tr>
-<tr id="row_8_3_3_" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_object_default.html" target="_self">TObjectDefault</a></td><td class="desc"></td></tr>
-<tr id="row_8_3_4_" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_timer_info.html" target="_self">TTimerInfo</a></td><td class="desc"></td></tr>
-<tr id="row_9_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_9_" class="arrow" onclick="toggleFolder('9_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_event.html" target="_self">TEvent</a></td><td class="desc"></td></tr>
+<tr id="row_7_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_date_time.html" target="_self">TDateTime</a></td><td class="desc"></td></tr>
+<tr id="row_8_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_8_" class="arrow" onclick="dynsection.toggleFolder('8_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_emitter.html" target="_self">TEmitter</a></td><td class="desc"></td></tr>
+<tr id="row_8_0_" class="odd" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_assets_manager.html" target="_self">TAssetsManager</a></td><td class="desc"></td></tr>
+<tr id="row_8_1_" class="odd" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_file_chooser.html" target="_self">TFileChooser</a></td><td class="desc"></td></tr>
+<tr id="row_8_2_" class="odd" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_font_manager.html" target="_self">TFontManager</a></td><td class="desc"></td></tr>
+<tr id="row_8_3_" class="odd" style="display:none;"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_8_3_" class="arrow" onclick="dynsection.toggleFolder('8_3_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_object.html" target="_self">TObject</a></td><td class="desc"></td></tr>
+<tr id="row_8_3_0_" class="odd" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_idle_info.html" target="_self">TIdleInfo</a></td><td class="desc"></td></tr>
+<tr id="row_8_3_1_" class="odd" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_native_window.html" target="_self">TNativeWindow</a></td><td class="desc"></td></tr>
+<tr id="row_8_3_2_" class="odd" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_object_array.html" target="_self">TObjectArray</a></td><td class="desc"></td></tr>
+<tr id="row_8_3_3_" class="odd" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_object_default.html" target="_self">TObjectDefault</a></td><td class="desc"></td></tr>
+<tr id="row_8_3_4_" class="odd" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_timer_info.html" target="_self">TTimerInfo</a></td><td class="desc"></td></tr>
+<tr id="row_9_" class="odd"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_9_" class="arrow" onclick="dynsection.toggleFolder('9_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_event.html" target="_self">TEvent</a></td><td class="desc"></td></tr>
 <tr id="row_9_0_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_cmd_exec_event.html" target="_self">TCmdExecEvent</a></td><td class="desc"></td></tr>
 <tr id="row_9_1_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_done_event.html" target="_self">TDoneEvent</a></td><td class="desc"></td></tr>
 <tr id="row_9_2_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_drop_file_event.html" target="_self">TDropFileEvent</a></td><td class="desc"></td></tr>
 <tr id="row_9_3_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_error_event.html" target="_self">TErrorEvent</a></td><td class="desc"></td></tr>
 <tr id="row_9_4_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_key_event.html" target="_self">TKeyEvent</a></td><td class="desc"></td></tr>
-<tr id="row_9_5_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_model_event.html" target="_self">TModelEvent</a></td><td class="desc"></td></tr>
-<tr id="row_9_6_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_multi_gesture_event.html" target="_self">TMultiGestureEvent</a></td><td class="desc"></td></tr>
-<tr id="row_9_7_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_offset_change_event.html" target="_self">TOffsetChangeEvent</a></td><td class="desc"></td></tr>
-<tr id="row_9_8_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_orientation_event.html" target="_self">TOrientationEvent</a></td><td class="desc"></td></tr>
-<tr id="row_9_9_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_paint_event.html" target="_self">TPaintEvent</a></td><td class="desc"></td></tr>
-<tr id="row_9_10_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_pointer_event.html" target="_self">TPointerEvent</a></td><td class="desc"></td></tr>
-<tr id="row_9_11_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_progress_event.html" target="_self">TProgressEvent</a></td><td class="desc"></td></tr>
-<tr id="row_9_12_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_prop_change_event.html" target="_self">TPropChangeEvent</a></td><td class="desc"></td></tr>
-<tr id="row_9_13_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_system_event.html" target="_self">TSystemEvent</a></td><td class="desc"></td></tr>
-<tr id="row_9_14_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_theme_change_event.html" target="_self">TThemeChangeEvent</a></td><td class="desc"></td></tr>
-<tr id="row_9_15_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_value_change_event.html" target="_self">TValueChangeEvent</a></td><td class="desc"></td></tr>
-<tr id="row_9_16_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_wheel_event.html" target="_self">TWheelEvent</a></td><td class="desc"></td></tr>
-<tr id="row_9_17_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_window_event.html" target="_self">TWindowEvent</a></td><td class="desc"></td></tr>
+<tr id="row_9_5_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_log_message_event.html" target="_self">TLogMessageEvent</a></td><td class="desc"></td></tr>
+<tr id="row_9_6_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_model_event.html" target="_self">TModelEvent</a></td><td class="desc"></td></tr>
+<tr id="row_9_7_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_multi_gesture_event.html" target="_self">TMultiGestureEvent</a></td><td class="desc"></td></tr>
+<tr id="row_9_8_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_offset_change_event.html" target="_self">TOffsetChangeEvent</a></td><td class="desc"></td></tr>
+<tr id="row_9_9_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_orientation_event.html" target="_self">TOrientationEvent</a></td><td class="desc"></td></tr>
+<tr id="row_9_10_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_paint_event.html" target="_self">TPaintEvent</a></td><td class="desc"></td></tr>
+<tr id="row_9_11_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_pointer_event.html" target="_self">TPointerEvent</a></td><td class="desc"></td></tr>
+<tr id="row_9_12_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_progress_event.html" target="_self">TProgressEvent</a></td><td class="desc"></td></tr>
+<tr id="row_9_13_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_prop_change_event.html" target="_self">TPropChangeEvent</a></td><td class="desc"></td></tr>
+<tr id="row_9_14_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_system_event.html" target="_self">TSystemEvent</a></td><td class="desc"></td></tr>
+<tr id="row_9_15_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_theme_change_event.html" target="_self">TThemeChangeEvent</a></td><td class="desc"></td></tr>
+<tr id="row_9_16_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_ui_load_event.html" target="_self">TUiLoadEvent</a></td><td class="desc"></td></tr>
+<tr id="row_9_17_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_value_change_event.html" target="_self">TValueChangeEvent</a></td><td class="desc"></td></tr>
+<tr id="row_9_18_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_wheel_event.html" target="_self">TWheelEvent</a></td><td class="desc"></td></tr>
+<tr id="row_9_19_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_widget_animator_event.html" target="_self">TWidgetAnimatorEvent</a></td><td class="desc"></td></tr>
+<tr id="row_9_20_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_window_event.html" target="_self">TWindowEvent</a></td><td class="desc"></td></tr>
 <tr id="row_10_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_ext_widgets.html" target="_self">TExtWidgets</a></td><td class="desc"></td></tr>
-<tr id="row_11_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_global.html" target="_self">TGlobal</a></td><td class="desc"></td></tr>
+<tr id="row_11_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_global.html" target="_self">TGlobal</a></td><td class="desc"></td></tr>
 <tr id="row_12_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_idle.html" target="_self">TIdle</a></td><td class="desc"></td></tr>
-<tr id="row_13_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_idle_manager.html" target="_self">TIdleManager</a></td><td class="desc"></td></tr>
+<tr id="row_13_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_idle_manager.html" target="_self">TIdleManager</a></td><td class="desc"></td></tr>
 <tr id="row_14_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_image_manager.html" target="_self">TImageManager</a></td><td class="desc"></td></tr>
-<tr id="row_15_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_input_method.html" target="_self">TInputMethod</a></td><td class="desc"></td></tr>
+<tr id="row_15_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_input_method.html" target="_self">TInputMethod</a></td><td class="desc"></td></tr>
 <tr id="row_16_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_locale_info.html" target="_self">TLocaleInfo</a></td><td class="desc"></td></tr>
-<tr id="row_17_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_locale_infos.html" target="_self">TLocaleInfos</a></td><td class="desc"></td></tr>
+<tr id="row_17_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_locale_infos.html" target="_self">TLocaleInfos</a></td><td class="desc"></td></tr>
 <tr id="row_18_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_named_value.html" target="_self">TNamedValue</a></td><td class="desc"></td></tr>
-<tr id="row_19_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_point.html" target="_self">TPoint</a></td><td class="desc"></td></tr>
+<tr id="row_19_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_point.html" target="_self">TPoint</a></td><td class="desc"></td></tr>
 <tr id="row_20_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_pointf.html" target="_self">TPointf</a></td><td class="desc"></td></tr>
-<tr id="row_21_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_rect.html" target="_self">TRect</a></td><td class="desc"></td></tr>
+<tr id="row_21_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_rect.html" target="_self">TRect</a></td><td class="desc"></td></tr>
 <tr id="row_22_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_rectf.html" target="_self">TRectf</a></td><td class="desc"></td></tr>
-<tr id="row_23_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_rlog.html" target="_self">TRlog</a></td><td class="desc"></td></tr>
-<tr id="row_24_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_24_" class="arrow" onclick="toggleFolder('24_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_style.html" target="_self">TStyle</a></td><td class="desc"></td></tr>
-<tr id="row_24_0_" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_style_mutable.html" target="_self">TStyleMutable</a></td><td class="desc"></td></tr>
-<tr id="row_25_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_theme.html" target="_self">TTheme</a></td><td class="desc"></td></tr>
+<tr id="row_23_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_rlog.html" target="_self">TRlog</a></td><td class="desc"></td></tr>
+<tr id="row_24_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_24_" class="arrow" onclick="dynsection.toggleFolder('24_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_style.html" target="_self">TStyle</a></td><td class="desc"></td></tr>
+<tr id="row_24_0_" class="odd" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_style_mutable.html" target="_self">TStyleMutable</a></td><td class="desc"></td></tr>
+<tr id="row_25_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_theme.html" target="_self">TTheme</a></td><td class="desc"></td></tr>
 <tr id="row_26_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_time_now.html" target="_self">TTimeNow</a></td><td class="desc"></td></tr>
-<tr id="row_27_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_timer.html" target="_self">TTimer</a></td><td class="desc"></td></tr>
+<tr id="row_27_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_timer.html" target="_self">TTimer</a></td><td class="desc"></td></tr>
 <tr id="row_28_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_timer_manager.html" target="_self">TTimerManager</a></td><td class="desc"></td></tr>
-<tr id="row_29_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_value.html" target="_self">TValue</a></td><td class="desc"></td></tr>
+<tr id="row_29_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_value.html" target="_self">TValue</a></td><td class="desc"></td></tr>
 <tr id="row_30_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_vgcanvas.html" target="_self">TVgcanvas</a></td><td class="desc"></td></tr>
-<tr id="row_31_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_31_" class="arrow" onclick="toggleFolder('31_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><b>TWidget</b></td><td class="desc"></td></tr>
+<tr id="row_31_" class="odd"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_31_" class="arrow" onclick="dynsection.toggleFolder('31_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_widget.html" target="_self">TWidget</a></td><td class="desc"></td></tr>
 <tr id="row_31_0_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_app_bar.html" target="_self">TAppBar</a></td><td class="desc"></td></tr>
 <tr id="row_31_1_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_button.html" target="_self">TButton</a></td><td class="desc"></td></tr>
 <tr id="row_31_2_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_button_group.html" target="_self">TButtonGroup</a></td><td class="desc"></td></tr>
 <tr id="row_31_3_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_candidates.html" target="_self">TCandidates</a></td><td class="desc"></td></tr>
 <tr id="row_31_4_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_canvas_widget.html" target="_self">TCanvasWidget</a></td><td class="desc"></td></tr>
-<tr id="row_31_5_" class="even" style="display:none;"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_31_5_" class="arrow" onclick="toggleFolder('31_5_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_check_button.html" target="_self">TCheckButton</a></td><td class="desc"></td></tr>
+<tr id="row_31_5_" class="even" style="display:none;"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_31_5_" class="arrow" onclick="dynsection.toggleFolder('31_5_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_check_button.html" target="_self">TCheckButton</a></td><td class="desc"></td></tr>
 <tr id="row_31_5_0_" class="even" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_list_item_seperator.html" target="_self">TListItemSeperator</a></td><td class="desc"></td></tr>
 <tr id="row_31_6_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_clip_view.html" target="_self">TClipView</a></td><td class="desc"></td></tr>
 <tr id="row_31_7_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_color_component.html" target="_self">TColorComponent</a></td><td class="desc"></td></tr>
@@ -146,8 +171,8 @@ $(function() {
 <tr id="row_31_14_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_digit_clock.html" target="_self">TDigitClock</a></td><td class="desc"></td></tr>
 <tr id="row_31_15_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_draggable.html" target="_self">TDraggable</a></td><td class="desc"></td></tr>
 <tr id="row_31_16_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_dragger.html" target="_self">TDragger</a></td><td class="desc"></td></tr>
-<tr id="row_31_17_" class="even" style="display:none;"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_31_17_" class="arrow" onclick="toggleFolder('31_17_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_edit.html" target="_self">TEdit</a></td><td class="desc"></td></tr>
-<tr id="row_31_17_0_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span id="arr_31_17_0_" class="arrow" onclick="toggleFolder('31_17_0_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_combo_box.html" target="_self">TComboBox</a></td><td class="desc"></td></tr>
+<tr id="row_31_17_" class="even" style="display:none;"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_31_17_" class="arrow" onclick="dynsection.toggleFolder('31_17_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_edit.html" target="_self">TEdit</a></td><td class="desc"></td></tr>
+<tr id="row_31_17_0_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span id="arr_31_17_0_" class="arrow" onclick="dynsection.toggleFolder('31_17_0_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_combo_box.html" target="_self">TComboBox</a></td><td class="desc"></td></tr>
 <tr id="row_31_17_0_0_" class="even" style="display:none;"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_combo_box_ex.html" target="_self">TComboBoxEx</a></td><td class="desc"></td></tr>
 <tr id="row_31_17_1_" class="even" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_spin_box.html" target="_self">TSpinBox</a></td><td class="desc"></td></tr>
 <tr id="row_31_18_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_file_browser_view.html" target="_self">TFileBrowserView</a></td><td class="desc"></td></tr>
@@ -158,7 +183,7 @@ $(function() {
 <tr id="row_31_23_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_group_box.html" target="_self">TGroupBox</a></td><td class="desc"></td></tr>
 <tr id="row_31_24_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_hscroll_label.html" target="_self">THscrollLabel</a></td><td class="desc"></td></tr>
 <tr id="row_31_25_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_image_animation.html" target="_self">TImageAnimation</a></td><td class="desc"></td></tr>
-<tr id="row_31_26_" class="even" style="display:none;"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_31_26_" class="arrow" onclick="toggleFolder('31_26_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_image_base.html" target="_self">TImageBase</a></td><td class="desc"></td></tr>
+<tr id="row_31_26_" class="even" style="display:none;"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_31_26_" class="arrow" onclick="dynsection.toggleFolder('31_26_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_image_base.html" target="_self">TImageBase</a></td><td class="desc"></td></tr>
 <tr id="row_31_26_0_" class="even" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_gif_image.html" target="_self">TGifImage</a></td><td class="desc"></td></tr>
 <tr id="row_31_26_1_" class="even" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_image.html" target="_self">TImage</a></td><td class="desc"></td></tr>
 <tr id="row_31_26_2_" class="even" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_mutable_image.html" target="_self">TMutableImage</a></td><td class="desc"></td></tr>
@@ -193,7 +218,7 @@ $(function() {
 <tr id="row_31_54_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_timer_widget.html" target="_self">TTimerWidget</a></td><td class="desc"></td></tr>
 <tr id="row_31_55_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_view.html" target="_self">TView</a></td><td class="desc"></td></tr>
 <tr id="row_31_56_" class="even" style="display:none;"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_vpage.html" target="_self">TVpage</a></td><td class="desc"></td></tr>
-<tr id="row_31_57_" class="even" style="display:none;"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_31_57_" class="arrow" onclick="toggleFolder('31_57_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_window_base.html" target="_self">TWindowBase</a></td><td class="desc"></td></tr>
+<tr id="row_31_57_" class="even" style="display:none;"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_31_57_" class="arrow" onclick="dynsection.toggleFolder('31_57_')">&#9658;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_window_base.html" target="_self">TWindowBase</a></td><td class="desc"></td></tr>
 <tr id="row_31_57_0_" class="even" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_calibration_win.html" target="_self">TCalibrationWin</a></td><td class="desc"></td></tr>
 <tr id="row_31_57_1_" class="even" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_dialog.html" target="_self">TDialog</a></td><td class="desc"></td></tr>
 <tr id="row_31_57_2_" class="even" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_t_keyboard.html" target="_self">TKeyboard</a></td><td class="desc"></td></tr>
@@ -207,7 +232,8 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

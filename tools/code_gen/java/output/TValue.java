@@ -345,17 +345,6 @@ public class TValue {
 
 
   /**
-   * 转换为int的值。
-   * 
-   *
-   * @return 值。
-   */
- public  int int()  {
-    return value_int(this != null ? (this.nativeObj) : 0);
- }
-
-
-  /**
    * 设置类型为int的值。
    * 
    * @param value 待设置的值。
@@ -540,7 +529,6 @@ static private native String value_str(long v);
 static private native String value_str_ex(long v, String buff, int size);
 static private native boolean value_is_null(long value);
 static private native boolean value_equal(long value, long other);
-static private native int value_int(long v);
 static private native long value_set_int(long v, int value);
 static private native long value_set_object(long v, long value);
 static private native long value_object(long v);

@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TObjectArray类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,19 +70,26 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="class_t_object_array-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">TObjectArray类 参考</div>  </div>
+  <div class="headertitle"><div class="title">TObjectArray类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -83,234 +105,234 @@ $(function() {
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a60d508c955d6b0776d3651f71e66ddf0"><td class="memItemLeft" align="right" valign="top"><a id="a60d508c955d6b0776d3651f71e66ddf0"></a>
+<tr class="memitem:a60d508c955d6b0776d3651f71e66ddf0" id="r_a60d508c955d6b0776d3651f71e66ddf0"><td class="memItemLeft" align="right" valign="top"><a id="a60d508c955d6b0776d3651f71e66ddf0" name="a60d508c955d6b0776d3651f71e66ddf0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TObjectArray</b> (emitter_t *nativeObj)</td></tr>
 <tr class="separator:a60d508c955d6b0776d3651f71e66ddf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a077b85ff9fbbed36b3808cb4e9b92dad"><td class="memItemLeft" align="right" valign="top"><a id="a077b85ff9fbbed36b3808cb4e9b92dad"></a>
+<tr class="memitem:a077b85ff9fbbed36b3808cb4e9b92dad" id="r_a077b85ff9fbbed36b3808cb4e9b92dad"><td class="memItemLeft" align="right" valign="top"><a id="a077b85ff9fbbed36b3808cb4e9b92dad" name="a077b85ff9fbbed36b3808cb4e9b92dad"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TObjectArray</b> (const object_array_t *nativeObj)</td></tr>
 <tr class="separator:a077b85ff9fbbed36b3808cb4e9b92dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc0c893ca87d5b53f17c0055dcbccd0d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#adc0c893ca87d5b53f17c0055dcbccd0d">Unref</a> ()</td></tr>
+<tr class="memitem:adc0c893ca87d5b53f17c0055dcbccd0d" id="r_adc0c893ca87d5b53f17c0055dcbccd0d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc0c893ca87d5b53f17c0055dcbccd0d">Unref</a> ()</td></tr>
 <tr class="separator:adc0c893ca87d5b53f17c0055dcbccd0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a9ecc882c9ca11a49674870748afe0f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#a6a9ecc882c9ca11a49674870748afe0f">ClearProps</a> ()</td></tr>
+<tr class="memitem:a6a9ecc882c9ca11a49674870748afe0f" id="r_a6a9ecc882c9ca11a49674870748afe0f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a9ecc882c9ca11a49674870748afe0f">ClearProps</a> ()</td></tr>
 <tr class="separator:a6a9ecc882c9ca11a49674870748afe0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f156f618a8684ef1e59311574c7aefd"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#a5f156f618a8684ef1e59311574c7aefd">Insert</a> (uint32_t index, <a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
+<tr class="memitem:a5f156f618a8684ef1e59311574c7aefd" id="r_a5f156f618a8684ef1e59311574c7aefd"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f156f618a8684ef1e59311574c7aefd">Insert</a> (uint32_t index, <a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
 <tr class="separator:a5f156f618a8684ef1e59311574c7aefd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86587ce0e7a41432c1933a5057bde7cc"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#a86587ce0e7a41432c1933a5057bde7cc">Push</a> (<a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
+<tr class="memitem:a86587ce0e7a41432c1933a5057bde7cc" id="r_a86587ce0e7a41432c1933a5057bde7cc"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86587ce0e7a41432c1933a5057bde7cc">Push</a> (<a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
 <tr class="separator:a86587ce0e7a41432c1933a5057bde7cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ee7ea1a0f79b39f06b41d69425a560a"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#a3ee7ea1a0f79b39f06b41d69425a560a">IndexOf</a> (<a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
+<tr class="memitem:a3ee7ea1a0f79b39f06b41d69425a560a" id="r_a3ee7ea1a0f79b39f06b41d69425a560a"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ee7ea1a0f79b39f06b41d69425a560a">IndexOf</a> (<a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
 <tr class="separator:a3ee7ea1a0f79b39f06b41d69425a560a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e9eddd679276099b507e84a6758e78e"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#a7e9eddd679276099b507e84a6758e78e">LastIndexOf</a> (<a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
+<tr class="memitem:a7e9eddd679276099b507e84a6758e78e" id="r_a7e9eddd679276099b507e84a6758e78e"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e9eddd679276099b507e84a6758e78e">LastIndexOf</a> (<a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
 <tr class="separator:a7e9eddd679276099b507e84a6758e78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99fe1a8814076c17a6584c5ca8654064"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#a99fe1a8814076c17a6584c5ca8654064">Remove</a> (uint32_t index)</td></tr>
+<tr class="memitem:a99fe1a8814076c17a6584c5ca8654064" id="r_a99fe1a8814076c17a6584c5ca8654064"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99fe1a8814076c17a6584c5ca8654064">Remove</a> (uint32_t index)</td></tr>
 <tr class="separator:a99fe1a8814076c17a6584c5ca8654064"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bb1e7907c2cc4374c52a225cca432e3"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#a5bb1e7907c2cc4374c52a225cca432e3">RemoveValue</a> (<a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
+<tr class="memitem:a5bb1e7907c2cc4374c52a225cca432e3" id="r_a5bb1e7907c2cc4374c52a225cca432e3"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bb1e7907c2cc4374c52a225cca432e3">RemoveValue</a> (<a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
 <tr class="separator:a5bb1e7907c2cc4374c52a225cca432e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6de3b47ca2bde6c05f9170765a99eea3"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#a6de3b47ca2bde6c05f9170765a99eea3">GetAndRemove</a> (uint32_t index, <a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
+<tr class="memitem:a6de3b47ca2bde6c05f9170765a99eea3" id="r_a6de3b47ca2bde6c05f9170765a99eea3"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6de3b47ca2bde6c05f9170765a99eea3">GetAndRemove</a> (uint32_t index, <a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
 <tr class="separator:a6de3b47ca2bde6c05f9170765a99eea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7ae5594d937c32271222965464b910e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#aa7ae5594d937c32271222965464b910e">GetSize</a> () const</td></tr>
+<tr class="memitem:aa7ae5594d937c32271222965464b910e" id="r_aa7ae5594d937c32271222965464b910e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7ae5594d937c32271222965464b910e">GetSize</a> () const</td></tr>
 <tr class="separator:aa7ae5594d937c32271222965464b910e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_t_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_t_object')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_t_object.html">TObject</a></td></tr>
-<tr class="memitem:a2c8bccc43117e0936901231aa9ad6e0b inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top"><a id="a2c8bccc43117e0936901231aa9ad6e0b"></a>
+<tr class="inherit_header pub_methods_class_t_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_t_object')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_t_object.html">TObject</a></td></tr>
+<tr class="memitem:a2c8bccc43117e0936901231aa9ad6e0b inherit pub_methods_class_t_object" id="r_a2c8bccc43117e0936901231aa9ad6e0b"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>TObject</b> (emitter_t *nativeObj)</td></tr>
 <tr class="separator:a2c8bccc43117e0936901231aa9ad6e0b inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04c91886ad4d792edb3bb24c0d46fb5f inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top"><a id="a04c91886ad4d792edb3bb24c0d46fb5f"></a>
+<tr class="memitem:a04c91886ad4d792edb3bb24c0d46fb5f inherit pub_methods_class_t_object" id="r_a04c91886ad4d792edb3bb24c0d46fb5f"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>TObject</b> (const object_t *nativeObj)</td></tr>
 <tr class="separator:a04c91886ad4d792edb3bb24c0d46fb5f inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5ce6eafed86e1e27d8ff795a95619c3 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ad5ce6eafed86e1e27d8ff795a95619c3">Unref</a> ()</td></tr>
+<tr class="memitem:ad5ce6eafed86e1e27d8ff795a95619c3 inherit pub_methods_class_t_object" id="r_ad5ce6eafed86e1e27d8ff795a95619c3"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ad5ce6eafed86e1e27d8ff795a95619c3">Unref</a> ()</td></tr>
 <tr class="separator:ad5ce6eafed86e1e27d8ff795a95619c3 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acae28bf5cc087c2a7a6892755816403b inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#acae28bf5cc087c2a7a6892755816403b">GetType</a> ()</td></tr>
+<tr class="memitem:acae28bf5cc087c2a7a6892755816403b inherit pub_methods_class_t_object" id="r_acae28bf5cc087c2a7a6892755816403b"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#acae28bf5cc087c2a7a6892755816403b">GetType</a> ()</td></tr>
 <tr class="separator:acae28bf5cc087c2a7a6892755816403b inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd6ae091de16d8557eb04b96e9d83bc3 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#abd6ae091de16d8557eb04b96e9d83bc3">GetDesc</a> ()</td></tr>
+<tr class="memitem:abd6ae091de16d8557eb04b96e9d83bc3 inherit pub_methods_class_t_object" id="r_abd6ae091de16d8557eb04b96e9d83bc3"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#abd6ae091de16d8557eb04b96e9d83bc3">GetDesc</a> ()</td></tr>
 <tr class="separator:abd6ae091de16d8557eb04b96e9d83bc3 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16cc9c4beac75dc37c13955330396200 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a16cc9c4beac75dc37c13955330396200">GetSize</a> ()</td></tr>
+<tr class="memitem:a16cc9c4beac75dc37c13955330396200 inherit pub_methods_class_t_object" id="r_a16cc9c4beac75dc37c13955330396200"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a16cc9c4beac75dc37c13955330396200">GetSize</a> ()</td></tr>
 <tr class="separator:a16cc9c4beac75dc37c13955330396200 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f7b501b352df7415938714f9124e1da inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a2f7b501b352df7415938714f9124e1da">IsCollection</a> ()</td></tr>
+<tr class="memitem:a2f7b501b352df7415938714f9124e1da inherit pub_methods_class_t_object" id="r_a2f7b501b352df7415938714f9124e1da"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a2f7b501b352df7415938714f9124e1da">IsCollection</a> ()</td></tr>
 <tr class="separator:a2f7b501b352df7415938714f9124e1da inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28ae6aa61136ceba822f116e13eb3377 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a28ae6aa61136ceba822f116e13eb3377">SetName</a> (const char *name)</td></tr>
+<tr class="memitem:a28ae6aa61136ceba822f116e13eb3377 inherit pub_methods_class_t_object" id="r_a28ae6aa61136ceba822f116e13eb3377"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a28ae6aa61136ceba822f116e13eb3377">SetName</a> (const char *name)</td></tr>
 <tr class="separator:a28ae6aa61136ceba822f116e13eb3377 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2514b43887127cec54a42e330f0ef7d8 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a2514b43887127cec54a42e330f0ef7d8">Compare</a> (<a class="el" href="class_t_object.html">TObject</a> &amp;other)</td></tr>
+<tr class="memitem:a2514b43887127cec54a42e330f0ef7d8 inherit pub_methods_class_t_object" id="r_a2514b43887127cec54a42e330f0ef7d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a2514b43887127cec54a42e330f0ef7d8">Compare</a> (<a class="el" href="class_t_object.html">TObject</a> &amp;other)</td></tr>
 <tr class="separator:a2514b43887127cec54a42e330f0ef7d8 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ecfcb70df97e2988fbd5b1d5a45259e inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a0ecfcb70df97e2988fbd5b1d5a45259e">GetProp</a> (const char *name, <a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
+<tr class="memitem:a0ecfcb70df97e2988fbd5b1d5a45259e inherit pub_methods_class_t_object" id="r_a0ecfcb70df97e2988fbd5b1d5a45259e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a0ecfcb70df97e2988fbd5b1d5a45259e">GetProp</a> (const char *name, <a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
 <tr class="separator:a0ecfcb70df97e2988fbd5b1d5a45259e inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77954d87081fb24909eb7a5fb988c926 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a77954d87081fb24909eb7a5fb988c926">GetPropStr</a> (const char *name)</td></tr>
+<tr class="memitem:a77954d87081fb24909eb7a5fb988c926 inherit pub_methods_class_t_object" id="r_a77954d87081fb24909eb7a5fb988c926"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a77954d87081fb24909eb7a5fb988c926">GetPropStr</a> (const char *name)</td></tr>
 <tr class="separator:a77954d87081fb24909eb7a5fb988c926 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b6753c9baad66cfdd7ad42090c5fe1f inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a5b6753c9baad66cfdd7ad42090c5fe1f">GetPropPointer</a> (const char *name)</td></tr>
+<tr class="memitem:a5b6753c9baad66cfdd7ad42090c5fe1f inherit pub_methods_class_t_object" id="r_a5b6753c9baad66cfdd7ad42090c5fe1f"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a5b6753c9baad66cfdd7ad42090c5fe1f">GetPropPointer</a> (const char *name)</td></tr>
 <tr class="separator:a5b6753c9baad66cfdd7ad42090c5fe1f inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1303ef698300c5f365d608c1d543988c inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a1303ef698300c5f365d608c1d543988c">GetPropObject</a> (const char *name)</td></tr>
+<tr class="memitem:a1303ef698300c5f365d608c1d543988c inherit pub_methods_class_t_object" id="r_a1303ef698300c5f365d608c1d543988c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a1303ef698300c5f365d608c1d543988c">GetPropObject</a> (const char *name)</td></tr>
 <tr class="separator:a1303ef698300c5f365d608c1d543988c inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acda78a1ea9a61b7f63421cd6e0df8894 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#acda78a1ea9a61b7f63421cd6e0df8894">GetPropInt</a> (const char *name, int32_t defval)</td></tr>
+<tr class="memitem:acda78a1ea9a61b7f63421cd6e0df8894 inherit pub_methods_class_t_object" id="r_acda78a1ea9a61b7f63421cd6e0df8894"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#acda78a1ea9a61b7f63421cd6e0df8894">GetPropInt</a> (const char *name, int32_t defval)</td></tr>
 <tr class="separator:acda78a1ea9a61b7f63421cd6e0df8894 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fa25c83e17657df3c7dea5b929dc242 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a9fa25c83e17657df3c7dea5b929dc242">GetPropBool</a> (const char *name, bool defval)</td></tr>
+<tr class="memitem:a9fa25c83e17657df3c7dea5b929dc242 inherit pub_methods_class_t_object" id="r_a9fa25c83e17657df3c7dea5b929dc242"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a9fa25c83e17657df3c7dea5b929dc242">GetPropBool</a> (const char *name, bool defval)</td></tr>
 <tr class="separator:a9fa25c83e17657df3c7dea5b929dc242 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3f277b3239f8df857b1e674c91023ad inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ae3f277b3239f8df857b1e674c91023ad">GetPropFloat</a> (const char *name, float_t defval)</td></tr>
+<tr class="memitem:ae3f277b3239f8df857b1e674c91023ad inherit pub_methods_class_t_object" id="r_ae3f277b3239f8df857b1e674c91023ad"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ae3f277b3239f8df857b1e674c91023ad">GetPropFloat</a> (const char *name, float_t defval)</td></tr>
 <tr class="separator:ae3f277b3239f8df857b1e674c91023ad inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90d59f2609f2ce674c1257f3e12dfb71 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a90d59f2609f2ce674c1257f3e12dfb71">GetPropDouble</a> (const char *name, double defval)</td></tr>
+<tr class="memitem:a90d59f2609f2ce674c1257f3e12dfb71 inherit pub_methods_class_t_object" id="r_a90d59f2609f2ce674c1257f3e12dfb71"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a90d59f2609f2ce674c1257f3e12dfb71">GetPropDouble</a> (const char *name, double defval)</td></tr>
 <tr class="separator:a90d59f2609f2ce674c1257f3e12dfb71 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6df251ace441dc55a9845214b51838ca inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a6df251ace441dc55a9845214b51838ca">RemoveProp</a> (const char *name)</td></tr>
+<tr class="memitem:a6df251ace441dc55a9845214b51838ca inherit pub_methods_class_t_object" id="r_a6df251ace441dc55a9845214b51838ca"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a6df251ace441dc55a9845214b51838ca">RemoveProp</a> (const char *name)</td></tr>
 <tr class="separator:a6df251ace441dc55a9845214b51838ca inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0286826ee56e77b2b97be2c4cf1aac5d inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a0286826ee56e77b2b97be2c4cf1aac5d">SetProp</a> (const char *name, <a class="el" href="class_t_value.html">TValue</a> &amp;value)</td></tr>
+<tr class="memitem:a0286826ee56e77b2b97be2c4cf1aac5d inherit pub_methods_class_t_object" id="r_a0286826ee56e77b2b97be2c4cf1aac5d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a0286826ee56e77b2b97be2c4cf1aac5d">SetProp</a> (const char *name, <a class="el" href="class_t_value.html">TValue</a> &amp;value)</td></tr>
 <tr class="separator:a0286826ee56e77b2b97be2c4cf1aac5d inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa8536d516d88a949ce12e46f95d5286 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#aaa8536d516d88a949ce12e46f95d5286">SetPropStr</a> (const char *name, const char *value)</td></tr>
+<tr class="memitem:aaa8536d516d88a949ce12e46f95d5286 inherit pub_methods_class_t_object" id="r_aaa8536d516d88a949ce12e46f95d5286"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#aaa8536d516d88a949ce12e46f95d5286">SetPropStr</a> (const char *name, const char *value)</td></tr>
 <tr class="separator:aaa8536d516d88a949ce12e46f95d5286 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d8e5b1a7939b15a8e07ec91ab743d69 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a1d8e5b1a7939b15a8e07ec91ab743d69">SetPropObject</a> (const char *name, <a class="el" href="class_t_object.html">TObject</a> &amp;value)</td></tr>
+<tr class="memitem:a1d8e5b1a7939b15a8e07ec91ab743d69 inherit pub_methods_class_t_object" id="r_a1d8e5b1a7939b15a8e07ec91ab743d69"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a1d8e5b1a7939b15a8e07ec91ab743d69">SetPropObject</a> (const char *name, <a class="el" href="class_t_object.html">TObject</a> &amp;value)</td></tr>
 <tr class="separator:a1d8e5b1a7939b15a8e07ec91ab743d69 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09005d9fb33cbf5ff012fd129aeff295 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a09005d9fb33cbf5ff012fd129aeff295">SetPropInt</a> (const char *name, int32_t value)</td></tr>
+<tr class="memitem:a09005d9fb33cbf5ff012fd129aeff295 inherit pub_methods_class_t_object" id="r_a09005d9fb33cbf5ff012fd129aeff295"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a09005d9fb33cbf5ff012fd129aeff295">SetPropInt</a> (const char *name, int32_t value)</td></tr>
 <tr class="separator:a09005d9fb33cbf5ff012fd129aeff295 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a239e0d77190b6af3afc72fe16ca93c23 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a239e0d77190b6af3afc72fe16ca93c23">SetPropBool</a> (const char *name, bool value)</td></tr>
+<tr class="memitem:a239e0d77190b6af3afc72fe16ca93c23 inherit pub_methods_class_t_object" id="r_a239e0d77190b6af3afc72fe16ca93c23"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a239e0d77190b6af3afc72fe16ca93c23">SetPropBool</a> (const char *name, bool value)</td></tr>
 <tr class="separator:a239e0d77190b6af3afc72fe16ca93c23 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1e04e7ea45923feadc1d814d5b731ea inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ac1e04e7ea45923feadc1d814d5b731ea">SetPropFloat</a> (const char *name, float_t value)</td></tr>
+<tr class="memitem:ac1e04e7ea45923feadc1d814d5b731ea inherit pub_methods_class_t_object" id="r_ac1e04e7ea45923feadc1d814d5b731ea"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ac1e04e7ea45923feadc1d814d5b731ea">SetPropFloat</a> (const char *name, float_t value)</td></tr>
 <tr class="separator:ac1e04e7ea45923feadc1d814d5b731ea inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a058f7dab70ff723dfd3fea0f593fcd15 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a058f7dab70ff723dfd3fea0f593fcd15">SetPropDouble</a> (const char *name, double value)</td></tr>
+<tr class="memitem:a058f7dab70ff723dfd3fea0f593fcd15 inherit pub_methods_class_t_object" id="r_a058f7dab70ff723dfd3fea0f593fcd15"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a058f7dab70ff723dfd3fea0f593fcd15">SetPropDouble</a> (const char *name, double value)</td></tr>
 <tr class="separator:a058f7dab70ff723dfd3fea0f593fcd15 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50ba4b37006ad1d0791475a39d4ac256 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a50ba4b37006ad1d0791475a39d4ac256">CopyProp</a> (<a class="el" href="class_t_object.html">TObject</a> &amp;src, const char *name)</td></tr>
+<tr class="memitem:a50ba4b37006ad1d0791475a39d4ac256 inherit pub_methods_class_t_object" id="r_a50ba4b37006ad1d0791475a39d4ac256"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a50ba4b37006ad1d0791475a39d4ac256">CopyProp</a> (<a class="el" href="class_t_object.html">TObject</a> &amp;src, const char *name)</td></tr>
 <tr class="separator:a50ba4b37006ad1d0791475a39d4ac256 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef604c3c9c82b33038dae6b679afe164 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#aef604c3c9c82b33038dae6b679afe164">CopyProps</a> (<a class="el" href="class_t_object.html">TObject</a> &amp;src, bool overwrite)</td></tr>
+<tr class="memitem:aef604c3c9c82b33038dae6b679afe164 inherit pub_methods_class_t_object" id="r_aef604c3c9c82b33038dae6b679afe164"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#aef604c3c9c82b33038dae6b679afe164">CopyProps</a> (<a class="el" href="class_t_object.html">TObject</a> &amp;src, bool overwrite)</td></tr>
 <tr class="separator:aef604c3c9c82b33038dae6b679afe164 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aded33356e6e51515e0511e471927bf78 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#aded33356e6e51515e0511e471927bf78">HasProp</a> (const char *name)</td></tr>
+<tr class="memitem:aded33356e6e51515e0511e471927bf78 inherit pub_methods_class_t_object" id="r_aded33356e6e51515e0511e471927bf78"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#aded33356e6e51515e0511e471927bf78">HasProp</a> (const char *name)</td></tr>
 <tr class="separator:aded33356e6e51515e0511e471927bf78 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a861eeb2a9b673ecb2f905844092aa387 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a861eeb2a9b673ecb2f905844092aa387">Eval</a> (const char *expr, <a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
+<tr class="memitem:a861eeb2a9b673ecb2f905844092aa387 inherit pub_methods_class_t_object" id="r_a861eeb2a9b673ecb2f905844092aa387"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a861eeb2a9b673ecb2f905844092aa387">Eval</a> (const char *expr, <a class="el" href="class_t_value.html">TValue</a> &amp;v)</td></tr>
 <tr class="separator:a861eeb2a9b673ecb2f905844092aa387 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fa8faa56cc36cc03f2fcdc25207b40a inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a3fa8faa56cc36cc03f2fcdc25207b40a">CanExec</a> (const char *name, const char *args)</td></tr>
+<tr class="memitem:a3fa8faa56cc36cc03f2fcdc25207b40a inherit pub_methods_class_t_object" id="r_a3fa8faa56cc36cc03f2fcdc25207b40a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a3fa8faa56cc36cc03f2fcdc25207b40a">CanExec</a> (const char *name, const char *args)</td></tr>
 <tr class="separator:a3fa8faa56cc36cc03f2fcdc25207b40a inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7acc0900e37142a9517729b773cb72a2 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a7acc0900e37142a9517729b773cb72a2">Execute</a> (const char *name, const char *args)</td></tr>
+<tr class="memitem:a7acc0900e37142a9517729b773cb72a2 inherit pub_methods_class_t_object" id="r_a7acc0900e37142a9517729b773cb72a2"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a7acc0900e37142a9517729b773cb72a2">Execute</a> (const char *name, const char *args)</td></tr>
 <tr class="separator:a7acc0900e37142a9517729b773cb72a2 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af15d9c5da8a2d488a57f55f67aa67728 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#af15d9c5da8a2d488a57f55f67aa67728">NotifyChanged</a> ()</td></tr>
+<tr class="memitem:af15d9c5da8a2d488a57f55f67aa67728 inherit pub_methods_class_t_object" id="r_af15d9c5da8a2d488a57f55f67aa67728"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#af15d9c5da8a2d488a57f55f67aa67728">NotifyChanged</a> ()</td></tr>
 <tr class="separator:af15d9c5da8a2d488a57f55f67aa67728 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16830e3dbfb8a81f4e150d471c33857b inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a16830e3dbfb8a81f4e150d471c33857b">HasPropByPath</a> (const char *path)</td></tr>
+<tr class="memitem:a16830e3dbfb8a81f4e150d471c33857b inherit pub_methods_class_t_object" id="r_a16830e3dbfb8a81f4e150d471c33857b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a16830e3dbfb8a81f4e150d471c33857b">HasPropByPath</a> (const char *path)</td></tr>
 <tr class="separator:a16830e3dbfb8a81f4e150d471c33857b inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8a5b39300b80d1d44e448490eb69780 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ab8a5b39300b80d1d44e448490eb69780">GetPropStrByPath</a> (const char *path)</td></tr>
+<tr class="memitem:ab8a5b39300b80d1d44e448490eb69780 inherit pub_methods_class_t_object" id="r_ab8a5b39300b80d1d44e448490eb69780"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ab8a5b39300b80d1d44e448490eb69780">GetPropStrByPath</a> (const char *path)</td></tr>
 <tr class="separator:ab8a5b39300b80d1d44e448490eb69780 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6fc799cc003acb28b813aedb21220be inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#af6fc799cc003acb28b813aedb21220be">GetPropPointerByPath</a> (const char *path)</td></tr>
+<tr class="memitem:af6fc799cc003acb28b813aedb21220be inherit pub_methods_class_t_object" id="r_af6fc799cc003acb28b813aedb21220be"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#af6fc799cc003acb28b813aedb21220be">GetPropPointerByPath</a> (const char *path)</td></tr>
 <tr class="separator:af6fc799cc003acb28b813aedb21220be inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad329b919329f353e246a68e1cf00ce68 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ad329b919329f353e246a68e1cf00ce68">GetPropObjectByPath</a> (const char *path)</td></tr>
+<tr class="memitem:ad329b919329f353e246a68e1cf00ce68 inherit pub_methods_class_t_object" id="r_ad329b919329f353e246a68e1cf00ce68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ad329b919329f353e246a68e1cf00ce68">GetPropObjectByPath</a> (const char *path)</td></tr>
 <tr class="separator:ad329b919329f353e246a68e1cf00ce68 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b19cbb52aeae717226c3abddd5eacc1 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a9b19cbb52aeae717226c3abddd5eacc1">GetPropIntByPath</a> (const char *path, int32_t defval)</td></tr>
+<tr class="memitem:a9b19cbb52aeae717226c3abddd5eacc1 inherit pub_methods_class_t_object" id="r_a9b19cbb52aeae717226c3abddd5eacc1"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a9b19cbb52aeae717226c3abddd5eacc1">GetPropIntByPath</a> (const char *path, int32_t defval)</td></tr>
 <tr class="separator:a9b19cbb52aeae717226c3abddd5eacc1 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a547a9330c84728a6699e46705e22e655 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a547a9330c84728a6699e46705e22e655">GetPropBoolByPath</a> (const char *path, bool defval)</td></tr>
+<tr class="memitem:a547a9330c84728a6699e46705e22e655 inherit pub_methods_class_t_object" id="r_a547a9330c84728a6699e46705e22e655"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a547a9330c84728a6699e46705e22e655">GetPropBoolByPath</a> (const char *path, bool defval)</td></tr>
 <tr class="separator:a547a9330c84728a6699e46705e22e655 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf739a4ae16e9735e1bf48393827f5f3 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#adf739a4ae16e9735e1bf48393827f5f3">GetPropFloatByPath</a> (const char *path, float_t defval)</td></tr>
+<tr class="memitem:adf739a4ae16e9735e1bf48393827f5f3 inherit pub_methods_class_t_object" id="r_adf739a4ae16e9735e1bf48393827f5f3"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#adf739a4ae16e9735e1bf48393827f5f3">GetPropFloatByPath</a> (const char *path, float_t defval)</td></tr>
 <tr class="separator:adf739a4ae16e9735e1bf48393827f5f3 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a302ae92a78db48c4f2685e64c97028bb inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a302ae92a78db48c4f2685e64c97028bb">SetPropByPath</a> (const char *path, <a class="el" href="class_t_value.html">TValue</a> &amp;value)</td></tr>
+<tr class="memitem:a302ae92a78db48c4f2685e64c97028bb inherit pub_methods_class_t_object" id="r_a302ae92a78db48c4f2685e64c97028bb"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a302ae92a78db48c4f2685e64c97028bb">SetPropByPath</a> (const char *path, <a class="el" href="class_t_value.html">TValue</a> &amp;value)</td></tr>
 <tr class="separator:a302ae92a78db48c4f2685e64c97028bb inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47abf468dd636223b332df5c510a1bcc inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a47abf468dd636223b332df5c510a1bcc">SetPropStrByPath</a> (const char *path, const char *value)</td></tr>
+<tr class="memitem:a47abf468dd636223b332df5c510a1bcc inherit pub_methods_class_t_object" id="r_a47abf468dd636223b332df5c510a1bcc"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a47abf468dd636223b332df5c510a1bcc">SetPropStrByPath</a> (const char *path, const char *value)</td></tr>
 <tr class="separator:a47abf468dd636223b332df5c510a1bcc inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22228e736dca7f6c5dff6e2ffb585f9e inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a22228e736dca7f6c5dff6e2ffb585f9e">SetPropObjectByPath</a> (const char *path, <a class="el" href="class_t_object.html">TObject</a> &amp;value)</td></tr>
+<tr class="memitem:a22228e736dca7f6c5dff6e2ffb585f9e inherit pub_methods_class_t_object" id="r_a22228e736dca7f6c5dff6e2ffb585f9e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a22228e736dca7f6c5dff6e2ffb585f9e">SetPropObjectByPath</a> (const char *path, <a class="el" href="class_t_object.html">TObject</a> &amp;value)</td></tr>
 <tr class="separator:a22228e736dca7f6c5dff6e2ffb585f9e inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18e223fad30b711b17190f3b91ca01a8 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a18e223fad30b711b17190f3b91ca01a8">SetPropIntByPath</a> (const char *path, int32_t value)</td></tr>
+<tr class="memitem:a18e223fad30b711b17190f3b91ca01a8 inherit pub_methods_class_t_object" id="r_a18e223fad30b711b17190f3b91ca01a8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a18e223fad30b711b17190f3b91ca01a8">SetPropIntByPath</a> (const char *path, int32_t value)</td></tr>
 <tr class="separator:a18e223fad30b711b17190f3b91ca01a8 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c266e215ead183eaf6b47c528d1c498 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a3c266e215ead183eaf6b47c528d1c498">SetPropBoolByPath</a> (const char *path, bool value)</td></tr>
+<tr class="memitem:a3c266e215ead183eaf6b47c528d1c498 inherit pub_methods_class_t_object" id="r_a3c266e215ead183eaf6b47c528d1c498"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a3c266e215ead183eaf6b47c528d1c498">SetPropBoolByPath</a> (const char *path, bool value)</td></tr>
 <tr class="separator:a3c266e215ead183eaf6b47c528d1c498 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aada5c0b6cfb6225ec675c93432403421 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#aada5c0b6cfb6225ec675c93432403421">SetPropFloatByPath</a> (const char *path, float_t value)</td></tr>
+<tr class="memitem:aada5c0b6cfb6225ec675c93432403421 inherit pub_methods_class_t_object" id="r_aada5c0b6cfb6225ec675c93432403421"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#aada5c0b6cfb6225ec675c93432403421">SetPropFloatByPath</a> (const char *path, float_t value)</td></tr>
 <tr class="separator:aada5c0b6cfb6225ec675c93432403421 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc51fc6524aae910b9f66221689b8b89 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#adc51fc6524aae910b9f66221689b8b89">CanExecByPath</a> (const char *path, const char *args)</td></tr>
+<tr class="memitem:adc51fc6524aae910b9f66221689b8b89 inherit pub_methods_class_t_object" id="r_adc51fc6524aae910b9f66221689b8b89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#adc51fc6524aae910b9f66221689b8b89">CanExecByPath</a> (const char *path, const char *args)</td></tr>
 <tr class="separator:adc51fc6524aae910b9f66221689b8b89 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bbf691f4244a6addc5acea9c58e867d inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a1bbf691f4244a6addc5acea9c58e867d">ExecuteByPath</a> (const char *path, const char *args)</td></tr>
+<tr class="memitem:a1bbf691f4244a6addc5acea9c58e867d inherit pub_methods_class_t_object" id="r_a1bbf691f4244a6addc5acea9c58e867d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a1bbf691f4244a6addc5acea9c58e867d">ExecuteByPath</a> (const char *path, const char *args)</td></tr>
 <tr class="separator:a1bbf691f4244a6addc5acea9c58e867d inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0c9e3b25b0da9db1a8577131ef15a0a inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#af0c9e3b25b0da9db1a8577131ef15a0a">GetPropInt8</a> (const char *name, int8_t defval)</td></tr>
+<tr class="memitem:af0c9e3b25b0da9db1a8577131ef15a0a inherit pub_methods_class_t_object" id="r_af0c9e3b25b0da9db1a8577131ef15a0a"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#af0c9e3b25b0da9db1a8577131ef15a0a">GetPropInt8</a> (const char *name, int8_t defval)</td></tr>
 <tr class="separator:af0c9e3b25b0da9db1a8577131ef15a0a inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22983ad241467be1fd5d6baffe5e9b98 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a22983ad241467be1fd5d6baffe5e9b98">SetPropInt8</a> (const char *name, int8_t value)</td></tr>
+<tr class="memitem:a22983ad241467be1fd5d6baffe5e9b98 inherit pub_methods_class_t_object" id="r_a22983ad241467be1fd5d6baffe5e9b98"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a22983ad241467be1fd5d6baffe5e9b98">SetPropInt8</a> (const char *name, int8_t value)</td></tr>
 <tr class="separator:a22983ad241467be1fd5d6baffe5e9b98 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52026b9ee7907a1871752462188fc8ff inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a52026b9ee7907a1871752462188fc8ff">GetPropUint8</a> (const char *name, uint8_t defval)</td></tr>
+<tr class="memitem:a52026b9ee7907a1871752462188fc8ff inherit pub_methods_class_t_object" id="r_a52026b9ee7907a1871752462188fc8ff"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a52026b9ee7907a1871752462188fc8ff">GetPropUint8</a> (const char *name, uint8_t defval)</td></tr>
 <tr class="separator:a52026b9ee7907a1871752462188fc8ff inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7745352626249029f5f9c90b220ea99 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ac7745352626249029f5f9c90b220ea99">SetPropUint8</a> (const char *name, uint8_t value)</td></tr>
+<tr class="memitem:ac7745352626249029f5f9c90b220ea99 inherit pub_methods_class_t_object" id="r_ac7745352626249029f5f9c90b220ea99"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ac7745352626249029f5f9c90b220ea99">SetPropUint8</a> (const char *name, uint8_t value)</td></tr>
 <tr class="separator:ac7745352626249029f5f9c90b220ea99 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cd81d430860f05358a136508e53f0ef inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a3cd81d430860f05358a136508e53f0ef">GetPropInt16</a> (const char *name, int16_t defval)</td></tr>
+<tr class="memitem:a3cd81d430860f05358a136508e53f0ef inherit pub_methods_class_t_object" id="r_a3cd81d430860f05358a136508e53f0ef"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a3cd81d430860f05358a136508e53f0ef">GetPropInt16</a> (const char *name, int16_t defval)</td></tr>
 <tr class="separator:a3cd81d430860f05358a136508e53f0ef inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b05dc134aef8e9cf2df047e5cde14c8 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a8b05dc134aef8e9cf2df047e5cde14c8">SetPropInt16</a> (const char *name, int16_t value)</td></tr>
+<tr class="memitem:a8b05dc134aef8e9cf2df047e5cde14c8 inherit pub_methods_class_t_object" id="r_a8b05dc134aef8e9cf2df047e5cde14c8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a8b05dc134aef8e9cf2df047e5cde14c8">SetPropInt16</a> (const char *name, int16_t value)</td></tr>
 <tr class="separator:a8b05dc134aef8e9cf2df047e5cde14c8 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed3d5cbdcf9d89eb09142d5e883ad1b9 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#aed3d5cbdcf9d89eb09142d5e883ad1b9">GetPropUint16</a> (const char *name, uint16_t defval)</td></tr>
+<tr class="memitem:aed3d5cbdcf9d89eb09142d5e883ad1b9 inherit pub_methods_class_t_object" id="r_aed3d5cbdcf9d89eb09142d5e883ad1b9"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#aed3d5cbdcf9d89eb09142d5e883ad1b9">GetPropUint16</a> (const char *name, uint16_t defval)</td></tr>
 <tr class="separator:aed3d5cbdcf9d89eb09142d5e883ad1b9 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86e447e5c0fdf67c14db2cba8c2e70cb inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a86e447e5c0fdf67c14db2cba8c2e70cb">SetPropUint16</a> (const char *name, uint16_t value)</td></tr>
+<tr class="memitem:a86e447e5c0fdf67c14db2cba8c2e70cb inherit pub_methods_class_t_object" id="r_a86e447e5c0fdf67c14db2cba8c2e70cb"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a86e447e5c0fdf67c14db2cba8c2e70cb">SetPropUint16</a> (const char *name, uint16_t value)</td></tr>
 <tr class="separator:a86e447e5c0fdf67c14db2cba8c2e70cb inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae20222aeb1ff54870987e169e4c3343a inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ae20222aeb1ff54870987e169e4c3343a">GetPropInt32</a> (const char *name, int32_t defval)</td></tr>
+<tr class="memitem:ae20222aeb1ff54870987e169e4c3343a inherit pub_methods_class_t_object" id="r_ae20222aeb1ff54870987e169e4c3343a"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ae20222aeb1ff54870987e169e4c3343a">GetPropInt32</a> (const char *name, int32_t defval)</td></tr>
 <tr class="separator:ae20222aeb1ff54870987e169e4c3343a inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa453d3d0a8d3284cb7f83df170f31274 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#aa453d3d0a8d3284cb7f83df170f31274">SetPropInt32</a> (const char *name, int32_t value)</td></tr>
+<tr class="memitem:aa453d3d0a8d3284cb7f83df170f31274 inherit pub_methods_class_t_object" id="r_aa453d3d0a8d3284cb7f83df170f31274"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#aa453d3d0a8d3284cb7f83df170f31274">SetPropInt32</a> (const char *name, int32_t value)</td></tr>
 <tr class="separator:aa453d3d0a8d3284cb7f83df170f31274 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f94fbf13af2e7f3b1c14318c738e831 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a5f94fbf13af2e7f3b1c14318c738e831">GetPropUint32</a> (const char *name, uint32_t defval)</td></tr>
+<tr class="memitem:a5f94fbf13af2e7f3b1c14318c738e831 inherit pub_methods_class_t_object" id="r_a5f94fbf13af2e7f3b1c14318c738e831"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a5f94fbf13af2e7f3b1c14318c738e831">GetPropUint32</a> (const char *name, uint32_t defval)</td></tr>
 <tr class="separator:a5f94fbf13af2e7f3b1c14318c738e831 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb6adecda9eb558d7d916625128e2da5 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#acb6adecda9eb558d7d916625128e2da5">SetPropUint32</a> (const char *name, uint32_t value)</td></tr>
+<tr class="memitem:acb6adecda9eb558d7d916625128e2da5 inherit pub_methods_class_t_object" id="r_acb6adecda9eb558d7d916625128e2da5"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#acb6adecda9eb558d7d916625128e2da5">SetPropUint32</a> (const char *name, uint32_t value)</td></tr>
 <tr class="separator:acb6adecda9eb558d7d916625128e2da5 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6d58beaf5b584b60ae0c1212ce8d332 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ac6d58beaf5b584b60ae0c1212ce8d332">GetPropInt64</a> (const char *name, int64_t defval)</td></tr>
+<tr class="memitem:ac6d58beaf5b584b60ae0c1212ce8d332 inherit pub_methods_class_t_object" id="r_ac6d58beaf5b584b60ae0c1212ce8d332"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ac6d58beaf5b584b60ae0c1212ce8d332">GetPropInt64</a> (const char *name, int64_t defval)</td></tr>
 <tr class="separator:ac6d58beaf5b584b60ae0c1212ce8d332 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e987faa6458a28b0bed1e33baccbc6e inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a8e987faa6458a28b0bed1e33baccbc6e">SetPropInt64</a> (const char *name, int64_t value)</td></tr>
+<tr class="memitem:a8e987faa6458a28b0bed1e33baccbc6e inherit pub_methods_class_t_object" id="r_a8e987faa6458a28b0bed1e33baccbc6e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a8e987faa6458a28b0bed1e33baccbc6e">SetPropInt64</a> (const char *name, int64_t value)</td></tr>
 <tr class="separator:a8e987faa6458a28b0bed1e33baccbc6e inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b1a7c39fb5ff896272d105cdc56b52f inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a9b1a7c39fb5ff896272d105cdc56b52f">GetPropUint64</a> (const char *name, uint64_t defval)</td></tr>
+<tr class="memitem:a9b1a7c39fb5ff896272d105cdc56b52f inherit pub_methods_class_t_object" id="r_a9b1a7c39fb5ff896272d105cdc56b52f"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a9b1a7c39fb5ff896272d105cdc56b52f">GetPropUint64</a> (const char *name, uint64_t defval)</td></tr>
 <tr class="separator:a9b1a7c39fb5ff896272d105cdc56b52f inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f7000c0757087e4e200e175cd3c4e4a inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a9f7000c0757087e4e200e175cd3c4e4a">SetPropUint64</a> (const char *name, uint64_t value)</td></tr>
+<tr class="memitem:a9f7000c0757087e4e200e175cd3c4e4a inherit pub_methods_class_t_object" id="r_a9f7000c0757087e4e200e175cd3c4e4a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#a9f7000c0757087e4e200e175cd3c4e4a">SetPropUint64</a> (const char *name, uint64_t value)</td></tr>
 <tr class="separator:a9f7000c0757087e4e200e175cd3c4e4a inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf88f8baf905e1ec672b47d2beebb193 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#abf88f8baf905e1ec672b47d2beebb193">GetRefCount</a> () const</td></tr>
+<tr class="memitem:abf88f8baf905e1ec672b47d2beebb193 inherit pub_methods_class_t_object" id="r_abf88f8baf905e1ec672b47d2beebb193"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#abf88f8baf905e1ec672b47d2beebb193">GetRefCount</a> () const</td></tr>
 <tr class="separator:abf88f8baf905e1ec672b47d2beebb193 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad49dccfbf4ceccd4c61211841a7d74d7 inherit pub_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ad49dccfbf4ceccd4c61211841a7d74d7">GetName</a> () const</td></tr>
+<tr class="memitem:ad49dccfbf4ceccd4c61211841a7d74d7 inherit pub_methods_class_t_object" id="r_ad49dccfbf4ceccd4c61211841a7d74d7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#ad49dccfbf4ceccd4c61211841a7d74d7">GetName</a> () const</td></tr>
 <tr class="separator:ad49dccfbf4ceccd4c61211841a7d74d7 inherit pub_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_t_emitter"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_t_emitter')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_t_emitter.html">TEmitter</a></td></tr>
-<tr class="memitem:a6ca92e86b5b1096926e6c1027391c8d9 inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top"><a id="a6ca92e86b5b1096926e6c1027391c8d9"></a>
+<tr class="inherit_header pub_methods_class_t_emitter"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_t_emitter')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_t_emitter.html">TEmitter</a></td></tr>
+<tr class="memitem:a6ca92e86b5b1096926e6c1027391c8d9 inherit pub_methods_class_t_emitter" id="r_a6ca92e86b5b1096926e6c1027391c8d9"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>TEmitter</b> (emitter_t *nativeObj)</td></tr>
 <tr class="separator:a6ca92e86b5b1096926e6c1027391c8d9 inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1164e76c026d546bcd229514e1896be7 inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top"><a id="a1164e76c026d546bcd229514e1896be7"></a>
+<tr class="memitem:a1164e76c026d546bcd229514e1896be7 inherit pub_methods_class_t_emitter" id="r_a1164e76c026d546bcd229514e1896be7"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>TEmitter</b> (const emitter_t *nativeObj)</td></tr>
 <tr class="separator:a1164e76c026d546bcd229514e1896be7 inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f3943b7219c16dd7d171aaa66fad97e inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a0f3943b7219c16dd7d171aaa66fad97e">Dispatch</a> (<a class="el" href="class_t_event.html">TEvent</a> &amp;e)</td></tr>
+<tr class="memitem:a0f3943b7219c16dd7d171aaa66fad97e inherit pub_methods_class_t_emitter" id="r_a0f3943b7219c16dd7d171aaa66fad97e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a0f3943b7219c16dd7d171aaa66fad97e">Dispatch</a> (<a class="el" href="class_t_event.html">TEvent</a> &amp;e)</td></tr>
 <tr class="separator:a0f3943b7219c16dd7d171aaa66fad97e inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa371beccbd4d2792db21f4da22049673 inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#aa371beccbd4d2792db21f4da22049673">DispatchSimpleEvent</a> (uint32_t type)</td></tr>
+<tr class="memitem:aa371beccbd4d2792db21f4da22049673 inherit pub_methods_class_t_emitter" id="r_aa371beccbd4d2792db21f4da22049673"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#aa371beccbd4d2792db21f4da22049673">DispatchSimpleEvent</a> (uint32_t type)</td></tr>
 <tr class="separator:aa371beccbd4d2792db21f4da22049673 inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29404a7b2ca8b41b25d6442dfbf6863e inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a29404a7b2ca8b41b25d6442dfbf6863e">On</a> (uint32_t etype, event_func_t handler, void *ctx)</td></tr>
+<tr class="memitem:a29404a7b2ca8b41b25d6442dfbf6863e inherit pub_methods_class_t_emitter" id="r_a29404a7b2ca8b41b25d6442dfbf6863e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a29404a7b2ca8b41b25d6442dfbf6863e">On</a> (uint32_t etype, event_func_t handler, void *ctx)</td></tr>
 <tr class="separator:a29404a7b2ca8b41b25d6442dfbf6863e inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9cfdac85eba8396ffb90a2beea66d3f inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#ad9cfdac85eba8396ffb90a2beea66d3f">Off</a> (uint32_t id)</td></tr>
+<tr class="memitem:ad9cfdac85eba8396ffb90a2beea66d3f inherit pub_methods_class_t_emitter" id="r_ad9cfdac85eba8396ffb90a2beea66d3f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#ad9cfdac85eba8396ffb90a2beea66d3f">Off</a> (uint32_t id)</td></tr>
 <tr class="separator:ad9cfdac85eba8396ffb90a2beea66d3f inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d3788d19cabda5e7be335a8d6b713fb inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a7d3788d19cabda5e7be335a8d6b713fb">Enable</a> ()</td></tr>
+<tr class="memitem:a7d3788d19cabda5e7be335a8d6b713fb inherit pub_methods_class_t_emitter" id="r_a7d3788d19cabda5e7be335a8d6b713fb"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a7d3788d19cabda5e7be335a8d6b713fb">Enable</a> ()</td></tr>
 <tr class="separator:a7d3788d19cabda5e7be335a8d6b713fb inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab009db7ef16ca18fdf8eac10559501c0 inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#ab009db7ef16ca18fdf8eac10559501c0">Disable</a> ()</td></tr>
+<tr class="memitem:ab009db7ef16ca18fdf8eac10559501c0 inherit pub_methods_class_t_emitter" id="r_ab009db7ef16ca18fdf8eac10559501c0"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#ab009db7ef16ca18fdf8eac10559501c0">Disable</a> ()</td></tr>
 <tr class="separator:ab009db7ef16ca18fdf8eac10559501c0 inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a67a712b6749c37f56c95e37fbcee92 inherit pub_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a0a67a712b6749c37f56c95e37fbcee92">Destroy</a> ()</td></tr>
+<tr class="memitem:a0a67a712b6749c37f56c95e37fbcee92 inherit pub_methods_class_t_emitter" id="r_a0a67a712b6749c37f56c95e37fbcee92"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a0a67a712b6749c37f56c95e37fbcee92">Destroy</a> ()</td></tr>
 <tr class="separator:a0a67a712b6749c37f56c95e37fbcee92 inherit pub_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:aea74555c9c3df98e6b1243788d37c95d"><td class="memItemLeft" align="right" valign="top"><a id="aea74555c9c3df98e6b1243788d37c95d"></a>
+<tr class="memitem:aea74555c9c3df98e6b1243788d37c95d" id="r_aea74555c9c3df98e6b1243788d37c95d"><td class="memItemLeft" align="right" valign="top"><a id="aea74555c9c3df98e6b1243788d37c95d" name="aea74555c9c3df98e6b1243788d37c95d"></a>
 static <a class="el" href="class_t_object_array.html">TObjectArray</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (emitter_t *nativeObj)</td></tr>
 <tr class="separator:aea74555c9c3df98e6b1243788d37c95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7658aff51d76c623076cdd29208bab64"><td class="memItemLeft" align="right" valign="top"><a id="a7658aff51d76c623076cdd29208bab64"></a>
+<tr class="memitem:a7658aff51d76c623076cdd29208bab64" id="r_a7658aff51d76c623076cdd29208bab64"><td class="memItemLeft" align="right" valign="top"><a id="a7658aff51d76c623076cdd29208bab64" name="a7658aff51d76c623076cdd29208bab64"></a>
 static <a class="el" href="class_t_object_array.html">TObjectArray</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const emitter_t *nativeObj)</td></tr>
 <tr class="separator:a7658aff51d76c623076cdd29208bab64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa1371531bd3dc906b33b8e9f61f6046"><td class="memItemLeft" align="right" valign="top"><a id="aaa1371531bd3dc906b33b8e9f61f6046"></a>
+<tr class="memitem:aaa1371531bd3dc906b33b8e9f61f6046" id="r_aaa1371531bd3dc906b33b8e9f61f6046"><td class="memItemLeft" align="right" valign="top"><a id="aaa1371531bd3dc906b33b8e9f61f6046" name="aaa1371531bd3dc906b33b8e9f61f6046"></a>
 static <a class="el" href="class_t_object_array.html">TObjectArray</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (<a class="el" href="class_t_emitter.html">TEmitter</a> &amp;obj)</td></tr>
 <tr class="separator:aaa1371531bd3dc906b33b8e9f61f6046"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65747c383832b26eaa808d2aecf0edc2"><td class="memItemLeft" align="right" valign="top"><a id="a65747c383832b26eaa808d2aecf0edc2"></a>
+<tr class="memitem:a65747c383832b26eaa808d2aecf0edc2" id="r_a65747c383832b26eaa808d2aecf0edc2"><td class="memItemLeft" align="right" valign="top"><a id="a65747c383832b26eaa808d2aecf0edc2" name="a65747c383832b26eaa808d2aecf0edc2"></a>
 static <a class="el" href="class_t_object_array.html">TObjectArray</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const <a class="el" href="class_t_emitter.html">TEmitter</a> &amp;obj)</td></tr>
 <tr class="separator:a65747c383832b26eaa808d2aecf0edc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeed785e20693f504888d3e462029bf08"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object_array.html#aeed785e20693f504888d3e462029bf08">Create</a> ()</td></tr>
+<tr class="memitem:aeed785e20693f504888d3e462029bf08" id="r_aeed785e20693f504888d3e462029bf08"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeed785e20693f504888d3e462029bf08">Create</a> ()</td></tr>
 <tr class="separator:aeed785e20693f504888d3e462029bf08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_class_t_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_t_object')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="class_t_object.html">TObject</a></td></tr>
-<tr class="memitem:aeba20a692fc6590fe0c1dac089c3afe4 inherit pub_static_methods_class_t_object"><td class="memItemLeft" align="right" valign="top"><a id="aeba20a692fc6590fe0c1dac089c3afe4"></a>
+<tr class="inherit_header pub_static_methods_class_t_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_t_object')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="class_t_object.html">TObject</a></td></tr>
+<tr class="memitem:aeba20a692fc6590fe0c1dac089c3afe4 inherit pub_static_methods_class_t_object" id="r_aeba20a692fc6590fe0c1dac089c3afe4"><td class="memItemLeft" align="right" valign="top">
 static <a class="el" href="class_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (emitter_t *nativeObj)</td></tr>
 <tr class="separator:aeba20a692fc6590fe0c1dac089c3afe4 inherit pub_static_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0fca516af8528a3bf010b93fd1ebbab inherit pub_static_methods_class_t_object"><td class="memItemLeft" align="right" valign="top"><a id="ae0fca516af8528a3bf010b93fd1ebbab"></a>
+<tr class="memitem:ae0fca516af8528a3bf010b93fd1ebbab inherit pub_static_methods_class_t_object" id="r_ae0fca516af8528a3bf010b93fd1ebbab"><td class="memItemLeft" align="right" valign="top">
 static <a class="el" href="class_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const emitter_t *nativeObj)</td></tr>
 <tr class="separator:ae0fca516af8528a3bf010b93fd1ebbab inherit pub_static_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9869848ac2d04811210e001606ae208 inherit pub_static_methods_class_t_object"><td class="memItemLeft" align="right" valign="top"><a id="ac9869848ac2d04811210e001606ae208"></a>
+<tr class="memitem:ac9869848ac2d04811210e001606ae208 inherit pub_static_methods_class_t_object" id="r_ac9869848ac2d04811210e001606ae208"><td class="memItemLeft" align="right" valign="top">
 static <a class="el" href="class_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (<a class="el" href="class_t_emitter.html">TEmitter</a> &amp;obj)</td></tr>
 <tr class="separator:ac9869848ac2d04811210e001606ae208 inherit pub_static_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c2616c2d7eba1cf9c9387a0dc7fa2ba inherit pub_static_methods_class_t_object"><td class="memItemLeft" align="right" valign="top"><a id="a8c2616c2d7eba1cf9c9387a0dc7fa2ba"></a>
+<tr class="memitem:a8c2616c2d7eba1cf9c9387a0dc7fa2ba inherit pub_static_methods_class_t_object" id="r_a8c2616c2d7eba1cf9c9387a0dc7fa2ba"><td class="memItemLeft" align="right" valign="top">
 static <a class="el" href="class_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const <a class="el" href="class_t_emitter.html">TEmitter</a> &amp;obj)</td></tr>
 <tr class="separator:a8c2616c2d7eba1cf9c9387a0dc7fa2ba inherit pub_static_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf537435d8cfe6994777b886e25cc2ba inherit pub_static_methods_class_t_object"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#aaf537435d8cfe6994777b886e25cc2ba">Ref</a> (<a class="el" href="class_t_object.html">TObject</a> &amp;obj)</td></tr>
+<tr class="memitem:aaf537435d8cfe6994777b886e25cc2ba inherit pub_static_methods_class_t_object" id="r_aaf537435d8cfe6994777b886e25cc2ba"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_object.html#aaf537435d8cfe6994777b886e25cc2ba">Ref</a> (<a class="el" href="class_t_object.html">TObject</a> &amp;obj)</td></tr>
 <tr class="separator:aaf537435d8cfe6994777b886e25cc2ba inherit pub_static_methods_class_t_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_class_t_emitter"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_t_emitter')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="class_t_emitter.html">TEmitter</a></td></tr>
-<tr class="memitem:a519410f20fbc260357c72f17fae29c61 inherit pub_static_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top"><a id="a519410f20fbc260357c72f17fae29c61"></a>
+<tr class="inherit_header pub_static_methods_class_t_emitter"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_t_emitter')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="class_t_emitter.html">TEmitter</a></td></tr>
+<tr class="memitem:a519410f20fbc260357c72f17fae29c61 inherit pub_static_methods_class_t_emitter" id="r_a519410f20fbc260357c72f17fae29c61"><td class="memItemLeft" align="right" valign="top">
 static <a class="el" href="class_t_emitter.html">TEmitter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (emitter_t *nativeObj)</td></tr>
 <tr class="separator:a519410f20fbc260357c72f17fae29c61 inherit pub_static_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ddf47a8480c17fdd0875da2d9a77ed9 inherit pub_static_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top"><a id="a9ddf47a8480c17fdd0875da2d9a77ed9"></a>
+<tr class="memitem:a9ddf47a8480c17fdd0875da2d9a77ed9 inherit pub_static_methods_class_t_emitter" id="r_a9ddf47a8480c17fdd0875da2d9a77ed9"><td class="memItemLeft" align="right" valign="top">
 static <a class="el" href="class_t_emitter.html">TEmitter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const emitter_t *nativeObj)</td></tr>
 <tr class="separator:a9ddf47a8480c17fdd0875da2d9a77ed9 inherit pub_static_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70ef09f38ab28ee7cd4f1fddb2c5e450 inherit pub_static_methods_class_t_emitter"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_emitter.html">TEmitter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a70ef09f38ab28ee7cd4f1fddb2c5e450">Create</a> ()</td></tr>
+<tr class="memitem:a70ef09f38ab28ee7cd4f1fddb2c5e450 inherit pub_static_methods_class_t_emitter" id="r_a70ef09f38ab28ee7cd4f1fddb2c5e450"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_emitter.html">TEmitter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_emitter.html#a70ef09f38ab28ee7cd4f1fddb2c5e450">Create</a> ()</td></tr>
 <tr class="separator:a70ef09f38ab28ee7cd4f1fddb2c5e450 inherit pub_static_methods_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 额外继承的成员函数</h2></td></tr>
-<tr class="inherit_header pub_attribs_class_t_emitter"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_t_emitter')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="class_t_emitter.html">TEmitter</a></td></tr>
-<tr class="memitem:a476ec4fc4b3a97af70c2d5e91df7a0cc inherit pub_attribs_class_t_emitter"><td class="memItemLeft" align="right" valign="top"><a id="a476ec4fc4b3a97af70c2d5e91df7a0cc"></a>
+<tr class="inherit_header pub_attribs_class_t_emitter"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_t_emitter')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="class_t_emitter.html">TEmitter</a></td></tr>
+<tr class="memitem:a476ec4fc4b3a97af70c2d5e91df7a0cc inherit pub_attribs_class_t_emitter" id="r_a476ec4fc4b3a97af70c2d5e91df7a0cc"><td class="memItemLeft" align="right" valign="top">
 emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td></tr>
 <tr class="separator:a476ec4fc4b3a97af70c2d5e91df7a0cc inherit pub_attribs_class_t_emitter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -319,8 +341,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 <p>访问时属性名称为：</p>
 <p>"size"/"length" 用于获取数组的长度。 index 用于访问属性，-1可以用来追加新元素。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a6a9ecc882c9ca11a49674870748afe0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a9ecc882c9ca11a49674870748afe0f">&#9670;&nbsp;</a></span>ClearProps()</h2>
+<a id="a6a9ecc882c9ca11a49674870748afe0f" name="a6a9ecc882c9ca11a49674870748afe0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a9ecc882c9ca11a49674870748afe0f">&#9670;&#160;</a></span>ClearProps()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -328,7 +350,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">ret_t TObjectArray::ClearProps </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -338,8 +360,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="aeed785e20693f504888d3e462029bf08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeed785e20693f504888d3e462029bf08">&#9670;&nbsp;</a></span>Create()</h2>
+<a id="aeed785e20693f504888d3e462029bf08" name="aeed785e20693f504888d3e462029bf08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeed785e20693f504888d3e462029bf08">&#9670;&#160;</a></span>Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -350,7 +372,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname"><a class="el" href="class_t_object.html">TObject</a> TObjectArray::Create </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -365,8 +387,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="a6de3b47ca2bde6c05f9170765a99eea3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6de3b47ca2bde6c05f9170765a99eea3">&#9670;&nbsp;</a></span>GetAndRemove()</h2>
+<a id="a6de3b47ca2bde6c05f9170765a99eea3" name="a6de3b47ca2bde6c05f9170765a99eea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6de3b47ca2bde6c05f9170765a99eea3">&#9670;&#160;</a></span>GetAndRemove()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -374,19 +396,12 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">ret_t TObjectArray::GetAndRemove </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>index</em>, </td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -402,8 +417,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="aa7ae5594d937c32271222965464b910e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7ae5594d937c32271222965464b910e">&#9670;&nbsp;</a></span>GetSize()</h2>
+<a id="aa7ae5594d937c32271222965464b910e" name="aa7ae5594d937c32271222965464b910e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7ae5594d937c32271222965464b910e">&#9670;&#160;</a></span>GetSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -411,7 +426,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">uint32_t TObjectArray::GetSize </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -420,8 +435,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="a3ee7ea1a0f79b39f06b41d69425a560a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ee7ea1a0f79b39f06b41d69425a560a">&#9670;&nbsp;</a></span>IndexOf()</h2>
+<a id="a3ee7ea1a0f79b39f06b41d69425a560a" name="a3ee7ea1a0f79b39f06b41d69425a560a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ee7ea1a0f79b39f06b41d69425a560a">&#9670;&#160;</a></span>IndexOf()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -429,8 +444,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">int32_t TObjectArray::IndexOf </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;&#160;</td>
-          <td class="paramname"><em>v</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -446,8 +460,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="a5f156f618a8684ef1e59311574c7aefd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f156f618a8684ef1e59311574c7aefd">&#9670;&nbsp;</a></span>Insert()</h2>
+<a id="a5f156f618a8684ef1e59311574c7aefd" name="a5f156f618a8684ef1e59311574c7aefd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f156f618a8684ef1e59311574c7aefd">&#9670;&#160;</a></span>Insert()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -455,19 +469,12 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">ret_t TObjectArray::Insert </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>index</em>, </td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -483,8 +490,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="a7e9eddd679276099b507e84a6758e78e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e9eddd679276099b507e84a6758e78e">&#9670;&nbsp;</a></span>LastIndexOf()</h2>
+<a id="a7e9eddd679276099b507e84a6758e78e" name="a7e9eddd679276099b507e84a6758e78e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e9eddd679276099b507e84a6758e78e">&#9670;&#160;</a></span>LastIndexOf()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -492,8 +499,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">int32_t TObjectArray::LastIndexOf </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;&#160;</td>
-          <td class="paramname"><em>v</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -509,8 +515,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="a86587ce0e7a41432c1933a5057bde7cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86587ce0e7a41432c1933a5057bde7cc">&#9670;&nbsp;</a></span>Push()</h2>
+<a id="a86587ce0e7a41432c1933a5057bde7cc" name="a86587ce0e7a41432c1933a5057bde7cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86587ce0e7a41432c1933a5057bde7cc">&#9670;&#160;</a></span>Push()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -518,8 +524,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">ret_t TObjectArray::Push </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;&#160;</td>
-          <td class="paramname"><em>v</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -535,8 +540,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="a99fe1a8814076c17a6584c5ca8654064"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99fe1a8814076c17a6584c5ca8654064">&#9670;&nbsp;</a></span>Remove()</h2>
+<a id="a99fe1a8814076c17a6584c5ca8654064" name="a99fe1a8814076c17a6584c5ca8654064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99fe1a8814076c17a6584c5ca8654064">&#9670;&#160;</a></span>Remove()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -544,8 +549,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">ret_t TObjectArray::Remove </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -561,8 +565,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="a5bb1e7907c2cc4374c52a225cca432e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bb1e7907c2cc4374c52a225cca432e3">&#9670;&nbsp;</a></span>RemoveValue()</h2>
+<a id="a5bb1e7907c2cc4374c52a225cca432e3" name="a5bb1e7907c2cc4374c52a225cca432e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bb1e7907c2cc4374c52a225cca432e3">&#9670;&#160;</a></span>RemoveValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -570,8 +574,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">ret_t TObjectArray::RemoveValue </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;&#160;</td>
-          <td class="paramname"><em>v</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -587,8 +590,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="adc0c893ca87d5b53f17c0055dcbccd0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc0c893ca87d5b53f17c0055dcbccd0d">&#9670;&nbsp;</a></span>Unref()</h2>
+<a id="adc0c893ca87d5b53f17c0055dcbccd0d" name="adc0c893ca87d5b53f17c0055dcbccd0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc0c893ca87d5b53f17c0055dcbccd0d">&#9670;&#160;</a></span>Unref()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -596,7 +599,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">ret_t TObjectArray::Unref </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -608,12 +611,13 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
-<li>output/awtk_cpp.cpp</li>
+<li>output/<b>awtk_cpp.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

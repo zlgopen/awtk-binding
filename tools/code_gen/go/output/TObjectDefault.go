@@ -26,3 +26,7 @@ func (this TObjectDefault) SetKeepPropType(keep_prop_type bool) TRet {
   return TRet(C.object_default_set_keep_prop_type((*C.object_t)(this.handle), (C.bool_t)(keep_prop_type)));
 }
 
+func (this TObjectDefault) SetNameCaseInsensitive(name_case_insensitive bool) TRet {
+  return TRet(C.object_default_set_name_case_insensitive((*C.object_t)(this.handle), (C.bool_t)(name_case_insensitive)));
+}
+

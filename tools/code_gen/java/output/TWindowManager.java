@@ -77,6 +77,17 @@ public class TWindowManager extends TWidget {
 
 
   /**
+   * 获取前景窗口。
+   * 
+   *
+   * @return 返回窗口对象。
+   */
+ public  TWidget getForegroundWindow()  {
+    return new TWidget(window_manager_get_foreground_window(this != null ? (this.nativeObj) : 0));
+ }
+
+
+  /**
    * 获取前一个的窗口。
    * 
    *
@@ -285,6 +296,7 @@ static private native long window_manager();
 static private native long window_manager_cast(long widget);
 static private native long window_manager_get_top_main_window(long widget);
 static private native long window_manager_get_top_window(long widget);
+static private native long window_manager_get_foreground_window(long widget);
 static private native long window_manager_get_prev_window(long widget);
 static private native int window_manager_get_pointer_x(long widget);
 static private native int window_manager_get_pointer_y(long widget);

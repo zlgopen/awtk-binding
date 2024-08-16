@@ -1,4 +1,8 @@
-[AWTK](../README.md) / [Exports](../modules.md) / TComboBoxEx
+[**AWTK**](../README.md) • **Docs**
+
+***
+
+[AWTK](../globals.md) / TComboBoxEx
 
 # Class: TComboBoxEx
 
@@ -7,279 +11,51 @@
 * 自动调整弹出窗口的宽度。根据最长文本自动调整弹出窗口的宽度。
 * 支持分组显示。如果item的文本以"seperator."开头，视为一个分组开始，其后的文本为分组的标题。比如: "seperator.basic"，会创建一个basic为标题的分组。
 
-## Hierarchy
+## Extends
 
 - [`TComboBox`](TComboBox.md)
 
-  ↳ **`TComboBoxEx`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](TComboBoxEx.md#constructor)
-
-### Properties
-
-- [nativeObj](TComboBoxEx.md#nativeobj)
-
-### Accessors
-
-- [actionText](TComboBoxEx.md#actiontext)
-- [animation](TComboBoxEx.md#animation)
-- [autoAdjustSize](TComboBoxEx.md#autoadjustsize)
-- [autoFix](TComboBoxEx.md#autofix)
-- [cancelable](TComboBoxEx.md#cancelable)
-- [closeImWhenBlured](TComboBoxEx.md#closeimwhenblured)
-- [dirtyRectTolerance](TComboBoxEx.md#dirtyrecttolerance)
-- [enable](TComboBoxEx.md#enable)
-- [feedback](TComboBoxEx.md#feedback)
-- [floating](TComboBoxEx.md#floating)
-- [focusable](TComboBoxEx.md#focusable)
-- [h](TComboBoxEx.md#h)
-- [inputType](TComboBoxEx.md#inputtype)
-- [itemHeight](TComboBoxEx.md#itemheight)
-- [keyboard](TComboBoxEx.md#keyboard)
-- [localizeOptions](TComboBoxEx.md#localizeoptions)
-- [max](TComboBoxEx.md#max)
-- [min](TComboBoxEx.md#min)
-- [name](TComboBoxEx.md#name)
-- [opacity](TComboBoxEx.md#opacity)
-- [openImWhenFocused](TComboBoxEx.md#openimwhenfocused)
-- [openWindow](TComboBoxEx.md#openwindow)
-- [options](TComboBoxEx.md#options)
-- [parent](TComboBoxEx.md#parent)
-- [passwordVisible](TComboBoxEx.md#passwordvisible)
-- [pointerCursor](TComboBoxEx.md#pointercursor)
-- [readonly](TComboBoxEx.md#readonly)
-- [selectNoneWhenFocused](TComboBoxEx.md#selectnonewhenfocused)
-- [selectedIndex](TComboBoxEx.md#selectedindex)
-- [sensitive](TComboBoxEx.md#sensitive)
-- [step](TComboBoxEx.md#step)
-- [style](TComboBoxEx.md#style)
-- [themeOfPopup](TComboBoxEx.md#themeofpopup)
-- [tips](TComboBoxEx.md#tips)
-- [trText](TComboBoxEx.md#trtext)
-- [trTips](TComboBoxEx.md#trtips)
-- [value](TComboBoxEx.md#value)
-- [visible](TComboBoxEx.md#visible)
-- [w](TComboBoxEx.md#w)
-- [withFocusState](TComboBoxEx.md#withfocusstate)
-- [x](TComboBoxEx.md#x)
-- [y](TComboBoxEx.md#y)
-
-### Methods
-
-- [addChild](TComboBoxEx.md#addchild)
-- [addChildDefault](TComboBoxEx.md#addchilddefault)
-- [addValue](TComboBoxEx.md#addvalue)
-- [addValueInt](TComboBoxEx.md#addvalueint)
-- [animateValueTo](TComboBoxEx.md#animatevalueto)
-- [appendOption](TComboBoxEx.md#appendoption)
-- [back](TComboBoxEx.md#back)
-- [backToHome](TComboBoxEx.md#backtohome)
-- [child](TComboBoxEx.md#child)
-- [clone](TComboBoxEx.md#clone)
-- [closeWindow](TComboBoxEx.md#closewindow)
-- [closeWindowForce](TComboBoxEx.md#closewindowforce)
-- [countChildren](TComboBoxEx.md#countchildren)
-- [countOptions](TComboBoxEx.md#countoptions)
-- [createAnimator](TComboBoxEx.md#createanimator)
-- [destroy](TComboBoxEx.md#destroy)
-- [destroyAnimator](TComboBoxEx.md#destroyanimator)
-- [destroyAsync](TComboBoxEx.md#destroyasync)
-- [destroyChildren](TComboBoxEx.md#destroychildren)
-- [dispatchToKeyTarget](TComboBoxEx.md#dispatchtokeytarget)
-- [dispatchToTarget](TComboBoxEx.md#dispatchtotarget)
-- [equal](TComboBoxEx.md#equal)
-- [fillBgRect](TComboBoxEx.md#fillbgrect)
-- [fillFgRect](TComboBoxEx.md#fillfgrect)
-- [findParentByName](TComboBoxEx.md#findparentbyname)
-- [findParentByType](TComboBoxEx.md#findparentbytype)
-- [focusNext](TComboBoxEx.md#focusnext)
-- [focusPrev](TComboBoxEx.md#focusprev)
-- [foreach](TComboBoxEx.md#foreach)
-- [getAutoAdjustSize](TComboBoxEx.md#getautoadjustsize)
-- [getChild](TComboBoxEx.md#getchild)
-- [getCursor](TComboBoxEx.md#getcursor)
-- [getDouble](TComboBoxEx.md#getdouble)
-- [getEnable](TComboBoxEx.md#getenable)
-- [getFeedback](TComboBoxEx.md#getfeedback)
-- [getFloating](TComboBoxEx.md#getfloating)
-- [getFocusable](TComboBoxEx.md#getfocusable)
-- [getFocusedWidget](TComboBoxEx.md#getfocusedwidget)
-- [getInt](TComboBoxEx.md#getint)
-- [getNativeWindow](TComboBoxEx.md#getnativewindow)
-- [getPropBool](TComboBoxEx.md#getpropbool)
-- [getPropFloat](TComboBoxEx.md#getpropfloat)
-- [getPropInt](TComboBoxEx.md#getpropint)
-- [getPropPointer](TComboBoxEx.md#getproppointer)
-- [getPropStr](TComboBoxEx.md#getpropstr)
-- [getSelectedText](TComboBoxEx.md#getselectedtext)
-- [getSensitive](TComboBoxEx.md#getsensitive)
-- [getStateForStyle](TComboBoxEx.md#getstateforstyle)
-- [getStyleType](TComboBoxEx.md#getstyletype)
-- [getText](TComboBoxEx.md#gettext)
-- [getTextOfSelected](TComboBoxEx.md#gettextofselected)
-- [getTextValue](TComboBoxEx.md#gettextvalue)
-- [getThemeName](TComboBoxEx.md#getthemename)
-- [getType](TComboBoxEx.md#gettype)
-- [getValue](TComboBoxEx.md#getvalue)
-- [getValueInt](TComboBoxEx.md#getvalueint)
-- [getVisible](TComboBoxEx.md#getvisible)
-- [getWindow](TComboBoxEx.md#getwindow)
-- [getWindowManager](TComboBoxEx.md#getwindowmanager)
-- [getWithFocusState](TComboBoxEx.md#getwithfocusstate)
-- [hasOptionText](TComboBoxEx.md#hasoptiontext)
-- [indexOf](TComboBoxEx.md#indexof)
-- [insertChild](TComboBoxEx.md#insertchild)
-- [invalidateForce](TComboBoxEx.md#invalidateforce)
-- [isDesigningWindow](TComboBoxEx.md#isdesigningwindow)
-- [isDialog](TComboBoxEx.md#isdialog)
-- [isDirectParentOf](TComboBoxEx.md#isdirectparentof)
-- [isKeyboard](TComboBoxEx.md#iskeyboard)
-- [isNormalWindow](TComboBoxEx.md#isnormalwindow)
-- [isOpenedDialog](TComboBoxEx.md#isopeneddialog)
-- [isOpenedPopup](TComboBoxEx.md#isopenedpopup)
-- [isOverlay](TComboBoxEx.md#isoverlay)
-- [isParentOf](TComboBoxEx.md#isparentof)
-- [isPopup](TComboBoxEx.md#ispopup)
-- [isStyleExist](TComboBoxEx.md#isstyleexist)
-- [isSystemBar](TComboBoxEx.md#issystembar)
-- [isWindow](TComboBoxEx.md#iswindow)
-- [isWindowCreated](TComboBoxEx.md#iswindowcreated)
-- [isWindowManager](TComboBoxEx.md#iswindowmanager)
-- [isWindowOpened](TComboBoxEx.md#iswindowopened)
-- [layout](TComboBoxEx.md#layout)
-- [lookup](TComboBoxEx.md#lookup)
-- [lookupByType](TComboBoxEx.md#lookupbytype)
-- [move](TComboBoxEx.md#move)
-- [moveResize](TComboBoxEx.md#moveresize)
-- [moveResizeEx](TComboBoxEx.md#moveresizeex)
-- [moveToCenter](TComboBoxEx.md#movetocenter)
-- [off](TComboBoxEx.md#off)
-- [on](TComboBoxEx.md#on)
-- [pauseAnimator](TComboBoxEx.md#pauseanimator)
-- [removeChild](TComboBoxEx.md#removechild)
-- [removeOption](TComboBoxEx.md#removeoption)
-- [resetOptions](TComboBoxEx.md#resetoptions)
-- [resize](TComboBoxEx.md#resize)
-- [restack](TComboBoxEx.md#restack)
-- [setActionText](TComboBoxEx.md#setactiontext)
-- [setAnimation](TComboBoxEx.md#setanimation)
-- [setAnimatorTimeScale](TComboBoxEx.md#setanimatortimescale)
-- [setAsKeyTarget](TComboBoxEx.md#setaskeytarget)
-- [setAutoAdjustSize](TComboBoxEx.md#setautoadjustsize)
-- [setAutoFix](TComboBoxEx.md#setautofix)
-- [setCancelable](TComboBoxEx.md#setcancelable)
-- [setChildText](TComboBoxEx.md#setchildtext)
-- [setChildTextWithDouble](TComboBoxEx.md#setchildtextwithdouble)
-- [setChildTextWithInt](TComboBoxEx.md#setchildtextwithint)
-- [setChildrenLayout](TComboBoxEx.md#setchildrenlayout)
-- [setCloseImWhenBlured](TComboBoxEx.md#setcloseimwhenblured)
-- [setCursor](TComboBoxEx.md#setcursor)
-- [setDirtyRectTolerance](TComboBoxEx.md#setdirtyrecttolerance)
-- [setDouble](TComboBoxEx.md#setdouble)
-- [setDoubleEx](TComboBoxEx.md#setdoubleex)
-- [setEnable](TComboBoxEx.md#setenable)
-- [setFeedback](TComboBoxEx.md#setfeedback)
-- [setFloatLimit](TComboBoxEx.md#setfloatlimit)
-- [setFloating](TComboBoxEx.md#setfloating)
-- [setFocus](TComboBoxEx.md#setfocus)
-- [setFocusable](TComboBoxEx.md#setfocusable)
-- [setFocused](TComboBoxEx.md#setfocused)
-- [setInputType](TComboBoxEx.md#setinputtype)
-- [setInt](TComboBoxEx.md#setint)
-- [setIntLimit](TComboBoxEx.md#setintlimit)
-- [setItemHeight](TComboBoxEx.md#setitemheight)
-- [setKeyboard](TComboBoxEx.md#setkeyboard)
-- [setLocalizeOptions](TComboBoxEx.md#setlocalizeoptions)
-- [setName](TComboBoxEx.md#setname)
-- [setOpacity](TComboBoxEx.md#setopacity)
-- [setOpenImWhenFocused](TComboBoxEx.md#setopenimwhenfocused)
-- [setOpenWindow](TComboBoxEx.md#setopenwindow)
-- [setOptions](TComboBoxEx.md#setoptions)
-- [setPasswordVisible](TComboBoxEx.md#setpasswordvisible)
-- [setPointerCursor](TComboBoxEx.md#setpointercursor)
-- [setPropBool](TComboBoxEx.md#setpropbool)
-- [setPropFloat](TComboBoxEx.md#setpropfloat)
-- [setPropInt](TComboBoxEx.md#setpropint)
-- [setPropPointer](TComboBoxEx.md#setproppointer)
-- [setPropStr](TComboBoxEx.md#setpropstr)
-- [setProps](TComboBoxEx.md#setprops)
-- [setReadonly](TComboBoxEx.md#setreadonly)
-- [setSelect](TComboBoxEx.md#setselect)
-- [setSelectNoneWhenFocused](TComboBoxEx.md#setselectnonewhenfocused)
-- [setSelectedIndex](TComboBoxEx.md#setselectedindex)
-- [setSelectedIndexByText](TComboBoxEx.md#setselectedindexbytext)
-- [setSelfLayout](TComboBoxEx.md#setselflayout)
-- [setSelfLayoutParams](TComboBoxEx.md#setselflayoutparams)
-- [setSensitive](TComboBoxEx.md#setsensitive)
-- [setState](TComboBoxEx.md#setstate)
-- [setStyleColor](TComboBoxEx.md#setstylecolor)
-- [setStyleInt](TComboBoxEx.md#setstyleint)
-- [setStyleStr](TComboBoxEx.md#setstylestr)
-- [setText](TComboBoxEx.md#settext)
-- [setTextEx](TComboBoxEx.md#settextex)
-- [setTextLimit](TComboBoxEx.md#settextlimit)
-- [setTheme](TComboBoxEx.md#settheme)
-- [setThemeOfPopup](TComboBoxEx.md#setthemeofpopup)
-- [setTips](TComboBoxEx.md#settips)
-- [setTrText](TComboBoxEx.md#settrtext)
-- [setTrTips](TComboBoxEx.md#settrtips)
-- [setValue](TComboBoxEx.md#setvalue)
-- [setValueInt](TComboBoxEx.md#setvalueint)
-- [setVisible](TComboBoxEx.md#setvisible)
-- [setVisibleOnly](TComboBoxEx.md#setvisibleonly)
-- [startAnimator](TComboBoxEx.md#startanimator)
-- [stopAnimator](TComboBoxEx.md#stopanimator)
-- [strokeBorderRect](TComboBoxEx.md#strokeborderrect)
-- [unref](TComboBoxEx.md#unref)
-- [updateStyle](TComboBoxEx.md#updatestyle)
-- [updateStyleRecursive](TComboBoxEx.md#updatestylerecursive)
-- [useStyle](TComboBoxEx.md#usestyle)
-- [cast](TComboBoxEx.md#cast)
-- [create](TComboBoxEx.md#create)
-
 ## Constructors
 
-### constructor
+### new TComboBoxEx()
 
-• **new TComboBoxEx**(`nativeObj`)
+> **new TComboBoxEx**(`nativeObj`): [`TComboBoxEx`](TComboBoxEx.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `nativeObj` | `any` |
+• **nativeObj**: `any`
+
+#### Returns
+
+[`TComboBoxEx`](TComboBoxEx.md)
 
 #### Overrides
 
-[TComboBox](TComboBox.md).[constructor](TComboBox.md#constructor)
+[`TComboBox`](TComboBox.md).[`constructor`](TComboBox.md#constructors)
 
 #### Defined in
 
-[awtk.ts:28997](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28997)
+[awtk.ts:30242](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L30242)
 
 ## Properties
 
 ### nativeObj
 
-• **nativeObj**: `any`
+> **nativeObj**: `any`
 
 #### Overrides
 
-[TComboBox](TComboBox.md).[nativeObj](TComboBox.md#nativeobj)
+[`TComboBox`](TComboBox.md).[`nativeObj`](TComboBox.md#nativeobj)
 
 #### Defined in
 
-[awtk.ts:28996](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28996)
+[awtk.ts:30241](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L30241)
 
 ## Accessors
 
 ### actionText
 
-• `get` **actionText**(): `string`
+> `get` **actionText**(): `string`
 
 软键盘上action按钮的文本。内置取值有：
 
@@ -288,45 +64,37 @@
 
 也可以使用其它文本，比如send表示发送。这个需要自己实现相应的功能，处理EVT\_IM\_ACTION事件即可。
 
+> `set` **actionText**(`v`): `void`
+
+#### Parameters
+
+• **v**: `string`
+
 #### Returns
 
 `string`
 
 #### Inherited from
 
-TComboBox.actionText
+[`TComboBox`](TComboBox.md).[`actionText`](TComboBox.md#actiontext)
 
 #### Defined in
 
-[awtk.ts:24621](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24621)
+[awtk.ts:25570](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25570)
 
-• `set` **actionText**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `string` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.actionText
-
-#### Defined in
-
-[awtk.ts:24625](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24625)
-
-___
+***
 
 ### animation
 
-• `get` **animation**(): `string`
+> `get` **animation**(): `string`
 
 动画参数。请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
+
+> `set` **animation**(`v`): `void`
+
+#### Parameters
+
+• **v**: `string`
 
 #### Returns
 
@@ -334,82 +102,54 @@ ___
 
 #### Inherited from
 
-TComboBox.animation
+[`TComboBox`](TComboBox.md).[`animation`](TComboBox.md#animation)
 
 #### Defined in
 
-[awtk.ts:12060](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12060)
+[awtk.ts:12544](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12544)
 
-• `set` **animation**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `string` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.animation
-
-#### Defined in
-
-[awtk.ts:12064](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12064)
-
-___
+***
 
 ### autoAdjustSize
 
-• `get` **autoAdjustSize**(): `boolean`
+> `get` **autoAdjustSize**(): `boolean`
 
 是否根据子控件和文本自动调整控件自身大小。
 
 > 为true时，最好不要使用 layout 的相关东西，否则可能有冲突。
 > 注意：只是调整控件的本身的宽高，不会修改控件本身的位置。
 
+> `set` **autoAdjustSize**(`v`): `void`
+
+#### Parameters
+
+• **v**: `boolean`
+
 #### Returns
 
 `boolean`
 
 #### Inherited from
 
-TComboBox.autoAdjustSize
+[`TComboBox`](TComboBox.md).[`autoAdjustSize`](TComboBox.md#autoadjustsize)
 
 #### Defined in
 
-[awtk.ts:12151](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12151)
+[awtk.ts:12635](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12635)
 
-• `set` **autoAdjustSize**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.autoAdjustSize
-
-#### Defined in
-
-[awtk.ts:12155](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12155)
-
-___
+***
 
 ### autoFix
 
-• `get` **autoFix**(): `boolean`
+> `get` **autoFix**(): `boolean`
 
 输入无效时，是否自动改正。
+
+> `set` **autoFix**(`v`): `void`
+
+#### Parameters
+
+• **v**: `boolean`
 
 #### Returns
 
@@ -417,82 +157,54 @@ ___
 
 #### Inherited from
 
-TComboBox.autoFix
+[`TComboBox`](TComboBox.md).[`autoFix`](TComboBox.md#autofix)
 
 #### Defined in
 
-[awtk.ts:24714](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24714)
+[awtk.ts:25674](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25674)
 
-• `set` **autoFix**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.autoFix
-
-#### Defined in
-
-[awtk.ts:24718](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24718)
-
-___
+***
 
 ### cancelable
 
-• `get` **cancelable**(): `boolean`
+> `get` **cancelable**(): `boolean`
 
 是否支持撤销编辑。如果为TRUE，在失去焦点之前可以撤销所有修改(恢复获得焦点之前的内容)。
 
 > * 1.一般配合keyboard的"cancel"按钮使用。
 > * 2.为TRUE时，如果内容有变化，会设置编辑器的状态为changed，所以此时编辑器需要支持changed状态的style。
 
+> `set` **cancelable**(`v`): `void`
+
+#### Parameters
+
+• **v**: `boolean`
+
 #### Returns
 
 `boolean`
 
 #### Inherited from
 
-TComboBox.cancelable
+[`TComboBox`](TComboBox.md).[`cancelable`](TComboBox.md#cancelable)
 
 #### Defined in
 
-[awtk.ts:24773](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24773)
+[awtk.ts:25733](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25733)
 
-• `set` **cancelable**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.cancelable
-
-#### Defined in
-
-[awtk.ts:24777](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24777)
-
-___
+***
 
 ### closeImWhenBlured
 
-• `get` **closeImWhenBlured**(): `boolean`
+> `get` **closeImWhenBlured**(): `boolean`
 
 是否在失去焦点时关闭输入法(默认是)。
+
+> `set` **closeImWhenBlured**(`v`): `void`
+
+#### Parameters
+
+• **v**: `boolean`
 
 #### Returns
 
@@ -500,41 +212,27 @@ ___
 
 #### Inherited from
 
-TComboBox.closeImWhenBlured
+[`TComboBox`](TComboBox.md).[`closeImWhenBlured`](TComboBox.md#closeimwhenblured)
 
 #### Defined in
 
-[awtk.ts:24757](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24757)
+[awtk.ts:25717](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25717)
 
-• `set` **closeImWhenBlured**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.closeImWhenBlured
-
-#### Defined in
-
-[awtk.ts:24761](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24761)
-
-___
+***
 
 ### dirtyRectTolerance
 
-• `get` **dirtyRectTolerance**(): `number`
+> `get` **dirtyRectTolerance**(): `number`
 
 脏矩形超出控件本身大小的最大范围(一般不用指定)。
 
 > 如果 border 太粗或 offset 太大等原因，导致脏矩形超出控件本身大小太多（大于缺省值）时，才需要指定。
+
+> `set` **dirtyRectTolerance**(`v`): `void`
+
+#### Parameters
+
+• **v**: `number`
 
 #### Returns
 
@@ -542,159 +240,129 @@ ___
 
 #### Inherited from
 
-TComboBox.dirtyRectTolerance
+[`TComboBox`](TComboBox.md).[`dirtyRectTolerance`](TComboBox.md#dirtyrecttolerance)
 
 #### Defined in
 
-[awtk.ts:12192](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12192)
+[awtk.ts:12676](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12676)
 
-• `set` **dirtyRectTolerance**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `number` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.dirtyRectTolerance
-
-#### Defined in
-
-[awtk.ts:12196](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12196)
-
-___
+***
 
 ### enable
 
-• `get` **enable**(): `boolean`
+> `get` **enable**(): `boolean`
 
 启用/禁用状态。
 
+> `set` **enable**(`v`): `void`
+
+#### Parameters
+
+• **v**: `boolean`
+
 #### Returns
 
 `boolean`
 
 #### Inherited from
 
-TComboBox.enable
+[`TComboBox`](TComboBox.md).[`enable`](TComboBox.md#enable)
 
 #### Defined in
 
-[awtk.ts:12073](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12073)
+[awtk.ts:12557](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12557)
 
-• `set` **enable**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.enable
-
-#### Defined in
-
-[awtk.ts:12077](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12077)
-
-___
+***
 
 ### feedback
 
-• `get` **feedback**(): `boolean`
+> `get` **feedback**(): `boolean`
 
 是否启用按键音、触屏音和震动等反馈。
 
+> `set` **feedback**(`v`): `void`
+
+#### Parameters
+
+• **v**: `boolean`
+
 #### Returns
 
 `boolean`
 
 #### Inherited from
 
-TComboBox.feedback
+[`TComboBox`](TComboBox.md).[`feedback`](TComboBox.md#feedback)
 
 #### Defined in
 
-[awtk.ts:12086](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12086)
+[awtk.ts:12570](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12570)
 
-• `set` **feedback**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.feedback
-
-#### Defined in
-
-[awtk.ts:12090](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12090)
-
-___
+***
 
 ### floating
 
-• `get` **floating**(): `boolean`
+> `get` **floating**(): `boolean`
 
 标识控件是否启用浮动布局，不受父控件的children_layout的控制。
 
+> `set` **floating**(`v`): `void`
+
+#### Parameters
+
+• **v**: `boolean`
+
 #### Returns
 
 `boolean`
 
 #### Inherited from
 
-TComboBox.floating
+[`TComboBox`](TComboBox.md).[`floating`](TComboBox.md#floating)
 
 #### Defined in
 
-[awtk.ts:12164](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12164)
+[awtk.ts:12648](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12648)
 
-• `set` **floating**(`v`): `void`
+***
+
+### focusNextWhenEnter
+
+> `get` **focusNextWhenEnter**(): `boolean`
+
+输入回车后是否跳到下一个控件中。
+
+> `set` **focusNextWhenEnter**(`v`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `v` | `boolean` |
+• **v**: `boolean`
 
 #### Returns
 
-`void`
+`boolean`
 
 #### Inherited from
 
-TComboBox.floating
+[`TComboBox`](TComboBox.md).[`focusNextWhenEnter`](TComboBox.md#focusnextwhenenter)
 
 #### Defined in
 
-[awtk.ts:12168](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12168)
+[awtk.ts:25746](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25746)
 
-___
+***
 
 ### focusable
 
-• `get` **focusable**(): `boolean`
+> `get` **focusable**(): `boolean`
 
 是否支持焦点停留。
+
+> `set` **focusable**(`v`): `void`
+
+#### Parameters
+
+• **v**: `boolean`
 
 #### Returns
 
@@ -702,37 +370,17 @@ ___
 
 #### Inherited from
 
-TComboBox.focusable
+[`TComboBox`](TComboBox.md).[`focusable`](TComboBox.md#focusable)
 
 #### Defined in
 
-[awtk.ts:12125](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12125)
+[awtk.ts:12609](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12609)
 
-• `set` **focusable**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.focusable
-
-#### Defined in
-
-[awtk.ts:12129](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12129)
-
-___
+***
 
 ### h
 
-• `get` **h**(): `number`
+> `get` **h**(): `number`
 
 高度。
 
@@ -742,59 +390,51 @@ ___
 
 #### Inherited from
 
-TComboBox.h
+[`TComboBox`](TComboBox.md).[`h`](TComboBox.md#h)
 
 #### Defined in
 
-[awtk.ts:12003](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12003)
+[awtk.ts:12487](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12487)
 
-___
+***
 
 ### inputType
 
-• `get` **inputType**(): [`TInputType`](../enums/TInputType.md)
+> `get` **inputType**(): [`TInputType`](../enumerations/TInputType.md)
 
 输入类型。
 
-#### Returns
-
-[`TInputType`](../enums/TInputType.md)
-
-#### Inherited from
-
-TComboBox.inputType
-
-#### Defined in
-
-[awtk.ts:24675](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24675)
-
-• `set` **inputType**(`v`): `void`
+> `set` **inputType**(`v`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `v` | [`TInputType`](../enums/TInputType.md) |
+• **v**: [`TInputType`](../enumerations/TInputType.md)
 
 #### Returns
 
-`void`
+[`TInputType`](../enumerations/TInputType.md)
 
 #### Inherited from
 
-TComboBox.inputType
+[`TComboBox`](TComboBox.md).[`inputType`](TComboBox.md#inputtype)
 
 #### Defined in
 
-[awtk.ts:24679](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24679)
+[awtk.ts:25635](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25635)
 
-___
+***
 
 ### itemHeight
 
-• `get` **itemHeight**(): `number`
+> `get` **itemHeight**(): `number`
 
 下拉选项的高度。如果open_window为空，则使用缺省高度。
+
+> `set` **itemHeight**(`v`): `void`
+
+#### Parameters
+
+• **v**: `number`
 
 #### Returns
 
@@ -802,39 +442,25 @@ ___
 
 #### Inherited from
 
-TComboBox.itemHeight
+[`TComboBox`](TComboBox.md).[`itemHeight`](TComboBox.md#itemheight)
 
 #### Defined in
 
-[awtk.ts:28327](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28327)
+[awtk.ts:29540](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29540)
 
-• `set` **itemHeight**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `number` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.itemHeight
-
-#### Defined in
-
-[awtk.ts:28331](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28331)
-
-___
+***
 
 ### keyboard
 
-• `get` **keyboard**(): `string`
+> `get` **keyboard**(): `string`
 
 自定义软键盘名称。AWTK优先查找keyboard属性设置的键盘文件名（该键盘的XML文件需要在default\raw\ui目录下存在），如果没有指定keyboard，就找input_type设置的键盘类型。如果指定为空字符串，则表示不需要软键盘。
+
+> `set` **keyboard**(`v`): `void`
+
+#### Parameters
+
+• **v**: `string`
 
 #### Returns
 
@@ -842,39 +468,25 @@ ___
 
 #### Inherited from
 
-TComboBox.keyboard
+[`TComboBox`](TComboBox.md).[`keyboard`](TComboBox.md#keyboard)
 
 #### Defined in
 
-[awtk.ts:24634](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24634)
+[awtk.ts:25594](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25594)
 
-• `set` **keyboard**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `string` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.keyboard
-
-#### Defined in
-
-[awtk.ts:24638](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24638)
-
-___
+***
 
 ### localizeOptions
 
-• `get` **localizeOptions**(): `boolean`
+> `get` **localizeOptions**(): `boolean`
 
 是否本地化(翻译)选项(缺省为TRUE)。
+
+> `set` **localizeOptions**(`v`): `void`
+
+#### Parameters
+
+• **v**: `boolean`
 
 #### Returns
 
@@ -882,37 +494,17 @@ ___
 
 #### Inherited from
 
-TComboBox.localizeOptions
+[`TComboBox`](TComboBox.md).[`localizeOptions`](TComboBox.md#localizeoptions)
 
 #### Defined in
 
-[awtk.ts:28298](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28298)
+[awtk.ts:29511](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29511)
 
-• `set` **localizeOptions**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.localizeOptions
-
-#### Defined in
-
-[awtk.ts:28302](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28302)
-
-___
+***
 
 ### max
 
-• `get` **max**(): `number`
+> `get` **max**(): `number`
 
 最大值或最大长度。
 
@@ -922,17 +514,17 @@ ___
 
 #### Inherited from
 
-TComboBox.max
+[`TComboBox`](TComboBox.md).[`max`](TComboBox.md#max)
 
 #### Defined in
 
-[awtk.ts:24656](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24656)
+[awtk.ts:25616](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25616)
 
-___
+***
 
 ### min
 
-• `get` **min**(): `number`
+> `get` **min**(): `number`
 
 最小值或最小长度。
 
@@ -942,19 +534,25 @@ ___
 
 #### Inherited from
 
-TComboBox.min
+[`TComboBox`](TComboBox.md).[`min`](TComboBox.md#min)
 
 #### Defined in
 
-[awtk.ts:24647](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24647)
+[awtk.ts:25607](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25607)
 
-___
+***
 
 ### name
 
-• `get` **name**(): `string`
+> `get` **name**(): `string`
 
 控件名字。
+
+> `set` **name**(`v`): `void`
+
+#### Parameters
+
+• **v**: `string`
 
 #### Returns
 
@@ -962,39 +560,25 @@ ___
 
 #### Inherited from
 
-TComboBox.name
+[`TComboBox`](TComboBox.md).[`name`](TComboBox.md#name)
 
 #### Defined in
 
-[awtk.ts:12012](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12012)
+[awtk.ts:12496](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12496)
 
-• `set` **name**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `string` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.name
-
-#### Defined in
-
-[awtk.ts:12016](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12016)
-
-___
+***
 
 ### opacity
 
-• `get` **opacity**(): `number`
+> `get` **opacity**(): `number`
 
 不透明度(0-255)，0完全透明，255完全不透明。
+
+> `set` **opacity**(`v`): `void`
+
+#### Parameters
+
+• **v**: `number`
 
 #### Returns
 
@@ -1002,41 +586,27 @@ ___
 
 #### Inherited from
 
-TComboBox.opacity
+[`TComboBox`](TComboBox.md).[`opacity`](TComboBox.md#opacity)
 
 #### Defined in
 
-[awtk.ts:12177](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12177)
+[awtk.ts:12661](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12661)
 
-• `set` **opacity**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `number` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.opacity
-
-#### Defined in
-
-[awtk.ts:12181](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12181)
-
-___
+***
 
 ### openImWhenFocused
 
-• `get` **openImWhenFocused**(): `boolean`
+> `get` **openImWhenFocused**(): `boolean`
 
 获得焦点时打开输入法。
 
 > 主要用于没有指针设备的情况，否则每次切换焦点时都打开输入法。
+
+> `set` **openImWhenFocused**(`v`): `void`
+
+#### Parameters
+
+• **v**: `boolean`
 
 #### Returns
 
@@ -1044,39 +614,25 @@ ___
 
 #### Inherited from
 
-TComboBox.openImWhenFocused
+[`TComboBox`](TComboBox.md).[`openImWhenFocused`](TComboBox.md#openimwhenfocused)
 
 #### Defined in
 
-[awtk.ts:24744](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24744)
+[awtk.ts:25704](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25704)
 
-• `set` **openImWhenFocused**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.openImWhenFocused
-
-#### Defined in
-
-[awtk.ts:24748](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24748)
-
-___
+***
 
 ### openWindow
 
-• `get` **openWindow**(): `string`
+> `get` **openWindow**(): `string`
 
 为点击按钮时，要打开窗口的名称。
+
+> `set` **openWindow**(`v`): `void`
+
+#### Parameters
+
+• **v**: `string`
 
 #### Returns
 
@@ -1084,80 +640,46 @@ ___
 
 #### Inherited from
 
-TComboBox.openWindow
+[`TComboBox`](TComboBox.md).[`openWindow`](TComboBox.md#openwindow)
 
 #### Defined in
 
-[awtk.ts:28246](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28246)
+[awtk.ts:29459](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29459)
 
-• `set` **openWindow**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `string` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.openWindow
-
-#### Defined in
-
-[awtk.ts:28250](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28250)
-
-___
+***
 
 ### options
 
-• `get` **options**(): `string`
+> `get` **options**(): `string`
 
 设置可选项(冒号分隔值和文本，分号分隔选项，如:1:red;2:green;3:blue)。
 > 如果数据本身中有英文冒号(:)和英文分号(;)，请用16进制转义。
 > * 英文冒号(:)写为\\x3a
 > * 英文冒号(;)写为\\x3b
 
+> `set` **options**(`v`): `void`
+
+#### Parameters
+
+• **v**: `string`
+
 #### Returns
 
 `string`
 
 #### Inherited from
 
-TComboBox.options
+[`TComboBox`](TComboBox.md).[`options`](TComboBox.md#options)
 
 #### Defined in
 
-[awtk.ts:28314](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28314)
+[awtk.ts:29527](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29527)
 
-• `set` **options**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `string` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.options
-
-#### Defined in
-
-[awtk.ts:28318](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28318)
-
-___
+***
 
 ### parent
 
-• `get` **parent**(): [`TWidget`](TWidget.md)
+> `get` **parent**(): [`TWidget`](TWidget.md)
 
 父控件
 
@@ -1167,19 +689,25 @@ ___
 
 #### Inherited from
 
-TComboBox.parent
+[`TComboBox`](TComboBox.md).[`parent`](TComboBox.md#parent)
 
 #### Defined in
 
-[awtk.ts:12205](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12205)
+[awtk.ts:12689](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12689)
 
-___
+***
 
 ### passwordVisible
 
-• `get` **passwordVisible**(): `boolean`
+> `get` **passwordVisible**(): `boolean`
 
 密码是否可见。
+
+> `set` **passwordVisible**(`v`): `void`
+
+#### Parameters
+
+• **v**: `boolean`
 
 #### Returns
 
@@ -1187,39 +715,25 @@ ___
 
 #### Inherited from
 
-TComboBox.passwordVisible
+[`TComboBox`](TComboBox.md).[`passwordVisible`](TComboBox.md#passwordvisible)
 
 #### Defined in
 
-[awtk.ts:24701](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24701)
+[awtk.ts:25661](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25661)
 
-• `set` **passwordVisible**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.passwordVisible
-
-#### Defined in
-
-[awtk.ts:24705](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24705)
-
-___
+***
 
 ### pointerCursor
 
-• `get` **pointerCursor**(): `string`
+> `get` **pointerCursor**(): `string`
 
 鼠标光标图片名称。
+
+> `set` **pointerCursor**(`v`): `void`
+
+#### Parameters
+
+• **v**: `string`
 
 #### Returns
 
@@ -1227,39 +741,25 @@ ___
 
 #### Inherited from
 
-TComboBox.pointerCursor
+[`TComboBox`](TComboBox.md).[`pointerCursor`](TComboBox.md#pointercursor)
 
 #### Defined in
 
-[awtk.ts:12025](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12025)
+[awtk.ts:12509](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12509)
 
-• `set` **pointerCursor**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `string` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.pointerCursor
-
-#### Defined in
-
-[awtk.ts:12029](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12029)
-
-___
+***
 
 ### readonly
 
-• `get` **readonly**(): `boolean`
+> `get` **readonly**(): `boolean`
 
 编辑器是否为只读。
+
+> `set` **readonly**(`v`): `void`
+
+#### Parameters
+
+• **v**: `boolean`
 
 #### Returns
 
@@ -1267,81 +767,53 @@ ___
 
 #### Inherited from
 
-TComboBox.readonly
+[`TComboBox`](TComboBox.md).[`readonly`](TComboBox.md#readonly)
 
 #### Defined in
 
-[awtk.ts:24688](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24688)
+[awtk.ts:25648](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25648)
 
-• `set` **readonly**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.readonly
-
-#### Defined in
-
-[awtk.ts:24692](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24692)
-
-___
+***
 
 ### selectNoneWhenFocused
 
-• `get` **selectNoneWhenFocused**(): `boolean`
+> `get` **selectNoneWhenFocused**(): `boolean`
 
 获得焦点时不选中文本。
 
 > 主要用于没有指针设备的情况，否则软键盘无法取消选中文本。
 
+> `set` **selectNoneWhenFocused**(`v`): `void`
+
+#### Parameters
+
+• **v**: `boolean`
+
 #### Returns
 
 `boolean`
 
 #### Inherited from
 
-TComboBox.selectNoneWhenFocused
+[`TComboBox`](TComboBox.md).[`selectNoneWhenFocused`](TComboBox.md#selectnonewhenfocused)
 
 #### Defined in
 
-[awtk.ts:24729](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24729)
+[awtk.ts:25689](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25689)
 
-• `set` **selectNoneWhenFocused**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.selectNoneWhenFocused
-
-#### Defined in
-
-[awtk.ts:24733](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24733)
-
-___
+***
 
 ### selectedIndex
 
-• `get` **selectedIndex**(): `number`
+> `get` **selectedIndex**(): `number`
 
 当前选中的选项。
+
+> `set` **selectedIndex**(`v`): `void`
+
+#### Parameters
+
+• **v**: `number`
 
 #### Returns
 
@@ -1349,39 +821,25 @@ ___
 
 #### Inherited from
 
-TComboBox.selectedIndex
+[`TComboBox`](TComboBox.md).[`selectedIndex`](TComboBox.md#selectedindex)
 
 #### Defined in
 
-[awtk.ts:28272](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28272)
+[awtk.ts:29485](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29485)
 
-• `set` **selectedIndex**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `number` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.selectedIndex
-
-#### Defined in
-
-[awtk.ts:28276](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28276)
-
-___
+***
 
 ### sensitive
 
-• `get` **sensitive**(): `boolean`
+> `get` **sensitive**(): `boolean`
 
 是否接受用户事件。
+
+> `set` **sensitive**(`v`): `void`
+
+#### Parameters
+
+• **v**: `boolean`
 
 #### Returns
 
@@ -1389,37 +847,17 @@ ___
 
 #### Inherited from
 
-TComboBox.sensitive
+[`TComboBox`](TComboBox.md).[`sensitive`](TComboBox.md#sensitive)
 
 #### Defined in
 
-[awtk.ts:12112](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12112)
+[awtk.ts:12596](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12596)
 
-• `set` **sensitive**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.sensitive
-
-#### Defined in
-
-[awtk.ts:12116](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12116)
-
-___
+***
 
 ### step
 
-• `get` **step**(): `number`
+> `get` **step**(): `number`
 
 步长。
 作为数值型编辑器时，一次增加和减少时的数值。
@@ -1430,17 +868,17 @@ ___
 
 #### Inherited from
 
-TComboBox.step
+[`TComboBox`](TComboBox.md).[`step`](TComboBox.md#step)
 
 #### Defined in
 
-[awtk.ts:24666](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24666)
+[awtk.ts:25626](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25626)
 
-___
+***
 
 ### style
 
-• `get` **style**(): `string`
+> `get` **style**(): `string`
 
 style的名称。
 
@@ -1450,139 +888,103 @@ style的名称。
 
 #### Inherited from
 
-TComboBox.style
+[`TComboBox`](TComboBox.md).[`style`](TComboBox.md#style)
 
 #### Defined in
 
-[awtk.ts:12051](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12051)
+[awtk.ts:12535](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12535)
 
-___
+***
 
 ### themeOfPopup
 
-• `get` **themeOfPopup**(): `string`
+> `get` **themeOfPopup**(): `string`
 
 弹出窗口的主题(对应的style文件必须存在)，方便为不同combo box的弹出窗口指定不同的样式。
 
+> `set` **themeOfPopup**(`v`): `void`
+
+#### Parameters
+
+• **v**: `string`
+
 #### Returns
 
 `string`
 
 #### Inherited from
 
-TComboBox.themeOfPopup
+[`TComboBox`](TComboBox.md).[`themeOfPopup`](TComboBox.md#themeofpopup)
 
 #### Defined in
 
-[awtk.ts:28259](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28259)
+[awtk.ts:29472](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29472)
 
-• `set` **themeOfPopup**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `string` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.themeOfPopup
-
-#### Defined in
-
-[awtk.ts:28263](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28263)
-
-___
+***
 
 ### tips
 
-• `get` **tips**(): `string`
+> `get` **tips**(): `string`
 
 输入提示。
 
+> `set` **tips**(`v`): `void`
+
+#### Parameters
+
+• **v**: `string`
+
 #### Returns
 
 `string`
 
 #### Inherited from
 
-TComboBox.tips
+[`TComboBox`](TComboBox.md).[`tips`](TComboBox.md#tips)
 
 #### Defined in
 
-[awtk.ts:24590](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24590)
+[awtk.ts:25539](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25539)
 
-• `set` **tips**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `string` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.tips
-
-#### Defined in
-
-[awtk.ts:24594](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24594)
-
-___
+***
 
 ### trText
 
-• `get` **trText**(): `string`
+> `get` **trText**(): `string`
 
 保存用于翻译的字符串。
 
+> `set` **trText**(`v`): `void`
+
+#### Parameters
+
+• **v**: `string`
+
 #### Returns
 
 `string`
 
 #### Inherited from
 
-TComboBox.trText
+[`TComboBox`](TComboBox.md).[`trText`](TComboBox.md#trtext)
 
 #### Defined in
 
-[awtk.ts:12038](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12038)
+[awtk.ts:12522](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12522)
 
-• `set` **trText**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `string` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.trText
-
-#### Defined in
-
-[awtk.ts:12042](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12042)
-
-___
+***
 
 ### trTips
 
-• `get` **trTips**(): `string`
+> `get` **trTips**(): `string`
 
 保存用于翻译的提示信息。
+
+> `set` **trTips**(`v`): `void`
+
+#### Parameters
+
+• **v**: `string`
 
 #### Returns
 
@@ -1590,39 +992,47 @@ ___
 
 #### Inherited from
 
-TComboBox.trTips
+[`TComboBox`](TComboBox.md).[`trTips`](TComboBox.md#trtips)
 
 #### Defined in
 
-[awtk.ts:24603](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24603)
+[awtk.ts:25552](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25552)
 
-• `set` **trTips**(`v`): `void`
+***
 
-#### Parameters
+### validator
 
-| Name | Type |
-| :------ | :------ |
-| `v` | `string` |
+> `get` **validator**(): `string`
+
+fscript脚本，用输入校验，如：(len(text) 3) && (len(text) < 10)。
+
+> 用于校验输入的文本是否合法。
 
 #### Returns
 
-`void`
+`string`
 
 #### Inherited from
 
-TComboBox.trTips
+[`TComboBox`](TComboBox.md).[`validator`](TComboBox.md#validator)
 
 #### Defined in
 
-[awtk.ts:24607](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24607)
+[awtk.ts:25585](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25585)
 
-___
+***
 
 ### value
 
-• `get` **value**(): `number`
+> `get` **value**(): `number`
 
 值。
+
+> `set` **value**(`v`): `void`
+
+#### Parameters
+
+• **v**: `number`
 
 #### Returns
 
@@ -1630,39 +1040,25 @@ ___
 
 #### Inherited from
 
-TComboBox.value
+[`TComboBox`](TComboBox.md).[`value`](TComboBox.md#value)
 
 #### Defined in
 
-[awtk.ts:28285](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28285)
+[awtk.ts:29498](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29498)
 
-• `set` **value**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `number` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.value
-
-#### Defined in
-
-[awtk.ts:28289](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28289)
-
-___
+***
 
 ### visible
 
-• `get` **visible**(): `boolean`
+> `get` **visible**(): `boolean`
 
 是否可见。
+
+> `set` **visible**(`v`): `void`
+
+#### Parameters
+
+• **v**: `boolean`
 
 #### Returns
 
@@ -1670,37 +1066,17 @@ ___
 
 #### Inherited from
 
-TComboBox.visible
+[`TComboBox`](TComboBox.md).[`visible`](TComboBox.md#visible)
 
 #### Defined in
 
-[awtk.ts:12099](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12099)
+[awtk.ts:12583](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12583)
 
-• `set` **visible**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TComboBox.visible
-
-#### Defined in
-
-[awtk.ts:12103](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12103)
-
-___
+***
 
 ### w
 
-• `get` **w**(): `number`
+> `get` **w**(): `number`
 
 宽度。
 
@@ -1710,17 +1086,17 @@ ___
 
 #### Inherited from
 
-TComboBox.w
+[`TComboBox`](TComboBox.md).[`w`](TComboBox.md#w)
 
 #### Defined in
 
-[awtk.ts:11994](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11994)
+[awtk.ts:12478](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12478)
 
-___
+***
 
 ### withFocusState
 
-• `get` **withFocusState**(): `boolean`
+> `get` **withFocusState**(): `boolean`
 
 是否支持焦点状态。
 > 如果希望style支持焦点状态，但又不希望焦点停留，可用本属性。
@@ -1731,17 +1107,17 @@ ___
 
 #### Inherited from
 
-TComboBox.withFocusState
+[`TComboBox`](TComboBox.md).[`withFocusState`](TComboBox.md#withfocusstate)
 
 #### Defined in
 
-[awtk.ts:12139](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12139)
+[awtk.ts:12623](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12623)
 
-___
+***
 
 ### x
 
-• `get` **x**(): `number`
+> `get` **x**(): `number`
 
 x坐标(相对于父控件的x坐标)。
 
@@ -1751,17 +1127,17 @@ x坐标(相对于父控件的x坐标)。
 
 #### Inherited from
 
-TComboBox.x
+[`TComboBox`](TComboBox.md).[`x`](TComboBox.md#x)
 
 #### Defined in
 
-[awtk.ts:11976](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11976)
+[awtk.ts:12460](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12460)
 
-___
+***
 
 ### y
 
-• `get` **y**(): `number`
+> `get` **y**(): `number`
 
 y坐标(相对于父控件的y坐标)。
 
@@ -1771,242 +1147,248 @@ y坐标(相对于父控件的y坐标)。
 
 #### Inherited from
 
-TComboBox.y
+[`TComboBox`](TComboBox.md).[`y`](TComboBox.md#y)
 
 #### Defined in
 
-[awtk.ts:11985](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11985)
+[awtk.ts:12469](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12469)
 
 ## Methods
 
-### addChild
+### addChild()
 
-▸ **addChild**(`child`): [`TRet`](../enums/TRet.md)
+> **addChild**(`child`): [`TRet`](../enumerations/TRet.md)
 
 加入一个子控件。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `child` | [`TWidget`](TWidget.md) | 子控件对象。 |
+• **child**: [`TWidget`](TWidget.md)
+
+子控件对象。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[addChild](TComboBox.md#addchild)
+[`TComboBox`](TComboBox.md).[`addChild`](TComboBox.md#addchild)
 
 #### Defined in
 
-[awtk.ts:11130](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11130)
+[awtk.ts:11551](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11551)
 
-___
+***
 
-### addChildDefault
+### addChildDefault()
 
-▸ **addChildDefault**(`child`): [`TRet`](../enums/TRet.md)
+> **addChildDefault**(`child`): [`TRet`](../enumerations/TRet.md)
 
 加入一个子控件默认实现(供子类调用)。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `child` | [`TWidget`](TWidget.md) | 子控件对象。 |
+• **child**: [`TWidget`](TWidget.md)
+
+子控件对象。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[addChildDefault](TComboBox.md#addchilddefault)
+[`TComboBox`](TComboBox.md).[`addChildDefault`](TComboBox.md#addchilddefault)
 
 #### Defined in
 
-[awtk.ts:11967](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11967)
+[awtk.ts:12451](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12451)
 
-___
+***
 
-### addValue
+### addValue()
 
-▸ **addValue**(`delta`): [`TRet`](../enums/TRet.md)
+> **addValue**(`delta`): [`TRet`](../enumerations/TRet.md)
 
 增加控件的值。
 只是对widget\_set\_prop的包装，值的意义由子类控件决定。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `delta` | `number` | 增量。 |
+• **delta**: `number`
+
+增量。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[addValue](TComboBox.md#addvalue)
+[`TComboBox`](TComboBox.md).[`addValue`](TComboBox.md#addvalue)
 
 #### Defined in
 
-[awtk.ts:10573](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10573)
+[awtk.ts:10972](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10972)
 
-___
+***
 
-### addValueInt
+### addValueInt()
 
-▸ **addValueInt**(`delta`): [`TRet`](../enums/TRet.md)
+> **addValueInt**(`delta`): [`TRet`](../enumerations/TRet.md)
 
 增加控件的值。
 只是对widget\_set\_prop的包装，值的意义由子类控件决定。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `delta` | `number` | 增量。 |
+• **delta**: `number`
+
+增量。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[addValueInt](TComboBox.md#addvalueint)
+[`TComboBox`](TComboBox.md).[`addValueInt`](TComboBox.md#addvalueint)
 
 #### Defined in
 
-[awtk.ts:10610](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10610)
+[awtk.ts:11009](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11009)
 
-___
+***
 
-### animateValueTo
+### animateValueTo()
 
-▸ **animateValueTo**(`value`, `duration`): [`TRet`](../enums/TRet.md)
+> **animateValueTo**(`value`, `duration`): [`TRet`](../enumerations/TRet.md)
 
 设置控件的值(以动画形式变化到指定的值)。
 只是对widget\_set\_prop的包装，值的意义由子类控件决定。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `any` | 值。 |
-| `duration` | `number` | 动画持续时间(毫秒)。 |
+• **value**: `any`
+
+值。
+
+• **duration**: `number`
+
+动画持续时间(毫秒)。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[animateValueTo](TComboBox.md#animatevalueto)
+[`TComboBox`](TComboBox.md).[`animateValueTo`](TComboBox.md#animatevalueto)
 
 #### Defined in
 
-[awtk.ts:10624](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10624)
+[awtk.ts:11023](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11023)
 
-___
+***
 
-### appendOption
+### appendOption()
 
-▸ **appendOption**(`value`, `text`): [`TRet`](../enums/TRet.md)
+> **appendOption**(`value`, `text`): [`TRet`](../enumerations/TRet.md)
 
 追加一个选项。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `any` | 值。 |
-| `text` | `string` | 文本。 |
+• **value**: `any`
+
+值。
+
+• **text**: `string`
+
+文本。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[appendOption](TComboBox.md#appendoption)
+[`TComboBox`](TComboBox.md).[`appendOption`](TComboBox.md#appendoption)
 
 #### Defined in
 
-[awtk.ts:28168](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28168)
+[awtk.ts:29369](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29369)
 
-___
+***
 
-### back
+### back()
 
-▸ **back**(): [`TRet`](../enums/TRet.md)
+> **back**(): [`TRet`](../enumerations/TRet.md)
 
 请求返回到前一个窗口。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[back](TComboBox.md#back)
+[`TComboBox`](TComboBox.md).[`back`](TComboBox.md#back)
 
 #### Defined in
 
-[awtk.ts:10457](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10457)
+[awtk.ts:10856](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10856)
 
-___
+***
 
-### backToHome
+### backToHome()
 
-▸ **backToHome**(): [`TRet`](../enums/TRet.md)
+> **backToHome**(): [`TRet`](../enumerations/TRet.md)
 
 请求返回到home窗口。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[backToHome](TComboBox.md#backtohome)
+[`TComboBox`](TComboBox.md).[`backToHome`](TComboBox.md#backtohome)
 
 #### Defined in
 
-[awtk.ts:10468](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10468)
+[awtk.ts:10867](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10867)
 
-___
+***
 
-### child
+### child()
 
-▸ **child**(`name`): [`TWidget`](TWidget.md)
+> **child**(`name`): [`TWidget`](TWidget.md)
 
 查找指定名称的子控件(同widget_lookup(widget, name, FALSE))。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 子控件的名称。 |
+• **name**: `string`
+
+子控件的名称。
 
 #### Returns
 
@@ -2016,25 +1398,25 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[child](TComboBox.md#child)
+[`TComboBox`](TComboBox.md).[`child`](TComboBox.md#child)
 
 #### Defined in
 
-[awtk.ts:11179](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11179)
+[awtk.ts:11600](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11600)
 
-___
+***
 
-### clone
+### clone()
 
-▸ **clone**(`parent`): [`TWidget`](TWidget.md)
+> **clone**(`parent`): [`TWidget`](TWidget.md)
 
 clone。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `parent` | [`TWidget`](TWidget.md) | clone新控件的parent对象。 |
+• **parent**: [`TWidget`](TWidget.md)
+
+clone新控件的parent对象。
 
 #### Returns
 
@@ -2044,61 +1426,61 @@ clone。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[clone](TComboBox.md#clone)
+[`TComboBox`](TComboBox.md).[`clone`](TComboBox.md#clone)
 
 #### Defined in
 
-[awtk.ts:11650](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11650)
+[awtk.ts:12124](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12124)
 
-___
+***
 
-### closeWindow
+### closeWindow()
 
-▸ **closeWindow**(): [`TRet`](../enums/TRet.md)
+> **closeWindow**(): [`TRet`](../enumerations/TRet.md)
 
 关闭控件所在的窗口。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[closeWindow](TComboBox.md#closewindow)
+[`TComboBox`](TComboBox.md).[`closeWindow`](TComboBox.md#closewindow)
 
 #### Defined in
 
-[awtk.ts:10435](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10435)
+[awtk.ts:10834](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10834)
 
-___
+***
 
-### closeWindowForce
+### closeWindowForce()
 
-▸ **closeWindowForce**(): [`TRet`](../enums/TRet.md)
+> **closeWindowForce**(): [`TRet`](../enumerations/TRet.md)
 
 关闭控件所在的窗口。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[closeWindowForce](TComboBox.md#closewindowforce)
+[`TComboBox`](TComboBox.md).[`closeWindowForce`](TComboBox.md#closewindowforce)
 
 #### Defined in
 
-[awtk.ts:10446](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10446)
+[awtk.ts:10845](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10845)
 
-___
+***
 
-### countChildren
+### countChildren()
 
-▸ **countChildren**(): `number`
+> **countChildren**(): `number`
 
 获取子控件的个数。
 
@@ -2110,17 +1492,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[countChildren](TComboBox.md#countchildren)
+[`TComboBox`](TComboBox.md).[`countChildren`](TComboBox.md#countchildren)
 
 #### Defined in
 
-[awtk.ts:10355](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10355)
+[awtk.ts:10754](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10754)
 
-___
+***
 
-### countOptions
+### countOptions()
 
-▸ **countOptions**(): `number`
+> **countOptions**(): `number`
 
 获取选项个数。
 
@@ -2132,17 +1514,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[countOptions](TComboBox.md#countoptions)
+[`TComboBox`](TComboBox.md).[`countOptions`](TComboBox.md#countoptions)
 
 #### Defined in
 
-[awtk.ts:28095](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28095)
+[awtk.ts:29296](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29296)
 
-___
+***
 
-### createAnimator
+### createAnimator()
 
-▸ **createAnimator**(`animation`): [`TRet`](../enums/TRet.md)
+> **createAnimator**(`animation`): [`TRet`](../enumerations/TRet.md)
 
 创建动画。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
@@ -2152,29 +1534,29 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `animation` | `string` | 动画参数。 |
+• **animation**: `string`
+
+动画参数。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[createAnimator](TComboBox.md#createanimator)
+[`TComboBox`](TComboBox.md).[`createAnimator`](TComboBox.md#createanimator)
 
 #### Defined in
 
-[awtk.ts:10910](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10910)
+[awtk.ts:11331](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11331)
 
-___
+***
 
-### destroy
+### destroy()
 
-▸ **destroy**(): [`TRet`](../enums/TRet.md)
+> **destroy**(): [`TRet`](../enumerations/TRet.md)
 
 从父控件中移除控件，并调用unref函数销毁控件。
 
@@ -2182,23 +1564,23 @@ ___
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[destroy](TComboBox.md#destroy)
+[`TComboBox`](TComboBox.md).[`destroy`](TComboBox.md#destroy)
 
 #### Defined in
 
-[awtk.ts:11687](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11687)
+[awtk.ts:12161](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12161)
 
-___
+***
 
-### destroyAnimator
+### destroyAnimator()
 
-▸ **destroyAnimator**(`name`): [`TRet`](../enums/TRet.md)
+> **destroyAnimator**(`name`): [`TRet`](../enumerations/TRet.md)
 
 销毁动画。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
@@ -2209,29 +1591,29 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 动画名称。 |
+• **name**: `string`
+
+动画名称。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[destroyAnimator](TComboBox.md#destroyanimator)
+[`TComboBox`](TComboBox.md).[`destroyAnimator`](TComboBox.md#destroyanimator)
 
 #### Defined in
 
-[awtk.ts:10996](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10996)
+[awtk.ts:11417](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11417)
 
-___
+***
 
-### destroyAsync
+### destroyAsync()
 
-▸ **destroyAsync**(): [`TRet`](../enums/TRet.md)
+> **destroyAsync**(): [`TRet`](../enumerations/TRet.md)
 
 从父控件中移除控件，并调用unref函数销毁控件。
 
@@ -2239,109 +1621,109 @@ ___
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[destroyAsync](TComboBox.md#destroyasync)
+[`TComboBox`](TComboBox.md).[`destroyAsync`](TComboBox.md#destroyasync)
 
 #### Defined in
 
-[awtk.ts:11700](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11700)
+[awtk.ts:12174](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12174)
 
-___
+***
 
-### destroyChildren
+### destroyChildren()
 
-▸ **destroyChildren**(): [`TRet`](../enums/TRet.md)
+> **destroyChildren**(): [`TRet`](../enumerations/TRet.md)
 
 销毁全部子控件。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[destroyChildren](TComboBox.md#destroychildren)
+[`TComboBox`](TComboBox.md).[`destroyChildren`](TComboBox.md#destroychildren)
 
 #### Defined in
 
-[awtk.ts:11118](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11118)
+[awtk.ts:11539](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11539)
 
-___
+***
 
-### dispatchToKeyTarget
+### dispatchToKeyTarget()
 
-▸ **dispatchToKeyTarget**(`e`): [`TRet`](../enums/TRet.md)
+> **dispatchToKeyTarget**(`e`): [`TRet`](../enumerations/TRet.md)
 
 递归的分发一个事件到所有key_target子控件。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `e` | [`TEvent`](TEvent.md) | 事件。 |
+• **e**: [`TEvent`](TEvent.md)
+
+事件。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[dispatchToKeyTarget](TComboBox.md#dispatchtokeytarget)
+[`TComboBox`](TComboBox.md).[`dispatchToKeyTarget`](TComboBox.md#dispatchtokeytarget)
 
 #### Defined in
 
-[awtk.ts:11776](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11776)
+[awtk.ts:12250](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12250)
 
-___
+***
 
-### dispatchToTarget
+### dispatchToTarget()
 
-▸ **dispatchToTarget**(`e`): [`TRet`](../enums/TRet.md)
+> **dispatchToTarget**(`e`): [`TRet`](../enumerations/TRet.md)
 
 递归的分发一个事件到所有target子控件。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `e` | [`TEvent`](TEvent.md) | 事件。 |
+• **e**: [`TEvent`](TEvent.md)
+
+事件。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[dispatchToTarget](TComboBox.md#dispatchtotarget)
+[`TComboBox`](TComboBox.md).[`dispatchToTarget`](TComboBox.md#dispatchtotarget)
 
 #### Defined in
 
-[awtk.ts:11764](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11764)
+[awtk.ts:12238](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12238)
 
-___
+***
 
-### equal
+### equal()
 
-▸ **equal**(`other`): `boolean`
+> **equal**(`other`): `boolean`
 
 判断两个widget是否相同。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `other` | [`TWidget`](TWidget.md) | 要比较的控件对象。 |
+• **other**: [`TWidget`](TWidget.md)
+
+要比较的控件对象。
 
 #### Returns
 
@@ -2351,85 +1733,97 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[equal](TComboBox.md#equal)
+[`TComboBox`](TComboBox.md).[`equal`](TComboBox.md#equal)
 
 #### Defined in
 
-[awtk.ts:11662](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11662)
+[awtk.ts:12136](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12136)
 
-___
+***
 
-### fillBgRect
+### fillBgRect()
 
-▸ **fillBgRect**(`c`, `r`, `draw_type`): [`TRet`](../enums/TRet.md)
+> **fillBgRect**(`c`, `r`, `draw_type`): [`TRet`](../enumerations/TRet.md)
 
 根据控件的style绘制背景矩形。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `c` | [`TCanvas`](TCanvas.md) | 画布对象。 |
-| `r` | [`TRect`](TRect.md) | 矩形区域。 |
-| `draw_type` | [`TImageDrawType`](../enums/TImageDrawType.md) | 图片缺省绘制方式。 |
+• **c**: [`TCanvas`](TCanvas.md)
+
+画布对象。
+
+• **r**: [`TRect`](TRect.md)
+
+矩形区域。
+
+• **draw\_type**: [`TImageDrawType`](../enumerations/TImageDrawType.md)
+
+图片缺省绘制方式。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[fillBgRect](TComboBox.md#fillbgrect)
+[`TComboBox`](TComboBox.md).[`fillBgRect`](TComboBox.md#fillbgrect)
 
 #### Defined in
 
-[awtk.ts:11738](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11738)
+[awtk.ts:12212](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12212)
 
-___
+***
 
-### fillFgRect
+### fillFgRect()
 
-▸ **fillFgRect**(`c`, `r`, `draw_type`): [`TRet`](../enums/TRet.md)
+> **fillFgRect**(`c`, `r`, `draw_type`): [`TRet`](../enumerations/TRet.md)
 
 根据控件的style绘制前景矩形。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `c` | [`TCanvas`](TCanvas.md) | 画布对象。 |
-| `r` | [`TRect`](TRect.md) | 矩形区域。 |
-| `draw_type` | [`TImageDrawType`](../enums/TImageDrawType.md) | 图片缺省绘制方式。 |
+• **c**: [`TCanvas`](TCanvas.md)
+
+画布对象。
+
+• **r**: [`TRect`](TRect.md)
+
+矩形区域。
+
+• **draw\_type**: [`TImageDrawType`](../enumerations/TImageDrawType.md)
+
+图片缺省绘制方式。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[fillFgRect](TComboBox.md#fillfgrect)
+[`TComboBox`](TComboBox.md).[`fillFgRect`](TComboBox.md#fillfgrect)
 
 #### Defined in
 
-[awtk.ts:11752](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11752)
+[awtk.ts:12226](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12226)
 
-___
+***
 
-### findParentByName
+### findParentByName()
 
-▸ **findParentByName**(`name`): [`TWidget`](TWidget.md)
+> **findParentByName**(`name`): [`TWidget`](TWidget.md)
 
 通过名称查找父控件。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 名称。 |
+• **name**: `string`
+
+名称。
 
 #### Returns
 
@@ -2439,25 +1833,25 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[findParentByName](TComboBox.md#findparentbyname)
+[`TComboBox`](TComboBox.md).[`findParentByName`](TComboBox.md#findparentbyname)
 
 #### Defined in
 
-[awtk.ts:10379](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10379)
+[awtk.ts:10778](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10778)
 
-___
+***
 
-### findParentByType
+### findParentByType()
 
-▸ **findParentByType**(`type`): [`TWidget`](TWidget.md)
+> **findParentByType**(`type`): [`TWidget`](TWidget.md)
 
 通过类型查找父控件。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `string` | 类型。 |
+• **type**: `string`
+
+类型。
 
 #### Returns
 
@@ -2467,17 +1861,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[findParentByType](TComboBox.md#findparentbytype)
+[`TComboBox`](TComboBox.md).[`findParentByType`](TComboBox.md#findparentbytype)
 
 #### Defined in
 
-[awtk.ts:10391](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10391)
+[awtk.ts:10790](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10790)
 
-___
+***
 
-### focusNext
+### focusNext()
 
-▸ **focusNext**(): [`TRet`](../enums/TRet.md)
+> **focusNext**(): [`TRet`](../enumerations/TRet.md)
 
 把焦点移动下一个控件。
 
@@ -2485,23 +1879,23 @@ ___
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[focusNext](TComboBox.md#focusnext)
+[`TComboBox`](TComboBox.md).[`focusNext`](TComboBox.md#focusnext)
 
 #### Defined in
 
-[awtk.ts:11833](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11833)
+[awtk.ts:12307](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12307)
 
-___
+***
 
-### focusPrev
+### focusPrev()
 
-▸ **focusPrev**(): [`TRet`](../enums/TRet.md)
+> **focusPrev**(): [`TRet`](../enumerations/TRet.md)
 
 把焦点移动前一个控件。
 
@@ -2509,52 +1903,55 @@ ___
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[focusPrev](TComboBox.md#focusprev)
+[`TComboBox`](TComboBox.md).[`focusPrev`](TComboBox.md#focusprev)
 
 #### Defined in
 
-[awtk.ts:11846](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11846)
+[awtk.ts:12320](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12320)
 
-___
+***
 
-### foreach
+### foreach()
 
-▸ **foreach**(`visit`, `ctx`): [`TRet`](../enums/TRet.md)
+> **foreach**(`visit`, `ctx`): [`TRet`](../enumerations/TRet.md)
 
 遍历当前控件及子控件。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `visit` | `Function` | 遍历的回调函数。 |
-| `ctx` | `any` | 回调函数的上下文。 |
+• **visit**: `Function`
+
+遍历的回调函数。
+
+• **ctx**: `any`
+
+回调函数的上下文。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[foreach](TComboBox.md#foreach)
+[`TComboBox`](TComboBox.md).[`foreach`](TComboBox.md#foreach)
 
 #### Defined in
 
-[awtk.ts:11605](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11605)
+[awtk.ts:12079](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12079)
 
-___
+***
 
-### getAutoAdjustSize
+### getAutoAdjustSize()
 
-▸ **getAutoAdjustSize**(): `boolean`
+> **getAutoAdjustSize**(): `boolean`
 
 获取控件auto_adjust_size属性值。
 
@@ -2566,25 +1963,25 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getAutoAdjustSize](TComboBox.md#getautoadjustsize)
+[`TComboBox`](TComboBox.md).[`getAutoAdjustSize`](TComboBox.md#getautoadjustsize)
 
 #### Defined in
 
-[awtk.ts:10763](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10763)
+[awtk.ts:11184](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11184)
 
-___
+***
 
-### getChild
+### getChild()
 
-▸ **getChild**(`index`): [`TWidget`](TWidget.md)
+> **getChild**(`index`): [`TWidget`](TWidget.md)
 
 获取指定索引的子控件。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `index` | `number` | 索引。 |
+• **index**: `number`
+
+索引。
 
 #### Returns
 
@@ -2594,17 +1991,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getChild](TComboBox.md#getchild)
+[`TComboBox`](TComboBox.md).[`getChild`](TComboBox.md#getchild)
 
 #### Defined in
 
-[awtk.ts:10367](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10367)
+[awtk.ts:10766](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10766)
 
-___
+***
 
-### getCursor
+### getCursor()
 
-▸ **getCursor**(): `number`
+> **getCursor**(): `number`
 
 获取输入框的光标位置。
 
@@ -2616,17 +2013,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getCursor](TComboBox.md#getcursor)
+[`TComboBox`](TComboBox.md).[`getCursor`](TComboBox.md#getcursor)
 
 #### Defined in
 
-[awtk.ts:24556](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24556)
+[awtk.ts:25493](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25493)
 
-___
+***
 
-### getDouble
+### getDouble()
 
-▸ **getDouble**(): `number`
+> **getDouble**(): `number`
 
 获取double类型的值。
 
@@ -2638,17 +2035,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getDouble](TComboBox.md#getdouble)
+[`TComboBox`](TComboBox.md).[`getDouble`](TComboBox.md#getdouble)
 
 #### Defined in
 
-[awtk.ts:24296](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24296)
+[awtk.ts:25233](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25233)
 
-___
+***
 
-### getEnable
+### getEnable()
 
-▸ **getEnable**(): `boolean`
+> **getEnable**(): `boolean`
 
 获取控件enable属性值。
 
@@ -2660,17 +2057,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getEnable](TComboBox.md#getenable)
+[`TComboBox`](TComboBox.md).[`getEnable`](TComboBox.md#getenable)
 
 #### Defined in
 
-[awtk.ts:10741](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10741)
+[awtk.ts:11162](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11162)
 
-___
+***
 
-### getFeedback
+### getFeedback()
 
-▸ **getFeedback**(): `boolean`
+> **getFeedback**(): `boolean`
 
 获取控件feedback属性值。
 
@@ -2682,17 +2079,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getFeedback](TComboBox.md#getfeedback)
+[`TComboBox`](TComboBox.md).[`getFeedback`](TComboBox.md#getfeedback)
 
 #### Defined in
 
-[awtk.ts:10818](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10818)
+[awtk.ts:11239](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11239)
 
-___
+***
 
-### getFloating
+### getFloating()
 
-▸ **getFloating**(): `boolean`
+> **getFloating**(): `boolean`
 
 获取控件floating属性值。
 
@@ -2704,17 +2101,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getFloating](TComboBox.md#getfloating)
+[`TComboBox`](TComboBox.md).[`getFloating`](TComboBox.md#getfloating)
 
 #### Defined in
 
-[awtk.ts:10752](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10752)
+[awtk.ts:11173](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11173)
 
-___
+***
 
-### getFocusable
+### getFocusable()
 
-▸ **getFocusable**(): `boolean`
+> **getFocusable**(): `boolean`
 
 获取控件focusable属性值。
 
@@ -2726,17 +2123,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getFocusable](TComboBox.md#getfocusable)
+[`TComboBox`](TComboBox.md).[`getFocusable`](TComboBox.md#getfocusable)
 
 #### Defined in
 
-[awtk.ts:10785](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10785)
+[awtk.ts:11206](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11206)
 
-___
+***
 
-### getFocusedWidget
+### getFocusedWidget()
 
-▸ **getFocusedWidget**(): [`TWidget`](TWidget.md)
+> **getFocusedWidget**(): [`TWidget`](TWidget.md)
 
 获取当前窗口中的焦点控件。
 
@@ -2748,17 +2145,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getFocusedWidget](TComboBox.md#getfocusedwidget)
+[`TComboBox`](TComboBox.md).[`getFocusedWidget`](TComboBox.md#getfocusedwidget)
 
 #### Defined in
 
-[awtk.ts:10402](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10402)
+[awtk.ts:10801](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10801)
 
-___
+***
 
-### getInt
+### getInt()
 
-▸ **getInt**(): `number`
+> **getInt**(): `number`
 
 获取int类型的值。
 
@@ -2770,17 +2167,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getInt](TComboBox.md#getint)
+[`TComboBox`](TComboBox.md).[`getInt`](TComboBox.md#getint)
 
 #### Defined in
 
-[awtk.ts:24285](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24285)
+[awtk.ts:25222](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25222)
 
-___
+***
 
-### getNativeWindow
+### getNativeWindow()
 
-▸ **getNativeWindow**(): [`TNativeWindow`](TNativeWindow.md)
+> **getNativeWindow**(): [`TNativeWindow`](TNativeWindow.md)
 
 获取原生窗口对象。
 
@@ -2792,26 +2189,61 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getNativeWindow](TComboBox.md#getnativewindow)
+[`TComboBox`](TComboBox.md).[`getNativeWindow`](TComboBox.md#getnativewindow)
 
 #### Defined in
 
-[awtk.ts:10413](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10413)
+[awtk.ts:10812](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10812)
 
-___
+***
 
-### getPropBool
+### getProp()
 
-▸ **getPropBool**(`name`, `defval`): `boolean`
+> **getProp**(`name`, `v`): [`TRet`](../enumerations/TRet.md)
+
+获取控件指定属性的值。
+
+#### Parameters
+
+• **name**: `string`
+
+属性的名称。
+
+• **v**: [`TValue`](TValue.md)
+
+返回属性的值。
+
+#### Returns
+
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
+
+#### Inherited from
+
+[`TComboBox`](TComboBox.md).[`getProp`](TComboBox.md#getprop)
+
+#### Defined in
+
+[awtk.ts:11716](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11716)
+
+***
+
+### getPropBool()
+
+> **getPropBool**(`name`, `defval`): `boolean`
 
 获取布尔格式的属性。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `defval` | `boolean` | 缺省值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **defval**: `boolean`
+
+缺省值。
 
 #### Returns
 
@@ -2821,26 +2253,29 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getPropBool](TComboBox.md#getpropbool)
+[`TComboBox`](TComboBox.md).[`getPropBool`](TComboBox.md#getpropbool)
 
 #### Defined in
 
-[awtk.ts:11424](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11424)
+[awtk.ts:11871](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11871)
 
-___
+***
 
-### getPropFloat
+### getPropFloat()
 
-▸ **getPropFloat**(`name`, `defval`): `number`
+> **getPropFloat**(`name`, `defval`): `number`
 
 获取浮点数格式的属性。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `defval` | `number` | 缺省值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **defval**: `number`
+
+缺省值。
 
 #### Returns
 
@@ -2850,26 +2285,29 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getPropFloat](TComboBox.md#getpropfloat)
+[`TComboBox`](TComboBox.md).[`getPropFloat`](TComboBox.md#getpropfloat)
 
 #### Defined in
 
-[awtk.ts:11372](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11372)
+[awtk.ts:11819](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11819)
 
-___
+***
 
-### getPropInt
+### getPropInt()
 
-▸ **getPropInt**(`name`, `defval`): `number`
+> **getPropInt**(`name`, `defval`): `number`
 
 获取整数格式的属性。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `defval` | `number` | 缺省值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **defval**: `number`
+
+缺省值。
 
 #### Returns
 
@@ -2879,25 +2317,25 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getPropInt](TComboBox.md#getpropint)
+[`TComboBox`](TComboBox.md).[`getPropInt`](TComboBox.md#getpropint)
 
 #### Defined in
 
-[awtk.ts:11398](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11398)
+[awtk.ts:11845](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11845)
 
-___
+***
 
-### getPropPointer
+### getPropPointer()
 
-▸ **getPropPointer**(`name`): `any`
+> **getPropPointer**(`name`): `any`
 
 获取指针格式的属性。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
+• **name**: `string`
+
+属性的名称。
 
 #### Returns
 
@@ -2907,26 +2345,29 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getPropPointer](TComboBox.md#getproppointer)
+[`TComboBox`](TComboBox.md).[`getPropPointer`](TComboBox.md#getproppointer)
 
 #### Defined in
 
-[awtk.ts:11346](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11346)
+[awtk.ts:11793](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11793)
 
-___
+***
 
-### getPropStr
+### getPropStr()
 
-▸ **getPropStr**(`name`, `defval`): `string`
+> **getPropStr**(`name`, `defval`): `string`
 
 获取字符串格式的属性。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `defval` | `string` | 缺省值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **defval**: `string`
+
+缺省值。
 
 #### Returns
 
@@ -2936,17 +2377,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getPropStr](TComboBox.md#getpropstr)
+[`TComboBox`](TComboBox.md).[`getPropStr`](TComboBox.md#getpropstr)
 
 #### Defined in
 
-[awtk.ts:11321](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11321)
+[awtk.ts:11768](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11768)
 
-___
+***
 
-### getSelectedText
+### getSelectedText()
 
-▸ **getSelectedText**(): `string`
+> **getSelectedText**(): `string`
 
 获取选中的文本。
 使用完后需调用 TKMEM_FREE() 进行释放文本占有内存。
@@ -2959,17 +2400,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getSelectedText](TComboBox.md#getselectedtext)
+[`TComboBox`](TComboBox.md).[`getSelectedText`](TComboBox.md#getselectedtext)
 
 #### Defined in
 
-[awtk.ts:24581](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24581)
+[awtk.ts:25518](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25518)
 
-___
+***
 
-### getSensitive
+### getSensitive()
 
-▸ **getSensitive**(): `boolean`
+> **getSensitive**(): `boolean`
 
 获取控件sensitive属性值。
 
@@ -2981,26 +2422,29 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getSensitive](TComboBox.md#getsensitive)
+[`TComboBox`](TComboBox.md).[`getSensitive`](TComboBox.md#getsensitive)
 
 #### Defined in
 
-[awtk.ts:10796](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10796)
+[awtk.ts:11217](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11217)
 
-___
+***
 
-### getStateForStyle
+### getStateForStyle()
 
-▸ **getStateForStyle**(`active`, `checked`): `string`
+> **getStateForStyle**(`active`, `checked`): `string`
 
 把控件的状态转成获取style选要的状态，一般只在子类中使用。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `active` | `boolean` | 控件是否为当前项。 |
-| `checked` | `boolean` | 控件是否为选中项。 |
+• **active**: `boolean`
+
+控件是否为当前项。
+
+• **checked**: `boolean`
+
+控件是否为选中项。
 
 #### Returns
 
@@ -3010,17 +2454,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getStateForStyle](TComboBox.md#getstateforstyle)
+[`TComboBox`](TComboBox.md).[`getStateForStyle`](TComboBox.md#getstateforstyle)
 
 #### Defined in
 
-[awtk.ts:11859](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11859)
+[awtk.ts:12333](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12333)
 
-___
+***
 
-### getStyleType
+### getStyleType()
 
-▸ **getStyleType**(): `string`
+> **getStyleType**(): `string`
 
 获取 widget 对应风格类型
 
@@ -3032,44 +2476,42 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getStyleType](TComboBox.md#getstyletype)
+[`TComboBox`](TComboBox.md).[`getStyleType`](TComboBox.md#getstyletype)
 
 #### Defined in
 
-[awtk.ts:11787](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11787)
+[awtk.ts:12261](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12261)
 
-___
+***
 
-### getText
+### getText()
 
-▸ **getText**(): `any`
+> **getText**(): `any`
 
-str_t str;
-str_init(&str, 0);
-str_from_wstr(&str, widget_get_text(target));
-log_debug("%s: %s\n", target->name, str.str);
-str_reset(&str);
-```
+获取控件的文本。
+只是对widget\_get\_prop的包装，文本的意义由子类控件决定。
 
-@returns 返回文本。
+如果希望获取UTF8格式的文本，可以参考下面的代码：
 
 #### Returns
 
 `any`
 
+返回文本。
+
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getText](TComboBox.md#gettext)
+[`TComboBox`](TComboBox.md).[`getText`](TComboBox.md#gettext)
 
 #### Defined in
 
-[awtk.ts:10834](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10834)
+[awtk.ts:11255](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11255)
 
-___
+***
 
-### getTextOfSelected
+### getTextOfSelected()
 
-▸ **getTextOfSelected**(): `string`
+> **getTextOfSelected**(): `string`
 
 获取combo_box当前选中项目的文本(原生非翻译的文本)。
 
@@ -3081,17 +2523,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getTextOfSelected](TComboBox.md#gettextofselected)
+[`TComboBox`](TComboBox.md).[`getTextOfSelected`](TComboBox.md#gettextofselected)
 
 #### Defined in
 
-[awtk.ts:28237](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28237)
+[awtk.ts:29450](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29450)
 
-___
+***
 
-### getTextValue
+### getTextValue()
 
-▸ **getTextValue**(): `string`
+> **getTextValue**(): `string`
 
 获取combo_box的文本(可能是翻译后的文本)。
 
@@ -3103,17 +2545,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getTextValue](TComboBox.md#gettextvalue)
+[`TComboBox`](TComboBox.md).[`getTextValue`](TComboBox.md#gettextvalue)
 
 #### Defined in
 
-[awtk.ts:28226](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28226)
+[awtk.ts:29439](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29439)
 
-___
+***
 
-### getThemeName
+### getThemeName()
 
-▸ **getThemeName**(): `string`
+> **getThemeName**(): `string`
 
 获取 theme 的名称
 
@@ -3125,17 +2567,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getThemeName](TComboBox.md#getthemename)
+[`TComboBox`](TComboBox.md).[`getThemeName`](TComboBox.md#getthemename)
 
 #### Defined in
 
-[awtk.ts:10869](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10869)
+[awtk.ts:11290](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11290)
 
-___
+***
 
-### getType
+### getType()
 
-▸ **getType**(): `string`
+> **getType**(): `string`
 
 获取当前控件的类型名称。
 
@@ -3147,17 +2589,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getType](TComboBox.md#gettype)
+[`TComboBox`](TComboBox.md).[`getType`](TComboBox.md#gettype)
 
 #### Defined in
 
-[awtk.ts:11638](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11638)
+[awtk.ts:12112](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12112)
 
-___
+***
 
-### getValue
+### getValue()
 
-▸ **getValue**(): `number`
+> **getValue**(): `number`
 
 获取控件的值。只是对widget\_get\_prop的包装，值的意义由子类控件决定。
 
@@ -3169,17 +2611,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getValue](TComboBox.md#getvalue)
+[`TComboBox`](TComboBox.md).[`getValue`](TComboBox.md#getvalue)
 
 #### Defined in
 
-[awtk.ts:10547](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10547)
+[awtk.ts:10946](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10946)
 
-___
+***
 
-### getValueInt
+### getValueInt()
 
-▸ **getValueInt**(): `number`
+> **getValueInt**(): `number`
 
 获取combo_box的值。
 
@@ -3191,17 +2633,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getValueInt](TComboBox.md#getvalueint)
+[`TComboBox`](TComboBox.md).[`getValueInt`](TComboBox.md#getvalueint)
 
 #### Defined in
 
-[awtk.ts:28203](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28203)
+[awtk.ts:29416](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29416)
 
-___
+***
 
-### getVisible
+### getVisible()
 
-▸ **getVisible**(): `boolean`
+> **getVisible**(): `boolean`
 
 获取控件visible属性值。
 
@@ -3213,17 +2655,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getVisible](TComboBox.md#getvisible)
+[`TComboBox`](TComboBox.md).[`getVisible`](TComboBox.md#getvisible)
 
 #### Defined in
 
-[awtk.ts:10807](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10807)
+[awtk.ts:11228](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11228)
 
-___
+***
 
-### getWindow
+### getWindow()
 
-▸ **getWindow**(): [`TWidget`](TWidget.md)
+> **getWindow**(): [`TWidget`](TWidget.md)
 
 获取当前控件所在的窗口。
 
@@ -3235,17 +2677,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getWindow](TComboBox.md#getwindow)
+[`TComboBox`](TComboBox.md).[`getWindow`](TComboBox.md#getwindow)
 
 #### Defined in
 
-[awtk.ts:11616](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11616)
+[awtk.ts:12090](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12090)
 
-___
+***
 
-### getWindowManager
+### getWindowManager()
 
-▸ **getWindowManager**(): [`TWidget`](TWidget.md)
+> **getWindowManager**(): [`TWidget`](TWidget.md)
 
 获取当前的窗口管理器。
 
@@ -3257,17 +2699,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getWindowManager](TComboBox.md#getwindowmanager)
+[`TComboBox`](TComboBox.md).[`getWindowManager`](TComboBox.md#getwindowmanager)
 
 #### Defined in
 
-[awtk.ts:11627](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11627)
+[awtk.ts:12101](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12101)
 
-___
+***
 
-### getWithFocusState
+### getWithFocusState()
 
-▸ **getWithFocusState**(): `boolean`
+> **getWithFocusState**(): `boolean`
 
 获取控件with_focus_state属性值。
 
@@ -3279,25 +2721,47 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[getWithFocusState](TComboBox.md#getwithfocusstate)
+[`TComboBox`](TComboBox.md).[`getWithFocusState`](TComboBox.md#getwithfocusstate)
 
 #### Defined in
 
-[awtk.ts:10774](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10774)
+[awtk.ts:11195](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11195)
 
-___
+***
 
-### hasOptionText
+### hasHighlighter()
 
-▸ **hasOptionText**(`text`): `boolean`
+> **hasHighlighter**(): `boolean`
+
+判断widget拥有高亮属性。
+
+#### Returns
+
+`boolean`
+
+拥有返回 TRUE，没有返回 FALSE。
+
+#### Inherited from
+
+[`TComboBox`](TComboBox.md).[`hasHighlighter`](TComboBox.md#hashighlighter)
+
+#### Defined in
+
+[awtk.ts:11058](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11058)
+
+***
+
+### hasOptionText()
+
+> **hasOptionText**(`text`): `boolean`
 
 检查选项中是否存在指定的文本。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | option text |
+• **text**: `string`
+
+option text
 
 #### Returns
 
@@ -3307,17 +2771,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[hasOptionText](TComboBox.md#hasoptiontext)
+[`TComboBox`](TComboBox.md).[`hasOptionText`](TComboBox.md#hasoptiontext)
 
 #### Defined in
 
-[awtk.ts:28215](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28215)
+[awtk.ts:29428](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29428)
 
-___
+***
 
-### indexOf
+### indexOf()
 
-▸ **indexOf**(): `number`
+> **indexOf**(): `number`
 
 获取控件在父控件中的索引编号。
 
@@ -3329,74 +2793,99 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[indexOf](TComboBox.md#indexof)
+[`TComboBox`](TComboBox.md).[`indexOf`](TComboBox.md#indexof)
 
 #### Defined in
 
-[awtk.ts:10424](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10424)
+[awtk.ts:10823](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10823)
 
-___
+***
 
-### insertChild
+### insertChild()
 
-▸ **insertChild**(`index`, `child`): [`TRet`](../enums/TRet.md)
+> **insertChild**(`index`, `child`): [`TRet`](../enumerations/TRet.md)
 
 插入子控件到指定的位置。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `index` | `number` | 位置序数(大于等于总个数，则放到最后)。 |
-| `child` | [`TWidget`](TWidget.md) | 子控件对象。 |
+• **index**: `number`
+
+位置序数(大于等于总个数，则放到最后)。
+
+• **child**: [`TWidget`](TWidget.md)
+
+子控件对象。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[insertChild](TComboBox.md#insertchild)
+[`TComboBox`](TComboBox.md).[`insertChild`](TComboBox.md#insertchild)
 
 #### Defined in
 
-[awtk.ts:11155](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11155)
+[awtk.ts:11576](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11576)
 
-___
+***
 
-### invalidateForce
+### invalidateForce()
 
-▸ **invalidateForce**(`r`): [`TRet`](../enums/TRet.md)
+> **invalidateForce**(`r`): [`TRet`](../enumerations/TRet.md)
 
 请求强制重绘控件。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `r` | [`TRect`](TRect.md) | 矩形对象(widget本地坐标)。 |
+• **r**: [`TRect`](TRect.md)
+
+矩形对象(widget本地坐标)。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[invalidateForce](TComboBox.md#invalidateforce)
+[`TComboBox`](TComboBox.md).[`invalidateForce`](TComboBox.md#invalidateforce)
 
 #### Defined in
 
-[awtk.ts:11282](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11282)
+[awtk.ts:11703](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11703)
 
-___
+***
 
-### isDesigningWindow
+### isAlwaysOnTop()
 
-▸ **isDesigningWindow**(): `boolean`
+> **isAlwaysOnTop**(): `boolean`
+
+检查控件是否总在最上层。
+
+#### Returns
+
+`boolean`
+
+返回FALSE表示不是，否则表示是。
+
+#### Inherited from
+
+[`TComboBox`](TComboBox.md).[`isAlwaysOnTop`](TComboBox.md#isalwaysontop)
+
+#### Defined in
+
+[awtk.ts:12005](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12005)
+
+***
+
+### isDesigningWindow()
+
+> **isDesigningWindow**(): `boolean`
 
 判断当前控件是否是设计窗口。
 
@@ -3408,17 +2897,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[isDesigningWindow](TComboBox.md#isdesigningwindow)
+[`TComboBox`](TComboBox.md).[`isDesigningWindow`](TComboBox.md#isdesigningwindow)
 
 #### Defined in
 
-[awtk.ts:11581](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11581)
+[awtk.ts:12055](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12055)
 
-___
+***
 
-### isDialog
+### isDialog()
 
-▸ **isDialog**(): `boolean`
+> **isDialog**(): `boolean`
 
 检查控件是否是对话框类型。
 
@@ -3430,25 +2919,25 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[isDialog](TComboBox.md#isdialog)
+[`TComboBox`](TComboBox.md).[`isDialog`](TComboBox.md#isdialog)
 
 #### Defined in
 
-[awtk.ts:11514](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11514)
+[awtk.ts:11972](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11972)
 
-___
+***
 
-### isDirectParentOf
+### isDirectParentOf()
 
-▸ **isDirectParentOf**(`child`): `boolean`
+> **isDirectParentOf**(`child`): `boolean`
 
 判断当前控件是否是指定控件的直系父控件。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `child` | [`TWidget`](TWidget.md) | 控件对象。 |
+• **child**: [`TWidget`](TWidget.md)
+
+控件对象。
 
 #### Returns
 
@@ -3458,40 +2947,65 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[isDirectParentOf](TComboBox.md#isdirectparentof)
+[`TComboBox`](TComboBox.md).[`isDirectParentOf`](TComboBox.md#isdirectparentof)
 
 #### Defined in
 
-[awtk.ts:11470](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11470)
+[awtk.ts:11917](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11917)
 
-___
+***
 
-### isKeyboard
+### isFullscreenWindow()
 
-▸ **isKeyboard**(): `boolean`
+> **isFullscreenWindow**(): `boolean`
 
-widget_set_prop_bool(group, WIDGET_PROP_IS_KEYBOARD, TRUE);
-```
-
-@returns 返回FALSE表示不是，否则表示是。
+检查控件是否是全屏窗口。
 
 #### Returns
 
 `boolean`
 
+返回FALSE表示不是，否则表示是。
+
 #### Inherited from
 
-[TComboBox](TComboBox.md).[isKeyboard](TComboBox.md#iskeyboard)
+[`TComboBox`](TComboBox.md).[`isFullscreenWindow`](TComboBox.md#isfullscreenwindow)
 
 #### Defined in
 
-[awtk.ts:11570](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11570)
+[awtk.ts:11961](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11961)
 
-___
+***
 
-### isNormalWindow
+### isKeyboard()
 
-▸ **isNormalWindow**(): `boolean`
+> **isKeyboard**(): `boolean`
+
+判断当前控件是否是keyboard。
+
+> keyboard收到pointer事件时，不会让当前控件失去焦点。
+
+在自定义软键盘时，将所有按钮放到一个容器当中，并设置为is_keyboard。
+
+#### Returns
+
+`boolean`
+
+返回FALSE表示不是，否则表示是。
+
+#### Inherited from
+
+[`TComboBox`](TComboBox.md).[`isKeyboard`](TComboBox.md#iskeyboard)
+
+#### Defined in
+
+[awtk.ts:12044](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12044)
+
+***
+
+### isNormalWindow()
+
+> **isNormalWindow**(): `boolean`
 
 检查控件是否是普通窗口类型。
 
@@ -3503,17 +3017,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[isNormalWindow](TComboBox.md#isnormalwindow)
+[`TComboBox`](TComboBox.md).[`isNormalWindow`](TComboBox.md#isnormalwindow)
 
 #### Defined in
 
-[awtk.ts:11503](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11503)
+[awtk.ts:11950](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11950)
 
-___
+***
 
-### isOpenedDialog
+### isOpenedDialog()
 
-▸ **isOpenedDialog**(): `boolean`
+> **isOpenedDialog**(): `boolean`
 
 检查控件弹出对话框控件是否已经打开了（而非挂起状态）。
 
@@ -3525,17 +3039,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[isOpenedDialog](TComboBox.md#isopeneddialog)
+[`TComboBox`](TComboBox.md).[`isOpenedDialog`](TComboBox.md#isopeneddialog)
 
 #### Defined in
 
-[awtk.ts:11547](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11547)
+[awtk.ts:12016](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12016)
 
-___
+***
 
-### isOpenedPopup
+### isOpenedPopup()
 
-▸ **isOpenedPopup**(): `boolean`
+> **isOpenedPopup**(): `boolean`
 
 检查控件弹出窗口控件是否已经打开了（而非挂起状态）。
 
@@ -3547,17 +3061,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[isOpenedPopup](TComboBox.md#isopenedpopup)
+[`TComboBox`](TComboBox.md).[`isOpenedPopup`](TComboBox.md#isopenedpopup)
 
 #### Defined in
 
-[awtk.ts:11558](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11558)
+[awtk.ts:12027](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12027)
 
-___
+***
 
-### isOverlay
+### isOverlay()
 
-▸ **isOverlay**(): `boolean`
+> **isOverlay**(): `boolean`
 
 检查控件是否是overlay窗口类型。
 
@@ -3569,25 +3083,25 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[isOverlay](TComboBox.md#isoverlay)
+[`TComboBox`](TComboBox.md).[`isOverlay`](TComboBox.md#isoverlay)
 
 #### Defined in
 
-[awtk.ts:11536](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11536)
+[awtk.ts:11994](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11994)
 
-___
+***
 
-### isParentOf
+### isParentOf()
 
-▸ **isParentOf**(`child`): `boolean`
+> **isParentOf**(`child`): `boolean`
 
 判断当前控件是否是指定控件的父控件(包括非直系)。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `child` | [`TWidget`](TWidget.md) | 控件对象。 |
+• **child**: [`TWidget`](TWidget.md)
+
+控件对象。
 
 #### Returns
 
@@ -3597,17 +3111,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[isParentOf](TComboBox.md#isparentof)
+[`TComboBox`](TComboBox.md).[`isParentOf`](TComboBox.md#isparentof)
 
 #### Defined in
 
-[awtk.ts:11458](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11458)
+[awtk.ts:11905](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11905)
 
-___
+***
 
-### isPopup
+### isPopup()
 
-▸ **isPopup**(): `boolean`
+> **isPopup**(): `boolean`
 
 检查控件是否是弹出窗口类型。
 
@@ -3619,26 +3133,29 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[isPopup](TComboBox.md#ispopup)
+[`TComboBox`](TComboBox.md).[`isPopup`](TComboBox.md#ispopup)
 
 #### Defined in
 
-[awtk.ts:11525](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11525)
+[awtk.ts:11983](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11983)
 
-___
+***
 
-### isStyleExist
+### isStyleExist()
 
-▸ **isStyleExist**(`style_name`, `state_name`): `boolean`
+> **isStyleExist**(`style_name`, `state_name`): `boolean`
 
 查询指定的style是否存在。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `style_name` | `string` | style的名称（如果为 NULL，则默认为 default）。 |
-| `state_name` | `string` | state的名称（如果为 NULL，则默认为 normal）。 |
+• **style\_name**: `string`
+
+style的名称（如果为 NULL，则默认为 default）。
+
+• **state\_name**: `string`
+
+state的名称（如果为 NULL，则默认为 normal）。
 
 #### Returns
 
@@ -3648,17 +3165,39 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[isStyleExist](TComboBox.md#isstyleexist)
+[`TComboBox`](TComboBox.md).[`isStyleExist`](TComboBox.md#isstyleexist)
 
 #### Defined in
 
-[awtk.ts:10637](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10637)
+[awtk.ts:11036](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11036)
 
-___
+***
 
-### isSystemBar
+### isSupportHighlighter()
 
-▸ **isSystemBar**(): `boolean`
+> **isSupportHighlighter**(): `boolean`
+
+判断widget是否支持高亮。
+
+#### Returns
+
+`boolean`
+
+支持返回 TRUE，不支持返回 FALSE。
+
+#### Inherited from
+
+[`TComboBox`](TComboBox.md).[`isSupportHighlighter`](TComboBox.md#issupporthighlighter)
+
+#### Defined in
+
+[awtk.ts:11047](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11047)
+
+***
+
+### isSystemBar()
+
+> **isSystemBar**(): `boolean`
 
 检查控件是否是system bar类型。
 
@@ -3670,17 +3209,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[isSystemBar](TComboBox.md#issystembar)
+[`TComboBox`](TComboBox.md).[`isSystemBar`](TComboBox.md#issystembar)
 
 #### Defined in
 
-[awtk.ts:11492](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11492)
+[awtk.ts:11939](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11939)
 
-___
+***
 
-### isWindow
+### isWindow()
 
-▸ **isWindow**(): `boolean`
+> **isWindow**(): `boolean`
 
 判断当前控件是否是窗口。
 
@@ -3692,17 +3231,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[isWindow](TComboBox.md#iswindow)
+[`TComboBox`](TComboBox.md).[`isWindow`](TComboBox.md#iswindow)
 
 #### Defined in
 
-[awtk.ts:11481](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11481)
+[awtk.ts:11928](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11928)
 
-___
+***
 
-### isWindowCreated
+### isWindowCreated()
 
-▸ **isWindowCreated**(): `boolean`
+> **isWindowCreated**(): `boolean`
 
 判断窗口及子控件创建或加载是否完成。
 
@@ -3714,17 +3253,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[isWindowCreated](TComboBox.md#iswindowcreated)
+[`TComboBox`](TComboBox.md).[`isWindowCreated`](TComboBox.md#iswindowcreated)
 
 #### Defined in
 
-[awtk.ts:11446](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11446)
+[awtk.ts:11893](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11893)
 
-___
+***
 
-### isWindowManager
+### isWindowManager()
 
-▸ **isWindowManager**(): `boolean`
+> **isWindowManager**(): `boolean`
 
 判断当前控件是否是窗口管理器。
 
@@ -3736,17 +3275,17 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[isWindowManager](TComboBox.md#iswindowmanager)
+[`TComboBox`](TComboBox.md).[`isWindowManager`](TComboBox.md#iswindowmanager)
 
 #### Defined in
 
-[awtk.ts:11592](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11592)
+[awtk.ts:12066](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12066)
 
-___
+***
 
-### isWindowOpened
+### isWindowOpened()
 
-▸ **isWindowOpened**(): `boolean`
+> **isWindowOpened**(): `boolean`
 
 判断当前控件所在的窗口是否已经打开。
 
@@ -3758,48 +3297,51 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[isWindowOpened](TComboBox.md#iswindowopened)
+[`TComboBox`](TComboBox.md).[`isWindowOpened`](TComboBox.md#iswindowopened)
 
 #### Defined in
 
-[awtk.ts:11435](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11435)
+[awtk.ts:11882](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11882)
 
-___
+***
 
-### layout
+### layout()
 
-▸ **layout**(): [`TRet`](../enums/TRet.md)
+> **layout**(): [`TRet`](../enumerations/TRet.md)
 
 布局当前控件及子控件。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[layout](TComboBox.md#layout)
+[`TComboBox`](TComboBox.md).[`layout`](TComboBox.md#layout)
 
 #### Defined in
 
-[awtk.ts:11870](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11870)
+[awtk.ts:12344](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12344)
 
-___
+***
 
-### lookup
+### lookup()
 
-▸ **lookup**(`name`, `recursive`): [`TWidget`](TWidget.md)
+> **lookup**(`name`, `recursive`): [`TWidget`](TWidget.md)
 
 查找指定名称的子控件(返回第一个)。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 子控件的名称。 |
-| `recursive` | `boolean` | 是否递归查找全部子控件。 |
+• **name**: `string`
+
+子控件的名称。
+
+• **recursive**: `boolean`
+
+是否递归查找全部子控件。
 
 #### Returns
 
@@ -3809,26 +3351,29 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[lookup](TComboBox.md#lookup)
+[`TComboBox`](TComboBox.md).[`lookup`](TComboBox.md#lookup)
 
 #### Defined in
 
-[awtk.ts:11192](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11192)
+[awtk.ts:11613](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11613)
 
-___
+***
 
-### lookupByType
+### lookupByType()
 
-▸ **lookupByType**(`type`, `recursive`): [`TWidget`](TWidget.md)
+> **lookupByType**(`type`, `recursive`): [`TWidget`](TWidget.md)
 
 查找指定类型的子控件(返回第一个)。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `string` | 子控件的名称。 |
-| `recursive` | `boolean` | 是否递归查找全部子控件。 |
+• **type**: `string`
+
+子控件的名称。
+
+• **recursive**: `boolean`
+
+是否递归查找全部子控件。
 
 #### Returns
 
@@ -3838,196 +3383,220 @@ ___
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[lookupByType](TComboBox.md#lookupbytype)
+[`TComboBox`](TComboBox.md).[`lookupByType`](TComboBox.md#lookupbytype)
 
 #### Defined in
 
-[awtk.ts:11205](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11205)
+[awtk.ts:11626](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11626)
 
-___
+***
 
-### move
+### move()
 
-▸ **move**(`x`, `y`): [`TRet`](../enums/TRet.md)
+> **move**(`x`, `y`): [`TRet`](../enumerations/TRet.md)
 
 移动控件。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `number` | x坐标 |
-| `y` | `number` | y坐标 |
+• **x**: `number`
+
+x坐标
+
+• **y**: `number`
+
+y坐标
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[move](TComboBox.md#move)
+[`TComboBox`](TComboBox.md).[`move`](TComboBox.md#move)
 
 #### Defined in
 
-[awtk.ts:10481](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10481)
+[awtk.ts:10880](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10880)
 
-___
+***
 
-### moveResize
+### moveResize()
 
-▸ **moveResize**(`x`, `y`, `w`, `h`): [`TRet`](../enums/TRet.md)
+> **moveResize**(`x`, `y`, `w`, `h`): [`TRet`](../enumerations/TRet.md)
 
 移动控件并调整控件的大小。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `number` | x坐标 |
-| `y` | `number` | y坐标 |
-| `w` | `number` | 宽度 |
-| `h` | `number` | 高度 |
+• **x**: `number`
+
+x坐标
+
+• **y**: `number`
+
+y坐标
+
+• **w**: `number`
+
+宽度
+
+• **h**: `number`
+
+高度
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[moveResize](TComboBox.md#moveresize)
+[`TComboBox`](TComboBox.md).[`moveResize`](TComboBox.md#moveresize)
 
 #### Defined in
 
-[awtk.ts:10520](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10520)
+[awtk.ts:10919](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10919)
 
-___
+***
 
-### moveResizeEx
+### moveResizeEx()
 
-▸ **moveResizeEx**(`x`, `y`, `w`, `h`, `update_layout`): [`TRet`](../enums/TRet.md)
+> **moveResizeEx**(`x`, `y`, `w`, `h`, `update_layout`): [`TRet`](../enumerations/TRet.md)
 
 移动控件并调整控件的大小。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `number` | x坐标 |
-| `y` | `number` | y坐标 |
-| `w` | `number` | 宽度 |
-| `h` | `number` | 高度 |
-| `update_layout` | `boolean` | 是否更新布局 |
+• **x**: `number`
+
+x坐标
+
+• **y**: `number`
+
+y坐标
+
+• **w**: `number`
+
+宽度
+
+• **h**: `number`
+
+高度
+
+• **update\_layout**: `boolean`
+
+是否更新布局
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[moveResizeEx](TComboBox.md#moveresizeex)
+[`TComboBox`](TComboBox.md).[`moveResizeEx`](TComboBox.md#moveresizeex)
 
 #### Defined in
 
-[awtk.ts:10536](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10536)
+[awtk.ts:10935](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10935)
 
-___
+***
 
-### moveToCenter
+### moveToCenter()
 
-▸ **moveToCenter**(): [`TRet`](../enums/TRet.md)
+> **moveToCenter**(): [`TRet`](../enumerations/TRet.md)
 
 移动控件到父控件中间。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[moveToCenter](TComboBox.md#movetocenter)
+[`TComboBox`](TComboBox.md).[`moveToCenter`](TComboBox.md#movetocenter)
 
 #### Defined in
 
-[awtk.ts:10492](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10492)
+[awtk.ts:10891](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10891)
 
-___
+***
 
-### off
+### off()
 
-▸ **off**(`id`): [`TRet`](../enums/TRet.md)
+> **off**(`id`): [`TRet`](../enumerations/TRet.md)
 
 注销指定事件的处理函数。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `id` | `number` | widget_on返回的ID。 |
+• **id**: `number`
+
+widget_on返回的ID。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[off](TComboBox.md#off)
+[`TComboBox`](TComboBox.md).[`off`](TComboBox.md#off)
 
 #### Defined in
 
-[awtk.ts:11270](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11270)
+[awtk.ts:11691](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11691)
 
-___
+***
 
-### on
+### on()
 
-▸ **on**(`type`, `on_event`, `ctx`): `number`
+> **on**(`type`, `on_event`, `ctx`): `number`
 
-widget_t* ok = button_create(win, 10, 10, 80, 30);
-widget_on(ok, EVT_CLICK, on_click, NULL);
-
-```
-
-@param type 事件类型。
-@param on_event 事件处理函数。
-@param ctx 事件处理函数上下文。
-
-@returns 返回id，用于widget_off。
+注册指定事件的处理函数。
+使用示例：
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `type` | `number` |
-| `on_event` | `Function` |
-| `ctx` | `any` |
+• **type**: `number`
+
+事件类型。
+
+• **on\_event**: `Function`
+
+事件处理函数。
+
+• **ctx**: `any`
+
+事件处理函数上下文。
 
 #### Returns
 
 `number`
 
+返回id，用于widget_off。
+
 #### Inherited from
 
-[TComboBox](TComboBox.md).[on](TComboBox.md#on)
+[`TComboBox`](TComboBox.md).[`on`](TComboBox.md#on)
 
 #### Defined in
 
-[awtk.ts:11258](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11258)
+[awtk.ts:11679](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11679)
 
-___
+***
 
-### pauseAnimator
+### pauseAnimator()
 
-▸ **pauseAnimator**(`name`): [`TRet`](../enums/TRet.md)
+> **pauseAnimator**(`name`): [`TRet`](../enumerations/TRet.md)
 
 暂停动画。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
@@ -4038,221 +3607,252 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 动画名称。 |
+• **name**: `string`
+
+动画名称。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[pauseAnimator](TComboBox.md#pauseanimator)
+[`TComboBox`](TComboBox.md).[`pauseAnimator`](TComboBox.md#pauseanimator)
 
 #### Defined in
 
-[awtk.ts:10962](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10962)
+[awtk.ts:11383](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11383)
 
-___
+***
 
-### removeChild
+### removeChild()
 
-▸ **removeChild**(`child`): [`TRet`](../enums/TRet.md)
+> **removeChild**(`child`): [`TRet`](../enumerations/TRet.md)
 
 移出指定的子控件(并不销毁)。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `child` | [`TWidget`](TWidget.md) | 子控件对象。 |
+• **child**: [`TWidget`](TWidget.md)
+
+子控件对象。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[removeChild](TComboBox.md#removechild)
+[`TComboBox`](TComboBox.md).[`removeChild`](TComboBox.md#removechild)
 
 #### Defined in
 
-[awtk.ts:11142](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11142)
+[awtk.ts:11563](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11563)
 
-___
+***
 
-### removeOption
+### removeOption()
 
-▸ **removeOption**(`value`): [`TRet`](../enums/TRet.md)
+> **removeOption**(`value`): [`TRet`](../enumerations/TRet.md)
 
-删除选项。
+删除第一个值为value的选项。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `any` | 值。 |
+• **value**: `any`
+
+选项的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[removeOption](TComboBox.md#removeoption)
+[`TComboBox`](TComboBox.md).[`removeOption`](TComboBox.md#removeoption)
 
 #### Defined in
 
-[awtk.ts:28180](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28180)
+[awtk.ts:29381](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29381)
 
-___
+***
 
-### resetOptions
+### removeOptionByIndex()
 
-▸ **resetOptions**(): [`TRet`](../enums/TRet.md)
+> **removeOptionByIndex**(`index`): [`TRet`](../enumerations/TRet.md)
+
+删除指定序数的选项。
+
+#### Parameters
+
+• **index**: `number`
+
+选项的序数(0表示第一个)。
+
+#### Returns
+
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
+
+#### Inherited from
+
+[`TComboBox`](TComboBox.md).[`removeOptionByIndex`](TComboBox.md#removeoptionbyindex)
+
+#### Defined in
+
+[awtk.ts:29393](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29393)
+
+***
+
+### resetOptions()
+
+> **resetOptions**(): [`TRet`](../enumerations/TRet.md)
 
 重置所有选项。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[resetOptions](TComboBox.md#resetoptions)
+[`TComboBox`](TComboBox.md).[`resetOptions`](TComboBox.md#resetoptions)
 
 #### Defined in
 
-[awtk.ts:28084](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28084)
+[awtk.ts:29285](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29285)
 
-___
+***
 
-### resize
+### resize()
 
-▸ **resize**(`w`, `h`): [`TRet`](../enums/TRet.md)
+> **resize**(`w`, `h`): [`TRet`](../enumerations/TRet.md)
 
 调整控件的大小。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `w` | `number` | 宽度 |
-| `h` | `number` | 高度 |
+• **w**: `number`
+
+宽度
+
+• **h**: `number`
+
+高度
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[resize](TComboBox.md#resize)
+[`TComboBox`](TComboBox.md).[`resize`](TComboBox.md#resize)
 
 #### Defined in
 
-[awtk.ts:10505](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10505)
+[awtk.ts:10904](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10904)
 
-___
+***
 
-### restack
+### restack()
 
-▸ **restack**(`index`): [`TRet`](../enums/TRet.md)
+> **restack**(`index`): [`TRet`](../enumerations/TRet.md)
 
 调整控件在父控件中的位置序数。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `index` | `number` | 位置序数(大于等于总个数，则放到最后)。 |
+• **index**: `number`
+
+位置序数(大于等于总个数，则放到最后)。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[restack](TComboBox.md#restack)
+[`TComboBox`](TComboBox.md).[`restack`](TComboBox.md#restack)
 
 #### Defined in
 
-[awtk.ts:11167](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11167)
+[awtk.ts:11588](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11588)
 
-___
+***
 
-### setActionText
+### setActionText()
 
-▸ **setActionText**(`action_text`): [`TRet`](../enums/TRet.md)
+> **setActionText**(`action_text`): [`TRet`](../enumerations/TRet.md)
 
 设置软键盘上action按钮的文本。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `action_text` | `string` | 软键盘上action按钮的文本。 |
+• **action\_text**: `string`
+
+软键盘上action按钮的文本。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setActionText](TComboBox.md#setactiontext)
+[`TComboBox`](TComboBox.md).[`setActionText`](TComboBox.md#setactiontext)
 
 #### Defined in
 
-[awtk.ts:24473](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24473)
+[awtk.ts:25410](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25410)
 
-___
+***
 
-### setAnimation
+### setAnimation()
 
-▸ **setAnimation**(`animation`): [`TRet`](../enums/TRet.md)
+> **setAnimation**(`animation`): [`TRet`](../enumerations/TRet.md)
 
 设置控件的动画参数(仅用于在UI文件使用)。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `animation` | `string` | 动画参数。 |
+• **animation**: `string`
+
+动画参数。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setAnimation](TComboBox.md#setanimation)
+[`TComboBox`](TComboBox.md).[`setAnimation`](TComboBox.md#setanimation)
 
 #### Defined in
 
-[awtk.ts:10894](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10894)
+[awtk.ts:11315](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11315)
 
-___
+***
 
-### setAnimatorTimeScale
+### setAnimatorTimeScale()
 
-▸ **setAnimatorTimeScale**(`name`, `time_scale`): [`TRet`](../enums/TRet.md)
+> **setAnimatorTimeScale**(`name`, `time_scale`): [`TRet`](../enumerations/TRet.md)
 
 设置动画的时间倍率，<0: 时间倒退，<1: 时间变慢，>1 时间变快。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
@@ -4263,794 +3863,856 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 动画名称。 |
-| `time_scale` | `number` | 时间倍率。 |
+• **name**: `string`
+
+动画名称。
+
+• **time\_scale**: `number`
+
+时间倍率。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setAnimatorTimeScale](TComboBox.md#setanimatortimescale)
+[`TComboBox`](TComboBox.md).[`setAnimatorTimeScale`](TComboBox.md#setanimatortimescale)
 
 #### Defined in
 
-[awtk.ts:10945](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10945)
+[awtk.ts:11366](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11366)
 
-___
+***
 
-### setAsKeyTarget
+### setAsKeyTarget()
 
-▸ **setAsKeyTarget**(): [`TRet`](../enums/TRet.md)
+> **setAsKeyTarget**(): [`TRet`](../enumerations/TRet.md)
 
 递归的把父控件的key_target设置为自己。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setAsKeyTarget](TComboBox.md#setaskeytarget)
+[`TComboBox`](TComboBox.md).[`setAsKeyTarget`](TComboBox.md#setaskeytarget)
 
 #### Defined in
 
-[awtk.ts:11820](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11820)
+[awtk.ts:12294](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12294)
 
-___
+***
 
-### setAutoAdjustSize
+### setAutoAdjustSize()
 
-▸ **setAutoAdjustSize**(`auto_adjust_size`): [`TRet`](../enums/TRet.md)
+> **setAutoAdjustSize**(`auto_adjust_size`): [`TRet`](../enumerations/TRet.md)
 
 设置控件是否根据子控件和文本自动调整控件自身大小。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `auto_adjust_size` | `boolean` | 是否根据子控件和文本自动调整控件自身大小。 |
+• **auto\_adjust\_size**: `boolean`
+
+是否根据子控件和文本自动调整控件自身大小。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setAutoAdjustSize](TComboBox.md#setautoadjustsize)
+[`TComboBox`](TComboBox.md).[`setAutoAdjustSize`](TComboBox.md#setautoadjustsize)
 
 #### Defined in
 
-[awtk.ts:11032](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11032)
+[awtk.ts:11453](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11453)
 
-___
+***
 
-### setAutoFix
+### setAutoFix()
 
-▸ **setAutoFix**(`auto_fix`): [`TRet`](../enums/TRet.md)
+> **setAutoFix**(`auto_fix`): [`TRet`](../enumerations/TRet.md)
 
 设置编辑器是否为自动改正。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `auto_fix` | `boolean` | 自动改正。 |
+• **auto\_fix**: `boolean`
+
+自动改正。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setAutoFix](TComboBox.md#setautofix)
+[`TComboBox`](TComboBox.md).[`setAutoFix`](TComboBox.md#setautofix)
 
 #### Defined in
 
-[awtk.ts:24410](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24410)
+[awtk.ts:25347](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25347)
 
-___
+***
 
-### setCancelable
+### setCancelable()
 
-▸ **setCancelable**(`cancelable`): [`TRet`](../enums/TRet.md)
+> **setCancelable**(`cancelable`): [`TRet`](../enumerations/TRet.md)
 
 设置编辑器是否为可撤销修改。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `cancelable` | `boolean` | 是否为可撤销修。 |
+• **cancelable**: `boolean`
+
+是否为可撤销修。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setCancelable](TComboBox.md#setcancelable)
+[`TComboBox`](TComboBox.md).[`setCancelable`](TComboBox.md#setcancelable)
 
 #### Defined in
 
-[awtk.ts:24398](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24398)
+[awtk.ts:25335](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25335)
 
-___
+***
 
-### setChildText
+### setChildText()
 
-▸ **setChildText**(`name`, `text`): [`TRet`](../enums/TRet.md)
+> **setChildText**(`name`, `text`): [`TRet`](../enumerations/TRet.md)
 
 设置子控件的文本。
 只是对widget\_set\_prop的包装，文本的意义由子类控件决定。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 子控件的名称。 |
-| `text` | `string` | 文本。 |
+• **name**: `string`
+
+子控件的名称。
+
+• **text**: `string`
+
+文本。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setChildText](TComboBox.md#setchildtext)
+[`TComboBox`](TComboBox.md).[`setChildText`](TComboBox.md#setchildtext)
 
 #### Defined in
 
-[awtk.ts:10688](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10688)
+[awtk.ts:11109](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11109)
 
-___
+***
 
-### setChildTextWithDouble
+### setChildTextWithDouble()
 
-▸ **setChildTextWithDouble**(`name`, `format`, `value`): [`TRet`](../enums/TRet.md)
+> **setChildTextWithDouble**(`name`, `format`, `value`): [`TRet`](../enumerations/TRet.md)
 
 用一个浮点数去设置子控件的文本。
 只是对widget\_set\_prop的包装，文本的意义由子类控件决定。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 子控件的名称。 |
-| `format` | `string` | 格式字符串(如："%2.2lf")。 |
-| `value` | `any` | 浮点数值。 |
+• **name**: `string`
+
+子控件的名称。
+
+• **format**: `string`
+
+格式字符串(如："%2.2lf")。
+
+• **value**: `any`
+
+浮点数值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setChildTextWithDouble](TComboBox.md#setchildtextwithdouble)
+[`TComboBox`](TComboBox.md).[`setChildTextWithDouble`](TComboBox.md#setchildtextwithdouble)
 
 #### Defined in
 
-[awtk.ts:10703](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10703)
+[awtk.ts:11124](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11124)
 
-___
+***
 
-### setChildTextWithInt
+### setChildTextWithInt()
 
-▸ **setChildTextWithInt**(`name`, `format`, `value`): [`TRet`](../enums/TRet.md)
+> **setChildTextWithInt**(`name`, `format`, `value`): [`TRet`](../enumerations/TRet.md)
 
 用一个整数去设置子控件的文本。
 只是对widget\_set\_prop的包装，文本的意义由子类控件决定。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 子控件的名称。 |
-| `format` | `string` | 格式字符串(如："%d")。 |
-| `value` | `any` | 值。 |
+• **name**: `string`
+
+子控件的名称。
+
+• **format**: `string`
+
+格式字符串(如："%d")。
+
+• **value**: `any`
+
+值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setChildTextWithInt](TComboBox.md#setchildtextwithint)
+[`TComboBox`](TComboBox.md).[`setChildTextWithInt`](TComboBox.md#setchildtextwithint)
 
 #### Defined in
 
-[awtk.ts:10718](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10718)
+[awtk.ts:11139](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11139)
 
-___
+***
 
-### setChildrenLayout
+### setChildrenLayout()
 
-▸ **setChildrenLayout**(`params`): [`TRet`](../enums/TRet.md)
+> **setChildrenLayout**(`params`): [`TRet`](../enumerations/TRet.md)
 
 设置子控件的布局参数。
+备注：下一帧才会生效数据
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `params` | `string` | 布局参数。 |
+• **params**: `string`
+
+布局参数。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setChildrenLayout](TComboBox.md#setchildrenlayout)
+[`TComboBox`](TComboBox.md).[`setChildrenLayout`](TComboBox.md#setchildrenlayout)
 
 #### Defined in
 
-[awtk.ts:11894](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11894)
+[awtk.ts:12370](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12370)
 
-___
+***
 
-### setCloseImWhenBlured
+### setCloseImWhenBlured()
 
-▸ **setCloseImWhenBlured**(`close_im_when_blured`): [`TRet`](../enums/TRet.md)
+> **setCloseImWhenBlured**(`close_im_when_blured`): [`TRet`](../enumerations/TRet.md)
 
 设置编辑器是否在失去焦点时关闭输入法。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `close_im_when_blured` | `boolean` | 是否是否在失去焦点时关闭输入法。在失去焦点时关闭输入法。 |
+• **close\_im\_when\_blured**: `boolean`
+
+是否是否在失去焦点时关闭输入法。在失去焦点时关闭输入法。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setCloseImWhenBlured](TComboBox.md#setcloseimwhenblured)
+[`TComboBox`](TComboBox.md).[`setCloseImWhenBlured`](TComboBox.md#setcloseimwhenblured)
 
 #### Defined in
 
-[awtk.ts:24449](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24449)
+[awtk.ts:25386](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25386)
 
-___
+***
 
-### setCursor
+### setCursor()
 
-▸ **setCursor**(`cursor`): [`TRet`](../enums/TRet.md)
+> **setCursor**(`cursor`): [`TRet`](../enumerations/TRet.md)
 
 设置输入框的光标位置。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `cursor` | `number` | 光标位置。 |
+• **cursor**: `number`
+
+光标位置。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setCursor](TComboBox.md#setcursor)
+[`TComboBox`](TComboBox.md).[`setCursor`](TComboBox.md#setcursor)
 
 #### Defined in
 
-[awtk.ts:24545](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24545)
+[awtk.ts:25482](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25482)
 
-___
+***
 
-### setDirtyRectTolerance
+### setDirtyRectTolerance()
 
-▸ **setDirtyRectTolerance**(`dirty_rect_tolerance`): [`TRet`](../enums/TRet.md)
+> **setDirtyRectTolerance**(`dirty_rect_tolerance`): [`TRet`](../enumerations/TRet.md)
 
 设置控件脏矩形超出控件本身大小的最大范围(一般不用指定)。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dirty_rect_tolerance` | `number` | 控件脏脏矩形超出控件本身大小的最大范。 |
+• **dirty\_rect\_tolerance**: `number`
+
+控件脏脏矩形超出控件本身大小的最大范。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setDirtyRectTolerance](TComboBox.md#setdirtyrecttolerance)
+[`TComboBox`](TComboBox.md).[`setDirtyRectTolerance`](TComboBox.md#setdirtyrecttolerance)
 
 #### Defined in
 
-[awtk.ts:11107](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11107)
+[awtk.ts:11528](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11528)
 
-___
+***
 
-### setDouble
+### setDouble()
 
-▸ **setDouble**(`value`): [`TRet`](../enums/TRet.md)
+> **setDouble**(`value`): [`TRet`](../enumerations/TRet.md)
 
 设置double类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `any` | 值。 |
+• **value**: `any`
+
+值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setDouble](TComboBox.md#setdouble)
+[`TComboBox`](TComboBox.md).[`setDouble`](TComboBox.md#setdouble)
 
 #### Defined in
 
-[awtk.ts:24320](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24320)
+[awtk.ts:25257](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25257)
 
-___
+***
 
-### setDoubleEx
+### setDoubleEx()
 
-▸ **setDoubleEx**(`format`, `value`): [`TRet`](../enums/TRet.md)
+> **setDoubleEx**(`format`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置double类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `format` | `string` | 格式(缺省为"%2.2lf")。 |
-| `value` | `any` | 值。 |
+• **format**: `string`
+
+格式(缺省为"%2.2lf")。
+
+• **value**: `any`
+
+值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setDoubleEx](TComboBox.md#setdoubleex)
+[`TComboBox`](TComboBox.md).[`setDoubleEx`](TComboBox.md#setdoubleex)
 
 #### Defined in
 
-[awtk.ts:24333](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24333)
+[awtk.ts:25270](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25270)
 
-___
+***
 
-### setEnable
+### setEnable()
 
-▸ **setEnable**(`enable`): [`TRet`](../enums/TRet.md)
+> **setEnable**(`enable`): [`TRet`](../enumerations/TRet.md)
 
 设置控件的可用性。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `enable` | `boolean` | 是否可用性。 |
+• **enable**: `boolean`
+
+是否可用性。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setEnable](TComboBox.md#setenable)
+[`TComboBox`](TComboBox.md).[`setEnable`](TComboBox.md#setenable)
 
 #### Defined in
 
-[awtk.ts:11008](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11008)
+[awtk.ts:11429](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11429)
 
-___
+***
 
-### setFeedback
+### setFeedback()
 
-▸ **setFeedback**(`feedback`): [`TRet`](../enums/TRet.md)
+> **setFeedback**(`feedback`): [`TRet`](../enumerations/TRet.md)
 
 设置控件是否启用反馈。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `feedback` | `boolean` | 是否启用反馈。 |
+• **feedback**: `boolean`
+
+是否启用反馈。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setFeedback](TComboBox.md#setfeedback)
+[`TComboBox`](TComboBox.md).[`setFeedback`](TComboBox.md#setfeedback)
 
 #### Defined in
 
-[awtk.ts:11020](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11020)
+[awtk.ts:11441](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11441)
 
-___
+***
 
-### setFloatLimit
+### setFloatLimit()
 
-▸ **setFloatLimit**(`min`, `max`, `step`): [`TRet`](../enums/TRet.md)
+> **setFloatLimit**(`min`, `max`, `step`): [`TRet`](../enumerations/TRet.md)
 
 设置为浮点数输入及取值范围。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `min` | `number` | 最小值。 |
-| `max` | `number` | 最大值。 |
-| `step` | `number` | 步长。 |
+• **min**: `number`
+
+最小值。
+
+• **max**: `number`
+
+最大值。
+
+• **step**: `number`
+
+步长。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setFloatLimit](TComboBox.md#setfloatlimit)
+[`TComboBox`](TComboBox.md).[`setFloatLimit`](TComboBox.md#setfloatlimit)
 
 #### Defined in
 
-[awtk.ts:24374](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24374)
+[awtk.ts:25311](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25311)
 
-___
+***
 
-### setFloating
+### setFloating()
 
-▸ **setFloating**(`floating`): [`TRet`](../enums/TRet.md)
+> **setFloating**(`floating`): [`TRet`](../enumerations/TRet.md)
 
 设置控件的floating标志。
 > floating的控件不受父控件的子控件布局参数的影响。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `floating` | `boolean` | 是否启用floating布局。 |
+• **floating**: `boolean`
+
+是否启用floating布局。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setFloating](TComboBox.md#setfloating)
+[`TComboBox`](TComboBox.md).[`setFloating`](TComboBox.md#setfloating)
 
 #### Defined in
 
-[awtk.ts:11045](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11045)
+[awtk.ts:11466](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11466)
 
-___
+***
 
-### setFocus
+### setFocus()
 
-▸ **setFocus**(`focus`): [`TRet`](../enums/TRet.md)
+> **setFocus**(`focus`): [`TRet`](../enumerations/TRet.md)
 
 设置为焦点。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `focus` | `boolean` | 是否为焦点。 |
+• **focus**: `boolean`
+
+是否为焦点。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setFocus](TComboBox.md#setfocus)
+[`TComboBox`](TComboBox.md).[`setFocus`](TComboBox.md#setfocus)
 
 #### Defined in
 
-[awtk.ts:24533](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24533)
+[awtk.ts:25470](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25470)
 
-___
+***
 
-### setFocusable
+### setFocusNextWhenEnter()
 
-▸ **setFocusable**(`focusable`): [`TRet`](../enums/TRet.md)
+> **setFocusNextWhenEnter**(`focus_next_when_enter`): [`TRet`](../enumerations/TRet.md)
+
+设置输入回车后是否跳到下一个控件中。
+
+#### Parameters
+
+• **focus\_next\_when\_enter**: `boolean`
+
+是否跳入下一个控件中。
+
+#### Returns
+
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
+
+#### Inherited from
+
+[`TComboBox`](TComboBox.md).[`setFocusNextWhenEnter`](TComboBox.md#setfocusnextwhenenter)
+
+#### Defined in
+
+[awtk.ts:25530](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25530)
+
+***
+
+### setFocusable()
+
+> **setFocusable**(`focusable`): [`TRet`](../enumerations/TRet.md)
 
 设置控件是否可获得焦点。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `focusable` | `boolean` | 是否可获得焦点。 |
+• **focusable**: `boolean`
+
+是否可获得焦点。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setFocusable](TComboBox.md#setfocusable)
+[`TComboBox`](TComboBox.md).[`setFocusable`](TComboBox.md#setfocusable)
 
 #### Defined in
 
-[awtk.ts:11069](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11069)
+[awtk.ts:11490](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11490)
 
-___
+***
 
-### setFocused
+### setFocused()
 
-▸ **setFocused**(`focused`): [`TRet`](../enums/TRet.md)
+> **setFocused**(`focused`): [`TRet`](../enumerations/TRet.md)
 
 设置控件是否获得焦点。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `focused` | `boolean` | 是否获得焦点。 |
+• **focused**: `boolean`
+
+是否获得焦点。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setFocused](TComboBox.md#setfocused)
+[`TComboBox`](TComboBox.md).[`setFocused`](TComboBox.md#setfocused)
 
 #### Defined in
 
-[awtk.ts:11057](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11057)
+[awtk.ts:11478](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11478)
 
-___
+***
 
-### setInputType
+### setInputType()
 
-▸ **setInputType**(`type`): [`TRet`](../enums/TRet.md)
+> **setInputType**(`type`): [`TRet`](../enumerations/TRet.md)
 
 设置编辑器的输入类型。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `type` | [`TInputType`](../enums/TInputType.md) | 输入类型。 |
+• **type**: [`TInputType`](../enumerations/TInputType.md)
+
+输入类型。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setInputType](TComboBox.md#setinputtype)
+[`TComboBox`](TComboBox.md).[`setInputType`](TComboBox.md#setinputtype)
 
 #### Defined in
 
-[awtk.ts:24461](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24461)
+[awtk.ts:25398](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25398)
 
-___
+***
 
-### setInt
+### setInt()
 
-▸ **setInt**(`value`): [`TRet`](../enums/TRet.md)
+> **setInt**(`value`): [`TRet`](../enumerations/TRet.md)
 
 设置int类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `any` | 值。 |
+• **value**: `any`
+
+值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setInt](TComboBox.md#setint)
+[`TComboBox`](TComboBox.md).[`setInt`](TComboBox.md#setint)
 
 #### Defined in
 
-[awtk.ts:24308](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24308)
+[awtk.ts:25245](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25245)
 
-___
+***
 
-### setIntLimit
+### setIntLimit()
 
-▸ **setIntLimit**(`min`, `max`, `step`): [`TRet`](../enums/TRet.md)
+> **setIntLimit**(`min`, `max`, `step`): [`TRet`](../enumerations/TRet.md)
 
 设置为整数输入及取值范围。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `min` | `number` | 最小值。 |
-| `max` | `number` | 最大值。 |
-| `step` | `number` | 步长。 |
+• **min**: `number`
+
+最小值。
+
+• **max**: `number`
+
+最大值。
+
+• **step**: `number`
+
+步长。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setIntLimit](TComboBox.md#setintlimit)
+[`TComboBox`](TComboBox.md).[`setIntLimit`](TComboBox.md#setintlimit)
 
 #### Defined in
 
-[awtk.ts:24360](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24360)
+[awtk.ts:25297](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25297)
 
-___
+***
 
-### setItemHeight
+### setItemHeight()
 
-▸ **setItemHeight**(`item_height`): [`TRet`](../enums/TRet.md)
+> **setItemHeight**(`item_height`): [`TRet`](../enumerations/TRet.md)
 
 设置item高度。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `item_height` | `number` | item的高度。 |
+• **item\_height**: `number`
+
+item的高度。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setItemHeight](TComboBox.md#setitemheight)
+[`TComboBox`](TComboBox.md).[`setItemHeight`](TComboBox.md#setitemheight)
 
 #### Defined in
 
-[awtk.ts:28155](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28155)
+[awtk.ts:29356](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29356)
 
-___
+***
 
-### setKeyboard
+### setKeyboard()
 
-▸ **setKeyboard**(`keyboard`): [`TRet`](../enums/TRet.md)
+> **setKeyboard**(`keyboard`): [`TRet`](../enumerations/TRet.md)
 
 设置自定义软键盘名称。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `keyboard` | `string` | 键盘名称(相应UI资源必须存在)。 |
+• **keyboard**: `string`
+
+键盘名称(相应UI资源必须存在)。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setKeyboard](TComboBox.md#setkeyboard)
+[`TComboBox`](TComboBox.md).[`setKeyboard`](TComboBox.md#setkeyboard)
 
 #### Defined in
 
-[awtk.ts:24509](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24509)
+[awtk.ts:25446](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25446)
 
-___
+***
 
-### setLocalizeOptions
+### setLocalizeOptions()
 
-▸ **setLocalizeOptions**(`localize_options`): [`TRet`](../enums/TRet.md)
+> **setLocalizeOptions**(`localize_options`): [`TRet`](../enumerations/TRet.md)
 
 设置是否本地化(翻译)选项。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `localize_options` | `boolean` | 是否本地化(翻译)选项。 |
+• **localize\_options**: `boolean`
+
+是否本地化(翻译)选项。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setLocalizeOptions](TComboBox.md#setlocalizeoptions)
+[`TComboBox`](TComboBox.md).[`setLocalizeOptions`](TComboBox.md#setlocalizeoptions)
 
 #### Defined in
 
-[awtk.ts:28131](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28131)
+[awtk.ts:29332](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29332)
 
-___
+***
 
-### setName
+### setName()
 
-▸ **setName**(`name`): [`TRet`](../enums/TRet.md)
+> **setName**(`name`): [`TRet`](../enumerations/TRet.md)
 
 设置控件的名称。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 名称。 |
+• **name**: `string`
+
+名称。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setName](TComboBox.md#setname)
+[`TComboBox`](TComboBox.md).[`setName`](TComboBox.md#setname)
 
 #### Defined in
 
-[awtk.ts:10846](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10846)
+[awtk.ts:11267](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11267)
 
-___
+***
 
-### setOpacity
+### setOpacity()
 
-▸ **setOpacity**(`opacity`): [`TRet`](../enums/TRet.md)
+> **setOpacity**(`opacity`): [`TRet`](../enumerations/TRet.md)
 
 设置控件的不透明度。
 
@@ -5058,29 +4720,29 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opacity` | `number` | 不透明度(取值0-255，0表示完全透明，255表示完全不透明)。 |
+• **opacity**: `number`
+
+不透明度(取值0-255，0表示完全透明，255表示完全不透明)。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setOpacity](TComboBox.md#setopacity)
+[`TComboBox`](TComboBox.md).[`setOpacity`](TComboBox.md#setopacity)
 
 #### Defined in
 
-[awtk.ts:11095](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11095)
+[awtk.ts:11516](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11516)
 
-___
+***
 
-### setOpenImWhenFocused
+### setOpenImWhenFocused()
 
-▸ **setOpenImWhenFocused**(`open_im_when_focused`): [`TRet`](../enums/TRet.md)
+> **setOpenImWhenFocused**(`open_im_when_focused`): [`TRet`](../enumerations/TRet.md)
 
 设置编辑器是否在获得焦点时打开输入法。
 
@@ -5089,604 +4751,669 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `open_im_when_focused` | `boolean` | 是否在获得焦点时打开输入法。 |
+• **open\_im\_when\_focused**: `boolean`
+
+是否在获得焦点时打开输入法。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setOpenImWhenFocused](TComboBox.md#setopenimwhenfocused)
+[`TComboBox`](TComboBox.md).[`setOpenImWhenFocused`](TComboBox.md#setopenimwhenfocused)
 
 #### Defined in
 
-[awtk.ts:24437](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24437)
+[awtk.ts:25374](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25374)
 
-___
+***
 
-### setOpenWindow
+### setOpenWindow()
 
-▸ **setOpenWindow**(`open_window`): [`TRet`](../enums/TRet.md)
+> **setOpenWindow**(`open_window`): [`TRet`](../enumerations/TRet.md)
 
 点击按钮时可以打开popup窗口，本函数可设置窗口的名称。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `open_window` | `string` | 弹出窗口的名称。 |
+• **open\_window**: `string`
+
+弹出窗口的名称。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setOpenWindow](TComboBox.md#setopenwindow)
+[`TComboBox`](TComboBox.md).[`setOpenWindow`](TComboBox.md#setopenwindow)
 
 #### Defined in
 
-[awtk.ts:28061](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28061)
+[awtk.ts:29262](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29262)
 
-___
+***
 
-### setOptions
+### setOptions()
 
-▸ **setOptions**(`options`): [`TRet`](../enums/TRet.md)
+> **setOptions**(`options`): [`TRet`](../enumerations/TRet.md)
 
 设置选项。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options` | `string` | 选项。 |
+• **options**: `string`
+
+选项。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setOptions](TComboBox.md#setoptions)
+[`TComboBox`](TComboBox.md).[`setOptions`](TComboBox.md#setoptions)
 
 #### Defined in
 
-[awtk.ts:28192](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28192)
+[awtk.ts:29405](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29405)
 
-___
+***
 
-### setPasswordVisible
+### setPasswordVisible()
 
-▸ **setPasswordVisible**(`password_visible`): [`TRet`](../enums/TRet.md)
+> **setPasswordVisible**(`password_visible`): [`TRet`](../enumerations/TRet.md)
 
 当编辑器输入类型为密码时，设置密码是否可见。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `password_visible` | `boolean` | 密码是否可见。 |
+• **password\_visible**: `boolean`
+
+密码是否可见。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setPasswordVisible](TComboBox.md#setpasswordvisible)
+[`TComboBox`](TComboBox.md).[`setPasswordVisible`](TComboBox.md#setpasswordvisible)
 
 #### Defined in
 
-[awtk.ts:24521](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24521)
+[awtk.ts:25458](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25458)
 
-___
+***
 
-### setPointerCursor
+### setPointerCursor()
 
-▸ **setPointerCursor**(`cursor`): [`TRet`](../enums/TRet.md)
+> **setPointerCursor**(`cursor`): [`TRet`](../enumerations/TRet.md)
 
 设置鼠标指针的图片名。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `cursor` | `string` | 图片名称(无扩展名)。 |
+• **cursor**: `string`
+
+图片名称(无扩展名)。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setPointerCursor](TComboBox.md#setpointercursor)
+[`TComboBox`](TComboBox.md).[`setPointerCursor`](TComboBox.md#setpointercursor)
 
 #### Defined in
 
-[awtk.ts:10881](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10881)
+[awtk.ts:11302](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11302)
 
-___
+***
 
-### setPropBool
+### setProp()
 
-▸ **setPropBool**(`name`, `v`): [`TRet`](../enums/TRet.md)
+> **setProp**(`name`, `v`): [`TRet`](../enumerations/TRet.md)
+
+设置控件指定属性的值。
+
+#### Parameters
+
+• **name**: `string`
+
+属性的名称。
+
+• **v**: [`TValue`](TValue.md)
+
+属性的值。
+
+#### Returns
+
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
+
+#### Inherited from
+
+[`TComboBox`](TComboBox.md).[`setProp`](TComboBox.md#setprop)
+
+#### Defined in
+
+[awtk.ts:11729](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11729)
+
+***
+
+### setPropBool()
+
+> **setPropBool**(`name`, `v`): [`TRet`](../enumerations/TRet.md)
 
 设置布尔格式的属性。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `v` | `boolean` | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **v**: `boolean`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setPropBool](TComboBox.md#setpropbool)
+[`TComboBox`](TComboBox.md).[`setPropBool`](TComboBox.md#setpropbool)
 
 #### Defined in
 
-[awtk.ts:11411](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11411)
+[awtk.ts:11858](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11858)
 
-___
+***
 
-### setPropFloat
+### setPropFloat()
 
-▸ **setPropFloat**(`name`, `v`): [`TRet`](../enums/TRet.md)
+> **setPropFloat**(`name`, `v`): [`TRet`](../enumerations/TRet.md)
 
 设置浮点数格式的属性。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `v` | `number` | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **v**: `number`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setPropFloat](TComboBox.md#setpropfloat)
+[`TComboBox`](TComboBox.md).[`setPropFloat`](TComboBox.md#setpropfloat)
 
 #### Defined in
 
-[awtk.ts:11359](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11359)
+[awtk.ts:11806](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11806)
 
-___
+***
 
-### setPropInt
+### setPropInt()
 
-▸ **setPropInt**(`name`, `v`): [`TRet`](../enums/TRet.md)
+> **setPropInt**(`name`, `v`): [`TRet`](../enumerations/TRet.md)
 
 设置整数格式的属性。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `v` | `number` | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **v**: `number`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setPropInt](TComboBox.md#setpropint)
+[`TComboBox`](TComboBox.md).[`setPropInt`](TComboBox.md#setpropint)
 
 #### Defined in
 
-[awtk.ts:11385](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11385)
+[awtk.ts:11832](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11832)
 
-___
+***
 
-### setPropPointer
+### setPropPointer()
 
-▸ **setPropPointer**(`name`, `v`): [`TRet`](../enums/TRet.md)
+> **setPropPointer**(`name`, `v`): [`TRet`](../enumerations/TRet.md)
 
 设置指针格式的属性。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `v` | `any` | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **v**: `any`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setPropPointer](TComboBox.md#setproppointer)
+[`TComboBox`](TComboBox.md).[`setPropPointer`](TComboBox.md#setproppointer)
 
 #### Defined in
 
-[awtk.ts:11334](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11334)
+[awtk.ts:11781](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11781)
 
-___
+***
 
-### setPropStr
+### setPropStr()
 
-▸ **setPropStr**(`name`, `v`): [`TRet`](../enums/TRet.md)
+> **setPropStr**(`name`, `v`): [`TRet`](../enumerations/TRet.md)
 
 设置字符串格式的属性。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `v` | `string` | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **v**: `string`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setPropStr](TComboBox.md#setpropstr)
+[`TComboBox`](TComboBox.md).[`setPropStr`](TComboBox.md#setpropstr)
 
 #### Defined in
 
-[awtk.ts:11308](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11308)
+[awtk.ts:11755](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11755)
 
-___
+***
 
-### setProps
+### setProps()
 
-▸ **setProps**(`params`): [`TRet`](../enums/TRet.md)
+> **setProps**(`params`): [`TRet`](../enumerations/TRet.md)
 
 设置多个参数。
 >参数之间用&分隔，名称和值之间用=分隔。如: name=awtk&min=10&max=100
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `params` | `string` | 参数列表。 |
+• **params**: `string`
+
+参数列表。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setProps](TComboBox.md#setprops)
+[`TComboBox`](TComboBox.md).[`setProps`](TComboBox.md#setprops)
 
 #### Defined in
 
-[awtk.ts:11295](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11295)
+[awtk.ts:11742](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11742)
 
-___
+***
 
-### setReadonly
+### setReadonly()
 
-▸ **setReadonly**(`readonly`): [`TRet`](../enums/TRet.md)
+> **setReadonly**(`readonly`): [`TRet`](../enumerations/TRet.md)
 
 设置编辑器是否为只读。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `readonly` | `boolean` | 只读。 |
+• **readonly**: `boolean`
+
+只读。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setReadonly](TComboBox.md#setreadonly)
+[`TComboBox`](TComboBox.md).[`setReadonly`](TComboBox.md#setreadonly)
 
 #### Defined in
 
-[awtk.ts:24386](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24386)
+[awtk.ts:25323](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25323)
 
-___
+***
 
-### setSelect
+### setSelect()
 
-▸ **setSelect**(`start`, `end`): [`TRet`](../enums/TRet.md)
+> **setSelect**(`start`, `end`): [`TRet`](../enumerations/TRet.md)
 
 选择指定范围的文本。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `start` | `number` | 起始偏移。 |
-| `end` | `number` | 结束偏移。 |
+• **start**: `number`
+
+起始偏移。
+
+• **end**: `number`
+
+结束偏移。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setSelect](TComboBox.md#setselect)
+[`TComboBox`](TComboBox.md).[`setSelect`](TComboBox.md#setselect)
 
 #### Defined in
 
-[awtk.ts:24569](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24569)
+[awtk.ts:25506](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25506)
 
-___
+***
 
-### setSelectNoneWhenFocused
+### setSelectNoneWhenFocused()
 
-▸ **setSelectNoneWhenFocused**(`select_none_when_focused`): [`TRet`](../enums/TRet.md)
+> **setSelectNoneWhenFocused**(`select_none_when_focused`): [`TRet`](../enumerations/TRet.md)
 
 设置编辑器是否在获得焦点时不选中文本。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `select_none_when_focused` | `boolean` | 是否在获得焦点时不选中文本。 |
+• **select\_none\_when\_focused**: `boolean`
+
+是否在获得焦点时不选中文本。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setSelectNoneWhenFocused](TComboBox.md#setselectnonewhenfocused)
+[`TComboBox`](TComboBox.md).[`setSelectNoneWhenFocused`](TComboBox.md#setselectnonewhenfocused)
 
 #### Defined in
 
-[awtk.ts:24422](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24422)
+[awtk.ts:25359](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25359)
 
-___
+***
 
-### setSelectedIndex
+### setSelectedIndex()
 
-▸ **setSelectedIndex**(`index`): [`TRet`](../enums/TRet.md)
+> **setSelectedIndex**(`index`): [`TRet`](../enumerations/TRet.md)
 
 设置第index个选项为当前选中的选项。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `index` | `number` | 选项的索引。 |
+• **index**: `number`
+
+选项的索引。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setSelectedIndex](TComboBox.md#setselectedindex)
+[`TComboBox`](TComboBox.md).[`setSelectedIndex`](TComboBox.md#setselectedindex)
 
 #### Defined in
 
-[awtk.ts:28107](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28107)
+[awtk.ts:29308](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29308)
 
-___
+***
 
-### setSelectedIndexByText
+### setSelectedIndexByText()
 
-▸ **setSelectedIndexByText**(`text`): [`TRet`](../enums/TRet.md)
+> **setSelectedIndexByText**(`text`): [`TRet`](../enumerations/TRet.md)
 
 根据文本设置当前选中的选项。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | 原生(非翻译的文本)。 |
+• **text**: `string`
+
+原生(非翻译的文本)。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setSelectedIndexByText](TComboBox.md#setselectedindexbytext)
+[`TComboBox`](TComboBox.md).[`setSelectedIndexByText`](TComboBox.md#setselectedindexbytext)
 
 #### Defined in
 
-[awtk.ts:28119](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28119)
+[awtk.ts:29320](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29320)
 
-___
+***
 
-### setSelfLayout
+### setSelfLayout()
 
-▸ **setSelfLayout**(`params`): [`TRet`](../enums/TRet.md)
+> **setSelfLayout**(`params`): [`TRet`](../enumerations/TRet.md)
 
 设置控件自己的布局参数。
+备注：下一帧才会生效数据
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `params` | `string` | 布局参数。 |
+• **params**: `string`
+
+布局参数。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setSelfLayout](TComboBox.md#setselflayout)
+[`TComboBox`](TComboBox.md).[`setSelfLayout`](TComboBox.md#setselflayout)
 
 #### Defined in
 
-[awtk.ts:11882](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11882)
+[awtk.ts:12357](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12357)
 
-___
+***
 
-### setSelfLayoutParams
+### setSelfLayoutParams()
 
-▸ **setSelfLayoutParams**(`x`, `y`, `w`, `h`): [`TRet`](../enums/TRet.md)
+> **setSelfLayoutParams**(`x`, `y`, `w`, `h`): [`TRet`](../enumerations/TRet.md)
 
 设置控件自己的布局(缺省布局器)参数(过时，请用widget\_set\_self\_layout)。
+备注：下一帧才会生效数据
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `string` | x参数。 |
-| `y` | `string` | y参数。 |
-| `w` | `string` | w参数。 |
-| `h` | `string` | h参数。 |
+• **x**: `string`
+
+x参数。
+
+• **y**: `string`
+
+y参数。
+
+• **w**: `string`
+
+w参数。
+
+• **h**: `string`
+
+h参数。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setSelfLayoutParams](TComboBox.md#setselflayoutparams)
+[`TComboBox`](TComboBox.md).[`setSelfLayoutParams`](TComboBox.md#setselflayoutparams)
 
 #### Defined in
 
-[awtk.ts:11909](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11909)
+[awtk.ts:12386](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12386)
 
-___
+***
 
-### setSensitive
+### setSensitive()
 
-▸ **setSensitive**(`sensitive`): [`TRet`](../enums/TRet.md)
+> **setSensitive**(`sensitive`): [`TRet`](../enumerations/TRet.md)
 
 设置控件是否接受用户事件。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `sensitive` | `boolean` | 是否接受用户事件。 |
+• **sensitive**: `boolean`
+
+是否接受用户事件。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setSensitive](TComboBox.md#setsensitive)
+[`TComboBox`](TComboBox.md).[`setSensitive`](TComboBox.md#setsensitive)
 
 #### Defined in
 
-[awtk.ts:11241](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11241)
+[awtk.ts:11662](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11662)
 
-___
+***
 
-### setState
+### setState()
 
-▸ **setState**(`state`): [`TRet`](../enums/TRet.md)
+> **setState**(`state`): [`TRet`](../enumerations/TRet.md)
 
 设置控件的状态。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `state` | `string` | 状态(必须为真正的常量字符串，在widget的整个生命周期有效)。 |
+• **state**: `string`
+
+状态。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setState](TComboBox.md#setstate)
+[`TComboBox`](TComboBox.md).[`setState`](TComboBox.md#setstate)
 
 #### Defined in
 
-[awtk.ts:11081](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11081)
+[awtk.ts:11502](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11502)
 
-___
+***
 
-### setStyleColor
+### setStyleColor()
 
-▸ **setStyleColor**(`state_and_name`, `value`): [`TRet`](../enums/TRet.md)
+> **setStyleColor**(`state_and_name`, `value`): [`TRet`](../enumerations/TRet.md)
 
-widget_set_style_color(label, "normal:bg_color", 0xFF332211);
-```
+设置颜色类型的style。
 
-@param state_and_name 状态和名字，用英文的冒号分隔。
-@param value 值。颜色值一般用十六进制表示，每两个数字表示一个颜色通道，从高位到低位，依次是ABGR。
+> * [state 的取值](https://github.com/zlgopen/awtk/blob/master/docs/manual/widget_state_t.md)
+> * [name 的取值](https://github.com/zlgopen/awtk/blob/master/docs/theme.md)
 
-@returns 返回RET_OK表示成功，否则表示失败。
+在下面这个例子中，R=0x11 G=0x22 B=0x33 A=0xFF
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `state_and_name` | `string` |
-| `value` | `any` |
+• **state\_and\_name**: `string`
+
+状态和名字，用英文的冒号分隔。
+
+• **value**: `any`
+
+值。颜色值一般用十六进制表示，每两个数字表示一个颜色通道，从高位到低位，依次是ABGR。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setStyleColor](TComboBox.md#setstylecolor)
+[`TComboBox`](TComboBox.md).[`setStyleColor`](TComboBox.md#setstylecolor)
 
 #### Defined in
 
-[awtk.ts:11955](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11955)
+[awtk.ts:12439](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12439)
 
-___
+***
 
-### setStyleInt
+### setStyleInt()
 
-▸ **setStyleInt**(`state_and_name`, `value`): [`TRet`](../enums/TRet.md)
+> **setStyleInt**(`state_and_name`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置整数类型的style。
 
@@ -5695,30 +5422,33 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `state_and_name` | `string` | 状态和名字，用英文的冒号分隔。 |
-| `value` | `any` | 值。 |
+• **state\_and\_name**: `string`
+
+状态和名字，用英文的冒号分隔。
+
+• **value**: `any`
+
+值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setStyleInt](TComboBox.md#setstyleint)
+[`TComboBox`](TComboBox.md).[`setStyleInt`](TComboBox.md#setstyleint)
 
 #### Defined in
 
-[awtk.ts:11925](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11925)
+[awtk.ts:12402](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12402)
 
-___
+***
 
-### setStyleStr
+### setStyleStr()
 
-▸ **setStyleStr**(`state_and_name`, `value`): [`TRet`](../enums/TRet.md)
+> **setStyleStr**(`state_and_name`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置字符串类型的style。
 
@@ -5727,369 +5457,378 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `state_and_name` | `string` | 状态和名字，用英文的冒号分隔。 |
-| `value` | `string` | 值。 |
+• **state\_and\_name**: `string`
+
+状态和名字，用英文的冒号分隔。
+
+• **value**: `string`
+
+值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setStyleStr](TComboBox.md#setstylestr)
+[`TComboBox`](TComboBox.md).[`setStyleStr`](TComboBox.md#setstylestr)
 
 #### Defined in
 
-[awtk.ts:11941](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11941)
+[awtk.ts:12418](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12418)
 
-___
+***
 
-### setText
+### setText()
 
-▸ **setText**(`text`): [`TRet`](../enums/TRet.md)
+> **setText**(`text`): [`TRet`](../enumerations/TRet.md)
 
 设置控件的文本。（如果字符串相同，则不会重复设置以及触发事件）
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | 文本。 |
+• **text**: `string`
+
+文本。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setText](TComboBox.md#settext)
+[`TComboBox`](TComboBox.md).[`setText`](TComboBox.md#settext)
 
 #### Defined in
 
-[awtk.ts:10661](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10661)
+[awtk.ts:11082](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11082)
 
-___
+***
 
-### setTextEx
+### setTextEx()
 
-▸ **setTextEx**(`text`, `check_diff`): [`TRet`](../enums/TRet.md)
+> **setTextEx**(`text`, `check_diff`): [`TRet`](../enumerations/TRet.md)
 
 设置控件的文本。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | 文本。 |
-| `check_diff` | `boolean` | 是否检查设置的文本是否和控件中的文本一样。 |
+• **text**: `string`
+
+文本。
+
+• **check\_diff**: `boolean`
+
+是否检查设置的文本是否和控件中的文本一样。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setTextEx](TComboBox.md#settextex)
+[`TComboBox`](TComboBox.md).[`setTextEx`](TComboBox.md#settextex)
 
 #### Defined in
 
-[awtk.ts:10674](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10674)
+[awtk.ts:11095](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11095)
 
-___
+***
 
-### setTextLimit
+### setTextLimit()
 
-▸ **setTextLimit**(`min`, `max`): [`TRet`](../enums/TRet.md)
+> **setTextLimit**(`min`, `max`): [`TRet`](../enumerations/TRet.md)
 
 设置为文本输入及其长度限制，不允许输入超过max个字符，少于min个字符时进入error状态。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `min` | `number` | 最小长度。 |
-| `max` | `number` | 最大长度。 |
+• **min**: `number`
+
+最小长度。
+
+• **max**: `number`
+
+最大长度。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setTextLimit](TComboBox.md#settextlimit)
+[`TComboBox`](TComboBox.md).[`setTextLimit`](TComboBox.md#settextlimit)
 
 #### Defined in
 
-[awtk.ts:24346](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24346)
+[awtk.ts:25283](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25283)
 
-___
+***
 
-### setTheme
+### setTheme()
 
-▸ **setTheme**(`name`): [`TRet`](../enums/TRet.md)
+> **setTheme**(`name`): [`TRet`](../enumerations/TRet.md)
 
 设置theme的名称，用于动态切换主题。名称与当前主题名称相同，则重新加载全部资源。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 主题的名称。 |
+• **name**: `string`
+
+主题的名称。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setTheme](TComboBox.md#settheme)
+[`TComboBox`](TComboBox.md).[`setTheme`](TComboBox.md#settheme)
 
 #### Defined in
 
-[awtk.ts:10858](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10858)
+[awtk.ts:11279](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11279)
 
-___
+***
 
-### setThemeOfPopup
+### setThemeOfPopup()
 
-▸ **setThemeOfPopup**(`theme_of_popup`): [`TRet`](../enums/TRet.md)
+> **setThemeOfPopup**(`theme_of_popup`): [`TRet`](../enumerations/TRet.md)
 
 设置弹出窗口的主题。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `theme_of_popup` | `string` | 弹出的窗口主题。 |
+• **theme\_of\_popup**: `string`
+
+弹出的窗口主题。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setThemeOfPopup](TComboBox.md#setthemeofpopup)
+[`TComboBox`](TComboBox.md).[`setThemeOfPopup`](TComboBox.md#setthemeofpopup)
 
 #### Defined in
 
-[awtk.ts:28073](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28073)
+[awtk.ts:29274](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29274)
 
-___
+***
 
-### setTips
+### setTips()
 
-▸ **setTips**(`tips`): [`TRet`](../enums/TRet.md)
+> **setTips**(`tips`): [`TRet`](../enumerations/TRet.md)
 
 设置编辑器的输入提示。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `tips` | `string` | 输入提示。 |
+• **tips**: `string`
+
+输入提示。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setTips](TComboBox.md#settips)
+[`TComboBox`](TComboBox.md).[`setTips`](TComboBox.md#settips)
 
 #### Defined in
 
-[awtk.ts:24485](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24485)
+[awtk.ts:25422](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25422)
 
-___
+***
 
-### setTrText
+### setTrText()
 
-▸ **setTrText**(`text`): [`TRet`](../enums/TRet.md)
+> **setTrText**(`text`): [`TRet`](../enumerations/TRet.md)
 
 获取翻译之后的文本，然后调用widget_set_text。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | 文本。 |
+• **text**: `string`
+
+文本。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setTrText](TComboBox.md#settrtext)
+[`TComboBox`](TComboBox.md).[`setTrText`](TComboBox.md#settrtext)
 
 #### Defined in
 
-[awtk.ts:10730](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10730)
+[awtk.ts:11151](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11151)
 
-___
+***
 
-### setTrTips
+### setTrTips()
 
-▸ **setTrTips**(`tr_tips`): [`TRet`](../enums/TRet.md)
+> **setTrTips**(`tr_tips`): [`TRet`](../enumerations/TRet.md)
 
 获取翻译之后的文本，然后调用edit_set_tips。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `tr_tips` | `string` | 提示信息。 |
+• **tr\_tips**: `string`
+
+提示信息。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setTrTips](TComboBox.md#settrtips)
+[`TComboBox`](TComboBox.md).[`setTrTips`](TComboBox.md#settrtips)
 
 #### Defined in
 
-[awtk.ts:24497](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L24497)
+[awtk.ts:25434](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L25434)
 
-___
+***
 
-### setValue
+### setValue()
 
-▸ **setValue**(`value`): [`TRet`](../enums/TRet.md)
+> **setValue**(`value`): [`TRet`](../enumerations/TRet.md)
 
 设置值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `any` | 值。 |
+• **value**: `any`
+
+值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setValue](TComboBox.md#setvalue)
+[`TComboBox`](TComboBox.md).[`setValue`](TComboBox.md#setvalue)
 
 #### Defined in
 
-[awtk.ts:28143](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28143)
+[awtk.ts:29344](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29344)
 
-___
+***
 
-### setValueInt
+### setValueInt()
 
-▸ **setValueInt**(`value`): [`TRet`](../enums/TRet.md)
+> **setValueInt**(`value`): [`TRet`](../enumerations/TRet.md)
 
 设置控件的值。
 只是对widget\_set\_prop的包装，值的意义由子类控件决定。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `any` | 值。 |
+• **value**: `any`
+
+值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setValueInt](TComboBox.md#setvalueint)
+[`TComboBox`](TComboBox.md).[`setValueInt`](TComboBox.md#setvalueint)
 
 #### Defined in
 
-[awtk.ts:10597](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10597)
+[awtk.ts:10996](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10996)
 
-___
+***
 
-### setVisible
+### setVisible()
 
-▸ **setVisible**(`visible`): [`TRet`](../enums/TRet.md)
+> **setVisible**(`visible`): [`TRet`](../enumerations/TRet.md)
 
 设置控件的可见性。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `visible` | `boolean` | 是否可见。 |
+• **visible**: `boolean`
+
+是否可见。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setVisible](TComboBox.md#setvisible)
+[`TComboBox`](TComboBox.md).[`setVisible`](TComboBox.md#setvisible)
 
 #### Defined in
 
-[awtk.ts:11217](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11217)
+[awtk.ts:11638](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11638)
 
-___
+***
 
-### setVisibleOnly
+### setVisibleOnly()
 
-▸ **setVisibleOnly**(`visible`): [`TRet`](../enums/TRet.md)
+> **setVisibleOnly**(`visible`): [`TRet`](../enumerations/TRet.md)
 
 设置控件的可见性(不触发repaint和relayout)。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `visible` | `boolean` | 是否可见。 |
+• **visible**: `boolean`
+
+是否可见。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[setVisibleOnly](TComboBox.md#setvisibleonly)
+[`TComboBox`](TComboBox.md).[`setVisibleOnly`](TComboBox.md#setvisibleonly)
 
 #### Defined in
 
-[awtk.ts:11229](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11229)
+[awtk.ts:11650](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11650)
 
-___
+***
 
-### startAnimator
+### startAnimator()
 
-▸ **startAnimator**(`name`): [`TRet`](../enums/TRet.md)
+> **startAnimator**(`name`): [`TRet`](../enumerations/TRet.md)
 
 播放动画。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
@@ -6100,29 +5839,29 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 动画名称。 |
+• **name**: `string`
+
+动画名称。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[startAnimator](TComboBox.md#startanimator)
+[`TComboBox`](TComboBox.md).[`startAnimator`](TComboBox.md#startanimator)
 
 #### Defined in
 
-[awtk.ts:10927](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10927)
+[awtk.ts:11348](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11348)
 
-___
+***
 
-### stopAnimator
+### stopAnimator()
 
-▸ **stopAnimator**(`name`): [`TRet`](../enums/TRet.md)
+> **stopAnimator**(`name`): [`TRet`](../enumerations/TRet.md)
 
 停止动画(控件的相应属性回归原位)。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
@@ -6133,160 +5872,163 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 动画名称。 |
+• **name**: `string`
+
+动画名称。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[stopAnimator](TComboBox.md#stopanimator)
+[`TComboBox`](TComboBox.md).[`stopAnimator`](TComboBox.md#stopanimator)
 
 #### Defined in
 
-[awtk.ts:10979](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10979)
+[awtk.ts:11400](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11400)
 
-___
+***
 
-### strokeBorderRect
+### strokeBorderRect()
 
-▸ **strokeBorderRect**(`c`, `r`): [`TRet`](../enums/TRet.md)
+> **strokeBorderRect**(`c`, `r`): [`TRet`](../enumerations/TRet.md)
 
 根据控件的style绘制边框矩形。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `c` | [`TCanvas`](TCanvas.md) | 画布对象。 |
-| `r` | [`TRect`](TRect.md) | 矩形区域。 |
+• **c**: [`TCanvas`](TCanvas.md)
+
+画布对象。
+
+• **r**: [`TRect`](TRect.md)
+
+矩形区域。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[strokeBorderRect](TComboBox.md#strokeborderrect)
+[`TComboBox`](TComboBox.md).[`strokeBorderRect`](TComboBox.md#strokeborderrect)
 
 #### Defined in
 
-[awtk.ts:11724](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11724)
+[awtk.ts:12198](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12198)
 
-___
+***
 
-### unref
+### unref()
 
-▸ **unref**(): [`TRet`](../enums/TRet.md)
+> **unref**(): [`TRet`](../enumerations/TRet.md)
 
 减少控件的引用计数。引用计数为0时销毁控件。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[unref](TComboBox.md#unref)
+[`TComboBox`](TComboBox.md).[`unref`](TComboBox.md#unref)
 
 #### Defined in
 
-[awtk.ts:11711](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11711)
+[awtk.ts:12185](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12185)
 
-___
+***
 
-### updateStyle
+### updateStyle()
 
-▸ **updateStyle**(): [`TRet`](../enums/TRet.md)
+> **updateStyle**(): [`TRet`](../enumerations/TRet.md)
 
 让控件根据自己当前状态更新style。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[updateStyle](TComboBox.md#updatestyle)
+[`TComboBox`](TComboBox.md).[`updateStyle`](TComboBox.md#updatestyle)
 
 #### Defined in
 
-[awtk.ts:11798](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11798)
+[awtk.ts:12272](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12272)
 
-___
+***
 
-### updateStyleRecursive
+### updateStyleRecursive()
 
-▸ **updateStyleRecursive**(): [`TRet`](../enums/TRet.md)
+> **updateStyleRecursive**(): [`TRet`](../enumerations/TRet.md)
 
 让控件及子控件根据自己当前状态更新style。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[updateStyleRecursive](TComboBox.md#updatestylerecursive)
+[`TComboBox`](TComboBox.md).[`updateStyleRecursive`](TComboBox.md#updatestylerecursive)
 
 #### Defined in
 
-[awtk.ts:11809](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L11809)
+[awtk.ts:12283](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12283)
 
-___
+***
 
-### useStyle
+### useStyle()
 
-▸ **useStyle**(`style`): [`TRet`](../enums/TRet.md)
+> **useStyle**(`style`): [`TRet`](../enumerations/TRet.md)
 
 启用指定的style。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `style` | `string` | style的名称。 |
+• **style**: `string`
+
+style的名称。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[useStyle](TComboBox.md#usestyle)
+[`TComboBox`](TComboBox.md).[`useStyle`](TComboBox.md#usestyle)
 
 #### Defined in
 
-[awtk.ts:10649](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L10649)
+[awtk.ts:11070](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11070)
 
-___
+***
 
-### cast
+### cast()
 
-▸ `Static` **cast**(`widget`): [`TComboBox`](TComboBox.md)
+> `static` **cast**(`widget`): [`TComboBox`](TComboBox.md)
 
 转换combo_box对象(供脚本语言使用)。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `widget` | [`TWidget`](TWidget.md) | combo_box对象。 |
+• **widget**: [`TWidget`](TWidget.md)
+
+combo_box对象。
 
 #### Returns
 
@@ -6296,29 +6038,41 @@ combo_box对象。
 
 #### Inherited from
 
-[TComboBox](TComboBox.md).[cast](TComboBox.md#cast)
+[`TComboBox`](TComboBox.md).[`cast`](TComboBox.md#cast)
 
 #### Defined in
 
-[awtk.ts:28049](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L28049)
+[awtk.ts:29250](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L29250)
 
-___
+***
 
-### create
+### create()
 
-▸ `Static` **create**(`parent`, `x`, `y`, `w`, `h`): [`TComboBoxEx`](TComboBoxEx.md)
+> `static` **create**(`parent`, `x`, `y`, `w`, `h`): [`TComboBoxEx`](TComboBoxEx.md)
 
 创建combo_box_ex对象
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `parent` | [`TWidget`](TWidget.md) | 父控件 |
-| `x` | `number` | x坐标 |
-| `y` | `number` | y坐标 |
-| `w` | `number` | 宽度 |
-| `h` | `number` | 高度 |
+• **parent**: [`TWidget`](TWidget.md)
+
+父控件
+
+• **x**: `number`
+
+x坐标
+
+• **y**: `number`
+
+y坐标
+
+• **w**: `number`
+
+宽度
+
+• **h**: `number`
+
+高度
 
 #### Returns
 
@@ -6328,8 +6082,8 @@ ___
 
 #### Overrides
 
-[TComboBox](TComboBox.md).[create](TComboBox.md#create)
+[`TComboBox`](TComboBox.md).[`create`](TComboBox.md#create)
 
 #### Defined in
 
-[awtk.ts:29013](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L29013)
+[awtk.ts:30258](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L30258)

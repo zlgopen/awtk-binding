@@ -1,41 +1,37 @@
-[AWTK](../README.md) / [Exports](../modules.md) / TCanvasOffline
+[**AWTK**](../README.md) • **Docs**
+
+***
+
+[AWTK](../globals.md) / TCanvasOffline
 
 # Class: TCanvasOffline
 
 离线画布 canvas。
 
-## Table of contents
-
-### Constructors
-
-- [constructor](TCanvasOffline.md#constructor)
-
-### Properties
-
-- [nativeObj](TCanvasOffline.md#nativeobj)
-
 ## Constructors
 
-### constructor
+### new TCanvasOffline()
 
-• **new TCanvasOffline**(`nativeObj`)
+> **new TCanvasOffline**(`nativeObj`): [`TCanvasOffline`](TCanvasOffline.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `nativeObj` | `any` |
+• **nativeObj**: `any`
+
+#### Returns
+
+[`TCanvasOffline`](TCanvasOffline.md)
 
 #### Defined in
 
-[awtk.ts:4283](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4283)
+[awtk.ts:4411](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4411)
 
 ## Properties
 
 ### nativeObj
 
-• **nativeObj**: `any`
+> **nativeObj**: `any`
 
 #### Defined in
 
-[awtk.ts:4282](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L4282)
+[awtk.ts:4410](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4410)

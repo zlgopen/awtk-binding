@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.20"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TAppConf类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-JAVA
    </div>
    <div id="projectbrief">AWTK JAVA API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.20 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,9 +70,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,55 +87,56 @@ $(function() {
 <li class="navelem"><b>awtk</b></li><li class="navelem"><a class="el" href="classawtk_1_1_t_app_conf.html">TAppConf</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="classawtk_1_1_t_app_conf-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">awtk.TAppConf类 参考</div>  </div>
+  <div class="headertitle"><div class="title">awtk.TAppConf类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:aec4b992d030a548778e2e320f1c70494"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#aec4b992d030a548778e2e320f1c70494">save</a> ()</td></tr>
+<tr class="memitem:aec4b992d030a548778e2e320f1c70494" id="r_aec4b992d030a548778e2e320f1c70494"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec4b992d030a548778e2e320f1c70494">save</a> ()</td></tr>
 <tr class="separator:aec4b992d030a548778e2e320f1c70494"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fe4e4f9941105735f7ddfc65bb5cda0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#a3fe4e4f9941105735f7ddfc65bb5cda0">reload</a> ()</td></tr>
+<tr class="memitem:a3fe4e4f9941105735f7ddfc65bb5cda0" id="r_a3fe4e4f9941105735f7ddfc65bb5cda0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fe4e4f9941105735f7ddfc65bb5cda0">reload</a> ()</td></tr>
 <tr class="separator:a3fe4e4f9941105735f7ddfc65bb5cda0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcc95df36fa7d794a021dfce9709e1fd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#adcc95df36fa7d794a021dfce9709e1fd">deinit</a> ()</td></tr>
+<tr class="memitem:adcc95df36fa7d794a021dfce9709e1fd" id="r_adcc95df36fa7d794a021dfce9709e1fd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcc95df36fa7d794a021dfce9709e1fd">deinit</a> ()</td></tr>
 <tr class="separator:adcc95df36fa7d794a021dfce9709e1fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0de3c3439a9239a83107489e600f8d97"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#a0de3c3439a9239a83107489e600f8d97">exist</a> (String key)</td></tr>
+<tr class="memitem:a0de3c3439a9239a83107489e600f8d97" id="r_a0de3c3439a9239a83107489e600f8d97"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0de3c3439a9239a83107489e600f8d97">exist</a> (String key)</td></tr>
 <tr class="separator:a0de3c3439a9239a83107489e600f8d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af40153f379b0d512829a6657e3e03a9d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#af40153f379b0d512829a6657e3e03a9d">setInt</a> (String key, int v)</td></tr>
+<tr class="memitem:af40153f379b0d512829a6657e3e03a9d" id="r_af40153f379b0d512829a6657e3e03a9d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af40153f379b0d512829a6657e3e03a9d">setInt</a> (String key, int v)</td></tr>
 <tr class="separator:af40153f379b0d512829a6657e3e03a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a972f4aab66874ce542825188d4ce03fc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#a972f4aab66874ce542825188d4ce03fc">setInt64</a> (String key, long v)</td></tr>
+<tr class="memitem:a972f4aab66874ce542825188d4ce03fc" id="r_a972f4aab66874ce542825188d4ce03fc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a972f4aab66874ce542825188d4ce03fc">setInt64</a> (String key, long v)</td></tr>
 <tr class="separator:a972f4aab66874ce542825188d4ce03fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a112ff7b7da5d55859345932307ee5db0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#a112ff7b7da5d55859345932307ee5db0">setBool</a> (String key, boolean v)</td></tr>
+<tr class="memitem:a112ff7b7da5d55859345932307ee5db0" id="r_a112ff7b7da5d55859345932307ee5db0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a112ff7b7da5d55859345932307ee5db0">setBool</a> (String key, boolean v)</td></tr>
 <tr class="separator:a112ff7b7da5d55859345932307ee5db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf8f348bd415db2d280433c97c171896"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#acf8f348bd415db2d280433c97c171896">setDouble</a> (String key, double v)</td></tr>
+<tr class="memitem:acf8f348bd415db2d280433c97c171896" id="r_acf8f348bd415db2d280433c97c171896"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf8f348bd415db2d280433c97c171896">setDouble</a> (String key, double v)</td></tr>
 <tr class="separator:acf8f348bd415db2d280433c97c171896"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13756ccb3e2922cf364bce4ada01b16c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#a13756ccb3e2922cf364bce4ada01b16c">setStr</a> (String key, String v)</td></tr>
+<tr class="memitem:a13756ccb3e2922cf364bce4ada01b16c" id="r_a13756ccb3e2922cf364bce4ada01b16c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13756ccb3e2922cf364bce4ada01b16c">setStr</a> (String key, String v)</td></tr>
 <tr class="separator:a13756ccb3e2922cf364bce4ada01b16c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1b81f60603acba1bbb02b88933694da"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#ae1b81f60603acba1bbb02b88933694da">getInt</a> (String key, int defval)</td></tr>
+<tr class="memitem:ae1b81f60603acba1bbb02b88933694da" id="r_ae1b81f60603acba1bbb02b88933694da"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1b81f60603acba1bbb02b88933694da">getInt</a> (String key, int defval)</td></tr>
 <tr class="separator:ae1b81f60603acba1bbb02b88933694da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac810b0ab5b50978d44fa0a160be523ca"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#ac810b0ab5b50978d44fa0a160be523ca">getInt64</a> (String key, long defval)</td></tr>
+<tr class="memitem:ac810b0ab5b50978d44fa0a160be523ca" id="r_ac810b0ab5b50978d44fa0a160be523ca"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac810b0ab5b50978d44fa0a160be523ca">getInt64</a> (String key, long defval)</td></tr>
 <tr class="separator:ac810b0ab5b50978d44fa0a160be523ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e403a2910031874bd8a7bbe89da3bb9"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#a6e403a2910031874bd8a7bbe89da3bb9">getBool</a> (String key, boolean defval)</td></tr>
+<tr class="memitem:a6e403a2910031874bd8a7bbe89da3bb9" id="r_a6e403a2910031874bd8a7bbe89da3bb9"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e403a2910031874bd8a7bbe89da3bb9">getBool</a> (String key, boolean defval)</td></tr>
 <tr class="separator:a6e403a2910031874bd8a7bbe89da3bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af81a01020738b2f8ed6bc87b9f2ce8bc"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#af81a01020738b2f8ed6bc87b9f2ce8bc">getDouble</a> (String key, double defval)</td></tr>
+<tr class="memitem:af81a01020738b2f8ed6bc87b9f2ce8bc" id="r_af81a01020738b2f8ed6bc87b9f2ce8bc"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af81a01020738b2f8ed6bc87b9f2ce8bc">getDouble</a> (String key, double defval)</td></tr>
 <tr class="separator:af81a01020738b2f8ed6bc87b9f2ce8bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb9726b52e4a3795049c2a07f9ce505c"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#adb9726b52e4a3795049c2a07f9ce505c">getStr</a> (String key, String defval)</td></tr>
+<tr class="memitem:adb9726b52e4a3795049c2a07f9ce505c" id="r_adb9726b52e4a3795049c2a07f9ce505c"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb9726b52e4a3795049c2a07f9ce505c">getStr</a> (String key, String defval)</td></tr>
 <tr class="separator:adb9726b52e4a3795049c2a07f9ce505c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3143d7772a74ae3d9e7356435f88b32"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_app_conf.html#aa3143d7772a74ae3d9e7356435f88b32">remove</a> (String key)</td></tr>
+<tr class="memitem:aa3143d7772a74ae3d9e7356435f88b32" id="r_aa3143d7772a74ae3d9e7356435f88b32"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3143d7772a74ae3d9e7356435f88b32">remove</a> (String key)</td></tr>
 <tr class="separator:aa3143d7772a74ae3d9e7356435f88b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>应用程序的配置信息。</p>
 <p>底层实现可以是任何格式，比如INI，XML，JSON和UBJSON。</p>
-<p>对于树状的文档，key可以是多级的，用.分隔。如network.ip。 </p>
+<p>对于树状的文档，key可以是多级的，用.分隔。如network.ip。</p>
+<p>conf-io是可选组件，需要自己包含头文件，否则64位数据类型会被截断成32位的数据。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="adcc95df36fa7d794a021dfce9709e1fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcc95df36fa7d794a021dfce9709e1fd">&#9670;&nbsp;</a></span>deinit()</h2>
+<a id="adcc95df36fa7d794a021dfce9709e1fd" name="adcc95df36fa7d794a021dfce9709e1fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcc95df36fa7d794a021dfce9709e1fd">&#9670;&#160;</a></span>deinit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -124,7 +147,7 @@ $(function() {
         <tr>
           <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TAppConf.deinit </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -139,8 +162,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a0de3c3439a9239a83107489e600f8d97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0de3c3439a9239a83107489e600f8d97">&#9670;&nbsp;</a></span>exist()</h2>
+<a id="a0de3c3439a9239a83107489e600f8d97" name="a0de3c3439a9239a83107489e600f8d97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0de3c3439a9239a83107489e600f8d97">&#9670;&#160;</a></span>exist()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -151,8 +174,7 @@ $(function() {
         <tr>
           <td class="memname">static boolean awtk.TAppConf.exist </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>key</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -173,8 +195,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a6e403a2910031874bd8a7bbe89da3bb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e403a2910031874bd8a7bbe89da3bb9">&#9670;&nbsp;</a></span>getBool()</h2>
+<a id="a6e403a2910031874bd8a7bbe89da3bb9" name="a6e403a2910031874bd8a7bbe89da3bb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e403a2910031874bd8a7bbe89da3bb9">&#9670;&#160;</a></span>getBool()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,19 +207,12 @@ $(function() {
         <tr>
           <td class="memname">static boolean awtk.TAppConf.getBool </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -218,8 +233,8 @@ $(function() {
 
 </div>
 </div>
-<a id="af81a01020738b2f8ed6bc87b9f2ce8bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af81a01020738b2f8ed6bc87b9f2ce8bc">&#9670;&nbsp;</a></span>getDouble()</h2>
+<a id="af81a01020738b2f8ed6bc87b9f2ce8bc" name="af81a01020738b2f8ed6bc87b9f2ce8bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af81a01020738b2f8ed6bc87b9f2ce8bc">&#9670;&#160;</a></span>getDouble()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -230,19 +245,12 @@ $(function() {
         <tr>
           <td class="memname">static double awtk.TAppConf.getDouble </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -263,8 +271,8 @@ $(function() {
 
 </div>
 </div>
-<a id="ae1b81f60603acba1bbb02b88933694da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1b81f60603acba1bbb02b88933694da">&#9670;&nbsp;</a></span>getInt()</h2>
+<a id="ae1b81f60603acba1bbb02b88933694da" name="ae1b81f60603acba1bbb02b88933694da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1b81f60603acba1bbb02b88933694da">&#9670;&#160;</a></span>getInt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -275,19 +283,12 @@ $(function() {
         <tr>
           <td class="memname">static int awtk.TAppConf.getInt </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -308,8 +309,8 @@ $(function() {
 
 </div>
 </div>
-<a id="ac810b0ab5b50978d44fa0a160be523ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac810b0ab5b50978d44fa0a160be523ca">&#9670;&nbsp;</a></span>getInt64()</h2>
+<a id="ac810b0ab5b50978d44fa0a160be523ca" name="ac810b0ab5b50978d44fa0a160be523ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac810b0ab5b50978d44fa0a160be523ca">&#9670;&#160;</a></span>getInt64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -320,19 +321,12 @@ $(function() {
         <tr>
           <td class="memname">static long awtk.TAppConf.getInt64 </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -353,8 +347,8 @@ $(function() {
 
 </div>
 </div>
-<a id="adb9726b52e4a3795049c2a07f9ce505c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb9726b52e4a3795049c2a07f9ce505c">&#9670;&nbsp;</a></span>getStr()</h2>
+<a id="adb9726b52e4a3795049c2a07f9ce505c" name="adb9726b52e4a3795049c2a07f9ce505c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb9726b52e4a3795049c2a07f9ce505c">&#9670;&#160;</a></span>getStr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -365,19 +359,12 @@ $(function() {
         <tr>
           <td class="memname">static String awtk.TAppConf.getStr </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -398,8 +385,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a3fe4e4f9941105735f7ddfc65bb5cda0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fe4e4f9941105735f7ddfc65bb5cda0">&#9670;&nbsp;</a></span>reload()</h2>
+<a id="a3fe4e4f9941105735f7ddfc65bb5cda0" name="a3fe4e4f9941105735f7ddfc65bb5cda0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fe4e4f9941105735f7ddfc65bb5cda0">&#9670;&#160;</a></span>reload()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -410,7 +397,7 @@ $(function() {
         <tr>
           <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TAppConf.reload </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -425,8 +412,8 @@ $(function() {
 
 </div>
 </div>
-<a id="aa3143d7772a74ae3d9e7356435f88b32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3143d7772a74ae3d9e7356435f88b32">&#9670;&nbsp;</a></span>remove()</h2>
+<a id="aa3143d7772a74ae3d9e7356435f88b32" name="aa3143d7772a74ae3d9e7356435f88b32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3143d7772a74ae3d9e7356435f88b32">&#9670;&#160;</a></span>remove()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -437,8 +424,7 @@ $(function() {
         <tr>
           <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TAppConf.remove </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>key</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -459,8 +445,8 @@ $(function() {
 
 </div>
 </div>
-<a id="aec4b992d030a548778e2e320f1c70494"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec4b992d030a548778e2e320f1c70494">&#9670;&nbsp;</a></span>save()</h2>
+<a id="aec4b992d030a548778e2e320f1c70494" name="aec4b992d030a548778e2e320f1c70494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec4b992d030a548778e2e320f1c70494">&#9670;&#160;</a></span>save()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -471,7 +457,7 @@ $(function() {
         <tr>
           <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TAppConf.save </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -486,8 +472,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a112ff7b7da5d55859345932307ee5db0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a112ff7b7da5d55859345932307ee5db0">&#9670;&nbsp;</a></span>setBool()</h2>
+<a id="a112ff7b7da5d55859345932307ee5db0" name="a112ff7b7da5d55859345932307ee5db0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a112ff7b7da5d55859345932307ee5db0">&#9670;&#160;</a></span>setBool()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -498,19 +484,12 @@ $(function() {
         <tr>
           <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TAppConf.setBool </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -531,8 +510,8 @@ $(function() {
 
 </div>
 </div>
-<a id="acf8f348bd415db2d280433c97c171896"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf8f348bd415db2d280433c97c171896">&#9670;&nbsp;</a></span>setDouble()</h2>
+<a id="acf8f348bd415db2d280433c97c171896" name="acf8f348bd415db2d280433c97c171896"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf8f348bd415db2d280433c97c171896">&#9670;&#160;</a></span>setDouble()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -543,19 +522,12 @@ $(function() {
         <tr>
           <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TAppConf.setDouble </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -576,8 +548,8 @@ $(function() {
 
 </div>
 </div>
-<a id="af40153f379b0d512829a6657e3e03a9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af40153f379b0d512829a6657e3e03a9d">&#9670;&nbsp;</a></span>setInt()</h2>
+<a id="af40153f379b0d512829a6657e3e03a9d" name="af40153f379b0d512829a6657e3e03a9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af40153f379b0d512829a6657e3e03a9d">&#9670;&#160;</a></span>setInt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -588,19 +560,12 @@ $(function() {
         <tr>
           <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TAppConf.setInt </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -621,8 +586,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a972f4aab66874ce542825188d4ce03fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a972f4aab66874ce542825188d4ce03fc">&#9670;&nbsp;</a></span>setInt64()</h2>
+<a id="a972f4aab66874ce542825188d4ce03fc" name="a972f4aab66874ce542825188d4ce03fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a972f4aab66874ce542825188d4ce03fc">&#9670;&#160;</a></span>setInt64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -633,19 +598,12 @@ $(function() {
         <tr>
           <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TAppConf.setInt64 </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -666,8 +624,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a13756ccb3e2922cf364bce4ada01b16c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13756ccb3e2922cf364bce4ada01b16c">&#9670;&nbsp;</a></span>setStr()</h2>
+<a id="a13756ccb3e2922cf364bce4ada01b16c" name="a13756ccb3e2922cf364bce4ada01b16c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13756ccb3e2922cf364bce4ada01b16c">&#9670;&#160;</a></span>setStr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -678,19 +636,12 @@ $(function() {
         <tr>
           <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TAppConf.setStr </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -712,12 +663,13 @@ $(function() {
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>output/TAppConf.java</li>
+<li>output/<b>TAppConf.java</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

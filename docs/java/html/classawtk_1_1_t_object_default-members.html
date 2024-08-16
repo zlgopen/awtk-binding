@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: 成员列表</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-JAVA
    </div>
    <div id="projectbrief">AWTK JAVA API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,9 +70,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,98 +87,101 @@ $(function() {
 <li class="navelem"><b>awtk</b></li><li class="navelem"><a class="el" href="classawtk_1_1_t_object_default.html">TObjectDefault</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
-  <div class="headertitle">
-<div class="title">awtk.TObjectDefault 成员列表</div>  </div>
+  <div class="headertitle"><div class="title">awtk.TObjectDefault 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>成员的完整列表，这些成员属于 <a class="el" href="classawtk_1_1_t_object_default.html">awtk.TObjectDefault</a>,包括所有继承而来的类成员</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a8175b46a1cb653e88a9594a8848abb10">canExec</a>(String name, String args)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a09ad0b1709a2c6858fd4a992b90025e1">canExecByPath</a>(String path, String args)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a09ad0b1709a2c6858fd4a992b90025e1">canExecByPath</a>(String path, String args)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html#a540eeea212bef35e9e565a08cb75c9b2">cast</a>(long nativeObj)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html">awtk.TObjectDefault</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html#a77409663ac9dc08f2625dd38b6120f44">awtk::TEmitter.cast</a>(TEmitter emitter)</td><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html#a77409663ac9dc08f2625dd38b6120f44">awtk::TEmitter.cast</a>(TEmitter emitter)</td><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html#ad5c9568769640872f6b094b2605f8e2d">clearProps</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html">awtk.TObjectDefault</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#ad0b41aa66511fcf8b19006e484034506">compare</a>(TObject other)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#ad0b41aa66511fcf8b19006e484034506">compare</a>(TObject other)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a018aeba3eefe2f97c5b83287524b5eb4">copyProp</a>(TObject src, String name)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#af6b23e38c494f0efcbffb75b6811ec93">copyProps</a>(TObject src, boolean overwrite)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#af6b23e38c494f0efcbffb75b6811ec93">copyProps</a>(TObject src, boolean overwrite)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html#a17b7e88ff32f208e064f970547cbb52e">create</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html">awtk.TObjectDefault</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html#a8a8f332e65244fa9a4f2d7c9ab44eee9">createEx</a>(boolean enable_path)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html">awtk.TObjectDefault</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html#a8a8f332e65244fa9a4f2d7c9ab44eee9">createEx</a>(boolean enable_path)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html">awtk.TObjectDefault</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html#a363332f4f679bcb99af877bc4f161097">destroy</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html#a943c4ba9c3a7feb93e02a6fa8f0ed834">disable</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html#a943c4ba9c3a7feb93e02a6fa8f0ed834">disable</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html#abe4f9d4a120ad6f3e81cafa2764fa601">dispatch</a>(TEvent e)</td><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html#a2d384e935cde6cc973b35162325d56fa">dispatchSimpleEvent</a>(int type)</td><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html#a2d384e935cde6cc973b35162325d56fa">dispatchSimpleEvent</a>(int type)</td><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html#ac74c2f4cb04791b650ad9c54b2b13707">enable</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a6f8f65ee50225e5420aa14a1d6282021">eval</a>(String expr, TValue v)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a6f8f65ee50225e5420aa14a1d6282021">eval</a>(String expr, TValue v)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#aa7cf12830497d90811f120c2509d8822">execute</a>(String name, String args)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a39295d72071bc1d180560e25fe642797">executeByPath</a>(String path, String args)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a39295d72071bc1d180560e25fe642797">executeByPath</a>(String path, String args)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#ad40b2c50b463f243610c2a7844d0d44f">getDesc</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a6ca3dbf7c9d3c1d853d6005d032d8c41">getName</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a6ca3dbf7c9d3c1d853d6005d032d8c41">getName</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#ab876f11c305651d60aa4650fa65dabb9">getProp</a>(String name, TValue v)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a7d9682a54b82a7884a07f03994df14bb">getPropBool</a>(String name, boolean defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a7d9682a54b82a7884a07f03994df14bb">getPropBool</a>(String name, boolean defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a5df44eb7dade57495b56285237ec36a5">getPropBoolByPath</a>(String path, boolean defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#abe77c512ba674e42bd9c9a5836b5d5d5">getPropDouble</a>(String name, double defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#abe77c512ba674e42bd9c9a5836b5d5d5">getPropDouble</a>(String name, double defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a55f1e963e671a463c6714ad4c6cb2531">getPropFloat</a>(String name, double defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a91206bd9bce056ee3aae08f00cd14f5b">getPropFloatByPath</a>(String path, double defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a91206bd9bce056ee3aae08f00cd14f5b">getPropFloatByPath</a>(String path, double defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a7186047d3ec4fbdf685fcc120b3d17d7">getPropInt</a>(String name, int defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a76d04100cdddb200c77f31d01309b2c7">getPropInt16</a>(String name, int defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a76d04100cdddb200c77f31d01309b2c7">getPropInt16</a>(String name, int defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a92e82b3139b9f878ddaf7375a8c3076d">getPropInt32</a>(String name, int defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#aa4dd40573537848876a494d1a2752164">getPropInt64</a>(String name, long defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#aa4dd40573537848876a494d1a2752164">getPropInt64</a>(String name, long defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a15f32d1ff534bb4f71bc12c71ed79386">getPropInt8</a>(String name, int defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#adf526e6045968e8717769a5d079c40b1">getPropIntByPath</a>(String path, int defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#adf526e6045968e8717769a5d079c40b1">getPropIntByPath</a>(String path, int defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a707e4fccc9baf9c74efc133fb71bd3a4">getPropObject</a>(String name)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a751717f69f0fc22c1f3a11f3e5c63c70">getPropObjectByPath</a>(String path)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a751717f69f0fc22c1f3a11f3e5c63c70">getPropObjectByPath</a>(String path)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a37f51b0cbe863fd20f7623d836aa393c">getPropPointer</a>(String name)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#af805870236ff911110253529b52e060d">getPropPointerByPath</a>(String path)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#af805870236ff911110253529b52e060d">getPropPointerByPath</a>(String path)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#ad882ebaa35bccfc7fab8c8403266ee66">getPropStr</a>(String name)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a13543148a2e527a83263cf6a3c76a8f6">getPropStrByPath</a>(String path)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a13543148a2e527a83263cf6a3c76a8f6">getPropStrByPath</a>(String path)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a7fa882ae14c70fd79ba78fb3d9d31d47">getPropUint16</a>(String name, int defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#af8a11f72c882c22e6b26ec1a1d3397eb">getPropUint32</a>(String name, int defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#af8a11f72c882c22e6b26ec1a1d3397eb">getPropUint32</a>(String name, int defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a12342269f55db44c04fb5054db700d0a">getPropUint64</a>(String name, long defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a2d0df69e1f70e0201667eb1a8e996848">getPropUint8</a>(String name, int defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a2d0df69e1f70e0201667eb1a8e996848">getPropUint8</a>(String name, int defval)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#adc23c7895bb580b17887fdc0794ba823">getRefCount</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a4dd26befed6010ce0c19624144488512">getSize</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a4dd26befed6010ce0c19624144488512">getSize</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#ae5e3aec2ad3500dba6ee04b5d9c6c057">getType</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#acd296ebc1efda1d0aea7a1a705ac6454">hasProp</a>(String name)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#acd296ebc1efda1d0aea7a1a705ac6454">hasProp</a>(String name)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#af7fd68115059e5220f48e6a4880678c8">hasPropByPath</a>(String path)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#ad20f2fb95684a2fa64f471ba949eb95e">isCollection</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#ad20f2fb95684a2fa64f471ba949eb95e">isCollection</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html#a3dfef6f3db53335a00cb479e90262840">nativeObj</a></td><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#afc1fc6d31fa551f0c85f87e07478ce0f">notifyChanged</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#afc1fc6d31fa551f0c85f87e07478ce0f">notifyChanged</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html#a4515856b77cd3f885a2fd628e4801ab7">off</a>(int id)</td><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html#a23c16a696dd21aaf3ecc8453b6941869">on</a>(int etype, TOnEvent handler, long ctx)</td><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html#a23c16a696dd21aaf3ecc8453b6941869">on</a>(int etype, TOnEvent handler, long ctx)</td><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a061dbbad49785d66c518927ebbb57f03">ref</a>(TObject obj)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#accb710cc8e5be738420a208d8c1f37b9">removeProp</a>(String name)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a5cb394693a52238fd1546d56be531ee1">setName</a>(String name)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a05b66c051e3fa4223edfc753f556fc98">setProp</a>(String name, TValue value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#accb710cc8e5be738420a208d8c1f37b9">removeProp</a>(String name)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html#a63fa84a18dc420912b253fbd5654b159">setKeepPropType</a>(boolean keep_prop_type)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html">awtk.TObjectDefault</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a5cb394693a52238fd1546d56be531ee1">setName</a>(String name)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html#ab8a9c655a0f12915147e74e338dc733f">setNameCaseInsensitive</a>(boolean name_case_insensitive)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html">awtk.TObjectDefault</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a05b66c051e3fa4223edfc753f556fc98">setProp</a>(String name, TValue value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a24896cb00f8d1485275823d014e8a9d9">setPropBool</a>(String name, boolean value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a54857c653e0eb1a7c94b5bb19a84d1ca">setPropBoolByPath</a>(String path, boolean value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a54857c653e0eb1a7c94b5bb19a84d1ca">setPropBoolByPath</a>(String path, boolean value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a1c0ed159a04225f39e5ddfcaa0a8bcf2">setPropByPath</a>(String path, TValue value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#ac9e46e441b9c1300f7dba50295d7b829">setPropDouble</a>(String name, double value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#ac9e46e441b9c1300f7dba50295d7b829">setPropDouble</a>(String name, double value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a26b8eb8c49b2a8f24e1c0c825854f585">setPropFloat</a>(String name, double value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a34e9a53157ddd0ff30a31ba529af8c54">setPropFloatByPath</a>(String path, double value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a34e9a53157ddd0ff30a31ba529af8c54">setPropFloatByPath</a>(String path, double value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a21e5e872495c4a7a45e4e4f69ddb7cac">setPropInt</a>(String name, int value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a5997a25e5a80e97b7584d077e665dfda">setPropInt16</a>(String name, int value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a5997a25e5a80e97b7584d077e665dfda">setPropInt16</a>(String name, int value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#ad5c214094c7574eab8f563821ff2cef3">setPropInt32</a>(String name, int value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a36cab09059cd84406b37ba84f46baaba">setPropInt64</a>(String name, long value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a36cab09059cd84406b37ba84f46baaba">setPropInt64</a>(String name, long value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a20618ff3baddb2886ab05b83ddb670bc">setPropInt8</a>(String name, int value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a1c2cbe5890241f8a192f797f16d049cf">setPropIntByPath</a>(String path, int value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a1c2cbe5890241f8a192f797f16d049cf">setPropIntByPath</a>(String path, int value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a87d5c144596bf3fc99af5099ab47b191">setPropObject</a>(String name, TObject value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#ab84e0835228cd76dce4ec49529b8b61a">setPropObjectByPath</a>(String path, TObject value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#ab84e0835228cd76dce4ec49529b8b61a">setPropObjectByPath</a>(String path, TObject value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#ad7fdb692187da5cc4d28cc892fe69d0d">setPropStr</a>(String name, String value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a3bf5ae3df9d004d6903846bc5d974f5c">setPropStrByPath</a>(String path, String value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a3bf5ae3df9d004d6903846bc5d974f5c">setPropStrByPath</a>(String path, String value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#ab48bd1894d041370f9e1a14bf8c2cbad">setPropUint16</a>(String name, int value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#ae52b709fee91e76960ec6b3afed4e4b0">setPropUint32</a>(String name, int value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#ae52b709fee91e76960ec6b3afed4e4b0">setPropUint32</a>(String name, int value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#abc1bb0784e844347d6ba64dbf98ee57c">setPropUint64</a>(String name, long value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#ac390b28db0b190f634eca3b13d8dda81">setPropUint8</a>(String name, int value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#ac390b28db0b190f634eca3b13d8dda81">setPropUint8</a>(String name, int value)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html#ae4e311959d07b2c5acb8a4a8aba394e0">TEmitter</a>(long nativeObj)</td><td class="entry"><a class="el" href="classawtk_1_1_t_emitter.html">awtk.TEmitter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a6644ccec73dac47818113a2e1ad78874">TObject</a>(long nativeObj)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object.html#a6644ccec73dac47818113a2e1ad78874">TObject</a>(long nativeObj)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object.html">awtk.TObject</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html#aa6faec7c9c3506bc54b550a12fb0a730">TObjectDefault</a>(long nativeObj)</td><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html">awtk.TObjectDefault</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html#a6bdb8bac002491058e44b3f21ed770cb">unref</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html">awtk.TObjectDefault</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html#a6bdb8bac002491058e44b3f21ed770cb">unref</a>()</td><td class="entry"><a class="el" href="classawtk_1_1_t_object_default.html">awtk.TObjectDefault</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

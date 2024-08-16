@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TValue类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-JAVA
    </div>
    <div id="projectbrief">AWTK JAVA API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,9 +70,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,119 +87,121 @@ $(function() {
 <li class="navelem"><b>awtk</b></li><li class="navelem"><a class="el" href="classawtk_1_1_t_value.html">TValue</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="classawtk_1_1_t_value-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">awtk.TValue类 参考</div>  </div>
+  <div class="headertitle"><div class="title">awtk.TValue类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a2cbbc518fc088d992a1d2966b782ae26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a2cbbc518fc088d992a1d2966b782ae26">TValue</a> (long <a class="el" href="classawtk_1_1_t_value.html#aac4f093763cfe193cce5cac21afe7d23">nativeObj</a>)</td></tr>
+<tr class="memitem:a2cbbc518fc088d992a1d2966b782ae26" id="r_a2cbbc518fc088d992a1d2966b782ae26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cbbc518fc088d992a1d2966b782ae26">TValue</a> (long <a class="el" href="#aac4f093763cfe193cce5cac21afe7d23">nativeObj</a>)</td></tr>
 <tr class="separator:a2cbbc518fc088d992a1d2966b782ae26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8290dbdaecad27fa34f66ba39810a67d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a8290dbdaecad27fa34f66ba39810a67d">setBool</a> (boolean value)</td></tr>
+<tr class="memitem:a8290dbdaecad27fa34f66ba39810a67d" id="r_a8290dbdaecad27fa34f66ba39810a67d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8290dbdaecad27fa34f66ba39810a67d">setBool</a> (boolean value)</td></tr>
 <tr class="separator:a8290dbdaecad27fa34f66ba39810a67d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69c27042578084fd3a027e13929ddd5d"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a69c27042578084fd3a027e13929ddd5d">bool</a> ()</td></tr>
+<tr class="memitem:a69c27042578084fd3a027e13929ddd5d" id="r_a69c27042578084fd3a027e13929ddd5d"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69c27042578084fd3a027e13929ddd5d">bool</a> ()</td></tr>
 <tr class="separator:a69c27042578084fd3a027e13929ddd5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab184e9b0f8bb482eb251ba9f770eaef9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#ab184e9b0f8bb482eb251ba9f770eaef9">setInt8</a> (int value)</td></tr>
+<tr class="memitem:ab184e9b0f8bb482eb251ba9f770eaef9" id="r_ab184e9b0f8bb482eb251ba9f770eaef9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab184e9b0f8bb482eb251ba9f770eaef9">setInt8</a> (int value)</td></tr>
 <tr class="separator:ab184e9b0f8bb482eb251ba9f770eaef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96859b44fd51cb3eb3b70a3f1e64dcca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a96859b44fd51cb3eb3b70a3f1e64dcca">int8</a> ()</td></tr>
+<tr class="memitem:a96859b44fd51cb3eb3b70a3f1e64dcca" id="r_a96859b44fd51cb3eb3b70a3f1e64dcca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96859b44fd51cb3eb3b70a3f1e64dcca">int8</a> ()</td></tr>
 <tr class="separator:a96859b44fd51cb3eb3b70a3f1e64dcca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaf740df4f4d92aab79880350ca03fc8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#afaf740df4f4d92aab79880350ca03fc8">setUint8</a> (int value)</td></tr>
+<tr class="memitem:afaf740df4f4d92aab79880350ca03fc8" id="r_afaf740df4f4d92aab79880350ca03fc8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afaf740df4f4d92aab79880350ca03fc8">setUint8</a> (int value)</td></tr>
 <tr class="separator:afaf740df4f4d92aab79880350ca03fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac03f64ae363915f6e8f188b67e7eaea7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#ac03f64ae363915f6e8f188b67e7eaea7">uint8</a> ()</td></tr>
+<tr class="memitem:ac03f64ae363915f6e8f188b67e7eaea7" id="r_ac03f64ae363915f6e8f188b67e7eaea7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac03f64ae363915f6e8f188b67e7eaea7">uint8</a> ()</td></tr>
 <tr class="separator:ac03f64ae363915f6e8f188b67e7eaea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bc96e755c548e51abe47e24bc2267f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a4bc96e755c548e51abe47e24bc2267f6">setInt16</a> (int value)</td></tr>
+<tr class="memitem:a4bc96e755c548e51abe47e24bc2267f6" id="r_a4bc96e755c548e51abe47e24bc2267f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bc96e755c548e51abe47e24bc2267f6">setInt16</a> (int value)</td></tr>
 <tr class="separator:a4bc96e755c548e51abe47e24bc2267f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38ba646794294635c970f39c761e1f69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a38ba646794294635c970f39c761e1f69">int16</a> ()</td></tr>
+<tr class="memitem:a38ba646794294635c970f39c761e1f69" id="r_a38ba646794294635c970f39c761e1f69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38ba646794294635c970f39c761e1f69">int16</a> ()</td></tr>
 <tr class="separator:a38ba646794294635c970f39c761e1f69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8095f47e87dac0f586de8cddb544465"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#ad8095f47e87dac0f586de8cddb544465">setUint16</a> (int value)</td></tr>
+<tr class="memitem:ad8095f47e87dac0f586de8cddb544465" id="r_ad8095f47e87dac0f586de8cddb544465"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8095f47e87dac0f586de8cddb544465">setUint16</a> (int value)</td></tr>
 <tr class="separator:ad8095f47e87dac0f586de8cddb544465"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5757f705a332b510ae97b07ca464ea87"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a5757f705a332b510ae97b07ca464ea87">uint16</a> ()</td></tr>
+<tr class="memitem:a5757f705a332b510ae97b07ca464ea87" id="r_a5757f705a332b510ae97b07ca464ea87"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5757f705a332b510ae97b07ca464ea87">uint16</a> ()</td></tr>
 <tr class="separator:a5757f705a332b510ae97b07ca464ea87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88e33a0e826be8f884e4fa32511e39e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a88e33a0e826be8f884e4fa32511e39e1">setInt32</a> (int value)</td></tr>
+<tr class="memitem:a88e33a0e826be8f884e4fa32511e39e1" id="r_a88e33a0e826be8f884e4fa32511e39e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88e33a0e826be8f884e4fa32511e39e1">setInt32</a> (int value)</td></tr>
 <tr class="separator:a88e33a0e826be8f884e4fa32511e39e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accbb6cc65d0e9c758b26fd981d35b34f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#accbb6cc65d0e9c758b26fd981d35b34f">int32</a> ()</td></tr>
+<tr class="memitem:accbb6cc65d0e9c758b26fd981d35b34f" id="r_accbb6cc65d0e9c758b26fd981d35b34f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accbb6cc65d0e9c758b26fd981d35b34f">int32</a> ()</td></tr>
 <tr class="separator:accbb6cc65d0e9c758b26fd981d35b34f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcbe22b4f2187c4ce40a87cfa2d6f789"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#adcbe22b4f2187c4ce40a87cfa2d6f789">setUint32</a> (int value)</td></tr>
+<tr class="memitem:adcbe22b4f2187c4ce40a87cfa2d6f789" id="r_adcbe22b4f2187c4ce40a87cfa2d6f789"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcbe22b4f2187c4ce40a87cfa2d6f789">setUint32</a> (int value)</td></tr>
 <tr class="separator:adcbe22b4f2187c4ce40a87cfa2d6f789"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25e9e6f9e9e1085394ea7fc34b161790"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a25e9e6f9e9e1085394ea7fc34b161790">setInt64</a> (long value)</td></tr>
+<tr class="memitem:a25e9e6f9e9e1085394ea7fc34b161790" id="r_a25e9e6f9e9e1085394ea7fc34b161790"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25e9e6f9e9e1085394ea7fc34b161790">setInt64</a> (long value)</td></tr>
 <tr class="separator:a25e9e6f9e9e1085394ea7fc34b161790"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6d257aea9e23f54c1a6eed397f40816"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#ab6d257aea9e23f54c1a6eed397f40816">int64</a> ()</td></tr>
+<tr class="memitem:ab6d257aea9e23f54c1a6eed397f40816" id="r_ab6d257aea9e23f54c1a6eed397f40816"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6d257aea9e23f54c1a6eed397f40816">int64</a> ()</td></tr>
 <tr class="separator:ab6d257aea9e23f54c1a6eed397f40816"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a737407bc702fa71f1f376d8582a58fe6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a737407bc702fa71f1f376d8582a58fe6">setUint64</a> (long value)</td></tr>
+<tr class="memitem:a737407bc702fa71f1f376d8582a58fe6" id="r_a737407bc702fa71f1f376d8582a58fe6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a737407bc702fa71f1f376d8582a58fe6">setUint64</a> (long value)</td></tr>
 <tr class="separator:a737407bc702fa71f1f376d8582a58fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab967cb6dd676265d3198312eb4005a60"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#ab967cb6dd676265d3198312eb4005a60">uint64</a> ()</td></tr>
+<tr class="memitem:ab967cb6dd676265d3198312eb4005a60" id="r_ab967cb6dd676265d3198312eb4005a60"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab967cb6dd676265d3198312eb4005a60">uint64</a> ()</td></tr>
 <tr class="separator:ab967cb6dd676265d3198312eb4005a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ef20ee06bfda74b43c0f01f1e815af5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a2ef20ee06bfda74b43c0f01f1e815af5">setFloat</a> (double value)</td></tr>
+<tr class="memitem:a2ef20ee06bfda74b43c0f01f1e815af5" id="r_a2ef20ee06bfda74b43c0f01f1e815af5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ef20ee06bfda74b43c0f01f1e815af5">setFloat</a> (double value)</td></tr>
 <tr class="separator:a2ef20ee06bfda74b43c0f01f1e815af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac23f178a76c82c73f35a0c7f2533970c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#ac23f178a76c82c73f35a0c7f2533970c">float32</a> ()</td></tr>
+<tr class="memitem:ac23f178a76c82c73f35a0c7f2533970c" id="r_ac23f178a76c82c73f35a0c7f2533970c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac23f178a76c82c73f35a0c7f2533970c">float32</a> ()</td></tr>
 <tr class="separator:ac23f178a76c82c73f35a0c7f2533970c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5d64e6f6eff81b9a261b0cb74e3f11e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#ae5d64e6f6eff81b9a261b0cb74e3f11e">setFloat64</a> (double value)</td></tr>
+<tr class="memitem:ae5d64e6f6eff81b9a261b0cb74e3f11e" id="r_ae5d64e6f6eff81b9a261b0cb74e3f11e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5d64e6f6eff81b9a261b0cb74e3f11e">setFloat64</a> (double value)</td></tr>
 <tr class="separator:ae5d64e6f6eff81b9a261b0cb74e3f11e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d18fd7ff3ac4f708fa35a5a08a82df0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a9d18fd7ff3ac4f708fa35a5a08a82df0">float64</a> ()</td></tr>
+<tr class="memitem:a9d18fd7ff3ac4f708fa35a5a08a82df0" id="r_a9d18fd7ff3ac4f708fa35a5a08a82df0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d18fd7ff3ac4f708fa35a5a08a82df0">float64</a> ()</td></tr>
 <tr class="separator:a9d18fd7ff3ac4f708fa35a5a08a82df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5473dbbafd3d2f0221b3a43b4392d61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#aa5473dbbafd3d2f0221b3a43b4392d61">setStr</a> (String value)</td></tr>
+<tr class="memitem:aa5473dbbafd3d2f0221b3a43b4392d61" id="r_aa5473dbbafd3d2f0221b3a43b4392d61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5473dbbafd3d2f0221b3a43b4392d61">setStr</a> (String value)</td></tr>
 <tr class="separator:aa5473dbbafd3d2f0221b3a43b4392d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad36adbd7e5a6e542265204bebdea4741"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#ad36adbd7e5a6e542265204bebdea4741">str</a> ()</td></tr>
+<tr class="memitem:ad36adbd7e5a6e542265204bebdea4741" id="r_ad36adbd7e5a6e542265204bebdea4741"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad36adbd7e5a6e542265204bebdea4741">str</a> ()</td></tr>
 <tr class="separator:ad36adbd7e5a6e542265204bebdea4741"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec77344bd38d25e91bd6d432c4ce0006"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#aec77344bd38d25e91bd6d432c4ce0006">strEx</a> (String buff, int size)</td></tr>
+<tr class="memitem:aec77344bd38d25e91bd6d432c4ce0006" id="r_aec77344bd38d25e91bd6d432c4ce0006"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec77344bd38d25e91bd6d432c4ce0006">strEx</a> (String buff, int size)</td></tr>
 <tr class="separator:aec77344bd38d25e91bd6d432c4ce0006"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac52008370f21b0d23cf8349ce4ffd18"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#aac52008370f21b0d23cf8349ce4ffd18">isNull</a> ()</td></tr>
+<tr class="memitem:aac52008370f21b0d23cf8349ce4ffd18" id="r_aac52008370f21b0d23cf8349ce4ffd18"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac52008370f21b0d23cf8349ce4ffd18">isNull</a> ()</td></tr>
 <tr class="separator:aac52008370f21b0d23cf8349ce4ffd18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2690be5b7eceede966b08d0c98803152"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a2690be5b7eceede966b08d0c98803152">setInt</a> (int value)</td></tr>
+<tr class="memitem:a0b97da4799c2d428b97019cea1d65287" id="r_a0b97da4799c2d428b97019cea1d65287"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b97da4799c2d428b97019cea1d65287">equal</a> (<a class="el" href="classawtk_1_1_t_value.html">TValue</a> other)</td></tr>
+<tr class="separator:a0b97da4799c2d428b97019cea1d65287"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2690be5b7eceede966b08d0c98803152" id="r_a2690be5b7eceede966b08d0c98803152"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2690be5b7eceede966b08d0c98803152">setInt</a> (int value)</td></tr>
 <tr class="separator:a2690be5b7eceede966b08d0c98803152"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af168ef5292316d4925193fb853406839"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#af168ef5292316d4925193fb853406839">setObject</a> (<a class="el" href="classawtk_1_1_t_object.html">TObject</a> value)</td></tr>
+<tr class="memitem:af168ef5292316d4925193fb853406839" id="r_af168ef5292316d4925193fb853406839"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af168ef5292316d4925193fb853406839">setObject</a> (<a class="el" href="classawtk_1_1_t_object.html">TObject</a> value)</td></tr>
 <tr class="separator:af168ef5292316d4925193fb853406839"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a6ca7a8d19057cf3d220d4e5d89e3d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a1a6ca7a8d19057cf3d220d4e5d89e3d3">object</a> ()</td></tr>
+<tr class="memitem:a1a6ca7a8d19057cf3d220d4e5d89e3d3" id="r_a1a6ca7a8d19057cf3d220d4e5d89e3d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a6ca7a8d19057cf3d220d4e5d89e3d3">object</a> ()</td></tr>
 <tr class="separator:a1a6ca7a8d19057cf3d220d4e5d89e3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a108416d079ec19f525d5a9b760d2d6d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a108416d079ec19f525d5a9b760d2d6d8">setToken</a> (int value)</td></tr>
+<tr class="memitem:a108416d079ec19f525d5a9b760d2d6d8" id="r_a108416d079ec19f525d5a9b760d2d6d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a108416d079ec19f525d5a9b760d2d6d8">setToken</a> (int value)</td></tr>
 <tr class="separator:a108416d079ec19f525d5a9b760d2d6d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b803e07699d193dffe8079f724b8bef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a4b803e07699d193dffe8079f724b8bef">token</a> ()</td></tr>
+<tr class="memitem:a4b803e07699d193dffe8079f724b8bef" id="r_a4b803e07699d193dffe8079f724b8bef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b803e07699d193dffe8079f724b8bef">token</a> ()</td></tr>
 <tr class="separator:a4b803e07699d193dffe8079f724b8bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2344d2251cefb497b33ab33db50c5748"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a2344d2251cefb497b33ab33db50c5748">destroy</a> ()</td></tr>
+<tr class="memitem:a2344d2251cefb497b33ab33db50c5748" id="r_a2344d2251cefb497b33ab33db50c5748"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2344d2251cefb497b33ab33db50c5748">destroy</a> ()</td></tr>
 <tr class="separator:a2344d2251cefb497b33ab33db50c5748"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7deeb294b0288dd4313c5985d999bd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#af7deeb294b0288dd4313c5985d999bd2">reset</a> ()</td></tr>
+<tr class="memitem:af7deeb294b0288dd4313c5985d999bd2" id="r_af7deeb294b0288dd4313c5985d999bd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7deeb294b0288dd4313c5985d999bd2">reset</a> ()</td></tr>
 <tr class="separator:af7deeb294b0288dd4313c5985d999bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a349514e114eb0eac624f7d3872213f6d"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a349514e114eb0eac624f7d3872213f6d">id</a> ()</td></tr>
+<tr class="memitem:a349514e114eb0eac624f7d3872213f6d" id="r_a349514e114eb0eac624f7d3872213f6d"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a349514e114eb0eac624f7d3872213f6d">id</a> ()</td></tr>
 <tr class="separator:a349514e114eb0eac624f7d3872213f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51e0528a02beef27ff562191e9cd635e"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a51e0528a02beef27ff562191e9cd635e">func</a> ()</td></tr>
+<tr class="memitem:a51e0528a02beef27ff562191e9cd635e" id="r_a51e0528a02beef27ff562191e9cd635e"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51e0528a02beef27ff562191e9cd635e">func</a> ()</td></tr>
 <tr class="separator:a51e0528a02beef27ff562191e9cd635e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee36e9b638b37fe9eae0d58cc9557bf2"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#aee36e9b638b37fe9eae0d58cc9557bf2">funcDef</a> ()</td></tr>
+<tr class="memitem:aee36e9b638b37fe9eae0d58cc9557bf2" id="r_aee36e9b638b37fe9eae0d58cc9557bf2"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee36e9b638b37fe9eae0d58cc9557bf2">funcDef</a> ()</td></tr>
 <tr class="separator:aee36e9b638b37fe9eae0d58cc9557bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a691b1412a6df86a9545a69c9c7361766"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a691b1412a6df86a9545a69c9c7361766">bitmap</a> ()</td></tr>
+<tr class="memitem:a691b1412a6df86a9545a69c9c7361766" id="r_a691b1412a6df86a9545a69c9c7361766"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a691b1412a6df86a9545a69c9c7361766">bitmap</a> ()</td></tr>
 <tr class="separator:a691b1412a6df86a9545a69c9c7361766"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a636ddc6b2e4d539fe5927b68de7a08a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a636ddc6b2e4d539fe5927b68de7a08a3">rect</a> ()</td></tr>
+<tr class="memitem:a636ddc6b2e4d539fe5927b68de7a08a3" id="r_a636ddc6b2e4d539fe5927b68de7a08a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a636ddc6b2e4d539fe5927b68de7a08a3">rect</a> ()</td></tr>
 <tr class="separator:a636ddc6b2e4d539fe5927b68de7a08a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a873afddc2d0bc0f9d4fff4da39a87363"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a873afddc2d0bc0f9d4fff4da39a87363">cast</a> (long <a class="el" href="classawtk_1_1_t_value.html#aac4f093763cfe193cce5cac21afe7d23">nativeObj</a>)</td></tr>
+<tr class="memitem:a873afddc2d0bc0f9d4fff4da39a87363" id="r_a873afddc2d0bc0f9d4fff4da39a87363"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a873afddc2d0bc0f9d4fff4da39a87363">cast</a> (long <a class="el" href="#aac4f093763cfe193cce5cac21afe7d23">nativeObj</a>)</td></tr>
 <tr class="separator:a873afddc2d0bc0f9d4fff4da39a87363"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a848713ead3059f9952c27aef048cb0b2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a848713ead3059f9952c27aef048cb0b2">create</a> ()</td></tr>
+<tr class="memitem:a848713ead3059f9952c27aef048cb0b2" id="r_a848713ead3059f9952c27aef048cb0b2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a848713ead3059f9952c27aef048cb0b2">create</a> ()</td></tr>
 <tr class="separator:a848713ead3059f9952c27aef048cb0b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2826592676f548ef861a92a4ec3b00c8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#a2826592676f548ef861a92a4ec3b00c8">cast</a> (<a class="el" href="classawtk_1_1_t_value.html">TValue</a> value)</td></tr>
+<tr class="memitem:a2826592676f548ef861a92a4ec3b00c8" id="r_a2826592676f548ef861a92a4ec3b00c8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2826592676f548ef861a92a4ec3b00c8">cast</a> (<a class="el" href="classawtk_1_1_t_value.html">TValue</a> value)</td></tr>
 <tr class="separator:a2826592676f548ef861a92a4ec3b00c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:aac4f093763cfe193cce5cac21afe7d23"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_value.html#aac4f093763cfe193cce5cac21afe7d23">nativeObj</a></td></tr>
+<tr class="memitem:aac4f093763cfe193cce5cac21afe7d23" id="r_aac4f093763cfe193cce5cac21afe7d23"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac4f093763cfe193cce5cac21afe7d23">nativeObj</a></td></tr>
 <tr class="separator:aac4f093763cfe193cce5cac21afe7d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>一个通用数据类型，用来存放整数、浮点数、字符串和其它对象。</p>
 <p>在C/C++中，一般不需动态创建对象，直接声明并初始化即可。如：</p>
 <blockquote class="doxtable">
-<p>在脚本语言中，需要动态创建对象。 </p>
+<p>&zwj;在脚本语言中，需要动态创建对象。 </p>
 </blockquote>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
-<a id="a2cbbc518fc088d992a1d2966b782ae26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cbbc518fc088d992a1d2966b782ae26">&#9670;&nbsp;</a></span>TValue()</h2>
+<a id="a2cbbc518fc088d992a1d2966b782ae26" name="a2cbbc518fc088d992a1d2966b782ae26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cbbc518fc088d992a1d2966b782ae26">&#9670;&#160;</a></span>TValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,8 +212,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">awtk.TValue.TValue </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>nativeObj</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>nativeObj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -211,8 +234,8 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a id="a691b1412a6df86a9545a69c9c7361766"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a691b1412a6df86a9545a69c9c7361766">&#9670;&nbsp;</a></span>bitmap()</h2>
+<a id="a691b1412a6df86a9545a69c9c7361766" name="a691b1412a6df86a9545a69c9c7361766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a691b1412a6df86a9545a69c9c7361766">&#9670;&#160;</a></span>bitmap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -223,7 +246,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">long awtk.TValue.bitmap </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -238,8 +261,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a69c27042578084fd3a027e13929ddd5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69c27042578084fd3a027e13929ddd5d">&#9670;&nbsp;</a></span>bool()</h2>
+<a id="a69c27042578084fd3a027e13929ddd5d" name="a69c27042578084fd3a027e13929ddd5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69c27042578084fd3a027e13929ddd5d">&#9670;&#160;</a></span>bool()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,7 +273,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TValue.bool </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -265,8 +288,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a873afddc2d0bc0f9d4fff4da39a87363"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a873afddc2d0bc0f9d4fff4da39a87363">&#9670;&nbsp;</a></span>cast() <span class="overload">[1/2]</span></h2>
+<a id="a873afddc2d0bc0f9d4fff4da39a87363" name="a873afddc2d0bc0f9d4fff4da39a87363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a873afddc2d0bc0f9d4fff4da39a87363">&#9670;&#160;</a></span>cast() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -277,8 +300,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_value.html">TValue</a> awtk.TValue.cast </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>nativeObj</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>nativeObj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -299,8 +321,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a2826592676f548ef861a92a4ec3b00c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2826592676f548ef861a92a4ec3b00c8">&#9670;&nbsp;</a></span>cast() <span class="overload">[2/2]</span></h2>
+<a id="a2826592676f548ef861a92a4ec3b00c8" name="a2826592676f548ef861a92a4ec3b00c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2826592676f548ef861a92a4ec3b00c8">&#9670;&#160;</a></span>cast() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -311,8 +333,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_value.html">TValue</a> awtk.TValue.cast </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_value.html">TValue</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -324,7 +345,7 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>转换为value对象。</p>
 <blockquote class="doxtable">
-<p>供脚本语言使用 </p>
+<p>&zwj;供脚本语言使用 </p>
 </blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -336,8 +357,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a848713ead3059f9952c27aef048cb0b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a848713ead3059f9952c27aef048cb0b2">&#9670;&nbsp;</a></span>create()</h2>
+<a id="a848713ead3059f9952c27aef048cb0b2" name="a848713ead3059f9952c27aef048cb0b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a848713ead3059f9952c27aef048cb0b2">&#9670;&#160;</a></span>create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -348,7 +369,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_value.html">TValue</a> awtk.TValue.create </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -363,8 +384,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a2344d2251cefb497b33ab33db50c5748"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2344d2251cefb497b33ab33db50c5748">&#9670;&nbsp;</a></span>destroy()</h2>
+<a id="a2344d2251cefb497b33ab33db50c5748" name="a2344d2251cefb497b33ab33db50c5748"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2344d2251cefb497b33ab33db50c5748">&#9670;&#160;</a></span>destroy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -375,7 +396,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TValue.destroy </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -390,8 +411,41 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ac23f178a76c82c73f35a0c7f2533970c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac23f178a76c82c73f35a0c7f2533970c">&#9670;&nbsp;</a></span>float32()</h2>
+<a id="a0b97da4799c2d428b97019cea1d65287" name="a0b97da4799c2d428b97019cea1d65287"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b97da4799c2d428b97019cea1d65287">&#9670;&#160;</a></span>equal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean awtk.TValue.equal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_value.html">TValue</a></td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>判断两个value是否相同。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>value对象。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>为空值返回TRUE，否则返回FALSE。 </dd></dl>
+
+</div>
+</div>
+<a id="ac23f178a76c82c73f35a0c7f2533970c" name="ac23f178a76c82c73f35a0c7f2533970c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac23f178a76c82c73f35a0c7f2533970c">&#9670;&#160;</a></span>float32()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -402,7 +456,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">double awtk.TValue.float32 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -417,8 +471,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a9d18fd7ff3ac4f708fa35a5a08a82df0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d18fd7ff3ac4f708fa35a5a08a82df0">&#9670;&nbsp;</a></span>float64()</h2>
+<a id="a9d18fd7ff3ac4f708fa35a5a08a82df0" name="a9d18fd7ff3ac4f708fa35a5a08a82df0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d18fd7ff3ac4f708fa35a5a08a82df0">&#9670;&#160;</a></span>float64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -429,7 +483,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">double awtk.TValue.float64 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -444,8 +498,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a51e0528a02beef27ff562191e9cd635e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51e0528a02beef27ff562191e9cd635e">&#9670;&nbsp;</a></span>func()</h2>
+<a id="a51e0528a02beef27ff562191e9cd635e" name="a51e0528a02beef27ff562191e9cd635e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51e0528a02beef27ff562191e9cd635e">&#9670;&#160;</a></span>func()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -456,7 +510,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">long awtk.TValue.func </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -471,8 +525,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aee36e9b638b37fe9eae0d58cc9557bf2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee36e9b638b37fe9eae0d58cc9557bf2">&#9670;&nbsp;</a></span>funcDef()</h2>
+<a id="aee36e9b638b37fe9eae0d58cc9557bf2" name="aee36e9b638b37fe9eae0d58cc9557bf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee36e9b638b37fe9eae0d58cc9557bf2">&#9670;&#160;</a></span>funcDef()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -483,7 +537,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">long awtk.TValue.funcDef </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -498,8 +552,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a349514e114eb0eac624f7d3872213f6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a349514e114eb0eac624f7d3872213f6d">&#9670;&nbsp;</a></span>id()</h2>
+<a id="a349514e114eb0eac624f7d3872213f6d" name="a349514e114eb0eac624f7d3872213f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a349514e114eb0eac624f7d3872213f6d">&#9670;&#160;</a></span>id()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -510,7 +564,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TValue.id </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -525,8 +579,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a38ba646794294635c970f39c761e1f69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38ba646794294635c970f39c761e1f69">&#9670;&nbsp;</a></span>int16()</h2>
+<a id="a38ba646794294635c970f39c761e1f69" name="a38ba646794294635c970f39c761e1f69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38ba646794294635c970f39c761e1f69">&#9670;&#160;</a></span>int16()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -537,7 +591,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TValue.int16 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -552,8 +606,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="accbb6cc65d0e9c758b26fd981d35b34f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#accbb6cc65d0e9c758b26fd981d35b34f">&#9670;&nbsp;</a></span>int32()</h2>
+<a id="accbb6cc65d0e9c758b26fd981d35b34f" name="accbb6cc65d0e9c758b26fd981d35b34f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accbb6cc65d0e9c758b26fd981d35b34f">&#9670;&#160;</a></span>int32()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -564,7 +618,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TValue.int32 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -579,8 +633,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ab6d257aea9e23f54c1a6eed397f40816"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6d257aea9e23f54c1a6eed397f40816">&#9670;&nbsp;</a></span>int64()</h2>
+<a id="ab6d257aea9e23f54c1a6eed397f40816" name="ab6d257aea9e23f54c1a6eed397f40816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6d257aea9e23f54c1a6eed397f40816">&#9670;&#160;</a></span>int64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -591,7 +645,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">long awtk.TValue.int64 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -606,8 +660,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a96859b44fd51cb3eb3b70a3f1e64dcca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96859b44fd51cb3eb3b70a3f1e64dcca">&#9670;&nbsp;</a></span>int8()</h2>
+<a id="a96859b44fd51cb3eb3b70a3f1e64dcca" name="a96859b44fd51cb3eb3b70a3f1e64dcca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96859b44fd51cb3eb3b70a3f1e64dcca">&#9670;&#160;</a></span>int8()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -618,7 +672,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TValue.int8 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -633,8 +687,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aac52008370f21b0d23cf8349ce4ffd18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac52008370f21b0d23cf8349ce4ffd18">&#9670;&nbsp;</a></span>isNull()</h2>
+<a id="aac52008370f21b0d23cf8349ce4ffd18" name="aac52008370f21b0d23cf8349ce4ffd18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac52008370f21b0d23cf8349ce4ffd18">&#9670;&#160;</a></span>isNull()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -645,7 +699,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TValue.isNull </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -660,8 +714,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a1a6ca7a8d19057cf3d220d4e5d89e3d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a6ca7a8d19057cf3d220d4e5d89e3d3">&#9670;&nbsp;</a></span>object()</h2>
+<a id="a1a6ca7a8d19057cf3d220d4e5d89e3d3" name="a1a6ca7a8d19057cf3d220d4e5d89e3d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a6ca7a8d19057cf3d220d4e5d89e3d3">&#9670;&#160;</a></span>object()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -672,7 +726,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_object.html">TObject</a> awtk.TValue.object </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -687,8 +741,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a636ddc6b2e4d539fe5927b68de7a08a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a636ddc6b2e4d539fe5927b68de7a08a3">&#9670;&nbsp;</a></span>rect()</h2>
+<a id="a636ddc6b2e4d539fe5927b68de7a08a3" name="a636ddc6b2e4d539fe5927b68de7a08a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a636ddc6b2e4d539fe5927b68de7a08a3">&#9670;&#160;</a></span>rect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -699,7 +753,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_rect.html">TRect</a> awtk.TValue.rect </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -714,8 +768,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="af7deeb294b0288dd4313c5985d999bd2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7deeb294b0288dd4313c5985d999bd2">&#9670;&nbsp;</a></span>reset()</h2>
+<a id="af7deeb294b0288dd4313c5985d999bd2" name="af7deeb294b0288dd4313c5985d999bd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7deeb294b0288dd4313c5985d999bd2">&#9670;&#160;</a></span>reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -726,7 +780,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TValue.reset </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -741,8 +795,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a8290dbdaecad27fa34f66ba39810a67d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8290dbdaecad27fa34f66ba39810a67d">&#9670;&nbsp;</a></span>setBool()</h2>
+<a id="a8290dbdaecad27fa34f66ba39810a67d" name="a8290dbdaecad27fa34f66ba39810a67d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8290dbdaecad27fa34f66ba39810a67d">&#9670;&#160;</a></span>setBool()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -753,8 +807,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_value.html">TValue</a> awtk.TValue.setBool </td>
           <td>(</td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -775,8 +828,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a2ef20ee06bfda74b43c0f01f1e815af5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ef20ee06bfda74b43c0f01f1e815af5">&#9670;&nbsp;</a></span>setFloat()</h2>
+<a id="a2ef20ee06bfda74b43c0f01f1e815af5" name="a2ef20ee06bfda74b43c0f01f1e815af5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ef20ee06bfda74b43c0f01f1e815af5">&#9670;&#160;</a></span>setFloat()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -787,8 +840,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_value.html">TValue</a> awtk.TValue.setFloat </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -809,8 +861,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ae5d64e6f6eff81b9a261b0cb74e3f11e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5d64e6f6eff81b9a261b0cb74e3f11e">&#9670;&nbsp;</a></span>setFloat64()</h2>
+<a id="ae5d64e6f6eff81b9a261b0cb74e3f11e" name="ae5d64e6f6eff81b9a261b0cb74e3f11e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5d64e6f6eff81b9a261b0cb74e3f11e">&#9670;&#160;</a></span>setFloat64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -821,8 +873,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_value.html">TValue</a> awtk.TValue.setFloat64 </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -843,8 +894,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a2690be5b7eceede966b08d0c98803152"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2690be5b7eceede966b08d0c98803152">&#9670;&nbsp;</a></span>setInt()</h2>
+<a id="a2690be5b7eceede966b08d0c98803152" name="a2690be5b7eceede966b08d0c98803152"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2690be5b7eceede966b08d0c98803152">&#9670;&#160;</a></span>setInt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -855,8 +906,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_value.html">TValue</a> awtk.TValue.setInt </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -877,8 +927,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a4bc96e755c548e51abe47e24bc2267f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bc96e755c548e51abe47e24bc2267f6">&#9670;&nbsp;</a></span>setInt16()</h2>
+<a id="a4bc96e755c548e51abe47e24bc2267f6" name="a4bc96e755c548e51abe47e24bc2267f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bc96e755c548e51abe47e24bc2267f6">&#9670;&#160;</a></span>setInt16()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -889,8 +939,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_value.html">TValue</a> awtk.TValue.setInt16 </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -911,8 +960,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a88e33a0e826be8f884e4fa32511e39e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88e33a0e826be8f884e4fa32511e39e1">&#9670;&nbsp;</a></span>setInt32()</h2>
+<a id="a88e33a0e826be8f884e4fa32511e39e1" name="a88e33a0e826be8f884e4fa32511e39e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88e33a0e826be8f884e4fa32511e39e1">&#9670;&#160;</a></span>setInt32()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -923,8 +972,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_value.html">TValue</a> awtk.TValue.setInt32 </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -945,8 +993,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a25e9e6f9e9e1085394ea7fc34b161790"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25e9e6f9e9e1085394ea7fc34b161790">&#9670;&nbsp;</a></span>setInt64()</h2>
+<a id="a25e9e6f9e9e1085394ea7fc34b161790" name="a25e9e6f9e9e1085394ea7fc34b161790"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25e9e6f9e9e1085394ea7fc34b161790">&#9670;&#160;</a></span>setInt64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -957,8 +1005,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_value.html">TValue</a> awtk.TValue.setInt64 </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -979,8 +1026,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ab184e9b0f8bb482eb251ba9f770eaef9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab184e9b0f8bb482eb251ba9f770eaef9">&#9670;&nbsp;</a></span>setInt8()</h2>
+<a id="ab184e9b0f8bb482eb251ba9f770eaef9" name="ab184e9b0f8bb482eb251ba9f770eaef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab184e9b0f8bb482eb251ba9f770eaef9">&#9670;&#160;</a></span>setInt8()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -991,8 +1038,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_value.html">TValue</a> awtk.TValue.setInt8 </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1013,8 +1059,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="af168ef5292316d4925193fb853406839"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af168ef5292316d4925193fb853406839">&#9670;&nbsp;</a></span>setObject()</h2>
+<a id="af168ef5292316d4925193fb853406839" name="af168ef5292316d4925193fb853406839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af168ef5292316d4925193fb853406839">&#9670;&#160;</a></span>setObject()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1025,8 +1071,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_value.html">TValue</a> awtk.TValue.setObject </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_object.html">TObject</a>&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_object.html">TObject</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1047,8 +1092,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aa5473dbbafd3d2f0221b3a43b4392d61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5473dbbafd3d2f0221b3a43b4392d61">&#9670;&nbsp;</a></span>setStr()</h2>
+<a id="aa5473dbbafd3d2f0221b3a43b4392d61" name="aa5473dbbafd3d2f0221b3a43b4392d61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5473dbbafd3d2f0221b3a43b4392d61">&#9670;&#160;</a></span>setStr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1059,8 +1104,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_value.html">TValue</a> awtk.TValue.setStr </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1081,8 +1125,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a108416d079ec19f525d5a9b760d2d6d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a108416d079ec19f525d5a9b760d2d6d8">&#9670;&nbsp;</a></span>setToken()</h2>
+<a id="a108416d079ec19f525d5a9b760d2d6d8" name="a108416d079ec19f525d5a9b760d2d6d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a108416d079ec19f525d5a9b760d2d6d8">&#9670;&#160;</a></span>setToken()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1093,8 +1137,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_value.html">TValue</a> awtk.TValue.setToken </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1115,8 +1158,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ad8095f47e87dac0f586de8cddb544465"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8095f47e87dac0f586de8cddb544465">&#9670;&nbsp;</a></span>setUint16()</h2>
+<a id="ad8095f47e87dac0f586de8cddb544465" name="ad8095f47e87dac0f586de8cddb544465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8095f47e87dac0f586de8cddb544465">&#9670;&#160;</a></span>setUint16()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1127,8 +1170,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_value.html">TValue</a> awtk.TValue.setUint16 </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1149,8 +1191,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="adcbe22b4f2187c4ce40a87cfa2d6f789"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcbe22b4f2187c4ce40a87cfa2d6f789">&#9670;&nbsp;</a></span>setUint32()</h2>
+<a id="adcbe22b4f2187c4ce40a87cfa2d6f789" name="adcbe22b4f2187c4ce40a87cfa2d6f789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcbe22b4f2187c4ce40a87cfa2d6f789">&#9670;&#160;</a></span>setUint32()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1161,8 +1203,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_value.html">TValue</a> awtk.TValue.setUint32 </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1183,8 +1224,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a737407bc702fa71f1f376d8582a58fe6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a737407bc702fa71f1f376d8582a58fe6">&#9670;&nbsp;</a></span>setUint64()</h2>
+<a id="a737407bc702fa71f1f376d8582a58fe6" name="a737407bc702fa71f1f376d8582a58fe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a737407bc702fa71f1f376d8582a58fe6">&#9670;&#160;</a></span>setUint64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1195,8 +1236,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_value.html">TValue</a> awtk.TValue.setUint64 </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1217,8 +1257,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="afaf740df4f4d92aab79880350ca03fc8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afaf740df4f4d92aab79880350ca03fc8">&#9670;&nbsp;</a></span>setUint8()</h2>
+<a id="afaf740df4f4d92aab79880350ca03fc8" name="afaf740df4f4d92aab79880350ca03fc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaf740df4f4d92aab79880350ca03fc8">&#9670;&#160;</a></span>setUint8()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1229,8 +1269,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_value.html">TValue</a> awtk.TValue.setUint8 </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1251,8 +1290,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ad36adbd7e5a6e542265204bebdea4741"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad36adbd7e5a6e542265204bebdea4741">&#9670;&nbsp;</a></span>str()</h2>
+<a id="ad36adbd7e5a6e542265204bebdea4741" name="ad36adbd7e5a6e542265204bebdea4741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad36adbd7e5a6e542265204bebdea4741">&#9670;&#160;</a></span>str()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1263,7 +1302,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TValue.str </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1278,8 +1317,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aec77344bd38d25e91bd6d432c4ce0006"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec77344bd38d25e91bd6d432c4ce0006">&#9670;&nbsp;</a></span>strEx()</h2>
+<a id="aec77344bd38d25e91bd6d432c4ce0006" name="aec77344bd38d25e91bd6d432c4ce0006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec77344bd38d25e91bd6d432c4ce0006">&#9670;&#160;</a></span>strEx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1290,19 +1329,12 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TValue.strEx </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>buff</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>buff</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1323,8 +1355,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a4b803e07699d193dffe8079f724b8bef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b803e07699d193dffe8079f724b8bef">&#9670;&nbsp;</a></span>token()</h2>
+<a id="a4b803e07699d193dffe8079f724b8bef" name="a4b803e07699d193dffe8079f724b8bef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b803e07699d193dffe8079f724b8bef">&#9670;&#160;</a></span>token()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1335,7 +1367,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TValue.token </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1350,8 +1382,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a5757f705a332b510ae97b07ca464ea87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5757f705a332b510ae97b07ca464ea87">&#9670;&nbsp;</a></span>uint16()</h2>
+<a id="a5757f705a332b510ae97b07ca464ea87" name="a5757f705a332b510ae97b07ca464ea87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5757f705a332b510ae97b07ca464ea87">&#9670;&#160;</a></span>uint16()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1362,7 +1394,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TValue.uint16 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1377,8 +1409,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ab967cb6dd676265d3198312eb4005a60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab967cb6dd676265d3198312eb4005a60">&#9670;&nbsp;</a></span>uint64()</h2>
+<a id="ab967cb6dd676265d3198312eb4005a60" name="ab967cb6dd676265d3198312eb4005a60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab967cb6dd676265d3198312eb4005a60">&#9670;&#160;</a></span>uint64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1389,7 +1421,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">long awtk.TValue.uint64 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1404,8 +1436,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ac03f64ae363915f6e8f188b67e7eaea7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac03f64ae363915f6e8f188b67e7eaea7">&#9670;&nbsp;</a></span>uint8()</h2>
+<a id="ac03f64ae363915f6e8f188b67e7eaea7" name="ac03f64ae363915f6e8f188b67e7eaea7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac03f64ae363915f6e8f188b67e7eaea7">&#9670;&#160;</a></span>uint8()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1416,7 +1448,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TValue.uint8 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1432,8 +1464,8 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">类成员变量说明</h2>
-<a id="aac4f093763cfe193cce5cac21afe7d23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac4f093763cfe193cce5cac21afe7d23">&#9670;&nbsp;</a></span>nativeObj</h2>
+<a id="aac4f093763cfe193cce5cac21afe7d23" name="aac4f093763cfe193cce5cac21afe7d23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac4f093763cfe193cce5cac21afe7d23">&#9670;&#160;</a></span>nativeObj</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1448,12 +1480,13 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>output/TValue.java</li>
+<li>output/<b>TValue.java</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

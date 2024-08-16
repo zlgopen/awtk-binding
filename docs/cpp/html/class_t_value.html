@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TValue类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,122 +70,131 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="class_t_value-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">TValue类 参考</div>  </div>
+  <div class="headertitle"><div class="title">TValue类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a1c01bf3519ae282c52a5c677ab22ae32"><td class="memItemLeft" align="right" valign="top"><a id="a1c01bf3519ae282c52a5c677ab22ae32"></a>
+<tr class="memitem:a1c01bf3519ae282c52a5c677ab22ae32" id="r_a1c01bf3519ae282c52a5c677ab22ae32"><td class="memItemLeft" align="right" valign="top"><a id="a1c01bf3519ae282c52a5c677ab22ae32" name="a1c01bf3519ae282c52a5c677ab22ae32"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TValue</b> (value_t *nativeObj)</td></tr>
 <tr class="separator:a1c01bf3519ae282c52a5c677ab22ae32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae99b632b6ab79d5b438645209ff1b6fc"><td class="memItemLeft" align="right" valign="top"><a id="ae99b632b6ab79d5b438645209ff1b6fc"></a>
+<tr class="memitem:ae99b632b6ab79d5b438645209ff1b6fc" id="r_ae99b632b6ab79d5b438645209ff1b6fc"><td class="memItemLeft" align="right" valign="top"><a id="ae99b632b6ab79d5b438645209ff1b6fc" name="ae99b632b6ab79d5b438645209ff1b6fc"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TValue</b> (const value_t *nativeObj)</td></tr>
 <tr class="separator:ae99b632b6ab79d5b438645209ff1b6fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15f32c1f3ade430b654fe7029bb4d01e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a15f32c1f3ade430b654fe7029bb4d01e">SetBool</a> (bool value)</td></tr>
+<tr class="memitem:a15f32c1f3ade430b654fe7029bb4d01e" id="r_a15f32c1f3ade430b654fe7029bb4d01e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15f32c1f3ade430b654fe7029bb4d01e">SetBool</a> (bool value)</td></tr>
 <tr class="separator:a15f32c1f3ade430b654fe7029bb4d01e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8e0ac0dafe17c443e831c62a80895f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#ac8e0ac0dafe17c443e831c62a80895f1">Bool</a> ()</td></tr>
+<tr class="memitem:ac8e0ac0dafe17c443e831c62a80895f1" id="r_ac8e0ac0dafe17c443e831c62a80895f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8e0ac0dafe17c443e831c62a80895f1">Bool</a> ()</td></tr>
 <tr class="separator:ac8e0ac0dafe17c443e831c62a80895f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a005be16ac1a01d31d2f7770815d0df08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a005be16ac1a01d31d2f7770815d0df08">SetInt8</a> (int8_t value)</td></tr>
+<tr class="memitem:a005be16ac1a01d31d2f7770815d0df08" id="r_a005be16ac1a01d31d2f7770815d0df08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a005be16ac1a01d31d2f7770815d0df08">SetInt8</a> (int8_t value)</td></tr>
 <tr class="separator:a005be16ac1a01d31d2f7770815d0df08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a866e58da47c0138efe49cd29712643a1"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a866e58da47c0138efe49cd29712643a1">Int8</a> ()</td></tr>
+<tr class="memitem:a866e58da47c0138efe49cd29712643a1" id="r_a866e58da47c0138efe49cd29712643a1"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a866e58da47c0138efe49cd29712643a1">Int8</a> ()</td></tr>
 <tr class="separator:a866e58da47c0138efe49cd29712643a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab909d172aee3452c2306c443250b82f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#ab909d172aee3452c2306c443250b82f1">SetUint8</a> (uint8_t value)</td></tr>
+<tr class="memitem:ab909d172aee3452c2306c443250b82f1" id="r_ab909d172aee3452c2306c443250b82f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab909d172aee3452c2306c443250b82f1">SetUint8</a> (uint8_t value)</td></tr>
 <tr class="separator:ab909d172aee3452c2306c443250b82f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecbf061b25133511984f98ab969dabbc"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#aecbf061b25133511984f98ab969dabbc">Uint8</a> ()</td></tr>
+<tr class="memitem:aecbf061b25133511984f98ab969dabbc" id="r_aecbf061b25133511984f98ab969dabbc"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecbf061b25133511984f98ab969dabbc">Uint8</a> ()</td></tr>
 <tr class="separator:aecbf061b25133511984f98ab969dabbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a648ceaa7e3ca044222061ebdaa858627"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a648ceaa7e3ca044222061ebdaa858627">SetInt16</a> (int16_t value)</td></tr>
+<tr class="memitem:a648ceaa7e3ca044222061ebdaa858627" id="r_a648ceaa7e3ca044222061ebdaa858627"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a648ceaa7e3ca044222061ebdaa858627">SetInt16</a> (int16_t value)</td></tr>
 <tr class="separator:a648ceaa7e3ca044222061ebdaa858627"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab971188c184ad614996fd1aadb9c3e26"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#ab971188c184ad614996fd1aadb9c3e26">Int16</a> ()</td></tr>
+<tr class="memitem:ab971188c184ad614996fd1aadb9c3e26" id="r_ab971188c184ad614996fd1aadb9c3e26"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab971188c184ad614996fd1aadb9c3e26">Int16</a> ()</td></tr>
 <tr class="separator:ab971188c184ad614996fd1aadb9c3e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9481b7d594b1b6dcaa0586b760400f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#af9481b7d594b1b6dcaa0586b760400f6">SetUint16</a> (uint16_t value)</td></tr>
+<tr class="memitem:af9481b7d594b1b6dcaa0586b760400f6" id="r_af9481b7d594b1b6dcaa0586b760400f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9481b7d594b1b6dcaa0586b760400f6">SetUint16</a> (uint16_t value)</td></tr>
 <tr class="separator:af9481b7d594b1b6dcaa0586b760400f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad21fa569f0fde85c40364c4ffef3c67"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#aad21fa569f0fde85c40364c4ffef3c67">Uint16</a> ()</td></tr>
+<tr class="memitem:aad21fa569f0fde85c40364c4ffef3c67" id="r_aad21fa569f0fde85c40364c4ffef3c67"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad21fa569f0fde85c40364c4ffef3c67">Uint16</a> ()</td></tr>
 <tr class="separator:aad21fa569f0fde85c40364c4ffef3c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b5a2303d4dd1ca5f4f574ca8b8a5353"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a4b5a2303d4dd1ca5f4f574ca8b8a5353">SetInt32</a> (int32_t value)</td></tr>
+<tr class="memitem:a4b5a2303d4dd1ca5f4f574ca8b8a5353" id="r_a4b5a2303d4dd1ca5f4f574ca8b8a5353"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b5a2303d4dd1ca5f4f574ca8b8a5353">SetInt32</a> (int32_t value)</td></tr>
 <tr class="separator:a4b5a2303d4dd1ca5f4f574ca8b8a5353"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb8cf205643679d291f7ed893f22d5b3"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#abb8cf205643679d291f7ed893f22d5b3">Int32</a> ()</td></tr>
+<tr class="memitem:abb8cf205643679d291f7ed893f22d5b3" id="r_abb8cf205643679d291f7ed893f22d5b3"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb8cf205643679d291f7ed893f22d5b3">Int32</a> ()</td></tr>
 <tr class="separator:abb8cf205643679d291f7ed893f22d5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8735c63a64e73852442146adf88438f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a8735c63a64e73852442146adf88438f8">SetUint32</a> (uint32_t value)</td></tr>
+<tr class="memitem:a8735c63a64e73852442146adf88438f8" id="r_a8735c63a64e73852442146adf88438f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8735c63a64e73852442146adf88438f8">SetUint32</a> (uint32_t value)</td></tr>
 <tr class="separator:a8735c63a64e73852442146adf88438f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a962bd2b4665973e2099a187f4600c1be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a962bd2b4665973e2099a187f4600c1be">SetInt64</a> (int64_t value)</td></tr>
+<tr class="memitem:a962bd2b4665973e2099a187f4600c1be" id="r_a962bd2b4665973e2099a187f4600c1be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a962bd2b4665973e2099a187f4600c1be">SetInt64</a> (int64_t value)</td></tr>
 <tr class="separator:a962bd2b4665973e2099a187f4600c1be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a923d9ed2652981d9b1090d34a3c60f1e"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a923d9ed2652981d9b1090d34a3c60f1e">Int64</a> ()</td></tr>
+<tr class="memitem:a923d9ed2652981d9b1090d34a3c60f1e" id="r_a923d9ed2652981d9b1090d34a3c60f1e"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a923d9ed2652981d9b1090d34a3c60f1e">Int64</a> ()</td></tr>
 <tr class="separator:a923d9ed2652981d9b1090d34a3c60f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bd4e4da66b2b9bf0faadfccfda42864"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a2bd4e4da66b2b9bf0faadfccfda42864">SetUint64</a> (uint64_t value)</td></tr>
+<tr class="memitem:a2bd4e4da66b2b9bf0faadfccfda42864" id="r_a2bd4e4da66b2b9bf0faadfccfda42864"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bd4e4da66b2b9bf0faadfccfda42864">SetUint64</a> (uint64_t value)</td></tr>
 <tr class="separator:a2bd4e4da66b2b9bf0faadfccfda42864"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a419cb0d54b34b626a141ead20acadd40"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a419cb0d54b34b626a141ead20acadd40">Uint64</a> ()</td></tr>
+<tr class="memitem:a419cb0d54b34b626a141ead20acadd40" id="r_a419cb0d54b34b626a141ead20acadd40"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a419cb0d54b34b626a141ead20acadd40">Uint64</a> ()</td></tr>
 <tr class="separator:a419cb0d54b34b626a141ead20acadd40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2a9a5cc18dde1df46719a1af0c47953"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#ab2a9a5cc18dde1df46719a1af0c47953">SetFloat</a> (float_t value)</td></tr>
+<tr class="memitem:ab2a9a5cc18dde1df46719a1af0c47953" id="r_ab2a9a5cc18dde1df46719a1af0c47953"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2a9a5cc18dde1df46719a1af0c47953">SetFloat</a> (float_t value)</td></tr>
 <tr class="separator:ab2a9a5cc18dde1df46719a1af0c47953"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bb1a3fa57deb2158b407be2c95e8a63"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a7bb1a3fa57deb2158b407be2c95e8a63">Float32</a> ()</td></tr>
+<tr class="memitem:a7bb1a3fa57deb2158b407be2c95e8a63" id="r_a7bb1a3fa57deb2158b407be2c95e8a63"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bb1a3fa57deb2158b407be2c95e8a63">Float32</a> ()</td></tr>
 <tr class="separator:a7bb1a3fa57deb2158b407be2c95e8a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adde9e7fcccc296a78aa7b54c8112f6b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#adde9e7fcccc296a78aa7b54c8112f6b9">SetFloat64</a> (double value)</td></tr>
+<tr class="memitem:adde9e7fcccc296a78aa7b54c8112f6b9" id="r_adde9e7fcccc296a78aa7b54c8112f6b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adde9e7fcccc296a78aa7b54c8112f6b9">SetFloat64</a> (double value)</td></tr>
 <tr class="separator:adde9e7fcccc296a78aa7b54c8112f6b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e6a08a868d8966fcb984c30b52465a1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a0e6a08a868d8966fcb984c30b52465a1">Float64</a> ()</td></tr>
+<tr class="memitem:a0e6a08a868d8966fcb984c30b52465a1" id="r_a0e6a08a868d8966fcb984c30b52465a1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e6a08a868d8966fcb984c30b52465a1">Float64</a> ()</td></tr>
 <tr class="separator:a0e6a08a868d8966fcb984c30b52465a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbcee6429e8ec0a2346926bef1edac0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#acbcee6429e8ec0a2346926bef1edac0d">SetStr</a> (const char *value)</td></tr>
+<tr class="memitem:acbcee6429e8ec0a2346926bef1edac0d" id="r_acbcee6429e8ec0a2346926bef1edac0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbcee6429e8ec0a2346926bef1edac0d">SetStr</a> (const char *value)</td></tr>
 <tr class="separator:acbcee6429e8ec0a2346926bef1edac0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03365d89e6a44ab5a69978ea5a0bdaf5"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a03365d89e6a44ab5a69978ea5a0bdaf5">Str</a> ()</td></tr>
+<tr class="memitem:a03365d89e6a44ab5a69978ea5a0bdaf5" id="r_a03365d89e6a44ab5a69978ea5a0bdaf5"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03365d89e6a44ab5a69978ea5a0bdaf5">Str</a> ()</td></tr>
 <tr class="separator:a03365d89e6a44ab5a69978ea5a0bdaf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ad123f1960740a14830365970fd2316"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a4ad123f1960740a14830365970fd2316">StrEx</a> (char *buff, uint32_t size)</td></tr>
+<tr class="memitem:a4ad123f1960740a14830365970fd2316" id="r_a4ad123f1960740a14830365970fd2316"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ad123f1960740a14830365970fd2316">StrEx</a> (char *buff, uint32_t size)</td></tr>
 <tr class="separator:a4ad123f1960740a14830365970fd2316"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cc6c9f56e29742e5e4400a4dae74739"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a4cc6c9f56e29742e5e4400a4dae74739">IsNull</a> ()</td></tr>
+<tr class="memitem:a4cc6c9f56e29742e5e4400a4dae74739" id="r_a4cc6c9f56e29742e5e4400a4dae74739"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cc6c9f56e29742e5e4400a4dae74739">IsNull</a> ()</td></tr>
 <tr class="separator:a4cc6c9f56e29742e5e4400a4dae74739"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f0e72a1e474ecd8a4a2e76a87a2b52f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a9f0e72a1e474ecd8a4a2e76a87a2b52f">SetInt</a> (int32_t value)</td></tr>
+<tr class="memitem:afc4ce50633e63cc25907795bfeaab757" id="r_afc4ce50633e63cc25907795bfeaab757"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc4ce50633e63cc25907795bfeaab757">Equal</a> (<a class="el" href="class_t_value.html">TValue</a> &amp;other)</td></tr>
+<tr class="separator:afc4ce50633e63cc25907795bfeaab757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f0e72a1e474ecd8a4a2e76a87a2b52f" id="r_a9f0e72a1e474ecd8a4a2e76a87a2b52f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f0e72a1e474ecd8a4a2e76a87a2b52f">SetInt</a> (int32_t value)</td></tr>
 <tr class="separator:a9f0e72a1e474ecd8a4a2e76a87a2b52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c810c31322d33d3ab3eaed7eb1708b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a7c810c31322d33d3ab3eaed7eb1708b6">SetObject</a> (<a class="el" href="class_t_object.html">TObject</a> &amp;value)</td></tr>
+<tr class="memitem:a7c810c31322d33d3ab3eaed7eb1708b6" id="r_a7c810c31322d33d3ab3eaed7eb1708b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c810c31322d33d3ab3eaed7eb1708b6">SetObject</a> (<a class="el" href="class_t_object.html">TObject</a> &amp;value)</td></tr>
 <tr class="separator:a7c810c31322d33d3ab3eaed7eb1708b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed54bdcfa9413fc02e04331ef09cc4b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#aed54bdcfa9413fc02e04331ef09cc4b4">Object</a> ()</td></tr>
+<tr class="memitem:aed54bdcfa9413fc02e04331ef09cc4b4" id="r_aed54bdcfa9413fc02e04331ef09cc4b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_object.html">TObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed54bdcfa9413fc02e04331ef09cc4b4">Object</a> ()</td></tr>
 <tr class="separator:aed54bdcfa9413fc02e04331ef09cc4b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8aee983d29b2ff7ce9e396ec1058a81b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a8aee983d29b2ff7ce9e396ec1058a81b">SetToken</a> (uint32_t value)</td></tr>
+<tr class="memitem:a8aee983d29b2ff7ce9e396ec1058a81b" id="r_a8aee983d29b2ff7ce9e396ec1058a81b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8aee983d29b2ff7ce9e396ec1058a81b">SetToken</a> (uint32_t value)</td></tr>
 <tr class="separator:a8aee983d29b2ff7ce9e396ec1058a81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20ef94873870ee699d917bfb65aee583"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a20ef94873870ee699d917bfb65aee583">Token</a> ()</td></tr>
+<tr class="memitem:a20ef94873870ee699d917bfb65aee583" id="r_a20ef94873870ee699d917bfb65aee583"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20ef94873870ee699d917bfb65aee583">Token</a> ()</td></tr>
 <tr class="separator:a20ef94873870ee699d917bfb65aee583"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a739692654dd9c682bee44c70f6609cc3"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a739692654dd9c682bee44c70f6609cc3">Destroy</a> ()</td></tr>
+<tr class="memitem:a739692654dd9c682bee44c70f6609cc3" id="r_a739692654dd9c682bee44c70f6609cc3"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a739692654dd9c682bee44c70f6609cc3">Destroy</a> ()</td></tr>
 <tr class="separator:a739692654dd9c682bee44c70f6609cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eb43bd88605d89fba08abe75a8abc59"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a8eb43bd88605d89fba08abe75a8abc59">Reset</a> ()</td></tr>
+<tr class="memitem:a8eb43bd88605d89fba08abe75a8abc59" id="r_a8eb43bd88605d89fba08abe75a8abc59"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8eb43bd88605d89fba08abe75a8abc59">Reset</a> ()</td></tr>
 <tr class="separator:a8eb43bd88605d89fba08abe75a8abc59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45d7ca7cf9040e4df3debbb5f437f5ff"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a45d7ca7cf9040e4df3debbb5f437f5ff">Id</a> ()</td></tr>
+<tr class="memitem:a45d7ca7cf9040e4df3debbb5f437f5ff" id="r_a45d7ca7cf9040e4df3debbb5f437f5ff"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45d7ca7cf9040e4df3debbb5f437f5ff">Id</a> ()</td></tr>
 <tr class="separator:a45d7ca7cf9040e4df3debbb5f437f5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f9f5c0a3563c664b2a0bea2181485e5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a2f9f5c0a3563c664b2a0bea2181485e5">Func</a> ()</td></tr>
+<tr class="memitem:a2f9f5c0a3563c664b2a0bea2181485e5" id="r_a2f9f5c0a3563c664b2a0bea2181485e5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f9f5c0a3563c664b2a0bea2181485e5">Func</a> ()</td></tr>
 <tr class="separator:a2f9f5c0a3563c664b2a0bea2181485e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c75b19a9eeabe7d1c3a631b8a13e19a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#a0c75b19a9eeabe7d1c3a631b8a13e19a">FuncDef</a> ()</td></tr>
+<tr class="memitem:a0c75b19a9eeabe7d1c3a631b8a13e19a" id="r_a0c75b19a9eeabe7d1c3a631b8a13e19a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c75b19a9eeabe7d1c3a631b8a13e19a">FuncDef</a> ()</td></tr>
 <tr class="separator:a0c75b19a9eeabe7d1c3a631b8a13e19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd8ad701cc4a2a557c9fa40f2719606c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#abd8ad701cc4a2a557c9fa40f2719606c">Bitmap</a> ()</td></tr>
+<tr class="memitem:abd8ad701cc4a2a557c9fa40f2719606c" id="r_abd8ad701cc4a2a557c9fa40f2719606c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd8ad701cc4a2a557c9fa40f2719606c">Bitmap</a> ()</td></tr>
 <tr class="separator:abd8ad701cc4a2a557c9fa40f2719606c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0699c0296d3a2429482a0d2cb2d46b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_rect.html">TRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#af0699c0296d3a2429482a0d2cb2d46b1">Rect</a> ()</td></tr>
+<tr class="memitem:af0699c0296d3a2429482a0d2cb2d46b1" id="r_af0699c0296d3a2429482a0d2cb2d46b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_rect.html">TRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0699c0296d3a2429482a0d2cb2d46b1">Rect</a> ()</td></tr>
 <tr class="separator:af0699c0296d3a2429482a0d2cb2d46b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a878db8bdfe5c99dde6379a2f362f6cd1"><td class="memItemLeft" align="right" valign="top"><a id="a878db8bdfe5c99dde6379a2f362f6cd1"></a>
+<tr class="memitem:a878db8bdfe5c99dde6379a2f362f6cd1" id="r_a878db8bdfe5c99dde6379a2f362f6cd1"><td class="memItemLeft" align="right" valign="top"><a id="a878db8bdfe5c99dde6379a2f362f6cd1" name="a878db8bdfe5c99dde6379a2f362f6cd1"></a>
 static <a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (value_t *nativeObj)</td></tr>
 <tr class="separator:a878db8bdfe5c99dde6379a2f362f6cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bfd4da446310a58010e350a1cea7e61"><td class="memItemLeft" align="right" valign="top"><a id="a2bfd4da446310a58010e350a1cea7e61"></a>
+<tr class="memitem:a2bfd4da446310a58010e350a1cea7e61" id="r_a2bfd4da446310a58010e350a1cea7e61"><td class="memItemLeft" align="right" valign="top"><a id="a2bfd4da446310a58010e350a1cea7e61" name="a2bfd4da446310a58010e350a1cea7e61"></a>
 static <a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const value_t *nativeObj)</td></tr>
 <tr class="separator:a2bfd4da446310a58010e350a1cea7e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd71593dbaeca48992b4d49a2fb1a907"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_value.html#afd71593dbaeca48992b4d49a2fb1a907">Create</a> ()</td></tr>
+<tr class="memitem:afd71593dbaeca48992b4d49a2fb1a907" id="r_afd71593dbaeca48992b4d49a2fb1a907"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd71593dbaeca48992b4d49a2fb1a907">Create</a> ()</td></tr>
 <tr class="separator:afd71593dbaeca48992b4d49a2fb1a907"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:a5860c0d61938151663b0fa5ba04fab3f"><td class="memItemLeft" align="right" valign="top"><a id="a5860c0d61938151663b0fa5ba04fab3f"></a>
+<tr class="memitem:a5860c0d61938151663b0fa5ba04fab3f" id="r_a5860c0d61938151663b0fa5ba04fab3f"><td class="memItemLeft" align="right" valign="top"><a id="a5860c0d61938151663b0fa5ba04fab3f" name="a5860c0d61938151663b0fa5ba04fab3f"></a>
 value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td></tr>
 <tr class="separator:a5860c0d61938151663b0fa5ba04fab3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -178,11 +202,11 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 <div class="textblock"><p>一个通用数据类型，用来存放整数、浮点数、字符串和其它对象。</p>
 <p>在C/C++中，一般不需动态创建对象，直接声明并初始化即可。如：</p>
 <blockquote class="doxtable">
-<p>在脚本语言中，需要动态创建对象。 </p>
+<p>&zwj;在脚本语言中，需要动态创建对象。 </p>
 </blockquote>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="abd8ad701cc4a2a557c9fa40f2719606c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd8ad701cc4a2a557c9fa40f2719606c">&#9670;&nbsp;</a></span>Bitmap()</h2>
+<a id="abd8ad701cc4a2a557c9fa40f2719606c" name="abd8ad701cc4a2a557c9fa40f2719606c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd8ad701cc4a2a557c9fa40f2719606c">&#9670;&#160;</a></span>Bitmap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -190,7 +214,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">void * TValue::Bitmap </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -200,8 +224,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="ac8e0ac0dafe17c443e831c62a80895f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8e0ac0dafe17c443e831c62a80895f1">&#9670;&nbsp;</a></span>Bool()</h2>
+<a id="ac8e0ac0dafe17c443e831c62a80895f1" name="ac8e0ac0dafe17c443e831c62a80895f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8e0ac0dafe17c443e831c62a80895f1">&#9670;&#160;</a></span>Bool()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,7 +233,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">bool TValue::Bool </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -219,8 +243,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="afd71593dbaeca48992b4d49a2fb1a907"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd71593dbaeca48992b4d49a2fb1a907">&#9670;&nbsp;</a></span>Create()</h2>
+<a id="afd71593dbaeca48992b4d49a2fb1a907" name="afd71593dbaeca48992b4d49a2fb1a907"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd71593dbaeca48992b4d49a2fb1a907">&#9670;&#160;</a></span>Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -231,7 +255,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_value.html">TValue</a> TValue::Create </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -246,8 +270,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a739692654dd9c682bee44c70f6609cc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a739692654dd9c682bee44c70f6609cc3">&#9670;&nbsp;</a></span>Destroy()</h2>
+<a id="a739692654dd9c682bee44c70f6609cc3" name="a739692654dd9c682bee44c70f6609cc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a739692654dd9c682bee44c70f6609cc3">&#9670;&#160;</a></span>Destroy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -255,7 +279,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">ret_t TValue::Destroy </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -265,8 +289,33 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a7bb1a3fa57deb2158b407be2c95e8a63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7bb1a3fa57deb2158b407be2c95e8a63">&#9670;&nbsp;</a></span>Float32()</h2>
+<a id="afc4ce50633e63cc25907795bfeaab757" name="afc4ce50633e63cc25907795bfeaab757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc4ce50633e63cc25907795bfeaab757">&#9670;&#160;</a></span>Equal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TValue::Equal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>判断两个value是否相同。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>value对象。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>为空值返回TRUE，否则返回FALSE。 </dd></dl>
+
+</div>
+</div>
+<a id="a7bb1a3fa57deb2158b407be2c95e8a63" name="a7bb1a3fa57deb2158b407be2c95e8a63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bb1a3fa57deb2158b407be2c95e8a63">&#9670;&#160;</a></span>Float32()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -274,7 +323,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">float TValue::Float32 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -284,8 +333,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a0e6a08a868d8966fcb984c30b52465a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e6a08a868d8966fcb984c30b52465a1">&#9670;&nbsp;</a></span>Float64()</h2>
+<a id="a0e6a08a868d8966fcb984c30b52465a1" name="a0e6a08a868d8966fcb984c30b52465a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e6a08a868d8966fcb984c30b52465a1">&#9670;&#160;</a></span>Float64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -293,7 +342,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">double TValue::Float64 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -303,8 +352,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a2f9f5c0a3563c664b2a0bea2181485e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f9f5c0a3563c664b2a0bea2181485e5">&#9670;&nbsp;</a></span>Func()</h2>
+<a id="a2f9f5c0a3563c664b2a0bea2181485e5" name="a2f9f5c0a3563c664b2a0bea2181485e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f9f5c0a3563c664b2a0bea2181485e5">&#9670;&#160;</a></span>Func()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -312,7 +361,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">void * TValue::Func </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -322,8 +371,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a0c75b19a9eeabe7d1c3a631b8a13e19a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c75b19a9eeabe7d1c3a631b8a13e19a">&#9670;&nbsp;</a></span>FuncDef()</h2>
+<a id="a0c75b19a9eeabe7d1c3a631b8a13e19a" name="a0c75b19a9eeabe7d1c3a631b8a13e19a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c75b19a9eeabe7d1c3a631b8a13e19a">&#9670;&#160;</a></span>FuncDef()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -331,7 +380,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">void * TValue::FuncDef </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -341,8 +390,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a45d7ca7cf9040e4df3debbb5f437f5ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45d7ca7cf9040e4df3debbb5f437f5ff">&#9670;&nbsp;</a></span>Id()</h2>
+<a id="a45d7ca7cf9040e4df3debbb5f437f5ff" name="a45d7ca7cf9040e4df3debbb5f437f5ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45d7ca7cf9040e4df3debbb5f437f5ff">&#9670;&#160;</a></span>Id()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -350,7 +399,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">const char * TValue::Id </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -360,8 +409,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="ab971188c184ad614996fd1aadb9c3e26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab971188c184ad614996fd1aadb9c3e26">&#9670;&nbsp;</a></span>Int16()</h2>
+<a id="ab971188c184ad614996fd1aadb9c3e26" name="ab971188c184ad614996fd1aadb9c3e26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab971188c184ad614996fd1aadb9c3e26">&#9670;&#160;</a></span>Int16()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -369,7 +418,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">int16_t TValue::Int16 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -379,8 +428,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="abb8cf205643679d291f7ed893f22d5b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb8cf205643679d291f7ed893f22d5b3">&#9670;&nbsp;</a></span>Int32()</h2>
+<a id="abb8cf205643679d291f7ed893f22d5b3" name="abb8cf205643679d291f7ed893f22d5b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb8cf205643679d291f7ed893f22d5b3">&#9670;&#160;</a></span>Int32()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -388,7 +437,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">int32_t TValue::Int32 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -398,8 +447,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a923d9ed2652981d9b1090d34a3c60f1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a923d9ed2652981d9b1090d34a3c60f1e">&#9670;&nbsp;</a></span>Int64()</h2>
+<a id="a923d9ed2652981d9b1090d34a3c60f1e" name="a923d9ed2652981d9b1090d34a3c60f1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a923d9ed2652981d9b1090d34a3c60f1e">&#9670;&#160;</a></span>Int64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -407,7 +456,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">int64_t TValue::Int64 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -417,8 +466,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a866e58da47c0138efe49cd29712643a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a866e58da47c0138efe49cd29712643a1">&#9670;&nbsp;</a></span>Int8()</h2>
+<a id="a866e58da47c0138efe49cd29712643a1" name="a866e58da47c0138efe49cd29712643a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a866e58da47c0138efe49cd29712643a1">&#9670;&#160;</a></span>Int8()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -426,7 +475,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">int8_t TValue::Int8 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -436,8 +485,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a4cc6c9f56e29742e5e4400a4dae74739"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cc6c9f56e29742e5e4400a4dae74739">&#9670;&nbsp;</a></span>IsNull()</h2>
+<a id="a4cc6c9f56e29742e5e4400a4dae74739" name="a4cc6c9f56e29742e5e4400a4dae74739"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cc6c9f56e29742e5e4400a4dae74739">&#9670;&#160;</a></span>IsNull()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -445,7 +494,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">bool TValue::IsNull </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -455,8 +504,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="aed54bdcfa9413fc02e04331ef09cc4b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed54bdcfa9413fc02e04331ef09cc4b4">&#9670;&nbsp;</a></span>Object()</h2>
+<a id="aed54bdcfa9413fc02e04331ef09cc4b4" name="aed54bdcfa9413fc02e04331ef09cc4b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed54bdcfa9413fc02e04331ef09cc4b4">&#9670;&#160;</a></span>Object()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -464,7 +513,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_object.html">TObject</a> TValue::Object </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -474,8 +523,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="af0699c0296d3a2429482a0d2cb2d46b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0699c0296d3a2429482a0d2cb2d46b1">&#9670;&nbsp;</a></span>Rect()</h2>
+<a id="af0699c0296d3a2429482a0d2cb2d46b1" name="af0699c0296d3a2429482a0d2cb2d46b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0699c0296d3a2429482a0d2cb2d46b1">&#9670;&#160;</a></span>Rect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -483,7 +532,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_rect.html">TRect</a> TValue::Rect </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -493,8 +542,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a8eb43bd88605d89fba08abe75a8abc59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8eb43bd88605d89fba08abe75a8abc59">&#9670;&nbsp;</a></span>Reset()</h2>
+<a id="a8eb43bd88605d89fba08abe75a8abc59" name="a8eb43bd88605d89fba08abe75a8abc59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8eb43bd88605d89fba08abe75a8abc59">&#9670;&#160;</a></span>Reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -502,7 +551,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">ret_t TValue::Reset </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -512,8 +561,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a15f32c1f3ade430b654fe7029bb4d01e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15f32c1f3ade430b654fe7029bb4d01e">&#9670;&nbsp;</a></span>SetBool()</h2>
+<a id="a15f32c1f3ade430b654fe7029bb4d01e" name="a15f32c1f3ade430b654fe7029bb4d01e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15f32c1f3ade430b654fe7029bb4d01e">&#9670;&#160;</a></span>SetBool()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -521,8 +570,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_value.html">TValue</a> TValue::SetBool </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -538,8 +586,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="ab2a9a5cc18dde1df46719a1af0c47953"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2a9a5cc18dde1df46719a1af0c47953">&#9670;&nbsp;</a></span>SetFloat()</h2>
+<a id="ab2a9a5cc18dde1df46719a1af0c47953" name="ab2a9a5cc18dde1df46719a1af0c47953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2a9a5cc18dde1df46719a1af0c47953">&#9670;&#160;</a></span>SetFloat()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -547,8 +595,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_value.html">TValue</a> TValue::SetFloat </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -564,8 +611,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="adde9e7fcccc296a78aa7b54c8112f6b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adde9e7fcccc296a78aa7b54c8112f6b9">&#9670;&nbsp;</a></span>SetFloat64()</h2>
+<a id="adde9e7fcccc296a78aa7b54c8112f6b9" name="adde9e7fcccc296a78aa7b54c8112f6b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adde9e7fcccc296a78aa7b54c8112f6b9">&#9670;&#160;</a></span>SetFloat64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -573,8 +620,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_value.html">TValue</a> TValue::SetFloat64 </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -590,8 +636,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a9f0e72a1e474ecd8a4a2e76a87a2b52f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f0e72a1e474ecd8a4a2e76a87a2b52f">&#9670;&nbsp;</a></span>SetInt()</h2>
+<a id="a9f0e72a1e474ecd8a4a2e76a87a2b52f" name="a9f0e72a1e474ecd8a4a2e76a87a2b52f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f0e72a1e474ecd8a4a2e76a87a2b52f">&#9670;&#160;</a></span>SetInt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -599,8 +645,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_value.html">TValue</a> TValue::SetInt </td>
           <td>(</td>
-          <td class="paramtype">int32_t&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">int32_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -616,8 +661,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a648ceaa7e3ca044222061ebdaa858627"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a648ceaa7e3ca044222061ebdaa858627">&#9670;&nbsp;</a></span>SetInt16()</h2>
+<a id="a648ceaa7e3ca044222061ebdaa858627" name="a648ceaa7e3ca044222061ebdaa858627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a648ceaa7e3ca044222061ebdaa858627">&#9670;&#160;</a></span>SetInt16()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -625,8 +670,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_value.html">TValue</a> TValue::SetInt16 </td>
           <td>(</td>
-          <td class="paramtype">int16_t&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -642,8 +686,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a4b5a2303d4dd1ca5f4f574ca8b8a5353"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b5a2303d4dd1ca5f4f574ca8b8a5353">&#9670;&nbsp;</a></span>SetInt32()</h2>
+<a id="a4b5a2303d4dd1ca5f4f574ca8b8a5353" name="a4b5a2303d4dd1ca5f4f574ca8b8a5353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b5a2303d4dd1ca5f4f574ca8b8a5353">&#9670;&#160;</a></span>SetInt32()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -651,8 +695,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_value.html">TValue</a> TValue::SetInt32 </td>
           <td>(</td>
-          <td class="paramtype">int32_t&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">int32_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -668,8 +711,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a962bd2b4665973e2099a187f4600c1be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a962bd2b4665973e2099a187f4600c1be">&#9670;&nbsp;</a></span>SetInt64()</h2>
+<a id="a962bd2b4665973e2099a187f4600c1be" name="a962bd2b4665973e2099a187f4600c1be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a962bd2b4665973e2099a187f4600c1be">&#9670;&#160;</a></span>SetInt64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -677,8 +720,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_value.html">TValue</a> TValue::SetInt64 </td>
           <td>(</td>
-          <td class="paramtype">int64_t&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -694,8 +736,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a005be16ac1a01d31d2f7770815d0df08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a005be16ac1a01d31d2f7770815d0df08">&#9670;&nbsp;</a></span>SetInt8()</h2>
+<a id="a005be16ac1a01d31d2f7770815d0df08" name="a005be16ac1a01d31d2f7770815d0df08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a005be16ac1a01d31d2f7770815d0df08">&#9670;&#160;</a></span>SetInt8()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -703,8 +745,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_value.html">TValue</a> TValue::SetInt8 </td>
           <td>(</td>
-          <td class="paramtype">int8_t&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">int8_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -720,8 +761,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a7c810c31322d33d3ab3eaed7eb1708b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c810c31322d33d3ab3eaed7eb1708b6">&#9670;&nbsp;</a></span>SetObject()</h2>
+<a id="a7c810c31322d33d3ab3eaed7eb1708b6" name="a7c810c31322d33d3ab3eaed7eb1708b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c810c31322d33d3ab3eaed7eb1708b6">&#9670;&#160;</a></span>SetObject()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -729,8 +770,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_value.html">TValue</a> TValue::SetObject </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_t_object.html">TObject</a> &amp;&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_t_object.html">TObject</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -746,8 +786,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="acbcee6429e8ec0a2346926bef1edac0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbcee6429e8ec0a2346926bef1edac0d">&#9670;&nbsp;</a></span>SetStr()</h2>
+<a id="acbcee6429e8ec0a2346926bef1edac0d" name="acbcee6429e8ec0a2346926bef1edac0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbcee6429e8ec0a2346926bef1edac0d">&#9670;&#160;</a></span>SetStr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -755,8 +795,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_value.html">TValue</a> TValue::SetStr </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -772,8 +811,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a8aee983d29b2ff7ce9e396ec1058a81b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8aee983d29b2ff7ce9e396ec1058a81b">&#9670;&nbsp;</a></span>SetToken()</h2>
+<a id="a8aee983d29b2ff7ce9e396ec1058a81b" name="a8aee983d29b2ff7ce9e396ec1058a81b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aee983d29b2ff7ce9e396ec1058a81b">&#9670;&#160;</a></span>SetToken()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -781,8 +820,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_value.html">TValue</a> TValue::SetToken </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -798,8 +836,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="af9481b7d594b1b6dcaa0586b760400f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9481b7d594b1b6dcaa0586b760400f6">&#9670;&nbsp;</a></span>SetUint16()</h2>
+<a id="af9481b7d594b1b6dcaa0586b760400f6" name="af9481b7d594b1b6dcaa0586b760400f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9481b7d594b1b6dcaa0586b760400f6">&#9670;&#160;</a></span>SetUint16()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -807,8 +845,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_value.html">TValue</a> TValue::SetUint16 </td>
           <td>(</td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -824,8 +861,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a8735c63a64e73852442146adf88438f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8735c63a64e73852442146adf88438f8">&#9670;&nbsp;</a></span>SetUint32()</h2>
+<a id="a8735c63a64e73852442146adf88438f8" name="a8735c63a64e73852442146adf88438f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8735c63a64e73852442146adf88438f8">&#9670;&#160;</a></span>SetUint32()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -833,8 +870,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_value.html">TValue</a> TValue::SetUint32 </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -850,8 +886,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a2bd4e4da66b2b9bf0faadfccfda42864"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bd4e4da66b2b9bf0faadfccfda42864">&#9670;&nbsp;</a></span>SetUint64()</h2>
+<a id="a2bd4e4da66b2b9bf0faadfccfda42864" name="a2bd4e4da66b2b9bf0faadfccfda42864"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bd4e4da66b2b9bf0faadfccfda42864">&#9670;&#160;</a></span>SetUint64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -859,8 +895,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_value.html">TValue</a> TValue::SetUint64 </td>
           <td>(</td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -876,8 +911,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="ab909d172aee3452c2306c443250b82f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab909d172aee3452c2306c443250b82f1">&#9670;&nbsp;</a></span>SetUint8()</h2>
+<a id="ab909d172aee3452c2306c443250b82f1" name="ab909d172aee3452c2306c443250b82f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab909d172aee3452c2306c443250b82f1">&#9670;&#160;</a></span>SetUint8()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -885,8 +920,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_value.html">TValue</a> TValue::SetUint8 </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -902,8 +936,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a03365d89e6a44ab5a69978ea5a0bdaf5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03365d89e6a44ab5a69978ea5a0bdaf5">&#9670;&nbsp;</a></span>Str()</h2>
+<a id="a03365d89e6a44ab5a69978ea5a0bdaf5" name="a03365d89e6a44ab5a69978ea5a0bdaf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03365d89e6a44ab5a69978ea5a0bdaf5">&#9670;&#160;</a></span>Str()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -911,7 +945,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">const char * TValue::Str </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -921,8 +955,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a4ad123f1960740a14830365970fd2316"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ad123f1960740a14830365970fd2316">&#9670;&nbsp;</a></span>StrEx()</h2>
+<a id="a4ad123f1960740a14830365970fd2316" name="a4ad123f1960740a14830365970fd2316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ad123f1960740a14830365970fd2316">&#9670;&#160;</a></span>StrEx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -930,19 +964,12 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">const char * TValue::StrEx </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>buff</em>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buff</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -958,8 +985,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a20ef94873870ee699d917bfb65aee583"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20ef94873870ee699d917bfb65aee583">&#9670;&nbsp;</a></span>Token()</h2>
+<a id="a20ef94873870ee699d917bfb65aee583" name="a20ef94873870ee699d917bfb65aee583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20ef94873870ee699d917bfb65aee583">&#9670;&#160;</a></span>Token()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -967,7 +994,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">uint32_t TValue::Token </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -977,8 +1004,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="aad21fa569f0fde85c40364c4ffef3c67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad21fa569f0fde85c40364c4ffef3c67">&#9670;&nbsp;</a></span>Uint16()</h2>
+<a id="aad21fa569f0fde85c40364c4ffef3c67" name="aad21fa569f0fde85c40364c4ffef3c67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad21fa569f0fde85c40364c4ffef3c67">&#9670;&#160;</a></span>Uint16()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -986,7 +1013,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">uint16_t TValue::Uint16 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -996,8 +1023,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a419cb0d54b34b626a141ead20acadd40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a419cb0d54b34b626a141ead20acadd40">&#9670;&nbsp;</a></span>Uint64()</h2>
+<a id="a419cb0d54b34b626a141ead20acadd40" name="a419cb0d54b34b626a141ead20acadd40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a419cb0d54b34b626a141ead20acadd40">&#9670;&#160;</a></span>Uint64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1005,7 +1032,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">uint64_t TValue::Uint64 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1015,8 +1042,8 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="aecbf061b25133511984f98ab969dabbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecbf061b25133511984f98ab969dabbc">&#9670;&nbsp;</a></span>Uint8()</h2>
+<a id="aecbf061b25133511984f98ab969dabbc" name="aecbf061b25133511984f98ab969dabbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecbf061b25133511984f98ab969dabbc">&#9670;&#160;</a></span>Uint8()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1024,7 +1051,7 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">uint8_t TValue::Uint8 </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1036,12 +1063,13 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
-<li>output/awtk_cpp.cpp</li>
+<li>output/<b>awtk_cpp.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

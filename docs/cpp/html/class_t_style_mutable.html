@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TStyleMutable类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,19 +70,26 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="class_t_style_mutable-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">TStyleMutable类 参考</div>  </div>
+  <div class="headertitle"><div class="title">TStyleMutable类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -82,78 +104,78 @@ $(function() {
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:aff7858268df549da2ca3c67cbe9b6d6b"><td class="memItemLeft" align="right" valign="top"><a id="aff7858268df549da2ca3c67cbe9b6d6b"></a>
+<tr class="memitem:aff7858268df549da2ca3c67cbe9b6d6b" id="r_aff7858268df549da2ca3c67cbe9b6d6b"><td class="memItemLeft" align="right" valign="top"><a id="aff7858268df549da2ca3c67cbe9b6d6b" name="aff7858268df549da2ca3c67cbe9b6d6b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TStyleMutable</b> (style_t *nativeObj)</td></tr>
 <tr class="separator:aff7858268df549da2ca3c67cbe9b6d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a300f75a25385f229f33547f8121077b5"><td class="memItemLeft" align="right" valign="top"><a id="a300f75a25385f229f33547f8121077b5"></a>
+<tr class="memitem:a300f75a25385f229f33547f8121077b5" id="r_a300f75a25385f229f33547f8121077b5"><td class="memItemLeft" align="right" valign="top"><a id="a300f75a25385f229f33547f8121077b5" name="a300f75a25385f229f33547f8121077b5"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TStyleMutable</b> (const style_mutable_t *nativeObj)</td></tr>
 <tr class="separator:a300f75a25385f229f33547f8121077b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab15af41a982dfc25e853ae2756a8828f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style_mutable.html#ab15af41a982dfc25e853ae2756a8828f">SetName</a> (const char *name)</td></tr>
+<tr class="memitem:ab15af41a982dfc25e853ae2756a8828f" id="r_ab15af41a982dfc25e853ae2756a8828f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab15af41a982dfc25e853ae2756a8828f">SetName</a> (const char *name)</td></tr>
 <tr class="separator:ab15af41a982dfc25e853ae2756a8828f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c503d790b5ce834ca6255426c9501df"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style_mutable.html#a6c503d790b5ce834ca6255426c9501df">SetInt</a> (const char *state, const char *name, uint32_t val)</td></tr>
+<tr class="memitem:a6c503d790b5ce834ca6255426c9501df" id="r_a6c503d790b5ce834ca6255426c9501df"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c503d790b5ce834ca6255426c9501df">SetInt</a> (const char *state, const char *name, uint32_t val)</td></tr>
 <tr class="separator:a6c503d790b5ce834ca6255426c9501df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a808dcf67e9ce2a403545429da638809d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style_mutable.html#a808dcf67e9ce2a403545429da638809d">GetName</a> () const</td></tr>
+<tr class="memitem:a808dcf67e9ce2a403545429da638809d" id="r_a808dcf67e9ce2a403545429da638809d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a808dcf67e9ce2a403545429da638809d">GetName</a> () const</td></tr>
 <tr class="separator:a808dcf67e9ce2a403545429da638809d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_t_style"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_t_style')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_t_style.html">TStyle</a></td></tr>
-<tr class="memitem:a65e92e6d34e0c4829b96eadb04115a75 inherit pub_methods_class_t_style"><td class="memItemLeft" align="right" valign="top"><a id="a65e92e6d34e0c4829b96eadb04115a75"></a>
+<tr class="inherit_header pub_methods_class_t_style"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_t_style')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_t_style.html">TStyle</a></td></tr>
+<tr class="memitem:a65e92e6d34e0c4829b96eadb04115a75 inherit pub_methods_class_t_style" id="r_a65e92e6d34e0c4829b96eadb04115a75"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>TStyle</b> (style_t *nativeObj)</td></tr>
 <tr class="separator:a65e92e6d34e0c4829b96eadb04115a75 inherit pub_methods_class_t_style"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa825ac97170508d5d24143482e98ccda inherit pub_methods_class_t_style"><td class="memItemLeft" align="right" valign="top"><a id="aa825ac97170508d5d24143482e98ccda"></a>
+<tr class="memitem:aa825ac97170508d5d24143482e98ccda inherit pub_methods_class_t_style" id="r_aa825ac97170508d5d24143482e98ccda"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>TStyle</b> (const style_t *nativeObj)</td></tr>
 <tr class="separator:aa825ac97170508d5d24143482e98ccda inherit pub_methods_class_t_style"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a094c4d8760823f71772a9778e033a5 inherit pub_methods_class_t_style"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#a3a094c4d8760823f71772a9778e033a5">NotifyWidgetStateChanged</a> (TWidget &amp;widget)</td></tr>
+<tr class="memitem:a3a094c4d8760823f71772a9778e033a5 inherit pub_methods_class_t_style" id="r_a3a094c4d8760823f71772a9778e033a5"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#a3a094c4d8760823f71772a9778e033a5">NotifyWidgetStateChanged</a> (<a class="el" href="class_t_widget.html">TWidget</a> &amp;widget)</td></tr>
 <tr class="separator:a3a094c4d8760823f71772a9778e033a5 inherit pub_methods_class_t_style"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab338f7bae3dfe4da88d4f64b5efedf52 inherit pub_methods_class_t_style"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#ab338f7bae3dfe4da88d4f64b5efedf52">IsValid</a> ()</td></tr>
+<tr class="memitem:ab338f7bae3dfe4da88d4f64b5efedf52 inherit pub_methods_class_t_style" id="r_ab338f7bae3dfe4da88d4f64b5efedf52"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#ab338f7bae3dfe4da88d4f64b5efedf52">IsValid</a> ()</td></tr>
 <tr class="separator:ab338f7bae3dfe4da88d4f64b5efedf52 inherit pub_methods_class_t_style"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa25880edce1ce52b7be659d6d9842a8 inherit pub_methods_class_t_style"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#afa25880edce1ce52b7be659d6d9842a8">GetInt</a> (const char *name, int32_t defval)</td></tr>
+<tr class="memitem:afa25880edce1ce52b7be659d6d9842a8 inherit pub_methods_class_t_style" id="r_afa25880edce1ce52b7be659d6d9842a8"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#afa25880edce1ce52b7be659d6d9842a8">GetInt</a> (const char *name, int32_t defval)</td></tr>
 <tr class="separator:afa25880edce1ce52b7be659d6d9842a8 inherit pub_methods_class_t_style"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad06c1be0b52ec98104e4fb6b72c800b inherit pub_methods_class_t_style"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#aad06c1be0b52ec98104e4fb6b72c800b">GetUint</a> (const char *name, uint32_t defval)</td></tr>
+<tr class="memitem:aad06c1be0b52ec98104e4fb6b72c800b inherit pub_methods_class_t_style" id="r_aad06c1be0b52ec98104e4fb6b72c800b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#aad06c1be0b52ec98104e4fb6b72c800b">GetUint</a> (const char *name, uint32_t defval)</td></tr>
 <tr class="separator:aad06c1be0b52ec98104e4fb6b72c800b inherit pub_methods_class_t_style"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc313e64294bc3204fe56994e1ed6d3e inherit pub_methods_class_t_style"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#acc313e64294bc3204fe56994e1ed6d3e">GetStr</a> (const char *name, const char *defval)</td></tr>
+<tr class="memitem:acc313e64294bc3204fe56994e1ed6d3e inherit pub_methods_class_t_style" id="r_acc313e64294bc3204fe56994e1ed6d3e"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#acc313e64294bc3204fe56994e1ed6d3e">GetStr</a> (const char *name, const char *defval)</td></tr>
 <tr class="separator:acc313e64294bc3204fe56994e1ed6d3e inherit pub_methods_class_t_style"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab69c0bca08733d43055125322f3b2bc2 inherit pub_methods_class_t_style"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#ab69c0bca08733d43055125322f3b2bc2">Get</a> (const char *state, const char *name, <a class="el" href="class_t_value.html">TValue</a> &amp;value)</td></tr>
+<tr class="memitem:ab69c0bca08733d43055125322f3b2bc2 inherit pub_methods_class_t_style" id="r_ab69c0bca08733d43055125322f3b2bc2"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#ab69c0bca08733d43055125322f3b2bc2">Get</a> (const char *state, const char *name, <a class="el" href="class_t_value.html">TValue</a> &amp;value)</td></tr>
 <tr class="separator:ab69c0bca08733d43055125322f3b2bc2 inherit pub_methods_class_t_style"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0fd6aee96501b4ffefcdb47f877b964 inherit pub_methods_class_t_style"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#ab0fd6aee96501b4ffefcdb47f877b964">Set</a> (const char *state, const char *name, <a class="el" href="class_t_value.html">TValue</a> &amp;value)</td></tr>
+<tr class="memitem:ab0fd6aee96501b4ffefcdb47f877b964 inherit pub_methods_class_t_style" id="r_ab0fd6aee96501b4ffefcdb47f877b964"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#ab0fd6aee96501b4ffefcdb47f877b964">Set</a> (const char *state, const char *name, <a class="el" href="class_t_value.html">TValue</a> &amp;value)</td></tr>
 <tr class="separator:ab0fd6aee96501b4ffefcdb47f877b964 inherit pub_methods_class_t_style"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a7160b804d2f886c1ae312d600a7b64 inherit pub_methods_class_t_style"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#a2a7160b804d2f886c1ae312d600a7b64">UpdateState</a> (<a class="el" href="class_t_theme.html">TTheme</a> &amp;theme, const char *widget_type, const char *style_name, const char *widget_state)</td></tr>
+<tr class="memitem:a2a7160b804d2f886c1ae312d600a7b64 inherit pub_methods_class_t_style" id="r_a2a7160b804d2f886c1ae312d600a7b64"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#a2a7160b804d2f886c1ae312d600a7b64">UpdateState</a> (<a class="el" href="class_t_theme.html">TTheme</a> &amp;theme, const char *widget_type, const char *style_name, const char *widget_state)</td></tr>
 <tr class="separator:a2a7160b804d2f886c1ae312d600a7b64 inherit pub_methods_class_t_style"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaf95b0e4d01e05807192b70a6554100 inherit pub_methods_class_t_style"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#afaf95b0e4d01e05807192b70a6554100">GetStyleState</a> ()</td></tr>
+<tr class="memitem:afaf95b0e4d01e05807192b70a6554100 inherit pub_methods_class_t_style" id="r_afaf95b0e4d01e05807192b70a6554100"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#afaf95b0e4d01e05807192b70a6554100">GetStyleState</a> ()</td></tr>
 <tr class="separator:afaf95b0e4d01e05807192b70a6554100 inherit pub_methods_class_t_style"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fc783502f0ad0699d4377c3dfb20aed inherit pub_methods_class_t_style"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#a0fc783502f0ad0699d4377c3dfb20aed">IsMutable</a> ()</td></tr>
+<tr class="memitem:a0fc783502f0ad0699d4377c3dfb20aed inherit pub_methods_class_t_style" id="r_a0fc783502f0ad0699d4377c3dfb20aed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#a0fc783502f0ad0699d4377c3dfb20aed">IsMutable</a> ()</td></tr>
 <tr class="separator:a0fc783502f0ad0699d4377c3dfb20aed inherit pub_methods_class_t_style"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47575ecb62a2dc186bc44f39c5d29ea5 inherit pub_methods_class_t_style"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#a47575ecb62a2dc186bc44f39c5d29ea5">GetStyleType</a> ()</td></tr>
+<tr class="memitem:a47575ecb62a2dc186bc44f39c5d29ea5 inherit pub_methods_class_t_style" id="r_a47575ecb62a2dc186bc44f39c5d29ea5"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style.html#a47575ecb62a2dc186bc44f39c5d29ea5">GetStyleType</a> ()</td></tr>
 <tr class="separator:a47575ecb62a2dc186bc44f39c5d29ea5 inherit pub_methods_class_t_style"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a7183773c8576dfcbdb08795026b69fff"><td class="memItemLeft" align="right" valign="top"><a id="a7183773c8576dfcbdb08795026b69fff"></a>
+<tr class="memitem:a7183773c8576dfcbdb08795026b69fff" id="r_a7183773c8576dfcbdb08795026b69fff"><td class="memItemLeft" align="right" valign="top"><a id="a7183773c8576dfcbdb08795026b69fff" name="a7183773c8576dfcbdb08795026b69fff"></a>
 static <a class="el" href="class_t_style_mutable.html">TStyleMutable</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (style_t *nativeObj)</td></tr>
 <tr class="separator:a7183773c8576dfcbdb08795026b69fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa70c9634c47d449f40a0687d0ed17427"><td class="memItemLeft" align="right" valign="top"><a id="aa70c9634c47d449f40a0687d0ed17427"></a>
+<tr class="memitem:aa70c9634c47d449f40a0687d0ed17427" id="r_aa70c9634c47d449f40a0687d0ed17427"><td class="memItemLeft" align="right" valign="top"><a id="aa70c9634c47d449f40a0687d0ed17427" name="aa70c9634c47d449f40a0687d0ed17427"></a>
 static <a class="el" href="class_t_style_mutable.html">TStyleMutable</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const style_t *nativeObj)</td></tr>
 <tr class="separator:aa70c9634c47d449f40a0687d0ed17427"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1459b8a9a651b4a6c7d0347243533e6f"><td class="memItemLeft" align="right" valign="top"><a id="a1459b8a9a651b4a6c7d0347243533e6f"></a>
+<tr class="memitem:a1459b8a9a651b4a6c7d0347243533e6f" id="r_a1459b8a9a651b4a6c7d0347243533e6f"><td class="memItemLeft" align="right" valign="top"><a id="a1459b8a9a651b4a6c7d0347243533e6f" name="a1459b8a9a651b4a6c7d0347243533e6f"></a>
 static <a class="el" href="class_t_style_mutable.html">TStyleMutable</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (<a class="el" href="class_t_style.html">TStyle</a> &amp;obj)</td></tr>
 <tr class="separator:a1459b8a9a651b4a6c7d0347243533e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd6eec8e905c15ad0deccab7ee6a4fa3"><td class="memItemLeft" align="right" valign="top"><a id="abd6eec8e905c15ad0deccab7ee6a4fa3"></a>
+<tr class="memitem:abd6eec8e905c15ad0deccab7ee6a4fa3" id="r_abd6eec8e905c15ad0deccab7ee6a4fa3"><td class="memItemLeft" align="right" valign="top"><a id="abd6eec8e905c15ad0deccab7ee6a4fa3" name="abd6eec8e905c15ad0deccab7ee6a4fa3"></a>
 static <a class="el" href="class_t_style_mutable.html">TStyleMutable</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const <a class="el" href="class_t_style.html">TStyle</a> &amp;obj)</td></tr>
 <tr class="separator:abd6eec8e905c15ad0deccab7ee6a4fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a611bdf2087c4b0b6ac6cac34d9bf633b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_style.html">TStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_style_mutable.html#a611bdf2087c4b0b6ac6cac34d9bf633b">Create</a> (<a class="el" href="class_t_style.html">TStyle</a> &amp;default_style)</td></tr>
+<tr class="memitem:a611bdf2087c4b0b6ac6cac34d9bf633b" id="r_a611bdf2087c4b0b6ac6cac34d9bf633b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_style.html">TStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a611bdf2087c4b0b6ac6cac34d9bf633b">Create</a> (<a class="el" href="class_t_style.html">TStyle</a> &amp;default_style)</td></tr>
 <tr class="separator:a611bdf2087c4b0b6ac6cac34d9bf633b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_class_t_style"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_t_style')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="class_t_style.html">TStyle</a></td></tr>
-<tr class="memitem:a16ecd7e302a4de1eb535b8b8365b241d inherit pub_static_methods_class_t_style"><td class="memItemLeft" align="right" valign="top"><a id="a16ecd7e302a4de1eb535b8b8365b241d"></a>
+<tr class="inherit_header pub_static_methods_class_t_style"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_t_style')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="class_t_style.html">TStyle</a></td></tr>
+<tr class="memitem:a16ecd7e302a4de1eb535b8b8365b241d inherit pub_static_methods_class_t_style" id="r_a16ecd7e302a4de1eb535b8b8365b241d"><td class="memItemLeft" align="right" valign="top">
 static <a class="el" href="class_t_style.html">TStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (style_t *nativeObj)</td></tr>
 <tr class="separator:a16ecd7e302a4de1eb535b8b8365b241d inherit pub_static_methods_class_t_style"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f61e8bf131680f0c91a97780d49e669 inherit pub_static_methods_class_t_style"><td class="memItemLeft" align="right" valign="top"><a id="a0f61e8bf131680f0c91a97780d49e669"></a>
+<tr class="memitem:a0f61e8bf131680f0c91a97780d49e669 inherit pub_static_methods_class_t_style" id="r_a0f61e8bf131680f0c91a97780d49e669"><td class="memItemLeft" align="right" valign="top">
 static <a class="el" href="class_t_style.html">TStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const style_t *nativeObj)</td></tr>
 <tr class="separator:a0f61e8bf131680f0c91a97780d49e669 inherit pub_static_methods_class_t_style"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 额外继承的成员函数</h2></td></tr>
-<tr class="inherit_header pub_attribs_class_t_style"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_t_style')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="class_t_style.html">TStyle</a></td></tr>
-<tr class="memitem:a09c6f48243b069bb90d8509fbfd64a22 inherit pub_attribs_class_t_style"><td class="memItemLeft" align="right" valign="top"><a id="a09c6f48243b069bb90d8509fbfd64a22"></a>
+<tr class="inherit_header pub_attribs_class_t_style"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_t_style')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="class_t_style.html">TStyle</a></td></tr>
+<tr class="memitem:a09c6f48243b069bb90d8509fbfd64a22 inherit pub_attribs_class_t_style" id="r_a09c6f48243b069bb90d8509fbfd64a22"><td class="memItemLeft" align="right" valign="top">
 style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td></tr>
 <tr class="separator:a09c6f48243b069bb90d8509fbfd64a22 inherit pub_attribs_class_t_style"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -161,8 +183,8 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 <div class="textblock"><p>可变的style(可实时修改并生效，主要用于在designer中被编辑的控件，或者一些特殊控件)。</p>
 <p>style_mutable也对style_const进行了包装，当用户没修改某个值时，便从style_const中获取。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a611bdf2087c4b0b6ac6cac34d9bf633b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a611bdf2087c4b0b6ac6cac34d9bf633b">&#9670;&nbsp;</a></span>Create()</h2>
+<a id="a611bdf2087c4b0b6ac6cac34d9bf633b" name="a611bdf2087c4b0b6ac6cac34d9bf633b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a611bdf2087c4b0b6ac6cac34d9bf633b">&#9670;&#160;</a></span>Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,8 +195,7 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_style.html">TStyle</a> TStyleMutable::Create </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_t_style.html">TStyle</a> &amp;&#160;</td>
-          <td class="paramname"><em>default_style</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_t_style.html">TStyle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>default_style</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -186,7 +207,7 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 </div><div class="memdoc">
 <p>创建style_mutable对象。</p>
 <blockquote class="doxtable">
-<p>除了测试程序外不需要直接调用，widget会通过style_factory_create创建。 </p>
+<p>&zwj;除了测试程序外不需要直接调用，widget会通过style_factory_create创建。 </p>
 </blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -198,8 +219,8 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a808dcf67e9ce2a403545429da638809d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a808dcf67e9ce2a403545429da638809d">&#9670;&nbsp;</a></span>GetName()</h2>
+<a id="a808dcf67e9ce2a403545429da638809d" name="a808dcf67e9ce2a403545429da638809d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a808dcf67e9ce2a403545429da638809d">&#9670;&#160;</a></span>GetName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,7 +228,7 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">char * TStyleMutable::GetName </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -216,8 +237,8 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a6c503d790b5ce834ca6255426c9501df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c503d790b5ce834ca6255426c9501df">&#9670;&nbsp;</a></span>SetInt()</h2>
+<a id="a6c503d790b5ce834ca6255426c9501df" name="a6c503d790b5ce834ca6255426c9501df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c503d790b5ce834ca6255426c9501df">&#9670;&#160;</a></span>SetInt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -225,25 +246,17 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">ret_t TStyleMutable::SetInt </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>state</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -260,8 +273,8 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="ab15af41a982dfc25e853ae2756a8828f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab15af41a982dfc25e853ae2756a8828f">&#9670;&nbsp;</a></span>SetName()</h2>
+<a id="ab15af41a982dfc25e853ae2756a8828f" name="ab15af41a982dfc25e853ae2756a8828f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab15af41a982dfc25e853ae2756a8828f">&#9670;&#160;</a></span>SetName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -269,8 +282,7 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">ret_t TStyleMutable::SetName </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -288,12 +300,13 @@ style_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
-<li>output/awtk_cpp.cpp</li>
+<li>output/<b>awtk_cpp.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

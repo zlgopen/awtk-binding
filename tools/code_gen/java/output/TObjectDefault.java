@@ -93,9 +93,22 @@ public class TObjectDefault extends TObject {
    return TRet.from(object_default_set_keep_prop_type(this != null ? (this.nativeObj) : 0, keep_prop_type));
  }
 
+
+  /**
+   * 设置属性名是否大小写不敏感。
+   * 
+   * @param name_case_insensitive 属性名是否大小写不敏感。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setNameCaseInsensitive(boolean name_case_insensitive)  {
+   return TRet.from(object_default_set_name_case_insensitive(this != null ? (this.nativeObj) : 0, name_case_insensitive));
+ }
+
 static private native long object_default_create();
 static private native long object_default_create_ex(boolean enable_path);
 static private native int object_default_unref(long obj);
 static private native int object_default_clear_props(long obj);
 static private native int object_default_set_keep_prop_type(long obj, boolean keep_prop_type);
+static private native int object_default_set_name_case_insensitive(long obj, boolean name_case_insensitive);
 };

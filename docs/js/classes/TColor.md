@@ -1,68 +1,54 @@
-[AWTK](../README.md) / [Exports](../modules.md) / TColor
+[**AWTK**](../README.md) • **Docs**
+
+***
+
+[AWTK](../globals.md) / TColor
 
 # Class: TColor
 
 颜色。
 
-## Table of contents
-
-### Constructors
-
-- [constructor](TColor.md#constructor)
-
-### Properties
-
-- [nativeObj](TColor.md#nativeobj)
-
-### Accessors
-
-- [color](TColor.md#color)
-
-### Methods
-
-- [a](TColor.md#a)
-- [b](TColor.md#b)
-- [destroy](TColor.md#destroy)
-- [fromStr](TColor.md#fromstr)
-- [g](TColor.md#g)
-- [getColor](TColor.md#getcolor)
-- [r](TColor.md#r)
-- [cast](TColor.md#cast)
-- [create](TColor.md#create)
-
 ## Constructors
 
-### constructor
+### new TColor()
 
-• **new TColor**(`nativeObj`)
+> **new TColor**(`nativeObj`): [`TColor`](TColor.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `nativeObj` | `any` |
+• **nativeObj**: `any`
+
+#### Returns
+
+[`TColor`](TColor.md)
 
 #### Defined in
 
-[awtk.ts:12661](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12661)
+[awtk.ts:13152](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13152)
 
 ## Properties
 
 ### nativeObj
 
-• **nativeObj**: `any`
+> **nativeObj**: `any`
 
 #### Defined in
 
-[awtk.ts:12660](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12660)
+[awtk.ts:13151](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13151)
 
 ## Accessors
 
 ### color
 
-• `get` **color**(): `number`
+> `get` **color**(): `number`
 
 颜色的数值。
+
+> `set` **color**(`v`): `void`
+
+#### Parameters
+
+• **v**: `number`
 
 #### Returns
 
@@ -70,29 +56,13 @@
 
 #### Defined in
 
-[awtk.ts:12792](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12792)
-
-• `set` **color**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `number` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[awtk.ts:12796](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12796)
+[awtk.ts:13283](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13283)
 
 ## Methods
 
-### a
+### a()
 
-▸ **a**(): `number`
+> **a**(): `number`
 
 获取alpha通道的值。
 
@@ -106,13 +76,13 @@
 
 #### Defined in
 
-[awtk.ts:12744](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12744)
+[awtk.ts:13235](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13235)
 
-___
+***
 
-### b
+### b()
 
-▸ **b**(): `number`
+> **b**(): `number`
 
 获取蓝色通道的值。
 
@@ -126,32 +96,32 @@ ___
 
 #### Defined in
 
-[awtk.ts:12731](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12731)
+[awtk.ts:13222](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13222)
 
-___
+***
 
-### destroy
+### destroy()
 
-▸ **destroy**(): [`TRet`](../enums/TRet.md)
+> **destroy**(): [`TRet`](../enumerations/TRet.md)
 
 销毁color对象。
 > 主要供脚本语言使用。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:12783](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12783)
+[awtk.ts:13274](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13274)
 
-___
+***
 
-### fromStr
+### fromStr()
 
-▸ **fromStr**(`str`): [`TColor`](TColor.md)
+> **fromStr**(`str`): [`TColor`](TColor.md)
 
 创建color对象。
 
@@ -159,9 +129,9 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `str` | `string` | css类似的颜色值。 |
+• **str**: `string`
+
+css类似的颜色值。
 
 #### Returns
 
@@ -171,13 +141,13 @@ color对象。
 
 #### Defined in
 
-[awtk.ts:12692](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12692)
+[awtk.ts:13183](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13183)
 
-___
+***
 
-### g
+### g()
 
-▸ **g**(): `number`
+> **g**(): `number`
 
 获取绿色通道的值。
 
@@ -191,13 +161,13 @@ ___
 
 #### Defined in
 
-[awtk.ts:12718](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12718)
+[awtk.ts:13209](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13209)
 
-___
+***
 
-### getColor
+### getColor()
 
-▸ **getColor**(): `number`
+> **getColor**(): `number`
 
 获取颜色值。
 
@@ -211,13 +181,13 @@ ___
 
 #### Defined in
 
-[awtk.ts:12757](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12757)
+[awtk.ts:13248](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13248)
 
-___
+***
 
-### r
+### r()
 
-▸ **r**(): `number`
+> **r**(): `number`
 
 获取红色通道的值。
 
@@ -231,13 +201,13 @@ ___
 
 #### Defined in
 
-[awtk.ts:12705](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12705)
+[awtk.ts:13196](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13196)
 
-___
+***
 
-### cast
+### cast()
 
-▸ `Static` **cast**(`color`): [`TColor`](TColor.md)
+> `static` **cast**(`color`): [`TColor`](TColor.md)
 
 转换为color对象。
 
@@ -245,9 +215,9 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `color` | [`TColor`](TColor.md) | color对象。 |
+• **color**: [`TColor`](TColor.md)
+
+color对象。
 
 #### Returns
 
@@ -257,13 +227,13 @@ color对象。
 
 #### Defined in
 
-[awtk.ts:12771](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12771)
+[awtk.ts:13262](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13262)
 
-___
+***
 
-### create
+### create()
 
-▸ `Static` **create**(`r`, `b`, `g`, `a`): [`TColor`](TColor.md)
+> `static` **create**(`r`, `g`, `b`, `a`): [`TColor`](TColor.md)
 
 创建color对象。
 
@@ -271,12 +241,21 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `r` | `number` | 红色通道。 |
-| `b` | `number` | 蓝色通道。 |
-| `g` | `number` | 绿色通道。 |
-| `a` | `number` | alpha通道。 |
+• **r**: `number`
+
+红色通道。
+
+• **g**: `number`
+
+绿色通道。
+
+• **b**: `number`
+
+蓝色通道。
+
+• **a**: `number`
+
+alpha通道。
 
 #### Returns
 
@@ -286,4 +265,4 @@ color对象。
 
 #### Defined in
 
-[awtk.ts:12678](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L12678)
+[awtk.ts:13169](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13169)

@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TColor类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-JAVA
    </div>
    <div id="projectbrief">AWTK JAVA API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,9 +70,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,55 +87,55 @@ $(function() {
 <li class="navelem"><b>awtk</b></li><li class="navelem"><a class="el" href="classawtk_1_1_t_color.html">TColor</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="classawtk_1_1_t_color-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">awtk.TColor类 参考</div>  </div>
+  <div class="headertitle"><div class="title">awtk.TColor类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a02e80f6ecd5e0d0a00186951c3d58e62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_color.html#a02e80f6ecd5e0d0a00186951c3d58e62">TColor</a> (long <a class="el" href="classawtk_1_1_t_color.html#aeb5ecb206652e441bfc32ae0e8811ee4">nativeObj</a>)</td></tr>
+<tr class="memitem:a02e80f6ecd5e0d0a00186951c3d58e62" id="r_a02e80f6ecd5e0d0a00186951c3d58e62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02e80f6ecd5e0d0a00186951c3d58e62">TColor</a> (long <a class="el" href="#aeb5ecb206652e441bfc32ae0e8811ee4">nativeObj</a>)</td></tr>
 <tr class="separator:a02e80f6ecd5e0d0a00186951c3d58e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a020d129936905623b38ba0b8a2365e38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_color.html">TColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_color.html#a020d129936905623b38ba0b8a2365e38">fromStr</a> (String str)</td></tr>
+<tr class="memitem:a020d129936905623b38ba0b8a2365e38" id="r_a020d129936905623b38ba0b8a2365e38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_color.html">TColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a020d129936905623b38ba0b8a2365e38">fromStr</a> (String str)</td></tr>
 <tr class="separator:a020d129936905623b38ba0b8a2365e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaabe897c0e7697d470ea821d3f0ef6da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_color.html#aaabe897c0e7697d470ea821d3f0ef6da">r</a> ()</td></tr>
+<tr class="memitem:aaabe897c0e7697d470ea821d3f0ef6da" id="r_aaabe897c0e7697d470ea821d3f0ef6da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaabe897c0e7697d470ea821d3f0ef6da">r</a> ()</td></tr>
 <tr class="separator:aaabe897c0e7697d470ea821d3f0ef6da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65cad96b33eadc185dc96388c7b57d1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_color.html#a65cad96b33eadc185dc96388c7b57d1a">g</a> ()</td></tr>
+<tr class="memitem:a65cad96b33eadc185dc96388c7b57d1a" id="r_a65cad96b33eadc185dc96388c7b57d1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65cad96b33eadc185dc96388c7b57d1a">g</a> ()</td></tr>
 <tr class="separator:a65cad96b33eadc185dc96388c7b57d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22560181329b43adced8bfc6c932ae02"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_color.html#a22560181329b43adced8bfc6c932ae02">b</a> ()</td></tr>
+<tr class="memitem:a22560181329b43adced8bfc6c932ae02" id="r_a22560181329b43adced8bfc6c932ae02"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22560181329b43adced8bfc6c932ae02">b</a> ()</td></tr>
 <tr class="separator:a22560181329b43adced8bfc6c932ae02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adedbd04494c37d9bc2db6f7782ba1c6e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_color.html#adedbd04494c37d9bc2db6f7782ba1c6e">a</a> ()</td></tr>
+<tr class="memitem:adedbd04494c37d9bc2db6f7782ba1c6e" id="r_adedbd04494c37d9bc2db6f7782ba1c6e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adedbd04494c37d9bc2db6f7782ba1c6e">a</a> ()</td></tr>
 <tr class="separator:adedbd04494c37d9bc2db6f7782ba1c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad96cd2c26bb4f4a3d1f0f29b3a5f0bed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_color.html#ad96cd2c26bb4f4a3d1f0f29b3a5f0bed">getColor</a> ()</td></tr>
+<tr class="memitem:ad96cd2c26bb4f4a3d1f0f29b3a5f0bed" id="r_ad96cd2c26bb4f4a3d1f0f29b3a5f0bed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad96cd2c26bb4f4a3d1f0f29b3a5f0bed">getColor</a> ()</td></tr>
 <tr class="separator:ad96cd2c26bb4f4a3d1f0f29b3a5f0bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27232e7f0792760f62ab997edfa84243"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_color.html#a27232e7f0792760f62ab997edfa84243">destroy</a> ()</td></tr>
+<tr class="memitem:a27232e7f0792760f62ab997edfa84243" id="r_a27232e7f0792760f62ab997edfa84243"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27232e7f0792760f62ab997edfa84243">destroy</a> ()</td></tr>
 <tr class="separator:a27232e7f0792760f62ab997edfa84243"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a7bda493110fed38d045fd21085075c11"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_color.html">TColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_color.html#a7bda493110fed38d045fd21085075c11">cast</a> (long <a class="el" href="classawtk_1_1_t_color.html#aeb5ecb206652e441bfc32ae0e8811ee4">nativeObj</a>)</td></tr>
+<tr class="memitem:a7bda493110fed38d045fd21085075c11" id="r_a7bda493110fed38d045fd21085075c11"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_color.html">TColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bda493110fed38d045fd21085075c11">cast</a> (long <a class="el" href="#aeb5ecb206652e441bfc32ae0e8811ee4">nativeObj</a>)</td></tr>
 <tr class="separator:a7bda493110fed38d045fd21085075c11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff1888cbac64418e770647ce3cc55741"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_color.html">TColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_color.html#aff1888cbac64418e770647ce3cc55741">create</a> (int <a class="el" href="classawtk_1_1_t_color.html#aaabe897c0e7697d470ea821d3f0ef6da">r</a>, int <a class="el" href="classawtk_1_1_t_color.html#a65cad96b33eadc185dc96388c7b57d1a">g</a>, int <a class="el" href="classawtk_1_1_t_color.html#a22560181329b43adced8bfc6c932ae02">b</a>, int <a class="el" href="classawtk_1_1_t_color.html#adedbd04494c37d9bc2db6f7782ba1c6e">a</a>)</td></tr>
+<tr class="memitem:aff1888cbac64418e770647ce3cc55741" id="r_aff1888cbac64418e770647ce3cc55741"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_color.html">TColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff1888cbac64418e770647ce3cc55741">create</a> (int <a class="el" href="#aaabe897c0e7697d470ea821d3f0ef6da">r</a>, int <a class="el" href="#a65cad96b33eadc185dc96388c7b57d1a">g</a>, int <a class="el" href="#a22560181329b43adced8bfc6c932ae02">b</a>, int <a class="el" href="#adedbd04494c37d9bc2db6f7782ba1c6e">a</a>)</td></tr>
 <tr class="separator:aff1888cbac64418e770647ce3cc55741"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4305ac20fe22f7a66cd6fe1ff06daffa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_color.html">TColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_color.html#a4305ac20fe22f7a66cd6fe1ff06daffa">cast</a> (<a class="el" href="classawtk_1_1_t_color.html">TColor</a> color)</td></tr>
+<tr class="memitem:a4305ac20fe22f7a66cd6fe1ff06daffa" id="r_a4305ac20fe22f7a66cd6fe1ff06daffa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_color.html">TColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4305ac20fe22f7a66cd6fe1ff06daffa">cast</a> (<a class="el" href="classawtk_1_1_t_color.html">TColor</a> color)</td></tr>
 <tr class="separator:a4305ac20fe22f7a66cd6fe1ff06daffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:aeb5ecb206652e441bfc32ae0e8811ee4"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_color.html#aeb5ecb206652e441bfc32ae0e8811ee4">nativeObj</a></td></tr>
+<tr class="memitem:aeb5ecb206652e441bfc32ae0e8811ee4" id="r_aeb5ecb206652e441bfc32ae0e8811ee4"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb5ecb206652e441bfc32ae0e8811ee4">nativeObj</a></td></tr>
 <tr class="separator:aeb5ecb206652e441bfc32ae0e8811ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>颜色。 </p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
-<a id="a02e80f6ecd5e0d0a00186951c3d58e62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02e80f6ecd5e0d0a00186951c3d58e62">&#9670;&nbsp;</a></span>TColor()</h2>
+<a id="a02e80f6ecd5e0d0a00186951c3d58e62" name="a02e80f6ecd5e0d0a00186951c3d58e62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02e80f6ecd5e0d0a00186951c3d58e62">&#9670;&#160;</a></span>TColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -124,8 +146,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">awtk.TColor.TColor </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>nativeObj</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>nativeObj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -147,8 +168,8 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a id="adedbd04494c37d9bc2db6f7782ba1c6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adedbd04494c37d9bc2db6f7782ba1c6e">&#9670;&nbsp;</a></span>a()</h2>
+<a id="adedbd04494c37d9bc2db6f7782ba1c6e" name="adedbd04494c37d9bc2db6f7782ba1c6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adedbd04494c37d9bc2db6f7782ba1c6e">&#9670;&#160;</a></span>a()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -159,7 +180,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TColor.a </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -171,14 +192,14 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>获取alpha通道的值。</p>
 <blockquote class="doxtable">
-<p>主要供脚本语言使用。 </p>
+<p>&zwj;主要供脚本语言使用。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回alpha通道的值。 </dd></dl>
 
 </div>
 </div>
-<a id="a22560181329b43adced8bfc6c932ae02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22560181329b43adced8bfc6c932ae02">&#9670;&nbsp;</a></span>b()</h2>
+<a id="a22560181329b43adced8bfc6c932ae02" name="a22560181329b43adced8bfc6c932ae02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22560181329b43adced8bfc6c932ae02">&#9670;&#160;</a></span>b()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,7 +210,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TColor.b </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -201,14 +222,14 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>获取蓝色通道的值。</p>
 <blockquote class="doxtable">
-<p>主要供脚本语言使用。 </p>
+<p>&zwj;主要供脚本语言使用。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回蓝色通道的值。 </dd></dl>
 
 </div>
 </div>
-<a id="a7bda493110fed38d045fd21085075c11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7bda493110fed38d045fd21085075c11">&#9670;&nbsp;</a></span>cast() <span class="overload">[1/2]</span></h2>
+<a id="a7bda493110fed38d045fd21085075c11" name="a7bda493110fed38d045fd21085075c11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bda493110fed38d045fd21085075c11">&#9670;&#160;</a></span>cast() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,8 +240,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_color.html">TColor</a> awtk.TColor.cast </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>nativeObj</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>nativeObj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -241,8 +261,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a4305ac20fe22f7a66cd6fe1ff06daffa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4305ac20fe22f7a66cd6fe1ff06daffa">&#9670;&nbsp;</a></span>cast() <span class="overload">[2/2]</span></h2>
+<a id="a4305ac20fe22f7a66cd6fe1ff06daffa" name="a4305ac20fe22f7a66cd6fe1ff06daffa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4305ac20fe22f7a66cd6fe1ff06daffa">&#9670;&#160;</a></span>cast() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -253,8 +273,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_color.html">TColor</a> awtk.TColor.cast </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_color.html">TColor</a>&#160;</td>
-          <td class="paramname"><em>color</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_color.html">TColor</a></td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -266,7 +285,7 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>转换为color对象。</p>
 <blockquote class="doxtable">
-<p>供脚本语言使用。 </p>
+<p>&zwj;供脚本语言使用。 </p>
 </blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -278,8 +297,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aff1888cbac64418e770647ce3cc55741"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff1888cbac64418e770647ce3cc55741">&#9670;&nbsp;</a></span>create()</h2>
+<a id="aff1888cbac64418e770647ce3cc55741" name="aff1888cbac64418e770647ce3cc55741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff1888cbac64418e770647ce3cc55741">&#9670;&#160;</a></span>create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,31 +309,22 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_color.html">TColor</a> awtk.TColor.create </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>r</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>g</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>a</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>a</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -325,7 +335,7 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>创建color对象。</p>
 <blockquote class="doxtable">
-<p>主要供脚本语言使用。 </p>
+<p>&zwj;主要供脚本语言使用。 </p>
 </blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -340,8 +350,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a27232e7f0792760f62ab997edfa84243"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27232e7f0792760f62ab997edfa84243">&#9670;&nbsp;</a></span>destroy()</h2>
+<a id="a27232e7f0792760f62ab997edfa84243" name="a27232e7f0792760f62ab997edfa84243"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27232e7f0792760f62ab997edfa84243">&#9670;&#160;</a></span>destroy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -352,7 +362,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TColor.destroy </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -363,14 +373,14 @@ Public 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>销毁color对象。 </p><blockquote class="doxtable">
-<p>主要供脚本语言使用。 </p>
+<p>&zwj;主要供脚本语言使用。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>
-<a id="a020d129936905623b38ba0b8a2365e38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a020d129936905623b38ba0b8a2365e38">&#9670;&nbsp;</a></span>fromStr()</h2>
+<a id="a020d129936905623b38ba0b8a2365e38" name="a020d129936905623b38ba0b8a2365e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a020d129936905623b38ba0b8a2365e38">&#9670;&#160;</a></span>fromStr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -381,8 +391,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classawtk_1_1_t_color.html">TColor</a> awtk.TColor.fromStr </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -394,7 +403,7 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>创建color对象。</p>
 <blockquote class="doxtable">
-<p>主要供脚本语言使用。 </p>
+<p>&zwj;主要供脚本语言使用。 </p>
 </blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -406,8 +415,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a65cad96b33eadc185dc96388c7b57d1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65cad96b33eadc185dc96388c7b57d1a">&#9670;&nbsp;</a></span>g()</h2>
+<a id="a65cad96b33eadc185dc96388c7b57d1a" name="a65cad96b33eadc185dc96388c7b57d1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65cad96b33eadc185dc96388c7b57d1a">&#9670;&#160;</a></span>g()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -418,7 +427,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TColor.g </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -430,14 +439,14 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>获取绿色通道的值。</p>
 <blockquote class="doxtable">
-<p>主要供脚本语言使用。 </p>
+<p>&zwj;主要供脚本语言使用。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回绿色通道的值。 </dd></dl>
 
 </div>
 </div>
-<a id="ad96cd2c26bb4f4a3d1f0f29b3a5f0bed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad96cd2c26bb4f4a3d1f0f29b3a5f0bed">&#9670;&nbsp;</a></span>getColor()</h2>
+<a id="ad96cd2c26bb4f4a3d1f0f29b3a5f0bed" name="ad96cd2c26bb4f4a3d1f0f29b3a5f0bed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad96cd2c26bb4f4a3d1f0f29b3a5f0bed">&#9670;&#160;</a></span>getColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -448,7 +457,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TColor.getColor </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -460,14 +469,14 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>获取颜色值。</p>
 <blockquote class="doxtable">
-<p>主要供脚本语言使用。 </p>
+<p>&zwj;主要供脚本语言使用。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回颜色值。 </dd></dl>
 
 </div>
 </div>
-<a id="aaabe897c0e7697d470ea821d3f0ef6da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaabe897c0e7697d470ea821d3f0ef6da">&#9670;&nbsp;</a></span>r()</h2>
+<a id="aaabe897c0e7697d470ea821d3f0ef6da" name="aaabe897c0e7697d470ea821d3f0ef6da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaabe897c0e7697d470ea821d3f0ef6da">&#9670;&#160;</a></span>r()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -478,7 +487,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TColor.r </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -490,15 +499,15 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>获取红色通道的值。</p>
 <blockquote class="doxtable">
-<p>主要供脚本语言使用。 </p>
+<p>&zwj;主要供脚本语言使用。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回红色通道的值。 </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">类成员变量说明</h2>
-<a id="aeb5ecb206652e441bfc32ae0e8811ee4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb5ecb206652e441bfc32ae0e8811ee4">&#9670;&nbsp;</a></span>nativeObj</h2>
+<a id="aeb5ecb206652e441bfc32ae0e8811ee4" name="aeb5ecb206652e441bfc32ae0e8811ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb5ecb206652e441bfc32ae0e8811ee4">&#9670;&#160;</a></span>nativeObj</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -513,12 +522,13 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>output/TColor.java</li>
+<li>output/<b>TColor.java</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

@@ -1,4 +1,8 @@
-[AWTK](../README.md) / [Exports](../modules.md) / TInputMethod
+[**AWTK**](../README.md) • **Docs**
+
+***
+
+[AWTK](../globals.md) / TInputMethod
 
 # Class: TInputMethod
 
@@ -14,185 +18,165 @@
 
 > 输入类型请参考：[input\_type](input_type_t.md)
 
-## Table of contents
-
-### Constructors
-
-- [constructor](TInputMethod.md#constructor)
-
-### Properties
-
-- [nativeObj](TInputMethod.md#nativeobj)
-
-### Methods
-
-- [commitText](TInputMethod.md#committext)
-- [dispatchKey](TInputMethod.md#dispatchkey)
-- [dispatchKeys](TInputMethod.md#dispatchkeys)
-- [dispatchPreedit](TInputMethod.md#dispatchpreedit)
-- [dispatchPreeditAbort](TInputMethod.md#dispatchpreeditabort)
-- [dispatchPreeditConfirm](TInputMethod.md#dispatchpreeditconfirm)
-- [getLang](TInputMethod.md#getlang)
-- [setLang](TInputMethod.md#setlang)
-- [instance](TInputMethod.md#instance)
-
 ## Constructors
 
-### constructor
+### new TInputMethod()
 
-• **new TInputMethod**(`nativeObj`)
+> **new TInputMethod**(`nativeObj`): [`TInputMethod`](TInputMethod.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `nativeObj` | `any` |
+• **nativeObj**: `any`
+
+#### Returns
+
+[`TInputMethod`](TInputMethod.md)
 
 #### Defined in
 
-[awtk.ts:5864](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5864)
+[awtk.ts:6047](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L6047)
 
 ## Properties
 
 ### nativeObj
 
-• **nativeObj**: `any`
+> **nativeObj**: `any`
 
 #### Defined in
 
-[awtk.ts:5863](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5863)
+[awtk.ts:6046](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L6046)
 
 ## Methods
 
-### commitText
+### commitText()
 
-▸ **commitText**(`text`): [`TRet`](../enums/TRet.md)
+> **commitText**(`text`): [`TRet`](../enumerations/TRet.md)
 
 提交输入文本。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | 文本。 |
+• **text**: `string`
+
+文本。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:5876](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5876)
+[awtk.ts:6059](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L6059)
 
-___
+***
 
-### dispatchKey
+### dispatchKey()
 
-▸ **dispatchKey**(`key`): [`TRet`](../enums/TRet.md)
+> **dispatchKey**(`key`): [`TRet`](../enumerations/TRet.md)
 
 提交按键。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `key` | `number` | 键值。 |
+• **key**: `number`
+
+键值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:5916](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5916)
+[awtk.ts:6099](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L6099)
 
-___
+***
 
-### dispatchKeys
+### dispatchKeys()
 
-▸ **dispatchKeys**(`key`): [`TRet`](../enums/TRet.md)
+> **dispatchKeys**(`keys`): [`TRet`](../enumerations/TRet.md)
 
 提交按键。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `key` | `string` | 键值。 |
+• **keys**: `string`
+
+键值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:5928](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5928)
+[awtk.ts:6111](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L6111)
 
-___
+***
 
-### dispatchPreedit
+### dispatchPreedit()
 
-▸ **dispatchPreedit**(): [`TRet`](../enums/TRet.md)
+> **dispatchPreedit**(): [`TRet`](../enumerations/TRet.md)
 
 分发进入预编辑状态的事件。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:5939](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5939)
+[awtk.ts:6122](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L6122)
 
-___
+***
 
-### dispatchPreeditAbort
+### dispatchPreeditAbort()
 
-▸ **dispatchPreeditAbort**(): [`TRet`](../enums/TRet.md)
+> **dispatchPreeditAbort**(): [`TRet`](../enumerations/TRet.md)
 
 分发取消预编辑状态的事件(提交预编辑内容，退出预编辑状态)。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:5961](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5961)
+[awtk.ts:6144](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L6144)
 
-___
+***
 
-### dispatchPreeditConfirm
+### dispatchPreeditConfirm()
 
-▸ **dispatchPreeditConfirm**(): [`TRet`](../enums/TRet.md)
+> **dispatchPreeditConfirm**(): [`TRet`](../enumerations/TRet.md)
 
 分发确认预编辑状态的事件(提交预编辑内容，退出预编辑状态)。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:5950](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5950)
+[awtk.ts:6133](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L6133)
 
-___
+***
 
-### getLang
+### getLang()
 
-▸ **getLang**(): `string`
+> **getLang**(): `string`
 
 获取语言。
 
@@ -204,13 +188,13 @@ ___
 
 #### Defined in
 
-[awtk.ts:5904](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5904)
+[awtk.ts:6087](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L6087)
 
-___
+***
 
-### setLang
+### setLang()
 
-▸ **setLang**(`lang`): [`TRet`](../enums/TRet.md)
+> **setLang**(`lang`): [`TRet`](../enumerations/TRet.md)
 
 设置语言。
 
@@ -221,25 +205,25 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `lang` | `string` | 语言。格式为语言+国家/地区码。如：zh_cn和en_us等。 |
+• **lang**: `string`
+
+语言。格式为语言+国家/地区码。如：zh_cn和en_us等。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:5893](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5893)
+[awtk.ts:6076](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L6076)
 
-___
+***
 
-### instance
+### instance()
 
-▸ `Static` **instance**(): [`TInputMethod`](TInputMethod.md)
+> `static` **instance**(): [`TInputMethod`](TInputMethod.md)
 
 获取全局输入法对象。
 
@@ -251,4 +235,4 @@ ___
 
 #### Defined in
 
-[awtk.ts:5972](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L5972)
+[awtk.ts:6155](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L6155)

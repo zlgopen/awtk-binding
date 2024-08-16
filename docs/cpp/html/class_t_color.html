@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TColor类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,72 +70,79 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="class_t_color-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">TColor类 参考</div>  </div>
+  <div class="headertitle"><div class="title">TColor类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:ac5fffc6c7146ad1ca1152832be51acf1"><td class="memItemLeft" align="right" valign="top"><a id="ac5fffc6c7146ad1ca1152832be51acf1"></a>
+<tr class="memitem:ac5fffc6c7146ad1ca1152832be51acf1" id="r_ac5fffc6c7146ad1ca1152832be51acf1"><td class="memItemLeft" align="right" valign="top"><a id="ac5fffc6c7146ad1ca1152832be51acf1" name="ac5fffc6c7146ad1ca1152832be51acf1"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TColor</b> (color_t *nativeObj)</td></tr>
 <tr class="separator:ac5fffc6c7146ad1ca1152832be51acf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe32dea0394c1e70ab9d256508ab350a"><td class="memItemLeft" align="right" valign="top"><a id="afe32dea0394c1e70ab9d256508ab350a"></a>
+<tr class="memitem:afe32dea0394c1e70ab9d256508ab350a" id="r_afe32dea0394c1e70ab9d256508ab350a"><td class="memItemLeft" align="right" valign="top"><a id="afe32dea0394c1e70ab9d256508ab350a" name="afe32dea0394c1e70ab9d256508ab350a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TColor</b> (const color_t *nativeObj)</td></tr>
 <tr class="separator:afe32dea0394c1e70ab9d256508ab350a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3a8c4dbabe791570d46009fa7200cac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_color.html">TColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_color.html#ad3a8c4dbabe791570d46009fa7200cac">FromStr</a> (const char *str)</td></tr>
+<tr class="memitem:ad3a8c4dbabe791570d46009fa7200cac" id="r_ad3a8c4dbabe791570d46009fa7200cac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_color.html">TColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3a8c4dbabe791570d46009fa7200cac">FromStr</a> (const char *str)</td></tr>
 <tr class="separator:ad3a8c4dbabe791570d46009fa7200cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8104e48b26a70e7805af11bedb69d9d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_color.html#ad8104e48b26a70e7805af11bedb69d9d">R</a> ()</td></tr>
+<tr class="memitem:ad8104e48b26a70e7805af11bedb69d9d" id="r_ad8104e48b26a70e7805af11bedb69d9d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8104e48b26a70e7805af11bedb69d9d">R</a> ()</td></tr>
 <tr class="separator:ad8104e48b26a70e7805af11bedb69d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75df9503f2cb7d8717ea806c6b46db41"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_color.html#a75df9503f2cb7d8717ea806c6b46db41">G</a> ()</td></tr>
+<tr class="memitem:a75df9503f2cb7d8717ea806c6b46db41" id="r_a75df9503f2cb7d8717ea806c6b46db41"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75df9503f2cb7d8717ea806c6b46db41">G</a> ()</td></tr>
 <tr class="separator:a75df9503f2cb7d8717ea806c6b46db41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1543abd97237855d94fba67723abcedd"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_color.html#a1543abd97237855d94fba67723abcedd">B</a> ()</td></tr>
+<tr class="memitem:a1543abd97237855d94fba67723abcedd" id="r_a1543abd97237855d94fba67723abcedd"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1543abd97237855d94fba67723abcedd">B</a> ()</td></tr>
 <tr class="separator:a1543abd97237855d94fba67723abcedd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59591521013dc2caa7ec2993e4c28247"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_color.html#a59591521013dc2caa7ec2993e4c28247">A</a> ()</td></tr>
+<tr class="memitem:a59591521013dc2caa7ec2993e4c28247" id="r_a59591521013dc2caa7ec2993e4c28247"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59591521013dc2caa7ec2993e4c28247">A</a> ()</td></tr>
 <tr class="separator:a59591521013dc2caa7ec2993e4c28247"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f0d7c70aec61ebbbd41437637082886"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_color.html#a3f0d7c70aec61ebbbd41437637082886">GetColor</a> ()</td></tr>
+<tr class="memitem:a3f0d7c70aec61ebbbd41437637082886" id="r_a3f0d7c70aec61ebbbd41437637082886"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f0d7c70aec61ebbbd41437637082886">GetColor</a> ()</td></tr>
 <tr class="separator:a3f0d7c70aec61ebbbd41437637082886"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c78a9c3d7a14b19af0485054eaa1f58"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_color.html#a6c78a9c3d7a14b19af0485054eaa1f58">Destroy</a> ()</td></tr>
+<tr class="memitem:a6c78a9c3d7a14b19af0485054eaa1f58" id="r_a6c78a9c3d7a14b19af0485054eaa1f58"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c78a9c3d7a14b19af0485054eaa1f58">Destroy</a> ()</td></tr>
 <tr class="separator:a6c78a9c3d7a14b19af0485054eaa1f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3df039b0af0aebffd74520cad34d82be"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_color.html#a3df039b0af0aebffd74520cad34d82be">GetColor</a> () const</td></tr>
+<tr class="memitem:a3df039b0af0aebffd74520cad34d82be" id="r_a3df039b0af0aebffd74520cad34d82be"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3df039b0af0aebffd74520cad34d82be">GetColor</a> () const</td></tr>
 <tr class="separator:a3df039b0af0aebffd74520cad34d82be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a6c04b6a2e72cfdbe0a0edab46d7ef080"><td class="memItemLeft" align="right" valign="top"><a id="a6c04b6a2e72cfdbe0a0edab46d7ef080"></a>
+<tr class="memitem:a6c04b6a2e72cfdbe0a0edab46d7ef080" id="r_a6c04b6a2e72cfdbe0a0edab46d7ef080"><td class="memItemLeft" align="right" valign="top"><a id="a6c04b6a2e72cfdbe0a0edab46d7ef080" name="a6c04b6a2e72cfdbe0a0edab46d7ef080"></a>
 static <a class="el" href="class_t_color.html">TColor</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (color_t *nativeObj)</td></tr>
 <tr class="separator:a6c04b6a2e72cfdbe0a0edab46d7ef080"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7533b23ca5cebf485793c319753d7655"><td class="memItemLeft" align="right" valign="top"><a id="a7533b23ca5cebf485793c319753d7655"></a>
+<tr class="memitem:a7533b23ca5cebf485793c319753d7655" id="r_a7533b23ca5cebf485793c319753d7655"><td class="memItemLeft" align="right" valign="top"><a id="a7533b23ca5cebf485793c319753d7655" name="a7533b23ca5cebf485793c319753d7655"></a>
 static <a class="el" href="class_t_color.html">TColor</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const color_t *nativeObj)</td></tr>
 <tr class="separator:a7533b23ca5cebf485793c319753d7655"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ea7a18ce3ed9757b1ea9a86432805cc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_color.html">TColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_color.html#a6ea7a18ce3ed9757b1ea9a86432805cc">Create</a> (uint8_t r, uint8_t g, uint8_t b, uint8_t a)</td></tr>
+<tr class="memitem:a6ea7a18ce3ed9757b1ea9a86432805cc" id="r_a6ea7a18ce3ed9757b1ea9a86432805cc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_color.html">TColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ea7a18ce3ed9757b1ea9a86432805cc">Create</a> (uint8_t r, uint8_t g, uint8_t b, uint8_t a)</td></tr>
 <tr class="separator:a6ea7a18ce3ed9757b1ea9a86432805cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:a5ec1633bea7e79bb77908e70410d049c"><td class="memItemLeft" align="right" valign="top"><a id="a5ec1633bea7e79bb77908e70410d049c"></a>
+<tr class="memitem:a5ec1633bea7e79bb77908e70410d049c" id="r_a5ec1633bea7e79bb77908e70410d049c"><td class="memItemLeft" align="right" valign="top"><a id="a5ec1633bea7e79bb77908e70410d049c" name="a5ec1633bea7e79bb77908e70410d049c"></a>
 color_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td></tr>
 <tr class="separator:a5ec1633bea7e79bb77908e70410d049c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>颜色。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a59591521013dc2caa7ec2993e4c28247"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59591521013dc2caa7ec2993e4c28247">&#9670;&nbsp;</a></span>A()</h2>
+<a id="a59591521013dc2caa7ec2993e4c28247" name="a59591521013dc2caa7ec2993e4c28247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59591521013dc2caa7ec2993e4c28247">&#9670;&#160;</a></span>A()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,21 +150,21 @@ color_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">uint8_t TColor::A </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>获取alpha通道的值。</p>
 <blockquote class="doxtable">
-<p>主要供脚本语言使用。 </p>
+<p>&zwj;主要供脚本语言使用。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回alpha通道的值。 </dd></dl>
 
 </div>
 </div>
-<a id="a1543abd97237855d94fba67723abcedd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1543abd97237855d94fba67723abcedd">&#9670;&nbsp;</a></span>B()</h2>
+<a id="a1543abd97237855d94fba67723abcedd" name="a1543abd97237855d94fba67723abcedd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1543abd97237855d94fba67723abcedd">&#9670;&#160;</a></span>B()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -150,21 +172,21 @@ color_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">uint8_t TColor::B </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>获取蓝色通道的值。</p>
 <blockquote class="doxtable">
-<p>主要供脚本语言使用。 </p>
+<p>&zwj;主要供脚本语言使用。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回蓝色通道的值。 </dd></dl>
 
 </div>
 </div>
-<a id="a6ea7a18ce3ed9757b1ea9a86432805cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ea7a18ce3ed9757b1ea9a86432805cc">&#9670;&nbsp;</a></span>Create()</h2>
+<a id="a6ea7a18ce3ed9757b1ea9a86432805cc" name="a6ea7a18ce3ed9757b1ea9a86432805cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ea7a18ce3ed9757b1ea9a86432805cc">&#9670;&#160;</a></span>Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,31 +197,22 @@ color_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_color.html">TColor</a> TColor::Create </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>r</em>, </td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>g</em>, </td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>a</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>a</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -210,7 +223,7 @@ color_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 </div><div class="memdoc">
 <p>创建color对象。</p>
 <blockquote class="doxtable">
-<p>主要供脚本语言使用。 </p>
+<p>&zwj;主要供脚本语言使用。 </p>
 </blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -225,8 +238,8 @@ color_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a6c78a9c3d7a14b19af0485054eaa1f58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c78a9c3d7a14b19af0485054eaa1f58">&#9670;&nbsp;</a></span>Destroy()</h2>
+<a id="a6c78a9c3d7a14b19af0485054eaa1f58" name="a6c78a9c3d7a14b19af0485054eaa1f58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c78a9c3d7a14b19af0485054eaa1f58">&#9670;&#160;</a></span>Destroy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,20 +247,20 @@ color_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">ret_t TColor::Destroy </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>销毁color对象。 </p><blockquote class="doxtable">
-<p>主要供脚本语言使用。 </p>
+<p>&zwj;主要供脚本语言使用。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>
-<a id="ad3a8c4dbabe791570d46009fa7200cac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3a8c4dbabe791570d46009fa7200cac">&#9670;&nbsp;</a></span>FromStr()</h2>
+<a id="ad3a8c4dbabe791570d46009fa7200cac" name="ad3a8c4dbabe791570d46009fa7200cac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3a8c4dbabe791570d46009fa7200cac">&#9670;&#160;</a></span>FromStr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -255,15 +268,14 @@ color_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname"><a class="el" href="class_t_color.html">TColor</a> TColor::FromStr </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>创建color对象。</p>
 <blockquote class="doxtable">
-<p>主要供脚本语言使用。 </p>
+<p>&zwj;主要供脚本语言使用。 </p>
 </blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -275,8 +287,8 @@ color_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="a75df9503f2cb7d8717ea806c6b46db41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75df9503f2cb7d8717ea806c6b46db41">&#9670;&nbsp;</a></span>G()</h2>
+<a id="a75df9503f2cb7d8717ea806c6b46db41" name="a75df9503f2cb7d8717ea806c6b46db41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75df9503f2cb7d8717ea806c6b46db41">&#9670;&#160;</a></span>G()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -284,21 +296,21 @@ color_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">uint8_t TColor::G </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>获取绿色通道的值。</p>
 <blockquote class="doxtable">
-<p>主要供脚本语言使用。 </p>
+<p>&zwj;主要供脚本语言使用。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回绿色通道的值。 </dd></dl>
 
 </div>
 </div>
-<a id="a3f0d7c70aec61ebbbd41437637082886"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f0d7c70aec61ebbbd41437637082886">&#9670;&nbsp;</a></span>GetColor() <span class="overload">[1/2]</span></h2>
+<a id="a3f0d7c70aec61ebbbd41437637082886" name="a3f0d7c70aec61ebbbd41437637082886"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f0d7c70aec61ebbbd41437637082886">&#9670;&#160;</a></span>GetColor() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -306,21 +318,21 @@ color_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">uint32_t TColor::GetColor </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>获取颜色值。</p>
 <blockquote class="doxtable">
-<p>主要供脚本语言使用。 </p>
+<p>&zwj;主要供脚本语言使用。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回颜色值。 </dd></dl>
 
 </div>
 </div>
-<a id="a3df039b0af0aebffd74520cad34d82be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3df039b0af0aebffd74520cad34d82be">&#9670;&nbsp;</a></span>GetColor() <span class="overload">[2/2]</span></h2>
+<a id="a3df039b0af0aebffd74520cad34d82be" name="a3df039b0af0aebffd74520cad34d82be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3df039b0af0aebffd74520cad34d82be">&#9670;&#160;</a></span>GetColor() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -328,7 +340,7 @@ color_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">uint32_t TColor::GetColor </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -337,8 +349,8 @@ color_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 
 </div>
 </div>
-<a id="ad8104e48b26a70e7805af11bedb69d9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8104e48b26a70e7805af11bedb69d9d">&#9670;&nbsp;</a></span>R()</h2>
+<a id="ad8104e48b26a70e7805af11bedb69d9d" name="ad8104e48b26a70e7805af11bedb69d9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8104e48b26a70e7805af11bedb69d9d">&#9670;&#160;</a></span>R()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -346,14 +358,14 @@ color_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
         <tr>
           <td class="memname">uint8_t TColor::R </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>获取红色通道的值。</p>
 <blockquote class="doxtable">
-<p>主要供脚本语言使用。 </p>
+<p>&zwj;主要供脚本语言使用。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回红色通道的值。 </dd></dl>
 
@@ -361,12 +373,13 @@ color_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
-<li>output/awtk_cpp.cpp</li>
+<li>output/<b>awtk_cpp.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

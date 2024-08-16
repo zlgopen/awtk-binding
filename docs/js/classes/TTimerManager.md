@@ -1,41 +1,37 @@
-[AWTK](../README.md) / [Exports](../modules.md) / TTimerManager
+[**AWTK**](../README.md) • **Docs**
+
+***
+
+[AWTK](../globals.md) / TTimerManager
 
 # Class: TTimerManager
 
 定时器管理器。
 
-## Table of contents
-
-### Constructors
-
-- [constructor](TTimerManager.md#constructor)
-
-### Properties
-
-- [nativeObj](TTimerManager.md#nativeobj)
-
 ## Constructors
 
-### constructor
+### new TTimerManager()
 
-• **new TTimerManager**(`nativeObj`)
+> **new TTimerManager**(`nativeObj`): [`TTimerManager`](TTimerManager.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `nativeObj` | `any` |
+• **nativeObj**: `any`
+
+#### Returns
+
+[`TTimerManager`](TTimerManager.md)
 
 #### Defined in
 
-[awtk.ts:14174](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L14174)
+[awtk.ts:14670](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L14670)
 
 ## Properties
 
 ### nativeObj
 
-• **nativeObj**: `any`
+> **nativeObj**: `any`
 
 #### Defined in
 
-[awtk.ts:14173](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L14173)
+[awtk.ts:14669](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L14669)

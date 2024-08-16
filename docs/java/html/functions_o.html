@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: 类成员</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-JAVA
    </div>
    <div id="projectbrief">AWTK JAVA API</div>
@@ -30,23 +34,35 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,100 +72,54 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="contents">
 <div class="textblock">这里列出了所有文档化的类成员，并附带类所属的文件:</div>
 
-<h3><a id="index_o"></a>- o -</h3><ul>
-<li>object()
-: <a class="el" href="classawtk_1_1_t_value.html#a1a6ca7a8d19057cf3d220d4e5d89e3d3">awtk.TValue</a>
-</li>
-<li>OBJECT
-: <a class="el" href="enumawtk_1_1_t_value_type.html#af6ed116362479e627c484585f2ef463e">awtk.TValueType</a>
-</li>
-<li>OBJECT_CHANGED
-: <a class="el" href="enumawtk_1_1_t_ret.html#a0e51ac8f73062ee2cd11a66bc164f5b7">awtk.TRet</a>
-</li>
-<li>ODD_BG_COLOR
-: <a class="el" href="enumawtk_1_1_t_style_id.html#a0c6251a4a7238b9dd6977d6371820a8c">awtk.TStyleId</a>
-</li>
-<li>off()
-: <a class="el" href="classawtk_1_1_t_emitter.html#a4515856b77cd3f885a2fd628e4801ab7">awtk.TEmitter</a>
-, <a class="el" href="classawtk_1_1_t_locale_info.html#a07f49ebed086ebef45978a49fba454df">awtk.TLocaleInfo</a>
-, <a class="el" href="classawtk_1_1_t_locale_infos.html#a9569d86688e4087bd640b8c802e688ab">awtk.TLocaleInfos</a>
-</li>
-<li>OK
-: <a class="el" href="enumawtk_1_1_t_dialog_quit_code.html#af1bf0c64e127abb5e51433e6709a7a78">awtk.TDialogQuitCode</a>
-, <a class="el" href="enumawtk_1_1_t_ret.html#a8879287e0403ac38149f07ae867fb8e8">awtk.TRet</a>
-</li>
-<li>on()
-: <a class="el" href="classawtk_1_1_t_emitter.html#a23c16a696dd21aaf3ecc8453b6941869">awtk.TEmitter</a>
-, <a class="el" href="classawtk_1_1_t_locale_infos.html#ae1c04052765df21c3b3082529fe636b5">awtk.TLocaleInfos</a>
-</li>
-<li>OOM
-: <a class="el" href="enumawtk_1_1_t_ret.html#a0581125698c1476b022c6bc473145733">awtk.TRet</a>
-</li>
-<li>OPACITY
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#a7f8b6d0eb7874685dd24c2f289ce9f59">awtk.TWidgetProp</a>
-</li>
-<li>OPAQUE
-: <a class="el" href="enumawtk_1_1_t_bitmap_flag.html#ade8e7baf7a9edb58f5818763a1dc783e">awtk.TBitmapFlag</a>
-</li>
-<li>open()
-: <a class="el" href="classawtk_1_1_t_dialog.html#adc8d72e861710f57909fa0802e54f594">awtk.TDialog</a>
-, <a class="el" href="classawtk_1_1_t_window.html#a082c5d34858d1a001240096bef949330">awtk.TWindow</a>
-</li>
-<li>OPEN_ANIM_HINT
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#ab4b59fe9fddde2d618a8aa2e0961a413">awtk.TWidgetProp</a>
-</li>
-<li>OPEN_IM_WHEN_FOCUSED
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#a33fb7cd99aca7b99a9200ebe5aed21b6">awtk.TWidgetProp</a>
-</li>
-<li>OPEN_WINDOW
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#a06508f21feba121efb187730166d8b8f">awtk.TWidgetProp</a>
-</li>
-<li>openAndClose()
-: <a class="el" href="classawtk_1_1_t_window.html#a98c3f5255005b63393c55320065370db">awtk.TWindow</a>
-</li>
-<li>OPENED
-: <a class="el" href="enumawtk_1_1_t_window_stage.html#aa19b8a5ab8372fae22d9781ae13cd8b4">awtk.TWindowStage</a>
-</li>
-<li>OPTIONS
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#a20f06546014e16d80d8d626a990a52e1">awtk.TWidgetProp</a>
-</li>
-<li>ORIENTATION_CHANGED
-: <a class="el" href="enumawtk_1_1_t_event_type.html#a8990ee59532786f9bf7f9cbb37f4d91e">awtk.TEventType</a>
-</li>
-<li>ORIENTATION_WILL_CHANGED
-: <a class="el" href="enumawtk_1_1_t_event_type.html#a47e1cbd9fb1d818baa2cda4000207b54">awtk.TEventType</a>
-</li>
-<li>OTHER
-: <a class="el" href="enumawtk_1_1_t_dialog_quit_code.html#ab690ddf810bb8c5f64ff3ac801a7700f">awtk.TDialogQuitCode</a>
-</li>
-<li>OUT_OF_MEMORY
-: <a class="el" href="enumawtk_1_1_t_event_type.html#a2878cd1ddd7bc12b755c76962b4d5428">awtk.TEventType</a>
-</li>
-<li>OVER
-: <a class="el" href="enumawtk_1_1_t_widget_state.html#a8c0cbfadf9f1c20a0671a89d8f33b35f">awtk.TWidgetState</a>
-</li>
-<li>OVER_OF_ACTIVE
-: <a class="el" href="enumawtk_1_1_t_widget_state.html#a04cc60e5d2a866b921d1c2ad5fd0f728">awtk.TWidgetState</a>
-</li>
-<li>OVER_OF_CHECKED
-: <a class="el" href="enumawtk_1_1_t_widget_state.html#ab432643f28592d89e34ae112a487be0f">awtk.TWidgetState</a>
-</li>
-<li>OVERLAY
-: <a class="el" href="enumawtk_1_1_t_widget_type.html#a3c79fe854b003616890436c5c28f07b0">awtk.TWidgetType</a>
-</li>
+<h3><a id="index_o" name="index_o"></a>- o -</h3><ul>
+<li>OBJECT&#160;:&#160;<a class="el" href="enumawtk_1_1_t_value_type.html#af6ed116362479e627c484585f2ef463e">awtk.TValueType</a></li>
+<li>object()&#160;:&#160;<a class="el" href="classawtk_1_1_t_value.html#a1a6ca7a8d19057cf3d220d4e5d89e3d3">awtk.TValue</a></li>
+<li>OBJECT_CHANGED&#160;:&#160;<a class="el" href="enumawtk_1_1_t_ret.html#a0e51ac8f73062ee2cd11a66bc164f5b7">awtk.TRet</a></li>
+<li>ODD_BG_COLOR&#160;:&#160;<a class="el" href="enumawtk_1_1_t_style_id.html#a0c6251a4a7238b9dd6977d6371820a8c">awtk.TStyleId</a></li>
+<li>off()&#160;:&#160;<a class="el" href="classawtk_1_1_t_emitter.html#a4515856b77cd3f885a2fd628e4801ab7">awtk.TEmitter</a>, <a class="el" href="classawtk_1_1_t_locale_info.html#a07f49ebed086ebef45978a49fba454df">awtk.TLocaleInfo</a>, <a class="el" href="classawtk_1_1_t_locale_infos.html#a9569d86688e4087bd640b8c802e688ab">awtk.TLocaleInfos</a>, <a class="el" href="classawtk_1_1_t_widget.html#acf6e180bd618f1637bb5120bfbcf27ca">awtk.TWidget</a></li>
+<li>OK&#160;:&#160;<a class="el" href="enumawtk_1_1_t_dialog_quit_code.html#af1bf0c64e127abb5e51433e6709a7a78">awtk.TDialogQuitCode</a>, <a class="el" href="enumawtk_1_1_t_ret.html#a8879287e0403ac38149f07ae867fb8e8">awtk.TRet</a></li>
+<li>on()&#160;:&#160;<a class="el" href="classawtk_1_1_t_emitter.html#a23c16a696dd21aaf3ecc8453b6941869">awtk.TEmitter</a>, <a class="el" href="classawtk_1_1_t_locale_infos.html#ae1c04052765df21c3b3082529fe636b5">awtk.TLocaleInfos</a>, <a class="el" href="classawtk_1_1_t_widget.html#a3a12fe9bb7ca0f4223a4daeee0786789">awtk.TWidget</a></li>
+<li>OOM&#160;:&#160;<a class="el" href="enumawtk_1_1_t_ret.html#a0581125698c1476b022c6bc473145733">awtk.TRet</a></li>
+<li>OPACITY&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#a7f8b6d0eb7874685dd24c2f289ce9f59">awtk.TWidgetProp</a></li>
+<li>OPAQUE&#160;:&#160;<a class="el" href="enumawtk_1_1_t_bitmap_flag.html#ade8e7baf7a9edb58f5818763a1dc783e">awtk.TBitmapFlag</a></li>
+<li>open()&#160;:&#160;<a class="el" href="classawtk_1_1_t_dialog.html#adc8d72e861710f57909fa0802e54f594">awtk.TDialog</a>, <a class="el" href="classawtk_1_1_t_window.html#a082c5d34858d1a001240096bef949330">awtk.TWindow</a></li>
+<li>OPEN_ANIM_HINT&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#ab4b59fe9fddde2d618a8aa2e0961a413">awtk.TWidgetProp</a></li>
+<li>OPEN_IM_WHEN_FOCUSED&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#a33fb7cd99aca7b99a9200ebe5aed21b6">awtk.TWidgetProp</a></li>
+<li>OPEN_WINDOW&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#a06508f21feba121efb187730166d8b8f">awtk.TWidgetProp</a></li>
+<li>openAndClose()&#160;:&#160;<a class="el" href="classawtk_1_1_t_window.html#a98c3f5255005b63393c55320065370db">awtk.TWindow</a></li>
+<li>OPENED&#160;:&#160;<a class="el" href="enumawtk_1_1_t_window_stage.html#aa19b8a5ab8372fae22d9781ae13cd8b4">awtk.TWindowStage</a></li>
+<li>OPTIONS&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#a20f06546014e16d80d8d626a990a52e1">awtk.TWidgetProp</a></li>
+<li>ORIENTATION_CHANGED&#160;:&#160;<a class="el" href="enumawtk_1_1_t_event_type.html#a8990ee59532786f9bf7f9cbb37f4d91e">awtk.TEventType</a></li>
+<li>ORIENTATION_WILL_CHANGED&#160;:&#160;<a class="el" href="enumawtk_1_1_t_event_type.html#a47e1cbd9fb1d818baa2cda4000207b54">awtk.TEventType</a></li>
+<li>OTHER&#160;:&#160;<a class="el" href="enumawtk_1_1_t_dialog_quit_code.html#ab690ddf810bb8c5f64ff3ac801a7700f">awtk.TDialogQuitCode</a></li>
+<li>OUT_OF_MEMORY&#160;:&#160;<a class="el" href="enumawtk_1_1_t_event_type.html#a2878cd1ddd7bc12b755c76962b4d5428">awtk.TEventType</a></li>
+<li>OVER&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_state.html#a8c0cbfadf9f1c20a0671a89d8f33b35f">awtk.TWidgetState</a></li>
+<li>OVER_OF_ACTIVE&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_state.html#a04cc60e5d2a866b921d1c2ad5fd0f728">awtk.TWidgetState</a></li>
+<li>OVER_OF_CHECKED&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_state.html#ab432643f28592d89e34ae112a487be0f">awtk.TWidgetState</a></li>
+<li>OVER_OF_INDETERMINATE&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_state.html#af841e8260699721da71eadbb0ed4b733">awtk.TWidgetState</a></li>
+<li>OVERLAY&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_type.html#a3c79fe854b003616890436c5c28f07b0">awtk.TWidgetType</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

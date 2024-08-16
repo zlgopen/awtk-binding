@@ -1,92 +1,71 @@
-[AWTK](../README.md) / [Exports](../modules.md) / TEmitter
+[**AWTK**](../README.md) • **Docs**
+
+***
+
+[AWTK](../globals.md) / TEmitter
 
 # Class: TEmitter
 
 事件分发器, 用于实现观察者模式。
 
-## Hierarchy
+## Extended by
 
-- **`TEmitter`**
-
-  ↳ [`TObject`](TObject.md)
-
-  ↳ [`TAssetsManager`](TAssetsManager.md)
-
-  ↳ [`TFontManager`](TFontManager.md)
-
-  ↳ [`TFileChooser`](TFileChooser.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](TEmitter.md#constructor)
-
-### Properties
-
-- [nativeObj](TEmitter.md#nativeobj)
-
-### Methods
-
-- [destroy](TEmitter.md#destroy)
-- [disable](TEmitter.md#disable)
-- [dispatch](TEmitter.md#dispatch)
-- [dispatchSimpleEvent](TEmitter.md#dispatchsimpleevent)
-- [enable](TEmitter.md#enable)
-- [off](TEmitter.md#off)
-- [on](TEmitter.md#on)
-- [cast](TEmitter.md#cast)
-- [create](TEmitter.md#create)
+- [`TObject`](TObject.md)
+- [`TAssetsManager`](TAssetsManager.md)
+- [`TFontManager`](TFontManager.md)
+- [`TFileChooser`](TFileChooser.md)
 
 ## Constructors
 
-### constructor
+### new TEmitter()
 
-• **new TEmitter**(`nativeObj`)
+> **new TEmitter**(`nativeObj`): [`TEmitter`](TEmitter.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `nativeObj` | `any` |
+• **nativeObj**: `any`
+
+#### Returns
+
+[`TEmitter`](TEmitter.md)
 
 #### Defined in
 
-[awtk.ts:2293](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2293)
+[awtk.ts:2390](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2390)
 
 ## Properties
 
 ### nativeObj
 
-• **nativeObj**: `any`
+> **nativeObj**: `any`
 
 #### Defined in
 
-[awtk.ts:2292](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2292)
+[awtk.ts:2389](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2389)
 
 ## Methods
 
-### destroy
+### destroy()
 
-▸ **destroy**(): [`TRet`](../enums/TRet.md)
+> **destroy**(): [`TRet`](../enumerations/TRet.md)
 
 销毁。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:2392](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2392)
+[awtk.ts:2489](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2489)
 
-___
+***
 
-### disable
+### disable()
 
-▸ **disable**(): [`TRet`](../enums/TRet.md)
+> **disable**(): [`TRet`](../enumerations/TRet.md)
 
 禁用。
 
@@ -94,44 +73,44 @@ ___
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:2381](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2381)
+[awtk.ts:2478](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2478)
 
-___
+***
 
-### dispatch
+### dispatch()
 
-▸ **dispatch**(`e`): [`TRet`](../enums/TRet.md)
+> **dispatch**(`e`): [`TRet`](../enumerations/TRet.md)
 
 分发事件。如果当前分发的回调函数返回RET_REMOVE，该回调函数将被移出。
 禁用状态下，本函数不做任何事情。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `e` | [`TEvent`](TEvent.md) | 事件对象。 |
+• **e**: [`TEvent`](TEvent.md)
+
+事件对象。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 如果当前分发的回调函数返回RET_STOP，dispatch中断分发，并返回RET_STOP，否则返回RET_OK。
 
 #### Defined in
 
-[awtk.ts:2317](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2317)
+[awtk.ts:2414](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2414)
 
-___
+***
 
-### dispatchSimpleEvent
+### dispatchSimpleEvent()
 
-▸ **dispatchSimpleEvent**(`type`): [`TRet`](../enums/TRet.md)
+> **dispatchSimpleEvent**(`type`): [`TRet`](../enumerations/TRet.md)
 
 分发事件。
 > 对emitter_dispatch的包装，分发一个简单的事件。
@@ -139,75 +118,81 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `number` | 事件类型。 |
+• **type**: `number`
+
+事件类型。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 #### Defined in
 
-[awtk.ts:2331](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2331)
+[awtk.ts:2428](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2428)
 
-___
+***
 
-### enable
+### enable()
 
-▸ **enable**(): [`TRet`](../enums/TRet.md)
+> **enable**(): [`TRet`](../enumerations/TRet.md)
 
 启用。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:2368](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2368)
+[awtk.ts:2465](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2465)
 
-___
+***
 
-### off
+### off()
 
-▸ **off**(`id`): [`TRet`](../enums/TRet.md)
+> **off**(`id`): [`TRet`](../enumerations/TRet.md)
 
 注销指定事件的处理函数。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `id` | `number` | emitter_on返回的ID。 |
+• **id**: `number`
+
+emitter_on返回的ID。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:2357](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2357)
+[awtk.ts:2454](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2454)
 
-___
+***
 
-### on
+### on()
 
-▸ **on**(`etype`, `handler`, `ctx`): `number`
+> **on**(`etype`, `handler`, `ctx`): `number`
 
 注册指定事件的处理函数。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `etype` | `number` | 事件类型。 |
-| `handler` | `Function` | 事件处理函数。 |
-| `ctx` | `any` | 事件处理函数上下文。 |
+• **etype**: `number`
+
+事件类型。
+
+• **handler**: `Function`
+
+事件处理函数。
+
+• **ctx**: `any`
+
+事件处理函数上下文。
 
 #### Returns
 
@@ -217,13 +202,13 @@ ___
 
 #### Defined in
 
-[awtk.ts:2345](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2345)
+[awtk.ts:2442](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2442)
 
-___
+***
 
-### cast
+### cast()
 
-▸ `Static` **cast**(`emitter`): [`TEmitter`](TEmitter.md)
+> `static` **cast**(`emitter`): [`TEmitter`](TEmitter.md)
 
 转换为emitter对象(供脚本语言使用)。
 
@@ -231,9 +216,9 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `emitter` | [`TEmitter`](TEmitter.md) | emitter对象。 |
+• **emitter**: [`TEmitter`](TEmitter.md)
+
+emitter对象。
 
 #### Returns
 
@@ -243,13 +228,13 @@ ___
 
 #### Defined in
 
-[awtk.ts:2406](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2406)
+[awtk.ts:2503](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2503)
 
-___
+***
 
-### create
+### create()
 
-▸ `Static` **create**(): [`TEmitter`](TEmitter.md)
+> `static` **create**(): [`TEmitter`](TEmitter.md)
 
 创建emitter对象。
 
@@ -261,4 +246,4 @@ ___
 
 #### Defined in
 
-[awtk.ts:2304](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2304)
+[awtk.ts:2401](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2401)

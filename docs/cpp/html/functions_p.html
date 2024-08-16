@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: 类成员</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,23 +34,35 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,43 +72,36 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="contents">
 <div class="textblock">这里列出了所有文档化的类成员，并附带类所属的文件:</div>
 
-<h3><a id="index_p"></a>- p -</h3><ul>
-<li>Paint()
-: <a class="el" href="class_t_vgcanvas.html#a7f2dd9b173b9da2f15719a8694863e9f">TVgcanvas</a>
-</li>
-<li>PathWinding()
-: <a class="el" href="class_t_vgcanvas.html#af61cd3dd4d904843c1d0c9e979c1b47c">TVgcanvas</a>
-</li>
-<li>Pause()
-: <a class="el" href="class_t_gif_image.html#ab67e3d63cc043fb02e8e1afcb9862855">TGifImage</a>
-, <a class="el" href="class_t_image_animation.html#a99cc428d497e1d2c2944620516eef307">TImageAnimation</a>
-</li>
-<li>Play()
-: <a class="el" href="class_t_gif_image.html#ab989d3464f4959530fa3814e7ece648f">TGifImage</a>
-, <a class="el" href="class_t_image_animation.html#a6b0730c8fdddecef4f0a3afd230990f6">TImageAnimation</a>
-</li>
-<li>PreInit()
-: <a class="el" href="class_t_global.html#a4e4197ccbdacbb3a1fa3fe5be629d1a9">TGlobal</a>
-</li>
-<li>Preload()
-: <a class="el" href="class_t_image_manager.html#ab2e4182ed094f49a5878fdd9d5b6c94f">TImageManager</a>
-</li>
-<li>Push()
-: <a class="el" href="class_t_object_array.html#a86587ce0e7a41432c1933a5057bde7cc">TObjectArray</a>
-</li>
+<h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
+<li>Paint()&#160;:&#160;<a class="el" href="class_t_vgcanvas.html#a7f2dd9b173b9da2f15719a8694863e9f">TVgcanvas</a></li>
+<li>PathWinding()&#160;:&#160;<a class="el" href="class_t_vgcanvas.html#af61cd3dd4d904843c1d0c9e979c1b47c">TVgcanvas</a></li>
+<li>Pause()&#160;:&#160;<a class="el" href="class_t_gif_image.html#ab67e3d63cc043fb02e8e1afcb9862855">TGifImage</a>, <a class="el" href="class_t_image_animation.html#a99cc428d497e1d2c2944620516eef307">TImageAnimation</a></li>
+<li>PauseAnimator()&#160;:&#160;<a class="el" href="class_t_widget.html#ac0f2a30468d181aee7e82834847aeec2">TWidget</a></li>
+<li>Play()&#160;:&#160;<a class="el" href="class_t_gif_image.html#ab989d3464f4959530fa3814e7ece648f">TGifImage</a>, <a class="el" href="class_t_image_animation.html#a6b0730c8fdddecef4f0a3afd230990f6">TImageAnimation</a></li>
+<li>PreInit()&#160;:&#160;<a class="el" href="class_t_global.html#a4e4197ccbdacbb3a1fa3fe5be629d1a9">TGlobal</a></li>
+<li>Preload()&#160;:&#160;<a class="el" href="class_t_image_manager.html#ab2e4182ed094f49a5878fdd9d5b6c94f">TImageManager</a></li>
+<li>Push()&#160;:&#160;<a class="el" href="class_t_object_array.html#a86587ce0e7a41432c1933a5057bde7cc">TObjectArray</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

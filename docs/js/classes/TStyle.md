@@ -1,4 +1,8 @@
-[AWTK](../README.md) / [Exports](../modules.md) / TStyle
+[**AWTK**](../README.md) • **Docs**
+
+***
+
+[AWTK](../globals.md) / TStyle
 
 # Class: TStyle
 
@@ -8,75 +12,87 @@ widget从style对象中，获取诸如字体、颜色和图片相关的参数，
 
 属性名称的请参考[style\_id](style_id_t.md)
 
-## Hierarchy
+## Extended by
 
-- **`TStyle`**
-
-  ↳ [`TStyleMutable`](TStyleMutable.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](TStyle.md#constructor)
-
-### Properties
-
-- [nativeObj](TStyle.md#nativeobj)
-
-### Methods
-
-- [getInt](TStyle.md#getint)
-- [getStr](TStyle.md#getstr)
-- [getStyleState](TStyle.md#getstylestate)
-- [getStyleType](TStyle.md#getstyletype)
-- [getUint](TStyle.md#getuint)
-- [isMutable](TStyle.md#ismutable)
-- [isValid](TStyle.md#isvalid)
-- [notifyWidgetStateChanged](TStyle.md#notifywidgetstatechanged)
-- [set](TStyle.md#set)
-- [updateState](TStyle.md#updatestate)
+- [`TStyleMutable`](TStyleMutable.md)
 
 ## Constructors
 
-### constructor
+### new TStyle()
 
-• **new TStyle**(`nativeObj`)
+> **new TStyle**(`nativeObj`): [`TStyle`](TStyle.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `nativeObj` | `any` |
+• **nativeObj**: `any`
+
+#### Returns
+
+[`TStyle`](TStyle.md)
 
 #### Defined in
 
-[awtk.ts:7239](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7239)
+[awtk.ts:7510](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7510)
 
 ## Properties
 
 ### nativeObj
 
-• **nativeObj**: `any`
+> **nativeObj**: `any`
 
 #### Defined in
 
-[awtk.ts:7238](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7238)
+[awtk.ts:7509](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7509)
 
 ## Methods
 
-### getInt
+### get()
 
-▸ **getInt**(`name`, `defval`): `number`
+> **get**(`state`, `name`, `value`): [`TRet`](../enumerations/TRet.md)
+
+获取指定状态的指定属性的值。
+
+#### Parameters
+
+• **state**: `string`
+
+状态。
+
+• **name**: `string`
+
+属性名。
+
+• **value**: [`TValue`](TValue.md)
+
+值。
+
+#### Returns
+
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
+
+#### Defined in
+
+[awtk.ts:7586](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7586)
+
+***
+
+### getInt()
+
+> **getInt**(`name`, `defval`): `number`
 
 获取指定name的整数格式的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性名。 |
-| `defval` | `number` | 缺省值。 |
+• **name**: `string`
+
+属性名。
+
+• **defval**: `number`
+
+缺省值。
 
 #### Returns
 
@@ -86,22 +102,25 @@ widget从style对象中，获取诸如字体、颜色和图片相关的参数，
 
 #### Defined in
 
-[awtk.ts:7275](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7275)
+[awtk.ts:7546](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7546)
 
-___
+***
 
-### getStr
+### getStr()
 
-▸ **getStr**(`name`, `defval`): `string`
+> **getStr**(`name`, `defval`): `string`
 
 获取指定name的字符串格式的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性名。 |
-| `defval` | `string` | 缺省值。 |
+• **name**: `string`
+
+属性名。
+
+• **defval**: `string`
+
+缺省值。
 
 #### Returns
 
@@ -111,13 +130,13 @@ ___
 
 #### Defined in
 
-[awtk.ts:7301](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7301)
+[awtk.ts:7572](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7572)
 
-___
+***
 
-### getStyleState
+### getStyleState()
 
-▸ **getStyleState**(): `string`
+> **getStyleState**(): `string`
 
 获取风格对象的风格状态
 
@@ -129,13 +148,13 @@ ___
 
 #### Defined in
 
-[awtk.ts:7342](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7342)
+[awtk.ts:7627](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7627)
 
-___
+***
 
-### getStyleType
+### getStyleType()
 
-▸ **getStyleType**(): `string`
+> **getStyleType**(): `string`
 
 获取 style 的风格类型。
 
@@ -147,22 +166,25 @@ ___
 
 #### Defined in
 
-[awtk.ts:7364](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7364)
+[awtk.ts:7649](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7649)
 
-___
+***
 
-### getUint
+### getUint()
 
-▸ **getUint**(`name`, `defval`): `number`
+> **getUint**(`name`, `defval`): `number`
 
 获取指定name的无符号整数格式的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性名。 |
-| `defval` | `number` | 缺省值。 |
+• **name**: `string`
+
+属性名。
+
+• **defval**: `number`
+
+缺省值。
 
 #### Returns
 
@@ -172,13 +194,13 @@ ___
 
 #### Defined in
 
-[awtk.ts:7288](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7288)
+[awtk.ts:7559](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7559)
 
-___
+***
 
-### isMutable
+### isMutable()
 
-▸ **isMutable**(): `boolean`
+> **isMutable**(): `boolean`
 
 检查style是否是mutable的。
 
@@ -190,13 +212,13 @@ ___
 
 #### Defined in
 
-[awtk.ts:7353](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7353)
+[awtk.ts:7638](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7638)
 
-___
+***
 
-### isValid
+### isValid()
 
-▸ **isValid**(): `boolean`
+> **isValid**(): `boolean`
 
 检查style对象是否有效
 
@@ -208,82 +230,97 @@ ___
 
 #### Defined in
 
-[awtk.ts:7262](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7262)
+[awtk.ts:7533](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7533)
 
-___
+***
 
-### notifyWidgetStateChanged
+### notifyWidgetStateChanged()
 
-▸ **notifyWidgetStateChanged**(`widget`): [`TRet`](../enums/TRet.md)
+> **notifyWidgetStateChanged**(`widget`): [`TRet`](../enumerations/TRet.md)
 
 widget状态改变时，通知style更新数据。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `widget` | [`TWidget`](TWidget.md) | 控件对象。 |
+• **widget**: [`TWidget`](TWidget.md)
+
+控件对象。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:7251](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7251)
+[awtk.ts:7522](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7522)
 
-___
+***
 
-### set
+### set()
 
-▸ **set**(`state`, `name`, `value`): [`TRet`](../enums/TRet.md)
+> **set**(`state`, `name`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定状态的指定属性的值(仅仅对mutable的style有效)。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `state` | `string` | 状态。 |
-| `name` | `string` | 属性名。 |
-| `value` | [`TValue`](TValue.md) | 值。 |
+• **state**: `string`
+
+状态。
+
+• **name**: `string`
+
+属性名。
+
+• **value**: [`TValue`](TValue.md)
+
+值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:7315](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7315)
+[awtk.ts:7600](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7600)
 
-___
+***
 
-### updateState
+### updateState()
 
-▸ **updateState**(`theme`, `widget_type`, `style_name`, `widget_state`): [`TRet`](../enums/TRet.md)
+> **updateState**(`theme`, `widget_type`, `style_name`, `widget_state`): [`TRet`](../enumerations/TRet.md)
 
 更新风格对象的状态以及对应的数据
 备注：根据 widget_type 和 style_name 以及 widget_state 在 theme 对象中查找对应的数据并且更新到 style 对象中
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `theme` | [`TTheme`](TTheme.md) | theme对象。 |
-| `widget_type` | `string` | 控件的类型名。 |
-| `style_name` | `string` | style的名称。 |
-| `widget_state` | `string` | 控件的状态。 |
+• **theme**: [`TTheme`](TTheme.md)
+
+theme对象。
+
+• **widget\_type**: `string`
+
+控件的类型名。
+
+• **style\_name**: `string`
+
+style的名称。
+
+• **widget\_state**: `string`
+
+控件的状态。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:7331](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L7331)
+[awtk.ts:7616](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7616)

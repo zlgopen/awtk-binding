@@ -44,6 +44,10 @@ func (this TSlider) SetVertical(vertical bool) TRet {
   return TRet(C.slider_set_vertical((*C.widget_t)(this.handle), (C.bool_t)(vertical)));
 }
 
+func (this TSlider) SetDragThreshold(drag_threshold uint32) TRet {
+  return TRet(C.slider_set_drag_threshold((*C.widget_t)(this.handle), (C.uint32_t)(drag_threshold)));
+}
+
 func (this TSlider) GetMin() float64 {
   return (float64)((*C.slider_t)(unsafe.Pointer(this.handle)).min);
 }
@@ -78,5 +82,9 @@ func (this TSlider) GetDraggerAdaptToIcon() bool {
 
 func (this TSlider) GetSlideWithBar() bool {
   return (bool)((*C.slider_t)(unsafe.Pointer(this.handle)).slide_with_bar);
+}
+
+func (this TSlider) GetDragThreshold() uint32 {
+  return (uint32)((*C.slider_t)(unsafe.Pointer(this.handle)).drag_threshold);
 }
 

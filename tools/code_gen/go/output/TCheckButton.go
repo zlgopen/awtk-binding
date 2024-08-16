@@ -18,6 +18,14 @@ func (this TCheckButton) SetValue(value bool) TRet {
   return TRet(C.check_button_set_value((*C.widget_t)(this.handle), (C.bool_t)(value)));
 }
 
+func (this TCheckButton) SetIndeterminate(indeterminate bool) TRet {
+  return TRet(C.check_button_set_indeterminate((*C.widget_t)(this.handle), (C.bool_t)(indeterminate)));
+}
+
+func (this TCheckButton) GetIndeterminate() bool {
+  return (bool)(C.check_button_get_indeterminate((*C.widget_t)(this.handle)));
+}
+
 func TCheckButtonCast(widget TWidget) TCheckButton {
   retObj := TCheckButton{}
   retObj.handle = unsafe.Pointer(C.check_button_cast((*C.widget_t)(widget.handle)))

@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TVgcanvas类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,164 +70,171 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="class_t_vgcanvas-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">TVgcanvas类 参考</div>  </div>
+  <div class="headertitle"><div class="title">TVgcanvas类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a8da487fc7bca46debaaf7a6bbdb4f7c9"><td class="memItemLeft" align="right" valign="top"><a id="a8da487fc7bca46debaaf7a6bbdb4f7c9"></a>
+<tr class="memitem:a8da487fc7bca46debaaf7a6bbdb4f7c9" id="r_a8da487fc7bca46debaaf7a6bbdb4f7c9"><td class="memItemLeft" align="right" valign="top"><a id="a8da487fc7bca46debaaf7a6bbdb4f7c9" name="a8da487fc7bca46debaaf7a6bbdb4f7c9"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TVgcanvas</b> (vgcanvas_t *nativeObj)</td></tr>
 <tr class="separator:a8da487fc7bca46debaaf7a6bbdb4f7c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46b9aa37b084c67d8d45f4e8bd2dceb2"><td class="memItemLeft" align="right" valign="top"><a id="a46b9aa37b084c67d8d45f4e8bd2dceb2"></a>
+<tr class="memitem:a46b9aa37b084c67d8d45f4e8bd2dceb2" id="r_a46b9aa37b084c67d8d45f4e8bd2dceb2"><td class="memItemLeft" align="right" valign="top"><a id="a46b9aa37b084c67d8d45f4e8bd2dceb2" name="a46b9aa37b084c67d8d45f4e8bd2dceb2"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TVgcanvas</b> (const vgcanvas_t *nativeObj)</td></tr>
 <tr class="separator:a46b9aa37b084c67d8d45f4e8bd2dceb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cef1db770b88a58da3eae2dd9f8d3d3"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a4cef1db770b88a58da3eae2dd9f8d3d3">Flush</a> ()</td></tr>
+<tr class="memitem:a4cef1db770b88a58da3eae2dd9f8d3d3" id="r_a4cef1db770b88a58da3eae2dd9f8d3d3"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cef1db770b88a58da3eae2dd9f8d3d3">Flush</a> ()</td></tr>
 <tr class="separator:a4cef1db770b88a58da3eae2dd9f8d3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a819ec931c06d394df2720118034d3382"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a819ec931c06d394df2720118034d3382">BeginPath</a> ()</td></tr>
+<tr class="memitem:a819ec931c06d394df2720118034d3382" id="r_a819ec931c06d394df2720118034d3382"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a819ec931c06d394df2720118034d3382">BeginPath</a> ()</td></tr>
 <tr class="separator:a819ec931c06d394df2720118034d3382"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04307255f89dbaa71898477d2257c970"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a04307255f89dbaa71898477d2257c970">MoveTo</a> (float_t x, float_t y)</td></tr>
+<tr class="memitem:a04307255f89dbaa71898477d2257c970" id="r_a04307255f89dbaa71898477d2257c970"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04307255f89dbaa71898477d2257c970">MoveTo</a> (float_t x, float_t y)</td></tr>
 <tr class="separator:a04307255f89dbaa71898477d2257c970"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a154dd9254aa7b4c1e694e4bd6dab2dc3"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a154dd9254aa7b4c1e694e4bd6dab2dc3">LineTo</a> (float_t x, float_t y)</td></tr>
+<tr class="memitem:a154dd9254aa7b4c1e694e4bd6dab2dc3" id="r_a154dd9254aa7b4c1e694e4bd6dab2dc3"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a154dd9254aa7b4c1e694e4bd6dab2dc3">LineTo</a> (float_t x, float_t y)</td></tr>
 <tr class="separator:a154dd9254aa7b4c1e694e4bd6dab2dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4088321865d88a1f24902f4ae337d693"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a4088321865d88a1f24902f4ae337d693">QuadTo</a> (float_t cpx, float_t cpy, float_t x, float_t y)</td></tr>
+<tr class="memitem:a4088321865d88a1f24902f4ae337d693" id="r_a4088321865d88a1f24902f4ae337d693"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4088321865d88a1f24902f4ae337d693">QuadTo</a> (float_t cpx, float_t cpy, float_t x, float_t y)</td></tr>
 <tr class="separator:a4088321865d88a1f24902f4ae337d693"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a051655be838ec0ab08aeb9d991049ad3"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a051655be838ec0ab08aeb9d991049ad3">BezierTo</a> (float_t cp1x, float_t cp1y, float_t cp2x, float_t cp2y, float_t x, float_t y)</td></tr>
+<tr class="memitem:a051655be838ec0ab08aeb9d991049ad3" id="r_a051655be838ec0ab08aeb9d991049ad3"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a051655be838ec0ab08aeb9d991049ad3">BezierTo</a> (float_t cp1x, float_t cp1y, float_t cp2x, float_t cp2y, float_t x, float_t y)</td></tr>
 <tr class="separator:a051655be838ec0ab08aeb9d991049ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe69c74ebac3fccc57cbfafbf7ddf9b8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#afe69c74ebac3fccc57cbfafbf7ddf9b8">ArcTo</a> (float_t x1, float_t y1, float_t x2, float_t y2, float_t r)</td></tr>
+<tr class="memitem:afe69c74ebac3fccc57cbfafbf7ddf9b8" id="r_afe69c74ebac3fccc57cbfafbf7ddf9b8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe69c74ebac3fccc57cbfafbf7ddf9b8">ArcTo</a> (float_t x1, float_t y1, float_t x2, float_t y2, float_t r)</td></tr>
 <tr class="separator:afe69c74ebac3fccc57cbfafbf7ddf9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a526c1eb6abb162b159fca0582d9b0c40"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a526c1eb6abb162b159fca0582d9b0c40">Arc</a> (float_t x, float_t y, float_t r, float_t start_angle, float_t end_angle, bool ccw)</td></tr>
+<tr class="memitem:a526c1eb6abb162b159fca0582d9b0c40" id="r_a526c1eb6abb162b159fca0582d9b0c40"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a526c1eb6abb162b159fca0582d9b0c40">Arc</a> (float_t x, float_t y, float_t r, float_t start_angle, float_t end_angle, bool ccw)</td></tr>
 <tr class="separator:a526c1eb6abb162b159fca0582d9b0c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8db0583e1905a0c72b13b0870a58d38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#af8db0583e1905a0c72b13b0870a58d38">IsPointInPath</a> (float_t x, float_t y)</td></tr>
+<tr class="memitem:af8db0583e1905a0c72b13b0870a58d38" id="r_af8db0583e1905a0c72b13b0870a58d38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8db0583e1905a0c72b13b0870a58d38">IsPointInPath</a> (float_t x, float_t y)</td></tr>
 <tr class="separator:af8db0583e1905a0c72b13b0870a58d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07feea57b3ba5566c341f1ff06d90f92"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a07feea57b3ba5566c341f1ff06d90f92">Rect</a> (float_t x, float_t y, float_t w, float_t h)</td></tr>
+<tr class="memitem:a07feea57b3ba5566c341f1ff06d90f92" id="r_a07feea57b3ba5566c341f1ff06d90f92"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07feea57b3ba5566c341f1ff06d90f92">Rect</a> (float_t x, float_t y, float_t w, float_t h)</td></tr>
 <tr class="separator:a07feea57b3ba5566c341f1ff06d90f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a069e7639457908edfd9e37e804e83ac2"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a069e7639457908edfd9e37e804e83ac2">RoundedRect</a> (float_t x, float_t y, float_t w, float_t h, float_t r)</td></tr>
+<tr class="memitem:a069e7639457908edfd9e37e804e83ac2" id="r_a069e7639457908edfd9e37e804e83ac2"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a069e7639457908edfd9e37e804e83ac2">RoundedRect</a> (float_t x, float_t y, float_t w, float_t h, float_t r)</td></tr>
 <tr class="separator:a069e7639457908edfd9e37e804e83ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a481191e63898c7baef8552bc662e49dc"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a481191e63898c7baef8552bc662e49dc">Ellipse</a> (float_t x, float_t y, float_t rx, float_t ry)</td></tr>
+<tr class="memitem:a481191e63898c7baef8552bc662e49dc" id="r_a481191e63898c7baef8552bc662e49dc"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a481191e63898c7baef8552bc662e49dc">Ellipse</a> (float_t x, float_t y, float_t rx, float_t ry)</td></tr>
 <tr class="separator:a481191e63898c7baef8552bc662e49dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a093edb0bc723b63f6cec458bcbd7aa5c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a093edb0bc723b63f6cec458bcbd7aa5c">ClosePath</a> ()</td></tr>
+<tr class="memitem:a093edb0bc723b63f6cec458bcbd7aa5c" id="r_a093edb0bc723b63f6cec458bcbd7aa5c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a093edb0bc723b63f6cec458bcbd7aa5c">ClosePath</a> ()</td></tr>
 <tr class="separator:a093edb0bc723b63f6cec458bcbd7aa5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af61cd3dd4d904843c1d0c9e979c1b47c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#af61cd3dd4d904843c1d0c9e979c1b47c">PathWinding</a> (bool dir)</td></tr>
+<tr class="memitem:af61cd3dd4d904843c1d0c9e979c1b47c" id="r_af61cd3dd4d904843c1d0c9e979c1b47c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af61cd3dd4d904843c1d0c9e979c1b47c">PathWinding</a> (bool dir)</td></tr>
 <tr class="separator:af61cd3dd4d904843c1d0c9e979c1b47c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4692739271712eaec24aeabf3d43c566"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a4692739271712eaec24aeabf3d43c566">Rotate</a> (float_t rad)</td></tr>
+<tr class="memitem:a4692739271712eaec24aeabf3d43c566" id="r_a4692739271712eaec24aeabf3d43c566"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4692739271712eaec24aeabf3d43c566">Rotate</a> (float_t rad)</td></tr>
 <tr class="separator:a4692739271712eaec24aeabf3d43c566"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8803bf0876568ea4abe87fd7cc68944f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a8803bf0876568ea4abe87fd7cc68944f">Scale</a> (float_t x, float_t y)</td></tr>
+<tr class="memitem:a8803bf0876568ea4abe87fd7cc68944f" id="r_a8803bf0876568ea4abe87fd7cc68944f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8803bf0876568ea4abe87fd7cc68944f">Scale</a> (float_t x, float_t y)</td></tr>
 <tr class="separator:a8803bf0876568ea4abe87fd7cc68944f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a7f7a772b7bb7fac8a8ba2b4e54b797"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a6a7f7a772b7bb7fac8a8ba2b4e54b797">Translate</a> (float_t x, float_t y)</td></tr>
+<tr class="memitem:a6a7f7a772b7bb7fac8a8ba2b4e54b797" id="r_a6a7f7a772b7bb7fac8a8ba2b4e54b797"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a7f7a772b7bb7fac8a8ba2b4e54b797">Translate</a> (float_t x, float_t y)</td></tr>
 <tr class="separator:a6a7f7a772b7bb7fac8a8ba2b4e54b797"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d89dbb4ee1d187ae5353c3d233a9d49"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a7d89dbb4ee1d187ae5353c3d233a9d49">Transform</a> (float_t a, float_t b, float_t c, float_t d, float_t e, float_t f)</td></tr>
+<tr class="memitem:a7d89dbb4ee1d187ae5353c3d233a9d49" id="r_a7d89dbb4ee1d187ae5353c3d233a9d49"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d89dbb4ee1d187ae5353c3d233a9d49">Transform</a> (float_t a, float_t b, float_t c, float_t d, float_t e, float_t f)</td></tr>
 <tr class="separator:a7d89dbb4ee1d187ae5353c3d233a9d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4361859d7b511a8bfcfcdeac7b3ee169"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a4361859d7b511a8bfcfcdeac7b3ee169">SetTransform</a> (float_t a, float_t b, float_t c, float_t d, float_t e, float_t f)</td></tr>
+<tr class="memitem:a4361859d7b511a8bfcfcdeac7b3ee169" id="r_a4361859d7b511a8bfcfcdeac7b3ee169"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4361859d7b511a8bfcfcdeac7b3ee169">SetTransform</a> (float_t a, float_t b, float_t c, float_t d, float_t e, float_t f)</td></tr>
 <tr class="separator:a4361859d7b511a8bfcfcdeac7b3ee169"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaff4d506749c7a205af49f8010c5e02"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#aaaff4d506749c7a205af49f8010c5e02">ClipPath</a> ()</td></tr>
+<tr class="memitem:aaaff4d506749c7a205af49f8010c5e02" id="r_aaaff4d506749c7a205af49f8010c5e02"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaaff4d506749c7a205af49f8010c5e02">ClipPath</a> ()</td></tr>
 <tr class="separator:aaaff4d506749c7a205af49f8010c5e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac99bd1226ef6915519163e363432b5d8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#ac99bd1226ef6915519163e363432b5d8">ClipRect</a> (float_t x, float_t y, float_t w, float_t h)</td></tr>
+<tr class="memitem:ac99bd1226ef6915519163e363432b5d8" id="r_ac99bd1226ef6915519163e363432b5d8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac99bd1226ef6915519163e363432b5d8">ClipRect</a> (float_t x, float_t y, float_t w, float_t h)</td></tr>
 <tr class="separator:ac99bd1226ef6915519163e363432b5d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0e97e81a0cf8e3a542ec93df1663e26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#ae0e97e81a0cf8e3a542ec93df1663e26">IsRectfInClipRect</a> (float_t left, float_t top, float_t right, float_t bottom)</td></tr>
+<tr class="memitem:ae0e97e81a0cf8e3a542ec93df1663e26" id="r_ae0e97e81a0cf8e3a542ec93df1663e26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0e97e81a0cf8e3a542ec93df1663e26">IsRectfInClipRect</a> (float_t left, float_t top, float_t right, float_t bottom)</td></tr>
 <tr class="separator:ae0e97e81a0cf8e3a542ec93df1663e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae65059743e0039d06efddfd077a84b73"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#ae65059743e0039d06efddfd077a84b73">IntersectClipRect</a> (float_t x, float_t y, float_t w, float_t h)</td></tr>
+<tr class="memitem:ae65059743e0039d06efddfd077a84b73" id="r_ae65059743e0039d06efddfd077a84b73"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae65059743e0039d06efddfd077a84b73">IntersectClipRect</a> (float_t x, float_t y, float_t w, float_t h)</td></tr>
 <tr class="separator:ae65059743e0039d06efddfd077a84b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14f818062de7fa7926b2e7d5ce8e189d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a14f818062de7fa7926b2e7d5ce8e189d">Fill</a> ()</td></tr>
+<tr class="memitem:a14f818062de7fa7926b2e7d5ce8e189d" id="r_a14f818062de7fa7926b2e7d5ce8e189d"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14f818062de7fa7926b2e7d5ce8e189d">Fill</a> ()</td></tr>
 <tr class="separator:a14f818062de7fa7926b2e7d5ce8e189d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a280cbf1d9b4ef38763216f0ea9ea0c0a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a280cbf1d9b4ef38763216f0ea9ea0c0a">Stroke</a> ()</td></tr>
+<tr class="memitem:a280cbf1d9b4ef38763216f0ea9ea0c0a" id="r_a280cbf1d9b4ef38763216f0ea9ea0c0a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a280cbf1d9b4ef38763216f0ea9ea0c0a">Stroke</a> ()</td></tr>
 <tr class="separator:a280cbf1d9b4ef38763216f0ea9ea0c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f2dd9b173b9da2f15719a8694863e9f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a7f2dd9b173b9da2f15719a8694863e9f">Paint</a> (bool stroke, <a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;img)</td></tr>
+<tr class="memitem:a7f2dd9b173b9da2f15719a8694863e9f" id="r_a7f2dd9b173b9da2f15719a8694863e9f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f2dd9b173b9da2f15719a8694863e9f">Paint</a> (bool stroke, <a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;img)</td></tr>
 <tr class="separator:a7f2dd9b173b9da2f15719a8694863e9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6c0e5d77bba67fb1a4efea9d33c6a62"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#af6c0e5d77bba67fb1a4efea9d33c6a62">SetFont</a> (const char *font)</td></tr>
+<tr class="memitem:af6c0e5d77bba67fb1a4efea9d33c6a62" id="r_af6c0e5d77bba67fb1a4efea9d33c6a62"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6c0e5d77bba67fb1a4efea9d33c6a62">SetFont</a> (const char *font)</td></tr>
 <tr class="separator:af6c0e5d77bba67fb1a4efea9d33c6a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a634f4ea1ccab2c702a134054d3d56f42"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a634f4ea1ccab2c702a134054d3d56f42">SetFontSize</a> (float_t size)</td></tr>
+<tr class="memitem:a634f4ea1ccab2c702a134054d3d56f42" id="r_a634f4ea1ccab2c702a134054d3d56f42"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a634f4ea1ccab2c702a134054d3d56f42">SetFontSize</a> (float_t size)</td></tr>
 <tr class="separator:a634f4ea1ccab2c702a134054d3d56f42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad16bdbbca115556988f0d442d8d6b460"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#ad16bdbbca115556988f0d442d8d6b460">SetTextAlign</a> (const char *value)</td></tr>
+<tr class="memitem:ad16bdbbca115556988f0d442d8d6b460" id="r_ad16bdbbca115556988f0d442d8d6b460"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad16bdbbca115556988f0d442d8d6b460">SetTextAlign</a> (const char *value)</td></tr>
 <tr class="separator:ad16bdbbca115556988f0d442d8d6b460"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d60da8b841152856c5b352361c1540a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a7d60da8b841152856c5b352361c1540a">SetTextBaseline</a> (const char *value)</td></tr>
+<tr class="memitem:a7d60da8b841152856c5b352361c1540a" id="r_a7d60da8b841152856c5b352361c1540a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d60da8b841152856c5b352361c1540a">SetTextBaseline</a> (const char *value)</td></tr>
 <tr class="separator:a7d60da8b841152856c5b352361c1540a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad52e8fb00145fe90783ef4c279540aa5"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#ad52e8fb00145fe90783ef4c279540aa5">FillText</a> (const char *text, float_t x, float_t y, float_t max_width)</td></tr>
+<tr class="memitem:ad52e8fb00145fe90783ef4c279540aa5" id="r_ad52e8fb00145fe90783ef4c279540aa5"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad52e8fb00145fe90783ef4c279540aa5">FillText</a> (const char *text, float_t x, float_t y, float_t max_width)</td></tr>
 <tr class="separator:ad52e8fb00145fe90783ef4c279540aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c0d31eb69398b195d4143e03a1fa6d5"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a9c0d31eb69398b195d4143e03a1fa6d5">MeasureText</a> (const char *text)</td></tr>
+<tr class="memitem:a9c0d31eb69398b195d4143e03a1fa6d5" id="r_a9c0d31eb69398b195d4143e03a1fa6d5"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c0d31eb69398b195d4143e03a1fa6d5">MeasureText</a> (const char *text)</td></tr>
 <tr class="separator:a9c0d31eb69398b195d4143e03a1fa6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afeecd9b59291fbced10e03dc83348c49"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#afeecd9b59291fbced10e03dc83348c49">DrawImage</a> (<a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;img, float_t sx, float_t sy, float_t sw, float_t sh, float_t dx, float_t dy, float_t dw, float_t dh)</td></tr>
+<tr class="memitem:afeecd9b59291fbced10e03dc83348c49" id="r_afeecd9b59291fbced10e03dc83348c49"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afeecd9b59291fbced10e03dc83348c49">DrawImage</a> (<a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;img, float_t sx, float_t sy, float_t sw, float_t sh, float_t dx, float_t dy, float_t dw, float_t dh)</td></tr>
 <tr class="separator:afeecd9b59291fbced10e03dc83348c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a626925e5174c21b5e9492acf74eacc"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a0a626925e5174c21b5e9492acf74eacc">DrawImageRepeat</a> (<a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;img, float_t sx, float_t sy, float_t sw, float_t sh, float_t dx, float_t dy, float_t dw, float_t dh, float_t dst_w, float_t dst_h)</td></tr>
+<tr class="memitem:a0a626925e5174c21b5e9492acf74eacc" id="r_a0a626925e5174c21b5e9492acf74eacc"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a626925e5174c21b5e9492acf74eacc">DrawImageRepeat</a> (<a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;img, float_t sx, float_t sy, float_t sw, float_t sh, float_t dx, float_t dy, float_t dw, float_t dh, float_t dst_w, float_t dst_h)</td></tr>
 <tr class="separator:a0a626925e5174c21b5e9492acf74eacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cdf27f516c7a3d42ec4e3b75f487d07"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a5cdf27f516c7a3d42ec4e3b75f487d07">DrawIcon</a> (<a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;img, float_t sx, float_t sy, float_t sw, float_t sh, float_t dx, float_t dy, float_t dw, float_t dh)</td></tr>
+<tr class="memitem:a5cdf27f516c7a3d42ec4e3b75f487d07" id="r_a5cdf27f516c7a3d42ec4e3b75f487d07"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cdf27f516c7a3d42ec4e3b75f487d07">DrawIcon</a> (<a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;img, float_t sx, float_t sy, float_t sw, float_t sh, float_t dx, float_t dy, float_t dw, float_t dh)</td></tr>
 <tr class="separator:a5cdf27f516c7a3d42ec4e3b75f487d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04ee2510e3ce41575ea38dc120ae88ff"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a04ee2510e3ce41575ea38dc120ae88ff">SetAntialias</a> (bool value)</td></tr>
+<tr class="memitem:a04ee2510e3ce41575ea38dc120ae88ff" id="r_a04ee2510e3ce41575ea38dc120ae88ff"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04ee2510e3ce41575ea38dc120ae88ff">SetAntialias</a> (bool value)</td></tr>
 <tr class="separator:a04ee2510e3ce41575ea38dc120ae88ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a113b766d6cb99eaddd791ca095930a16"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a113b766d6cb99eaddd791ca095930a16">SetGlobalAlpha</a> (float_t alpha)</td></tr>
+<tr class="memitem:a113b766d6cb99eaddd791ca095930a16" id="r_a113b766d6cb99eaddd791ca095930a16"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a113b766d6cb99eaddd791ca095930a16">SetGlobalAlpha</a> (float_t alpha)</td></tr>
 <tr class="separator:a113b766d6cb99eaddd791ca095930a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1373d9f061e4c78e9a042c4b674b322b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a1373d9f061e4c78e9a042c4b674b322b">SetLineWidth</a> (float_t value)</td></tr>
+<tr class="memitem:a1373d9f061e4c78e9a042c4b674b322b" id="r_a1373d9f061e4c78e9a042c4b674b322b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1373d9f061e4c78e9a042c4b674b322b">SetLineWidth</a> (float_t value)</td></tr>
 <tr class="separator:a1373d9f061e4c78e9a042c4b674b322b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1ae81672a3b230cb19c30f869735fa7"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#ac1ae81672a3b230cb19c30f869735fa7">SetFillColor</a> (const char *color)</td></tr>
+<tr class="memitem:ac1ae81672a3b230cb19c30f869735fa7" id="r_ac1ae81672a3b230cb19c30f869735fa7"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1ae81672a3b230cb19c30f869735fa7">SetFillColor</a> (const char *color)</td></tr>
 <tr class="separator:ac1ae81672a3b230cb19c30f869735fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a695215d68840f5d8d4d30edfa6006e1b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a695215d68840f5d8d4d30edfa6006e1b">SetStrokeColor</a> (const char *str)</td></tr>
+<tr class="memitem:a695215d68840f5d8d4d30edfa6006e1b" id="r_a695215d68840f5d8d4d30edfa6006e1b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a695215d68840f5d8d4d30edfa6006e1b">SetStrokeColor</a> (const char *str)</td></tr>
 <tr class="separator:a695215d68840f5d8d4d30edfa6006e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9043ed910653bb801719dae642bdbf03"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a9043ed910653bb801719dae642bdbf03">SetLineCap</a> (const char *value)</td></tr>
+<tr class="memitem:a9043ed910653bb801719dae642bdbf03" id="r_a9043ed910653bb801719dae642bdbf03"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9043ed910653bb801719dae642bdbf03">SetLineCap</a> (const char *value)</td></tr>
 <tr class="separator:a9043ed910653bb801719dae642bdbf03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf0f4083b74ea9f71a5f514ec912ff67"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#abf0f4083b74ea9f71a5f514ec912ff67">SetLineJoin</a> (const char *value)</td></tr>
+<tr class="memitem:abf0f4083b74ea9f71a5f514ec912ff67" id="r_abf0f4083b74ea9f71a5f514ec912ff67"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf0f4083b74ea9f71a5f514ec912ff67">SetLineJoin</a> (const char *value)</td></tr>
 <tr class="separator:abf0f4083b74ea9f71a5f514ec912ff67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab47443dde40a320efbb538c4d83ccfce"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#ab47443dde40a320efbb538c4d83ccfce">SetMiterLimit</a> (float_t value)</td></tr>
+<tr class="memitem:ab47443dde40a320efbb538c4d83ccfce" id="r_ab47443dde40a320efbb538c4d83ccfce"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab47443dde40a320efbb538c4d83ccfce">SetMiterLimit</a> (float_t value)</td></tr>
 <tr class="separator:ab47443dde40a320efbb538c4d83ccfce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a074352d2dbc7bc0e24470f0bd2d57790"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a074352d2dbc7bc0e24470f0bd2d57790">Save</a> ()</td></tr>
+<tr class="memitem:a074352d2dbc7bc0e24470f0bd2d57790" id="r_a074352d2dbc7bc0e24470f0bd2d57790"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a074352d2dbc7bc0e24470f0bd2d57790">Save</a> ()</td></tr>
 <tr class="separator:a074352d2dbc7bc0e24470f0bd2d57790"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae12a84c37394b11f68b76e585cb22ef8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#ae12a84c37394b11f68b76e585cb22ef8">Restore</a> ()</td></tr>
+<tr class="memitem:ae12a84c37394b11f68b76e585cb22ef8" id="r_ae12a84c37394b11f68b76e585cb22ef8"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae12a84c37394b11f68b76e585cb22ef8">Restore</a> ()</td></tr>
 <tr class="separator:ae12a84c37394b11f68b76e585cb22ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e3416658aff4d96d156c42846d7a152"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a5e3416658aff4d96d156c42846d7a152">GetW</a> () const</td></tr>
+<tr class="memitem:a5e3416658aff4d96d156c42846d7a152" id="r_a5e3416658aff4d96d156c42846d7a152"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e3416658aff4d96d156c42846d7a152">GetW</a> () const</td></tr>
 <tr class="separator:a5e3416658aff4d96d156c42846d7a152"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54282e8ecc519bf2d2ae79a474943997"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a54282e8ecc519bf2d2ae79a474943997">GetH</a> () const</td></tr>
+<tr class="memitem:a54282e8ecc519bf2d2ae79a474943997" id="r_a54282e8ecc519bf2d2ae79a474943997"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54282e8ecc519bf2d2ae79a474943997">GetH</a> () const</td></tr>
 <tr class="separator:a54282e8ecc519bf2d2ae79a474943997"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cc0c4ea765b406bf03f13e2d1c7378b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a0cc0c4ea765b406bf03f13e2d1c7378b">GetStride</a> () const</td></tr>
+<tr class="memitem:a0cc0c4ea765b406bf03f13e2d1c7378b" id="r_a0cc0c4ea765b406bf03f13e2d1c7378b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cc0c4ea765b406bf03f13e2d1c7378b">GetStride</a> () const</td></tr>
 <tr class="separator:a0cc0c4ea765b406bf03f13e2d1c7378b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a096df74fa271a79f3a63fba08e17d6"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a9a096df74fa271a79f3a63fba08e17d6">GetRatio</a> () const</td></tr>
+<tr class="memitem:a9a096df74fa271a79f3a63fba08e17d6" id="r_a9a096df74fa271a79f3a63fba08e17d6"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a096df74fa271a79f3a63fba08e17d6">GetRatio</a> () const</td></tr>
 <tr class="separator:a9a096df74fa271a79f3a63fba08e17d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a156b11c494e93e836b48c0629f7229d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a156b11c494e93e836b48c0629f7229d2">GetAntiAlias</a> () const</td></tr>
+<tr class="memitem:a156b11c494e93e836b48c0629f7229d2" id="r_a156b11c494e93e836b48c0629f7229d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a156b11c494e93e836b48c0629f7229d2">GetAntiAlias</a> () const</td></tr>
 <tr class="separator:a156b11c494e93e836b48c0629f7229d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac37e1b6d825bb5e67511fbccdf242394"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#ac37e1b6d825bb5e67511fbccdf242394">GetLineWidth</a> () const</td></tr>
+<tr class="memitem:ac37e1b6d825bb5e67511fbccdf242394" id="r_ac37e1b6d825bb5e67511fbccdf242394"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac37e1b6d825bb5e67511fbccdf242394">GetLineWidth</a> () const</td></tr>
 <tr class="separator:ac37e1b6d825bb5e67511fbccdf242394"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b1ebab17b8201ee76ca149f98db21c6"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a3b1ebab17b8201ee76ca149f98db21c6">GetGlobalAlpha</a> () const</td></tr>
+<tr class="memitem:a3b1ebab17b8201ee76ca149f98db21c6" id="r_a3b1ebab17b8201ee76ca149f98db21c6"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b1ebab17b8201ee76ca149f98db21c6">GetGlobalAlpha</a> () const</td></tr>
 <tr class="separator:a3b1ebab17b8201ee76ca149f98db21c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae95c4e0fe292c9e612ec85372f4afaa0"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#ae95c4e0fe292c9e612ec85372f4afaa0">GetMiterLimit</a> () const</td></tr>
+<tr class="memitem:ae95c4e0fe292c9e612ec85372f4afaa0" id="r_ae95c4e0fe292c9e612ec85372f4afaa0"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae95c4e0fe292c9e612ec85372f4afaa0">GetMiterLimit</a> () const</td></tr>
 <tr class="separator:ae95c4e0fe292c9e612ec85372f4afaa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6edf3c948fd31b221a71db1a6d1586d"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#af6edf3c948fd31b221a71db1a6d1586d">GetLineCap</a> () const</td></tr>
+<tr class="memitem:af6edf3c948fd31b221a71db1a6d1586d" id="r_af6edf3c948fd31b221a71db1a6d1586d"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6edf3c948fd31b221a71db1a6d1586d">GetLineCap</a> () const</td></tr>
 <tr class="separator:af6edf3c948fd31b221a71db1a6d1586d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab24485b67f43dc3874f9a18195cdf244"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#ab24485b67f43dc3874f9a18195cdf244">GetLineJoin</a> () const</td></tr>
+<tr class="memitem:ab24485b67f43dc3874f9a18195cdf244" id="r_ab24485b67f43dc3874f9a18195cdf244"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab24485b67f43dc3874f9a18195cdf244">GetLineJoin</a> () const</td></tr>
 <tr class="separator:ab24485b67f43dc3874f9a18195cdf244"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3651360ace843556822e241601da270e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a3651360ace843556822e241601da270e">GetFont</a> () const</td></tr>
+<tr class="memitem:a3651360ace843556822e241601da270e" id="r_a3651360ace843556822e241601da270e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3651360ace843556822e241601da270e">GetFont</a> () const</td></tr>
 <tr class="separator:a3651360ace843556822e241601da270e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1135c99ae31ced3c27017e318725bdf"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#ab1135c99ae31ced3c27017e318725bdf">GetFontSize</a> () const</td></tr>
+<tr class="memitem:ab1135c99ae31ced3c27017e318725bdf" id="r_ab1135c99ae31ced3c27017e318725bdf"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1135c99ae31ced3c27017e318725bdf">GetFontSize</a> () const</td></tr>
 <tr class="separator:ab1135c99ae31ced3c27017e318725bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dc152da64163be4115110a65afb0eef"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#a4dc152da64163be4115110a65afb0eef">GetTextAlign</a> () const</td></tr>
+<tr class="memitem:a4dc152da64163be4115110a65afb0eef" id="r_a4dc152da64163be4115110a65afb0eef"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dc152da64163be4115110a65afb0eef">GetTextAlign</a> () const</td></tr>
 <tr class="separator:a4dc152da64163be4115110a65afb0eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae992f9687fa432f35b485abd51d543f3"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_vgcanvas.html#ae992f9687fa432f35b485abd51d543f3">GetTextBaseline</a> () const</td></tr>
+<tr class="memitem:ae992f9687fa432f35b485abd51d543f3" id="r_ae992f9687fa432f35b485abd51d543f3"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae992f9687fa432f35b485abd51d543f3">GetTextBaseline</a> () const</td></tr>
 <tr class="separator:ae992f9687fa432f35b485abd51d543f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a50a446341fc2d775b01124f8e68d14a8"><td class="memItemLeft" align="right" valign="top"><a id="a50a446341fc2d775b01124f8e68d14a8"></a>
+<tr class="memitem:a50a446341fc2d775b01124f8e68d14a8" id="r_a50a446341fc2d775b01124f8e68d14a8"><td class="memItemLeft" align="right" valign="top"><a id="a50a446341fc2d775b01124f8e68d14a8" name="a50a446341fc2d775b01124f8e68d14a8"></a>
 static <a class="el" href="class_t_vgcanvas.html">TVgcanvas</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (vgcanvas_t *nativeObj)</td></tr>
 <tr class="separator:a50a446341fc2d775b01124f8e68d14a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac65050eb57f22cabd69ccff1fe46acfe"><td class="memItemLeft" align="right" valign="top"><a id="ac65050eb57f22cabd69ccff1fe46acfe"></a>
+<tr class="memitem:ac65050eb57f22cabd69ccff1fe46acfe" id="r_ac65050eb57f22cabd69ccff1fe46acfe"><td class="memItemLeft" align="right" valign="top"><a id="ac65050eb57f22cabd69ccff1fe46acfe" name="ac65050eb57f22cabd69ccff1fe46acfe"></a>
 static <a class="el" href="class_t_vgcanvas.html">TVgcanvas</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const vgcanvas_t *nativeObj)</td></tr>
 <tr class="separator:ac65050eb57f22cabd69ccff1fe46acfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:a24ec739753eb71e8c93623c0797b3150"><td class="memItemLeft" align="right" valign="top"><a id="a24ec739753eb71e8c93623c0797b3150"></a>
+<tr class="memitem:a24ec739753eb71e8c93623c0797b3150" id="r_a24ec739753eb71e8c93623c0797b3150"><td class="memItemLeft" align="right" valign="top"><a id="a24ec739753eb71e8c93623c0797b3150" name="a24ec739753eb71e8c93623c0797b3150"></a>
 vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td></tr>
 <tr class="separator:a24ec739753eb71e8c93623c0797b3150"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -227,8 +249,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 <p>示例：</p>
 <p>&gt;请参考：https://www.w3schools.com/tags/ref_canvas.asp </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a526c1eb6abb162b159fca0582d9b0c40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a526c1eb6abb162b159fca0582d9b0c40">&#9670;&nbsp;</a></span>Arc()</h2>
+<a id="a526c1eb6abb162b159fca0582d9b0c40" name="a526c1eb6abb162b159fca0582d9b0c40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a526c1eb6abb162b159fca0582d9b0c40">&#9670;&#160;</a></span>Arc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -236,43 +258,32 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::Arc </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>r</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>start_angle</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>start_angle</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>end_angle</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>end_angle</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>ccw</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>ccw</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -292,8 +303,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="afe69c74ebac3fccc57cbfafbf7ddf9b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe69c74ebac3fccc57cbfafbf7ddf9b8">&#9670;&nbsp;</a></span>ArcTo()</h2>
+<a id="afe69c74ebac3fccc57cbfafbf7ddf9b8" name="afe69c74ebac3fccc57cbfafbf7ddf9b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe69c74ebac3fccc57cbfafbf7ddf9b8">&#9670;&#160;</a></span>ArcTo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -301,37 +312,27 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::ArcTo </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>x1</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>y1</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>y1</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>x2</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>x2</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>y2</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>y2</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>r</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -350,8 +351,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a819ec931c06d394df2720118034d3382"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a819ec931c06d394df2720118034d3382">&#9670;&nbsp;</a></span>BeginPath()</h2>
+<a id="a819ec931c06d394df2720118034d3382" name="a819ec931c06d394df2720118034d3382"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a819ec931c06d394df2720118034d3382">&#9670;&#160;</a></span>BeginPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -359,7 +360,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::BeginPath </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -369,8 +370,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a051655be838ec0ab08aeb9d991049ad3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a051655be838ec0ab08aeb9d991049ad3">&#9670;&nbsp;</a></span>BezierTo()</h2>
+<a id="a051655be838ec0ab08aeb9d991049ad3" name="a051655be838ec0ab08aeb9d991049ad3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a051655be838ec0ab08aeb9d991049ad3">&#9670;&#160;</a></span>BezierTo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -378,43 +379,32 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::BezierTo </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>cp1x</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>cp1x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>cp1y</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>cp1y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>cp2x</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>cp2x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>cp2y</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>cp2y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -434,8 +424,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="aaaff4d506749c7a205af49f8010c5e02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaaff4d506749c7a205af49f8010c5e02">&#9670;&nbsp;</a></span>ClipPath()</h2>
+<a id="aaaff4d506749c7a205af49f8010c5e02" name="aaaff4d506749c7a205af49f8010c5e02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaff4d506749c7a205af49f8010c5e02">&#9670;&#160;</a></span>ClipPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -443,7 +433,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::ClipPath </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -453,8 +443,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="ac99bd1226ef6915519163e363432b5d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac99bd1226ef6915519163e363432b5d8">&#9670;&nbsp;</a></span>ClipRect()</h2>
+<a id="ac99bd1226ef6915519163e363432b5d8" name="ac99bd1226ef6915519163e363432b5d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac99bd1226ef6915519163e363432b5d8">&#9670;&#160;</a></span>ClipRect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -462,31 +452,22 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::ClipRect </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>h</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -504,8 +485,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a093edb0bc723b63f6cec458bcbd7aa5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a093edb0bc723b63f6cec458bcbd7aa5c">&#9670;&nbsp;</a></span>ClosePath()</h2>
+<a id="a093edb0bc723b63f6cec458bcbd7aa5c" name="a093edb0bc723b63f6cec458bcbd7aa5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a093edb0bc723b63f6cec458bcbd7aa5c">&#9670;&#160;</a></span>ClosePath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -513,7 +494,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::ClosePath </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -524,8 +505,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a5cdf27f516c7a3d42ec4e3b75f487d07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cdf27f516c7a3d42ec4e3b75f487d07">&#9670;&nbsp;</a></span>DrawIcon()</h2>
+<a id="a5cdf27f516c7a3d42ec4e3b75f487d07" name="a5cdf27f516c7a3d42ec4e3b75f487d07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cdf27f516c7a3d42ec4e3b75f487d07">&#9670;&#160;</a></span>DrawIcon()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -533,61 +514,47 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::DrawIcon </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;&#160;</td>
-          <td class="paramname"><em>img</em>, </td>
+          <td class="paramtype"><a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>img</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>sx</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>sx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>sy</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>sy</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>sw</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>sw</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>sh</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>sh</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>dx</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>dx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>dy</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>dy</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>dw</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>dw</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>dh</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>dh</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -611,8 +578,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="afeecd9b59291fbced10e03dc83348c49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afeecd9b59291fbced10e03dc83348c49">&#9670;&nbsp;</a></span>DrawImage()</h2>
+<a id="afeecd9b59291fbced10e03dc83348c49" name="afeecd9b59291fbced10e03dc83348c49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeecd9b59291fbced10e03dc83348c49">&#9670;&#160;</a></span>DrawImage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -620,61 +587,47 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::DrawImage </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;&#160;</td>
-          <td class="paramname"><em>img</em>, </td>
+          <td class="paramtype"><a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>img</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>sx</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>sx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>sy</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>sy</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>sw</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>sw</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>sh</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>sh</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>dx</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>dx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>dy</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>dy</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>dw</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>dw</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>dh</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>dh</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -697,8 +650,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a0a626925e5174c21b5e9492acf74eacc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a626925e5174c21b5e9492acf74eacc">&#9670;&nbsp;</a></span>DrawImageRepeat()</h2>
+<a id="a0a626925e5174c21b5e9492acf74eacc" name="a0a626925e5174c21b5e9492acf74eacc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a626925e5174c21b5e9492acf74eacc">&#9670;&#160;</a></span>DrawImageRepeat()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -706,73 +659,57 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::DrawImageRepeat </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;&#160;</td>
-          <td class="paramname"><em>img</em>, </td>
+          <td class="paramtype"><a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>img</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>sx</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>sx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>sy</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>sy</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>sw</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>sw</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>sh</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>sh</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>dx</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>dx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>dy</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>dy</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>dw</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>dw</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>dh</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>dh</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>dst_w</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>dst_w</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>dst_h</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>dst_h</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -798,8 +735,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a481191e63898c7baef8552bc662e49dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a481191e63898c7baef8552bc662e49dc">&#9670;&nbsp;</a></span>Ellipse()</h2>
+<a id="a481191e63898c7baef8552bc662e49dc" name="a481191e63898c7baef8552bc662e49dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a481191e63898c7baef8552bc662e49dc">&#9670;&#160;</a></span>Ellipse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -807,31 +744,22 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::Ellipse </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>rx</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>rx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>ry</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>ry</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -849,8 +777,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a14f818062de7fa7926b2e7d5ce8e189d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14f818062de7fa7926b2e7d5ce8e189d">&#9670;&nbsp;</a></span>Fill()</h2>
+<a id="a14f818062de7fa7926b2e7d5ce8e189d" name="a14f818062de7fa7926b2e7d5ce8e189d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14f818062de7fa7926b2e7d5ce8e189d">&#9670;&#160;</a></span>Fill()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -858,7 +786,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::Fill </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -868,8 +796,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="ad52e8fb00145fe90783ef4c279540aa5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad52e8fb00145fe90783ef4c279540aa5">&#9670;&nbsp;</a></span>FillText()</h2>
+<a id="ad52e8fb00145fe90783ef4c279540aa5" name="ad52e8fb00145fe90783ef4c279540aa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad52e8fb00145fe90783ef4c279540aa5">&#9670;&#160;</a></span>FillText()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -877,31 +805,22 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::FillText </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>text</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>max_width</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>max_width</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -919,8 +838,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a4cef1db770b88a58da3eae2dd9f8d3d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cef1db770b88a58da3eae2dd9f8d3d3">&#9670;&nbsp;</a></span>Flush()</h2>
+<a id="a4cef1db770b88a58da3eae2dd9f8d3d3" name="a4cef1db770b88a58da3eae2dd9f8d3d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cef1db770b88a58da3eae2dd9f8d3d3">&#9670;&#160;</a></span>Flush()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -928,7 +847,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::Flush </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -938,8 +857,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a156b11c494e93e836b48c0629f7229d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a156b11c494e93e836b48c0629f7229d2">&#9670;&nbsp;</a></span>GetAntiAlias()</h2>
+<a id="a156b11c494e93e836b48c0629f7229d2" name="a156b11c494e93e836b48c0629f7229d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a156b11c494e93e836b48c0629f7229d2">&#9670;&#160;</a></span>GetAntiAlias()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -947,7 +866,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">bool TVgcanvas::GetAntiAlias </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -956,8 +875,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a3651360ace843556822e241601da270e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3651360ace843556822e241601da270e">&#9670;&nbsp;</a></span>GetFont()</h2>
+<a id="a3651360ace843556822e241601da270e" name="a3651360ace843556822e241601da270e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3651360ace843556822e241601da270e">&#9670;&#160;</a></span>GetFont()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -965,7 +884,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">char * TVgcanvas::GetFont </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -974,8 +893,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="ab1135c99ae31ced3c27017e318725bdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1135c99ae31ced3c27017e318725bdf">&#9670;&nbsp;</a></span>GetFontSize()</h2>
+<a id="ab1135c99ae31ced3c27017e318725bdf" name="ab1135c99ae31ced3c27017e318725bdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1135c99ae31ced3c27017e318725bdf">&#9670;&#160;</a></span>GetFontSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -983,7 +902,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">float_t TVgcanvas::GetFontSize </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -992,8 +911,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a3b1ebab17b8201ee76ca149f98db21c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b1ebab17b8201ee76ca149f98db21c6">&#9670;&nbsp;</a></span>GetGlobalAlpha()</h2>
+<a id="a3b1ebab17b8201ee76ca149f98db21c6" name="a3b1ebab17b8201ee76ca149f98db21c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b1ebab17b8201ee76ca149f98db21c6">&#9670;&#160;</a></span>GetGlobalAlpha()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1001,7 +920,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">float_t TVgcanvas::GetGlobalAlpha </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1010,8 +929,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a54282e8ecc519bf2d2ae79a474943997"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54282e8ecc519bf2d2ae79a474943997">&#9670;&nbsp;</a></span>GetH()</h2>
+<a id="a54282e8ecc519bf2d2ae79a474943997" name="a54282e8ecc519bf2d2ae79a474943997"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54282e8ecc519bf2d2ae79a474943997">&#9670;&#160;</a></span>GetH()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1019,7 +938,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">uint32_t TVgcanvas::GetH </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1028,8 +947,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="af6edf3c948fd31b221a71db1a6d1586d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6edf3c948fd31b221a71db1a6d1586d">&#9670;&nbsp;</a></span>GetLineCap()</h2>
+<a id="af6edf3c948fd31b221a71db1a6d1586d" name="af6edf3c948fd31b221a71db1a6d1586d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6edf3c948fd31b221a71db1a6d1586d">&#9670;&#160;</a></span>GetLineCap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1037,7 +956,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">const char * TVgcanvas::GetLineCap </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1046,8 +965,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="ab24485b67f43dc3874f9a18195cdf244"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab24485b67f43dc3874f9a18195cdf244">&#9670;&nbsp;</a></span>GetLineJoin()</h2>
+<a id="ab24485b67f43dc3874f9a18195cdf244" name="ab24485b67f43dc3874f9a18195cdf244"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab24485b67f43dc3874f9a18195cdf244">&#9670;&#160;</a></span>GetLineJoin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1055,7 +974,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">const char * TVgcanvas::GetLineJoin </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1064,8 +983,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="ac37e1b6d825bb5e67511fbccdf242394"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac37e1b6d825bb5e67511fbccdf242394">&#9670;&nbsp;</a></span>GetLineWidth()</h2>
+<a id="ac37e1b6d825bb5e67511fbccdf242394" name="ac37e1b6d825bb5e67511fbccdf242394"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac37e1b6d825bb5e67511fbccdf242394">&#9670;&#160;</a></span>GetLineWidth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1073,7 +992,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">float_t TVgcanvas::GetLineWidth </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1082,8 +1001,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="ae95c4e0fe292c9e612ec85372f4afaa0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae95c4e0fe292c9e612ec85372f4afaa0">&#9670;&nbsp;</a></span>GetMiterLimit()</h2>
+<a id="ae95c4e0fe292c9e612ec85372f4afaa0" name="ae95c4e0fe292c9e612ec85372f4afaa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae95c4e0fe292c9e612ec85372f4afaa0">&#9670;&#160;</a></span>GetMiterLimit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1091,7 +1010,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">float_t TVgcanvas::GetMiterLimit </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1100,8 +1019,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a9a096df74fa271a79f3a63fba08e17d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a096df74fa271a79f3a63fba08e17d6">&#9670;&nbsp;</a></span>GetRatio()</h2>
+<a id="a9a096df74fa271a79f3a63fba08e17d6" name="a9a096df74fa271a79f3a63fba08e17d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a096df74fa271a79f3a63fba08e17d6">&#9670;&#160;</a></span>GetRatio()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1109,7 +1028,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">float_t TVgcanvas::GetRatio </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1118,8 +1037,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a0cc0c4ea765b406bf03f13e2d1c7378b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cc0c4ea765b406bf03f13e2d1c7378b">&#9670;&nbsp;</a></span>GetStride()</h2>
+<a id="a0cc0c4ea765b406bf03f13e2d1c7378b" name="a0cc0c4ea765b406bf03f13e2d1c7378b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cc0c4ea765b406bf03f13e2d1c7378b">&#9670;&#160;</a></span>GetStride()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1127,7 +1046,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">uint32_t TVgcanvas::GetStride </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1136,8 +1055,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a4dc152da64163be4115110a65afb0eef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4dc152da64163be4115110a65afb0eef">&#9670;&nbsp;</a></span>GetTextAlign()</h2>
+<a id="a4dc152da64163be4115110a65afb0eef" name="a4dc152da64163be4115110a65afb0eef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dc152da64163be4115110a65afb0eef">&#9670;&#160;</a></span>GetTextAlign()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1145,7 +1064,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">char * TVgcanvas::GetTextAlign </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1155,8 +1074,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="ae992f9687fa432f35b485abd51d543f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae992f9687fa432f35b485abd51d543f3">&#9670;&nbsp;</a></span>GetTextBaseline()</h2>
+<a id="ae992f9687fa432f35b485abd51d543f3" name="ae992f9687fa432f35b485abd51d543f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae992f9687fa432f35b485abd51d543f3">&#9670;&#160;</a></span>GetTextBaseline()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1164,7 +1083,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">char * TVgcanvas::GetTextBaseline </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1174,8 +1093,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a5e3416658aff4d96d156c42846d7a152"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e3416658aff4d96d156c42846d7a152">&#9670;&nbsp;</a></span>GetW()</h2>
+<a id="a5e3416658aff4d96d156c42846d7a152" name="a5e3416658aff4d96d156c42846d7a152"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e3416658aff4d96d156c42846d7a152">&#9670;&#160;</a></span>GetW()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1183,7 +1102,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">uint32_t TVgcanvas::GetW </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1192,8 +1111,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="ae65059743e0039d06efddfd077a84b73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae65059743e0039d06efddfd077a84b73">&#9670;&nbsp;</a></span>IntersectClipRect()</h2>
+<a id="ae65059743e0039d06efddfd077a84b73" name="ae65059743e0039d06efddfd077a84b73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae65059743e0039d06efddfd077a84b73">&#9670;&#160;</a></span>IntersectClipRect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1201,31 +1120,22 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::IntersectClipRect </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>h</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1250,8 +1160,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="af8db0583e1905a0c72b13b0870a58d38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8db0583e1905a0c72b13b0870a58d38">&#9670;&nbsp;</a></span>IsPointInPath()</h2>
+<a id="af8db0583e1905a0c72b13b0870a58d38" name="af8db0583e1905a0c72b13b0870a58d38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8db0583e1905a0c72b13b0870a58d38">&#9670;&#160;</a></span>IsPointInPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1259,19 +1169,12 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">bool TVgcanvas::IsPointInPath </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1287,8 +1190,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="ae0e97e81a0cf8e3a542ec93df1663e26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0e97e81a0cf8e3a542ec93df1663e26">&#9670;&nbsp;</a></span>IsRectfInClipRect()</h2>
+<a id="ae0e97e81a0cf8e3a542ec93df1663e26" name="ae0e97e81a0cf8e3a542ec93df1663e26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0e97e81a0cf8e3a542ec93df1663e26">&#9670;&#160;</a></span>IsRectfInClipRect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1296,31 +1199,22 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">bool TVgcanvas::IsRectfInClipRect </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>left</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>top</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>top</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>right</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>right</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>bottom</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>bottom</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1338,8 +1232,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a154dd9254aa7b4c1e694e4bd6dab2dc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a154dd9254aa7b4c1e694e4bd6dab2dc3">&#9670;&nbsp;</a></span>LineTo()</h2>
+<a id="a154dd9254aa7b4c1e694e4bd6dab2dc3" name="a154dd9254aa7b4c1e694e4bd6dab2dc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a154dd9254aa7b4c1e694e4bd6dab2dc3">&#9670;&#160;</a></span>LineTo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1347,19 +1241,12 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::LineTo </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1375,8 +1262,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a9c0d31eb69398b195d4143e03a1fa6d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c0d31eb69398b195d4143e03a1fa6d5">&#9670;&nbsp;</a></span>MeasureText()</h2>
+<a id="a9c0d31eb69398b195d4143e03a1fa6d5" name="a9c0d31eb69398b195d4143e03a1fa6d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c0d31eb69398b195d4143e03a1fa6d5">&#9670;&#160;</a></span>MeasureText()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1384,8 +1271,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">float_t TVgcanvas::MeasureText </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>text</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>text</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1401,8 +1287,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a04307255f89dbaa71898477d2257c970"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04307255f89dbaa71898477d2257c970">&#9670;&nbsp;</a></span>MoveTo()</h2>
+<a id="a04307255f89dbaa71898477d2257c970" name="a04307255f89dbaa71898477d2257c970"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04307255f89dbaa71898477d2257c970">&#9670;&#160;</a></span>MoveTo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1410,19 +1296,12 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::MoveTo </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1438,8 +1317,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a7f2dd9b173b9da2f15719a8694863e9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f2dd9b173b9da2f15719a8694863e9f">&#9670;&nbsp;</a></span>Paint()</h2>
+<a id="a7f2dd9b173b9da2f15719a8694863e9f" name="a7f2dd9b173b9da2f15719a8694863e9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f2dd9b173b9da2f15719a8694863e9f">&#9670;&#160;</a></span>Paint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1447,19 +1326,12 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::Paint </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>stroke</em>, </td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>stroke</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;&#160;</td>
-          <td class="paramname"><em>img</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>img</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1475,8 +1347,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="af61cd3dd4d904843c1d0c9e979c1b47c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af61cd3dd4d904843c1d0c9e979c1b47c">&#9670;&nbsp;</a></span>PathWinding()</h2>
+<a id="af61cd3dd4d904843c1d0c9e979c1b47c" name="af61cd3dd4d904843c1d0c9e979c1b47c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af61cd3dd4d904843c1d0c9e979c1b47c">&#9670;&#160;</a></span>PathWinding()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1484,8 +1356,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::PathWinding </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>dir</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1502,8 +1373,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a4088321865d88a1f24902f4ae337d693"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4088321865d88a1f24902f4ae337d693">&#9670;&nbsp;</a></span>QuadTo()</h2>
+<a id="a4088321865d88a1f24902f4ae337d693" name="a4088321865d88a1f24902f4ae337d693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4088321865d88a1f24902f4ae337d693">&#9670;&#160;</a></span>QuadTo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1511,31 +1382,22 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::QuadTo </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>cpx</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>cpx</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>cpy</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>cpy</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1553,8 +1415,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a07feea57b3ba5566c341f1ff06d90f92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07feea57b3ba5566c341f1ff06d90f92">&#9670;&nbsp;</a></span>Rect()</h2>
+<a id="a07feea57b3ba5566c341f1ff06d90f92" name="a07feea57b3ba5566c341f1ff06d90f92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07feea57b3ba5566c341f1ff06d90f92">&#9670;&#160;</a></span>Rect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1562,31 +1424,22 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::Rect </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>h</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1604,8 +1457,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="ae12a84c37394b11f68b76e585cb22ef8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae12a84c37394b11f68b76e585cb22ef8">&#9670;&nbsp;</a></span>Restore()</h2>
+<a id="ae12a84c37394b11f68b76e585cb22ef8" name="ae12a84c37394b11f68b76e585cb22ef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae12a84c37394b11f68b76e585cb22ef8">&#9670;&#160;</a></span>Restore()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1613,21 +1466,21 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::Restore </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>恢复上次save的状态。</p>
 <blockquote class="doxtable">
-<p>save/restore必须配套使用，否则可能导致状态混乱。 </p>
+<p>&zwj;save/restore必须配套使用，否则可能导致状态混乱。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>
-<a id="a4692739271712eaec24aeabf3d43c566"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4692739271712eaec24aeabf3d43c566">&#9670;&nbsp;</a></span>Rotate()</h2>
+<a id="a4692739271712eaec24aeabf3d43c566" name="a4692739271712eaec24aeabf3d43c566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4692739271712eaec24aeabf3d43c566">&#9670;&#160;</a></span>Rotate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1635,8 +1488,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::Rotate </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>rad</em></td><td>)</td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>rad</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1652,8 +1504,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a069e7639457908edfd9e37e804e83ac2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a069e7639457908edfd9e37e804e83ac2">&#9670;&nbsp;</a></span>RoundedRect()</h2>
+<a id="a069e7639457908edfd9e37e804e83ac2" name="a069e7639457908edfd9e37e804e83ac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a069e7639457908edfd9e37e804e83ac2">&#9670;&#160;</a></span>RoundedRect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1661,37 +1513,27 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::RoundedRect </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>h</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>r</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1710,8 +1552,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a074352d2dbc7bc0e24470f0bd2d57790"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a074352d2dbc7bc0e24470f0bd2d57790">&#9670;&nbsp;</a></span>Save()</h2>
+<a id="a074352d2dbc7bc0e24470f0bd2d57790" name="a074352d2dbc7bc0e24470f0bd2d57790"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a074352d2dbc7bc0e24470f0bd2d57790">&#9670;&#160;</a></span>Save()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1719,21 +1561,21 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::Save </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>保存当前的状态。如颜色和矩阵等信息。</p>
 <blockquote class="doxtable">
-<p>save/restore必须配套使用，否则可能导致状态混乱。 </p>
+<p>&zwj;save/restore必须配套使用，否则可能导致状态混乱。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>
-<a id="a8803bf0876568ea4abe87fd7cc68944f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8803bf0876568ea4abe87fd7cc68944f">&#9670;&nbsp;</a></span>Scale()</h2>
+<a id="a8803bf0876568ea4abe87fd7cc68944f" name="a8803bf0876568ea4abe87fd7cc68944f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8803bf0876568ea4abe87fd7cc68944f">&#9670;&#160;</a></span>Scale()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1741,19 +1583,12 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::Scale </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1769,8 +1604,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a04ee2510e3ce41575ea38dc120ae88ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04ee2510e3ce41575ea38dc120ae88ff">&#9670;&nbsp;</a></span>SetAntialias()</h2>
+<a id="a04ee2510e3ce41575ea38dc120ae88ff" name="a04ee2510e3ce41575ea38dc120ae88ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04ee2510e3ce41575ea38dc120ae88ff">&#9670;&#160;</a></span>SetAntialias()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1778,8 +1613,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::SetAntialias </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1795,8 +1629,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="ac1ae81672a3b230cb19c30f869735fa7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1ae81672a3b230cb19c30f869735fa7">&#9670;&nbsp;</a></span>SetFillColor()</h2>
+<a id="ac1ae81672a3b230cb19c30f869735fa7" name="ac1ae81672a3b230cb19c30f869735fa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1ae81672a3b230cb19c30f869735fa7">&#9670;&#160;</a></span>SetFillColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1804,8 +1638,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::SetFillColor </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>color</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1821,8 +1654,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="af6c0e5d77bba67fb1a4efea9d33c6a62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6c0e5d77bba67fb1a4efea9d33c6a62">&#9670;&nbsp;</a></span>SetFont()</h2>
+<a id="af6c0e5d77bba67fb1a4efea9d33c6a62" name="af6c0e5d77bba67fb1a4efea9d33c6a62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c0e5d77bba67fb1a4efea9d33c6a62">&#9670;&#160;</a></span>SetFont()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1830,8 +1663,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::SetFont </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>font</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>font</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1847,8 +1679,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a634f4ea1ccab2c702a134054d3d56f42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a634f4ea1ccab2c702a134054d3d56f42">&#9670;&nbsp;</a></span>SetFontSize()</h2>
+<a id="a634f4ea1ccab2c702a134054d3d56f42" name="a634f4ea1ccab2c702a134054d3d56f42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a634f4ea1ccab2c702a134054d3d56f42">&#9670;&#160;</a></span>SetFontSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1856,8 +1688,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::SetFontSize </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1873,8 +1704,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a113b766d6cb99eaddd791ca095930a16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a113b766d6cb99eaddd791ca095930a16">&#9670;&nbsp;</a></span>SetGlobalAlpha()</h2>
+<a id="a113b766d6cb99eaddd791ca095930a16" name="a113b766d6cb99eaddd791ca095930a16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a113b766d6cb99eaddd791ca095930a16">&#9670;&#160;</a></span>SetGlobalAlpha()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1882,8 +1713,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::SetGlobalAlpha </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>alpha</em></td><td>)</td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>alpha</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1899,8 +1729,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a9043ed910653bb801719dae642bdbf03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9043ed910653bb801719dae642bdbf03">&#9670;&nbsp;</a></span>SetLineCap()</h2>
+<a id="a9043ed910653bb801719dae642bdbf03" name="a9043ed910653bb801719dae642bdbf03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9043ed910653bb801719dae642bdbf03">&#9670;&#160;</a></span>SetLineCap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1908,8 +1738,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::SetLineCap </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1925,8 +1754,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="abf0f4083b74ea9f71a5f514ec912ff67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf0f4083b74ea9f71a5f514ec912ff67">&#9670;&nbsp;</a></span>SetLineJoin()</h2>
+<a id="abf0f4083b74ea9f71a5f514ec912ff67" name="abf0f4083b74ea9f71a5f514ec912ff67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf0f4083b74ea9f71a5f514ec912ff67">&#9670;&#160;</a></span>SetLineJoin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1934,8 +1763,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::SetLineJoin </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1951,8 +1779,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a1373d9f061e4c78e9a042c4b674b322b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1373d9f061e4c78e9a042c4b674b322b">&#9670;&nbsp;</a></span>SetLineWidth()</h2>
+<a id="a1373d9f061e4c78e9a042c4b674b322b" name="a1373d9f061e4c78e9a042c4b674b322b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1373d9f061e4c78e9a042c4b674b322b">&#9670;&#160;</a></span>SetLineWidth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1960,8 +1788,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::SetLineWidth </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1977,8 +1804,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="ab47443dde40a320efbb538c4d83ccfce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab47443dde40a320efbb538c4d83ccfce">&#9670;&nbsp;</a></span>SetMiterLimit()</h2>
+<a id="ab47443dde40a320efbb538c4d83ccfce" name="ab47443dde40a320efbb538c4d83ccfce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab47443dde40a320efbb538c4d83ccfce">&#9670;&#160;</a></span>SetMiterLimit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1986,8 +1813,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::SetMiterLimit </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2003,8 +1829,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a695215d68840f5d8d4d30edfa6006e1b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a695215d68840f5d8d4d30edfa6006e1b">&#9670;&nbsp;</a></span>SetStrokeColor()</h2>
+<a id="a695215d68840f5d8d4d30edfa6006e1b" name="a695215d68840f5d8d4d30edfa6006e1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a695215d68840f5d8d4d30edfa6006e1b">&#9670;&#160;</a></span>SetStrokeColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2012,8 +1838,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::SetStrokeColor </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2029,8 +1854,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="ad16bdbbca115556988f0d442d8d6b460"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad16bdbbca115556988f0d442d8d6b460">&#9670;&nbsp;</a></span>SetTextAlign()</h2>
+<a id="ad16bdbbca115556988f0d442d8d6b460" name="ad16bdbbca115556988f0d442d8d6b460"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad16bdbbca115556988f0d442d8d6b460">&#9670;&#160;</a></span>SetTextAlign()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2038,8 +1863,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::SetTextAlign </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2055,8 +1879,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a7d60da8b841152856c5b352361c1540a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d60da8b841152856c5b352361c1540a">&#9670;&nbsp;</a></span>SetTextBaseline()</h2>
+<a id="a7d60da8b841152856c5b352361c1540a" name="a7d60da8b841152856c5b352361c1540a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d60da8b841152856c5b352361c1540a">&#9670;&#160;</a></span>SetTextBaseline()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2064,8 +1888,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::SetTextBaseline </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2081,8 +1904,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a4361859d7b511a8bfcfcdeac7b3ee169"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4361859d7b511a8bfcfcdeac7b3ee169">&#9670;&nbsp;</a></span>SetTransform()</h2>
+<a id="a4361859d7b511a8bfcfcdeac7b3ee169" name="a4361859d7b511a8bfcfcdeac7b3ee169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4361859d7b511a8bfcfcdeac7b3ee169">&#9670;&#160;</a></span>SetTransform()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2090,43 +1913,32 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::SetTransform </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>c</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>d</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>e</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>e</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>f</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>f</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2146,8 +1958,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a280cbf1d9b4ef38763216f0ea9ea0c0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a280cbf1d9b4ef38763216f0ea9ea0c0a">&#9670;&nbsp;</a></span>Stroke()</h2>
+<a id="a280cbf1d9b4ef38763216f0ea9ea0c0a" name="a280cbf1d9b4ef38763216f0ea9ea0c0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a280cbf1d9b4ef38763216f0ea9ea0c0a">&#9670;&#160;</a></span>Stroke()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2155,7 +1967,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::Stroke </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2165,8 +1977,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a7d89dbb4ee1d187ae5353c3d233a9d49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d89dbb4ee1d187ae5353c3d233a9d49">&#9670;&nbsp;</a></span>Transform()</h2>
+<a id="a7d89dbb4ee1d187ae5353c3d233a9d49" name="a7d89dbb4ee1d187ae5353c3d233a9d49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d89dbb4ee1d187ae5353c3d233a9d49">&#9670;&#160;</a></span>Transform()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2174,43 +1986,32 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::Transform </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>c</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>d</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>e</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>e</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>f</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>f</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2230,8 +2031,8 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="a6a7f7a772b7bb7fac8a8ba2b4e54b797"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a7f7a772b7bb7fac8a8ba2b4e54b797">&#9670;&nbsp;</a></span>Translate()</h2>
+<a id="a6a7f7a772b7bb7fac8a8ba2b4e54b797" name="a6a7f7a772b7bb7fac8a8ba2b4e54b797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a7f7a772b7bb7fac8a8ba2b4e54b797">&#9670;&#160;</a></span>Translate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2239,19 +2040,12 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         <tr>
           <td class="memname">ret_t TVgcanvas::Translate </td>
           <td>(</td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float_t&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2269,12 +2063,13 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
-<li>output/awtk_cpp.cpp</li>
+<li>output/<b>awtk_cpp.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

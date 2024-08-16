@@ -124,7 +124,6 @@ declare function value_str(v : any) : string;
 declare function value_str_ex(v : any, buff : string, size : number) : string;
 declare function value_is_null(value : any) : boolean;
 declare function value_equal(value : any, other : any) : boolean;
-declare function value_int(v : any) : number;
 declare function value_set_int(v : any, value : any) : any;
 declare function value_set_object(v : any, value : any) : any;
 declare function value_object(v : any) : any;
@@ -756,6 +755,7 @@ declare function WIDGET_PROP_LENGTH():any;
 declare function WIDGET_PROP_LINE_WRAP():any;
 declare function WIDGET_PROP_WORD_WRAP():any;
 declare function WIDGET_PROP_ELLIPSES():any;
+declare function WIDGET_PROP_VISIBLE_REVEAL_IN_SCROLL():any;
 declare function WIDGET_PROP_TEXT():any;
 declare function WIDGET_PROP_TR_TEXT():any;
 declare function WIDGET_PROP_STYLE():any;
@@ -976,6 +976,11 @@ declare function WIDGET_STATE_PRESSED_OF_ACTIVE():any;
 declare function WIDGET_STATE_OVER_OF_ACTIVE():any;
 declare function WIDGET_STATE_DISABLE_OF_ACTIVE():any;
 declare function WIDGET_STATE_FOCUSED_OF_ACTIVE():any;
+declare function WIDGET_STATE_NORMAL_OF_INDETERMINATE():any;
+declare function WIDGET_STATE_PRESSED_OF_INDETERMINATE():any;
+declare function WIDGET_STATE_OVER_OF_INDETERMINATE():any;
+declare function WIDGET_STATE_DISABLE_OF_INDETERMINATE():any;
+declare function WIDGET_STATE_FOCUSED_OF_INDETERMINATE():any;
 declare function WIDGET_CURSOR_DEFAULT():any;
 declare function WIDGET_CURSOR_EDIT():any;
 declare function WIDGET_CURSOR_HAND():any;
@@ -1542,6 +1547,7 @@ declare function window_manager() : any;
 declare function window_manager_cast(widget : any) : any;
 declare function window_manager_get_top_main_window(widget : any) : any;
 declare function window_manager_get_top_window(widget : any) : any;
+declare function window_manager_get_foreground_window(widget : any) : any;
 declare function window_manager_get_prev_window(widget : any) : any;
 declare function window_manager_get_pointer_x(widget : any) : number;
 declare function window_manager_get_pointer_y(widget : any) : number;
@@ -1727,6 +1733,8 @@ declare function mledit_set_open_im_when_focused(widget : any, open_im_when_focu
 declare function mledit_set_close_im_when_blured(widget : any, close_im_when_blured : boolean) : TRet;
 declare function mledit_set_select(widget : any, start : number, end : number) : TRet;
 declare function mledit_get_selected_text(widget : any) : string;
+declare function mledit_get_current_line_index(widget : any) : number;
+declare function mledit_get_current_row_index(widget : any) : number;
 declare function mledit_insert_text(widget : any, offset : number, text : string) : TRet;
 declare function mledit_cast(widget : any) : any;
 declare function mledit_t_get_prop_tips(nativeObj : any) : string;
@@ -2050,6 +2058,8 @@ declare function button_t_get_prop_pressed(nativeObj : any) : boolean;
 declare function check_button_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function check_button_create_radio(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function check_button_set_value(widget : any, value : any) : TRet;
+declare function check_button_set_indeterminate(widget : any, indeterminate : boolean) : TRet;
+declare function check_button_get_indeterminate(widget : any) : boolean;
 declare function check_button_cast(widget : any) : any;
 declare function check_button_create_ex(parent : any, x : number, y : number, w : number, h : number, type : string, radio : boolean) : any;
 declare function check_button_t_get_prop_value(nativeObj : any) : boolean;
@@ -2190,6 +2200,7 @@ declare function slider_set_line_cap(widget : any, line_cap : string) : TRet;
 declare function slider_set_step(widget : any, step : number) : TRet;
 declare function slider_set_bar_size(widget : any, bar_size : number) : TRet;
 declare function slider_set_vertical(widget : any, vertical : boolean) : TRet;
+declare function slider_set_drag_threshold(widget : any, drag_threshold : number) : TRet;
 declare function slider_t_get_prop_value(nativeObj : any) : number;
 declare function slider_t_get_prop_min(nativeObj : any) : number;
 declare function slider_t_get_prop_max(nativeObj : any) : number;
@@ -2200,22 +2211,28 @@ declare function slider_t_get_prop_line_cap(nativeObj : any) : string;
 declare function slider_t_get_prop_vertical(nativeObj : any) : boolean;
 declare function slider_t_get_prop_dragger_adapt_to_icon(nativeObj : any) : boolean;
 declare function slider_t_get_prop_slide_with_bar(nativeObj : any) : boolean;
+declare function slider_t_get_prop_drag_threshold(nativeObj : any) : number;
 declare function tab_button_group_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function tab_button_group_set_compact(widget : any, compact : boolean) : TRet;
 declare function tab_button_group_set_scrollable(widget : any, scrollable : boolean) : TRet;
+declare function tab_button_group_set_drag_child(widget : any, drag_child : boolean) : TRet;
 declare function tab_button_group_cast(widget : any) : any;
 declare function tab_button_group_t_get_prop_compact(nativeObj : any) : boolean;
 declare function tab_button_group_t_get_prop_scrollable(nativeObj : any) : boolean;
+declare function tab_button_group_t_get_prop_drag_child(nativeObj : any) : boolean;
 declare function tab_button_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function tab_button_cast(widget : any) : any;
 declare function tab_button_set_value(widget : any, value : any) : TRet;
 declare function tab_button_set_icon(widget : any, name : string) : TRet;
 declare function tab_button_set_active_icon(widget : any, name : string) : TRet;
+declare function tab_button_set_max_w(widget : any, max_w : number) : TRet;
+declare function tab_button_restack(widget : any, index : number) : TRet;
 declare function tab_button_set_load_ui(widget : any, name : string) : TRet;
 declare function tab_button_t_get_prop_value(nativeObj : any) : boolean;
 declare function tab_button_t_get_prop_load_ui(nativeObj : any) : string;
 declare function tab_button_t_get_prop_active_icon(nativeObj : any) : string;
 declare function tab_button_t_get_prop_icon(nativeObj : any) : string;
+declare function tab_button_t_get_prop_max_w(nativeObj : any) : number;
 declare function tab_control_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function tab_control_cast(widget : any) : any;
 declare function view_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -2298,6 +2315,7 @@ declare function object_default_create_ex(enable_path : boolean) : any;
 declare function object_default_unref(obj : any) : TRet;
 declare function object_default_clear_props(obj : any) : TRet;
 declare function object_default_set_keep_prop_type(obj : any, keep_prop_type : boolean) : TRet;
+declare function object_default_set_name_case_insensitive(obj : any, name_case_insensitive : boolean) : TRet;
 declare function timer_info_cast(timer : any) : any;
 declare function timer_info_t_get_prop_ctx(nativeObj : any) : any;
 declare function timer_info_t_get_prop_extra_ctx(nativeObj : any) : any;
@@ -3921,17 +3939,6 @@ export class TValue {
    */
  equal(other : TValue) : boolean  {
     return value_equal(this != null ? (this.nativeObj || this) : null, other != null ? (other.nativeObj || other) : null);
- }
-
-
-  /**
-   * 转换为int的值。
-   * 
-   *
-   * @returns 值。
-   */
- int() : number  {
-    return value_int(this != null ? (this.nativeObj || this) : null);
  }
 
 
@@ -9225,6 +9232,12 @@ export enum TWidgetProp {
  ELLIPSES = WIDGET_PROP_ELLIPSES(),
 
   /**
+   * 可见控件在滚动控件中的可见处理方案。（影响 widget_ensure_visible_in_viewport 函数）
+   *
+   */
+ VISIBLE_REVEAL_IN_SCROLL = WIDGET_PROP_VISIBLE_REVEAL_IN_SCROLL(),
+
+  /**
    * 文本。
    *
    */
@@ -10579,6 +10592,36 @@ export enum TWidgetState {
    *
    */
  FOCUSED_OF_ACTIVE = WIDGET_STATE_FOCUSED_OF_ACTIVE(),
+
+  /**
+   * 正常状态(选项不确定)。
+   *
+   */
+ NORMAL_OF_INDETERMINATE = WIDGET_STATE_NORMAL_OF_INDETERMINATE(),
+
+  /**
+   * 指针按下状态(选项不确定)。
+   *
+   */
+ PRESSED_OF_INDETERMINATE = WIDGET_STATE_PRESSED_OF_INDETERMINATE(),
+
+  /**
+   * 指针悬浮状态(选项不确定)。
+   *
+   */
+ OVER_OF_INDETERMINATE = WIDGET_STATE_OVER_OF_INDETERMINATE(),
+
+  /**
+   * 禁用状态(选项不确定)。
+   *
+   */
+ DISABLE_OF_INDETERMINATE = WIDGET_STATE_DISABLE_OF_INDETERMINATE(),
+
+  /**
+   * 焦点状态(选项不确定)。
+   *
+   */
+ FOCUSED_OF_INDETERMINATE = WIDGET_STATE_FOCUSED_OF_INDETERMINATE(),
 };
 
 
@@ -16463,6 +16506,17 @@ export class TWindowManager extends TWidget {
 
 
   /**
+   * 获取前景窗口。
+   * 
+   *
+   * @returns 返回窗口对象。
+   */
+ getForegroundWindow() : TWidget  {
+    return new TWidget(window_manager_get_foreground_window(this != null ? (this.nativeObj || this) : null));
+ }
+
+
+  /**
    * 获取前一个的窗口。
    * 
    *
@@ -19257,6 +19311,28 @@ export class TMledit extends TWidget {
 
 
   /**
+   * 获取光标所在视觉行号(一行文本可能分多行显示)。
+   * 
+   *
+   * @returns 返回光标所在行号。
+   */
+ getCurrentLineIndex() : number  {
+    return mledit_get_current_line_index(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 获取光标所在物理行号。
+   * 
+   *
+   * @returns 返回光标所在行号。
+   */
+ getCurrentRowIndex() : number  {
+    return mledit_get_current_row_index(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
    * 插入一段文本。
    * 
    * @param offset 插入的偏移位置。
@@ -20531,10 +20607,10 @@ export class TListViewH extends TWidget {
  *备注：list_view 下的 scroll_view 控件不支持遍历所有子控件的效果。
  *
  *下面是针对 scroll_bar_d （桌面版）有效果，scroll_bar_m（移动版）没有效果。
- *如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 TRUE，scroll_view 宽默认为 list_view 的 100% 宽，鼠标在 list_view 上滚动条才显示，不在的就自动隐藏，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽不会变。
- *如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 FALSE ，scroll_view 宽默认为 list_view 的 100% 宽，滚动条不隐藏，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽不会变。
- *如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 FALSE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可用，scroll_view 宽不会变。
- *如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 TRUE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽会合并原来滚动条的宽。
+ *如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 TRUE， 如果 scroll_view 的高比虚拟高要小的话，鼠标在 list_view 上滚动条才显示，鼠标移开的就自动隐藏，scroll_view 宽为控件宽度。
+ *如果 floating_scroll_bar 属性为 TRUE 和 auto_hide_scroll_bar 属性为 FALSE ，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，如果 scroll_view 的高比虚拟高要小的话，滚动条固定显示（不管鼠标是否悬停），scroll_view 宽为控件宽度。
+ *如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 FALSE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可用（滚动条固定显示，不管鼠标是否悬停），scroll_view 宽不会变。
+ *如果 floating_scroll_bar 属性为 FALSE 和 auto_hide_scroll_bar 属性为 TRUE，如果 scroll_view 的高比虚拟高要大的话，滚动条变成不可见，scroll_view 宽会合并原来滚动条的宽，如果 scroll_view 的高比虚拟高要小的话，滚动条固定显示（不管鼠标是否悬停），scroll_view 宽会变为 list_view 宽度减去滚动条宽度。
  *
  */
 export class TListView extends TWidget { 
@@ -24320,6 +24396,29 @@ export class TCheckButton extends TWidget {
 
 
   /**
+   * 设置控件的不确定状态。
+   * 
+   * @param indeterminate 不确定状态。（该值为TRUE的话，value 值存于不确定状态，该值为FALSE的话，value 值存于确定状态）
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setIndeterminate(indeterminate : boolean) : TRet  {
+    return check_button_set_indeterminate(this != null ? (this.nativeObj || this) : null, indeterminate);
+ }
+
+
+  /**
+   * 获取控件的是否存于不确定状态。
+   * 
+   *
+   * @returns 返回控件的是否存于不确定状态。
+   */
+ getIndeterminate() : boolean  {
+    return check_button_get_indeterminate(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
    * 转换check_button对象(供脚本语言使用)。
    * 
    * @param widget check_button对象。
@@ -26758,6 +26857,18 @@ export class TSlider extends TWidget {
 
 
   /**
+   * 设置拖拽临界值。
+   * 
+   * @param drag_threshold 拖拽临界值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setDragThreshold(drag_threshold : number) : TRet  {
+    return slider_set_drag_threshold(this != null ? (this.nativeObj || this) : null, drag_threshold);
+ }
+
+
+  /**
    * 值。
    *
    */
@@ -26874,6 +26985,19 @@ export class TSlider extends TWidget {
    return slider_t_get_prop_slide_with_bar(this.nativeObj);
  }
 
+
+  /**
+   * 拖动临界值。
+   *
+   */
+ get dragThreshold() : number {
+   return slider_t_get_prop_drag_threshold(this.nativeObj);
+ }
+
+ set dragThreshold(v : number) {
+   this.setDragThreshold(v);
+ }
+
 };
 /**
  * 标签按钮分组控件。
@@ -26955,6 +27079,18 @@ export class TTabButtonGroup extends TWidget {
 
 
   /**
+   * 设置拖拽 tab_button 控件位置。
+   * 
+   * @param drag_child 是否拖拽(缺省FALSE)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setDragChild(drag_child : boolean) : TRet  {
+    return tab_button_group_set_drag_child(this != null ? (this.nativeObj || this) : null, drag_child);
+ }
+
+
+  /**
    * 转换tab_button_group对象(供脚本语言使用)。
    * 
    * @param widget tab_button_group对象。
@@ -26991,6 +27127,21 @@ export class TTabButtonGroup extends TWidget {
 
  set scrollable(v : boolean) {
    this.setScrollable(v);
+ }
+
+
+  /**
+   * 是否支持拖拽并且修改 tab_button 控件的位置(缺省FALSE)。
+   *
+   *> 紧凑型排版子控件时才支持滚动，开启该功能后，就不能拖拽滚动了，只能鼠标滚轮滚动了。
+   *
+   */
+ get dragChild() : boolean {
+   return tab_button_group_t_get_prop_drag_child(this.nativeObj);
+ }
+
+ set dragChild(v : boolean) {
+   this.setDragChild(v);
  }
 
 };
@@ -27127,6 +27278,30 @@ export class TTabButton extends TWidget {
 
 
   /**
+   * 设置控件的最大宽度。
+   * 
+   * @param max_w 最大宽度。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setMaxW(max_w : number) : TRet  {
+    return tab_button_set_max_w(this != null ? (this.nativeObj || this) : null, max_w);
+ }
+
+
+  /**
+   * 调整控件在父控件中的位置序数。
+   * 
+   * @param index 位置序数(大于等于总个数，则放到最后)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ restack(index : number) : TRet  {
+    return tab_button_restack(this != null ? (this.nativeObj || this) : null, index);
+ }
+
+
+  /**
    * 设置控件动态加载显示UI。
    * 
    * @param name 动态加载UI的资源名称。
@@ -27187,6 +27362,19 @@ export class TTabButton extends TWidget {
 
  set icon(v : string) {
    this.setIcon(v);
+ }
+
+
+  /**
+   * 最大宽度。（缺省值为-1，小于 0 则最大宽度无效）
+   *
+   */
+ get maxW() : number {
+   return tab_button_t_get_prop_max_w(this.nativeObj);
+ }
+
+ set maxW(v : number) {
+   this.setMaxW(v);
  }
 
 };
@@ -28772,6 +28960,18 @@ export class TObjectDefault extends TObject {
    */
  setKeepPropType(keep_prop_type : boolean) : TRet  {
     return object_default_set_keep_prop_type(this != null ? (this.nativeObj || this) : null, keep_prop_type);
+ }
+
+
+  /**
+   * 设置属性名是否大小写不敏感。
+   * 
+   * @param name_case_insensitive 属性名是否大小写不敏感。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setNameCaseInsensitive(name_case_insensitive : boolean) : TRet  {
+    return object_default_set_name_case_insensitive(this != null ? (this.nativeObj || this) : null, name_case_insensitive);
  }
 
 };

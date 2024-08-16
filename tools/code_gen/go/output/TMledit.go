@@ -86,6 +86,14 @@ func (this TMledit) GetSelectedText() string {
   return C.GoString(C.mledit_get_selected_text((*C.widget_t)(this.handle)));
 }
 
+func (this TMledit) GetCurrentLineIndex() uint32 {
+  return (uint32)(C.mledit_get_current_line_index((*C.widget_t)(this.handle)));
+}
+
+func (this TMledit) GetCurrentRowIndex() uint32 {
+  return (uint32)(C.mledit_get_current_row_index((*C.widget_t)(this.handle)));
+}
+
 func (this TMledit) InsertText(offset uint32, text string) TRet {
   atext := C.CString(text)
   defer C.free(unsafe.Pointer(atext))

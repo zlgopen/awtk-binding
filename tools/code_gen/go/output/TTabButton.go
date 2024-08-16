@@ -30,6 +30,14 @@ func (this TTabButton) SetActiveIcon(name string) TRet {
   return TRet(C.tab_button_set_active_icon((*C.widget_t)(this.handle), aname));
 }
 
+func (this TTabButton) SetMaxW(max_w int32) TRet {
+  return TRet(C.tab_button_set_max_w((*C.widget_t)(this.handle), (C.int32_t)(max_w)));
+}
+
+func (this TTabButton) Restack(index uint32) TRet {
+  return TRet(C.tab_button_restack((*C.widget_t)(this.handle), (C.uint32_t)(index)));
+}
+
 func (this TTabButton) SetLoadUi(name string) TRet {
   aname := C.CString(name)
   defer C.free(unsafe.Pointer(aname))
@@ -46,5 +54,9 @@ func (this TTabButton) GetActiveIcon() string {
 
 func (this TTabButton) GetIcon() string {
   return C.GoString((*C.tab_button_t)(unsafe.Pointer(this.handle)).icon);
+}
+
+func (this TTabButton) GetMaxW() int32 {
+  return (int32)((*C.tab_button_t)(unsafe.Pointer(this.handle)).max_w);
 }
 

@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TBitmap类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,76 +70,83 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="class_t_bitmap-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">TBitmap类 参考</div>  </div>
+  <div class="headertitle"><div class="title">TBitmap类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a364975be5ca04e7f0fd5aeae12ae1547"><td class="memItemLeft" align="right" valign="top"><a id="a364975be5ca04e7f0fd5aeae12ae1547"></a>
+<tr class="memitem:a364975be5ca04e7f0fd5aeae12ae1547" id="r_a364975be5ca04e7f0fd5aeae12ae1547"><td class="memItemLeft" align="right" valign="top"><a id="a364975be5ca04e7f0fd5aeae12ae1547" name="a364975be5ca04e7f0fd5aeae12ae1547"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TBitmap</b> (bitmap_t *nativeObj)</td></tr>
 <tr class="separator:a364975be5ca04e7f0fd5aeae12ae1547"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99f447e0a0951fb6f1d72ebd699ed4fa"><td class="memItemLeft" align="right" valign="top"><a id="a99f447e0a0951fb6f1d72ebd699ed4fa"></a>
+<tr class="memitem:a99f447e0a0951fb6f1d72ebd699ed4fa" id="r_a99f447e0a0951fb6f1d72ebd699ed4fa"><td class="memItemLeft" align="right" valign="top"><a id="a99f447e0a0951fb6f1d72ebd699ed4fa" name="a99f447e0a0951fb6f1d72ebd699ed4fa"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TBitmap</b> (const bitmap_t *nativeObj)</td></tr>
 <tr class="separator:a99f447e0a0951fb6f1d72ebd699ed4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ad8c5307fa80003c42462a50b96e894"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_bitmap.html#a8ad8c5307fa80003c42462a50b96e894">GetBpp</a> ()</td></tr>
+<tr class="memitem:a8ad8c5307fa80003c42462a50b96e894" id="r_a8ad8c5307fa80003c42462a50b96e894"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ad8c5307fa80003c42462a50b96e894">GetBpp</a> ()</td></tr>
 <tr class="separator:a8ad8c5307fa80003c42462a50b96e894"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b1f901f4eb9650446e6a4ad8736f7b4"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_bitmap.html#a7b1f901f4eb9650446e6a4ad8736f7b4">Destroy</a> ()</td></tr>
+<tr class="memitem:a7b1f901f4eb9650446e6a4ad8736f7b4" id="r_a7b1f901f4eb9650446e6a4ad8736f7b4"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b1f901f4eb9650446e6a4ad8736f7b4">Destroy</a> ()</td></tr>
 <tr class="separator:a7b1f901f4eb9650446e6a4ad8736f7b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74eeb69cbd3aab2a8ef0f98a65689619"><td class="memItemLeft" align="right" valign="top">wh_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_bitmap.html#a74eeb69cbd3aab2a8ef0f98a65689619">GetW</a> () const</td></tr>
+<tr class="memitem:a74eeb69cbd3aab2a8ef0f98a65689619" id="r_a74eeb69cbd3aab2a8ef0f98a65689619"><td class="memItemLeft" align="right" valign="top">wh_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74eeb69cbd3aab2a8ef0f98a65689619">GetW</a> () const</td></tr>
 <tr class="separator:a74eeb69cbd3aab2a8ef0f98a65689619"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94e03670e066e80b6f58d5df423ffb1d"><td class="memItemLeft" align="right" valign="top">wh_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_bitmap.html#a94e03670e066e80b6f58d5df423ffb1d">GetH</a> () const</td></tr>
+<tr class="memitem:a94e03670e066e80b6f58d5df423ffb1d" id="r_a94e03670e066e80b6f58d5df423ffb1d"><td class="memItemLeft" align="right" valign="top">wh_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94e03670e066e80b6f58d5df423ffb1d">GetH</a> () const</td></tr>
 <tr class="separator:a94e03670e066e80b6f58d5df423ffb1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a052d01d0f4e56663264faba6acebd73a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_bitmap.html#a052d01d0f4e56663264faba6acebd73a">GetLineLength</a> () const</td></tr>
+<tr class="memitem:a052d01d0f4e56663264faba6acebd73a" id="r_a052d01d0f4e56663264faba6acebd73a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a052d01d0f4e56663264faba6acebd73a">GetLineLength</a> () const</td></tr>
 <tr class="separator:a052d01d0f4e56663264faba6acebd73a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f066ed49d904c52b3b0bba070ace1da"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_bitmap.html#a8f066ed49d904c52b3b0bba070ace1da">GetFlags</a> () const</td></tr>
+<tr class="memitem:a8f066ed49d904c52b3b0bba070ace1da" id="r_a8f066ed49d904c52b3b0bba070ace1da"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f066ed49d904c52b3b0bba070ace1da">GetFlags</a> () const</td></tr>
 <tr class="separator:a8f066ed49d904c52b3b0bba070ace1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab856c4db190803808dd5cfca9163dd9f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_bitmap.html#ab856c4db190803808dd5cfca9163dd9f">GetFormat</a> () const</td></tr>
+<tr class="memitem:ab856c4db190803808dd5cfca9163dd9f" id="r_ab856c4db190803808dd5cfca9163dd9f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab856c4db190803808dd5cfca9163dd9f">GetFormat</a> () const</td></tr>
 <tr class="separator:ab856c4db190803808dd5cfca9163dd9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29f04e34c76d605ea5c6c653396ef0e9"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_bitmap.html#a29f04e34c76d605ea5c6c653396ef0e9">GetName</a> () const</td></tr>
+<tr class="memitem:a29f04e34c76d605ea5c6c653396ef0e9" id="r_a29f04e34c76d605ea5c6c653396ef0e9"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29f04e34c76d605ea5c6c653396ef0e9">GetName</a> () const</td></tr>
 <tr class="separator:a29f04e34c76d605ea5c6c653396ef0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a8dbbd38c9136f5f8b97386cfb5164159"><td class="memItemLeft" align="right" valign="top"><a id="a8dbbd38c9136f5f8b97386cfb5164159"></a>
+<tr class="memitem:a8dbbd38c9136f5f8b97386cfb5164159" id="r_a8dbbd38c9136f5f8b97386cfb5164159"><td class="memItemLeft" align="right" valign="top"><a id="a8dbbd38c9136f5f8b97386cfb5164159" name="a8dbbd38c9136f5f8b97386cfb5164159"></a>
 static <a class="el" href="class_t_bitmap.html">TBitmap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (bitmap_t *nativeObj)</td></tr>
 <tr class="separator:a8dbbd38c9136f5f8b97386cfb5164159"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42d482ba398a685a662a0e448c10c315"><td class="memItemLeft" align="right" valign="top"><a id="a42d482ba398a685a662a0e448c10c315"></a>
+<tr class="memitem:a42d482ba398a685a662a0e448c10c315" id="r_a42d482ba398a685a662a0e448c10c315"><td class="memItemLeft" align="right" valign="top"><a id="a42d482ba398a685a662a0e448c10c315" name="a42d482ba398a685a662a0e448c10c315"></a>
 static <a class="el" href="class_t_bitmap.html">TBitmap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const bitmap_t *nativeObj)</td></tr>
 <tr class="separator:a42d482ba398a685a662a0e448c10c315"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e02a250a63c03b6730f371c453252ed"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_bitmap.html">TBitmap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_bitmap.html#a6e02a250a63c03b6730f371c453252ed">Create</a> ()</td></tr>
+<tr class="memitem:a6e02a250a63c03b6730f371c453252ed" id="r_a6e02a250a63c03b6730f371c453252ed"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_bitmap.html">TBitmap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e02a250a63c03b6730f371c453252ed">Create</a> ()</td></tr>
 <tr class="separator:a6e02a250a63c03b6730f371c453252ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c609fbeba442c5c03ca9577b2ffc67b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_bitmap.html">TBitmap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_bitmap.html#a6c609fbeba442c5c03ca9577b2ffc67b">CreateEx</a> (uint32_t w, uint32_t h, uint32_t line_length, bitmap_format_t format)</td></tr>
+<tr class="memitem:a6c609fbeba442c5c03ca9577b2ffc67b" id="r_a6c609fbeba442c5c03ca9577b2ffc67b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_bitmap.html">TBitmap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c609fbeba442c5c03ca9577b2ffc67b">CreateEx</a> (uint32_t w, uint32_t h, uint32_t line_length, bitmap_format_t format)</td></tr>
 <tr class="separator:a6c609fbeba442c5c03ca9577b2ffc67b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a849cde5bc09e281891a467933c1797ac"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_bitmap.html#a849cde5bc09e281891a467933c1797ac">GetBppOfFormat</a> (bitmap_format_t format)</td></tr>
+<tr class="memitem:a849cde5bc09e281891a467933c1797ac" id="r_a849cde5bc09e281891a467933c1797ac"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a849cde5bc09e281891a467933c1797ac">GetBppOfFormat</a> (bitmap_format_t format)</td></tr>
 <tr class="separator:a849cde5bc09e281891a467933c1797ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:a0334d7bf7243eaf0f122997e590c7138"><td class="memItemLeft" align="right" valign="top"><a id="a0334d7bf7243eaf0f122997e590c7138"></a>
+<tr class="memitem:a0334d7bf7243eaf0f122997e590c7138" id="r_a0334d7bf7243eaf0f122997e590c7138"><td class="memItemLeft" align="right" valign="top"><a id="a0334d7bf7243eaf0f122997e590c7138" name="a0334d7bf7243eaf0f122997e590c7138"></a>
 bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td></tr>
 <tr class="separator:a0334d7bf7243eaf0f122997e590c7138"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>位图。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a6e02a250a63c03b6730f371c453252ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e02a250a63c03b6730f371c453252ed">&#9670;&nbsp;</a></span>Create()</h2>
+<a id="a6e02a250a63c03b6730f371c453252ed" name="a6e02a250a63c03b6730f371c453252ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e02a250a63c03b6730f371c453252ed">&#9670;&#160;</a></span>Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,7 +157,7 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
         <tr>
           <td class="memname"><a class="el" href="class_t_bitmap.html">TBitmap</a> TBitmap::Create </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -150,8 +172,8 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
 
 </div>
 </div>
-<a id="a6c609fbeba442c5c03ca9577b2ffc67b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c609fbeba442c5c03ca9577b2ffc67b">&#9670;&nbsp;</a></span>CreateEx()</h2>
+<a id="a6c609fbeba442c5c03ca9577b2ffc67b" name="a6c609fbeba442c5c03ca9577b2ffc67b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c609fbeba442c5c03ca9577b2ffc67b">&#9670;&#160;</a></span>CreateEx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,31 +184,22 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
         <tr>
           <td class="memname"><a class="el" href="class_t_bitmap.html">TBitmap</a> TBitmap::CreateEx </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>h</em>, </td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>line_length</em>, </td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>line_length</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bitmap_format_t&#160;</td>
-          <td class="paramname"><em>format</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">bitmap_format_t</td>          <td class="paramname"><span class="paramname"><em>format</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -209,8 +222,8 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
 
 </div>
 </div>
-<a id="a7b1f901f4eb9650446e6a4ad8736f7b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b1f901f4eb9650446e6a4ad8736f7b4">&#9670;&nbsp;</a></span>Destroy()</h2>
+<a id="a7b1f901f4eb9650446e6a4ad8736f7b4" name="a7b1f901f4eb9650446e6a4ad8736f7b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b1f901f4eb9650446e6a4ad8736f7b4">&#9670;&#160;</a></span>Destroy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,7 +231,7 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
         <tr>
           <td class="memname">ret_t TBitmap::Destroy </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -228,8 +241,8 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
 
 </div>
 </div>
-<a id="a8ad8c5307fa80003c42462a50b96e894"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ad8c5307fa80003c42462a50b96e894">&#9670;&nbsp;</a></span>GetBpp()</h2>
+<a id="a8ad8c5307fa80003c42462a50b96e894" name="a8ad8c5307fa80003c42462a50b96e894"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ad8c5307fa80003c42462a50b96e894">&#9670;&#160;</a></span>GetBpp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -237,7 +250,7 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
         <tr>
           <td class="memname">uint32_t TBitmap::GetBpp </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -247,8 +260,8 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
 
 </div>
 </div>
-<a id="a849cde5bc09e281891a467933c1797ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a849cde5bc09e281891a467933c1797ac">&#9670;&nbsp;</a></span>GetBppOfFormat()</h2>
+<a id="a849cde5bc09e281891a467933c1797ac" name="a849cde5bc09e281891a467933c1797ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a849cde5bc09e281891a467933c1797ac">&#9670;&#160;</a></span>GetBppOfFormat()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -259,8 +272,7 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
         <tr>
           <td class="memname">uint32_t TBitmap::GetBppOfFormat </td>
           <td>(</td>
-          <td class="paramtype">bitmap_format_t&#160;</td>
-          <td class="paramname"><em>format</em></td><td>)</td>
+          <td class="paramtype">bitmap_format_t</td>          <td class="paramname"><span class="paramname"><em>format</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -281,8 +293,8 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
 
 </div>
 </div>
-<a id="a8f066ed49d904c52b3b0bba070ace1da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f066ed49d904c52b3b0bba070ace1da">&#9670;&nbsp;</a></span>GetFlags()</h2>
+<a id="a8f066ed49d904c52b3b0bba070ace1da" name="a8f066ed49d904c52b3b0bba070ace1da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f066ed49d904c52b3b0bba070ace1da">&#9670;&#160;</a></span>GetFlags()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,7 +302,7 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
         <tr>
           <td class="memname">uint16_t TBitmap::GetFlags </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -299,8 +311,8 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
 
 </div>
 </div>
-<a id="ab856c4db190803808dd5cfca9163dd9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab856c4db190803808dd5cfca9163dd9f">&#9670;&nbsp;</a></span>GetFormat()</h2>
+<a id="ab856c4db190803808dd5cfca9163dd9f" name="ab856c4db190803808dd5cfca9163dd9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab856c4db190803808dd5cfca9163dd9f">&#9670;&#160;</a></span>GetFormat()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -308,7 +320,7 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
         <tr>
           <td class="memname">uint16_t TBitmap::GetFormat </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -317,8 +329,8 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
 
 </div>
 </div>
-<a id="a94e03670e066e80b6f58d5df423ffb1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94e03670e066e80b6f58d5df423ffb1d">&#9670;&nbsp;</a></span>GetH()</h2>
+<a id="a94e03670e066e80b6f58d5df423ffb1d" name="a94e03670e066e80b6f58d5df423ffb1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94e03670e066e80b6f58d5df423ffb1d">&#9670;&#160;</a></span>GetH()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -326,7 +338,7 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
         <tr>
           <td class="memname">wh_t TBitmap::GetH </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -335,8 +347,8 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
 
 </div>
 </div>
-<a id="a052d01d0f4e56663264faba6acebd73a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a052d01d0f4e56663264faba6acebd73a">&#9670;&nbsp;</a></span>GetLineLength()</h2>
+<a id="a052d01d0f4e56663264faba6acebd73a" name="a052d01d0f4e56663264faba6acebd73a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a052d01d0f4e56663264faba6acebd73a">&#9670;&#160;</a></span>GetLineLength()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -344,7 +356,7 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
         <tr>
           <td class="memname">uint32_t TBitmap::GetLineLength </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -353,8 +365,8 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
 
 </div>
 </div>
-<a id="a29f04e34c76d605ea5c6c653396ef0e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29f04e34c76d605ea5c6c653396ef0e9">&#9670;&nbsp;</a></span>GetName()</h2>
+<a id="a29f04e34c76d605ea5c6c653396ef0e9" name="a29f04e34c76d605ea5c6c653396ef0e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29f04e34c76d605ea5c6c653396ef0e9">&#9670;&#160;</a></span>GetName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -362,7 +374,7 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
         <tr>
           <td class="memname">const char * TBitmap::GetName </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -371,8 +383,8 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
 
 </div>
 </div>
-<a id="a74eeb69cbd3aab2a8ef0f98a65689619"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74eeb69cbd3aab2a8ef0f98a65689619">&#9670;&nbsp;</a></span>GetW()</h2>
+<a id="a74eeb69cbd3aab2a8ef0f98a65689619" name="a74eeb69cbd3aab2a8ef0f98a65689619"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74eeb69cbd3aab2a8ef0f98a65689619">&#9670;&#160;</a></span>GetW()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -380,7 +392,7 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
         <tr>
           <td class="memname">wh_t TBitmap::GetW </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -391,12 +403,13 @@ bitmap_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
-<li>output/awtk_cpp.cpp</li>
+<li>output/<b>awtk_cpp.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

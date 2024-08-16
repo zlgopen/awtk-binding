@@ -1,149 +1,70 @@
-[AWTK](../README.md) / [Exports](../modules.md) / TObjectDefault
+[**AWTK**](../README.md) • **Docs**
+
+***
+
+[AWTK](../globals.md) / TObjectDefault
 
 # Class: TObjectDefault
 
 对象接口的缺省实现。
 
-内部使用有序数组保存所有属性，可以快速查找指定名称的属性。
+通用当作 map 数据结构使用，内部用有序数组保存所有属性，因此可以快速查找指定名称的属性。
 
-## Hierarchy
+示例
+
+## Extends
 
 - [`TObject`](TObject.md)
 
-  ↳ **`TObjectDefault`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](TObjectDefault.md#constructor)
-
-### Properties
-
-- [nativeObj](TObjectDefault.md#nativeobj)
-
-### Accessors
-
-- [name](TObjectDefault.md#name)
-- [refCount](TObjectDefault.md#refcount)
-
-### Methods
-
-- [canExec](TObjectDefault.md#canexec)
-- [canExecByPath](TObjectDefault.md#canexecbypath)
-- [clearProps](TObjectDefault.md#clearprops)
-- [compare](TObjectDefault.md#compare)
-- [copyProp](TObjectDefault.md#copyprop)
-- [copyProps](TObjectDefault.md#copyprops)
-- [destroy](TObjectDefault.md#destroy)
-- [disable](TObjectDefault.md#disable)
-- [dispatch](TObjectDefault.md#dispatch)
-- [dispatchSimpleEvent](TObjectDefault.md#dispatchsimpleevent)
-- [enable](TObjectDefault.md#enable)
-- [eval](TObjectDefault.md#eval)
-- [execute](TObjectDefault.md#execute)
-- [executeByPath](TObjectDefault.md#executebypath)
-- [getDesc](TObjectDefault.md#getdesc)
-- [getProp](TObjectDefault.md#getprop)
-- [getPropBool](TObjectDefault.md#getpropbool)
-- [getPropBoolByPath](TObjectDefault.md#getpropboolbypath)
-- [getPropDouble](TObjectDefault.md#getpropdouble)
-- [getPropFloat](TObjectDefault.md#getpropfloat)
-- [getPropFloatByPath](TObjectDefault.md#getpropfloatbypath)
-- [getPropInt](TObjectDefault.md#getpropint)
-- [getPropInt16](TObjectDefault.md#getpropint16)
-- [getPropInt32](TObjectDefault.md#getpropint32)
-- [getPropInt64](TObjectDefault.md#getpropint64)
-- [getPropInt8](TObjectDefault.md#getpropint8)
-- [getPropIntByPath](TObjectDefault.md#getpropintbypath)
-- [getPropObject](TObjectDefault.md#getpropobject)
-- [getPropObjectByPath](TObjectDefault.md#getpropobjectbypath)
-- [getPropPointer](TObjectDefault.md#getproppointer)
-- [getPropPointerByPath](TObjectDefault.md#getproppointerbypath)
-- [getPropStr](TObjectDefault.md#getpropstr)
-- [getPropStrByPath](TObjectDefault.md#getpropstrbypath)
-- [getPropUint16](TObjectDefault.md#getpropuint16)
-- [getPropUint32](TObjectDefault.md#getpropuint32)
-- [getPropUint64](TObjectDefault.md#getpropuint64)
-- [getPropUint8](TObjectDefault.md#getpropuint8)
-- [getSize](TObjectDefault.md#getsize)
-- [getType](TObjectDefault.md#gettype)
-- [hasProp](TObjectDefault.md#hasprop)
-- [hasPropByPath](TObjectDefault.md#haspropbypath)
-- [isCollection](TObjectDefault.md#iscollection)
-- [notifyChanged](TObjectDefault.md#notifychanged)
-- [off](TObjectDefault.md#off)
-- [on](TObjectDefault.md#on)
-- [removeProp](TObjectDefault.md#removeprop)
-- [setName](TObjectDefault.md#setname)
-- [setProp](TObjectDefault.md#setprop)
-- [setPropBool](TObjectDefault.md#setpropbool)
-- [setPropBoolByPath](TObjectDefault.md#setpropboolbypath)
-- [setPropByPath](TObjectDefault.md#setpropbypath)
-- [setPropDouble](TObjectDefault.md#setpropdouble)
-- [setPropFloat](TObjectDefault.md#setpropfloat)
-- [setPropFloatByPath](TObjectDefault.md#setpropfloatbypath)
-- [setPropInt](TObjectDefault.md#setpropint)
-- [setPropInt16](TObjectDefault.md#setpropint16)
-- [setPropInt32](TObjectDefault.md#setpropint32)
-- [setPropInt64](TObjectDefault.md#setpropint64)
-- [setPropInt8](TObjectDefault.md#setpropint8)
-- [setPropIntByPath](TObjectDefault.md#setpropintbypath)
-- [setPropObject](TObjectDefault.md#setpropobject)
-- [setPropObjectByPath](TObjectDefault.md#setpropobjectbypath)
-- [setPropStr](TObjectDefault.md#setpropstr)
-- [setPropStrByPath](TObjectDefault.md#setpropstrbypath)
-- [setPropUint16](TObjectDefault.md#setpropuint16)
-- [setPropUint32](TObjectDefault.md#setpropuint32)
-- [setPropUint64](TObjectDefault.md#setpropuint64)
-- [setPropUint8](TObjectDefault.md#setpropuint8)
-- [unref](TObjectDefault.md#unref)
-- [cast](TObjectDefault.md#cast)
-- [create](TObjectDefault.md#create)
-- [createEx](TObjectDefault.md#createex)
-- [ref](TObjectDefault.md#ref)
-
 ## Constructors
 
-### constructor
+### new TObjectDefault()
 
-• **new TObjectDefault**(`nativeObj`)
+> **new TObjectDefault**(`nativeObj`): [`TObjectDefault`](TObjectDefault.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `nativeObj` | `any` |
+• **nativeObj**: `any`
+
+#### Returns
+
+[`TObjectDefault`](TObjectDefault.md)
 
 #### Overrides
 
-[TObject](TObject.md).[constructor](TObject.md#constructor)
+[`TObject`](TObject.md).[`constructor`](TObject.md#constructors)
 
 #### Defined in
 
-[awtk.ts:27729](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L27729)
+[awtk.ts:28904](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L28904)
 
 ## Properties
 
 ### nativeObj
 
-• **nativeObj**: `any`
+> **nativeObj**: `any`
 
 #### Overrides
 
-[TObject](TObject.md).[nativeObj](TObject.md#nativeobj)
+[`TObject`](TObject.md).[`nativeObj`](TObject.md#nativeobj)
 
 #### Defined in
 
-[awtk.ts:27728](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L27728)
+[awtk.ts:28903](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L28903)
 
 ## Accessors
 
 ### name
 
-• `get` **name**(): `string`
+> `get` **name**(): `string`
 
 对象的名称。
+
+> `set` **name**(`v`): `void`
+
+#### Parameters
+
+• **v**: `string`
 
 #### Returns
 
@@ -151,37 +72,17 @@
 
 #### Inherited from
 
-TObject.name
+[`TObject`](TObject.md).[`name`](TObject.md#name)
 
 #### Defined in
 
-[awtk.ts:3521](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3521)
+[awtk.ts:3618](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3618)
 
-• `set` **name**(`v`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `v` | `string` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-TObject.name
-
-#### Defined in
-
-[awtk.ts:3525](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3525)
-
-___
+***
 
 ### refCount
 
-• `get` **refCount**(): `number`
+> `get` **refCount**(): `number`
 
 引用计数。
 
@@ -191,26 +92,29 @@ ___
 
 #### Inherited from
 
-TObject.refCount
+[`TObject`](TObject.md).[`refCount`](TObject.md#refcount)
 
 #### Defined in
 
-[awtk.ts:3512](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3512)
+[awtk.ts:3609](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3609)
 
 ## Methods
 
-### canExec
+### canExec()
 
-▸ **canExec**(`name`, `args`): `boolean`
+> **canExec**(`name`, `args`): `boolean`
 
 检查是否可以执行指定的命令。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 命令的名称。 |
-| `args` | `string` | 命令的参数。 |
+• **name**: `string`
+
+命令的名称。
+
+• **args**: `string`
+
+命令的参数。
 
 #### Returns
 
@@ -220,26 +124,29 @@ TObject.refCount
 
 #### Inherited from
 
-[TObject](TObject.md).[canExec](TObject.md#canexec)
+[`TObject`](TObject.md).[`canExec`](TObject.md#canexec)
 
 #### Defined in
 
-[awtk.ts:3078](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3078)
+[awtk.ts:3175](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3175)
 
-___
+***
 
-### canExecByPath
+### canExecByPath()
 
-▸ **canExecByPath**(`path`, `args`): `boolean`
+> **canExecByPath**(`path`, `args`): `boolean`
 
 检查是否可以执行指定的命令。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `path` | `string` | 命令的path。 |
-| `args` | `string` | 命令的参数。 |
+• **path**: `string`
+
+命令的path。
+
+• **args**: `string`
+
+命令的参数。
 
 #### Returns
 
@@ -249,43 +156,43 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[canExecByPath](TObject.md#canexecbypath)
+[`TObject`](TObject.md).[`canExecByPath`](TObject.md#canexecbypath)
 
 #### Defined in
 
-[awtk.ts:3282](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3282)
+[awtk.ts:3379](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3379)
 
-___
+***
 
-### clearProps
+### clearProps()
 
-▸ **clearProps**(): [`TRet`](../enums/TRet.md)
+> **clearProps**(): [`TRet`](../enumerations/TRet.md)
 
 清除全部属性。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Defined in
 
-[awtk.ts:27774](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L27774)
+[awtk.ts:28949](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L28949)
 
-___
+***
 
-### compare
+### compare()
 
-▸ **compare**(`other`): `number`
+> **compare**(`other`): `number`
 
 比较两个对象。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `other` | [`TObject`](TObject.md) | 比较的object对象。 |
+• **other**: [`TObject`](TObject.md)
+
+比较的object对象。
 
 #### Returns
 
@@ -295,97 +202,103 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[compare](TObject.md#compare)
+[`TObject`](TObject.md).[`compare`](TObject.md#compare)
 
 #### Defined in
 
-[awtk.ts:2810](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2810)
+[awtk.ts:2907](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2907)
 
-___
+***
 
-### copyProp
+### copyProp()
 
-▸ **copyProp**(`src`, `name`): [`TRet`](../enums/TRet.md)
+> **copyProp**(`src`, `name`): [`TRet`](../enumerations/TRet.md)
 
 拷贝指定的属性。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `src` | [`TObject`](TObject.md) | 源对象。 |
-| `name` | `string` | 属性的名称。 |
+• **src**: [`TObject`](TObject.md)
+
+源对象。
+
+• **name**: `string`
+
+属性的名称。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[copyProp](TObject.md#copyprop)
+[`TObject`](TObject.md).[`copyProp`](TObject.md#copyprop)
 
 #### Defined in
 
-[awtk.ts:3027](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3027)
+[awtk.ts:3124](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3124)
 
-___
+***
 
-### copyProps
+### copyProps()
 
-▸ **copyProps**(`src`, `overwrite`): [`TRet`](../enums/TRet.md)
+> **copyProps**(`src`, `overwrite`): [`TRet`](../enumerations/TRet.md)
 
 拷贝全部的属性。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `src` | [`TObject`](TObject.md) | 源对象。 |
-| `overwrite` | `boolean` | 如果属性存在是否覆盖。 |
+• **src**: [`TObject`](TObject.md)
+
+源对象。
+
+• **overwrite**: `boolean`
+
+如果属性存在是否覆盖。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[copyProps](TObject.md#copyprops)
+[`TObject`](TObject.md).[`copyProps`](TObject.md#copyprops)
 
 #### Defined in
 
-[awtk.ts:3040](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3040)
+[awtk.ts:3137](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3137)
 
-___
+***
 
-### destroy
+### destroy()
 
-▸ **destroy**(): [`TRet`](../enums/TRet.md)
+> **destroy**(): [`TRet`](../enumerations/TRet.md)
 
 销毁。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[destroy](TObject.md#destroy)
+[`TObject`](TObject.md).[`destroy`](TObject.md#destroy)
 
 #### Defined in
 
-[awtk.ts:2392](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2392)
+[awtk.ts:2489](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2489)
 
-___
+***
 
-### disable
+### disable()
 
-▸ **disable**(): [`TRet`](../enums/TRet.md)
+> **disable**(): [`TRet`](../enumerations/TRet.md)
 
 禁用。
 
@@ -393,52 +306,52 @@ ___
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[disable](TObject.md#disable)
+[`TObject`](TObject.md).[`disable`](TObject.md#disable)
 
 #### Defined in
 
-[awtk.ts:2381](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2381)
+[awtk.ts:2478](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2478)
 
-___
+***
 
-### dispatch
+### dispatch()
 
-▸ **dispatch**(`e`): [`TRet`](../enums/TRet.md)
+> **dispatch**(`e`): [`TRet`](../enumerations/TRet.md)
 
 分发事件。如果当前分发的回调函数返回RET_REMOVE，该回调函数将被移出。
 禁用状态下，本函数不做任何事情。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `e` | [`TEvent`](TEvent.md) | 事件对象。 |
+• **e**: [`TEvent`](TEvent.md)
+
+事件对象。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 如果当前分发的回调函数返回RET_STOP，dispatch中断分发，并返回RET_STOP，否则返回RET_OK。
 
 #### Inherited from
 
-[TObject](TObject.md).[dispatch](TObject.md#dispatch)
+[`TObject`](TObject.md).[`dispatch`](TObject.md#dispatch)
 
 #### Defined in
 
-[awtk.ts:2317](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2317)
+[awtk.ts:2414](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2414)
 
-___
+***
 
-### dispatchSimpleEvent
+### dispatchSimpleEvent()
 
-▸ **dispatchSimpleEvent**(`type`): [`TRet`](../enums/TRet.md)
+> **dispatchSimpleEvent**(`type`): [`TRet`](../enumerations/TRet.md)
 
 分发事件。
 > 对emitter_dispatch的包装，分发一个简单的事件。
@@ -446,136 +359,145 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `type` | `number` | 事件类型。 |
+• **type**: `number`
+
+事件类型。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 #### Inherited from
 
-[TObject](TObject.md).[dispatchSimpleEvent](TObject.md#dispatchsimpleevent)
+[`TObject`](TObject.md).[`dispatchSimpleEvent`](TObject.md#dispatchsimpleevent)
 
 #### Defined in
 
-[awtk.ts:2331](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2331)
+[awtk.ts:2428](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2428)
 
-___
+***
 
-### enable
+### enable()
 
-▸ **enable**(): [`TRet`](../enums/TRet.md)
+> **enable**(): [`TRet`](../enumerations/TRet.md)
 
 启用。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[enable](TObject.md#enable)
+[`TObject`](TObject.md).[`enable`](TObject.md#enable)
 
 #### Defined in
 
-[awtk.ts:2368](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2368)
+[awtk.ts:2465](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2465)
 
-___
+***
 
-### eval
+### eval()
 
-▸ **eval**(`expr`, `v`): [`TRet`](../enums/TRet.md)
+> **eval**(`expr`, `v`): [`TRet`](../enumerations/TRet.md)
 
 计算一个表达式，表达式中引用的变量从prop中获取。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `expr` | `string` | 表达式。 |
-| `v` | [`TValue`](TValue.md) | 返回计算结果。 |
+• **expr**: `string`
+
+表达式。
+
+• **v**: [`TValue`](TValue.md)
+
+返回计算结果。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[eval](TObject.md#eval)
+[`TObject`](TObject.md).[`eval`](TObject.md#eval)
 
 #### Defined in
 
-[awtk.ts:3065](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3065)
+[awtk.ts:3162](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3162)
 
-___
+***
 
-### execute
+### execute()
 
-▸ **execute**(`name`, `args`): [`TRet`](../enums/TRet.md)
+> **execute**(`name`, `args`): [`TRet`](../enumerations/TRet.md)
 
 执行指定的命令。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 命令的名称。 |
-| `args` | `string` | 命令的参数。 |
+• **name**: `string`
+
+命令的名称。
+
+• **args**: `string`
+
+命令的参数。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[execute](TObject.md#execute)
+[`TObject`](TObject.md).[`execute`](TObject.md#execute)
 
 #### Defined in
 
-[awtk.ts:3091](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3091)
+[awtk.ts:3188](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3188)
 
-___
+***
 
-### executeByPath
+### executeByPath()
 
-▸ **executeByPath**(`path`, `args`): [`TRet`](../enums/TRet.md)
+> **executeByPath**(`path`, `args`): [`TRet`](../enumerations/TRet.md)
 
 执行指定的命令。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `path` | `string` | 命令的path。 |
-| `args` | `string` | 命令的参数。 |
+• **path**: `string`
+
+命令的path。
+
+• **args**: `string`
+
+命令的参数。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[executeByPath](TObject.md#executebypath)
+[`TObject`](TObject.md).[`executeByPath`](TObject.md#executebypath)
 
 #### Defined in
 
-[awtk.ts:3295](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3295)
+[awtk.ts:3392](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3392)
 
-___
+***
 
-### getDesc
+### getDesc()
 
-▸ **getDesc**(): `string`
+> **getDesc**(): `string`
 
 获取对象的描述信息。
 
@@ -587,55 +509,61 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getDesc](TObject.md#getdesc)
+[`TObject`](TObject.md).[`getDesc`](TObject.md#getdesc)
 
 #### Defined in
 
-[awtk.ts:2764](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2764)
+[awtk.ts:2861](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2861)
 
-___
+***
 
-### getProp
+### getProp()
 
-▸ **getProp**(`name`, `v`): [`TRet`](../enums/TRet.md)
+> **getProp**(`name`, `v`): [`TRet`](../enumerations/TRet.md)
 
 获取指定属性的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `v` | [`TValue`](TValue.md) | 返回属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **v**: [`TValue`](TValue.md)
+
+返回属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[getProp](TObject.md#getprop)
+[`TObject`](TObject.md).[`getProp`](TObject.md#getprop)
 
 #### Defined in
 
-[awtk.ts:2823](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2823)
+[awtk.ts:2920](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2920)
 
-___
+***
 
-### getPropBool
+### getPropBool()
 
-▸ **getPropBool**(`name`, `defval`): `boolean`
+> **getPropBool**(`name`, `defval`): `boolean`
 
 获取指定属性的bool类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `defval` | `boolean` | 缺省值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **defval**: `boolean`
+
+缺省值。
 
 #### Returns
 
@@ -645,26 +573,29 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropBool](TObject.md#getpropbool)
+[`TObject`](TObject.md).[`getPropBool`](TObject.md#getpropbool)
 
 #### Defined in
 
-[awtk.ts:2885](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2885)
+[awtk.ts:2982](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2982)
 
-___
+***
 
-### getPropBoolByPath
+### getPropBoolByPath()
 
-▸ **getPropBoolByPath**(`path`, `defval`): `boolean`
+> **getPropBoolByPath**(`path`, `defval`): `boolean`
 
 获取指定属性的bool类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `path` | `string` | 属性的path。 |
-| `defval` | `boolean` | 缺省值。 |
+• **path**: `string`
+
+属性的path。
+
+• **defval**: `boolean`
+
+缺省值。
 
 #### Returns
 
@@ -674,26 +605,29 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropBoolByPath](TObject.md#getpropboolbypath)
+[`TObject`](TObject.md).[`getPropBoolByPath`](TObject.md#getpropboolbypath)
 
 #### Defined in
 
-[awtk.ts:3176](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3176)
+[awtk.ts:3273](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3273)
 
-___
+***
 
-### getPropDouble
+### getPropDouble()
 
-▸ **getPropDouble**(`name`, `defval`): `number`
+> **getPropDouble**(`name`, `defval`): `number`
 
 获取指定属性的浮点数类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `defval` | `number` | 缺省值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **defval**: `number`
+
+缺省值。
 
 #### Returns
 
@@ -703,26 +637,29 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropDouble](TObject.md#getpropdouble)
+[`TObject`](TObject.md).[`getPropDouble`](TObject.md#getpropdouble)
 
 #### Defined in
 
-[awtk.ts:2911](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2911)
+[awtk.ts:3008](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3008)
 
-___
+***
 
-### getPropFloat
+### getPropFloat()
 
-▸ **getPropFloat**(`name`, `defval`): `number`
+> **getPropFloat**(`name`, `defval`): `number`
 
 获取指定属性的浮点数类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `defval` | `number` | 缺省值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **defval**: `number`
+
+缺省值。
 
 #### Returns
 
@@ -732,17 +669,17 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropFloat](TObject.md#getpropfloat)
+[`TObject`](TObject.md).[`getPropFloat`](TObject.md#getpropfloat)
 
 #### Defined in
 
-[awtk.ts:2898](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2898)
+[awtk.ts:2995](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2995)
 
-___
+***
 
-### getPropFloatByPath
+### getPropFloatByPath()
 
-▸ **getPropFloatByPath**(`path`, `defval`): `number`
+> **getPropFloatByPath**(`path`, `defval`): `number`
 
 获取指定属性的浮点数类型的值。
 
@@ -750,10 +687,13 @@ e
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `path` | `string` | 属性的path。 |
-| `defval` | `number` | 缺省值。 |
+• **path**: `string`
+
+属性的path。
+
+• **defval**: `number`
+
+缺省值。
 
 #### Returns
 
@@ -763,26 +703,29 @@ e
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropFloatByPath](TObject.md#getpropfloatbypath)
+[`TObject`](TObject.md).[`getPropFloatByPath`](TObject.md#getpropfloatbypath)
 
 #### Defined in
 
-[awtk.ts:3191](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3191)
+[awtk.ts:3288](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3288)
 
-___
+***
 
-### getPropInt
+### getPropInt()
 
-▸ **getPropInt**(`name`, `defval`): `number`
+> **getPropInt**(`name`, `defval`): `number`
 
 获取指定属性的整数类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `defval` | `number` | 缺省值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **defval**: `number`
+
+缺省值。
 
 #### Returns
 
@@ -792,26 +735,29 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropInt](TObject.md#getpropint)
+[`TObject`](TObject.md).[`getPropInt`](TObject.md#getpropint)
 
 #### Defined in
 
-[awtk.ts:2872](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2872)
+[awtk.ts:2969](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2969)
 
-___
+***
 
-### getPropInt16
+### getPropInt16()
 
-▸ **getPropInt16**(`name`, `defval`): `number`
+> **getPropInt16**(`name`, `defval`): `number`
 
 获取指定属性的int16类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `defval` | `number` | 缺省值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **defval**: `number`
+
+缺省值。
 
 #### Returns
 
@@ -821,26 +767,29 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropInt16](TObject.md#getpropint16)
+[`TObject`](TObject.md).[`getPropInt16`](TObject.md#getpropint16)
 
 #### Defined in
 
-[awtk.ts:3360](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3360)
+[awtk.ts:3457](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3457)
 
-___
+***
 
-### getPropInt32
+### getPropInt32()
 
-▸ **getPropInt32**(`name`, `defval`): `number`
+> **getPropInt32**(`name`, `defval`): `number`
 
 获取指定属性的int32类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `defval` | `number` | 缺省值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **defval**: `number`
+
+缺省值。
 
 #### Returns
 
@@ -850,26 +799,29 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropInt32](TObject.md#getpropint32)
+[`TObject`](TObject.md).[`getPropInt32`](TObject.md#getpropint32)
 
 #### Defined in
 
-[awtk.ts:3412](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3412)
+[awtk.ts:3509](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3509)
 
-___
+***
 
-### getPropInt64
+### getPropInt64()
 
-▸ **getPropInt64**(`name`, `defval`): `number`
+> **getPropInt64**(`name`, `defval`): `number`
 
 获取指定属性的int64类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `defval` | `number` | 缺省值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **defval**: `number`
+
+缺省值。
 
 #### Returns
 
@@ -879,26 +831,29 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropInt64](TObject.md#getpropint64)
+[`TObject`](TObject.md).[`getPropInt64`](TObject.md#getpropint64)
 
 #### Defined in
 
-[awtk.ts:3464](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3464)
+[awtk.ts:3561](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3561)
 
-___
+***
 
-### getPropInt8
+### getPropInt8()
 
-▸ **getPropInt8**(`name`, `defval`): `number`
+> **getPropInt8**(`name`, `defval`): `number`
 
 获取指定属性的int8类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `defval` | `number` | 缺省值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **defval**: `number`
+
+缺省值。
 
 #### Returns
 
@@ -908,26 +863,29 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropInt8](TObject.md#getpropint8)
+[`TObject`](TObject.md).[`getPropInt8`](TObject.md#getpropint8)
 
 #### Defined in
 
-[awtk.ts:3308](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3308)
+[awtk.ts:3405](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3405)
 
-___
+***
 
-### getPropIntByPath
+### getPropIntByPath()
 
-▸ **getPropIntByPath**(`path`, `defval`): `number`
+> **getPropIntByPath**(`path`, `defval`): `number`
 
 获取指定属性的整数类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `path` | `string` | 属性的path。 |
-| `defval` | `number` | 缺省值。 |
+• **path**: `string`
+
+属性的path。
+
+• **defval**: `number`
+
+缺省值。
 
 #### Returns
 
@@ -937,25 +895,25 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropIntByPath](TObject.md#getpropintbypath)
+[`TObject`](TObject.md).[`getPropIntByPath`](TObject.md#getpropintbypath)
 
 #### Defined in
 
-[awtk.ts:3163](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3163)
+[awtk.ts:3260](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3260)
 
-___
+***
 
-### getPropObject
+### getPropObject()
 
-▸ **getPropObject**(`name`): [`TObject`](TObject.md)
+> **getPropObject**(`name`): [`TObject`](TObject.md)
 
 获取指定属性的object类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
+• **name**: `string`
+
+属性的名称。
 
 #### Returns
 
@@ -965,25 +923,25 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropObject](TObject.md#getpropobject)
+[`TObject`](TObject.md).[`getPropObject`](TObject.md#getpropobject)
 
 #### Defined in
 
-[awtk.ts:2859](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2859)
+[awtk.ts:2956](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2956)
 
-___
+***
 
-### getPropObjectByPath
+### getPropObjectByPath()
 
-▸ **getPropObjectByPath**(`path`): [`TObject`](TObject.md)
+> **getPropObjectByPath**(`path`): [`TObject`](TObject.md)
 
 获取指定属性的object类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `path` | `string` | 属性的path。 |
+• **path**: `string`
+
+属性的path。
 
 #### Returns
 
@@ -993,25 +951,25 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropObjectByPath](TObject.md#getpropobjectbypath)
+[`TObject`](TObject.md).[`getPropObjectByPath`](TObject.md#getpropobjectbypath)
 
 #### Defined in
 
-[awtk.ts:3150](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3150)
+[awtk.ts:3247](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3247)
 
-___
+***
 
-### getPropPointer
+### getPropPointer()
 
-▸ **getPropPointer**(`name`): `any`
+> **getPropPointer**(`name`): `any`
 
 获取指定属性的指针类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
+• **name**: `string`
+
+属性的名称。
 
 #### Returns
 
@@ -1021,25 +979,25 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropPointer](TObject.md#getproppointer)
+[`TObject`](TObject.md).[`getPropPointer`](TObject.md#getproppointer)
 
 #### Defined in
 
-[awtk.ts:2847](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2847)
+[awtk.ts:2944](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2944)
 
-___
+***
 
-### getPropPointerByPath
+### getPropPointerByPath()
 
-▸ **getPropPointerByPath**(`path`): `any`
+> **getPropPointerByPath**(`path`): `any`
 
 获取指定属性的指针类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `path` | `string` | 属性的path。 |
+• **path**: `string`
+
+属性的path。
 
 #### Returns
 
@@ -1049,25 +1007,25 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropPointerByPath](TObject.md#getproppointerbypath)
+[`TObject`](TObject.md).[`getPropPointerByPath`](TObject.md#getproppointerbypath)
 
 #### Defined in
 
-[awtk.ts:3138](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3138)
+[awtk.ts:3235](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3235)
 
-___
+***
 
-### getPropStr
+### getPropStr()
 
-▸ **getPropStr**(`name`): `string`
+> **getPropStr**(`name`): `string`
 
 获取指定属性的字符串类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
+• **name**: `string`
+
+属性的名称。
 
 #### Returns
 
@@ -1077,25 +1035,25 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropStr](TObject.md#getpropstr)
+[`TObject`](TObject.md).[`getPropStr`](TObject.md#getpropstr)
 
 #### Defined in
 
-[awtk.ts:2835](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2835)
+[awtk.ts:2932](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2932)
 
-___
+***
 
-### getPropStrByPath
+### getPropStrByPath()
 
-▸ **getPropStrByPath**(`path`): `string`
+> **getPropStrByPath**(`path`): `string`
 
 获取指定属性的字符串类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `path` | `string` | 属性的path。 |
+• **path**: `string`
+
+属性的path。
 
 #### Returns
 
@@ -1105,26 +1063,29 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropStrByPath](TObject.md#getpropstrbypath)
+[`TObject`](TObject.md).[`getPropStrByPath`](TObject.md#getpropstrbypath)
 
 #### Defined in
 
-[awtk.ts:3126](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3126)
+[awtk.ts:3223](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3223)
 
-___
+***
 
-### getPropUint16
+### getPropUint16()
 
-▸ **getPropUint16**(`name`, `defval`): `number`
+> **getPropUint16**(`name`, `defval`): `number`
 
 获取指定属性的uint16类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `defval` | `number` | 缺省值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **defval**: `number`
+
+缺省值。
 
 #### Returns
 
@@ -1134,26 +1095,29 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropUint16](TObject.md#getpropuint16)
+[`TObject`](TObject.md).[`getPropUint16`](TObject.md#getpropuint16)
 
 #### Defined in
 
-[awtk.ts:3386](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3386)
+[awtk.ts:3483](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3483)
 
-___
+***
 
-### getPropUint32
+### getPropUint32()
 
-▸ **getPropUint32**(`name`, `defval`): `number`
+> **getPropUint32**(`name`, `defval`): `number`
 
 获取指定属性的uint32类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `defval` | `number` | 缺省值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **defval**: `number`
+
+缺省值。
 
 #### Returns
 
@@ -1163,26 +1127,29 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropUint32](TObject.md#getpropuint32)
+[`TObject`](TObject.md).[`getPropUint32`](TObject.md#getpropuint32)
 
 #### Defined in
 
-[awtk.ts:3438](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3438)
+[awtk.ts:3535](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3535)
 
-___
+***
 
-### getPropUint64
+### getPropUint64()
 
-▸ **getPropUint64**(`name`, `defval`): `number`
+> **getPropUint64**(`name`, `defval`): `number`
 
 获取指定属性的uint64类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `defval` | `number` | 缺省值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **defval**: `number`
+
+缺省值。
 
 #### Returns
 
@@ -1192,26 +1159,29 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropUint64](TObject.md#getpropuint64)
+[`TObject`](TObject.md).[`getPropUint64`](TObject.md#getpropuint64)
 
 #### Defined in
 
-[awtk.ts:3490](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3490)
+[awtk.ts:3587](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3587)
 
-___
+***
 
-### getPropUint8
+### getPropUint8()
 
-▸ **getPropUint8**(`name`, `defval`): `number`
+> **getPropUint8**(`name`, `defval`): `number`
 
 获取指定属性的uint8类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `defval` | `number` | 缺省值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **defval**: `number`
+
+缺省值。
 
 #### Returns
 
@@ -1221,17 +1191,17 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getPropUint8](TObject.md#getpropuint8)
+[`TObject`](TObject.md).[`getPropUint8`](TObject.md#getpropuint8)
 
 #### Defined in
 
-[awtk.ts:3334](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3334)
+[awtk.ts:3431](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3431)
 
-___
+***
 
-### getSize
+### getSize()
 
-▸ **getSize**(): `number`
+> **getSize**(): `number`
 
 获取对象占用内存的大小。
 
@@ -1243,17 +1213,17 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getSize](TObject.md#getsize)
+[`TObject`](TObject.md).[`getSize`](TObject.md#getsize)
 
 #### Defined in
 
-[awtk.ts:2775](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2775)
+[awtk.ts:2872](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2872)
 
-___
+***
 
-### getType
+### getType()
 
-▸ **getType**(): `string`
+> **getType**(): `string`
 
 获取对象的类型名称。
 
@@ -1265,25 +1235,25 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[getType](TObject.md#gettype)
+[`TObject`](TObject.md).[`getType`](TObject.md#gettype)
 
 #### Defined in
 
-[awtk.ts:2753](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2753)
+[awtk.ts:2850](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2850)
 
-___
+***
 
-### hasProp
+### hasProp()
 
-▸ **hasProp**(`name`): `boolean`
+> **hasProp**(`name`): `boolean`
 
 检查是否存在指定的属性。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
+• **name**: `string`
+
+属性的名称。
 
 #### Returns
 
@@ -1293,25 +1263,25 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[hasProp](TObject.md#hasprop)
+[`TObject`](TObject.md).[`hasProp`](TObject.md#hasprop)
 
 #### Defined in
 
-[awtk.ts:3052](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3052)
+[awtk.ts:3149](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3149)
 
-___
+***
 
-### hasPropByPath
+### hasPropByPath()
 
-▸ **hasPropByPath**(`path`): `boolean`
+> **hasPropByPath**(`path`): `boolean`
 
 检查是否存在指定的属性。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `path` | `string` | 属性的path，各级之间用.分隔。 |
+• **path**: `string`
+
+属性的path，各级之间用.分隔。
 
 #### Returns
 
@@ -1321,17 +1291,17 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[hasPropByPath](TObject.md#haspropbypath)
+[`TObject`](TObject.md).[`hasPropByPath`](TObject.md#haspropbypath)
 
 #### Defined in
 
-[awtk.ts:3114](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3114)
+[awtk.ts:3211](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3211)
 
-___
+***
 
-### isCollection
+### isCollection()
 
-▸ **isCollection**(): `boolean`
+> **isCollection**(): `boolean`
 
 判断对象是否是集合。
 
@@ -1343,77 +1313,83 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[isCollection](TObject.md#iscollection)
+[`TObject`](TObject.md).[`isCollection`](TObject.md#iscollection)
 
 #### Defined in
 
-[awtk.ts:2786](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2786)
+[awtk.ts:2883](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2883)
 
-___
+***
 
-### notifyChanged
+### notifyChanged()
 
-▸ **notifyChanged**(): [`TRet`](../enums/TRet.md)
+> **notifyChanged**(): [`TRet`](../enumerations/TRet.md)
 
 触发EVT_PROPS_CHANGED事件。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[notifyChanged](TObject.md#notifychanged)
+[`TObject`](TObject.md).[`notifyChanged`](TObject.md#notifychanged)
 
 #### Defined in
 
-[awtk.ts:3102](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3102)
+[awtk.ts:3199](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3199)
 
-___
+***
 
-### off
+### off()
 
-▸ **off**(`id`): [`TRet`](../enums/TRet.md)
+> **off**(`id`): [`TRet`](../enumerations/TRet.md)
 
 注销指定事件的处理函数。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `id` | `number` | emitter_on返回的ID。 |
+• **id**: `number`
+
+emitter_on返回的ID。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[off](TObject.md#off)
+[`TObject`](TObject.md).[`off`](TObject.md#off)
 
 #### Defined in
 
-[awtk.ts:2357](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2357)
+[awtk.ts:2454](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2454)
 
-___
+***
 
-### on
+### on()
 
-▸ **on**(`etype`, `handler`, `ctx`): `number`
+> **on**(`etype`, `handler`, `ctx`): `number`
 
 注册指定事件的处理函数。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `etype` | `number` | 事件类型。 |
-| `handler` | `Function` | 事件处理函数。 |
-| `ctx` | `any` | 事件处理函数上下文。 |
+• **etype**: `number`
+
+事件类型。
+
+• **handler**: `Function`
+
+事件处理函数。
+
+• **ctx**: `any`
+
+事件处理函数上下文。
 
 #### Returns
 
@@ -1423,704 +1399,815 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[on](TObject.md#on)
+[`TObject`](TObject.md).[`on`](TObject.md#on)
 
 #### Defined in
 
-[awtk.ts:2345](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2345)
+[awtk.ts:2442](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2442)
 
-___
+***
 
-### removeProp
+### removeProp()
 
-▸ **removeProp**(`name`): [`TRet`](../enums/TRet.md)
+> **removeProp**(`name`): [`TRet`](../enumerations/TRet.md)
 
 删除指定属性。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
+• **name**: `string`
+
+属性的名称。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[removeProp](TObject.md#removeprop)
+[`TObject`](TObject.md).[`removeProp`](TObject.md#removeprop)
 
 #### Defined in
 
-[awtk.ts:2923](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2923)
+[awtk.ts:3020](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3020)
 
-___
+***
 
-### setName
+### setKeepPropType()
 
-▸ **setName**(`name`): [`TRet`](../enums/TRet.md)
+> **setKeepPropType**(`keep_prop_type`): [`TRet`](../enumerations/TRet.md)
+
+设置属性值时不改变属性的类型。
+
+#### Parameters
+
+• **keep\_prop\_type**: `boolean`
+
+不改变属性的类型。
+
+#### Returns
+
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
+
+#### Defined in
+
+[awtk.ts:28961](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L28961)
+
+***
+
+### setName()
+
+> **setName**(`name`): [`TRet`](../enumerations/TRet.md)
 
 设置对象的名称。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 对象的名称。 |
+• **name**: `string`
+
+对象的名称。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setName](TObject.md#setname)
+[`TObject`](TObject.md).[`setName`](TObject.md#setname)
 
 #### Defined in
 
-[awtk.ts:2798](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2798)
+[awtk.ts:2895](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2895)
 
-___
+***
 
-### setProp
+### setNameCaseInsensitive()
 
-▸ **setProp**(`name`, `value`): [`TRet`](../enums/TRet.md)
+> **setNameCaseInsensitive**(`name_case_insensitive`): [`TRet`](../enumerations/TRet.md)
+
+设置属性名是否大小写不敏感。
+
+#### Parameters
+
+• **name\_case\_insensitive**: `boolean`
+
+属性名是否大小写不敏感。
+
+#### Returns
+
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
+
+#### Defined in
+
+[awtk.ts:28973](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L28973)
+
+***
+
+### setProp()
+
+> **setProp**(`name`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `value` | [`TValue`](TValue.md) | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **value**: [`TValue`](TValue.md)
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setProp](TObject.md#setprop)
+[`TObject`](TObject.md).[`setProp`](TObject.md#setprop)
 
 #### Defined in
 
-[awtk.ts:2936](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2936)
+[awtk.ts:3033](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3033)
 
-___
+***
 
-### setPropBool
+### setPropBool()
 
-▸ **setPropBool**(`name`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropBool**(`name`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的bool类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `value` | `any` | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **value**: `any`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropBool](TObject.md#setpropbool)
+[`TObject`](TObject.md).[`setPropBool`](TObject.md#setpropbool)
 
 #### Defined in
 
-[awtk.ts:2988](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2988)
+[awtk.ts:3085](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3085)
 
-___
+***
 
-### setPropBoolByPath
+### setPropBoolByPath()
 
-▸ **setPropBoolByPath**(`path`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropBoolByPath**(`path`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的bool类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `path` | `string` | 属性的path。 |
-| `value` | `any` | 属性的值。 |
+• **path**: `string`
+
+属性的path。
+
+• **value**: `any`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropBoolByPath](TObject.md#setpropboolbypath)
+[`TObject`](TObject.md).[`setPropBoolByPath`](TObject.md#setpropboolbypath)
 
 #### Defined in
 
-[awtk.ts:3256](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3256)
+[awtk.ts:3353](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3353)
 
-___
+***
 
-### setPropByPath
+### setPropByPath()
 
-▸ **setPropByPath**(`path`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropByPath**(`path`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `path` | `string` | 属性的path。 |
-| `value` | [`TValue`](TValue.md) | 属性的值。 |
+• **path**: `string`
+
+属性的path。
+
+• **value**: [`TValue`](TValue.md)
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropByPath](TObject.md#setpropbypath)
+[`TObject`](TObject.md).[`setPropByPath`](TObject.md#setpropbypath)
 
 #### Defined in
 
-[awtk.ts:3204](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3204)
+[awtk.ts:3301](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3301)
 
-___
+***
 
-### setPropDouble
+### setPropDouble()
 
-▸ **setPropDouble**(`name`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropDouble**(`name`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的浮点数类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `value` | `any` | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **value**: `any`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropDouble](TObject.md#setpropdouble)
+[`TObject`](TObject.md).[`setPropDouble`](TObject.md#setpropdouble)
 
 #### Defined in
 
-[awtk.ts:3014](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3014)
+[awtk.ts:3111](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3111)
 
-___
+***
 
-### setPropFloat
+### setPropFloat()
 
-▸ **setPropFloat**(`name`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropFloat**(`name`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的浮点数类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `value` | `any` | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **value**: `any`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropFloat](TObject.md#setpropfloat)
+[`TObject`](TObject.md).[`setPropFloat`](TObject.md#setpropfloat)
 
 #### Defined in
 
-[awtk.ts:3001](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3001)
+[awtk.ts:3098](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3098)
 
-___
+***
 
-### setPropFloatByPath
+### setPropFloatByPath()
 
-▸ **setPropFloatByPath**(`path`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropFloatByPath**(`path`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的浮点数类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `path` | `string` | 属性的path。 |
-| `value` | `any` | 属性的值。 |
+• **path**: `string`
+
+属性的path。
+
+• **value**: `any`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropFloatByPath](TObject.md#setpropfloatbypath)
+[`TObject`](TObject.md).[`setPropFloatByPath`](TObject.md#setpropfloatbypath)
 
 #### Defined in
 
-[awtk.ts:3269](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3269)
+[awtk.ts:3366](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3366)
 
-___
+***
 
-### setPropInt
+### setPropInt()
 
-▸ **setPropInt**(`name`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropInt**(`name`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的整数类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `value` | `any` | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **value**: `any`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropInt](TObject.md#setpropint)
+[`TObject`](TObject.md).[`setPropInt`](TObject.md#setpropint)
 
 #### Defined in
 
-[awtk.ts:2975](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2975)
+[awtk.ts:3072](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3072)
 
-___
+***
 
-### setPropInt16
+### setPropInt16()
 
-▸ **setPropInt16**(`name`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropInt16**(`name`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的int16类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `value` | `any` | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **value**: `any`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropInt16](TObject.md#setpropint16)
+[`TObject`](TObject.md).[`setPropInt16`](TObject.md#setpropint16)
 
 #### Defined in
 
-[awtk.ts:3373](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3373)
+[awtk.ts:3470](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3470)
 
-___
+***
 
-### setPropInt32
+### setPropInt32()
 
-▸ **setPropInt32**(`name`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropInt32**(`name`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的int32类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `value` | `any` | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **value**: `any`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropInt32](TObject.md#setpropint32)
+[`TObject`](TObject.md).[`setPropInt32`](TObject.md#setpropint32)
 
 #### Defined in
 
-[awtk.ts:3425](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3425)
+[awtk.ts:3522](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3522)
 
-___
+***
 
-### setPropInt64
+### setPropInt64()
 
-▸ **setPropInt64**(`name`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropInt64**(`name`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的int64类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `value` | `any` | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **value**: `any`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropInt64](TObject.md#setpropint64)
+[`TObject`](TObject.md).[`setPropInt64`](TObject.md#setpropint64)
 
 #### Defined in
 
-[awtk.ts:3477](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3477)
+[awtk.ts:3574](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3574)
 
-___
+***
 
-### setPropInt8
+### setPropInt8()
 
-▸ **setPropInt8**(`name`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropInt8**(`name`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的int8类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `value` | `any` | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **value**: `any`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropInt8](TObject.md#setpropint8)
+[`TObject`](TObject.md).[`setPropInt8`](TObject.md#setpropint8)
 
 #### Defined in
 
-[awtk.ts:3321](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3321)
+[awtk.ts:3418](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3418)
 
-___
+***
 
-### setPropIntByPath
+### setPropIntByPath()
 
-▸ **setPropIntByPath**(`path`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropIntByPath**(`path`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的整数类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `path` | `string` | 属性的path。 |
-| `value` | `any` | 属性的值。 |
+• **path**: `string`
+
+属性的path。
+
+• **value**: `any`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropIntByPath](TObject.md#setpropintbypath)
+[`TObject`](TObject.md).[`setPropIntByPath`](TObject.md#setpropintbypath)
 
 #### Defined in
 
-[awtk.ts:3243](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3243)
+[awtk.ts:3340](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3340)
 
-___
+***
 
-### setPropObject
+### setPropObject()
 
-▸ **setPropObject**(`name`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropObject**(`name`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的object类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `value` | [`TObject`](TObject.md) | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **value**: [`TObject`](TObject.md)
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropObject](TObject.md#setpropobject)
+[`TObject`](TObject.md).[`setPropObject`](TObject.md#setpropobject)
 
 #### Defined in
 
-[awtk.ts:2962](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2962)
+[awtk.ts:3059](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3059)
 
-___
+***
 
-### setPropObjectByPath
+### setPropObjectByPath()
 
-▸ **setPropObjectByPath**(`path`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropObjectByPath**(`path`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的object类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `path` | `string` | 属性的path。 |
-| `value` | [`TObject`](TObject.md) | 属性的值。 |
+• **path**: `string`
+
+属性的path。
+
+• **value**: [`TObject`](TObject.md)
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropObjectByPath](TObject.md#setpropobjectbypath)
+[`TObject`](TObject.md).[`setPropObjectByPath`](TObject.md#setpropobjectbypath)
 
 #### Defined in
 
-[awtk.ts:3230](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3230)
+[awtk.ts:3327](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3327)
 
-___
+***
 
-### setPropStr
+### setPropStr()
 
-▸ **setPropStr**(`name`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropStr**(`name`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的字符串类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `value` | `string` | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **value**: `string`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropStr](TObject.md#setpropstr)
+[`TObject`](TObject.md).[`setPropStr`](TObject.md#setpropstr)
 
 #### Defined in
 
-[awtk.ts:2949](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2949)
+[awtk.ts:3046](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3046)
 
-___
+***
 
-### setPropStrByPath
+### setPropStrByPath()
 
-▸ **setPropStrByPath**(`path`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropStrByPath**(`path`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的字符串类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `path` | `string` | 属性的path。 |
-| `value` | `string` | 属性的值。 |
+• **path**: `string`
+
+属性的path。
+
+• **value**: `string`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropStrByPath](TObject.md#setpropstrbypath)
+[`TObject`](TObject.md).[`setPropStrByPath`](TObject.md#setpropstrbypath)
 
 #### Defined in
 
-[awtk.ts:3217](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3217)
+[awtk.ts:3314](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3314)
 
-___
+***
 
-### setPropUint16
+### setPropUint16()
 
-▸ **setPropUint16**(`name`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropUint16**(`name`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的uint16类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `value` | `any` | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **value**: `any`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropUint16](TObject.md#setpropuint16)
+[`TObject`](TObject.md).[`setPropUint16`](TObject.md#setpropuint16)
 
 #### Defined in
 
-[awtk.ts:3399](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3399)
+[awtk.ts:3496](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3496)
 
-___
+***
 
-### setPropUint32
+### setPropUint32()
 
-▸ **setPropUint32**(`name`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropUint32**(`name`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的uint32类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `value` | `any` | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **value**: `any`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropUint32](TObject.md#setpropuint32)
+[`TObject`](TObject.md).[`setPropUint32`](TObject.md#setpropuint32)
 
 #### Defined in
 
-[awtk.ts:3451](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3451)
+[awtk.ts:3548](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3548)
 
-___
+***
 
-### setPropUint64
+### setPropUint64()
 
-▸ **setPropUint64**(`name`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropUint64**(`name`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的uint64类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `value` | `any` | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **value**: `any`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropUint64](TObject.md#setpropuint64)
+[`TObject`](TObject.md).[`setPropUint64`](TObject.md#setpropuint64)
 
 #### Defined in
 
-[awtk.ts:3503](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3503)
+[awtk.ts:3600](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3600)
 
-___
+***
 
-### setPropUint8
+### setPropUint8()
 
-▸ **setPropUint8**(`name`, `value`): [`TRet`](../enums/TRet.md)
+> **setPropUint8**(`name`, `value`): [`TRet`](../enumerations/TRet.md)
 
 设置指定属性的uint8类型的值。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | 属性的名称。 |
-| `value` | `any` | 属性的值。 |
+• **name**: `string`
+
+属性的名称。
+
+• **value**: `any`
+
+属性的值。
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Inherited from
 
-[TObject](TObject.md).[setPropUint8](TObject.md#setpropuint8)
+[`TObject`](TObject.md).[`setPropUint8`](TObject.md#setpropuint8)
 
 #### Defined in
 
-[awtk.ts:3347](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L3347)
+[awtk.ts:3444](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L3444)
 
-___
+***
 
-### unref
+### unref()
 
-▸ **unref**(): [`TRet`](../enums/TRet.md)
+> **unref**(): [`TRet`](../enumerations/TRet.md)
 
 for script gc
 
 #### Returns
 
-[`TRet`](../enums/TRet.md)
+[`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
 
 #### Overrides
 
-[TObject](TObject.md).[unref](TObject.md#unref)
+[`TObject`](TObject.md).[`unref`](TObject.md#unref)
 
 #### Defined in
 
-[awtk.ts:27763](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L27763)
+[awtk.ts:28938](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L28938)
 
-___
+***
 
-### cast
+### cast()
 
-▸ `Static` **cast**(`emitter`): [`TEmitter`](TEmitter.md)
+> `static` **cast**(`emitter`): [`TEmitter`](TEmitter.md)
 
 转换为emitter对象(供脚本语言使用)。
 
@@ -2128,9 +2215,9 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `emitter` | [`TEmitter`](TEmitter.md) | emitter对象。 |
+• **emitter**: [`TEmitter`](TEmitter.md)
+
+emitter对象。
 
 #### Returns
 
@@ -2140,17 +2227,17 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[cast](TObject.md#cast)
+[`TObject`](TObject.md).[`cast`](TObject.md#cast)
 
 #### Defined in
 
-[awtk.ts:2406](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2406)
+[awtk.ts:2503](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2503)
 
-___
+***
 
-### create
+### create()
 
-▸ `Static` **create**(): [`TObjectDefault`](TObjectDefault.md)
+> `static` **create**(): [`TObjectDefault`](TObjectDefault.md)
 
 创建对象。
 
@@ -2162,25 +2249,25 @@ ___
 
 #### Overrides
 
-[TObject](TObject.md).[create](TObject.md#create)
+[`TObject`](TObject.md).[`create`](TObject.md#create)
 
 #### Defined in
 
-[awtk.ts:27740](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L27740)
+[awtk.ts:28915](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L28915)
 
-___
+***
 
-### createEx
+### createEx()
 
-▸ `Static` **createEx**(`enable_path`): [`TObjectDefault`](TObjectDefault.md)
+> `static` **createEx**(`enable_path`): [`TObjectDefault`](TObjectDefault.md)
 
 创建对象。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `enable_path` | `boolean` | 是否支持按路径访问属性。 |
+• **enable\_path**: `boolean`
+
+是否支持按路径访问属性。
 
 #### Returns
 
@@ -2190,21 +2277,21 @@ ___
 
 #### Defined in
 
-[awtk.ts:27752](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L27752)
+[awtk.ts:28927](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L28927)
 
-___
+***
 
-### ref
+### ref()
 
-▸ `Static` **ref**(`obj`): [`TObject`](TObject.md)
+> `static` **ref**(`obj`): [`TObject`](TObject.md)
 
 引用计数加1。
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `obj` | [`TObject`](TObject.md) | object对象。 |
+• **obj**: [`TObject`](TObject.md)
+
+object对象。
 
 #### Returns
 
@@ -2214,8 +2301,8 @@ ___
 
 #### Inherited from
 
-[TObject](TObject.md).[ref](TObject.md#ref)
+[`TObject`](TObject.md).[`ref`](TObject.md#ref)
 
 #### Defined in
 
-[awtk.ts:2742](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L2742)
+[awtk.ts:2839](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2839)

@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TRect类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,68 +70,75 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="class_t_rect-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">TRect类 参考</div>  </div>
+  <div class="headertitle"><div class="title">TRect类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:acc37f944de4ddf959fdd28b428ca6c60"><td class="memItemLeft" align="right" valign="top"><a id="acc37f944de4ddf959fdd28b428ca6c60"></a>
+<tr class="memitem:acc37f944de4ddf959fdd28b428ca6c60" id="r_acc37f944de4ddf959fdd28b428ca6c60"><td class="memItemLeft" align="right" valign="top"><a id="acc37f944de4ddf959fdd28b428ca6c60" name="acc37f944de4ddf959fdd28b428ca6c60"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TRect</b> (rect_t *nativeObj)</td></tr>
 <tr class="separator:acc37f944de4ddf959fdd28b428ca6c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9264e8f035db72dae095b79985569cb"><td class="memItemLeft" align="right" valign="top"><a id="aa9264e8f035db72dae095b79985569cb"></a>
+<tr class="memitem:aa9264e8f035db72dae095b79985569cb" id="r_aa9264e8f035db72dae095b79985569cb"><td class="memItemLeft" align="right" valign="top"><a id="aa9264e8f035db72dae095b79985569cb" name="aa9264e8f035db72dae095b79985569cb"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TRect</b> (const rect_t *nativeObj)</td></tr>
 <tr class="separator:aa9264e8f035db72dae095b79985569cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5098b9e4d7d0ec58b1b1924a79c2a3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_rect.html">TRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_rect.html#ac5098b9e4d7d0ec58b1b1924a79c2a3a">Set</a> (xy_t x, xy_t y, wh_t w, wh_t h)</td></tr>
+<tr class="memitem:ac5098b9e4d7d0ec58b1b1924a79c2a3a" id="r_ac5098b9e4d7d0ec58b1b1924a79c2a3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_rect.html">TRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5098b9e4d7d0ec58b1b1924a79c2a3a">Set</a> (xy_t x, xy_t y, wh_t w, wh_t h)</td></tr>
 <tr class="separator:ac5098b9e4d7d0ec58b1b1924a79c2a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d8fece5673f095d16ce6148c69b817c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_rect.html#a4d8fece5673f095d16ce6148c69b817c">Destroy</a> ()</td></tr>
+<tr class="memitem:a4d8fece5673f095d16ce6148c69b817c" id="r_a4d8fece5673f095d16ce6148c69b817c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d8fece5673f095d16ce6148c69b817c">Destroy</a> ()</td></tr>
 <tr class="separator:a4d8fece5673f095d16ce6148c69b817c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cc205c171035f79f00570531b5047fa"><td class="memItemLeft" align="right" valign="top">xy_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_rect.html#a9cc205c171035f79f00570531b5047fa">GetX</a> () const</td></tr>
+<tr class="memitem:a9cc205c171035f79f00570531b5047fa" id="r_a9cc205c171035f79f00570531b5047fa"><td class="memItemLeft" align="right" valign="top">xy_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cc205c171035f79f00570531b5047fa">GetX</a> () const</td></tr>
 <tr class="separator:a9cc205c171035f79f00570531b5047fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a939ed8acb2164f5c36c24df11a2167ae"><td class="memItemLeft" align="right" valign="top">xy_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_rect.html#a939ed8acb2164f5c36c24df11a2167ae">GetY</a> () const</td></tr>
+<tr class="memitem:a939ed8acb2164f5c36c24df11a2167ae" id="r_a939ed8acb2164f5c36c24df11a2167ae"><td class="memItemLeft" align="right" valign="top">xy_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a939ed8acb2164f5c36c24df11a2167ae">GetY</a> () const</td></tr>
 <tr class="separator:a939ed8acb2164f5c36c24df11a2167ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31ee91aae879a629ad590f1e47c0b8ee"><td class="memItemLeft" align="right" valign="top">wh_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_rect.html#a31ee91aae879a629ad590f1e47c0b8ee">GetW</a> () const</td></tr>
+<tr class="memitem:a31ee91aae879a629ad590f1e47c0b8ee" id="r_a31ee91aae879a629ad590f1e47c0b8ee"><td class="memItemLeft" align="right" valign="top">wh_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31ee91aae879a629ad590f1e47c0b8ee">GetW</a> () const</td></tr>
 <tr class="separator:a31ee91aae879a629ad590f1e47c0b8ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab646b7cab0305a5e75cbe7d4c4c97e36"><td class="memItemLeft" align="right" valign="top">wh_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_rect.html#ab646b7cab0305a5e75cbe7d4c4c97e36">GetH</a> () const</td></tr>
+<tr class="memitem:ab646b7cab0305a5e75cbe7d4c4c97e36" id="r_ab646b7cab0305a5e75cbe7d4c4c97e36"><td class="memItemLeft" align="right" valign="top">wh_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab646b7cab0305a5e75cbe7d4c4c97e36">GetH</a> () const</td></tr>
 <tr class="separator:ab646b7cab0305a5e75cbe7d4c4c97e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a80aa768986a8de358a4a529d2d971f0d"><td class="memItemLeft" align="right" valign="top"><a id="a80aa768986a8de358a4a529d2d971f0d"></a>
+<tr class="memitem:a80aa768986a8de358a4a529d2d971f0d" id="r_a80aa768986a8de358a4a529d2d971f0d"><td class="memItemLeft" align="right" valign="top"><a id="a80aa768986a8de358a4a529d2d971f0d" name="a80aa768986a8de358a4a529d2d971f0d"></a>
 static <a class="el" href="class_t_rect.html">TRect</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (rect_t *nativeObj)</td></tr>
 <tr class="separator:a80aa768986a8de358a4a529d2d971f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9881108daf0fcef6729822cf6fc9da6f"><td class="memItemLeft" align="right" valign="top"><a id="a9881108daf0fcef6729822cf6fc9da6f"></a>
+<tr class="memitem:a9881108daf0fcef6729822cf6fc9da6f" id="r_a9881108daf0fcef6729822cf6fc9da6f"><td class="memItemLeft" align="right" valign="top"><a id="a9881108daf0fcef6729822cf6fc9da6f" name="a9881108daf0fcef6729822cf6fc9da6f"></a>
 static <a class="el" href="class_t_rect.html">TRect</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const rect_t *nativeObj)</td></tr>
 <tr class="separator:a9881108daf0fcef6729822cf6fc9da6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58208692b53384c1b1c54de193dde0ec"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_rect.html">TRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_rect.html#a58208692b53384c1b1c54de193dde0ec">Create</a> (xy_t x, xy_t y, wh_t w, wh_t h)</td></tr>
+<tr class="memitem:a58208692b53384c1b1c54de193dde0ec" id="r_a58208692b53384c1b1c54de193dde0ec"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_rect.html">TRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58208692b53384c1b1c54de193dde0ec">Create</a> (xy_t x, xy_t y, wh_t w, wh_t h)</td></tr>
 <tr class="separator:a58208692b53384c1b1c54de193dde0ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:acdeeedf1e78bba788187288cc430a82f"><td class="memItemLeft" align="right" valign="top"><a id="acdeeedf1e78bba788187288cc430a82f"></a>
+<tr class="memitem:acdeeedf1e78bba788187288cc430a82f" id="r_acdeeedf1e78bba788187288cc430a82f"><td class="memItemLeft" align="right" valign="top"><a id="acdeeedf1e78bba788187288cc430a82f" name="acdeeedf1e78bba788187288cc430a82f"></a>
 rect_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td></tr>
 <tr class="separator:acdeeedf1e78bba788187288cc430a82f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>矩形。包括一个x坐标、y坐标、宽度和高度。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="a58208692b53384c1b1c54de193dde0ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58208692b53384c1b1c54de193dde0ec">&#9670;&nbsp;</a></span>Create()</h2>
+<a id="a58208692b53384c1b1c54de193dde0ec" name="a58208692b53384c1b1c54de193dde0ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58208692b53384c1b1c54de193dde0ec">&#9670;&#160;</a></span>Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,31 +149,22 @@ rect_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td
         <tr>
           <td class="memname"><a class="el" href="class_t_rect.html">TRect</a> TRect::Create </td>
           <td>(</td>
-          <td class="paramtype">xy_t&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">xy_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">xy_t&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">xy_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">wh_t&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
+          <td class="paramtype">wh_t</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">wh_t&#160;</td>
-          <td class="paramname"><em>h</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">wh_t</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -162,7 +175,7 @@ rect_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td
 </div><div class="memdoc">
 <p>创建rect对象。</p>
 <blockquote class="doxtable">
-<p>主要供脚本语言使用。 </p>
+<p>&zwj;主要供脚本语言使用。 </p>
 </blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -177,8 +190,8 @@ rect_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td
 
 </div>
 </div>
-<a id="a4d8fece5673f095d16ce6148c69b817c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d8fece5673f095d16ce6148c69b817c">&#9670;&nbsp;</a></span>Destroy()</h2>
+<a id="a4d8fece5673f095d16ce6148c69b817c" name="a4d8fece5673f095d16ce6148c69b817c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d8fece5673f095d16ce6148c69b817c">&#9670;&#160;</a></span>Destroy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -186,21 +199,21 @@ rect_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td
         <tr>
           <td class="memname">ret_t TRect::Destroy </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>销毁rect对象。</p>
 <blockquote class="doxtable">
-<p>主要供脚本语言使用。 </p>
+<p>&zwj;主要供脚本语言使用。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>
-<a id="ab646b7cab0305a5e75cbe7d4c4c97e36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab646b7cab0305a5e75cbe7d4c4c97e36">&#9670;&nbsp;</a></span>GetH()</h2>
+<a id="ab646b7cab0305a5e75cbe7d4c4c97e36" name="ab646b7cab0305a5e75cbe7d4c4c97e36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab646b7cab0305a5e75cbe7d4c4c97e36">&#9670;&#160;</a></span>GetH()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,7 +221,7 @@ rect_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td
         <tr>
           <td class="memname">wh_t TRect::GetH </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -217,8 +230,8 @@ rect_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td
 
 </div>
 </div>
-<a id="a31ee91aae879a629ad590f1e47c0b8ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31ee91aae879a629ad590f1e47c0b8ee">&#9670;&nbsp;</a></span>GetW()</h2>
+<a id="a31ee91aae879a629ad590f1e47c0b8ee" name="a31ee91aae879a629ad590f1e47c0b8ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31ee91aae879a629ad590f1e47c0b8ee">&#9670;&#160;</a></span>GetW()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -226,7 +239,7 @@ rect_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td
         <tr>
           <td class="memname">wh_t TRect::GetW </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -235,8 +248,8 @@ rect_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td
 
 </div>
 </div>
-<a id="a9cc205c171035f79f00570531b5047fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9cc205c171035f79f00570531b5047fa">&#9670;&nbsp;</a></span>GetX()</h2>
+<a id="a9cc205c171035f79f00570531b5047fa" name="a9cc205c171035f79f00570531b5047fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cc205c171035f79f00570531b5047fa">&#9670;&#160;</a></span>GetX()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -244,7 +257,7 @@ rect_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td
         <tr>
           <td class="memname">xy_t TRect::GetX </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -253,8 +266,8 @@ rect_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td
 
 </div>
 </div>
-<a id="a939ed8acb2164f5c36c24df11a2167ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a939ed8acb2164f5c36c24df11a2167ae">&#9670;&nbsp;</a></span>GetY()</h2>
+<a id="a939ed8acb2164f5c36c24df11a2167ae" name="a939ed8acb2164f5c36c24df11a2167ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a939ed8acb2164f5c36c24df11a2167ae">&#9670;&#160;</a></span>GetY()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -262,7 +275,7 @@ rect_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td
         <tr>
           <td class="memname">xy_t TRect::GetY </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -271,8 +284,8 @@ rect_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td
 
 </div>
 </div>
-<a id="ac5098b9e4d7d0ec58b1b1924a79c2a3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5098b9e4d7d0ec58b1b1924a79c2a3a">&#9670;&nbsp;</a></span>Set()</h2>
+<a id="ac5098b9e4d7d0ec58b1b1924a79c2a3a" name="ac5098b9e4d7d0ec58b1b1924a79c2a3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5098b9e4d7d0ec58b1b1924a79c2a3a">&#9670;&#160;</a></span>Set()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -280,37 +293,28 @@ rect_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td
         <tr>
           <td class="memname"><a class="el" href="class_t_rect.html">TRect</a> TRect::Set </td>
           <td>(</td>
-          <td class="paramtype">xy_t&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">xy_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">xy_t&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">xy_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">wh_t&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
+          <td class="paramtype">wh_t</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">wh_t&#160;</td>
-          <td class="paramname"><em>h</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">wh_t</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>设置rect对象的xywh。</p>
 <blockquote class="doxtable">
-<p>主要供脚本语言使用。 </p>
+<p>&zwj;主要供脚本语言使用。 </p>
 </blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -327,12 +331,13 @@ rect_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
-<li>output/awtk_cpp.cpp</li>
+<li>output/<b>awtk_cpp.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

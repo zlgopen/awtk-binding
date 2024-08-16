@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TAppConf类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,119 +70,71 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="class_t_app_conf-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">TAppConf类 参考</div>  </div>
+  <div class="headertitle"><div class="title">TAppConf类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a5d4986a464b4bc150904f93bc7978629"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_app_conf.html#a5d4986a464b4bc150904f93bc7978629">Save</a> ()</td></tr>
+<tr class="memitem:a5d4986a464b4bc150904f93bc7978629" id="r_a5d4986a464b4bc150904f93bc7978629"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d4986a464b4bc150904f93bc7978629">Save</a> ()</td></tr>
 <tr class="separator:a5d4986a464b4bc150904f93bc7978629"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4ab1ef740b0682c1174b7954559f741"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_app_conf.html#ab4ab1ef740b0682c1174b7954559f741">Reload</a> ()</td></tr>
+<tr class="memitem:ab4ab1ef740b0682c1174b7954559f741" id="r_ab4ab1ef740b0682c1174b7954559f741"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4ab1ef740b0682c1174b7954559f741">Reload</a> ()</td></tr>
 <tr class="separator:ab4ab1ef740b0682c1174b7954559f741"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace206860d1fe86e5b7f1cd2b2cec6f3e"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_app_conf.html#ace206860d1fe86e5b7f1cd2b2cec6f3e">Deinit</a> ()</td></tr>
+<tr class="memitem:ace206860d1fe86e5b7f1cd2b2cec6f3e" id="r_ace206860d1fe86e5b7f1cd2b2cec6f3e"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace206860d1fe86e5b7f1cd2b2cec6f3e">Deinit</a> ()</td></tr>
 <tr class="separator:ace206860d1fe86e5b7f1cd2b2cec6f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f20e13b745f93c0178ea80208b913c9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_app_conf.html#a1f20e13b745f93c0178ea80208b913c9">Exist</a> (const char *key)</td></tr>
+<tr class="memitem:a1f20e13b745f93c0178ea80208b913c9" id="r_a1f20e13b745f93c0178ea80208b913c9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f20e13b745f93c0178ea80208b913c9">Exist</a> (const char *key)</td></tr>
 <tr class="separator:a1f20e13b745f93c0178ea80208b913c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a0ed59fe3fbc0e6d9923212ed0987e3"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_app_conf.html#a6a0ed59fe3fbc0e6d9923212ed0987e3">SetInt</a> (const char *key, int32_t v)</td></tr>
+<tr class="memitem:a6a0ed59fe3fbc0e6d9923212ed0987e3" id="r_a6a0ed59fe3fbc0e6d9923212ed0987e3"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a0ed59fe3fbc0e6d9923212ed0987e3">SetInt</a> (const char *key, int32_t v)</td></tr>
 <tr class="separator:a6a0ed59fe3fbc0e6d9923212ed0987e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8954e7cc11e522819c9751182de5eab"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_app_conf.html#ad8954e7cc11e522819c9751182de5eab">SetInt64</a> (const char *key, int64_t v)</td></tr>
+<tr class="memitem:ad8954e7cc11e522819c9751182de5eab" id="r_ad8954e7cc11e522819c9751182de5eab"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8954e7cc11e522819c9751182de5eab">SetInt64</a> (const char *key, int64_t v)</td></tr>
 <tr class="separator:ad8954e7cc11e522819c9751182de5eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae39a4c8ba12e7bf22ff45cbdff20838e"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_app_conf.html#ae39a4c8ba12e7bf22ff45cbdff20838e">SetBool</a> (const char *key, bool v)</td></tr>
+<tr class="memitem:ae39a4c8ba12e7bf22ff45cbdff20838e" id="r_ae39a4c8ba12e7bf22ff45cbdff20838e"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae39a4c8ba12e7bf22ff45cbdff20838e">SetBool</a> (const char *key, bool v)</td></tr>
 <tr class="separator:ae39a4c8ba12e7bf22ff45cbdff20838e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee3283a4295aab543056124174c18a94"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_app_conf.html#aee3283a4295aab543056124174c18a94">SetDouble</a> (const char *key, double v)</td></tr>
+<tr class="memitem:aee3283a4295aab543056124174c18a94" id="r_aee3283a4295aab543056124174c18a94"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee3283a4295aab543056124174c18a94">SetDouble</a> (const char *key, double v)</td></tr>
 <tr class="separator:aee3283a4295aab543056124174c18a94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3794299c60f759c98e2006421e113a28"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_app_conf.html#a3794299c60f759c98e2006421e113a28">SetStr</a> (const char *key, const char *v)</td></tr>
+<tr class="memitem:a3794299c60f759c98e2006421e113a28" id="r_a3794299c60f759c98e2006421e113a28"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3794299c60f759c98e2006421e113a28">SetStr</a> (const char *key, const char *v)</td></tr>
 <tr class="separator:a3794299c60f759c98e2006421e113a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a226b748b904dcab7cf934e4186e5507e"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_app_conf.html#a226b748b904dcab7cf934e4186e5507e">GetInt</a> (const char *key, int32_t defval)</td></tr>
+<tr class="memitem:a226b748b904dcab7cf934e4186e5507e" id="r_a226b748b904dcab7cf934e4186e5507e"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a226b748b904dcab7cf934e4186e5507e">GetInt</a> (const char *key, int32_t defval)</td></tr>
 <tr class="separator:a226b748b904dcab7cf934e4186e5507e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a095657d247978e29b66762d7582653df"><td class="memItemLeft" align="right" valign="top">static int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_app_conf.html#a095657d247978e29b66762d7582653df">GetInt64</a> (const char *key, int64_t defval)</td></tr>
+<tr class="memitem:a095657d247978e29b66762d7582653df" id="r_a095657d247978e29b66762d7582653df"><td class="memItemLeft" align="right" valign="top">static int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a095657d247978e29b66762d7582653df">GetInt64</a> (const char *key, int64_t defval)</td></tr>
 <tr class="separator:a095657d247978e29b66762d7582653df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c35555ba3e9d762865bc57636455ba1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_app_conf.html#a5c35555ba3e9d762865bc57636455ba1">GetBool</a> (const char *key, bool defval)</td></tr>
+<tr class="memitem:a5c35555ba3e9d762865bc57636455ba1" id="r_a5c35555ba3e9d762865bc57636455ba1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c35555ba3e9d762865bc57636455ba1">GetBool</a> (const char *key, bool defval)</td></tr>
 <tr class="separator:a5c35555ba3e9d762865bc57636455ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6d2cb3024ff56428006c14b00435180"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_app_conf.html#ae6d2cb3024ff56428006c14b00435180">GetDouble</a> (const char *key, double defval)</td></tr>
+<tr class="memitem:ae6d2cb3024ff56428006c14b00435180" id="r_ae6d2cb3024ff56428006c14b00435180"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6d2cb3024ff56428006c14b00435180">GetDouble</a> (const char *key, double defval)</td></tr>
 <tr class="separator:ae6d2cb3024ff56428006c14b00435180"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9392ee896338653440183456dde8171b"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_app_conf.html#a9392ee896338653440183456dde8171b">GetStr</a> (const char *key, const char *defval)</td></tr>
+<tr class="memitem:a9392ee896338653440183456dde8171b" id="r_a9392ee896338653440183456dde8171b"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9392ee896338653440183456dde8171b">GetStr</a> (const char *key, const char *defval)</td></tr>
 <tr class="separator:a9392ee896338653440183456dde8171b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a505248383e6db37cd17cc72a75a2708a"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_app_conf.html#a505248383e6db37cd17cc72a75a2708a">Remove</a> (const char *key)</td></tr>
+<tr class="memitem:a505248383e6db37cd17cc72a75a2708a" id="r_a505248383e6db37cd17cc72a75a2708a"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a505248383e6db37cd17cc72a75a2708a">Remove</a> (const char *key)</td></tr>
 <tr class="separator:a505248383e6db37cd17cc72a75a2708a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><pre class="fragment"> widget_set_style_color(label, "normal:bg_color", 0xFF332211);
-```
-
- @param state_and_name 状态和名字，用英文的冒号分隔。
- @param value 值。颜色值一般用十六进制表示，每两个数字表示一个颜色通道，从高位到低位，依次是ABGR。
-
- @return 返回RET_OK表示成功，否则表示失败。
-</pre><p> */ ret_t SetStyleColor(const char* state_and_name, uint32_t value) ;</p>
-<p>/** 加入一个子控件默认实现(供子类调用)。</p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">child</td><td>子控件对象。</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 */ ret_t AddChildDefault(TWidget&amp; child) ;</dd></dl>
-<p>/** x坐标(相对于父控件的x坐标)。</p>
-<p>*/ xy_t GetX() const;</p>
-<p>/** y坐标(相对于父控件的y坐标)。</p>
-<p>*/ xy_t GetY() const;</p>
-<p>/** 宽度。</p>
-<p>*/ wh_t GetW() const;</p>
-<p>/** 高度。</p>
-<p>*/ wh_t GetH() const;</p>
-<p>/** 控件名字。</p>
-<p>*/ char* GetName() const;</p>
-<p>/** 鼠标光标图片名称。</p>
-<p>*/ char* GetPointerCursor() const;</p>
-<p>/** 保存用于翻译的字符串。</p>
-<p>*/ char* GetTrText() const;</p>
-<p>/** style的名称。</p>
-<p>*/ char* GetStyle() const;</p>
-<p>/** 动画参数。请参考<a href="https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md">控件动画</a></p>
-<p>*/ char* GetAnimation() const;</p>
-<p>/** 启用/禁用状态。</p>
-<p>*/ bool GetEnable() const;</p>
-<p>/** 是否启用按键音、触屏音和震动等反馈。</p>
-<p>*/ bool GetFeedback() const;</p>
-<p>/** 是否可见。</p>
-<p>*/ bool GetVisible() const;</p>
-<p>/** 是否接受用户事件。</p>
-<p>*/ bool GetSensitive() const;</p>
-<p>/** 是否支持焦点停留。</p>
-<p>*/ bool GetFocusable() const;</p>
-<p>/** 是否支持焦点状态。 *&gt; 如果希望style支持焦点状态，但又不希望焦点停留，可用本属性。</p>
-<p>*/ bool GetWithFocusState() const;</p>
-<p>/** 是否根据子控件和文本自动调整控件自身大小。</p>
-<p>*&gt; 为true时，最好不要使用 layout 的相关东西，否则可能有冲突。 *&gt; 注意：只是调整控件的本身的宽高，不会修改控件本身的位置。</p>
-<p>*/ bool GetAutoAdjustSize() const;</p>
-<p>/** 标识控件是否启用浮动布局，不受父控件的children_layout的控制。</p>
-<p>*/ bool GetFloating() const;</p>
-<p>/** 不透明度(0-255)，0完全透明，255完全不透明。</p>
-<p>*/ uint8_t GetOpacity() const;</p>
-<p>/** 脏矩形超出控件本身大小的最大范围(一般不用指定)。</p>
-<p>*&gt; 如果 border 太粗或 offset 太大等原因，导致脏矩形超出控件本身大小太多（大于缺省值）时，才需要指定。</p>
-<p>*/ uint16_t GetDirtyRectTolerance() const;</p>
-<p>/** 父控件</p>
-<p>*/ TWidget GetParent() const; };</p>
-<p>/** #include "conf_io/app_conf.h" ``` </p>
+<div class="textblock"><p>应用程序的配置信息。</p>
+<p>底层实现可以是任何格式，比如INI，XML，JSON和UBJSON。</p>
+<p>对于树状的文档，key可以是多级的，用.分隔。如network.ip。</p>
+<p>conf-io是可选组件，需要自己包含头文件，否则64位数据类型会被截断成32位的数据。 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="ace206860d1fe86e5b7f1cd2b2cec6f3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace206860d1fe86e5b7f1cd2b2cec6f3e">&#9670;&nbsp;</a></span>Deinit()</h2>
+<a id="ace206860d1fe86e5b7f1cd2b2cec6f3e" name="ace206860d1fe86e5b7f1cd2b2cec6f3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace206860d1fe86e5b7f1cd2b2cec6f3e">&#9670;&#160;</a></span>Deinit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -178,7 +145,7 @@ $(function() {
         <tr>
           <td class="memname">ret_t TAppConf::Deinit </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -193,8 +160,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a1f20e13b745f93c0178ea80208b913c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f20e13b745f93c0178ea80208b913c9">&#9670;&nbsp;</a></span>Exist()</h2>
+<a id="a1f20e13b745f93c0178ea80208b913c9" name="a1f20e13b745f93c0178ea80208b913c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f20e13b745f93c0178ea80208b913c9">&#9670;&#160;</a></span>Exist()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -205,8 +172,7 @@ $(function() {
         <tr>
           <td class="memname">bool TAppConf::Exist </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>key</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -227,8 +193,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a5c35555ba3e9d762865bc57636455ba1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c35555ba3e9d762865bc57636455ba1">&#9670;&nbsp;</a></span>GetBool()</h2>
+<a id="a5c35555ba3e9d762865bc57636455ba1" name="a5c35555ba3e9d762865bc57636455ba1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c35555ba3e9d762865bc57636455ba1">&#9670;&#160;</a></span>GetBool()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -239,19 +205,12 @@ $(function() {
         <tr>
           <td class="memname">bool TAppConf::GetBool </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -272,8 +231,8 @@ $(function() {
 
 </div>
 </div>
-<a id="ae6d2cb3024ff56428006c14b00435180"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6d2cb3024ff56428006c14b00435180">&#9670;&nbsp;</a></span>GetDouble()</h2>
+<a id="ae6d2cb3024ff56428006c14b00435180" name="ae6d2cb3024ff56428006c14b00435180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6d2cb3024ff56428006c14b00435180">&#9670;&#160;</a></span>GetDouble()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -284,19 +243,12 @@ $(function() {
         <tr>
           <td class="memname">double TAppConf::GetDouble </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -317,8 +269,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a226b748b904dcab7cf934e4186e5507e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a226b748b904dcab7cf934e4186e5507e">&#9670;&nbsp;</a></span>GetInt()</h2>
+<a id="a226b748b904dcab7cf934e4186e5507e" name="a226b748b904dcab7cf934e4186e5507e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a226b748b904dcab7cf934e4186e5507e">&#9670;&#160;</a></span>GetInt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,19 +281,12 @@ $(function() {
         <tr>
           <td class="memname">int32_t TAppConf::GetInt </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int32_t&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int32_t</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -362,8 +307,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a095657d247978e29b66762d7582653df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a095657d247978e29b66762d7582653df">&#9670;&nbsp;</a></span>GetInt64()</h2>
+<a id="a095657d247978e29b66762d7582653df" name="a095657d247978e29b66762d7582653df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a095657d247978e29b66762d7582653df">&#9670;&#160;</a></span>GetInt64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -374,19 +319,12 @@ $(function() {
         <tr>
           <td class="memname">int64_t TAppConf::GetInt64 </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int64_t&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -407,8 +345,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a9392ee896338653440183456dde8171b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9392ee896338653440183456dde8171b">&#9670;&nbsp;</a></span>GetStr()</h2>
+<a id="a9392ee896338653440183456dde8171b" name="a9392ee896338653440183456dde8171b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9392ee896338653440183456dde8171b">&#9670;&#160;</a></span>GetStr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -419,19 +357,12 @@ $(function() {
         <tr>
           <td class="memname">const char * TAppConf::GetStr </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -452,8 +383,8 @@ $(function() {
 
 </div>
 </div>
-<a id="ab4ab1ef740b0682c1174b7954559f741"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4ab1ef740b0682c1174b7954559f741">&#9670;&nbsp;</a></span>Reload()</h2>
+<a id="ab4ab1ef740b0682c1174b7954559f741" name="ab4ab1ef740b0682c1174b7954559f741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4ab1ef740b0682c1174b7954559f741">&#9670;&#160;</a></span>Reload()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -464,7 +395,7 @@ $(function() {
         <tr>
           <td class="memname">ret_t TAppConf::Reload </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -479,8 +410,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a505248383e6db37cd17cc72a75a2708a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a505248383e6db37cd17cc72a75a2708a">&#9670;&nbsp;</a></span>Remove()</h2>
+<a id="a505248383e6db37cd17cc72a75a2708a" name="a505248383e6db37cd17cc72a75a2708a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a505248383e6db37cd17cc72a75a2708a">&#9670;&#160;</a></span>Remove()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -491,8 +422,7 @@ $(function() {
         <tr>
           <td class="memname">ret_t TAppConf::Remove </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>key</em></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -513,8 +443,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a5d4986a464b4bc150904f93bc7978629"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d4986a464b4bc150904f93bc7978629">&#9670;&nbsp;</a></span>Save()</h2>
+<a id="a5d4986a464b4bc150904f93bc7978629" name="a5d4986a464b4bc150904f93bc7978629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d4986a464b4bc150904f93bc7978629">&#9670;&#160;</a></span>Save()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -525,7 +455,7 @@ $(function() {
         <tr>
           <td class="memname">ret_t TAppConf::Save </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -540,8 +470,8 @@ $(function() {
 
 </div>
 </div>
-<a id="ae39a4c8ba12e7bf22ff45cbdff20838e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae39a4c8ba12e7bf22ff45cbdff20838e">&#9670;&nbsp;</a></span>SetBool()</h2>
+<a id="ae39a4c8ba12e7bf22ff45cbdff20838e" name="ae39a4c8ba12e7bf22ff45cbdff20838e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae39a4c8ba12e7bf22ff45cbdff20838e">&#9670;&#160;</a></span>SetBool()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -552,19 +482,12 @@ $(function() {
         <tr>
           <td class="memname">ret_t TAppConf::SetBool </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -585,8 +508,8 @@ $(function() {
 
 </div>
 </div>
-<a id="aee3283a4295aab543056124174c18a94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee3283a4295aab543056124174c18a94">&#9670;&nbsp;</a></span>SetDouble()</h2>
+<a id="aee3283a4295aab543056124174c18a94" name="aee3283a4295aab543056124174c18a94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee3283a4295aab543056124174c18a94">&#9670;&#160;</a></span>SetDouble()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -597,19 +520,12 @@ $(function() {
         <tr>
           <td class="memname">ret_t TAppConf::SetDouble </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -630,8 +546,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a6a0ed59fe3fbc0e6d9923212ed0987e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a0ed59fe3fbc0e6d9923212ed0987e3">&#9670;&nbsp;</a></span>SetInt()</h2>
+<a id="a6a0ed59fe3fbc0e6d9923212ed0987e3" name="a6a0ed59fe3fbc0e6d9923212ed0987e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a0ed59fe3fbc0e6d9923212ed0987e3">&#9670;&#160;</a></span>SetInt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -642,19 +558,12 @@ $(function() {
         <tr>
           <td class="memname">ret_t TAppConf::SetInt </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int32_t&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int32_t</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -675,8 +584,8 @@ $(function() {
 
 </div>
 </div>
-<a id="ad8954e7cc11e522819c9751182de5eab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8954e7cc11e522819c9751182de5eab">&#9670;&nbsp;</a></span>SetInt64()</h2>
+<a id="ad8954e7cc11e522819c9751182de5eab" name="ad8954e7cc11e522819c9751182de5eab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8954e7cc11e522819c9751182de5eab">&#9670;&#160;</a></span>SetInt64()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -687,19 +596,12 @@ $(function() {
         <tr>
           <td class="memname">ret_t TAppConf::SetInt64 </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int64_t&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -720,8 +622,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a3794299c60f759c98e2006421e113a28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3794299c60f759c98e2006421e113a28">&#9670;&nbsp;</a></span>SetStr()</h2>
+<a id="a3794299c60f759c98e2006421e113a28" name="a3794299c60f759c98e2006421e113a28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3794299c60f759c98e2006421e113a28">&#9670;&#160;</a></span>SetStr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -732,19 +634,12 @@ $(function() {
         <tr>
           <td class="memname">ret_t TAppConf::SetStr </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -767,12 +662,13 @@ $(function() {
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
-<li>output/awtk_cpp.cpp</li>
+<li>output/<b>awtk_cpp.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

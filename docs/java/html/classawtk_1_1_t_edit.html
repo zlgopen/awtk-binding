@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TEdit类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-JAVA
    </div>
    <div id="projectbrief">AWTK JAVA API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,9 +70,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,13 +87,13 @@ $(function() {
 <li class="navelem"><b>awtk</b></li><li class="navelem"><a class="el" href="classawtk_1_1_t_edit.html">TEdit</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="classawtk_1_1_t_edit-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">awtk.TEdit类 参考</div>  </div>
+  <div class="headertitle"><div class="title">awtk.TEdit类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -80,129 +102,442 @@ $(function() {
  <div class="center">
   <img src="classawtk_1_1_t_edit.png" usemap="#awtk.TEdit_map" alt=""/>
   <map id="awtk.TEdit_map" name="awtk.TEdit_map">
+<area href="classawtk_1_1_t_widget.html" alt="awtk.TWidget" shape="rect" coords="66,0,188,24"/>
 <area href="classawtk_1_1_t_combo_box.html" alt="awtk.TComboBox" shape="rect" coords="0,112,122,136"/>
 <area href="classawtk_1_1_t_spin_box.html" alt="awtk.TSpinBox" shape="rect" coords="132,112,254,136"/>
 <area href="classawtk_1_1_t_combo_box_ex.html" alt="awtk.TComboBoxEx" shape="rect" coords="0,168,122,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a1304a8eb0e5b1d50fffda3168f3baf58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a1304a8eb0e5b1d50fffda3168f3baf58">TEdit</a> (long nativeObj)</td></tr>
+<tr class="memitem:a1304a8eb0e5b1d50fffda3168f3baf58" id="r_a1304a8eb0e5b1d50fffda3168f3baf58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1304a8eb0e5b1d50fffda3168f3baf58">TEdit</a> (long <a class="el" href="classawtk_1_1_t_widget.html#a562906c4aab148e8b0162367ccad09de">nativeObj</a>)</td></tr>
 <tr class="separator:a1304a8eb0e5b1d50fffda3168f3baf58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54dfa7d9792d79b4f2545ad88f66cc6a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a54dfa7d9792d79b4f2545ad88f66cc6a">getInt</a> ()</td></tr>
+<tr class="memitem:a54dfa7d9792d79b4f2545ad88f66cc6a" id="r_a54dfa7d9792d79b4f2545ad88f66cc6a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54dfa7d9792d79b4f2545ad88f66cc6a">getInt</a> ()</td></tr>
 <tr class="separator:a54dfa7d9792d79b4f2545ad88f66cc6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53f6fcd5cbafc4d848d8659a30ca4c6d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a53f6fcd5cbafc4d848d8659a30ca4c6d">getDouble</a> ()</td></tr>
+<tr class="memitem:a53f6fcd5cbafc4d848d8659a30ca4c6d" id="r_a53f6fcd5cbafc4d848d8659a30ca4c6d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53f6fcd5cbafc4d848d8659a30ca4c6d">getDouble</a> ()</td></tr>
 <tr class="separator:a53f6fcd5cbafc4d848d8659a30ca4c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d013a8959740ceb95fd63d6a0a86617"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a3d013a8959740ceb95fd63d6a0a86617">setInt</a> (int value)</td></tr>
+<tr class="memitem:a3d013a8959740ceb95fd63d6a0a86617" id="r_a3d013a8959740ceb95fd63d6a0a86617"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d013a8959740ceb95fd63d6a0a86617">setInt</a> (int value)</td></tr>
 <tr class="separator:a3d013a8959740ceb95fd63d6a0a86617"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d041d5fe1965b061af9b1e470843ed8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a4d041d5fe1965b061af9b1e470843ed8">setDouble</a> (double value)</td></tr>
+<tr class="memitem:a4d041d5fe1965b061af9b1e470843ed8" id="r_a4d041d5fe1965b061af9b1e470843ed8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d041d5fe1965b061af9b1e470843ed8">setDouble</a> (double value)</td></tr>
 <tr class="separator:a4d041d5fe1965b061af9b1e470843ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a8296e193f4219d86d401780c494aac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a9a8296e193f4219d86d401780c494aac">setDoubleEx</a> (String format, double value)</td></tr>
+<tr class="memitem:a9a8296e193f4219d86d401780c494aac" id="r_a9a8296e193f4219d86d401780c494aac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a8296e193f4219d86d401780c494aac">setDoubleEx</a> (String format, double value)</td></tr>
 <tr class="separator:a9a8296e193f4219d86d401780c494aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c4cd79700697bae39487a0a83936fca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a8c4cd79700697bae39487a0a83936fca">setTextLimit</a> (int min, int max)</td></tr>
+<tr class="memitem:a8c4cd79700697bae39487a0a83936fca" id="r_a8c4cd79700697bae39487a0a83936fca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c4cd79700697bae39487a0a83936fca">setTextLimit</a> (int min, int max)</td></tr>
 <tr class="separator:a8c4cd79700697bae39487a0a83936fca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab60ea183eb4fbd10b65bc3979e9f397d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#ab60ea183eb4fbd10b65bc3979e9f397d">setIntLimit</a> (int min, int max, int step)</td></tr>
+<tr class="memitem:ab60ea183eb4fbd10b65bc3979e9f397d" id="r_ab60ea183eb4fbd10b65bc3979e9f397d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab60ea183eb4fbd10b65bc3979e9f397d">setIntLimit</a> (int min, int max, int step)</td></tr>
 <tr class="separator:ab60ea183eb4fbd10b65bc3979e9f397d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a93e4f2c6e58a8dd13723193afd1dfd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a9a93e4f2c6e58a8dd13723193afd1dfd">setFloatLimit</a> (double min, double max, double step)</td></tr>
+<tr class="memitem:a9a93e4f2c6e58a8dd13723193afd1dfd" id="r_a9a93e4f2c6e58a8dd13723193afd1dfd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a93e4f2c6e58a8dd13723193afd1dfd">setFloatLimit</a> (double min, double max, double step)</td></tr>
 <tr class="separator:a9a93e4f2c6e58a8dd13723193afd1dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cd953fa1cff886dbe123e598c1922a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a4cd953fa1cff886dbe123e598c1922a9">setReadonly</a> (boolean readonly)</td></tr>
+<tr class="memitem:a4cd953fa1cff886dbe123e598c1922a9" id="r_a4cd953fa1cff886dbe123e598c1922a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cd953fa1cff886dbe123e598c1922a9">setReadonly</a> (boolean readonly)</td></tr>
 <tr class="separator:a4cd953fa1cff886dbe123e598c1922a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ab2c200f569c020af7cf01cf267aedf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a7ab2c200f569c020af7cf01cf267aedf">setCancelable</a> (boolean cancelable)</td></tr>
+<tr class="memitem:a7ab2c200f569c020af7cf01cf267aedf" id="r_a7ab2c200f569c020af7cf01cf267aedf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ab2c200f569c020af7cf01cf267aedf">setCancelable</a> (boolean cancelable)</td></tr>
 <tr class="separator:a7ab2c200f569c020af7cf01cf267aedf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdcdc2f23aee583f8e74209146f84d68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#abdcdc2f23aee583f8e74209146f84d68">setAutoFix</a> (boolean auto_fix)</td></tr>
+<tr class="memitem:abdcdc2f23aee583f8e74209146f84d68" id="r_abdcdc2f23aee583f8e74209146f84d68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdcdc2f23aee583f8e74209146f84d68">setAutoFix</a> (boolean auto_fix)</td></tr>
 <tr class="separator:abdcdc2f23aee583f8e74209146f84d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17ee7a550d2f87674fd68811b563a017"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a17ee7a550d2f87674fd68811b563a017">setSelectNoneWhenFocused</a> (boolean select_none_when_focused)</td></tr>
+<tr class="memitem:a17ee7a550d2f87674fd68811b563a017" id="r_a17ee7a550d2f87674fd68811b563a017"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17ee7a550d2f87674fd68811b563a017">setSelectNoneWhenFocused</a> (boolean select_none_when_focused)</td></tr>
 <tr class="separator:a17ee7a550d2f87674fd68811b563a017"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0499673b0946550c0fe3db3e5b3a4dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#ae0499673b0946550c0fe3db3e5b3a4dc">setOpenImWhenFocused</a> (boolean open_im_when_focused)</td></tr>
+<tr class="memitem:ae0499673b0946550c0fe3db3e5b3a4dc" id="r_ae0499673b0946550c0fe3db3e5b3a4dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0499673b0946550c0fe3db3e5b3a4dc">setOpenImWhenFocused</a> (boolean open_im_when_focused)</td></tr>
 <tr class="separator:ae0499673b0946550c0fe3db3e5b3a4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76a31acb08404f9d99893721a0efe2f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a76a31acb08404f9d99893721a0efe2f5">setCloseImWhenBlured</a> (boolean close_im_when_blured)</td></tr>
+<tr class="memitem:a76a31acb08404f9d99893721a0efe2f5" id="r_a76a31acb08404f9d99893721a0efe2f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76a31acb08404f9d99893721a0efe2f5">setCloseImWhenBlured</a> (boolean close_im_when_blured)</td></tr>
 <tr class="separator:a76a31acb08404f9d99893721a0efe2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa1c97fb9c92c973dd2bd4e8aba1b001"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#afa1c97fb9c92c973dd2bd4e8aba1b001">setInputType</a> (<a class="el" href="enumawtk_1_1_t_input_type.html">TInputType</a> type)</td></tr>
+<tr class="memitem:afa1c97fb9c92c973dd2bd4e8aba1b001" id="r_afa1c97fb9c92c973dd2bd4e8aba1b001"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa1c97fb9c92c973dd2bd4e8aba1b001">setInputType</a> (<a class="el" href="enumawtk_1_1_t_input_type.html">TInputType</a> type)</td></tr>
 <tr class="separator:afa1c97fb9c92c973dd2bd4e8aba1b001"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cb096c8a211f6d735e20a77dd23abbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a4cb096c8a211f6d735e20a77dd23abbe">setActionText</a> (String action_text)</td></tr>
+<tr class="memitem:a4cb096c8a211f6d735e20a77dd23abbe" id="r_a4cb096c8a211f6d735e20a77dd23abbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cb096c8a211f6d735e20a77dd23abbe">setActionText</a> (String action_text)</td></tr>
 <tr class="separator:a4cb096c8a211f6d735e20a77dd23abbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac12dab3b58b326749ca8dc78e486ab62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#ac12dab3b58b326749ca8dc78e486ab62">setTips</a> (String tips)</td></tr>
+<tr class="memitem:ac12dab3b58b326749ca8dc78e486ab62" id="r_ac12dab3b58b326749ca8dc78e486ab62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac12dab3b58b326749ca8dc78e486ab62">setTips</a> (String tips)</td></tr>
 <tr class="separator:ac12dab3b58b326749ca8dc78e486ab62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d253d8c327247f460861b0cb0d2ade6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a8d253d8c327247f460861b0cb0d2ade6">setTrTips</a> (String tr_tips)</td></tr>
+<tr class="memitem:a8d253d8c327247f460861b0cb0d2ade6" id="r_a8d253d8c327247f460861b0cb0d2ade6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d253d8c327247f460861b0cb0d2ade6">setTrTips</a> (String tr_tips)</td></tr>
 <tr class="separator:a8d253d8c327247f460861b0cb0d2ade6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a398aba4c109a1c43f5dd79e3665a9f8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a398aba4c109a1c43f5dd79e3665a9f8f">setKeyboard</a> (String keyboard)</td></tr>
+<tr class="memitem:a398aba4c109a1c43f5dd79e3665a9f8f" id="r_a398aba4c109a1c43f5dd79e3665a9f8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a398aba4c109a1c43f5dd79e3665a9f8f">setKeyboard</a> (String keyboard)</td></tr>
 <tr class="separator:a398aba4c109a1c43f5dd79e3665a9f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfc7c37a40d46e78e7ab14ea2b45f32f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#acfc7c37a40d46e78e7ab14ea2b45f32f">setPasswordVisible</a> (boolean password_visible)</td></tr>
+<tr class="memitem:acfc7c37a40d46e78e7ab14ea2b45f32f" id="r_acfc7c37a40d46e78e7ab14ea2b45f32f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfc7c37a40d46e78e7ab14ea2b45f32f">setPasswordVisible</a> (boolean password_visible)</td></tr>
 <tr class="separator:acfc7c37a40d46e78e7ab14ea2b45f32f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5f2fe503adf5e41fe9c0102b5c33f50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#ac5f2fe503adf5e41fe9c0102b5c33f50">setFocus</a> (boolean focus)</td></tr>
+<tr class="memitem:ac5f2fe503adf5e41fe9c0102b5c33f50" id="r_ac5f2fe503adf5e41fe9c0102b5c33f50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5f2fe503adf5e41fe9c0102b5c33f50">setFocus</a> (boolean focus)</td></tr>
 <tr class="separator:ac5f2fe503adf5e41fe9c0102b5c33f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7aafadc67c20a64f7f414cc11952be71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a7aafadc67c20a64f7f414cc11952be71">setCursor</a> (int cursor)</td></tr>
+<tr class="memitem:a7aafadc67c20a64f7f414cc11952be71" id="r_a7aafadc67c20a64f7f414cc11952be71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7aafadc67c20a64f7f414cc11952be71">setCursor</a> (int cursor)</td></tr>
 <tr class="separator:a7aafadc67c20a64f7f414cc11952be71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83853d4b6a98bb7b8f6fa774ccc7a4b0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a83853d4b6a98bb7b8f6fa774ccc7a4b0">getCursor</a> ()</td></tr>
+<tr class="memitem:a83853d4b6a98bb7b8f6fa774ccc7a4b0" id="r_a83853d4b6a98bb7b8f6fa774ccc7a4b0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83853d4b6a98bb7b8f6fa774ccc7a4b0">getCursor</a> ()</td></tr>
 <tr class="separator:a83853d4b6a98bb7b8f6fa774ccc7a4b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad351955b6e5d9c2829b7dad04d05a8c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#ad351955b6e5d9c2829b7dad04d05a8c9">setSelect</a> (int start, int end)</td></tr>
+<tr class="memitem:ad351955b6e5d9c2829b7dad04d05a8c9" id="r_ad351955b6e5d9c2829b7dad04d05a8c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad351955b6e5d9c2829b7dad04d05a8c9">setSelect</a> (int start, int end)</td></tr>
 <tr class="separator:ad351955b6e5d9c2829b7dad04d05a8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fe3a11e8617a4ab97051748c7d956b8"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a1fe3a11e8617a4ab97051748c7d956b8">getSelectedText</a> ()</td></tr>
+<tr class="memitem:a1fe3a11e8617a4ab97051748c7d956b8" id="r_a1fe3a11e8617a4ab97051748c7d956b8"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fe3a11e8617a4ab97051748c7d956b8">getSelectedText</a> ()</td></tr>
 <tr class="separator:a1fe3a11e8617a4ab97051748c7d956b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e974129bc7002c7a150638f39cdf0ec"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a3e974129bc7002c7a150638f39cdf0ec">getTips</a> ()</td></tr>
+<tr class="memitem:abd64eec5042c5bc462b32baaeb0d3733" id="r_abd64eec5042c5bc462b32baaeb0d3733"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd64eec5042c5bc462b32baaeb0d3733">setFocusNextWhenEnter</a> (boolean focus_next_when_enter)</td></tr>
+<tr class="separator:abd64eec5042c5bc462b32baaeb0d3733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e974129bc7002c7a150638f39cdf0ec" id="r_a3e974129bc7002c7a150638f39cdf0ec"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e974129bc7002c7a150638f39cdf0ec">getTips</a> ()</td></tr>
 <tr class="separator:a3e974129bc7002c7a150638f39cdf0ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b0a0cddc679a7d30376def3aac62a58"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a1b0a0cddc679a7d30376def3aac62a58">getTrTips</a> ()</td></tr>
+<tr class="memitem:a1b0a0cddc679a7d30376def3aac62a58" id="r_a1b0a0cddc679a7d30376def3aac62a58"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b0a0cddc679a7d30376def3aac62a58">getTrTips</a> ()</td></tr>
 <tr class="separator:a1b0a0cddc679a7d30376def3aac62a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4581fd853364bff2b5e6370dda88eded"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a4581fd853364bff2b5e6370dda88eded">getActionText</a> ()</td></tr>
+<tr class="memitem:a4581fd853364bff2b5e6370dda88eded" id="r_a4581fd853364bff2b5e6370dda88eded"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4581fd853364bff2b5e6370dda88eded">getActionText</a> ()</td></tr>
 <tr class="separator:a4581fd853364bff2b5e6370dda88eded"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f8cbf39b01f5e5707ff44187dee452a"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a8f8cbf39b01f5e5707ff44187dee452a">getKeyboard</a> ()</td></tr>
+<tr class="memitem:ad56a715fa4b5f836ba360e9b4b707e26" id="r_ad56a715fa4b5f836ba360e9b4b707e26"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad56a715fa4b5f836ba360e9b4b707e26">getValidator</a> ()</td></tr>
+<tr class="separator:ad56a715fa4b5f836ba360e9b4b707e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f8cbf39b01f5e5707ff44187dee452a" id="r_a8f8cbf39b01f5e5707ff44187dee452a"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f8cbf39b01f5e5707ff44187dee452a">getKeyboard</a> ()</td></tr>
 <tr class="separator:a8f8cbf39b01f5e5707ff44187dee452a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7becd5e8c915b8bdb45d964115c1ec93"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a7becd5e8c915b8bdb45d964115c1ec93">getMin</a> ()</td></tr>
+<tr class="memitem:a7becd5e8c915b8bdb45d964115c1ec93" id="r_a7becd5e8c915b8bdb45d964115c1ec93"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7becd5e8c915b8bdb45d964115c1ec93">getMin</a> ()</td></tr>
 <tr class="separator:a7becd5e8c915b8bdb45d964115c1ec93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa73bb680610717cdf5ff35f51513ac62"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#aa73bb680610717cdf5ff35f51513ac62">getMax</a> ()</td></tr>
+<tr class="memitem:aa73bb680610717cdf5ff35f51513ac62" id="r_aa73bb680610717cdf5ff35f51513ac62"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa73bb680610717cdf5ff35f51513ac62">getMax</a> ()</td></tr>
 <tr class="separator:aa73bb680610717cdf5ff35f51513ac62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08d10eab4de90b2df6c4e1d487dc6d34"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a08d10eab4de90b2df6c4e1d487dc6d34">getStep</a> ()</td></tr>
+<tr class="memitem:a08d10eab4de90b2df6c4e1d487dc6d34" id="r_a08d10eab4de90b2df6c4e1d487dc6d34"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08d10eab4de90b2df6c4e1d487dc6d34">getStep</a> ()</td></tr>
 <tr class="separator:a08d10eab4de90b2df6c4e1d487dc6d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4337dc3eaf6b906d84c8693245571e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_input_type.html">TInputType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#aa4337dc3eaf6b906d84c8693245571e6">getInputType</a> ()</td></tr>
+<tr class="memitem:aa4337dc3eaf6b906d84c8693245571e6" id="r_aa4337dc3eaf6b906d84c8693245571e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_input_type.html">TInputType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4337dc3eaf6b906d84c8693245571e6">getInputType</a> ()</td></tr>
 <tr class="separator:aa4337dc3eaf6b906d84c8693245571e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91b3675075a6b85b87ed51d9c5076e66"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a91b3675075a6b85b87ed51d9c5076e66">getReadonly</a> ()</td></tr>
+<tr class="memitem:a91b3675075a6b85b87ed51d9c5076e66" id="r_a91b3675075a6b85b87ed51d9c5076e66"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91b3675075a6b85b87ed51d9c5076e66">getReadonly</a> ()</td></tr>
 <tr class="separator:a91b3675075a6b85b87ed51d9c5076e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a2c4b455c6cec7f9cda4a383444bcdb"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a3a2c4b455c6cec7f9cda4a383444bcdb">getPasswordVisible</a> ()</td></tr>
+<tr class="memitem:a3a2c4b455c6cec7f9cda4a383444bcdb" id="r_a3a2c4b455c6cec7f9cda4a383444bcdb"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a2c4b455c6cec7f9cda4a383444bcdb">getPasswordVisible</a> ()</td></tr>
 <tr class="separator:a3a2c4b455c6cec7f9cda4a383444bcdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b95397c0b7226ac607c26b3251058cc"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a6b95397c0b7226ac607c26b3251058cc">getAutoFix</a> ()</td></tr>
+<tr class="memitem:a6b95397c0b7226ac607c26b3251058cc" id="r_a6b95397c0b7226ac607c26b3251058cc"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b95397c0b7226ac607c26b3251058cc">getAutoFix</a> ()</td></tr>
 <tr class="separator:a6b95397c0b7226ac607c26b3251058cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ec14c8369366ea282057b8f87a3b307"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a4ec14c8369366ea282057b8f87a3b307">getSelectNoneWhenFocused</a> ()</td></tr>
+<tr class="memitem:a4ec14c8369366ea282057b8f87a3b307" id="r_a4ec14c8369366ea282057b8f87a3b307"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ec14c8369366ea282057b8f87a3b307">getSelectNoneWhenFocused</a> ()</td></tr>
 <tr class="separator:a4ec14c8369366ea282057b8f87a3b307"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedd87e45ab85c5fecc539424c2a6d96e"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#aedd87e45ab85c5fecc539424c2a6d96e">getOpenImWhenFocused</a> ()</td></tr>
+<tr class="memitem:aedd87e45ab85c5fecc539424c2a6d96e" id="r_aedd87e45ab85c5fecc539424c2a6d96e"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedd87e45ab85c5fecc539424c2a6d96e">getOpenImWhenFocused</a> ()</td></tr>
 <tr class="separator:aedd87e45ab85c5fecc539424c2a6d96e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41f6b3f08ef7d9f850cebddfaaa52e83"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a41f6b3f08ef7d9f850cebddfaaa52e83">getCloseImWhenBlured</a> ()</td></tr>
+<tr class="memitem:a41f6b3f08ef7d9f850cebddfaaa52e83" id="r_a41f6b3f08ef7d9f850cebddfaaa52e83"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41f6b3f08ef7d9f850cebddfaaa52e83">getCloseImWhenBlured</a> ()</td></tr>
 <tr class="separator:a41f6b3f08ef7d9f850cebddfaaa52e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c158e859fcee02878122b8fb3fb8c09"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a7c158e859fcee02878122b8fb3fb8c09">getCancelable</a> ()</td></tr>
+<tr class="memitem:a7c158e859fcee02878122b8fb3fb8c09" id="r_a7c158e859fcee02878122b8fb3fb8c09"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c158e859fcee02878122b8fb3fb8c09">getCancelable</a> ()</td></tr>
 <tr class="separator:a7c158e859fcee02878122b8fb3fb8c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d668cb546f632a9adf128cab941e8f5" id="r_a8d668cb546f632a9adf128cab941e8f5"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d668cb546f632a9adf128cab941e8f5">getFocusNextWhenEnter</a> ()</td></tr>
+<tr class="separator:a8d668cb546f632a9adf128cab941e8f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classawtk_1_1_t_widget"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classawtk_1_1_t_widget')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classawtk_1_1_t_widget.html">awtk.TWidget</a></td></tr>
+<tr class="memitem:a9109a1c930e3a21f4b8bacc6c3f1a5a5 inherit pub_methods_classawtk_1_1_t_widget" id="r_a9109a1c930e3a21f4b8bacc6c3f1a5a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a9109a1c930e3a21f4b8bacc6c3f1a5a5">TWidget</a> (long <a class="el" href="classawtk_1_1_t_widget.html#a562906c4aab148e8b0162367ccad09de">nativeObj</a>)</td></tr>
+<tr class="separator:a9109a1c930e3a21f4b8bacc6c3f1a5a5 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af517283a0b459465d03cb7b528971c3c inherit pub_methods_classawtk_1_1_t_widget" id="r_af517283a0b459465d03cb7b528971c3c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#af517283a0b459465d03cb7b528971c3c">countChildren</a> ()</td></tr>
+<tr class="separator:af517283a0b459465d03cb7b528971c3c inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a391ca24efe1a2ec814b0599122ac30a3 inherit pub_methods_classawtk_1_1_t_widget" id="r_a391ca24efe1a2ec814b0599122ac30a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a391ca24efe1a2ec814b0599122ac30a3">getChild</a> (int index)</td></tr>
+<tr class="separator:a391ca24efe1a2ec814b0599122ac30a3 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24a28f0d47529ae19fd27b81c57c1f7a inherit pub_methods_classawtk_1_1_t_widget" id="r_a24a28f0d47529ae19fd27b81c57c1f7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a24a28f0d47529ae19fd27b81c57c1f7a">findParentByName</a> (String name)</td></tr>
+<tr class="separator:a24a28f0d47529ae19fd27b81c57c1f7a inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2bd55c6a232985ca0f1930642bdff12 inherit pub_methods_classawtk_1_1_t_widget" id="r_ac2bd55c6a232985ca0f1930642bdff12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ac2bd55c6a232985ca0f1930642bdff12">findParentByType</a> (String type)</td></tr>
+<tr class="separator:ac2bd55c6a232985ca0f1930642bdff12 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4181e44cb7da2872199e9a0f139e8364 inherit pub_methods_classawtk_1_1_t_widget" id="r_a4181e44cb7da2872199e9a0f139e8364"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a4181e44cb7da2872199e9a0f139e8364">getFocusedWidget</a> ()</td></tr>
+<tr class="separator:a4181e44cb7da2872199e9a0f139e8364 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dea4508d46af90401420998a1bfe641 inherit pub_methods_classawtk_1_1_t_widget" id="r_a0dea4508d46af90401420998a1bfe641"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_native_window.html">TNativeWindow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a0dea4508d46af90401420998a1bfe641">getNativeWindow</a> ()</td></tr>
+<tr class="separator:a0dea4508d46af90401420998a1bfe641 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7375bfe57201450ec89c588c19f1340c inherit pub_methods_classawtk_1_1_t_widget" id="r_a7375bfe57201450ec89c588c19f1340c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a7375bfe57201450ec89c588c19f1340c">indexOf</a> ()</td></tr>
+<tr class="separator:a7375bfe57201450ec89c588c19f1340c inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b1f9c1a8cd05f0656717a5a563f93b2 inherit pub_methods_classawtk_1_1_t_widget" id="r_a5b1f9c1a8cd05f0656717a5a563f93b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a5b1f9c1a8cd05f0656717a5a563f93b2">closeWindow</a> ()</td></tr>
+<tr class="separator:a5b1f9c1a8cd05f0656717a5a563f93b2 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bacb8d2905c1645cdd4705ec7736758 inherit pub_methods_classawtk_1_1_t_widget" id="r_a8bacb8d2905c1645cdd4705ec7736758"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a8bacb8d2905c1645cdd4705ec7736758">closeWindowForce</a> ()</td></tr>
+<tr class="separator:a8bacb8d2905c1645cdd4705ec7736758 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b8a819f8f94c69348e4387f30062e52 inherit pub_methods_classawtk_1_1_t_widget" id="r_a6b8a819f8f94c69348e4387f30062e52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a6b8a819f8f94c69348e4387f30062e52">back</a> ()</td></tr>
+<tr class="separator:a6b8a819f8f94c69348e4387f30062e52 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dc9f174b56b62b83f58bf39219a1cfd inherit pub_methods_classawtk_1_1_t_widget" id="r_a2dc9f174b56b62b83f58bf39219a1cfd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a2dc9f174b56b62b83f58bf39219a1cfd">backToHome</a> ()</td></tr>
+<tr class="separator:a2dc9f174b56b62b83f58bf39219a1cfd inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7242dc4a8ae80c533c448976a4351d24 inherit pub_methods_classawtk_1_1_t_widget" id="r_a7242dc4a8ae80c533c448976a4351d24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a7242dc4a8ae80c533c448976a4351d24">move</a> (int x, int y)</td></tr>
+<tr class="separator:a7242dc4a8ae80c533c448976a4351d24 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09679fc7507453a6d0ea9519b4298a28 inherit pub_methods_classawtk_1_1_t_widget" id="r_a09679fc7507453a6d0ea9519b4298a28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a09679fc7507453a6d0ea9519b4298a28">moveToCenter</a> ()</td></tr>
+<tr class="separator:a09679fc7507453a6d0ea9519b4298a28 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac20f47885828f77e9e48d0192d02e925 inherit pub_methods_classawtk_1_1_t_widget" id="r_ac20f47885828f77e9e48d0192d02e925"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ac20f47885828f77e9e48d0192d02e925">resize</a> (int w, int h)</td></tr>
+<tr class="separator:ac20f47885828f77e9e48d0192d02e925 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bf1861091df495abaf69008524a6737 inherit pub_methods_classawtk_1_1_t_widget" id="r_a4bf1861091df495abaf69008524a6737"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a4bf1861091df495abaf69008524a6737">moveResize</a> (int x, int y, int w, int h)</td></tr>
+<tr class="separator:a4bf1861091df495abaf69008524a6737 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6565008e660e21626f2b464505476179 inherit pub_methods_classawtk_1_1_t_widget" id="r_a6565008e660e21626f2b464505476179"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a6565008e660e21626f2b464505476179">moveResizeEx</a> (int x, int y, int w, int h, boolean update_layout)</td></tr>
+<tr class="separator:a6565008e660e21626f2b464505476179 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae80a09cd2f96c7120b33349e40b80af7 inherit pub_methods_classawtk_1_1_t_widget" id="r_ae80a09cd2f96c7120b33349e40b80af7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ae80a09cd2f96c7120b33349e40b80af7">getValue</a> ()</td></tr>
+<tr class="separator:ae80a09cd2f96c7120b33349e40b80af7 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63de266b4fce7c33d9d77982e0185f5d inherit pub_methods_classawtk_1_1_t_widget" id="r_a63de266b4fce7c33d9d77982e0185f5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a63de266b4fce7c33d9d77982e0185f5d">setValue</a> (double value)</td></tr>
+<tr class="separator:a63de266b4fce7c33d9d77982e0185f5d inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f920f9c2195a7f9f81e9cbdee500f59 inherit pub_methods_classawtk_1_1_t_widget" id="r_a5f920f9c2195a7f9f81e9cbdee500f59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a5f920f9c2195a7f9f81e9cbdee500f59">addValue</a> (double delta)</td></tr>
+<tr class="separator:a5f920f9c2195a7f9f81e9cbdee500f59 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a664ea0809bb31000d210de2a0684492a inherit pub_methods_classawtk_1_1_t_widget" id="r_a664ea0809bb31000d210de2a0684492a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a664ea0809bb31000d210de2a0684492a">getValueInt</a> ()</td></tr>
+<tr class="separator:a664ea0809bb31000d210de2a0684492a inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b00a303c620bb06e479f84de0128863 inherit pub_methods_classawtk_1_1_t_widget" id="r_a8b00a303c620bb06e479f84de0128863"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a8b00a303c620bb06e479f84de0128863">setValueInt</a> (int value)</td></tr>
+<tr class="separator:a8b00a303c620bb06e479f84de0128863 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac075edf40a980ffa560a4e927a8c4a08 inherit pub_methods_classawtk_1_1_t_widget" id="r_ac075edf40a980ffa560a4e927a8c4a08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ac075edf40a980ffa560a4e927a8c4a08">addValueInt</a> (int delta)</td></tr>
+<tr class="separator:ac075edf40a980ffa560a4e927a8c4a08 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac72faf65ae1c9c8e61f5e3c753d0b17d inherit pub_methods_classawtk_1_1_t_widget" id="r_ac72faf65ae1c9c8e61f5e3c753d0b17d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ac72faf65ae1c9c8e61f5e3c753d0b17d">animateValueTo</a> (double value, int duration)</td></tr>
+<tr class="separator:ac72faf65ae1c9c8e61f5e3c753d0b17d inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a857bd2ce0c2b4560ddeaf7a19d3a1a38 inherit pub_methods_classawtk_1_1_t_widget" id="r_a857bd2ce0c2b4560ddeaf7a19d3a1a38"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a857bd2ce0c2b4560ddeaf7a19d3a1a38">isStyleExist</a> (String style_name, String state_name)</td></tr>
+<tr class="separator:a857bd2ce0c2b4560ddeaf7a19d3a1a38 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1e46b156e8e06f7c0b3a2afa9ed81b9 inherit pub_methods_classawtk_1_1_t_widget" id="r_ab1e46b156e8e06f7c0b3a2afa9ed81b9"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ab1e46b156e8e06f7c0b3a2afa9ed81b9">isSupportHighlighter</a> ()</td></tr>
+<tr class="separator:ab1e46b156e8e06f7c0b3a2afa9ed81b9 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea09fcefb8589f22540a4ede908696ba inherit pub_methods_classawtk_1_1_t_widget" id="r_aea09fcefb8589f22540a4ede908696ba"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#aea09fcefb8589f22540a4ede908696ba">hasHighlighter</a> ()</td></tr>
+<tr class="separator:aea09fcefb8589f22540a4ede908696ba inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b37f27732230bff2f4a8e56057880ae inherit pub_methods_classawtk_1_1_t_widget" id="r_a9b37f27732230bff2f4a8e56057880ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a9b37f27732230bff2f4a8e56057880ae">useStyle</a> (String style)</td></tr>
+<tr class="separator:a9b37f27732230bff2f4a8e56057880ae inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4dfdb28f56be949dab8e06209474253 inherit pub_methods_classawtk_1_1_t_widget" id="r_ae4dfdb28f56be949dab8e06209474253"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ae4dfdb28f56be949dab8e06209474253">setText</a> (String text)</td></tr>
+<tr class="separator:ae4dfdb28f56be949dab8e06209474253 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94e2992f5ea79df86bb340fffa900821 inherit pub_methods_classawtk_1_1_t_widget" id="r_a94e2992f5ea79df86bb340fffa900821"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a94e2992f5ea79df86bb340fffa900821">setTextEx</a> (String text, boolean check_diff)</td></tr>
+<tr class="separator:a94e2992f5ea79df86bb340fffa900821 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afab69df9c6e44cca103400c3cb3b2b64 inherit pub_methods_classawtk_1_1_t_widget" id="r_afab69df9c6e44cca103400c3cb3b2b64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#afab69df9c6e44cca103400c3cb3b2b64">setChildText</a> (String name, String text)</td></tr>
+<tr class="separator:afab69df9c6e44cca103400c3cb3b2b64 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1773226a6729a67f70d87069d7d74d98 inherit pub_methods_classawtk_1_1_t_widget" id="r_a1773226a6729a67f70d87069d7d74d98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a1773226a6729a67f70d87069d7d74d98">setChildTextWithDouble</a> (String name, String format, double value)</td></tr>
+<tr class="separator:a1773226a6729a67f70d87069d7d74d98 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af25648b9cf7f481e9f1211f7b0e6d1f6 inherit pub_methods_classawtk_1_1_t_widget" id="r_af25648b9cf7f481e9f1211f7b0e6d1f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#af25648b9cf7f481e9f1211f7b0e6d1f6">setChildTextWithInt</a> (String name, String format, int value)</td></tr>
+<tr class="separator:af25648b9cf7f481e9f1211f7b0e6d1f6 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d6e150f9aeabb408317cf2003c6507c inherit pub_methods_classawtk_1_1_t_widget" id="r_a4d6e150f9aeabb408317cf2003c6507c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a4d6e150f9aeabb408317cf2003c6507c">setTrText</a> (String text)</td></tr>
+<tr class="separator:a4d6e150f9aeabb408317cf2003c6507c inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ec5579c966d3e0253134fa49e6ce9dc inherit pub_methods_classawtk_1_1_t_widget" id="r_a3ec5579c966d3e0253134fa49e6ce9dc"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a3ec5579c966d3e0253134fa49e6ce9dc">getEnable</a> ()</td></tr>
+<tr class="separator:a3ec5579c966d3e0253134fa49e6ce9dc inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9490bf8812b3b16cffa7baf2174aa0f inherit pub_methods_classawtk_1_1_t_widget" id="r_af9490bf8812b3b16cffa7baf2174aa0f"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#af9490bf8812b3b16cffa7baf2174aa0f">getFloating</a> ()</td></tr>
+<tr class="separator:af9490bf8812b3b16cffa7baf2174aa0f inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affbf2c338ac8fe3498fa92a3b147afba inherit pub_methods_classawtk_1_1_t_widget" id="r_affbf2c338ac8fe3498fa92a3b147afba"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#affbf2c338ac8fe3498fa92a3b147afba">getAutoAdjustSize</a> ()</td></tr>
+<tr class="separator:affbf2c338ac8fe3498fa92a3b147afba inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbb0c34800fd05da958022c34dfd5d39 inherit pub_methods_classawtk_1_1_t_widget" id="r_acbb0c34800fd05da958022c34dfd5d39"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#acbb0c34800fd05da958022c34dfd5d39">getWithFocusState</a> ()</td></tr>
+<tr class="separator:acbb0c34800fd05da958022c34dfd5d39 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7de9c7fd24e3f81cfda8c975682fc808 inherit pub_methods_classawtk_1_1_t_widget" id="r_a7de9c7fd24e3f81cfda8c975682fc808"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a7de9c7fd24e3f81cfda8c975682fc808">getFocusable</a> ()</td></tr>
+<tr class="separator:a7de9c7fd24e3f81cfda8c975682fc808 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae94f7fe51af95fe9be7ef433910ae844 inherit pub_methods_classawtk_1_1_t_widget" id="r_ae94f7fe51af95fe9be7ef433910ae844"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ae94f7fe51af95fe9be7ef433910ae844">getSensitive</a> ()</td></tr>
+<tr class="separator:ae94f7fe51af95fe9be7ef433910ae844 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7873731da809fec62819f612a32ec5cd inherit pub_methods_classawtk_1_1_t_widget" id="r_a7873731da809fec62819f612a32ec5cd"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a7873731da809fec62819f612a32ec5cd">getVisible</a> ()</td></tr>
+<tr class="separator:a7873731da809fec62819f612a32ec5cd inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40d2dd57252e8e278f47df372a7e0d4f inherit pub_methods_classawtk_1_1_t_widget" id="r_a40d2dd57252e8e278f47df372a7e0d4f"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a40d2dd57252e8e278f47df372a7e0d4f">getFeedback</a> ()</td></tr>
+<tr class="separator:a40d2dd57252e8e278f47df372a7e0d4f inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bbb31346b4d28c643a6462a32aa4bf3 inherit pub_methods_classawtk_1_1_t_widget" id="r_a0bbb31346b4d28c643a6462a32aa4bf3"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a0bbb31346b4d28c643a6462a32aa4bf3">getText</a> ()</td></tr>
+<tr class="separator:a0bbb31346b4d28c643a6462a32aa4bf3 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab66827fb80104f5f5276c4cf72089eb1 inherit pub_methods_classawtk_1_1_t_widget" id="r_ab66827fb80104f5f5276c4cf72089eb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ab66827fb80104f5f5276c4cf72089eb1">setName</a> (String name)</td></tr>
+<tr class="separator:ab66827fb80104f5f5276c4cf72089eb1 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a961ff728ee74ddce1599bee5199fbef5 inherit pub_methods_classawtk_1_1_t_widget" id="r_a961ff728ee74ddce1599bee5199fbef5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a961ff728ee74ddce1599bee5199fbef5">setTheme</a> (String name)</td></tr>
+<tr class="separator:a961ff728ee74ddce1599bee5199fbef5 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a16dcfbacc4164614e52e0b2993d58f inherit pub_methods_classawtk_1_1_t_widget" id="r_a7a16dcfbacc4164614e52e0b2993d58f"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a7a16dcfbacc4164614e52e0b2993d58f">getThemeName</a> ()</td></tr>
+<tr class="separator:a7a16dcfbacc4164614e52e0b2993d58f inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6a5a85a449c57b7501127fffe098091 inherit pub_methods_classawtk_1_1_t_widget" id="r_af6a5a85a449c57b7501127fffe098091"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#af6a5a85a449c57b7501127fffe098091">setPointerCursor</a> (String cursor)</td></tr>
+<tr class="separator:af6a5a85a449c57b7501127fffe098091 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af066cc5c719cc02bf44a6138d2f4d18b inherit pub_methods_classawtk_1_1_t_widget" id="r_af066cc5c719cc02bf44a6138d2f4d18b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#af066cc5c719cc02bf44a6138d2f4d18b">setAnimation</a> (String animation)</td></tr>
+<tr class="separator:af066cc5c719cc02bf44a6138d2f4d18b inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb2597879db891317ffbb441866f55aa inherit pub_methods_classawtk_1_1_t_widget" id="r_afb2597879db891317ffbb441866f55aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#afb2597879db891317ffbb441866f55aa">createAnimator</a> (String animation)</td></tr>
+<tr class="separator:afb2597879db891317ffbb441866f55aa inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b211e53c2ecff38286a785351b8b71 inherit pub_methods_classawtk_1_1_t_widget" id="r_a16b211e53c2ecff38286a785351b8b71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a16b211e53c2ecff38286a785351b8b71">startAnimator</a> (String name)</td></tr>
+<tr class="separator:a16b211e53c2ecff38286a785351b8b71 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b05b03a4dbdef15d77d262914edf0a8 inherit pub_methods_classawtk_1_1_t_widget" id="r_a2b05b03a4dbdef15d77d262914edf0a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a2b05b03a4dbdef15d77d262914edf0a8">setAnimatorTimeScale</a> (String name, double time_scale)</td></tr>
+<tr class="separator:a2b05b03a4dbdef15d77d262914edf0a8 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26fdc83ab30cf958f0188bf4e8c819e1 inherit pub_methods_classawtk_1_1_t_widget" id="r_a26fdc83ab30cf958f0188bf4e8c819e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a26fdc83ab30cf958f0188bf4e8c819e1">pauseAnimator</a> (String name)</td></tr>
+<tr class="separator:a26fdc83ab30cf958f0188bf4e8c819e1 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8dec7f4425a436366cdcb41ba5e5230 inherit pub_methods_classawtk_1_1_t_widget" id="r_ac8dec7f4425a436366cdcb41ba5e5230"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ac8dec7f4425a436366cdcb41ba5e5230">stopAnimator</a> (String name)</td></tr>
+<tr class="separator:ac8dec7f4425a436366cdcb41ba5e5230 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7837f3dfa54a6e8188864a630d6eb2af inherit pub_methods_classawtk_1_1_t_widget" id="r_a7837f3dfa54a6e8188864a630d6eb2af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a7837f3dfa54a6e8188864a630d6eb2af">destroyAnimator</a> (String name)</td></tr>
+<tr class="separator:a7837f3dfa54a6e8188864a630d6eb2af inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a223b85d789bf2dd022cd1c17ff0a5e8d inherit pub_methods_classawtk_1_1_t_widget" id="r_a223b85d789bf2dd022cd1c17ff0a5e8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a223b85d789bf2dd022cd1c17ff0a5e8d">setEnable</a> (boolean enable)</td></tr>
+<tr class="separator:a223b85d789bf2dd022cd1c17ff0a5e8d inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3d2cb800e9fa4d6a6a94ce53605fb2d inherit pub_methods_classawtk_1_1_t_widget" id="r_af3d2cb800e9fa4d6a6a94ce53605fb2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#af3d2cb800e9fa4d6a6a94ce53605fb2d">setFeedback</a> (boolean feedback)</td></tr>
+<tr class="separator:af3d2cb800e9fa4d6a6a94ce53605fb2d inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ef1d5a5ab6584011d96988f87ac1bef inherit pub_methods_classawtk_1_1_t_widget" id="r_a6ef1d5a5ab6584011d96988f87ac1bef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a6ef1d5a5ab6584011d96988f87ac1bef">setAutoAdjustSize</a> (boolean auto_adjust_size)</td></tr>
+<tr class="separator:a6ef1d5a5ab6584011d96988f87ac1bef inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac43e54e1f7e33665486fd4a39b34acb1 inherit pub_methods_classawtk_1_1_t_widget" id="r_ac43e54e1f7e33665486fd4a39b34acb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ac43e54e1f7e33665486fd4a39b34acb1">setFloating</a> (boolean floating)</td></tr>
+<tr class="separator:ac43e54e1f7e33665486fd4a39b34acb1 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8874ddfaca6d324636631de35a60de4 inherit pub_methods_classawtk_1_1_t_widget" id="r_af8874ddfaca6d324636631de35a60de4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#af8874ddfaca6d324636631de35a60de4">setFocused</a> (boolean focused)</td></tr>
+<tr class="separator:af8874ddfaca6d324636631de35a60de4 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a825e867ce633d31a2b51edfaa0e270bd inherit pub_methods_classawtk_1_1_t_widget" id="r_a825e867ce633d31a2b51edfaa0e270bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a825e867ce633d31a2b51edfaa0e270bd">setFocusable</a> (boolean focusable)</td></tr>
+<tr class="separator:a825e867ce633d31a2b51edfaa0e270bd inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd094bdf8136ee3a92238a28f1faa547 inherit pub_methods_classawtk_1_1_t_widget" id="r_acd094bdf8136ee3a92238a28f1faa547"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#acd094bdf8136ee3a92238a28f1faa547">setState</a> (String state)</td></tr>
+<tr class="separator:acd094bdf8136ee3a92238a28f1faa547 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac10e041011652de44e224afe950bb6ca inherit pub_methods_classawtk_1_1_t_widget" id="r_ac10e041011652de44e224afe950bb6ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ac10e041011652de44e224afe950bb6ca">setOpacity</a> (int opacity)</td></tr>
+<tr class="separator:ac10e041011652de44e224afe950bb6ca inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e1416980be42de46f78626c4bcbbbb8 inherit pub_methods_classawtk_1_1_t_widget" id="r_a0e1416980be42de46f78626c4bcbbbb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a0e1416980be42de46f78626c4bcbbbb8">setDirtyRectTolerance</a> (int dirty_rect_tolerance)</td></tr>
+<tr class="separator:a0e1416980be42de46f78626c4bcbbbb8 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5662698031f48831817420562e4f649 inherit pub_methods_classawtk_1_1_t_widget" id="r_aa5662698031f48831817420562e4f649"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#aa5662698031f48831817420562e4f649">destroyChildren</a> ()</td></tr>
+<tr class="separator:aa5662698031f48831817420562e4f649 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbd920d8cd415793d0a212300a6b1de2 inherit pub_methods_classawtk_1_1_t_widget" id="r_abbd920d8cd415793d0a212300a6b1de2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#abbd920d8cd415793d0a212300a6b1de2">addChild</a> (<a class="el" href="classawtk_1_1_t_widget.html">TWidget</a> <a class="el" href="classawtk_1_1_t_widget.html#a73f61118426b63ebca5d22cb72061339">child</a>)</td></tr>
+<tr class="separator:abbd920d8cd415793d0a212300a6b1de2 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa20a04c588b604f3b2818695f744efa inherit pub_methods_classawtk_1_1_t_widget" id="r_afa20a04c588b604f3b2818695f744efa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#afa20a04c588b604f3b2818695f744efa">removeChild</a> (<a class="el" href="classawtk_1_1_t_widget.html">TWidget</a> <a class="el" href="classawtk_1_1_t_widget.html#a73f61118426b63ebca5d22cb72061339">child</a>)</td></tr>
+<tr class="separator:afa20a04c588b604f3b2818695f744efa inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9220ea057fd60ff2b781d60dafaf44ac inherit pub_methods_classawtk_1_1_t_widget" id="r_a9220ea057fd60ff2b781d60dafaf44ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a9220ea057fd60ff2b781d60dafaf44ac">insertChild</a> (int index, <a class="el" href="classawtk_1_1_t_widget.html">TWidget</a> <a class="el" href="classawtk_1_1_t_widget.html#a73f61118426b63ebca5d22cb72061339">child</a>)</td></tr>
+<tr class="separator:a9220ea057fd60ff2b781d60dafaf44ac inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba101e25fb8294372a201c825123642a inherit pub_methods_classawtk_1_1_t_widget" id="r_aba101e25fb8294372a201c825123642a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#aba101e25fb8294372a201c825123642a">restack</a> (int index)</td></tr>
+<tr class="separator:aba101e25fb8294372a201c825123642a inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73f61118426b63ebca5d22cb72061339 inherit pub_methods_classawtk_1_1_t_widget" id="r_a73f61118426b63ebca5d22cb72061339"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a73f61118426b63ebca5d22cb72061339">child</a> (String name)</td></tr>
+<tr class="separator:a73f61118426b63ebca5d22cb72061339 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb70d36d70fdf9d10b273fabb47906d9 inherit pub_methods_classawtk_1_1_t_widget" id="r_afb70d36d70fdf9d10b273fabb47906d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#afb70d36d70fdf9d10b273fabb47906d9">lookup</a> (String name, boolean recursive)</td></tr>
+<tr class="separator:afb70d36d70fdf9d10b273fabb47906d9 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a7884d7833a6e7d0d6e38093f459293 inherit pub_methods_classawtk_1_1_t_widget" id="r_a8a7884d7833a6e7d0d6e38093f459293"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a8a7884d7833a6e7d0d6e38093f459293">lookupByType</a> (String type, boolean recursive)</td></tr>
+<tr class="separator:a8a7884d7833a6e7d0d6e38093f459293 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58900ccbccb65fa05e3091e6c93f3779 inherit pub_methods_classawtk_1_1_t_widget" id="r_a58900ccbccb65fa05e3091e6c93f3779"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a58900ccbccb65fa05e3091e6c93f3779">setVisible</a> (boolean visible)</td></tr>
+<tr class="separator:a58900ccbccb65fa05e3091e6c93f3779 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86519281186a68d34bb5eb0ce824ce69 inherit pub_methods_classawtk_1_1_t_widget" id="r_a86519281186a68d34bb5eb0ce824ce69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a86519281186a68d34bb5eb0ce824ce69">setVisibleOnly</a> (boolean visible)</td></tr>
+<tr class="separator:a86519281186a68d34bb5eb0ce824ce69 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d8da9ba6ffe62a7ec287eab7f56a936 inherit pub_methods_classawtk_1_1_t_widget" id="r_a3d8da9ba6ffe62a7ec287eab7f56a936"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a3d8da9ba6ffe62a7ec287eab7f56a936">setSensitive</a> (boolean sensitive)</td></tr>
+<tr class="separator:a3d8da9ba6ffe62a7ec287eab7f56a936 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a12fe9bb7ca0f4223a4daeee0786789 inherit pub_methods_classawtk_1_1_t_widget" id="r_a3a12fe9bb7ca0f4223a4daeee0786789"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a3a12fe9bb7ca0f4223a4daeee0786789">on</a> (int type, TOnEvent on_event, long ctx)</td></tr>
+<tr class="separator:a3a12fe9bb7ca0f4223a4daeee0786789 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf6e180bd618f1637bb5120bfbcf27ca inherit pub_methods_classawtk_1_1_t_widget" id="r_acf6e180bd618f1637bb5120bfbcf27ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#acf6e180bd618f1637bb5120bfbcf27ca">off</a> (int id)</td></tr>
+<tr class="separator:acf6e180bd618f1637bb5120bfbcf27ca inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf08f0582c060352ee4d632e88db5e91 inherit pub_methods_classawtk_1_1_t_widget" id="r_acf08f0582c060352ee4d632e88db5e91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#acf08f0582c060352ee4d632e88db5e91">invalidateForce</a> (<a class="el" href="classawtk_1_1_t_rect.html">TRect</a> r)</td></tr>
+<tr class="separator:acf08f0582c060352ee4d632e88db5e91 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad38d1cd779f70e3f9e55e21ffa3c484d inherit pub_methods_classawtk_1_1_t_widget" id="r_ad38d1cd779f70e3f9e55e21ffa3c484d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ad38d1cd779f70e3f9e55e21ffa3c484d">getProp</a> (String name, <a class="el" href="classawtk_1_1_t_value.html">TValue</a> v)</td></tr>
+<tr class="separator:ad38d1cd779f70e3f9e55e21ffa3c484d inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e02f046cb80a5d0182b641fcba80e31 inherit pub_methods_classawtk_1_1_t_widget" id="r_a2e02f046cb80a5d0182b641fcba80e31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a2e02f046cb80a5d0182b641fcba80e31">setProp</a> (String name, <a class="el" href="classawtk_1_1_t_value.html">TValue</a> v)</td></tr>
+<tr class="separator:a2e02f046cb80a5d0182b641fcba80e31 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba8ce0b4ca6db7762c5a8b034066d5b2 inherit pub_methods_classawtk_1_1_t_widget" id="r_aba8ce0b4ca6db7762c5a8b034066d5b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#aba8ce0b4ca6db7762c5a8b034066d5b2">setProps</a> (String params)</td></tr>
+<tr class="separator:aba8ce0b4ca6db7762c5a8b034066d5b2 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7c50e2372c628af41b1d468773e9bb0 inherit pub_methods_classawtk_1_1_t_widget" id="r_aa7c50e2372c628af41b1d468773e9bb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#aa7c50e2372c628af41b1d468773e9bb0">setPropStr</a> (String name, String v)</td></tr>
+<tr class="separator:aa7c50e2372c628af41b1d468773e9bb0 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9f714ca45a7795a2eccd0172beef6e1 inherit pub_methods_classawtk_1_1_t_widget" id="r_ac9f714ca45a7795a2eccd0172beef6e1"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ac9f714ca45a7795a2eccd0172beef6e1">getPropStr</a> (String name, String defval)</td></tr>
+<tr class="separator:ac9f714ca45a7795a2eccd0172beef6e1 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a408666de1aa36371be9ec46cd66602ec inherit pub_methods_classawtk_1_1_t_widget" id="r_a408666de1aa36371be9ec46cd66602ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a408666de1aa36371be9ec46cd66602ec">setPropPointer</a> (String name, long v)</td></tr>
+<tr class="separator:a408666de1aa36371be9ec46cd66602ec inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94d9b46c8ae762d560a5503ae50730ea inherit pub_methods_classawtk_1_1_t_widget" id="r_a94d9b46c8ae762d560a5503ae50730ea"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a94d9b46c8ae762d560a5503ae50730ea">getPropPointer</a> (String name)</td></tr>
+<tr class="separator:a94d9b46c8ae762d560a5503ae50730ea inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a15bf5b22a3e5f9a3c38f27be45b85f inherit pub_methods_classawtk_1_1_t_widget" id="r_a2a15bf5b22a3e5f9a3c38f27be45b85f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a2a15bf5b22a3e5f9a3c38f27be45b85f">setPropFloat</a> (String name, double v)</td></tr>
+<tr class="separator:a2a15bf5b22a3e5f9a3c38f27be45b85f inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc3b4249a71764125e9a4d97cfa1f18d inherit pub_methods_classawtk_1_1_t_widget" id="r_afc3b4249a71764125e9a4d97cfa1f18d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#afc3b4249a71764125e9a4d97cfa1f18d">getPropFloat</a> (String name, double defval)</td></tr>
+<tr class="separator:afc3b4249a71764125e9a4d97cfa1f18d inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc9fd5f67b81a9b4a9f1d4d0b7070f7e inherit pub_methods_classawtk_1_1_t_widget" id="r_adc9fd5f67b81a9b4a9f1d4d0b7070f7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#adc9fd5f67b81a9b4a9f1d4d0b7070f7e">setPropInt</a> (String name, int v)</td></tr>
+<tr class="separator:adc9fd5f67b81a9b4a9f1d4d0b7070f7e inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3db110bd98bc3e624b058d9095899867 inherit pub_methods_classawtk_1_1_t_widget" id="r_a3db110bd98bc3e624b058d9095899867"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a3db110bd98bc3e624b058d9095899867">getPropInt</a> (String name, int defval)</td></tr>
+<tr class="separator:a3db110bd98bc3e624b058d9095899867 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15ad452b70a88871424548fdd7dfcfd2 inherit pub_methods_classawtk_1_1_t_widget" id="r_a15ad452b70a88871424548fdd7dfcfd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a15ad452b70a88871424548fdd7dfcfd2">setPropBool</a> (String name, boolean v)</td></tr>
+<tr class="separator:a15ad452b70a88871424548fdd7dfcfd2 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9befce117c6b1f59942b3ebbf989f880 inherit pub_methods_classawtk_1_1_t_widget" id="r_a9befce117c6b1f59942b3ebbf989f880"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a9befce117c6b1f59942b3ebbf989f880">getPropBool</a> (String name, boolean defval)</td></tr>
+<tr class="separator:a9befce117c6b1f59942b3ebbf989f880 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad03d5c024deb4e1cade14e055276e655 inherit pub_methods_classawtk_1_1_t_widget" id="r_ad03d5c024deb4e1cade14e055276e655"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ad03d5c024deb4e1cade14e055276e655">isWindowOpened</a> ()</td></tr>
+<tr class="separator:ad03d5c024deb4e1cade14e055276e655 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab31383f5e6a402f9ed2e49349aa776e9 inherit pub_methods_classawtk_1_1_t_widget" id="r_ab31383f5e6a402f9ed2e49349aa776e9"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ab31383f5e6a402f9ed2e49349aa776e9">isWindowCreated</a> ()</td></tr>
+<tr class="separator:ab31383f5e6a402f9ed2e49349aa776e9 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af17164ef28570301031e88977a368481 inherit pub_methods_classawtk_1_1_t_widget" id="r_af17164ef28570301031e88977a368481"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#af17164ef28570301031e88977a368481">isParentOf</a> (<a class="el" href="classawtk_1_1_t_widget.html">TWidget</a> <a class="el" href="classawtk_1_1_t_widget.html#a73f61118426b63ebca5d22cb72061339">child</a>)</td></tr>
+<tr class="separator:af17164ef28570301031e88977a368481 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91778c4e8c38c8cea290a90082028b6f inherit pub_methods_classawtk_1_1_t_widget" id="r_a91778c4e8c38c8cea290a90082028b6f"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a91778c4e8c38c8cea290a90082028b6f">isDirectParentOf</a> (<a class="el" href="classawtk_1_1_t_widget.html">TWidget</a> <a class="el" href="classawtk_1_1_t_widget.html#a73f61118426b63ebca5d22cb72061339">child</a>)</td></tr>
+<tr class="separator:a91778c4e8c38c8cea290a90082028b6f inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6595dedc8352ec559cbcab9cbf89f5c6 inherit pub_methods_classawtk_1_1_t_widget" id="r_a6595dedc8352ec559cbcab9cbf89f5c6"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a6595dedc8352ec559cbcab9cbf89f5c6">isWindow</a> ()</td></tr>
+<tr class="separator:a6595dedc8352ec559cbcab9cbf89f5c6 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad83c1b58dfa8433ef4270b4b48bce143 inherit pub_methods_classawtk_1_1_t_widget" id="r_ad83c1b58dfa8433ef4270b4b48bce143"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ad83c1b58dfa8433ef4270b4b48bce143">isSystemBar</a> ()</td></tr>
+<tr class="separator:ad83c1b58dfa8433ef4270b4b48bce143 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62a31ea7a709fda4ea1fc53ce4be1464 inherit pub_methods_classawtk_1_1_t_widget" id="r_a62a31ea7a709fda4ea1fc53ce4be1464"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a62a31ea7a709fda4ea1fc53ce4be1464">isNormalWindow</a> ()</td></tr>
+<tr class="separator:a62a31ea7a709fda4ea1fc53ce4be1464 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e0c28f7cb076fa0c1d0e8a07209ddf6 inherit pub_methods_classawtk_1_1_t_widget" id="r_a0e0c28f7cb076fa0c1d0e8a07209ddf6"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a0e0c28f7cb076fa0c1d0e8a07209ddf6">isFullscreenWindow</a> ()</td></tr>
+<tr class="separator:a0e0c28f7cb076fa0c1d0e8a07209ddf6 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fe0c0b621ba139fa714290f2ca12270 inherit pub_methods_classawtk_1_1_t_widget" id="r_a0fe0c0b621ba139fa714290f2ca12270"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a0fe0c0b621ba139fa714290f2ca12270">isDialog</a> ()</td></tr>
+<tr class="separator:a0fe0c0b621ba139fa714290f2ca12270 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a9ffa54bba19edf54583b41e7db64d6 inherit pub_methods_classawtk_1_1_t_widget" id="r_a1a9ffa54bba19edf54583b41e7db64d6"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a1a9ffa54bba19edf54583b41e7db64d6">isPopup</a> ()</td></tr>
+<tr class="separator:a1a9ffa54bba19edf54583b41e7db64d6 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f09feeda9d0d50dc2c1795dae7be103 inherit pub_methods_classawtk_1_1_t_widget" id="r_a0f09feeda9d0d50dc2c1795dae7be103"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a0f09feeda9d0d50dc2c1795dae7be103">isOverlay</a> ()</td></tr>
+<tr class="separator:a0f09feeda9d0d50dc2c1795dae7be103 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85f25de3bf95d7bc91ee314c73f216f2 inherit pub_methods_classawtk_1_1_t_widget" id="r_a85f25de3bf95d7bc91ee314c73f216f2"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a85f25de3bf95d7bc91ee314c73f216f2">isAlwaysOnTop</a> ()</td></tr>
+<tr class="separator:a85f25de3bf95d7bc91ee314c73f216f2 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d72876224117bdff3a45d3ecf071f38 inherit pub_methods_classawtk_1_1_t_widget" id="r_a7d72876224117bdff3a45d3ecf071f38"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a7d72876224117bdff3a45d3ecf071f38">isOpenedDialog</a> ()</td></tr>
+<tr class="separator:a7d72876224117bdff3a45d3ecf071f38 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f842c78b488d57ed40b621511c9e3e inherit pub_methods_classawtk_1_1_t_widget" id="r_a48f842c78b488d57ed40b621511c9e3e"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a48f842c78b488d57ed40b621511c9e3e">isOpenedPopup</a> ()</td></tr>
+<tr class="separator:a48f842c78b488d57ed40b621511c9e3e inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a860eef66f6376183ff81afb12ec92cba inherit pub_methods_classawtk_1_1_t_widget" id="r_a860eef66f6376183ff81afb12ec92cba"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a860eef66f6376183ff81afb12ec92cba">isKeyboard</a> ()</td></tr>
+<tr class="separator:a860eef66f6376183ff81afb12ec92cba inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8048d0172433793643d0ec58dc164714 inherit pub_methods_classawtk_1_1_t_widget" id="r_a8048d0172433793643d0ec58dc164714"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a8048d0172433793643d0ec58dc164714">isDesigningWindow</a> ()</td></tr>
+<tr class="separator:a8048d0172433793643d0ec58dc164714 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affffc25f9c376ac0df23056a6be8452b inherit pub_methods_classawtk_1_1_t_widget" id="r_affffc25f9c376ac0df23056a6be8452b"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#affffc25f9c376ac0df23056a6be8452b">isWindowManager</a> ()</td></tr>
+<tr class="separator:affffc25f9c376ac0df23056a6be8452b inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a699c83a827a974f18d0297b1371f88eb inherit pub_methods_classawtk_1_1_t_widget" id="r_a699c83a827a974f18d0297b1371f88eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a699c83a827a974f18d0297b1371f88eb">foreach</a> (TOnWidget visit, long ctx)</td></tr>
+<tr class="separator:a699c83a827a974f18d0297b1371f88eb inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf225981dfe5a5d629987810632d2c87 inherit pub_methods_classawtk_1_1_t_widget" id="r_aaf225981dfe5a5d629987810632d2c87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#aaf225981dfe5a5d629987810632d2c87">getWindow</a> ()</td></tr>
+<tr class="separator:aaf225981dfe5a5d629987810632d2c87 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca7d2fcfc9bd4e51ccac8b00451c3253 inherit pub_methods_classawtk_1_1_t_widget" id="r_aca7d2fcfc9bd4e51ccac8b00451c3253"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#aca7d2fcfc9bd4e51ccac8b00451c3253">getWindowManager</a> ()</td></tr>
+<tr class="separator:aca7d2fcfc9bd4e51ccac8b00451c3253 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a701e29372e6fc8e41fc3db42871e8277 inherit pub_methods_classawtk_1_1_t_widget" id="r_a701e29372e6fc8e41fc3db42871e8277"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a701e29372e6fc8e41fc3db42871e8277">getType</a> ()</td></tr>
+<tr class="separator:a701e29372e6fc8e41fc3db42871e8277 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a720013fc78bef29cbb99b3dd45a65ba2 inherit pub_methods_classawtk_1_1_t_widget" id="r_a720013fc78bef29cbb99b3dd45a65ba2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a720013fc78bef29cbb99b3dd45a65ba2">clone</a> (<a class="el" href="classawtk_1_1_t_widget.html">TWidget</a> parent)</td></tr>
+<tr class="separator:a720013fc78bef29cbb99b3dd45a65ba2 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6e1253525c27a3fd49e134ed3f2189d inherit pub_methods_classawtk_1_1_t_widget" id="r_ac6e1253525c27a3fd49e134ed3f2189d"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ac6e1253525c27a3fd49e134ed3f2189d">equal</a> (<a class="el" href="classawtk_1_1_t_widget.html">TWidget</a> other)</td></tr>
+<tr class="separator:ac6e1253525c27a3fd49e134ed3f2189d inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f2b5cd7db811f9000f5119d69283ed0 inherit pub_methods_classawtk_1_1_t_widget" id="r_a1f2b5cd7db811f9000f5119d69283ed0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a1f2b5cd7db811f9000f5119d69283ed0">destroy</a> ()</td></tr>
+<tr class="separator:a1f2b5cd7db811f9000f5119d69283ed0 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae92b1da8eb032945ffb9d7319cf1f42b inherit pub_methods_classawtk_1_1_t_widget" id="r_ae92b1da8eb032945ffb9d7319cf1f42b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ae92b1da8eb032945ffb9d7319cf1f42b">destroyAsync</a> ()</td></tr>
+<tr class="separator:ae92b1da8eb032945ffb9d7319cf1f42b inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b0c16edd3c642477b2dafaedcb388dc inherit pub_methods_classawtk_1_1_t_widget" id="r_a5b0c16edd3c642477b2dafaedcb388dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a5b0c16edd3c642477b2dafaedcb388dc">unref</a> ()</td></tr>
+<tr class="separator:a5b0c16edd3c642477b2dafaedcb388dc inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25efbcc6e23132be05da75c3aa62573b inherit pub_methods_classawtk_1_1_t_widget" id="r_a25efbcc6e23132be05da75c3aa62573b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a25efbcc6e23132be05da75c3aa62573b">strokeBorderRect</a> (<a class="el" href="classawtk_1_1_t_canvas.html">TCanvas</a> c, <a class="el" href="classawtk_1_1_t_rect.html">TRect</a> r)</td></tr>
+<tr class="separator:a25efbcc6e23132be05da75c3aa62573b inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af64fc6e3e0c90649ee7920fd1df0f7b9 inherit pub_methods_classawtk_1_1_t_widget" id="r_af64fc6e3e0c90649ee7920fd1df0f7b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#af64fc6e3e0c90649ee7920fd1df0f7b9">fillBgRect</a> (<a class="el" href="classawtk_1_1_t_canvas.html">TCanvas</a> c, <a class="el" href="classawtk_1_1_t_rect.html">TRect</a> r, <a class="el" href="enumawtk_1_1_t_image_draw_type.html">TImageDrawType</a> draw_type)</td></tr>
+<tr class="separator:af64fc6e3e0c90649ee7920fd1df0f7b9 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eeed24038faac0282d38a8ab565a751 inherit pub_methods_classawtk_1_1_t_widget" id="r_a3eeed24038faac0282d38a8ab565a751"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a3eeed24038faac0282d38a8ab565a751">fillFgRect</a> (<a class="el" href="classawtk_1_1_t_canvas.html">TCanvas</a> c, <a class="el" href="classawtk_1_1_t_rect.html">TRect</a> r, <a class="el" href="enumawtk_1_1_t_image_draw_type.html">TImageDrawType</a> draw_type)</td></tr>
+<tr class="separator:a3eeed24038faac0282d38a8ab565a751 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9048da2cff23c1f3f740abc1b0ea09d inherit pub_methods_classawtk_1_1_t_widget" id="r_ab9048da2cff23c1f3f740abc1b0ea09d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ab9048da2cff23c1f3f740abc1b0ea09d">dispatchToTarget</a> (<a class="el" href="classawtk_1_1_t_event.html">TEvent</a> e)</td></tr>
+<tr class="separator:ab9048da2cff23c1f3f740abc1b0ea09d inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3660669165c81bb28d0fdc657c996f4f inherit pub_methods_classawtk_1_1_t_widget" id="r_a3660669165c81bb28d0fdc657c996f4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a3660669165c81bb28d0fdc657c996f4f">dispatchToKeyTarget</a> (<a class="el" href="classawtk_1_1_t_event.html">TEvent</a> e)</td></tr>
+<tr class="separator:a3660669165c81bb28d0fdc657c996f4f inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7660737b86bae3917aea89863b9cad8 inherit pub_methods_classawtk_1_1_t_widget" id="r_aa7660737b86bae3917aea89863b9cad8"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#aa7660737b86bae3917aea89863b9cad8">getStyleType</a> ()</td></tr>
+<tr class="separator:aa7660737b86bae3917aea89863b9cad8 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a353d34ffb4f55cb82f3479cc58ec487a inherit pub_methods_classawtk_1_1_t_widget" id="r_a353d34ffb4f55cb82f3479cc58ec487a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a353d34ffb4f55cb82f3479cc58ec487a">updateStyle</a> ()</td></tr>
+<tr class="separator:a353d34ffb4f55cb82f3479cc58ec487a inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cc0a822b1b85da9e9a9cbd140e57aec inherit pub_methods_classawtk_1_1_t_widget" id="r_a8cc0a822b1b85da9e9a9cbd140e57aec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a8cc0a822b1b85da9e9a9cbd140e57aec">updateStyleRecursive</a> ()</td></tr>
+<tr class="separator:a8cc0a822b1b85da9e9a9cbd140e57aec inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a1d82929882789ca83e941fb7629f8f inherit pub_methods_classawtk_1_1_t_widget" id="r_a5a1d82929882789ca83e941fb7629f8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a5a1d82929882789ca83e941fb7629f8f">setAsKeyTarget</a> ()</td></tr>
+<tr class="separator:a5a1d82929882789ca83e941fb7629f8f inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc06aed47d1f0c67a9918b03f89ae03a inherit pub_methods_classawtk_1_1_t_widget" id="r_acc06aed47d1f0c67a9918b03f89ae03a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#acc06aed47d1f0c67a9918b03f89ae03a">focusNext</a> ()</td></tr>
+<tr class="separator:acc06aed47d1f0c67a9918b03f89ae03a inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa32ad0c4da72b1144ec5655c104567fd inherit pub_methods_classawtk_1_1_t_widget" id="r_aa32ad0c4da72b1144ec5655c104567fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#aa32ad0c4da72b1144ec5655c104567fd">focusPrev</a> ()</td></tr>
+<tr class="separator:aa32ad0c4da72b1144ec5655c104567fd inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac078fda63eb2cdd6dbba648d954eda2e inherit pub_methods_classawtk_1_1_t_widget" id="r_ac078fda63eb2cdd6dbba648d954eda2e"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#ac078fda63eb2cdd6dbba648d954eda2e">getStateForStyle</a> (boolean active, boolean checked)</td></tr>
+<tr class="separator:ac078fda63eb2cdd6dbba648d954eda2e inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ac4b03b962f563f9b1c771099f391bd inherit pub_methods_classawtk_1_1_t_widget" id="r_a8ac4b03b962f563f9b1c771099f391bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a8ac4b03b962f563f9b1c771099f391bd">layout</a> ()</td></tr>
+<tr class="separator:a8ac4b03b962f563f9b1c771099f391bd inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4833ad293341d6ffc13c3dd3f8833c96 inherit pub_methods_classawtk_1_1_t_widget" id="r_a4833ad293341d6ffc13c3dd3f8833c96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a4833ad293341d6ffc13c3dd3f8833c96">setSelfLayout</a> (String params)</td></tr>
+<tr class="separator:a4833ad293341d6ffc13c3dd3f8833c96 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefcfc881d9ca3a393424584a11e0a22c inherit pub_methods_classawtk_1_1_t_widget" id="r_aefcfc881d9ca3a393424584a11e0a22c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#aefcfc881d9ca3a393424584a11e0a22c">setChildrenLayout</a> (String params)</td></tr>
+<tr class="separator:aefcfc881d9ca3a393424584a11e0a22c inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39bbe9eebd5e9533bff7b30d430e2bc0 inherit pub_methods_classawtk_1_1_t_widget" id="r_a39bbe9eebd5e9533bff7b30d430e2bc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a39bbe9eebd5e9533bff7b30d430e2bc0">setSelfLayoutParams</a> (String x, String y, String w, String h)</td></tr>
+<tr class="separator:a39bbe9eebd5e9533bff7b30d430e2bc0 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa092715773398628d9f74b97953d2ddb inherit pub_methods_classawtk_1_1_t_widget" id="r_aa092715773398628d9f74b97953d2ddb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#aa092715773398628d9f74b97953d2ddb">setStyleInt</a> (String state_and_name, int value)</td></tr>
+<tr class="separator:aa092715773398628d9f74b97953d2ddb inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19860843cd0f379861ef91de5cc879f3 inherit pub_methods_classawtk_1_1_t_widget" id="r_a19860843cd0f379861ef91de5cc879f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a19860843cd0f379861ef91de5cc879f3">setStyleStr</a> (String state_and_name, String value)</td></tr>
+<tr class="separator:a19860843cd0f379861ef91de5cc879f3 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ba3fbcdc2e6152b20ebc37d7d8ebf5f inherit pub_methods_classawtk_1_1_t_widget" id="r_a2ba3fbcdc2e6152b20ebc37d7d8ebf5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a2ba3fbcdc2e6152b20ebc37d7d8ebf5f">setStyleColor</a> (String state_and_name, int value)</td></tr>
+<tr class="separator:a2ba3fbcdc2e6152b20ebc37d7d8ebf5f inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cbd7c26b190d78324caaee82787df3a inherit pub_methods_classawtk_1_1_t_widget" id="r_a9cbd7c26b190d78324caaee82787df3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a9cbd7c26b190d78324caaee82787df3a">addChildDefault</a> (<a class="el" href="classawtk_1_1_t_widget.html">TWidget</a> <a class="el" href="classawtk_1_1_t_widget.html#a73f61118426b63ebca5d22cb72061339">child</a>)</td></tr>
+<tr class="separator:a9cbd7c26b190d78324caaee82787df3a inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef232ab05c6efd2fde062a172e6ecee2 inherit pub_methods_classawtk_1_1_t_widget" id="r_aef232ab05c6efd2fde062a172e6ecee2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#aef232ab05c6efd2fde062a172e6ecee2">getX</a> ()</td></tr>
+<tr class="separator:aef232ab05c6efd2fde062a172e6ecee2 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74ca85e9773199a8550dd179d9eca13c inherit pub_methods_classawtk_1_1_t_widget" id="r_a74ca85e9773199a8550dd179d9eca13c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a74ca85e9773199a8550dd179d9eca13c">getY</a> ()</td></tr>
+<tr class="separator:a74ca85e9773199a8550dd179d9eca13c inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a985d2159d856cda656adddbd3d13390d inherit pub_methods_classawtk_1_1_t_widget" id="r_a985d2159d856cda656adddbd3d13390d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a985d2159d856cda656adddbd3d13390d">getW</a> ()</td></tr>
+<tr class="separator:a985d2159d856cda656adddbd3d13390d inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e5bdec25151967f8e22dcbff7cfb935 inherit pub_methods_classawtk_1_1_t_widget" id="r_a3e5bdec25151967f8e22dcbff7cfb935"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a3e5bdec25151967f8e22dcbff7cfb935">getH</a> ()</td></tr>
+<tr class="separator:a3e5bdec25151967f8e22dcbff7cfb935 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee108dac2d55a11b2079c20d544998dc inherit pub_methods_classawtk_1_1_t_widget" id="r_aee108dac2d55a11b2079c20d544998dc"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#aee108dac2d55a11b2079c20d544998dc">getName</a> ()</td></tr>
+<tr class="separator:aee108dac2d55a11b2079c20d544998dc inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d10173023a7ca23da765c55b54d4052 inherit pub_methods_classawtk_1_1_t_widget" id="r_a9d10173023a7ca23da765c55b54d4052"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a9d10173023a7ca23da765c55b54d4052">getPointerCursor</a> ()</td></tr>
+<tr class="separator:a9d10173023a7ca23da765c55b54d4052 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2042869f663d0c571af66e913c86bf8c inherit pub_methods_classawtk_1_1_t_widget" id="r_a2042869f663d0c571af66e913c86bf8c"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a2042869f663d0c571af66e913c86bf8c">getTrText</a> ()</td></tr>
+<tr class="separator:a2042869f663d0c571af66e913c86bf8c inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dddc2d726017666a6ec505dc0caf238 inherit pub_methods_classawtk_1_1_t_widget" id="r_a3dddc2d726017666a6ec505dc0caf238"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a3dddc2d726017666a6ec505dc0caf238">getStyle</a> ()</td></tr>
+<tr class="separator:a3dddc2d726017666a6ec505dc0caf238 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa0a8b03420b32b1bba705e96e5b073c inherit pub_methods_classawtk_1_1_t_widget" id="r_afa0a8b03420b32b1bba705e96e5b073c"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#afa0a8b03420b32b1bba705e96e5b073c">getAnimation</a> ()</td></tr>
+<tr class="separator:afa0a8b03420b32b1bba705e96e5b073c inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a433f95b675fff08a6862c02c87772cd4 inherit pub_methods_classawtk_1_1_t_widget" id="r_a433f95b675fff08a6862c02c87772cd4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a433f95b675fff08a6862c02c87772cd4">getOpacity</a> ()</td></tr>
+<tr class="separator:a433f95b675fff08a6862c02c87772cd4 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14d5ca0be8ffdbe5fdfb7e9b6db49697 inherit pub_methods_classawtk_1_1_t_widget" id="r_a14d5ca0be8ffdbe5fdfb7e9b6db49697"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a14d5ca0be8ffdbe5fdfb7e9b6db49697">getDirtyRectTolerance</a> ()</td></tr>
+<tr class="separator:a14d5ca0be8ffdbe5fdfb7e9b6db49697 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaee6d207ec3b0e41738529cc6d643358 inherit pub_methods_classawtk_1_1_t_widget" id="r_aaee6d207ec3b0e41738529cc6d643358"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classawtk_1_1_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#aaee6d207ec3b0e41738529cc6d643358">getParent</a> ()</td></tr>
+<tr class="separator:aaee6d207ec3b0e41738529cc6d643358 inherit pub_methods_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a6bb1b46fd01f738a930efacfd5aefd1e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_edit.html">TEdit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a6bb1b46fd01f738a930efacfd5aefd1e">cast</a> (long nativeObj)</td></tr>
+<tr class="memitem:a6bb1b46fd01f738a930efacfd5aefd1e" id="r_a6bb1b46fd01f738a930efacfd5aefd1e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_edit.html">TEdit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bb1b46fd01f738a930efacfd5aefd1e">cast</a> (long <a class="el" href="classawtk_1_1_t_widget.html#a562906c4aab148e8b0162367ccad09de">nativeObj</a>)</td></tr>
 <tr class="separator:a6bb1b46fd01f738a930efacfd5aefd1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d09e68e8a6df2f25c2a0d8ffec9e97a"><td class="memItemLeft" align="right" valign="top">static TWidget&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#a2d09e68e8a6df2f25c2a0d8ffec9e97a">create</a> (TWidget parent, int x, int y, int w, int h)</td></tr>
+<tr class="memitem:a2d09e68e8a6df2f25c2a0d8ffec9e97a" id="r_a2d09e68e8a6df2f25c2a0d8ffec9e97a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_widget.html">TWidget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d09e68e8a6df2f25c2a0d8ffec9e97a">create</a> (<a class="el" href="classawtk_1_1_t_widget.html">TWidget</a> parent, int x, int y, int w, int h)</td></tr>
 <tr class="separator:a2d09e68e8a6df2f25c2a0d8ffec9e97a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae53f94c7e6d54f065e3a7c02ce036a2a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_edit.html">TEdit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_edit.html#ae53f94c7e6d54f065e3a7c02ce036a2a">cast</a> (TWidget widget)</td></tr>
+<tr class="memitem:ae53f94c7e6d54f065e3a7c02ce036a2a" id="r_ae53f94c7e6d54f065e3a7c02ce036a2a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_edit.html">TEdit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae53f94c7e6d54f065e3a7c02ce036a2a">cast</a> (<a class="el" href="classawtk_1_1_t_widget.html">TWidget</a> widget)</td></tr>
 <tr class="separator:ae53f94c7e6d54f065e3a7c02ce036a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_classawtk_1_1_t_widget"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classawtk_1_1_t_widget')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="classawtk_1_1_t_widget.html">awtk.TWidget</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_attribs_classawtk_1_1_t_widget"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_classawtk_1_1_t_widget')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="classawtk_1_1_t_widget.html">awtk.TWidget</a></td></tr>
+<tr class="memitem:a562906c4aab148e8b0162367ccad09de inherit pub_attribs_classawtk_1_1_t_widget" id="r_a562906c4aab148e8b0162367ccad09de"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_widget.html#a562906c4aab148e8b0162367ccad09de">nativeObj</a></td></tr>
+<tr class="separator:a562906c4aab148e8b0162367ccad09de inherit pub_attribs_classawtk_1_1_t_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>单行编辑器控件。</p>
 <p>在基于SDL的平台，单行编辑器控件使用平台原生的输入法，对于嵌入式平台使用内置的输入法。</p>
 <p>在使用内置的输入法时，软键盘由输入类型决定，开发者可以自定义软键盘的界面。</p>
-<p>edit_t是widget\_t的子类控件，widget_t的函数均适用于edit_t控件。</p>
+<p>edit_t是widget_t的子类控件，widget_t的函数均适用于edit_t控件。</p>
 <p>edit_t本身可以做为容器，放入按钮等控件。有几个特殊的子控件：</p>
 <p>名为"clear"的按钮。点击时清除编辑器中的内容。 名为"inc"的按钮。点击时增加编辑器的值，用于实现类似于spinbox的功能。 名为"dec"的按钮。点击时减少编辑器的值，用于实现类似于spinbox的功能。 名为"visible"的复选框。勾选时显示密码，反之不显示密码。</p>
 <p>在xml中使用"edit"标签创建编辑器控件。如：</p>
 <div class="fragment"><div class="line">*&lt;<span class="keywordtype">edit</span> <span class="keyword">x</span>=<span class="stringliteral">&quot;c&quot;</span> <span class="keyword">y</span>=<span class="stringliteral">&quot;m&quot;</span> <span class="keyword">w</span>=<span class="stringliteral">&quot;80&quot;</span> <span class="keyword">h</span>=<span class="stringliteral">&quot;30&quot;</span></div>
 <div class="line">*<span class="keyword">tips</span>=<span class="stringliteral">&quot;age&quot;</span> <span class="keyword">input_type</span>=<span class="stringliteral">&quot;uint&quot;</span> <span class="keyword">min</span>=<span class="stringliteral">&quot;0&quot;</span> <span class="keyword">max</span>=<span class="stringliteral">&quot;150&quot;</span> <span class="keyword">step</span>=<span class="stringliteral">&quot;1&quot;</span> <span class="keyword">auto_fix</span>=<span class="stringliteral">&quot;true&quot;</span> <span class="keyword">style</span>=<span class="stringliteral">&quot;number&quot;</span> /&gt;</div>
 </div><!-- fragment --><blockquote class="doxtable">
-<p>XXX：需要在min/max/step之前设置input_type。 </p>
+<p>&zwj;XXX：需要在min/max/step之前设置input_type。 </p>
 </blockquote>
-<p>&gt;更多用法请参考： <a href="https://github.com/zlgopen/awtk/blob/master/design/default/ui/edit.xml">edit.xml</a></p>
+<p><br  />
+ &gt;更多用法请参考： <a href="https://github.com/zlgopen/awtk/blob/master/design/default/ui/edit.xml">edit.xml</a></p>
 <p>在c代码中使用函数edit_create创建编辑器控件。如：</p>
 <blockquote class="doxtable">
-<p>创建之后，可以用widget_set_text或widget_set_text_utf8设置文本内容。 </p>
+<p>&zwj;创建之后，可以用widget_set_text或widget_set_text_utf8设置文本内容。 </p>
 </blockquote>
-<blockquote class="doxtable">
-<p>完整示例请参考： </p>
+<p><br  />
+ </p><blockquote class="doxtable">
+<p>&zwj;完整示例请参考： <a href="https://github.com/zlgopen/awtk-c-demos/blob/master/demos/edit.c">edit demo</a> </p>
 </blockquote>
-<p><a href="https://github.com/zlgopen/awtk-c-demos/blob/master/demos/edit.c">edit demo</a></p>
-<p>可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：</p>
+<p><br  />
+ 可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：</p>
 <div class="fragment"><div class="line">*&lt;<span class="keywordtype">style</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;default&quot;</span> <span class="keyword">border_color</span>=<span class="stringliteral">&quot;#a0a0a0&quot;</span>  <span class="keyword">text_color</span>=<span class="stringliteral">&quot;black&quot;</span> <span class="keyword">text_align_h</span>=<span class="stringliteral">&quot;left&quot;</span>&gt;</div>
 <div class="line">*&lt;<span class="keywordtype">normal</span>     <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#f0f0f0&quot;</span> /&gt;</div>
 <div class="line">*&lt;<span class="keywordtype">focused</span>    <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#f0f0f0&quot;</span> <span class="keyword">border_color</span>=<span class="stringliteral">&quot;black&quot;</span>/&gt;</div>
@@ -211,12 +546,13 @@ Public 成员函数</h2></td></tr>
 <div class="line">*&lt;<span class="keywordtype">empty</span>      <span class="keyword">bg_color</span>=<span class="stringliteral">&quot;#f0f0f0&quot;</span> <span class="keyword">text_color</span>=<span class="stringliteral">&quot;#a0a0a0&quot;</span> /&gt;</div>
 <div class="line">*&lt;/<span class="keywordtype">style</span>&gt;</div>
 </div><!-- fragment --><blockquote class="doxtable">
-<p>更多用法请参考： </p>
+<p>&zwj;更多用法请参考： <a href="https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L104">theme default</a> </p>
 </blockquote>
-<p><a href="https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L104">theme default</a> </p>
+<p><br  />
+ </p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
-<a id="a1304a8eb0e5b1d50fffda3168f3baf58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1304a8eb0e5b1d50fffda3168f3baf58">&#9670;&nbsp;</a></span>TEdit()</h2>
+<a id="a1304a8eb0e5b1d50fffda3168f3baf58" name="a1304a8eb0e5b1d50fffda3168f3baf58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1304a8eb0e5b1d50fffda3168f3baf58">&#9670;&#160;</a></span>TEdit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -227,8 +563,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">awtk.TEdit.TEdit </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>nativeObj</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>nativeObj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -250,8 +585,8 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a id="a6bb1b46fd01f738a930efacfd5aefd1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6bb1b46fd01f738a930efacfd5aefd1e">&#9670;&nbsp;</a></span>cast() <span class="overload">[1/2]</span></h2>
+<a id="a6bb1b46fd01f738a930efacfd5aefd1e" name="a6bb1b46fd01f738a930efacfd5aefd1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bb1b46fd01f738a930efacfd5aefd1e">&#9670;&#160;</a></span>cast() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -262,8 +597,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_edit.html">TEdit</a> awtk.TEdit.cast </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>nativeObj</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>nativeObj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -282,12 +616,14 @@ Public 成员函数</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>对应的Java对象。 </dd></dl>
 
-<p>被 <a class="el" href="classawtk_1_1_t_spin_box.html#a26bf01472acc18b34aac04b8025d086e">awtk.TSpinBox</a>, <a class="el" href="classawtk_1_1_t_combo_box_ex.html#a0539be72cb286df4499221c12d454b55">awtk.TComboBoxEx</a> , 以及 <a class="el" href="classawtk_1_1_t_combo_box.html#a35af5f66d306ac3570c75d2da95400a0">awtk.TComboBox</a> 重载.</p>
+<p>重载 <a class="el" href="classawtk_1_1_t_widget.html#a673c7aa1622fad5826080e462451f3ff">awtk.TWidget</a> .</p>
+
+<p>被 <a class="el" href="classawtk_1_1_t_combo_box.html#a35af5f66d306ac3570c75d2da95400a0">awtk.TComboBox</a>, <a class="el" href="classawtk_1_1_t_combo_box_ex.html#a0539be72cb286df4499221c12d454b55">awtk.TComboBoxEx</a> , 以及 <a class="el" href="classawtk_1_1_t_spin_box.html#a26bf01472acc18b34aac04b8025d086e">awtk.TSpinBox</a> 重载.</p>
 
 </div>
 </div>
-<a id="ae53f94c7e6d54f065e3a7c02ce036a2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae53f94c7e6d54f065e3a7c02ce036a2a">&#9670;&nbsp;</a></span>cast() <span class="overload">[2/2]</span></h2>
+<a id="ae53f94c7e6d54f065e3a7c02ce036a2a" name="ae53f94c7e6d54f065e3a7c02ce036a2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae53f94c7e6d54f065e3a7c02ce036a2a">&#9670;&#160;</a></span>cast() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -298,8 +634,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_edit.html">TEdit</a> awtk.TEdit.cast </td>
           <td>(</td>
-          <td class="paramtype">TWidget&#160;</td>
-          <td class="paramname"><em>widget</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_widget.html">TWidget</a></td>          <td class="paramname"><span class="paramname"><em>widget</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -318,12 +653,14 @@ Public 成员函数</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>edit对象。 </dd></dl>
 
-<p>被 <a class="el" href="classawtk_1_1_t_spin_box.html#a519c1081d2cc853b963ab7cf851d5fb7">awtk.TSpinBox</a> , 以及 <a class="el" href="classawtk_1_1_t_combo_box.html#ad8a146cb04fc5d1d55867af98531d383">awtk.TComboBox</a> 重载.</p>
+<p>重载 <a class="el" href="classawtk_1_1_t_widget.html#a858a0cd4797dd48887f39f73f8113df0">awtk.TWidget</a> .</p>
+
+<p>被 <a class="el" href="classawtk_1_1_t_combo_box.html#ad8a146cb04fc5d1d55867af98531d383">awtk.TComboBox</a> , 以及 <a class="el" href="classawtk_1_1_t_spin_box.html#a519c1081d2cc853b963ab7cf851d5fb7">awtk.TSpinBox</a> 重载.</p>
 
 </div>
 </div>
-<a id="a2d09e68e8a6df2f25c2a0d8ffec9e97a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d09e68e8a6df2f25c2a0d8ffec9e97a">&#9670;&nbsp;</a></span>create()</h2>
+<a id="a2d09e68e8a6df2f25c2a0d8ffec9e97a" name="a2d09e68e8a6df2f25c2a0d8ffec9e97a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d09e68e8a6df2f25c2a0d8ffec9e97a">&#9670;&#160;</a></span>create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -332,39 +669,29 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static TWidget awtk.TEdit.create </td>
+          <td class="memname">static <a class="el" href="classawtk_1_1_t_widget.html">TWidget</a> awtk.TEdit.create </td>
           <td>(</td>
-          <td class="paramtype">TWidget&#160;</td>
-          <td class="paramname"><em>parent</em>, </td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_widget.html">TWidget</a></td>          <td class="paramname"><span class="paramname"><em>parent</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>h</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -386,12 +713,12 @@ Public 成员函数</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>对象。 </dd></dl>
 
-<p>被 <a class="el" href="classawtk_1_1_t_spin_box.html#a21b679128d3af3d3f036b50aa7bb00f2">awtk.TSpinBox</a>, <a class="el" href="classawtk_1_1_t_combo_box_ex.html#a6539ad1288bb1932b2256af8b2ccfdb2">awtk.TComboBoxEx</a> , 以及 <a class="el" href="classawtk_1_1_t_combo_box.html#a4f893f874fe29509fd9f0606d8063a1a">awtk.TComboBox</a> 重载.</p>
+<p>被 <a class="el" href="classawtk_1_1_t_combo_box.html#a4f893f874fe29509fd9f0606d8063a1a">awtk.TComboBox</a>, <a class="el" href="classawtk_1_1_t_combo_box_ex.html#a6539ad1288bb1932b2256af8b2ccfdb2">awtk.TComboBoxEx</a> , 以及 <a class="el" href="classawtk_1_1_t_spin_box.html#a21b679128d3af3d3f036b50aa7bb00f2">awtk.TSpinBox</a> 重载.</p>
 
 </div>
 </div>
-<a id="a4581fd853364bff2b5e6370dda88eded"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4581fd853364bff2b5e6370dda88eded">&#9670;&nbsp;</a></span>getActionText()</h2>
+<a id="a4581fd853364bff2b5e6370dda88eded" name="a4581fd853364bff2b5e6370dda88eded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4581fd853364bff2b5e6370dda88eded">&#9670;&#160;</a></span>getActionText()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -402,7 +729,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TEdit.getActionText </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -418,8 +745,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a6b95397c0b7226ac607c26b3251058cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b95397c0b7226ac607c26b3251058cc">&#9670;&nbsp;</a></span>getAutoFix()</h2>
+<a id="a6b95397c0b7226ac607c26b3251058cc" name="a6b95397c0b7226ac607c26b3251058cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b95397c0b7226ac607c26b3251058cc">&#9670;&#160;</a></span>getAutoFix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -430,7 +757,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TEdit.getAutoFix </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -444,8 +771,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a7c158e859fcee02878122b8fb3fb8c09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c158e859fcee02878122b8fb3fb8c09">&#9670;&nbsp;</a></span>getCancelable()</h2>
+<a id="a7c158e859fcee02878122b8fb3fb8c09" name="a7c158e859fcee02878122b8fb3fb8c09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c158e859fcee02878122b8fb3fb8c09">&#9670;&#160;</a></span>getCancelable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -456,7 +783,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TEdit.getCancelable </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -468,15 +795,15 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p>是否支持撤销编辑。如果为TRUE，在失去焦点之前可以撤销所有修改(恢复获得焦点之前的内容)。</p>
 <blockquote class="doxtable">
-<p>* 1.一般配合keyboard的"cancel"按钮使用。</p><ul>
+<p>&zwj;* 1.一般配合keyboard的"cancel"按钮使用。</p><ul>
 <li>2.为TRUE时，如果内容有变化，会设置编辑器的状态为changed，所以此时编辑器需要支持changed状态的style。 </li>
 </ul>
 </blockquote>
 
 </div>
 </div>
-<a id="a41f6b3f08ef7d9f850cebddfaaa52e83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41f6b3f08ef7d9f850cebddfaaa52e83">&#9670;&nbsp;</a></span>getCloseImWhenBlured()</h2>
+<a id="a41f6b3f08ef7d9f850cebddfaaa52e83" name="a41f6b3f08ef7d9f850cebddfaaa52e83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41f6b3f08ef7d9f850cebddfaaa52e83">&#9670;&#160;</a></span>getCloseImWhenBlured()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -487,7 +814,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TEdit.getCloseImWhenBlured </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -501,8 +828,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a83853d4b6a98bb7b8f6fa774ccc7a4b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83853d4b6a98bb7b8f6fa774ccc7a4b0">&#9670;&nbsp;</a></span>getCursor()</h2>
+<a id="a83853d4b6a98bb7b8f6fa774ccc7a4b0" name="a83853d4b6a98bb7b8f6fa774ccc7a4b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83853d4b6a98bb7b8f6fa774ccc7a4b0">&#9670;&#160;</a></span>getCursor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -513,7 +840,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TEdit.getCursor </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -528,8 +855,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a53f6fcd5cbafc4d848d8659a30ca4c6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53f6fcd5cbafc4d848d8659a30ca4c6d">&#9670;&nbsp;</a></span>getDouble()</h2>
+<a id="a53f6fcd5cbafc4d848d8659a30ca4c6d" name="a53f6fcd5cbafc4d848d8659a30ca4c6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53f6fcd5cbafc4d848d8659a30ca4c6d">&#9670;&#160;</a></span>getDouble()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -540,7 +867,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">double awtk.TEdit.getDouble </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -555,8 +882,34 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="aa4337dc3eaf6b906d84c8693245571e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4337dc3eaf6b906d84c8693245571e6">&#9670;&nbsp;</a></span>getInputType()</h2>
+<a id="a8d668cb546f632a9adf128cab941e8f5" name="a8d668cb546f632a9adf128cab941e8f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d668cb546f632a9adf128cab941e8f5">&#9670;&#160;</a></span>getFocusNextWhenEnter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean awtk.TEdit.getFocusNextWhenEnter </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>输入回车后是否跳到下一个控件中。 </p>
+
+</div>
+</div>
+<a id="aa4337dc3eaf6b906d84c8693245571e6" name="aa4337dc3eaf6b906d84c8693245571e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4337dc3eaf6b906d84c8693245571e6">&#9670;&#160;</a></span>getInputType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -567,7 +920,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_input_type.html">TInputType</a> awtk.TEdit.getInputType </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -581,8 +934,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a54dfa7d9792d79b4f2545ad88f66cc6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54dfa7d9792d79b4f2545ad88f66cc6a">&#9670;&nbsp;</a></span>getInt()</h2>
+<a id="a54dfa7d9792d79b4f2545ad88f66cc6a" name="a54dfa7d9792d79b4f2545ad88f66cc6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54dfa7d9792d79b4f2545ad88f66cc6a">&#9670;&#160;</a></span>getInt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -593,7 +946,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TEdit.getInt </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -608,8 +961,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a8f8cbf39b01f5e5707ff44187dee452a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f8cbf39b01f5e5707ff44187dee452a">&#9670;&nbsp;</a></span>getKeyboard()</h2>
+<a id="a8f8cbf39b01f5e5707ff44187dee452a" name="a8f8cbf39b01f5e5707ff44187dee452a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f8cbf39b01f5e5707ff44187dee452a">&#9670;&#160;</a></span>getKeyboard()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -620,7 +973,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TEdit.getKeyboard </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -634,8 +987,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="aa73bb680610717cdf5ff35f51513ac62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa73bb680610717cdf5ff35f51513ac62">&#9670;&nbsp;</a></span>getMax()</h2>
+<a id="aa73bb680610717cdf5ff35f51513ac62" name="aa73bb680610717cdf5ff35f51513ac62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa73bb680610717cdf5ff35f51513ac62">&#9670;&#160;</a></span>getMax()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -646,7 +999,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">double awtk.TEdit.getMax </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -660,8 +1013,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a7becd5e8c915b8bdb45d964115c1ec93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7becd5e8c915b8bdb45d964115c1ec93">&#9670;&nbsp;</a></span>getMin()</h2>
+<a id="a7becd5e8c915b8bdb45d964115c1ec93" name="a7becd5e8c915b8bdb45d964115c1ec93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7becd5e8c915b8bdb45d964115c1ec93">&#9670;&#160;</a></span>getMin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -672,7 +1025,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">double awtk.TEdit.getMin </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -686,8 +1039,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="aedd87e45ab85c5fecc539424c2a6d96e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aedd87e45ab85c5fecc539424c2a6d96e">&#9670;&nbsp;</a></span>getOpenImWhenFocused()</h2>
+<a id="aedd87e45ab85c5fecc539424c2a6d96e" name="aedd87e45ab85c5fecc539424c2a6d96e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedd87e45ab85c5fecc539424c2a6d96e">&#9670;&#160;</a></span>getOpenImWhenFocused()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -698,7 +1051,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TEdit.getOpenImWhenFocused </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -710,13 +1063,13 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p>获得焦点时打开输入法。</p>
 <blockquote class="doxtable">
-<p>主要用于没有指针设备的情况，否则每次切换焦点时都打开输入法。 </p>
+<p>&zwj;主要用于没有指针设备的情况，否则每次切换焦点时都打开输入法。 </p>
 </blockquote>
 
 </div>
 </div>
-<a id="a3a2c4b455c6cec7f9cda4a383444bcdb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a2c4b455c6cec7f9cda4a383444bcdb">&#9670;&nbsp;</a></span>getPasswordVisible()</h2>
+<a id="a3a2c4b455c6cec7f9cda4a383444bcdb" name="a3a2c4b455c6cec7f9cda4a383444bcdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a2c4b455c6cec7f9cda4a383444bcdb">&#9670;&#160;</a></span>getPasswordVisible()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -727,7 +1080,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TEdit.getPasswordVisible </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -741,8 +1094,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a91b3675075a6b85b87ed51d9c5076e66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91b3675075a6b85b87ed51d9c5076e66">&#9670;&nbsp;</a></span>getReadonly()</h2>
+<a id="a91b3675075a6b85b87ed51d9c5076e66" name="a91b3675075a6b85b87ed51d9c5076e66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91b3675075a6b85b87ed51d9c5076e66">&#9670;&#160;</a></span>getReadonly()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -753,7 +1106,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TEdit.getReadonly </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -767,8 +1120,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a1fe3a11e8617a4ab97051748c7d956b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fe3a11e8617a4ab97051748c7d956b8">&#9670;&nbsp;</a></span>getSelectedText()</h2>
+<a id="a1fe3a11e8617a4ab97051748c7d956b8" name="a1fe3a11e8617a4ab97051748c7d956b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fe3a11e8617a4ab97051748c7d956b8">&#9670;&#160;</a></span>getSelectedText()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -779,7 +1132,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TEdit.getSelectedText </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -794,8 +1147,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a4ec14c8369366ea282057b8f87a3b307"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ec14c8369366ea282057b8f87a3b307">&#9670;&nbsp;</a></span>getSelectNoneWhenFocused()</h2>
+<a id="a4ec14c8369366ea282057b8f87a3b307" name="a4ec14c8369366ea282057b8f87a3b307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ec14c8369366ea282057b8f87a3b307">&#9670;&#160;</a></span>getSelectNoneWhenFocused()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -806,7 +1159,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TEdit.getSelectNoneWhenFocused </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -818,13 +1171,13 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p>获得焦点时不选中文本。</p>
 <blockquote class="doxtable">
-<p>主要用于没有指针设备的情况，否则软键盘无法取消选中文本。 </p>
+<p>&zwj;主要用于没有指针设备的情况，否则软键盘无法取消选中文本。 </p>
 </blockquote>
 
 </div>
 </div>
-<a id="a08d10eab4de90b2df6c4e1d487dc6d34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08d10eab4de90b2df6c4e1d487dc6d34">&#9670;&nbsp;</a></span>getStep()</h2>
+<a id="a08d10eab4de90b2df6c4e1d487dc6d34" name="a08d10eab4de90b2df6c4e1d487dc6d34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08d10eab4de90b2df6c4e1d487dc6d34">&#9670;&#160;</a></span>getStep()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -835,7 +1188,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">double awtk.TEdit.getStep </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -849,8 +1202,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a3e974129bc7002c7a150638f39cdf0ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e974129bc7002c7a150638f39cdf0ec">&#9670;&nbsp;</a></span>getTips()</h2>
+<a id="a3e974129bc7002c7a150638f39cdf0ec" name="a3e974129bc7002c7a150638f39cdf0ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e974129bc7002c7a150638f39cdf0ec">&#9670;&#160;</a></span>getTips()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -861,7 +1214,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TEdit.getTips </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -875,8 +1228,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a1b0a0cddc679a7d30376def3aac62a58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b0a0cddc679a7d30376def3aac62a58">&#9670;&nbsp;</a></span>getTrTips()</h2>
+<a id="a1b0a0cddc679a7d30376def3aac62a58" name="a1b0a0cddc679a7d30376def3aac62a58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b0a0cddc679a7d30376def3aac62a58">&#9670;&#160;</a></span>getTrTips()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -887,7 +1240,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TEdit.getTrTips </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -901,8 +1254,37 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a4cb096c8a211f6d735e20a77dd23abbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cb096c8a211f6d735e20a77dd23abbe">&#9670;&nbsp;</a></span>setActionText()</h2>
+<a id="ad56a715fa4b5f836ba360e9b4b707e26" name="ad56a715fa4b5f836ba360e9b4b707e26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad56a715fa4b5f836ba360e9b4b707e26">&#9670;&#160;</a></span>getValidator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String awtk.TEdit.getValidator </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>fscript脚本，用输入校验，如：(len(text) 3) &amp;&amp; (len(text) &lt; 10)。</p>
+<blockquote class="doxtable">
+<p>&zwj;用于校验输入的文本是否合法。 </p>
+</blockquote>
+
+</div>
+</div>
+<a id="a4cb096c8a211f6d735e20a77dd23abbe" name="a4cb096c8a211f6d735e20a77dd23abbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cb096c8a211f6d735e20a77dd23abbe">&#9670;&#160;</a></span>setActionText()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -913,8 +1295,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setActionText </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>action_text</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>action_text</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -935,8 +1316,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="abdcdc2f23aee583f8e74209146f84d68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdcdc2f23aee583f8e74209146f84d68">&#9670;&nbsp;</a></span>setAutoFix()</h2>
+<a id="abdcdc2f23aee583f8e74209146f84d68" name="abdcdc2f23aee583f8e74209146f84d68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdcdc2f23aee583f8e74209146f84d68">&#9670;&#160;</a></span>setAutoFix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -947,8 +1328,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setAutoFix </td>
           <td>(</td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>auto_fix</em></td><td>)</td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>auto_fix</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -969,8 +1349,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a7ab2c200f569c020af7cf01cf267aedf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ab2c200f569c020af7cf01cf267aedf">&#9670;&nbsp;</a></span>setCancelable()</h2>
+<a id="a7ab2c200f569c020af7cf01cf267aedf" name="a7ab2c200f569c020af7cf01cf267aedf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ab2c200f569c020af7cf01cf267aedf">&#9670;&#160;</a></span>setCancelable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -981,8 +1361,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setCancelable </td>
           <td>(</td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>cancelable</em></td><td>)</td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>cancelable</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1003,8 +1382,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a76a31acb08404f9d99893721a0efe2f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76a31acb08404f9d99893721a0efe2f5">&#9670;&nbsp;</a></span>setCloseImWhenBlured()</h2>
+<a id="a76a31acb08404f9d99893721a0efe2f5" name="a76a31acb08404f9d99893721a0efe2f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76a31acb08404f9d99893721a0efe2f5">&#9670;&#160;</a></span>setCloseImWhenBlured()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1015,8 +1394,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setCloseImWhenBlured </td>
           <td>(</td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>close_im_when_blured</em></td><td>)</td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>close_im_when_blured</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1037,8 +1415,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a7aafadc67c20a64f7f414cc11952be71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7aafadc67c20a64f7f414cc11952be71">&#9670;&nbsp;</a></span>setCursor()</h2>
+<a id="a7aafadc67c20a64f7f414cc11952be71" name="a7aafadc67c20a64f7f414cc11952be71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aafadc67c20a64f7f414cc11952be71">&#9670;&#160;</a></span>setCursor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1049,8 +1427,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setCursor </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cursor</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cursor</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1071,8 +1448,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a4d041d5fe1965b061af9b1e470843ed8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d041d5fe1965b061af9b1e470843ed8">&#9670;&nbsp;</a></span>setDouble()</h2>
+<a id="a4d041d5fe1965b061af9b1e470843ed8" name="a4d041d5fe1965b061af9b1e470843ed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d041d5fe1965b061af9b1e470843ed8">&#9670;&#160;</a></span>setDouble()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1083,8 +1460,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setDouble </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1105,8 +1481,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a9a8296e193f4219d86d401780c494aac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a8296e193f4219d86d401780c494aac">&#9670;&nbsp;</a></span>setDoubleEx()</h2>
+<a id="a9a8296e193f4219d86d401780c494aac" name="a9a8296e193f4219d86d401780c494aac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a8296e193f4219d86d401780c494aac">&#9670;&#160;</a></span>setDoubleEx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1117,19 +1493,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setDoubleEx </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>format</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1150,8 +1519,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a9a93e4f2c6e58a8dd13723193afd1dfd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a93e4f2c6e58a8dd13723193afd1dfd">&#9670;&nbsp;</a></span>setFloatLimit()</h2>
+<a id="a9a93e4f2c6e58a8dd13723193afd1dfd" name="a9a93e4f2c6e58a8dd13723193afd1dfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a93e4f2c6e58a8dd13723193afd1dfd">&#9670;&#160;</a></span>setFloatLimit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1162,25 +1531,17 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setFloatLimit </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>min</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>max</em>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>max</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>step</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>step</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1202,8 +1563,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ac5f2fe503adf5e41fe9c0102b5c33f50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5f2fe503adf5e41fe9c0102b5c33f50">&#9670;&nbsp;</a></span>setFocus()</h2>
+<a id="ac5f2fe503adf5e41fe9c0102b5c33f50" name="ac5f2fe503adf5e41fe9c0102b5c33f50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5f2fe503adf5e41fe9c0102b5c33f50">&#9670;&#160;</a></span>setFocus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1214,8 +1575,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setFocus </td>
           <td>(</td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>focus</em></td><td>)</td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>focus</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1236,8 +1596,41 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="afa1c97fb9c92c973dd2bd4e8aba1b001"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa1c97fb9c92c973dd2bd4e8aba1b001">&#9670;&nbsp;</a></span>setInputType()</h2>
+<a id="abd64eec5042c5bc462b32baaeb0d3733" name="abd64eec5042c5bc462b32baaeb0d3733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd64eec5042c5bc462b32baaeb0d3733">&#9670;&#160;</a></span>setFocusNextWhenEnter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setFocusNextWhenEnter </td>
+          <td>(</td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>focus_next_when_enter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置输入回车后是否跳到下一个控件中。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">focus_next_when_enter</td><td>是否跳入下一个控件中。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="afa1c97fb9c92c973dd2bd4e8aba1b001" name="afa1c97fb9c92c973dd2bd4e8aba1b001"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa1c97fb9c92c973dd2bd4e8aba1b001">&#9670;&#160;</a></span>setInputType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1248,8 +1641,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setInputType </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="enumawtk_1_1_t_input_type.html">TInputType</a>&#160;</td>
-          <td class="paramname"><em>type</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="enumawtk_1_1_t_input_type.html">TInputType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1270,8 +1662,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a3d013a8959740ceb95fd63d6a0a86617"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d013a8959740ceb95fd63d6a0a86617">&#9670;&nbsp;</a></span>setInt()</h2>
+<a id="a3d013a8959740ceb95fd63d6a0a86617" name="a3d013a8959740ceb95fd63d6a0a86617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d013a8959740ceb95fd63d6a0a86617">&#9670;&#160;</a></span>setInt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1282,8 +1674,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setInt </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1304,8 +1695,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ab60ea183eb4fbd10b65bc3979e9f397d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab60ea183eb4fbd10b65bc3979e9f397d">&#9670;&nbsp;</a></span>setIntLimit()</h2>
+<a id="ab60ea183eb4fbd10b65bc3979e9f397d" name="ab60ea183eb4fbd10b65bc3979e9f397d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab60ea183eb4fbd10b65bc3979e9f397d">&#9670;&#160;</a></span>setIntLimit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1316,25 +1707,17 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setIntLimit </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>min</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>max</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>max</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>step</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>step</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1356,8 +1739,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a398aba4c109a1c43f5dd79e3665a9f8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a398aba4c109a1c43f5dd79e3665a9f8f">&#9670;&nbsp;</a></span>setKeyboard()</h2>
+<a id="a398aba4c109a1c43f5dd79e3665a9f8f" name="a398aba4c109a1c43f5dd79e3665a9f8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a398aba4c109a1c43f5dd79e3665a9f8f">&#9670;&#160;</a></span>setKeyboard()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1368,8 +1751,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setKeyboard </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>keyboard</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>keyboard</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1390,8 +1772,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ae0499673b0946550c0fe3db3e5b3a4dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0499673b0946550c0fe3db3e5b3a4dc">&#9670;&nbsp;</a></span>setOpenImWhenFocused()</h2>
+<a id="ae0499673b0946550c0fe3db3e5b3a4dc" name="ae0499673b0946550c0fe3db3e5b3a4dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0499673b0946550c0fe3db3e5b3a4dc">&#9670;&#160;</a></span>setOpenImWhenFocused()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1402,8 +1784,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setOpenImWhenFocused </td>
           <td>(</td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>open_im_when_focused</em></td><td>)</td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>open_im_when_focused</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1415,7 +1796,7 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 <p>设置编辑器是否在获得焦点时打开输入法。</p>
 <blockquote class="doxtable">
-<p>* 设置默认焦点时，打开窗口时不弹出软键盘。</p><ul>
+<p>&zwj;* 设置默认焦点时，打开窗口时不弹出软键盘。</p><ul>
 <li>用键盘切换焦点时，编辑器获得焦点时不弹出软键盘。 </li>
 </ul>
 </blockquote>
@@ -1429,8 +1810,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="acfc7c37a40d46e78e7ab14ea2b45f32f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfc7c37a40d46e78e7ab14ea2b45f32f">&#9670;&nbsp;</a></span>setPasswordVisible()</h2>
+<a id="acfc7c37a40d46e78e7ab14ea2b45f32f" name="acfc7c37a40d46e78e7ab14ea2b45f32f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfc7c37a40d46e78e7ab14ea2b45f32f">&#9670;&#160;</a></span>setPasswordVisible()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1441,8 +1822,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setPasswordVisible </td>
           <td>(</td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>password_visible</em></td><td>)</td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>password_visible</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1463,8 +1843,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a4cd953fa1cff886dbe123e598c1922a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cd953fa1cff886dbe123e598c1922a9">&#9670;&nbsp;</a></span>setReadonly()</h2>
+<a id="a4cd953fa1cff886dbe123e598c1922a9" name="a4cd953fa1cff886dbe123e598c1922a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cd953fa1cff886dbe123e598c1922a9">&#9670;&#160;</a></span>setReadonly()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1475,8 +1855,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setReadonly </td>
           <td>(</td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>readonly</em></td><td>)</td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>readonly</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1497,8 +1876,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ad351955b6e5d9c2829b7dad04d05a8c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad351955b6e5d9c2829b7dad04d05a8c9">&#9670;&nbsp;</a></span>setSelect()</h2>
+<a id="ad351955b6e5d9c2829b7dad04d05a8c9" name="ad351955b6e5d9c2829b7dad04d05a8c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad351955b6e5d9c2829b7dad04d05a8c9">&#9670;&#160;</a></span>setSelect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1509,19 +1888,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setSelect </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>start</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>end</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>end</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1542,8 +1914,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a17ee7a550d2f87674fd68811b563a017"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17ee7a550d2f87674fd68811b563a017">&#9670;&nbsp;</a></span>setSelectNoneWhenFocused()</h2>
+<a id="a17ee7a550d2f87674fd68811b563a017" name="a17ee7a550d2f87674fd68811b563a017"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17ee7a550d2f87674fd68811b563a017">&#9670;&#160;</a></span>setSelectNoneWhenFocused()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1554,8 +1926,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setSelectNoneWhenFocused </td>
           <td>(</td>
-          <td class="paramtype">boolean&#160;</td>
-          <td class="paramname"><em>select_none_when_focused</em></td><td>)</td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>select_none_when_focused</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1576,8 +1947,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a8c4cd79700697bae39487a0a83936fca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c4cd79700697bae39487a0a83936fca">&#9670;&nbsp;</a></span>setTextLimit()</h2>
+<a id="a8c4cd79700697bae39487a0a83936fca" name="a8c4cd79700697bae39487a0a83936fca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c4cd79700697bae39487a0a83936fca">&#9670;&#160;</a></span>setTextLimit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1588,19 +1959,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setTextLimit </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>min</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>max</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1621,8 +1985,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ac12dab3b58b326749ca8dc78e486ab62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac12dab3b58b326749ca8dc78e486ab62">&#9670;&nbsp;</a></span>setTips()</h2>
+<a id="ac12dab3b58b326749ca8dc78e486ab62" name="ac12dab3b58b326749ca8dc78e486ab62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac12dab3b58b326749ca8dc78e486ab62">&#9670;&#160;</a></span>setTips()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1633,8 +1997,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setTips </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>tips</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>tips</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1655,8 +2018,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a8d253d8c327247f460861b0cb0d2ade6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d253d8c327247f460861b0cb0d2ade6">&#9670;&nbsp;</a></span>setTrTips()</h2>
+<a id="a8d253d8c327247f460861b0cb0d2ade6" name="a8d253d8c327247f460861b0cb0d2ade6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d253d8c327247f460861b0cb0d2ade6">&#9670;&#160;</a></span>setTrTips()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1667,8 +2030,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TEdit.setTrTips </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>tr_tips</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>tr_tips</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1690,12 +2052,13 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>output/TEdit.java</li>
+<li>output/<b>TEdit.java</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

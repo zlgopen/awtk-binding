@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TInputMethod类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-JAVA
    </div>
    <div id="projectbrief">AWTK JAVA API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,9 +70,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,48 +87,48 @@ $(function() {
 <li class="navelem"><b>awtk</b></li><li class="navelem"><a class="el" href="classawtk_1_1_t_input_method.html">TInputMethod</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="classawtk_1_1_t_input_method-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">awtk.TInputMethod类 参考</div>  </div>
+  <div class="headertitle"><div class="title">awtk.TInputMethod类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a21b0c1887b3c518178ab2ffa947c2f97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_input_method.html#a21b0c1887b3c518178ab2ffa947c2f97">TInputMethod</a> (long <a class="el" href="classawtk_1_1_t_input_method.html#a08326dd6ae5863afbb2b0469f71f3678">nativeObj</a>)</td></tr>
+<tr class="memitem:a21b0c1887b3c518178ab2ffa947c2f97" id="r_a21b0c1887b3c518178ab2ffa947c2f97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21b0c1887b3c518178ab2ffa947c2f97">TInputMethod</a> (long <a class="el" href="#a08326dd6ae5863afbb2b0469f71f3678">nativeObj</a>)</td></tr>
 <tr class="separator:a21b0c1887b3c518178ab2ffa947c2f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86c97d3b8557e45a5166ba141894a32e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_input_method.html#a86c97d3b8557e45a5166ba141894a32e">commitText</a> (String text)</td></tr>
+<tr class="memitem:a86c97d3b8557e45a5166ba141894a32e" id="r_a86c97d3b8557e45a5166ba141894a32e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86c97d3b8557e45a5166ba141894a32e">commitText</a> (String text)</td></tr>
 <tr class="separator:a86c97d3b8557e45a5166ba141894a32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93790ab8770163d7eb8d898981fe7b83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_input_method.html#a93790ab8770163d7eb8d898981fe7b83">setLang</a> (String lang)</td></tr>
+<tr class="memitem:a93790ab8770163d7eb8d898981fe7b83" id="r_a93790ab8770163d7eb8d898981fe7b83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93790ab8770163d7eb8d898981fe7b83">setLang</a> (String lang)</td></tr>
 <tr class="separator:a93790ab8770163d7eb8d898981fe7b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81924da66149663eac20f51051eb71a8"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_input_method.html#a81924da66149663eac20f51051eb71a8">getLang</a> ()</td></tr>
+<tr class="memitem:a81924da66149663eac20f51051eb71a8" id="r_a81924da66149663eac20f51051eb71a8"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81924da66149663eac20f51051eb71a8">getLang</a> ()</td></tr>
 <tr class="separator:a81924da66149663eac20f51051eb71a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2deec4e42a069fc71633c944a0e089ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_input_method.html#a2deec4e42a069fc71633c944a0e089ca">dispatchKey</a> (int key)</td></tr>
+<tr class="memitem:a2deec4e42a069fc71633c944a0e089ca" id="r_a2deec4e42a069fc71633c944a0e089ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2deec4e42a069fc71633c944a0e089ca">dispatchKey</a> (int key)</td></tr>
 <tr class="separator:a2deec4e42a069fc71633c944a0e089ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2902f9162f98c1f0a48fcbb70b639f95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_input_method.html#a2902f9162f98c1f0a48fcbb70b639f95">dispatchKeys</a> (String keys)</td></tr>
+<tr class="memitem:a2902f9162f98c1f0a48fcbb70b639f95" id="r_a2902f9162f98c1f0a48fcbb70b639f95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2902f9162f98c1f0a48fcbb70b639f95">dispatchKeys</a> (String keys)</td></tr>
 <tr class="separator:a2902f9162f98c1f0a48fcbb70b639f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bca6daa0405620b2f159f4e4cc6e6c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_input_method.html#a8bca6daa0405620b2f159f4e4cc6e6c1">dispatchPreedit</a> ()</td></tr>
+<tr class="memitem:a8bca6daa0405620b2f159f4e4cc6e6c1" id="r_a8bca6daa0405620b2f159f4e4cc6e6c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bca6daa0405620b2f159f4e4cc6e6c1">dispatchPreedit</a> ()</td></tr>
 <tr class="separator:a8bca6daa0405620b2f159f4e4cc6e6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad61f73614814f5104aabb5ba81c942a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_input_method.html#ad61f73614814f5104aabb5ba81c942a5">dispatchPreeditConfirm</a> ()</td></tr>
+<tr class="memitem:ad61f73614814f5104aabb5ba81c942a5" id="r_ad61f73614814f5104aabb5ba81c942a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad61f73614814f5104aabb5ba81c942a5">dispatchPreeditConfirm</a> ()</td></tr>
 <tr class="separator:ad61f73614814f5104aabb5ba81c942a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63672b6b209179888a25a52cfa930367"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_input_method.html#a63672b6b209179888a25a52cfa930367">dispatchPreeditAbort</a> ()</td></tr>
+<tr class="memitem:a63672b6b209179888a25a52cfa930367" id="r_a63672b6b209179888a25a52cfa930367"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63672b6b209179888a25a52cfa930367">dispatchPreeditAbort</a> ()</td></tr>
 <tr class="separator:a63672b6b209179888a25a52cfa930367"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:ad58d468b18fbac217ea05ebac2b3491b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_input_method.html">TInputMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_input_method.html#ad58d468b18fbac217ea05ebac2b3491b">cast</a> (long <a class="el" href="classawtk_1_1_t_input_method.html#a08326dd6ae5863afbb2b0469f71f3678">nativeObj</a>)</td></tr>
+<tr class="memitem:ad58d468b18fbac217ea05ebac2b3491b" id="r_ad58d468b18fbac217ea05ebac2b3491b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_input_method.html">TInputMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad58d468b18fbac217ea05ebac2b3491b">cast</a> (long <a class="el" href="#a08326dd6ae5863afbb2b0469f71f3678">nativeObj</a>)</td></tr>
 <tr class="separator:ad58d468b18fbac217ea05ebac2b3491b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38056cd623ab5a333298879bd6fabaee"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_input_method.html">TInputMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_input_method.html#a38056cd623ab5a333298879bd6fabaee">instance</a> ()</td></tr>
+<tr class="memitem:a38056cd623ab5a333298879bd6fabaee" id="r_a38056cd623ab5a333298879bd6fabaee"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_input_method.html">TInputMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38056cd623ab5a333298879bd6fabaee">instance</a> ()</td></tr>
 <tr class="separator:a38056cd623ab5a333298879bd6fabaee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:a08326dd6ae5863afbb2b0469f71f3678"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_input_method.html#a08326dd6ae5863afbb2b0469f71f3678">nativeObj</a></td></tr>
+<tr class="memitem:a08326dd6ae5863afbb2b0469f71f3678" id="r_a08326dd6ae5863afbb2b0469f71f3678"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08326dd6ae5863afbb2b0469f71f3678">nativeObj</a></td></tr>
 <tr class="separator:a08326dd6ae5863afbb2b0469f71f3678"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
@@ -116,11 +138,11 @@ Public 属性</h2></td></tr>
 <p>缺省实现。用于需要输入法的嵌入式平台。</p>
 <p>基于SDL实现的平台原生输入法。用于桌面系统和手机系统。</p>
 <blockquote class="doxtable">
-<p>输入类型请参考：input\_type </p>
+<p>&zwj;输入类型请参考：input_type </p>
 </blockquote>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
-<a id="a21b0c1887b3c518178ab2ffa947c2f97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21b0c1887b3c518178ab2ffa947c2f97">&#9670;&nbsp;</a></span>TInputMethod()</h2>
+<a id="a21b0c1887b3c518178ab2ffa947c2f97" name="a21b0c1887b3c518178ab2ffa947c2f97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21b0c1887b3c518178ab2ffa947c2f97">&#9670;&#160;</a></span>TInputMethod()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -131,8 +153,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">awtk.TInputMethod.TInputMethod </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>nativeObj</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>nativeObj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -154,8 +175,8 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a id="ad58d468b18fbac217ea05ebac2b3491b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad58d468b18fbac217ea05ebac2b3491b">&#9670;&nbsp;</a></span>cast()</h2>
+<a id="ad58d468b18fbac217ea05ebac2b3491b" name="ad58d468b18fbac217ea05ebac2b3491b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad58d468b18fbac217ea05ebac2b3491b">&#9670;&#160;</a></span>cast()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -166,8 +187,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_input_method.html">TInputMethod</a> awtk.TInputMethod.cast </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>nativeObj</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>nativeObj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -188,8 +208,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a86c97d3b8557e45a5166ba141894a32e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86c97d3b8557e45a5166ba141894a32e">&#9670;&nbsp;</a></span>commitText()</h2>
+<a id="a86c97d3b8557e45a5166ba141894a32e" name="a86c97d3b8557e45a5166ba141894a32e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86c97d3b8557e45a5166ba141894a32e">&#9670;&#160;</a></span>commitText()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -200,8 +220,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TInputMethod.commitText </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>text</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>text</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -222,8 +241,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a2deec4e42a069fc71633c944a0e089ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2deec4e42a069fc71633c944a0e089ca">&#9670;&nbsp;</a></span>dispatchKey()</h2>
+<a id="a2deec4e42a069fc71633c944a0e089ca" name="a2deec4e42a069fc71633c944a0e089ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2deec4e42a069fc71633c944a0e089ca">&#9670;&#160;</a></span>dispatchKey()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,8 +253,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TInputMethod.dispatchKey </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>key</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -256,8 +274,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a2902f9162f98c1f0a48fcbb70b639f95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2902f9162f98c1f0a48fcbb70b639f95">&#9670;&nbsp;</a></span>dispatchKeys()</h2>
+<a id="a2902f9162f98c1f0a48fcbb70b639f95" name="a2902f9162f98c1f0a48fcbb70b639f95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2902f9162f98c1f0a48fcbb70b639f95">&#9670;&#160;</a></span>dispatchKeys()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -268,8 +286,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TInputMethod.dispatchKeys </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>keys</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>keys</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -290,8 +307,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a8bca6daa0405620b2f159f4e4cc6e6c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bca6daa0405620b2f159f4e4cc6e6c1">&#9670;&nbsp;</a></span>dispatchPreedit()</h2>
+<a id="a8bca6daa0405620b2f159f4e4cc6e6c1" name="a8bca6daa0405620b2f159f4e4cc6e6c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bca6daa0405620b2f159f4e4cc6e6c1">&#9670;&#160;</a></span>dispatchPreedit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -302,7 +319,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TInputMethod.dispatchPreedit </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -317,8 +334,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a63672b6b209179888a25a52cfa930367"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63672b6b209179888a25a52cfa930367">&#9670;&nbsp;</a></span>dispatchPreeditAbort()</h2>
+<a id="a63672b6b209179888a25a52cfa930367" name="a63672b6b209179888a25a52cfa930367"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63672b6b209179888a25a52cfa930367">&#9670;&#160;</a></span>dispatchPreeditAbort()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,7 +346,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TInputMethod.dispatchPreeditAbort </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -344,8 +361,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ad61f73614814f5104aabb5ba81c942a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad61f73614814f5104aabb5ba81c942a5">&#9670;&nbsp;</a></span>dispatchPreeditConfirm()</h2>
+<a id="ad61f73614814f5104aabb5ba81c942a5" name="ad61f73614814f5104aabb5ba81c942a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad61f73614814f5104aabb5ba81c942a5">&#9670;&#160;</a></span>dispatchPreeditConfirm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -356,7 +373,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TInputMethod.dispatchPreeditConfirm </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -371,8 +388,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a81924da66149663eac20f51051eb71a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81924da66149663eac20f51051eb71a8">&#9670;&nbsp;</a></span>getLang()</h2>
+<a id="a81924da66149663eac20f51051eb71a8" name="a81924da66149663eac20f51051eb71a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81924da66149663eac20f51051eb71a8">&#9670;&#160;</a></span>getLang()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -383,7 +400,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TInputMethod.getLang </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -398,8 +415,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a38056cd623ab5a333298879bd6fabaee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38056cd623ab5a333298879bd6fabaee">&#9670;&nbsp;</a></span>instance()</h2>
+<a id="a38056cd623ab5a333298879bd6fabaee" name="a38056cd623ab5a333298879bd6fabaee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38056cd623ab5a333298879bd6fabaee">&#9670;&#160;</a></span>instance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -410,7 +427,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_input_method.html">TInputMethod</a> awtk.TInputMethod.instance </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -425,8 +442,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a93790ab8770163d7eb8d898981fe7b83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93790ab8770163d7eb8d898981fe7b83">&#9670;&nbsp;</a></span>setLang()</h2>
+<a id="a93790ab8770163d7eb8d898981fe7b83" name="a93790ab8770163d7eb8d898981fe7b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93790ab8770163d7eb8d898981fe7b83">&#9670;&#160;</a></span>setLang()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -437,8 +454,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TInputMethod.setLang </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>lang</em></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>lang</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -450,7 +466,7 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 <p>设置语言。</p>
 <blockquote class="doxtable">
-<p>有时在同一种语言环境下，也需要输入多种文字，典型的情况是同时输入中文和英文。 比如T9输入法，可以同时支持中文和英文输入，配合软键盘随时切换输入的语言。 数字、小写字母、大写字母和符合也可以视为输入的语言。 主要用于提示输入法引擎选择适当的输入方法。 </p>
+<p>&zwj;有时在同一种语言环境下，也需要输入多种文字，典型的情况是同时输入中文和英文。 比如T9输入法，可以同时支持中文和英文输入，配合软键盘随时切换输入的语言。 数字、小写字母、大写字母和符合也可以视为输入的语言。 主要用于提示输入法引擎选择适当的输入方法。 </p>
 </blockquote>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -463,8 +479,8 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">类成员变量说明</h2>
-<a id="a08326dd6ae5863afbb2b0469f71f3678"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08326dd6ae5863afbb2b0469f71f3678">&#9670;&nbsp;</a></span>nativeObj</h2>
+<a id="a08326dd6ae5863afbb2b0469f71f3678" name="a08326dd6ae5863afbb2b0469f71f3678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08326dd6ae5863afbb2b0469f71f3678">&#9670;&#160;</a></span>nativeObj</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -479,12 +495,13 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>output/TInputMethod.java</li>
+<li>output/<b>TInputMethod.java</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

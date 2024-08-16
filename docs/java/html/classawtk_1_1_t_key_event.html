@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TKeyEvent类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-JAVA
    </div>
    <div id="projectbrief">AWTK JAVA API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,9 +70,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,13 +87,13 @@ $(function() {
 <li class="navelem"><b>awtk</b></li><li class="navelem"><a class="el" href="classawtk_1_1_t_key_event.html">TKeyEvent</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="classawtk_1_1_t_key_event-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">awtk.TKeyEvent类 参考</div>  </div>
+  <div class="headertitle"><div class="title">awtk.TKeyEvent类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -84,75 +106,75 @@ $(function() {
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:ac60ab2b5e5cee87961feddee3047009d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_key_event.html#ac60ab2b5e5cee87961feddee3047009d">TKeyEvent</a> (long <a class="el" href="classawtk_1_1_t_event.html#aede2b8f4ca1f04e2ac01814f947c4304">nativeObj</a>)</td></tr>
+<tr class="memitem:ac60ab2b5e5cee87961feddee3047009d" id="r_ac60ab2b5e5cee87961feddee3047009d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac60ab2b5e5cee87961feddee3047009d">TKeyEvent</a> (long <a class="el" href="classawtk_1_1_t_event.html#aede2b8f4ca1f04e2ac01814f947c4304">nativeObj</a>)</td></tr>
 <tr class="separator:ac60ab2b5e5cee87961feddee3047009d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9639379720cfdc70cbf605eaf3e86248"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_key_event.html#a9639379720cfdc70cbf605eaf3e86248">getKey</a> ()</td></tr>
+<tr class="memitem:a9639379720cfdc70cbf605eaf3e86248" id="r_a9639379720cfdc70cbf605eaf3e86248"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9639379720cfdc70cbf605eaf3e86248">getKey</a> ()</td></tr>
 <tr class="separator:a9639379720cfdc70cbf605eaf3e86248"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a998ea6238dd5d949794f2b8833fa3f2d"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_key_event.html#a998ea6238dd5d949794f2b8833fa3f2d">getAlt</a> ()</td></tr>
+<tr class="memitem:a998ea6238dd5d949794f2b8833fa3f2d" id="r_a998ea6238dd5d949794f2b8833fa3f2d"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a998ea6238dd5d949794f2b8833fa3f2d">getAlt</a> ()</td></tr>
 <tr class="separator:a998ea6238dd5d949794f2b8833fa3f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3e6965a569fc6a28ee29a31f98d285c"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_key_event.html#ac3e6965a569fc6a28ee29a31f98d285c">getLalt</a> ()</td></tr>
+<tr class="memitem:ac3e6965a569fc6a28ee29a31f98d285c" id="r_ac3e6965a569fc6a28ee29a31f98d285c"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3e6965a569fc6a28ee29a31f98d285c">getLalt</a> ()</td></tr>
 <tr class="separator:ac3e6965a569fc6a28ee29a31f98d285c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d6f24dddac37b70e2a0e310cbd0b381"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_key_event.html#a1d6f24dddac37b70e2a0e310cbd0b381">getRalt</a> ()</td></tr>
+<tr class="memitem:a1d6f24dddac37b70e2a0e310cbd0b381" id="r_a1d6f24dddac37b70e2a0e310cbd0b381"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d6f24dddac37b70e2a0e310cbd0b381">getRalt</a> ()</td></tr>
 <tr class="separator:a1d6f24dddac37b70e2a0e310cbd0b381"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05e0a192d943b88f74320325ecb770f8"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_key_event.html#a05e0a192d943b88f74320325ecb770f8">getCtrl</a> ()</td></tr>
+<tr class="memitem:a05e0a192d943b88f74320325ecb770f8" id="r_a05e0a192d943b88f74320325ecb770f8"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05e0a192d943b88f74320325ecb770f8">getCtrl</a> ()</td></tr>
 <tr class="separator:a05e0a192d943b88f74320325ecb770f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b65a12b017fd388ea7c3723e3fe4985"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_key_event.html#a4b65a12b017fd388ea7c3723e3fe4985">getLctrl</a> ()</td></tr>
+<tr class="memitem:a4b65a12b017fd388ea7c3723e3fe4985" id="r_a4b65a12b017fd388ea7c3723e3fe4985"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b65a12b017fd388ea7c3723e3fe4985">getLctrl</a> ()</td></tr>
 <tr class="separator:a4b65a12b017fd388ea7c3723e3fe4985"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc115e7105ad458d8a48c3eb50c23d59"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_key_event.html#abc115e7105ad458d8a48c3eb50c23d59">getRctrl</a> ()</td></tr>
+<tr class="memitem:abc115e7105ad458d8a48c3eb50c23d59" id="r_abc115e7105ad458d8a48c3eb50c23d59"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc115e7105ad458d8a48c3eb50c23d59">getRctrl</a> ()</td></tr>
 <tr class="separator:abc115e7105ad458d8a48c3eb50c23d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab25305966f2df65f2c8db8f3949bf7b4"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_key_event.html#ab25305966f2df65f2c8db8f3949bf7b4">getShift</a> ()</td></tr>
+<tr class="memitem:ab25305966f2df65f2c8db8f3949bf7b4" id="r_ab25305966f2df65f2c8db8f3949bf7b4"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab25305966f2df65f2c8db8f3949bf7b4">getShift</a> ()</td></tr>
 <tr class="separator:ab25305966f2df65f2c8db8f3949bf7b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e41b87e61fc3426a8585d8f2ca00735"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_key_event.html#a0e41b87e61fc3426a8585d8f2ca00735">getLshift</a> ()</td></tr>
+<tr class="memitem:a0e41b87e61fc3426a8585d8f2ca00735" id="r_a0e41b87e61fc3426a8585d8f2ca00735"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e41b87e61fc3426a8585d8f2ca00735">getLshift</a> ()</td></tr>
 <tr class="separator:a0e41b87e61fc3426a8585d8f2ca00735"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b53e1144e06526df097364bb478d85a"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_key_event.html#a4b53e1144e06526df097364bb478d85a">getRshift</a> ()</td></tr>
+<tr class="memitem:a4b53e1144e06526df097364bb478d85a" id="r_a4b53e1144e06526df097364bb478d85a"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b53e1144e06526df097364bb478d85a">getRshift</a> ()</td></tr>
 <tr class="separator:a4b53e1144e06526df097364bb478d85a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a196e82852966e16572534a4299759e04"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_key_event.html#a196e82852966e16572534a4299759e04">getCmd</a> ()</td></tr>
+<tr class="memitem:a196e82852966e16572534a4299759e04" id="r_a196e82852966e16572534a4299759e04"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a196e82852966e16572534a4299759e04">getCmd</a> ()</td></tr>
 <tr class="separator:a196e82852966e16572534a4299759e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02c490fbf47c5cf6486256106dc44acb"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_key_event.html#a02c490fbf47c5cf6486256106dc44acb">getMenu</a> ()</td></tr>
+<tr class="memitem:a02c490fbf47c5cf6486256106dc44acb" id="r_a02c490fbf47c5cf6486256106dc44acb"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02c490fbf47c5cf6486256106dc44acb">getMenu</a> ()</td></tr>
 <tr class="separator:a02c490fbf47c5cf6486256106dc44acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1790c74a68bcb7376190c7a50feee522"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_key_event.html#a1790c74a68bcb7376190c7a50feee522">getCapslock</a> ()</td></tr>
+<tr class="memitem:a1790c74a68bcb7376190c7a50feee522" id="r_a1790c74a68bcb7376190c7a50feee522"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1790c74a68bcb7376190c7a50feee522">getCapslock</a> ()</td></tr>
 <tr class="separator:a1790c74a68bcb7376190c7a50feee522"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92f026a4281ed94c68f3d9c25e65d369"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_key_event.html#a92f026a4281ed94c68f3d9c25e65d369">getNumlock</a> ()</td></tr>
+<tr class="memitem:a92f026a4281ed94c68f3d9c25e65d369" id="r_a92f026a4281ed94c68f3d9c25e65d369"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92f026a4281ed94c68f3d9c25e65d369">getNumlock</a> ()</td></tr>
 <tr class="separator:a92f026a4281ed94c68f3d9c25e65d369"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classawtk_1_1_t_event"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classawtk_1_1_t_event')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classawtk_1_1_t_event.html">awtk.TEvent</a></td></tr>
-<tr class="memitem:ae01962dbecb1f5d4bad32bf314007ac0 inherit pub_methods_classawtk_1_1_t_event"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#ae01962dbecb1f5d4bad32bf314007ac0">TEvent</a> (long <a class="el" href="classawtk_1_1_t_event.html#aede2b8f4ca1f04e2ac01814f947c4304">nativeObj</a>)</td></tr>
+<tr class="inherit_header pub_methods_classawtk_1_1_t_event"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classawtk_1_1_t_event')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classawtk_1_1_t_event.html">awtk.TEvent</a></td></tr>
+<tr class="memitem:ae01962dbecb1f5d4bad32bf314007ac0 inherit pub_methods_classawtk_1_1_t_event" id="r_ae01962dbecb1f5d4bad32bf314007ac0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#ae01962dbecb1f5d4bad32bf314007ac0">TEvent</a> (long <a class="el" href="classawtk_1_1_t_event.html#aede2b8f4ca1f04e2ac01814f947c4304">nativeObj</a>)</td></tr>
 <tr class="separator:ae01962dbecb1f5d4bad32bf314007ac0 inherit pub_methods_classawtk_1_1_t_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a964ae7dc0cbb10e46a40dbf8ecda543f inherit pub_methods_classawtk_1_1_t_event"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#a964ae7dc0cbb10e46a40dbf8ecda543f">getType</a> ()</td></tr>
+<tr class="memitem:a964ae7dc0cbb10e46a40dbf8ecda543f inherit pub_methods_classawtk_1_1_t_event" id="r_a964ae7dc0cbb10e46a40dbf8ecda543f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#a964ae7dc0cbb10e46a40dbf8ecda543f">getType</a> ()</td></tr>
 <tr class="separator:a964ae7dc0cbb10e46a40dbf8ecda543f inherit pub_methods_classawtk_1_1_t_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcce6c53414eceb6b510eda03195779b inherit pub_methods_classawtk_1_1_t_event"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#abcce6c53414eceb6b510eda03195779b">destroy</a> ()</td></tr>
+<tr class="memitem:abcce6c53414eceb6b510eda03195779b inherit pub_methods_classawtk_1_1_t_event" id="r_abcce6c53414eceb6b510eda03195779b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#abcce6c53414eceb6b510eda03195779b">destroy</a> ()</td></tr>
 <tr class="separator:abcce6c53414eceb6b510eda03195779b inherit pub_methods_classawtk_1_1_t_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac28b02dc1473875e50bd2dad0989849f inherit pub_methods_classawtk_1_1_t_event"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#ac28b02dc1473875e50bd2dad0989849f">getSize</a> ()</td></tr>
+<tr class="memitem:ac28b02dc1473875e50bd2dad0989849f inherit pub_methods_classawtk_1_1_t_event" id="r_ac28b02dc1473875e50bd2dad0989849f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#ac28b02dc1473875e50bd2dad0989849f">getSize</a> ()</td></tr>
 <tr class="separator:ac28b02dc1473875e50bd2dad0989849f inherit pub_methods_classawtk_1_1_t_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedcabbe1dbd556316bb6a07bcefdf87e inherit pub_methods_classawtk_1_1_t_event"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#aedcabbe1dbd556316bb6a07bcefdf87e">getTime</a> ()</td></tr>
+<tr class="memitem:aedcabbe1dbd556316bb6a07bcefdf87e inherit pub_methods_classawtk_1_1_t_event" id="r_aedcabbe1dbd556316bb6a07bcefdf87e"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#aedcabbe1dbd556316bb6a07bcefdf87e">getTime</a> ()</td></tr>
 <tr class="separator:aedcabbe1dbd556316bb6a07bcefdf87e inherit pub_methods_classawtk_1_1_t_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add2b6613b1e1ae53c15db5f6c2361e19 inherit pub_methods_classawtk_1_1_t_event"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#add2b6613b1e1ae53c15db5f6c2361e19">getTarget</a> ()</td></tr>
+<tr class="memitem:add2b6613b1e1ae53c15db5f6c2361e19 inherit pub_methods_classawtk_1_1_t_event" id="r_add2b6613b1e1ae53c15db5f6c2361e19"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#add2b6613b1e1ae53c15db5f6c2361e19">getTarget</a> ()</td></tr>
 <tr class="separator:add2b6613b1e1ae53c15db5f6c2361e19 inherit pub_methods_classawtk_1_1_t_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a95072ab259c82ab607d45b10803779b5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_key_event.html">TKeyEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_key_event.html#a95072ab259c82ab607d45b10803779b5">cast</a> (long <a class="el" href="classawtk_1_1_t_event.html#aede2b8f4ca1f04e2ac01814f947c4304">nativeObj</a>)</td></tr>
+<tr class="memitem:a95072ab259c82ab607d45b10803779b5" id="r_a95072ab259c82ab607d45b10803779b5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_key_event.html">TKeyEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95072ab259c82ab607d45b10803779b5">cast</a> (long <a class="el" href="classawtk_1_1_t_event.html#aede2b8f4ca1f04e2ac01814f947c4304">nativeObj</a>)</td></tr>
 <tr class="separator:a95072ab259c82ab607d45b10803779b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9b1b8b6e195910e6e4b2e806eba7bae"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_key_event.html">TKeyEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_key_event.html#ab9b1b8b6e195910e6e4b2e806eba7bae">cast</a> (<a class="el" href="classawtk_1_1_t_event.html">TEvent</a> event)</td></tr>
+<tr class="memitem:ab9b1b8b6e195910e6e4b2e806eba7bae" id="r_ab9b1b8b6e195910e6e4b2e806eba7bae"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_key_event.html">TKeyEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9b1b8b6e195910e6e4b2e806eba7bae">cast</a> (<a class="el" href="classawtk_1_1_t_event.html">TEvent</a> event)</td></tr>
 <tr class="separator:ab9b1b8b6e195910e6e4b2e806eba7bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_classawtk_1_1_t_event"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classawtk_1_1_t_event')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="classawtk_1_1_t_event.html">awtk.TEvent</a></td></tr>
-<tr class="memitem:acf92f325c5d73dc6c56d6bd15227a21d inherit pub_static_methods_classawtk_1_1_t_event"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#acf92f325c5d73dc6c56d6bd15227a21d">fromName</a> (String name)</td></tr>
+<tr class="inherit_header pub_static_methods_classawtk_1_1_t_event"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classawtk_1_1_t_event')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="classawtk_1_1_t_event.html">awtk.TEvent</a></td></tr>
+<tr class="memitem:acf92f325c5d73dc6c56d6bd15227a21d inherit pub_static_methods_classawtk_1_1_t_event" id="r_acf92f325c5d73dc6c56d6bd15227a21d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#acf92f325c5d73dc6c56d6bd15227a21d">fromName</a> (String name)</td></tr>
 <tr class="separator:acf92f325c5d73dc6c56d6bd15227a21d inherit pub_static_methods_classawtk_1_1_t_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe7494adb31ef8d50da371e4558c948f inherit pub_static_methods_classawtk_1_1_t_event"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_event.html">TEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#abe7494adb31ef8d50da371e4558c948f">create</a> (int type)</td></tr>
+<tr class="memitem:abe7494adb31ef8d50da371e4558c948f inherit pub_static_methods_classawtk_1_1_t_event" id="r_abe7494adb31ef8d50da371e4558c948f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_event.html">TEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#abe7494adb31ef8d50da371e4558c948f">create</a> (int type)</td></tr>
 <tr class="separator:abe7494adb31ef8d50da371e4558c948f inherit pub_static_methods_classawtk_1_1_t_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 额外继承的成员函数</h2></td></tr>
-<tr class="inherit_header pub_attribs_classawtk_1_1_t_event"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classawtk_1_1_t_event')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="classawtk_1_1_t_event.html">awtk.TEvent</a></td></tr>
-<tr class="memitem:aede2b8f4ca1f04e2ac01814f947c4304 inherit pub_attribs_classawtk_1_1_t_event"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#aede2b8f4ca1f04e2ac01814f947c4304">nativeObj</a></td></tr>
+<tr class="inherit_header pub_attribs_classawtk_1_1_t_event"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_classawtk_1_1_t_event')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="classawtk_1_1_t_event.html">awtk.TEvent</a></td></tr>
+<tr class="memitem:aede2b8f4ca1f04e2ac01814f947c4304 inherit pub_attribs_classawtk_1_1_t_event" id="r_aede2b8f4ca1f04e2ac01814f947c4304"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_event.html#aede2b8f4ca1f04e2ac01814f947c4304">nativeObj</a></td></tr>
 <tr class="separator:aede2b8f4ca1f04e2ac01814f947c4304 inherit pub_attribs_classawtk_1_1_t_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>按键事件。 </p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
-<a id="ac60ab2b5e5cee87961feddee3047009d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac60ab2b5e5cee87961feddee3047009d">&#9670;&nbsp;</a></span>TKeyEvent()</h2>
+<a id="ac60ab2b5e5cee87961feddee3047009d" name="ac60ab2b5e5cee87961feddee3047009d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac60ab2b5e5cee87961feddee3047009d">&#9670;&#160;</a></span>TKeyEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,8 +185,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">awtk.TKeyEvent.TKeyEvent </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>nativeObj</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>nativeObj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -186,8 +207,8 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a id="a95072ab259c82ab607d45b10803779b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95072ab259c82ab607d45b10803779b5">&#9670;&nbsp;</a></span>cast() <span class="overload">[1/2]</span></h2>
+<a id="a95072ab259c82ab607d45b10803779b5" name="a95072ab259c82ab607d45b10803779b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95072ab259c82ab607d45b10803779b5">&#9670;&#160;</a></span>cast() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,8 +219,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_key_event.html">TKeyEvent</a> awtk.TKeyEvent.cast </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>nativeObj</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>nativeObj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -222,8 +242,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ab9b1b8b6e195910e6e4b2e806eba7bae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9b1b8b6e195910e6e4b2e806eba7bae">&#9670;&nbsp;</a></span>cast() <span class="overload">[2/2]</span></h2>
+<a id="ab9b1b8b6e195910e6e4b2e806eba7bae" name="ab9b1b8b6e195910e6e4b2e806eba7bae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9b1b8b6e195910e6e4b2e806eba7bae">&#9670;&#160;</a></span>cast() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,8 +254,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_key_event.html">TKeyEvent</a> awtk.TKeyEvent.cast </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_event.html">TEvent</a>&#160;</td>
-          <td class="paramname"><em>event</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_event.html">TEvent</a></td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -258,8 +277,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a998ea6238dd5d949794f2b8833fa3f2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a998ea6238dd5d949794f2b8833fa3f2d">&#9670;&nbsp;</a></span>getAlt()</h2>
+<a id="a998ea6238dd5d949794f2b8833fa3f2d" name="a998ea6238dd5d949794f2b8833fa3f2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a998ea6238dd5d949794f2b8833fa3f2d">&#9670;&#160;</a></span>getAlt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,7 +289,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TKeyEvent.getAlt </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -284,8 +303,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a1790c74a68bcb7376190c7a50feee522"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1790c74a68bcb7376190c7a50feee522">&#9670;&nbsp;</a></span>getCapslock()</h2>
+<a id="a1790c74a68bcb7376190c7a50feee522" name="a1790c74a68bcb7376190c7a50feee522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1790c74a68bcb7376190c7a50feee522">&#9670;&#160;</a></span>getCapslock()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -296,7 +315,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TKeyEvent.getCapslock </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -310,8 +329,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a196e82852966e16572534a4299759e04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a196e82852966e16572534a4299759e04">&#9670;&nbsp;</a></span>getCmd()</h2>
+<a id="a196e82852966e16572534a4299759e04" name="a196e82852966e16572534a4299759e04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a196e82852966e16572534a4299759e04">&#9670;&#160;</a></span>getCmd()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -322,7 +341,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TKeyEvent.getCmd </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -332,12 +351,12 @@ Public 成员函数</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>left shift键是否按下。 cmd/win键是否按下。 </p>
+<p>cmd/win键是否按下。 </p>
 
 </div>
 </div>
-<a id="a05e0a192d943b88f74320325ecb770f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05e0a192d943b88f74320325ecb770f8">&#9670;&nbsp;</a></span>getCtrl()</h2>
+<a id="a05e0a192d943b88f74320325ecb770f8" name="a05e0a192d943b88f74320325ecb770f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05e0a192d943b88f74320325ecb770f8">&#9670;&#160;</a></span>getCtrl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -348,7 +367,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TKeyEvent.getCtrl </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -358,12 +377,12 @@ Public 成员函数</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>right alt键是否按下。 ctrl键是否按下。 </p>
+<p>ctrl键是否按下。 </p>
 
 </div>
 </div>
-<a id="a9639379720cfdc70cbf605eaf3e86248"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9639379720cfdc70cbf605eaf3e86248">&#9670;&nbsp;</a></span>getKey()</h2>
+<a id="a9639379720cfdc70cbf605eaf3e86248" name="a9639379720cfdc70cbf605eaf3e86248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9639379720cfdc70cbf605eaf3e86248">&#9670;&#160;</a></span>getKey()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -374,7 +393,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TKeyEvent.getKey </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -388,8 +407,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ac3e6965a569fc6a28ee29a31f98d285c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3e6965a569fc6a28ee29a31f98d285c">&#9670;&nbsp;</a></span>getLalt()</h2>
+<a id="ac3e6965a569fc6a28ee29a31f98d285c" name="ac3e6965a569fc6a28ee29a31f98d285c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3e6965a569fc6a28ee29a31f98d285c">&#9670;&#160;</a></span>getLalt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -400,7 +419,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TKeyEvent.getLalt </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -414,8 +433,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a4b65a12b017fd388ea7c3723e3fe4985"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b65a12b017fd388ea7c3723e3fe4985">&#9670;&nbsp;</a></span>getLctrl()</h2>
+<a id="a4b65a12b017fd388ea7c3723e3fe4985" name="a4b65a12b017fd388ea7c3723e3fe4985"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b65a12b017fd388ea7c3723e3fe4985">&#9670;&#160;</a></span>getLctrl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -426,7 +445,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TKeyEvent.getLctrl </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -440,8 +459,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a0e41b87e61fc3426a8585d8f2ca00735"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e41b87e61fc3426a8585d8f2ca00735">&#9670;&nbsp;</a></span>getLshift()</h2>
+<a id="a0e41b87e61fc3426a8585d8f2ca00735" name="a0e41b87e61fc3426a8585d8f2ca00735"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e41b87e61fc3426a8585d8f2ca00735">&#9670;&#160;</a></span>getLshift()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -452,7 +471,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TKeyEvent.getLshift </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -466,8 +485,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a02c490fbf47c5cf6486256106dc44acb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02c490fbf47c5cf6486256106dc44acb">&#9670;&nbsp;</a></span>getMenu()</h2>
+<a id="a02c490fbf47c5cf6486256106dc44acb" name="a02c490fbf47c5cf6486256106dc44acb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02c490fbf47c5cf6486256106dc44acb">&#9670;&#160;</a></span>getMenu()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -478,7 +497,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TKeyEvent.getMenu </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -492,8 +511,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a92f026a4281ed94c68f3d9c25e65d369"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92f026a4281ed94c68f3d9c25e65d369">&#9670;&nbsp;</a></span>getNumlock()</h2>
+<a id="a92f026a4281ed94c68f3d9c25e65d369" name="a92f026a4281ed94c68f3d9c25e65d369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92f026a4281ed94c68f3d9c25e65d369">&#9670;&#160;</a></span>getNumlock()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -504,7 +523,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TKeyEvent.getNumlock </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -518,8 +537,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a1d6f24dddac37b70e2a0e310cbd0b381"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d6f24dddac37b70e2a0e310cbd0b381">&#9670;&nbsp;</a></span>getRalt()</h2>
+<a id="a1d6f24dddac37b70e2a0e310cbd0b381" name="a1d6f24dddac37b70e2a0e310cbd0b381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d6f24dddac37b70e2a0e310cbd0b381">&#9670;&#160;</a></span>getRalt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -530,7 +549,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TKeyEvent.getRalt </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -544,8 +563,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="abc115e7105ad458d8a48c3eb50c23d59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc115e7105ad458d8a48c3eb50c23d59">&#9670;&nbsp;</a></span>getRctrl()</h2>
+<a id="abc115e7105ad458d8a48c3eb50c23d59" name="abc115e7105ad458d8a48c3eb50c23d59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc115e7105ad458d8a48c3eb50c23d59">&#9670;&#160;</a></span>getRctrl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -556,7 +575,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TKeyEvent.getRctrl </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -570,8 +589,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a4b53e1144e06526df097364bb478d85a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b53e1144e06526df097364bb478d85a">&#9670;&nbsp;</a></span>getRshift()</h2>
+<a id="a4b53e1144e06526df097364bb478d85a" name="a4b53e1144e06526df097364bb478d85a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b53e1144e06526df097364bb478d85a">&#9670;&#160;</a></span>getRshift()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -582,7 +601,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TKeyEvent.getRshift </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -596,8 +615,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ab25305966f2df65f2c8db8f3949bf7b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab25305966f2df65f2c8db8f3949bf7b4">&#9670;&nbsp;</a></span>getShift()</h2>
+<a id="ab25305966f2df65f2c8db8f3949bf7b4" name="ab25305966f2df65f2c8db8f3949bf7b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab25305966f2df65f2c8db8f3949bf7b4">&#9670;&#160;</a></span>getShift()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -608,7 +627,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TKeyEvent.getShift </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -623,12 +642,13 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>output/TKeyEvent.java</li>
+<li>output/<b>TKeyEvent.java</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

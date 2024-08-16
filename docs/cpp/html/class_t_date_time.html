@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TDateTime类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-CPP
    </div>
    <div id="projectbrief">AWTK CPP API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,105 +70,112 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="class_t_date_time-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">TDateTime类 参考</div>  </div>
+  <div class="headertitle"><div class="title">TDateTime类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a267a94e932a9901faad05fe4448e901b"><td class="memItemLeft" align="right" valign="top"><a id="a267a94e932a9901faad05fe4448e901b"></a>
+<tr class="memitem:a267a94e932a9901faad05fe4448e901b" id="r_a267a94e932a9901faad05fe4448e901b"><td class="memItemLeft" align="right" valign="top"><a id="a267a94e932a9901faad05fe4448e901b" name="a267a94e932a9901faad05fe4448e901b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TDateTime</b> (date_time_t *nativeObj)</td></tr>
 <tr class="separator:a267a94e932a9901faad05fe4448e901b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07e587547eda97c2bf7b2385e7520318"><td class="memItemLeft" align="right" valign="top"><a id="a07e587547eda97c2bf7b2385e7520318"></a>
+<tr class="memitem:a07e587547eda97c2bf7b2385e7520318" id="r_a07e587547eda97c2bf7b2385e7520318"><td class="memItemLeft" align="right" valign="top"><a id="a07e587547eda97c2bf7b2385e7520318" name="a07e587547eda97c2bf7b2385e7520318"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TDateTime</b> (const date_time_t *nativeObj)</td></tr>
 <tr class="separator:a07e587547eda97c2bf7b2385e7520318"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d1a18fed893aacce12dc613657254e9"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a2d1a18fed893aacce12dc613657254e9">SetYear</a> (uint32_t year)</td></tr>
+<tr class="memitem:a2d1a18fed893aacce12dc613657254e9" id="r_a2d1a18fed893aacce12dc613657254e9"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d1a18fed893aacce12dc613657254e9">SetYear</a> (uint32_t year)</td></tr>
 <tr class="separator:a2d1a18fed893aacce12dc613657254e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17ac62bbc6a44660513a58480027534a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a17ac62bbc6a44660513a58480027534a">SetMonth</a> (uint32_t month)</td></tr>
+<tr class="memitem:a17ac62bbc6a44660513a58480027534a" id="r_a17ac62bbc6a44660513a58480027534a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17ac62bbc6a44660513a58480027534a">SetMonth</a> (uint32_t month)</td></tr>
 <tr class="separator:a17ac62bbc6a44660513a58480027534a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a378c8f38d7651ce4176ee58c1eeffab7"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a378c8f38d7651ce4176ee58c1eeffab7">SetDay</a> (uint32_t day)</td></tr>
+<tr class="memitem:a378c8f38d7651ce4176ee58c1eeffab7" id="r_a378c8f38d7651ce4176ee58c1eeffab7"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a378c8f38d7651ce4176ee58c1eeffab7">SetDay</a> (uint32_t day)</td></tr>
 <tr class="separator:a378c8f38d7651ce4176ee58c1eeffab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9ea4492913f6a77fbb6f0dd477dc4cc"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#ad9ea4492913f6a77fbb6f0dd477dc4cc">SetHour</a> (uint32_t hour)</td></tr>
+<tr class="memitem:ad9ea4492913f6a77fbb6f0dd477dc4cc" id="r_ad9ea4492913f6a77fbb6f0dd477dc4cc"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9ea4492913f6a77fbb6f0dd477dc4cc">SetHour</a> (uint32_t hour)</td></tr>
 <tr class="separator:ad9ea4492913f6a77fbb6f0dd477dc4cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab54cfb0e73c14b1fe25897f290d36cc1"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#ab54cfb0e73c14b1fe25897f290d36cc1">SetMinute</a> (uint32_t minute)</td></tr>
+<tr class="memitem:ab54cfb0e73c14b1fe25897f290d36cc1" id="r_ab54cfb0e73c14b1fe25897f290d36cc1"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab54cfb0e73c14b1fe25897f290d36cc1">SetMinute</a> (uint32_t minute)</td></tr>
 <tr class="separator:ab54cfb0e73c14b1fe25897f290d36cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a467cb935262f1aaa0b94258163d4475b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a467cb935262f1aaa0b94258163d4475b">SetSecond</a> (uint32_t second)</td></tr>
+<tr class="memitem:a467cb935262f1aaa0b94258163d4475b" id="r_a467cb935262f1aaa0b94258163d4475b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a467cb935262f1aaa0b94258163d4475b">SetSecond</a> (uint32_t second)</td></tr>
 <tr class="separator:a467cb935262f1aaa0b94258163d4475b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef712604bfd25647022f50024026cdcd"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#aef712604bfd25647022f50024026cdcd">Set</a> ()</td></tr>
+<tr class="memitem:aef712604bfd25647022f50024026cdcd" id="r_aef712604bfd25647022f50024026cdcd"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef712604bfd25647022f50024026cdcd">Set</a> ()</td></tr>
 <tr class="separator:aef712604bfd25647022f50024026cdcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30114aaa6fc5816a4cbf8db7ac9219b1"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a30114aaa6fc5816a4cbf8db7ac9219b1">FromTime</a> (int64_t time)</td></tr>
+<tr class="memitem:a30114aaa6fc5816a4cbf8db7ac9219b1" id="r_a30114aaa6fc5816a4cbf8db7ac9219b1"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30114aaa6fc5816a4cbf8db7ac9219b1">FromTime</a> (int64_t time)</td></tr>
 <tr class="separator:a30114aaa6fc5816a4cbf8db7ac9219b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a007fb12889483c931b395599a89bb5e2"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a007fb12889483c931b395599a89bb5e2">ToTime</a> ()</td></tr>
+<tr class="memitem:a007fb12889483c931b395599a89bb5e2" id="r_a007fb12889483c931b395599a89bb5e2"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a007fb12889483c931b395599a89bb5e2">ToTime</a> ()</td></tr>
 <tr class="separator:a007fb12889483c931b395599a89bb5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2dd1849c836f72d236ff4a30ac34370"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#ad2dd1849c836f72d236ff4a30ac34370">AddDelta</a> (int64_t delta)</td></tr>
+<tr class="memitem:ad2dd1849c836f72d236ff4a30ac34370" id="r_ad2dd1849c836f72d236ff4a30ac34370"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2dd1849c836f72d236ff4a30ac34370">AddDelta</a> (int64_t delta)</td></tr>
 <tr class="separator:ad2dd1849c836f72d236ff4a30ac34370"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63840776299c0f42d3f3a0d8948d2ce4"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a63840776299c0f42d3f3a0d8948d2ce4">Destroy</a> ()</td></tr>
+<tr class="memitem:a63840776299c0f42d3f3a0d8948d2ce4" id="r_a63840776299c0f42d3f3a0d8948d2ce4"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63840776299c0f42d3f3a0d8948d2ce4">Destroy</a> ()</td></tr>
 <tr class="separator:a63840776299c0f42d3f3a0d8948d2ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46d80192d883027677bcd01afce27bd1"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a46d80192d883027677bcd01afce27bd1">GetSecond</a> () const</td></tr>
+<tr class="memitem:a46d80192d883027677bcd01afce27bd1" id="r_a46d80192d883027677bcd01afce27bd1"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46d80192d883027677bcd01afce27bd1">GetSecond</a> () const</td></tr>
 <tr class="separator:a46d80192d883027677bcd01afce27bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34372c20e28da037c01f96b49ec90a66"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a34372c20e28da037c01f96b49ec90a66">GetMinute</a> () const</td></tr>
+<tr class="memitem:a34372c20e28da037c01f96b49ec90a66" id="r_a34372c20e28da037c01f96b49ec90a66"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34372c20e28da037c01f96b49ec90a66">GetMinute</a> () const</td></tr>
 <tr class="separator:a34372c20e28da037c01f96b49ec90a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91d867390b1a6b591be9fe11c0701278"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a91d867390b1a6b591be9fe11c0701278">GetHour</a> () const</td></tr>
+<tr class="memitem:a91d867390b1a6b591be9fe11c0701278" id="r_a91d867390b1a6b591be9fe11c0701278"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91d867390b1a6b591be9fe11c0701278">GetHour</a> () const</td></tr>
 <tr class="separator:a91d867390b1a6b591be9fe11c0701278"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83703cdb4e5cc693f27b125fb63c2ffe"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a83703cdb4e5cc693f27b125fb63c2ffe">GetDay</a> () const</td></tr>
+<tr class="memitem:a83703cdb4e5cc693f27b125fb63c2ffe" id="r_a83703cdb4e5cc693f27b125fb63c2ffe"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83703cdb4e5cc693f27b125fb63c2ffe">GetDay</a> () const</td></tr>
 <tr class="separator:a83703cdb4e5cc693f27b125fb63c2ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa84a65eea32263946c4a5eea9c712cdf"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#aa84a65eea32263946c4a5eea9c712cdf">GetWday</a> () const</td></tr>
+<tr class="memitem:aa84a65eea32263946c4a5eea9c712cdf" id="r_aa84a65eea32263946c4a5eea9c712cdf"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa84a65eea32263946c4a5eea9c712cdf">GetWday</a> () const</td></tr>
 <tr class="separator:aa84a65eea32263946c4a5eea9c712cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b27c331829c152e5ffd9e66dabd71f2"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a2b27c331829c152e5ffd9e66dabd71f2">GetMonth</a> () const</td></tr>
+<tr class="memitem:a2b27c331829c152e5ffd9e66dabd71f2" id="r_a2b27c331829c152e5ffd9e66dabd71f2"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b27c331829c152e5ffd9e66dabd71f2">GetMonth</a> () const</td></tr>
 <tr class="separator:a2b27c331829c152e5ffd9e66dabd71f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a550dbdb5529522cd94e4793452fe886c"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a550dbdb5529522cd94e4793452fe886c">GetYear</a> () const</td></tr>
+<tr class="memitem:a550dbdb5529522cd94e4793452fe886c" id="r_a550dbdb5529522cd94e4793452fe886c"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a550dbdb5529522cd94e4793452fe886c">GetYear</a> () const</td></tr>
 <tr class="separator:a550dbdb5529522cd94e4793452fe886c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:ace5377d01708673233fb810f9831217c"><td class="memItemLeft" align="right" valign="top"><a id="ace5377d01708673233fb810f9831217c"></a>
+<tr class="memitem:ace5377d01708673233fb810f9831217c" id="r_ace5377d01708673233fb810f9831217c"><td class="memItemLeft" align="right" valign="top"><a id="ace5377d01708673233fb810f9831217c" name="ace5377d01708673233fb810f9831217c"></a>
 static <a class="el" href="class_t_date_time.html">TDateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (date_time_t *nativeObj)</td></tr>
 <tr class="separator:ace5377d01708673233fb810f9831217c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a695305d464989eaa4bd33a394223ec4a"><td class="memItemLeft" align="right" valign="top"><a id="a695305d464989eaa4bd33a394223ec4a"></a>
+<tr class="memitem:a695305d464989eaa4bd33a394223ec4a" id="r_a695305d464989eaa4bd33a394223ec4a"><td class="memItemLeft" align="right" valign="top"><a id="a695305d464989eaa4bd33a394223ec4a" name="a695305d464989eaa4bd33a394223ec4a"></a>
 static <a class="el" href="class_t_date_time.html">TDateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Cast</b> (const date_time_t *nativeObj)</td></tr>
 <tr class="separator:a695305d464989eaa4bd33a394223ec4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a767f92f2b0d91f90298445768c207cba"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_date_time.html">TDateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a767f92f2b0d91f90298445768c207cba">Create</a> ()</td></tr>
+<tr class="memitem:a767f92f2b0d91f90298445768c207cba" id="r_a767f92f2b0d91f90298445768c207cba"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_date_time.html">TDateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a767f92f2b0d91f90298445768c207cba">Create</a> ()</td></tr>
 <tr class="separator:a767f92f2b0d91f90298445768c207cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a59a8949b59c4fdd08a0b80182417c8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a9a59a8949b59c4fdd08a0b80182417c8">IsLeap</a> (uint32_t year)</td></tr>
+<tr class="memitem:a9a59a8949b59c4fdd08a0b80182417c8" id="r_a9a59a8949b59c4fdd08a0b80182417c8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a59a8949b59c4fdd08a0b80182417c8">IsLeap</a> (uint32_t year)</td></tr>
 <tr class="separator:a9a59a8949b59c4fdd08a0b80182417c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62a767099bf81e1364a7ce654b17f71c"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a62a767099bf81e1364a7ce654b17f71c">GetDays</a> (uint32_t year, uint32_t month)</td></tr>
+<tr class="memitem:a62a767099bf81e1364a7ce654b17f71c" id="r_a62a767099bf81e1364a7ce654b17f71c"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62a767099bf81e1364a7ce654b17f71c">GetDays</a> (uint32_t year, uint32_t month)</td></tr>
 <tr class="separator:a62a767099bf81e1364a7ce654b17f71c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7553d98875f62ae476b9b3513df01289"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a7553d98875f62ae476b9b3513df01289">GetWday</a> (uint32_t year, uint32_t month, uint32_t day)</td></tr>
+<tr class="memitem:a7553d98875f62ae476b9b3513df01289" id="r_a7553d98875f62ae476b9b3513df01289"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7553d98875f62ae476b9b3513df01289">GetWday</a> (uint32_t year, uint32_t month, uint32_t day)</td></tr>
 <tr class="separator:a7553d98875f62ae476b9b3513df01289"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62fcb9ca899162a7a6cb9b0453f04b47"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a62fcb9ca899162a7a6cb9b0453f04b47">GetMonthName</a> (uint32_t month)</td></tr>
+<tr class="memitem:a62fcb9ca899162a7a6cb9b0453f04b47" id="r_a62fcb9ca899162a7a6cb9b0453f04b47"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62fcb9ca899162a7a6cb9b0453f04b47">GetMonthName</a> (uint32_t month)</td></tr>
 <tr class="separator:a62fcb9ca899162a7a6cb9b0453f04b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9834f8ca646a0b45d01a6b4cc8b56f52"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_date_time.html#a9834f8ca646a0b45d01a6b4cc8b56f52">GetWdayName</a> (uint32_t wday)</td></tr>
+<tr class="memitem:a9834f8ca646a0b45d01a6b4cc8b56f52" id="r_a9834f8ca646a0b45d01a6b4cc8b56f52"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9834f8ca646a0b45d01a6b4cc8b56f52">GetWdayName</a> (uint32_t wday)</td></tr>
 <tr class="separator:a9834f8ca646a0b45d01a6b4cc8b56f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:a769dc4a96727af462e6841b897e06dea"><td class="memItemLeft" align="right" valign="top"><a id="a769dc4a96727af462e6841b897e06dea"></a>
+<tr class="memitem:a769dc4a96727af462e6841b897e06dea" id="r_a769dc4a96727af462e6841b897e06dea"><td class="memItemLeft" align="right" valign="top"><a id="a769dc4a96727af462e6841b897e06dea" name="a769dc4a96727af462e6841b897e06dea"></a>
 date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></td></tr>
 <tr class="separator:a769dc4a96727af462e6841b897e06dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>日期时间。</p>
 <blockquote class="doxtable">
-<p>在嵌入式平台中，在系统初始时，需要调用date_time_global_init设置实际获取/设置系统时间的函数。 </p>
+<p>&zwj;在嵌入式平台中，在系统初始时，需要调用date_time_global_init设置实际获取/设置系统时间的函数。 </p>
 </blockquote>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="ad2dd1849c836f72d236ff4a30ac34370"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2dd1849c836f72d236ff4a30ac34370">&#9670;&nbsp;</a></span>AddDelta()</h2>
+<a id="ad2dd1849c836f72d236ff4a30ac34370" name="ad2dd1849c836f72d236ff4a30ac34370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2dd1849c836f72d236ff4a30ac34370">&#9670;&#160;</a></span>AddDelta()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -161,8 +183,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">ret_t TDateTime::AddDelta </td>
           <td>(</td>
-          <td class="paramtype">int64_t&#160;</td>
-          <td class="paramname"><em>delta</em></td><td>)</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>delta</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -178,8 +199,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="a767f92f2b0d91f90298445768c207cba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a767f92f2b0d91f90298445768c207cba">&#9670;&nbsp;</a></span>Create()</h2>
+<a id="a767f92f2b0d91f90298445768c207cba" name="a767f92f2b0d91f90298445768c207cba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a767f92f2b0d91f90298445768c207cba">&#9670;&#160;</a></span>Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -190,7 +211,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname"><a class="el" href="class_t_date_time.html">TDateTime</a> TDateTime::Create </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -205,8 +226,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="a63840776299c0f42d3f3a0d8948d2ce4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63840776299c0f42d3f3a0d8948d2ce4">&#9670;&nbsp;</a></span>Destroy()</h2>
+<a id="a63840776299c0f42d3f3a0d8948d2ce4" name="a63840776299c0f42d3f3a0d8948d2ce4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63840776299c0f42d3f3a0d8948d2ce4">&#9670;&#160;</a></span>Destroy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -214,7 +235,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">ret_t TDateTime::Destroy </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -224,8 +245,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="a30114aaa6fc5816a4cbf8db7ac9219b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30114aaa6fc5816a4cbf8db7ac9219b1">&#9670;&nbsp;</a></span>FromTime()</h2>
+<a id="a30114aaa6fc5816a4cbf8db7ac9219b1" name="a30114aaa6fc5816a4cbf8db7ac9219b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30114aaa6fc5816a4cbf8db7ac9219b1">&#9670;&#160;</a></span>FromTime()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -233,8 +254,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">ret_t TDateTime::FromTime </td>
           <td>(</td>
-          <td class="paramtype">int64_t&#160;</td>
-          <td class="paramname"><em>time</em></td><td>)</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -250,8 +270,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="a83703cdb4e5cc693f27b125fb63c2ffe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83703cdb4e5cc693f27b125fb63c2ffe">&#9670;&nbsp;</a></span>GetDay()</h2>
+<a id="a83703cdb4e5cc693f27b125fb63c2ffe" name="a83703cdb4e5cc693f27b125fb63c2ffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83703cdb4e5cc693f27b125fb63c2ffe">&#9670;&#160;</a></span>GetDay()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -259,7 +279,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">int32_t TDateTime::GetDay </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -268,8 +288,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="a62a767099bf81e1364a7ce654b17f71c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62a767099bf81e1364a7ce654b17f71c">&#9670;&nbsp;</a></span>GetDays()</h2>
+<a id="a62a767099bf81e1364a7ce654b17f71c" name="a62a767099bf81e1364a7ce654b17f71c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62a767099bf81e1364a7ce654b17f71c">&#9670;&#160;</a></span>GetDays()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -280,19 +300,12 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">int32_t TDateTime::GetDays </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>year</em>, </td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>year</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>month</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>month</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -313,8 +326,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="a91d867390b1a6b591be9fe11c0701278"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91d867390b1a6b591be9fe11c0701278">&#9670;&nbsp;</a></span>GetHour()</h2>
+<a id="a91d867390b1a6b591be9fe11c0701278" name="a91d867390b1a6b591be9fe11c0701278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91d867390b1a6b591be9fe11c0701278">&#9670;&#160;</a></span>GetHour()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -322,7 +335,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">int32_t TDateTime::GetHour </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -331,8 +344,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="a34372c20e28da037c01f96b49ec90a66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34372c20e28da037c01f96b49ec90a66">&#9670;&nbsp;</a></span>GetMinute()</h2>
+<a id="a34372c20e28da037c01f96b49ec90a66" name="a34372c20e28da037c01f96b49ec90a66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34372c20e28da037c01f96b49ec90a66">&#9670;&#160;</a></span>GetMinute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -340,7 +353,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">int32_t TDateTime::GetMinute </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -349,8 +362,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="a2b27c331829c152e5ffd9e66dabd71f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b27c331829c152e5ffd9e66dabd71f2">&#9670;&nbsp;</a></span>GetMonth()</h2>
+<a id="a2b27c331829c152e5ffd9e66dabd71f2" name="a2b27c331829c152e5ffd9e66dabd71f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b27c331829c152e5ffd9e66dabd71f2">&#9670;&#160;</a></span>GetMonth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -358,7 +371,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">int32_t TDateTime::GetMonth </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -367,8 +380,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="a62fcb9ca899162a7a6cb9b0453f04b47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62fcb9ca899162a7a6cb9b0453f04b47">&#9670;&nbsp;</a></span>GetMonthName()</h2>
+<a id="a62fcb9ca899162a7a6cb9b0453f04b47" name="a62fcb9ca899162a7a6cb9b0453f04b47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62fcb9ca899162a7a6cb9b0453f04b47">&#9670;&#160;</a></span>GetMonthName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -379,8 +392,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">const char * TDateTime::GetMonthName </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>month</em></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>month</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -401,8 +413,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="a46d80192d883027677bcd01afce27bd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46d80192d883027677bcd01afce27bd1">&#9670;&nbsp;</a></span>GetSecond()</h2>
+<a id="a46d80192d883027677bcd01afce27bd1" name="a46d80192d883027677bcd01afce27bd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46d80192d883027677bcd01afce27bd1">&#9670;&#160;</a></span>GetSecond()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -410,7 +422,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">int32_t TDateTime::GetSecond </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -419,8 +431,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="aa84a65eea32263946c4a5eea9c712cdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa84a65eea32263946c4a5eea9c712cdf">&#9670;&nbsp;</a></span>GetWday() <span class="overload">[1/2]</span></h2>
+<a id="aa84a65eea32263946c4a5eea9c712cdf" name="aa84a65eea32263946c4a5eea9c712cdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa84a65eea32263946c4a5eea9c712cdf">&#9670;&#160;</a></span>GetWday() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -428,7 +440,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">int32_t TDateTime::GetWday </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -437,8 +449,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="a7553d98875f62ae476b9b3513df01289"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7553d98875f62ae476b9b3513df01289">&#9670;&nbsp;</a></span>GetWday() <span class="overload">[2/2]</span></h2>
+<a id="a7553d98875f62ae476b9b3513df01289" name="a7553d98875f62ae476b9b3513df01289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7553d98875f62ae476b9b3513df01289">&#9670;&#160;</a></span>GetWday() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -449,25 +461,17 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">int32_t TDateTime::GetWday </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>year</em>, </td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>year</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>month</em>, </td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>month</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>day</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>day</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -489,8 +493,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="a9834f8ca646a0b45d01a6b4cc8b56f52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9834f8ca646a0b45d01a6b4cc8b56f52">&#9670;&nbsp;</a></span>GetWdayName()</h2>
+<a id="a9834f8ca646a0b45d01a6b4cc8b56f52" name="a9834f8ca646a0b45d01a6b4cc8b56f52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9834f8ca646a0b45d01a6b4cc8b56f52">&#9670;&#160;</a></span>GetWdayName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -501,8 +505,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">const char * TDateTime::GetWdayName </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>wday</em></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>wday</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -523,8 +526,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="a550dbdb5529522cd94e4793452fe886c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a550dbdb5529522cd94e4793452fe886c">&#9670;&nbsp;</a></span>GetYear()</h2>
+<a id="a550dbdb5529522cd94e4793452fe886c" name="a550dbdb5529522cd94e4793452fe886c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a550dbdb5529522cd94e4793452fe886c">&#9670;&#160;</a></span>GetYear()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -532,7 +535,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">int32_t TDateTime::GetYear </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -541,8 +544,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="a9a59a8949b59c4fdd08a0b80182417c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a59a8949b59c4fdd08a0b80182417c8">&#9670;&nbsp;</a></span>IsLeap()</h2>
+<a id="a9a59a8949b59c4fdd08a0b80182417c8" name="a9a59a8949b59c4fdd08a0b80182417c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a59a8949b59c4fdd08a0b80182417c8">&#9670;&#160;</a></span>IsLeap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -553,8 +556,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">bool TDateTime::IsLeap </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>year</em></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>year</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -575,8 +577,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="aef712604bfd25647022f50024026cdcd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef712604bfd25647022f50024026cdcd">&#9670;&nbsp;</a></span>Set()</h2>
+<a id="aef712604bfd25647022f50024026cdcd" name="aef712604bfd25647022f50024026cdcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef712604bfd25647022f50024026cdcd">&#9670;&#160;</a></span>Set()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -584,7 +586,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">ret_t TDateTime::Set </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -594,8 +596,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="a378c8f38d7651ce4176ee58c1eeffab7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a378c8f38d7651ce4176ee58c1eeffab7">&#9670;&nbsp;</a></span>SetDay()</h2>
+<a id="a378c8f38d7651ce4176ee58c1eeffab7" name="a378c8f38d7651ce4176ee58c1eeffab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a378c8f38d7651ce4176ee58c1eeffab7">&#9670;&#160;</a></span>SetDay()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -603,8 +605,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">ret_t TDateTime::SetDay </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>day</em></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>day</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -620,8 +621,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="ad9ea4492913f6a77fbb6f0dd477dc4cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9ea4492913f6a77fbb6f0dd477dc4cc">&#9670;&nbsp;</a></span>SetHour()</h2>
+<a id="ad9ea4492913f6a77fbb6f0dd477dc4cc" name="ad9ea4492913f6a77fbb6f0dd477dc4cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9ea4492913f6a77fbb6f0dd477dc4cc">&#9670;&#160;</a></span>SetHour()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -629,8 +630,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">ret_t TDateTime::SetHour </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>hour</em></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>hour</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -646,8 +646,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="ab54cfb0e73c14b1fe25897f290d36cc1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab54cfb0e73c14b1fe25897f290d36cc1">&#9670;&nbsp;</a></span>SetMinute()</h2>
+<a id="ab54cfb0e73c14b1fe25897f290d36cc1" name="ab54cfb0e73c14b1fe25897f290d36cc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab54cfb0e73c14b1fe25897f290d36cc1">&#9670;&#160;</a></span>SetMinute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -655,8 +655,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">ret_t TDateTime::SetMinute </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>minute</em></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>minute</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -672,8 +671,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="a17ac62bbc6a44660513a58480027534a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17ac62bbc6a44660513a58480027534a">&#9670;&nbsp;</a></span>SetMonth()</h2>
+<a id="a17ac62bbc6a44660513a58480027534a" name="a17ac62bbc6a44660513a58480027534a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17ac62bbc6a44660513a58480027534a">&#9670;&#160;</a></span>SetMonth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -681,8 +680,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">ret_t TDateTime::SetMonth </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>month</em></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>month</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -698,8 +696,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="a467cb935262f1aaa0b94258163d4475b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a467cb935262f1aaa0b94258163d4475b">&#9670;&nbsp;</a></span>SetSecond()</h2>
+<a id="a467cb935262f1aaa0b94258163d4475b" name="a467cb935262f1aaa0b94258163d4475b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a467cb935262f1aaa0b94258163d4475b">&#9670;&#160;</a></span>SetSecond()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -707,8 +705,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">ret_t TDateTime::SetSecond </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>second</em></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>second</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -724,8 +721,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="a2d1a18fed893aacce12dc613657254e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d1a18fed893aacce12dc613657254e9">&#9670;&nbsp;</a></span>SetYear()</h2>
+<a id="a2d1a18fed893aacce12dc613657254e9" name="a2d1a18fed893aacce12dc613657254e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d1a18fed893aacce12dc613657254e9">&#9670;&#160;</a></span>SetYear()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -733,8 +730,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">ret_t TDateTime::SetYear </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>year</em></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>year</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -750,8 +746,8 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 
 </div>
 </div>
-<a id="a007fb12889483c931b395599a89bb5e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a007fb12889483c931b395599a89bb5e2">&#9670;&nbsp;</a></span>ToTime()</h2>
+<a id="a007fb12889483c931b395599a89bb5e2" name="a007fb12889483c931b395599a89bb5e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a007fb12889483c931b395599a89bb5e2">&#9670;&#160;</a></span>ToTime()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -759,7 +755,7 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
         <tr>
           <td class="memname">int64_t TDateTime::ToTime </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -771,12 +767,13 @@ date_time_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/<a class="el" href="awtk__cpp_8hpp_source.html">awtk_cpp.hpp</a></li>
-<li>output/awtk_cpp.cpp</li>
+<li>output/<b>awtk_cpp.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

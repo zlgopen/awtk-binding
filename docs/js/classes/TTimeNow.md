@@ -1,34 +1,30 @@
-[AWTK](../README.md) / [Exports](../modules.md) / TTimeNow
+[**AWTK**](../README.md) • **Docs**
+
+***
+
+[AWTK](../globals.md) / TTimeNow
 
 # Class: TTimeNow
 
 获取当前时间的函数。
-这里的当前时间是相对的，在嵌入式系统一般相对于开机时间。
+这里的当前时间是相对的，在嵌入式系统一般相对于开机时间(毫秒)。
 它本身并没有任何意义，一般用来计算时间间隔，如实现定时器和动画等等。
-
-## Table of contents
-
-### Constructors
-
-- [constructor](TTimeNow.md#constructor)
-
-### Methods
-
-- [ms](TTimeNow.md#ms)
-- [s](TTimeNow.md#s)
-- [us](TTimeNow.md#us)
 
 ## Constructors
 
-### constructor
+### new TTimeNow()
 
-• **new TTimeNow**()
+> **new TTimeNow**(): [`TTimeNow`](TTimeNow.md)
+
+#### Returns
+
+[`TTimeNow`](TTimeNow.md)
 
 ## Methods
 
-### ms
+### ms()
 
-▸ `Static` **ms**(): `number`
+> `static` **ms**(): `number`
 
 获取当前时间(毫秒)。
 
@@ -42,13 +38,13 @@
 
 #### Defined in
 
-[awtk.ts:14150](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L14150)
+[awtk.ts:14646](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L14646)
 
-___
+***
 
-### s
+### s()
 
-▸ `Static` **s**(): `number`
+> `static` **s**(): `number`
 
 获取当前时间(秒)。
 
@@ -62,13 +58,13 @@ ___
 
 #### Defined in
 
-[awtk.ts:14137](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L14137)
+[awtk.ts:14633](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L14633)
 
-___
+***
 
-### us
+### us()
 
-▸ `Static` **us**(): `number`
+> `static` **us**(): `number`
 
 获取当前时间(微秒)。
 
@@ -82,4 +78,4 @@ ___
 
 #### Defined in
 
-[awtk.ts:14163](https://github.com/zlgopen/awtk-binding/blob/5d7e9b70/tools/code_gen/js/output/awtk.ts#L14163)
+[awtk.ts:14659](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L14659)

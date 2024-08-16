@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: 类成员</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-JAVA
    </div>
    <div id="projectbrief">AWTK JAVA API</div>
@@ -30,23 +34,35 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,525 +72,130 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="contents">
 <div class="textblock">这里列出了所有文档化的类成员，并附带类所属的文件:</div>
 
-<h3><a id="index_c"></a>- c -</h3><ul>
-<li>CALIBRATION_WIN
-: <a class="el" href="enumawtk_1_1_t_widget_type.html#a8c17886cc5a25787712292de60c3b93b">awtk.TWidgetType</a>
-</li>
-<li>CANCEL
-: <a class="el" href="enumawtk_1_1_t_dialog_quit_code.html#a62292a34e46035b8f88f496b2cdebca0">awtk.TDialogQuitCode</a>
-</li>
-<li>CANCELABLE
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#afc9b33ad012965059bbfce81702e8697">awtk.TWidgetProp</a>
-</li>
-<li>CANDIDATES
-: <a class="el" href="enumawtk_1_1_t_widget_type.html#a4682c1bc3f334730920084b9b1118ee6">awtk.TWidgetType</a>
-</li>
-<li>canExec()
-: <a class="el" href="classawtk_1_1_t_object.html#a8175b46a1cb653e88a9594a8848abb10">awtk.TObject</a>
-</li>
-<li>canExecByPath()
-: <a class="el" href="classawtk_1_1_t_object.html#a09ad0b1709a2c6858fd4a992b90025e1">awtk.TObject</a>
-</li>
-<li>CANVAS
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#ad5d18b9804d957f806d5127dbe149d21">awtk.TWidgetProp</a>
-</li>
-<li>CARET_X
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#a7f36808d6acde5f892eb4411879556b1">awtk.TWidgetProp</a>
-</li>
-<li>CARET_Y
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#a03dc1bb1ae32c804f7e2738e15e0096a">awtk.TWidgetProp</a>
-</li>
-<li>cast()
-: <a class="el" href="classawtk_1_1_t_app_bar.html#a21fd598d8b4166c66d8d7ec3304e2627">awtk.TAppBar</a>
-, <a class="el" href="classawtk_1_1_t_asset_info.html#a31523b7cddb3004a5bace9ecb35b3bae">awtk.TAssetInfo</a>
-, <a class="el" href="classawtk_1_1_t_assets_manager.html#aed3688ae3ff577b0b518daac005e31eb">awtk.TAssetsManager</a>
-, <a class="el" href="classawtk_1_1_t_bitmap.html#aab7149042e2e5b8defbfada1371a0dbe">awtk.TBitmap</a>
-, <a class="el" href="classawtk_1_1_t_button.html#acf875f4e32727b35266e9c6e3f55bf4a">awtk.TButton</a>
-, <a class="el" href="classawtk_1_1_t_button_group.html#ab874d2340840401955e71000a9a42993">awtk.TButtonGroup</a>
-, <a class="el" href="classawtk_1_1_t_calibration_win.html#a576b21d6a221b5505c1ca4826710556b">awtk.TCalibrationWin</a>
-, <a class="el" href="classawtk_1_1_t_candidates.html#a47120da3f81aeb9168106e52ad3b9b1e">awtk.TCandidates</a>
-, <a class="el" href="classawtk_1_1_t_canvas.html#a32e49929b25e1a3d85465888239b6977">awtk.TCanvas</a>
-, <a class="el" href="classawtk_1_1_t_canvas_offline.html#a03d44cc1c50059c279ce210527998b65">awtk.TCanvasOffline</a>
-, <a class="el" href="classawtk_1_1_t_canvas_widget.html#ab6f029ff18fdfbfae381ad368f8b0993">awtk.TCanvasWidget</a>
-, <a class="el" href="classawtk_1_1_t_check_button.html#a7ddbb245d6d307f4036efce2890cdf4b">awtk.TCheckButton</a>
-, <a class="el" href="classawtk_1_1_t_clip_board.html#a49df58bbddf24e809ac7b1b24c3a9104">awtk.TClipBoard</a>
-, <a class="el" href="classawtk_1_1_t_clip_view.html#ac52a5bf5fa46aabe0fc18efb1f724b4e">awtk.TClipView</a>
-, <a class="el" href="classawtk_1_1_t_cmd_exec_event.html#af5603492aba2aa3029ddc81dd4a2e80c">awtk.TCmdExecEvent</a>
-, <a class="el" href="classawtk_1_1_t_color.html#a7bda493110fed38d045fd21085075c11">awtk.TColor</a>
-, <a class="el" href="classawtk_1_1_t_color_component.html#af30181569c8567e55d1eaa8a1ad220db">awtk.TColorComponent</a>
-, <a class="el" href="classawtk_1_1_t_color_picker.html#a115e4a22a8e34eb201bc2f0fbce41da5">awtk.TColorPicker</a>
-, <a class="el" href="classawtk_1_1_t_color_tile.html#a191d09ea04757c1b10673a37251ab276">awtk.TColorTile</a>
-, <a class="el" href="classawtk_1_1_t_column.html#afca91f4d993463e885885bf7dad6a550">awtk.TColumn</a>
-, <a class="el" href="classawtk_1_1_t_combo_box.html#a35af5f66d306ac3570c75d2da95400a0">awtk.TComboBox</a>
-, <a class="el" href="classawtk_1_1_t_combo_box_ex.html#a0539be72cb286df4499221c12d454b55">awtk.TComboBoxEx</a>
-, <a class="el" href="classawtk_1_1_t_combo_box_item.html#aac3f5b156d363ec179c33bb741ba1356">awtk.TComboBoxItem</a>
-, <a class="el" href="classawtk_1_1_t_date_time.html#a8cd031c35edc0ad587c5a11302394f42">awtk.TDateTime</a>
-, <a class="el" href="classawtk_1_1_t_dialog.html#ab600248f7bf4697d03fdf3f00dcae6bb">awtk.TDialog</a>
-, <a class="el" href="classawtk_1_1_t_dialog_client.html#a12907ab028ac4c7fb25772dd1b3db52c">awtk.TDialogClient</a>
-, <a class="el" href="classawtk_1_1_t_dialog_title.html#a3680baa0a6c3e0c5fff95a2c37cef0e2">awtk.TDialogTitle</a>
-, <a class="el" href="classawtk_1_1_t_digit_clock.html#a7dff48f3c33396e40d81c283e0eee652">awtk.TDigitClock</a>
-, <a class="el" href="classawtk_1_1_t_done_event.html#a9ceb83de6c6c599279d4fbea042a1349">awtk.TDoneEvent</a>
-, <a class="el" href="classawtk_1_1_t_draggable.html#a35d583f08ecd7cbd96e68b4655e46d95">awtk.TDraggable</a>
-, <a class="el" href="classawtk_1_1_t_dragger.html#af5681ead3d4bc9418a1b53ac258252b6">awtk.TDragger</a>
-, <a class="el" href="classawtk_1_1_t_drop_file_event.html#afc72aa39891bf0d7383010b318882ab3">awtk.TDropFileEvent</a>
-, <a class="el" href="classawtk_1_1_t_edit.html#a6bb1b46fd01f738a930efacfd5aefd1e">awtk.TEdit</a>
-, <a class="el" href="classawtk_1_1_t_emitter.html#a22052354ddd6d3e7a5ae7ce0fa3654a6">awtk.TEmitter</a>
-, <a class="el" href="classawtk_1_1_t_error_event.html#a10ca73538781907ce2f118097bc7dee9">awtk.TErrorEvent</a>
-, <a class="el" href="classawtk_1_1_t_event.html#ab2ab11fa6f541612f29e4746fa5bf9f6">awtk.TEvent</a>
-, <a class="el" href="classawtk_1_1_t_file_browser_view.html#af383d60046b475143cfbe9dd6c26544c">awtk.TFileBrowserView</a>
-, <a class="el" href="classawtk_1_1_t_file_chooser.html#a3c1aebee88a59cb0006a2f6f3054f5df">awtk.TFileChooser</a>
-, <a class="el" href="classawtk_1_1_t_font_manager.html#a527fd6604b122abba93512ea699f3259">awtk.TFontManager</a>
-, <a class="el" href="classawtk_1_1_t_gauge.html#a5c504d6e1e5e54c5bab8c33aeccb5932">awtk.TGauge</a>
-, <a class="el" href="classawtk_1_1_t_gauge_pointer.html#ac351e60321fda7be06f46649db363ca3">awtk.TGaugePointer</a>
-, <a class="el" href="classawtk_1_1_t_gif_image.html#acfd0ecafe550a6c14d0d4f3b52bb72e5">awtk.TGifImage</a>
-, <a class="el" href="classawtk_1_1_t_grid.html#a37173f6d41f11dc46ab5f2f172bd849f">awtk.TGrid</a>
-, <a class="el" href="classawtk_1_1_t_grid_item.html#ab1c5e7fb535d87267a7adae67ff2a0c8">awtk.TGridItem</a>
-, <a class="el" href="classawtk_1_1_t_group_box.html#accb6d6930782e7ddf2320723da86ca7c">awtk.TGroupBox</a>
-, <a class="el" href="classawtk_1_1_t_hscroll_label.html#abf9cbde164b0b68f34a87873ad39f2a9">awtk.THscrollLabel</a>
-, <a class="el" href="classawtk_1_1_t_idle_info.html#a15abd94e89d5c5ae6bd9728649310044">awtk.TIdleInfo</a>
-, <a class="el" href="classawtk_1_1_t_idle_manager.html#a2882d86d5a6368f2c6e1dd9bc778e337">awtk.TIdleManager</a>
-, <a class="el" href="classawtk_1_1_t_image.html#a655c47e3bc5dc0f5582aa0c8354ee6c8">awtk.TImage</a>
-, <a class="el" href="classawtk_1_1_t_image_animation.html#a5a8b9102aa3f983d2f14cb3d07e466d8">awtk.TImageAnimation</a>
-, <a class="el" href="classawtk_1_1_t_image_base.html#a7da6ee71e180dfb1d8d20977f972a289">awtk.TImageBase</a>
-, <a class="el" href="classawtk_1_1_t_image_manager.html#a6c3cfb8bc10ce36d182c303da2e25cc0">awtk.TImageManager</a>
-, <a class="el" href="classawtk_1_1_t_image_value.html#ae435256e1888f04a74aec74cbb50d437">awtk.TImageValue</a>
-, <a class="el" href="classawtk_1_1_t_input_method.html#ad58d468b18fbac217ea05ebac2b3491b">awtk.TInputMethod</a>
-, <a class="el" href="classawtk_1_1_t_keyboard.html#ae3bf5a52de40dfe793a4f603f18dbb08">awtk.TKeyboard</a>
-, <a class="el" href="classawtk_1_1_t_key_event.html#ab9b1b8b6e195910e6e4b2e806eba7bae">awtk.TKeyEvent</a>
-, <a class="el" href="classawtk_1_1_t_label.html#a58f7a835913205dd80d7fa3d8608b0c6">awtk.TLabel</a>
-, <a class="el" href="classawtk_1_1_t_lang_indicator.html#a86190c17728dda7364f09f5e6d051f0d">awtk.TLangIndicator</a>
-, <a class="el" href="classawtk_1_1_t_line_number.html#a6baff19d80d0209d874e201b37bd6667">awtk.TLineNumber</a>
-, <a class="el" href="classawtk_1_1_t_list_item.html#a8527ec54941dc66974cf0c78b5c48cc4">awtk.TListItem</a>
-, <a class="el" href="classawtk_1_1_t_list_item_seperator.html#af081895bd88090da0ce4cfe77ecb4dd9">awtk.TListItemSeperator</a>
-, <a class="el" href="classawtk_1_1_t_list_view.html#a312a32d0cdacd4016ec3911f93c7081d">awtk.TListView</a>
-, <a class="el" href="classawtk_1_1_t_list_view_h.html#a5071d4e7a4ce475f8420e3a228d473b4">awtk.TListViewH</a>
-, <a class="el" href="classawtk_1_1_t_locale_info.html#aa649445a0c9b2246d7da383e2414d4f4">awtk.TLocaleInfo</a>
-, <a class="el" href="classawtk_1_1_t_mledit.html#a94a17def42844bb6ddf3b66ca8a92eea">awtk.TMledit</a>
-, <a class="el" href="classawtk_1_1_t_model_event.html#affcef98ef32a185f84ff7be402ab6a20">awtk.TModelEvent</a>
-, <a class="el" href="classawtk_1_1_t_multi_gesture_event.html#a8927fb2435c496a7743fa58b235bf6e1">awtk.TMultiGestureEvent</a>
-, <a class="el" href="classawtk_1_1_t_mutable_image.html#af6bd236f023082f0b3b29c5897e8c929">awtk.TMutableImage</a>
-, <a class="el" href="classawtk_1_1_t_named_value.html#af1faa817d6499f58dc0895a489c11d8b">awtk.TNamedValue</a>
-, <a class="el" href="classawtk_1_1_t_native_window.html#a738923f6f493dd55695092f6f3317947">awtk.TNativeWindow</a>
-, <a class="el" href="classawtk_1_1_t_object.html#a6b977217383a5f374a04379b4cfc7066">awtk.TObject</a>
-, <a class="el" href="classawtk_1_1_t_object_array.html#aff10e70b85effef310cceb64edc006f1">awtk.TObjectArray</a>
-, <a class="el" href="classawtk_1_1_t_object_default.html#a540eeea212bef35e9e565a08cb75c9b2">awtk.TObjectDefault</a>
-, <a class="el" href="classawtk_1_1_t_offset_change_event.html#a4ec4b11e6ffd46d005ad06ff8e68aeba">awtk.TOffsetChangeEvent</a>
-, <a class="el" href="classawtk_1_1_t_orientation_event.html#a63eeac20b19f4eb2f786647c63eb7108">awtk.TOrientationEvent</a>
-, <a class="el" href="classawtk_1_1_t_overlay.html#a671965ca3d1d6e381e1eaf051f432609">awtk.TOverlay</a>
-, <a class="el" href="classawtk_1_1_t_pages.html#a7312846a6e20d2ca09626fda5fa4951a">awtk.TPages</a>
-, <a class="el" href="classawtk_1_1_t_paint_event.html#ab9053000fad495ce277d613d4a48b606">awtk.TPaintEvent</a>
-, <a class="el" href="classawtk_1_1_t_point.html#a67dbad8633e466f28f746334be7ecb51">awtk.TPoint</a>
-, <a class="el" href="classawtk_1_1_t_pointer_event.html#a1d742682e1d090e9cbace7914d8a8534">awtk.TPointerEvent</a>
-, <a class="el" href="classawtk_1_1_t_pointf.html#a2d2274d04bc86856897916225106b7f6">awtk.TPointf</a>
-, <a class="el" href="classawtk_1_1_t_popup.html#a10614aaa9c40a5b11c6090d3a1fb5dc0">awtk.TPopup</a>
-, <a class="el" href="classawtk_1_1_t_progress_bar.html#a55e958c57b6310dfc7797ae893a64823">awtk.TProgressBar</a>
-, <a class="el" href="classawtk_1_1_t_progress_circle.html#abb3ce12eb198950c957546f37679b11a">awtk.TProgressCircle</a>
-, <a class="el" href="classawtk_1_1_t_progress_event.html#acfdcfcaab0f8c4286c275bec5dfde5b5">awtk.TProgressEvent</a>
-, <a class="el" href="classawtk_1_1_t_prop_change_event.html#aa2254e7176567c99b8e99abc02f6437e">awtk.TPropChangeEvent</a>
-, <a class="el" href="classawtk_1_1_t_rect.html#a5baf4adf4d4d75e9b29cbe9087b333f6">awtk.TRect</a>
-, <a class="el" href="classawtk_1_1_t_rectf.html#a71bc100a5030db4407e5f77e1a4b77b4">awtk.TRectf</a>
-, <a class="el" href="classawtk_1_1_t_rich_text.html#abc425d2ec81995caee47059f37982519">awtk.TRichText</a>
-, <a class="el" href="classawtk_1_1_t_rich_text_view.html#a8f430ce51bc44c56ecb544d0487a99b7">awtk.TRichTextView</a>
-, <a class="el" href="classawtk_1_1_t_rlog.html#a5e86b4c3730c6a694c984b16a59092f1">awtk.TRlog</a>
-, <a class="el" href="classawtk_1_1_t_row.html#a11dc8b228d3c8a618822541b7db2d9f0">awtk.TRow</a>
-, <a class="el" href="classawtk_1_1_t_scroll_bar.html#a5396e1ecc033f812bec1cfa12bf658d8">awtk.TScrollBar</a>
-, <a class="el" href="classawtk_1_1_t_scroll_view.html#af302d01b38c55b2f80a14800b63ad0ec">awtk.TScrollView</a>
-, <a class="el" href="classawtk_1_1_t_serial_widget.html#a4b980d47405994fc36e4264f204fa484">awtk.TSerialWidget</a>
-, <a class="el" href="classawtk_1_1_t_slide_indicator.html#a1501d57c4c8d7256b2cf99ba895b2285">awtk.TSlideIndicator</a>
-, <a class="el" href="classawtk_1_1_t_slide_menu.html#a70744a40a53ca817cb5c7ed92ed8bb71">awtk.TSlideMenu</a>
-, <a class="el" href="classawtk_1_1_t_slider.html#a36dde8fbf1803d177314a3a6817343f8">awtk.TSlider</a>
-, <a class="el" href="classawtk_1_1_t_slide_view.html#a892a5401a95b6a0f8676ea9b7b4c2d7c">awtk.TSlideView</a>
-, <a class="el" href="classawtk_1_1_t_spin_box.html#a26bf01472acc18b34aac04b8025d086e">awtk.TSpinBox</a>
-, <a class="el" href="classawtk_1_1_t_style.html#a34520ac7298b84e510d89514dd8c23f0">awtk.TStyle</a>
-, <a class="el" href="classawtk_1_1_t_style_mutable.html#a18f50b15fdd56ab0c52cff05cdc720d2">awtk.TStyleMutable</a>
-, <a class="el" href="classawtk_1_1_t_svg_image.html#ad8e76d210a90056ef672f12b556008e4">awtk.TSvgImage</a>
-, <a class="el" href="classawtk_1_1_t_switch.html#a3bfb1e553116d6fde3aac94459841fbc">awtk.TSwitch</a>
-, <a class="el" href="classawtk_1_1_t_system_bar.html#aa9d1121e295f719c7ce6f7623744949c">awtk.TSystemBar</a>
-, <a class="el" href="classawtk_1_1_t_system_event.html#ab65f17d87d9ca5041d2d5b8213bc435e">awtk.TSystemEvent</a>
-, <a class="el" href="classawtk_1_1_t_tab_button.html#a4c6fd739e6980d2f1549146419de8923">awtk.TTabButton</a>
-, <a class="el" href="classawtk_1_1_t_tab_button_group.html#a458a9361d30c4b0afcc3eb23f642fc45">awtk.TTabButtonGroup</a>
-, <a class="el" href="classawtk_1_1_t_tab_control.html#a9f26852d6926c22b2c679fdd4c145bde">awtk.TTabControl</a>
-, <a class="el" href="classawtk_1_1_t_text_selector.html#ad9a2071dccc4ccd87c266d4c9fbf8afc">awtk.TTextSelector</a>
-, <a class="el" href="classawtk_1_1_t_theme.html#a3b4749b765f7818e1926515c76c6a518">awtk.TTheme</a>
-, <a class="el" href="classawtk_1_1_t_theme_change_event.html#ad33cd9452cc5e8492ce3f20fa7d2adbe">awtk.TThemeChangeEvent</a>
-, <a class="el" href="classawtk_1_1_t_time_clock.html#afb209e615b8fa0ba03ff81eb00f819d1">awtk.TTimeClock</a>
-, <a class="el" href="classawtk_1_1_t_timer_info.html#a1a97fb81742c5f19f645c21cf6cb7f95">awtk.TTimerInfo</a>
-, <a class="el" href="classawtk_1_1_t_timer_manager.html#a1f30c0c6b12c17d30bdc514cff3cb0a6">awtk.TTimerManager</a>
-, <a class="el" href="classawtk_1_1_t_timer_widget.html#a067e785900452b22532b8cc0d304ff9c">awtk.TTimerWidget</a>
-, <a class="el" href="classawtk_1_1_t_value.html#a873afddc2d0bc0f9d4fff4da39a87363">awtk.TValue</a>
-, <a class="el" href="classawtk_1_1_t_value_change_event.html#a0da77a69519cc71c28fdadad2e28ff80">awtk.TValueChangeEvent</a>
-, <a class="el" href="classawtk_1_1_t_vgcanvas.html#aba6b7166938b3910f1094be57bba261a">awtk.TVgcanvas</a>
-, <a class="el" href="classawtk_1_1_t_view.html#a4b45a96a3891060734bec9f795a24b44">awtk.TView</a>
-, <a class="el" href="classawtk_1_1_t_vpage.html#a95a63095eac89227e72f10d967b705f0">awtk.TVpage</a>
-, <a class="el" href="classawtk_1_1_t_wheel_event.html#a9dfb8ddb92011592cc460ea976506811">awtk.TWheelEvent</a>
-, <a class="el" href="classawtk_1_1_t_window.html#a6ee3b47a20d13fb8cfadb38ea71e1f11">awtk.TWindow</a>
-, <a class="el" href="classawtk_1_1_t_window_base.html#a6b818850054d65efa888b0d788346616">awtk.TWindowBase</a>
-, <a class="el" href="classawtk_1_1_t_window_event.html#a8e0e4de2c6c0cfa32043d41cb17e2302">awtk.TWindowEvent</a>
-, <a class="el" href="classawtk_1_1_t_window_manager.html#ac74d71994627dbd039da64963b951af7">awtk.TWindowManager</a>
-</li>
-<li>CENTER
-: <a class="el" href="enumawtk_1_1_t_align_h.html#af125c0b7a5a81efe82461869324e2028">awtk.TAlignH</a>
-, <a class="el" href="enumawtk_1_1_t_image_draw_type.html#aea3d45e849a8ead37190cd51475f8780">awtk.TImageDrawType</a>
-</li>
-<li>center()
-: <a class="el" href="classawtk_1_1_t_native_window.html#a15f9e28ffe09a9eed9d0ee947a3acdf0">awtk.TNativeWindow</a>
-</li>
-<li>change()
-: <a class="el" href="classawtk_1_1_t_locale_info.html#a7161f4ed58d350eadf199dc99b32d8e4">awtk.TLocaleInfo</a>
-, <a class="el" href="classawtk_1_1_t_locale_infos.html#a40fe5d538c8e541c236ba6959f3fa866">awtk.TLocaleInfos</a>
-</li>
-<li>CHANGED
-: <a class="el" href="enumawtk_1_1_t_bitmap_flag.html#a51a132fe1cf75865300bd6fa41f73ca6">awtk.TBitmapFlag</a>
-, <a class="el" href="enumawtk_1_1_t_widget_state.html#a5fbaa4bc2568b3ab27bcbef31be22a8e">awtk.TWidgetState</a>
-</li>
-<li>CHECK_BUTTON
-: <a class="el" href="enumawtk_1_1_t_widget_type.html#a3d16f9975b7d3268eff5aeebdf1fe4bb">awtk.TWidgetType</a>
-</li>
-<li>CHECKED
-: <a class="el" href="enumawtk_1_1_t_object_prop.html#abe3e4a6684e33188d16f1df0b34dd97f">awtk.TObjectProp</a>
-, <a class="el" href="enumawtk_1_1_t_widget_prop.html#aaa490e70d8bf4420c7d58d44a012e6eb">awtk.TWidgetProp</a>
-, <a class="el" href="enumawtk_1_1_t_widget_state.html#aa90b0b881d2892ee07920fb7674704f4">awtk.TWidgetState</a>
-</li>
-<li>CHILDREN_LAYOUT
-: <a class="el" href="enumawtk_1_1_t_style_id.html#aa3296361037c5deb73f03820935b2ccd">awtk.TStyleId</a>
-, <a class="el" href="enumawtk_1_1_t_widget_prop.html#a932f111a63b10e85e939c6194607ea0c">awtk.TWidgetProp</a>
-</li>
-<li>chooseFileForOpen()
-: <a class="el" href="classawtk_1_1_t_file_chooser.html#a4d32af90f1a8380d86ad3babf4160649">awtk.TFileChooser</a>
-</li>
-<li>chooseFileForSave()
-: <a class="el" href="classawtk_1_1_t_file_chooser.html#a3302e4296572b105a5b23f9341d51498">awtk.TFileChooser</a>
-</li>
-<li>chooseFolder()
-: <a class="el" href="classawtk_1_1_t_file_chooser.html#a37953a2f48682096e6cff58884551525">awtk.TFileChooser</a>
-</li>
-<li>CIRCULAR_IN
-: <a class="el" href="enumawtk_1_1_t_easing_type.html#afd69f92ec52b3275469bb256d58ef6d5">awtk.TEasingType</a>
-</li>
-<li>CIRCULAR_INOUT
-: <a class="el" href="enumawtk_1_1_t_easing_type.html#a44f7316faf2d90aeef3ecfa782a15e57">awtk.TEasingType</a>
-</li>
-<li>CIRCULAR_OUT
-: <a class="el" href="enumawtk_1_1_t_easing_type.html#a84f37739182106c00c650114a38b5787">awtk.TEasingType</a>
-</li>
-<li>CLEAR
-: <a class="el" href="enumawtk_1_1_t_object_cmd.html#a942dbb6e047e6758ce4d7918629f5893">awtk.TObjectCmd</a>
-</li>
-<li>CLEAR_BG
-: <a class="el" href="enumawtk_1_1_t_style_id.html#a4e67236973a13b88068c10415d2e3ba9">awtk.TStyleId</a>
-</li>
-<li>clearHighlight()
-: <a class="el" href="classawtk_1_1_t_line_number.html#ae5179cc1e3e23265ab863bbc68c3cdb3">awtk.TLineNumber</a>
-</li>
-<li>clearProps()
-: <a class="el" href="classawtk_1_1_t_object_array.html#a780e03d1ec83824bdaed7da8a9e53dc2">awtk.TObjectArray</a>
-, <a class="el" href="classawtk_1_1_t_object_default.html#ad5c9568769640872f6b094b2605f8e2d">awtk.TObjectDefault</a>
-</li>
-<li>clearRect()
-: <a class="el" href="classawtk_1_1_t_canvas.html#a0c6e018c892a5c5a19113edf02591468">awtk.TCanvas</a>
-</li>
-<li>CLICK
-: <a class="el" href="enumawtk_1_1_t_event_type.html#a4fa5069b8163fcd65c5974d2457086c4">awtk.TEventType</a>
-</li>
-<li>CLICK_THROUGH
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#ace535a3f0e3d69f553bcbc322f802bff">awtk.TWidgetProp</a>
-</li>
-<li>CLICKABLE
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#a36eddaeed30c54641ce31049286e4802">awtk.TWidgetProp</a>
-</li>
-<li>CLIP_VIEW
-: <a class="el" href="enumawtk_1_1_t_widget_type.html#ad2dd53b90e346926cebdc7e690ddcd5b">awtk.TWidgetType</a>
-</li>
-<li>clipPath()
-: <a class="el" href="classawtk_1_1_t_vgcanvas.html#a001d7d46a0f273c1946018a074968c83">awtk.TVgcanvas</a>
-</li>
-<li>clipRect()
-: <a class="el" href="classawtk_1_1_t_vgcanvas.html#a27ae8e6c9977fa896b24650be06299f9">awtk.TVgcanvas</a>
-</li>
-<li>CLOSABLE
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#a8a4152e0c69e4a8f948d64803084132f">awtk.TWidgetProp</a>
-</li>
-<li>close()
-: <a class="el" href="classawtk_1_1_t_window.html#afa214fa7254a131d77386beaa2a6026f">awtk.TWindow</a>
-</li>
-<li>CLOSE_ANIM_HINT
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#a35544f245ba0c82839dca6aab5286c34">awtk.TWidgetProp</a>
-</li>
-<li>CLOSE_IM_WHEN_BLURED
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#aa1bc5d0171408a06b6b0dba45403081d">awtk.TWidgetProp</a>
-</li>
-<li>CLOSE_WHEN_CLICK
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#a6dd53668784711d7a4fe91b436559488">awtk.TWidgetProp</a>
-</li>
-<li>CLOSE_WHEN_CLICK_OUTSIDE
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#acc2f67ff40acac471e9b81aa346c3765">awtk.TWidgetProp</a>
-</li>
-<li>CLOSE_WHEN_TIMEOUT
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#ab2d685ec5c455f0decec019b66e0423e">awtk.TWidgetProp</a>
-</li>
-<li>closeAll()
-: <a class="el" href="classawtk_1_1_t_window_manager.html#a18f82d33552d36dd426d5b666ee37110">awtk.TWindowManager</a>
-</li>
-<li>CLOSED
-: <a class="el" href="enumawtk_1_1_t_window_stage.html#ad4a448edc6b6894f0771066634857ba4">awtk.TWindowStage</a>
-</li>
-<li>closeForce()
-: <a class="el" href="classawtk_1_1_t_window.html#ad97abdd52b467081ce1b4779ef9452a0">awtk.TWindow</a>
-</li>
-<li>closePath()
-: <a class="el" href="classawtk_1_1_t_vgcanvas.html#ab27efe08d5eeb009bacb20d5867c279d">awtk.TVgcanvas</a>
-</li>
-<li>CMD_CAN_EXEC
-: <a class="el" href="enumawtk_1_1_t_event_type.html#a9d75130d9314e24e296ae7b9bc9b245a">awtk.TEventType</a>
-</li>
-<li>CMD_EXECED
-: <a class="el" href="enumawtk_1_1_t_event_type.html#aff213cc766c57d46a8fba6fbf8f2b2a1">awtk.TEventType</a>
-</li>
-<li>CMD_WILL_EXEC
-: <a class="el" href="enumawtk_1_1_t_event_type.html#ac6648c209fe0a69eafd78ac15fbe403c">awtk.TEventType</a>
-</li>
-<li>COLOR_COMPONENT
-: <a class="el" href="enumawtk_1_1_t_widget_type.html#a8b328dd48623b925f12a0796aedd206c">awtk.TWidgetType</a>
-</li>
-<li>COLOR_PICKER
-: <a class="el" href="enumawtk_1_1_t_widget_type.html#aa6bc05b0f8941c8c83917ddffd8093b6">awtk.TWidgetType</a>
-</li>
-<li>COLOR_TILE
-: <a class="el" href="enumawtk_1_1_t_widget_type.html#a2d7ff3f60831a59e35a6fb5efe64c9f2">awtk.TWidgetType</a>
-</li>
-<li>COLUMN
-: <a class="el" href="enumawtk_1_1_t_widget_type.html#adf455289bd0067d20fdd1587aaeb2a67">awtk.TWidgetType</a>
-</li>
-<li>COLUMNS_DEFINITION
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#ab2ab2c823726211cd6479968d1d0f250">awtk.TWidgetProp</a>
-</li>
-<li>COMBO_BOX
-: <a class="el" href="enumawtk_1_1_t_widget_type.html#a881900c7339cf28e65521bbd5c588b33">awtk.TWidgetType</a>
-</li>
-<li>COMBO_BOX_ITEM
-: <a class="el" href="enumawtk_1_1_t_widget_type.html#ad27d8bf8d538bc001877fdb1b3187669">awtk.TWidgetType</a>
-</li>
-<li>commitText()
-: <a class="el" href="classawtk_1_1_t_input_method.html#a86c97d3b8557e45a5166ba141894a32e">awtk.TInputMethod</a>
-</li>
-<li>COMPACT
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#a49c97359c35a7fda3d97223157809550">awtk.TWidgetProp</a>
-</li>
-<li>compare()
-: <a class="el" href="classawtk_1_1_t_object.html#ad0b41aa66511fcf8b19006e484034506">awtk.TObject</a>
-</li>
-<li>confirm()
-: <a class="el" href="classawtk_1_1_t_dialog.html#a054118d06f48982829bf86b93cc0cfab">awtk.TDialog</a>
-</li>
-<li>CONFIRM
-: <a class="el" href="enumawtk_1_1_t_window_closable.html#a9a6d8e789c8af697178fc9316cc0fe6b">awtk.TWindowClosable</a>
-</li>
-<li>CONNECT
-: <a class="el" href="enumawtk_1_1_t_event_type.html#a33f8a1de08646eaa578157fb6a535ac5">awtk.TEventType</a>
-</li>
-<li>CONSOLE
-: <a class="el" href="enumawtk_1_1_t_app_type.html#ad8dda77ca4799ba3005ddbc91e12d274">awtk.TAppType</a>
-</li>
-<li>CONTEXT_MENU
-: <a class="el" href="enumawtk_1_1_t_event_type.html#a995a0031ab5a724916bad46c0dc8f75d">awtk.TEventType</a>
-</li>
-<li>CONTINUE
-: <a class="el" href="enumawtk_1_1_t_ret.html#a3aa0a77a32ea7f87c3ca4e2b0c8c89af">awtk.TRet</a>
-</li>
-<li>copyProp()
-: <a class="el" href="classawtk_1_1_t_object.html#a018aeba3eefe2f97c5b83287524b5eb4">awtk.TObject</a>
-</li>
-<li>copyProps()
-: <a class="el" href="classawtk_1_1_t_object.html#af6b23e38c494f0efcbffb75b6811ec93">awtk.TObject</a>
-</li>
-<li>countOptions()
-: <a class="el" href="classawtk_1_1_t_combo_box.html#abdfec36707d283c566717958b286f575">awtk.TComboBox</a>
-, <a class="el" href="classawtk_1_1_t_text_selector.html#a90cf2450d4caeb844c083078da6e8301">awtk.TTextSelector</a>
-</li>
-<li>CRC
-: <a class="el" href="enumawtk_1_1_t_ret.html#abb73fc117718329e58837b4fc8cae7e5">awtk.TRet</a>
-</li>
-<li>create()
-: <a class="el" href="classawtk_1_1_t_app_bar.html#af430c1399dc5052dae14196cf19bbf6c">awtk.TAppBar</a>
-, <a class="el" href="classawtk_1_1_t_bitmap.html#a99761d375d39f27ccbed4b3351be6510">awtk.TBitmap</a>
-, <a class="el" href="classawtk_1_1_t_button.html#a2ba6fbba0b4acf11333de4338df96cc5">awtk.TButton</a>
-, <a class="el" href="classawtk_1_1_t_button_group.html#a4277c443ea6b0381117c1ff0152a834f">awtk.TButtonGroup</a>
-, <a class="el" href="classawtk_1_1_t_calibration_win.html#aa997ffd5efb3c69cf1134afe37f7aeff">awtk.TCalibrationWin</a>
-, <a class="el" href="classawtk_1_1_t_candidates.html#a5fded844abc9e159456aee02b26cb77f">awtk.TCandidates</a>
-, <a class="el" href="classawtk_1_1_t_canvas_widget.html#a57bf590b04ffaaa0d69194dc48f6e837">awtk.TCanvasWidget</a>
-, <a class="el" href="classawtk_1_1_t_check_button.html#ac76ce1ce3a292d2c34d35b75adc7f49e">awtk.TCheckButton</a>
-, <a class="el" href="classawtk_1_1_t_clip_view.html#a4e85a60898ec8af06fcf68d6538d1a53">awtk.TClipView</a>
-, <a class="el" href="classawtk_1_1_t_color.html#aff1888cbac64418e770647ce3cc55741">awtk.TColor</a>
-, <a class="el" href="classawtk_1_1_t_color_component.html#ad5f060f1b9236670bf589f4863e152d9">awtk.TColorComponent</a>
-, <a class="el" href="classawtk_1_1_t_color_picker.html#afe231b7e142e07a389e201b60d510ba0">awtk.TColorPicker</a>
-, <a class="el" href="classawtk_1_1_t_color_tile.html#aa0345684cbb939078865327ca18801b4">awtk.TColorTile</a>
-, <a class="el" href="classawtk_1_1_t_column.html#a0b9e57c05b9936f51a31fdef121be2d7">awtk.TColumn</a>
-, <a class="el" href="classawtk_1_1_t_combo_box.html#a4f893f874fe29509fd9f0606d8063a1a">awtk.TComboBox</a>
-, <a class="el" href="classawtk_1_1_t_combo_box_ex.html#a6539ad1288bb1932b2256af8b2ccfdb2">awtk.TComboBoxEx</a>
-, <a class="el" href="classawtk_1_1_t_combo_box_item.html#a2027783b8897699c6ce48614ecd6ac8e">awtk.TComboBoxItem</a>
-, <a class="el" href="classawtk_1_1_t_date_time.html#a591414f54431f6dbacd5cf4638d58224">awtk.TDateTime</a>
-, <a class="el" href="classawtk_1_1_t_dialog.html#aeb6bbc022b393387d96ef8492db99bc3">awtk.TDialog</a>
-, <a class="el" href="classawtk_1_1_t_dialog_client.html#a5297e6824a4bf73490d3c956d9c3cda4">awtk.TDialogClient</a>
-, <a class="el" href="classawtk_1_1_t_dialog_title.html#aa10a4c2b9313770a4f8762dc6f990aab">awtk.TDialogTitle</a>
-, <a class="el" href="classawtk_1_1_t_digit_clock.html#a1d79d35866883bfb6ebb760079a11528">awtk.TDigitClock</a>
-, <a class="el" href="classawtk_1_1_t_draggable.html#abc7536427d925cef7c3ad7557c9c59f3">awtk.TDraggable</a>
-, <a class="el" href="classawtk_1_1_t_dragger.html#a4355dc7c4b2f00c7aeffe00204350915">awtk.TDragger</a>
-, <a class="el" href="classawtk_1_1_t_edit.html#a2d09e68e8a6df2f25c2a0d8ffec9e97a">awtk.TEdit</a>
-, <a class="el" href="classawtk_1_1_t_emitter.html#a068f5e211a8daecdfa4b784e5591ac35">awtk.TEmitter</a>
-, <a class="el" href="classawtk_1_1_t_event.html#abe7494adb31ef8d50da371e4558c948f">awtk.TEvent</a>
-, <a class="el" href="classawtk_1_1_t_file_browser_view.html#a7369b2b2247704288c1459987c348ba0">awtk.TFileBrowserView</a>
-, <a class="el" href="classawtk_1_1_t_file_chooser.html#af92f440578bf7c143b2364cd29bdde00">awtk.TFileChooser</a>
-, <a class="el" href="classawtk_1_1_t_gauge.html#a9d387469dfb17d519995bd35929255da">awtk.TGauge</a>
-, <a class="el" href="classawtk_1_1_t_gauge_pointer.html#a48475cca3e4a3093525b74b8bccb7f35">awtk.TGaugePointer</a>
-, <a class="el" href="classawtk_1_1_t_gif_image.html#a5a5bdb2839701a1850b504a59513a4cd">awtk.TGifImage</a>
-, <a class="el" href="classawtk_1_1_t_grid.html#a3a451b513bd7be7a450f4b07640e799e">awtk.TGrid</a>
-, <a class="el" href="classawtk_1_1_t_grid_item.html#a6383132525d2526b6f3108eabc9e233a">awtk.TGridItem</a>
-, <a class="el" href="classawtk_1_1_t_group_box.html#a56b2d535959f89f5cf52f1719864f23d">awtk.TGroupBox</a>
-, <a class="el" href="classawtk_1_1_t_hscroll_label.html#a53576cb6e095e67af56733b680b79a07">awtk.THscrollLabel</a>
-, <a class="el" href="classawtk_1_1_t_image.html#ac5166a1ccaa9f7b7e8162bbc5b9015bf">awtk.TImage</a>
-, <a class="el" href="classawtk_1_1_t_image_animation.html#af3c0f03012160b5e169016e75c88d67e">awtk.TImageAnimation</a>
-, <a class="el" href="classawtk_1_1_t_image_value.html#acc40471ee1e19e0ddecc3ca527bacc65">awtk.TImageValue</a>
-, <a class="el" href="classawtk_1_1_t_keyboard.html#ab79e75e8531c8012ea9d6547fea249c5">awtk.TKeyboard</a>
-, <a class="el" href="classawtk_1_1_t_label.html#ab46daa7be7e288aa888d332831397a27">awtk.TLabel</a>
-, <a class="el" href="classawtk_1_1_t_lang_indicator.html#af0599ec173c50d1ad8b8421108da53ec">awtk.TLangIndicator</a>
-, <a class="el" href="classawtk_1_1_t_line_number.html#a44685a2d7a9c6bb07a880364c726c4a2">awtk.TLineNumber</a>
-, <a class="el" href="classawtk_1_1_t_list_item.html#a86f5d4c94add6551c2f3bf057b1d7042">awtk.TListItem</a>
-, <a class="el" href="classawtk_1_1_t_list_item_seperator.html#ac8494241162933f87a7c1f4942998ea3">awtk.TListItemSeperator</a>
-, <a class="el" href="classawtk_1_1_t_list_view.html#a718f668698ed8be7688eb4d65762cdab">awtk.TListView</a>
-, <a class="el" href="classawtk_1_1_t_list_view_h.html#a614ce5f82f7046273fe7bbff116c2485">awtk.TListViewH</a>
-, <a class="el" href="classawtk_1_1_t_mledit.html#a675afad3a4148911bc66f319248e0ad8">awtk.TMledit</a>
-, <a class="el" href="classawtk_1_1_t_mutable_image.html#ac0d654bc66acd261689b7a95f68986e8">awtk.TMutableImage</a>
-, <a class="el" href="classawtk_1_1_t_named_value.html#ad9c44370d57e1c588f7d772d2da95732">awtk.TNamedValue</a>
-, <a class="el" href="classawtk_1_1_t_object_array.html#ad3c8adeab0dc988aba3b2c441fdb705d">awtk.TObjectArray</a>
-, <a class="el" href="classawtk_1_1_t_object_default.html#a17b7e88ff32f208e064f970547cbb52e">awtk.TObjectDefault</a>
-, <a class="el" href="classawtk_1_1_t_overlay.html#a9ba6d9171f67c0ce4e10f4bff4bcfab4">awtk.TOverlay</a>
-, <a class="el" href="classawtk_1_1_t_pages.html#a77a7e67de3c1bae4c23d7a4d985d65ab">awtk.TPages</a>
-, <a class="el" href="classawtk_1_1_t_popup.html#a1f0009bdefce9a2cabb391e28ae22775">awtk.TPopup</a>
-, <a class="el" href="classawtk_1_1_t_progress_bar.html#aee61cc5487f7a8bfe4c8a43d274d9d6d">awtk.TProgressBar</a>
-, <a class="el" href="classawtk_1_1_t_progress_circle.html#a34a4c66591a7b7a047cbca2083f2d886">awtk.TProgressCircle</a>
-, <a class="el" href="classawtk_1_1_t_rect.html#a261846347b61152a2c60b0ea0dd7740e">awtk.TRect</a>
-, <a class="el" href="classawtk_1_1_t_rich_text.html#acccdd8b3b0b02785b02aae69a485458c">awtk.TRichText</a>
-, <a class="el" href="classawtk_1_1_t_rich_text_view.html#ae9b05916817746334a2cde76e375fdcb">awtk.TRichTextView</a>
-, <a class="el" href="classawtk_1_1_t_row.html#a3a6100687fe32f9501f0633ba36c3a15">awtk.TRow</a>
-, <a class="el" href="classawtk_1_1_t_scroll_bar.html#a2cc4fc8818e340df17dd72e89092b348">awtk.TScrollBar</a>
-, <a class="el" href="classawtk_1_1_t_scroll_view.html#a72dec62cd847158469174145bc27b01c">awtk.TScrollView</a>
-, <a class="el" href="classawtk_1_1_t_serial_widget.html#a102288c2b5e9a0d66897c7a903fc2599">awtk.TSerialWidget</a>
-, <a class="el" href="classawtk_1_1_t_slide_indicator.html#afae55d8fc7ed54ea44a282f8623707a6">awtk.TSlideIndicator</a>
-, <a class="el" href="classawtk_1_1_t_slide_menu.html#a89d366d643e468c2efcb1a50335c5ef9">awtk.TSlideMenu</a>
-, <a class="el" href="classawtk_1_1_t_slider.html#a211232a1aa40ce37644ccd7a40cc6bfd">awtk.TSlider</a>
-, <a class="el" href="classawtk_1_1_t_slide_view.html#ac0dd6e12952a3a0c5379e4763ef46c01">awtk.TSlideView</a>
-, <a class="el" href="classawtk_1_1_t_spin_box.html#a21b679128d3af3d3f036b50aa7bb00f2">awtk.TSpinBox</a>
-, <a class="el" href="classawtk_1_1_t_style_mutable.html#a5985f878519aaddb754e0bcf2dab47a1">awtk.TStyleMutable</a>
-, <a class="el" href="classawtk_1_1_t_svg_image.html#a60f146201f0f27e1d453eb4a8a03185f">awtk.TSvgImage</a>
-, <a class="el" href="classawtk_1_1_t_switch.html#a5f028fadd93163c7544c6f4c5fbd5750">awtk.TSwitch</a>
-, <a class="el" href="classawtk_1_1_t_system_bar.html#afd17ea8f6e09b68b7b3e4e12e02d2ff2">awtk.TSystemBar</a>
-, <a class="el" href="classawtk_1_1_t_tab_button.html#aac367d19e8d52bdbbf71eb4d80830b66">awtk.TTabButton</a>
-, <a class="el" href="classawtk_1_1_t_tab_button_group.html#a001d286776e6bcdc878c16ecc4620d1a">awtk.TTabButtonGroup</a>
-, <a class="el" href="classawtk_1_1_t_tab_control.html#a93c92951eeec0171ca9f57f24e6924c4">awtk.TTabControl</a>
-, <a class="el" href="classawtk_1_1_t_text_selector.html#a31419d8bdc757b480b4112829742e032">awtk.TTextSelector</a>
-, <a class="el" href="classawtk_1_1_t_time_clock.html#aa4670140c38d336d916041ca161e6e78">awtk.TTimeClock</a>
-, <a class="el" href="classawtk_1_1_t_timer_widget.html#aac8035f9f545f27acc16056139197087">awtk.TTimerWidget</a>
-, <a class="el" href="classawtk_1_1_t_value.html#a848713ead3059f9952c27aef048cb0b2">awtk.TValue</a>
-, <a class="el" href="classawtk_1_1_t_view.html#a4ee58128a3092927d95d2cc4888a78a9">awtk.TView</a>
-, <a class="el" href="classawtk_1_1_t_vpage.html#a8cdd20ab791d92d342b9576c53e7767b">awtk.TVpage</a>
-, <a class="el" href="classawtk_1_1_t_window.html#a9da037bd2861e80a9a8afa6f769a0bd7">awtk.TWindow</a>
-</li>
-<li>createArc()
-: <a class="el" href="classawtk_1_1_t_slide_indicator.html#a0c8c18e0f75f35250b8cacb91840e3bd">awtk.TSlideIndicator</a>
-</li>
-<li>CREATED
-: <a class="el" href="enumawtk_1_1_t_window_stage.html#a0bb81ab672a755ea12a84ceb8670a54c">awtk.TWindowStage</a>
-</li>
-<li>createDefault()
-: <a class="el" href="classawtk_1_1_t_window.html#a8579f0e0cb4641376104ec16a89d0452">awtk.TWindow</a>
-</li>
-<li>createDesktop()
-: <a class="el" href="classawtk_1_1_t_scroll_bar.html#a717286fdb8f8e51a52389cae0c567cf0">awtk.TScrollBar</a>
-</li>
-<li>createDir()
-: <a class="el" href="classawtk_1_1_t_file_browser_view.html#ae5474b3d8577cf9c63a51903661fb61f">awtk.TFileBrowserView</a>
-</li>
-<li>createEx()
-: <a class="el" href="classawtk_1_1_t_bitmap.html#ab70781d406d75233a546ec45a7fcf46f">awtk.TBitmap</a>
-, <a class="el" href="classawtk_1_1_t_check_button.html#a75ec126136987d85f6c443516bd4f26b">awtk.TCheckButton</a>
-, <a class="el" href="classawtk_1_1_t_object_default.html#a8a8f332e65244fa9a4f2d7c9ab44eee9">awtk.TObjectDefault</a>
-</li>
-<li>createFile()
-: <a class="el" href="classawtk_1_1_t_file_browser_view.html#a26184d4dd2dcb6791ea76a913862be9f">awtk.TFileBrowserView</a>
-</li>
-<li>createLinear()
-: <a class="el" href="classawtk_1_1_t_slide_indicator.html#ab0891ef835ac2b1a2630f6f6af7a899d">awtk.TSlideIndicator</a>
-</li>
-<li>createMobile()
-: <a class="el" href="classawtk_1_1_t_scroll_bar.html#a4bd0b1b4d006205a40520139ca0374bd">awtk.TScrollBar</a>
-</li>
-<li>createRadio()
-: <a class="el" href="classawtk_1_1_t_check_button.html#acc259e427145a679756e7e6962680711">awtk.TCheckButton</a>
-</li>
-<li>createSimple()
-: <a class="el" href="classawtk_1_1_t_dialog.html#a09f45b044edc5f4300f98a6ca6898ae1">awtk.TDialog</a>
-</li>
-<li>CUBIC_IN
-: <a class="el" href="enumawtk_1_1_t_easing_type.html#af4dd3c3010201db6e3aeebb371336044">awtk.TEasingType</a>
-</li>
-<li>CUBIC_OUT
-: <a class="el" href="enumawtk_1_1_t_easing_type.html#a172af83c99aec20d4c30955e2573ea08">awtk.TEasingType</a>
-</li>
-<li>CURR_PAGE
-: <a class="el" href="enumawtk_1_1_t_widget_prop.html#ae1a33692b3af9f3d7509bdeafd0fd8de">awtk.TWidgetProp</a>
-</li>
-<li>CURSOR_CROSS
-: <a class="el" href="enumawtk_1_1_t_widget_cursor.html#a95ce284b5d45e9f2fa8c7b5d1cd65afd">awtk.TWidgetCursor</a>
-</li>
-<li>CURSOR_DEFAULT
-: <a class="el" href="enumawtk_1_1_t_widget_cursor.html#aa8b3058af4f073bc0967bb0a98be762c">awtk.TWidgetCursor</a>
-</li>
-<li>CURSOR_EDIT
-: <a class="el" href="enumawtk_1_1_t_widget_cursor.html#ab4c990195c306f052540cd5574113ba3">awtk.TWidgetCursor</a>
-</li>
-<li>CURSOR_HAND
-: <a class="el" href="enumawtk_1_1_t_widget_cursor.html#a9cb24a3d3a6875619a94855f14061768">awtk.TWidgetCursor</a>
-</li>
-<li>CURSOR_NO
-: <a class="el" href="enumawtk_1_1_t_widget_cursor.html#a1b2d8ef92538e86c8a6b0285f8927df6">awtk.TWidgetCursor</a>
-</li>
-<li>CURSOR_SIZEALL
-: <a class="el" href="enumawtk_1_1_t_widget_cursor.html#a7fde81f3c4270ed4a7385b9ae87aa822">awtk.TWidgetCursor</a>
-</li>
-<li>CURSOR_SIZENESW
-: <a class="el" href="enumawtk_1_1_t_widget_cursor.html#ace5caf6177091bc3c8e27b8b7e508e8a">awtk.TWidgetCursor</a>
-</li>
-<li>CURSOR_SIZENS
-: <a class="el" href="enumawtk_1_1_t_widget_cursor.html#af83c264e9b0276b772aaeb6364a90a98">awtk.TWidgetCursor</a>
-</li>
-<li>CURSOR_SIZENWSE
-: <a class="el" href="enumawtk_1_1_t_widget_cursor.html#ab1888da1f142421aefd8ea9805770f55">awtk.TWidgetCursor</a>
-</li>
-<li>CURSOR_SIZEWE
-: <a class="el" href="enumawtk_1_1_t_widget_cursor.html#a057a1197dbfe8fcb64f09e6e1584f0f0">awtk.TWidgetCursor</a>
-</li>
-<li>CURSOR_WAIT
-: <a class="el" href="enumawtk_1_1_t_widget_cursor.html#a017d375f5e190316da445fcbddf8efff">awtk.TWidgetCursor</a>
-</li>
-<li>CUSTOM
-: <a class="el" href="enumawtk_1_1_t_input_type.html#ab4056328b0f540383334823123180dde">awtk.TInputType</a>
-</li>
-<li>CUSTOM_PASSWORD
-: <a class="el" href="enumawtk_1_1_t_input_type.html#adba7738659a59c16c20baf44aab7baae">awtk.TInputType</a>
-</li>
+<h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
+<li>CALIBRATION_WIN&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_type.html#a8c17886cc5a25787712292de60c3b93b">awtk.TWidgetType</a></li>
+<li>CANCEL&#160;:&#160;<a class="el" href="enumawtk_1_1_t_dialog_quit_code.html#a62292a34e46035b8f88f496b2cdebca0">awtk.TDialogQuitCode</a></li>
+<li>CANCELABLE&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#afc9b33ad012965059bbfce81702e8697">awtk.TWidgetProp</a></li>
+<li>CANDIDATES&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_type.html#a4682c1bc3f334730920084b9b1118ee6">awtk.TWidgetType</a></li>
+<li>canExec()&#160;:&#160;<a class="el" href="classawtk_1_1_t_object.html#a8175b46a1cb653e88a9594a8848abb10">awtk.TObject</a></li>
+<li>canExecByPath()&#160;:&#160;<a class="el" href="classawtk_1_1_t_object.html#a09ad0b1709a2c6858fd4a992b90025e1">awtk.TObject</a></li>
+<li>CANVAS&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#ad5d18b9804d957f806d5127dbe149d21">awtk.TWidgetProp</a></li>
+<li>CARET_X&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#a7f36808d6acde5f892eb4411879556b1">awtk.TWidgetProp</a></li>
+<li>CARET_Y&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#a03dc1bb1ae32c804f7e2738e15e0096a">awtk.TWidgetProp</a></li>
+<li>cast()&#160;:&#160;<a class="el" href="classawtk_1_1_t_app_bar.html#a21fd598d8b4166c66d8d7ec3304e2627">awtk.TAppBar</a>, <a class="el" href="classawtk_1_1_t_asset_info.html#a31523b7cddb3004a5bace9ecb35b3bae">awtk.TAssetInfo</a>, <a class="el" href="classawtk_1_1_t_assets_manager.html#aed3688ae3ff577b0b518daac005e31eb">awtk.TAssetsManager</a>, <a class="el" href="classawtk_1_1_t_bitmap.html#aab7149042e2e5b8defbfada1371a0dbe">awtk.TBitmap</a>, <a class="el" href="classawtk_1_1_t_button.html#acf875f4e32727b35266e9c6e3f55bf4a">awtk.TButton</a>, <a class="el" href="classawtk_1_1_t_button_group.html#ab874d2340840401955e71000a9a42993">awtk.TButtonGroup</a>, <a class="el" href="classawtk_1_1_t_calibration_win.html#a6bd6dc0bedd6e6ce4c5733ac64935cca">awtk.TCalibrationWin</a>, <a class="el" href="classawtk_1_1_t_candidates.html#a47120da3f81aeb9168106e52ad3b9b1e">awtk.TCandidates</a>, <a class="el" href="classawtk_1_1_t_canvas.html#a32e49929b25e1a3d85465888239b6977">awtk.TCanvas</a>, <a class="el" href="classawtk_1_1_t_canvas_offline.html#a03d44cc1c50059c279ce210527998b65">awtk.TCanvasOffline</a>, <a class="el" href="classawtk_1_1_t_canvas_widget.html#ab6f029ff18fdfbfae381ad368f8b0993">awtk.TCanvasWidget</a>, <a class="el" href="classawtk_1_1_t_check_button.html#a7ddbb245d6d307f4036efce2890cdf4b">awtk.TCheckButton</a>, <a class="el" href="classawtk_1_1_t_clip_board.html#a49df58bbddf24e809ac7b1b24c3a9104">awtk.TClipBoard</a>, <a class="el" href="classawtk_1_1_t_clip_view.html#ac52a5bf5fa46aabe0fc18efb1f724b4e">awtk.TClipView</a>, <a class="el" href="classawtk_1_1_t_cmd_exec_event.html#af5603492aba2aa3029ddc81dd4a2e80c">awtk.TCmdExecEvent</a>, <a class="el" href="classawtk_1_1_t_color.html#a7bda493110fed38d045fd21085075c11">awtk.TColor</a>, <a class="el" href="classawtk_1_1_t_color_component.html#af30181569c8567e55d1eaa8a1ad220db">awtk.TColorComponent</a>, <a class="el" href="classawtk_1_1_t_color_picker.html#a115e4a22a8e34eb201bc2f0fbce41da5">awtk.TColorPicker</a>, <a class="el" href="classawtk_1_1_t_color_tile.html#a191d09ea04757c1b10673a37251ab276">awtk.TColorTile</a>, <a class="el" href="classawtk_1_1_t_column.html#a89fc699a1c777b78bc1b83a1a4a6019a">awtk.TColumn</a>, <a class="el" href="classawtk_1_1_t_combo_box.html#a35af5f66d306ac3570c75d2da95400a0">awtk.TComboBox</a>, <a class="el" href="classawtk_1_1_t_combo_box_ex.html#a0539be72cb286df4499221c12d454b55">awtk.TComboBoxEx</a>, <a class="el" href="classawtk_1_1_t_combo_box_item.html#aac3f5b156d363ec179c33bb741ba1356">awtk.TComboBoxItem</a>, <a class="el" href="classawtk_1_1_t_date_time.html#a8cd031c35edc0ad587c5a11302394f42">awtk.TDateTime</a>, <a class="el" href="classawtk_1_1_t_dialog.html#ab600248f7bf4697d03fdf3f00dcae6bb">awtk.TDialog</a>, <a class="el" href="classawtk_1_1_t_dialog_client.html#a12907ab028ac4c7fb25772dd1b3db52c">awtk.TDialogClient</a>, <a class="el" href="classawtk_1_1_t_dialog_title.html#ab2d48e0340cfcfef1203d607f0911a2d">awtk.TDialogTitle</a>, <a class="el" href="classawtk_1_1_t_digit_clock.html#a7dff48f3c33396e40d81c283e0eee652">awtk.TDigitClock</a>, <a class="el" href="classawtk_1_1_t_done_event.html#a9ceb83de6c6c599279d4fbea042a1349">awtk.TDoneEvent</a>, <a class="el" href="classawtk_1_1_t_draggable.html#a35d583f08ecd7cbd96e68b4655e46d95">awtk.TDraggable</a>, <a class="el" href="classawtk_1_1_t_dragger.html#af5681ead3d4bc9418a1b53ac258252b6">awtk.TDragger</a>, <a class="el" href="classawtk_1_1_t_drop_file_event.html#afc72aa39891bf0d7383010b318882ab3">awtk.TDropFileEvent</a>, <a class="el" href="classawtk_1_1_t_edit.html#a6bb1b46fd01f738a930efacfd5aefd1e">awtk.TEdit</a>, <a class="el" href="classawtk_1_1_t_emitter.html#a22052354ddd6d3e7a5ae7ce0fa3654a6">awtk.TEmitter</a>, <a class="el" href="classawtk_1_1_t_error_event.html#a10ca73538781907ce2f118097bc7dee9">awtk.TErrorEvent</a>, <a class="el" href="classawtk_1_1_t_event.html#ab2ab11fa6f541612f29e4746fa5bf9f6">awtk.TEvent</a>, <a class="el" href="classawtk_1_1_t_file_browser_view.html#af383d60046b475143cfbe9dd6c26544c">awtk.TFileBrowserView</a>, <a class="el" href="classawtk_1_1_t_file_chooser.html#a3c1aebee88a59cb0006a2f6f3054f5df">awtk.TFileChooser</a>, <a class="el" href="classawtk_1_1_t_font_manager.html#a527fd6604b122abba93512ea699f3259">awtk.TFontManager</a>, <a class="el" href="classawtk_1_1_t_gauge.html#aa0fc820a0a42f30448e9c64f85a2d6af">awtk.TGauge</a>, <a class="el" href="classawtk_1_1_t_gauge_pointer.html#ac351e60321fda7be06f46649db363ca3">awtk.TGaugePointer</a>, <a class="el" href="classawtk_1_1_t_gif_image.html#acfd0ecafe550a6c14d0d4f3b52bb72e5">awtk.TGifImage</a>, <a class="el" href="classawtk_1_1_t_grid.html#a37173f6d41f11dc46ab5f2f172bd849f">awtk.TGrid</a>, <a class="el" href="classawtk_1_1_t_grid_item.html#ab1c5e7fb535d87267a7adae67ff2a0c8">awtk.TGridItem</a>, <a class="el" href="classawtk_1_1_t_group_box.html#accb6d6930782e7ddf2320723da86ca7c">awtk.TGroupBox</a>, <a class="el" href="classawtk_1_1_t_hscroll_label.html#abf9cbde164b0b68f34a87873ad39f2a9">awtk.THscrollLabel</a>, <a class="el" href="classawtk_1_1_t_idle_info.html#a15abd94e89d5c5ae6bd9728649310044">awtk.TIdleInfo</a>, <a class="el" href="classawtk_1_1_t_idle_manager.html#a2882d86d5a6368f2c6e1dd9bc778e337">awtk.TIdleManager</a>, <a class="el" href="classawtk_1_1_t_image.html#a655c47e3bc5dc0f5582aa0c8354ee6c8">awtk.TImage</a>, <a class="el" href="classawtk_1_1_t_image_animation.html#a5a8b9102aa3f983d2f14cb3d07e466d8">awtk.TImageAnimation</a>, <a class="el" href="classawtk_1_1_t_image_base.html#a7da6ee71e180dfb1d8d20977f972a289">awtk.TImageBase</a>, <a class="el" href="classawtk_1_1_t_image_manager.html#a6c3cfb8bc10ce36d182c303da2e25cc0">awtk.TImageManager</a>, <a class="el" href="classawtk_1_1_t_image_value.html#ae435256e1888f04a74aec74cbb50d437">awtk.TImageValue</a>, <a class="el" href="classawtk_1_1_t_input_method.html#ad58d468b18fbac217ea05ebac2b3491b">awtk.TInputMethod</a>, <a class="el" href="classawtk_1_1_t_keyboard.html#a353130cb2898ffccaf9815b260888d98">awtk.TKeyboard</a>, <a class="el" href="classawtk_1_1_t_key_event.html#a95072ab259c82ab607d45b10803779b5">awtk.TKeyEvent</a>, <a class="el" href="classawtk_1_1_t_label.html#a098674e93607d07e6f9c791af474bafa">awtk.TLabel</a>, <a class="el" href="classawtk_1_1_t_lang_indicator.html#a86190c17728dda7364f09f5e6d051f0d">awtk.TLangIndicator</a>, <a class="el" href="classawtk_1_1_t_line_number.html#a6baff19d80d0209d874e201b37bd6667">awtk.TLineNumber</a>, <a class="el" href="classawtk_1_1_t_list_item.html#a8527ec54941dc66974cf0c78b5c48cc4">awtk.TListItem</a>, <a class="el" href="classawtk_1_1_t_list_item_seperator.html#af081895bd88090da0ce4cfe77ecb4dd9">awtk.TListItemSeperator</a>, <a class="el" href="classawtk_1_1_t_list_view.html#aa1f766d887825aa898ee4fafe634f888">awtk.TListView</a>, <a class="el" href="classawtk_1_1_t_list_view_h.html#a5071d4e7a4ce475f8420e3a228d473b4">awtk.TListViewH</a>, <a class="el" href="classawtk_1_1_t_locale_info.html#aa649445a0c9b2246d7da383e2414d4f4">awtk.TLocaleInfo</a>, <a class="el" href="classawtk_1_1_t_log_message_event.html#a53245352bcd6386cc426a04a6191a9cb">awtk.TLogMessageEvent</a>, <a class="el" href="classawtk_1_1_t_mledit.html#a94a17def42844bb6ddf3b66ca8a92eea">awtk.TMledit</a>, <a class="el" href="classawtk_1_1_t_model_event.html#affcef98ef32a185f84ff7be402ab6a20">awtk.TModelEvent</a>, <a class="el" href="classawtk_1_1_t_multi_gesture_event.html#a8927fb2435c496a7743fa58b235bf6e1">awtk.TMultiGestureEvent</a>, <a class="el" href="classawtk_1_1_t_mutable_image.html#af6bd236f023082f0b3b29c5897e8c929">awtk.TMutableImage</a>, <a class="el" href="classawtk_1_1_t_named_value.html#af1faa817d6499f58dc0895a489c11d8b">awtk.TNamedValue</a>, <a class="el" href="classawtk_1_1_t_native_window.html#a738923f6f493dd55695092f6f3317947">awtk.TNativeWindow</a>, <a class="el" href="classawtk_1_1_t_object.html#a6b977217383a5f374a04379b4cfc7066">awtk.TObject</a>, <a class="el" href="classawtk_1_1_t_object_array.html#aff10e70b85effef310cceb64edc006f1">awtk.TObjectArray</a>, <a class="el" href="classawtk_1_1_t_object_default.html#a540eeea212bef35e9e565a08cb75c9b2">awtk.TObjectDefault</a>, <a class="el" href="classawtk_1_1_t_offset_change_event.html#a4ec4b11e6ffd46d005ad06ff8e68aeba">awtk.TOffsetChangeEvent</a>, <a class="el" href="classawtk_1_1_t_orientation_event.html#a63eeac20b19f4eb2f786647c63eb7108">awtk.TOrientationEvent</a>, <a class="el" href="classawtk_1_1_t_overlay.html#a671965ca3d1d6e381e1eaf051f432609">awtk.TOverlay</a>, <a class="el" href="classawtk_1_1_t_pages.html#aced7cdc1703d73258a7243a6c3fcb166">awtk.TPages</a>, <a class="el" href="classawtk_1_1_t_paint_event.html#ab9053000fad495ce277d613d4a48b606">awtk.TPaintEvent</a>, <a class="el" href="classawtk_1_1_t_point.html#a67dbad8633e466f28f746334be7ecb51">awtk.TPoint</a>, <a class="el" href="classawtk_1_1_t_pointer_event.html#a1d742682e1d090e9cbace7914d8a8534">awtk.TPointerEvent</a>, <a class="el" href="classawtk_1_1_t_pointf.html#a2d2274d04bc86856897916225106b7f6">awtk.TPointf</a>, <a class="el" href="classawtk_1_1_t_popup.html#a10614aaa9c40a5b11c6090d3a1fb5dc0">awtk.TPopup</a>, <a class="el" href="classawtk_1_1_t_progress_bar.html#a55e958c57b6310dfc7797ae893a64823">awtk.TProgressBar</a>, <a class="el" href="classawtk_1_1_t_progress_circle.html#a1897d0d9d971c0ddbf2cb47897ea4130">awtk.TProgressCircle</a>, <a class="el" href="classawtk_1_1_t_progress_event.html#acfdcfcaab0f8c4286c275bec5dfde5b5">awtk.TProgressEvent</a>, <a class="el" href="classawtk_1_1_t_prop_change_event.html#aa2254e7176567c99b8e99abc02f6437e">awtk.TPropChangeEvent</a>, <a class="el" href="classawtk_1_1_t_rect.html#a5baf4adf4d4d75e9b29cbe9087b333f6">awtk.TRect</a>, <a class="el" href="classawtk_1_1_t_rectf.html#a71bc100a5030db4407e5f77e1a4b77b4">awtk.TRectf</a>, <a class="el" href="classawtk_1_1_t_rich_text.html#abc425d2ec81995caee47059f37982519">awtk.TRichText</a>, <a class="el" href="classawtk_1_1_t_rich_text_view.html#a8f430ce51bc44c56ecb544d0487a99b7">awtk.TRichTextView</a>, <a class="el" href="classawtk_1_1_t_rlog.html#a5e86b4c3730c6a694c984b16a59092f1">awtk.TRlog</a>, <a class="el" href="classawtk_1_1_t_row.html#a953c2595da0ea901d74d44924f781ba5">awtk.TRow</a>, <a class="el" href="classawtk_1_1_t_scroll_bar.html#a5396e1ecc033f812bec1cfa12bf658d8">awtk.TScrollBar</a>, <a class="el" href="classawtk_1_1_t_scroll_view.html#af302d01b38c55b2f80a14800b63ad0ec">awtk.TScrollView</a>, <a class="el" href="classawtk_1_1_t_serial_widget.html#a4b980d47405994fc36e4264f204fa484">awtk.TSerialWidget</a>, <a class="el" href="classawtk_1_1_t_slide_indicator.html#a1501d57c4c8d7256b2cf99ba895b2285">awtk.TSlideIndicator</a>, <a class="el" href="classawtk_1_1_t_slide_menu.html#a70744a40a53ca817cb5c7ed92ed8bb71">awtk.TSlideMenu</a>, <a class="el" href="classawtk_1_1_t_slider.html#a36dde8fbf1803d177314a3a6817343f8">awtk.TSlider</a>, <a class="el" href="classawtk_1_1_t_slide_view.html#a892a5401a95b6a0f8676ea9b7b4c2d7c">awtk.TSlideView</a>, <a class="el" href="classawtk_1_1_t_spin_box.html#a26bf01472acc18b34aac04b8025d086e">awtk.TSpinBox</a>, <a class="el" href="classawtk_1_1_t_style.html#a34520ac7298b84e510d89514dd8c23f0">awtk.TStyle</a>, <a class="el" href="classawtk_1_1_t_style_mutable.html#a18f50b15fdd56ab0c52cff05cdc720d2">awtk.TStyleMutable</a>, <a class="el" href="classawtk_1_1_t_svg_image.html#ad8e76d210a90056ef672f12b556008e4">awtk.TSvgImage</a>, <a class="el" href="classawtk_1_1_t_switch.html#a3bfb1e553116d6fde3aac94459841fbc">awtk.TSwitch</a>, <a class="el" href="classawtk_1_1_t_system_bar.html#aa9d1121e295f719c7ce6f7623744949c">awtk.TSystemBar</a>, <a class="el" href="classawtk_1_1_t_system_event.html#ab65f17d87d9ca5041d2d5b8213bc435e">awtk.TSystemEvent</a>, <a class="el" href="classawtk_1_1_t_tab_button.html#a4c6fd739e6980d2f1549146419de8923">awtk.TTabButton</a>, <a class="el" href="classawtk_1_1_t_tab_button_group.html#a458a9361d30c4b0afcc3eb23f642fc45">awtk.TTabButtonGroup</a>, <a class="el" href="classawtk_1_1_t_tab_control.html#a9f26852d6926c22b2c679fdd4c145bde">awtk.TTabControl</a>, <a class="el" href="classawtk_1_1_t_text_selector.html#ad9a2071dccc4ccd87c266d4c9fbf8afc">awtk.TTextSelector</a>, <a class="el" href="classawtk_1_1_t_theme.html#a3b4749b765f7818e1926515c76c6a518">awtk.TTheme</a>, <a class="el" href="classawtk_1_1_t_theme_change_event.html#ac6f8d43f4117afd1e0dcea37857417cf">awtk.TThemeChangeEvent</a>, <a class="el" href="classawtk_1_1_t_time_clock.html#aae68379c38d417ddfdcff19d5fcba395">awtk.TTimeClock</a>, <a class="el" href="classawtk_1_1_t_timer_info.html#abf4ef80c28924deb3d761f9de5138e3d">awtk.TTimerInfo</a>, <a class="el" href="classawtk_1_1_t_timer_manager.html#a1f30c0c6b12c17d30bdc514cff3cb0a6">awtk.TTimerManager</a>, <a class="el" href="classawtk_1_1_t_timer_widget.html#a067e785900452b22532b8cc0d304ff9c">awtk.TTimerWidget</a>, <a class="el" href="classawtk_1_1_t_ui_load_event.html#aad5cf7ddcf52fab7e6f31a3a06849731">awtk.TUiLoadEvent</a>, <a class="el" href="classawtk_1_1_t_value.html#a873afddc2d0bc0f9d4fff4da39a87363">awtk.TValue</a>, <a class="el" href="classawtk_1_1_t_value_change_event.html#a0da77a69519cc71c28fdadad2e28ff80">awtk.TValueChangeEvent</a>, <a class="el" href="classawtk_1_1_t_vgcanvas.html#aba6b7166938b3910f1094be57bba261a">awtk.TVgcanvas</a>, <a class="el" href="classawtk_1_1_t_view.html#a4b45a96a3891060734bec9f795a24b44">awtk.TView</a>, <a class="el" href="classawtk_1_1_t_vpage.html#a4a2fc5c1bca798191b6c7a73c5ce455a">awtk.TVpage</a>, <a class="el" href="classawtk_1_1_t_wheel_event.html#a9dfb8ddb92011592cc460ea976506811">awtk.TWheelEvent</a>, <a class="el" href="classawtk_1_1_t_widget.html#a673c7aa1622fad5826080e462451f3ff">awtk.TWidget</a>, <a class="el" href="classawtk_1_1_t_widget_animator_event.html#ab9394fbea2973481026b23ac5a4f59b1">awtk.TWidgetAnimatorEvent</a>, <a class="el" href="classawtk_1_1_t_window.html#a6ee3b47a20d13fb8cfadb38ea71e1f11">awtk.TWindow</a>, <a class="el" href="classawtk_1_1_t_window_base.html#a6b818850054d65efa888b0d788346616">awtk.TWindowBase</a>, <a class="el" href="classawtk_1_1_t_window_event.html#a8e0e4de2c6c0cfa32043d41cb17e2302">awtk.TWindowEvent</a>, <a class="el" href="classawtk_1_1_t_window_manager.html#ac74d71994627dbd039da64963b951af7">awtk.TWindowManager</a></li>
+<li>CENTER&#160;:&#160;<a class="el" href="enumawtk_1_1_t_align_h.html#af125c0b7a5a81efe82461869324e2028">awtk.TAlignH</a>, <a class="el" href="enumawtk_1_1_t_image_draw_type.html#aea3d45e849a8ead37190cd51475f8780">awtk.TImageDrawType</a></li>
+<li>center()&#160;:&#160;<a class="el" href="classawtk_1_1_t_native_window.html#a15f9e28ffe09a9eed9d0ee947a3acdf0">awtk.TNativeWindow</a></li>
+<li>change()&#160;:&#160;<a class="el" href="classawtk_1_1_t_locale_info.html#a7161f4ed58d350eadf199dc99b32d8e4">awtk.TLocaleInfo</a>, <a class="el" href="classawtk_1_1_t_locale_infos.html#a40fe5d538c8e541c236ba6959f3fa866">awtk.TLocaleInfos</a></li>
+<li>CHANGED&#160;:&#160;<a class="el" href="enumawtk_1_1_t_bitmap_flag.html#a51a132fe1cf75865300bd6fa41f73ca6">awtk.TBitmapFlag</a>, <a class="el" href="enumawtk_1_1_t_widget_state.html#a5fbaa4bc2568b3ab27bcbef31be22a8e">awtk.TWidgetState</a></li>
+<li>CHECK_BUTTON&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_type.html#a3d16f9975b7d3268eff5aeebdf1fe4bb">awtk.TWidgetType</a></li>
+<li>CHECKED&#160;:&#160;<a class="el" href="enumawtk_1_1_t_object_prop.html#abe3e4a6684e33188d16f1df0b34dd97f">awtk.TObjectProp</a>, <a class="el" href="enumawtk_1_1_t_widget_prop.html#aaa490e70d8bf4420c7d58d44a012e6eb">awtk.TWidgetProp</a>, <a class="el" href="enumawtk_1_1_t_widget_state.html#aa90b0b881d2892ee07920fb7674704f4">awtk.TWidgetState</a></li>
+<li>child()&#160;:&#160;<a class="el" href="classawtk_1_1_t_widget.html#a73f61118426b63ebca5d22cb72061339">awtk.TWidget</a></li>
+<li>CHILDREN_LAYOUT&#160;:&#160;<a class="el" href="enumawtk_1_1_t_style_id.html#aa3296361037c5deb73f03820935b2ccd">awtk.TStyleId</a>, <a class="el" href="enumawtk_1_1_t_widget_prop.html#a932f111a63b10e85e939c6194607ea0c">awtk.TWidgetProp</a></li>
+<li>chooseFileForOpen()&#160;:&#160;<a class="el" href="classawtk_1_1_t_file_chooser.html#a4d32af90f1a8380d86ad3babf4160649">awtk.TFileChooser</a></li>
+<li>chooseFileForSave()&#160;:&#160;<a class="el" href="classawtk_1_1_t_file_chooser.html#a3302e4296572b105a5b23f9341d51498">awtk.TFileChooser</a></li>
+<li>chooseFolder()&#160;:&#160;<a class="el" href="classawtk_1_1_t_file_chooser.html#a37953a2f48682096e6cff58884551525">awtk.TFileChooser</a></li>
+<li>CIRCULAR_IN&#160;:&#160;<a class="el" href="enumawtk_1_1_t_easing_type.html#afd69f92ec52b3275469bb256d58ef6d5">awtk.TEasingType</a></li>
+<li>CIRCULAR_INOUT&#160;:&#160;<a class="el" href="enumawtk_1_1_t_easing_type.html#a44f7316faf2d90aeef3ecfa782a15e57">awtk.TEasingType</a></li>
+<li>CIRCULAR_OUT&#160;:&#160;<a class="el" href="enumawtk_1_1_t_easing_type.html#a84f37739182106c00c650114a38b5787">awtk.TEasingType</a></li>
+<li>CLEAR&#160;:&#160;<a class="el" href="enumawtk_1_1_t_object_cmd.html#a942dbb6e047e6758ce4d7918629f5893">awtk.TObjectCmd</a></li>
+<li>CLEAR_BG&#160;:&#160;<a class="el" href="enumawtk_1_1_t_style_id.html#a4e67236973a13b88068c10415d2e3ba9">awtk.TStyleId</a></li>
+<li>clearHighlight()&#160;:&#160;<a class="el" href="classawtk_1_1_t_line_number.html#ae5179cc1e3e23265ab863bbc68c3cdb3">awtk.TLineNumber</a></li>
+<li>clearProps()&#160;:&#160;<a class="el" href="classawtk_1_1_t_object_array.html#a780e03d1ec83824bdaed7da8a9e53dc2">awtk.TObjectArray</a>, <a class="el" href="classawtk_1_1_t_object_default.html#ad5c9568769640872f6b094b2605f8e2d">awtk.TObjectDefault</a></li>
+<li>clearRect()&#160;:&#160;<a class="el" href="classawtk_1_1_t_canvas.html#a0c6e018c892a5c5a19113edf02591468">awtk.TCanvas</a></li>
+<li>CLICK&#160;:&#160;<a class="el" href="enumawtk_1_1_t_event_type.html#a4fa5069b8163fcd65c5974d2457086c4">awtk.TEventType</a></li>
+<li>CLICK_THROUGH&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#ace535a3f0e3d69f553bcbc322f802bff">awtk.TWidgetProp</a></li>
+<li>CLICKABLE&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#a36eddaeed30c54641ce31049286e4802">awtk.TWidgetProp</a></li>
+<li>CLIP_VIEW&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_type.html#ad2dd53b90e346926cebdc7e690ddcd5b">awtk.TWidgetType</a></li>
+<li>clipPath()&#160;:&#160;<a class="el" href="classawtk_1_1_t_vgcanvas.html#a001d7d46a0f273c1946018a074968c83">awtk.TVgcanvas</a></li>
+<li>clipRect()&#160;:&#160;<a class="el" href="classawtk_1_1_t_vgcanvas.html#a27ae8e6c9977fa896b24650be06299f9">awtk.TVgcanvas</a></li>
+<li>clone()&#160;:&#160;<a class="el" href="classawtk_1_1_t_widget.html#a720013fc78bef29cbb99b3dd45a65ba2">awtk.TWidget</a></li>
+<li>CLOSABLE&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#a8a4152e0c69e4a8f948d64803084132f">awtk.TWidgetProp</a></li>
+<li>close()&#160;:&#160;<a class="el" href="classawtk_1_1_t_window.html#afa214fa7254a131d77386beaa2a6026f">awtk.TWindow</a></li>
+<li>CLOSE_ANIM_HINT&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#a35544f245ba0c82839dca6aab5286c34">awtk.TWidgetProp</a></li>
+<li>CLOSE_IM_WHEN_BLURED&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#aa1bc5d0171408a06b6b0dba45403081d">awtk.TWidgetProp</a></li>
+<li>CLOSE_WHEN_CLICK&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#a6dd53668784711d7a4fe91b436559488">awtk.TWidgetProp</a></li>
+<li>CLOSE_WHEN_CLICK_OUTSIDE&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#acc2f67ff40acac471e9b81aa346c3765">awtk.TWidgetProp</a></li>
+<li>CLOSE_WHEN_TIMEOUT&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#ab2d685ec5c455f0decec019b66e0423e">awtk.TWidgetProp</a></li>
+<li>closeAll()&#160;:&#160;<a class="el" href="classawtk_1_1_t_window_manager.html#a18f82d33552d36dd426d5b666ee37110">awtk.TWindowManager</a></li>
+<li>CLOSED&#160;:&#160;<a class="el" href="enumawtk_1_1_t_window_stage.html#ad4a448edc6b6894f0771066634857ba4">awtk.TWindowStage</a></li>
+<li>closeForce()&#160;:&#160;<a class="el" href="classawtk_1_1_t_window.html#ad97abdd52b467081ce1b4779ef9452a0">awtk.TWindow</a></li>
+<li>closePath()&#160;:&#160;<a class="el" href="classawtk_1_1_t_vgcanvas.html#ab27efe08d5eeb009bacb20d5867c279d">awtk.TVgcanvas</a></li>
+<li>closeWindow()&#160;:&#160;<a class="el" href="classawtk_1_1_t_widget.html#a5b1f9c1a8cd05f0656717a5a563f93b2">awtk.TWidget</a></li>
+<li>closeWindowForce()&#160;:&#160;<a class="el" href="classawtk_1_1_t_widget.html#a8bacb8d2905c1645cdd4705ec7736758">awtk.TWidget</a></li>
+<li>CMD_CAN_EXEC&#160;:&#160;<a class="el" href="enumawtk_1_1_t_event_type.html#a9d75130d9314e24e296ae7b9bc9b245a">awtk.TEventType</a></li>
+<li>CMD_EXECED&#160;:&#160;<a class="el" href="enumawtk_1_1_t_event_type.html#aff213cc766c57d46a8fba6fbf8f2b2a1">awtk.TEventType</a></li>
+<li>CMD_WILL_EXEC&#160;:&#160;<a class="el" href="enumawtk_1_1_t_event_type.html#ac6648c209fe0a69eafd78ac15fbe403c">awtk.TEventType</a></li>
+<li>COLOR_COMPONENT&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_type.html#a8b328dd48623b925f12a0796aedd206c">awtk.TWidgetType</a></li>
+<li>COLOR_PICKER&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_type.html#aa6bc05b0f8941c8c83917ddffd8093b6">awtk.TWidgetType</a></li>
+<li>COLOR_TILE&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_type.html#a2d7ff3f60831a59e35a6fb5efe64c9f2">awtk.TWidgetType</a></li>
+<li>COLUMN&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_type.html#adf455289bd0067d20fdd1587aaeb2a67">awtk.TWidgetType</a></li>
+<li>COLUMNS_DEFINITION&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#ab2ab2c823726211cd6479968d1d0f250">awtk.TWidgetProp</a></li>
+<li>COMBO_BOX&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_type.html#a881900c7339cf28e65521bbd5c588b33">awtk.TWidgetType</a></li>
+<li>COMBO_BOX_ITEM&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_type.html#ad27d8bf8d538bc001877fdb1b3187669">awtk.TWidgetType</a></li>
+<li>commitText()&#160;:&#160;<a class="el" href="classawtk_1_1_t_input_method.html#a86c97d3b8557e45a5166ba141894a32e">awtk.TInputMethod</a></li>
+<li>COMPACT&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#a49c97359c35a7fda3d97223157809550">awtk.TWidgetProp</a></li>
+<li>compare()&#160;:&#160;<a class="el" href="classawtk_1_1_t_object.html#ad0b41aa66511fcf8b19006e484034506">awtk.TObject</a></li>
+<li>CONFIRM&#160;:&#160;<a class="el" href="enumawtk_1_1_t_window_closable.html#a9a6d8e789c8af697178fc9316cc0fe6b">awtk.TWindowClosable</a></li>
+<li>confirm()&#160;:&#160;<a class="el" href="classawtk_1_1_t_dialog.html#a054118d06f48982829bf86b93cc0cfab">awtk.TDialog</a></li>
+<li>CONNECT&#160;:&#160;<a class="el" href="enumawtk_1_1_t_event_type.html#a33f8a1de08646eaa578157fb6a535ac5">awtk.TEventType</a></li>
+<li>CONSOLE&#160;:&#160;<a class="el" href="enumawtk_1_1_t_app_type.html#ad8dda77ca4799ba3005ddbc91e12d274">awtk.TAppType</a></li>
+<li>CONTEXT_MENU&#160;:&#160;<a class="el" href="enumawtk_1_1_t_event_type.html#a995a0031ab5a724916bad46c0dc8f75d">awtk.TEventType</a></li>
+<li>CONTINUE&#160;:&#160;<a class="el" href="enumawtk_1_1_t_ret.html#a3aa0a77a32ea7f87c3ca4e2b0c8c89af">awtk.TRet</a></li>
+<li>copyProp()&#160;:&#160;<a class="el" href="classawtk_1_1_t_object.html#a018aeba3eefe2f97c5b83287524b5eb4">awtk.TObject</a></li>
+<li>copyProps()&#160;:&#160;<a class="el" href="classawtk_1_1_t_object.html#af6b23e38c494f0efcbffb75b6811ec93">awtk.TObject</a></li>
+<li>countChildren()&#160;:&#160;<a class="el" href="classawtk_1_1_t_widget.html#af517283a0b459465d03cb7b528971c3c">awtk.TWidget</a></li>
+<li>countOptions()&#160;:&#160;<a class="el" href="classawtk_1_1_t_combo_box.html#abdfec36707d283c566717958b286f575">awtk.TComboBox</a>, <a class="el" href="classawtk_1_1_t_text_selector.html#a90cf2450d4caeb844c083078da6e8301">awtk.TTextSelector</a></li>
+<li>CRC&#160;:&#160;<a class="el" href="enumawtk_1_1_t_ret.html#abb73fc117718329e58837b4fc8cae7e5">awtk.TRet</a></li>
+<li>create()&#160;:&#160;<a class="el" href="classawtk_1_1_t_app_bar.html#af430c1399dc5052dae14196cf19bbf6c">awtk.TAppBar</a>, <a class="el" href="classawtk_1_1_t_bitmap.html#a99761d375d39f27ccbed4b3351be6510">awtk.TBitmap</a>, <a class="el" href="classawtk_1_1_t_button.html#a2ba6fbba0b4acf11333de4338df96cc5">awtk.TButton</a>, <a class="el" href="classawtk_1_1_t_button_group.html#a4277c443ea6b0381117c1ff0152a834f">awtk.TButtonGroup</a>, <a class="el" href="classawtk_1_1_t_calibration_win.html#aa997ffd5efb3c69cf1134afe37f7aeff">awtk.TCalibrationWin</a>, <a class="el" href="classawtk_1_1_t_candidates.html#a5fded844abc9e159456aee02b26cb77f">awtk.TCandidates</a>, <a class="el" href="classawtk_1_1_t_canvas_widget.html#a57bf590b04ffaaa0d69194dc48f6e837">awtk.TCanvasWidget</a>, <a class="el" href="classawtk_1_1_t_check_button.html#ac76ce1ce3a292d2c34d35b75adc7f49e">awtk.TCheckButton</a>, <a class="el" href="classawtk_1_1_t_clip_view.html#a4e85a60898ec8af06fcf68d6538d1a53">awtk.TClipView</a>, <a class="el" href="classawtk_1_1_t_color.html#aff1888cbac64418e770647ce3cc55741">awtk.TColor</a>, <a class="el" href="classawtk_1_1_t_color_component.html#ad5f060f1b9236670bf589f4863e152d9">awtk.TColorComponent</a>, <a class="el" href="classawtk_1_1_t_color_picker.html#afe231b7e142e07a389e201b60d510ba0">awtk.TColorPicker</a>, <a class="el" href="classawtk_1_1_t_color_tile.html#aa0345684cbb939078865327ca18801b4">awtk.TColorTile</a>, <a class="el" href="classawtk_1_1_t_column.html#a0b9e57c05b9936f51a31fdef121be2d7">awtk.TColumn</a>, <a class="el" href="classawtk_1_1_t_combo_box.html#a4f893f874fe29509fd9f0606d8063a1a">awtk.TComboBox</a>, <a class="el" href="classawtk_1_1_t_combo_box_ex.html#a6539ad1288bb1932b2256af8b2ccfdb2">awtk.TComboBoxEx</a>, <a class="el" href="classawtk_1_1_t_combo_box_item.html#a2027783b8897699c6ce48614ecd6ac8e">awtk.TComboBoxItem</a>, <a class="el" href="classawtk_1_1_t_date_time.html#a591414f54431f6dbacd5cf4638d58224">awtk.TDateTime</a>, <a class="el" href="classawtk_1_1_t_dialog.html#aeb6bbc022b393387d96ef8492db99bc3">awtk.TDialog</a>, <a class="el" href="classawtk_1_1_t_dialog_client.html#a5297e6824a4bf73490d3c956d9c3cda4">awtk.TDialogClient</a>, <a class="el" href="classawtk_1_1_t_dialog_title.html#aa10a4c2b9313770a4f8762dc6f990aab">awtk.TDialogTitle</a>, <a class="el" href="classawtk_1_1_t_digit_clock.html#a1d79d35866883bfb6ebb760079a11528">awtk.TDigitClock</a>, <a class="el" href="classawtk_1_1_t_draggable.html#abc7536427d925cef7c3ad7557c9c59f3">awtk.TDraggable</a>, <a class="el" href="classawtk_1_1_t_dragger.html#a4355dc7c4b2f00c7aeffe00204350915">awtk.TDragger</a>, <a class="el" href="classawtk_1_1_t_edit.html#a2d09e68e8a6df2f25c2a0d8ffec9e97a">awtk.TEdit</a>, <a class="el" href="classawtk_1_1_t_emitter.html#a068f5e211a8daecdfa4b784e5591ac35">awtk.TEmitter</a>, <a class="el" href="classawtk_1_1_t_event.html#abe7494adb31ef8d50da371e4558c948f">awtk.TEvent</a>, <a class="el" href="classawtk_1_1_t_file_browser_view.html#a7369b2b2247704288c1459987c348ba0">awtk.TFileBrowserView</a>, <a class="el" href="classawtk_1_1_t_file_chooser.html#af92f440578bf7c143b2364cd29bdde00">awtk.TFileChooser</a>, <a class="el" href="classawtk_1_1_t_gauge.html#a9d387469dfb17d519995bd35929255da">awtk.TGauge</a>, <a class="el" href="classawtk_1_1_t_gauge_pointer.html#a48475cca3e4a3093525b74b8bccb7f35">awtk.TGaugePointer</a>, <a class="el" href="classawtk_1_1_t_gif_image.html#a5a5bdb2839701a1850b504a59513a4cd">awtk.TGifImage</a>, <a class="el" href="classawtk_1_1_t_grid.html#a3a451b513bd7be7a450f4b07640e799e">awtk.TGrid</a>, <a class="el" href="classawtk_1_1_t_grid_item.html#a6383132525d2526b6f3108eabc9e233a">awtk.TGridItem</a>, <a class="el" href="classawtk_1_1_t_group_box.html#a56b2d535959f89f5cf52f1719864f23d">awtk.TGroupBox</a>, <a class="el" href="classawtk_1_1_t_hscroll_label.html#a53576cb6e095e67af56733b680b79a07">awtk.THscrollLabel</a>, <a class="el" href="classawtk_1_1_t_image.html#ac5166a1ccaa9f7b7e8162bbc5b9015bf">awtk.TImage</a>, <a class="el" href="classawtk_1_1_t_image_animation.html#af3c0f03012160b5e169016e75c88d67e">awtk.TImageAnimation</a>, <a class="el" href="classawtk_1_1_t_image_value.html#acc40471ee1e19e0ddecc3ca527bacc65">awtk.TImageValue</a>, <a class="el" href="classawtk_1_1_t_keyboard.html#ab79e75e8531c8012ea9d6547fea249c5">awtk.TKeyboard</a>, <a class="el" href="classawtk_1_1_t_label.html#ab46daa7be7e288aa888d332831397a27">awtk.TLabel</a>, <a class="el" href="classawtk_1_1_t_lang_indicator.html#af0599ec173c50d1ad8b8421108da53ec">awtk.TLangIndicator</a>, <a class="el" href="classawtk_1_1_t_line_number.html#a44685a2d7a9c6bb07a880364c726c4a2">awtk.TLineNumber</a>, <a class="el" href="classawtk_1_1_t_list_item.html#a86f5d4c94add6551c2f3bf057b1d7042">awtk.TListItem</a>, <a class="el" href="classawtk_1_1_t_list_item_seperator.html#ac8494241162933f87a7c1f4942998ea3">awtk.TListItemSeperator</a>, <a class="el" href="classawtk_1_1_t_list_view.html#a718f668698ed8be7688eb4d65762cdab">awtk.TListView</a>, <a class="el" href="classawtk_1_1_t_list_view_h.html#a614ce5f82f7046273fe7bbff116c2485">awtk.TListViewH</a>, <a class="el" href="classawtk_1_1_t_mledit.html#a675afad3a4148911bc66f319248e0ad8">awtk.TMledit</a>, <a class="el" href="classawtk_1_1_t_mutable_image.html#ac0d654bc66acd261689b7a95f68986e8">awtk.TMutableImage</a>, <a class="el" href="classawtk_1_1_t_named_value.html#ad9c44370d57e1c588f7d772d2da95732">awtk.TNamedValue</a>, <a class="el" href="classawtk_1_1_t_object_array.html#ad3c8adeab0dc988aba3b2c441fdb705d">awtk.TObjectArray</a>, <a class="el" href="classawtk_1_1_t_object_default.html#a17b7e88ff32f208e064f970547cbb52e">awtk.TObjectDefault</a>, <a class="el" href="classawtk_1_1_t_overlay.html#a9ba6d9171f67c0ce4e10f4bff4bcfab4">awtk.TOverlay</a>, <a class="el" href="classawtk_1_1_t_pages.html#a77a7e67de3c1bae4c23d7a4d985d65ab">awtk.TPages</a>, <a class="el" href="classawtk_1_1_t_popup.html#a1f0009bdefce9a2cabb391e28ae22775">awtk.TPopup</a>, <a class="el" href="classawtk_1_1_t_progress_bar.html#aee61cc5487f7a8bfe4c8a43d274d9d6d">awtk.TProgressBar</a>, <a class="el" href="classawtk_1_1_t_progress_circle.html#a34a4c66591a7b7a047cbca2083f2d886">awtk.TProgressCircle</a>, <a class="el" href="classawtk_1_1_t_rect.html#a261846347b61152a2c60b0ea0dd7740e">awtk.TRect</a>, <a class="el" href="classawtk_1_1_t_rich_text.html#acccdd8b3b0b02785b02aae69a485458c">awtk.TRichText</a>, <a class="el" href="classawtk_1_1_t_rich_text_view.html#ae9b05916817746334a2cde76e375fdcb">awtk.TRichTextView</a>, <a class="el" href="classawtk_1_1_t_rlog.html#ad0aa3c02a78650c97e5005d75698e817">awtk.TRlog</a>, <a class="el" href="classawtk_1_1_t_row.html#a3a6100687fe32f9501f0633ba36c3a15">awtk.TRow</a>, <a class="el" href="classawtk_1_1_t_scroll_bar.html#a2cc4fc8818e340df17dd72e89092b348">awtk.TScrollBar</a>, <a class="el" href="classawtk_1_1_t_scroll_view.html#a72dec62cd847158469174145bc27b01c">awtk.TScrollView</a>, <a class="el" href="classawtk_1_1_t_serial_widget.html#a102288c2b5e9a0d66897c7a903fc2599">awtk.TSerialWidget</a>, <a class="el" href="classawtk_1_1_t_slide_indicator.html#afae55d8fc7ed54ea44a282f8623707a6">awtk.TSlideIndicator</a>, <a class="el" href="classawtk_1_1_t_slide_menu.html#a89d366d643e468c2efcb1a50335c5ef9">awtk.TSlideMenu</a>, <a class="el" href="classawtk_1_1_t_slider.html#a211232a1aa40ce37644ccd7a40cc6bfd">awtk.TSlider</a>, <a class="el" href="classawtk_1_1_t_slide_view.html#ac0dd6e12952a3a0c5379e4763ef46c01">awtk.TSlideView</a>, <a class="el" href="classawtk_1_1_t_spin_box.html#a21b679128d3af3d3f036b50aa7bb00f2">awtk.TSpinBox</a>, <a class="el" href="classawtk_1_1_t_style_mutable.html#a5985f878519aaddb754e0bcf2dab47a1">awtk.TStyleMutable</a>, <a class="el" href="classawtk_1_1_t_svg_image.html#a60f146201f0f27e1d453eb4a8a03185f">awtk.TSvgImage</a>, <a class="el" href="classawtk_1_1_t_switch.html#a5f028fadd93163c7544c6f4c5fbd5750">awtk.TSwitch</a>, <a class="el" href="classawtk_1_1_t_system_bar.html#afd17ea8f6e09b68b7b3e4e12e02d2ff2">awtk.TSystemBar</a>, <a class="el" href="classawtk_1_1_t_tab_button.html#aac367d19e8d52bdbbf71eb4d80830b66">awtk.TTabButton</a>, <a class="el" href="classawtk_1_1_t_tab_button_group.html#a001d286776e6bcdc878c16ecc4620d1a">awtk.TTabButtonGroup</a>, <a class="el" href="classawtk_1_1_t_tab_control.html#a93c92951eeec0171ca9f57f24e6924c4">awtk.TTabControl</a>, <a class="el" href="classawtk_1_1_t_text_selector.html#a31419d8bdc757b480b4112829742e032">awtk.TTextSelector</a>, <a class="el" href="classawtk_1_1_t_time_clock.html#aa4670140c38d336d916041ca161e6e78">awtk.TTimeClock</a>, <a class="el" href="classawtk_1_1_t_timer_widget.html#aac8035f9f545f27acc16056139197087">awtk.TTimerWidget</a>, <a class="el" href="classawtk_1_1_t_value.html#a848713ead3059f9952c27aef048cb0b2">awtk.TValue</a>, <a class="el" href="classawtk_1_1_t_view.html#a4ee58128a3092927d95d2cc4888a78a9">awtk.TView</a>, <a class="el" href="classawtk_1_1_t_vpage.html#a8cdd20ab791d92d342b9576c53e7767b">awtk.TVpage</a>, <a class="el" href="classawtk_1_1_t_window.html#a9da037bd2861e80a9a8afa6f769a0bd7">awtk.TWindow</a></li>
+<li>createAnimator()&#160;:&#160;<a class="el" href="classawtk_1_1_t_widget.html#afb2597879db891317ffbb441866f55aa">awtk.TWidget</a></li>
+<li>createArc()&#160;:&#160;<a class="el" href="classawtk_1_1_t_slide_indicator.html#a0c8c18e0f75f35250b8cacb91840e3bd">awtk.TSlideIndicator</a></li>
+<li>CREATED&#160;:&#160;<a class="el" href="enumawtk_1_1_t_window_stage.html#a0bb81ab672a755ea12a84ceb8670a54c">awtk.TWindowStage</a></li>
+<li>createDefault()&#160;:&#160;<a class="el" href="classawtk_1_1_t_window.html#a8579f0e0cb4641376104ec16a89d0452">awtk.TWindow</a></li>
+<li>createDesktop()&#160;:&#160;<a class="el" href="classawtk_1_1_t_scroll_bar.html#a717286fdb8f8e51a52389cae0c567cf0">awtk.TScrollBar</a></li>
+<li>createDir()&#160;:&#160;<a class="el" href="classawtk_1_1_t_file_browser_view.html#ae5474b3d8577cf9c63a51903661fb61f">awtk.TFileBrowserView</a></li>
+<li>createEx()&#160;:&#160;<a class="el" href="classawtk_1_1_t_bitmap.html#ab70781d406d75233a546ec45a7fcf46f">awtk.TBitmap</a>, <a class="el" href="classawtk_1_1_t_check_button.html#a75ec126136987d85f6c443516bd4f26b">awtk.TCheckButton</a>, <a class="el" href="classawtk_1_1_t_object_default.html#a8a8f332e65244fa9a4f2d7c9ab44eee9">awtk.TObjectDefault</a></li>
+<li>createFile()&#160;:&#160;<a class="el" href="classawtk_1_1_t_file_browser_view.html#a26184d4dd2dcb6791ea76a913862be9f">awtk.TFileBrowserView</a></li>
+<li>createLinear()&#160;:&#160;<a class="el" href="classawtk_1_1_t_slide_indicator.html#ab0891ef835ac2b1a2630f6f6af7a899d">awtk.TSlideIndicator</a></li>
+<li>createMobile()&#160;:&#160;<a class="el" href="classawtk_1_1_t_scroll_bar.html#a4bd0b1b4d006205a40520139ca0374bd">awtk.TScrollBar</a></li>
+<li>createRadio()&#160;:&#160;<a class="el" href="classawtk_1_1_t_check_button.html#acc259e427145a679756e7e6962680711">awtk.TCheckButton</a></li>
+<li>createSimple()&#160;:&#160;<a class="el" href="classawtk_1_1_t_dialog.html#a09f45b044edc5f4300f98a6ca6898ae1">awtk.TDialog</a></li>
+<li>CUBIC_IN&#160;:&#160;<a class="el" href="enumawtk_1_1_t_easing_type.html#af4dd3c3010201db6e3aeebb371336044">awtk.TEasingType</a></li>
+<li>CUBIC_OUT&#160;:&#160;<a class="el" href="enumawtk_1_1_t_easing_type.html#a172af83c99aec20d4c30955e2573ea08">awtk.TEasingType</a></li>
+<li>CURR_PAGE&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_prop.html#ae1a33692b3af9f3d7509bdeafd0fd8de">awtk.TWidgetProp</a></li>
+<li>CURSOR_CROSS&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_cursor.html#a95ce284b5d45e9f2fa8c7b5d1cd65afd">awtk.TWidgetCursor</a></li>
+<li>CURSOR_DEFAULT&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_cursor.html#aa8b3058af4f073bc0967bb0a98be762c">awtk.TWidgetCursor</a></li>
+<li>CURSOR_EDIT&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_cursor.html#ab4c990195c306f052540cd5574113ba3">awtk.TWidgetCursor</a></li>
+<li>CURSOR_HAND&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_cursor.html#a9cb24a3d3a6875619a94855f14061768">awtk.TWidgetCursor</a></li>
+<li>CURSOR_NO&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_cursor.html#a1b2d8ef92538e86c8a6b0285f8927df6">awtk.TWidgetCursor</a></li>
+<li>CURSOR_SIZEALL&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_cursor.html#a7fde81f3c4270ed4a7385b9ae87aa822">awtk.TWidgetCursor</a></li>
+<li>CURSOR_SIZENESW&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_cursor.html#ace5caf6177091bc3c8e27b8b7e508e8a">awtk.TWidgetCursor</a></li>
+<li>CURSOR_SIZENS&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_cursor.html#af83c264e9b0276b772aaeb6364a90a98">awtk.TWidgetCursor</a></li>
+<li>CURSOR_SIZENWSE&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_cursor.html#ab1888da1f142421aefd8ea9805770f55">awtk.TWidgetCursor</a></li>
+<li>CURSOR_SIZEWE&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_cursor.html#a057a1197dbfe8fcb64f09e6e1584f0f0">awtk.TWidgetCursor</a></li>
+<li>CURSOR_WAIT&#160;:&#160;<a class="el" href="enumawtk_1_1_t_widget_cursor.html#a017d375f5e190316da445fcbddf8efff">awtk.TWidgetCursor</a></li>
+<li>CUSTOM&#160;:&#160;<a class="el" href="enumawtk_1_1_t_input_type.html#ab4056328b0f540383334823123180dde">awtk.TInputType</a></li>
+<li>CUSTOM_PASSWORD&#160;:&#160;<a class="el" href="enumawtk_1_1_t_input_type.html#adba7738659a59c16c20baf44aab7baae">awtk.TInputType</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

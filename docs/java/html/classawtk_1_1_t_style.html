@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TStyle类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +23,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">AWTK-JAVA
    </div>
    <div id="projectbrief">AWTK JAVA API</div>
@@ -30,22 +34,33 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.12.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,9 +70,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,14 +87,14 @@ $(function() {
 <li class="navelem"><b>awtk</b></li><li class="navelem"><a class="el" href="classawtk_1_1_t_style.html">TStyle</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="classawtk_1_1_t_style-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">awtk.TStyle类 参考</div>  </div>
+  <div class="headertitle"><div class="title">awtk.TStyle类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -85,50 +107,50 @@ $(function() {
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a5df9996df9b8f2cba56501baaaeb55b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_style.html#a5df9996df9b8f2cba56501baaaeb55b5">TStyle</a> (long <a class="el" href="classawtk_1_1_t_style.html#ac08aa20ab5208d97816dcd57b0cbac4a">nativeObj</a>)</td></tr>
+<tr class="memitem:a5df9996df9b8f2cba56501baaaeb55b5" id="r_a5df9996df9b8f2cba56501baaaeb55b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5df9996df9b8f2cba56501baaaeb55b5">TStyle</a> (long <a class="el" href="#ac08aa20ab5208d97816dcd57b0cbac4a">nativeObj</a>)</td></tr>
 <tr class="separator:a5df9996df9b8f2cba56501baaaeb55b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5d630a42b1a9b690bc472e9022fe854"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_style.html#ac5d630a42b1a9b690bc472e9022fe854">notifyWidgetStateChanged</a> (TWidget widget)</td></tr>
+<tr class="memitem:ac5d630a42b1a9b690bc472e9022fe854" id="r_ac5d630a42b1a9b690bc472e9022fe854"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5d630a42b1a9b690bc472e9022fe854">notifyWidgetStateChanged</a> (<a class="el" href="classawtk_1_1_t_widget.html">TWidget</a> widget)</td></tr>
 <tr class="separator:ac5d630a42b1a9b690bc472e9022fe854"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3aecd4172c3cdd847fe302360115ef6e"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_style.html#a3aecd4172c3cdd847fe302360115ef6e">isValid</a> ()</td></tr>
+<tr class="memitem:a3aecd4172c3cdd847fe302360115ef6e" id="r_a3aecd4172c3cdd847fe302360115ef6e"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3aecd4172c3cdd847fe302360115ef6e">isValid</a> ()</td></tr>
 <tr class="separator:a3aecd4172c3cdd847fe302360115ef6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14da6524b9874cceedbd26efe8ba25d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_style.html#a14da6524b9874cceedbd26efe8ba25d9">getInt</a> (String name, int defval)</td></tr>
+<tr class="memitem:a14da6524b9874cceedbd26efe8ba25d9" id="r_a14da6524b9874cceedbd26efe8ba25d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14da6524b9874cceedbd26efe8ba25d9">getInt</a> (String name, int defval)</td></tr>
 <tr class="separator:a14da6524b9874cceedbd26efe8ba25d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba69441fdd45001af7c3e4075e3964b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_style.html#aba69441fdd45001af7c3e4075e3964b7">getUint</a> (String name, int defval)</td></tr>
+<tr class="memitem:aba69441fdd45001af7c3e4075e3964b7" id="r_aba69441fdd45001af7c3e4075e3964b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba69441fdd45001af7c3e4075e3964b7">getUint</a> (String name, int defval)</td></tr>
 <tr class="separator:aba69441fdd45001af7c3e4075e3964b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c68825cdb51b8e44f908cbb65196451"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_style.html#a7c68825cdb51b8e44f908cbb65196451">getStr</a> (String name, String defval)</td></tr>
+<tr class="memitem:a7c68825cdb51b8e44f908cbb65196451" id="r_a7c68825cdb51b8e44f908cbb65196451"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c68825cdb51b8e44f908cbb65196451">getStr</a> (String name, String defval)</td></tr>
 <tr class="separator:a7c68825cdb51b8e44f908cbb65196451"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3154c455614e616bcd31698d88b7ba93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_style.html#a3154c455614e616bcd31698d88b7ba93">get</a> (String state, String name, <a class="el" href="classawtk_1_1_t_value.html">TValue</a> value)</td></tr>
+<tr class="memitem:a3154c455614e616bcd31698d88b7ba93" id="r_a3154c455614e616bcd31698d88b7ba93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3154c455614e616bcd31698d88b7ba93">get</a> (String state, String name, <a class="el" href="classawtk_1_1_t_value.html">TValue</a> value)</td></tr>
 <tr class="separator:a3154c455614e616bcd31698d88b7ba93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa331d73b980ed62c80bbe6e13f1e6eed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_style.html#aa331d73b980ed62c80bbe6e13f1e6eed">set</a> (String state, String name, <a class="el" href="classawtk_1_1_t_value.html">TValue</a> value)</td></tr>
+<tr class="memitem:aa331d73b980ed62c80bbe6e13f1e6eed" id="r_aa331d73b980ed62c80bbe6e13f1e6eed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa331d73b980ed62c80bbe6e13f1e6eed">set</a> (String state, String name, <a class="el" href="classawtk_1_1_t_value.html">TValue</a> value)</td></tr>
 <tr class="separator:aa331d73b980ed62c80bbe6e13f1e6eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd62670fb4ed1160ae46d0438af45801"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_style.html#afd62670fb4ed1160ae46d0438af45801">updateState</a> (<a class="el" href="classawtk_1_1_t_theme.html">TTheme</a> theme, String widget_type, String style_name, String widget_state)</td></tr>
+<tr class="memitem:afd62670fb4ed1160ae46d0438af45801" id="r_afd62670fb4ed1160ae46d0438af45801"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd62670fb4ed1160ae46d0438af45801">updateState</a> (<a class="el" href="classawtk_1_1_t_theme.html">TTheme</a> theme, String widget_type, String style_name, String widget_state)</td></tr>
 <tr class="separator:afd62670fb4ed1160ae46d0438af45801"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4977c622dd54b2dcf5def212d6a4969"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_style.html#ad4977c622dd54b2dcf5def212d6a4969">getStyleState</a> ()</td></tr>
+<tr class="memitem:ad4977c622dd54b2dcf5def212d6a4969" id="r_ad4977c622dd54b2dcf5def212d6a4969"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4977c622dd54b2dcf5def212d6a4969">getStyleState</a> ()</td></tr>
 <tr class="separator:ad4977c622dd54b2dcf5def212d6a4969"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8c15ad56ae4bd272a273647382f8ae9"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_style.html#ac8c15ad56ae4bd272a273647382f8ae9">isMutable</a> ()</td></tr>
+<tr class="memitem:ac8c15ad56ae4bd272a273647382f8ae9" id="r_ac8c15ad56ae4bd272a273647382f8ae9"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8c15ad56ae4bd272a273647382f8ae9">isMutable</a> ()</td></tr>
 <tr class="separator:ac8c15ad56ae4bd272a273647382f8ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a933515aa75e1ce9aef0ba5c7497fa35f"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_style.html#a933515aa75e1ce9aef0ba5c7497fa35f">getStyleType</a> ()</td></tr>
+<tr class="memitem:a933515aa75e1ce9aef0ba5c7497fa35f" id="r_a933515aa75e1ce9aef0ba5c7497fa35f"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a933515aa75e1ce9aef0ba5c7497fa35f">getStyleType</a> ()</td></tr>
 <tr class="separator:a933515aa75e1ce9aef0ba5c7497fa35f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a34520ac7298b84e510d89514dd8c23f0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_style.html">TStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_style.html#a34520ac7298b84e510d89514dd8c23f0">cast</a> (long <a class="el" href="classawtk_1_1_t_style.html#ac08aa20ab5208d97816dcd57b0cbac4a">nativeObj</a>)</td></tr>
+<tr class="memitem:a34520ac7298b84e510d89514dd8c23f0" id="r_a34520ac7298b84e510d89514dd8c23f0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classawtk_1_1_t_style.html">TStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34520ac7298b84e510d89514dd8c23f0">cast</a> (long <a class="el" href="#ac08aa20ab5208d97816dcd57b0cbac4a">nativeObj</a>)</td></tr>
 <tr class="separator:a34520ac7298b84e510d89514dd8c23f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:ac08aa20ab5208d97816dcd57b0cbac4a"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classawtk_1_1_t_style.html#ac08aa20ab5208d97816dcd57b0cbac4a">nativeObj</a></td></tr>
+<tr class="memitem:ac08aa20ab5208d97816dcd57b0cbac4a" id="r_ac08aa20ab5208d97816dcd57b0cbac4a"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac08aa20ab5208d97816dcd57b0cbac4a">nativeObj</a></td></tr>
 <tr class="separator:ac08aa20ab5208d97816dcd57b0cbac4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>控件风格。</p>
 <p>widget从style对象中，获取诸如字体、颜色和图片相关的参数，根据这些参数来绘制界面。</p>
-<p>属性名称的请参考style\_id </p>
+<p>属性名称的请参考style_id </p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
-<a id="a5df9996df9b8f2cba56501baaaeb55b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5df9996df9b8f2cba56501baaaeb55b5">&#9670;&nbsp;</a></span>TStyle()</h2>
+<a id="a5df9996df9b8f2cba56501baaaeb55b5" name="a5df9996df9b8f2cba56501baaaeb55b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5df9996df9b8f2cba56501baaaeb55b5">&#9670;&#160;</a></span>TStyle()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -139,8 +161,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">awtk.TStyle.TStyle </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>nativeObj</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>nativeObj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -162,8 +183,8 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a id="a34520ac7298b84e510d89514dd8c23f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34520ac7298b84e510d89514dd8c23f0">&#9670;&nbsp;</a></span>cast()</h2>
+<a id="a34520ac7298b84e510d89514dd8c23f0" name="a34520ac7298b84e510d89514dd8c23f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34520ac7298b84e510d89514dd8c23f0">&#9670;&#160;</a></span>cast()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -174,8 +195,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classawtk_1_1_t_style.html">TStyle</a> awtk.TStyle.cast </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>nativeObj</em></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>nativeObj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -198,8 +218,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a3154c455614e616bcd31698d88b7ba93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3154c455614e616bcd31698d88b7ba93">&#9670;&nbsp;</a></span>get()</h2>
+<a id="a3154c455614e616bcd31698d88b7ba93" name="a3154c455614e616bcd31698d88b7ba93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3154c455614e616bcd31698d88b7ba93">&#9670;&#160;</a></span>get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,25 +230,17 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TStyle.get </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>state</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_value.html">TValue</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -250,8 +262,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a14da6524b9874cceedbd26efe8ba25d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14da6524b9874cceedbd26efe8ba25d9">&#9670;&nbsp;</a></span>getInt()</h2>
+<a id="a14da6524b9874cceedbd26efe8ba25d9" name="a14da6524b9874cceedbd26efe8ba25d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14da6524b9874cceedbd26efe8ba25d9">&#9670;&#160;</a></span>getInt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -262,19 +274,12 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TStyle.getInt </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -295,8 +300,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a7c68825cdb51b8e44f908cbb65196451"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c68825cdb51b8e44f908cbb65196451">&#9670;&nbsp;</a></span>getStr()</h2>
+<a id="a7c68825cdb51b8e44f908cbb65196451" name="a7c68825cdb51b8e44f908cbb65196451"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c68825cdb51b8e44f908cbb65196451">&#9670;&#160;</a></span>getStr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -307,19 +312,12 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TStyle.getStr </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -340,8 +338,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ad4977c622dd54b2dcf5def212d6a4969"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4977c622dd54b2dcf5def212d6a4969">&#9670;&nbsp;</a></span>getStyleState()</h2>
+<a id="ad4977c622dd54b2dcf5def212d6a4969" name="ad4977c622dd54b2dcf5def212d6a4969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4977c622dd54b2dcf5def212d6a4969">&#9670;&#160;</a></span>getStyleState()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -352,7 +350,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TStyle.getStyleState </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -367,8 +365,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a933515aa75e1ce9aef0ba5c7497fa35f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a933515aa75e1ce9aef0ba5c7497fa35f">&#9670;&nbsp;</a></span>getStyleType()</h2>
+<a id="a933515aa75e1ce9aef0ba5c7497fa35f" name="a933515aa75e1ce9aef0ba5c7497fa35f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a933515aa75e1ce9aef0ba5c7497fa35f">&#9670;&#160;</a></span>getStyleType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -379,7 +377,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">String awtk.TStyle.getStyleType </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -394,8 +392,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aba69441fdd45001af7c3e4075e3964b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba69441fdd45001af7c3e4075e3964b7">&#9670;&nbsp;</a></span>getUint()</h2>
+<a id="aba69441fdd45001af7c3e4075e3964b7" name="aba69441fdd45001af7c3e4075e3964b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba69441fdd45001af7c3e4075e3964b7">&#9670;&#160;</a></span>getUint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -406,19 +404,12 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">int awtk.TStyle.getUint </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>defval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>defval</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -439,8 +430,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ac8c15ad56ae4bd272a273647382f8ae9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8c15ad56ae4bd272a273647382f8ae9">&#9670;&nbsp;</a></span>isMutable()</h2>
+<a id="ac8c15ad56ae4bd272a273647382f8ae9" name="ac8c15ad56ae4bd272a273647382f8ae9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8c15ad56ae4bd272a273647382f8ae9">&#9670;&#160;</a></span>isMutable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -451,7 +442,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TStyle.isMutable </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -466,8 +457,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a3aecd4172c3cdd847fe302360115ef6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3aecd4172c3cdd847fe302360115ef6e">&#9670;&nbsp;</a></span>isValid()</h2>
+<a id="a3aecd4172c3cdd847fe302360115ef6e" name="a3aecd4172c3cdd847fe302360115ef6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aecd4172c3cdd847fe302360115ef6e">&#9670;&#160;</a></span>isValid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -478,7 +469,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname">boolean awtk.TStyle.isValid </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -493,8 +484,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ac5d630a42b1a9b690bc472e9022fe854"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5d630a42b1a9b690bc472e9022fe854">&#9670;&nbsp;</a></span>notifyWidgetStateChanged()</h2>
+<a id="ac5d630a42b1a9b690bc472e9022fe854" name="ac5d630a42b1a9b690bc472e9022fe854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5d630a42b1a9b690bc472e9022fe854">&#9670;&#160;</a></span>notifyWidgetStateChanged()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -505,8 +496,7 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TStyle.notifyWidgetStateChanged </td>
           <td>(</td>
-          <td class="paramtype">TWidget&#160;</td>
-          <td class="paramname"><em>widget</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_widget.html">TWidget</a></td>          <td class="paramname"><span class="paramname"><em>widget</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -527,8 +517,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aa331d73b980ed62c80bbe6e13f1e6eed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa331d73b980ed62c80bbe6e13f1e6eed">&#9670;&nbsp;</a></span>set()</h2>
+<a id="aa331d73b980ed62c80bbe6e13f1e6eed" name="aa331d73b980ed62c80bbe6e13f1e6eed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa331d73b980ed62c80bbe6e13f1e6eed">&#9670;&#160;</a></span>set()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -539,25 +529,17 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TStyle.set </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>state</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_value.html">TValue</a>&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_value.html">TValue</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -579,8 +561,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="afd62670fb4ed1160ae46d0438af45801"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd62670fb4ed1160ae46d0438af45801">&#9670;&nbsp;</a></span>updateState()</h2>
+<a id="afd62670fb4ed1160ae46d0438af45801" name="afd62670fb4ed1160ae46d0438af45801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd62670fb4ed1160ae46d0438af45801">&#9670;&#160;</a></span>updateState()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -591,31 +573,22 @@ Public 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TStyle.updateState </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classawtk_1_1_t_theme.html">TTheme</a>&#160;</td>
-          <td class="paramname"><em>theme</em>, </td>
+          <td class="paramtype"><a class="el" href="classawtk_1_1_t_theme.html">TTheme</a></td>          <td class="paramname"><span class="paramname"><em>theme</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>widget_type</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>widget_type</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>style_name</em>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>style_name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>widget_state</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>widget_state</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -639,8 +612,8 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">类成员变量说明</h2>
-<a id="ac08aa20ab5208d97816dcd57b0cbac4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac08aa20ab5208d97816dcd57b0cbac4a">&#9670;&nbsp;</a></span>nativeObj</h2>
+<a id="ac08aa20ab5208d97816dcd57b0cbac4a" name="ac08aa20ab5208d97816dcd57b0cbac4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac08aa20ab5208d97816dcd57b0cbac4a">&#9670;&#160;</a></span>nativeObj</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -655,12 +628,13 @@ Public 属性</h2></td></tr>
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>output/TStyle.java</li>
+<li>output/<b>TStyle.java</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>
