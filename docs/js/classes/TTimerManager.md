@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[awtk.ts:14670](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L14670)
+[awtk.ts:14719](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L14719)
 
 ## Properties
 
@@ -34,4 +34,4 @@
 
 #### Defined in
 
-[awtk.ts:14669](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L14669)
+[awtk.ts:14718](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L14718)

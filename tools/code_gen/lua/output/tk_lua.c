@@ -81,6 +81,7 @@
 #include "time_clock/time_clock.h"
 #include "timer_widget/timer_widget.h"
 #include "tkc/event.h"
+#include "tkc/named_value_hash.h"
 #include "widgets/app_bar.h"
 #include "widgets/button_group.h"
 #include "widgets/button.h"
@@ -116,6 +117,7 @@
 #include "tkc/idle_info.h"
 #include "tkc/object_array.h"
 #include "tkc/object_default.h"
+#include "tkc/object_hash.h"
 #include "tkc/timer_info.h"
 #include "widgets/calibration_win.h"
 #include "widgets/combo_box.h"
@@ -298,6 +300,8 @@ static int wrap_value_change_event_t_get_prop(lua_State* L);
 static int wrap_value_change_event_t_set_prop(lua_State* L);
 static int wrap_log_message_event_t_get_prop(lua_State* L);
 static int wrap_log_message_event_t_set_prop(lua_State* L);
+static int wrap_named_value_hash_t_get_prop(lua_State* L);
+static int wrap_named_value_hash_t_set_prop(lua_State* L);
 static int wrap_app_bar_t_get_prop(lua_State* L);
 static int wrap_app_bar_t_set_prop(lua_State* L);
 static int wrap_button_group_t_get_prop(lua_State* L);
@@ -370,6 +374,8 @@ static int wrap_object_array_t_get_prop(lua_State* L);
 static int wrap_object_array_t_set_prop(lua_State* L);
 static int wrap_object_default_t_get_prop(lua_State* L);
 static int wrap_object_default_t_set_prop(lua_State* L);
+static int wrap_object_hash_t_get_prop(lua_State* L);
+static int wrap_object_hash_t_set_prop(lua_State* L);
 static int wrap_timer_info_t_get_prop(lua_State* L);
 static int wrap_timer_info_t_set_prop(lua_State* L);
 static int wrap_calibration_win_t_get_prop(lua_State* L);
@@ -1660,6 +1666,16 @@ static int wrap_tk_object_set_prop_uint64(lua_State* L) {
   return 1;
 }
 
+static int wrap_tk_object_clear_props(lua_State* L) {
+  ret_t ret = 0;
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
+  ret = (ret_t)tk_object_clear_props(obj);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 
 static const struct luaL_Reg tk_object_t_member_funcs[] = {
   {"unref", wrap_tk_object_unref},
@@ -1723,6 +1739,7 @@ static const struct luaL_Reg tk_object_t_member_funcs[] = {
   {"set_prop_int64", wrap_tk_object_set_prop_int64},
   {"get_prop_uint64", wrap_tk_object_get_prop_uint64},
   {"set_prop_uint64", wrap_tk_object_set_prop_uint64},
+  {"clear_props", wrap_tk_object_clear_props},
   {NULL, NULL}
 };
 
@@ -3556,6 +3573,27 @@ static int wrap_event_from_name(lua_State* L) {
   return 1;
 }
 
+static int wrap_event_register_custom_name(lua_State* L) {
+  ret_t ret = 0;
+  int32_t event_type = (int32_t)luaL_checkinteger(L, 1);
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  ret = (ret_t)event_register_custom_name(event_type, name);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_event_unregister_custom_name(lua_State* L) {
+  ret_t ret = 0;
+  const char* name = (const char*)luaL_checkstring(L, 1);
+  ret = (ret_t)event_unregister_custom_name(name);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 static int wrap_event_cast(lua_State* L) {
   event_t* ret = NULL;
   event_t* event = (event_t*)tk_checkudata(L, 1, "event_t");
@@ -3646,6 +3684,8 @@ static int wrap_event_t_get_prop(lua_State* L) {
 static void event_t_init(lua_State* L) {
   static const struct luaL_Reg static_funcs[] = {
     {"from_name", wrap_event_from_name},
+    {"register_custom_name", wrap_event_register_custom_name},
+    {"unregister_custom_name", wrap_event_unregister_custom_name},
     {"cast", wrap_event_cast},
     {"create", wrap_event_create},
     {NULL, NULL}
@@ -12292,6 +12332,27 @@ static void ui_load_event_t_init(lua_State* L) {
   luaL_openlib(L, "UiLoadEvent", static_funcs, 0);
   lua_settop(L, 0);
 }
+static int wrap_font_manager_set_standard_font_size(lua_State* L) {
+  ret_t ret = 0;
+  font_manager_t* fm = (font_manager_t*)tk_checkudata(L, 1, "font_manager_t");
+  bool_t is_standard = (bool_t)lua_toboolean(L, 2);
+  ret = (ret_t)font_manager_set_standard_font_size(fm, is_standard);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_font_manager_get_standard_font_size(lua_State* L) {
+  bool_t ret = 0;
+  font_manager_t* fm = (font_manager_t*)tk_checkudata(L, 1, "font_manager_t");
+  ret = (bool_t)font_manager_get_standard_font_size(fm);
+
+  lua_pushboolean(L,(lua_Integer)(ret));
+
+  return 1;
+}
+
 static int wrap_font_manager_unload_font(lua_State* L) {
   ret_t ret = 0;
   font_manager_t* fm = (font_manager_t*)tk_checkudata(L, 1, "font_manager_t");
@@ -12327,6 +12388,8 @@ static int wrap_font_manager_unload_all(lua_State* L) {
 
 
 static const struct luaL_Reg font_manager_t_member_funcs[] = {
+  {"set_standard_font_size", wrap_font_manager_set_standard_font_size},
+  {"get_standard_font_size", wrap_font_manager_get_standard_font_size},
   {"unload_font", wrap_font_manager_unload_font},
   {"shrink_cache", wrap_font_manager_shrink_cache},
   {"unload_all", wrap_font_manager_unload_all},
@@ -19322,6 +19385,105 @@ static void log_message_event_t_init(lua_State* L) {
   luaL_openlib(L, "LogMessageEvent", static_funcs, 0);
   lua_settop(L, 0);
 }
+static int wrap_named_value_hash_create(lua_State* L) {
+  named_value_hash_t* ret = NULL;
+  ret = (named_value_hash_t*)named_value_hash_create();
+
+  return tk_newuserdata(L, (void*)ret, "/named_value_hash_t/named_value_t", "awtk.named_value_hash_t");
+}
+
+static int wrap_named_value_hash_set_name(lua_State* L) {
+  ret_t ret = 0;
+  named_value_hash_t* nvh = (named_value_hash_t*)tk_checkudata(L, 1, "named_value_hash_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  ret = (ret_t)named_value_hash_set_name(nvh, name);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_named_value_hash_destroy(lua_State* L) {
+  ret_t ret = 0;
+  named_value_hash_t* nvh = (named_value_hash_t*)tk_checkudata(L, 1, "named_value_hash_t");
+  ret = (ret_t)named_value_hash_destroy(nvh);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_named_value_hash_clone(lua_State* L) {
+  named_value_hash_t* ret = NULL;
+  named_value_hash_t* nvh = (named_value_hash_t*)tk_checkudata(L, 1, "named_value_hash_t");
+  ret = (named_value_hash_t*)named_value_hash_clone(nvh);
+
+  return tk_newuserdata(L, (void*)ret, "/named_value_hash_t/named_value_t", "awtk.named_value_hash_t");
+}
+
+static int wrap_named_value_hash_get_hash_from_str(lua_State* L) {
+  uint64_t ret = 0;
+  const char* str = (const char*)luaL_checkstring(L, 1);
+  ret = (uint64_t)named_value_hash_get_hash_from_str(str);
+
+  lua_pushinteger(L,(lua_Integer)(ret));
+
+  return 1;
+}
+
+
+static const struct luaL_Reg named_value_hash_t_member_funcs[] = {
+  {"set_name", wrap_named_value_hash_set_name},
+  {"destroy", wrap_named_value_hash_destroy},
+  {"clone", wrap_named_value_hash_clone},
+  {NULL, NULL}
+};
+
+static int wrap_named_value_hash_t_set_prop(lua_State* L) {
+  named_value_hash_t* obj = (named_value_hash_t*)tk_checkudata(L, 1, "named_value_hash_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  (void)obj;
+  (void)name;
+    return wrap_named_value_t_set_prop(L);
+}
+
+static int wrap_named_value_hash_t_get_prop(lua_State* L) {
+  named_value_hash_t* obj = (named_value_hash_t*)tk_checkudata(L, 1, "named_value_hash_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  const luaL_Reg* ret = find_member(named_value_hash_t_member_funcs, name);
+
+  (void)obj;
+  (void)name;
+  if(ret) {
+    lua_pushcfunction(L, ret->func);
+    return 1;
+  }
+  else {
+    return wrap_named_value_t_get_prop(L);
+  }
+}
+
+static void named_value_hash_t_init(lua_State* L) {
+  static const struct luaL_Reg static_funcs[] = {
+    {"create", wrap_named_value_hash_create},
+    {"get_hash_from_str", wrap_named_value_hash_get_hash_from_str},
+    {NULL, NULL}
+  };
+
+  static const struct luaL_Reg index_funcs[] = {
+    {"__index", wrap_named_value_hash_t_get_prop},
+    {"__newindex", wrap_named_value_hash_t_set_prop},
+    {NULL, NULL}
+  };
+
+  luaL_newmetatable(L, "awtk.named_value_hash_t");
+  lua_pushstring(L, "__index");
+  lua_pushvalue(L, -2);
+  lua_settable(L, -3);
+  luaL_openlib(L, NULL, index_funcs, 0);
+  luaL_openlib(L, "NamedValueHash", static_funcs, 0);
+  lua_settop(L, 0);
+}
 static int wrap_app_bar_create(lua_State* L) {
   widget_t* ret = NULL;
   widget_t* parent = (widget_t*)tk_checkudata(L, 1, "widget_t");
@@ -23722,6 +23884,83 @@ static void object_default_t_init(lua_State* L) {
   luaL_openlib(L, "ObjectDefault", static_funcs, 0);
   lua_settop(L, 0);
 }
+static int wrap_object_hash_create(lua_State* L) {
+  tk_object_t* ret = NULL;
+  ret = (tk_object_t*)object_hash_create();
+
+  return tk_newuserdata(L, (void*)ret, "/object_hash_t/tk_object_t/emitter_t", "awtk.object_hash_t");
+}
+
+static int wrap_object_hash_create_ex(lua_State* L) {
+  tk_object_t* ret = NULL;
+  bool_t enable_path = (bool_t)lua_toboolean(L, 1);
+  ret = (tk_object_t*)object_hash_create_ex(enable_path);
+
+  return tk_newuserdata(L, (void*)ret, "/object_hash_t/tk_object_t/emitter_t", "awtk.object_hash_t");
+}
+
+static int wrap_object_hash_set_keep_prop_type(lua_State* L) {
+  ret_t ret = 0;
+  tk_object_t* obj = (tk_object_t*)tk_checkudata(L, 1, "tk_object_t");
+  bool_t keep_prop_type = (bool_t)lua_toboolean(L, 2);
+  ret = (ret_t)object_hash_set_keep_prop_type(obj, keep_prop_type);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+
+static const struct luaL_Reg object_hash_t_member_funcs[] = {
+  {"set_keep_prop_type", wrap_object_hash_set_keep_prop_type},
+  {NULL, NULL}
+};
+
+static int wrap_object_hash_t_set_prop(lua_State* L) {
+  object_hash_t* obj = (object_hash_t*)tk_checkudata(L, 1, "object_hash_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  (void)obj;
+  (void)name;
+    return wrap_tk_object_t_set_prop(L);
+}
+
+static int wrap_object_hash_t_get_prop(lua_State* L) {
+  object_hash_t* obj = (object_hash_t*)tk_checkudata(L, 1, "object_hash_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  const luaL_Reg* ret = find_member(object_hash_t_member_funcs, name);
+
+  (void)obj;
+  (void)name;
+  if(ret) {
+    lua_pushcfunction(L, ret->func);
+    return 1;
+  }
+  else {
+    return wrap_tk_object_t_get_prop(L);
+  }
+}
+
+static void object_hash_t_init(lua_State* L) {
+  static const struct luaL_Reg static_funcs[] = {
+    {"create", wrap_object_hash_create},
+    {"create_ex", wrap_object_hash_create_ex},
+    {NULL, NULL}
+  };
+
+  static const struct luaL_Reg index_funcs[] = {
+    {"__index", wrap_object_hash_t_get_prop},
+    {"__newindex", wrap_object_hash_t_set_prop},
+    {NULL, NULL}
+  };
+
+  luaL_newmetatable(L, "awtk.object_hash_t");
+  lua_pushstring(L, "__index");
+  lua_pushvalue(L, -2);
+  lua_settable(L, -3);
+  luaL_openlib(L, NULL, index_funcs, 0);
+  luaL_openlib(L, "ObjectHash", static_funcs, 0);
+  lua_settop(L, 0);
+}
 static int wrap_timer_info_cast(lua_State* L) {
   timer_info_t* ret = NULL;
   timer_info_t* timer = (timer_info_t*)tk_checkudata(L, 1, "timer_info_t");
@@ -24886,6 +25125,7 @@ void luaL_openawtk(lua_State* L) {
   cmd_exec_event_t_init(L);
   value_change_event_t_init(L);
   log_message_event_t_init(L);
+  named_value_hash_t_init(L);
   app_bar_t_init(L);
   button_group_t_init(L);
   button_t_init(L);
@@ -24922,6 +25162,7 @@ void luaL_openawtk(lua_State* L) {
   idle_info_t_init(L);
   object_array_t_init(L);
   object_default_t_init(L);
+  object_hash_t_init(L);
   timer_info_t_init(L);
   calibration_win_t_init(L);
   combo_box_t_init(L);

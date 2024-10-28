@@ -102,12 +102,13 @@ $(function(){ initResizable(false); });
  <div class="center">
   <img src="classawtk_1_1_t_object.png" usemap="#awtk.TObject_map" alt=""/>
   <map id="awtk.TObject_map" name="awtk.TObject_map">
-<area href="classawtk_1_1_t_emitter.html" alt="awtk.TEmitter" shape="rect" coords="276,0,404,24"/>
+<area href="classawtk_1_1_t_emitter.html" alt="awtk.TEmitter" shape="rect" coords="345,0,473,24"/>
 <area href="classawtk_1_1_t_idle_info.html" alt="awtk.TIdleInfo" shape="rect" coords="0,112,128,136"/>
 <area href="classawtk_1_1_t_native_window.html" alt="awtk.TNativeWindow" shape="rect" coords="138,112,266,136"/>
 <area href="classawtk_1_1_t_object_array.html" alt="awtk.TObjectArray" shape="rect" coords="276,112,404,136"/>
 <area href="classawtk_1_1_t_object_default.html" alt="awtk.TObjectDefault" shape="rect" coords="414,112,542,136"/>
-<area href="classawtk_1_1_t_timer_info.html" alt="awtk.TTimerInfo" shape="rect" coords="552,112,680,136"/>
+<area href="classawtk_1_1_t_object_hash.html" alt="awtk.TObjectHash" shape="rect" coords="552,112,680,136"/>
+<area href="classawtk_1_1_t_timer_info.html" alt="awtk.TTimerInfo" shape="rect" coords="690,112,818,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -237,6 +238,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a12342269f55db44c04fb5054db700d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc1bb0784e844347d6ba64dbf98ee57c" id="r_abc1bb0784e844347d6ba64dbf98ee57c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc1bb0784e844347d6ba64dbf98ee57c">setPropUint64</a> (String name, long value)</td></tr>
 <tr class="separator:abc1bb0784e844347d6ba64dbf98ee57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e6d1119492c0c18c542788bbf096d2e" id="r_a2e6d1119492c0c18c542788bbf096d2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e6d1119492c0c18c542788bbf096d2e">clearProps</a> ()</td></tr>
+<tr class="separator:a2e6d1119492c0c18c542788bbf096d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc23c7895bb580b17887fdc0794ba823" id="r_adc23c7895bb580b17887fdc0794ba823"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc23c7895bb580b17887fdc0794ba823">getRefCount</a> ()</td></tr>
 <tr class="separator:adc23c7895bb580b17887fdc0794ba823"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ca3dbf7c9d3c1d853d6005d032d8c41" id="r_a6ca3dbf7c9d3c1d853d6005d032d8c41"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ca3dbf7c9d3c1d853d6005d032d8c41">getName</a> ()</td></tr>
@@ -423,7 +426,36 @@ Public 成员函数</h2></td></tr>
 
 <p>重载 <a class="el" href="classawtk_1_1_t_emitter.html#a22052354ddd6d3e7a5ae7ce0fa3654a6">awtk.TEmitter</a> .</p>
 
-<p>被 <a class="el" href="classawtk_1_1_t_idle_info.html#a15abd94e89d5c5ae6bd9728649310044">awtk.TIdleInfo</a>, <a class="el" href="classawtk_1_1_t_native_window.html#a738923f6f493dd55695092f6f3317947">awtk.TNativeWindow</a>, <a class="el" href="classawtk_1_1_t_object_array.html#aff10e70b85effef310cceb64edc006f1">awtk.TObjectArray</a>, <a class="el" href="classawtk_1_1_t_object_default.html#a540eeea212bef35e9e565a08cb75c9b2">awtk.TObjectDefault</a> , 以及 <a class="el" href="classawtk_1_1_t_timer_info.html#abf4ef80c28924deb3d761f9de5138e3d">awtk.TTimerInfo</a> 重载.</p>
+<p>被 <a class="el" href="classawtk_1_1_t_idle_info.html#a15abd94e89d5c5ae6bd9728649310044">awtk.TIdleInfo</a>, <a class="el" href="classawtk_1_1_t_native_window.html#a738923f6f493dd55695092f6f3317947">awtk.TNativeWindow</a>, <a class="el" href="classawtk_1_1_t_object_array.html#aff10e70b85effef310cceb64edc006f1">awtk.TObjectArray</a>, <a class="el" href="classawtk_1_1_t_object_default.html#a540eeea212bef35e9e565a08cb75c9b2">awtk.TObjectDefault</a>, <a class="el" href="classawtk_1_1_t_object_hash.html#a25102d0b775436ce6572c98b6d5372ff">awtk.TObjectHash</a> , 以及 <a class="el" href="classawtk_1_1_t_timer_info.html#abf4ef80c28924deb3d761f9de5138e3d">awtk.TTimerInfo</a> 重载.</p>
+
+</div>
+</div>
+<a id="a2e6d1119492c0c18c542788bbf096d2e" name="a2e6d1119492c0c18c542788bbf096d2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e6d1119492c0c18c542788bbf096d2e">&#9670;&#160;</a></span>clearProps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TObject.clearProps </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>清除全部属性。</p>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+<p>被 <a class="el" href="classawtk_1_1_t_object_array.html#a780e03d1ec83824bdaed7da8a9e53dc2">awtk.TObjectArray</a> , 以及 <a class="el" href="classawtk_1_1_t_object_default.html#ad5c9568769640872f6b094b2605f8e2d">awtk.TObjectDefault</a> 重载.</p>
 
 </div>
 </div>

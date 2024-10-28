@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[awtk.ts:23730](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L23730)
+[awtk.ts:23802](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L23802)
 
 ## Properties
 
@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[awtk.ts:23729](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L23729)
+[awtk.ts:23801](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L23801)
 
 ## Accessors
 
@@ -62,7 +62,7 @@
 
 #### Defined in
 
-[awtk.ts:23751](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L23751)
+[awtk.ts:23823](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L23823)
 
 ***
 
@@ -82,7 +82,7 @@
 
 #### Defined in
 
-[awtk.ts:5765](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5765)
+[awtk.ts:5814](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5814)
 
 ***
 
@@ -102,7 +102,7 @@
 
 #### Defined in
 
-[awtk.ts:5783](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5783)
+[awtk.ts:5832](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5832)
 
 ***
 
@@ -122,7 +122,7 @@
 
 #### Defined in
 
-[awtk.ts:5774](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5774)
+[awtk.ts:5823](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5823)
 
 ***
 
@@ -142,7 +142,7 @@
 
 #### Defined in
 
-[awtk.ts:5756](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5756)
+[awtk.ts:5805](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5805)
 
 ***
 
@@ -158,7 +158,7 @@
 
 #### Defined in
 
-[awtk.ts:23760](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L23760)
+[awtk.ts:23832](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L23832)
 
 ## Methods
 
@@ -182,7 +182,7 @@
 
 #### Defined in
 
-[awtk.ts:5747](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5747)
+[awtk.ts:5796](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5796)
 
 ***
 
@@ -204,7 +204,7 @@
 
 #### Defined in
 
-[awtk.ts:5720](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5720)
+[awtk.ts:5769](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5769)
 
 ***
 
@@ -232,7 +232,7 @@ event对象。
 
 #### Defined in
 
-[awtk.ts:23742](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L23742)
+[awtk.ts:23814](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L23814)
 
 ***
 
@@ -262,7 +262,7 @@ event对象。
 
 #### Defined in
 
-[awtk.ts:5734](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5734)
+[awtk.ts:5783](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5783)
 
 ***
 
@@ -270,7 +270,7 @@ event对象。
 
 > `static` **fromName**(`name`): `number`
 
-将事件名转换成事件的值。
+将事件名转换成事件的类型。
 
 #### Parameters
 
@@ -282,7 +282,7 @@ event对象。
 
 `number`
 
-返回事件的值。
+返回事件的类型。
 
 #### Inherited from
 
@@ -290,4 +290,64 @@ event对象。
 
 #### Defined in
 
-[awtk.ts:5695](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5695)
+[awtk.ts:5719](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5719)
+
+***
+
+### registerCustomName()
+
+> `static` **registerCustomName**(`event_type`, `name`): [`TRet`](../enumerations/TRet.md)
+
+给事件注册名称。
+
+#### Parameters
+
+• **event\_type**: `number`
+
+事件类型。
+
+• **name**: `string`
+
+事件名。
+
+#### Returns
+
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
+
+#### Inherited from
+
+[`TEvent`](TEvent.md).[`registerCustomName`](TEvent.md#registercustomname)
+
+#### Defined in
+
+[awtk.ts:5732](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5732)
+
+***
+
+### unregisterCustomName()
+
+> `static` **unregisterCustomName**(`name`): [`TRet`](../enumerations/TRet.md)
+
+注销事件名称。
+
+#### Parameters
+
+• **name**: `string`
+
+事件名。
+
+#### Returns
+
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
+
+#### Inherited from
+
+[`TEvent`](TEvent.md).[`unregisterCustomName`](TEvent.md#unregistercustomname)
+
+#### Defined in
+
+[awtk.ts:5744](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5744)

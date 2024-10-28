@@ -367,6 +367,10 @@
    return object_set_prop_uint64(((object_t*)(this->nativeObj)), name, value);
  }
 
+ ret_t TObject::ClearProps()  {
+   return object_clear_props(((object_t*)(this->nativeObj)));
+ }
+
  int32_t TObject::GetRefCount() const {
    return ((object_t*)(this->nativeObj))->ref_count;
  }
@@ -705,6 +709,14 @@
 
  int32_t TEvent::FromName(const char* name)  {
     return event_from_name(name);
+ }
+
+ ret_t TEvent::RegisterCustomName(int32_t event_type, const char* name)  {
+   return event_register_custom_name(event_type, name);
+ }
+
+ ret_t TEvent::UnregisterCustomName(const char* name)  {
+   return event_unregister_custom_name(name);
  }
 
  uint32_t TEvent::GetType()  {
@@ -2249,6 +2261,14 @@
 
  const char* TUiLoadEvent::GetName() const {
    return ((ui_load_event_t*)(this->nativeObj))->name;
+ }
+
+ ret_t TFontManager::SetStandardFontSize(bool is_standard)  {
+   return font_manager_set_standard_font_size(((font_manager_t*)(this->nativeObj)), is_standard);
+ }
+
+ bool TFontManager::GetStandardFontSize()  {
+    return font_manager_get_standard_font_size(((font_manager_t*)(this->nativeObj)));
  }
 
  ret_t TFontManager::UnloadFont(const char* name, font_size_t size)  {
@@ -4247,6 +4267,26 @@
    return ((cmd_exec_event_t*)(this->nativeObj))->can_exec;
  }
 
+ TNamedValueHash TNamedValueHash::Create()  {
+   return TNamedValueHash((named_value_t*)(named_value_hash_create()));
+ }
+
+ ret_t TNamedValueHash::SetName(const char* name)  {
+   return named_value_hash_set_name(((named_value_hash_t*)(this->nativeObj)), name);
+ }
+
+ ret_t TNamedValueHash::Destroy()  {
+   return named_value_hash_destroy(((named_value_hash_t*)(this->nativeObj)));
+ }
+
+ TNamedValueHash TNamedValueHash::Clone()  {
+   return TNamedValueHash((named_value_t*)(named_value_hash_clone(((named_value_hash_t*)(this->nativeObj)))));
+ }
+
+ uint64_t TNamedValueHash::GetHashFromStr(const char* str)  {
+    return named_value_hash_get_hash_from_str(str);
+ }
+
  TWidget TAppBar::Create(TWidget& parent, xy_t x, xy_t y, wh_t w, wh_t h)  {
    return TAppBar((widget_t*)(app_bar_create(((widget_t*)(parent.nativeObj)), x, y, w, h)));
  }
@@ -5221,6 +5261,18 @@
 
  ret_t TObjectDefault::SetNameCaseInsensitive(bool name_case_insensitive)  {
    return object_default_set_name_case_insensitive(((object_t*)(this->nativeObj)), name_case_insensitive);
+ }
+
+ TObject TObjectHash::Create()  {
+   return TObjectHash((emitter_t*)(object_hash_create()));
+ }
+
+ TObject TObjectHash::CreateEx(bool enable_path)  {
+   return TObjectHash((emitter_t*)(object_hash_create_ex(enable_path)));
+ }
+
+ ret_t TObjectHash::SetKeepPropType(bool keep_prop_type)  {
+   return object_hash_set_keep_prop_type(((object_t*)(this->nativeObj)), keep_prop_type);
  }
 
  void* TTimerInfo::GetCtx() const {

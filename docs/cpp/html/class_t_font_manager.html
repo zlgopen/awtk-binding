@@ -112,6 +112,10 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a27081b069f54aa395f03d67d760582d7" id="r_a27081b069f54aa395f03d67d760582d7"><td class="memItemLeft" align="right" valign="top"><a id="a27081b069f54aa395f03d67d760582d7" name="a27081b069f54aa395f03d67d760582d7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TFontManager</b> (const font_manager_t *nativeObj)</td></tr>
 <tr class="separator:a27081b069f54aa395f03d67d760582d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b3a2932d8278a08adfd5525a78a2e68" id="r_a0b3a2932d8278a08adfd5525a78a2e68"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b3a2932d8278a08adfd5525a78a2e68">SetStandardFontSize</a> (bool is_standard)</td></tr>
+<tr class="separator:a0b3a2932d8278a08adfd5525a78a2e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad73331695bdaf3ffbaec24d17dd67381" id="r_ad73331695bdaf3ffbaec24d17dd67381"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad73331695bdaf3ffbaec24d17dd67381">GetStandardFontSize</a> ()</td></tr>
+<tr class="separator:ad73331695bdaf3ffbaec24d17dd67381"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bfab6af70f1362d3b6abaa38af177f0" id="r_a8bfab6af70f1362d3b6abaa38af177f0"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bfab6af70f1362d3b6abaa38af177f0">UnloadFont</a> (const char *name, font_size_t size)</td></tr>
 <tr class="separator:a8bfab6af70f1362d3b6abaa38af177f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4cffca713fa0189985928ba83c86cdb" id="r_aa4cffca713fa0189985928ba83c86cdb"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4cffca713fa0189985928ba83c86cdb">ShrinkCache</a> (uint32_t cache_size)</td></tr>
@@ -174,6 +178,50 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>字体管理器，负责字体的加载和缓存管理。 (如果使用nanovg，字体由nanovg内部管理) </p>
 </div><h2 class="groupheader">成员函数说明</h2>
+<a id="ad73331695bdaf3ffbaec24d17dd67381" name="ad73331695bdaf3ffbaec24d17dd67381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad73331695bdaf3ffbaec24d17dd67381">&#9670;&#160;</a></span>GetStandardFontSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TFontManager::GetStandardFontSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取是否使用标准字号</p>
+<dl class="section return"><dt>返回</dt><dd>返回TRUE表示使用标准字号，否则表示不是。 </dd></dl>
+
+</div>
+</div>
+<a id="a0b3a2932d8278a08adfd5525a78a2e68" name="a0b3a2932d8278a08adfd5525a78a2e68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b3a2932d8278a08adfd5525a78a2e68">&#9670;&#160;</a></span>SetStandardFontSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TFontManager::SetStandardFontSize </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>is_standard</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置是否使用标准字号</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is_standard</td><td>是否使用标准字号</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
 <a id="aa4cffca713fa0189985928ba83c86cdb" name="aa4cffca713fa0189985928ba83c86cdb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4cffca713fa0189985928ba83c86cdb">&#9670;&#160;</a></span>ShrinkCache()</h2>
 

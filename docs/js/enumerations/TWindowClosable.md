@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[awtk.ts:10434](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10434)
+[awtk.ts:10483](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10483)
 
 ***
 
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[awtk.ts:10428](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10428)
+[awtk.ts:10477](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10477)
 
 ***
 
@@ -42,4 +42,4 @@
 
 #### Defined in
 
-[awtk.ts:10422](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10422)
+[awtk.ts:10471](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10471)

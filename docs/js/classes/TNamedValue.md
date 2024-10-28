@@ -8,6 +8,10 @@
 
 命名的值。
 
+## Extended by
+
+- [`TNamedValueHash`](TNamedValueHash.md)
+
 ## Constructors
 
 ### new TNamedValue()
@@ -24,7 +28,7 @@
 
 #### Defined in
 
-[awtk.ts:14384](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L14384)
+[awtk.ts:14433](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L14433)
 
 ## Properties
 
@@ -34,7 +38,7 @@
 
 #### Defined in
 
-[awtk.ts:14383](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L14383)
+[awtk.ts:14432](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L14432)
 
 ## Accessors
 
@@ -56,7 +60,7 @@
 
 #### Defined in
 
-[awtk.ts:14462](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L14462)
+[awtk.ts:14511](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L14511)
 
 ## Methods
 
@@ -74,7 +78,7 @@
 
 #### Defined in
 
-[awtk.ts:14453](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L14453)
+[awtk.ts:14502](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L14502)
 
 ***
 
@@ -92,7 +96,7 @@
 
 #### Defined in
 
-[awtk.ts:14442](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L14442)
+[awtk.ts:14491](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L14491)
 
 ***
 
@@ -116,7 +120,7 @@
 
 #### Defined in
 
-[awtk.ts:14419](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L14419)
+[awtk.ts:14468](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L14468)
 
 ***
 
@@ -140,7 +144,7 @@
 
 #### Defined in
 
-[awtk.ts:14431](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L14431)
+[awtk.ts:14480](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L14480)
 
 ***
 
@@ -164,7 +168,7 @@ named_value对象。
 
 #### Defined in
 
-[awtk.ts:14407](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L14407)
+[awtk.ts:14456](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L14456)
 
 ***
 
@@ -182,4 +186,4 @@ named_value对象。
 
 #### Defined in
 
-[awtk.ts:14395](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L14395)
+[awtk.ts:14444](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L14444)

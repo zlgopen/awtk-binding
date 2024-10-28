@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[awtk.ts:5547](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5547)
+[awtk.ts:5571](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5571)
 
 ***
 
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[awtk.ts:5158](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5158)
+[awtk.ts:5182](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5182)
 
 ***
 
@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[awtk.ts:5200](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5200)
+[awtk.ts:5224](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5224)
 
 ***
 
@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[awtk.ts:5194](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5194)
+[awtk.ts:5218](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5218)
 
 ***
 
@@ -66,7 +66,7 @@
 
 #### Defined in
 
-[awtk.ts:5188](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5188)
+[awtk.ts:5212](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5212)
 
 ***
 
@@ -78,7 +78,7 @@
 
 #### Defined in
 
-[awtk.ts:5176](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5176)
+[awtk.ts:5200](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5200)
 
 ***
 
@@ -90,7 +90,7 @@
 
 #### Defined in
 
-[awtk.ts:5182](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5182)
+[awtk.ts:5206](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5206)
 
 ***
 
@@ -102,7 +102,7 @@
 
 #### Defined in
 
-[awtk.ts:5493](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5493)
+[awtk.ts:5517](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5517)
 
 ***
 
@@ -114,7 +114,7 @@
 
 #### Defined in
 
-[awtk.ts:5481](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5481)
+[awtk.ts:5505](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5505)
 
 ***
 
@@ -126,7 +126,7 @@
 
 #### Defined in
 
-[awtk.ts:5487](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5487)
+[awtk.ts:5511](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5511)
 
 ***
 
@@ -138,7 +138,7 @@
 
 #### Defined in
 
-[awtk.ts:5152](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5152)
+[awtk.ts:5176](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5176)
 
 ***
 
@@ -150,7 +150,7 @@
 
 #### Defined in
 
-[awtk.ts:5068](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5068)
+[awtk.ts:5092](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5092)
 
 ***
 
@@ -162,7 +162,7 @@
 
 #### Defined in
 
-[awtk.ts:5050](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5050)
+[awtk.ts:5074](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5074)
 
 ***
 
@@ -174,7 +174,7 @@
 
 #### Defined in
 
-[awtk.ts:5607](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5607)
+[awtk.ts:5631](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5631)
 
 ***
 
@@ -186,7 +186,7 @@
 
 #### Defined in
 
-[awtk.ts:5601](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5601)
+[awtk.ts:5625](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5625)
 
 ***
 
@@ -198,7 +198,7 @@
 
 #### Defined in
 
-[awtk.ts:5595](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5595)
+[awtk.ts:5619](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5619)
 
 ***
 
@@ -210,7 +210,7 @@
 
 #### Defined in
 
-[awtk.ts:5511](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5511)
+[awtk.ts:5535](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5535)
 
 ***
 
@@ -222,7 +222,7 @@
 
 #### Defined in
 
-[awtk.ts:5026](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5026)
+[awtk.ts:5050](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5050)
 
 ***
 
@@ -234,7 +234,7 @@
 
 #### Defined in
 
-[awtk.ts:5505](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5505)
+[awtk.ts:5529](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5529)
 
 ***
 
@@ -246,7 +246,7 @@
 
 #### Defined in
 
-[awtk.ts:5649](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5649)
+[awtk.ts:5673](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5673)
 
 ***
 
@@ -258,7 +258,7 @@
 
 #### Defined in
 
-[awtk.ts:5637](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5637)
+[awtk.ts:5661](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5661)
 
 ***
 
@@ -270,7 +270,7 @@
 
 #### Defined in
 
-[awtk.ts:5056](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5056)
+[awtk.ts:5080](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5080)
 
 ***
 
@@ -282,7 +282,7 @@
 
 #### Defined in
 
-[awtk.ts:5348](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5348)
+[awtk.ts:5372](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5372)
 
 ***
 
@@ -294,7 +294,7 @@
 
 #### Defined in
 
-[awtk.ts:5354](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5354)
+[awtk.ts:5378](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5378)
 
 ***
 
@@ -306,7 +306,7 @@
 
 #### Defined in
 
-[awtk.ts:5342](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5342)
+[awtk.ts:5366](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5366)
 
 ***
 
@@ -318,7 +318,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5529](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5529)
+[awtk.ts:5553](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5553)
 
 ***
 
@@ -330,7 +330,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5643](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5643)
+[awtk.ts:5667](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5667)
 
 ***
 
@@ -342,7 +342,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5062](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5062)
+[awtk.ts:5086](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5086)
 
 ***
 
@@ -354,7 +354,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5330](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5330)
+[awtk.ts:5354](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5354)
 
 ***
 
@@ -366,7 +366,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5336](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5336)
+[awtk.ts:5360](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5360)
 
 ***
 
@@ -378,7 +378,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5288](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5288)
+[awtk.ts:5312](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5312)
 
 ***
 
@@ -390,7 +390,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5282](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5282)
+[awtk.ts:5306](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5306)
 
 ***
 
@@ -402,7 +402,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5276](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5276)
+[awtk.ts:5300](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5300)
 
 ***
 
@@ -414,7 +414,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5324](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5324)
+[awtk.ts:5348](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5348)
 
 ***
 
@@ -426,7 +426,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5294](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5294)
+[awtk.ts:5318](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5318)
 
 ***
 
@@ -438,7 +438,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5306](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5306)
+[awtk.ts:5330](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5330)
 
 ***
 
@@ -450,7 +450,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5300](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5300)
+[awtk.ts:5324](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5324)
 
 ***
 
@@ -462,7 +462,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5312](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5312)
+[awtk.ts:5336](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5336)
 
 ***
 
@@ -474,7 +474,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5318](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5318)
+[awtk.ts:5342](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5342)
 
 ***
 
@@ -486,7 +486,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5264](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5264)
+[awtk.ts:5288](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5288)
 
 ***
 
@@ -498,7 +498,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5270](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5270)
+[awtk.ts:5294](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5294)
 
 ***
 
@@ -510,7 +510,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5619](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5619)
+[awtk.ts:5643](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5643)
 
 ***
 
@@ -522,7 +522,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5613](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5613)
+[awtk.ts:5637](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5637)
 
 ***
 
@@ -534,7 +534,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5074](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5074)
+[awtk.ts:5098](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5098)
 
 ***
 
@@ -546,7 +546,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5086](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5086)
+[awtk.ts:5110](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5110)
 
 ***
 
@@ -558,7 +558,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5080](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5080)
+[awtk.ts:5104](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5104)
 
 ***
 
@@ -570,7 +570,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5092](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5092)
+[awtk.ts:5116](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5116)
 
 ***
 
@@ -582,7 +582,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5098](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5098)
+[awtk.ts:5122](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5122)
 
 ***
 
@@ -594,7 +594,7 @@ SDL文件拖入事件(drop_file_event_t)。
 
 #### Defined in
 
-[awtk.ts:5104](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5104)
+[awtk.ts:5128](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5128)
 
 ***
 
@@ -606,7 +606,7 @@ locale改变的事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5170](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5170)
+[awtk.ts:5194](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5194)
 
 ***
 
@@ -618,7 +618,7 @@ locale_infos加载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5535](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5535)
+[awtk.ts:5559](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5559)
 
 ***
 
@@ -630,7 +630,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5541](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5541)
+[awtk.ts:5565](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5565)
 
 ***
 
@@ -642,7 +642,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5673](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5673)
+[awtk.ts:5697](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5697)
 
 ***
 
@@ -654,7 +654,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5044](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5044)
+[awtk.ts:5068](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5068)
 
 ***
 
@@ -666,7 +666,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5372](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5372)
+[awtk.ts:5396](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5396)
 
 ***
 
@@ -678,7 +678,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5517](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5517)
+[awtk.ts:5541](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5541)
 
 ***
 
@@ -690,7 +690,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5116](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5116)
+[awtk.ts:5140](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5140)
 
 ***
 
@@ -702,7 +702,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5140](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5140)
+[awtk.ts:5164](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5164)
 
 ***
 
@@ -714,7 +714,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5463](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5463)
+[awtk.ts:5487](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5487)
 
 ***
 
@@ -726,7 +726,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5577](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5577)
+[awtk.ts:5601](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5601)
 
 ***
 
@@ -738,7 +738,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5390](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5390)
+[awtk.ts:5414](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5414)
 
 ***
 
@@ -750,7 +750,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5384](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5384)
+[awtk.ts:5408](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5408)
 
 ***
 
@@ -762,7 +762,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5378](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5378)
+[awtk.ts:5402](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5402)
 
 ***
 
@@ -774,7 +774,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5469](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5469)
+[awtk.ts:5493](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5493)
 
 ***
 
@@ -786,7 +786,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5475](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5475)
+[awtk.ts:5499](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5499)
 
 ***
 
@@ -798,7 +798,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5146](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5146)
+[awtk.ts:5170](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5170)
 
 ***
 
@@ -810,7 +810,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5164](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5164)
+[awtk.ts:5188](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5188)
 
 ***
 
@@ -822,7 +822,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:4972](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4972)
+[awtk.ts:4996](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L4996)
 
 ***
 
@@ -834,7 +834,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5020](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5020)
+[awtk.ts:5044](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5044)
 
 ***
 
@@ -846,7 +846,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:4978](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4978)
+[awtk.ts:5002](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5002)
 
 ***
 
@@ -858,7 +858,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5032](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5032)
+[awtk.ts:5056](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5056)
 
 ***
 
@@ -870,7 +870,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5038](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5038)
+[awtk.ts:5062](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5062)
 
 ***
 
@@ -882,7 +882,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:4984](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4984)
+[awtk.ts:5008](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5008)
 
 ***
 
@@ -894,7 +894,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:4990](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4990)
+[awtk.ts:5014](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5014)
 
 ***
 
@@ -906,7 +906,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:4996](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L4996)
+[awtk.ts:5020](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5020)
 
 ***
 
@@ -918,7 +918,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5002](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5002)
+[awtk.ts:5026](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5026)
 
 ***
 
@@ -930,7 +930,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5631](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5631)
+[awtk.ts:5655](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5655)
 
 ***
 
@@ -942,7 +942,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5625](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5625)
+[awtk.ts:5649](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5649)
 
 ***
 
@@ -954,7 +954,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5589](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5589)
+[awtk.ts:5613](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5613)
 
 ***
 
@@ -966,7 +966,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5583](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5583)
+[awtk.ts:5607](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5607)
 
 ***
 
@@ -978,7 +978,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5252](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5252)
+[awtk.ts:5276](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5276)
 
 ***
 
@@ -991,7 +991,7 @@ locale_infos卸载某个本地化信息(event_t)。
 
 #### Defined in
 
-[awtk.ts:5403](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5403)
+[awtk.ts:5427](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5427)
 
 ***
 
@@ -1003,7 +1003,7 @@ event queue其它请求编号起始值。
 
 #### Defined in
 
-[awtk.ts:5565](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5565)
+[awtk.ts:5589](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5589)
 
 ***
 
@@ -1015,7 +1015,7 @@ Reset(event_t)。
 
 #### Defined in
 
-[awtk.ts:5360](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5360)
+[awtk.ts:5384](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5384)
 
 ***
 
@@ -1027,7 +1027,7 @@ Reset(event_t)。
 
 #### Defined in
 
-[awtk.ts:5128](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5128)
+[awtk.ts:5152](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5152)
 
 ***
 
@@ -1039,7 +1039,7 @@ Reset(event_t)。
 
 #### Defined in
 
-[awtk.ts:5366](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5366)
+[awtk.ts:5390](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5390)
 
 ***
 
@@ -1051,7 +1051,7 @@ scroll view滚动(event_t)。
 
 #### Defined in
 
-[awtk.ts:5451](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5451)
+[awtk.ts:5475](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5475)
 
 ***
 
@@ -1063,7 +1063,7 @@ scroll view结束滚动(event_t)。
 
 #### Defined in
 
-[awtk.ts:5457](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5457)
+[awtk.ts:5481](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5481)
 
 ***
 
@@ -1075,7 +1075,7 @@ scroll view开始滚动(event_t)。
 
 #### Defined in
 
-[awtk.ts:5445](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5445)
+[awtk.ts:5469](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5469)
 
 ***
 
@@ -1087,7 +1087,7 @@ SDL系统事件(system_event_t)。
 
 #### Defined in
 
-[awtk.ts:5523](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5523)
+[awtk.ts:5547](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5547)
 
 ***
 
@@ -1099,7 +1099,7 @@ SDL系统事件(system_event_t)。
 
 #### Defined in
 
-[awtk.ts:5415](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5415)
+[awtk.ts:5439](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5439)
 
 ***
 
@@ -1111,7 +1111,7 @@ SDL系统事件(system_event_t)。
 
 #### Defined in
 
-[awtk.ts:5409](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5409)
+[awtk.ts:5433](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5433)
 
 ***
 
@@ -1123,7 +1123,7 @@ SDL系统事件(system_event_t)。
 
 #### Defined in
 
-[awtk.ts:5499](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5499)
+[awtk.ts:5523](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5523)
 
 ***
 
@@ -1135,7 +1135,7 @@ SDL系统事件(system_event_t)。
 
 #### Defined in
 
-[awtk.ts:5258](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5258)
+[awtk.ts:5282](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5282)
 
 ***
 
@@ -1147,7 +1147,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5559](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5559)
+[awtk.ts:5583](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5583)
 
 ***
 
@@ -1159,7 +1159,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5553](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5553)
+[awtk.ts:5577](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5577)
 
 ***
 
@@ -1171,7 +1171,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5571](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5571)
+[awtk.ts:5595](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5595)
 
 ***
 
@@ -1183,7 +1183,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5661](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5661)
+[awtk.ts:5685](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5685)
 
 ***
 
@@ -1195,7 +1195,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5667](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5667)
+[awtk.ts:5691](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5691)
 
 ***
 
@@ -1207,7 +1207,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5655](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5655)
+[awtk.ts:5679](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5679)
 
 ***
 
@@ -1219,7 +1219,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5008](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5008)
+[awtk.ts:5032](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5032)
 
 ***
 
@@ -1231,7 +1231,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5014](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5014)
+[awtk.ts:5038](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5038)
 
 ***
 
@@ -1243,7 +1243,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5433](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5433)
+[awtk.ts:5457](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5457)
 
 ***
 
@@ -1255,7 +1255,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5396](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5396)
+[awtk.ts:5420](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5420)
 
 ***
 
@@ -1267,7 +1267,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5212](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5212)
+[awtk.ts:5236](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5236)
 
 ***
 
@@ -1279,7 +1279,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5439](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5439)
+[awtk.ts:5463](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5463)
 
 ***
 
@@ -1291,7 +1291,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5427](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5427)
+[awtk.ts:5451](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5451)
 
 ***
 
@@ -1303,7 +1303,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5421](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5421)
+[awtk.ts:5445](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5445)
 
 ***
 
@@ -1315,7 +1315,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5110](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5110)
+[awtk.ts:5134](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5134)
 
 ***
 
@@ -1327,7 +1327,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5134](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5134)
+[awtk.ts:5158](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5158)
 
 ***
 
@@ -1339,7 +1339,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5122](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5122)
+[awtk.ts:5146](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5146)
 
 ***
 
@@ -1351,7 +1351,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5246](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5246)
+[awtk.ts:5270](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5270)
 
 ***
 
@@ -1363,7 +1363,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5206](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5206)
+[awtk.ts:5230](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5230)
 
 ***
 
@@ -1376,7 +1376,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5226](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5226)
+[awtk.ts:5250](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5250)
 
 ***
 
@@ -1389,7 +1389,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5233](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5233)
+[awtk.ts:5257](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5257)
 
 ***
 
@@ -1402,7 +1402,7 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5240](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5240)
+[awtk.ts:5264](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5264)
 
 ***
 
@@ -1415,4 +1415,4 @@ UI加载完成事件(event_t)。
 
 #### Defined in
 
-[awtk.ts:5219](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5219)
+[awtk.ts:5243](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5243)

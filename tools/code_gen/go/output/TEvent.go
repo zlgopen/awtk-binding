@@ -8,6 +8,18 @@ func TEventFromName(name string) int32 {
   return (int32)(C.event_from_name(aname));
 }
 
+func TEventRegisterCustomName(event_type int32, name string) TRet {
+  aname := C.CString(name)
+  defer C.free(unsafe.Pointer(aname))
+  return TRet(C.event_register_custom_name((C.int32_t)(event_type), aname));
+}
+
+func TEventUnregisterCustomName(name string) TRet {
+  aname := C.CString(name)
+  defer C.free(unsafe.Pointer(aname))
+  return TRet(C.event_unregister_custom_name(aname));
+}
+
 func TEventCast(event TEvent) TEvent {
   retObj := TEvent{}
   retObj.handle = unsafe.Pointer(C.event_cast((*C.event_t)(event.handle)))

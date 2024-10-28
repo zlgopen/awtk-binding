@@ -69,7 +69,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:24151](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L24151)
+[awtk.ts:24291](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L24291)
 
 ## Properties
 
@@ -83,7 +83,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:24150](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L24150)
+[awtk.ts:24290](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L24290)
 
 ## Accessors
 
@@ -109,7 +109,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:12544](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12544)
+[awtk.ts:12593](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12593)
 
 ***
 
@@ -138,7 +138,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:12635](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12635)
+[awtk.ts:12684](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12684)
 
 ***
 
@@ -166,7 +166,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:12676](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12676)
+[awtk.ts:12725](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12725)
 
 ***
 
@@ -192,7 +192,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:12557](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12557)
+[awtk.ts:12606](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12606)
 
 ***
 
@@ -217,7 +217,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:24254](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L24254)
+[awtk.ts:24394](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L24394)
 
 ***
 
@@ -239,7 +239,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:24267](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L24267)
+[awtk.ts:24407](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L24407)
 
 ***
 
@@ -265,7 +265,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:12570](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12570)
+[awtk.ts:12619](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12619)
 
 ***
 
@@ -291,7 +291,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:12648](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12648)
+[awtk.ts:12697](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12697)
 
 ***
 
@@ -317,7 +317,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:12609](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12609)
+[awtk.ts:12658](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12658)
 
 ***
 
@@ -337,7 +337,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:12487](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12487)
+[awtk.ts:12536](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12536)
 
 ***
 
@@ -359,7 +359,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:24280](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L24280)
+[awtk.ts:24420](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L24420)
 
 ***
 
@@ -385,7 +385,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:12496](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12496)
+[awtk.ts:12545](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12545)
 
 ***
 
@@ -411,7 +411,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:12661](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12661)
+[awtk.ts:12710](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12710)
 
 ***
 
@@ -431,7 +431,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:12689](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12689)
+[awtk.ts:12738](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12738)
 
 ***
 
@@ -457,7 +457,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:12509](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12509)
+[awtk.ts:12558](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12558)
 
 ***
 
@@ -473,7 +473,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:24293](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L24293)
+[awtk.ts:24433](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L24433)
 
 ***
 
@@ -497,7 +497,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:24238](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L24238)
+[awtk.ts:24378](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L24378)
 
 ***
 
@@ -523,7 +523,7 @@ default](https://github.com/zlgopen/awtk/blob/master/design/default/styles/defau
 
 #### Defined in
 
-[awtk.ts:12596](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12596)
+[awtk.ts:12645](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12645)
 
 ***
 
@@ -543,7 +543,7 @@ style的名称。
 
 #### Defined in
 
-[awtk.ts:12535](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12535)
+[awtk.ts:12584](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12584)
 
 ***
 
@@ -569,7 +569,7 @@ style的名称。
 
 #### Defined in
 
-[awtk.ts:12522](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12522)
+[awtk.ts:12571](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12571)
 
 ***
 
@@ -595,7 +595,7 @@ style的名称。
 
 #### Defined in
 
-[awtk.ts:12583](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12583)
+[awtk.ts:12632](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12632)
 
 ***
 
@@ -615,7 +615,7 @@ style的名称。
 
 #### Defined in
 
-[awtk.ts:12478](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12478)
+[awtk.ts:12527](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12527)
 
 ***
 
@@ -636,7 +636,7 @@ style的名称。
 
 #### Defined in
 
-[awtk.ts:12623](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12623)
+[awtk.ts:12672](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12672)
 
 ***
 
@@ -656,7 +656,7 @@ x坐标(相对于父控件的x坐标)。
 
 #### Defined in
 
-[awtk.ts:12460](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12460)
+[awtk.ts:12509](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12509)
 
 ***
 
@@ -676,7 +676,7 @@ y坐标(相对于父控件的y坐标)。
 
 #### Defined in
 
-[awtk.ts:12469](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12469)
+[awtk.ts:12518](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12518)
 
 ## Methods
 
@@ -704,7 +704,7 @@ y坐标(相对于父控件的y坐标)。
 
 #### Defined in
 
-[awtk.ts:11551](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11551)
+[awtk.ts:11600](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11600)
 
 ***
 
@@ -732,7 +732,7 @@ y坐标(相对于父控件的y坐标)。
 
 #### Defined in
 
-[awtk.ts:12451](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12451)
+[awtk.ts:12500](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12500)
 
 ***
 
@@ -761,7 +761,7 @@ y坐标(相对于父控件的y坐标)。
 
 #### Defined in
 
-[awtk.ts:10972](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10972)
+[awtk.ts:11021](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11021)
 
 ***
 
@@ -790,7 +790,7 @@ y坐标(相对于父控件的y坐标)。
 
 #### Defined in
 
-[awtk.ts:11009](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11009)
+[awtk.ts:11058](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11058)
 
 ***
 
@@ -823,7 +823,7 @@ y坐标(相对于父控件的y坐标)。
 
 #### Defined in
 
-[awtk.ts:11023](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11023)
+[awtk.ts:11072](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11072)
 
 ***
 
@@ -845,7 +845,7 @@ y坐标(相对于父控件的y坐标)。
 
 #### Defined in
 
-[awtk.ts:10856](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10856)
+[awtk.ts:10905](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10905)
 
 ***
 
@@ -867,7 +867,7 @@ y坐标(相对于父控件的y坐标)。
 
 #### Defined in
 
-[awtk.ts:10867](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10867)
+[awtk.ts:10916](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10916)
 
 ***
 
@@ -895,7 +895,7 @@ y坐标(相对于父控件的y坐标)。
 
 #### Defined in
 
-[awtk.ts:11600](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11600)
+[awtk.ts:11649](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11649)
 
 ***
 
@@ -923,7 +923,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12124](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12124)
+[awtk.ts:12173](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12173)
 
 ***
 
@@ -945,7 +945,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:10834](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10834)
+[awtk.ts:10883](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10883)
 
 ***
 
@@ -967,7 +967,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:10845](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10845)
+[awtk.ts:10894](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10894)
 
 ***
 
@@ -989,7 +989,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:10754](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10754)
+[awtk.ts:10803](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10803)
 
 ***
 
@@ -1021,7 +1021,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11331](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11331)
+[awtk.ts:11380](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11380)
 
 ***
 
@@ -1045,7 +1045,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12161](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12161)
+[awtk.ts:12210](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12210)
 
 ***
 
@@ -1078,7 +1078,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11417](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11417)
+[awtk.ts:11466](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11466)
 
 ***
 
@@ -1102,7 +1102,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12174](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12174)
+[awtk.ts:12223](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12223)
 
 ***
 
@@ -1124,7 +1124,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11539](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11539)
+[awtk.ts:11588](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11588)
 
 ***
 
@@ -1152,7 +1152,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12250](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12250)
+[awtk.ts:12299](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12299)
 
 ***
 
@@ -1180,7 +1180,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12238](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12238)
+[awtk.ts:12287](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12287)
 
 ***
 
@@ -1208,7 +1208,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12136](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12136)
+[awtk.ts:12185](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12185)
 
 ***
 
@@ -1244,7 +1244,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12212](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12212)
+[awtk.ts:12261](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12261)
 
 ***
 
@@ -1280,7 +1280,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12226](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12226)
+[awtk.ts:12275](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12275)
 
 ***
 
@@ -1308,7 +1308,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:10778](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10778)
+[awtk.ts:10827](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10827)
 
 ***
 
@@ -1336,7 +1336,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:10790](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10790)
+[awtk.ts:10839](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10839)
 
 ***
 
@@ -1360,7 +1360,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12307](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12307)
+[awtk.ts:12356](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12356)
 
 ***
 
@@ -1384,7 +1384,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12320](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12320)
+[awtk.ts:12369](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12369)
 
 ***
 
@@ -1416,7 +1416,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12079](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12079)
+[awtk.ts:12128](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12128)
 
 ***
 
@@ -1438,7 +1438,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11184](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11184)
+[awtk.ts:11233](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11233)
 
 ***
 
@@ -1466,7 +1466,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:10766](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10766)
+[awtk.ts:10815](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10815)
 
 ***
 
@@ -1488,7 +1488,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11162](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11162)
+[awtk.ts:11211](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11211)
 
 ***
 
@@ -1510,7 +1510,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11239](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11239)
+[awtk.ts:11288](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11288)
 
 ***
 
@@ -1532,7 +1532,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11173](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11173)
+[awtk.ts:11222](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11222)
 
 ***
 
@@ -1554,7 +1554,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11206](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11206)
+[awtk.ts:11255](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11255)
 
 ***
 
@@ -1576,7 +1576,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:10801](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10801)
+[awtk.ts:10850](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10850)
 
 ***
 
@@ -1598,7 +1598,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:10812](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10812)
+[awtk.ts:10861](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10861)
 
 ***
 
@@ -1630,7 +1630,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11716](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11716)
+[awtk.ts:11765](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11765)
 
 ***
 
@@ -1662,7 +1662,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11871](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11871)
+[awtk.ts:11920](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11920)
 
 ***
 
@@ -1694,7 +1694,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11819](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11819)
+[awtk.ts:11868](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11868)
 
 ***
 
@@ -1726,7 +1726,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11845](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11845)
+[awtk.ts:11894](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11894)
 
 ***
 
@@ -1754,7 +1754,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11793](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11793)
+[awtk.ts:11842](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11842)
 
 ***
 
@@ -1786,7 +1786,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11768](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11768)
+[awtk.ts:11817](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11817)
 
 ***
 
@@ -1808,7 +1808,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11217](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11217)
+[awtk.ts:11266](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11266)
 
 ***
 
@@ -1840,7 +1840,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12333](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12333)
+[awtk.ts:12382](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12382)
 
 ***
 
@@ -1862,7 +1862,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12261](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12261)
+[awtk.ts:12310](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12310)
 
 ***
 
@@ -1887,7 +1887,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11255](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11255)
+[awtk.ts:11304](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11304)
 
 ***
 
@@ -1909,7 +1909,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11290](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11290)
+[awtk.ts:11339](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11339)
 
 ***
 
@@ -1931,7 +1931,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12112](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12112)
+[awtk.ts:12161](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12161)
 
 ***
 
@@ -1953,7 +1953,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:10946](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10946)
+[awtk.ts:10995](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10995)
 
 ***
 
@@ -1975,7 +1975,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:10983](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10983)
+[awtk.ts:11032](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11032)
 
 ***
 
@@ -1997,7 +1997,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11228](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11228)
+[awtk.ts:11277](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11277)
 
 ***
 
@@ -2019,7 +2019,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12090](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12090)
+[awtk.ts:12139](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12139)
 
 ***
 
@@ -2041,7 +2041,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12101](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12101)
+[awtk.ts:12150](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12150)
 
 ***
 
@@ -2063,7 +2063,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11195](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11195)
+[awtk.ts:11244](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11244)
 
 ***
 
@@ -2085,7 +2085,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11058](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11058)
+[awtk.ts:11107](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11107)
 
 ***
 
@@ -2107,7 +2107,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:10823](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10823)
+[awtk.ts:10872](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10872)
 
 ***
 
@@ -2139,7 +2139,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11576](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11576)
+[awtk.ts:11625](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11625)
 
 ***
 
@@ -2167,7 +2167,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11703](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11703)
+[awtk.ts:11752](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11752)
 
 ***
 
@@ -2189,7 +2189,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12005](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12005)
+[awtk.ts:12054](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12054)
 
 ***
 
@@ -2211,7 +2211,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12055](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12055)
+[awtk.ts:12104](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12104)
 
 ***
 
@@ -2233,7 +2233,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11972](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11972)
+[awtk.ts:12021](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12021)
 
 ***
 
@@ -2261,7 +2261,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11917](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11917)
+[awtk.ts:11966](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11966)
 
 ***
 
@@ -2283,7 +2283,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11961](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11961)
+[awtk.ts:12010](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12010)
 
 ***
 
@@ -2309,7 +2309,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12044](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12044)
+[awtk.ts:12093](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12093)
 
 ***
 
@@ -2331,7 +2331,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11950](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11950)
+[awtk.ts:11999](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11999)
 
 ***
 
@@ -2353,7 +2353,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12016](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12016)
+[awtk.ts:12065](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12065)
 
 ***
 
@@ -2375,7 +2375,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:12027](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12027)
+[awtk.ts:12076](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12076)
 
 ***
 
@@ -2397,7 +2397,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11994](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11994)
+[awtk.ts:12043](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12043)
 
 ***
 
@@ -2425,7 +2425,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11905](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11905)
+[awtk.ts:11954](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11954)
 
 ***
 
@@ -2447,7 +2447,7 @@ clone新控件的parent对象。
 
 #### Defined in
 
-[awtk.ts:11983](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11983)
+[awtk.ts:12032](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12032)
 
 ***
 
@@ -2479,7 +2479,7 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 #### Defined in
 
-[awtk.ts:11036](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11036)
+[awtk.ts:11085](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11085)
 
 ***
 
@@ -2501,7 +2501,7 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 #### Defined in
 
-[awtk.ts:11047](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11047)
+[awtk.ts:11096](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11096)
 
 ***
 
@@ -2523,7 +2523,7 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 #### Defined in
 
-[awtk.ts:11939](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11939)
+[awtk.ts:11988](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11988)
 
 ***
 
@@ -2545,7 +2545,7 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 #### Defined in
 
-[awtk.ts:11928](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11928)
+[awtk.ts:11977](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11977)
 
 ***
 
@@ -2567,7 +2567,7 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 #### Defined in
 
-[awtk.ts:11893](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11893)
+[awtk.ts:11942](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11942)
 
 ***
 
@@ -2589,7 +2589,7 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 #### Defined in
 
-[awtk.ts:12066](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12066)
+[awtk.ts:12115](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12115)
 
 ***
 
@@ -2611,7 +2611,7 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 #### Defined in
 
-[awtk.ts:11882](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11882)
+[awtk.ts:11931](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11931)
 
 ***
 
@@ -2633,7 +2633,7 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 #### Defined in
 
-[awtk.ts:12344](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12344)
+[awtk.ts:12393](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12393)
 
 ***
 
@@ -2665,7 +2665,7 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 #### Defined in
 
-[awtk.ts:11613](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11613)
+[awtk.ts:11662](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11662)
 
 ***
 
@@ -2697,7 +2697,7 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 #### Defined in
 
-[awtk.ts:11626](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11626)
+[awtk.ts:11675](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11675)
 
 ***
 
@@ -2729,7 +2729,7 @@ y坐标
 
 #### Defined in
 
-[awtk.ts:10880](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10880)
+[awtk.ts:10929](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10929)
 
 ***
 
@@ -2769,7 +2769,7 @@ y坐标
 
 #### Defined in
 
-[awtk.ts:10919](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10919)
+[awtk.ts:10968](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10968)
 
 ***
 
@@ -2813,7 +2813,7 @@ y坐标
 
 #### Defined in
 
-[awtk.ts:10935](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10935)
+[awtk.ts:10984](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10984)
 
 ***
 
@@ -2835,7 +2835,7 @@ y坐标
 
 #### Defined in
 
-[awtk.ts:10891](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10891)
+[awtk.ts:10940](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10940)
 
 ***
 
@@ -2863,7 +2863,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11691](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11691)
+[awtk.ts:11740](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11740)
 
 ***
 
@@ -2900,7 +2900,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11679](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11679)
+[awtk.ts:11728](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11728)
 
 ***
 
@@ -2933,7 +2933,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11383](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11383)
+[awtk.ts:11432](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11432)
 
 ***
 
@@ -2961,7 +2961,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11563](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11563)
+[awtk.ts:11612](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11612)
 
 ***
 
@@ -2993,7 +2993,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:10904](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10904)
+[awtk.ts:10953](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L10953)
 
 ***
 
@@ -3021,7 +3021,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11588](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11588)
+[awtk.ts:11637](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11637)
 
 ***
 
@@ -3050,7 +3050,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11315](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11315)
+[awtk.ts:11364](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11364)
 
 ***
 
@@ -3087,7 +3087,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11366](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11366)
+[awtk.ts:11415](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11415)
 
 ***
 
@@ -3109,7 +3109,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:12294](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12294)
+[awtk.ts:12343](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12343)
 
 ***
 
@@ -3137,7 +3137,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11453](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11453)
+[awtk.ts:11502](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11502)
 
 ***
 
@@ -3170,7 +3170,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11109](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11109)
+[awtk.ts:11158](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11158)
 
 ***
 
@@ -3207,7 +3207,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11124](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11124)
+[awtk.ts:11173](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11173)
 
 ***
 
@@ -3244,7 +3244,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11139](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11139)
+[awtk.ts:11188](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11188)
 
 ***
 
@@ -3273,7 +3273,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:12370](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12370)
+[awtk.ts:12419](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12419)
 
 ***
 
@@ -3301,7 +3301,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11528](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11528)
+[awtk.ts:11577](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11577)
 
 ***
 
@@ -3329,7 +3329,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11429](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11429)
+[awtk.ts:11478](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11478)
 
 ***
 
@@ -3353,7 +3353,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:24215](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L24215)
+[awtk.ts:24355](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L24355)
 
 ***
 
@@ -3377,7 +3377,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:24227](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L24227)
+[awtk.ts:24367](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L24367)
 
 ***
 
@@ -3405,7 +3405,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11441](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11441)
+[awtk.ts:11490](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11490)
 
 ***
 
@@ -3434,7 +3434,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11466](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11466)
+[awtk.ts:11515](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11515)
 
 ***
 
@@ -3462,7 +3462,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11490](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11490)
+[awtk.ts:11539](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11539)
 
 ***
 
@@ -3490,7 +3490,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11478](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11478)
+[awtk.ts:11527](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11527)
 
 ***
 
@@ -3514,7 +3514,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:24203](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L24203)
+[awtk.ts:24343](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L24343)
 
 ***
 
@@ -3542,7 +3542,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11267](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11267)
+[awtk.ts:11316](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11316)
 
 ***
 
@@ -3572,7 +3572,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11516](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11516)
+[awtk.ts:11565](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11565)
 
 ***
 
@@ -3600,7 +3600,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11302](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11302)
+[awtk.ts:11351](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11351)
 
 ***
 
@@ -3632,7 +3632,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11729](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11729)
+[awtk.ts:11778](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11778)
 
 ***
 
@@ -3664,7 +3664,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11858](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11858)
+[awtk.ts:11907](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11907)
 
 ***
 
@@ -3696,7 +3696,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11806](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11806)
+[awtk.ts:11855](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11855)
 
 ***
 
@@ -3728,7 +3728,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11832](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11832)
+[awtk.ts:11881](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11881)
 
 ***
 
@@ -3760,7 +3760,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11781](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11781)
+[awtk.ts:11830](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11830)
 
 ***
 
@@ -3792,7 +3792,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11755](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11755)
+[awtk.ts:11804](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11804)
 
 ***
 
@@ -3821,7 +3821,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:11742](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11742)
+[awtk.ts:11791](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11791)
 
 ***
 
@@ -3845,7 +3845,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:24191](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L24191)
+[awtk.ts:24331](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L24331)
 
 ***
 
@@ -3874,7 +3874,7 @@ widget_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:12357](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12357)
+[awtk.ts:12406](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12406)
 
 ***
 
@@ -3915,7 +3915,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:12386](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12386)
+[awtk.ts:12435](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12435)
 
 ***
 
@@ -3943,7 +3943,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:11662](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11662)
+[awtk.ts:11711](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11711)
 
 ***
 
@@ -3971,7 +3971,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:11502](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11502)
+[awtk.ts:11551](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11551)
 
 ***
 
@@ -4008,7 +4008,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:12439](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12439)
+[awtk.ts:12488](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12488)
 
 ***
 
@@ -4043,7 +4043,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:12402](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12402)
+[awtk.ts:12451](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12451)
 
 ***
 
@@ -4078,7 +4078,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:12418](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12418)
+[awtk.ts:12467](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12467)
 
 ***
 
@@ -4106,7 +4106,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:11082](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11082)
+[awtk.ts:11131](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11131)
 
 ***
 
@@ -4138,7 +4138,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:11095](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11095)
+[awtk.ts:11144](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11144)
 
 ***
 
@@ -4166,7 +4166,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:11279](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11279)
+[awtk.ts:11328](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11328)
 
 ***
 
@@ -4194,7 +4194,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:11151](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11151)
+[awtk.ts:11200](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11200)
 
 ***
 
@@ -4223,7 +4223,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:10959](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10959)
+[awtk.ts:11008](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11008)
 
 ***
 
@@ -4252,7 +4252,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:10996](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L10996)
+[awtk.ts:11045](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11045)
 
 ***
 
@@ -4280,7 +4280,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:11638](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11638)
+[awtk.ts:11687](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11687)
 
 ***
 
@@ -4308,7 +4308,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:11650](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11650)
+[awtk.ts:11699](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11699)
 
 ***
 
@@ -4341,7 +4341,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:11348](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11348)
+[awtk.ts:11397](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11397)
 
 ***
 
@@ -4374,7 +4374,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:11400](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11400)
+[awtk.ts:11449](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11449)
 
 ***
 
@@ -4406,7 +4406,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:12198](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12198)
+[awtk.ts:12247](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12247)
 
 ***
 
@@ -4428,7 +4428,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:12185](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12185)
+[awtk.ts:12234](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12234)
 
 ***
 
@@ -4450,7 +4450,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:12272](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12272)
+[awtk.ts:12321](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12321)
 
 ***
 
@@ -4472,7 +4472,7 @@ h参数。
 
 #### Defined in
 
-[awtk.ts:12283](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L12283)
+[awtk.ts:12332](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L12332)
 
 ***
 
@@ -4500,7 +4500,7 @@ style的名称。
 
 #### Defined in
 
-[awtk.ts:11070](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L11070)
+[awtk.ts:11119](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L11119)
 
 ***
 
@@ -4528,7 +4528,7 @@ button对象。
 
 #### Defined in
 
-[awtk.ts:24179](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L24179)
+[awtk.ts:24319](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L24319)
 
 ***
 
@@ -4568,4 +4568,4 @@ y坐标
 
 #### Defined in
 
-[awtk.ts:24167](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L24167)
+[awtk.ts:24307](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L24307)

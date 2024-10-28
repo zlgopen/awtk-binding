@@ -1124,6 +1124,17 @@ int awtk_TObject_object_set_prop_uint64(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TObject_object_clear_props(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  object_t* obj = (object_t*)jni_ctx_get_object(&actx);
+  ret = (ret_t)object_clear_props(obj);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TObject_object_t_get_prop_ref_count(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -3352,6 +3363,31 @@ int awtk_TEvent_event_from_name(Runtime *runtime, JClass *clazz) {
   int32_t ret = 0;
   const char* name = (const char*)jni_ctx_get_str(&actx);
   ret = (int32_t)event_from_name(name);
+  TKMEM_FREE(name);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TEvent_event_register_custom_name(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  int32_t event_type = (int32_t)jni_ctx_get_int(&actx);
+  const char* name = (const char*)jni_ctx_get_str(&actx);
+  ret = (ret_t)event_register_custom_name(event_type, name);
+  TKMEM_FREE(name);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TEvent_event_unregister_custom_name(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  const char* name = (const char*)jni_ctx_get_str(&actx);
+  ret = (ret_t)event_unregister_custom_name(name);
   TKMEM_FREE(name);
   jni_ctx_return_int(&actx, (int32_t)(ret));
 
@@ -13967,6 +14003,29 @@ int awtk_TUiLoadEvent_ui_load_event_t_get_prop_name(Runtime *runtime, JClass *cl
   return 0;
 }
 
+int awtk_TFontManager_font_manager_set_standard_font_size(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  font_manager_t* fm = (font_manager_t*)jni_ctx_get_object(&actx);
+  bool_t is_standard = (bool_t)jni_ctx_get_int(&actx);
+  ret = (ret_t)font_manager_set_standard_font_size(fm, is_standard);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TFontManager_font_manager_get_standard_font_size(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  bool_t ret = 0;
+  font_manager_t* fm = (font_manager_t*)jni_ctx_get_object(&actx);
+  ret = (bool_t)font_manager_get_standard_font_size(fm);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TFontManager_font_manager_unload_font(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -19962,6 +20021,52 @@ int awtk_TLogMessageEvent_log_message_event_cast(Runtime *runtime, JClass *clazz
   return 0;
 }
 
+int awtk_TNamedValueHash_named_value_hash_create(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  named_value_hash_t* ret = NULL;
+  ret = (named_value_hash_t*)named_value_hash_create();
+  jni_ctx_return_object(&actx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TNamedValueHash_named_value_hash_set_name(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  named_value_hash_t* nvh = (named_value_hash_t*)jni_ctx_get_object(&actx);
+  const char* name = (const char*)jni_ctx_get_str(&actx);
+  ret = (ret_t)named_value_hash_set_name(nvh, name);
+  TKMEM_FREE(name);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TNamedValueHash_named_value_hash_clone(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  named_value_hash_t* ret = NULL;
+  named_value_hash_t* nvh = (named_value_hash_t*)jni_ctx_get_object(&actx);
+  ret = (named_value_hash_t*)named_value_hash_clone(nvh);
+  jni_ctx_return_object(&actx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TNamedValueHash_named_value_hash_get_hash_from_str(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  uint64_t ret = 0;
+  const char* str = (const char*)jni_ctx_get_str(&actx);
+  ret = (uint64_t)named_value_hash_get_hash_from_str(str);
+  TKMEM_FREE(str);
+  jni_ctx_return_int64(&actx, (int64_t)(ret));
+
+  return 0;
+}
+
 int awtk_TAppBar_app_bar_create(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -23110,6 +23215,39 @@ int awtk_TObjectDefault_object_default_set_name_case_insensitive(Runtime *runtim
   return 0;
 }
 
+int awtk_TObjectHash_object_hash_create(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  object_t* ret = NULL;
+  ret = (object_t*)object_hash_create();
+  jni_ctx_return_object(&actx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TObjectHash_object_hash_create_ex(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  object_t* ret = NULL;
+  bool_t enable_path = (bool_t)jni_ctx_get_int(&actx);
+  ret = (object_t*)object_hash_create_ex(enable_path);
+  jni_ctx_return_object(&actx, (void*)(ret));
+
+  return 0;
+}
+
+int awtk_TObjectHash_object_hash_set_keep_prop_type(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  object_t* obj = (object_t*)jni_ctx_get_object(&actx);
+  bool_t keep_prop_type = (bool_t)jni_ctx_get_int(&actx);
+  ret = (ret_t)object_hash_set_keep_prop_type(obj, keep_prop_type);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TTimerInfo_timer_info_cast(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -23935,6 +24073,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TObject",  "object_set_prop_int64",  "(JLjava/lang/String;J)I",  awtk_TObject_object_set_prop_int64},
 {"awtk/TObject",  "object_get_prop_uint64",  "(JLjava/lang/String;J)J",  awtk_TObject_object_get_prop_uint64},
 {"awtk/TObject",  "object_set_prop_uint64",  "(JLjava/lang/String;J)I",  awtk_TObject_object_set_prop_uint64},
+{"awtk/TObject",  "object_clear_props",  "(J)I",  awtk_TObject_object_clear_props},
 {"awtk/TObject",  "object_t_get_prop_ref_count",  "(J)I",  awtk_TObject_object_t_get_prop_ref_count},
 {"awtk/TObject",  "object_t_get_prop_name",  "(J)Ljava/lang/String;",  awtk_TObject_object_t_get_prop_name},
 {"awtk/TValue",  "value_set_bool",  "(JZ)J",  awtk_TValue_value_set_bool},
@@ -24174,6 +24313,8 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TEventType",  "EVT_VALUE_CHANGING",  "()I",  awtk_TEventType_EVT_VALUE_CHANGING},
 {"awtk/TEventType",  "EVT_LOG_MESSAGE",  "()I",  awtk_TEventType_EVT_LOG_MESSAGE},
 {"awtk/TEvent",  "event_from_name",  "(Ljava/lang/String;)I",  awtk_TEvent_event_from_name},
+{"awtk/TEvent",  "event_register_custom_name",  "(ILjava/lang/String;)I",  awtk_TEvent_event_register_custom_name},
+{"awtk/TEvent",  "event_unregister_custom_name",  "(Ljava/lang/String;)I",  awtk_TEvent_event_unregister_custom_name},
 {"awtk/TEvent",  "event_cast",  "(J)J",  awtk_TEvent_event_cast},
 {"awtk/TEvent",  "event_get_type",  "(J)I",  awtk_TEvent_event_get_type},
 {"awtk/TEvent",  "event_create",  "(I)J",  awtk_TEvent_event_create},
@@ -25331,6 +25472,8 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TUiLoadEvent",  "ui_load_event_cast",  "(J)J",  awtk_TUiLoadEvent_ui_load_event_cast},
 {"awtk/TUiLoadEvent",  "ui_load_event_t_get_prop_root",  "(J)J",  awtk_TUiLoadEvent_ui_load_event_t_get_prop_root},
 {"awtk/TUiLoadEvent",  "ui_load_event_t_get_prop_name",  "(J)Ljava/lang/String;",  awtk_TUiLoadEvent_ui_load_event_t_get_prop_name},
+{"awtk/TFontManager",  "font_manager_set_standard_font_size",  "(JZ)I",  awtk_TFontManager_font_manager_set_standard_font_size},
+{"awtk/TFontManager",  "font_manager_get_standard_font_size",  "(J)Z",  awtk_TFontManager_font_manager_get_standard_font_size},
 {"awtk/TFontManager",  "font_manager_unload_font",  "(JLjava/lang/String;I)I",  awtk_TFontManager_font_manager_unload_font},
 {"awtk/TFontManager",  "font_manager_shrink_cache",  "(JI)I",  awtk_TFontManager_font_manager_shrink_cache},
 {"awtk/TFontManager",  "font_manager_unload_all",  "(J)I",  awtk_TFontManager_font_manager_unload_all},
@@ -25874,6 +26017,10 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TCmdExecEvent",  "cmd_exec_event_t_get_prop_can_exec",  "(J)Z",  awtk_TCmdExecEvent_cmd_exec_event_t_get_prop_can_exec},
 {"awtk/TValueChangeEvent",  "value_change_event_cast",  "(J)J",  awtk_TValueChangeEvent_value_change_event_cast},
 {"awtk/TLogMessageEvent",  "log_message_event_cast",  "(J)J",  awtk_TLogMessageEvent_log_message_event_cast},
+{"awtk/TNamedValueHash",  "named_value_hash_create",  "()J",  awtk_TNamedValueHash_named_value_hash_create},
+{"awtk/TNamedValueHash",  "named_value_hash_set_name",  "(JLjava/lang/String;)I",  awtk_TNamedValueHash_named_value_hash_set_name},
+{"awtk/TNamedValueHash",  "named_value_hash_clone",  "(J)J",  awtk_TNamedValueHash_named_value_hash_clone},
+{"awtk/TNamedValueHash",  "named_value_hash_get_hash_from_str",  "(Ljava/lang/String;)J",  awtk_TNamedValueHash_named_value_hash_get_hash_from_str},
 {"awtk/TAppBar",  "app_bar_create",  "(JIIII)J",  awtk_TAppBar_app_bar_create},
 {"awtk/TAppBar",  "app_bar_cast",  "(J)J",  awtk_TAppBar_app_bar_cast},
 {"awtk/TButtonGroup",  "button_group_create",  "(JIIII)J",  awtk_TButtonGroup_button_group_create},
@@ -26148,6 +26295,9 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TObjectDefault",  "object_default_clear_props",  "(J)I",  awtk_TObjectDefault_object_default_clear_props},
 {"awtk/TObjectDefault",  "object_default_set_keep_prop_type",  "(JZ)I",  awtk_TObjectDefault_object_default_set_keep_prop_type},
 {"awtk/TObjectDefault",  "object_default_set_name_case_insensitive",  "(JZ)I",  awtk_TObjectDefault_object_default_set_name_case_insensitive},
+{"awtk/TObjectHash",  "object_hash_create",  "()J",  awtk_TObjectHash_object_hash_create},
+{"awtk/TObjectHash",  "object_hash_create_ex",  "(Z)J",  awtk_TObjectHash_object_hash_create_ex},
+{"awtk/TObjectHash",  "object_hash_set_keep_prop_type",  "(JZ)I",  awtk_TObjectHash_object_hash_set_keep_prop_type},
 {"awtk/TTimerInfo",  "timer_info_cast",  "(J)J",  awtk_TTimerInfo_timer_info_cast},
 {"awtk/TTimerInfo",  "timer_info_t_get_prop_ctx",  "(J)J",  awtk_TTimerInfo_timer_info_t_get_prop_ctx},
 {"awtk/TTimerInfo",  "timer_info_t_get_prop_extra_ctx",  "(J)J",  awtk_TTimerInfo_timer_info_t_get_prop_extra_ctx},

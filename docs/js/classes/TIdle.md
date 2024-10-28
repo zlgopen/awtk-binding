@@ -50,7 +50,7 @@ idle回调函数的上下文。
 
 #### Defined in
 
-[awtk.ts:5848](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5848)
+[awtk.ts:5897](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5897)
 
 ***
 
@@ -74,7 +74,7 @@ idleID。
 
 #### Defined in
 
-[awtk.ts:5860](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5860)
+[awtk.ts:5909](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5909)
 
 ***
 
@@ -98,4 +98,4 @@ idle回调函数的上下文
 
 #### Defined in
 
-[awtk.ts:5872](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5872)
+[awtk.ts:5921](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5921)

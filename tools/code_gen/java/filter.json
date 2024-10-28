@@ -2244,6 +2244,24 @@
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "清除全部属性。",
+        "name": "object_clear_props",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
       }
     ],
     "events": [],
@@ -4859,11 +4877,54 @@
           "scriptable": true,
           "static": true
         },
-        "desc": "将事件名转换成事件的值。",
+        "desc": "将事件名转换成事件的类型。",
         "name": "event_from_name",
         "return": {
           "type": "int32_t",
-          "desc": "返回事件的值。"
+          "desc": "返回事件的类型。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "int32_t",
+            "name": "event_type",
+            "desc": "事件类型。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "事件名。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true,
+          "static": true
+        },
+        "desc": "给事件注册名称。",
+        "name": "event_register_custom_name",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "事件名。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true,
+          "static": true
+        },
+        "desc": "注销事件名称。",
+        "name": "event_unregister_custom_name",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
         }
       },
       {
@@ -7472,12 +7533,12 @@
           {
             "type": "float_t",
             "name": "start_angle",
-            "desc": "起始角度。"
+            "desc": "起始角度（单位：弧度）。"
           },
           {
             "type": "float_t",
             "name": "end_angle",
-            "desc": "结束角度。"
+            "desc": "结束角度（单位：弧度）。"
           },
           {
             "type": "bool_t",
@@ -7693,7 +7754,7 @@
           {
             "type": "float_t",
             "name": "rad",
-            "desc": "旋转角度(单位弧度)"
+            "desc": "旋转角度(单位：弧度)"
           }
         ],
         "annotation": {
@@ -17056,6 +17117,47 @@
   {
     "type": "class",
     "methods": [
+      {
+        "params": [
+          {
+            "type": "font_manager_t*",
+            "name": "fm",
+            "desc": "字体管理器对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "is_standard",
+            "desc": "是否使用标准字号"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置是否使用标准字号",
+        "name": "font_manager_set_standard_font_size",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "font_manager_t*",
+            "name": "fm",
+            "desc": "字体管理器对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取是否使用标准字号",
+        "name": "font_manager_get_standard_font_size",
+        "return": {
+          "type": "bool_t",
+          "desc": "返回TRUE表示使用标准字号，否则表示不是。"
+        }
+      },
       {
         "params": [
           {
@@ -28772,6 +28874,115 @@
     "type": "class",
     "methods": [
       {
+        "params": [],
+        "annotation": {
+          "constructor": true,
+          "scriptable": true,
+          "gc": true
+        },
+        "desc": "创建named_value_hash对象。",
+        "name": "named_value_hash_create",
+        "return": {
+          "type": "named_value_hash_t*",
+          "desc": "返回named_value_hash对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_hash_t*",
+            "name": "nvh",
+            "desc": "named_value_hash对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "名称。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置散列值。",
+        "name": "named_value_hash_set_name",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_hash_t*",
+            "name": "nvh",
+            "desc": "named_value_hash对象。"
+          }
+        ],
+        "annotation": {
+          "deconstructor": true,
+          "scriptable": true,
+          "gc": true
+        },
+        "desc": "销毁named_value_hash对象。",
+        "name": "named_value_hash_destroy",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_hash_t*",
+            "name": "nvh",
+            "desc": "named_value_hash对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "克隆named_value_hash对象。",
+        "name": "named_value_hash_clone",
+        "return": {
+          "type": "named_value_hash_t*",
+          "desc": "返回named_value_hash对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "const char*",
+            "name": "str",
+            "desc": "字符串。"
+          }
+        ],
+        "annotation": {
+          "static": true,
+          "scriptable": true
+        },
+        "desc": "获取字符串散列值。",
+        "name": "named_value_hash_get_hash_from_str",
+        "return": {
+          "type": "uint64_t",
+          "desc": "返回散列值。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [],
+    "header": "tkc/named_value_hash.h",
+    "desc": "带有散列值的命名的值。",
+    "name": "named_value_hash_t",
+    "parent": "named_value_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "level": 2
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
         "params": [
           {
             "type": "widget_t*",
@@ -35486,6 +35697,78 @@
     "header": "tkc/object_default.h",
     "desc": "对象接口的缺省实现。\n\n通用当作 map 数据结构使用，内部用有序数组保存所有属性，因此可以快速查找指定名称的属性。\n\n示例\n\n```c\n// 创建默认对象\ntk_object_t *obj = object_default_create();\n\n// 设置属性\ntk_object_set_prop_str(obj, \"name\", \"awplc\");\ntk_object_set_prop_int(obj, \"age\", 18);\ntk_object_set_prop_double(obj, \"weight\", 60.5);\n\n// 获取属性\nENSURE(tk_str_eq(tk_object_get_prop_str(obj, \"name\"), \"awplc\"));\nENSURE(tk_object_get_prop_int(obj, \"age\", 0) == 18);\nENSURE(tk_object_get_prop_double(obj, \"weight\", 0) == 60.5);\n\n// 遍历属性\ntk_object_foreach_prop(obj, visit_obj, NULL);\n\n// 释放对象\nTK_OBJECT_UNREF(obj);\n```",
     "name": "object_default_t",
+    "parent": "object_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "level": 3
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [],
+        "annotation": {
+          "constructor": true,
+          "scriptable": true,
+          "gc": true
+        },
+        "desc": "创建对象。",
+        "name": "object_hash_create",
+        "return": {
+          "type": "object_t*",
+          "desc": "返回object对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "bool_t",
+            "name": "enable_path",
+            "desc": "是否支持按路径访问属性。"
+          }
+        ],
+        "annotation": {
+          "constructor": true,
+          "scriptable": true,
+          "gc": true
+        },
+        "desc": "创建对象。",
+        "name": "object_hash_create_ex",
+        "return": {
+          "type": "object_t*",
+          "desc": "返回object对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "keep_prop_type",
+            "desc": "不改变属性的类型。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置属性值时不改变属性的类型。",
+        "name": "object_hash_set_keep_prop_type",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [],
+    "header": "tkc/object_hash.h",
+    "desc": "对象接口的散列值查询属性的object实现。\n\n通用当作 map 数据结构使用，内部用有序数组保存所有属性，因此可以快速查找指定名称的属性。\n\n示例\n\n```c\n// 创建默认对象\ntk_object_t *obj = object_hash_create();\n\n// 设置属性\ntk_object_set_prop_str(obj, \"name\", \"awplc\");\ntk_object_set_prop_int(obj, \"age\", 18);\ntk_object_set_prop_double(obj, \"weight\", 60.5);\n\n// 获取属性\nENSURE(tk_str_eq(tk_object_get_prop_str(obj, \"name\"), \"awplc\"));\nENSURE(tk_object_get_prop_int(obj, \"age\", 0) == 18);\nENSURE(tk_object_get_prop_double(obj, \"weight\", 0) == 60.5);\n\n// 遍历属性\ntk_object_foreach_prop(obj, visit_obj, NULL);\n\n// 释放对象\nTK_OBJECT_UNREF(obj);\n```",
+    "name": "object_hash_t",
     "parent": "object_t",
     "annotation": {
       "scriptable": true

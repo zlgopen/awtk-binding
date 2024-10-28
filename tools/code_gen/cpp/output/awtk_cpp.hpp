@@ -1082,6 +1082,14 @@ public:
   ret_t SetPropUint64(const char* name, uint64_t value) ;
 
   /**
+   * 清除全部属性。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t ClearProps() ;
+
+  /**
    * 引用计数。
    *
    */
@@ -2008,13 +2016,32 @@ public:
 
 
   /**
-   * 将事件名转换成事件的值。
+   * 将事件名转换成事件的类型。
    * 
    * @param name 事件名。
    *
-   * @return 返回事件的值。
+   * @return 返回事件的类型。
    */
   static  int32_t FromName(const char* name) ;
+
+  /**
+   * 给事件注册名称。
+   * 
+   * @param event_type 事件类型。
+   * @param name 事件名。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  static  ret_t RegisterCustomName(int32_t event_type, const char* name) ;
+
+  /**
+   * 注销事件名称。
+   * 
+   * @param name 事件名。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  static  ret_t UnregisterCustomName(const char* name) ;
 
   /**
    * 获取event类型。
@@ -2832,8 +2859,8 @@ public:
    * @param x 原点x坐标。
    * @param y 原点y坐标。
    * @param r 半径。
-   * @param start_angle 起始角度。
-   * @param end_angle 结束角度。
+   * @param start_angle 起始角度（单位：弧度）。
+   * @param end_angle 结束角度（单位：弧度）。
    * @param ccw 是否逆时针。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
@@ -2911,7 +2938,7 @@ public:
   /**
    * 旋转。
    * 
-   * @param rad 旋转角度(单位弧度)
+   * @param rad 旋转角度(单位：弧度)
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -6631,6 +6658,23 @@ public:
     return TFontManager(obj.nativeObj);
   }
 
+
+  /**
+   * 设置是否使用标准字号
+   * 
+   * @param is_standard 是否使用标准字号
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetStandardFontSize(bool is_standard) ;
+
+  /**
+   * 获取是否使用标准字号
+   * 
+   *
+   * @return 返回TRUE表示使用标准字号，否则表示不是。
+   */
+  bool GetStandardFontSize() ;
 
   /**
    * 卸载指定的字体。
@@ -13130,6 +13174,83 @@ public:
 
 
 /**
+ * 带有散列值的命名的值。
+ *
+ */
+class TNamedValueHash : public TNamedValue { 
+public:
+  TNamedValueHash(named_value_t* nativeObj) : TNamedValue(nativeObj) {
+  }
+
+  TNamedValueHash() {
+    this->nativeObj = (named_value_t*)NULL;
+  }
+
+  TNamedValueHash(const named_value_hash_t* nativeObj) : TNamedValue((named_value_t*)nativeObj) {
+  }
+
+  static TNamedValueHash Cast(named_value_t* nativeObj) {
+    return TNamedValueHash(nativeObj);
+  }
+
+  static TNamedValueHash Cast(const named_value_t* nativeObj) {
+    return TNamedValueHash((named_value_t*)nativeObj);
+  }
+
+  static TNamedValueHash Cast(TNamedValue& obj) {
+    return TNamedValueHash(obj.nativeObj);
+  }
+
+  static TNamedValueHash Cast(const TNamedValue& obj) {
+    return TNamedValueHash(obj.nativeObj);
+  }
+
+
+  /**
+   * 创建named_value_hash对象。
+   * 
+   *
+   * @return 返回named_value_hash对象。
+   */
+  static  TNamedValueHash Create() ;
+
+  /**
+   * 设置散列值。
+   * 
+   * @param name 名称。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetName(const char* name) ;
+
+  /**
+   * 销毁named_value_hash对象。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t Destroy() ;
+
+  /**
+   * 克隆named_value_hash对象。
+   * 
+   *
+   * @return 返回named_value_hash对象。
+   */
+  TNamedValueHash Clone() ;
+
+  /**
+   * 获取字符串散列值。
+   * 
+   * @param str 字符串。
+   *
+   * @return 返回散列值。
+   */
+  static  uint64_t GetHashFromStr(const char* str) ;
+};
+
+
+/**
  * app_bar控件。
  *
  *一个简单的容器控件，一般在窗口的顶部，用于显示本窗口的状态和信息。
@@ -17641,6 +17762,73 @@ public:
    * @return 返回RET_OK表示成功，否则表示失败。
    */
   ret_t SetNameCaseInsensitive(bool name_case_insensitive) ;
+};
+
+
+/**
+ * 对象接口的散列值查询属性的object实现。
+ *
+ *通用当作 map 数据结构使用，内部用有序数组保存所有属性，因此可以快速查找指定名称的属性。
+ *
+ *示例
+ *
+ *
+ *
+ */
+class TObjectHash : public TObject { 
+public:
+  TObjectHash(emitter_t* nativeObj) : TObject(nativeObj) {
+  }
+
+  TObjectHash() {
+    this->nativeObj = (emitter_t*)NULL;
+  }
+
+  TObjectHash(const object_hash_t* nativeObj) : TObject((emitter_t*)nativeObj) {
+  }
+
+  static TObjectHash Cast(emitter_t* nativeObj) {
+    return TObjectHash(nativeObj);
+  }
+
+  static TObjectHash Cast(const emitter_t* nativeObj) {
+    return TObjectHash((emitter_t*)nativeObj);
+  }
+
+  static TObjectHash Cast(TEmitter& obj) {
+    return TObjectHash(obj.nativeObj);
+  }
+
+  static TObjectHash Cast(const TEmitter& obj) {
+    return TObjectHash(obj.nativeObj);
+  }
+
+
+  /**
+   * 创建对象。
+   * 
+   *
+   * @return 返回object对象。
+   */
+  static  TObject Create() ;
+
+  /**
+   * 创建对象。
+   * 
+   * @param enable_path 是否支持按路径访问属性。
+   *
+   * @return 返回object对象。
+   */
+  static  TObject CreateEx(bool enable_path) ;
+
+  /**
+   * 设置属性值时不改变属性的类型。
+   * 
+   * @param keep_prop_type 不改变属性的类型。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetKeepPropType(bool keep_prop_type) ;
 };
 
 

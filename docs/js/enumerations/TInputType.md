@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[awtk.ts:6025](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L6025)
+[awtk.ts:6074](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L6074)
 
 ***
 
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[awtk.ts:6013](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L6013)
+[awtk.ts:6062](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L6062)
 
 ***
 
@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[awtk.ts:6019](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L6019)
+[awtk.ts:6068](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L6068)
 
 ***
 
@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[awtk.ts:5995](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5995)
+[awtk.ts:6044](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L6044)
 
 ***
 
@@ -66,7 +66,7 @@
 
 #### Defined in
 
-[awtk.ts:5971](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5971)
+[awtk.ts:6020](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L6020)
 
 ***
 
@@ -78,7 +78,7 @@
 
 #### Defined in
 
-[awtk.ts:5959](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5959)
+[awtk.ts:6008](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L6008)
 
 ***
 
@@ -90,7 +90,7 @@
 
 #### Defined in
 
-[awtk.ts:5953](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5953)
+[awtk.ts:6002](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L6002)
 
 ***
 
@@ -102,7 +102,7 @@
 
 #### Defined in
 
-[awtk.ts:5941](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5941)
+[awtk.ts:5990](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5990)
 
 ***
 
@@ -114,7 +114,7 @@ IP Addr V4(如：192.168.1.1)。字符串属性值：ipv4
 
 #### Defined in
 
-[awtk.ts:5989](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5989)
+[awtk.ts:6038](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L6038)
 
 ***
 
@@ -126,7 +126,7 @@ IP Addr V4(如：192.168.1.1)。字符串属性值：ipv4
 
 #### Defined in
 
-[awtk.ts:5977](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5977)
+[awtk.ts:6026](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L6026)
 
 ***
 
@@ -138,7 +138,7 @@ IP Addr V4(如：192.168.1.1)。字符串属性值：ipv4
 
 #### Defined in
 
-[awtk.ts:5983](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5983)
+[awtk.ts:6032](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L6032)
 
 ***
 
@@ -150,7 +150,7 @@ IP Addr V4(如：192.168.1.1)。字符串属性值：ipv4
 
 #### Defined in
 
-[awtk.ts:5935](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5935)
+[awtk.ts:5984](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5984)
 
 ***
 
@@ -162,7 +162,7 @@ IP Addr V4(如：192.168.1.1)。字符串属性值：ipv4
 
 #### Defined in
 
-[awtk.ts:6001](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L6001)
+[awtk.ts:6050](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L6050)
 
 ***
 
@@ -174,7 +174,7 @@ IP Addr V4(如：192.168.1.1)。字符串属性值：ipv4
 
 #### Defined in
 
-[awtk.ts:6007](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L6007)
+[awtk.ts:6056](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L6056)
 
 ***
 
@@ -186,7 +186,7 @@ IP Addr V4(如：192.168.1.1)。字符串属性值：ipv4
 
 #### Defined in
 
-[awtk.ts:5965](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5965)
+[awtk.ts:6014](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L6014)
 
 ***
 
@@ -198,4 +198,4 @@ IP Addr V4(如：192.168.1.1)。字符串属性值：ipv4
 
 #### Defined in
 
-[awtk.ts:5947](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L5947)
+[awtk.ts:5996](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5996)

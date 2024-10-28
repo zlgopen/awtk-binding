@@ -156,6 +156,10 @@ static <a class="el" href="class_t_event.html">TEvent</a>&#160;</td><td class="m
 <tr class="separator:a94363c56edb03d39bad9fb781b0b4bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95a746a2230504d7c86376fff0196ac3" id="r_a95a746a2230504d7c86376fff0196ac3"><td class="memItemLeft" align="right" valign="top">static int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95a746a2230504d7c86376fff0196ac3">FromName</a> (const char *name)</td></tr>
 <tr class="separator:a95a746a2230504d7c86376fff0196ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a210ad29bd1d35a7c9fde9f2d56e7689a" id="r_a210ad29bd1d35a7c9fde9f2d56e7689a"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a210ad29bd1d35a7c9fde9f2d56e7689a">RegisterCustomName</a> (int32_t event_type, const char *name)</td></tr>
+<tr class="separator:a210ad29bd1d35a7c9fde9f2d56e7689a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6463a8ee10ed8708274317080d8330b1" id="r_a6463a8ee10ed8708274317080d8330b1"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6463a8ee10ed8708274317080d8330b1">UnregisterCustomName</a> (const char *name)</td></tr>
+<tr class="separator:a6463a8ee10ed8708274317080d8330b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adad60ee8cf3e26266681c6c80d41bd3b" id="r_adad60ee8cf3e26266681c6c80d41bd3b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_event.html">TEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adad60ee8cf3e26266681c6c80d41bd3b">Create</a> (uint32_t type)</td></tr>
 <tr class="separator:adad60ee8cf3e26266681c6c80d41bd3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -244,14 +248,14 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
   </tr>
 </table>
 </div><div class="memdoc">
-<p>将事件名转换成事件的值。</p>
+<p>将事件名转换成事件的类型。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>事件名。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>返回事件的值。 </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>返回事件的类型。 </dd></dl>
 
 </div>
 </div>
@@ -343,6 +347,77 @@ event_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
       </table>
 </div><div class="memdoc">
 <p>类型。 </p>
+
+</div>
+</div>
+<a id="a210ad29bd1d35a7c9fde9f2d56e7689a" name="a210ad29bd1d35a7c9fde9f2d56e7689a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a210ad29bd1d35a7c9fde9f2d56e7689a">&#9670;&#160;</a></span>RegisterCustomName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TEvent::RegisterCustomName </td>
+          <td>(</td>
+          <td class="paramtype">int32_t</td>          <td class="paramname"><span class="paramname"><em>event_type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>给事件注册名称。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event_type</td><td>事件类型。 </td></tr>
+    <tr><td class="paramname">name</td><td>事件名。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a6463a8ee10ed8708274317080d8330b1" name="a6463a8ee10ed8708274317080d8330b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6463a8ee10ed8708274317080d8330b1">&#9670;&#160;</a></span>UnregisterCustomName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TEvent::UnregisterCustomName </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>注销事件名称。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>事件名。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>

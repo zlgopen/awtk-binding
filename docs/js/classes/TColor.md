@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[awtk.ts:13152](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13152)
+[awtk.ts:13201](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L13201)
 
 ## Properties
 
@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[awtk.ts:13151](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13151)
+[awtk.ts:13200](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L13200)
 
 ## Accessors
 
@@ -56,7 +56,7 @@
 
 #### Defined in
 
-[awtk.ts:13283](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13283)
+[awtk.ts:13332](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L13332)
 
 ## Methods
 
@@ -76,7 +76,7 @@
 
 #### Defined in
 
-[awtk.ts:13235](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13235)
+[awtk.ts:13284](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L13284)
 
 ***
 
@@ -96,7 +96,7 @@
 
 #### Defined in
 
-[awtk.ts:13222](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13222)
+[awtk.ts:13271](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L13271)
 
 ***
 
@@ -115,7 +115,7 @@
 
 #### Defined in
 
-[awtk.ts:13274](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13274)
+[awtk.ts:13323](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L13323)
 
 ***
 
@@ -141,7 +141,7 @@ color对象。
 
 #### Defined in
 
-[awtk.ts:13183](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13183)
+[awtk.ts:13232](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L13232)
 
 ***
 
@@ -161,7 +161,7 @@ color对象。
 
 #### Defined in
 
-[awtk.ts:13209](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13209)
+[awtk.ts:13258](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L13258)
 
 ***
 
@@ -181,7 +181,7 @@ color对象。
 
 #### Defined in
 
-[awtk.ts:13248](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13248)
+[awtk.ts:13297](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L13297)
 
 ***
 
@@ -201,7 +201,7 @@ color对象。
 
 #### Defined in
 
-[awtk.ts:13196](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13196)
+[awtk.ts:13245](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L13245)
 
 ***
 
@@ -227,7 +227,7 @@ color对象。
 
 #### Defined in
 
-[awtk.ts:13262](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13262)
+[awtk.ts:13311](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L13311)
 
 ***
 
@@ -265,4 +265,4 @@ color对象。
 
 #### Defined in
 
-[awtk.ts:13169](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L13169)
+[awtk.ts:13218](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L13218)

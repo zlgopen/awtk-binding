@@ -60,7 +60,7 @@ ui      UI描述数据。
 
 #### Defined in
 
-[awtk.ts:15049](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L15049)
+[awtk.ts:15098](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L15098)
 
 ## Properties
 
@@ -74,7 +74,7 @@ ui      UI描述数据。
 
 #### Defined in
 
-[awtk.ts:15048](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L15048)
+[awtk.ts:15097](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L15097)
 
 ## Methods
 
@@ -96,7 +96,7 @@ ui      UI描述数据。
 
 #### Defined in
 
-[awtk.ts:2489](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2489)
+[awtk.ts:2502](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L2502)
 
 ***
 
@@ -120,7 +120,7 @@ ui      UI描述数据。
 
 #### Defined in
 
-[awtk.ts:2478](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2478)
+[awtk.ts:2491](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L2491)
 
 ***
 
@@ -149,7 +149,7 @@ ui      UI描述数据。
 
 #### Defined in
 
-[awtk.ts:2414](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2414)
+[awtk.ts:2427](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L2427)
 
 ***
 
@@ -177,7 +177,7 @@ ui      UI描述数据。
 
 #### Defined in
 
-[awtk.ts:2428](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2428)
+[awtk.ts:2441](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L2441)
 
 ***
 
@@ -199,7 +199,7 @@ ui      UI描述数据。
 
 #### Defined in
 
-[awtk.ts:2465](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2465)
+[awtk.ts:2478](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L2478)
 
 ***
 
@@ -227,7 +227,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:2454](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2454)
+[awtk.ts:2467](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L2467)
 
 ***
 
@@ -263,7 +263,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:2442](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2442)
+[awtk.ts:2455](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L2455)
 
 ***
 
@@ -291,7 +291,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:15085](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L15085)
+[awtk.ts:15134](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L15134)
 
 ***
 
@@ -323,7 +323,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:15099](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L15099)
+[awtk.ts:15148](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L15148)
 
 ***
 
@@ -347,7 +347,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:15072](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L15072)
+[awtk.ts:15121](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L15121)
 
 ***
 
@@ -371,7 +371,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:15111](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L15111)
+[awtk.ts:15160](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L15160)
 
 ***
 
@@ -401,7 +401,7 @@ emitter对象。
 
 #### Defined in
 
-[awtk.ts:2503](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2503)
+[awtk.ts:2516](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L2516)
 
 ***
 
@@ -423,7 +423,7 @@ emitter对象。
 
 #### Defined in
 
-[awtk.ts:2401](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L2401)
+[awtk.ts:2414](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L2414)
 
 ***
 
@@ -441,4 +441,4 @@ emitter对象。
 
 #### Defined in
 
-[awtk.ts:15060](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L15060)
+[awtk.ts:15109](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L15109)

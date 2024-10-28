@@ -54,7 +54,7 @@ timer回调函数的上下文。
 
 #### Defined in
 
-[awtk.ts:7718](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7718)
+[awtk.ts:7767](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7767)
 
 ***
 
@@ -82,7 +82,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7791](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7791)
+[awtk.ts:7840](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7840)
 
 ***
 
@@ -106,7 +106,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7730](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7730)
+[awtk.ts:7779](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7779)
 
 ***
 
@@ -130,7 +130,7 @@ timer回调函数的上下文。
 
 #### Defined in
 
-[awtk.ts:7742](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7742)
+[awtk.ts:7791](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7791)
 
 ***
 
@@ -154,7 +154,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7754](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7754)
+[awtk.ts:7803](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7803)
 
 ***
 
@@ -178,7 +178,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7778](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7778)
+[awtk.ts:7827](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7827)
 
 ***
 
@@ -202,4 +202,4 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7766](https://github.com/zlgopen/awtk-binding/blob/b1e618d759250c07a8449fe21dad19c89a7f6c51/tools/code_gen/js/output/awtk.ts#L7766)
+[awtk.ts:7815](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7815)

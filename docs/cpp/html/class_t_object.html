@@ -100,12 +100,13 @@ $(function(){ initResizable(false); });
  <div class="center">
   <img src="class_t_object.png" usemap="#TObject_map" alt=""/>
   <map id="TObject_map" name="TObject_map">
-<area href="class_t_emitter.html" alt="TEmitter" shape="rect" coords="218,0,317,24"/>
+<area href="class_t_emitter.html" alt="TEmitter" shape="rect" coords="272,0,371,24"/>
 <area href="class_t_idle_info.html" alt="TIdleInfo" shape="rect" coords="0,112,99,136"/>
 <area href="class_t_native_window.html" alt="TNativeWindow" shape="rect" coords="109,112,208,136"/>
 <area href="class_t_object_array.html" alt="TObjectArray" shape="rect" coords="218,112,317,136"/>
 <area href="class_t_object_default.html" alt="TObjectDefault" shape="rect" coords="327,112,426,136"/>
-<area href="class_t_timer_info.html" alt="TTimerInfo" shape="rect" coords="436,112,535,136"/>
+<area href="class_t_object_hash.html" alt="TObjectHash" shape="rect" coords="436,112,535,136"/>
+<area href="class_t_timer_info.html" alt="TTimerInfo" shape="rect" coords="545,112,644,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -239,6 +240,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a9b1a7c39fb5ff896272d105cdc56b52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f7000c0757087e4e200e175cd3c4e4a" id="r_a9f7000c0757087e4e200e175cd3c4e4a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f7000c0757087e4e200e175cd3c4e4a">SetPropUint64</a> (const char *name, uint64_t value)</td></tr>
 <tr class="separator:a9f7000c0757087e4e200e175cd3c4e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a364b8960a36e48a3acdd728310539594" id="r_a364b8960a36e48a3acdd728310539594"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a364b8960a36e48a3acdd728310539594">ClearProps</a> ()</td></tr>
+<tr class="separator:a364b8960a36e48a3acdd728310539594"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf88f8baf905e1ec672b47d2beebb193" id="r_abf88f8baf905e1ec672b47d2beebb193"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf88f8baf905e1ec672b47d2beebb193">GetRefCount</a> () const</td></tr>
 <tr class="separator:abf88f8baf905e1ec672b47d2beebb193"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad49dccfbf4ceccd4c61211841a7d74d7" id="r_ad49dccfbf4ceccd4c61211841a7d74d7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad49dccfbf4ceccd4c61211841a7d74d7">GetName</a> () const</td></tr>
@@ -358,6 +361,25 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>返回TRUE表示可以执行，否则表示不可以执行。 </dd></dl>
+
+</div>
+</div>
+<a id="a364b8960a36e48a3acdd728310539594" name="a364b8960a36e48a3acdd728310539594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a364b8960a36e48a3acdd728310539594">&#9670;&#160;</a></span>ClearProps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TObject::ClearProps </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>清除全部属性。</p>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>

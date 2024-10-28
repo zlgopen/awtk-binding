@@ -374,6 +374,10 @@ func (this TObject) SetPropUint64(name string, value int64) TRet {
   return TRet(C.object_set_prop_uint64((*C.object_t)(this.handle), aname, (C.uint64_t)(value)));
 }
 
+func (this TObject) ClearProps() TRet {
+  return TRet(C.object_clear_props((*C.object_t)(this.handle)));
+}
+
 func (this TObject) GetRefCount() int32 {
   return (int32)((*C.object_t)(unsafe.Pointer(this.handle)).ref_count);
 }

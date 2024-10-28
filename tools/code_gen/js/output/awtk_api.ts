@@ -208,6 +208,8 @@ const tk_object_get_prop_uint64 = Module.cwrap("tk_object_get_prop_uint64",
     "number", ["number","string","number"]);
 const tk_object_set_prop_uint64 = Module.cwrap("tk_object_set_prop_uint64", 
     "number", ["number","string","number"]);
+const tk_object_clear_props = Module.cwrap("tk_object_clear_props", 
+    "number", ["number"]);
 const tk_object_t_get_prop_ref_count = Module.cwrap("tk_object_t_get_prop_ref_count", 
     "number", ["number"]);
 const tk_object_t_get_prop_name = Module.cwrap("tk_object_t_get_prop_name", 
@@ -687,6 +689,10 @@ const EVT_VALUE_CHANGING = Module.cwrap("get_EVT_VALUE_CHANGING",
 const EVT_LOG_MESSAGE = Module.cwrap("get_EVT_LOG_MESSAGE", 
     "number", []);
 const event_from_name = Module.cwrap("event_from_name", 
+    "number", ["string"]);
+const event_register_custom_name = Module.cwrap("event_register_custom_name", 
+    "number", ["number","string"]);
+const event_unregister_custom_name = Module.cwrap("event_unregister_custom_name", 
     "number", ["string"]);
 const event_cast = Module.cwrap("event_cast", 
     "number", ["number"]);
@@ -3010,6 +3016,10 @@ const ui_load_event_t_get_prop_root = Module.cwrap("ui_load_event_t_get_prop_roo
     "number", ["number"]);
 const ui_load_event_t_get_prop_name = Module.cwrap("ui_load_event_t_get_prop_name", 
     "string", ["number"]);
+const font_manager_set_standard_font_size = Module.cwrap("font_manager_set_standard_font_size", 
+    "number", ["number","number"]);
+const font_manager_get_standard_font_size = Module.cwrap("font_manager_get_standard_font_size", 
+    "number", ["number"]);
 const font_manager_unload_font = Module.cwrap("font_manager_unload_font", 
     "number", ["number","string","number"]);
 const font_manager_shrink_cache = Module.cwrap("font_manager_shrink_cache", 
@@ -4096,6 +4106,16 @@ const value_change_event_cast = Module.cwrap("value_change_event_cast",
     "number", ["number"]);
 const log_message_event_cast = Module.cwrap("log_message_event_cast", 
     "number", ["number"]);
+const named_value_hash_create = Module.cwrap("named_value_hash_create", 
+    "number", []);
+const named_value_hash_set_name = Module.cwrap("named_value_hash_set_name", 
+    "number", ["number","string"]);
+const named_value_hash_destroy = Module.cwrap("named_value_hash_destroy", 
+    "number", ["number"]);
+const named_value_hash_clone = Module.cwrap("named_value_hash_clone", 
+    "number", ["number"]);
+const named_value_hash_get_hash_from_str = Module.cwrap("named_value_hash_get_hash_from_str", 
+    "number", ["string"]);
 const app_bar_create = Module.cwrap("app_bar_create", 
     "number", ["number","number","number","number","number"]);
 const app_bar_cast = Module.cwrap("app_bar_cast", 
@@ -4647,6 +4667,12 @@ const object_default_clear_props = Module.cwrap("object_default_clear_props",
 const object_default_set_keep_prop_type = Module.cwrap("object_default_set_keep_prop_type", 
     "number", ["number","number"]);
 const object_default_set_name_case_insensitive = Module.cwrap("object_default_set_name_case_insensitive", 
+    "number", ["number","number"]);
+const object_hash_create = Module.cwrap("object_hash_create", 
+    "number", []);
+const object_hash_create_ex = Module.cwrap("object_hash_create_ex", 
+    "number", ["number"]);
+const object_hash_set_keep_prop_type = Module.cwrap("object_hash_set_keep_prop_type", 
     "number", ["number","number"]);
 const timer_info_cast = Module.cwrap("timer_info_cast", 
     "number", ["number"]);
@@ -5995,6 +6021,17 @@ export class TTkObject extends TEmitter {
    */
  setPropUint64(name : string, value : any) : TRet  {
     return tk_object_set_prop_uint64(this != null ? (this.nativeObj || this) : null, name, value);
+ }
+
+
+  /**
+   * 清除全部属性。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ clearProps() : TRet  {
+    return tk_object_clear_props(this != null ? (this.nativeObj || this) : null);
  }
 
 
@@ -8082,14 +8119,39 @@ export class TEvent {
 
 
   /**
-   * 将事件名转换成事件的值。
+   * 将事件名转换成事件的类型。
    * 
    * @param name 事件名。
    *
-   * @returns 返回事件的值。
+   * @returns 返回事件的类型。
    */
  static fromName(name : string) : number  {
     return event_from_name(name);
+ }
+
+
+  /**
+   * 给事件注册名称。
+   * 
+   * @param event_type 事件类型。
+   * @param name 事件名。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ static registerCustomName(event_type : number, name : string) : TRet  {
+    return event_register_custom_name(event_type, name);
+ }
+
+
+  /**
+   * 注销事件名称。
+   * 
+   * @param name 事件名。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ static unregisterCustomName(name : string) : TRet  {
+    return event_unregister_custom_name(name);
  }
 
 
@@ -10560,8 +10622,8 @@ export class TVgcanvas {
    * @param x 原点x坐标。
    * @param y 原点y坐标。
    * @param r 半径。
-   * @param start_angle 起始角度。
-   * @param end_angle 结束角度。
+   * @param start_angle 起始角度（单位：弧度）。
+   * @param end_angle 结束角度（单位：弧度）。
    * @param ccw 是否逆时针。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
@@ -10660,7 +10722,7 @@ export class TVgcanvas {
   /**
    * 旋转。
    * 
-   * @param rad 旋转角度(单位弧度)
+   * @param rad 旋转角度(单位：弧度)
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -18266,6 +18328,29 @@ export class TFontManager extends TEmitter {
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
+ }
+
+
+  /**
+   * 设置是否使用标准字号
+   * 
+   * @param is_standard 是否使用标准字号
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setStandardFontSize(is_standard : boolean) : TRet  {
+    return font_manager_set_standard_font_size(this != null ? (this.nativeObj || this) : null, is_standard);
+ }
+
+
+  /**
+   * 获取是否使用标准字号
+   * 
+   *
+   * @returns 返回TRUE表示使用标准字号，否则表示不是。
+   */
+ getStandardFontSize() : boolean  {
+    return font_manager_get_standard_font_size(this != null ? (this.nativeObj || this) : null);
  }
 
 
@@ -26369,6 +26454,74 @@ export class TLogMessageEvent extends TEvent {
 
 };
 /**
+ * 带有散列值的命名的值。
+ *
+ */
+export class TNamedValueHash extends TNamedValue { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建named_value_hash对象。
+   * 
+   *
+   * @returns 返回named_value_hash对象。
+   */
+ static create() : TNamedValueHash  {
+    return new TNamedValueHash(named_value_hash_create());
+ }
+
+
+  /**
+   * 设置散列值。
+   * 
+   * @param name 名称。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setName(name : string) : TRet  {
+    return named_value_hash_set_name(this != null ? (this.nativeObj || this) : null, name);
+ }
+
+
+  /**
+   * 销毁named_value_hash对象。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ destroy() : TRet  {
+    return named_value_hash_destroy(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 克隆named_value_hash对象。
+   * 
+   *
+   * @returns 返回named_value_hash对象。
+   */
+ clone() : TNamedValueHash  {
+    return new TNamedValueHash(named_value_hash_clone(this != null ? (this.nativeObj || this) : null));
+ }
+
+
+  /**
+   * 获取字符串散列值。
+   * 
+   * @param str 字符串。
+   *
+   * @returns 返回散列值。
+   */
+ static getHashFromStr(str : string) : number  {
+    return named_value_hash_get_hash_from_str(str);
+ }
+
+};
+/**
  * app_bar控件。
  *
  *一个简单的容器控件，一般在窗口的顶部，用于显示本窗口的状态和信息。
@@ -31368,6 +31521,58 @@ export class TObjectDefault extends TTkObject {
    */
  setNameCaseInsensitive(name_case_insensitive : boolean) : TRet  {
     return object_default_set_name_case_insensitive(this != null ? (this.nativeObj || this) : null, name_case_insensitive);
+ }
+
+};
+/**
+ * 对象接口的散列值查询属性的object实现。
+ *
+ *通用当作 map 数据结构使用，内部用有序数组保存所有属性，因此可以快速查找指定名称的属性。
+ *
+ *示例
+ *
+ *
+ *
+ */
+export class TObjectHash extends TTkObject { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建对象。
+   * 
+   *
+   * @returns 返回object对象。
+   */
+ static create() : TObjectHash  {
+    return new TObjectHash(object_hash_create());
+ }
+
+
+  /**
+   * 创建对象。
+   * 
+   * @param enable_path 是否支持按路径访问属性。
+   *
+   * @returns 返回object对象。
+   */
+ static createEx(enable_path : boolean) : TObjectHash  {
+    return new TObjectHash(object_hash_create_ex(enable_path));
+ }
+
+
+  /**
+   * 设置属性值时不改变属性的类型。
+   * 
+   * @param keep_prop_type 不改变属性的类型。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setKeepPropType(keep_prop_type : boolean) : TRet  {
+    return object_hash_set_keep_prop_type(this != null ? (this.nativeObj || this) : null, keep_prop_type);
  }
 
 };
