@@ -44,6 +44,10 @@ class TargetGen extends CodeGen {
     return `    return ${arg};\n`;
   }
 
+  genWStrToString(arg) {
+    return arg;
+  }
+
   genCallMethod(cls, m) {
     let returnType = null;
     let result = `${m.name}${this.genCallParamsDecl(m)}`;
@@ -56,11 +60,14 @@ class TargetGen extends CodeGen {
 
     let classInfo = this.getClassInfo(returnType);
     let enumInfo = this.getEnumInfo(returnType);
+    let isWStr = m.return.type.indexOf('wchar_t*') >= 0;
 
     if (classInfo) {
       return this.genReturnObject(classInfo, m, result);
     } else if (enumInfo) {
       return this.genReturnEnum(enumInfo, result);
+    } else if (isWStr) {
+      return this.genReturnValue(`${this.genWStrToString(result)}`);
     } else {
       return this.genReturnValue(result);
     }

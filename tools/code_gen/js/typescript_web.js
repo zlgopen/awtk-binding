@@ -69,7 +69,7 @@ class TypescriptGenerator extends TypescriptBaseGenerator {
   genFuncsDeclBegin() {
     return `
 declare global {
-    interface Window { Module: any; TBrowser:any}
+    interface Window { Module: any; TBrowser:any; wstrToString:any; pointerToString:any}
 }
 
 var Module : any = window.Module || {};
@@ -106,6 +106,10 @@ export function init(w:number, h:number, title:string, isDesktop:boolean) {
 
   genFuncsDeclEnd() {
     return '';
+  }
+  
+  genWStrToString(arg) {
+    return `window.wstrToString(${arg});\n`;
   }
 
   static gen() {

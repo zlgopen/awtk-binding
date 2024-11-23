@@ -1355,13 +1355,6 @@ declare function MIME_TYPE_TEXT_X_VCARD():any;
 declare function MIME_TYPE_VIDEO_MPEG():any;
 declare function MIME_TYPE_VIDEO_QUICKTIME():any;
 declare function MIME_TYPE_VIDEO_X_MSVIDEO():any;
-declare function named_value_create() : any;
-declare function named_value_cast(nv : any) : any;
-declare function named_value_set_name(nv : any, name : string) : TRet;
-declare function named_value_set_value(nv : any, value : any) : TRet;
-declare function named_value_get_value(nv : any) : any;
-declare function named_value_destroy(nv : any) : TRet;
-declare function named_value_t_get_prop_name(nativeObj : any) : string;
 declare function OBJECT_CMD_SAVE():any;
 declare function OBJECT_CMD_RELOAD():any;
 declare function OBJECT_CMD_MOVE_UP():any;
@@ -1699,12 +1692,14 @@ declare function candidates_cast(widget : any) : any;
 declare function candidates_set_pre(widget : any, pre : boolean) : TRet;
 declare function candidates_set_select_by_num(widget : any, select_by_num : boolean) : TRet;
 declare function candidates_set_auto_hide(widget : any, auto_hide : boolean) : TRet;
+declare function candidates_set_visible_num(widget : any, visible_num : number) : TRet;
 declare function candidates_set_button_style(widget : any, button_style : string) : TRet;
 declare function candidates_t_get_prop_pre(nativeObj : any) : boolean;
 declare function candidates_t_get_prop_select_by_num(nativeObj : any) : boolean;
 declare function candidates_t_get_prop_auto_hide(nativeObj : any) : boolean;
 declare function candidates_t_get_prop_button_style(nativeObj : any) : string;
 declare function candidates_t_get_prop_enable_preview(nativeObj : any) : boolean;
+declare function candidates_t_get_prop_visible_num(nativeObj : any) : number;
 declare function lang_indicator_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function lang_indicator_set_image(widget : any, image : string) : TRet;
 declare function lang_indicator_cast(widget : any) : any;
@@ -2045,11 +2040,13 @@ declare function cmd_exec_event_t_get_prop_result(nativeObj : any) : TRet;
 declare function cmd_exec_event_t_get_prop_can_exec(nativeObj : any) : boolean;
 declare function value_change_event_cast(event : any) : any;
 declare function log_message_event_cast(event : any) : any;
-declare function named_value_hash_create() : any;
-declare function named_value_hash_set_name(nvh : any, name : string) : TRet;
-declare function named_value_hash_destroy(nvh : any) : TRet;
-declare function named_value_hash_clone(nvh : any) : any;
-declare function named_value_hash_get_hash_from_str(str : string) : number;
+declare function named_value_create() : any;
+declare function named_value_cast(nv : any) : any;
+declare function named_value_set_name(nv : any, name : string) : TRet;
+declare function named_value_set_value(nv : any, value : any) : TRet;
+declare function named_value_get_value(nv : any) : any;
+declare function named_value_destroy(nv : any) : TRet;
+declare function named_value_t_get_prop_name(nativeObj : any) : string;
 declare function app_bar_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function app_bar_cast(widget : any) : any;
 declare function button_group_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -2309,6 +2306,11 @@ declare function idle_info_cast(idle : any) : any;
 declare function idle_info_t_get_prop_ctx(nativeObj : any) : any;
 declare function idle_info_t_get_prop_extra_ctx(nativeObj : any) : any;
 declare function idle_info_t_get_prop_id(nativeObj : any) : number;
+declare function named_value_hash_create() : any;
+declare function named_value_hash_set_name(nvh : any, name : string) : TRet;
+declare function named_value_hash_destroy(nvh : any) : TRet;
+declare function named_value_hash_clone(nvh : any) : any;
+declare function named_value_hash_get_hash_from_str(str : string) : number;
 declare function object_array_create() : any;
 declare function object_array_unref(obj : any) : TRet;
 declare function object_array_clear_props(obj : any) : TRet;
@@ -2329,6 +2331,7 @@ declare function object_default_set_name_case_insensitive(obj : any, name_case_i
 declare function object_hash_create() : any;
 declare function object_hash_create_ex(enable_path : boolean) : any;
 declare function object_hash_set_keep_prop_type(obj : any, keep_prop_type : boolean) : TRet;
+declare function object_hash_set_keep_props_order(obj : any, keep_props_order : boolean) : TRet;
 declare function timer_info_cast(timer : any) : any;
 declare function timer_info_t_get_prop_ctx(nativeObj : any) : any;
 declare function timer_info_t_get_prop_extra_ctx(nativeObj : any) : any;
@@ -14425,99 +14428,6 @@ export enum TMIME_TYPE {
 
 
 /**
- * 命名的值。
- *
- */
-export class TNamedValue { 
- public nativeObj : any;
- constructor(nativeObj : any) {
-   this.nativeObj = nativeObj;
- }
-
-
-  /**
-   * 创建named_value对象。
-   * 
-   *
-   * @returns 返回named_value对象。
-   */
- static create() : TNamedValue  {
-    return new TNamedValue(named_value_create());
- }
-
-
-  /**
-   * 转换为named_value对象(供脚本语言使用)。
-   * 
-   * @param nv named_value对象。
-   *
-   * @returns 返回named_value对象。
-   */
- static cast(nv : TNamedValue) : TNamedValue  {
-    return new TNamedValue(named_value_cast(nv != null ? (nv.nativeObj || nv) : null));
- }
-
-
-  /**
-   * 设置名称。
-   * 
-   * @param name 名称。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setName(name : string) : TRet  {
-    return named_value_set_name(this != null ? (this.nativeObj || this) : null, name);
- }
-
-
-  /**
-   * 设置值。
-   * 
-   * @param value 值。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setValue(value : TValue) : TRet  {
-    return named_value_set_value(this != null ? (this.nativeObj || this) : null, value != null ? (value.nativeObj || value) : null);
- }
-
-
-  /**
-   * 获取值对象(主要给脚本语言使用)。
-   * 
-   *
-   * @returns 返回值对象。
-   */
- getValue() : TValue  {
-    return new TValue(named_value_get_value(this != null ? (this.nativeObj || this) : null));
- }
-
-
-  /**
-   * 销毁named_value对象。
-   * 
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- destroy() : TRet  {
-    return named_value_destroy(this != null ? (this.nativeObj || this) : null);
- }
-
-
-  /**
-   * 名称。
-   *
-   */
- get name() : string {
-   return named_value_t_get_prop_name(this.nativeObj);
- }
-
- set name(v : string) {
-   this.setName(v);
- }
-
-};
-/**
  * 对象常见命令定义
  *
  */
@@ -18795,6 +18705,18 @@ export class TCandidates extends TWidget {
 
 
   /**
+   * 设置可见候选词个数。
+   * 
+   * @param visible_num 可见个数。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setVisibleNum(visible_num : number) : TRet  {
+    return candidates_set_visible_num(this != null ? (this.nativeObj || this) : null, visible_num);
+ }
+
+
+  /**
    * 设置按钮的style名称。
    * 
    * @param button_style 按钮的style名称。
@@ -18867,6 +18789,19 @@ export class TCandidates extends TWidget {
    */
  get enablePreview() : boolean {
    return candidates_t_get_prop_enable_preview(this.nativeObj);
+ }
+
+
+  /**
+   * 候选字可见个数。
+   *
+   */
+ get visibleNum() : number {
+   return candidates_t_get_prop_visible_num(this.nativeObj);
+ }
+
+ set visibleNum(v : number) {
+   this.setVisibleNum(v);
  }
 
 };
@@ -24045,10 +23980,10 @@ export class TLogMessageEvent extends TEvent {
 
 };
 /**
- * 带有散列值的命名的值。
+ * 命名的值。
  *
  */
-export class TNamedValueHash extends TNamedValue { 
+export class TNamedValue extends TValue { 
  public nativeObj : any;
  constructor(nativeObj : any) {
    super(nativeObj);
@@ -24056,59 +23991,84 @@ export class TNamedValueHash extends TNamedValue {
 
 
   /**
-   * 创建named_value_hash对象。
+   * 创建named_value对象。
    * 
    *
-   * @returns 返回named_value_hash对象。
+   * @returns 返回named_value对象。
    */
- static create() : TNamedValueHash  {
-    return new TNamedValueHash(named_value_hash_create());
+ static create() : TNamedValue  {
+    return new TNamedValue(named_value_create());
  }
 
 
   /**
-   * 设置散列值。
+   * 转换为named_value对象(供脚本语言使用)。
+   * 
+   * @param nv named_value对象。
+   *
+   * @returns 返回named_value对象。
+   */
+ static cast(nv : TNamedValue) : TNamedValue  {
+    return new TNamedValue(named_value_cast(nv != null ? (nv.nativeObj || nv) : null));
+ }
+
+
+  /**
+   * 设置名称。
    * 
    * @param name 名称。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
  setName(name : string) : TRet  {
-    return named_value_hash_set_name(this != null ? (this.nativeObj || this) : null, name);
+    return named_value_set_name(this != null ? (this.nativeObj || this) : null, name);
  }
 
 
   /**
-   * 销毁named_value_hash对象。
+   * 设置值。
+   * 
+   * @param value 值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setValue(value : TValue) : TRet  {
+    return named_value_set_value(this != null ? (this.nativeObj || this) : null, value != null ? (value.nativeObj || value) : null);
+ }
+
+
+  /**
+   * 获取值对象(主要给脚本语言使用)。
+   * 
+   *
+   * @returns 返回值对象。
+   */
+ getValue() : TValue  {
+    return new TValue(named_value_get_value(this != null ? (this.nativeObj || this) : null));
+ }
+
+
+  /**
+   * 销毁named_value对象。
    * 
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
  destroy() : TRet  {
-    return named_value_hash_destroy(this != null ? (this.nativeObj || this) : null);
+    return named_value_destroy(this != null ? (this.nativeObj || this) : null);
  }
 
 
   /**
-   * 克隆named_value_hash对象。
-   * 
+   * 名称。
    *
-   * @returns 返回named_value_hash对象。
    */
- clone() : TNamedValueHash  {
-    return new TNamedValueHash(named_value_hash_clone(this != null ? (this.nativeObj || this) : null));
+ get name() : string {
+   return named_value_t_get_prop_name(this.nativeObj);
  }
 
-
-  /**
-   * 获取字符串散列值。
-   * 
-   * @param str 字符串。
-   *
-   * @returns 返回散列值。
-   */
- static getHashFromStr(str : string) : number  {
-    return named_value_hash_get_hash_from_str(str);
+ set name(v : string) {
+   this.setName(v);
  }
 
 };
@@ -28886,6 +28846,74 @@ export class TIdleInfo extends TObject {
 
 };
 /**
+ * 带有散列值的命名的值。
+ *
+ */
+export class TNamedValueHash extends TNamedValue { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建named_value_hash对象。
+   * 
+   *
+   * @returns 返回named_value_hash对象。
+   */
+ static create() : TNamedValueHash  {
+    return new TNamedValueHash(named_value_hash_create());
+ }
+
+
+  /**
+   * 设置散列值。
+   * 
+   * @param name 名称。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setName(name : string) : TRet  {
+    return named_value_hash_set_name(this != null ? (this.nativeObj || this) : null, name);
+ }
+
+
+  /**
+   * 销毁named_value_hash对象。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ destroy() : TRet  {
+    return named_value_hash_destroy(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
+   * 克隆named_value_hash对象。
+   * 
+   *
+   * @returns 返回named_value_hash对象。
+   */
+ clone() : TNamedValueHash  {
+    return new TNamedValueHash(named_value_hash_clone(this != null ? (this.nativeObj || this) : null));
+ }
+
+
+  /**
+   * 获取字符串散列值。
+   * 
+   * @param str 字符串。
+   *
+   * @returns 返回散列值。
+   */
+ static getHashFromStr(str : string) : number  {
+    return named_value_hash_get_hash_from_str(str);
+ }
+
+};
+/**
  * 简单的动态数组，内部存放value对象。
  *
  *访问时属性名称为：
@@ -29164,6 +29192,18 @@ export class TObjectHash extends TObject {
    */
  setKeepPropType(keep_prop_type : boolean) : TRet  {
     return object_hash_set_keep_prop_type(this != null ? (this.nativeObj || this) : null, keep_prop_type);
+ }
+
+
+  /**
+   * 设置是否保持属性间的顺序。
+   * 
+   * @param keep_props_order 保持属性间的顺序。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setKeepPropsOrder(keep_props_order : boolean) : TRet  {
+    return object_hash_set_keep_props_order(this != null ? (this.nativeObj || this) : null, keep_props_order);
  }
 
 };

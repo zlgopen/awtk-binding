@@ -782,7 +782,7 @@
         "desc": "比较两个对象。",
         "name": "tk_object_compare",
         "return": {
-          "type": "int",
+          "type": "int32_t",
           "desc": "返回比较结果。"
         }
       },
@@ -15471,147 +15471,6 @@
     "level": 1
   },
   {
-    "type": "class",
-    "methods": [
-      {
-        "params": [],
-        "annotation": {
-          "constructor": true,
-          "scriptable": true,
-          "gc": true
-        },
-        "desc": "创建named_value对象。",
-        "name": "named_value_create",
-        "return": {
-          "type": "named_value_t*",
-          "desc": "返回named_value对象。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "named_value_t*",
-            "name": "nv",
-            "desc": "named_value对象。"
-          }
-        ],
-        "annotation": {
-          "cast": true,
-          "scriptable": true
-        },
-        "desc": "转换为named_value对象(供脚本语言使用)。",
-        "name": "named_value_cast",
-        "return": {
-          "type": "named_value_t*",
-          "desc": "返回named_value对象。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "named_value_t*",
-            "name": "nv",
-            "desc": "named_value对象。"
-          },
-          {
-            "type": "const char*",
-            "name": "name",
-            "desc": "名称。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "设置名称。",
-        "name": "named_value_set_name",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "named_value_t*",
-            "name": "nv",
-            "desc": "named_value对象。"
-          },
-          {
-            "type": "const value_t*",
-            "name": "value",
-            "desc": "值。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "设置值。",
-        "name": "named_value_set_value",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "named_value_t*",
-            "name": "nv",
-            "desc": "named_value对象。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "获取值对象(主要给脚本语言使用)。",
-        "name": "named_value_get_value",
-        "return": {
-          "type": "value_t*",
-          "desc": "返回值对象。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "named_value_t*",
-            "name": "nv",
-            "desc": "named_value对象。"
-          }
-        ],
-        "annotation": {
-          "deconstructor": true,
-          "scriptable": true,
-          "gc": true
-        },
-        "desc": "销毁named_value对象。",
-        "name": "named_value_destroy",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      }
-    ],
-    "events": [],
-    "properties": [
-      {
-        "name": "name",
-        "desc": "名称。",
-        "type": "char*",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      }
-    ],
-    "header": "tkc/named_value.h",
-    "desc": "命名的值。",
-    "name": "named_value_t",
-    "annotation": {
-      "scriptable": true
-    },
-    "level": 1
-  },
-  {
     "type": "enum",
     "desc": "对象常见命令定义",
     "consts": [
@@ -21337,6 +21196,29 @@
             "desc": "控件对象。"
           },
           {
+            "type": "uint32_t",
+            "name": "visible_num",
+            "desc": "可见个数。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置可见候选词个数。",
+        "name": "candidates_set_visible_num",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
             "type": "const char*",
             "name": "button_style",
             "desc": "按钮的style名称。"
@@ -21411,6 +21293,19 @@
         "name": "enable_preview",
         "desc": "是否启用候选字预览。",
         "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "visible_num",
+        "desc": "候选字可见个数。",
+        "type": "uint32_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -28880,19 +28775,38 @@
           "scriptable": true,
           "gc": true
         },
-        "desc": "创建named_value_hash对象。",
-        "name": "named_value_hash_create",
+        "desc": "创建named_value对象。",
+        "name": "named_value_create",
         "return": {
-          "type": "named_value_hash_t*",
-          "desc": "返回named_value_hash对象。"
+          "type": "named_value_t*",
+          "desc": "返回named_value对象。"
         }
       },
       {
         "params": [
           {
-            "type": "named_value_hash_t*",
-            "name": "nvh",
-            "desc": "named_value_hash对象。"
+            "type": "named_value_t*",
+            "name": "nv",
+            "desc": "named_value对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
+        "desc": "转换为named_value对象(供脚本语言使用)。",
+        "name": "named_value_cast",
+        "return": {
+          "type": "named_value_t*",
+          "desc": "返回named_value对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_t*",
+            "name": "nv",
+            "desc": "named_value对象。"
           },
           {
             "type": "const char*",
@@ -28903,8 +28817,8 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置散列值。",
-        "name": "named_value_hash_set_name",
+        "desc": "设置名称。",
+        "name": "named_value_set_name",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -28913,9 +28827,50 @@
       {
         "params": [
           {
-            "type": "named_value_hash_t*",
-            "name": "nvh",
-            "desc": "named_value_hash对象。"
+            "type": "named_value_t*",
+            "name": "nv",
+            "desc": "named_value对象。"
+          },
+          {
+            "type": "const value_t*",
+            "name": "value",
+            "desc": "值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置值。",
+        "name": "named_value_set_value",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_t*",
+            "name": "nv",
+            "desc": "named_value对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取值对象(主要给脚本语言使用)。",
+        "name": "named_value_get_value",
+        "return": {
+          "type": "value_t*",
+          "desc": "返回值对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_t*",
+            "name": "nv",
+            "desc": "named_value对象。"
           }
         ],
         "annotation": {
@@ -28923,57 +28878,30 @@
           "scriptable": true,
           "gc": true
         },
-        "desc": "销毁named_value_hash对象。",
-        "name": "named_value_hash_destroy",
+        "desc": "销毁named_value对象。",
+        "name": "named_value_destroy",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
-      },
-      {
-        "params": [
-          {
-            "type": "named_value_hash_t*",
-            "name": "nvh",
-            "desc": "named_value_hash对象。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "克隆named_value_hash对象。",
-        "name": "named_value_hash_clone",
-        "return": {
-          "type": "named_value_hash_t*",
-          "desc": "返回named_value_hash对象。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "const char*",
-            "name": "str",
-            "desc": "字符串。"
-          }
-        ],
-        "annotation": {
-          "static": true,
-          "scriptable": true
-        },
-        "desc": "获取字符串散列值。",
-        "name": "named_value_hash_get_hash_from_str",
-        "return": {
-          "type": "uint64_t",
-          "desc": "返回散列值。"
-        }
       }
     ],
     "events": [],
-    "properties": [],
-    "header": "tkc/named_value_hash.h",
-    "desc": "带有散列值的命名的值。",
-    "name": "named_value_hash_t",
-    "parent": "named_value_t",
+    "properties": [
+      {
+        "name": "name",
+        "desc": "名称。",
+        "type": "char*",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      }
+    ],
+    "header": "tkc/named_value.h",
+    "desc": "命名的值。",
+    "name": "named_value_t",
+    "parent": "value_t",
     "annotation": {
       "scriptable": true
     },
@@ -35332,6 +35260,115 @@
           "scriptable": true,
           "gc": true
         },
+        "desc": "创建named_value_hash对象。",
+        "name": "named_value_hash_create",
+        "return": {
+          "type": "named_value_hash_t*",
+          "desc": "返回named_value_hash对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_hash_t*",
+            "name": "nvh",
+            "desc": "named_value_hash对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "名称。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置散列值。",
+        "name": "named_value_hash_set_name",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_hash_t*",
+            "name": "nvh",
+            "desc": "named_value_hash对象。"
+          }
+        ],
+        "annotation": {
+          "deconstructor": true,
+          "scriptable": true,
+          "gc": true
+        },
+        "desc": "销毁named_value_hash对象。",
+        "name": "named_value_hash_destroy",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_hash_t*",
+            "name": "nvh",
+            "desc": "named_value_hash对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "克隆named_value_hash对象。",
+        "name": "named_value_hash_clone",
+        "return": {
+          "type": "named_value_hash_t*",
+          "desc": "返回named_value_hash对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "const char*",
+            "name": "str",
+            "desc": "字符串。"
+          }
+        ],
+        "annotation": {
+          "static": true,
+          "scriptable": true
+        },
+        "desc": "获取字符串散列值。",
+        "name": "named_value_hash_get_hash_from_str",
+        "return": {
+          "type": "uint64_t",
+          "desc": "返回散列值。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [],
+    "header": "tkc/named_value_hash.h",
+    "desc": "带有散列值的命名的值。",
+    "name": "named_value_hash_t",
+    "parent": "named_value_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "level": 3
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [],
+        "annotation": {
+          "constructor": true,
+          "scriptable": true,
+          "gc": true
+        },
         "desc": "创建对象。",
         "name": "object_array_create",
         "return": {
@@ -35758,6 +35795,29 @@
         },
         "desc": "设置属性值时不改变属性的类型。",
         "name": "object_hash_set_keep_prop_type",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "tk_object_t*",
+            "name": "obj",
+            "desc": "对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "keep_props_order",
+            "desc": "保持属性间的顺序。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置是否保持属性间的顺序。",
+        "name": "object_hash_set_keep_props_order",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
