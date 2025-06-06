@@ -1,5 +1,5 @@
 type TNamedValue struct {
-  handle unsafe.Pointer
+  TValue
 }
 
 func TNamedValueCreate() TNamedValue {

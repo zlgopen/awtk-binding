@@ -8,6 +8,10 @@
 
 本地化信息。提供字符串翻译数据管理，当前语言改变的事件通知等等。
 
+## Extended by
+
+- [`TLocaleInfoXml`](TLocaleInfoXml.md)
+
 ## Constructors
 
 ### new TLocaleInfo()
@@ -24,7 +28,7 @@
 
 #### Defined in
 
-[awtk.ts:7117](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7117)
+[awtk.ts:7158](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7158)
 
 ## Properties
 
@@ -34,7 +38,7 @@
 
 #### Defined in
 
-[awtk.ts:7116](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7116)
+[awtk.ts:7157](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7157)
 
 ## Methods
 
@@ -62,7 +66,7 @@
 
 #### Defined in
 
-[awtk.ts:7153](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7153)
+[awtk.ts:7194](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7194)
 
 ***
 
@@ -86,7 +90,7 @@ locale_info_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:7165](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7165)
+[awtk.ts:7206](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7206)
 
 ***
 
@@ -110,7 +114,7 @@ locale_info_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:7140](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7140)
+[awtk.ts:7181](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7181)
 
 ***
 
@@ -128,4 +132,4 @@ locale_info_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:7128](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7128)
+[awtk.ts:7169](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7169)

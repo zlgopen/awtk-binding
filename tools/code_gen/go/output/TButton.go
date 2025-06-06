@@ -42,11 +42,15 @@ func (this TButton) GetEnablePreview() bool {
   return (bool)((*C.button_t)(unsafe.Pointer(this.handle)).enable_preview);
 }
 
-func (this TButton) GetLongPressTime() uint32 {
-  return (uint32)((*C.button_t)(unsafe.Pointer(this.handle)).long_press_time);
+func (this TButton) GetIsAcceptStatus() bool {
+  return (bool)((*C.button_t)(unsafe.Pointer(this.handle)).is_accept_status);
 }
 
 func (this TButton) GetPressed() bool {
   return (bool)((*C.button_t)(unsafe.Pointer(this.handle)).pressed);
+}
+
+func (this TButton) GetLongPressTime() uint32 {
+  return (uint32)((*C.button_t)(unsafe.Pointer(this.handle)).long_press_time);
 }
 

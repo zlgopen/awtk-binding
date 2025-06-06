@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-JAVA: awtk.TIdle类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -34,7 +34,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.12.0 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
@@ -102,17 +102,15 @@ $(function(){ initResizable(false); });
 <tr class="separator:a9331d7bdbfadbabe1e1c6e6e67c8e684"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05f23f08f2206834cabcf5ad9a9df364" id="r_a05f23f08f2206834cabcf5ad9a9df364"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05f23f08f2206834cabcf5ad9a9df364">remove</a> (int idle_id)</td></tr>
 <tr class="separator:a05f23f08f2206834cabcf5ad9a9df364"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55e42e3fca77c8dc6a2dfb5d0e8795ae" id="r_a55e42e3fca77c8dc6a2dfb5d0e8795ae"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55e42e3fca77c8dc6a2dfb5d0e8795ae">removeAllByCtx</a> (long ctx)</td></tr>
-<tr class="separator:a55e42e3fca77c8dc6a2dfb5d0e8795ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>idle可以看作是duration为0的定时器。</p>
 <blockquote class="doxtable">
-<p>&zwj;idle可以用来实现一些异步处理。 </p>
+<p>idle可以用来实现一些异步处理。 </p>
 </blockquote>
 <p>示例：</p>
 <blockquote class="doxtable">
-<p>&zwj;在非GUI线程请用idle_queue。 </p>
+<p>在非GUI线程请用idle_queue。 </p>
 </blockquote>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a9331d7bdbfadbabe1e1c6e6e67c8e684" name="a9331d7bdbfadbabe1e1c6e6e67c8e684"></a>
@@ -137,7 +135,7 @@ $(function(){ initResizable(false); });
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -171,7 +169,7 @@ $(function(){ initResizable(false); });
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -186,46 +184,13 @@ $(function(){ initResizable(false); });
 
 </div>
 </div>
-<a id="a55e42e3fca77c8dc6a2dfb5d0e8795ae" name="a55e42e3fca77c8dc6a2dfb5d0e8795ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55e42e3fca77c8dc6a2dfb5d0e8795ae">&#9670;&#160;</a></span>removeAllByCtx()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TIdle.removeAllByCtx </td>
-          <td>(</td>
-          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>根据上下文删除所有对应的idle。</p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ctx</td><td>idle回调函数的上下文</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
-
-</div>
-</div>
 <hr/>该类的文档由以下文件生成:<ul>
 <li>output/<b>TIdle.java</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
 </small></address>
 </div><!-- doc-content -->
 </body>

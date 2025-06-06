@@ -20,6 +20,10 @@ func (this TTabButtonGroup) SetDragChild(drag_child bool) TRet {
   return TRet(C.tab_button_group_set_drag_child((*C.widget_t)(this.handle), (C.bool_t)(drag_child)));
 }
 
+func (this TTabButtonGroup) RemoveIndex(index uint32) TRet {
+  return TRet(C.tab_button_group_remove_index((*C.widget_t)(this.handle), (C.uint32_t)(index)));
+}
+
 func TTabButtonGroupCast(widget TWidget) TTabButtonGroup {
   retObj := TTabButtonGroup{}
   retObj.handle = unsafe.Pointer(C.tab_button_group_cast((*C.widget_t)(widget.handle)))

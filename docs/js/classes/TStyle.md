@@ -32,7 +32,7 @@ widget从style对象中，获取诸如字体、颜色和图片相关的参数，
 
 #### Defined in
 
-[awtk.ts:7559](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7559)
+[awtk.ts:7600](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7600)
 
 ## Properties
 
@@ -42,7 +42,7 @@ widget从style对象中，获取诸如字体、颜色和图片相关的参数，
 
 #### Defined in
 
-[awtk.ts:7558](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7558)
+[awtk.ts:7599](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7599)
 
 ## Methods
 
@@ -74,7 +74,7 @@ widget从style对象中，获取诸如字体、颜色和图片相关的参数，
 
 #### Defined in
 
-[awtk.ts:7635](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7635)
+[awtk.ts:7676](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7676)
 
 ***
 
@@ -102,7 +102,7 @@ widget从style对象中，获取诸如字体、颜色和图片相关的参数，
 
 #### Defined in
 
-[awtk.ts:7595](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7595)
+[awtk.ts:7636](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7636)
 
 ***
 
@@ -130,7 +130,7 @@ widget从style对象中，获取诸如字体、颜色和图片相关的参数，
 
 #### Defined in
 
-[awtk.ts:7621](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7621)
+[awtk.ts:7662](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7662)
 
 ***
 
@@ -148,7 +148,7 @@ widget从style对象中，获取诸如字体、颜色和图片相关的参数，
 
 #### Defined in
 
-[awtk.ts:7676](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7676)
+[awtk.ts:7717](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7717)
 
 ***
 
@@ -166,7 +166,7 @@ widget从style对象中，获取诸如字体、颜色和图片相关的参数，
 
 #### Defined in
 
-[awtk.ts:7698](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7698)
+[awtk.ts:7739](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7739)
 
 ***
 
@@ -194,7 +194,7 @@ widget从style对象中，获取诸如字体、颜色和图片相关的参数，
 
 #### Defined in
 
-[awtk.ts:7608](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7608)
+[awtk.ts:7649](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7649)
 
 ***
 
@@ -212,7 +212,7 @@ widget从style对象中，获取诸如字体、颜色和图片相关的参数，
 
 #### Defined in
 
-[awtk.ts:7687](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7687)
+[awtk.ts:7728](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7728)
 
 ***
 
@@ -230,7 +230,7 @@ widget从style对象中，获取诸如字体、颜色和图片相关的参数，
 
 #### Defined in
 
-[awtk.ts:7582](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7582)
+[awtk.ts:7623](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7623)
 
 ***
 
@@ -254,7 +254,7 @@ widget状态改变时，通知style更新数据。
 
 #### Defined in
 
-[awtk.ts:7571](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7571)
+[awtk.ts:7612](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7612)
 
 ***
 
@@ -286,7 +286,7 @@ widget状态改变时，通知style更新数据。
 
 #### Defined in
 
-[awtk.ts:7649](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7649)
+[awtk.ts:7690](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7690)
 
 ***
 
@@ -323,4 +323,4 @@ style的名称。
 
 #### Defined in
 
-[awtk.ts:7665](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7665)
+[awtk.ts:7706](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7706)

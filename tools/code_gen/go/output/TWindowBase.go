@@ -76,6 +76,14 @@ func (this TWindowBase) GetMoveFocusRightKey() string {
   return C.GoString((*C.window_base_t)(unsafe.Pointer(this.handle)).move_focus_right_key);
 }
 
+func (this TWindowBase) GetAcceptButton() string {
+  return C.GoString((*C.window_base_t)(unsafe.Pointer(this.handle)).accept_button);
+}
+
+func (this TWindowBase) GetCancelButton() string {
+  return C.GoString((*C.window_base_t)(unsafe.Pointer(this.handle)).cancel_button);
+}
+
 func (this TWindowBase) GetAppletName() string {
   return C.GoString((*C.window_base_t)(unsafe.Pointer(this.handle)).applet_name);
 }

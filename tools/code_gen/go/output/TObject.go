@@ -34,8 +34,8 @@ func (this TObject) SetName(name string) TRet {
   return TRet(C.object_set_name((*C.object_t)(this.handle), aname));
 }
 
-func (this TObject) Compare(other TObject) int {
-  return (int)(C.object_compare((*C.object_t)(this.handle), (*C.object_t)(other.handle)));
+func (this TObject) Compare(other TObject) int32 {
+  return (int32)(C.object_compare((*C.object_t)(this.handle), (*C.object_t)(other.handle)));
 }
 
 func (this TObject) GetProp(name string, v TValue) TRet {

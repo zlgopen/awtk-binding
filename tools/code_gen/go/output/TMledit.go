@@ -62,10 +62,6 @@ func (this TMledit) GetCursor() uint32 {
   return (uint32)(C.mledit_get_cursor((*C.widget_t)(this.handle)));
 }
 
-func (this TMledit) SetScrollLine(scroll_line uint32) TRet {
-  return TRet(C.mledit_set_scroll_line((*C.widget_t)(this.handle), (C.uint32_t)(scroll_line)));
-}
-
 func (this TMledit) ScrollToOffset(offset uint32) TRet {
   return TRet(C.mledit_scroll_to_offset((*C.widget_t)(this.handle), (C.uint32_t)(offset)));
 }
@@ -126,10 +122,6 @@ func (this TMledit) GetMaxChars() uint32 {
   return (uint32)((*C.mledit_t)(unsafe.Pointer(this.handle)).max_chars);
 }
 
-func (this TMledit) GetScrollLine() uint32 {
-  return (uint32)((*C.mledit_t)(unsafe.Pointer(this.handle)).scroll_line);
-}
-
 func (this TMledit) GetOverwrite() bool {
   return (bool)((*C.mledit_t)(unsafe.Pointer(this.handle)).overwrite);
 }
@@ -152,5 +144,13 @@ func (this TMledit) GetOpenImWhenFocused() bool {
 
 func (this TMledit) GetCloseImWhenBlured() bool {
   return (bool)((*C.mledit_t)(unsafe.Pointer(this.handle)).close_im_when_blured);
+}
+
+func (this TMledit) GetAcceptReturn() bool {
+  return (bool)((*C.mledit_t)(unsafe.Pointer(this.handle)).accept_return);
+}
+
+func (this TMledit) GetAcceptTab() bool {
+  return (bool)((*C.mledit_t)(unsafe.Pointer(this.handle)).accept_tab);
 }
 

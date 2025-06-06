@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[awtk.ts:4896](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L4896)
+[awtk.ts:4931](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L4931)
 
 ***
 
@@ -30,4 +30,4 @@ UTF8文本。
 
 #### Defined in
 
-[awtk.ts:4902](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L4902)
+[awtk.ts:4937](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L4937)

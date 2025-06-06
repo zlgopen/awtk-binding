@@ -34,6 +34,10 @@ func (this TNativeWindow) ShowBorder(show bool) TRet {
   return TRet(C.native_window_show_border((*C.native_window_t)(this.handle), (C.bool_t)(show)));
 }
 
+func (this TNativeWindow) SetWindowHitTest(x int, y int, w int, h int) TRet {
+  return TRet(C.native_window_set_window_hit_test((*C.native_window_t)(this.handle), (C.xy_t)(x), (C.xy_t)(y), (C.wh_t)(w), (C.wh_t)(h)));
+}
+
 func (this TNativeWindow) SetFullscreen(fullscreen bool) TRet {
   return TRet(C.native_window_set_fullscreen((*C.native_window_t)(this.handle), (C.bool_t)(fullscreen)));
 }

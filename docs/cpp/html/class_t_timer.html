@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TTimer类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -34,7 +34,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.12.0 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
@@ -100,8 +100,6 @@ $(function(){ initResizable(false); });
 <tr class="separator:a7570bd60aa957b566bd93726697c9162"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40e7fb637864da595ef891ebebf4c9f8" id="r_a40e7fb637864da595ef891ebebf4c9f8"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40e7fb637864da595ef891ebebf4c9f8">Remove</a> (uint32_t timer_id)</td></tr>
 <tr class="separator:a40e7fb637864da595ef891ebebf4c9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7c287bf5d44fdbcb2869f447f7401af" id="r_ad7c287bf5d44fdbcb2869f447f7401af"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7c287bf5d44fdbcb2869f447f7401af">RemoveAllByCtx</a> (void *ctx)</td></tr>
-<tr class="separator:ad7c287bf5d44fdbcb2869f447f7401af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc9845f46017626f309008a839cbfdae" id="r_afc9845f46017626f309008a839cbfdae"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc9845f46017626f309008a839cbfdae">Reset</a> (uint32_t timer_id)</td></tr>
 <tr class="separator:afc9845f46017626f309008a839cbfdae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0ba05cb473205282845daa40bfb6b8c" id="r_ae0ba05cb473205282845daa40bfb6b8c"><td class="memItemLeft" align="right" valign="top">static ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0ba05cb473205282845daa40bfb6b8c">Suspend</a> (uint32_t timer_id)</td></tr>
@@ -114,11 +112,11 @@ $(function(){ initResizable(false); });
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>定时器系统。</p>
 <blockquote class="doxtable">
-<p>&zwj;本定时器精度较低，最高精度为1000/FPS，如果需要高精度的定时器，请用OS提供的定时器。 </p>
+<p>本定时器精度较低，最高精度为1000/FPS，如果需要高精度的定时器，请用OS提供的定时器。 </p>
 </blockquote>
 <p>示例：</p>
 <blockquote class="doxtable">
-<p>&zwj;在非GUI线程请用timer_queue。 </p>
+<p>在非GUI线程请用timer_queue。 </p>
 </blockquote>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a7570bd60aa957b566bd93726697c9162" name="a7570bd60aa957b566bd93726697c9162"></a>
@@ -148,7 +146,7 @@ $(function(){ initResizable(false); });
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -187,7 +185,7 @@ $(function(){ initResizable(false); });
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -221,7 +219,7 @@ $(function(){ initResizable(false); });
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -229,39 +227,6 @@ $(function(){ initResizable(false); });
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">timer_id</td><td>timerID。</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
-
-</div>
-</div>
-<a id="ad7c287bf5d44fdbcb2869f447f7401af" name="ad7c287bf5d44fdbcb2869f447f7401af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7c287bf5d44fdbcb2869f447f7401af">&#9670;&#160;</a></span>RemoveAllByCtx()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ret_t TTimer::RemoveAllByCtx </td>
-          <td>(</td>
-          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>根据上下文删除所有对应的timer。</p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ctx</td><td>timer回调函数的上下文。</td></tr>
   </table>
   </dd>
 </dl>
@@ -287,7 +252,7 @@ $(function(){ initResizable(false); });
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -320,7 +285,7 @@ $(function(){ initResizable(false); });
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -353,7 +318,7 @@ $(function(){ initResizable(false); });
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -375,7 +340,7 @@ $(function(){ initResizable(false); });
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
 </small></address>
 </div><!-- doc-content -->
 </body>

@@ -54,7 +54,7 @@ timer回调函数的上下文。
 
 #### Defined in
 
-[awtk.ts:7767](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7767)
+[awtk.ts:7808](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7808)
 
 ***
 
@@ -82,7 +82,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7840](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7840)
+[awtk.ts:7869](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7869)
 
 ***
 
@@ -106,31 +106,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7779](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7779)
-
-***
-
-### removeAllByCtx()
-
-> `static` **removeAllByCtx**(`ctx`): [`TRet`](../enumerations/TRet.md)
-
-根据上下文删除所有对应的timer。
-
-#### Parameters
-
-• **ctx**: `any`
-
-timer回调函数的上下文。
-
-#### Returns
-
-[`TRet`](../enumerations/TRet.md)
-
-返回RET_OK表示成功，否则表示失败。
-
-#### Defined in
-
-[awtk.ts:7791](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7791)
+[awtk.ts:7820](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7820)
 
 ***
 
@@ -154,7 +130,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7803](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7803)
+[awtk.ts:7832](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7832)
 
 ***
 
@@ -178,7 +154,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7827](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7827)
+[awtk.ts:7856](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7856)
 
 ***
 
@@ -202,4 +178,4 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7815](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L7815)
+[awtk.ts:7844](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7844)

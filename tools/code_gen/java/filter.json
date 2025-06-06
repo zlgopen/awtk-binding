@@ -782,7 +782,7 @@
         "desc": "比较两个对象。",
         "name": "object_compare",
         "return": {
-          "type": "int",
+          "type": "int32_t",
           "desc": "返回比较结果。"
         }
       },
@@ -4778,6 +4778,18 @@
         "name": "EVT_UI_LOAD"
       },
       {
+        "desc": "触摸按下事件名(touch_event_t)。",
+        "name": "EVT_TOUCH_DOWN"
+      },
+      {
+        "desc": "触摸移动事件名(touch_event_t)。",
+        "name": "EVT_TOUCH_MOVE"
+      },
+      {
+        "desc": "触摸抬起事件名(touch_event_t)。",
+        "name": "EVT_TOUCH_UP"
+      },
+      {
         "desc": "event queue其它请求编号起始值。",
         "name": "EVT_REQ_START"
       },
@@ -5126,25 +5138,6 @@
         },
         "desc": "删除指定的idle。",
         "name": "idle_remove",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "void*",
-            "name": "ctx",
-            "desc": "idle回调函数的上下文"
-          }
-        ],
-        "annotation": {
-          "scriptable": true,
-          "static": true
-        },
-        "desc": "根据上下文删除所有对应的idle。",
-        "name": "idle_remove_all_by_ctx",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -6967,25 +6960,6 @@
       {
         "params": [
           {
-            "type": "void*",
-            "name": "ctx",
-            "desc": "timer回调函数的上下文。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true,
-          "static": true
-        },
-        "desc": "根据上下文删除所有对应的timer。",
-        "name": "timer_remove_all_by_ctx",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
             "type": "uint32_t",
             "name": "timer_id",
             "desc": "timerID。"
@@ -7737,7 +7711,7 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置路径填充实心与否。\n\n>CCW(1)为实心，CW(2)为镂空，设置其他则默认根据非零环绕规则判断(nonzero)。",
+        "desc": "设置路径填充实心与否。\n\n>设置为FALSE为实心，TRUE为镂空。",
         "name": "vgcanvas_path_winding",
         "return": {
           "type": "ret_t",
@@ -7968,7 +7942,7 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "矩形裁剪。",
+        "desc": "矩形裁剪。\n备注：\n1. 在绘图的时候脏矩形和裁剪区是一样的。\n2. 该函数是不合并裁剪区的，所有可能出现裁剪区被扩大导致绘图在脏矩形以外的情况，导致残影的情况。\n3. 该函数不支持旋转后调用，会导致裁剪区异常。\n........\nrect_t r;\nrect_t r_save;\nr = rectf_init(c->ox, c->oy, widget->w, widget->h);\nr_save = *vgcanvas_get_clip_rect(vg);\nr = rectf_intersect(&r, &r_save);\nvgcanvas_clip_rect(vg, (float_t)r.x, (float_t)r.y, (float_t)r.w, (float_t)r.h);\n........",
         "name": "vgcanvas_clip_rect",
         "return": {
           "type": "ret_t",
@@ -8044,7 +8018,7 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置一个与前一个裁剪区做交集的矩形裁剪区。\n如果下面这种情况，则不能直接调用 rect_intersect 函数来做矩形交集和 vgcanvas_clip_rect 函数设置裁剪区，而采用本函数做交集。\n由于缩放和旋转以及平移会导致 vg 的坐标系和上一个裁剪区的坐标系不同，\n导致直接使用做交集的话，裁剪区会出错。\n\n```\nvgcanvas_clip_rect(vg, old_r.x, old_r.y, old_r.w, old_r.h);\nvgcanvas_save(vg);\nvgcanvas_scale(vg, scale_x, scale_y);\nvgcanvas_rotate(vg, TK_D2R(15));\nvgcanvas_intersect_clip_rect(vg, r.x, r.y, r.w, r.h);\n..................\nvgcanvas_restore(vg);\n```",
+        "desc": "设置一个与前一个裁剪区做交集的矩形裁剪区。\n备注：\n1. 如果下面这种情况，则不能直接调用 rect_intersect 函数来做矩形交集和 vgcanvas_clip_rect 函数设置裁剪区，而采用本函数做交集。\n由于缩放和旋转以及平移会导致 vg 的坐标系和上一个裁剪区的坐标系不同，\n导致直接使用做交集的话，裁剪区会出错。\n2. 该函数不支持旋转后调用，会导致裁剪区异常。\n\n```\nvgcanvas_clip_rect(vg, old_r.x, old_r.y, old_r.w, old_r.h);\nvgcanvas_save(vg);\nvgcanvas_scale(vg, scale_x, scale_y);\nvgcanvas_rotate(vg, TK_D2R(15));\nvgcanvas_intersect_clip_rect(vg, r.x, r.y, r.w, r.h);\n..................\nvgcanvas_restore(vg);\n```",
         "name": "vgcanvas_intersect_clip_rect",
         "return": {
           "type": "ret_t",
@@ -8283,42 +8257,42 @@
           {
             "type": "float_t",
             "name": "sx",
-            "desc": "sx"
+            "desc": "原图区域的 x"
           },
           {
             "type": "float_t",
             "name": "sy",
-            "desc": "sy"
+            "desc": "原图区域的 y"
           },
           {
             "type": "float_t",
             "name": "sw",
-            "desc": "sw"
+            "desc": "原图区域的 w"
           },
           {
             "type": "float_t",
             "name": "sh",
-            "desc": "sh"
+            "desc": "原图区域的 h"
           },
           {
             "type": "float_t",
             "name": "dx",
-            "desc": "dx"
+            "desc": "绘制区域的 x"
           },
           {
             "type": "float_t",
             "name": "dy",
-            "desc": "dy"
+            "desc": "绘制区域的 y"
           },
           {
             "type": "float_t",
             "name": "dw",
-            "desc": "dw"
+            "desc": "绘制区域的 w"
           },
           {
             "type": "float_t",
             "name": "dh",
-            "desc": "dh"
+            "desc": "绘制区域的 h"
           }
         ],
         "annotation": {
@@ -8419,42 +8393,42 @@
           {
             "type": "float_t",
             "name": "sx",
-            "desc": "sx"
+            "desc": "原图区域的 x"
           },
           {
             "type": "float_t",
             "name": "sy",
-            "desc": "sy"
+            "desc": "原图区域的 y"
           },
           {
             "type": "float_t",
             "name": "sw",
-            "desc": "sw"
+            "desc": "原图区域的 w"
           },
           {
             "type": "float_t",
             "name": "sh",
-            "desc": "sh"
+            "desc": "原图区域的 h"
           },
           {
             "type": "float_t",
             "name": "dx",
-            "desc": "dx"
+            "desc": "绘制区域的 x"
           },
           {
             "type": "float_t",
             "name": "dy",
-            "desc": "dy"
+            "desc": "绘制区域的 y"
           },
           {
             "type": "float_t",
             "name": "dw",
-            "desc": "dw"
+            "desc": "绘制区域的 w"
           },
           {
             "type": "float_t",
             "name": "dh",
-            "desc": "dh"
+            "desc": "绘制区域的 h"
           }
         ],
         "annotation": {
@@ -9384,6 +9358,10 @@
         "name": "WIDGET_PROP_ENABLE_PREVIEW"
       },
       {
+        "desc": "是否为 accept 状态",
+        "name": "WIDGET_PROP_IS_ACCEPT_STATUS"
+      },
+      {
         "desc": "是否启用点击穿透。",
         "name": "WIDGET_PROP_CLICK_THROUGH"
       },
@@ -9556,6 +9534,22 @@
         "name": "WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY"
       },
       {
+        "desc": "窗口中按下 Enter 默认触发单击 button 控件名字。\n备注：如果控件接管了 Enter 的话，accept_button 控件是不会进入 focused 风格，例如：设置 accept_return 为 true 或者 widget->vt->return_key_to_activate 为 true",
+        "name": "WIDGET_PROP_ACCEPT_BUTTON"
+      },
+      {
+        "desc": "窗口中按下 Esc 默认触发单击 button 控件名字。",
+        "name": "WIDGET_PROP_CANCEL_BUTTON"
+      },
+      {
+        "desc": "控件中是否支持 Enter 按钮输入。",
+        "name": "WIDGET_PROP_ACCEPT_RETRUN"
+      },
+      {
+        "desc": "控件中是否支持 Tab 按钮输入。",
+        "name": "WIDGET_PROP_ACCEPT_TAB"
+      },
+      {
         "desc": "行数。",
         "name": "WIDGET_PROP_ROWS"
       },
@@ -9602,6 +9596,14 @@
       {
         "desc": "数据校验脚本。",
         "name": "WIDGET_PROP_VALIDATOR"
+      },
+      {
+        "desc": "标识是否将当前控件状态同步到子控件中。",
+        "name": "WIDGET_PROP_SYNC_STATE_TO_CHILDREN"
+      },
+      {
+        "desc": "标识是否接收父控件的状态同步。",
+        "name": "WIDGET_PROP_STATE_FROM_PARENT_SYNC"
       }
     ],
     "header": "base/widget_consts.h",
@@ -11480,6 +11482,52 @@
             "desc": "控件对象。"
           },
           {
+            "type": "bool_t",
+            "name": "sync_state_to_children",
+            "desc": "是否将当前控件状态同步到子控件中。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "标识是否将当前控件状态同步到子控件中。",
+        "name": "widget_set_sync_state_to_children",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "state_from_parent_sync",
+            "desc": "是否接收父控件的状态同步。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "标识是否接收父控件的状态同步。",
+        "name": "widget_set_state_from_parent_sync",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
             "type": "uint8_t",
             "name": "opacity",
             "desc": "不透明度(取值0-255，0表示完全透明，255表示完全不透明)。"
@@ -11993,34 +12041,6 @@
         "return": {
           "type": "const char*",
           "desc": "返回属性的值。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "widget_t*",
-            "name": "widget",
-            "desc": "控件对象。"
-          },
-          {
-            "type": "const char*",
-            "name": "name",
-            "desc": "属性的名称。"
-          },
-          {
-            "type": "void*",
-            "name": "v",
-            "desc": "属性的值。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "设置指针格式的属性。",
-        "name": "widget_set_prop_pointer",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
         }
       },
       {
@@ -13102,7 +13122,7 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置控件自己的布局(缺省布局器)参数(过时，请用widget\\_set\\_self\\_layout)。\n备注：下一帧才会生效数据",
+        "desc": "设置控件自己的布局(缺省布局器)参数(建议用widget\\_set\\_self\\_layout)。\n备注：下一帧才会生效数据",
         "name": "widget_set_self_layout_params",
         "return": {
           "type": "ret_t",
@@ -13597,7 +13617,7 @@
       },
       {
         "name": "auto_adjust_size",
-        "desc": "是否根据子控件和文本自动调整控件自身大小。\n\n> 为true时，最好不要使用 layout 的相关东西，否则可能有冲突。\n> 注意：只是调整控件的本身的宽高，不会修改控件本身的位置。",
+        "desc": "是否根据子控件和文本自动调整控件自身大小。\n\n> 为true时，最好不要使用 layout 的相关东西，否则可能有冲突。\n> 注意：只是调整控件的本身的宽高，不会修改控件本身的位置，仅部分控件实现该效果。",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,
@@ -13611,6 +13631,32 @@
       {
         "name": "floating",
         "desc": "标识控件是否启用浮动布局，不受父控件的children_layout的控制。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "sync_state_to_children",
+        "desc": "标识是否将当前控件状态同步到子控件中。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "state_from_parent_sync",
+        "desc": "标识是否接收父控件的状态同步。",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,
@@ -15471,147 +15517,6 @@
     "level": 1
   },
   {
-    "type": "class",
-    "methods": [
-      {
-        "params": [],
-        "annotation": {
-          "constructor": true,
-          "scriptable": true,
-          "gc": true
-        },
-        "desc": "创建named_value对象。",
-        "name": "named_value_create",
-        "return": {
-          "type": "named_value_t*",
-          "desc": "返回named_value对象。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "named_value_t*",
-            "name": "nv",
-            "desc": "named_value对象。"
-          }
-        ],
-        "annotation": {
-          "cast": true,
-          "scriptable": true
-        },
-        "desc": "转换为named_value对象(供脚本语言使用)。",
-        "name": "named_value_cast",
-        "return": {
-          "type": "named_value_t*",
-          "desc": "返回named_value对象。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "named_value_t*",
-            "name": "nv",
-            "desc": "named_value对象。"
-          },
-          {
-            "type": "const char*",
-            "name": "name",
-            "desc": "名称。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "设置名称。",
-        "name": "named_value_set_name",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "named_value_t*",
-            "name": "nv",
-            "desc": "named_value对象。"
-          },
-          {
-            "type": "const value_t*",
-            "name": "value",
-            "desc": "值。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "设置值。",
-        "name": "named_value_set_value",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "named_value_t*",
-            "name": "nv",
-            "desc": "named_value对象。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "获取值对象(主要给脚本语言使用)。",
-        "name": "named_value_get_value",
-        "return": {
-          "type": "value_t*",
-          "desc": "返回值对象。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "named_value_t*",
-            "name": "nv",
-            "desc": "named_value对象。"
-          }
-        ],
-        "annotation": {
-          "deconstructor": true,
-          "scriptable": true,
-          "gc": true
-        },
-        "desc": "销毁named_value对象。",
-        "name": "named_value_destroy",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      }
-    ],
-    "events": [],
-    "properties": [
-      {
-        "name": "name",
-        "desc": "名称。",
-        "type": "char*",
-        "annotation": {
-          "readable": true,
-          "scriptable": true
-        }
-      }
-    ],
-    "header": "tkc/named_value.h",
-    "desc": "命名的值。",
-    "name": "named_value_t",
-    "annotation": {
-      "scriptable": true
-    },
-    "level": 1
-  },
-  {
     "type": "enum",
     "desc": "对象常见命令定义",
     "consts": [
@@ -16598,6 +16503,15 @@
           "readable": true,
           "scriptable": true
         }
+      },
+      {
+        "name": "finger_id",
+        "desc": "触摸ID。",
+        "type": "int32_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
       }
     ],
     "header": "base/events.h",
@@ -17055,6 +16969,86 @@
     "header": "base/events.h",
     "desc": "系统事件。",
     "name": "system_event_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "parent": "event_t",
+    "level": 2
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
+            "type": "event_t*",
+            "name": "event",
+            "desc": "event对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
+        "desc": "把event对象转touch_event_t对象。",
+        "name": "touch_event_cast",
+        "return": {
+          "type": "touch_event_t*",
+          "desc": "event 对象。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [
+      {
+        "name": "touch_id",
+        "desc": "触摸ID。",
+        "type": "int64_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "finger_id",
+        "desc": "手指ID。",
+        "type": "int64_t",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "x",
+        "desc": "x坐标(在 0-1 之间，表示与屏幕宽度的比例）。",
+        "type": "float",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "y",
+        "desc": "y坐标(在 0-1 之间，表示与屏幕高度的比例）。",
+        "type": "float",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "pressure",
+        "desc": "压力。",
+        "type": "float",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      }
+    ],
+    "header": "base/events.h",
+    "desc": "多点触摸事件(目前主要对接 SDL_TouchFingerEvent(SDL_FINGERMOTION/SDL_FINGERDOWN/SDL_FINGERUP))。",
+    "name": "touch_event_t",
     "annotation": {
       "scriptable": true
     },
@@ -17567,6 +17561,20 @@
   },
   {
     "type": "class",
+    "methods": [],
+    "events": [],
+    "properties": [],
+    "header": "base/locale_info_xml.h",
+    "desc": "本地化信息。\nlocale_info_t 的子类。\n提供从 xml 文件中获取本地化信息的功能。\n\n注意：fallback_tr2 回调已被设置用于从xml文件中获取本地化信息，不可再重复设置，否则将导致功能失效！",
+    "name": "locale_info_xml_t",
+    "parent": "locale_info_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "level": 2
+  },
+  {
+    "type": "class",
     "methods": [
       {
         "params": [
@@ -17961,6 +17969,32 @@
       {
         "name": "move_focus_right_key",
         "desc": "向右移动焦点的键值。\n\n请参考[控件焦点](https://github.com/zlgopen/awtk/blob/master/docs/widget_focus.md)",
+        "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "accept_button",
+        "desc": "窗口中按下 Enter 按钮默认触发单击 button 控件名字",
+        "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "cancel_button",
+        "desc": "窗口中按下 Esc 按钮默认触发单击 button 控件名字",
         "type": "char*",
         "annotation": {
           "set_prop": true,
@@ -21337,6 +21371,29 @@
             "desc": "控件对象。"
           },
           {
+            "type": "uint32_t",
+            "name": "visible_num",
+            "desc": "可见个数。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置可见候选词个数。",
+        "name": "candidates_set_visible_num",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
             "type": "const char*",
             "name": "button_style",
             "desc": "按钮的style名称。"
@@ -21370,7 +21427,7 @@
       },
       {
         "name": "select_by_num",
-        "desc": "是否启用用数字选择候选字。比如按下1选择第1个候选字，按下2选择第2个候选字。",
+        "desc": "是否启用用数字选择候选字。比如按下1选择第1个候选字，按下2选择第2个候选字。(需在keyboard中设置grab_keys=\"true\"方可生效)",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,
@@ -21411,6 +21468,19 @@
         "name": "enable_preview",
         "desc": "是否启用候选字预览。",
         "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "visible_num",
+        "desc": "候选字可见个数。",
+        "type": "uint32_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
@@ -22120,29 +22190,6 @@
           },
           {
             "type": "uint32_t",
-            "name": "scroll_line",
-            "desc": "滚动行数。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "设置编辑器滚动速度。",
-        "name": "mledit_set_scroll_line",
-        "return": {
-          "type": "ret_t",
-          "desc": "返回RET_OK表示成功，否则表示失败。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "widget_t*",
-            "name": "widget",
-            "desc": "widget对象。"
-          },
-          {
-            "type": "uint32_t",
             "name": "offset",
             "desc": "偏移位置。"
           }
@@ -22412,19 +22459,6 @@
         }
       },
       {
-        "name": "scroll_line",
-        "desc": "鼠标一次滚动行数。",
-        "type": "uint32_t",
-        "annotation": {
-          "set_prop": true,
-          "get_prop": true,
-          "readable": true,
-          "persitent": true,
-          "design": true,
-          "scriptable": true
-        }
-      },
-      {
         "name": "overwrite",
         "desc": "是否启用覆盖行。",
         "type": "bool_t",
@@ -22492,6 +22526,32 @@
       {
         "name": "close_im_when_blured",
         "desc": "是否在失去焦点时关闭输入法(默认是)。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "accept_return",
+        "desc": "是否支持 Enter 按钮输入。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "accept_tab",
+        "desc": "是否支持 Tab 按钮输入。",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,
@@ -23089,7 +23149,7 @@
       },
       {
         "name": "yslidable",
-        "desc": "标识控件是否允许上下拖动。",
+        "desc": "标识控件是否允许上下拖动。(需满足文字的高度大于控件的高度)",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,
@@ -24113,6 +24173,19 @@
           "design": true,
           "scriptable": true
         }
+      },
+      {
+        "name": "item_width",
+        "desc": "列表项的宽度。如果 item_width > 0，所有列表项使用该宽度，否则使用让列表项的宽度等于scroll_view的宽度。",
+        "type": "int32_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
       }
     ],
     "header": "scroll_view/list_view.h",
@@ -24676,7 +24749,7 @@
       }
     ],
     "header": "scroll_view/scroll_bar.h",
-    "desc": "滚动条控件。\n\n> 目前只支持垂直滚动。\n\nscroll\\_bar\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于scroll\\_bar\\_t控件。\n\n在xml中使用\"scroll\\_bar\"或\"scroll\\_bar\\_d\"或\"scroll\\_bar\\_m\"标签创建滚动条控件。如：\n\n```xml\n<list_view x=\"0\"  y=\"30\" w=\"100%\" h=\"-80\" item_height=\"60\">\n<scroll_view name=\"view\" x=\"0\"  y=\"0\" w=\"100%\" h=\"100%\">\n...\n</scroll_view>\n<scroll_bar_m name=\"bar\" x=\"right\" y=\"0\" w=\"6\" h=\"100%\" value=\"0\"/>\n</list_view>\n```\n\n> 更多用法请参考：[list\\_view\\_m.xml](\nhttps://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)\n\n在c代码中使用函数scroll\\_bar\\_create创建列表项控件。如：\n\n```c\nwidget_t* scroll_bar = scroll_bar_create(list_view, 0, 0, 0, 0);\n```\n\n```xml\n<style name=\"default\">\n<normal bg_color=\"#c0c0c0\" fg_color=\"#808080\"/>\n<over bg_color=\"#c0c0c0\" fg_color=\"#808080\"/>\n<pressed bg_color=\"#c0c0c0\" fg_color=\"#808080\"/>\n</style>\n```\n\n> 更多用法请参考：[theme default](\nhttps://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L350)",
+    "desc": "滚动条控件。\n\nscroll\\_bar\\_t是[widget\\_t](widget_t.md)的子类控件，widget\\_t的函数均适用于scroll\\_bar\\_t控件。\n\n在xml中使用\"scroll\\_bar\"或\"scroll\\_bar\\_d\"或\"scroll\\_bar\\_m\"标签创建滚动条控件。如：\n\n```xml\n<list_view x=\"0\"  y=\"30\" w=\"100%\" h=\"-80\" item_height=\"60\">\n<scroll_view name=\"view\" x=\"0\"  y=\"0\" w=\"100%\" h=\"100%\">\n...\n</scroll_view>\n<scroll_bar_m name=\"bar\" x=\"right\" y=\"0\" w=\"6\" h=\"100%\" value=\"0\"/>\n</list_view>\n```\n\n> 更多用法请参考：[list\\_view\\_m.xml](\nhttps://github.com/zlgopen/awtk/blob/master/design/default/ui/list_view_m.xml)\n\n在c代码中使用函数scroll\\_bar\\_create创建列表项控件。如：\n\n```c\nwidget_t* scroll_bar = scroll_bar_create(list_view, 0, 0, 0, 0);\n```\n\n```xml\n<style name=\"default\">\n<normal bg_color=\"#c0c0c0\" fg_color=\"#808080\"/>\n<over bg_color=\"#c0c0c0\" fg_color=\"#808080\"/>\n<pressed bg_color=\"#c0c0c0\" fg_color=\"#808080\"/>\n</style>\n```\n\n> 更多用法请参考：[theme default](\nhttps://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L350)",
     "name": "scroll_bar_t",
     "parent": "widget_t",
     "annotation": {
@@ -25237,7 +25310,7 @@
       },
       {
         "name": "recursive",
-        "desc": "是否递归查找全部子控件。",
+        "desc": "是否递归查找全部子控件。(当scroll_view的父控件是list_view_h或list_view时无效)",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,
@@ -26359,7 +26432,7 @@
       },
       {
         "name": "max",
-        "desc": "最大值(缺省为100)。",
+        "desc": "最大值(缺省为3)。",
         "type": "uint32_t",
         "annotation": {
           "set_prop": true,
@@ -26437,7 +26510,7 @@
       },
       {
         "name": "anchor_x",
-        "desc": "锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)",
+        "desc": "锚点x坐标。(后面加上px为像素点，不加px为相对百分取值范围为0.0f到1.0f)",
         "type": "char*",
         "annotation": {
           "set_prop": true,
@@ -26450,7 +26523,7 @@
       },
       {
         "name": "anchor_y",
-        "desc": "锚点y坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)",
+        "desc": "锚点y坐标。(后面加上px为像素点，不加px为相对百分取值范围为0.0f到1.0f)",
         "type": "char*",
         "annotation": {
           "set_prop": true,
@@ -27004,7 +27077,7 @@
       },
       {
         "name": "max_xoffset_ratio",
-        "desc": "当开关处于关闭时，图片偏移相对于图片宽度的比例(缺省为1/3)。",
+        "desc": "主要用于当开关处于关闭时，图片偏移相对于图片宽度的比例(缺省为1/3)。",
         "type": "float_t",
         "annotation": {
           "set_prop": true,
@@ -28880,19 +28953,38 @@
           "scriptable": true,
           "gc": true
         },
-        "desc": "创建named_value_hash对象。",
-        "name": "named_value_hash_create",
+        "desc": "创建named_value对象。",
+        "name": "named_value_create",
         "return": {
-          "type": "named_value_hash_t*",
-          "desc": "返回named_value_hash对象。"
+          "type": "named_value_t*",
+          "desc": "返回named_value对象。"
         }
       },
       {
         "params": [
           {
-            "type": "named_value_hash_t*",
-            "name": "nvh",
-            "desc": "named_value_hash对象。"
+            "type": "named_value_t*",
+            "name": "nv",
+            "desc": "named_value对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
+        "desc": "转换为named_value对象(供脚本语言使用)。",
+        "name": "named_value_cast",
+        "return": {
+          "type": "named_value_t*",
+          "desc": "返回named_value对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_t*",
+            "name": "nv",
+            "desc": "named_value对象。"
           },
           {
             "type": "const char*",
@@ -28903,8 +28995,8 @@
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置散列值。",
-        "name": "named_value_hash_set_name",
+        "desc": "设置名称。",
+        "name": "named_value_set_name",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -28913,9 +29005,50 @@
       {
         "params": [
           {
-            "type": "named_value_hash_t*",
-            "name": "nvh",
-            "desc": "named_value_hash对象。"
+            "type": "named_value_t*",
+            "name": "nv",
+            "desc": "named_value对象。"
+          },
+          {
+            "type": "const value_t*",
+            "name": "value",
+            "desc": "值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置值。",
+        "name": "named_value_set_value",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_t*",
+            "name": "nv",
+            "desc": "named_value对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "获取值对象(主要给脚本语言使用)。",
+        "name": "named_value_get_value",
+        "return": {
+          "type": "value_t*",
+          "desc": "返回值对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_t*",
+            "name": "nv",
+            "desc": "named_value对象。"
           }
         ],
         "annotation": {
@@ -28923,57 +29056,30 @@
           "scriptable": true,
           "gc": true
         },
-        "desc": "销毁named_value_hash对象。",
-        "name": "named_value_hash_destroy",
+        "desc": "销毁named_value对象。",
+        "name": "named_value_destroy",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
-      },
-      {
-        "params": [
-          {
-            "type": "named_value_hash_t*",
-            "name": "nvh",
-            "desc": "named_value_hash对象。"
-          }
-        ],
-        "annotation": {
-          "scriptable": true
-        },
-        "desc": "克隆named_value_hash对象。",
-        "name": "named_value_hash_clone",
-        "return": {
-          "type": "named_value_hash_t*",
-          "desc": "返回named_value_hash对象。"
-        }
-      },
-      {
-        "params": [
-          {
-            "type": "const char*",
-            "name": "str",
-            "desc": "字符串。"
-          }
-        ],
-        "annotation": {
-          "static": true,
-          "scriptable": true
-        },
-        "desc": "获取字符串散列值。",
-        "name": "named_value_hash_get_hash_from_str",
-        "return": {
-          "type": "uint64_t",
-          "desc": "返回散列值。"
-        }
       }
     ],
     "events": [],
-    "properties": [],
-    "header": "tkc/named_value_hash.h",
-    "desc": "带有散列值的命名的值。",
-    "name": "named_value_hash_t",
-    "parent": "named_value_t",
+    "properties": [
+      {
+        "name": "name",
+        "desc": "名称。",
+        "type": "char*",
+        "annotation": {
+          "readable": true,
+          "scriptable": true
+        }
+      }
+    ],
+    "header": "tkc/named_value.h",
+    "desc": "命名的值。",
+    "name": "named_value_t",
+    "parent": "value_t",
     "annotation": {
       "scriptable": true
     },
@@ -29336,15 +29442,13 @@
         }
       },
       {
-        "name": "long_press_time",
-        "desc": "触发长按事件的时间(毫秒)",
-        "type": "uint32_t",
+        "name": "is_accept_status",
+        "desc": "是否为 accept 状态",
+        "type": "bool_t",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
           "readable": true,
-          "persitent": true,
-          "design": true,
           "scriptable": true
         }
       },
@@ -29356,6 +29460,19 @@
           "set_prop": true,
           "get_prop": true,
           "readable": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "long_press_time",
+        "desc": "触发长按事件的时间(毫秒)",
+        "type": "uint32_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
           "scriptable": true
         }
       }
@@ -31707,7 +31824,7 @@
       },
       {
         "name": "columns_definition",
-        "desc": "各列的参数。\n各列的参数之间用英文的分号(;)分隔，每列参数的格式为：\n\ncol(w=?,left_margin=?,right_margin=?,top_maorgin=?,bottom_margin=?)\n\n* w 为列的宽度(必须存在)。取值在(0-1]区间时，视为grid控件宽度的比例，否则为像素宽度。\n(如果为负数，将计算结果加上控件的宽度)\n* left_margin(可选，可缩写为l) 该列左边的边距。\n* right_margin(可选，可缩写为r) 该列右边的边距。\n* top_margin(可选，可缩写为t) 该列顶部的边距。\n* bottom_margin(可选，可缩写为b) 该列底部的边距。\n* margin(可选，可缩写为m) 同时指定上面4个边距。\n* fill_available(可选，可缩写为f) 填充剩余宽度(只有一列可以指定)。",
+        "desc": "各列的参数。\n各列的参数之间用英文的分号(;)分隔，每列参数的格式为：\n\ncol(w=?,left_margin=?,right_margin=?,top_margin=?,bottom_margin=?)\n\n* w 为列的宽度（必须存在）。取值在 (0-1] 区间时，视为 grid 控件宽度的比例，否则为像素宽度。\n（如果为负数，将计算结果加上控件的宽度）\n* left_margin（可选，可缩写为 l）该列左边的边距。\n* right_margin（可选，可缩写为 r）该列右边的边距。\n* top_margin（可选，可缩写为 t）该列顶部的边距。\n* bottom_margin（可选，可缩写为 b）该列底部的边距。\n* margin（可选，可缩写为 m）同时指定上面 4 个边距。\n* fill_available（可选，可缩写为f）填充剩余宽度（只有一列可以指定）。",
         "type": "char*",
         "annotation": {
           "set_prop": true,
@@ -32306,7 +32423,7 @@
     "properties": [
       {
         "name": "active",
-        "desc": "当前活跃的page。(需要用到 MVVM 数据绑定请设置 value 属性)",
+        "desc": "当前活跃的page。(起始值从0开始。需要用到 MVVM 数据绑定请设置 value 属性)",
         "type": "uint32_t",
         "annotation": {
           "set_prop": true,
@@ -32601,7 +32718,7 @@
       },
       {
         "name": "format",
-        "desc": "数值到字符串转换时的格式，缺省为\"%d\"。",
+        "desc": "数值到字符串转换时的格式，缺省为\"%d%%\"。",
         "type": "char*",
         "annotation": {
           "set_prop": true,
@@ -33273,6 +33390,29 @@
           {
             "type": "widget_t*",
             "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "index",
+            "desc": "tab_button 的序号。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置删除 tab_button_group 控件中的 tab_button 控件和对应页。",
+        "name": "tab_button_group_remove_index",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
             "desc": "tab_button_group对象。"
           }
         ],
@@ -33800,14 +33940,13 @@
     "properties": [
       {
         "name": "default_focused_child",
-        "desc": "缺省获得焦点的子控件(可用控件名或类型)。\n\n> view作为pages/slideview的直接子控件才需要设置。\n> 正常情况下，一个窗口只能指定一个初始焦点。\n> 但是对于pages/slideview来说，可能希望每一个页面都有一个初始焦点，此时可用default\\_focused\\_child来指定。",
+        "desc": "缺省获得焦点的子控件(可用控件名或类型)。(该属性废弃。)\n\n> view作为pages/slideview的直接子控件才需要设置。\n> 正常情况下，一个窗口只能指定一个初始焦点。\n> 但是对于pages/slideview来说，可能希望每一个页面都有一个初始焦点，此时可用default\\_focused\\_child来指定。",
         "type": "char*",
         "annotation": {
           "set_prop": true,
           "get_prop": true,
           "readable": true,
           "persitent": true,
-          "design": true,
           "scriptable": true
         }
       }
@@ -34192,7 +34331,7 @@
       }
     ],
     "header": "base/dialog.h",
-    "desc": "对话框。 对话框是一种特殊的窗口，大小和位置可以自由设置。\n\nAWTK中的对话框可以是模态的，也可以是非模态的。\n\n如果dialog有透明或半透效果则不支持窗口动画。\n\n> 由于浏览器中无法实现主循环嵌套，因此无法实现模态对话框。\n如果希望自己写的AWTK应用程序可以在浏览器(包括各种小程序)中运行或演示，\n请避免使用模态对话框。\n\n对话框通常由对话框标题和对话框客户区两部分组成：\n\n```graphviz\n[default_style]\n\ndialog_title_t -> dialog_t[arrowhead = \"ediamond\"]\ndialog_client_t -> dialog_t[arrowhead = \"ediamond\"]\n```\n\ndialog\\_t是[window\\_base\\_t](window_base_t.md)的子类控件，window\\_base\\_t的函数均适用于dialog\\_t控件。\n\n在xml中使用\"dialog\"标签创建对话框。如：\n\n```xml\n<dialog anim_hint=\"center_scale(duration=300)\" x=\"c\" y=\"m\" w=\"80%\" h=\"160\" text=\"Dialog\">\n<dialog_title x=\"0\" y=\"0\" w=\"100%\" h=\"30\" text=\"Hello AWTK\" />\n<dialog_client x=\"0\" y=\"bottom\" w=\"100%\" h=\"-30\">\n<label name=\"\" x=\"center\" y=\"middle:-20\" w=\"200\" h=\"30\" text=\"Are you ready?\"/>\n<button name=\"quit\" x=\"10\" y=\"bottom:10\" w=\"40%\" h=\"30\" text=\"确定\"/>\n<button name=\"quit\" x=\"right:10\" y=\"bottom:10\" w=\"40%\" h=\"30\" text=\"取消\"/>\n</dialog_client>\n</dialog>\n```\n\n如果你不需要对话框的标题，可以这样写：\n\n```xml\n<dialog anim_hint=\"center_scale(duration=300)\" x=\"c\" y=\"m\" w=\"80%\" h=\"160\" text=\"Dialog\">\n<label name=\"\" x=\"center\" y=\"middle:-20\" w=\"200\" h=\"30\" text=\"Are you ready?\"/>\n<button name=\"quit\" x=\"10\" y=\"bottom:10\" w=\"40%\" h=\"30\" text=\"确定\"/>\n<button name=\"quit\" x=\"right:10\" y=\"bottom:10\" w=\"40%\" h=\"30\" text=\"取消\"/>\n</dialog>\n```\n\n打开非模态对话框时，其用法与普通窗口一样。打开非模态对话框时，还需要调用dialog\\_modal。\n\n```c\nwidget_t* dlg = dialog_open(name);\n\nret = dialog_modal(dlg);\n```\n\n关闭模态对话框用dialog\\_quit\n\n```c\nstatic ret_t on_dialog_btn_click(void* ctx, event_t* evt) {\nwidget_t* win = widget_get_window(WIDGET(evt->target));\nint code = (char*)ctx - (char*)NULL;\n\ndialog_quit(win, code);\n\nreturn RET_OK;\n}\n```\n\n关闭非模态对话框用window\\_close。\n\n```c\nstatic ret_t on_dialog_btn_click(void* ctx, event_t* evt) {\nwidget_t* win = widget_get_window(WIDGET(evt->target));\nint code = (char*)ctx - (char*)NULL;\n\nwindow_close(win);\n\nreturn RET_OK;\n}\n```\n\n> 更多用法请参考：\n[dialog.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/)\n\n> 完整C代码示例请参考：\n\n* [非模态对话框](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/dialog.c)\n\n* [模态对话框](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/dialog_modal.c)\n\n可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：\n\n```xml\n<style name=\"default\">\n<normal border_color=\"#606060\" />\n</style>\n```\n\n> 更多用法请参考：\n[theme default]\n(https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L324)",
+    "desc": "对话框。 对话框是一种特殊的窗口，大小和位置可以自由设置。\n\nAWTK中的对话框可以是模态的，也可以是非模态的。\n\n如果dialog有透明或半透效果则不支持窗口动画。\n\n> 由于浏览器中无法实现主循环嵌套，因此无法实现模态对话框。\n如果希望自己写的AWTK应用程序可以在浏览器(包括各种小程序)中运行或演示，\n请避免使用模态对话框。\n\n对话框通常由对话框标题和对话框客户区两部分组成：\n\n```graphviz\n[default_style]\n\ndialog_title_t -> dialog_t[arrowhead = \"ediamond\"]\ndialog_client_t -> dialog_t[arrowhead = \"ediamond\"]\n```\n\ndialog\\_t是[window\\_base\\_t](window_base_t.md)的子类控件，window\\_base\\_t的函数均适用于dialog\\_t控件。\n\n在xml中使用\"dialog\"标签创建对话框。如：\n\n```xml\n<dialog anim_hint=\"center_scale(duration=300)\" x=\"c\" y=\"m\" w=\"80%\" h=\"160\" text=\"Dialog\">\n<dialog_title x=\"0\" y=\"0\" w=\"100%\" h=\"30\" text=\"Hello AWTK\" />\n<dialog_client x=\"0\" y=\"bottom\" w=\"100%\" h=\"-30\">\n<label name=\"\" x=\"center\" y=\"middle:-20\" w=\"200\" h=\"30\" text=\"Are you ready?\"/>\n<button name=\"quit\" x=\"10\" y=\"bottom:10\" w=\"40%\" h=\"30\" text=\"确定\"/>\n<button name=\"quit\" x=\"right:10\" y=\"bottom:10\" w=\"40%\" h=\"30\" text=\"取消\"/>\n</dialog_client>\n</dialog>\n```\n\n如果你不需要对话框的标题，可以这样写：\n\n```xml\n<dialog anim_hint=\"center_scale(duration=300)\" x=\"c\" y=\"m\" w=\"80%\" h=\"160\" text=\"Dialog\">\n<label name=\"\" x=\"center\" y=\"middle:-20\" w=\"200\" h=\"30\" text=\"Are you ready?\"/>\n<button name=\"quit\" x=\"10\" y=\"bottom:10\" w=\"40%\" h=\"30\" text=\"确定\"/>\n<button name=\"quit\" x=\"right:10\" y=\"bottom:10\" w=\"40%\" h=\"30\" text=\"取消\"/>\n</dialog>\n```\n\n打开非模态对话框时，其用法与普通窗口一样。打开模态对话框时，还需要调用dialog\\_modal。\n\n```c\nwidget_t* dlg = dialog_open(name);\n\nret = dialog_modal(dlg);\n```\n\n关闭模态对话框用dialog\\_quit\n\n```c\nstatic ret_t on_dialog_btn_click(void* ctx, event_t* evt) {\nwidget_t* win = widget_get_window(WIDGET(evt->target));\nint code = (char*)ctx - (char*)NULL;\n\ndialog_quit(win, code);\n\nreturn RET_OK;\n}\n```\n\n关闭非模态对话框用window\\_close。\n\n```c\nstatic ret_t on_dialog_btn_click(void* ctx, event_t* evt) {\nwidget_t* win = widget_get_window(WIDGET(evt->target));\nint code = (char*)ctx - (char*)NULL;\n\nwindow_close(win);\n\nreturn RET_OK;\n}\n```\n\n> 更多用法请参考：\n[dialog.xml](https://github.com/zlgopen/awtk/blob/master/design/default/ui/)\n\n> 完整C代码示例请参考：\n\n* [非模态对话框](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/dialog.c)\n\n* [模态对话框](https://github.com/zlgopen/awtk-c-demos/blob/master/demos/dialog_modal.c)\n\n可用通过style来设置控件的显示风格，如字体的大小和颜色等等。如：\n\n```xml\n<style name=\"default\">\n<normal border_color=\"#606060\" />\n</style>\n```\n\n> 更多用法请参考：\n[theme default]\n(https://github.com/zlgopen/awtk/blob/master/design/default/styles/default.xml#L324)",
     "name": "dialog_t",
     "parent": "window_base_t",
     "annotation": {
@@ -34390,6 +34529,44 @@
         },
         "desc": "是否显示边框。",
         "name": "native_window_show_border",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "native_window_t*",
+            "name": "win",
+            "desc": "win对象。"
+          },
+          {
+            "type": "xy_t",
+            "name": "x",
+            "desc": "x坐标。"
+          },
+          {
+            "type": "xy_t",
+            "name": "y",
+            "desc": "y坐标。"
+          },
+          {
+            "type": "wh_t",
+            "name": "w",
+            "desc": "w宽度。"
+          },
+          {
+            "type": "wh_t",
+            "name": "h",
+            "desc": "h高度。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置hitTest。",
+        "name": "native_window_set_window_hit_test",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -34713,6 +34890,189 @@
       "design": true,
       "widget": true,
       "window": true
+    },
+    "level": 3
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "parent",
+            "desc": "父控件"
+          },
+          {
+            "type": "xy_t",
+            "name": "x",
+            "desc": "x坐标"
+          },
+          {
+            "type": "xy_t",
+            "name": "y",
+            "desc": "y坐标"
+          },
+          {
+            "type": "wh_t",
+            "name": "w",
+            "desc": "宽度"
+          },
+          {
+            "type": "wh_t",
+            "name": "h",
+            "desc": "高度"
+          }
+        ],
+        "annotation": {
+          "constructor": true,
+          "scriptable": true
+        },
+        "desc": "创建edit_ex对象",
+        "name": "edit_ex_create",
+        "return": {
+          "type": "widget_t*",
+          "desc": "对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "edit_ex对象。"
+          },
+          {
+            "type": "object_t*",
+            "name": "suggest_words",
+            "desc": "输入建议词源。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置输入建议词源。\n> EVT_VALUE_CHANGED 事件请求词源更新，new_value 为 edit 输入内容。",
+        "name": "edit_ex_set_suggest_words",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "edit_ex对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "formats",
+            "desc": "输入建议词的项格式。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置输入建议词的项格式。",
+        "name": "edit_ex_set_suggest_words_item_formats",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "edit_ex对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "最终输入到edit控件的文本的属性名。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "最终输入到edit控件的文本的属性名。\n> 设置了 suggest_words_item_formats 才会被用到。",
+        "name": "edit_ex_set_suggest_words_input_name",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "edit_ex对象。"
+          }
+        ],
+        "annotation": {
+          "cast": true,
+          "scriptable": true
+        },
+        "desc": "转换为edit对象(供脚本语言使用)。",
+        "name": "edit_ex_cast",
+        "return": {
+          "type": "widget_t*",
+          "desc": "edit对象。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [
+      {
+        "name": "suggest_words",
+        "desc": "输入建议词。",
+        "type": "object_t*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "suggest_words_item_formats",
+        "desc": "输入建议词的项格式。",
+        "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "suggest_words_input_name",
+        "desc": "最终输入到edit控件的文本的属性名。\n> 设置了 suggest_words_item_formats 才会被用到。",
+        "type": "char*",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      }
+    ],
+    "header": "edit_ex/edit_ex.h",
+    "desc": "扩展edit控件。支持以下功能：\n* 支持搜索建议功能。",
+    "name": "edit_ex_t",
+    "parent": "edit_t",
+    "annotation": {
+      "scriptable": true,
+      "design": true,
+      "widget": true
     },
     "level": 3
   },
@@ -35332,6 +35692,115 @@
           "scriptable": true,
           "gc": true
         },
+        "desc": "创建named_value_hash对象。",
+        "name": "named_value_hash_create",
+        "return": {
+          "type": "named_value_hash_t*",
+          "desc": "返回named_value_hash对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_hash_t*",
+            "name": "nvh",
+            "desc": "named_value_hash对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "名称。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置散列值。",
+        "name": "named_value_hash_set_name",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_hash_t*",
+            "name": "nvh",
+            "desc": "named_value_hash对象。"
+          }
+        ],
+        "annotation": {
+          "deconstructor": true,
+          "scriptable": true,
+          "gc": true
+        },
+        "desc": "销毁named_value_hash对象。",
+        "name": "named_value_hash_destroy",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "named_value_hash_t*",
+            "name": "nvh",
+            "desc": "named_value_hash对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "克隆named_value_hash对象。",
+        "name": "named_value_hash_clone",
+        "return": {
+          "type": "named_value_hash_t*",
+          "desc": "返回named_value_hash对象。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "const char*",
+            "name": "str",
+            "desc": "字符串。"
+          }
+        ],
+        "annotation": {
+          "static": true,
+          "scriptable": true
+        },
+        "desc": "获取字符串散列值。",
+        "name": "named_value_hash_get_hash_from_str",
+        "return": {
+          "type": "uint64_t",
+          "desc": "返回散列值。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [],
+    "header": "tkc/named_value_hash.h",
+    "desc": "带有散列值的命名的值。",
+    "name": "named_value_hash_t",
+    "parent": "named_value_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "level": 3
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [],
+        "annotation": {
+          "constructor": true,
+          "scriptable": true,
+          "gc": true
+        },
         "desc": "创建对象。",
         "name": "object_array_create",
         "return": {
@@ -35758,6 +36227,29 @@
         },
         "desc": "设置属性值时不改变属性的类型。",
         "name": "object_hash_set_keep_prop_type",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "object_t*",
+            "name": "obj",
+            "desc": "对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "keep_props_order",
+            "desc": "保持属性间的顺序。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置是否保持属性间的顺序。",
+        "name": "object_hash_set_keep_props_order",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"

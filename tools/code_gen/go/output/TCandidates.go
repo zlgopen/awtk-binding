@@ -26,6 +26,10 @@ func (this TCandidates) SetAutoHide(auto_hide bool) TRet {
   return TRet(C.candidates_set_auto_hide((*C.widget_t)(this.handle), (C.bool_t)(auto_hide)));
 }
 
+func (this TCandidates) SetVisibleNum(visible_num uint32) TRet {
+  return TRet(C.candidates_set_visible_num((*C.widget_t)(this.handle), (C.uint32_t)(visible_num)));
+}
+
 func (this TCandidates) SetButtonStyle(button_style string) TRet {
   abutton_style := C.CString(button_style)
   defer C.free(unsafe.Pointer(abutton_style))
@@ -50,5 +54,9 @@ func (this TCandidates) GetButtonStyle() string {
 
 func (this TCandidates) GetEnablePreview() bool {
   return (bool)((*C.candidates_t)(unsafe.Pointer(this.handle)).enable_preview);
+}
+
+func (this TCandidates) GetVisibleNum() uint32 {
+  return (uint32)((*C.candidates_t)(unsafe.Pointer(this.handle)).visible_num);
 }
 

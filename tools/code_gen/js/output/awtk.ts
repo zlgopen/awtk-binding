@@ -317,6 +317,9 @@ declare function EVT_LOCALE_INFOS_UNLOAD_INFO():any;
 declare function EVT_ACTIVATED():any;
 declare function EVT_UNACTIVATED():any;
 declare function EVT_UI_LOAD():any;
+declare function EVT_TOUCH_DOWN():any;
+declare function EVT_TOUCH_MOVE():any;
+declare function EVT_TOUCH_UP():any;
 declare function EVT_REQ_START():any;
 declare function EVT_USER_START():any;
 declare function EVT_NONE():any;
@@ -354,7 +357,6 @@ declare function GLYPH_FMT_ALPHA2():any;
 declare function GLYPH_FMT_ALPHA4():any;
 declare function idle_add(on_idle : Function, ctx : any) : number;
 declare function idle_remove(idle_id : number) : TRet;
-declare function idle_remove_all_by_ctx(ctx : any) : TRet;
 declare function image_manager() : any;
 declare function image_manager_get_bitmap(imm : any, name : string, image : any) : TRet;
 declare function image_manager_preload(imm : any, name : string) : TRet;
@@ -606,7 +608,6 @@ declare function SYSTEM_INFO_FLAG_FAST_LCD_PORTRAIT():any;
 declare function theme() : any;
 declare function timer_add(on_timer : Function, ctx : any, duration : number) : number;
 declare function timer_remove(timer_id : number) : TRet;
-declare function timer_remove_all_by_ctx(ctx : any) : TRet;
 declare function timer_reset(timer_id : number) : TRet;
 declare function timer_suspend(timer_id : number) : TRet;
 declare function timer_resume(timer_id : number) : TRet;
@@ -833,6 +834,7 @@ declare function WIDGET_PROP_REPEAT():any;
 declare function WIDGET_PROP_LONG_PRESS_TIME():any;
 declare function WIDGET_PROP_ENABLE_LONG_PRESS():any;
 declare function WIDGET_PROP_ENABLE_PREVIEW():any;
+declare function WIDGET_PROP_IS_ACCEPT_STATUS():any;
 declare function WIDGET_PROP_CLICK_THROUGH():any;
 declare function WIDGET_PROP_ANIMATABLE():any;
 declare function WIDGET_PROP_AUTO_HIDE():any;
@@ -876,6 +878,10 @@ declare function WIDGET_PROP_MOVE_FOCUS_UP_KEY():any;
 declare function WIDGET_PROP_MOVE_FOCUS_DOWN_KEY():any;
 declare function WIDGET_PROP_MOVE_FOCUS_LEFT_KEY():any;
 declare function WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY():any;
+declare function WIDGET_PROP_ACCEPT_BUTTON():any;
+declare function WIDGET_PROP_CANCEL_BUTTON():any;
+declare function WIDGET_PROP_ACCEPT_RETRUN():any;
+declare function WIDGET_PROP_ACCEPT_TAB():any;
 declare function WIDGET_PROP_ROWS():any;
 declare function WIDGET_PROP_SHOW_GRID():any;
 declare function WIDGET_PROP_COLUMNS_DEFINITION():any;
@@ -888,6 +894,8 @@ declare function WIDGET_PROP_SCREEN_SAVER_TIME():any;
 declare function WIDGET_PROP_SHOW_FPS():any;
 declare function WIDGET_PROP_MAX_FPS():any;
 declare function WIDGET_PROP_VALIDATOR():any;
+declare function WIDGET_PROP_SYNC_STATE_TO_CHILDREN():any;
+declare function WIDGET_PROP_STATE_FROM_PARENT_SYNC():any;
 declare function WIDGET_TYPE_NONE():any;
 declare function WIDGET_TYPE_WINDOW_MANAGER():any;
 declare function WIDGET_TYPE_NORMAL_WINDOW():any;
@@ -1055,6 +1063,8 @@ declare function widget_set_floating(widget : any, floating : boolean) : TRet;
 declare function widget_set_focused(widget : any, focused : boolean) : TRet;
 declare function widget_set_focusable(widget : any, focusable : boolean) : TRet;
 declare function widget_set_state(widget : any, state : string) : TRet;
+declare function widget_set_sync_state_to_children(widget : any, sync_state_to_children : boolean) : TRet;
+declare function widget_set_state_from_parent_sync(widget : any, state_from_parent_sync : boolean) : TRet;
 declare function widget_set_opacity(widget : any, opacity : number) : TRet;
 declare function widget_set_dirty_rect_tolerance(widget : any, dirty_rect_tolerance : number) : TRet;
 declare function widget_destroy_children(widget : any) : TRet;
@@ -1076,7 +1086,6 @@ declare function widget_set_prop(widget : any, name : string, v : any) : TRet;
 declare function widget_set_props(widget : any, params : string) : TRet;
 declare function widget_set_prop_str(widget : any, name : string, v : string) : TRet;
 declare function widget_get_prop_str(widget : any, name : string, defval : string) : string;
-declare function widget_set_prop_pointer(widget : any, name : string, v : any) : TRet;
 declare function widget_get_prop_pointer(widget : any, name : string) : any;
 declare function widget_set_prop_float(widget : any, name : string, v : number) : TRet;
 declare function widget_get_prop_float(widget : any, name : string, defval : number) : number;
@@ -1148,6 +1157,8 @@ declare function widget_t_get_prop_focusable(nativeObj : any) : boolean;
 declare function widget_t_get_prop_with_focus_state(nativeObj : any) : boolean;
 declare function widget_t_get_prop_auto_adjust_size(nativeObj : any) : boolean;
 declare function widget_t_get_prop_floating(nativeObj : any) : boolean;
+declare function widget_t_get_prop_sync_state_to_children(nativeObj : any) : boolean;
+declare function widget_t_get_prop_state_from_parent_sync(nativeObj : any) : boolean;
 declare function widget_t_get_prop_opacity(nativeObj : any) : number;
 declare function widget_t_get_prop_dirty_rect_tolerance(nativeObj : any) : number;
 declare function widget_t_get_prop_parent(nativeObj : any) : any;
@@ -1460,6 +1471,7 @@ declare function pointer_event_t_get_prop_ctrl(nativeObj : any) : boolean;
 declare function pointer_event_t_get_prop_cmd(nativeObj : any) : boolean;
 declare function pointer_event_t_get_prop_menu(nativeObj : any) : boolean;
 declare function pointer_event_t_get_prop_shift(nativeObj : any) : boolean;
+declare function pointer_event_t_get_prop_finger_id(nativeObj : any) : number;
 declare function key_event_cast(event : any) : any;
 declare function key_event_t_get_prop_key(nativeObj : any) : number;
 declare function key_event_t_get_prop_alt(nativeObj : any) : boolean;
@@ -1490,6 +1502,12 @@ declare function drop_file_event_cast(event : any) : any;
 declare function drop_file_event_t_get_prop_filename(nativeObj : any) : string;
 declare function system_event_cast(event : any) : any;
 declare function system_event_t_get_prop_sdl_event(nativeObj : any) : any;
+declare function touch_event_cast(event : any) : any;
+declare function touch_event_t_get_prop_touch_id(nativeObj : any) : number;
+declare function touch_event_t_get_prop_finger_id(nativeObj : any) : number;
+declare function touch_event_t_get_prop_x(nativeObj : any) : number;
+declare function touch_event_t_get_prop_y(nativeObj : any) : number;
+declare function touch_event_t_get_prop_pressure(nativeObj : any) : number;
 declare function ui_load_event_cast(event : any) : any;
 declare function ui_load_event_t_get_prop_root(nativeObj : any) : any;
 declare function ui_load_event_t_get_prop_name(nativeObj : any) : string;
@@ -1538,6 +1556,8 @@ declare function window_base_t_get_prop_move_focus_up_key(nativeObj : any) : str
 declare function window_base_t_get_prop_move_focus_down_key(nativeObj : any) : string;
 declare function window_base_t_get_prop_move_focus_left_key(nativeObj : any) : string;
 declare function window_base_t_get_prop_move_focus_right_key(nativeObj : any) : string;
+declare function window_base_t_get_prop_accept_button(nativeObj : any) : string;
+declare function window_base_t_get_prop_cancel_button(nativeObj : any) : string;
 declare function window_base_t_get_prop_applet_name(nativeObj : any) : string;
 declare function window_base_t_get_prop_single_instance(nativeObj : any) : boolean;
 declare function window_base_t_get_prop_strongly_focus(nativeObj : any) : boolean;
@@ -1727,7 +1747,6 @@ declare function mledit_set_tr_tips(widget : any, tr_tips : string) : TRet;
 declare function mledit_set_keyboard(widget : any, keyboard : string) : TRet;
 declare function mledit_set_cursor(widget : any, cursor : number) : TRet;
 declare function mledit_get_cursor(widget : any) : number;
-declare function mledit_set_scroll_line(widget : any, scroll_line : number) : TRet;
 declare function mledit_scroll_to_offset(widget : any, offset : number) : TRet;
 declare function mledit_set_open_im_when_focused(widget : any, open_im_when_focused : boolean) : TRet;
 declare function mledit_set_close_im_when_blured(widget : any, close_im_when_blured : boolean) : TRet;
@@ -1742,13 +1761,14 @@ declare function mledit_t_get_prop_tr_tips(nativeObj : any) : string;
 declare function mledit_t_get_prop_keyboard(nativeObj : any) : string;
 declare function mledit_t_get_prop_max_lines(nativeObj : any) : number;
 declare function mledit_t_get_prop_max_chars(nativeObj : any) : number;
-declare function mledit_t_get_prop_scroll_line(nativeObj : any) : number;
 declare function mledit_t_get_prop_overwrite(nativeObj : any) : boolean;
 declare function mledit_t_get_prop_wrap_word(nativeObj : any) : boolean;
 declare function mledit_t_get_prop_readonly(nativeObj : any) : boolean;
 declare function mledit_t_get_prop_cancelable(nativeObj : any) : boolean;
 declare function mledit_t_get_prop_open_im_when_focused(nativeObj : any) : boolean;
 declare function mledit_t_get_prop_close_im_when_blured(nativeObj : any) : boolean;
+declare function mledit_t_get_prop_accept_return(nativeObj : any) : boolean;
+declare function mledit_t_get_prop_accept_tab(nativeObj : any) : boolean;
 declare function progress_circle_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function progress_circle_cast(widget : any) : any;
 declare function progress_circle_set_value(widget : any, value : any) : TRet;
@@ -1823,6 +1843,7 @@ declare function list_view_t_get_prop_item_height(nativeObj : any) : number;
 declare function list_view_t_get_prop_default_item_height(nativeObj : any) : number;
 declare function list_view_t_get_prop_auto_hide_scroll_bar(nativeObj : any) : boolean;
 declare function list_view_t_get_prop_floating_scroll_bar(nativeObj : any) : boolean;
+declare function list_view_t_get_prop_item_width(nativeObj : any) : number;
 declare function scroll_bar_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function scroll_bar_cast(widget : any) : any;
 declare function scroll_bar_create_mobile(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -2060,8 +2081,9 @@ declare function button_set_enable_preview(widget : any, enable_preview : boolea
 declare function button_t_get_prop_repeat(nativeObj : any) : number;
 declare function button_t_get_prop_enable_long_press(nativeObj : any) : boolean;
 declare function button_t_get_prop_enable_preview(nativeObj : any) : boolean;
-declare function button_t_get_prop_long_press_time(nativeObj : any) : number;
+declare function button_t_get_prop_is_accept_status(nativeObj : any) : boolean;
 declare function button_t_get_prop_pressed(nativeObj : any) : boolean;
+declare function button_t_get_prop_long_press_time(nativeObj : any) : number;
 declare function check_button_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function check_button_create_radio(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function check_button_set_value(widget : any, value : any) : TRet;
@@ -2223,6 +2245,7 @@ declare function tab_button_group_create(parent : any, x : number, y : number, w
 declare function tab_button_group_set_compact(widget : any, compact : boolean) : TRet;
 declare function tab_button_group_set_scrollable(widget : any, scrollable : boolean) : TRet;
 declare function tab_button_group_set_drag_child(widget : any, drag_child : boolean) : TRet;
+declare function tab_button_group_remove_index(widget : any, index : number) : TRet;
 declare function tab_button_group_cast(widget : any) : any;
 declare function tab_button_group_t_get_prop_compact(nativeObj : any) : boolean;
 declare function tab_button_group_t_get_prop_scrollable(nativeObj : any) : boolean;
@@ -2270,6 +2293,7 @@ declare function native_window_maximize(win : any) : TRet;
 declare function native_window_restore(win : any) : TRet;
 declare function native_window_center(win : any) : TRet;
 declare function native_window_show_border(win : any, show : boolean) : TRet;
+declare function native_window_set_window_hit_test(win : any, x : number, y : number, w : number, h : number) : TRet;
 declare function native_window_set_fullscreen(win : any, fullscreen : boolean) : TRet;
 declare function native_window_set_cursor(win : any, name : string, img : any) : TRet;
 declare function native_window_set_title(win : any, app_name : string) : TRet;
@@ -2283,6 +2307,14 @@ declare function window_close(widget : any) : TRet;
 declare function window_close_force(widget : any) : TRet;
 declare function window_cast(widget : any) : any;
 declare function window_t_get_prop_fullscreen(nativeObj : any) : boolean;
+declare function edit_ex_create(parent : any, x : number, y : number, w : number, h : number) : any;
+declare function edit_ex_set_suggest_words(widget : any, suggest_words : any) : TRet;
+declare function edit_ex_set_suggest_words_item_formats(widget : any, formats : string) : TRet;
+declare function edit_ex_set_suggest_words_input_name(widget : any, name : string) : TRet;
+declare function edit_ex_cast(widget : any) : any;
+declare function edit_ex_t_get_prop_suggest_words(nativeObj : any) : any;
+declare function edit_ex_t_get_prop_suggest_words_item_formats(nativeObj : any) : string;
+declare function edit_ex_t_get_prop_suggest_words_input_name(nativeObj : any) : string;
 declare function gif_image_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function gif_image_play(widget : any) : TRet;
 declare function gif_image_stop(widget : any) : TRet;
@@ -5586,6 +5618,24 @@ export enum TEventType {
  UI_LOAD = EVT_UI_LOAD(),
 
   /**
+   * 触摸按下事件名(touch_event_t)。
+   *
+   */
+ TOUCH_DOWN = EVT_TOUCH_DOWN(),
+
+  /**
+   * 触摸移动事件名(touch_event_t)。
+   *
+   */
+ TOUCH_MOVE = EVT_TOUCH_MOVE(),
+
+  /**
+   * 触摸抬起事件名(touch_event_t)。
+   *
+   */
+ TOUCH_UP = EVT_TOUCH_UP(),
+
+  /**
    * event queue其它请求编号起始值。
    *
    */
@@ -5911,18 +5961,6 @@ export class TIdle {
    */
  static remove(idle_id : number) : TRet  {
     return idle_remove(idle_id);
- }
-
-
-  /**
-   * 根据上下文删除所有对应的idle。
-   * 
-   * @param ctx idle回调函数的上下文
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- static removeAllByCtx(ctx : any) : TRet  {
-    return idle_remove_all_by_ctx(ctx);
  }
 
 };
@@ -7785,18 +7823,6 @@ export class TTimer {
 
 
   /**
-   * 根据上下文删除所有对应的timer。
-   * 
-   * @param ctx timer回调函数的上下文。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- static removeAllByCtx(ctx : any) : TRet  {
-    return timer_remove_all_by_ctx(ctx);
- }
-
-
-  /**
    * 重置指定的timer，重置之后定时器重新开始计时。
    * 
    * @param timer_id timerID。
@@ -8302,7 +8328,7 @@ export class TVgcanvas {
   /**
    * 设置路径填充实心与否。
    *
-   *>CCW(1)为实心，CW(2)为镂空，设置其他则默认根据非零环绕规则判断(nonzero)。
+   *>设置为FALSE为实心，TRUE为镂空。
    * 
    * @param dir 填充方法。
    *
@@ -8399,6 +8425,18 @@ export class TVgcanvas {
 
   /**
    * 矩形裁剪。
+   *备注：
+   *1. 在绘图的时候脏矩形和裁剪区是一样的。
+   *2. 该函数是不合并裁剪区的，所有可能出现裁剪区被扩大导致绘图在脏矩形以外的情况，导致残影的情况。
+   *3. 该函数不支持旋转后调用，会导致裁剪区异常。
+   *........
+   *rect_t r;
+   *rect_t r_save;
+   *r = rectf_init(c->ox, c->oy, widget->w, widget->h);
+   *r_save = *vgcanvas_get_clip_rect(vg);
+   *r = rectf_intersect(&r, &r_save);
+   *vgcanvas_clip_rect(vg, (float_t)r.x, (float_t)r.y, (float_t)r.w, (float_t)r.h);
+   *........
    * 
    * @param x x坐标。
    * @param y y坐标。
@@ -8429,9 +8467,11 @@ export class TVgcanvas {
 
   /**
    * 设置一个与前一个裁剪区做交集的矩形裁剪区。
-   *如果下面这种情况，则不能直接调用 rect_intersect 函数来做矩形交集和 vgcanvas_clip_rect 函数设置裁剪区，而采用本函数做交集。
+   *备注：
+   *1. 如果下面这种情况，则不能直接调用 rect_intersect 函数来做矩形交集和 vgcanvas_clip_rect 函数设置裁剪区，而采用本函数做交集。
    *由于缩放和旋转以及平移会导致 vg 的坐标系和上一个裁剪区的坐标系不同，
    *导致直接使用做交集的话，裁剪区会出错。
+   *2. 该函数不支持旋转后调用，会导致裁剪区异常。
    *
    *```
    *vgcanvas_clip_rect(vg, old_r.x, old_r.y, old_r.w, old_r.h);
@@ -8570,14 +8610,14 @@ export class TVgcanvas {
    * 绘制图片。
    * 
    * @param img 图片。
-   * @param sx sx
-   * @param sy sy
-   * @param sw sw
-   * @param sh sh
-   * @param dx dx
-   * @param dy dy
-   * @param dw dw
-   * @param dh dh
+   * @param sx 原图区域的 x
+   * @param sy 原图区域的 y
+   * @param sw 原图区域的 w
+   * @param sh 原图区域的 h
+   * @param dx 绘制区域的 x
+   * @param dy 绘制区域的 y
+   * @param dw 绘制区域的 w
+   * @param dh 绘制区域的 h
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -8618,14 +8658,14 @@ export class TVgcanvas {
    *绘制图标时会根据屏幕密度进行自动缩放，而绘制普通图片时不会。
    * 
    * @param img 图片。
-   * @param sx sx
-   * @param sy sy
-   * @param sw sw
-   * @param sh sh
-   * @param dx dx
-   * @param dy dy
-   * @param dw dw
-   * @param dh dh
+   * @param sx 原图区域的 x
+   * @param sy 原图区域的 y
+   * @param sw 原图区域的 w
+   * @param sh 原图区域的 h
+   * @param dx 绘制区域的 x
+   * @param dy 绘制区域的 y
+   * @param dw 绘制区域的 w
+   * @param dh 绘制区域的 h
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -9736,6 +9776,12 @@ export enum TWidgetProp {
  ENABLE_PREVIEW = WIDGET_PROP_ENABLE_PREVIEW(),
 
   /**
+   * 是否为 accept 状态
+   *
+   */
+ IS_ACCEPT_STATUS = WIDGET_PROP_IS_ACCEPT_STATUS(),
+
+  /**
    * 是否启用点击穿透。
    *
    */
@@ -9994,6 +10040,31 @@ export enum TWidgetProp {
  MOVE_FOCUS_RIGHT_KEY = WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY(),
 
   /**
+   * 窗口中按下 Enter 默认触发单击 button 控件名字。
+   *备注：如果控件接管了 Enter 的话，accept_button 控件是不会进入 focused 风格，例如：设置 accept_return 为 true 或者 widget->vt->return_key_to_activate 为 true
+   *
+   */
+ ACCEPT_BUTTON = WIDGET_PROP_ACCEPT_BUTTON(),
+
+  /**
+   * 窗口中按下 Esc 默认触发单击 button 控件名字。
+   *
+   */
+ CANCEL_BUTTON = WIDGET_PROP_CANCEL_BUTTON(),
+
+  /**
+   * 控件中是否支持 Enter 按钮输入。
+   *
+   */
+ ACCEPT_RETRUN = WIDGET_PROP_ACCEPT_RETRUN(),
+
+  /**
+   * 控件中是否支持 Tab 按钮输入。
+   *
+   */
+ ACCEPT_TAB = WIDGET_PROP_ACCEPT_TAB(),
+
+  /**
    * 行数。
    *
    */
@@ -10064,6 +10135,18 @@ export enum TWidgetProp {
    *
    */
  VALIDATOR = WIDGET_PROP_VALIDATOR(),
+
+  /**
+   * 标识是否将当前控件状态同步到子控件中。
+   *
+   */
+ SYNC_STATE_TO_CHILDREN = WIDGET_PROP_SYNC_STATE_TO_CHILDREN(),
+
+  /**
+   * 标识是否接收父控件的状态同步。
+   *
+   */
+ STATE_FROM_PARENT_SYNC = WIDGET_PROP_STATE_FROM_PARENT_SYNC(),
 };
 
 
@@ -11557,6 +11640,30 @@ export class TWidget {
 
 
   /**
+   * 标识是否将当前控件状态同步到子控件中。
+   * 
+   * @param sync_state_to_children 是否将当前控件状态同步到子控件中。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setSyncStateToChildren(sync_state_to_children : boolean) : TRet  {
+    return widget_set_sync_state_to_children(this != null ? (this.nativeObj || this) : null, sync_state_to_children);
+ }
+
+
+  /**
+   * 标识是否接收父控件的状态同步。
+   * 
+   * @param state_from_parent_sync 是否接收父控件的状态同步。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setStateFromParentSync(state_from_parent_sync : boolean) : TRet  {
+    return widget_set_state_from_parent_sync(this != null ? (this.nativeObj || this) : null, state_from_parent_sync);
+ }
+
+
+  /**
    * 设置控件的不透明度。
    *
    *>在嵌入式平台，半透明效果会使性能大幅下降，请谨慎使用。
@@ -11819,19 +11926,6 @@ export class TWidget {
    */
  getPropStr(name : string, defval : string) : string  {
     return widget_get_prop_str(this != null ? (this.nativeObj || this) : null, name, defval);
- }
-
-
-  /**
-   * 设置指针格式的属性。
-   * 
-   * @param name 属性的名称。
-   * @param v 属性的值。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setPropPointer(name : string, v : any) : TRet  {
-    return widget_set_prop_pointer(this != null ? (this.nativeObj || this) : null, name, v);
  }
 
 
@@ -12425,7 +12519,7 @@ export class TWidget {
 
 
   /**
-   * 设置控件自己的布局(缺省布局器)参数(过时，请用widget\_set\_self\_layout)。
+   * 设置控件自己的布局(缺省布局器)参数(建议用widget\_set\_self\_layout)。
    *备注：下一帧才会生效数据
    * 
    * @param x x参数。
@@ -12681,7 +12775,7 @@ export class TWidget {
    * 是否根据子控件和文本自动调整控件自身大小。
    *
    *> 为true时，最好不要使用 layout 的相关东西，否则可能有冲突。
-   *> 注意：只是调整控件的本身的宽高，不会修改控件本身的位置。
+   *> 注意：只是调整控件的本身的宽高，不会修改控件本身的位置，仅部分控件实现该效果。
    *
    */
  get autoAdjustSize() : boolean {
@@ -12703,6 +12797,32 @@ export class TWidget {
 
  set floating(v : boolean) {
    this.setFloating(v);
+ }
+
+
+  /**
+   * 标识是否将当前控件状态同步到子控件中。
+   *
+   */
+ get syncStateToChildren() : boolean {
+   return widget_t_get_prop_sync_state_to_children(this.nativeObj);
+ }
+
+ set syncStateToChildren(v : boolean) {
+   this.setSyncStateToChildren(v);
+ }
+
+
+  /**
+   * 标识是否接收父控件的状态同步。
+   *
+   */
+ get stateFromParentSync() : boolean {
+   return widget_t_get_prop_state_from_parent_sync(this.nativeObj);
+ }
+
+ set stateFromParentSync(v : boolean) {
+   this.setStateFromParentSync(v);
  }
 
 
@@ -15410,6 +15530,15 @@ export class TPointerEvent extends TEvent {
    return pointer_event_t_get_prop_shift(this.nativeObj);
  }
 
+
+  /**
+   * 触摸ID。
+   *
+   */
+ get fingerId() : number {
+   return pointer_event_t_get_prop_finger_id(this.nativeObj);
+ }
+
 };
 /**
  * 按键事件。
@@ -15780,6 +15909,74 @@ export class TSystemEvent extends TEvent {
 
 };
 /**
+ * 多点触摸事件(目前主要对接 SDL_TouchFingerEvent(SDL_FINGERMOTION/SDL_FINGERDOWN/SDL_FINGERUP))。
+ *
+ */
+export class TTouchEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转touch_event_t对象。
+   * 
+   * @param event event对象。
+   *
+   * @returns event 对象。
+   */
+ static cast(event : TEvent) : TTouchEvent  {
+    return new TTouchEvent(touch_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+
+  /**
+   * 触摸ID。
+   *
+   */
+ get touchId() : number {
+   return touch_event_t_get_prop_touch_id(this.nativeObj);
+ }
+
+
+  /**
+   * 手指ID。
+   *
+   */
+ get fingerId() : number {
+   return touch_event_t_get_prop_finger_id(this.nativeObj);
+ }
+
+
+  /**
+   * x坐标(在 0-1 之间，表示与屏幕宽度的比例）。
+   *
+   */
+ get x() : number {
+   return touch_event_t_get_prop_x(this.nativeObj);
+ }
+
+
+  /**
+   * y坐标(在 0-1 之间，表示与屏幕高度的比例）。
+   *
+   */
+ get y() : number {
+   return touch_event_t_get_prop_y(this.nativeObj);
+ }
+
+
+  /**
+   * 压力。
+   *
+   */
+ get pressure() : number {
+   return touch_event_t_get_prop_pressure(this.nativeObj);
+ }
+
+};
+/**
  * UI加载完成事件。
  *
  */
@@ -16118,6 +16315,21 @@ export class TImageBase extends TWidget {
 
 };
 /**
+ * 本地化信息。
+ *locale_info_t 的子类。
+ *提供从 xml 文件中获取本地化信息的功能。
+ *
+ *注意：fallback_tr2 回调已被设置用于从xml文件中获取本地化信息，不可再重复设置，否则将导致功能失效！
+ *
+ */
+export class TLocaleInfoXml extends TLocaleInfo { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+};
+/**
  * 可变的style(可实时修改并生效，主要用于在designer中被编辑的控件，或者一些特殊控件)。
  *
  *style\_mutable也对style\_const进行了包装，当用户没修改某个值时，便从style\_const中获取。
@@ -16399,6 +16611,24 @@ export class TWindowBase extends TWidget {
    */
  get moveFocusRightKey() : string {
    return window_base_t_get_prop_move_focus_right_key(this.nativeObj);
+ }
+
+
+  /**
+   * 窗口中按下 Enter 按钮默认触发单击 button 控件名字
+   *
+   */
+ get acceptButton() : string {
+   return window_base_t_get_prop_accept_button(this.nativeObj);
+ }
+
+
+  /**
+   * 窗口中按下 Esc 按钮默认触发单击 button 控件名字
+   *
+   */
+ get cancelButton() : string {
+   return window_base_t_get_prop_cancel_button(this.nativeObj);
  }
 
 
@@ -18745,7 +18975,7 @@ export class TCandidates extends TWidget {
 
 
   /**
-   * 是否启用用数字选择候选字。比如按下1选择第1个候选字，按下2选择第2个候选字。
+   * 是否启用用数字选择候选字。比如按下1选择第1个候选字，按下2选择第2个候选字。(需在keyboard中设置grab_keys="true"方可生效)
    *
    */
  get selectByNum() : boolean {
@@ -19242,18 +19472,6 @@ export class TMledit extends TWidget {
 
 
   /**
-   * 设置编辑器滚动速度。
-   * 
-   * @param scroll_line 滚动行数。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setScrollLine(scroll_line : number) : TRet  {
-    return mledit_set_scroll_line(this != null ? (this.nativeObj || this) : null, scroll_line);
- }
-
-
-  /**
    * 设置编辑器滚动到指定偏移位置。
    * 
    * @param offset 偏移位置。
@@ -19430,19 +19648,6 @@ export class TMledit extends TWidget {
 
 
   /**
-   * 鼠标一次滚动行数。
-   *
-   */
- get scrollLine() : number {
-   return mledit_t_get_prop_scroll_line(this.nativeObj);
- }
-
- set scrollLine(v : number) {
-   this.setScrollLine(v);
- }
-
-
-  /**
    * 是否启用覆盖行。
    *
    */
@@ -19522,6 +19727,24 @@ export class TMledit extends TWidget {
 
  set closeImWhenBlured(v : boolean) {
    this.setCloseImWhenBlured(v);
+ }
+
+
+  /**
+   * 是否支持 Enter 按钮输入。
+   *
+   */
+ get acceptReturn() : boolean {
+   return mledit_t_get_prop_accept_return(this.nativeObj);
+ }
+
+
+  /**
+   * 是否支持 Tab 按钮输入。
+   *
+   */
+ get acceptTab() : boolean {
+   return mledit_t_get_prop_accept_tab(this.nativeObj);
  }
 
 };
@@ -19965,7 +20188,7 @@ export class TRichText extends TWidget {
 
 
   /**
-   * 标识控件是否允许上下拖动。
+   * 标识控件是否允许上下拖动。(需满足文字的高度大于控件的高度)
    *
    */
  get yslidable() : boolean {
@@ -20765,11 +20988,18 @@ export class TListView extends TWidget {
    this.setFloatingScrollBar(v);
  }
 
+
+  /**
+   * 列表项的宽度。如果 item_width 0，所有列表项使用该宽度，否则使用让列表项的宽度等于scroll_view的宽度。
+   *
+   */
+ get itemWidth() : number {
+   return list_view_t_get_prop_item_width(this.nativeObj);
+ }
+
 };
 /**
  * 滚动条控件。
- *
- *> 目前只支持垂直滚动。
  *
  *scroll\_bar\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于scroll\_bar\_t控件。
  *
@@ -21459,7 +21689,7 @@ export class TScrollView extends TWidget {
 
 
   /**
-   * 是否递归查找全部子控件。
+   * 是否递归查找全部子控件。(当scroll_view的父控件是list_view_h或list_view时无效)
    *
    */
  get recursive() : boolean {
@@ -22208,7 +22438,7 @@ export class TSlideIndicator extends TWidget {
 
 
   /**
-   * 最大值(缺省为100)。
+   * 最大值(缺省为3)。
    *
    */
  get max() : number {
@@ -22286,7 +22516,7 @@ export class TSlideIndicator extends TWidget {
 
 
   /**
-   * 锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
+   * 锚点x坐标。(后面加上px为像素点，不加px为相对百分取值范围为0.0f到1.0f)
    *
    */
  get anchorX() : string {
@@ -22295,7 +22525,7 @@ export class TSlideIndicator extends TWidget {
 
 
   /**
-   * 锚点y坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
+   * 锚点y坐标。(后面加上px为像素点，不加px为相对百分取值范围为0.0f到1.0f)
    *
    */
  get anchorY() : string {
@@ -22704,7 +22934,7 @@ export class TSwitch extends TWidget {
 
 
   /**
-   * 当开关处于关闭时，图片偏移相对于图片宽度的比例(缺省为1/3)。
+   * 主要用于当开关处于关闭时，图片偏移相对于图片宽度的比例(缺省为1/3)。
    *
    */
  get maxXoffsetRatio() : number {
@@ -24374,15 +24604,11 @@ export class TButton extends TWidget {
 
 
   /**
-   * 触发长按事件的时间(毫秒)
+   * 是否为 accept 状态
    *
    */
- get longPressTime() : number {
-   return button_t_get_prop_long_press_time(this.nativeObj);
- }
-
- set longPressTime(v : number) {
-   this.setLongPressTime(v);
+ get isAcceptStatus() : boolean {
+   return button_t_get_prop_is_accept_status(this.nativeObj);
  }
 
 
@@ -24392,6 +24618,19 @@ export class TButton extends TWidget {
    */
  get pressed() : boolean {
    return button_t_get_prop_pressed(this.nativeObj);
+ }
+
+
+  /**
+   * 触发长按事件的时间(毫秒)
+   *
+   */
+ get longPressTime() : number {
+   return button_t_get_prop_long_press_time(this.nativeObj);
+ }
+
+ set longPressTime(v : number) {
+   this.setLongPressTime(v);
  }
 
 };
@@ -26034,16 +26273,16 @@ export class TGrid extends TWidget {
    * 各列的参数。
    *各列的参数之间用英文的分号(;)分隔，每列参数的格式为：
    *
-   *col(w=?,left_margin=?,right_margin=?,top_maorgin=?,bottom_margin=?)
+   *col(w=?,left_margin=?,right_margin=?,top_margin=?,bottom_margin=?)
    *
-   ** w 为列的宽度(必须存在)。取值在(0-1]区间时，视为grid控件宽度的比例，否则为像素宽度。
-   *(如果为负数，将计算结果加上控件的宽度)
-   ** left_margin(可选，可缩写为l) 该列左边的边距。
-   ** right_margin(可选，可缩写为r) 该列右边的边距。
-   ** top_margin(可选，可缩写为t) 该列顶部的边距。
-   ** bottom_margin(可选，可缩写为b) 该列底部的边距。
-   ** margin(可选，可缩写为m) 同时指定上面4个边距。
-   ** fill_available(可选，可缩写为f) 填充剩余宽度(只有一列可以指定)。
+   ** w 为列的宽度（必须存在）。取值在 (0-1] 区间时，视为 grid 控件宽度的比例，否则为像素宽度。
+   *（如果为负数，将计算结果加上控件的宽度）
+   ** left_margin（可选，可缩写为 l）该列左边的边距。
+   ** right_margin（可选，可缩写为 r）该列右边的边距。
+   ** top_margin（可选，可缩写为 t）该列顶部的边距。
+   ** bottom_margin（可选，可缩写为 b）该列底部的边距。
+   ** margin（可选，可缩写为 m）同时指定上面 4 个边距。
+   ** fill_available（可选，可缩写为f）填充剩余宽度（只有一列可以指定）。
    *
    */
  get columnsDefinition() : string {
@@ -26475,7 +26714,7 @@ export class TPages extends TWidget {
 
 
   /**
-   * 当前活跃的page。(需要用到 MVVM 数据绑定请设置 value 属性)
+   * 当前活跃的page。(起始值从0开始。需要用到 MVVM 数据绑定请设置 value 属性)
    *
    */
  get active() : number {
@@ -26684,7 +26923,7 @@ export class TProgressBar extends TWidget {
 
 
   /**
-   * 数值到字符串转换时的格式，缺省为"%d"。
+   * 数值到字符串转换时的格式，缺省为"%d%%"。
    *
    */
  get format() : string {
@@ -27191,6 +27430,18 @@ export class TTabButtonGroup extends TWidget {
 
 
   /**
+   * 设置删除 tab_button_group 控件中的 tab_button 控件和对应页。
+   * 
+   * @param index tab_button 的序号。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ removeIndex(index : number) : TRet  {
+    return tab_button_group_remove_index(this != null ? (this.nativeObj || this) : null, index);
+ }
+
+
+  /**
    * 转换tab_button_group对象(供脚本语言使用)。
    * 
    * @param widget tab_button_group对象。
@@ -27615,7 +27866,7 @@ export class TView extends TWidget {
 
 
   /**
-   * 缺省获得焦点的子控件(可用控件名或类型)。
+   * 缺省获得焦点的子控件(可用控件名或类型)。(该属性废弃。)
    *
    *> view作为pages/slideview的直接子控件才需要设置。
    *> 正常情况下，一个窗口只能指定一个初始焦点。
@@ -27671,7 +27922,7 @@ export class TView extends TWidget {
  *</dialog>
  *```
  *
- *打开非模态对话框时，其用法与普通窗口一样。打开非模态对话框时，还需要调用dialog\_modal。
+ *打开非模态对话框时，其用法与普通窗口一样。打开模态对话框时，还需要调用dialog\_modal。
  *
  *
  *
@@ -28034,6 +28285,21 @@ export class TNativeWindow extends TObject {
 
 
   /**
+   * 设置hitTest。
+   * 
+   * @param x x坐标。
+   * @param y y坐标。
+   * @param w w宽度。
+   * @param h h高度。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setWindowHitTest(x : number, y : number, w : number, h : number) : TRet  {
+    return native_window_set_window_hit_test(this != null ? (this.nativeObj || this) : null, x, y, w, h);
+ }
+
+
+  /**
    * 是否全屏。
    * 
    * @param fullscreen 是否全屏。
@@ -28243,6 +28509,124 @@ export class TWindow extends TWindowBase {
 
  set fullscreen(v : boolean) {
    this.setFullscreen(v);
+ }
+
+};
+/**
+ * 扩展edit控件。支持以下功能：
+ ** 支持搜索建议功能。
+ *
+ */
+export class TEditEx extends TEdit { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建edit_ex对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TEditEx  {
+    return new TEditEx(edit_ex_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 设置输入建议词源。
+   *> EVT_VALUE_CHANGED 事件请求词源更新，new_value 为 edit 输入内容。
+   * 
+   * @param suggest_words 输入建议词源。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setSuggestWords(suggest_words : TObject) : TRet  {
+    return edit_ex_set_suggest_words(this != null ? (this.nativeObj || this) : null, suggest_words != null ? (suggest_words.nativeObj || suggest_words) : null);
+ }
+
+
+  /**
+   * 设置输入建议词的项格式。
+   * 
+   * @param formats 输入建议词的项格式。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setSuggestWordsItemFormats(formats : string) : TRet  {
+    return edit_ex_set_suggest_words_item_formats(this != null ? (this.nativeObj || this) : null, formats);
+ }
+
+
+  /**
+   * 最终输入到edit控件的文本的属性名。
+   *> 设置了 suggest_words_item_formats 才会被用到。
+   * 
+   * @param name 最终输入到edit控件的文本的属性名。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setSuggestWordsInputName(name : string) : TRet  {
+    return edit_ex_set_suggest_words_input_name(this != null ? (this.nativeObj || this) : null, name);
+ }
+
+
+  /**
+   * 转换为edit对象(供脚本语言使用)。
+   * 
+   * @param widget edit_ex对象。
+   *
+   * @returns edit对象。
+   */
+ static cast(widget : TWidget) : TEditEx  {
+    return new TEditEx(edit_ex_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 输入建议词。
+   *
+   */
+ get suggestWords() : TObject {
+   return new TObject(edit_ex_t_get_prop_suggest_words(this.nativeObj));
+ }
+
+ set suggestWords(v : TObject) {
+   this.setSuggestWords(v);
+ }
+
+
+  /**
+   * 输入建议词的项格式。
+   *
+   */
+ get suggestWordsItemFormats() : string {
+   return edit_ex_t_get_prop_suggest_words_item_formats(this.nativeObj);
+ }
+
+ set suggestWordsItemFormats(v : string) {
+   this.setSuggestWordsItemFormats(v);
+ }
+
+
+  /**
+   * 最终输入到edit控件的文本的属性名。
+   *> 设置了 suggest_words_item_formats 才会被用到。
+   *
+   */
+ get suggestWordsInputName() : string {
+   return edit_ex_t_get_prop_suggest_words_input_name(this.nativeObj);
+ }
+
+ set suggestWordsInputName(v : string) {
+   this.setSuggestWordsInputName(v);
  }
 
 };

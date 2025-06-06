@@ -44,3 +44,7 @@ func (this TPointerEvent) GetShift() bool {
   return (bool)((*C.pointer_event_t)(unsafe.Pointer(this.handle)).shift);
 }
 
+func (this TPointerEvent) GetFingerId() int32 {
+  return (int32)((*C.pointer_event_t)(unsafe.Pointer(this.handle)).finger_id);
+}
+

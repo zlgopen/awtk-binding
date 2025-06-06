@@ -650,6 +650,12 @@ const EVT_UNACTIVATED = Module.cwrap("get_EVT_UNACTIVATED",
     "number", []);
 const EVT_UI_LOAD = Module.cwrap("get_EVT_UI_LOAD", 
     "number", []);
+const EVT_TOUCH_DOWN = Module.cwrap("get_EVT_TOUCH_DOWN", 
+    "number", []);
+const EVT_TOUCH_MOVE = Module.cwrap("get_EVT_TOUCH_MOVE", 
+    "number", []);
+const EVT_TOUCH_UP = Module.cwrap("get_EVT_TOUCH_UP", 
+    "number", []);
 const EVT_REQ_START = Module.cwrap("get_EVT_REQ_START", 
     "number", []);
 const EVT_USER_START = Module.cwrap("get_EVT_USER_START", 
@@ -723,8 +729,6 @@ const GLYPH_FMT_ALPHA4 = Module.cwrap("get_GLYPH_FMT_ALPHA4",
 const idle_add = Module.cwrap("idle_add", 
     "number", ["number","number"]);
 const idle_remove = Module.cwrap("idle_remove", 
-    "number", ["number"]);
-const idle_remove_all_by_ctx = Module.cwrap("idle_remove_all_by_ctx", 
     "number", ["number"]);
 const image_manager = Module.cwrap("image_manager", 
     "number", []);
@@ -1228,8 +1232,6 @@ const timer_add = Module.cwrap("timer_add",
     "number", ["number","number","number"]);
 const timer_remove = Module.cwrap("timer_remove", 
     "number", ["number"]);
-const timer_remove_all_by_ctx = Module.cwrap("timer_remove_all_by_ctx", 
-    "number", ["number"]);
 const timer_reset = Module.cwrap("timer_reset", 
     "number", ["number"]);
 const timer_suspend = Module.cwrap("timer_suspend", 
@@ -1682,6 +1684,8 @@ const WIDGET_PROP_ENABLE_LONG_PRESS = Module.cwrap("get_WIDGET_PROP_ENABLE_LONG_
     "string", []);
 const WIDGET_PROP_ENABLE_PREVIEW = Module.cwrap("get_WIDGET_PROP_ENABLE_PREVIEW", 
     "string", []);
+const WIDGET_PROP_IS_ACCEPT_STATUS = Module.cwrap("get_WIDGET_PROP_IS_ACCEPT_STATUS", 
+    "string", []);
 const WIDGET_PROP_CLICK_THROUGH = Module.cwrap("get_WIDGET_PROP_CLICK_THROUGH", 
     "string", []);
 const WIDGET_PROP_ANIMATABLE = Module.cwrap("get_WIDGET_PROP_ANIMATABLE", 
@@ -1768,6 +1772,14 @@ const WIDGET_PROP_MOVE_FOCUS_LEFT_KEY = Module.cwrap("get_WIDGET_PROP_MOVE_FOCUS
     "string", []);
 const WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY = Module.cwrap("get_WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY", 
     "string", []);
+const WIDGET_PROP_ACCEPT_BUTTON = Module.cwrap("get_WIDGET_PROP_ACCEPT_BUTTON", 
+    "string", []);
+const WIDGET_PROP_CANCEL_BUTTON = Module.cwrap("get_WIDGET_PROP_CANCEL_BUTTON", 
+    "string", []);
+const WIDGET_PROP_ACCEPT_RETRUN = Module.cwrap("get_WIDGET_PROP_ACCEPT_RETRUN", 
+    "string", []);
+const WIDGET_PROP_ACCEPT_TAB = Module.cwrap("get_WIDGET_PROP_ACCEPT_TAB", 
+    "string", []);
 const WIDGET_PROP_ROWS = Module.cwrap("get_WIDGET_PROP_ROWS", 
     "string", []);
 const WIDGET_PROP_SHOW_GRID = Module.cwrap("get_WIDGET_PROP_SHOW_GRID", 
@@ -1791,6 +1803,10 @@ const WIDGET_PROP_SHOW_FPS = Module.cwrap("get_WIDGET_PROP_SHOW_FPS",
 const WIDGET_PROP_MAX_FPS = Module.cwrap("get_WIDGET_PROP_MAX_FPS", 
     "string", []);
 const WIDGET_PROP_VALIDATOR = Module.cwrap("get_WIDGET_PROP_VALIDATOR", 
+    "string", []);
+const WIDGET_PROP_SYNC_STATE_TO_CHILDREN = Module.cwrap("get_WIDGET_PROP_SYNC_STATE_TO_CHILDREN", 
+    "string", []);
+const WIDGET_PROP_STATE_FROM_PARENT_SYNC = Module.cwrap("get_WIDGET_PROP_STATE_FROM_PARENT_SYNC", 
     "string", []);
 const WIDGET_TYPE_NONE = Module.cwrap("get_WIDGET_TYPE_NONE", 
     "string", []);
@@ -2126,6 +2142,10 @@ const widget_set_focusable = Module.cwrap("widget_set_focusable",
     "number", ["number","number"]);
 const widget_set_state = Module.cwrap("widget_set_state", 
     "number", ["number","string"]);
+const widget_set_sync_state_to_children = Module.cwrap("widget_set_sync_state_to_children", 
+    "number", ["number","number"]);
+const widget_set_state_from_parent_sync = Module.cwrap("widget_set_state_from_parent_sync", 
+    "number", ["number","number"]);
 const widget_set_opacity = Module.cwrap("widget_set_opacity", 
     "number", ["number","number"]);
 const widget_set_dirty_rect_tolerance = Module.cwrap("widget_set_dirty_rect_tolerance", 
@@ -2168,8 +2188,6 @@ const widget_set_prop_str = Module.cwrap("widget_set_prop_str",
     "number", ["number","string","string"]);
 const widget_get_prop_str = Module.cwrap("widget_get_prop_str", 
     "string", ["number","string","string"]);
-const widget_set_prop_pointer = Module.cwrap("widget_set_prop_pointer", 
-    "number", ["number","string","number"]);
 const widget_get_prop_pointer = Module.cwrap("widget_get_prop_pointer", 
     "number", ["number","string"]);
 const widget_set_prop_float = Module.cwrap("widget_set_prop_float", 
@@ -2311,6 +2329,10 @@ const widget_t_get_prop_with_focus_state = Module.cwrap("widget_t_get_prop_with_
 const widget_t_get_prop_auto_adjust_size = Module.cwrap("widget_t_get_prop_auto_adjust_size", 
     "number", ["number"]);
 const widget_t_get_prop_floating = Module.cwrap("widget_t_get_prop_floating", 
+    "number", ["number"]);
+const widget_t_get_prop_sync_state_to_children = Module.cwrap("widget_t_get_prop_sync_state_to_children", 
+    "number", ["number"]);
+const widget_t_get_prop_state_from_parent_sync = Module.cwrap("widget_t_get_prop_state_from_parent_sync", 
     "number", ["number"]);
 const widget_t_get_prop_opacity = Module.cwrap("widget_t_get_prop_opacity", 
     "number", ["number"]);
@@ -2936,6 +2958,8 @@ const pointer_event_t_get_prop_menu = Module.cwrap("pointer_event_t_get_prop_men
     "number", ["number"]);
 const pointer_event_t_get_prop_shift = Module.cwrap("pointer_event_t_get_prop_shift", 
     "number", ["number"]);
+const pointer_event_t_get_prop_finger_id = Module.cwrap("pointer_event_t_get_prop_finger_id", 
+    "number", ["number"]);
 const key_event_cast = Module.cwrap("key_event_cast", 
     "number", ["number"]);
 const key_event_t_get_prop_key = Module.cwrap("key_event_t_get_prop_key", 
@@ -2995,6 +3019,18 @@ const drop_file_event_t_get_prop_filename = Module.cwrap("drop_file_event_t_get_
 const system_event_cast = Module.cwrap("system_event_cast", 
     "number", ["number"]);
 const system_event_t_get_prop_sdl_event = Module.cwrap("system_event_t_get_prop_sdl_event", 
+    "number", ["number"]);
+const touch_event_cast = Module.cwrap("touch_event_cast", 
+    "number", ["number"]);
+const touch_event_t_get_prop_touch_id = Module.cwrap("touch_event_t_get_prop_touch_id", 
+    "number", ["number"]);
+const touch_event_t_get_prop_finger_id = Module.cwrap("touch_event_t_get_prop_finger_id", 
+    "number", ["number"]);
+const touch_event_t_get_prop_x = Module.cwrap("touch_event_t_get_prop_x", 
+    "number", ["number"]);
+const touch_event_t_get_prop_y = Module.cwrap("touch_event_t_get_prop_y", 
+    "number", ["number"]);
+const touch_event_t_get_prop_pressure = Module.cwrap("touch_event_t_get_prop_pressure", 
     "number", ["number"]);
 const ui_load_event_cast = Module.cwrap("ui_load_event_cast", 
     "number", ["number"]);
@@ -3091,6 +3127,10 @@ const window_base_t_get_prop_move_focus_down_key = Module.cwrap("window_base_t_g
 const window_base_t_get_prop_move_focus_left_key = Module.cwrap("window_base_t_get_prop_move_focus_left_key", 
     "string", ["number"]);
 const window_base_t_get_prop_move_focus_right_key = Module.cwrap("window_base_t_get_prop_move_focus_right_key", 
+    "string", ["number"]);
+const window_base_t_get_prop_accept_button = Module.cwrap("window_base_t_get_prop_accept_button", 
+    "string", ["number"]);
+const window_base_t_get_prop_cancel_button = Module.cwrap("window_base_t_get_prop_cancel_button", 
     "string", ["number"]);
 const window_base_t_get_prop_applet_name = Module.cwrap("window_base_t_get_prop_applet_name", 
     "string", ["number"]);
@@ -3470,8 +3510,6 @@ const mledit_set_cursor = Module.cwrap("mledit_set_cursor",
     "number", ["number","number"]);
 const mledit_get_cursor = Module.cwrap("mledit_get_cursor", 
     "number", ["number"]);
-const mledit_set_scroll_line = Module.cwrap("mledit_set_scroll_line", 
-    "number", ["number","number"]);
 const mledit_scroll_to_offset = Module.cwrap("mledit_scroll_to_offset", 
     "number", ["number","number"]);
 const mledit_set_open_im_when_focused = Module.cwrap("mledit_set_open_im_when_focused", 
@@ -3500,8 +3538,6 @@ const mledit_t_get_prop_max_lines = Module.cwrap("mledit_t_get_prop_max_lines",
     "number", ["number"]);
 const mledit_t_get_prop_max_chars = Module.cwrap("mledit_t_get_prop_max_chars", 
     "number", ["number"]);
-const mledit_t_get_prop_scroll_line = Module.cwrap("mledit_t_get_prop_scroll_line", 
-    "number", ["number"]);
 const mledit_t_get_prop_overwrite = Module.cwrap("mledit_t_get_prop_overwrite", 
     "number", ["number"]);
 const mledit_t_get_prop_wrap_word = Module.cwrap("mledit_t_get_prop_wrap_word", 
@@ -3513,6 +3549,10 @@ const mledit_t_get_prop_cancelable = Module.cwrap("mledit_t_get_prop_cancelable"
 const mledit_t_get_prop_open_im_when_focused = Module.cwrap("mledit_t_get_prop_open_im_when_focused", 
     "number", ["number"]);
 const mledit_t_get_prop_close_im_when_blured = Module.cwrap("mledit_t_get_prop_close_im_when_blured", 
+    "number", ["number"]);
+const mledit_t_get_prop_accept_return = Module.cwrap("mledit_t_get_prop_accept_return", 
+    "number", ["number"]);
+const mledit_t_get_prop_accept_tab = Module.cwrap("mledit_t_get_prop_accept_tab", 
     "number", ["number"]);
 const progress_circle_create = Module.cwrap("progress_circle_create", 
     "number", ["number","number","number","number","number"]);
@@ -3661,6 +3701,8 @@ const list_view_t_get_prop_default_item_height = Module.cwrap("list_view_t_get_p
 const list_view_t_get_prop_auto_hide_scroll_bar = Module.cwrap("list_view_t_get_prop_auto_hide_scroll_bar", 
     "number", ["number"]);
 const list_view_t_get_prop_floating_scroll_bar = Module.cwrap("list_view_t_get_prop_floating_scroll_bar", 
+    "number", ["number"]);
+const list_view_t_get_prop_item_width = Module.cwrap("list_view_t_get_prop_item_width", 
     "number", ["number"]);
 const scroll_bar_create = Module.cwrap("scroll_bar_create", 
     "number", ["number","number","number","number","number"]);
@@ -4136,9 +4178,11 @@ const button_t_get_prop_enable_long_press = Module.cwrap("button_t_get_prop_enab
     "number", ["number"]);
 const button_t_get_prop_enable_preview = Module.cwrap("button_t_get_prop_enable_preview", 
     "number", ["number"]);
-const button_t_get_prop_long_press_time = Module.cwrap("button_t_get_prop_long_press_time", 
+const button_t_get_prop_is_accept_status = Module.cwrap("button_t_get_prop_is_accept_status", 
     "number", ["number"]);
 const button_t_get_prop_pressed = Module.cwrap("button_t_get_prop_pressed", 
+    "number", ["number"]);
+const button_t_get_prop_long_press_time = Module.cwrap("button_t_get_prop_long_press_time", 
     "number", ["number"]);
 const check_button_create = Module.cwrap("check_button_create", 
     "number", ["number","number","number","number","number"]);
@@ -4462,6 +4506,8 @@ const tab_button_group_set_scrollable = Module.cwrap("tab_button_group_set_scrol
     "number", ["number","number"]);
 const tab_button_group_set_drag_child = Module.cwrap("tab_button_group_set_drag_child", 
     "number", ["number","number"]);
+const tab_button_group_remove_index = Module.cwrap("tab_button_group_remove_index", 
+    "number", ["number","number"]);
 const tab_button_group_cast = Module.cwrap("tab_button_group_cast", 
     "number", ["number"]);
 const tab_button_group_t_get_prop_compact = Module.cwrap("tab_button_group_t_get_prop_compact", 
@@ -4556,6 +4602,8 @@ const native_window_center = Module.cwrap("native_window_center",
     "number", ["number"]);
 const native_window_show_border = Module.cwrap("native_window_show_border", 
     "number", ["number","number"]);
+const native_window_set_window_hit_test = Module.cwrap("native_window_set_window_hit_test", 
+    "number", ["number","number","number","number","number"]);
 const native_window_set_fullscreen = Module.cwrap("native_window_set_fullscreen", 
     "number", ["number","number"]);
 const native_window_set_cursor = Module.cwrap("native_window_set_cursor", 
@@ -4582,6 +4630,22 @@ const window_cast = Module.cwrap("window_cast",
     "number", ["number"]);
 const window_t_get_prop_fullscreen = Module.cwrap("window_t_get_prop_fullscreen", 
     "number", ["number"]);
+const edit_ex_create = Module.cwrap("edit_ex_create", 
+    "number", ["number","number","number","number","number"]);
+const edit_ex_set_suggest_words = Module.cwrap("edit_ex_set_suggest_words", 
+    "number", ["number","number"]);
+const edit_ex_set_suggest_words_item_formats = Module.cwrap("edit_ex_set_suggest_words_item_formats", 
+    "number", ["number","string"]);
+const edit_ex_set_suggest_words_input_name = Module.cwrap("edit_ex_set_suggest_words_input_name", 
+    "number", ["number","string"]);
+const edit_ex_cast = Module.cwrap("edit_ex_cast", 
+    "number", ["number"]);
+const edit_ex_t_get_prop_suggest_words = Module.cwrap("edit_ex_t_get_prop_suggest_words", 
+    "number", ["number"]);
+const edit_ex_t_get_prop_suggest_words_item_formats = Module.cwrap("edit_ex_t_get_prop_suggest_words_item_formats", 
+    "string", ["number"]);
+const edit_ex_t_get_prop_suggest_words_input_name = Module.cwrap("edit_ex_t_get_prop_suggest_words_input_name", 
+    "string", ["number"]);
 const gif_image_create = Module.cwrap("gif_image_create", 
     "number", ["number","number","number","number","number"]);
 const gif_image_play = Module.cwrap("gif_image_play", 
@@ -7998,6 +8062,24 @@ export enum TEventType {
  UI_LOAD = EVT_UI_LOAD(),
 
   /**
+   * 触摸按下事件名(touch_event_t)。
+   *
+   */
+ TOUCH_DOWN = EVT_TOUCH_DOWN(),
+
+  /**
+   * 触摸移动事件名(touch_event_t)。
+   *
+   */
+ TOUCH_MOVE = EVT_TOUCH_MOVE(),
+
+  /**
+   * 触摸抬起事件名(touch_event_t)。
+   *
+   */
+ TOUCH_UP = EVT_TOUCH_UP(),
+
+  /**
    * event queue其它请求编号起始值。
    *
    */
@@ -8323,18 +8405,6 @@ export class TIdle {
    */
  static remove(idle_id : number) : TRet  {
     return idle_remove(idle_id);
- }
-
-
-  /**
-   * 根据上下文删除所有对应的idle。
-   * 
-   * @param ctx idle回调函数的上下文
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- static removeAllByCtx(ctx : any) : TRet  {
-    return idle_remove_all_by_ctx(ctx);
  }
 
 };
@@ -10197,18 +10267,6 @@ export class TTimer {
 
 
   /**
-   * 根据上下文删除所有对应的timer。
-   * 
-   * @param ctx timer回调函数的上下文。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- static removeAllByCtx(ctx : any) : TRet  {
-    return timer_remove_all_by_ctx(ctx);
- }
-
-
-  /**
    * 重置指定的timer，重置之后定时器重新开始计时。
    * 
    * @param timer_id timerID。
@@ -10714,7 +10772,7 @@ export class TVgcanvas {
   /**
    * 设置路径填充实心与否。
    *
-   *>CCW(1)为实心，CW(2)为镂空，设置其他则默认根据非零环绕规则判断(nonzero)。
+   *>设置为FALSE为实心，TRUE为镂空。
    * 
    * @param dir 填充方法。
    *
@@ -10811,6 +10869,18 @@ export class TVgcanvas {
 
   /**
    * 矩形裁剪。
+   *备注：
+   *1. 在绘图的时候脏矩形和裁剪区是一样的。
+   *2. 该函数是不合并裁剪区的，所有可能出现裁剪区被扩大导致绘图在脏矩形以外的情况，导致残影的情况。
+   *3. 该函数不支持旋转后调用，会导致裁剪区异常。
+   *........
+   *rect_t r;
+   *rect_t r_save;
+   *r = rectf_init(c->ox, c->oy, widget->w, widget->h);
+   *r_save = *vgcanvas_get_clip_rect(vg);
+   *r = rectf_intersect(&r, &r_save);
+   *vgcanvas_clip_rect(vg, (float_t)r.x, (float_t)r.y, (float_t)r.w, (float_t)r.h);
+   *........
    * 
    * @param x x坐标。
    * @param y y坐标。
@@ -10841,9 +10911,11 @@ export class TVgcanvas {
 
   /**
    * 设置一个与前一个裁剪区做交集的矩形裁剪区。
-   *如果下面这种情况，则不能直接调用 rect_intersect 函数来做矩形交集和 vgcanvas_clip_rect 函数设置裁剪区，而采用本函数做交集。
+   *备注：
+   *1. 如果下面这种情况，则不能直接调用 rect_intersect 函数来做矩形交集和 vgcanvas_clip_rect 函数设置裁剪区，而采用本函数做交集。
    *由于缩放和旋转以及平移会导致 vg 的坐标系和上一个裁剪区的坐标系不同，
    *导致直接使用做交集的话，裁剪区会出错。
+   *2. 该函数不支持旋转后调用，会导致裁剪区异常。
    *
    *```
    *vgcanvas_clip_rect(vg, old_r.x, old_r.y, old_r.w, old_r.h);
@@ -10982,14 +11054,14 @@ export class TVgcanvas {
    * 绘制图片。
    * 
    * @param img 图片。
-   * @param sx sx
-   * @param sy sy
-   * @param sw sw
-   * @param sh sh
-   * @param dx dx
-   * @param dy dy
-   * @param dw dw
-   * @param dh dh
+   * @param sx 原图区域的 x
+   * @param sy 原图区域的 y
+   * @param sw 原图区域的 w
+   * @param sh 原图区域的 h
+   * @param dx 绘制区域的 x
+   * @param dy 绘制区域的 y
+   * @param dw 绘制区域的 w
+   * @param dh 绘制区域的 h
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -11030,14 +11102,14 @@ export class TVgcanvas {
    *绘制图标时会根据屏幕密度进行自动缩放，而绘制普通图片时不会。
    * 
    * @param img 图片。
-   * @param sx sx
-   * @param sy sy
-   * @param sw sw
-   * @param sh sh
-   * @param dx dx
-   * @param dy dy
-   * @param dw dw
-   * @param dh dh
+   * @param sx 原图区域的 x
+   * @param sy 原图区域的 y
+   * @param sw 原图区域的 w
+   * @param sh 原图区域的 h
+   * @param dx 绘制区域的 x
+   * @param dy 绘制区域的 y
+   * @param dw 绘制区域的 w
+   * @param dh 绘制区域的 h
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
@@ -12148,6 +12220,12 @@ export enum TWidgetProp {
  ENABLE_PREVIEW = WIDGET_PROP_ENABLE_PREVIEW(),
 
   /**
+   * 是否为 accept 状态
+   *
+   */
+ IS_ACCEPT_STATUS = WIDGET_PROP_IS_ACCEPT_STATUS(),
+
+  /**
    * 是否启用点击穿透。
    *
    */
@@ -12406,6 +12484,31 @@ export enum TWidgetProp {
  MOVE_FOCUS_RIGHT_KEY = WIDGET_PROP_MOVE_FOCUS_RIGHT_KEY(),
 
   /**
+   * 窗口中按下 Enter 默认触发单击 button 控件名字。
+   *备注：如果控件接管了 Enter 的话，accept_button 控件是不会进入 focused 风格，例如：设置 accept_return 为 true 或者 widget->vt->return_key_to_activate 为 true
+   *
+   */
+ ACCEPT_BUTTON = WIDGET_PROP_ACCEPT_BUTTON(),
+
+  /**
+   * 窗口中按下 Esc 默认触发单击 button 控件名字。
+   *
+   */
+ CANCEL_BUTTON = WIDGET_PROP_CANCEL_BUTTON(),
+
+  /**
+   * 控件中是否支持 Enter 按钮输入。
+   *
+   */
+ ACCEPT_RETRUN = WIDGET_PROP_ACCEPT_RETRUN(),
+
+  /**
+   * 控件中是否支持 Tab 按钮输入。
+   *
+   */
+ ACCEPT_TAB = WIDGET_PROP_ACCEPT_TAB(),
+
+  /**
    * 行数。
    *
    */
@@ -12476,6 +12579,18 @@ export enum TWidgetProp {
    *
    */
  VALIDATOR = WIDGET_PROP_VALIDATOR(),
+
+  /**
+   * 标识是否将当前控件状态同步到子控件中。
+   *
+   */
+ SYNC_STATE_TO_CHILDREN = WIDGET_PROP_SYNC_STATE_TO_CHILDREN(),
+
+  /**
+   * 标识是否接收父控件的状态同步。
+   *
+   */
+ STATE_FROM_PARENT_SYNC = WIDGET_PROP_STATE_FROM_PARENT_SYNC(),
 };
 
 
@@ -13970,6 +14085,30 @@ export class TWidget {
 
 
   /**
+   * 标识是否将当前控件状态同步到子控件中。
+   * 
+   * @param sync_state_to_children 是否将当前控件状态同步到子控件中。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setSyncStateToChildren(sync_state_to_children : boolean) : TRet  {
+    return widget_set_sync_state_to_children(this != null ? (this.nativeObj || this) : null, sync_state_to_children);
+ }
+
+
+  /**
+   * 标识是否接收父控件的状态同步。
+   * 
+   * @param state_from_parent_sync 是否接收父控件的状态同步。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setStateFromParentSync(state_from_parent_sync : boolean) : TRet  {
+    return widget_set_state_from_parent_sync(this != null ? (this.nativeObj || this) : null, state_from_parent_sync);
+ }
+
+
+  /**
    * 设置控件的不透明度。
    *
    *>在嵌入式平台，半透明效果会使性能大幅下降，请谨慎使用。
@@ -14232,19 +14371,6 @@ export class TWidget {
    */
  getPropStr(name : string, defval : string) : string  {
     return widget_get_prop_str(this != null ? (this.nativeObj || this) : null, name, defval);
- }
-
-
-  /**
-   * 设置指针格式的属性。
-   * 
-   * @param name 属性的名称。
-   * @param v 属性的值。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setPropPointer(name : string, v : any) : TRet  {
-    return widget_set_prop_pointer(this != null ? (this.nativeObj || this) : null, name, v);
  }
 
 
@@ -14838,7 +14964,7 @@ export class TWidget {
 
 
   /**
-   * 设置控件自己的布局(缺省布局器)参数(过时，请用widget\_set\_self\_layout)。
+   * 设置控件自己的布局(缺省布局器)参数(建议用widget\_set\_self\_layout)。
    *备注：下一帧才会生效数据
    * 
    * @param x x参数。
@@ -15094,7 +15220,7 @@ export class TWidget {
    * 是否根据子控件和文本自动调整控件自身大小。
    *
    *> 为true时，最好不要使用 layout 的相关东西，否则可能有冲突。
-   *> 注意：只是调整控件的本身的宽高，不会修改控件本身的位置。
+   *> 注意：只是调整控件的本身的宽高，不会修改控件本身的位置，仅部分控件实现该效果。
    *
    */
  get autoAdjustSize() : boolean {
@@ -15116,6 +15242,32 @@ export class TWidget {
 
  set floating(v : boolean) {
    this.setFloating(v);
+ }
+
+
+  /**
+   * 标识是否将当前控件状态同步到子控件中。
+   *
+   */
+ get syncStateToChildren() : boolean {
+   return widget_t_get_prop_sync_state_to_children(this.nativeObj);
+ }
+
+ set syncStateToChildren(v : boolean) {
+   this.setSyncStateToChildren(v);
+ }
+
+
+  /**
+   * 标识是否接收父控件的状态同步。
+   *
+   */
+ get stateFromParentSync() : boolean {
+   return widget_t_get_prop_state_from_parent_sync(this.nativeObj);
+ }
+
+ set stateFromParentSync(v : boolean) {
+   this.setStateFromParentSync(v);
  }
 
 
@@ -17823,6 +17975,15 @@ export class TPointerEvent extends TEvent {
    return pointer_event_t_get_prop_shift(this.nativeObj);
  }
 
+
+  /**
+   * 触摸ID。
+   *
+   */
+ get fingerId() : number {
+   return pointer_event_t_get_prop_finger_id(this.nativeObj);
+ }
+
 };
 /**
  * 按键事件。
@@ -18193,6 +18354,74 @@ export class TSystemEvent extends TEvent {
 
 };
 /**
+ * 多点触摸事件(目前主要对接 SDL_TouchFingerEvent(SDL_FINGERMOTION/SDL_FINGERDOWN/SDL_FINGERUP))。
+ *
+ */
+export class TTouchEvent extends TEvent { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 把event对象转touch_event_t对象。
+   * 
+   * @param event event对象。
+   *
+   * @returns event 对象。
+   */
+ static cast(event : TEvent) : TTouchEvent  {
+    return new TTouchEvent(touch_event_cast(event != null ? (event.nativeObj || event) : null));
+ }
+
+
+  /**
+   * 触摸ID。
+   *
+   */
+ get touchId() : number {
+   return touch_event_t_get_prop_touch_id(this.nativeObj);
+ }
+
+
+  /**
+   * 手指ID。
+   *
+   */
+ get fingerId() : number {
+   return touch_event_t_get_prop_finger_id(this.nativeObj);
+ }
+
+
+  /**
+   * x坐标(在 0-1 之间，表示与屏幕宽度的比例）。
+   *
+   */
+ get x() : number {
+   return touch_event_t_get_prop_x(this.nativeObj);
+ }
+
+
+  /**
+   * y坐标(在 0-1 之间，表示与屏幕高度的比例）。
+   *
+   */
+ get y() : number {
+   return touch_event_t_get_prop_y(this.nativeObj);
+ }
+
+
+  /**
+   * 压力。
+   *
+   */
+ get pressure() : number {
+   return touch_event_t_get_prop_pressure(this.nativeObj);
+ }
+
+};
+/**
  * UI加载完成事件。
  *
  */
@@ -18531,6 +18760,21 @@ export class TImageBase extends TWidget {
 
 };
 /**
+ * 本地化信息。
+ *locale_info_t 的子类。
+ *提供从 xml 文件中获取本地化信息的功能。
+ *
+ *注意：fallback_tr2 回调已被设置用于从xml文件中获取本地化信息，不可再重复设置，否则将导致功能失效！
+ *
+ */
+export class TLocaleInfoXml extends TLocaleInfo { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+};
+/**
  * 可变的style(可实时修改并生效，主要用于在designer中被编辑的控件，或者一些特殊控件)。
  *
  *style\_mutable也对style\_const进行了包装，当用户没修改某个值时，便从style\_const中获取。
@@ -18812,6 +19056,24 @@ export class TWindowBase extends TWidget {
    */
  get moveFocusRightKey() : string {
    return window_base_t_get_prop_move_focus_right_key(this.nativeObj);
+ }
+
+
+  /**
+   * 窗口中按下 Enter 按钮默认触发单击 button 控件名字
+   *
+   */
+ get acceptButton() : string {
+   return window_base_t_get_prop_accept_button(this.nativeObj);
+ }
+
+
+  /**
+   * 窗口中按下 Esc 按钮默认触发单击 button 控件名字
+   *
+   */
+ get cancelButton() : string {
+   return window_base_t_get_prop_cancel_button(this.nativeObj);
  }
 
 
@@ -21158,7 +21420,7 @@ export class TCandidates extends TWidget {
 
 
   /**
-   * 是否启用用数字选择候选字。比如按下1选择第1个候选字，按下2选择第2个候选字。
+   * 是否启用用数字选择候选字。比如按下1选择第1个候选字，按下2选择第2个候选字。(需在keyboard中设置grab_keys="true"方可生效)
    *
    */
  get selectByNum() : boolean {
@@ -21655,18 +21917,6 @@ export class TMledit extends TWidget {
 
 
   /**
-   * 设置编辑器滚动速度。
-   * 
-   * @param scroll_line 滚动行数。
-   *
-   * @returns 返回RET_OK表示成功，否则表示失败。
-   */
- setScrollLine(scroll_line : number) : TRet  {
-    return mledit_set_scroll_line(this != null ? (this.nativeObj || this) : null, scroll_line);
- }
-
-
-  /**
    * 设置编辑器滚动到指定偏移位置。
    * 
    * @param offset 偏移位置。
@@ -21843,19 +22093,6 @@ export class TMledit extends TWidget {
 
 
   /**
-   * 鼠标一次滚动行数。
-   *
-   */
- get scrollLine() : number {
-   return mledit_t_get_prop_scroll_line(this.nativeObj);
- }
-
- set scrollLine(v : number) {
-   this.setScrollLine(v);
- }
-
-
-  /**
    * 是否启用覆盖行。
    *
    */
@@ -21935,6 +22172,24 @@ export class TMledit extends TWidget {
 
  set closeImWhenBlured(v : boolean) {
    this.setCloseImWhenBlured(v);
+ }
+
+
+  /**
+   * 是否支持 Enter 按钮输入。
+   *
+   */
+ get acceptReturn() : boolean {
+   return mledit_t_get_prop_accept_return(this.nativeObj);
+ }
+
+
+  /**
+   * 是否支持 Tab 按钮输入。
+   *
+   */
+ get acceptTab() : boolean {
+   return mledit_t_get_prop_accept_tab(this.nativeObj);
  }
 
 };
@@ -22378,7 +22633,7 @@ export class TRichText extends TWidget {
 
 
   /**
-   * 标识控件是否允许上下拖动。
+   * 标识控件是否允许上下拖动。(需满足文字的高度大于控件的高度)
    *
    */
  get yslidable() : boolean {
@@ -23178,11 +23433,18 @@ export class TListView extends TWidget {
    this.setFloatingScrollBar(v);
  }
 
+
+  /**
+   * 列表项的宽度。如果 item_width 0，所有列表项使用该宽度，否则使用让列表项的宽度等于scroll_view的宽度。
+   *
+   */
+ get itemWidth() : number {
+   return list_view_t_get_prop_item_width(this.nativeObj);
+ }
+
 };
 /**
  * 滚动条控件。
- *
- *> 目前只支持垂直滚动。
  *
  *scroll\_bar\_t是[widget\_t](widget_t.md)的子类控件，widget\_t的函数均适用于scroll\_bar\_t控件。
  *
@@ -23872,7 +24134,7 @@ export class TScrollView extends TWidget {
 
 
   /**
-   * 是否递归查找全部子控件。
+   * 是否递归查找全部子控件。(当scroll_view的父控件是list_view_h或list_view时无效)
    *
    */
  get recursive() : boolean {
@@ -24621,7 +24883,7 @@ export class TSlideIndicator extends TWidget {
 
 
   /**
-   * 最大值(缺省为100)。
+   * 最大值(缺省为3)。
    *
    */
  get max() : number {
@@ -24699,7 +24961,7 @@ export class TSlideIndicator extends TWidget {
 
 
   /**
-   * 锚点x坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
+   * 锚点x坐标。(后面加上px为像素点，不加px为相对百分取值范围为0.0f到1.0f)
    *
    */
  get anchorX() : string {
@@ -24708,7 +24970,7 @@ export class TSlideIndicator extends TWidget {
 
 
   /**
-   * 锚点y坐标。(后面加上px为像素点，不加px为相对百分比坐标0.0f到1.0f)
+   * 锚点y坐标。(后面加上px为像素点，不加px为相对百分取值范围为0.0f到1.0f)
    *
    */
  get anchorY() : string {
@@ -25117,7 +25379,7 @@ export class TSwitch extends TWidget {
 
 
   /**
-   * 当开关处于关闭时，图片偏移相对于图片宽度的比例(缺省为1/3)。
+   * 主要用于当开关处于关闭时，图片偏移相对于图片宽度的比例(缺省为1/3)。
    *
    */
  get maxXoffsetRatio() : number {
@@ -26787,15 +27049,11 @@ export class TButton extends TWidget {
 
 
   /**
-   * 触发长按事件的时间(毫秒)
+   * 是否为 accept 状态
    *
    */
- get longPressTime() : number {
-   return button_t_get_prop_long_press_time(this.nativeObj);
- }
-
- set longPressTime(v : number) {
-   this.setLongPressTime(v);
+ get isAcceptStatus() : boolean {
+   return button_t_get_prop_is_accept_status(this.nativeObj);
  }
 
 
@@ -26805,6 +27063,19 @@ export class TButton extends TWidget {
    */
  get pressed() : boolean {
    return button_t_get_prop_pressed(this.nativeObj);
+ }
+
+
+  /**
+   * 触发长按事件的时间(毫秒)
+   *
+   */
+ get longPressTime() : number {
+   return button_t_get_prop_long_press_time(this.nativeObj);
+ }
+
+ set longPressTime(v : number) {
+   this.setLongPressTime(v);
  }
 
 };
@@ -28447,16 +28718,16 @@ export class TGrid extends TWidget {
    * 各列的参数。
    *各列的参数之间用英文的分号(;)分隔，每列参数的格式为：
    *
-   *col(w=?,left_margin=?,right_margin=?,top_maorgin=?,bottom_margin=?)
+   *col(w=?,left_margin=?,right_margin=?,top_margin=?,bottom_margin=?)
    *
-   ** w 为列的宽度(必须存在)。取值在(0-1]区间时，视为grid控件宽度的比例，否则为像素宽度。
-   *(如果为负数，将计算结果加上控件的宽度)
-   ** left_margin(可选，可缩写为l) 该列左边的边距。
-   ** right_margin(可选，可缩写为r) 该列右边的边距。
-   ** top_margin(可选，可缩写为t) 该列顶部的边距。
-   ** bottom_margin(可选，可缩写为b) 该列底部的边距。
-   ** margin(可选，可缩写为m) 同时指定上面4个边距。
-   ** fill_available(可选，可缩写为f) 填充剩余宽度(只有一列可以指定)。
+   ** w 为列的宽度（必须存在）。取值在 (0-1] 区间时，视为 grid 控件宽度的比例，否则为像素宽度。
+   *（如果为负数，将计算结果加上控件的宽度）
+   ** left_margin（可选，可缩写为 l）该列左边的边距。
+   ** right_margin（可选，可缩写为 r）该列右边的边距。
+   ** top_margin（可选，可缩写为 t）该列顶部的边距。
+   ** bottom_margin（可选，可缩写为 b）该列底部的边距。
+   ** margin（可选，可缩写为 m）同时指定上面 4 个边距。
+   ** fill_available（可选，可缩写为f）填充剩余宽度（只有一列可以指定）。
    *
    */
  get columnsDefinition() : string {
@@ -28888,7 +29159,7 @@ export class TPages extends TWidget {
 
 
   /**
-   * 当前活跃的page。(需要用到 MVVM 数据绑定请设置 value 属性)
+   * 当前活跃的page。(起始值从0开始。需要用到 MVVM 数据绑定请设置 value 属性)
    *
    */
  get active() : number {
@@ -29097,7 +29368,7 @@ export class TProgressBar extends TWidget {
 
 
   /**
-   * 数值到字符串转换时的格式，缺省为"%d"。
+   * 数值到字符串转换时的格式，缺省为"%d%%"。
    *
    */
  get format() : string {
@@ -29604,6 +29875,18 @@ export class TTabButtonGroup extends TWidget {
 
 
   /**
+   * 设置删除 tab_button_group 控件中的 tab_button 控件和对应页。
+   * 
+   * @param index tab_button 的序号。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ removeIndex(index : number) : TRet  {
+    return tab_button_group_remove_index(this != null ? (this.nativeObj || this) : null, index);
+ }
+
+
+  /**
    * 转换tab_button_group对象(供脚本语言使用)。
    * 
    * @param widget tab_button_group对象。
@@ -30028,7 +30311,7 @@ export class TView extends TWidget {
 
 
   /**
-   * 缺省获得焦点的子控件(可用控件名或类型)。
+   * 缺省获得焦点的子控件(可用控件名或类型)。(该属性废弃。)
    *
    *> view作为pages/slideview的直接子控件才需要设置。
    *> 正常情况下，一个窗口只能指定一个初始焦点。
@@ -30084,7 +30367,7 @@ export class TView extends TWidget {
  *</dialog>
  *```
  *
- *打开非模态对话框时，其用法与普通窗口一样。打开非模态对话框时，还需要调用dialog\_modal。
+ *打开非模态对话框时，其用法与普通窗口一样。打开模态对话框时，还需要调用dialog\_modal。
  *
  *
  *
@@ -30447,6 +30730,21 @@ export class TNativeWindow extends TTkObject {
 
 
   /**
+   * 设置hitTest。
+   * 
+   * @param x x坐标。
+   * @param y y坐标。
+   * @param w w宽度。
+   * @param h h高度。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setWindowHitTest(x : number, y : number, w : number, h : number) : TRet  {
+    return native_window_set_window_hit_test(this != null ? (this.nativeObj || this) : null, x, y, w, h);
+ }
+
+
+  /**
    * 是否全屏。
    * 
    * @param fullscreen 是否全屏。
@@ -30656,6 +30954,124 @@ export class TWindow extends TWindowBase {
 
  set fullscreen(v : boolean) {
    this.setFullscreen(v);
+ }
+
+};
+/**
+ * 扩展edit控件。支持以下功能：
+ ** 支持搜索建议功能。
+ *
+ */
+export class TEditEx extends TEdit { 
+ public nativeObj : any;
+ constructor(nativeObj : any) {
+   super(nativeObj);
+ }
+
+
+  /**
+   * 创建edit_ex对象
+   * 
+   * @param parent 父控件
+   * @param x x坐标
+   * @param y y坐标
+   * @param w 宽度
+   * @param h 高度
+   *
+   * @returns 对象。
+   */
+ static create(parent : TWidget, x : number, y : number, w : number, h : number) : TEditEx  {
+    return new TEditEx(edit_ex_create(parent != null ? (parent.nativeObj || parent) : null, x, y, w, h));
+ }
+
+
+  /**
+   * 设置输入建议词源。
+   *> EVT_VALUE_CHANGED 事件请求词源更新，new_value 为 edit 输入内容。
+   * 
+   * @param suggest_words 输入建议词源。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setSuggestWords(suggest_words : TTkObject) : TRet  {
+    return edit_ex_set_suggest_words(this != null ? (this.nativeObj || this) : null, suggest_words != null ? (suggest_words.nativeObj || suggest_words) : null);
+ }
+
+
+  /**
+   * 设置输入建议词的项格式。
+   * 
+   * @param formats 输入建议词的项格式。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setSuggestWordsItemFormats(formats : string) : TRet  {
+    return edit_ex_set_suggest_words_item_formats(this != null ? (this.nativeObj || this) : null, formats);
+ }
+
+
+  /**
+   * 最终输入到edit控件的文本的属性名。
+   *> 设置了 suggest_words_item_formats 才会被用到。
+   * 
+   * @param name 最终输入到edit控件的文本的属性名。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setSuggestWordsInputName(name : string) : TRet  {
+    return edit_ex_set_suggest_words_input_name(this != null ? (this.nativeObj || this) : null, name);
+ }
+
+
+  /**
+   * 转换为edit对象(供脚本语言使用)。
+   * 
+   * @param widget edit_ex对象。
+   *
+   * @returns edit对象。
+   */
+ static cast(widget : TWidget) : TEditEx  {
+    return new TEditEx(edit_ex_cast(widget != null ? (widget.nativeObj || widget) : null));
+ }
+
+
+  /**
+   * 输入建议词。
+   *
+   */
+ get suggestWords() : TTkObject {
+   return new TTkObject(edit_ex_t_get_prop_suggest_words(this.nativeObj));
+ }
+
+ set suggestWords(v : TTkObject) {
+   this.setSuggestWords(v);
+ }
+
+
+  /**
+   * 输入建议词的项格式。
+   *
+   */
+ get suggestWordsItemFormats() : string {
+   return edit_ex_t_get_prop_suggest_words_item_formats(this.nativeObj);
+ }
+
+ set suggestWordsItemFormats(v : string) {
+   this.setSuggestWordsItemFormats(v);
+ }
+
+
+  /**
+   * 最终输入到edit控件的文本的属性名。
+   *> 设置了 suggest_words_item_formats 才会被用到。
+   *
+   */
+ get suggestWordsInputName() : string {
+   return edit_ex_t_get_prop_suggest_words_input_name(this.nativeObj);
+ }
+
+ set suggestWordsInputName(v : string) {
+   this.setSuggestWordsInputName(v);
  }
 
 };

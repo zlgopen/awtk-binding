@@ -50,3 +50,7 @@ func (this TListView) GetFloatingScrollBar() bool {
   return (bool)((*C.list_view_t)(unsafe.Pointer(this.handle)).floating_scroll_bar);
 }
 
+func (this TListView) GetItemWidth() int32 {
+  return (int32)((*C.list_view_t)(unsafe.Pointer(this.handle)).item_width);
+}
+

@@ -305,6 +305,14 @@ func (this TWidget) SetState(state string) TRet {
   return TRet(C.widget_set_state((*C.widget_t)(this.handle), astate));
 }
 
+func (this TWidget) SetSyncStateToChildren(sync_state_to_children bool) TRet {
+  return TRet(C.widget_set_sync_state_to_children((*C.widget_t)(this.handle), (C.bool_t)(sync_state_to_children)));
+}
+
+func (this TWidget) SetStateFromParentSync(state_from_parent_sync bool) TRet {
+  return TRet(C.widget_set_state_from_parent_sync((*C.widget_t)(this.handle), (C.bool_t)(state_from_parent_sync)));
+}
+
 func (this TWidget) SetOpacity(opacity uint8) TRet {
   return TRet(C.widget_set_opacity((*C.widget_t)(this.handle), (C.uint8_t)(opacity)));
 }
@@ -409,12 +417,6 @@ func (this TWidget) GetPropStr(name string, defval string) string {
   adefval := C.CString(defval)
   defer C.free(unsafe.Pointer(adefval))
   return C.GoString(C.widget_get_prop_str((*C.widget_t)(this.handle), aname, adefval));
-}
-
-func (this TWidget) SetPropPointer(name string, v unsafe.Pointer) TRet {
-  aname := C.CString(name)
-  defer C.free(unsafe.Pointer(aname))
-  return TRet(C.widget_set_prop_pointer((*C.widget_t)(this.handle), aname, (unsafe.Pointer)(v)));
 }
 
 func (this TWidget) GetPropPointer(name string) unsafe.Pointer {
@@ -705,6 +707,14 @@ func (this TWidget) GetStyle() string {
 
 func (this TWidget) GetAnimation() string {
   return C.GoString((*C.widget_t)(unsafe.Pointer(this.handle)).animation);
+}
+
+func (this TWidget) GetSyncStateToChildren() bool {
+  return (bool)((*C.widget_t)(unsafe.Pointer(this.handle)).sync_state_to_children);
+}
+
+func (this TWidget) GetStateFromParentSync() bool {
+  return (bool)((*C.widget_t)(unsafe.Pointer(this.handle)).state_from_parent_sync);
 }
 
 func (this TWidget) GetOpacity() uint8 {

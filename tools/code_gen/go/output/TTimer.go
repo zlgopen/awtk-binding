@@ -2,10 +2,6 @@ func TTimerRemove(timer_id uint32) TRet {
   return TRet(C.timer_remove((C.uint32_t)(timer_id)));
 }
 
-func TTimerRemoveAllByCtx(ctx unsafe.Pointer) TRet {
-  return TRet(C.timer_remove_all_by_ctx((unsafe.Pointer)(ctx)));
-}
-
 func TTimerReset(timer_id uint32) TRet {
   return TRet(C.timer_reset((C.uint32_t)(timer_id)));
 }

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AWTK-CPP: TVgcanvas类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -34,7 +34,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.12.0 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
@@ -471,7 +471,11 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>矩形裁剪。</p>
+<p>矩形裁剪。 备注：</p><ol type="1">
+<li>在绘图的时候脏矩形和裁剪区是一样的。</li>
+<li>该函数是不合并裁剪区的，所有可能出现裁剪区被扩大导致绘图在脏矩形以外的情况，导致残影的情况。</li>
+<li>该函数不支持旋转后调用，会导致裁剪区异常。 ........ rect_t r; rect_t r_save; r = rectf_init(c-&gt;ox, c-&gt;oy, widget-&gt;w, widget-&gt;h); r_save = *vgcanvas_get_clip_rect(vg); r = rectf_intersect(&amp;r, &amp;r_save); vgcanvas_clip_rect(vg, (float_t)r.x, (float_t)r.y, (float_t)r.w, (float_t)r.h); ........</li>
+</ol>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>x坐标。 </td></tr>
@@ -563,14 +567,14 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">img</td><td>图片。 </td></tr>
-    <tr><td class="paramname">sx</td><td>sx </td></tr>
-    <tr><td class="paramname">sy</td><td>sy </td></tr>
-    <tr><td class="paramname">sw</td><td>sw </td></tr>
-    <tr><td class="paramname">sh</td><td>sh </td></tr>
-    <tr><td class="paramname">dx</td><td>dx </td></tr>
-    <tr><td class="paramname">dy</td><td>dy </td></tr>
-    <tr><td class="paramname">dw</td><td>dw </td></tr>
-    <tr><td class="paramname">dh</td><td>dh</td></tr>
+    <tr><td class="paramname">sx</td><td>原图区域的 x </td></tr>
+    <tr><td class="paramname">sy</td><td>原图区域的 y </td></tr>
+    <tr><td class="paramname">sw</td><td>原图区域的 w </td></tr>
+    <tr><td class="paramname">sh</td><td>原图区域的 h </td></tr>
+    <tr><td class="paramname">dx</td><td>绘制区域的 x </td></tr>
+    <tr><td class="paramname">dy</td><td>绘制区域的 y </td></tr>
+    <tr><td class="paramname">dw</td><td>绘制区域的 w </td></tr>
+    <tr><td class="paramname">dh</td><td>绘制区域的 h</td></tr>
   </table>
   </dd>
 </dl>
@@ -635,14 +639,14 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">img</td><td>图片。 </td></tr>
-    <tr><td class="paramname">sx</td><td>sx </td></tr>
-    <tr><td class="paramname">sy</td><td>sy </td></tr>
-    <tr><td class="paramname">sw</td><td>sw </td></tr>
-    <tr><td class="paramname">sh</td><td>sh </td></tr>
-    <tr><td class="paramname">dx</td><td>dx </td></tr>
-    <tr><td class="paramname">dy</td><td>dy </td></tr>
-    <tr><td class="paramname">dw</td><td>dw </td></tr>
-    <tr><td class="paramname">dh</td><td>dh</td></tr>
+    <tr><td class="paramname">sx</td><td>原图区域的 x </td></tr>
+    <tr><td class="paramname">sy</td><td>原图区域的 y </td></tr>
+    <tr><td class="paramname">sw</td><td>原图区域的 w </td></tr>
+    <tr><td class="paramname">sh</td><td>原图区域的 h </td></tr>
+    <tr><td class="paramname">dx</td><td>绘制区域的 x </td></tr>
+    <tr><td class="paramname">dy</td><td>绘制区域的 y </td></tr>
+    <tr><td class="paramname">dw</td><td>绘制区域的 w </td></tr>
+    <tr><td class="paramname">dh</td><td>绘制区域的 h</td></tr>
   </table>
   </dd>
 </dl>
@@ -1139,7 +1143,10 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>设置一个与前一个裁剪区做交集的矩形裁剪区。 如果下面这种情况，则不能直接调用 rect_intersect 函数来做矩形交集和 vgcanvas_clip_rect 函数设置裁剪区，而采用本函数做交集。 由于缩放和旋转以及平移会导致 vg 的坐标系和上一个裁剪区的坐标系不同， 导致直接使用做交集的话，裁剪区会出错。</p>
+<p>设置一个与前一个裁剪区做交集的矩形裁剪区。 备注：</p><ol type="1">
+<li>如果下面这种情况，则不能直接调用 rect_intersect 函数来做矩形交集和 vgcanvas_clip_rect 函数设置裁剪区，而采用本函数做交集。 由于缩放和旋转以及平移会导致 vg 的坐标系和上一个裁剪区的坐标系不同， 导致直接使用做交集的话，裁剪区会出错。</li>
+<li>该函数不支持旋转后调用，会导致裁剪区异常。</li>
+</ol>
 <div class="fragment"><div class="line">*vgcanvas_clip_rect(vg, old_r.x, old_r.y, old_r.w, old_r.h);</div>
 <div class="line">*vgcanvas_save(vg);</div>
 <div class="line">*vgcanvas_scale(vg, scale_x, scale_y);</div>
@@ -1362,7 +1369,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
       </table>
 </div><div class="memdoc">
 <p>设置路径填充实心与否。</p>
-<p>&gt;CCW(1)为实心，CW(2)为镂空，设置其他则默认根据非零环绕规则判断(nonzero)。</p>
+<p>&gt;设置为FALSE为实心，TRUE为镂空。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">dir</td><td>填充方法。</td></tr>
@@ -1473,7 +1480,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 </div><div class="memdoc">
 <p>恢复上次save的状态。</p>
 <blockquote class="doxtable">
-<p>&zwj;save/restore必须配套使用，否则可能导致状态混乱。 </p>
+<p>save/restore必须配套使用，否则可能导致状态混乱。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
@@ -1568,7 +1575,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 </div><div class="memdoc">
 <p>保存当前的状态。如颜色和矩阵等信息。</p>
 <blockquote class="doxtable">
-<p>&zwj;save/restore必须配套使用，否则可能导致状态混乱。 </p>
+<p>save/restore必须配套使用，否则可能导致状态混乱。 </p>
 </blockquote>
 <dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
@@ -2068,7 +2075,7 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
 </small></address>
 </div><!-- doc-content -->
 </body>

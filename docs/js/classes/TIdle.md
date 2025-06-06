@@ -50,7 +50,7 @@ idle回调函数的上下文。
 
 #### Defined in
 
-[awtk.ts:5897](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5897)
+[awtk.ts:5950](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L5950)
 
 ***
 
@@ -74,28 +74,4 @@ idleID。
 
 #### Defined in
 
-[awtk.ts:5909](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5909)
-
-***
-
-### removeAllByCtx()
-
-> `static` **removeAllByCtx**(`ctx`): [`TRet`](../enumerations/TRet.md)
-
-根据上下文删除所有对应的idle。
-
-#### Parameters
-
-• **ctx**: `any`
-
-idle回调函数的上下文
-
-#### Returns
-
-[`TRet`](../enumerations/TRet.md)
-
-返回RET_OK表示成功，否则表示失败。
-
-#### Defined in
-
-[awtk.ts:5921](https://github.com/zlgopen/awtk-binding/blob/eba643a28b6249e8f99055dcbc6755f195868c97/tools/code_gen/js/output/awtk.ts#L5921)
+[awtk.ts:5962](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L5962)
